@@ -1,5 +1,5 @@
 ---
-title: "Класс add_pointer | Документы Майкрософт"
+title: add_pointer Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -9,7 +9,6 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
-- add_pointer
 - type_traits/std::add_pointer
 dev_langs:
 - C++
@@ -35,17 +34,17 @@ translation.priority.mt:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 51fbd09793071631985720550007dddbe16f598f
-ms.openlocfilehash: 008f19421575b8a930498a615642fdfdad99b7b6
+ms.translationtype: MT
+ms.sourcegitcommit: 5d026c375025b169d5db8445cbb52c0c917b2d8d
+ms.openlocfilehash: 5b7f0fa84b8a99b5e2225dfdf4028807f2d89eaa
 ms.contentlocale: ru-ru
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 09/09/2017
 
 ---
-# <a name="addpointer-class"></a>Класс add_pointer
-Создает указатель на тип из указанного типа.  
+# <a name="addpointer-class"></a>add_pointer Class
+Makes a pointer-to-type from a specified type.  
   
-## <a name="syntax"></a>Синтаксис  
+## <a name="syntax"></a>Syntax  
   
 ```  
 template <class T>  
@@ -55,17 +54,17 @@ template <class T>
 using add_pointer_t = typename add_pointer<T>::type;  
 ```  
   
-#### <a name="parameters"></a>Параметры  
+#### <a name="parameters"></a>Parameters  
 *T*  
-Тип для изменения.  
+The type to modify.  
   
-## <a name="remarks"></a>Примечания  
-Определение типов `type`члена именует тот же тип как `remove_reference<T>::type*`. Псевдоним `add_pointer_t` является ярлыком для доступа к определению типа `type`.  
+## <a name="remarks"></a>Remarks  
+The member typedef `type` names the same type as `remove_reference<T>::type*`. The alias `add_pointer_t` is a shortcut to access the member typedef `type`.  
   
-Поскольку его нельзя использовать для создания указателя из ссылки, `add_pointer` удаляет ссылку (если таковая имеется) из указанного типа, прежде чем создать указатель на тип. Следовательно, можно использовать тип с `add_pointer` вне зависимости от того, является ли данный тип ссылкой.  
+Because it is invalid to make a pointer from a reference, `add_pointer` removes the reference, if any, from the specified type before it makes a pointer-to-type. Consequently, you can use a type with `add_pointer` without being concerned about whether the type is a reference.  
   
-## <a name="example"></a>Пример  
-В следующем примере показано, что `add_pointer` типа аналогичен указателю на данный тип.  
+## <a name="example"></a>Example  
+The following example demonstrates that `add_pointer` of a type is the same as a pointer to that type.  
   
 ```cpp  
 #include <type_traits>   
@@ -87,12 +86,12 @@ int main()
 add_pointer_t<int> == int *  
 ```  
   
-## <a name="requirements"></a>Требования  
- **Заголовок:** \<type_traits>  
+## <a name="requirements"></a>Requirements  
+ **Header:** \<type_traits>  
   
- **Пространство имен:** std  
+ **Namespace:** std  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>See Also  
  [<type_traits>](../standard-library/type-traits.md)   
- [Класс remove_pointer](../standard-library/remove-pointer-class.md)
+ [remove_pointer Class](../standard-library/remove-pointer-class.md)
 

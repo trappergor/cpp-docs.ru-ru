@@ -1,5 +1,5 @@
 ---
-title: "Класс uniform_int_distribution | Документы Майкрософт"
+title: uniform_int_distribution Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -9,7 +9,6 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
-- uniform_int_distribution
 - random/std::uniform_int_distribution
 - random/std::uniform_int_distribution::reset
 - random/std::uniform_int_distribution::a
@@ -27,7 +26,15 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- uniform_int_distribution class
+- std::uniform_int_distribution [C++]
+- std::uniform_int_distribution [C++], reset
+- std::uniform_int_distribution [C++], a
+- std::uniform_int_distribution [C++], b
+- std::uniform_int_distribution [C++], param
+- std::uniform_int_distribution [C++], min
+- std::uniform_int_distribution [C++], max
+- std::uniform_int_distribution [C++], param_type
+- std::uniform_int_distribution [C++], param_type
 ms.assetid: a1867dcd-3bd9-4787-afe3-4b62692c1d04
 caps.latest.revision: 20
 author: corob-msft
@@ -47,17 +54,17 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
-ms.openlocfilehash: 0555c6562ee987eab9eebc2e9e178a31cdf684e9
+ms.translationtype: MT
+ms.sourcegitcommit: 5d026c375025b169d5db8445cbb52c0c917b2d8d
+ms.openlocfilehash: e06538cdd811df58e61d75c4fd2c5ff0fa4a4dcc
 ms.contentlocale: ru-ru
-ms.lasthandoff: 04/29/2017
+ms.lasthandoff: 09/09/2017
 
 ---
-# <a name="uniformintdistribution-class"></a>Класс uniform_int_distribution
-Формирует равномерное (каждое значение одинаково вероятно) распределение целых чисел в выходном инклюзивно-эксклюзивном диапазоне.  
+# <a name="uniformintdistribution-class"></a>uniform_int_distribution Class
+Generates a uniform (every value is equally probable) integer distribution within an output range that is inclusive-inclusive.  
   
-## <a name="syntax"></a>Синтаксис  
+## <a name="syntax"></a>Syntax  
 ```  
 template<class IntType = int>
    class uniform_int_distribution {
@@ -87,31 +94,31 @@ public:
    result_type max() const;
 };  
 ```  
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
 *IntType*  
-По умолчанию целочисленный тип результата имеет тип `int`. Возможные типы см. в разделе [\<random>](../standard-library/random.md).  
+The integer result type, defaults to `int`. For possible types, see [\<random>](../standard-library/random.md).  
   
-## <a name="remarks"></a>Примечания  
-Класс шаблона описывает инклюзивно-инклюзивное распределение, которое формирует значения заданного пользователем целочисленного типа, вероятность получения каждого из которых одинакова. В следующей таблице представлены ссылки на статьи об отдельных членах.  
+## <a name="remarks"></a>Remarks  
+The template class describes an inclusive-inclusive distribution that produces values of a user-specified integral type with a distribution so that every value is equally probable. The following table links to articles about individual members.  
   
 ||||  
 |-|-|-|  
 |[uniform_int_distribution](#uniform_int_distribution)|`uniform_int_distribution::a`|`uniform_int_distribution::param`|  
 |`uniform_int_distribution::operator()`|`uniform_int_distribution::b`|[param_type](#param_type)|  
   
-Член свойства `a()` возвращает текущее хранимое минимальное значение распределения, а `b()` возвращает текущее хранимое максимальное значение. Для класса распределения эти минимальные и максимальные значения совпадают со значениями, которые возвращаются функциями свойств `min()` и `max()`.  
+The property member `a()` returns the currently stored minimum bound of the distribution, while `b()` returns the currently stored maximum bound. For this distribution class, these minimum and maximum values are the same as those returned by the common property functions `min()` and `max()`.  
   
-Член свойства `param()` устанавливает или возвращает пакет хранимого пакета распределения `param_type`.  
+The property member `param()` sets or returns the `param_type` stored distribution parameter package.  
 
-Функции-члены `min()` и `max()` возвращают наименьший и наибольший из возможных результатов соответственно.  
+The `min()` and `max()` member functions return the smallest possible result and largest possible result, respectively.  
   
-Функция-член `reset()` удаляет любые кэшированные значения, чтобы результат следующего вызова `operator()` не зависел от любых значений, полученных от механизма перед вызовом.  
+The `reset()` member function discards any cached values, so that the result of the next call to `operator()` does not depend on any values obtained from the engine before the call.  
   
-Функции-члены `operator()` возвращают следующее значение, созданное механизмом РГСЧ, из текущего или указанного пакета параметров.
+The `operator()` member functions return the next generated value based on the URNG engine, either from the current parameter package, or the specified parameter package.
   
-Дополнительные сведения о классах распределения и их членах см. в разделе [\<random>](../standard-library/random.md).  
+For more information about distribution classes and their members, see [\<random>](../standard-library/random.md).  
   
-## <a name="example"></a>Пример  
+## <a name="example"></a>Example  
   
 ```cpp  
 // compile with: /EHsc /W4  
@@ -189,13 +196,13 @@ Distribution for 200 samples:
    12 :::::::::::::::::
 ```  
   
-## <a name="requirements"></a>Требования  
- **Заголовок:** \<random>  
+## <a name="requirements"></a>Requirements  
+ **Header:** \<random>  
   
- **Пространство имен:** std  
+ **Namespace:** std  
   
 ##  <a name="uniform_int_distribution"></a>  uniform_int_distribution::uniform_int_distribution  
-Формирует распределение.  
+Constructs the distribution.  
   
 ```  
 explicit uniform_int_distribution(
@@ -203,25 +210,25 @@ explicit uniform_int_distribution(
 explicit uniform_int_distribution(const param_type& parm);
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
 *a*  
-Нижняя граница случайных значений (инклюзивно).  
+The lower bound for random values, inclusive.  
   
 *b*  
-Верхняя граница случайных значений (инклюзивно).  
+The upper bound for random values, inclusive.  
   
 *parm*  
-Структура `param_type`, используемая для формирования распределения.  
+The `param_type` structure used to construct the distribution.  
   
-### <a name="remarks"></a>Примечания  
-**Предусловие:** `a ≤ b`  
+### <a name="remarks"></a>Remarks  
+**Precondition:** `a ≤ b`  
   
-Первый конструктор создает объект, хранимое значение `a` которого содержит значение *a*, а значение `b` содержит значение *b*.  
+The first constructor constructs an object whose stored `a` value holds the value *a* and whose stored `b` value holds the value *b*.  
   
-Второй конструктор создает объект, хранимые параметры которого инициализируются из *parm*. Вы можете получить и задать текущие параметры существующего распределения, вызвав функцию-член `param()`.  
+The second constructor constructs an object whose stored parameters are initialized from *parm*. You can obtain and set the current parameters of an existing distribution by calling the `param()` member function.  
   
 ##  <a name="param_type"></a>  uniform_int_distribution::param_type  
- Сохраняет параметры распределения.  
+ Stores the parameters of the distribution.  
 ```cpp  
 struct param_type {  
    typedef uniform_int_distribution<result_type> distribution_type;  
@@ -235,22 +242,22 @@ struct param_type {
    };  
 ```  
 
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
 *a*  
-Нижняя граница случайных значений (инклюзивно).  
+The lower bound for random values, inclusive.  
   
 *b*  
-Верхняя граница случайных значений (инклюзивно).  
+The upper bound for random values, inclusive.  
   
 *right*  
-Объект `param_type`, который требуется сравнить с данным объектом.  
+The `param_type` object to compare to this.  
   
-### <a name="remarks"></a>Примечания  
-**Предварительные условия:** `a ≤ b`  
+### <a name="remarks"></a>Remarks  
+**Precondition:** `a ≤ b`  
   
-Эту структуру можно передать конструктору класса распределения во время создания экземпляра, функции-члену `param()` для установки хранимых параметров существующего распределения и `operator()` для использования вместо хранимых параметров.  
+This structure can be passed to the distribution's class constructor at instantiation, to the `param()` member function to set the stored parameters of an existing distribution, and to `operator()` to be used in place of the stored parameters.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>See Also  
  [\<random>](../standard-library/random.md)
 
 

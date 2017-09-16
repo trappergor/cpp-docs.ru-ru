@@ -1,137 +1,156 @@
 ---
-title: "Классы диалоговых окон | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "vc.classes.dialog"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "классы общих диалоговых окон"
-  - "классы диалоговых окон"
-  - "Классы общих диалоговых окон OLE"
-  - "классы вкладок свойств"
-  - "диалоговые окна с вкладками"
+title: Dialog Box Classes | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- vc.classes.dialog
+dev_langs:
+- C++
+helpviewer_keywords:
+- property sheet classes
+- dialog box classes
+- OLE common dialog classes
+- common dialog classes [MFC]
+- tab dialog boxes
 ms.assetid: db75da23-4eff-4c6c-beae-79cf046fbce9
 caps.latest.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 5
----
-# Классы диалоговых окон
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 534f360915b0909b6dac97e6cc7afaae7ae38835
+ms.contentlocale: ru-ru
+ms.lasthandoff: 09/12/2017
 
-Класс `CDialog` и производные классы инкапсулируют функция диалоговых окон.  Поскольку диалоговое окно специальный вид окна, `CDialog` является производным от `CWnd`.  Наследование классов диалогового окна с `CDialog` или использовать один из классов стандартного диалогового окна для обычных окон, такие как открытие или сбережения файл, печать, выбирая шрифта или цвета, начиная поиск\-и\- заменить операцию, или при выполнении различных OLE\- связанные операции.  
+---
+# <a name="dialog-box-classes"></a>Dialog Box Classes
+Class `CDialog` and its derived classes encapsulate dialog-box functionality. Since a dialog box is a special kind of window, `CDialog` is derived from `CWnd`. Derive your dialog classes from `CDialog` or use one of the common dialog classes for standard dialog boxes, such as opening or saving a file, printing, selecting a font or color, initiating a search-and-replace operation, or performing various OLE-related operations.  
   
  [CDialog](../mfc/reference/cdialog-class.md)  
- Базовый класс для всех диалоговых окон и режимных и немодальных.  
+ The base class for all dialog boxes, both modal and modeless.  
   
- [CDataExchange](../Topic/CDataExchange%20Class.md)  
- Предоставляет обмен данными и сведения о проверке для диалоговых окон.  
+ [CDataExchange](../mfc/reference/cdataexchange-class.md)  
+ Supplies data exchange and validation information for dialog boxes.  
   
-## Стандартные диалоги  
- Эти классы инкапсулируют диалогового окна диалоговые окна Windows.  Они предоставляют простые в использовании реализации осложненных диалоговых окон.  
+## <a name="common-dialogs"></a>Common Dialogs  
+ These dialog box classes encapsulate the Windows common dialog boxes. They provide easy-to-use implementations of complicated dialog boxes.  
   
- [CCommonDialog](../Topic/CCommonDialog%20Class.md)  
- Базовый класс для всех стандартных диалоговых окон.  
+ [CCommonDialog](../mfc/reference/ccommondialog-class.md)  
+ Base class for all common dialog boxes.  
   
- [CFileDialog](../Topic/CFileDialog%20Class.md)  
- Предоставляется стандартное диалоговое окно для открытия или сохранения файла.  
+ [CFileDialog](../mfc/reference/cfiledialog-class.md)  
+ Provides a standard dialog box for opening or saving a file.  
   
  [CColorDialog](../mfc/reference/ccolordialog-class.md)  
- Предоставляется стандартное диалоговое окно для выбора цвета.  
+ Provides a standard dialog box for selecting a color.  
   
  [CFontDialog](../mfc/reference/cfontdialog-class.md)  
- Предоставляется стандартное диалоговое окно для выбора шрифта.  
+ Provides a standard dialog box for selecting a font.  
   
- [CFindReplaceDialog](../Topic/CFindReplaceDialog%20Class.md)  
- Предоставляется стандартное диалоговое окно для операции поиск\-и\- заменить.  
+ [CFindReplaceDialog](../mfc/reference/cfindreplacedialog-class.md)  
+ Provides a standard dialog box for a search-and-replace operation.  
   
- [CPrintDialog](../Topic/CPrintDialog%20Class.md)  
- Предоставляется стандартное диалоговое окно для печати файла.  
+ [CPrintDialog](../mfc/reference/cprintdialog-class.md)  
+ Provides a standard dialog box for printing a file.  
   
  [CPrintDialogEx](../mfc/reference/cprintdialogex-class.md)  
- Предоставляет страницу свойств печати в Windows 2000.  
+ Provides a Windows 2000 Print property sheet.  
   
  [CPageSetupDialog](../mfc/reference/cpagesetupdialog-class.md)  
- Инкапсулирует службы с помощью диалогового окна "параметры страницы" общие Windows с дополнительной поддержки для установки и изменения полей печати.  
+ Encapsulates the services provided by the Windows common Page Setup dialog box with additional support for setting and modifying print margins.  
   
-## Стандартные диалоги OLE  
- Добавляет OLE несколько стандартных диалоговых окон в Windows.  Эти классы инкапсулируют OLE стандартные диалоговые окна.  
+## <a name="ole-common-dialogs"></a>OLE Common Dialogs  
+ OLE adds several common dialog boxes to Windows. These classes encapsulate the OLE common dialog boxes.  
   
  [COleDialog](../mfc/reference/coledialog-class.md)  
- Используется средой выполнения для хранения общие реализации для всех OLE диалоговых окон.  Все классы диалогового окна в категории интерфейса пользователя являются производными от этого базового класса.  `COleDialog` нельзя использовать напрямую.  
+ Used by the framework to contain common implementations for all OLE dialog boxes. All dialog box classes in the user-interface category are derived from this base class. `COleDialog` cannot be used directly.  
   
  [COleInsertDialog](../mfc/reference/coleinsertdialog-class.md)  
- Отображает диалоговое окно объекта вставки, интерфейс обычного пользователя для вставки новых элементов OLE связанные или внедренные.  
+ Displays the Insert Object dialog box, the standard user interface for inserting new OLE linked or embedded items.  
   
  [COlePasteSpecialDialog](../mfc/reference/colepastespecialdialog-class.md)  
- Отображает диалоговое окно для вставки, интерфейс обычного пользователя для реализации команду для вставки правки.  
+ Displays the Paste Special dialog box, the standard user interface for implementing the Edit Paste Special command.  
   
  [COleLinksDialog](../mfc/reference/colelinksdialog-class.md)  
- Отображает диалоговое окно ссылок правки, интерфейс обычного пользователя для изменения сведений о связанных элементов.  
+ Displays the Edit Links dialog box, the standard user interface for modifying information about linked items.  
   
  [COleChangeIconDialog](../mfc/reference/colechangeicondialog-class.md)  
- Отображает диалоговое окно Значка изменения, интерфейс обычного пользователя для изменения Значок, связанный с внедренным или OLE, связанные с элементом.  
+ Displays the Change Icon dialog box, the standard user interface for changing the icon associated with an OLE embedded or linked item.  
   
  [COleConvertDialog](../mfc/reference/coleconvertdialog-class.md)  
- Отображает диалоговое окно преобразования, интерфейс обычного пользователя для преобразования элемент OLE из одного типа в другой.  
+ Displays the Convert dialog box, the standard user interface for converting OLE items from one type to another.  
   
- [COlePropertiesDialog](../Topic/COlePropertiesDialog%20Class.md)  
- Инкапсулирует диалоговое окно свойств Windows общее OLE.  Общие диалоговые окна свойств OLE предоставляют простой способ отображения и изменения свойств OLE элемента документа способом последовательного стандартам Windows.  
+ [COlePropertiesDialog](../mfc/reference/colepropertiesdialog-class.md)  
+ Encapsulates the Windows common OLE Properties dialog box. Common OLE Properties dialog boxes provide an easy way to display and modify the properties of an OLE document item in a manner consistent with Windows standards.  
   
- [COleUpdateDialog](../Topic/COleUpdateDialog%20Class.md)  
- Отображает диалоговое окно обновление, интерфейс обычного пользователя для обновления всех ссылок в документе.  Диалоговое окно содержит индикатор выполнения, показывающий, как закрыть процедура обновления до завершения.  
+ [COleUpdateDialog](../mfc/reference/coleupdatedialog-class.md)  
+ Displays the Update dialog box, the standard user interface for updating all links in a document. The dialog box contains a progress indicator to indicate how close the update procedure is to completion.  
   
  [COleChangeSourceDialog](../mfc/reference/colechangesourcedialog-class.md)  
- Отображает диалоговое окно источника изменения, интерфейс для обычного пользователя изменить назначение или источник ссылки.  
+ Displays the Change Source dialog box, the standard user interface for changing the destination or source of a link.  
   
  [COleBusyDialog](../mfc/reference/colebusydialog-class.md)  
- Отображает сервер Занят и сервера не отвечающий диалоговые окна, интерфейс обычного пользователя для обработки вызовы занято приложения.  Обычно отображается автоматически реализацией [COleMessageFilter](../mfc/reference/colemessagefilter-class.md).  
+ Displays the Server Busy and Server Not Responding dialog boxes, the standard user interface for handling calls to busy applications. Usually displayed automatically by the [COleMessageFilter](../mfc/reference/colemessagefilter-class.md) implementation.  
   
-## Классы страницы свойств  
- Классы страницы свойств позволяют приложениям использовать страницы свойств, также известные как нашитые диалоговые окна.  Страницы свойств для эффективной организации большое число элементов управления в одном диалоговом окне.  
+## <a name="property-sheet-classes"></a>Property Sheet Classes  
+ The property sheet classes allow your applications to use property sheets, also known as tabbed dialogs. Property sheets are an efficient way to organize a large number of controls in a single dialog box.  
   
  [CPropertyPage](../mfc/reference/cpropertypage-class.md)  
- Предоставляет отдельные страницы внутри страницы свойств.  Унаследуйте класс от `CPropertyPage` для каждой страницы, чтобы добавить на страницу свойств.  
+ Provides the individual pages within a property sheet. Derive a class from `CPropertyPage` for each page to be added to your property sheet.  
   
  [CPropertySheet](../mfc/reference/cpropertysheet-class.md)  
- Предоставляет кадр для нескольких страниц свойств.  Создайте производный класс страницы свойств из `CPropertySheet` для реализации на страницах свойств быстро.  
+ Provides the frame for multiple property pages. Derive your property sheet class from `CPropertySheet` to implement your property sheets quickly.  
   
  [COlePropertyPage](../mfc/reference/colepropertypage-class.md)  
- Отображает свойства элемента управления OLE в графическом интерфейсе, аналогично диалоговому окну.  
+ Displays the properties of an OLE control in a graphical interface, similar to a dialog box.  
   
-## Классы диалогового окна на базе HTML с  
- [CDHtmlDialog](../Topic/CDHtmlDialog%20Class.md)  
- Используется для создания диалоговые окна, которые реализуют интерфейс пользователя с их HTML вместо ресурсов диалогового окна.  
+## <a name="html-based-dialog-classes"></a>HTML-based Dialog Classes  
+ [CDHtmlDialog](../mfc/reference/cdhtmldialog-class.md)  
+ Used to create dialog boxes that implement their user interface with HTML rather than dialog resources.  
   
  [CMultiPageDHtmlDialog](../mfc/reference/cmultipagedhtmldialog-class.md)  
- Отображает несколько html\-страницы и последовательно обрабатывает события из каждой страницы.  
+ Displays multiple HTML pages sequentially and handles the events from each page.  
   
-## Связанные классы  
- Эти классы не диалоговых окон по сути, однако они используют шаблонов диалоговых окон и имеют многие расширения функциональности диалоговых окон.  
+## <a name="related-classes"></a>Related Classes  
+ These classes are not dialog boxes per se, but they use dialog box templates and have much of the behavior of dialog boxes.  
   
  [CDialogBar](../mfc/reference/cdialogbar-class.md)  
- Панель элементов управления, основанная на шаблоне диалогового окна.  
+ A control bar that is based on a dialog box template.  
   
  [CFormView](../mfc/reference/cformview-class.md)  
- Представление с прокруткой макет которого определен в шаблоне диалогового окна.  Унаследуйте класс от `CFormView` для реализации интерфейса пользователя на основе шаблона диалогового окна.  
+ A scroll view whose layout is defined in a dialog box template. Derive a class from `CFormView` to implement a user interface based on a dialog box template.  
   
  [CDaoRecordView](../mfc/reference/cdaorecordview-class.md)  
- Предоставляет непосредственно вложенного представление формы объекта набора записей \(DAO\) объекта доступа к данным.  Как и другие представления формы, `CDaoRecordView` основан на шаблоне диалогового окна.  
+ Provides a form view directly connected to a Data Access Object (DAO) recordset object. Like all form views, a `CDaoRecordView` is based on a dialog box template.  
   
  [CRecordView](../mfc/reference/crecordview-class.md)  
- Предоставляет непосредственно вложенного представление формы объекта набора записей ODBC \(ODBC\).  Как и другие представления формы, `CRecordView` основан на шаблоне диалогового окна.  
+ Provides a form view directly connected to an Open Database Connectivity (ODBC) recordset object. Like all form views, a `CRecordView` is based on a dialog box template.  
   
  [CPrintInfo](../mfc/reference/cprintinfo-structure.md)  
- Структура, содержащая сведения о задании печати или предварительного просмотра.  Используется архитектурой печати [CView](../Topic/CView%20Class.md).  
+ A structure containing information about a print or print preview job. Used by the printing architecture of [CView](../mfc/reference/cview-class.md).  
   
-## См. также  
- [Общие сведения о классах](../mfc/class-library-overview.md)
+## <a name="see-also"></a>See Also  
+ [Class Overview](../mfc/class-library-overview.md)
+
+

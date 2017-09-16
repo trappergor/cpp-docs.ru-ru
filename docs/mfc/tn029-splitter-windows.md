@@ -1,86 +1,103 @@
 ---
-title: "TN029. Окна разделителей | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "vc.windows.splitter"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "окна разделителей, об окнах разделителей"
-  - "TN029"
+title: 'TN029: Splitter Windows | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- vc.windows.splitter
+dev_langs:
+- C++
+helpviewer_keywords:
+- TN029
+- splitter windows [MFC], about splitter windows
 ms.assetid: 2c57ce99-2a3c-4eff-9cea-baccb13af075
 caps.latest.revision: 18
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 14
----
-# TN029. Окна разделителей
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: d0885dea840b73b78be581383c7f4a194b5cb9a8
+ms.contentlocale: ru-ru
+ms.lasthandoff: 09/12/2017
 
-Эта заметка описывает MFC [CSplitterWnd Class](../mfc/reference/csplitterwnd-class.md), который предоставляет окно разделяет и управляет изменение других окон области.  
+---
+# <a name="tn029-splitter-windows"></a>TN029: Splitter Windows
+This note describes the MFC [CSplitterWnd Class](../mfc/reference/csplitterwnd-class.md), which provides window splits and manages the resizing of other pane windows.  
   
-## Стиль разделителя  
- `CSplitterWnd` поддерживает 2 различных стиля разделение окна.  
+## <a name="splitter-styles"></a>Splitter Styles  
+ A `CSplitterWnd` supports two different styles of splitting windows.  
   
- В статических разделителях «,» окно\-разделитель создает области при его создании.  Никогда не изменяется порядок и число областей.  Панели разделителя используются для изменения различных областей.  Можно использовать этот стиль отображения класс представления в каждой области.  Редактор графики Visual C\+\+ файловый менеджер Windows примеры программ, использующих этот стиль разделителя.  Этот стиль окна\-разделителя не использует окна разделителя.  
+ In "static splitters," the splitter window creates the panes when it is created. The order and number of panes never change. Splitter bars are used to resize the different panes. You can use this style to display a different view class in each pane. The Visual C++ graphics editor and the Windows File Manager are examples of programs that use this splitter style. This style of splitter window does not use splitter boxes.  
   
- В динамических разделителях «,» создаются и уничтожаются дополнительные области, как пользователь разделят и отменить новые представления разделений.  Этот разделитель начинает работу с одним представлением, и предоставляет окна разделителя для пользователя, чтобы начать разделить.  Разделитель динамически создает новый объект представления, если представление разделено в одном направлении.  Этот новый объект представления представляет новую область.  Если представление разделено на 2 направлениях интерфейса с помощью клавиатуры, окно\-разделитель создает 3 новых объектов представления для 3 новых областей.  При разделении активно, Windows отображение окна разделителя области в качестве разделителя между областями.  Windows уничтожает дополнительные объекты представления, когда пользователь удаляет разделение, но первоначальное представление остается окно\-разделитель до тех пор, пока он не будет удален.  Microsoft Excel или Microsoft Word примеры приложений, использующих динамический стиль разделителя.  
+ In "dynamic splitters," additional panes are created and destroyed as the user splits and un-splits new views. This splitter starts out with a single view and provides splitter boxes for the user to initiate splitting. The splitter window dynamically creates a new view object when the view is split in one direction. This new view object represents the new pane. If the view is split in two directions by using the keyboard interface, the splitter window creates three new view objects for the three new panes. While the split is active, Windows displays the splitter box as a splitter bar between the panes. Windows destroys additional view objects when the user removes a split, but the original view remains until the splitter window itself is destroyed. Microsoft Excel and Microsoft Word are examples of applications that use the dynamic splitter style.  
   
- При создании любого типа окна\-разделителя необходимо задать максимальное число строк и столбцов, управляет разделитель.  Статический разделитель создает области, чтобы заполнить все строки и столбцы.  Динамический разделитель создает только первая область при `CSplitterWnd` будет создано.  
+ When you create either kind of splitter window, you must specify the maximum number of rows and columns that the splitter will manage. A static splitter will create panes to fill all the rows and columns. A dynamic splitter will create only the first pane when the `CSplitterWnd` is created.  
   
- Максимальное число областей, можно задать для статических разделителей 16 строк на 16 столбцов.  Рекомендованные конфигурации:  
+ The maximum number of panes you can specify for static splitters is 16 rows by 16 columns. The recommended configurations are:  
   
--   1 строка x 2 столбца: обычно с несходными областями  
+-   1 row x 2 columns : usually with dissimilar panes  
   
--   2 строки x 1 столбец: обычно с несходными областями  
+-   2 rows x 1 column : usually with dissimilar panes  
   
--   2 строки x 2 столбца: обычно с областями также  
+-   2 rows x 2 columns : usually with similar panes  
   
- Максимальное количество областей, которые можно задать для динамических разделителей строки 2 2 столбцами.  Рекомендованные конфигурации:  
+ The maximum number of panes that you can specify for dynamic splitters is 2 rows by 2 columns. The recommended configurations are:  
   
--   1 строка x 2 столбца: для шестоватых данных  
+-   1 row x 2 columns : for columnar data  
   
--   2 строки x 1 столбец: для текстуальных или других данных  
+-   2 rows x 1 column : for textual or other data  
   
--   2 строки x 2 столбца: для таблицы или таблицы ориентировал данные  
+-   2 rows x 2 columns : for grid or table oriented data  
   
-## Примеры разделителя  
- Многие примеры программы MFC используются окна\-разделители прямо или косвенно.  MFC общий пример [VIEWEX](../top/visual-cpp-samples.md) рассмотрены использует несколько статических разделителей, включая настройки разделитель в разделителе.  
+## <a name="splitter-examples"></a>Splitter Examples  
+ Many of the MFC sample programs use splitter windows directly or indirectly. The MFC General sample [VIEWEX](../visual-cpp-samples.md) illustrates several uses of static splitters, including how to place a splitter in a splitter.  
   
- Можно также использовать классы ClassWizard создание класса фреймового окна \(MDI\) нового интерфейса MDI дочерний, содержащий разделитель.  Дополнительные сведения о окно\-разделителях см. в разделе [Типы многооконного, представления и фреймовые окна](../mfc/multiple-document-types-views-and-frame-windows.md).  
+ You can also use ClassWizard to create a new multiple document interface (MDI) Child frame window class that contains a splitter window. For more information on splitter windows, see [Multiple Document Types, Views, and Frame Windows](../mfc/multiple-document-types-views-and-frame-windows.md).  
   
-## Терминология, используемая реализацией  
- Ниже представлен список терминов, относящихся к окно\-разделителям:  
+## <a name="terminology-used-by-implementation"></a>Terminology Used by Implementation  
+ Here is a list of terms that are specific to splitter windows:  
   
  `CSplitterWnd`:  
- Окно, которое предоставляет нужно разделить элементы управления и полосы прокрутки, совместно используются всеми областями в строке или столбце.  При определении строки и столбцы с индексацией от нуля номерами \(первая область строка \= 0 и столбец \= 0\).  
+ A window that provides pane-splitting controls and scroll bars that are shared between all panes on a row or column. You specify rows and columns with zero-based numbers (the first pane is row = 0 and column = 0).  
   
- Область действия:  
- Конкретного приложения окно, `CSplitterWnd` управляет.  Область обычно объект, производный от [CView Class](../Topic/CView%20Class.md), но может быть любым объектом [CWnd](../Topic/CWnd%20Class.md), имеет соответствующий идентификатор дочернего окна  
+ Pane:  
+ An application-specific window that a `CSplitterWnd` manages. A pane is usually an object that is derived from the [CView Class](../mfc/reference/cview-class.md), but can be any [CWnd](../mfc/reference/cwnd-class.md) object that has the appropriate child window ID.  
   
- Использовать `CWnd`\- производного объекта, передайте `RUNTIME_CLASS` объекта в функции `CreateView` так же, как и при использовании `CView`\), то производный класс.  Класс должен использовать `DECLARE_DYNCREATE` и `IMPLEMENT_DYNCREATE`, поскольку платформа использует динамическое создание во время выполнения.  Хотя многие код в `CSplitterWnd`, относящихся к классу `CView`, всегда используется [CObject::IsKindOf](../Topic/CObject::IsKindOf.md), прежде чем эти действия выполняются.  
+ To use a `CWnd`-derived object, pass the `RUNTIME_CLASS` of the object to the `CreateView` function as you would if you were using a `CView`-derived class. Your class must use `DECLARE_DYNCREATE` and `IMPLEMENT_DYNCREATE` because the framework uses dynamic creation at runtime. Although there is a lot of code in `CSplitterWnd` that is specific to the `CView` class, [CObject::IsKindOf](../mfc/reference/cobject-class.md#iskindof) is always used before those actions are performed.  
   
- Панель разделителя.  
- Элемент управления, который размещается между строками и столбцами областей.  Он может использоваться, чтобы изменить размеры строк и столбцов областей.  
+ Splitter Bar:  
+ A control that is placed between rows and columns of panes. It may be used to adjust the sizes of rows or columns of panes.  
   
- Окно разделителя.  
- Элемент управления в динамическом `CSplitterWnd`, который можно использовать для создания новых строк или столбцов областей.  Оно находится в верхней части вертикальные полосы прокрутки или слева от горизонтальных полос прокрутки.  
+ Splitter Box:  
+ A control in a dynamic `CSplitterWnd` that you can use to create new rows or columns of panes. It is located at the top of the vertical scroll bars or to the left of the horizontal scroll bars.  
   
- Пересечение разделителя.  
- Пересечение разделителя горизонтальной и вертикальной черты панели разделителя.  Можно перетащить его, чтобы изменять размер строк и столбцов области одновременно.  
+ Splitter Intersection:  
+ The intersection of a vertical splitter bar and a horizontal splitter bar. You can drag it to adjust the size of a row and column of panes simultaneously.  
   
-## Общие полосы прокрутки  
- Класс `CSplitterWnd` также поддерживает общие полосы прокрутки.  Эти элементы управления полосы прокрутки дочерние элементы `CSplitterWnd` и совместно с другими областями в разделителе.  
+## <a name="shared-scroll-bars"></a>Shared Scroll Bars  
+ The `CSplitterWnd` class also supports shared scroll bars. These scroll bar controls are children of the `CSplitterWnd` and are shared with the different panes in the splitter.  
   
- Например, в окне столбца 1 x2 строки, можно указать WS\_VSCROLL создание `CSplitterWnd`.  Windows создает специальный элемент управления "полоса прокрутки", совместно используемый в 2 областями.  
+ For example, in a 1 row x 2 column window, you can specify WS_VSCROLL when creating the `CSplitterWnd`. Windows creates a special scroll bar control that is shared between the two panes.  
   
 ```  
 [      ][      ][^]  
@@ -88,57 +105,59 @@ caps.handback.revision: 14
 [      ][      ][v]  
 ```  
   
- Когда пользователь перемещает полоса прокрутки, сообщения `WM_VSCROLL` отправляются на оба представления.  Любое представление при этом положение полосы прокрутки, общая полоса прокрутки будет установлена.  
+ When the user moves the scroll bar, `WM_VSCROLL` messages will be sent to both views. When either view sets the scroll bar position, the shared scroll bar will be set.  
   
- Обратите внимание, что общие полосы прокрутки наиболее полезны также с объектами представления.  В случае смешения представления различных типов в разделителе, можно написать специальный код для управления их положения полос прокрутки.  Любое `CView`\- производный класс, который использует API полосы прокрутки `CWnd` делегирует к общей полосе прокрутки, если она существует.  Реализация `CScrollView` примером класса `CView`, поддерживающий общие полосы прокрутки.  Классы, которые не являются производными от `CView`, классов, основанных на полосах прокрутки, элемента управления или классы, используют стандартные реализации Windows \(например, `CEditView`\), не будут работать с общей функцией полосы прокрутки `CSplitterWnd`.  
+ Note that shared scroll bars are most useful with similar view objects. If you mix views of different types in a splitter, then you may have to write special code to coordinate their scroll positions. Any `CView`-derived class that uses the `CWnd` scroll bar APIs will delegate to the shared scroll bar if it exists. The `CScrollView` implementation is one example of a `CView` class that supports shared scroll bars. Classes that are not derived from `CView`, classes that rely on non-control scroll bars, or classes that use standard Windows implementations (for example, `CEditView`) will not work with the shared scroll bar feature of `CSplitterWnd`.  
   
-## Минимальные размеры  
- Для каждой строки минимальная высота строки и для каждого столбца минимальная ширина столбца.  Это не гарантирует, что область не слишком мала для отображения в полной информации.  
+## <a name="minimum-sizes"></a>Minimum Sizes  
+ For each row there is a minimum row height, and for each column there is a minimum column width. This minimum guarantees that a pane is not too small to be shown in complete detail.  
   
- Для статического окна\-разделителя начальные строки, минимальное значение высоты и ширины столбца 0.  Для динамического окна\-разделителя начальные строки, минимальное значение высоты и ширины столбца задается параметром `sizeMin` функции `CSplitterWnd::Create`.  
+ For a static splitter window, the initial minimum row height and column width is 0. For a dynamic splitter window, the initial minimum row height and column width are set by the `sizeMin` parameter of the `CSplitterWnd::Create` function.  
   
- Можно изменить эти минимальные размеры с помощью функций [CSplitterWnd::SetRowInfo](../Topic/CSplitterWnd::SetRowInfo.md) и [CSplitterWnd::SetColumnInfo](../Topic/CSplitterWnd::SetColumnInfo.md).  
+ You can change these minimum sizes by using the [CSplitterWnd::SetRowInfo](../mfc/reference/csplitterwnd-class.md#setrowinfo) and [CSplitterWnd::SetColumnInfo](../mfc/reference/csplitterwnd-class.md#setcolumninfo) functions.  
   
-## Фактический и идеальных размеров  
- Макет областей в окно\-разделителе зависит от размера стека, содержащий их.  Когда пользователь изменяет размер, содержащий кадр, `CSplitterWnd` перемещает и изменить области, чтобы они приспособят наилучшим образом.  
+## <a name="actual-vs-ideal-sizes"></a>Actual vs. Ideal Sizes  
+ The layout of the panes in the splitter window depends on the size of the frame that contains them. When a user resizes the containing frame, the `CSplitterWnd` repositions and resizes the panes so that they fit as well as possible.  
   
- Пользователь может вручную задать размеры ширины столбца и высоты строки, или программа может задать идеальный размер с помощью класса `CSplitterWnd`.  Фактический размер может быть меньше или больше идеал.  Windows отрегулирует фактический размер, если недостаточно места отображения идеальный размер или если слишком много пустого пространства в правой и нижней части окна\-разделителя.  
+ The user can manually set the row height and column width sizes, or the program can set the ideal size by using the `CSplitterWnd` class. The actual size can be smaller or larger than the ideal. Windows will adjust the actual size if there is not enough room to display the ideal size or if there is too much empty space on the right or bottom of the splitter window.  
   
-## Пользовательские элементы управления  
- Можно переопределить множество функций для предоставления настраиванное расширение функциональности и числом интерфейс.  Можно переопределить этот первый набор для предоставления другую скульптуру графических окна\-разделителя для различных компонентов.  
+## <a name="custom-controls"></a>Custom Controls  
+ You can override many functions to provide customized behavior and a customized interface. You can override this first set to provide alternate imagery for the various graphical components of a splitter window.  
   
--   `virtual void OnDrawSpltter(CDC* pDC, ESplitType nType, const CRect& rect);`  
+- `virtual void OnDrawSpltter(CDC* pDC, ESplitType nType, const CRect& rect);`  
   
--   `virtual void OnInvertTracker(const CRect& rect);`  
+- `virtual void OnInvertTracker(const CRect& rect);`  
   
- При вызове этой функции, чтобы создать общий элемент управления "полоса прокрутки".  Можно переопределить его, чтобы создать дополнительные элементы управления рядом с полосой прокрутки.  
+ You call this function to create a shared scroll bar control. You can override it to create extra controls next to the scroll bar.  
   
--   `virtual BOOL CreateScrollBarCtrl(DWORD dwStyle, UINT nID);`  
+- `virtual BOOL CreateScrollBarCtrl(DWORD dwStyle, UINT nID);`  
   
- Эти функции реализующими логику динамического окна\-разделителя.  Можно переопределить эти для обеспечения более сложных логику разделителя.  
+ These functions implement the logic of the dynamic splitter window. You can override these to provide more advanced splitter logic.  
   
--   `virtual void DeleteView(int row, int col);`  
+- `virtual void DeleteView(int row, int col);`  
   
--   `virtual BOOL SplitRow(int cyBefore);`  
+- `virtual BOOL SplitRow(int cyBefore);`  
   
--   `virtual BOOL SplitColumn(int cxBefore);`  
+- `virtual BOOL SplitColumn(int cxBefore);`  
   
--   `virtual void DeleteRow(int rowDelete);`  
+- `virtual void DeleteRow(int rowDelete);`  
   
--   `virtual void DeleteColumn(int colDelete);`  
+- `virtual void DeleteColumn(int colDelete);`  
   
-## Функция CView  
- Класс `CView` используются следующие высокоуровневые команды делегировать в `CSplitterWnd` реализацию.  Поскольку эти команды виртуальный, стандартная реализация `CView` не требует, чтобы все реализации `CSplitterWnd` была связана недопустимо.  Для приложений, использующих `CView`, но не `CSplitterWnd`, реализация `CSplitterWnd` не будет связана с приложением.  
+## <a name="cview-functionality"></a>CView Functionality  
+ The `CView` class uses the following high level commands to delegate to the `CSplitterWnd` implementation. Because these commands are virtual, the standard `CView` implementation will not require the entire `CSplitterWnd` implementation to be linked in. For applications that use `CView` but not `CSplitterWnd`, the `CSplitterWnd` implementation will not be linked with the application.  
   
  `virtual BOOL CanActivateNext(BOOL bPrev = FALSE);`  
- Проверяет, является ли ID\_NEXT\_PANE или ID\_PREV\_PANE в настоящее время доступны.  
+ Checks whether ID_NEXT_PANE or ID_PREV_PANE is currently possible.  
   
  `virtual void ActivateNext(BOOL bPrev = FALSE);`  
- Выполняет команду «следующей области» или «предыдущей области».  
+ Executes the "Next Pane" or "Previous Pane" command.  
   
  `virtual BOOL DoKeyboardSplit();`  
- Выполняет команду разделения клавиатуры, обычно имеют «окно».  
+ Executes the keyboard split command, usually "Window Split".  
   
-## См. также  
- [Технические примечания по номеру](../mfc/technical-notes-by-number.md)   
- [Технические примечания по категории](../mfc/technical-notes-by-category.md)
+## <a name="see-also"></a>See Also  
+ [Technical Notes by Number](../mfc/technical-notes-by-number.md)   
+ [Technical Notes by Category](../mfc/technical-notes-by-category.md)
+
+

@@ -1,43 +1,62 @@
 ---
-title: "Использование элемента управления &quot;Анимация&quot; | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "элементы управления анимацией [C++]"
-  - "CAnimateCtrl - класс, элементы управления анимацией"
-  - "элементы управления [MFC], анимация"
+title: Using an Animation Control | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- controls [MFC], animation
+- CAnimateCtrl class [MFC], animation controls
+- animation controls [MFC]
 ms.assetid: a009a464-e12d-4112-bf52-04a09b28dd88
 caps.latest.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 6
----
-# Использование элемента управления &quot;Анимация&quot;
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: e7555102fdfdb3cbe1405b23a1acde25178567bb
+ms.contentlocale: ru-ru
+ms.lasthandoff: 09/12/2017
 
-Типичное потребление управления анимацией соответствующий шаблон ниже:  
+---
+# <a name="using-an-animation-control"></a>Using an Animation Control
+Typical usage of an animation control follows the pattern below:  
   
--   Элемент управления.  Если элемент управления определен в шаблоне диалогового окна, автоматическое создание диалоговое окно при создании. \(Необходимо иметь член [CAnimateCtrl](../mfc/reference/canimatectrl-class.md) в классе диалогового окна, соответствующий элементу управления анимацией\). Также можно использовать функцию\-член [Создать](../Topic/CAnimateCtrl::Create.md) создает элемент управления, как дочернее окно любого окна.  
+-   The control is created. If the control is specified in a dialog box template, creation is automatic when the dialog box is created. (You should have a [CAnimateCtrl](../mfc/reference/canimatectrl-class.md) member in your dialog class that corresponds to the animation control.) Alternatively, you can use the [Create](../mfc/reference/canimatectrl-class.md#create) member function to create the control as a child window of any window.  
   
--   Загрузите отсечение формат AVI в элемент управления анимацией, вызвав функцию\-член [Открыть](../Topic/CAnimateCtrl::Open.md).  Если в элемент управления анимацией в диалоговом окне, задача прекрасного разместить его в функции [OnInitDialog](../Topic/CDialog::OnInitDialog.md) класса диалогового окна.  
+-   Load an AVI clip into the animation control by calling the [Open](../mfc/reference/canimatectrl-class.md#open) member function. If your animation control is in a dialog box, a good place to do this is in the dialog class's [OnInitDialog](../mfc/reference/cdialog-class.md#oninitdialog) function.  
   
--   Воспроизведение отсечение, вызвав функцию\-член [Воспроизвести](../Topic/CAnimateCtrl::Play.md).  Если в элемент управления анимацией в диалоговом окне, задача прекрасного разместить его в функции **OnInitDialog**  класса диалогового окна.  Вызов метода **Воспроизвести** не является обязательным, если элемент управления анимацией имеет задать стиль `ACS_AUTOPLAY`.  
+-   Play the clip by calling the [Play](../mfc/reference/canimatectrl-class.md#play) member function. If your animation control is in a dialog box, a good place to do this is in the dialog class's **OnInitDialog** function. Calling **Play** is not necessary if the animation control has the `ACS_AUTOPLAY` style set.  
   
--   Если требуется отобразить части отсечения или его воспроизведения кадр кадром следует использовать функции\-члена `Seek`.  Чтобы остановить отсечение, воспроизводится, используйте функции\-члена `Stop`.  
+-   If you want to display portions of the clip or play it frame by frame, use the `Seek` member function. To stop a clip that is playing, use the `Stop` member function.  
   
--   Если не удалить элемент управления непосредственно перейти, удалите отсечение из памяти, вызвав функцию\-член **Закрыть**.  
+-   If you are not going to destroy the control right away, remove the clip from memory by calling the **Close** member function.  
   
--   Если элемент управления анимацией в диалоговом окне, оно и объект `CAnimateCtrl` будут уничтожены автоматически.  Если нет, необходимо убедиться, что и элемент управления и объект `CAnimateCtrl` правильно уничтожены.  Удалить элемент управления автоматически закрывает отсечение формат AVI.  
+-   If the animation control is in a dialog box, it and the `CAnimateCtrl` object will be destroyed automatically. If not, you need to ensure that both the control and the `CAnimateCtrl` object are properly destroyed. Destroying the control automatically closes the AVI clip.  
   
-## См. также  
- [Использование CAnimateCtrl](../Topic/Using%20CAnimateCtrl.md)   
- [Элементы управления](../mfc/controls-mfc.md)
+## <a name="see-also"></a>See Also  
+ [Using CAnimateCtrl](../mfc/using-canimatectrl.md)   
+ [Controls](../mfc/controls-mfc.md)
+
+

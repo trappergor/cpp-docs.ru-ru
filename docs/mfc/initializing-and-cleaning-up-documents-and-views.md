@@ -1,62 +1,81 @@
 ---
-title: "Инициализация и очистка документов и представлений | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "объекты документа, жизненный цикл"
-  - "документы, очистка"
-  - "документы, инициализация"
-  - "инициализация документов"
-  - "инициализация объектов, объекты документа"
-  - "инициализация представлений"
-  - "представления, очистка"
-  - "представления, инициализация"
+title: Initializing and Cleaning Up Documents and Views | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- initializing documents [MFC]
+- views [MFC], cleaning up
+- documents [MFC], initializing
+- documents [MFC], cleaning up
+- views [MFC], initializing
+- initializing objects [MFC], document objects
+- document objects [MFC], life cycle of
+- initializing views [MFC]
 ms.assetid: 95d6f09b-a047-4079-856a-ae7d0548e9d2
 caps.latest.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 5
----
-# Инициализация и очистка документов и представлений
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: e08b862b32a58c545fb1f3265ec6a5110b920724
+ms.contentlocale: ru-ru
+ms.lasthandoff: 09/12/2017
 
-Используйте следующие правила для инициализации и очистки после текущих документов и представлений.  
+---
+# <a name="initializing-and-cleaning-up-documents-and-views"></a>Initializing and Cleaning Up Documents and Views
+Use the following guidelines for initializing and cleaning up after your documents and views:  
   
--   Платформы MFC инициализирует документы и представления. можно инициализировать все данные добавляются на них.  
+-   The MFC framework initializes documents and views; you initialize any data you add to them.  
   
--   Платформа очищает как документы и представления закроют; необходимо отменить всю память, выбранной в куче из этих функций\-членов документов и представлений.  
+-   The framework cleans up as documents and views close; you must deallocate any memory that you allocated on the heap from within the member functions of those documents and views.  
   
 > [!NOTE]
->  Помните, что инициализация для всего приложения лучше всего выполняется в переопределении функцию\-член [InitInstance](../Topic/CWinApp::InitInstance.md) класса `CWinApp` и очистка для всего приложения лучше всего выполняется в переопределении функции\-члена [ExitInstance](../Topic/CWinApp::ExitInstance.md)`CWinApp`.  
+>  Recall that initialization for the whole application is best done in your override of the [InitInstance](../mfc/reference/cwinapp-class.md#initinstance) member function of class `CWinApp`, and cleanup for the whole application is best done in your override of the `CWinApp` member function [ExitInstance](../mfc/reference/cwinapp-class.md#exitinstance).  
   
- Жизненный цикл документа \(и его фреймового окна и представления или представления\) в приложении MDI следующим образом:  
+ The life cycle of a document (and its frame window and view or views) in an MDI application is as follows:  
   
-1.  Во время создания динамических, вызывается конструктор документов.  
+1.  During dynamic creation, the document constructor is called.  
   
-2.  Для каждого нового документа называются [OnNewDocument](../Topic/CDocument::OnNewDocument.md) или [OnOpenDocument](../Topic/CDocument::OnOpenDocument.md) документа.  
+2.  For each new document, the document's [OnNewDocument](../mfc/reference/cdocument-class.md#onnewdocument) or [OnOpenDocument](../mfc/reference/cdocument-class.md#onopendocument) is called.  
   
-3.  Пользователь взаимодействует с документом в течение времени его существования.  Обычно это происходит по мере того, как пользователь работает на данных через представление документа, выбирая и редактирования данные.  Представление изменяется и перейти к документу для хранения и обновления других представлений.  В этот момент документ и представление может обрабатывать команды.  
+3.  The user interacts with the document throughout its lifetime. Typically this happens as the user works on document data through the view, selecting and editing the data. The view passes changes on to the document for storage and updating other views. During this time both the document and the view might handle commands.  
   
-4.  Платформа вызывает функцию [DeleteContents](../Topic/CDocument::DeleteContents.md) для удалений для данных в документ.  
+4.  The framework calls [DeleteContents](../mfc/reference/cdocument-class.md#deletecontents) to delete data specific to a document.  
   
-5.  Деструктор вызывается документа.  
+5.  The document's destructor is called.  
   
- В приложении SDI, шаг 1 выполняется один раз при первоначальном создании документа.  Затем проверьте шаги с 2 по 4 выполняются повторно каждый раз, когда новый документ открыт.  Новый документ повторно использует существующий объект документа.  Наконец, шаг 5. при завершении приложения.  
+ In an SDI application, step 1 is performed once, when the document is first created. Then steps 2 through 4 are performed repeatedly each time a new document is opened. The new document reuses the existing document object. Finally, step 5 is performed when the application ends.  
   
-## Дополнительные сведения  
+## <a name="what-do-you-want-to-know-more-about"></a>What do you want to know more about  
   
--   [Инициализация документов и представлений](../mfc/initializing-documents-and-views.md)  
+-   [Initializing Documents and Views](../mfc/initializing-documents-and-views.md)  
   
--   [Содержит описание представления и очистка](../Topic/Cleaning%20Up%20Documents%20and%20Views.md)  
+-   [Cleaning Up Documents and Views](../mfc/cleaning-up-documents-and-views.md)  
   
-## См. также  
- [Архитектура "документ\-представление"](../Topic/Document-View%20Architecture.md)
+## <a name="see-also"></a>See Also  
+ [Document/View Architecture](../mfc/document-view-architecture.md)
+
+

@@ -1,53 +1,71 @@
 ---
-title: "Часто переопределяемые функции-члены | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "CDialog - класс, члены"
-  - "классы диалоговых окон, стандартно переопределяемые функции-члены"
-  - "диалоговые окна MFC, переопределение функций-членов"
-  - "OnCancel - функция"
-  - "OnInitDialog - функция"
-  - "OnOK - функция"
-  - "переопределение, члены класса диалогового окна"
+title: Commonly Overridden Member Functions | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- CDialog class [MFC], members
+- OnInitDialog function
+- dialog classes [MFC], commonly overridden member functions
+- OnCancel function
+- overriding, dialog class members
+- OnOK function
+- MFC dialog boxes [MFC], overriding member functions
 ms.assetid: 78eb566c-e361-4c86-8db5-c7e2791b249a
 caps.latest.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 5
----
-# Часто переопределяемые функции-члены
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 21a29ea120266909ab40473276efb317a482643f
+ms.contentlocale: ru-ru
+ms.lasthandoff: 09/12/2017
 
-В следующей таблице перечислены вероятнее функций\-членов для переопределения в производном классе `CDialog`\-.  
+---
+# <a name="commonly-overridden-member-functions"></a>Commonly Overridden Member Functions
+The following table lists the most likely member functions to override in your `CDialog`-derived class.  
   
-### Часто переопределенная функции\-члена класса CDialog  
+### <a name="commonly-overridden-member-functions-of-class-cdialog"></a>Commonly Overridden Member Functions of Class CDialog  
   
-|Функция\-член|Он отвечает на сообщение|Цель переопределения|  
-|-------------------|------------------------------|--------------------------|  
-|`OnInitDialog`|**WM\_INITDIALOG**|Инициализация управления диалогового окна.|  
-|`OnOK`|**BN\_CLICKED** для кнопки **IDOK**|Ответ, когда пользователь нажимает кнопку " ОК ".|  
-|`OnCancel`|**BN\_CLICKED** для кнопки **IDCANCEL**|Ответ, когда пользователь нажимает кнопку " Отмена ".|  
+|Member function|Message it responds to|Purpose of the override|  
+|---------------------|----------------------------|-----------------------------|  
+|`OnInitDialog`|**WM_INITDIALOG**|Initialize the dialog box's controls.|  
+|`OnOK`|**BN_CLICKED** for button **IDOK**|Respond when the user clicks the OK button.|  
+|`OnCancel`|**BN_CLICKED** for button **IDCANCEL**|Respond when the user clicks the Cancel button.|  
   
- `OnInitDialog`, `OnOK` и `OnCancel` виртуальные функции.  Чтобы переопределить их необходимо объявить переопределяющую функцию в производном классе диалогового окна с помощью [Окно свойств](../Topic/Properties%20Window.md).  
+ `OnInitDialog`, `OnOK`, and `OnCancel` are virtual functions. To override them, you declare an overriding function in your derived dialog class using the [Properties window](/visualstudio/ide/reference/properties-window).  
   
- `OnInitDialog` вызывается непосредственно перед диалоговое окно отображается.  Необходимо вызывать обработчик `OnInitDialog` по умолчанию из переопределения — обычно как первое действие в обработчике.  По умолчанию `OnInitDialog` возвращает **TRUE**, чтобы указать, что фокус должен быть установлен на первый элемент управления в диалоговом окне.  
+ `OnInitDialog` is called just before the dialog box is displayed. You must call the default `OnInitDialog` handler from your override — usually as the first action in the handler. By default, `OnInitDialog` returns **TRUE** to indicate that the focus should be set to the first control in the dialog box.  
   
- `OnOK` обычно переопределено для немодального, но не модальных окон.  При переопределении этот обработчик для модального диалогового окна, вызовите версию базового класса из переопределения — убедиться, что `EndDialog` называется — или вызова `EndDialog` самостоятельно.  
+ `OnOK` is typically overridden for modeless but not modal dialog boxes. If you override this handler for a modal dialog box, call the base class version from your override — to ensure that `EndDialog` is called — or call `EndDialog` yourself.  
   
- `OnCancel` обычно переопределено для немодальных диалоговых окон.  
+ `OnCancel` is usually overridden for modeless dialog boxes.  
   
- Дополнительные сведения об этих функциях\-членах класса см. в разделе [CDialog](../mfc/reference/cdialog-class.md) в *Справочнике по MFC* и в разделе [Жизненный цикл диалогового окна](../mfc/life-cycle-of-a-dialog-box.md).  
+ For more information about these member functions, see class [CDialog](../mfc/reference/cdialog-class.md) in the *MFC Reference* and the discussion on [Life Cycle of a Dialog Box](../mfc/life-cycle-of-a-dialog-box.md).  
   
-## См. также  
- [Диалоговые окна](../mfc/dialog-boxes.md)   
- [Часто добавляемые функции\-члены](../Topic/Commonly%20Added%20Member%20Functions.md)
+## <a name="see-also"></a>See Also  
+ [Dialog Boxes](../mfc/dialog-boxes.md)   
+ [Commonly Added Member Functions](../mfc/commonly-added-member-functions.md)
+

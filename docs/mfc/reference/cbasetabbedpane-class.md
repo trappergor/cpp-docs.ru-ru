@@ -1,5 +1,5 @@
 ---
-title: "Класс CBaseTabbedPane | Документы Microsoft"
+title: CBaseTabbedPane Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -42,7 +42,34 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- CBaseTabbedPane class
+- CBaseTabbedPane [MFC], AddTab
+- CBaseTabbedPane [MFC], AllowDestroyEmptyTabbedPane
+- CBaseTabbedPane [MFC], ApplyRestoredTabInfo
+- CBaseTabbedPane [MFC], CanFloat
+- CBaseTabbedPane [MFC], CanSetCaptionTextToTabName
+- CBaseTabbedPane [MFC], ConvertToTabbedDocument
+- CBaseTabbedPane [MFC], DetachPane
+- CBaseTabbedPane [MFC], EnableSetCaptionTextToTabName
+- CBaseTabbedPane [MFC], FillDefaultTabsOrderArray
+- CBaseTabbedPane [MFC], FindBarByTabNumber
+- CBaseTabbedPane [MFC], FindPaneByID
+- CBaseTabbedPane [MFC], FloatTab
+- CBaseTabbedPane [MFC], GetDefaultTabsOrder
+- CBaseTabbedPane [MFC], GetFirstVisibleTab
+- CBaseTabbedPane [MFC], GetMinSize
+- CBaseTabbedPane [MFC], GetPaneIcon
+- CBaseTabbedPane [MFC], GetPaneList
+- CBaseTabbedPane [MFC], GetTabArea
+- CBaseTabbedPane [MFC], GetTabsNum
+- CBaseTabbedPane [MFC], GetUnderlyingWindow
+- CBaseTabbedPane [MFC], GetVisibleTabsNum
+- CBaseTabbedPane [MFC], HasAutoHideMode
+- CBaseTabbedPane [MFC], IsHideSingleTab
+- CBaseTabbedPane [MFC], RecalcLayout
+- CBaseTabbedPane [MFC], RemovePane
+- CBaseTabbedPane [MFC], SetAutoDestroy
+- CBaseTabbedPane [MFC], SetAutoHideMode
+- CBaseTabbedPane [MFC], ShowTab
 ms.assetid: f22c0080-5b29-4a0a-8f74-8f0a4cd2dbcf
 caps.latest.revision: 26
 author: mikeblome
@@ -63,78 +90,78 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0e0c08ddc57d437c51872b5186ae3fc983bb0199
-ms.openlocfilehash: b72804dd8b2ca2253caff4cebf5b0631ae6040c6
+ms.translationtype: MT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 675d504f3c27c8ef681d42b1569b0b1127f0ad07
 ms.contentlocale: ru-ru
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 09/12/2017
 
 ---
-# <a name="cbasetabbedpane-class"></a>Класс CBaseTabbedPane
-Расширяет функциональность [CDockablePane класса](../../mfc/reference/cdockablepane-class.md) для поддержки создания окон с вкладками.  
+# <a name="cbasetabbedpane-class"></a>CBaseTabbedPane Class
+Extends the functionality of the [CDockablePane Class](../../mfc/reference/cdockablepane-class.md) to support the creation of tabbed windows.  
   
-## <a name="syntax"></a>Синтаксис  
+## <a name="syntax"></a>Syntax  
   
 ```  
 class CBaseTabbedPane : public CDockablePane  
 ```  
   
-## <a name="members"></a>Члены  
+## <a name="members"></a>Members  
   
-### <a name="public-constructors"></a>Открытые конструкторы  
+### <a name="public-constructors"></a>Public Constructors  
   
-|Имя|Описание|  
+|Name|Description|  
 |----------|-----------------|  
-|`CBaseTabbedPane::CBaseTabbedPane`|Конструктор по умолчанию.|  
+|`CBaseTabbedPane::CBaseTabbedPane`|Default constructor.|  
   
-### <a name="public-methods"></a>Открытые методы  
+### <a name="public-methods"></a>Public Methods  
   
-|Имя|Описание|  
+|Name|Description|  
 |----------|-----------------|  
-|[CBaseTabbedPane::AddTab](#addtab)|Добавляет новую вкладку область с вкладками.|  
-|[CBaseTabbedPane::AllowDestroyEmptyTabbedPane](#allowdestroyemptytabbedpane)|Указывает, можно ли удалить пустая область с вкладками.|  
-|[CBaseTabbedPane::ApplyRestoredTabInfo](#applyrestoredtabinfo)|Применяет параметры табуляции, которые загружаются из реестра, чтобы область с вкладками.|  
-|[CBaseTabbedPane::CanFloat](#canfloat)|Определяет, может перемещаться ли области. (Переопределяет [CBasePane::CanFloat](../../mfc/reference/cbasepane-class.md#canfloat).)|  
-|[CBaseTabbedPane::CanSetCaptionTextToTabName](#cansetcaptiontexttotabname)|Определяет, должен ли заголовок для области с вкладками отображать тот же текст в активную вкладку.|  
-|[CBaseTabbedPane::ConvertToTabbedDocument](#converttotabbeddocument)|(Переопределяет [CDockablePane::ConvertToTabbedDocument](../../mfc/reference/cdockablepane-class.md#converttotabbeddocument).)|  
-|[CBaseTabbedPane::DetachPane](#detachpane)|Преобразует один или несколько закрепляемых областей документы с вкладками MDI.|  
-|[CBaseTabbedPane::EnableSetCaptionTextToTabName](#enablesetcaptiontexttotabname)|Включает или отключает возможность синхронизации текст заголовка с текстом метки на активной вкладке области с вкладками.|  
-|[CBaseTabbedPane::FillDefaultTabsOrderArray](#filldefaulttabsorderarray)|Восстанавливает состояние по умолчанию внутренней последовательности.|  
-|[CBaseTabbedPane::FindBarByTabNumber](#findbarbytabnumber)|Возвращает область, в которой находится на вкладке при вкладке определяется по клавише tab (с нуля).|  
+|[CBaseTabbedPane::AddTab](#addtab)|Adds a new tab to a tabbed pane.|  
+|[CBaseTabbedPane::AllowDestroyEmptyTabbedPane](#allowdestroyemptytabbedpane)|Specifies whether an empty tabbed pane can be destroyed.|  
+|[CBaseTabbedPane::ApplyRestoredTabInfo](#applyrestoredtabinfo)|Applies tab settings, which are loaded from the registry, to a tabbed pane.|  
+|[CBaseTabbedPane::CanFloat](#canfloat)|Determines whether the pane can float. (Overrides [CBasePane::CanFloat](../../mfc/reference/cbasepane-class.md#canfloat).)|  
+|[CBaseTabbedPane::CanSetCaptionTextToTabName](#cansetcaptiontexttotabname)|Determines whether the caption for the tabbed pane should display the same text as the active tab.|  
+|[CBaseTabbedPane::ConvertToTabbedDocument](#converttotabbeddocument)|(Overrides [CDockablePane::ConvertToTabbedDocument](../../mfc/reference/cdockablepane-class.md#converttotabbeddocument).)|  
+|[CBaseTabbedPane::DetachPane](#detachpane)|Converts one or more dockable panes to MDI tabbed documents.|  
+|[CBaseTabbedPane::EnableSetCaptionTextToTabName](#enablesetcaptiontexttotabname)|Enables or disables the ability of the tabbed pane to synchronize caption text with the label text on the active tab.|  
+|[CBaseTabbedPane::FillDefaultTabsOrderArray](#filldefaulttabsorderarray)|Restores the internal tab order to a default state.|  
+|[CBaseTabbedPane::FindBarByTabNumber](#findbarbytabnumber)|Returns a pane that resides in a tab when the tab is identified by a zero-based tab index.|  
 |||  
-|[CBaseTabbedPane::FindPaneByID](#findpanebyid)|Возвращает область, в которой определяется по идентификатору области.|  
-|[CBaseTabbedPane::FloatTab](#floattab)|Преобразует панель в плавающую, но только если она расположена на отделяемой вкладке.|  
-|[CBaseTabbedPane::GetDefaultTabsOrder](#getdefaulttabsorder)|Возвращает порядок вкладок на панели.|  
-|[CBaseTabbedPane::GetFirstVisibleTab](#getfirstvisibletab)|Извлекает указатель на первой вкладке отображается.|  
-|[CBaseTabbedPane::GetMinSize](#getminsize)|Получает минимальный поддерживаемый размер для области. (Переопределяет [CPane::GetMinSize](../../mfc/reference/cpane-class.md#getminsize).)|  
-|[CBaseTabbedPane::GetPaneIcon](#getpaneicon)|Возвращает дескриптор для значка панели. (Переопределяет [CBasePane::GetPaneIcon](../../mfc/reference/cbasepane-class.md#getpaneicon).)|  
-|[CBaseTabbedPane::GetPaneList](#getpanelist)|Возвращает список областей, содержащихся в области с вкладками.|  
-|[CBaseTabbedPane::GetTabArea](#gettabarea)|Возвращает прямоугольников вкладки в верхней и нижней областях.|  
-|[CBaseTabbedPane::GetTabsNum](#gettabsnum)|Возвращает число вкладок в окне вкладку.|  
-|[CBaseTabbedPane::GetUnderlyingWindow](#getunderlyingwindow)|Возвращает базовый (оболочку) вкладки окна.|  
-|[CBaseTabbedPane::GetVisibleTabsNum](#getvisibletabsnum)|Возвращает число отображаемых вкладок.|  
-|[CBaseTabbedPane::HasAutoHideMode](#hasautohidemode)|Определяет, можно ли переключить режим автоматического скрытия области с вкладками.|  
-|[CBaseTabbedPane::IsHideSingleTab](#ishidesingletab)|Определяет, скрыт ли области с вкладками, если только одна вкладка отображается.|  
-|`CBaseTabbedPane::LoadSiblingPaneIDs`|Используется во время сериализации.|  
-|[CBaseTabbedPane::RecalcLayout](#recalclayout)|Обновление сведений о макете для области. (Переопределяет [CPane::RecalcLayout](../../mfc/reference/cpane-class.md#recalclayout).)|  
-|[CBaseTabbedPane::RemovePane](#removepane)|Удаляет область панели с вкладками.|  
-|`CBaseTabbedPane::SaveSiblingBarIDs`|Используется во время сериализации.|  
-|`CBaseTabbedPane::Serialize`|(Переопределяет [CDockablePane::Serialize](http://msdn.microsoft.com/en-us/09787e59-e446-4e76-894b-206d303dcfd6).)|  
-|`CBaseTabbedPane::SerializeTabWindow`|Используется во время сериализации.|  
-|[CBaseTabbedPane::SetAutoDestroy](#setautodestroy)|Определяет, автоматическое удаление панели управления с вкладками.|  
-|[CBaseTabbedPane::SetAutoHideMode](#setautohidemode)|Переключение между закрепляемой области отображения и режим автоматического скрытия. (Переопределяет [CDockablePane::SetAutoHideMode](../../mfc/reference/cdockablepane-class.md#setautohidemode).)|  
-|[CBaseTabbedPane::ShowTab](#showtab)|Показывает или скрывает вкладку.|  
+|[CBaseTabbedPane::FindPaneByID](#findpanebyid)|Returns a pane that is identified by the pane ID.|  
+|[CBaseTabbedPane::FloatTab](#floattab)|Floats a pane, but only if the pane currently resides in a detachable tab.|  
+|[CBaseTabbedPane::GetDefaultTabsOrder](#getdefaulttabsorder)|Returns the default order of tabs in the pane.|  
+|[CBaseTabbedPane::GetFirstVisibleTab](#getfirstvisibletab)|Retrieves a pointer to the first displayed tab.|  
+|[CBaseTabbedPane::GetMinSize](#getminsize)|Retrieves the minimum allowed size for the pane. (Overrides [CPane::GetMinSize](../../mfc/reference/cpane-class.md#getminsize).)|  
+|[CBaseTabbedPane::GetPaneIcon](#getpaneicon)|Returns a handle to the pane icon. (Overrides [CBasePane::GetPaneIcon](../../mfc/reference/cbasepane-class.md#getpaneicon).)|  
+|[CBaseTabbedPane::GetPaneList](#getpanelist)|Returns a list of panes that are contained in the tabbed pane.|  
+|[CBaseTabbedPane::GetTabArea](#gettabarea)|Returns the bounding rectangles for the top and bottom tab areas.|  
+|[CBaseTabbedPane::GetTabsNum](#gettabsnum)|Returns the count of tabs in a tab window.|  
+|[CBaseTabbedPane::GetUnderlyingWindow](#getunderlyingwindow)|Gets the underlying (wrapped) tab window.|  
+|[CBaseTabbedPane::GetVisibleTabsNum](#getvisibletabsnum)|Returns the count of displayed tabs.|  
+|[CBaseTabbedPane::HasAutoHideMode](#hasautohidemode)|Determines whether the tabbed pane can be switched to auto-hide mode.|  
+|[CBaseTabbedPane::IsHideSingleTab](#ishidesingletab)|Determines whether the tabbed pane is hidden if only one tab is displayed.|  
+|`CBaseTabbedPane::LoadSiblingPaneIDs`|Used internally during serialization.|  
+|[CBaseTabbedPane::RecalcLayout](#recalclayout)|Recalculates layout information for the pane. (Overrides [CPane::RecalcLayout](../../mfc/reference/cpane-class.md#recalclayout).)|  
+|[CBaseTabbedPane::RemovePane](#removepane)|Removes a pane from the tabbed pane.|  
+|`CBaseTabbedPane::SaveSiblingBarIDs`|Used internally during serialization.|  
+|`CBaseTabbedPane::Serialize`|(Overrides [CDockablePane::Serialize](http://msdn.microsoft.com/en-us/09787e59-e446-4e76-894b-206d303dcfd6).)|  
+|`CBaseTabbedPane::SerializeTabWindow`|Used internally during serialization.|  
+|[CBaseTabbedPane::SetAutoDestroy](#setautodestroy)|Determines whether the tabbed control bar will be destroyed automatically.|  
+|[CBaseTabbedPane::SetAutoHideMode](#setautohidemode)|Toggles the docking pane between displayed and auto-hide mode. (Overrides [CDockablePane::SetAutoHideMode](../../mfc/reference/cdockablepane-class.md#setautohidemode).)|  
+|[CBaseTabbedPane::ShowTab](#showtab)|Shows or hides a tab.|  
   
-## <a name="remarks"></a>Примечания  
- Этот класс является абстрактным классом и не может быть создан. Он реализует службы, которые являются общими для всех видов вкладки.  
+## <a name="remarks"></a>Remarks  
+ This class is an abstract class and cannot be instantiated. It implements the services that are common to all kinds of tabbed panes.  
   
- В настоящее время библиотека включает два класса производного панели с вкладками: [класса CTabbedPane](../../mfc/reference/ctabbedpane-class.md) и [CMFCOutlookBar класса](../../mfc/reference/cmfcoutlookbar-class.md).  
+ Currently, the library includes two derived tabbed pane classes: [CTabbedPane Class](../../mfc/reference/ctabbedpane-class.md) and [CMFCOutlookBar Class](../../mfc/reference/cmfcoutlookbar-class.md).  
   
- Объект `CBaseTabbedPane` объект охватывает указатель [CMFCBaseTabCtrl класс](../../mfc/reference/cmfcbasetabctrl-class.md) объекта. [Класс CMFCBaseTabCtrl](../../mfc/reference/cmfcbasetabctrl-class.md) становится дочернее окно области с вкладками.  
+ A `CBaseTabbedPane` object wraps a pointer to a [CMFCBaseTabCtrl Class](../../mfc/reference/cmfcbasetabctrl-class.md) object. [CMFCBaseTabCtrl Class](../../mfc/reference/cmfcbasetabctrl-class.md) then becomes a child window of the tabbed pane.  
   
- Дополнительные сведения о создании вкладки см. в разделе [класса CDockablePane](../../mfc/reference/cdockablepane-class.md), [класса CTabbedPane](../../mfc/reference/ctabbedpane-class.md), и [CMFCOutlookBar класса](../../mfc/reference/cmfcoutlookbar-class.md).  
+ For more information about how to create tabbed panes, see [CDockablePane Class](../../mfc/reference/cdockablepane-class.md), [CTabbedPane Class](../../mfc/reference/ctabbedpane-class.md), and [CMFCOutlookBar Class](../../mfc/reference/cmfcoutlookbar-class.md).  
   
-## <a name="inheritance-hierarchy"></a>Иерархия наследования  
+## <a name="inheritance-hierarchy"></a>Inheritance Hierarchy  
  [CObject](../../mfc/reference/cobject-class.md)  
   
  [CCmdTarget](../../mfc/reference/ccmdtarget-class.md)  
@@ -149,11 +176,11 @@ class CBaseTabbedPane : public CDockablePane
   
  `CBaseTabbedPane`  
   
-## <a name="requirements"></a>Требования  
- **Заголовок:** afxBaseTabbedPane.h  
+## <a name="requirements"></a>Requirements  
+ **Header:** afxBaseTabbedPane.h  
   
-##  <a name="addtab"></a>CBaseTabbedPane::AddTab  
- Добавляет новую вкладку область с вкладками.  
+##  <a name="addtab"></a>  CBaseTabbedPane::AddTab  
+ Adds a new tab to a tabbed pane.  
   
 ```  
 virtual BOOL AddTab(
@@ -163,88 +190,88 @@ virtual BOOL AddTab(
     BOOL bDetachable = TRUE);
 ```  
   
-### <a name="parameters"></a>Параметры  
- [in] [out]`pNewBar`  
- Указатель на область для добавления. Этот указатель могут стать недопустимыми после вызова этого метода. Дополнительные сведения см. в разделе "Примечания".  
+### <a name="parameters"></a>Parameters  
+ [in] [out] `pNewBar`  
+ A pointer to the pane to add. This pointer may become invalid after you call this method. For more information, see the Remarks section.  
   
  [in] `bVisible`  
- `TRUE`Чтобы отобразить вкладку; в противном случае — `FALSE`.  
+ `TRUE` to make the tab visible; otherwise, `FALSE`.  
   
  [in] `bSetActive`  
- `TRUE`отобразить вкладку активной вкладке; в противном случае — `FALSE`.  
+ `TRUE` to make the tab the active tab; otherwise, `FALSE`.  
   
  [in] `bDetachable`  
- `TRUE`Чтобы отобразить вкладку отключаемых; в противном случае — `FALSE`.  
+ `TRUE` to make the tab detachable; otherwise, `FALSE`.  
   
-### <a name="return-value"></a>Возвращаемое значение  
- `TRUE`Если был успешно добавлен в виде вкладки области и не удаляется в процессе. `FALSE`Если панель добавляемый объект типа `CBaseTabbedPane`. Дополнительные сведения см. в разделе "Примечания".  
+### <a name="return-value"></a>Return Value  
+ `TRUE` if the pane was successfully added as a tab and was not destroyed in the process. `FALSE` if the pane being added is an object of type `CBaseTabbedPane`. For more information, see the Remarks section.  
   
-### <a name="remarks"></a>Примечания  
- Вызовите этот метод, чтобы добавить область в виде новой вкладки на область с вкладками. Если `pNewBar` указывает на объект типа `CBaseTabbedPane`, копируется все вкладки на панели с вкладками и затем `pNewBar` уничтожается. Таким образом `pNewBar` становится недопустимый указатель и не должны использоваться.  
+### <a name="remarks"></a>Remarks  
+ Call this method to add a pane as a new tab on a tabbed pane. If `pNewBar` points to an object of type `CBaseTabbedPane`, all its tabs are copied onto the tabbed pane and then `pNewBar` is destroyed. Thus, `pNewBar` becomes an invalid pointer and should not be used.  
   
-##  <a name="allowdestroyemptytabbedpane"></a>CBaseTabbedPane::AllowDestroyEmptyTabbedPane  
- Указывает, можно ли удалить пустая область с вкладками.  
+##  <a name="allowdestroyemptytabbedpane"></a>  CBaseTabbedPane::AllowDestroyEmptyTabbedPane  
+ Specifies whether an empty tabbed pane can be destroyed.  
   
 ```  
 virtual BOOL AllowDestroyEmptyTabbedPane() const;  
 ```  
   
-### <a name="return-value"></a>Возвращаемое значение  
- `TRUE`Если пустая область с вкладками можно быть уничтожено; в противном случае — `FALSE`. Реализация по умолчанию всегда возвращает `TRUE`.  
+### <a name="return-value"></a>Return Value  
+ `TRUE` if an empty tabbed pane can be destroyed; otherwise, `FALSE`. The default implementation always returns `TRUE`.  
   
-### <a name="remarks"></a>Примечания  
- Если пустая область с вкладками запрещено будут уничтожены, платформа вместо скрывает панель.  
+### <a name="remarks"></a>Remarks  
+ If an empty tabbed pane is not allowed to be destroyed, the framework hides the pane instead.  
   
-##  <a name="applyrestoredtabinfo"></a>CBaseTabbedPane::ApplyRestoredTabInfo  
- Загружает вкладку Параметры из реестра и применяет их к область с вкладками.  
+##  <a name="applyrestoredtabinfo"></a>  CBaseTabbedPane::ApplyRestoredTabInfo  
+ Loads tab settings from the registry and applies them to a tabbed pane.  
   
 ```  
 virtual void ApplyRestoredTabInfo(BOOL bUseTabIndexes = FALSE);
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
  [in] `bUseTabIndexes`  
- Этот параметр используется внутри платформой.  
+ This parameter is used internally by the framework.  
   
-### <a name="remarks"></a>Примечания  
- Этот метод вызывается инфраструктурой при его перезагрузке закрепления сведения о состоянии из реестра. Метод получает сведения о последовательности табуляции и названия вкладок для область с вкладками.  
+### <a name="remarks"></a>Remarks  
+ This method is called by the framework when it reloads docking state information from the registry. The method obtains information about tab order and tab names for a tabbed pane.  
   
-##  <a name="canfloat"></a>CBaseTabbedPane::CanFloat  
- Указывает, можно ли float панели с вкладками.  
+##  <a name="canfloat"></a>  CBaseTabbedPane::CanFloat  
+ Specifies whether the tabbed pane can float.  
   
 ```  
 virtual BOOL CanFloat() const;  
 ```  
   
-### <a name="return-value"></a>Возвращаемое значение  
- `TRUE`Если панель может перемещаться; в противном случае — `FALSE`.  
+### <a name="return-value"></a>Return Value  
+ `TRUE` if the pane can float; otherwise, `FALSE`.  
   
-##  <a name="cansetcaptiontexttotabname"></a>CBaseTabbedPane::CanSetCaptionTextToTabName  
- Определяет, должен ли заголовок для области с вкладками отображать тот же текст в активную вкладку.  
+##  <a name="cansetcaptiontexttotabname"></a>  CBaseTabbedPane::CanSetCaptionTextToTabName  
+ Determines whether the caption for the tabbed pane should display the same text as the active tab.  
   
 ```  
 virtual BOOL CanSetCaptionTextToTabName() const;  
 ```  
   
-### <a name="return-value"></a>Возвращаемое значение  
- `TRUE`Если текст заголовка панели с вкладками текст активной вкладке; в противном случае — `FALSE`.  
+### <a name="return-value"></a>Return Value  
+ `TRUE` if the caption text of the tabbed pane is set to the text of the active tab; otherwise, `FALSE`.  
   
-### <a name="remarks"></a>Примечания  
- Метод используется для определения ли текст отображаться на дубликаты заголовок панели с вкладками метка активной вкладки. Можно включить или отключить эту функцию, вызвав [CBaseTabbedPane::EnableSetCaptionTextToTabName](#enablesetcaptiontexttotabname).  
+### <a name="remarks"></a>Remarks  
+ The method is used to determine whether the text displayed on the tabbed pane caption duplicates the label of the active tab. You can enable or disable this functionality by calling [CBaseTabbedPane::EnableSetCaptionTextToTabName](#enablesetcaptiontexttotabname).  
   
-##  <a name="converttotabbeddocument"></a>CBaseTabbedPane::ConvertToTabbedDocument  
- Преобразует один или несколько закрепляемых областей документы с вкладками MDI.  
+##  <a name="converttotabbeddocument"></a>  CBaseTabbedPane::ConvertToTabbedDocument  
+ Converts one or more dockable panes to MDI tabbed documents.  
   
 ```  
 virtual void ConvertToTabbedDocument(BOOL bActiveTabOnly = TRUE);
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
  [in] `bActiveTabOnly`  
- При преобразовании область с вкладками, укажите `TRUE` для преобразования только на активную вкладку. Укажите `FALSE` для преобразования всех вкладок на панели.  
+ When you convert a tabbed pane, specify `TRUE` to convert only the active tab. Specify `FALSE` to convert all tabs in the pane.  
   
-##  <a name="detachpane"></a>CBaseTabbedPane::DetachPane  
- Отсоединяет панель из панели с вкладками.  
+##  <a name="detachpane"></a>  CBaseTabbedPane::DetachPane  
+ Detaches a pane from the tabbed pane.  
   
 ```  
 virtual BOOL DetachPane(
@@ -252,59 +279,59 @@ virtual BOOL DetachPane(
     BOOL bHide = FALSE);
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
  [in] `pBar`  
- Указатель на область для отсоединения.  
+ Pointer to the pane to detach.  
   
  [in] `bHide`  
- Логический параметр, указывает ли платформа framework скрывает панель после ее отключения.  
+ Boolean parameter that specifies whether the framework hides the pane after it is detached.  
   
-### <a name="return-value"></a>Возвращаемое значение  
- `TRUE`Если платформа успешно отсоединяет области; `FALSE` Если `pBar` — `NULL` или ссылается на область, которая не находится в области с вкладками.  
+### <a name="return-value"></a>Return Value  
+ `TRUE` if the framework successfully detaches the pane; `FALSE` if `pBar` is `NULL` or refers to a pane that is not in the tabbed pane.  
   
-### <a name="remarks"></a>Примечания  
- Платформа смещает отсоединенных области, если это возможно. Дополнительные сведения см. в разделе [CBasePane::CanFloat](../../mfc/reference/cbasepane-class.md#canfloat).  
+### <a name="remarks"></a>Remarks  
+ The framework floats the detached pane if possible. For more information, see [CBasePane::CanFloat](../../mfc/reference/cbasepane-class.md#canfloat).  
   
-##  <a name="enablesetcaptiontexttotabname"></a>CBaseTabbedPane::EnableSetCaptionTextToTabName  
- Включает или отключает возможность синхронизации текст заголовка с текстом метки на активной вкладке области с вкладками.  
+##  <a name="enablesetcaptiontexttotabname"></a>  CBaseTabbedPane::EnableSetCaptionTextToTabName  
+ Enables or disables the ability of the tabbed pane to synchronize caption text with the label text on the active tab.  
   
 ```  
 virtual void EnableSetCaptionTextToTabName(BOOL bEnable);
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
  [in] `bEnable`  
- `TRUE`для синхронизации с вкладками панели заголовка с активной вкладке заголовок; в противном случае — `FALSE`.  
+ `TRUE` to synchronize the tabbed pane caption with the active tab caption; otherwise, `FALSE`.  
   
-##  <a name="filldefaulttabsorderarray"></a>CBaseTabbedPane::FillDefaultTabsOrderArray  
- Восстанавливает состояние по умолчанию внутренней последовательности.  
+##  <a name="filldefaulttabsorderarray"></a>  CBaseTabbedPane::FillDefaultTabsOrderArray  
+ Restores the internal tab order to a default state.  
   
 ```  
 void FillDefaultTabsOrderArray();
 ```  
   
-### <a name="remarks"></a>Примечания  
- Этот метод вызывается, когда платформа восстанавливает панель Outlook в исходное состояние.  
+### <a name="remarks"></a>Remarks  
+ This method is called when the framework restores an Outlook bar to an initial state.  
   
-##  <a name="findpanebyid"></a>CBaseTabbedPane::FindPaneByID  
- Возвращает область, определяемый идентификатор области.  
+##  <a name="findpanebyid"></a>  CBaseTabbedPane::FindPaneByID  
+ Returns a pane identified by the pane ID.  
   
 ```  
 virtual CWnd* FindPaneByID(UINT uBarID);
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
  [in] `uBarID`  
- Указывает идентификатор области для поиска.  
+ Specifies the ID of the pane to find.  
   
-### <a name="return-value"></a>Возвращаемое значение  
- Указатель на область, если он найден; в противном случае — `NULL`.  
+### <a name="return-value"></a>Return Value  
+ A pointer to the pane if it was found; otherwise, `NULL`.  
   
-### <a name="remarks"></a>Примечания  
- Этот метод сравнивает все вкладки в области и возвращает запись с Идентификатором, указанным параметром `uBarID` параметр.  
+### <a name="remarks"></a>Remarks  
+ This method compares all tabs in the pane and returns the one with the ID specified by the `uBarID` parameter.  
   
-##  <a name="findbarbytabnumber"></a>CBaseTabbedPane::FindBarByTabNumber  
- Возвращает область, в которой находится на вкладке.  
+##  <a name="findbarbytabnumber"></a>  CBaseTabbedPane::FindBarByTabNumber  
+ Returns a pane that resides in a tab.  
   
 ```  
 virtual CWnd* FindBarByTabNumber(
@@ -312,21 +339,21 @@ virtual CWnd* FindBarByTabNumber(
     BOOL bGetWrappedBar = FALSE);
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
  [in] `nTabNum`  
- Задает отсчитываемый от нуля индекс вкладки для извлечения.  
+ Specifies the zero-based index of the tab to retrieve.  
   
  [in] `bGetWrappedBar`  
- `TRUE`Чтобы вернуть окна (оболочку) области вместо области в противном случае `FALSE`. Это относится только к области, производный от [CDockablePaneAdapter](../../mfc/reference/cdockablepaneadapter-class.md).  
+ `TRUE` to return the underlying (wrapped) window of the pane instead of the pane itself; otherwise `FALSE`. This only applies to panes derived from [CDockablePaneAdapter](../../mfc/reference/cdockablepaneadapter-class.md).  
   
-### <a name="return-value"></a>Возвращаемое значение  
- Если найден области, то возвращается допустимый указатель на панель, поиск которого выполняется; в противном случае — `NULL`.  
+### <a name="return-value"></a>Return Value  
+ If the pane is found, then a valid pointer to the pane being searched for is returned; otherwise, `NULL`.  
   
-### <a name="remarks"></a>Примечания  
- Этот метод вызывается для получения области, находящиеся в вкладку, указанную в `nTabNum` параметр.  
+### <a name="remarks"></a>Remarks  
+ Call this method to retrieve the pane residing in the tab specified by the `nTabNum` parameter.  
   
-##  <a name="floattab"></a>CBaseTabbedPane::FloatTab  
- Преобразует панель в плавающую, но только если она расположена на отделяемой вкладке.  
+##  <a name="floattab"></a>  CBaseTabbedPane::FloatTab  
+ Floats a pane, but only if the pane currently resides in a detachable tab.  
   
 ```  
 virtual BOOL FloatTab(
@@ -336,84 +363,84 @@ virtual BOOL FloatTab(
     BOOL bHide = FALSE);
 ```  
   
-### <a name="parameters"></a>Параметры  
- [in] [out]`pBar`  
- Указатель на область с плавающей запятой.  
+### <a name="parameters"></a>Parameters  
+ [in] [out] `pBar`  
+ A pointer to the pane to float.  
   
  [in] `nTabID`  
- Задает отсчитываемый от нуля индекс вкладки с плавающей запятой.  
+ Specifies the zero-based index of the tab to float.  
   
  [in] `dockMethod`  
- Указывает метод, с помощью панели с плавающей запятой. Дополнительные сведения см. в разделе "Примечания".  
+ Specifies the method to use to make the pane float. For more information, see the Remarks section.  
   
  [in] `bHide`  
- `TRUE`Чтобы скрыть область перед с плавающей запятой; в противном случае — `FALSE`.  
+ `TRUE` to hide the pane before floating; otherwise, `FALSE`.  
   
-### <a name="return-value"></a>Возвращаемое значение  
- `TRUE`Если оставить плавающим области; в противном случае — `FALSE`.  
+### <a name="return-value"></a>Return Value  
+ `TRUE` if the pane floated; otherwise, `FALSE`.  
   
-### <a name="remarks"></a>Примечания  
- Этот метод вызывается для область, в которой в данный момент находится на вкладке отключаемых float.  
+### <a name="remarks"></a>Remarks  
+ Call this method to float a pane that currently resides in a detachable tab.  
   
- Отключение панели программными средствами, укажите `DM_SHOW` для `dockMethod` параметр. Если вы хотите float области в том же месте, где ранее находился, укажите `DM_DBL_CLICK` как `dockMethod` параметр.  
+ If you want to detach a pane programmatically, specify `DM_SHOW` for the `dockMethod` parameter. If you want to float the pane in the same position where it floated previously, specify `DM_DBL_CLICK` as the `dockMethod` parameter.  
   
-##  <a name="getdefaulttabsorder"></a>CBaseTabbedPane::GetDefaultTabsOrder  
- Возвращает порядок вкладок на панели.  
+##  <a name="getdefaulttabsorder"></a>  CBaseTabbedPane::GetDefaultTabsOrder  
+ Returns the default order of tabs in the pane.  
   
 ```  
 const CArray<int,int>& GetDefaultTabsOrder();
 ```  
   
-### <a name="return-value"></a>Возвращаемое значение  
- Объект `CArray` , определяющий порядок вкладок на панели.  
+### <a name="return-value"></a>Return Value  
+ A `CArray` object that specifies the default order of tabs in the pane.  
   
-### <a name="remarks"></a>Примечания  
- Платформа вызывает этот метод, когда панель Outlook сбрасывается в исходное состояние.  
+### <a name="remarks"></a>Remarks  
+ The framework calls this method when an Outlook bar is reset to an initial state.  
   
-##  <a name="getfirstvisibletab"></a>CBaseTabbedPane::GetFirstVisibleTab  
- Извлекает указатель на первой вкладке отображается.  
+##  <a name="getfirstvisibletab"></a>  CBaseTabbedPane::GetFirstVisibleTab  
+ Retrieves a pointer to the first displayed tab.  
   
 ```  
 virtual CWnd* GetFirstVisibleTab(int& iTabNum);
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
  [in] `iTabNum`  
- Ссылка на целое число. Этот метод записывает отсчитываемый от нуля индекс первой отображаемой вкладке этот параметр или значение -1, если не отображается, находится вкладке.  
+ A reference to an integer. This method writes the zero-based index of the first displayed tab to this parameter, or -1 if no displayed tab is found.  
   
-### <a name="return-value"></a>Возвращаемое значение  
- В случае успеха, указатель на первой вкладке отображается; в противном случае — `NULL`.  
+### <a name="return-value"></a>Return Value  
+ If successful, a pointer to the first displayed tab; otherwise, `NULL`.  
   
-##  <a name="getminsize"></a>CBaseTabbedPane::GetMinSize  
- Получает минимальный поддерживаемый размер для области.  
-  
-```  
-virtual void GetMinSize(CSize& size) const;  
-```  
-  
-### <a name="parameters"></a>Параметры  
- [выходной] `size`  
- Объект `CSize` объект, который заполняется минимально допустимого размера.  
-  
-### <a name="remarks"></a>Примечания  
- Если согласованная обработка размеров Минимальная область активна ( [CPane::m_bHandleMinSize](../../mfc/reference/cpane-class.md#m_bhandleminsize)), `size` заполняется минимально допустимого размера для активной вкладки. В противном случае — `size` заполняется возвращаемое значение [CPane::GetMinSize](../../mfc/reference/cpane-class.md#getminsize).  
-  
-##  <a name="getpaneicon"></a>CBaseTabbedPane::GetPaneIcon  
- Получает минимальный поддерживаемый размер для области.  
+##  <a name="getminsize"></a>  CBaseTabbedPane::GetMinSize  
+ Retrieves the minimum allowed size for the pane.  
   
 ```  
 virtual void GetMinSize(CSize& size) const;  
 ```  
   
-### <a name="parameters"></a>Параметры  
- [выходной] `size`  
- Объект `CSize` объект, который заполняется минимально допустимого размера.  
+### <a name="parameters"></a>Parameters  
+ [out] `size`  
+ A `CSize` object that is filled with the minimum allowed size.  
   
-### <a name="remarks"></a>Примечания  
- Если согласованная обработка размеров Минимальная область активна ( [CPane::m_bHandleMinSize](../../mfc/reference/cpane-class.md#m_bhandleminsize)), `size` заполняется минимально допустимого размера для активной вкладки. В противном случае — `size` заполняется возвращаемое значение [CPane::GetMinSize](../../mfc/reference/cpane-class.md#getminsize).  
+### <a name="remarks"></a>Remarks  
+ If consistent handling of minimum pane sizes is active ( [CPane::m_bHandleMinSize](../../mfc/reference/cpane-class.md#m_bhandleminsize)), `size` is filled with the minimum allowed size for the active tab. Otherwise, `size` is filled with the return value of [CPane::GetMinSize](../../mfc/reference/cpane-class.md#getminsize).  
   
-##  <a name="getpanelist"></a>CBaseTabbedPane::GetPaneList  
- Возвращает список областей, содержащихся в области с вкладками.  
+##  <a name="getpaneicon"></a>  CBaseTabbedPane::GetPaneIcon  
+ Retrieves the minimum allowed size for the pane.  
+  
+```  
+virtual void GetMinSize(CSize& size) const;  
+```  
+  
+### <a name="parameters"></a>Parameters  
+ [out] `size`  
+ A `CSize` object that is filled with the minimum allowed size.  
+  
+### <a name="remarks"></a>Remarks  
+ If consistent handling of minimum pane sizes is active ( [CPane::m_bHandleMinSize](../../mfc/reference/cpane-class.md#m_bhandleminsize)), `size` is filled with the minimum allowed size for the active tab. Otherwise, `size` is filled with the return value of [CPane::GetMinSize](../../mfc/reference/cpane-class.md#getminsize).  
+  
+##  <a name="getpanelist"></a>  CBaseTabbedPane::GetPaneList  
+ Returns a list of panes that are contained in the tabbed pane.  
   
 ```  
 virtual void GetPaneList(
@@ -421,15 +448,15 @@ virtual void GetPaneList(
     CRuntimeClass* pRTCFilter = NULL);
 ```  
   
-### <a name="parameters"></a>Параметры  
- [выходной] `lst`  
- A `CObList` заполняется панелей, которые находятся в области с вкладками.  
+### <a name="parameters"></a>Parameters  
+ [out] `lst`  
+ A `CObList` that is filled with the panes that are contained in the tabbed pane.  
   
  [in] `pRTCFilter`  
- Если это не `NULL`, возвращаемый список содержит только те области, которые имеют указанного класса среды выполнения.  
+ If it is not `NULL`, the returned list contains only panes that are of the specified runtime class.  
   
-##  <a name="gettabarea"></a>CBaseTabbedPane::GetTabArea  
- Возвращает прямоугольников вкладки в верхней и нижней областях.  
+##  <a name="gettabarea"></a>  CBaseTabbedPane::GetTabArea  
+ Returns the bounding rectangles for the top and bottom tab areas.  
   
 ```  
 virtual void GetTabArea(
@@ -437,108 +464,108 @@ virtual void GetTabArea(
     CRect& rectTabAreaBottom) const = 0;  
 ```  
   
-### <a name="parameters"></a>Параметры  
- [выходной] `rectTabAreaTop`  
- Получает экранные координаты верхней вкладки области.  
+### <a name="parameters"></a>Parameters  
+ [out] `rectTabAreaTop`  
+ Receives the screen coordinates of the upper tab area.  
   
- [выходной] `rectTabAreaBottom`  
- Получает экранные координаты в нижней области вкладки.  
+ [out] `rectTabAreaBottom`  
+ Receives the screen coordinates of the lower tab area.  
   
-### <a name="remarks"></a>Примечания  
- Этот метод вызывается для определения прямоугольников, в экранных координатах для вкладку верхней и нижней области.  
+### <a name="remarks"></a>Remarks  
+ Call this method to determine the bounding rectangles, in screen coordinates, for the upper and lower tab areas.  
   
-##  <a name="gettabsnum"></a>CBaseTabbedPane::GetTabsNum  
- Возвращает число вкладок в окне вкладку.  
+##  <a name="gettabsnum"></a>  CBaseTabbedPane::GetTabsNum  
+ Returns the count of tabs in a tab window.  
   
 ```  
 virtual int GetTabsNum() const;  
 ```  
   
-### <a name="return-value"></a>Возвращаемое значение  
- Число вкладок на панели с вкладками.  
+### <a name="return-value"></a>Return Value  
+ The number of tabs in the tabbed pane.  
   
-##  <a name="getunderlyingwindow"></a>CBaseTabbedPane::GetUnderlyingWindow  
- Возвращает базовый (оболочку) вкладки окна.  
+##  <a name="getunderlyingwindow"></a>  CBaseTabbedPane::GetUnderlyingWindow  
+ Gets the underlying (wrapped) tab window.  
   
 ```  
 virtual CMFCBaseTabCtrl* GetUnderlyingWindow();
 ```  
   
-### <a name="return-value"></a>Возвращаемое значение  
- Указатель на вкладку окна.  
+### <a name="return-value"></a>Return Value  
+ A pointer to the underlying tab window.  
   
-##  <a name="getvisibletabsnum"></a>CBaseTabbedPane::GetVisibleTabsNum  
- Возвращает число вкладок видимым.  
+##  <a name="getvisibletabsnum"></a>  CBaseTabbedPane::GetVisibleTabsNum  
+ Returns the count of visible tabs.  
   
 ```  
 virtual int GetVisibleTabsNum() const;  
 ```  
   
-### <a name="return-value"></a>Возвращаемое значение  
- Число отображается вкладок, которые будет больше или равно нулю.  
+### <a name="return-value"></a>Return Value  
+ The number of visible tabs, which will be greater than or equal to zero.  
   
-### <a name="remarks"></a>Примечания  
- Этот метод служит для определения числа видимым вкладки в области с вкладками.  
+### <a name="remarks"></a>Remarks  
+ Call this method to determine the number of visible tabs in the tabbed pane.  
   
-##  <a name="hasautohidemode"></a>CBaseTabbedPane::HasAutoHideMode  
- Определяет возможность переключения панели с вкладками в режим автоматического скрытия.  
+##  <a name="hasautohidemode"></a>  CBaseTabbedPane::HasAutoHideMode  
+ Determines whether the tabbed pane can be switched to autohide mode.  
   
 ```  
 virtual BOOL HasAutoHideMode() const;  
 ```  
   
-### <a name="return-value"></a>Возвращаемое значение  
- `TRUE`Если области можно переключить в режим автоскрытия. в противном случае — `FALSE`.  
+### <a name="return-value"></a>Return Value  
+ `TRUE` if the pane can be switched to autohide mode; otherwise, `FALSE`.  
   
-### <a name="remarks"></a>Примечания  
- При отключении режима Автоскрытие не кнопка ПИН-код отображается в заголовке панели с вкладками.  
+### <a name="remarks"></a>Remarks  
+ If autohide mode is disabled, no pin button is displayed on the tabbed pane caption.  
   
-##  <a name="ishidesingletab"></a>CBaseTabbedPane::IsHideSingleTab  
- Определяет, скрыт ли области с вкладками, если только одна вкладка отображается.  
+##  <a name="ishidesingletab"></a>  CBaseTabbedPane::IsHideSingleTab  
+ Determines whether the tabbed pane is hidden if only one tab is displayed.  
   
 ```  
 virtual BOOL IsHideSingleTab() const;  
 ```  
   
-### <a name="return-value"></a>Возвращаемое значение  
- `TRUE`Если окно вкладка не отображается, если имеется только одна вкладка отображается; в противном случае — `FALSE`.  
+### <a name="return-value"></a>Return Value  
+ `TRUE` if the tab window is not shown when there is only one visible tab; otherwise, `FALSE`.  
   
-### <a name="remarks"></a>Примечания  
- Если область не отображается, поскольку открыта только одна вкладка, можно вызвать этот метод, чтобы определить, правильно ли работает области с вкладками.  
+### <a name="remarks"></a>Remarks  
+ If the pane is not displayed because only one tab is open, you can call this method to determine whether the tabbed pane is working correctly.  
   
-##  <a name="removepane"></a>CBaseTabbedPane::RemovePane  
- Удаляет область панели с вкладками.  
+##  <a name="removepane"></a>  CBaseTabbedPane::RemovePane  
+ Removes a pane from the tabbed pane.  
   
 ```  
 virtual BOOL RemovePane(CWnd* pBar);
 ```  
   
-### <a name="parameters"></a>Параметры  
- [in] [out]`pBar`  
- Указатель на панели, чтобы удалить из области с вкладками.  
+### <a name="parameters"></a>Parameters  
+ [in] [out] `pBar`  
+ A pointer to the pane to remove from the tabbed pane.  
   
-### <a name="return-value"></a>Возвращаемое значение  
- `TRUE`Если области был успешно удален из области с вкладками и панели с вкладками по-прежнему действительна. `FALSE`Если последнее был удален из области с вкладками и панели с вкладками будут уничтожены. Если возвращаемое значение является `FALSE`, больше не используйте панели с вкладками.  
+### <a name="return-value"></a>Return Value  
+ `TRUE` if the pane was successfully removed from the tabbed pane and if the tabbed pane is still valid. `FALSE` if the last pane has been removed from the tabbed pane and the tabbed pane is about to be destroyed. If the return value is `FALSE`, do not use the tabbed pane any more.  
   
-### <a name="remarks"></a>Примечания  
- Этот метод вызывается для удаления области, определяемой `pBar` параметра из области с вкладками.  
+### <a name="remarks"></a>Remarks  
+ Call this method to remove the pane specified by the `pBar` parameter from the tabbed pane.  
   
-##  <a name="setautodestroy"></a>CBaseTabbedPane::SetAutoDestroy  
- Определяет, автоматическое удаление панели управления с вкладками.  
+##  <a name="setautodestroy"></a>  CBaseTabbedPane::SetAutoDestroy  
+ Determines whether the tabbed control bar will be destroyed automatically.  
   
 ```  
 void SetAutoDestroy(BOOL bAutoDestroy = TRUE);
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
  [in] `bAutoDestroy`  
- `TRUE`Если область с вкладками создан динамически, и вы не управляете существования; в противном случае — `FALSE`.  
+ `TRUE` if the tabbed pane was created dynamically and you are not controlling its lifetime; otherwise, `FALSE`.  
   
-### <a name="remarks"></a>Примечания  
- Задать режим автоматического уничтожения `TRUE` Если динамически создать область с вкладками, и если вы не управляете времени его существования. Если автоматического удаления режим `TRUE`, области с вкладками, уничтожается автоматически платформой.  
+### <a name="remarks"></a>Remarks  
+ Set the auto-destroy mode to `TRUE` if you create a tabbed pane dynamically and if you are not controlling its lifetime. If auto-destroy mode is `TRUE`, the tabbed pane will be destroyed automatically by the framework.  
   
-##  <a name="showtab"></a>CBaseTabbedPane::ShowTab  
- Показывает или скрывает вкладку.  
+##  <a name="showtab"></a>  CBaseTabbedPane::ShowTab  
+ Shows or hides a tab.  
   
 ```  
 virtual BOOL ShowTab(
@@ -548,39 +575,39 @@ virtual BOOL ShowTab(
     BOOL bActivate);
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
  [in] `pBar`  
- Указатель на панели, чтобы показать или скрыть.  
+ A pointer to the pane to show or hide.  
   
  [in] `bShow`  
- `TRUE`для отображения области; `FALSE` скрыть области.  
+ `TRUE` to show the pane; `FALSE` to hide the pane.  
   
  [in] `bDelay`  
- `TRUE`Чтобы отложить корректировка структуру вкладки; в противном случае — `FALSE`.  
+ `TRUE` to delay the adjustment of the tab layout; otherwise, `FALSE`.  
   
  [in] `bActivate`  
- `TRUE`отобразить вкладку активной вкладке; в противном случае — `FALSE`.  
+ `TRUE` to make the tab the active tab; otherwise, `FALSE`.  
   
-### <a name="return-value"></a>Возвращаемое значение  
- `TRUE`Если на вкладке была показаны или скрыты успешно; в противном случае — `FALSE`.  
+### <a name="return-value"></a>Return Value  
+ `TRUE` if the tab was either shown or hidden successfully; otherwise, `FALSE`.  
   
-### <a name="remarks"></a>Примечания  
- При вызове этого метода области показаны или скрыты, в зависимости от значения `bShow` параметр. Если скрыть вкладку, это последняя отображается вкладка окна вкладку панели с вкладками скрыт. Если показать вкладку при наличии ранее вкладки не видны, отображается область с вкладками.  
+### <a name="remarks"></a>Remarks  
+ When you call this method, a pane is either shown or hidden, depending on the value of the `bShow` parameter. If you hide a tab and it is the last visible tab in the underlying tab window, the tabbed pane is hidden. If you show a tab when there were previously no tabs visible, the tabbed pane is shown.  
   
-##  <a name="recalclayout"></a>CBaseTabbedPane::RecalcLayout  
- Обновление сведений о макете для области.  
+##  <a name="recalclayout"></a>  CBaseTabbedPane::RecalcLayout  
+ Recalculates layout information for the pane.  
   
 ```  
 virtual void RecalcLayout();
 ```  
   
-### <a name="remarks"></a>Примечания  
- Если панель закреплена, этот метод уведомляет платформу для изменения размера области, чтобы текущий размер области.  
+### <a name="remarks"></a>Remarks  
+ If the pane is floating, this method notifies the framework to resize the pane to the current size of the mini-frame.  
   
- Если панель закреплена, этот метод не выполняет никаких действий.  
+ If the pane is docked, this method does nothing.  
   
-##  <a name="setautohidemode"></a>CBaseTabbedPane::SetAutoHideMode  
- Задает режим автоматического скрытия отключаемых панелей в области с вкладками.  
+##  <a name="setautohidemode"></a>  CBaseTabbedPane::SetAutoHideMode  
+ Sets the auto-hide mode for detachable panes in the tabbed pane.  
   
 ```  
 virtual CMFCAutoHideToolBar* SetAutoHideMode(
@@ -590,31 +617,31 @@ virtual CMFCAutoHideToolBar* SetAutoHideMode(
     BOOL bUseTimer = TRUE);
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
  [in] `bMode`  
- `TRUE`Чтобы включить режим автоматического скрытия; `FALSE` Включение обычный режим закрепления.  
+ `TRUE` to enable auto-hide mode; `FALSE` to enable regular docking mode.  
   
  [in] `dwAlignment`  
- Задает выравнивание автоматического скрытия области, в которой должен быть создан. Список возможных значений см. в разделе [CPane::MoveByAlignment](../../mfc/reference/cpane-class.md#movebyalignment).  
+ Specifies the alignment of the auto-hide pane that is to be created. For a list of possible values, see [CPane::MoveByAlignment](../../mfc/reference/cpane-class.md#movebyalignment).  
   
- [in] [out]`pCurrAutoHideBar`  
- Указатель на текущий инструментов автоматического скрытия. Может быть `NULL`.  
+ [in] [out] `pCurrAutoHideBar`  
+ A pointer to the current auto-hide toolbar. Can be `NULL`.  
   
  [in] `bUseTimer`  
- Указывает, следует ли использовать эффект автоматического скрытия при переключении панели в режиме автоматического скрытия или скрыть область немедленно.  
+ Specifies whether to use the auto-hide effect when the user switches the pane to auto-hide mode, or to hide the pane immediately.  
   
-### <a name="return-value"></a>Возвращаемое значение  
- Указатель на панель инструментов автоматического скрытия, которая создается при переключении в режим автоматического скрытия или `NULL` Если создается нет панели инструментов.  
+### <a name="return-value"></a>Return Value  
+ A pointer to the auto-hide toolbar that is created when switching to auto-hide mode, or `NULL` if no toolbar is created.  
   
-### <a name="remarks"></a>Примечания  
- Платформа вызывает этот метод, когда пользователь нажимает кнопку закрепления в области с вкладками для переключения в режим автоматического скрытия или обычный режим закрепления.  
+### <a name="remarks"></a>Remarks  
+ The framework calls this method when a user chooses the pin button to switch the tabbed pane to auto-hide mode or to regular docking mode.  
   
- Для каждой отключаемых панели в области с вкладками задан режим автоматического скрытия. Области, которые не отключаемых игнорируются. Дополнительные сведения см. в разделе [CMFCBaseTabCtrl::EnableTabDetach](../../mfc/reference/cmfcbasetabctrl-class.md#enabletabdetach).  
+ Auto-hide mode is set for each detachable pane in the tabbed pane. Panes that are non-detachable are ignored. For more information, see [CMFCBaseTabCtrl::EnableTabDetach](../../mfc/reference/cmfcbasetabctrl-class.md#enabletabdetach).  
   
- Этот метод используется для переключения область с вкладками в режиме автоматического скрытия программным способом. Необходимо закрепить области фрейма главного окна ( [CDockablePane::GetDefaultPaneDivider](../../mfc/reference/cdockablepane-class.md#getdefaultpanedivider) должен возвращать допустимый указатель на [CPaneDivider](../../mfc/reference/cpanedivider-class.md)).  
+ Call this method to switch a tabbed pane to auto-hide mode programmatically. The pane must be docked to the main frame window ( [CDockablePane::GetDefaultPaneDivider](../../mfc/reference/cdockablepane-class.md#getdefaultpanedivider) must return a valid pointer to the [CPaneDivider](../../mfc/reference/cpanedivider-class.md)).  
   
-## <a name="see-also"></a>См. также  
- [Диаграмма иерархии](../../mfc/hierarchy-chart.md)   
- [Классы](../../mfc/reference/mfc-classes.md)   
- [Класс CDockablePane](../../mfc/reference/cdockablepane-class.md)
+## <a name="see-also"></a>See Also  
+ [Hierarchy Chart](../../mfc/hierarchy-chart.md)   
+ [Classes](../../mfc/reference/mfc-classes.md)   
+ [CDockablePane Class](../../mfc/reference/cdockablepane-class.md)
 

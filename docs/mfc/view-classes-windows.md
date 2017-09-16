@@ -1,93 +1,112 @@
 ---
-title: "Классы представления (Windows) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "vc.classes.view"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "представления формы и записей"
-  - "классы окон разделителя"
-  - "классы представлений, Windows"
+title: View Classes (Windows) | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- vc.classes.view
+dev_langs:
+- C++
+helpviewer_keywords:
+- form and record views [MFC]
+- splitter window classes [MFC]
+- view classes [MFC], Windows
 ms.assetid: b11683fb-9f43-4de3-9499-2b55775f9870
 caps.latest.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 6
----
-# Классы представления (Windows)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: ff65a4a581035536bee8077f2736e273e36ce68d
+ms.contentlocale: ru-ru
+ms.lasthandoff: 09/12/2017
 
-`CView` и производные классы дочерние окна, представляющие клиентской области фреймового окна.  Представления отображают данные и принимают входные данные для документа.  
+---
+# <a name="view-classes-windows"></a>View Classes (Windows)
+`CView` and its derived classes are child windows that represent the client area of a frame window. Views show data and accept input for a document.  
   
- Класс представления связан с классом документа и классом фреймового окна с помощью объекта шаблона документа.  
+ A view class is associated with a document class and a frame window class using a document-template object.  
   
- [CView](../Topic/CView%20Class.md)  
- Базовый класс для конкретного приложения для представления данных документа.  Отображение информации представлений и введенные пользователем данные, чтобы редактировать или выбора данных.  Унаследуйте нужный класс представления или классы из `CView`.  
+ [CView](../mfc/reference/cview-class.md)  
+ The base class for application-specific views of a document's data. Views display data and accept user input to edit or select the data. Derive your view class or classes from `CView`.  
   
  [CScrollView](../mfc/reference/cscrollview-class.md)  
- Базовый класс для представления с возможностями прокрутки.  Создайте производный класс представления из `CScrollView` для автоматической прокрутки.  
+ The base class for views with scrolling capabilities. Derive your view class from `CScrollView` for automatic scrolling.  
   
-## Форма и представления записей  
- Представления формы также — представления.  Они основаны на шаблоне диалогового окна.  
+## <a name="form-and-record-views"></a>Form and Record Views  
+ Form views are also scrolling views. They are based on a dialog box template.  
   
- Представления записей являются производными от представления формы.  В дополнение к шаблону диалогового окна, они обладают подключение к базе данных.  
+ Record views are derived from form views. In addition to the dialog box template, they also have a connection to a database.  
   
  [CFormView](../mfc/reference/cformview-class.md)  
- Представление с прокруткой макет которого определен в шаблоне диалогового окна.  Унаследуйте класс от `CFormView` для реализации интерфейса пользователя на основе шаблона диалогового окна.  
+ A scroll view whose layout is defined in a dialog box template. Derive a class from `CFormView` to implement a user interface based on a dialog box template.  
   
  [CDaoRecordView](../mfc/reference/cdaorecordview-class.md)  
- Предоставляет непосредственно вложенного представление формы объекта набора записей \(DAO\) объекта доступа к данным.  Как и другие представления формы, `CDaoRecordView` основан на шаблоне диалогового окна.  
+ Provides a form view directly connected to a Data Access Object (DAO) recordset object. Like all form views, a `CDaoRecordView` is based on a dialog box template.  
   
  [CRecordView](../mfc/reference/crecordview-class.md)  
- Предоставляет непосредственно вложенного представление формы объекта набора записей ODBC \(ODBC\).  Как и другие представления формы, `CRecordView` основан на шаблоне диалогового окна.  
+ Provides a form view directly connected to an Open Database Connectivity (ODBC) recordset object. Like all form views, a `CRecordView` is based on a dialog box template.  
   
  [CHtmlEditView](../mfc/reference/chtmleditview-class.md)  
- Представление формы, предоставляет функциональные возможности редактирования HTML браузера платформы.  
+ A form view that provides the functionality of the WebBrowser HTML editing platform.  
   
-## Элементы управления  
- Элементы управления отображают элемент управления с их представление.  
+## <a name="control-views"></a>Control Views  
+ Control views display a control as their view.  
   
  [CCtrlView](../mfc/reference/cctrlview-class.md)  
- Базовый класс для всех представлений, связанной с элементами управления Windows.  Представления на основе элементов управления описаны ниже.  
+ The base class for all views associated with Windows controls. The views based on controls are described below.  
   
- [CEditView](../Topic/CEditView%20Class.md)  
- Представление, содержащее элемент управления "Поле ввода" Windows стандартный \(см. [CEdit](../Topic/CEdit%20Class.md)\).  При редактировании поддержки элементов управления "Поле ввода", поиск, заменяя и прокрутящ возможности.  
+ [CEditView](../mfc/reference/ceditview-class.md)  
+ A view that contains a Windows standard edit control (see [CEdit](../mfc/reference/cedit-class.md)). Edit controls support text editing, searching, replacing, and scrolling capabilities.  
   
  [CRichEditView](../mfc/reference/cricheditview-class.md)  
- Представление, содержащее элемент управления расширенного редактирования Windows \(см. [CRichEditCtrl](../Topic/CRichEditCtrl%20Class.md)\).  В дополнение к возможностям элемента управления "Поле ввода", управления расширенного редактирования поддерживают шрифты и цвета, форматирование абзаца и встроенные объекты OLE.  
+ A view that contains a Windows rich edit control (see [CRichEditCtrl](../mfc/reference/cricheditctrl-class.md)). In addition to the capabilities of an edit control, rich edit controls support fonts, colors, paragraph formatting, and embedded OLE objects.  
   
  [CListView](../mfc/reference/clistview-class.md)  
- Представление, содержащее элемент управления "Список" Windows \(см. [CListCtrl](../Topic/CListCtrl%20Class.md)\).  Элемент управления "Список" показывает коллекцию элементов, каждый из которых состоит из Значка и метки, способом подобно правой панели проводника.  
+ A view that contains a Windows list control (see [CListCtrl](../mfc/reference/clistctrl-class.md)). A list control displays a collection of items, each consisting of an icon and a label, in a manner similar to the right pane of File Explorer.  
   
  [CTreeView](../mfc/reference/ctreeview-class.md)  
- Представление, содержащее элемент управления "Дерево" Windows \(см. [CTreeCtrl](../mfc/reference/ctreectrl-class.md)\).  Элемент управления "Дерево" отображает иерархический список Значков и аранжированной метками способом похож на левой панели проводника.  
+ A view that contains a Windows tree control (see [CTreeCtrl](../mfc/reference/ctreectrl-class.md)). A tree control displays a hierarchical list of icons and labels arranged in a manner similar to the left pane of File Explorer.  
   
-## Связанные классы  
- `CSplitterWnd` позволяет иметь несколько представлений в пределах одного фреймовое окно.  `CPrintDialog` и `CPrintInfo` поддерживает возможность печати и предварительного просмотра представлений.  `CRichEditDoc` и `CRichEditCntrItem` используются с `CRichEditView`, чтобы реализовать OLE\-контейнер.  
+## <a name="related-classes"></a>Related Classes  
+ `CSplitterWnd` allows you to have multiple views within a single frame window. `CPrintDialog` and `CPrintInfo` support the print and print preview ability of views. `CRichEditDoc` and `CRichEditCntrItem` are used with `CRichEditView` to implement OLE container capabilities.  
   
  [CSplitterWnd](../mfc/reference/csplitterwnd-class.md)  
- Окно, пользователь может разбить на несколько областей.  Эти области могут быть изменяемым пользователем или постоянным размером.  
+ A window that the user can split into multiple panes. These panes can be resizable by the user or fixed size.  
   
- [CPrintDialog](../Topic/CPrintDialog%20Class.md)  
- Предоставляется стандартное диалоговое окно для печати файла.  
+ [CPrintDialog](../mfc/reference/cprintdialog-class.md)  
+ Provides a standard dialog box for printing a file.  
   
  [CPrintInfo](../mfc/reference/cprintinfo-structure.md)  
- Структура, содержащая сведения о задании печати или предварительного просмотра.  Используется `CView` ввод архитектуры.  
+ A structure containing information about a print or print preview job. Used by `CView`'s printing architecture.  
   
  [CRichEditDoc](../mfc/reference/cricheditdoc-class.md)  
- Приводит список элементов OLE клиента, в `CRichEditView`.  
+ Maintains the list of OLE client items that are in a `CRichEditView`.  
   
  [CRichEditCntrItem](../mfc/reference/cricheditcntritem-class.md)  
- Предоставляет клиентский доступ к элемент OLE, хранящиеся в `CRichEditView`.  
+ Provides client-side access to an OLE item stored in a `CRichEditView`.  
   
-## См. также  
- [Общие сведения о классах](../mfc/class-library-overview.md)
+## <a name="see-also"></a>See Also  
+ [Class Overview](../mfc/class-library-overview.md)
+
+

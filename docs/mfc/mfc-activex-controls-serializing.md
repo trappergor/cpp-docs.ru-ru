@@ -1,100 +1,119 @@
 ---
-title: "Элементы управления ActiveX в MFC. Сериализация | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "_wVerMinor"
-  - "DoPropExchange"
-  - "_wVerMajor"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "DoPropExchange - метод"
-  - "ExchangeVersion - метод"
-  - "GetVersion - метод"
-  - "MFC ActiveX - элементы управления, сериализация"
-  - "MFC ActiveX - элементы управления, поддержка версий"
-  - "управление версиями элементов управления ActiveX"
-  - "wVerMajor - глобальная константа"
-  - "wVerMinor - глобальная константа"
+title: 'MFC ActiveX Controls: Serializing | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- _wVerMinor
+- DoPropExchange
+- _wVerMajor
+dev_langs:
+- C++
+helpviewer_keywords:
+- MFC ActiveX controls [MFC], version support
+- wVerMinor global constant [MFC]
+- GetVersion method [MFC]
+- ExchangeVersion method [MFC]
+- MFC ActiveX controls [MFC], serializing
+- DoPropExchange method [MFC]
+- versioning ActiveX controls
+- wVerMajor global constant
 ms.assetid: 9d57c290-dd8c-4853-b552-6f17f15ebedd
 caps.latest.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 6
----
-# Элементы управления ActiveX в MFC. Сериализация
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 4594131d8814122b93b0132dc2c5e121cae2e3ba
+ms.contentlocale: ru-ru
+ms.lasthandoff: 09/12/2017
 
-Этот раздел описывает, как выполнить сериализацию элементов управления ActiveX.  Сериализация представляет собой процесс из чтения или записи в постоянное носителю записи, например дисковый файл.  Библиотеки Microsoft Foundation Class \(MFC\) предоставляет встроенную поддержку сериализации в классе `CObject`.  `COleControl` передает эта поддержка с элементами управления ActiveX с помощью механизма обмена свойства.  
+---
+# <a name="mfc-activex-controls-serializing"></a>MFC ActiveX Controls: Serializing
+This article discusses how to serialize an ActiveX control. Serialization is the process of reading from or writing to a persistent storage medium, such as a disk file. The Microsoft Foundation Class (MFC) Library provides built-in support for serialization in class `CObject`. `COleControl` extends this support to ActiveX controls through the use of a property exchange mechanism.  
   
- Сериализация для элементов управления ActiveX реализуется путем переопределения [COleControl::DoPropExchange](../Topic/COleControl::DoPropExchange.md).  Эта функция, вызываемая во время загрузки и сохранения объекта управления, содержит все свойства, реализованные с переменной\-членом или переменной\-членом с уведомления об изменении.  
+ Serialization for ActiveX controls is implemented by overriding [COleControl::DoPropExchange](../mfc/reference/colecontrol-class.md#dopropexchange). This function, called during the loading and saving of the control object, stores all properties implemented with a member variable or a member variable with change notification.  
   
- В следующих разделах приведены сведения о связанных основных проблем в сериализации элемента управления ActiveX.  
+ The following topics cover the main issues related to serializing an ActiveX control:  
   
--   Реализации функций `DoPropExchange`  для сериализации находится объект управления  
+-   Implementing `DoPropExchange` function to serialize your control object  
   
--   [Настраивать процесс сериализации](#_core_customizing_the_default_behavior_of_dopropexchange)  
+-   [Customizing the Serialization Process](#_core_customizing_the_default_behavior_of_dopropexchange)  
   
--   [Реализация поддержки версии](#_core_implementing_version_support)  
+-   [Implementing Version Support](#_core_implementing_version_support)  
   
-##  <a name="_core_implementing_the_dopropexchange_function"></a> Реализации функций DoPropExchange  
- При использовании мастера элементов управления ActiveX для создания проекта элемента управления, несколько функций обработчика по умолчанию автоматически добавляются в класс элемента управления, включая реализацию по умолчанию [COleControl::DoPropExchange](../Topic/COleControl::DoPropExchange.md).  В следующем примере показан код добавлен к классам, созданным с помощью элемента управления ActiveX.  
+##  <a name="_core_implementing_the_dopropexchange_function"></a> Implementing the DoPropExchange Function  
+ When you use the ActiveX Control Wizard to generate the control project, several default handler functions are automatically added to the control class, including the default implementation of [COleControl::DoPropExchange](../mfc/reference/colecontrol-class.md#dopropexchange). The following example shows the code added to classes created with the ActiveX Control Wizard:  
   
- [!code-cpp[NVC_MFC_AxUI#43](../mfc/codesnippet/CPP/mfc-activex-controls-serializing_1.cpp)]  
+ [!code-cpp[NVC_MFC_AxUI#43](../mfc/codesnippet/cpp/mfc-activex-controls-serializing_1.cpp)]  
   
- Если требуется создать свойство упорным, измените `DoPropExchange` путем добавления вызов функции обмена свойства.  В следующем примере демонстрируется сериализации пользовательского свойства логического CircleShape, где свойство CircleShape имеет значение по умолчанию **TRUE**.  
+ If you want to make a property persistent, modify `DoPropExchange` by adding a call to the property exchange function. The following example demonstrates the serialization of a custom Boolean CircleShape property, where the CircleShape property has a default value of **TRUE**:  
   
- [!code-cpp[NVC_MFC_AxSer#1](../mfc/codesnippet/CPP/mfc-activex-controls-serializing_2.cpp)]  
-[!code-cpp[NVC_MFC_AxSer#2](../mfc/codesnippet/CPP/mfc-activex-controls-serializing_3.cpp)]  
+ [!code-cpp[NVC_MFC_AxSer#1](../mfc/codesnippet/cpp/mfc-activex-controls-serializing_2.cpp)]  
+[!code-cpp[NVC_MFC_AxSer#2](../mfc/codesnippet/cpp/mfc-activex-controls-serializing_3.cpp)]  
   
- В следующей таблице перечислены возможные обмена функции свойств можно использовать для сериализации свойства элемента управления.  
+ The following table lists the possible property exchange functions you can use to serialize the control's properties:  
   
-|Функции обмена свойства|Назначение|  
-|-----------------------------|----------------|  
-|**PX\_Blob \(\)**|Сериализует свойства данных \(BLOB\) большого двоичного объекта типа.|  
-|**PX\_Bool \(\)**|Сериализует логическое свойство типа.|  
-|**PX\_Color \(\)**|Сериализует свойства типа цвета.|  
-|**PX\_Currency \(\)**|Сериализует свойства типа валюты \( **CY** \).|  
-|**PX\_Double \(\)**|Сериализует свойства типа **double**.|  
-|**PX\_Font \(\)**|Сериализует свойства типа шрифта.|  
-|**PX\_Float \(\)**|Сериализует свойства типа **плавающее**.|  
-|**PX\_IUnknown \(\)**|Сериализует свойства типа `LPUNKNOWN`.|  
-|**PX\_Long \(\)**|Сериализует свойства типа **long**.|  
-|**PX\_Picture \(\)**|Сериализует свойство фигуры типа.|  
-|**PX\_Short \(\)**|Сериализует свойства типа **short**.|  
-|**PX\_String \(\)**|Сериализует свойство `CString` типа.|  
-|**PX\_ULong \(\)**|Сериализует свойства типа **ulong**.|  
-|**PX\_UShort \(\)**|Сериализует свойства типа **ushort**.|  
+|Property exchange functions|Purpose|  
+|---------------------------------|-------------|  
+|**PX_Blob( )**|Serializes a type Binary Large Object (BLOB) data property.|  
+|**PX_Bool( )**|Serializes a type Boolean property.|  
+|**PX_Color( )**|Serializes a type color property.|  
+|**PX_Currency( )**|Serializes a type **CY** (currency) property.|  
+|**PX_Double( )**|Serializes a type **double** property.|  
+|**PX_Font( )**|Serializes a Font type property.|  
+|**PX_Float( )**|Serializes a type **float** property.|  
+|**PX_IUnknown( )**|Serializes a property of type `LPUNKNOWN`.|  
+|**PX_Long( )**|Serializes a type **long** property.|  
+|**PX_Picture( )**|Serializes a type Picture property.|  
+|**PX_Short( )**|Serializes a type **short** property.|  
+|**PXstring( )**|Serializes a type `CString` property.|  
+|**PX_ULong( )**|Serializes a type **ULONG** property.|  
+|**PX_UShort( )**|Serializes a type **USHORT** property.|  
   
- Дополнительные сведения об этих функциях обмена свойств см. в разделе [Сохранение элементов управления OLE](../mfc/reference/persistence-of-ole-controls.md) в *справочнике по MFC*.  
+ For more information on these property exchange functions, see [Persistence of OLE Controls](../mfc/reference/persistence-of-ole-controls.md) in the *MFC Reference*.  
   
-##  <a name="_core_customizing_the_default_behavior_of_dopropexchange"></a> Настраивать реакция на событие по умолчанию DoPropExchange  
- Реализация по умолчанию **DoPropertyExchange** \(как показано в предыдущем разделе\) вызовет базовый класс `COleControl`.  Это сериализует набор свойств автоматически поддерживается `COleControl`, который использует больше дискового пространства, чем издающ сериализации только пользовательские свойства элемента управления.  Удалить этот вызов позволяет данный объект для сериализации только те свойства, безопасные важным.  Любое стандартное свойство заявляет, что не будет сериализуется в элемент управления, реализовал сохранения или загрузка объект управления, если явно не задано добавление вызовов **PX\_** для них.  
+##  <a name="_core_customizing_the_default_behavior_of_dopropexchange"></a> Customizing the Default Behavior of DoPropExchange  
+ The default implementation of **DoPropertyExchange** (as shown in the previous topic) makes a call to base class `COleControl`. This serializes the set of properties automatically supported by `COleControl`, which uses more storage space than serializing only the custom properties of the control. Removing this call allows your object to serialize only those properties you consider important. Any stock property states the control has implemented will not be serialized when saving or loading the control object unless you explicitly add **PX_** calls for them.  
   
-##  <a name="_core_implementing_version_support"></a> Реализация поддержки версии  
- Поддержка версий позволяет измененного элемента управления ActiveX добавлять новые доступные свойства и по\-прежнему может найти и загрузить постоянные, созданный в более ранней версии состояние элемента управления.  Чтобы сделать версии элемента управления доступен как часть его упорных данных, вызовите функции [COleControl::ExchangeVersion](../Topic/COleControl::ExchangeVersion.md) в `DoPropExchange` элемента управления.  Этот вызов автоматически вставляется, если элемент управления ActiveX было создано с помощью мастера элементов управления ActiveX.  Его можно удалить, если не нужна поддержка версии.  Однако затраты размера элемента управления очень мала \(4 байта\) для добавленной гибкости, поддержка предоставляет версии.  
+##  <a name="_core_implementing_version_support"></a> Implementing Version Support  
+ Version support enables a revised ActiveX control to add new persistent properties, and still be able to detect and load the persistent state created by an earlier version of the control. To make a control's version available as part of its persistent data, call [COleControl::ExchangeVersion](../mfc/reference/colecontrol-class.md#exchangeversion) in the control's `DoPropExchange` function. This call is automatically inserted if the ActiveX control was created using the ActiveX Control Wizard. It can be removed if version support is not needed. However, the cost in control size is very small (4 bytes) for the added flexibility that version support provides.  
   
- Если элемент управления не был создан с помощью мастера элементов управления ActiveX, добавьте вызов `COleControl::ExchangeVersion`, вставив следующей линии в начале функции `DoPropExchange` \(перед вызовом `COleControl::DoPropExchange`\).  
+ If the control was not created with the ActiveX Control Wizard, add a call to `COleControl::ExchangeVersion` by inserting the following line at the beginning of your `DoPropExchange` function (before the call to `COleControl::DoPropExchange`):  
   
- [!code-cpp[NVC_MFC_AxSer#1](../mfc/codesnippet/CPP/mfc-activex-controls-serializing_2.cpp)]  
-[!code-cpp[NVC_MFC_AxSer#3](../mfc/codesnippet/CPP/mfc-activex-controls-serializing_4.cpp)]  
+ [!code-cpp[NVC_MFC_AxSer#1](../mfc/codesnippet/cpp/mfc-activex-controls-serializing_2.cpp)]  
+[!code-cpp[NVC_MFC_AxSer#3](../mfc/codesnippet/cpp/mfc-activex-controls-serializing_4.cpp)]  
   
- Можно использовать любое `DWORD` как номер версии.  Проекты, созданные использованием **\_wVerMinor** и **\_wVerMajor** мастера элементов управления ActiveX по умолчанию.  Эти глобальные константы, определенные в файле реализации класса элемента управления ActiveX проекта.  В пределах остальной функции `DoPropExchange`, можно вызвать [CPropExchange::GetVersion](../Topic/CPropExchange::GetVersion.md) в любое время, чтобы получить версию сохранении или извлечении.  
+ You can use any `DWORD` as the version number. Projects generated by the ActiveX Control Wizard use **_wVerMinor** and **_wVerMajor** as the default. These are global constants defined in the implementation file of the project's ActiveX control class. Within the remainder of your `DoPropExchange` function, you can call [CPropExchange::GetVersion](../mfc/reference/cpropexchange-class.md#getversion) at any time to retrieve the version you are saving or retrieving.  
   
- В следующем примере, версия 1 управления этого примера «имеет только свойства ReleaseDate».  Версия 2 добавляет свойство «OriginalDate».  Если элемент управления проинструктирован для загрузки постоянное состояние из старой версии, он инициализирует переменную\-член для нового свойства значение по умолчанию.  
+ In the following example, version 1 of this sample control has only a "ReleaseDate" property. Version 2 adds an "OriginalDate" property. If the control is instructed to load the persistent state from the old version, it initializes the member variable for the new property to a default value.  
   
- [!code-cpp[NVC_MFC_AxSer#4](../mfc/codesnippet/CPP/mfc-activex-controls-serializing_5.cpp)]  
-[!code-cpp[NVC_MFC_AxSer#3](../mfc/codesnippet/CPP/mfc-activex-controls-serializing_4.cpp)]  
+ [!code-cpp[NVC_MFC_AxSer#4](../mfc/codesnippet/cpp/mfc-activex-controls-serializing_5.cpp)]  
+[!code-cpp[NVC_MFC_AxSer#3](../mfc/codesnippet/cpp/mfc-activex-controls-serializing_4.cpp)]  
   
- По умолчанию элемент управления «преобразования» старые данные на последний по времени формат.  Например, если версия 2 элемента управления загружает данные, сохраненного версия 1, он записывает формат версии 2 при его сохранении снова.  Если последним или требуется элемент управления сохранения данных в формате, передайте **ЛОЖЬ** в качестве третьего параметра при вызове `ExchangeVersion`.  Этот параметр является необязательным и третий **TRUE** по умолчанию.  
+ By default, a control "converts" old data to the latest format. For example, if version 2 of a control loads data that was saved by version 1, it will write the version 2 format when it is saved again. If you want the control to save data in the format last read, pass **FALSE** as a third parameter when calling `ExchangeVersion`. This third parameter is optional and is **TRUE** by default.  
   
-## См. также  
- [Элементы управления ActiveX MFC](../mfc/mfc-activex-controls.md)
+## <a name="see-also"></a>See Also  
+ [MFC ActiveX Controls](../mfc/mfc-activex-controls.md)
+
+

@@ -1,5 +1,5 @@
 ---
-title: "Структура intput_iterator_tag | Документы Майкрософт"
+title: input_iterator_tag Struct | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -9,7 +9,6 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
-- input_iterator_tag
 - xutility/std::input_iterator_tag
 dev_langs:
 - C++
@@ -35,36 +34,36 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 2d05749ba2837a3879c91886b9266de47dd2ece6
-ms.openlocfilehash: aa5370c1604d9ce29bcfdd783084795696cce326
+ms.translationtype: MT
+ms.sourcegitcommit: 5d026c375025b169d5db8445cbb52c0c917b2d8d
+ms.openlocfilehash: 38caddde0f2613261084d4cb66637dcbbf54e0f3
 ms.contentlocale: ru-ru
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 09/09/2017
 
 ---
-# <a name="inputiteratortag-struct"></a>Структура input_iterator_tag
-Класс, предоставляющий тип возвращаемого значения для функции **iterator_category**, которая представляет собой итератор ввода.  
+# <a name="inputiteratortag-struct"></a>input_iterator_tag Struct
+A class that provides a return type for **iterator_category** function that represents an input iterator.  
   
-## <a name="syntax"></a>Синтаксис  
+## <a name="syntax"></a>Syntax  
   
 struct input_iterator_tag {};  
   
-## <a name="remarks"></a>Примечания  
- Классы категории тегов используются как теги компиляции для выбора алгоритма. Функция шаблона должна найти наиболее точно определенную категорию своего аргумента итератора, чтобы можно было использовать наиболее эффективный алгоритм во время компиляции. Для каждого итератора типа `Iterator` категория `iterator_traits`< `Iterator`> **::iterator_category** должна быть определена как наиболее точный тег категории, который описывает поведение итератора.  
+## <a name="remarks"></a>Remarks  
+ The category tag classes are used as compile tags for algorithm selection. The template function needs to find the most specific category of its iterator argument so that it can use the most efficient algorithm at compile time. For every iterator of type `Iterator`, `iterator_traits`< `Iterator`> **::iterator_category** must be defined to be the most specific category tag that describes the iterator's behavior.  
   
- Тип является таким же, как **итератор**\< **Iter**> **::iterator_category**, когда **Iter** описывает объект, который может быть итератором ввода.  
+ The type is the same as **iterator**\< **Iter**> **::iterator_category** when **Iter** describes an object that can serve as an input iterator.  
   
-## <a name="example"></a>Пример  
- См. разделы [iterator_traits](../standard-library/iterator-traits-struct.md) или [random_access_iterator_tag](../standard-library/random-access-iterator-tag-struct.md) с примерами использования тегов **iterator_tag**.  
+## <a name="example"></a>Example  
+ See [iterator_traits](../standard-library/iterator-traits-struct.md) or [random_access_iterator_tag](../standard-library/random-access-iterator-tag-struct.md) for an example of how to use **iterator_tag**s.  
   
-## <a name="requirements"></a>Требования  
- **Заголовок:** \<iterator>  
+## <a name="requirements"></a>Requirements  
+ **Header:** \<iterator>  
   
- **Пространство имен:** std  
+ **Namespace:** std  
   
-## <a name="see-also"></a>См. также  
- [Потокобезопасность в стандартной библиотеке C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)   
- [Справочник по стандартной библиотеке C++](../standard-library/cpp-standard-library-reference.md)
+## <a name="see-also"></a>See Also  
+ [Thread Safety in the C++ Standard Library](../standard-library/thread-safety-in-the-cpp-standard-library.md)   
+ [C++ Standard Library Reference](../standard-library/cpp-standard-library-reference.md)
 
 
 

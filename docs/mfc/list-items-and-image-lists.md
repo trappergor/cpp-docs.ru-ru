@@ -1,45 +1,64 @@
 ---
-title: "Элементы списков и списки изображений | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "CImageList - класс, и элементы списка"
-  - "CListCtrl - класс, списки изображений"
-  - "списки изображений [C++], элементы списка"
-  - "элементы списка, списки изображений"
+title: List Items and Image Lists | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- CImageList class [MFC], and list items
+- image lists [MFC], list items
+- CListCtrl class [MFC], image lists
+- list items [MFC], image lists
 ms.assetid: 317d095f-f978-47da-acb6-7bfe7dd3bc69
 caps.latest.revision: 13
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 9
----
-# Элементы списков и списки изображений
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: de7e5fa9537d4cec3fed7c891fba9a7c4c11c4d2
+ms.contentlocale: ru-ru
+ms.lasthandoff: 09/12/2017
 
-«Элемент» в элементе управления списка \([CListCtrl](../Topic/CListCtrl%20Class.md)\) состоит из Значка, метки и, возможно, другие сведения в подэлементов \(«»\).  
+---
+# <a name="list-items-and-image-lists"></a>List Items and Image Lists
+An "item" in a list control ([CListCtrl](../mfc/reference/clistctrl-class.md)) consists of an icon, a label, and possibly other information (in "subitems").  
   
- Значки элементов элемента управления "Список" содержатся в списках изображений.  Один список содержит полноразрядные Значки изображений, используемых в значков.  Второй, необязательно, список изображений содержит более мелкие версии одного Значков для использования в других представлениях элемента управления.  Третий необязательный список содержит изображения «состояние», например, флажки для отображения перед небольших вкладок в некоторых представлениях.  Четвертый — необязательный список содержит изображения, отображаются в отдельных элементах заголовка элемента управления "Список".  
+ The icons for list control items are contained in image lists. One image list contains full-sized icons used in icon view. A second, optional, image list contains smaller versions of the same icons for use in other views of the control. A third optional list contains "state" images, such as check boxes, for display in front of the small icons in certain views. A fourth optional list contains images that are displayed in individual header items of the list control.  
   
 > [!NOTE]
->  Если элемент управления создается список со стилем `LVS_SHAREIMAGELISTS`, ответственность за уничтожения списки изображений, если они больше не используются.  Укажите этот стиль при присвоении те же списки изображений к элементам управления представления нескольких списков; в противном случае более одного элемента управления может попытаться удалить один и тот же список изображений.  
+>  If a list view control is created with the `LVS_SHAREIMAGELISTS` style, you are responsible for destroying the image lists when they are no longer in use. Specify this style if you assign the same image lists to multiple list view controls; otherwise, more than one control might try to destroy the same image list.  
   
- Элементы списка Дополнительные сведения о см. в разделе [Списки списка изображений](http://msdn.microsoft.com/library/windows/desktop/bb774736) и [Элементы и подэлементов](http://msdn.microsoft.com/library/windows/desktop/bb774736) в [!INCLUDE[winSDK](../atl/includes/winsdk_md.md)].  Также см. в описании класса [CImageList](../Topic/CImageList%20Class.md) в справочнике по MFC и [Использование CImageList](../mfc/using-cimagelist.md) этого семейства статей.  
+ For more information about list items, see [List View Image Lists](http://msdn.microsoft.com/library/windows/desktop/bb774736) and [Items and Subitems](http://msdn.microsoft.com/library/windows/desktop/bb774736) in the Windows SDK. Also see class [CImageList](../mfc/reference/cimagelist-class.md) in the *MFC Reference* and [Using CImageList](../mfc/using-cimagelist.md) in this family of articles.  
   
- Для создания элемента управления "Список", необходимо предоставить списки изображений, используемых при вставке новых элементов в список.  Следующий пример демонстрирует эту процедуру, где `m_pImagelist` указатель типа `CImageList` и `m_listctrl` элемент данных `CListCtrl`.  
+ To create a list control, you need to supply image lists to be used when you insert new items into the list. The following example demonstrates this procedure, where `m_pImagelist` is a pointer of type `CImageList` and `m_listctrl` is a `CListCtrl` data member.  
   
- [!code-cpp[NVC_MFCControlLadenDialog#19](../mfc/codesnippet/CPP/list-items-and-image-lists_1.cpp)]  
+ [!code-cpp[NVC_MFCControlLadenDialog#19](../mfc/codesnippet/cpp/list-items-and-image-lists_1.cpp)]  
   
- Однако если не требуется отобразить Значки на представлении или элементе управления списка, не требуется списки изображений.  
+ However, if you don't plan to display icons in your list view or list control, you don't need image lists.  
   
-## См. также  
- [Использование CListCtrl](../Topic/Using%20CListCtrl.md)   
- [Элементы управления](../mfc/controls-mfc.md)
+## <a name="see-also"></a>See Also  
+ [Using CListCtrl](../mfc/using-clistctrl.md)   
+ [Controls](../mfc/controls-mfc.md)
+
+

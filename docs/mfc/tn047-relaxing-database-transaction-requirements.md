@@ -1,33 +1,52 @@
 ---
-title: "TN047. Уменьшение требований к транзакциям баз данных | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "vc.data"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "TN047"
+title: 'TN047: Relaxing Database Transaction Requirements | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- vc.data
+dev_langs:
+- C++
+helpviewer_keywords:
+- TN047
 ms.assetid: f93c51cf-a8c0-43d0-aa47-7bcb8333d693
 caps.latest.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 5
----
-# TN047. Уменьшение требований к транзакциям баз данных
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 2ea5b26d266d064b9966620a4f05473644421f71
+ms.contentlocale: ru-ru
+ms.lasthandoff: 09/12/2017
 
-Обратите внимание, что эта техника обсудила требования к транзакции классов MFC базы данных ODBC, теперь является устаревшим.  Перед MFC 4.2, классы базы данных требуют, чтобы курсоры были сохранены в наборах записей после операции **CommitTrans** или **Откат**.  Если драйвер ODBC и СУБД не поддерживает этот уровень сохранение курсора, классы базы данных не включено транзакции.  
+---
+# <a name="tn047-relaxing-database-transaction-requirements"></a>TN047: Relaxing Database Transaction Requirements
+This tech note, which discussed the transaction requirements of the MFC ODBC database classes, is now obsolete. Before MFC 4.2, the database classes required that cursors be preserved on recordsets after a **CommitTrans** or **Rollback** operation. If the ODBC driver and DBMS did not support this level of cursor preservation, then the database classes did not enable transactions.  
   
- Начиная с версии MFC 4.2, классы базы данных ослабляли ограничение для хранения курсора.  Транзакции будут включены, если драйвер поддерживает их.  Однако теперь необходимо проверить результат операции **CommitTrans** или **Откат** на общих наборах записей.  В разделе функций\-членов [CDatabase::GetCursorCommitBehavior](../Topic/CDatabase::GetCursorCommitBehavior.md) и [CDatabase::GetCursorRollbackBehavior](../Topic/CDatabase::GetCursorRollbackBehavior.md) для получения дополнительных сведений.  
+ Beginning with MFC 4.2, the database classes have relaxed the restriction of requiring cursor preservation. Transactions will be enabled if the driver supports them. However, you must now check the effect of a **CommitTrans** or **Rollback** operation on open recordsets. See the member functions [CDatabase::GetCursorCommitBehavior](../mfc/reference/cdatabase-class.md#getcursorcommitbehavior) and [CDatabase::GetCursorRollbackBehavior](../mfc/reference/cdatabase-class.md#getcursorrollbackbehavior) for more information.  
   
-## См. также  
- [Технические примечания по номеру](../mfc/technical-notes-by-number.md)   
- [Технические примечания по категории](../mfc/technical-notes-by-category.md)
+## <a name="see-also"></a>See Also  
+ [Technical Notes by Number](../mfc/technical-notes-by-number.md)   
+ [Technical Notes by Category](../mfc/technical-notes-by-category.md)
+
+

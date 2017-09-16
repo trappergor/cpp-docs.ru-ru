@@ -1,5 +1,5 @@
 ---
-title: "Класс lock_guard | Документы Майкрософт"
+title: lock_guard Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -33,48 +33,48 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
-ms.openlocfilehash: 047c7ab9db009bceafe47bb0ae53b876adad81b5
+ms.translationtype: MT
+ms.sourcegitcommit: 5d026c375025b169d5db8445cbb52c0c917b2d8d
+ms.openlocfilehash: 56bff026e272b14dd6b7a08d23f04f7997e2a570
 ms.contentlocale: ru-ru
-ms.lasthandoff: 04/29/2017
+ms.lasthandoff: 09/09/2017
 
 ---
-# <a name="lockguard-class"></a>Класс lock_guard
-Представляет шаблон, для которого можно создать экземпляры и объект, деструктор которого разблокирует `mutex`.  
+# <a name="lockguard-class"></a>lock_guard Class
+Represents a template that can be instantiated to create an object whose destructor unlocks a `mutex`.  
   
-## <a name="syntax"></a>Синтаксис  
+## <a name="syntax"></a>Syntax  
   
 ```
 template <class Mutex>
 class lock_guard;
 ```  
   
-## <a name="remarks"></a>Примечания  
- В аргументе шаблона `Mutex` должно быть указано имя *типа мьютекс*.  
+## <a name="remarks"></a>Remarks  
+ The template argument `Mutex` must name a *mutex type*.  
   
-## <a name="members"></a>Члены  
+## <a name="members"></a>Members  
   
-### <a name="public-typedefs"></a>Общедоступные определения типов  
+### <a name="public-typedefs"></a>Public Typedefs  
   
-|Имя|Описание|  
+|Name|Description|  
 |----------|-----------------|  
-|`lock_guard::mutex_type`|Синоним для аргумента шаблона `Mutex`.|  
+|`lock_guard::mutex_type`|Synonym for the template argument `Mutex`.|  
   
-### <a name="public-constructors"></a>Открытые конструкторы  
+### <a name="public-constructors"></a>Public Constructors  
   
-|Имя|Описание|  
+|Name|Description|  
 |----------|-----------------|  
-|[lock_guard](#lock_guard)|Создает объект `lock_guard`.|  
-|[Деструктор lock_guard::~lock_guard](#dtorlock_guard_destructor)|Снимает блокировку `mutex`, переданного в конструктор.|  
+|[lock_guard](#lock_guard)|Constructs a `lock_guard` object.|  
+|[lock_guard::~lock_guard Destructor](#dtorlock_guard_destructor)|Unlocks the `mutex` that was passed to the constructor.|  
   
-## <a name="requirements"></a>Требования  
- **Заголовок:** \<мьютекс >  
+## <a name="requirements"></a>Requirements  
+ **Header:** \<mutex>  
   
- **Пространство имен:** std  
+ **Namespace:** std  
   
-##  <a name="lock_guard"></a>  Конструктор lock_guard::lock_guard  
- Создает объект `lock_guard`.  
+##  <a name="lock_guard"></a>  lock_guard::lock_guard Constructor  
+ Constructs a `lock_guard` object.  
   
 ```cpp  
 explicit lock_guard(mutex_type& Mtx);
@@ -82,27 +82,27 @@ explicit lock_guard(mutex_type& Mtx);
 lock_guard(mutex_type& Mtx, adopt_lock_t);
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
  `Mtx`  
- Объект *типа мьютекс*.  
+ A *mutex type* object.  
   
-### <a name="remarks"></a>Примечания  
- Первый конструктор создает объект типа `lock_guard` и блокирует `Mtx`. Если `Mtx` не является рекурсивным мьютексом, его необходимо разблокировать при вызове этого конструктора.  
+### <a name="remarks"></a>Remarks  
+ The first constructor constructs an object of type `lock_guard` and locks `Mtx`. If `Mtx` is not a recursive mutex, it must be unlocked when this constructor is called.  
   
- Второй конструктор не блокирует `Mtx`. `Mtx` должен быть заблокирован при вызове этого конструктора. Конструктор не выдает никаких исключений.  
+ The second constructor does not lock `Mtx`. `Mtx` must be locked when this constructor is called. The constructor throws no exceptions.  
   
-##  <a name="dtorlock_guard_destructor"></a>  Деструктор lock_guard::~lock_guard  
- Снимает блокировку `mutex`, переданного в конструктор.  
+##  <a name="dtorlock_guard_destructor"></a>  lock_guard::~lock_guard Destructor  
+ Unlocks the `mutex` that was passed to the constructor.  
   
 ```
 ~lock_guard() noexcept;
 ```  
   
-### <a name="remarks"></a>Примечания  
- Если `mutex` не существует при выполнении деструктора, поведение не определено.  
+### <a name="remarks"></a>Remarks  
+ If the `mutex` does not exist when the destructor runs, the behavior is undefined.  
   
-## <a name="see-also"></a>См. также  
- [Справочник по файлам заголовков](../standard-library/cpp-standard-library-header-files.md)   
+## <a name="see-also"></a>See Also  
+ [Header Files Reference](../standard-library/cpp-standard-library-header-files.md)   
  [\<mutex>](../standard-library/mutex.md)
 
 

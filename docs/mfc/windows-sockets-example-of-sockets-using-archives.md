@@ -1,71 +1,90 @@
 ---
-title: "Сокеты Windows. Пример сокетов с использованием архивов | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "примеры [MFC], Сокеты Windows"
-  - "сокеты [C++], с архивами"
-  - "Сокеты Windows [C++], с архивами"
+title: 'Windows Sockets: Example of Sockets Using Archives | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- sockets [MFC], with archives
+- examples [MFC], Windows Sockets
+- Windows Sockets [MFC], with archives
 ms.assetid: 2e3c9bb2-7e7b-4f28-8dc5-6cb7a484edac
 caps.latest.revision: 12
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 8
----
-# Сокеты Windows. Пример сокетов с использованием архивов
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: fc51b4ea00b6511786a6a95c9a17f82ffe1f7a7c
+ms.contentlocale: ru-ru
+ms.lasthandoff: 09/12/2017
 
-В этой статье описывается пример класса [CSocket](../mfc/reference/csocket-class.md).  В этом примере используется объекты `CArchive` для сериализации данных через сокет.  Обратите внимание, что это не сериализации документа на или из файла.  
+---
+# <a name="windows-sockets-example-of-sockets-using-archives"></a>Windows Sockets: Example of Sockets Using Archives
+This article presents an example of using class [CSocket](../mfc/reference/csocket-class.md). The example employs `CArchive` objects to serialize data through a socket. Note that this is not document serialization to or from a file.  
   
- В следующем примере показано использование архив отправлять и получать данные с помощью объектов `CSocket`.  Будет создан образец, чтобы 2 экземпляр обменов данными приложения \(на том же компьютере или на разных компьютерах в сети\).  Один экземпляр отправляет данные, другой экземпляр получает и подтверждает.  Любое приложение может начать обмен, и это может выступать в роли сервера или в качестве клиента к другому приложению.  Следующая функция определена в классе представления приложения.  
+ The following example illustrates how you use the archive to send and receive data through `CSocket` objects. The example is designed so that two instances of the application (on the same machine or on different machines on the network) exchange data. One instance sends data, which the other instance receives and acknowledges. Either application can initiate an exchange, and either can act as server or as client to the other application. The following function is defined in the application's view class:  
   
- [!code-cpp[NVC_MFCSimpleSocket#1](../mfc/codesnippet/CPP/windows-sockets-example-of-sockets-using-archives_1.cpp)]  
+ [!code-cpp[NVC_MFCSimpleSocket#1](../mfc/codesnippet/cpp/windows-sockets-example-of-sockets-using-archives_1.cpp)]  
   
- Наиболее важной прежде всего об этом примере, его параллельные структуры, функции MFC `Serialize`.  Функцию\-член **PacketSerialize** состоит из выписки **if** с предложением **else**.  Функция получает 2 ссылки [CArchive](../mfc/reference/carchive-class.md) в качестве параметров. `arData` и `arAck`.  Если объект архива `arData` задается для хранения \(отправить\), ветвь **if** выполняется; в противном случае, если `arData` установлено для загрузки \(получение\) функция принимает ветвь **else**.  Дополнительные сведения о сериализации в MFC см. в разделе [Сериализация](../mfc/how-to-make-a-type-safe-collection.md).  
+ The most important thing about this example is that its structure parallels that of an MFC `Serialize` function. The **PacketSerialize** member function consists of an **if** statement with an **else** clause. The function receives two [CArchive](../mfc/reference/carchive-class.md) references as parameters: `arData` and `arAck`. If the `arData` archive object is set for storing (sending), the **if** branch executes; otherwise, if `arData` is set for loading (receiving) the function takes the **else** branch. For more information about serialization in MFC, see [Serialization](../mfc/how-to-make-a-type-safe-collection.md).  
   
 > [!NOTE]
->  Предполагается, что будет объект архива `arAck` противоположностью `arData`.  Если `arData` для отправки, `arAck` получает и converse значение true.  
+>  The `arAck` archive object is assumed to be the opposite of `arData`. If `arData` is for sending, `arAck` receives, and the converse is true.  
   
- Для отправки функция примера выполняются для указанного числа раз, каждый раз при создании некоторые случайные данные для демонстрации.  Приложение будет получена реальные данные из определенного источника, например файл.  Оператор вставки архива `arData` \(**\<\<**\) используется, чтобы отправить поток 3 последовательных блоков данных:  
+ For sending, the example function loops for a specified number of times, each time generating some random data for demonstration purposes. Your application would obtain real data from some source, such as a file. The `arData` archive's insertion operator (**<<**) is used to send a stream of three consecutive chunks of data:  
   
--   «Заголовок», указывают на природу данных \(в данном случае значение переменной `bValue` и отправляются количество копий\).  
+-   A "header" that specifies the nature of the data (in this case, the value of the `bValue` variable and how many copies will be sent).  
   
-     Оба элемента создаются случайно для данного образца.  
+     Both items are generated randomly for this example.  
   
--   Заданное число копий данных.  
+-   The specified number of copies of the data.  
   
-     Внутренний цикл **for** отправляет `bValue` заданное число раз.  
+     The inner **for** loop sends `bValue` the specified number of times.  
   
--   Строка с `strText` этим отображаются приемника его пользователю.  
+-   A string called `strText` that the receiver displays to its user.  
   
- Для получения функция работает аналогично, за исключением того, что она использует оператор извлечения архива \(**\>\>**\) для получения данных из архива.  Принимающее приложение проверяет данные, он получает сообщение указывает конечный «последнего», а затем отправляет обратно сообщение, которое гласит «отправить» для отправя приложениям отображать.  
+ For receiving, the function operates similarly, except that it uses the archive's extraction operator (**>>**) to get data from the archive. The receiving application verifies the data it receives, displays the final "Received" message, and then sends back a message that says "Sent" for the sending application to display.  
   
- В этой модели взаимодействий,» ключевое слово «полученное сообщение, отправленное в переменной `strText`, для отображения на другом окончании сообщения, и определяет, является принимающим пользователю, что были получены определенное количество пакетов данных.  Получатель отвечает со сходной строкой, гласит «отправить» для отображения на экране исходного отправителя.  Является сообщением обеих строк успешного сообщение указывает, что произошло.  
+ In this communications model, the word "Received", the message sent in the `strText` variable, is for display at the other end of the communication, so it specifies to the receiving user that a certain number of packets of data have been received. The receiver replies with a similar string that says "Sent", for display on the original sender's screen. Receipt of both strings indicates that successful communication has occurred.  
   
 > [!CAUTION]
->  При создании клиентской программы MFC для связи с установленными серверами библиотек \(\), не отправлять объекты C\+\+ по архивным.  Если сервер не будет приложение MFC, понимает типы объектов требуется отправить, он не сможет получить и поиск объекты.  В примере этого раздела [Windows SSL. Порядок байтов](../mfc/windows-sockets-byte-ordering.md) показано сообщение данного типа.  
+>  If you are writing an MFC client program to communicate with established (non-MFC) servers, do not send C++ objects through the archive. Unless the server is an MFC application that understands the kinds of objects you want to send, it won't be able to receive and deserialize your objects. An example in the article [Windows Sockets: Byte Ordering](../mfc/windows-sockets-byte-ordering.md) shows a communication of this type.  
   
- Спецификация Windows SSL см. Дополнительные сведения в: **htonl**, **htons**, **ntohl**, **ntohs**.  Кроме того, дополнительные сведения см. в разделах:  
+ For more information, see Windows Sockets Specification: **htonl**, **htons**, **ntohl**, **ntohs**. Also, for more information, see:  
   
--   [Windows SSL. Наследование от классов socket](../mfc/windows-sockets-deriving-from-socket-classes.md)  
+-   [Windows Sockets: Deriving from Socket Classes](../mfc/windows-sockets-deriving-from-socket-classes.md)  
   
--   [Windows SSL. Как работают с архивами сокеты](../mfc/windows-sockets-how-sockets-with-archives-work.md)  
+-   [Windows Sockets: How Sockets with Archives Work](../mfc/windows-sockets-how-sockets-with-archives-work.md)  
   
--   [Windows SSL. Фон](../mfc/windows-sockets-background.md)  
+-   [Windows Sockets: Background](../mfc/windows-sockets-background.md)  
   
-## См. также  
- [Сокеты Windows в MFC](../mfc/windows-sockets-in-mfc.md)   
- [CArchive::IsStoring](../Topic/CArchive::IsStoring.md)   
- [CArchive::operator \<\<](../Topic/CArchive::operator%20%3C%3C.md)   
- [CArchive::operator \>\>](../Topic/CArchive::operator%20%3E%3E.md)   
- [CArchive::Flush](../Topic/CArchive::Flush.md)   
- [CObject::Serialize](../Topic/CObject::Serialize.md)
+## <a name="see-also"></a>See Also  
+ [Windows Sockets in MFC](../mfc/windows-sockets-in-mfc.md)   
+ [CArchive::IsStoring](../mfc/reference/carchive-class.md#isstoring)   
+ [CArchive::operator <<](../mfc/reference/carchive-class.md#operator_lt_lt)   
+ [CArchive::operator >>](../mfc/reference/carchive-class.md#operator_lt_lt)   
+ [CArchive::Flush](../mfc/reference/carchive-class.md#flush)   
+ [CObject::Serialize](../mfc/reference/cobject-class.md#serialize)
+
+

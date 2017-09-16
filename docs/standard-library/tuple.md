@@ -1,5 +1,5 @@
 ---
-title: "&lt;tuple&gt; | Документы Майкрософт"
+title: '&lt;tuple&gt; | Microsoft Docs'
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -33,50 +33,50 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
-ms.openlocfilehash: 212b2b5af678bd39b4ecc7d6622c71db20db5a26
+ms.translationtype: MT
+ms.sourcegitcommit: 5d026c375025b169d5db8445cbb52c0c917b2d8d
+ms.openlocfilehash: fa99b5815a0612727d163ca65440fea13dafedbc
 ms.contentlocale: ru-ru
-ms.lasthandoff: 04/29/2017
+ms.lasthandoff: 09/09/2017
 
 ---
 # <a name="lttuplegt"></a>&lt;tuple&gt;
-Определяет шаблон `tuple`, экземпляры которого содержат объекты различных типов.  
+Defines a template `tuple` whose instances hold objects of varying types.  
   
-## <a name="syntax"></a>Синтаксис  
+## <a name="syntax"></a>Syntax  
   
 ```  
 #include <tuple>  
 ```  
   
-### <a name="classes"></a>Классы  
+### <a name="classes"></a>Classes  
   
 |||  
 |-|-|  
-|[tuple](../standard-library/tuple-class.md)|Создает последовательность элементов фиксированной длины.|  
-|[Класс tuple_element](../standard-library/tuple-element-class-tuple.md)|Заключает в оболочку тип элемента `tuple`.|  
-|[Класс tuple_size](../standard-library/tuple-size-class-tuple.md)|Создает оболочку для счетчика элементов `tuple`.|  
+|[tuple](../standard-library/tuple-class.md)|Wraps a fixed-length sequence of elements.|  
+|[tuple_element Class](../standard-library/tuple-element-class-tuple.md)|Wraps the type of a `tuple` element.|  
+|[tuple_size Class](../standard-library/tuple-size-class-tuple.md)|Wraps `tuple` element count.|  
   
-### <a name="operators"></a>Операторы  
-  
-|||  
-|-|-|  
-|[оператор==](../standard-library/tuple-operators.md#op_eq_eq)|Сравнение объектов `tuple`, равенство|  
-|[оператор!=](../standard-library/tuple-operators.md#op_neq)|Сравнение объектов `tuple`, неравенство|  
-|[оператор<](../standard-library/tuple-operators.md#op_lt)|Сравнение объектов `tuple`, меньше|  
-|[оператор<=](../standard-library/tuple-operators.md#op_lt_eq)|Сравнение объектов `tuple`, меньше или равно|  
-|[оператор>](../standard-library/tuple-operators.md#op_gt)|Сравнение объектов `tuple`, больше|  
-|[оператор>=](../standard-library/tuple-operators.md#op_gt_eq)|Сравнение объектов `tuple`, больше или равно|  
-  
-### <a name="functions"></a>Функции  
+### <a name="operators"></a>Operators  
   
 |||  
 |-|-|  
-|[get](../standard-library/tuple-functions.md#get)|Возвращает элемент из объекта `tuple`.|  
-|[make_tuple](../standard-library/tuple-functions.md#make_tuple)|Создает `tuple` из значений элементов.|  
-|[tie](../standard-library/tuple-functions.md#tie)|Создает `tuple` из ссылок на элементы.|  
+|[operator==](../standard-library/tuple-operators.md#op_eq_eq)|Comparison of `tuple` objects, equal|  
+|[operator!=](../standard-library/tuple-operators.md#op_neq)|Comparison of `tuple` objects, not equal|  
+|[operator<](../standard-library/tuple-operators.md#op_lt)|Comparison of `tuple` objects, less than|  
+|[operator<=](../standard-library/tuple-operators.md#op_lt_eq)|Comparison of `tuple` objects, less than or equal|  
+|[operator>](../standard-library/tuple-operators.md#op_gt)|Comparison of `tuple` objects, greater than|  
+|[operator>=](../standard-library/tuple-operators.md#op_gt_eq)|Comparison of `tuple` objects, greater than or equal|  
   
-## <a name="see-also"></a>См. также  
+### <a name="functions"></a>Functions  
+  
+|||  
+|-|-|  
+|[get](../standard-library/tuple-functions.md#get)|Gets an element from a `tuple` object.|  
+|[make_tuple](../standard-library/tuple-functions.md#make_tuple)|Makes a `tuple` from element values.|  
+|[tie](../standard-library/tuple-functions.md#tie)|Makes a `tuple` from element references.|  
+  
+## <a name="see-also"></a>See Also  
  [\<array>](../standard-library/array.md)
 
 

@@ -1,89 +1,105 @@
 ---
-title: "Элементы управления ActiveX в MFC. Распространение элементов управления ActiveX | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "GetWindowsDirectory"
-  - "GetSystemDirectory"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "распространение элементов управления ActiveX MFC"
-  - "GetProcAddress - метод, регистрация элементов управления ActiveX"
-  - "GetSystemDirectory - метод"
-  - "GetWindowsDirectory - метод"
-  - "установка элементов управления ActiveX"
-  - "LoadLibrary - метод, регистрация элементов управления ActiveX"
-  - "MFC ActiveX - элементы управления, версии ANSI или Юникода"
-  - "MFC ActiveX - элементы управления, распространение"
-  - "MFC ActiveX - элементы управления, установка"
-  - "MFC ActiveX - элементы управления, регистрация"
-  - "MFC40.DLL"
-  - "MFC40U.DLL"
-  - "MSVCRT40.dll"
-  - "OLEPRO32.DLL"
-  - "распространяемые файлы, MFC ActiveX - элементы управления"
-  - "регистрация элементов управления ActiveX"
-  - "регистрация элементов управления"
-  - "реестр, регистрация элементов управления"
-  - "RegSvr32.exe"
+title: 'MFC ActiveX Controls: Distributing ActiveX Controls | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- GetWindowsDirectory
+- GetSystemDirectory
+dev_langs:
+- C++
+helpviewer_keywords:
+- MFC ActiveX controls [MFC], ANSI or Unicode versions
+- RegSvr32.exe
+- MFC ActiveX controls [MFC], distributing
+- distributing MFC ActiveX controls
+- redistributable files, MFC ActiveX controls
+- GetSystemDirectory method [MFC]
+- registering ActiveX controls
+- MSVCRT40.dll
+- registry [MFC], registering controls
+- LoadLibrary method, registering ActiveX controls
+- MFC40U.DLL
+- MFC40.DLL
+- GetWindowsDirectory method [MFC]
+- installing ActiveX controls
+- GetProcAddress method, registering ActiveX controls
+- MFC ActiveX controls [MFC], installing
+- MFC ActiveX controls [MFC], registering
+- registering controls
+- OLEPRO32.DLL
 ms.assetid: cd70ac9b-f613-4879-9e81-6381fdfda2a1
 caps.latest.revision: 11
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 7
----
-# Элементы управления ActiveX в MFC. Распространение элементов управления ActiveX
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: a531f3a004729f5f877ec46205c187b77a31697e
+ms.contentlocale: ru-ru
+ms.lasthandoff: 09/12/2017
 
-Этот раздел описывает несколько связанных проблем в распространении элементы управления ActiveX.  
+---
+# <a name="mfc-activex-controls-distributing-activex-controls"></a>MFC ActiveX Controls: Distributing ActiveX Controls
+This article discusses several issues related to redistributing ActiveX controls:  
   
--   [ANSI или юникода версии элемента управления](#_core_ansi_or_unicode_control_versions)  
+-   [ANSI or Unicode Control Versions](#_core_ansi_or_unicode_control_versions)  
   
--   [Чтобы задать элементы управления ActiveX и DLL распространяемого](#_core_installing_activex_controls_and_redistributable_dlls)  
+-   [Installing ActiveX Controls and Redistributable DLLs](#_core_installing_activex_controls_and_redistributable_dlls)  
   
--   [Регистрация элементов управления](#_core_registering_controls)  
+-   [Registering Controls](#_core_registering_controls)  
   
-    > [!NOTE]
-    >  Дополнительные сведения о распространении элементов управления ActiveX см. в разделе [Распространение элементов управления](../Topic/Redistributing%20Controls.md).  
+##  <a name="_core_ansi_or_unicode_control_versions"></a> ANSI or Unicode Control Versions  
+ You must decide whether to ship an ANSI or Unicode version of the control, or both. This decision is based on portability factors inherent in ANSI and Unicode character sets.  
   
-##  <a name="_core_ansi_or_unicode_control_versions"></a> ANSI или юникода версии элемента управления  
- Можно решить, нужно ли сделать версии ANSI или юникода элемента управления или оба.  Это решение зависит от факторов ошибки, используемая в ANSI и символ юникода — наборов.  
+ ANSI controls, which work on all Win32 operating systems, allow for maximum portability between the various Win32 operating systems. Unicode controls work on only Windows NT (version 3.51 or later), but not on Windows 95 or Windows 98. If portability is your primary concern, ship ANSI controls. If your controls will run only on Windows NT, you can ship Unicode controls. You could also choose to ship both and have your application install the version most appropriate for the user's operating system.  
   
- Управления ANSI, работающие на всех операционных систем Win32, позволяют для максимальной переноса между различными операционными системами Win32.  Управления юникода работают только на Windows NT \(версии 3.51 или более поздней версии\), но не в Windows 95 или Windows 98.  Если переносимость является основным обеспечение, грузите управления ANSI.  Если элементы управления выполняться только на Windows NT, можно грузите управления юникода.  Вы можете выбрать предоставить оба и иметь приложение установить версию наиболее подходящую для операционной системы пользователя.  
-  
-##  <a name="_core_installing_activex_controls_and_redistributable_dlls"></a> Чтобы задать элементы управления ActiveX и DLL распространяемого  
- Программа установки предоставляется вместе с элементами управления ActiveX должна создать специальный подкаталог каталога Windows и поместить файлы .OCX элементов управления в ней.  
-  
-> [!NOTE]
->  Используйте Windows API **GetWindowsDirectory** в программе установки для получения имени каталога Windows.  Может потребоваться создать имя вложенной папки из имени, компании или продукта.  
-  
- Программа установки должна иметь необходимые распространяемые файлы DLL в системном каталоге Windows.  Если какие\-либо DLL уже имеются на компьютере пользователя, программа установки должна сравнить их версии с версиями выполняется настройка.  Переустановите файл, только если номер версии выше уже установлен файл.  
-  
- Поскольку элементы управления ActiveX может использоваться только в приложениях OLE\-контейнер, нет никакой необходимости распределенного полный набор OLE DLL вместе с элементами управления.  Можно высказывать, приложение \(или операционная система сама\) имеет стандартные OLE библиотеки DLL, но.  
-  
-##  <a name="_core_registering_controls"></a> Регистрация элементов управления  
- Перед элементом управления можно использовать соответствующие записи, необходимо создать для него в базе данных регистрации Windows.  Некоторые контейнеры элементов управления ActiveX предоставляют пункт меню для пользователей для регистрации новых элементов управления, однако эта функция не может быть доступна во всех контейнерах.  Поэтому может потребоваться программу установки регистрации элемента управления, если они заданы.  
-  
- При необходимости можно написать программу установки, чтобы зарегистрировать элемент управления непосредственно вместо.  
-  
- Использовать API Windows **LoadLibrary**  для загрузки библиотеки DLL элемента управления.  Далее, используя **GetProcAddress**  получить адрес функции «DllRegisterServer».  Наконец, вызовите функцию `DllRegisterServer`.  В следующем примере кода показан один из возможных метод, где `hLib` хранит дескриптор библиотеки элементов управления и `lpDllEntryPoint`  хранит адрес функции «DllRegisterServer».  
-  
- [!code-cpp[NVC_MFC_AxCont#16](../mfc/codesnippet/CPP/mfc-activex-controls-distributing-activex-controls_1.cpp)]  
-  
- Преимущество зарегистрировать элемент управления непосредственно, нет необходимости вызывать и загрузить отдельный процесс \(а именно, REGSVR32\), уменьшая время установки.  Кроме того, поскольку регистрация внутренний процесс, программа установки может обрабатывать ошибки и непредвиденные ситуации лучше, чем внешний процесс может.  
+##  <a name="_core_installing_activex_controls_and_redistributable_dlls"></a> Installing ActiveX Controls and Redistributable DLLs  
+ The setup program you provide with your ActiveX controls should create a special subdirectory of the Windows directory and install the controls' .OCX files in it.  
   
 > [!NOTE]
->  До того, как программа установки установит элемента управления ActiveX, он должен вызвать метод **OleInitialize**.  Если программа установки приложения завершена, вызовите функцию **OleUnitialize**.  Это гарантирует, что системные библиотеки DLL OLE в правильном состоянии регистрации элемента управления ActiveX.  
+>  Use the Windows **GetWindowsDirectory** API in your setup program to obtain the name of the Windows directory. You may want to derive the subdirectory name from the name of your company or product.  
   
- Необходимо зарегистрировать MFCx0.dll.  
+ The setup program must install the necessary redistributable DLL files in the Windows system directory. If any of the DLLs are already present on the user's machine, the setup program should compare their versions with the versions you are installing. Reinstall a file only if its version number is higher than the file already installed.  
   
-## См. также  
- [Элементы управления ActiveX MFC](../mfc/mfc-activex-controls.md)
+ Because ActiveX controls can be used only in OLE container applications, there is no need to distribute the full set of OLE DLLs with your controls. You can assume that the containing application (or the operating system itself) has the standard OLE DLLs installed.  
+  
+##  <a name="_core_registering_controls"></a> Registering Controls  
+ Before a control can be used, appropriate entries must be created for it in the Windows registration database. Some ActiveX control containers provide a menu item for users to register new controls, but this feature may not be available in all containers. Therefore, you may want your setup program to register the controls when they are installed.  
+  
+ If you prefer, you can write your setup program to register the control directly instead.  
+  
+ Use the **LoadLibrary** Windows API to load the control DLL. Next, use **GetProcAddress** to obtain the address of the "DllRegisterServer" function. Finally, call the `DllRegisterServer` function. The following code sample demonstrates one possible method, where `hLib` stores the handle of the control library, and `lpDllEntryPoint` stores the address of the "DllRegisterServer" function.  
+  
+ [!code-cpp[NVC_MFC_AxCont#16](../mfc/codesnippet/cpp/mfc-activex-controls-distributing-activex-controls_1.cpp)]  
+  
+ The advantage of registering the control directly is that you do not need to invoke and load a separate process (namely, REGSVR32), reducing installation time. In addition, because registration is an internal process, the setup program can handle errors and unforeseen situations better than an external process can.  
+  
+> [!NOTE]
+>  Before your setup program installs an ActiveX control, it should call **OleInitialize**. When your setup program is finished, call **OleUnitialize**. This ensures that the OLE system DLLs are in the proper state for registering an ActiveX control.  
+  
+ You should register MFCx0.DLL.  
+  
+## <a name="see-also"></a>See Also  
+ [MFC ActiveX Controls](../mfc/mfc-activex-controls.md)
+
+

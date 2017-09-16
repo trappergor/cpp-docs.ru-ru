@@ -1,7 +1,7 @@
 ---
-title: "Проблемы при миграции с плавающей запятой | Документы Майкрософт"
+title: Floating-point migration issues | Microsoft Docs
 ms.custom: 
-ms.date: 11/04/2016
+ms.date: 05/17/2017
 ms.reviewer: 
 ms.suite: 
 ms.technology:
@@ -29,36 +29,36 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 6b30a331ca93d704539d32d003333f4f0a2823fb
-ms.openlocfilehash: b84e3edcba95e75b877e0acf2651d3d1a9ac8816
+ms.translationtype: HT
+ms.sourcegitcommit: 22000a296568c01082c9aef5ceaac8f266bcad5c
+ms.openlocfilehash: 597513f15331c01c796932e82e94e891df0b8fab
 ms.contentlocale: ru-ru
-ms.lasthandoff: 02/28/2017
+ms.lasthandoff: 09/08/2017
 
 ---
-# <a name="floating-point-migration-issues"></a>Проблемы при миграции с плавающей запятой  
+# <a name="floating-point-migration-issues"></a>Floating-point migration issues  
   
-Иногда при обновлении проектов до более новой версии Visual Studio, может оказаться, что были изменены результаты отдельных операций с плавающей запятой. Обычно это происходит по одной из двух причин: изменения создания кода, когда более эффективно используются доступные ресурсы процессора, и исправления ошибок или изменения в алгоритмах, используемых в математических функциях в библиотеке среды выполнения C (CRT). Как правило, новые результаты верны в рамках ограничений, установленных языковым стандартом. Ознакомьтесь с изменениями и, если для вас это важно, узнайте, как получать прежние результаты.  
+Sometimes when you upgrade your projects to a newer version of Visual Studio, you may find that the results of certain floating-point operations have changed. This generally happens for one of two reasons: Code generation changes that take better advantage of the available processor, and bug fixes or changes to the algorithms used in math functions in the C runtime library (CRT). In general, the new results are correct to within the limits specified by the language standard. Read on to find out what's changed, and if it's important, how to get the same results your functions got before.  
 
-## <a name="new-math-functions-and-universal-crt-changes"></a>Новые математические функции и изменения в универсальной CRT  
+## <a name="new-math-functions-and-universal-crt-changes"></a>New math functions and Universal CRT changes  
   
-Большая часть математических функций CRT была доступна в Visual Studio в течение многих лет, но начиная с Visual Studio 2013, добавляются все функции, необходимые согласно стандарту ISO C99. Эти функции предназначены для балансировки производительности и правильности. Так как получение правильно округленного результата в каждом случае может оказаться неоправданно дорогим, эти функции позволяют получить значение, максимально приближенное к правильно округленному результату. В большинстве случаев результат будет соответствовать правильно округленному значению +/-1 *ulp*, хотя в некоторых случаях погрешность может быть выше. Если для получения этих функций вы раньше использовали другую математическую библиотеку, возможно, изменение в результатах связано с различиями в реализации.   
+Most CRT math functions have been available in Visual Studio for years, but starting in Visual Studio 2013, all of the functions required by ISO C99 are included. These functions are implemented to balance performance with correctness. Because producing the correctly rounded result in every case may be prohibitively expensive, these functions are designed to efficiently produce a close approximation to the correctly rounded result. In most cases, the result produced is within +/-1 unit of least precision, or *ulp*, of the correctly rounded result, though there may be cases where there is greater inaccuracy. If you were using a different math library to get these functions before, implementation differences may be responsible for the change in your results.   
     
-Когда математические функции были перемещены в универсальную CRT в Visual Studio 2015, использовались некоторые новые алгоритмы и был исправлен ряд ошибок в реализации функций, впервые появившихся в Visual Studio 2013. Эти изменения могут привести к заметным отличиям в результатах вычислений с плавающей запятой, где используются эти функции. Ошибки возникали в функциях erf, exp2, remainder, remquo, scalbln и scalbn и их вариантах float и long double.  Другие изменения в Visual Studio 2015 привели к устранению проблем с сохранением слова, обозначающего статус плавающей запятой, и сведений о состоянии исключения в функциях _clear87, _clearfp, fegetenv, fesetenv и feholdexcept.  
+When the math functions were moved to the Universal CRT in Visual Studio 2015, some new algorithms were used, and several bugs in the implementation of the functions that were new in Visual Studio 2013 were fixed. These changes can lead to detectable differences in the results of floating-point calculations that use these functions. The functions that had bug issues were erf, exp2, remainder, remquo, scalbln, and scalbn, and their float and long double variants.  Other changes in Visual Studio 2015 fixed issues in preserving floating point status word and exception state information in _clear87, _clearfp, fegetenv, fesetenv, and feholdexcept functions.  
   
-## <a name="processor-differences-and-compiler-flags"></a>Различия процессоров и флаги компилятора  
+## <a name="processor-differences-and-compiler-flags"></a>Processor differences and compiler flags  
   
-Во многих функциях математической библиотеки с плавающей точкой используются различные реализации разной архитектуры ЦП. Например, в 32-разрядных CRT x86 могут использоваться не такие реализации, как в 64-разрядных CRT x64. Кроме того, некоторые функции могут содержать сразу несколько реализаций заданной архитектуры ЦП. Наиболее эффективная реализация выбирается в среде выполнения динамически в зависимости от того, какие наборы инструкций поддерживает ЦП. Например, в 32-разрядных CRT x86 некоторые функции включают сразу две реализации — x87 и SSE2. При работе на ЦП, который поддерживает SSE2, используется более быстрая реализация SSE2. При работе на ЦП, который не поддерживает SSE2, используется более медленная реализация x87. Это можно заметить при миграции старого кода, так как заданный по умолчанию параметр архитектуры компилятора x86 изменен на [/arch:SSE2](../build/reference/arch-x86.md) в Visual Studio 2012. Так как различные реализации функций математической библиотеки могут использовать для получения результатов различные инструкции ЦП и разнообразные алгоритмы, эти функции могут давать различные результаты на разных платформах. В большинстве случаев результаты находятся в пределах +/–1 ULP от правильно округленного результата, но фактические результаты могут отличаться в зависимости от ЦП.  
+Many of the floating point math library functions have different implementations for different CPU architectures. For example, the 32-bit x86 CRT may have a different implementation than the 64-bit x64 CRT. In addition, some of the functions may have multiple implementations for a given CPU architecture. The most efficient implementation is selected dynamically at run-time depending on the instruction sets supported by the CPU. For example, in the 32-bit x86 CRT, some functions have both an x87 implementation and an SSE2 implementation. When running on a CPU that supports SSE2, the faster SSE2 implementation is used. When running on a CPU that does not support SSE2, the slower x87 implementation is used. You may see this when migrating old code, because the default x86 compiler architecture option changed to [/arch:SSE2](../build/reference/arch-x86.md) in Visual Studio 2012. Because different implementations of the math library functions may use different CPU instructions and different algorithms to produce their results, the functions may produce different results on different platforms. In most cases, the results are within +/-1 ulp of the correctly rounded result, but the actual results may vary across CPUs.  
   
-Усовершенствования правильности создания кода в различных режимах с плавающей запятой в Visual Studio также могут повлиять на результаты операций с плавающей запятой при сравнении старого кода с новым даже при использовании тех же флагов компилятора. Например, код, созданный в Visual Studio 2010 с указанием [/fp:precise](../build/reference/fp-specify-floating-point-behavior.md) (по умолчанию) или **/fp:strict**, мог неправильно распространять промежуточные не являющиеся числами значения (NaN) значений с помощью выражений. Таким образом, некоторые выражения, которые выдавали числовой результат в старых компиляторах, теперь могут правильно давать результат NaN. Кроме того, различия существуют в связи с тем, что для оптимизаций кода, включенных для **/fp: fast**, теперь доступны дополнительные функции процессора. Эти оптимизации могут использовать меньше инструкций, но не исключают влияние на полученные результаты, так как были удалены некоторые ранее видимые промежуточные операции.  
+Code-generation correctness improvements in different floating point modes in Visual Studio can also affect the results of floating-point operations when old code is compared to new code, even when using the same compiler flags. For example, the code generated by Visual Studio 2010 when [/fp:precise](../build/reference/fp-specify-floating-point-behavior.md) (the default) or **/fp:strict** was specified may not have propagated intermediate not-a-number (NaN) values through expressions correctly. Thus, some expressions that gave a numeric result in older compilers may now correctly produce a NaN result. You may also see differences because the code optimizations enabled for **/fp:fast** now take advantage of more processor features. These optimizations can use fewer instructions, but may impact the generated results because some previously visible intermediate operations have been removed.  
   
-## <a name="how-to-get-identical-results"></a>Получение одинаковых результатов  
+## <a name="how-to-get-identical-results"></a>How to get identical results  
   
-В большинстве случаев изменения операций с плавающей запятой в новейших компиляторах и библиотеках приводят к более быстрому и правильному выполнению действий. При замене инструкций x87 на инструкции SSE2 наблюдается повышение производительности процессора. Но если у вас есть код, который должен точно реплицировать поведение вычислений с плавающей запятой в более старой версии компилятора, рассмотрите возможность использования собственного многоплатформенного нацеливания в Visual Studio и сборки затронутых проектов с помощью старого набора инструментов. Дополнительные сведения см. в разделе [Использование собственного многоплатформенного нацеливания в Visual Studio для сборки старых проектов](use-native-multi-targeting.md).  
+In most cases, the floating-point changes in the newest compilers and libraries result in faster or more correct behavior, or both. You may even see better processor power performance when SSE2 instructions replace x87 instructions. However, if you have code that must precisely replicate the floating point behavior of an older compiler, consider using Visual Studio native multi-targeting capabilities, and build the affected project with the older toolset. For more information, see [Use native multi-targeting in Visual Studio to build old projects](use-native-multi-targeting.md).  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>See also  
   
-[Обновление проектов, созданных в предыдущих версиях Visual C++](upgrading-projects-from-earlier-versions-of-visual-cpp.md)  
-[Общие сведения о возможных проблемах, возникающих при обновлении (Visual C++)](overview-of-potential-upgrade-issues-visual-cpp.md)  
-[Журнал изменений Visual C++ 2003–2015](visual-cpp-change-history-2003-2015.md)  
+[Upgrading Projects from Earlier Versions of Visual C++](upgrading-projects-from-earlier-versions-of-visual-cpp.md)  
+[Overview of potential upgrade issues (Visual C++)](overview-of-potential-upgrade-issues-visual-cpp.md)  
+[Visual C++ change history 2003 - 2015](visual-cpp-change-history-2003-2015.md)  
 

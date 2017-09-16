@@ -1,31 +1,50 @@
 ---
-title: "Пользовательские компоненты удаленной автоматизации | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "DLL-библиотеки [C++], автоматизация"
-  - "удаленная автоматизация [C++], пользовательские компоненты"
+title: Remote Automation User Components | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- DLLs [MFC], Automation
+- Remote Automation [MFC], user components
 ms.assetid: 601591cc-a442-440a-988e-baf3284b0d46
 caps.latest.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 5
----
-# Пользовательские компоненты удаленной автоматизации
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 29735b6e515f5d6c04cfcc0014a9f69cc1a22cb4
+ms.contentlocale: ru-ru
+ms.lasthandoff: 09/12/2017
 
-Необходимо убедиться, что каждый клиентский компьютер содержит соответствующую клиентской программы и все библиотеки DLL поддержки для этого.  Кроме того, необходимо убедиться, что серверное приложение и все библиотеки DLL поддержки это требует присутствуют на компьютере сервера.  Наконец, необходимо обеспечить, чтобы программа сервера регистрируется на каждом клиентском компьютере, прежде чем диспетчер средства анализа стабильности системы можно запустить для настройки подключения.  Если программа; регистрирует \(как большую часть будет\), необходимо только выполнение программ сервера на клиентском компьютере для регистрации.  Завершащся с ошибкой, то может потребоваться выполнить файл регистрации, предоставляется, вручную или вносятся изменения в реестр.  
+---
+# <a name="remote-automation-user-components"></a>Remote Automation User Components
+You will need to ensure that each client machine contains your client program and any support DLLs it requires. You will also need to ensure that the server application and any support DLLs it requires are present on the server machine. Finally, you will need to ensure that your server program is registered on each client machine before RAC Manager can be run to configure the connection. If the program is self-registering (as most will be), you need only execute the server program on the client machine to register it. Failing that, you may have to execute a registration file that you provide, or manually edit the registry.  
   
-## См. также  
- [Диспетчер автоматизации \(MFC\)](../mfc/automation-manager-mfc.md)   
- [Диспетчер подключений удаленной автоматизации](../mfc/remote-automation-connection-manager.md)   
- [Установка удаленной автоматизации](../Topic/Remote%20Automation%20Installation.md)
+## <a name="see-also"></a>See Also  
+ [Automation Manager (MFC)](../mfc/automation-manager-mfc.md)   
+ [Remote Automation Connection Manager](../mfc/remote-automation-connection-manager.md)   
+ [Remote Automation Installation](../mfc/remote-automation-installation.md)
+
+

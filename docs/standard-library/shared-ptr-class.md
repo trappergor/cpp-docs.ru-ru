@@ -1,15 +1,14 @@
 ---
-title: "Класс shared_ptr | Документы Майкрософт"
+title: shared_ptr Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
 ms.technology:
-- devlang-cpp
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
-- shared_ptr
 - memory/std::shared_ptr
 - memory/std::shared_ptr::element_type
 - memory/std::shared_ptr::get
@@ -32,7 +31,21 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- shared_ptr class
+- std::shared_ptr [C++]
+- std::shared_ptr [C++], element_type
+- std::shared_ptr [C++], get
+- std::shared_ptr [C++], owner_before
+- std::shared_ptr [C++], reset
+- std::shared_ptr [C++], swap
+- std::shared_ptr [C++], unique
+- std::shared_ptr [C++], use_count
+- std::shared_ptr [C++], element_type
+- std::shared_ptr [C++], get
+- std::shared_ptr [C++], owner_before
+- std::shared_ptr [C++], reset
+- std::shared_ptr [C++], swap
+- std::shared_ptr [C++], unique
+- std::shared_ptr [C++], use_count
 ms.assetid: 1469fc51-c658-43f1-886c-f4530dd84860
 caps.latest.revision: 28
 author: corob-msft
@@ -52,30 +65,30 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
-ms.openlocfilehash: ead4dff36cf75d7a1519cee10aed39a30b6e88b8
+ms.translationtype: MT
+ms.sourcegitcommit: 5d026c375025b169d5db8445cbb52c0c917b2d8d
+ms.openlocfilehash: a6fd55efcd0501cd794cdffa506b5cbb6b04ff5c
 ms.contentlocale: ru-ru
-ms.lasthandoff: 04/29/2017
+ms.lasthandoff: 09/09/2017
 
 ---
-# <a name="sharedptr-class"></a>Класс shared_ptr
-Помещает объект с динамическим выделением памяти в оболочку интеллектуального указателя с подсчитанными ссылками.  
+# <a name="sharedptr-class"></a>shared_ptr Class
+Wraps a reference-counted smart pointer around a dynamically allocated object.  
   
-## <a name="syntax"></a>Синтаксис  
+## <a name="syntax"></a>Syntax  
 ```
 template <class T>
 class shared_ptr; 
 ```  
   
-## <a name="remarks"></a>Примечания  
- Класс shared_ptr описывает объект, который использует подсчет ссылок для управления ресурсами. Объект `shared_ptr` фактически содержит указатель на ресурс, которым он владеет, или содержит пустой указатель (NULL). Обладать ресурсом могут несколько объектов `shared_ptr`; при удалении последнего объекта `shared_ptr`, обладающего тем или иным ресурсом, данный ресурс освобождается.  
+## <a name="remarks"></a>Remarks  
+ The shared_ptr class describes an object that uses reference counting to manage resources. A `shared_ptr` object effectively holds a pointer to the resource that it owns or holds a null pointer. A resource can be owned by more than one `shared_ptr` object; when the last `shared_ptr` object that owns a particular resource is destroyed, the resource is freed.  
   
- `shared_ptr` прекращает владеть ресурсом при переназначении или сбросе.  
+ A `shared_ptr` stops owning a resource when it is reassigned or reset.  
   
- Аргумент шаблона `T` может быть неполным типом, за исключением случаев, особо отмеченных для определенных функций-членов.  
+ The template argument `T` might be an incomplete type except as noted for certain member functions.  
   
- При создании объекта `shared_ptr<T>` из указателя ресурса типа `G*` или из `shared_ptr<G>` тип указателя `G*` должен допускать преобразование в `T*`. В противном случае код не будет компилироваться. Пример:  
+ When a `shared_ptr<T>` object is constructed from a resource pointer of type `G*` or from a `shared_ptr<G>`, the pointer type `G*` must be convertible to `T*`. If it is not, the code will not compile. For example:  
   
 ```cpp  
 #include <memory>  
@@ -93,101 +106,101 @@ shared_ptr<int> sp5(new G); // error, G* not convertible to int*
 shared_ptr<int> sp6(sp2);   // error, template parameter int and argument shared_ptr<F>  
 ```  
   
- Объект `shared_ptr` владеет ресурсом:  
+ A `shared_ptr` object owns a resource:  
   
--   если он был создан с использованием указателя на этот ресурс;  
+-   if it was constructed with a pointer to that resource,  
   
--   если он был создан из объекта `shared_ptr`, владеющего этим ресурсом;  
+-   if it was constructed from a `shared_ptr` object that owns that resource,  
   
--   если был создан из объекта [Класс weak_ptr](../standard-library/weak-ptr-class.md), который указывает на этот ресурс, или  
+-   if it was constructed from a [weak_ptr Class](../standard-library/weak-ptr-class.md) object that points to that resource, or  
   
--   если владение этим ресурсом было передано ему помощью оператора [shared_ptr::operator=](#op_eq) или путем вызова функции-члена [shared_ptr::reset](#reset)  
+-   if ownership of that resource was assigned to it, either with [shared_ptr::operator=](#op_eq) or by calling the member function [shared_ptr::reset](#reset).  
   
- Владеющие ресурсом объекты `shared_ptr` совместно используют один блок управления. Блок управления содержит следующее:  
+ The `shared_ptr` objects that own a resource share a control block. The control block holds:  
   
--   количество объектов `shared_ptr`, владеющих ресурсом;  
+-   the number of `shared_ptr` objects that own the resource,  
   
--   количество объектов `weak_ptr`, указывающих на ресурс;  
+-   the number of `weak_ptr` objects that point to the resource,  
   
--   метод удаления для этого ресурса, если он есть;  
+-   the deleter for that resource if it has one,  
   
--   пользовательский распределитель для блока управления, если он есть.  
+-   the custom allocator for the control block if it has one.  
   
- Объект `shared_ptr`, инициализируемый при помощи пустого указателя, имеет блок управления и не является пустым. После того как объект `shared_ptr` освобождает ресурс, он перестает быть его владельцем. После того как объект `weak_ptr` освобождает ресурс, он перестает указывать на него.  
+ A `shared_ptr` object that is initialized by using a null pointer has a control block and is not empty. After a `shared_ptr` object releases a resource, it no longer owns that resource. After a `weak_ptr` object releases a resource, it no longer points to that resource.  
   
- Если количество объектов `shared_ptr`, владеющих ресурсом, становится равным нулю, ресурс освобождается путем удаления или передачи его адреса в метод удаления в зависимости от того, как изначально был создан владелец ресурса. Если количество объектов `shared_ptr`, владеющих ресурсом, как и число объектов `weak_ptr`, которые указывают на ресурс, становится равным нулю, освобождается блок управления с использованием пользовательского распределителя этого блока управления при его наличии.  
+ When the number of `shared_ptr` objects that own a resource becomes zero, the resource is freed, either by deleting it or by passing its address to a deleter, depending on how ownership of the resource was originally created. When the number of `shared_ptr` objects that own a resource is zero, and the number of `weak_ptr` objects that point to that resource is zero, the control block is freed, using the custom allocator for the control block if it has one.  
   
- Пустой объект `shared_ptr` не владеет какими-либо ресурсами и не имеет блока управления.  
+ An empty `shared_ptr` object does not own any resources and has no control block.  
   
- Метод удаления является объектом функции, имеющим функцию-член `operator()`. Его тип должен быть конструируемым по копии, а его конструктор копии и деструктор не должны выдавать исключения. Он принимает один параметр — удаляемый объект.  
+ A deleter is a function object that has a member function `operator()`. Its type must be copy constructible, and its copy constructor and destructor must not throw exceptions. It accepts one parameter, the object to be deleted.  
   
- Некоторые функции принимают список аргументов, определяющий свойства результирующего объекта `shared_ptr<T>` или `weak_ptr<T>`. Такой список аргументов можно задать несколькими способами.  
+ Some functions take an argument list that defines properties of the resulting `shared_ptr<T>` or `weak_ptr<T>` object. You can specify such an argument list in several ways:  
   
- Нет аргументов — результирующий объект является пустым объектом `shared_ptr` или `weak_ptr`.  
+ no arguments -- the resulting object is an empty `shared_ptr` object or an empty `weak_ptr` object.  
   
- `ptr` — указатель типа `Other*` на ресурс, которым требуется управлять. `T` должен быть полным типом. Если функция завершается с ошибкой (так как не удалось выделить блок управления), он вычисляет выражение `delete ptr`.  
+ `ptr` -- a pointer of type `Other*` to the resource to be managed. `T` must be a complete type. If the function fails (because the control block cannot be allocated) it evaluates the expression `delete ptr`.  
   
- `ptr, dtor` — указатель типа `Other*` на ресурс, которым требуется управлять, и метод удаления для данного ресурса. Если функция завершается с ошибкой (так как не удалось выделить блок управления), он вызывает `dtor(ptr)`, который должен быть определен правильно.  
+ `ptr, dtor` -- a pointer of type `Other*` to the resource to be managed and a deleter for that resource. If the function fails (because the control block cannot be allocated), it calls `dtor(ptr)`, which must be well defined.  
   
- `ptr, dtor, alloc` — указатель типа `Other*` на ресурс, которым требуется управлять, для управления, метод удаления для данного ресурса и распределитель для управления выделяемым и освобождаемым местом в хранилище. Если функция завершается с ошибкой (так как не удалось выделить блок управления), он вызывает `dtor(ptr)`, который должен быть определен правильно.  
+ `ptr, dtor, alloc` -- a pointer of type `Other*` to the resource to be managed, a deleter for that resource, and an allocator to manage any storage that must be allocated and freed. If the function fails (because the control block can't be allocated) it calls `dtor(ptr)`, which must be well defined.  
   
- `sp` — объект `shared_ptr<Other>`, владеющий ресурсом, которым требуется управлять.  
+ `sp` -- a `shared_ptr<Other>` object that owns the resource to be managed.  
   
- `wp` — объект `weak_ptr<Other>`, указывающий на ресурс, которым требуется управлять.  
+ `wp` -- a `weak_ptr<Other>` object that points to the resource to be managed.  
   
- `ap` — объект `auto_ptr<Other>`, содержащий указатель на ресурс, которым требуется управлять. Если функция выполняется успешно, он вызывает `ap.release()`; в противном случае он выполняет выход из `ap` без изменений.  
+ `ap` -- an `auto_ptr<Other>` object that holds a pointer to the resource to be managed. If the function succeeds it calls `ap.release()`; otherwise it leaves `ap` unchanged.  
   
- Во всех случаях тип указателя типа `Other*` должен допускать преобразование в `T*`.  
+ In all cases, the pointer type `Other*` must be convertible to `T*`.  
   
-## <a name="thread-safety"></a>Потокобезопасность  
- Несколько потоков могут одновременно считывать и записывать разные объекты `shared_ptr`, даже если они являются копиями с общим владельцем.  
+## <a name="thread-safety"></a>Thread Safety  
+ Multiple threads can read and write different `shared_ptr` objects at the same time, even when the objects are copies that share ownership.  
   
-## <a name="members"></a>Участники  
+## <a name="members"></a>Members  
   
-### <a name="constructors"></a>Конструкторы  
-  
-|||  
-|-|-|  
-|[shared_ptr](#shared_ptr)|Создает документ `shared_ptr`.|  
-|[shared_ptr::~shared_ptr](#dtorshared_ptr)|Удаляет `shared_ptr`.|  
-  
-### <a name="methods"></a>Методы  
+### <a name="constructors"></a>Constructors  
   
 |||  
 |-|-|  
-|[element_type](#element_type)|Тип элемента.|  
-|[get](#get)|Возвращает адрес принадлежащего ресурса.|  
-|[owner_before](#owner_before)|Возвращает значение true, если `shared_ptr` упорядочен до (меньше) предоставленного указателя.|  
-|[reset](#reset)|Заменяет принадлежащий ресурс.|  
-|[swap](#swap)|Меняет местами два объекта `shared_ptr`.|  
-|[unique](#unique)|Проверяет, является ли принадлежащий ресурс уникальным.|  
-|[use_count](#use_count)|Подсчитывает количество владельцев ресурса.|  
+|[shared_ptr](#shared_ptr)|Constructs a `shared_ptr`.|  
+|[shared_ptr::~shared_ptr](#dtorshared_ptr)|Destroys a `shared_ptr`.|  
   
-### <a name="operators"></a>Операторы  
+### <a name="methods"></a>Methods  
   
 |||  
 |-|-|  
-|[shared_ptr::operator boolean-type](#op_boolean-type)|Проверяет существование принадлежащего ресурса.|  
-|[shared_ptr::operator*](#op_star)|Возвращает указанное значение.|  
-|[shared_ptr::operator=](#op_eq)|Заменяет принадлежащий ресурс.|  
-|[shared_ptr::operator-&gt;](#operator-_gt)|Получает указатель на указанное значение.|  
+|[element_type](#element_type)|The type of an element.|  
+|[get](#get)|Gets address of owned resource.|  
+|[owner_before](#owner_before)|Returns true if this `shared_ptr` is ordered before (or less than) the provided pointer.|  
+|[reset](#reset)|Replace owned resource.|  
+|[swap](#swap)|Swaps two `shared_ptr` objects.|  
+|[unique](#unique)|Tests if owned resource is unique.|  
+|[use_count](#use_count)|Counts numbers of resource owners.|  
   
-## <a name="requirements"></a>Требования  
- **Заголовок:** \<memory>  
+### <a name="operators"></a>Operators  
   
- **Пространство имен:** std  
+|||  
+|-|-|  
+|[shared_ptr::operator boolean-type](#op_boolean-type)|Tests if an owned resource exists.|  
+|[shared_ptr::operator*](#op_star)|Gets the designated value.|  
+|[shared_ptr::operator=](#op_eq)|Replaces the owned resource.|  
+|[shared_ptr::operator-&gt;](#operator-_gt)|Gets a pointer to the designated value.|  
+  
+## <a name="requirements"></a>Requirements  
+ **Header:** \<memory>  
+  
+ **Namespace:** std  
   
 ##  <a name="element_type"></a>  shared_ptr::element_type  
- Тип элемента.  
+ The type of an element.  
   
 ```  
 typedef T element_type;  
 ```  
   
-### <a name="remarks"></a>Примечания  
- Этот тип является синонимом для параметра шаблона `T`.  
+### <a name="remarks"></a>Remarks  
+ The type is a synonym for the template parameter `T`.  
   
-### <a name="example"></a>Пример  
+### <a name="example"></a>Example  
   
 ```cpp  
 // std__memory__shared_ptr_element_type.cpp   
@@ -212,16 +225,16 @@ int main()
 ```  
   
 ##  <a name="get"></a>  shared_ptr::get  
- Возвращает адрес принадлежащего ресурса.  
+ Gets address of owned resource.  
   
 ```  
 T *get() const;
 ```  
   
-### <a name="remarks"></a>Примечания  
- Функция-член возвращает адрес контролируемого ресурса. Если объект не является владельцем ресурса, он возвращает значение 0.  
+### <a name="remarks"></a>Remarks  
+ The member function returns the address of the owned resource. If the object does not own a resource it returns 0.  
   
-### <a name="example"></a>Пример  
+### <a name="example"></a>Example  
   
 ```cpp  
 // std__memory__shared_ptr_get.cpp   
@@ -249,16 +262,16 @@ sp0.get() == 0 == true
 ```  
   
 ##  <a name="shared_ptr__operator_boolean-type"></a>  shared_ptr::operator boolean-type  
- Проверяет существование принадлежащего ресурса.  
+ Tests if an owned resource exists.  
   
 ```  
 operator boolean-type() const;
 ```  
   
-### <a name="remarks"></a>Примечания  
- Оператор возвращает значение типа, которое можно преобразовать в значение `bool`. Результат преобразования в `bool` — значение `true`, если `get() != 0`; в противном случае — значение `false`.  
+### <a name="remarks"></a>Remarks  
+ The operator returns a value of a type that is convertible to `bool`. The result of the conversion to `bool` is `true` when `get() != 0`, otherwise `false`.  
   
-### <a name="example"></a>Пример  
+### <a name="example"></a>Example  
   
 ```cpp  
 // std__memory__shared_ptr_operator_bool.cpp   
@@ -287,16 +300,16 @@ int main()
 ```  
   
 ##  <a name="op_star"></a>  shared_ptr::operator*  
- Возвращает указанное значение.  
+ Gets the designated value.  
   
 ```  
 T& operator*() const;
 ```  
   
-### <a name="remarks"></a>Примечания  
- Оператор косвенного обращения возвращает `*get()`. Следовательно, сохраненный указатель не должен быть пустым.  
+### <a name="remarks"></a>Remarks  
+ The indirection operator returns `*get()`. Hence, the stored pointer must not be null.  
   
-### <a name="example"></a>Пример  
+### <a name="example"></a>Example  
   
 ```cpp  
 // std__memory__shared_ptr_operator_st.cpp   
@@ -320,7 +333,7 @@ int main()
 ```  
   
 ##  <a name="op_eq"></a>  shared_ptr::operator=  
- Заменяет принадлежащий ресурс.  
+ Replaces the owned resource.  
   
 ```  
 shared_ptr& operator=(const shared_ptr& sp);
@@ -341,17 +354,17 @@ template <class Other, class Deletor>
 shared_ptr& operator=(unique_ptr<Other, Deletor>&& ap);
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
  `sp`  
- Общий указатель для копирования.  
+ The shared pointer to copy.  
   
  `ap`  
- "Автоматический" указатель ( auto_ptr ) для копирования  
+ The auto pointer to copy.  
   
-### <a name="remarks"></a>Примечания  
- Все операторы уменьшают значение счетчика ссылок для ресурса, который в настоящее время контролируется `*this`, и передают владение ресурсом, указанным последовательностью операндов, объекту `*this`. Если число ссылок на ресурс становится равным нулю, ресурс освобождается (delete). Если оператор завершается сбоем, значение `*this` остается неизменным.  
+### <a name="remarks"></a>Remarks  
+ The operators all decrement the reference count for the resource currently owned by `*this` and assign ownership of the resource named by the operand sequence to `*this`. If the reference count falls to zero, the resource is released. If an operator fails it leaves `*this` unchanged.  
   
-### <a name="example"></a>Пример  
+### <a name="example"></a>Example  
   
 ```cpp  
 // std__memory__shared_ptr_operator_as.cpp   
@@ -382,16 +395,16 @@ int main()
 ```  
   
 ##  <a name="shared_ptr__operator-_gt"></a>  shared_ptr::operator-&gt;  
- Получает указатель на указанное значение.  
+ Gets a pointer to the designated value.  
   
 ```  
 T * operator->() const;
 ```  
   
-### <a name="remarks"></a>Примечания  
- Оператор выбора возвращает `get()`, так что выражение `sp->member` ведет себя так же, как `(sp.get())->member`, где `sp` — это объект класса `shared_ptr<T>`. Следовательно, сохраненный указатель не должен быть пустым, и `T` должен быть классом, структурой или типом объединения с членом `member`.  
+### <a name="remarks"></a>Remarks  
+ The selection operator returns `get()`, so that the expression `sp->member` behaves the same as `(sp.get())->member` where `sp` is an object of class `shared_ptr<T>`. Hence, the stored pointer must not be null, and `T` must be a class, structure, or union type with a member `member`.  
   
-### <a name="example"></a>Пример  
+### <a name="example"></a>Example  
   
 ```cpp  
 // std__memory__shared_ptr_operator_ar.cpp   
@@ -418,7 +431,7 @@ sp0->second == 2
 ```  
   
 ##  <a name="owner_before"></a>  shared_ptr::owner_before  
- Возвращает значение true, если `shared_ptr` упорядочен до (меньше) предоставленного указателя.  
+ Returns true if this `shared_ptr` is ordered before (or less than) the provided pointer.  
   
 ```  
 template <class Other>  
@@ -428,15 +441,15 @@ template <class Other>
 bool owner_before(const weak_ptr<Other>& ptr);
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
  `ptr`  
- Ссылка `lvalue` на значение `shared_ptr` или `weak_ptr`.  
+ An `lvalue` reference to either a `shared_ptr` or a `weak_ptr`.  
   
-### <a name="remarks"></a>Примечания  
- Функция-член возвращает значение true, если `*this` равно `ordered before``ptr`.  
+### <a name="remarks"></a>Remarks  
+ The template member function returns true if `*this` is `ordered before` `ptr`.  
   
 ##  <a name="reset"></a>  shared_ptr::reset  
- Заменяет принадлежащий ресурс.  
+ Replace owned resource.  
   
 ```  
 void reset();
@@ -451,29 +464,29 @@ template <class Other, class D, class A>
 void reset(Other *ptr, D dtor, A alloc);
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
  `Other`  
- Тип, управляемый указателем аргумента.  
+ The type controlled by the argument pointer.  
   
  `D`  
- Тип метода удаления.  
+ The type of the deleter.  
   
  `ptr`  
- Копируемый указатель.  
+ The pointer to copy.  
   
  `dtor`  
- Метод удаления для копирования.  
+ The deleter to copy.  
   
  `A`  
- Тип распределителя.  
+ The type of the allocator.  
   
  `alloc`  
- Распределитель для копирования.  
+ The allocator to copy.  
   
-### <a name="remarks"></a>Примечания  
- Все операторы уменьшают значение счетчика ссылок для ресурса, который в настоящее время контролируется `*this`, и передают владение ресурсом, указанным последовательностью операндов, объекту `*this`. Если число ссылок на ресурс становится равным нулю, ресурс освобождается (delete). Если оператор завершается сбоем, значение `*this` остается неизменным.  
+### <a name="remarks"></a>Remarks  
+ The operators all decrement the reference count for the resource currently owned by `*this` and assign ownership of the resource named by the operand sequence to `*this`. If the reference count falls to zero, the resource is released. If an operator fails it leaves `*this` unchanged.  
   
-### <a name="example"></a>Пример  
+### <a name="example"></a>Example  
   
 ```cpp  
 // std__memory__shared_ptr_reset.cpp   
@@ -521,7 +534,7 @@ int main()
 ```  
   
 ##  <a name="shared_ptr"></a>  shared_ptr::shared_ptr  
- Создает документ `shared_ptr`.  
+ Constructs a `shared_ptr`.  
   
 ```  
 shared_ptr();
@@ -569,38 +582,38 @@ template <class Other, class D>
 shared_ptr(const unique_ptr<Other, D>& up) = delete;  
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
  `Other`  
- Тип, управляемый указателем аргумента.  
+ The type controlled by the argument pointer.  
   
  `ptr`  
- Копируемый указатель.  
+ The pointer to copy.  
   
  `D`  
- Тип метода удаления.  
+ The type of the deleter.  
   
  `A`  
- Тип распределителя.  
+ The type of the allocator.  
   
  `dtor`  
- Метод удаления.  
+ The deleter.  
   
  `ator`  
- Распределитель.  
+ The allocator.  
   
  `sp`  
- Интеллектуальный указатель для копирования  
+ The smart pointer to copy.  
   
  `wp`  
- Слабый указатель.  
+ The weak pointer.  
   
  `ap`  
- "Автоматический" указатель ( auto_ptr ) для копирования  
+ The auto pointer to copy.  
   
-### <a name="remarks"></a>Примечания  
- Каждый из конструкторов создает объект для контроля над ресурсом, указанным в качестве операнда. Конструктор `shared_ptr(const weak_ptr<Other>& wp)` создает объект исключения типа [Класс bad_weak_ptr](../standard-library/bad-weak-ptr-class.md), если `wp.expired()`.  
+### <a name="remarks"></a>Remarks  
+ The constructors each construct an object that owns the resource named by the operand sequence. The constructor `shared_ptr(const weak_ptr<Other>& wp)` throws an exception object of type [bad_weak_ptr Class](../standard-library/bad-weak-ptr-class.md) if `wp.expired()`.  
   
-### <a name="example"></a>Пример  
+### <a name="example"></a>Example  
   
 ```cpp  
 // std__memory__shared_ptr_construct.cpp   
@@ -654,16 +667,16 @@ int main()
 ```  
   
 ##  <a name="dtorshared_ptr"></a>  shared_ptr::~shared_ptr  
- Удаляет `shared_ptr`.  
+ Destroys a `shared_ptr`.  
   
 ```  
 ~shared_ptr();
 ```  
   
-### <a name="remarks"></a>Примечания  
- Деструктор уменьшает значение счетчика ссылок для ресурса, который в настоящее время контролируется `*this`. Если число ссылок на ресурс становится равным нулю, ресурс освобождается (delete).  
+### <a name="remarks"></a>Remarks  
+ The destructor decrements the reference count for the resource currently owned by `*this`. If the reference count falls to zero, the resource is released.  
   
-### <a name="example"></a>Пример  
+### <a name="example"></a>Example  
   
 ```cpp  
 // std__memory__shared_ptr_destroy.cpp   
@@ -708,20 +721,20 @@ use count == 1
 ```  
   
 ##  <a name="swap"></a>  shared_ptr::swap  
- Меняет местами два объекта `shared_ptr`.  
+ Swaps two `shared_ptr` objects.  
   
 ```  
 void swap(shared_ptr& sp);
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
  `sp`  
- Разделяемый указатель (shared_ptr), с которым требуется произвести обмен контролируемыми объектами.  
+ The shared pointer to swap with.  
   
-### <a name="remarks"></a>Примечания  
- Функция-член устанавливает контроль `sp` над ресурсом, изначально контролируемым `*this` и контроль `sp` над ресурсом, изначально контролируемым `*this`. Функция не изменяет подсчет ссылок для двух ресурсов и не создает исключений.  
+### <a name="remarks"></a>Remarks  
+ The member function leaves the resource originally owned by `*this` subsequently owned by `sp`, and the resource originally owned by `sp` subsequently owned by `*this`. The function does not change the reference counts for the two resources and it does not throw any exceptions.  
   
-### <a name="example"></a>Пример  
+### <a name="example"></a>Example  
   
 ```cpp  
 // std__memory__shared_ptr_swap.cpp   
@@ -776,16 +789,16 @@ int main()
 ```  
   
 ##  <a name="unique"></a>  shared_ptr::unique  
- Проверяет, является ли принадлежащий ресурс уникальным.  
+ Tests if owned resource is unique.  
   
 ```  
 bool unique() const;
 ```  
   
-### <a name="remarks"></a>Примечания  
- Функция-член возвращает значение `true`, если никакой другой объект `shared_ptr` не контролирует ресурс, контролируемый `*this`; в противном случае — значение `false`.  
+### <a name="remarks"></a>Remarks  
+ The member function returns `true` if no other `shared_ptr` object owns the resource that is owned by `*this`, otherwise `false`.  
   
-### <a name="example"></a>Пример  
+### <a name="example"></a>Example  
   
 ```cpp  
 // std__memory__shared_ptr_unique.cpp   
@@ -822,16 +835,16 @@ sp1.unique() == false
 ```  
   
 ##  <a name="use_count"></a>  shared_ptr::use_count  
- Подсчитывает количество владельцев ресурса.  
+ Counts numbers of resource owners.  
   
 ```  
 long use_count() const;
 ```  
   
-### <a name="remarks"></a>Примечания  
- Функция-член возвращает число объектов `shared_ptr`, контролирующих ресурс, который контролируется `*this`.  
+### <a name="remarks"></a>Remarks  
+ The member function returns the number of `shared_ptr` objects that own the resource that is owned by `*this`.  
   
-### <a name="example"></a>Пример  
+### <a name="example"></a>Example  
   
 ```cpp  
 // std__memory__shared_ptr_use_count.cpp   
@@ -859,9 +872,9 @@ sp1.use_count() == 1
 sp1.use_count() == 2  
 ```  
   
-## <a name="see-also"></a>См. также  
- [Класс weak_ptr](../standard-library/weak-ptr-class.md)   
- [Потокобезопасность в стандартной библиотеке C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)
+## <a name="see-also"></a>See Also  
+ [weak_ptr Class](../standard-library/weak-ptr-class.md)   
+ [Thread Safety in the C++ Standard Library](../standard-library/thread-safety-in-the-cpp-standard-library.md)
 
 
 

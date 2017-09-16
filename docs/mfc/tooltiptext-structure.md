@@ -1,31 +1,48 @@
 ---
-title: "Структура TOOLTIPTEXT | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "TOOLTIPTEXT"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "всплывающие подсказки [C++], уведомления"
-  - "TOOLTIPTEXT - структура"
+title: TOOLTIPTEXT Structure | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- TOOLTIPTEXT
+dev_langs:
+- C++
+helpviewer_keywords:
+- TOOLTIPTEXT structure [MFC]
+- tool tips [MFC], notifications
 ms.assetid: 547591bf-80f5-400e-a2a7-0708cfffbb5d
 caps.latest.revision: 13
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 9
----
-# Структура TOOLTIPTEXT
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: e7d5ad1e3607d21d2d8243455e479e78d87897c0
+ms.contentlocale: ru-ru
+ms.lasthandoff: 09/12/2017
 
-В записи в [обработчик уведомления всплывающей подсказки](../Topic/Handling%20TTN_NEEDTEXT%20Notification%20for%20Tool%20Tips.md), необходимо использовать структуру `TOOLTIPTEXT`.  Члены структуры `TOOLTIPTEXT`:  
+---
+# <a name="tooltiptext-structure"></a>TOOLTIPTEXT Structure
+In writing your [tool tip notification handler](../mfc/handling-ttn-needtext-notification-for-tool-tips.md), you need to use the `TOOLTIPTEXT` structure. The members of the `TOOLTIPTEXT` structure are:  
   
  `typedef struct {`  
   
@@ -46,24 +63,26 @@ caps.handback.revision: 9
  `} TOOLTIPTEXT, FAR *LPTOOLTIPTEXT;`  
   
  `hdr`  
- Определяет средство, которое требуется текст.  Единственный член этой структуры можно идентификатор команды элемента управления  Идентификатор команды элемента управления находится в элементе `idFrom` структуры `NMHDR`, получил доступ с синтаксисом `hdr.idFrom`.  В разделе [NMHDR](http://msdn.microsoft.com/library/windows/desktop/bb775514) для обсуждения членов структуры `NMHDR`.  
+ Identifies the tool that needs text. The only member of this structure you might need is the control's command ID. The control's command ID will be in the `idFrom` member of the `NMHDR` structure, accessed with the syntax `hdr.idFrom`. See [NMHDR](http://msdn.microsoft.com/library/windows/desktop/bb775514) for a discussion of members of the `NMHDR` structure.  
   
  `lpszText`  
- Адрес строки для получения текста для средства.  
+ Address of a string to receive the text for a tool.  
   
  `szText`  
- Буфер, который получает текст всплывающей подсказки.  Приложение может копировать текст в этот буфер в качестве альтернативы определение адрес строки.  
+ Buffer that receives the tool tip text. An application can copy the text to this buffer as an alternative to specifying a string address.  
   
  `hinst`  
- Дескриптор экземпляра, который содержит строку, используемый в качестве текст всплывающей подсказки.  Если `lpszText` адрес текст всплывающей подсказки, то этот член NULL.  
+ Handle of the instance that contains a string to be used as the tool tip text. If `lpszText` is the address of the tool tip text, this member is NULL.  
   
- При обработке сообщения уведомления `TTN_NEEDTEXT` укажите строку для отображения одним из следующих способов:  
+ When you handle the `TTN_NEEDTEXT` notification message, specify the string to be displayed in one of the following ways:  
   
--   Скопируйте текст в буфер, членом `szText`.  
+-   Copy the text to the buffer specified by the `szText` member.  
   
--   Скопируйте адрес буфера, содержащего текст на член `lpszText`.  
+-   Copy the address of the buffer that contains the text to the `lpszText` member.  
   
--   Скопируйте идентификатор строки ресурсов на член `lpszText` и скопировать дескриптор экземпляра, содержащему ресурс на член `hinst`.  
+-   Copy the identifier of a string resource to the `lpszText` member, and copy the handle of the instance that contains the resource to the `hinst` member.  
   
-## См. также  
- [Всплывающие подсказки в Windows, не являющиеся производными CFrameWnd](../mfc/tool-tips-in-windows-not-derived-from-cframewnd.md)
+## <a name="see-also"></a>See Also  
+ [Tool Tips in Windows Not Derived from CFrameWnd](../mfc/tool-tips-in-windows-not-derived-from-cframewnd.md)
+
+

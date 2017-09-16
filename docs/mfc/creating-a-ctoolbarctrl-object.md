@@ -1,46 +1,65 @@
 ---
-title: "создание объекта CToolBarCtrl | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "CToolBarCtrl"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "CToolBarCtrl - класс, создание панелей инструментов"
-  - "элементы управления панели инструментов [MFC], создание"
+title: Creating a CToolBarCtrl Object | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- CToolBarCtrl
+dev_langs:
+- C++
+helpviewer_keywords:
+- toolbar controls [MFC], creating
+- CToolBarCtrl class [MFC], creating toolbars
 ms.assetid: a4f6bf0c-0195-4dbf-a09e-aee503e19dc3
 caps.latest.revision: 11
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 8
----
-# создание объекта CToolBarCtrl
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 5041670f733d353220f16d32fa5c56f66ba64904
+ms.contentlocale: ru-ru
+ms.lasthandoff: 09/12/2017
 
-[CToolBarCtrl](../mfc/reference/ctoolbarctrl-class.md) объекты содержат несколько внутренних структур данных — список растровых изображений образа кнопки, список строк кнопки, метки и список структур `TBBUTTON` — тех связывают изображение или строка с позицией, стилем, состоянием и идентификатор команды кнопки.  Каждый из элементов этих структур данных сокращенное имя, на которое индекс с отсчетом от нуля.  Перед использованием объекта `CToolBarCtrl` необходимо настроить эти структуры данных.  Для списка структуры данных см. в разделе [Элементы управления панели инструментов](https://msdn.microsoft.com/en-us/library/47xcww9x.aspx) в [!INCLUDE[winSDK](../atl/includes/winsdk_md.md)].  Список строк можно использовать только для меток кнопки; невозможно получить строки из панели инструментов.  
+---
+# <a name="creating-a-ctoolbarctrl-object"></a>Creating a CToolBarCtrl Object
+[CToolBarCtrl](../mfc/reference/ctoolbarctrl-class.md) objects contain several internal data structures — a list of button image bitmaps, a list of button label strings, and a list of `TBBUTTON` structures — that associate an image and/or string with the position, style, state, and command ID of the button. Each of the elements of these data structures is referred to by a zero-based index. Before you can use a `CToolBarCtrl` object, you must set up these data structures. For a list of the data structures, see [Toolbar Controls](https://msdn.microsoft.com/library/47xcww9x.aspx) in the Windows SDK. The list of strings can only be used for button labels; you cannot retrieve strings from the toolbar.  
   
- Для использования объекта `CToolBarCtrl`, как правило, выполните следующие действия.  
+ To use a `CToolBarCtrl` object, you will typically follow these steps:  
   
-### Использование объекта CToolBarCtrl  
+### <a name="to-use-a-ctoolbarctrl-object"></a>To use a CToolBarCtrl object  
   
-1.  Создайте объект [CToolBarCtrl](../mfc/reference/ctoolbarctrl-class.md).  
+1.  Construct the [CToolBarCtrl](../mfc/reference/ctoolbarctrl-class.md) object.  
   
-2.  Вызовите метод [Создать](../Topic/CToolBarCtrl::Create.md), чтобы создать общий элемент управления панели инструментов Windows и вложить его в объект `CToolBarCtrl`.  Если требуется образы растрового изображения кнопок, добавьте растровые изображения кнопок на панели инструментов с помощью метода [AddBitmap](../Topic/CToolBarCtrl::AddBitmap.md).  Если требуется метки строки для кнопок, добавьте строку на панель инструментов с помощью метода [AddString](../Topic/CToolBarCtrl::AddString.md) или [AddStrings](../Topic/CToolBarCtrl::AddStrings.md).  После вызова `AddString` и\/или `AddStrings`, необходимо вызвать метод [AutoSize](../Topic/CToolBarCtrl::AutoSize.md) для получения, что строку или строки отображались.  
+2.  Call [Create](../mfc/reference/ctoolbarctrl-class.md#create) to create the Windows toolbar common control and attach it to the `CToolBarCtrl` object. If you want bitmap images for buttons, add the button bitmaps to the toolbar by calling [AddBitmap](../mfc/reference/ctoolbarctrl-class.md#addbitmap). If you want string labels for buttons, add the strings to the toolbar by calling [AddString](../mfc/reference/ctoolbarctrl-class.md#addstring) and/or [AddStrings](../mfc/reference/ctoolbarctrl-class.md#addstrings). After calling `AddString` and/or `AddStrings`, you should call [AutoSize](../mfc/reference/ctoolbarctrl-class.md#autosize) in order to get the string or strings to appear.  
   
-3.  Добавьте две кнопки на панели инструментов с помощью метода [AddButtons](../Topic/CToolBarCtrl::AddButtons.md).  
+3.  Add button structures to the toolbar by calling [AddButtons](../mfc/reference/ctoolbarctrl-class.md#addbuttons).  
   
-4.  Если требуется всплывающие подсказки, обработка сообщений **TTN\_NEEDTEXT** в окне " средства, как описано в разделе [Обрабатывать уведомления всплывающей подсказки](../mfc/handling-tool-tip-notifications.md).  
+4.  If you want tool tips, handle **TTN_NEEDTEXT** messages in the toolbar's owner window as described in [Handling Tool Tip Notifications](../mfc/handling-tool-tip-notifications.md).  
   
-5.  Если требуется, чтобы пользователь мог настраивать панель инструментов, обработка сообщения уведомления настройки в окне ", как описано в разделе [Обрабатывать уведомления настройки](../Topic/Handling%20Customization%20Notifications.md).  
+5.  If you want your user to be able to customize the toolbar, handle customization notification messages in the owner window as described in [Handling Customization Notifications](../mfc/handling-customization-notifications.md).  
   
-## См. также  
- [Использование CToolBarCtrl](../mfc/using-ctoolbarctrl.md)   
- [Элементы управления](../mfc/controls-mfc.md)
+## <a name="see-also"></a>See Also  
+ [Using CToolBarCtrl](../mfc/using-ctoolbarctrl.md)   
+ [Controls](../mfc/controls-mfc.md)
+
+

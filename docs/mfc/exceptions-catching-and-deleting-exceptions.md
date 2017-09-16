@@ -1,64 +1,83 @@
 ---
-title: "Исключения. Перехват и удаление исключений | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "AND_CATCH - макрос"
-  - "catch - блоки, перехват и удаление исключений"
-  - "обработка исключений, перехват и удаление исключений"
-  - "исключения, удаление"
-  - "выполнение, возвращается из блока catch"
-  - "обработка исключений try-catch, перехват и удаление исключений"
+title: 'Exceptions: Catching and Deleting Exceptions | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- exceptions [MFC], deleting
+- AND_CATCH macro [MFC]
+- try-catch exception handling [MFC], catching and deleting exceptions
+- exception handling [MFC], catching and deleting exceptions
+- catch blocks [MFC], catching and deleting exceptions
+- execution [MFC], returns from within catch block
 ms.assetid: 7c233ff0-89de-4de0-a68a-9e9cdb164311
 caps.latest.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 6
----
-# Исключения. Перехват и удаление исключений
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 24544b69849dca2425cdd0df6e7919c89f0a1e72
+ms.contentlocale: ru-ru
+ms.lasthandoff: 09/12/2017
 
-Следующие инструкции и примеры показывают, как перехватывать исключения и удаления.  Дополнительные сведения о **try**, **catch** и ключевые слова `throw` см. в разделе [Обработка исключений C\+\+.](../cpp/cpp-exception-handling.md)  
+---
+# <a name="exceptions-catching-and-deleting-exceptions"></a>Exceptions: Catching and Deleting Exceptions
+The following instructions and examples show you how to catch and delete exceptions. For more information on the **try**, **catch**, and `throw` keywords, see [C++ Exception Handling](../cpp/cpp-exception-handling.md).  
   
- Обработчики исключений удалять объекты они обрабатывают исключения, поскольку сбой удаления исключение приведет к утечки памяти, когда этот код перехватывает исключение.  
+ Your exception handlers must delete exception objects they handle, because failure to delete the exception causes a memory leak whenever that code catches an exception.  
   
- В блоке **catch** должен удалить исключение, когда:  
+ Your **catch** block must delete an exception when:  
   
--   Блок **catch** создает новое исключение.  
+-   The **catch** block throws a new exception.  
   
-     Конечно, не следует удалять исключение при вывести исключение одно и то же исключение, еще раз.  
+     Of course, you must not delete the exception if you throw the same exception again:  
   
-     [!code-cpp[NVC_MFCExceptions#3](../mfc/codesnippet/CPP/exceptions-catching-and-deleting-exceptions_1.cpp)]  
+     [!code-cpp[NVC_MFCExceptions#3](../mfc/codesnippet/cpp/exceptions-catching-and-deleting-exceptions_1.cpp)]  
   
--   Среда выполнения возвращает из блока **catch**.  
+-   Execution returns from within the **catch** block.  
   
 > [!NOTE]
->  Удаление `CException` используйте функции\-члена **Удалить** для удаления исключение.  Не используйте ключевое слово **удалить**, поскольку это может завершиться неудачей, если исключение не в куче.  
+>  When deleting a `CException`, use the **Delete** member function to delete the exception. Do not use the **delete** keyword, because it can fail if the exception is not on the heap.  
   
-#### Перехват исключения и удаление  
+#### <a name="to-catch-and-delete-exceptions"></a>To catch and delete exceptions  
   
-1.  Используйте ключевое слово **try** для настройки блок **try**.  Выполнить все выписки программы, которые могут вызывать исключения в блоке **try**.  
+1.  Use the **try** keyword to set up a **try** block. Execute any program statements that might throw an exception within a **try** block.  
   
-     Используйте ключевое слово **catch** для настройки блок **catch**.  Поместите код обработки исключений в блоке **catch**.  Код в блоке **catch** выполняется только в том случае, если код в блоке **try** создает исключение типа, определенного в инструкцию **catch**.  
+     Use the **catch** keyword to set up a **catch** block. Place exception-handling code in a **catch** block. The code in the **catch** block is executed only if the code within the **try** block throws an exception of the type specified in the **catch** statement.  
   
-     На следующей схеме показано, как **try** и **catch** блоки обычно размещаются:  
+     The following skeleton shows how **try** and **catch** blocks are normally arranged:  
   
-     [!code-cpp[NVC_MFCExceptions#4](../mfc/codesnippet/CPP/exceptions-catching-and-deleting-exceptions_2.cpp)]  
+     [!code-cpp[NVC_MFCExceptions#4](../mfc/codesnippet/cpp/exceptions-catching-and-deleting-exceptions_2.cpp)]  
   
-     При возникновении исключения, элемент управления передает в первый блок **catch** объявление исключения, соответствующим типу исключения.  При необходимости можно различные типы обработки исключений с последующими блоками **catch** так, как показано ниже:  
+     When an exception is thrown, control passes to the first **catch** block whose exception-declaration matches the type of the exception. You can selectively handle different types of exceptions with sequential **catch** blocks as listed below:  
   
-     [!code-cpp[NVC_MFCExceptions#5](../mfc/codesnippet/CPP/exceptions-catching-and-deleting-exceptions_3.cpp)]  
+     [!code-cpp[NVC_MFCExceptions#5](../mfc/codesnippet/cpp/exceptions-catching-and-deleting-exceptions_3.cpp)]  
   
- Дополнительные сведения см. в разделе [Исключения: Преобразование из исключения макросов MFC](../mfc/exceptions-converting-from-mfc-exception-macros.md).  
+ For more information, see [Exceptions: Converting from MFC Exception Macros](../mfc/exceptions-converting-from-mfc-exception-macros.md).  
   
-## См. также  
- [Обработка исключений](../mfc/exception-handling-in-mfc.md)
+## <a name="see-also"></a>See Also  
+ [Exception Handling](../mfc/exception-handling-in-mfc.md)
+
+

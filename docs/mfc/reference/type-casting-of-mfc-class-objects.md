@@ -1,5 +1,5 @@
 ---
-title: "Приведение объектов классов MFC введите | Документы Microsoft"
+title: Type Casting of MFC Class Objects | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -13,11 +13,11 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- macros, type casting
-- pointers, type casting
-- type casts
-- casting types
-- macros, casting pointers
+- macros [MFC], type casting
+- pointers [MFC], type casting
+- type casts [MFC]
+- casting types [MFC]
+- macros [MFC], casting pointers
 ms.assetid: e138465e-c35f-4e84-b788-bd200ccf2f0e
 caps.latest.revision: 15
 author: mikeblome
@@ -37,69 +37,69 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 040985df34f2613b4e4fae29498721aef15d50cb
-ms.openlocfilehash: f1ae094e7085017f03daab3f73323da13ab1be39
+ms.translationtype: MT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: ffd816499e0075a70c87552165867a97218122fa
 ms.contentlocale: ru-ru
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 09/12/2017
 
 ---
-# <a name="type-casting-of-mfc-class-objects"></a>Приведение типов объектов классов MFC
-Макросы приведения типов предоставляют способ приведения заданный указатель на указатель, указывающий на объект определенного класса, с или без проверки, что допускается приведение.  
+# <a name="type-casting-of-mfc-class-objects"></a>Type Casting of MFC Class Objects
+Type casting macros provide a way to cast a given pointer to a pointer that points to an object of specific class, with or without checking that the cast is legal.  
   
- В следующей таблице перечислены макросы приведения типов MFC.  
+ The following table lists the MFC type casting macros.  
   
-### <a name="macros-that-cast-pointers-to-mfc-class-objects"></a>Макросы, приведение указателей на объекты классов MFC  
+### <a name="macros-that-cast-pointers-to-mfc-class-objects"></a>Macros That Cast Pointers to MFC Class Objects  
   
 |||  
 |-|-|  
-|[DYNAMIC_DOWNCAST](#dynamic_downcast)|При проверке, если допускается приведение приводит указатель на указатель на объект класса.|  
-|[STATIC_DOWNCAST](#static_downcast)|Приводит указатель на объект из одного класса в указатель связанного типа. В отладочном построении вызывает **ASSERT** , если объект не является «вида» тип целевого объекта.|  
+|[DYNAMIC_DOWNCAST](#dynamic_downcast)|Casts a pointer to a pointer to a class object while checking to see if the cast is legal.|  
+|[STATIC_DOWNCAST](#static_downcast)|Casts a pointer to an object from one class to a pointer of a related type. In a debug build, causes an **ASSERT** if the object is not a "kind of" the target type.|  
   
-##  <a name="dynamic_downcast"></a>DYNAMIC_DOWNCAST  
- Предоставляет удобный способ приведение указателя на указатель на объект класса при проверке, если приведение является допустимым.  
+##  <a name="dynamic_downcast"></a>  DYNAMIC_DOWNCAST  
+ Provides a handy way to cast a pointer to a pointer to a class object while checking to see if the cast is legal.  
   
 ```   
 DYNAMIC_DOWNCAST(class, pointer)  
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
  `class`  
- Имя класса.  
+ The name of a class.  
   
  `pointer`  
- Указатель для приведения к указателю на объект типа `class`.  
+ A pointer to be cast to a pointer to an object of type `class`.  
   
-### <a name="remarks"></a>Примечания  
- Макрос будет привести `pointer` параметр в указатель на объект `class` тип параметра.  
+### <a name="remarks"></a>Remarks  
+ The macro will cast the `pointer` parameter to a pointer to an object of the `class` parameter's type.  
   
- Если объект, который ссылается указатель «вида» идентифицируемый класс макрос возвращает указатель на соответствующий. Если это не юридические приведения, этот макрос возвращает **NULL**.  
+ If the object referenced by the pointer is a "kind of" the identified class, the macro returns the appropriate pointer. If it is not a legal cast, the macro returns **NULL**.  
   
-##  <a name="static_downcast"></a>STATIC_DOWNCAST  
- Приведение *pobject* указатель на *class_name* объекта.  
+##  <a name="static_downcast"></a>  STATIC_DOWNCAST  
+ Casts *pobject* to a pointer to a *class_name* object.  
   
 ```   
 STATIC_DOWNCAST(class_name, pobject)   
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
  *class_name*  
- Имя класса, приведение.  
+ The name of the class being cast to.  
   
- *pObject*  
- Приведение к указателю на указатель *class_name* объекта.  
+ *pobject*  
+ The pointer to be cast to a pointer to a *class_name* object.  
   
-### <a name="remarks"></a>Примечания  
- *pObject* должно быть **NULL**, или указывает на объект класса, который является производным непосредственно или косвенно от *class_name*. В сборках приложения с помощью **_DEBUG** определен символ препроцессора, макрос будет **ASSERT** Если *pobject* не **NULL**, или он указывает на объект, который не является «вида» класс, указанный в *class_name* параметр (см. [CObject::IsKindOf](../../mfc/reference/cobject-class.md#iskindof)). В не **_DEBUG** сборок, макрос выполняет приведение без проверки типа.  
+### <a name="remarks"></a>Remarks  
+ *pobject* must either be **NULL**, or point to an object of a class which is derived directly, or indirectly, from *class_name*. In builds of your application with the **_DEBUG** preprocessor symbol defined, the macro will **ASSERT** if *pobject* is not **NULL**, or if it points to an object that is not a "kind of" the class specified in the *class_name* parameter (see [CObject::IsKindOf](../../mfc/reference/cobject-class.md#iskindof)). In non- **_DEBUG** builds, the macro performs the cast without any type checking.  
   
- Класс, указанный в *class_name* параметр должен быть производным от `CObject` и необходимо использовать `DECLARE_DYNAMIC` и `IMPLEMENT_DYNAMIC`, `DECLARE_DYNCREATE` и `IMPLEMENT_DYNCREATE`, или `DECLARE_SERIAL` и `IMPLEMENT_SERIAL` макросов, как описано в статье [класс CObject: наследование класса от CObject](../../mfc/deriving-a-class-from-cobject.md).  
+ The class specified in the *class_name* parameter must be derived from `CObject` and must use the `DECLARE_DYNAMIC` and `IMPLEMENT_DYNAMIC`, the `DECLARE_DYNCREATE` and `IMPLEMENT_DYNCREATE`, or the `DECLARE_SERIAL` and `IMPLEMENT_SERIAL` macros as explained in the article [CObject Class: Deriving a Class from CObject](../../mfc/deriving-a-class-from-cobject.md).  
   
- Например, может привести указатель `CMyDoc`, который называется `pMyDoc`, указатель на **CDocument** с помощью следующего выражения:  
+ For example, you might cast a pointer to `CMyDoc`, called `pMyDoc`, to a pointer to **CDocument** using this expression:  
   
- [!code-cpp[NVC_MFCDocView&#197;](../../mfc/codesnippet/cpp/type-casting-of-mfc-class-objects_1.cpp)]  
+ [!code-cpp[NVC_MFCDocView#197](../../mfc/codesnippet/cpp/type-casting-of-mfc-class-objects_1.cpp)]  
   
- Если `pMyDoc` не указывает на объект, производный прямо или косвенно от **CDocument**, макрос будет **ASSERT**.  
+ If `pMyDoc` does not point to an object derived directly or indirectly from **CDocument**, the macro will **ASSERT**.  
   
-## <a name="see-also"></a>См. также  
- [Макросы и глобальные объекты](../../mfc/reference/mfc-macros-and-globals.md)
+## <a name="see-also"></a>See Also  
+ [Macros and Globals](../../mfc/reference/mfc-macros-and-globals.md)
 

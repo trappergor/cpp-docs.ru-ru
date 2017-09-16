@@ -1,36 +1,54 @@
 ---
-title: "Сериализация. Сериализация и ввод-вывод баз данных | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "приложения баз данных [C++], файловый ввод-вывод или сериализация"
-  - "базы данных [C++], обработка ввода-вывода"
-  - "ввод-вывод [C++], или сериализация"
-  - "сериализация [C++], или ввод-вывод базы данных"
+title: 'Serialization: Serialization vs. Database Input-Output | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- database applications [MFC], file I/O vs. serialization
+- serialization [MFC], vs. database I/O
+- I/O [MFC], vs. serialization
+- databases [MFC], input/output handling
 ms.assetid: f1d23d77-4761-4a52-a7ea-54fc92d347ea
 caps.latest.revision: 9
-caps.handback.revision: 5
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
----
-# Сериализация. Сериализация и ввод-вывод баз данных
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: ad76e1a264605f63e6e04c513e89f65081a38d97
+ms.contentlocale: ru-ru
+ms.lasthandoff: 09/12/2017
 
-В этой статье описывается использование объектов документа и сериализация для основанного на файле ввода\/вывода \(ВВОД\-ВЫВОД\), и если другие методы соответствующие ВВОДА\-ВЫВОДА, поскольку приложение считывает и записывает данные на уровне транзакций, как в приложениях баз данных.  Если использовать сериализацию, команды также не понадобится файл открыт, сохранения и сохранения изменений.  В разделе рассматриваются следующие вопросы:  
+---
+# <a name="serialization-serialization-vs-database-inputoutput"></a>Serialization: Serialization vs. Database Input/Output
+This article explains when to use document objects and serialization for file-based input/output (I/O) and when other I/O techniques are appropriate — because the application reads and writes data on a per-transaction basis, as in database applications. If you don't use serialization, you also won't need the File Open, Save, and Save As commands. Topics covered include:  
   
--   [Рекомендации для обработки вход\-выход](../Topic/Recommendations%20for%20Handling%20Input-Output.md)  
+-   [Recommendations for handling input/output](../mfc/recommendations-for-handling-input-output.md)  
   
--   [Обработка меню "Файл" в приложениях баз данных](../Topic/File%20Menu%20in%20an%20MFC%20Database%20Application.md)  
+-   [Handling the File menu in database applications](../mfc/file-menu-in-an-mfc-database-application.md)  
   
-## См. также  
- [Сериализация](../Topic/Serialization%20in%20MFC.md)
+## <a name="see-also"></a>See Also  
+ [Serialization](../mfc/serialization-in-mfc.md)
+
+

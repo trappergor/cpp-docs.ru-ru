@@ -1,5 +1,5 @@
 ---
-title: "&lt;condition_variable&gt; | Документы Майкрософт"
+title: '&lt;condition_variable&gt; | Microsoft Docs'
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -32,59 +32,59 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: cc82b83860786ffc3f0aee73ede18ecadef16a7a
-ms.openlocfilehash: 6002dcd4cd0fe35c99ce56a1d9fd3b5f3c23dd08
+ms.translationtype: MT
+ms.sourcegitcommit: 5d026c375025b169d5db8445cbb52c0c917b2d8d
+ms.openlocfilehash: 5cf0a7bed02578f4bd4e7fe8146c7f67835a01ac
 ms.contentlocale: ru-ru
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 09/09/2017
 
 ---
 # <a name="ltconditionvariablegt"></a>&lt;condition_variable&gt;
-Определяет классы [condition_variable](../standard-library/condition-variable-class.md) и [condition_variable_any](../standard-library/condition-variable-any-class.md) , используемые для создания объектов, которые ожидают условие, чтобы стать true.  
+Defines the classes [condition_variable](../standard-library/condition-variable-class.md) and [condition_variable_any](../standard-library/condition-variable-any-class.md) that are used to create objects that wait for a condition to become true.  
   
- Этот заголовок использует среду выполнения с параллелизмом (ConcRT), чтобы ее можно было использовать вместе с другими механизмами ConcRT. Дополнительные сведения о ConcRT см. в статье [Среда выполнения с параллелизмом](../parallel/concrt/concurrency-runtime.md).  
+ This header uses Concurrency Runtime (ConcRT) so that you can use it together with other ConcRT mechanisms. For more information about ConcRT, see [Concurrency Runtime](../parallel/concrt/concurrency-runtime.md).  
   
-## <a name="syntax"></a>Синтаксис  
+## <a name="syntax"></a>Syntax  
   
 ```cpp  
 #include <condition_variable>  
 ```  
   
 > [!NOTE]
->  В коде, который компилируется с помощью **/CLR**, этот заголовок будет заблокирован.  
+>  In code that is compiled by using **/clr**, this header is blocked.  
   
-### <a name="remarks"></a>Примечания  
- Код, который ожидает переменную условия, должен также использовать `mutex`. Вызывающий поток должен заблокировать `mutex` перед вызовом функции, ожидающей переменную условия. Затем блокируется `mutex` при возврате вызванной функции. `mutex` не блокируется, пока поток ожидает, когда условие станет истинным. Таким образом, нет никаких непредсказуемых результатов, все потоки, ожидающие переменную условия, должны использовать один и тот же объект `mutex`.  
+### <a name="remarks"></a>Remarks  
+ Code that waits for a condition variable must also use a `mutex`. A calling thread must lock the `mutex` before it calls the functions that wait for the condition variable. The `mutex` is then locked when the called function returns. The `mutex` is not locked while the thread waits for the condition to become true. So that there are no unpredictable results, each thread that waits for a condition variable must use the same `mutex` object.  
   
- Объекты типа `condition_variable_any` можно использовать с mutex любого типа. Используемый тип mutex не должен предоставлять метод `try_lock`. Объекты типа `condition_variable` можно использовать с mutex типа `unique_lock<mutex>`. Объекты этого типа могут быть быстрее, чем объекты типа `condition_variable_any<unique_lock<mutex>>`.  
+ Objects of type `condition_variable_any` can be used with a mutex of any type. The type of the mutex that is used does not have to provide the `try_lock` method. Objects of type `condition_variable` can only be used with a mutex of type `unique_lock<mutex>`. Objects of this type may be faster than objects of type `condition_variable_any<unique_lock<mutex>>`.  
   
- Чтобы дождаться события, сначала блокируется mutex, а затем вызывается один из методов `wait` в переменной условия. Вызов `wait` блокируется, пока другой поток не сигнализирует о переменной условия.  
+ To wait for an event, first lock the mutex, and then call one of the `wait` methods on the condition variable. The `wait` call blocks until another thread signals the condition variable.  
   
- *Ложные активации* возникают, когда потоки, ожидающие переменных условия, становятся разблокированными без соответствующих уведомлений. Чтобы распознать такие ложные активации, код, который ожидает, пока условие станет истинным, должен явно проверять это условие при возврате кода из функции wait. Обычно это делается с помощью цикла; можно использовать `wait(unique_lock<mutex>& lock, Predicate pred)` для выполнения этого цикла.  
+ *Spurious wakeups* occur when threads that are waiting for condition variables become unblocked without appropriate notifications. To recognize such spurious wakeups, code that waits for a condition to become true should explicitly check that condition when the code returns from a wait function. This is usually done by using a loop; you can use `wait(unique_lock<mutex>& lock, Predicate pred)` to perform this loop for you.  
   
 ```cpp  
 while (condition is false)
     wait for condition variable;
 ```  
   
- Классы `condition_variable_any` и `condition_variable` имеют по три метода, которые ожидают условие.  
+ The `condition_variable_any` and `condition_variable` classes each have three methods that wait for a condition.  
   
-- Метод `wait` ожидает в течение неограниченного времени.  
+- `wait` waits for an unbounded time period.  
   
-- Метод `wait_until` ожидает до указанного `time`.  
+- `wait_until` waits until a specified `time`.  
   
-- Метод `wait_for` ожидает в течение указанного `time interval`.  
+- `wait_for` waits for a specified `time interval`.  
   
- Каждый из этих методов имеет две перегруженные версии. Одна просто ожидает и может выполнить ложную активацию. Другая принимает дополнительный аргумент шаблона, который задает предикат. Возврат метода не происходит, пока этот предикат не получит значение `true`.  
+ Each of these methods has two overloaded versions. One just waits and can wake up spuriously. The other takes an additional template argument that defines a predicate. The method does not return until the predicate is `true`.  
   
- Каждый класс также имеет два метода, которые используются для уведомления переменной условия, что его условие `true`.  
+ Each class also has two methods that are used to notify a condition variable that its condition is `true`.  
   
-- `notify_one` активирует один из потоков, ожидающий переменную условия.  
+- `notify_one` wakes up one of the threads that is waiting for the condition variable.  
   
-- `notify_all` активирует все потоки, ожидающие переменную условия.  
+- `notify_all` wakes up all of the threads that are waiting for the condition variable.  
   
-## <a name="see-also"></a>См. также  
- [Справочник по файлам заголовков](../standard-library/cpp-standard-library-header-files.md)   
- [Класс condition_variable](../standard-library/condition-variable-class.md)   
- [Класс condition_variable_any](../standard-library/condition-variable-any-class.md)
+## <a name="see-also"></a>See Also  
+ [Header Files Reference](../standard-library/cpp-standard-library-header-files.md)   
+ [condition_variable Class](../standard-library/condition-variable-class.md)   
+ [condition_variable_any Class](../standard-library/condition-variable-any-class.md)
 

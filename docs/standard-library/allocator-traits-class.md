@@ -1,5 +1,5 @@
 ---
-title: "Класс allocator_traits | Документы Майкрософт"
+title: allocator_traits Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -48,17 +48,36 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
-ms.openlocfilehash: d4fdcb8af6fa8b33ee6153563770b9bf00f02942
+helpviewer_keywords:
+- std::allocator_traits [C++]
+- std::allocator_traits [C++], propagate_on_container_move_assignment
+- std::allocator_traits [C++], const_pointer
+- std::allocator_traits [C++], propagate_on_container_swap
+- std::allocator_traits [C++], propagate_on_container_copy_assignment
+- std::allocator_traits [C++], difference_type
+- std::allocator_traits [C++], allocator_type
+- std::allocator_traits [C++], value_type
+- std::allocator_traits [C++], pointer
+- std::allocator_traits [C++], size_type
+- std::allocator_traits [C++], const_void_pointer
+- std::allocator_traits [C++], void_pointer
+- std::allocator_traits [C++], allocate
+- std::allocator_traits [C++], construct
+- std::allocator_traits [C++], deallocate
+- std::allocator_traits [C++], destroy
+- std::allocator_traits [C++], max_size
+- std::allocator_traits [C++], select_on_container_copy_construction
+ms.translationtype: MT
+ms.sourcegitcommit: 5d026c375025b169d5db8445cbb52c0c917b2d8d
+ms.openlocfilehash: e76087fe07ce065aeb19de18acc17464e6b4e4a0
 ms.contentlocale: ru-ru
-ms.lasthandoff: 04/29/2017
+ms.lasthandoff: 09/09/2017
 
 ---
-# <a name="allocatortraits-class"></a>Класс allocator_traits
-Класс шаблона описывает объект, который дополняет *тип распределителя*. Тип распределителя — это любой тип, описывающий объект allocator, который используется для управления выделенной памятью. В частности, для любого типа распределителя `Alloc` можно использовать `allocator_traits<Alloc>`, чтобы определить все сведения, необходимые контейнеру с распределителем. Дополнительные сведения см. в разделе [Класс allocator](../standard-library/allocator-class.md).  
+# <a name="allocatortraits-class"></a>allocator_traits Class
+The template class describes an object that supplements an *allocator type*. An allocator type is any type that describes an allocator object that is used for managing allocated storage. Specifically, for any allocator type `Alloc`, you can use `allocator_traits<Alloc>` to determine all the information that is needed by an allocator-enabled container. For more information, see the default [allocator Class](../standard-library/allocator-class.md).  
   
-## <a name="syntax"></a>Синтаксис  
+## <a name="syntax"></a>Syntax  
   
 ```cpp  
 template <class Alloc>
@@ -67,39 +86,39 @@ class allocator_traits;
   
 ### <a name="typedefs"></a>Typedefs  
   
-|Имя|Описание|  
+|Name|Description|  
 |----------|-----------------|  
-|`allocator_traits::allocator_type`|Этот тип является синонимом для параметра-шаблона `Alloc`.|  
-|`allocator_traits::const_pointer`|Этот тип — `Alloc::const_pointer`, если он правильно сформирован; в противном случае этот тип — `pointer_traits<pointer>::rebind<const value_type>`.|  
-|`allocator_traits::const_void_pointer`|Этот тип — `Alloc::const_void_pointer`, если он правильно сформирован; в противном случае этот тип — `pointer_traits<pointer>::rebind<const void>`.|  
-|`allocator_traits::difference_type`|Этот тип — `Alloc::difference_type`, если он правильно сформирован; в противном случае этот тип — `pointer_traits<pointer>::difference_type`.|  
-|`allocator_traits::pointer`|Этот тип — `Alloc::pointer`, если он правильно сформирован; в противном случае этот тип — `value_type *`.|  
-|`allocator_traits::propagate_on_container_copy_assignment`|Этот тип — `Alloc::propagate_on_container_copy_assignment`, если он правильно сформирован; в противном случае этот тип — `false_type`.|  
-|`allocator_traits::propagate_on_container_move_assignment`|Этот тип — `Alloc::propagate_on_container_move_assignment`, если он правильно сформирован; в противном случае этот тип — `false_type`. Если тип содержит значение true, контейнер с поддержкой распределителя копирует его сохраненный распределитель для назначения перемещения.|  
-|`allocator_traits::propagate_on_container_swap`|Этот тип — `Alloc::propagate_on_container_swap`, если он правильно сформирован; в противном случае этот тип — `false_type`. Если тип содержит значение true, контейнер с поддержкой распределителя копирует его сохраненный распределитель в перестановку.|  
-|`allocator_traits::size_type`|Этот тип — `Alloc::size_type`, если он правильно сформирован; в противном случае этот тип — `make_unsigned<difference_type>::type`.|  
-|`allocator_traits::value_type`|Этот тип является синонимом `Alloc::value_type`.|  
-|`allocator_traits::void_pointer`|Этот тип — `Alloc::void_pointer`, если он правильно сформирован; в противном случае этот тип — `pointer_traits<pointer>::rebind<void>`.|  
+|`allocator_traits::allocator_type`|This type is a synonym for the template parameter `Alloc`.|  
+|`allocator_traits::const_pointer`|This type is `Alloc::const_pointer`, if that type is well-formed; otherwise, this type is `pointer_traits<pointer>::rebind<const value_type>`.|  
+|`allocator_traits::const_void_pointer`|This type is `Alloc::const_void_pointer`, if that type is well-formed; otherwise, this type is `pointer_traits<pointer>::rebind<const void>`.|  
+|`allocator_traits::difference_type`|This type is `Alloc::difference_type`, if that type is well-formed; otherwise, this type is `pointer_traits<pointer>::difference_type`.|  
+|`allocator_traits::pointer`|This type is `Alloc::pointer`, if that type is well-formed; otherwise, this type is `value_type *`.|  
+|`allocator_traits::propagate_on_container_copy_assignment`|This type is `Alloc::propagate_on_container_copy_assignment`, if that type is well-formed; otherwise, this type is `false_type`.|  
+|`allocator_traits::propagate_on_container_move_assignment`|This type is `Alloc::propagate_on_container_move_assignment`, if that type is well-formed; otherwise, this type is `false_type`. If the type holds true, an allocator-enabled container copies its stored allocator on a move assignment.|  
+|`allocator_traits::propagate_on_container_swap`|This type is `Alloc::propagate_on_container_swap`, if that type is well-formed; otherwise, this type is `false_type`. If the type holds true, an allocator-enabled container swaps its stored allocator on a swap.|  
+|`allocator_traits::size_type`|This type is `Alloc::size_type`, if that type is well-formed; otherwise, this type is `make_unsigned<difference_type>::type`.|  
+|`allocator_traits::value_type`|This type is a synonym for `Alloc::value_type`.|  
+|`allocator_traits::void_pointer`|This type is `Alloc::void_pointer`, if that type is well-formed; otherwise, this type is `pointer_traits<pointer>::rebind<void>`.|  
   
-### <a name="static-methods"></a>Статические методы  
- Следующие статические методы вызывают соответствующий метод в указанном параметре распределителя.  
+### <a name="static-methods"></a>Static Methods  
+ The following static methods call the corresponding method on a given allocator parameter.  
   
-|Имя|Описание|  
+|Name|Description|  
 |----------|-----------------|  
-|[allocate](#allocate)|Статический метод, который выделяет память с помощью указанного параметра распределителя.|  
-|[construct](#construct)|Статический метод, который используется указанным распределителем для создания объекта.|  
-|[deallocate](#deallocate)|Статический метод, который используется указанным распределителем для освобождения указанного количества объектов.|  
-|[destroy](#destroy)|Статический метод, который используется указанным распределителем для вызова деструктора в объекте без освобождения его памяти.|  
-|[max_size](#max_size)|Статический метод, который используется указанным распределителем, чтобы определить максимальное число объектов, которые могут быть распределены.|  
-|[select_on_container_copy_construction](#select_on_container_copy_construction)|Статический метод, который вызывает `select_on_container_copy_construction` в указанном распределителе.|  
+|[allocate](#allocate)|Static method that allocates memory by using the given allocator parameter.|  
+|[construct](#construct)|Static method that uses a specified allocator to construct an object.|  
+|[deallocate](#deallocate)|Static method that uses a specified allocator to deallocate a specified number of objects.|  
+|[destroy](#destroy)|Static method that uses a specified allocator to call the destructor on an object without deallocating its memory.|  
+|[max_size](#max_size)|Static method that uses a specified allocator to determine the maximum number of objects that can be allocated.|  
+|[select_on_container_copy_construction](#select_on_container_copy_construction)|Static method that calls `select_on_container_copy_construction` on the specified allocator.|  
   
-## <a name="requirements"></a>Требования  
- **Заголовок:** \<memory>  
+## <a name="requirements"></a>Requirements  
+ **Header:** \<memory>  
   
- **Пространство имен:** std  
+ **Namespace:** std  
   
-##  <a name="allocate"></a>allocator_traits::allocate
- Статический метод, который выделяет память с помощью указанного параметра распределителя.  
+##  <a name="allocate"></a>  allocator_traits::allocate
+ Static method that allocates memory by using the given allocator parameter.  
   
 ```cpp  
 static pointer allocate(Alloc& al, size_type count);
@@ -108,46 +127,46 @@ static pointer allocate(Alloc& al, size_type count,
     typename allocator_traits<void>::const_pointer* hint);
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
  `al`  
- Объект распределителя.  
+ An allocator object.  
   
  `count`  
- Число элементов для распределения.  
+ The number of elements to allocate.  
   
  `hint`  
- `const_pointer`, который может помочь объекту allocator удовлетворить запрос хранилища, найдя адрес выделенного объекта до запроса. Пустой указатель рассматривается как отсутствие подсказки.  
+ A `const_pointer` that might assist the allocator object in satisfying the request for storage by locating the address of an allocated object prior to the request. A null pointer is treated as no hint.  
   
-### <a name="return-value"></a>Возвращаемое значение  
- Каждый метод возвращает указатель на выделенный объект.  
+### <a name="return-value"></a>Return Value  
+ Each method returns a pointer to the allocated object.  
   
- Первый статический метод возвращает `al.allocate(count)`.  
+ The first static method returns `al.allocate(count)`.  
   
- Второй метод возвращает `al.allocate(count, hint)`, если это выражение правильно сформировано; в противном случае возвращается `al.allocate(count)`.  
+ The second method returns `al.allocate(count, hint)`, if that expression is well formed; otherwise it returns `al.allocate(count)`.  
   
-##  <a name="construct"></a>allocator_traits::construct
- Статический метод, который используется указанным распределителем для создания объекта.  
+##  <a name="construct"></a>  allocator_traits::construct
+ Static method that uses a specified allocator to construct an object.  
   
 ```cpp  
 template <class Uty, class Types>
 static void construct(Alloc& al, Uty* ptr, Types&&... args);
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
  `al`  
- Объект распределителя.  
+ An allocator object.  
   
  `ptr`  
- Указатель места, в котором должен создаваться объект.  
+ A pointer to the location where the object is to be constructed.  
   
  `args`  
- Список аргументов, передаваемый в конструктор объекта.  
+ A list of arguments that is passed to the object constructor.  
   
-### <a name="remarks"></a>Примечания  
- Эта статическая функция-член вызывает `al.construct(ptr, args...)`, если выражение правильно сформировано; в противном случае оно оценивается как `::new (static_cast<void *>(ptr)) Uty(std::forward<Types>(args)...)`.  
+### <a name="remarks"></a>Remarks  
+ The static member function calls `al.construct(ptr, args...)`, if that expression is well formed; otherwise it evaluates `::new (static_cast<void *>(ptr)) Uty(std::forward<Types>(args)...)`.  
   
-##  <a name="deallocate"></a>allocator_traits::DEALLOCATE
- Статический метод, который используется указанным распределителем для освобождения указанного количества объектов.  
+##  <a name="deallocate"></a>  allocator_traits::deallocate
+ Static method that uses a specified allocator to deallocate a specified number of objects.  
   
 ```cpp  
 static void deallocate(Alloc al,
@@ -155,72 +174,72 @@ static void deallocate(Alloc al,
     size_type count);
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
  `al`  
- Объект распределителя.  
+ An allocator object.  
   
  `ptr`  
- Указатель начальной позиции освобождаемых объектов.  
+ A pointer to the starting location of the objects to be deallocated.  
   
  `count`  
- Количество освобождаемых объектов.  
+ The number of objects to deallocate.  
   
-### <a name="remarks"></a>Примечания  
- Этот метод вызывает `al.deallocate(ptr, count)`.  
+### <a name="remarks"></a>Remarks  
+ This method calls `al.deallocate(ptr, count)`.  
   
- Этот метод ничего не создает.  
+ This method throws nothing.  
   
-##  <a name="destroy"></a>allocator_traits::destroy
- Статический метод, который используется указанным распределителем для вызова деструктора в объекте без освобождения его памяти.  
+##  <a name="destroy"></a>  allocator_traits::destroy
+ Static method that uses a specified allocator to call the destructor on an object without deallocating its memory.  
   
 ```cpp  
 template <class Uty>
 static void destroy(Alloc& al, Uty* ptr);
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
  `al`  
- Объект распределителя.  
+ An allocator object.  
   
  `ptr`  
- Указатель на расположение объекта.  
+ A pointer to the location of the object.  
   
-### <a name="remarks"></a>Примечания  
- Этот метод вызывает `al.destroy(ptr)`, если выражение правильно сформировано; в противном случае оно оценивается как `ptr->~Uty()`.  
+### <a name="remarks"></a>Remarks  
+ This method calls `al.destroy(ptr)`, if that expression is well formed; otherwise it evaluates `ptr->~Uty()`.  
   
-##  <a name="max_size"></a>allocator_traits::max_size
- Статический метод, который используется указанным распределителем, чтобы определить максимальное число объектов, которые могут быть распределены.  
+##  <a name="max_size"></a>  allocator_traits::max_size
+ Static method that uses a specified allocator to determine the maximum number of objects that can be allocated.  
   
 ```cpp  
 static size_type max_size(const Alloc& al);
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
  `al`  
- Объект распределителя.  
+ An allocator object.  
   
-### <a name="remarks"></a>Примечания  
- Этот метод возвращает `al.max_size()`, если это выражение правильно сформировано; в противном случае возвращается `numeric_limits<size_type>::max()`.  
+### <a name="remarks"></a>Remarks  
+ This method returns `al.max_size()`, if that expression is well formed; otherwise it returns `numeric_limits<size_type>::max()`.  
   
-##  <a name="select_on_container_copy_construction"></a>allocator_traits::select_on_container_copy_construction
- Статический метод, который вызывает `select_on_container_copy_construction` в указанном распределителе.  
+##  <a name="select_on_container_copy_construction"></a>  allocator_traits::select_on_container_copy_construction
+ Static method that calls `select_on_container_copy_construction` on the specified allocator.  
   
 ```cpp  
 static Alloc select_on_container_copy_construction(const Alloc& al);
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
  `al`  
- Объект распределителя.  
+ An allocator object.  
   
-### <a name="return-value"></a>Возвращаемое значение  
- Данный метод возвращает `al.select_on_container_copy_construction()`, если этот тип правильно сформирован; в противном случае возвращается `al`.  
+### <a name="return-value"></a>Return Value  
+ This method returns `al.select_on_container_copy_construction()`, if that type is well formed; otherwise it returns `al`.  
   
-### <a name="remarks"></a>Примечания  
- Этот метод используется для указания распределителя при создании копии связанного контейнера.  
+### <a name="remarks"></a>Remarks  
+ This method is used to specify an allocator when the associated container is copy-constructed.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>See Also  
  [\<memory>](../standard-library/memory.md)   
- [Структура pointer_traits](../standard-library/pointer-traits-struct.md)   
- [Класс scoped_allocator_adaptor](../standard-library/scoped-allocator-adaptor-class.md)
+ [pointer_traits Struct](../standard-library/pointer-traits-struct.md)   
+ [scoped_allocator_adaptor Class](../standard-library/scoped-allocator-adaptor-class.md)
 

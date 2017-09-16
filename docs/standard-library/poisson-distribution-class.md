@@ -1,5 +1,5 @@
 ---
-title: "Класс poisson_distribution | Документы Майкрософт"
+title: poisson_distribution Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -9,7 +9,6 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
-- poisson_distribution
 - random/std::poisson_distribution
 - random/std::poisson_distribution::reset
 - random/std::poisson_distribution::mean
@@ -25,7 +24,14 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- poisson_distribution class
+- std::poisson_distribution [C++]
+- std::poisson_distribution [C++], reset
+- std::poisson_distribution [C++], mean
+- std::poisson_distribution [C++], param
+- std::poisson_distribution [C++], min
+- std::poisson_distribution [C++], max
+- std::poisson_distribution [C++], param_type
+- std::poisson_distribution [C++], param_type
 ms.assetid: 09614281-349a-45f7-8e95-c0196be0a937
 caps.latest.revision: 19
 author: corob-msft
@@ -45,17 +51,17 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
-ms.openlocfilehash: a8a87f4101cca4a709d594ac2ad19726eb505c00
+ms.translationtype: MT
+ms.sourcegitcommit: 5d026c375025b169d5db8445cbb52c0c917b2d8d
+ms.openlocfilehash: d7237dd8a273323eb8424223848bde9d647c06da
 ms.contentlocale: ru-ru
-ms.lasthandoff: 04/29/2017
+ms.lasthandoff: 09/09/2017
 
 ---
-# <a name="poissondistribution-class"></a>Класс poisson_distribution
-Формирует распределение Пуассона.  
+# <a name="poissondistribution-class"></a>poisson_distribution Class
+Generates a Poisson distribution.  
   
-## <a name="syntax"></a>Синтаксис  
+## <a name="syntax"></a>Syntax  
   
 ```  
 template<class IntType = int>
@@ -86,33 +92,33 @@ public:
    };  
 ``` 
   
-#### <a name="parameters"></a>Параметры  
+#### <a name="parameters"></a>Parameters  
 *IntType*  
-По умолчанию целочисленный тип результата имеет тип `int`. Возможные типы см. в разделе [\<random>](../standard-library/random.md).  
+The integer result type, defaults to `int`. For possible types, see [\<random>](../standard-library/random.md).  
   
-## <a name="remarks"></a>Примечания  
-Класс шаблона описывает распределение, получающее значения указанного пользователем целочисленного типа с распределением Пуассона. В следующей таблице представлены ссылки на статьи об отдельных членах.  
+## <a name="remarks"></a>Remarks  
+The template class describes a distribution that produces values of a user-specified integral type with a Poisson distribution. The following table links to articles about individual members.  
   
 ||||  
 |-|-|-|  
 |[poisson_distribution](#poisson_distribution)|`poisson_distribution::mean`|`poisson_distribution::param`|  
 |`poisson_distribution::operator()`||[param_type](#param_type)|  
   
-Функция свойства `mean()` возвращает значение для хранимого параметра распределения *mean*.  
+The property function `mean()` returns the value for stored distribution parameter *mean*.  
   
-Член свойства `param()` устанавливает или возвращает хранимый пакет параметров распределения `param_type`.  
+The property member `param()` sets or returns the `param_type` stored distribution parameter package.  
 
-Функции-члены `min()` и `max()` возвращают наименьший и наибольший из возможных результатов соответственно.  
+The `min()` and `max()` member functions return the smallest possible result and largest possible result, respectively.  
   
-Функция-член `reset()` удаляет любые кэшированные значения, чтобы результат следующего вызова `operator()` не зависел от любых значений, полученных от механизма перед вызовом.  
+The `reset()` member function discards any cached values, so that the result of the next call to `operator()` does not depend on any values obtained from the engine before the call.  
   
-Функции-члены `operator()` возвращают следующее значение, созданное механизмом РГСЧ, из текущего или указанного пакета параметров.
+The `operator()` member functions return the next generated value based on the URNG engine, either from the current parameter package, or the specified parameter package.
   
-Дополнительные сведения о классах распределения и их членах см. в разделе [\<random>](../standard-library/random.md).  
+For more information about distribution classes and their members, see [\<random>](../standard-library/random.md).  
   
-Подробные сведения о распределении Пуассона см. в статье Wolfram MathWorld [Распределение Пуассона](http://go.microsoft.com/fwlink/LinkId=401112).  
+For detailed information about the Poisson distribution, see the Wolfram MathWorld article [Poisson Distribution](http://go.microsoft.com/fwlink/LinkId=401112).  
   
-## <a name="example"></a>Пример  
+## <a name="example"></a>Example  
   
 ```cpp  
 // compile with: /EHsc /W4  
@@ -166,7 +172,7 @@ int main()
   
 ```  
   
-Первый тест.  
+First test:  
   
 ```Output  
 Use CTRL-Z to bypass data entry and run using default values.
@@ -183,7 +189,7 @@ Distribution for 100 samples:
     5 :  
 ```  
   
-Второй тест.  
+Second test:  
   
 ```Output  
 Use CTRL-Z to bypass data entry and run using default values.
@@ -210,35 +216,35 @@ Distribution for 100 samples:
    17 :  
 ```  
   
-## <a name="requirements"></a>Требования  
- **Заголовок:** \<random>  
+## <a name="requirements"></a>Requirements  
+ **Header:** \<random>  
   
- **Пространство имен:** std  
+ **Namespace:** std  
   
 ##  <a name="poisson_distribution"></a>  poisson_distribution::poisson_distribution  
-Формирует распределение.  
+Constructs the distribution.  
   
 ```  
 explicit poisson_distribution(RealType mean = 1.0);
 explicit binomial_distribution(const param_type& parm);
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
 *mean*  
-Параметр распределения `mean`.  
+The `mean` distribution parameter.  
   
 *parm*  
-Структура параметров, используемая для формирования распределения.  
+The parameter structure used to construct the distribution.  
   
-### <a name="remarks"></a>Примечания  
- **Предварительные условия:** `0.0 < mean`  
+### <a name="remarks"></a>Remarks  
+ **Precondition:** `0.0 < mean`  
   
-Первый конструктор создает объект, хранимое значение `mean` которого содержит значение *mean*.  
+The first constructor constructs an object whose stored `mean` value holds the value *mean*.  
   
-Второй конструктор создает объект, хранимые параметры которого инициализируются из *parm*. Вы можете получить и задать текущие параметры существующего распределения, вызвав функцию-член `param()`.  
+The second constructor constructs an object whose stored parameters are initialized from *parm*. You can obtain and set the current parameters of an existing distribution by calling the `param()` member function.  
   
 ##  <a name="param_type"></a>  poisson_distribution::param_type  
-Сохраняет параметры распределения.  
+Stores the parameters of the distribution.  
   
 ```    
 struct param_type {  
@@ -251,15 +257,15 @@ struct param_type {
    };  
 ```  
   
-### <a name="parameters"></a>Параметры  
-См. параметры конструктора для [poisson_distribution](#poisson_distribution).  
+### <a name="parameters"></a>Parameters  
+See constructor parameters for [poisson_distribution](#poisson_distribution).  
   
-### <a name="remarks"></a>Примечания  
- **Предварительные условия:** `0.0 < mean`  
+### <a name="remarks"></a>Remarks  
+ **Precondition:** `0.0 < mean`  
   
-Эту структуру можно передать конструктору класса распределения во время создания экземпляра, функции-члену `param()` для установки хранимых параметров существующего распределения и `operator()` для использования вместо хранимых параметров.  
+This structure can be passed to the distribution's class constructor at instantiation, to the `param()` member function to set the stored parameters of an existing distribution, and to `operator()` to be used in place of the stored parameters.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>See Also  
  [\<random>](../standard-library/random.md)
 
 

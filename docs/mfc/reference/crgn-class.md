@@ -1,5 +1,5 @@
 ---
-title: "CRgn-класс | Документы Microsoft"
+title: CRgn Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -34,9 +34,26 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- HRGN
-- CRgn class
-- regions, MFC
+- CRgn [MFC], CRgn
+- CRgn [MFC], CombineRgn
+- CRgn [MFC], CopyRgn
+- CRgn [MFC], CreateEllipticRgn
+- CRgn [MFC], CreateEllipticRgnIndirect
+- CRgn [MFC], CreateFromData
+- CRgn [MFC], CreateFromPath
+- CRgn [MFC], CreatePolygonRgn
+- CRgn [MFC], CreatePolyPolygonRgn
+- CRgn [MFC], CreateRectRgn
+- CRgn [MFC], CreateRectRgnIndirect
+- CRgn [MFC], CreateRoundRectRgn
+- CRgn [MFC], EqualRgn
+- CRgn [MFC], FromHandle
+- CRgn [MFC], GetRegionData
+- CRgn [MFC], GetRgnBox
+- CRgn [MFC], OffsetRgn
+- CRgn [MFC], PtInRegion
+- CRgn [MFC], RectInRegion
+- CRgn [MFC], SetRectRgn
 ms.assetid: d904da84-76aa-481e-8780-b09485f49e64
 caps.latest.revision: 23
 author: mikeblome
@@ -56,79 +73,79 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3f91eafaf3b5d5c1b8f96b010206d699f666e224
-ms.openlocfilehash: 3aa69aa3947409b5b3d96a9da92f5d4549eebbb4
+ms.translationtype: MT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 9aab720a355bb351c32d6a2242979306e62cbbaf
 ms.contentlocale: ru-ru
-ms.lasthandoff: 04/01/2017
+ms.lasthandoff: 09/12/2017
 
 ---
-# <a name="crgn-class"></a>CRgn-класс
-Инкапсулирует область интерфейса графических устройств Windows (GDI).  
+# <a name="crgn-class"></a>CRgn Class
+Encapsulates a Windows graphics device interface (GDI) region.  
   
-## <a name="syntax"></a>Синтаксис  
+## <a name="syntax"></a>Syntax  
   
 ```  
 class CRgn : public CGdiObject  
 ```  
   
-## <a name="members"></a>Члены  
+## <a name="members"></a>Members  
   
-### <a name="public-constructors"></a>Открытые конструкторы  
+### <a name="public-constructors"></a>Public Constructors  
   
-|Имя|Описание|  
+|Name|Description|  
 |----------|-----------------|  
-|[CRgn::CRgn](#crgn)|Создает объект `CRgn`.|  
+|[CRgn::CRgn](#crgn)|Constructs a `CRgn` object.|  
   
-### <a name="public-methods"></a>Открытые методы  
+### <a name="public-methods"></a>Public Methods  
   
-|Имя|Описание|  
+|Name|Description|  
 |----------|-----------------|  
-|[CRgn::CombineRgn](#combinergn)|Наборы `CRgn` таким образом, чтобы она эквивалентна объединение двух заданных `CRgn` объектов.|  
-|[CRgn::CopyRgn](#copyrgn)|Наборы `CRgn` таким образом, чтобы он является копией указанного `CRgn` объекта.|  
-|[CRgn::CreateEllipticRgn](#createellipticrgn)|Инициализирует `CRgn` объекта с регионом эллипса.|  
-|[CRgn::CreateEllipticRgnIndirect](#createellipticrgnindirect)|Инициализирует `CRgn` объект с эллиптической области, определяемой [RECT](../../mfc/reference/rect-structure1.md) структуры.|  
-|[CRgn::CreateFromData](#createfromdata)|Создает область из заданной области и преобразования данных.|  
-|[CRgn::CreateFromPath](#createfrompath)|Создает область из пути, который выбран в контексте данного устройства.|  
-|[CRgn::CreatePolygonRgn](#createpolygonrgn)|Инициализирует `CRgn` объект с многоугольных области. Система закрывает многоугольника автоматически, при необходимости путем рисования линии из последнего вершин с первым.|  
-|[CRgn::CreatePolyPolygonRgn](#createpolypolygonrgn)|Инициализирует `CRgn` объекта с областью, состоящий из набора закрытых многоугольников. Может быть несвязанным многоугольников или они могут перекрываться.|  
-|[CRgn::CreateRectRgn](#createrectrgn)|Инициализирует `CRgn` объект с прямоугольной области.|  
-|[CRgn::CreateRectRgnIndirect](#createrectrgnindirect)|Инициализирует `CRgn` объект с прямоугольной области, определяемой [RECT](../../mfc/reference/rect-structure1.md) структуры.|  
-|[CRgn::CreateRoundRectRgn](#createroundrectrgn)|Инициализирует `CRgn` объект с прямоугольной области со скругленными углами.|  
-|[CRgn::EqualRgn](#equalrgn)|Проверяет два `CRgn` объектами, чтобы определить, эквивалентны ли они.|  
-|[CRgn::FromHandle](#fromhandle)|Возвращает указатель на `CRgn` объект для заданного дескриптора в область Windows.|  
-|[CRgn::GetRegionData](#getregiondata)|Заполняет указанный буфер данных, описывающих заданной области.|  
-|[CRgn::GetRgnBox](#getrgnbox)|Извлекает координаты ограничивающего прямоугольника `CRgn` объекта.|  
-|[CRgn::OffsetRgn](#offsetrgn)|Перемещает `CRgn` объекта с заданными смещениями.|  
-|[CRgn::PtInRegion](#ptinregion)|Определяет, является ли указанная точка в области.|  
-|[CRgn::RectInRegion](#rectinregion)|Определяет, является ли какой-либо части заданного прямоугольника в пределах области.|  
-|[CRgn::SetRectRgn](#setrectrgn)|Наборы `CRgn` объекта для указанной прямоугольной области.|  
+|[CRgn::CombineRgn](#combinergn)|Sets a `CRgn` object so that it is equivalent to the union of two specified `CRgn` objects.|  
+|[CRgn::CopyRgn](#copyrgn)|Sets a `CRgn` object so that it is a copy of a specified `CRgn` object.|  
+|[CRgn::CreateEllipticRgn](#createellipticrgn)|Initializes a `CRgn` object with an elliptical region.|  
+|[CRgn::CreateEllipticRgnIndirect](#createellipticrgnindirect)|Initializes a `CRgn` object with an elliptical region defined by a [RECT](../../mfc/reference/rect-structure1.md) structure.|  
+|[CRgn::CreateFromData](#createfromdata)|Creates a region from the given region and transformation data.|  
+|[CRgn::CreateFromPath](#createfrompath)|Creates a region from the path that is selected into the given device context.|  
+|[CRgn::CreatePolygonRgn](#createpolygonrgn)|Initializes a `CRgn` object with a polygonal region. The system closes the polygon automatically, if necessary, by drawing a line from the last vertex to the first.|  
+|[CRgn::CreatePolyPolygonRgn](#createpolypolygonrgn)|Initializes a `CRgn` object with a region consisting of a series of closed polygons. The polygons may be disjoint, or they may overlap.|  
+|[CRgn::CreateRectRgn](#createrectrgn)|Initializes a `CRgn` object with a rectangular region.|  
+|[CRgn::CreateRectRgnIndirect](#createrectrgnindirect)|Initializes a `CRgn` object with a rectangular region defined by a [RECT](../../mfc/reference/rect-structure1.md) structure.|  
+|[CRgn::CreateRoundRectRgn](#createroundrectrgn)|Initializes a `CRgn` object with a rectangular region with rounded corners.|  
+|[CRgn::EqualRgn](#equalrgn)|Checks two `CRgn` objects to determine whether they are equivalent.|  
+|[CRgn::FromHandle](#fromhandle)|Returns a pointer to a `CRgn` object when given a handle to a Windows region.|  
+|[CRgn::GetRegionData](#getregiondata)|Fills the specified buffer with data describing the given region.|  
+|[CRgn::GetRgnBox](#getrgnbox)|Retrieves the coordinates of the bounding rectangle of a `CRgn` object.|  
+|[CRgn::OffsetRgn](#offsetrgn)|Moves a `CRgn` object by the specified offsets.|  
+|[CRgn::PtInRegion](#ptinregion)|Determines whether a specified point is in the region.|  
+|[CRgn::RectInRegion](#rectinregion)|Determines whether any part of a specified rectangle is within the boundaries of the region.|  
+|[CRgn::SetRectRgn](#setrectrgn)|Sets the `CRgn` object to the specified rectangular region.|  
   
-### <a name="public-operators"></a>Открытые операторы  
+### <a name="public-operators"></a>Public Operators  
   
-|Имя|Описание|  
+|Name|Description|  
 |----------|-----------------|  
-|[CRgn::operator HRGN](#operator_hrgn)|Возвращает дескриптор Windows, содержащийся в `CRgn` объекта.|  
+|[CRgn::operator HRGN](#operator_hrgn)|Returns the Windows handle contained in the `CRgn` object.|  
   
-## <a name="remarks"></a>Примечания  
- Область — это эллиптической или многоугольных область в окне. Чтобы использовать области, используйте функции-члены класса `CRgn` с функциями обрезки, определенные как члены класса `CDC`.  
+## <a name="remarks"></a>Remarks  
+ A region is an elliptical or polygonal area within a window. To use regions, you use the member functions of class `CRgn` with the clipping functions defined as members of class `CDC`.  
   
- Функции-члены `CRgn` создания, изменения и получения сведений об объекте области, для которого вызван.  
+ The member functions of `CRgn` create, alter, and retrieve information about the region object for which they are called.  
   
- Дополнительные сведения об использовании `CRgn`, в разделе [графические объекты](../../mfc/graphic-objects.md).  
+ For more information on using `CRgn`, see [Graphic Objects](../../mfc/graphic-objects.md).  
   
-## <a name="inheritance-hierarchy"></a>Иерархия наследования  
+## <a name="inheritance-hierarchy"></a>Inheritance Hierarchy  
  [CObject](../../mfc/reference/cobject-class.md)  
   
  [CGdiObject](../../mfc/reference/cgdiobject-class.md)  
   
  `CRgn`  
   
-## <a name="requirements"></a>Требования  
- **Заголовок:** afxwin.h  
+## <a name="requirements"></a>Requirements  
+ **Header:** afxwin.h  
   
-##  <a name="combinergn"></a>CRgn::CombineRgn  
- Создает новую область GDI путем объединения двух существующих областей.  
+##  <a name="combinergn"></a>  CRgn::CombineRgn  
+ Creates a new GDI region by combining two existing regions.  
   
 ```  
 int CombineRgn(
@@ -137,79 +154,79 @@ int CombineRgn(
     int nCombineMode);
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
  `pRgn1`  
- Идентифицирует существующей области.  
+ Identifies an existing region.  
   
  `pRgn2`  
- Идентифицирует существующей области.  
+ Identifies an existing region.  
   
  `nCombineMode`  
- Указывает операцию для выполнения при объединении двух исходных областей. Он может быть одним из следующих значений:  
+ Specifies the operation to be performed when combining the two source regions. It can be any one of the following values:  
   
-- **RGN_AND** использует перекрывающиеся области обеих областей (пересечение).  
+- **RGN_AND** Uses overlapping areas of both regions (intersection).  
   
-- **RGN_COPY** создает копию регион 1 (определяется `pRgn1`).  
+- **RGN_COPY** Creates a copy of region 1 (identified by `pRgn1`).  
   
-- **RGN_DIFF** создает область, состоящий из областей регион 1 (определяется `pRgn1`), не являются частью области 2 (определяется `pRgn2`).  
+- **RGN_DIFF** Creates a region consisting of the areas of region 1 (identified by `pRgn1`) that are not part of region 2 (identified by `pRgn2`).  
   
-- **RGN_OR** объединяет обе области целиком (объединение).  
+- **RGN_OR** Combines both regions in their entirety (union).  
   
-- **RGN_XOR** объединяет обе области, но удаляет перекрывающиеся области.  
+- **RGN_XOR** Combines both regions but removes overlapping areas.  
   
-### <a name="return-value"></a>Возвращаемое значение  
- Указывает тип результирующей области. Он может принимать одно из следующих значений:  
+### <a name="return-value"></a>Return Value  
+ Specifies the type of the resulting region. It can be one of the following values:  
   
-- **COMPLEXREGION** новая область имеет перекрывающиеся границы.  
+- **COMPLEXREGION** New region has overlapping borders.  
   
-- **Ошибка** не новая область создана.  
+- **ERROR** No new region created.  
   
-- **NULLREGION** новая область является пустым.  
+- **NULLREGION** New region is empty.  
   
-- **SIMPLEREGION** новая область имеет перекрывающиеся границы отсутствуют.  
+- **SIMPLEREGION** New region has no overlapping borders.  
   
-### <a name="remarks"></a>Примечания  
- Области объединяются, заданные `nCombineMode`.  
+### <a name="remarks"></a>Remarks  
+ The regions are combined as specified by `nCombineMode`.  
   
- Указанные области объединяются, и полученный дескриптор области сохраняется в `CRgn` объекта. Таким образом, любые области хранится в `CRgn` области объединенный заменить объект.  
+ The two specified regions are combined, and the resulting region handle is stored in the `CRgn` object. Thus, whatever region is stored in the `CRgn` object is replaced by the combined region.  
   
- Размер области ограничено 32 767 по 32 767 логические устройства или 64 КБ памяти, какое значение меньше.  
+ The size of a region is limited to 32,767 by 32,767 logical units or 64K of memory, whichever is smaller.  
   
- Используйте [CopyRgn](#copyrgn) для простого копирования одного региона в другой области.  
+ Use [CopyRgn](#copyrgn) to simply copy one region into another region.  
   
-### <a name="example"></a>Пример  
- [!code-cpp[NVC_MFCDocView #144](../../mfc/codesnippet/cpp/crgn-class_1.cpp)]  
+### <a name="example"></a>Example  
+ [!code-cpp[NVC_MFCDocView#144](../../mfc/codesnippet/cpp/crgn-class_1.cpp)]  
   
-##  <a name="copyrgn"></a>CRgn::CopyRgn  
- Копирует области, определяемой `pRgnSrc` в `CRgn` объекта.  
+##  <a name="copyrgn"></a>  CRgn::CopyRgn  
+ Copies the region defined by `pRgnSrc` into the `CRgn` object.  
   
 ```  
 int CopyRgn(CRgn* pRgnSrc);
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
  `pRgnSrc`  
- Идентифицирует существующей области.  
+ Identifies an existing region.  
   
-### <a name="return-value"></a>Возвращаемое значение  
- Указывает тип результирующей области. Он может принимать одно из следующих значений:  
+### <a name="return-value"></a>Return Value  
+ Specifies the type of the resulting region. It can be one of the following values:  
   
-- **COMPLEXREGION** новая область имеет перекрывающиеся границы.  
+- **COMPLEXREGION** New region has overlapping borders.  
   
-- **Ошибка** не новая область создана.  
+- **ERROR** No new region created.  
   
-- **NULLREGION** новая область является пустым.  
+- **NULLREGION** New region is empty.  
   
-- **SIMPLEREGION** новая область имеет перекрывающиеся границы отсутствуют.  
+- **SIMPLEREGION** New region has no overlapping borders.  
   
-### <a name="remarks"></a>Примечания  
- Новая область заменяет области ранее хранятся в `CRgn` объекта. Эта функция является особым случаем [CombineRgn](#combinergn) функции-члена.  
+### <a name="remarks"></a>Remarks  
+ The new region replaces the region formerly stored in the `CRgn` object. This function is a special case of the [CombineRgn](#combinergn) member function.  
   
-### <a name="example"></a>Пример  
-  Далее приведен пример [CRgn::CreateEllipticRgn](#createellipticrgn).  
+### <a name="example"></a>Example  
+  See the example for [CRgn::CreateEllipticRgn](#createellipticrgn).  
   
-##  <a name="createellipticrgn"></a>CRgn::CreateEllipticRgn  
- Создает область эллипса.  
+##  <a name="createellipticrgn"></a>  CRgn::CreateEllipticRgn  
+ Creates an elliptical region.  
   
 ```  
 BOOL CreateEllipticRgn(
@@ -219,58 +236,58 @@ BOOL CreateEllipticRgn(
     int y2);
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
  `x1`  
- Указывает логический Координата x верхнего левого угла ограничивающего прямоугольника эллипса.  
+ Specifies the logical x-coordinate of the upper-left corner of the bounding rectangle of the ellipse.  
   
  `y1`  
- Указывает логический Координата y верхнего левого угла ограничивающего прямоугольника эллипса.  
+ Specifies the logical y-coordinate of the upper-left corner of the bounding rectangle of the ellipse.  
   
  `x2`  
- Указывает логический Координата x нижнего правого угла ограничивающего прямоугольника эллипса.  
+ Specifies the logical x-coordinate of the lower-right corner of the bounding rectangle of the ellipse.  
   
  `y2`  
- Указывает логический координату по оси y нижнего правого угла ограничивающего прямоугольника эллипса.  
+ Specifies the logical y-coordinate of the lower-right corner of the bounding rectangle of the ellipse.  
   
-### <a name="return-value"></a>Возвращаемое значение  
- Ненулевое значение, если операция выполнена успешно; в противном случае — 0.  
+### <a name="return-value"></a>Return Value  
+ Nonzero if the operation succeeded; otherwise 0.  
   
-### <a name="remarks"></a>Примечания  
- Области, определяемый ограничивающим прямоугольником, заданным с `x1`, `y1`, `x2`, и `y2`. Область хранится в `CRgn` объекта.  
+### <a name="remarks"></a>Remarks  
+ The region is defined by the bounding rectangle specified by `x1`, `y1`, `x2`, and `y2`. The region is stored in the `CRgn` object.  
   
- Размер области ограничено 32 767 по 32 767 логические устройства или 64 КБ памяти, какое значение меньше.  
+ The size of a region is limited to 32,767 by 32,767 logical units or 64K of memory, whichever is smaller.  
   
- При завершении использования области, созданных с помощью `CreateEllipticRgn` функции, приложения должны выбрать область ожидания контекста устройства и используйте `DeleteObject` функции, чтобы удалить его.  
+ When it has finished using a region created with the `CreateEllipticRgn` function, an application should select the region out of the device context and use the `DeleteObject` function to remove it.  
   
-### <a name="example"></a>Пример  
- [!code-cpp[NVC_MFCDocView #145](../../mfc/codesnippet/cpp/crgn-class_2.cpp)]  
+### <a name="example"></a>Example  
+ [!code-cpp[NVC_MFCDocView#145](../../mfc/codesnippet/cpp/crgn-class_2.cpp)]  
   
-##  <a name="createellipticrgnindirect"></a>CRgn::CreateEllipticRgnIndirect  
- Создает область эллипса.  
+##  <a name="createellipticrgnindirect"></a>  CRgn::CreateEllipticRgnIndirect  
+ Creates an elliptical region.  
   
 ```  
 BOOL CreateEllipticRgnIndirect(LPCRECT lpRect);
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
  `lpRect`  
- Указывает на `RECT` структуры или `CRect` объект, содержащий логические координаты верхнего левого и правого нижнего углов ограничивающего прямоугольника эллипса.  
+ Points to a `RECT` structure or a `CRect` object that contains the logical coordinates of the upper-left and lower-right corners of the bounding rectangle of the ellipse.  
   
-### <a name="return-value"></a>Возвращаемое значение  
- Ненулевое значение, если операция выполнена успешно; в противном случае — 0.  
+### <a name="return-value"></a>Return Value  
+ Nonzero if the operation succeeded; otherwise 0.  
   
-### <a name="remarks"></a>Примечания  
- Область определяется структура или объект, на который указывает `lpRect` и сохраняется в `CRgn` объекта.  
+### <a name="remarks"></a>Remarks  
+ The region is defined by the structure or object pointed to by `lpRect` and is stored in the `CRgn` object.  
   
- Размер области ограничено 32 767 по 32 767 логические устройства или 64 КБ памяти, какое значение меньше.  
+ The size of a region is limited to 32,767 by 32,767 logical units or 64K of memory, whichever is smaller.  
   
- При завершении использования области, созданных с помощью `CreateEllipticRgnIndirect` функции, приложения должны выбрать область ожидания контекста устройства и используйте `DeleteObject` функции, чтобы удалить его.  
+ When it has finished using a region created with the `CreateEllipticRgnIndirect` function, an application should select the region out of the device context and use the `DeleteObject` function to remove it.  
   
-### <a name="example"></a>Пример  
-  Далее приведен пример [CRgn::CreateRectRgnIndirect](#createrectrgnindirect).  
+### <a name="example"></a>Example  
+  See the example for [CRgn::CreateRectRgnIndirect](#createrectrgnindirect).  
   
-##  <a name="createfromdata"></a>CRgn::CreateFromData  
- Создает область из заданной области и преобразования данных.  
+##  <a name="createfromdata"></a>  CRgn::CreateFromData  
+ Creates a region from the given region and transformation data.  
   
 ```  
 BOOL CreateFromData(
@@ -279,41 +296,41 @@ BOOL CreateFromData(
     const RGNDATA* pRgnData);
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
  *lpXForm*  
- Указывает на [XFORM](../../mfc/reference/xform-structure.md) структуру данных, определяющий преобразование, выполняемое в области. Если указатель относится **NULL**, используется единичное преобразование.  
+ Points to an [XFORM](../../mfc/reference/xform-structure.md) data structure that defines the transformation to be performed on the region. If this pointer is **NULL**, the identity transformation is used.  
   
  `nCount`  
- Указывает число байтов, который указывает `pRgnData`.  
+ Specifies the number of bytes pointed to by `pRgnData`.  
   
  `pRgnData`  
- Указывает на [RGNDATA](../../mfc/reference/rgndata-structure.md) структуру данных, содержащую данные этой области.  
+ Points to a [RGNDATA](../../mfc/reference/rgndata-structure.md) data structure that contains the region data.  
   
-### <a name="return-value"></a>Возвращаемое значение  
- Ненулевое значение, если функция выполнена успешно; в противном случае — 0.  
+### <a name="return-value"></a>Return Value  
+ Nonzero if the function is successful; otherwise 0.  
   
-### <a name="remarks"></a>Примечания  
- Приложение может получать данные для области путем вызова `CRgn::GetRegionData` функции.  
+### <a name="remarks"></a>Remarks  
+ An application can retrieve data for a region by calling the `CRgn::GetRegionData` function.  
   
-##  <a name="createfrompath"></a>CRgn::CreateFromPath  
- Создает область из пути, который выбран в контексте данного устройства.  
+##  <a name="createfrompath"></a>  CRgn::CreateFromPath  
+ Creates a region from the path that is selected into the given device context.  
   
 ```  
 BOOL CreateFromPath(CDC* pDC);
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
  `pDC`  
- Определяет контекст устройства, который содержит закрытый путь.  
+ Identifies a device context that contains a closed path.  
   
-### <a name="return-value"></a>Возвращаемое значение  
- Ненулевое значение, если функция выполнена успешно; в противном случае — 0.  
+### <a name="return-value"></a>Return Value  
+ Nonzero if the function is successful; otherwise 0.  
   
-### <a name="remarks"></a>Примечания  
- Контекст устройства, обозначенную `pDC` параметр должен содержать закрытый путь. После `CreateFromPath` преобразует путь в область, Windows удаляет закрытый путь из контекста устройства.  
+### <a name="remarks"></a>Remarks  
+ The device context identified by the `pDC` parameter must contain a closed path. After `CreateFromPath` converts a path into a region, Windows discards the closed path from the device context.  
   
-##  <a name="createpolygonrgn"></a>CRgn::CreatePolygonRgn  
- Создает многоугольных область.  
+##  <a name="createpolygonrgn"></a>  CRgn::CreatePolygonRgn  
+ Creates a polygonal region.  
   
 ```  
 BOOL CreatePolygonRgn(
@@ -322,9 +339,9 @@ BOOL CreatePolygonRgn(
     int nMode);
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
  `lpPoints`  
- Указывает массив **ТОЧКИ** структуры или массив `CPoint` объектов. Каждая структура задает координаты x и y координата одной вершины многоугольника. **ТОЧКИ** структура имеет следующий вид:  
+ Points to an array of **POINT** structures or an array of `CPoint` objects. Each structure specifies the x-coordinate and y-coordinate of one vertex of the polygon. The **POINT** structure has the following form:  
   
  `typedef struct tagPOINT {`  
   
@@ -335,30 +352,30 @@ BOOL CreatePolygonRgn(
  `} POINT;`  
   
  `nCount`  
- Указывает количество **ТОЧКИ** структуры или `CPoint` объектов в массиве, на который указывает `lpPoints`.  
+ Specifies the number of **POINT** structures or `CPoint` objects in the array pointed to by `lpPoints`.  
   
  `nMode`  
- Задает режим заполнения для региона. Этот параметр может быть либо **АЛЬТЕРНАТИВНЫЙ** или **ВРАЩЕНИЯ**.  
+ Specifies the filling mode for the region. This parameter may be either **ALTERNATE** or **WINDING**.  
   
-### <a name="return-value"></a>Возвращаемое значение  
- Ненулевое значение, если операция выполнена успешно; в противном случае — 0.  
+### <a name="return-value"></a>Return Value  
+ Nonzero if the operation succeeded; otherwise 0.  
   
-### <a name="remarks"></a>Примечания  
- Система закрывает многоугольника автоматически, при необходимости путем рисования линии из последнего вершин с первым. Полученный региона сохраняется в `CRgn` объекта.  
+### <a name="remarks"></a>Remarks  
+ The system closes the polygon automatically, if necessary, by drawing a line from the last vertex to the first. The resulting region is stored in the `CRgn` object.  
   
- Размер области ограничено 32 767 по 32 767 логические устройства или 64 КБ памяти, какое значение меньше.  
+ The size of a region is limited to 32,767 by 32,767 logical units or 64K of memory, whichever is smaller.  
   
- Когда режим заполнения многоугольников — **АЛЬТЕРНАТИВНЫЙ**, система заполняет область между сторон нечетных и четных многоугольников для каждой строки. То есть система заполняет область между первой и второй стороны, между третья и четвертая стороне и т. д.  
+ When the polygon-filling mode is **ALTERNATE**, the system fills the area between odd-numbered and even-numbered polygon sides on each scan line. That is, the system fills the area between the first and second side, between the third and fourth side, and so on.  
   
- Когда режим заполнения многоугольников — **ВРАЩЕНИЯ**, система использует направление, в котором для определения необходимости Заливка области рисования фигуры. Каждого сегмента линии многоугольника, рисуется по часовой стрелке или против часовой стрелки. Каждый раз, когда мнимой линии, соединяющей замкнутой области за пределы фигуры проходит через сегмент линии по часовой стрелке, счетчик увеличивается. Когда строка проходит через сегмент линии против часовой стрелки, уменьшается. Область заполняется в том случае, если число равно ненулевое значение, когда строке достигает за пределами рисунка.  
+ When the polygon-filling mode is **WINDING**, the system uses the direction in which a figure was drawn to determine whether to fill an area. Each line segment in a polygon is drawn in either a clockwise or a counterclockwise direction. Whenever an imaginary line drawn from an enclosed area to the outside of a figure passes through a clockwise line segment, a count is incremented. When the line passes through a counterclockwise line segment, the count is decremented. The area is filled if the count is nonzero when the line reaches the outside of the figure.  
   
- Когда приложение завершило использования области, созданных с помощью `CreatePolygonRgn` функции, его следует выбрать область ожидания контекста устройства и используйте `DeleteObject` функции, чтобы удалить его.  
+ When an application has finished using a region created with the `CreatePolygonRgn` function, it should select the region out of the device context and use the `DeleteObject` function to remove it.  
   
-### <a name="example"></a>Пример  
- [!code-cpp[NVC_MFCDocView #146](../../mfc/codesnippet/cpp/crgn-class_3.cpp)]  
+### <a name="example"></a>Example  
+ [!code-cpp[NVC_MFCDocView#146](../../mfc/codesnippet/cpp/crgn-class_3.cpp)]  
   
-##  <a name="createpolypolygonrgn"></a>CRgn::CreatePolyPolygonRgn  
- Создает область, состоящий из набора закрытых многоугольников.  
+##  <a name="createpolypolygonrgn"></a>  CRgn::CreatePolyPolygonRgn  
+ Creates a region consisting of a series of closed polygons.  
   
 ```  
 BOOL CreatePolyPolygonRgn(
@@ -368,9 +385,9 @@ BOOL CreatePolyPolygonRgn(
     int nPolyFillMode);
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
  `lpPoints`  
- Указывает массив **ТОЧКИ** структуры или массив `CPoint` объекты, которые определяет вершин многоугольников. Каждого многоугольника должен быть явно закрыт, так как система не закрывает их автоматически. Последовательное построение задаются многоугольников. **ТОЧКИ** структура имеет следующий вид:  
+ Points to an array of **POINT** structures or an array of `CPoint` objects that defines the vertices of the polygons. Each polygon must be explicitly closed because the system does not close them automatically. The polygons are specified consecutively. The **POINT** structure has the following form:  
   
  `typedef struct tagPOINT {`  
   
@@ -381,32 +398,32 @@ BOOL CreatePolyPolygonRgn(
  `} POINT;`  
   
  `lpPolyCounts`  
- Указывает массив целых чисел. Первое целое число вершин в первом многоугольника в `lpPoints` массива, второе указывает число вершин в второй многоугольников и т. д.  
+ Points to an array of integers. The first integer specifies the number of vertices in the first polygon in the `lpPoints` array, the second integer specifies the number of vertices in the second polygon, and so on.  
   
  `nCount`  
- Определяет общее количество целых чисел в `lpPolyCounts` массива.  
+ Specifies the total number of integers in the `lpPolyCounts` array.  
   
  `nPolyFillMode`  
- Задает режим заполнения многоугольников. Это значение может быть либо **АЛЬТЕРНАТИВНЫЙ** или **ВРАЩЕНИЯ**.  
+ Specifies the polygon-filling mode. This value may be either **ALTERNATE** or **WINDING**.  
   
-### <a name="return-value"></a>Возвращаемое значение  
- Ненулевое значение, если операция выполнена успешно; в противном случае — 0.  
+### <a name="return-value"></a>Return Value  
+ Nonzero if the operation succeeded; otherwise 0.  
   
-### <a name="remarks"></a>Примечания  
- Полученный региона сохраняется в `CRgn` объекта.  
+### <a name="remarks"></a>Remarks  
+ The resulting region is stored in the `CRgn` object.  
   
- Может быть несвязанным многоугольников или они могут перекрываться.  
+ The polygons may be disjoint, or they may overlap.  
   
- Размер области ограничено 32 767 по 32 767 логические устройства или 64 КБ памяти, какое значение меньше.  
+ The size of a region is limited to 32,767 by 32,767 logical units or 64K of memory, whichever is smaller.  
   
- Когда режим заполнения многоугольников — **АЛЬТЕРНАТИВНЫЙ**, система заполняет область между сторон нечетных и четных многоугольников для каждой строки. То есть система заполняет область между первой и второй стороны, между третья и четвертая стороне и т. д.  
+ When the polygon-filling mode is **ALTERNATE**, the system fills the area between odd-numbered and even-numbered polygon sides on each scan line. That is, the system fills the area between the first and second side, between the third and fourth side, and so on.  
   
- Когда режим заполнения многоугольников — **ВРАЩЕНИЯ**, система использует направление, в котором для определения необходимости Заливка области рисования фигуры. Каждого сегмента линии многоугольника, рисуется по часовой стрелке или против часовой стрелки. Каждый раз, когда мнимой линии, соединяющей замкнутой области за пределы фигуры проходит через сегмент линии по часовой стрелке, счетчик увеличивается. Когда строка проходит через сегмент линии против часовой стрелки, уменьшается. Область заполняется в том случае, если число равно ненулевое значение, когда строке достигает за пределами рисунка.  
+ When the polygon-filling mode is **WINDING**, the system uses the direction in which a figure was drawn to determine whether to fill an area. Each line segment in a polygon is drawn in either a clockwise or a counterclockwise direction. Whenever an imaginary line drawn from an enclosed area to the outside of a figure passes through a clockwise line segment, a count is incremented. When the line passes through a counterclockwise line segment, the count is decremented. The area is filled if the count is nonzero when the line reaches the outside of the figure.  
   
- Когда приложение завершило использования области, созданных с помощью `CreatePolyPolygonRgn` функции, его следует выбрать область ожидания контекста устройства и используйте [CGDIObject::DeleteObject](../../mfc/reference/cgdiobject-class.md#deleteobject) функции-члена для его удаления.  
+ When an application has finished using a region created with the `CreatePolyPolygonRgn` function, it should select the region out of the device context and use the [CGDIObject::DeleteObject](../../mfc/reference/cgdiobject-class.md#deleteobject) member function to remove it.  
   
-##  <a name="createrectrgn"></a>CRgn::CreateRectRgn  
- Создает прямоугольную область, которая хранится в `CRgn` объекта.  
+##  <a name="createrectrgn"></a>  CRgn::CreateRectRgn  
+ Creates a rectangular region that is stored in the `CRgn` object.  
   
 ```  
 BOOL CreateRectRgn(
@@ -416,42 +433,42 @@ BOOL CreateRectRgn(
     int y2);
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
  `x1`  
- Указывает логический Координата x верхнего левого угла области.  
+ Specifies the logical x-coordinate of the upper-left corner of the region.  
   
  `y1`  
- Указывает логический Координата y верхнего левого угла области.  
+ Specifies the logical y-coordinate of the upper-left corner of the region.  
   
  `x2`  
- Указывает логические координаты по оси x нижнего правого угла области.  
+ Specifies the logical x-coordinate of the lower-right corner of the region.  
   
  `y2`  
- Указывает логический координату по оси y нижнего правого угла области.  
+ Specifies the logical y-coordinate of the lower-right corner of the region.  
   
-### <a name="return-value"></a>Возвращаемое значение  
- Ненулевое значение, если операция выполнена успешно; в противном случае — 0.  
+### <a name="return-value"></a>Return Value  
+ Nonzero if the operation succeeded; otherwise 0.  
   
-### <a name="remarks"></a>Примечания  
- Размер области ограничено 32 767 по 32 767 логические устройства или 64 КБ памяти, какое значение меньше.  
+### <a name="remarks"></a>Remarks  
+ The size of a region is limited to 32,767 by 32,767 logical units or 64K of memory, whichever is smaller.  
   
- При завершении использования области, созданные `CreateRectRgn`, приложение должно использовать [CGDIObject::DeleteObject](../../mfc/reference/cgdiobject-class.md#deleteobject) функция-член для удаления области.  
+ When it has finished using a region created by `CreateRectRgn`, an application should use the [CGDIObject::DeleteObject](../../mfc/reference/cgdiobject-class.md#deleteobject) member function to remove the region.  
   
-### <a name="example"></a>Пример  
- [!code-cpp[NVC_MFCDocView #147](../../mfc/codesnippet/cpp/crgn-class_4.cpp)]  
+### <a name="example"></a>Example  
+ [!code-cpp[NVC_MFCDocView#147](../../mfc/codesnippet/cpp/crgn-class_4.cpp)]  
   
- Дополнительный пример, в разделе [CRgn::CombineRgn](#combinergn).  
+ For an additional example, see [CRgn::CombineRgn](#combinergn).  
   
-##  <a name="createrectrgnindirect"></a>CRgn::CreateRectRgnIndirect  
- Создает прямоугольную область, которая хранится в `CRgn` объекта.  
+##  <a name="createrectrgnindirect"></a>  CRgn::CreateRectRgnIndirect  
+ Creates a rectangular region that is stored in the `CRgn` object.  
   
 ```  
 BOOL CreateRectRgnIndirect(LPCRECT lpRect);
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
  `lpRect`  
- Указывает на `RECT` структуры или `CRect` объект, содержащий логические координаты левого верхнего и нижнего правого угла области. `RECT` Структура имеет следующий вид:  
+ Points to a `RECT` structure or `CRect` object that contains the logical coordinates of the upper-left and lower-right corners of the region. The `RECT` structure has the following form:  
   
  `typedef struct tagRECT {`  
   
@@ -465,19 +482,19 @@ BOOL CreateRectRgnIndirect(LPCRECT lpRect);
   
  `} RECT;`  
   
-### <a name="return-value"></a>Возвращаемое значение  
- Ненулевое значение, если операция выполнена успешно; в противном случае — 0.  
+### <a name="return-value"></a>Return Value  
+ Nonzero if the operation succeeded; otherwise 0.  
   
-### <a name="remarks"></a>Примечания  
- Размер области ограничено 32 767 по 32 767 логические устройства или 64 КБ памяти, какое значение меньше.  
+### <a name="remarks"></a>Remarks  
+ The size of a region is limited to 32,767 by 32,767 logical units or 64K of memory, whichever is smaller.  
   
- При завершении использования области, созданные `CreateRectRgnIndirect`, приложение должно использовать [CGDIObject::DeleteObject](../../mfc/reference/cgdiobject-class.md#deleteobject) функция-член для удаления области.  
+ When it has finished using a region created by `CreateRectRgnIndirect`, an application should use the [CGDIObject::DeleteObject](../../mfc/reference/cgdiobject-class.md#deleteobject) member function to remove the region.  
   
-### <a name="example"></a>Пример  
- [!code-cpp[NVC_MFCDocView #148](../../mfc/codesnippet/cpp/crgn-class_5.cpp)]  
+### <a name="example"></a>Example  
+ [!code-cpp[NVC_MFCDocView#148](../../mfc/codesnippet/cpp/crgn-class_5.cpp)]  
   
-##  <a name="createroundrectrgn"></a>CRgn::CreateRoundRectRgn  
- Создает прямоугольную область со скругленными углами, хранится в `CRgn` объекта.  
+##  <a name="createroundrectrgn"></a>  CRgn::CreateRoundRectRgn  
+ Creates a rectangular region with rounded corners that is stored in the `CRgn` object.  
   
 ```  
 BOOL CreateRoundRectRgn(
@@ -489,85 +506,85 @@ BOOL CreateRoundRectRgn(
     int y3);
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
  `x1`  
- Указывает логический Координата x верхнего левого угла области.  
+ Specifies the logical x-coordinate of the upper-left corner of the region.  
   
  `y1`  
- Указывает логический Координата y верхнего левого угла области.  
+ Specifies the logical y-coordinate of the upper-left corner of the region.  
   
  `x2`  
- Указывает логические координаты по оси x нижнего правого угла области.  
+ Specifies the logical x-coordinate of the lower-right corner of the region.  
   
  `y2`  
- Указывает логический координату по оси y нижнего правого угла области.  
+ Specifies the logical y-coordinate of the lower-right corner of the region.  
   
- *X3*  
- Задает ширину эллипса, который используется для создания прямоугольника с закругленными углами.  
+ *x3*  
+ Specifies the width of the ellipse used to create the rounded corners.  
   
  `y3`  
- Задает высоту эллипса, который используется для создания прямоугольника с закругленными углами.  
+ Specifies the height of the ellipse used to create the rounded corners.  
   
-### <a name="return-value"></a>Возвращаемое значение  
- Ненулевое значение, если операция выполнена успешно; в противном случае — 0.  
+### <a name="return-value"></a>Return Value  
+ Nonzero if the operation succeeded; otherwise 0.  
   
-### <a name="remarks"></a>Примечания  
- Размер области ограничено 32 767 по 32 767 логические устройства или 64 КБ памяти, какое значение меньше.  
+### <a name="remarks"></a>Remarks  
+ The size of a region is limited to 32,767 by 32,767 logical units or 64K of memory, whichever is smaller.  
   
- Когда приложение завершило использования области, созданных с помощью `CreateRoundRectRgn` функции, его следует выбрать область ожидания контекста устройства и используйте [CGDIObject::DeleteObject](../../mfc/reference/cgdiobject-class.md#deleteobject) функции-члена для его удаления.  
+ When an application has finished using a region created with the `CreateRoundRectRgn` function, it should select the region out of the device context and use the [CGDIObject::DeleteObject](../../mfc/reference/cgdiobject-class.md#deleteobject) member function to remove it.  
   
-### <a name="example"></a>Пример  
- [!code-cpp[NVC_MFCDocView #149](../../mfc/codesnippet/cpp/crgn-class_6.cpp)]  
+### <a name="example"></a>Example  
+ [!code-cpp[NVC_MFCDocView#149](../../mfc/codesnippet/cpp/crgn-class_6.cpp)]  
   
-##  <a name="crgn"></a>CRgn::CRgn  
- Создает объект `CRgn`.  
+##  <a name="crgn"></a>  CRgn::CRgn  
+ Constructs a `CRgn` object.  
   
 ```  
 CRgn();
 ```  
   
-### <a name="remarks"></a>Примечания  
- `m_hObject` Член данных не содержит допустимые области Windows GDI до инициализации объекта с одним или несколькими из других `CRgn` функции-члены.  
+### <a name="remarks"></a>Remarks  
+ The `m_hObject` data member does not contain a valid Windows GDI region until the object is initialized with one or more of the other `CRgn` member functions.  
   
-### <a name="example"></a>Пример  
-  Далее приведен пример [CRgn::CreateRoundRectRgn](#createroundrectrgn).  
+### <a name="example"></a>Example  
+  See the example for [CRgn::CreateRoundRectRgn](#createroundrectrgn).  
   
-##  <a name="equalrgn"></a>CRgn::EqualRgn  
- Определяет, является ли заданной области эквивалентно области, хранящиеся в `CRgn` объекта.  
+##  <a name="equalrgn"></a>  CRgn::EqualRgn  
+ Determines whether the given region is equivalent to the region stored in the `CRgn` object.  
   
 ```  
 BOOL EqualRgn(CRgn* pRgn) const;  
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
  `pRgn`  
- Определяет область.  
+ Identifies a region.  
   
-### <a name="return-value"></a>Возвращаемое значение  
- Ненулевое значение, если две области эквивалентны; в противном случае — 0.  
+### <a name="return-value"></a>Return Value  
+ Nonzero if the two regions are equivalent; otherwise 0.  
   
-### <a name="example"></a>Пример  
- [!code-cpp[NVC_MFCDocView #150](../../mfc/codesnippet/cpp/crgn-class_7.cpp)]  
+### <a name="example"></a>Example  
+ [!code-cpp[NVC_MFCDocView#150](../../mfc/codesnippet/cpp/crgn-class_7.cpp)]  
   
-##  <a name="fromhandle"></a>CRgn::FromHandle  
- Возвращает указатель на `CRgn` объект для заданного дескриптора в область Windows.  
+##  <a name="fromhandle"></a>  CRgn::FromHandle  
+ Returns a pointer to a `CRgn` object when given a handle to a Windows region.  
   
 ```  
 static CRgn* PASCAL FromHandle(HRGN hRgn);
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
  `hRgn`  
- Указывает дескриптор область Windows.  
+ Specifies a handle to a Windows region.  
   
-### <a name="return-value"></a>Возвращаемое значение  
- Указатель на объект `CRgn`. Если функция не была успешной, возвращаемым значением является **NULL**.  
+### <a name="return-value"></a>Return Value  
+ A pointer to a `CRgn` object. If the function was not successful, the return value is **NULL**.  
   
-### <a name="remarks"></a>Примечания  
- Если `CRgn` объект уже не присоединен к дескриптору, временный `CRgn` объект создается и прикрепляется. Этот временный `CRgn` , допустимо только до следующей приложение имеет время простоя в его цикл событий, после чего график все временные объекты удаляются. Другими словами является, что временный объект допустима только во время обработки одного окна сообщения.  
+### <a name="remarks"></a>Remarks  
+ If a `CRgn` object is not already attached to the handle, a temporary `CRgn` object is created and attached. This temporary `CRgn` object is valid only until the next time the application has idle time in its event loop, at which time all temporary graphic objects are deleted. Another way of saying this is that the temporary object is only valid during the processing of one window message.  
   
-##  <a name="getregiondata"></a>CRgn::GetRegionData  
- Заполняет указанный буфер данных, описывающих области.  
+##  <a name="getregiondata"></a>  CRgn::GetRegionData  
+ Fills the specified buffer with data describing the region.  
   
 ```  
 int GetRegionData(
@@ -575,29 +592,29 @@ int GetRegionData(
     int nCount) const;  
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
  `lpRgnData`  
- Указывает на [RGNDATA](../../mfc/reference/rgndata-structure.md) структуру данных, которая получает данные. Если этот параметр имеет **NULL**, возвращаемое значение содержит число байтов, необходимое для области данных.  
+ Points to a [RGNDATA](../../mfc/reference/rgndata-structure.md) data structure that receives the information. If this parameter is **NULL**, the return value contains the number of bytes needed for the region data.  
   
  `nCount`  
- Указывает размер в байтах, `lpRgnData` буфера.  
+ Specifies the size, in bytes, of the `lpRgnData` buffer.  
   
-### <a name="return-value"></a>Возвращаемое значение  
- Если функция выполняется успешно и `nCount` достаточно номер байтов, возвращаемое значение всегда равно `nCount`. Если функция завершается с ошибкой или `nCount` указывает меньше, чем адекватное число байтов, возвращаемое значение равно 0 (ошибка).  
+### <a name="return-value"></a>Return Value  
+ If the function succeeds and `nCount` specifies an adequate number of bytes, the return value is always `nCount`. If the function fails, or if `nCount` specifies less than adequate number of bytes, the return value is 0 (error).  
   
-### <a name="remarks"></a>Примечания  
- Эти данные включают измерения прямоугольников, составляющие области. Эта функция используется в сочетании с `CRgn::CreateFromData` функции.  
+### <a name="remarks"></a>Remarks  
+ This data includes the dimensions of the rectangles that make up the region. This function is used in conjunction with the `CRgn::CreateFromData` function.  
   
-##  <a name="getrgnbox"></a>CRgn::GetRgnBox  
- Извлекает координаты ограничивающего прямоугольника `CRgn` объекта.  
+##  <a name="getrgnbox"></a>  CRgn::GetRgnBox  
+ Retrieves the coordinates of the bounding rectangle of the `CRgn` object.  
   
 ```  
 int GetRgnBox(LPRECT lpRect) const;  
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
  `lpRect`  
- Указывает на `RECT` структуры или `CRect` объект для получения координаты ограничивающего прямоугольника. `RECT` Структура имеет следующий вид:  
+ Points to a `RECT` structure or `CRect` object to receive the coordinates of the bounding rectangle. The `RECT` structure has the following form:  
   
  `typedef struct tagRECT {`  
   
@@ -611,22 +628,22 @@ int GetRgnBox(LPRECT lpRect) const;
   
  `} RECT;`  
   
-### <a name="return-value"></a>Возвращаемое значение  
- Указывает тип области. Он может иметь любое из следующих значений.  
+### <a name="return-value"></a>Return Value  
+ Specifies the region's type. It can be any of the following values:  
   
-- **COMPLEXREGION** область имеет перекрывающиеся границы.  
+- **COMPLEXREGION** Region has overlapping borders.  
   
-- **NULLREGION** область является пустым.  
+- **NULLREGION** Region is empty.  
   
-- **Ошибка** `CRgn` объект не задает допустимое области.  
+- **ERROR** `CRgn` object does not specify a valid region.  
   
-- **SIMPLEREGION** область имеет перекрывающиеся границы отсутствуют.  
+- **SIMPLEREGION** Region has no overlapping borders.  
   
-### <a name="example"></a>Пример  
-  Далее приведен пример [CRgn::CreatePolygonRgn](#createpolygonrgn).  
+### <a name="example"></a>Example  
+  See the example for [CRgn::CreatePolygonRgn](#createpolygonrgn).  
   
-##  <a name="offsetrgn"></a>CRgn::OffsetRgn  
- Перемещение области, хранящиеся в `CRgn` объекта с заданными смещениями.  
+##  <a name="offsetrgn"></a>  CRgn::OffsetRgn  
+ Moves the region stored in the `CRgn` object by the specified offsets.  
   
 ```  
 int OffsetRgn(
@@ -636,52 +653,52 @@ int OffsetRgn(
 int OffsetRgn(POINT point);
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
  *x*  
- Указывает число единиц для перемещения влево или вправо.  
+ Specifies the number of units to move left or right.  
   
  *y*  
- Указывает количество единиц для перемещения вверх или вниз.  
+ Specifies the number of units to move up or down.  
   
  `point`  
- Координата по оси x `point` указывает число единиц для перемещения влево или вправо. Координата по оси y `point` указывает количество единиц для перемещения вверх или вниз. `point` Параметр может быть либо **ТОЧКИ** структуры или `CPoint` объекта.  
+ The x-coordinate of `point` specifies the number of units to move left or right. The y-coordinate of `point` specifies the number of units to move up or down. The `point` parameter may be either a **POINT** structure or a `CPoint` object.  
   
-### <a name="return-value"></a>Возвращаемое значение  
- Тип новой области. Он может быть одним из следующих значений:  
+### <a name="return-value"></a>Return Value  
+ The new region's type. It can be any one of the following values:  
   
-- **COMPLEXREGION** область имеет перекрывающиеся границы.  
+- **COMPLEXREGION** Region has overlapping borders.  
   
-- **Ошибка** недопустимый дескриптор области.  
+- **ERROR** Region handle is not valid.  
   
-- **NULLREGION** область является пустым.  
+- **NULLREGION** Region is empty.  
   
-- **SIMPLEREGION** область имеет перекрывающиеся границы отсутствуют.  
+- **SIMPLEREGION** Region has no overlapping borders.  
   
-### <a name="remarks"></a>Примечания  
- Функция перемещает области *x* единиц вдоль оси x и *y* единицы по оси y.  
+### <a name="remarks"></a>Remarks  
+ The function moves the region *x* units along the x-axis and *y* units along the y-axis.  
   
- Значения координат области должно быть меньше или равно 32 767 и больше или равно-32 768. *x* и *y* необходимо тщательно выбрать параметры для предотвращения координаты недопустимый регион.  
+ The coordinate values of a region must be less than or equal to 32,767 and greater than or equal to -32,768. The *x* and *y* parameters must be carefully chosen to prevent invalid region coordinates.  
   
-### <a name="example"></a>Пример  
-  Далее приведен пример [CRgn::CreateEllipticRgn](#createellipticrgn).  
+### <a name="example"></a>Example  
+  See the example for [CRgn::CreateEllipticRgn](#createellipticrgn).  
   
-##  <a name="operator_hrgn"></a>CRgn::operator HRGN  
- Этот оператор используется для получения вложенного дескриптор Windows GDI `CRgn` объекта.  
+##  <a name="operator_hrgn"></a>  CRgn::operator HRGN  
+ Use this operator to get the attached Windows GDI handle of the `CRgn` object.  
   
 ```  
 operator HRGN() const;  
 ```  
   
-### <a name="return-value"></a>Возвращаемое значение  
- Если успешно, дескриптор объекта Windows GDI, представленных `CRgn` объекта; в противном случае **NULL**.  
+### <a name="return-value"></a>Return Value  
+ If successful, a handle to the Windows GDI object represented by the `CRgn` object; otherwise **NULL**.  
   
-### <a name="remarks"></a>Примечания  
- Этот оператор — оператор приведения, который поддерживает прямое использование **HRGN** объекта.  
+### <a name="remarks"></a>Remarks  
+ This operator is a casting operator, which supports direct use of an **HRGN** object.  
   
- Дополнительные сведения об использовании графических объектов см. в статье [объектов график](http://msdn.microsoft.com/library/windows/desktop/dd144962) в [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
+ For more information about using graphic objects, see the article [Graphic Objects](http://msdn.microsoft.com/library/windows/desktop/dd144962) in the Windows SDK.  
   
-##  <a name="ptinregion"></a>CRgn::PtInRegion  
- Проверяет, является ли точки, заданной параметром *x* и *y* находится в регионе, хранящихся в `CRgn` объекта.  
+##  <a name="ptinregion"></a>  CRgn::PtInRegion  
+ Checks whether the point given by *x* and *y* is in the region stored in the `CRgn` object.  
   
 ```  
 BOOL PtInRegion(
@@ -691,29 +708,29 @@ BOOL PtInRegion(
 BOOL PtInRegion(POINT point) const;  
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
  *x*  
- Указывает логическую координату x точки для проверки.  
+ Specifies the logical x-coordinate of the point to test.  
   
  *y*  
- Указывает логический Координата y точки для проверки.  
+ Specifies the logical y-coordinate of the point to test.  
   
  `point`  
- X-y координаты и `point` укажите x и y координаты точки для проверки значения. `point` Параметра может быть **ТОЧКИ** структуры или `CPoint` объекта.  
+ The x- and y-coordinates of `point` specify the x- and y-coordinates of the point to test the value of. The `point` parameter can either be a **POINT** structure or a `CPoint` object.  
   
-### <a name="return-value"></a>Возвращаемое значение  
- Ненулевое значение, если точка находится в области; в противном случае — 0.  
+### <a name="return-value"></a>Return Value  
+ Nonzero if the point is in the region; otherwise 0.  
   
-##  <a name="rectinregion"></a>CRgn::RectInRegion  
- Определяет, является ли заданный любую часть прямоугольника `lpRect` находится в пределах области, хранящиеся в `CRgn` объекта.  
+##  <a name="rectinregion"></a>  CRgn::RectInRegion  
+ Determines whether any part of the rectangle specified by `lpRect` is within the boundaries of the region stored in the `CRgn` object.  
   
 ```  
 BOOL RectInRegion(LPCRECT lpRect) const;  
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
  `lpRect`  
- Указывает на `RECT` структуры или `CRect` объекта. `RECT` Структура имеет следующий вид:  
+ Points to a `RECT` structure or `CRect` object. The `RECT` structure has the following form:  
   
  `typedef struct tagRECT {`  
   
@@ -727,11 +744,11 @@ BOOL RectInRegion(LPCRECT lpRect) const;
   
  `} RECT;`  
   
-### <a name="return-value"></a>Возвращаемое значение  
- Ненулевое значение, если какой-либо части заданного прямоугольника находится в пределах области; в противном случае — 0.  
+### <a name="return-value"></a>Return Value  
+ Nonzero if any part of the specified rectangle lies within the boundaries of the region; otherwise 0.  
   
-##  <a name="setrectrgn"></a>CRgn::SetRectRgn  
- Создает прямоугольной области.  
+##  <a name="setrectrgn"></a>  CRgn::SetRectRgn  
+ Creates a rectangular region.  
   
 ```  
 void SetRectRgn(
@@ -743,30 +760,30 @@ void SetRectRgn(
 void SetRectRgn(LPCRECT lpRect);
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
  `x1`  
- Задает координату x левого верхнего угла прямоугольной области.  
+ Specifies the x-coordinate of the upper-left corner of the rectangular region.  
   
  `y1`  
- Задает координату y верхнего левого угла прямоугольной области.  
+ Specifies the y-coordinate of the upper-left corner of the rectangular region.  
   
  `x2`  
- Указывает Координата по оси x нижнего правого угла прямоугольной области.  
+ Specifies the x-coordinate of the lower-right corner of the rectangular region.  
   
  `y2`  
- Указывает Координата по оси y нижнего правого угла прямоугольной области.  
+ Specifies the y-coordinate of the lower-right corner of the rectangular region.  
   
  `lpRect`  
- Задает прямоугольную область. Может быть либо указателем `RECT` структуры или `CRect` объекта.  
+ Specifies the rectangular region. Can be either a pointer to a `RECT` structure or a `CRect` object.  
   
-### <a name="remarks"></a>Примечания  
- В отличие от [CreateRectRgn](#createrectrgn), однако он не выделяет любой дополнительный объем памяти в локальной куче приложения Windows. Вместо этого он использует объем, выделяемый для области, хранящихся в `CRgn` объекта. Это означает, что `CRgn` объект должен уже быть инициализирован допустимым область Windows перед вызовом `SetRectRgn`. Точек, предоставленных `x1`, `y1`, `x2`, и `y2` определяют минимальный размер выделенного пространства.  
+### <a name="remarks"></a>Remarks  
+ Unlike [CreateRectRgn](#createrectrgn), however, it does not allocate any additional memory from the local Windows application heap. Instead, it uses the space allocated for the region stored in the `CRgn` object. This means that the `CRgn` object must already have been initialized with a valid Windows region before calling `SetRectRgn`. The points given by `x1`, `y1`, `x2`, and `y2` specify the minimum size of the allocated space.  
   
- Используйте эту функцию вместо `CreateRectRgn` функции-члена во избежание вызовы диспетчеру локальной памяти.  
+ Use this function instead of the `CreateRectRgn` member function to avoid calls to the local memory manager.  
   
-## <a name="see-also"></a>См. также  
- [CWnd-класс](../../mfc/reference/cwnd-class.md)   
- [Диаграмма иерархии](../../mfc/hierarchy-chart.md)
+## <a name="see-also"></a>See Also  
+ [CWnd Class](../../mfc/reference/cwnd-class.md)   
+ [Hierarchy Chart](../../mfc/hierarchy-chart.md)
 
 
 

@@ -1,5 +1,5 @@
 ---
-title: "оператор== (&lt;образец контейнера&gt;) | Документы Майкрософт"
+title: operator== (&lt;sample container&gt;) | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -9,12 +9,7 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
-- std.==
-- std::==
-- operator==
-- std.operator==
-- std::operator==
-- ==
+- std.==", "std::==", "operator==", "std.operator==", "std::operator==", "==
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -40,20 +35,20 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: a82768750e6a7837bb81edd8a51847f83c294c20
-ms.openlocfilehash: da93ea05069cece10b7190368997c4471aaf13bd
+ms.translationtype: MT
+ms.sourcegitcommit: 5d026c375025b169d5db8445cbb52c0c917b2d8d
+ms.openlocfilehash: 0b0113b0fa570c85f086a35d5b98ff4c056d2ca2
 ms.contentlocale: ru-ru
-ms.lasthandoff: 04/04/2017
+ms.lasthandoff: 09/09/2017
 
 ---
-# <a name="operator-ltsample-containergt"></a>оператор== (&lt;образец контейнера&gt;)
+# <a name="operator-ltsample-containergt"></a>operator== (&lt;sample container&gt;)
 > [!NOTE]
->  Данный раздел включен в документацию Visual C++ в качестве нефункционального примера контейнеров, используемых в стандартной библиотеке C++. Дополнительные сведения см. в разделе [Контейнеры стандартной библиотеки C++](../standard-library/stl-containers.md).  
+>  This topic is in the Visual C++ documentation as a nonfunctional example of containers used in the C++ Standard Library. For more information, see [C++ Standard Library Containers](../standard-library/stl-containers.md).  
   
- Перегружает `operator==` для сравнения двух объектов класса шаблона [контейнер](../standard-library/sample-container-class.md).  
+ Overloads `operator==` to compare two objects of template class [Container](../standard-library/sample-container-class.md).  
   
-## <a name="syntax"></a>Синтаксис  
+## <a name="syntax"></a>Syntax  
   
 ```  
 template <class Ty>  
@@ -62,10 +57,10 @@ bool operator==(
     const Container <Ty>& right);
 ```  
   
-## <a name="return-value"></a>Возвращаемое значение  
+## <a name="return-value"></a>Return Value  
  Returns `left.`[size](../standard-library/container-class-size.md) ` == right.size && equal(left.`[begin](../standard-library/container-class-begin.md)`, left.`[end](../standard-library/container-class-end.md)`, right.begin)`.  
   
-## <a name="see-also"></a>См. также  
- [\<образец контейнера>](../standard-library/sample-container.md)
+## <a name="see-also"></a>See Also  
+ [\<sample container>](../standard-library/sample-container.md)
 
 

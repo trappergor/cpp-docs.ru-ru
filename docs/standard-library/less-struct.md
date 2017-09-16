@@ -1,15 +1,14 @@
 ---
-title: "Структура less | Документы Майкрософт"
+title: less Struct | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
 ms.technology:
-- devlang-cpp
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
-- less
 - xfunctional/std::less
 dev_langs:
 - C++
@@ -36,16 +35,17 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Machine Translation
-ms.sourcegitcommit: 2d05749ba2837a3879c91886b9266de47dd2ece6
-ms.openlocfilehash: ff9530d08066cf0cf9b9421ac8b1b72d1a229bbe
-ms.lasthandoff: 02/24/2017
+ms.translationtype: MT
+ms.sourcegitcommit: 5d026c375025b169d5db8445cbb52c0c917b2d8d
+ms.openlocfilehash: df98d62f094ef8ead680a2d184355ea312cdf436
+ms.contentlocale: ru-ru
+ms.lasthandoff: 09/09/2017
 
 ---
-# <a name="less-struct"></a>Структура less
-Бинарный предикат, который выполняет на своих аргументах операцию сравнения "меньше чем" (`operator<`).  
+# <a name="less-struct"></a>less Struct
+A binary predicate that performs the less-than operation ( `operator<`) on its arguments.  
   
-## <a name="syntax"></a>Синтаксис  
+## <a name="syntax"></a>Syntax  
   
 ```
 template <class Type = void>
@@ -64,23 +64,23 @@ struct less<void>
  };
 ```  
   
-#### <a name="parameters"></a>Параметры  
+#### <a name="parameters"></a>Parameters  
  `Type`, `T`, `U`  
- Любой тип, поддерживающий `operator<`, принимающий операнды указанного или выводимого типа.  
+ Any type that supports an `operator<` that takes operands of the specified or inferred types.  
   
  `Left`  
- Левый операнд в операции деления. Неспециализированный шаблон принимает ссылочный аргумент lvalue типа `Type`. Специализированный шаблон выполняет точную пересылку ссылочных аргументов lvalue и rvalue выводимого типа `T`.  
+ The left operand of the less-than operation. The unspecialized template takes an lvalue reference argument of type `Type`. The specialized template does perfect forwarding of lvalue and rvalue reference arguments of inferred type `T`.  
   
  `Right`  
- Правый операнд в операции "меньше чем". Неспециализированный шаблон принимает ссылочный аргумент lvalue типа `Type`. Специализированный шаблон выполняет точную пересылку ссылочных аргументов lvalue и rvalue выводимого типа `U`.  
+ The right operand of the less-than operation. The unspecialized template takes an lvalue reference argument of type `Type`. The specialized template does perfect forwarding of lvalue and rvalue reference arguments of inferred type `U`.  
   
-## <a name="return-value"></a>Возвращаемое значение  
- Результат `Left``<``Right`. Специализированный шаблон выполняет точную пересылку результата типа, возвращаемого `operator<`.  
+## <a name="return-value"></a>Return Value  
+ The result of `Left < Right`. The specialized template does perfect forwarding of the result, which has the type that's returned by `operator<`.  
   
-## <a name="remarks"></a>Примечания  
- Бинарный предикат `less`< `Type`> обеспечивает строгое слабое упорядочивание набора значений элементов типа `Type` в классы эквивалентности тогда и только тогда, когда этот тип удовлетворяет стандартным математическим требованиям для такого упорядочивания. Специализации для любого типа указателя дают общее упорядочение элементов в том, что все элементы из различных значений упорядочиваются относительно друг друга.  
+## <a name="remarks"></a>Remarks  
+ The binary predicate `less`< `Type`> provides a strict weak ordering of a set of element values of type `Type` into equivalence classes, if and only if this type satisfies the standard mathematical requirements for being so ordered. The specializations for any pointer type yield a total ordering of elements, in that all elements of distinct values are ordered with respect to each other.  
   
-## <a name="example"></a>Пример  
+## <a name="example"></a>Example  
   
 ```cpp  
 // functional_less.cpp  
@@ -125,20 +125,20 @@ cout << Iter1->m_i << " ";
  }  
 ```  
   
-## <a name="output"></a>Вывод  
+## <a name="output"></a>Output  
   
 ```
 Original vector v1 = (41 18467 6334 26500 19169 15724 11478)
 Sorted vector v1 = (41 6334 11478 15724 18467 19169 26500)
 ```  
   
-## <a name="requirements"></a>Требования  
- **Заголовок:** \<functional>  
+## <a name="requirements"></a>Requirements  
+ **Header:** \<functional>  
   
- **Пространство имен:** std  
+ **Namespace:** std  
   
-## <a name="see-also"></a>См. также  
- [Справочник по стандартной библиотеке C++](../standard-library/cpp-standard-library-reference.md)
+## <a name="see-also"></a>See Also  
+ [C++ Standard Library Reference](../standard-library/cpp-standard-library-reference.md)
 
 
 

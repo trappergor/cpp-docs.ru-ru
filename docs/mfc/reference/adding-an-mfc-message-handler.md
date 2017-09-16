@@ -1,5 +1,5 @@
 ---
-title: "Добавление обработчика сообщения MFC | Документы Microsoft"
+title: Adding an MFC Message Handler | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -13,7 +13,7 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- message handling, adding handlers
+- message handling [MFC], adding handlers
 ms.assetid: 4251cfce-76ca-443d-bd2f-6303afa6d942
 caps.latest.revision: 9
 author: mikeblome
@@ -33,28 +33,28 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 4fafe461008e3545243d693e0d9e34acd57163e0
-ms.openlocfilehash: b80ebf607b7a11bf80f14c5375a5ace27ce1047c
+ms.translationtype: MT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: c5568c7d75b0d98349c7086d9efd367c15deda51
 ms.contentlocale: ru-ru
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 09/12/2017
 
 ---
-# <a name="adding-an-mfc-message-handler"></a>Добавление обработчика сообщения MFC
-Вы можете [окно свойств для добавления обработчика сообщения](../../mfc/reference/mapping-messages-to-functions.md) (член функции, обрабатывающей сообщения Windows) для класса и сопоставления сообщений Windows обработчику сообщений. Можно также добавить [обработчик событий для любого элемента управления диалогового окна](../../windows/adding-event-handlers-for-dialog-box-controls.md).  
+# <a name="adding-an-mfc-message-handler"></a>Adding an MFC Message Handler
+You can [use the Properties window to add a message handler](../../mfc/reference/mapping-messages-to-functions.md) (a member function that handles Windows messages) to a class and map Windows messages to the message handler. You can also add [an event handler for any dialog box control](../../windows/adding-event-handlers-for-dialog-box-controls.md).  
   
- С помощью окна «Свойства» для определения функций обработки сообщений и событий, можно автоматически обновить таблицу диспетчеризации сообщений (или схему сообщений) и файл заголовка класса.  
+ By using the Properties window to define message- and event-handling functions, you can automatically update the message-dispatch table (or message map) and your class header file.  
   
 > [!NOTE]
->  Можно добавить обработчик сообщения в класс ATL с помощью окна свойств; Тем не менее некоторые результаты могут отличаться. Дополнительные сведения см. в разделе ATL [Добавление обработчика сообщения ATL](../../atl/adding-an-atl-message-handler.md).  
+>  You can add a message handler to an ATL class using the Properties window; however, some results may vary. For more information, see the ATL topic [Adding an ATL Message Handler](../../atl/adding-an-atl-message-handler.md).  
   
-## <a name="see-also"></a>См. также  
- [Добавление функциональных возможностей с помощью мастеров кода](../../ide/adding-functionality-with-code-wizards-cpp.md)   
- [Добавление класса](../../ide/adding-a-class-visual-cpp.md)   
- [Добавление функции-члена](../../ide/adding-a-member-function-visual-cpp.md)   
- [Добавление переменной-члена](../../ide/adding-a-member-variable-visual-cpp.md)   
- [Переопределение виртуальной функции](../../ide/overriding-a-virtual-function-visual-cpp.md)   
- [Перемещение по структуре класса](../../ide/navigating-the-class-structure-visual-cpp.md)   
- [Редактор диалоговых окон](../../windows/dialog-editor.md)
+## <a name="see-also"></a>See Also  
+ [Adding Functionality with Code Wizards](../../ide/adding-functionality-with-code-wizards-cpp.md)   
+ [Adding a Class](../../ide/adding-a-class-visual-cpp.md)   
+ [Adding a Member Function](../../ide/adding-a-member-function-visual-cpp.md)   
+ [Adding a Member Variable](../../ide/adding-a-member-variable-visual-cpp.md)   
+ [Overriding a Virtual Function](../../ide/overriding-a-virtual-function-visual-cpp.md)   
+ [Navigating the Class Structure](../../ide/navigating-the-class-structure-visual-cpp.md)   
+ [Dialog Editor](../../windows/dialog-editor.md)
 
 

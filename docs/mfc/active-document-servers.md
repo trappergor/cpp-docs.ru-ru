@@ -1,42 +1,61 @@
 ---
-title: "Серверы активных документов | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "серверы активных документов [C++]"
-  - "активные документы [C++], серверы"
-  - "серверы [C++], активный документ"
+title: Active Document Servers | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- active documents [MFC], servers
+- servers [MFC], active document
+- active document servers [MFC]
 ms.assetid: 131fec1e-02a0-4305-a7ab-903b911232a7
 caps.latest.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 5
----
-# Серверы активных документов
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 1dc80f4c1a84b17248df1e25dbcef7c85806c1f3
+ms.contentlocale: ru-ru
+ms.lasthandoff: 09/12/2017
 
-Серверы активных документов, например документы узел ключевые слова, Excel и PowerPoint других типов приложений, активные документы.  В отличие от внедренный объект OLE \(которые просто отображаются внутри страницы другого документа\), активные документы предоставляют полный интерфейс и завершают собственную функцию серверного приложения, которое создает их.  Пользователи могут создавать документы использование полной некоторые их избранных приложений \(если они enabled активный документ\), но могут обрабатывать результирующего проекта как единая сущность.  
+---
+# <a name="active-document-servers"></a>Active Document Servers
+Active document servers such as Word, Excel, or PowerPoint host documents of other application types called active documents. Unlike OLE embedded objects (which are simply displayed within the page of another document), Active documents provide the full interface and complete native functionality of the server application that creates them. Users can create documents using the full power of their favorite applications (if they are active document enabled), yet can treat the resulting project as a single entity.  
   
- Активные документы могут иметь более одной страницы и всегда являются активными.  Контрольная часть активных документов интерфейса пользователя, их слияния меню с меню **Файл** и **Справка** контейнера.  Они занимают всю область редактирования контейнера и элемента управления представления и макет страницы принтера \(полей, нижних колонтитулов и т д\).  
+ Active documents can have more than one page and are always in-place active. Active documents control part of the user interface, merging their menus with the **File** and **Help** menus of the container. They occupy the entire editing area of the container and control the views and the layout of the printer page (margins, footers, and so on).  
   
- MFC реализует сервера активных документов с интерфейсами документов и представлений, схемами подготовки к отправке команды, управления печатью, меню и управления реестра.  Требования для программирования описаны в разделе [активные документы](../Topic/Active%20Documents.md).  
+ MFC implements active document servers with document/view interfaces, command dispatch maps, printing, menu management, and registry management. Specific programming requirements are discussed in [active documents](../mfc/active-documents.md).  
   
- MFC поддерживает активные документы с помощью класса [CDocObjectServer](../mfc/reference/cdocobjectserver-class.md), производный от [CCmdTarget](../Topic/CCmdTarget%20Class.md) и [CDocObjectServerItem](../mfc/reference/cdocobjectserveritem-class.md), производное от [COleServerItem](../mfc/reference/coleserveritem-class.md).  MFC поддерживает контейнеров активных документов с помощью класса [COleDocObjectItem](../Topic/COleDocObjectItem%20Class.md), производный от [COleClientItem](../mfc/reference/coleclientitem-class.md).  
+ MFC supports active documents with the [CDocObjectServer](../mfc/reference/cdocobjectserver-class.md) class, derived from [CCmdTarget](../mfc/reference/ccmdtarget-class.md), and [CDocObjectServerItem](../mfc/reference/cdocobjectserveritem-class.md), derived from [COleServerItem](../mfc/reference/coleserveritem-class.md). MFC supports active document containers with the [COleDocObjectItem](../mfc/reference/coledocobjectitem-class.md) class, derived from [COleClientItem](../mfc/reference/coleclientitem-class.md).  
   
- `CDocObjectServer` сопоставляет интерфейсы активного документа и инициализирует и активирует активный документ.  MFC также предоставляет макросы маршрутизация команд активных дескрипторов в документах.  Для использования активных документов в приложении включите AfxDocOb.h в файле StdAfx.h.  
+ `CDocObjectServer` maps the active document interfaces and initializes and activates an active document. MFC also provides macros to handle command routing in ACTIVE documents. To use active documents in your application, include AfxDocOb.h in your StdAfx.h file.  
   
- Обычные соединения сервера MFC собственную `COleServerItem`\- производного класса.  Мастер приложений MFC этот класс автоматически при размещении флажок **Mini\-server** или **Весь сервер** для предоставления серверу приложений составную поддержку документов.  Если также выделите флажок **Сервер активных документов**, то мастер приложений MFC создает класс, производный от `CDocObjectServerItem` вместо.  
+ A regular MFC server hooks up its own `COleServerItem`-derived class. The MFC Application Wizard generates this class for you if you select the **Mini-server** or **Full-server** check box to give your application server compound document support. If you also select the **Active document server** check box, the MFC Application Wizard generates a class derived from `CDocObjectServerItem` instead.  
   
- Класс `COleDocObjectItem` позволяет OLE\-контейнер станет контейнер активных документов.  С помощью мастера приложений MFC создание контейнера активных документов, установив флажок **Контейнер активных документов** в составной поддержки документа странице мастера приложений MFC.  Дополнительные сведения см. в разделе [Создание приложения контейнера активных документов](../mfc/creating-an-active-document-container-application.md).  
+ The `COleDocObjectItem` class allows an OLE container to become an active document container. You can use the MFC Application Wizard to create an active document container by selecting the **Active document container** checkbox in the Compound Document Support page of the MFC Application Wizard. For more information, see [Creating an Active Document Container Application](../mfc/creating-an-active-document-container-application.md).  
   
-## См. также  
- [Вложение активного документа](../mfc/active-document-containment.md)
+## <a name="see-also"></a>See Also  
+ [Active Document Containment](../mfc/active-document-containment.md)
+
+

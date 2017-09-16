@@ -1,15 +1,14 @@
 ---
-title: "Структура not_equal_to | Документы Майкрософт"
+title: not_equal_to Struct | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
 ms.technology:
-- devlang-cpp
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
-- not_equal_to
 - xfunctional/std::not_equal_to
 dev_langs:
 - C++
@@ -36,16 +35,17 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-translationtype: Machine Translation
-ms.sourcegitcommit: 2d05749ba2837a3879c91886b9266de47dd2ece6
-ms.openlocfilehash: 741c899479f89845a2be8e68e133a48b7d99e7c3
-ms.lasthandoff: 02/24/2017
+ms.translationtype: MT
+ms.sourcegitcommit: 5d026c375025b169d5db8445cbb52c0c917b2d8d
+ms.openlocfilehash: 7801e5bad4111bae6087b54db018a110c22d47d9
+ms.contentlocale: ru-ru
+ms.lasthandoff: 09/09/2017
 
 ---
-# <a name="notequalto-struct"></a>Структура not_equal_to
-Двоичный предикат, который выполняет со своими аргументами операцию неравенства ( `operator!=`).  
+# <a name="notequalto-struct"></a>not_equal_to Struct
+A binary predicate that performs the inequality operation ( `operator!=`) on its arguments.  
   
-## <a name="syntax"></a>Синтаксис  
+## <a name="syntax"></a>Syntax  
   
 ```
 template <class Type = void>
@@ -64,23 +64,23 @@ struct not_equal_to<void>
 };
 ```  
   
-#### <a name="parameters"></a>Параметры  
+#### <a name="parameters"></a>Parameters  
  `Type`, `T`, `U`  
- Любой тип, поддерживающий `operator!=`, принимающий операнды указанного или выводимого типа.  
+ Any type that supports an `operator!=` that takes operands of the specified or inferred types.  
   
  `Left`  
- Левый операнд в операции неравенства. Неспециализированный шаблон принимает ссылочный аргумент lvalue типа `Type`. Специализированный шаблон выполняет точную пересылку ссылочных аргументов lvalue и rvalue выводимого типа `T`.  
+ The left operand of the inequality operation. The unspecialized template takes an lvalue reference argument of type `Type`. The specialized template does perfect forwarding of lvalue and rvalue reference arguments of inferred type `T`.  
   
  `Right`  
- Правый операнд в операции неравенства. Неспециализированный шаблон принимает ссылочный аргумент lvalue типа `Type`. Специализированный шаблон выполняет точную пересылку ссылочных аргументов lvalue и rvalue выводимого типа `U`.  
+ The right operand of the inequality operation. The unspecialized template takes an lvalue reference argument of type `Type`. The specialized template does perfect forwarding of lvalue and rvalue reference arguments of inferred type `U`.  
   
-## <a name="return-value"></a>Возвращаемое значение  
- Результат `Left``!=``Right`. Специализированный шаблон выполняет точную пересылку результата типа, возвращаемого `operator!=`.  
+## <a name="return-value"></a>Return Value  
+ The result of `Left != Right`. The specialized template does perfect forwarding of the result, which has the type that's returned by `operator!=`.  
   
-## <a name="remarks"></a>Примечания  
- Объекты типа `Type` должны быть сравнимы. Для этого нужно, чтобы `operator!=`, определенный в наборе объектов, удовлетворял математическим свойствам отношения эквивалентности. Этим требованиям удовлетворяют все встроенные числовые типы и типы указателей.  
+## <a name="remarks"></a>Remarks  
+ The objects of type `Type` must be equality-comparable. This requires that the `operator!=` defined on the set of objects satisfies the mathematical properties of an equivalence relation. All of the built-in numeric and pointer types satisfy this requirement.  
   
-## <a name="example"></a>Пример  
+## <a name="example"></a>Example  
   
 ```cpp  
 // functional_not_equal_to.cpp  
@@ -139,13 +139,13 @@ between v1 & v2 is: ( 0 0 1 0 1 0 )
 */  
 ```  
   
-## <a name="requirements"></a>Требования  
- **Заголовок:** \<functional>  
+## <a name="requirements"></a>Requirements  
+ **Header:** \<functional>  
   
- **Пространство имен:** std  
+ **Namespace:** std  
   
-## <a name="see-also"></a>См. также  
- [Справочник по стандартной библиотеке C++](../standard-library/cpp-standard-library-reference.md)
+## <a name="see-also"></a>See Also  
+ [C++ Standard Library Reference](../standard-library/cpp-standard-library-reference.md)
 
 
 

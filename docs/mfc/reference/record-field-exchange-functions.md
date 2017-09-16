@@ -1,5 +1,5 @@
 ---
-title: "Функции обмена полями записи | Документы Microsoft"
+title: Record Field Exchange Functions | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -43,15 +43,15 @@ dev_langs:
 - C++
 helpviewer_keywords:
 - DAO (Data Access Objects), record field exchange (DFX)
-- ODBC, bulk RFX data exchange functions
+- ODBC, bulk RFX data exchange functions [MFC]
 - RFX (record field exchange), ODBC classes
-- DFX (DAO record field exchange), data exchange functions
-- DFX functions
-- bulk RFX functions
+- DFX (DAO record field exchange), data exchange functions [MFC]
+- DFX functions [MFC]
+- bulk RFX functions [MFC]
 - DFX (DAO record field exchange)
 - RFX (record field exchange), DAO classes
 - ODBC, RFX
-- RFX (record field exchange), data exchange functions
+- RFX (record field exchange), data exchange functions [MFC]
 - RFX (record field exchange)
 ms.assetid: 6e4c5c1c-acb7-4c18-bf51-bf7959a696cd
 caps.latest.revision: 13
@@ -73,79 +73,79 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: d2d39abf526a58b8442107b5ee816f316ae841f5
-ms.openlocfilehash: acabc4e9469560b67c5fe10bcb845517e05c7854
+ms.translationtype: MT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 163384a9fd160fea3db1976408c5c81d336a2ddb
 ms.contentlocale: ru-ru
-ms.lasthandoff: 03/31/2017
+ms.lasthandoff: 09/12/2017
 
 ---
-# <a name="record-field-exchange-functions"></a>Функции обмена данными полями записей
-В этом разделе перечислены обмен полями записей (RFX Bulk RFX и DFX) функции, которые используются для автоматизации передачи данных между объектом набора записей и источником данных и выполнения других операций с данными.  
+# <a name="record-field-exchange-functions"></a>Record Field Exchange Functions
+This topic lists the Record Field Exchange (RFX, Bulk RFX, and DFX) functions used to automate the transfer of data between a recordset object and its data source and to perform other operations on the data.  
   
- При использовании классов на основе ODBC и реализации массовой выборки строк необходимо вручную переопределить функцию-член `DoBulkFieldExchange` `CRecordset` путем вызова функций Bulk RFX для каждого элемента данных, соответствующего столбцу источника данных.  
+ If you are using the ODBC-based classes and you have implemented bulk row fetching, you must manually override the `DoBulkFieldExchange` member function of `CRecordset` by calling the Bulk RFX functions for each data member corresponding to a data source column.  
   
- Если в классах на основе ODBC массовая выборка строк не реализована или если вы используете классы на основе DAO, мастер ClassWizard переопределит функцию-член `DoFieldExchange` `CRecordset` или `CDaoRecordset` путем вызова функций RFX (для классов ODBC) или функций DFX (для классов DAO) для каждого элемента данных поля в наборе записей.  
+ If you have not implemented bulk row fetching in the ODBC-based classes, or if you are using the DAO-based classes, then ClassWizard will override the `DoFieldExchange` member function of `CRecordset` or `CDaoRecordset` by calling the RFX functions (for ODBC classes) or the DFX functions (for DAO classes) for each field data member in your recordset.  
   
- Функции обмена полями записей передают данные каждый раз, когда платформа вызывает `DoFieldExchange` или `DoBulkFieldExchange`. Каждая функция передает определенный тип данных.  
+ The record field exchange functions transfer data each time the framework calls `DoFieldExchange` or `DoBulkFieldExchange`. Each function transfers a specific data type.  
   
- Дополнительные сведения об использовании этих функций см. в статьях [обмен полями записей: как работы RFX (ODBC)](../../data/odbc/record-field-exchange-how-rfx-works.md). Дополнительные сведения о массовой выборке строк см. в статье [набор записей: групповая выборка записей (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md).  
+ For more information about how these functions are used, see the articles [Record Field Exchange: How RFX Works (ODBC)](../../data/odbc/record-field-exchange-how-rfx-works.md). For more information about bulk row fetching, see the article [Recordset: Fetching Records in Bulk (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md).  
   
- Для столбцов данных с динамической привязкой, его можно также вызвать функции RFX и DFX самостоятельно, как описано в статьях [набор записей: динамическая привязка столбцов данных (ODBC)](../../data/odbc/recordset-dynamically-binding-data-columns-odbc.md). Кроме того, можно написать собственные пользовательские процедуры, RFX и DFX, как описано в техническом примечании [43](../../mfc/tn043-rfx-routines.md) (для ODBC) и техническом примечании [53](../../mfc/tn053-custom-dfx-routines-for-dao-database-classes.md) (для DAO).  
+ For columns of data that you bind dynamically, you can also call the RFX or DFX functions yourself, as explained in the articles [Recordset: Dynamically Binding Data Columns (ODBC)](../../data/odbc/recordset-dynamically-binding-data-columns-odbc.md). Additionally, you can write your own custom RFX or DFX routines, as explained in Technical Note [43](../../mfc/tn043-rfx-routines.md) (for ODBC) and Technical Note [53](../../mfc/tn053-custom-dfx-routines-for-dao-database-classes.md) (for DAO).  
   
- Пример функций RFX и Bulk RFX функции, как они отображаются в `DoFieldExchange` и `DoBulkFieldExchange` функции, в разделе [RFX_Text](#rfx_text) и rfx_text_bulk # [RFX_Text_Bulk]). Функции DFX очень похожи на функции RFX.  
+ For an example of RFX and Bulk RFX functions as they appear in the `DoFieldExchange` and `DoBulkFieldExchange` functions, see [RFX_Text](#rfx_text) and [RFX_Text_Bulk]#rfx_text_bulk). DFX functions are very similar to the RFX functions.  
   
-### <a name="rfx-functions-odbc"></a>Функции RFX (ODBC)  
-  
-|||  
-|-|-|  
-|[RFX_Binary](#rfx_binary)|Передает массивы байтов типа [CByteArray](cbytearray-class.md).|  
-|[RFX_Bool](#rfx_bool)|Передает логический тип данных.|  
-|[RFX_Byte](#rfx_byte)|Передает один байт данных.|  
-|[RFX_Date](#rfx_date)|Передает значения времени и даты с помощью [CTime](../../atl-mfc-shared/reference/ctime-class.md) или **TIMESTAMP_STRUCT**.|  
-|[RFX_Double](#rfx_double)|Передает данные двойной точности с плавающей запятой.|  
-|[RFX_Int](#rfx_int)|Передает целочисленные данные.|  
-|[RFX_Long](#rfx_long)|Передает длинные целые данные.|  
-|[RFX_LongBinary](#rfx_longbinary)|Передает данные больших двоичных объектов (BLOB) с объектом [CLongBinary](clongbinary-class.md) класса.|  
-|[RFX_Single](#rfx_single)|Передает данные с плавающей запятой.|  
-|[RFX_Text](#rfx_text)|Передает строковые данные.|  
-  
-### <a name="bulk-rfx-functions-odbc"></a>Функции Bulk RFX (ODBC)  
+### <a name="rfx-functions-odbc"></a>RFX Functions (ODBC)  
   
 |||  
 |-|-|  
-|[RFX_Binary_Bulk](#rfx_binary_bulk)|Передает массивы байтов данных.|  
-|[RFX_Bool_Bulk](#rfx_bool_bulk)|Передает массивы логических данных.|  
-|[RFX_Byte_Bulk](#rfx_byte_bulk)|Передает массивы отдельных байтов.|  
-|[RFX_Date_Bulk](#rfx_date_bulk)|Передает массивы данных типа **TIMESTAMP_STRUCT**.|  
-|[RFX_Double_Bulk](#rfx_double_bulk)|Передает массивы данных двойной точности с плавающей запятой.|  
-|[RFX_Int_Bulk](#rfx_int_bulk)|Передает массивы целочисленных данных.|  
-|[RFX_Long_Bulk](#rfx_long_bulk)|Передает массивы длинных целых данных.|  
-|[RFX_Single_Bulk](#rfx_single_bulk)|Передает массивы данных с плавающей запятой.|  
-|[RFX_Text_Bulk](#rfx_text_bulk)|Передает массивы данных типа **LPSTR**.|  
+|[RFX_Binary](#rfx_binary)|Transfers arrays of bytes of type [CByteArray](cbytearray-class.md).|  
+|[RFX_Bool](#rfx_bool)|Transfers Boolean data.|  
+|[RFX_Byte](#rfx_byte)|Transfers a single byte of data.|  
+|[RFX_Date](#rfx_date)|Transfers time and date data using [CTime](../../atl-mfc-shared/reference/ctime-class.md) or **TIMESTAMP_STRUCT**.|  
+|[RFX_Double](#rfx_double)|Transfers double-precision float data.|  
+|[RFX_Int](#rfx_int)|Transfers integer data.|  
+|[RFX_Long](#rfx_long)|Transfers long integer data.|  
+|[RFX_LongBinary](#rfx_longbinary)|Transfers binary large object (BLOB) data with an object of the [CLongBinary](clongbinary-class.md) class.|  
+|[RFX_Single](#rfx_single)|Transfers float data.|  
+|[RFX_Text](#rfx_text)|Transfers string data.|  
   
-### <a name="dfx-functions-dao"></a>Функции DFX (DAO)  
+### <a name="bulk-rfx-functions-odbc"></a>Bulk RFX Functions (ODBC)  
+  
+|||  
+|-|-|  
+|[RFX_Binary_Bulk](#rfx_binary_bulk)|Transfers arrays of byte data.|  
+|[RFX_Bool_Bulk](#rfx_bool_bulk)|Transfers arrays of Boolean data.|  
+|[RFX_Byte_Bulk](#rfx_byte_bulk)|Transfers arrays of single bytes.|  
+|[RFX_Date_Bulk](#rfx_date_bulk)|Transfers arrays of data of type **TIMESTAMP_STRUCT**.|  
+|[RFX_Double_Bulk](#rfx_double_bulk)|Transfers arrays of double-precision, floating-point data.|  
+|[RFX_Int_Bulk](#rfx_int_bulk)|Transfers arrays of integer data.|  
+|[RFX_Long_Bulk](#rfx_long_bulk)|Transfers arrays of long integer data.|  
+|[RFX_Single_Bulk](#rfx_single_bulk)|Transfers arrays of floating-point data.|  
+|[RFX_Text_Bulk](#rfx_text_bulk)|Transfers arrays of data of type **LPSTR**.|  
+  
+### <a name="dfx-functions-dao"></a>DFX Functions (DAO)  
   
 |||
 |-|-|  
-|[DFX_Binary](#dfx_binary)|Передает массивы байтов типа [CByteArray](cbytearray-class.md).|  
-|[DFX_Bool](#dfx_bool)|Передает логический тип данных.|  
-|[DFX_Byte](#dfx_byte)|Передает один байт данных.|  
-|[DFX_Currency](#dfx_currency)|Передает данные денежных единиц, типа [COleCurrency](colecurrency-class.md).|  
-|[DFX_DateTime](#dfx_datetime)|Передает данные даты и времени типа [COleDateTime](../../atl-mfc-shared/reference/coledatetime-class.md).|  
-|[DFX_Double](#dfx_double)|Передает данные двойной точности с плавающей запятой.|  
-|[DFX_Long](#dfx_long)|Передает длинные целые данные.|  
-|[DFX_LongBinary](#dfx_longbinary)|Передает данные больших двоичных объектов (BLOB) с объектом класса `CLongBinary` . Для DAO рекомендуется использовать [DFX_Binary](#dfx_binary) вместо него.|  
-|[DFX_Short](#dfx_short)|Передает короткие целые данные.|  
-|[DFX_Single](#dfx_single)|Передает данные с плавающей запятой.|  
-|[DFX_Text](#dfx_text)|Передает строковые данные.|  
+|[DFX_Binary](#dfx_binary)|Transfers arrays of bytes of type [CByteArray](cbytearray-class.md).|  
+|[DFX_Bool](#dfx_bool)|Transfers Boolean data.|  
+|[DFX_Byte](#dfx_byte)|Transfers a single byte of data.|  
+|[DFX_Currency](#dfx_currency)|Transfers currency data, of type [COleCurrency](colecurrency-class.md).|  
+|[DFX_DateTime](#dfx_datetime)|Transfers time and date data, of type [COleDateTime](../../atl-mfc-shared/reference/coledatetime-class.md).|  
+|[DFX_Double](#dfx_double)|Transfers double-precision float data.|  
+|[DFX_Long](#dfx_long)|Transfers long integer data.|  
+|[DFX_LongBinary](#dfx_longbinary)|Transfers binary large object (BLOB) data with an object of the `CLongBinary` class. For DAO, it is recommended that you use [DFX_Binary](#dfx_binary) instead.|  
+|[DFX_Short](#dfx_short)|Transfers short integer data.|  
+|[DFX_Single](#dfx_single)|Transfers float data.|  
+|[DFX_Text](#dfx_text)|Transfers string data.|  
 
  =============================================
 
-## <a name="rfx_binary"></a>RFX_Binary
-Передает массивы байтов между элементами данных полей `CRecordset` объектов и столбцы записи в источнике данных ODBC типа **SQL_BINARY**, **SQL_VARBINARY**, или **SQL_LONGVARBINARY**.  
+## <a name="rfx_binary"></a>  RFX_Binary
+Transfers arrays of bytes between the field data members of a `CRecordset` object and the columns of a record on the data source of ODBC type **SQL_BINARY**, **SQL_VARBINARY**, or **SQL_LONGVARBINARY**.  
   
-### <a name="syntax"></a>Синтаксис  
+### <a name="syntax"></a>Syntax  
   
 ```
 void RFX_Binary(  
@@ -155,32 +155,32 @@ void RFX_Binary(
    int nMaxLength = 255);  
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
  `pFX`  
- Указатель на объект класса [разделе](cfieldexchange-class.md). Этот объект содержит сведения для определения контекста для каждого вызова функции. Дополнительные сведения об операциях `CFieldExchange` объекта можно указать, см. в статье [обмен полями записей: принцип работы RFX](../../data/odbc/record-field-exchange-how-rfx-works.md).  
+ A pointer to an object of class [CFieldExchange](cfieldexchange-class.md). This object contains information to define the context for each call of the function. For more information about the operations a `CFieldExchange` object can specify, see the article [Record Field Exchange: How RFX Works](../../data/odbc/record-field-exchange-how-rfx-works.md).  
   
  `szName`  
- Имя столбца данных.  
+ The name of a data column.  
   
  *value*  
- Значение, хранящееся в указанные данные элемента, значение должно быть передано. При передаче из набора данных к источнику данных, значение типа [CByteArray](cbytearray-class.md), берется из заданного элемента данных. Для передачи из источника данных в набор записей значение, хранящееся в заданный элемент данных.  
+ The value stored in the indicated data member — the value to be transferred. For a transfer from recordset to data source, the value, of type [CByteArray](cbytearray-class.md), is taken from the specified data member. For a transfer from data source to recordset, the value is stored in the specified data member.  
   
  `nMaxLength`  
- Максимально допустимая длина строки или массива, передаваемый. Значение по умолчанию `nMaxLength` — 255. Допустимые значения: от 1 до `INT_MAX`. Платформа выделяет этот объем пространства для данных. Для повышения производительности рекомендуется передайте достаточно велик для хранения наибольший элемент данных, который предполагается, что значение.  
+ The maximum allowed length of the string or array being transferred. The default value of `nMaxLength` is 255. Legal values are 1 to `INT_MAX`. The framework allocates this amount of space for the data. For best performance, pass a value large enough to accommodate the largest data item you expect.  
   
-### <a name="remarks"></a>Примечания  
- Сопоставления данных в источнике данных из этих типов в тип и из `CByteArray` в наборе записей.  
+### <a name="remarks"></a>Remarks  
+ Data in the data source of these types is mapped to and from type `CByteArray` in the recordset.  
   
-### <a name="example"></a>Пример  
- В разделе [RFX_Text](#rfx_text).  
+### <a name="example"></a>Example  
+ See [RFX_Text](#rfx_text).  
   
-### <a name="requirements"></a>Требования  
- **Заголовок:** afxdb.h  
+### <a name="requirements"></a>Requirements  
+ **Header:** afxdb.h  
 
-## <a name="rfx_bool"></a>RFX_Bool
-Передает логический тип данных между элементами данных полей `CRecordset` объектов и столбцы записи в источнике данных ODBC типа **SQL_BIT**.  
+## <a name="rfx_bool"></a>  RFX_Bool
+Transfers Boolean data between the field data members of a `CRecordset` object and the columns of a record on the data source of ODBC type **SQL_BIT**.  
   
-### <a name="syntax"></a>Синтаксис  
+### <a name="syntax"></a>Syntax  
   
 ```
 void RFX_Bool(  
@@ -189,26 +189,26 @@ void RFX_Bool(
    BOOL& value);  
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
  `pFX`  
- Указатель на объект класса [разделе](cfieldexchange-class.md). Этот объект содержит сведения для определения контекста для каждого вызова функции. Дополнительные сведения об операциях `CFieldExchange` объекта можно указать, см. в статье [обмен полями записей: принцип работы RFX](../../data/odbc/record-field-exchange-how-rfx-works.md).  
+ A pointer to an object of class [CFieldExchange](cfieldexchange-class.md). This object contains information to define the context for each call of the function. For more information about the operations a `CFieldExchange` object can specify, see the article [Record Field Exchange: How RFX Works](../../data/odbc/record-field-exchange-how-rfx-works.md).  
   
  `szName`  
- Имя столбца данных.  
+ The name of a data column.  
   
  *value*  
- Значение, хранящееся в указанные данные элемента, значение должно быть передано. При передаче из набора данных к источнику данных, значение типа **BOOL**, берется из заданного элемента данных. Для передачи из источника данных в набор записей значение, хранящееся в заданный элемент данных.  
+ The value stored in the indicated data member — the value to be transferred. For a transfer from recordset to data source, the value, of type **BOOL**, is taken from the specified data member. For a transfer from data source to recordset, the value is stored in the specified data member.  
   
-### <a name="example"></a>Пример  
- В разделе [RFX_Text](#rfx_text).  
+### <a name="example"></a>Example  
+ See [RFX_Text](#rfx_text).  
   
-### <a name="requirements"></a>Требования  
- **Заголовок:** afxdb.h  
+### <a name="requirements"></a>Requirements  
+ **Header:** afxdb.h  
 
-## <a name="rfx_byte"></a>RFX_Byte
-Передает один байт между элементами данных полей `CRecordset` объектов и столбцы записи в источнике данных ODBC типа **SQL_TINYINT**.  
+## <a name="rfx_byte"></a>  RFX_Byte
+Transfers single bytes between the field data members of a `CRecordset` object and the columns of a record on the data source of ODBC type **SQL_TINYINT**.  
   
-### <a name="syntax"></a>Синтаксис  
+### <a name="syntax"></a>Syntax  
   
 ```
 void RFX_Byte(  
@@ -217,26 +217,26 @@ void RFX_Byte(
    BYTE& value);  
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
  `pFX`  
- Указатель на объект класса [разделе](cfieldexchange-class.md). Этот объект содержит сведения для определения контекста для каждого вызова функции. Дополнительные сведения об операциях `CFieldExchange` объекта можно указать, см. в статье [обмен полями записей: принцип работы RFX](../../data/odbc/record-field-exchange-how-rfx-works.md).  
+ A pointer to an object of class [CFieldExchange](cfieldexchange-class.md). This object contains information to define the context for each call of the function. For more information about the operations a `CFieldExchange` object can specify, see the article [Record Field Exchange: How RFX Works](../../data/odbc/record-field-exchange-how-rfx-works.md).  
   
  `szName`  
- Имя столбца данных.  
+ The name of a data column.  
   
  *value*  
- Значение, хранящееся в указанные данные элемента, значение должно быть передано. При передаче из набора данных к источнику данных, значение типа **БАЙТОВ**, берется из заданного элемента данных. Для передачи из источника данных в набор записей значение, хранящееся в заданный элемент данных.  
+ The value stored in the indicated data member — the value to be transferred. For a transfer from recordset to data source, the value, of type **BYTE**, is taken from the specified data member. For a transfer from data source to recordset, the value is stored in the specified data member.  
   
-### <a name="example"></a>Пример  
- В разделе [RFX_Text](#rfx_text).  
+### <a name="example"></a>Example  
+ See [RFX_Text](#rfx_text).  
   
-### <a name="requirements"></a>Требования  
- **Заголовок:** afxdb.h  
+### <a name="requirements"></a>Requirements  
+ **Header:** afxdb.h  
 
-## <a name="rfx_date"></a>RFX_Date
-Передача `CTime` или **TIMESTAMP_STRUCT** данных между элементами данных полей `CRecordset` объектов и столбцы записи в источнике данных ODBC типа **SQL_DATE**, **SQL_TIME**, или **SQL_TIMESTAMP**.  
+## <a name="rfx_date"></a>  RFX_Date
+Transfers `CTime` or **TIMESTAMP_STRUCT** data between the field data members of a `CRecordset` object and the columns of a record on the data source of ODBC type **SQL_DATE**, **SQL_TIME**, or **SQL_TIMESTAMP**.  
   
-### <a name="syntax"></a>Синтаксис  
+### <a name="syntax"></a>Syntax  
   
 ```
 void RFX_Date(  
@@ -255,33 +255,33 @@ void RFX_Date(
    COleDateTime& value);  
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
  `pFX`  
- Указатель на объект класса [разделе](cfieldexchange-class.md). Этот объект содержит сведения для определения контекста для каждого вызова функции. Дополнительные сведения об операциях `CFieldExchange` объекта можно указать, см. в статье [обмен полями записей: принцип работы RFX](../../data/odbc/record-field-exchange-how-rfx-works.md).  
+ A pointer to an object of class [CFieldExchange](cfieldexchange-class.md). This object contains information to define the context for each call of the function. For more information about the operations a `CFieldExchange` object can specify, see the article [Record Field Exchange: How RFX Works](../../data/odbc/record-field-exchange-how-rfx-works.md).  
   
  `szName`  
- Имя столбца данных.  
+ The name of a data column.  
   
  *value*  
- Значение, хранящееся в элементе указанные данные; значение должно быть передано. Различные версии функции принимать различные типы данных для значения:  
+ The value stored in the indicated data member; the value to be transferred. The various versions of the function take different data types for value:  
   
- Первая версия функции, принимающей ссылку на [CTime](../../atl-mfc-shared/reference/ctime-class.md) объекта. При передаче из набора записей с источником данных это значение берется из заданного элемента данных. Для передачи из источника данных в набор записей значение, хранящееся в заданный элемент данных.  
+ The first version of the function takes a reference to a [CTime](../../atl-mfc-shared/reference/ctime-class.md) object. For a transfer from recordset to data source, this value is taken from the specified data member. For a transfer from data source to recordset, the value is stored in the specified data member.  
   
- Вторая версия функции, принимающей ссылку на **TIMESTAMP_STRUCT** структуры. Необходимо настроить эту структуру самостоятельно до вызова метода. Поддерживают ни обмен данными (диалоговых окон DDX) и поддержка мастера кода доступны для этой версии. Третья версия функции работают схожим образом с первой версией, за исключением того, что он принимает ссылку на [COleDateTime](../../atl-mfc-shared/reference/coledatetime-class.md) объекта.  
+ The second version of the function takes a reference to a **TIMESTAMP_STRUCT** structure. You must set up this structure yourself before the call. Neither dialog data exchange (DDX) support nor code wizard support is available for this version. The third version of the function works similarly to the first version except that it takes a reference to a [COleDateTime](../../atl-mfc-shared/reference/coledatetime-class.md) object.  
   
-### <a name="remarks"></a>Примечания  
- `CTime` Версии функции снижение некоторые промежуточной обработки и некоторой степени ограничены диапазоном значений. Если любой из этих факторов слишком ограничивающим, используйте второй версии функции. Но Обратите внимание, отсутствие поддержка DDX и мастер создания кода и требование, которое можно настроить структуру самостоятельно.  
+### <a name="remarks"></a>Remarks  
+ The `CTime` version of the function imposes the overhead of some intermediate processing and has a somewhat limited range. If you find either of these factors too limiting, use the second version of the function. But note its lack of code wizard and DDX support and the requirement that you set up the structure yourself.  
   
-### <a name="example"></a>Пример  
- В разделе [RFX_Text](#rfx_text).  
+### <a name="example"></a>Example  
+ See [RFX_Text](#rfx_text).  
   
-### <a name="requirements"></a>Требования  
- **Заголовок:** afxdb.h  
+### <a name="requirements"></a>Requirements  
+ **Header:** afxdb.h  
 
-## <a name="rfx_double"></a>RFX_Double
-Передача **double float** данных между элементами данных полей `CRecordset` объектов и столбцы записи в источнике данных ODBC типа **SQL_DOUBLE**.  
+## <a name="rfx_double"></a>  RFX_Double
+Transfers **double float** data between the field data members of a `CRecordset` object and the columns of a record on the data source of ODBC type **SQL_DOUBLE**.  
   
-### <a name="syntax"></a>Синтаксис  
+### <a name="syntax"></a>Syntax  
   
 ```
 void RFX_Double(  
@@ -290,26 +290,26 @@ void RFX_Double(
    double& value);  
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
  `pFX`  
- Указатель на объект класса [разделе](cfieldexchange-class.md). Этот объект содержит сведения для определения контекста для каждого вызова функции. Дополнительные сведения об операциях `CFieldExchange` объекта можно указать, см. в статье [обмен полями записей: принцип работы RFX](../../data/odbc/record-field-exchange-how-rfx-works.md).  
+ A pointer to an object of class [CFieldExchange](cfieldexchange-class.md). This object contains information to define the context for each call of the function. For more information about the operations a `CFieldExchange` object can specify, see the article [Record Field Exchange: How RFX Works](../../data/odbc/record-field-exchange-how-rfx-works.md).  
   
  `szName`  
- Имя столбца данных.  
+ The name of a data column.  
   
  *value*  
- Значение, хранящееся в указанные данные элемента, значение должно быть передано. При передаче из набора данных к источнику данных, значение типа **двойные**, берется из заданного элемента данных. Для передачи из источника данных в набор записей значение, хранящееся в заданный элемент данных.  
+ The value stored in the indicated data member — the value to be transferred. For a transfer from recordset to data source, the value, of type **double**, is taken from the specified data member. For a transfer from data source to recordset, the value is stored in the specified data member.  
   
-### <a name="example"></a>Пример  
- В разделе [RFX_Text](#rfx_text).  
+### <a name="example"></a>Example  
+ See [RFX_Text](#rfx_text).  
   
-### <a name="requirements"></a>Требования  
- **Заголовок:** afxdb.h  
+### <a name="requirements"></a>Requirements  
+ **Header:** afxdb.h  
 
-## <a name="rfx_int"></a>RFX_Int
-Передает целочисленные данные между элементами данных полей `CRecordset` объектов и столбцы записи в источнике данных ODBC типа **SQL_SMALLINT**.  
+## <a name="rfx_int"></a>  RFX_Int
+Transfers integer data between the field data members of a `CRecordset` object and the columns of a record on the data source of ODBC type **SQL_SMALLINT**.  
   
-### <a name="syntax"></a>Синтаксис  
+### <a name="syntax"></a>Syntax  
   
 ```
 void RFX_Int(  
@@ -318,26 +318,26 @@ void RFX_Int(
    int& value);  
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
  `pFX`  
- Указатель на объект класса [разделе](cfieldexchange-class.md). Этот объект содержит сведения для определения контекста для каждого вызова функции. Дополнительные сведения об операциях `CFieldExchange` объекта можно указать, см. в статье [обмен полями записей: принцип работы RFX](../../data/odbc/record-field-exchange-how-rfx-works.md).  
+ A pointer to an object of class [CFieldExchange](cfieldexchange-class.md). This object contains information to define the context for each call of the function. For more information about the operations a `CFieldExchange` object can specify, see the article [Record Field Exchange: How RFX Works](../../data/odbc/record-field-exchange-how-rfx-works.md).  
   
  `szName`  
- Имя столбца данных.  
+ The name of a data column.  
   
  *value*  
- Значение, хранящееся в указанные данные элемента, значение должно быть передано. При передаче из набора данных к источнику данных, значение типа `int`, берется из заданного элемента данных. Для передачи из источника данных в набор записей значение, хранящееся в заданный элемент данных.  
+ The value stored in the indicated data member — the value to be transferred. For a transfer from recordset to data source, the value, of type `int`, is taken from the specified data member. For a transfer from data source to recordset, the value is stored in the specified data member.  
   
-### <a name="example"></a>Пример  
- В разделе [RFX_Text](#rfx_text).  
+### <a name="example"></a>Example  
+ See [RFX_Text](#rfx_text).  
   
-### <a name="requirements"></a>Требования  
- **Заголовок:** afxdb.h  
+### <a name="requirements"></a>Requirements  
+ **Header:** afxdb.h  
 
-## <a name="rfx_long"></a>RFX_Long
-Передает данные в длинное целое число между элементами данных полей `CRecordset` объектов и столбцы записи в источнике данных ODBC типа **SQL_INTEGER**.  
+## <a name="rfx_long"></a>  RFX_Long
+Transfers long integer data between the field data members of a `CRecordset` object and the columns of a record on the data source of ODBC type **SQL_INTEGER**.  
   
-### <a name="syntax"></a>Синтаксис  
+### <a name="syntax"></a>Syntax  
   
 ```
 void RFX_Long(  
@@ -347,26 +347,26 @@ void RFX_Long(
 value );  
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
  `pFX`  
- Указатель на объект класса [разделе](cfieldexchange-class.md). Этот объект содержит сведения для определения контекста для каждого вызова функции. Дополнительные сведения об операциях `CFieldExchange` объекта можно указать, см. в статье [обмен полями записей: принцип работы RFX](../../data/odbc/record-field-exchange-how-rfx-works.md).  
+ A pointer to an object of class [CFieldExchange](cfieldexchange-class.md). This object contains information to define the context for each call of the function. For more information about the operations a `CFieldExchange` object can specify, see the article [Record Field Exchange: How RFX Works](../../data/odbc/record-field-exchange-how-rfx-works.md).  
   
  `szName`  
- Имя столбца данных.  
+ The name of a data column.  
   
  *value*  
- Значение, хранящееся в указанные данные элемента, значение должно быть передано. При передаче из набора данных к источнику данных, значение типа **длинные**, берется из заданного элемента данных. Для передачи из источника данных в набор записей значение, хранящееся в заданный элемент данных.  
+ The value stored in the indicated data member — the value to be transferred. For a transfer from recordset to data source, the value, of type **long**, is taken from the specified data member. For a transfer from data source to recordset, the value is stored in the specified data member.  
   
-### <a name="example"></a>Пример  
- В разделе [RFX_Text](#rfx_text).  
+### <a name="example"></a>Example  
+ See [RFX_Text](#rfx_text).  
   
-### <a name="requirements"></a>Требования  
- **Заголовок:** afxdb.h  
+### <a name="requirements"></a>Requirements  
+ **Header:** afxdb.h  
   
-## <a name="rfx_longbinary"></a>RFX_LongBinary
-Передает данные больших двоичных объектов (BLOB) с помощью класса [CLongBinary](clongbinary-class.md) между элементами данных полей `CRecordset` объектов и столбцы записи в источнике данных ODBC типа **SQL_LONGVARBINARY** или **SQL_LONGVARCHAR**.  
+## <a name="rfx_longbinary"></a>  RFX_LongBinary
+Transfers binary large object (BLOB) data using class [CLongBinary](clongbinary-class.md) between the field data members of a `CRecordset` object and the columns of a record on the data source of ODBC type **SQL_LONGVARBINARY** or **SQL_LONGVARCHAR**.  
   
-### <a name="syntax"></a>Синтаксис  
+### <a name="syntax"></a>Syntax  
   
 ```
 void RFX_LongBinary(  
@@ -375,26 +375,26 @@ void RFX_LongBinary(
    CLongBinary& value);  
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
  `pFX`  
- Указатель на объект класса [разделе](cfieldexchange-class.md). Этот объект содержит сведения для определения контекста для каждого вызова функции. Дополнительные сведения об операциях `CFieldExchange` объекта можно указать, см. в статье [обмен полями записей: принцип работы RFX](../../data/odbc/record-field-exchange-how-rfx-works.md).  
+ A pointer to an object of class [CFieldExchange](cfieldexchange-class.md). This object contains information to define the context for each call of the function. For more information about the operations a `CFieldExchange` object can specify, see the article [Record Field Exchange: How RFX Works](../../data/odbc/record-field-exchange-how-rfx-works.md).  
   
  `szName`  
- Имя столбца данных.  
+ The name of a data column.  
   
  *value*  
- Значение, хранящееся в указанные данные элемента, значение должно быть передано. При передаче из набора данных к источнику данных, значение типа `CLongBinary`, берется из заданного элемента данных. Для передачи из источника данных в набор записей значение, хранящееся в заданный элемент данных.  
+ The value stored in the indicated data member — the value to be transferred. For a transfer from recordset to data source, the value, of type `CLongBinary`, is taken from the specified data member. For a transfer from data source to recordset, the value is stored in the specified data member.  
   
-### <a name="example"></a>Пример  
- В разделе [RFX_Text](#rfx_text).  
+### <a name="example"></a>Example  
+ See [RFX_Text](#rfx_text).  
   
-### <a name="requirements"></a>Требования  
- **Заголовок:** afxdb.h  
+### <a name="requirements"></a>Requirements  
+ **Header:** afxdb.h  
 
-## <a name="rfx_single"></a>RFX_Single
-Передача данных с плавающей запятой между элементами данных полей `CRecordset` объектов и столбцы записи в источнике данных ODBC типа **SQL_REAL**.  
+## <a name="rfx_single"></a>  RFX_Single
+Transfers floating-point data between the field data members of a `CRecordset` object and the columns of a record on the data source of ODBC type **SQL_REAL**.  
   
-### <a name="syntax"></a>Синтаксис  
+### <a name="syntax"></a>Syntax  
   
 ```
 void RFX_Single(  
@@ -403,27 +403,27 @@ void RFX_Single(
    float& value);  
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
  `pFX`  
- Указатель на объект класса [разделе](cfieldexchange-class.md). Этот объект содержит сведения для определения контекста для каждого вызова функции. Дополнительные сведения об операциях `CFieldExchange` объекта можно указать, см. в статье [обмен полями записей: принцип работы RFX](../../data/odbc/record-field-exchange-how-rfx-works.md).  
+ A pointer to an object of class [CFieldExchange](cfieldexchange-class.md). This object contains information to define the context for each call of the function. For more information about the operations a `CFieldExchange` object can specify, see the article [Record Field Exchange: How RFX Works](../../data/odbc/record-field-exchange-how-rfx-works.md).  
   
  `szName`  
- Имя столбца данных.  
+ The name of a data column.  
   
  *value*  
- Значение, хранящееся в указанные данные элемента, значение должно быть передано. При передаче из набора данных к источнику данных, значение типа **float**, берется из заданного элемента данных. Для передачи из источника данных в набор записей значение, хранящееся в заданный элемент данных.  
+ The value stored in the indicated data member — the value to be transferred. For a transfer from recordset to data source, the value, of type **float**, is taken from the specified data member. For a transfer from data source to recordset, the value is stored in the specified data member.  
   
-### <a name="example"></a>Пример  
- В разделе [RFX_Text](#rfx_text).  
+### <a name="example"></a>Example  
+ See [RFX_Text](#rfx_text).  
   
-### <a name="requirements"></a>Требования  
- **Заголовок:** afxdb.h  
+### <a name="requirements"></a>Requirements  
+ **Header:** afxdb.h  
   
 
-## <a name="rfx_text"></a>RFX_Text
-Передача `CString` данных между элементами данных полей `CRecordset` объектов и столбцы записи в источнике данных ODBC типа **SQL_LONGVARCHAR**, **SQL_CHAR**, **SQL_VARCHAR**, **SQL_DECIMAL**, или **SQL_NUMERIC**.  
+## <a name="rfx_text"></a>  RFX_Text
+Transfers `CString` data between the field data members of a `CRecordset` object and columns of a record on the data source of ODBC type **SQL_LONGVARCHAR**, **SQL_CHAR**, **SQL_VARCHAR**, **SQL_DECIMAL**, or **SQL_NUMERIC**.  
   
-### <a name="syntax"></a>Синтаксис  
+### <a name="syntax"></a>Syntax  
   
 ```
 void RFX_Text(  
@@ -435,30 +435,30 @@ void RFX_Text(
    short nScale = 0);  
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
  `pFX`  
- Указатель на объект класса `CFieldExchange`. Этот объект содержит сведения для определения контекста для каждого вызова функции. Дополнительные сведения об операциях `CFieldExchange` объекта можно указать, см. в статье [обмен полями записей: принцип работы RFX](../../data/odbc/record-field-exchange-how-rfx-works.md).  
+ A pointer to an object of class `CFieldExchange`. This object contains information to define the context for each call of the function. For more information about the operations a `CFieldExchange` object can specify, see the article [Record Field Exchange: How RFX Works](../../data/odbc/record-field-exchange-how-rfx-works.md).  
   
  `szName`  
- Имя столбца данных.  
+ The name of a data column.  
   
  *value*  
- Значение, хранящееся в указанные данные элемента, значение должно быть передано. При передаче из набора данных к источнику данных, значение типа `CString`, берется из заданного элемента данных. Для передачи из источника данных в набор записей значение, хранящееся в заданный элемент данных.  
+ The value stored in the indicated data member — the value to be transferred. For a transfer from recordset to data source, the value, of type `CString`, is taken from the specified data member. For a transfer from data source to recordset, the value is stored in the specified data member.  
   
  `nMaxLength`  
- Максимально допустимая длина строки или массива, передаваемый. Значение по умолчанию `nMaxLength` — 255. Допустимые значения: от 1 до `INT_MAX`). Платформа выделяет этот объем пространства для данных. Для повышения производительности рекомендуется передайте достаточно велик для хранения наибольший элемент данных, который предполагается, что значение.  
+ The maximum allowed length of the string or array being transferred. The default value of `nMaxLength` is 255. Legal values are 1 to `INT_MAX`). The framework allocates this amount of space for the data. For best performance, pass a value large enough to accommodate the largest data item you expect.  
   
  *nColumnType*  
- Используется главным образом для параметров. Целое число, указывающее тип данных параметра. Тип является типом данных ODBC формы **SQL_XXX**.  
+ Used mainly for parameters. An integer indicating the data type of the parameter. The type is an ODBC data type of the form **SQL_XXX**.  
   
  `nScale`  
- Задает масштаб для значения типа ODBC **SQL_DECIMAL** или **SQL_NUMERIC**. `nScale`полезно только при задании значения параметров. Дополнительные сведения см. в разделе «Точность, масштаб, длину и отображаемый размер» в приложении D *справочнике программиста ODBC SDK*.  
+ Specifies the scale for values of ODBC type **SQL_DECIMAL** or **SQL_NUMERIC**. `nScale` is only useful when setting parameter values. For more information, see the topic "Precision, Scale, Length, and Display Size" in Appendix D of the *ODBC SDK Programmer's Reference*.  
   
-### <a name="remarks"></a>Примечания  
- Сопоставления данных в источнике данных всех этих типов в / из `CString` в наборе записей.  
+### <a name="remarks"></a>Remarks  
+ Data in the data source of all of these types is mapped to and from `CString` in the recordset.  
   
-### <a name="example"></a>Пример  
- В этом примере показано несколько вызовов `RFX_Text`. Обратите внимание также два вызова `CFieldExchange::SetFieldType`. Для параметров необходимо написать вызов `SetFieldType` и его вызов RFX. Выходной столбец и его связанные вызовов RFX обычно записываются мастером код.  
+### <a name="example"></a>Example  
+ This example shows several calls to `RFX_Text`. Notice also the two calls to `CFieldExchange::SetFieldType`. For parameters you must write the call to `SetFieldType` and its RFX call. The output column call and its associated RFX calls are normally written by a code wizard.  
   
 ```cpp  
 void CCustomer::DoFieldExchange(CFieldExchange* pFX)
@@ -478,14 +478,14 @@ void CCustomer::DoFieldExchange(CFieldExchange* pFX)
 }
 ```
   
-### <a name="requirements"></a>Требования  
- **Заголовок:** afxdb.h  
+### <a name="requirements"></a>Requirements  
+ **Header:** afxdb.h  
 
 
-## <a name="rfx_binary_bulk"></a>RFX_Binary_Bulk
-Передает несколько строк данных байтов из столбца источника данных ODBC на соответствующий массив в `CRecordset`-производного объекта.  
+## <a name="rfx_binary_bulk"></a>  RFX_Binary_Bulk
+Transfers multiple rows of byte data from a column of an ODBC data source to a corresponding array in a `CRecordset`-derived object.  
   
-### <a name="syntax"></a>Синтаксис  
+### <a name="syntax"></a>Syntax  
   
 ```
 void RFX_Binary_Bulk(  
@@ -496,42 +496,42 @@ void RFX_Binary_Bulk(
    int nMaxLength);  
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
  `pFX`  
- Указатель на [разделе](cfieldexchange-class.md) объекта. Этот объект содержит сведения для определения контекста для каждого вызова функции. Дополнительные сведения см. в статье [обмен полями записей: принцип работы RFX](../../data/odbc/record-field-exchange-how-rfx-works.md).  
+ A pointer to a [CFieldExchange](cfieldexchange-class.md) object. This object contains information to define the context for each call of the function. For more information, see the article [Record Field Exchange: How RFX Works](../../data/odbc/record-field-exchange-how-rfx-works.md).  
   
  `szName`  
- Имя столбца данных.  
+ The name of a data column.  
   
  `prgByteVals`  
- Указатель на массив **БАЙТОВ** значения. Этот массив хранения данных для передачи из источника данных в набор записей.  
+ A pointer to an array of **BYTE** values. This array will store the data to be transferred from the data source to the recordset.  
   
  `prgLengths`  
- Указатель на массив длинных целых чисел. Этот массив будет сохранять длину в байтах для каждого значения в массиве, на который указывает `prgByteVals`. Обратите внимание, что значение **SQL_NULL_DATA** будет сохранен в том случае, если соответствующий элемент данных содержит значение Null. Дополнительные сведения см. в описании функции API-интерфейса ODBC **SQLBindCol** в *справочнике программиста ODBC SDK*.  
+ A pointer to an array of long integers. This array will store the length in bytes of each value in the array pointed to by `prgByteVals`. Note that the value **SQL_NULL_DATA** will be stored if the corresponding data item contains a Null value. For more details, see the ODBC API function **SQLBindCol** in the *ODBC SDK Programmer's Reference*.  
   
  `nMaxLength`  
- Максимально допустимая длина значений, хранящихся в массиве, на который указывает `prgByteVals`. Чтобы убедиться, что данные не будут усечены, передайте значение достаточно велик для хранения самого большого элемента данных предполагается, что.  
+ The maximum allowed length of the values stored in the array pointed to by `prgByteVals`. To ensure that data will not be truncated, pass a value large enough to accommodate the largest data item you expect.  
   
-### <a name="remarks"></a>Примечания  
- Столбцы источника данных может иметь тип ODBC **SQL_BINARY**, **SQL_VARBINARY**, или **SQL_LONGVARBINARY**. Набор записей необходимо определить тип указателя на член данных поля **БАЙТОВ**.  
+### <a name="remarks"></a>Remarks  
+ The data source column can have an ODBC type of **SQL_BINARY**, **SQL_VARBINARY**, or **SQL_LONGVARBINARY**. The recordset must define a field data member of type pointer to **BYTE**.  
   
- Если инициализировать `prgByteVals` и `prgLengths` для **NULL**, а затем массивы, они указывают выделяется автоматически, с размерами, равно размеру набора строк.  
+ If you initialize `prgByteVals` and `prgLengths` to **NULL**, then the arrays they point to will be allocated automatically, with sizes equal to the rowset size.  
   
 > [!NOTE]
->  Блочный обмен полей записей передает только данные из источника данных объекта набора записей. Чтобы сделать возможно обновление набора записей, необходимо использовать функцию ODBC API **SQLSetPos**.  
+>  Bulk record field exchange only transfers data from the data source to the recordset object. In order to make your recordset updateable, you must use the ODBC API function **SQLSetPos**.  
   
- Дополнительные сведения см. в статьях [набор записей: групповая выборка записей (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md) и [обмен полей записей (RFX)](../../data/odbc/record-field-exchange-rfx.md).  
+ For more information, see the articles [Recordset: Fetching Records in Bulk (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md) and [Record Field Exchange (RFX)](../../data/odbc/record-field-exchange-rfx.md).  
   
-### <a name="example"></a>Пример  
- В разделе [RFX_Text_Bulk](#rfx_text_bulk).  
+### <a name="example"></a>Example  
+ See [RFX_Text_Bulk](#rfx_text_bulk).  
   
-### <a name="requirements"></a>Требования  
- **Заголовок:** afxdb.h  
+### <a name="requirements"></a>Requirements  
+ **Header:** afxdb.h  
 
-## <a name="rfx_bool_bulk"></a>RFX_Bool_Bulk
-Передает несколько строк данных Boolean из столбца источника данных ODBC на соответствующий массив в `CRecordset`-производного объекта.  
+## <a name="rfx_bool_bulk"></a>  RFX_Bool_Bulk
+Transfers multiple rows of Boolean data from a column of an ODBC data source to a corresponding array in a `CRecordset`-derived object.  
   
-### <a name="syntax"></a>Синтаксис  
+### <a name="syntax"></a>Syntax  
   
 ```
 void RFX_Bool_Bulk(  
@@ -541,39 +541,39 @@ void RFX_Bool_Bulk(
    long** prgLengths);  
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
  `pFX`  
- Указатель на [разделе](cfieldexchange-class.md) объекта. Этот объект содержит сведения для определения контекста для каждого вызова функции. Дополнительные сведения см. в статье [обмен полями записей: принцип работы RFX](../../data/odbc/record-field-exchange-how-rfx-works.md).  
+ A pointer to a [CFieldExchange](cfieldexchange-class.md) object. This object contains information to define the context for each call of the function. For more information, see the article [Record Field Exchange: How RFX Works](../../data/odbc/record-field-exchange-how-rfx-works.md).  
   
  `szName`  
- Имя столбца данных.  
+ The name of a data column.  
   
  `prgBoolVals`  
- Указатель на массив **BOOL** значения. Этот массив хранения данных для передачи из источника данных в набор записей.  
+ A pointer to an array of **BOOL** values. This array will store the data to be transferred from the data source to the recordset.  
   
  `prgLengths`  
- Указатель на массив длинных целых чисел. Этот массив будет сохранять длину в байтах для каждого значения в массиве, на который указывает `prgBoolVals`. Обратите внимание, что значение **SQL_NULL_DATA** будет сохранен в том случае, если соответствующий элемент данных содержит значение Null. Дополнительные сведения см. в описании функции API-интерфейса ODBC **SQLBindCol** в *справочнике программиста ODBC SDK*.  
+ A pointer to an array of long integers. This array will store the length in bytes of each value in the array pointed to by `prgBoolVals`. Note that the value **SQL_NULL_DATA** will be stored if the corresponding data item contains a Null value. For more details, see the ODBC API function **SQLBindCol** in the *ODBC SDK Programmer's Reference*.  
   
-### <a name="remarks"></a>Примечания  
- Столбцы источника данных должны иметь тип ODBC **SQL_BIT**. Набор записей необходимо определить тип указателя на член данных поля **BOOL**.  
+### <a name="remarks"></a>Remarks  
+ The data source column must have an ODBC type of **SQL_BIT**. The recordset must define a field data member of type pointer to **BOOL**.  
   
- Если инициализировать `prgBoolVals` и `prgLengths` для **NULL**, а затем массивы, они указывают выделяется автоматически, с размерами, равно размеру набора строк.  
+ If you initialize `prgBoolVals` and `prgLengths` to **NULL**, then the arrays they point to will be allocated automatically, with sizes equal to the rowset size.  
   
 > [!NOTE]
->  Блочный обмен полей записей передает только данные из источника данных объекта набора записей. Чтобы сделать возможно обновление набора записей, необходимо использовать функцию ODBC API **SQLSetPos**.  
+>  Bulk record field exchange only transfers data from the data source to the recordset object. To make your recordset updateable, you must use the ODBC API function **SQLSetPos**.  
   
- Дополнительные сведения см. в статьях [набор записей: групповая выборка записей (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md) и [обмен полей записей (RFX)](../../data/odbc/record-field-exchange-rfx.md).  
+ For more information, see the articles [Recordset: Fetching Records in Bulk (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md) and [Record Field Exchange (RFX)](../../data/odbc/record-field-exchange-rfx.md).  
   
-### <a name="example"></a>Пример  
- В разделе [RFX_Text_Bulk](#rfx_text_bulk).  
+### <a name="example"></a>Example  
+ See [RFX_Text_Bulk](#rfx_text_bulk).  
   
-### <a name="requirements"></a>Требования  
- **Заголовок:** afxdb.h  
+### <a name="requirements"></a>Requirements  
+ **Header:** afxdb.h  
 
-## <a name="rfx_byte_bulk"></a>RFX_Byte_Bulk
-Передает несколько строк один байт из столбца источника данных ODBC на соответствующий массив в `CRecordset`-производного объекта.  
+## <a name="rfx_byte_bulk"></a>  RFX_Byte_Bulk
+Transfers multiple rows of single bytes from a column of an ODBC data source to a corresponding array in a `CRecordset`-derived object.  
   
-### <a name="syntax"></a>Синтаксис  
+### <a name="syntax"></a>Syntax  
   
 ```
 void RFX_Byte_Bulk(  
@@ -583,39 +583,39 @@ void RFX_Byte_Bulk(
    long** prgLengths);  
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
  `pFX`  
- Указатель на [разделе](cfieldexchange-class.md) объекта. Этот объект содержит сведения для определения контекста для каждого вызова функции. Дополнительные сведения см. в статье [обмен полями записей: принцип работы RFX](../../data/odbc/record-field-exchange-how-rfx-works.md).  
+ A pointer to a [CFieldExchange](cfieldexchange-class.md) object. This object contains information to define the context for each call of the function. For more information, see the article [Record Field Exchange: How RFX Works](../../data/odbc/record-field-exchange-how-rfx-works.md).  
   
  `szName`  
- Имя столбца данных.  
+ The name of a data column.  
   
  `prgByteVals`  
- Указатель на массив **БАЙТОВ** значения. Этот массив хранения данных для передачи из источника данных в набор записей.  
+ A pointer to an array of **BYTE** values. This array will store the data to be transferred from the data source to the recordset.  
   
  `prgLengths`  
- Указатель на массив длинных целых чисел. Этот массив будет сохранять длину в байтах для каждого значения в массиве, на который указывает `prgByteVals`. Обратите внимание, что значение **SQL_NULL_DATA** будет сохранен в том случае, если соответствующий элемент данных содержит значение Null. Дополнительные сведения см. в описании функции API-интерфейса ODBC **SQLBindCol** в *справочнике программиста ODBC SDK*.  
+ A pointer to an array of long integers. This array will store the length in bytes of each value in the array pointed to by `prgByteVals`. Note that the value **SQL_NULL_DATA** will be stored if the corresponding data item contains a Null value. For more details, see the ODBC API function **SQLBindCol** in the *ODBC SDK Programmer's Reference*.  
   
-### <a name="remarks"></a>Примечания  
- Столбцы источника данных должны иметь тип ODBC **SQL_TINYINT**. Набор записей необходимо определить тип указателя на член данных поля **БАЙТОВ**.  
+### <a name="remarks"></a>Remarks  
+ The data source column must have an ODBC type of **SQL_TINYINT**. The recordset must define a field data member of type pointer to **BYTE**.  
   
- Если инициализировать `prgByteVals` и `prgLengths` для **NULL**, а затем массивы, они указывают выделяется автоматически, с размерами, равно размеру набора строк.  
+ If you initialize `prgByteVals` and `prgLengths` to **NULL**, then the arrays they point to will be allocated automatically, with sizes equal to the rowset size.  
   
 > [!NOTE]
->  Блочный обмен полей записей передает только данные из источника данных объекта набора записей. Чтобы сделать возможно обновление набора записей, необходимо использовать функцию ODBC API **SQLSetPos**.  
+>  Bulk record field exchange only transfers data from the data source to the recordset object. To make your recordset updateable, you must use the ODBC API function **SQLSetPos**.  
   
- Дополнительные сведения см. в статьях [набор записей: групповая выборка записей (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md) и [обмен полей записей (RFX)](../../data/odbc/record-field-exchange-rfx.md).  
+ For more information, see the articles [Recordset: Fetching Records in Bulk (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md) and [Record Field Exchange (RFX)](../../data/odbc/record-field-exchange-rfx.md).  
   
-### <a name="example"></a>Пример  
- В разделе [RFX_Text_Bulk](#rfx_text_bulk).  
+### <a name="example"></a>Example  
+ See [RFX_Text_Bulk](#rfx_text_bulk).  
   
-### <a name="requirements"></a>Требования  
- **Заголовок:** afxdb.h  
+### <a name="requirements"></a>Requirements  
+ **Header:** afxdb.h  
   
-## <a name="rfx_date_bulk"></a>RFX_Date_Bulk
-Передача нескольких строк **TIMESTAMP_STRUCT** данные из столбцов источника данных ODBC на соответствующий массив в `CRecordset`-производного объекта.  
+## <a name="rfx_date_bulk"></a>  RFX_Date_Bulk
+Transfers multiple rows of **TIMESTAMP_STRUCT** data from a column of an ODBC data source to a corresponding array in a `CRecordset`-derived object.  
   
-### <a name="syntax"></a>Синтаксис  
+### <a name="syntax"></a>Syntax  
   
 ```
 void RFX_Date_Bulk(  
@@ -625,39 +625,39 @@ void RFX_Date_Bulk(
    long** prgLengths);  
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
  `pFX`  
- Указатель на [разделе](cfieldexchange-class.md) объекта. Этот объект содержит сведения для определения контекста для каждого вызова функции. Дополнительные сведения см. в статье [обмен полями записей: принцип работы RFX](../../data/odbc/record-field-exchange-how-rfx-works.md).  
+ A pointer to a [CFieldExchange](cfieldexchange-class.md) object. This object contains information to define the context for each call of the function. For more information, see the article [Record Field Exchange: How RFX Works](../../data/odbc/record-field-exchange-how-rfx-works.md).  
   
  `szName`  
- Имя столбца данных.  
+ The name of a data column.  
   
  `prgTSVals`  
- Указатель на массив **TIMESTAMP_STRUCT** значения. Этот массив хранения данных для передачи из источника данных в набор записей. Дополнительные сведения о **TIMESTAMP_STRUCT** тип данных, см. в разделе «Типы данных C» в приложении D *справочнике программиста ODBC SDK*.  
+ A pointer to an array of **TIMESTAMP_STRUCT** values. This array will store the data to be transferred from the data source to the recordset. For more information about the **TIMESTAMP_STRUCT** data type, see the topic "C Data Types" in Appendix D of the *ODBC SDK Programmer's Reference*.  
   
  `prgLengths`  
- Указатель на массив длинных целых чисел. Этот массив будет сохранять длину в байтах для каждого значения в массиве, на который указывает `prgTSVals`. Обратите внимание, что значение **SQL_NULL_DATA** будет сохранен в том случае, если соответствующий элемент данных содержит значение Null. Дополнительные сведения см. в описании функции API-интерфейса ODBC **SQLBindCol** в *справочнике программиста ODBC SDK*.  
+ A pointer to an array of long integers. This array will store the length in bytes of each value in the array pointed to by `prgTSVals`. Note that the value **SQL_NULL_DATA** will be stored if the corresponding data item contains a Null value. For more details, see the ODBC API function **SQLBindCol** in the *ODBC SDK Programmer's Reference*.  
   
-### <a name="remarks"></a>Примечания  
- Столбцы источника данных может иметь тип ODBC **SQL_DATE**, **SQL_TIME**, или **SQL_TIMESTAMP**. Набор записей необходимо определить тип указателя на член данных поля **TIMESTAMP_STRUCT**.  
+### <a name="remarks"></a>Remarks  
+ The data source column can have an ODBC type of **SQL_DATE**, **SQL_TIME**, or **SQL_TIMESTAMP**. The recordset must define a field data member of type pointer to **TIMESTAMP_STRUCT**.  
   
- Если инициализировать `prgTSVals` и `prgLengths` для **NULL**, а затем массивы, они указывают выделяется автоматически, с размерами, равно размеру набора строк.  
+ If you initialize `prgTSVals` and `prgLengths` to **NULL**, then the arrays they point to will be allocated automatically, with sizes equal to the rowset size.  
   
 > [!NOTE]
->  Блочный обмен полей записей передает только данные из источника данных объекта набора записей. Чтобы сделать возможно обновление набора записей, необходимо использовать функцию ODBC API **SQLSetPos**.  
+>  Bulk record field exchange only transfers data from the data source to the recordset object. To make your recordset updateable, you must use the ODBC API function **SQLSetPos**.  
   
- Дополнительные сведения см. в статьях [набор записей: групповая выборка записей (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md) и [обмен полей записей (RFX)](../../data/odbc/record-field-exchange-rfx.md).  
+ For more information, see the articles [Recordset: Fetching Records in Bulk (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md) and [Record Field Exchange (RFX)](../../data/odbc/record-field-exchange-rfx.md).  
   
-### <a name="example"></a>Пример  
- В разделе [RFX_Text_Bulk](#rfx_text_bulk).  
+### <a name="example"></a>Example  
+ See [RFX_Text_Bulk](#rfx_text_bulk).  
   
-### <a name="requirements"></a>Требования  
- **Заголовок:** afxdb.h  
+### <a name="requirements"></a>Requirements  
+ **Header:** afxdb.h  
 
-## <a name="rfx_double_bulk"></a>RFX_Double_Bulk
-Передает несколько строк двойной точности с плавающей запятой данных из столбца источника данных ODBC на соответствующий массив в `CRecordset`-производного объекта.  
+## <a name="rfx_double_bulk"></a>  RFX_Double_Bulk
+Transfers multiple rows of double-precision, floating-point data from a column of an ODBC data source to a corresponding array in a `CRecordset`-derived object.  
   
-### <a name="syntax"></a>Синтаксис  
+### <a name="syntax"></a>Syntax  
   
 ```
 void RFX_Double_Bulk(  
@@ -667,39 +667,39 @@ void RFX_Double_Bulk(
    long** prgLengths);  
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
  `pFX`  
- Указатель на [разделе](cfieldexchange-class.md) объекта. Этот объект содержит сведения для определения контекста для каждого вызова функции. Дополнительные сведения см. в статье [обмен полями записей: принцип работы RFX](../../data/odbc/record-field-exchange-how-rfx-works.md).  
+ A pointer to a [CFieldExchange](cfieldexchange-class.md) object. This object contains information to define the context for each call of the function. For more information, see the article [Record Field Exchange: How RFX Works](../../data/odbc/record-field-exchange-how-rfx-works.md).  
   
  `szName`  
- Имя столбца данных.  
+ The name of a data column.  
   
  `prgDblVals`  
- Указатель на массив **двойные** значения. Этот массив хранения данных для передачи из источника данных в набор записей.  
+ A pointer to an array of **double** values. This array will store the data to be transferred from the data source to the recordset.  
   
  `prgLengths`  
- Указатель на массив длинных целых чисел. Этот массив будет сохранять длину в байтах для каждого значения в массиве, на который указывает `prgDblVals`. Обратите внимание, что значение **SQL_NULL_DATA** будет сохранен в том случае, если соответствующий элемент данных содержит значение Null. Дополнительные сведения см. в описании функции API-интерфейса ODBC **SQLBindCol** в *справочнике программиста ODBC SDK*.  
+ A pointer to an array of long integers. This array will store the length in bytes of each value in the array pointed to by `prgDblVals`. Note that the value **SQL_NULL_DATA** will be stored if the corresponding data item contains a Null value. For more details, see the ODBC API function **SQLBindCol** in the *ODBC SDK Programmer's Reference*.  
   
-### <a name="remarks"></a>Примечания  
- Столбцы источника данных должны иметь тип ODBC **SQL_DOUBLE**. Набор записей необходимо определить тип указателя на член данных поля **двойные**.  
+### <a name="remarks"></a>Remarks  
+ The data source column must have an ODBC type of **SQL_DOUBLE**. The recordset must define a field data member of type pointer to **double**.  
   
- Если инициализировать `prgDblVals` и `prgLengths` для **NULL**, а затем массивы, они указывают выделяется автоматически, с размерами, равно размеру набора строк.  
+ If you initialize `prgDblVals` and `prgLengths` to **NULL**, then the arrays they point to will be allocated automatically, with sizes equal to the rowset size.  
   
 > [!NOTE]
->  Блочный обмен полей записей передает только данные из источника данных объекта набора записей. Чтобы сделать возможно обновление набора записей, необходимо использовать функцию ODBC API **SQLSetPos**.  
+>  Bulk record field exchange only transfers data from the data source to the recordset object. To make your recordset updateable, you must use the ODBC API function **SQLSetPos**.  
   
- Дополнительные сведения см. в статьях [набор записей: групповая выборка записей (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md) и [обмен полей записей (RFX)](../../data/odbc/record-field-exchange-rfx.md).  
+ For more information, see the articles [Recordset: Fetching Records in Bulk (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md) and [Record Field Exchange (RFX)](../../data/odbc/record-field-exchange-rfx.md).  
   
-### <a name="example"></a>Пример  
- В разделе [RFX_Text_Bulk](#rfx_text_bulk).  
+### <a name="example"></a>Example  
+ See [RFX_Text_Bulk](#rfx_text_bulk).  
   
-### <a name="requirements"></a>Требования  
- **Заголовок:** afxdb.h  
+### <a name="requirements"></a>Requirements  
+ **Header:** afxdb.h  
 
-## <a name="rfx_int_bulk"></a>RFX_Int_Bulk
-Передает целочисленные данные между элементами данных полей `CRecordset` объектов и столбцы записи в источнике данных ODBC типа **SQL_SMALLINT**.  
+## <a name="rfx_int_bulk"></a>  RFX_Int_Bulk
+Transfers integer data between the field data members of a `CRecordset` object and the columns of a record on the data source of ODBC type **SQL_SMALLINT**.  
   
-### <a name="syntax"></a>Синтаксис  
+### <a name="syntax"></a>Syntax  
   
 ```
 void RFX_Int(  
@@ -708,26 +708,26 @@ void RFX_Int(
    int& value);  
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
  `pFX`  
- Указатель на объект класса [разделе](cfieldexchange-class.md). Этот объект содержит сведения для определения контекста для каждого вызова функции. Дополнительные сведения об операциях `CFieldExchange` объекта можно указать, см. в статье [обмен полями записей: принцип работы RFX](../../data/odbc/record-field-exchange-how-rfx-works.md).  
+ A pointer to an object of class [CFieldExchange](cfieldexchange-class.md). This object contains information to define the context for each call of the function. For more information about the operations a `CFieldExchange` object can specify, see the article [Record Field Exchange: How RFX Works](../../data/odbc/record-field-exchange-how-rfx-works.md).  
   
  `szName`  
- Имя столбца данных.  
+ The name of a data column.  
   
  *value*  
- Значение, хранящееся в указанные данные элемента, значение должно быть передано. При передаче из набора данных к источнику данных, значение типа `int`, берется из заданного элемента данных. Для передачи из источника данных в набор записей значение, хранящееся в заданный элемент данных.  
+ The value stored in the indicated data member — the value to be transferred. For a transfer from recordset to data source, the value, of type `int`, is taken from the specified data member. For a transfer from data source to recordset, the value is stored in the specified data member.  
   
-### <a name="example"></a>Пример  
- В разделе [RFX_Text](#rfx_text).  
+### <a name="example"></a>Example  
+ See [RFX_Text](#rfx_text).  
   
-### <a name="requirements"></a>Требования  
- **Заголовок:** afxdb.h  
+### <a name="requirements"></a>Requirements  
+ **Header:** afxdb.h  
 
-## <a name="rfx_long_bulk"></a>RFX_Long_Bulk
-Передает несколько строк данных типа long integer из столбца источника данных ODBC на соответствующий массив в `CRecordset`-производного объекта.  
+## <a name="rfx_long_bulk"></a>  RFX_Long_Bulk
+Transfers multiple rows of long integer data from a column of an ODBC data source to a corresponding array in a `CRecordset`-derived object.  
   
-### <a name="syntax"></a>Синтаксис  
+### <a name="syntax"></a>Syntax  
   
 ```
 void RFX_Long_Bulk(  
@@ -737,39 +737,39 @@ void RFX_Long_Bulk(
    long** prgLengths);  
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
  `pFX`  
- Указатель на [разделе](cfieldexchange-class.md) объекта. Этот объект содержит сведения для определения контекста для каждого вызова функции. Дополнительные сведения см. в статье [обмен полями записей: принцип работы RFX](../../data/odbc/record-field-exchange-how-rfx-works.md).  
+ A pointer to a [CFieldExchange](cfieldexchange-class.md) object. This object contains information to define the context for each call of the function. For more information, see the article [Record Field Exchange: How RFX Works](../../data/odbc/record-field-exchange-how-rfx-works.md).  
   
  `szName`  
- Имя столбца данных.  
+ The name of a data column.  
   
  `prgLongVals`  
- Указатель на массив длинных целых чисел. Этот массив хранения данных для передачи из источника данных в набор записей.  
+ A pointer to an array of long integers. This array will store the data to be transferred from the data source to the recordset.  
   
  `prgLengths`  
- Указатель на массив длинных целых чисел. Этот массив будет сохранять длину в байтах для каждого значения в массиве, на который указывает `prgLongVals`. Обратите внимание, что значение **SQL_NULL_DATA** будет сохранен в том случае, если соответствующий элемент данных содержит значение Null. Дополнительные сведения см. в описании функции API-интерфейса ODBC **SQLBindCol** в *справочнике программиста ODBC SDK*.  
+ A pointer to an array of long integers. This array will store the length in bytes of each value in the array pointed to by `prgLongVals`. Note that the value **SQL_NULL_DATA** will be stored if the corresponding data item contains a Null value. For more details, see the ODBC API function **SQLBindCol** in the *ODBC SDK Programmer's Reference*.  
   
-### <a name="remarks"></a>Примечания  
- Столбцы источника данных должны иметь тип ODBC **SQL_INTEGER**. Набор записей необходимо определить тип указателя на член данных поля **длинные**.  
+### <a name="remarks"></a>Remarks  
+ The data source column must have an ODBC type of **SQL_INTEGER**. The recordset must define a field data member of type pointer to **long**.  
   
- Если инициализировать `prgLongVals` и `prgLengths` для **NULL**, а затем массивы, они указывают выделяется автоматически, с размерами, равно размеру набора строк.  
+ If you initialize `prgLongVals` and `prgLengths` to **NULL**, then the arrays they point to will be allocated automatically, with sizes equal to the rowset size.  
   
 > [!NOTE]
->  Блочный обмен полей записей передает только данные из источника данных объекта набора записей. Чтобы сделать возможно обновление набора записей, необходимо использовать функцию ODBC API **SQLSetPos**.  
+>  Bulk record field exchange only transfers data from the data source to the recordset object. To make your recordset updateable, you must use the ODBC API function **SQLSetPos**.  
   
- Дополнительные сведения см. в статьях [набор записей: групповая выборка записей (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md) и [обмен полей записей (RFX)](../../data/odbc/record-field-exchange-rfx.md).  
+ For more information, see the articles [Recordset: Fetching Records in Bulk (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md) and [Record Field Exchange (RFX)](../../data/odbc/record-field-exchange-rfx.md).  
   
-### <a name="example"></a>Пример  
- В разделе [RFX_Text_Bulk](#rfx_text_bulk).  
+### <a name="example"></a>Example  
+ See [RFX_Text_Bulk](#rfx_text_bulk).  
   
-### <a name="requirements"></a>Требования  
- **Заголовок:** afxdb.h  
+### <a name="requirements"></a>Requirements  
+ **Header:** afxdb.h  
 
-## <a name="rfx_single_bulk"></a>RFX_Single_Bulk
-Передает несколько строк данных с плавающей запятой из столбца источника данных ODBC на соответствующий массив в `CRecordset`-производного объекта.  
+## <a name="rfx_single_bulk"></a>  RFX_Single_Bulk
+Transfers multiple rows of floating-point data from a column of an ODBC data source to a corresponding array in a `CRecordset`-derived object.  
   
-### <a name="syntax"></a>Синтаксис  
+### <a name="syntax"></a>Syntax  
   
 ```
 void RFX_Single_Bulk(  
@@ -779,40 +779,40 @@ void RFX_Single_Bulk(
    long** prgLengths);  
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
  `pFX`  
- Указатель на [разделе](cfieldexchange-class.md) объекта. Этот объект содержит сведения для определения контекста для каждого вызова функции. Дополнительные сведения см. в статье [обмен полями записей: принцип работы RFX](../../data/odbc/record-field-exchange-how-rfx-works.md).  
+ A pointer to a [CFieldExchange](cfieldexchange-class.md) object. This object contains information to define the context for each call of the function. For more information, see the article [Record Field Exchange: How RFX Works](../../data/odbc/record-field-exchange-how-rfx-works.md).  
   
  `szName`  
- Имя столбца данных.  
+ The name of a data column.  
   
  `prgFltVals`  
- Указатель на массив **float** значения. Этот массив хранения данных для передачи из источника данных в набор записей.  
+ A pointer to an array of **float** values. This array will store the data to be transferred from the data source to the recordset.  
   
  `prgLengths`  
- Указатель на массив длинных целых чисел. Этот массив будет сохранять длину в байтах для каждого значения в массиве, на который указывает `prgFltVals`. Обратите внимание, что значение **SQL_NULL_DATA** будет сохранен в том случае, если соответствующий элемент данных содержит значение Null. Дополнительные сведения см. в описании функции API-интерфейса ODBC **SQLBindCol** в *справочнике программиста ODBC SDK*.  
+ A pointer to an array of long integers. This array will store the length in bytes of each value in the array pointed to by `prgFltVals`. Note that the value **SQL_NULL_DATA** will be stored if the corresponding data item contains a Null value. For more details, see the ODBC API function **SQLBindCol** in the *ODBC SDK Programmer's Reference*.  
   
-### <a name="remarks"></a>Примечания  
- Столбцы источника данных должны иметь тип ODBC **SQL_REAL**. Набор записей необходимо определить тип указателя на член данных поля **float**.  
+### <a name="remarks"></a>Remarks  
+ The data source column must have an ODBC type of **SQL_REAL**. The recordset must define a field data member of type pointer to **float**.  
   
- Если инициализировать `prgFltVals` и `prgLengths` для **NULL**, а затем массивы, они указывают выделяется автоматически, с размерами, равно размеру набора строк.  
+ If you initialize `prgFltVals` and `prgLengths` to **NULL**, then the arrays they point to will be allocated automatically, with sizes equal to the rowset size.  
   
 > [!NOTE]
->  Блочный обмен полей записей передает только данные из источника данных объекта набора записей. Чтобы сделать возможно обновление набора записей, необходимо использовать функцию ODBC API **SQLSetPos**.  
+>  Bulk record field exchange only transfers data from the data source to the recordset object. To make your recordset updateable, you must use the ODBC API function **SQLSetPos**.  
   
- Дополнительные сведения см. в статьях [набор записей: групповая выборка записей (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md) и [обмен полей записей (RFX)](../../data/odbc/record-field-exchange-rfx.md).  
+ For more information, see the articles [Recordset: Fetching Records in Bulk (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md) and [Record Field Exchange (RFX)](../../data/odbc/record-field-exchange-rfx.md).  
   
-### <a name="example"></a>Пример  
- В разделе [RFX_Text_Bulk](#rfx_text_bulk).  
+### <a name="example"></a>Example  
+ See [RFX_Text_Bulk](#rfx_text_bulk).  
   
-### <a name="requirements"></a>Требования  
- **Заголовок:** afxdb.h  
+### <a name="requirements"></a>Requirements  
+ **Header:** afxdb.h  
   
 
-## <a name="rfx_text_bulk"></a>RFX_Text_Bulk
-Передает несколько строк символьных данных из столбца источника данных ODBC на соответствующий массив в `CRecordset`-производного объекта.  
+## <a name="rfx_text_bulk"></a>  RFX_Text_Bulk
+Transfers multiple rows of character data from a column of an ODBC data source to a corresponding array in a `CRecordset`-derived object.  
   
-### <a name="syntax"></a>Синтаксис  
+### <a name="syntax"></a>Syntax  
   
 ```
 void RFX_Text_Bulk(  
@@ -823,34 +823,34 @@ void RFX_Text_Bulk(
    int nMaxLength);  
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
  `pFX`  
- Указатель на [разделе](cfieldexchange-class.md) объекта. Этот объект содержит сведения для определения контекста для каждого вызова функции. Дополнительные сведения см. в статье [обмен полями записей: принцип работы RFX](../../data/odbc/record-field-exchange-how-rfx-works.md).  
+ A pointer to a [CFieldExchange](cfieldexchange-class.md) object. This object contains information to define the context for each call of the function. For more information, see the article [Record Field Exchange: How RFX Works](../../data/odbc/record-field-exchange-how-rfx-works.md).  
   
  `szName`  
- Имя столбца данных.  
+ The name of a data column.  
   
  `prgStrVals`  
- Указатель на массив **LPSTR** значения. Этот массив хранения данных для передачи из источника данных в набор записей. Обратите внимание, что в текущей версии ODBC, эти значения не может быть Юникода.  
+ A pointer to an array of **LPSTR** values. This array will store the data to be transferred from the data source to the recordset. Note that with the current version of ODBC, these values cannot be Unicode.  
   
  `prgLengths`  
- Указатель на массив длинных целых чисел. Этот массив будет сохранять длину в байтах для каждого значения в массиве, на который указывает `prgStrVals`. Эту длину исключает нулевой символ. Обратите внимание, что значение **SQL_NULL_DATA** будет сохранен в том случае, если соответствующий элемент данных содержит значение Null. Дополнительные сведения см. в описании функции API-интерфейса ODBC **SQLBindCol** в *справочнике программиста ODBC SDK*.  
+ A pointer to an array of long integers. This array will store the length in bytes of each value in the array pointed to by `prgStrVals`. This length excludes the null termination character. Note that the value **SQL_NULL_DATA** will be stored if the corresponding data item contains a Null value. For more details, see the ODBC API function **SQLBindCol** in the *ODBC SDK Programmer's Reference*.  
   
  `nMaxLength`  
- Максимально допустимая длина значений, хранящихся в массиве, на который указывает `prgStrVals`, включая символ завершения null. Чтобы убедиться, что данные не будут усечены, передайте значение достаточно велик для хранения самого большого элемента данных предполагается, что.  
+ The maximum allowed length of the values stored in the array pointed to by `prgStrVals`, including the null termination character. To ensure that data will not be truncated, pass a value large enough to accommodate the largest data item you expect.  
   
-### <a name="remarks"></a>Примечания  
- Столбцы источника данных может иметь тип ODBC **SQL_LONGVARCHAR**, **SQL_CHAR**, **SQL_VARCHAR**, **SQL_DECIMAL**, или **SQL_NUMERIC**. Набор записей необходимо определить элемент поля данных типа **LPSTR**.  
+### <a name="remarks"></a>Remarks  
+ The data source column can have an ODBC type of **SQL_LONGVARCHAR**, **SQL_CHAR**, **SQL_VARCHAR**, **SQL_DECIMAL**, or **SQL_NUMERIC**. The recordset must define a field data member of type **LPSTR**.  
   
- Если инициализировать `prgStrVals` и `prgLengths` для **NULL**, а затем массивы, они указывают выделяется автоматически, с размерами, равно размеру набора строк.  
+ If you initialize `prgStrVals` and `prgLengths` to **NULL**, then the arrays they point to will be allocated automatically, with sizes equal to the rowset size.  
   
 > [!NOTE]
->  Блочный обмен полей записей передает только данные из источника данных объекта набора записей. Чтобы сделать возможно обновление набора записей, необходимо использовать функцию ODBC API **SQLSetPos**.  
+>  Bulk record field exchange only transfers data from the data source to the recordset object. To make your recordset updateable, you must use the ODBC API function **SQLSetPos**.  
   
- Дополнительные сведения см. в статьях [набор записей: групповая выборка записей (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md) и [обмен полей записей (RFX)](../../data/odbc/record-field-exchange-rfx.md).  
+ For more information, see the articles [Recordset: Fetching Records in Bulk (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md) and [Record Field Exchange (RFX)](../../data/odbc/record-field-exchange-rfx.md).  
   
-### <a name="example"></a>Пример  
- Необходимо вручную записать вызовы вашей `DoBulkFieldExchange` переопределения. В этом примере показан вызов `RFX_Text_Bulk`, а также вызов `RFX_Long_Bulk`, для передачи данных. Перед вызовом этих вызовов [CFieldExchange::SetFieldType](CFieldExchange::SetFieldType.md). Обратите внимание, что для параметров, необходимо вызвать функции RFX вместо функций Bulk RFX.  
+### <a name="example"></a>Example  
+ You must manually write calls in your `DoBulkFieldExchange` override. This example shows a call to `RFX_Text_Bulk`, as well as a call to `RFX_Long_Bulk`, for data transfer. These calls are preceded by a call to [CFieldExchange::SetFieldType](CFieldExchange::SetFieldType.md). Note that for parameters, you must call the RFX functions instead of the Bulk RFX functions.  
   
 ```cpp  
 void CMultiCustomer::DoBulkFieldExchange(CFieldExchange* pFX)
@@ -867,13 +867,13 @@ void CMultiCustomer::DoBulkFieldExchange(CFieldExchange* pFX)
 }
 ``` 
   
-### <a name="requirements"></a>Требования  
- **Заголовок:** afxdb.h  
+### <a name="requirements"></a>Requirements  
+ **Header:** afxdb.h  
 
-## <a name="dfx_binary"></a>DFX_Binary
-Передает массивы байтов между элементами данных полей [CDaoRecordset](cdaorecordset-class.md) объектов и столбцы записи в источнике данных.  
+## <a name="dfx_binary"></a>  DFX_Binary
+Transfers arrays of bytes between the field data members of a [CDaoRecordset](cdaorecordset-class.md) object and the columns of a record on the data source.  
   
-### <a name="syntax"></a>Синтаксис  
+### <a name="syntax"></a>Syntax  
   
 ```
 void AFXAPI DFX_Binary(  
@@ -884,39 +884,39 @@ void AFXAPI DFX_Binary(
    DWORD dwBindOptions = 0);  
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
  `pFX`  
- Указатель на объект класса [CDaoFieldExchange](cdaofieldexchange-class.md). Этот объект содержит сведения для определения контекста для каждого вызова функции.  
+ A pointer to an object of class [CDaoFieldExchange](cdaofieldexchange-class.md). This object contains information to define the context for each call of the function.  
   
  `szName`  
- Имя столбца данных.  
+ The name of a data column.  
   
  *value*  
- Значение, хранящееся в указанные данные элемента, значение должно быть передано. При передаче из набора данных к источнику данных, значение типа [CByteArray](cbytearray-class.md), берется из заданного элемента данных. Для передачи из источника данных в набор записей значение, хранящееся в заданный элемент данных.  
+ The value stored in the indicated data member — the value to be transferred. For a transfer from recordset to data source, the value, of type [CByteArray](cbytearray-class.md), is taken from the specified data member. For a transfer from data source to recordset, the value is stored in the specified data member.  
   
  `nPreAllocSize`  
- Платформа предварительно размещает объемом памяти. Если размер данных, платформа будет выделить больше места, при необходимости. Для повышения производительности присвоено значение, достаточное для предотвращения перераспределениями этот размер. Размер по умолчанию определяется в AFXDAO. H-файл как **AFX_DAO_BINARY_DEFAULT_SIZE**.  
+ The framework preallocates this amount of memory. If your data is larger, the framework will allocated more space as needed. For better performance, set this size to a value large enough to prevent reallocations. The default size is defined in the AFXDAO.H file as **AFX_DAO_BINARY_DEFAULT_SIZE**.  
   
  `dwBindOptions`  
- Параметр, который позволяет воспользоваться преимуществами MFC двойной буферизации механизм определения полей набора записей, которые были изменены. Значение по умолчанию `AFX_DAO_DISABLE_FIELD_CACHE`, не двойной буферизации использования и необходимо вызвать [SetFieldDirty](cdaorecordset-class.md#setfielddirty) и [метод SetFieldNull](cdaorecordset-class.md#setfieldnull) самостоятельно. Другие возможные значения `AFX_DAO_ENABLE_FIELD_CACHE`, использует двойной буферизации и вы не должны выполнить дополнительную работу, чтобы пометить поля "грязный" или Null. По производительности и памяти причинам не это значение, если только двоичные данные относительно невелико.  
+ An option that lets you take advantage of MFC's double buffering mechanism for detecting recordset fields that have changed. The default, `AFX_DAO_DISABLE_FIELD_CACHE`, does not use double buffering, and you must call [SetFieldDirty](cdaorecordset-class.md#setfielddirty) and [SetFieldNull](cdaorecordset-class.md#setfieldnull) yourself. The other possible value, `AFX_DAO_ENABLE_FIELD_CACHE`, uses double buffering, and you do not have to do extra work to mark fields dirty or Null. For performance and memory reasons, avoid this value unless your binary data is relatively small.  
   
 > [!NOTE]
->  Можно управлять ли данных double в буфер для всех полей по умолчанию, задав [CDaoRecordset::m_bCheckCacheForDirtyFields](cdaorecordset-class.md#m_bcheckcachefordirtyfields).  
+>  You can control whether data is double buffered for all fields by default by setting [CDaoRecordset::m_bCheckCacheForDirtyFields](cdaorecordset-class.md#m_bcheckcachefordirtyfields).  
   
-### <a name="remarks"></a>Примечания  
- Сопоставления между типом данных **DAO_BYTES** DAO и типу [CByteArray](cbytearray-class.md) в наборе записей.  
+### <a name="remarks"></a>Remarks  
+ Data is mapped between type **DAO_BYTES** in DAO and type [CByteArray](cbytearray-class.md) in the recordset.  
   
-### <a name="example"></a>Пример  
- В разделе [DFX_Text](#dfx_text).  
+### <a name="example"></a>Example  
+ See [DFX_Text](#dfx_text).  
   
-### <a name="requirements"></a>Требования  
- **Заголовок:** afxdao.h  
+### <a name="requirements"></a>Requirements  
+ **Header:** afxdao.h  
   
 
-## <a name="dfx_bool"></a>DFX_Bool
-Передает логический тип данных между элементами данных полей [CDaoRecordset](cdaorecordset-class.md) объектов и столбцы записи в источнике данных.  
+## <a name="dfx_bool"></a>  DFX_Bool
+Transfers Boolean data between the field data members of a [CDaoRecordset](cdaorecordset-class.md) object and the columns of a record on the data source.  
   
-### <a name="syntax"></a>Синтаксис  
+### <a name="syntax"></a>Syntax  
   
 ```
 void AFXAPI DFX_Bool(  
@@ -926,35 +926,35 @@ void AFXAPI DFX_Bool(
    DWORD dwBindOptions = AFX_DAO_ENABLE_FIELD_CACHE);  
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
  `pFX`  
- Указатель на объект класса [CDaoFieldExchange](cdaofieldexchange-class.md). Этот объект содержит сведения для определения контекста для каждого вызова функции.  
+ A pointer to an object of class [CDaoFieldExchange](cdaofieldexchange-class.md). This object contains information to define the context for each call of the function.  
   
  `szName`  
- Имя столбца данных.  
+ The name of a data column.  
   
  *value*  
- Значение, хранящееся в указанные данные элемента, значение должно быть передано. При передаче из набора данных к источнику данных, значение типа **BOOL**, берется из заданного элемента данных. Для передачи из источника данных в набор записей значение, хранящееся в заданный элемент данных.  
+ The value stored in the indicated data member — the value to be transferred. For a transfer from recordset to data source, the value, of type **BOOL**, is taken from the specified data member. For a transfer from data source to recordset, the value is stored in the specified data member.  
   
  `dwBindOptions`  
- Параметр, который позволяет воспользоваться преимуществами MFC двойной буферизации механизм определения полей набора записей, которые были изменены. Значение по умолчанию `AFX_DAO_ENABLE_FIELD_CACHE`, использует двойной буферизации. Возможное значение — `AFX_DAO_DISABLE_FIELD_CACHE`. Если это значение указано, MFC не выполняет проверки на это поле не. Необходимо вызвать `SetFieldDirty` и `SetFieldNull` самостоятельно.  
+ An option that lets you take advantage of MFC's double buffering mechanism for detecting recordset fields that have changed. The default, `AFX_DAO_ENABLE_FIELD_CACHE`, uses double buffering. The other possible value is `AFX_DAO_DISABLE_FIELD_CACHE`. If you specify this value, MFC does no checking on this field. You must call `SetFieldDirty` and `SetFieldNull` yourself.  
   
 > [!NOTE]
->  Можно управлять ли данные двойной буферизации по умолчанию, задав [CDaoRecordset::m_bCheckCacheForDirtyFields](cdaorecordset-class.md#m_bcheckcachefordirtyfields).  
+>  You can control whether data is double buffered by default by setting [CDaoRecordset::m_bCheckCacheForDirtyFields](cdaorecordset-class.md#m_bcheckcachefordirtyfields).  
   
-### <a name="remarks"></a>Примечания  
- Сопоставления между типом данных **DAO_BOOL** DAO и типу **BOOL** в наборе записей.  
+### <a name="remarks"></a>Remarks  
+ Data is mapped between type **DAO_BOOL** in DAO and type **BOOL** in the recordset.  
   
-### <a name="example"></a>Пример  
- В разделе [DFX_Text](#dfx_text).  
+### <a name="example"></a>Example  
+ See [DFX_Text](#dfx_text).  
   
-### <a name="requirements"></a>Требования  
- **Заголовок:** afxdao.h  
+### <a name="requirements"></a>Requirements  
+ **Header:** afxdao.h  
 
-## <a name="dfx_byte"></a>DFX_Byte
-Передает один байт между элементами данных полей [CDaoRecordset](cdaorecordset-class.md) объектов и столбцы записи в источнике данных.  
+## <a name="dfx_byte"></a>  DFX_Byte
+Transfers single bytes between the field data members of a [CDaoRecordset](cdaorecordset-class.md) object and the columns of a record on the data source.  
   
-### <a name="syntax"></a>Синтаксис  
+### <a name="syntax"></a>Syntax  
   
 ```
 void AFXAPI DFX_Byte(  
@@ -964,35 +964,35 @@ void AFXAPI DFX_Byte(
    DWORD dwBindOptions = AFX_DAO_ENABLE_FIELD_CACHE);  
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
  `pFX`  
- Указатель на объект класса [CDaoFieldExchange](cdaofieldexchange-class.md). Этот объект содержит сведения для определения контекста для каждого вызова функции.  
+ A pointer to an object of class [CDaoFieldExchange](cdaofieldexchange-class.md). This object contains information to define the context for each call of the function.  
   
  `szName`  
- Имя столбца данных.  
+ The name of a data column.  
   
  *value*  
- Значение, хранящееся в указанные данные элемента, значение должно быть передано. При передаче из набора данных к источнику данных, значение типа **БАЙТОВ**, берется из заданного элемента данных. Для передачи из источника данных в набор записей значение, хранящееся в заданный элемент данных.  
+ The value stored in the indicated data member — the value to be transferred. For a transfer from recordset to data source, the value, of type **BYTE**, is taken from the specified data member. For a transfer from data source to recordset, the value is stored in the specified data member.  
   
  `dwBindOptions`  
- Параметр, который позволяет воспользоваться преимуществами MFC двойной буферизации механизм определения полей набора записей, которые были изменены. Значение по умолчанию `AFX_DAO_ENABLE_FIELD_CACHE`, использует двойной буферизации. Возможное значение — `AFX_DAO_DISABLE_FIELD_CACHE`. Если это значение указано, MFC не выполняет проверки на это поле не. Необходимо вызвать `SetFieldDirty` и `SetFieldNull` самостоятельно.  
+ An option that lets you take advantage of MFC's double buffering mechanism for detecting recordset fields that have changed. The default, `AFX_DAO_ENABLE_FIELD_CACHE`, uses double buffering. The other possible value is `AFX_DAO_DISABLE_FIELD_CACHE`. If you specify this value, MFC does no checking on this field. You must call `SetFieldDirty` and `SetFieldNull` yourself.  
   
 > [!NOTE]
->  Можно управлять ли данные двойной буферизации по умолчанию, задав [CDaoRecordset::m_bCheckCacheForDirtyFields](cdaorecordset-class.md#m_bcheckcachefordirtyfields).  
+>  You can control whether data is double buffered by default by setting [CDaoRecordset::m_bCheckCacheForDirtyFields](cdaorecordset-class.md#m_bcheckcachefordirtyfields).  
   
-### <a name="remarks"></a>Примечания  
- Сопоставления между типом данных **DAO_BYTES** DAO и типу **БАЙТОВ** в наборе записей.  
+### <a name="remarks"></a>Remarks  
+ Data is mapped between type **DAO_BYTES** in DAO and type **BYTE** in the recordset.  
   
-### <a name="example"></a>Пример  
- В разделе [DFX_Text](#dfx_text).  
+### <a name="example"></a>Example  
+ See [DFX_Text](#dfx_text).  
   
-### <a name="requirements"></a>Требования  
- **Заголовок:** afxdao.h  
+### <a name="requirements"></a>Requirements  
+ **Header:** afxdao.h  
 
-## <a name="dfx_currency"></a>DFX_Currency
-Передает данные денежных единиц между элементами данных полей [CDaoRecordset](cdaorecordset-class.md) объектов и столбцы записи в источнике данных.  
+## <a name="dfx_currency"></a>  DFX_Currency
+Transfers currency data between the field data members of a [CDaoRecordset](cdaorecordset-class.md) object and the columns of a record on the data source.  
   
-### <a name="syntax"></a>Синтаксис  
+### <a name="syntax"></a>Syntax  
   
 ```
 void AFXAPI DFX_Currency(  
@@ -1002,35 +1002,35 @@ void AFXAPI DFX_Currency(
    DWORD dwBindOptions = AFX_DAO_ENABLE_FIELD_CACHE);  
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
  `pFX`  
- Указатель на объект класса [CDaoFieldExchange](cdaofieldexchange-class.md). Этот объект содержит сведения для определения контекста для каждого вызова функции.  
+ A pointer to an object of class [CDaoFieldExchange](cdaofieldexchange-class.md). This object contains information to define the context for each call of the function.  
   
  `szName`  
- Имя столбца данных.  
+ The name of a data column.  
   
  *value*  
- Значение, хранящееся в указанные данные элемента, значение должно быть передано. При передаче из набора записей с источником данных это значение берется из указанных данных члена типа [COleCurrency](colecurrency-class.md). Для передачи из источника данных в набор записей значение, хранящееся в заданный элемент данных.  
+ The value stored in the indicated data member — the value to be transferred. For a transfer from recordset to data source, this value is taken from the specified data member, of type [COleCurrency](colecurrency-class.md). For a transfer from data source to recordset, the value is stored in the specified data member.  
   
  `dwBindOptions`  
- Параметр, который позволяет воспользоваться преимуществами MFC двойной буферизации механизм определения полей набора записей, которые были изменены. Значение по умолчанию `AFX_DAO_ENABLE_FIELD_CACHE`, использует двойной буферизации. Возможное значение — `AFX_DAO_DISABLE_FIELD_CACHE`. Если это значение указано, MFC не выполняет проверки на это поле не. Необходимо вызвать `SetFieldDirty` и `SetFieldNull` самостоятельно.  
+ An option that lets you take advantage of MFC's double buffering mechanism for detecting recordset fields that have changed. The default, `AFX_DAO_ENABLE_FIELD_CACHE`, uses double buffering. The other possible value is `AFX_DAO_DISABLE_FIELD_CACHE`. If you specify this value, MFC does no checking on this field. You must call `SetFieldDirty` and `SetFieldNull` yourself.  
   
 > [!NOTE]
->  Можно управлять ли данные двойной буферизации по умолчанию, задав [CDaoRecordset::m_bCheckCacheForDirtyFields](cdaorecordset-class.md#m_bcheckcachefordirtyfields).  
+>  You can control whether data is double buffered by default by setting [CDaoRecordset::m_bCheckCacheForDirtyFields](cdaorecordset-class.md#m_bcheckcachefordirtyfields).  
   
-### <a name="remarks"></a>Примечания  
- Сопоставления между типом данных **DAO_CURRENCY** DAO и типу [COleCurrency](colecurrency-class.md) в наборе записей.  
+### <a name="remarks"></a>Remarks  
+ Data is mapped between type **DAO_CURRENCY** in DAO and type [COleCurrency](colecurrency-class.md) in the recordset.  
   
-### <a name="example"></a>Пример  
- В разделе [DFX_Text](#dfx_text).  
+### <a name="example"></a>Example  
+ See [DFX_Text](#dfx_text).  
   
-### <a name="requirements"></a>Требования  
- **Заголовок:** afxdao.h  
+### <a name="requirements"></a>Requirements  
+ **Header:** afxdao.h  
 
-## <a name="dfx_datetime"></a>DFX_DateTime
-Передает данные даты и времени между элементами данных полей [CDaoRecordset](cdaorecordset-class.md) объектов и столбцы записи в источнике данных.  
+## <a name="dfx_datetime"></a>  DFX_DateTime
+Transfers time and date data between the field data members of a [CDaoRecordset](cdaorecordset-class.md) object and the columns of a record on the data source.  
   
-### <a name="syntax"></a>Синтаксис  
+### <a name="syntax"></a>Syntax  
   
 ```
 void AFXAPI DFX_DateTime(  
@@ -1040,38 +1040,38 @@ void AFXAPI DFX_DateTime(
    DWORD dwBindOptions = AFX_DAO_ENABLE_FIELD_CACHE);  
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
  `pFX`  
- Указатель на объект класса [CDaoFieldExchange](cdaofieldexchange-class.md). Этот объект содержит сведения для определения контекста для каждого вызова функции.  
+ A pointer to an object of class [CDaoFieldExchange](cdaofieldexchange-class.md). This object contains information to define the context for each call of the function.  
   
  `szName`  
- Имя столбца данных.  
+ The name of a data column.  
   
  *value*  
- Значение, хранящееся в указанные данные элемента, значение должно быть передано. Эта функция принимает ссылку на [COleDateTime](../../atl-mfc-shared/reference/coledatetime-class.md) объекта. При передаче из набора записей с источником данных это значение берется из заданного элемента данных. Для передачи из источника данных в набор записей значение, хранящееся в заданный элемент данных.  
+ The value stored in the indicated data member — the value to be transferred. The function takes a reference to a [COleDateTime](../../atl-mfc-shared/reference/coledatetime-class.md) object. For a transfer from recordset to data source, this value is taken from the specified data member. For a transfer from data source to recordset, the value is stored in the specified data member.  
   
  `dwBindOptions`  
- Параметр, который позволяет воспользоваться преимуществами MFC двойной буферизации механизм определения полей набора записей, которые были изменены. Значение по умолчанию `AFX_DAO_ENABLE_FIELD_CACHE`, использует двойной буферизации. Возможное значение — `AFX_DAO_DISABLE_FIELD_CACHE`. Если это значение указано, MFC не выполняет проверки на это поле не. Необходимо вызвать `SetFieldDirty` и `SetFieldNull` самостоятельно.  
+ An option that lets you take advantage of MFC's double buffering mechanism for detecting recordset fields that have changed. The default, `AFX_DAO_ENABLE_FIELD_CACHE`, uses double buffering. The other possible value is `AFX_DAO_DISABLE_FIELD_CACHE`. If you specify this value, MFC does no checking on this field. You must call `SetFieldDirty` and `SetFieldNull` yourself.  
   
 > [!NOTE]
->  Можно управлять ли данные двойной буферизации по умолчанию, задав [CDaoRecordset::m_bCheckCacheForDirtyFields](cdaorecordset-class.md#m_bcheckcachefordirtyfields).  
+>  You can control whether data is double buffered by default by setting [CDaoRecordset::m_bCheckCacheForDirtyFields](cdaorecordset-class.md#m_bcheckcachefordirtyfields).  
   
-### <a name="remarks"></a>Примечания  
- Сопоставления между типом данных **DAO_DATE** DAO и типу [COleDateTime](../../atl-mfc-shared/reference/coledatetime-class.md) в наборе записей.  
+### <a name="remarks"></a>Remarks  
+ Data is mapped between type **DAO_DATE** in DAO and type [COleDateTime](../../atl-mfc-shared/reference/coledatetime-class.md) in the recordset.  
   
 > [!NOTE]
->  `COleDateTime`заменяет [CTime](../../atl-mfc-shared/reference/ctime-class.md) и **TIMESTAMP_STRUCT** в классы DAO для этой цели. `CTime`и **TIMESTAMP_STRUCT** все еще используется для классов доступа к данным на основе ODBC.  
+>  `COleDateTime` replaces [CTime](../../atl-mfc-shared/reference/ctime-class.md) and **TIMESTAMP_STRUCT** for this purpose in the DAO classes. `CTime` and **TIMESTAMP_STRUCT** are still used for the ODBC-based data access classes.  
   
-### <a name="example"></a>Пример  
- В разделе [DFX_Text](#dfx_text).  
+### <a name="example"></a>Example  
+ See [DFX_Text](#dfx_text).  
   
-### <a name="requirements"></a>Требования  
- **Заголовок:** afxdao.h  
+### <a name="requirements"></a>Requirements  
+ **Header:** afxdao.h  
 
-## <a name="dfx_double"></a>DFX_Double
-Передача **double float** данных между элементами данных полей [CDaoRecordset](cdaorecordset-class.md) объектов и столбцы записи в источнике данных.  
+## <a name="dfx_double"></a>  DFX_Double
+Transfers **double float** data between the field data members of a [CDaoRecordset](cdaorecordset-class.md) object and the columns of a record on the data source.  
   
-### <a name="syntax"></a>Синтаксис  
+### <a name="syntax"></a>Syntax  
   
 ```
 void AFXAPI DFX_Double(  
@@ -1081,35 +1081,35 @@ void AFXAPI DFX_Double(
    DWORD dwBindOptions = AFX_DAO_ENABLE_FIELD_CACHE);  
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
  `pFX`  
- Указатель на объект класса [CDaoFieldExchange](cdaofieldexchange-class.md). Этот объект содержит сведения для определения контекста для каждого вызова функции.  
+ A pointer to an object of class [CDaoFieldExchange](cdaofieldexchange-class.md). This object contains information to define the context for each call of the function.  
   
  `szName`  
- Имя столбца данных.  
+ The name of a data column.  
   
  *value*  
- Значение, хранящееся в указанные данные элемента, значение должно быть передано. При передаче из набора данных к источнику данных, значение типа **двойные**, берется из заданного элемента данных. Для передачи из источника данных в набор записей значение, хранящееся в заданный элемент данных.  
+ The value stored in the indicated data member — the value to be transferred. For a transfer from recordset to data source, the value, of type **double**, is taken from the specified data member. For a transfer from data source to recordset, the value is stored in the specified data member.  
   
  `dwBindOptions`  
- Параметр, который позволяет воспользоваться преимуществами MFC двойной буферизации механизм определения полей набора записей, которые были изменены. Значение по умолчанию `AFX_DAO_ENABLE_FIELD_CACHE`, использует двойной буферизации. Возможное значение — `AFX_DAO_DISABLE_FIELD_CACHE`. Если это значение указано, MFC не выполняет проверки на это поле не. Необходимо вызвать `SetFieldDirty` и `SetFieldNull` самостоятельно.  
+ An option that lets you take advantage of MFC's double buffering mechanism for detecting recordset fields that have changed. The default, `AFX_DAO_ENABLE_FIELD_CACHE`, uses double buffering. The other possible value is `AFX_DAO_DISABLE_FIELD_CACHE`. If you specify this value, MFC does no checking on this field. You must call `SetFieldDirty` and `SetFieldNull` yourself.  
   
 > [!NOTE]
->  Можно управлять ли данные двойной буферизации по умолчанию, задав [CDaoRecordset::m_bCheckCacheForDirtyFields](cdaorecordset-class.md#m_bcheckcachefordirtyfields).  
+>  You can control whether data is double buffered by default by setting [CDaoRecordset::m_bCheckCacheForDirtyFields](cdaorecordset-class.md#m_bcheckcachefordirtyfields).  
   
-### <a name="remarks"></a>Примечания  
- Сопоставления между типом данных **DAO_R8** DAO и типу **double float** в наборе записей.  
+### <a name="remarks"></a>Remarks  
+ Data is mapped between type **DAO_R8** in DAO and type **double float** in the recordset.  
   
-### <a name="example"></a>Пример  
- В разделе [DFX_Text](#dfx_text).  
+### <a name="example"></a>Example  
+ See [DFX_Text](#dfx_text).  
   
-### <a name="requirements"></a>Требования  
- **Заголовок:** afxdao.h  
+### <a name="requirements"></a>Requirements  
+ **Header:** afxdao.h  
 
-## <a name="dfx_long"></a>DFX_Long
-Передает данные в длинное целое число между элементами данных полей [CDaoRecordset](cdaorecordset-class.md) объектов и столбцы записи в источнике данных.  
+## <a name="dfx_long"></a>  DFX_Long
+Transfers long integer data between the field data members of a [CDaoRecordset](cdaorecordset-class.md) object and the columns of a record on the data source.  
   
-### <a name="syntax"></a>Синтаксис  
+### <a name="syntax"></a>Syntax  
   
 ```
 void AFXAPI DFX_Long(  
@@ -1119,36 +1119,36 @@ void AFXAPI DFX_Long(
    DWORD dwBindOptions = AFX_DAO_ENABLE_FIELD_CACHE);  
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
  `pFX`  
- Указатель на объект класса [CDaoFieldExchange](cdaofieldexchange-class.md). Этот объект содержит сведения для определения контекста для каждого вызова функции.  
+ A pointer to an object of class [CDaoFieldExchange](cdaofieldexchange-class.md). This object contains information to define the context for each call of the function.  
   
  `szName`  
- Имя столбца данных.  
+ The name of a data column.  
   
  *value*  
- Значение, хранящееся в указанные данные элемента, значение должно быть передано. При передаче из набора данных к источнику данных, значение типа **длинные**, берется из заданного элемента данных. Для передачи из источника данных в набор записей значение, хранящееся в заданный элемент данных.  
+ The value stored in the indicated data member — the value to be transferred. For a transfer from recordset to data source, the value, of type **long**, is taken from the specified data member. For a transfer from data source to recordset, the value is stored in the specified data member.  
   
  `dwBindOptions`  
- Параметр, который позволяет воспользоваться преимуществами MFC двойной буферизации механизм определения полей набора записей, которые были изменены. Значение по умолчанию `AFX_DAO_ENABLE_FIELD_CACHE`, использует двойной буферизации. Возможное значение — `AFX_DAO_DISABLE_FIELD_CACHE`. Если это значение указано, MFC не выполняет проверки на это поле не. Необходимо вызвать `SetFieldDirty` и `SetFieldNull` самостоятельно.  
+ An option that lets you take advantage of MFC's double buffering mechanism for detecting recordset fields that have changed. The default, `AFX_DAO_ENABLE_FIELD_CACHE`, uses double buffering. The other possible value is `AFX_DAO_DISABLE_FIELD_CACHE`. If you specify this value, MFC does no checking on this field. You must call `SetFieldDirty` and `SetFieldNull` yourself.  
   
 > [!NOTE]
->  Можно управлять ли данные двойной буферизации по умолчанию, задав [CDaoRecordset::m_bCheckCacheForDirtyFields](cdaorecordset-class.md#m_bcheckcachefordirtyfields).  
+>  You can control whether data is double buffered by default by setting [CDaoRecordset::m_bCheckCacheForDirtyFields](cdaorecordset-class.md#m_bcheckcachefordirtyfields).  
   
-### <a name="remarks"></a>Примечания  
- Сопоставления между типом данных **DAO_I4** DAO и типу **длинные** в наборе записей.  
+### <a name="remarks"></a>Remarks  
+ Data is mapped between type **DAO_I4** in DAO and type **long** in the recordset.  
   
-### <a name="example"></a>Пример  
- В разделе [DFX_Text](#dfx_text).  
+### <a name="example"></a>Example  
+ See [DFX_Text](#dfx_text).  
   
-### <a name="requirements"></a>Требования  
- **Заголовок:** afxdao.h  
+### <a name="requirements"></a>Requirements  
+ **Header:** afxdao.h  
   
 
-## <a name="dfx_longbinary"></a>DFX_LongBinary
-**Важные** , рекомендуется использовать [DFX_Binary](#dfx_binary) вместо этой функции.  
+## <a name="dfx_longbinary"></a>  DFX_LongBinary
+**Important** It is recommended that you use [DFX_Binary](#dfx_binary) instead of this function.  
   
-### <a name="syntax"></a>Синтаксис  
+### <a name="syntax"></a>Syntax  
   
 ```
 void AFXAPI DFX_LongBinary(  
@@ -1159,38 +1159,38 @@ void AFXAPI DFX_LongBinary(
    DWORD dwBindOptions = 0);  
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
  `pFX`  
- Указатель на объект класса [CDaoFieldExchange](cdaofieldexchange-class.md). Этот объект содержит сведения для определения контекста для каждого вызова функции.  
+ A pointer to an object of class [CDaoFieldExchange](cdaofieldexchange-class.md). This object contains information to define the context for each call of the function.  
   
  `szName`  
- Имя столбца данных.  
+ The name of a data column.  
   
  *value*  
- Значение, хранящееся в указанные данные элемента, значение должно быть передано. При передаче из набора данных к источнику данных, значение типа [CLongBinary](clongbinary-class.md), берется из заданного элемента данных. Для передачи из источника данных в набор записей значение, хранящееся в заданный элемент данных.  
+ The value stored in the indicated data member — the value to be transferred. For a transfer from recordset to data source, the value, of type [CLongBinary](clongbinary-class.md), is taken from the specified data member. For a transfer from data source to recordset, the value is stored in the specified data member.  
   
  *dwPreAllocSize*  
- Платформа предварительно размещает объемом памяти. Если размер данных, платформа будет выделить больше места, при необходимости. Для повышения производительности присвоено значение, достаточное для предотвращения перераспределениями этот размер.  
+ The framework preallocates this amount of memory. If your data is larger, the framework will allocated more space as needed. For better performance, set this size to a value large enough to prevent reallocations.  
   
  `dwBindOptions`  
- Параметр, который позволяет воспользоваться преимуществами MFC двойной буферизации механизм определения полей набора записей, которые были изменены. Значение по умолчанию **AFX_DISABLE_FIELD_CACHE**, не используйте двойной буферизации. Возможное значение — `AFX_DAO_ENABLE_FIELD_CACHE`. Использование двойной буферизации и вы не должны выполнить дополнительные действия, чтобы пометить поля "грязный" или Null. По производительности и памяти причинам не это значение, если только двоичные данные относительно невелико.  
+ An option that lets you take advantage of MFC's double buffering mechanism for detecting recordset fields that have changed. The default, **AFX_DISABLE_FIELD_CACHE**, does not use double buffering. The other possible value is `AFX_DAO_ENABLE_FIELD_CACHE`. Uses double buffering, and you do not have to do extra work to mark fields dirty or Null. For performance and memory reasons, avoid this value unless your binary data is relatively small.  
   
 > [!NOTE]
->  Можно управлять ли данные двойной буферизации по умолчанию, задав [CDaoRecordset::m_bCheckCacheForDirtyFields](cdaorecordset-class.md#m_bcheckcachefordirtyfields).  
+>  You can control whether data is double buffered by default by setting [CDaoRecordset::m_bCheckCacheForDirtyFields](cdaorecordset-class.md#m_bcheckcachefordirtyfields).  
   
-### <a name="remarks"></a>Примечания  
- `DFX_LongBinary`обеспечивает совместимость с использованием классов MFC ODBC. `DFX_LongBinary` Функция передает данные больших двоичных-объектов (BLOB) с помощью класса `CLongBinary` между элементами данных полей [CDaoRecordset](cdaorecordset-class.md) объектов и столбцы записи в источнике данных. Сопоставления между типом данных **DAO_BYTES** DAO и типу [CLongBinary](clongbinary-class.md) в наборе записей.  
+### <a name="remarks"></a>Remarks  
+ `DFX_LongBinary` is provided for compatibility with the MFC ODBC classes. The `DFX_LongBinary` function transfers binary large-object (BLOB) data using class `CLongBinary` between the field data members of a [CDaoRecordset](cdaorecordset-class.md) object and the columns of a record on the data source. Data is mapped between type **DAO_BYTES** in DAO and type [CLongBinary](clongbinary-class.md) in the recordset.  
   
-### <a name="example"></a>Пример  
- В разделе [DFX_Text](#dfx_text).  
+### <a name="example"></a>Example  
+ See [DFX_Text](#dfx_text).  
   
-### <a name="requirements"></a>Требования  
- **Заголовок:** afxdao.h  
+### <a name="requirements"></a>Requirements  
+ **Header:** afxdao.h  
 
-## <a name="dfx_short"></a>DFX_Short
-Передает короткие целые данные между элементами данных полей [CDaoRecordset](cdaorecordset-class.md) объектов и столбцы записи в источнике данных.  
+## <a name="dfx_short"></a>  DFX_Short
+Transfers short integer data between the field data members of a [CDaoRecordset](cdaorecordset-class.md) object and the columns of a record on the data source.  
   
-### <a name="syntax"></a>Синтаксис  
+### <a name="syntax"></a>Syntax  
   
 ```
 void AFXAPI DFX_Short(  
@@ -1200,39 +1200,39 @@ void AFXAPI DFX_Short(
    DWORD dwBindOptions = AFX_DAO_ENABLE_FIELD_CACHE);  
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
  `pFX`  
- Указатель на объект класса [CDaoFieldExchange](cdaofieldexchange-class.md). Этот объект содержит сведения для определения контекста для каждого вызова функции.  
+ A pointer to an object of class [CDaoFieldExchange](cdaofieldexchange-class.md). This object contains information to define the context for each call of the function.  
   
  `szName`  
- Имя столбца данных.  
+ The name of a data column.  
   
  *value*  
- Значение, хранящееся в указанные данные элемента, значение должно быть передано. При передаче из набора данных к источнику данных, значение типа **короткие**, берется из заданного элемента данных. Для передачи из источника данных в набор записей значение, хранящееся в заданный элемент данных.  
+ The value stored in the indicated data member — the value to be transferred. For a transfer from recordset to data source, the value, of type **short**, is taken from the specified data member. For a transfer from data source to recordset, the value is stored in the specified data member.  
   
  `dwBindOptions`  
- Параметр, который позволяет воспользоваться преимуществами MFC двойной буферизации механизм определения полей набора записей, которые были изменены. Значение по умолчанию `AFX_DAO_ENABLE_FIELD_CACHE`, использует двойной буферизации. Возможное значение — `AFX_DAO_DISABLE_FIELD_CACHE`. Если это значение указано, MFC не выполняет проверки на это поле не. Необходимо вызвать `SetFieldDirty` и `SetFieldNull` самостоятельно.  
+ An option that lets you take advantage of MFC's double buffering mechanism for detecting recordset fields that have changed. The default, `AFX_DAO_ENABLE_FIELD_CACHE`, uses double buffering. The other possible value is `AFX_DAO_DISABLE_FIELD_CACHE`. If you specify this value, MFC does no checking on this field. You must call `SetFieldDirty` and `SetFieldNull` yourself.  
   
 > [!NOTE]
->  Можно управлять ли данные двойной буферизации по умолчанию, задав [CDaoRecordset::m_bCheckCacheForDirtyFields](cdaorecordset-class.md#m_bcheckcachefordirtyfields).  
+>  You can control whether data is double buffered by default by setting [CDaoRecordset::m_bCheckCacheForDirtyFields](cdaorecordset-class.md#m_bcheckcachefordirtyfields).  
   
-### <a name="remarks"></a>Примечания  
- Сопоставления между типом данных **DAO_I2** DAO и типу **короткие** в наборе записей.  
+### <a name="remarks"></a>Remarks  
+ Data is mapped between type **DAO_I2** in DAO and type **short** in the recordset.  
   
 > [!NOTE]
->  `DFX_Short`эквивалентно [RFX_Int](#rfx_int) для классов на основе ODBC.  
+>  `DFX_Short` is equivalent to [RFX_Int](#rfx_int) for the ODBC-based classes.  
   
-### <a name="example"></a>Пример  
- В разделе [DFX_Text](#dfx_text).  
+### <a name="example"></a>Example  
+ See [DFX_Text](#dfx_text).  
   
-### <a name="requirements"></a>Требования  
- **Заголовок:** afxdao.h  
+### <a name="requirements"></a>Requirements  
+ **Header:** afxdao.h  
   
 
-## <a name="dfx_single"></a>DFX_Single
-Передача данных с плавающей запятой между элементами данных полей [CDaoRecordset](cdaorecordset-class.md) объектов и столбцы записи в источнике данных.  
+## <a name="dfx_single"></a>  DFX_Single
+Transfers floating-point data between the field data members of a [CDaoRecordset](cdaorecordset-class.md) object and the columns of a record on the data source.  
   
-### <a name="syntax"></a>Синтаксис  
+### <a name="syntax"></a>Syntax  
   
 ```
 void AFXAPI DFX_Single(  
@@ -1242,35 +1242,35 @@ void AFXAPI DFX_Single(
    DWORD dwBindOptions = AFX_DAO_ENABLE_FIELD_CACHE);  
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
  `pFX`  
- Указатель на объект класса [CDaoFieldExchange](cdaofieldexchange-class.md). Этот объект содержит сведения для определения контекста для каждого вызова функции.  
+ A pointer to an object of class [CDaoFieldExchange](cdaofieldexchange-class.md). This object contains information to define the context for each call of the function.  
   
  `szName`  
- Имя столбца данных.  
+ The name of a data column.  
   
  *value*  
- Значение, хранящееся в указанные данные элемента, значение должно быть передано. При передаче из набора данных к источнику данных, значение типа **float**, берется из заданного элемента данных. Для передачи из источника данных в набор записей значение, хранящееся в заданный элемент данных.  
+ The value stored in the indicated data member — the value to be transferred. For a transfer from recordset to data source, the value, of type **float**, is taken from the specified data member. For a transfer from data source to recordset, the value is stored in the specified data member.  
   
  `dwBindOptions`  
- Параметр, который позволяет воспользоваться преимуществами MFC двойной буферизации механизм определения полей набора записей, которые были изменены. Значение по умолчанию `AFX_DAO_ENABLE_FIELD_CACHE`, использует двойной буферизации. Возможное значение — `AFX_DAO_DISABLE_FIELD_CACHE`. Если это значение указано, MFC не выполняет проверки на это поле не. Необходимо вызвать `SetFieldDirty` и `SetFieldNull` самостоятельно.  
+ An option that lets you take advantage of MFC's double buffering mechanism for detecting recordset fields that have changed. The default, `AFX_DAO_ENABLE_FIELD_CACHE`, uses double buffering. The other possible value is `AFX_DAO_DISABLE_FIELD_CACHE`. If you specify this value, MFC does no checking on this field. You must call `SetFieldDirty` and `SetFieldNull` yourself.  
   
 > [!NOTE]
->  Можно управлять ли данные двойной буферизации по умолчанию, задав [CDaoRecordset::m_bCheckCacheForDirtyFields](cdaorecordset-class.md#m_bcheckcachefordirtyfields).  
+>  You can control whether data is double buffered by default by setting [CDaoRecordset::m_bCheckCacheForDirtyFields](cdaorecordset-class.md#m_bcheckcachefordirtyfields).  
   
-### <a name="remarks"></a>Примечания  
- Сопоставления между типом данных **DAO_R4** DAO и типу **float** в наборе записей.  
+### <a name="remarks"></a>Remarks  
+ Data is mapped between type **DAO_R4** in DAO and type **float** in the recordset.  
   
-### <a name="example"></a>Пример  
- В разделе [DFX_Text](#dfx_text).  
+### <a name="example"></a>Example  
+ See [DFX_Text](#dfx_text).  
   
-### <a name="requirements"></a>Требования  
- **Заголовок:** afxdao.h  
+### <a name="requirements"></a>Requirements  
+ **Header:** afxdao.h  
 
-## <a name="dfx_text"></a>DFX_Text
-Передача `CString` данных между элементами данных полей [CDaoRecordset](cdaorecordset-class.md) объектов и столбцы записи в источнике данных.  
+## <a name="dfx_text"></a>  DFX_Text
+Transfers `CString` data between the field data members of a [CDaoRecordset](cdaorecordset-class.md) object and columns of a record on the data source.  
   
-### <a name="syntax"></a>Синтаксис  
+### <a name="syntax"></a>Syntax  
   
 ```
 void AFXAPI DFX_Text(  
@@ -1281,30 +1281,30 @@ void AFXAPI DFX_Text(
    DWORD dwBindOptions = AFX_DAO_ENABLE_FIELD_CACHE);  
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
  `pFX`  
- Указатель на объект класса [CDaoFieldExchange](cdaofieldexchange-class.md). Этот объект содержит сведения для определения контекста для каждого вызова функции.  
+ A pointer to an object of class [CDaoFieldExchange](cdaofieldexchange-class.md). This object contains information to define the context for each call of the function.  
   
  `szName`  
- Имя столбца данных.  
+ The name of a data column.  
   
  *value*  
- Значение, хранящееся в указанные данные элемента, значение должно быть передано. При передаче из набора данных к источнику данных, значение типа [CString](../../atl-mfc-shared/reference/cstringt-class.md), берется из заданного элемента данных. Для передачи из источника данных в набор записей значение, хранящееся в заданный элемент данных.  
+ The value stored in the indicated data member — the value to be transferred. For a transfer from recordset to data source, the value, of type [CString](../../atl-mfc-shared/reference/cstringt-class.md), is taken from the specified data member. For a transfer from data source to recordset, the value is stored in the specified data member.  
   
  `nPreAllocSize`  
- Платформа предварительно размещает объемом памяти. Если размер данных, платформа будет выделить больше места, при необходимости. Для повышения производительности присвоено значение, достаточное для предотвращения перераспределениями этот размер.  
+ The framework preallocates this amount of memory. If your data is larger, the framework will allocated more space as needed. For better performance, set this size to a value large enough to prevent reallocations.  
   
  `dwBindOptions`  
- Параметр, который позволяет воспользоваться преимуществами MFC двойной буферизации механизм определения полей набора записей, которые были изменены. Значение по умолчанию `AFX_DAO_ENABLE_FIELD_CACHE`, использует двойной буферизации. Возможное значение — `AFX_DAO_DISABLE_FIELD_CACHE`. Если это значение указано, MFC не выполняет проверки на это поле не. Необходимо вызвать [SetFieldDirty](cdaorecordset-class.md#setfielddirty) и [метод SetFieldNull](cdaorecordset-class.md#setfieldnull) самостоятельно.  
+ An option that lets you take advantage of MFC's double buffering mechanism for detecting recordset fields that have changed. The default, `AFX_DAO_ENABLE_FIELD_CACHE`, uses double buffering. The other possible value is `AFX_DAO_DISABLE_FIELD_CACHE`. If you specify this value, MFC does no checking on this field. You must call [SetFieldDirty](cdaorecordset-class.md#setfielddirty) and [SetFieldNull](cdaorecordset-class.md#setfieldnull) yourself.  
   
 > [!NOTE]
->  Можно управлять ли данные двойной буферизации по умолчанию, задав [CDaoRecordset::m_bCheckCacheForDirtyFields](cdaorecordset-class.md#m_bcheckcachefordirtyfields).  
+>  You can control whether data is double buffered by default by setting [CDaoRecordset::m_bCheckCacheForDirtyFields](cdaorecordset-class.md#m_bcheckcachefordirtyfields).  
   
-### <a name="remarks"></a>Примечания  
- Сопоставления между типом данных **DAO_CHAR** в DAO (или, если символ **_UNICODE** определен, **DAO_WCHAR**) и тип [CString](../../atl-mfc-shared/reference/cstringt-class.md) в наборе записей.  n
+### <a name="remarks"></a>Remarks  
+ Data is mapped between type **DAO_CHAR** in DAO (or, if the symbol **_UNICODE** is defined, **DAO_WCHAR**) and type [CString](../../atl-mfc-shared/reference/cstringt-class.md) in the recordset.  n
   
-### <a name="example"></a>Пример  
- В этом примере показано несколько вызовов `DFX_Text`. Обратите внимание также два вызова [CDaoFieldExchange::SetFieldType](cdaofieldexchange-class.md#setfieldtype). Необходимо написать первый вызов `SetFieldType` и его **DFX** вызова. Второй вызов и связанный с ним **DFX** вызовы обычно записываются при помощи мастера код, созданный класс.  
+### <a name="example"></a>Example  
+ This example shows several calls to `DFX_Text`. Notice also the two calls to [CDaoFieldExchange::SetFieldType](cdaofieldexchange-class.md#setfieldtype). You must write the first call to `SetFieldType` and its **DFX** call. The second call and its associated **DFX** calls are normally written by the code wizard that generated the class.  
   
 ```cpp  
 void CCustSet::DoFieldExchange(CDaoFieldExchange* pFX)
@@ -1322,11 +1322,11 @@ void CCustSet::DoFieldExchange(CDaoFieldExchange* pFX)
 }
 ```
   
-### <a name="requirements"></a>Требования  
- **Заголовок:** afxdao.h  
+### <a name="requirements"></a>Requirements  
+ **Header:** afxdao.h  
   
-## <a name="see-also"></a>См. также  
- [Макросы и глобальные объекты](mfc-macros-and-globals.md)   
+## <a name="see-also"></a>See Also  
+ [Macros and Globals](mfc-macros-and-globals.md)   
  [CRecordset::DoFieldExchange](crecordset-class.md#dofieldexchange)   
  [CRecordset::DoBulkFieldExchange](crecordset-class.md#dobulkfieldexchange)   
  [CDaoRecordset::DoFieldExchange](cdaorecordset-class.md#dofieldexchange)

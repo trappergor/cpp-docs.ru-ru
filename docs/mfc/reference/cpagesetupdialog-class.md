@@ -1,5 +1,5 @@
 ---
-title: "Класс CPageSetupDialog | Документы Microsoft"
+title: CPageSetupDialog Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -26,11 +26,18 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- page setup
-- Print Setup dialog box
-- Page Setup dialog box
-- OLE Page Setup dialog box
-- CPageSetupDialog class
+- CPageSetupDialog [MFC], CPageSetupDialog
+- CPageSetupDialog [MFC], CreatePrinterDC
+- CPageSetupDialog [MFC], DoModal
+- CPageSetupDialog [MFC], GetDeviceName
+- CPageSetupDialog [MFC], GetDevMode
+- CPageSetupDialog [MFC], GetDriverName
+- CPageSetupDialog [MFC], GetMargins
+- CPageSetupDialog [MFC], GetPaperSize
+- CPageSetupDialog [MFC], GetPortName
+- CPageSetupDialog [MFC], OnDrawPage
+- CPageSetupDialog [MFC], PreDrawPage
+- CPageSetupDialog [MFC], m_psd
 ms.assetid: 049c0ac8-f254-4854-9414-7a8271d1447a
 caps.latest.revision: 24
 author: mikeblome
@@ -50,64 +57,64 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0e0c08ddc57d437c51872b5186ae3fc983bb0199
-ms.openlocfilehash: 81d36b3a005a291aca4c77dc9771a4fe92c304ee
+ms.translationtype: MT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: f8b6cc626f6ae19ddb3f147441c16c83bdf74bfe
 ms.contentlocale: ru-ru
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 09/12/2017
 
 ---
-# <a name="cpagesetupdialog-class"></a>Класс CPageSetupDialog
-Инкапсулирует службы, предоставляемые стандартным диалоговым окном OLE "Параметры страницы" Windows с дополнительной поддержкой установки и изменения полей печати.  
+# <a name="cpagesetupdialog-class"></a>CPageSetupDialog Class
+Encapsulates the services provided by the Windows common OLE Page Setup dialog box with additional support for setting and modifying print margins.  
   
-## <a name="syntax"></a>Синтаксис  
+## <a name="syntax"></a>Syntax  
   
 ```  
 class CPageSetupDialog : public CCommonDialog  
 ```  
   
-## <a name="members"></a>Члены  
+## <a name="members"></a>Members  
   
-### <a name="public-constructors"></a>Открытые конструкторы  
+### <a name="public-constructors"></a>Public Constructors  
   
-|Имя|Описание|  
+|Name|Description|  
 |----------|-----------------|  
-|[CPageSetupDialog::CPageSetupDialog](#cpagesetupdialog)|Создает объект `CPageSetupDialog`.|  
+|[CPageSetupDialog::CPageSetupDialog](#cpagesetupdialog)|Constructs a `CPageSetupDialog` object.|  
   
-### <a name="public-methods"></a>Открытые методы  
+### <a name="public-methods"></a>Public Methods  
   
-|Имя|Описание|  
+|Name|Description|  
 |----------|-----------------|  
-|[CPageSetupDialog::CreatePrinterDC](#createprinterdc)|Создает контекст устройства для печати.|  
-|[CPageSetupDialog::DoModal](#domodal)|Отображает диалоговое окно и позволяет пользователю сделать выбор.|  
-|[CPageSetupDialog::GetDeviceName](#getdevicename)|Возвращает имя устройства принтера.|  
-|[CPageSetupDialog::GetDevMode](#getdevmode)|Возвращает текущий `DEVMODE` принтера.|  
-|[CPageSetupDialog::GetDriverName](#getdrivername)|Возвращает драйвер принтера.|  
-|[CPageSetupDialog::GetMargins](#getmargins)|Возвращает текущие параметры полей принтера.|  
-|[CPageSetupDialog::GetPaperSize](#getpapersize)|Возвращает размер бумаги принтера.|  
-|[CPageSetupDialog::GetPortName](#getportname)|Возвращает имя порта вывода.|  
-|[CPageSetupDialog::OnDrawPage](#ondrawpage)|Вызывается платформой для подготовки к просмотру изображение экрана на печатной странице.|  
-|[CPageSetupDialog::PreDrawPage](#predrawpage)|Вызывается средой перед отображением изображение экрана на печатной странице.|  
+|[CPageSetupDialog::CreatePrinterDC](#createprinterdc)|Creates a device context for printing.|  
+|[CPageSetupDialog::DoModal](#domodal)|Displays the dialog box and allows the user make a selection.|  
+|[CPageSetupDialog::GetDeviceName](#getdevicename)|Returns the device name of the printer.|  
+|[CPageSetupDialog::GetDevMode](#getdevmode)|Returns the current `DEVMODE` of the printer.|  
+|[CPageSetupDialog::GetDriverName](#getdrivername)|Returns the driver used by the printer.|  
+|[CPageSetupDialog::GetMargins](#getmargins)|Returns the current margin settings of the printer.|  
+|[CPageSetupDialog::GetPaperSize](#getpapersize)|Returns the paper size of the printer.|  
+|[CPageSetupDialog::GetPortName](#getportname)|Returns the output port name.|  
+|[CPageSetupDialog::OnDrawPage](#ondrawpage)|Called by the framework to render a screen image of a printed page.|  
+|[CPageSetupDialog::PreDrawPage](#predrawpage)|Called by the framework before rendering a screen image of a printed page.|  
   
-### <a name="public-data-members"></a>Открытые члены данных  
+### <a name="public-data-members"></a>Public Data Members  
   
-|Имя|Описание|  
+|Name|Description|  
 |----------|-----------------|  
-|[CPageSetupDialog::m_psd](#m_psd)|Структура, используемая для настройки `CPageSetupDialog` объекта.|  
+|[CPageSetupDialog::m_psd](#m_psd)|A structure used to customize a `CPageSetupDialog` object.|  
   
-## <a name="remarks"></a>Примечания  
- Этот класс предназначен для вместо диалогового окна Настройка печати.  
+## <a name="remarks"></a>Remarks  
+ This class is designed to take the place of the Print Setup dialog box.  
   
- Для использования `CPageSetupDialog` объекта, сначала создайте объект с помощью `CPageSetupDialog` конструктор. После конструирования диалоговом окне можно задать или изменить значения в `m_psd` элемент данных для инициализации значений элементов управления диалогового окна. [M_psd](#m_psd) структуры имеет тип **PAGESETUPDLG**.  
+ To use a `CPageSetupDialog` object, first create the object using the `CPageSetupDialog` constructor. Once the dialog box has been constructed, you can set or modify any values in the `m_psd` data member to initialize the values of the dialog box's controls. The [m_psd](#m_psd) structure is of type **PAGESETUPDLG**.  
   
- После инициализации диалоговыми окнами, вызовите `DoModal` функции-члена для отображения диалогового окна и разрешить пользователю выбирать параметры печати. `DoModal`Возвращает, выбрал ли пользователь ОК ( **IDOK**) или Отмена ( **IDCANCEL**) кнопки.  
+ After initializing the dialog box controls, call the `DoModal` member function to display the dialog box and allow the user to select print options. `DoModal` returns whether the user selected the OK ( **IDOK**) or Cancel ( **IDCANCEL**) button.  
   
- Если `DoModal` возвращает **IDOK**, можно использовать несколько `CPageSetupDialog`в функциях-членах или доступа `m_psd` члена данных, чтобы получить данные, введенные пользователем.  
+ If `DoModal` returns **IDOK**, you can use several of `CPageSetupDialog`'s member functions, or access the `m_psd` data member, to retrieve information input by the user.  
   
 > [!NOTE]
->  После закрытия стандартным диалоговым окном OLE страницы установки, любые изменения, внесенные пользователем, не сохраняются платформой. Возлагается само приложение, чтобы сохранить все значения в этом окне в постоянную папку, например члена класса в документ приложения или приложения.  
+>  After the common OLE Page Setup dialog box is dismissed, any changes made by the user will not be saved by the framework. It is up to the application itself to save any values from this dialog box to a permanent location, such as member of the application's document or application class.  
   
-## <a name="inheritance-hierarchy"></a>Иерархия наследования  
+## <a name="inheritance-hierarchy"></a>Inheritance Hierarchy  
  [CObject](../../mfc/reference/cobject-class.md)  
   
  [CCmdTarget](../../mfc/reference/ccmdtarget-class.md)  
@@ -120,11 +127,11 @@ class CPageSetupDialog : public CCommonDialog
   
  `CPageSetupDialog`  
   
-## <a name="requirements"></a>Требования  
- **Заголовок:** afxdlgs.h  
+## <a name="requirements"></a>Requirements  
+ **Header:** afxdlgs.h  
   
-##  <a name="cpagesetupdialog"></a>CPageSetupDialog::CPageSetupDialog  
- Эта функция вызывается для создания `CPageSetupDialog` объекта.  
+##  <a name="cpagesetupdialog"></a>  CPageSetupDialog::CPageSetupDialog  
+ Call this function to construct a `CPageSetupDialog` object.  
   
 ```  
 CPageSetupDialog(
@@ -132,124 +139,124 @@ CPageSetupDialog(
     CWnd* pParentWnd = NULL);
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
  `dwFlags`  
- Один или несколько флагов, которые можно использовать для настройки параметров диалогового окна. Значения могут объединяться с помощью оператора побитового или. Эти значения имеют следующий смысл:  
+ One or more flags you can use to customize the settings of the dialog box. The values can be combined using the bitwise-OR operator. These values have the following meanings:  
   
-- **PSD_DEFAULTMINMARGINS** задает Минимальная ширина, допустимый для поля страницы должен совпадать с принтера минимальных значений. Этот флаг учитывается, если **PSD_MARGINS** и **PSD_MINMARGINS** указаны флаги.  
+- **PSD_DEFAULTMINMARGINS** Sets the minimum allowable widths for the page margins to be the same as the printer's minimums. This flag is ignored if the **PSD_MARGINS** and **PSD_MINMARGINS** flags are also specified.  
   
-- **PSD_INWININIINTLMEASURE** не реализован.  
+- **PSD_INWININIINTLMEASURE** Not implemented.  
   
-- **PSD_MINMARGINS** заставляет систему используйте значения, указанные в **rtMinMargin** член как Минимальная допустимая ширина слева, сверху, справа и нижнего полей. Система не позволяет пользователю ввести шириной не меньше заданного минимального. Если **PSD_MINMARGINS** не указан, система задает Минимальная допустимая ширина допускаемым принтером.  
+- **PSD_MINMARGINS** Causes the system to use the values specified in the **rtMinMargin** member as the minimum allowable widths for the left, top, right, and bottom margins. The system prevents the user from entering a width that is less than the specified minimum. If **PSD_MINMARGINS** is not specified, the system sets the minimum allowable widths to those allowed by the printer.  
   
-- **PSD_MARGINS** активирует элемент управления поля.  
+- **PSD_MARGINS** Activates the margin control area.  
   
-- **PSD_INTHOUSANDTHSOFINCHES** вызывает единицы диалогового окна для измеряться в 1/1000 дюйма.  
+- **PSD_INTHOUSANDTHSOFINCHES** Causes the units of the dialog box to be measured in 1/1000 of an inch.  
   
-- **PSD_INHUNDREDTHSOFMILLIMETERS** вызывает единицы диалогового окна для измеряться в 1/100 миллиметра.  
+- **PSD_INHUNDREDTHSOFMILLIMETERS** Causes the units of the dialog box to be measured in 1/100 of a millimeter.  
   
-- **PSD_DISABLEMARGINS** отключает margin диалоговыми окнами.  
+- **PSD_DISABLEMARGINS** Disables the margin dialog box controls.  
   
-- **PSD_DISABLEPRINTER** отключает кнопку принтера.  
+- **PSD_DISABLEPRINTER** Disables the Printer button.  
   
-- **PSD_NOWARNING** запрещает отображение когда принтер по умолчанию не предупреждающее сообщение.  
+- **PSD_NOWARNING** Prevents the warning message from being displayed when there is no default printer.  
   
-- **PSD_DISABLEORIENTATION** отключает элемент управления диалогового окна ориентацию страницы.  
+- **PSD_DISABLEORIENTATION** Disables the page orientation dialog control.  
   
-- **PSD_RETURNDEFAULT** вызывает `CPageSetupDialog` для возврата [DEVMODE](http://msdn.microsoft.com/library/windows/desktop/dd183565) и [DEVNAMES](../../mfc/reference/devnames-structure.md) структуры, которые инициализируются для на принтере по умолчанию без отображения диалоговое окно. Предполагается, что оба **hDevNames** и **hDevMode** , **NULL**; в противном случае, функция возвращает ошибку. Если старый драйвер принтера (более ранних, чем Windows версии 3.0), поддерживаемый на принтере по умолчанию только **hDevNames** возвращается; **hDevMode** is **NULL**.  
+- **PSD_RETURNDEFAULT** Causes `CPageSetupDialog` to return [DEVMODE](http://msdn.microsoft.com/library/windows/desktop/dd183565) and [DEVNAMES](../../mfc/reference/devnames-structure.md) structures that are initialized for the system default printer without displaying a dialog box. It is assumed that both **hDevNames** and **hDevMode** are **NULL**; otherwise, the function returns an error. If the system default printer is supported by an old printer driver (earlier than Windows version 3.0), only **hDevNames** is returned; **hDevMode** is **NULL**.  
   
-- **PSD_DISABLEPAPER** отключает элемент управления выбора бумаги.  
+- **PSD_DISABLEPAPER** Disables the paper selection control.  
   
-- **PSD_SHOWHELP** Отображение диалогового окна для отображения кнопки справки. **HwndOwner** члена не должно быть **NULL** Если этот флажок установлен.  
+- **PSD_SHOWHELP** Causes the dialog box to show the Help button. The **hwndOwner** member must not be **NULL** if this flag is specified.  
   
-- **PSD_ENABLEPAGESETUPHOOK** позволяет функция обработчика, указанного в **lpfnSetupHook**.  
+- **PSD_ENABLEPAGESETUPHOOK** Enables the hook function specified in **lpfnSetupHook**.  
   
-- **PSD_ENABLEPAGESETUPTEMPLATE** вынуждает операционную систему для создания диалогового окна, используя диалоговое окно «шаблон», определяется **hInstance** и **lpSetupTemplateName**.  
+- **PSD_ENABLEPAGESETUPTEMPLATE** Causes the operating system to create the dialog box by using the dialog template box identified by **hInstance** and **lpSetupTemplateName**.  
   
-- **PSD_ENABLEPAGESETUPTEMPLATEHANDLE** указывает, что **hInstance** определяет блок данных, содержащий шаблон предварительно диалогового окна. Система пропускает **lpSetupTemplateName** Если этот флажок установлен.  
+- **PSD_ENABLEPAGESETUPTEMPLATEHANDLE** Indicates that **hInstance** identifies a data block that contains a preloaded dialog box template. The system ignores **lpSetupTemplateName** if this flag is specified.  
   
-- **PSD_ENABLEPAGEPAINTHOOK** позволяет функция обработчика, указанного в **lpfnPagePaintHook**.  
+- **PSD_ENABLEPAGEPAINTHOOK** Enables the hook function specified in **lpfnPagePaintHook**.  
   
-- **PSD_DISABLEPAGEPAINTING** отключает области рисования диалогового окна.  
+- **PSD_DISABLEPAGEPAINTING** Disables the draw area of the dialog box.  
   
  `pParentWnd`  
- Указатель на родительский или владельца диалогового окна.  
+ Pointer to the dialog box's parent or owner.  
   
-### <a name="remarks"></a>Примечания  
- Используйте [DoModal](../../mfc/reference/cdialog-class.md#domodal) функцию, чтобы открыть диалоговое окно.  
+### <a name="remarks"></a>Remarks  
+ Use the [DoModal](../../mfc/reference/cdialog-class.md#domodal) function to display the dialog box.  
   
-### <a name="example"></a>Пример  
- [!code-cpp[NVC_MFCDocView&#94;](../../mfc/codesnippet/cpp/cpagesetupdialog-class_1.cpp)]  
+### <a name="example"></a>Example  
+ [!code-cpp[NVC_MFCDocView#94](../../mfc/codesnippet/cpp/cpagesetupdialog-class_1.cpp)]  
   
-##  <a name="createprinterdc"></a>CPageSetupDialog::CreatePrinterDC  
- Создает контекст устройства принтера из [DEVMODE](http://msdn.microsoft.com/library/windows/desktop/dd183565) и [DEVNAMES](../../mfc/reference/devnames-structure.md) структуры.  
+##  <a name="createprinterdc"></a>  CPageSetupDialog::CreatePrinterDC  
+ Creates a printer device context from the [DEVMODE](http://msdn.microsoft.com/library/windows/desktop/dd183565) and [DEVNAMES](../../mfc/reference/devnames-structure.md) structures.  
   
 ```  
 HDC CreatePrinterDC();
 ```  
   
-### <a name="return-value"></a>Возвращаемое значение  
- Дескриптор контекста устройства (DC), созданного принтера.  
+### <a name="return-value"></a>Return Value  
+ Handle to the newly created printer device context (DC).  
   
-##  <a name="domodal"></a>CPageSetupDialog::DoModal  
- Эта функция вызывается для отображения диалогового окна Windows Общие параметры OLE страницы и разрешить пользователю выбирать различные варианты настройки печати, например поля печати, размер и ориентация бумаги и принтер назначения.  
+##  <a name="domodal"></a>  CPageSetupDialog::DoModal  
+ Call this function to display the Windows common OLE Page Setup dialog box and allow the user to select various print setup options such as the printing margins, size and orientation of the paper, and destination printer.  
   
 ```  
 virtual INT_PTR DoModal();
 ```  
   
-### <a name="return-value"></a>Возвращаемое значение  
- **IDOK** или **IDCANCEL**. Если **IDCANCEL** будет возвращен, вызовите Windows [CommDlgExtendedError](http://msdn.microsoft.com/library/windows/desktop/ms646916) функцию, чтобы определить, произошла ли ошибка.  
+### <a name="return-value"></a>Return Value  
+ **IDOK** or **IDCANCEL**. If **IDCANCEL** is returned, call the Windows [CommDlgExtendedError](http://msdn.microsoft.com/library/windows/desktop/ms646916) function to determine whether an error occurred.  
   
- **IDOK** и **IDCANCEL** константы, которые указывают, выбрал ли пользователь кнопку OK или "Отмена".  
+ **IDOK** and **IDCANCEL** are constants that indicate whether the user selected the OK or Cancel button.  
   
-### <a name="remarks"></a>Примечания  
- Кроме того пользователь может получить доступ к параметры принтера, например сетевого расположения и свойства, относящиеся к выбранному принтеру.  
+### <a name="remarks"></a>Remarks  
+ In addition, the user can access the printer setup options such as network location and properties specific to the selected printer.  
   
- Если требуется инициализировать различных параметров диалогового окна Параметры страницы, задав члены `m_psd` структуры, следует сделать это до вызова `DoModal`, и после создания объекта диалогового окна. После вызова метода `DoModal`, вызывать другой член функции для получения параметров или данные, введенные пользователем в диалоговом окне.  
+ If you want to initialize the various Page Setup dialog options by setting members of the `m_psd` structure, you should do so before calling `DoModal`, and after the dialog object is constructed. After calling `DoModal`, call other member functions to retrieve the settings or information input by the user into the dialog box.  
   
- Если требуется передать текущие параметры, введенные пользователем, позвонить [CWinApp::SelectPrinter](../../mfc/reference/cwinapp-class.md#selectprinter). Эта функция берет информацию из `CPageSetupDialog` объекта и инициализирует и выбирает нового принтера контроллера домена с правильными атрибутами.  
+ If you want to propagate the current settings entered by the user, make a call to [CWinApp::SelectPrinter](../../mfc/reference/cwinapp-class.md#selectprinter). This function takes the information from the `CPageSetupDialog` object and initializes and selects a new printer DC with the proper attributes.  
   
- [!code-cpp[NVC_MFCDocView&#95;](../../mfc/codesnippet/cpp/cpagesetupdialog-class_2.cpp)]  
+ [!code-cpp[NVC_MFCDocView#95](../../mfc/codesnippet/cpp/cpagesetupdialog-class_2.cpp)]  
   
-### <a name="example"></a>Пример  
-  В примере показано [CPageSetupDialog::CPageSetupDialog](#cpagesetupdialog).  
+### <a name="example"></a>Example  
+  See the example for [CPageSetupDialog::CPageSetupDialog](#cpagesetupdialog).  
   
-##  <a name="getdevicename"></a>CPageSetupDialog::GetDeviceName  
- Вызывайте эту функцию после `DoModal` для извлечения имени выбранного принтера.  
+##  <a name="getdevicename"></a>  CPageSetupDialog::GetDeviceName  
+ Call this function after `DoModal` to retrieve the name of the currently selected printer.  
   
 ```  
 CString GetDeviceName() const;  
 ```  
   
-### <a name="return-value"></a>Возвращаемое значение  
- Имя устройства, используемые **CPageSetupDialog** объекта.  
+### <a name="return-value"></a>Return Value  
+ The device name used by the **CPageSetupDialog** object.  
   
-##  <a name="getdevmode"></a>CPageSetupDialog::GetDevMode  
- Эта функция вызывается после вызова метода `DoModal` для получения информации о контексте устройства принтера `CPageSetupDialog` объекта.  
+##  <a name="getdevmode"></a>  CPageSetupDialog::GetDevMode  
+ Call this function after calling `DoModal` to retrieve information about the printer device context of the `CPageSetupDialog` object.  
   
 ```  
 LPDEVMODE GetDevMode() const;  
 ```  
   
-### <a name="return-value"></a>Возвращаемое значение  
- [DEVMODE](http://msdn.microsoft.com/library/windows/desktop/dd183565) структуру данных, которая содержит сведения об инициализации устройства и среде драйвер принтера. Необходимо разблокировать память, занимаемую структурой с Windows [GlobalUnlock](http://msdn.microsoft.com/library/windows/desktop/aa366595) функции, который описан в [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
+### <a name="return-value"></a>Return Value  
+ The [DEVMODE](http://msdn.microsoft.com/library/windows/desktop/dd183565) data structure, which contains information about the device initialization and environment of a print driver. You must unlock the memory taken by this structure with the Windows [GlobalUnlock](http://msdn.microsoft.com/library/windows/desktop/aa366595) function, which is described in the Windows SDK.  
   
-##  <a name="getdrivername"></a>CPageSetupDialog::GetDriverName  
- Эта функция вызывается после вызова метода [DoModal](../../mfc/reference/cprintdialog-class.md#domodal) получить имя драйвера принтера, определяемые системой.  
+##  <a name="getdrivername"></a>  CPageSetupDialog::GetDriverName  
+ Call this function after calling [DoModal](../../mfc/reference/cprintdialog-class.md#domodal) to retrieve the name of the system-defined printer device driver.  
   
 ```  
 CString GetDriverName() const;  
 ```  
   
-### <a name="return-value"></a>Возвращаемое значение  
- A `CString` Указание имени драйвера, определяемые системой.  
+### <a name="return-value"></a>Return Value  
+ A `CString` specifying the system-defined driver name.  
   
-### <a name="remarks"></a>Примечания  
- Использование указателя для `CString` объект, возвращаемый `GetDriverName` в качестве значения `lpszDriverName` в вызове [CDC::CreateDC](../../mfc/reference/cdc-class.md#createdc).  
+### <a name="remarks"></a>Remarks  
+ Use a pointer to the `CString` object returned by `GetDriverName` as the value of `lpszDriverName` in a call to [CDC::CreateDC](../../mfc/reference/cdc-class.md#createdc).  
   
-##  <a name="getmargins"></a>CPageSetupDialog::GetMargins  
- Эта функция вызывается после вызова метода `DoModal` для извлечения полей драйвера принтера.  
+##  <a name="getmargins"></a>  CPageSetupDialog::GetMargins  
+ Call this function after a call to `DoModal` to retrieve the margins of the printer device driver.  
   
 ```  
 void GetMargins(
@@ -257,51 +264,51 @@ void GetMargins(
     LPRECT lpRectMinMargins) const;  
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
  *lpRectMargins*  
- Указатель на [RECT](https://www.microsoftonedoc.com/#/organizations/e6f6a65cf14f462597b64ac058dbe1d0/projects/3fedad16-eaf1-41a6-8f96-0c1949c68f32/containers/a3daf831-1c5f-4bbe-964d-503870caf874/tocpaths/18113766-3975-4369-bc07-92e34cba712e/locales/en-us) структуры или [CRect](../../atl-mfc-shared/reference/crect-class.md) , описывающий (в дюймах 1/1000 или 1/100 мм) поля печати для выбранного принтера. Передайте **NULL** для этого параметра, если вы не заинтересованы в этот прямоугольник.  
+ Pointer to a [RECT](https://www.microsoftonedoc.com/#/organizations/e6f6a65cf14f462597b64ac058dbe1d0/projects/3fedad16-eaf1-41a6-8f96-0c1949c68f32/containers/a3daf831-1c5f-4bbe-964d-503870caf874/tocpaths/18113766-3975-4369-bc07-92e34cba712e/locales/en-us) structure or [CRect](../../atl-mfc-shared/reference/crect-class.md) object that describes (in 1/1000 inches or 1/100 mm) the print margins for the currently selected printer. Pass **NULL** for this parameter, if you are not interested in this rectangle.  
   
  *lpRectMinMargins*  
- Указатель на `RECT` структуры или `CRect` объект, описывающий (в дюймах 1/1000 или 1/100 мм) минимальные поля печати для выбранного принтера. Передайте **NULL** для этого параметра, если вы не заинтересованы в этот прямоугольник.  
+ Pointer to a `RECT` structure or `CRect` object that describes (in 1/1000 inches or 1/100 mm) the minimum print margins for the currently selected printer. Pass **NULL** for this parameter, if you are not interested in this rectangle.  
   
-##  <a name="getpapersize"></a>CPageSetupDialog::GetPaperSize  
- Эта функция вызывается для получения размера бумаги, выбранного для печати.  
+##  <a name="getpapersize"></a>  CPageSetupDialog::GetPaperSize  
+ Call this function to retrieve the size of the paper selected for printing.  
   
 ```  
 CSize GetPaperSize() const;  
 ```  
   
-### <a name="return-value"></a>Возвращаемое значение  
- Объект [CSize](../../atl-mfc-shared/reference/csize-class.md) объект, содержащий размер бумаги (в дюймах 1/1000 или 1/100 мм), выбранные для печати.  
+### <a name="return-value"></a>Return Value  
+ A [CSize](../../atl-mfc-shared/reference/csize-class.md) object containing the size of the paper (in 1/1000 inches or 1/100 mm) selected for printing.  
   
-##  <a name="getportname"></a>CPageSetupDialog::GetPortName  
- Эта функция вызывается после вызова метода `DoModal` для извлечения имени выбранного порта.  
+##  <a name="getportname"></a>  CPageSetupDialog::GetPortName  
+ Call this function after calling `DoModal` to retrieve the name of the currently selected printer port.  
   
 ```  
 CString GetPortName() const;  
 ```  
   
-### <a name="return-value"></a>Возвращаемое значение  
- Имя выбранного порта.  
+### <a name="return-value"></a>Return Value  
+ The name of the currently selected printer port.  
   
-##  <a name="m_psd"></a>CPageSetupDialog::m_psd  
- Структура типа **PAGESETUPDLG**, члены которого хранения характеристики объекта диалогового окна.  
+##  <a name="m_psd"></a>  CPageSetupDialog::m_psd  
+ A structure of type **PAGESETUPDLG**, whose members store the characteristics of the dialog object.  
   
 ```  
 PAGESETUPDLG m_psd;  
 ```  
   
-### <a name="remarks"></a>Примечания  
- После построения `CPageSetupDialog` объекта, можно использовать `m_psd` для задания различных аспектов диалоговым окном перед вызовом метода `DoModal` функции-члена.  
+### <a name="remarks"></a>Remarks  
+ After constructing a `CPageSetupDialog` object, you can use `m_psd` to set various aspects of the dialog box before calling the `DoModal` member function.  
   
- Если изменить `m_psd` член данных напрямую, переопределяют любое поведение по умолчанию.  
+ If you modify the `m_psd` data member directly, you will override any default behavior.  
   
- Дополнительные сведения о [PAGESETUPDLG](http://msdn.microsoft.com/library/windows/desktop/ms646842) структуры см. в разделе [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
+ For more information on the [PAGESETUPDLG](http://msdn.microsoft.com/library/windows/desktop/ms646842) structure, see the Windows SDK.  
   
- В примере показано [CPageSetupDialog::CPageSetupDialog](#cpagesetupdialog).  
+ See the example for [CPageSetupDialog::CPageSetupDialog](#cpagesetupdialog).  
   
-##  <a name="ondrawpage"></a>CPageSetupDialog::OnDrawPage  
- Вызывается платформой для рисования изображение экрана на печатной странице.  
+##  <a name="ondrawpage"></a>  CPageSetupDialog::OnDrawPage  
+ Called by the framework to draw a screen image of a printed page.  
   
 ```  
 virtual UINT OnDrawPage(
@@ -310,42 +317,42 @@ virtual UINT OnDrawPage(
     LPRECT lpRect);
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
  `pDC`  
- Указатель на контекст устройства принтера.  
+ Pointer to the printer device context.  
   
  `nMessage`  
- Задает сообщение, указывающее область страницы, которые в настоящее время рисования. Ниже указаны доступные значения.  
+ Specifies a message, indicating the area of the page currently being drawn. Can be one of the following:  
   
-- **WM_PSD_FULLPAGERECT** область всей страницы.  
+- **WM_PSD_FULLPAGERECT** The entire page area.  
   
-- **WM_PSD_MINMARGINRECT** текущей минимальный размер полей.  
+- **WM_PSD_MINMARGINRECT** Current minimum margins.  
   
-- **WM_PSD_MARGINRECT** текущего поля.  
+- **WM_PSD_MARGINRECT** Current margins.  
   
-- **WM_PSD_GREEKTEXTRECT** содержимого страницы.  
+- **WM_PSD_GREEKTEXTRECT** Contents of the page.  
   
-- **WM_PSD_ENVSTAMPRECT** область, выделенная для представления почтовой марки.  
+- **WM_PSD_ENVSTAMPRECT** Area reserved for a postage stamp representation.  
   
-- **WM_PSD_YAFULLPAGERECT** область для представления обратный адрес. В этой области расширяет по границам области пример страницы.  
+- **WM_PSD_YAFULLPAGERECT** Area for a return address representation. This area extends to the edges of the sample page area.  
   
  `lpRect`  
- Указатель на [CRect](../../atl-mfc-shared/reference/crect-class.md) или [RECT](https://www.microsoftonedoc.com/#/organizations/e6f6a65cf14f462597b64ac058dbe1d0/projects/3fedad16-eaf1-41a6-8f96-0c1949c68f32/containers/a3daf831-1c5f-4bbe-964d-503870caf874/tocpaths/18113766-3975-4369-bc07-92e34cba712e/locales/en-us) объект, содержащий координаты области рисования.  
+ Pointer to a [CRect](../../atl-mfc-shared/reference/crect-class.md) or [RECT](https://www.microsoftonedoc.com/#/organizations/e6f6a65cf14f462597b64ac058dbe1d0/projects/3fedad16-eaf1-41a6-8f96-0c1949c68f32/containers/a3daf831-1c5f-4bbe-964d-503870caf874/tocpaths/18113766-3975-4369-bc07-92e34cba712e/locales/en-us) object containing the coordinates of the drawing area.  
   
-### <a name="return-value"></a>Возвращаемое значение  
- Ненулевое значение, если обработанное; в противном случае — 0.  
+### <a name="return-value"></a>Return Value  
+ Nonzero value if handled; otherwise 0.  
   
-### <a name="remarks"></a>Примечания  
- Это изображение отображается как часть стандартным диалоговым окном OLE страницы программы установки. Реализация по умолчанию Рисует изображение страницы текста.  
+### <a name="remarks"></a>Remarks  
+ This image is then displayed as part of the common OLE Page Setup dialog box. The default implementation draws an image of a page of text.  
   
- Переопределите эту функцию для настройки прорисовки определенной области изображения или всего изображения. Это можно сделать с помощью `switch` инструкции с **случае** инструкции проверки значения `nMessage`. Например для настройки отображения содержимого изображения страницы, можно использовать следующий код:  
+ Override this function to customize the drawing of a specific area of the image, or the entire image. You can do this by using a `switch` statement with **case** statements checking the value of `nMessage`. For example, to customize the rendering of the contents of the page image, you could use the following example code:  
   
- [!code-cpp[NVC_MFCDocView&#96;](../../mfc/codesnippet/cpp/cpagesetupdialog-class_3.cpp)]  
+ [!code-cpp[NVC_MFCDocView#96](../../mfc/codesnippet/cpp/cpagesetupdialog-class_3.cpp)]  
   
- Обратите внимание, не нужно обработать каждый случай из `nMessage`. Можно обрабатывать один компонент изображения, несколько компонентов изображения или всю область.  
+ Note that you do not need to handle every case of `nMessage`. You can choose to handle one component of the image, several components of the image, or the whole area.  
   
-##  <a name="predrawpage"></a>CPageSetupDialog::PreDrawPage  
- Вызывается средой перед рисованием изображения экрана на печатной странице.  
+##  <a name="predrawpage"></a>  CPageSetupDialog::PreDrawPage  
+ Called by the framework before drawing the screen image of a printed page.  
   
 ```  
 virtual UINT PreDrawPage(
@@ -354,42 +361,42 @@ virtual UINT PreDrawPage(
     LPPAGESETUPDLG pPSD);
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
  *wPaper*  
- Задает значение, указывающее размер бумаги. Это значение может быть одним из **DMPAPER_** значений, перечисленных в описании [DEVMODE](http://msdn.microsoft.com/library/windows/desktop/dd183565) структуры.  
+ Specifies a value that indicates the paper size. This value can be one of the **DMPAPER_** values listed in the description of the [DEVMODE](http://msdn.microsoft.com/library/windows/desktop/dd183565) structure.  
   
  `wFlags`  
- Указывает ориентацию бумаги или конверта, и является ли принтер матричные или HPPCL (язык управления принтера Hewlett Packard) устройства. Этот параметр может принимать одно из следующих значений:  
+ Indicates the orientation of the paper or envelope, and whether the printer is a dot-matrix or HPPCL (Hewlett Packard Printer Control Language) device. This parameter can have one of the following values:  
   
--   0x001 бумаги в альбомной ориентации (матричный)  
+-   0x001   Paper in landscape mode (dot matrix)  
   
--   0x003 бумаги в альбомной ориентации (HPPCL)  
+-   0x003   Paper in landscape mode (HPPCL)  
   
--   0x005 бумаги в портретной ориентации (матричный)  
+-   0x005   Paper in portrait mode (dot matrix)  
   
--   0x007 бумаги в портретной ориентации (HPPCL)  
+-   0x007   Paper in portrait mode (HPPCL)  
   
--   0x00b конверта в альбомной ориентации (HPPCL)  
+-   0x00b   Envelope in landscape mode (HPPCL)  
   
--   0x00d конверта в портретной ориентации (матричный)  
+-   0x00d   Envelope in portrait mode (dot matrix)  
   
--   0x019 конверта в альбомной ориентации (матричный)  
+-   0x019   Envelope in landscape mode (dot matrix)  
   
--   0x01f конверта в портретной ориентации (матричный)  
+-   0x01f   Envelope in portrait mode (dot matrix)  
   
  `pPSD`  
- Указатель на **PAGESETUPDLG** структуры. Дополнительные сведения о [PAGESETUPDLG](http://msdn.microsoft.com/library/windows/desktop/ms646842), в разделе [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
+ Pointer to a **PAGESETUPDLG** structure. For more information on [PAGESETUPDLG](http://msdn.microsoft.com/library/windows/desktop/ms646842), see the Windows SDK.  
   
-### <a name="return-value"></a>Возвращаемое значение  
- Ненулевое значение, если обработанное; в противном случае — 0.  
+### <a name="return-value"></a>Return Value  
+ Nonzero value if handled; otherwise 0.  
   
-### <a name="remarks"></a>Примечания  
- Переопределите эту функцию для настройки прорисовки изображения. Если переопределить эту функцию и вернуть **TRUE**, необходимо нарисовать всего изображения. Если переопределить эту функцию и вернуть **FALSE**, рисуется изображение по умолчанию целиком платформой.  
+### <a name="remarks"></a>Remarks  
+ Override this function to customize the drawing of the image. If you override this function and return **TRUE**, you must draw the entire image. If you override this function and return **FALSE**, the entire default image is drawn by the framework.  
   
-## <a name="see-also"></a>См. также  
- [Пример MFC WORDPAD](../../visual-cpp-samples.md)   
- [Класс CCommonDialog](../../mfc/reference/ccommondialog-class.md)   
- [Диаграмма иерархии](../../mfc/hierarchy-chart.md)
+## <a name="see-also"></a>See Also  
+ [MFC Sample WORDPAD](../../visual-cpp-samples.md)   
+ [CCommonDialog Class](../../mfc/reference/ccommondialog-class.md)   
+ [Hierarchy Chart](../../mfc/hierarchy-chart.md)
 
 
 

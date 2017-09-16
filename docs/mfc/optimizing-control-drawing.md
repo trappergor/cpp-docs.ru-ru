@@ -1,60 +1,79 @@
 ---
-title: "Оптимизация рисования элементов управления | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "MFC ActiveX - элементы управления, оптимизация"
+title: Optimizing Control Drawing | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- MFC ActiveX controls [MFC], optimizing
 ms.assetid: 29ff985d-9bf5-4678-b62d-aad12def75fb
 caps.latest.revision: 11
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 7
----
-# Оптимизация рисования элементов управления
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: c7fe06fb28ec2274c5350aa372a1fbad0b33c269
+ms.contentlocale: ru-ru
+ms.lasthandoff: 09/12/2017
 
-Если элемент управления проинструктирован для рисования в контейнер\- предоставленный контекст устройства, обычно это выделяет объекты GDI \(например, перья, кисти и шрифты\) в контексте устройства, выполняет свои операции рисования, и восстановление предыдущие объекты GDI.  Если контейнер имеет несколько элементов управления, которые должны быть выписанным в одном и том же контексте устройства, каждый элемент управления выделяет объекты, GDI он требует времени, можно сохранить отдельно, если элементы управления не восстановление ранее выбранные объекты.  Наконец, контейнер элементов управления вычерченны могут автоматически восстановить исходные объекты.  
+---
+# <a name="optimizing-control-drawing"></a>Optimizing Control Drawing
+When a control is instructed to draw itself into a container-supplied device context, it typically selects GDI objects (such as pens, brushes, and fonts) into the device context, performs its drawing operations, and restores the previous GDI objects. If the container has multiple controls that are to be drawn into the same device context, and each control selects the GDI objects it requires, time can be saved if the controls do not individually restore previously selected objects. After all the controls have been drawn, the container can automatically restore the original objects.  
   
- Чтобы определить, поддерживает ли контейнер этот метод, элемент управления может вызывать функцию\-член [COleControl::IsOptimizedDraw](../Topic/COleControl::IsOptimizedDraw.md).  Если эта функция возвращает значение **TRUE**, то элемент управления может пропустить шаг обычно восстановление ранее выбранные объекты.  
+ To detect whether a container supports this technique, a control can call the [COleControl::IsOptimizedDraw](../mfc/reference/colecontrol-class.md#isoptimizeddraw) member function. If this function returns **TRUE**, the control can skip the normal step of restoring the previously selected objects.  
   
- Рассмотрим элемент управления, который имеет следующую \(неоптимизированную\) функции `OnDraw`:  
+ Consider a control that has the following (unoptimized) `OnDraw` function:  
   
- [!code-cpp[NVC_MFC_AxOpt#15](../mfc/codesnippet/CPP/optimizing-control-drawing_1.cpp)]  
+ [!code-cpp[NVC_MFC_AxOpt#15](../mfc/codesnippet/cpp/optimizing-control-drawing_1.cpp)]  
   
- Перо и кисти в этом примере локальные переменные, это означает, что они будут деструкторы вызываются, когда они находятся вне области \(если функция `OnDraw` завершение\).  Деструкторы попытаются удаление соответствующие объекты GDI.  Однако они не должны быть удалены, если планируется оставить их выбранный в контексте устройства после возврата из `OnDraw`.  
+ The pen and brush in this example are local variables, meaning their destructors will be called when they go out of scope (when the `OnDraw` function ends). The destructors will attempt to delete the corresponding GDI objects. But they should not be deleted if you plan to leave them selected into the device context upon returning from `OnDraw`.  
   
- Чтобы предотвратить объекты [CPen](../Topic/CPen%20Class.md) и [CBrush](../mfc/reference/cbrush-class.md) из уничтожить при `OnDraw` завершается, сохраните их в переменных\-членах вместо локальных переменных.  В объявлении класса элемента управления добавьте объявления для 2 новых переменных\-членов:  
+ To prevent the [CPen](../mfc/reference/cpen-class.md) and [CBrush](../mfc/reference/cbrush-class.md) objects from being destroyed when `OnDraw` finishes, store them in member variables instead of local variables. In the control's class declaration, add declarations for two new member variables:  
   
- [!code-cpp[NVC_MFC_AxOpt#16](../mfc/codesnippet/CPP/optimizing-control-drawing_2.h)]  
-[!code-cpp[NVC_MFC_AxOpt#17](../mfc/codesnippet/CPP/optimizing-control-drawing_3.h)]  
+ [!code-cpp[NVC_MFC_AxOpt#16](../mfc/codesnippet/cpp/optimizing-control-drawing_2.h)]  
+[!code-cpp[NVC_MFC_AxOpt#17](../mfc/codesnippet/cpp/optimizing-control-drawing_3.h)]  
   
- Затем, при `OnDraw` можно переписать следующим образом:  
+ Then, the `OnDraw` function can be rewritten as follows:  
   
- [!code-cpp[NVC_MFC_AxOpt#18](../mfc/codesnippet/CPP/optimizing-control-drawing_4.cpp)]  
+ [!code-cpp[NVC_MFC_AxOpt#18](../mfc/codesnippet/cpp/optimizing-control-drawing_4.cpp)]  
   
- Такой подход позволяет избежать создания пера и кисти каждый раз `OnDraw` данной функции.  Улучшение скорости поступает за счет обслуживания дополнительных данных экземпляра.  
+ This approach avoids creation of the pen and brush every time `OnDraw` is called. The speed improvement comes at the cost of maintaining additional instance data.  
   
- Если изменения свойств ForeColor или BackColor, перо или кисть должен быть создан повторно.  Чтобы сделать это, переопределяет функции\-члены [OnForeColorChanged](../Topic/COleControl::OnForeColorChanged.md) и [OnBackColorChanged](../Topic/COleControl::OnBackColorChanged.md).  
+ If the ForeColor or BackColor property changes, the pen or brush needs to be created again. To do this, override the [OnForeColorChanged](../mfc/reference/colecontrol-class.md#onforecolorchanged) and [OnBackColorChanged](../mfc/reference/colecontrol-class.md#onbackcolorchanged) member functions:  
   
- [!code-cpp[NVC_MFC_AxOpt#19](../mfc/codesnippet/CPP/optimizing-control-drawing_5.cpp)]  
+ [!code-cpp[NVC_MFC_AxOpt#19](../mfc/codesnippet/cpp/optimizing-control-drawing_5.cpp)]  
   
- Наконец, исключить ненужные вызовы `SelectObject` измените `OnDraw` следующим образом:  
+ Finally, to eliminate unnecessary `SelectObject` calls, modify `OnDraw` as follows:  
   
- [!code-cpp[NVC_MFC_AxOpt#20](../mfc/codesnippet/CPP/optimizing-control-drawing_6.cpp)]  
+ [!code-cpp[NVC_MFC_AxOpt#20](../mfc/codesnippet/cpp/optimizing-control-drawing_6.cpp)]  
   
-## См. также  
- [Элементы управления ActiveX в MFC. Оптимизация](../mfc/mfc-activex-controls-optimization.md)   
+## <a name="see-also"></a>See Also  
+ [MFC ActiveX Controls: Optimization](../mfc/mfc-activex-controls-optimization.md)   
  [COleControl Class](../mfc/reference/colecontrol-class.md)   
- [Элементы управления ActiveX MFC](../mfc/mfc-activex-controls.md)   
- [Элементы управления ActiveX MFC](../mfc/mfc-activex-controls.md)   
- [мастер элементов управления MFC ActiveX](../mfc/reference/mfc-activex-control-wizard.md)   
- [Элементы управления ActiveX в MFC. Закраска элементов управления ActiveX](../mfc/mfc-activex-controls-painting-an-activex-control.md)
+ [MFC ActiveX Controls](../mfc/mfc-activex-controls.md)   
+ [MFC ActiveX Controls](../mfc/mfc-activex-controls.md)   
+ [MFC ActiveX Control Wizard](../mfc/reference/mfc-activex-control-wizard.md)   
+ [MFC ActiveX Controls: Painting an ActiveX Control](../mfc/mfc-activex-controls-painting-an-activex-control.md)
+
+

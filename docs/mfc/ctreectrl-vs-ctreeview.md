@@ -1,40 +1,58 @@
 ---
-title: "CTreeCtrl и CTreeView | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "CTreeCtrl"
-  - "CTreeView"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "CTreeCtrl - класс, или класс CTreeView"
-  - "CTreeView - класс, или класс CTreeCtrl"
-  - "элементы управления "дерево", и представление в виде дерева"
-  - "элементы управления представлением в виде дерева"
+title: CTreeCtrl vs. CTreeView | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- CTreeCtrl
+- CTreeView
+dev_langs:
+- C++
+helpviewer_keywords:
+- tree view controls
+- CTreeCtrl class [MFC], vs. CTreeView class [MFC]
+- CTreeView class [MFC], vs. CTreeCtrl class [MFC]
+- tree controls [MFC], and tree view
 ms.assetid: bba5af25-103f-4b53-84d3-071bc9bd6494
 caps.latest.revision: 10
-caps.handback.revision: 6
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
----
-# CTreeCtrl и CTreeView
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 9579c973c75898cb243fc1b47b638c35bd0423ea
+ms.contentlocale: ru-ru
+ms.lasthandoff: 09/12/2017
 
-MFC предоставляет 2 класса, включающих управления дерева: [CTreeCtrl](../mfc/reference/ctreectrl-class.md) и [CTreeView](../mfc/reference/ctreeview-class.md).  Каждый класс полезен в различных ситуациях.  
+---
+# <a name="ctreectrl-vs-ctreeview"></a>CTreeCtrl vs. CTreeView
+MFC provides two classes that encapsulate tree controls: [CTreeCtrl](../mfc/reference/ctreectrl-class.md) and [CTreeView](../mfc/reference/ctreeview-class.md). Each class is useful in different situations.  
   
- Используйте `CTreeCtrl` при необходимости простого элемента управления дочернего окна; например, в диалоговом окне.  Особенно следует использовать `CTreeCtrl` если будут другие дочерние элементы управления в окне, как в стандартном диалоговом окне.  
+ Use `CTreeCtrl` when you need a plain child window control; for instance, in a dialog box. You'd especially want to use `CTreeCtrl` if there will be other child controls in the window, as in a typical dialog box.  
   
- Используйте `CTreeView`, когда требуется элемент управления "Дерево" действовать как и окно представления в документ\/представление архитектуры, так и в элементе управления дерева.  `CTreeView` займет всю клиентскую область окна\-разделителя или фреймового окна.  Она будет автоматически при изменении размера его родительское окно изменяется размер и может процесс сообщения команд из меню и сочетаний клавиш и инструментов.  Поскольку элемент управления "Дерево" содержит данные, необходимые для отображения дерева, соответствующий объект документа не должен быть сложное — можно использовать даже [CDocument](../Topic/CDocument%20Class.md) в качестве типа документа в шаблоне документов.  
+ Use `CTreeView` when you want the tree control to act like a view window in document/view architecture as well as a tree control. A `CTreeView` will occupy the entire client area of a frame window or splitter window. It will be automatically resized when its parent window is resized, and it can process command messages from menus, accelerator keys, and toolbars. Since a tree control contains the data necessary to display the tree, the corresponding document object does not have to be complicated — you could even use [CDocument](../mfc/reference/cdocument-class.md) as the document type in your document template.  
   
-## См. также  
- [Использование CTreeCtrl](../Topic/Using%20CTreeCtrl.md)   
- [Элементы управления](../mfc/controls-mfc.md)
+## <a name="see-also"></a>See Also  
+ [Using CTreeCtrl](../mfc/using-ctreectrl.md)   
+ [Controls](../mfc/controls-mfc.md)
+
+

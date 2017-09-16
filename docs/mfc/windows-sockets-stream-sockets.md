@@ -1,54 +1,74 @@
 ---
-title: "Сокеты Windows. Сокеты потоков | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "сокеты [C++], сокеты потока"
-  - "сокеты потока [C++]"
-  - "Сокеты Windows [C++], сокеты потока"
+title: 'Windows Sockets: Stream Sockets | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- Windows Sockets [MFC], stream sockets
+- sockets [MFC], stream sockets
+- stream sockets [MFC]
 ms.assetid: 31faaa34-a995-493f-a30b-b8115293d619
 caps.latest.revision: 12
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 8
----
-# Сокеты Windows. Сокеты потоков
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- ru-ru
+- zh-cn
+- zh-tw
+translation.priority.mt:
+- cs-cz
+- pl-pl
+- pt-br
+- tr-tr
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 380b2922e253fcbeea84557e8bb15f9c2912e3c3
+ms.contentlocale: ru-ru
+ms.lasthandoff: 09/12/2017
 
-В этом разделе описываются сокеты потока, один из 2 типов, доступных сокета Windows. Другой тип \( [сокет датаграмм](../mfc/windows-sockets-datagram-sockets.md)\).  
+---
+# <a name="windows-sockets-stream-sockets"></a>Windows Sockets: Stream Sockets
+This article describes stream sockets, one of the two Windows Socket types available. (The other type is the [datagram socket](../mfc/windows-sockets-datagram-sockets.md).)  
   
- Сокеты потока обеспечивают для потока данных, рекордных границ: поток байтов, которые могут быть двунаправленный \(приложению о: он может и отправки и получения через сокет\).  Потоки можно положиться на, чтобы доставлять последовательного, unduplicated данные. \(«Последовательного» означает, что пакеты доставлены в отправленном порядке. «Unduplicated» означает, что при получении указанный пакет только один раз\). Отправку данных сообщений потока гарантировано и поток хорошо подходит для обработки больших объемов данных.  
+ Stream sockets provide for a data flow without record boundaries: a stream of bytes that can be bidirectional (the application is full duplex: it can both transmit and receive through the socket). Streams can be relied upon to deliver sequenced, unduplicated data. ("Sequenced" means that packets are delivered in the order sent. "Unduplicated" means that you get a particular packet only once.) Receipt of stream messages is guaranteed, and streams are well suited to handling large amounts of data.  
   
- Транспортный уровень сети может прекращать или группирования данных в пакеты разумного размера.  Класс `CSocket` обрабатывает упаковка и распаковывать автоматически.  
+ The network transport layer may break up or group data into packets of reasonable size. The `CSocket` class will handle the packing and unpacking for you.  
   
- Потоки основаны на точные подключений: запросы сокета a подключение к сокету B; сокет б принимает или отклоняет запрос подключения.  
+ Streams are based on explicit connections: socket A requests a connection to socket B; socket B accepts or rejects the connection request.  
   
- Телефона вызов обеспечивает хорошую аналогию для потока.  В обычных условиях, принимающая сторона слышит сообщает, что в порядке их получает его, без дублирования или потери.  Сокеты соответствующие потока, например для реализаций, например протокол FTP \(FTP\), который облегчает передачи ASCII или двоичные файлы произвольного размера.  
+ A telephone call provides a good analogy for a stream. Under normal circumstances, the receiving party hears what you say in the order that you say it, without duplication or loss. Stream sockets are appropriate, for example, for implementations such as the File Transfer Protocol (FTP), which facilitates transferring ASCII or binary files of arbitrary size.  
   
- Сокеты потока предпочтительны к сокетам датаграмм, когда данные должны гарантировать, что приехали и при большой размер данных.  Сокеты потока Дополнительные сведения о см. в спецификации Windows SSL.  Спецификация доступна в [!INCLUDE[winSDK](../atl/includes/winsdk_md.md)].  
+ Stream sockets are preferable to datagram sockets when the data must be guaranteed to arrive and when data size is large. For more information about stream sockets, see the Windows Sockets specification. The specification is available in the Windows SDK.  
   
- С помощью сокетов потока может быть главн приложениям конструированным для использования сокета датаграмм для широковещательной передачи ко всем получение сокетам в сети, поскольку  
+ Using stream sockets can be superior to applications designed to use a datagram socket for broadcasting to all receiving sockets on the network because  
   
--   Широковещательная модель и проблемы потока сети \(или «шторма»\).  
+-   The broadcast model is subject to network flood (or "storm") problems.  
   
--   Модель клиент\-сервера принята далее более эффективным.  
+-   The client-server model adopted subsequently is more efficient.  
   
--   Передача достоверных данных предоставляет потока модели, где модель датаграммы не требуется.  
+-   The stream model supplies reliable data transfer, where the datagram model does not.  
   
--   Конечная модель использует возможности взаимодействия между юникод и приложениями сокета ANSI, класс CArchive одалживает в класс CSocket.  
+-   The final model takes advantage of the ability to communicate between Unicode and ANSI socket applications that class CArchive lends to class CSocket.  
   
     > [!NOTE]
-    >  При использовании класса `CSocket`, необходимо использовать поток.  Утверждение MFC завершается неудачей, если указать тип сокета как **SOCK\_DGRAM**.  
+    >  If you use class `CSocket`, you must use a stream. An MFC assertion fails if you specify the socket type as **SOCK_DGRAM**.  
   
-## См. также  
- [Сокеты Windows в MFC](../mfc/windows-sockets-in-mfc.md)   
- [Сокеты Windows. Фон](../mfc/windows-sockets-background.md)
+## <a name="see-also"></a>See Also  
+ [Windows Sockets in MFC](../mfc/windows-sockets-in-mfc.md)   
+ [Windows Sockets: Background](../mfc/windows-sockets-background.md)
+
+

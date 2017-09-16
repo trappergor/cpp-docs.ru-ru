@@ -1,5 +1,5 @@
 ---
-title: "Класс strstream | Документы Майкрософт"
+title: strstream Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -9,7 +9,6 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
-- strstream
 - strstream/std::strstream::freeze
 - strstream/std::strstream::pcount
 - strstream/std::strstream::rdbuf
@@ -17,7 +16,10 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- strstream class
+- std::strstream [C++], freeze
+- std::strstream [C++], pcount
+- std::strstream [C++], rdbuf
+- std::strstream [C++], str
 ms.assetid: 63f3be31-9e36-42b1-9715-a474a5997e2a
 caps.latest.revision: 21
 author: corob-msft
@@ -37,115 +39,115 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
-ms.openlocfilehash: a1d7d7799e1338c72404f5bcdb9d06e9bac763e5
+ms.translationtype: MT
+ms.sourcegitcommit: 5d026c375025b169d5db8445cbb52c0c917b2d8d
+ms.openlocfilehash: 06f3db071e0b8652da27c01bd5e1668b50f24fde
 ms.contentlocale: ru-ru
-ms.lasthandoff: 04/29/2017
+ms.lasthandoff: 09/09/2017
 
 ---
-# <a name="strstream-class"></a>Класс strstream
-Описывает объект, управляющий вставкой и извлечением элементов и закодированных объектов с помощью буфера потока класса [strstreambuf](../standard-library/strstreambuf-class.md).  
+# <a name="strstream-class"></a>strstream Class
+Describes an object that controls insertion and extraction of elements and encoded objects using a stream buffer of class [strstreambuf](../standard-library/strstreambuf-class.md).  
   
-## <a name="syntax"></a>Синтаксис  
+## <a name="syntax"></a>Syntax  
   
 ```
 class strstream : public iostream
 ```  
   
-## <a name="remarks"></a>Примечания  
- Объект сохраняет объект класса `strstreambuf`.  
+## <a name="remarks"></a>Remarks  
+ The object stores an object of class `strstreambuf`.  
   
 > [!NOTE]
->  Этот класс устарел. Вместо него рекомендуется использовать [stringstream](../standard-library/sstream-typedefs.md#stringstream) или [wstringstream](../standard-library/sstream-typedefs.md#wstringstream).  
+>  This class is deprecated. Consider using [stringstream](../standard-library/sstream-typedefs.md#stringstream) or [wstringstream](../standard-library/sstream-typedefs.md#wstringstream) instead.  
   
-### <a name="constructors"></a>Конструкторы  
-  
-|||  
-|-|-|  
-|[strstream](#strstream)|Создает объект типа `strstream`.|  
-  
-### <a name="member-functions"></a>Функции-члены  
+### <a name="constructors"></a>Constructors  
   
 |||  
 |-|-|  
-|[freeze](#freeze)|Делает буфер потока недоступным для операций с буфером потока.|  
-|[pcount](#pcount)|Возвращает число элементов, записанных в управляемую последовательность.|  
-|[rdbuf](#rdbuf)|Возвращает указатель на объект `strstreambuf`, связанный с потоком.|  
-|[str](#str)|Вызывает [freeze](../standard-library/strstreambuf-class.md#freeze), затем возвращает указатель на начало управляемой последовательности.|  
+|[strstream](#strstream)|Constructs an object of type `strstream`.|  
   
-## <a name="requirements"></a>Требования  
- **Заголовок:** \<strstream>  
+### <a name="member-functions"></a>Member Functions  
   
- **Пространство имен:** std  
+|||  
+|-|-|  
+|[freeze](#freeze)|Causes a stream buffer to be unavailable through stream buffer operations.|  
+|[pcount](#pcount)|Returns a count of the number of elements written to the controlled sequence.|  
+|[rdbuf](#rdbuf)|Returns a pointer to the stream's associated `strstreambuf` object.|  
+|[str](#str)|Calls [freeze](../standard-library/strstreambuf-class.md#freeze), and then returns a pointer to the beginning of the controlled sequence.|  
+  
+## <a name="requirements"></a>Requirements  
+ **Header:** \<strstream>  
+  
+ **Namespace:** std  
   
 ##  <a name="freeze"></a>  strstream::freeze  
- Делает буфер потока недоступным для операций с буфером потока.  
+ Causes a stream buffer to be unavailable through stream buffer operations.  
   
 ```
 void freeze(bool _Freezeit = true);
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
  `_Freezeit`  
- Объект `bool`, указывающий, следует ли фиксировать поток.  
+ A `bool` indicating whether you want the stream to be frozen.  
   
-### <a name="remarks"></a>Примечания  
- Функция-член вызывает метод [rdbuf](#rdbuf) -> [freeze](../standard-library/strstreambuf-class.md#freeze)(_ *Freezeit*).  
+### <a name="remarks"></a>Remarks  
+ The member function calls [rdbuf](#rdbuf) -> [freeze](../standard-library/strstreambuf-class.md#freeze)(_ *Freezeit*).  
   
-### <a name="example"></a>Пример  
-  См. пример использования метода **freeze** в разделе [strstreambuf::freeze](../standard-library/strstreambuf-class.md#freeze)  
+### <a name="example"></a>Example  
+  See [strstreambuf::freeze](../standard-library/strstreambuf-class.md#freeze) for an example that uses **freeze**.  
   
 ##  <a name="pcount"></a>  strstream::pcount  
- Возвращает число элементов, записанных в управляемую последовательность.  
+ Returns a count of the number of elements written to the controlled sequence.  
   
 ```
 streamsize pcount() const;
 ```  
   
-### <a name="return-value"></a>Возвращаемое значение  
- Число элементов, записанных в управляемую последовательность.  
+### <a name="return-value"></a>Return Value  
+ The number of elements written to the controlled sequence.  
   
-### <a name="remarks"></a>Примечания  
- Функция-член возвращает [rdbuf](#rdbuf) -> [pcount](../standard-library/strstreambuf-class.md#pcount).  
+### <a name="remarks"></a>Remarks  
+ The member function returns [rdbuf](#rdbuf) -> [pcount](../standard-library/strstreambuf-class.md#pcount).  
   
-### <a name="example"></a>Пример  
-  См. пример использования метода pcount в разделе [strstreambuf::pcount](../standard-library/strstreambuf-class.md#pcount).  
+### <a name="example"></a>Example  
+  See [strstreambuf::pcount](../standard-library/strstreambuf-class.md#pcount) for a sample of using pcount.  
   
 ##  <a name="rdbuf"></a>  strstream::rdbuf  
- Возвращает указатель на объект strstreambuf, связанный с потоком.  
+ Returns a pointer to the stream's associated strstreambuf object.  
   
 ```
 strstreambuf *rdbuf() const
 ```  
   
-### <a name="return-value"></a>Возвращаемое значение  
- Указатель на объект strstreambuf, связанный с потоком.  
+### <a name="return-value"></a>Return Value  
+ A pointer to the stream's associated strstreambuf object.  
   
-### <a name="remarks"></a>Примечания  
- Функция-член возвращает адрес хранимого буфера потока типа **pointer**, указывающий на [strstreambuf](../standard-library/strstreambuf-class.md).  
+### <a name="remarks"></a>Remarks  
+ The member function returns the address of the stored stream buffer of type **pointer** to [strstreambuf](../standard-library/strstreambuf-class.md).  
   
-### <a name="example"></a>Пример  
-  См. пример использования `rdbuf` в разделе [strstreambuf::pcount](../standard-library/strstreambuf-class.md#pcount).  
+### <a name="example"></a>Example  
+  See [strstreambuf::pcount](../standard-library/strstreambuf-class.md#pcount) for a sample that uses `rdbuf`.  
   
 ##  <a name="str"></a>  strstream::str  
- Вызывает [freeze](../standard-library/strstreambuf-class.md#freeze), затем возвращает указатель на начало управляемой последовательности.  
+ Calls [freeze](../standard-library/strstreambuf-class.md#freeze), and then returns a pointer to the beginning of the controlled sequence.  
   
 ```
 char *str();
 ```  
   
-### <a name="return-value"></a>Возвращаемое значение  
- Указатель на начало управляемой последовательности.  
+### <a name="return-value"></a>Return Value  
+ A pointer to the beginning of the controlled sequence.  
   
-### <a name="remarks"></a>Примечания  
- Функция-член возвращает [rdbuf](#rdbuf) -> [str](../standard-library/strstreambuf-class.md#str).  
+### <a name="remarks"></a>Remarks  
+ The member function returns [rdbuf](#rdbuf) -> [str](../standard-library/strstreambuf-class.md#str).  
   
-### <a name="example"></a>Пример  
-  См. пример использования **str** в разделе [strstreambuf::str](../standard-library/strstreambuf-class.md#str).  
+### <a name="example"></a>Example  
+  See [strstreambuf::str](../standard-library/strstreambuf-class.md#str) for a sample that uses **str**.  
   
 ##  <a name="strstream"></a>  strstream::strstream  
- Создает объект типа `strstream`.  
+ Constructs an object of type `strstream`.  
   
 ```
 strstream();
@@ -155,28 +157,28 @@ strstream(char* ptr,
     ios_base::openmode _Mode = ios_base::in | ios_base::out);
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
  `count`  
- Размер буфера.  
+ The size of the buffer.  
   
  `_Mode`  
- Режим ввода-вывода буфера. Дополнительные сведения см. в разделе [ios_base::openmode](../standard-library/ios-base-class.md#openmode).  
+ The input and output mode of the buffer. See [ios_base::openmode](../standard-library/ios-base-class.md#openmode) for more information.  
   
  `ptr`  
- Буфер.  
+ The buffer.  
   
-### <a name="remarks"></a>Примечания  
- Оба конструктора инициализируют базовый класс путем вызова [streambuf](../standard-library/streambuf-typedefs.md#streambuf)(**sb**), где **sb** является сохраненным объектом класса [strstreambuf](../standard-library/strstreambuf-class.md). Первый конструктор также инициализирует **sb**, вызывая метод [strstreambuf](../standard-library/strstreambuf-class.md#strstreambuf). Второй конструктор инициализирует базовый класс одним из двух способов:  
+### <a name="remarks"></a>Remarks  
+ Both constructors initialize the base class by calling [streambuf](../standard-library/streambuf-typedefs.md#streambuf)( **sb**), where **sb** is the stored object of class [strstreambuf](../standard-library/strstreambuf-class.md). The first constructor also initializes **sb** by calling [strstreambuf](../standard-library/strstreambuf-class.md#strstreambuf). The second constructor initializes the base class one of two ways:  
   
--   Если `_Mode`  &  **ios_base::app**== 0, то `ptr` должен назначить первый элемент массива из `count` элементов. Далее конструктор вызывает `strstreambuf`(`ptr`, `count`, `ptr`).  
+-   If `_Mode` & **ios_base::app**== 0, then `ptr` must designate the first element of an array of `count` elements, and the constructor calls `strstreambuf`( `ptr`, `count`, `ptr`).  
   
--   В противном случае `ptr` должен назначить первый элемент массива элементов-счетчиков, содержащий строку C, первый элемент которой обозначается `ptr`. Затем конструктор вызывает `strstreambuf`(`ptr`, `count`, `ptr`  +  `strlen`(`ptr`)).  
+-   Otherwise, `ptr` must designate the first element of an array of count elements that contains a C string whose first element is designated by `ptr`, and the constructor calls `strstreambuf`( `ptr`, `count`, `ptr` + `strlen`( `ptr`) ).  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>See Also  
  [iostream](../standard-library/istream-typedefs.md#iostream)   
- [Потокобезопасность в стандартной библиотеке C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)   
- [Программирование iostream](../standard-library/iostream-programming.md)   
- [Соглашения iostreams](../standard-library/iostreams-conventions.md)
+ [Thread Safety in the C++ Standard Library](../standard-library/thread-safety-in-the-cpp-standard-library.md)   
+ [iostream Programming](../standard-library/iostream-programming.md)   
+ [iostreams Conventions](../standard-library/iostreams-conventions.md)
 
 
 

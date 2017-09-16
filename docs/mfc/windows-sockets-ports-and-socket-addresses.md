@@ -1,61 +1,80 @@
 ---
-title: "Сокеты Windows. Порты и адреса сокета | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "адреса [C++], сокет"
-  - "порты [C++]"
-  - "порты [C++], определение"
-  - "сокеты [C++], адреса"
-  - "сокеты [C++], порты"
-  - "Сокеты Windows [C++], адреса"
-  - "Сокеты Windows [C++], порты"
+title: 'Windows Sockets: Ports and Socket Addresses | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- ports [MFC], definition
+- Windows Sockets [MFC], ports
+- Windows Sockets [MFC], addresses
+- ports [MFC]
+- addresses [MFC], socket
+- sockets [MFC], addresses
+- sockets [MFC], ports
 ms.assetid: e050261a-9285-4f31-a1c5-6c8033af5b4a
 caps.latest.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 5
----
-# Сокеты Windows. Порты и адреса сокета
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 9c2f722c08af117d2394efac46496f9c6a144029
+ms.contentlocale: ru-ru
+ms.lasthandoff: 09/12/2017
 
-В этой статье описывается термин «порт» и «адрес», как используется с Windows SSL.  
+---
+# <a name="windows-sockets-ports-and-socket-addresses"></a>Windows Sockets: Ports and Socket Addresses
+This article explains the terms "port" and "address" as used with Windows Sockets.  
   
 ##  <a name="_core_port"></a> Port  
- Задает уникальный порт процесса, для которого служба может быть предоставлена.  Присутствующем в контексте, порт связан с приложением, которое поддерживает Windows SSL.  Рекомендуется указывать каждое приложение Windows sockets уникальным, поэтому следует имеет более одного выполнения приложения Windows SSL на компьютере одновременно.  
+ A port identifies a unique process for which a service can be provided. In the present context, a port is associated with an application that supports Windows Sockets. The idea is to identify each Windows Sockets application uniquely so you can have more than one Windows Sockets application running on a machine at the same time.  
   
- Некоторые порты зарезервировано для общих служб, например FTP.  Следует избегать использования этих портов без предоставления этот тип службы.  Сведения спецификации Windows эти порты SSL зарезервировано.  Файл WINSOCK.H также перечислены их.  
+ Certain ports are reserved for common services, such as FTP. You should avoid using those ports unless you are providing that kind of service. The Windows Sockets specification details these reserved ports. The file WINSOCK.H also lists them.  
   
- Чтобы включить Windows sockets DLL выделяет годный к использованию порт автоматически, передает порт 0 в качестве значения.  MFC выделяет порт значение, десятичное число 1,024.  Можно извлечь значение порт, который выбрал MFC, вызвав функцию\-член [CAsyncSocket::GetSockName](../Topic/CAsyncSocket::GetSockName.md).  
+ To let the Windows Sockets DLL select a usable port for you, pass 0 as the port value. MFC selects a port value greater than 1,024 decimal. You can retrieve the port value that MFC selected by calling the [CAsyncSocket::GetSockName](../mfc/reference/casyncsocket-class.md#getsockname) member function.  
   
-##  <a name="_core_socket_address"></a> Адрес сокета  
- Каждый объект сокета связан с адресом \(IP\) протокол IP в сети.  Как правило, адрес имя компьютера, например «ftp.microsoft.com» или точки, число, например «128.56.22.8».  
+##  <a name="_core_socket_address"></a> Socket Address  
+ Each socket object is associated with an Internet Protocol (IP) address on the network. Typically, the address is a machine name, such as "ftp.microsoft.com", or a dotted number, such as "128.56.22.8".  
   
- При поиске создание сокет, обычно не требуется указывать собственный адрес.  
+ When you seek to create a socket, you typically do not need to specify your own address.  
   
 > [!NOTE]
->  Возможно, что компьютер имеет несколько сетевые карты \(или приложение когда\-нибудь может выполняться на одном компьютере\), каждый из которых представляет отдельную сети.  Если в этом случае может потребоваться предоставить адрес для определения, карту сети сокет будет использовать.  Это может быть расширенные потреблением и возможной причиной проблемы 64\-битной.  
+>  It is possible that your machine has multiple network cards (or your application might someday run on such a machine), each representing a different network. If so, you might need to give an address to specify which network card the socket will use. This is certain to be an advanced usage and a possible portability issue.  
   
- Дополнительные сведения см. в следующих разделах:  
+ For more information, see:  
   
--   [Windows SSL. С помощью класса CAsyncSocket](../mfc/windows-sockets-using-class-casyncsocket.md)  
+-   [Windows Sockets: Using Class CAsyncSocket](../mfc/windows-sockets-using-class-casyncsocket.md)  
   
--   [Windows SSL. С помощью сокетов с архивами](../mfc/windows-sockets-using-sockets-with-archives.md)  
+-   [Windows Sockets: Using Sockets with Archives](../mfc/windows-sockets-using-sockets-with-archives.md)  
   
--   [Windows SSL. Как работают с архивами сокеты](../mfc/windows-sockets-how-sockets-with-archives-work.md)  
+-   [Windows Sockets: How Sockets with Archives Work](../mfc/windows-sockets-how-sockets-with-archives-work.md)  
   
--   [Windows SSL. Сокеты потока](../mfc/windows-sockets-stream-sockets.md)  
+-   [Windows Sockets: Stream Sockets](../mfc/windows-sockets-stream-sockets.md)  
   
--   [Windows SSL. Сокеты датаграмм](../mfc/windows-sockets-datagram-sockets.md)  
+-   [Windows Sockets: Datagram Sockets](../mfc/windows-sockets-datagram-sockets.md)  
   
-## См. также  
- [Сокеты Windows в MFC](../mfc/windows-sockets-in-mfc.md)
+## <a name="see-also"></a>See Also  
+ [Windows Sockets in MFC](../mfc/windows-sockets-in-mfc.md)
+
+

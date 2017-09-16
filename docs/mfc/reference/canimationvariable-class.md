@@ -1,5 +1,5 @@
 ---
-title: "Класс CAnimationVariable | Документы Microsoft"
+title: CAnimationVariable Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -33,7 +33,25 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- CAnimationVariable class
+- CAnimationVariable [MFC], CAnimationVariable
+- CAnimationVariable [MFC], AddTransition
+- CAnimationVariable [MFC], ApplyTransitions
+- CAnimationVariable [MFC], ClearTransitions
+- CAnimationVariable [MFC], Create
+- CAnimationVariable [MFC], CreateTransitions
+- CAnimationVariable [MFC], EnableIntegerValueChangedEvent
+- CAnimationVariable [MFC], EnableValueChangedEvent
+- CAnimationVariable [MFC], GetDefaultValue
+- CAnimationVariable [MFC], GetParentAnimationObject
+- CAnimationVariable [MFC], GetValue
+- CAnimationVariable [MFC], GetVariable
+- CAnimationVariable [MFC], SetDefaultValue
+- CAnimationVariable [MFC], SetParentAnimationObject
+- CAnimationVariable [MFC], m_bAutodestroyTransitions
+- CAnimationVariable [MFC], m_dblDefaultValue
+- CAnimationVariable [MFC], m_lstTransitions
+- CAnimationVariable [MFC], m_pParentObject
+- CAnimationVariable [MFC], m_variable
 ms.assetid: 506e697e-31a8-4033-a27e-292f4d7b42d9
 caps.latest.revision: 17
 author: mikeblome
@@ -53,101 +71,101 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0e0c08ddc57d437c51872b5186ae3fc983bb0199
-ms.openlocfilehash: 42513c841f6dc891369d7d6640ced1aa37f90e8e
+ms.translationtype: MT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 85388a9f55358c1c1fb5f5964d25c29c0231f3c0
 ms.contentlocale: ru-ru
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 09/12/2017
 
 ---
-# <a name="canimationvariable-class"></a>Класс CAnimationVariable
-Представляет переменную анимации.  
+# <a name="canimationvariable-class"></a>CAnimationVariable Class
+Represents an animation variable.  
   
-## <a name="syntax"></a>Синтаксис  
+## <a name="syntax"></a>Syntax  
   
 ```  
 class CAnimationVariable;  
 ```  
   
-## <a name="members"></a>Члены  
+## <a name="members"></a>Members  
   
-### <a name="public-constructors"></a>Открытые конструкторы  
+### <a name="public-constructors"></a>Public Constructors  
   
-|Имя|Описание|  
+|Name|Description|  
 |----------|-----------------|  
-|[CAnimationVariable::CAnimationVariable](#canimationvariable)|Создает объект переменной анимации.|  
-|[CAnimationVariable:: ~ CAnimationVariable](#canimationvariable__~canimationvariable)|Деструктор Вызывается при уничтожении объекта CAnimationVariable.|  
+|[CAnimationVariable::CAnimationVariable](#canimationvariable)|Constructs an animation variable object.|  
+|[CAnimationVariable::~CAnimationVariable](#canimationvariable__~canimationvariable)|The destructor. Called when a CAnimationVariable object is being destroyed.|  
   
-### <a name="public-methods"></a>Открытые методы  
+### <a name="public-methods"></a>Public Methods  
   
-|Имя|Описание|  
+|Name|Description|  
 |----------|-----------------|  
-|[CAnimationVariable::AddTransition](#addtransition)|Добавляет переход.|  
-|[CAnimationVariable::ApplyTransitions](#applytransitions)|Добавляет переходы из внутреннего списка для раскадровки.|  
-|[CAnimationVariable::ClearTransitions](#cleartransitions)|Очищает переходов.|  
-|[CAnimationVariable::Create](#create)|Создает объект COM переменной базового анимации.|  
-|[CAnimationVariable::CreateTransitions](#createtransitions)|Создает все переходы для применения к этой переменной анимации.|  
-|[CAnimationVariable::EnableIntegerValueChangedEvent](#enableintegervaluechangedevent)|Включает или отключает IntegerValueChanged события.|  
-|[CAnimationVariable::EnableValueChangedEvent](#enablevaluechangedevent)|Включает или отключает событие ValueChanged.|  
-|[CAnimationVariable::GetDefaultValue](#getdefaultvalue)|Возвращает значение по умолчанию.|  
-|[CAnimationVariable::GetParentAnimationObject](#getparentanimationobject)|Возвращает родительский объект для анимации.|  
-|[CAnimationVariable::GetValue](#getvalue)|Перегружен. Возвращает текущее значение переменной анимации.|  
-|[CAnimationVariable::GetVariable](#getvariable)|Возвращает указатель IUIAnimationVariable COM-объект.|  
-|[CAnimationVariable::SetDefaultValue](#setdefaultvalue)|Задает значение по умолчанию и освобождает IUIAnimationVariable COM-объект.|  
+|[CAnimationVariable::AddTransition](#addtransition)|Adds a transition.|  
+|[CAnimationVariable::ApplyTransitions](#applytransitions)|Adds transitions from the internal list to storyboard.|  
+|[CAnimationVariable::ClearTransitions](#cleartransitions)|Clears transitions.|  
+|[CAnimationVariable::Create](#create)|Creates the underlying animation variable COM object.|  
+|[CAnimationVariable::CreateTransitions](#createtransitions)|Creates all transitions to be applied to this animation variable.|  
+|[CAnimationVariable::EnableIntegerValueChangedEvent](#enableintegervaluechangedevent)|Enables or disables the IntegerValueChanged event.|  
+|[CAnimationVariable::EnableValueChangedEvent](#enablevaluechangedevent)|Enables or disables the ValueChanged event.|  
+|[CAnimationVariable::GetDefaultValue](#getdefaultvalue)|Returns default value.|  
+|[CAnimationVariable::GetParentAnimationObject](#getparentanimationobject)|Returns the parent animation object.|  
+|[CAnimationVariable::GetValue](#getvalue)|Overloaded. Returns the current value of animation variable.|  
+|[CAnimationVariable::GetVariable](#getvariable)|Returns a pointer to IUIAnimationVariable COM object.|  
+|[CAnimationVariable::SetDefaultValue](#setdefaultvalue)|Sets default value and releases IUIAnimationVariable COM object.|  
   
-### <a name="protected-methods"></a>Защищенные методы  
+### <a name="protected-methods"></a>Protected Methods  
   
-|Имя|Описание|  
+|Name|Description|  
 |----------|-----------------|  
-|[CAnimationVariable::SetParentAnimationObject](#setparentanimationobject)|Задает связь между переменной анимации и объекта анимации.|  
+|[CAnimationVariable::SetParentAnimationObject](#setparentanimationobject)|Sets the relationship between an animation variable and an animation object.|  
   
-### <a name="public-data-members"></a>Открытые члены данных  
+### <a name="public-data-members"></a>Public Data Members  
   
-|Имя|Описание|  
+|Name|Description|  
 |----------|-----------------|  
-|[CAnimationVariable::m_bAutodestroyTransitions](#m_bautodestroytransitions)|Указывает, следует ли удалять переход на связанные объекты.|  
+|[CAnimationVariable::m_bAutodestroyTransitions](#m_bautodestroytransitions)|Specifies whether related transition objects should be deleted.|  
   
-### <a name="protected-data-members"></a>Защищенные члены данных  
+### <a name="protected-data-members"></a>Protected Data Members  
   
-|Имя|Описание|  
+|Name|Description|  
 |----------|-----------------|  
-|[CAnimationVariable::m_dblDefaultValue](#m_dbldefaultvalue)|Указывает значение по умолчанию, который передается IUIAnimationVariable.|  
-|[CAnimationVariable::m_lstTransitions](#m_lsttransitions)|Содержит список переходов, анимация этой переменной анимации.|  
-|[CAnimationVariable::m_pParentObject](#m_pparentobject)|Указатель объекта анимации, который инкапсулирует этой переменной анимации.|  
-|[CAnimationVariable::m_variable](#m_variable)|Хранит указатель IUIAnimationVariable COM-объект. Значение NULL, если COM-объект еще не создана, или не удалось создать.|  
+|[CAnimationVariable::m_dblDefaultValue](#m_dbldefaultvalue)|Specifies the default value, which is propagated to IUIAnimationVariable.|  
+|[CAnimationVariable::m_lstTransitions](#m_lsttransitions)|Contains a list of transitions that animate this animation variable.|  
+|[CAnimationVariable::m_pParentObject](#m_pparentobject)|A pointer to an animation object that encapsulates this animation variable.|  
+|[CAnimationVariable::m_variable](#m_variable)|Stores a pointer to IUIAnimationVariable COM object. NULL if the COM object has not been created yet, or if creation failed.|  
   
-## <a name="remarks"></a>Примечания  
- Класс CAnimationVariable инкапсулирует IUIAnimationVariable COM-объект. Она также содержит список переходов для применения к переменной анимации в раскадровке. Внедренные объекты CAnimationVariable для анимации объектов, которые могут представлять приложения анимированное значение, точки, размер, цвет и прямоугольника.  
+## <a name="remarks"></a>Remarks  
+ The CAnimationVariable class encapsulates IUIAnimationVariable COM object. It also holds a list of transitions to be applied to the animation variable in a storyboard. CAnimationVariable objects are embedded to animation objects, which can represent in an application an animated value, point, size, color and rectangle.  
   
-## <a name="inheritance-hierarchy"></a>Иерархия наследования  
+## <a name="inheritance-hierarchy"></a>Inheritance Hierarchy  
  `CAnimationVariable`  
   
-## <a name="requirements"></a>Требования  
- **Заголовок:** afxanimationcontroller.h  
+## <a name="requirements"></a>Requirements  
+ **Header:** afxanimationcontroller.h  
   
-##  <a name="_dtorcanimationvariable"></a>CAnimationVariable:: ~ CAnimationVariable  
- Деструктор Вызывается при уничтожении объекта CAnimationVariable.  
+##  <a name="_dtorcanimationvariable"></a>  CAnimationVariable::~CAnimationVariable  
+ The destructor. Called when a CAnimationVariable object is being destroyed.  
   
 ```  
 virtual ~CAnimationVariable();
 ```  
   
-##  <a name="addtransition"></a>CAnimationVariable::AddTransition  
- Добавляет переход.  
+##  <a name="addtransition"></a>  CAnimationVariable::AddTransition  
+ Adds a transition.  
   
 ```  
 void AddTransition(CBaseTransition* pTransition);
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
  `pTransition`  
- Переход, чтобы добавить указатель.  
+ A pointer to a transition to add.  
   
-### <a name="remarks"></a>Примечания  
- Этот метод вызывается, чтобы добавить переход во внутренний список переходов для применения к переменной анимации. Этот список должен быть очищен, когда было запланировано анимации.  
+### <a name="remarks"></a>Remarks  
+ This method is called to add a transition to the internal list of transitions to be applied to the animation variable. This list should be cleared when an animation has been scheduled.  
   
-##  <a name="applytransitions"></a>CAnimationVariable::ApplyTransitions  
- Добавляет переходы из внутреннего списка для раскадровки.  
+##  <a name="applytransitions"></a>  CAnimationVariable::ApplyTransitions  
+ Adds transitions from the internal list to storyboard.  
   
 ```  
 void ApplyTransitions(
@@ -156,66 +174,66 @@ void ApplyTransitions(
     BOOL bDependOnKeyframes);
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
  `pController`  
- Указатель на родительский контроллер анимации.  
+ A pointer to parent animation controller.  
   
  `pStoryboard`  
- Указатель на раскадровку.  
+ A pointer to storyboard.  
   
  `bDependOnKeyframes`  
- Значение TRUE, если этот метод следует добавить переходы, которые зависят от опорных кадров.  
+ TRUE, if this method should add transitions that depend on keyframes.  
   
-### <a name="remarks"></a>Примечания  
- Этот метод добавляет переходы из внутреннего списка для раскадровки. Он вызывается из кода верхнего уровня несколько раз для добавления переходов, которые не зависят от ключевых кадров и добавьте переходы, которые зависят от опорных кадров. Базовой переменной анимации COM-объект не был создан, этот метод создает на этом этапе.  
+### <a name="remarks"></a>Remarks  
+ This method adds transitions from the internal list to storyboard. It's called from the top level code several times to add transitions that do not depend on keyframes and add transitions that depend on keyframes. If the underlying animation variable COM object has not been created, this method creates it at this stage.  
   
-##  <a name="canimationvariable"></a>CAnimationVariable::CAnimationVariable  
- Создает объект переменной анимации.  
+##  <a name="canimationvariable"></a>  CAnimationVariable::CAnimationVariable  
+ Constructs an animation variable object.  
   
 ```  
 CAnimationVariable(DOUBLE dblDefaultValue = 0.0);
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
  `dblDefaultValue`  
- Указывает значение по умолчанию.  
+ Specifies the default value.  
   
-### <a name="remarks"></a>Примечания  
- Создает объект переменной анимации и задает в качестве значения по умолчанию. Значение по умолчанию используется в том случае, когда переменная не анимируется или не может быть анимированы.  
+### <a name="remarks"></a>Remarks  
+ Constructs an animation variable object and sets its default value. A default value is used when a variable is not animated, or can't be animated.  
   
-##  <a name="cleartransitions"></a>CAnimationVariable::ClearTransitions  
- Очищает переходов.  
+##  <a name="cleartransitions"></a>  CAnimationVariable::ClearTransitions  
+ Clears transitions.  
   
 ```  
 void ClearTransitions(BOOL bAutodestroy);
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
  `bAutodestroy`  
- Указывает, должен ли этот метод удалить объекты перехода.  
+ Specifies whether this method should delete transition objects.  
   
-### <a name="remarks"></a>Примечания  
- Этот метод удаляет все переходы из внутреннего списка переходов. Если bAutodestroy имеет значение TRUE, или m_bAutodestroyTransitions имеет значение TRUE, переходы будут удалены. В противном случае вызывающий объект должен освободить объекты перехода.  
+### <a name="remarks"></a>Remarks  
+ This method removes all transitions from the internal list of transitions. If bAutodestroy is TRUE, or m_bAutodestroyTransitions is TRUE, then transitions are deleted. Otherwise the caller should deallocate the transition objects.  
   
-##  <a name="create"></a>CAnimationVariable::Create  
- Создает объект COM переменной базового анимации.  
+##  <a name="create"></a>  CAnimationVariable::Create  
+ Creates the underlying animation variable COM object.  
   
 ```  
 virtual BOOL Create(IUIAnimationManager* pManager);
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
  `pManager`  
- Указатель диспетчера анимации.  
+ A pointer to animation manager.  
   
-### <a name="return-value"></a>Возвращаемое значение  
- Значение TRUE, если переменной анимации был успешно создан; в противном случае — значение FALSE.  
+### <a name="return-value"></a>Return Value  
+ TRUE if the animation variable was successfully created; otherwise FALSE.  
   
-### <a name="remarks"></a>Примечания  
- Этот метод создает базовой переменной анимации COM-объект и задает в качестве значения по умолчанию.  
+### <a name="remarks"></a>Remarks  
+ This method creates the underlying animation variable COM object and sets its default value.  
   
-##  <a name="createtransitions"></a>CAnimationVariable::CreateTransitions  
- Создает все переходы для применения к этой переменной анимации.  
+##  <a name="createtransitions"></a>  CAnimationVariable::CreateTransitions  
+ Creates all transitions to be applied to this animation variable.  
   
 ```  
 BOOL CreateTransitions(
@@ -223,18 +241,18 @@ BOOL CreateTransitions(
     IUIAnimationTransitionFactory* \*not used*\);
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
 `pLibrary`  
- Указатель на [IUIAnimationTransitionLibrary интерфейс](https://msdn.microsoft.com/library/windows/desktop/dd371897), определяющего библиотеки стандартных переходов.  
+ A pointer to an [IUIAnimationTransitionLibrary interface](https://msdn.microsoft.com/library/windows/desktop/dd371897), which defines a library of standard transitions.  
   
-### <a name="return-value"></a>Возвращаемое значение  
- Значение TRUE, если переходы были созданы успешно. в противном случае — значение FALSE.  
+### <a name="return-value"></a>Return Value  
+ TRUE if transitions were created successfully; otherwise FALSE.  
   
-### <a name="remarks"></a>Примечания  
- Этот метод вызывается платформой, когда следует создавать переходы, добавленные к переменной внутренний список переходов.  
+### <a name="remarks"></a>Remarks  
+ This method is called by the framework when it needs to create transitions that have been added to the variable's internal list of transitions.  
   
-##  <a name="enableintegervaluechangedevent"></a>CAnimationVariable::EnableIntegerValueChangedEvent  
- Включает или отключает IntegerValueChanged события.  
+##  <a name="enableintegervaluechangedevent"></a>  CAnimationVariable::EnableIntegerValueChangedEvent  
+ Enables or disables the IntegerValueChanged event.  
   
 ```  
 void EnableIntegerValueChangedEvent (
@@ -242,18 +260,18 @@ void EnableIntegerValueChangedEvent (
     BOOL bEnable);
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
  `pController`  
- Указатель на родительский контроллер.  
+ A pointer to parent controller.  
   
  `bEnable`  
- TRUE – включить события, FALSE — отключить события.  
+ TRUE - enable event, FALSE - disable event.  
   
-### <a name="remarks"></a>Примечания  
- При включении события ValueChanged платформа вызывает виртуальный метод CAnimationController::OnAnimationIntegerValueChanged. Необходимо переопределить его в класс, производный от CAnimationController для обработки этого события. Этот метод вызывается каждый раз при изменении целочисленное значение переменной анимации.  
+### <a name="remarks"></a>Remarks  
+ When ValueChanged event is enabled, the framework calls virtual method CAnimationController::OnAnimationIntegerValueChanged. You need to override it in a class derived from CAnimationController in order to process this event. This method is called every time the integer value of animation variable is changed.  
   
-##  <a name="enablevaluechangedevent"></a>CAnimationVariable::EnableValueChangedEvent  
- Включает или отключает событие ValueChanged.  
+##  <a name="enablevaluechangedevent"></a>  CAnimationVariable::EnableValueChangedEvent  
+ Enables or disables the ValueChanged event.  
   
 ```  
 void EnableValueChangedEvent (
@@ -261,142 +279,142 @@ void EnableValueChangedEvent (
     BOOL bEnable);
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
  `pController`  
- Указатель на родительский контроллер.  
+ A pointer to parent controller.  
   
  `bEnable`  
- TRUE – включить события, FALSE — отключить события.  
+ TRUE - enable event, FALSE - disable event.  
   
-### <a name="remarks"></a>Примечания  
- При включении события ValueChanged платформа вызывает виртуальный метод CAnimationController::OnAnimationValueChanged. Необходимо переопределить его в класс, производный от CAnimationController для обработки этого события. Этот метод вызывается каждый раз при изменении значения переменной анимации.  
+### <a name="remarks"></a>Remarks  
+ When ValueChanged event is enabled, the framework calls virtual method CAnimationController::OnAnimationValueChanged. You need to override it in a class derived from CAnimationController in order to process this event. This method is called every time the value of animation variable is changed.  
   
-##  <a name="getdefaultvalue"></a>CAnimationVariable::GetDefaultValue  
- Возвращает значение по умолчанию.  
+##  <a name="getdefaultvalue"></a>  CAnimationVariable::GetDefaultValue  
+ Returns default value.  
   
 ```  
 DOUBLE GetDefaultValue() const;  
 ```  
   
-### <a name="return-value"></a>Возвращаемое значение  
- Значение по умолчанию.  
+### <a name="return-value"></a>Return Value  
+ The default value.  
   
-### <a name="remarks"></a>Примечания  
- Эта функция используется для получения значения переменной анимации по умолчанию. Значение по умолчанию можно задать в конструкторе или методом SetDefaultValue.  
+### <a name="remarks"></a>Remarks  
+ Use this function to obtain default value of animation variable. The default value can be set in constructor or by SetDefaultValue method.  
   
-##  <a name="getparentanimationobject"></a>CAnimationVariable::GetParentAnimationObject  
- Возвращает родительский объект для анимации.  
+##  <a name="getparentanimationobject"></a>  CAnimationVariable::GetParentAnimationObject  
+ Returns the parent animation object.  
   
 ```  
 CAnimationBaseObject* GetParentAnimationObject();
 ```  
   
-### <a name="return-value"></a>Возвращаемое значение  
- Указатель на родительский объект анимации, если было установлено отношение, в противном случае — значение NULL.  
+### <a name="return-value"></a>Return Value  
+ A pointer to parent animation object, if relationship was established, otherwise NULL.  
   
-### <a name="remarks"></a>Примечания  
- Этот метод может вызываться, чтобы получить указатель на родительский объект анимации (контейнер).  
+### <a name="remarks"></a>Remarks  
+ This method can be called to retrieve a pointer to a parent animation object (a container).  
   
-##  <a name="getvalue"></a>CAnimationVariable::GetValue  
- Возвращает текущее значение переменной анимации.  
+##  <a name="getvalue"></a>  CAnimationVariable::GetValue  
+ Returns the current value of animation variable.  
   
 ```  
 HRESULT GetValue(DOUBLE& dblValue);  
 HRESULT GetValue(INT32& nValue);
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
  `dblValue`  
- Текущее значение переменной анимации.  
+ The current value of the animation variable.  
   
  `nValue`  
- Текущее значение переменной анимации.  
+ The current value of the animation variable.  
   
-### <a name="return-value"></a>Возвращаемое значение  
- Значение S_OK, если было получено значение или не был создан базовый переменной анимации. В противном случае — код ошибки HRESULT.  
+### <a name="return-value"></a>Return Value  
+ S_OK if the value was obtained successfully, or underlying animation variable has not been created. Otherwise HRESULT error code.  
   
-### <a name="remarks"></a>Примечания  
- Этот метод может быть вызван для получения текущего значения переменной анимации. Если основной COM-объект не был создан, dblValue будет содержать значение по умолчанию, при возврате из функции.  
+### <a name="remarks"></a>Remarks  
+ This method can be called to retrieve the current value of animation variable. If the underlying COM object has not been created, dblValue will contain a default value, when the function returns.  
   
-##  <a name="getvariable"></a>CAnimationVariable::GetVariable  
- Возвращает указатель IUIAnimationVariable COM-объект.  
+##  <a name="getvariable"></a>  CAnimationVariable::GetVariable  
+ Returns a pointer to IUIAnimationVariable COM object.  
   
 ```  
 IUIAnimationVariable* GetVariable();
 ```  
   
-### <a name="return-value"></a>Возвращаемое значение  
- Допустимый указатель IUIAnimationVariable COM-объекта, или значение NULL, если переменной анимации не был создан или не может быть создан.  
+### <a name="return-value"></a>Return Value  
+ A valid pointer to IUIAnimationVariable COM object, or NULL if animation variable was not created, or can't be created.  
   
-### <a name="remarks"></a>Примечания  
- Используйте эту функцию для доступа к базовой IUIAnimationVariable COM-объекта и при необходимости его методы вызываются напрямую.  
+### <a name="remarks"></a>Remarks  
+ Use this function to access the underlying IUIAnimationVariable COM object and call its methods directly if needed.  
   
-##  <a name="m_bautodestroytransitions"></a>CAnimationVariable::m_bAutodestroyTransitions  
- Указывает, следует ли удалять переход на связанные объекты.  
+##  <a name="m_bautodestroytransitions"></a>  CAnimationVariable::m_bAutodestroyTransitions  
+ Specifies whether related transition objects should be deleted.  
   
 ```  
 BOOL m_bAutodestroyTransitions;  
 ```  
   
-### <a name="remarks"></a>Примечания  
- Задайте значение true для принудительного удаления объектов перехода, когда они удаляются из внутреннего списка переходов. Если это значение равно FALSE, вызвав приложения следует удалить переходы. Список переходов всегда очищается после анимации был запланирован. Значение по умолчанию — FALSE.  
+### <a name="remarks"></a>Remarks  
+ Set this value to TRUE to force deletion of transition objects when they are being removed from the internal list of transitions. If this value is FALSE the transitions should be deleted by calling application. The list of transitions is always cleared after an animation has been scheduled. The default value is FALSE.  
   
-##  <a name="m_dbldefaultvalue"></a>CAnimationVariable::m_dblDefaultValue  
- Указывает значение по умолчанию, который передается IUIAnimationVariable.  
+##  <a name="m_dbldefaultvalue"></a>  CAnimationVariable::m_dblDefaultValue  
+ Specifies the default value, which is propagated to IUIAnimationVariable.  
   
 ```  
 DOUBLE m_dblDefaultValue;  
 ```  
   
-##  <a name="m_lsttransitions"></a>CAnimationVariable::m_lstTransitions  
- Содержит список переходов, анимация этой переменной анимации.  
+##  <a name="m_lsttransitions"></a>  CAnimationVariable::m_lstTransitions  
+ Contains a list of transitions that animate this animation variable.  
   
 ```  
 CObList m_lstTransitions;  
 ```  
   
-##  <a name="m_pparentobject"></a>CAnimationVariable::m_pParentObject  
- Указатель объекта анимации, который инкапсулирует этой переменной анимации.  
+##  <a name="m_pparentobject"></a>  CAnimationVariable::m_pParentObject  
+ A pointer to an animation object that encapsulates this animation variable.  
   
 ```  
 CAnimationBaseObject* m_pParentObject;  
 ```  
   
-##  <a name="m_variable"></a>CAnimationVariable::m_variable  
- Хранит указатель IUIAnimationVariable COM-объект. Значение NULL, если COM-объект еще не создана, или не удалось создать.  
+##  <a name="m_variable"></a>  CAnimationVariable::m_variable  
+ Stores a pointer to IUIAnimationVariable COM object. NULL if the COM object has not been created yet, or if creation failed.  
   
 ```  
 ATL::CComPtr<IUIAnimationVariable> m_variable;  
 ```  
   
-##  <a name="setdefaultvalue"></a>CAnimationVariable::SetDefaultValue  
- Задает значение по умолчанию и освобождает IUIAnimationVariable COM-объект.  
+##  <a name="setdefaultvalue"></a>  CAnimationVariable::SetDefaultValue  
+ Sets default value and releases IUIAnimationVariable COM object.  
   
 ```  
 void SetDefaultValue(DOUBLE dblDefaultValue);
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
  `dblDefaultValue`  
- Указывает новое значение по умолчанию.  
+ Specifies the new default value.  
   
-### <a name="remarks"></a>Примечания  
- Используйте этот метод, чтобы сбросить значение по умолчанию. Данный метод освобождает внутренних IUIAnimationVariable COM-объект, поэтому при заново переменной анимации, базового COM-объект возвращает новое значение по умолчанию. Если не создать COM-объект, представляющий переменную анимации или переменная не анимации GetValue возвращается значение по умолчанию.  
+### <a name="remarks"></a>Remarks  
+ Use this method to reset the default value. This method releases the internal IUIAnimationVariable COM object, therefore when animation variable is recreated, the underlying COM object gets the new default value. The default value is returned by GetValue if the COM object representing the animation variable is not created, or if the variable has not been animated.  
   
-##  <a name="setparentanimationobject"></a>CAnimationVariable::SetParentAnimationObject  
- Задает связь между переменной анимации и объекта анимации.  
+##  <a name="setparentanimationobject"></a>  CAnimationVariable::SetParentAnimationObject  
+ Sets the relationship between an animation variable and an animation object.  
   
 ```  
 void SetParentAnimationObject(CAnimationBaseObject* pParentObject);
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
  `pParentObject`  
- Указатель объекта анимации, который содержит эту переменную.  
+ A pointer to an animation object that contains this variable.  
   
-### <a name="remarks"></a>Примечания  
- Этот метод вызывается внутренне для установления однозначное соответствие между переменной анимации и объекта анимации, который инкапсулирует его.  
+### <a name="remarks"></a>Remarks  
+ This method is called internally to establish one-to-one relationship between an animation variable and an animation object that encapsulates it.  
   
-## <a name="see-also"></a>См. также  
- [Классы](../../mfc/reference/mfc-classes.md)
+## <a name="see-also"></a>See Also  
+ [Classes](../../mfc/reference/mfc-classes.md)
 

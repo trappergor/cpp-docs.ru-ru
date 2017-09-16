@@ -1,172 +1,189 @@
 ---
-title: "Элементы управления ActiveX в Интернете | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "элементы управления ActiveX [C++], создание"
-  - "элементы управления ActiveX [C++], Интернет"
-  - "загрузка данных с элементами управления ActiveX"
-  - "Интернет-приложения [C++], элементы управления ActiveX"
-  - "сети [C++], загрузка с элементами управления ActiveX"
-  - "элементы управления OLE [C++], обновление до ActiveX"
+title: ActiveX Controls on the Internet | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- ActiveX controls [MFC], creating
+- ActiveX controls [MFC], Internet
+- downloading data with ActiveX controls
+- OLE controls [MFC], upgrading to ActiveX
+- Internet applications [MFC], ActiveX controls
+- networks [MFC], downloading with ActiveX controls
 ms.assetid: 7ab943c8-2022-41df-9065-d629b616eeec
 caps.latest.revision: 14
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 10
----
-# Элементы управления ActiveX в Интернете
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 988f0e2e303f6789ddc4d779ccba6f3d34435a42
+ms.contentlocale: ru-ru
+ms.lasthandoff: 09/12/2017
 
-Элементы управления ActiveX обновленную версию спецификации элемента управления OLE.  Элементы управления базовая архитектура для разработка программируемых программные компоненты, которые могут использоваться в контейнерах, включая различные модели COM языковых веб\-браузера в Интернете.  Любой элемент управления ActiveX может быть элементом управления Интернета и может добавлять его возможности к активному документу или быть частью страницы.  Элементы управления на странице могут взаимодействовать друг с другом с помощью скрипта.  
+---
+# <a name="activex-controls-on-the-internet"></a>ActiveX Controls on the Internet
+ActiveX controls are the updated version of the OLE control specification. Controls are a primary architecture for developing programmable software components that can be used in a variety of different containers, including COM-aware Web browsers on the Internet. Any ActiveX control can be an Internet control and can add its functionality to an Active document or be part of a Web page. Controls on a Web page can communicate with each other using scripting.  
   
- Элементы управления ActiveX не ограничиваются интернета.  Элемент управления ActiveX также можно использовать в любом контейнере, если элемент управления поддерживает интерфейсы требуется этим контейнером.  
+ ActiveX controls are not limited to the Internet. An ActiveX control can also be used in any container, as long as the control supports the interfaces required by that container.  
   
- **Элементы управления ActiveX имеют несколько преимуществ, включая:**  
+ **ActiveX controls have several advantages, including:**  
   
--   Требуемых интерфейсов меньше, чем предыдущие элементы управления OLE.  
+-   Fewer required interfaces than previous OLE controls.  
   
--   Возможность быть безоконный и всегда на месте активен.  
+-   The ability to be windowless and always in-place active.  
   
- **Для элемента управления ActiveX элемент управления.**  
+ **In order to be an ActiveX control, a control must:**  
   
--   Поддерживают интерфейс **IUnknown**.  
+-   Support the **IUnknown** interface.  
   
--   COM\-объект.  
+-   Be a COM object.  
   
--   Экспортировать **DLLRegisterServer**  и **DLLUnRegisterServer**.  
+-   Export **DLLRegisterServer** and **DLLUnRegisterServer**.  
   
--   Интерфейсы, как для поддержки дополнительных функций.  
+-   Support additional interfaces as needed for functionality.  
   
-## Создание существующие элементы управления дружественной к приложению  
- Разработка элемента управления, который будет работать должным образом на основе веб\-форм требуется вопроса для относительно низких показателей передачи в Интернете.  Можно использовать существующие элементы управления; однако следует принять меры, чтобы объем кода более маленьким и сделать их свойства элемента управления загрузить асинхронно.  
+## <a name="making-your-existing-controls-internet-friendly"></a>Making Your Existing Controls Internet-Friendly  
+ Designing a control that will work well in an Internet environment requires consideration for the relatively low transmission rates on the Internet. You can use your existing controls; however, there are steps you should take to make your code size smaller and to make your control properties download asynchronously.  
   
- Чтобы улучшить производительность элементов управления, выполните следующие рекомендации по вопросам эффективности:  
+ To improve performance of your controls, follow these tips on efficiency considerations:  
   
--   Реализуйте методы, описанные в статье [Элементы управления ActiveX. Оптимизация](../mfc/mfc-activex-controls-optimization.md).  
+-   Implement the techniques described in the article [ActiveX Controls: Optimization](../mfc/mfc-activex-controls-optimization.md).  
   
--   Рассмотрим, как элемент управления экземпляра.  
+-   Consider how a control is instantiated.  
   
--   Является асинхронным; не задержите другие программы.  
+-   Be asynchronous; don't hold up other programs.  
   
--   Чтобы загрузить данные в маленькими блоками.  
+-   Download data in small blocks.  
   
-     Загрузя большие потоки как растровые изображения или видеоматериалы данные, чтобы получить данные, обрабатываемые асинхронно в сотрудничестве с контейнером.  Извлечение данных в добавочной или прогрессивной таким, работающий совместно с другими элементами управления, также могут получить данные.  Код также может загрузить асинхронно.  
+     When downloading large streams such as bitmaps or video data, access a control's data asynchronously in cooperation with the container. Retrieve the data in an incremental or progressive fashion, working cooperatively with other controls that may also be retrieving data. Code can also be downloading asynchronously.  
   
--   Код и свойств нагрузки в фоновом режиме.  
+-   Download code and properties in the background.  
   
--   Интерфейс пользователя стали активными как можно быстрее.  
+-   Become user-interface active as quickly as possible.  
   
--   Рассмотрим, как упорный хранятся данные, свойства и большие большие двоичные объекты данных \(например, изображение растрового изображения или видеоматериалы данные\).  
+-   Consider how persistent data is stored, both properties and large data BLOBs (such as a bitmap image or video data).  
   
-     Элементы управления со значительными количествами упорных данных, например большие растровые изображения или файлы формат AVI, требуют особого внимания к загрузить метод.  Документ или страницы могут быть видимыми как можно скорее, дающие пользователю возможность взаимодействовать со страницей, элементы управления извлекает данные в фоновом режиме.  
+     Controls with significant amounts of persistent data, such as large bitmaps or AVI files, require careful attention to downloading method. A document or page can become visible as soon as possible, and allow the user to interact with the page while controls retrieve data in the background.  
   
--   Запись экономические режимы работы, чтобы сохранить размер и время выполнения кода вниз.  
+-   Write efficient routines to keep code size and run time down.  
   
-     Малые кнопки и элемента управления "Метка", с небольшое число байтов упорных данных, подходят для использования на основе Интернета и хорошо работают внутри браузера.  
+     Small button and label controls, with only a few bytes of persistent data, are suitable for use in the Internet environment and work well inside browsers.  
   
--   Рассмотрим ход выполнения взаимодействует с контейнером.  
+-   Consider progress is communicated to the container.  
   
-     Уведомляет контейнер хода выполнения в асинхронной загрузке, например когда пользователь может запустить для взаимодействия со страницей, и, если загрузка завершена.  Контейнер может отображать ход выполнения \(например, процент завершения\) для пользователя.  
+     Notify the container of progress in the asynchronous download, including when the user can start to interact with a page, and when the download is complete. The container can display progress (such as percent complete) to the user.  
   
--   Рассмотрим, как элементы управления зарегистрированными на клиентском компьютере.  
+-   Consider how controls are registered on the client computer.  
   
-## Создание нового элемента управления ActiveX  
- Создание нового элемента управления с помощью мастера приложений можно выбрать включить поддержку асинхронных моникеров, так и в других оптимизации.  Чтобы добавить поддержку к свойствам элементов управления загрузки асинхронно, выполните следующие действия.  
+## <a name="creating-a-new-activex-control"></a>Creating a New ActiveX Control  
+ When creating a new control using the Application Wizard, you can choose to enable support for asynchronous monikers as well as other optimizations. To add support to download control properties asynchronously, follow these steps:  
   
-#### Создание проекта с помощью мастера элементов управления ActiveX MFC  
+#### <a name="to-create-your-project-using-the-mfc-activex-control-wizard"></a>To create your project using the MFC ActiveX Control Wizard  
   
-1.  Нажмите кнопку `New` в меню **Файл**.  
+1.  Click `New` on the **File** menu.  
   
-2.  Выберите **Мастер элементов ActiveX MFC** из проектов Visual C\+\+ имени проекта.  
+2.  Select **MFC ActiveX Control Wizard** from the Visual C++ projects and name your project.  
   
-3.  На странице **Параметры элементов управления**, выберите **Загружает свойства асинхронно**.  Выбор этого параметра настройка готовую национальную свойство и событие изменения состояния работают автоматически.  
+3.  On the **Control Settings** page, select **Loads properties asynchronously**. Selecting this option sets up the ready state property and the ready state changed event for you.  
   
-     Можно также choice другие виды оптимизации, например **Активация без окна**, которая описывается в разделе [Элементы управления ActiveX. Оптимизация](../mfc/mfc-activex-controls-optimization.md).  
+     You can also select other optimizations, such as **Windowless activation**, which is described in [ActiveX Controls: Optimization](../mfc/mfc-activex-controls-optimization.md).  
   
-4.  Нажмите кнопку **Готово**, чтобы создать проект.  
+4.  Choose **Finish** to create the project.  
   
-#### Создать класс, производный от CDataPathProperty  
+#### <a name="to-create-a-class-derived-from-cdatapathproperty"></a>To create a class derived from CDataPathProperty  
   
-1.  Создайте класс, производный от `CDataPathProperty`.  
+1.  Create a class derived from `CDataPathProperty`.  
   
-2.  В каждом из файлов источника, который включает файл заголовка для элемента управления добавьте файл заголовка для этого класса перед ним.  
+2.  In each of your source files that includes the header file for your control, add the header file for this class before it.  
   
-3.  В этом классе, переопределите `OnDataAvailable`.  Эта функция вызывается, когда данные доступны для отображения.  По мере поступления данные, можно обработать его в любом случае следует выбрать, например последовательно обрабатывать его.  
+3.  In this class, override `OnDataAvailable`. This function is called whenever data is available for display. As data becomes available, you can handle it any way you choose, for example by progressively rendering it.  
   
-     Фрагмент кода ниже представлен пример последовательно отображения данных в элементе управления "Поле ввода".  Обратите внимание на использование флажка **BSCF\_FIRSTDATANOTIFICATION** для элемента управления "Поле ввода".  
+     The code excerpt below is a simple example of progressively displaying data in an edit control. Note the use of flag **BSCF_FIRSTDATANOTIFICATION** to clear the edit control.  
   
-     [!code-cpp[NVC_MFCActiveXControl#1](../mfc/codesnippet/CPP/activex-controls-on-the-internet_1.cpp)]  
+     [!code-cpp[NVC_MFCActiveXControl#1](../mfc/codesnippet/cpp/activex-controls-on-the-internet_1.cpp)]  
   
-     Обратите внимание, что необходимо включить AFXCMN.H для использования класса `CListCtrl`.  
+     Note that you must include AFXCMN.H to use the `CListCtrl` class.  
   
-4.  При изменении состояния элемента управления общие \(например, от загрузки на инициализированный или пользователя\), вызов интерактивного `COleControl::InternalSetReadyState`.  Если элемент управления имеет только одно свойство информационного канала, можно добавить код в **BSCF\_LASTDATANOTIFICATION**, чтобы убедиться, что контейнер загрузить завершена.  Примеры.  
+4.  When your control's overall state changes (for example, from loading to initialized or user interactive), call `COleControl::InternalSetReadyState`. If your control has only one data path property, you can add code on **BSCF_LASTDATANOTIFICATION** to notify the container that your download is complete. For example:  
   
-     [!code-cpp[NVC_MFCActiveXControl#2](../mfc/codesnippet/CPP/activex-controls-on-the-internet_2.cpp)]  
+     [!code-cpp[NVC_MFCActiveXControl#2](../mfc/codesnippet/cpp/activex-controls-on-the-internet_2.cpp)]  
   
-5.  Переопределите метод `OnProgress`.  В `OnProgress`, передаются число, указывающее максимальное дальность и отображение числа как можно ближе в текущей нагрузки.  Можно использовать эти номера отображения состояния, такие как процент завершения пользователю.  
+5.  Override `OnProgress`. In `OnProgress`, you are passed a number showing the maximum range and a number showing how far along the current download is. You can use these numbers to display status such as percent complete to the user.  
   
- Следующая процедура добавляет свойства в элемент управления для использования только производного класса.  
+ The next procedure adds a property to the control to use the class just derived.  
   
-#### Добавление свойства  
+#### <a name="to-add-a-property"></a>To add a property  
   
-1.  В **Представление классов** щелкните правой кнопкой мыши интерфейс под узлом библиотеки и выделите **Добавить**, а затем **Добавить свойство**.  Запустится **Мастер добавления свойства**.  
+1.  In **Class View**, right-click the interface underneath the library node and select **Add**, then **Add Property**. This will start the **Add Property Wizard**.  
   
-2.  В **Мастер добавления свойства** выберите переключатель **Методы get и set**, введите **Имя свойства**, например EditControlText и выделите строку BSTR как **свойство Type**.  
+2.  In the **Add Property Wizard**, select the **Set/Get Methods** radio button, type the **Property Name**, for example, EditControlText, and select BSTR as the **Property type**.  
   
-3.  Нажмите кнопку **Готово**.  
+3.  Click **Finish**.  
   
-4.  Объявите переменную\-член. `CDataPathProperty`\- производный класс в класс элемента управления ActiveX.  
+4.  Declare a member variable of your `CDataPathProperty`-derived class to your ActiveX control class.  
   
-     [!code-cpp[NVC_MFCActiveXControl#3](../mfc/codesnippet/CPP/activex-controls-on-the-internet_3.h)]  
+     [!code-cpp[NVC_MFCActiveXControl#3](../mfc/codesnippet/cpp/activex-controls-on-the-internet_3.h)]  
   
-5.  Реализуйте методы **Get\/Set**.  Для **Get**, возвратите строку.  Для `Set` загрузите свойство и вызовите `SetModifiedFlag`.  
+5.  Implement the **Get/Set** methods. For **Get**, return the string. For `Set`, load the property and call `SetModifiedFlag`.  
   
-     [!code-cpp[NVC_MFCActiveXControl#4](../mfc/codesnippet/CPP/activex-controls-on-the-internet_4.cpp)]  
+     [!code-cpp[NVC_MFCActiveXControl#4](../mfc/codesnippet/cpp/activex-controls-on-the-internet_4.cpp)]  
   
-6.  В [DoPropExchange](../Topic/COleControl::DoPropExchange.md) добавьте следующую линия:  
+6.  In [DoPropExchange](../mfc/reference/colecontrol-class.md#dopropexchange), add the following line:  
   
-     [!code-cpp[NVC_MFCActiveXControl#5](../mfc/codesnippet/CPP/activex-controls-on-the-internet_5.cpp)]  
+     [!code-cpp[NVC_MFCActiveXControl#5](../mfc/codesnippet/cpp/activex-controls-on-the-internet_5.cpp)]  
   
-7.  Переопределение [ResetData](../Topic/CDataPathProperty::ResetData.md) для уведомления свойство, чтобы сбросить его элемент управления путем добавления этой линии.  
+7.  Override [ResetData](../mfc/reference/cdatapathproperty-class.md#resetdata) to notify the property to reset its control by adding this line:  
   
-     [!code-cpp[NVC_MFCActiveXControl#6](../mfc/codesnippet/CPP/activex-controls-on-the-internet_6.cpp)]  
+     [!code-cpp[NVC_MFCActiveXControl#6](../mfc/codesnippet/cpp/activex-controls-on-the-internet_6.cpp)]  
   
-## Решающ ли наследовать от CDataPathProperty или CCachedDataPathProperty  
- В предыдущем примере описаны шаги по наследование свойства элемента управления из `CDataPathProperty`.  Это являются хорошим выбором, если требуется загрузить в реальном времени данные, которые часто изменяются, и для них не требуется, чтобы хранить все данные, но только текущее значение.  Пример элемента управления биржевых кодов акций график по имеющимся данным  
+## <a name="deciding-whether-to-derive-from-cdatapathproperty-or-ccacheddatapathproperty"></a>Deciding Whether to Derive from CDataPathProperty or CCachedDataPathProperty  
+ The previous example describes steps for deriving your control's property from `CDataPathProperty`. This is a good choice if you are downloading real-time data that frequently changes, and for which you do not need to keep all the data, but only the current value. An example is a stock ticker control.  
   
- Также можно наследовать от `CCachedDataPathProperty`.  В этом случае загруженный данных кэшируется в файле памяти.  Это являются хорошим выбором, если необходимо хранить все загруженные данные \(например, элемент управления, который последовательно отображает растровое изображение.  В этом случае класс имеющему переменной\-члена, содержащим данные.  
+ You can also derive from `CCachedDataPathProperty`. In this case, the downloaded data is cached in a memory file. This is a good choice if you need to keep all the downloaded data — for example, a control that progressively renders a bitmap. In this case, the class has a member variable containing your data:  
   
  `CMemFile m_Cache;`  
   
- В классе элемента управления ActiveX, могут использовать этот файл сопоставленного в памяти `OnDraw` для отображения данных.  В элемент управления ActiveX `CCachedDataPathProperty`\- производном классе, переопределить функцию\-член `OnDataAvailable` и удалите элемент управления, после вызова реализации базового класса.  
+ In your ActiveX control class, you can use this memory mapped file in `OnDraw` to display the data. In your ActiveX control `CCachedDataPathProperty`-derived class, override the member function `OnDataAvailable` and invalidate the control, after calling the base class implementation.  
   
- [!code-cpp[NVC_MFCActiveXControl#7](../mfc/codesnippet/CPP/activex-controls-on-the-internet_7.cpp)]  
+ [!code-cpp[NVC_MFCActiveXControl#7](../mfc/codesnippet/cpp/activex-controls-on-the-internet_7.cpp)]  
   
-## Сведения о загрузке асинхронно с помощью элементов управления ActiveX  
- Сведения о загрузке по сети необходимо произвести асинхронно.  Преимущество методика, если большой объем данных передаются или если подключение медленно, процесс загрузки не блокирует другие процессы на клиенте.  
+## <a name="downloading-data-asynchronously-using-activex-controls"></a>Downloading Data Asynchronously Using ActiveX Controls  
+ Downloading data over a network should be done asynchronously. The advantage of doing so is that if a large amount of data is transferred or if the connection is slow, the download process will not block other processes on the client.  
   
- Асинхронные моникеры предоставляют способ загрузить данные асинхронно по сети.  Операция чтения в асинхронном моникере немедленно возвращает, даже если операция не завершается.  
+ Asynchronous monikers provide a way to download data asynchronously over a network. A Read operation on an Asynchronous moniker returns immediately, even if the operation has not been completed.  
   
- Например, если только 10 байт, доступных для записи и чтения, вызывает асинхронно на прочитанном файле 1K, не блокируется, но возвращает с в настоящее время доступны 10 байтов.  
+ For example, if only 10 bytes are available and Read is called asynchronously on a 1K file, Read does not block, but returns with the currently available 10 bytes.  
   
- Реализуется с помощью класса [асинхронные моникеры](../mfc/asynchronous-monikers-on-the-internet.md)`CAsyncMonikerFile`.  Однако элементы управления ActiveX могут использовать класс `CDataPathProperty`, наследующий от `CAsyncMonikerFile`, чтобы помочь реализовать асинхронные свойства элемента управления.  
+ You implement [asynchronous monikers](../mfc/asynchronous-monikers-on-the-internet.md) using the `CAsyncMonikerFile` class. However, ActiveX controls can use the `CDataPathProperty` class, which is derived from `CAsyncMonikerFile`, to help implement asynchronous control properties.  
   
- Пример ASYNDOWN демонстрируется настройка асинхронный цикла с помощью таймеры для чтения данных.  ASYNDOWN подробно описано в статье «HOWTO базы знаний: AsyncDown показаны асинхронную загрузку данных» \(Q177244\) и доступен для загрузки из центра загрузки Майкрософт. \(Дополнительные сведения о загрузя файлы из центра загрузки Майкрософт см. в статье «, как получить файлы поддержки Майкрософт из онлайновых служб» \(Q119591\) в Базе знаний Майкрософт\). Статьи базы знаний можно найти на компакт\-диске библиотеки MSDN или на [http:\/\/support.microsoft.com\/support](http://support.microsoft.com/support).  
+ The ASYNDOWN sample demonstrates how to set up an asynchronous loop using timers to read the data. ASYNDOWN is described in detail in the Knowledge Base article "HOWTO: AsyncDown Demonstrates Asynchronous Data Download" (Q177244) and is available for download from the Microsoft Download Center. (For more information about downloading files from the Microsoft Download Center, see the article "How to Obtain Microsoft Support Files from Online Services" (Q119591) in the Microsoft Knowledge Base.) You can find Knowledge Base articles at [http://support.microsoft.com/support](http://support.microsoft.com/support).  
   
- Базовый метод, используемый в ASYNDOWN задания таймера в **CDataPathProperty::OnDataAvailable**, чтобы указать, когда данные.  Если получено сообщение таймера, приложение считывает в блоки 128 байтов данных и заполняет элемент управления "Поле ввода".  Если данные не доступен, когда сообщение таймера обрабатывается, таймер отключен.  `OnDataAvailable` включит таймер, если больше данных попадает позже.  
+ The basic technique used in ASYNDOWN is to set a timer in **CDataPathProperty::OnDataAvailable** to indicate when data is available. When the timer message is received, the application reads in 128-byte blocks of data and fills an edit control. If data is not available when the timer message is handled, the timer is turned off. `OnDataAvailable` turns on the timer if more data arrives later.  
   
-## Отображение элемента управления на странице  
- Ниже приведен пример тега и атрибутов объекта для вставки элемент управления на странице.  
+## <a name="displaying-a-control-on-a-web-page"></a>Displaying a Control on a Web Page  
+ Here is an example of an object tag and attributes for inserting a control on a Web page.  
   
  `<OBJECT`  
   
@@ -196,17 +213,19 @@ caps.handback.revision: 10
   
  `</OBJECT>`  
   
-## Обновление существующего элемента управления OLE для использования новых функций элемента управления ActiveX  
- Если элемент управления OLE был создан в версии Visual C\+\+ — до 4.2, можно предпринять шаги, чтобы повысить его производительность и расширить его функциональные возможности.  Подробное описание этих изменениях см. в разделе [Элементы управления ActiveX. Оптимизация](../mfc/mfc-activex-controls-optimization.md).  
+## <a name="updating-an-existing-ole-control-to-use-new-activex-control-features"></a>Updating an Existing OLE Control to Use New ActiveX Control Features  
+ If your OLE control was created with a version of Visual C++ prior to 4.2, there are steps you can take to improve its performance and enhance its functionality. For a detailed discussion of these changes, see [ActiveX Controls: Optimization](../mfc/mfc-activex-controls-optimization.md).  
   
- При добавлении асинхронной поддержка свойства к существующему элементу управления, самостоятельно придется добавлять готовая свойство свойство и событие `ReadyStateChange`.  В конструкторе элемента управления добавьте:  
+ If you are adding asynchronous property support to an existing control, you will need to add the ready state property and the `ReadyStateChange` event yourself. In the constructor for your control, add:  
   
- [!code-cpp[NVC_MFCActiveXControl#8](../mfc/codesnippet/CPP/activex-controls-on-the-internet_8.cpp)]  
+ [!code-cpp[NVC_MFCActiveXControl#8](../mfc/codesnippet/cpp/activex-controls-on-the-internet_8.cpp)]  
   
- Обновлении состояние готовности как код загружен с помощью метода [COleControl::InternalSetReadyState](../Topic/COleControl::InternalSetReadyState.md).  Одно место следует вызвать `InternalSetReadyState` из переопределения `CDataPathProperty`\- производного класса `OnProgress`.  
+ You will update the ready state as your code is downloaded by calling [COleControl::InternalSetReadyState](../mfc/reference/colecontrol-class.md#internalsetreadystate). One place you could call `InternalSetReadyState` is from the `OnProgress` override of `CDataPathProperty`-derived class.  
   
- Затем выполните шаги, описанные в разделе [Создание нового элемента управления ActiveX](#_core_how_do_i_create_a_new_activex_control.3f).  
+
   
-## См. также  
- [Задачи программирования для интернет\-решений MFC](../mfc/mfc-internet-programming-tasks.md)   
- [Основы программирования для интернет\-решений MFC](../mfc/mfc-internet-programming-basics.md)
+## <a name="see-also"></a>See Also  
+ [MFC Internet Programming Tasks](../mfc/mfc-internet-programming-tasks.md)   
+ [MFC Internet Programming Basics](../mfc/mfc-internet-programming-basics.md)
+
+

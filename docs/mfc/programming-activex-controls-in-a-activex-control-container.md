@@ -1,101 +1,119 @@
 ---
-title: "Контейнеры элементов управления ActiveX. Программирование элементов управления ActiveX в контейнере элементов управления ActiveX | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "контейнер для элементов ActiveX [C++], доступ к элементам управления ActiveX"
-  - "контейнер для элементов ActiveX [C++], классы-оболочки"
-  - "элементы управления ActiveX [C++], доступ"
-  - "элементы управления ActiveX [C++], классы-оболочки"
-  - "Confirm Classes - диалоговое окно"
-  - "заголовочные файлы [C++], для класса программы-оболочки элемента управления ActiveX"
-  - "элементы управления MFC ActiveX [C++], доступ в контейнеры"
-  - "классы-оболочки [C++], элементы управления ActiveX"
-  - "классы-оболочки [C++], использование"
+title: 'ActiveX Control Containers: Programming ActiveX Controls in an ActiveX Control Container | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- ActiveX control containers [MFC], accessing ActiveX controls
+- Confirm Classes dialog box
+- wrapper classes [MFC], ActiveX controls
+- ActiveX control containers [MFC], wrapper classes
+- ActiveX controls [MFC], accessing
+- MFC ActiveX controls [MFC], accessing in containers
+- header files [MFC], for ActiveX control wrapper class
+- wrapper classes [MFC], using
+- ActiveX controls [MFC], wrapper classes
 ms.assetid: ef9b2480-92d6-4191-b16e-8055c4fd7b73
 caps.latest.revision: 8
-caps.handback.revision: 4
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
----
-# Контейнеры элементов управления ActiveX. Программирование элементов управления ActiveX в контейнере элементов управления ActiveX
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 2cc45529721bb7b55511a5447ecd947d955cf4e2
+ms.contentlocale: ru-ru
+ms.lasthandoff: 09/12/2017
 
-Этот раздел описывает процесс для получения предоставляется [методы](../mfc/mfc-activex-controls-methods.md) и [свойства](../mfc/mfc-activex-controls-properties.md) внедренных элементов управления ActiveX.  По существу, необходимо выполнить следующие действия.  
+---
+# <a name="activex-control-containers-programming-activex-controls-in-an-activex-control-container"></a>ActiveX Control Containers: Programming ActiveX Controls in an ActiveX Control Container
+This article describes the process for accessing the exposed [methods](../mfc/mfc-activex-controls-methods.md) and [properties](../mfc/mfc-activex-controls-properties.md) of embedded ActiveX controls. Basically, you will follow these steps:  
   
-1.  [Вставьте элемент управления ActiveX в проект контейнера ActiveX](../mfc/inserting-a-control-into-a-control-container-application.md) использование коллекции.  
+1.  [Insert an ActiveX control into the ActiveX container project](../mfc/inserting-a-control-into-a-control-container-application.md) using Gallery.  
   
-2.  [Определение переменной\-члена](../mfc/activex-control-containers-connecting-an-activex-control-to-a-member-variable.md) \(или другую форму доступа\) того же введите как класс\-оболочка элемента управления ActiveX.  
+2.  [Define a member variable](../mfc/activex-control-containers-connecting-an-activex-control-to-a-member-variable.md) (or other form of access) of the same type as the ActiveX control wrapper class.  
   
-3.  [Программа элемент управления ActiveX](#_core_programming_the_activex_control) использование предопределенных функции\-члены класс\-оболочки.  
+3.  [Program the ActiveX control](#_core_programming_the_activex_control) using predefined member functions of the wrapper class.  
   
- Для данного обсуждения предположим, что создан проект на основе диалоговых окон \(\) с поддержкой именованный Контейнер элементов управления ActiveX.  Управление примера CIRC, CIRC, добавляется к полученный проект.  
+ For this discussion, assume you've created a dialog-based project (named Container) with ActiveX control support. The Circ sample control, Circ, will be added to the resulting project.  
   
- После того как элемент управления CIRC добавится в проект \(раздел 1\), вставляет экземпляр элемента управления CIRC в диалоговое окно главного приложения.  
+ Once the Circ control is inserted into the project (step 1), insert an instance of the Circ control into the application's main dialog box.  
   
-## Процедуры  
+## <a name="procedures"></a>Procedures  
   
-#### Добавление элемента управления CIRC в шаблон диалоговых окон  
+#### <a name="to-add-the-circ-control-to-the-dialog-template"></a>To add the Circ control to the dialog template  
   
-1.  Загрузите проект контейнера элементов управления ActiveX.  Для этого примера выберите проект `Container`.  
+1.  Load the ActiveX control container project. For this example, use the `Container` project.  
   
-2.  Выберите вкладку Ресурсы.  
+2.  Click the Resource View tab.  
   
-3.  Откройте папку **Диалоговое окно**.  
+3.  Open the **Dialog** folder.  
   
-4.  Дважды щелкните основного шаблона диалогового окна.  В данном примере используйте **IDD\_CONTAINER\_DIALOG**.  
+4.  Double-click the main dialog box template. For this example, use **IDD_CONTAINER_DIALOG**.  
   
-5.  Щелкните Значок элемента управления CIRC для элемента.  
+5.  Click the Circ control icon on the Toolbox.  
   
-6.  Нажмите пятно в диалоговое окно, чтобы вставить элемент управления CIRC.  
+6.  Click a spot within the dialog box to insert the Circ control.  
   
-7.  В меню **Файл** выберите команду **Сохранить все**, чтобы сохранить все изменения в шаблон диалогового окна.  
+7.  From the **File** menu, choose **Save All** to save all modifications to the dialog box template.  
   
-## Изменения в проект  
- Чтобы включить контейнерное приложение получает управление CIRC Visual C\+\+ автоматически добавит файл реализации класс\-оболочки \(`CCirc`\) \(CPP\) в проект контейнера и заголовку класс\-оболочки \(. Файл H\) в файл заголовка диалогового окна:  
+## <a name="modifications-to-the-project"></a>Modifications to the Project  
+ To enable the Container application to access the Circ control, Visual C++ automatically adds the wrapper class (`CCirc`) implementation file (.CPP) to the Container project and the wrapper class header (.H) file to the dialog box header file:  
   
- [!code-cpp[NVC_MFC_AxCont#1](../mfc/codesnippet/CPP/programming-activex-controls-in-a-activex-control-container_1.h)]  
+ [!code-cpp[NVC_MFC_AxCont#1](../mfc/codesnippet/cpp/programming-activex-controls-in-a-activex-control-container_1.h)]  
   
-##  <a name="_core_the_wrapper_class_header_28h29_file"></a> Заголовок класс\-оболочки \(. Файл H\)  
- Для получения и свойств \(\) и вызывать методы для управления CIRC класс\-оболочка, `CCirc` предоставляют объявление всех доступных методов и свойств.  В примере эти объявления находятся в CIRC.H.  В следующем примере часть класса `CCirc`, определяющий интерфейсы, предоставляемые элементом управления ActiveX.  
+##  <a name="_core_the_wrapper_class_header_28h29_file"></a> The Wrapper Class Header (.H) File  
+ To get and set properties (and invoke methods) for the Circ control, the `CCirc` wrapper class provides a declaration of all exposed methods and properties. In the example, these declarations are found in CIRC.H. The following sample is the portion of class `CCirc` that defines the exposed interfaces of the ActiveX control:  
   
- [!code-cpp[NVC_MFC_AxCont#2](../mfc/codesnippet/CPP/programming-activex-controls-in-a-activex-control-container_2.h)]  
-[!code-cpp[NVC_MFC_AxCont#3](../mfc/codesnippet/CPP/programming-activex-controls-in-a-activex-control-container_3.h)]  
+ [!code-cpp[NVC_MFC_AxCont#2](../mfc/codesnippet/cpp/programming-activex-controls-in-a-activex-control-container_2.h)]  
+[!code-cpp[NVC_MFC_AxCont#3](../mfc/codesnippet/cpp/programming-activex-controls-in-a-activex-control-container_3.h)]  
   
- Затем эти функции можно вызывать из другой из процедур приложения с помощью стандартного синтаксиса C C\+\+.  Дополнительные сведения об использовании данного набора функции\-члена для доступа к методам и свойствам элемента управления см. в разделе [Программирование элементов управления ActiveX](#_core_programming_the_activex_control).  
+ These functions can then be called from other of the application's procedures using normal C++ syntax. For more information on using this member function set to access the control's methods and properties, see the section [Programming the ActiveX control](#_core_programming_the_activex_control).  
   
-##  <a name="_core_member_variable_modifications_to_the_project"></a> Изменения переменной\-члена в проект  
- После того как элемент управления ActiveX была добавлена в проект и было внедряется в контейнере диалогового окна, он может быть получен доступ другие составляющие проекта.  Самый простой способ доступа к элементу управления в [создайте переменную элемента](../mfc/activex-control-containers-connecting-an-activex-control-to-a-member-variable.md) класса диалогового окна, `CContainerDlg` \(раздел 2\), который имеет тот же тип класс\-оболочка, добавленной в проект Visual C\+\+.  Затем можно использовать переменную\-член получить встроенный элемент управления в любое время.  
+##  <a name="_core_member_variable_modifications_to_the_project"></a> Member Variable Modifications to the Project  
+ Once the ActiveX control has been added to the project and embedded in a dialog box container, it can be accessed by other parts of the project. The easiest way to access the control is to [create a member variable](../mfc/activex-control-containers-connecting-an-activex-control-to-a-member-variable.md) of the dialog class, `CContainerDlg` (step 2), that is of the same type as the wrapper class added to the project by Visual C++. You can then use the member variable to access the embedded control at any time.  
   
- В диалоговом окне **Добавление переменной\-члена** добавляет переменную\-член `m_circctl` в проект, она также добавлены следующие линии в файл заголовка \(. H\) класса `CContainerDlg`:  
+ When the **Add Member Variable** dialog box adds the `m_circctl` member variable to the project, it also adds the following lines to the header file (.H) of the `CContainerDlg` class:  
   
- [!code-cpp[NVC_MFC_AxCont#4](../mfc/codesnippet/CPP/programming-activex-controls-in-a-activex-control-container_4.h)]  
-[!code-cpp[NVC_MFC_AxCont#5](../mfc/codesnippet/CPP/programming-activex-controls-in-a-activex-control-container_5.h)]  
+ [!code-cpp[NVC_MFC_AxCont#4](../mfc/codesnippet/cpp/programming-activex-controls-in-a-activex-control-container_4.h)]  
+[!code-cpp[NVC_MFC_AxCont#5](../mfc/codesnippet/cpp/programming-activex-controls-in-a-activex-control-container_5.h)]  
   
- Кроме того, вызов метода **DDX\_Control** автоматически добавляется к реализации `CContainerDlg``DoDataExchange`:  
+ In addition, a call to **DDX_Control** is automatically added to the `CContainerDlg`'s implementation of `DoDataExchange`:  
   
- [!code-cpp[NVC_MFC_AxCont#6](../mfc/codesnippet/CPP/programming-activex-controls-in-a-activex-control-container_6.cpp)]  
+ [!code-cpp[NVC_MFC_AxCont#6](../mfc/codesnippet/cpp/programming-activex-controls-in-a-activex-control-container_6.cpp)]  
   
-##  <a name="_core_programming_the_activex_control"></a> Программирование элементов управления ActiveX  
- На этом этапе, вставленной элемент управления ActiveX в шаблон диалоговых окон и создания переменную\-член для него.  Теперь можно использовать синтаксис C\+\+ для общего доступа к свойствам и методам внедренного элемента управления.  
+##  <a name="_core_programming_the_activex_control"></a> Programming the ActiveX Control  
+ At this point, you have inserted the ActiveX control into your dialog template and created a member variable for it. You can now use common C++ syntax to access the properties and methods of the embedded control.  
   
- Как отмечалось в \( [Заголовок класс\-оболочки \(. Файл H\)](#_core_the_wrapper_class_header_28h29_file)\), файл заголовка \(. H\) для класс\-оболочки `CCirc`, в данном случае CIRC.H, содержит список функций\-членов, которые можно использовать для получения и задания предоставляется любое значение свойства.  Функции\-члены для методов, предоставляемых также доступны.  
+ As noted (in [The Wrapper Class Header (.H) File](#_core_the_wrapper_class_header_28h29_file)), the header file (.H) for the `CCirc` wrapper class, in this case CIRC.H, contains a list of member functions that you can use to get and set any exposed property value. Member functions for exposed methods are also available.  
   
- Общее место для изменения свойств элемента управления в функции\-члене `OnInitDialog` основного класса диалогового окна.  Эта функция вызывается непосредственно перед вызовом диалогового окна, и используется для инициализации его содержимое, включая ее элементов управления.  
+ A common place to modify the control's properties is in the `OnInitDialog` member function of the main dialog class. This function is called just before the dialog box appears and is used to initialize its contents, including any of its controls.  
   
- В следующем примере кода используется переменной\-члена `m_circctl`, изменять свойства заголовка и CircleShape внутреннего управления CIRC:  
+ The following code example uses the `m_circctl` member variable to modify the Caption and CircleShape properties of the embedded Circ control:  
   
- [!code-cpp[NVC_MFC_AxCont#7](../mfc/codesnippet/CPP/programming-activex-controls-in-a-activex-control-container_7.cpp)]  
+ [!code-cpp[NVC_MFC_AxCont#7](../mfc/codesnippet/cpp/programming-activex-controls-in-a-activex-control-container_7.cpp)]  
   
-## См. также  
- [Контейнеры для элементов управления ActiveX](../mfc/activex-control-containers.md)
+## <a name="see-also"></a>See Also  
+ [ActiveX Control Containers](../mfc/activex-control-containers.md)
+
+

@@ -1,5 +1,5 @@
 ---
-title: "Класс CMFCCaptionBar | Документы Microsoft"
+title: CMFCCaptionBar Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -44,7 +44,36 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- CMFCCaptionBar class
+- CMFCCaptionBar [MFC], Create
+- CMFCCaptionBar [MFC], DoesAllowDynInsertBefore
+- CMFCCaptionBar [MFC], EnableButton
+- CMFCCaptionBar [MFC], GetAlignment
+- CMFCCaptionBar [MFC], GetBorderSize
+- CMFCCaptionBar [MFC], GetButtonRect
+- CMFCCaptionBar [MFC], GetMargin
+- CMFCCaptionBar [MFC], IsMessageBarMode
+- CMFCCaptionBar [MFC], RemoveBitmap
+- CMFCCaptionBar [MFC], RemoveButton
+- CMFCCaptionBar [MFC], RemoveIcon
+- CMFCCaptionBar [MFC], RemoveText
+- CMFCCaptionBar [MFC], SetBitmap
+- CMFCCaptionBar [MFC], SetBorderSize
+- CMFCCaptionBar [MFC], SetButton
+- CMFCCaptionBar [MFC], SetButtonPressed
+- CMFCCaptionBar [MFC], SetButtonToolTip
+- CMFCCaptionBar [MFC], SetFlatBorder
+- CMFCCaptionBar [MFC], SetIcon
+- CMFCCaptionBar [MFC], SetImageToolTip
+- CMFCCaptionBar [MFC], SetMargin
+- CMFCCaptionBar [MFC], SetText
+- CMFCCaptionBar [MFC], OnDrawBackground
+- CMFCCaptionBar [MFC], OnDrawBorder
+- CMFCCaptionBar [MFC], OnDrawButton
+- CMFCCaptionBar [MFC], OnDrawImage
+- CMFCCaptionBar [MFC], OnDrawText
+- CMFCCaptionBar [MFC], m_clrBarBackground
+- CMFCCaptionBar [MFC], m_clrBarBorder
+- CMFCCaptionBar [MFC], m_clrBarText
 ms.assetid: acb54d5f-14ff-4c96-aeb3-7717cf566d9a
 caps.latest.revision: 28
 author: mikeblome
@@ -65,91 +94,91 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0e0c08ddc57d437c51872b5186ae3fc983bb0199
-ms.openlocfilehash: c9be93449392de9d04e4869db8dcd73e08125c88
+ms.translationtype: MT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: ba88754180db3d2b828158a1493fd8c05c588123
 ms.contentlocale: ru-ru
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 09/12/2017
 
 ---
-# <a name="cmfccaptionbar-class"></a>Класс CMFCCaptionBar
-Объект `CMFCCaptionBar` объект является панель элементов управления, который может отображать три элемента: кнопка, текстовую метку и растровое изображение. Она может содержать только один элемент каждого типа одновременно. Можно выровнять каждый элемент по левому или правому краю элемента управления или по центру. Также можно применить плоский или трехмерный стиль к верхним и нижним границам заголовка окна.  
+# <a name="cmfccaptionbar-class"></a>CMFCCaptionBar Class
+A `CMFCCaptionBar` object is a control bar that can display three elements: a button, a text label, and a bitmap. It can only display one element of each type at a time. You can align each element to the left or right edges of the control or to the center. You can also apply a flat or 3D style to the top and bottom borders of the caption bar.  
   
-## <a name="syntax"></a>Синтаксис  
+## <a name="syntax"></a>Syntax  
   
 ```  
 class CMFCCaptionBar : public CPane  
 ```  
   
-## <a name="members"></a>Члены  
+## <a name="members"></a>Members  
   
-### <a name="public-methods"></a>Открытые методы  
+### <a name="public-methods"></a>Public Methods  
   
-|Имя|Описание|  
+|Name|Description|  
 |----------|-----------------|  
-|[CMFCCaptionBar::Create](#create)|Создает элемент управления панель заголовка и присоединяет его к `CMFCCaptionBar` объекта.|  
-|[CMFCCaptionBar::DoesAllowDynInsertBefore](#doesallowdyninsertbefore)|Указывает, может ли другой области динамически вставляются между строки заголовка и его родительского фрейма. (Переопределяет [CBasePane::DoesAllowDynInsertBefore](../../mfc/reference/cbasepane-class.md#doesallowdyninsertbefore).)|  
-|[CMFCCaptionBar::EnableButton](#enablebutton)|Включает или отключает кнопку в заголовке окна.|  
-|[CMFCCaptionBar::GetAlignment](#getalignment)|Возвращает выравнивание указанного элемента.|  
-|[CMFCCaptionBar::GetBorderSize](#getbordersize)|Возвращает размер границы заголовка окна.|  
-|[CMFCCaptionBar::GetButtonRect](#getbuttonrect)|Возвращает прямоугольник, ограничивающий кнопки в строке заголовка.|  
-|[CMFCCaptionBar::GetMargin](#getmargin)|Возвращает расстояние между границей заголовка панели элементов и границей элемента управления заголовка строки.|  
-|[CMFCCaptionBar::IsMessageBarMode](#ismessagebarmode)|Указывает, является ли заголовок в режиме панель сообщений.|  
-|[CMFCCaptionBar::RemoveBitmap](#removebitmap)|Удаляет растрового изображения из заголовка окна.|  
-|[CMFCCaptionBar::RemoveButton](#removebutton)|Удаление кнопки в строке заголовка.|  
-|[CMFCCaptionBar::RemoveIcon](#removeicon)|Удаление значка из заголовка окна.|  
-|[CMFCCaptionBar::RemoveText](#removetext)|Удаляет текстовую метку из заголовка окна.|  
-|[CMFCCaptionBar::SetBitmap](#setbitmap)|Задает растровое изображение для заголовка окна.|  
-|[CMFCCaptionBar::SetBorderSize](#setbordersize)|Задает размер границы заголовка окна.|  
-|[CMFCCaptionBar::SetButton](#setbutton)|Задает кнопку для строки заголовка.|  
-|[CMFCCaptionBar::SetButtonPressed](#setbuttonpressed)|Указывает, является ли кнопка остается нажатой.|  
-|[CMFCCaptionBar::SetButtonToolTip](#setbuttontooltip)|Задает подсказки для кнопки.|  
-|[CMFCCaptionBar::SetFlatBorder](#setflatborder)|Задает стиль границы заголовка окна.|  
-|[CMFCCaptionBar::SetIcon](#seticon)|Задает значок для строки заголовка.|  
-|[CMFCCaptionBar::SetImageToolTip](#setimagetooltip)|Задает всплывающую подсказку для изображения заголовка окна.|  
-|[CMFCCaptionBar::SetMargin](#setmargin)|Задает расстояние между краем элемента панель заголовка и краем элемента управления заголовка строки.|  
-|[CMFCCaptionBar::SetText](#settext)|Задает текстовую метку для строки заголовка.|  
+|[CMFCCaptionBar::Create](#create)|Creates the caption bar control and attaches it to the `CMFCCaptionBar` object.|  
+|[CMFCCaptionBar::DoesAllowDynInsertBefore](#doesallowdyninsertbefore)|Indicates whether another pane can be dynamically inserted between the caption bar and its parent frame. (Overrides [CBasePane::DoesAllowDynInsertBefore](../../mfc/reference/cbasepane-class.md#doesallowdyninsertbefore).)|  
+|[CMFCCaptionBar::EnableButton](#enablebutton)|Enables or disables the button on the caption bar.|  
+|[CMFCCaptionBar::GetAlignment](#getalignment)|Returns the alignment of the specified element.|  
+|[CMFCCaptionBar::GetBorderSize](#getbordersize)|Returns the border size of the caption bar.|  
+|[CMFCCaptionBar::GetButtonRect](#getbuttonrect)|Retrieves the bounding rectangle of the button on the caption bar.|  
+|[CMFCCaptionBar::GetMargin](#getmargin)|Returns the distance between the edge of the caption bar elements and the edge of the caption bar control.|  
+|[CMFCCaptionBar::IsMessageBarMode](#ismessagebarmode)|Specifies whether the caption bar is in the message bar mode.|  
+|[CMFCCaptionBar::RemoveBitmap](#removebitmap)|Removes the bitmap image from the caption bar.|  
+|[CMFCCaptionBar::RemoveButton](#removebutton)|Removes the button from the caption bar.|  
+|[CMFCCaptionBar::RemoveIcon](#removeicon)|Removes the icon from the caption bar.|  
+|[CMFCCaptionBar::RemoveText](#removetext)|Removes the text label from the caption bar.|  
+|[CMFCCaptionBar::SetBitmap](#setbitmap)|Sets the bitmap image for the caption bar.|  
+|[CMFCCaptionBar::SetBorderSize](#setbordersize)|Sets the border size of the caption bar.|  
+|[CMFCCaptionBar::SetButton](#setbutton)|Sets the button for the caption bar.|  
+|[CMFCCaptionBar::SetButtonPressed](#setbuttonpressed)|Specifies whether the button stays pressed.|  
+|[CMFCCaptionBar::SetButtonToolTip](#setbuttontooltip)|Sets the tooltip for the button.|  
+|[CMFCCaptionBar::SetFlatBorder](#setflatborder)|Sets the border style of the caption bar.|  
+|[CMFCCaptionBar::SetIcon](#seticon)|Sets the icon for a caption bar.|  
+|[CMFCCaptionBar::SetImageToolTip](#setimagetooltip)|Sets the tooltip for the image for the caption bar.|  
+|[CMFCCaptionBar::SetMargin](#setmargin)|Sets the distance between the edge of the caption bar element and the edge of the caption bar control.|  
+|[CMFCCaptionBar::SetText](#settext)|Sets the text label for the caption bar.|  
   
-### <a name="protected-methods"></a>Защищенные методы  
+### <a name="protected-methods"></a>Protected Methods  
   
-|Имя|Описание|  
+|Name|Description|  
 |----------|-----------------|  
-|[CMFCCaptionBar::OnDrawBackground](#ondrawbackground)|Вызывается платформой для заполнения фона заголовка окна.|  
-|[CMFCCaptionBar::OnDrawBorder](#ondrawborder)|Вызывается платформой для рисования границы заголовка окна.|  
-|[CMFCCaptionBar::OnDrawButton](#ondrawbutton)|Вызывается платформой для отрисовки кнопки в строке заголовка.|  
-|[CMFCCaptionBar::OnDrawImage](#ondrawimage)|Вызывается платформой для рисования изображения панели заголовка.|  
-|[CMFCCaptionBar::OnDrawText](#ondrawtext)|Вызывается платформой для рисования текста строки заголовка.|  
+|[CMFCCaptionBar::OnDrawBackground](#ondrawbackground)|Called by the framework to fill the background of the caption bar.|  
+|[CMFCCaptionBar::OnDrawBorder](#ondrawborder)|Called by the framework to draw the border of the caption bar.|  
+|[CMFCCaptionBar::OnDrawButton](#ondrawbutton)|Called by the framework to draw the caption bar button.|  
+|[CMFCCaptionBar::OnDrawImage](#ondrawimage)|Called by the framework to draw the caption bar image.|  
+|[CMFCCaptionBar::OnDrawText](#ondrawtext)|Called by the framework to draw the caption bar text.|  
   
-### <a name="data-members"></a>Элементы данных  
+### <a name="data-members"></a>Data Members  
   
-|Имя|Описание|  
+|Name|Description|  
 |----------|-----------------|  
-|[CMFCCaptionBar::m_clrBarBackground](#m_clrbarbackground)|Цвет фона заголовка окна.|  
-|[CMFCCaptionBar::m_clrBarBorder](#m_clrbarborder)|Цвет границы заголовка окна.|  
-|[CMFCCaptionBar::m_clrBarText](#m_clrbartext)|Цвет текста заголовка строки.|  
+|[CMFCCaptionBar::m_clrBarBackground](#m_clrbarbackground)|The background color of the caption bar.|  
+|[CMFCCaptionBar::m_clrBarBorder](#m_clrbarborder)|The color of the border of the caption bar.|  
+|[CMFCCaptionBar::m_clrBarText](#m_clrbartext)|The color of the caption bar text.|  
   
-## <a name="remarks"></a>Примечания  
- Создание заголовка окна, выполните следующие действия.  
+## <a name="remarks"></a>Remarks  
+ To create a caption bar, follow these steps:  
   
-1.  Создать `CMFCCaptionBar` объекта. Как правило необходимо добавить заголовок в класс окна фрейма.  
+1.  Construct the `CMFCCaptionBar` object. Typically, you would add the caption bar to a frame window class.  
   
-2.  Вызов [CMFCCaptionBar::Create](#create) метод для создания заголовка панели управления и присоединить его к `CMFCCaptionBar` объекта.  
+2.  Call the [CMFCCaptionBar::Create](#create) method to create the caption bar control and attach it to the `CMFCCaptionBar` object.  
   
-3.  Вызов [CMFCCaptionBar::SetButton](#setbutton), [CMFCCaptionBar::SetText](#settext), [CMFCCaptionBar::SetIcon](#seticon), и [CMFCCaptionBar::SetBitmap](#setbitmap) для задания заголовка панели элементов.  
+3.  Call [CMFCCaptionBar::SetButton](#setbutton), [CMFCCaptionBar::SetText](#settext), [CMFCCaptionBar::SetIcon](#seticon), and [CMFCCaptionBar::SetBitmap](#setbitmap) to set the caption bar elements.  
   
- Если значение элемента button, необходимо назначить идентификатор команды кнопки. Когда пользователь нажимает эту кнопку, маршруты панель заголовка `WM_COMMAND` сообщения, этот идентификатор родительского фрейма окна.  
+ When you set the button element, you must assign a command ID to the button. When the user clicks the button, the caption bar routes the `WM_COMMAND` messages that have this ID to the parent frame window.  
   
- Заголовок также можно работать в режиме панель сообщений, который эмулирует панели сообщения, которая отображается в приложениях Microsoft Office 2007. В режим панели сообщения заголовок отображается точечный рисунок, сообщения и кнопки (который обычно открывает диалоговое окно.) Точечный рисунок можно назначить всплывающей подсказки.  
+ The caption bar can also work in message bar mode, which emulates the message bar that appears in Microsoft Office 2007 applications. In message bar mode, the caption bar displays a bitmap, a message, and a button (which typically opens a dialog box.) You can assign a tooltip to the bitmap.  
   
- Чтобы включить режим панели сообщения, вызовите [CMFCCaptionBar::Create](#create) и четвертый параметр (bIsMessageBarMode) равен `TRUE`.  
+ To enable message bar mode, call [CMFCCaptionBar::Create](#create) and set the fourth parameter (bIsMessageBarMode) to `TRUE`.  
   
-## <a name="example"></a>Пример  
- Ниже приведен пример, как использовать различные методы в `CMFCCaptionBar` класса. В примере показано создание элемента управления панели заголовка, задание трехмерной границы заголовка окна, задайте расстояние в пикселях между границей заголовка панели элементов и границей элемента управления заголовка, кнопки для строки заголовка, параметров подсказки для кнопки, задайте текстовую метку для строки заголовка, установки растровое изображение для заголовка окна и в строке заголовка всплывающей подсказки для образа. Этот фрагмент кода является частью [MS Office 2007 демонстрационного](../../visual-cpp-samples.md).  
+## <a name="example"></a>Example  
+ The following example demonstrates how to use various methods in the `CMFCCaptionBar` class. The example shows how to create the caption bar control, set a 3D border of the caption bar, set the distance, in pixels, between the edge of the caption bar elements and the edge of the caption bar control, set the button for the caption bar, set the tooltip for the button, set the text label for the caption bar, set the bitmap image for the caption bar, and set the tooltip for the image in the caption bar. This code snippet is part of the [MS Office 2007 Demo sample](../../visual-cpp-samples.md).  
   
- [!code-cpp[NVC_MFC_MSOffice2007Demo&#1;](../../mfc/reference/codesnippet/cpp/cmfccaptionbar-class_1.h)]  
-[!code-cpp[NVC_MFC_MSOffice2007Demo&#2;](../../mfc/reference/codesnippet/cpp/cmfccaptionbar-class_2.cpp)]  
+ [!code-cpp[NVC_MFC_MSOffice2007Demo#1](../../mfc/reference/codesnippet/cpp/cmfccaptionbar-class_1.h)]  
+[!code-cpp[NVC_MFC_MSOffice2007Demo#2](../../mfc/reference/codesnippet/cpp/cmfccaptionbar-class_2.cpp)]  
   
-## <a name="inheritance-hierarchy"></a>Иерархия наследования  
+## <a name="inheritance-hierarchy"></a>Inheritance Hierarchy  
  [CObject](../../mfc/reference/cobject-class.md)  
   
  [CCmdTarget](../../mfc/reference/ccmdtarget-class.md)  
@@ -162,11 +191,11 @@ class CMFCCaptionBar : public CPane
   
  [CMFCCaptionBar](../../mfc/reference/cmfccaptionbar-class.md)  
   
-## <a name="requirements"></a>Требования  
- **Заголовок:** afxcaptionbar.h  
+## <a name="requirements"></a>Requirements  
+ **Header:** afxcaptionbar.h  
   
-##  <a name="create"></a>CMFCCaptionBar::Create  
- Создает элемент управления панель заголовка и присоединяет его к `CMFCCaptionBar` объекта.  
+##  <a name="create"></a>  CMFCCaptionBar::Create  
+ Creates the caption bar control and attaches it to the `CMFCCaptionBar` object.  
   
 ```  
 BOOL Create(
@@ -177,67 +206,67 @@ BOOL Create(
     BOOL bIsMessageBarMode=FALSE);
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
  `dwStyle`  
- Сочетание логического или стили панели заголовка.  
+ The logical OR combination of the caption bar styles.  
   
  `pParentWnd`  
- Родительское окно элемента управления заголовка строки.  
+ The parent window of the caption bar control.  
   
  `uID`  
- Идентификатор элемента управления заголовка строки.  
+ The ID of caption bar control.  
   
  `nHeight`  
- Высота в пикселях, заголовок элемента управления. Если это значение -1, высота вычисляется согласно высоту значка, текст и кнопки, которая отображает заголовок панели управления.  
+ The height, in pixels, of the caption bar control. If it is -1, the height is calculated according to the height of the icon, the text and the button that the caption bar control displays.  
   
  `bIsMessageBarMode`  
- `TRUE`Если заголовок находится в режиме панель сообщений; `FALSE` в противном случае.  
+ `TRUE` if the caption bar is in the message bar mode; `FALSE` otherwise.  
   
-### <a name="return-value"></a>Возвращаемое значение  
- `TRUE`Если заголовок панели управления создано успешно; `FALSE` в противном случае.  
+### <a name="return-value"></a>Return Value  
+ `TRUE` if the caption bar control is created successfully; `FALSE` otherwise.  
   
-### <a name="remarks"></a>Примечания  
- Создании `CMFCCaptionBar` объекта в два этапа. Сначала вызовите конструктор, а затем вызвать `Create` метод, который создает элемент управления Windows и присоединяет его к `CMFCCaptionBar` объекта.  
+### <a name="remarks"></a>Remarks  
+ You construct a `CMFCCaptionBar` object in two steps. First you call the constructor, and then you call the `Create` method, which creates the Windows control and attaches it to the `CMFCCaptionBar` object.  
   
-##  <a name="doesallowdyninsertbefore"></a>CMFCCaptionBar::DoesAllowDynInsertBefore  
- Указывает, может ли другой области динамически вставляются между строки заголовка и его родительского фрейма.  
+##  <a name="doesallowdyninsertbefore"></a>  CMFCCaptionBar::DoesAllowDynInsertBefore  
+ Indicates whether another pane can be dynamically inserted between the caption bar and its parent frame.  
   
 ```  
 virtual BOOL DoesAllowDynInsertBefore() const;  
 ```  
   
-### <a name="return-value"></a>Возвращаемое значение  
- Возвращает `FALSE` Если не переопределено.  
+### <a name="return-value"></a>Return Value  
+ Returns `FALSE` unless overridden.  
   
-### <a name="remarks"></a>Примечания  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="enablebutton"></a>CMFCCaptionBar::EnableButton  
- Включает или отключает кнопку в заголовке окна.  
+##  <a name="enablebutton"></a>  CMFCCaptionBar::EnableButton  
+ Enables or disables the button on the caption bar.  
   
 ```  
 void EnableButton(BOOL bEnable=TRUE);
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
  [in] `bEnable`  
- `TRUE`Чтобы включить кнопку, `FALSE` для выключения кнопки.  
+ `TRUE` to enable the button, `FALSE` to disable the button.  
   
-##  <a name="getalignment"></a>CMFCCaptionBar::GetAlignment  
- Возвращает выравнивание указанного элемента.  
+##  <a name="getalignment"></a>  CMFCCaptionBar::GetAlignment  
+ Returns the alignment of the specified element.  
   
 ```  
 BarElementAlignment GetAlignment(BarElement elem);
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
  [in] `elem`  
- Элемент заголовка панели для которого необходимо получить выравнивания.  
+ A caption bar element for which to retrieve alignment.  
   
-### <a name="return-value"></a>Возвращаемое значение  
- Выравнивание элемента, таких как кнопки, растровое изображение, текст или значок.  
+### <a name="return-value"></a>Return Value  
+ The alignment of an element, such as a button, a bitmap, text, or an icon.  
   
-### <a name="remarks"></a>Примечания  
- Выравнивание элемента может принимать одно из следующих значений:  
+### <a name="remarks"></a>Remarks  
+ The alignment of the element can be one of the following values:  
   
 -   ALIGN_INVALID  
   
@@ -247,72 +276,72 @@ BarElementAlignment GetAlignment(BarElement elem);
   
 -   ALIGN_CENTER  
   
-##  <a name="getbordersize"></a>CMFCCaptionBar::GetBorderSize  
- Возвращает размер границы заголовка окна.  
+##  <a name="getbordersize"></a>  CMFCCaptionBar::GetBorderSize  
+ Returns the border size of the caption bar.  
   
 ```  
 int GetBorderSize() const;  
 ```  
   
-### <a name="return-value"></a>Возвращаемое значение  
- Размер в точках границы.  
+### <a name="return-value"></a>Return Value  
+ The size, in pixels, of the border.  
   
-##  <a name="getbuttonrect"></a>CMFCCaptionBar::GetButtonRect  
- Возвращает прямоугольник, ограничивающий кнопки в строке заголовка.  
+##  <a name="getbuttonrect"></a>  CMFCCaptionBar::GetButtonRect  
+ Retrieves the bounding rectangle of the button on the caption bar.  
   
 ```  
 CRect GetButtonRect() const;  
 ```  
   
-### <a name="return-value"></a>Возвращаемое значение  
- Объект `CRect` , содержащий координаты ограничивающего прямоугольника кнопки в строке заголовка.  
+### <a name="return-value"></a>Return Value  
+ A `CRect` object that contains the coordinates of the bounding rectangle of the button on the caption bar.  
   
-##  <a name="getmargin"></a>CMFCCaptionBar::GetMargin  
- Возвращает расстояние между границей заголовка панели элементов и границей элемента управления заголовка строки.  
+##  <a name="getmargin"></a>  CMFCCaptionBar::GetMargin  
+ Returns the distance between the edge of the caption bar elements and the edge of the caption bar control.  
   
 ```  
 int GetMargin() const;  
 ```  
   
-### <a name="return-value"></a>Возвращаемое значение  
- Расстояние в точках между границей заголовка панели элементов и границей элемента управления заголовка строки.  
+### <a name="return-value"></a>Return Value  
+ The distance, in pixels, between the edge of the caption bar elements and the edge of the caption bar control.  
   
-##  <a name="ismessagebarmode"></a>CMFCCaptionBar::IsMessageBarMode  
- Указывает, является ли заголовок в режиме панель сообщений.  
+##  <a name="ismessagebarmode"></a>  CMFCCaptionBar::IsMessageBarMode  
+ Specifies whether the caption bar is in the message bar mode.  
   
 ```  
 BOOL IsMessageBarMode() const;  
 ```  
   
-### <a name="return-value"></a>Возвращаемое значение  
- `TRUE`Если заголовок находится в режиме панель сообщений; `FALSE` в противном случае.  
+### <a name="return-value"></a>Return Value  
+ `TRUE` if the caption bar is in the message bar mode; `FALSE` otherwise.  
   
-### <a name="remarks"></a>Примечания  
- В режиме панели сообщения заголовок отображает изображение с всплывающей подсказки, текст сообщения и кнопки.  
+### <a name="remarks"></a>Remarks  
+ In the message bar mode, the caption bar displays an image with a tooltip, a message text, and a button.  
   
-##  <a name="m_clrbarbackground"></a>CMFCCaptionBar::m_clrBarBackground  
- Цвет фона заголовка окна.  
+##  <a name="m_clrbarbackground"></a>  CMFCCaptionBar::m_clrBarBackground  
+ The background color of the caption bar.  
   
 ```  
 COLORREF m_clrBarBackground  
 ```  
   
-##  <a name="m_clrbarborder"></a>CMFCCaptionBar::m_clrBarBorder  
- Цвет границы заголовка окна.  
+##  <a name="m_clrbarborder"></a>  CMFCCaptionBar::m_clrBarBorder  
+ The color of the border of the caption bar.  
   
 ```  
 COLORREF m_clrBarBorder  
 ```  
   
-##  <a name="m_clrbartext"></a>CMFCCaptionBar::m_clrBarText  
- Цвет текста заголовка строки.  
+##  <a name="m_clrbartext"></a>  CMFCCaptionBar::m_clrBarText  
+ The color of the caption bar text.  
   
 ```  
 COLORREF m_clrBarText  
 ```  
   
-##  <a name="ondrawbackground"></a>CMFCCaptionBar::OnDrawBackground  
- Вызывается платформой для заполнения фона заголовка окна.  
+##  <a name="ondrawbackground"></a>  CMFCCaptionBar::OnDrawBackground  
+ Called by the framework to fill the background of the caption bar.  
   
 ```  
 virtual void OnDrawBackground(
@@ -320,20 +349,20 @@ virtual void OnDrawBackground(
     CRect rect);
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
  [in] `pDC`  
- Указатель на контекст устройства заголовка окна.  
+ A pointer to the device context of the caption bar.  
   
  [in] `rect`  
- Ограничивающий прямоугольник для заливки.  
+ The bounding rectangle to fill.  
   
-### <a name="remarks"></a>Примечания  
- `OnDrawBackground` Метод вызывается, когда заполняется фона заголовка окна. Реализация по умолчанию выполняет заливку фона с помощью [CMFCCaptionBar::m_clrBarBackground](#m_clrbarbackground) цвет.  
+### <a name="remarks"></a>Remarks  
+ The `OnDrawBackground` method is called when the background of the caption bar is about to be filled. The default implementation fills the background by using the [CMFCCaptionBar::m_clrBarBackground](#m_clrbarbackground) color.  
   
- Переопределите этот метод в `CMFCCaptionBar` производного класса, чтобы настроить внешний вид заголовка окна.  
+ Override this method in a `CMFCCaptionBar` derived class to customize the appearance of the caption bar.  
   
-##  <a name="ondrawborder"></a>CMFCCaptionBar::OnDrawBorder  
- Вызывается платформой для рисования границы заголовка окна.  
+##  <a name="ondrawborder"></a>  CMFCCaptionBar::OnDrawBorder  
+ Called by the framework to draw the border of the caption bar.  
   
 ```  
 virtual void OnDrawBorder(
@@ -341,20 +370,20 @@ virtual void OnDrawBorder(
     CRect rect);
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
  [in] `pDC`  
- Контекст устройства, который используется для отображения границ.  
+ A device context that is used to display the borders.  
   
  [in] `rect`  
- Ограничивающий прямоугольник.  
+ The bounding rectangle.  
   
-### <a name="remarks"></a>Примечания  
- По умолчанию границы со стилем плоскими.  
+### <a name="remarks"></a>Remarks  
+ By default, the borders have the flat style.  
   
- Переопределите этот метод в `CMFCCaptionBar` производного класса, чтобы настроить внешний вид границ заголовка окна.  
+ Override this method in a `CMFCCaptionBar` derived class to customize the appearance of the caption bar's borders.  
   
-##  <a name="ondrawbutton"></a>CMFCCaptionBar::OnDrawButton  
- Вызывается платформой для отрисовки кнопки в строке заголовка.  
+##  <a name="ondrawbutton"></a>  CMFCCaptionBar::OnDrawButton  
+ Called by the framework to draw the caption bar button.  
   
 ```  
 virtual void OnDrawButton(
@@ -364,24 +393,24 @@ virtual void OnDrawButton(
     BOOL bEnabled);
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
  [in] `pDC`  
- Указатель на контекст устройства, который используется для отображения кнопки.  
+ A pointer to a device context that is used to display the button.  
   
  [in] `rect`  
- Ограничивающий прямоугольник кнопки.  
+ The bounding rectangle of the button.  
   
  [in] `strButton`  
- Текст метки кнопки.  
+ The button's text label.  
   
  [in] `bEnabled`  
- `TRUE`Если кнопка включена; `FALSE` в противном случае.  
+ `TRUE` if the button is enabled; `FALSE` otherwise.  
   
-### <a name="remarks"></a>Примечания  
- Переопределите этот метод в `CMFCCaptionBar` производного класса, чтобы настроить внешний вид кнопки заголовка окна.  
+### <a name="remarks"></a>Remarks  
+ Override this method in a `CMFCCaptionBar` derived class to customize the appearance of the caption bar's button.  
   
-##  <a name="ondrawimage"></a>CMFCCaptionBar::OnDrawImage  
- Вызывается платформой для рисования изображения панели заголовка.  
+##  <a name="ondrawimage"></a>  CMFCCaptionBar::OnDrawImage  
+ Called by the framework to draw the caption bar image.  
   
 ```  
 virtual void OnDrawImage(
@@ -389,18 +418,18 @@ virtual void OnDrawImage(
     CRect rect);
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
  [in] `pDC`  
- Указатель на контекст устройства, который используется для отображения изображения.  
+ A pointer to a device context that is used to display the image.  
   
  [in] `rect`  
- Указывает ограничивающий прямоугольник изображения.  
+ Specifies the bounding rectangle of the image.  
   
-### <a name="remarks"></a>Примечания  
- Переопределите этот метод в `CMFCCaptionBar` производного класса, чтобы настроить внешний вид изображения.  
+### <a name="remarks"></a>Remarks  
+ Override this method in a `CMFCCaptionBar` derived class to customize the image appearance.  
   
-##  <a name="ondrawtext"></a>CMFCCaptionBar::OnDrawText  
- Вызывается платформой для рисования текста строки заголовка.  
+##  <a name="ondrawtext"></a>  CMFCCaptionBar::OnDrawText  
+ Called by the framework to draw the caption bar text.  
   
 ```  
 virtual void OnDrawText(
@@ -409,54 +438,54 @@ virtual void OnDrawText(
     const CString& strText);
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
  [in] `pDC`  
- Указатель на контекст устройства, который используется для отображения кнопки.  
+ A pointer to a device context that is used to display the button.  
   
  [in] `rect`  
- Ограничивающий прямоугольник для текста.  
+ The bounding rectangle of the text.  
   
  [in] `strText`  
- Текстовая строка для отображения.  
+ The text string to display.  
   
-### <a name="remarks"></a>Примечания  
- Реализация по умолчанию отображается текст с помощью `CDC::DrawText` и [CMFCCaptionBar::m_clrBarText](#m_clrbartext) цвет.  
+### <a name="remarks"></a>Remarks  
+ The default implementation displays the text by using `CDC::DrawText` and [CMFCCaptionBar::m_clrBarText](#m_clrbartext) color.  
   
- Переопределите этот метод в `CMFCCaptionBar` производный класс для настройки внешнего вида текста в строке заголовка.  
+ Override this method in a `CMFCCaptionBar` derived class to customize the appearance of the caption bar's text.  
   
-##  <a name="removebitmap"></a>CMFCCaptionBar::RemoveBitmap  
- Удаляет растрового изображения из заголовка окна.  
+##  <a name="removebitmap"></a>  CMFCCaptionBar::RemoveBitmap  
+ Removes the bitmap image from the caption bar.  
   
 ```  
 void RemoveBitmap();
 ```  
   
-##  <a name="removebutton"></a>CMFCCaptionBar::RemoveButton  
- Удаление кнопки в строке заголовка.  
+##  <a name="removebutton"></a>  CMFCCaptionBar::RemoveButton  
+ Removes the button from the caption bar.  
   
 ```  
 void RemoveButton();
 ```  
   
-### <a name="remarks"></a>Примечания  
- Размещение элементов строки заголовка настраиваются автоматически.  
+### <a name="remarks"></a>Remarks  
+ The layout of caption bar elements are adjusted automatically.  
   
-##  <a name="removeicon"></a>CMFCCaptionBar::RemoveIcon  
- Удаление значка из заголовка окна.  
+##  <a name="removeicon"></a>  CMFCCaptionBar::RemoveIcon  
+ Removes the icon from the caption bar.  
   
 ```  
 void RemoveIcon();
 ```  
   
-##  <a name="removetext"></a>CMFCCaptionBar::RemoveText  
- Удаляет текстовую метку из заголовка окна.  
+##  <a name="removetext"></a>  CMFCCaptionBar::RemoveText  
+ Removes the text label from the caption bar.  
   
 ```  
 void RemoveText();
 ```  
   
-##  <a name="setbitmap"></a>CMFCCaptionBar::SetBitmap  
- Задает растровое изображение для заголовка окна.  
+##  <a name="setbitmap"></a>  CMFCCaptionBar::SetBitmap  
+ Sets the bitmap image for the caption bar.  
   
 ```  
 void SetBitmap(
@@ -473,25 +502,25 @@ void SetBitmap(
     BarElementAlignment bmpAlignment=ALIGN_RIGHT);
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
  [in] `hBitmap`  
- Дескриптор точечного рисунка для установки.  
+ The handle to the bitmap to set.  
   
  [in] `clrTransparent`  
- Значение RGB определяет прозрачный цвет изображения.  
+ An RGB value that specifies the transparent color of the bitmap.  
   
  [in] `bStretch`  
- Если `TRUE`, точечный рисунок растягивается, если он не помещается в образе, ограничивающего прямоугольника. В противном случае битовая карта не растягивается.  
+ If `TRUE`, the bitmap is stretched if it does not fit to the image bounding rectangle. Otherwise the bitmap is not stretched.  
   
  [in] `bmpAlignment`  
- Выравнивание изображения.  
+ The alignment of the bitmap.  
   
-### <a name="remarks"></a>Примечания  
- Используйте этот метод для задания заголовка окна растровое изображение.  
+### <a name="remarks"></a>Remarks  
+ Use this method to set a bitmap on a caption bar.  
   
- Предыдущие точечного рисунка будет удален автоматически. Если заголовок отображается значок, поскольку вызывается [CMFCCaptionBar::SetIcon](#seticon) метод, точечный рисунок не будет отображаться, пока не будет удален значок путем вызова [CMFCCaptionBar::RemoveIcon](#removeicon).  
+ The previous bitmap is destroyed automatically. If the caption bar displays an icon because you called the [CMFCCaptionBar::SetIcon](#seticon) method, the bitmap will not be displayed unless you remove the icon by calling [CMFCCaptionBar::RemoveIcon](#removeicon).  
   
- Точечный рисунок выравнивается, заданной параметром `bmpAlignment` параметр.  Этот параметр может принимать одно из следующих значений `BarElementAlignment`:  
+ The bitmap is aligned as specified by the `bmpAlignment` parameter.  This parameter can be one of the following `BarElementAlignment` values:  
   
 -   ALIGN_INVALID  
   
@@ -501,19 +530,19 @@ void SetBitmap(
   
 -   ALIGN_CENTER  
   
-##  <a name="setbordersize"></a>CMFCCaptionBar::SetBorderSize  
- Задает размер границы заголовка окна.  
+##  <a name="setbordersize"></a>  CMFCCaptionBar::SetBorderSize  
+ Sets the border size of the caption bar.  
   
 ```  
 void SetBorderSize(int nSize);
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
  [in] `nSize`  
- Новый размер в точках границы панели заголовка.  
+ The new size, in pixels, of the caption bar border.  
   
-##  <a name="setbutton"></a>CMFCCaptionBar::SetButton  
- Задает кнопку для строки заголовка.  
+##  <a name="setbutton"></a>  CMFCCaptionBar::SetButton  
+ Sets the button for the caption bar.  
   
 ```  
 void SetButton(
@@ -523,32 +552,32 @@ void SetButton(
     BOOL bHasDropDownArrow=TRUE);
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
  `lpszLabel`  
- Метка кнопки команд.  
+ The button's command label.  
   
  `uiCmdUI`  
- Идентификатор команды кнопки.  
+ The button's command ID.  
   
  `btnAlignmnet`  
- Выравнивание кнопок.  
+ The button's alignment.  
   
  `bHasDropDownArrow`  
- `TRUE`Если кнопка отображает стрелку раскрывающегося списка, `FALSE` в противном случае.  
+ `TRUE` if the button displays a drop down arrow, `FALSE` otherwise.  
   
-##  <a name="setbuttonpressed"></a>CMFCCaptionBar::SetButtonPressed  
- Указывает, является ли кнопка остается нажатой.  
+##  <a name="setbuttonpressed"></a>  CMFCCaptionBar::SetButtonPressed  
+ Specifies whether the button stays pressed.  
   
 ```  
 void SetButtonPressed(BOOL bPresed=TRUE);
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
  `bPresed`  
- `TRUE`Если кнопки отслеживает его нажатом состоянии `FALSE` в противном случае.  
+ `TRUE` if the button keeps its pressed state, `FALSE` otherwise.  
   
-##  <a name="setbuttontooltip"></a>CMFCCaptionBar::SetButtonToolTip  
- Задает подсказки для кнопки.  
+##  <a name="setbuttontooltip"></a>  CMFCCaptionBar::SetButtonToolTip  
+ Sets the tooltip for the button.  
   
 ```  
 void SetButtonToolTip(
@@ -556,26 +585,26 @@ void SetButtonToolTip(
     LPCTSTR lpszDescription=NULL);
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
  [in] `lpszToolTip`  
- Заголовок подсказки.  
+ The tooltip caption.  
   
  [in] `lpszDescription`  
- Подсказка.  
+ The tooltip description.  
   
-##  <a name="setflatborder"></a>CMFCCaptionBar::SetFlatBorder  
- Задает стиль границы заголовка окна.  
+##  <a name="setflatborder"></a>  CMFCCaptionBar::SetFlatBorder  
+ Sets the border style of the caption bar.  
   
 ```  
 void SetFlatBorder(BOOL bFlat=TRUE);
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
  [in] `bFlat`  
- `TRUE`Если границы строки заголовка, остается неизменным. `FALSE`Если границы 3D.  
+ `TRUE` if the border of a caption bar is flat. `FALSE` if the border is 3D.  
   
-##  <a name="seticon"></a>CMFCCaptionBar::SetIcon  
- Задает значок для строки заголовка.  
+##  <a name="seticon"></a>  CMFCCaptionBar::SetIcon  
+ Sets the icon for a caption bar.  
   
 ```  
 void SetIcon(
@@ -583,17 +612,17 @@ void SetIcon(
     BarElementAlignment iconAlignment=ALIGN_RIGHT);
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
  [in] `hIcon`  
- Дескриптор значка для задания.  
+ The handle to the icon to set.  
   
  [in] `iconAlignment`  
- Выравнивание значка.  
+ The alignment of the icon.  
   
-### <a name="remarks"></a>Примечания  
- Заголовок панели можно отобразить значки или растровые изображения. В разделе [CMFCCaptionBar::SetBitmap](#setbitmap) чтобы узнать, как отобразить точечный рисунок. Если задать значок и растровое изображение всегда отображается значок. Вызов [CMFCCaptionBar::RemoveIcon](#removeicon) Удаление значка из заголовка окна.  
+### <a name="remarks"></a>Remarks  
+ Caption bars can display either icons or bitmaps. See [CMFCCaptionBar::SetBitmap](#setbitmap) to find out how to display a bitmap. If you set both an icon and a bitmap, the icon is always displayed. Call [CMFCCaptionBar::RemoveIcon](#removeicon) to remove an icon from the caption bar.  
   
- Значок, выровненный по `iconAlignment` параметр. Он может принимать одно из следующих `BarElementAlignment` значения:  
+ The icon is aligned according to the `iconAlignment` parameter. It can be one of the following `BarElementAlignment` values:  
   
 -   ALIGN_INVALID  
   
@@ -603,8 +632,8 @@ void SetIcon(
   
 -   ALIGN_CENTER  
   
-##  <a name="setimagetooltip"></a>CMFCCaptionBar::SetImageToolTip  
- Задает всплывающую подсказку для изображения в строке заголовка.  
+##  <a name="setimagetooltip"></a>  CMFCCaptionBar::SetImageToolTip  
+ Sets the tooltip for the image in the caption bar.  
   
 ```  
 void SetImageToolTip(
@@ -612,26 +641,26 @@ void SetImageToolTip(
     LPCTSTR lpszDescription=NULL);
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
  [in] `lpszToolTip`  
- Текст всплывающей подсказки.  
+ The text of the tooltip.  
   
  [in] `lpszDescription`  
- Подсказка.  
+ The tooltip description.  
   
-##  <a name="setmargin"></a>CMFCCaptionBar::SetMargin  
- Задает расстояние между краем элемента панель заголовка и краем элемента управления заголовка строки.  
+##  <a name="setmargin"></a>  CMFCCaptionBar::SetMargin  
+ Sets the distance between the edge of the caption bar element and the edge of the caption bar control.  
   
 ```  
 void SetMargin(int nMargin);
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
  [in] `nMargin`  
- Расстояние в точках между границей заголовка панели элементов и границей элемента управления заголовка строки.  
+ The distance, in pixels, between the edge of the caption bar elements and the edge of the caption bar control.  
   
-##  <a name="settext"></a>CMFCCaptionBar::SetText  
- Задает текстовую метку для строки заголовка.  
+##  <a name="settext"></a>  CMFCCaptionBar::SetText  
+ Sets the text label for the caption bar.  
   
 ```  
 void SetText(
@@ -639,15 +668,15 @@ void SetText(
     BarElementAlignment textAlignment=ALIGN_RIGHT);
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
  [in] `strText`  
- Чтобы задать строку текста.  
+ The text string to set.  
   
  [in] `textAlignment`  
- Выравнивание текста.  
+ The text alignment.  
   
-### <a name="remarks"></a>Примечания  
- Выравнивание текста метки, заданной параметром `textAlignment` параметр. Он может принимать одно из следующих `BarElementAlignment` значения:  
+### <a name="remarks"></a>Remarks  
+ The text label is aligned as specified by the `textAlignment` parameter. It can be one of the following `BarElementAlignment` values:  
   
 -   ALIGN_INVALID  
   
@@ -657,7 +686,7 @@ void SetText(
   
 -   ALIGN_CENTER  
   
-## <a name="see-also"></a>См. также  
- [Диаграмма иерархии](../../mfc/hierarchy-chart.md)   
- [Классы](../../mfc/reference/mfc-classes.md)
+## <a name="see-also"></a>See Also  
+ [Hierarchy Chart](../../mfc/hierarchy-chart.md)   
+ [Classes](../../mfc/reference/mfc-classes.md)
 

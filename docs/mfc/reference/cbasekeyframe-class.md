@@ -1,5 +1,5 @@
 ---
-title: "Класс CBaseKeyFrame | Документы Microsoft"
+title: CBaseKeyFrame Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -22,7 +22,14 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- CBaseKeyFrame class
+- CBaseKeyFrame [MFC], CBaseKeyFrame
+- CBaseKeyFrame [MFC], AddToStoryboard
+- CBaseKeyFrame [MFC], GetAnimationKeyframe
+- CBaseKeyFrame [MFC], IsAdded
+- CBaseKeyFrame [MFC], IsKeyframeAtOffset
+- CBaseKeyFrame [MFC], m_bAdded
+- CBaseKeyFrame [MFC], m_bIsKeyframeAtOffset
+- CBaseKeyFrame [MFC], m_keyframe
 ms.assetid: 285a2eff-e7c4-43be-b5aa-737727e6866d
 caps.latest.revision: 17
 author: mikeblome
@@ -42,60 +49,60 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0e0c08ddc57d437c51872b5186ae3fc983bb0199
-ms.openlocfilehash: cfbaac379097c89b5dcb52fa36c0cd1f6e3d2c7f
+ms.translationtype: MT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 5f79f26454a66666e317122c27df4ccf82a64bde
 ms.contentlocale: ru-ru
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 09/12/2017
 
 ---
-# <a name="cbasekeyframe-class"></a>Класс CBaseKeyFrame
-Реализует базовую функциональность ключевого кадра.  
+# <a name="cbasekeyframe-class"></a>CBaseKeyFrame Class
+Implements the basic functionality of a keyframe.  
   
-## <a name="syntax"></a>Синтаксис  
+## <a name="syntax"></a>Syntax  
   
 ```  
 class CBaseKeyFrame : public CObject;  
 ```  
   
-## <a name="members"></a>Члены  
+## <a name="members"></a>Members  
   
-### <a name="public-constructors"></a>Открытые конструкторы  
+### <a name="public-constructors"></a>Public Constructors  
   
-|Имя|Описание|  
+|Name|Description|  
 |----------|-----------------|  
-|[CBaseKeyFrame::CBaseKeyFrame](#cbasekeyframe)|Создает объект опорного кадра.|  
+|[CBaseKeyFrame::CBaseKeyFrame](#cbasekeyframe)|Constructs a keyframe object.|  
   
-### <a name="public-methods"></a>Открытые методы  
+### <a name="public-methods"></a>Public Methods  
   
-|Имя|Описание|  
+|Name|Description|  
 |----------|-----------------|  
-|[CBaseKeyFrame::AddToStoryboard](#addtostoryboard)|Добавляет кадр в раскадровке.|  
-|[CBaseKeyFrame::GetAnimationKeyframe](#getanimationkeyframe)|Возвращает базовое значение ключевого кадра.|  
-|[CBaseKeyFrame::IsAdded](#isadded)|Указывает, был ли опорный кадр добавлен для раскадровки.|  
-|[CBaseKeyFrame::IsKeyframeAtOffset](#iskeyframeatoffset)|Указывает, следует ли добавить опорный кадр на раскадровку смещением или после перехода.|  
+|[CBaseKeyFrame::AddToStoryboard](#addtostoryboard)|Adds a keyframe to storyboard.|  
+|[CBaseKeyFrame::GetAnimationKeyframe](#getanimationkeyframe)|Returns the underlying keyframe value.|  
+|[CBaseKeyFrame::IsAdded](#isadded)|Tells whether a keyframe has been added to storyboard.|  
+|[CBaseKeyFrame::IsKeyframeAtOffset](#iskeyframeatoffset)|Specifies whether the keyframe should be added to storyboard at offset, or after transition.|  
   
-### <a name="protected-data-members"></a>Защищенные члены данных  
+### <a name="protected-data-members"></a>Protected Data Members  
   
-|Имя|Описание|  
+|Name|Description|  
 |----------|-----------------|  
-|[CBaseKeyFrame::m_bAdded](#m_badded)|Указывает, был ли этот опорный кадр добавлен в раскадровку.|  
-|[CBaseKeyFrame::m_bIsKeyframeAtOffset](#m_biskeyframeatoffset)|Указывает, следует ли добавить этот опорный кадр для раскадровки со смещением от другого существующего опорного кадра или в конце некоторых перехода.|  
-|[CBaseKeyFrame::m_keyframe](#m_keyframe)|Представляет ключевой кадр анимации Windows API. Опорный кадр не инициализирован присваивается определенное значение UI_ANIMATION_KEYFRAME_STORYBOARD_START.|  
+|[CBaseKeyFrame::m_bAdded](#m_badded)|Specifies whether this keyframe has been added to a storyboard.|  
+|[CBaseKeyFrame::m_bIsKeyframeAtOffset](#m_biskeyframeatoffset)|Specifies whether this keyframe should be added to storyboard at an offset from another existing keyframe, or at the end of some transition.|  
+|[CBaseKeyFrame::m_keyframe](#m_keyframe)|Represents a Windows Animation API keyframe. When a keyframe is not initialized it is set to the predefined value UI_ANIMATION_KEYFRAME_STORYBOARD_START.|  
   
-## <a name="remarks"></a>Примечания  
- Инкапсулирует UI_ANIMATION_KEYFRAME переменной. Служит в качестве базового класса для реализации ключевого кадра. Опорный кадр представляет момент времени в пределах раскадровки и может использоваться для указания времени начала и окончания переходов. Существует два типа ключевых кадров - опорные кадры, добавляемый раскадровки с указанным смещением (по времени) или опорные кадры добавлен после указанного перехода. Так как длительность некоторые переходы не может быть известен до запуска анимации, фактические значения некоторых опорные кадры определяются только во время выполнения. Поскольку ключевые кадры могут зависеть переходов, зависящие в очередь опорные кадры, очень важно для предотвращения бесконечной рекурсии при построении цепочки опорного кадра.  
+## <a name="remarks"></a>Remarks  
+ Encapsulates UI_ANIMATION_KEYFRAME variable. Serves as a base class for any keyframe implementation. A keyframe represents a moment in time within a storyboard and can be used to specify the start and end times of transitions. There are two types of keyframes - keyframes added to storyboard at the specified offset (in time), or keyframes added after specified transition. Because durations of some transitions can't be known before animation starts, the actual values of some keyframes are determined at runtime only. Because keyframes may depend on transitions, which in their turn depend on keyframes, it's important to prevent infinite recursions when building keyframe chains.  
   
-## <a name="inheritance-hierarchy"></a>Иерархия наследования  
+## <a name="inheritance-hierarchy"></a>Inheritance Hierarchy  
  [CObject](../../mfc/reference/cobject-class.md)  
   
  `CBaseKeyFrame`  
   
-## <a name="requirements"></a>Требования  
- **Заголовок:** afxanimationcontroller.h  
+## <a name="requirements"></a>Requirements  
+ **Header:** afxanimationcontroller.h  
   
-##  <a name="addtostoryboard"></a>CBaseKeyFrame::AddToStoryboard  
- Добавляет кадр в раскадровке.  
+##  <a name="addtostoryboard"></a>  CBaseKeyFrame::AddToStoryboard  
+ Adds a keyframe to storyboard.  
   
 ```  
 virtual BOOL AddToStoryboard(
@@ -103,86 +110,86 @@ virtual BOOL AddToStoryboard(
     BOOL bDeepAdd);
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
  `pStoryboard`  
- Указатель раскадровки.  
+ A pointer to a storyboard.  
   
  `bDeepAdd`  
- Если этот параметр имеет значение TRUE и опорный кадр добавлен зависит от других опорного кадра или перехода, этот метод пытается добавить этот кадр или перехода на раскадровку сначала.  
+ If this parameter is TRUE and the keyframe being added depends on some other keyframe or transition, this method tries to add this keyframe or transition to storyboard first.  
   
-### <a name="return-value"></a>Возвращаемое значение  
- Значение TRUE, если опорный кадр добавлен раскадровки успешно; в противном случае — значение FALSE.  
+### <a name="return-value"></a>Return Value  
+ TRUE if keyframe was added to storyboard successfully; otherwise FALSE.  
   
-### <a name="remarks"></a>Примечания  
- Этот метод вызывается, чтобы добавить опорный кадр на раскадровку.  
+### <a name="remarks"></a>Remarks  
+ This method is called to add a keyframe to storyboard.  
   
-##  <a name="cbasekeyframe"></a>CBaseKeyFrame::CBaseKeyFrame  
- Создает объект опорного кадра.  
+##  <a name="cbasekeyframe"></a>  CBaseKeyFrame::CBaseKeyFrame  
+ Constructs a keyframe object.  
   
 ```  
 CBaseKeyFrame();
 ```  
   
-##  <a name="getanimationkeyframe"></a>CBaseKeyFrame::GetAnimationKeyframe  
- Возвращает базовое значение ключевого кадра.  
+##  <a name="getanimationkeyframe"></a>  CBaseKeyFrame::GetAnimationKeyframe  
+ Returns the underlying keyframe value.  
   
 ```  
 UI_ANIMATION_KEYFRAME GetAnimationKeyframe() const;  
 ```  
   
-### <a name="return-value"></a>Возвращаемое значение  
- Текущий кадр. Значение по умолчанию — UI_ANIMATION_KEYFRAME_STORYBOARD_START.  
+### <a name="return-value"></a>Return Value  
+ A current keyframe. The default value is UI_ANIMATION_KEYFRAME_STORYBOARD_START.  
   
-### <a name="remarks"></a>Примечания  
- Это метод доступа к исходному значению ключевого кадра.  
+### <a name="remarks"></a>Remarks  
+ This is an accessor to the underlying keyframe value.  
   
-##  <a name="isadded"></a>CBaseKeyFrame::IsAdded  
- Указывает, был ли опорный кадр добавлен для раскадровки.  
+##  <a name="isadded"></a>  CBaseKeyFrame::IsAdded  
+ Tells whether a keyframe has been added to storyboard.  
   
 ```  
 BOOL IsAdded() const;  
 ```  
   
-### <a name="return-value"></a>Возвращаемое значение  
- Значение TRUE, если ключевой кадр добавляется в раскадровку; противном случае — значение FALSE.  
+### <a name="return-value"></a>Return Value  
+ TRUE if a keyframe is added to a storyboard; otehrwise FALSE.  
   
-### <a name="remarks"></a>Примечания  
- В базовом классе IsAdded всегда возвращает значение TRUE, но он переопределен в производном классе.  
+### <a name="remarks"></a>Remarks  
+ In the base class IsAdded always returns TRUE, but it's overridden in derived classes.  
   
-##  <a name="iskeyframeatoffset"></a>CBaseKeyFrame::IsKeyframeAtOffset  
- Указывает, следует ли добавить опорный кадр на раскадровку смещением или после перехода.  
+##  <a name="iskeyframeatoffset"></a>  CBaseKeyFrame::IsKeyframeAtOffset  
+ Specifies whether the keyframe should be added to storyboard at offset, or after transition.  
   
 ```  
 BOOL IsKeyframeAtOffset() const;  
 ```  
   
-### <a name="return-value"></a>Возвращаемое значение  
- Значение TRUE, если следует добавить опорный кадр раскадровки с заданным смещением. Значение FALSE, если раскадровка после некоторых перехода следует добавить опорный кадр.  
+### <a name="return-value"></a>Return Value  
+ TRUE if the keyframe should be added to storyboard at some specified offset. FALSE if the keyframe should be added to storyboard after some transition.  
   
-### <a name="remarks"></a>Примечания  
- Указывает, следует ли добавить опорный кадр на раскадровку смещением. В производном классе необходимо указать смещение или перехода.  
+### <a name="remarks"></a>Remarks  
+ Specifies whether the keyframe should be added to storyboard at offset. The offset or transition must be specified in a derived class.  
   
-##  <a name="m_badded"></a>CBaseKeyFrame::m_bAdded  
- Указывает, был ли этот опорный кадр добавлен в раскадровку.  
+##  <a name="m_badded"></a>  CBaseKeyFrame::m_bAdded  
+ Specifies whether this keyframe has been added to a storyboard.  
   
 ```  
 BOOL m_bAdded;  
 ```  
   
-##  <a name="m_biskeyframeatoffset"></a>CBaseKeyFrame::m_bIsKeyframeAtOffset  
- Указывает, следует ли добавить этот опорный кадр для раскадровки со смещением от другого существующего опорного кадра или в конце некоторых перехода.  
+##  <a name="m_biskeyframeatoffset"></a>  CBaseKeyFrame::m_bIsKeyframeAtOffset  
+ Specifies whether this keyframe should be added to storyboard at an offset from another existing keyframe, or at the end of some transition.  
   
 ```  
 BOOL m_bIsKeyframeAtOffset;  
 ```  
   
-##  <a name="m_keyframe"></a>CBaseKeyFrame::m_keyframe  
- Представляет ключевой кадр анимации Windows API. Опорный кадр не инициализирован присваивается определенное значение UI_ANIMATION_KEYFRAME_STORYBOARD_START.  
+##  <a name="m_keyframe"></a>  CBaseKeyFrame::m_keyframe  
+ Represents a Windows Animation API keyframe. When a keyframe is not initialized it is set to the predefined value UI_ANIMATION_KEYFRAME_STORYBOARD_START.  
   
 ```  
 UI_ANIMATION_KEYFRAME m_keyframe;  
 ```  
   
-## <a name="see-also"></a>См. также  
- [Классы](../../mfc/reference/mfc-classes.md)
+## <a name="see-also"></a>See Also  
+ [Classes](../../mfc/reference/mfc-classes.md)
 

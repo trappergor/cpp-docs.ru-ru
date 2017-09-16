@@ -1,54 +1,58 @@
 ---
-title: "Операторы &lt;hash_map&gt; | Документы Майкрософт"
+title: '&lt;hash_map&gt; operators | Microsoft Docs'
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords: []
+f1_keywords:
+- hash_map/std::operator!=
+- hash_map/std::operator==
+dev_langs:
+- C++
 ms.assetid: 24b9bb9e-e983-4060-bce5-2c7c8161ee61
 caps.latest.revision: 13
 manager: ghogen
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
-ms.openlocfilehash: 7d47da5bcdb614e5eaf43fbabbe836226e3f907b
+ms.translationtype: MT
+ms.sourcegitcommit: 5d026c375025b169d5db8445cbb52c0c917b2d8d
+ms.openlocfilehash: 11e3f989709f34b43ec7c84601c157a7e9b0d163
 ms.contentlocale: ru-ru
-ms.lasthandoff: 04/29/2017
+ms.lasthandoff: 09/09/2017
 
 ---
-# <a name="lthashmapgt-operators"></a>Операторы &lt;hash_map&gt;
+# <a name="lthashmapgt-operators"></a>&lt;hash_map&gt; operators
 |||  
 |-|-|  
 |[operator!=](#op_neq)|[operator!=](#op_neq)|
   
-##  <a name="op_neq"></a> operator!=  
+##  <a name="op_neq"></a>  operator!=  
   
 > [!NOTE]
->  Этот API устарел. Вместо него следует использовать [класс unordered_map](../standard-library/unordered-map-class.md).  
+>  This API is obsolete. The alternative is [unordered_map Class](../standard-library/unordered-map-class.md).  
   
- Проверяет неравенство объекта hash_map слева от оператора и объекта hash_map справа от оператора.  
+ Tests if the hash_map object on the left side of the operator is not equal to the hash_map object on the right side.  
   
 ```  
 bool operator!=(const hash_map <Key, Type, Traits, Allocator>& left, const hash_map <Key, Type, Traits, Allocator>& right);
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
  `left`  
- Объект типа `hash_map`.  
+ An object of type `hash_map`.  
   
  `right`  
- Объект типа `hash_map`.  
+ An object of type `hash_map`.  
   
-### <a name="return-value"></a>Возвращаемое значение  
- **true**, если объекты hash_map не равны; **false**, если объекты hash_map равны.  
+### <a name="return-value"></a>Return Value  
+ **true** if the hash_maps are not equal; **false** if hash_maps are equal.  
   
-### <a name="remarks"></a>Примечания  
- Сравнение между объектами hash_map основывается на попарном сравнении их элементов. Два объекта hash_map равны, если они содержат одинаковое количество элементов, а их соответствующие элементы имеют одинаковые значения. В противном случае они не равны.  
+### <a name="remarks"></a>Remarks  
+ The comparison between hash_map objects is based on a pairwise comparison of their elements. Two hash_maps are equal if they have the same number of elements and their respective elements have the same values. Otherwise, they are unequal.  
   
- Члены [< hash_map >](../standard-library/hash-map.md) и [< hash_set >](../standard-library/hash-set.md) файлы заголовков в [ пространство имен stdext](../standard-library/stdext-namespace.md).  
+ Members of the [<hash_map>](../standard-library/hash-map.md) and [<hash_set>](../standard-library/hash-set.md) header files in the [ stdext Namespace](../standard-library/stdext-namespace.md).  
   
-### <a name="example"></a>Пример  
+### <a name="example"></a>Example  
   
 ```cpp  
 // hash_map_op_ne.cpp  
@@ -88,31 +92,31 @@ The hash_maps hm1 and hm2 are not equal.
 The hash_maps hm1 and hm3 are equal.  
 ```  
   
-##  <a name="op_eq_eq"></a>  оператор== 
+##  <a name="op_eq_eq"></a>  operator== 
   
 > [!NOTE]
->  Этот API устарел. Вместо него следует использовать [класс unordered_map](../standard-library/unordered-map-class.md).  
+>  This API is obsolete. The alternative is [unordered_map Class](../standard-library/unordered-map-class.md).  
   
- Проверяет равенство объекта hash_map слева от оператора и объекта hash_map справа от оператора.  
+ Tests if the hash_map object on the left side of the operator is equal to the hash_map object on the right side.  
   
 ```  
 bool operator==(const hash_map <Key, Type, Traits, Allocator>& left, const hash_map <Key, Type, Traits, Allocator>& right);
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
  `left`  
- Объект типа `hash_map`.  
+ An object of type `hash_map`.  
   
  `right`  
- Объект типа `hash_map`.  
+ An object of type `hash_map`.  
   
-### <a name="return-value"></a>Возвращаемое значение  
- **true**, если объект hash_map слева от оператора равен объекту hash_map справа от оператора; в противном случае **false**.  
+### <a name="return-value"></a>Return Value  
+ **true** if the hash_map on the left side of the operator is equal to the hash_map on the right side of the operator; otherwise **false**.  
   
-### <a name="remarks"></a>Примечания  
- Сравнение между объектами hash_map основывается на попарном сравнении их элементов. Два объекта hash_map равны, если они содержат одинаковое количество элементов, а их соответствующие элементы имеют одинаковые значения. В противном случае они не равны.  
+### <a name="remarks"></a>Remarks  
+ The comparison between hash_map objects is based on a pairwise comparison of their elements. Two hash_maps are equal if they have the same number of elements and their respective elements have the same values. Otherwise, they are unequal.  
     
-### <a name="example"></a>Пример  
+### <a name="example"></a>Example  
   
 ```cpp  
 // hash_map_op_eq.cpp  
@@ -152,31 +156,31 @@ The hash_maps hm1 and hm2 are not equal.
 The hash_maps hm1 and hm3 are equal.  
 ```  
   
-##  <a name="op_neq"></a>  оператор!=  
+##  <a name="op_neq"></a>  operator!=  
   
 > [!NOTE]
->  Этот API устарел. Вместо него следует использовать [класс unordered_multimap](../standard-library/unordered-multimap-class.md).  
+>  This API is obsolete. The alternative is [unordered_multimap Class](../standard-library/unordered-multimap-class.md).  
   
- Проверяет неравенство объекта hash_multimap слева от оператора и объекта hash_multimap справа от оператора.  
+ Tests if the hash_multimap object on the left side of the operator is not equal to the hash_multimap object on the right side.  
   
 ```  
 bool operator!=(const hash_multimap <Key, Type, Traits, Allocator>& left, const hash_multimap <Key, Type, Traits, Allocator>& right);
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
  `left`  
- Объект типа `hash_multimap`.  
+ An object of type `hash_multimap`.  
   
  `right`  
- Объект типа `hash_multimap`.  
+ An object of type `hash_multimap`.  
   
-### <a name="return-value"></a>Возвращаемое значение  
- **true**, если объекты hash_multimap не равны; **false**, если они равны.  
+### <a name="return-value"></a>Return Value  
+ **true** if the hash_multimaps are not equal; **false** if hash_multimaps are equal.  
   
-### <a name="remarks"></a>Примечания  
- Сравнение между объектами hash_multimap основывается на попарном сравнении их элементов. Два объекта hash_multimap равны, если они содержат одинаковое количество элементов, а их соответствующие элементы имеют одинаковые значения. В противном случае они не равны.  
+### <a name="remarks"></a>Remarks  
+ The comparison between hash_multimap objects is based on a pairwise comparison of their elements. Two hash_multimaps are equal if they have the same number of elements and their respective elements have the same values. Otherwise, they are unequal.  
    
-### <a name="example"></a>Пример  
+### <a name="example"></a>Example  
   
 ```cpp  
 // hash_multimap_op_ne.cpp  
@@ -216,31 +220,31 @@ The hash_multimaps hm1 and hm2 are not equal.
 The hash_multimaps hm1 and hm3 are equal.  
 ```  
   
-##  <a name="op_eq_eq"></a>  оператор==  
+##  <a name="op_eq_eq"></a>  operator==  
   
 > [!NOTE]
->  Этот API устарел. Вместо него следует использовать [класс unordered_multimap](../standard-library/unordered-multimap-class.md).  
+>  This API is obsolete. The alternative is [unordered_multimap Class](../standard-library/unordered-multimap-class.md).  
   
- Проверяет равенство объекта hash_multimap слева от оператора и объекта hash_multimap справа от оператора.  
+ Tests if the hash_multimap object on the left side of the operator is equal to the hash_multimap object on the right side.  
   
 ```  
 bool operator==(const hash_multimap <Key, Type, Traits, Allocator>& left, const hash_multimap <Key, Type, Traits, Allocator>& right);
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
  `left`  
- Объект типа `hash_multimap`.  
+ An object of type `hash_multimap`.  
   
  `right`  
- Объект типа `hash_multimap`.  
+ An object of type `hash_multimap`.  
   
-### <a name="return-value"></a>Возвращаемое значение  
- **true**, если объект hash_multimap слева от оператора равен объекту hash_multimap справа от оператора; в противном случае **false**.  
+### <a name="return-value"></a>Return Value  
+ **true** if the hash_multimap on the left side of the operator is equal to the hash_multimap on the right side of the operator; otherwise **false**.  
   
-### <a name="remarks"></a>Примечания  
- Сравнение между объектами hash_multimap основывается на попарном сравнении их элементов. Два объекта hash_multimap равны, если они содержат одинаковое количество элементов, а их соответствующие элементы имеют одинаковые значения. В противном случае они не равны.  
+### <a name="remarks"></a>Remarks  
+ The comparison between hash_multimap objects is based on a pairwise comparison of their elements. Two hash_multimaps are equal if they have the same number of elements and their respective elements have the same values. Otherwise, they are unequal.  
   
-### <a name="example"></a>Пример  
+### <a name="example"></a>Example  
   
 ```cpp  
 // hash_multimap_op_eq.cpp  
@@ -280,7 +284,7 @@ The hash_multimaps hm1 and hm2 are not equal.
 The hash_multimaps hm1 and hm3 are equal.  
 ```  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>See Also  
  [<hash_map>](../standard-library/hash-map.md)
 
 

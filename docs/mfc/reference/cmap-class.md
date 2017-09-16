@@ -1,11 +1,11 @@
 ---
-title: "Класс CMap | Документы Microsoft"
+title: CMap Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
 ms.technology:
-- devlang-cpp
+- cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
@@ -30,9 +30,22 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- dictionary mapping class
-- collection classes, dictionary mapping
-- CMap class
+- CMap [MFC], CPair
+- CMap [MFC], CMap
+- CMap [MFC], GetCount
+- CMap [MFC], GetHashTableSize
+- CMap [MFC], GetNextAssoc
+- CMap [MFC], GetSize
+- CMap [MFC], GetStartPosition
+- CMap [MFC], InitHashTable
+- CMap [MFC], IsEmpty
+- CMap [MFC], Lookup
+- CMap [MFC], PGetFirstAssoc
+- CMap [MFC], PGetNextAssoc
+- CMap [MFC], PLookup
+- CMap [MFC], RemoveAll
+- CMap [MFC], RemoveKey
+- CMap [MFC], SetAt
 ms.assetid: 640a45ab-0993-4def-97ec-42cc78eb10b9
 caps.latest.revision: 24
 author: mikeblome
@@ -52,158 +65,159 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: 3f91eafaf3b5d5c1b8f96b010206d699f666e224
-ms.openlocfilehash: 24f2c70210db2d0179f3234f18c3fcbd3bf093f2
-ms.lasthandoff: 04/01/2017
+ms.translationtype: MT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: e7e9ba0ffe6ed0175b97234fa41c9812052b94df
+ms.contentlocale: ru-ru
+ms.lasthandoff: 09/12/2017
 
 ---
-# <a name="cmap-class"></a>Класс CMap
-Класс коллекции словарей, который сопоставляет уникальные ключи значениям.  
+# <a name="cmap-class"></a>CMap Class
+A dictionary collection class that maps unique keys to values.  
   
-## <a name="syntax"></a>Синтаксис  
+## <a name="syntax"></a>Syntax  
   
 ```  
 template<class KEY, class ARG_KEY, class VALUE, class ARG_VALUE>class CMap : public CObject  
 ```  
   
-#### <a name="parameters"></a>Параметры  
+#### <a name="parameters"></a>Parameters  
  `KEY`  
- Класс объекта, который используется как ключ для карты.  
+ Class of the object used as the key to the map.  
   
  `ARG` *_* `KEY`  
- Тип данных, используемый для `KEY` аргументов; обычно ссылка `KEY`.  
+ Data type used for `KEY` arguments; usually a reference to `KEY`.  
   
  `VALUE`  
- Класс объекта, хранимый в сопоставлении.  
+ Class of the object stored in the map.  
   
  `ARG` *_* `VALUE`  
- Тип данных, используемый для `VALUE` аргументов; обычно ссылка `VALUE`.  
+ Data type used for `VALUE` arguments; usually a reference to `VALUE`.  
   
-## <a name="members"></a>Члены  
+## <a name="members"></a>Members  
   
-### <a name="public-structures"></a>Открытые структуры  
+### <a name="public-structures"></a>Public Structures  
   
-|Имя|Описание|  
+|Name|Description|  
 |----------|-----------------|  
-|[CMap::CPair](#cpair)|Вложенную структуру, содержащую ключевое значение и значение связанного объекта.|  
+|[CMap::CPair](#cpair)|A nested structure containing a key value and the value of the associated object.|  
   
-### <a name="public-constructors"></a>Открытые конструкторы  
+### <a name="public-constructors"></a>Public Constructors  
   
-|Имя|Описание|  
+|Name|Description|  
 |----------|-----------------|  
-|[CMap::CMap](#cmap)|Создает коллекцию, которая сопоставляет значения ключей.|  
+|[CMap::CMap](#cmap)|Constructs a collection that maps keys to values.|  
   
-### <a name="public-methods"></a>Открытые методы  
+### <a name="public-methods"></a>Public Methods  
   
-|Имя|Описание|  
+|Name|Description|  
 |----------|-----------------|  
-|[CMap::GetCount](#getcount)|Возвращает количество элементов в этой схеме.|  
-|[CMap::GetHashTableSize](#gethashtablesize)|Возвращает количество элементов в хэш-таблице.|  
-|[CMap::GetNextAssoc](#getnextassoc)|Получает следующий элемент для выполнения итерации.|  
-|[CMap::GetSize](#getsize)|Возвращает количество элементов в этой схеме.|  
-|[CMap::GetStartPosition](#getstartposition)|Возвращает позицию первого элемента.|  
-|[CMap::InitHashTable](#inithashtable)|Инициализирует хэш-таблицы и ее размер.|  
-|[CMap::IsEmpty](#isempty)|Проверяет условие пустой карты (нет элементов).|  
-|[CMap::Lookup](#lookup)|Ищет значение сопоставлен с данным ключом.|  
-|[CMap::PGetFirstAssoc](#pgetfirstassoc)|Возвращает указатель на первый элемент.|  
-|[CMap::PGetNextAssoc](#pgetnextassoc)|Возвращает указатель на следующий элемент для выполнения итерации.|  
-|[CMap::PLookup](#plookup)|Возвращает указатель на ключ, значение которого совпадает с указанным значением.|  
-|[CMap::RemoveAll](#removeall)|Удаляет все элементы из этой карты.|  
-|[CMap::RemoveKey](#removekey)|Удаляет элемент, указанный с помощью ключа.|  
-|[CMap::SetAt](#setat)|Вставляет элемент в сопоставление; заменяет существующий элемент, если найден соответствующий ключ.|  
+|[CMap::GetCount](#getcount)|Returns the number of elements in this map.|  
+|[CMap::GetHashTableSize](#gethashtablesize)|Returns the number of elements in the hash table.|  
+|[CMap::GetNextAssoc](#getnextassoc)|Gets the next element for iterating.|  
+|[CMap::GetSize](#getsize)|Returns the number of elements in this map.|  
+|[CMap::GetStartPosition](#getstartposition)|Returns the position of the first element.|  
+|[CMap::InitHashTable](#inithashtable)|Initializes the hash table and specifies its size.|  
+|[CMap::IsEmpty](#isempty)|Tests for the empty-map condition (no elements).|  
+|[CMap::Lookup](#lookup)|Looks up the value mapped to a given key.|  
+|[CMap::PGetFirstAssoc](#pgetfirstassoc)|Returns a pointer to the first element.|  
+|[CMap::PGetNextAssoc](#pgetnextassoc)|Gets a pointer to the next element for iterating.|  
+|[CMap::PLookup](#plookup)|Returns a pointer to a key whose value matches the specified value.|  
+|[CMap::RemoveAll](#removeall)|Removes all the elements from this map.|  
+|[CMap::RemoveKey](#removekey)|Removes an element specified by a key.|  
+|[CMap::SetAt](#setat)|Inserts an element into the map; replaces an existing element if a matching key is found.|  
   
-### <a name="public-operators"></a>Открытые операторы  
+### <a name="public-operators"></a>Public Operators  
   
-|Имя|Описание|  
+|Name|Description|  
 |----------|-----------------|  
-|[[CMap::operator]](#operator_at)|Вставляет элемент в сопоставление — оператор подстановки для `SetAt`.|  
+|[CMap::operator [ ]](#operator_at)|Inserts an element into the map — operator substitution for `SetAt`.|  
   
-## <a name="remarks"></a>Примечания  
- После вставки пару "ключ значение" (элемент) в сопоставление, можно эффективно извлекать и удалять пары с помощью ключа для доступа к нему. Также можно выполнять итерацию по всем элементам в схеме.  
+## <a name="remarks"></a>Remarks  
+ Once you have inserted a key-value pair (element) into the map, you can efficiently retrieve or delete the pair using the key to access it. You can also iterate over all the elements in the map.  
   
- Переменная типа **ПОЗИЦИИ** используется для альтернативного доступа к записи. Можно использовать **ПОЗИЦИИ** запись «запомнить» и для итерации элементов карты. Может показаться, что эту итерацию расположен последовательно по значением ключа. Нет. Последовательность элементов, полученных не определен.  
+ A variable of type **POSITION** is used for alternate access to entries. You can use a **POSITION** to "remember" an entry and to iterate through the map. You might think that this iteration is sequential by key value; it is not. The sequence of retrieved elements is indeterminate.  
   
- Некоторые функции-члены этого класса вызова глобальных вспомогательные функции, следует настроить для использования большинства `CMap` класса. В разделе [вспомогательные функции классов коллекции](../../mfc/reference/collection-class-helpers.md) в разделе макросы и глобальные объекты `MFC``Reference`.  
+ Certain member functions of this class call global helper functions that must be customized for most uses of the `CMap` class. See [Collection Class Helpers](../../mfc/reference/collection-class-helpers.md) in the Macros and Globals section of the `MFC Reference`.  
   
- `CMap`переопределяет [CObject::Serialize](../../mfc/reference/cobject-class.md#serialize) для поддержки сериализации и записи элементов в дамп. Если карта хранится архив с помощью `Serialize`, в свою очередь сериализуется каждого элемента карты. Реализация по умолчанию `SerializeElements` вспомогательный функция выполняет операцию побитового записи. Для сведений о сериализации указатель коллекции элементов, производных от `CObject` или другие пользовательские типы в разделе [как: создание коллекций типобезопасный](../../mfc/how-to-make-a-type-safe-collection.md).  
+ `CMap` overrides [CObject::Serialize](../../mfc/reference/cobject-class.md#serialize) to support serialization and dumping of its elements. If a map is stored to an archive using `Serialize`, each map element is serialized in turn. The default implementation of the `SerializeElements` helper function does a bitwise write. For information about serialization of pointer collection items derived from `CObject` or other user defined types, see [How to: Make a Type-Safe Collection](../../mfc/how-to-make-a-type-safe-collection.md).  
   
- Если вам требуется дамп диагностики отдельных элементов в карте (ключи и значения), необходимо присвоить глубины контекста дампа 1 или больше.  
+ If you need a diagnostic dump of the individual elements in the map (the keys and values), you must set the depth of the dump context to 1 or greater.  
   
- Если `CMap` объект удаляется или будут удалены при удалении его элементов, ключи и значения.  
+ When a `CMap` object is deleted, or when its elements are removed, the keys and values both are removed.  
   
- Карта производного класса аналогично вывода списка. См. в статье [коллекций](../../mfc/collections.md) иллюстрация производный класс списка специального назначения.  
+ Map class derivation is similar to list derivation. See the article [Collections](../../mfc/collections.md) for an illustration of the derivation of a special-purpose list class.  
   
-## <a name="inheritance-hierarchy"></a>Иерархия наследования  
+## <a name="inheritance-hierarchy"></a>Inheritance Hierarchy  
  [CObject](../../mfc/reference/cobject-class.md)  
   
  `CMap`  
   
-## <a name="requirements"></a>Требования  
- **Заголовок:** afxtempl.h  
+## <a name="requirements"></a>Requirements  
+ **Header:** afxtempl.h  
   
-##  <a name="cmap"></a>CMap::CMap  
- Создает пустой карты.  
+##  <a name="cmap"></a>  CMap::CMap  
+ Constructs an empty map.  
   
 ```  
 CMap(INT_PTR nBlockSize = 10);
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
  `nBlockSize`  
- Указывает гранулярность выделения памяти для расширения карты.  
+ Specifies the memory-allocation granularity for extending the map.  
   
-### <a name="remarks"></a>Примечания  
- При увеличении карты в единицах выделяется память `nBlockSize` записей.  
+### <a name="remarks"></a>Remarks  
+ As the map grows, memory is allocated in units of `nBlockSize` entries.  
   
-### <a name="example"></a>Пример  
- [!code-cpp[NVC_MFCCollections #56](../../mfc/codesnippet/cpp/cmap-class_1.cpp)]  
+### <a name="example"></a>Example  
+ [!code-cpp[NVC_MFCCollections#56](../../mfc/codesnippet/cpp/cmap-class_1.cpp)]  
   
-##  <a name="cpair"></a>CMap::CPair  
- Содержит ключевое значение и значение связанного объекта.  
+##  <a name="cpair"></a>  CMap::CPair  
+ Contains a key value and the value of the associated object.  
   
-### <a name="remarks"></a>Примечания  
- Это вложенную структуру в класс [CMap](../../mfc/reference/cmap-class.md).  
+### <a name="remarks"></a>Remarks  
+ This is a nested structure within class [CMap](../../mfc/reference/cmap-class.md).  
   
- Структура состоит из двух полей.  
+ The structure is composed of two fields:  
   
-- **ключ** фактическое значение тип ключа.  
+- **key** The actual value of the key type.  
   
-- **значение** значение связанного объекта.  
+- **value** The value of the associated object.  
   
- Он используется для хранения значения, возвращаемые из [CMap::PLookup](#plookup), [CMap::PGetFirstAssoc](#pgetfirstassoc), и [CMap::PGetNextAssoc](#pgetnextassoc).  
+ It is used to store the return values from [CMap::PLookup](#plookup), [CMap::PGetFirstAssoc](#pgetfirstassoc), and [CMap::PGetNextAssoc](#pgetnextassoc).  
   
-### <a name="example"></a>Пример  
- Пример использования см. пример для [CMap::PLookup](#plookup).  
+### <a name="example"></a>Example  
+ For an example of usage, see the example for [CMap::PLookup](#plookup).  
   
-##  <a name="getcount"></a>CMap::GetCount  
- Возвращает число элементов в объекте map.  
+##  <a name="getcount"></a>  CMap::GetCount  
+ Retrieves the number of elements in the map.  
   
 ```  
 INT_PTR GetCount() const;  
 ```  
   
-### <a name="return-value"></a>Возвращаемое значение  
- Количество элементов  
+### <a name="return-value"></a>Return Value  
+ The number of elements.  
   
-### <a name="example"></a>Пример  
- Далее приведен пример [CMap::Lookup](#lookup).  
+### <a name="example"></a>Example  
+ See the example for [CMap::Lookup](#lookup).  
   
-##  <a name="gethashtablesize"></a>CMap::GetHashTableSize  
- Определяет количество элементов в хэш-таблицу для карты.  
+##  <a name="gethashtablesize"></a>  CMap::GetHashTableSize  
+ Determines the number of elements in the hash table for the map.  
   
 ```  
 UINT GetHashTableSize() const;  
 ```  
   
-### <a name="return-value"></a>Возвращаемое значение  
- Число элементов в хэш-таблице.  
+### <a name="return-value"></a>Return Value  
+ The number of elements in the hash table.  
   
-### <a name="example"></a>Пример  
- [!code-cpp[NVC_MFCCollections #57](../../mfc/codesnippet/cpp/cmap-class_2.cpp)]  
+### <a name="example"></a>Example  
+ [!code-cpp[NVC_MFCCollections#57](../../mfc/codesnippet/cpp/cmap-class_2.cpp)]  
   
-##  <a name="getnextassoc"></a>CMap::GetNextAssoc  
- Извлекает элемент карты по `rNextPosition`, затем обновляет `rNextPosition` для обращения к следующему элементу в схеме.  
+##  <a name="getnextassoc"></a>  CMap::GetNextAssoc  
+ Retrieves the map element at `rNextPosition`, then updates `rNextPosition` to refer to the next element in the map.  
   
 ```  
 void GetNextAssoc(
@@ -212,168 +226,168 @@ void GetNextAssoc(
     VALUE& rValue) const;  
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
  `rNextPosition`  
- Указывает ссылку на **ПОЗИЦИИ** значение, возвращенное предыдущим `GetNextAssoc` или `GetStartPosition` вызова.  
+ Specifies a reference to a **POSITION** value returned by a previous `GetNextAssoc` or `GetStartPosition` call.  
   
- *КЛЮЧ*  
- Параметр шаблона, указывающий тип ключа карты.  
+ *KEY*  
+ Template parameter specifying the type of the map's key.  
   
  `rKey`  
- Указывает возвращаемый ключ полученного элемента.  
+ Specifies the returned key of the retrieved element.  
   
- *ЗНАЧЕНИЕ*  
- Параметр шаблона, указывающий тип значения карты.  
+ *VALUE*  
+ Template parameter specifying the type of the map's value.  
   
  `rValue`  
- Указывает возвращаемое значение полученного элемента.  
+ Specifies the returned value of the retrieved element.  
   
-### <a name="remarks"></a>Примечания  
- Эта функция полезна для перебора всех элементов в объекте map. Обратите внимание, что порядковый номер позиции не обязательно будет таким же, как последовательность значение ключа.  
+### <a name="remarks"></a>Remarks  
+ This function is most useful for iterating through all the elements in the map. Note that the position sequence is not necessarily the same as the key value sequence.  
   
- Если полученного элемента является последним в схеме, то новое значение `rNextPosition` равно **NULL**.  
+ If the retrieved element is the last in the map, then the new value of `rNextPosition` is set to **NULL**.  
   
-### <a name="example"></a>Пример  
- Далее приведен пример [CMap::SetAt](#setat).  
+### <a name="example"></a>Example  
+ See the example for [CMap::SetAt](#setat).  
   
-##  <a name="getsize"></a>CMap::GetSize  
- Возвращает количество элементов карты.  
+##  <a name="getsize"></a>  CMap::GetSize  
+ Returns the number of map elements.  
   
 ```  
 INT_PTR GetSize() const;  
 ```  
   
-### <a name="return-value"></a>Возвращаемое значение  
- Число элементов в карте.  
+### <a name="return-value"></a>Return Value  
+ The number of items in the map.  
   
-### <a name="remarks"></a>Примечания  
- Вызовите этот метод для извлечения нескольких элементов в объекте map.  
+### <a name="remarks"></a>Remarks  
+ Call this method to retrieve the number of elements in the map.  
   
-### <a name="example"></a>Пример  
- [!code-cpp[NVC_MFCCollections #58](../../mfc/codesnippet/cpp/cmap-class_3.cpp)]  
+### <a name="example"></a>Example  
+ [!code-cpp[NVC_MFCCollections#58](../../mfc/codesnippet/cpp/cmap-class_3.cpp)]  
   
-##  <a name="getstartposition"></a>CMap::GetStartPosition  
- Начинает итерацию карты, возвращая **ПОЗИЦИИ** значение, которое может быть передан `GetNextAssoc` вызова.  
+##  <a name="getstartposition"></a>  CMap::GetStartPosition  
+ Starts a map iteration by returning a **POSITION** value that can be passed to a `GetNextAssoc` call.  
   
 ```  
 POSITION GetStartPosition() const;  
 ```  
   
-### <a name="return-value"></a>Возвращаемое значение  
- Объект **ПОЗИЦИИ** значение, указывающее начальную позицию для прохода сопоставление; или **NULL** Если сопоставление пусто.  
+### <a name="return-value"></a>Return Value  
+ A **POSITION** value that indicates a starting position for iterating the map; or **NULL** if the map is empty.  
   
-### <a name="remarks"></a>Примечания  
- Порядковый номер итерации не является прогнозируемым; Таким образом «первый элемент в схеме» не имеет особой важности.  
+### <a name="remarks"></a>Remarks  
+ The iteration sequence is not predictable; therefore, the "first element in the map" has no special significance.  
   
-### <a name="example"></a>Пример  
- Далее приведен пример [CMap::SetAt](#setat).  
+### <a name="example"></a>Example  
+ See the example for [CMap::SetAt](#setat).  
   
-##  <a name="inithashtable"></a>CMap::InitHashTable  
- Инициализирует хэш-таблицы.  
+##  <a name="inithashtable"></a>  CMap::InitHashTable  
+ Initializes the hash table.  
   
 ```  
 void InitHashTable(UINT hashSize, BOOL  bAllocNow = TRUE);  
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
  `hashSize`  
- Число записей в хэш-таблице.  
+ Number of entries in the hash table.  
   
  `bAllocNow`  
- Если **TRUE**, выделяет хэш-таблице при инициализации; в противном случае таблица выделяется при необходимости.  
+ If **TRUE**, allocates the hash table upon initialization; otherwise the table is allocated when needed.  
   
-### <a name="remarks"></a>Примечания  
- Для наилучшей производительности размер хэш-таблицы должны быть простых чисел. Чтобы свести к минимуму конфликты, на размер должен быть примерно 20 процентов больше, чем самый большой набор ожидаемых данных.  
+### <a name="remarks"></a>Remarks  
+ For best performance, the hash table size should be a prime number. To minimize collisions, the size should be roughly 20 percent larger than the largest anticipated data set.  
   
-### <a name="example"></a>Пример  
- Далее приведен пример [CMap::Lookup](#lookup).  
+### <a name="example"></a>Example  
+ See the example for [CMap::Lookup](#lookup).  
   
-##  <a name="isempty"></a>CMap::IsEmpty  
- Определяет, является ли пустой карты.  
+##  <a name="isempty"></a>  CMap::IsEmpty  
+ Determines whether the map is empty.  
   
 ```  
 BOOL IsEmpty() const;  
 ```  
   
-### <a name="return-value"></a>Возвращаемое значение  
- Ненулевое значение, если эта карта не содержит элементов; в противном случае — 0.  
+### <a name="return-value"></a>Return Value  
+ Nonzero if this map contains no elements; otherwise 0.  
   
-### <a name="example"></a>Пример  
- Далее приведен пример [CMap::RemoveAll](#removeall).  
+### <a name="example"></a>Example  
+ See the example for [CMap::RemoveAll](#removeall).  
   
-##  <a name="lookup"></a>CMap::Lookup  
- Ищет значение сопоставлен с данным ключом.  
+##  <a name="lookup"></a>  CMap::Lookup  
+ Looks up the value mapped to a given key.  
   
 ```  
 BOOL Lookup(ARG_KEY key, VALUE& rValue) const;  
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
  `ARG_KEY`  
- Параметр шаблона, задающее тип `key` значение.  
+ Template parameter specifying the type of the `key` value.  
   
  `key`  
- Задает ключ, определяющий элемента, который требуется найти.  
+ Specifies the key that identifies the element to be looked up.  
   
- *ЗНАЧЕНИЕ*  
- Указывает тип значения, которое необходимо найти.  
+ *VALUE*  
+ Specifies the type of the value to be looked up.  
   
  `rValue`  
- Получает значение, поиск вверх.  
+ Receives the looked-up value.  
   
-### <a name="return-value"></a>Возвращаемое значение  
- Ненулевое значение, если элемент найден; в противном случае — 0.  
+### <a name="return-value"></a>Return Value  
+ Nonzero if the element was found; otherwise 0.  
   
-### <a name="remarks"></a>Примечания  
- `Lookup`использует алгоритм хэширования для быстрого поиска элемента карты с ключом, который совпадает с указанным ключом.  
+### <a name="remarks"></a>Remarks  
+ `Lookup` uses a hashing algorithm to quickly find the map element with a key that exactly matches the given key.  
   
-### <a name="example"></a>Пример  
- [!code-cpp[NVC_MFCCollections #58](../../mfc/codesnippet/cpp/cmap-class_3.cpp)]  
+### <a name="example"></a>Example  
+ [!code-cpp[NVC_MFCCollections#58](../../mfc/codesnippet/cpp/cmap-class_3.cpp)]  
   
-##  <a name="operator_at"></a>[CMap::operator]  
- Удобный заменой `SetAt` функции-члена.  
+##  <a name="operator_at"></a>  CMap::operator [ ]  
+ A convenient substitute for the `SetAt` member function.  
   
 ```  
 VALUE& operator[](arg_key key);
 ```  
   
-### <a name="parameters"></a>Параметры  
- *ЗНАЧЕНИЕ*  
- Параметр шаблона, задающее тип значения карты.  
+### <a name="parameters"></a>Parameters  
+ *VALUE*  
+ Template parameter specifying the type of the map value.  
   
  `ARG_KEY`  
- Параметр шаблона, указывающий тип значения ключа.  
+ Template parameter specifying the type of the key value.  
   
  `key`  
- Ключ, используемый для извлечения значения из схемы.  
+ The key used to retrieve the value from the map.  
   
-### <a name="remarks"></a>Примечания  
- Поэтому он может использоваться только в левой части оператора присваивания (l значение). Если ни один элемент карты с указанным ключом, создается новый элемент.  
+### <a name="remarks"></a>Remarks  
+ Thus it can be used only on the left side of an assignment statement (an l-value). If there is no map element with the specified key, then a new element is created.  
   
- Нет нет» справа от оператора» (r-значение) эквивалентно этот оператор, так как имеется возможность того, что ключ не может находиться в схеме. Используйте `Lookup` функция-член для извлечения элементов.  
+ There is no "right side" (r-value) equivalent to this operator because there is a possibility that a key may not be found in the map. Use the `Lookup` member function for element retrieval.  
   
-### <a name="example"></a>Пример  
- Далее приведен пример [CMap::Lookup](#lookup).  
+### <a name="example"></a>Example  
+ See the example for [CMap::Lookup](#lookup).  
   
-##  <a name="pgetfirstassoc"></a>CMap::PGetFirstAssoc  
- Возвращает первый элемент объекта карты.  
+##  <a name="pgetfirstassoc"></a>  CMap::PGetFirstAssoc  
+ Returns the first entry of the map object.  
   
 ```  
 const CPair* PGetFirstAssoc() const; 
 CPair* PGetFirstAssoc();  
 ```  
   
-### <a name="return-value"></a>Возвращаемое значение  
- Указатель на первую запись в схеме; в разделе [CMap::CPair](#cpair). Если карты не содержит записей, это значение равно **NULL**.  
+### <a name="return-value"></a>Return Value  
+ A pointer to the first entry in the map; see [CMap::CPair](#cpair). If the map contains no entries, the value is **NULL**.  
   
-### <a name="remarks"></a>Примечания  
- Эта функция возвращает указатель на первый элемент в объекте map.  
+### <a name="remarks"></a>Remarks  
+ Call this function to return a pointer the first element in the map object.  
   
-### <a name="example"></a>Пример  
- [!code-cpp[NVC_MFCCollections #59](../../mfc/codesnippet/cpp/cmap-class_4.cpp)]  
+### <a name="example"></a>Example  
+ [!code-cpp[NVC_MFCCollections#59](../../mfc/codesnippet/cpp/cmap-class_4.cpp)]  
   
-##  <a name="pgetnextassoc"></a>CMap::PGetNextAssoc  
- Извлекает элемент карты, на который указывает `pAssocRec`.  
+##  <a name="pgetnextassoc"></a>  CMap::PGetNextAssoc  
+ Retrieves the map element pointed to by `pAssocRec`.  
   
 ```  
 const CPair *PGetNextAssoc(const CPair* pAssocRet) const;  
@@ -381,104 +395,104 @@ const CPair *PGetNextAssoc(const CPair* pAssocRet) const;
 CPair *PGetNextAssoc(const CPair* pAssocRet);
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
  *pAssocRet*  
- Указывает на запись сопоставления, который возвращается предыдущим вызовом [PGetNextAssoc](#pgetnextassoc) или [CMap::PGetFirstAssoc](#pgetfirstassoc) вызова.  
+ Points to a map entry returned by a previous [PGetNextAssoc](#pgetnextassoc) or [CMap::PGetFirstAssoc](#pgetfirstassoc) call.  
   
-### <a name="return-value"></a>Возвращаемое значение  
- Указатель на следующую запись в сопоставление; в разделе [CMap::CPair](#cpair). Если элемент является последним в схеме, это значение равно **NULL**.  
+### <a name="return-value"></a>Return Value  
+ A pointer to the next entry in the map; see [CMap::CPair](#cpair). If the element is the last in the map, the value is **NULL**.  
   
-### <a name="remarks"></a>Примечания  
- Этот метод служит для перебора всех элементов в объекте map. Получение первого элемента с помощью вызова `PGetFirstAssoc` и затем выполните итерацию через схему при последующих вызовах для `PGetNextAssoc`.  
+### <a name="remarks"></a>Remarks  
+ Call this method to iterate through all the elements in the map. Retrieve the first element with a call to `PGetFirstAssoc` and then iterate through the map with successive calls to `PGetNextAssoc`.  
   
-### <a name="example"></a>Пример  
- Далее приведен пример [CMap::PGetFirstAssoc](#pgetfirstassoc).  
+### <a name="example"></a>Example  
+ See the example for [CMap::PGetFirstAssoc](#pgetfirstassoc).  
   
-##  <a name="plookup"></a>CMap::PLookup  
- Находит значение сопоставлен с данным ключом.  
+##  <a name="plookup"></a>  CMap::PLookup  
+ Finds the value mapped to a given key.  
   
 ```  
 const CPair* PLookup(ARG_KEY key) const;
 CPair* PLookup(ARG_KEY key);  
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
  `key`  
- Ключ элемента для поиска.  
+ Key for the element to be searched for.  
   
-### <a name="return-value"></a>Возвращаемое значение  
- Указатель на структуру ключей; в разделе [CMap::CPair](#cpair). Если совпадение не найдено, `CMap::PLookup` возвращает `NULL`.  
+### <a name="return-value"></a>Return Value  
+ A pointer to a key structure; see [CMap::CPair](#cpair). If no match is found, `CMap::PLookup` returns `NULL`.  
   
-### <a name="remarks"></a>Примечания  
- Этот метод используется для поиска элемента карты с ключом, который совпадает с указанным ключом.  
+### <a name="remarks"></a>Remarks  
+ Call this method to search for a map element with a key that exactly matches the given key.  
   
-### <a name="example"></a>Пример  
- [!code-cpp[NVC_MFCCollections #60](../../mfc/codesnippet/cpp/cmap-class_5.cpp)]  
+### <a name="example"></a>Example  
+ [!code-cpp[NVC_MFCCollections#60](../../mfc/codesnippet/cpp/cmap-class_5.cpp)]  
   
-##  <a name="removeall"></a>CMap::RemoveAll  
- Удаляет все значения из этой карте, вызвав функцию глобального **DestructElements**.  
+##  <a name="removeall"></a>  CMap::RemoveAll  
+ Removes all the values from this map by calling the global helper function **DestructElements**.  
   
 ```  
 void RemoveAll();
 ```  
   
-### <a name="remarks"></a>Примечания  
- Функция работает корректно, если сопоставление уже является пустым.  
+### <a name="remarks"></a>Remarks  
+ The function works correctly if the map is already empty.  
   
-### <a name="example"></a>Пример  
- [!code-cpp[NVC_MFCCollections #61](../../mfc/codesnippet/cpp/cmap-class_6.cpp)]  
+### <a name="example"></a>Example  
+ [!code-cpp[NVC_MFCCollections#61](../../mfc/codesnippet/cpp/cmap-class_6.cpp)]  
   
-##  <a name="removekey"></a>CMap::RemoveKey  
- Ищет элемент карты, соответствующий заданному ключу; затем Если ключ найден, удаляет запись.  
+##  <a name="removekey"></a>  CMap::RemoveKey  
+ Looks up the map entry corresponding to the supplied key; then, if the key is found, removes the entry.  
   
 ```  
 BOOL RemoveKey(ARG_KEY key);
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
  `ARG_KEY`  
- Параметр шаблона, определяющий тип ключа.  
+ Template parameter specifying the type of the key.  
   
  `key`  
- Ключ элемента, который требуется удалить.  
+ Key for the element to be removed.  
   
-### <a name="return-value"></a>Возвращаемое значение  
- Ненулевое значение, если элемент был найден и успешно удален. в противном случае — 0.  
+### <a name="return-value"></a>Return Value  
+ Nonzero if the entry was found and successfully removed; otherwise 0.  
   
-### <a name="remarks"></a>Примечания  
- **DestructElements** вспомогательной функции используется для удаления записи.  
+### <a name="remarks"></a>Remarks  
+ The **DestructElements** helper function is used to remove the entry.  
   
-### <a name="example"></a>Пример  
- Далее приведен пример [CMap::SetAt](#setat).  
+### <a name="example"></a>Example  
+ See the example for [CMap::SetAt](#setat).  
   
-##  <a name="setat"></a>CMap::SetAt  
- Основным средством для вставки элементов в сопоставлении.  
+##  <a name="setat"></a>  CMap::SetAt  
+ The primary means to insert an element in a map.  
   
 ```  
 void SetAt(ARG_KEY key, ARG_VALUE newValue);
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
  `ARG_KEY`  
- Параметр шаблона, задающее тип `key` параметр.  
+ Template parameter specifying the type of the `key` parameter.  
   
  `key`  
- Задает ключ для нового элемента.  
+ Specifies the key of the new element.  
   
  `ARG_VALUE`  
- Параметр шаблона, задающее тип `newValue` параметр.  
+ Template parameter specifying the type of the `newValue` parameter.  
   
  `newValue`  
- Указывает значение нового элемента.  
+ Specifies the value of the new element.  
   
-### <a name="remarks"></a>Примечания  
- Во-первых ищется ключ. Если ключ найден, то изменяется соответствующее значение; в противном случае создается новый пара ключ значение.  
+### <a name="remarks"></a>Remarks  
+ First, the key is looked up. If the key is found, then the corresponding value is changed; otherwise a new key-value pair is created.  
   
-### <a name="example"></a>Пример  
- [!code-cpp[NVC_MFCCollections #62](../../mfc/codesnippet/cpp/cmap-class_7.cpp)]  
+### <a name="example"></a>Example  
+ [!code-cpp[NVC_MFCCollections#62](../../mfc/codesnippet/cpp/cmap-class_7.cpp)]  
   
-## <a name="see-also"></a>См. также  
- [Пример MFC СБОРА](../../visual-cpp-samples.md)   
- [CObject-класс](../../mfc/reference/cobject-class.md)   
- [Диаграмма иерархии](../../mfc/hierarchy-chart.md)  
+## <a name="see-also"></a>See Also  
+ [MFC Sample COLLECT](../../visual-cpp-samples.md)   
+ [CObject Class](../../mfc/reference/cobject-class.md)   
+ [Hierarchy Chart](../../mfc/hierarchy-chart.md)  
 

@@ -1,5 +1,5 @@
 ---
-title: "CDaoRecordView-класс | Документы Microsoft"
+title: CDaoRecordView Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -19,12 +19,11 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- CDaoRecordView class
-- data-bound controls [C++], DAO controls
-- data binding [C++], DAO views
-- bound controls [C++], displaying database data
-- application wizards [C++], creating record views
-- controls [MFC], data binding
+- CDaoRecordView [MFC], CDaoRecordView
+- CDaoRecordView [MFC], IsOnFirstRecord
+- CDaoRecordView [MFC], IsOnLastRecord
+- CDaoRecordView [MFC], OnGetRecordset
+- CDaoRecordView [MFC], OnMove
 ms.assetid: 5aa7d0e2-bd05-413e-b216-80c404ce18ac
 caps.latest.revision: 23
 author: mikeblome
@@ -44,58 +43,58 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0e0c08ddc57d437c51872b5186ae3fc983bb0199
-ms.openlocfilehash: 11aa318e84e89835ceb710725590f3c3e6387fcd
+ms.translationtype: MT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 4d300082bf01394958c02a4cf8dd33305df1c4a0
 ms.contentlocale: ru-ru
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 09/12/2017
 
 ---
-# <a name="cdaorecordview-class"></a>CDaoRecordView-класс
-Представление, которое отображает записи базы данных в элементах управления.  
+# <a name="cdaorecordview-class"></a>CDaoRecordView Class
+A view that displays database records in controls.  
   
-## <a name="syntax"></a>Синтаксис  
+## <a name="syntax"></a>Syntax  
   
 ```  
 class AFX_NOVTABLE CDaoRecordView : public CFormView  
 ```  
   
-## <a name="members"></a>Члены  
+## <a name="members"></a>Members  
   
-### <a name="protected-constructors"></a>Защищенные конструкторы  
+### <a name="protected-constructors"></a>Protected Constructors  
   
-|Имя|Описание|  
+|Name|Description|  
 |----------|-----------------|  
-|[CDaoRecordView::CDaoRecordView](#cdaorecordview)|Создает объект `CDaoRecordView`.|  
+|[CDaoRecordView::CDaoRecordView](#cdaorecordview)|Constructs a `CDaoRecordView` object.|  
   
-### <a name="public-methods"></a>Открытые методы  
+### <a name="public-methods"></a>Public Methods  
   
-|Имя|Описание|  
+|Name|Description|  
 |----------|-----------------|  
-|[CDaoRecordView::IsOnFirstRecord](#isonfirstrecord)|Возвращает ненулевое значение, если текущая запись является первой записи в связанных записей.|  
-|[CDaoRecordView::IsOnLastRecord](#isonlastrecord)|Возвращает ненулевое значение, если текущая запись является последней записи в связанных записей.|  
-|[CDaoRecordView::OnGetRecordset](#ongetrecordset)|Возвращает указатель на объект класса, производного от `CDaoRecordset`. ClassWizard переопределяет эту функцию для вас и при необходимости создает набор записей.|  
-|[CDaoRecordView::OnMove](#onmove)|Если текущая запись была изменена, обновляет его в источнике данных, а затем переходит к указанной записи (следующего, предыдущего, первого или последнего).|  
+|[CDaoRecordView::IsOnFirstRecord](#isonfirstrecord)|Returns nonzero if the current record is the first record in the associated recordset.|  
+|[CDaoRecordView::IsOnLastRecord](#isonlastrecord)|Returns nonzero if the current record is the last record in the associated recordset.|  
+|[CDaoRecordView::OnGetRecordset](#ongetrecordset)|Returns a pointer to an object of a class derived from `CDaoRecordset`. ClassWizard overrides this function for you and creates the recordset if necessary.|  
+|[CDaoRecordView::OnMove](#onmove)|If the current record has changed, updates it on the data source, then moves to the specified record (next, previous, first, or last).|  
   
-## <a name="remarks"></a>Примечания  
- Это представление является представление формы, непосредственно подключенные к `CDaoRecordset` объекта. Представление создается на основе ресурс шаблона диалоговых окон и отображает поля `CDaoRecordset` в элементах управления шаблона диалогового окна. `CDaoRecordView` Объект использует обмен данными (диалоговых окон DDX) и обмен полями записей DAO (DFX) для автоматизации перемещения данных между элементами управления в форме и полями набора записей. `CDaoRecordView`также предоставляет реализацию по умолчанию для перехода к первой, следующего, предыдущего или последней записи и интерфейс для обновления записи в данный момент в представлении.  
+## <a name="remarks"></a>Remarks  
+ The view is a form view directly connected to a `CDaoRecordset` object. The view is created from a dialog template resource and displays the fields of the `CDaoRecordset` object in the dialog template's controls. The `CDaoRecordView` object uses dialog data exchange (DDX) and DAO record field exchange (DFX) to automate the movement of data between the controls on the form and the fields of the recordset. `CDaoRecordView` also supplies a default implementation for moving to the first, next, previous, or last record and an interface for updating the record currently in view.  
   
 > [!NOTE]
->  Классы баз данных DAO отличаются от классов базы данных MFC на основе на Open Database Connectivity (ODBC). Все имена классов DAO базы данных имеют префикс «CDao». Вы можете по-прежнему обращаться к источникам данных ODBC с помощью классов DAO. классы DAO обычно предлагают превосходит возможности, поскольку они используют ядро базы данных Microsoft Jet.  
+>  The DAO database classes are distinct from the MFC database classes based on Open Database Connectivity (ODBC). All DAO database class names have the "CDao" prefix. You can still access ODBC data sources with the DAO classes; the DAO classes generally offer superior capabilities because they use the Microsoft Jet database engine.  
   
- Является наиболее распространенным способом для создание представления записей с помощью мастера приложений. Мастер приложения создает класс представления записей и его класс связанных записей как часть приложения скелет начального уровня.  
+ The most common way to create your record view is with the Application Wizard. The Application Wizard creates both the record view class and its associated recordset class as part of your skeleton starter application.  
   
- Если требуется просто одной форме, мастер приложений подход проще. ClassWizard позволяет решить, использование представления записей позже в процессе разработки. Если не создать класс представления записей с помощью мастера приложений, можно создать ее позже с помощью классов. Использование классов для создания представления записей и записей отдельно и затем подключить их, самый гибкий подход, поскольку предоставляет больший контроль при именовании класс записей и его. H. CPP-файлов. Такой подход также позволяет иметь несколько представлений записей в одном классе набора записей.  
+ If you simply need a single form, the Application Wizard approach is easier. ClassWizard lets you decide to use a record view later in the development process. If you don't create the record view class with the Application Wizard, you can create it later with ClassWizard. Using ClassWizard to create a record view and a recordset separately and then connect them is the most flexible approach because it gives you more control in naming the recordset class and its .H/.CPP files. This approach also lets you have multiple record views on the same recordset class.  
   
- Чтобы упростить для конечных пользователей для перемещения по записям в представлении записей, мастер приложения создает меню (и при необходимости инструментов) ресурсы для перемещения к первому следующего, предыдущего или последней записи. Если создать класс представления записей с помощью классов, необходимо создать эти ресурсы самостоятельно с меню и растрового изображения редакторов.  
+ To make it easy for end-users to move from record to record in the record view, the Application Wizard creates menu (and optionally toolbar) resources for moving to the first, next, previous, or last record. If you create a record view class with ClassWizard, you need to create these resources yourself with the menu and bitmap editors.  
   
- Сведения о реализации по умолчанию для перемещения по записям в разделе `IsOnFirstRecord` и `IsOnLastRecord` и статьи [использование представления записей](../../data/using-a-record-view-mfc-data-access.md), который действует как `CRecordView` и `CDaoRecordView`.  
+ For information about the default implementation for moving from record to record, see `IsOnFirstRecord` and `IsOnLastRecord` and the article [Using a Record View](../../data/using-a-record-view-mfc-data-access.md), which applies to both `CRecordView` and `CDaoRecordView`.  
   
- `CDaoRecordView`сохраняет сведения о положение пользователя в наборе записей, чтобы представление записей можно обновить пользовательский интерфейс. Когда пользователь переходит на любой конец набора записей, представление записей отключает объекты пользовательского интерфейса — например пунктов меню или кнопок панели инструментов — для перемещения в одном направлении.  
+ `CDaoRecordView` keeps track of the user's position in the recordset so that the record view can update the user interface. When the user moves to either end of the recordset, the record view disables user interface objects — such as menu items or toolbar buttons — for moving further in the same direction.  
   
- Дополнительные сведения об объявлении и использование представления записей и классов набора записей в разделе «Проектирование и создание представления записей» в статье [представления записей](../../data/record-views-mfc-data-access.md). Дополнительные сведения о как запись представления работы и их использовании см. в статье [использование представления записей](../../data/using-a-record-view-mfc-data-access.md). Все упомянутые выше статьи применимы в обоих `CRecordView` и `CDaoRecordView`.  
+ For more information about declaring and using your record view and recordset classes, see "Designing and Creating a Record View" in the article [Record Views](../../data/record-views-mfc-data-access.md). For more information about how record views work and how to use them, see the article [Using a Record View](../../data/using-a-record-view-mfc-data-access.md). All the articles mentioned above apply to both `CRecordView` and `CDaoRecordView`.  
   
-## <a name="inheritance-hierarchy"></a>Иерархия наследования  
+## <a name="inheritance-hierarchy"></a>Inheritance Hierarchy  
  [CObject](../../mfc/reference/cobject-class.md)  
   
  [CCmdTarget](../../mfc/reference/ccmdtarget-class.md)  
@@ -110,124 +109,124 @@ class AFX_NOVTABLE CDaoRecordView : public CFormView
   
  `CDaoRecordView`  
   
-## <a name="requirements"></a>Требования  
- **Заголовок:** afxdao.h  
+## <a name="requirements"></a>Requirements  
+ **Header:** afxdao.h  
   
-##  <a name="cdaorecordview"></a>CDaoRecordView::CDaoRecordView  
- При создании объекта типа производным от `CDaoRecordView`, вызовите конструктор для инициализации объекта представления и определения ресурса диалогового окна, лежащие в основе представления либо форме.  
+##  <a name="cdaorecordview"></a>  CDaoRecordView::CDaoRecordView  
+ When you create an object of a type derived from `CDaoRecordView`, call either form of the constructor to initialize the view object and identify the dialog resource on which the view is based.  
   
 ```  
 explicit CDaoRecordView(LPCTSTR lpszTemplateName);  
 explicit CDaoRecordView(UINT nIDTemplate);
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
  `lpszTemplateName`  
- Содержит нулем строку, являющуюся именем ресурс шаблона диалоговых окон.  
+ Contains a null-terminated string that is the name of a dialog template resource.  
   
  `nIDTemplate`  
- Содержит идентификатор ресурс шаблона диалоговых окон.  
+ Contains the ID number of a dialog template resource.  
   
-### <a name="remarks"></a>Примечания  
- Можно либо указать ресурс по имени (передавать строку в качестве аргумента конструктору) или по его Идентификатору (pass целое число без знака в качестве аргумента). Ресурс идентификатор рекомендуется использовать.  
-  
-> [!NOTE]
->  Производный класс должен предоставить собственный конструктор. В конструкторе производного класса, вызовите конструктор `CDaoRecordView::CDaoRecordView` имя ресурса или идентификатор в качестве аргумента.  
-  
- **CDaoRecordView::OnInitialUpdate** вызовов `CWnd::UpdateData`, который вызывает метод `CWnd::DoDataExchange`. Этот первоначальный вызов `DoDataExchange` подключается `CDaoRecordView` управляет (неявно) к `CDaoRecordset` поля элементов данных, созданных классов. Эти данные-члены не должны использоваться до, после вызова метода базового класса **CFormView::OnInitialUpdate** функции-члена.  
+### <a name="remarks"></a>Remarks  
+ You can either identify the resource by name (pass a string as the argument to the constructor) or by its ID (pass an unsigned integer as the argument). Using a resource ID is recommended.  
   
 > [!NOTE]
->  При использовании классов, мастер определяет `enum` значение `CDaoRecordView::IDD` в объявлении класса и использует его во время инициализации элемента списка для конструктора.  
+>  Your derived class must supply its own constructor. In the constructor of your derived class, call the constructor `CDaoRecordView::CDaoRecordView` with the resource name or ID as an argument.  
   
- [!code-cpp[NVC_MFCDatabase&#35;](../../mfc/codesnippet/cpp/cdaorecordview-class_1.cpp)]  
+ **CDaoRecordView::OnInitialUpdate** calls `CWnd::UpdateData`, which calls `CWnd::DoDataExchange`. This initial call to `DoDataExchange` connects `CDaoRecordView` controls (indirectly) to `CDaoRecordset` field data members created by ClassWizard. These data members cannot be used until after you call the base class **CFormView::OnInitialUpdate** member function.  
   
-##  <a name="isonfirstrecord"></a>CDaoRecordView::IsOnFirstRecord  
- Вызовите эту функцию-член, чтобы определить, является ли текущая запись первой записи в объекте набора записей, связанный с этим представлением записи.  
+> [!NOTE]
+>  If you use ClassWizard, the wizard defines an `enum` value `CDaoRecordView::IDD` in the class declaration and uses it in the member initialization list for the constructor.  
+  
+ [!code-cpp[NVC_MFCDatabase#35](../../mfc/codesnippet/cpp/cdaorecordview-class_1.cpp)]  
+  
+##  <a name="isonfirstrecord"></a>  CDaoRecordView::IsOnFirstRecord  
+ Call this member function to determine whether the current record is the first record in the recordset object associated with this record view.  
   
 ```  
 BOOL IsOnFirstRecord();
 ```  
   
-### <a name="return-value"></a>Возвращаемое значение  
- Ненулевое значение, если текущая запись является первой записи в наборе записей; в противном случае — 0.  
+### <a name="return-value"></a>Return Value  
+ Nonzero if the current record is the first record in the recordset; otherwise 0.  
   
-### <a name="remarks"></a>Примечания  
- Эту функцию можно использовать для создания собственных реализаций по умолчанию обработчики обновления команд, созданных классов.  
+### <a name="remarks"></a>Remarks  
+ This function is useful for writing your own implementations of the default command update handlers written by ClassWizard.  
   
- Если пользователь переходит к первой записи, отключает framework, пользовательский интерфейс объекты (например, элементы меню или кнопки панели инструментов) необходимо для перемещения к первому или предыдущей записи.  
+ If the user moves to the first record, the framework disables any user interface objects (for example, menu items or toolbar buttons) you have for moving to the first or the previous record.  
   
-##  <a name="isonlastrecord"></a>CDaoRecordView::IsOnLastRecord  
- Вызовите эту функцию-член, чтобы определить, является ли текущая запись последней записи в объекте набора записей, связанный с этим представлением записи.  
+##  <a name="isonlastrecord"></a>  CDaoRecordView::IsOnLastRecord  
+ Call this member function to determine whether the current record is the last record in the recordset object associated with this record view.  
   
 ```  
 BOOL IsOnLastRecord();
 ```  
   
-### <a name="return-value"></a>Возвращаемое значение  
- Ненулевое значение, если текущая запись является последней записи в наборе записей; в противном случае — 0.  
+### <a name="return-value"></a>Return Value  
+ Nonzero if the current record is the last record in the recordset; otherwise 0.  
   
-### <a name="remarks"></a>Примечания  
- Эту функцию можно использовать для создания собственных реализаций по умолчанию обработчики обновления команд, создаваемых классов для поддержки пользовательский интерфейс для перемещения по записям.  
+### <a name="remarks"></a>Remarks  
+ This function is useful for writing your own implementations of the default command update handlers that ClassWizard writes to support a user interface for moving from record to record.  
   
 > [!CAUTION]
->  Результат этой функции надежен, за исключением того, что представление не удается обнаружить конца набора данных, пока пользователь уже прошел его. Пользователь может потребоваться переместить за пределы последней записи, прежде чем представления записей можно указать, что его нужно отключить любые объекты пользовательского интерфейса для перемещения к следующей или последней записи. Если пользователь перемещает за последней записью и затем обратно до последней записи (или перед ним), представление записей можно отслеживать положение пользователя в наборе записей и правильно отключить объекты пользовательского интерфейса.  
+>  The result of this function is reliable except that the view may not be able to detect the end of the recordset until the user has moved past it. The user might have to move beyond the last record before the record view can tell that it must disable any user interface objects for moving to the next or last record. If the user moves past the last record and then moves back to the last record (or before it), the record view can track the user's position in the recordset and disable user interface objects correctly.  
   
-##  <a name="ongetrecordset"></a>CDaoRecordView::OnGetRecordset  
- Возвращает указатель на `CDaoRecordset`-производный объект, связанный с представлением записи.  
+##  <a name="ongetrecordset"></a>  CDaoRecordView::OnGetRecordset  
+ Returns a pointer to the `CDaoRecordset`-derived object associated with the record view.  
   
 ```  
 virtual CDaoRecordset* OnGetRecordset() = 0;  
 ```  
   
-### <a name="return-value"></a>Возвращаемое значение  
- Указатель на `CDaoRecordset`-производного объекта, если объект был успешно создан; в противном случае **NULL** указателя.  
+### <a name="return-value"></a>Return Value  
+ A pointer to a `CDaoRecordset`-derived object if the object was successfully created; otherwise a **NULL** pointer.  
   
-### <a name="remarks"></a>Примечания  
- Необходимо переопределить эту функцию-член для создания или получения объекта набора записей и возвращает указатель на него. Если объявляется класс представления записей с помощью классов, мастер создает переопределение по умолчанию. Реализация по умолчанию для классов возвращает указатель набора записей, хранится в представлении записей, если таковой существует. Если нет, он создает объект набора записей типа, указанный с ClassWizard и вызывает его **откройте** член для открытия таблицы или выполнить запрос и затем возвращает указатель на объект.  
+### <a name="remarks"></a>Remarks  
+ You must override this member function to construct or obtain a recordset object and return a pointer to it. If you declare your record view class with ClassWizard, the wizard writes a default override for you. ClassWizard's default implementation returns the recordset pointer stored in the record view if one exists. If not, it constructs a recordset object of the type you specified with ClassWizard and calls its **Open** member function to open the table or run the query, and then returns a pointer to the object.  
   
- Дополнительные сведения и примеры см. в статье [представления записей: использование представления записей](../../data/using-a-record-view-mfc-data-access.md).  
+ For more information and examples, see the article [Record Views: Using a Record View](../../data/using-a-record-view-mfc-data-access.md).  
   
-##  <a name="onmove"></a>CDaoRecordView::OnMove  
- Вызовите эту функцию-член для перемещения к другой записи в наборе записей и отобразить ее поля в элементах управления представления записей.  
+##  <a name="onmove"></a>  CDaoRecordView::OnMove  
+ Call this member function to move to a different record in the recordset and display its fields in the controls of the record view.  
   
 ```  
 virtual BOOL OnMove(UINT nIDMoveCommand);
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
  `nIDMoveCommand`  
- Одно из следующих значений ИД стандартных команд:  
+ One of the following standard command ID values:  
   
-- `ID_RECORD_FIRST`Перемещение к первой записи в наборе записей.  
+- `ID_RECORD_FIRST` Move to the first record in the recordset.  
   
-- `ID_RECORD_LAST`Перейти к последней записи в наборе записей.  
+- `ID_RECORD_LAST` Move to the last record in the recordset.  
   
-- `ID_RECORD_NEXT`Перемещение на следующую запись в наборе записей.  
+- `ID_RECORD_NEXT` Move to the next record in the recordset.  
   
-- `ID_RECORD_PREV`Переместите предыдущие записи в наборе записей.  
+- `ID_RECORD_PREV` Move to the previous record in the recordset.  
   
-### <a name="return-value"></a>Возвращаемое значение  
- Ненулевое значение, если перемещение прошло успешно; в противном случае — 0, если запрос на перемещение был отклонен.  
+### <a name="return-value"></a>Return Value  
+ Nonzero if the move was successful; otherwise 0 if the move request was denied.  
   
-### <a name="remarks"></a>Примечания  
- Реализация по умолчанию вызывает соответствующую функцию перемещения элемента из `CDaoRecordset` объект, связанный с представлением записи.  
+### <a name="remarks"></a>Remarks  
+ The default implementation calls the appropriate Move member function of the `CDaoRecordset` object associated with the record view.  
   
- По умолчанию `OnMove` обновление текущей записи в источнике данных, если пользователь изменил ее в представлении записей.  
+ By default, `OnMove` updates the current record on the data source if the user has changed it in the record view.  
   
- Мастер приложения создает ресурс меню с первой записи, последней записи, следующей записи и предыдущей записи пунктов меню. При выборе параметра Первичная панель инструментов приложения мастер также создает панель инструментов с кнопками, соответствующие этим командам.  
+ The Application Wizard creates a menu resource with First Record, Last Record, Next Record, and Previous Record menu items. If you select the Initial Toolbar option, the Application Wizard also creates a toolbar with buttons corresponding to these commands.  
   
- При перемещении за последней записью в наборе записей, представление записей продолжают отображаться последней записи. При перемещении назад после первой записи в представлении записей продолжают отображаться первой записи.  
+ If you move past the last record in the recordset, the record view continues to display the last record. If you move backward past the first record, the record view continues to display the first record.  
   
 > [!CAUTION]
->  Вызов `OnMove` вызывает исключение, если набор записей не имеет записей. Вызов функции-обработчика обновить соответствующий пользовательский интерфейс — **OnUpdateRecordFirst**, **OnUpdateRecordLast**, **OnUpdateRecordNext**, или **OnUpdateRecordPrev** , соответствующая операции перемещения для определить, является ли набор записей ни одной записи.  
+>  Calling `OnMove` throws an exception if the recordset has no records. Call the appropriate user interface update handler function — **OnUpdateRecordFirst**, **OnUpdateRecordLast**, **OnUpdateRecordNext**, or **OnUpdateRecordPrev** — before the corresponding move operation to determine whether the recordset has any records.  
   
-## <a name="see-also"></a>См. также  
- [Класс CFormView](../../mfc/reference/cformview-class.md)   
- [Диаграмма иерархии](../../mfc/hierarchy-chart.md)   
- [CDaoRecordset-класс](../../mfc/reference/cdaorecordset-class.md)   
- [Класс CDaoTableDef](../../mfc/reference/cdaotabledef-class.md)   
- [Класс CDaoQueryDef](../../mfc/reference/cdaoquerydef-class.md)   
- [Класс CDaoDatabase](../../mfc/reference/cdaodatabase-class.md)   
- [Класс CDaoWorkspace](../../mfc/reference/cdaoworkspace-class.md)   
- [Класс CFormView](../../mfc/reference/cformview-class.md)
+## <a name="see-also"></a>See Also  
+ [CFormView Class](../../mfc/reference/cformview-class.md)   
+ [Hierarchy Chart](../../mfc/hierarchy-chart.md)   
+ [CDaoRecordset Class](../../mfc/reference/cdaorecordset-class.md)   
+ [CDaoTableDef Class](../../mfc/reference/cdaotabledef-class.md)   
+ [CDaoQueryDef Class](../../mfc/reference/cdaoquerydef-class.md)   
+ [CDaoDatabase Class](../../mfc/reference/cdaodatabase-class.md)   
+ [CDaoWorkspace Class](../../mfc/reference/cdaoworkspace-class.md)   
+ [CFormView Class](../../mfc/reference/cformview-class.md)
 

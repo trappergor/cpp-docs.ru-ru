@@ -1,57 +1,78 @@
 ---
-title: "Практическое руководство. Преобразование существующей ленты MFC в ресурс ленты | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "лента MFC, преобразование в ресурс ленты"
-  - "ресурс ленты, преобразование из ленты MFC"
+title: 'How to: Convert an Existing MFC Ribbon to a Ribbon Resource | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- ribbon resource, converting from an MFC ribbon
+- MFC ribbon, converting to a ribbon resource
 ms.assetid: 324b7ff6-58f9-4691-96a9-9836a79d0fb6
 caps.latest.revision: 8
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 4
----
-# Практическое руководство. Преобразование существующей ленты MFC в ресурс ленты
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 30ed9bd9483e00dc4845b4e318a66bfb21f4531f
+ms.contentlocale: ru-ru
+ms.lasthandoff: 09/12/2017
 
-Ресурсы ленты легче визуализации, изменения и обслуживания, чем вручную закодированные ленты.  В этом разделе описывается, как преобразовать вручную закодированная ленты в проекте MFC в ресурс ленты.  
+---
+# <a name="how-to-convert-an-existing-mfc-ribbon-to-a-ribbon-resource"></a>How to: Convert an Existing MFC Ribbon to a Ribbon Resource
+Ribbon resources are easier to visualize, modify, and maintain than manually coded ribbons. This topic describes how to convert a manually coded ribbon in an MFC Project into a ribbon resource.  
   
- Необходимо иметь проект MFC, содержащий код, который использует классы ленты MFC, например [Класс CMFCRibbonBar](../mfc/reference/cmfcribbonbar-class.md).  
+ You must have an existing MFC project that has code that uses the MFC ribbon classes, for example, [CMFCRibbonBar Class](../mfc/reference/cmfcribbonbar-class.md).  
   
-### Преобразование ленты MFC к ресурсу ленты  
+### <a name="to-convert-an-mfc-ribbon-to-a-ribbon-resource"></a>To convert an MFC ribbon to a ribbon resource  
   
-1.  В Visual Studio в существующем проекте MFC, откройте файл источника, в котором объект CMFCRibbonBar инициализации.  Как правило, файл mainfrm.cpp.  Добавьте следующий код после кода инициализации для ленты.  
+1.  In Visual Studio, in an existing MFC project, open the source file where the CMFCRibbonBar object is initialized. Typically, the file is mainfrm.cpp. Add the following code after the initialization code for the ribbon.  
   
-    ```  
-    m_wndRibbonBar.SaveToXMLFile("RibbonOutput.xml");  
-    ```  
+ ```  
+    m_wndRibbonBar.SaveToXMLFile("RibbonOutput.xml");
+
+ ```  
   
-     Сохраните и закройте файл.  
+     Save and close the file.  
   
-2.  Выполните построение и запустите приложение MFC, а затем в блокноте, откройте RibbonOutput.txt и скопируйте его содержимое.  
+2.  Build and run the MFC application, and then in Notepad, open RibbonOutput.txt and copy its contents.  
   
-3.  В меню Visual Studio **Проект**, щелкните **Добавить ресурс**.  В диалоговом окне **Добавить ресурс**, выберите **ribbon** и нажмите кнопку **Создать**.  
+3.  In Visual Studio, on the **Project** menu, click **Add Resource**. In the **Add Resource** dialog box, select **Ribbon** and then click **New**.  
   
-     Visual Studio создает ресурс ленты и открыть его в представлении конструирования.  Идентификатор ресурса IDR\_RIBBON1 ленты, которое отображается в **Ресурсы**.  Если указана в файле ribbon1.mfcribbon\-ms XML.  
+     Visual Studio creates a ribbon resource and opens it in design view. The ribbon resource ID is IDR_RIBBON1, which is displayed in **Resource View**. The ribbon is defined in the ribbon1.mfcribbon-ms XML file.  
   
-4.  В Visual Studio открытые ribbon1.mfcribbon\-ms, удалите его содержимое, а затем вставьте содержимое RibbonOutput.txt, скопированный ранее.  Сохраните и закрыть ribbon1.mfcribbon\-ms.  
+4.  In Visual Studio, open ribbon1.mfcribbon-ms, delete its contents, and then paste the contents of RibbonOutput.txt, which you copied earlier. Save and close ribbon1.mfcribbon-ms.  
   
-5.  При этом раскрывайте файл источника, в котором объект CMFCRibbonBar инициализируется \(обычно mainfrm.cpp\) и установите существующего кода ленты.  Добавьте следующий код после кода, который будет закомментирован.  
+5.  Again open the source file where the CMFCRibbonBar object is initialized (typically, mainfrm.cpp) and comment out the existing ribbon code. Add the following code after the code that you commented out.  
   
-    ```  
-    m_wndRibbonBar.LoadFromResource(IDR_RIBBON1);  
-    ```  
+ ```  
+    m_wndRibbonBar.LoadFromResource(IDR_RIBBON1);
+
+ ```  
   
-6.  Выполните построение проекта и запустите программу.  
+6.  Build the project and run the program.  
   
-## См. также  
- [Конструктор лент \(MFC\)](../mfc/ribbon-designer-mfc.md)
+## <a name="see-also"></a>See Also  
+ [Ribbon Designer (MFC)](../mfc/ribbon-designer-mfc.md)
+
+

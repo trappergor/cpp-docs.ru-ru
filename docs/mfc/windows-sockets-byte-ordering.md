@@ -1,115 +1,134 @@
 ---
-title: "Сокеты Windows. Порядок байтов | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "проблемы порядка байтов в программировании сокетов"
-  - "сокеты [C++], проблемы порядка байтов"
-  - "Сокеты Windows [C++], проблемы порядка байтов"
+title: 'Windows Sockets: Byte Ordering | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- byte order issues in sockets programming
+- sockets [MFC], byte order issues
+- Windows Sockets [MFC], byte order issues
 ms.assetid: 8a787a65-f9f4-4002-a02f-ac25a5dace5d
 caps.latest.revision: 11
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 7
----
-# Сокеты Windows. Порядок байтов
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 8542122bc1d242c564a3b25eacc7387d784057fb
+ms.contentlocale: ru-ru
+ms.lasthandoff: 09/12/2017
 
-Данная статья базы знаний 2 и сопутствующей описан ряд проблем в программировании Windows SSL.  Этот раздел содержит описание порядка байтов.  Другие проблемы описаны в статьях. [Windows SSL. Блокировка](../Topic/Windows%20Sockets:%20Blocking.md) и [Windows SSL. Преобразования строк](../mfc/windows-sockets-converting-strings.md).  
+---
+# <a name="windows-sockets-byte-ordering"></a>Windows Sockets: Byte Ordering
+This article and two companion articles explain several issues in Windows Sockets programming. This article covers byte ordering. The other issues are covered in the articles: [Windows Sockets: Blocking](../mfc/windows-sockets-blocking.md) and [Windows Sockets: Converting Strings](../mfc/windows-sockets-converting-strings.md).  
   
- При использовании или является производным от класса [CAsyncSocket](../Topic/CAsyncSocket%20Class.md), необходимо самостоятельно управлять этих проблем.  При использовании или является производным от класса [CSocket](../mfc/reference/csocket-class.md), MFC управляет их автоматически.  
+ If you use or derive from class [CAsyncSocket](../mfc/reference/casyncsocket-class.md), you will need to manage these issues yourself. If you use or derive from class [CSocket](../mfc/reference/csocket-class.md), MFC manages them for you.  
   
-## Порядок байтов  
- Различные архитектуры компьютера иногда хранить данные с помощью различных порядка байтов.  Например, на основе Intel компьютеры содержит данные в обратном порядке компьютера macintosh \(Motorola\).  Вызывается порядка байтов, Intel маленьким «\- так,» также обратный порядок стандартного сети «обратный порядок байтов».  В следующей таблице приведены эти термины.  
+## <a name="byte-ordering"></a>Byte Ordering  
+ Different machine architectures sometimes store data using different byte orders. For example, Intel-based machines store data in the reverse order of Macintosh (Motorola) machines. The Intel byte order, called "little-Endian," is also the reverse of the network standard "big-Endian" order. The following table explains these terms.  
   
-### Крупно\- и маленький — так порядка байтов  
+### <a name="big--and-little-endian-byte-ordering"></a>Big- and Little-Endian Byte Ordering  
   
-|Порядок байтов|Значение|  
-|--------------------|--------------|  
-|Обратный порядок байтов|Значительно байт с левой стороны ключевые слова.|  
-|Маленький — так|Значительно байт на правой стороны ключевые слова.|  
+|Byte ordering|Meaning|  
+|-------------------|-------------|  
+|Big-Endian|The most significant byte is on the left end of a word.|  
+|Little-Endian|The most significant byte is on the right end of a word.|  
   
- Обычно не нужно беспокоиться о преобразовании порядка байтов для данных, отправке и получении по сети, но ситуации, в которых необходимо преобразовать порядка байтов.  
+ Typically, you do not have to worry about byte-order conversion for data that you send and receive over the network, but there are situations in which you must convert byte orders.  
   
-## Если необходимо преобразовать порядка байтов  
- Необходимо преобразовать порядка байтов в следующих случаях:  
+## <a name="when-you-must-convert-byte-orders"></a>When You Must Convert Byte Orders  
+ You need to convert byte orders in the following situations:  
   
--   Если передать сведения, которые необходимо интерпретировать сети, в отличие от данных необходимо отправить на другом компьютере.  Например, можно передать порты и адреса, сеть должна понять.  
+-   You are passing information that needs to be interpreted by the network, as opposed to the data you are sending to another machine. For example, you might pass ports and addresses, which the network must understand.  
   
--   Серверное приложение, в котором она сообщения не приложения MFC \(и необходимости не имеют исходный код для него\).  Этот метод вызывает для преобразований порядка байтов, если 2 компьютера не используют тот же порядок байтов.  
+-   The server application with which you are communicating is not an MFC application (and you do not have source code for it). This calls for byte order conversions if the two machines do not share the same byte ordering.  
   
-## Если не нужно преобразовать порядка байтов  
- Чтобы избежать преобразования рабочего порядка байтов в следующих случаях:  
+## <a name="when-you-do-not-have-to-convert-byte-orders"></a>When You Do Not Have to Convert Byte Orders  
+ You can avoid the work of converting byte orders in the following situations:  
   
--   Компьютеры на обоих концах к не могут обмениваться байты, и оба компьютера используется тот же порядок байтов.  
+-   The machines on both ends can agree not to swap bytes, and both machines use the same byte order.  
   
--   Сервер, сообщения с приложения MFC.  
+-   The server you are communicating with is an MFC application.  
   
--   Имеется исходный код сервера для сообщения с, поэтому можно явно сообщает ли необходимо преобразовать порядка байтов или нет.  
+-   You have source code for the server you're communicating with, so you can tell explicitly whether you must convert byte orders or not.  
   
--   Можно порт сервера в MFC.  Это справедливо простая задача, и это обычно меньше, чем быстрый код.  
+-   You can port the server to MFC. This is fairly easy to do, and the result is usually smaller, faster code.  
   
- Работа с [CAsyncSocket](../Topic/CAsyncSocket%20Class.md), должны самостоятельно управлять все необходимые преобразования порядка байтов.  Windows унифицируют SSL «обратный порядок байтов» модель порядка байтов и обеспечивает функции преобразования между данным заказом и другими.  [CArchive](../mfc/reference/carchive-class.md) однако, который используется с [CSocket](../mfc/reference/csocket-class.md), используется противоположный \(маленький «\-» порядок байтов\), но `CArchive` позаботит освобождает данные преобразований порядка байтов автоматически.  С помощью этого стандартный заказ в приложениях, или использовать функции преобразования порядка байтов Windows SSL можно сделать код более портативным.  
+ Working with [CAsyncSocket](../mfc/reference/casyncsocket-class.md), you must manage any necessary byte-order conversions yourself. Windows Sockets standardizes the "big-Endian" byte-order model and provides functions to convert between this order and others. [CArchive](../mfc/reference/carchive-class.md), however, which you use with [CSocket](../mfc/reference/csocket-class.md), uses the opposite ("little-Endian") order, but `CArchive` takes care of the details of byte-order conversions for you. By using this standard ordering in your applications, or using Windows Sockets byte-order conversion functions, you can make your code more portable.  
   
- Идеальное вариант использования сокетов MFC при написании оба окончания сообщения: использование MFC на обоих концах.  При создании, приложение, которое будет взаимодействовать с приложениями библиотеки, таких как FTP\-сервер, возможно, потребуется управлять байт\- переключение перед загрузкой данных в объект архива, преобразования с помощью процедуры **ntohs**, **ntohl**, **htons** и **htonl** Windows SSL.  Пример этих функций, используемых в взаимодействовать с приложением библиотеки " ниже в данном разделе.  
+ The ideal case for using MFC sockets is when you are writing both ends of the communication: using MFC at both ends. If you are writing an application that will communicate with non-MFC applications, such as an FTP server, you will probably need to manage byte-swapping yourself before you pass data to the archive object, using the Windows Sockets conversion routines **ntohs**, **ntohl**, **htons**, and **htonl**. An example of these functions used in communicating with a non-MFC application appears later in this article.  
   
 > [!NOTE]
->  Если другой конец сообщения не приложения MFC, также следует избегать десериализации объектов C\+\+, производные от `CObject` в архив, поскольку получатель не обработает их.  См. примечание в [Windows SSL. С помощью сокетов с архивами](../mfc/windows-sockets-using-sockets-with-archives.md).  
+>  When the other end of the communication is not an MFC application, you also must avoid streaming C++ objects derived from `CObject` into your archive because the receiver will not be able to handle them. See the note in [Windows Sockets: Using Sockets with Archives](../mfc/windows-sockets-using-sockets-with-archives.md).  
   
- Дополнительные сведения о порядка байтов см. в спецификации Windows SSL, доступная в [!INCLUDE[winSDK](../atl/includes/winsdk_md.md)].  
+ For more information about byte orders, see the Windows Sockets specification, available in the Windows SDK.  
   
-## Пример преобразования порядка байтов  
- В следующем примере показана функция сериализации для объекта `CSocket`, использующий архив.  Он также показано использование функций преобразования порядка байтов в API Windows SSL.  
+## <a name="a-byte-order-conversion-example"></a>A Byte-Order Conversion Example  
+ The following example shows a serialization function for a `CSocket` object that uses an archive. It also illustrates using the byte-order conversion functions in the Windows Sockets API.  
   
- Этот пример содержит сценарий, в котором нужно создать клиент, который взаимодействует с серверными приложениями библиотеки, для которого нет доступа к исходному коду.  В этом сценарии необходимо высказывать сервер библиотеки используется стандартный порядок байтов сети.  Напротив, клиентское приложение MFC использует объект `CArchive` с объектом `CSocket` и `CArchive` используется «маленький — так» порядок байтов, то стандарта сети.  
+ This example presents a scenario in which you are writing a client that communicates with a non-MFC server application for which you have no access to the source code. In this scenario, you must assume that the non-MFC server uses standard network byte order. In contrast, your MFC client application uses a `CArchive` object with a `CSocket` object, and `CArchive` uses "little-Endian" byte order, the opposite of the network standard.  
   
- Предположим, что сервер библиотеки, с которым требуется установить связь имеет протокол для пакета сообщения следующим образом:  
+ Suppose the non-MFC server with which you plan to communicate has an established protocol for a message packet like the following:  
   
- [!CODE [NVC_MFCSimpleSocket#5](../CodeSnippet/VS_Snippets_Cpp/NVC_MFCSimpleSocket#5)]  
+ [!code-cpp[NVC_MFCSimpleSocket#5](../mfc/codesnippet/cpp/windows-sockets-byte-ordering_1.cpp)]  
   
- С MFC, это будет выражено следующим образом:  
+ In MFC terms, this would be expressed as follows:  
   
- [!CODE [NVC_MFCSimpleSocket#6](../CodeSnippet/VS_Snippets_Cpp/NVC_MFCSimpleSocket#6)]  
+ [!code-cpp[NVC_MFCSimpleSocket#6](../mfc/codesnippet/cpp/windows-sockets-byte-ordering_2.cpp)]  
   
- В C\+\+ `struct` — то же самое, что и класс.  Структура `Message` может иметь функции\-члены, например функцию\-член `Serialize` объявленный выше.  Функция\-член `Serialize` может выглядеть следующим образом:  
+ In C++, a `struct` is essentially the same thing as a class. The `Message` structure can have member functions, such as the `Serialize` member function declared above. The `Serialize` member function might look like this:  
   
- [!CODE [NVC_MFCSimpleSocket#7](../CodeSnippet/VS_Snippets_Cpp/NVC_MFCSimpleSocket#7)]  
+ [!code-cpp[NVC_MFCSimpleSocket#7](../mfc/codesnippet/cpp/windows-sockets-byte-ordering_3.cpp)]  
   
- Вызовы этого примера для преобразований порядка байтов данных, поскольку определенного порядка байтов несоответствие между серверной библиотеки на одном конце и `CArchive`, используемым в клиентском приложении MFC на другом закончена.  Пример иллюстрирует несколько функций преобразования порядка байтов, предоставляет Windows SSL.  В следующей таблице описаны эти функции.  
+ This example calls for byte-order conversions of data because there is a clear mismatch between the byte ordering of the non-MFC server application on one end and the `CArchive` used in your MFC client application on the other end. The example illustrates several of the byte-order conversion functions that Windows Sockets supplies. The following table describes these functions.  
   
-### Функции преобразования порядка байтов Windows SSL  
+### <a name="windows-sockets-byte-order-conversion-functions"></a>Windows Sockets Byte-Order Conversion Functions  
   
-|Функция|Назначение|  
-|-------------|----------------|  
-|**ntohs**|Преобразование 16 8\-разрядное число от порядка байтов сети с порядком байтов узла \(обратный порядок байтов в маленькому — прямой порядок байтов\).|  
-|**ntohl**|Преобразование 32 8\-разрядное число от порядка байтов сети с порядком байтов узла \(обратный порядок байтов в маленькому — прямой порядок байтов\).|  
-|**Htons**|Преобразование 16 8\-разрядное число от порядка байтов узла с порядком байтов сети \(маленькому — байтов на обратный порядок байтов\).|  
-|**Htonl**|Преобразование 32 8\-разрядное число от порядка байтов узла с порядком байтов сети \(маленькому — байтов на обратный порядок байтов\).|  
+|Function|Purpose|  
+|--------------|-------------|  
+|**ntohs**|Convert a 16-bit quantity from network byte order to host byte order (big-Endian to little-Endian).|  
+|**ntohl**|Convert a 32-bit quantity from network byte order to host byte order (big-Endian to little-Endian).|  
+|**Htons**|Convert a 16-bit quantity from host byte order to network byte order (little-Endian to big-Endian).|  
+|**Htonl**|Convert a 32-bit quantity from host byte order to network byte order (little-Endian to big-Endian).|  
   
- Другая точка этого примера, когда приложение сокета на другом конце сообщения приложения библиотеки, не следует делать примерно следующим образом:  
+ Another point of this example is that when the socket application on the other end of the communication is a non-MFC application, you must avoid doing something like the following:  
   
  `ar << pMsg;`  
   
- , где `pMsg` указатель на объект C\+\+, производный от класса `CObject`.  Это отправляет дополнительные данные по MFC, связанные с объектами и сервер не поймет его, так как его, как приложением MFC.  
+ where `pMsg` is a pointer to a C++ object derived from class `CObject`. This will send extra MFC information associated with objects and the server will not understand it, as it would if it were an MFC application.  
   
- Дополнительные сведения см. в следующих разделах:  
+ For more information, see:  
   
--   [Windows SSL. С помощью класса CAsyncSocket](../mfc/windows-sockets-using-class-casyncsocket.md)  
+-   [Windows Sockets: Using Class CAsyncSocket](../mfc/windows-sockets-using-class-casyncsocket.md)  
   
--   [Windows SSL. Фон](../mfc/windows-sockets-background.md)  
+-   [Windows Sockets: Background](../mfc/windows-sockets-background.md)  
   
--   [Windows SSL. Сокеты потока](../mfc/windows-sockets-stream-sockets.md)  
+-   [Windows Sockets: Stream Sockets](../mfc/windows-sockets-stream-sockets.md)  
   
--   [Windows SSL. Сокеты датаграмм](../mfc/windows-sockets-datagram-sockets.md)  
+-   [Windows Sockets: Datagram Sockets](../mfc/windows-sockets-datagram-sockets.md)  
   
-## См. также  
- [Сокеты Windows в MFC](../mfc/windows-sockets-in-mfc.md)
+## <a name="see-also"></a>See Also  
+ [Windows Sockets in MFC](../mfc/windows-sockets-in-mfc.md)
+
+

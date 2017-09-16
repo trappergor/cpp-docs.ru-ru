@@ -1,5 +1,5 @@
 ---
-title: "Константы типа параметра Variant | Документы Microsoft"
+title: Variant Parameter Type Constants | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -26,23 +26,23 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- VTS_XPOS_HIMETRIC constant
-- VTS_FONT constant
-- VTS_XPOS_PIXELS constant
-- VTS_COLOR constant
-- Variants
-- VTS_YPOS_PIXELS constant
-- VTS_YSIZE_HIMETRIC constant
-- VTS_YPOS_HIMETRIC constant
+- VTS_XPOS_HIMETRIC constant [MFC]
+- VTS_FONT constant [MFC]
+- VTS_XPOS_PIXELS constant [MFC]
+- VTS_COLOR constant [MFC]
+- Variants [MFC]
+- VTS_YPOS_PIXELS constant [MFC]
+- VTS_YSIZE_HIMETRIC constant [MFC]
+- VTS_YPOS_HIMETRIC constant [MFC]
 - Variants, parameter type constants
-- Variant data constants
-- VTS_PICTURE constant
-- VTS_TRISTATE constant
-- VTS_XSIZE_HIMETRIC constant
-- VTS_HANDLE constant
-- VTS_XSIZE_PIXELS constant
-- VTS_OPTEXCLUSIVE constant
-- VTS_YSIZE_PIXELS constant
+- Variant data constants [MFC]
+- VTS_PICTURE constant [MFC]
+- VTS_TRISTATE constant [MFC]
+- VTS_XSIZE_HIMETRIC constant [MFC]
+- VTS_HANDLE constant [MFC]
+- VTS_XSIZE_PIXELS constant [MFC]
+- VTS_OPTEXCLUSIVE constant [MFC]
+- VTS_YSIZE_PIXELS constant [MFC]
 ms.assetid: de99c7a9-7aae-4dc4-b723-40c6380543ab
 caps.latest.revision: 14
 author: mikeblome
@@ -62,54 +62,54 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
-ms.openlocfilehash: 3b09357859b8fc87252fba704de8f2a927981873
+ms.translationtype: MT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 394a652f516012c5154bf978bb9a7ef4d7514b6b
 ms.contentlocale: ru-ru
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 09/12/2017
 
 ---
-# <a name="variant-parameter-type-constants"></a>Константы типа параметра Variant
-В этом разделе перечислены новые константы, указывающие типы variant параметр предназначен для использования с классы элементов управления OLE, библиотеки классов Microsoft Foundation.  
+# <a name="variant-parameter-type-constants"></a>Variant Parameter Type Constants
+This topic lists new constants that indicate variant parameter types designed for use with the OLE control classes of the Microsoft Foundation Class Library.  
   
- Ниже приведен список констант класса:  
+ The following is a list of class constants:  
   
-##  <a name="_mfc_variant_data_constants"></a>Variant-константы данных  
+##  <a name="_mfc_variant_data_constants"></a> Variant Data Constants  
   
--   **VTS_COLOR** 32-разрядное целое число со знаком, используемое для представления значения цветов RGB.  
+-   **VTS_COLOR** A 32-bit integer used to represent a RGB color value.  
   
--   **VTS_FONT** указатель **IFontDisp** интерфейс OLE-объекта шрифта.  
+-   **VTS_FONT** A pointer to the                         **IFontDisp** interface of an OLE font object.  
   
--   **VTS_HANDLE** значение дескриптора окна.  
+-   **VTS_HANDLE** A Windows handle value.  
   
--   **VTS_PICTURE** указатель `IPictureDisp` интерфейс рисунок OLE-объекта.  
+-   **VTS_PICTURE** A pointer to the                         `IPictureDisp` interface of an OLE picture object.  
   
--   **VTS_OPTEXCLUSIVE** 16-разрядное значение, используемое для элемента управления, который предназначен для использования в группе управления, такие как переключатели. Этот тип указывает контейнеру, что если один из элемента управления в группе имеет **TRUE** значение, все остальные должно быть **FALSE**.  
+-   **VTS_OPTEXCLUSIVE** A 16-bit value used for a control that is intended to be used in a group of controls, such as radio buttons. This type tells the container that if one control in a group has a                         **TRUE** value, all others must be                         **FALSE**.  
   
--   **VTS_TRISTATE** 16-разрядное целое число со знаком используется для свойств, которые может принимать одно из трех возможных значений (выбранного снят, недоступен), например, поле с флажком.  
+-   **VTS_TRISTATE** A 16-bit signed integer used for properties that can have one of three possible values (selected, cleared, unavailable), for example, a check box.  
   
--   **VTS_XPOS_HIMETRIC** 32-разрядное целое число без знака, используемое для представления положения по оси x в **HIMETRIC** единиц.  
+-   **VTS_XPOS_HIMETRIC** A 32-bit unsigned integer used to represent a position along the x-axis in                         **HIMETRIC** units.  
   
--   **VTS_YPOS_HIMETRIC** 32-разрядное целое число без знака, используемое для представления положения по оси y в **HIMETRIC** единиц.  
+-   **VTS_YPOS_HIMETRIC** A 32-bit unsigned integer used to represent a position along the y-axis in                         **HIMETRIC** units.  
   
--   **VTS_XPOS_PIXELS** 32-разрядное целое число без знака, используемое для представления положения по оси x в пикселях.  
+-   **VTS_XPOS_PIXELS** A 32-bit unsigned integer used to represent a position along the x-axis in pixels.  
   
--   **VTS_YPOS_PIXELS** 32-разрядное целое число без знака, используемое для представления положения по оси y в пикселях.  
+-   **VTS_YPOS_PIXELS** A 32-bit unsigned integer used to represent a position along the y-axis in pixels.  
   
--   **VTS_XSIZE_PIXELS** 32-разрядное целое число без знака, используемый для представления Ширина объекта экрана в пикселях.  
+-   **VTS_XSIZE_PIXELS** A 32-bit unsigned integer used to represent the width of a screen object in pixels.  
   
--   **VTS_YSIZE_PIXELS** 32-разрядное целое число без знака, используемый для представления высоту объекта экрана в пикселях.  
+-   **VTS_YSIZE_PIXELS** A 32-bit unsigned integer used to represent the height of a screen object in pixels.  
   
--   **VTS_XSIZE_HIMETRIC** 32-разрядное целое число без знака, используемый для представления ширину объекта на экране в **HIMETRIC** единиц.  
+-   **VTS_XSIZE_HIMETRIC** A 32-bit unsigned integer used to represent the width of a screen object in                         **HIMETRIC** units.  
   
--   **VTS_YSIZE_HIMETRIC** 32-разрядное целое число без знака, используемый для представления высоту объекта на экране в **HIMETRIC** единиц.  
+-   **VTS_YSIZE_HIMETRIC** A 32-bit unsigned integer used to represent the height of a screen object in                         **HIMETRIC** units.  
   
     > [!NOTE]
-    >  Дополнительные variant константы определены для всех типов variant, за исключением класса **VTS_FONT** и **VTS_PICTURE**, обеспечивающие указатель константы данных variant. Эти константы именуются **VTS_P** `constantname` соглашение. Например **VTS_PCOLOR** — это указатель на **VTS_COLOR** константой.  
+    >  Additional variant constants have been defined for all variant types, with the exception of                             **VTS_FONT** and                             **VTS_PICTURE**, that provide a pointer to the variant data constant. These constants are named using the                             **VTS_P**`constantname` convention. For example,                             **VTS_PCOLOR** is a pointer to a                             **VTS_COLOR** constant.  
   
-## <a name="requirements"></a>Требования  
- **Заголовок:** afxdisp.h  
+## <a name="requirements"></a>Requirements  
+ **Header:** afxdisp.h  
   
-## <a name="see-also"></a>См. также  
- [Макросы и глобальные объекты](../../mfc/reference/mfc-macros-and-globals.md)
+## <a name="see-also"></a>See Also  
+ [Macros and Globals](../../mfc/reference/mfc-macros-and-globals.md)
 

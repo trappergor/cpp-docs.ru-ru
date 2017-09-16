@@ -1,5 +1,5 @@
 ---
-title: "Параметры приложения, мастер библиотек DLL MFC | Документы Microsoft"
+title: Application Settings, MFC DLL Wizard | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -33,41 +33,41 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 040985df34f2613b4e4fae29498721aef15d50cb
-ms.openlocfilehash: df1e3de3e1548fe4c4c340a30127d9916998ba64
+ms.translationtype: MT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: a4721fbb1f0abfdda66dfb70ad1f4e44cf848fd3
 ms.contentlocale: ru-ru
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 09/12/2017
 
 ---
-# <a name="application-settings-mfc-dll-wizard"></a>Страница "Параметры приложения" мастера библиотек DLL MFC
-Эта страница мастера библиотек DLL MFC используется для проектирования и добавления базовых функций нового проекта библиотеки DLL MFC.  
+# <a name="application-settings-mfc-dll-wizard"></a>Application Settings, MFC DLL Wizard
+Use this page of the MFC DLL wizard to design and add basic features to a new MFC DLL project.  
   
-## <a name="dll-type"></a>Тип библиотеки DLL  
- Выберите тип библиотеки DLL, необходимо создать.  
+## <a name="dll-type"></a>DLL type  
+ Select the type of DLL you want to create.  
   
- **Обычной библиотеки DLL с помощью общей библиотеки DLL MFC**  
- Выберите этот параметр, чтобы скомпоновать библиотеку MFC со своей программой как общую библиотеку DLL. При использовании этого параметра вы невозможно совместное использование объектов MFC создаваемой библиотекой DLL и вызывающим приложением. Программа вызывает библиотеку MFC во время выполнения. Этот параметр уменьшает требования к объему диска и памяти программы, если она состоит из нескольких исполняемых файлов, использующих библиотеку MFC. Вызывать функции библиотеки DLL смогут программы Win32 и MFC. Необходимо повторно распространить библиотеку DLL MFC с проектом этого типа.  
+ **Regular MFC DLL using shared MFC DLL**  
+ Select this option to link the MFC library to your program as a shared DLL. Using this option, you cannot share MFC objects between your DLL and the calling application. Your program makes calls to the MFC library at run time. This option reduces the disk and memory requirements of your program if it is composed of multiple execution files that use the MFC library. Both Win32 and MFC programs can call functions in your DLL. You must redistribute the MFC DLL with this type of project.  
   
- **Статически компонуемые обычной библиотеки DLL с MFC**  
- Выберите этот параметр, чтобы статически скомпоновать свою программу с библиотекой MFC во время построения. Вызывать функции библиотеки DLL смогут программы Win32 и MFC. Хотя этот вариант увеличивает размеры программы, не требуется повторно распространить библиотеку DLL MFC с проектом этого типа. Невозможно совместное использование объектов MFC создаваемой библиотекой DLL и вызывающим приложением.  
+ **Regular MFC DLL with MFC statically linked**  
+ Select this option to link your program statically to the MFC library at build time. Both Win32 and MFC programs can call functions in your DLL. While this option increases the size of your program, you do not need to redistribute the MFC DLL with this type of project. You cannot share MFC objects between your DLL and the calling application.  
   
- **Библиотеки DLL расширения MFC**  
- Выберите этот параметр, если требуется осуществлять вызовы библиотеки MFC во время выполнения программы, и в том случае, если требуется совместное использование объектов MFC создаваемой библиотекой DLL и вызывающим приложением. Этот вариант уменьшает требования программы, диска и памяти, если она состоит из нескольких исполняемых файлов, что все использующие библиотеку MFC. Только программы MFC могут вызывать функции библиотеки DLL. Необходимо повторно распространить библиотеку DLL MFC с проектом этого типа.  
+ **MFC extension DLL**  
+ Select this option if you want your program to make calls to the MFC library at run time, and if you want to share MFC objects between your DLL and the calling application. This option reduces the disk and memory requirements of your program, if it is composed of multiple executable files that all use the MFC library. Only MFC programs can call functions in your DLL. You must redistribute the MFC DLL with this type of project.  
   
-## <a name="additional-features"></a>Дополнительные возможности  
- Выберите ли библиотеки DLL MFC должен поддерживать автоматизации и является ли он должен поддерживать Windows sockets.  
+## <a name="additional-features"></a>Additional features  
+ Select whether your MFC DLL should support automation and whether it should support Windows sockets.  
   
- **Автоматизация**  
- Выберите **автоматизации** Предоставление программе для управления объектами, реализованными в других программах. Выбор **автоматизации** также предоставляет программу другим клиентам автоматизации. В разделе [автоматизации](../../mfc/automation.md) для получения дополнительной информации.  
+ **Automation**  
+ Select **Automation** to allow your program to manipulate objects implemented in another program. Selecting **Automation** also exposes your program to other Automation clients. See [Automation](../../mfc/automation.md) for more information.  
   
- **Сокеты Windows**  
- Выберите этот параметр, чтобы указать, что программа поддерживает сокеты Windows. Сокеты Windows позволяют создавать программы, обменивающиеся данными по сетям TCP/IP.  
+ **Windows sockets**  
+ Select this option to indicate that your program supports Windows sockets. Windows sockets allow you to write programs that communicate over TCP/IP networks.  
   
- Когда сокетов библиотеки DLL MFC с Windows создается поддержки, [CWinApp::InitInstance](../../mfc/reference/cwinapp-class.md#initinstance) инициализирует поддержка сокеты и файл заголовков StdAfx.h MFC включает AfxSock.h.  
+ When your MFC DLL with Windows sockets support is created, [CWinApp::InitInstance](../../mfc/reference/cwinapp-class.md#initinstance) initializes support for sockets and the MFC header file StdAfx.h includes AfxSock.h.  
   
-## <a name="see-also"></a>См. также  
- [Мастера библиотек DLL MFC](../../mfc/reference/mfc-dll-wizard.md)   
- [Создание проекта библиотеки DLL MFC](../../mfc/reference/creating-an-mfc-dll-project.md)
+## <a name="see-also"></a>See Also  
+ [MFC DLL Wizard](../../mfc/reference/mfc-dll-wizard.md)   
+ [Creating an MFC DLL Project](../../mfc/reference/creating-an-mfc-dll-project.md)
 
 

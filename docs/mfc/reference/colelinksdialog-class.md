@@ -1,5 +1,5 @@
 ---
-title: "Класс COleLinksDialog | Документы Microsoft"
+title: COleLinksDialog Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -17,10 +17,9 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- Edit Links dialog box
-- COleLinksDialog class
-- dialog boxes, OLE
-- OLE Edit Links dialog box
+- COleLinksDialog [MFC], COleLinksDialog
+- COleLinksDialog [MFC], DoModal
+- COleLinksDialog [MFC], m_el
 ms.assetid: fb2eb638-2809-46db-ac74-392a732affc7
 caps.latest.revision: 22
 author: mikeblome
@@ -40,53 +39,53 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 040985df34f2613b4e4fae29498721aef15d50cb
-ms.openlocfilehash: ed256b3a4d3236863e3dcccb7614949f650f058b
+ms.translationtype: MT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: fa51351bf888268c1bddf0f4b1247216de9e2e4d
 ms.contentlocale: ru-ru
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 09/12/2017
 
 ---
-# <a name="colelinksdialog-class"></a>Класс COleLinksDialog
-Используется для диалогового окна OLE "Изменить ссылки".  
+# <a name="colelinksdialog-class"></a>COleLinksDialog Class
+Used for the OLE Edit Links dialog box.  
   
-## <a name="syntax"></a>Синтаксис  
+## <a name="syntax"></a>Syntax  
   
 ```  
 class COleLinksDialog : public COleDialog  
 ```  
   
-## <a name="members"></a>Члены  
+## <a name="members"></a>Members  
   
-### <a name="public-constructors"></a>Открытые конструкторы  
+### <a name="public-constructors"></a>Public Constructors  
   
-|Имя|Описание|  
+|Name|Description|  
 |----------|-----------------|  
-|[COleLinksDialog::COleLinksDialog](#colelinksdialog)|Создает объект `COleLinksDialog`.|  
+|[COleLinksDialog::COleLinksDialog](#colelinksdialog)|Constructs a `COleLinksDialog` object.|  
   
-### <a name="public-methods"></a>Открытые методы  
+### <a name="public-methods"></a>Public Methods  
   
-|Имя|Описание|  
+|Name|Description|  
 |----------|-----------------|  
-|[COleLinksDialog::DoModal](#domodal)|Отображение диалогового окна OLE изменить ссылки.|  
+|[COleLinksDialog::DoModal](#domodal)|Displays the OLE Edit Links dialog box.|  
   
-### <a name="public-data-members"></a>Открытые члены данных  
+### <a name="public-data-members"></a>Public Data Members  
   
-|Имя|Описание|  
+|Name|Description|  
 |----------|-----------------|  
-|[COleLinksDialog::m_el](#m_el)|Структура типа **OLEUIEDITLINKS** , контролирует поведение диалогового окна.|  
+|[COleLinksDialog::m_el](#m_el)|A structure of type **OLEUIEDITLINKS** that controls the behavior of the dialog box.|  
   
-## <a name="remarks"></a>Примечания  
- Создание объекта класса `COleLinksDialog` когда необходимо вызвать это диалоговое окно предназначено. После `COleLinksDialog` объект был создан, можно использовать [m_el](#m_el) структуры для инициализации значения или состояния элементов управления в диалоговом окне. `m_el` Структуры имеет тип **OLEUIEDITLINKS**. Дополнительные сведения об использовании этого класса диалогового окна в разделе [DoModal](#domodal) функции-члена.  
+## <a name="remarks"></a>Remarks  
+ Create an object of class `COleLinksDialog` when you want to call this dialog box. After a `COleLinksDialog` object has been constructed, you can use the [m_el](#m_el) structure to initialize the values or states of controls in the dialog box. The `m_el` structure is of type **OLEUIEDITLINKS**. For more information about using this dialog class, see the [DoModal](#domodal) member function.  
   
 > [!NOTE]
->  Контейнер, созданный мастером код приложения использует этот класс.  
+>  Application Wizard-generated container code uses this class.  
   
- Дополнительные сведения см. в разделе [OLEUIEDITLINKS](http://msdn.microsoft.com/library/windows/desktop/ms678492) в структуре [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
+ For more information, see the [OLEUIEDITLINKS](http://msdn.microsoft.com/library/windows/desktop/ms678492) structure in the Windows SDK.  
   
- Дополнительные сведения о диалоговых окнах OLE конкретных см. в статье [диалоговые окна в OLE](../../mfc/dialog-boxes-in-ole.md).  
+ For more information regarding OLE-specific dialog boxes, see the article [Dialog Boxes in OLE](../../mfc/dialog-boxes-in-ole.md).  
   
-## <a name="inheritance-hierarchy"></a>Иерархия наследования  
+## <a name="inheritance-hierarchy"></a>Inheritance Hierarchy  
  [CObject](../../mfc/reference/cobject-class.md)  
   
  [CCmdTarget](../../mfc/reference/ccmdtarget-class.md)  
@@ -101,30 +100,30 @@ class COleLinksDialog : public COleDialog
   
  `COleLinksDialog`  
   
-## <a name="requirements"></a>Требования  
- **Заголовок:** afxodlgs.h  
+## <a name="requirements"></a>Requirements  
+ **Header:** afxodlgs.h  
   
-##  <a name="domodal"></a>COleLinksDialog::DoModal  
- Отображение диалогового окна OLE изменить ссылки.  
+##  <a name="domodal"></a>  COleLinksDialog::DoModal  
+ Displays the OLE Edit Links dialog box.  
   
 ```  
 virtual INT_PTR DoModal();
 ```  
   
-### <a name="return-value"></a>Возвращаемое значение  
- Состояние завершения для диалогового окна. Одно из следующих значений:  
+### <a name="return-value"></a>Return Value  
+ Completion status for the dialog box. One of the following values:  
   
-- **IDOK** Если успешно откроется диалоговое окно.  
+- **IDOK** if the dialog box was successfully displayed.  
   
-- **IDCANCEL** Если пользователь отменил диалоговое окно.  
+- **IDCANCEL** if the user canceled the dialog box.  
   
-- **IDABORT** произошла ошибка. Если **IDABORT** будет возвращен, вызовите `COleDialog::GetLastError` функции-члена для получения дополнительных сведений о типе возникшей ошибки. Список возможных ошибок см. в разделе [OleUIEditLinks](http://msdn.microsoft.com/library/windows/desktop/ms679703) работать в [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
+- **IDABORT** if an error occurred. If **IDABORT** is returned, call the `COleDialog::GetLastError` member function to get more information about the type of error that occurred. For a listing of possible errors, see the [OleUIEditLinks](http://msdn.microsoft.com/library/windows/desktop/ms679703) function in the Windows SDK.  
   
-### <a name="remarks"></a>Примечания  
- Если требуется инициализировать различные диалоговыми окнами, задав члены [m_el](#m_el) структуры, необходимо сделать это до вызова метода `DoModal`, но после создания объекта диалогового окна.  
+### <a name="remarks"></a>Remarks  
+ If you want to initialize the various dialog box controls by setting members of the [m_el](#m_el) structure, you should do it before calling `DoModal`, but after the dialog object is constructed.  
   
-##  <a name="colelinksdialog"></a>COleLinksDialog::COleLinksDialog  
- Создает объект `COleLinksDialog`.  
+##  <a name="colelinksdialog"></a>  COleLinksDialog::COleLinksDialog  
+ Constructs a `COleLinksDialog` object.  
   
 ```  
 COleLinksDialog (
@@ -134,36 +133,36 @@ COleLinksDialog (
     CWnd* pParentWnd = NULL);
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
  `pDoc`  
- Указывает для документов OLE, со ссылками для редактирования.  
+ Points to the OLE document that contains the links to be edited.  
   
  `pView`  
- Указывает текущее представление на `pDoc`.  
+ Points to the current view on `pDoc`.  
   
  `dwFlags`  
- Создание флаг, который содержит либо 0 или **ELF_SHOWHELP** для указания, будет ли отображаться при откроется диалоговое окно "Справка".  
+ Creation flag, which contains either 0 or **ELF_SHOWHELP** to specify whether the Help button will be displayed when the dialog box is displayed.  
   
  `pParentWnd`  
- Указывает на объект окна родительского или владелец (типа `CWnd`), которому принадлежит объект диалогового окна. Если это **NULL**, родительского окна окно присвоено главного окна приложения.  
+ Points to the parent or owner window object (of type `CWnd`) to which the dialog object belongs. If it is **NULL**, the parent window of the dialog box is set to the main application window.  
   
-### <a name="remarks"></a>Примечания  
- Эта функция создает только `COleLinksDialog` объекта. Чтобы открыть диалоговое окно, вызовите [DoModal](#domodal) функции.  
+### <a name="remarks"></a>Remarks  
+ This function constructs only a `COleLinksDialog` object. To display the dialog box, call the [DoModal](#domodal) function.  
   
-##  <a name="m_el"></a>COleLinksDialog::m_el  
- Структура типа **OLEUIEDITLINKS** используется для управления поведением диалоговое окно Изменение связей.  
+##  <a name="m_el"></a>  COleLinksDialog::m_el  
+ Structure of type **OLEUIEDITLINKS** used to control the behavior of the Edit Links dialog box.  
   
 ```  
 OLEUIEDITLINKS m_el;  
 ```  
   
-### <a name="remarks"></a>Примечания  
- Можно изменить члены этой структуры, либо непосредственно, либо с помощью функций-членов.  
+### <a name="remarks"></a>Remarks  
+ Members of this structure can be modified either directly or through member functions.  
   
- Дополнительные сведения см. в разделе [OLEUIEDITLINKS](http://msdn.microsoft.com/library/windows/desktop/ms678492) в структуре [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
+ For more information, see the [OLEUIEDITLINKS](http://msdn.microsoft.com/library/windows/desktop/ms678492) structure in the Windows SDK.  
   
-## <a name="see-also"></a>См. также  
- [Класс COleDialog](../../mfc/reference/coledialog-class.md)   
- [Диаграмма иерархии](../../mfc/hierarchy-chart.md)   
- [Класс COleDialog](../../mfc/reference/coledialog-class.md)
+## <a name="see-also"></a>See Also  
+ [COleDialog Class](../../mfc/reference/coledialog-class.md)   
+ [Hierarchy Chart](../../mfc/hierarchy-chart.md)   
+ [COleDialog Class](../../mfc/reference/coledialog-class.md)
 

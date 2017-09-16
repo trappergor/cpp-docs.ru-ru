@@ -1,158 +1,177 @@
 ---
-title: "Элементы управления ActiveX в MFC. Использование изображений в элементе управления ActiveX | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "LPPICTUREDISP"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Метод OnDraw, элементы управления MFC ActiveX"
-  - "MFC ActiveX — элементы управления, изображения"
-  - "OnDraw - метод"
-  - "OnResetState - метод"
-  - "CLSID_CPicturePropPage"
+title: 'MFC ActiveX Controls: Using Pictures in an ActiveX Control | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- LPPICTUREDISP
+dev_langs:
+- C++
+helpviewer_keywords:
+- OnDraw method, MFC ActiveX controls
+- MFC ActiveX controls [MFC], pictures
+- OnDraw method [MFC]
+- OnResetState method [MFC]
+- CLSID_CPicturePropPage [MFC]
 ms.assetid: 2e49735c-21b9-4442-bb3d-c82ef258eec9
 caps.latest.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 6
----
-# Элементы управления ActiveX в MFC. Использование изображений в элементе управления ActiveX
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 0de8bb1cf7a43aa993712cbdb81664e3ba5afe03
+ms.contentlocale: ru-ru
+ms.lasthandoff: 09/12/2017
 
-В этой статье описан общий тип Picture и способ его реализации в пользовательском элементе управления ActiveX. Ниже приведен список разделов.  
+---
+# <a name="mfc-activex-controls-using-pictures-in-an-activex-control"></a>MFC ActiveX Controls: Using Pictures in an ActiveX Control
+This article describes the common Picture type and how to implement it in your ActiveX control. Topics include:  
   
--   [Общие сведения о настраиваемых свойствах изображения](#_core_overview_of_custom_picture_properties)  
+-   [Overview of Custom Picture Properties](#_core_overview_of_custom_picture_properties)  
   
--   [Реализация настраиваемого свойства изображения в элементе управления ActiveX](#_core_implementing_a_custom_picture_property_in_your_activex_control)  
+-   [Implementing a Custom Picture Property in Your ActiveX Control](#_core_implementing_a_custom_picture_property_in_your_activex_control)  
   
--   [Дополнения к проекту элемента управления](#_core_additions_to_your_control_project)  
+-   [Additions to Your Control Project](#_core_additions_to_your_control_project)  
   
-##  <a name="_core_overview_of_custom_picture_properties"></a> Общие сведения о настраиваемых свойствах изображения  
- Тип Picture — это один из группы общих типов для некоторых элементов управления ActiveX. Тип Picture предназначен для работы с метафайлами, растровыми изображениями или значками и позволяет пользователю выбрать изображение для показа в элементе управления ActiveX. Настраиваемые свойства изображения реализуются с использованием объекта изображения и функций Get и Set, обеспечивающих доступ пользователя к свойству изображения. Управление доступом пользователей к свойству изображения осуществляется с помощью стандартной страницы свойств изображений.  
+##  <a name="_core_overview_of_custom_picture_properties"></a> Overview of Custom Picture Properties  
+ A Picture type is one of a group of types common to some ActiveX controls. The Picture type handles metafiles, bitmaps, or icons and allows the user to specify a picture to be displayed in an ActiveX control. Custom Picture properties are implemented using a picture object and Get/Set functions that allow the control user access to the Picture property. Control users access the custom Picture property using the stock Picture property page.  
   
- Кроме стандартного типа Picture также доступны типы Font и Color. Дополнительные сведения об использовании стандартного типа Font в элементе управления ActiveX см. в статье [Элементы управления MFC ActiveX: использование шрифтов](../mfc/mfc-activex-controls-using-fonts.md).  
+ In addition to the standard Picture type, Font and Color types are also available. For more information on using the standard Font type in your ActiveX control, see the article [MFC ActiveX Controls: Using Fonts](../mfc/mfc-activex-controls-using-fonts.md).  
   
- Классы элементов управления ActiveX предоставляют несколько компонентов, которые можно использовать для реализации свойства изображения в элементе управления. Сюда входят следующие компоненты.  
+ The ActiveX control classes provide several components you can use to implement the Picture property within the control. These components include:  
   
--   Класс [CPictureHolder](../mfc/reference/cpictureholder-class.md).  
+-   The [CPictureHolder](../mfc/reference/cpictureholder-class.md) class.  
   
-     Этот класс предоставляет простой доступ к объекту изображения и функциям для элемента, отображаемого настраиваемым свойством изображения.  
+     This class provides easy access to the picture object and functionality for the item displayed by the custom Picture property.  
   
--   Поддержка свойств типа **LPPICTUREDISP**, реализованных с помощью функций Get и Set.  
+-   Support for properties of type **LPPICTUREDISP**, implemented with Get/Set functions.  
   
-     С помощью представления класса вы можете быстро добавить поддерживающее тип Picture настраиваемое свойство или несколько. Дополнительные сведения о добавлении свойств элемента управления ActiveX в представлении класса см. в статье [Элементы управления MFC ActiveX: свойства](../mfc/mfc-activex-controls-properties.md).  
+     Using Class View you can quickly add a custom property, or properties, that supports the Picture type. For more information on adding ActiveX control properties with Class View, see the article [MFC ActiveX Controls: Properties](../mfc/mfc-activex-controls-properties.md).  
   
--   Страница свойств, которая управляет свойством или свойствами изображения элемента управления.  
+-   A property page that manipulates a control's Picture property or properties.  
   
-     Эта страница свойств является частью группы запасных страниц свойств, доступных для элементов управления ActiveX. Дополнительные сведения о страницах свойств элементов управления ActiveX см. в статье [Элементы управления MFC ActiveX: использование запасных страниц свойств](../mfc/mfc-activex-controls-using-stock-property-pages.md)  
+     This property page is part of a group of stock property pages available to ActiveX controls. For more information on ActiveX control property pages, see the article [MFC ActiveX Controls: Using Stock Property Pages](../mfc/mfc-activex-controls-using-stock-property-pages.md)  
   
-##  <a name="_core_implementing_a_custom_picture_property_in_your_activex_control"></a> Реализация настраиваемого свойства изображения в элементе управления ActiveX  
- После завершения шагов, перечисленных в этом разделе, элемент управления может отображать изображения, выбранные пользователем. Пользователь может изменить отображающееся изображение на странице свойств с текущим изображением и кнопкой "Обзор", которая позволяет пользователю выбирать другие изображения.  
+##  <a name="_core_implementing_a_custom_picture_property_in_your_activex_control"></a> Implementing a Custom Picture Property in Your ActiveX Control  
+ When you have completed the steps outlined in this section, the control can display pictures chosen by its user. The user can change the displayed picture using a property page that shows the current picture and has a Browse button that allows the user to the select different pictures.  
   
- Настраиваемое свойство изображения реализуется с использованием процесса, аналогичного тому, который использовался для реализации других свойств. Основное отличие состоит в том, что настраиваемое свойство должно поддерживать тип Picture. Так как элемент свойства изображения должен отрисовываться элементом управления ActiveX, перед его полной реализацией необходимо внести в свойство ряд дополнений и изменений.  
+ A custom Picture property is implemented using a process similar to that used for implementing other properties, the main difference being that the custom property must support a Picture type. Because the item of the Picture property must be drawn by the ActiveX control, a number of additions and modifications must be made to the property before it can be fully implemented.  
   
- Для реализации настраиваемого свойства изображения необходимо сделать следующее.  
+ To implement a custom Picture property, you must do the following:  
   
--   [Добавление кода в проект элемента управления](#_core_additions_to_your_control_project).  
+-   [Add code to your control project](#_core_additions_to_your_control_project).  
   
-     Необходимо добавить стандартный идентификатор страницы свойств изображения, член данных типа `CPictureHolder` и настраиваемое свойство типа **LPPICTUREDISP** с реализацией функций Get и Set.  
+     A standard Picture property page ID, a data member of type `CPictureHolder`, and a custom property of type **LPPICTUREDISP** with a Get/Set implementation must be added.  
   
--   [Изменение нескольких функций в классе элемента управления](#_core_modifications_to_your_control_project).  
+-   [Modify several functions in your control class](#_core_modifications_to_your_control_project).  
   
-     Эти изменения будут внесены в нескольких функциях, ответственных за отрисовку элемента управления ActiveX .  
+     These modifications will be made to several functions that are responsible for the drawing of your ActiveX control.  
   
-##  <a name="_core_additions_to_your_control_project"></a> Дополнения к проекту элемента управления  
- Чтобы добавить идентификатор страницы свойств на стандартную страницу свойств изображения, вставьте следующую строку после макроса `BEGIN_PROPPAGEIDS` в CPP\-файле, реализующем элемент управления:  
+##  <a name="_core_additions_to_your_control_project"></a> Additions to Your Control Project  
+ To add the property page ID for the standard Picture property page, insert the following line after the `BEGIN_PROPPAGEIDS` macro in the control implementation file (.CPP):  
   
- [!code-cpp[NVC_MFC_AxPic#1](../mfc/codesnippet/CPP/mfc-activex-controls-using-pictures-in-an-activex-control_1.cpp)]  
+ [!code-cpp[NVC_MFC_AxPic#1](../mfc/codesnippet/cpp/mfc-activex-controls-using-pictures-in-an-activex-control_1.cpp)]  
   
- Вы также должны увеличить параметр счетчика макроса `BEGIN_PROPPAGEIDS` на один. Это показано в следующей строке:  
+ You must also increment the count parameter of your `BEGIN_PROPPAGEIDS` macro by one. The following line illustrates this:  
   
- [!code-cpp[NVC_MFC_AxPic#2](../mfc/codesnippet/CPP/mfc-activex-controls-using-pictures-in-an-activex-control_2.cpp)]  
+ [!code-cpp[NVC_MFC_AxPic#2](../mfc/codesnippet/cpp/mfc-activex-controls-using-pictures-in-an-activex-control_2.cpp)]  
   
- Чтобы добавить член данных `CPictureHolder` в класс элемента управления, вставьте следующую строку в защищенный раздел объявления класса элемента управления в файле заголовка \(.H\) элемента управления:  
+ To add the `CPictureHolder` data member to the control class, insert the following line under the protected section of the control class declaration in the control header file (.H):  
   
- [!code-cpp[NVC_MFC_AxPic#3](../mfc/codesnippet/CPP/mfc-activex-controls-using-pictures-in-an-activex-control_3.h)]  
+ [!code-cpp[NVC_MFC_AxPic#3](../mfc/codesnippet/cpp/mfc-activex-controls-using-pictures-in-an-activex-control_3.h)]  
   
- Необязательно называть член данных `m_pic`; подойдет любое имя.  
+ It is not necessary to name your data member `m_pic`; any name will suffice.  
   
- Далее добавьте настраиваемое свойство, которое поддерживает тип Picture.  
+ Next, add a custom property that supports a Picture type:  
   
-#### Добавление настраиваемого свойства изображения с помощью мастера добавления свойств  
+#### <a name="to-add-a-custom-picture-property-using-the-add-property-wizard"></a>To add a custom picture property using the Add Property Wizard  
   
-1.  Загрузите проект элемента управления.  
+1.  Load your control's project.  
   
-2.  В представлении класса разверните узел библиотеки элемента управления.  
+2.  In Class View, expand the library node of your control.  
   
-3.  Щелкните правой кнопкой мыши узел интерфейса для элемента управления \(второй узел узла библиотеки\), чтобы открыть контекстное меню.  
+3.  Right-click the interface node for your control (the second node of the library node) to open the shortcut menu.  
   
-4.  В контекстном меню выберите команду **Добавить**, а затем — **Добавить свойство**.  
+4.  From the shortcut menu, choose **Add** and then **Add Property**.  
   
-5.  В поле **Имя свойства** введите имя свойства. В качестве примера в этой процедуре используется `ControlPicture`.  
+5.  In the **Property Name** box, type the property name. For example purposes, `ControlPicture` is used in this procedure.  
   
-6.  В поле **Тип свойства** выберите **IPictureDisp\***.  
+6.  In the **Property Type** box, select **IPictureDisp\*** for the property type.  
   
-7.  В поле **Тип реализации** выберите **Методы Get\/Set**.  
+7.  For **Implementation Type**, click **Get/Set Methods**.  
   
-8.  Введите уникальные имена для функций Get и Set или примите имена по умолчанию. \(В этом примере используются имена по умолчанию: `GetControlPicture` и `SetControlPicture`.\)  
+8.  Type unique names for your Get and Set Functions or accept the default names. (In this example, the default names `GetControlPicture` and `SetControlPicture` are used.)  
   
-9. Нажмите кнопку **Готово**.  
+9. Click **Finish**.  
   
- Мастер добавления свойств добавляет следующий код между комментариями диспетчерской карты в файле заголовка \(.H\) элемента управления:  
+ The Add Property Wizard adds the following code between the dispatch map comments in the control header (.H) file:  
   
- [!code-cpp[NVC_MFC_AxPic#4](../mfc/codesnippet/CPP/mfc-activex-controls-using-pictures-in-an-activex-control_4.h)]  
+ [!code-cpp[NVC_MFC_AxPic#4](../mfc/codesnippet/cpp/mfc-activex-controls-using-pictures-in-an-activex-control_4.h)]  
   
- Кроме того, в диспетчерскую карту CPP\-файла реализации \(.CPP\) элемента управления был вставлен следующий код:  
+ In addition, the following code was inserted in the dispatch map of the control implementation (.CPP) file:  
   
- [!code-cpp[NVC_MFC_AxPic#5](../mfc/codesnippet/CPP/mfc-activex-controls-using-pictures-in-an-activex-control_5.cpp)]  
+ [!code-cpp[NVC_MFC_AxPic#5](../mfc/codesnippet/cpp/mfc-activex-controls-using-pictures-in-an-activex-control_5.cpp)]  
   
- Мастер добавления свойств также добавляет следующие две функции\-заглушки в файл реализации элемента управления:  
+ The Add Property Wizard also adds the following two stub functions in the control implementation file:  
   
- [!code-cpp[NVC_MFC_AxPic#6](../mfc/codesnippet/CPP/mfc-activex-controls-using-pictures-in-an-activex-control_6.cpp)]  
-  
-> [!NOTE]
->  Имена класса и функций вашего элемента управления могут отличаться от примера выше.  
-  
-###  <a name="_core_modifications_to_your_control_project"></a> Модификации проекта элемента управления  
- После внесения необходимых дополнений в проект элемента управления необходимо изменить несколько функций, которые влияют на отрисовку элемента управления ActiveX. Эти функции, `OnResetState` и `OnDraw`, а также функции Get и Set настраиваемого свойства изображения расположены в файле реализации элемента управления. \(Обратите внимание, что в этом примере класс элемента управления называется `CSampleCtrl`, член данных `CPictureHolder` называется `m_pic`, а имя настраиваемого свойства изображения — `ControlPicture`.\)  
-  
- В функцию `OnResetState` элемента управления добавьте следующую необязательную строку после вызова `COleControl::OnResetState`:  
-  
- [!code-cpp[NVC_MFC_AxPic#7](../mfc/codesnippet/CPP/mfc-activex-controls-using-pictures-in-an-activex-control_7.cpp)]  
-  
- Это приведет к тому, что будет задано пустое изображение элемента управления.  
-  
- Чтобы правильно нарисовать изображение, вызовите метод [CPictureHolder::Render](../Topic/CPictureHolder::Render.md) в функции `OnDraw` элемента управления. Измените функцию в соответствии со следующим примером:  
-  
- [!code-cpp[NVC_MFC_AxPic#8](../mfc/codesnippet/CPP/mfc-activex-controls-using-pictures-in-an-activex-control_8.cpp)]  
-  
- В функцию Get настраиваемого свойства изображения элемента управления добавьте следующую строку:  
-  
- [!code-cpp[NVC_MFC_AxPic#9](../mfc/codesnippet/CPP/mfc-activex-controls-using-pictures-in-an-activex-control_9.cpp)]  
-  
- В функцию Set настраиваемого свойства изображения элемента управления добавьте следующие строки:  
-  
- [!code-cpp[NVC_MFC_AxPic#10](../mfc/codesnippet/CPP/mfc-activex-controls-using-pictures-in-an-activex-control_10.cpp)]  
-  
- Свойство изображения должно быть сохраняемым, чтобы добавляемые во время разработки сведения отображались во время выполнения. Добавьте следующую строку в функцию `DoPropExchange` класса, производного от `COleControl`:  
-  
- [!code-cpp[NVC_MFC_AxPic#11](../mfc/codesnippet/CPP/mfc-activex-controls-using-pictures-in-an-activex-control_11.cpp)]  
+ [!code-cpp[NVC_MFC_AxPic#6](../mfc/codesnippet/cpp/mfc-activex-controls-using-pictures-in-an-activex-control_6.cpp)]  
   
 > [!NOTE]
->  Имена ваших класса и функции могут отличаться от примера выше.  
+>  Your control class and function names might differ from the example above.  
   
- После внесения изменений выполните повторную сборку проекта, чтобы внедрить новые функции настраиваемого свойства изображения и использовать Контейнер для тестирования нового свойства. Сведения о том, как получить доступ к Контейнеру для тестирования, см. в разделе [Тестирование свойств и событий в Контейнере для тестирования](../mfc/testing-properties-and-events-with-test-container.md).  
+###  <a name="_core_modifications_to_your_control_project"></a> Modifications to Your Control Project  
+ After you have made the necessary additions to your control project, you need to modify several functions that affect the rendering of your ActiveX control. These functions, `OnResetState`, `OnDraw`, and the Get/Set functions of a custom Picture property, are located in the control implementation file. (Note that in this example the control class is called `CSampleCtrl`, the `CPictureHolder` data member is called `m_pic`, and the custom picture property name is `ControlPicture`.)  
   
-## См. также  
- [Элементы управления ActiveX MFC](../mfc/mfc-activex-controls.md)   
- [Элементы управления ActiveX в MFC. Использование шрифтов](../mfc/mfc-activex-controls-using-fonts.md)   
- [Элементы управления ActiveX в MFC. Страницы свойств](../mfc/mfc-activex-controls-property-pages.md)
+ In the control `OnResetState` function, add the following optional line after the call to `COleControl::OnResetState`:  
+  
+ [!code-cpp[NVC_MFC_AxPic#7](../mfc/codesnippet/cpp/mfc-activex-controls-using-pictures-in-an-activex-control_7.cpp)]  
+  
+ This sets the control's picture to a blank picture.  
+  
+ To draw the picture properly, make a call to [CPictureHolder::Render](../mfc/reference/cpictureholder-class.md#render) in the control `OnDraw` function. Modify your function to resemble the following example:  
+  
+ [!code-cpp[NVC_MFC_AxPic#8](../mfc/codesnippet/cpp/mfc-activex-controls-using-pictures-in-an-activex-control_8.cpp)]  
+  
+ In the Get function of the control's custom picture property, add the following line:  
+  
+ [!code-cpp[NVC_MFC_AxPic#9](../mfc/codesnippet/cpp/mfc-activex-controls-using-pictures-in-an-activex-control_9.cpp)]  
+  
+ In the Set function of the control's custom Picture property, add the following lines:  
+  
+ [!code-cpp[NVC_MFC_AxPic#10](../mfc/codesnippet/cpp/mfc-activex-controls-using-pictures-in-an-activex-control_10.cpp)]  
+  
+ The picture property must be made persistent so that information added at design time will show up at run time. Add the following line to the `COleControl`-derived class's `DoPropExchange` function:  
+  
+ [!code-cpp[NVC_MFC_AxPic#11](../mfc/codesnippet/cpp/mfc-activex-controls-using-pictures-in-an-activex-control_11.cpp)]  
+  
+> [!NOTE]
+>  Your class and function names might differ from the example above.  
+  
+ After you complete the modifications, rebuild your project to incorporate the new functionality of the custom Picture property and use Test Container to test the new property. See [Testing Properties and Events with Test Container](../mfc/testing-properties-and-events-with-test-container.md) for information on how to access the test container.  
+  
+## <a name="see-also"></a>See Also  
+ [MFC ActiveX Controls](../mfc/mfc-activex-controls.md)   
+ [MFC ActiveX Controls: Using Fonts](../mfc/mfc-activex-controls-using-fonts.md)   
+ [MFC ActiveX Controls: Property Pages](../mfc/mfc-activex-controls-property-pages.md)
+
+

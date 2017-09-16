@@ -1,5 +1,5 @@
 ---
-title: "Класс CWinFormsView | Документы Microsoft"
+title: CWinFormsView Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -16,9 +16,8 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- MFC [C++], Windows Forms support
-- CWinFormsView class
-- Windows Forms [C++], MFC support
+- CWinFormsView [MFC], CWinFormsView
+- CWinFormsView [MFC], GetControl
 ms.assetid: d597e397-6529-469b-88f5-7f65a6b9e895
 caps.latest.revision: 26
 author: mikeblome
@@ -38,103 +37,103 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 6c49d711da747e4c6cbad0f883d93196b6a98057
-ms.openlocfilehash: 7aadcc1aa887cb6be1ddbb8f3797c4a9e1af5b6a
+ms.translationtype: MT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: ad14f0caa84154a73a669704da8c977b905bc311
 ms.contentlocale: ru-ru
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 09/12/2017
 
 ---
-# <a name="cwinformsview-class"></a>Класс CWinFormsView
-Предоставляет универсальную функцию для размещения элементов управления Windows Forms в качестве представления MFC.  
+# <a name="cwinformsview-class"></a>CWinFormsView Class
+Provides generic functionality for hosting of a Windows Forms control as an MFC view.  
   
-## <a name="syntax"></a>Синтаксис  
+## <a name="syntax"></a>Syntax  
   
 ```  
 class CWinFormsView : public CView;  
 ```  
   
-## <a name="members"></a>Члены  
+## <a name="members"></a>Members  
   
-### <a name="public-constructors"></a>Открытые конструкторы  
+### <a name="public-constructors"></a>Public Constructors  
   
-|Имя|Описание|  
+|Name|Description|  
 |----------|-----------------|  
-|[CWinFormsView::CWinFormsView](#cwinformsview)|Создает объект `CWinFormsView`.|  
+|[CWinFormsView::CWinFormsView](#cwinformsview)|Constructs a `CWinFormsView` object.|  
   
-### <a name="public-methods"></a>Открытые методы  
+### <a name="public-methods"></a>Public Methods  
   
-|Имя|Описание|  
+|Name|Description|  
 |----------|-----------------|  
-|[CWinFormsView::GetControl](#getcontrol)|Извлекает указатель на элемент управления Windows Forms.|  
+|[CWinFormsView::GetControl](#getcontrol)|Retrieves a pointer to the Windows Forms control.|  
   
-### <a name="public-operators"></a>Открытые операторы  
+### <a name="public-operators"></a>Public Operators  
   
-|Имя||  
+|Name||  
 |----------|-|  
-|[Элемент управления CWinFormsView::operator ^](#operator_control)|Приведение типа как указатель на элемент управления Windows Forms.|  
+|[CWinFormsView::operator Control^](#operator_control)|Casts a type as a pointer to a Windows Forms control.|  
   
-## <a name="remarks"></a>Примечания  
- MFC использует `CWinFormsView` класса для размещения элемента управления .NET Framework Windows Forms в пределах представления MFC. Элемент управления является дочерним для собственного представления и занимают всю клиентскую область представления MFC. Результат аналогичен `CFormView` представление, что позволяет воспользоваться преимуществами конструктора Windows Forms и времени выполнения для создания расширенных представлений на основе форм.  
+## <a name="remarks"></a>Remarks  
+ MFC uses the `CWinFormsView` class to host a .NET Framework Windows Forms control within an MFC view. The control is a child of the native view and occupies the entire client area of the MFC view. The result is similar to a `CFormView` view, allowing you to take advantage of the Windows Forms designer and run time to create rich form-based views.  
   
- Дополнительные сведения об использовании Windows Forms см. в разделе [использование пользовательского элемента управления формы Windows Form в MFC](../../dotnet/using-a-windows-form-user-control-in-mfc.md).  
-  
-> [!NOTE]
->  Интеграция MFC Windows Forms работает только в проектах, которые динамически связываются с MFC (проекты, в которых определена AFXDLL).  
+ For more information on using Windows Forms, see [Using a Windows Form User Control in MFC](../../dotnet/using-a-windows-form-user-control-in-mfc.md).  
   
 > [!NOTE]
->  CWinFormsView не поддерживает окна-разделителя MFC ( [класса CSplitterWnd](../../mfc/reference/csplitterwnd-class.md)). В настоящее время только Windows Forms Splitter поддержка элемента управления.  
+>  MFC Windows Forms integration works only in projects which link dynamically with MFC (projects in which AFXDLL is defined).  
   
-## <a name="requirements"></a>Требования  
- **Заголовок:** afxwinforms.h  
+> [!NOTE]
+>  CWinFormsView does not support the MFC splitter window ( [CSplitterWnd Class](../../mfc/reference/csplitterwnd-class.md)). Currently only the Windows Forms Splitter control is supported.  
   
-##  <a name="cwinformsview"></a>CWinFormsView::CWinFormsView  
- Создает объект `CWinFormsView`.  
+## <a name="requirements"></a>Requirements  
+ **Header:** afxwinforms.h  
+  
+##  <a name="cwinformsview"></a>  CWinFormsView::CWinFormsView  
+ Constructs a `CWinFormsView` object.  
   
 ```  
 CWinFormsView(System::Type^ pManagedViewType);  
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
  `pManagedViewType`  
- Указатель на тип данных пользовательского элемента управления Windows Forms.   
+ A pointer to the data type of the Windows Forms user control.   
   
-### <a name="example"></a>Пример  
- В следующем примере `CUserView` класс наследует от `CWinFormsView` и передает тип `UserControl1` для `CWinFormsView` конструктор. `UserControl1`является пользовательским элементом управления в ControlLibrary1.dll.  
+### <a name="example"></a>Example  
+ In the following example, the `CUserView` class inherits from `CWinFormsView` and passes the type of `UserControl1` to the `CWinFormsView` constructor. `UserControl1` is a custom-built control in ControlLibrary1.dll.  
   
- [!code-cpp[NVC_MFC_Managed&#1;](../../mfc/reference/codesnippet/cpp/cwinformsview-class_1.h)]  
+ [!code-cpp[NVC_MFC_Managed#1](../../mfc/reference/codesnippet/cpp/cwinformsview-class_1.h)]  
   
- [!code-cpp[NVC_MFC_Managed&#2;](../../mfc/reference/codesnippet/cpp/cwinformsview-class_2.cpp)]  
+ [!code-cpp[NVC_MFC_Managed#2](../../mfc/reference/codesnippet/cpp/cwinformsview-class_2.cpp)]  
   
-##  <a name="getcontrol"></a>CWinFormsView::GetControl  
- Извлекает указатель на элемент управления Windows Forms.  
+##  <a name="getcontrol"></a>  CWinFormsView::GetControl  
+ Retrieves a pointer to the Windows Forms control.  
   
 ```  
 System::Windows::Forms::Control^ GetControl() const;  
 ```  
   
-### <a name="return-value"></a>Возвращаемое значение  
- Указатель на объект `System.Windows.Forms.Control`.  
+### <a name="return-value"></a>Return Value  
+ A pointer to a `System.Windows.Forms.Control` object.  
   
-### <a name="remarks"></a>Примечания  
- Пример использования Windows Forms см. в разделе [использование пользовательского элемента управления формы Windows Form в MFC](../../dotnet/using-a-windows-form-user-control-in-mfc.md).  
+### <a name="remarks"></a>Remarks  
+ For an example of how to use Windows Forms, see [Using a Windows Form User Control in MFC](../../dotnet/using-a-windows-form-user-control-in-mfc.md).  
   
-##  <a name="operator_control"></a>Элемент управления CWinFormsView::operator ^  
- Приведение типа как указатель на элемент управления Windows Forms.  
+##  <a name="operator_control"></a>  CWinFormsView::operator Control^  
+ Casts a type as a pointer to a Windows Forms control.  
   
 ```  
 operator System::Windows::Forms::Control^() const;  
 ```  
   
-### <a name="remarks"></a>Примечания  
- Этот оператор позволяет передавать `CWinFormsView` представление функции, которые принимают указатель на элемент управления Windows Forms типа <xref:System.Windows.Forms.Control>.</xref:System.Windows.Forms.Control>  
+### <a name="remarks"></a>Remarks  
+ This operator allows you to pass a `CWinFormsView` view to functions that accept a pointer to a Windows Forms control of type <xref:System.Windows.Forms.Control>.  
   
-### <a name="example"></a>Пример  
-  В разделе [CWinFormsView::GetControl](#getcontrol).  
+### <a name="example"></a>Example  
+  See [CWinFormsView::GetControl](#getcontrol).  
   
-## <a name="see-also"></a>См. также  
- [Диаграмма иерархии](../../mfc/hierarchy-chart.md)   
- [Класс CWinFormsControl](../../mfc/reference/cwinformscontrol-class.md)   
- [Класс CWinFormsDialog](../../mfc/reference/cwinformsdialog-class.md)   
- [Класс CFormView](../../mfc/reference/cformview-class.md)
+## <a name="see-also"></a>See Also  
+ [Hierarchy Chart](../../mfc/hierarchy-chart.md)   
+ [CWinFormsControl Class](../../mfc/reference/cwinformscontrol-class.md)   
+ [CWinFormsDialog Class](../../mfc/reference/cwinformsdialog-class.md)   
+ [CFormView Class](../../mfc/reference/cformview-class.md)
 

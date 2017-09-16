@@ -1,92 +1,111 @@
 ---
-title: "TN040. Изменение размеров и масштабирование MFC/OLE по месту | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "vc.mfc.ole"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "активация "на месте", изменение масштаба и размера"
-  - "изменения размера на месте"
-  - "TN040"
-  - "изменение масштаба и активация на месте"
+title: 'TN040: MFC-OLE In-Place Resizing and Zooming | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- vc.mfc.ole
+dev_langs:
+- C++
+helpviewer_keywords:
+- resizing in-place
+- TN040
+- zooming and in-place activation
+- in-place activation, zooming and resizing
 ms.assetid: 4d7859bd-0b2e-4254-be62-2735cecf02c6
 caps.latest.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 6
----
-# TN040. Изменение размеров и масштабирование MFC/OLE по месту
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 952db6c874fb7e4abab4d64bbe518681cea44619
+ms.contentlocale: ru-ru
+ms.lasthandoff: 09/12/2017
 
+---
+# <a name="tn040-mfcole-in-place-resizing-and-zooming"></a>TN040: MFC/OLE In-Place Resizing and Zooming
 > [!NOTE]
->  Следующее техническое примечание не было обновлено, поскольку сначала оно было включено в электронную документацию.  В результате некоторые процедуры и разделы могут быть устаревшими или неверными.  Для получения последних сведений рекомендуется выполнить поиск интересующей темы в алфавитном указателе документации в Интернете.  
+>  The following technical note has not been updated since it was first included in the online documentation. As a result, some procedures and topics might be out of date or incorrect. For the latest information, it is recommended that you search for the topic of interest in the online documentation index.  
   
- Эта заметка обсудит проблемы, относящиеся к редактирования локально и как сервер должен выполнить правильное увеличение и на месте изменения.  Встроенной функции с активацией, режим представления WYSIWYG концепции принимают один шаг вперед, так как контейнеры и серверы сотрудничают друг с другом, особенно интерпретирует спецификация OLE во многом аналогично.  
+ This note will discuss the issues relating to in-place editing and how a server should accomplish correct zooming and in-place resizing. With in-place activation, the WYSIWYG concept is taken one step further in that containers and servers cooperate with each other, and in particular interpret the OLE specification in much the same way.  
   
- Из\-за " взаимодействия между контейнером и встроенной активацией сервера поддерживает несколько ожиданий от пользователя, который должен быть доступен.  
+ Because of the close interaction between a container and server supporting in-place activation there are a number of expectations from the end-user that should be maintained:  
   
--   Отображение представления \(метафайл рисование в переопределении `COleServerItem::OnDraw` \) должно выглядеть точно так же, как при его будет выполнено для редактирования \(за исключением того, что редактирования средства не отображается\).  
+-   The presentation display (the metafile drawn in the `COleServerItem::OnDraw` override) should look exactly the same as when it is drawn for editing (except that editing tools are not visible).  
   
--   Когда контейнер увеличится, окно сервера слишком\!  
+-   When the container zooms, the server window should too!  
   
--   Является и контейнером, и сервер должны показывать объекты для редактирования с использованием той же метрики.  Это означает, что с использованием режима сопоставления на основе количества *логических пикселей* на дюйм — физических пикселей на дюйм, отрисовки на дисплее.  
+-   Both the container and server should display objects for editing using the same metrics. This means using a mapping mode based on the number of *logical* pixels per inch — not physical pixels per inch, when rendering on the display device.  
   
 > [!NOTE]
->  Поскольку функция активация применяется только к элементам, которые внедрены \(\), не связанный горизонтали применяется только к внедренным объекты.  При этом API в обоих `COleServerDoc` и `COleServerItem`, используемые для расширения.  Причина этой дихотомии, что только функции, которые являются допустимыми и связанных и встроенных элементов в `COleServerItem` \(это позволяет иметь общую реализацию\) и функциях, допустимо только для внедренных объектов находятся в классе `COleServerDoc` \(с точки зрения сервера, это `document`, встраиваемого\).  
+>  Because in-place activation only applies to items that are embedded (not linked), zooming only applies to embedded objects. You will see APIs in both `COleServerDoc` and `COleServerItem` that are used for zooming. The reason for this dichotomy is that only functions that are valid for both linked and embedded items are in `COleServerItem` (this allows you to have a common implementation) and functions that are valid only for embedded objects are located in the `COleServerDoc` class (from the server's perspective, it is the `document` which is embedded).  
   
- Большинство тяготы будет помещена в разработчике сервера, в котором содержится имя сервера необходимо получить контейнера и изменяет его интерфейс редактирования соответственно.  Но когда сервер задает коэффициент масштабирования, контейнер использует?  
+ Most of the burden is placed on the server implementer, in that the server must be aware of the container's zoom factor and modify its editing interface as appropriate. But how does the server determine the zoom factor that the container is using  
   
-## Поддержка MFC для увеличения  
- Текущий коэффициент масштабирования может быть определен с помощью вызова `COleServerDoc::GetZoomFactor`.  При вызове этого документа, если нет активного встроенного результата воли всегда факторе в отношении масштаба 100% \(или 1:1\).  Вызывать ее, пока на месте активный май возвращает отлична от 100%.  
+## <a name="mfc-support-for-zooming"></a>MFC Support for Zooming  
+ The current zoom factor can be determined by calling `COleServerDoc::GetZoomFactor`. Calling this when the document is not in-place active will always result in a 100% zoom factor (or 1:1 ratio). Calling it while in-place active may return something other than 100%.  
   
- Пример увелича правильно см. в примере MFC [HIERSVR](../top/visual-cpp-samples.md) OLE.  Увеличить HIERSVR осложняется тем, что он отображает текст, и текст, как правило, не обеспечивает напрямую \(подсказки, являются типографскими соглашениями разработки и ширины и высоты всех затрудняет выполнение независимо от\).  Тем не менее, HIERSVR разумная ссылку для реализации увеличить правильно, поэтому это MFC [Образец SCRIBBLE](../top/visual-cpp-samples.md) \(раздел 7\).  
+ For an example of zooming correctly see the MFC OLE sample [HIERSVR](../visual-cpp-samples.md). Zooming in HIERSVR is complicated by the fact that it displays text, and text, in general, does not scale in a linear fashion (hints, typographic conventions, design widths, and heights all complicate the matter). Still, HIERSVR is a reasonable reference for implementing zooming correctly, and so is the MFC Tutorial [SCRIBBLE](../visual-cpp-samples.md) (step 7).  
   
- `COleServerDoc::GetZoomFactor` задает коэффициент масштабирования на основе нескольких отличающейся метрик, или из контейнера или из реализации класса `COleServerItem` и `COleServerDoc`.  Вкратце, текущий коэффициент масштабирования определяется следующей формулой:  
+ `COleServerDoc::GetZoomFactor` determines the zoom factor based on a number of different metrics available either from the container or from the implementation of your `COleServerItem` and `COleServerDoc` classes. In short, the current zoom factor is determined by the following formula:  
   
 ```  
 Position Rectangle (PR) / Container Extent (CE)  
 ```  
   
- RECT ПОЗИЦИИ определяется контейнером.  Он возвращается на сервер во время встроенной активации при `COleClientItem::OnGetItemPosition` называется и обновляется, когда контейнер вызывает `COleServerDoc::OnSetItemRects` сервера \(с вызовом `COleClientItem::SetItemRects`\).  
+ The POSITION RECTANGLE is determined by the container. It is returned to the server during in-place activation when `COleClientItem::OnGetItemPosition` is called and is updated when the container calls the server's `COleServerDoc::OnSetItemRects` (with a call to `COleClientItem::SetItemRects`).  
   
- ЭКСТЕНТ CONTAINER немного более сложным для вычисления.  Если контейнер, `COleServerItem::OnSetExtent` \(с вызовом `COleClientItem::SetExtent`\), ЭКСТЕНТ CONTAINER это значение, преобразованное в пиксели, на основании количества пикселей на логические дюйм.  Если контейнер не вызывается SetExtent \(который обычно регистра\), ЭКСТЕНТ CONTAINER размер, возвращенный из `COleServerItem::OnGetExtent`.  Таким образом, если контейнер не вызывается SetExtent, платформа высказывать, если она имела бы контейнер вызыватьTfа ее с 100% из естественных экстента, возвращаемого из \(значение **COleServerItem::GetExtent**\).  Заявил другим способом, платформа высказывать контейнер отображается 100% \(нет, больше не менее\) из элемента.  
+ The CONTAINER EXTENT is slightly more complex to calculate. If the container has called `COleServerItem::OnSetExtent` (with a call to `COleClientItem::SetExtent`), then the CONTAINER EXTENT is this value converted to pixels based on the number of pixels per logical inch. If the container has not called SetExtent (which is usually the case), then the CONTAINER EXTENT is the size returned from `COleServerItem::OnGetExtent`. So, if the container has not called SetExtent, the framework assumes that if it did the container would have called it with 100% of the natural extent (the value returned from **COleServerItem::GetExtent**). Stated another way, the framework assumes that the container is displaying 100% (no more, no less) of the item.  
   
- Обратите внимание, что `COleServerItem::OnSetExtent` и `COleServerItem::OnGetExtent` имеют похожие имена, они не работающим с одним атрибутом элемента.  `OnSetExtent` вызывается, чтобы разрешить серверу знать, насколько из объекта отображается в контейнере \(независимо от фактора увеличения\) и `OnGetExtent` называется контейнером для определения идеальный размер объекта.  
+ It is important to note that although `COleServerItem::OnSetExtent` and `COleServerItem::OnGetExtent` have similar names, they do not manipulate the same attribute of the item. `OnSetExtent` is called to let the server know how much of the object is visible in the container (regardless of the zoom factor) and `OnGetExtent` is called by the container to determine ideal size of the object.  
   
- Анализируя каждый из используемых API, можно получить более очистить рисунке:  
+ By looking at each of the APIs involved, you can get a clearer picture:  
   
-## COleServerItem::OnGetExtent  
- Эта функция должна возвращать естественный «размер» в модульных HIMETRIC элемента.  Лучшим способом представить естественных «размер» определить его как его размер должен быть напечатан.  Возвращает размер здесь неизменным для содержимого элемента частности \(подобно метафайл, констант для указанного элемента\).  Этот размер не изменяет увелича применяется к элементу.  Обычно не изменяется, когда контейнер предоставляет элемент больше или меньше места путем вызова `OnSetExtent`.  Пример изменения может быть одним из простого текстового редактора без возможности «поля», которая создает текст на последнем отправленном экстенте контейнером.  Если сервер изменяется, то, возможно, сервер должен установить бит OLEMISC\_RECOMPOSEONRESIZE в системном реестре \(см. OLE документации пакета SDK дополнительные сведения об этом параметре\).  
+## <a name="coleserveritemongetextent"></a>COleServerItem::OnGetExtent  
+ This function should return the "natural size" in HIMETRIC units of the item. The best way to think of the "natural size" is to define it as the size it might appear when printed. The size returned here is constant for a particular item contents (much like the metafile, which is constant for a particular item). This size does not change when zooming is applied to the item. It usually does not change when the container gives the item more or less space by calling `OnSetExtent`. An example of a change might be that of a simple text editor with no "margin" capability that wrapped text based on the last extent sent by the container. If a server does change, the server should probably set the OLEMISC_RECOMPOSEONRESIZE bit in the system registry (see the OLE SDK documentation for more information on this option).  
   
-## COleServerItem::OnSetExtent  
- Эта функция вызывается, когда контейнер означает «больше» или из объекта.  Большинство контейнеры не вызывают это вообще.  Реализация по умолчанию сохраняет последнее значение, предоставленное в контейнере «m\_sizeExtent», которое используется в `COleServerDoc::GetZoomFactor` вычислительных ЭКСТЕНТ значение CONTAINER, описанной выше.  
+## <a name="coleserveritemonsetextent"></a>COleServerItem::OnSetExtent  
+ This function is called when the container shows "more or less" of the object. Most containers will not call this at all. The default implementation stores the last value received from the container in 'm_sizeExtent', which is used in `COleServerDoc::GetZoomFactor` when computing the CONTAINER EXTENT value described above.  
   
-## COleServerDoc::OnSetItemRects  
- Эта функция вызывается, только если документ на месте активен.  Она вызывается при обновлении любого контейнера или отсечения положение элемента, примененные к элементу.  RECT ПОЗИЦИИ, как описано выше, предоставляет делимое для вычисления фактора увеличения.  Сервер может отправить, чтобы положение элемента была изменена путем вызова `COleServerDoc::RequestPositionChange`.  Контейнер может и не может ответ на этот запрос путем вызова `OnSetItemRects` \(при вызове функции **COleServerItem::SetItemRects**\).  
+## <a name="coleserverdoconsetitemrects"></a>COleServerDoc::OnSetItemRects  
+ This function is called only when the document is in-place active. It is called when the container updates either the item's position or the clipping applied to the item. The POSITION RECTANGLE, as discussed above, provides the numerator for the zoom factor calculation. A server can request that the item position be changed by calling `COleServerDoc::RequestPositionChange`. The container may or may not respond to this request by calling `OnSetItemRects` (with a call to **COleServerItem::SetItemRects**).  
   
-## COleServerDoc::OnDraw  
- Важно понять, что метафайл, созданный путем переопределения `COleServerItem::OnDraw` приводит одинаковым метафайл, независимо от текущего фактора увеличения.  Обеспечивает контейнер метафайл соответственно.  Это важное различие между `OnDraw` представления и `OnDraw` элемента сервера.  Представление обрабатывает увеличить, элемент, просто создает *zoomable* метафайл и оставить его до задачи контейнера соответствующий увеличить.  
+## <a name="coleserverdocondraw"></a>COleServerDoc::OnDraw  
+ It is important to realize that the metafile created by overriding of `COleServerItem::OnDraw` produces exactly the same metafile, regardless of the current zoom factor. The container will scale the metafile as appropriate. This is an important distinction between the view's `OnDraw` and the server item's `OnDraw`. The view handles zooming, the item just creates a *zoomable* metafile and leaves it up to the container to do the appropriate zooming.  
   
- Лучший способ убедиться, что сервер работает правильно использовать реализацию `COleServerDoc::GetZoomFactor`, если документ на месте активен.  
+ The best way to insure that your server behaves correctly is to use the implementation of `COleServerDoc::GetZoomFactor` if your document is in-place active.  
   
-## Поддержка MFC для изменения на месте  
- Библиотека MFC полностью реализует на месте пользовательским интерфейсом, описанной в разделе 2 спецификации OLE.  Интерфейс пользователя поддерживается классом `COleResizeBar`, пользовательским сообщением **WM\_SIZECHILD** и специальным обработки этого сообщения в `COleIPFrameWnd`.  
+## <a name="mfc-support-for-in-place-resizing"></a>MFC Support for In-Place Resizing  
+ MFC fully implements the in-place resizing interface as described in the OLE 2 specification. The user-interface is supported by the `COleResizeBar` class, a custom message **WM_SIZECHILD**, and special handling of this message in `COleIPFrameWnd`.  
   
- Может потребоваться реализовать другой обработки этого сообщения, что не средой выполнения.  Как указано выше, платформа. результаты на месте изменения до контейнера — сервер реагирует на изменение в факторе увеличения.  Если контейнер с правилом, устанавливать и ЭКСТЕНТ CONTAINER и RECT ПОЗИЦИИ во время обработки его `COleClientItem::OnChangeItemPosition` \(с именем в результате вызова `COleServerDoc::RequestPositionChange`\), а затем на месте, то изменение приведет к отображению нескольких «или» из элемента в окне редактирования.  Если контейнер реагирует только параметр RECT ПОЗИЦИИ во время обработки `COleClientItem::OnChangeItemPosition`, коэффициент масштабирования изменится и будет показан элемент увеличенный или «out».  
+ You may want to implement different handling of this message than what is provided by the framework. As described above, the framework leaves the results of in-place resizing up to the container — the server responds to the change in the zoom factor. If the container reacts by setting the both CONTAINER EXTENT and POSITION RECTANGLE during the processing of its `COleClientItem::OnChangeItemPosition` (called as a result of a call to `COleServerDoc::RequestPositionChange`) then the in-place resize will result in showing "more or less" of the item in the editing window. If the container reacts by just setting the POSITION RECTANGLE during the processing of `COleClientItem::OnChangeItemPosition`, the zoom factor will change and the item will be shown "zoomed in or out."  
   
- Сервер может элемента управления \(в некоторой степени\), происходит во время данного согласования.  Электронная таблица, например может избрать, чтобы показать больше или меньше ячеек, когда пользователь изменяет размер окна во время редактирования элемент на месте.  Текстовый редактор избрать может изменять поля «страницы», поэтому тот же окно и rewrap текст в новое поле.  Серверы реализуют это можно изменить естественный экстент \(размер, возвращенный из `COleServerItem::OnGetExtent`\), если изменение будет выполнен.  Это приведет к тому, что и RECT ПОЗИЦИИ и ЭКСТЕНТ CONTAINER изменить так же, количества, и в одном факторе увеличения, но более крупной или более небольшую область обзора.  Кроме того, больше или из документа будут видны в метафайле произведенном `OnDraw`.  В этом случае сам документ изменяется, когда пользователь изменяет размер элемента, а не просто области просмотра.  
+ A server can control (to some degree) what happens during this negotiation. A spreadsheet, for example might elect to show more or fewer cells when the user resizes the window while editing the item in-place. A word-processor might elect to change the "page margins" so they are the same as the window and rewrap the text to the new margin. Servers implement this by changing the natural extent (the size returned from `COleServerItem::OnGetExtent`) when the resizing is done. This will cause both the POSITION RECTANGLE and the CONTAINER EXTENT to change by the same amount, resulting in the same zoom factor, but a bigger or smaller viewing area. In addition, more or less of the document will be visible in the metafile generated by `OnDraw`. In this case, the document itself is changing when the user resizes the item, instead of just the viewing area.  
   
- Реализация пользовательских можно изменить и по\-прежнему использовать пользовательский интерфейс, предоставляемый `COleResizeBar` путем переопределения сообщение **WM\_SIZECHILD** в классе `COleIPFrameWnd`.  Дополнительные сведения об особенностях **WM\_SIZECHILD** см. в разделе [Техническое примечание 24](../mfc/tn024-mfc-defined-messages-and-resources.md).  
+ You can implement custom resizing and still leverage the user interface provided by `COleResizeBar` by overriding the **WM_SIZECHILD** message in your `COleIPFrameWnd` class. For more information on the specifics of **WM_SIZECHILD**, see [Technical Note 24](../mfc/tn024-mfc-defined-messages-and-resources.md).  
   
-## См. также  
- [Технические примечания по номеру](../mfc/technical-notes-by-number.md)   
- [Технические примечания по категории](../mfc/technical-notes-by-category.md)
+## <a name="see-also"></a>See Also  
+ [Technical Notes by Number](../mfc/technical-notes-by-number.md)   
+ [Technical Notes by Category](../mfc/technical-notes-by-category.md)
+
+

@@ -1,113 +1,136 @@
 ---
-title: "TN064. Потоки изолированной модели в элементах управления ActiveX | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "vc.controls.activex"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "потоки изолированной модели"
-  - "контейнеры [C++], многопоточные"
-  - "многопоточный контейнер"
-  - "элементы управления OLE, поддержка контейнера"
-  - "TN064"
+title: 'TN064: Apartment-Model Threading in ActiveX Controls | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- vc.controls.activex
+dev_langs:
+- C++
+helpviewer_keywords:
+- OLE controls [MFC], container support
+- containers [MFC], multithreaded
+- TN064 [MFC]
+- multithread container [MFC]
+- apartment model threading [MFC]
 ms.assetid: b2ab4c88-6954-48e2-9a74-01d4a60df073
 caps.latest.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 5
----
-# TN064. Потоки изолированной модели в элементах управления ActiveX
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: a1c3fe1e70ffb0747bf519873cab0a784cc1c60b
+ms.contentlocale: ru-ru
+ms.lasthandoff: 09/12/2017
 
+---
+# <a name="tn064-apartment-model-threading-in-activex-controls"></a>TN064: Apartment-Model Threading in ActiveX Controls
 > [!NOTE]
->  Следующее техническое примечание не было обновлено, поскольку сначала оно было включено в электронную документацию.  В результате некоторые процедуры и разделы могут быть устаревшими или неверными.  Для получения последних сведений рекомендуется выполнить поиск интересующей темы в алфавитном указателе документации в Интернете.  
+>  The following technical note has not been updated since it was first included in the online documentation. As a result, some procedures and topics might be out of date or incorrect. For the latest information, it is recommended that you search for the topic of interest in the online documentation index.  
   
- Это техническом примечании объясняется, как включить модель изоляции передавая накапливаемое значение в элементе управления ActiveX.  Обратите внимание, что потоки модели изоляции поддерживается только в версии Visual C\+\+ 4.2 C или позже.  
+ This technical note explains how to enable apartment-model threading in an ActiveX control. Note that apartment-model threading is only supported in Visual C++ versions 4.2 or later.  
   
-## Что модель изоляции продевает потоков?  
- Модель изоляции подход к внедренным вспомогательные объекты, такие как элементы управления ActiveX, внутри многопоточного приложения.  Хотя приложение может иметь несколько потоков, каждый экземпляр внедренного объекта будет присвоен один «,» подразделение, выполняется только на одном потоке.  Другими словами, все вызовы в экземпляр элемента управления будут выполнены в том же потоке.  
+## <a name="what-is-apartment-model-threading"></a>What Is Apartment-Model Threading  
+ The apartment model is an approach to supporting embedded objects, such as ActiveX controls, within a multithreaded container application. Although the application may have multiple threads, each instance of an embedded object will be assigned to one "apartment," which will execute on only one thread. In other words, all calls into an instance of a control will happen on the same thread.  
   
- Однако различные экземпляры одного типа элемента управления могут быть присвоены к различным подразделениям.  Таким образом, если несколько экземпляров элемента управления используют любые данные в общем \(например, статический или глобальных данных\), доступ к этим данным будет общим должен быть защищен объектом синхронизации, например критичный участок.  
+ However, different instances of the same type of control may be assigned to different apartments. So, if multiple instances of a control share any data in common (for example, static or global data), then access to this shared data will need to be protected by a synchronization object, such as a critical section.  
   
- Дополнительные сведения о потоковой модели " Подразделение " см. в разделе [Процессы и потоки](http://msdn.microsoft.com/library/windows/desktop/ms684841) в *справочнике программиста OLE*.  
+ For complete details on the apartment threading model, please see [Processes and Threads](http://msdn.microsoft.com/library/windows/desktop/ms684841) in the *OLE Programmer's Reference*.  
   
-## Почему поддержка потоков модели изоляции?  
- Элементы управления, которые поддерживают потоки изоляции модели можно использовать в многопоточном приложение\-контейнерах, также поддерживают модель изоляции.  Если не включить модель изоляции передавая накапливаемое значение отсутствует, появится возможность ограничить набор контейнеров, в которых элемент управления может использоваться.  
+## <a name="why-support-apartment-model-threading"></a>Why Support Apartment-Model Threading  
+ Controls that support apartment-model threading can be used in multithreaded container applications that also support the apartment model. If you do not enable apartment-model threading, you will limit the potential set of containers in which your control could be used.  
   
- Включение потоков модели изоляции простым для большинства элементов управления, особенно если они содержат небольших или никаких общих данных.  
+ Enabling apartment-model threading is easy for most controls, particularly if they have little or no shared data.  
   
-## Защита общие сведения  
- Если элемент управления использует общие данные, такие как переменная статического члена, доступ к этому, эти данные должны быть защищены критической секцией для предотвращения несколько потоков из изменять данные одновременно.  Для настройки критическую секцию для этой цели объявите переменную статический элемент класса `CCriticalSection` в классе элемента управления.  Используйте `Lock` и функции\-члены  **Разблокировать** этого объекта критической секции, для них собственный код обращается к общим данным.  
+## <a name="protecting-shared-data"></a>Protecting Shared Data  
+ If your control uses shared data, such as a static member variable, access to that data should be protected with a critical section to prevent more than one thread from modifying the data at the same time. To set up a critical section for this purpose, declare a static member variable of class `CCriticalSection` in your control's class. Use the `Lock` and **Unlock** member functions of this critical section object wherever your code accesses the shared data.  
   
- Рассмотрим, например, класс элемента управления, который должен поддерживать строку, используется всеми экземплярами.  Эта строка может храниться в переменной статического члена и защита критической секцией.  Объявление класса элемента управления, содержит следующее:  
+ Consider, for example, a control class that needs to maintain a string that is shared by all instances. This string can be maintained in a static member variable and protected by a critical section. The control's class declaration would contain the following:  
   
 ```  
 class CSampleCtrl : public COleControl  
 {  
-    ...  
+ ...  
     static CString _strShared;  
     static CCriticalSection _critSect;  
 };  
 ```  
   
- Реализация класса включила бы определения для этих переменных.  
+ The implementation for the class would include definitions for these variables:  
   
 ```  
 int CString CSampleCtrl::_strShared;  
 CCriticalSection CSampleCtrl::_critSect;  
 ```  
   
- Доступ к статическому члену `_strShared` затем может быть защищен критической секцией.  
+ Access to the `_strShared` static member can then be protected by the critical section:  
   
 ```  
 void CSampleCtrl::SomeMethod()  
 {  
-    _critSect.Lock();  
-    if (_strShared.Empty())  
-        _strShared = "<text>";  
-    _critSect.Unlock();  
-    ...  
+    _critSect.Lock();
+if (_strShared.Empty())  
+    _strShared = "<text>";  
+    _critSect.Unlock();
+
+ ...  
 }  
 ```  
   
-## Зарегистрировать элемент управления Подразделение\-Модель\- информации об электропитании  
- Элементы управления, которые поддерживают потоки модели изоляции указать эту возможность в реестре, путем добавления именованное значение «ThreadingModel» со значением «,» в их записи реестра идентификатора класса в ключом **InprocServer32** id\\ *класса*.  Чтобы вызвать этот ключ автоматически, должна быть зарегистрирована для элемента управления, передайте флажок `afxRegApartmentThreading` в параметре шестом в `AfxOleRegisterControlClass`:  
+## <a name="registering-an-apartment-model-aware-control"></a>Registering an Apartment-Model-Aware Control  
+ Controls that support apartment-model threading should indicate this capability in the registry, by adding the named value "ThreadingModel" with a value of "Apartment" in their class ID registry entry under the *class id*\\**InprocServer32** key. To cause this key to be automatically registered for your control, pass the `afxRegApartmentThreading` flag in the sixth parameter to `AfxOleRegisterControlClass`:  
   
 ```  
 BOOL CSampleCtrl::CSampleCtrlFactory::UpdateRegistry(BOOL bRegister)  
 {  
     if (bRegister)  
-        return AfxOleRegisterControlClass(  
-            AfxGetInstanceHandle(),  
-            m_clsid,  
-            m_lpszProgID,  
-            IDS_SAMPLE,  
-            IDB_SAMPLE,  
-            afxRegApartmentThreading,  
-            _dwSampleOleMisc,  
-            _tlid,  
-            _wVerMajor,  
-            _wVerMinor);  
-    else  
-        return AfxOleUnregisterClass(m_clsid, m_lpszProgID);  
+    return AfxOleRegisterControlClass(
+    AfxGetInstanceHandle(), 
+    m_clsid, 
+    m_lpszProgID, 
+    IDS_SAMPLE, 
+    IDB_SAMPLE, 
+    afxRegApartmentThreading, 
+    _dwSampleOleMisc, 
+    _tlid, 
+    _wVerMajor, 
+    _wVerMinor);
+
+ else  
+    return AfxOleUnregisterClass(m_clsid,
+    m_lpszProgID);
+
 }  
 ```  
   
- Если проект был создан ControlWizard элемента управления в версии 4.1 Visual C или C\+\+ позже, то этот флажок уже будет в коде.  Никакие изменения не требуются для регистрации потоковой модели.  
+ If your control project was generated by ControlWizard in Visual C++ version 4.1 or later, this flag will already be present in your code. No changes are necessary to register the threading model.  
   
- Если проект был создан в более ранней версии ControlWizard, в существующий код будут иметь логическое значение шестой как параметр.  Если существующий параметр ИСТИНЕН, измените его в  `afxRegInsertable | afxRegApartmentThreading`.  Если существующий параметр ЛОЖЕН, измените его в  `afxRegApartmentThreading`.  
+ If your project was generated by an earlier version of ControlWizard, your existing code will have a Boolean value as the sixth parameter. If the existing parameter is TRUE, change it to `afxRegInsertable | afxRegApartmentThreading`. If the existing parameter is FALSE, change it to `afxRegApartmentThreading`.  
   
- Если элемент управления не удовлетворяет правилам для модели изоляции передавая накапливаемое значение, не следует передавать `afxRegApartmentThreading` в этом параметре.  
+ If your control does not follow the rules for apartment-model threading, you must not pass `afxRegApartmentThreading` in this parameter.  
   
-## См. также  
- [Технические примечания по номеру](../mfc/technical-notes-by-number.md)   
- [Технические примечания по категории](../mfc/technical-notes-by-category.md)
+## <a name="see-also"></a>See Also  
+ [Technical Notes by Number](../mfc/technical-notes-by-number.md)   
+ [Technical Notes by Category](../mfc/technical-notes-by-category.md)
+
+

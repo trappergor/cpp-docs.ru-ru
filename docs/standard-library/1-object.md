@@ -1,5 +1,5 @@
 ---
-title: "Объект _1| Документы Майкрософт"
+title: _1 Object | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -35,17 +35,17 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 86978cd4549f0672dac7cad0e4713380ea189c27
-ms.openlocfilehash: ce86a87e5f22b27c5b1d7eeeeb4edcbcac8e15c7
+ms.translationtype: MT
+ms.sourcegitcommit: 5d026c375025b169d5db8445cbb52c0c917b2d8d
+ms.openlocfilehash: 9001045194ca9a7b96a5ba44ab01b2e7a736be06
 ms.contentlocale: ru-ru
-ms.lasthandoff: 04/18/2017
+ms.lasthandoff: 09/09/2017
 
 ---
-# <a name="1-object"></a>Объект _1
-Заполнители для подстановочных аргументов.  
+# <a name="1-object"></a>_1 Object
+Placeholders for replaceable arguments.  
   
-## <a name="syntax"></a>Синтаксис  
+## <a name="syntax"></a>Syntax  
   
 ```  
 namespace placeholders {  
@@ -54,12 +54,12 @@ namespace placeholders {
  } // namespace placeholders (within std)  
 ```  
   
-## <a name="remarks"></a>Примечания  
- Объекты `_1, _2, ... _M` заполнители назначается первый, второй,..., аргумент мес, соответственно, в вызове функции в объект, возвращаемый [привязки](../standard-library/functional-functions.md#bind). Можно использовать `_N` для указания, куда необходимо вставить N-й аргумент при вычислении выражения привязки.  
+## <a name="remarks"></a>Remarks  
+ The objects `_1, _2, ... _M` are placeholders designating the first, second, ..., Mth argument, respectively in a function call to an object returned by [bind](../standard-library/functional-functions.md#bind). You use `_N` to specify where the Nth argument should be inserted when the bind expression is evaluated.  
   
- В этой реализации значение `M` — 20.  
+ In this implementation the value of `M` is 20.  
   
-## <a name="example"></a>Пример  
+## <a name="example"></a>Example  
   
 ```cpp  
 // std__functional_placeholder.cpp   
@@ -111,12 +111,12 @@ int main()
 3^2 == 9  
 ```  
   
-## <a name="requirements"></a>Требования  
- **Заголовок:** \<functional>  
+## <a name="requirements"></a>Requirements  
+ **Header:** \<functional>  
   
- **Пространство имен:** std  
+ **Namespace:** std  
   
-## <a name="see-also"></a>См. также  
- [BIND](../standard-library/functional-functions.md#bind)   
- [Класс is_placeholder](../standard-library/is-placeholder-class.md)
+## <a name="see-also"></a>See Also  
+ [bind](../standard-library/functional-functions.md#bind)   
+ [is_placeholder Class](../standard-library/is-placeholder-class.md)
 

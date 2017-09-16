@@ -1,5 +1,5 @@
 ---
-title: "Класс CMFCFontInfo | Документы Microsoft"
+title: CMFCFontInfo Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -20,8 +20,12 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- CMFCFontInfo class
-- CMFCFontInfo::CMFCFontInfo constructor
+- CMFCFontInfo [MFC], GetFullName
+- CMFCFontInfo [MFC], m_nCharSet
+- CMFCFontInfo [MFC], m_nPitchAndFamily
+- CMFCFontInfo [MFC], m_nType
+- CMFCFontInfo [MFC], m_strName
+- CMFCFontInfo [MFC], m_strScript
 ms.assetid: f88329b2-d74e-4921-9441-a3bb6536a049
 caps.latest.revision: 26
 author: mikeblome
@@ -41,59 +45,59 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0e0c08ddc57d437c51872b5186ae3fc983bb0199
-ms.openlocfilehash: ac1409bcfce389cbc334edd2b864f7505d7443c7
+ms.translationtype: MT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 5695b70aeb7c91d3471c3077624a067dbe916475
 ms.contentlocale: ru-ru
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 09/12/2017
 
 ---
-# <a name="cmfcfontinfo-class"></a>Класс CMFCFontInfo
-`CMFCFontInfo` Класс описывает имя и другие атрибуты шрифта.  
+# <a name="cmfcfontinfo-class"></a>CMFCFontInfo Class
+The `CMFCFontInfo` class describes the name and other attributes of a font.  
   
-## <a name="syntax"></a>Синтаксис  
+## <a name="syntax"></a>Syntax  
   
 ```  
 class CMFCFontInfo : public CObject  
 ```  
   
-## <a name="members"></a>Члены  
+## <a name="members"></a>Members  
   
-### <a name="public-constructors"></a>Открытые конструкторы  
+### <a name="public-constructors"></a>Public Constructors  
   
-|Имя|Описание|  
+|Name|Description|  
 |----------|-----------------|  
-|`CMFCFontInfo`|Создает объект `CMFCFontInfo`.|  
+|`CMFCFontInfo`|Constructs a `CMFCFontInfo` object.|  
   
-### <a name="public-methods"></a>Открытые методы  
+### <a name="public-methods"></a>Public Methods  
   
-|Имя|Описание|  
+|Name|Description|  
 |----------|-----------------|  
-|[CMFCFontInfo::GetFullName](#getfullname)|Получает сцепленные имена шрифта и его значение (сценарий).|  
+|[CMFCFontInfo::GetFullName](#getfullname)|Retrieves the concatenated names of a font and its character set (script).|  
   
-### <a name="data-members"></a>Элементы данных  
+### <a name="data-members"></a>Data Members  
   
-|Имя|Описание|  
+|Name|Description|  
 |----------|-----------------|  
-|[CMFCFontInfo::m_nCharSet](#m_ncharset)|Значение, указывающее набор символов (сценарий), связанные со шрифтом.|  
-|[CMFCFontInfo::m_nPitchAndFamily](#m_npitchandfamily)|Значение, указывающее шаг и семейство шрифта.|  
-|[CMFCFontInfo::m_nType](#m_ntype)|Значение, указывающее тип шрифта.|  
-|[CMFCFontInfo::m_strName](#m_strname)|Имя шрифта; например **Arial**.|  
-|[CMFCFontInfo::m_strScript](#m_strscript)|Имя набора символов (сценарий), связанные со шрифтом.|  
+|[CMFCFontInfo::m_nCharSet](#m_ncharset)|A value that specifies the character set (script) associated with the font.|  
+|[CMFCFontInfo::m_nPitchAndFamily](#m_npitchandfamily)|A value that specifies the pitch and family of the font.|  
+|[CMFCFontInfo::m_nType](#m_ntype)|A value that specifies the type of the font.|  
+|[CMFCFontInfo::m_strName](#m_strname)|The name of the font; for example, **Arial**.|  
+|[CMFCFontInfo::m_strScript](#m_strscript)|The name of a character set (script) associated with the font.|  
   
-## <a name="remarks"></a>Примечания  
- Можно присоединить `CMFCFontInfo` объект для элемента [CMFCToolBarFontComboBox класса](../../mfc/reference/cmfctoolbarfontcombobox-class.md) класса. Вызов [CMFCToolBarFontComboBox::GetFontDesc](../../mfc/reference/cmfctoolbarfontcombobox-class.md#getfontdesc) метод, чтобы получить указатель на `CMFCFontInfo` объект.  
+## <a name="remarks"></a>Remarks  
+ You can attach a `CMFCFontInfo` object to an item of the [CMFCToolBarFontComboBox Class](../../mfc/reference/cmfctoolbarfontcombobox-class.md) class. Call the [CMFCToolBarFontComboBox::GetFontDesc](../../mfc/reference/cmfctoolbarfontcombobox-class.md#getfontdesc) method to retrieve a pointer to a `CMFCFontInfo` object.  
   
-## <a name="example"></a>Пример  
- Следующий пример демонстрирует, как использовать различные члены `CMFCFontInfo` класса. В примере показано, как получить `CMFCFontInfo` объекта из `CMFCRibbonFontComboBox`и как получить доступ к ее локальных переменных. Этот пример является частью [2007 демонстрационного MSOffice](../../visual-cpp-samples.md).  
+## <a name="example"></a>Example  
+ The following example demonstrates how to use various members of the `CMFCFontInfo` class. The example demonstrates how to get a `CMFCFontInfo` object from a `CMFCRibbonFontComboBox`, and how to access its local variables. This example is part of the [MSOffice 2007 Demo sample](../../visual-cpp-samples.md).  
   
- [!code-cpp[NVC_MFC_MSOffice2007Demo №&6;](../../mfc/reference/codesnippet/cpp/cmfcfontinfo-class_1.cpp)]  
+ [!code-cpp[NVC_MFC_MSOffice2007Demo#6](../../mfc/reference/codesnippet/cpp/cmfcfontinfo-class_1.cpp)]  
   
-## <a name="requirements"></a>Требования  
- **Заголовок:** afxtoolbarfontcombobox.h  
+## <a name="requirements"></a>Requirements  
+ **Header:** afxtoolbarfontcombobox.h  
   
-##  <a name="cmfcfontinfo"></a>CMFCFontInfo::CMFCFontInfo  
- Создает объект `CMFCFontInfo`.  
+##  <a name="cmfcfontinfo"></a>  CMFCFontInfo::CMFCFontInfo  
+ Constructs a `CMFCFontInfo` object.  
   
 ```  
 CMFCFontInfo(
@@ -106,96 +110,96 @@ CMFCFontInfo(
 CMFCFontInfo(const CMFCFontInfo& src);
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
  [in] `lpszName`  
- Имя шрифта. Дополнительные сведения см. в разделе `lfFaceName` членом [LOGFONT](http://msdn.microsoft.com/library/windows/desktop/dd145037) структуры.  
+ The name of the font. For more information, see the `lfFaceName` member of the [LOGFONT](http://msdn.microsoft.com/library/windows/desktop/dd145037) structure.  
   
  [in] `lpszScript`  
- Имя шрифта сценарий (набор символов).  
+ The name of the script (character set) of the font.  
   
  [in] `nCharSet`  
- Значение, указывающее набор символов (сценарий) шрифта. Дополнительные сведения см. в разделе `lfCharSet` членом [LOGFONT](http://msdn.microsoft.com/library/windows/desktop/dd145037) структуры.  
+ A value that specifies the character set (script) of the font. For more information, see the `lfCharSet` member of the [LOGFONT](http://msdn.microsoft.com/library/windows/desktop/dd145037) structure.  
   
  [in] `nPitchAndFamily`  
- Значение, указывающее шаг и семейство шрифта. Дополнительные сведения см. в разделе `lfPitchAndFamily` членом [LOGFONT](http://msdn.microsoft.com/library/windows/desktop/dd145037) структуры.  
+ A value that specifies the pitch and family of the font. For more information, see the `lfPitchAndFamily` member of the [LOGFONT](http://msdn.microsoft.com/library/windows/desktop/dd145037) structure.  
   
  [in] `nType`  
- Значение, указывающее тип шрифта. Этот параметр может иметь побитовое сочетание (или) DEVICE_FONTTYPE, RASTER_FONTTYPE и TRUETYPE_FONTTYPE.  
+ A value that specifies the font type. This parameter can be a bitwise combination (OR) of DEVICE_FONTTYPE, RASTER_FONTTYPE, and TRUETYPE_FONTTYPE.  
   
  [in] `src`  
- Существующий `CMFCFontInfo` , члены которого используются для создания данного объекта `CMFCFontInfo` объекта.  
+ An existing `CMFCFontInfo` object whose members are used to construct this `CMFCFontInfo` object.  
   
-### <a name="return-value"></a>Возвращаемое значение  
+### <a name="return-value"></a>Return Value  
   
-### <a name="remarks"></a>Примечания  
- В этой документации термины *кодировку* и *сценарий* взаимозаменяемо. Объект *сценарий*, который называется также системе письма, — это совокупность символов и правила для записи этих символов в одном или нескольких языках. Коллекция символов включает алфавит и знаки препинания, используемые в скрипте. Например его говорят в США, а его алфавита включает символы от A до Z латинского алфавита используется для английского языка. `lfCharSet` Членом [LOGFONT](http://msdn.microsoft.com/library/windows/desktop/dd145037) структура определяет набор символов. Например, значение `ANSI_CHARSET` указывает [!INCLUDE[vcpransi](../../atl-mfc-shared/reference/includes/vcpransi_md.md)] набор символов, который включает в себя алфавита латинского алфавита.  
+### <a name="remarks"></a>Remarks  
+ This documentation uses the terms *character set* and *script* interchangeably. A *script*, which is also known as a writing system, is a collection of characters and rules for writing those characters in one or more languages. The collection of characters includes the alphabet and punctuation used in that script. For example, Latin script is used for English as it is spoken in the United States, and its alphabet includes the characters from A through Z. The `lfCharSet` member of the [LOGFONT](http://msdn.microsoft.com/library/windows/desktop/dd145037) structure specifies a character set. For example, the value `ANSI_CHARSET` specifies the [!INCLUDE[vcpransi](../../atl-mfc-shared/reference/includes/vcpransi_md.md)] character set, which includes the alphabet of the Latin script.  
   
-##  <a name="getfullname"></a>CMFCFontInfo::GetFullName  
- Получает сцепленные имена шрифта и его значение (сценарий).  
+##  <a name="getfullname"></a>  CMFCFontInfo::GetFullName  
+ Retrieves the concatenated names of a font and its character set (script).  
   
 ```  
 CString GetFullName() const;  
 ```  
   
-### <a name="return-value"></a>Возвращаемое значение  
- Строка, содержащая имя шрифта и сценарий.  
+### <a name="return-value"></a>Return Value  
+ A string that contains the font name and script.  
   
-### <a name="remarks"></a>Примечания  
- Используйте этот метод для получения полного имени шрифта. Например, если имя шрифта будет `Arial` и начертание шрифта `Cyrillic`, этот метод возвращает «Arial (кириллица)».  
+### <a name="remarks"></a>Remarks  
+ Use this method to obtain the full name of the font. For example, if the font name is is `Arial` and the font script is `Cyrillic`, this method returns "Arial (Cyrillic)".  
   
-##  <a name="m_ncharset"></a>CMFCFontInfo::m_nCharSet  
- Значение, указывающее набор символов (сценарий), связанные со шрифтом.  
+##  <a name="m_ncharset"></a>  CMFCFontInfo::m_nCharSet  
+ A value that specifies the character set (script) associated with the font.  
   
 ```  
 const BYTE m_nCharSet;  
 ```  
   
-### <a name="remarks"></a>Примечания  
- Дополнительные сведения см. в разделе `nCharSet` параметр [CMFCFontInfo::CMFCFontInfo](#cmfcfontinfo) конструктор.  
+### <a name="remarks"></a>Remarks  
+ For more information, see the `nCharSet` parameter of the [CMFCFontInfo::CMFCFontInfo](#cmfcfontinfo) constructor.  
   
-##  <a name="m_npitchandfamily"></a>CMFCFontInfo::m_nPitchAndFamily  
- Значение, указывающее высоту (размер) и семейство шрифта (например, serif, sans-serif и моноширинный).  
+##  <a name="m_npitchandfamily"></a>  CMFCFontInfo::m_nPitchAndFamily  
+ A value that specifies the pitch (point size) and family (for example, serif, sans-serif, and monospace) of the font.  
   
 ```  
 const BYTE m_nPitchAndFamily;  
 ```  
   
-### <a name="remarks"></a>Примечания  
- Дополнительные сведения см. в разделе `nPitchAndFamily` параметр [CMFCFontInfo::CMFCFontInfo](#cmfcfontinfo) конструктор.  
+### <a name="remarks"></a>Remarks  
+ For more information, see the `nPitchAndFamily` parameter of the [CMFCFontInfo::CMFCFontInfo](#cmfcfontinfo) constructor.  
   
-##  <a name="m_ntype"></a>CMFCFontInfo::m_nType  
- Значение, указывающее тип шрифта.  
+##  <a name="m_ntype"></a>  CMFCFontInfo::m_nType  
+ A value that specifies the type of the font.  
   
 ```  
 const int m_nType;  
 ```  
   
-### <a name="remarks"></a>Примечания  
- Дополнительные сведения см. в разделе `nType` параметр [CMFCFontInfo::CMFCFontInfo](#cmfcfontinfo) конструктор.  
+### <a name="remarks"></a>Remarks  
+ For more information, see the `nType` parameter of the [CMFCFontInfo::CMFCFontInfo](#cmfcfontinfo) constructor.  
   
-##  <a name="m_strname"></a>CMFCFontInfo::m_strName  
- Имя шрифта: например, **Arial**.  
+##  <a name="m_strname"></a>  CMFCFontInfo::m_strName  
+ The name of the font: for example, **Arial**.  
   
 ```  
 const CString m_strName;  
 ```  
   
-### <a name="remarks"></a>Примечания  
- Дополнительные сведения см. в разделе `lpszName` параметр [CMFCFontInfo::CMFCFontInfo](#cmfcfontinfo) конструктор.  
+### <a name="remarks"></a>Remarks  
+ For more information, see the `lpszName` parameter of the [CMFCFontInfo::CMFCFontInfo](#cmfcfontinfo) constructor.  
   
-##  <a name="m_strscript"></a>CMFCFontInfo::m_strScript  
- Имя набора символов (сценарий), связанные со шрифтом.  
+##  <a name="m_strscript"></a>  CMFCFontInfo::m_strScript  
+ The name of a character set (script) associated with the font.  
   
 ```  
 const CString m_strScript;  
 ```  
   
-### <a name="remarks"></a>Примечания  
- Дополнительные сведения см. в разделе `lpszScript` параметр [CMFCFontInfo::CMFCFontInfo](#cmfcfontinfo) конструктор.  
+### <a name="remarks"></a>Remarks  
+ For more information, see the `lpszScript` parameter of the [CMFCFontInfo::CMFCFontInfo](#cmfcfontinfo) constructor.  
   
-## <a name="see-also"></a>См. также  
- [Диаграмма иерархии](../../mfc/hierarchy-chart.md)   
- [Классы](../../mfc/reference/mfc-classes.md)   
- [Класс CMFCToolBarFontComboBox](../../mfc/reference/cmfctoolbarfontcombobox-class.md)   
- [Класс CMFCToolBarFontSizeComboBox](../../mfc/reference/cmfctoolbarfontsizecombobox-class.md)
+## <a name="see-also"></a>See Also  
+ [Hierarchy Chart](../../mfc/hierarchy-chart.md)   
+ [Classes](../../mfc/reference/mfc-classes.md)   
+ [CMFCToolBarFontComboBox Class](../../mfc/reference/cmfctoolbarfontcombobox-class.md)   
+ [CMFCToolBarFontSizeComboBox Class](../../mfc/reference/cmfctoolbarfontsizecombobox-class.md)
 

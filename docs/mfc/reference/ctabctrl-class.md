@@ -1,5 +1,5 @@
 ---
-title: "CTabCtrl-класс | Документы Microsoft"
+title: CTabCtrl Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -47,9 +47,39 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- tab controls
-- CTabCtrl class, common controls
-- CTabCtrl class
+- CTabCtrl [MFC], CTabCtrl
+- CTabCtrl [MFC], AdjustRect
+- CTabCtrl [MFC], Create
+- CTabCtrl [MFC], CreateEx
+- CTabCtrl [MFC], DeleteAllItems
+- CTabCtrl [MFC], DeleteItem
+- CTabCtrl [MFC], DeselectAll
+- CTabCtrl [MFC], DrawItem
+- CTabCtrl [MFC], GetCurFocus
+- CTabCtrl [MFC], GetCurSel
+- CTabCtrl [MFC], GetExtendedStyle
+- CTabCtrl [MFC], GetImageList
+- CTabCtrl [MFC], GetItem
+- CTabCtrl [MFC], GetItemCount
+- CTabCtrl [MFC], GetItemRect
+- CTabCtrl [MFC], GetItemState
+- CTabCtrl [MFC], GetRowCount
+- CTabCtrl [MFC], GetToolTips
+- CTabCtrl [MFC], HighlightItem
+- CTabCtrl [MFC], HitTest
+- CTabCtrl [MFC], InsertItem
+- CTabCtrl [MFC], RemoveImage
+- CTabCtrl [MFC], SetCurFocus
+- CTabCtrl [MFC], SetCurSel
+- CTabCtrl [MFC], SetExtendedStyle
+- CTabCtrl [MFC], SetImageList
+- CTabCtrl [MFC], SetItem
+- CTabCtrl [MFC], SetItemExtra
+- CTabCtrl [MFC], SetItemSize
+- CTabCtrl [MFC], SetItemState
+- CTabCtrl [MFC], SetMinTabWidth
+- CTabCtrl [MFC], SetPadding
+- CTabCtrl [MFC], SetToolTips
 ms.assetid: 42e4aff6-46ae-4b2c-beaa-d1dce8d82138
 caps.latest.revision: 21
 author: mikeblome
@@ -69,75 +99,75 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3f91eafaf3b5d5c1b8f96b010206d699f666e224
-ms.openlocfilehash: 150b11e4989cd45ba2a8065c86c07510d00c346c
+ms.translationtype: MT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 5714de6c675d433320ce3095205b4c78f9701323
 ms.contentlocale: ru-ru
-ms.lasthandoff: 04/01/2017
+ms.lasthandoff: 09/12/2017
 
 ---
-# <a name="ctabctrl-class"></a>CTabCtrl-класс
-Предоставляет функциональные возможности стандартного элемента управления "вкладка" Windows.  
+# <a name="ctabctrl-class"></a>CTabCtrl Class
+Provides the functionality of the Windows common tab control.  
   
-## <a name="syntax"></a>Синтаксис  
+## <a name="syntax"></a>Syntax  
   
 ```  
 class CTabCtrl : public CWnd  
 ```  
   
-## <a name="members"></a>Члены  
+## <a name="members"></a>Members  
   
-### <a name="public-constructors"></a>Открытые конструкторы  
+### <a name="public-constructors"></a>Public Constructors  
   
-|Имя|Описание|  
+|Name|Description|  
 |----------|-----------------|  
-|[CTabCtrl::CTabCtrl](#ctabctrl)|Создает объект `CTabCtrl`.|  
+|[CTabCtrl::CTabCtrl](#ctabctrl)|Constructs a `CTabCtrl` object.|  
   
-### <a name="public-methods"></a>Открытые методы  
+### <a name="public-methods"></a>Public Methods  
   
-|Имя|Описание|  
+|Name|Description|  
 |----------|-----------------|  
-|[CTabCtrl::AdjustRect](#adjustrect)|Вычисляет отображаемую область элемента управления tab указанным прямоугольником окна или вычисляет окна прямоугольник, который будет соответствовать данной отображаемой области.|  
-|[CTabCtrl::Create](#create)|Создает набор вкладок и прикрепляет его к экземпляру `CTabCtrl` объекта.|  
-|[CTabCtrl::CreateEx](#createex)|Создает элемент управления вкладки с указанным расширенные стили Windows и прикрепляет его к экземпляру `CTabCtrl` объекта.|  
-|[CTabCtrl::DeleteAllItems](#deleteallitems)|Удаляет все элементы из элемента управления tab.|  
-|[CTabCtrl::DeleteItem](#deleteitem)|Удаляет элемент из элемента управления tab.|  
-|[CTabCtrl::DeselectAll](#deselectall)|Сбрасывает элементов в элементе управления вкладками, сбросить были нажаты.|  
-|[CTabCtrl::DrawItem](#drawitem)|Рисует указанный элемент управления "Вкладка".|  
-|[CTabCtrl::GetCurFocus](#getcurfocus)|Извлекает вкладку с текущего местоположения элемента управления вкладками.|  
-|[CTabCtrl::GetCurSel](#getcursel)|Определяет выбранной вкладки в элементе управления вкладками.|  
-|[CTabCtrl::GetExtendedStyle](#getextendedstyle)|Извлекает расширенные стили, которые в настоящее время используются для управления "Вкладка".|  
-|[CTabCtrl::GetImageList](#getimagelist)|Извлекает список изображений, связанных с элементом управления tab.|  
-|[CTabCtrl::GetItem](#getitem)|Извлекает сведения о вкладке в элементе управления вкладками.|  
-|[CTabCtrl::GetItemCount](#getitemcount)|Возвращает число вкладок в наборе вкладок.|  
-|[CTabCtrl::GetItemRect](#getitemrect)|Возвращает ограничивающий прямоугольник для вкладки в элементе управления вкладками.|  
-|[CTabCtrl::GetItemState](#getitemstate)|Получает состояние элемента управления для указанной вкладки.|  
-|[CTabCtrl::GetRowCount](#getrowcount)|Получает текущее число рядов вкладок в наборе вкладок.|  
-|[CTabCtrl::GetToolTips](#gettooltips)|Извлекает дескриптор управления всплывающей подсказки, связанный с элементом управления tab.|  
-|[CTabCtrl::HighlightItem](#highlightitem)|Задает состояние выделения элемента вкладки.|  
-|[CTabCtrl::HitTest](#hittest)|Определяет, какие вкладки, с указанными экранными позиции.|  
-|[CTabCtrl::InsertItem](#insertitem)|Вставляет новую вкладку в элементе управления вкладками.|  
-|[CTabCtrl::RemoveImage](#removeimage)|Удаляет изображение из списка изображений элемента управления tab.|  
-|[CTabCtrl::SetCurFocus](#setcurfocus)|Устанавливает фокус на указанной вкладки в элементе управления вкладками.|  
-|[CTabCtrl::SetCurSel](#setcursel)|Выбор вкладки в элементе управления вкладками.|  
-|[CTabCtrl::SetExtendedStyle](#setextendedstyle)|Задает расширенные стили для элемента управления tab.|  
-|[CTabCtrl::SetImageList](#setimagelist)|Назначает списка изображений элемента управления tab.|  
-|[CTabCtrl::SetItem](#setitem)|Задает некоторые или все атрибуты "Вкладка".|  
-|[CTabCtrl::SetItemExtra](#setitemextra)|Задает число байтов для табуляции, зарезервированных для определяемых приложением данных в элементе управления вкладками.|  
-|[CTabCtrl::SetItemSize](#setitemsize)|Задает ширину и высоту элемента.|  
-|[CTabCtrl::SetItemState](#setitemstate)|Задает состояние элемента управления указанной вкладки.|  
-|[CTabCtrl::SetMinTabWidth](#setmintabwidth)|Задает минимальную ширину элементов в элементе управления вкладками.|  
-|[CTabCtrl::SetPadding](#setpadding)|Задает объем пространства (заполнения) вокруг значка каждой вкладки и подписи в элементе управления вкладками.|  
-|[CTabCtrl::SetToolTips](#settooltips)|Назначает всплывающая подсказка элемента управления tab.|  
+|[CTabCtrl::AdjustRect](#adjustrect)|Calculates a tab control's display area given a window rectangle, or calculates the window rectangle that would correspond to a given display area.|  
+|[CTabCtrl::Create](#create)|Creates a tab control and attaches it to an instance of a `CTabCtrl` object.|  
+|[CTabCtrl::CreateEx](#createex)|Creates a tab control with the specified Windows extended styles and attaches it to an instance of a `CTabCtrl` object.|  
+|[CTabCtrl::DeleteAllItems](#deleteallitems)|Removes all items from a tab control.|  
+|[CTabCtrl::DeleteItem](#deleteitem)|Removes an item from a tab control.|  
+|[CTabCtrl::DeselectAll](#deselectall)|Resets items in a tab control, clearing any that were pressed.|  
+|[CTabCtrl::DrawItem](#drawitem)|Draws a specified item of a tab control.|  
+|[CTabCtrl::GetCurFocus](#getcurfocus)|Retrieves the tab with the current focus of a tab control.|  
+|[CTabCtrl::GetCurSel](#getcursel)|Determines the currently selected tab in a tab control.|  
+|[CTabCtrl::GetExtendedStyle](#getextendedstyle)|Retrieves the extended styles that are currently in use for the tab control.|  
+|[CTabCtrl::GetImageList](#getimagelist)|Retrieves the image list associated with a tab control.|  
+|[CTabCtrl::GetItem](#getitem)|Retrieves information about a tab in a tab control.|  
+|[CTabCtrl::GetItemCount](#getitemcount)|Retrieves the number of tabs in the tab control.|  
+|[CTabCtrl::GetItemRect](#getitemrect)|Retrieves the bounding rectangle for a tab in a tab control.|  
+|[CTabCtrl::GetItemState](#getitemstate)|Retrieves the state of the indicated tab control item.|  
+|[CTabCtrl::GetRowCount](#getrowcount)|Retrieves the current number of rows of tabs in a tab control.|  
+|[CTabCtrl::GetToolTips](#gettooltips)|Retrieves the handle of the tool tip control associated with a tab control.|  
+|[CTabCtrl::HighlightItem](#highlightitem)|Sets the highlight state of a tab item.|  
+|[CTabCtrl::HitTest](#hittest)|Determines which tab, if any, is at a specified screen position.|  
+|[CTabCtrl::InsertItem](#insertitem)|Inserts a new tab in a tab control.|  
+|[CTabCtrl::RemoveImage](#removeimage)|Removes an image from a tab control's image list.|  
+|[CTabCtrl::SetCurFocus](#setcurfocus)|Sets the focus to a specified tab in a tab control.|  
+|[CTabCtrl::SetCurSel](#setcursel)|Selects a tab in a tab control.|  
+|[CTabCtrl::SetExtendedStyle](#setextendedstyle)|Sets the extended styles for a tab control.|  
+|[CTabCtrl::SetImageList](#setimagelist)|Assigns an image list to a tab control.|  
+|[CTabCtrl::SetItem](#setitem)|Sets some or all of a tab's attributes.|  
+|[CTabCtrl::SetItemExtra](#setitemextra)|Sets the number of bytes per tab reserved for application-defined data in a tab control.|  
+|[CTabCtrl::SetItemSize](#setitemsize)|Sets the width and height of an item.|  
+|[CTabCtrl::SetItemState](#setitemstate)|Sets the state of the indicated tab control item.|  
+|[CTabCtrl::SetMinTabWidth](#setmintabwidth)|Sets the minimum width of items in a tab control.|  
+|[CTabCtrl::SetPadding](#setpadding)|Sets the amount of space (padding) around each tab's icon and label in a tab control.|  
+|[CTabCtrl::SetToolTips](#settooltips)|Assigns a tool tip control to a tab control.|  
   
-## <a name="remarks"></a>Примечания  
- «Вкладка» является аналогом разделителей в записной книжке или меток в картотеке. С помощью элемента управления "Вкладка" приложение может определить несколько страниц для одной области окна или диалогового окна. Каждая страница состоит из набора сведений или группы элементов управления, которые приложение отображает, когда пользователь выбирает соответствующую вкладку. Специальный тип элемента управления "Вкладка" отображает вкладки, которые выглядят как кнопки. Нажатие кнопки следует немедленно выполнить команду вместо отображения страницы.  
+## <a name="remarks"></a>Remarks  
+ A "tab control" is analogous to the dividers in a notebook or the labels in a file cabinet. By using a tab control, an application can define multiple pages for the same area of a window or dialog box. Each page consists of a set of information or a group of controls that the application displays when the user selects the corresponding tab. A special type of tab control displays tabs that look like buttons. Clicking a button should immediately perform a command instead of displaying a page.  
   
- Этот элемент управления (и, следовательно, `CTabCtrl` класс) доступен только для программ, работающих в Windows 95/98 и Windows NT версии 3.51 и более поздних.  
+ This control (and therefore the `CTabCtrl` class) is available only to programs running under Windows 95/98 and Windows NT version 3.51 and later.  
   
- Дополнительные сведения об использовании `CTabCtrl`, в разделе [элементов управления](../../mfc/controls-mfc.md) и [использование CTabCtrl](../../mfc/using-ctabctrl.md).  
+ For more information on using `CTabCtrl`, see [Controls](../../mfc/controls-mfc.md) and [Using CTabCtrl](../../mfc/using-ctabctrl.md).  
   
-## <a name="inheritance-hierarchy"></a>Иерархия наследования  
+## <a name="inheritance-hierarchy"></a>Inheritance Hierarchy  
  [CObject](../../mfc/reference/cobject-class.md)  
   
  [CCmdTarget](../../mfc/reference/ccmdtarget-class.md)  
@@ -146,28 +176,28 @@ class CTabCtrl : public CWnd
   
  `CTabCtrl`  
   
-## <a name="requirements"></a>Требования  
- **Заголовок:** afxcmn.h  
+## <a name="requirements"></a>Requirements  
+ **Header:** afxcmn.h  
   
-##  <a name="adjustrect"></a>CTabCtrl::AdjustRect  
- Вычисляет отображаемую область элемента управления tab указанным прямоугольником окна или вычисляет окна прямоугольник, который будет соответствовать данной отображаемой области.  
+##  <a name="adjustrect"></a>  CTabCtrl::AdjustRect  
+ Calculates a tab control's display area given a window rectangle, or calculates the window rectangle that would correspond to a given display area.  
   
 ```  
 void AdjustRect(BOOL bLarger,   LPRECT lpRect);
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
  `bLarger`  
- Указывает операцию для выполнения. Если этот параметр имеет **TRUE**, `lpRect` указывает отображаемый прямоугольник и получает соответствующие прямоугольника окна. Если этот параметр имеет **FALSE**, `lpRect` указывает прямоугольник окна и получает соответствующие отображаемый прямоугольник.  
+ Indicates which operation to perform. If this parameter is **TRUE**, `lpRect` specifies a display rectangle and receives the corresponding window rectangle. If this parameter is **FALSE**, `lpRect` specifies a window rectangle and receives the corresponding display rectangle.  
   
  `lpRect`  
- Указатель на [RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897) структуру, которая указывает заданного прямоугольника и получает расчетный прямоугольник.  
+ Pointer to a [RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897) structure that specifies the given rectangle and receives the calculated rectangle.  
   
-### <a name="example"></a>Пример  
- [!code-cpp[NVC_MFC_CTabCtrl #1](../../mfc/reference/codesnippet/cpp/ctabctrl-class_1.cpp)]  
+### <a name="example"></a>Example  
+ [!code-cpp[NVC_MFC_CTabCtrl#1](../../mfc/reference/codesnippet/cpp/ctabctrl-class_1.cpp)]  
   
-##  <a name="create"></a>CTabCtrl::Create  
- Создает набор вкладок и прикрепляет его к экземпляру `CTabCtrl` объекта.  
+##  <a name="create"></a>  CTabCtrl::Create  
+ Creates a tab control and attaches it to an instance of a `CTabCtrl` object.  
   
 ```  
 virtual BOOL Create(
@@ -177,44 +207,44 @@ virtual BOOL Create(
     UINT nID);
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
  `dwStyle`  
- Задает стиль элемента управления tab. Примените любое сочетание [вкладке Стили элемента управления](http://msdn.microsoft.com/library/windows/desktop/bb760549), описанном в статье [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]. В разделе **примечания** список стилей окна, которые также можно применить к элементу управления.  
+ Specifies the tab control's style. Apply any combination of [tab control styles](http://msdn.microsoft.com/library/windows/desktop/bb760549), described in the Windows SDK. See **Remarks** for a list of window styles that you can also apply to the control.  
   
  `rect`  
- Задает размер и положение элемента управления tab. Это может быть либо [CRect](../../atl-mfc-shared/reference/crect-class.md) объекта или [RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897) структуры.  
+ Specifies the tab control's size and position. It can be either a [CRect](../../atl-mfc-shared/reference/crect-class.md) object or a [RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897) structure.  
   
  `pParentWnd`  
- Указывает родительскому окну элемента управления tab, обычно `CDialog`. Он не должен быть **NULL**.  
+ Specifies the tab control's parent window, usually a `CDialog`. It must not be **NULL**.  
   
  `nID`  
- Указывает идентификатор элемента управления tab.  
+ Specifies the tab control's ID.  
   
-### <a name="return-value"></a>Возвращаемое значение  
- **Значение TRUE,** при инициализации объекта выполнен успешно; в противном случае **FALSE**.  
+### <a name="return-value"></a>Return Value  
+ **TRUE** if initialization of the object was successful; otherwise **FALSE**.  
   
-### <a name="remarks"></a>Примечания  
- Создании `CTabCtrl` объекта в два этапа. Во-первых, вызовите конструктор, а затем вызвать **создать**, который создает вкладок элемента управления и прикрепляет его к `CTabCtrl` объекта.  
+### <a name="remarks"></a>Remarks  
+ You construct a `CTabCtrl` object in two steps. First, call the constructor, and then call **Create**, which creates the tab control and attaches it to the `CTabCtrl` object.  
   
- Помимо стили элемента управления tab можно применить следующие стили окна для элемента управления tab.  
+ In addition to tab control styles, you can apply the following window styles to a tab control:  
   
-- **WS_CHILD** создает дочернее окно, представляющий набор вкладок. Нельзя использовать с `WS_POPUP` стиля.  
+- **WS_CHILD** Creates a child window that represents the tab control. Cannot be used with the `WS_POPUP` style.  
   
-- **WS_VISIBLE** создает элемент управления вкладки, изначально является видимым.  
+- **WS_VISIBLE** Creates a tab control that is initially visible.  
   
-- **WS_DISABLED** создает окно, которое изначально отключены.  
+- **WS_DISABLED** Creates a window that is initially disabled.  
   
-- **WS_GROUP** определяет первый элемент группы элементов управления, в которых пользователь может перемещать из одного элемента управления к другому с помощью клавиш со стрелками. Все элементы управления, имеющий **WS_GROUP** стиль после первого элемента управления принадлежать одной группе. Следующий элемент управления с **WS_GROUP** стиль завершает стиль группы и запуске следующей группы (то есть одна группа заканчивается до начала следующего).  
+- **WS_GROUP** Specifies the first control of a group of controls in which the user can move from one control to the next with the arrow keys. All controls defined with the **WS_GROUP** style after the first control belong to the same group. The next control with the **WS_GROUP** style ends the style group and starts the next group (that is, one group ends where the next begins).  
   
-- **WS_TABSTOP** указывает один из любое число элементов управления с помощью которых можно перемещаться с помощью клавиши TAB. Пользователь перемещается клавишей TAB к следующему элементу управления, определяемое **WS_TABSTOP** стиля.  
+- **WS_TABSTOP** Specifies one of any number of controls through which the user can move by using the TAB key. The TAB key moves the user to the next control specified by the **WS_TABSTOP** style.  
   
- Чтобы создать набор вкладок с расширенные стили окна, вызовите [CTabCtrl::CreateEx](#createex) вместо **создать**.  
+ To create a tab control with extended window styles, call [CTabCtrl::CreateEx](#createex) instead of **Create**.  
   
-### <a name="example"></a>Пример  
- [!code-cpp[NVC_MFC_CTabCtrl #2](../../mfc/reference/codesnippet/cpp/ctabctrl-class_2.cpp)]  
+### <a name="example"></a>Example  
+ [!code-cpp[NVC_MFC_CTabCtrl#2](../../mfc/reference/codesnippet/cpp/ctabctrl-class_2.cpp)]  
   
-##  <a name="createex"></a>CTabCtrl::CreateEx  
- Создает элемент управления (дочернего окна) и связывает его с `CTabCtrl` объекта.  
+##  <a name="createex"></a>  CTabCtrl::CreateEx  
+ Creates a control (a child window) and associates it with the `CTabCtrl` object.  
   
 ```  
 virtual BOOL CreateEx(
@@ -225,222 +255,222 @@ virtual BOOL CreateEx(
     UINT nID);
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
  `dwExStyle`  
- Указывает расширенный стиль создаваемого элемента управления. Список расширенных стилей Windows см. в разделе `dwExStyle` параметр [CreateWindowEx](http://msdn.microsoft.com/library/windows/desktop/ms632680) в [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
+ Specifies the extended style of the control being created. For a list of extended Windows styles, see the `dwExStyle` parameter for [CreateWindowEx](http://msdn.microsoft.com/library/windows/desktop/ms632680) in the Windows SDK.  
   
  `dwStyle`  
- Задает стиль элемента управления tab. Примените любое сочетание [вкладке Стили элемента управления](http://msdn.microsoft.com/library/windows/desktop/bb760549), описанном в статье [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]. В разделе **примечания** в [создать](#create) список стилей окна, которые также можно применить к элементу управления.  
+ Specifies the tab control's style. Apply any combination of [tab control styles](http://msdn.microsoft.com/library/windows/desktop/bb760549), described in the Windows SDK. See **Remarks** in [Create](#create) for a list of window styles that you can also apply to the control.  
   
  `rect`  
- Ссылку на [RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897) структура, описывающая размер и положение окна будет создан в клиентские координаты `pParentWnd`.  
+ A reference to a [RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897) structure describing the size and position of the window to be created, in client coordinates of `pParentWnd`.  
   
  `pParentWnd`  
- Указатель на окно, который является родительским для элемента управления.  
+ A pointer to the window that is the control's parent.  
   
  `nID`  
- Идентификатор элемента управления дочернего окна.  
+ The control's child-window ID.  
   
-### <a name="return-value"></a>Возвращаемое значение  
- Ненулевое значение, в случае успешного выполнения в противном случае — 0.  
+### <a name="return-value"></a>Return Value  
+ Nonzero if successful otherwise 0.  
   
-### <a name="remarks"></a>Примечания  
- Используйте `CreateEx` вместо [создать](#create) для применения расширенные стили Windows, заданные вводной части расширенный стиль Windows **WS_EX_**.  
+### <a name="remarks"></a>Remarks  
+ Use `CreateEx` instead of [Create](#create) to apply extended Windows styles, specified by the Windows extended style preface **WS_EX_**.  
   
- `CreateEx`Создает элемент управления с расширенные стили Windows, указанные для `dwExStyle`. Расширенные стили, определенные для элемента управления с помощью набора [SetExtendedStyle](#setextendedstyle). Например, использовать `CreateEx` задание стилей, таких как **WS_EX_CONTEXTHELP**, но использовать `SetExtendedStyle` задание стилей, таких как **TCS_EX_FLATSEPARATORS**. Дополнительные сведения см. в разделе стили, описанные в [вкладку управления расширенные стили](http://msdn.microsoft.com/library/windows/desktop/bb760546) в [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
+ `CreateEx` creates the control with the extended Windows styles specified by `dwExStyle`. Set extended styles specific to a control using [SetExtendedStyle](#setextendedstyle). For example, use `CreateEx` to set such styles as **WS_EX_CONTEXTHELP**, but use `SetExtendedStyle` to set such styles as **TCS_EX_FLATSEPARATORS**. For more information, see the styles described in [Tab Control Extended Styles](http://msdn.microsoft.com/library/windows/desktop/bb760546) in the Windows SDK.  
   
-##  <a name="ctabctrl"></a>CTabCtrl::CTabCtrl  
- Создает объект `CTabCtrl`.  
+##  <a name="ctabctrl"></a>  CTabCtrl::CTabCtrl  
+ Constructs a `CTabCtrl` object.  
   
 ```  
 CTabCtrl();
 ```  
   
-##  <a name="deleteallitems"></a>CTabCtrl::DeleteAllItems  
- Удаляет все элементы из элемента управления tab.  
+##  <a name="deleteallitems"></a>  CTabCtrl::DeleteAllItems  
+ Removes all items from a tab control.  
   
 ```  
 BOOL DeleteAllItems();
 ```  
   
-### <a name="return-value"></a>Возвращаемое значение  
- Имеет ненулевое значение в случае успешного выполнения, иначе — 0.  
+### <a name="return-value"></a>Return Value  
+ Nonzero if successful; otherwise 0.  
   
-##  <a name="deleteitem"></a>CTabCtrl::DeleteItem  
- Удаляет заданный элемент из элемента управления tab.  
+##  <a name="deleteitem"></a>  CTabCtrl::DeleteItem  
+ Removes the specified item from a tab control.  
   
 ```  
 BOOL DeleteItem(int nItem);
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
  `nItem`  
- Отсчитываемый от нуля значение элемента для удаления.  
+ Zero-based value of the item to delete.  
   
-### <a name="return-value"></a>Возвращаемое значение  
- Имеет ненулевое значение в случае успешного выполнения, иначе — 0.  
+### <a name="return-value"></a>Return Value  
+ Nonzero if successful; otherwise 0.  
   
-### <a name="example"></a>Пример  
- [!code-cpp[NVC_MFC_CTabCtrl #3](../../mfc/reference/codesnippet/cpp/ctabctrl-class_3.cpp)]  
+### <a name="example"></a>Example  
+ [!code-cpp[NVC_MFC_CTabCtrl#3](../../mfc/reference/codesnippet/cpp/ctabctrl-class_3.cpp)]  
   
-##  <a name="deselectall"></a>CTabCtrl::DeselectAll  
- Сбрасывает элементов в элементе управления вкладками, сбросить были нажаты.  
+##  <a name="deselectall"></a>  CTabCtrl::DeselectAll  
+ Resets items in a tab control, clearing any that were pressed.  
   
 ```  
 void DeselectAll(BOOL fExcludeFocus);
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
  *fExcludeFocus*  
- Флаг, указывающий область deselection элемента. Если этот параметр имеет значение **FALSE**, приведет к сбросу всех кнопок. Если задано значение **TRUE**, то будут сброшены все элементы вкладки, за исключением выбранного в данный момент.  
+ Flag that specifies the scope of the item deselection. If this parameter is set to **FALSE**, all tab buttons will be reset. If it is set to **TRUE**, then all tab items except for the one currently selected will be reset.  
   
-### <a name="remarks"></a>Примечания  
- Эта функция-член реализует поведение сообщения Win32 [TCM_DESELECTALL](http://msdn.microsoft.com/library/windows/desktop/bb760579), как описано в [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
+### <a name="remarks"></a>Remarks  
+ This member function implements the behavior of the Win32 message, [TCM_DESELECTALL](http://msdn.microsoft.com/library/windows/desktop/bb760579), as described in the Windows SDK.  
   
-##  <a name="drawitem"></a>CTabCtrl::DrawItem  
- Вызывается платформой при изменении внешнего вида изменения рисуемый владельцем элемент управления.  
+##  <a name="drawitem"></a>  CTabCtrl::DrawItem  
+ Called by the framework when a visual aspect of an owner-draw tab control changes.  
   
 ```  
 virtual void DrawItem(LPDRAWITEMSTRUCT lpDrawItemStruct);
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
  `lpDrawItemStruct`  
- Указатель на [DRAWITEMSTRUCT](http://msdn.microsoft.com/library/windows/desktop/bb775802) структуры, описывающий элемент для рисования.  
+ A pointer to a [DRAWITEMSTRUCT](http://msdn.microsoft.com/library/windows/desktop/bb775802) structure describing the item to be painted.  
   
-### <a name="remarks"></a>Примечания  
- **ItemAction** членом `DRAWITEMSTRUCT` структура определяет рисования действие, которое должно быть выполнено.  
+### <a name="remarks"></a>Remarks  
+ The **itemAction** member of the `DRAWITEMSTRUCT` structure defines the drawing action that is to be performed.  
   
- По умолчанию эта функция-член не выполняет никаких действий. Переопределить эту функцию-член для реализации отрисовки рисуемый владельцем `CTabCtrl` объекта.  
+ By default, this member function does nothing. Override this member function to implement drawing for an owner-draw `CTabCtrl` object.  
   
- Приложения следует восстановить всех графических устройств (интерфейс) выбранных объектов контекст отображения указано в `lpDrawItemStruct` до этого элемента, функция завершается.  
+ The application should restore all graphics device interface (GDI) objects selected for the display context supplied in `lpDrawItemStruct` before this member function terminates.  
   
-##  <a name="getcurfocus"></a>CTabCtrl::GetCurFocus  
- Возвращает индекс текущей вкладки.  
+##  <a name="getcurfocus"></a>  CTabCtrl::GetCurFocus  
+ Retrieves the index of the tab with the current focus.  
   
 ```  
 int GetCurFocus() const;  
 ```  
   
-### <a name="return-value"></a>Возвращаемое значение  
- Отсчитываемый от нуля индекс текущей вкладки.  
+### <a name="return-value"></a>Return Value  
+ The zero-based index of the tab with the current focus.  
   
-##  <a name="getcursel"></a>CTabCtrl::GetCurSel  
- Извлекает выбранной вкладки в элементе управления вкладками.  
+##  <a name="getcursel"></a>  CTabCtrl::GetCurSel  
+ Retrieves the currently selected tab in a tab control.  
   
 ```  
 int GetCurSel() const;  
 ```  
   
-### <a name="return-value"></a>Возвращаемое значение  
- Отсчитываемый от нуля индекс выбранной вкладки в случае успешного выполнения или - 1, если выбрана вкладка «нет».  
+### <a name="return-value"></a>Return Value  
+ Zero-based index of the selected tab if successful or - 1 if no tab is selected.  
   
-##  <a name="getextendedstyle"></a>CTabCtrl::GetExtendedStyle  
- Извлекает расширенные стили, которые в настоящее время используются для управления "Вкладка".  
+##  <a name="getextendedstyle"></a>  CTabCtrl::GetExtendedStyle  
+ Retrieves the extended styles that are currently in use for the tab control.  
   
 ```  
 DWORD GetExtendedStyle();
 ```  
   
-### <a name="return-value"></a>Возвращаемое значение  
- Представляет расширенные стили, которые в настоящее время для управления "Вкладка". Это значение представляет собой сочетание [вкладок расширенные стили](http://msdn.microsoft.com/library/windows/desktop/bb760546), как описано в [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
+### <a name="return-value"></a>Return Value  
+ Represents the extended styles currently in use for the tab control. This value is a combination of [tab control extended styles](http://msdn.microsoft.com/library/windows/desktop/bb760546), as described in the Windows SDK.  
   
-### <a name="remarks"></a>Примечания  
- Эта функция-член реализует поведение сообщения Win32 [TCM_GETEXTENDEDSTYLE](http://msdn.microsoft.com/library/windows/desktop/bb760585), как описано в [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
+### <a name="remarks"></a>Remarks  
+ This member function implements the behavior of the Win32 message [TCM_GETEXTENDEDSTYLE](http://msdn.microsoft.com/library/windows/desktop/bb760585), as described in the Windows SDK.  
   
-##  <a name="getimagelist"></a>CTabCtrl::GetImageList  
- Извлекает список изображений, связанной с элементом управления tab.  
+##  <a name="getimagelist"></a>  CTabCtrl::GetImageList  
+ Retrieves the image list that's associated with a tab control.  
   
 ```  
 CImageList* GetImageList() const;  
 ```  
   
-### <a name="return-value"></a>Возвращаемое значение  
- Указатель на список изображений на вкладке управления, в случае успешного выполнения; в противном случае **NULL**.  
+### <a name="return-value"></a>Return Value  
+ If successful, a pointer to the image list of the tab control; otherwise, **NULL**.  
   
-##  <a name="getitem"></a>CTabCtrl::GetItem  
- Извлекает сведения о вкладке в элементе управления вкладками.  
+##  <a name="getitem"></a>  CTabCtrl::GetItem  
+ Retrieves information about a tab in a tab control.  
   
 ```  
 BOOL GetItem(int nItem,   TCITEM* pTabCtrlItem) const;  
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
  `nItem`  
- Отсчитываемый от нуля индекс вкладки.  
+ Zero-based index of the tab.  
   
  `pTabCtrlItem`  
- Указатель на [TCITEM](http://msdn.microsoft.com/library/windows/desktop/bb760554) структуры, позволяет указать, какую информацию необходимо вернуть. Также используется для получения сведения о вкладке. Эта структура используется с `InsertItem`, `GetItem`, и `SetItem` функции-члены.  
+ Pointer to a [TCITEM](http://msdn.microsoft.com/library/windows/desktop/bb760554) structure, used to specify the information to retrieve. Also used to receive information about the tab. This structure is used with the `InsertItem`, `GetItem`, and `SetItem` member functions.  
   
-### <a name="return-value"></a>Возвращаемое значение  
- Возвращает **TRUE** в случае успешного выполнения; **FALSE** в противном случае.  
+### <a name="return-value"></a>Return Value  
+ Returns **TRUE** if successful; **FALSE** otherwise.  
   
-### <a name="remarks"></a>Примечания  
- При отправке сообщения **маска** задает атрибуты, возвращаемые. Если **маска** задает `TCIF_TEXT` значение, **pszText** член должен содержать адрес буфера, принимающего текста элемента и **cchTextMax** элемента необходимо указать размер буфера.  
+### <a name="remarks"></a>Remarks  
+ When the message is sent, the **mask** member specifies which attributes to return. If the **mask** member specifies the `TCIF_TEXT` value, the **pszText** member must contain the address of the buffer that receives the item text and the **cchTextMax** member must specify the size of the buffer.  
   
- **Маска**  
- Значение, указывающее, какие `TCITEM` члены для получения или задания структур. Этот член может содержать ноль или сочетанием следующих значений:  
+ **mask**  
+ Value specifying which `TCITEM` structure members to retrieve or set. This member can be zero or a combination of the following values:  
   
-- `TCIF_TEXT`**PszText** член является допустимым.  
+- `TCIF_TEXT` The **pszText** member is valid.  
   
-- `TCIF_IMAGE``iImage` Член является допустимым.  
+- `TCIF_IMAGE` The `iImage` member is valid.  
   
-- `TCIF_PARAM`**LParam** член является допустимым.  
+- `TCIF_PARAM` The **lParam** member is valid.  
   
-- `TCIF_RTLREADING`Текст **pszText** при отображении используется порядок чтения справа налево в системах иврит и арабский язык.  
+- `TCIF_RTLREADING` The text of **pszText** is displayed using right-to-left reading order on Hebrew or Arabic systems.  
   
-- `TCIF_STATE`**DwState** член является допустимым.  
+- `TCIF_STATE` The **dwState** member is valid.  
   
  **pszText**  
- Указатель на завершающуюся значением null строка, содержащая текст вкладки, если структура содержит сведения о вкладке. Если структура получает сведения, этот элемент указывает адрес буфера, принимающего текст вкладки.  
+ Pointer to a null-terminated string containing the tab text if the structure contains information about a tab. If the structure is receiving information, this member specifies the address of the buffer that receives the tab text.  
   
  **cchTextMax**  
- Размер буфера, на который указывает **pszText**. Этот член учитывается, если не получает сведения о структуре.  
+ Size of the buffer pointed to by **pszText**. This member is ignored if the structure is not receiving information.  
   
  `iImage`  
- Индекс в управления "Вкладка" список изображений, или значение-1, если изображение отсутствует для вкладки.  
+ Index into the tab control's image list, or - 1 if there is no image for the tab.  
   
  **lParam**  
- Определяемые приложением данные, связанные с вкладкой. При наличии более четырех байт определяемые приложением данные на вкладке, приложение должно определить структуру и использовать его вместо `TCITEM` структуры. Должен быть первым элементом структуры, определяемые приложением [TCITEMHEADER](http://msdn.microsoft.com/library/windows/desktop/bb760556)структуры. **TCITEMHEADER** идентична структуру `TCITEM` структуры, но без **lParam** член. Разница между размером структуры и размер **TCITEMHEADER** структуры должна равняться количеству дополнительные байты на вкладку.  
+ Application-defined data associated with the tab. If there are more than four bytes of application-defined data per tab, an application must define a structure and use it instead of the `TCITEM` structure. The first member of the application-defined structure must be a [TCITEMHEADER](http://msdn.microsoft.com/library/windows/desktop/bb760556)structure. The **TCITEMHEADER** structure is identical to the `TCITEM` structure, but without the **lParam** member. The difference between the size of your structure and the size of the **TCITEMHEADER** structure should equal the number of extra bytes per tab.  
   
-### <a name="example"></a>Пример  
- [!code-cpp[NVC_MFC_CTabCtrl #4](../../mfc/reference/codesnippet/cpp/ctabctrl-class_4.cpp)]  
+### <a name="example"></a>Example  
+ [!code-cpp[NVC_MFC_CTabCtrl#4](../../mfc/reference/codesnippet/cpp/ctabctrl-class_4.cpp)]  
   
-##  <a name="getitemcount"></a>CTabCtrl::GetItemCount  
- Возвращает число вкладок в наборе вкладок.  
+##  <a name="getitemcount"></a>  CTabCtrl::GetItemCount  
+ Retrieves the number of tabs in the tab control.  
   
 ```  
 int GetItemCount() const;  
 ```  
   
-### <a name="return-value"></a>Возвращаемое значение  
- Число элементов в элементе управления вкладками.  
+### <a name="return-value"></a>Return Value  
+ Number of items in the tab control.  
   
-### <a name="example"></a>Пример  
-  Далее приведен пример [CPropertySheet::GetTabControl](../../mfc/reference/cpropertysheet-class.md#gettabcontrol).  
+### <a name="example"></a>Example  
+  See the example for [CPropertySheet::GetTabControl](../../mfc/reference/cpropertysheet-class.md#gettabcontrol).  
   
-##  <a name="getitemrect"></a>CTabCtrl::GetItemRect  
- Возвращает ограничивающий прямоугольник для указанной вкладки в элементе управления вкладками.  
+##  <a name="getitemrect"></a>  CTabCtrl::GetItemRect  
+ Retrieves the bounding rectangle for the specified tab in a tab control.  
   
 ```  
 BOOL GetItemRect(int nItem,   LPRECT lpRect) const;  
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
  `nItem`  
- Отсчитываемый от нуля индекс элемента вкладки.  
+ Zero-based index of the tab item.  
   
  `lpRect`  
- Указатель на [RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897) структуру, которая получает ограничивающий прямоугольник вкладки. Эти координаты использовать режим сопоставления текущего окна просмотра.  
+ Pointer to a [RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897) structure that receives the bounding rectangle of the tab. These coordinates use the viewport's current mapping mode.  
   
-### <a name="return-value"></a>Возвращаемое значение  
- Имеет ненулевое значение в случае успешного выполнения, иначе — 0.  
+### <a name="return-value"></a>Return Value  
+ Nonzero if successful; otherwise 0.  
   
-### <a name="example"></a>Пример  
-  Далее приведен пример [CPropertySheet::GetTabControl](../../mfc/reference/cpropertysheet-class.md#gettabcontrol).  
+### <a name="example"></a>Example  
+  See the example for [CPropertySheet::GetTabControl](../../mfc/reference/cpropertysheet-class.md#gettabcontrol).  
   
-##  <a name="getitemstate"></a>CTabCtrl::GetItemState  
- Получает состояние элемента управления tab, определенные `nItem`.  
+##  <a name="getitemstate"></a>  CTabCtrl::GetItemState  
+ Retrieves the state of the tab control item identified by `nItem`.  
   
 ```  
 DWORD GetItemState(
@@ -448,86 +478,86 @@ DWORD GetItemState(
     DWORD dwMask) const;  
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
  `nItem`  
- Отсчитываемый от нуля индекс элемента, для которого требуется извлечь сведения о состоянии.  
+ The zero-based index number of the item for which to retrieve state information.  
   
  `dwMask`  
- Маска, указывающая, что элемент имеет состояние флаги для возврата. Список значений см. в разделе маска членом [TCITEM](http://msdn.microsoft.com/library/windows/desktop/bb760554) структуры, как описано в [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
+ Mask specifying which of the item's state flags to return. For a list of values, see the mask member of the [TCITEM](http://msdn.microsoft.com/library/windows/desktop/bb760554) structure, as described in the Windows SDK.  
   
-### <a name="return-value"></a>Возвращаемое значение  
- Ссылку на `DWORD` значение получение сведений о состоянии. Может принимать одно из следующих значений:  
+### <a name="return-value"></a>Return Value  
+ A reference to a `DWORD` value receiving the state information. Can be one of the following values:  
   
-|Значение|Описание|  
+|Value|Description|  
 |-----------|-----------------|  
-|**TCIS_BUTTONPRESSED**|Выбран элемент управления вкладки.|  
-|**TCIS_HIGHLIGHTED**|Будет выделен элемент управления вкладки и вкладку и текст, отображаются с помощью текущий цвет выделения. При использовании цветом, это будет true интерполяции, не сглаженный цвет.|  
+|**TCIS_BUTTONPRESSED**|The tab control item is selected.|  
+|**TCIS_HIGHLIGHTED**|The tab control item is highlighted, and the tab and text are drawn using the current highlight color. When using highlight color, this will be a true interpolation, not a dithered color.|  
   
-### <a name="remarks"></a>Примечания  
- Состояние элемента определяется **dwState** членом `TCITEM` структуры.  
+### <a name="remarks"></a>Remarks  
+ An item's state is specified by the **dwState** member of the `TCITEM` structure.  
   
-##  <a name="getrowcount"></a>CTabCtrl::GetRowCount  
- Возвращает текущее количество строк в элементе управления вкладками.  
+##  <a name="getrowcount"></a>  CTabCtrl::GetRowCount  
+ Retrieves the current number of rows in a tab control.  
   
 ```  
 int GetRowCount() const;  
 ```  
   
-### <a name="return-value"></a>Возвращаемое значение  
- Количество рядов вкладок в наборе вкладок.  
+### <a name="return-value"></a>Return Value  
+ The number of rows of tabs in the tab control.  
   
-### <a name="remarks"></a>Примечания  
- Только вкладку элементов управления, имеющих **TCS_MULTILINE** стилей может иметь несколько рядов вкладок.  
+### <a name="remarks"></a>Remarks  
+ Only tab controls that have the **TCS_MULTILINE** style can have multiple rows of tabs.  
   
-##  <a name="gettooltips"></a>CTabCtrl::GetToolTips  
- Извлекает дескриптор управления всплывающей подсказки, связанный с элементом управления tab.  
+##  <a name="gettooltips"></a>  CTabCtrl::GetToolTips  
+ Retrieves the handle of the tool tip control associated with a tab control.  
   
 ```  
 CToolTipCtrl* GetToolTips() const;  
 ```  
   
-### <a name="return-value"></a>Возвращаемое значение  
- Дескриптор элемента управления всплывающей подсказки в случае успешного выполнения; в противном случае **NULL**.  
+### <a name="return-value"></a>Return Value  
+ Handle of the tool tip control if successful; otherwise **NULL**.  
   
-### <a name="remarks"></a>Примечания  
- Набор вкладок создает элемента управления всплывающей подсказки, если у него есть **TCS_TOOLTIPS** стиля. Можно также назначить всплывающая подсказка вкладки с помощью `SetToolTips` функции-члена.  
+### <a name="remarks"></a>Remarks  
+ A tab control creates a tool tip control if it has the **TCS_TOOLTIPS** style. You can also assign a tool tip control to a tab control by using the `SetToolTips` member function.  
   
-##  <a name="highlightitem"></a>CTabCtrl::HighlightItem  
- Задает состояние выделения элемента вкладки.  
+##  <a name="highlightitem"></a>  CTabCtrl::HighlightItem  
+ Sets the highlight state of a tab item.  
   
 ```  
 BOOL HighlightItem(int idItem,   BOOL fHighlight = TRUE);
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
  `idItem`  
- Отсчитываемый от нуля индекс элемента управления tab.  
+ Zero-based index of a tab control item.  
   
  `fHighlight`  
- Значение, указывающее состояние выделения. Если это значение равно **TRUE**, выделяются вкладке; Если **FALSE**, вкладке устанавливается в состояние по умолчанию.  
+ Value specifying the highlight state to be set. If this value is **TRUE**, the tab is highlighted; if **FALSE**, the tab is set to its default state.  
   
-### <a name="return-value"></a>Возвращаемое значение  
- Ненулевое значение в случае успеха, иначе — 0.  
+### <a name="return-value"></a>Return Value  
+ Nonzero if successful; otherwise zero.  
   
-### <a name="remarks"></a>Примечания  
- Эта функция-член реализует сообщения Win32 [TCM_HIGHLIGHTITEM](http://msdn.microsoft.com/library/windows/desktop/bb760602), как описано в [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
+### <a name="remarks"></a>Remarks  
+ This member function implements the Win32 message [TCM_HIGHLIGHTITEM](http://msdn.microsoft.com/library/windows/desktop/bb760602), as described in the Windows SDK.  
   
-##  <a name="hittest"></a>CTabCtrl::HitTest  
- Определяет, какие вкладки, с указанными экранными позиции.  
+##  <a name="hittest"></a>  CTabCtrl::HitTest  
+ Determines which tab, if any, is at the specified screen position.  
   
 ```  
 int HitTest(TCHITTESTINFO* pHitTestInfo) const;  
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
  `pHitTestInfo`  
- Указатель на [TCHITTESTINFO](http://msdn.microsoft.com/library/windows/desktop/bb760553) структуры, как описано в [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)], которое указывает положение на экране для тестирования.  
+ Pointer to a [TCHITTESTINFO](http://msdn.microsoft.com/library/windows/desktop/bb760553) structure, as described in the Windows SDK, which specifies the screen position to test.  
   
-### <a name="return-value"></a>Возвращаемое значение  
- Возвращает отсчитываемый от нуля индекс вкладки или - 1, если в указанной позиции.  
+### <a name="return-value"></a>Return Value  
+ Returns the zero-based index of the tab or - 1 if no tab is at the specified position.  
   
-##  <a name="insertitem"></a>CTabCtrl::InsertItem  
- Вставляет новую вкладку в существующий элемент управления вкладки.  
+##  <a name="insertitem"></a>  CTabCtrl::InsertItem  
+ Inserts a new tab in an existing tab control.  
   
 ```  
 LONG InsertItem(
@@ -564,179 +594,179 @@ LONG InsertItem(
     DWORD dwStateMask);
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
  `nItem`  
- Отсчитываемый от нуля индекс вкладки «новые».  
+ Zero-based index of the new tab.  
   
  `pTabCtrlItem`  
- Указатель на [TCITEM](http://msdn.microsoft.com/library/windows/desktop/bb760554) структура, которая задает атрибуты вкладки.  
+ Pointer to a [TCITEM](http://msdn.microsoft.com/library/windows/desktop/bb760554) structure that specifies the attributes of the tab.  
   
  `lpszItem`  
- Адрес нулем строка, содержащая текст вкладки.  
+ Address of a null-terminated string that contains the text of the tab.  
   
  `nImage`  
- Отсчитываемый от нуля индекс образа для вставки списка изображений.  
+ The zero-based index of an image to insert from an image list.  
   
  `nMask`  
- Определяет, какая `TCITEM` структуры атрибуты для установки. Может содержать ноль или сочетанием следующих значений:  
+ Specifies which `TCITEM` structure attributes to set. Can be zero or a combination of the following values:  
   
-- `TCIF_TEXT`**PszText** член является допустимым.  
+- `TCIF_TEXT` The **pszText** member is valid.  
   
-- `TCIF_IMAGE``iImage` Член является допустимым.  
+- `TCIF_IMAGE` The `iImage` member is valid.  
   
-- `TCIF_PARAM`**LParam** член является допустимым.  
+- `TCIF_PARAM` The **lParam** member is valid.  
   
-- `TCIF_RTLREADING`Текст **pszText** при отображении используется порядок чтения справа налево в системах иврит и арабский язык.  
+- `TCIF_RTLREADING` The text of **pszText** is displayed using right-to-left reading order on Hebrew or Arabic systems.  
   
-- `TCIF_STATE`**DwState** член является допустимым.  
+- `TCIF_STATE` The **dwState** member is valid.  
   
  `lParam`  
- Определяемые приложением данные, связанные с вкладкой.  
+ Application-defined data associated with the tab.  
   
  `dwState`  
- Задает значения для состояния элемента. Дополнительные сведения см. в разделе [TCITEM](http://msdn.microsoft.com/library/windows/desktop/bb760554) в [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
+ Specifies values for the item's states. For more information, see [TCITEM](http://msdn.microsoft.com/library/windows/desktop/bb760554) in the Windows SDK.  
   
  *dwStateMask*  
- Указывает, какие состояния должны быть заданы. Дополнительные сведения см. в разделе [TCITEM](http://msdn.microsoft.com/library/windows/desktop/bb760554) в [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
+ Specifies which states are to be set. For more information, see [TCITEM](http://msdn.microsoft.com/library/windows/desktop/bb760554) in the Windows SDK.  
   
-### <a name="return-value"></a>Возвращаемое значение  
- Отсчитываемый от нуля индекс вкладки «новые» в случае успешного выполнения; в противном случае - 1.  
+### <a name="return-value"></a>Return Value  
+ Zero-based index of the new tab if successful; otherwise - 1.  
   
-### <a name="example"></a>Пример  
- [!code-cpp[NVC_MFC_CTabCtrl #5](../../mfc/reference/codesnippet/cpp/ctabctrl-class_5.cpp)]  
+### <a name="example"></a>Example  
+ [!code-cpp[NVC_MFC_CTabCtrl#5](../../mfc/reference/codesnippet/cpp/ctabctrl-class_5.cpp)]  
   
-##  <a name="removeimage"></a>CTabCtrl::RemoveImage  
- Удаляет указанный образ из списка изображений элемента управления tab.  
+##  <a name="removeimage"></a>  CTabCtrl::RemoveImage  
+ Removes the specified image from a tab control's image list.  
   
 ```  
 void RemoveImage(int nImage);
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
  `nImage`  
- Отсчитываемый от нуля индекс образа для удаления.  
+ Zero-based index of the image to remove.  
   
-### <a name="remarks"></a>Примечания  
- Набор вкладок обновляет индекс образа для каждой вкладки, чтобы каждая вкладка остается связанным с одного изображения.  
+### <a name="remarks"></a>Remarks  
+ The tab control updates each tab's image index so that each tab remains associated with the same image.  
   
-##  <a name="setcurfocus"></a>CTabCtrl::SetCurFocus  
- Устанавливает фокус на указанной вкладки в элементе управления вкладками.  
+##  <a name="setcurfocus"></a>  CTabCtrl::SetCurFocus  
+ Sets the focus to a specified tab in a tab control.  
   
 ```  
 void SetCurFocus(int nItem);
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
  `nItem`  
- Задает индекс вкладки, который получает фокус.  
+ Specifies the index of the tab that gets the focus.  
   
-### <a name="remarks"></a>Примечания  
- Эта функция-член реализует поведение сообщения Win32 [TCM_SETCURFOCUS](http://msdn.microsoft.com/library/windows/desktop/bb760610), как описано в [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
+### <a name="remarks"></a>Remarks  
+ This member function implements the behavior of the Win32 message [TCM_SETCURFOCUS](http://msdn.microsoft.com/library/windows/desktop/bb760610), as described in the Windows SDK.  
   
-##  <a name="setcursel"></a>CTabCtrl::SetCurSel  
- Выбор вкладки в элементе управления вкладками.  
+##  <a name="setcursel"></a>  CTabCtrl::SetCurSel  
+ Selects a tab in a tab control.  
   
 ```  
 int SetCurSel(int nItem);
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
  `nItem`  
- Отсчитываемый от нуля индекс элемента для выбора.  
+ The zero-based index of the item to be selected.  
   
-### <a name="return-value"></a>Возвращаемое значение  
- Отсчитываемый от нуля индекс ранее выбранной вкладки в случае успеха, в противном случае - 1.  
+### <a name="return-value"></a>Return Value  
+ Zero-based index of the previously selected tab if successful, otherwise - 1.  
   
-### <a name="remarks"></a>Примечания  
- Набор вкладок не отправляет **TCN_SELCHANGING** или **TCN_SELCHANGE** сообщение уведомления, когда выбрана вкладка с использованием этой функции. Эти уведомления отправляются с помощью **WM_NOTIFY**при щелчке мышью или клавиатурой для изменения табуляции.  
+### <a name="remarks"></a>Remarks  
+ A tab control does not send a **TCN_SELCHANGING** or **TCN_SELCHANGE** notification message when a tab is selected using this function. These notifications are sent, using **WM_NOTIFY**, when the user clicks or uses the keyboard to change tabs.  
   
-##  <a name="setextendedstyle"></a>CTabCtrl::SetExtendedStyle  
- Задает расширенные стили для элемента управления tab.  
+##  <a name="setextendedstyle"></a>  CTabCtrl::SetExtendedStyle  
+ Sets the extended styles for a tab control.  
   
 ```  
 DWORD SetExtendedStyle(DWORD dwNewStyle,   DWORD dwExMask = 0);
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
  `dwNewStyle`  
- Значение, указывающее сочетание вкладку управления расширенные стили.  
+ Value specifying a combination of tab control extended styles.  
   
  `dwExMask`  
- Объект `DWORD` значение, указывающее, какие стили в `dwNewStyle` , могут быть затронуты. Расширенные стили в `dwExMask` будет изменен. Все стили будут сохранены как есть. Если этот параметр равен нулю, то все стили в `dwNewStyle` будут затронуты.  
+ A `DWORD` value that indicates which styles in `dwNewStyle` are to be affected. Only the extended styles in `dwExMask` will be changed. All other styles will be maintained as is. If this parameter is zero, then all of the styles in `dwNewStyle` will be affected.  
   
-### <a name="return-value"></a>Возвращаемое значение  
- Объект `DWORD` значение с предыдущим [вкладок расширенные стили](http://msdn.microsoft.com/library/windows/desktop/bb760546), как описано в [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
+### <a name="return-value"></a>Return Value  
+ A `DWORD` value that contains the previous [tab control extended styles](http://msdn.microsoft.com/library/windows/desktop/bb760546), as described in the Windows SDK.  
   
-### <a name="return-value"></a>Возвращаемое значение  
- Эта функция-член реализует поведение сообщения Win32 [TCM_SETEXTENDEDSTYLE](http://msdn.microsoft.com/library/windows/desktop/bb760627), как описано в [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
+### <a name="return-value"></a>Return Value  
+ This member function implements the behavior of the Win32 message [TCM_SETEXTENDEDSTYLE](http://msdn.microsoft.com/library/windows/desktop/bb760627), as described in the Windows SDK.  
   
-##  <a name="setimagelist"></a>CTabCtrl::SetImageList  
- Назначает списка изображений элемента управления tab.  
+##  <a name="setimagelist"></a>  CTabCtrl::SetImageList  
+ Assigns an image list to a tab control.  
   
 ```  
 CImageList* SetImageList(CImageList* pImageList);
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
  `pImageList`  
- Указатель на список изображений для назначения вкладок элемента управления.  
+ Pointer to the image list to be assigned to the tab control.  
   
-### <a name="return-value"></a>Возвращаемое значение  
- Возвращает указатель на предыдущем список изображений или **NULL** Если нет предыдущего списка изображений.  
+### <a name="return-value"></a>Return Value  
+ Returns a pointer to the previous image list or **NULL** if there is no previous image list.  
   
-##  <a name="setitem"></a>CTabCtrl::SetItem  
- Задает некоторые или все атрибуты "Вкладка".  
+##  <a name="setitem"></a>  CTabCtrl::SetItem  
+ Sets some or all of a tab's attributes.  
   
 ```  
 BOOL SetItem(int nItem,   TCITEM* pTabCtrlItem);
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
  `nItem`  
- Отсчитываемый от нуля индекс элемента.  
+ Zero-based index of the item.  
   
  `pTabCtrlItem`  
- Указатель на [TCITEM](http://msdn.microsoft.com/library/windows/desktop/bb760554) структуру, содержащую новые атрибуты элемента. **Маска** элемент указывает, какие атрибуты следует задать. Если **маска** задает `TCIF_TEXT` значение, **pszText** член является адрес строки с завершающим нулем и **cchTextMax** элемент обрабатывается.  
+ Pointer to a [TCITEM](http://msdn.microsoft.com/library/windows/desktop/bb760554) structure that contains the new item attributes. The **mask** member specifies which attributes to set. If the **mask** member specifies the `TCIF_TEXT` value, the **pszText** member is the address of a null-terminated string and the **cchTextMax** member is ignored.  
   
-### <a name="return-value"></a>Возвращаемое значение  
- Имеет ненулевое значение в случае успешного выполнения, иначе — 0.  
+### <a name="return-value"></a>Return Value  
+ Nonzero if successful; otherwise 0.  
   
-### <a name="example"></a>Пример  
-  Далее приведен пример [GetItem](#getitem).  
+### <a name="example"></a>Example  
+  See the example for [GetItem](#getitem).  
   
-##  <a name="setitemextra"></a>CTabCtrl::SetItemExtra  
- Задает число байтов для табуляции, зарезервированных для определяемых приложением данных в элементе управления вкладками.  
+##  <a name="setitemextra"></a>  CTabCtrl::SetItemExtra  
+ Sets the number of bytes per tab reserved for application-defined data in a tab control.  
   
 ```  
 BOOL SetItemExtra(int nBytes);
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
  `nBytes`  
- Количество дополнительных байтов для задания.  
+ The number of extra bytes to set.  
   
-### <a name="return-value"></a>Возвращаемое значение  
- Ненулевое значение в случае успеха, иначе — 0.  
+### <a name="return-value"></a>Return Value  
+ Nonzero if successful; otherwise zero.  
   
-### <a name="remarks"></a>Примечания  
- Эта функция-член реализует поведение сообщения Win32 [TCM_SETITEMEXTRA](http://msdn.microsoft.com/library/windows/desktop/bb760633), как описано в [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
+### <a name="remarks"></a>Remarks  
+ This member function implements the behavior of the Win32 message [TCM_SETITEMEXTRA](http://msdn.microsoft.com/library/windows/desktop/bb760633), as described in the Windows SDK.  
   
-##  <a name="setitemsize"></a>CTabCtrl::SetItemSize  
- Задает ширину и высоту элементов набора вкладок.  
+##  <a name="setitemsize"></a>  CTabCtrl::SetItemSize  
+ Sets the width and height of the tab control items.  
   
 ```  
 CSize SetItemSize(CSize size);
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
  `size`  
- Новая ширина и высота (в пикселях) элементов набора вкладок.  
+ The new width and height, in pixels, of the tab control items.  
   
-### <a name="return-value"></a>Возвращаемое значение  
- Возвращает старую ширину и высоту элементов набора вкладок.  
+### <a name="return-value"></a>Return Value  
+ Returns the old width and height of the tab control items.  
   
-##  <a name="setitemstate"></a>CTabCtrl::SetItemState  
- Задает состояние элемента управления tab, определенные `nItem`.  
+##  <a name="setitemstate"></a>  CTabCtrl::SetItemState  
+ Sets the state of the tab control item identified by `nItem`.  
   
 ```  
 BOOL SetItemState(
@@ -745,72 +775,72 @@ BOOL SetItemState(
     DWORD dwState);
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
  `nItem`  
- Отсчитываемый от нуля индекс элемента, для которого устанавливаются сведения о состоянии.  
+ The zero-based index number of the item for which to set state information.  
   
  `dwMask`  
- Маска, указывающая, что состояние элемента флаги для задания. Список значений см. в разделе маска членом [TCITEM](http://msdn.microsoft.com/library/windows/desktop/bb760554) структуры, как описано в [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
+ Mask specifying which of the item's state flags to set. For a list of values, see the mask member of the [TCITEM](http://msdn.microsoft.com/library/windows/desktop/bb760554) structure, as described in the Windows SDK.  
   
  `dwState`  
- Ссылку на `DWORD` значение, содержащее сведения о состоянии. Может принимать одно из следующих значений:  
+ A reference to a `DWORD` value containing the state information. Can be one of the following values:  
   
-|Значение|Описание|  
+|Value|Description|  
 |-----------|-----------------|  
-|**TCIS_BUTTONPRESSED**|Выбран элемент управления вкладки.|  
-|**TCIS_HIGHLIGHTED**|Будет выделен элемент управления вкладки и вкладку и текст, отображаются с помощью текущий цвет выделения. При использовании цветом, это будет true интерполяции, не сглаженный цвет.|  
+|**TCIS_BUTTONPRESSED**|The tab control item is selected.|  
+|**TCIS_HIGHLIGHTED**|The tab control item is highlighted, and the tab and text are drawn using the current highlight color. When using highlight color, this will be a true interpolation, not a dithered color.|  
   
-### <a name="return-value"></a>Возвращаемое значение  
- Имеет ненулевое значение в случае успешного выполнения, иначе — 0.  
+### <a name="return-value"></a>Return Value  
+ Nonzero if successful; otherwise 0.  
   
-##  <a name="setmintabwidth"></a>CTabCtrl::SetMinTabWidth  
- Задает минимальную ширину элементов в элементе управления вкладками.  
+##  <a name="setmintabwidth"></a>  CTabCtrl::SetMinTabWidth  
+ Sets the minimum width of items in a tab control.  
   
 ```  
 int SetMinTabWidth(int cx);
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
  `cx`  
- Минимальная ширина должен быть задан для элемента управления tab. Если этот параметр имеет значение -1, элемент управления будет использовать ширину вкладку по умолчанию.  
+ Minimum width to be set for a tab control item. If this parameter is set to -1, the control will use the default tab width.  
   
-### <a name="return-value"></a>Возвращаемое значение  
- Ширина предыдущих минимальное вкладку.  
+### <a name="return-value"></a>Return Value  
+ The previous minimum tab width.  
   
-### <a name="return-value"></a>Возвращаемое значение  
- Эта функция-член реализует поведение сообщения Win32 [TCM_SETMINTABWIDTH](http://msdn.microsoft.com/library/windows/desktop/bb760637), как описано в [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
+### <a name="return-value"></a>Return Value  
+ This member function implements the behavior of the Win32 message [TCM_SETMINTABWIDTH](http://msdn.microsoft.com/library/windows/desktop/bb760637), as described in the Windows SDK.  
   
-##  <a name="setpadding"></a>CTabCtrl::SetPadding  
- Задает объем пространства (заполнения) вокруг значка каждой вкладки и подписи в элементе управления вкладками.  
+##  <a name="setpadding"></a>  CTabCtrl::SetPadding  
+ Sets the amount of space (padding) around each tab's icon and label in a tab control.  
   
 ```  
 void SetPadding(CSize size);
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
  `size`  
- Задает объем пространства (заполнения) вокруг значка каждой вкладки и подписи в элементе управления вкладками.  
+ Sets the amount of space (padding) around each tab's icon and label in a tab control.  
   
-##  <a name="settooltips"></a>CTabCtrl::SetToolTips  
- Назначает всплывающая подсказка элемента управления tab.  
+##  <a name="settooltips"></a>  CTabCtrl::SetToolTips  
+ Assigns a tool tip control to a tab control.  
   
 ```  
 void SetToolTips(CToolTipCtrl* pWndTip);
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
  `pWndTip`  
- Дескриптор управления всплывающей подсказки.  
+ Handle of the tool tip control.  
   
-### <a name="remarks"></a>Примечания  
- Вы можете получить управления всплывающей подсказки, связанный с элементом управления tab путем вызова `GetToolTips`.  
+### <a name="remarks"></a>Remarks  
+ You can get the tool tip control associated with a tab control by making a call to `GetToolTips`.  
   
-### <a name="example"></a>Пример  
-  Далее приведен пример [CPropertySheet::GetTabControl](../../mfc/reference/cpropertysheet-class.md#gettabcontrol).  
+### <a name="example"></a>Example  
+  See the example for [CPropertySheet::GetTabControl](../../mfc/reference/cpropertysheet-class.md#gettabcontrol).  
   
-## <a name="see-also"></a>См. также  
- [CWnd-класс](../../mfc/reference/cwnd-class.md)   
- [Диаграмма иерархии](../../mfc/hierarchy-chart.md)   
- [CHeaderCtrl-класс](../../mfc/reference/cheaderctrl-class.md)   
- [Класс CListCtrl](../../mfc/reference/clistctrl-class.md)
+## <a name="see-also"></a>See Also  
+ [CWnd Class](../../mfc/reference/cwnd-class.md)   
+ [Hierarchy Chart](../../mfc/hierarchy-chart.md)   
+ [CHeaderCtrl Class](../../mfc/reference/cheaderctrl-class.md)   
+ [CListCtrl Class](../../mfc/reference/clistctrl-class.md)
 

@@ -1,67 +1,86 @@
 ---
-title: "Классы панели элементов управления | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "vc.classes.control"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "панели элементов управления, классы"
+title: Control Bar Classes | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- vc.classes.control
+dev_langs:
+- C++
+helpviewer_keywords:
+- control bars [MFC], classes
 ms.assetid: 11009103-cad8-4309-85ce-3d2e858e1818
 caps.latest.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 5
----
-# Классы панели элементов управления
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: b798583c9848ca035fbbea45d9a58b638caf137d
+ms.contentlocale: ru-ru
+ms.lasthandoff: 09/12/2017
 
-Панели элементов управления вложены в фреймовому окно.  Они содержат кнопки, области состояния и шаблона диалоговых окон.  Также называемые панели элементов управления состояние с плавающей запятой, палитрами средства, реализованы с вложить их в объект [CMiniFrameWnd](../mfc/reference/cminiframewnd-class.md).  
+---
+# <a name="control-bar-classes"></a>Control Bar Classes
+Control bars are attached to a frame window. They contain buttons, status panes, or a dialog template. Free-floating control bars, also called tool palettes, are implemented by attaching them to a [CMiniFrameWnd](../mfc/reference/cminiframewnd-class.md) object.  
   
-## Панели элементов управления платформы .NET Framework  
- Эти панели элементов управления является неотъемлемой частью платформы MFC.  Они являются простыми в использовании и эффективным, чем панели элементов управления Windows, поскольку они связаны с платформой.  Большинство приложений MFC используются панели элементов управления вместо панели элементов управления Windows.  
+## <a name="framework-control-bars"></a>Framework Control Bars  
+ These control bars are an integral part of the MFC framework. They are easier to use and more powerful than the Windows control bars because they are integrated with the framework. Most MFC applications use these control bars rather than the Windows control bars.  
   
  [CControlBar](../mfc/reference/ccontrolbar-class.md)  
- Базовый класс для панелей элементов управления MFC, представленный в этом разделе.  Панель элементов управления окно выравниванное к краю фреймового окна.  Панель элементов управления или содержит дочерние элементы управления `HWND` на основе или элементы управления не на основе `HWND`, например кнопки панели инструментов.  
+ The base class for MFC control bars listed in this section. A control bar is a window aligned to the edge of a frame window. The control bar contains either `HWND`-based child controls or controls not based on an `HWND`, such as toolbar buttons.  
   
  [CDialogBar](../mfc/reference/cdialogbar-class.md)  
- Панель элементов управления, основанная на шаблоне диалогового окна.  
+ A control bar that is based on a dialog box template.  
   
  [CReBar](../mfc/reference/crebar-class.md)  
- Поддерживает инструмент, который может содержать дополнительные дочерние окна в форме элементов управления.  
+ Supports a toolbar that can contain additional child windows in the form of controls.  
   
  [CToolBar](../mfc/reference/ctoolbar-class.md)  
- Окна элемента управления панели инструментов, содержащие кнопки команд растрового изображения не на основе `HWND`.  Большинство приложений MFC используют этот класс, а не `CToolBarCtrl`.  
+ Toolbar control windows that contain bitmap command buttons not based on an `HWND`. Most MFC applications use this class rather than `CToolBarCtrl`.  
   
  [CStatusBar](../mfc/reference/cstatusbar-class.md)  
- Базовый класс для элемента управления windows forms в строке состояния.  Большинство приложений MFC используют этот класс, а не `CStatusBarCtrl`.  
+ The base class for status-bar control windows. Most MFC applications use this class rather than `CStatusBarCtrl`.  
   
-## Панели элементов управления Windows  
- Эти панели элементов управления место оболочки для соответствующих элементов управления Windows.  Так как они не связаны с платформой, они более сложно, чем перечисленные ранее использования панели элементов управления.  Большинство приложений MFC используются перечисленные ранее панели элементов управления.  
+## <a name="windows-control-bars"></a>Windows Control Bars  
+ These control bars are thin wrappers for the corresponding Windows controls. Because they are not integrated with the framework, they are harder to use than the control bars previously listed. Most MFC applications use the control bars previously listed.  
   
  [CRebarCtrl](../mfc/reference/crebarctrl-class.md)  
- Реализует контроль внутреннего объекта `CRebar`.  
+ Implements the internal control of the `CRebar` object.  
   
  [CStatusBarCtrl](../mfc/reference/cstatusbarctrl-class.md)  
- Горизонтальная окно, обычно разделяемое в области, в которых приложение может отображать сведения о состоянии.  
+ A horizontal window, usually divided into panes, in which an application can display status information.  
   
  [CToolBarCtrl](../mfc/reference/ctoolbarctrl-class.md)  
- Предоставляет функциональные возможности стандартного элемента управления "панель инструментов" Windows.  
+ Provides the functionality of the Windows toolbar common control.  
   
-## Связанные классы  
- [CToolTipCtrl](../Topic/CToolTipCtrl%20Class.md)  
- Небольшое всплывающее окно, в котором отображается отдельную линии текста, цель средства в приложении.  
+## <a name="related-classes"></a>Related Classes  
+ [CToolTipCtrl](../mfc/reference/ctooltipctrl-class.md)  
+ A small pop-up window that displays a single line of text describing the purpose of a tool in an application.  
   
  [CDockState](../mfc/reference/cdockstate-class.md)  
- Обрабатывает постоянное хранилище данных состояния закрепления для панелей элементов управления.  
+ Handles persistent storage of docking state data for control bars.  
   
-## См. также  
- [Общие сведения о классах](../mfc/class-library-overview.md)
+## <a name="see-also"></a>See Also  
+ [Class Overview](../mfc/class-library-overview.md)
+
+

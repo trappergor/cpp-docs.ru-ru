@@ -1,5 +1,5 @@
 ---
-title: "Стили элемента управления панели инструментов | Документы Microsoft"
+title: ToolBar Control Styles | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -11,7 +11,7 @@ ms.topic: article
 dev_langs:
 - C++
 helpviewer_keywords:
-- ToolBar control styles
+- ToolBar control styles [MFC]
 ms.assetid: 0f717eb9-fa32-4263-b852-809238863feb
 caps.latest.revision: 16
 author: mikeblome
@@ -31,65 +31,65 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 040985df34f2613b4e4fae29498721aef15d50cb
-ms.openlocfilehash: 1c50009a50c5b80e007add9de679315df6aecea9
+ms.translationtype: MT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 383120b1eecd7db663ef878c386f51ad6a2a92f8
 ms.contentlocale: ru-ru
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 09/12/2017
 
 ---
-# <a name="toolbar-control-styles"></a>Стили элемента управления панели инструментов
-[Класс CMFCToolBarButton](../../mfc/reference/cmfctoolbarbutton-class.md) имеет набор флагов стилей, которые определяют внешний вид и поведение кнопки. Сочетание этих флагов можно задать путем вызова [CMFCToolBarButton::SetStyle](../../mfc/reference/cmfctoolbarbutton-class.md#setstyle). В этом разделе перечислены значения флагов стилей и их значения.  
+# <a name="toolbar-control-styles"></a>ToolBar Control Styles
+[CMFCToolBarButton Class](../../mfc/reference/cmfctoolbarbutton-class.md) has a set of style flags that determine the appearance and behavior of the button. You can set a combination of these flags by calling             [CMFCToolBarButton::SetStyle](../../mfc/reference/cmfctoolbarbutton-class.md#setstyle). This topic lists the style flag values and their meanings.  
   
-## <a name="property-values"></a>Значения свойств  
- Следующие значения определить тип, представляющий элемент управления кнопки:  
+## <a name="property-values"></a>Property Values  
+ The following values determine the type of button that the control represents:  
   
  TBBS_BUTTON  
- Стандартная pushbutton (по умолчанию).  
+ Standard pushbutton (default).  
   
  TBBS_CHECKBOX  
- Флажок.  
+ Check box.  
   
  TBBS_CHECKGROUP  
- Начало группы флажков.  
+ The start of a group of checkboxes.  
   
  TBBS_GROUP  
- Начало группы кнопок.  
+ The start of a group of buttons.  
   
  TBBS_SEPARATOR  
- Разделитель.  
+ Separator.  
   
- Следующие значения представляют текущее состояние элемента управления.  
+ The following values represent the current status of the control:  
   
  TBBS_CHECKED  
- Флажок установлен.  
+ Check box is checked.  
   
  TBBS_DISABLED  
- Элемент управления отключен.  
+ Control is disabled.  
   
  TBBS_INDETERMINATE  
- Флажок находится в неопределенном состоянии.  
+ Check box is in an indeterminate state.  
   
  TBBS_PRESSED  
- Нажата кнопка.  
+ Button is pressed.  
   
- Следующее значение изменяется макет кнопки на панели инструментов:  
+ The following value changes the layout of the button in the toolbar:  
   
  TBBS_BREAK  
- Помещает элемент на новой строке или в новом столбце без разделения столбцов.  
+ Places the item on a new line or in a new column without separating columns.  
   
-## <a name="remarks"></a>Примечания  
- Текущий стиль сохраняется в [CMFCToolBarButton::m_nStyle](../../mfc/reference/cmfctoolbarbutton-class.md#m_nstyle). Не задано новое значение `m_nStyle` напрямую, поскольку несколько классов, производных дополнительной обработки при вызове `SetStyles`.  
+## <a name="remarks"></a>Remarks  
+ The current style is stored in                 [CMFCToolBarButton::m_nStyle](../../mfc/reference/cmfctoolbarbutton-class.md#m_nstyle). Do not set a new value in                 `m_nStyle` directly, because some derived classes perform additional processing when you call                 `SetStyles`.  
   
- Диспетчер визуального представления определяет внешний вид кнопки в каждом состоянии. В разделе [диспетчер визуализации](../../mfc/visualization-manager.md) подробнее.  
+ The visual manager determines the appearance of buttons in each state. See                 [Visualization Manager](../../mfc/visualization-manager.md) for more information.  
   
-## <a name="requirements"></a>Требования  
- **Заголовок:** afxtoolbarbutton.h  
+## <a name="requirements"></a>Requirements  
+ **Header:** afxtoolbarbutton.h  
   
-## <a name="see-also"></a>См. также  
- [Макросы и глобальные объекты](../../mfc/reference/mfc-macros-and-globals.md)   
- [Класс CMFCToolBarButton](../../mfc/reference/cmfctoolbarbutton-class.md)   
- [Диспетчер визуализации](../../mfc/visualization-manager.md)
+## <a name="see-also"></a>See Also  
+ [Macros and Globals](../../mfc/reference/mfc-macros-and-globals.md)   
+ [CMFCToolBarButton Class](../../mfc/reference/cmfctoolbarbutton-class.md)   
+ [Visualization Manager](../../mfc/visualization-manager.md)
 
 
 

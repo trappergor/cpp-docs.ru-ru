@@ -1,5 +1,5 @@
 ---
-title: "Класс condition_variable_any | Документы Майкрософт"
+title: condition_variable_any Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -37,71 +37,79 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
-ms.openlocfilehash: 0c72f22ed2962b3d1a200e99ace2c56d69194c78
+helpviewer_keywords:
+- std::condition_variable_any
+- std::condition_variable_any::condition_variable_any
+- std::condition_variable_any::notify_all
+- std::condition_variable_any::notify_one
+- std::condition_variable_any::wait
+- std::condition_variable_any::wait_for
+- std::condition_variable_any::wait_until
+ms.translationtype: MT
+ms.sourcegitcommit: 5d026c375025b169d5db8445cbb52c0c917b2d8d
+ms.openlocfilehash: bbb4ce1dc861727543608fcea3261621e5251dad
 ms.contentlocale: ru-ru
-ms.lasthandoff: 04/29/2017
+ms.lasthandoff: 09/09/2017
 
 ---
-# <a name="conditionvariableany-class"></a>Класс condition_variable_any
-Класс `condition_variable_any` используется для ожидания события, которое имеет любой тип `mutex`.  
+# <a name="conditionvariableany-class"></a>condition_variable_any Class
+Use the class `condition_variable_any` to wait for an event that has any `mutex` type.  
   
-## <a name="syntax"></a>Синтаксис  
+## <a name="syntax"></a>Syntax  
   
 ```
 class condition_variable_any;
 ```  
   
-## <a name="members"></a>Члены  
+## <a name="members"></a>Members  
   
-### <a name="public-constructors"></a>Открытые конструкторы  
+### <a name="public-constructors"></a>Public Constructors  
   
-|Имя|Описание|  
+|Name|Description|  
 |----------|-----------------|  
-|[condition_variable_any](#condition_variable_any)|Создает объект `condition_variable_any`.|  
+|[condition_variable_any](#condition_variable_any)|Constructs a `condition_variable_any` object.|  
   
-### <a name="public-methods"></a>Открытые методы  
+### <a name="public-methods"></a>Public Methods  
   
-|Имя|Описание|  
+|Name|Description|  
 |----------|-----------------|  
-|[notify_all](#notify_all)|Разблокирует все потоки, которые ожидают объект `condition_variable_any`.|  
-|[notify_one](#notify_one)|Разблокирует один из потоков, которые ожидают объект `condition_variable_any`.|  
-|[Ожидание](#wait)|Блокирует поток.|  
-|[wait_for](#wait_for)|Блокирует поток и задает интервал времени, после которого поток разблокируется.|  
-|[wait_until](#wait_until)|Блокирует поток и задает максимальный момент времени, в который поток разблокируется.|  
+|[notify_all](#notify_all)|Unblocks all threads that are waiting for the `condition_variable_any` object.|  
+|[notify_one](#notify_one)|Unblocks one of the threads that are waiting for the `condition_variable_any` object.|  
+|[wait](#wait)|Blocks a thread.|  
+|[wait_for](#wait_for)|Blocks a thread, and sets a time interval after which the thread unblocks.|  
+|[wait_until](#wait_until)|Blocks a thread, and sets a maximum point in time at which the thread unblocks.|  
   
-## <a name="requirements"></a>Требования  
- **Заголовок:** \<condition_variable >  
+## <a name="requirements"></a>Requirements  
+ **Header:** \<condition_variable>  
   
- **Пространство имен:** std  
+ **Namespace:** std  
   
-##  <a name="condition_variable_any"></a> Конструктор condition_variable_any::condition_variable_any  
- Создает объект `condition_variable_any`.  
+##  <a name="condition_variable_any"></a>  condition_variable_any::condition_variable_any Constructor  
+ Constructs a `condition_variable_any` object.  
   
 ```
 condition_variable_any();
 ```  
   
-### <a name="remarks"></a>Примечания  
- При недостатке памяти этот конструктор вызывает объект [system_error](../standard-library/system-error-class.md), имеющий код ошибки `not_enough_memory`. Если объект не может быть создан из-за недоступности некоторых других ресурсов, конструктор создает объект `system_error`, имеющий код ошибки `resource_unavailable_try_again`.  
+### <a name="remarks"></a>Remarks  
+ If not enough memory is available, the constructor throws a [system_error](../standard-library/system-error-class.md) object that has a `not_enough_memory` error code. If the object cannot be constructed because some other resource is not available, the constructor throws a `system_error` object that has a `resource_unavailable_try_again` error code.  
   
 ##  <a name="notify_all"></a>  condition_variable_any::notify_all  
- Разблокирует все потоки, которые ожидают объект `condition_variable_any`.  
+ Unblocks all threads that are waiting for the `condition_variable_any` object.  
   
 ```
 void notify_all() noexcept;
 ```  
   
 ##  <a name="notify_one"></a>  condition_variable_any::notify_one  
- Разблокирует один из потоков, которые ожидают объект `condition_variable_any`.  
+ Unblocks one of the threads that are waiting on the `condition_variable_any` object.  
   
 ```
 void notify_one() noexcept;
 ```  
   
 ##  <a name="wait"></a>  condition_variable_any::wait  
- Блокирует поток.  
+ Blocks a thread.  
   
 ```
 template <class Lock>  
@@ -111,17 +119,17 @@ template <class Lock, class Predicate>
 void wait(Lock& Lck, Predicate Pred);
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
  `Lck`  
- Объект `mutex` любого типа.  
+ A `mutex` object of any type.  
   
  `Pred`  
- Любое выражение, возвращающее значение `true` или `false`.  
+ Any expression that returns `true` or `false`.  
   
-### <a name="remarks"></a>Примечания  
- Первый метод блокируется до оповещения объекта `condition_variable_any` путем вызова [notify_one](../standard-library/condition-variable-class.md#notify_one) или [notify_all](../standard-library/condition-variable-class.md#notify_all). Он может также ложно активироваться.  
+### <a name="remarks"></a>Remarks  
+ The first method blocks until the `condition_variable_any` object is signaled by a call to [notify_one](../standard-library/condition-variable-class.md#notify_one) or [notify_all](../standard-library/condition-variable-class.md#notify_all). It can also wake up spuriously.  
   
- Второй метод фактически выполняет следующий код.  
+ The second method in effect executes the following code.  
   
 ```
 while (!Pred())
@@ -129,7 +137,7 @@ while (!Pred())
 ```    
   
 ##  <a name="wait_for"></a>  condition_variable_any::wait_for  
- Блокирует поток и задает интервал времени, после которого поток разблокируется.  
+ Blocks a thread, and sets a time interval after which the thread unblocks.  
   
 ```
 template <class Lock, class Rep, class Period>
@@ -139,25 +147,25 @@ template <class Lock, class Rep, class Period, class Predicate>
 bool wait_for(Lock& Lck, const chrono::duration<Rep, Period>& Rel_time, Predicate Pred);
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
  `Lck`  
- Объект `mutex` любого типа.  
+ A `mutex` object of any type.  
   
  `Rel_time`  
- Объект `chrono::duration`, указывающий количество времени до активации потока.  
+ A `chrono::duration` object that specifies the amount of time before the thread wakes up.  
   
  `Pred`  
- Любое выражение, возвращающее значение `true` или `false`.  
+ Any expression that returns `true` or `false`.  
   
-### <a name="return-value"></a>Возвращаемое значение  
- Первый метод возвращает `cv_status::timeout`, если ожидание прекращается, когда прошло `Rel_time`. В противном случае метод возвращает значение `cv_status::no_timeout`.  
+### <a name="return-value"></a>Return Value  
+ The first method returns `cv_status::timeout` if the wait terminates when `Rel_time` has elapsed. Otherwise, the method returns `cv_status::no_timeout`.  
   
- Второй метод возвращает значение `Pred`.  
+ The second method returns the value of `Pred`.  
   
-### <a name="remarks"></a>Примечания  
- Первый метод блокируется до оповещения объекта `condition_variable_any` путем вызова [notify_one](../standard-library/condition-variable-class.md#notify_one) или [notify_all](../standard-library/condition-variable-class.md#notify_all), или до завершения временного интервала `Rel_time`. Он может также ложно активироваться.  
+### <a name="remarks"></a>Remarks  
+ The first method blocks until the `condition_variable_any` object is signaled by a call to [notify_one](../standard-library/condition-variable-class.md#notify_one) or [notify_all](../standard-library/condition-variable-class.md#notify_all), or until the time interval `Rel_time` has elapsed. It can also wake up spuriously.  
   
- Второй метод фактически выполняет следующий код.  
+ The second method in effect executes the following code.  
   
 ```cpp  
 while(!Pred())
@@ -168,7 +176,7 @@ return true;
 ```  
   
 ##  <a name="wait_until"></a>  condition_variable_any::wait_until  
- Блокирует поток и задает максимальный момент времени, в который поток разблокируется.  
+ Blocks a thread, and sets a maximum point in time at which the thread unblocks.  
   
 ```
 template <class Lock, class Clock, class Duration>
@@ -190,25 +198,25 @@ void wait_until(
     Predicate Pred);
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
  `Lck`  
- Объект mutex.  
+ A mutex object.  
   
  `Abs_time`  
- Объект [chrono::time_point](../standard-library/time-point-class.md).  
+ A [chrono::time_point](../standard-library/time-point-class.md) object.  
   
  `Pred`  
- Любое выражение, возвращающее значение `true` или `false`.  
+ Any expression that returns `true` or `false`.  
   
-### <a name="return-value"></a>Возвращаемое значение  
- Методы, возвращающие тип `cv_status`, возвращают `cv_status::timeout`, если ожидание прекращается, когда истекает `Abs_time`. В противном случае эти методы возвращают `cv_status::no_timeout`.  
+### <a name="return-value"></a>Return Value  
+ Methods that return a `cv_status` type return `cv_status::timeout` if the wait terminates when `Abs_time` elapses. Otherwise, the methods return `cv_status::no_timeout`.  
   
- Методы, возвращающие `bool` возвращают значение `Pred`.  
+ Methods that return a `bool` return the value of `Pred`.  
   
-### <a name="remarks"></a>Примечания  
- Первый метод блокируется до оповещения объекта `condition_variable` путем вызова [notify_one](../standard-library/condition-variable-class.md#notify_one) или [notify_all](../standard-library/condition-variable-class.md#notify_all)`Abs_time`. Он может также ложно активироваться.  
+### <a name="remarks"></a>Remarks  
+ The first method blocks until the `condition_variable` object is signaled by a call to [notify_one](../standard-library/condition-variable-class.md#notify_one) or [notify_all](../standard-library/condition-variable-class.md#notify_all), or until `Abs_time`. It can also wake up spuriously.  
   
- Второй метод фактически выполняет следующий код.  
+ The second method in effect executes the following code.  
   
 ```
 while(!Pred())
@@ -218,10 +226,10 @@ while(!Pred())
 return true;
 ```  
   
- Третий и четвертый методы используют указатель на объект типа `xtime` для замены объекта `chrono::time_point`. Объект `xtime` задает максимальное время ожидания сигнала.  
+ The third and fourth methods use a pointer to an object of type `xtime` to replace the `chrono::time_point` object. The `xtime` object specifies the maximum amount of time to wait for a signal.  
   
-## <a name="see-also"></a>См. также  
- [Справочник по файлам заголовков](../standard-library/cpp-standard-library-header-files.md)   
+## <a name="see-also"></a>See Also  
+ [Header Files Reference](../standard-library/cpp-standard-library-header-files.md)   
  [<condition_variable>](../standard-library/condition-variable.md)
 
 

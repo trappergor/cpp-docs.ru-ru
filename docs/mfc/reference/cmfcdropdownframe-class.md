@@ -1,5 +1,5 @@
 ---
-title: "Класс CMFCDropDownFrame | Документы Microsoft"
+title: CMFCDropDownFrame Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -19,7 +19,11 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- CMFCDropDownFrame class
+- CMFCDropDownFrame [MFC], Create
+- CMFCDropDownFrame [MFC], GetParentMenuBar
+- CMFCDropDownFrame [MFC], GetParentPopupMenu
+- CMFCDropDownFrame [MFC], RecalcLayout
+- CMFCDropDownFrame [MFC], SetAutoDestroy
 ms.assetid: 09ff81a9-de00-43ec-9df9-b626f7728c4b
 caps.latest.revision: 23
 author: mikeblome
@@ -39,56 +43,56 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0e0c08ddc57d437c51872b5186ae3fc983bb0199
-ms.openlocfilehash: 5f045e4a3b580f12e64758737495c32963bea6db
+ms.translationtype: MT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 135d88a8f1da56ffe32675c69e3e4ecf3b8075bd
 ms.contentlocale: ru-ru
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 09/12/2017
 
 ---
-# <a name="cmfcdropdownframe-class"></a>Класс CMFCDropDownFrame
-Предоставляет функциональные возможности окна фрейма раскрывающегося списка в раскрывающемся списке панели инструментов и кнопки раскрывающегося списка на панели инструментов.  
+# <a name="cmfcdropdownframe-class"></a>CMFCDropDownFrame Class
+Provides drop-down frame window functionality to drop-down toolbars and drop-down toolbar buttons.  
   
-## <a name="syntax"></a>Синтаксис  
+## <a name="syntax"></a>Syntax  
   
 ```  
 class CMFCDropDownFrame : public CMiniFrameWnd  
 ```  
   
-## <a name="members"></a>Члены  
+## <a name="members"></a>Members  
   
-### <a name="public-constructors"></a>Открытые конструкторы  
-  
-|||  
-|-|-|  
-|Имя|Описание|  
-|`CMFCDropDownFrame::CMFCDropDownFrame`|Конструктор по умолчанию.|  
-|`CMFCDropDownFrame::~CMFCDropDownFrame`|Деструктор.|  
-  
-### <a name="public-methods"></a>Открытые методы  
+### <a name="public-constructors"></a>Public Constructors  
   
 |||  
 |-|-|  
-|Имя|Описание|  
-|[CMFCDropDownFrame::Create](#create)|Создает объект `CMFCDropDownFrame`.|  
-|`CMFCDropDownFrame::CreateObject`|Используется платформой для создания динамического экземпляра этого типа класса.|  
-|[CMFCDropDownFrame::GetParentMenuBar](#getparentmenubar)|Извлекает меню родительского фрейма раскрывающегося списка.|  
-|[CMFCDropDownFrame::GetParentPopupMenu](#getparentpopupmenu)|Извлекает контекстного меню родительского фрейма раскрывающегося списка.|  
-|`CMFCDropDownFrame::GetThisClass`|Используется инфраструктурой, чтобы получить указатель на [CRuntimeClass](../../mfc/reference/cruntimeclass-structure.md) объект, связанный с этим типом класса.|  
-|[CMFCDropDownFrame::RecalcLayout](#recalclayout)|Перемещает кадра раскрывающегося списка.|  
-|[CMFCDropDownFrame::SetAutoDestroy](#setautodestroy)|Задает значение, указывающее дочернее окно раскрывающимся списком удаляется автоматически.|  
+|Name|Description|  
+|`CMFCDropDownFrame::CMFCDropDownFrame`|Default constructor.|  
+|`CMFCDropDownFrame::~CMFCDropDownFrame`|Destructor.|  
   
-### <a name="remarks"></a>Примечания  
- Этот класс не предназначен для непосредственного использования в коде.  
+### <a name="public-methods"></a>Public Methods  
   
- Платформа использует этот класс для предоставления поведения рамки `CMFCDropDownToolbar` и `CMFCDropDownToolbarButton` классы. Дополнительные сведения об этих классах см. в разделе [класса CMFCDropDownToolBar](../../mfc/reference/cmfcdropdowntoolbar-class.md) и [CMFCDropDownToolbarButton класса](../../mfc/reference/cmfcdropdowntoolbarbutton-class.md).  
+|||  
+|-|-|  
+|Name|Description|  
+|[CMFCDropDownFrame::Create](#create)|Creates a `CMFCDropDownFrame` object.|  
+|`CMFCDropDownFrame::CreateObject`|Used by the framework to create a dynamic instance of this class type.|  
+|[CMFCDropDownFrame::GetParentMenuBar](#getparentmenubar)|Retrieves the parent menu bar of the drop-down frame.|  
+|[CMFCDropDownFrame::GetParentPopupMenu](#getparentpopupmenu)|Retrieves the parent pop-up menu of the drop-down frame.|  
+|`CMFCDropDownFrame::GetThisClass`|Used by the framework to obtain a pointer to the [CRuntimeClass](../../mfc/reference/cruntimeclass-structure.md) object that is associated with this class type.|  
+|[CMFCDropDownFrame::RecalcLayout](#recalclayout)|Repositions the drop-down frame.|  
+|[CMFCDropDownFrame::SetAutoDestroy](#setautodestroy)|Sets whether the child drop-down toolbar window is destroyed automatically.|  
   
-## <a name="example"></a>Пример  
- Ниже приведен пример, как получить указатель на `CMFCDropDownFrame` объекта из `CFrameWnd` класс и Установка дочернего окна раскрывающимся списком будут автоматически удаляться.  
+### <a name="remarks"></a>Remarks  
+ This class is not intended to be used directly from your code.  
   
- [!code-cpp[NVC_MFC_RibbonApp&#36;](../../mfc/reference/codesnippet/cpp/cmfcdropdownframe-class_1.cpp)]  
+ The framework uses this class to provide frame behavior to the `CMFCDropDownToolbar` and `CMFCDropDownToolbarButton` classes. For more information about these classes, see [CMFCDropDownToolBar Class](../../mfc/reference/cmfcdropdowntoolbar-class.md) and [CMFCDropDownToolbarButton Class](../../mfc/reference/cmfcdropdowntoolbarbutton-class.md).  
   
-## <a name="inheritance-hierarchy"></a>Иерархия наследования  
+## <a name="example"></a>Example  
+ The following example demonstrates how to retrieve a pointer to a `CMFCDropDownFrame` object from a `CFrameWnd` class, and how to set the child drop-down toolbar window to be destroyed automatically.  
+  
+ [!code-cpp[NVC_MFC_RibbonApp#36](../../mfc/reference/codesnippet/cpp/cmfcdropdownframe-class_1.cpp)]  
+  
+## <a name="inheritance-hierarchy"></a>Inheritance Hierarchy  
  [CObject](../../mfc/reference/cobject-class.md)  
   
  [CCmdTarget](../../mfc/reference/ccmdtarget-class.md)  
@@ -101,11 +105,11 @@ class CMFCDropDownFrame : public CMiniFrameWnd
   
  [CMFCDropDownFrame](../../mfc/reference/cmfcdropdownframe-class.md)  
   
-## <a name="requirements"></a>Требования  
- **Заголовок:** afxdropdowntoolbar.h  
+## <a name="requirements"></a>Requirements  
+ **Header:** afxdropdowntoolbar.h  
   
-##  <a name="create"></a>CMFCDropDownFrame::Create  
- Создает объект `CMFCDropDownFrame`.  
+##  <a name="create"></a>  CMFCDropDownFrame::Create  
+ Creates a `CMFCDropDownFrame` object.  
   
 ```  
 virtual BOOL Create(
@@ -115,84 +119,84 @@ virtual BOOL Create(
     CMFCDropDownToolBar* pWndOriginToolbar);
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
   
 |||  
 |-|-|  
-|Параметр|Описание|  
-|[in] `pWndParent`|Родительское окно фрейма раскрывающегося списка.|  
-|[in] `x`|Горизонтальная экранная координата расположения раскрывающемся кадра.|  
-|[in] `y`|Вертикальная экранная координата расположения раскрывающемся кадра.|  
-|[in] `pWndOriginToolbar`|Панель инструментов, расположены кнопки раскрывающегося списка, этот метод используется для заполнения нового объекта кадра раскрывающегося списка.|  
+|Parameter|Description|  
+|[in] `pWndParent`|The parent window of the drop-down frame.|  
+|[in] `x`|The horizontal screen coordinate for the location of the down-down frame.|  
+|[in] `y`|The vertical screen coordinate for the location of the down-down frame.|  
+|[in] `pWndOriginToolbar`|The toolbar that has the drop-down buttons that this method uses to populate the new drop-down frame object.|  
   
-### <a name="return-value"></a>Возвращаемое значение  
- `TRUE`Если раскрывающийся список кадров был успешно создан; в противном случае `FALSE`.  
+### <a name="return-value"></a>Return Value  
+ `TRUE` if the drop-down frame was successfully created; otherwise `FALSE`.  
   
-### <a name="remarks"></a>Примечания  
- Этот метод вызывает базовый [CMiniFrameWnd::CreateEx](../../mfc/reference/cminiframewnd-class.md#createex) метод для создания окна фрейма раскрывающийся список с `WS_POPUP` стиля. Появится окно раскрывающегося списка указанными экранными координатами. Этот метод не выполняется, если [CMiniFrameWnd::CreateEx](../../mfc/reference/cminiframewnd-class.md#createex) возвращает метод `FALSE`.  
+### <a name="remarks"></a>Remarks  
+ This method calls the base [CMiniFrameWnd::CreateEx](../../mfc/reference/cminiframewnd-class.md#createex) method to create the drop-down frame window with the `WS_POPUP` style. The drop-down frame window appears at the specified screen coordinates. This method fails if the [CMiniFrameWnd::CreateEx](../../mfc/reference/cminiframewnd-class.md#createex) method returns `FALSE`.  
   
- `CMFCDropDownFrame` Класс создает копию указанных `CMFCDropDownToolBar` параметр. Этот метод копирует изображения кнопок и состояний кнопки из `pWndOriginToolbar` параметр `m_pWndOriginToolbar` члена данных.  
+ The `CMFCDropDownFrame` class creates a copy of the provided `CMFCDropDownToolBar` parameter. This method copies the button images and button states from the `pWndOriginToolbar` parameter to the `m_pWndOriginToolbar` data member.  
   
-##  <a name="getparentmenubar"></a>CMFCDropDownFrame::GetParentMenuBar  
- Извлекает меню родительского фрейма раскрывающегося списка.  
+##  <a name="getparentmenubar"></a>  CMFCDropDownFrame::GetParentMenuBar  
+ Retrieves the parent menu bar of the drop-down frame.  
   
 ```  
 CMFCMenuBar* GetParentMenuBar() const;  
 ```  
   
-### <a name="return-value"></a>Возвращаемое значение  
- Указатель на меню родительского фрейма раскрывающегося списка или `NULL` Если кадр не имеет родителя.  
+### <a name="return-value"></a>Return Value  
+ A pointer to the parent menu bar of the drop-down frame, or `NULL` if the frame has no parent.  
   
-### <a name="remarks"></a>Примечания  
- Этот метод получает меню родительского меню кнопки «родительский». Этот метод возвращает `NULL` Если кадров имеет нет родительская кнопка или кнопка родительского меню нет родительского.  
+### <a name="remarks"></a>Remarks  
+ This method retrieves the parent menu bar from the parent button. This method returns `NULL` if the drop-down frame has no parent button or the parent button has no parent menu bar.  
   
-##  <a name="getparentpopupmenu"></a>CMFCDropDownFrame::GetParentPopupMenu  
- Извлекает контекстного меню родительского фрейма раскрывающегося списка.  
+##  <a name="getparentpopupmenu"></a>  CMFCDropDownFrame::GetParentPopupMenu  
+ Retrieves the parent pop-up menu of the drop-down frame.  
   
 ```  
 CMFCDropDownFrame* GetParentPopupMenu() const;  
 ```  
   
-### <a name="return-value"></a>Возвращаемое значение  
- Указатель кадра раскрывающегося меню родительского или `NULL` Если кадр не имеет родителя.  
+### <a name="return-value"></a>Return Value  
+ A pointer to the parent drop-down menu of the drop-down frame, or `NULL` if the frame has no parent.  
   
-### <a name="remarks"></a>Примечания  
- Этот метод получает родительского меню из родительского кнопки. Этот метод возвращает `NULL` Если нет родительская кнопка имеет кадров или родительская кнопка Нет родительского меню.  
+### <a name="remarks"></a>Remarks  
+ This method retrieves the parent menu from the parent button. This method returns `NULL` if the drop-down frame has no parent button or the parent button has no parent menu.  
   
-##  <a name="recalclayout"></a>CMFCDropDownFrame::RecalcLayout  
- Перемещает кадра раскрывающегося списка.  
+##  <a name="recalclayout"></a>  CMFCDropDownFrame::RecalcLayout  
+ Repositions the drop-down frame.  
   
 ```  
 virtual void RecalcLayout(BOOL bNotify = TRUE);
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
   
 |||  
 |-|-|  
-|Параметр|Описание|  
-|[in] `bNotify`|Не используется.|  
+|Parameter|Description|  
+|[in] `bNotify`|Unused.|  
   
-### <a name="remarks"></a>Примечания  
- Платформа вызывает этот метод, когда кадров создается или изменяется родительского окна. Этот метод вычисляет положение и размер кадра раскрывающийся список с помощью положение и размер родительского окна.  
+### <a name="remarks"></a>Remarks  
+ The framework calls this method when the drop-down frame is created or the parent window is resized. This method calculates the position and size of the drop-down frame by using the position and size of the parent window.  
   
-##  <a name="setautodestroy"></a>CMFCDropDownFrame::SetAutoDestroy  
- Задает значение, указывающее дочернее окно раскрывающимся списком удаляется автоматически.  
+##  <a name="setautodestroy"></a>  CMFCDropDownFrame::SetAutoDestroy  
+ Sets whether the child drop-down toolbar window is destroyed automatically.  
   
 ```  
 void SetAutoDestroy(BOOL bAutoDestroy = TRUE);
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
  [in] `bAutoDestroy`  
- `TRUE`автоматически уничтожении окна соответствующей раскрывающемся списке панели инструментов; в противном случае — `FALSE`.  
+ `TRUE` to automatically destroy the associated drop-down toolbar window; otherwise, `FALSE`.  
   
-### <a name="remarks"></a>Примечания  
- Если `bAutoDestroy` — `TRUE`, то `CMFCDropDownFrame` деструктор уничтожает окно соответствующей панели инструментов в раскрывающемся списке. Значение по умолчанию — `TRUE`.  
+### <a name="remarks"></a>Remarks  
+ If `bAutoDestroy` is `TRUE`, then the `CMFCDropDownFrame` destructor destroys the associated drop-down toolbar window. The default value is `TRUE`.  
   
-## <a name="see-also"></a>См. также  
- [Диаграмма иерархии](../../mfc/hierarchy-chart.md)   
- [Классы](../../mfc/reference/mfc-classes.md)   
- [Класс CMFCDropDownToolBar](../../mfc/reference/cmfcdropdowntoolbar-class.md)   
- [Класс CMFCDropDownToolbarButton](../../mfc/reference/cmfcdropdowntoolbarbutton-class.md)
+## <a name="see-also"></a>See Also  
+ [Hierarchy Chart](../../mfc/hierarchy-chart.md)   
+ [Classes](../../mfc/reference/mfc-classes.md)   
+ [CMFCDropDownToolBar Class](../../mfc/reference/cmfcdropdowntoolbar-class.md)   
+ [CMFCDropDownToolbarButton Class](../../mfc/reference/cmfcdropdowntoolbarbutton-class.md)
 

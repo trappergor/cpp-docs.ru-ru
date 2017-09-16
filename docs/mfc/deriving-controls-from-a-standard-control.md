@@ -1,56 +1,75 @@
 ---
-title: "Наследование элементов управления от стандартного элемента управления | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "стандартные элементы управления [C++], производное из"
-  - "элементы управления [MFC], производные"
-  - "производные элементы управления"
-  - "стандартные элементы управления"
-  - "стандартные элементы управления, наследование элементов управления из"
-  - "общие элементы управления Windows [C++], производное из"
+title: Deriving Controls from a Standard Control | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- standard controls [MFC], deriving controls from
+- common controls [MFC], deriving from
+- derived controls
+- controls [MFC], derived
+- Windows common controls [MFC], deriving from
+- standard controls
 ms.assetid: a6f84315-7007-4e0e-8576-78be81254802
 caps.latest.revision: 11
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 7
----
-# Наследование элементов управления от стандартного элемента управления
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 6bab0175dee887cbf16ea45827ddd2b0cf17b347
+ms.contentlocale: ru-ru
+ms.lasthandoff: 09/12/2017
 
-Как и любой [CWnd](../Topic/CWnd%20Class.md)\- производный класс, можно изменить расширение функциональности элемента управления, наследующие новый класс из существующего элемента управления.  
+---
+# <a name="deriving-controls-from-a-standard-control"></a>Deriving Controls from a Standard Control
+As with any [CWnd](../mfc/reference/cwnd-class.md)-derived class, you can modify a control's behavior by deriving a new class from an existing control class.  
   
-### Создать производный класс элемента управления  
+### <a name="to-create-a-derived-control-class"></a>To create a derived control class  
   
-1.  Создайте производный класс от класса существующего элемента управления и выборочно переопределить функцию\-член **Создать**, чтобы можно было реализовать обязательные аргументы функции **Создать** базового класса.  
+1.  Derive your class from an existing control class and optionally override the **Create** member function so that it provides the necessary arguments to the base-class **Create** function.  
   
-2.  Предоставляет функции\-члены обработчика сообщений и записи сопоставления сообщений, чтобы изменить расширение функциональности элемента управления в ответ на определенные сообщения Windows.  См. раздел [Сопоставление сообщений с функциями](../Topic/Mapping%20Messages%20to%20Functions.md).  
+2.  Provide message-handler member functions and message-map entries to modify the control's behavior in response to specific Windows messages. See [Mapping Messages to Functions](../mfc/reference/mapping-messages-to-functions.md).  
   
-3.  Предоставление новых функций\-членов для расширения функциональности элемента управления \(необязательно\).  
+3.  Provide new member functions to extend the functionality of the control (optional).  
   
- Использование производный элемент управления в диалоговом окне требует дополнительной работы.  Типы и положения элементов управления в диалоговом окне обычно задаются в ресурс шаблона диалоговых окон.  При создании производного класса элемента управления, нельзя указать его в шаблоне диалоговых окон, поскольку компилятору ресурсов ничего не знает о производном классе.  
+ Using a derived control in a dialog box requires extra work. The types and positions of controls in a dialog box are normally specified in a dialog-template resource. If you create a derived control class, you cannot specify it in a dialog template since the resource compiler knows nothing about your derived class.  
   
-#### Задать производный элемент управления в диалоговом окне  
+#### <a name="to-place-your-derived-control-in-a-dialog-box"></a>To place your derived control in a dialog box  
   
-1.  Внедрить объект производного класса элемента управления в объявлении производного класса диалогового окна.  
+1.  Embed an object of the derived control class in the declaration of your derived dialog class.  
   
-2.  Переопределить функцию\-член `OnInitDialog` в классе диалогового окна для вызова функции\-члена `SubclassDlgItem` для производного элемента управления.  
+2.  Override the `OnInitDialog` member function in your dialog class to call the `SubclassDlgItem` member function for the derived control.  
   
- подклассы `SubclassDlgItem` «динамически» элемент управления, созданный из шаблона диалогового окна.  Если элемент управления динамически является подклассом, обработчик в Windows, процесс некоторые сообщения внутри собственного приложения, а затем передать оставшиеся сообщения и перейти к Windows.  Дополнительные сведения см. в функцию\-член [SubclassDlgItem](../Topic/CWnd::SubclassDlgItem.md) класса `CWnd` в *справочнике по MFC*.  В следующем примере показано, как можно написать переопределение `OnInitDialog` для вызова `SubclassDlgItem`:  
+ `SubclassDlgItem` "dynamically subclasses" a control created from a dialog template. When a control is dynamically subclassed, you hook into Windows, process some messages within your own application, then pass the remaining messages on to Windows. For more information, see the [SubclassDlgItem](../mfc/reference/cwnd-class.md#subclassdlgitem) member function of class `CWnd` in the *MFC Reference*. The following example shows how you might write an override of `OnInitDialog` to call `SubclassDlgItem`:  
   
- [!code-cpp[NVC_MFCControlLadenDialog#3](../mfc/codesnippet/CPP/deriving-controls-from-a-standard-control_1.cpp)]  
+ [!code-cpp[NVC_MFCControlLadenDialog#3](../mfc/codesnippet/cpp/deriving-controls-from-a-standard-control_1.cpp)]  
   
- Поскольку производный элемент управления внедряется в классе диалогового окна, он будет построен в диалоговом окне будет создан, и он будет при уничтожении диалоговое окно становится уничтожается.  Сравните этот код в примере в разделе [Добавление элементов управления вручную](../mfc/adding-controls-by-hand.md).  
+ Because the derived control is embedded in the dialog class, it will be constructed when the dialog box is constructed, and it will be destroyed when the dialog box is destroyed. Compare this code to the example in [Adding Controls By Hand](../mfc/adding-controls-by-hand.md).  
   
-## См. также  
- [Создание и использование элементов управления](../mfc/making-and-using-controls.md)   
- [Элементы управления](../mfc/controls-mfc.md)
+## <a name="see-also"></a>See Also  
+ [Making and Using Controls](../mfc/making-and-using-controls.md)   
+ [Controls](../mfc/controls-mfc.md)
+
+

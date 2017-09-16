@@ -1,66 +1,84 @@
 ---
-title: "TN048. Написание программ настройки и администрирования ODBC для приложений баз данных MFC | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "vc.mfc.odbc"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "установка ODBC"
-  - "MFC - библиотека, приложения баз данных"
-  - "ODBC, и MFC"
-  - "ODBC, установка"
-  - "установка, программы установки ODBC"
-  - "TN048"
+title: 'TN048: Writing ODBC Setup and Administration Programs for MFC Database Applications | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- vc.mfc.odbc
+dev_langs:
+- C++
+helpviewer_keywords:
+- installing ODBC
+- ODBC, installing
+- setup, ODBC setup programs
+- TN048
+- ODBC, and MFC
+- MFC, database applications
 ms.assetid: d456cdd4-0513-4a51-80c0-9132b66115ce
 caps.latest.revision: 9
-caps.handback.revision: 5
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
----
-# TN048. Написание программ настройки и администрирования ODBC для приложений баз данных MFC
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 0b7ccc6afffa028589ddc86e9f0a6124425aa0d8
+ms.contentlocale: ru-ru
+ms.lasthandoff: 09/12/2017
 
+---
+# <a name="tn048-writing-odbc-setup-and-administration-programs-for-mfc-database-applications"></a>TN048: Writing ODBC Setup and Administration Programs for MFC Database Applications
 > [!NOTE]
->  Следующее техническое примечание не было обновлено, поскольку сначала оно было включено в электронную документацию.  В результате некоторые процедуры и разделы могут быть устаревшими или неверными.  Для получения последних сведений рекомендуется выполнить поиск интересующей темы в алфавитном указателе документации в Интернете.  
+>  The following technical note has not been updated since it was first included in the online documentation. As a result, some procedures and topics might be out of date or incorrect. For the latest information, it is recommended that you search for the topic of interest in the online documentation index.  
   
- Приложения с помощью классов MFC базы данных требует, программа установки установит компоненты ODBC.  Они могут также программу администрирования ODBC, которая получает сведения о доступных драйверов, чтобы определить драйвера по умолчанию и настройки источников данных.  Эта заметка описывается использование api\-интерфейса установщика ODBC запись данных программы.  
+ Applications using MFC database classes will need a setup program that installs ODBC components. They may also need an ODBC Administration program that will retrieve information about the available drivers, to specify default drivers and to configure data sources. This note describes the use of the ODBC Installer API to write these programs.  
   
-##  <a name="_mfcnotes_writing_an_odbc_setup_program"></a> При создании программы установки ODBC  
- Приложения баз данных MFC требует диспетчера драйверов ODBC \(ODBC.DLL\) и драйверы ODBC могут обращаться к источникам данных.  Многие драйверы ODBC также требуют дополнительных DLL сети и взаимодействия.  Большинство драйверов ODBC, поставляемых с программой установки установит необходимые компоненты ODBC.  Разработчики приложений с помощью классов MFC базы данных можно:  
+##  <a name="_mfcnotes_writing_an_odbc_setup_program"></a> Writing an ODBC Setup Program  
+ An MFC database application requires the ODBC Driver Manager (ODBC.DLL) and ODBC drivers to be able to get to data sources. Many ODBC drivers also require additional network and communication DLLs. Most ODBC drivers ship with a setup program that will install the required ODBC components. Application developers using MFC database classes can:  
   
--   Полагаться на том драйвер\- для установки для установки компонентов ODBC.  Это не требует дальнейших действий с части разработчика — можно просто распространение программа установки драйвера.  
+-   Rely on the driver-specific setup programs for installing ODBC components. This will require no further work on the developer's part — you can just redistribute the driver's setup program.  
   
--   Кроме того, можно написать собственную программу установки, которая установит диспетчер драйверов и драйвер.  
+-   Alternatively, you can write your own setup program, which will install the driver manager and the driver.  
   
- Api\-интерфейса установщика ODBC могут использоваться для создания конкретного приложения программы установки.  В функции API установщика реализованы DLL установщика ODBC — ODBCINST.DLL на 16 разрядном Windows и ODBCCP32.DLL в Win32.  Приложение может вызвать метод **SQLInstallODBC** в библиотеке DLL установщика, который установит диспетчер драйверов ODBC, драйверы ODBC, и все необходимые переводчики.  Затем пишет установка драйверов и переводчиков в файле ODBCINST.INI \(или в реестре, NT\).  **SQLInstallODBC** требуется полный путь к файлу ODBC.INF, который содержит список драйверов, настройку и описаны файлы, которые состоят из каждого драйвера.  Он также содержит нужную информацию о диспетчере и переводчиках драйвера.  Файлы ODBC.INF обычно предоставляются разработчиками драйвера.  
+ The ODBC installer API can be used to write application-specific setup programs. The functions in the installer API are implemented by the ODBC installer DLL — ODBCINST.DLL on 16-bit Windows and ODBCCP32.DLL on Win32. An application can call **SQLInstallODBC** in the installer DLL, which will install the ODBC driver manager, ODBC drivers, and any required translators. It then records the installed drivers and translators in the ODBCINST.INI file (or the registry, on NT). **SQLInstallODBC** requires the full path to the ODBC.INF file, which contains the list of drivers to be installed and describes the files that comprise each driver. It also contains similar information about the driver manager and translators. ODBC.INF files are typically supplied by driver developers.  
   
- Программа может также создать отдельные компоненты ODBC.  Настроить диспетчер драйверов, сначала вызывает **SQLInstallDriverManager** программы в библиотеке DLL установщика для получения целевой каталог для диспетчера драйверов.  Обычно это каталог, в котором находятся DLL Windows.  Затем программа использует сведения в разделе диспетчера драйвера \[ODBC\] ODBC.INF файла для копирования диспетчер драйверов и связанные файлы с диска установки в этот каталог.  Установка этому драйвер, сначала вызывает **SQLInstallDriver** программы в библиотеке DLL установщика для добавления спецификация драйвера в файл ODBCINST.INI \(или реестр, на NT\).  **SQLInstallDriver** возвращает целевой каталог драйвера — обычно каталог, в котором находятся DLL Windows.  Затем программа использует сведения в разделе драйвера файла ODBC.INF для копирования DLL драйвера и связанные файлы с диска установки в этот каталог.  
+ A program can also install individual ODBC components. To install the Driver Manager, a program first calls **SQLInstallDriverManager** in the installer DLL to get the target directory for the Driver Manager. This is usually the directory in which Windows DLLs reside. The program then uses the information in the [ODBC Driver Manager] section of the ODBC.INF file to copy the Driver Manager and related files from the installation disk to this directory. To install an individual driver, a program first calls **SQLInstallDriver** in the installer DLL to add the driver specification to the ODBCINST.INI file (or the registry, on NT). **SQLInstallDriver** returns the driver's target directory — usually the directory in which Windows DLLs reside. The program then uses the information in the driver's section of the ODBC.INF file to copy the driver DLL and related files from the installation disk to this directory.  
   
- Дополнительные сведения о ODBC.INF, ODBCINST.INI и использованием API\-интерфейса установщика см. в *справочнике программиста* ODBC SDK, глава 19 "Установка программного обеспечения ODBC".  
+ For more information on ODBC.INF, ODBCINST.INI and using the installer API, see ODBC SDK *Programmer's Reference,* Chapter 19, Installing ODBC Software.  
   
-##  <a name="_mfcnotes_writing_an_odbc_administrator"></a> Использовать администратор ODBC  
- Приложения баз данных MFC может установить и настроить источники данных ODBC в одном из 2 способами, следующим образом:  
+##  <a name="_mfcnotes_writing_an_odbc_administrator"></a> Writing an ODBC Administrator  
+ An MFC database application can set up and configure ODBC data sources in one of two ways, as follows:  
   
--   Используйте администратор ODBC \(доступны как программа или в качестве элемента панели управления\).  
+-   Use the ODBC Administrator (available as a program or as a Control Panel item).  
   
--   Создайте собственную программу для настройки источников данных.  
+-   Create your own program to configure data sources.  
   
- Программы, настроить источники данных осуществляет вызовы функций в библиотеке DLL установщика.  Библиотека DLL установщика вызывает установки библиотеки DLL для настройки источника данных.  Одно установки библиотеки DLL для каждого драйвера; это может являться dll\-файлом самим драйвером, или отдельной библиотеки DLL.  Библиотека DLL настройки предлагает пользователю для сведений, драйверу для подключения к источнику данных и переводчику по умолчанию, если поддерживается.  Затем он вызывает библиотеку DLL и api\-интерфейса установщика Windows, чтобы записать эти сведения в файле ODBC.INI \(или реестре\).  
+ A program that configures data sources makes function calls to the installer DLL. The installer DLL calls a setup DLL to configure a data source. There is one setup DLL for each driver; it may be the driver DLL itself, or a separate DLL. The setup DLL prompts the user for information that the driver needs to connect to the data source and the default translator, if supported. It then calls the installer DLL and Windows APIs to record this information in the ODBC.INI file (or registry).  
   
- Чтобы отобразить диалоговое окно, в котором пользователь может добавлять, изменять и удалять источники данных, вызовы **SQLManageDataSources** программы в библиотеке DLL установщика.  Эта функция вызывается, когда библиотека DLL установщика вызываться на панели управления.  Для добавления изменения или удаления источника данных, функция **SQLManageDataSources** вызывает **ConfigDSN** в установку библиотеки DLL для драйвера, связанного с этим источником данных.  Непосредственно для добавления, изменения или удаления источников данных, программа вызывает **SQLConfigDataSource** в библиотеке DLL установщика.  Программа передает имя источника данных и параметра, который определяет действия, которые следует предпринять.  **SQLConfigDataSource** вызывает **ConfigDSN** в установку библиотеки DLL и передает его аргументы из **SQLConfigDataSource**.  
+ To display a dialog box with which a user can add, modify, and delete data sources, a program calls **SQLManageDataSources** in the installer DLL. This function is invoked when the installer DLL is called from the Control Panel. To add, modify, or delete a data source, **SQLManageDataSources** calls **ConfigDSN** in the setup DLL for the driver associated with that data source. To directly add, modify, or delete data sources, a program calls **SQLConfigDataSource** in the installer DLL. The program passes the name of the data source and an option that specifies the action to take. **SQLConfigDataSource** calls **ConfigDSN** in the setup DLL and passes it the arguments from **SQLConfigDataSource**.  
   
- Дополнительные сведения см. в *справочнике программиста* ODBC SDK, глава 23, "Установка функциональной ссылки на DLL", и глава 24, "Справочник по DLL\-функции установщика".  
+ For more information, see ODBC SDK *Programmer's Reference,* Chapter 23, Setup DLL Function Reference, and Chapter 24, Installer DLL Function Reference.  
   
-## См. также  
- [Технические примечания по номеру](../mfc/technical-notes-by-number.md)   
- [Технические примечания по категории](../mfc/technical-notes-by-category.md)
+## <a name="see-also"></a>See Also  
+ [Technical Notes by Number](../mfc/technical-notes-by-number.md)   
+ [Technical Notes by Category](../mfc/technical-notes-by-category.md)
+
+

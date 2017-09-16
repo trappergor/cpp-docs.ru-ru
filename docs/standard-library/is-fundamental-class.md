@@ -1,5 +1,5 @@
 ---
-title: "Класс is_fundamental | Документы Майкрософт"
+title: is_fundamental Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -9,7 +9,6 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
-- is_fundamental
 - type_traits/std::is_fundamental
 dev_langs:
 - C++
@@ -35,31 +34,31 @@ translation.priority.mt:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 51fbd09793071631985720550007dddbe16f598f
-ms.openlocfilehash: ba389ba4db5b559314b9db19cbb08d9f86ba4e7d
+ms.translationtype: MT
+ms.sourcegitcommit: 5d026c375025b169d5db8445cbb52c0c917b2d8d
+ms.openlocfilehash: fe5c85b338d2b253ef989aae03703799af27727b
 ms.contentlocale: ru-ru
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 09/09/2017
 
 ---
-# <a name="isfundamental-class"></a>Класс is_fundamental
-Проверяет, является ли тип типом void или арифметическим типом.  
+# <a name="isfundamental-class"></a>is_fundamental Class
+Tests if type is void or arithmetic.  
   
-## <a name="syntax"></a>Синтаксис  
+## <a name="syntax"></a>Syntax  
   
 ```  
 template <class Ty>  
 struct is_fundamental;  
 ```  
   
-#### <a name="parameters"></a>Параметры  
+#### <a name="parameters"></a>Parameters  
  `Ty`  
- Запрашиваемый тип.  
+ The type to query.  
   
-## <a name="remarks"></a>Примечания  
- Экземпляр предиката типа содержит значение true, если тип `Ty` — фундаментальный тип, т. е., `void`, целочисленный тип, тип с плавающей запятой или форма `cv-qualified` одного из них. В противном случае он содержит значение false.  
+## <a name="remarks"></a>Remarks  
+ An instance of the type predicate holds true if the type `Ty` is a fundamental type, that is, `void`, an integral type, an floating point type, or a `cv-qualified` form of one of them, otherwise it holds false.  
   
-## <a name="example"></a>Пример  
+## <a name="example"></a>Example  
   
 ```cpp  
 // std__type_traits__is_fundamental.cpp   
@@ -95,12 +94,12 @@ is_fundamental<const float> == true
 is_fundamental<void> == true  
 ```  
   
-## <a name="requirements"></a>Требования  
- **Заголовок:** \<type_traits>  
+## <a name="requirements"></a>Requirements  
+ **Header:** \<type_traits>  
   
- **Пространство имен:** std  
+ **Namespace:** std  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>See Also  
  [<type_traits>](../standard-library/type-traits.md)   
- [Класс is_compound](../standard-library/is-compound-class.md)
+ [is_compound Class](../standard-library/is-compound-class.md)
 

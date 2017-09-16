@@ -1,101 +1,120 @@
 ---
-title: "Пошаговое руководство. Создание приложения ленты с помощью MFC | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "создание приложения ленты (MFC)"
-  - "приложение ленты, создание (MFC)"
+title: 'Walkthrough: Creating a Ribbon Application By Using MFC | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- ribbon application, creating (MFC)
+- creating a ribbon aplication (MFC)
 ms.assetid: e61393e2-1d6b-4594-a7ce-157d3d1b0d9f
 caps.latest.revision: 21
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 17
----
-# Пошаговое руководство. Создание приложения ленты с помощью MFC
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: dd9aff0bf52100207e2df0504226c991d0f66614
+ms.contentlocale: ru-ru
+ms.lasthandoff: 09/12/2017
 
-В этом пошаговом руководстве рассматривается использование **Мастера приложений MFC** для создания приложения, в котором по умолчанию имеется лента.  Затем мы расширим ленту, добавив в нее категорию **Пользовательская** с панелью **Избранное**, и добавим на эту панель некоторые часто используемые команды.  
+---
+# <a name="walkthrough-creating-a-ribbon-application-by-using-mfc"></a>Walkthrough: Creating a Ribbon Application By Using MFC
+This walkthrough shows how to use the **MFC Application Wizard** to create an application that has a ribbon by default. You can then expand the ribbon by adding a **Custom** ribbon category that has a **Favorites** ribbon panel, and then adding some frequently used commands to the panel.  
   
-## Обязательные компоненты  
- В этом руководстве предполагается, что в [!INCLUDE[vsprvs](../assembler/masm/includes/vsprvs_md.md)] используются **Обычные параметры среды разработки**.  Если вы используете другие параметры, некоторые из элементов пользовательского интерфейса, упоминаемые в приведенных ниже инструкциях, могут не отображаться.  Сведения о том, как изменить эти параметры, см. в разделе [How to: Reset Your Settings](http://msdn.microsoft.com/ru-ru/c95c51be-e609-4769-abba-65e6beedec76).  
+## <a name="prerequisites"></a>Prerequisites  
+ This walkthrough assumes that you have set [!INCLUDE[vsprvs](../assembler/masm/includes/vsprvs_md.md)] to use **General Development Settings**. If you are using different settings, some of the user interface (UI) elements that are referenced in the following instructions might not be displayed. For information about how to change settings, see [How to: Reset Your Settings](http://msdn.microsoft.com/en-us/c95c51be-e609-4769-abba-65e6beedec76).  
   
-### Создание приложения MFC с лентой  
+### <a name="to-create-an-mfc-application-that-has-a-ribbon"></a>To create an MFC application that has a ribbon  
   
-1.  С помощью **Мастера приложений MFC** создайте приложение MFC с лентой.  Чтобы запустить мастер, в меню **Файл** выберите **Создать** и затем выберите **Проект**.  
+1.  Use the **MFC Application Wizard** to create an MFC application that has a ribbon. To run the wizard, on the **File** menu, point to **New**, and then click **Project**.  
   
-2.  В диалоговом окне **Новый проект** разверните узел **Visual C\+\+** в разделе **Установленные шаблоны**, выберите **Библиотека MFC**, а затем выберите **Приложение MFC**.  Введите имя для проекта, например `MFCRibbonApp`, и нажмите кнопку **ОК**.  
+2.  In the **New Project** dialog box, expand the **Visual C++** node under **Installed Templates**, select **MFC**, and then select **MFC Application**. Type a name for the project, for example, `MFCRibbonApp`, and then click **OK**.  
   
-3.  На первой странице **Мастера приложений MFC** нажмите кнопку **Далее**.  
+3.  On the first page of the **MFC Application Wizard**, click **Next**.  
   
-4.  На странице **Тип приложения** в списке **Визуальный стиль и цвета** выберите **Office 2007 \(синяя тема\)**.  Остальные параметры не изменяйте.  Нажмите кнопку **Далее**.  
+4.  On the **Application Type** page, under **Visual style and colors**, select **Office 2007 (Blue theme)**. Leave the other settings as they are. Click **Next**.  
   
-5.  На странице **Поддержка составных документов** убедитесь, что выбран вариант **Нет**, и нажмите кнопку **Далее**.  
+5.  On the **Compound Document Support** page, make sure that **None** is selected and then click **Next**.  
   
-6.  На странице **Свойства шаблона документов** в поле **Расширение файла** введите расширение файла для документов, создаваемых этим приложением, например `mfcrbnapp`.  Нажмите кнопку **Далее**.  
+6.  On the **Document Template Properties** page, in the **File extension** box, type a file name extension for documents that this application creates, for example, `mfcrbnapp`. Click **Next**.  
   
-7.  На странице **Поддержка базы данных** убедитесь, что выбран вариант **Нет**, и нажмите кнопку **Далее**.  
+7.  On the **Database Support** page, make sure that **None** is selected and then click **Next**.  
   
-8.  На странице **Свойства интерфейса пользователя** убедитесь, что выбран вариант **Использовать ленту**.  Нажмите кнопку **Далее**.  
+8.  On the **User Interface Features** page, make sure that **Use a ribbon** is selected. Click **Next**.  
   
-9. По умолчанию **Мастер приложений MFC** добавляет поддержку нескольких закрепляемых областей.  Поскольку в этом руководстве рассматривается только лента, эти компоненты можно удалить из приложения.  На странице **Дополнительные параметры** снимите все флажки.  Нажмите кнопку **Далее**.  
+9. By default, the **MFC Application Wizard** adds support for several docking panes. Because this walkthrough just teaches about the ribbon, you can remove these options from the application. On the **Advanced Features** page, clear all options. Click **Next**.  
   
-10. На странице **Созданные классы** нажмите кнопку **Готово**, чтобы создать приложение MFC.  
+10. On the **Generated Classes** page, click **Finish** to create the MFC application.  
   
-11. Чтобы убедиться, что приложение успешно создано, соберите и запустите его.  Для сборки приложения в меню **Сборка** выберите **Собрать решение**.  Если сборка приложения прошла успешно, запустите его, выбрав **Начать отладку** в меню **Отладка**.  
+11. To verify that the application was created successfully, build it and run it. To build the application, on the **Build** menu, click **Build Solution**. If the application builds successfully, run it by clicking **Start Debugging** on the **Debug** menu.  
   
-     Мастер автоматически создает ленту с одной категорией, которая называется **Главная**.  Эта лента содержит три панели ленты, которые называются **Буфер обмена**, **Вид** и **Окно**.  
+     The wizard automatically creates a ribbon that has one ribbon category that is named **Home**. This ribbon contains three ribbon panels, which are named **Clipboard**, **View**, and **Window**.  
   
-### Добавление категории и панели на ленту  
+### <a name="to-add-a-category-and-panel-to-the-ribbon"></a>To add a category and panel to the ribbon  
   
-1.  Чтобы открыть созданный мастером ресурс ленты, в меню **Вид** выберите **Другие окна** и затем выберите **Ресурсы**.  В окне **Ресурсы** щелкните **Лента**, а затем дважды щелкните **IDR\_RIBBON**.  
+1.  To open the ribbon resource that the wizard created, on the **View** menu, point to **Other Windows** and then click **Resource View**. In **Resource View**, click **Ribbon** and then double-click **IDR_RIBBON**.  
   
-2.  Сначала добавьте на ленту пользовательскую категорию, дважды щелкнув элемент **Категория** в **панели элементов**.  
+2.  First, add a custom category to the ribbon by double-clicking **Category** in the **Toolbox**.  
   
-     Будет создана категория с заголовком **Категория1**.  По умолчанию категория содержит одну панель.  
+     A category that has the caption **Category1** is created. By default, the category contains one panel.  
   
-     Щелкните правой кнопкой мыши заголовок **Категория1** и выберите **Свойства**.  В окне **Свойства** измените значение свойства **Заголовок** на `Пользовательская`.  
+     Right-click **Category1** and then click **Properties**. In the **Properties** window, change **Caption** to `Custom`.  
   
-     Свойства **Большие изображения** и **Маленькие изображения** задают точечные рисунки, используемые в качестве значков для элементов ленты в этой категории.  Поскольку создание пользовательских точечных рисунков выходит за рамки этого руководства, просто используйте точечные рисунки, созданные мастером.  Маленькие точечные рисунки имеют размер 16 пикселей на 16 пикселей.  Используйте в качестве маленьких изображений точечные рисунки, доступ к которым осуществляется по идентификатору ресурса IDB\_FILESMALL.  Большие точечные рисунки имеют размер 32 пикселей на 32 пикселей.  Используйте в качестве больших изображений точечные рисунки, доступ к которым осуществляется по идентификатору ресурса IDB\_FILELARGE.  
+     The **Large Images** and **Small Images** properties specify the bitmaps that are used as icons for the ribbon elements in this category. Because creating custom bitmaps is beyond the scope of this walkthrough, just reuse the bitmaps that were created by the wizard. Small bitmaps are 16 pixels by 16 pixels. For small images, use the bitmaps that are accessed by the IDB_FILESMALL resource ID. Large bitmaps are 32 pixels by 32 pixels. For large images, use the bitmaps that are accessed by the IDB_FILELARGE resource ID.  
   
     > [!NOTE]
-    >  На HDPI\-мониторах автоматически используются HDPI\-версии изображений.  
+    >  On high dots per inch (HDPI) displays, the HDPI versions of the images are automatically used.  
   
-3.  Теперь необходимо настроить панель.  Панели используются для группирования элементов, логически связанных друг с другом.  Например, на вкладке **Главная** команды **Вырезать**, **Копировать** и **Вставить** находятся на панели **Буфер обмена**.  Чтобы настроить панель, щелкните правой кнопкой мыши **Panel1** и выберите **Свойства**.  В окне **Свойства** измените значение свойства **Заголовок** на `Избранное`.  
+3.  Next, customize the panel. Panels are used to group items that are logically related to one another. For example, on the **Home** tab of this application, the **Cut**, **Copy**, and **Paste** commands are all located on the **Clipboard** panel. To customize the panel, right-click **Panel1** and then click **Properties**. In the **Properties** window, change **Caption** to `Favorites`.  
   
-     Для панели можно указать **Индекс изображения**.  Это число определяет значок, отображаемый, если панель ленты добавлена на **Панель быстрого доступа**.  На самой панели ленты значок не отображается.  
+     You can specify the **Image Index** for the panel. This number specifies the icon that is displayed if the ribbon panel is added to the **Quick Access Toolbar**. The icon is not displayed on the ribbon panel itself.  
   
-4.  Чтобы убедиться, что категория и панель ленты успешно созданы, просмотрите элемент управления "лента".  На **панели инструментов редактора ленты** нажмите кнопку **Проверить ленту**.  На ленте должны отображаться вкладка **Пользовательская** и панель **Избранное**.  
+4.  To verify that the ribbon category and panel were created successfully, preview the ribbon control. On the **Ribbon Editor Toolbar**, click the **Test Ribbon** button. A **Custom** tab and **Favorites** panel should be displayed on the ribbon.  
   
-### Добавление элементов на панели ленты  
+### <a name="to-add-elements-to-the-ribbon-panels"></a>To add elements to the ribbon panels  
   
-1.  Чтобы добавить элементы на панель, созданную в предыдущей процедуре, перетащите элементы управления из раздела **Редактор ленты** в **панели элементов** на панель в представлении кода.  
+1.  To add elements to the panel that you created in the previous procedure, drag controls from the **Ribbon Editor** section of the **Toolbox** to the panel in the design view.  
   
-2.  Сначала добавьте кнопку **Печать**.  Кнопка **Печать** будет иметь подменю, содержащее команду **Быстрая печать**, которая выводит документ на принтер по умолчанию.  Обе эти команды уже определены для этого приложения.  Они находятся в меню приложения.  
+2.  First, add a **Print** button. The **Print** button will have a submenu that contains a **Quick Print** command that prints by using the default printer. Both of these commands are already defined for this application. They are located on the application menu.  
   
-     Чтобы создать кнопку **Печать**, перетащите на панель инструмент "Кнопка".  
+     To create the **Print** button, drag a Button tool to the panel.  
   
-     В окне **Свойства** измените значение свойства **Идентификатор** на **ID\_FILE\_PRINT** \(этот идентификатор должен уже быть определен\).  Измените значение свойства **Заголовок** на `Печать`.  Измените значение свойства **Индекс изображения** на `4`.  
+     In the **Properties** window, change the **ID** property to **ID_FILE_PRINT**, which should already be defined. Change **Caption** to `Print`. Change **Image Index** to `4`.  
   
-     Чтобы создать кнопку **Быстрая печать**, щелкните столбец значения свойства рядом с пунктом **Пункты меню**, а затем щелкните многоточие \(**...**\).  В **Редакторе элементов** нажмите неподписанную кнопку **Добавить**, чтобы создать пункт меню.  В окне **Свойства** измените значение свойства **Заголовок** на `Быстрая печать`, свойства **Идентификатор** на `ID_FILE_PRINT_DIRECT`, а свойства **Изображение** на `5`.  Свойство "Изображение" задает значок "Быстрая печать" в ресурсе точечных изображений IDB\_FILESMALL.  
+     To create the **Quick Print** button, click the property value column next to **Menu Items**, and then click the ellipsis (**...**). In the **Items Editor**, click the unlabeled **Add** button to create a menu item. In the **Properties** window, change **Caption** to `Quick Print`, **ID** to `ID_FILE_PRINT_DIRECT`, and **Image** to `5`. The image property specifies the Quick Print icon in the IDB_FILESMALL bitmap resource.  
   
-3.  Чтобы убедиться, что кнопки добавлены на панель ленты, соберите приложение и запустите его.  Для сборки приложения в меню **Сборка** выберите **Собрать решение**.  Если сборка приложения прошла успешно, запустите приложение, выбрав **Начать отладку** в меню **Отладка**.  На панели **Избранное** на вкладке ленты **Пользовательская** должны отображаться кнопка **Печать** и поле со списком.  
+3.  To verify that the buttons were added to the ribbon panel, build the application and run it. To build the application, on the **Build** menu, click **Build Solution**. If the application builds successfully, run the application by clicking **Start Debugging** on the **Debug** menu. The **Print** button and the combo box on the **Favorites** panel on the **Custom** tab on the ribbon should be displayed.  
   
-## Следующие действия  
- [Практическое руководство. Настройка панели быстрого доступа](../mfc/how-to-customize-the-quick-access-toolbar.md)  
+## <a name="next-steps"></a>Next Steps  
+ [How to: Customize the Quick Access Toolbar](../mfc/how-to-customize-the-quick-access-toolbar.md)  
   
- [Практическое руководство. Настройка кнопки приложения](../mfc/how-to-customize-the-application-button.md)  
+ [How to: Customize the Application Button](../mfc/how-to-customize-the-application-button.md)  
   
- Полные примеры см. в разделе [Примеры \(пакет компонентов MFC\)](../top/visual-cpp-samples.md).  
+ For end-to-end samples, see [Samples (MFC Feature Pack)](../visual-cpp-samples.md).  
   
-## См. также  
- [Пошаговые руководства](../mfc/walkthroughs-mfc.md)   
- [Примеры \(пакет компонентов MFC\)](../top/visual-cpp-samples.md)
+## <a name="see-also"></a>See Also  
+ [Walkthroughs](../mfc/walkthroughs-mfc.md)   
+ [Samples (MFC Feature Pack)](../visual-cpp-samples.md)
+
+

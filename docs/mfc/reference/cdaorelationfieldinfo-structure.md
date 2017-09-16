@@ -1,5 +1,5 @@
 ---
-title: "Структура CDaoRelationFieldInfo | Документы Microsoft"
+title: CDaoRelationFieldInfo Structure | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -14,7 +14,7 @@ dev_langs:
 - C++
 helpviewer_keywords:
 - DAO (Data Access Objects), Relations collection
-- CDaoRelationFieldInfo structure
+- CDaoRelationFieldInfo structure [MFC]
 ms.assetid: 47cb89ca-dc80-47ce-96fd-cc4b88512558
 caps.latest.revision: 13
 author: mikeblome
@@ -34,17 +34,17 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 040985df34f2613b4e4fae29498721aef15d50cb
-ms.openlocfilehash: 23d7497502f611cf2311e574556186dc5f7c7d3d
+ms.translationtype: MT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 58505b69e8acb04122bbf62d8cecf6635a4efb8a
 ms.contentlocale: ru-ru
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 09/12/2017
 
 ---
-# <a name="cdaorelationfieldinfo-structure"></a>Структура CDaoRelationFieldInfo
-`CDaoRelationFieldInfo` Структура содержит сведения о поле в связь, определенную для объектов доступа к данным (DAO).  
+# <a name="cdaorelationfieldinfo-structure"></a>CDaoRelationFieldInfo Structure
+The `CDaoRelationFieldInfo` structure contains information about a field in a relation defined for data access objects (DAO).  
   
-## <a name="syntax"></a>Синтаксис  
+## <a name="syntax"></a>Syntax  
   
 ```  
 struct CDaoRelationFieldInfo  
@@ -54,24 +54,24 @@ struct CDaoRelationFieldInfo
 };  
 ```  
   
-#### <a name="parameters"></a>Параметры  
+#### <a name="parameters"></a>Parameters  
  `m_strName`  
- Имя поля в таблице первичного отношения.  
+ The name of the field in the primary table of the relation.  
   
  `m_strForeignName`  
- Имя поля в таблице внешнего отношения.  
+ The name of the field in the foreign table of the relation.  
   
-## <a name="remarks"></a>Примечания  
- Объект relation DAO задает поля в главной таблицы и поля во внешней таблице, которые определяют связи. Ссылки на определение структуры выше в основном указывают, как данные возвращаются в `m_pFieldInfos` членом [CDaoRelationInfo](../../mfc/reference/cdaorelationinfo-structure.md) объекта, полученного путем вызова [GetRelationInfo](../../mfc/reference/cdaodatabase-class.md#getrelationinfo) функции-члена класса `CDaoDatabase`.  
+## <a name="remarks"></a>Remarks  
+ A DAO relation object specifies the fields in a primary table and the fields in a foreign table that define the relation. The references to Primary in the structure definition above indicate how the information is returned in the `m_pFieldInfos` member of a [CDaoRelationInfo](../../mfc/reference/cdaorelationinfo-structure.md) object obtained by calling the [GetRelationInfo](../../mfc/reference/cdaodatabase-class.md#getrelationinfo) member function of class `CDaoDatabase`.  
   
- Класс MFC не представлены связи и отношения поле объекты. Вместо этого DAO объекты базового MFC класса [CDaoDatabase](../../mfc/reference/cdaodatabase-class.md) содержит коллекцию объектов отношения с именем коллекции отношений. Каждый объект отношения в свою очередь, содержит коллекцию объектов полей отношения. Каждый объект отношения поле сопоставляет поля в таблице первичного с полем во внешней таблице. Взятые вместе, объектов полей отношения определяют группу полей в каждой таблице которых совместно определяют связи. `CDaoDatabase`обращение к связи объектов с `CDaoRelationInfo` путем вызова метода `GetRelationInfo` функции-члена. `CDaoRelationInfo` Объекта, затем имеет член данных, `m_pFieldInfos`, который указывает на массив `CDaoRelationFieldInfo` объектов.  
+ Relation objects and relation field objects are not represented by an MFC class. Instead, the DAO objects underlying MFC objects of class [CDaoDatabase](../../mfc/reference/cdaodatabase-class.md) contain a collection of relation objects, called the Relations collection. Each relation object, in turn, contains a collection of relation field objects. Each relation field object correlates a field in the primary table with a field in the foreign table. Taken together, the relation field objects define a group of fields in each table, which together define the relation. `CDaoDatabase` lets you access relation objects with a `CDaoRelationInfo` object by calling the `GetRelationInfo` member function. The `CDaoRelationInfo` object, then, has a data member, `m_pFieldInfos`, that points to an array of `CDaoRelationFieldInfo` objects.  
   
- Вызов [GetRelationInfo](../../mfc/reference/cdaodatabase-class.md#getrelationinfo) функции-члена, содержащего `CDaoDatabase` объекта в объект отношения, вы заинтересованы в которого хранятся отношения является коллекция. Получить доступ к `m_pFieldInfos` членом [CDaoRelationInfo](../../mfc/reference/cdaorelationinfo-structure.md) объекта. `CDaoRelationFieldInfo`также определяет `Dump` создает функцию-член в режиме отладки. Можно использовать `Dump` для вывода содержимого из `CDaoRelationFieldInfo` объекта.  
+ Call the [GetRelationInfo](../../mfc/reference/cdaodatabase-class.md#getrelationinfo) member function of the containing `CDaoDatabase` object in whose Relations collection is stored the relation object you are interested in. Then access the `m_pFieldInfos` member of the [CDaoRelationInfo](../../mfc/reference/cdaorelationinfo-structure.md) object. `CDaoRelationFieldInfo` also defines a `Dump` member function in debug builds. You can use `Dump` to dump the contents of a `CDaoRelationFieldInfo` object.  
   
-## <a name="requirements"></a>Требования  
- **Заголовок:** afxdao.h  
+## <a name="requirements"></a>Requirements  
+ **Header:** afxdao.h  
   
-## <a name="see-also"></a>См. также  
- [Структуры, стили, обратные вызовы и схемы сообщений](../../mfc/reference/structures-styles-callbacks-and-message-maps.md)   
- [Структура CDaoRelationInfo](../../mfc/reference/cdaorelationinfo-structure.md)
+## <a name="see-also"></a>See Also  
+ [Structures, Styles, Callbacks, and Message Maps](../../mfc/reference/structures-styles-callbacks-and-message-maps.md)   
+ [CDaoRelationInfo Structure](../../mfc/reference/cdaorelationinfo-structure.md)
 

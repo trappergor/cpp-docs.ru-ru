@@ -1,5 +1,5 @@
 ---
-title: "Класс CMemFile | Документы Microsoft"
+title: CMemFile Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -22,9 +22,14 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- memory files
-- CMemFile class
-- temporary files, memory files
+- CMemFile [MFC], CMemFile
+- CMemFile [MFC], Attach
+- CMemFile [MFC], Detach
+- CMemFile [MFC], Alloc
+- CMemFile [MFC], Free
+- CMemFile [MFC], GrowFile
+- CMemFile [MFC], Memcpy
+- CMemFile [MFC], Realloc
 ms.assetid: 20e86515-e465-4f73-b2ea-e49789d63165
 caps.latest.revision: 21
 author: mikeblome
@@ -44,95 +49,95 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: a82768750e6a7837bb81edd8a51847f83c294c20
-ms.openlocfilehash: 735f0a5653782f6f42b9dc9ad20e91e94a825f6c
+ms.translationtype: MT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 8c202fa4b577d82780b73badac6f87c0de8f1027
 ms.contentlocale: ru-ru
-ms.lasthandoff: 04/04/2017
+ms.lasthandoff: 09/12/2017
 
 ---
-# <a name="cmemfile-class"></a>Класс CMemFile
-[CFile](../../mfc/reference/cfile-class.md)-производный класс, поддерживающий файлы памяти.  
+# <a name="cmemfile-class"></a>CMemFile Class
+The [CFile](../../mfc/reference/cfile-class.md)-derived class that supports memory files.  
   
-## <a name="syntax"></a>Синтаксис  
+## <a name="syntax"></a>Syntax  
   
 ```  
 class CMemFile : public CFile  
 ```  
   
-## <a name="members"></a>Члены  
+## <a name="members"></a>Members  
   
-### <a name="public-constructors"></a>Открытые конструкторы  
+### <a name="public-constructors"></a>Public Constructors  
   
-|Имя|Описание|  
+|Name|Description|  
 |----------|-----------------|  
-|[CMemFile::CMemFile](#cmemfile)|Создает объект памяти файла.|  
+|[CMemFile::CMemFile](#cmemfile)|Constructs a memory file object.|  
   
-### <a name="public-methods"></a>Открытые методы  
+### <a name="public-methods"></a>Public Methods  
   
-|Имя|Описание|  
+|Name|Description|  
 |----------|-----------------|  
-|[CMemFile::Attach](#attach)|Присоединяет блока памяти `CMemFile`.|  
-|[CMemFile::Detach](#detach)|Отсоединяет блок памяти из `CMemFile` и возвращает указатель на блок памяти отсоединена.|  
+|[CMemFile::Attach](#attach)|Attaches a block of memory to `CMemFile`.|  
+|[CMemFile::Detach](#detach)|Detaches the block of memory from `CMemFile` and returns a pointer to the block of memory detached.|  
   
-### <a name="protected-methods"></a>Защищенные методы  
+### <a name="protected-methods"></a>Protected Methods  
   
-|Имя|Описание|  
+|Name|Description|  
 |----------|-----------------|  
-|[CMemFile::Alloc](#alloc)|Переопределите, чтобы изменить поведение распределения памяти.|  
-|[CMemFile::Free](#free)|Переопределение для изменения поведения освобождение памяти.|  
-|[CMemFile::GrowFile](#growfile)|Переопределение для изменения поведения при увеличении файла.|  
-|[CMemFile::Memcpy](#memcpy)|Переопределите, чтобы изменить поведение копирования памяти при чтении и записи файлов.|  
-|[CMemFile::Realloc](#realloc)|Переопределение для изменения поведения повторного выделения памяти.|  
+|[CMemFile::Alloc](#alloc)|Override to modify memory allocation behavior.|  
+|[CMemFile::Free](#free)|Override to modify memory deallocation behavior.|  
+|[CMemFile::GrowFile](#growfile)|Override to modify behavior when growing a file.|  
+|[CMemFile::Memcpy](#memcpy)|Override to modify memory copy behavior when reading and writing files.|  
+|[CMemFile::Realloc](#realloc)|Override to modify memory reallocation behavior.|  
   
-## <a name="remarks"></a>Примечания  
- Эти файлы памяти ведут себя как дисковые файлы, за исключением того, что файл хранится в оперативной памяти, а не на диске. Файл памяти полезен для быстрого временного хранилища для передачи необработанные байты или сериализованных объектов между независимыми процессов.  
+## <a name="remarks"></a>Remarks  
+ These memory files behave like disk files except that the file is stored in RAM rather than on disk. A memory file is useful for fast temporary storage or for transferring raw bytes or serialized objects between independent processes.  
   
- `CMemFile`объекты можно автоматически выделить собственные память или присоединить собственные блок памяти, который `CMemFile` путем вызова метода [присоединение](#attach). В любом случае память автоматически ростом файла памяти выделяется `nGrowBytes`-размера с шагом, если `nGrowBytes` не равно нулю.  
+ `CMemFile` objects can automatically allocate their own memory or you can attach your own memory block to the `CMemFile` object by calling [Attach](#attach). In either case, memory for growing the memory file automatically is allocated in `nGrowBytes`-sized increments if `nGrowBytes` is not zero.  
   
- Блок памяти будет автоматически удалено после удаления `CMemFile` объекта, если объем памяти был первоначально занимаемый `CMemFile` объекта; в противном случае вы несете ответственность за освобождение памяти, подключенной к объекту.  
+ The memory block will automatically be deleted upon destruction of the `CMemFile` object if the memory was originally allocated by the `CMemFile` object; otherwise, you are responsible for deallocating the memory you attached to the object.  
   
- Вы можете открыть блок памяти через указателю при отсоединении от `CMemFile` путем вызова метода [отсоединения](#detach).  
+ You can access the memory block through the pointer supplied when you detach it from the `CMemFile` object by calling [Detach](#detach).  
   
- Чаще всего используют `CMemFile` заключается в создании `CMemFile` и используйте его, вызвав [CFile](../../mfc/reference/cfile-class.md) функции-члены. Обратите внимание, что создание `CMemFile` автоматически открывает: не следует вызывать [CFile::Open](../../mfc/reference/cfile-class.md#open), который используется только файлов на диске. Поскольку `CMemFile` не использует файл на диске, элемент данных `CFile::m_hFile` не используется.  
+ The most common use of `CMemFile` is to create a `CMemFile` object and use it by calling [CFile](../../mfc/reference/cfile-class.md) member functions. Note that creating a `CMemFile` automatically opens it: you do not call [CFile::Open](../../mfc/reference/cfile-class.md#open), which is only used for disk files. Because `CMemFile` doesn't use a disk file, the data member `CFile::m_hFile` is not used.  
   
- `CFile` Функции-члены [дублировать](../../mfc/reference/cfile-class.md#duplicate), [LockRange](../../mfc/reference/cfile-class.md#lockrange), и [UnlockRange](../../mfc/reference/cfile-class.md#unlockrange) не реализован для `CMemFile`. При вызове этих функций для `CMemFile` объекта, вы получите [CNotSupportedException](../../mfc/reference/cnotsupportedexception-class.md).  
+ The `CFile` member functions [Duplicate](../../mfc/reference/cfile-class.md#duplicate), [LockRange](../../mfc/reference/cfile-class.md#lockrange), and [UnlockRange](../../mfc/reference/cfile-class.md#unlockrange) are not implemented for `CMemFile`. If you call these functions on a `CMemFile` object, you will get a [CNotSupportedException](../../mfc/reference/cnotsupportedexception-class.md).  
   
- `CMemFile`с помощью функций библиотеки времени выполнения [malloc](../../c-runtime-library/reference/malloc.md), [realloc](../../c-runtime-library/reference/realloc.md), и [свободного](../../c-runtime-library/reference/free.md) для выделения, перераспределения и освобождения памяти; и встроенную функцию [memcpy](../../c-runtime-library/reference/memcpy-wmemcpy.md) блок памяти копии при чтении и записи. Если вы хотите изменить это поведение или поведение при `CMemFile` увеличения размера файла, создайте производный класс из `CMemFile` и заменяют соответствующие функции.  
+ `CMemFile` uses the run-time library functions [malloc](../../c-runtime-library/reference/malloc.md), [realloc](../../c-runtime-library/reference/realloc.md), and [free](../../c-runtime-library/reference/free.md) to allocate, reallocate, and deallocate memory; and the intrinsic [memcpy](../../c-runtime-library/reference/memcpy-wmemcpy.md) to block copy memory when reading and writing. If you'd like to change this behavior or the behavior when `CMemFile` grows a file, derive your own class from `CMemFile` and override the appropriate functions.  
   
- Дополнительные сведения о `CMemFile`, см. в статьях [файлы в MFC](../../mfc/files-in-mfc.md) и [управления памяти (MFC)](../../mfc/memory-management.md) и в разделе [обработка файлов](../../c-runtime-library/file-handling.md) в *Справочник по библиотеке времени выполнения*.  
+ For more information on `CMemFile`, see the articles [Files in MFC](../../mfc/files-in-mfc.md) and [Memory Management (MFC)](../../mfc/memory-management.md) and see [File Handling](../../c-runtime-library/file-handling.md) in the *Run-Time Library Reference*.  
   
-## <a name="inheritance-hierarchy"></a>Иерархия наследования  
+## <a name="inheritance-hierarchy"></a>Inheritance Hierarchy  
  [CObject](../../mfc/reference/cobject-class.md)  
   
  [CFile](../../mfc/reference/cfile-class.md)  
   
  `CMemFile`  
   
-## <a name="requirements"></a>Требования  
- **Заголовок:** afx.h  
+## <a name="requirements"></a>Requirements  
+ **Header:** afx.h  
   
-##  <a name="alloc"></a>CMemFile::Alloc  
- Эта функция вызывается `CMemFile` функции-члены.  
+##  <a name="alloc"></a>  CMemFile::Alloc  
+ This function is called by `CMemFile` member functions.  
   
 ```  
 virtual BYTE* Alloc(SIZE_T nBytes);
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
  `nBytes`  
- Число байтов памяти, которые нужно выделить.  
+ Number of bytes of memory to be allocated.  
   
-### <a name="return-value"></a>Возвращаемое значение  
- Указатель на блок памяти, которая была выделена или **NULL** Если сбой при выделении.  
+### <a name="return-value"></a>Return Value  
+ A pointer to the memory block that was allocated, or **NULL** if the allocation failed.  
   
-### <a name="remarks"></a>Примечания  
- Переопределите эту функцию для реализации пользовательской области памяти. Если эта функция, возможно, имеет смысл переопределить [Free](#free) и [Realloc](#realloc) также.  
+### <a name="remarks"></a>Remarks  
+ Override this function to implement custom memory allocation. If you override this function, you'll probably want to override [Free](#free) and [Realloc](#realloc) as well.  
   
- Реализация по умолчанию с помощью функции библиотеки времени выполнения [malloc](../../c-runtime-library/reference/malloc.md) для выделения памяти.  
+ The default implementation uses the run-time library function [malloc](../../c-runtime-library/reference/malloc.md) to allocate memory.  
   
-##  <a name="attach"></a>CMemFile::Attach  
- Эта функция вызывается для присоединения блока памяти `CMemFile`.  
+##  <a name="attach"></a>  CMemFile::Attach  
+ Call this function to attach a block of memory to `CMemFile`.  
   
 ```  
 void Attach(
@@ -141,27 +146,27 @@ void Attach(
     UINT nGrowBytes = 0);
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
  `lpBuffer`  
- Указатель на буфер для присоединения к `CMemFile`.  
+ Pointer to the buffer to be attached to `CMemFile`.  
   
  `nBufferSize`  
- Целое число, указывающее размер буфера в байтах.  
+ An integer that specifies the size of the buffer in bytes.  
   
  `nGrowBytes`  
- Приращение выделения памяти в байтах.  
+ The memory allocation increment in bytes.  
   
-### <a name="remarks"></a>Примечания  
- В результате `CMemFile` для использования в качестве файла памяти блок памяти.  
+### <a name="remarks"></a>Remarks  
+ This causes `CMemFile` to use the block of memory as the memory file.  
   
- Если `nGrowBytes` равно 0, `CMemFile` установит длина файла `nBufferSize`. Это означает, что данные в блок памяти, прежде чем он был присоединен к `CMemFile` будет использоваться как файл. Не удается увеличил создается таким образом файлы памяти.  
+ If `nGrowBytes` is 0, `CMemFile` will set the file length to `nBufferSize`. This means that the data in the memory block before it was attached to `CMemFile` will be used as the file. Memory files created in this manner cannot be grown.  
   
- Поскольку файл не может использоваться с, будьте внимательны и не вызвать `CMemFile` для приращения файла. Например, не вызывайте `CMemFile` переопределений [CFile:Write](../../mfc/reference/cfile-class.md#write) для записи за пределами или не вызывайте [CFile:SetLength](../../mfc/reference/cfile-class.md#setlength) с длиной более `nBufferSize`.  
+ Since the file cannot be grown, be careful not to cause `CMemFile` to attempt to grow the file. For example, don't call the `CMemFile` overrides of [CFile:Write](../../mfc/reference/cfile-class.md#write) to write past the end or don't call [CFile:SetLength](../../mfc/reference/cfile-class.md#setlength) with a length longer than `nBufferSize`.  
   
- Если `nGrowBytes` больше, чем 0, `CMemFile` будет игнорировать содержимое блока памяти была присоединена. Вам потребуется записать содержимое файла памяти с нуля с помощью `CMemFile` переопределение `CFile::Write`. При попытке записи после конца файла или увеличение размера файла, вызвав `CMemFile` переопределение `CFile::SetLength`, `CMemFile` будет увеличиваться выделения памяти с шагом `nGrowBytes`. Увеличение выделения памяти завершится ошибкой, если блок памяти передается **присоединение** не был выделен с помощью метода, совместимый с [Alloc](#alloc). Для обеспечения совместимости с реализацией по умолчанию `Alloc`, необходимо выделить память с помощью функции библиотеки времени выполнения [malloc](../../c-runtime-library/reference/malloc.md) или [calloc](../../c-runtime-library/reference/calloc.md).  
+ If `nGrowBytes` is greater than 0, `CMemFile` will ignore the contents of the memory block you've attached. You'll have to write the contents of the memory file from scratch using the `CMemFile` override of `CFile::Write`. If you attempt to write past the end of the file or grow the file by calling the `CMemFile` override of `CFile::SetLength`, `CMemFile` will grow the memory allocation in increments of `nGrowBytes`. Growing the memory allocation will fail if the memory block you pass to **Attach** wasn't allocated with a method compatible with [Alloc](#alloc). To be compatible with the default implementation of `Alloc`, you must allocate the memory with the run-time library function [malloc](../../c-runtime-library/reference/malloc.md) or [calloc](../../c-runtime-library/reference/calloc.md).  
   
-##  <a name="cmemfile"></a>CMemFile::CMemFile  
- Первая перегрузка открывает файл пустым памяти.  
+##  <a name="cmemfile"></a>  CMemFile::CMemFile  
+ The first overload opens an empty memory file.  
   
 ```  
 CMemFile(UINT nGrowBytes = 1024);
@@ -173,67 +178,67 @@ CMemFile(
     UINT nGrowBytes = 0);
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
  `nGrowBytes`  
- Приращение выделения памяти в байтах.  
+ The memory allocation increment in bytes.  
   
  *lpBuffe*r  
- Указатель на буфер, который получает сведения от размера `nBufferSize`.  
+ Pointer to a buffer that receives information of the size `nBufferSize`.  
   
  `nBufferSize`  
- Целое число, определяющее размер буфера файла в байтах.  
+ An integer that specifies the size of the file buffer, in bytes.  
   
-### <a name="remarks"></a>Примечания  
- Обратите внимание, что файл открыт в конструкторе, и что не следует вызывать [CFile::Open](../../mfc/reference/cfile-class.md#open).  
+### <a name="remarks"></a>Remarks  
+ Note that the file is opened by the constructor and that you should not call [CFile::Open](../../mfc/reference/cfile-class.md#open).  
   
- Вторая перегрузка функционирует так же, как если бы использовать первый конструктор и сразу же вызывается [присоединение](#attach) с теми же параметрами. В разделе **присоединение** подробные сведения.  
+ The second overload acts the same as if you used the first constructor and immediately called [Attach](#attach) with the same parameters. See **Attach** for details.  
   
-### <a name="example"></a>Пример  
- [!code-cpp[NVC_MFCFiles #36](../../atl-mfc-shared/reference/codesnippet/cpp/cmemfile-class_1.cpp)]  
+### <a name="example"></a>Example  
+ [!code-cpp[NVC_MFCFiles#36](../../atl-mfc-shared/reference/codesnippet/cpp/cmemfile-class_1.cpp)]  
   
-##  <a name="detach"></a>CMemFile::Detach  
- Вызывайте эту функцию, чтобы получить указатель на блок памяти, используемый `CMemFile`.  
+##  <a name="detach"></a>  CMemFile::Detach  
+ Call this function to get a pointer to the memory block being used by `CMemFile`.  
   
 ```  
 BYTE* Detach();
 ```  
   
-### <a name="return-value"></a>Возвращаемое значение  
- Указатель на блок памяти, содержащий содержимое памяти файла.  
+### <a name="return-value"></a>Return Value  
+ A pointer to the memory block that contains the contents of the memory file.  
   
-### <a name="remarks"></a>Примечания  
- Вызов этой функции также закрывает `CMemFile`. Блок памяти, который можно подключить `CMemFile` путем вызова [присоединение](#attach). Если вы хотите восстановить подключение файла и использовать данные, необходимо вызвать [CFile::GetLength](../../mfc/reference/cfile-class.md#getlength) получить длину файла перед вызовом **отсоединения**. Обратите внимание, что при подключении блок памяти, который `CMemFile` , чтобы вы могли использовать его данные ( `nGrowBytes` == 0), то нельзя будет увеличиваться файл памяти.  
+### <a name="remarks"></a>Remarks  
+ Calling this function also closes the `CMemFile`. You can reattach the memory block to `CMemFile` by calling [Attach](#attach). If you want to reattach the file and use the data in it, you should call [CFile::GetLength](../../mfc/reference/cfile-class.md#getlength) to get the length of the file before calling **Detach**. Note that if you attach a memory block to `CMemFile` so that you can use its data ( `nGrowBytes` == 0), then you won't be able to grow the memory file.  
   
-##  <a name="free"></a>CMemFile::Free  
- Эта функция вызывается `CMemFile` функции-члены.  
+##  <a name="free"></a>  CMemFile::Free  
+ This function is called by `CMemFile` member functions.  
   
 ```  
 virtual void Free(BYTE* lpMem);
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
  `lpMem`  
- Указатель на память, чтобы быть освобождена.  
+ Pointer to the memory to be deallocated.  
   
-### <a name="remarks"></a>Примечания  
- Переопределите эту функцию для реализации освобождения памяти. Если эта функция, возможно, имеет смысл переопределить [Alloc](#alloc) и [Realloc](#realloc) также.  
+### <a name="remarks"></a>Remarks  
+ Override this function to implement custom memory deallocation. If you override this function, you'll probably want to override [Alloc](#alloc) and [Realloc](#realloc) as well.  
   
-##  <a name="growfile"></a>CMemFile::GrowFile  
- Эта функция вызывается в нескольких `CMemFile` функции-члены.  
+##  <a name="growfile"></a>  CMemFile::GrowFile  
+ This function is called by several of the `CMemFile` member functions.  
   
 ```  
 virtual void GrowFile(SIZE_T dwNewLen);
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
  `dwNewLen`  
- Новый размер файла памяти.  
+ New size of the memory file.  
   
-### <a name="remarks"></a>Примечания  
- Его можно изменить, если вы хотите изменить как `CMemFile` увеличения размера его файла. По умолчанию реализация вызывает [Realloc](#realloc) рост существования блока (или [Alloc](#alloc) для создания блока памяти), выделение памяти кратное `nGrowBytes` значения, указанного в конструкторе или [присоединения](#attach) вызова.  
+### <a name="remarks"></a>Remarks  
+ You can override it if you want to change how `CMemFile` grows its file. The default implementation calls [Realloc](#realloc) to grow an existing block (or [Alloc](#alloc) to create a memory block), allocating memory in multiples of the `nGrowBytes` value specified in the constructor or [Attach](#attach) call.  
   
-##  <a name="memcpy"></a>CMemFile::Memcpy  
- Эта функция вызывается `CMemFile` переопределений [CFile::Read](../../mfc/reference/cfile-class.md#read) и [CFile::Write](../../mfc/reference/cfile-class.md#write) для обмена данными в файле памяти.  
+##  <a name="memcpy"></a>  CMemFile::Memcpy  
+ This function is called by the `CMemFile` overrides of [CFile::Read](../../mfc/reference/cfile-class.md#read) and [CFile::Write](../../mfc/reference/cfile-class.md#write) to transfer data to and from the memory file.  
   
 ```  
 virtual BYTE* Memcpy(
@@ -242,24 +247,24 @@ virtual BYTE* Memcpy(
     SIZE_T nBytes);
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
  `lpMemTarget`  
- Указатель на блок памяти, в которую будет копироваться памяти источника.  
+ Pointer to the memory block into which the source memory will be copied.  
   
  `lpMemSource`  
- Указатель на блок памяти источника.  
+ Pointer to the source memory block.  
   
  `nBytes`  
- Число байтов для копирования.  
+ Number of bytes to be copied.  
   
-### <a name="return-value"></a>Возвращаемое значение  
- Копия `lpMemTarget`.  
+### <a name="return-value"></a>Return Value  
+ A copy of `lpMemTarget`.  
   
-### <a name="remarks"></a>Примечания  
- Переопределить эту функцию, если вы хотите изменить способ, `CMemFile` эти копии памяти.  
+### <a name="remarks"></a>Remarks  
+ Override this function if you want to change the way that `CMemFile` does these memory copies.  
   
-##  <a name="realloc"></a>CMemFile::Realloc  
- Эта функция вызывается `CMemFile` функции-члены.  
+##  <a name="realloc"></a>  CMemFile::Realloc  
+ This function is called by `CMemFile` member functions.  
   
 ```  
 virtual BYTE* Realloc(
@@ -267,22 +272,22 @@ virtual BYTE* Realloc(
     SIZE_T nBytes);
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
  `lpMem`  
- Указатель на блок памяти, чтобы перераспределить.  
+ A pointer to the memory block to be reallocated.  
   
  `nBytes`  
- Новый размер блока памяти.  
+ New size for the memory block.  
   
-### <a name="return-value"></a>Возвращаемое значение  
- Указатель на блок памяти, перераспределение (и возможно перемещена), или **NULL** Если перераспределение завершилось неудачей.  
+### <a name="return-value"></a>Return Value  
+ A pointer to the memory block that was reallocated (and possibly moved), or **NULL** if the reallocation failed.  
   
-### <a name="remarks"></a>Примечания  
- Переопределите эту функцию для реализации повторного выделения памяти. Если эта функция, возможно, имеет смысл переопределить [Alloc](#alloc) и [Free](#free) также.  
+### <a name="remarks"></a>Remarks  
+ Override this function to implement custom memory reallocation. If you override this function, you'll probably want to override [Alloc](#alloc) and [Free](#free) as well.  
   
-## <a name="see-also"></a>См. также  
- [CFile-класс](../../mfc/reference/cfile-class.md)   
- [Диаграмма иерархии](../../mfc/hierarchy-chart.md)
+## <a name="see-also"></a>See Also  
+ [CFile Class](../../mfc/reference/cfile-class.md)   
+ [Hierarchy Chart](../../mfc/hierarchy-chart.md)
 
 
 

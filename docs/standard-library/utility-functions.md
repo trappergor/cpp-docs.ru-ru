@@ -1,5 +1,5 @@
 ---
-title: "Функции &lt;utility&gt; | Документы Майкрософт"
+title: '&lt;utility&gt; functions | Microsoft Docs'
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -15,38 +15,45 @@ f1_keywords:
 ms.assetid: b1df38cd-3a59-4098-9c81-83342eb719a4
 caps.latest.revision: 7
 manager: ghogen
-translationtype: Machine Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: 814fa9960e5507846f9d2846c15bdde7177b8678
-ms.lasthandoff: 02/24/2017
+helpviewer_keywords:
+- std::exchange [C++]
+- std::forward [C++]
+- std::make_pair [C++]
+- std::move [C++]
+- std::swap [C++]
+ms.translationtype: MT
+ms.sourcegitcommit: 5d026c375025b169d5db8445cbb52c0c917b2d8d
+ms.openlocfilehash: e215a80647ad3927325cd9ffbd59e9029eeace7b
+ms.contentlocale: ru-ru
+ms.lasthandoff: 09/09/2017
 
 ---
-# <a name="ltutilitygt-functions"></a>Функции &lt;utility&gt;
+# <a name="ltutilitygt-functions"></a>&lt;utility&gt; functions
 ||||  
 |-|-|-|  
 |[exchange](#exchange)|[forward](#forward)|[get Function &lt;utility&gt;](#get)|  
 |[make_pair](#make_pair)|[move](#move)|[swap](#swap)|  
   
 ##  <a name="exchange"></a>  exchange  
- **(C++14)** Назначает новое значение объекту и возвращает его старое значение.  
+ **(C++14)** Assigns a new value to an object and returns its old value.  
   
 ```cpp  
 template <class T, class Other = T>
 T exchange(T& val, Other&& new_val)
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
  `val`  
- Объект, который будет получать значение new_val.  
+ The object that will receive the value of new_val.  
   
  `new_val`  
- Объект, значение которого копируется или перемещается в val.  
+ The object whose value is copied or moved into val.  
   
-### <a name="remarks"></a>Примечания  
- В случае со сложными типами `exchange` не копирует старое значение, если доступен конструктор перемещения, не копирует новое значение, если оно является временным или переносится, и принимает любой тип в качестве нового значения, используя любой доступный оператор назначения с конвертацией.  Функция exchange отличается от [std::swap](../standard-library/algorithm-functions.md#swap) в том, что левый аргумент не перемещается и не копируется в правый аргумент.  
+### <a name="remarks"></a>Remarks  
+ For complex types, `exchange` avoids copying the old value when a move constructor is available, avoids copying the new value if it’s a temporary object or is moved, and accepts any type as the new value, using any available converting assignment operator. The exchange function is different from [std::swap](../standard-library/algorithm-functions.md#swap) in that the left argument is not moved or copied to the right argument.  
   
-### <a name="example"></a>Пример  
-  В следующем примере показано, как использовать `exchange`. В реальной ситуации `exchange` наиболее полезен с большими объектами, копирование которых является дорогостоящим:  
+### <a name="example"></a>Example  
+  The following example shows how to use `exchange`. In the real world, `exchange` is most useful with large objects that are expensive to copy:  
   
 ```  
 #include <utility>  
@@ -77,7 +84,7 @@ The new value of c1 after exchange is: 2
 ```  
   
 ##  <a name="forward"></a>  forward  
- Условно приводит свой аргумент к ссылке rvalue, если аргумент представляет собой rvalue или ссылку rvalue. Это восстанавливает присущие rvalue характеристики аргумента для функции пересылки для обеспечения точной пересылки.  
+ Conditionally casts its argument to an rvalue reference if the argument is an rvalue or rvalue reference. This restores the rvalue-ness of an argument to the forwarding function in support of perfect forwarding.  
   
 ```
 template <class Type>    // accepts lvalues
@@ -87,25 +94,25 @@ template <class Type>    // accepts everything else
 constexpr Type&& forward(typename remove_reference<Type>::type&& Arg) noexcept
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
   
-|Параметр|Описание|  
+|Parameter|Description|  
 |---------------|-----------------|  
-|`Type`|Тип значения, передаваемого в `Arg`, который может отличаться от типа `Arg`. Как правило, определяется аргументом шаблона функции пересылки.|  
-|`Arg`|Аргумент для приведения.|  
+|`Type`|The type of the value passed in `Arg`, which might be different than the type of `Arg`. Typically determined by a template argument of the forwarding function.|  
+|`Arg`|The argument to cast.|  
   
-### <a name="return-value"></a>Возвращаемое значение  
- Возвращает ссылку rvalue `Arg`, если значение, переданное в `Arg`, изначально было rvalue или ссылкой на rvalue; в противном случае возвращает `Arg`, не изменяя его тип.  
+### <a name="return-value"></a>Return Value  
+ Returns an rvalue reference to `Arg` if the value passed in `Arg` was originally an rvalue or a reference to an rvalue; otherwise, returns `Arg` without modifying its type.  
   
-### <a name="remarks"></a>Примечания  
- Необходимо указать явный аргумент шаблона для вызова `forward`.  
+### <a name="remarks"></a>Remarks  
+ You must specify an explicit template argument to call `forward`.  
   
- `forward` не пересылает аргумент. Вместо этого путем условного приведения аргумента к ссылке rvalue, как если бы он изначально был rvalue или ссылкой rvalue, `forward` позволяет компилятору выполнять разрешение перегрузки с использованием сведений об исходном типе пересылаемого аргумента. Видимый тип аргумента для функции пересылки может отличаться от его исходного типа, например, если rvalue используется в качестве аргумента для функции и привязано к имени параметра; наличие имени делает его lvalue независимо от того, существует ли это значение фактически как rvalue, `forward` восстановит присущие rvalue характеристики аргумента.  
+ `forward` does not forward its argument. Instead, by conditionally casting its argument to an rvalue reference if it was originally an rvalue or rvalue reference, `forward` enables the compiler to perform overload resolution with knowledge of the forwarded argument's original type. The apparent type of an argument to a forwarding function might be different than its original type—for example, when an rvalue is used as an argument to a function and is bound to a parameter name; having a name makes it an lvalue, regardless of whether the value actually exists as an rvalue— `forward` restores the rvalue-ness of the argument.  
   
- Восстановление присущих rvalue характеристик исходного значения аргумента для выполнения разрешения перегрузки известно как *точная пересылка*. Точная пересылка позволяет шаблонной функции принимать аргумент любого ссылочного типа и восстановить его присущие rvalue характеристики, когда это необходимо для правильного разрешения перегрузки. С помощью точной пересылки можно сохранять семантику перемещения для значений rvalue и избегать необходимости предоставления перегрузок функциям, которые отличаются только ссылочным типом их аргументов.  
+ Restoring the rvalue-ness of an argument's original value in order to perform overload resolution is known as *perfect forwarding*. Perfect forwarding enables a template function to accept an argument of either reference type and to restore its rvalue-ness when it's necessary for correct overload resolution. By using perfect forwarding, you can preserve move semantics for rvalues and avoid having to provide overloads for functions that vary only by the reference type of their arguments.  
   
 ##  <a name="get"></a>  get  
- Получает элемент из объекта `pair` по позиции индекса или по типу.  
+ Gets an element from a `pair` object by index position, or by type.  
   
 ```
 // get reference to element at Index in pair Pr
@@ -148,27 +155,27 @@ template <class T2, class T1>
 constexpr T2&& get(pair<T1, T2>&& Pr) noexcept;
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
  `Index`  
- Индекс указанного элемента, отсчитываемый от нуля.  
+ The 0-based index of the designated element.  
   
  `T1`  
- Тип первого элемента пары.  
+ The type of the first pair element.  
   
  `T2`  
- Тип второго элемента пары.  
+ The type of the second pair element.  
   
  `pr`  
- Пара для выбора элемента.  
+ The pair to select from.  
   
-### <a name="remarks"></a>Примечания  
- Каждая функция шаблона возвращает ссылку на элемент аргумента `pair` .  
+### <a name="remarks"></a>Remarks  
+ The template functions each return a reference to an element of its `pair` argument.  
   
- Для индексированных перегрузок, если значение `Index` равно 0, функция возвращает `pr.first` , а если значение `Index` равно 1, функция возвращает `pr.second`. Тип `RI` — это тип возвращаемого элемента.  
+ For the indexed overloads, if the value of `Index` is 0 the functions return `pr.first` and if the value of `Index` is 1 the functions return `pr.second`. The type `RI` is the type of the returned element.  
   
- Для перегрузок, для которых не указан параметр Index, возвращаемый элемент определяется по аргументу типа. Вызов функции `get<T>(Tuple)` приведет к ошибке компилятора, если `pr` содержит больше или меньше одного элемента типа T.  
+ For the overloads that do not have an Index parameter, the element to return is deduced by the type argument. Calling `get<T>(Tuple)` will produce a compiler error if `pr` contains more or less than one element of type T.  
   
-### <a name="example"></a>Пример  
+### <a name="example"></a>Example  
   
 ```cpp  
 #include <utility>  
@@ -200,7 +207,7 @@ int main()
 ```  
   
 ##  <a name="make_pair"></a>  make_pair  
- Функция шаблона, которую можно использовать для построения объектов типа `pair`, где типы компонентов автоматически выбираются на основе типов данных, переданных в качестве параметров.  
+ A template function that you can use to construct objects of type `pair`, where the component types are automatically chosen based on the data types that are passed as parameters.  
   
 ```
 template <class T, class U>
@@ -216,78 +223,78 @@ template <class T, class U>
 pair<T, U> make_pair(T&& Val1, U&& Val2);
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
  `Val1`  
- Значение, которое инициализирует первый элемент `pair`.  
+ Value that initializes the first element of `pair`.  
   
  `Val2`  
- Значение, которое инициализирует второй элемент `pair`.  
+ Value that initializes the second element of `pair`.  
   
-### <a name="return-value"></a>Возвращаемое значение  
- Создаваемый парный объект: `pair`< `T`, `U`>(`Val1`, `Val2`).  
+### <a name="return-value"></a>Return Value  
+ The pair object that's constructed: `pair`< `T`, `U`>( `Val1`, `Val2`).  
   
-### <a name="remarks"></a>Примечания  
- `make_pair` преобразует объект типа [reference_wrapper Class](../standard-library/reference-wrapper-class.md) в типы ссылки, а убывающие массивы и функции — в указатели.  
+### <a name="remarks"></a>Remarks  
+ `make_pair` converts object of type [reference_wrapper Class](../standard-library/reference-wrapper-class.md) to reference types and converts decaying arrays and functions to pointers.  
   
- В возвращенном объекте `pair` `T` определяется следующим образом:  
+ In the returned `pair` object, `T` is determined as follows:  
   
--   Если тип ввода `T` имеет значение `reference_wrapper<X>`, возвращаемый тип `T` имеет значение `X&`.  
+-   If the input type `T` is `reference_wrapper<X>`, the returned type `T` is `X&`.  
   
--   В противном случае возвращаемый тип `T` имеет значение `decay<T>::type`. Если [класс decay](../standard-library/decay-class.md) не поддерживается, то возвращаемый тип `T` совпадает с типом ввода `T`.  
+-   Otherwise, the returned type `T` is `decay<T>::type`. If [decay Class](../standard-library/decay-class.md) is not supported, the returned type `T` is the same as the input type `T`.  
   
- Возвращаемый тип `U` аналогичным образом определяется по типу ввода `U`.  
+ The returned type `U` is similarly determined from the input type `U`.  
   
- Одно из преимуществ `make_pair` заключается в том, что сохраненные типы объектов автоматически определяются компилятором, и их не требуется задавать явным образом. Не используйте явные аргументы шаблона, например `make_pair<int, int>(1, 2)`, при использовании `make_pair`, так как для них характерна избыточная подробность, которая создает дополнительные проблемы со сложными ссылками rvalue, способные вызвать сбой компиляции. В данном случае правильный синтаксис — `make_pair(1, 2)`  
+ One advantage of `make_pair` is that the types of objects that are being stored are determined automatically by the compiler and do not have to be explicitly specified. Don't use explicit template arguments such as `make_pair<int, int>(1, 2)` when you use `make_pair` because it is unnecessarily verbose and adds complex rvalue reference problems that might cause compilation failure. For this example, the correct syntax would be `make_pair(1, 2)`  
   
- Вспомогательная функция `make_pair` также предоставляет возможность передать два значения в функцию, которой в качестве параметра ввода требуется пара.  
+ The `make_pair` helper function also makes it possible to pass two values to a function that requires a pair as an input parameter.  
   
-### <a name="example"></a>Пример  
-  Пример использования вспомогательной функции `make_pair` для объявления и инициализации пары см. в разделе [Структура pair](../standard-library/pair-structure.md).  
+### <a name="example"></a>Example  
+  For an example about how to use the helper function `make_pair` to declare and initialize a pair, see [pair Structure](../standard-library/pair-structure.md).  
   
 ##  <a name="move"></a>  move  
- Безусловно приводит свой аргумент к ссылке rvalue, тем самым указывая, что его можно переместить, если его тип допускает перемещения.  
+ Unconditionally casts its argument to an rvalue reference, and thereby signals that it can be moved if its type is move-enabled.  
   
 ```
 template <class Type>
 constexpr typename remove_reference<Type>::type&& move(Type&& Arg) noexcept;
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
   
-|Параметр|Описание|  
+|Parameter|Description|  
 |---------------|-----------------|  
-|`Type`|Тип, выведенный из типа аргумента, переданного в `Arg`, а также правила сворачивания ссылок.|  
-|`Arg`|Аргумент для приведения. Несмотря на то, что тип `Arg` определен как ссылка rvalue, `move` также принимает аргументы lvalue, поскольку ссылки lvalue можно привязать к ссылкам rvalue.|  
+|`Type`|A type deduced from the type of the argument passed in `Arg`, together with the reference collapsing rules.|  
+|`Arg`|The argument to cast. Although the type of `Arg` appears to be specified as an rvalue reference, `move` also accepts lvalue arguments because lvalue references can bind to rvalue references.|  
   
-### <a name="return-value"></a>Возвращаемое значение  
- `Arg` используется в качестве ссылки rvalue вне зависимости от того, является ли его тип ссылочным.  
+### <a name="return-value"></a>Return Value  
+ `Arg` as an rvalue reference, whether or not its type is a reference type.  
   
-### <a name="remarks"></a>Примечания  
- Аргумент шаблона `Type` следует не задавать явным образом, но выводить из типа значения, переданного в `Arg`. Тип `Type` дополнительно адаптируется в соответствии с правилами сворачивания ссылок.  
+### <a name="remarks"></a>Remarks  
+ The template argument `Type` is not intended to be specified explicitly, but to be deduced from the type of the value passed in `Arg`. The type of `Type` is further adjusted according to the reference collapsing rules.  
   
- `move` не перемещает свой аргумент. Вместо этого, путем безусловного приведения аргумента (который может являться ссылкой lvalue) к ссылке rvalue он обеспечивает компилятору возможность впоследствии переместить, а не скопировать значение, переданное в `Arg`, если его тип допускает перемещение. Если тип значения не допускает перемещения, значение копируется.  
+ `move` does not move its argument. Instead, by unconditionally casting its argument—which might be an lvalue—to an rvalue reference, it enables the compiler to subsequently move, rather than copy, the value passed in `Arg` if its type is move-enabled. If its type is not move-enabled, it is copied instead.  
   
- Если значение, переданное в `Arg`, является ссылкой lvalue, то есть его имя или адрес можно получить, при перемещении оно становится недействительным. Не создавайте ссылки на значение, переданное в `Arg`, по имени или адресу после перемещения.  
+ If the value passed in `Arg` is an lvalue—that is, it has a name or its address can be taken—it's invalidated when the move occurs. Do not refer to the value passed in `Arg` by its name or address after it's been moved.  
   
 ##  <a name="swap"></a>  swap  
- Меняет местами элементы двух объектов [структуры pair](../standard-library/pair-structure.md).  
+ Exchanges the elements of two [pair Structure](../standard-library/pair-structure.md) objects.  
   
 ```
 template <class T, class U>  
 void swap(pair<T, U>& left, pair<T, U>& right);
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
   
-|Параметр|Описание|  
+|Parameter|Description|  
 |---------------|-----------------|  
-|`left`|Объект типа `pair`.|  
-|`right`|Объект типа `pair`.|  
+|`left`|An object of type `pair`.|  
+|`right`|An object of type `pair`.|  
   
-### <a name="remarks"></a>Примечания  
- Одно из преимуществ `swap` заключается в том, что сохраненные типы объектов автоматически определяются компилятором, и их не требуется задавать явным образом. Не используйте явные аргументы шаблона, например `swap<int, int>(1, 2)`, при использовании `swap`, так как для них характерна избыточная подробность, которая создает дополнительные проблемы со сложными ссылками rvalue, способные вызвать сбой компиляции.  
+### <a name="remarks"></a>Remarks  
+ One advantage of `swap` is that the types of objects that are being stored are determined automatically by the compiler and do not have to be explicitly specified. Don't use explicit template arguments such as `swap<int, int>(1, 2)` when you use `swap` because it is unnecessarily verbose and adds complex rvalue reference problems that might cause compilation failure.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>See Also  
  [\<utility>](../standard-library/utility.md)
 
 

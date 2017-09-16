@@ -1,29 +1,48 @@
 ---
-title: "Примеры элемента выбора даты и времени | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "DateTimePicker - элемент управления [MFC]"
+title: Date and Time Picker Control Examples | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- DateTimePicker control [MFC]
 ms.assetid: f03c3a22-7725-45eb-8f8e-dddb2d15c3ca
 caps.latest.revision: 11
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 7
----
-# Примеры элемента выбора даты и времени
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 92f6c2634a90ddfbb3e57b98210567fb78486cb0
+ms.contentlocale: ru-ru
+ms.lasthandoff: 09/12/2017
 
-Образец [CMNCTRL1](../top/visual-cpp-samples.md) показывает различные атрибуты класса `CDateTimeCtrl`.  Другая страница содержит элемент управления " выбор даты и времени, пользователь может управлять путем изменения другие атрибуты и тестирования основные функциональные возможности элемента управления.  
+---
+# <a name="date-and-time-picker-control-examples"></a>Date and Time Picker Control Examples
+The [CMNCTRL1](../visual-cpp-samples.md) sample demonstrates the various attributes of the `CDateTimeCtrl` class. A separate page contains a date and time picker control that the user can manipulate by changing various attributes and testing the basic functionality of the control.  
   
-## См. также  
- [Использование CDateTimeCtrl](../mfc/using-cdatetimectrl.md)   
- [Элементы управления](../mfc/controls-mfc.md)
+## <a name="see-also"></a>See Also  
+ [Using CDateTimeCtrl](../mfc/using-cdatetimectrl.md)   
+ [Controls](../mfc/controls-mfc.md)
+
+

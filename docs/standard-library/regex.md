@@ -1,11 +1,11 @@
 ---
-title: "&lt;regex&gt; | Документы Майкрософт"
+title: '&lt;regex&gt; | Microsoft Docs'
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
 ms.technology:
-- devlang-cpp
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -33,102 +33,102 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
-ms.openlocfilehash: ca9e01237343428bca2eb0c41eca7add3ea6d4bf
+ms.translationtype: MT
+ms.sourcegitcommit: 5d026c375025b169d5db8445cbb52c0c917b2d8d
+ms.openlocfilehash: a11770a8d919e5fefa5e67d256f85cb7861f12f3
 ms.contentlocale: ru-ru
-ms.lasthandoff: 04/29/2017
+ms.lasthandoff: 09/09/2017
 
 ---
 # <a name="ltregexgt"></a>&lt;regex&gt;
-Определяет класс шаблона для синтаксического анализа [регулярных выражений](../standard-library/regular-expressions-cpp.md) и несколько классов шаблонов и функций для поиска в тексте совпадений с объектом регулярного выражения.  
+Defines a template class to parse [Regular Expressions (C++)](../standard-library/regular-expressions-cpp.md), and several template classes and functions to search text for matches to a regular expression object.  
   
-## <a name="syntax"></a>Синтаксис  
+## <a name="syntax"></a>Syntax  
   
 ```  
 #include <regex>  
 ```  
   
-## <a name="remarks"></a>Примечания  
- Чтобы создать объект регулярного выражения, используйте класс шаблона [Класс basic_regex](../standard-library/basic-regex-class.md) или одну из его специализаций ([regex](../standard-library/regex-typedefs.md#regex) и [wregex](../standard-library/regex-typedefs.md#wregex)) вместе с флагами синтаксиса типа [regex_constants::syntax_option_type](../standard-library/regex-constants-class.md#syntax_option_type).  
+## <a name="remarks"></a>Remarks  
+ To create a regular expression object, use the template class [basic_regex Class](../standard-library/basic-regex-class.md) or one of its specializations, [regex](../standard-library/regex-typedefs.md#regex) and [wregex](../standard-library/regex-typedefs.md#wregex), together with the syntax flags of type [regex_constants::syntax_option_type](../standard-library/regex-constants-class.md#syntax_option_type).  
   
- Для поиска в тексте совпадений с объектом регулярного выражения, используйте функции шаблона [regex_match](../standard-library/regex-functions.md#regex_match) и [regex_search](../standard-library/regex-functions.md#regex_search)вместе с флагами соответствия типа [regex_constants::match_flag_type](../standard-library/regex-constants-class.md#match_flag_type). Эти функции возвращают результаты с использованием класса шаблонов [match_results Class](../standard-library/match-results-class.md) и его специализаций, [cmatch](../standard-library/regex-typedefs.md#cmatch), [wcmatch](../standard-library/regex-typedefs.md#wcmatch), [smatch](../standard-library/regex-typedefs.md#smatch) и [wsmatch](../standard-library/regex-typedefs.md#wsmatch), а также класса шаблона [Класс sub_match](../standard-library/sub-match-class.md) и его специализаций, [csub_match](../standard-library/regex-typedefs.md#csub_match), [wcsub_match](../standard-library/regex-typedefs.md#wcsub_match), [ssub_match](../standard-library/regex-typedefs.md#ssub_match) и [wssub_match](../standard-library/regex-typedefs.md#wssub_match).  
+ To search text for matches to a regular expression object, use the template functions [regex_match](../standard-library/regex-functions.md#regex_match) and [regex_search](../standard-library/regex-functions.md#regex_search), together with the match flags of type [regex_constants::match_flag_type](../standard-library/regex-constants-class.md#match_flag_type). These functions return results by using the template class [match_results Class](../standard-library/match-results-class.md) and its specializations, [cmatch](../standard-library/regex-typedefs.md#cmatch), [wcmatch](../standard-library/regex-typedefs.md#wcmatch), [smatch](../standard-library/regex-typedefs.md#smatch), and [wsmatch](../standard-library/regex-typedefs.md#wsmatch), together with the template class [sub_match Class](../standard-library/sub-match-class.md) and its specializations, [csub_match](../standard-library/regex-typedefs.md#csub_match), [wcsub_match](../standard-library/regex-typedefs.md#wcsub_match), [ssub_match](../standard-library/regex-typedefs.md#ssub_match), and [wssub_match](../standard-library/regex-typedefs.md#wssub_match).  
   
- Чтобы заменить текст, соответствующий объект регулярного выражения, используйте функцию шаблона [regex_replace](../standard-library/regex-functions.md#regex_replace)вместе с флагами соответствия типа [regex_constants::match_flag_type](../standard-library/regex-constants-class.md#match_flag_type).  
+ To replace text that matches a regular expression object, use the template function [regex_replace](../standard-library/regex-functions.md#regex_replace), together with the match flags of type [regex_constants::match_flag_type](../standard-library/regex-constants-class.md#match_flag_type).  
   
- Чтобы выполнить итерацию нескольких соответствий объекта регулярного выражения, используйте классы шаблона [Класс regex_iterator](../standard-library/regex-iterator-class.md) и [Класс regex_token_iterator](../standard-library/regex-token-iterator-class.md) или одну из их специализаций, [cregex_iterator](../standard-library/regex-typedefs.md#cregex_iterator), [sregex_iterator](../standard-library/regex-typedefs.md#sregex_iterator), [wcregex_iterator](../standard-library/regex-typedefs.md#wcregex_iterator), [wsregex_iterator](../standard-library/regex-typedefs.md#wsregex_iterator), [cregex_token_iterator](../standard-library/regex-typedefs.md#cregex_token_iterator), [sregex_token_iterator](../standard-library/regex-typedefs.md#sregex_token_iterator), [wcregex_token_iterator](../standard-library/regex-typedefs.md#wcregex_token_iterator) или [wsregex_token_iterator](../standard-library/regex-typedefs.md#wsregex_token_iterator), вместе с флагами соответствия типа [regex_constants::match_flag_type](../standard-library/regex-constants-class.md#match_flag_type).  
+ To iterate through multiple matches of a regular expression object, use the template classes [regex_iterator Class](../standard-library/regex-iterator-class.md) and [regex_token_iterator Class](../standard-library/regex-token-iterator-class.md) or one of their specializations, [cregex_iterator](../standard-library/regex-typedefs.md#cregex_iterator), [sregex_iterator](../standard-library/regex-typedefs.md#sregex_iterator), [wcregex_iterator](../standard-library/regex-typedefs.md#wcregex_iterator), [wsregex_iterator](../standard-library/regex-typedefs.md#wsregex_iterator), [cregex_token_iterator](../standard-library/regex-typedefs.md#cregex_token_iterator), [sregex_token_iterator](../standard-library/regex-typedefs.md#sregex_token_iterator), [wcregex_token_iterator](../standard-library/regex-typedefs.md#wcregex_token_iterator), or [wsregex_token_iterator](../standard-library/regex-typedefs.md#wsregex_token_iterator), together with the match flags of type [regex_constants::match_flag_type](../standard-library/regex-constants-class.md#match_flag_type).  
   
- Чтобы изменить сведения о грамматике регулярных выражений, напишите класс, реализующий характеристики регулярного выражения.  
+ To modify the details of the grammar of regular expressions, write a class that implements the regular expression traits.  
   
-### <a name="classes"></a>Классы  
-  
-|||  
-|-|-|  
-|[basic_regex](../standard-library/basic-regex-class.md)|Создание оболочки для регулярного выражения.|  
-|[match_results](../standard-library/match-results-class.md)|Содержит последовательность подстрок соответствия.|  
-|[regex_constants](../standard-library/regex-constants-class.md)|Содержит различные константы.|  
-|[regex_error](../standard-library/regex-error-class.md)|Сообщает о недопустимом регулярном выражении.|  
-|[regex_iterator](../standard-library/regex-iterator-class.md)|Перебирает результаты сопоставления.|  
-|[regex_traits](../standard-library/regex-traits-class.md)|Описывает характеристики элементов для сопоставления.|  
-|[regex_traits\<char>](../standard-library/regex-traits-char-class.md)|Описывает характеристики `char` для сопоставления.|  
-|[regex_traits<wchar_t>](../standard-library/regex-traits-wchar-t-class.md)|Описывает характеристики `wchar_t` для сопоставления.|  
-|[regex_token_iterator](../standard-library/regex-token-iterator-class.md)|Перебирает подстроки соответствия.|  
-|[sub_match](../standard-library/sub-match-class.md)|Описывает подстроку соответствия.|  
-  
-### <a name="type-definitions"></a>Определения типов  
+### <a name="classes"></a>Classes  
   
 |||  
 |-|-|  
-|[cmatch](../standard-library/regex-typedefs.md#cmatch)|Определение типа для `char``match_results`.|  
-|[cregex_iterator](../standard-library/regex-typedefs.md#cregex_iterator)|Определение типа для `char``regex_iterator`.|  
-|[cregex_token_iterator](../standard-library/regex-typedefs.md#cregex_token_iterator)|Определение типа для `char``regex_token_iterator`.|  
-|[csub_match](../standard-library/regex-typedefs.md#csub_match)|Определение типа для `char``sub_match`.|  
-|[regex](../standard-library/regex-typedefs.md#regex)|Определение типа для `char``basic_regex`.|  
-|[smatch](../standard-library/regex-typedefs.md#smatch)|Определение типа для `string``match_results`.|  
-|[sregex_iterator](../standard-library/regex-typedefs.md#sregex_iterator)|Определение типа для `string``regex_iterator`.|  
-|[sregex_token_iterator](../standard-library/regex-typedefs.md#sregex_token_iterator)|Определение типа для `string``regex_token_iterator`.|  
-|[ssub_match](../standard-library/regex-typedefs.md#ssub_match)|Определение типа для `string``sub_match`.|  
-|[wcmatch](../standard-library/regex-typedefs.md#wcmatch)|Определение типа для `wchar_t``match_results`.|  
-|[wcregex_iterator](../standard-library/regex-typedefs.md#wcregex_iterator)|Определение типа для `wchar_t``regex_iterator`.|  
-|[wcregex_token_iterator](../standard-library/regex-typedefs.md#wcregex_token_iterator)|Определение типа для `wchar_t``regex_token_iterator`.|  
-|[wcsub_match](../standard-library/regex-typedefs.md#wcsub_match)|Определение типа для `wchar_t``sub_match`.|  
-|[wregex](../standard-library/regex-typedefs.md#wregex)|Определение типа для `wchar_t``basic_regex`.|  
-|[wsmatch](../standard-library/regex-typedefs.md#wsmatch)|Определение типа для `wstring``match_results`.|  
-|[wsregex_iterator](../standard-library/regex-typedefs.md#wsregex_iterator)|Определение типа для `wstring``regex_iterator`.|  
-|[wsregex_token_iterator](../standard-library/regex-typedefs.md#wsregex_token_iterator)|Определение типа для `wstring``regex_token_iterator`.|  
-|[wssub_match](../standard-library/regex-typedefs.md#wssub_match)|Определение типа для `wstring``sub_match`.|  
+|[basic_regex](../standard-library/basic-regex-class.md)|Wraps a regular expression.|  
+|[match_results](../standard-library/match-results-class.md)|Holds a sequence of submatches.|  
+|[regex_constants](../standard-library/regex-constants-class.md)|Holds assorted constants.|  
+|[regex_error](../standard-library/regex-error-class.md)|Reports a bad regular expression.|  
+|[regex_iterator](../standard-library/regex-iterator-class.md)|Iterates through match results.|  
+|[regex_traits](../standard-library/regex-traits-class.md)|Describes characteristics of elements for matching.|  
+|[regex_traits\<char>](../standard-library/regex-traits-char-class.md)|Describes characteristics of `char` for matching.|  
+|[regex_traits<wchar_t>](../standard-library/regex-traits-wchar-t-class.md)|Describes characteristics of `wchar_t` for matching.|  
+|[regex_token_iterator](../standard-library/regex-token-iterator-class.md)|Iterates through submatches.|  
+|[sub_match](../standard-library/sub-match-class.md)|Describes a submatch.|  
   
-### <a name="functions"></a>Функции  
+### <a name="type-definitions"></a>Type Definitions  
   
 |||  
 |-|-|  
-|[regex_match](../standard-library/regex-functions.md#regex_match)|Точно соответствует регулярному выражению.|  
-|[regex_replace](../standard-library/regex-functions.md#regex_replace)|Заменяет соответствующие регулярные выражения.|  
-|[regex_search](../standard-library/regex-functions.md#regex_search)|Поиск соответствия регулярному выражению.|  
-|[swap](../standard-library/regex-functions.md#swap)|Меняет местами объекты `basic_regex` и `match_results`.|  
+|[cmatch](../standard-library/regex-typedefs.md#cmatch)|Type definition for `char` `match_results`.|  
+|[cregex_iterator](../standard-library/regex-typedefs.md#cregex_iterator)|Type definition for `char` `regex_iterator`.|  
+|[cregex_token_iterator](../standard-library/regex-typedefs.md#cregex_token_iterator)|Type definition for `char` `regex_token_iterator`.|  
+|[csub_match](../standard-library/regex-typedefs.md#csub_match)|Type definition for `char` `sub_match`.|  
+|[regex](../standard-library/regex-typedefs.md#regex)|Type definition for `char` `basic_regex`.|  
+|[smatch](../standard-library/regex-typedefs.md#smatch)|Type definition for `string` `match_results`.|  
+|[sregex_iterator](../standard-library/regex-typedefs.md#sregex_iterator)|Type definition for `string` `regex_iterator`.|  
+|[sregex_token_iterator](../standard-library/regex-typedefs.md#sregex_token_iterator)|Type definition for `string` `regex_token_iterator`.|  
+|[ssub_match](../standard-library/regex-typedefs.md#ssub_match)|Type definition for `string` `sub_match`.|  
+|[wcmatch](../standard-library/regex-typedefs.md#wcmatch)|Type definition for `wchar_t` `match_results`.|  
+|[wcregex_iterator](../standard-library/regex-typedefs.md#wcregex_iterator)|Type definition for `wchar_t` `regex_iterator`.|  
+|[wcregex_token_iterator](../standard-library/regex-typedefs.md#wcregex_token_iterator)|Type definition for `wchar_t` `regex_token_iterator`.|  
+|[wcsub_match](../standard-library/regex-typedefs.md#wcsub_match)|Type definition for `wchar_t` `sub_match`.|  
+|[wregex](../standard-library/regex-typedefs.md#wregex)|Type definition for `wchar_t` `basic_regex`.|  
+|[wsmatch](../standard-library/regex-typedefs.md#wsmatch)|Type definition for `wstring` `match_results`.|  
+|[wsregex_iterator](../standard-library/regex-typedefs.md#wsregex_iterator)|Type definition for `wstring` `regex_iterator`.|  
+|[wsregex_token_iterator](../standard-library/regex-typedefs.md#wsregex_token_iterator)|Type definition for `wstring` `regex_token_iterator`.|  
+|[wssub_match](../standard-library/regex-typedefs.md#wssub_match)|Type definition for `wstring` `sub_match`.|  
   
-### <a name="operators"></a>Операторы  
+### <a name="functions"></a>Functions  
   
 |||  
 |-|-|  
-|[оператор==](../standard-library/regex-operators.md#op_eq_eq)|Сравнение различных объектов, равенство.|  
-|[оператор!=](../standard-library/regex-operators.md#op_neq)|Сравнение различных объектов, неравенство.|  
-|[оператор<](../standard-library/regex-operators.md#op_lt)|Сравнение различных объектов, меньше.|  
-|[оператор\<=](../standard-library/regex-operators.md#op_gt_eq)|Сравнение различных объектов, меньше или равно.|  
-|[оператор>](../standard-library/regex-operators.md#op_gt)|Сравнение различных объектов, больше.|  
-|[оператор>=](../standard-library/regex-operators.md#op_gt_eq)|Сравнение различных объектов, больше или равно.|  
-|[оператор<<](../standard-library/regex-operators.md#op_lt_lt)|Вставляет `sub_match` в поток.|  
+|[regex_match](../standard-library/regex-functions.md#regex_match)|Exactly matches a regular expression.|  
+|[regex_replace](../standard-library/regex-functions.md#regex_replace)|Replaces matched regular expressions.|  
+|[regex_search](../standard-library/regex-functions.md#regex_search)|Searches for a regular expression match.|  
+|[swap](../standard-library/regex-functions.md#swap)|Swaps `basic_regex` or `match_results` objects.|  
   
-## <a name="see-also"></a>См. также  
-[Регулярные выражения (C++)](../standard-library/regular-expressions-cpp.md)  
-[Класс regex_constants](../standard-library/regex-constants-class.md)  
-[Класс regex_error](../standard-library/regex-error-class.md)  
-[Функции \<regex>](../standard-library/regex-functions.md)  
-[Класс regex_iterator](../standard-library/regex-iterator-class.md)  
-[Операторы \<regex>](../standard-library/regex-operators.md)  
-[Класс regex_token_iterator](../standard-library/regex-token-iterator-class.md)  
-[Класс regex_traits](../standard-library/regex-traits-class.md)  
-[Определения типов \<regex>](../standard-library/regex-typedefs.md)  
+### <a name="operators"></a>Operators  
+  
+|||  
+|-|-|  
+|[operator==](../standard-library/regex-operators.md#op_eq_eq)|Comparison of various objects, equal.|  
+|[operator!=](../standard-library/regex-operators.md#op_neq)|Comparison of various objects, not equal.|  
+|[operator<](../standard-library/regex-operators.md#op_lt)|Comparison of various objects, less than.|  
+|[operator\<=](../standard-library/regex-operators.md#op_gt_eq)|Comparison of various objects, less than or equal.|  
+|[operator>](../standard-library/regex-operators.md#op_gt)|Comparison of various objects, greater than.|  
+|[operator>=](../standard-library/regex-operators.md#op_gt_eq)|Comparison of various objects, greater than or equal.|  
+|[operator<<](../standard-library/regex-operators.md#op_lt_lt)|Inserts a `sub_match` in a stream.|  
+  
+## <a name="see-also"></a>See Also  
+[Regular Expressions (C++)](../standard-library/regular-expressions-cpp.md)  
+[regex_constants Class](../standard-library/regex-constants-class.md)  
+[regex_error Class](../standard-library/regex-error-class.md)  
+[\<regex> functions](../standard-library/regex-functions.md)  
+[regex_iterator Class](../standard-library/regex-iterator-class.md)  
+[\<regex> operators](../standard-library/regex-operators.md)  
+[regex_token_iterator Class](../standard-library/regex-token-iterator-class.md)  
+[regex_traits Class](../standard-library/regex-traits-class.md)  
+[\<regex> typedefs](../standard-library/regex-typedefs.md)  
 
 
 

@@ -1,78 +1,96 @@
 ---
-title: "Диалоговые окна | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "CDialog - класс, диалоговые окна MFC"
-  - "диалоговые окна MFC"
-  - "MFC - библиотека, диалоговые окна"
-  - "модальные диалоговые окна, диалоговые окна MFC"
-  - "безрежимные диалоговые окна, диалоговые окна MFC"
+title: Dialog Boxes | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- modeless dialog boxes [MFC], MFC dialog boxes
+- MFC, dialog boxes
+- modal dialog boxes [MFC], MFC dialog boxes
+- CDialog class [MFC], MFC dialog boxes
+- MFC dialog boxes
 ms.assetid: e4feea1a-8360-4ccb-9b84-507f1ccd9ef3
 caps.latest.revision: 14
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 10
----
-# Диалоговые окна
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: be78fe33a08b538da1574f5ccf9f1a042a7a374a
+ms.contentlocale: ru-ru
+ms.lasthandoff: 09/12/2017
 
-Для приложения Windows часто взаимодействуют с пользователем через диалоговые окна.  Класс [CDialog](../mfc/reference/cdialog-class.md) предоставляет интерфейс для управления диалоговые окна, редактор диалоговых окон Visual C\+\+ упрощает разработку диалоговые окна и создать их ресурс шаблона диалоговых окон и мастеров кода упрощают процесс инициализации и проверки элемента управления в диалоговом окне и извлекать значения, введенные пользователем.  
+---
+# <a name="dialog-boxes"></a>Dialog Boxes
+Applications for Windows frequently communicate with the user through dialog boxes. Class [CDialog](../mfc/reference/cdialog-class.md) provides an interface for managing dialog boxes, the Visual C++ dialog editor makes it easy to design dialog boxes and create their dialog-template resources, and Code wizards simplify the process of initializing and validating the controls in a dialog box and of gathering the values entered by the user.  
   
- Диалоговые окна содержат элементы управления, в том числе:  
+ Dialog boxes contain controls, including:  
   
--   Стандартные элементы управления Windows, например поля ввода, кнопки, списки, поля со списком, управления дерева, элементы управления "Список" и индикаторы хода выполнения.  
+-   Windows common controls such as edit boxes, pushbuttons, list boxes, combo boxes, tree controls, list controls, and progress indicators.  
   
--   Элементы управления ActiveX.  
+-   ActiveX controls.  
   
--   Определяемые пользователем элементов управления. элементы управления, ответственность за рисования в диалоговом окне.  
+-   Owner-drawn controls: controls that you are responsible for drawing in the dialog box.  
   
- Большинство диалоговые окна являются модальными, которые требуют, чтобы пользователь закрывает диалоговое окно перед использованием других частей программы.  Однако можно создать немодальные диалоговые окна, которые позволяют пользователям работать с другими окнами, пока диалоговое окно открыто.  MFC поддерживает оба типа диалогового окна с классом `CDialog`.  Элементы управления располагаются и управляемых с помощью ресурс шаблона диалоговых окон, созданный с помощью [редактор диалоговых окон](../mfc/dialog-editor.md).  
+ Most dialog boxes are modal, which require the user to close the dialog box before using any other part of the program. But it is possible to create modeless dialog boxes, which let users work with other windows while the dialog box is open. MFC supports both kinds of dialog box with class `CDialog`. The controls are arranged and managed using a dialog-template resource, created with the [dialog editor](../windows/dialog-editor.md).  
   
- [Страницы свойств](../mfc/property-sheets-mfc.md), также известны как диалоговые окна вкладки, диалоговые окна, содержащие «страницы» определенных элементов управления диалоговых окон.  Каждая страница содержит папку файла «вкладка» в верхней части окна.  Выберите вкладку приносит эту страницу плана и до переднего плана диалогового окна.  
+ [Property sheets](../mfc/property-sheets-mfc.md), also known as tab dialog boxes, are dialog boxes that contain "pages" of distinct dialog-box controls. Each page has a file folder "tab" at the top. Clicking a tab brings that page to the front of the dialog box.  
   
-## Дополнительные сведения  
+## <a name="what-do-you-want-to-know-more-about"></a>What do you want to know more about  
   
--   [Пример: Отображение диалогового окна с помощью команды меню](../mfc/example-displaying-a-dialog-box-via-a-menu-command.md)  
+-   [Example: Displaying a Dialog Box via a Menu Command](../mfc/example-displaying-a-dialog-box-via-a-menu-command.md)  
   
--   [Компоненты диалогового окна в платформе](../mfc/dialog-box-components-in-the-framework.md)  
+-   [Dialog-box components in the framework](../mfc/dialog-box-components-in-the-framework.md)  
   
--   [Модальном и безрежимное диалоговое окно](../mfc/modal-and-modeless-dialog-boxes.md)  
+-   [Modal and modeless dialog boxes](../mfc/modal-and-modeless-dialog-boxes.md)  
   
--   [Страниц свойств](../mfc/property-sheets-and-property-pages-mfc.md) в диалоговом окне  
+-   [Property sheets and property pages](../mfc/property-sheets-and-property-pages-mfc.md) in a dialog box  
   
--   [Создать ресурс диалогового окна](../Topic/Creating%20the%20Dialog%20Resource.md)  
+-   [Creating the dialog resource](../mfc/creating-the-dialog-resource.md)  
   
--   [Создание класса диалогового окна с помощью мастеров кода](../mfc/creating-a-dialog-class-with-code-wizards.md)  
+-   [Creating a dialog class with Code Wizards](../mfc/creating-a-dialog-class-with-code-wizards.md)  
   
--   [Жизненный цикл диалогового окна](../mfc/life-cycle-of-a-dialog-box.md)  
+-   [Life cycle of a dialog box](../mfc/life-cycle-of-a-dialog-box.md)  
   
--   [Данные диалогового окна \(DDX\) и проверка \(DDV\)](../mfc/dialog-data-exchange-and-validation.md)  
+-   [Dialog data exchange (DDX) and validation (DDV)](../mfc/dialog-data-exchange-and-validation.md)  
   
--   [Типобезопасный доступ к элементу управления в диалоговом окне](../Topic/Type-Safe%20Access%20to%20Controls%20in%20a%20Dialog%20Box.md)  
+-   [Type-safe access to controls in a dialog box](../mfc/type-safe-access-to-controls-in-a-dialog-box.md)  
   
--   [Сообщения Windows сопоставления в класс](../mfc/mapping-windows-messages-to-your-class.md)  
+-   [Mapping Windows messages to your class](../mfc/mapping-windows-messages-to-your-class.md)  
   
--   [Часто переопределенная функции\-члена](../mfc/commonly-overridden-member-functions.md)  
+-   [Commonly Overridden Member Functions](../mfc/commonly-overridden-member-functions.md)  
   
--   [Часто добавлены функции\-члены](../Topic/Commonly%20Added%20Member%20Functions.md)  
+-   [Commonly Added Member Functions](../mfc/commonly-added-member-functions.md)  
   
--   [Классы стандартного диалогового окна](../mfc/common-dialog-classes.md)  
+-   [Common dialog classes](../mfc/common-dialog-classes.md)  
   
--   [Диалоговые окна в OLE](../mfc/dialog-boxes-in-ole.md)  
+-   [Dialog boxes in OLE](../mfc/dialog-boxes-in-ole.md)  
   
--   Создайте приложение интерфейс пользователя которого диалоговое окно. см. примеры программы [CMNCTRL1](../top/visual-cpp-samples.md) или [CMNCTRL2](../top/visual-cpp-samples.md).  Мастер приложений предоставляет этот параметр также.  
+-   Create an application whose user interface is a dialog box: see the [CMNCTRL1](../visual-cpp-samples.md) or [CMNCTRL2](../visual-cpp-samples.md) sample programs. The Application Wizard provides this option as well.  
   
--   [Примеры](../mfc/dialog-sample-list.md)  
+-   [Samples](../mfc/dialog-sample-list.md)  
   
-## См. также  
- [Элементы пользовательского интерфейса](../mfc/user-interface-elements-mfc.md)
+## <a name="see-also"></a>See Also  
+ [User Interface Elements](../mfc/user-interface-elements-mfc.md)
+

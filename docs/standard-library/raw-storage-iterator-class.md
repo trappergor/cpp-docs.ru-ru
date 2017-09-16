@@ -1,5 +1,5 @@
 ---
-title: "Класс raw_storage_iterator | Документы Майкрософт"
+title: raw_storage_iterator Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -9,14 +9,15 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
-- raw_storage_iterator
 - memory/std::raw_storage_iterator
 - memory/std::raw_storage_iterator::element_type
 - memory/std::raw_storage_iterator::iter_type
 dev_langs:
 - C++
 helpviewer_keywords:
-- raw_storage_iterator class
+- std::raw_storage_iterator [C++]
+- std::raw_storage_iterator [C++], element_type
+- std::raw_storage_iterator [C++], iter_type
 ms.assetid: 6f033f15-f48e-452a-a326-647ea2cf346f
 caps.latest.revision: 17
 author: corob-msft
@@ -36,97 +37,97 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
-ms.openlocfilehash: 46bfc6bc42e09348d0760f7d03d70c816fde31ed
+ms.translationtype: MT
+ms.sourcegitcommit: 5d026c375025b169d5db8445cbb52c0c917b2d8d
+ms.openlocfilehash: 5a513b9b27c72c36f831eba839538910914d4057
 ms.contentlocale: ru-ru
-ms.lasthandoff: 04/29/2017
+ms.lasthandoff: 09/09/2017
 
 ---
-# <a name="rawstorageiterator-class"></a>Класс raw_storage_iterator
-Класс-адаптер, который предоставляется, чтобы алгоритмы могли сохранять свои результаты в неинициализированной памяти.  
+# <a name="rawstorageiterator-class"></a>raw_storage_iterator Class
+An adaptor class that is provided to enable algorithms to store their results into uninitialized memory.  
   
-## <a name="syntax"></a>Синтаксис  
+## <a name="syntax"></a>Syntax  
   
 ```
 template <class OutputIterator, class Type>  
 class raw_storage_iterator
 ```  
   
-#### <a name="parameters"></a>Параметры  
+#### <a name="parameters"></a>Parameters  
  `OutputIterator`  
- Указывает выходной итератор сохраняемого объекта.  
+ Specifies the output iterator for the object being stored.  
   
- *Тип*  
- Тип объекта, для которого выполняется выделение памяти.  
+ *Type*  
+ The type of object for which storage is being allocated.  
   
-## <a name="remarks"></a>Примечания  
- Класс описывает итератор вывода, который создает объекты типа **Type** в формируемой им последовательности. Объект класса `raw_storage_iterator`\< **ForwardIterator**, **Type**> получает доступ к хранилищу с помощью объекта прямого итератора класса **ForwardIterator**, который указывается при создании объекта. Для объекта first класса **ForwardIterator** выражение **&\*first** должно обозначать несконструированное хранилище для следующего объекта (типа **Type**) в создаваемой последовательности.  
+## <a name="remarks"></a>Remarks  
+ The class describes an output iterator that constructs objects of type **Type** in the sequence it generates. An object of class `raw_storage_iterator`\< **ForwardIterator**, **Type**> accesses storage through a forward iterator object, of class **ForwardIterator**, that you specify when you construct the object. For an object first of class **ForwardIterator**, the expression **&\*first** must designate unconstructed storage for the next object (of type **Type**) in the generated sequence.  
   
- Этот класс адаптера используется, когда необходимо разделить выделение памяти и создание объектов. `raw_storage_iterator` можно использовать для копирования объектов в неинициализированное хранилище, например в память, выделенную с помощью функции `malloc`.  
+ This adaptor class is used when it is necessary to separate memory allocation and object construction. The `raw_storage_iterator` can be used to copy objects into uninitialized storage, such as memory allocated using the `malloc` function.  
   
-## <a name="members"></a>Участники  
+## <a name="members"></a>Members  
   
-### <a name="constructors"></a>Конструкторы  
+### <a name="constructors"></a>Constructors  
   
 |||  
 |-|-|  
-|[raw_storage_iterator](#raw_storage_iterator)|Создает итератор необработанного хранилища с указанным базовым выходным итератором.|  
+|[raw_storage_iterator](#raw_storage_iterator)|Constructs a raw storage iterator with a specified underlying output iterator.|  
   
 ### <a name="typedefs"></a>Typedefs  
   
 |||  
 |-|-|  
-|[element_type](#element_type)|Предоставляет тип, описывающий элемент, в котором будет сохранен итератор необработанного хранилища.|  
-|[iter_type](#iter_type)|Предоставляет тип, который описывает итератор, базовый для итератора необработанного хранилища.|  
+|[element_type](#element_type)|Provides a type that describes an element to be stored a raw storage iterator.|  
+|[iter_type](#iter_type)|Provides a type that describes an iterator that underlies a raw storage iterator.|  
   
-### <a name="operators"></a>Операторы  
+### <a name="operators"></a>Operators  
   
 |||  
 |-|-|  
-|[оператор*](#op_star)|Оператор разыменования, используемый для реализации выражения итератора вывода * `ii` = `x`.|  
-|[оператор=](#op_eq)|Оператор присваивания, используемый для реализации выражения итератора необработанного хранилища * `i` = `x` для сохранения в памяти.|  
-|[оператор++](#op_add_add)|Преинкрементный и постинкрементный операторы для итераторов необработанного хранилища.|  
+|[operator*](#op_star)|A dereferencing operator used to implement the output iterator expression * `ii` = `x`.|  
+|[operator=](#op_eq)|An assignment operator used to implement the raw storage iterator expression * `i` = `x` for storing in memory.|  
+|[operator++](#op_add_add)|Preincrement and postincrement operators for raw storage iterators.|  
   
-## <a name="requirements"></a>Требования  
- **Заголовок:** \<memory>  
+## <a name="requirements"></a>Requirements  
+ **Header:** \<memory>  
   
- **Пространство имен:** std  
+ **Namespace:** std  
   
 ##  <a name="element_type"></a>  raw_storage_iterator::element_type  
- Предоставляет тип, описывающий элемент, в котором будет сохранен итератор необработанного хранилища.  
+ Provides a type that describes an element to be stored a raw storage iterator.  
   
 ```
 typedef Type element_type;
 ```  
   
-### <a name="remarks"></a>Примечания  
- Тип является синонимом параметра-шаблона **Type** класса raw_storage_iterator.  
+### <a name="remarks"></a>Remarks  
+ The type is a synonym for the raw_storage_iterator class template parameter **Type**.  
   
 ##  <a name="iter_type"></a>  raw_storage_iterator::iter_type  
- Предоставляет тип, который описывает итератор, базовый для итератора необработанного хранилища.  
+ Provides a type that describes an iterator that underlies a raw storage iterator.  
   
 ```
 typedef ForwardIterator iter_type;
 ```  
   
-### <a name="remarks"></a>Примечания  
- Тип является синонимом для параметра-шаблона **ForwardIterator**.  
+### <a name="remarks"></a>Remarks  
+ The type is a synonym for the template parameter **ForwardIterator**.  
   
 ##  <a name="op_star"></a>  raw_storage_iterator::operator*  
- Оператор разыменования, используемый для реализации выражения итератора необработанного хранилища \* *ii* = *x*.  
+ A dereferencing operator used to implement the raw storage iterator expression \* *ii* = *x*.  
   
 ```
 raw_storage_iterator<ForwardIterator, Type>& operator*();
 ```  
   
-### <a name="return-value"></a>Возвращаемое значение  
- Ссылка на итератор необработанного хранилища  
+### <a name="return-value"></a>Return Value  
+ A reference to the raw storage iterator  
   
-### <a name="remarks"></a>Примечания  
- Требования для состояния **ForwardIterator**, которые должен выполнить итератор необработанного хранилища, требуют только действительность выражения \* *ii* = *t*, и он не должен ничего сообщать об **operator** или `operator=` самих по себе. Возвращает операторы-члены в этой реализации **\*this**, так что [operator=](#op_eq)(**constType**&) может выполнить фактическое сохранение в выражении, таком как \* *ptr* = `val`.  
+### <a name="remarks"></a>Remarks  
+ The requirements for a **ForwardIterator** are that the raw storage iterator must satisfy require only the expression \* *ii* = *t* be valid and that it says nothing about the **operator** or the `operator=` on their own. The member operators in this implementation returns **\*this**, so that [operator=](#op_eq)( **constType**&) can perform the actual store in an expression, such as \* *ptr* = `val`.  
   
-### <a name="example"></a>Пример  
+### <a name="example"></a>Example  
   
 ```cpp  
 // raw_storage_iterator_op_deref.cpp  
@@ -178,26 +179,26 @@ Constructing 5
 ```  
   
 ##  <a name="op_eq"></a>  raw_storage_iterator::operator=  
- Оператор присваивания, используемый для реализации выражения итератора необработанного хранилища \* *i* = *x* для сохранения в памяти.  
+ Assignment operator used to implement the raw storage iterator expression \* *i* = *x* for storing in memory.  
   
 ```
 raw_storage_iterator<ForwardIterator, Type>& operator=(
     const Type& val);
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
  `val`  
- Значение объекта типа **Type** для вставки в память.  
+ The value of the object of type **Type** to be inserted into memory.  
   
-### <a name="return-value"></a>Возвращаемое значение  
- Оператор вставляет `val` в память и возвращает ссылку на итератор необработанного хранилища.  
+### <a name="return-value"></a>Return Value  
+ The operator inserts `val` into memory, and then returns a reference to the raw storage iterator.  
   
-### <a name="remarks"></a>Примечания  
- Требования для состояния **ForwardIterator**, которые должен выполнить итератор необработанного хранилища, требуют только действительность выражения \* *ii* = *t*, и он не должен ничего сообщать об **operator** или `operator=` самих по себе. Эти операторы-члены возвращают **\*this**.  
+### <a name="remarks"></a>Remarks  
+ The requirements for a **ForwardIterator** state that the raw storage iterator must satisfy require only the expression \* *ii* = *t* be valid, and that it says nothing about the **operator** or the `operator=` on their own. These member operators return **\*this**.  
   
- Оператор присваивания создает следующий объект в выходной последовательности, используя сначала значение сохраненного итератора путем вычисления расположения нового выражения **new** ((`void` \*)&\* **first**) **Type**(`val`).  
+ The assignment operator constructs the next object in the output sequence using the stored iterator value first, by evaluating the placement new expression **new** ( ( `void` \*)&\* **first**) **Type**( `val`).  
   
-### <a name="example"></a>Пример  
+### <a name="example"></a>Example  
   
 ```cpp  
 // raw_storage_iterator_op_assign.cpp  
@@ -247,7 +248,7 @@ Constructing 5
 ```  
   
 ##  <a name="op_add_add"></a>  raw_storage_iterator::operator++  
- Преинкрементный и постинкрементный операторы для итераторов необработанного хранилища.  
+ Preincrement and postincrement operators for raw storage iterators.  
   
 ```
 raw_storage_iterator<ForwardIterator, Type>& operator++();
@@ -255,19 +256,19 @@ raw_storage_iterator<ForwardIterator, Type>& operator++();
 raw_storage_iterator<ForwardIterator, Type> operator++(int);
 ```  
   
-### <a name="return-value"></a>Возвращаемое значение  
- Итератор необработанного хранилища или ссылка такой итератор.  
+### <a name="return-value"></a>Return Value  
+ An raw storage iterator or a reference to an raw storage iterator.  
   
-### <a name="remarks"></a>Примечания  
- Первый оператор в конечном итоге пытается извлечь и сохранить объект типа **CharType** из соответствующего входного потока. Второй оператор создает копию объекта, выполняет приращение объекта, а затем возвращает копию.  
+### <a name="remarks"></a>Remarks  
+ The first operator eventually attempts to extract and store an object of type **CharType** from the associated input stream. The second operator makes a copy of the object, increments the object, and then returns the copy.  
   
- Первый оператор preincrement увеличивает сохраненный объект-итератор вывода, а затем возвращает **\*this**.  
+ The first preincrement operator increments the stored output iterator object, and then returns **\*this**.  
   
- Второй оператор postincrement создает копию **\*this**, увеличивает сохраненный объект-итератор вывода, а затем возвращает копию.  
+ The second postincrement operator makes a copy of **\*this**, increments the stored output iterator object, and then returns the copy.  
   
- Конструктор сохраняет **first** как объект-итератор вывода.  
+ The constructor stores **first** as the output iterator object.  
   
-### <a name="example"></a>Пример  
+### <a name="example"></a>Example  
   
 ```cpp  
 // raw_storage_iterator_op_incr.cpp  
@@ -300,17 +301,17 @@ array 4 = 8
 ```  
   
 ##  <a name="raw_storage_iterator"></a>  raw_storage_iterator::raw_storage_iterator  
- Создает итератор необработанного хранилища с указанным базовым выходным итератором.  
+ Constructs a raw storage iterator with a specified underlying output iterator.  
   
 ```
 explicit raw_storage_iterator(ForwardIterator first);
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
  `first`  
- Прямой итератор, который лежит в основе создаваемого объекта `raw_storage_iterator`.  
+ The forward iterator that is to underlie the `raw_storage_iterator` object being constructed.  
   
-### <a name="example"></a>Пример  
+### <a name="example"></a>Example  
   
 ```cpp  
 // raw_storage_iterator_ctor.cpp  
@@ -390,8 +391,8 @@ array 3 = 4
 *\  
 ```  
   
-## <a name="see-also"></a>См. также  
- [Потокобезопасность в стандартной библиотеке C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)
+## <a name="see-also"></a>See Also  
+ [Thread Safety in the C++ Standard Library](../standard-library/thread-safety-in-the-cpp-standard-library.md)
 
 
 

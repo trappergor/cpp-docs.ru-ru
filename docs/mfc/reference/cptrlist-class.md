@@ -1,5 +1,5 @@
 ---
-title: "Класс CPtrList | Документы Microsoft"
+title: CPtrList Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -14,7 +14,7 @@ dev_langs:
 - C++
 helpviewer_keywords:
 - lists, generic
-- CPtrList class
+- CPtrList class [MFC]
 - generic lists
 ms.assetid: 4139a09c-4338-4f42-9eea-51336120b43c
 caps.latest.revision: 23
@@ -35,50 +35,50 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
-ms.openlocfilehash: 430d98d399e3c5131b248e10b9c7cfcec8dedc04
+ms.translationtype: MT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 7f9265c795d8aef95f72899a39fd2a40409b76a1
 ms.contentlocale: ru-ru
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 09/12/2017
 
 ---
-# <a name="cptrlist-class"></a>Класс CPtrList
-Поддерживает списки пустых указателей.  
+# <a name="cptrlist-class"></a>CPtrList Class
+Supports lists of void pointers.  
   
-## <a name="syntax"></a>Синтаксис  
+## <a name="syntax"></a>Syntax  
   
 ```  
 class CPtrList : public CObject  
 ```  
   
-## <a name="members"></a>Члены  
- Функции-члены `CPtrList` похожи на функции-члены класса [CObList](../../mfc/reference/coblist-class.md). Из-за этой схожести для изучения этой функции-члена можно использовать справочную документацию по классу `CObList`. Если вы видите `CObject` указатель в качестве параметра функции или возвращаемого значения, заменить указатель `void`.  
+## <a name="members"></a>Members  
+ The member functions of `CPtrList` are similar to the member functions of class [CObList](../../mfc/reference/coblist-class.md). Because of this similarity, you can use the `CObList` reference documentation for member function specifics. Wherever you see a `CObject` pointer as a function parameter or return value, substitute a pointer to `void`.  
   
  `CObject*& CObList::GetHead() const;`  
   
- , например, преобразуется в  
+ for example, translates to  
   
  `void*& CPtrList::GetHead() const;`  
   
-## <a name="remarks"></a>Примечания  
- `CPtrList`включает в себя `IMPLEMENT_DYNAMIC` макрос для поддержки доступа типа во время выполнения и Сохранение дампа `CDumpContext` объекта. Если вам требуется дамп отдельных указатель список элементов, необходимо задать глубины контекста дампа 1 или выше.  
+## <a name="remarks"></a>Remarks  
+ `CPtrList` incorporates the `IMPLEMENT_DYNAMIC` macro to support run-time type access and dumping to a `CDumpContext` object. If you need a dump of individual pointer list elements, you must set the depth of the dump context to 1 or greater.  
   
- Списки указатель не может быть сериализован.  
+ Pointer lists cannot be serialized.  
   
- Когда `CPtrList` удалить объект, или при удалении элементов, удаляются только указатели, не сущностями, которые они ссылаются.  
+ When a `CPtrList` object is deleted, or when its elements are removed, only the pointers are removed, not the entities they reference.  
   
- Дополнительные сведения об использовании `CPtrList`, см. в статье [коллекции](../../mfc/collections.md).  
+ For more information on using `CPtrList`, see the article [Collections](../../mfc/collections.md).  
   
-## <a name="inheritance-hierarchy"></a>Иерархия наследования  
+## <a name="inheritance-hierarchy"></a>Inheritance Hierarchy  
  [CObject](../../mfc/reference/cobject-class.md)  
   
  `CPtrList`  
   
-## <a name="requirements"></a>Требования  
- **Заголовок:** afxcoll.h  
+## <a name="requirements"></a>Requirements  
+ **Header:** afxcoll.h  
   
-## <a name="see-also"></a>См. также  
- [CObject-класс](../../mfc/reference/cobject-class.md)   
- [Диаграмма иерархии](../../mfc/hierarchy-chart.md)   
- [Класс cObList](../../mfc/reference/coblist-class.md)
+## <a name="see-also"></a>See Also  
+ [CObject Class](../../mfc/reference/cobject-class.md)   
+ [Hierarchy Chart](../../mfc/hierarchy-chart.md)   
+ [CObList Class](../../mfc/reference/coblist-class.md)
 

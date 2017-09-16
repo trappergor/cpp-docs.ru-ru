@@ -1,5 +1,5 @@
 ---
-title: "Класс CMFCBaseToolBar | Документы Microsoft"
+title: CMFCBaseToolBar Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -17,11 +17,9 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- CMFCBaseToolBar class, constructor
-- CMFCBaseToolBar class, destructor
-- ~CMFCBaseToolBar destructor
-- CreateObject method
-- CMFCBaseToolBar class
+- CMFCBaseToolBar [MFC], GetDockingMode
+- CMFCBaseToolBar [MFC], GetMinSize
+- CMFCBaseToolBar [MFC], OnAfterChangeParent
 ms.assetid: 5d79206d-55e4-46f8-b1b8-042e34d7f9da
 caps.latest.revision: 19
 author: mikeblome
@@ -41,41 +39,41 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0e0c08ddc57d437c51872b5186ae3fc983bb0199
-ms.openlocfilehash: f608b23c0dbee3ec0e2d2b234612365e3c2461b0
+ms.translationtype: MT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: eb896d2c03f8b25ec615444111fa6307e4dfd63e
 ms.contentlocale: ru-ru
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 09/12/2017
 
 ---
-# <a name="cmfcbasetoolbar-class"></a>Класс CMFCBaseToolBar
-Базовый класс для панели инструментов.  
+# <a name="cmfcbasetoolbar-class"></a>CMFCBaseToolBar Class
+Base class for toolbars.  
   
-## <a name="syntax"></a>Синтаксис  
+## <a name="syntax"></a>Syntax  
   
 ```  
 class CMFCBaseToolBar : public CPane  
 ```  
   
-## <a name="members"></a>Члены  
+## <a name="members"></a>Members  
   
-### <a name="public-constructors"></a>Открытые конструкторы  
+### <a name="public-constructors"></a>Public Constructors  
   
-|Имя|Описание|  
+|Name|Description|  
 |----------|-----------------|  
-|`CMFCBaseToolBar::CMFCBaseToolBar`|Конструктор по умолчанию.|  
-|`CMFCBaseToolBar::~CMFCBaseToolBar`|Деструктор.|  
+|`CMFCBaseToolBar::CMFCBaseToolBar`|Default constructor.|  
+|`CMFCBaseToolBar::~CMFCBaseToolBar`|Destructor.|  
   
-### <a name="public-methods"></a>Открытые методы  
+### <a name="public-methods"></a>Public Methods  
   
-|Имя|Описание|  
+|Name|Description|  
 |----------|-----------------|  
-|`CMFCBaseToolBar::CreateObject`|Используется платформой для создания динамического экземпляра этого типа класса.|  
-|[CMFCBaseToolBar::GetDockingMode](#getdockingmode)|Возвращает режим закрепления. (Переопределяет [CBasePane::GetDockingMode](../../mfc/reference/cbasepane-class.md#getdockingmode).)|  
-|[CMFCBaseToolBar::GetMinSize](#getminsize)|Возвращает минимальный размер панели инструментов. (Переопределяет [CPane::GetMinSize](../../mfc/reference/cpane-class.md#getminsize).)|  
-|[CMFCBaseToolBar::OnAfterChangeParent](#onafterchangeparent)|Вызывается платформой после изменения родительской области. (Переопределяет [CBasePane::OnAfterChangeParent](../../mfc/reference/cbasepane-class.md#onafterchangeparent).)|  
+|`CMFCBaseToolBar::CreateObject`|Used by the framework to create a dynamic instance of this class type.|  
+|[CMFCBaseToolBar::GetDockingMode](#getdockingmode)|Returns the docking mode. (Overrides [CBasePane::GetDockingMode](../../mfc/reference/cbasepane-class.md#getdockingmode).)|  
+|[CMFCBaseToolBar::GetMinSize](#getminsize)|Returns the minimum size of a toolbar. (Overrides [CPane::GetMinSize](../../mfc/reference/cpane-class.md#getminsize).)|  
+|[CMFCBaseToolBar::OnAfterChangeParent](#onafterchangeparent)|Called by the framework after the pane's parent changes. (Overrides [CBasePane::OnAfterChangeParent](../../mfc/reference/cbasepane-class.md#onafterchangeparent).)|  
   
-## <a name="inheritance-hierarchy"></a>Иерархия наследования  
+## <a name="inheritance-hierarchy"></a>Inheritance Hierarchy  
  [CObject](../../mfc/reference/cobject-class.md)  
   
  [CCmdTarget](../../mfc/reference/ccmdtarget-class.md)  
@@ -88,42 +86,42 @@ class CMFCBaseToolBar : public CPane
   
  [CMFCBaseToolBar](../../mfc/reference/cmfcbasetoolbar-class.md)  
   
-## <a name="requirements"></a>Требования  
- **Заголовок:** afxbasetoolbar.h  
+## <a name="requirements"></a>Requirements  
+ **Header:** afxbasetoolbar.h  
   
-##  <a name="getdockingmode"></a>CMFCBaseToolBar::GetDockingMode  
- Возвращает режим закрепления.  
+##  <a name="getdockingmode"></a>  CMFCBaseToolBar::GetDockingMode  
+ Returns the docking mode.  
   
 ```  
 virtual AFX_DOCK_TYPE GetDockingMode() const;  
 ```  
   
-### <a name="return-value"></a>Возвращаемое значение  
- Режим закрепления.  
+### <a name="return-value"></a>Return Value  
+ The docking mode.  
   
-##  <a name="getminsize"></a>CMFCBaseToolBar::GetMinSize  
- Возвращает минимальный размер панели инструментов.  
+##  <a name="getminsize"></a>  CMFCBaseToolBar::GetMinSize  
+ Returns the minimum size of a toolbar.  
   
 ```  
 virtual void GetMinSize(CSize& size) const;  
 ```  
   
-### <a name="parameters"></a>Параметры  
- [выходной] `size`  
- Минимальный размер панели инструментов.  
+### <a name="parameters"></a>Parameters  
+ [out] `size`  
+ The minimum size of a toolbar.  
   
-##  <a name="onafterchangeparent"></a>CMFCBaseToolBar::OnAfterChangeParent  
- Вызывается платформой после изменения родительской области.  
+##  <a name="onafterchangeparent"></a>  CMFCBaseToolBar::OnAfterChangeParent  
+ Called by the framework after the pane's parent changes.  
   
 ```  
 virtual void OnAfterChangeParent(CWnd* pWndOldParent);
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
  [in] `pWndOldParent`  
- Указатель на предыдущем родительского окна.  
+ A pointer to the previous parent window.  
   
-## <a name="see-also"></a>См. также  
- [Диаграмма иерархии](../../mfc/hierarchy-chart.md)   
- [Классы](../../mfc/reference/mfc-classes.md)
+## <a name="see-also"></a>See Also  
+ [Hierarchy Chart](../../mfc/hierarchy-chart.md)   
+ [Classes](../../mfc/reference/mfc-classes.md)
 

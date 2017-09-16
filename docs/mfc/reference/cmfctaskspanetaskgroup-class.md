@@ -1,5 +1,5 @@
 ---
-title: "Класс CMFCTasksPaneTaskGroup | Документы Microsoft"
+title: CMFCTasksPaneTaskGroup Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -23,7 +23,15 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- CMFCTasksPaneTaskGroup class
+- CMFCTasksPaneTaskGroup [MFC], CMFCTasksPaneTaskGroup
+- CMFCTasksPaneTaskGroup [MFC], SetACCData
+- CMFCTasksPaneTaskGroup [MFC], m_bIsBottom
+- CMFCTasksPaneTaskGroup [MFC], m_bIsCollapsed
+- CMFCTasksPaneTaskGroup [MFC], m_bIsSpecial
+- CMFCTasksPaneTaskGroup [MFC], m_lstTasks
+- CMFCTasksPaneTaskGroup [MFC], m_rect
+- CMFCTasksPaneTaskGroup [MFC], m_rectGroup
+- CMFCTasksPaneTaskGroup [MFC], m_strName
 ms.assetid: 2111640b-a46e-4b27-b033-29e88632b86a
 caps.latest.revision: 33
 author: mikeblome
@@ -43,76 +51,76 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 040985df34f2613b4e4fae29498721aef15d50cb
-ms.openlocfilehash: 405a69a0c7d8c4179b36e1beec09fdfa7acd2d7b
+ms.translationtype: MT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: a7c7503acf4deed60ab86eac6c91c64f746c8a09
 ms.contentlocale: ru-ru
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 09/12/2017
 
 ---
-# <a name="cmfctaskspanetaskgroup-class"></a>Класс CMFCTasksPaneTaskGroup
-`CMFCTasksPaneTaskGroup` Класс является вспомогательным классом, используемые [CMFCTasksPane](../../mfc/reference/cmfctaskspane-class.md) управления. Объекты типа `CMFCTasksPaneTaskGroup` представляют *группу задач*. Группа задач — это список элементов, отображаемых структурой в отдельном поле с кнопкой "Свернуть". Поле может иметь необязательный заголовок (имя группы). Если группа свернута, список задач не отображается.  
+# <a name="cmfctaskspanetaskgroup-class"></a>CMFCTasksPaneTaskGroup Class
+The `CMFCTasksPaneTaskGroup` class is a helper class used by the [CMFCTasksPane](../../mfc/reference/cmfctaskspane-class.md) control. Objects of type `CMFCTasksPaneTaskGroup` represent a *task group*. The task group is a list of items that the framework displays in a separate box that has a collapse button. The box can have an optional caption (group name). If a group is collapsed, the list of tasks is not visible.  
   
-## <a name="syntax"></a>Синтаксис  
+## <a name="syntax"></a>Syntax  
   
 ```  
 class CMFCTasksPaneTaskGroup : public CObject  
 ```  
   
-## <a name="members"></a>Члены  
+## <a name="members"></a>Members  
   
-### <a name="public-constructors"></a>Открытые конструкторы  
+### <a name="public-constructors"></a>Public Constructors  
   
-|Имя|Описание|  
+|Name|Description|  
 |----------|-----------------|  
-|[CMFCTasksPaneTaskGroup::CMFCTasksPaneTaskGroup](#cmfctaskspanetaskgroup)|Создает объект `CMFCTasksPaneTaskGroup`.|  
-|`CMFCTasksPaneTaskGroup::~CMFCTasksPaneTaskGroup`|Деструктор.|  
+|[CMFCTasksPaneTaskGroup::CMFCTasksPaneTaskGroup](#cmfctaskspanetaskgroup)|Constructs a `CMFCTasksPaneTaskGroup` object.|  
+|`CMFCTasksPaneTaskGroup::~CMFCTasksPaneTaskGroup`|Destructor.|  
   
-### <a name="public-methods"></a>Открытые методы  
+### <a name="public-methods"></a>Public Methods  
   
-|Имя|Описание|  
+|Name|Description|  
 |----------|-----------------|  
-|[CMFCTasksPaneTaskGroup::SetACCData](#setaccdata)|Определяет доступность данных для текущей группы задач.|  
+|[CMFCTasksPaneTaskGroup::SetACCData](#setaccdata)|Determines the accessibility data for the current task group.|  
   
-### <a name="data-members"></a>Элементы данных  
+### <a name="data-members"></a>Data Members  
   
-|Имя|Описание|  
+|Name|Description|  
 |----------|-----------------|  
-|[CMFCTasksPaneTaskGroup::m_bIsBottom](#m_bisbottom)|Определяет, выравнивается ли группа задач в нижней части элемента управления области задач.|  
-|[CMFCTasksPaneTaskGroup::m_bIsCollapsed](#m_biscollapsed)|Определяет, свернута ли группа задач.|  
-|[CMFCTasksPaneTaskGroup::m_bIsSpecial](#m_bisspecial)|Определяет, является ли группа задач *специальные.* Платформа специальные заголовки отображаются разными цветами.|  
-|[CMFCTasksPaneTaskGroup::m_lstTasks](#m_lsttasks)|Содержит список внутренних задач.|  
-|[CMFCTasksPaneTaskGroup::m_rect](#m_rect)|Указывает ограничивающий прямоугольник заголовка группы.|  
-|[CMFCTasksPaneTaskGroup::m_rectGroup](#m_rectgroup)|Указывает ограничивающий прямоугольник группы.|  
-|[CMFCTasksPaneTaskGroup::m_strName](#m_strname)|Задает имя группы.|  
+|[CMFCTasksPaneTaskGroup::m_bIsBottom](#m_bisbottom)|Determines whether the task group is aligned to the bottom of the task pane control.|  
+|[CMFCTasksPaneTaskGroup::m_bIsCollapsed](#m_biscollapsed)|Determines whether the task group is collapsed.|  
+|[CMFCTasksPaneTaskGroup::m_bIsSpecial](#m_bisspecial)|Determines whether the task group is *special.* The framework displays special captions in a different color.|  
+|[CMFCTasksPaneTaskGroup::m_lstTasks](#m_lsttasks)|Contains the internal list of tasks.|  
+|[CMFCTasksPaneTaskGroup::m_rect](#m_rect)|Specifies the bounding rectangle of the group caption.|  
+|[CMFCTasksPaneTaskGroup::m_rectGroup](#m_rectgroup)|Specifies the bounding rectangle of the group.|  
+|[CMFCTasksPaneTaskGroup::m_strName](#m_strname)|Specifies the name of the group.|  
   
-## <a name="remarks"></a>Примечания  
- На следующем рисунке показано группы расширенные задачи:  
+## <a name="remarks"></a>Remarks  
+ The following illustration shows an expanded task group:  
   
- ![Развернутая группа задач](../../mfc/reference/media/nexttaskgrpexpand.png "nexttaskgrpexpand")  
+ ![Task group, expanded](../../mfc/reference/media/nexttaskgrpexpand.png "nexttaskgrpexpand")  
   
- На следующем рисунке показано свернутая группа задач:  
+ The following illustration shows a collapsed task group:  
   
- ![Свернутая группа задач](../../mfc/reference/media/nexttaskgrpcollapse.png "nexttaskgrpcollapse")  
+ ![Collapsed task group](../../mfc/reference/media/nexttaskgrpcollapse.png "nexttaskgrpcollapse")  
   
- На следующем рисунке группа задач без заголовка:  
+ The following illustration shows a task group without a caption:  
   
- ![Группа задач без заголовка](../../mfc/reference/media/nexttaskgrpnocapt.png "nexttaskgrpnocapt")  
+ ![Task group without a caption](../../mfc/reference/media/nexttaskgrpnocapt.png "nexttaskgrpnocapt")  
   
- Ниже показаны две группы задач. Первой группы задач будет отмечен как специальный параметр `m_bIsSpecial` флаг `TRUE`, а вторая группа задач не является особенным. Обратите внимание, что заголовок для первой группы задач темнее второй группы задач:  
+ The following illustration shows two task groups. The first task group is marked as special by setting the `m_bIsSpecial` flag to `TRUE`, while the second task group is not special. Note how the caption for the first task group is darker than the second task group:  
   
- ![Специальная группа задач](../../mfc/reference/media/nexttaskgrpspecial.png "nexttaskgrpspecial")  
+ ![Special task group](../../mfc/reference/media/nexttaskgrpspecial.png "nexttaskgrpspecial")  
   
-## <a name="inheritance-hierarchy"></a>Иерархия наследования  
+## <a name="inheritance-hierarchy"></a>Inheritance Hierarchy  
  [CObject](../../mfc/reference/cobject-class.md)  
   
  [CMFCTasksPaneTaskGroup](../../mfc/reference/cmfctaskspanetaskgroup-class.md)  
   
-## <a name="requirements"></a>Требования  
- **Заголовок:** afxTasksPane.h  
+## <a name="requirements"></a>Requirements  
+ **Header:** afxTasksPane.h  
   
-##  <a name="cmfctaskspanetaskgroup"></a>CMFCTasksPaneTaskGroup::CMFCTasksPaneTaskGroup  
- Создает объект `CMFCTasksPaneTaskGroup`.  
+##  <a name="cmfctaskspanetaskgroup"></a>  CMFCTasksPaneTaskGroup::CMFCTasksPaneTaskGroup  
+ Constructs a `CMFCTasksPaneTaskGroup` object.  
   
 ```  
 CMFCTasksPaneTaskGroup(
@@ -124,99 +132,99 @@ CMFCTasksPaneTaskGroup(
     HICON hIcon=NULL);
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
  `lpszName`  
- Указывает имя группы в заголовок группы.  
+ Specifies the name of the group in the group caption.  
   
  `bIsBottom`  
- Указывает, выравнивается ли группу в нижнюю часть элемента управления области задач.  
+ Specifies whether the group is aligned to the bottom of the task pane control.  
   
  `bIsSpecial`  
- Указывает, назначается ли группа *специальных* и таким образом, является ли название группы заполняется другим цветом.  
+ Specifies whether the group is designated as *special* and thus, whether the group caption is filled with a different color.  
   
  `bIsCollapsed`  
- Указывает, является ли группа свернута.  
+ Specifies whether the group is collapsed.  
   
  `pPage`  
- Задает страницу свойств, к которой принадлежит эта группа задач.  
+ Specifies the property page that this task group belongs to.  
   
  `hIcon`  
- Задает значок, отображаемый в заголовке группы.  
+ Specifies the icon that displays in the group caption.  
   
-### <a name="remarks"></a>Примечания  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="m_bisbottom"></a>CMFCTasksPaneTaskGroup::m_bIsBottom  
- Определяет, выравнивается ли группа задач в нижней части элемента управления области задач.  
+##  <a name="m_bisbottom"></a>  CMFCTasksPaneTaskGroup::m_bIsBottom  
+ Determines whether the task group is aligned to the bottom of the task pane control.  
   
 ```  
 BOOL m_bIsBottom;  
 ```  
   
-### <a name="remarks"></a>Примечания  
- Только одна группа может быть выровнен по нижней части элемента управления области задач. Эта группа задач должны быть добавлены последнего. Дополнительные сведения см. в разделе [CMFCTasksPane::AddGroup](../../mfc/reference/cmfctaskspane-class.md#addgroup).  
+### <a name="remarks"></a>Remarks  
+ Only one group can be aligned to the bottom of the task pane control. This task group must be added last. For more information, see [CMFCTasksPane::AddGroup](../../mfc/reference/cmfctaskspane-class.md#addgroup).  
   
-##  <a name="m_biscollapsed"></a>CMFCTasksPaneTaskGroup::m_bIsCollapsed  
- Определяет, свернута ли группа задач.  
+##  <a name="m_biscollapsed"></a>  CMFCTasksPaneTaskGroup::m_bIsCollapsed  
+ Determines whether the task group is collapsed.  
   
 ```  
 BOOL m_bIsCollapsed;  
 ```  
   
-### <a name="remarks"></a>Примечания  
- Можно включить или отключить возможность свернуть группы в области задач путем вызова [CMFCTasksPane::EnableGroupCollapse](../../mfc/reference/cmfctaskspane-class.md#enablegroupcollapse).  
+### <a name="remarks"></a>Remarks  
+ You can enable or disable the ability to collapse groups on the task pane by calling [CMFCTasksPane::EnableGroupCollapse](../../mfc/reference/cmfctaskspane-class.md#enablegroupcollapse).  
   
-##  <a name="m_bisspecial"></a>CMFCTasksPaneTaskGroup::m_bIsSpecial  
- Определяет, является ли группа задач *специальных* и ли заголовок специальная группа задач должна быть определена с другим цветом.  
+##  <a name="m_bisspecial"></a>  CMFCTasksPaneTaskGroup::m_bIsSpecial  
+ Determines whether the task group is *special* and whether the caption for a special task group should be identified by a different color.  
   
 ```  
 BOOL m_bIsSpecial;  
 ```  
   
-### <a name="remarks"></a>Примечания  
- Если приложение использует визуальной темы Windows XP и `m_bIsSpecial` — `FALSE`, платформа вызывает функцию `DrawThemeBackground` с `EBP_NORMALGROUPBACKGROUND` флаг. Если `m_bIsSpecial` — `TRUE`, платформа вызывает функцию `DrawThemeBackground` с `EBP_SPECIALGROUPBACKGROUND` флаг.  
+### <a name="remarks"></a>Remarks  
+ If your application is using the Windows XP visual theme and `m_bIsSpecial` is `FALSE`, the framework calls `DrawThemeBackground` with the `EBP_NORMALGROUPBACKGROUND` flag. If `m_bIsSpecial` is `TRUE`, the framework calls `DrawThemeBackground` with the `EBP_SPECIALGROUPBACKGROUND` flag.  
   
-##  <a name="m_lsttasks"></a>CMFCTasksPaneTaskGroup::m_lstTasks  
- Содержит список внутренних задач.  
+##  <a name="m_lsttasks"></a>  CMFCTasksPaneTaskGroup::m_lstTasks  
+ Contains the internal list of tasks.  
   
 ```  
 CObList m_lstTasks;  
 ```  
   
-### <a name="remarks"></a>Примечания  
- Чтобы заполнить этот список, вызовите [CMFCTasksPane::AddTask](../../mfc/reference/cmfctaskspane-class.md#addtask).  
+### <a name="remarks"></a>Remarks  
+ To fill this list, call [CMFCTasksPane::AddTask](../../mfc/reference/cmfctaskspane-class.md#addtask).  
   
-##  <a name="m_rect"></a>CMFCTasksPaneTaskGroup::m_rect  
- Указывает ограничивающий прямоугольник заголовка группы.  
+##  <a name="m_rect"></a>  CMFCTasksPaneTaskGroup::m_rect  
+ Specifies the bounding rectangle of the group caption.  
   
 ```  
 CRect m_rect;  
 ```  
   
-### <a name="remarks"></a>Примечания  
- Это значение вычисляется автоматически платформой.  
+### <a name="remarks"></a>Remarks  
+ This value is automatically calculated by the framework.  
   
-##  <a name="m_rectgroup"></a>CMFCTasksPaneTaskGroup::m_rectGroup  
- Указывает ограничивающий прямоугольник группы.  
+##  <a name="m_rectgroup"></a>  CMFCTasksPaneTaskGroup::m_rectGroup  
+ Specifies the bounding rectangle of the group.  
   
 ```  
 CRect m_rectGroup;  
 ```  
   
-### <a name="remarks"></a>Примечания  
- Это значение вычисляется автоматически платформой.  
+### <a name="remarks"></a>Remarks  
+ This value is calculated automatically by the framework.  
   
-##  <a name="m_strname"></a>CMFCTasksPaneTaskGroup::m_strName  
- Задает имя группы.  
+##  <a name="m_strname"></a>  CMFCTasksPaneTaskGroup::m_strName  
+ Specifies the name of the group.  
   
 ```  
 CString m_strName;  
 ```  
   
-### <a name="remarks"></a>Примечания  
- Если это значение является пустым, название группы не отображается и не удается свернуть группу.  
+### <a name="remarks"></a>Remarks  
+ If this value is empty, the group caption is not displayed and the group cannot be collapsed.  
   
-##  <a name="setaccdata"></a>CMFCTasksPaneTaskGroup::SetACCData  
- Определяет доступность данных для текущей группы задач.  
+##  <a name="setaccdata"></a>  CMFCTasksPaneTaskGroup::SetACCData  
+ Determines the accessibility data for the current task group.  
   
 ```  
 virtual BOOL SetACCData(
@@ -224,21 +232,21 @@ virtual BOOL SetACCData(
     CAccessibilityData& data);
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
  [in] `pParent`  
- Представляет окно родительской группы задач.  
+ Represents the parent window of the current task group.  
   
- [выходной] `data`  
- Объект типа `CAccessibilityData` , заполняется данными специальные группы задач.  
+ [out] `data`  
+ An object of type `CAccessibilityData` that is populated with the accessibility data of the current task group.  
   
-### <a name="return-value"></a>Возвращаемое значение  
- `TRUE`Если `data` параметр был заполнен данными специальные группы задач успешно, в противном случае — `FALSE`.  
+### <a name="return-value"></a>Return Value  
+ `TRUE` if the `data` parameter was successfully populated with the accessibility data of the current task group; otherwise, `FALSE`.  
   
-## <a name="see-also"></a>См. также  
- [Диаграмма иерархии](../../mfc/hierarchy-chart.md)   
- [Классы](../../mfc/reference/mfc-classes.md)   
- [Класс CMFCTasksPane](../../mfc/reference/cmfctaskspane-class.md)   
- [Класс CMFCTasksPaneTask](../../mfc/reference/cmfctaskspanetask-class.md)   
- [Класс CMFCOutlookBar](../../mfc/reference/cmfcoutlookbar-class.md)   
- [CObject-класс](../../mfc/reference/cobject-class.md)
+## <a name="see-also"></a>See Also  
+ [Hierarchy Chart](../../mfc/hierarchy-chart.md)   
+ [Classes](../../mfc/reference/mfc-classes.md)   
+ [CMFCTasksPane Class](../../mfc/reference/cmfctaskspane-class.md)   
+ [CMFCTasksPaneTask Class](../../mfc/reference/cmfctaskspanetask-class.md)   
+ [CMFCOutlookBar Class](../../mfc/reference/cmfcoutlookbar-class.md)   
+ [CObject Class](../../mfc/reference/cobject-class.md)
 

@@ -1,61 +1,80 @@
 ---
-title: "Управление элементом управления &quot;Индикатор выполнения&quot; | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "контроль элементов управления хода выполнения"
-  - "CProgressCtrl - класс, обработка"
-  - "CProgressCtrl - класс, использование"
-  - "CProgressCtrl - класс, работа с"
-  - "элементы управления хода выполнения [C++], обработка"
+title: Manipulating the Progress Control | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- CProgressCtrl class [MFC], working with
+- progress controls [MFC], manipulating
+- CProgressCtrl class [MFC], manipulating
+- controlling progress controls [MFC]
+- CProgressCtrl class [MFC], using
 ms.assetid: 9af561d1-980b-4003-a6da-ff79be15bf23
 caps.latest.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 6
----
-# Управление элементом управления &quot;Индикатор выполнения&quot;
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 82c8e32789f396a371af38c372d622d1405024f4
+ms.contentlocale: ru-ru
+ms.lasthandoff: 09/12/2017
 
-3 Способа изменить текущая позиция контроля за ходом выполнения \([CProgressCtrl](../mfc/reference/cprogressctrl-class.md)\).  
+---
+# <a name="manipulating-the-progress-control"></a>Manipulating the Progress Control
+There are three ways to change the current position of a progress control ([CProgressCtrl](../mfc/reference/cprogressctrl-class.md)).  
   
--   Позиция может быть изменена суммой инкремента preset.  
+-   The position can be changed by a preset increment amount.  
   
--   Позиция может быть изменена произвольной суммой.  
+-   The position can be changed by an arbitrary amount.  
   
--   Позиция можно изменить на конкретное значение.  
+-   The position can be changed to a specific value.  
   
-### Изменение положения количество preset  
+### <a name="to-change-the-position-by-a-preset-amount"></a>To change the position by a preset amount  
   
-1.  Используйте функции\-члена [SetStep](../Topic/CProgressCtrl::SetStep.md), чтобы задать количество инкремента.  Значением по умолчанию является 10.  Обычно это значение задается как один из двух параметров для элемента управления.  Это значение может быть отрицательным.  
+1.  Use the [SetStep](../mfc/reference/cprogressctrl-class.md#setstep) member function to set the increment amount. By default, this value is 10. This value is typically set as one of the initial settings for the control. The step value can be negative.  
   
-2.  Используйте функции\-члена [StepIt](../Topic/CProgressCtrl::StepIt.md), чтобы увеличить позицию.  В этом случае элемент управления redraw.  
-  
-    > [!NOTE]
-    >  `StepIt` приведет к положению экземпляра.  Например, при использовании диапазон от 1 до 100, из шага 20 и положение 90, `StepIt` установят положение значение 10.  
-  
-### Изменение положения произвольной суммой  
-  
-1.  Используйте функции\-члена [OffsetPos](../Topic/CProgressCtrl::OffsetPos.md), чтобы изменить положение.  `OffsetPos` может принимать отрицательные значения.  
+2.  Use the [StepIt](../mfc/reference/cprogressctrl-class.md#stepit) member function to increment the position. This causes the control to redraw itself.  
   
     > [!NOTE]
-    >  `OffsetPos`, в отличие от `StepIt`, позиция не создается.  Отрегулирована новая позиция оставаться в пределах диапазона.  
+    >  `StepIt` will cause the position to wrap. For example, given a range of 1 -100, a step of 20, and a position of 90, `StepIt` will set the position to 10.  
   
-### Изменение положения на конкретное значение  
+### <a name="to-change-the-position-by-an-arbitrary-amount"></a>To change the position by an arbitrary amount  
   
-1.  Используйте функции\-члена [SetPos](../Topic/CProgressCtrl::SetPos.md), чтобы задать положение на конкретное значение.  Если необходимо, отрегулирована новая позиция находится в пределах диапазона.  
+1.  Use the [OffsetPos](../mfc/reference/cprogressctrl-class.md#offsetpos) member function to change the position. `OffsetPos` will accept negative values.  
   
- Как правило, элемент управления ходом выполнения используется исключительно для вывода.  Для доступа к текущей позиции без указания новое значение используйте функцию [GetPos](../Topic/CProgressCtrl::GetPos.md).  
+    > [!NOTE]
+    >  `OffsetPos`, unlike `StepIt`, will not wrap the position. The new position is adjusted to remain within the range.  
   
-## См. также  
- [Использование CProgressCtrl](../mfc/using-cprogressctrl.md)   
- [Элементы управления](../mfc/controls-mfc.md)
+### <a name="to-change-the-position-to-a-specific-value"></a>To change the position to a specific value  
+  
+1.  Use the [SetPos](../mfc/reference/cprogressctrl-class.md#setpos) member function to set the position to a specific value. If necessary, the new position is adjusted to be within the range.  
+  
+ Typically, the progress control is used solely for output. To get the current position without specifying a new value, use [GetPos](../mfc/reference/cprogressctrl-class.md#getpos).  
+  
+## <a name="see-also"></a>See Also  
+ [Using CProgressCtrl](../mfc/using-cprogressctrl.md)   
+ [Controls](../mfc/controls-mfc.md)
+
+

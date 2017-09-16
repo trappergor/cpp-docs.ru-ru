@@ -1,59 +1,78 @@
 ---
-title: "Создание коллекций стеков и очередей | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "классы коллекций, создание"
-  - "коллекции, очередь"
-  - "коллекции, стек"
-  - "классы коллекций MFC, коллекции очередей"
-  - "классы коллекций MFC, коллекции стеков"
-  - "коллекции очередей"
-  - "стек"
-  - "коллекции стеков"
+title: Creating Stack and Queue Collections | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- MFC collection classes [MFC], stack collections
+- collections, stack
+- stack
+- collection classes [MFC], creating
+- queue collections
+- MFC collection classes [MFC], queue collections
+- stack collections
+- collections, queue
 ms.assetid: 3c7bc198-35f0-4fc3-aaed-6005a0f22638
 caps.latest.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 6
----
-# Создание коллекций стеков и очередей
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 26e7012530dc05cc413fd04a8ababc756cf29c8a
+ms.contentlocale: ru-ru
+ms.lasthandoff: 09/12/2017
 
-В этой статье описывается, как создать другие структуры данных, например [стека](#_core_stacks) и [очереди](#_core_queues), из списка классов MFC.  Примеры используют классы, производные от `CList`, но можно использовать `CList` напрямую, если не требуется добавить функцию.  
+---
+# <a name="creating-stack-and-queue-collections"></a>Creating Stack and Queue Collections
+This article explains how to create other data structures, such as [stacks](#_core_stacks) and [queues](#_core_queues), from MFC list classes. The examples use classes derived from `CList`, but you can use `CList` directly unless you need to add functionality.  
   
-##  <a name="_core_stacks"></a> Стека  
- Поскольку обычная коллекция имеет списка и головки и заканчивается, легко создать производную коллекции списков, имитирует расширение функциональности, имеющую первой — out стека.  Стека, стека компонентов в столовой.  Как компоненты добавляются в стеке, их переходе на вершине стека.  Последний добавленный первым компонент, который необходимо удалить.  Функции\-члены `AddHead` и `RemoveHead` коллекции списка можно использовать для добавления и удаления элементов из списка, в частности головки таким образом, самый последний добавленный первый элемент, который необходимо удалить.  
+##  <a name="_core_stacks"></a> Stacks  
+ Because the standard list collection has both a head and a tail, it is easy to create a derived list collection that mimics the behavior of a last-in-first-out stack. A stack is like a stack of trays in a cafeteria. As trays are added to the stack, they go on top of the stack. The last tray added is the first to be removed. The list collection member functions `AddHead` and `RemoveHead` can be used to add and remove elements specifically from the head of the list; thus, the most recently added element is the first to be removed.  
   
-#### Создание коллекции стека  
+#### <a name="to-create-a-stack-collection"></a>To create a stack collection  
   
-1.  Создание нового производного класса списка из одного из списка существующих классов MFC и добавить дополнительные функций\-членов для поддержки функции операций стека.  
+1.  Derive a new list class from one of the existing MFC list classes and add more member functions to support the functionality of stack operations.  
   
-     В следующем примере показано добавление функции\-члены к элементам внедрения включен в стеке, взгляду украдкой в верхнем элементе стека и извлекает из верхний элемент стека:  
+     The following example shows how to add member functions to push elements on to the stack, peek at the top element of the stack, and pop the top element from the stack:  
   
-     [!code-cpp[NVC_MFCCollections#20](../mfc/codesnippet/CPP/creating-stack-and-queue-collections_1.h)]  
+     [!code-cpp[NVC_MFCCollections#20](../mfc/codesnippet/cpp/creating-stack-and-queue-collections_1.h)]  
   
- Обратите внимание, что этот подход предоставляет базовый класс `CObList`.  Пользователь может вызывать любой функции\-члена `CObList`, имеет ли он для стека или нет.  
+ Note that this approach exposes the underlying `CObList` class. The user can call any `CObList` member function, whether it makes sense for a stack or not.  
   
-##  <a name="_core_queues"></a> Очереди  
- Поскольку обычная коллекция имеет списка и головки и заканчивается, также легко создать производную коллекции списков, имитирует расширение функциональности перво\-в\- первой — в очереди.  Очередь как линия человека в столовой.  Первый пользователь в первый линии, чтобы обслуживать.  Как только больше людей, они сохраняются в конец линии, их принимает.  Функции\-члены `AddTail` и `RemoveHead` коллекции списка можно использовать для добавления и удаления элементов из специально головки или конца списка; таким образом, самый последний добавленный элемент всегда является последним, который необходимо удалить.  
+##  <a name="_core_queues"></a> Queues  
+ Because the standard list collection has both a head and a tail, it is also easy to create a derived list collection that mimics the behavior of a first-in-first-out queue. A queue is like a line of people in a cafeteria. The first person in line is the first to be served. As more people come, they go to the end of the line to wait their turn. The list collection member functions `AddTail` and `RemoveHead` can be used to add and remove elements specifically from the head or tail of the list; thus, the most recently added element is always the last to be removed.  
   
-#### Создание коллекции queue  
+#### <a name="to-create-a-queue-collection"></a>To create a queue collection  
   
-1.  Создание нового производного класса списка из одного из предварительно определенных классов, предоставляемых списка с помощью библиотеки Microsoft Foundation Class и добавить дополнительные функций\-членов для поддержки семантику операций очереди.  
+1.  Derive a new list class from one of the predefined list classes provided with the Microsoft Foundation Class Library and add more member functions to support the semantics of queue operations.  
   
-     В следующем примере показано, как можно добавить функции\-члены для добавления элемента в конец очереди и получить элемент из начала очереди.  
+     The following example shows how you can append member functions to add an element to the end of the queue and get the element from the front of the queue.  
   
-     [!code-cpp[NVC_MFCCollections#21](../mfc/codesnippet/CPP/creating-stack-and-queue-collections_2.h)]  
+     [!code-cpp[NVC_MFCCollections#21](../mfc/codesnippet/cpp/creating-stack-and-queue-collections_2.h)]  
   
-## См. также  
- [Коллекции](../mfc/collections.md)
+## <a name="see-also"></a>See Also  
+ [Collections](../mfc/collections.md)
+
+

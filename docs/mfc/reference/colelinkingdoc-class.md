@@ -1,5 +1,5 @@
 ---
-title: "Класс COleLinkingDoc | Документы Microsoft"
+title: COleLinkingDoc Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -19,8 +19,11 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- OLE containers, client items
-- COleLinkingDoc class
+- COleLinkingDoc [MFC], COleLinkingDoc
+- COleLinkingDoc [MFC], Register
+- COleLinkingDoc [MFC], Revoke
+- COleLinkingDoc [MFC], OnFindEmbeddedItem
+- COleLinkingDoc [MFC], OnGetLinkedItem
 ms.assetid: 9f547f35-2f95-427f-b9c0-85c31940198b
 caps.latest.revision: 24
 author: mikeblome
@@ -40,68 +43,68 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 040985df34f2613b4e4fae29498721aef15d50cb
-ms.openlocfilehash: acdfde1413d5ff93efc63dbbf211881f71cf624e
+ms.translationtype: MT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: a457e139aa4770baa22dd148e0676ef522f238ca
 ms.contentlocale: ru-ru
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 09/12/2017
 
 ---
-# <a name="colelinkingdoc-class"></a>Класс COleLinkingDoc
-Базовый класс для документов OLE-контейнера, которые поддерживают связывание со встроенными элементами, которые их содержат.  
+# <a name="colelinkingdoc-class"></a>COleLinkingDoc Class
+The base class for OLE container documents that support linking to the embedded items they contain.  
   
-## <a name="syntax"></a>Синтаксис  
+## <a name="syntax"></a>Syntax  
   
 ```  
 class COleLinkingDoc : public COleDocument  
 ```  
   
-## <a name="members"></a>Члены  
+## <a name="members"></a>Members  
   
-### <a name="public-constructors"></a>Открытые конструкторы  
+### <a name="public-constructors"></a>Public Constructors  
   
-|Имя|Описание|  
+|Name|Description|  
 |----------|-----------------|  
-|[COleLinkingDoc::COleLinkingDoc](#colelinkingdoc)|Создает объект `COleLinkingDoc`.|  
+|[COleLinkingDoc::COleLinkingDoc](#colelinkingdoc)|Constructs a `COleLinkingDoc` object.|  
   
-### <a name="public-methods"></a>Открытые методы  
+### <a name="public-methods"></a>Public Methods  
   
-|Имя|Описание|  
+|Name|Description|  
 |----------|-----------------|  
-|[COleLinkingDoc::Register](#register)|Регистрирует документа OLE системные библиотеки DLL.|  
-|[COleLinkingDoc::Revoke](#revoke)|Отменяет регистрацию документа.|  
+|[COleLinkingDoc::Register](#register)|Registers the document with the OLE system DLLs.|  
+|[COleLinkingDoc::Revoke](#revoke)|Revokes the document's registration.|  
   
-### <a name="protected-methods"></a>Защищенные методы  
+### <a name="protected-methods"></a>Protected Methods  
   
-|Имя|Описание|  
+|Name|Description|  
 |----------|-----------------|  
-|[COleLinkingDoc::OnFindEmbeddedItem](#onfindembeddeditem)|Находит указанный внедренный элемент.|  
-|[COleLinkingDoc::OnGetLinkedItem](#ongetlinkeditem)|Выполняет поиск указанного связанного элемента.|  
+|[COleLinkingDoc::OnFindEmbeddedItem](#onfindembeddeditem)|Finds the specified embedded item.|  
+|[COleLinkingDoc::OnGetLinkedItem](#ongetlinkeditem)|Finds the specified linked item.|  
   
-## <a name="remarks"></a>Примечания  
- Приложения-контейнера, который поддерживает связывание встроенными элементами называется «контейнер ссылку». [OCLIENT](../../visual-cpp-samples.md) пример приложения является примером контейнера ссылку.  
+## <a name="remarks"></a>Remarks  
+ A container application that supports linking to embedded items is called a "link container." The [OCLIENT](../../visual-cpp-samples.md) sample application is an example of a link container.  
   
- Если связанный элемент источником является встроенного элемента в другой документ, содержащий документ загрузку для внедренного элемента для редактирования. По этой причине контейнера ссылку должен иметь возможность запускаться другим приложением контейнера, когда пользователь хочет изменить источник связанного элемента. Приложение также должно использовать [COleTemplateServer](../../mfc/reference/coletemplateserver-class.md) класса, чтобы можно было создавать документы при запуске программным способом.  
+ When a linked item's source is an embedded item in another document, that containing document must be loaded in order for the embedded item to be edited. For this reason, a link container must be able to be launched by another container application when the user wants to edit the source of a linked item. Your application must also use the [COleTemplateServer](../../mfc/reference/coletemplateserver-class.md) class so that it can create documents when launched programmatically.  
   
- Чтобы контейнер ссылку контейнера, сформируйте класс документа из `COleLinkingDoc` вместо [COleDocument](../../mfc/reference/coledocument-class.md). Как и в случае любой другой контейнер OLE, необходимо разработать класс для хранения приложения собственных данных, а также внедренные и связанные элементы. Кроме того необходимо разработать структуры данных для хранения данных в собственном. Если определить `CDocItem`-производный класс для собственного приложения данные, можно использовать интерфейс, определяемый `COleDocument` для хранения данных в собственном, а также данных OLE.  
+ To make your container a link container, derive your document class from `COleLinkingDoc` instead of [COleDocument](../../mfc/reference/coledocument-class.md). As with any other OLE container, you must design your class for storing the application's native data as well as embedded or linked items. Also, you must design data structures for storing your native data. If you define a `CDocItem`-derived class for your application's native data, you can use the interface defined by `COleDocument` to store your native data as well as your OLE data.  
   
- Чтобы разрешить приложению запускаться программно другой контейнер, объявить `COleTemplateServer` объект как член приложения `CWinApp`-производного класса:  
+ To allow your application to be launched programmatically by another container, declare a `COleTemplateServer` object as a member of your application's `CWinApp`-derived class:  
   
- [!code-cpp[NVC_MFCOleContainer&#23;](../../mfc/codesnippet/cpp/colelinkingdoc-class_1.h)]  
+ [!code-cpp[NVC_MFCOleContainer#23](../../mfc/codesnippet/cpp/colelinkingdoc-class_1.h)]  
   
- В `InitInstance` функцию-член вашей `CWinApp`-производного класса, создайте шаблон документа и укажите вашей `COleLinkingDoc`-производный класс как класс документа:  
+ In the `InitInstance` member function of your `CWinApp`-derived class, create a document template and specify your `COleLinkingDoc`-derived class as the document class:  
   
- [!code-cpp[NVC_MFCOleContainer&#24;](../../mfc/codesnippet/cpp/colelinkingdoc-class_2.cpp)]  
+ [!code-cpp[NVC_MFCOleContainer#24](../../mfc/codesnippet/cpp/colelinkingdoc-class_2.cpp)]  
   
- Подключения к `COleTemplateServer` объектов в шаблонах документов путем вызова объекта `ConnectTemplate` функции-члена, а также регистрировать все классы объектов в системе OLE путем вызова **COleTemplateServer::RegisterAll**:  
+ Connect your `COleTemplateServer` object to your document templates by calling the object's `ConnectTemplate` member function, and register all class objects with the OLE system by calling **COleTemplateServer::RegisterAll**:  
   
- [!code-cpp[NVC_MFCOleContainer&#25;](../../mfc/codesnippet/cpp/colelinkingdoc-class_3.cpp)]  
+ [!code-cpp[NVC_MFCOleContainer#25](../../mfc/codesnippet/cpp/colelinkingdoc-class_3.cpp)]  
   
- Образец `CWinApp`-производный класс определения и `InitInstance` см. в разделе OCLIENT. H и OCLIENT. CPP в образце MFC [OCLIENT](../../visual-cpp-samples.md).  
+ For a sample `CWinApp`-derived class definition and `InitInstance` function, see OCLIENT.H and OCLIENT.CPP in the MFC sample [OCLIENT](../../visual-cpp-samples.md).  
   
- Дополнительные сведения об использовании `COleLinkingDoc`, см. в статьях [контейнеры: реализация контейнера](../../mfc/containers-implementing-a-container.md) и [контейнеров: Дополнительные функции](../../mfc/containers-advanced-features.md).  
+ For more information on using `COleLinkingDoc`, see the articles [Containers: Implementing a Container](../../mfc/containers-implementing-a-container.md) and [Containers: Advanced Features](../../mfc/containers-advanced-features.md).  
   
-## <a name="inheritance-hierarchy"></a>Иерархия наследования  
+## <a name="inheritance-hierarchy"></a>Inheritance Hierarchy  
  [CObject](../../mfc/reference/cobject-class.md)  
   
  [CCmdTarget](../../mfc/reference/ccmdtarget-class.md)  
@@ -112,55 +115,55 @@ class COleLinkingDoc : public COleDocument
   
  `COleLinkingDoc`  
   
-## <a name="requirements"></a>Требования  
- **Заголовок:** afxole.h  
+## <a name="requirements"></a>Requirements  
+ **Header:** afxole.h  
   
-##  <a name="colelinkingdoc"></a>COleLinkingDoc::COleLinkingDoc  
- Создает `COleLinkingDoc` объекта, не создавая связи с OLE системные библиотеки DLL.  
+##  <a name="colelinkingdoc"></a>  COleLinkingDoc::COleLinkingDoc  
+ Constructs a `COleLinkingDoc` object without beginning communications with the OLE system DLLs.  
   
 ```  
 COleLinkingDoc();
 ```  
   
-### <a name="remarks"></a>Примечания  
- Необходимо вызвать метод `Register` функции-члена для информирования OLE документ открыт.  
+### <a name="remarks"></a>Remarks  
+ You must call the `Register` member function to inform OLE that the document is open.  
   
-##  <a name="onfindembeddeditem"></a>COleLinkingDoc::OnFindEmbeddedItem  
- Вызывается средой, чтобы определить, содержит ли документ с указанным именем встроенного элемента OLE.  
+##  <a name="onfindembeddeditem"></a>  COleLinkingDoc::OnFindEmbeddedItem  
+ Called by the framework to determine whether the document contains an embedded OLE item with the specified name.  
   
 ```  
 virtual COleClientItem* OnFindEmbeddedItem(LPCTSTR lpszItemName);
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
  `lpszItemName`  
- Указатель на имя внедренного OLE запрошенного элемента.  
+ Pointer to the name of the embedded OLE item requested.  
   
-### <a name="return-value"></a>Возвращаемое значение  
- Указатель на указанный элемент; **NULL** Если элемент не найден.  
+### <a name="return-value"></a>Return Value  
+ A pointer to the specified item; **NULL** if the item is not found.  
   
-### <a name="remarks"></a>Примечания  
- Реализация по умолчанию выполняет поиск в списке встроенных элементов для элемента с указанным именем (имя сравнение чувствительно к регистру). Переопределите эту функцию, если у вас есть собственный метод хранения или именования внедренные элементы OLE.  
+### <a name="remarks"></a>Remarks  
+ The default implementation searches the list of embedded items for an item with the specified name (the name comparison is case sensitive). Override this function if you have your own method of storing or naming embedded OLE items.  
   
-##  <a name="ongetlinkeditem"></a>COleLinkingDoc::OnGetLinkedItem  
- Вызывается средой, чтобы проверить, содержит ли документ элемент связанного сервера с указанным именем.  
+##  <a name="ongetlinkeditem"></a>  COleLinkingDoc::OnGetLinkedItem  
+ Called by the framework to check whether the document contains a linked server item with the specified name.  
   
 ```  
 virtual COleServerItem* OnGetLinkedItem(LPCTSTR lpszItemName);
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
  `lpszItemName`  
- Указатель на имя связанного OLE запрошенного элемента.  
+ Pointer to the name of the linked OLE item requested.  
   
-### <a name="return-value"></a>Возвращаемое значение  
- Указатель на указанный элемент; **NULL** Если элемент не найден.  
+### <a name="return-value"></a>Return Value  
+ A pointer to the specified item; **NULL** if the item is not found.  
   
-### <a name="remarks"></a>Примечания  
- Значение по умолчанию `COleLinkingDoc` реализация всегда возвращает **NULL**. Эта функция будет переопределен в производном классе `COleServerDoc` для поиска в списке сервер OLE-элементы для элемента, связанного с указанным именем (имя сравнивается с учетом регистра). Переопределите эту функцию, если реализован собственный метод хранение и извлечение элементов связанного сервера.  
+### <a name="remarks"></a>Remarks  
+ The default `COleLinkingDoc` implementation always returns **NULL**. This function is overriden in the derived class `COleServerDoc` to search the list of OLE server items for a linked item with the specified name (the name comparison is case sensitive). Override this function if you have implemented your own method of storing or retrieving linked server items.  
   
-##  <a name="register"></a>COleLinkingDoc::Register  
- Сообщает системе OLE библиотеки DLL, что документ открыт.  
+##  <a name="register"></a>  COleLinkingDoc::Register  
+ Informs the OLE system DLLs that the document is open.  
   
 ```  
 BOOL Register(
@@ -168,36 +171,36 @@ BOOL Register(
     LPCTSTR lpszPathName);
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
  *pFactory*  
- Указатель на объект фабрики OLE (может быть **NULL**).  
+ Pointer to an OLE factory object (can be **NULL**).  
   
  `lpszPathName`  
- Указатель на полный путь документе-контейнере.  
+ Pointer to the fully qualified path of the container document.  
   
-### <a name="return-value"></a>Возвращаемое значение  
- Ненулевое значение, если документ успешно зарегистрировано; в противном случае — 0.  
+### <a name="return-value"></a>Return Value  
+ Nonzero if the document is successfully registered; otherwise 0.  
   
-### <a name="remarks"></a>Примечания  
- Вызов этой функции при создании или открытии файл с именем регистрируемого документа OLE системные библиотеки DLL. Нет необходимости вызывать данную функцию, если документ представляет внедренный элемент.  
+### <a name="remarks"></a>Remarks  
+ Call this function when creating or opening a named file to register the document with the OLE system DLLs. There is no need to call this function if the document represents an embedded item.  
   
- При использовании `COleTemplateServer` в приложении, `Register` вызывается для вас `COleLinkingDoc`реализация `OnNewDocument`, `OnOpenDocument`, и `OnSaveDocument`.  
+ If you are using `COleTemplateServer` in your application, `Register` is called for you by `COleLinkingDoc`'s implementation of `OnNewDocument`, `OnOpenDocument`, and `OnSaveDocument`.  
   
-##  <a name="revoke"></a>COleLinkingDoc::Revoke  
- Сообщает системе OLE библиотеки DLL, что документ больше не открыт.  
+##  <a name="revoke"></a>  COleLinkingDoc::Revoke  
+ Informs the OLE system DLLs that the document is no longer open.  
   
 ```  
 void Revoke();
 ```  
   
-### <a name="remarks"></a>Примечания  
- Эта функция вызывается для отмены регистрации документа с OLE системные библиотеки DLL.  
+### <a name="remarks"></a>Remarks  
+ Call this function to revoke the document's registration with the OLE system DLLs.  
   
- Эту функцию следует вызывать при закрытии файл с именем, но обычно не требуется напрямую вызывать. `Revoke`вызывается для вас `COleLinkingDoc`реализация `OnCloseDocument`, `OnNewDocument`, `OnOpenDocument`, и `OnSaveDocument`.  
+ You should call this function when closing a named file, but you usually do not need to call it directly. `Revoke` is called for you by `COleLinkingDoc`'s implementation of `OnCloseDocument`, `OnNewDocument`, `OnOpenDocument`, and `OnSaveDocument`.  
   
-## <a name="see-also"></a>См. также  
- [Пример MFC OCLIENT](../../visual-cpp-samples.md)   
- [Класс COleDocument](../../mfc/reference/coledocument-class.md)   
- [Диаграмма иерархии](../../mfc/hierarchy-chart.md)   
- [CDocTemplate-класс](../../mfc/reference/cdoctemplate-class.md)
+## <a name="see-also"></a>See Also  
+ [MFC Sample OCLIENT](../../visual-cpp-samples.md)   
+ [COleDocument Class](../../mfc/reference/coledocument-class.md)   
+ [Hierarchy Chart](../../mfc/hierarchy-chart.md)   
+ [CDocTemplate Class](../../mfc/reference/cdoctemplate-class.md)
 

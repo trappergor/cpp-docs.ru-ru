@@ -1,82 +1,100 @@
 ---
-title: "Элементы управления ActiveX в MFC. Реализация расширенных свойств | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "MFC ActiveX - элементы управления, коды ошибок"
-  - "MFC ActiveX - элементы управления, свойства"
-  - "свойства [MFC], элементы управления ActiveX"
+title: 'MFC ActiveX Controls: Advanced Property Implementation | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- MFC ActiveX controls [MFC], error codes
+- properties [MFC], ActiveX controls
+- MFC ActiveX controls [MFC], properties
 ms.assetid: ec2e6759-5a8e-41d8-a275-99af8ff6f32e
 caps.latest.revision: 12
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 8
----
-# Элементы управления ActiveX в MFC. Реализация расширенных свойств
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 7b23dd1b02a9a8e7e7584574429439c8334151fa
+ms.contentlocale: ru-ru
+ms.lasthandoff: 09/12/2017
 
-В этом разделе описываются разделы, относящиеся к реализации расширенные свойства в элемент управления ActiveX.  
+---
+# <a name="mfc-activex-controls-advanced-property-implementation"></a>MFC ActiveX Controls: Advanced Property Implementation
+This article describes topics related to implementing advanced properties in an ActiveX control:  
   
--   [Только для чтения, доступные только на запись свойства](#_core_read2donly_and_write2donly_properties)  
+-   [Read-only and write-only properties](#_core_read2donly_and_write2donly_properties)  
   
--   [Возвращение коды ошибок из свойства](#_core_returning_error_codes_from_a_property)  
+-   [Returning error codes from a property](#_core_returning_error_codes_from_a_property)  
   
-##  <a name="_core_read2donly_and_write2donly_properties"></a> Только для чтения, доступные только на запись свойства  
- Мастера добавления свойства предоставляет быстрый и удобный метод для реализации только для чтения или доступные только на запись свойства для элемента управления.  
+##  <a name="_core_read2donly_and_write2donly_properties"></a> Read-Only and Write-Only Properties  
+ The Add Property Wizard provides a quick and easy method to implement read-only or write-only properties for the control.  
   
-#### Реализовывать только для чтения или доступное только на запись свойство  
+#### <a name="to-implement-a-read-only-or-write-only-property"></a>To implement a read-only or write-only property  
   
-1.  Загрузите проект элемента управления.  
+1.  Load your control's project.  
   
-2.  В представлении классов разверните узел библиотеки элемента управления.  
+2.  In Class View, expand the library node of your control.  
   
-3.  Щелкните правой кнопкой мыши узел интерфейса для элемента управления \(второго узла узла библиотеки\), чтобы открыть контекстное меню.  
+3.  Right-click the interface node for your control (the second node of the library node) to open the shortcut menu.  
   
-4.  В контекстном меню щелкните **Добавить**, а затем щелкните **Добавить свойство**.  
+4.  From the shortcut menu, click **Add** and then click **Add Property**.  
   
-     Это окно [Мастер добавления свойства](../ide/names-add-property-wizard.md).  
+     This opens the [Add Property Wizard](../ide/names-add-property-wizard.md).  
   
-5.  В поле **Имя свойства** введите имя свойства.  
+5.  In the **Property Name** box, type the name of your property.  
   
-6.  В поле **Тип реализации**, щелкните **Get\/set методы**.  
+6.  For **Implementation Type**, click **Get/Set Methods**.  
   
-7.  В окне **свойство Type** выберите нужный тип свойства.  
+7.  In the **Property Type** box, select the proper type for the property.  
   
-8.  Если требуется свойство только для чтения, снимите устанавливается имя функции.  Если требуется доступное только на запись свойство, снимите имя функции получения.  
+8.  If you want a read-only property, clear the Set function name. If you want a write-only property, clear the Get function name.  
   
-9. Нажмите кнопку **Готово**.  
+9. Click **Finish**.  
   
- После этого мастера добавления свойства описание функциональных возможностей `SetNotSupported` или `GetNotSupported` в записи схемы подготовки к отправке вместо — набора получает или функцию.  
+ When you do this, the Add Property Wizard inserts the function `SetNotSupported` or `GetNotSupported` in the dispatch map entry in place of a normal Set or Get function.  
   
- Если требуется изменить существующее свойство, чтобы быть доступным только для чтения или доступные только на запись, можно правка схема подготовки к отправке вручную и удалите лишнее или получить набор функциональных возможностей класса элемента управления.  
+ If you want to change an existing property to be read-only or write-only, you can edit the dispatch map manually and remove the unnecessary Set or Get function from the control class.  
   
- Если свойство быть условно доступный только для чтения или доступные только на запись \(например, только если элемент управления работает в указанном режиме\), то можно предоставить набор или получить функции, как обычно, и вызовите функцию `SetNotSupported` или `GetNotSupported` при необходимости.  Примеры.  
+ If you want a property to be conditionally read-only or write-only (for example, only when your control is operating in a particular mode), you can provide the Set or Get function, as normal, and call the `SetNotSupported` or `GetNotSupported` function where appropriate. For example:  
   
- [!code-cpp[NVC_MFC_AxUI#29](../mfc/codesnippet/CPP/mfc-activex-controls-advanced-property-implementation_1.cpp)]  
+ [!code-cpp[NVC_MFC_AxUI#29](../mfc/codesnippet/cpp/mfc-activex-controls-advanced-property-implementation_1.cpp)]  
   
- Этот пример кода вызывает `SetNotSupported` если элемент данных `m_bReadOnlyMode`**TRUE**.  Если **ЛОЖЬ**, затем свойству присваивается новое значение.  
+ This code sample calls `SetNotSupported` if the `m_bReadOnlyMode` data member is **TRUE**. If **FALSE**, then the property is set to the new value.  
   
-##  <a name="_core_returning_error_codes_from_a_property"></a> Возвращение коды ошибок из свойства  
- Указать, что произошла ошибка попытка получить или задать свойство, используйте функцию `COleControl::ThrowError`, которая принимает `SCODE` \(код состояния\) в качестве параметра.  Можно использовать предопределенное `SCODE` или укажите одно из.  Для списка предопределило `SCODE` и инструкции для определения пользовательского `SCODE` s, см. в разделе [Обработка ошибок в коде элемента управления ActiveX](../mfc/mfc-activex-controls-advanced-topics.md) в элементах управления ActiveX статьи: Дополнительные разделы.  
+##  <a name="_core_returning_error_codes_from_a_property"></a> Returning Error Codes From a Property  
+ To indicate that an error has occurred while attempting to get or set a property, use the `COleControl::ThrowError` function, which takes an `SCODE` (status code) as a parameter. You can use a predefined `SCODE` or define one of your own. For a list of predefined `SCODE`s and instructions for defining custom `SCODE`s, see [Handling Errors in Your ActiveX Control](../mfc/mfc-activex-controls-advanced-topics.md) in the article ActiveX controls: Advanced Topics.  
   
- Вспомогательные функции существуют самого общего предопределенного `SCODE` s, например [COleControl::SetNotSupported](../Topic/COleControl::SetNotSupported.md), [COleControl::GetNotSupported](../Topic/COleControl::GetNotSupported.md) и [COleControl::SetNotPermitted](../Topic/COleControl::SetNotPermitted.md).  
+ Helper functions exist for the most common predefined `SCODE`s, such as [COleControl::SetNotSupported](../mfc/reference/colecontrol-class.md#setnotsupported), [COleControl::GetNotSupported](../mfc/reference/colecontrol-class.md#getnotsupported), and [COleControl::SetNotPermitted](../mfc/reference/colecontrol-class.md#setnotpermitted).  
   
 > [!NOTE]
->  если используется, чтобы `ThrowError` только для средство возврат ошибки из свойства получает или задана функция или метод автоматизации.  Это единственные времени, соответствующий обработчик исключений будет в стеке.  
+>  `ThrowError` is meant to be used only as a means of returning an error from within a property's Get or Set function or an automation method. These are the only times that the appropriate exception handler will be present on the stack.  
   
- Дополнительные сведения об исключениях отчета в других областях кода см. в разделе [COleControl::FireError](../Topic/COleControl::FireError.md) и [Обработка ошибок в коде элемента управления ActiveX](../mfc/mfc-activex-controls-advanced-topics.md) в элементах управления ActiveX статьи: Дополнительные разделы.  
+ For more information on reporting exceptions in other areas of the code, see [COleControl::FireError](../mfc/reference/colecontrol-class.md#fireerror) and the section [Handling Errors in Your ActiveX Control](../mfc/mfc-activex-controls-advanced-topics.md) in the article ActiveX Controls: Advanced Topics.  
   
-## См. также  
- [Элементы управления ActiveX MFC](../mfc/mfc-activex-controls.md)   
- [Элементы управления ActiveX в MFC. Свойства](../mfc/mfc-activex-controls-properties.md)   
- [Элементы управления ActiveX в MFC. Методы](../mfc/mfc-activex-controls-methods.md)   
+## <a name="see-also"></a>See Also  
+ [MFC ActiveX Controls](../mfc/mfc-activex-controls.md)   
+ [MFC ActiveX Controls: Properties](../mfc/mfc-activex-controls-properties.md)   
+ [MFC ActiveX Controls: Methods](../mfc/mfc-activex-controls-methods.md)   
  [COleControl Class](../mfc/reference/colecontrol-class.md)
+

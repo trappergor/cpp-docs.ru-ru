@@ -1,184 +1,203 @@
 ---
-title: "Элементы управления ActiveX в MFC. Дополнительные разделы | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "FireError - метод"
-  - "MFC ActiveX - элементы управления, доступ к элементам управления диалогового окна"
-  - "MFC ActiveX - элементы управления, дополнительные разделы"
-  - "MFC ActiveX - элементы управления, классы баз данных"
-  - "MFC ActiveX - элементы управления, коды ошибок"
-  - "MFC ActiveX - элементы управления, параметризованное свойство"
-  - "MFC ActiveX - элементы управления, специальные ключи"
-  - "PreTranslateMessage - метод"
-  - "ThrowError - метод"
+title: 'MFC ActiveX Controls: Advanced Topics | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- MFC ActiveX controls [MFC], error codes
+- MFC ActiveX controls [MFC], accessing invisible dialog controls
+- MFC ActiveX controls [MFC], advanced topics
+- FireError method [MFC]
+- MFC ActiveX controls [MFC], database classes
+- MFC ActiveX controls [MFC], special keys
+- PreTranslateMessage method [MFC]
+- MFC ActiveX controls [MFC], parameterized property
+- ThrowError method [MFC]
 ms.assetid: e9e34abb-8e2d-461e-bb9c-a1aec5dcecbd
 caps.latest.revision: 13
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 9
----
-# Элементы управления ActiveX в MFC. Дополнительные разделы
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: b514bde53c0b585854f477aaa133a473fc9e7e62
+ms.contentlocale: ru-ru
+ms.lasthandoff: 09/12/2017
 
-В этой статье рассматриваются дополнительные разделы, относящиеся к разработке элементов управления ActiveX.  К ним относятся:  
+---
+# <a name="mfc-activex-controls-advanced-topics"></a>MFC ActiveX Controls: Advanced Topics
+This article covers advanced topics related to developing ActiveX controls. These include:  
   
--   [Использование классов базы данных в элементах управления ActiveX](#_core_using_database_classes_in_activex_controls)  
+-   [Using Database Classes in ActiveX Controls](#_core_using_database_classes_in_activex_controls)  
   
--   [Реализация параметризованное свойство](#_core_implementing_a_parameterized_property)  
+-   [Implementing a Parameterized Property](#_core_implementing_a_parameterized_property)  
   
--   [Обработка ошибок в коде элемента управления ActiveX](#_core_handling_errors_in_your_activex_control)  
+-   [Handling Errors in Your ActiveX Control](#_core_handling_errors_in_your_activex_control)  
   
--   [Обработка специальные ключи в элементе управления](#_core_handling_special_keys_in_your_control)  
+-   [Handling Special Keys in the Control](#_core_handling_special_keys_in_your_control)  
   
--   [Доступ к элементам управления диалогового окна, невидимы во время выполнения](#_core_accessing_dialog_controls_that_are_invisible_at_run_time)  
+-   [Accessing Dialog Controls That Are Invisible at Run Time](#_core_accessing_dialog_controls_that_are_invisible_at_run_time)  
   
-##  <a name="_core_using_database_classes_in_activex_controls"></a> Использование классов базы данных в элементах управления ActiveX  
- Так как классы элементов управления ActiveX в библиотеку классов, можно применить те же процедуры и правила использования классов базы данных в стандартном приложении MFC в разработке элементов управления ActiveX, которые используют классы MFC базы данных.  
+##  <a name="_core_using_database_classes_in_activex_controls"></a> Using Database Classes in ActiveX Controls  
+ Because the ActiveX control classes are part of the class library, you can apply the same procedures and rules for using database classes in a standard MFC application to developing ActiveX controls that use the MFC database classes.  
   
- Общие сведения о классов баз данных MFC см. в разделе [Классы MFC DAO и ODBC \(\)](../Topic/MFC%20Database%20Classes%20\(ODBC%20and%20DAO\).md).  Раздел содержит описание и классы MFC ODBC и MFC DAO и направляет. для получения дополнительных сведений об этом.  
+ For a general overview of the MFC database classes, see [MFC Database Classes (DAO and ODBC)](../data/mfc-database-classes-odbc-and-dao.md). The article introduces both the MFC ODBC classes and the MFC DAO classes and directs you to more details on either.  
   
 > [!NOTE]
->  Что касается Visual C\+\+ .NET, то среда и мастера Visual C\+\+ больше не поддерживают DAO \(хотя классы DAO включены и вы по\-прежнему можете их использовать\).  Майкрософт рекомендует использовать [Шаблоны OLE DB](../data/oledb/ole-db-programming.md) или [ODBC и MFC](../data/odbc/odbc-and-mfc.md) для новых проектов.  DAO необходимо использовать только для поддержки существующих приложений.  
+>  As of Visual C++ .NET, the Visual C++ environment and wizards no longer support DAO (although the DAO classes are included and you can still use them). Microsoft recommends that you use [OLE DB Templates](../data/oledb/ole-db-programming.md) or [ODBC and MFC](../data/odbc/odbc-and-mfc.md) for new projects. You should only use DAO in maintaining existing applications.  
   
-##  <a name="_core_implementing_a_parameterized_property"></a> Реализация параметризованное свойство  
- Параметризованное свойство \(иногда называемое массив свойств\) метод для предоставления однотиповая коллекция значений как отдельное свойство элемента управления.  Например, можно использовать свойство параметризованное предоставить массив или словарь в виде свойства.  В Visual Basic то свойство доступно использование нотацию массива:  
+##  <a name="_core_implementing_a_parameterized_property"></a> Implementing a Parameterized Property  
+ A parameterized property (sometimes called a property array) is a method for exposing a homogeneous collection of values as a single property of the control. For example, you can use a parameterized property to expose an array or a dictionary as a property. In Visual Basic, such a property is accessed using array notation:  
   
- [!code-vb[NVC_MFC_AxVb#1](../mfc/codesnippet/VisualBasic/mfc-activex-controls-advanced-topics_1.vb)]  
+ [!code-vb[NVC_MFC_AxVb#1](../mfc/codesnippet/visualbasic/mfc-activex-controls-advanced-topics_1.vb)]  
   
- Использование мастера добавления свойства для реализации параметризованное свойство.  Мастера добавления свойства реализует свойство, добавляя пары GET и задать функций, которая позволяет пользователю элемента управления для доступа к свойству с помощью вышеуказанную нотацию или в стандартной таким.  
+ Use the Add Property Wizard to implement a parameterized property. The Add Property Wizard implements the property by adding a pair of Get/Set functions that allow the control user to access the property using the above notation or in the standard fashion.  
   
- Аналогично методам и свойствам, параметризированным свойства также может настроить ограничение на число разрешенных параметров.  При использовании параметризованных свойств, ограничение параметры 15 \(с одним параметром зарезервировано для хранения значения свойства\).  
+ Similar to methods and properties, parameterized properties also have a limit to the number of parameters allowed. In the case of parameterized properties, the limit is 15 parameters (with one parameter reserved for storing the property value).  
   
- Следующая процедура добавляет параметризованное свойство, именуемое Массив, который можно получить как двумерный массив целых чисел.  
+ The following procedure adds a parameterized property, called Array, which can be accessed as a two-dimensional array of integers.  
   
-#### Добавление параметризованное значение свойства с помощью мастера добавления свойства.  
+#### <a name="to-add-a-parameterized-property-using-the-add-property-wizard"></a>To add a parameterized property using the Add Property Wizard  
   
-1.  Загрузите проект элемента управления.  
+1.  Load your control's project.  
   
-2.  В представлении классов разверните узел библиотеки элемента управления.  
+2.  In Class View, expand the library node of your control.  
   
-3.  Щелкните правой кнопкой мыши узел интерфейса для элемента управления \(второго узла узла библиотеки\), чтобы открыть контекстное меню.  
+3.  Right-click the interface node for your control (the second node of the library node) to open the shortcut menu.  
   
-4.  В контекстном меню щелкните **Добавить**, а затем щелкните **Добавить свойство**.  
+4.  From the shortcut menu, click **Add** and then click **Add Property**.  
   
-5.  В поле **Имя свойства** введите `Array`.  
+5.  In the **Property Name** box, type `Array`.  
   
-6.  В поле **свойство Type**, выберите **short**.  
+6.  In the **Property Type** box, select **short**.  
   
-7.  Для типа **Реализация**, щелкните **Get\/set методы**.  
+7.  For **Implementation** Type, click **Get/Set Methods**.  
   
-8.  В полях **Функция Get**  и **Функция Set**, уникальные имена типа для получения и установки или функции принимают имена по умолчанию.  
+8.  In the **Get Function** and **Set Function** boxes, type unique names for your Get and Set Functions or accept the default names.  
   
-9. Добавьте параметр с именем `row` \(тип `short`\), с помощью элементов управления **Имя параметра** и **Тип параметра** .  
+9. Add a parameter, called `row` (type `short`), using the **Parameter Name** and **Parameter Type** controls.  
   
-10. Добавьте второй `column` с именем параметра \(тип `short`\).  
+10. Add a second parameter called `column` (type `short`).  
   
-11. Нажмите кнопку **Готово**.  
+11. Click **Finish**.  
   
-### Изменения, выполненные с помощью мастера добавления свойства.  
- При добавлении пользовательского свойства, мастера добавления свойства вносит изменения в качестве заголовка класса элемента управления \(. H\) и файлы реализации \(CPP\).  
+### <a name="changes-made-by-the-add-property-wizard"></a>Changes Made by the Add Property Wizard  
+ When you add a custom property, the Add Property Wizard makes changes to the control class header (.H) and the implementation (.CPP) files.  
   
- Следующие линии добавляются в класс элемента управления. Файл H:  
+ The following lines are added to the control class .H file:  
   
- [!code-cpp[NVC_MFC_AxUI#35](../mfc/codesnippet/CPP/mfc-activex-controls-advanced-topics_2.h)]  
+ [!code-cpp[NVC_MFC_AxUI#35](../mfc/codesnippet/cpp/mfc-activex-controls-advanced-topics_2.h)]  
   
- Этот код объявляет 2 вызываемой функции `GetArray` и `SetArray`, позволяющие пользователю оставлять определенные строку и столбец к свойству.  
+ This code declares two functions called `GetArray` and `SetArray` that allow the user to request a specific row and column when accessing the property.  
   
- Кроме того, мастер добавления свойства добавляются следующие три линии на схеме подготовки к отправке элемента управления, находящуюся в файле реализации класса элемента управления \(CPP\).  
+ In addition, the Add Property Wizard adds the following lines to the control dispatch map, located in the control class implementation (.CPP) file:  
   
- [!code-cpp[NVC_MFC_AxUI#36](../mfc/codesnippet/CPP/mfc-activex-controls-advanced-topics_3.cpp)]  
+ [!code-cpp[NVC_MFC_AxUI#36](../mfc/codesnippet/cpp/mfc-activex-controls-advanced-topics_3.cpp)]  
   
- Наконец, реализации `GetArray` и функции `SetArray` добавляются в конец файла CPP.  В большинстве случаев следует изменить функции получения для возврата значения свойства.  Указывает функция обычно содержит код, который должен выполняться, до или после изменения свойств.  
+ Finally, the implementations of the `GetArray` and `SetArray` functions are added to the end of the .CPP file. In most cases, you will modify the Get function to return the value of the property. The Set function will usually contain code that should execute, either before or after the property changes.  
   
- Для этого свойства точности, можно объявить переменной\-члена двумерного массива в классе элемента управления, типа **short**, для хранения значения свойства с параметрами  Затем можно изменить функции получения для возврата значения, хранящиеся в правильную строку и столбец, как показано параметрами и измените настройки параметров функции для обновления значения указанные параметрами строки и столбца.  
+ For this property to be useful, you could declare a two-dimensional array member variable in the control class, of type **short**, to store values for the parameterized property. You could then modify the Get function to return the value stored at the proper row and column, as indicated by the parameters, and modify the Set function to update the value referenced by the row and column parameters.  
   
-##  <a name="_core_handling_errors_in_your_activex_control"></a> Обработка ошибок в коде элемента управления ActiveX  
- Если условия ошибки возникают в элементе управления, можно создать отчет об ошибке на контейнер элементов управления.  2 Метода для сообщений об ошибках, в зависимости от ситуации, в которой произошла ошибка.  При возникновении ошибки в свойство get или set, функции или внутри реализации метода ole\-автоматизации, элемент управления должен вызвать метод [COleControl::ThrowError](../Topic/COleControl::ThrowError.md), которое сигнализирует пользователю элемента управления, что произошла ошибка.  При возникновении ошибки в любое другое время, элемент управления должен вызвать метод [COleControl::FireError](../Topic/COleControl::FireError.md), который вызывает событие ошибки хранения.  
+##  <a name="_core_handling_errors_in_your_activex_control"></a> Handling Errors in Your ActiveX Control  
+ If error conditions occur in the control, you may need to report the error to the control container. There are two methods for reporting errors, depending on the situation in which the error occurs. If the error occurs within a property's Get or Set function, or within the implementation of an OLE Automation method, the control should call [COleControl::ThrowError](../mfc/reference/colecontrol-class.md#throwerror), which signals to the control user that an error has occurred. If the error occurs at any other time, the control should call [COleControl::FireError](../mfc/reference/colecontrol-class.md#fireerror), which fires a stock Error event.  
   
- Для указания типа возникшей ошибки элемент управления должен передать код ошибки в `ThrowError` или `FireError`.  Код ошибки OLE код состояния, который имеет значение 32 бит.  Если возможно, выберите код ошибки из стандартного набора кодов, определенных в файле заголовка OLECTL.H.  В следующей таблице перечислены эти коды.  
+ To indicate the kind of error that has occurred, the control must pass an error code to `ThrowError` or `FireError`. An error code is an OLE status code, which has a 32-bit value. When possible, choose an error code from the standard set of codes defined in the OLECTL.H header file. The following table summarizes these codes.  
   
-### Коды ошибок элемент управления ActiveX  
+### <a name="activex-control-error-codes"></a>ActiveX Control Error Codes  
   
-|Ошибка|Описание|  
-|------------|--------------|  
-|**CTL\_E\_ILLEGALFUNCTIONCALL**|Недопустимый вызов функции|  
-|**CTL\_E\_OVERFLOW**|Переполнение|  
-|**CTL\_E\_OUTOFMEMORY**|Недостаточно памяти|  
-|**CTL\_E\_DIVISIONBYZERO**|Деление на ноль|  
-|**CTL\_E\_OUTOFSTRINGSPACE**|Не хватает строки|  
-|**CTL\_E\_OUTOFSTACKSPACE**|Из пространство стека|  
-|**CTL\_E\_BADFILENAMEORNUMBER**|Имя файла или число таких|  
-|**CTL\_E\_FILENOTFOUND**|Файл не найден|  
-|**CTL\_E\_BADFILEMODE**|Недопустимый файловый режим|  
-|**CTL\_E\_FILEALREADYOPEN**|Файл уже открытого|  
-|**CTL\_E\_DEVICEIOERROR**|Ошибка ВВОДА\-ВЫВОДА устройства|  
-|**CTL\_E\_FILEALREADYEXISTS**|Файл уже существует|  
-|**CTL\_E\_BADRECORDLENGTH**|Неверная рекордная длина|  
-|**CTL\_E\_DISKFULL**|Нет места на диске.|  
-|**CTL\_E\_BADRECORDNUMBER**|Неправильное количество record|  
-|**CTL\_E\_BADFILENAME**|Неправильное имя файла|  
-|**CTL\_E\_TOOMANYFILES**|Слишком много файлов|  
-|**CTL\_E\_DEVICEUNAVAILABLE**|Отсутствует устройство|  
-|**CTL\_E\_PERMISSIONDENIED**|Отказанное разрешение|  
-|**CTL\_E\_DISKNOTREADY**|Диск не готово|  
-|**CTL\_E\_PATHFILEACCESSERROR**|Путь или ошибка доступа к файлу|  
-|**CTL\_E\_PATHNOTFOUND**|Путь не найден|  
-|**CTL\_E\_INVALIDPATTERNSTRING**|Недопустимая строка шаблона|  
-|**CTL\_E\_INVALIDUSEOFNULL**|Недопустимое использование NULL|  
-|**CTL\_E\_INVALIDFILEFORMAT**|Недопустимый формат файла|  
-|**CTL\_E\_INVALIDPROPERTYVALUE**|Недопустимое значение свойства|  
-|**CTL\_E\_INVALIDPROPERTYARRAYINDEX**|Недопустимый индекс массива свойства|  
-|**CTL\_E\_SETNOTSUPPORTEDATRUNTIME**|Набор не поддерживается во время выполнения|  
-|**CTL\_E\_SETNOTSUPPORTED**|Не поддерживается набор \(свойство только для чтения\)|  
-|**CTL\_E\_NEEDPROPERTYARRAYINDEX**|Индекс массива свойства необходимости|  
-|**CTL\_E\_SETNOTPERMITTED**|Не разрешается набор|  
-|**CTL\_E\_GETNOTSUPPORTEDATRUNTIME**|Получение не поддерживаемых во время выполнения|  
-|**CTL\_E\_GETNOTSUPPORTED**|Получение не поддерживаемых \(доступное только на запись свойство\)|  
-|**CTL\_E\_PROPERTYNOTFOUND**|Не найдены свойство|  
-|**CTL\_E\_INVALIDCLIPBOARDFORMAT**|Недопустимый формат буфера обмена|  
-|**CTL\_E\_INVALIDPICTURE**|Недопустимый рисунок|  
-|**CTL\_E\_PRINTERERROR**|Ошибка принтера|  
-|**CTL\_E\_CANTSAVEFILETOTEMP**|Не удается сохранить файл в TEMP|  
-|**CTL\_E\_SEARCHTEXTNOTFOUND**|Не найдены текста поиска|  
-|**CTL\_E\_REPLACEMENTSTOOLONG**|Слишком длинное.|  
+|Error|Description|  
+|-----------|-----------------|  
+|**CTL_E_ILLEGALFUNCTIONCALL**|Illegal function call|  
+|**CTL_E_OVERFLOW**|Overflow|  
+|**CTL_E_OUTOFMEMORY**|Out of memory|  
+|**CTL_E_DIVISIONBYZERO**|Division by zero|  
+|**CTL_E_OUTOFSTRINGSPACE**|Out of string space|  
+|**CTL_E_OUTOFSTACKSPACE**|Out of stack space|  
+|**CTL_E_BADFILENAMEORNUMBER**|Bad file name or number|  
+|**CTL_E_FILENOTFOUND**|File not found|  
+|**CTL_E_BADFILEMODE**|Bad file mode|  
+|**CTL_E_FILEALREADYOPEN**|File already open|  
+|**CTL_E_DEVICEIOERROR**|Device I/O error|  
+|**CTL_E_FILEALREADYEXISTS**|File already exists|  
+|**CTL_E_BADRECORDLENGTH**|Bad record length|  
+|**CTL_E_DISKFULL**|Disk full|  
+|**CTL_E_BADRECORDNUMBER**|Bad record number|  
+|**CTL_E_BADFILENAME**|Bad file name|  
+|**CTL_E_TOOMANYFILES**|Too many files|  
+|**CTL_E_DEVICEUNAVAILABLE**|Device unavailable|  
+|**CTL_E_PERMISSIONDENIED**|Permission denied|  
+|**CTL_E_DISKNOTREADY**|Disk not ready|  
+|**CTL_E_PATHFILEACCESSERROR**|Path/file access error|  
+|**CTL_E_PATHNOTFOUND**|Path not found|  
+|**CTL_E_INVALIDPATTERNSTRING**|Invalid pattern string|  
+|**CTL_E_INVALIDUSEOFNULL**|Invalid use of NULL|  
+|**CTL_E_INVALIDFILEFORMAT**|Invalid file format|  
+|**CTL_E_INVALIDPROPERTYVALUE**|Invalid property value|  
+|**CTL_E_INVALIDPROPERTYARRAYINDEX**|Invalid property array index|  
+|**CTL_E_SETNOTSUPPORTEDATRUNTIME**|Set not supported at run time|  
+|**CTL_E_SETNOTSUPPORTED**|Set not supported (read-only property)|  
+|**CTL_E_NEEDPROPERTYARRAYINDEX**|Need property array index|  
+|**CTL_E_SETNOTPERMITTED**|Set not permitted|  
+|**CTL_E_GETNOTSUPPORTEDATRUNTIME**|Get not supported at run time|  
+|**CTL_E_GETNOTSUPPORTED**|Get not supported (write-only property)|  
+|**CTL_E_PROPERTYNOTFOUND**|Property not found|  
+|**CTL_E_INVALIDCLIPBOARDFORMAT**|Invalid clipboard format|  
+|**CTL_E_INVALIDPICTURE**|Invalid picture|  
+|**CTL_E_PRINTERERROR**|Printer error|  
+|**CTL_E_CANTSAVEFILETOTEMP**|Can't save file to TEMP|  
+|**CTL_E_SEARCHTEXTNOTFOUND**|Search text not found|  
+|**CTL_E_REPLACEMENTSTOOLONG**|Replacements too long|  
   
- При необходимости используйте макрос **CUSTOM\_CTL\_SCODE**, чтобы определить пользовательский код ошибки для условия, не описаны одним из стандартных кодов.  Параметр для этого макроса должен быть целым числом от 1000 до 32767, включительно.  Примеры.  
+ If necessary, use the **CUSTOM_CTL_SCODE** macro to define a custom error code for a condition that is not covered by one of the standard codes. The parameter for this macro should be an integer between 1000 and 32767, inclusive. For example:  
   
- [!code-cpp[NVC_MFC_AxUI#37](../mfc/codesnippet/CPP/mfc-activex-controls-advanced-topics_4.cpp)]  
+ [!code-cpp[NVC_MFC_AxUI#37](../mfc/codesnippet/cpp/mfc-activex-controls-advanced-topics_4.cpp)]  
   
- Если создается элемент управления ActiveX, чтобы заменить существующий элемент управления VBX, укажите собственные коды ошибок элемент управления ActiveX с теми же числовыми значениями управление VBX используется, чтобы гарантировать, что коды ошибок совместимы.  
+ If you are creating an ActiveX control to replace an existing VBX control, define your ActiveX control error codes with the same numeric values the VBX control uses to ensure that the error codes are compatible.  
   
-##  <a name="_core_handling_special_keys_in_your_control"></a> Обработка специальные ключи в элементе управления  
- В некоторых случаях может потребоваться обрабатывать некоторые сочетания клавиш особым образом. например, вставьте новую линию, если была нажата клавиша ВВОД будет в многострочных элементе управления или движении текстового поля между группой в составе элементы управления "Поле ввода" при дирекционное идентификатор ключа отжало.  
+##  <a name="_core_handling_special_keys_in_your_control"></a> Handling Special Keys in the Control  
+ In some cases you may want to handle certain keystroke combinations in a special way; for example, insert a new line when the ENTER key is pressed in a multiline text box control or move between a group of edit controls when a directional key ID pressed.  
   
- Если базовый класс элемента управления ActiveX `COleControl`, можно переопределить [CWnd::PreTranslateMessage](../Topic/CWnd::PreTranslateMessage.md) для обработки сообщений перед их процессами контейнера.  При использовании этого метода, всегда возвращается значение **TRUE** при обработке сообщения в переопределении `PreTranslateMessage`.  
+ If the base class of your ActiveX control is `COleControl`, you can override [CWnd::PreTranslateMessage](../mfc/reference/cwnd-class.md#pretranslatemessage) to handle messages before the container processes them. When using this technique, always return **TRUE** if you handle the message in your override of `PreTranslateMessage`.  
   
- В следующем примере кода демонстрируется способ возможности обрабатывать все связанные сообщения в дирекционным ключи.  
+ The following code example demonstrates a possible way of handling any messages related to the directional keys.  
   
- [!code-cpp[NVC_MFC_AxUI#38](../mfc/codesnippet/CPP/mfc-activex-controls-advanced-topics_5.cpp)]  
+ [!code-cpp[NVC_MFC_AxUI#38](../mfc/codesnippet/cpp/mfc-activex-controls-advanced-topics_5.cpp)]  
   
- Дополнительные сведения об обработке интерфейсы клавиатуры для элементов управления ActiveX см. в документации по пакету SDK ActiveX.  
+ For more information on handling keyboard interfaces for an ActiveX control, see the ActiveX SDK documentation.  
   
-##  <a name="_core_accessing_dialog_controls_that_are_invisible_at_run_time"></a> Доступ к элементам управления диалогового окна, невидимы во время выполнения  
- Можно создать элементы управления диалогового окна, не оказывают интерфейс пользователя и невидимы во время выполнения.  При добавлении незримое во время выполнения элемента управления ActiveX в диалоговое окно и используется [CWnd::GetDlgItem](../Topic/CWnd::GetDlgItem.md), чтобы получить доступ к элементу управления, элемент управления не будет работать правильно.  Вместо этого следует использовать один из следующих методов, чтобы получить объект, представляющий элемент управления.  
+##  <a name="_core_accessing_dialog_controls_that_are_invisible_at_run_time"></a> Accessing Dialog Controls that Are Invisible at Run Time  
+ You can create dialog controls that have no user interface and are invisible at run time. If you add an invisible at run time ActiveX control to a dialog box and use [CWnd::GetDlgItem](../mfc/reference/cwnd-class.md#getdlgitem) to access the control, the control will not work correctly. Instead, you should use one of the following techniques to obtain an object that represents the control:  
   
--   С помощью мастера добавления переменной\-члена, выберите **Переменная элемента управления**, а затем выбирает идентификатор элемента управления.  Введите имя переменной и выделите класс\-оболочка элемента управления как **Тип элемента управления**.  
+-   Using the Add Member Variable Wizard, select **Control Variable** and then select the control's ID. Enter a member variable name and select the control's wrapper class as the **Control Type**.  
   
-     – или –  
+     -or-  
   
--   Объявите локальную переменную и подклассы как элемент диалогового окна.  Вставьте код, который похож на \(`CMyCtrl` класс\-оболочка, `IDC_MYCTRL1` идентификатор элемента управления\).  
+-   Declare a local variable and subclass as the dialog item. Insert code that resembles the following (`CMyCtrl` is the wrapper class, `IDC_MYCTRL1` is the control's ID):  
   
-     [!code-cpp[NVC_MFC_AxCont#19](../mfc/codesnippet/CPP/mfc-activex-controls-advanced-topics_6.cpp)]  
+     [!code-cpp[NVC_MFC_AxCont#19](../mfc/codesnippet/cpp/mfc-activex-controls-advanced-topics_6.cpp)]  
   
-## См. также  
- [Элементы управления ActiveX MFC](../mfc/mfc-activex-controls.md)
+## <a name="see-also"></a>See Also  
+ [MFC ActiveX Controls](../mfc/mfc-activex-controls.md)
+
+

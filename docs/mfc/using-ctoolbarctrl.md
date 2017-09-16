@@ -1,45 +1,64 @@
 ---
-title: "Использование CToolBarCtrl | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "CToolBarCtrl"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "CToolBarCtrl - класс"
-  - "элементы управления панели инструментов [MFC], создание"
+title: Using CToolBarCtrl | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- CToolBarCtrl
+dev_langs:
+- C++
+helpviewer_keywords:
+- CToolBarCtrl class [MFC]
+- toolbar controls [MFC], creating
 ms.assetid: 13cf3753-135b-4a3e-a850-ed30177fcf9d
 caps.latest.revision: 11
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 7
----
-# Использование CToolBarCtrl
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 856893014c79c71262e1442ef5707bb83dd72dc7
+ms.contentlocale: ru-ru
+ms.lasthandoff: 09/12/2017
 
-Можно использовать элемент управления панели инструментов \([CToolBarCtrl](../mfc/reference/ctoolbarctrl-class.md)\) для создания окна элемента управления, содержащую кнопки и дополнительные пробелы.  Каждая кнопка в поле элемента управления панели инструментов отправляет сообщение команды к родительскому окну как пользователь выбирает его.  Как правило, кнопки на панели инструментов соответствуют элементам в меню приложения, предоставляя дополнительное и более прямого пути для пользователя для получения команды приложения.  
+---
+# <a name="using-ctoolbarctrl"></a>Using CToolBarCtrl
+You can use the toolbar control ([CToolBarCtrl](../mfc/reference/ctoolbarctrl-class.md)) to create a control window containing buttons and optional spaces. Each button in the toolbar control window sends a command message to the parent window as the user chooses it. Typically, the buttons in a toolbar correspond to items in the application's menu, providing an additional and more direct way for the user to access an application's commands.  
   
-## Дополнительные сведения  
+## <a name="what-do-you-want-to-know-more-about"></a>What do you want to know more about  
   
--   [Методы создания панели инструментов](../mfc/methods-of-creating-a-toolbar.md)  
+-   [Methods of Creating a Toolbar](../mfc/methods-of-creating-a-toolbar.md)  
   
--   [Параметры для элемента управления панели инструментов](../mfc/settings-for-the-toolbar-control.md)  
+-   [Settings for the Toolbar Control](../mfc/settings-for-the-toolbar-control.md)  
   
--   [Создание объекта CToolBarCtrl](../mfc/creating-a-ctoolbarctrl-object.md)  
+-   [Creating a CToolBarCtrl Object](../mfc/creating-a-ctoolbarctrl-object.md)  
   
--   [Использование списков изображений в элементе управления панели инструментов](../mfc/using-image-lists-in-a-toolbar-control.md)  
+-   [Using Image Lists in a Toolbar Control](../mfc/using-image-lists-in-a-toolbar-control.md)  
   
--   [Использование кнопок со списком в элементе управления панели инструментов](../mfc/using-drop-down-buttons-in-a-toolbar-control.md)  
+-   [Using Drop-Down Buttons in a Toolbar Control](../mfc/using-drop-down-buttons-in-a-toolbar-control.md)  
   
--   [Настраивать внешний вид элемента управления панели инструментов](../mfc/customizing-the-appearance-of-a-toolbar-control.md)  
+-   [Customizing the Appearance of a Toolbar Control](../mfc/customizing-the-appearance-of-a-toolbar-control.md)  
   
-## См. также  
- [Элементы управления](../mfc/controls-mfc.md)
+## <a name="see-also"></a>See Also  
+ [Controls](../mfc/controls-mfc.md)
+
+

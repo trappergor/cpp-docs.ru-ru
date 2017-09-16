@@ -1,5 +1,5 @@
 ---
-title: "Макросы схемы (MFC) сообщений | Документы Microsoft"
+title: Message Map Macros (MFC) | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -29,10 +29,10 @@ dev_langs:
 - C++
 helpviewer_keywords:
 - message map macros
-- Windows messages [C++], declaration
+- Windows messages [MFC], declaration
 - demarcating Windows messages
-- message maps [C++], macros
-- message maps [C++], declaration and demarcation
+- message maps [MFC], macros
+- message maps [MFC], declaration and demarcation
 - message mapping macros
 - ranges, message map
 - message map ranges
@@ -55,124 +55,124 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: bb94e24657d16b2a3eda3a770c2b6ae734c6006f
-ms.openlocfilehash: ca7c5b1e5042ab134ad72a80986435448f5bec20
+ms.translationtype: MT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: d6b6322989db936f67c0d248b5b6a6e781e263ac
 ms.contentlocale: ru-ru
-ms.lasthandoff: 04/12/2017
+ms.lasthandoff: 09/12/2017
 
 ---
-# <a name="message-map-macros-mfc"></a>Макросы схемы сообщений (MFC)
-Для поддержки схемы сообщений, MFC предоставляет следующие макросы:  
+# <a name="message-map-macros-mfc"></a>Message Map Macros (MFC)
+To support message maps, MFC supplies the following macros:  
   
-### <a name="message-map-declaration-and-demarcation-macros"></a>Схемы сообщений объявление и определение границ макросы  
-  
-|||  
-|-|-|  
-|[DECLARE_MESSAGE_MAP](#declare_message_map)|Объявляет, схему сообщений будет использоваться в классе для сопоставления сообщения с функциями (следует использовать в объявлении класса).|  
-|[BEGIN_MESSAGE_MAP](#begin_message_map)|Начинается определение схемы сообщений (следует использовать в реализацию класса).|  
-|[BEGIN_TEMPLATE_MESSAGE_MAP](#begin_template_interface_map)|Начинается определение схемы сообщений для типа класса, содержащего аргумента одного шаблона. |
-|[END_MESSAGE_MAP](#end_message_map)|Завершает определение схемы сообщений (следует использовать в реализацию класса).|  
-  
-### <a name="message-mapping-macros"></a>Макросы сопоставления сообщений  
+### <a name="message-map-declaration-and-demarcation-macros"></a>Message-Map Declaration and Demarcation Macros  
   
 |||  
 |-|-|  
-|[ON_COMMAND](#on_command)|Указывает, какая функция будет обрабатывать сообщения указанную команду.|  
-|[ON_COMMAND_EX](#on_command_ex)|Указывает, какая функция будет обрабатывать сообщения указанную команду.|  
-|[ON_CONTROL](#on_control)|Указывает, какие функции будет обрабатывать сообщения указанного уведомление элемента управления.|  
-|[ON_MESSAGE](#on_message)|Указывает, какие функции будут обрабатывать определенное пользователем сообщение.|  
-|[ON_OLECMD](#on_olecmd)|Указывает, какая функция будет обрабатывать команды меню с DocObject или его контейнера.|  
-|[ON_REGISTERED_MESSAGE](#on_registered_message)|Указывает, какая функция будет обрабатывать зарегистрированных определенное пользователем сообщение.|  
-|[ON_REGISTERED_THREAD_MESSAGE](#on_registered_thread_message)|Указывает, какая функция будет обрабатывать зарегистрированных определяемых пользователем сообщений, при наличии `CWinThread` класса.|  
-|[ON_THREAD_MESSAGE](#on_thread_message)|Указывает, какая функция будет обрабатывать определенное пользователем сообщение, при наличии `CWinThread` класса.|  
-|[ON_UPDATE_COMMAND_UI](#on_update_command_ui)|Указывает, какая функция будет обрабатывать сообщения команды обновления указанного пользовательского интерфейса.|  
+|[DECLARE_MESSAGE_MAP](#declare_message_map)|Declares that a message map will be used in a class to map messages to functions (must be used in the class declaration).|  
+|[BEGIN_MESSAGE_MAP](#begin_message_map)|Begins the definition of a message map (must be used in the class implementation).|  
+|[BEGIN_TEMPLATE_MESSAGE_MAP](#begin_template_interface_map)|Begins the definition of a message map on a class type containing a single template argument. |
+|[END_MESSAGE_MAP](#end_message_map)|Ends the definition of a message map (must be used in the class implementation).|  
   
-### <a name="message-map-range-macros"></a>Макросы схемы сообщений диапазона  
+### <a name="message-mapping-macros"></a>Message-Mapping Macros  
   
 |||  
 |-|-|  
-|[ON_COMMAND_RANGE](#on_command_range)|Указывает, какую функцию обработки диапазона идентификаторов команд, указанный в первые два параметра в макрос.|  
-|[ON_UPDATE_COMMAND_UI_RANGE](#on_update_command_ui_range)|Указывает, какой обработчик обновление будет обрабатывать диапазон идентификаторов, указанный в первых двух pa] араметры в макрос.|  
-|[ON_CONTROL_RANGE](#on_control_range)|Указывает, какие функции будут обрабатывать уведомления из диапазона идентификаторов, указанных в второй и третий параметры в макрос элемента управления. Первый параметр является сообщением уведомление элемента управления, такие как **BN_CLICKED**.|  
+|[ON_COMMAND](#on_command)|Indicates which function will handle a specified command message.|  
+|[ON_COMMAND_EX](#on_command_ex)|Indicates which function will handle a specified command message.|  
+|[ON_CONTROL](#on_control)|Indicates which function will handle a specified control-notification message.|  
+|[ON_MESSAGE](#on_message)|Indicates which function will handle a user-defined message.|  
+|[ON_OLECMD](#on_olecmd)|Indicates which function will handle a menu command from a DocObject or its container.|  
+|[ON_REGISTERED_MESSAGE](#on_registered_message)|Indicates which function will handle a registered user-defined message.|  
+|[ON_REGISTERED_THREAD_MESSAGE](#on_registered_thread_message)|Indicates which function will handle a registered user-defined message when you have a `CWinThread` class.|  
+|[ON_THREAD_MESSAGE](#on_thread_message)|Indicates which function will handle a user-defined message when you have a `CWinThread` class.|  
+|[ON_UPDATE_COMMAND_UI](#on_update_command_ui)|Indicates which function will handle a specified user-interface update command message.|  
   
- Дополнительные сведения о схемы сообщений, объявление схемы сообщений и определение границ макросы и макросы сопоставления сообщений см. в разделе [схемы сообщений](../../mfc/reference/message-maps-mfc.md) и [обработка сообщений и разделов сопоставления](../../mfc/message-handling-and-mapping.md). Дополнительные сведения о диапазоны схемы сообщений см. в разделе [обработчики для диапазонов схем сообщений](../../mfc/handlers-for-message-map-ranges.md).  
+### <a name="message-map-range-macros"></a>Message-Map Range Macros  
+  
+|||  
+|-|-|  
+|[ON_COMMAND_RANGE](#on_command_range)|Indicates which function will handle the range of command IDs specified in the first two parameters to the macro.|  
+|[ON_UPDATE_COMMAND_UI_RANGE](#on_update_command_ui_range)|Indicates which update handler will handle the range of command IDs specified in the first two pa]rameters to the macro.|  
+|[ON_CONTROL_RANGE](#on_control_range)|Indicates which function will handle notifications from the range of control IDs specified in the second and third parameters to the macro. The first parameter is a control-notification message, such as **BN_CLICKED**.|  
+  
+ For more information on message maps, the message-map declaration and demarcation macros, and the message-mapping macros, see [Message Maps](../../mfc/reference/message-maps-mfc.md) and [Message Handling and Mapping Topics](../../mfc/message-handling-and-mapping.md). For more information about message-map ranges, see [Handlers for Message-Map Ranges](../../mfc/handlers-for-message-map-ranges.md).  
 
 
-## <a name="begin_message_map"></a>BEGIN_MESSAGE_MAP
-Начинается определение схему сообщений.  
+## <a name="begin_message_map"></a> BEGIN_MESSAGE_MAP
+Begins the definition of your message map.  
   
-### <a name="syntax"></a>Синтаксис  
+### <a name="syntax"></a>Syntax  
   
 ```  
 BEGIN_MESSAGE_MAP( theClass, baseClass )  
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
  `theClass`  
- Указывает имя класса, сообщение о которой сопоставления.  
+ Specifies the name of the class whose message map this is.  
   
  `baseClass`  
- Указывает имя базового класса `theClass`.  
+ Specifies the name of the base class of `theClass`.  
   
-### <a name="remarks"></a>Примечания  
- В файле реализации (CPP), который определяет функции-члены класса, запустить сопоставление сообщений с `BEGIN_MESSAGE_MAP` макрос, затем добавить макрос записи для каждой из функций обработчиков сообщений и выполните сопоставление сообщений с `END_MESSAGE_MAP` макрос.  
+### <a name="remarks"></a>Remarks  
+ In the implementation (.cpp) file that defines the member functions for your class, start the message map with the `BEGIN_MESSAGE_MAP` macro, then add macro entries for each of your message-handler functions, and complete the message map with the `END_MESSAGE_MAP` macro.  
   
- Дополнительные сведения о схемах сообщений см. в разделе [схемы сообщений](message-maps-mfc.md)  
+ For more information about message maps, see [Message Maps](message-maps-mfc.md)  
   
-### <a name="example"></a>Пример  
+### <a name="example"></a>Example  
 ```cpp  
 BEGIN_MESSAGE_MAP(CMainFrame, CMDIFrameWnd)
    ON_WM_CREATE()
 END_MESSAGE_MAP()
 ```
   
-### <a name="requirements"></a>Требования  
- **Заголовок:** afxwin.h 
+### <a name="requirements"></a>Requirements  
+ **Header:** afxwin.h 
 
 ##  <a name="begin_template_message_map"></a>BEGIN_TEMPLATE_MESSAGE_MAP
-Начинается определение схемы сообщений для типа класса, содержащего аргумента одного шаблона.  
+Begins the definition of a message map on a class type containing a single template argument.  
    
-### <a name="syntax"></a>Синтаксис  
+### <a name="syntax"></a>Syntax  
   ```
 BEGIN_TEMPLATE_MESSAGE_MAP( theClass, type_name, baseClass )  
 ```
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
  `theClass`  
- Указывает имя класса, сообщение о которой сопоставления.    
+ Specifies the name of the class whose message map this is.    
  `type_name`  
- Имя параметра шаблона, указанный для класса.    
+ The name of the template parameter specified for the class.    
  `baseClass`  
- Указывает имя базового класса `theClass`.  
+ Specifies the name of the base class of `theClass`.  
    
-### <a name="remarks"></a>Примечания  
- Этот макрос аналогичен [BEGIN_MESSAGE_MAP](message-map-macros-mfc.md#begin_message_map) макрос; тем не менее, этот макрос предназначен для классов, содержащих аргумента одного шаблона.  
+### <a name="remarks"></a>Remarks  
+ This macro is similar to the [BEGIN_MESSAGE_MAP](message-map-macros-mfc.md#begin_message_map) macro; however, this macro is intended for classes containing a single template argument.  
   
- В разделе реализации метода класса, запустить сопоставление сообщений с **BEGIN_TEMPLATE_MESSAGE_MAP** макрос; затем добавить записи макроса для каждого из методов обработчик сообщений, как и для стандартных сообщений карты. Как и в **BEGIN_MESSAGE_MAP** макрос, выполните сопоставление сообщений шаблона с [END_MESSAGE_MAP](message-map-macros-mfc.md#end_message_map) макрос.  
+ In the method implementation section of your class, start the message map with the **BEGIN_TEMPLATE_MESSAGE_MAP** macro; then add macro entries for each of your message-handler methods as you would for a standard message map. As with the **BEGIN_MESSAGE_MAP** macro, complete the template message map with the [END_MESSAGE_MAP](message-map-macros-mfc.md#end_message_map) macro.  
   
- Дополнительные сведения о реализации схемы сообщений для классов шаблонов см. [как: Создание виртуальной схемы сообщений для класса шаблона](../how-to-create-a-message-map-for-a-template-class.md).  
+ For more information on implementing message maps for template classes, refer to [How to: Create a Message Map for a Template Class](../how-to-create-a-message-map-for-a-template-class.md).  
    
-### <a name="requirements"></a>Требования  
- **Заголовок:** afxwin.h  
+### <a name="requirements"></a>Requirements  
+ **Header:** afxwin.h  
  
-## <a name="declare_message_map"></a>DECLARE_MESSAGE_MAP
- Объявляет, что класс определяет схему сообщений. Каждый `CCmdTarget`-производный класс в программе необходимо указать схему сообщений для обработки сообщений.  
+## <a name="declare_message_map"></a>  DECLARE_MESSAGE_MAP
+ Declares that the class defines a message map. Each `CCmdTarget`-derived class in your program must provide a message map to handle messages.  
   
-### <a name="syntax"></a>Синтаксис  
+### <a name="syntax"></a>Syntax  
   
 ```    
 DECLARE_MESSAGE_MAP( )  
 ```  
   
-### <a name="remarks"></a>Примечания  
- Используйте `DECLARE_MESSAGE_MAP` макрос в конце объявления класса. В CPP-файле, который определяет функции-члены класса, используйте `BEGIN_MESSAGE_MAP` макрос, макрос записи для каждой из функций обработчик сообщений и `END_MESSAGE_MAP` макрос.  
+### <a name="remarks"></a>Remarks  
+ Use the `DECLARE_MESSAGE_MAP` macro at the end of your class declaration. Then, in the .cpp file that defines the member functions for the class, use the `BEGIN_MESSAGE_MAP` macro, macro entries for each of your message-handler functions, and the `END_MESSAGE_MAP` macro.  
   
 > [!NOTE]
->  При объявлении любого элемента после `DECLARE_MESSAGE_MAP`, необходимо указать новый тип доступа (**открытый**, `private`, или `protected`) для них.  
+>  If you declare any member after `DECLARE_MESSAGE_MAP`, you must specify a new access type (**public**, `private`, or `protected`) for them.  
   
- Дополнительные сведения о сообщении сопоставляет и `DECLARE_MESSAGE_MAP` макрос, в разделе [обработка сообщений и сопоставление разделов](../../mfc/message-handling-and-mapping.md).  
+ For more information on message maps and the `DECLARE_MESSAGE_MAP` macro, see [Message Handling and Mapping Topics](../../mfc/message-handling-and-mapping.md).  
   
-### <a name="example"></a>Пример  
+### <a name="example"></a>Example  
 ```cpp  
 class CMainFrame : public CMDIFrameWnd
 {
@@ -181,159 +181,159 @@ class CMainFrame : public CMDIFrameWnd
    // Remainder of class declaration omitted.
 ``` 
   
-### <a name="requirements"></a>Требования  
- **Заголовок:** afxwin.h  
+### <a name="requirements"></a>Requirements  
+ **Header:** afxwin.h  
 
 
-## <a name="end_message_map"></a>END_MESSAGE_MAP
-Завершает определение схему сообщений.  
+## <a name="end_message_map"></a>  END_MESSAGE_MAP
+Ends the definition of your message map.  
   
-### <a name="syntax"></a>Синтаксис  
+### <a name="syntax"></a>Syntax  
   
 ```   
 END_MESSAGE_MAP( )  
 ```  
   
-### <a name="remarks"></a>Примечания  
- Дополнительные сведения о сообщении сопоставляет и `END_MESSAGE_MAP` макрос, в разделе [обработка сообщений и сопоставление разделов](../../mfc/message-handling-and-mapping.md).  
+### <a name="remarks"></a>Remarks  
+ For more information on message maps and the `END_MESSAGE_MAP` macro, see [Message Handling and Mapping Topics](../../mfc/message-handling-and-mapping.md).  
   
-### <a name="requirements"></a>Требования  
- **Заголовок:** afxwin.h  
+### <a name="requirements"></a>Requirements  
+ **Header:** afxwin.h  
 
-## <a name="on_command"></a>ON_COMMAND
-Этот макрос сообщением команды сопоставляется с функцией-членом.  
+## <a name="on_command"></a>  ON_COMMAND
+This macro maps a command message to a member function.  
   
-### <a name="syntax"></a>Синтаксис  
+### <a name="syntax"></a>Syntax  
   
 ```  
 ON_COMMAND( id, memberFxn )  
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
  `id`  
- Идентификатор команды.  
+ The command ID.  
   
  `memberFxn`  
- Имя функции обработчика сообщений, с которым сопоставлен команда.  
+ The name of the message-handler function to which the command is mapped.  
   
-### <a name="remarks"></a>Примечания  
- Он указывает, какие функции будут обрабатывать сообщение команды из объекта команды пользовательского интерфейса, например пункта меню или панели инструментов кнопки.  
+### <a name="remarks"></a>Remarks  
+ It indicates which function will handle a command message from a command user-interface object such as a menu item or toolbar button.  
   
- Когда целевой объект команды получает Windows **WM_COMMAND** сообщения с указанным Идентификатором `ON_COMMAND` будет вызывать функцию-член `memberFxn` для обработки сообщения.  
+ When a command-target object receives a Windows **WM_COMMAND** message with the specified ID, `ON_COMMAND` will call the member function `memberFxn` to handle the message.  
   
- Используйте `ON_COMMAND` для сопоставления одной команды с функцией-членом. Используйте [ON_COMMAND_RANGE](#on_command_range) сопоставляемый диапазон идентификаторов, функция один член. Только одна запись схемы сообщений можно сопоставить идентификатор данной команды. То есть команду нельзя сопоставить несколько обработчиков. Дополнительные сведения и примеры см. в разделе [обработка сообщений и сопоставление разделов](../../mfc/message-handling-and-mapping.md).  
+ Use `ON_COMMAND` to map a single command to a member function. Use [ON_COMMAND_RANGE](#on_command_range) to map a range of command ids to one member function. Only one message-map entry can match a given command id. That is, you can't map a command to more than one handler. For more information and examples, see [Message Handling and Mapping Topics](../../mfc/message-handling-and-mapping.md).  
   
-### <a name="example"></a>Пример  
+### <a name="example"></a>Example  
 ```cpp  
 BEGIN_MESSAGE_MAP(CMFCListViewDoc, CDocument)
    ON_COMMAND(ID_MYCOMMAND, &CMFCListViewDoc::OnMycommand)
 END_MESSAGE_MAP()
 ``` 
   
-### <a name="requirements"></a>Требования  
- **Заголовок:** afxmsg_.h  
+### <a name="requirements"></a>Requirements  
+ **Header:** afxmsg_.h  
 
- ## <a name="on_command_ex"></a>ON_COMMAND_EX
-Расширенные функции-члена обработчика команд.  
+ ## <a name="on_command_ex"></a>  ON_COMMAND_EX
+Extended command-handler member function.  
    
-### <a name="syntax"></a>Синтаксис  
+### <a name="syntax"></a>Syntax  
   ```  
 ON_COMMAND_EX(id, memberFxn);  
 ```
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
  `id`  
- Идентификатор команды.  
+ The command ID.  
   
  `memberFxn`  
- Имя функции обработчик сообщений, с которым сопоставлен команды.  
+ The name of the  message-handler  function to which the  command is mapped.  
    
-### <a name="remarks"></a>Примечания 
-Расширенной формы обработчики команд сообщения доступен для расширенного использования. `ON_COMMAND_EX` Макрос используется для таких обработчиков сообщений и предоставляет надмножество функций [ON_COMMAND] (#on_command).  Функции-члены расширенного обработчика команд принимать единственный параметр, **UINT** содержит идентификатор команды и возвращать **BOOL**. Возвращаемое значение должно быть значение TRUE для 
+### <a name="remarks"></a>Remarks 
+An extended form of  command message  handlers is available  for advanced uses. The  `ON_COMMAND_EX` macro  is used for such  message handlers, and  it provides a superset  of the [ON_COMMAND] (#on_command)  functionality.  Extended  command-handler member  functions take a single  parameter, a **UINT**  containing the command  ID, and return a  **BOOL**. The return  value should be TRUE to 
 
-Этот макрос сопоставляет сообщение команды функцию расширенный элемент обработчика команд.  
+This macro maps a command message to an extended command-handler member function.  
    
-### <a name="syntax"></a>Синтаксис  
+### <a name="syntax"></a>Syntax  
 ```  
 ON_COMMAND_EX(id,  memberFxn);  
 ```
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
  `id`  
- Идентификатор команды.  
+ The command ID.  
   
  `memberFxn`  
- Имя функции обработчика сообщений, с которым сопоставлен команда.  
+ The name of the message-handler function to which the command is mapped.  
    
-### <a name="remarks"></a>Примечания  
- Расширенной формы обработчики команд сообщения доступен для расширенного использования. `ON_COMMAND_EX` Макрос используется для таких обработчиков сообщений и предоставляет надмножество [ON_COMMAND](message-map-macros-mfc.md#on_command) функциональные возможности. Функции-члены расширенного обработчика команд принимать единственный параметр, **UINT** содержит идентификатор команды и возвращать **BOOL**. Возвращаемое значение должно быть значение TRUE указывает, что команда было обработано; в противном случае маршрутизации продолжит другие целевые объекты команды.  
-Дополнительные сведения см. в разделе техническое Примечание [TN006: схемы сообщений] tm006 сообщения maps.md).  
+### <a name="remarks"></a>Remarks  
+ An extended form of command message handlers is available for advanced uses. The `ON_COMMAND_EX` macro is used for such message handlers, and it provides a superset of the [ON_COMMAND](message-map-macros-mfc.md#on_command) functionality. Extended command-handler member functions take a single parameter, a **UINT** containing the command ID, and return a **BOOL**. The return value should be TRUE to indicate that the command has been handled; otherwise routing will continue to other command target objects.  
+For more information, see Technical Note [TN006: Message Maps]tm006-message-maps.md).  
    
-### <a name="requirements"></a>Требования  
- Файл заголовка: afxmsg_.h  
+### <a name="requirements"></a>Requirements  
+ Header file: afxmsg_.h  
    
-### <a name="see-also"></a>См. также  
+### <a name="see-also"></a>See Also  
  [ON_COMMAND](message-map-macros-mfc.md#on_command)   
- [TN006: схемы сообщений] tm006 сообщения maps.md)
+ [TN006: Message Maps]tm006-message-maps.md)
 
   
-## <a name="on_control"></a>ON_CONTROL
-Указывает, какая функция будет обрабатывать сообщение уведомления пользовательский-элемент управления.  
+## <a name="on_control"></a>  ON_CONTROL
+Indicates which function will handle a custom-control notification message.  
   
-### <a name="syntax"></a>Синтаксис  
+### <a name="syntax"></a>Syntax  
   
 ```  
 ON_CONTROL( wNotifyCode, id, memberFxn )  
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
  `wNotifyCode`  
- Код уведомления элемента управления.  
+ The notification code of the control.  
   
  `id`  
- Идентификатор команды.  
+ The command ID.  
   
  `memberFxn`  
- Имя функции обработчика сообщений, с которым сопоставлен команда.  
+ The name of the message-handler function to which the command is mapped.  
   
-### <a name="remarks"></a>Примечания  
- Уведомляющие сообщения элементов управления являются сообщения от элемента управления своему родительскому окну.  
+### <a name="remarks"></a>Remarks  
+ Control notification messages are those sent from a control to its parent window.  
   
- Должен быть ровно один `ON_CONTROL` макрос инструкции на карте сообщений для каждого сообщения уведомления элемента управления, должен быть сопоставлен с функцией обработчик сообщений.  
+ There should be exactly one `ON_CONTROL` macro statement in your message map for every control notification message that must be mapped to a message-handler function.  
   
- Дополнительные сведения и примеры см. в разделе [обработка сообщений и сопоставление разделов](../../mfc/message-handling-and-mapping.md).  
+ For more information and examples, see [Message Handling and Mapping Topics](../../mfc/message-handling-and-mapping.md).  
   
-### <a name="requirements"></a>Требования  
- **Заголовок:** afxmsg_.h  
+### <a name="requirements"></a>Requirements  
+ **Header:** afxmsg_.h  
   
 
-## <a name="on_message"></a>ON_MESSAGE  
-Указывает, какие функции будут обрабатывать определенное пользователем сообщение.  
+## <a name="on_message"></a>  ON_MESSAGE  
+Indicates which function will handle a user-defined message.  
   
-### <a name="syntax"></a>Синтаксис  
+### <a name="syntax"></a>Syntax  
   
 ```  
 ON_MESSAGE( message, memberFxn )  
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
  `message`  
- Идентификатор сообщения.  
+ The message ID.  
   
  `memberFxn`  
- Имя функции обработчика сообщений, с которым сопоставляется сообщение.  
+ The name of the message-handler function to which the message is mapped.  
   
- Тип функции должен быть `afx_msg LRESULT (CWnd::*)(WPARAM, LPARAM)`.  
+ The type of the function must be `afx_msg LRESULT (CWnd::*)(WPARAM, LPARAM)`.  
   
-### <a name="remarks"></a>Примечания  
- Определяемые пользователем сообщения, все сообщения, которые не являются стандартный Windows `WM_MESSAGE` сообщений. При выборе идентификатор сообщения, необходимо использовать значения в диапазоне от `WM_USER` (0x0400) для 0x7FFF или `WM_APP` (0x8000) для 0xBFFF. Дополнительные сведения о сообщении идентификаторы. в разделе [WM_APP](http://msdn.microsoft.com/library/windows/desktop/ms644930).  
+### <a name="remarks"></a>Remarks  
+ User-defined messages are any messages that are not standard Windows `WM_MESSAGE` messages. When selecting a message ID, you must use values within the range of `WM_USER` (0x0400) to 0x7FFF or `WM_APP` (0x8000) to 0xBFFF. For more information regarding message IDs, see [WM_APP](http://msdn.microsoft.com/library/windows/desktop/ms644930).  
   
- Должен быть ровно один `ON_MESSAGE` макрос инструкции на карте сообщение для каждого определяемого пользователем сообщения должен быть сопоставлен с функцией обработчик сообщений.  
+ There should be exactly one `ON_MESSAGE` macro statement in your message map for every user-defined message that must be mapped to a message-handler function.  
   
 > [!NOTE]
->  Помимо определяемых пользователем сообщений `ON_MESSAGE` обрабатывает сообщения Windows, реже. Дополнительные сведения см. статью базы знаний [99848: INFO: используйте макрос ON_MESSAGE() карты менее типичных сообщений](http://go.microsoft.com/fwlink/?linkId=192022).  
+>  In addition to user-defined messages, `ON_MESSAGE` handles less common Windows messages. For more information, see Knowledge Base article [99848: INFO: Use ON_MESSAGE() Macro to Map Less-Common Messages](http://go.microsoft.com/fwlink/?linkId=192022).  
   
- Дополнительные сведения и примеры см. в разделе [обработка сообщений и сопоставление разделов](../../mfc/message-handling-and-mapping.md) и [определяемые пользователем обработчики](user-defined-handlers.md)  
+ For more information and examples, see [Message Handling and Mapping Topics](../../mfc/message-handling-and-mapping.md) and [User-Defined Handlers](user-defined-handlers.md)  
   
-### <a name="example"></a>Пример  
+### <a name="example"></a>Example  
 ```cpp  
 #define WM_MYMESSAGE (WM_USER + 100)
 
@@ -355,160 +355,160 @@ END_MESSAGE_MAP()
 }
 ```   
   
-### <a name="requirements"></a>Требования  
- **Заголовок:** afxmsg_.h  
+### <a name="requirements"></a>Requirements  
+ **Header:** afxmsg_.h  
 
-## <a name="on_olecmd"></a>ON_OLECMD    
-Перенаправляет команды через интерфейс диспетчеризации команда `IOleCommandTarget`.  
+## <a name="on_olecmd"></a>  ON_OLECMD  
+Routes commands through the command dispatch interface `IOleCommandTarget`.  
   
-### <a name="syntax"></a>Синтаксис  
+### <a name="syntax"></a>Syntax  
   
 ```  
 ON_OLECMD( pguid, olecmdid, id )  
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
  `pguid`  
- Идентификатор группы команд, к которой принадлежит команда. Используйте **NULL** для стандартной группы.  
+ Identifier of the command group to which the command belongs. Use **NULL** for the standard group.  
   
  *olecmdid*  
- Идентификатор команды OLE.  
+ The identifier of the OLE command.  
   
  `id`  
- Идентификатор меню, панели инструментов идентификатор, button ID или другой идентификатор ресурса или объекта команды.  
+ The menu ID, toolbar ID, button ID, or other ID of the resource or object issuing the command.  
   
-### <a name="remarks"></a>Примечания  
- `IOleCommandTarget`позволяет контейнера для получения команд, создаваемых в DocObject пользовательского интерфейса, а контейнера для отправки команды (такие как New, открыть, сохранить как и печати в меню "файл"; и скопируйте, вставьте и отменить, и так далее, в меню Правка) для DocObject.  
+### <a name="remarks"></a>Remarks  
+ `IOleCommandTarget` allows a container to receive commands that originate in a DocObject's user interface, and allows the container to send the same commands (such as New, Open, SaveAs, and Print on the File menu; and Copy, Paste, Undo, and so forth on the Edit menu) to a DocObject.  
   
- `IOleCommandTarget`проще, чем OLE-автоматизации `IDispatch`. `IOleCommandTarget`полностью зависит от стандартный набор команд, редко иметь аргументы и участвует никакой информации о типе (безопасность типа позволяет уменьшить также аргументы командной строки). Если требуется отправлять команды с аргументами, используйте [COleServerDoc::OnExecOleCmd](coleserverdoc-class.md#onexecolecmd).  
+ `IOleCommandTarget` is simpler than OLE Automation's `IDispatch`. `IOleCommandTarget` relies entirely on a standard set of commands that rarely have arguments, and no type information is involved (type safety is diminished for command arguments as well). If you do need to dispatch commands with arguments, use [COleServerDoc::OnExecOleCmd](coleserverdoc-class.md#onexecolecmd).  
   
- `IOleCommandTarget` Стандартных команд меню с MFC в реализованы следующие макросы:  
+ The `IOleCommandTarget` standard menu commands have been implemented by MFC in the following macros:  
   
- **ON_OLECMD_CLEARSELECTION)**  
+ **ON_OLECMD_CLEARSELECTION( )**  
   
- Отправляет команду Редактировать снимите флажок. Реализован в виде:  
+ Dispatches the Edit Clear command. Implemented as:  
   
  `ON_OLECMD(NULL, OLECMDID_CLEARSELECTION, ID_EDIT_CLEAR)`  
   
- **ON_OLECMD_COPY)**  
+ **ON_OLECMD_COPY( )**  
   
- Отправляет команду Изменить копирования. Реализован в виде:  
+ Dispatches the Edit Copy command. Implemented as:  
   
  `ON_OLECMD(NULL, OLECMDID_COPY, ID_EDIT_COPY)`  
   
- **ON_OLECMD_CUT)**  
+ **ON_OLECMD_CUT( )**  
   
- Отправляет команду Изменить Вырезать. Реализован в виде:  
+ Dispatches the Edit Cut command. Implemented as:  
   
  `ON_OLECMD(NULL, OLECMDID_CUT, ID_EDIT_CUT)`  
   
- **ON_OLECMD_NEW)**  
+ **ON_OLECMD_NEW( )**  
   
- Отправляет команды создания файла. Реализован в виде:  
+ Dispatches the File New command. Implemented as:  
   
  `ON_OLECMD(NULL, OLECMDID_NEW, ID_FILE_NEW)`  
   
- **ON_OLECMD_OPEN)**  
+ **ON_OLECMD_OPEN( )**  
   
- Отправляет команды открытия файла. Реализован в виде:  
+ Dispatches the File Open command. Implemented as:  
   
  `ON_OLECMD(NULL, OLECMDID_OPEN, ID_FILE_OPEN)`  
   
- **ON_OLECMD_PAGESETUP)**  
+ **ON_OLECMD_PAGESETUP( )**  
   
- Отправляет команду Setup файла страницы. Реализован в виде:  
+ Dispatches the File Page Setup command. Implemented as:  
   
  `ON_OLECMD(NULL, OLECMDID_PAGESETUP, ID_FILE_PAGE_SETUP)`  
   
- **ON_OLECMD_PASTE)**  
+ **ON_OLECMD_PASTE( )**  
   
- Отправляет команду Изменить вставки. Реализован в виде:  
+ Dispatches the Edit Paste command. Implemented as:  
   
  `ON_OLECMD(NULL, OLECMDID_PASTE, ID_EDIT_PASTE)`  
   
- **ON_OLECMD_PASTESPECIAL)**  
+ **ON_OLECMD_PASTESPECIAL( )**  
   
- Отправляет команду Специальная вставка. Реализован в виде:  
+ Dispatches the Edit Paste Special command. Implemented as:  
   
  `ON_OLECMD(NULL, OLECMDID_PASTESPECIAL, ID_EDIT_PASTE_SPECIAL)`  
   
- **ON_OLECMD_PRINT)**  
+ **ON_OLECMD_PRINT( )**  
   
- Отправляет команды Печать файла. Реализован в виде:  
+ Dispatches the File Print command. Implemented as:  
   
  `ON_OLECMD(NULL, OLECMDID_PRINT, ID_FILE_PRINT)`  
   
- **ON_OLECMD_PRINTPREVIEW)**  
+ **ON_OLECMD_PRINTPREVIEW( )**  
   
- Отправляет команду предварительного просмотра перед печатью файла. Реализован в виде:  
+ Dispatches the File Print Preview command. Implemented as:  
   
  `ON_OLECMD(NULL, OLECMDID_PRINTPREVIEW, ID_FILE_PRINT_PREVIEW)`  
   
- **ON_OLECMD_REDO)**  
+ **ON_OLECMD_REDO( )**  
   
- Отправляет команду Изменить повтора. Реализован в виде:  
+ Dispatches the Edit Redo command. Implemented as:  
   
  `ON_OLECMD(NULL, OLECMDID_REDO, ID_EDIT_REDO)`  
   
- **ON_OLECMD_SAVE)**  
+ **ON_OLECMD_SAVE( )**  
   
- Отправляет команду сохранения файла. Реализован в виде:  
+ Dispatches the File Save command. Implemented as:  
   
  `ON_OLECMD(NULL, OLECMDID_SAVE, ID_FILE_SAVE)`  
   
- **ON_OLECMD_SAVE_AS)**  
+ **ON_OLECMD_SAVE_AS( )**  
   
- Отправляет команду Сохранить как файл. Реализован в виде:  
+ Dispatches the File Save As command. Implemented as:  
   
  `ON_OLECMD(NULL, OLECMDID_SAVEAS, ID_FILE_SAVE_AS)`  
   
- **ON_OLECMD_SAVE_COPY_AS)**  
+ **ON_OLECMD_SAVE_COPY_AS( )**  
   
- Отправляет файл сохранить копию как команду. Реализован в виде:  
+ Dispatches the File Save Copy As command. Implemented as:  
   
  `ON_OLECMD(NULL, OLECMDID_SAVECOPYAS, ID_FILE_SAVE_COPY_AS)`  
   
- **ON_OLECMD_SELECTALL)**  
+ **ON_OLECMD_SELECTALL( )**  
   
- Отправляет команду Изменить выделить все. Реализован в виде:  
+ Dispatches the Edit Select All command. Implemented as:  
   
  `ON_OLECMD(NULL, OLECMDID_SELECTALL, ID_EDIT_SELECT_ALL)`  
   
- **ON_OLECMD_UNDO)**  
+ **ON_OLECMD_UNDO( )**  
   
- Отправляет команду Отменить изменение. Реализован в виде:  
+ Dispatches the Edit Undo command. Implemented as:  
   
  `ON_OLECMD(NULL, OLECMDID_UNDO, ID_EDIT_UNDO)`  
   
-### <a name="requirements"></a>Требования  
- **Заголовок:** afxdocob.h  
+### <a name="requirements"></a>Requirements  
+ **Header:** afxdocob.h  
   
-### <a name="see-also"></a>См. также  
- [Класс COleCmdUI](colecmdui-class.md)   
+### <a name="see-also"></a>See Also  
+ [COleCmdUI Class](colecmdui-class.md)   
  [COleServerDoc::OnExecOleCmd](coleserverdoc-class.md#onexecolecmd)
 
-## <a name="on_registered_message"></a>ON_REGISTERED_MESSAGE
-Windows **RegisterWindowMessage** функция используется для определения нового сообщение окна, которое гарантированно будет уникальным во всей системе.  
+## <a name="on_registered_message"></a>  ON_REGISTERED_MESSAGE
+The Windows **RegisterWindowMessage** function is used to define a new window message that is guaranteed to be unique throughout the system.  
   
-### <a name="syntax"></a>Синтаксис  
+### <a name="syntax"></a>Syntax  
   
 ```  
 ON_REGISTERED_MESSAGE( nMessageVariable, memberFxn )  
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
  `nMessageVariable`  
- Переменная идентификатор зарегистрированного сообщения окна.  
+ The registered window-message ID variable.  
   
  `memberFxn`  
- Имя функции обработчика сообщений, с которым сопоставляется сообщение.  
+ The name of the message-handler function to which the message is mapped.  
   
-### <a name="remarks"></a>Примечания  
- Этот макрос указывает, какие функции будут обрабатывать зарегистрированных сообщения.  
+### <a name="remarks"></a>Remarks  
+ This macro indicates which function will handle the registered message.  
   
- Дополнительные сведения и примеры см. в разделе [обработка сообщений и сопоставление разделов](../../mfc/message-handling-and-mapping.md).  
+ For more information and examples, see [Message Handling and Mapping Topics](../../mfc/message-handling-and-mapping.md).  
   
-### <a name="example"></a>Пример  
+### <a name="example"></a>Example  
 ```cpp  
 static UINT NEAR WM_FIND = RegisterWindowMessage(_T("COMMDLG_FIND"));
 
@@ -518,111 +518,111 @@ BEGIN_MESSAGE_MAP(CMyWnd3, CWnd)
 END_MESSAGE_MAP()
 ```  
   
-### <a name="requirements"></a>Требования  
- **Заголовок:** afxmsg_.h  
+### <a name="requirements"></a>Requirements  
+ **Header:** afxmsg_.h  
   
-### <a name="see-also"></a>См. также  
+### <a name="see-also"></a>See Also  
  [RegisterWindowMessage](http://msdn.microsoft.com/library/windows/desktop/ms644947)   
- [Пользовательские обработчики](user-defined-handlers.md)
+ [User-Defined Handlers](user-defined-handlers.md)
 
-## <a name="on_registered_thread_message"></a>ON_REGISTERED_THREAD_MESSAGE    
-Указывает, какая функция будет обрабатывать сообщения, зарегистрированные с помощью функции Windows RegisterWindowMessage.  
+## <a name="on_registered_thread_message"></a>  ON_REGISTERED_THREAD_MESSAGE    
+Indicates which function will handle the message registered by the Windows RegisterWindowMessage function.  
   
-### <a name="syntax"></a>Синтаксис  
+### <a name="syntax"></a>Syntax  
   
 ```  
 ON_REGISTERED_THREAD_MESSAGE(nMessageVariable, memberFxn )  
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
  `nMessageVariable`  
- Переменная идентификатор зарегистрированного сообщения окна.  
+ The registered window-message ID variable.  
   
  `memberFxn`  
- Имя функции обработчика сообщений CWinThread, с которым сопоставляется сообщение.  
+ The name of the CWinThread-message-handler function to which the message is mapped.  
   
-### <a name="remarks"></a>Примечания  
- RegisterWindowMessage используется для определения нового сообщение окна, которое гарантированно будет уникальным во всей системе. ON_REGISTERED_THREAD_MESSAGE должен использоваться вместо ON_REGISTERED_MESSAGE при наличии CWinThread-класс. 
+### <a name="remarks"></a>Remarks  
+ RegisterWindowMessage is used to define a new window message that is guaranteed to be unique throughout the system. ON_REGISTERED_THREAD_MESSAGE must be used instead of ON_REGISTERED_MESSAGE when you have a CWinThread class. 
   
-### <a name="requirements"></a>Требования  
- **Заголовок:** afxmsg_.h  
+### <a name="requirements"></a>Requirements  
+ **Header:** afxmsg_.h  
 
-## <a name="on_thread_message"></a>ON_THREAD_MESSAGE    
-Указывает, какие функции будут обрабатывать определенное пользователем сообщение.  
+## <a name="on_thread_message"></a>  ON_THREAD_MESSAGE  
+Indicates which function will handle a user-defined message.  
   
-### <a name="syntax"></a>Синтаксис  
+### <a name="syntax"></a>Syntax  
   
 ```  
 ON_THREAD_MESSAGE( message, memberFxn )  
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
  `message`  
- Идентификатор сообщения.  
+ The message ID.  
   
  `memberFxn`  
- Имя `CWinThread`-сообщение-функция обработчика, с которым сопоставляется сообщение.  
+ The name of the `CWinThread`-message-handler function to which the message is mapped.  
   
-### <a name="remarks"></a>Примечания  
- `ON_THREAD_MESSAGE`должен использоваться вместо `ON_MESSAGE` при наличии `CWinThread` класса. Определяемые пользователем сообщения, все сообщения, которые не являются стандартный Windows **WM_MESSAGE** сообщений. Должен быть ровно один `ON_THREAD_MESSAGE` макрос инструкции на карте сообщение для каждого определяемого пользователем сообщения должен быть сопоставлен с функцией обработчик сообщений.  
+### <a name="remarks"></a>Remarks  
+ `ON_THREAD_MESSAGE` must be used instead of `ON_MESSAGE` when you have a `CWinThread` class. User-defined messages are any messages that are not standard Windows **WM_MESSAGE** messages. There should be exactly one `ON_THREAD_MESSAGE` macro statement in your message map for every user-defined message that must be mapped to a message-handler function.  
   
-### <a name="requirements"></a>Требования  
- **Заголовок:** afxole.h  
+### <a name="requirements"></a>Requirements  
+ **Header:** afxole.h  
 
-## <a name="on_update_command_ui"></a>ON_UPDATE_COMMAND_UI    
-Этот макрос указывает, какая функция будет обрабатывать сообщения команды обновления пользовательского интерфейса.  
+## <a name="on_update_command_ui"></a>  ON_UPDATE_COMMAND_UI    
+This macro indicates which function will handle a user-interface update command message.  
   
-### <a name="syntax"></a>Синтаксис  
+### <a name="syntax"></a>Syntax  
   
 ```  
 ON_UPDATE_COMMAND_UI( id, memberFxn )  
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
  `id`  
- Идентификатор сообщения.  
+ The message ID.  
   
  `memberFxn`  
- Имя функции обработчика сообщений, с которым сопоставляется сообщение.  
+ The name of the message-handler function to which the message is mapped.  
   
-### <a name="remarks"></a>Примечания  
- Должен быть ровно один `ON_UPDATE_COMMAND_UI` макрос инструкции на карте сообщения для каждой команды обновления пользовательского интерфейса, который должен быть сопоставлен с функцией обработчик сообщений.  
+### <a name="remarks"></a>Remarks  
+ There should be exactly one `ON_UPDATE_COMMAND_UI` macro statement in your message map for every user-interface update command that must be mapped to a message-handler function.  
   
- Дополнительные сведения и примеры см. в разделе [обработка сообщений и сопоставление разделов](../../mfc/message-handling-and-mapping.md).  
+ For more information and examples, see [Message Handling and Mapping Topics](../../mfc/message-handling-and-mapping.md).  
   
-### <a name="requirements"></a>Требования  
- **Заголовок:** afxole.h  
+### <a name="requirements"></a>Requirements  
+ **Header:** afxole.h  
   
-### <a name="see-also"></a>См. также  
- [Класс CCmdUI](ccmdui-class.md)
+### <a name="see-also"></a>See Also  
+ [CCmdUI Class](ccmdui-class.md)
 
-## <a name="on_command_range"></a>ON_COMMAND_RANGE  
-Используйте этот макрос для сопоставления непрерывный диапазон идентификаторов, функция обработки одного сообщения.  
+## <a name="on_command_range"></a>  ON_COMMAND_RANGE  
+Use this macro to map a contiguous range of command IDs to a single message handler function.  
   
-### <a name="syntax"></a>Синтаксис
+### <a name="syntax"></a>Syntax
   
 ```  
 ON_COMMAND_RANGE( id1, id2, memberFxn )  
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
  `id1`  
- Идентификатор команды в начале непрерывный диапазон идентификаторов команд.  
+ Command ID at the beginning of a contiguous range of command IDs.  
   
  `id2`  
- Идентификатор команды в конце непрерывный диапазон идентификаторов команд.  
+ Command ID at the end of a contiguous range of command IDs.  
   
  `memberFxn`  
- Имя функции обработчика сообщений, с которыми связаны команды.  
+ The name of the message-handler function to which the commands are mapped.  
   
-### <a name="remarks"></a>Примечания  
- Диапазон идентификаторов начинается с `id1` и заканчивается `id2`.  
+### <a name="remarks"></a>Remarks  
+ The range of IDs starts with `id1` and ends with `id2`.  
   
- Используйте `ON_COMMAND_RANGE` сопоставляемый диапазон идентификаторов, функция один член. Используйте [ON_COMMAND](#on_command) для сопоставления одной команды с функцией-членом. Только одна запись схемы сообщений можно сопоставить идентификатор данной команды. То есть команду нельзя сопоставить несколько обработчиков. Дополнительные сведения о сопоставлении диапазоны сообщений см. в разделе [обработчики для диапазонов схем сообщений](../../mfc/handlers-for-message-map-ranges.md).  
+ Use `ON_COMMAND_RANGE` to map a range of command IDs to one member function. Use [ON_COMMAND](#on_command) to map a single command to a member function. Only one message-map entry can match a given command ID. That is, you can't map a command to more than one handler. For more information on mapping message ranges, see [Handlers for Message-Map Ranges](../../mfc/handlers-for-message-map-ranges.md).  
   
- Не поддерживается автоматическое для диапазонов схем сообщений, поэтому необходимо поместить макрос самостоятельно.  
+ There is no automatic support for message map ranges, so you must place the macro yourself.  
   
-### <a name="example"></a>Пример  
+### <a name="example"></a>Example  
 ```cpp  
 // The code fragment below shows how to use ON_COMMAND_RANGE macro 
 // to map a contiguous range of command IDs to a single message  
@@ -643,67 +643,67 @@ void CChildFrame::OnRangeCmds(UINT nID)
 }
 ```
   
-### <a name="requirements"></a>Требования  
- **Заголовок:** afxmsg_.h  
+### <a name="requirements"></a>Requirements  
+ **Header:** afxmsg_.h  
 
-## <a name="on_update_command_ui_range"></a>ON_UPDATE_COMMAND_UI_RANGE    
-Сопоставляет непрерывный диапазон идентификаторов, функция-обработчик сообщений одно обновление.  
+## <a name="on_update_command_ui_range"></a>  ON_UPDATE_COMMAND_UI_RANGE    
+Maps a contiguous range of command IDs to a single update message handler function.  
   
-### <a name="syntax"></a>Синтаксис  
+### <a name="syntax"></a>Syntax  
   
 ```  
 ON_UPDATE_COMMAND_UI_RANGE( id1, id2, memberFxn )  
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
  `id1`  
- Идентификатор команды в начале непрерывный диапазон идентификаторов команд.  
+ Command ID at the beginning of a contiguous range of command IDs.  
   
  `id2`  
- Идентификатор команды в конце непрерывный диапазон идентификаторов команд.  
+ Command ID at the end of a contiguous range of command IDs.  
   
  `memberFxn`  
- Имя функции обработчика сообщений обновления, с которыми связаны команды.  
+ The name of the update message-handler function to which the commands are mapped.  
   
-### <a name="remarks"></a>Примечания  
- Обработчики сообщений обновления обновить состояние элементов меню и кнопки панели инструментов, связанный с данной командой. Диапазон идентификаторов начинается с `id1` и заканчивается `id2`.  
+### <a name="remarks"></a>Remarks  
+ Update message handlers update the state of menu items and toolbar buttons associated with the command. The range of IDs starts with `id1` and ends with `id2`.  
   
- Не поддерживается автоматическое для диапазонов схем сообщений, поэтому необходимо поместить макрос самостоятельно.  
+ There is no automatic support for message map ranges, so you must place the macro yourself.  
   
-### <a name="requirements"></a>Требования  
- **Заголовок:** afxmsg_.h  
+### <a name="requirements"></a>Requirements  
+ **Header:** afxmsg_.h  
 
-## <a name="on_control_range"></a>ON_CONTROL_RANGE     
-Используйте этот макрос для сопоставления непрерывный диапазон идентификаторов элементов управления, функция-обработчик одно сообщение для указанного сообщения уведомлений Windows, таких как **BN_CLICKED**.  
+## <a name="on_control_range"></a>  ON_CONTROL_RANGE     
+Use this macro to map a contiguous range of control IDs to a single message handler function for a specified Windows notification message, such as **BN_CLICKED**.  
   
-### <a name="syntax"></a>Синтаксис  
+### <a name="syntax"></a>Syntax  
   
 ```  
 ON_CONTROL_RANGE( wNotifyCode, id1, id2, memberFxn )  
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
  `wNotifyCode`  
- Код уведомления, к которому отвечает обработчиком.  
+ The notification code to which your handler is responding.  
   
  `id1`  
- Идентификатор команды в начале непрерывный диапазон идентификаторов элементов управления.  
+ Command ID at the beginning of a contiguous range of control IDs.  
   
  `id2`  
- Идентификатор команды в конце непрерывный диапазон идентификаторов элементов управления.  
+ Command ID at the end of a contiguous range of control IDs.  
   
  `memberFxn`  
- Имя функции обработчик сообщений, с которой сопоставляются элементы управления.  
+ The name of the message-handler function to which the controls are mapped.  
   
-### <a name="remarks"></a>Примечания  
- Диапазон идентификаторов начинается с `id1` и заканчивается `id2`. Обработчик вызывается для указанного уведомлений, поступающих от всех сопоставленном элементов управления.  
+### <a name="remarks"></a>Remarks  
+ The range of IDs starts with `id1` and ends with `id2`. The handler is called for the specified notification coming from any of the mapped controls.  
   
- Не поддерживается автоматическое для диапазонов схем сообщений, поэтому необходимо поместить макрос самостоятельно.  
+ There is no automatic support for message map ranges, so you must place the macro yourself.  
   
- Дополнительные сведения о реализации функции обработчика для диапазона идентификаторов элементов управления см. [обработчики для диапазонов схем сообщений](../../mfc/handlers-for-message-map-ranges.md).  
+ For more information on implementing handler functions for a range of control IDs, refer to [Handlers for Message-Map Ranges](../../mfc/handlers-for-message-map-ranges.md).  
   
-### <a name="requirements"></a>Требования  
- **Заголовок:** afxmsg_.h  
+### <a name="requirements"></a>Requirements  
+ **Header:** afxmsg_.h  
   
 
 

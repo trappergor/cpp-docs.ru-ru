@@ -1,37 +1,56 @@
 ---
-title: "Тестирование интернет-приложений | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "отладка [MFC], в веб-приложениях"
-  - "отладка веб-приложений, тестирование приложений"
-  - "отладка и тестирование в Интернете"
-  - "проверка, Интернет-приложения"
-  - "в веб-приложениях, проверка"
+title: Testing Internet Applications | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- Web applications [MFC], testing
+- debugging Web applications [MFC], testing applications
+- testing [MFC], Internet applications
+- debugging [MFC], Web applications
+- Internet debugging and testing
 ms.assetid: ac4c74e3-d4ad-4e19-8f6c-e270de067f01
 caps.latest.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 6
----
-# Тестирование интернет-приложений
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 1bdf3922311d334eecece5fefbd7573f6dffab26
+ms.contentlocale: ru-ru
+ms.lasthandoff: 09/12/2017
 
-Некоторые проблемы уникальный тестирования в Интернете, особенно для приложений, выполняющихся на веб\-сервере.  Исходное тестирование всего выполняется с помощью пользователя при подключении клиента на тестовом сервере.  Это будет использована для отладки кода.  
+---
+# <a name="testing-internet-applications"></a>Testing Internet Applications
+There are some unique testing challenges on the Internet, especially for applications running on a Web server. Your initial testing will probably be done using a single-user client connecting to a test server. This will be useful for debugging your code.  
   
- Также потребуется выполнить в условиях реального мира. клиенты, подключенные высокоскоростными через несколько подключений, так и низкоскоростными системы линиями, включая подключения соединения.  Может быть сложно имитировать реальные условия, но есть стоимость тратя время при разработке возможные сценарии и их выполнение.  Если возможно, также потребуется использовать ресурсы задачи средств и стресс\-теста.  Некоторые классы ошибок, такие как ошибки времени, трудно найти и воспроизведения.  
+ You will also want to test under real conditions: with multiple clients connected over high-speed connections as well as low-speed serial lines, including modem connections. It can be difficult to simulate real conditions, but it is certainly worth spending time designing possible scenarios and executing them. If possible, you will also want to use tools to do capacity and stress testing. Certain classes of bugs, such as timing bugs, are difficult to find and to reproduce.  
   
- Одна из задач программирования Интернета его отображения.  Многие методы доступа на сайте может замедлить сервера.  Требуется сервер снизить null.  Необходимо, чтобы все, может быть разрушительно на компьютере пользователя, если приложение завершается ошибкой, \(например, повреждение данных во время записи в реестр или во время записи файлов cookie на клиенте\).  
+ One of the challenges of Internet programming is its visibility. Many accesses to your site may slow down your server. You want your server to degrade gracefully. You want to prevent anything that could be destructive to a user's computer if your application fails (for example, corruption of data while writing to the registry or while writing cookies on the client).  
   
-## См. также  
- [Задачи программирования для интернет\-решений MFC](../mfc/mfc-internet-programming-tasks.md)   
- [Основы программирования для интернет\-решений MFC](../mfc/mfc-internet-programming-basics.md)
+## <a name="see-also"></a>See Also  
+ [MFC Internet Programming Tasks](../mfc/mfc-internet-programming-tasks.md)   
+ [MFC Internet Programming Basics](../mfc/mfc-internet-programming-basics.md)
+
+

@@ -1,5 +1,5 @@
 ---
-title: "Вспомогательные функции классов коллекции | Документы Microsoft"
+title: Collection Class Helpers | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -16,8 +16,8 @@ helpviewer_keywords:
 - DestructElements function
 - ConstructElements function
 - SerializeElements function
-- collection classes, helper functions
-- helper functions collection class
+- collection classes [MFC], helper functions
+- helper functions collection class [MFC]
 ms.assetid: bc3a2368-9edd-4748-9e6a-13cba79517ca
 caps.latest.revision: 14
 author: mikeblome
@@ -37,30 +37,30 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0e0c08ddc57d437c51872b5186ae3fc983bb0199
-ms.openlocfilehash: d2649ef9c8b0320a94ec28a2341baa0f768b07d0
+ms.translationtype: MT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 20e953c408a72717bc7e738298fd7f12ffc30699
 ms.contentlocale: ru-ru
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 09/12/2017
 
 ---
-# <a name="collection-class-helpers"></a>Вспомогательные функции классов коллекции
-Классы коллекций `CMap`, `CList`, и `CArray` использовать шаблонные глобального вспомогательные функции для таких целей, как сравнение, копирования и сериализации элементов. Как часть своей реализации классов на основе `CMap`, `CList`, и `CArray`, необходимо переопределить эти функции при необходимости с версиями, которые соответствуют типу данных, хранящихся в вашей карты, список или массив. Сведения о переопределении вспомогательные функции, такие как `SerializeElements`, см. в статье [коллекций: осуществление строго типизированную коллекцию](../../mfc/how-to-make-a-type-safe-collection.md). Обратите внимание, что **ConstructElements** и **DestructElements** являются устаревшими.  
+# <a name="collection-class-helpers"></a>Collection Class Helpers
+The collection classes `CMap`, `CList`, and `CArray` use templated global helper functions for such purposes as comparing, copying, and serializing elements. As part of your implementation of classes based on `CMap`, `CList`, and `CArray`, you must override these functions as necessary with versions tailored to the type of data stored in your map, list, or array. For information on overriding helper functions such as `SerializeElements`, see the article [Collections: How to Make a Type-Safe Collection](../../mfc/how-to-make-a-type-safe-collection.md). Note that **ConstructElements** and **DestructElements** have been deprecated.  
   
- Библиотеки классов Microsoft Foundation предоставляет следующие глобальные функции в afxtempl.h помогают настроить пользовательские классы коллекций:  
+ The Microsoft Foundation Class Library provides the following global functions in afxtempl.h to help you customize your collection classes:  
   
-### <a name="collection-class-helpers"></a>Вспомогательные функции классов коллекции  
+### <a name="collection-class-helpers"></a>Collection Class Helpers  
   
 |||  
 |-|-|  
-|[CompareElements](#compareelements)|Указывает, совпадают ли элементы.|  
-|[CopyElements](#copyelements)|Копирует элементы из одного массива в другой.|  
-|[DumpElements](#dumpelements)|Предоставляет поточно ориентированный выходных данных диагностики.|  
-|[HashKey](#hashkey)|Вычисляет хэш-ключа.|  
-|[SerializeElements](#serializeelements)|Сохраняет или получает элементы в или из архива.|  
+|[CompareElements](#compareelements)|Indicates whether elements are the same.|  
+|[CopyElements](#copyelements)|Copies elements from one array to another.|  
+|[DumpElements](#dumpelements)|Provides stream-oriented diagnostic output.|  
+|[HashKey](#hashkey)|Calculates a hash key.|  
+|[SerializeElements](#serializeelements)|Stores or retrieves elements to or from an archive.|  
   
-##  <a name="compareelements"></a>CompareElements  
- Напрямую с именем [CList::Find] (#clist__find clist class.md #not_found.md и косвенно [cmap__lookup](cmap-class.md#lookup) и [[cmap__operator]](cmap-class.md#operator_at).  
+##  <a name="compareelements"></a>  CompareElements  
+ Called directly by [CList::Find](clist-class.md#not_found.md#clist__find and indirectly by [cmap__lookup](cmap-class.md#lookup) and [cmap__operator &#91;&#93;](cmap-class.md#operator_at).  
   
 ```   
 template<class TYPE, class ARG_TYPE>  
@@ -70,34 +70,34 @@ CompareElements(
     const ARG_TYPE* pElement2);  
 ```  
   
-### <a name="parameters"></a>Параметры  
- *ТИП*  
- Тип первый элемент для сравнения.  
+### <a name="parameters"></a>Parameters  
+ *TYPE*  
+ The type of the first element to be compared.  
   
  `pElement1`  
- Указатель на первый элемент для сравнения.  
+ Pointer to the first element to be compared.  
   
  `ARG_TYPE`  
- Тип второй элемент для сравнения.  
+ The type of the second element to be compared.  
   
  `pElement2`  
- Указатель на второй элемент для сравнения.  
+ Pointer to the second element to be compared.  
   
-### <a name="return-value"></a>Возвращаемое значение  
- Ненулевое значение, если объект, на который указывает `pElement1` равен объекту, на который указывает `pElement2`; в противном случае — 0.  
+### <a name="return-value"></a>Return Value  
+ Nonzero if the object pointed to by `pElement1` is equal to the object pointed to by `pElement2`; otherwise 0.  
   
-### <a name="remarks"></a>Примечания  
- `CMap` Вызывает использование `CMap` параметры шаблона *ключ* и `ARG_KEY`.  
+### <a name="remarks"></a>Remarks  
+ The `CMap` calls use the `CMap` template parameters *KEY* and `ARG_KEY`.  
   
- Реализация по умолчанию возвращает результат сравнения * \*pElement1* и * \*pElement2*. Эту функцию можно переопределите, чтобы он сравнивает элементы в способом, подходящим для вашего приложения.  
+ The default implementation returns the result of the comparison of *\*pElement1* and *\*pElement2*. Override this function so that it compares the elements in a way that is appropriate for your application.  
   
- В языке C++ определены оператора сравнения ( `==`) для простых типов ( `char`, `int`, **float**и так далее), но не определяет оператор сравнения для классов и структур. Если вы хотите использовать `CompareElements` или для создания экземпляра одного из классов коллекций, которые использует его, необходимо определить оператор сравнения или перегрузка `CompareElements` с версией, которая возвращает соответствующие значения.  
+ The C++ language defines the comparison operator ( `==`) for simple types ( `char`, `int`, **float**, and so on) but does not define a comparison operator for classes and structures. If you want to use `CompareElements` or to instantiate one of the collection classes that uses it, you must either define the comparison operator or overload `CompareElements` with a version that returns appropriate values.  
   
-### <a name="requirements"></a>Требования  
-   **Заголовок:** afxtempl.h   
+### <a name="requirements"></a>Requirements  
+   **Header:** afxtempl.h   
   
-##  <a name="copyelements"></a>CopyElements  
- Эта функция вызывается непосредственно [CArray::Append](carray-class.md#append) и [CArray::Copy](carray-class.md#copy).  
+##  <a name="copyelements"></a>  CopyElements  
+ This function is called directly by [CArray::Append](carray-class.md#append) and [CArray::Copy](carray-class.md#copy).  
   
 ```   
 template<class TYPE>  
@@ -107,29 +107,29 @@ void AFXAPI CopyElements(
     INT_PTR nCount);  
 ```  
   
-### <a name="parameters"></a>Параметры  
- *ТИП*  
- Параметр шаблона, указав тип элементов для копирования.  
+### <a name="parameters"></a>Parameters  
+ *TYPE*  
+ Template parameter specifying the type of elements to be copied.  
   
  `pDest`  
- Указатель в место назначения, куда будут скопированы элементы.  
+ Pointer to the destination where the elements will be copied.  
   
  `pSrc`  
- Указатель на источник копируемых элементов.  
+ Pointer to the source of the elements to be copied.  
   
  `nCount`  
- Число копируемых элементов.  
+ Number of elements to be copied.  
   
-### <a name="remarks"></a>Примечания  
- Реализация по умолчанию использует простой оператор присваивания ( ** = ** ) для выполнения операции копирования. Если при копировании типа нет перегруженного оператора =, реализация по умолчанию выполняет побитовое копирование.  
+### <a name="remarks"></a>Remarks  
+ The default implementation uses the simple assignment operator ( **=** ) to perform the copy operation. If the type being copied does not have an overloaded operator=, then the default implementation performs a bitwise copy.  
   
- Сведения о реализации этого и других вспомогательных функций, см. в статье [коллекций: осуществление строго типизированную коллекцию](../how-to-make-a-type-safe-collection.md).  
+ For information on implementing this and other helper functions, see the article [Collections: How to Make a Type-Safe Collection](../how-to-make-a-type-safe-collection.md).  
   
-### <a name="requirements"></a>Требования  
-  **Заголовок** afxtempl.h  
+### <a name="requirements"></a>Requirements  
+  **Header** afxtempl.h  
   
-##  <a name="dumpelements"></a>DumpElements  
- Для элементов коллекции при переопределении предоставляет поточно ориентированный диагностические данные в виде текста.  
+##  <a name="dumpelements"></a>  DumpElements  
+ Provides stream-oriented diagnostic output in text form for the elements of your collection when overridden.  
   
 ```   
 template<class TYPE>  
@@ -139,52 +139,52 @@ void  AFXAPI DumpElements(
     INT_PTR nCount);  
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
  `dc`  
- Дамп контекста для дампа элементов.  
+ Dump context for dumping elements.  
   
- *ТИП*  
- Параметр шаблона, указав тип элементов.  
+ *TYPE*  
+ Template parameter specifying the type of the elements.  
   
  `pElements`  
- Указатель на элементы, которые будут выводиться.  
+ Pointer to the elements to be dumped.  
   
  `nCount`  
- Число элементов в дамп.  
+ Number of elements to be dumped.  
   
-### <a name="remarks"></a>Примечания  
- **CArray::Dump**, **CList::Dump**, и **CMap::Dump** функции вызывать его, если глубина дампа больше 0.  
+### <a name="remarks"></a>Remarks  
+ The **CArray::Dump**, **CList::Dump**, and **CMap::Dump** functions call this if the depth of the dump is greater than 0.  
   
- Реализация по умолчанию не выполняет никаких действий. Если элементами коллекции являются производными от `CObject`, переопределение обычно перебора элементов коллекции, вызов `Dump` для каждого элемента, в свою очередь.  
+ The default implementation does nothing. If the elements of your collection are derived from `CObject`, your override will typically iterate through the collection's elements, calling `Dump` for each element in turn.  
   
 
-### <a name="requirements"></a>Требования  
-  **Заголовок** afxtempl.h  
+### <a name="requirements"></a>Requirements  
+  **Header** afxtempl.h  
   
-##  <a name="hashkey"></a>HashKey  
- Вычисляет хэш-значение для заданного ключа.  
+##  <a name="hashkey"></a>  HashKey  
+ Calculates a hash value for the given key.  
   
 ```  
 template<class ARG_KEY>  
 AFX_INLINE UINT AFXAPI HashKey(ARG_KEY  key); 
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
  `ARG_KEY`  
- Параметр шаблона, указав тип данных, используемый для доступа к разделам карты.  
+ Template parameter specifying the data type used to access map keys.  
   
  `key`  
- Ключ хэша, значение которого необходимо вычислить.  
+ The key whose hash value is to be calculated.  
   
-### <a name="return-value"></a>Возвращаемое значение  
- Хэш-значение ключа.  
+### <a name="return-value"></a>Return Value  
+ The key's hash value.  
   
-### <a name="remarks"></a>Примечания  
- Эта функция вызывается непосредственно [CMap::RemoveKey](cmap-class.md#removekey) и косвенно [CMap::Lookup](cmap-class.md#lookup) и [[CMap::Operator]](cmap-class.md#operator_at).
+### <a name="remarks"></a>Remarks  
+ This function is called directly by [CMap::RemoveKey](cmap-class.md#removekey) and indirectly by [CMap::Lookup](cmap-class.md#lookup) and [CMap::Operator &#91;&#93;](cmap-class.md#operator_at).
   
- Реализация по умолчанию создает значение хэша, переключившись `key` прямо с четырех позиций. Эту функцию можно переопределите, чтобы он возвращал хэш-значения для вашего приложения.  
+ The default implementation creates a hash value by shifting `key` right by four positions. Override this function so that it returns hash values appropriate for your application.  
   
-### <a name="example"></a>Пример
+### <a name="example"></a>Example
  ```cpp  
 template <> UINT AFXAPI HashKey(unsigned __int64 key)
 {
@@ -194,43 +194,43 @@ template <> UINT AFXAPI HashKey(unsigned __int64 key)
 }
  ```
  
-### <a name="requirements"></a>Требования  
-  **Заголовок** afxtempl.h 
+### <a name="requirements"></a>Requirements  
+  **Header** afxtempl.h 
   
-##  <a name="serializeelements"></a>SerializeElements  
- [CArray](carray-class.md), [CList](clist-class.md), и [CMap](cmap-class.md) эта функция вызывается для сериализации элементов.  
+##  <a name="serializeelements"></a>  SerializeElements  
+ [CArray](carray-class.md), [CList](clist-class.md), and [CMap](cmap-class.md) call this function to serialize elements.  
   
 ```   
 template<class TYPE>  
 void AFXAPI SerializeElements(CArchive& ar, TYPE* pElements, INT_PTR nCount);  
 ```  
   
-### <a name="parameters"></a>Параметры  
- *ТИП*  
- Параметр шаблона, указав тип элементов.  
+### <a name="parameters"></a>Parameters  
+ *TYPE*  
+ Template parameter specifying the type of the elements.  
   
  `ar`  
- Объект для архивации в архив.  
+ An archive object to archive to or from.  
   
  `pElements`  
- Указатель на элементы архивирования.  
+ Pointer to the elements being archived.  
   
  `nCount`  
- Количество элементов архивирования  
+ Number of elements being archived  
   
-### <a name="remarks"></a>Примечания  
- Реализация по умолчанию не побитовой операции чтения или записи.  
+### <a name="remarks"></a>Remarks  
+ The default implementation does a bitwise read or write.  
   
- Сведения о реализации этого и других вспомогательных функций, см. в статье [коллекций: осуществление строго типизированную коллекцию](../how-to-make-a-type-safe-collection.md).  
+ For information on implementing this and other helper functions, see the article [Collections: How to Make a Type-Safe Collection](../how-to-make-a-type-safe-collection.md).  
   
-### <a name="example"></a>Пример  
- Пример см. в статье [коллекций: осуществление строго типизированную коллекцию](../how-to-make-a-type-safe-collection.md).  
+### <a name="example"></a>Example  
+ See the example in the article [Collections: How to Make a Type-Safe Collection](../how-to-make-a-type-safe-collection.md).  
  
-### <a name="requirements"></a>Требования  
-  **Заголовок** afxtempl.h 
+### <a name="requirements"></a>Requirements  
+  **Header** afxtempl.h 
     
-## <a name="see-also"></a>См. также  
- [Макросы и глобальные объекты](mfc-macros-and-globals.md)   
- [Класс CMap](cmap-class.md)   
- [CList-класс](clist-class.md)   
- [CArray-класс](carray-class.md)
+## <a name="see-also"></a>See Also  
+ [Macros and Globals](mfc-macros-and-globals.md)   
+ [CMap Class](cmap-class.md)   
+ [CList Class](clist-class.md)   
+ [CArray Class](carray-class.md)

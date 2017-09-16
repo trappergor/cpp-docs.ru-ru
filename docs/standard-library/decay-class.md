@@ -1,5 +1,5 @@
 ---
-title: "Класс decay | Документы Майкрософт"
+title: decay Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -9,7 +9,6 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
-- decay
 - type_traits/std::decay
 dev_langs:
 - C++
@@ -34,17 +33,17 @@ translation.priority.mt:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 51fbd09793071631985720550007dddbe16f598f
-ms.openlocfilehash: cb75f00c4f7dfc46122c8e69e5572de1ec23f8ed
+ms.translationtype: MT
+ms.sourcegitcommit: 5d026c375025b169d5db8445cbb52c0c917b2d8d
+ms.openlocfilehash: 2fd24a6f493cce88804abedf275c8038d0e05067
 ms.contentlocale: ru-ru
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 09/09/2017
 
 ---
-# <a name="decay-class"></a>Класс decay
-Создает тип, как передано по значению. Создает тип, не являющийся ссылочным, константным, временным, или создает указатель на тип из функции или типа массива.  
+# <a name="decay-class"></a>decay Class
+Produces the type as passed by value. Makes the type non-reference, non-const, non-volatile, or makes a pointer to the type from a function or an array type.  
   
-## <a name="syntax"></a>Синтаксис  
+## <a name="syntax"></a>Syntax  
   
 ```
 template <class T>
@@ -54,27 +53,27 @@ template <class T>
 using decay_t = typename decay<T>::type;
 ```  
   
-#### <a name="parameters"></a>Параметры  
+#### <a name="parameters"></a>Parameters  
  `T`  
- Тип для изменения.  
+ The type to modify.  
   
-## <a name="remarks"></a>Примечания  
- Используйте шаблон decay для создания результирующего типа, как если бы тип был передан по значению в качестве аргумента. Член класса шаблона typedef `type` содержит измененный тип, который определяется на следующих этапах:  
+## <a name="remarks"></a>Remarks  
+ Use the decay template to produce the resulting type as if the type was passed by value as an argument. The template class member typedef `type` holds a modified type that is defined in the following stages:  
   
--   Тип `U` определяется как `remove_reference<T>::type`.  
+-   The type `U` is defined as `remove_reference<T>::type`.  
   
--   Если `is_array<U>::value` имеет значение true, измененный тип `type` имеет значение `remove_extent<U>::type *`.  
+-   If `is_array<U>::value` is true, the modified type `type` is `remove_extent<U>::type *`.  
   
--   Если же `is_function<U>::value` имеет значение true, измененный тип `type` имеет значение `add_pointer<U>::type`.  
+-   Otherwise, if `is_function<U>::value` is true, the modified type `type` is `add_pointer<U>::type`.  
   
--   В противном случае измененный тип `type` имеет значение `remove_cv<U>::type`.  
+-   Otherwise, the modified type `type` is `remove_cv<U>::type`.  
   
-## <a name="requirements"></a>Требования  
- **Заголовок:** \<type_traits>  
+## <a name="requirements"></a>Requirements  
+ **Header:** \<type_traits>  
   
- **Пространство имен:** std  
+ **Namespace:** std  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>See Also  
  [<type_traits>](../standard-library/type-traits.md)
 
 

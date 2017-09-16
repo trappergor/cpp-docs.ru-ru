@@ -1,5 +1,5 @@
 ---
-title: "Структура DRAWITEMSTRUCT | Документы Microsoft"
+title: DRAWITEMSTRUCT Structure | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -13,7 +13,7 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- DRAWITEMSTRUCT structure
+- DRAWITEMSTRUCT structure [MFC]
 ms.assetid: ba9ef1d4-aebb-45e9-b956-4b81a02e50f7
 caps.latest.revision: 11
 author: mikeblome
@@ -33,17 +33,17 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 040985df34f2613b4e4fae29498721aef15d50cb
-ms.openlocfilehash: bd47b12f6401cb6603855fa153fe268bfe68914c
+ms.translationtype: MT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 65319e8cf34302a37ba030705ec701698abd54bf
 ms.contentlocale: ru-ru
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 09/12/2017
 
 ---
-# <a name="drawitemstruct-structure"></a>Структура DRAWITEMSTRUCT
-Структура `DRAWITEMSTRUCT` содержит сведения, необходимые окну-владельцу для определения способа рисования определяемого владельцем элемента управления или пункта меню.  
+# <a name="drawitemstruct-structure"></a>DRAWITEMSTRUCT Structure
+The `DRAWITEMSTRUCT` structure provides information the owner window must have to determine how to paint an owner-drawn control or menu item.  
   
-## <a name="syntax"></a>Синтаксис  
+## <a name="syntax"></a>Syntax  
   
 ```  
 typedef struct tagDRAWITEMSTRUCT {  
@@ -59,67 +59,67 @@ typedef struct tagDRAWITEMSTRUCT {
 } DRAWITEMSTRUCT;  
 ```  
   
-#### <a name="parameters"></a>Параметры  
+#### <a name="parameters"></a>Parameters  
  `CtlType`  
- Тип элемента управления. Ниже приведены значения для типов элементов управления.  
+ The control type. The values for control types are as follows:  
   
-- **ODT_BUTTON** — определяемая владельцем кнопка  
+- **ODT_BUTTON** Owner-drawn button  
   
-- **ODT_COMBOBOX** — определяемое владельцем поле со списком  
+- **ODT_COMBOBOX** Owner-drawn combo box  
   
-- **ODT_LISTBOX** — определяемый владельцем список  
+- **ODT_LISTBOX** Owner-drawn list box  
   
-- **ODT_MENU** — определяемое владельцем меню  
+- **ODT_MENU** Owner-drawn menu  
   
-- **ODT_LISTVIEW** — элемент управления "Представление списка"  
+- **ODT_LISTVIEW** List view control  
   
-- **ODT_STATIC** — определяемый владельцем статический элемент управления  
+- **ODT_STATIC** Owner-drawn static control  
   
-- **ODT_TAB** — набор вкладок  
+- **ODT_TAB** Tab control  
   
  `CtlID`  
- Идентификатор элемента управления для поля со списком, списка или кнопки. Этот элемент не используется для меню.  
+ The control ID for a combo box, list box, or button. This member is not used for a menu.  
   
  `itemID`  
- Идентификатор пункта меню меню или индекс элемента в списке или поле со списком. Для пустого списка или поля со списком этот элемент имеет отрицательное значение, что позволяет приложению рисовать только прямоугольник фокуса в координатах, заданных элементом **rcItem** , несмотря на то что в элементе управления нет элементов. Таким образом пользователю может быть показано, имеет ли этот список или поле со списком фокус ввода. Значение битов в элементе **itemAction** определяет, должен ли прямоугольник рисоваться так, как если бы фокус ввода был в списке или в поле со списком.  
+ The menu-item ID for a menu or the index of the item in a list box or combo box. For an empty list box or combo box, this member is a negative value, which allows the application to draw only the focus rectangle at the coordinates specified by the **rcItem** member even though there are no items in the control. The user can thus be shown whether the list box or combo box has the input focus. The setting of the bits in the **itemAction** member determines whether the rectangle is to be drawn as though the list box or combo box has input focus.  
   
  `itemAction`  
- Определяет необходимое действие рисования. Это будет один или несколько следующих битов.  
+ Defines the drawing action required. This will be one or more of the following bits:  
   
-- **ODA_DRAWENTIRE** — этот бит устанавливается, когда должен быть нарисован весь элемент управления.  
+- **ODA_DRAWENTIRE** This bit is set when the entire control needs to be drawn.  
   
-- **ODA_FOCUS** — этот бит устанавливается в том случае, когда элемент управления получает или теряет фокус ввода. Чтобы определить, имеет ли элемент управления фокус, следует проверить элемент **ItemState** .  
+- **ODA_FOCUS** This bit is set when the control gains or loses input focus. The **itemState** member should be checked to determine whether the control has focus.  
   
-- **ODA_SELECT** — этот бит устанавливается в том случае, когда изменилось только состояние выбора. Чтобы определить новое состояние выбора, следует проверить элемент **itemState** .  
+- **ODA_SELECT** This bit is set when only the selection status has changed. The **itemState** member should be checked to determine the new selection state.  
   
  *itemState*  
- Указывает визуальное состояние элемента выполнения текущего действия рисования. То есть если пункт меню будет недоступен, будет установлен флаг состояния **ODS_GRAYED** . Ниже приведены возможные флаги состояния.  
+ Specifies the visual state of the item after the current drawing action takes place. That is, if a menu item is to be dimmed, the state flag **ODS_GRAYED** will be set. The state flags are as follows:  
   
-- **ODS_CHECKED** — этот бит устанавливается, если элемент меню будет проверяться. Этот бит используется только в меню.  
+- **ODS_CHECKED** This bit is set if the menu item is to be checked. This bit is used only in a menu.  
   
-- **ODS_DISABLED** — этот бит устанавливается, если элемент будет  отображаться в отключенном состоянии.  
+- **ODS_DISABLED** This bit is set if the item is to be drawn as disabled.  
   
-- **ODS_FOCUS** — этот бит устанавливается, если элемент имеет фокус ввода.  
+- **ODS_FOCUS** This bit is set if the item has input focus.  
   
-- **ODS_GRAYED** — этот бит устанавливается, если элемент недоступен. Этот бит используется только в меню.  
+- **ODS_GRAYED** This bit is set if the item is to be dimmed. This bit is used only in a menu.  
   
-- **ODS_SELECTED** — этот бит устанавливается, если элемент находится в выбранном состоянии.  
+- **ODS_SELECTED** This bit is set if the item's status is selected.  
   
-- **ODS_COMBOBOXEDIT** — рисование выполняется в поле выбора (в элементе управления "Поле ввода") определяемого владельцем поля со списком.  
+- **ODS_COMBOBOXEDIT** The drawing takes place in the selection field (edit control) of an ownerdrawn combo box.  
   
-- **ODS_DEFAULT** — элемент является элементом по умолчанию.  
+- **ODS_DEFAULT** The item is the default item.  
   
  `hwndItem`  
- Указывает дескриптор окна элемента управления для полей со списком, списков и кнопок. Указывает дескриптор меню (`HMENU`), содержащего пункт меню.  
+ Specifies the window handle of the control for combo boxes, list boxes, and buttons. Specifies the handle of the menu (`HMENU`) that contains the item for menus.  
   
  `hDC`  
- Определяет контекст устройства. Этот контекст устройства должен использоваться при выполнении операций рисования в элементе управления.  
+ Identifies a device context. This device context must be used when performing drawing operations on the control.  
   
  *rcItem*  
- Прямоугольник в контексте устройства, заданном элементом `hDC` , который определяет границы элемента управления для отображения. Windows автоматически обрезает все, что владелец рисует в контексте устройства для полей со списком, списков и кнопок, но не обрезает пункты меню. При рисовании пунктов меню владелец не должен выходить за границы прямоугольника, заданного элементом **rcItem** .  
+ A rectangle in the device context specified by the `hDC` member that defines the boundaries of the control to be drawn. Windows automatically clips anything the owner draws in the device context for combo boxes, list boxes, and buttons, but it does not clip menu items. When drawing menu items, the owner must not draw outside the boundaries of the rectangle defined by the **rcItem** member.  
   
  `itemData`  
- Для поля со списком или списка этот элемент содержит значение, которое было передано в список с помощью одной из следующих структур:  
+ For a combo box or list box, this member contains the value that was passed to the list box by one of the following:  
   
 - [CComboBox::AddString](../../mfc/reference/ccombobox-class.md#addstring)  
   
@@ -129,7 +129,7 @@ typedef struct tagDRAWITEMSTRUCT {
   
 - [CListBox::InsertString](../../mfc/reference/clistbox-class.md#insertstring)  
   
- Для меню этот элемент содержит значение, которое было передано в меню с помощью одной из следующих структур:  
+ For a menu, this member contains the value that was passed to the menu by one of the following:  
   
 - [CMenu::AppendMenu](../../mfc/reference/cmenu-class.md#appendmenu)  
   
@@ -137,14 +137,14 @@ typedef struct tagDRAWITEMSTRUCT {
   
 - [CMenu::ModifyMenu](../../mfc/reference/cmenu-class.md#modifymenu)  
   
-## <a name="remarks"></a>Примечания  
- Окно-владелец определяемого владельцем элемента управления или пункта меню получает указатель на эту структуру как параметр `lParam` сообщения `WM_DRAWITEM` .  
+## <a name="remarks"></a>Remarks  
+ The owner window of the owner-drawn control or menu item receives a pointer to this structure as the `lParam` parameter of the `WM_DRAWITEM` message.  
   
-## <a name="requirements"></a>Требования  
- **Заголовок:** winuser.h  
+## <a name="requirements"></a>Requirements  
+ **Header:** winuser.h  
   
-## <a name="see-also"></a>См. также  
- [Структуры, стили, обратные вызовы и схемы сообщений](../../mfc/reference/structures-styles-callbacks-and-message-maps.md)   
+## <a name="see-also"></a>See Also  
+ [Structures, Styles, Callbacks, and Message Maps](../../mfc/reference/structures-styles-callbacks-and-message-maps.md)   
  [CWnd::OnDrawItem](../../mfc/reference/cwnd-class.md#ondrawitem)
 
 

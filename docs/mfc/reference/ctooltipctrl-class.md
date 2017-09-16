@@ -1,5 +1,5 @@
 ---
-title: "CToolTipCtrl-класс | Документы Microsoft"
+title: CToolTipCtrl Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -47,9 +47,39 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- tool tips [C++], tool tip controls
-- data tips [C++]
-- CToolTipCtrl class
+- CToolTipCtrl [MFC], CToolTipCtrl
+- CToolTipCtrl [MFC], Activate
+- CToolTipCtrl [MFC], AddTool
+- CToolTipCtrl [MFC], AdjustRect
+- CToolTipCtrl [MFC], Create
+- CToolTipCtrl [MFC], CreateEx
+- CToolTipCtrl [MFC], DelTool
+- CToolTipCtrl [MFC], GetBubbleSize
+- CToolTipCtrl [MFC], GetCurrentTool
+- CToolTipCtrl [MFC], GetDelayTime
+- CToolTipCtrl [MFC], GetMargin
+- CToolTipCtrl [MFC], GetMaxTipWidth
+- CToolTipCtrl [MFC], GetText
+- CToolTipCtrl [MFC], GetTipBkColor
+- CToolTipCtrl [MFC], GetTipTextColor
+- CToolTipCtrl [MFC], GetTitle
+- CToolTipCtrl [MFC], GetToolCount
+- CToolTipCtrl [MFC], GetToolInfo
+- CToolTipCtrl [MFC], HitTest
+- CToolTipCtrl [MFC], Pop
+- CToolTipCtrl [MFC], Popup
+- CToolTipCtrl [MFC], RelayEvent
+- CToolTipCtrl [MFC], SetDelayTime
+- CToolTipCtrl [MFC], SetMargin
+- CToolTipCtrl [MFC], SetMaxTipWidth
+- CToolTipCtrl [MFC], SetTipBkColor
+- CToolTipCtrl [MFC], SetTipTextColor
+- CToolTipCtrl [MFC], SetTitle
+- CToolTipCtrl [MFC], SetToolInfo
+- CToolTipCtrl [MFC], SetToolRect
+- CToolTipCtrl [MFC], SetWindowTheme
+- CToolTipCtrl [MFC], Update
+- CToolTipCtrl [MFC], UpdateTipText
 ms.assetid: 8973f70c-b73a-46c7-908d-758f364b9a97
 caps.latest.revision: 20
 author: mikeblome
@@ -69,79 +99,79 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0e0c08ddc57d437c51872b5186ae3fc983bb0199
-ms.openlocfilehash: 982aae01dc1308896e9c625e2c2e118b65ec2e64
+ms.translationtype: MT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 6bf1e328fff24bd92979d21faf24a5fc6aaf6644
 ms.contentlocale: ru-ru
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 09/12/2017
 
 ---
 # <a name="ctooltipctrl-class"></a>CToolTipCtrl Class
-Инкапсулирует функциональность элемента управления "всплывающая подсказка" — небольшого всплывающего окна, в котором отображается одна строка текста, описывающая назначение инструмента в приложении.  
+Encapsulates the functionality of a "tool tip control," a small pop-up window that displays a single line of text describing the purpose of a tool in an application.  
   
-## <a name="syntax"></a>Синтаксис  
+## <a name="syntax"></a>Syntax  
   
 ```  
 class CToolTipCtrl : public CWnd  
 ```  
   
-## <a name="members"></a>Члены  
+## <a name="members"></a>Members  
   
-### <a name="public-constructors"></a>Открытые конструкторы  
+### <a name="public-constructors"></a>Public Constructors  
   
-|Имя|Описание|  
+|Name|Description|  
 |----------|-----------------|  
-|[CToolTipCtrl::CToolTipCtrl](#ctooltipctrl)|Создает объект `CToolTipCtrl`.|  
+|[CToolTipCtrl::CToolTipCtrl](#ctooltipctrl)|Constructs a `CToolTipCtrl` object.|  
   
-### <a name="public-methods"></a>Открытые методы  
+### <a name="public-methods"></a>Public Methods  
   
-|Имя|Описание|  
+|Name|Description|  
 |----------|-----------------|  
-|[CToolTipCtrl::Activate](#activate)|Активирует и деактивирует управления всплывающей подсказки.|  
-|[CToolTipCtrl::AddTool](#addtool)|Регистрирует средство управления всплывающей подсказки.|  
-|[CToolTipCtrl::AdjustRect](#adjustrect)|Преобразование между текстом элемента управления всплывающей подсказки отобразить прямоугольник и ее прямоугольника окна.|  
-|[CToolTipCtrl::Create](#create)|Создание элемента управления всплывающей подсказки и присоединяет его к `CToolTipCtrl` объекта.|  
-|[CToolTipCtrl::CreateEx](#createex)|Создает элемента управления всплывающей подсказки с указанным расширенные стили Windows и присоединяет его к `CToolTipCtrl` объекта.|  
-|[CToolTipCtrl::DelTool](#deltool)|Удаляет средство с элементом управления всплывающей подсказки.|  
-|[CToolTipCtrl::GetBubbleSize](#getbubblesize)|Получает размер всплывающей подсказки.|  
-|[CToolTipCtrl::GetCurrentTool](#getcurrenttool)|Извлекает сведения, такие как размер, положение и текст окна всплывающей подсказки, который отображает текущий элемент управления всплывающей подсказки.|  
-|[CToolTipCtrl::GetDelayTime](#getdelaytime)|Получает начальный, всплывающие окна и reshow длительности, заданные в настоящее время средство управления подсказки.|  
-|[CToolTipCtrl::GetMargin](#getmargin)|Извлекает сверху, слева, снизу и правого поля, заданные для подсказки.|  
-|[CToolTipCtrl::GetMaxTipWidth](#getmaxtipwidth)|Получает максимальную ширину для подсказки.|  
-|[CToolTipCtrl::GetText](#gettext)|Получает текст, который поддерживает средство управления всплывающей подсказки.|  
-|[CToolTipCtrl::GetTipBkColor](#gettipbkcolor)|Получает цвет фона в подсказки.|  
-|[CToolTipCtrl::GetTipTextColor](#gettiptextcolor)|Получает цвет текста в окне подсказки инструментов.|  
-|[CToolTipCtrl::GetTitle](#gettitle)|Возвращает название текущего элемента управления всплывающей подсказки.|  
-|[CToolTipCtrl::GetToolCount](#gettoolcount)|Получает количество средств, поддерживаемых элементом управления всплывающей подсказки.|  
-|[CToolTipCtrl::GetToolInfo](#gettoolinfo)|Возвращает сведения, поддерживающий управления всплывающей подсказки о средстве.|  
-|[CToolTipCtrl::HitTest](#hittest)|Проверяет точку, чтобы определить, является ли оно внутри ограничивающего прямоугольника данное средство. В этом случае извлекает сведения о средстве.|  
-|[CToolTipCtrl::Pop](#pop)|Удаляет отображаемые подсказки из представления.|  
-|[CToolTipCtrl::Popup](#popup)|Вызывает текущий элемент управления всплывающей подсказки для отображения в координатах последнего сообщения мыши.|  
-|[CToolTipCtrl::RelayEvent](#relayevent)|Передает сообщение мыши элементом управления всплывающей подсказки для обработки.|  
-|[CToolTipCtrl::SetDelayTime](#setdelaytime)|Задает начальный всплывающем и reshow длительности для элемента управления всплывающей подсказки.|  
-|[CToolTipCtrl::SetMargin](#setmargin)|Задает начало, левую, нижнюю и правого поля для подсказки.|  
-|[CToolTipCtrl::SetMaxTipWidth](#setmaxtipwidth)|Задает максимальную ширину для подсказки.|  
-|[CToolTipCtrl::SetTipBkColor](#settipbkcolor)|Задает цвет фона в подсказки.|  
-|[CToolTipCtrl::SetTipTextColor](#settiptextcolor)|Задает цвет текста в окне подсказки инструментов.|  
-|[CToolTipCtrl::SetTitle](#settitle)|Добавляет стандартную строку значок и заголовок подсказки.|  
-|[CToolTipCtrl::SetToolInfo](#settoolinfo)|Задает сведения, которые поддерживает всплывающей подсказки для инструмента.|  
-|[CToolTipCtrl::SetToolRect](#settoolrect)|Задает ограничивающий прямоугольник для средства.|  
-|[CToolTipCtrl::SetWindowTheme](#setwindowtheme)|Задает стиль оформления подсказки.|  
-|[CToolTipCtrl::Update](#update)|Вызывает перерисовку текущего инструмента.|  
-|[CToolTipCtrl::UpdateTipText](#updatetiptext)|Задает текст подсказки для инструмента.|  
+|[CToolTipCtrl::Activate](#activate)|Activates and deactivates the tool tip control.|  
+|[CToolTipCtrl::AddTool](#addtool)|Registers a tool with the tool tip control.|  
+|[CToolTipCtrl::AdjustRect](#adjustrect)|Converts between a tool tip control's text display rectangle and its window rectangle.|  
+|[CToolTipCtrl::Create](#create)|Creates a tool tip control and attaches it to a `CToolTipCtrl` object.|  
+|[CToolTipCtrl::CreateEx](#createex)|Creates a tool tip control with the specified Windows extended styles and attaches it to a `CToolTipCtrl` object.|  
+|[CToolTipCtrl::DelTool](#deltool)|Removes a tool from the tool tip control.|  
+|[CToolTipCtrl::GetBubbleSize](#getbubblesize)|Retrieves the size of the tool tip.|  
+|[CToolTipCtrl::GetCurrentTool](#getcurrenttool)|Retrieves information, such as the size, position, and text, of the tooltip window that the current tooltip control displays.|  
+|[CToolTipCtrl::GetDelayTime](#getdelaytime)|Retrieves the initial, pop-up, and reshow durations that are currently set for a tool tip control.|  
+|[CToolTipCtrl::GetMargin](#getmargin)|Retrieves the top, left, bottom, and right margins that are set for a tool tip window.|  
+|[CToolTipCtrl::GetMaxTipWidth](#getmaxtipwidth)|Retrieves the maximum width for a tool tip window.|  
+|[CToolTipCtrl::GetText](#gettext)|Retrieves the text that a tool tip control maintains for a tool.|  
+|[CToolTipCtrl::GetTipBkColor](#gettipbkcolor)|Retrieves the background color in a tool tip window.|  
+|[CToolTipCtrl::GetTipTextColor](#gettiptextcolor)|Retrieves the text color in a tool tip window.|  
+|[CToolTipCtrl::GetTitle](#gettitle)|Retrieves the title of the current tooltip control.|  
+|[CToolTipCtrl::GetToolCount](#gettoolcount)|Retrieves a count of the tools maintained by a tool tip control.|  
+|[CToolTipCtrl::GetToolInfo](#gettoolinfo)|Retrieves the information that a tool tip control maintains about a tool.|  
+|[CToolTipCtrl::HitTest](#hittest)|Tests a point to determine whether it is within the bounding rectangle of the given tool. If so, retrieves information about the tool.|  
+|[CToolTipCtrl::Pop](#pop)|Removes a displayed tool tip window from view.|  
+|[CToolTipCtrl::Popup](#popup)|Causes the current ToolTip control to display at the coordinates of the last mouse message.|  
+|[CToolTipCtrl::RelayEvent](#relayevent)|Passes a mouse message to a tool tip control for processing.|  
+|[CToolTipCtrl::SetDelayTime](#setdelaytime)|Sets the initial, pop-up, and reshow durations for a tool tip control.|  
+|[CToolTipCtrl::SetMargin](#setmargin)|Sets the top, left, bottom, and right margins for a tool tip window.|  
+|[CToolTipCtrl::SetMaxTipWidth](#setmaxtipwidth)|Sets the maximum width for a tool tip window.|  
+|[CToolTipCtrl::SetTipBkColor](#settipbkcolor)|Sets the background color in a tool tip window.|  
+|[CToolTipCtrl::SetTipTextColor](#settiptextcolor)|Sets the text color in a tool tip window.|  
+|[CToolTipCtrl::SetTitle](#settitle)|Adds a standard icon and title string to a tool tip.|  
+|[CToolTipCtrl::SetToolInfo](#settoolinfo)|Sets the information that a tool tip maintains for a tool.|  
+|[CToolTipCtrl::SetToolRect](#settoolrect)|Sets a new bounding rectangle for a tool.|  
+|[CToolTipCtrl::SetWindowTheme](#setwindowtheme)|Sets the visual style of the tool tip window.|  
+|[CToolTipCtrl::Update](#update)|Forces the current tool to be redrawn.|  
+|[CToolTipCtrl::UpdateTipText](#updatetiptext)|Sets the tool tip text for a tool.|  
   
-## <a name="remarks"></a>Примечания  
- «Средства» является либо окна, такие как дочернего окна или элемента управления или определяемые приложением прямоугольной области в клиентской области окна. Во всплывающей подсказке скрыто в большинстве случаев отображаются, только когда пользователь помещает курсор над средством и оставляет его на примерно половину второй. Подсказка появляется рядом с курсором и исчезает, когда пользователь нажимает кнопку мыши или перемещает курсор средство.  
+## <a name="remarks"></a>Remarks  
+ A "tool" is either a window, such as a child window or control, or an application-defined rectangular area within a window's client area. A tool tip is hidden most of the time, appearing only when the user puts the cursor on a tool and leaves it there for approximately one-half second. The tool tip appears near the cursor and disappears when the user clicks a mouse button or moves the cursor off the tool.  
   
- `CToolTipCtrl`предоставляет функциональные возможности для управления начальное время и длительность всплывающей подсказки, ширина полей, окружающих текст подсказки, ширина подсказки сам и цвет фона и текст всплывающей подсказки. Единое средство управления подсказки может предоставить сведения для более чем одного средства.  
+ `CToolTipCtrl` provides the functionality to control the initial time and duration of the tool tip, the margin widths surrounding the tool tip text, the width of the tool tip window itself, and the background and text color of the tool tip. A single tool tip control can provide information for more than one tool.  
   
- `CToolTipCtrl` Класс предоставляет функциональные возможности элемента управления Windows распространенных всплывающая подсказка. Этот элемент управления (и, следовательно, `CToolTipCtrl` класса) доступны только для программы под управлением версий Windows 95/98 и Windows NT 3.51 и более поздних версий.  
+ The `CToolTipCtrl` class provides the functionality of the Windows common tool tip control. This control (and therefore the `CToolTipCtrl` class) is available only to programs running under Windows 95/98 and Windows NT versions 3.51 and later.  
   
- Дополнительные сведения о включении всплывающие подсказки в разделе [всплывающие подсказки в Windows, не являющиеся производными CFrameWnd](../../mfc/tool-tips-in-windows-not-derived-from-cframewnd.md).  
+ For more information about enabling tool tips, see [Tool Tips in Windows not Derived from CFrameWnd](../../mfc/tool-tips-in-windows-not-derived-from-cframewnd.md).  
   
- Дополнительные сведения об использовании `CToolTipCtrl`, в разделе [управления](../../mfc/controls-mfc.md) и [CToolTipCtrl с помощью](../../mfc/using-ctooltipctrl.md).  
+ For more information on using `CToolTipCtrl`, see [Controls](../../mfc/controls-mfc.md) and [Using CToolTipCtrl](../../mfc/using-ctooltipctrl.md).  
   
-## <a name="inheritance-hierarchy"></a>Иерархия наследования  
+## <a name="inheritance-hierarchy"></a>Inheritance Hierarchy  
  [CObject](../../mfc/reference/cobject-class.md)  
   
  [CCmdTarget](../../mfc/reference/ccmdtarget-class.md)  
@@ -150,30 +180,30 @@ class CToolTipCtrl : public CWnd
   
  `CToolTipCtrl`  
   
-## <a name="requirements"></a>Требования  
- **Заголовок:** afxcmn.h  
+## <a name="requirements"></a>Requirements  
+ **Header:** afxcmn.h  
   
-##  <a name="activate"></a>CToolTipCtrl::Activate  
- Эта функция вызывается для активации или деактивации управления всплывающей подсказки.  
+##  <a name="activate"></a>  CToolTipCtrl::Activate  
+ Call this function to activate or deactivate a tool tip control.  
   
 ```  
 void Activate(BOOL bActivate);
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
  `bActivate`  
- Указывает, является ли элемент управления всплывающей подсказки для активации или деактивации.  
+ Specifies whether the tool tip control is to be activated or deactivated.  
   
-### <a name="remarks"></a>Примечания  
- Если `bActivate` — **TRUE**, элемент активизирован; Если **FALSE**, он отключен.  
+### <a name="remarks"></a>Remarks  
+ If `bActivate` is **TRUE**, the control is activated; if **FALSE**, it is deactivated.  
   
- При активном управления всплывающей подсказки совет сведений о программе появляется при прохождении курсора над средством, которое регистрируется с элементом управления; Если неактивен, средство совет сведения не отображается, даже когда курсор находится над средством.  
+ When a tool tip control is active, the tool tip information appears when the cursor is on a tool that is registered with the control; when it is inactive, the tool tip information does not appear, even when the cursor is on a tool.  
   
-### <a name="example"></a>Пример  
-  В примере показано [CPropertySheet::GetTabControl](../../mfc/reference/cpropertysheet-class.md#gettabcontrol).  
+### <a name="example"></a>Example  
+  See the example for [CPropertySheet::GetTabControl](../../mfc/reference/cpropertysheet-class.md#gettabcontrol).  
   
-##  <a name="addtool"></a>CToolTipCtrl::AddTool  
- Регистрирует средство управления всплывающей подсказки.  
+##  <a name="addtool"></a>  CToolTipCtrl::AddTool  
+ Registers a tool with the tool tip control.  
   
 ```  
 BOOL AddTool(
@@ -190,38 +220,38 @@ BOOL AddTool(
     UINT_PTR nIDTool = 0);
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
  `pWnd`  
- Указатель на окно, содержащее средство.  
+ Pointer to the window that contains the tool.  
   
  `nIDText`  
- Идентификатор строкового ресурса с текстом программы.  
+ ID of the string resource that contains the text for the tool.  
   
  *lpRectTool*  
- Указатель на [RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897) структуру, содержащую средство координаты ограничивающего прямоугольника. Координаты указываются относительно левого верхнего угла клиентской области окна, идентифицируемый `pWnd`.  
+ Pointer to a [RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897) structure containing coordinates of the tool's bounding rectangle. The coordinates are relative to the upper-left corner of the client area of the window identified by `pWnd`.  
   
  `nIDTool`  
- Идентификатор средства.  
+ ID of the tool.  
   
  `lpszText`  
- Указатель на текст программы. Если этот параметр имеет значение **LPSTR_TEXTCALLBACK**, **TTN_NEEDTEXT** сообщений уведомления перейти к родительского окна, `pWnd` указывает.  
+ Pointer to the text for the tool. If this parameter contains the value **LPSTR_TEXTCALLBACK**, **TTN_NEEDTEXT** notification messages go to the parent of the window that `pWnd` points to.  
   
-### <a name="return-value"></a>Возвращаемое значение  
- Имеет ненулевое значение в случае успешного выполнения, иначе — 0.  
+### <a name="return-value"></a>Return Value  
+ Nonzero if successful; otherwise 0.  
   
-### <a name="remarks"></a>Примечания  
- **LpRectTool** и **nIDTool** параметры должны быть допустимым, или если **lpRectTool** имеет значение NULL, **nIDTool** должно быть равно 0.  
+### <a name="remarks"></a>Remarks  
+ The **lpRectTool** and **nIDTool** parameters must both be valid, or if **lpRectTool** is NULL, **nIDTool** must be 0.  
   
- Элемента управления всплывающей подсказки может быть связан более чем одного средства. Эта функция вызывается для регистрации средство управления всплывающей подсказки для отображения сведений, хранящихся в подсказке, когда курсор находится в средстве.  
+ A tool tip control can be associated with more than one tool. Call this function to register a tool with the tool tip control, so that the information stored in the tool tip is displayed when the cursor is on the tool.  
   
 > [!NOTE]
->  Невозможно задать всплывающую подсказку в статический элемент управления с помощью `AddTool`.  
+>  You cannot set a tool tip to a static control using `AddTool`.  
   
-### <a name="example"></a>Пример  
-  В примере показано [CPropertySheet::GetTabControl](../../mfc/reference/cpropertysheet-class.md#gettabcontrol).  
+### <a name="example"></a>Example  
+  See the example for [CPropertySheet::GetTabControl](../../mfc/reference/cpropertysheet-class.md#gettabcontrol).  
   
-##  <a name="adjustrect"></a>CToolTipCtrl::AdjustRect  
- Преобразование между текст всплывающей подсказки элемента управления отображения прямоугольника и ее прямоугольника окна.  
+##  <a name="adjustrect"></a>  CToolTipCtrl::AdjustRect  
+ Converts between a tooltip control's text display rectangle and its window rectangle.  
   
 ```  
 BOOL AdjustRect(
@@ -229,57 +259,57 @@ BOOL AdjustRect(
     BOOL bLarger = TRUE);
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
  `lprc`  
- Указатель на [RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897) структура, которая содержит прямоугольник окна средства совет или прямоугольник отображения текста.  
+ Pointer to a [RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897) structure that holds either a tool tip window rectangle or a text display rectangle.  
   
  `bLarger`  
- Если **TRUE**, `lprc` используется для указания прямоугольник отображения текста, и она получает соответствующие прямоугольника окна. Если **FALSE**, `lprc` используется для указания прямоугольника окна, и он получает соответствующий прямоугольник отображения текста.  
+ If **TRUE**, `lprc` is used to specify a text-display rectangle, and it receives the corresponding window rectangle. If **FALSE**, `lprc` is used to specify a window rectangle, and it receives the corresponding text display rectangle.  
   
-### <a name="return-value"></a>Возвращаемое значение  
- Ненулевое значение, если прямоугольник успешно изменены; в противном случае — 0.  
+### <a name="return-value"></a>Return Value  
+ Nonzero if the rectangle is successfully adjusted; otherwise 0.  
   
-### <a name="remarks"></a>Примечания  
- Эта функция-член вычисляет прямоугольник отображения элемента управления всплывающей подсказки в текст из окна прямоугольника или прямоугольника окна совет средства, необходимые для отображения прямоугольник отображения указанного текста.  
+### <a name="remarks"></a>Remarks  
+ This member function calculates a tool tip control's text display rectangle from its window rectangle, or the tool tip window rectangle needed to display a specified text display rectangle.  
   
- Эта функция-член реализует поведение сообщения Win32 [TTM_ADJUSTRECT](http://msdn.microsoft.com/library/windows/desktop/bb760352), как описано в [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
+ This member function implements the behavior of the Win32 message [TTM_ADJUSTRECT](http://msdn.microsoft.com/library/windows/desktop/bb760352), as described in the Windows SDK.  
   
-##  <a name="create"></a>CToolTipCtrl::Create  
- Создание элемента управления всплывающей подсказки и присоединяет его к `CToolTipCtrl` объекта.  
+##  <a name="create"></a>  CToolTipCtrl::Create  
+ Creates a tool tip control and attaches it to a `CToolTipCtrl` object.  
   
 ```  
 virtual BOOL Create(CWnd* pParentWnd, DWORD dwStyle = 0);
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
  `pParentWnd`  
- Указывает родительского окна управления всплывающей подсказки, обычно `CDialog`. Оно не должно быть **NULL**.  
+ Specifies the tool tip control's parent window, usually a `CDialog`. It must not be **NULL**.  
   
  `dwStyle`  
- Задает стиль элемента управления всплывающей подсказки. В разделе **примечания** Дополнительные сведения.  
+ Specifies the tool tip control's style. See the **Remarks** section for more information.  
   
-### <a name="return-value"></a>Возвращаемое значение  
- Ненулевое значение, если `CToolTipCtrl` объект успешно создан; в противном случае — 0.  
+### <a name="return-value"></a>Return Value  
+ Nonzero if the `CToolTipCtrl` object is successfully created; otherwise 0.  
   
-### <a name="remarks"></a>Примечания  
- Создании `CToolTipCtrl` в два этапа. Во-первых, вызовите конструктор для создания `CToolTipCtrl` , а затем вызвать **создать** для создания управления всплывающей подсказки и присоединить его к `CToolTipCtrl` объекта.  
+### <a name="remarks"></a>Remarks  
+ You construct a `CToolTipCtrl` in two steps. First, call the constructor to construct the `CToolTipCtrl` object, and then call **Create** to create the tool tip control and attach it to the `CToolTipCtrl` object.  
   
- `dwStyle` Параметр может иметь любое сочетание [стили окна](../../mfc/reference/window-styles.md). Кроме того, управления всплывающей подсказки имеет два стиля данного класса: **TTS_ALWAYSTIP** и **TTS_NOPREFIX**.  
+ The `dwStyle` parameter can be any combination of [Window Styles](../../mfc/reference/styles-used-by-mfc.md#window-styles). In addition, a tool tip control has two class-specific styles: **TTS_ALWAYSTIP** and **TTS_NOPREFIX**.  
   
-|Стиль|Значение|  
+|Style|Meaning|  
 |-----------|-------------|  
-|**TTS_ALWAYSTIP**|Указывает, что подсказка будет появляться при прохождении курсора над средством, независимо от того, окна-владельца управления всплывающей подсказки активным или неактивным. Без этого стиля управления всплывающей подсказки отображается при активном окно владельца, но не находится в неактивном состоянии.|  
-|**TTS_NOPREFIX**|Этот стиль предотвращает удаление знак амперсанда (&) из строки. Если нет элемента управления всплывающей подсказки **TTS_NOPREFIX** стиля, система автоматически удаляет знаки амперсанда, что позволяет приложению использовать ту же строку, элемент меню, а текст элемента управления всплывающей подсказки.|  
+|**TTS_ALWAYSTIP**|Specifies that the tool tip will appear when the cursor is on a tool, regardless of whether the tool tip control's owner window is active or inactive. Without this style, the tool tip control appears when the tool's owner window is active, but not when it is inactive.|  
+|**TTS_NOPREFIX**|This style prevents the system from stripping the ampersand (&) character from a string. If a tool tip control does not have the **TTS_NOPREFIX** style, the system automatically strips ampersand characters, allowing an application to use the same string as both a menu item and as text in a tool tip control.|  
   
- Подсказка имеет `WS_POPUP` и **WS_EX_TOOLWINDOW** стили окна, независимо от их при создании элемента управления.  
+ A tool tip control has the `WS_POPUP` and **WS_EX_TOOLWINDOW** window styles, regardless of whether you specify them when creating the control.  
   
- Создание элемента управления всплывающей подсказки с помощью windows расширенные стили, вызовите [CToolTipCtrl::CreateEx](#createex) вместо **создать**.  
+ To create a tool tip control with extended windows styles, call [CToolTipCtrl::CreateEx](#createex) instead of **Create**.  
   
-### <a name="example"></a>Пример  
-  В примере показано [CPropertySheet::GetTabControl](../../mfc/reference/cpropertysheet-class.md#gettabcontrol).  
+### <a name="example"></a>Example  
+  See the example for [CPropertySheet::GetTabControl](../../mfc/reference/cpropertysheet-class.md#gettabcontrol).  
   
-##  <a name="createex"></a>CToolTipCtrl::CreateEx  
- Создает элемент управления (дочернего окна) и связать его с `CToolTipCtrl` объекта.  
+##  <a name="createex"></a>  CToolTipCtrl::CreateEx  
+ Creates a control (a child window) and associate it with the `CToolTipCtrl` object.  
   
 ```  
 virtual BOOL CreateEx(
@@ -288,37 +318,37 @@ virtual BOOL CreateEx(
     DWORD dwStyleEx = 0);
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
  `pParentWnd`  
- Указатель на окно, который является родительским для элемента управления.  
+ A pointer to the window that is the control's parent.  
   
  `dwStyle`  
- Задает стиль элемента управления всплывающей подсказки. В разделе **примечания** раздел [создать](#create) для получения дополнительной информации.  
+ Specifies the tool tip control's style. See the **Remarks** section of [Create](#create) for more information.  
   
  *dwStyleEx*  
- Указывает расширенный стиль создаваемого элемента управления. Список расширенных стилей Windows см. в разделе `dwExStyle` параметр [CreateWindowEx](http://msdn.microsoft.com/library/windows/desktop/ms632680) в [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
+ Specifies the extended style of the control being created. For a list of extended Windows styles, see the `dwExStyle` parameter for [CreateWindowEx](http://msdn.microsoft.com/library/windows/desktop/ms632680) in the Windows SDK.  
   
-### <a name="return-value"></a>Возвращаемое значение  
- Ненулевое значение, в случае успеха в противном случае — 0.  
+### <a name="return-value"></a>Return Value  
+ Nonzero if successful otherwise 0.  
   
-### <a name="remarks"></a>Примечания  
- Используйте `CreateEx` вместо **создать** для применения расширенных стилей Windows, заданные к ней префикс расширенный стиль Windows **WS_EX_**.  
+### <a name="remarks"></a>Remarks  
+ Use `CreateEx` instead of **Create** to apply extended Windows styles, specified by the Windows extended style preface **WS_EX_**.  
   
-##  <a name="ctooltipctrl"></a>CToolTipCtrl::CToolTipCtrl  
- Создает объект `CToolTipCtrl`.  
+##  <a name="ctooltipctrl"></a>  CToolTipCtrl::CToolTipCtrl  
+ Constructs a `CToolTipCtrl` object.  
   
 ```  
 CToolTipCtrl();
 ```  
   
-### <a name="remarks"></a>Примечания  
- Необходимо вызвать **создать** после создания объекта.  
+### <a name="remarks"></a>Remarks  
+ You must call **Create** after constructing the object.  
   
-### <a name="example"></a>Пример  
- [!code-cpp[NVC_MFCControlLadenDialog&#74;](../../mfc/codesnippet/cpp/ctooltipctrl-class_1.h)]  
+### <a name="example"></a>Example  
+ [!code-cpp[NVC_MFCControlLadenDialog#74](../../mfc/codesnippet/cpp/ctooltipctrl-class_1.h)]  
   
-##  <a name="deltool"></a>CToolTipCtrl::DelTool  
- Удаляет заданные инструмент `pWnd` и `nIDTool` из коллекции средств, поддерживаемых элементом управления всплывающей подсказки.  
+##  <a name="deltool"></a>  CToolTipCtrl::DelTool  
+ Removes the tool specified by `pWnd` and `nIDTool` from the collection of tools supported by a tool tip control.  
   
 ```  
 void DelTool(
@@ -326,113 +356,113 @@ void DelTool(
     UINT_PTR nIDTool = 0);
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
  `pWnd`  
- Указатель на окно, содержащее средство.  
+ Pointer to the window that contains the tool.  
   
  `nIDTool`  
- Идентификатор средства.  
+ ID of the tool.  
   
-##  <a name="getbubblesize"></a>CToolTipCtrl::GetBubbleSize  
- Получает размер всплывающей подсказки.  
+##  <a name="getbubblesize"></a>  CToolTipCtrl::GetBubbleSize  
+ Retrieves the size of the tool tip.  
   
 ```  
 CSize GetBubbleSize(LPTOOLINFO lpToolInfo) const;  
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
  `lpToolInfo`  
- Указатель на всплывающей подсказке [TOOLINFO](http://msdn.microsoft.com/library/windows/desktop/bb760256) структуры.  
+ A pointer to the tool tip's [TOOLINFO](http://msdn.microsoft.com/library/windows/desktop/bb760256) structure.  
   
-### <a name="return-value"></a>Возвращаемое значение  
- Размер всплывающей подсказки.  
+### <a name="return-value"></a>Return Value  
+ The size of the tool tip.  
   
-### <a name="remarks"></a>Примечания  
- Эта функция-член реализует поведение сообщения Win32 [TTM_GETBUBBLESIZE](http://msdn.microsoft.com/library/windows/desktop/bb760387), как описано в [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
+### <a name="remarks"></a>Remarks  
+ This member function implements the behavior of the Win32 message [TTM_GETBUBBLESIZE](http://msdn.microsoft.com/library/windows/desktop/bb760387), as described in the Windows SDK.  
   
-##  <a name="getcurrenttool"></a>CToolTipCtrl::GetCurrentTool  
- Извлекает сведения, такие как размер, положение и текст окна всплывающей подсказки, отображаемый элементом текущего элемента управления всплывающей подсказки.  
+##  <a name="getcurrenttool"></a>  CToolTipCtrl::GetCurrentTool  
+ Retrieves information, such as the size, position, and text, of the tooltip window displayed by the current tooltip control.  
   
 ```  
 BOOL GetCurrentTool(LPTOOLINFO lpToolInfo) const;  
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
   
-|Параметр|Описание|  
+|Parameter|Description|  
 |---------------|-----------------|  
-|[выходной] `lpToolInfo`|Указатель на [TOOLINFO](http://msdn.microsoft.com/library/windows/desktop/bb760256) структуры, который получает сведения о текущем окно всплывающей подсказки.|  
+|[out] `lpToolInfo`|Pointer to a [TOOLINFO](http://msdn.microsoft.com/library/windows/desktop/bb760256) structure that receives information about the current tooltip window.|  
   
-### <a name="return-value"></a>Возвращаемое значение  
- `true`Если данные извлекаются успешно; в противном случае —`false.`  
+### <a name="return-value"></a>Return Value  
+ `true` if the information is retrieved successfully; otherwise, `false.`  
   
-### <a name="remarks"></a>Примечания  
- Этот метод отправляет [TTM_GETCURRENTTOOL](http://msdn.microsoft.com/library/windows/desktop/bb760389) сообщения, которое описано в [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
+### <a name="remarks"></a>Remarks  
+ This method sends the [TTM_GETCURRENTTOOL](http://msdn.microsoft.com/library/windows/desktop/bb760389) message, which is described in the Windows SDK.  
   
-### <a name="example"></a>Пример  
- В следующем примере кода извлекает сведения о текущем окно всплывающей подсказки.  
+### <a name="example"></a>Example  
+ The following code example retrieves information about the current tooltip window.  
   
- [!code-cpp[NVC_MFC_CToolBarCtrl_s1 №&6;](../../mfc/reference/codesnippet/cpp/ctooltipctrl-class_2.cpp)]  
+ [!code-cpp[NVC_MFC_CToolBarCtrl_s1#6](../../mfc/reference/codesnippet/cpp/ctooltipctrl-class_2.cpp)]  
   
-##  <a name="getdelaytime"></a>CToolTipCtrl::GetDelayTime  
- Получает начальный всплывающем и reshow длительности, установленный для элемента управления всплывающей подсказки.  
+##  <a name="getdelaytime"></a>  CToolTipCtrl::GetDelayTime  
+ Retrieves the initial, pop-up, and reshow durations currently set for a tool tip control.  
   
 ```  
 int GetDelayTime(DWORD dwDuration) const;  
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
  `dwDuration`  
- Флаг, указывающий, какие значения длительности, будет возвращен. Этот параметр может принимать одно из следующих значений:  
+ Flag that specifies which duration value will be retrieved. This parameter can be one of the following values:  
   
-- `TTDT_AUTOPOP`Получить время отображения подсказки при указатель мыши останавливается в это средство ограничивающего прямоугольника.  
+- `TTDT_AUTOPOP` Retrieve the length of time the tool tip window remains visible if the pointer is stationary within a tool's bounding rectangle.  
   
-- `TTDT_INITIAL`Получить время, указатель мыши должен оставаться в границах внутри ограничивающего прямоугольника инструмента, до появления подсказки.  
+- `TTDT_INITIAL` Retrieve the length of time the pointer must remain stationary within a tool's bounding rectangle before the tool tip window appears.  
   
-- `TTDT_RESHOW`Получить время, необходимое для последующих средство совет windows отображается как указатель перемещается от одного средства к другому.  
+- `TTDT_RESHOW` Retrieve the length of time it takes for subsequent tool tip windows to appear as the pointer moves from one tool to another.  
   
-### <a name="return-value"></a>Возвращаемое значение  
- Времени, в миллисекундах  
+### <a name="return-value"></a>Return Value  
+ The specified delay time, in milliseconds  
   
-### <a name="remarks"></a>Примечания  
- Эта функция-член реализует поведение сообщения Win32 [TTM_GETDELAYTIME](http://msdn.microsoft.com/library/windows/desktop/bb760390), как описано в [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
+### <a name="remarks"></a>Remarks  
+ This member function implements the behavior of the Win32 message [TTM_GETDELAYTIME](http://msdn.microsoft.com/library/windows/desktop/bb760390), as described in the Windows SDK.  
   
-##  <a name="getmargin"></a>CToolTipCtrl::GetMargin  
- Извлекает верхней, левой, нижней и правое поля для подсказки.  
+##  <a name="getmargin"></a>  CToolTipCtrl::GetMargin  
+ Retrieves the top, left, bottom, and right margins set for a tool tip window.  
   
 ```  
 void GetMargin(LPRECT lprc) const;  
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
  `lprc`  
- Адрес `RECT` структуру, которая будет получать данные поля. Элементы [RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897) структуры не определяют ограничивающего прямоугольника. Для этого сообщения члены структуры интерпретируются следующим образом:  
+ Address of a `RECT` structure that will receive the margin information. The members of the [RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897) structure do not define a bounding rectangle. For the purpose of this message, the structure members are interpreted as follows:  
   
-|Член|Представление|  
+|Member|Representation|  
 |------------|--------------------|  
-|**top**|Расстояние между верхней границей и верхней части текст подсказки, в пикселях.|  
-|**left**|Расстояние между левой границей и левый конец текст подсказки, в пикселях.|  
-|**снизу**|Расстояние между нижней границей и нижней части текст подсказки, в пикселях.|  
-|**right**|Расстояние между правой границей и правом конце текст подсказки, в пикселях.|  
+|**top**|Distance between top border and top of tool tip text, in pixels.|  
+|**left**|Distance between left border and left end of tip text, in pixels.|  
+|**bottom**|Distance between bottom border and bottom of tip text, in pixels.|  
+|**right**|Distance between right border and right end of tip text, in pixels.|  
   
-### <a name="remarks"></a>Примечания  
- Эта функция-член реализует поведение сообщения Win32 [TTM_GETMARGIN](http://msdn.microsoft.com/library/windows/desktop/bb760391), как описано в [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
+### <a name="remarks"></a>Remarks  
+ This member function implements the behavior of the Win32 message [TTM_GETMARGIN](http://msdn.microsoft.com/library/windows/desktop/bb760391), as described in the Windows SDK.  
   
-##  <a name="getmaxtipwidth"></a>CToolTipCtrl::GetMaxTipWidth  
- Получает максимальную ширину для подсказки.  
+##  <a name="getmaxtipwidth"></a>  CToolTipCtrl::GetMaxTipWidth  
+ Retrieves the maximum width for a tool tip window.  
   
 ```  
 int GetMaxTipWidth() const;  
 ```  
   
-### <a name="return-value"></a>Возвращаемое значение  
- Максимальная ширина для подсказки.  
+### <a name="return-value"></a>Return Value  
+ The maximum width for a tool tip window.  
   
-### <a name="remarks"></a>Примечания  
- Эта функция-член реализует поведение сообщения Win32 [TTM_GETMAXTIPWIDTH](http://msdn.microsoft.com/library/windows/desktop/bb760392), как описано в [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
+### <a name="remarks"></a>Remarks  
+ This member function implements the behavior of the Win32 message [TTM_GETMAXTIPWIDTH](http://msdn.microsoft.com/library/windows/desktop/bb760392), as described in the Windows SDK.  
   
-##  <a name="gettext"></a>CToolTipCtrl::GetText  
- Получает текст, который поддерживает средство управления всплывающей подсказки.  
+##  <a name="gettext"></a>  CToolTipCtrl::GetText  
+ Retrieves the text that a tool tip control maintains for a tool.  
   
 ```  
 void GetText(
@@ -441,73 +471,73 @@ void GetText(
     UINT_PTR nIDTool = 0) const;  
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
  `str`  
- Ссылка на `CString` объект, который получает текст данного средства.  
+ Reference to a `CString` object that receives the tool's text.  
   
  `pWnd`  
- Указатель на окно, содержащее средство.  
+ Pointer to the window that contains the tool.  
   
  `nIDTool`  
- Идентификатор средства.  
+ ID of the tool.  
   
-### <a name="remarks"></a>Примечания  
- `pWnd` И `nIDTool` параметры определяют средство. Если это средство прежде зарегистрированы с элементом управления всплывающей подсказки по предыдущим вызовом **CToolTipCtrl::AddTool**, объект ссылается `str` средство текст назначен параметр.  
+### <a name="remarks"></a>Remarks  
+ The `pWnd` and `nIDTool` parameters identify the tool. If that tool has been previously registered with the tool tip control through a previous call to **CToolTipCtrl::AddTool**, the object referenced by the `str` parameter is assigned the tool's text.  
   
-##  <a name="gettipbkcolor"></a>CToolTipCtrl::GetTipBkColor  
- Получает цвет фона в подсказки.  
+##  <a name="gettipbkcolor"></a>  CToolTipCtrl::GetTipBkColor  
+ Retrieves the background color in a tool tip window.  
   
 ```  
 COLORREF GetTipBkColor() const;  
 ```  
   
-### <a name="return-value"></a>Возвращаемое значение  
- Объект [COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449) значение, представляющее цвет фона.  
+### <a name="return-value"></a>Return Value  
+ A [COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449) value that represents the background color.  
   
-### <a name="remarks"></a>Примечания  
- Эта функция-член реализует поведение сообщения Win32 [TTM_GETTIPBKCOLOR](http://msdn.microsoft.com/library/windows/desktop/bb760394), как описано в [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
+### <a name="remarks"></a>Remarks  
+ This member function implements the behavior of the Win32 message [TTM_GETTIPBKCOLOR](http://msdn.microsoft.com/library/windows/desktop/bb760394), as described in the Windows SDK.  
   
-##  <a name="gettiptextcolor"></a>CToolTipCtrl::GetTipTextColor  
- Получает цвет текста в окне подсказки инструментов.  
+##  <a name="gettiptextcolor"></a>  CToolTipCtrl::GetTipTextColor  
+ Retrieves the text color in a tool tip window.  
   
 ```  
 COLORREF GetTipTextColor() const;  
 ```  
   
-### <a name="return-value"></a>Возвращаемое значение  
- Объект [COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449) значение, представляющее цвет текста.  
+### <a name="return-value"></a>Return Value  
+ A [COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449) value that represents the text color.  
   
-### <a name="remarks"></a>Примечания  
- Эта функция-член реализует поведение сообщения Win32 [TTM_GETTIPTEXTCOLOR](http://msdn.microsoft.com/library/windows/desktop/bb760395), как описано в [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
+### <a name="remarks"></a>Remarks  
+ This member function implements the behavior of the Win32 message [TTM_GETTIPTEXTCOLOR](http://msdn.microsoft.com/library/windows/desktop/bb760395), as described in the Windows SDK.  
   
-##  <a name="gettitle"></a>CToolTipCtrl::GetTitle  
- Возвращает название текущего элемента управления всплывающей подсказки.  
+##  <a name="gettitle"></a>  CToolTipCtrl::GetTitle  
+ Retrieves the title of the current tooltip control.  
   
 ```  
 void GetTitle(PTTGETTITLE pttgt) const;  
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
   
-|Параметр|Описание|  
+|Parameter|Description|  
 |---------------|-----------------|  
-|[выходной] `pttgt`|Указатель на [TTGETTITLE](http://msdn.microsoft.com/library/windows/desktop/bb760260) структуру, содержащую сведения об элементе управления ToolTip. По возвращении из этого метода `pszTitle` членом [TTGETTITLE](http://msdn.microsoft.com/library/windows/desktop/bb760260) структуры точек для текста заголовка.|  
+|[out] `pttgt`|Pointer to a [TTGETTITLE](http://msdn.microsoft.com/library/windows/desktop/bb760260) structure that contains information about the ToolTip control. When this method returns, the `pszTitle` member of the [TTGETTITLE](http://msdn.microsoft.com/library/windows/desktop/bb760260) structure points to the text of the title.|  
   
-### <a name="remarks"></a>Примечания  
- Этот метод отправляет [TTM_GETTITLE](http://msdn.microsoft.com/library/windows/desktop/bb760396) сообщения, которое описано в [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
+### <a name="remarks"></a>Remarks  
+ This method sends the [TTM_GETTITLE](http://msdn.microsoft.com/library/windows/desktop/bb760396) message, which is described in the Windows SDK.  
   
-##  <a name="gettoolcount"></a>CToolTipCtrl::GetToolCount  
- Получает количество средств, зарегистрированные с элементом управления всплывающей подсказки.  
+##  <a name="gettoolcount"></a>  CToolTipCtrl::GetToolCount  
+ Retrieves a count of the tools registered with the tool tip control.  
   
 ```  
 int GetToolCount() const;  
 ```  
   
-### <a name="return-value"></a>Возвращаемое значение  
- Число средств зарегистрирован с элементом управления всплывающей подсказки.  
+### <a name="return-value"></a>Return Value  
+ A count of tools registered with the tool tip control.  
   
-##  <a name="gettoolinfo"></a>CToolTipCtrl::GetToolInfo  
- Возвращает сведения, поддерживающий управления всплывающей подсказки о средстве.  
+##  <a name="gettoolinfo"></a>  CToolTipCtrl::GetToolInfo  
+ Retrieves the information that a tool tip control maintains about a tool.  
   
 ```  
 BOOL GetToolInfo(
@@ -516,24 +546,24 @@ BOOL GetToolInfo(
     UINT_PTR nIDTool = 0) const;  
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
  *ToolInfo*  
- Ссылка на `TOOLINFO` объект, который получает текст данного средства.  
+ Reference to a `TOOLINFO` object that receives the tool's text.  
   
  `pWnd`  
- Указатель на окно, содержащее средство.  
+ Pointer to the window that contains the tool.  
   
  `nIDTool`  
- Идентификатор средства.  
+ ID of the tool.  
   
-### <a name="return-value"></a>Возвращаемое значение  
- Имеет ненулевое значение в случае успешного выполнения, иначе — 0.  
+### <a name="return-value"></a>Return Value  
+ Nonzero if successful; otherwise 0.  
   
-### <a name="remarks"></a>Примечания  
- **Hwnd** и **uId** члены [TOOLINFO](http://msdn.microsoft.com/library/windows/desktop/bb760256) ссылается структура *CToolInfo* средство идентификации. Если этот инструмент был зарегистрирован с элементом управления всплывающей подсказки по предыдущим вызовом `AddTool`, `TOOLINFO` структура заполняется сведения об этом средстве.  
+### <a name="remarks"></a>Remarks  
+ The **hwnd** and **uId** members of the [TOOLINFO](http://msdn.microsoft.com/library/windows/desktop/bb760256) structure referenced by *CToolInfo* identify the tool. If that tool has been registered with the tool tip control through a previous call to `AddTool`, the `TOOLINFO` structure is filled with information about the tool.  
   
-##  <a name="hittest"></a>CToolTipCtrl::HitTest  
- Проверяет точку, чтобы определить, является ли оно внутри ограничивающего прямоугольника данное средство и если да, получить сведения о средстве.  
+##  <a name="hittest"></a>  CToolTipCtrl::HitTest  
+ Tests a point to determine whether it is within the bounding rectangle of the given tool and, if so, retrieve information about the tool.  
   
 ```  
 BOOL HitTest(
@@ -542,23 +572,23 @@ BOOL HitTest(
     LPTOOLINFO lpToolInfo) const;  
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
  `pWnd`  
- Указатель на окно, содержащее средство.  
+ Pointer to the window that contains the tool.  
   
  `pt`  
- Указатель на `CPoint` объект, содержащий координаты точки для тестирования.  
+ Pointer to a `CPoint` object containing the coordinates of the point to be tested.  
   
  `lpToolInfo`  
- Указатель на [TOOLINFO](http://msdn.microsoft.com/library/windows/desktop/bb760256) структуру, содержащую сведения об этом средстве.  
+ Pointer to [TOOLINFO](http://msdn.microsoft.com/library/windows/desktop/bb760256) structure that contains information about the tool.  
   
-### <a name="return-value"></a>Возвращаемое значение  
- Ненулевое значение, если точку, указанную информацию проверки нажатия находится внутри ограничивающего прямоугольника средства; в противном случае — 0.  
+### <a name="return-value"></a>Return Value  
+ Nonzero if the point specified by the hit-test information is within the tool's bounding rectangle; otherwise 0.  
   
-### <a name="remarks"></a>Примечания  
- Если эта функция возвращает ненулевое значение, структура указывает `lpToolInfo` заполняется сведения о средстве, в которой прямоугольник находится точка.  
+### <a name="remarks"></a>Remarks  
+ If this function returns a nonzero value, the structure pointed to by `lpToolInfo` is filled with information on the tool within whose rectangle the point lies.  
   
- `TTHITTESTINFO` Структура определяется следующим образом:  
+ The `TTHITTESTINFO` structure is defined as follows:  
   
  `typedef struct _TT_HITTESTINFO { // tthti`  
   
@@ -570,53 +600,53 @@ BOOL HitTest(
   
  `} TTHITTESTINFO, FAR * LPHITTESTINFO;`  
   
- **HWND**  
- Указывает дескриптор этого средства.  
+ **hwnd**  
+ Specifies the tool's handle.  
   
  **pt**  
- Задает координаты точки, если точка находится в средстве ограничивающего прямоугольника.  
+ Specifies the coordinates of a point if the point is in the tool's bounding rectangle.  
   
- **TI**  
- Сведения о средстве. Дополнительные сведения о `TOOLINFO` структуры см. в разделе [CToolTipCtrl::GetToolInfo](#gettoolinfo).  
+ **ti**  
+ Information about the tool. For more information about the `TOOLINFO` structure, see [CToolTipCtrl::GetToolInfo](#gettoolinfo).  
   
-##  <a name="pop"></a>CToolTipCtrl::Pop  
- Удаляет отображаемые подсказки из представления.  
+##  <a name="pop"></a>  CToolTipCtrl::Pop  
+ Removes a displayed tool tip window from the view.  
   
 ```  
 void Pop();
 ```  
   
-### <a name="remarks"></a>Примечания  
- Эта функция-член реализует поведение сообщения Win32 [TTM_POP](http://msdn.microsoft.com/library/windows/desktop/bb760401), как описано в [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
+### <a name="remarks"></a>Remarks  
+ This member function implements the behavior of the Win32 message [TTM_POP](http://msdn.microsoft.com/library/windows/desktop/bb760401), as described in the Windows SDK.  
   
-##  <a name="popup"></a>CToolTipCtrl::Popup  
- Вызывает текущий элемент управления всплывающей подсказки для отображения в координатах последнего сообщения мыши.  
+##  <a name="popup"></a>  CToolTipCtrl::Popup  
+ Causes the current tooltip control to display at the coordinates of the last mouse message.  
   
 ```  
 void Popup();
 ```  
   
-### <a name="remarks"></a>Примечания  
- Этот метод отправляет [TTM_POPUP](http://msdn.microsoft.com/library/windows/desktop/bb760402) сообщения, которое описано в [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
+### <a name="remarks"></a>Remarks  
+ This method sends the [TTM_POPUP](http://msdn.microsoft.com/library/windows/desktop/bb760402) message, which is described in the Windows SDK.  
   
-### <a name="example"></a>Пример  
- В следующем примере кода отображается окно всплывающей подсказки.  
+### <a name="example"></a>Example  
+ The following code example displays a tooltip window.  
   
- [!code-cpp[NVC_MFC_CToolBarCtrl_s&#1;7](../../mfc/reference/codesnippet/cpp/ctooltipctrl-class_3.cpp)]  
+ [!code-cpp[NVC_MFC_CToolBarCtrl_s1#7](../../mfc/reference/codesnippet/cpp/ctooltipctrl-class_3.cpp)]  
   
-##  <a name="relayevent"></a>CToolTipCtrl::RelayEvent  
- Передает сообщение мыши элементом управления всплывающей подсказки для обработки.  
+##  <a name="relayevent"></a>  CToolTipCtrl::RelayEvent  
+ Passes a mouse message to a tool tip control for processing.  
   
 ```  
 void RelayEvent(LPMSG lpMsg);
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
  `lpMsg`  
- Указатель на [MSG](http://msdn.microsoft.com/library/windows/desktop/ms644958) структуру, содержащую сообщения для ретрансляции.  
+ Pointer to a [MSG](http://msdn.microsoft.com/library/windows/desktop/ms644958) structure that contains the message to relay.  
   
-### <a name="remarks"></a>Примечания  
- Подсказка обрабатывает только следующие сообщения, отправляемые на него по `RelayEvent`:  
+### <a name="remarks"></a>Remarks  
+ A tool tip control processes only the following messages, which are sent to it by `RelayEvent`:  
   
 |WM_LBUTTONDOWN|WM_MOUSEMOVE|  
 |---------------------|-------------------|  
@@ -624,11 +654,11 @@ void RelayEvent(LPMSG lpMsg);
 |`WM_MBUTTONDOWN`|`WM_RBUTTONUP`|  
 |`WM_MBUTTONUP`||  
   
-### <a name="example"></a>Пример  
-  В примере показано [CPropertySheet::GetTabControl](../../mfc/reference/cpropertysheet-class.md#gettabcontrol).  
+### <a name="example"></a>Example  
+  See the example for [CPropertySheet::GetTabControl](../../mfc/reference/cpropertysheet-class.md#gettabcontrol).  
   
-##  <a name="setdelaytime"></a>CToolTipCtrl::SetDelayTime  
- Задает время задержки для элемента управления всплывающей подсказки.  
+##  <a name="setdelaytime"></a>  CToolTipCtrl::SetDelayTime  
+ Sets the delay time for a tool tip control.  
   
 ```  
 void SetDelayTime(UINT nDelay);
@@ -639,80 +669,80 @@ void SetDelayTime(
     int iTime);
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
  *nDelay*  
- Задает новое время задержки в миллисекундах.  
+ Specifies the new delay time, in milliseconds.  
   
  `dwDuration`  
- Флаг, указывающий, какие значения длительности, будет возвращен. В разделе [CToolTipCtrl::GetDelayTime](#getdelaytime) описание допустимых значений.  
+ Flag that specifies which duration value will be retrieved. See [CToolTipCtrl::GetDelayTime](#getdelaytime) for a description of the valid values.  
   
  *iTime*  
- Время заданной задержки в миллисекундах.  
+ The specified delay time, in milliseconds.  
   
-### <a name="remarks"></a>Примечания  
- Время задержки — это время, должны оставаться курсор над средством, до появления подсказки. Время задержки по умолчанию — 500 миллисекунд.  
+### <a name="remarks"></a>Remarks  
+ The delay time is the length of time the cursor must remain on a tool before the tool tip window appears. The default delay time is 500 milliseconds.  
   
-##  <a name="setmargin"></a>CToolTipCtrl::SetMargin  
- Задает начало, левую, нижнюю и правого поля для подсказки.  
+##  <a name="setmargin"></a>  CToolTipCtrl::SetMargin  
+ Sets the top, left, bottom, and right margins for a tool tip window.  
   
 ```  
 void SetMargin(LPRECT lprc);
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
  `lprc`  
- Адрес `RECT` структуру, содержащую сведения margin устанавливается. Элементы `RECT` структуры не определяют ограничивающего прямоугольника. В разделе [CToolTipCtrl::GetMargin](#getmargin) описание поля данных.  
+ Address of a `RECT` structure that contains the margin information to be set. The members of the `RECT` structure do not define a bounding rectangle. See [CToolTipCtrl::GetMargin](#getmargin) for a description of the margin information.  
   
-### <a name="remarks"></a>Примечания  
- Эта функция-член реализует поведение сообщения Win32 [TTM_SETMARGIN](http://msdn.microsoft.com/library/windows/desktop/bb760406), как описано в [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
+### <a name="remarks"></a>Remarks  
+ This member function implements the behavior of the Win32 message [TTM_SETMARGIN](http://msdn.microsoft.com/library/windows/desktop/bb760406), as described in the Windows SDK.  
   
-##  <a name="setmaxtipwidth"></a>CToolTipCtrl::SetMaxTipWidth  
- Задает максимальную ширину для подсказки.  
+##  <a name="setmaxtipwidth"></a>  CToolTipCtrl::SetMaxTipWidth  
+ Sets the maximum width for a tool tip window.  
   
 ```  
 int SetMaxTipWidth(int iWidth);
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
  *iWidth*  
- Ширина окна подсказки максимальное средство устанавливается.  
+ The maximum tool tip window width to be set.  
   
-### <a name="return-value"></a>Возвращаемое значение  
- Ширина предыдущих максимальное tip.  
+### <a name="return-value"></a>Return Value  
+ The previous maximum tip width.  
   
-### <a name="remarks"></a>Примечания  
- Эта функция-член реализует поведение сообщения Win32 [TTM_SETMAXTIPWIDTH](http://msdn.microsoft.com/library/windows/desktop/bb760408), как описано в [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
+### <a name="remarks"></a>Remarks  
+ This member function implements the behavior of the Win32 message [TTM_SETMAXTIPWIDTH](http://msdn.microsoft.com/library/windows/desktop/bb760408), as described in the Windows SDK.  
   
-##  <a name="settipbkcolor"></a>CToolTipCtrl::SetTipBkColor  
- Задает цвет фона в подсказки.  
+##  <a name="settipbkcolor"></a>  CToolTipCtrl::SetTipBkColor  
+ Sets the background color in a tool tip window.  
   
 ```  
 void SetTipBkColor(COLORREF clr);
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
  `clr`  
- Новый цвет фона.  
+ The new background color.  
   
-### <a name="remarks"></a>Примечания  
- Эта функция-член реализует поведение сообщения Win32 [TTM_SETTIPBKCOLOR](http://msdn.microsoft.com/library/windows/desktop/bb760411), как описано в [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
+### <a name="remarks"></a>Remarks  
+ This member function implements the behavior of the Win32 message [TTM_SETTIPBKCOLOR](http://msdn.microsoft.com/library/windows/desktop/bb760411), as described in the Windows SDK.  
   
-##  <a name="settiptextcolor"></a>CToolTipCtrl::SetTipTextColor  
- Задает цвет текста в окне подсказки инструментов.  
+##  <a name="settiptextcolor"></a>  CToolTipCtrl::SetTipTextColor  
+ Sets the text color in a tool tip window.  
   
 ```  
 void SetTipTextColor(COLORREF clr);
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
  `clr`  
- Новый цвет текста.  
+ The new text color.  
   
-### <a name="remarks"></a>Примечания  
- Эта функция-член реализует поведение сообщения Win32 [TTM_SETTIPTEXTCOLOR](http://msdn.microsoft.com/library/windows/desktop/bb760413), как описано в [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
+### <a name="remarks"></a>Remarks  
+ This member function implements the behavior of the Win32 message [TTM_SETTIPTEXTCOLOR](http://msdn.microsoft.com/library/windows/desktop/bb760413), as described in the Windows SDK.  
   
-##  <a name="settitle"></a>CToolTipCtrl::SetTitle  
- Добавляет стандартную строку значок и заголовок подсказки.  
+##  <a name="settitle"></a>  CToolTipCtrl::SetTitle  
+ Adds a standard icon and title string to a tool tip.  
   
 ```  
 BOOL SetTitle(
@@ -720,32 +750,32 @@ BOOL SetTitle(
     LPCTSTR lpstrTitle);
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
  *uIcon*  
- В разделе *значок* в [TTM_SETTITLE](http://msdn.microsoft.com/library/windows/desktop/bb760414) в [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
+ See *icon* in [TTM_SETTITLE](http://msdn.microsoft.com/library/windows/desktop/bb760414) in the Windows SDK.  
   
  *lpstrTitle*  
- Указатель на строку заголовка.  
+ Pointer to the title string.  
   
-### <a name="return-value"></a>Возвращаемое значение  
- Имеет ненулевое значение в случае успешного выполнения, иначе — 0.  
+### <a name="return-value"></a>Return Value  
+ Nonzero if successful; otherwise 0.  
   
-### <a name="remarks"></a>Примечания  
- Эта функция-член реализует поведение сообщения Win32 [TTM_SETTITLE](http://msdn.microsoft.com/library/windows/desktop/bb760414), как описано в [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
+### <a name="remarks"></a>Remarks  
+ This member function implements the behavior of the Win32 message [TTM_SETTITLE](http://msdn.microsoft.com/library/windows/desktop/bb760414), as described in the Windows SDK.  
   
-##  <a name="settoolinfo"></a>CToolTipCtrl::SetToolInfo  
- Задает сведения, которые поддерживает всплывающей подсказки для инструмента.  
+##  <a name="settoolinfo"></a>  CToolTipCtrl::SetToolInfo  
+ Sets the information that a tool tip maintains for a tool.  
   
 ```  
 void SetToolInfo(LPTOOLINFO lpToolInfo);
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
  `lpToolInfo`  
- Указатель на [TOOLINFO](http://msdn.microsoft.com/library/windows/desktop/bb760256) структура, содержащая сведения для установки.  
+ A pointer to a [TOOLINFO](http://msdn.microsoft.com/library/windows/desktop/bb760256) structure that specifies the information to set.  
   
-##  <a name="settoolrect"></a>CToolTipCtrl::SetToolRect  
- Задает ограничивающий прямоугольник для средства.  
+##  <a name="settoolrect"></a>  CToolTipCtrl::SetToolRect  
+ Sets a new bounding rectangle for a tool.  
   
 ```  
 void SetToolRect(
@@ -754,42 +784,42 @@ void SetToolRect(
     LPCRECT lpRect);
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
  `pWnd`  
- Указатель на окно, содержащее средство.  
+ Pointer to the window that contains the tool.  
   
  `nIDTool`  
- Идентификатор средства.  
+ ID of the tool.  
   
  `lpRect`  
- Указатель на [RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897) структура ограничивающий прямоугольник.  
+ Pointer to a [RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897) structure specifying the new bounding rectangle.  
   
-##  <a name="setwindowtheme"></a>CToolTipCtrl::SetWindowTheme  
- Задает стиль оформления подсказки.  
+##  <a name="setwindowtheme"></a>  CToolTipCtrl::SetWindowTheme  
+ Sets the visual style of the tool tip window.  
   
 ```  
 HRESULT SetWindowTheme(LPCWSTR pszSubAppName);
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
  `pszSubAppName`  
- Указатель на строку Юникода, содержит визуальный стиль для задания.  
+ A pointer to a Unicode string that contains the visual style to set.  
   
-### <a name="return-value"></a>Возвращаемое значение  
- Возвращаемое значение не используется.  
+### <a name="return-value"></a>Return Value  
+ The return value is not used.  
   
-### <a name="remarks"></a>Примечания  
- Эта функция-член эмулирует работу [TTM_SETWINDOWTHEME](http://msdn.microsoft.com/library/windows/desktop/bb760418) сообщений, как описано в [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
+### <a name="remarks"></a>Remarks  
+ This member function emulates the functionality of the [TTM_SETWINDOWTHEME](http://msdn.microsoft.com/library/windows/desktop/bb760418) message, as described in the Windows SDK.  
   
-##  <a name="update"></a>CToolTipCtrl::Update  
- Вызывает перерисовку текущего инструмента.  
+##  <a name="update"></a>  CToolTipCtrl::Update  
+ Forces the current tool to be redrawn.  
   
 ```  
 void Update();
 ```  
   
-##  <a name="updatetiptext"></a>CToolTipCtrl::UpdateTipText  
- Обновляет текст подсказки для элемента управления средств.  
+##  <a name="updatetiptext"></a>  CToolTipCtrl::UpdateTipText  
+ Updates the tool tip text for this control's tools.  
   
 ```  
 void UpdateTipText(
@@ -804,21 +834,21 @@ void UpdateTipText(
     UINT_PTR nIDTool = 0);
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
  `lpszText`  
- Указатель на текст программы.  
+ Pointer to the text for the tool.  
   
  `pWnd`  
- Указатель на окно, содержащее средство.  
+ Pointer to the window that contains the tool.  
   
  `nIDTool`  
- Идентификатор средства.  
+ ID of the tool.  
   
  `nIDText`  
- Идентификатор строкового ресурса с текстом программы.  
+ ID of the string resource that contains the text for the tool.  
   
-## <a name="see-also"></a>См. также  
- [CWnd-класс](../../mfc/reference/cwnd-class.md)   
- [Диаграмма иерархии](../../mfc/hierarchy-chart.md)   
- [CToolBar-класс](../../mfc/reference/ctoolbar-class.md)
+## <a name="see-also"></a>See Also  
+ [CWnd Class](../../mfc/reference/cwnd-class.md)   
+ [Hierarchy Chart](../../mfc/hierarchy-chart.md)   
+ [CToolBar Class](../../mfc/reference/ctoolbar-class.md)
 

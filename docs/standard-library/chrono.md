@@ -1,5 +1,5 @@
 ---
-title: "&lt;chrono&gt; | Документы Майкрософт"
+title: '&lt;chrono&gt; | Microsoft Docs'
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -9,13 +9,7 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
-- chrono/std::chrono::nanoseconds
-- chrono/std::chrono::minutes
-- chrono/std::chrono::seconds
-- <chrono>
-- chrono/std::chrono::hours
-- chrono/std::chrono::milliseconds
-- chrono/std::chrono::microseconds
+- chrono/std::chrono::nanoseconds", "chrono/std::chrono::minutes", "chrono/std::chrono::seconds", "<chrono>", "chrono/std::chrono::hours", "chrono/std::chrono::milliseconds", "chrono/std::chrono::microseconds
 dev_langs:
 - C++
 ms.assetid: 844de749-f306-482e-89bc-6f53c99c8324
@@ -37,106 +31,106 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
-ms.openlocfilehash: c91a494644e2d8d12259c3ee6cd23333eb9bae9e
+ms.translationtype: MT
+ms.sourcegitcommit: 5d026c375025b169d5db8445cbb52c0c917b2d8d
+ms.openlocfilehash: 2917c7927904cafe4f69f4ed2f1e168614e1df66
 ms.contentlocale: ru-ru
-ms.lasthandoff: 04/29/2017
+ms.lasthandoff: 09/09/2017
 
 ---
 # <a name="ltchronogt"></a>&lt;chrono&gt;
-Включите стандартный заголовок \<chrono> для определения классов и функций, которые представляют интервалы и моменты времени и работают с ними.  
+Include the standard header \<chrono> to define classes and functions that represent and manipulate time durations and time instants.  
   
- Начиная с Visual Studio 2015, реализация `steady_clock` была изменена в соответствии с требованиями стандарта C++ к постоянству и монотонности. `steady_clock` теперь основан на функции QueryPerformanceCounter(), а `high_resolution_clock` теперь является определением типа для `steady_clock`. В результате в Visual C++ `steady_clock::time_point` теперь является определением типа для `chrono::time_point<steady_clock>`, однако в других реализациях это может быть не так.  
+ Beginning in Visual Studio 2015, the implementation of `steady_clock` has changed to meet the C++ Standard requirements for steadiness and monotonicity. `steady_clock` is now based on QueryPerformanceCounter() and `high_resolution_clock` is now a typedef for `steady_clock`. As a result, in Visual C++ `steady_clock::time_point` is now a typedef for `chrono::time_point<steady_clock>`; however, this is not necessarily the case for other implementations.  
   
-## <a name="syntax"></a>Синтаксис  
+## <a name="syntax"></a>Syntax  
   
 ```cpp  
 #include <chrono>  
 ```  
 
-### <a name="classes"></a>Классы  
+### <a name="classes"></a>Classes  
   
-|Имя|Описание|  
+|Name|Description|  
 |----------|-----------------|  
-|[Класс duration](../standard-library/duration-class.md)|Описывает тип, содержащий интервал времени.|  
-|[Класс time_point](../standard-library/time-point-class.md)|Описывает тип, представляющий момент времени.|  
+|[duration Class](../standard-library/duration-class.md)|Describes a type that holds a time interval.|  
+|[time_point Class](../standard-library/time-point-class.md)|Describes a type that represents a point in time.|  
   
-### <a name="structs"></a>структурам;  
+### <a name="structs"></a>Structs  
   
-|Имя|Описание|  
+|Name|Description|  
 |----------|-----------------|  
-|[Структура common_type](../standard-library/common-type-structure.md)|Описывает специализации класса шаблона [common_type](../standard-library/common-type-class.md) для создания экземпляров `duration` и `time_point`.|  
-|[Структура duration_values](../standard-library/duration-values-structure.md)|Предоставляет конкретные значения для параметра `Rep` шаблона `duration`.|  
-|[Структура steady_clock](../standard-library/steady-clock-struct.md)|Представляет часы `steady`.|  
-|[Структура system_clock](../standard-library/system-clock-structure.md)|Представляет *тип clock*, использующий данные системных часов в реальном времени.|  
-|[Структура treat_as_floating_point](../standard-library/treat-as-floating-point-structure.md)|Указывает, может ли тип рассматриваться как тип с плавающей запятой.|  
+|[common_type Structure](../standard-library/common-type-structure.md)|Describes specializations of template class [common_type](../standard-library/common-type-class.md) for instantiations of `duration` and `time_point`.|  
+|[duration_values Structure](../standard-library/duration-values-structure.md)|Provides specific values for the `duration` template parameter `Rep`.|  
+|[steady_clock struct](../standard-library/steady-clock-struct.md)|Represents a `steady` clock.|  
+|[system_clock Structure](../standard-library/system-clock-structure.md)|Represents a *clock type* that is based on the real-time clock of the system.|  
+|[treat_as_floating_point Structure](../standard-library/treat-as-floating-point-structure.md)|Specifies whether a type can be treated as a floating-point type.|  
   
-### <a name="functions"></a>Функции  
+### <a name="functions"></a>Functions  
   
-|Имя|Описание|  
+|Name|Description|  
 |----------|-----------------|  
-|[duration_cast](../standard-library/chrono-functions.md#duration_cast)|Приводит объект `duration` к указанному типу.|  
-|[time_point_cast](../standard-library/chrono-functions.md#time_point_cast)|Приводит объект `time_point` к указанному типу.|  
+|[duration_cast](../standard-library/chrono-functions.md#duration_cast)|Casts a `duration` object to a specified type.|  
+|[time_point_cast](../standard-library/chrono-functions.md#time_point_cast)|Casts a `time_point` object to a specified type.|  
   
-### <a name="operators"></a>Операторы  
+### <a name="operators"></a>Operators  
   
-|Имя|Описание|  
+|Name|Description|  
 |----------|-----------------|  
-|[operator-](../standard-library/chrono-operators.md#operator-)|Оператор вычитания или отрицания объектов `duration` и `time_point`.|  
-|[operator!=](../standard-library/chrono-operators.md#op_neq)|Оператор неравенства, используемый с объектами `duration` или `time_point`.|  
-|[operator modulo](../standard-library/chrono-operators.md#op_modulo)|Оператор для операций вычисления остатка от деления над объектами `duration`.|  
-|[operator*](../standard-library/chrono-operators.md#op_star)|Оператор умножения для объектов `duration`.|  
-|[operator/](../standard-library/chrono-operators.md#op_div)|Оператор деления для объектов `duration`.|  
-|[operator+](../standard-library/chrono-operators.md#op_add)|Складывает объекты `duration` и `time_point`.|  
-|[operator&lt;](../standard-library/chrono-operators.md#op_lt)|Определяет, справедливо ли, что один из объектов `duration` или `time_point` меньше, чем другой объект `duration` или `time_point`.|  
-|[operator&lt;=](../standard-library/chrono-operators.md#op_lt_eq)|Определяет, справедливо ли, что один из объектов `duration` или `time_point` меньше или равен другому объекту `duration` или `time_point`.|  
-|[operator==](../standard-library/chrono-operators.md#op_eq_eq)|Определяет, справедливо ли, что два объекта `duration` представляют интервалы времени, имеющие одинаковую длину, или, что два объекта `time_point` представляют один и тот же момент времени.|  
-|[operator&gt;](../standard-library/chrono-operators.md#op_gt)|Определяет, справедливо ли, что один из объектов `duration` или `time_point` больше, чем другой объект `duration` или `time_point`.|  
-|[operator&gt;=](../standard-library/chrono-operators.md#op_gt_eq)|Определяет, справедливо ли, что один из объектов `duration` или `time_point` больше или равен другому объекту `duration` или `time_point`.|  
+|[operator-](../standard-library/chrono-operators.md#operator-)|Operator for subtraction or negation of `duration` and `time_point` objects.|  
+|[operator!=](../standard-library/chrono-operators.md#op_neq)|Inequality operator that is used with `duration` or `time_point` objects.|  
+|[operator modulo](../standard-library/chrono-operators.md#op_modulo)|Operator for modulo operations on `duration` objects.|  
+|[operator*](../standard-library/chrono-operators.md#op_star)|Multiplication operator for `duration` objects.|  
+|[operator/](../standard-library/chrono-operators.md#op_div)|Division operator for `duration` objects.|  
+|[operator+](../standard-library/chrono-operators.md#op_add)|Adds `duration` and `time_point` objects.|  
+|[operator&lt;](../standard-library/chrono-operators.md#op_lt)|Determines whether one `duration` or `time_point` object is less than another `duration` or `time_point` object.|  
+|[operator&lt;=](../standard-library/chrono-operators.md#op_lt_eq)|Determines whether one `duration` or `time_point` object is less than or equal to another `duration` or `time_point` object.|  
+|[operator==](../standard-library/chrono-operators.md#op_eq_eq)|Determines whether two `duration` objects represent time intervals that have the same length, or whether two `time_point` objects represent the same point in time.|  
+|[operator&gt;](../standard-library/chrono-operators.md#op_gt)|Determines whether one `duration` or `time_point` object is greater than another `duration` or `time_point` object.|  
+|[operator&gt;=](../standard-library/chrono-operators.md#op_gt_eq)|Determines whether one `duration` or `time_point` object is greater than or equal to another `duration` or `time_point` object.|  
   
-### <a name="predefined-duration-types"></a>Предопределенные типы длительности  
- Дополнительные сведения о типах отношения, используемых в следующих определениях типов, см. в разделе [\<ratio>](../standard-library/ratio.md).  
+### <a name="predefined-duration-types"></a>Predefined Duration Types  
+ For more information about ratio types that are used in the following typedefs, see [\<ratio>](../standard-library/ratio.md).  
   
-|Typedef|Описание|  
+|Typedef|Description|  
 |-------------|-----------------|  
-|`typedef duration<long long, nano> nanoseconds;`|Синоним для типа `duration` с тактовым периодом равным 1 наносекунде.|  
-|`typedef duration<long long, micro> microseconds;`|Синоним для типа `duration` с тактовым периодом равным 1 микросекунде.|  
-|`typedef duration<long long, milli> milliseconds;`|Синоним для типа `duration` с тактовым периодом равным 1 миллисекунде.|  
-|`typedef duration<long long> seconds;`|Синоним для типа `duration` с тактовым периодом равным 1 секунде.|  
-|`typedef duration<int, ratio<60> > minutes;`|Синоним для типа `duration` с тактовым периодом равным 1 минуте.|  
-|`typedef duration<int, ratio<3600> > hours;`|Синоним для типа `duration` с тактовым периодом равным 1 часу.|  
+|`typedef duration<long long, nano> nanoseconds;`|Synonym for a `duration` type that has a tick period of one nanosecond.|  
+|`typedef duration<long long, micro> microseconds;`|Synonym for a `duration` type that has a tick period of one microsecond.|  
+|`typedef duration<long long, milli> milliseconds;`|Synonym for a `duration` type that has a tick period of one millisecond.|  
+|`typedef duration<long long> seconds;`|Synonym for a `duration` type that has a tick period of one second.|  
+|`typedef duration<int, ratio<60> > minutes;`|Synonym for a `duration` type that has a tick period of one minute.|  
+|`typedef duration<int, ratio<3600> > hours;`|Synonym for a `duration` type that has a tick period of one hour.|  
   
-### <a name="literals"></a>Литералы  
- **(C++ 11)** Заголовок \<chrono> определяет следующие [пользовательские литералы](../cpp/user-defined-literals-cpp.md), которые можно использовать для большего удобства, типобезопасности и обслуживаемости кода. Такие литералы определяются во встроенном пространстве имен `literals::chrono_literals` и находятся в области действия, когда std::chrono находится в области действия.  
+### <a name="literals"></a>Literals  
+ **(C++11)**The \<chrono> header defines the following [user-defined literals](../cpp/user-defined-literals-cpp.md) that you can use for greater convenience, type-safety and maintainability of your code. These literals are defined in the `literals::chrono_literals` inline namespace and are in scope when std::chrono is in scope.  
   
-|Литерал|Описание|  
+|Literal|Description|  
 |-------------|-----------------|  
-|chrono::hours operator "" h(unsigned long long Val)|Указывает часы как целочисленное значение.|  
-|chrono::Duration\<double, соотношение\<3600 >> оператор «» h (long double Val)|Указывает часы как значение с плавающей запятой.|  
-|chrono::minutes (operator "" min)(unsigned long long Val)|Указывает минуты как целочисленное значение.|  
-|chrono::Duration\<double, соотношение\<60 >> (оператор «» min) (длинная двойной Val)|Указывает минуты как значение с плавающей запятой.|  
-|chrono::seconds operator "" s(unsigned long long Val)|Указывает минуты как целочисленное значение.|  
-|chrono::duration\<double> operator "" s(long double Val)|Указывает секунды как значение с плавающей запятой.|  
-|chrono::milliseconds operator "" ms(unsigned long long Val)|Указывает миллисекунды как целочисленное значение.|  
-|chrono::duration\<double, milli> operator "" ms(long double Val)|Указывает миллисекунды как значение с плавающей запятой.|  
-|chrono::microseconds operator "" us(unsigned long long Val)|Указывает микросекунды как целочисленное значение.|  
-|chrono::duration\<double, micro> operator "" us(long double Val)|Указывает микросекунды как значение с плавающей запятой.|  
-|chrono::nanoseconds operator "" ns(unsigned long long Val)|Указывает наносекунды как целочисленное значение.|  
-|chrono::duration\<double, nano> operator "" ns(long double Val)|Указывает наносекунды как значение с плавающей запятой.|  
+|chrono::hours operator "" h(unsigned long long Val)|Specifies hours as an integral value.|  
+|chrono::duration\<double, ratio\<3600> > operator "" h(long double Val)|Specifies hours as a floating-point value.|  
+|chrono::minutes (operator "" min)(unsigned long long Val)|Specifies minutes as an integral value.|  
+|chrono::duration\<double, ratio\<60> > (operator "" min)( long double Val)|Specifies minutes as a floating-point value.|  
+|chrono::seconds operator "" s(unsigned long long Val)|Specifies minutes as an integral value.|  
+|chrono::duration\<double> operator "" s(long double Val)|Specifies seconds as a floating-point value.|  
+|chrono::milliseconds operator "" ms(unsigned long long Val)|Specifies milliseconds as an integral value.|  
+|chrono::duration\<double, milli> operator "" ms(long double Val)|Specifies milliseconds as a floating-point value.|  
+|chrono::microseconds operator "" us(unsigned long long Val)|Specifies microseconds as an integral value.|  
+|chrono::duration\<double, micro> operator "" us(long double Val)|Specifies microseconds as a floating-point value.|  
+|chrono::nanoseconds operator "" ns(unsigned long long Val)|Specifies nanoseconds as an integral value.|  
+|chrono::duration\<double, nano> operator "" ns(long double Val)|Specifies nanoseconds as a floating-point value.|  
 |||  
   
-В следующем примере демонстрируется использование литералов chrono.  
+The following examples show how to use the chrono literals.  
   
 ```  
 constexpr auto day = 24h;  
 constexpr auto week = 24h* 7;  
 constexpr auto my_duration_unit = 108ms;  
 ```  
-## <a name="remarks"></a>Примечания  
+## <a name="remarks"></a>Remarks  
   
-## <a name="see-also"></a>См. также  
- [Справочник по файлам заголовков](../standard-library/cpp-standard-library-header-files.md)
+## <a name="see-also"></a>See Also  
+ [Header Files Reference](../standard-library/cpp-standard-library-header-files.md)
 
 
 

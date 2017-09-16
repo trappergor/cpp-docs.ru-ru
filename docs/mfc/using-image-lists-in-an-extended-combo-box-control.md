@@ -1,49 +1,68 @@
 ---
-title: "Использование списков изображений в элементе управления &quot;Расширенное поле со списком&quot; | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "расширенные поля со списком, изображения"
-  - "списки изображений [C++], поля со списком"
-  - "изображения [C++], элементы поля со списком"
+title: Using Image Lists in an Extended Combo Box Control | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- image lists [MFC], combo boxes
+- extended combo boxes [MFC], images
+- images [MFC], combo box items
 ms.assetid: dfff25fe-af70-47a2-8032-3901d1e6842d
 caps.latest.revision: 11
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 7
----
-# Использование списков изображений в элементе управления &quot;Расширенное поле со списком&quot;
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: b42104bf06020fa49435d6aa73bb9dea690aea49
+ms.contentlocale: ru-ru
+ms.lasthandoff: 09/12/2017
 
-Основной функции расширенных элементов управления " Поле со списком возможность сопоставлять изображения из списка изображений с отдельными элементами в элементе управления " Поле со списком.  Каждый элемент может отображать 3 различных способа: одно для своего выбранного состояния, один для его nonselected состояния и третий для образа перекрытия.  
+---
+# <a name="using-image-lists-in-an-extended-combo-box-control"></a>Using Image Lists in an Extended Combo Box Control
+The main feature of extended combo box controls is the ability to associate images from an image list with individual items in a combo box control. Each item is able to display three different images: one for its selected state, one for its nonselected state, and a third for an overlay image.  
   
- В следующей процедуре связывает список изображений расширенный элемент управления " Поле со списком:  
+ The following procedure associates an image list with an extended combo box control:  
   
-### Связывание списка изображений расширенный элемент управления " Поле со списком  
+### <a name="to-associate-an-image-list-with-an-extended-combo-box-control"></a>To associate an image list with an extended combo box control  
   
-1.  Создайте новый список изображений \(или использовать существующий объект списка изображений\), используя конструктор [CImageList](../Topic/CImageList%20Class.md) и хранения результирующий указатель.  
+1.  Construct a new image list (or use an existing image list object), using the [CImageList](../mfc/reference/cimagelist-class.md) constructor and storing the resultant pointer.  
   
-2.  Инициализируйте новый объект списка изображений с помощью метода [CImageList::Create](../Topic/CImageList::Create.md).  Следующий код является примером этого вызова.  
+2.  Initialize the new image list object by calling [CImageList::Create](../mfc/reference/cimagelist-class.md#create). The following code is one example of this call.  
   
-     [!code-cpp[NVC_MFCControlLadenDialog#10](../mfc/codesnippet/CPP/using-image-lists-in-an-extended-combo-box-control_1.cpp)]  
+     [!code-cpp[NVC_MFCControlLadenDialog#10](../mfc/codesnippet/cpp/using-image-lists-in-an-extended-combo-box-control_1.cpp)]  
   
-3.  Добавьте дополнительные образы для каждого возможного состояния: выбранный или nonselected и наложение.  Следующий код добавляет 3 предопределенных образа.  
+3.  Add optional images for each possible state: selected or nonselected, and an overlay. The following code adds three predefined images.  
   
-     [!code-cpp[NVC_MFCControlLadenDialog#11](../mfc/codesnippet/CPP/using-image-lists-in-an-extended-combo-box-control_2.cpp)]  
+     [!code-cpp[NVC_MFCControlLadenDialog#11](../mfc/codesnippet/cpp/using-image-lists-in-an-extended-combo-box-control_2.cpp)]  
   
-4.  Связывание списка изображений с элементом управления, вызвав метод [CComboBoxEx::SetImageList](../Topic/CComboBoxEx::SetImageList.md).  
+4.  Associate the image list with the control with a call to [CComboBoxEx::SetImageList](../mfc/reference/ccomboboxex-class.md#setimagelist).  
   
- После списка изображений связанный с элементом управления, можно задать способ по отдельности каждый элемент будет использовать для 3 состояний.  Дополнительные сведения см. в разделе [Параметр образы для отдельного элемента](../mfc/setting-the-images-for-an-individual-item.md).  
+ Once the image list has been associated with the control, you can individually specify the images each item will use for the three possible states. For more information, see [Setting the Images for an Individual Item](../mfc/setting-the-images-for-an-individual-item.md).  
   
-## См. также  
- [Использование CComboBoxEx](../mfc/using-ccomboboxex.md)   
- [Элементы управления](../mfc/controls-mfc.md)
+## <a name="see-also"></a>See Also  
+ [Using CComboBoxEx](../mfc/using-ccomboboxex.md)   
+ [Controls](../mfc/controls-mfc.md)
+
+

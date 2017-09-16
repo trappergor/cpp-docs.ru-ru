@@ -1,85 +1,104 @@
 ---
-title: "Элементы управления ActiveX в MFC. Добавление пользовательских методов | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "MFC ActiveX - элементы управления, методы"
-  - "PtInCircle - пользовательский метод"
+title: 'MFC ActiveX Controls: Adding Custom Methods | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- MFC ActiveX controls [MFC], methods
+- PtInCircle custom method [MFC]
 ms.assetid: 8f8dc344-44a0-4021-8db5-4cdd3d700e18
 caps.latest.revision: 11
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 7
----
-# Элементы управления ActiveX в MFC. Добавление пользовательских методов
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 8ca25680f3da358fb1e7dda710bd65dfb39ee6c7
+ms.contentlocale: ru-ru
+ms.lasthandoff: 09/12/2017
 
-Пользовательские методы отличаются от стандартных методов, так как они еще не реализованы `COleControl`.  Необходимо указать реализацию для каждого пользовательского метода добавляется к элементу управления.  
+---
+# <a name="mfc-activex-controls-adding-custom-methods"></a>MFC ActiveX Controls: Adding Custom Methods
+Custom methods differ from stock methods in that they are not already implemented by `COleControl`. You must supply the implementation for each custom method you add to your control.  
   
- Пользователь элемент управления ActiveX может вызывать пользовательский метод в любое время для выполнения действий для отдельного элемента управления.  Запись схемы подготовки к сообщению для пользовательских методов формы `DISP_FUNCTION`.  
+ An ActiveX control user can call a custom method at any time to perform control-specific actions. The dispatch map entry for custom methods is of the form `DISP_FUNCTION`.  
   
-##  <a name="_core_adding_a_custom_method_with_classwizard"></a> Чтобы добавить пользовательский метод с помощью мастера добавления метода.  
- В следующей процедуре показано добавление пользовательского PtInCircle метод в код элемента управления ActiveX каркасному.  Определяет, является ли PtInCircle координаты, заданных в элемент управления внутри или вне круга.  Эту одной процедуры можно также использовать для добавления дополнительных пользовательские методы.  Замените имя пользовательского метода и его параметры имени и параметров метода PtInCircle.  
+##  <a name="_core_adding_a_custom_method_with_classwizard"></a> Adding a Custom Method With the Add Method Wizard  
+ The following procedure demonstrates adding the custom method PtInCircle to an ActiveX control's skeleton code. PtInCircle determines whether the coordinates passed to the control are inside or outside the circle. This same procedure can also be used to add other custom methods. Substitute your custom method name and its parameters for the PtInCircle method name and parameters.  
   
 > [!NOTE]
->  В данном примере функция `InCircle` из событий статьи.  Дополнительные сведения об этой функции см. в разделе [Элементы управления ActiveX MFC. Добавление пользовательских событий к элементу управления ActiveX](../Topic/MFC%20ActiveX%20Controls:%20Adding%20Custom%20Events.md) статьи.  
+>  This example uses the `InCircle` function from the article Events. For more information on this function, see the article [MFC ActiveX Controls: Adding Custom Events to an ActiveX Control](../mfc/mfc-activex-controls-adding-custom-events.md).  
   
-#### Чтобы добавить пользовательский метод PtInCircle с помощью мастера добавления метода.  
+#### <a name="to-add-the-ptincircle-custom-method-using-the-add-method-wizard"></a>To add the PtInCircle custom method using the Add Method Wizard  
   
-1.  Загрузите проект элемента управления.  
+1.  Load the control's project.  
   
-2.  В представлении классов разверните узел библиотеки элемента управления.  
+2.  In Class View, expand the library node of your control.  
   
-3.  Щелкните правой кнопкой мыши узел интерфейса для элемента управления \(второго узла узла библиотеки\), чтобы открыть контекстное меню.  
+3.  Right-click the interface node for your control (the second node of the library node) to open the shortcut menu.  
   
-4.  В контекстном меню щелкните **Добавить**, а затем щелкните **Добавить метод**.  
+4.  From the shortcut menu, click **Add** and then click **Add Method**.  
   
-     Это будет открыт мастер добавления метода.  
+     This opens the Add Method Wizard.  
   
-5.  В поле **Имя метода** введите `PtInCircle`.  
+5.  In the **Method Name** box, type `PtInCircle`.  
   
-6.  В поле **Внутреннее имя** введите имя функции метода внутренней или примите значение по умолчанию \(в данном случае `PtInCircle`\).  
+6.  In the **Internal Name** box, type the name of the method's internal function or use the default value (in this case, `PtInCircle`).  
   
-7.  В поле **Возвращаемый тип**, щелкните **VARIANT\_BOOL** для возвращаемого типа метода.  
+7.  In the **Return Type** box, click **VARIANT_BOOL** for the method's return type.  
   
-8.  Использование элементов управления **Тип параметра** и **Имя параметра** добавьте параметр с именем `xCoord` \(типом **OLE\_XPOS\_PIXELS**\).  
+8.  Using the **Parameter Type** and **Parameter Name** controls, add a parameter called `xCoord` (type **OLE_XPOS_PIXELS**).  
   
-9. Использование элементов управления **Тип параметра** и **Имя параметра** добавьте параметр с именем `yCoord` \(типом **OLE\_YPOS\_PIXELS**\).  
+9. Using the **Parameter Type** and **Parameter Name** controls, add a parameter called `yCoord` (type **OLE_YPOS_PIXELS**).  
   
-10. Нажмите кнопку **Готово**.  
+10. Click **Finish**.  
   
-##  <a name="_core_classwizard_changes_for_custom_methods"></a> Добавьте мастера изменения метода для пользовательских методов  
- При добавлении пользовательского метода, мастера добавления метода выполняет некоторые изменения в качестве заголовка класса элемента управления \(. H\) и файлы реализации \(CPP\).  В следующей линия добавляется к объявлению схемы подготовки к отправке в заголовке \(класса элемента управления. Файл H\).  
+##  <a name="_core_classwizard_changes_for_custom_methods"></a> Add Method Wizard Changes for Custom Methods  
+ When you add a custom method, the Add Method Wizard makes some changes to the control class header (.H) and implementation (.CPP) files. The following line is added to the dispatch map declaration in the control class header (.H) file:  
   
- [!code-cpp[NVC_MFC_AxUI#18](../mfc/codesnippet/CPP/mfc-activex-controls-adding-custom-methods_1.h)]  
+ [!code-cpp[NVC_MFC_AxUI#18](../mfc/codesnippet/cpp/mfc-activex-controls-adding-custom-methods_1.h)]  
   
- Этот код объявляет метод `PtInCircle` диспетчеризации вызывается обработчиком.  Эта функция может быть вызвана пользователем элемента управления с помощью внешнего имени PtInCircle.  
+ This code declares a dispatch method handler called `PtInCircle`. This function can be called by the control user using the external name PtInCircle.  
   
- В следующей линия добавляется в файл .IDL элемента управления:  
+ The following line is added to the control's .IDL file:  
   
- [!code-cpp[NVC_MFC_AxUI#19](../mfc/codesnippet/CPP/mfc-activex-controls-adding-custom-methods_2.idl)]  
+ [!code-cpp[NVC_MFC_AxUI#19](../mfc/codesnippet/cpp/mfc-activex-controls-adding-custom-methods_2.idl)]  
   
- Эта линия присвоить метод PtInCircle определенный идентификатор, позиция метода в методах мастера добавления метода и свойства перечислены.  Поскольку мастера добавления метода использовался для добавления пользовательский метод, запись для ее была добавлена .IDL автоматически в файл проекта.  
+ This line assigns the PtInCircle method a specific ID number, the method's position in the Add Method Wizard methods and properties list. Because the Add Method Wizard was used to add the custom method, the entry for it was added automatically to the project's .IDL file.  
   
- Кроме того, следующая линия, расположенная в файле реализации \(CPP\) класса элемента управления, добавляется в схеме подготовки к отправке элемента управления:  
+ In addition, the following line, located in the implementation (.CPP) file of the control class, is added to the control's dispatch map:  
   
- [!code-cpp[NVC_MFC_AxUI#20](../mfc/codesnippet/CPP/mfc-activex-controls-adding-custom-methods_3.cpp)]  
+ [!code-cpp[NVC_MFC_AxUI#20](../mfc/codesnippet/cpp/mfc-activex-controls-adding-custom-methods_3.cpp)]  
   
- Макрос `DISP_FUNCTION` сопоставляет метод PtInCircle функции обработчика элемента управления, `PtInCircle`, следует объявить тип возвращаемого значения, возвратят значение **VARIANT\_BOOL**, и объявляет 2 параметров типа **VTS\_XPOS\_PIXELS**  и **VTS\_YPOSPIXELS**, передаваемые `PtInCircle`.  
+ The `DISP_FUNCTION` macro maps the method PtInCircle to the control's handler function, `PtInCircle`, declares the return type to be **VARIANT_BOOL**, and declares two parameters of type **VTS_XPOS_PIXELS** and **VTS_YPOSPIXELS** to be passed to `PtInCircle`.  
   
- Наконец, мастера добавления метода функциональность `CSampleCtrl::PtInCircle` заглушки в конце файла реализации элемента управления \(CPP\).  Для `PtInCircle` к функции, как показано выше, его необходимо изменить следующим образом:  
+ Finally, the Add Method Wizard adds the stub function `CSampleCtrl::PtInCircle` to the bottom of the control's implementation (.CPP) file. For `PtInCircle` to function as stated previously, it must be modified as follows:  
   
- [!code-cpp[NVC_MFC_AxUI#21](../mfc/codesnippet/CPP/mfc-activex-controls-adding-custom-methods_4.cpp)]  
+ [!code-cpp[NVC_MFC_AxUI#21](../mfc/codesnippet/cpp/mfc-activex-controls-adding-custom-methods_4.cpp)]  
   
-## См. также  
- [Элементы управления ActiveX MFC](../mfc/mfc-activex-controls.md)   
- [Значки представления классов и обозревателя объектов](../Topic/Class%20View%20and%20Object%20Browser%20Icons.md)
+## <a name="see-also"></a>See Also  
+ [MFC ActiveX Controls](../mfc/mfc-activex-controls.md)   
+ [Class View and Object Browser Icons](/visualstudio/ide/class-view-and-object-browser-icons)
+
+

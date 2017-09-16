@@ -1,42 +1,61 @@
 ---
-title: "Демонстрация маршрутизации команд | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "обработка команд, маршрутизация команд"
-  - "маршрутизация команд, OnCmdMsg - обработчик"
-  - "MFC - библиотека, маршрутизация команд"
+title: Command Routing Illustration | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- MFC, command routing
+- command handling [MFC], routing commands
+- command routing [MFC], OnCmdMsg handler
 ms.assetid: 4b7b4741-565f-4878-b076-fd85c670f87f
 caps.latest.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 5
----
-# Демонстрация маршрутизации команд
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 17f5b5930936f1c7839b5f435eafbeae611d39fd
+ms.contentlocale: ru-ru
+ms.lasthandoff: 09/12/2017
 
-Чтобы увидеть, подумайте сообщение из команды удаления всех пунктом меню в меню " Правка " приложения MDI.  Предположим, что функция обработчика для этой команды оказывается функцией\-членом класса документа приложения.  Описание этой команды достигает его обработчик после того, как пользователь выбирает пункт меню:  
+---
+# <a name="command-routing-illustration"></a>Command Routing Illustration
+To illustrate, consider a command message from a Clear All menu item in an MDI application's Edit menu. Suppose the handler function for this command happens to be a member function of the application's document class. Here's how that command reaches its handler after the user chooses the menu item:  
   
-1.  Главное фреймовое окно получает сообщение команды первым.  
+1.  The main frame window receives the command message first.  
   
-2.  Главное фреймовое окно MDI предоставляет в данный момент активному дочернему окну MDI\-приложения возможность обработки команды.  
+2.  The main MDI frame window gives the currently active MDI child window a chance to handle the command.  
   
-3.  Стандартная маршрутизация фреймового окна MDI дочернего дает возможность представлению в команде перед собственную схему проверки сообщений.  
+3.  The standard routing of an MDI child frame window gives its view a chance at the command before checking its own message map.  
   
-4.  Представление проверяет собственную схему сообщений, а не удается, никаких обработчиков, следующие команды маршруты с его связанный документ.  
+4.  The view checks its own message map first and, finding no handler, next routes the command to its associated document.  
   
-5.  Документ проверяет его схема сообщений и обнаруживает обработчик.  Этот функция\-член вызывается документа и маршрутизация останавливается.  
+5.  The document checks its message map and finds a handler. This document member function is called and the routing stops.  
   
- Если документ не имел обработчик это далее команду, направленные на его шаблон документов.  Затем команда возвращаются результаты в представление, а затем фреймовому окно.  Наконец, фреймовое окно проверитьTfо в качестве схемы сообщений.  Если такую проверку также завершается ошибкой, команда может быть направлена в главное окно фреймовому MDI и затем в объект приложения — конечный элемент назначения не команд.  
+ If the document did not have a handler, it would next route the command to its document template. Then the command would return to the view and then the frame window. Finally, the frame window would check its message map. If that check failed as well, the command would be routed back to the main MDI frame window and then to the application object — the ultimate destination of unhandled commands.  
   
-## См. также  
- [Вызовы к обработчику со стороны платформы](../mfc/how-the-framework-calls-a-handler.md)
+## <a name="see-also"></a>See Also  
+ [How the Framework Calls a Handler](../mfc/how-the-framework-calls-a-handler.md)
+
+

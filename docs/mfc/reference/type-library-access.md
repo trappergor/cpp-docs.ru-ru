@@ -1,5 +1,5 @@
 ---
-title: "Введите доступ к библиотеке | Документы Microsoft"
+title: Type Library Access | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -13,7 +13,7 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- type libraries, accessing
+- type libraries [MFC], accessing
 ms.assetid: a03fa7f0-86c2-4119-bf81-202916fb74b3
 caps.latest.revision: 14
 author: mikeblome
@@ -33,68 +33,68 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 17a158366f94d27b7a46917282425d652e6b9042
-ms.openlocfilehash: 8a3fbcf66036ef3df3bd34b5182dac8af3dfccef
+ms.translationtype: MT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: c531cfd358a6f049754b55a5bc8902ad5a37d975
 ms.contentlocale: ru-ru
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 09/12/2017
 
 ---
-# <a name="type-library-access"></a>Доступ к библиотеке типов
-Библиотеки типов предоставления интерфейсов элемента управления OLE других OLE-совместимых приложений. Если один или несколько интерфейсов, предоставляемых каждого элемента управления OLE необходимо иметь библиотеку типов.  
+# <a name="type-library-access"></a>Type Library Access
+Type libraries expose the interfaces of an OLE control to other OLE-aware applications. Each OLE control must have a type library if one or more interfaces are to be exposed.  
   
- Следующие макросы разрешить элемента управления OLE для предоставления доступа к библиотеке типов.  
+ The following macros allow an OLE control to provide access to its own type library:  
   
-### <a name="type-library-access"></a>Доступ к библиотеке типов  
+### <a name="type-library-access"></a>Type Library Access  
   
 |||  
 |-|-|  
-|[DECLARE_OLETYPELIB](#declare_oletypelib)|Объявляет `GetTypeLib` функции-члены элемента управления OLE (необходимо использовать в объявлении класса).|  
-|[IMPLEMENT_OLETYPELIB](#implement_oletypelib)|Реализует `GetTypeLib` функции-члены элемента управления OLE (необходимо использовать реализацию класса).|  
+|[DECLARE_OLETYPELIB](#declare_oletypelib)|Declares a `GetTypeLib` member function of an OLE control (must be used in the class declaration).|  
+|[IMPLEMENT_OLETYPELIB](#implement_oletypelib)|Implements a `GetTypeLib` member function of an OLE control (must be used in the class implementation).|  
   
-##  <a name="declare_oletypelib"></a>DECLARE_OLETYPELIB  
- Объявляет `GetTypeLib` функции-члена класса элемента управления.  
+##  <a name="declare_oletypelib"></a>  DECLARE_OLETYPELIB  
+ Declares the `GetTypeLib` member function of your control class.  
   
 ```   
 DECLARE_OLETYPELIB(class_name)   
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
  *class_name*  
- Имя класса элемента управления, относящиеся к библиотеке типов.  
+ The name of the control class related to the type library.  
   
-### <a name="remarks"></a>Примечания  
- Используйте этот макрос в файле заголовка класса элемента управления.  
+### <a name="remarks"></a>Remarks  
+ Use this macro in the control class header file.  
 
-### <a name="requirements"></a>Требования  
- **Заголовок:** afxdisp.h  
+### <a name="requirements"></a>Requirements  
+ **Header:** afxdisp.h  
 
-##  <a name="implement_oletypelib"></a>IMPLEMENT_OLETYPELIB  
- Реализует элемент управления `GetTypeLib` функции-члена.  
+##  <a name="implement_oletypelib"></a>  IMPLEMENT_OLETYPELIB  
+ Implements the control's `GetTypeLib` member function.  
   
 ```   
 IMPLEMENT_OLETYPELIB(class_name, tlid, wVerMajor,  wVerMinor)   
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
  *class_name*  
- Имя класса элемента управления, относящиеся к библиотеке типов.  
+ The name of the control class related to the type library.  
   
  *tlid*  
- Идентификатор библиотеки типов.  
+ The ID number of the type library.  
   
  `wVerMajor`  
- Номер основной версии библиотеки типов.  
+ The type library major version number.  
   
  `wVerMinor`  
- Номер вспомогательной версии библиотеки типов.  
+ The type library minor version number.  
   
-### <a name="remarks"></a>Примечания  
- Этот макрос должен присутствовать в файле реализации для любого класса элемента управления, который использует `DECLARE_OLETYPELIB` макрос.  
+### <a name="remarks"></a>Remarks  
+ This macro must appear in the implementation file for any control class that uses the `DECLARE_OLETYPELIB` macro.  
 
-### <a name="requirements"></a>Требования  
- **Заголовок:** afxdisp.h  
+### <a name="requirements"></a>Requirements  
+ **Header:** afxdisp.h  
    
-## <a name="see-also"></a>См. также  
- [Макросы и глобальные объекты](../../mfc/reference/mfc-macros-and-globals.md)
+## <a name="see-also"></a>See Also  
+ [Macros and Globals](../../mfc/reference/mfc-macros-and-globals.md)
 

@@ -1,5 +1,5 @@
 ---
-title: "Класс is_reference | Документы Майкрософт"
+title: is_reference Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -9,7 +9,6 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
-- is_reference
 - type_traits/std::is_reference
 dev_langs:
 - C++
@@ -35,31 +34,31 @@ translation.priority.mt:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 28baed4badda4f2c1d7e5b20235fe8d40c2a7195
-ms.openlocfilehash: 8bb6c8b253ef83a0c980865cc9958c567d11511c
+ms.translationtype: MT
+ms.sourcegitcommit: 5d026c375025b169d5db8445cbb52c0c917b2d8d
+ms.openlocfilehash: 44ebd411ef64b8ff54ec6bec33cb45eaa76d265a
 ms.contentlocale: ru-ru
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 09/09/2017
 
 ---
-# <a name="isreference-class"></a>Класс is_reference
-Проверяет, является ли тип ссылкой.  
+# <a name="isreference-class"></a>is_reference Class
+Tests if type is a reference.  
   
-## <a name="syntax"></a>Синтаксис  
+## <a name="syntax"></a>Syntax  
   
 ```  
 template <class Ty>  
 struct is_reference;  
 ```  
   
-#### <a name="parameters"></a>Параметры  
+#### <a name="parameters"></a>Parameters  
  `Ty`  
- Запрашиваемый тип.  
+ The type to query.  
   
-## <a name="remarks"></a>Примечания  
- Экземпляр предиката типа содержит значение true, если тип `Ty` является ссылкой на объект или функцию, в противном случае — значение false.  
+## <a name="remarks"></a>Remarks  
+ An instance of the type predicate holds true if the type `Ty` is a reference to an object or to a function, otherwise it holds false.  
   
-## <a name="example"></a>Пример  
+## <a name="example"></a>Example  
   
 ```cpp  
 // std__type_traits__is_reference.cpp   
@@ -95,12 +94,12 @@ is_reference<int()> == false
 is_reference<int(&)()> == true  
 ```  
   
-## <a name="requirements"></a>Требования  
- **Заголовок:** \<type_traits>  
+## <a name="requirements"></a>Requirements  
+ **Header:** \<type_traits>  
   
- **Пространство имен:** std  
+ **Namespace:** std  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>See Also  
  [<type_traits>](../standard-library/type-traits.md)   
- [Класс is_pointer](../standard-library/is-pointer-class.md)
+ [is_pointer Class](../standard-library/is-pointer-class.md)
 

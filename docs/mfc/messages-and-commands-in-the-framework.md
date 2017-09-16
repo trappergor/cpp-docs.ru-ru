@@ -1,49 +1,68 @@
 ---
-title: "Сообщения и команды платформы | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "программирование на основе событий"
-  - "события [C++], маршрутизация команд в MFC"
-  - "события [C++], программирование на основе событий"
-  - "программирование на основе сообщений"
+title: Messages and Commands in the Framework | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- events [MFC], command routing in MFC
+- event-driven programming [MFC]
+- events [MFC], event-driven programming
+- message-driven programming [MFC]
 ms.assetid: d799ed8c-6a9f-4f05-be5d-29cb5bc6d185
 caps.latest.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 6
----
-# Сообщения и команды платформы
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 40bdb27fe1812237f7b9ad3439d6abd227fd427b
+ms.contentlocale: ru-ru
+ms.lasthandoff: 09/12/2017
 
-Приложения, написанные для Microsoft Windows «сообщение управляемого». В ответ на события мыши, таких как нажатия клавиши, перемещения окна и т д Windows отправляют сообщения в соответствующий окно.  Сообщения Windows процесса платформы .NET Framework любят любое другое приложение для Windows.  Однако платформа также ряд усовершенствований, выполняющих обработку сообщения проще, более поддерживаемым, и лучше инкапсулировали.  
+---
+# <a name="messages-and-commands-in-the-framework"></a>Messages and Commands in the Framework
+Applications written for Microsoft Windows are "message driven." In response to events such as mouse clicks, keystrokes, window movements, and so on, Windows sends messages to the proper window. Framework applications process Windows messages like any other application for Windows. But the framework also provides some enhancements that make processing messages easier, more maintainable, and better encapsulated.  
   
- В следующих разделах описываются ключевые понятия, используемые в остальной части семейства статьи для обсуждения сообщения и команды.  
+ The following topics introduce the key terms used in the rest of the article family to discuss messages and commands:  
   
--   [Сообщения](../mfc/messages.md)  
+-   [Messages](../mfc/messages.md)  
   
--   [Обработчик сообщений.](../mfc/message-handlers.md)  
+-   [Message handlers](../mfc/message-handlers.md)  
   
--   [Категории сообщения](../mfc/message-categories.md)  
+-   [Message categories](../mfc/message-categories.md)  
   
--   [Сообщения Windows и сообщения уведомления элементов управления](../mfc/message-categories.md)  
+-   [Windows messages and control-notification messages](../mfc/message-categories.md)  
   
--   [Сообщения команды](../mfc/message-categories.md)  
+-   [Command messages](../mfc/message-categories.md)  
   
--   [Схемы сообщений](../mfc/mapping-messages.md)  
+-   [Message maps](../mfc/mapping-messages.md)  
   
--   [Объекты пользовательского интерфейса и идентификаторы команд](../mfc/user-interface-objects-and-command-ids.md)  
+-   [User-interface objects and command IDs](../mfc/user-interface-objects-and-command-ids.md)  
   
--   [Конечные объекты command](../Topic/Command%20Targets.md)  
+-   [Command targets](../mfc/command-targets.md)  
   
-## См. также  
- [Обработка и сопоставление сообщений](../mfc/message-handling-and-mapping.md)
+## <a name="see-also"></a>See Also  
+ [Message Handling and Mapping](../mfc/message-handling-and-mapping.md)
+
+

@@ -1,31 +1,50 @@
 ---
-title: "Разрешение локально объявленных имен | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-dev_langs: 
-  - "C++"
+title: Name Resolution for Locally Declared Names | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-language
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+dev_langs:
+- C++
 ms.assetid: 743b88f3-de11-48f4-ae83-931449ea3886
 caps.latest.revision: 11
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 9
----
-# Разрешение локально объявленных имен
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 63a5b95c5b4a1df7f850a4cf01b54b63e30196e6
+ms.contentlocale: ru-ru
+ms.lasthandoff: 09/12/2017
 
-Можно создать ссылку на само имя шаблона с аргументами шаблона или без них.  В области шаблона класса само имя относится к шаблону.  В области специализации шаблона или частичной специализации само имя относится к специализации или частичной специализации.  Можно также создать ссылки на другие специализации или частичные специализации шаблона с использованием соответствующих аргументов шаблона.  
+---
+# <a name="name-resolution-for-locally-declared-names"></a>Name Resolution for Locally Declared Names
+
+The template's name itself can be referred to with or without the template arguments. In the scope of a class template, the name itself refers to the template. In the scope of a template specialization or partial specialization, the name alone refers to the specialization or partial specialization. Other specializations or partial specializations of the template can also be referenced, with the appropriate template arguments.  
   
-## Пример  
- Следующий фрагмент кода показывает, что имя А шаблона классов интерпретируется по\-разному в области видимости специализации или частичной специализации.  
+## <a name="example"></a>Example
+
+ The following code shows that the class template's name A is interpreted differently in the scope of a specialization or partial specialization.  
   
-```  
+```cpp
 // template_name_resolution3.cpp  
 // compile with: /c  
 template <class T> class A {  
@@ -43,12 +62,13 @@ template<> class A<int> {
 };  
 ```  
   
-## Пример  
- В случае конфликта имен между параметром шаблона и другим объектом параметр шаблона может быть скрыт, но это не обязательно.  Следующие правила помогут определить приоритет.  
+## <a name="example"></a>Example
+
+ In the case of a name conflict between a template parameter and another object, the template parameter can or cannot be hidden. The following rules will help determine precedence.  
   
- Параметр шаблона находится в области видимости из точки, где он впервые появляется, и до конца класса или шаблона функции.  Если имя снова отображается в списке аргументов шаблона или в списке базовых классов, оно относится к тому же типу.  В стандартном языке C\+\+ невозможно объявить в той же области видимости никакое другое имя, идентичное параметру шаблона.  Расширение Microsoft позволяет переопределять параметр шаблона в области видимости шаблона.  В следующем примере показано использование параметра шаблона в базовой спецификации шаблона класса.  
+ The template parameter is in scope from the point where it first appears until the end of the class or function template. If the name appears again in the template argument list or in the list of base classes, it refers to the same type. In standard C++, no other name that is identical to the template parameter can be declared in the same scope. A Microsoft extension allows the template parameter to be redefined in the scope of the template. The following example shows using the template parameter in the base specification of a class template.  
   
-```  
+```cpp
 // template_name_resolution4.cpp  
 // compile with: /EHsc  
 template <class T>  
@@ -62,10 +82,11 @@ int main() {
 }  
 ```  
   
-## Пример  
- При определении функций\-членов шаблона за пределами шаблона классов можно использовать другое имя параметра шаблонов.  Если в определении функции\-члена шаблона используется другое имя параметра шаблона, нежели в декларации, а имя, используемое в определении, конфликтует с другим элементом объявления, приоритет получает элемент в объявлении шаблона.  
+## <a name="example"></a>Example
+
+ When defining a template's member functions outside the class template, a different template parameter name can be used. If the template member function definition uses a different name for the template parameter than the declaration does, and the name used in the definition conflicts with another member of the declaration, the member in the template declaration takes precedence.  
   
-```  
+```cpp
 // template_name_resolution5.cpp  
 // compile with: /EHsc  
 #include <iostream>  
@@ -92,11 +113,15 @@ int main() {
 }  
 ```  
   
-  **Z::Z\(\)**   
-## Пример  
- При определении функции шаблона или функции\-члена за пределами пространства имен, в котором объявлен шаблон, аргумент шаблона имеет приоритет над именами других элементов пространства имен.  
-  
+```Output  
+Z::Z()  
 ```  
+  
+## <a name="example"></a>Example
+
+ When defining a template function or member function outside the namespace in which the template was declared, the template argument takes precedence over the names of other members of the namespace.  
+  
+```cpp
 // template_name_resolution6.cpp  
 // compile with: /EHsc  
 #include <iostream>  
@@ -122,11 +147,15 @@ int main() {
 }  
 ```  
   
-  **C\<T\>::g**   
-## Пример  
- Если класс шаблона в определениях вне объявления класса шаблонов имеет базовый класс, который не зависит от аргумента шаблона и если базовый класс или один из его элементов имеют то же имя, что и аргумент шаблона, имя базового класса или элемента скрывает аргумент шаблона.  
-  
+```Output  
+C<T>::g  
 ```  
+  
+## <a name="example"></a>Example
+
+ In definitions that are outside of the template class declaration, if a template class has a base class that does not depend on a template argument and if the base class or one of its members has the same name as a template argument, then the base class or member name hides the template argument.  
+  
+```cpp
 // template_name_resolution7.cpp  
 // compile with: /EHsc  
 #include <iostream>  
@@ -155,7 +184,12 @@ int main() {
 }  
 ```  
   
-  **Базовый**  
-**1**   
-## См. также  
- [Разрешение имен](../cpp/templates-and-name-resolution.md)
+```Output  
+Base  
+1  
+```  
+  
+## <a name="see-also"></a>See Also
+
+ [Name Resolution](../cpp/templates-and-name-resolution.md)
+

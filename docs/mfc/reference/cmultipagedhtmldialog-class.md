@@ -1,5 +1,5 @@
 ---
-title: "Класс CMultiPageDHtmlDialog | Документы Microsoft"
+title: CMultiPageDHtmlDialog Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -15,7 +15,7 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- CMultiPageDHtmlDialog class
+- CMultiPageDHtmlDialog [MFC], CMultiPageDHtmlDialog
 ms.assetid: 971accc1-824d-4df4-b4c1-b1a20e0f7e4f
 caps.latest.revision: 22
 author: mikeblome
@@ -35,46 +35,46 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0e0c08ddc57d437c51872b5186ae3fc983bb0199
-ms.openlocfilehash: c00af20731b2c47a0074366722da3f4a0711ef85
+ms.translationtype: MT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 14f45cfc76755650624ccee4da74e18aba081278
 ms.contentlocale: ru-ru
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 09/12/2017
 
 ---
-# <a name="cmultipagedhtmldialog-class"></a>Класс CMultiPageDHtmlDialog
-Многостраничное диалоговое окно последовательно отображает несколько HTML-страниц и обрабатывает события каждой страницы.  
+# <a name="cmultipagedhtmldialog-class"></a>CMultiPageDHtmlDialog Class
+A multipage dialog displays multiple HTML pages sequentially and handles the events from each page.  
   
-## <a name="syntax"></a>Синтаксис  
+## <a name="syntax"></a>Syntax  
   
 ```  
 class CMultiPageDHtmlDialog : public CDHtmlDialog  
 ```  
   
-## <a name="members"></a>Члены  
+## <a name="members"></a>Members  
   
-### <a name="public-constructors"></a>Открытые конструкторы  
+### <a name="public-constructors"></a>Public Constructors  
   
-|Имя|Описание|  
+|Name|Description|  
 |----------|-----------------|  
-|[CMultiPageDHtmlDialog::CMultiPageDHtmlDialog](#cmultipagedhtmldialog)|Создает объект многостраничное диалоговое окно DHTML (мастера в стиле).|  
-|[CMultiPageDHtmlDialog:: ~ CMultiPageDHtmlDialog](#cmultipagedhtmldialog__~cmultipagedhtmldialog)|Уничтожает объект многостраничное диалоговое окно DHTML.|  
+|[CMultiPageDHtmlDialog::CMultiPageDHtmlDialog](#cmultipagedhtmldialog)|Constructs a multipage (wizard-style) DHTML dialog object.|  
+|[CMultiPageDHtmlDialog::~CMultiPageDHtmlDialog](#cmultipagedhtmldialog__~cmultipagedhtmldialog)|Destroys a multipage DHTML dialog object.|  
   
-## <a name="remarks"></a>Примечания  
- — Это механизм [схема событий DHTML и URL-адрес](http://msdn.microsoft.com/en-us/2a7332f0-79d7-46e4-b816-0a618c46777a), который содержит [встроенные схемы событий](http://msdn.microsoft.com/library/5346210f-f8b7-4e28-9d2c-d9d7fd42421d) для каждой страницы.  
+## <a name="remarks"></a>Remarks  
+ The mechanism for doing this is a [DHTML and URL event map](dhtml-event-maps.md), which contains embedded event maps for each page.  
   
-## <a name="example"></a>Пример  
- Это многостраничное диалоговое окно предполагается три ресурсы HTML, определяющих функции простого типа мастера. На первой странице имеется `Next` кнопки, второй **Prev** и `Next` кнопки, а в третьем **Prev** кнопки. При нажатии одной из кнопок вызывает функцию обработчика событий [CDHtmlDialog::LoadFromResource](../../mfc/reference/cdhtmldialog-class.md#loadfromresource) для загрузки соответствующего новой страницы.  
+## <a name="example"></a>Example  
+ This multipage dialog assumes three HTML resources that define simple wizard-like functionality. The first page has a `Next` button, the second a **Prev** and `Next` button, and the third a **Prev** button. When one of the buttons is pressed, a handler function calls [CDHtmlDialog::LoadFromResource](../../mfc/reference/cdhtmldialog-class.md#loadfromresource) to load the appropriate new page.  
   
- Соответствующие части объявления класса (в CMyMultiPageDlg.h):  
+ The pertinent parts of the class declaration (in CMyMultiPageDlg.h):  
   
- [!code-cpp[NVC_MFCDocView&#181;](../../mfc/codesnippet/cpp/cmultipagedhtmldialog-class_1.h)]  
+ [!code-cpp[NVC_MFCDocView#181](../../mfc/codesnippet/cpp/cmultipagedhtmldialog-class_1.h)]  
   
- Соответствующие части реализации класса (в CMyMultipageDlg.cpp):  
+ The pertinent parts of the class implementation (in CMyMultipageDlg.cpp):  
   
- [!code-cpp[NVC_MFCDocView&#182;](../../mfc/codesnippet/cpp/cmultipagedhtmldialog-class_2.cpp)]  
+ [!code-cpp[NVC_MFCDocView#182](../../mfc/codesnippet/cpp/cmultipagedhtmldialog-class_2.cpp)]  
   
-## <a name="inheritance-hierarchy"></a>Иерархия наследования  
+## <a name="inheritance-hierarchy"></a>Inheritance Hierarchy  
  [CObject](../../mfc/reference/cobject-class.md)  
   
  `CDHtmlSinkHandlerBase2`  
@@ -95,11 +95,11 @@ class CMultiPageDHtmlDialog : public CDHtmlDialog
   
  `CMultiPageDHtmlDialog`  
   
-## <a name="requirements"></a>Требования  
- **Заголовок:** afxdhtml.h  
+## <a name="requirements"></a>Requirements  
+ **Header:** afxdhtml.h  
   
-##  <a name="cmultipagedhtmldialog"></a>CMultiPageDHtmlDialog::CMultiPageDHtmlDialog  
- Создает объект многостраничное диалоговое окно DHTML (мастера в стиле).  
+##  <a name="cmultipagedhtmldialog"></a>  CMultiPageDHtmlDialog::CMultiPageDHtmlDialog  
+ Constructs a multipage (wizard-style) DHTML dialog object.  
   
 ```  
 CMultiPageDHtmlDialog(
@@ -116,29 +116,29 @@ CMultiPageDHtmlDialog(
 CMultiPageDHtmlDialog();
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
  `lpszTemplateName`  
- Завершающим нулем строка, представляющая имя ресурс шаблона диалоговых окон.  
+ The null-terminated string that is the name of a dialog-box template resource.  
   
  `szHtmlResID`  
- Завершающим нулем строка, представляющая имя ресурса HTML.  
+ The null-terminated string that is the name of an HTML resource.  
   
  `pParentWnd`  
- Указатель на объект окна родительского или владелец (типа [CWnd](../../mfc/reference/cwnd-class.md)), которому принадлежит объект диалогового окна. Если это **NULL**, главное окно приложения имеет значение родительского окна объекта диалогового окна.  
+ A pointer to the parent or owner window object (of type [CWnd](../../mfc/reference/cwnd-class.md)) to which the dialog object belongs. If it is **NULL**, the dialog object's parent window is set to the main application window.  
   
  `nIDTemplate`  
- Содержит идентификатор ресурс шаблона диалоговых окон.  
+ Contains the ID number of a dialog-box template resource.  
   
  `nHtmlResID`  
- Содержит идентификатор ресурса HTML.  
+ Contains the ID number of an HTML resource.  
   
-##  <a name="_dtorcmultipagedhtmldialog"></a>CMultiPageDHtmlDialog:: ~ CMultiPageDHtmlDialog  
- Уничтожает объект многостраничное диалоговое окно DHTML.  
+##  <a name="_dtorcmultipagedhtmldialog"></a>  CMultiPageDHtmlDialog::~CMultiPageDHtmlDialog  
+ Destroys a multipage DHTML dialog object.  
   
 ```  
 virtual ~CMultiPageDHtmlDialog();
 ```  
   
-## <a name="see-also"></a>См. также  
- [Класс CDHtmlDialog](../../mfc/reference/cdhtmldialog-class.md)
+## <a name="see-also"></a>See Also  
+ [CDHtmlDialog Class](../../mfc/reference/cdhtmldialog-class.md)
 

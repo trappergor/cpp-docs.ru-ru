@@ -1,53 +1,72 @@
 ---
-title: "Исключения. Создание исключений из собственных функций | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "исключения, создание"
-  - "функции [C++], создание исключений"
-  - "создание исключений, from - функции"
+title: 'Exceptions: Throwing Exceptions from Your Own Functions | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- throwing exceptions [MFC], from functions
+- functions [MFC], throwing exceptions
+- exceptions [MFC], throwing
 ms.assetid: 492976e8-8804-4234-8e8f-30dffd0501be
 caps.latest.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 6
----
-# Исключения. Создание исключений из собственных функций
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 9a67bebf4f9f71ae86a5c0bcbe3716c96ced6b56
+ms.contentlocale: ru-ru
+ms.lasthandoff: 09/12/2017
 
-Можно использовать парадигму обработки исключений MFC исключительно для перехвата исключения, созданные функциями в MFC или других библиотек.  Помимо перехватам исключений выданным этим кодом библиотеки можно создавать исключения или из собственного кода при записи функции, которые могут возникнуть исключительных условий.  
+---
+# <a name="exceptions-throwing-exceptions-from-your-own-functions"></a>Exceptions: Throwing Exceptions from Your Own Functions
+It is possible to use the MFC exception-handling paradigm solely to catch exceptions thrown by functions in MFC or other libraries. In addition to catching exceptions thrown by library code, you can throw exceptions from your own code if you are writing functions that can encounter exceptional conditions.  
   
- При возникновении исключения, среда выполнения текущей функции остановлено и скачет непосредственно в блоке **catch** самого внутреннего кадра исключения.  Механизм исключения обходит нормальный путь выхода из функции.  Поэтому необходимо убедиться удалять эти блоки памяти, будут удалены в обычном выходе.  
+ When an exception is thrown, execution of the current function is stopped and jumps directly to the **catch** block of the innermost exception frame. The exception mechanism bypasses the normal exit path from a function. Therefore, you must be sure to delete those memory blocks that would be deleted in a normal exit.  
   
-#### Исключения  
+#### <a name="to-throw-an-exception"></a>To throw an exception  
   
-1.  Используйте одну из вспомогательных функций MFC, например `AfxThrowMemoryException`.  Эти функции создают preallocated объект исключения соответствующего типа.  
+1.  Use one of the MFC helper functions, such as `AfxThrowMemoryException`. These functions throw a preallocated exception object of the appropriate type.  
   
-     В следующем примере функция пытается выделить 2 блоков памяти и создает исключение при сбое любое выделение:,  
+     In the following example, a function tries to allocate two memory blocks and throws an exception if either allocation fails:  
   
-     [!code-cpp[NVC_MFCExceptions#17](../mfc/codesnippet/CPP/exceptions-throwing-exceptions-from-your-own-functions_1.cpp)]  
+     [!code-cpp[NVC_MFCExceptions#17](../mfc/codesnippet/cpp/exceptions-throwing-exceptions-from-your-own-functions_1.cpp)]  
   
-     Если первое выделение завершается ошибкой, можно просто ход исключение памяти.  Если первое выделение успешно, а второй неудачным необходимо освобождать первый блок выделения до возникновения исключения.  Если оба выделения выполняются успешно, можно продолжить обычно и оставить блоки две функции.  
+     If the first allocation fails, you can simply throw the memory exception. If the first allocation is successful but the second one fails, you must free the first allocation block before throwing the exception. If both allocations succeed, you can proceed normally and free the blocks when exiting the function.  
   
-     либо  
+     - or -  
   
-2.  Используйте определенное пользователем исключение, указывающее условие проблемы.  Можно запускать элемент любого типа, даже всего класса, в качестве исключение.  
+2.  Use a user-defined exception to indicate a problem condition. You can throw an item of any type, even an entire class, as your exception.  
   
-     В следующем примере предпринимается попытка воспроизведения звука с помощью звуковое устройство и методе исключение в случае сбоя.  
+     The following example attempts to play a sound through a wave device and throws an exception if there is a failure.  
   
-     [!code-cpp[NVC_MFCExceptions#18](../mfc/codesnippet/CPP/exceptions-throwing-exceptions-from-your-own-functions_2.cpp)]  
+     [!code-cpp[NVC_MFCExceptions#18](../mfc/codesnippet/cpp/exceptions-throwing-exceptions-from-your-own-functions_2.cpp)]  
   
 > [!NOTE]
->  Обработка исключений MFC по умолчанию применяется только к указателю на объекты `CException` \(и объектов `CException`\- производных классов\).  В примере выше обходит механизм исключения MFC.  
+>  MFC's default handling of exceptions applies only to pointers to `CException` objects (and objects of `CException`-derived classes). The example above bypasses MFC's exception mechanism.  
   
-## См. также  
- [Обработка исключений](../mfc/exception-handling-in-mfc.md)
+## <a name="see-also"></a>See Also  
+ [Exception Handling](../mfc/exception-handling-in-mfc.md)
+
+

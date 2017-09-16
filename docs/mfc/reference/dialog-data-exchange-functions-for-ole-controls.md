@@ -1,5 +1,5 @@
 ---
-title: "Функции обмена данными диалоговых окон для элементов управления OLE | Документы Microsoft"
+title: Dialog Data Exchange Functions for OLE Controls | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -24,7 +24,7 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- OLE controls, DDX functions
+- OLE controls [MFC], DDX functions
 - DDX (dialog data exchange), OLE support
 ms.assetid: 7ef1f288-ff65-40d4-aad2-5497bc00bb27
 caps.latest.revision: 13
@@ -45,35 +45,35 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 5faef5bd1be6cc02d6614a6f6193c74167a8ff23
-ms.openlocfilehash: 5c50690c1652c4136b7f52f852ddf201c9dd6c9b
+ms.translationtype: MT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 1d20ebb94a41ad8ec1afb3a18da7957652a5eeb0
 ms.contentlocale: ru-ru
-ms.lasthandoff: 03/17/2017
+ms.lasthandoff: 09/12/2017
 
 ---
-# <a name="dialog-data-exchange-functions-for-ole-controls"></a>Функции обмена данными диалоговых окон для элементов управления OLE
-В этом разделе перечислены DDX_OC функций, используемых для обмена данными между свойством элемента управления в диалоговое окно, представление формы или элемента управления представления объекта OLE и член данных диалоговое окно, представление формы или объект элемента управления представления.  
+# <a name="dialog-data-exchange-functions-for-ole-controls"></a>Dialog Data Exchange Functions for OLE Controls
+This topic lists the DDX_OC functions used to exchange data between a property of an OLE control in a dialog box, form view, or control view object and a data member of the dialog box, form view, or control view object.  
   
-### <a name="ddxoc-functions"></a>Функции DDX_OC  
+### <a name="ddxoc-functions"></a>DDX_OC Functions  
   
 |||  
 |-|-|  
-|[DDX_OCBool](#ddx_ocbool)|Управляет передачей **BOOL** данные между свойством элемента управления OLE и **BOOL** члена данных.|  
-|[DDX_OCBoolRO](#ddx_ocboolro)|Управляет передачей **BOOL** данных только для чтения свойство элемента управления OLE и **BOOL** члена данных.|  
-|[DDX_OCColor](#ddx_occolor)|Управляет передачей **OLE_COLOR** данные между свойством элемента управления OLE и **OLE_COLOR** члена данных.|  
-|[DDX_OCColorRO](#ddx_occolorro)|Управляет передачей **OLE_COLOR** данных только для чтения свойство элемента управления OLE и **OLE_COLOR** члена данных.|  
-|[DDX_OCFloat](#ddx_ocfloat)|Управляет передачей **float** (или **двойные**) данные между свойством элемента управления OLE и **float** (или **двойные**) члена данных.|  
-|[DDX_OCFloatRO](#ddx_ocfloatro)|Управляет передачей **float** (или **двойные**) данных только для чтения свойство элемента управления OLE и **float** (или **двойные**) члена данных.|  
-|[DDX_OCInt](#ddx_ocint)|Управляет передачей `int` (или **длинные**) данные между свойством элемента управления OLE и `int` (или **длинные**) члена данных.|  
-|[DDX_OCIntRO](#ddx_ocintro)|Управляет передачей `int` (или **длинные**) данных только для чтения свойство элемента управления OLE и `int` (или **длинные**) члена данных.|  
-|[DDX_OCShort](#ddx_ocshort)|Управляет передачей **короткие** данные между свойством элемента управления OLE и **короткие** члена данных.|  
-|[DDX_OCShortRO](#ddx_ocshortro)|Управляет передачей **короткие** данных только для чтения свойство элемента управления OLE и **короткие** члена данных.|  
-|[DDX_OCText](#ddx_octext)|Управляет передачей **CString** данные между свойством элемента управления OLE и **CString** члена данных.|  
-|[DDX_OCTextRO](#ddx_octextro)|Управляет передачей **CString** данных только для чтения свойство элемента управления OLE и **CString** члена данных.|  
+|[DDX_OCBool](#ddx_ocbool)|Manages the transfer of **BOOL** data between a property of an OLE control and a **BOOL** data member.|  
+|[DDX_OCBoolRO](#ddx_ocboolro)|Manages the transfer of **BOOL** data between a read-only property of an OLE control and a **BOOL** data member.|  
+|[DDX_OCColor](#ddx_occolor)|Manages the transfer of **OLE_COLOR** data between a property of an OLE control and an **OLE_COLOR** data member.|  
+|[DDX_OCColorRO](#ddx_occolorro)|Manages the transfer of **OLE_COLOR** data between a read-only property of an OLE control and an **OLE_COLOR** data member.|  
+|[DDX_OCFloat](#ddx_ocfloat)|Manages the transfer of **float** (or **double**) data between a property of an OLE control and a **float** (or **double**) data member.|  
+|[DDX_OCFloatRO](#ddx_ocfloatro)|Manages the transfer of **float** (or **double**) data between a read-only property of an OLE control and a **float** (or **double**) data member.|  
+|[DDX_OCInt](#ddx_ocint)|Manages the transfer of `int` (or **long**) data between a property of an OLE control and an `int` (or **long**) data member.|  
+|[DDX_OCIntRO](#ddx_ocintro)|Manages the transfer of `int` (or **long**) data between a read-only property of an OLE control and an `int` (or **long**) data member.|  
+|[DDX_OCShort](#ddx_ocshort)|Manages the transfer of **short** data between a property of an OLE control and a **short** data member.|  
+|[DDX_OCShortRO](#ddx_ocshortro)|Manages the transfer of **short** data between a read-only property of an OLE control and a **short** data member.|  
+|[DDX_OCText](#ddx_octext)|Manages the transfer of **CString** data between a property of an OLE control and a **CString** data member.|  
+|[DDX_OCTextRO](#ddx_octextro)|Manages the transfer of **CString** data between a read-only property of an OLE control and a **CString** data member.|  
   
-##  <a name="ddx_ocbool"></a>DDX_OCBool  
- `DDX_OCBool` Функция управляет передачей **BOOL** данные между свойством элемента управления OLE, в диалоговом окне, форму, представление или объект элемента управления представления и **BOOL** диалоговое окно, представление формы или объект элемента управления представления элемента данных.  
+##  <a name="ddx_ocbool"></a>  DDX_OCBool  
+ The `DDX_OCBool` function manages the transfer of **BOOL** data between a property of an OLE control in a dialog box, form view, or control view object and a **BOOL** data member of the dialog box, form view, or control view object.  
   
 ```   
 void AFXAPI DDX_OCBool(
@@ -83,27 +83,27 @@ void AFXAPI DDX_OCBool(
     BOOL& value);
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
  `pDX`  
- Указатель на объект `CDataExchange` . Структура предоставляет этот объект для формирования контекста обмена данными, включая его направление.  
+ A pointer to a `CDataExchange` object. The framework supplies this object to establish the context of the data exchange, including its direction.  
   
  `nIDC`  
- Идентификатор элемента управления OLE в диалоговом окне, представлении формы или объекте представления элемента управления.  
+ The ID of an OLE control in the dialog box, form view, or control view object.  
   
  `dispid`  
- Идентификатор диспетчера свойства элемента управления.  
+ The dispatch ID of a property of the control.  
   
  *value*  
- Ссылка на переменную-член диалогового окна, представления формы или объекта представления элемента управления, с которой осуществляется обмен данными.  
+ A reference to a member variable of the dialog box, form view or control view object with which data is exchanged.  
   
-### <a name="remarks"></a>Примечания  
- Дополнительные сведения об DDX см. в разделе [обмен данными диалоговых окон и проверка](../../mfc/dialog-data-exchange-and-validation.md).  
+### <a name="remarks"></a>Remarks  
+ For more information about DDX, see [Dialog Data Exchange and Validation](../../mfc/dialog-data-exchange-and-validation.md).  
   
-### <a name="requirements"></a>Требования  
-  **Заголовок:** afxdisp.h  
+### <a name="requirements"></a>Requirements  
+  **Header:** afxdisp.h  
   
-##  <a name="ddx_ocboolro"></a>DDX_OCBoolRO  
- `DDX_OCBoolRO` Функция управляет передачей **BOOL** данные между свойством элемента управления OLE, в диалоговом окне, только для чтения форме представления или объект элемента управления представления и **BOOL** диалоговое окно, представление формы или объект элемента управления представления элемента данных.  
+##  <a name="ddx_ocboolro"></a>  DDX_OCBoolRO  
+ The `DDX_OCBoolRO` function manages the transfer of **BOOL** data between a read-only property of an OLE control in a dialog box, form view, or control view object and a **BOOL** data member of the dialog box, form view, or control view object.  
   
 ```   
 void AFXAPI DDX_OCBoolRO(
@@ -113,27 +113,27 @@ void AFXAPI DDX_OCBoolRO(
     BOOL& value);
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
  `pDX`  
- Указатель на объект `CDataExchange` . Структура предоставляет этот объект для формирования контекста обмена данными, включая его направление.  
+ A pointer to a `CDataExchange` object. The framework supplies this object to establish the context of the data exchange, including its direction.  
   
  `nIDC`  
- Идентификатор элемента управления OLE в диалоговом окне, представлении формы или объекте представления элемента управления.  
+ The ID of an OLE control in the dialog box, form view, or control view object.  
   
  `dispid`  
- Идентификатор диспетчера свойства элемента управления.  
+ The dispatch ID of a property of the control.  
   
  *value*  
- Ссылка на переменную-член диалогового окна, представления формы или объекта представления элемента управления, с которой осуществляется обмен данными.  
+ A reference to a member variable of the dialog box, form view or control view object with which data is exchanged.  
   
-### <a name="remarks"></a>Примечания  
- Дополнительные сведения об DDX см. в разделе [обмен данными диалоговых окон и проверка](../../mfc/dialog-data-exchange-and-validation.md).  
+### <a name="remarks"></a>Remarks  
+ For more information about DDX, see [Dialog Data Exchange and Validation](../../mfc/dialog-data-exchange-and-validation.md).  
   
-### <a name="requirements"></a>Требования  
-  **Заголовок** afxdisp.h  
+### <a name="requirements"></a>Requirements  
+  **Header** afxdisp.h  
   
-##  <a name="ddx_occolor"></a>DDX_OCColor  
- `DDX_OCColor` Функция управляет передачей **OLE_COLOR** данные между свойством элемента управления OLE, в диалоговом окне, форму, представление или объект элемента управления представления и **OLE_COLOR** диалоговое окно, представление формы или объект элемента управления представления элемента данных.  
+##  <a name="ddx_occolor"></a>  DDX_OCColor  
+ The `DDX_OCColor` function manages the transfer of **OLE_COLOR** data between a property of an OLE control in a dialog box, form view, or control view object and a **OLE_COLOR** data member of the dialog box, form view, or control view object.  
   
 ```   
 void AFXAPI DDX_OCColor(
@@ -143,27 +143,27 @@ void AFXAPI DDX_OCColor(
     OLE_COLOR& value);
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
  `pDX`  
- Указатель на объект `CDataExchange` . Структура предоставляет этот объект для формирования контекста обмена данными, включая его направление.  
+ A pointer to a `CDataExchange` object. The framework supplies this object to establish the context of the data exchange, including its direction.  
   
  `nIDC`  
- Идентификатор элемента управления OLE в диалоговом окне, представлении формы или объекте представления элемента управления.  
+ The ID of an OLE control in the dialog box, form view, or control view object.  
   
  `dispid`  
- Идентификатор диспетчера свойства элемента управления.  
+ The dispatch ID of a property of the control.  
   
  *value*  
- Ссылка на переменную-член диалогового окна, представления формы или объекта представления элемента управления, с которой осуществляется обмен данными.  
+ A reference to a member variable of the dialog box, form view or control view object with which data is exchanged.  
   
-### <a name="remarks"></a>Примечания  
- Дополнительные сведения об DDX см. в разделе [обмен данными диалоговых окон и проверка](../../mfc/dialog-data-exchange-and-validation.md).  
+### <a name="remarks"></a>Remarks  
+ For more information about DDX, see [Dialog Data Exchange and Validation](../../mfc/dialog-data-exchange-and-validation.md).  
   
-### <a name="requirements"></a>Требования  
-  **Заголовок** afxdisp.h  
+### <a name="requirements"></a>Requirements  
+  **Header** afxdisp.h  
   
-##  <a name="ddx_occolorro"></a>DDX_OCColorRO  
- `DDX_OCColorRO` Функция управляет передачей **OLE_COLOR** данные между свойством элемента управления OLE, в диалоговом окне, только для чтения форме представления или объект элемента управления представления и **OLE_COLOR** диалоговое окно, представление формы или объект элемента управления представления элемента данных.  
+##  <a name="ddx_occolorro"></a>  DDX_OCColorRO  
+ The `DDX_OCColorRO` function manages the transfer of **OLE_COLOR** data between a read-only property of an OLE control in a dialog box, form view, or control view object and a **OLE_COLOR** data member of the dialog box, form view, or control view object.  
   
 ```   
 void AFXAPI DDX_OCColorRO(
@@ -173,27 +173,27 @@ void AFXAPI DDX_OCColorRO(
     OLE_COLOR& value);
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
  `pDX`  
- Указатель на объект `CDataExchange` . Структура предоставляет этот объект для формирования контекста обмена данными, включая его направление.  
+ A pointer to a `CDataExchange` object. The framework supplies this object to establish the context of the data exchange, including its direction.  
   
  `nIDC`  
- Идентификатор элемента управления OLE в диалоговом окне, представлении формы или объекте представления элемента управления.  
+ The ID of an OLE control in the dialog box, form view, or control view object.  
   
  `dispid`  
- Идентификатор диспетчера свойства элемента управления.  
+ The dispatch ID of a property of the control.  
   
  *value*  
- Ссылка на переменную-член диалогового окна, представления формы или объекта представления элемента управления, с которой осуществляется обмен данными.  
+ A reference to a member variable of the dialog box, form view or control view object with which data is exchanged.  
   
-### <a name="remarks"></a>Примечания  
- Дополнительные сведения об DDX см. в разделе [обмен данными диалоговых окон и проверка](../../mfc/dialog-data-exchange-and-validation.md).  
+### <a name="remarks"></a>Remarks  
+ For more information about DDX, see [Dialog Data Exchange and Validation](../../mfc/dialog-data-exchange-and-validation.md).  
   
-### <a name="requirements"></a>Требования  
-  **Заголовок** afxdisp.h  
+### <a name="requirements"></a>Requirements  
+  **Header** afxdisp.h  
   
-##  <a name="ddx_ocfloat"></a>DDX_OCFloat  
- `DDX_OCFloat` Функция управляет передачей **float** (или **двойные**) данные между свойством элемента управления OLE, в диалоговом окне, форму, представление или объект элемента управления представления и **float** (или **двойные**) диалоговое окно, представление формы или объект элемента управления представления элемента данных.  
+##  <a name="ddx_ocfloat"></a>  DDX_OCFloat  
+ The `DDX_OCFloat` function manages the transfer of **float** (or **double**) data between a property of an OLE control in a dialog box, form view, or control view object and a **float** (or **double**) data member of the dialog box, form view, or control view object.  
   
 ```   
 void AFXAPI DDX_OCFloat(
@@ -209,27 +209,27 @@ void AFXAPI DDX_OCFloat(
     double& value);
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
  `pDX`  
- Указатель на объект `CDataExchange` . Структура предоставляет этот объект для формирования контекста обмена данными, включая его направление.  
+ A pointer to a `CDataExchange` object. The framework supplies this object to establish the context of the data exchange, including its direction.  
   
  `nIDC`  
- Идентификатор элемента управления OLE в диалоговом окне, представлении формы или объекте представления элемента управления.  
+ The ID of an OLE control in the dialog box, form view, or control view object.  
   
  `dispid`  
- Идентификатор диспетчера свойства элемента управления.  
+ The dispatch ID of a property of the control.  
   
  *value*  
- Ссылка на переменную-член диалогового окна, представления формы или объекта представления элемента управления, с которой осуществляется обмен данными.  
+ A reference to a member variable of the dialog box, form view or control view object with which data is exchanged.  
   
-### <a name="remarks"></a>Примечания  
- Дополнительные сведения об DDX см. в разделе [обмен данными диалоговых окон и проверка](../../mfc/dialog-data-exchange-and-validation.md).  
+### <a name="remarks"></a>Remarks  
+ For more information about DDX, see [Dialog Data Exchange and Validation](../../mfc/dialog-data-exchange-and-validation.md).  
   
-### <a name="requirements"></a>Требования  
-  **Заголовок** afxdisp.h  
+### <a name="requirements"></a>Requirements  
+  **Header** afxdisp.h  
   
-##  <a name="ddx_ocfloatro"></a>DDX_OCFloatRO  
- `DDX_OCFloatRO` Функция управляет передачей **float** (или **двойные**) данные между свойством элемента управления OLE, в диалоговом окне, только для чтения форме представления или объект элемента управления представления и **float** (или **двойные**) диалоговое окно, представление формы или объект элемента управления представления элемента данных.  
+##  <a name="ddx_ocfloatro"></a>  DDX_OCFloatRO  
+ The `DDX_OCFloatRO` function manages the transfer of **float** (or **double**) data between a read-only property of an OLE control in a dialog box, form view, or control view object and a **float** (or **double**) data member of the dialog box, form view, or control view object.  
   
 ```   
 void AFXAPI DDX_OCFloatRO(
@@ -245,27 +245,27 @@ void AFXAPI DDX_OCFloatRO(
     double& value);
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
  `pDX`  
- Указатель на объект `CDataExchange` . Структура предоставляет этот объект для формирования контекста обмена данными, включая его направление.  
+ A pointer to a `CDataExchange` object. The framework supplies this object to establish the context of the data exchange, including its direction.  
   
  `nIDC`  
- Идентификатор элемента управления OLE в диалоговом окне, представлении формы или объекте представления элемента управления.  
+ The ID of an OLE control in the dialog box, form view, or control view object.  
   
  `dispid`  
- Идентификатор диспетчера свойства элемента управления.  
+ The dispatch ID of a property of the control.  
   
  *value*  
- Ссылка на переменную-член диалогового окна, представления формы или объекта представления элемента управления, с которой осуществляется обмен данными.  
+ A reference to a member variable of the dialog box, form view or control view object with which data is exchanged.  
   
-### <a name="remarks"></a>Примечания  
- Дополнительные сведения об DDX см. в разделе [обмен данными диалоговых окон и проверка](../../mfc/dialog-data-exchange-and-validation.md).  
+### <a name="remarks"></a>Remarks  
+ For more information about DDX, see [Dialog Data Exchange and Validation](../../mfc/dialog-data-exchange-and-validation.md).  
   
-### <a name="requirements"></a>Требования  
-  **Заголовок** afxdisp.h  
+### <a name="requirements"></a>Requirements  
+  **Header** afxdisp.h  
   
-##  <a name="ddx_ocint"></a>DDX_OCInt  
- `DDX_OCInt` Функция управляет передачей `int` (или **длинные**) данные между свойством элемента управления OLE, в диалоговом окне, форму, представление или объект элемента управления представления и `int` (или **длинные**) диалоговое окно, представление формы или объект элемента управления представления элемента данных.  
+##  <a name="ddx_ocint"></a>  DDX_OCInt  
+ The `DDX_OCInt` function manages the transfer of `int` (or **long**) data between a property of an OLE control in a dialog box, form view, or control view object and a `int` (or **long**) data member of the dialog box, form view, or control view object.  
   
 ```   
 void AFXAPI DDX_OCInt(
@@ -281,27 +281,27 @@ void AFXAPI DDX_OCInt(
     long& value);
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
  `pDX`  
- Указатель на объект `CDataExchange` . Структура предоставляет этот объект для формирования контекста обмена данными, включая его направление.  
+ A pointer to a `CDataExchange` object. The framework supplies this object to establish the context of the data exchange, including its direction.  
   
  `nIDC`  
- Идентификатор элемента управления OLE в диалоговом окне, представлении формы или объекте представления элемента управления.  
+ The ID of an OLE control in the dialog box, form view, or control view object.  
   
  `dispid`  
- Идентификатор диспетчера свойства элемента управления.  
+ The dispatch ID of a property of the control.  
   
  *value*  
- Ссылка на переменную-член диалогового окна, представления формы или объекта представления элемента управления, с которой осуществляется обмен данными.  
+ A reference to a member variable of the dialog box, form view or control view object with which data is exchanged.  
   
-### <a name="remarks"></a>Примечания  
- Дополнительные сведения об DDX см. в разделе [обмен данными диалоговых окон и проверка](../../mfc/dialog-data-exchange-and-validation.md).  
+### <a name="remarks"></a>Remarks  
+ For more information about DDX, see [Dialog Data Exchange and Validation](../../mfc/dialog-data-exchange-and-validation.md).  
   
-### <a name="requirements"></a>Требования  
-  **Заголовок** afxdisp.h  
+### <a name="requirements"></a>Requirements  
+  **Header** afxdisp.h  
   
-##  <a name="ddx_ocintro"></a>DDX_OCIntRO  
- `DDX_OCIntRO` Функция управляет передачей `int` (или **long**) данные между свойством элемента управления OLE, в диалоговом окне, только для чтения форме представления или объект элемента управления представления и `int` (или **длинные**) диалоговое окно, представление формы или объект элемента управления представления элемента данных.  
+##  <a name="ddx_ocintro"></a>  DDX_OCIntRO  
+ The `DDX_OCIntRO` function manages the transfer of `int` (or **long**) data between a read-only property of an OLE control in a dialog box, form view, or control view object and a `int` (or **long**) data member of the dialog box, form view, or control view object.  
   
 ```   
 void AFXAPI DDX_OCIntRO(
@@ -317,27 +317,27 @@ void AFXAPI DDX_OCIntRO(
     long& value);
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
  `pDX`  
- Указатель на объект `CDataExchange` . Структура предоставляет этот объект для формирования контекста обмена данными, включая его направление.  
+ A pointer to a `CDataExchange` object. The framework supplies this object to establish the context of the data exchange, including its direction.  
   
  `nIDC`  
- Идентификатор элемента управления OLE в диалоговом окне, представлении формы или объекте представления элемента управления.  
+ The ID of an OLE control in the dialog box, form view, or control view object.  
   
  `dispid`  
- Идентификатор диспетчера свойства элемента управления.  
+ The dispatch ID of a property of the control.  
   
  *value*  
- Ссылка на переменную-член диалогового окна, представления формы или объекта представления элемента управления, с которой осуществляется обмен данными.  
+ A reference to a member variable of the dialog box, form view or control view object with which data is exchanged.  
   
-### <a name="remarks"></a>Примечания  
- Дополнительные сведения об DDX см. в разделе [обмен данными диалоговых окон и проверка](../../mfc/dialog-data-exchange-and-validation.md).  
+### <a name="remarks"></a>Remarks  
+ For more information about DDX, see [Dialog Data Exchange and Validation](../../mfc/dialog-data-exchange-and-validation.md).  
   
-### <a name="requirements"></a>Требования  
-  **Заголовок** afxdisp.h  
+### <a name="requirements"></a>Requirements  
+  **Header** afxdisp.h  
   
-##  <a name="ddx_ocshort"></a>DDX_OCShort  
- `DDX_OCShort` Функция управляет передачей данных short между свойством элемента управления OLE в диалоговом режиме формы или объект элемента управления представления члена данных short диалогового окна представление формы и представление объекта элемента управления.  
+##  <a name="ddx_ocshort"></a>  DDX_OCShort  
+ The `DDX_OCShort` function manages the transfer of short data between a property of an OLE control in a dialog box, form view, or control view object and a short data member of the dialog box, form view, or control view object.  
   
 ```   
 void AFXAPI DDX_OCShort(
@@ -347,27 +347,27 @@ void AFXAPI DDX_OCShort(
     short& value);
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
  `pDX`  
- Указатель на объект `CDataExchange` . Структура предоставляет этот объект для формирования контекста обмена данными, включая его направление.  
+ A pointer to a `CDataExchange` object. The framework supplies this object to establish the context of the data exchange, including its direction.  
   
  `nIDC`  
- Идентификатор элемента управления OLE в диалоговом окне, представлении формы или объекте представления элемента управления.  
+ The ID of an OLE control in the dialog box, form view, or control view object.  
   
  `dispid`  
- Идентификатор диспетчера свойства элемента управления.  
+ The dispatch ID of a property of the control.  
   
  *value*  
- Ссылка на переменную-член диалогового окна, представления формы или объекта представления элемента управления, с которой осуществляется обмен данными.  
+ A reference to a member variable of the dialog box, form view or control view object with which data is exchanged.  
   
-### <a name="remarks"></a>Примечания  
- Дополнительные сведения об DDX см. в разделе [обмен данными диалоговых окон и проверка](../../mfc/dialog-data-exchange-and-validation.md).  
+### <a name="remarks"></a>Remarks  
+ For more information about DDX, see [Dialog Data Exchange and Validation](../../mfc/dialog-data-exchange-and-validation.md).  
   
-### <a name="requirements"></a>Требования  
-  **Заголовок** afxdisp.h  
+### <a name="requirements"></a>Requirements  
+  **Header** afxdisp.h  
   
-##  <a name="ddx_ocshortro"></a>DDX_OCShortRO  
- `DDX_OCShortRO` Функция управляет передачей данных short между свойством элемента управления OLE в диалоговом режиме формы только для чтения или объект элемента управления представления члена данных short диалогового окна представление формы и представление объекта элемента управления.  
+##  <a name="ddx_ocshortro"></a>  DDX_OCShortRO  
+ The `DDX_OCShortRO` function manages the transfer of short data between a read-only property of an OLE control in a dialog box, form view, or control view object and a short data member of the dialog box, form view, or control view object.  
   
 ```   
 void AFXAPI DDX_OCShortRO(
@@ -377,27 +377,27 @@ void AFXAPI DDX_OCShortRO(
     short& value);
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
  `pDX`  
- Указатель на объект `CDataExchange` . Структура предоставляет этот объект для формирования контекста обмена данными, включая его направление.  
+ A pointer to a `CDataExchange` object. The framework supplies this object to establish the context of the data exchange, including its direction.  
   
  `nIDC`  
- Идентификатор элемента управления OLE в диалоговом окне, представлении формы или объекте представления элемента управления.  
+ The ID of an OLE control in the dialog box, form view, or control view object.  
   
  `dispid`  
- Идентификатор диспетчера свойства элемента управления.  
+ The dispatch ID of a property of the control.  
   
  *value*  
- Ссылка на переменную-член диалогового окна, представления формы или объекта представления элемента управления, с которой осуществляется обмен данными.  
+ A reference to a member variable of the dialog box, form view or control view object with which data is exchanged.  
   
-### <a name="remarks"></a>Примечания  
- Дополнительные сведения об DDX см. в разделе [обмен данными диалоговых окон и проверка](../../mfc/dialog-data-exchange-and-validation.md).  
+### <a name="remarks"></a>Remarks  
+ For more information about DDX, see [Dialog Data Exchange and Validation](../../mfc/dialog-data-exchange-and-validation.md).  
   
-### <a name="requirements"></a>Требования  
-  **Заголовок** afxdisp.h  
+### <a name="requirements"></a>Requirements  
+  **Header** afxdisp.h  
   
-##  <a name="ddx_octext"></a>DDX_OCText  
- **DDX_OCText** функция управляет передачей **CString** данные между свойством элемента управления OLE, в диалоговом окне, форму, представление или объект элемента управления представления и **CString** диалоговое окно, представление формы или объект элемента управления представления элемента данных.  
+##  <a name="ddx_octext"></a>  DDX_OCText  
+ The **DDX_OCText** function manages the transfer of **CString** data between a property of an OLE control in a dialog box, form view, or control view object and a **CString** data member of the dialog box, form view, or control view object.  
   
 ```   
 void AFXAPI DDX_OCText(
@@ -407,27 +407,27 @@ void AFXAPI DDX_OCText(
     CString& value); 
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
  `pDX`  
- Указатель на **CDataExchange** объекта. Структура предоставляет этот объект для формирования контекста обмена данными, включая его направление.  
+ A pointer to a **CDataExchange** object. The framework supplies this object to establish the context of the data exchange, including its direction.  
   
  `nIDC`  
- Идентификатор элемента управления OLE в диалоговом окне, представлении формы или объекте представления элемента управления.  
+ The ID of an OLE control in the dialog box, form view, or control view object.  
   
  `dispid`  
- Идентификатор диспетчера свойства элемента управления.  
+ The dispatch ID of a property of the control.  
   
  *value*  
- Ссылка на переменную-член диалогового окна, представления формы или объекта представления элемента управления, с которой осуществляется обмен данными.  
+ A reference to a member variable of the dialog box, form view or control view object with which data is exchanged.  
   
-### <a name="remarks"></a>Примечания  
- Дополнительные сведения об DDX см. в разделе [обмен данными диалоговых окон и проверка](../../mfc/dialog-data-exchange-and-validation.md).  
+### <a name="remarks"></a>Remarks  
+ For more information about DDX, see [Dialog Data Exchange and Validation](../../mfc/dialog-data-exchange-and-validation.md).  
   
-### <a name="requirements"></a>Требования  
-  **Заголовок** afxdisp.h  
+### <a name="requirements"></a>Requirements  
+  **Header** afxdisp.h  
   
-##  <a name="ddx_octextro"></a>DDX_OCTextRO  
- Функция `DDX_OCTextRO` управляет передачей данных `CString` между доступным только для чтения свойством элемента управления OLE в диалоговом окне, представлении формы или объекте представления элемента управления и элементом данных `CString` диалогового окна, представления формы или объекта представления элемента управления.  
+##  <a name="ddx_octextro"></a>  DDX_OCTextRO  
+ The `DDX_OCTextRO` function manages the transfer of `CString` data between a read-only property of an OLE control in a dialog box, form view, or control view object and a `CString` data member of the dialog box, form view, or control view object.  
   
 ```  
 void AFXAPI DDX_OCTextRO(
@@ -437,25 +437,25 @@ void AFXAPI DDX_OCTextRO(
     CString& value); 
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
  `pDX`  
- Указатель на объект `CDataExchange` . Структура предоставляет этот объект для формирования контекста обмена данными, включая его направление.  
+ A pointer to a `CDataExchange` object. The framework supplies this object to establish the context of the data exchange, including its direction.  
   
  `nIDC`  
- Идентификатор элемента управления OLE в диалоговом окне, представлении формы или объекте представления элемента управления.  
+ The ID of an OLE control in the dialog box, form view, or control view object.  
   
  `dispid`  
- Идентификатор диспетчера свойства элемента управления.  
+ The dispatch ID of a property of the control.  
   
  *value*  
- Ссылка на переменную-член диалогового окна, представления формы или объекта представления элемента управления, с которой осуществляется обмен данными.  
+ A reference to a member variable of the dialog box, form view or control view object with which data is exchanged.  
   
-### <a name="remarks"></a>Примечания  
- Дополнительные сведения об DDX см. в разделе [обмен данными диалоговых окон и проверка](../../mfc/dialog-data-exchange-and-validation.md).  
+### <a name="remarks"></a>Remarks  
+ For more information about DDX, see [Dialog Data Exchange and Validation](../../mfc/dialog-data-exchange-and-validation.md).  
 
-### <a name="requirements"></a>Требования  
-  **Заголовок** afxdisp.h
+### <a name="requirements"></a>Requirements  
+  **Header** afxdisp.h
     
-## <a name="see-also"></a>См. также  
- [Макросы и глобальные объекты](../../mfc/reference/mfc-macros-and-globals.md)
+## <a name="see-also"></a>See Also  
+ [Macros and Globals](../../mfc/reference/mfc-macros-and-globals.md)
 

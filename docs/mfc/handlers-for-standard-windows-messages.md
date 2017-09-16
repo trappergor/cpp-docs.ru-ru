@@ -1,51 +1,69 @@
 ---
-title: "Обработчики для стандартных сообщений Windows | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "afx_msg"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "функции [C++], обработчик"
-  - "функции обработчика, стандартные сообщения Windows"
-  - "обработка сообщений [C++], обработчики сообщений Windows"
-  - "сообщения [C++], Windows"
-  - "сообщения Windows [C++], обработчики"
+title: Handlers for Standard Windows Messages | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- afx_msg
+dev_langs:
+- C++
+helpviewer_keywords:
+- Windows messages [MFC], handlers
+- message handling [MFC], Windows message handlers
+- handler functions, standard Windows messages
+- functions [MFC], handler
+- messages [MFC], Windows
 ms.assetid: 19412a8b-2c38-4502-81da-13c823c7e36c
 caps.latest.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 6
----
-# Обработчики для стандартных сообщений Windows
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 9fa19a16623224e92442b00d6ea082d70c8ba040
+ms.contentlocale: ru-ru
+ms.lasthandoff: 09/12/2017
 
-Обработчики по умолчанию для стандартных сообщений Windows \(**WM\_**\) предварительно определены в классе `CWnd`.  Библиотека классов; имена этих обработчиков сообщений по имени.  Например, обработчик для сообщения `WM_PAINT` объявлен в `CWnd` следующим образом:  
+---
+# <a name="handlers-for-standard-windows-messages"></a>Handlers for Standard Windows Messages
+Default handlers for standard Windows messages (**WM_**) are predefined in class `CWnd`. The class library bases names for these handlers on the message name. For example, the handler for the `WM_PAINT` message is declared in `CWnd` as:  
   
  `afx_msg void OnPaint();`  
   
- Ключевое слово **afx\_msg** обеспечивает использование ключевого слова **виртуальный** C\+\+ отличия обработчики в функциях\-членах `CWnd`.  Обратите внимание, что эти функции не является виртуальным; вместо этого они реализованы с помощью схемы сообщений.  Схемы сообщений зависят исключительно в стандартных макросах препроцессора, не всех расширениях в языке C\+\+.  Ключевое слово **afx\_msg** — к пробел после предварительной обработки.  
+ The **afx_msg** keyword suggests the effect of the C++ **virtual** keyword by distinguishing the handlers from other `CWnd` member functions. Note, however, that these functions are not actually virtual; they are instead implemented through message maps. Message maps depend solely on standard preprocessor macros, not on any extensions to the C++ language. The **afx_msg** keyword resolves to white space after preprocessing.  
   
- Для переопределения обработчика, определенный в базовом классе, просто определение функции с тем же прототипа в производном классе и сделать запись сопоставления сообщений для обработки.  Обработчик «переопределяет» любого обработчика с тем же именем в любом из базовых классов класса.  
+ To override a handler defined in a base class, simply define a function with the same prototype in your derived class and to make a message-map entry for the handler. Your handler "overrides" any handler of the same name in any of your class's base classes.  
   
- В некоторых случаях обработчик должен вызывать обработчик в базовом классе переопределяется таким образом базовый класс и Windows могут работать с сообщение.  Когда вызывается обработчик базового класса в переопределении зависит от обстоятельствах.  Иногда необходимо вызывать обработчик базового класса, а иногда последним.  Иногда необходимо вызывать обработчик базового класса в соответствии с соглашением вы сами отказывается обрабатывать сообщения.  Иногда необходимо вызывать обработчик базового класса, а затем по для выполнения собственный код обработчика, в зависимости от значения или состояния, возвращаемых обработчиком базового класса.  
+ In some cases, your handler should call the overridden handler in the base class so the base class(es) and Windows can operate on the message. Where you call the base-class handler in your override depends on the circumstances. Sometimes you must call the base-class handler first and sometimes last. Sometimes you call the base-class handler conditionally, if you choose not to handle the message yourself. Sometimes you should call the base-class handler, then conditionally execute your own handler code, depending on the value or state returned by the base-class handler.  
   
 > [!CAUTION]
->  Небезопасно изменить аргументы, переданные в обработчик, если планируется загружать в обработчик базового класса.  Например, может возникнуть уговорены для изменения аргумент `nChar` обработчика `OnChar` \(преобразование прописными буквами, например\).  Это расширение функциональности достаточно неясно, но если требуется выполнить этот эффект, использует функции\-члена **SendMessage**`CWnd` вместо.  
+>  It is not safe to modify the arguments passed into a handler if you intend to pass them to a base-class handler. For example, you might be tempted to modify the `nChar` argument of the `OnChar` handler (to convert to uppercase, for example). This behavior is fairly obscure, but if you need to accomplish this effect, use the `CWnd` member function **SendMessage** instead.  
   
- Как указать правильный способ переопределения заданного сообщение?  Когда окно свойств записывает схему функции обработчика для заданного сообщения — обработчика `OnCreate` для `WM_CREATE`, например — это выполняется эскиз к в форме " минимальные правила и рекомендации " переопределенная функции\-члена.  В следующем примере " рекомендует первый вызов обработчика обработчик базового класса и продолжает только при условии, что он не возвращается — 1.  
+ How do you determine the proper way to override a given message When the Properties window writes the skeleton of the handler function for a given message — an `OnCreate` handler for `WM_CREATE`, for example — it sketches in the form of the recommended overridden member function. The following example recommends that the handler first call the base-class handler and proceed only on condition that it does not return -1.  
   
- [!CODE [NVC_MFCMessageHandling#3](../CodeSnippet/VS_Snippets_Cpp/NVC_MFCMessageHandling#3)]  
+ [!code-cpp[NVC_MFCMessageHandling#3](../mfc/codesnippet/cpp/handlers-for-standard-windows-messages_1.cpp)]  
   
- В соответствии с соглашением имена этих обработчиков начинаются с префикса «,». Некоторые из этих обработчиков не принимает аргументов, тогда как другие принимают несколько.  Некоторые также имеет возвращаемый тип, отличный от `void`.  Обработчики по умолчанию для всех сообщений **WM\_** описаны в *справочнике по MFC* как функции\-члены класса `CWnd` имена, начинающиеся с «на». Объявления функции\-члена в `CWnd` присоединены префикс **afx\_msg**.  
+ By convention, the names of these handlers begin with the prefix "On." Some of these handlers take no arguments, while others take several. Some also have a return type other than `void`. The default handlers for all **WM_** messages are documented in the *MFC Reference* as member functions of class `CWnd` whose names begin with "On." The member function declarations in `CWnd` are prefixed with **afx_msg**.  
   
-## См. также  
- [Объявление функций обработчиков сообщений](../mfc/declaring-message-handler-functions.md)
+## <a name="see-also"></a>See Also  
+ [Declaring Message Handler Functions](../mfc/declaring-message-handler-functions.md)
+

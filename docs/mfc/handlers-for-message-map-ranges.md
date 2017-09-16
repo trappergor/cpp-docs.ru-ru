@@ -1,154 +1,172 @@
 ---
-title: "Обработчики для диапазонов схем сообщений | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "обработка команд, обработчики обновления команд"
-  - "идентификаторы команд, сопоставление сообщений"
-  - "маршрутизация команд, обработчики обновления команд"
-  - "обработчики обновления команд"
-  - "уведомляющие сообщения элементов управления"
-  - "элементы управления [MFC], уведомления"
-  - "функции обработчика"
-  - "функции обработчика, объявление"
-  - "функции обработчика, диапазоны схемы сообщений"
-  - "обработчики"
-  - "обработчики, диапазоны схемы сообщений"
-  - "сопоставления, диапазоны сообщений"
-  - "обработчики сообщений"
-  - "обработка сообщений, функции обработчиков сообщений"
-  - "схемы сообщений, функции обработчиков сообщений"
-  - "схемы сообщений, диапазоны"
-  - "диапазоны сообщений"
-  - "диапазоны сообщений, сопоставление"
-  - "диапазоны схемы сообщений"
+title: Handlers for Message-Map Ranges | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- message handlers [MFC]
+- handlers [MFC], message-map ranges
+- message maps [MFC]], message handler functions
+- message maps [MFC]], ranges
+- control-notification messages [MFC]
+- command IDs [MFC], message mapping
+- message-map ranges [MFC]
+- handlers [MFC]
+- message handling [MFC], message handler functions
+- mappings [MFC]], message ranges
+- command handling [MFC], command update handlers
+- controls [MFC], notifications
+- handler functions [MFC], message-map ranges
+- handler functions [MFC]
+- command update handlers [MFC]
+- command routing [MFC], command update handlers
+- message ranges [MFC]
+- handler functions [MFC], declaring
+- message ranges [MFC], mapping
 ms.assetid: a271478b-5e1c-46f5-9f29-e5be44b27d08
 caps.latest.revision: 11
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 7
----
-# Обработчики для диапазонов схем сообщений
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: a0fe020931bc63084b3b7bfa640cec95afae0108
+ms.contentlocale: ru-ru
+ms.lasthandoff: 09/12/2017
 
-В этой статье описывается, как сопоставить диапазон сообщений в одной функции обработчика сообщений \(вместо сопоставления одного сообщения только к одной функции\).  
+---
+# <a name="handlers-for-message-map-ranges"></a>Handlers for Message-Map Ranges
+This article explains how to map a range of messages to a single message handler function (instead of mapping one message to only one function).  
   
- Случаи, когда требуется процесс более одного сообщения уведомления или элемента управления точно так же.  В таких случаях, может потребоваться сопоставить все сообщения в одной функции обработчика.  Диапазоны сопоставления сообщений позволяющих для этого диапазона для сопредельного сообщений:  
+ There are times when you need to process more than one message or control notification in exactly the same way. At such times, you might wish to map all of the messages to a single handler function. Message-map ranges allow you to do this for a contiguous range of messages:  
   
--   Сопоставления можно диапазоны идентификаторов команд:  
+-   You can map ranges of command IDs to:  
   
-    -   Функции обработчика команды.  
+    -   A command handler function.  
   
-    -   Функции обработчика команды обновления.  
+    -   A command update handler function.  
   
--   Элемент управления можно сообщения уведомления сопоставления для диапазона идентификаторов элементов управления в функцию обработчика сообщений.  
+-   You can map control-notification messages for a range of control IDs to a message handler function.  
   
- Разделы описанные в этой статье:  
+ Topics covered in this article include:  
   
--   [Создание схемы запись сообщений](#_core_writing_the_message.2d.map_entry)  
+-   [Writing the message-map entry](#_core_writing_the_message.2d.map_entry)  
   
--   [Объявление функции обработчика](#_core_declaring_the_handler_function)  
+-   [Declaring the handler function](#_core_declaring_the_handler_function)  
   
--   [Пример для диапазона идентификаторов команд](#_core_example_for_a_range_of_command_ids)  
+-   [Example for a range of command IDs](#_core_example_for_a_range_of_command_ids)  
   
--   [Пример для диапазона идентификаторов элементов управления](#_core_example_for_a_range_of_control_ids)  
+-   [Example for a range of control IDs](#_core_example_for_a_range_of_control_ids)  
   
-##  <a name="_core_writing_the_message.2d.map_entry"></a> Создание схемы запись сообщений  
- В cpp\-файле, добавьте записи сопоставления сообщений, как показано в следующем примере:  
+##  <a name="_core_writing_the_message.2d.map_entry"></a> Writing the Message-Map Entry  
+ In the .CPP file, add your message-map entry, as shown in the following example:  
   
- [!CODE [NVC_MFCMessageHandling#6](../CodeSnippet/VS_Snippets_Cpp/NVC_MFCMessageHandling#6)]  
+ [!code-cpp[NVC_MFCMessageHandling#6](../mfc/codesnippet/cpp/handlers-for-message-map-ranges_1.cpp)]  
   
- Запись сопоставления сообщений состоит из следующих элементов:  
+ The message-map entry consists of the following items:  
   
--   Макрос диапазона сопоставления сообщений:  
+-   The message-map range macro:  
   
-    -   [ON\_COMMAND\_RANGE](../Topic/ON_COMMAND_RANGE.md)  
+    -   [ON_COMMAND_RANGE](reference/message-map-macros-mfc.md#on_command_range)  
   
-    -   [ON\_UPDATE\_COMMAND\_UI\_RANGE](../Topic/ON_UPDATE_COMMAND_UI_RANGE.md)  
+    -   [ON_UPDATE_COMMAND_UI_RANGE](reference/message-map-macros-mfc.md#on_update_command_ui_range)  
   
-    -   [ON\_CONTROL\_RANGE](../Topic/ON_CONTROL_RANGE.md)  
+    -   [ON_CONTROL_RANGE](reference/message-map-macros-mfc.md#on_control_range)  
   
--   Параметры макросу:  
+-   Parameters to the macro:  
   
-     Первые 2 3 макроса принимают два параметра.  
+     The first two macros take three parameters:  
   
-    -   Идентификатор команды, начинающимся диапазон  
+    -   The command ID that starts the range  
   
-    -   Идентификатор команды, завершает диапазон  
+    -   The command ID that ends the range  
   
-    -   Имя функции обработчика сообщений  
+    -   The name of the message handler function  
   
-     Диапазон идентификаторов команд должен быть не прерывается.  
+     The range of command IDs must be contiguous.  
   
-     Третий макрос, `ON_CONTROL_RANGE`, принимает дополнительный первый параметр. в элементе управления сообщение уведомления, например **EN\_CHANGE**.  
+     The third macro, `ON_CONTROL_RANGE`, takes an additional first parameter: a control-notification message, such as **EN_CHANGE**.  
   
-##  <a name="_core_declaring_the_handler_function"></a> Объявление функции обработчика  
- Добавьте в объявление функции обработчика в. Файл H.  В следующем коде показано, как это может выглядеть, как показано ниже:  
+##  <a name="_core_declaring_the_handler_function"></a> Declaring the Handler Function  
+ Add your handler function declaration in the .H file. The following code shows how this might look, as shown below:  
   
- [!CODE [NVC_MFCMessageHandling#7](../CodeSnippet/VS_Snippets_Cpp/NVC_MFCMessageHandling#7)]  
+ [!code-cpp[NVC_MFCMessageHandling#7](../mfc/codesnippet/cpp/handlers-for-message-map-ranges_2.h)]  
   
- Функции обработчика для единственных команд обычно не принимает параметры.  За исключением функций механизма обновления, функции обработчика диапазонов для сопоставления сообщений требуют дополнительного параметра, `nID`, типа **uint**.  Этот параметр первый параметр.  Дополнительный параметр адаптирует дополнительное идентификатор команды, необходимый для определения команду, которую пользователь не выбрал.  
+ Handler functions for single commands normally take no parameters. With the exception of update handler functions, handler functions for message-map ranges require an extra parameter, `nID`, of type **UINT**. This parameter is the first parameter. The extra parameter accommodates the extra command ID needed to specify which command the user actually chose.  
   
- Требования к параметра Дополнительные сведения о функции обработчика для обновления см. в разделе [Пример для диапазона идентификаторов команд](#_core_example_for_a_range_of_command_ids).  
+ For more information about parameter requirements for updating handler functions, see [Example for a Range of Command IDs](#_core_example_for_a_range_of_command_ids).  
   
-##  <a name="_core_example_for_a_range_of_command_ids"></a> Пример для диапазона идентификаторов команд  
- Когда могут использовать диапазоны?  В качестве примера в обработке команды как команда увеличения в примере MFC [HIERSVR](../top/visual-cpp-samples.md).  Эта команда увеличивает представление, время ее от 25% до 300% — его размера.  Класс HIERSVR представления используется диапазон для обработки команд увеличения с записью сопоставления сообщений, сходный с этого:  
+##  <a name="_core_example_for_a_range_of_command_ids"></a> Example for a Range of Command IDs  
+ When might you use ranges One example is in handling commands like the Zoom command in the MFC sample [HIERSVR](../visual-cpp-samples.md). This command zooms the view, scaling it between 25% and 300% of its normal size. HIERSVR's view class uses a range to handle the Zoom commands with a message-map entry resembling this:  
   
- [!CODE [NVC_MFCMessageHandling#8](../CodeSnippet/VS_Snippets_Cpp/NVC_MFCMessageHandling#8)]  
+ [!code-cpp[NVC_MFCMessageHandling#8](../mfc/codesnippet/cpp/handlers-for-message-map-ranges_3.cpp)]  
   
- При создании схемы запись сообщений, необходимо указать следующее.  
+ When you write the message-map entry, you specify:  
   
--   2 Идентификаторов, начала и завершения команды представляет собой непрерывный диапазон.  
+-   Two command IDs, beginning and ending a contiguous range.  
   
-     Здесь они `ID_VIEW_ZOOM25` и `ID_VIEW_ZOOM300`.  
+     Here they are `ID_VIEW_ZOOM25` and `ID_VIEW_ZOOM300`.  
   
--   Имя функции обработчиков команд.  
+-   The name of the handler function for the commands.  
   
-     Здесь это `OnZoom`.  
+     Here it's `OnZoom`.  
   
- Объявление функции походило бы следующим образом:  
+ The function declaration would resemble this:  
   
- [!CODE [NVC_MFCMessageHandling#9](../CodeSnippet/VS_Snippets_Cpp/NVC_MFCMessageHandling#9)]  
+ [!code-cpp[NVC_MFCMessageHandling#9](../mfc/codesnippet/cpp/handlers-for-message-map-ranges_4.h)]  
   
- Случай функций механизма обновления аналогичен и, как правило, чтобы быть более широко используется.  Он часто приходится писать обработчики `ON_UPDATE_COMMAND_UI` для нескольких команд и найти запись или копирования, один и тот же код снова и снова.  Решение сопоставления диапазон идентификаторов команд одной функции обработчика обновления с помощью макроса `ON_UPDATE_COMMAND_UI_RANGE`.  Идентификаторы команд формы представляет собой непрерывный диапазон.  Пример см. в разделе обработчик **OnUpdateZoom** и его запись сопоставления сообщений `ON_UPDATE_COMMAND_UI_RANGE` в классе представления образца HIERSVR.  
+ The case of update handler functions is similar, and likely to be more widely useful. It's quite common to write `ON_UPDATE_COMMAND_UI` handlers for a number of commands and find yourself writing, or copying, the same code over and over. The solution is to map a range of command IDs to one update handler function using the `ON_UPDATE_COMMAND_UI_RANGE` macro. The command IDs must form a contiguous range. For an example, see the **OnUpdateZoom** handler and its `ON_UPDATE_COMMAND_UI_RANGE` message-map entry in the HIERSVR sample's view class.  
   
- Функции обработчика обновления для единственных команд обычно принимает один параметр, `pCmdUI`, типа **CCmdUI\***.  В отличие от функции обработчика, функции обработчика обновления диапазонов для сопоставления сообщений не требуют дополнительного параметра, `nID`, типа **uint**.  Идентификатор команды, которая необходима для определения команду, которую пользователь не выбрал, найдено в объекте `CCmdUI`.  
+ Update handler functions for single commands normally take a single parameter, `pCmdUI`, of type **CCmdUI\***. Unlike handler functions, update handler functions for message-map ranges do not require an extra parameter, `nID`, of type **UINT**. The command ID, which is needed to specify which command the user actually chose, is found in the `CCmdUI` object.  
   
-##  <a name="_core_example_for_a_range_of_control_ids"></a> Пример для диапазона идентификаторов элементов управления  
- Это руководство интересным регистр сопоставляет сообщения в элементе управления уведомления для диапазона идентификаторов элементов управления к одному обработчику.  Предположим, что пользователь может щелкнуть любую из 10 кнопок.  Сопоставляла все 10 кнопок к один обработчик, записи сопоставления сообщений какTfи будет выглядеть так, как это:  
+##  <a name="_core_example_for_a_range_of_control_ids"></a> Example for a Range of Control IDs  
+ Another interesting case is mapping control-notification messages for a range of control IDs to a single handler. Suppose the user can click any of 10 buttons. To map all 10 buttons to one handler, your message-map entry would look like this:  
   
- [!CODE [NVC_MFCMessageHandling#10](../CodeSnippet/VS_Snippets_Cpp/NVC_MFCMessageHandling#10)]  
+ [!code-cpp[NVC_MFCMessageHandling#10](../mfc/codesnippet/cpp/handlers-for-message-map-ranges_5.cpp)]  
   
- При записи макроса `ON_CONTROL_RANGE` в схеме сообщений, необходимо указать следующее.  
+ When you write the `ON_CONTROL_RANGE` macro in your message map, you specify:  
   
--   Указанное сообщение в элементе управления уведомления.  
+-   A particular control-notification message.  
   
-     Здесь значение **BN\_CLICKED**.  
+     Here it's **BN_CLICKED**.  
   
--   Значения идентификатора элемента управления, связанные с сопредельным диапазоном элементов управления.  
+-   The control ID values associated with the contiguous range of controls.  
   
-     Далее эти `IDC_BUTTON1` и `IDC_BUTTON10`.  
+     Here these are `IDC_BUTTON1` and `IDC_BUTTON10`.  
   
--   Имя функции обработчика сообщений.  
+-   The name of the message handler function.  
   
-     Здесь это `OnButtonClicked`.  
+     Here it's `OnButtonClicked`.  
   
- При написании функцию обработчика событий, определить дополнительный параметр **uint**, как показано в следующем примере:  
+ When you write the handler function, specify the extra **UINT** parameter, as shown in the following:  
   
- [!CODE [NVC_MFCMessageHandling#11](../CodeSnippet/VS_Snippets_Cpp/NVC_MFCMessageHandling#11)]  
+ [!code-cpp[NVC_MFCMessageHandling#11](../mfc/codesnippet/cpp/handlers-for-message-map-ranges_6.cpp)]  
   
- Обработчик `OnButtonClicked` для одного сообщения **BN\_CLICKED** не принимает параметров.  Один и тот же обработчик для кнопок диапазона принимает одно **uint**.  Позволяет дополнительный параметр для указания конкретного элемента управления ответственный создания сообщение **BN\_CLICKED**.  
+ The `OnButtonClicked` handler for a single **BN_CLICKED** message takes no parameters. The same handler for a range of buttons takes one **UINT**. The extra parameter allows for identifying the particular control responsible for generating the **BN_CLICKED** message.  
   
- Код, показанный в этом примере является типичным. преобразование значения, передаваемым на `int` внутри диапазона и подтверждение сообщения, в этом случае.  Затем можно выполнить какое\-либо другое действие в зависимости от того, какая кнопка была нажата.  
+ The code shown in the example is typical: converting the value passed to an `int` within the message range and asserting that this is the case. Then you might take some different action depending on which button was clicked.  
   
-## См. также  
- [Объявление функций обработчиков сообщений](../mfc/declaring-message-handler-functions.md)
+## <a name="see-also"></a>See Also  
+ [Declaring Message Handler Functions](../mfc/declaring-message-handler-functions.md)
+

@@ -1,5 +1,5 @@
 ---
-title: "Класс CMFCAcceleratorKeyAssignCtrl | Документы Microsoft"
+title: CMFCAcceleratorKeyAssignCtrl Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -20,7 +20,12 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- CMFCAcceleratorKeyAssignCtrl class
+- CMFCAcceleratorKeyAssignCtrl [MFC], CMFCAcceleratorKeyAssignCtrl
+- CMFCAcceleratorKeyAssignCtrl [MFC], GetAccel
+- CMFCAcceleratorKeyAssignCtrl [MFC], IsFocused
+- CMFCAcceleratorKeyAssignCtrl [MFC], IsKeyDefined
+- CMFCAcceleratorKeyAssignCtrl [MFC], PreTranslateMessage
+- CMFCAcceleratorKeyAssignCtrl [MFC], ResetKey
 ms.assetid: 89fb8e62-596e-4e71-8c9a-32740347aaab
 caps.latest.revision: 33
 author: mikeblome
@@ -40,51 +45,51 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0e0c08ddc57d437c51872b5186ae3fc983bb0199
-ms.openlocfilehash: 23687cf4c13881293d10a5f816a2c825180df49c
+ms.translationtype: MT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: ee706b089c38fb6f807c809bf13f78f17e944fe0
 ms.contentlocale: ru-ru
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 09/12/2017
 
 ---
-# <a name="cmfcacceleratorkeyassignctrl-class"></a>Класс CMFCAcceleratorKeyAssignCtrl
-`CMFCAcceleratorKeyAssignCtrl` Расширяет класс [CEdit Class](../../mfc/reference/cedit-class.md) для поддержки дополнительных системных клавиш, например ALT, CONTROL и SHIFT.  
+# <a name="cmfcacceleratorkeyassignctrl-class"></a>CMFCAcceleratorKeyAssignCtrl Class
+The `CMFCAcceleratorKeyAssignCtrl` class extends the [CEdit Class](../../mfc/reference/cedit-class.md) to support extra system buttons such as ALT, CONTROL, and SHIFT.  
   
-## <a name="syntax"></a>Синтаксис  
+## <a name="syntax"></a>Syntax  
   
 ```  
 class CMFCAcceleratorKeyAssignCtrl : public CEdit  
 ```  
   
-## <a name="members"></a>Члены  
+## <a name="members"></a>Members  
   
-### <a name="public-constructors"></a>Открытые конструкторы  
+### <a name="public-constructors"></a>Public Constructors  
   
-|Имя|Описание|  
+|Name|Description|  
 |----------|-----------------|  
-|[CMFCAcceleratorKeyAssignCtrl::CMFCAcceleratorKeyAssignCtrl](#cmfcacceleratorkeyassignctrl)|Создает объект `CMFCAcceleratorKeyAssignCtrl`.|  
+|[CMFCAcceleratorKeyAssignCtrl::CMFCAcceleratorKeyAssignCtrl](#cmfcacceleratorkeyassignctrl)|Constructs a `CMFCAcceleratorKeyAssignCtrl` object.|  
   
-### <a name="public-methods"></a>Открытые методы  
+### <a name="public-methods"></a>Public Methods  
   
-|Имя|Описание|  
+|Name|Description|  
 |----------|-----------------|  
-|[CMFCAcceleratorKeyAssignCtrl::GetAccel](#getaccel)|Извлекает `ACCEL` структуру для сочетания клавиш, нажатого в объекте `CMFCAcceleratorKeyAssignCtrl`.|  
+|[CMFCAcceleratorKeyAssignCtrl::GetAccel](#getaccel)|Retrieves the `ACCEL` structure for a shortcut key pressed in the `CMFCAcceleratorKeyAssignCtrl` object.|  
 |[CMFCAcceleratorKeyAssignCtrl::IsFocused](#isfocused)||  
-|[CMFCAcceleratorKeyAssignCtrl::IsKeyDefined](#iskeydefined)|Определяет, задано ли сочетание клавиш.|  
-|[CMFCAcceleratorKeyAssignCtrl::PreTranslateMessage](#pretranslatemessage)|Используется классом [CWinApp](../../mfc/reference/cwinapp-class.md) для перевода оконных сообщений перед их отправкой [TranslateMessage](http://msdn.microsoft.com/library/windows/desktop/ms644955) и [DispatchMessage](http://msdn.microsoft.com/library/windows/desktop/ms644934) функции Windows. (Переопределяет [CWnd::PreTranslateMessage](../../mfc/reference/cwnd-class.md#pretranslatemessage).)|  
-|[CMFCAcceleratorKeyAssignCtrl::ResetKey](#resetkey)|Сбрасывает сочетание клавиш.|  
+|[CMFCAcceleratorKeyAssignCtrl::IsKeyDefined](#iskeydefined)|Determines whether a shortcut key has been defined.|  
+|[CMFCAcceleratorKeyAssignCtrl::PreTranslateMessage](#pretranslatemessage)|Used by class [CWinApp](../../mfc/reference/cwinapp-class.md) to translate window messages before they are dispatched to the [TranslateMessage](http://msdn.microsoft.com/library/windows/desktop/ms644955) and [DispatchMessage](http://msdn.microsoft.com/library/windows/desktop/ms644934) Windows functions. (Overrides [CWnd::PreTranslateMessage](../../mfc/reference/cwnd-class.md#pretranslatemessage).)|  
+|[CMFCAcceleratorKeyAssignCtrl::ResetKey](#resetkey)|Resets the shortcut key.|  
   
-## <a name="remarks"></a>Примечания  
- Этот класс расширяет функциональность класса `CEdit` благодаря поддержке сочетаний клавиш. `CMFCAcceleratorKeyAssignCtrl` Функции как класса [CEdit Class](../../mfc/reference/cedit-class.md) и также может распознавать системные кнопки.  
+## <a name="remarks"></a>Remarks  
+ This class extends the functionality of the `CEdit` class by supporting shortcut keys, also known as accelerator keys. The `CMFCAcceleratorKeyAssignCtrl` class functions as a [CEdit Class](../../mfc/reference/cedit-class.md) and it can also recognize system buttons.  
   
- Этот класс сопоставляет физические сочетания клавиш со строковыми значениями. Например, пусть сочетание клавиш ALT+B сопоставлено со строкой "Alt + B". Когда пользователь нажимает это сочетание клавиш в объекте `CMFCAcceleratorKeyAssignCtrl`, отображается строка "Alt + B". Дополнительные сведения о сопоставлении между сочетания клавиш и формат строки см. в разделе [CMFCAcceleratorKey класса](../../mfc/reference/cmfcacceleratorkey-class.md).  
+ This class maps physical shortcut key combinations to string values. For example, assume the key combination ALT + B is mapped to the string "Alt + B". When the user presses this key combination in a `CMFCAcceleratorKeyAssignCtrl` object, "Alt + B" is displayed to the user. For more information about the mapping between shortcut keys and a string format, see [CMFCAcceleratorKey Class](../../mfc/reference/cmfcacceleratorkey-class.md).  
   
-## <a name="example"></a>Пример  
- В этом примере демонстрируется создание объекта `CMFCAcceleratorKeyAssignCtrl` и использование его метода `ResetKey` для сброса сочетания клавиш.  
+## <a name="example"></a>Example  
+ The following example demonstrates how to construct a `CMFCAcceleratorKeyAssignCtrl` object and use its `ResetKey` method to reset the shortcut key.  
   
- [!code-cpp[NVC_MFC_RibbonApp&#31;](../../mfc/reference/codesnippet/cpp/cmfcacceleratorkeyassignctrl-class_1.cpp)]  
+ [!code-cpp[NVC_MFC_RibbonApp#31](../../mfc/reference/codesnippet/cpp/cmfcacceleratorkeyassignctrl-class_1.cpp)]  
   
-## <a name="inheritance-hierarchy"></a>Иерархия наследования  
+## <a name="inheritance-hierarchy"></a>Inheritance Hierarchy  
  [CObject](../../mfc/reference/cobject-class.md)  
   
  [CCmdTarget](../../mfc/reference/ccmdtarget-class.md)  
@@ -95,79 +100,79 @@ class CMFCAcceleratorKeyAssignCtrl : public CEdit
   
  `CMFCAcceleratorKeyAssignCtrl`   
   
-## <a name="requirements"></a>Требования  
- **Заголовок:** afxacceleratorkeyassignctrl.h  
+## <a name="requirements"></a>Requirements  
+ **Header:** afxacceleratorkeyassignctrl.h  
   
-##  <a name="cmfcacceleratorkeyassignctrl"></a>CMFCAcceleratorKeyAssignCtrl::CMFCAcceleratorKeyAssignCtrl  
- Создает [CMFCAcceleratorKeyAssignCtrl](../../mfc/reference/cmfcacceleratorkeyassignctrl-class.md) объекта.  
+##  <a name="cmfcacceleratorkeyassignctrl"></a>  CMFCAcceleratorKeyAssignCtrl::CMFCAcceleratorKeyAssignCtrl  
+ Constructs a [CMFCAcceleratorKeyAssignCtrl](../../mfc/reference/cmfcacceleratorkeyassignctrl-class.md) object.  
   
 ```  
 CMFCAcceleratorKeyAssignCtrl();
 ```  
   
-##  <a name="getaccel"></a>CMFCAcceleratorKeyAssignCtrl::GetAccel  
- Извлекает `ACCEL` структуры для нажатия сочетания клавиш в [CMFCAcceleratorKeyAssignCtrl](../../mfc/reference/cmfcacceleratorkeyassignctrl-class.md) объекта.  
+##  <a name="getaccel"></a>  CMFCAcceleratorKeyAssignCtrl::GetAccel  
+ Retrieves the `ACCEL` structure for a shortcut key pressed in the [CMFCAcceleratorKeyAssignCtrl](../../mfc/reference/cmfcacceleratorkeyassignctrl-class.md) object.  
   
 ```  
 ACCEL const* GetAccel() const;  
 ```  
   
-### <a name="return-value"></a>Возвращаемое значение  
- `ACCEL` Структура, описывающая сочетание клавиш.  
+### <a name="return-value"></a>Return Value  
+ An `ACCEL` structure that describes the shortcut key.  
   
-### <a name="remarks"></a>Примечания  
- Используйте эту функцию для получения `ACCEL` структуры для сочетания клавиш, введенные пользователем в вашей `CMFCAcceleratorKeyAssignCtrl` объекта.  
+### <a name="remarks"></a>Remarks  
+ Use this function to retrieve the `ACCEL` structure for a shortcut key that the user entered into your `CMFCAcceleratorKeyAssignCtrl` object.  
   
-##  <a name="isfocused"></a>CMFCAcceleratorKeyAssignCtrl::IsFocused  
+##  <a name="isfocused"></a>  CMFCAcceleratorKeyAssignCtrl::IsFocused  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
 ```  
 BOOL IsFocused() const;  
 ```  
   
-### <a name="return-value"></a>Возвращаемое значение  
+### <a name="return-value"></a>Return Value  
   
-### <a name="remarks"></a>Примечания  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="iskeydefined"></a>CMFCAcceleratorKeyAssignCtrl::IsKeyDefined  
- Определяет, было ли определено сочетания клавиш в [CMFCAcceleratorKeyAssignCtrl](../../mfc/reference/cmfcacceleratorkeyassignctrl-class.md) объекта.  
+##  <a name="iskeydefined"></a>  CMFCAcceleratorKeyAssignCtrl::IsKeyDefined  
+ Determines whether a shortcut key has been defined in the [CMFCAcceleratorKeyAssignCtrl](../../mfc/reference/cmfcacceleratorkeyassignctrl-class.md) object.  
   
 ```  
 BOOL IsKeyDefined() const;  
 ```  
   
-### <a name="return-value"></a>Возвращаемое значение  
- Ненулевое значение, если пользователь нажал уже допустимые сочетания клавиш, определяющие сочетания клавиш; в противном случае — 0.  
+### <a name="return-value"></a>Return Value  
+ Nonzero if the user has already pressed a valid combination of keys that define a shortcut key; otherwise 0.  
   
-### <a name="remarks"></a>Примечания  
- Эта функция позволяет определить, является ли пользователь ввел допустимое сочетание клавиш в вашей `CMFCAcceleratorKeyAssignCtrl` объекта. Если существует сочетание клавиш, можно использовать [CMFCAcceleratorKeyAssignCtrl::GetAccel](#getaccel) метод, чтобы получить `ACCEL` структура, связанная с этого сочетания клавиш.  
+### <a name="remarks"></a>Remarks  
+ Use this function to determine whether the user entered a valid shortcut key in your `CMFCAcceleratorKeyAssignCtrl` object. If a shortcut key exists, you can use [CMFCAcceleratorKeyAssignCtrl::GetAccel](#getaccel) method to obtain the `ACCEL` structure associated with this shortcut key.  
   
-##  <a name="pretranslatemessage"></a>CMFCAcceleratorKeyAssignCtrl::PreTranslateMessage  
+##  <a name="pretranslatemessage"></a>  CMFCAcceleratorKeyAssignCtrl::PreTranslateMessage  
  [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
   
 ```  
 virtual BOOL PreTranslateMessage(MSG* pMsg);
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
  [in] `pMsg`  
   
-### <a name="return-value"></a>Возвращаемое значение  
+### <a name="return-value"></a>Return Value  
   
-### <a name="remarks"></a>Примечания  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="resetkey"></a>CMFCAcceleratorKeyAssignCtrl::ResetKey  
- Сбрасывает сочетание клавиш.  
+##  <a name="resetkey"></a>  CMFCAcceleratorKeyAssignCtrl::ResetKey  
+ Resets the shortcut key.  
   
 ```  
 void ResetKey();
 ```  
   
-### <a name="remarks"></a>Примечания  
- Функция очищает изменить текст элемента управления. Сюда входят все сочетания клавиш, нажата.  
+### <a name="remarks"></a>Remarks  
+ The function clears the edit control text. This includes any shortcut keys that the user pressed.  
   
-## <a name="see-also"></a>См. также  
- [Диаграмма иерархии](../../mfc/hierarchy-chart.md)   
- [Классы](../../mfc/reference/mfc-classes.md)   
- [Класс CMFCAcceleratorKey](../../mfc/reference/cmfcacceleratorkey-class.md)
+## <a name="see-also"></a>See Also  
+ [Hierarchy Chart](../../mfc/hierarchy-chart.md)   
+ [Classes](../../mfc/reference/mfc-classes.md)   
+ [CMFCAcceleratorKey Class](../../mfc/reference/cmfcacceleratorkey-class.md)
 

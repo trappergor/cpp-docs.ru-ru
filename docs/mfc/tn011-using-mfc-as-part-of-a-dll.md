@@ -1,119 +1,139 @@
 ---
-title: "TN011. Использование MFC как часть библиотеки DLL | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "vc.mfc.dll"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "_USRDLL - символ"
-  - "DLL-библиотеки [C++], связывание"
-  - "библиотеки DLL MFC [C++], связывание обычных DLL-библиотек с MFC"
-  - "TN011"
-  - "библиотеки USRDLL, параметры компилятора"
+title: 'TN011: Using MFC as Part of a DLL | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- vc.mfc.dll
+dev_langs:
+- C++
+helpviewer_keywords:
+- _USRDLL symbol
+- USRDLLs, compiler switches
+- TN011
+- DLLs [MFC], linking
+- MFC DLLs [MFC], linking regular MFC DLLs to MFC
 ms.assetid: 76753e9c-59dc-40f6-b6a7-f6bb9a7c4190
 caps.latest.revision: 20
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 16
----
-# TN011. Использование MFC как часть библиотеки DLL
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 6c705e64040214c028cdc2e5a59ba173a04ec9ea
+ms.contentlocale: ru-ru
+ms.lasthandoff: 09/12/2017
 
-Эта заметка описывает обычной библиотеки DLL, которые позволяют использовать библиотеки MFC как часть библиотеки динамической компоновки Windows \(DLL\).  Она высказывать, знакома с библиотекой DLL Windows и построения их.  Дополнительные сведения о библиотеке DLL расширения MFC, с помощью которой можно создать расширения с библиотекой MFC, см. в разделе [Версия библиотеки DLL MFC](../mfc/tn033-dll-version-of-mfc.md).  
+---
+# <a name="tn011-using-mfc-as-part-of-a-dll"></a>TN011: Using MFC as Part of a DLL
+This note describes regular MFC DLLs, which allow you to use the MFC library as part of a Windows dynamic-link library (DLL). It assumes that you are familiar with Windows DLLs and how to build them. For information about MFC extension DLLs, with which you can create extensions to the MFC library, see [DLL Version of MFC](../mfc/tn033-dll-version-of-mfc.md).  
   
-## Интерфейсы DLL  
- Обычные библиотеки DLL, имеют интерфейсы между приложением и библиотекой DLL задается в похожих на C функций или явно экспортированных классов.  Интерфейсы классов MFC нельзя экспортировать.  
+## <a name="dll-interfaces"></a>DLL Interfaces  
+ regular MFC DLLs assume interfaces between the application and the DLL are specified in C-like functions or explicitly exported classes. MFC class interfaces cannot be exported.  
   
- Если и DLL и приложение необходимо использовать MFC и, возможно, или вариант использования общая версия библиотек MFC или к статической привязке к копированию библиотек.  Приложение и оба библиотеки DLL можно использовать одну из стандартных версий библиотеки MFC.  
+ If both a DLL and an application want to use MFC, both have a choice to either use the shared version of the MFC libraries or to statically link to a copy of the libraries. The application and DLL may both use one of the standard versions of the MFC library.  
   
- Обычная библиотека DLL имеет несколько преимуществ:  
+ regular MFC DLLs have several advantages:  
   
--   Приложение, использующее библиотеку DLL не обязательно использовать MFC и не должно быть приложением Visual C\+\+.  
+-   The application that uses the DLL does not have to use MFC and does not have to be a Visual C++ application.  
   
--   С обычной библиотеки DLL, статически связанным с MFC, размер библиотеки DLL зависит только от подпрограммах MFC и среды выполнения C, используемые и связь.  
+-   With regular MFC DLLs that statically link to MFC, the size of the DLL depends only on the MFC and C runtime routines that are used and linked.  
   
--   С обычной библиотеки DLL, динамически связываемых с MFC, сбережения в памяти от использования общей версией MFC могут быть значительно.  Однако следует распределять общие библиотеки DLL MFC DLL,*\<version\>* и *\<version\>*, Msvvcrt DLL с помощью библиотеки DLL.  
+-   With regular MFC DLLs that dynamically link to MFC, the savings in memory from using the shared version of MFC can be significant. However, you must distribute the shared DLLs, Mfc*\<version>*.dll and Msvvcrt*\<version>*.dll, with your DLL.  
   
--   Разработка библиотек DLL не реализованы как классы.  При разработке библиотек DLL экспортирует только на интерфейсы требуется.  В результате, если реализация изменяется, обычная библиотека DLL все еще является допустимым.  
+-   The DLL design is independent of how classes are implemented. Your DLL design exports only to the APIs you want. As a result, if the implementation changes, regular MFC DLLs are still valid.  
   
--   С обычной библиотеки DLL, статически связанным с MFC, если и библиотеки DLL и используют приложение MFC, то никаких проблем с приложением, которое требуется разную версию MFC DLL, или наоборот.  Поскольку библиотека MFC статически связана в каждое DLL или EXE, не вопрос о том, какую версию имеется.  
+-   With regular MFC DLLs that statically link to MFC, if both DLL and application use MFC, there are no problems with the application that wants a different version of MFC than the DLL or vice versa. Because the MFC library is statically linked into each DLL or EXE, there is no question about which version you have.  
   
-## Ограничения API  
- Некоторые функции MFC не применяется к версии библиотек DLL или из\-за технических ограничений или, поскольку эти службы обычно предоставляются приложением.  В текущей версии MFC, единственная функция, не может применяться к `CWinApp::SetDialogBkColor`.  
+## <a name="api-limitations"></a>API Limitations  
+ Some MFC functionality does not apply to the DLL version, either because of technical limitations or because those services are usually provided by the application. With the current version of MFC, the only function that is not applicable is `CWinApp::SetDialogBkColor`.  
   
-## Построение библиотеки DLL  
- Когда компилировать обычной библиотеки DLL, статически связанным с MFC, и `_USRDLL` и `_WINDLL` должны быть определены.  Код библиотеки DLL необходимо также компилировать со следующими переключателями компилятора:  
+## <a name="building-your-dll"></a>Building Your DLL  
+ When compiling regular MFC DLLs that statically link to MFC, the symbols `_USRDLL` and `_WINDLL` must be defined. Your DLL code must also be compiled with the following compiler switches:  
   
--   **\/D\_WINDLL** означает компиляцию для библиотеки DLL  
+- **/D_WINDLL** signifies the compilation is for a DLL  
   
--   **\/D\_USRDLL** определяет построение обычной библиотеки DLL.  
+- **/D_USRDLL** specifies you are building a regular MFC DLL  
   
- Необходимо определить эти символы и использовать эти переключатели компилятора при компилировать обычной библиотеки DLL, динамически связываемых с MFC.  Кроме того, символ `_AFXDLL` должен быть определен и код библиотеки DLL необходимо компилировать с:  
+ You must also define these symbols and use these compiler switches when you compile regular MFC DLLs that dynamically link to MFC. Additionally, the symbol `_AFXDLL` must be defined and your DLL code must be compiled with:  
   
--   **\/D\_AFXDLL** указывает, что при построении обычной библиотеки DLL, динамически связываемой с MFC  
+- **/D_AFXDLL** specifies that you are building a regular MFC DLL that dynamically links to MFC  
   
- Интерфейсы \(API\) между приложением и библиотекой DLL должна быть явно экспортировать.  Рекомендуется определены интерфейсы, чтобы быть низкой пропускной способностью и используется только интерфейсы C — если можно.  Непосредственно интерфейсы C для поддержания проще, чем более сложные классы C C\+\+.  
+ The interfaces (APIs) between the application and the DLL must be explicitly exported. We recommend that you define your interfaces to be low bandwidth, and use only C interfaces if you can. Direct C interfaces are easier to maintain than more complex C++ classes.  
   
- Настройка API отдельно в заголовке, который может быть включен и файлами C C\+\+.  В разделе ScreenCap.h заголовок в расширенном примере MFC понятий [DLLScreenCap](../top/visual-cpp-samples.md) для примера.  Чтобы экспортировать функций, введите их в разделе `EXPORTS` файла определения модуля \(.DEF\), либо включить `__declspec(dllexport)` в определениях функций.  Используйте `__declspec(dllimport)` для импорта эти функции в исполняемый файл клиента.  
+ Place your APIs in a separate header that can be included by both C and C++ files. See the header ScreenCap.h in the MFC Advanced Concepts sample [DLLScreenCap](../visual-cpp-samples.md) for an example. To export your functions, enter them in the `EXPORTS` section of your module definition file (.DEF) or include `__declspec(dllexport)` on your function definitions. Use `__declspec(dllimport)` to import these functions into the client executable.  
   
- Необходимо добавить макрос `AFX_MANAGE_STATE` в начале всех экспортированных функций в обычной библиотеке DLL, динамически связываемых с MFC.  Этот макрос задает текущее состояние модуля одну из библиотек DLL.  Для использования этого макроса добавьте следующую строку кода в начало экспортированных функций из библиотеки DLL.  
+ You must add the `AFX_MANAGE_STATE` macro at the beginning of all the exported functions in regular MFC DLLs that dynamically link to MFC. This macro sets the current module state to the one for the DLL. To use this macro, add the following line of code to the beginning of functions exported from the DLL:  
   
  `AFX_MANAGE_STATE(AfxGetStaticModuleState( ))`  
   
-## WinMain \-\> DllMain  
- Библиотека MFC определяет стандартную точку входа Win32 `DllMain`, инициализирует данный объект, производный [CWinApp](../mfc/reference/cwinapp-class.md) и в обычном приложении MFC.  Разместите инициализацию библиотек DLL, в методе [InitInstance](../Topic/CWinApp::InitInstance.md) и в обычном приложении MFC.  
+## <a name="winmain---dllmain"></a>WinMain -> DllMain  
+ The MFC library defines the standard Win32 `DllMain` entry point that initializes your [CWinApp](../mfc/reference/cwinapp-class.md) derived object as in a typical MFC application. Place all DLL-specific initialization in the [InitInstance](../mfc/reference/cwinapp-class.md#initinstance) method as in a typical MFC application.  
   
- Обратите внимание, что механизм [CWinApp::Run](../Topic/CWinApp::Run.md) неприменим к библиотеке DLL, потому что главный цикл обработки сообщений находится в приложении.  Если библиотека DLL отображает немодальные диалоговые окна или имеет главного фреймовое окно его, цикл обработки сообщений приложения главный должен вызвать библиотеку DLL экспортированную процедуры, которая вызывает [CWinApp::PreTranslateMessage](../Topic/CWinApp::PreTranslateMessage.md).  
+ Note that the [CWinApp::Run](../mfc/reference/cwinapp-class.md#run) mechanism does not apply to a DLL, because the application owns the main message pump. If your DLL displays modeless dialogs or has a main frame window of its own, your application's main message pump must call a DLL-exported routine that calls [CWinApp::PreTranslateMessage](../mfc/reference/cwinapp-class.md#pretranslatemessage).  
   
- См. пример DLLScreenCap для использования этой функции.  
+ See the DLLScreenCap sample for use of this function.  
   
- Функция `DllMain`, MFC предоставляет вызывает метод [CWinApp::ExitInstance](../Topic/CWinApp::ExitInstance.md) класса, который является производным от `CWinApp`  перед выгрузкой DLL.  
+ The `DllMain` function that MFC provides will call the [CWinApp::ExitInstance](../mfc/reference/cwinapp-class.md#exitinstance) method of your class that is derived from `CWinApp` before the DLL is unloaded.  
   
-## Связывание библиотеки DLL  
- С обычной библиотеки DLL, статически связанным с MFC, необходимо связать библиотеки DLL с Nafxcwd.lib или Nafxcw.lib и с помощью трех выполнения C Libcmt.lib.  Эти библиотеки предварительно подготовленный и могут быть установлены, указав их при запуске Visual C\+\+ настраиваемых параметров.  
+## <a name="linking-your-dll"></a>Linking Your DLL  
+ With regular MFC DLLs that statically link to MFC, you must link your DLL with Nafxcwd.lib or Nafxcw.lib and with the version of the C runtimes named Libcmt.lib. These libraries are pre-built and may be installed by specifying them when you run Visual C++ setup.  
   
-## Пример кода  
- См. пример программы MFC расширенный понятий DLLScreenCap полный пример.  Ряд интересных вещей, которые следует принять во внимание в этом примере следующим образом:  
+## <a name="sample-code"></a>Sample Code  
+ See the MFC Advanced Concepts sample program DLLScreenCap for a complete sample. Several interesting things to note in this sample are as follows:  
   
--   Флажки компилятора библиотеки DLL, а два других приложений.  
+-   The compiler flags of the DLL and those of the application are different.  
   
--   Линии связи и файлы .DEF для библиотеки DLL и другие элементы управления для приложения.  
+-   The link lines and .DEF files for the DLL and those for the application are different.  
   
--   Приложение, использующее библиотеку DLL не должно находиться в C\+\+.  
+-   The application that uses the DLL does not have to be in C++.  
   
--   Интерфейс между приложением и библиотекой DLL API, годно к использованию C или C\+\+ экспортировано с DLLScreenCap.def.  
+-   The interface between the application and the DLL is an API that is usable by C or C++ and is exported with DLLScreenCap.def.  
   
- В следующем примере показано API, определенный в обычной библиотеки DLL, статически скомпонована с MFC.  В этом примере, объявление заключено в блок `extern "C" { }` для пользователей C C\+\+.  Это имеет несколько преимуществ.  Во\-первых, оно приводит к API библиотеки DLL можно было использовать в клиентские приложения, написанных не на C\+\+.  Во\-вторых, он снижает нагрузку библиотеки DLL, поскольку корежить имени C\+\+ не будет применяться к экспортированному имени.  Наконец, оно облегчает явно добавить в файл .DEF \(для экспортироваться порядковым номером\) без беспокоиться о корежить имени.  
+ The following example illustrates an API that is defined in a regular MFC DLL that statically links to MFC. In this example, the declaration is enclosed in an `extern "C" { }` block for C++ users. This has several advantages. First, it makes your DLL APIs usable by non-C++ client applications. Second, it reduces DLL overhead because C++ name mangling will not be applied to the exported name. Lastly, it makes it easier to explicitly add to a .DEF file (for exporting by ordinal) without having to worry about name mangling.  
   
 ```  
 #ifdef __cplusplus  
 extern "C" {  
 #endif  /* __cplusplus */  
-  
+ 
 struct TracerData  
 {  
-    BOOL    bEnabled;  
-    UINT    flags;  
+    BOOL bEnabled;  
+    UINT flags;  
 };  
-  
-BOOL PromptTraceFlags(TracerData FAR* lpData);  
-  
+ 
+BOOL PromptTraceFlags(TracerData FAR* lpData);
+
+ 
 #ifdef __cplusplus  
 }  
 #endif  
 ```  
   
- Структуры, используемые API не являются производными от классов MFC и определены в заголовке API.  Это упрощает интерфейса между приложением и библиотекой DLL и делает библиотеки DLL можно было использовать в для программ на языке C — программами.  
+ The structures used by the API are not derived from MFC classes and are defined in the API header. This reduces the complexity of the interface between the DLL and the application and makes the DLL usable by C programs.  
   
-## См. также  
- [Технические примечания по номеру](../mfc/technical-notes-by-number.md)   
- [Технические примечания по категории](../mfc/technical-notes-by-category.md)
+## <a name="see-also"></a>See Also  
+ [Technical Notes by Number](../mfc/technical-notes-by-number.md)   
+ [Technical Notes by Category](../mfc/technical-notes-by-category.md)
+
+

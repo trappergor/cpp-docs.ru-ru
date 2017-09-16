@@ -1,76 +1,95 @@
 ---
-title: "Контейнеры. Реализация контейнера | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "приложения [OLE], OLE - контейнер"
-  - "OLE - контейнеры, реализация"
+title: 'Containers: Implementing a Container | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- applications [OLE], OLE container
+- OLE containers [MFC], implementing
 ms.assetid: af1e2079-619a-4eac-9327-985ad875823a
 caps.latest.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 6
----
-# Контейнеры. Реализация контейнера
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: e9b68ee081de334a8ee0b5bfe599876a52c46896
+ms.contentlocale: ru-ru
+ms.lasthandoff: 09/12/2017
 
-Этот раздел содержит процедуры для реализации контейнер и точки с другим статьи, которые предоставляют более подробные объяснений о реализации контейнеры.  В ней также перечислены некоторые дополнительные функции OLE может потребоваться реализация и статьи, эти функции.  
+---
+# <a name="containers-implementing-a-container"></a>Containers: Implementing a Container
+This article summarizes the procedure for implementing a container and points you to other articles that provide more detailed explanations about implementing containers. It also lists some optional OLE features you may want to implement and the articles describing these features.  
   
-#### Подготовка к CWinApp\- производный класс  
+#### <a name="to-prepare-your-cwinapp-derived-class"></a>To prepare your CWinApp-derived class  
   
-1.  Инициализация библиотеки OLE, вызвав **AfxOleInit** в функции\-члене `InitInstance`.  
+1.  Initialize the OLE libraries by calling **AfxOleInit** in the `InitInstance` member function.  
   
-2.  Вызовите `CDocTemplate::SetContainerInfo` в `InitInstance` для присвоения ресурсов меню и сочетаний клавиш использовался при вложенный элемент активирован на месте.  Дополнительные сведения об этом см. в разделе [Активация](../mfc/activation-cpp.md).  
+2.  Call `CDocTemplate::SetContainerInfo` in `InitInstance` to assign the menu and accelerator resources used when an embedded item is activated in-place. For more information on this topic, see [Activation](../mfc/activation-cpp.md).  
   
- Эти функции предоставляются автоматически при использовании мастера приложений MFC для создания приложения контейнера.  В разделе [Создание программы MFC EXE](../Topic/MFC%20Application%20Wizard.md).  
+ These features are provided for you automatically when you use the MFC Application Wizard to create a container application. See [Creating an MFC EXE Program](../mfc/reference/mfc-application-wizard.md).  
   
-#### Чтобы подготовить класс представления  
+#### <a name="to-prepare-your-view-class"></a>To prepare your view class  
   
-1.  Отслеживать выбранных элементов, обслуживая указателя, или список указателей, если при этом возможность нескольких элементов, к выбранным элементам.  Чтобы функциональность `OnDraw` должна создать все элемент OLE.  
+1.  Keep track of selected items by maintaining a pointer, or list of pointers if you support multiple selection, to the selected items. Your `OnDraw` function must draw all OLE items.  
   
-2.  Переопределите `IsSelected` для проверки, выбран ли элемент, переданный ей в настоящее время.  
+2.  Override `IsSelected` to check whether the item passed to it is currently selected.  
   
-3.  Реализуйте обработчик сообщений **OnInsertObject**, чтобы открыть диалоговое окно **Вставить объект** .  
+3.  Implement an **OnInsertObject** message handler to display the **Insert Object** dialog box.  
   
-4.  Реализуйте обработчик сообщений `OnSetFocus` для передачи фокус из представления на месте активным элементом, встроенному OLE.  
+4.  Implement an `OnSetFocus` message handler to transfer focus from the view to an in-place active OLE embedded item.  
   
-5.  Реализуйте обработчик сообщений `OnSize` сообщает внедренный элемент OLE, ему необходимо изменить его прямоугольник, чтобы отразить изменения в размере его, содержащая представления.  
+5.  Implement an `OnSize` message handler to inform an OLE embedded item that it needs to change its rectangle to reflect the change in size of its containing view.  
   
- Поскольку реализация этих функций сильно зависят от одного приложения к другому, мастер приложений предоставляет только базовую реализацию.  Возможно, настраивать эти функции, чтобы получить доступ к приложению на функцию правильно.  Это Пример см. в образце [КОНТЕЙНЕР](../top/visual-cpp-samples.md).  
+ Because the implementation of these features varies dramatically from one application to the next, the application wizard provides only a basic implementation. You will likely have to customize these functions to get your application to function properly. For an example of this, see the [CONTAINER](../visual-cpp-samples.md) sample.  
   
-#### Обработка внедренными и связанные элементы  
+#### <a name="to-handle-embedded-and-linked-items"></a>To handle embedded and linked items  
   
-1.  Следует наследовать класс от класса [COleClientItem](../mfc/reference/coleclientitem-class.md).  Объекты этого класса представляют элементы, которые внедрены в или были связаны в OLE документ.  
+1.  Derive a class from [COleClientItem](../mfc/reference/coleclientitem-class.md). Objects of this class represent items that have been embedded in or linked to your OLE document.  
   
-2.  Переопределите **OnChange**, `OnChangeItemPosition` и `OnGetItemPosition`.  Эти функции обрабатывают размер и размещение, а внедренный изменения и связанные элементы.  
+2.  Override **OnChange**, `OnChangeItemPosition`, and `OnGetItemPosition`. These functions handle sizing, positioning, and modifying embedded and linked items.  
   
- Мастер приложений выдает класс автоматически, но скорее всего, необходимо переопределить **OnChange** и другие функции с ним, перечисленные на шаге 2 предыдущей процедуры.  Каркасным реализации должны быть настроенным для большинства приложений, поскольку эти функции, иначе, чем одно приложение к другому.  Примеры этого см. в образцах [DRAWCLI](../top/visual-cpp-samples.md) и [КОНТЕЙНЕР](../top/visual-cpp-samples.md) библиотеки MFC.  
+ The application wizard will derive the class for you, but you will likely need to override **OnChange** and the other functions listed with it in step 2 in the preceding procedure. The skeleton implementations need to be customized for most applications, because these functions are implemented differently from one application to the next. For examples of this, see the MFC samples [DRAWCLI](../visual-cpp-samples.md) and [CONTAINER](../visual-cpp-samples.md).  
   
- Необходимо добавить несколько элементов на структуру меню приложения для поддержки OLE.  Дополнительные сведения см. в разделе [Меню и ресурсы: Добавление контейнера](../mfc/menus-and-resources-container-additions.md).  
+ You must add a number of items to the container application's menu structure to support OLE. For more information on these, see [Menus and Resources: Container Additions](../mfc/menus-and-resources-container-additions.md).  
   
- Кроме того, можно поддерживать некоторые из следующих функций в контейнерном приложении.  
+ You may also want to support some of the following features in your container application:  
   
--   Встроенная функция активация редактирования вложенный элемент.  
+-   In-place activation when editing an embedded item.  
   
-     Дополнительные сведения см. в разделе [Активация](../mfc/activation-cpp.md).  
+     For more information, see [Activation](../mfc/activation-cpp.md).  
   
--   Создание элемент OLE, перетаскивая и удалить подсветку серверного приложения.  
+-   Creation of OLE items by dragging and dropping a selection from a server application.  
   
-     Дополнительные сведения см. в разделе [Перетаскивание OLE \(\)](../mfc/drag-and-drop-ole.md).  
+     For more information, see [Drag and Drop (OLE)](../mfc/drag-and-drop-ole.md).  
   
--   Ссылки на объекты внедренным или контейнер сочетания\/серверным приложениям.  
+-   Links to embedded objects or combination container/server applications.  
   
-     Дополнительные сведения см. в разделе [Контейнеры: Дополнительные параметры](../mfc/containers-advanced-features.md).  
+     For more information, see [Containers: Advanced Features](../mfc/containers-advanced-features.md).  
   
-## См. также  
- [Контейнеры](../mfc/containers.md)   
- [Контейнеры. Элементы клиентов](../mfc/containers-client-items.md)
+## <a name="see-also"></a>See Also  
+ [Containers](../mfc/containers.md)   
+ [Containers: Client Items](../mfc/containers-client-items.md)
+
+

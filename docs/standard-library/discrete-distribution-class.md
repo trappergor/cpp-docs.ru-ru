@@ -1,5 +1,5 @@
 ---
-title: "Класс discrete_distribution | Документы Майкрософт"
+title: discrete_distribution Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -9,7 +9,6 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
-- discrete_distribution
 - random/std::discrete_distribution
 - random/std::discrete_distribution::reset
 - random/std::discrete_distribution::probabilities
@@ -25,7 +24,14 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- discrete_distribution class
+- std::discrete_distribution [C++]
+- std::discrete_distribution [C++], reset
+- std::discrete_distribution [C++], probabilities
+- std::discrete_distribution [C++], param
+- std::discrete_distribution [C++], min
+- std::discrete_distribution [C++], max
+- std::discrete_distribution [C++], param_type
+- std::discrete_distribution [C++], param_type
 ms.assetid: 8c8ba8f8-c06f-4f07-b354-f53950142fcf
 caps.latest.revision: 21
 author: corob-msft
@@ -45,17 +51,17 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
-ms.openlocfilehash: 270dd20a29333c64526c103c3eabe847c1c6e3c9
+ms.translationtype: MT
+ms.sourcegitcommit: 5d026c375025b169d5db8445cbb52c0c917b2d8d
+ms.openlocfilehash: 2118eb841d1faf4f137ac30889443768ab6d0d89
 ms.contentlocale: ru-ru
-ms.lasthandoff: 04/29/2017
+ms.lasthandoff: 09/09/2017
 
 ---
-# <a name="discretedistribution-class"></a>Класс discrete_distribution
-Формирует дискретное распределение целых чисел с равномерными интервалами ширины и одинаковой вероятностью в каждом интервале.  
+# <a name="discretedistribution-class"></a>discrete_distribution Class
+Generates a discrete integer distribution that has uniform-width intervals with uniform probability in each interval.  
   
-## <a name="syntax"></a>Синтаксис  
+## <a name="syntax"></a>Syntax  
   
 ```  
 template<class IntType = int>
@@ -90,25 +96,25 @@ public:
    result_type max() const;
    };  
 ```   
-#### <a name="parameters"></a>Параметры  
+#### <a name="parameters"></a>Parameters  
 *IntType*  
- По умолчанию целочисленный тип результата имеет тип `int`. Возможные типы см. в разделе [\<random>](../standard-library/random.md).  
+ The integer result type, defaults to `int`. For possible types, see [\<random>](../standard-library/random.md).  
   
-## <a name="remarks"></a>Примечания  
- Выборочное распределение использует равномерные интервалы ширины с одинаковой вероятностью в каждом интервале. Сведения о других выборочных распределениях см. в разделах [piecewise_linear_distribution Class](../standard-library/piecewise-linear-distribution-class.md) и [piecewise_constant_distribution Class](../standard-library/piecewise-constant-distribution-class.md).  
+## <a name="remarks"></a>Remarks  
+ This sampling distribution has uniform-width intervals with uniform probability in each interval. For information about other sampling distributions, see [piecewise_linear_distribution Class](../standard-library/piecewise-linear-distribution-class.md) and [piecewise_constant_distribution Class](../standard-library/piecewise-constant-distribution-class.md).  
   
- В следующей таблице представлены ссылки на статьи об отдельных членах.  
+ The following table links to articles about individual members:  
   
 |||  
 |-|-|  
 |[discrete_distribution](#discrete_distribution)|`discrete_distribution::param`|  
 |`discrete_distribution::operator()`|[param_type](#param_type)|  
   
- Функция свойства `vector<double> probabilities()` возвращает отдельные вероятности для каждого полученного целого числа.  
+ The property function `vector<double> probabilities()` returns the individual probabilities for each integer generated.  
   
- Дополнительные сведения о классах распределений и их членах см. в разделе [\<random>](../standard-library/random.md).  
+ For more information about distribution classes and their members, see [\<random>](../standard-library/random.md).  
   
-## <a name="example"></a>Пример  
+## <a name="example"></a>Example  
   
 ```cpp  
 // compile with: /EHsc /W4  
@@ -187,13 +193,13 @@ Distribution for 100 samples:
     4 ::::::::::::::::::::::::::::::::::::    
 ```  
   
-## <a name="requirements"></a>Требования  
- **Заголовок:** \<random>  
+## <a name="requirements"></a>Requirements  
+ **Header:** \<random>  
   
- **Пространство имен:** std  
+ **Namespace:** std  
   
 ##  <a name="discrete_distribution"></a>  discrete_distribution::discrete_distribution  
- Формирует распределение.  
+ Constructs the distribution.  
   
 ```  
 // default constructor  
@@ -214,46 +220,46 @@ discrete_distribution(size_t count, double low, double high, UnaryOperation weig
 explicit discrete_distribution(const param_type& parm);  
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
 *firstW*  
- Первый итератор в списке, на основе которого формируется распределение.  
+ The first iterator in the list from which to construct the distribution.  
   
 *lastW*  
- Последний итератор в списке, на основе которого формируется распределение (неинклюзивный список, так как итераторы используют пустой элемент в качестве последнего элемента).  
+ The last iterator in the list from which to construct the distribution (non-inclusive because iterators use an empty element for the end).  
   
 *weightlist*  
- Объект [initializer_list](../cpp/initializers.md), из которого формируется распределение.  
+ The [initializer_list](../cpp/initializers.md) from which to construct the distribution.  
   
 *count*  
- Количество элементов в диапазоне распределения. Если `count==0`, то эквивалентно конструктору по умолчанию (всегда формируется 0).  
+ The number of elements in the distribution range. If `count==0`, equivalent to the default constructor (always generates zero).  
   
 *low*  
- Минимальное значение в диапазоне распределения.  
+ The lowest value in the distribution range.  
   
 *high*  
- Максимальное значение в диапазоне распределения.  
+ The highest value in the distribution range.  
   
 *weightfunc*  
- Объект, представляющий функцию вероятности распределения. Параметр и возвращаемое значение должны поддерживать преобразование в тип `double`.  
+ The object representing the probability function for the distribution. Both the parameter and the return value must be convertible to `double`.  
   
 *parm*  
- Структура `param_type`, используемая для формирования распределения.  
+ The `param_type` structure used to construct the distribution.  
   
-### <a name="remarks"></a>Примечания  
-Конструктор по умолчанию создает объект, значение вероятности которого содержит один элемент со значением 1. Это приводит к получению распределения, которое всегда возвращает 0.  
+### <a name="remarks"></a>Remarks  
+The default constructor constructs an object whose stored probability value has one element with value 1. This will result in a distribution that always generates a zero.  
   
-Конструктор диапазона итератора с параметрами *firstW* и *lastW* создает объект распределения с помощью значений веса из итераторов в пределах последовательности интервала [*firstW*, *lastW*).  
+The iterator range constructor that has parameters *firstW* and *lastW* constructs a distribution object by using weight values taken from the iterators over the interval sequence [*firstW*, *lastW*).  
   
-Конструктор списка инициализаторов с параметром *weightlist* создает объект распределения с весами из списка инициализаторов *weightlist*.  
+The initializer list constructor that has a *weightlist* parameter constructs a distribution object with weights from the intializer list *weightlist*.  
   
-Конструктор с параметрами *число*, *низкий*, *высокий* и *weightfunc* формирует объект распределения, инициализируемый на основе следующих правил:  
--  Если *число* < 1, **n** = 1, то эквивалентно конструктору по умолчанию (всегда формируется 0).  
--  Если *число* > 0, **n** = *число*. Provided **d** = (*high* - *low*) / **n** is greater than zero, using **d** uniform subranges, each weight is assigned as follows: `weight[k] = weightfunc(x)`, where **x** = *low* + **k** * **d** + **d** / 2, for **k** = 0, ..., **n** - 1.  
+The constructor that has *count*, *low*, *high*, and *weightfunc* parameters constructs a distribution object initialized based on these rules:  
+-  If *count* < 1, **n** = 1, and as such is equivalent to the default constructor, always generating zero.  
+-  If *count* > 0, **n** = *count*. Provided **d** = (*high* - *low*) / **n** is greater than zero, using **d** uniform subranges, each weight is assigned as follows: `weight[k] = weightfunc(x)`, where **x** = *low* + **k** * **d** + **d** / 2, for **k** = 0, ..., **n** - 1.  
   
-Конструктор, имеющий `param_type` параметр *parm*, создает объект распределения, используя *parm* как сохраненную структуру параметров.  
+The constructor that has a `param_type` parameter *parm* constructs a distribution object using *parm* as the stored parameter structure.  
   
 ##  <a name="param_type"></a>  discrete_distribution::param_type  
- Сохраняет все параметры распределения.  
+ Stores all the parameters of the distribution.  
   
 ```  
 struct param_type {  
@@ -277,35 +283,35 @@ struct param_type {
    bool operator!=(const param_type& right) const;
    };  
 ```   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
 *firstW*  
- Первый итератор в списке, на основе которого формируется распределение.  
+ The first iterator in the list from which to construct the distribution.  
   
 *lastW*  
- Последний итератор в списке, на основе которого формируется распределение (неинклюзивный список, так как итераторы используют пустой элемент в качестве последнего элемента).  
+ The last iterator in the list from which to construct the distribution (non-inclusive because iterators use an empty element for the end).  
   
 *weightlist*  
- Объект [initializer_list](../cpp/initializers.md), из которого формируется распределение.  
+ The [initializer_list](../cpp/initializers.md) from which to construct the distribution.  
   
 *count*  
- Количество элементов в диапазоне распределения. Если *число* равно 0, это эквивалентно конструктору по умолчанию (всегда формируется 0).  
+ The number of elements in the distribution range. If *count* is 0, this is equivalent to the default constructor (always generates zero).  
   
 *low*  
- Минимальное значение в диапазоне распределения.  
+ The lowest value in the distribution range.  
   
 *high*  
- Максимальное значение в диапазоне распределения.  
+ The highest value in the distribution range.  
   
 *weightfunc*  
- Объект, представляющий функцию вероятности распределения. Параметр и возвращаемое значение должны поддерживать преобразование в тип `double`.  
+ The object representing the probability function for the distribution. Both the parameter and the return value must be convertible to `double`.  
   
 *right*  
- Объект `param_type`, который требуется сравнить с данным объектом.  
+ The `param_type` object to compare to this.  
   
-### <a name="remarks"></a>Примечания  
- Этот пакет параметров можно передать в `operator()` для получения возвращаемого значения.  
+### <a name="remarks"></a>Remarks  
+ This parameter package can be passed to `operator()` to generate the return value.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>See Also  
  [\<random>](../standard-library/random.md)
 
 

@@ -1,5 +1,5 @@
 ---
-title: "Структура CCreateContext | Документы Microsoft"
+title: CCreateContext Structure | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -13,7 +13,7 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- CCreateContext structure
+- CCreateContext structure [MFC]
 ms.assetid: 337a0e44-d910-49a8-afc0-c7207666a9dc
 caps.latest.revision: 22
 author: mikeblome
@@ -33,61 +33,61 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 040985df34f2613b4e4fae29498721aef15d50cb
-ms.openlocfilehash: 231f2e44e085d27a2b2cbf289adf7b0521471b0e
+ms.translationtype: MT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: ccb666fdd2289eb08c7a84791525c1a12385ca9b
 ms.contentlocale: ru-ru
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 09/12/2017
 
 ---
-# <a name="ccreatecontext-structure"></a>Структура CCreateContext
-Инфраструктура использует `CCreateContext` структуры при создании окна фрейма и представления, которые связаны с документом.  
+# <a name="ccreatecontext-structure"></a>CCreateContext Structure
+The framework uses the `CCreateContext` structure when it creates the frame windows and views that are associated with a document.  
   
-## <a name="syntax"></a>Синтаксис  
+## <a name="syntax"></a>Syntax  
   
 ```  
 struct CCreateContext  
 ```  
   
-## <a name="remarks"></a>Примечания  
- `CCreateContext`представляет собой структуру и не имеет базового класса.  
+## <a name="remarks"></a>Remarks  
+ `CCreateContext` is a structure and does not have a base class.  
   
- При создании окна значений в этой структуре предоставляют сведения, используемые для соединения компонентов документа в представлении данных. Необходимо использовать `CCreateContext` при переопределении части процесса создания.  
+ When you create a window, the values in this structure provide the information used to connect the components of a document to the view of its data. You only have to use `CCreateContext` if you are overriding parts of the creation process.  
   
- A `CCreateContext` структура содержит указатели на документ, окно области, представления и шаблон документа. Он также содержит указатель на `CRuntimeClass` , идентифицирующий тип представления для создания. Информация о классе во время выполнения и указатель текущего документа используются для динамического создания нового представления. В следующей таблице перечислены как и когда каждая `CCreateContext` член может быть использован:  
+ A `CCreateContext` structure contains pointers to the document, the frame window, the view, and the document template. It also contains a pointer to a `CRuntimeClass` that identifies the type of view to create. The run-time class information and the current document pointer are used to create a new view dynamically. The following table suggests how and when each `CCreateContext` member might be used:  
   
-|Член|Тип|Что такое для|  
+|Member|Type|What it is for|  
 |------------|----------|--------------------|  
-|`m_pNewViewClass`|`CRuntimeClass*`|`CRuntimeClass`для создания нового представления.|  
-|`m_pCurrentDoc`|`CDocument*`|Существующий документ, который следует связать с новым представлением.|  
-|`m_pNewDocTemplate`|`CDocTemplate*`|Шаблон документа, связанные с созданием нового окна области интерфейса MDI.|  
-|`m_pLastView`|`CView*`|Исходное представление, на котором моделируются дополнительные представления, как создавать представления окна разделителя или создание второе представление документа.|  
-|`m_pCurrentFrame`|`CFrameWnd*`|Окна фрейма, на котором дополнительной рамки окна моделируются, как создание второе окно фрейма документа.|  
+|`m_pNewViewClass`|`CRuntimeClass*`|`CRuntimeClass` of the new view to create.|  
+|`m_pCurrentDoc`|`CDocument*`|The existing document to be associated with the new view.|  
+|`m_pNewDocTemplate`|`CDocTemplate*`|The document template associated with the creation of a new MDI frame window.|  
+|`m_pLastView`|`CView*`|The original view on which additional views are modeled, as in the creation of splitter window views or the creation of a second view on a document.|  
+|`m_pCurrentFrame`|`CFrameWnd*`|The frame window on which additional frame windows are modeled, as in the creation of a second frame window on a document.|  
   
- Когда шаблон документа создает документ и связанных с ним компонентов, он проверяет данные, хранящиеся в `CCreateContext` структуру. Например представление не следует создавать для несуществующего документа.  
+ When a document template creates a document and its associated components, it validates the information stored in the `CCreateContext` structure. For example, a view should not be created for a nonexistent document.  
   
 > [!NOTE]
->  Все указатели в `CCreateContext` являются необязательными и могут быть `NULL` Если определен или неизвестно.  
+>  All of the pointers in `CCreateContext` are optional and can be `NULL` if unspecified or unknown.  
   
- `CCreateContext`используется с функциями-членами, перечисленных в разделе «См.» Обратитесь к описания этих функций конкретные сведения, если вы планируете их переопределения.  
+ `CCreateContext` is used by the member functions listed under "See Also." Consult the descriptions of these functions for specific information if you plan to override them.  
   
- Вот несколько общих рекомендаций.  
+ Here are a few general guidelines:  
   
--   При передаче в качестве аргумента для создания окна, как и в `CWnd::Create`, `CFrameWnd::Create`, и `CFrameWnd::LoadFrame`, создать контекст указывает, что новое окно должен быть подключен к. Для большинства окон всю структуру является необязательным и `NULL` указатель может быть передан.  
+-   When passed as an argument for window creation, as in `CWnd::Create`, `CFrameWnd::Create`, and `CFrameWnd::LoadFrame`, the create context specifies what the new window should be connected to. For most windows, the entire structure is optional and a `NULL` pointer can be passed.  
   
--   Для функций-членов overridable таких как `CFrameWnd::OnCreateClient`, `CCreateContext` аргумент является необязательным.  
+-   For overridable member functions, such as `CFrameWnd::OnCreateClient`, the `CCreateContext` argument is optional.  
   
--   Для функций-членов участвующие в представлении создания, необходимо указать достаточно сведений для создания представления. Например для просмотра первого окна-разделителя, необходимо указать сведения класса представления и текущего документа.  
+-   For member functions involved in view creation, you must provide enough information to create the view. For example, for the first view in a splitter window, you must supply the view class information and the current document.  
   
- Как правило, при использовании значения по умолчанию framework можно игнорировать `CCreateContext`. При попытке изменения более сложных, исходный код библиотеки Microsoft Foundation Class или примеров программ, таких как приложения, поможет. Если вы забыли обязательного параметра, утверждение framework сообщит, вы забыли.  
+ In general, if you use the framework defaults, you can ignore `CCreateContext`. If you attempt more advanced modifications, the Microsoft Foundation Class Library source code or the sample programs, such as VIEWEX, will guide you. If you do forget a required parameter, a framework assertion will tell you what you forgot.  
   
- Дополнительные сведения о `CCreateContext`, см. в образце MFC [приложения](../../visual-cpp-samples.md).  
+ For more information on `CCreateContext`, see the MFC sample [VIEWEX](../../visual-cpp-samples.md).  
   
-## <a name="requirements"></a>Требования  
- **Заголовок:** файле afxext.h  
+## <a name="requirements"></a>Requirements  
+ **Header:** afxext.h  
   
-## <a name="see-also"></a>См. также  
- [Диаграмма иерархии](../../mfc/hierarchy-chart.md)   
+## <a name="see-also"></a>See Also  
+ [Hierarchy Chart](../../mfc/hierarchy-chart.md)   
  [CFrameWnd::Create](../../mfc/reference/cframewnd-class.md#create)   
  [CFrameWnd::LoadFrame](../../mfc/reference/cframewnd-class.md#loadframe)   
  [CFrameWnd::OnCreateClient](../../mfc/reference/cframewnd-class.md#oncreateclient)   

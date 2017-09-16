@@ -1,76 +1,95 @@
 ---
-title: "MFC COM | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "MFC COM (MFC)"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Active - технология [C++]"
-  - "элементы управления ActiveX [C++], объектная COM-модель"
-  - "COM [C++], поддержка MFC"
-  - "MFC [C++], поддержка COM"
-  - "элементы управления MFC ActiveX [C++], поддержка COM в MFC"
-  - "MFC COM [C++]"
+title: MFC COM | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- MFC COM (MFC)
+dev_langs:
+- C++
+helpviewer_keywords:
+- MFC, COM support
+- MFC ActiveX controls [MFC], COM support in MFC
+- MFC COM [MFC]
+- ActiveX controls [MFC], COM object model
+- Active technology [MFC]
+- COM [MFC], MFC support
 ms.assetid: 7646bdcb-3a06-4ed5-9386-9b00f3979dcb
 caps.latest.revision: 13
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 9
----
-# MFC COM
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: eabce4d97201628c406f10ad474089540de91e5a
+ms.contentlocale: ru-ru
+ms.lasthandoff: 09/12/2017
 
-Подмножество MFC был разработан для поддержки модели COM, поскольку большинство библиотеку шаблонных классов ATL \(ATL\) предназначена для программирования модели COM.  В этом разделе разделов описывается поддержка MFC для модели COM.  
+---
+# <a name="mfc-com"></a>MFC COM
+A subset of MFC is designed to support COM, while most of the Active Template Library (ATL) is designed for COM programming. This section of topics describes MFC's support for COM.  
   
- Активные технологии \(такие как элементы управления ActiveX, контейнер активных документов, OLE и т д\) используют модель COM \(COM\) позволяет программным компонентам взаимодействовать друг с другом в сетевой среде, независимо от языка, с которым они были созданы.  Активные технологии можно использовать для создания приложений, выполняющихся на рабочем столе или в Интернете.  Дополнительные сведения см. в разделе [Введение в модели COM](../atl/introduction-to-com.md) или [Модель COM](http://msdn.microsoft.com/library/windows/desktop/ms694363).  
+ Active technologies (such as ActiveX controls, Active document containment, OLE, and so on) use the Component Object Model (COM) to enable software components to interact with one another in a networked environment, regardless of the language with which they were created. Active technologies can be used to create applications that run on the desktop or the Internet. For more information see [Introduction to COM](../atl/introduction-to-com.md) or [The Component Object Model](http://msdn.microsoft.com/library/windows/desktop/ms694363).  
   
- Активные технологии включают и технологии клиента и сервера, включая следующие:  
+ Active technologies include both client and server technologies, including the following:  
   
--   [Контейнер активных документов](../mfc/active-document-containment.md) поддерживается в версиях 4.2, MFC и далее, позволяет пользователям просматривать [активные документы](../Topic/Active%20Documents.md) \(например, Microsoft Excel или сформулировать файлы\) и активировать всего интерфейса собственного приложения документа в всей клиентской области [контейнер активных документов](../mfc/active-document-containers.md) \(например, Microsoft Office Binder или Microsoft Internet Explorer.  Контейнеры работают как клиенты, документы, предоставляемыми [серверы активных документов](../mfc/active-document-servers.md).  Дополнительные сведения об использовании активных документов в интернет\-приложениях см. в следующих разделах: [Активные документы в Интернете](../Topic/Active%20Documents%20on%20the%20Internet.md).  
+-   [Active document containment](../mfc/active-document-containment.md), supported in MFC versions 4.2 and later, allows users to view [active documents](../mfc/active-documents.md) (such as Microsoft Excel or Word files) and activate the entire interface of the document's native application in the entire client area of an [active document container](../mfc/active-document-containers.md) such as the Microsoft Office Binder or Microsoft Internet Explorer. The containers act as clients, while the documents are provided by [active document servers](../mfc/active-document-servers.md). For more information on using active documents in Internet applications, see: [Active Documents on the Internet](../mfc/active-documents-on-the-internet.md).  
   
--   Элементы управления ActiveX интерактивные объекты, которые могут использоваться в контейнерах, например веб\-сайта.  Дополнительные сведения об элементах управления ActiveX см. в разделе:  
+-   ActiveX controls are interactive objects that can be used in containers such as a Web site. For more information on ActiveX controls, see:  
   
-    -   [Элементы управления ActiveX MFC](../mfc/mfc-activex-controls.md)  
+    -   [MFC ActiveX Controls](../mfc/mfc-activex-controls.md)  
   
-    -   [Элементы управления ActiveX в Интернете](../mfc/activex-controls-on-the-internet.md)  
+    -   [ActiveX Controls on the Internet](../mfc/activex-controls-on-the-internet.md)  
   
-    -   [Общие сведения: Интернет](../mfc/mfc-internet-programming-basics.md)  
+    -   [Overview: Internet](../mfc/mfc-internet-programming-basics.md)  
   
-    -   [Обновление существующего элемента управления ActiveX, используемый в Интернете](../Topic/Upgrading%20an%20Existing%20ActiveX%20Control.md)  
+    -   [Upgrade an Existing ActiveX Control to be Used on the Internet](../mfc/upgrading-an-existing-activex-control.md)  
   
-    -   [Отладка элементов управления ActiveX](../Topic/How%20to:%20Debug%20an%20ActiveX%20Control.md)  
+    -   [Debugging an ActiveX Control](/visualstudio/debugger/how-to-debug-an-activex-control)  
   
--   Управления активного сценария интегрированное расширение функциональности одного или нескольких элементов управления ActiveX с помощью браузера или сервера.  Дополнительные сведения об активном сценарии см. в разделе [Технология активной в Интернете](../mfc/active-technology-on-the-internet.md).  
+-   Active scripting controls the integrated behavior of one or more ActiveX controls from a browser or server. For more information on active scripting, see [Active Technology on the Internet](../mfc/active-technology-on-the-internet.md).  
   
--   [Автоматизация](../mfc/automation.md) \(ранее называвшейся ole\-автоматизацией\) как делает возможной его для одного приложения управления объектами, реализованные в другом приложении, или «предоставлять» объекты и их можно управлять.  
+-   [Automation](../mfc/automation.md) (formerly known as OLE Automation) makes it possible for one application to manipulate objects implemented in another application, or to "expose" objects so they can be manipulated.  
   
-     Автоматический объект может быть локальным или [удаленный](../mfc/remote-automation.md) \(на другом компьютере, доступном по сети\).  Автоматизация доступна как для OLE, так и для com\-объекта.  
+     The automated object might be local or [remote](../mfc/remote-automation.md) (on another machine accessible across a network). Automation is available for both OLE and COM objects.  
   
--   В этом разделе также содержатся сведения о написании компонентов с помощью модели COM MFC, например в [Точки подключения](../mfc/connection-points.md).  
+-   This section also provides information on how to write COM components using MFC, for example, in [Connection Points](../mfc/connection-points.md).  
   
- Обсуждение, по\-прежнему вызывается OLE и что теперь вызывает активной технологии см. в разделах, посвященных [OLE](../mfc/ole-in-mfc.md).  
+ For a discussion of what is still called OLE versus what is now called active technology, see the topics on [OLE](../mfc/ole-in-mfc.md).  
   
- Также см. в статье базы знаний Q248019: HOWTO: Диалоговое окно от сервера занято из появления во время длительной операции модели COM.  
+ Also, see Knowledge Base article Q248019 : HOWTO: Prevent Server Busy Dialog Box From Appearing During a Lengthy COM Operation.  
   
-## Содержание  
- [Контейнер активных документов](../mfc/active-document-containment.md)  
+## <a name="in-this-section"></a>In This Section  
+ [Active Document Containment](../mfc/active-document-containment.md)  
   
- [Автоматизация](../mfc/automation.md)  
+ [Automation](../mfc/automation.md)  
   
- [Удаленная автоматизации](../mfc/remote-automation.md)  
+ [Remote Automation](../mfc/remote-automation.md)  
   
- [Точки соединения](../mfc/connection-points.md)  
+ [Connection Points](../mfc/connection-points.md)  
   
- [Элементы управления ActiveX MFC](../mfc/mfc-activex-controls.md)  
+ [MFC ActiveX Controls](../mfc/mfc-activex-controls.md)  
   
-## См. также  
- [Основные понятия](../mfc/mfc-concepts.md)
+## <a name="see-also"></a>See Also  
+ [Concepts](../mfc/mfc-concepts.md)
+
+

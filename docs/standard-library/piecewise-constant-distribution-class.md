@@ -1,5 +1,5 @@
 ---
-title: "Класс piecewise_constant_distribution | Документы Майкрософт"
+title: piecewise_constant_distribution Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -9,7 +9,6 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
-- piecewise_constant_distribution
 - random/std::piecewise_constant_distribution
 - random/std::piecewise_constant_distribution::reset
 - random/std::piecewise_constant_distribution::intervals
@@ -27,7 +26,15 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- piecewise_constant_distribution class
+- std::piecewise_constant_distribution [C++]
+- std::piecewise_constant_distribution [C++], reset
+- std::piecewise_constant_distribution [C++], intervals
+- std::piecewise_constant_distribution [C++], densities
+- std::piecewise_constant_distribution [C++], param
+- std::piecewise_constant_distribution [C++], min
+- std::piecewise_constant_distribution [C++], max
+- std::piecewise_constant_distribution [C++], param_type
+- std::piecewise_constant_distribution [C++], param_type
 ms.assetid: 2c9a21fa-623e-4d63-b827-3f1556b6dedb
 caps.latest.revision: 23
 author: corob-msft
@@ -47,17 +54,17 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
-ms.openlocfilehash: fecb32f7916b79d631ed7a6ccf4cb55b89448fa0
+ms.translationtype: MT
+ms.sourcegitcommit: 5d026c375025b169d5db8445cbb52c0c917b2d8d
+ms.openlocfilehash: e94b741b5ab9c53705ed264241e1f7fcd83fdfad
 ms.contentlocale: ru-ru
-ms.lasthandoff: 04/29/2017
+ms.lasthandoff: 09/09/2017
 
 ---
-# <a name="piecewiseconstantdistribution-class"></a>Класс piecewise_constant_distribution
-Формирует кусочно-постоянное распределение с меняющимися интервалами ширины и одинаковой вероятностью в каждом интервале.  
+# <a name="piecewiseconstantdistribution-class"></a>piecewise_constant_distribution Class
+Generates a piecewise constant distribution that has varying-width intervals with uniform probability in each interval.  
   
-## <a name="syntax"></a>Синтаксис  
+## <a name="syntax"></a>Syntax  
 ```  
 template<class RealType = double>  
 class piecewise_constant_distribution  
@@ -97,35 +104,35 @@ public:
    };  
 ```  
 
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
 *RealType*  
-По умолчанию тип результата с плавающей запятой имеет тип `double`. Возможные типы см. в разделе [\<random>](../standard-library/random.md).  
+The floating point result type, defaults to `double`. For possible types, see [\<random>](../standard-library/random.md).  
   
-## <a name="remarks"></a>Примечания  
-Выборочное распределение использует меняющиеся интервалы ширины с одинаковой вероятностью в каждом интервале. Сведения о других выборочных распределениях см. в разделах [piecewise_linear_distribution](../standard-library/piecewise-linear-distribution-class.md) и [discrete_distribution](../standard-library/discrete-distribution-class.md).  
+## <a name="remarks"></a>Remarks  
+This sampling distribution has varying-width intervals with uniform probability in each interval. For information about other sampling distributions, see [piecewise_linear_distribution Class](../standard-library/piecewise-linear-distribution-class.md) and [discrete_distribution](../standard-library/discrete-distribution-class.md).  
   
-В следующей таблице представлены ссылки на статьи об отдельных членах.  
+The following table links to articles about individual members:  
   
 ||||  
 |-|-|-|  
 |[piecewise_constant_distribution](#piecewise_constant_distribution)|`piecewise_constant_distribution::intervals`|`piecewise_constant_distribution::param`|  
 |`piecewise_constant_distribution::operator()`|`piecewise_constant_distribution::densities`|[param_type](#param_type)|  
   
-Функция свойства `intervals()` возвращает значение типа `vector<result_type>` с набором хранимых интервалов распределения.  
+The property function `intervals()` returns a `vector<result_type>` with the set of stored intervals of the distribution.  
   
-Функция свойства `densities()` возвращает значение типа `vector<result_type>` с хранимыми плотностями для каждого набора интервалов, которые вычисляются в соответствии с весами, заданными в параметрах конструктора.  
+The property function `densities()` returns a `vector<result_type>` with the stored densities for each interval set, which are calculated according to the weights provided in the constructor parameters.  
   
-Член свойства `param()` устанавливает или возвращает хранимый пакет параметров распределения `param_type`.  
+The property member `param()` sets or returns the `param_type` stored distribution parameter package.  
 
-Функции-члены `min()` и `max()` возвращают наименьший и наибольший из возможных результатов соответственно.  
+The `min()` and `max()` member functions return the smallest possible result and largest possible result, respectively.  
   
-Функция-член `reset()` удаляет любые кэшированные значения, чтобы результат следующего вызова `operator()` не зависел от любых значений, полученных от механизма перед вызовом.  
+The `reset()` member function discards any cached values, so that the result of the next call to `operator()` does not depend on any values obtained from the engine before the call.  
   
-Функции-члены `operator()` возвращают следующее значение, созданное механизмом РГСЧ, из текущего или указанного пакета параметров.
+The `operator()` member functions return the next generated value based on the URNG engine, either from the current parameter package, or the specified parameter package.
   
-Дополнительные сведения о классах распределения и их членах см. в разделе [\<random>](../standard-library/random.md).  
+For more information about distribution classes and their members, see [\<random>](../standard-library/random.md).  
   
-## <a name="example"></a>Пример  
+## <a name="example"></a>Example  
   
 ```cpp  
 // compile with: /EHsc /W4  
@@ -230,13 +237,13 @@ Distribution for 100 samples:
     14-15 ::::::::  
 ```  
   
-## <a name="requirements"></a>Требования  
- **Заголовок:** \<random>  
+## <a name="requirements"></a>Requirements  
+ **Header:** \<random>  
   
- **Пространство имен:** std  
+ **Namespace:** std  
   
 ##  <a name="piecewise_constant_distribution"></a>  piecewise_constant_distribution::piecewise_constant_distribution  
-Формирует распределение.  
+Constructs the distribution.  
   
 ```  
 // default constructor  
@@ -262,47 +269,47 @@ piecewise_constant_distribution(size_t count, RealType xmin, RealType xmax, Unar
 explicit piecewise_constant_distribution(const param_type& parm);
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
  `firstI`  
- Итератор ввода первого элемента в диапазоне распределения.  
+ An input iterator of the first element in the distribution range.  
   
  `lastI`  
- Итератор ввода последнего элемента в диапазоне распределения.  
+ An input iterator of the last element in the distribution range.  
   
  `firstW`  
- Итератор ввода первого элемента в диапазоне весов.  
+ An input iterator of the first element in the weights range.  
   
  `intervals`  
- Объект [initializer_list](../cpp/initializers.md) с интервалами распределения.  
+ An [initializer_list](../cpp/initializers.md) with the intervals of the distribution.  
   
  `count`  
- Количество элементов в диапазоне распределения.  
+ The number of elements in the distribution range.  
   
  `xmin`  
- Минимальное значение в диапазоне распределения.  
+ The lowest value in the distribution range.  
   
  `xmax`  
- Максимальное значение в диапазоне распределения. Должно быть больше значения `xmin`.  
+ The highest value in the distribution range. Must be greater than `xmin`.  
   
  `weightfunc`  
- Объект, представляющий функцию вероятности распределения. Параметр и возвращаемое значение должны поддерживать преобразование в тип `double`.  
+ The object representing the probability function for the distribution. Both the parameter and the return value must be convertible to `double`.  
   
  `parm`  
- Структура параметров, используемая для формирования распределения.  
+ The parameter structure used to construct the distribution.  
   
-### <a name="remarks"></a>Примечания  
-Конструктор по умолчанию задает хранимые параметры таким образом, чтобы существовал один интервал от 0 до 1 с плотностью вероятности 1.  
+### <a name="remarks"></a>Remarks  
+The default constructor sets the stored parameters such that there is one interval, 0 to 1, with a probability density of 1.  
   
-Конструктор диапазона итератора  
+The iterator range constructor  
 ```  
 template <class InputIteratorI, class InputIteratorW>  
 piecewise_constant_distribution(InputIteratorI firstI, InputIteratorI lastI,  
     InputIteratorW firstW);
 ```  
   
-создает объект распределения с интервалами от итераторов в последовательности [`firstI`, `lastI`) и соответствующей последовательности весов начиная с `firstW`.  
+constructs a distribution object with itnervals from iterators over the sequence [ `firstI`, `lastI`) and a matching weight sequence starting at `firstW`.  
   
-Конструктор списка инициализаторов  
+The initializer list constructor  
 ```  
 template <class UnaryOperation>  
 piecewise_constant_distribution(initializer_list<result_type>  
@@ -310,26 +317,26 @@ intervals,
     UnaryOperation weightfunc);
 ```  
   
-создает объект распределения с интервалами из списка инициализаторов `intervals` и весами, полученными от функции `weightfunc`.  
+constructs a distribution object with intervals from the intializer list `intervals` and weights generated from the function `weightfunc`.  
   
-Конструктор, определенный как  
+The constructor defined as  
 ```  
 template <class UnaryOperation>  
 piecewise_constant_distribution(size_t count, result_type xmin, result_type xmax,  
     UnaryOperation weightfunc);
 ```  
   
-, создает объект распределения с `count` интервалами, равномерно распределенными по [`xmin,xmax`]. При этом вес каждого интервала назначается в соответствии с функцией `weightfunc`. Функция `weightfunc` должна принимать один параметр и возвращать значение. И параметр, и значение должны поддерживать преобразование в `double`. **Предварительные условия:** `xmin < xmax`  
+constructs a distribution object with `count` intervals distributed uniformly over [ `xmin,xmax`], assigning each interval weights according to the function `weightfunc`, and `weightfunc` must accept one parameter and have a return value, both of which are convertible to `double`. **Precondition:** `xmin < xmax`  
   
-Конструктор, определенный как  
+The constructor defined as  
 ```  
 explicit piecewise_constant_distribution(const param_type& parm);
 ```  
   
-, создает объект распределения, используя `parm` как сохраненную структуру параметров.  
+constructs a distribution object using `parm` as the stored parameter structure.  
   
 ##  <a name="param_type"></a>  piecewise_constant_distribution::param_type  
-Сохраняет все параметры распределения.  
+Stores all the parameters of the distribution.  
   
 ```    
 struct param_type {  
@@ -347,15 +354,15 @@ struct param_type {
    };  
 ```  
   
-### <a name="parameters"></a>Параметры  
-Параметры конструктора см. в разделе [piecewise_constant_distribution](#piecewise_constant_distribution).  
+### <a name="parameters"></a>Parameters  
+See the constructor parameters for the [piecewise_constant_distribution](#piecewise_constant_distribution).  
   
-### <a name="remarks"></a>Примечания  
- **Предварительные условия:** `xmin < xmax`  
+### <a name="remarks"></a>Remarks  
+ **Precondition:** `xmin < xmax`  
   
-Эту структуру можно передать конструктору класса распределения во время создания экземпляра, функции-члену `param()` для установки хранимых параметров существующего распределения и `operator()` для использования вместо хранимых параметров.  
+This structure can be passed to the distribution's class constructor at instantiation, to the `param()` member function to set the stored parameters of an existing distribution, and to `operator()` to be used in place of the stored parameters.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>See Also  
 [\<random>](../standard-library/random.md)   
 [piecewise_linear_distribution](../standard-library/piecewise-linear-distribution-class.md)
 

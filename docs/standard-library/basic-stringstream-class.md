@@ -1,5 +1,5 @@
 ---
-title: "Класс basic_stringstream | Документы Майкрософт"
+title: basic_stringstream Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -9,7 +9,6 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
-- basic_stringstream
 - sstream/std::basic_stringstream
 - sstream/std::basic_stringstream::allocator_type
 - sstream/std::basic_stringstream::rdbuf
@@ -17,7 +16,10 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- basic_stringstream class
+- std::basic_stringstream [C++]
+- std::basic_stringstream [C++], allocator_type
+- std::basic_stringstream [C++], rdbuf
+- std::basic_stringstream [C++], str
 ms.assetid: 49629814-ca37-45c5-931b-4ff894e6ebd2
 caps.latest.revision: 19
 author: corob-msft
@@ -37,69 +39,69 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
-ms.openlocfilehash: cbc938c20a408d721d44877295dc84fc40d04e28
+ms.translationtype: MT
+ms.sourcegitcommit: 5d026c375025b169d5db8445cbb52c0c917b2d8d
+ms.openlocfilehash: 60b73189130f32c8d892b51469a7427805065b8a
 ms.contentlocale: ru-ru
-ms.lasthandoff: 04/29/2017
+ms.lasthandoff: 09/09/2017
 
 ---
-# <a name="basicstringstream-class"></a>Класс basic_stringstream
-Описывает объект, управляющий вставкой и извлечением элементов и закодированных объектов с помощью буфера потока класса [basic_stringbuf](../standard-library/basic-stringbuf-class.md)< **Elem**, **Tr**, `Alloc`>.  
+# <a name="basicstringstream-class"></a>basic_stringstream Class
+Describes an object that controls insertion and extraction of elements and encoded objects using a stream buffer of class [basic_stringbuf](../standard-library/basic-stringbuf-class.md)< **Elem**, **Tr**, `Alloc`>.  
   
-## <a name="syntax"></a>Синтаксис  
+## <a name="syntax"></a>Syntax  
   
 ```  
 template <class Elem, class Tr = char_traits<Elem>, class Alloc = allocator<Elem>>  
 class basic_stringstream : public basic_iostream<Elem, Tr>  
 ```  
   
-#### <a name="parameters"></a>Параметры  
+#### <a name="parameters"></a>Parameters  
  `Alloc`  
- Класс распределителя.  
+ The allocator class.  
   
  `Elem`  
- Тип основного элемента строки.  
+ The type of the basic element of the string.  
   
  *Tr*  
- Признаки символа, соответствующие основному элементу строки.  
+ The character traits specialized on the basic element of the string.  
   
-## <a name="remarks"></a>Примечания  
- Класс шаблона описывает объект, управляющий извлечением и вставкой элементов и закодированных объектов с помощью буфера потока класса [basic_stringbuf](../standard-library/basic-stringbuf-class.md)< **Elem**, **Tr**, `Alloc`> с элементами типа **Elem**. Их признаки символов определяются классом **Tr**, а элементы выделяются распределителем класса `Alloc`. Этот объект сохраняет объект класса basic_stringbuf< **Elem**, **Tr**, `Alloc`>.  
+## <a name="remarks"></a>Remarks  
+ The template class describes an object that controls insertion and extraction of elements and encoded objects using a stream buffer of class [basic_stringbuf](../standard-library/basic-stringbuf-class.md)< **Elem**, **Tr**, `Alloc`>, with elements of type **Elem**, whose character traits are determined by the class **Tr**, and whose elements are allocated by an allocator of class `Alloc`. The object stores an object of class basic_stringbuf< **Elem**, **Tr**, `Alloc`>.  
   
-### <a name="constructors"></a>Конструкторы  
+### <a name="constructors"></a>Constructors  
   
 |||  
 |-|-|  
-|[basic_stringstream](#basic_stringstream)|Создает объект типа `basic_stringstream`.|  
+|[basic_stringstream](#basic_stringstream)|Constructs an object of type `basic_stringstream`.|  
   
 ### <a name="typedefs"></a>Typedefs  
   
 |||  
 |-|-|  
-|[allocator_type](#allocator_type)|Этот тип является синонимом для параметра шаблона `Alloc`.|  
+|[allocator_type](#allocator_type)|The type is a synonym for the template parameter `Alloc`.|  
   
-### <a name="member-functions"></a>Функции-члены  
+### <a name="member-functions"></a>Member Functions  
   
 |||  
 |-|-|  
-|[rdbuf](#rdbuf)|Возвращает адрес буфера сохраненного потока типа `pointer` в [basic_stringbuf](../standard-library/basic-stringbuf-class.md)< `Elem`, `Tr`, `Alloc`>.|  
-|[str](#str)|Задает или получает текст в буфере строк без изменения позиции записи.|  
+|[rdbuf](#rdbuf)|Returns the address of the stored stream buffer of type `pointer` to [basic_stringbuf](../standard-library/basic-stringbuf-class.md)< `Elem`, `Tr`, `Alloc`>.|  
+|[str](#str)|Sets or gets the text in a string buffer without changing the write position.|  
   
-## <a name="requirements"></a>Требования  
- **Заголовок:** \<sstream>  
+## <a name="requirements"></a>Requirements  
+ **Header:** \<sstream>  
   
- **Пространство имен:** std  
+ **Namespace:** std  
   
 ##  <a name="allocator_type"></a>  basic_stringstream::allocator_type  
- Этот тип является синонимом для параметра шаблона `Alloc`.  
+ The type is a synonym for the template parameter `Alloc`.  
   
 ```  
 typedef Alloc allocator_type;  
 ```  
   
 ##  <a name="basic_stringstream"></a>  basic_stringstream::basic_stringstream  
- Создает объект типа `basic_stringstream`.  
+ Constructs an object of type `basic_stringstream`.  
   
 ```  
 explicit basic_stringstream(ios_base::openmode _Mode = ios_base::in | ios_base::out);
@@ -107,33 +109,33 @@ explicit basic_stringstream(ios_base::openmode _Mode = ios_base::in | ios_base::
 explicit basic_stringstream(const basic_string<Elem, Tr, Alloc>& str, ios_base::openmode _Mode = ios_base::in | ios_base::out);
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
  `_Mode`  
- Одно из перечислений в [ios_base::openmode](../standard-library/ios-base-class.md#openmode).  
+ One of the enumerations in [ios_base::openmode](../standard-library/ios-base-class.md#openmode).  
   
  `str`  
- Объект типа `basic_string`.  
+ An object of type `basic_string`.  
   
-### <a name="remarks"></a>Примечания  
- Первый конструктор инициализирует базовый класс путем вызова [basic_iostream](../standard-library/basic-iostream-class.md)( **sb**), где **sb** — сохраненный объект класса [basic_stringbuf](../standard-library/basic-stringbuf-class.md)< **Elem**, **Tr**, `Alloc`>. Он также инициализирует **sb** путем вызова basic_stringbuf< **Elem**, **Tr**, `Alloc`>( `_Mode`).  
+### <a name="remarks"></a>Remarks  
+ The first constructor initializes the base class by calling [basic_iostream](../standard-library/basic-iostream-class.md)( **sb**), where **sb** is the stored object of class [basic_stringbuf](../standard-library/basic-stringbuf-class.md)< **Elem**, **Tr**, `Alloc`>. It also initializes **sb** by calling basic_stringbuf< **Elem**, **Tr**, `Alloc`>( `_Mode`).  
   
- Второй конструктор инициализирует базовый класс путем вызова basic_iostream( **sb**). Он также инициализирует **sb** путем вызова basic_stringbuf< **Elem**, **Tr**, `Alloc`>(_ *Str*, `_Mode`).  
+ The second constructor initializes the base class by calling basic_iostream( **sb**). It also initializes **sb** by calling basic_stringbuf< **Elem**, **Tr**, `Alloc`>(_ *Str*, `_Mode`).  
   
 ##  <a name="rdbuf"></a>  basic_stringstream::rdbuf  
- Возвращает адрес буфера сохраненного потока типа **pointer** в [basic_stringbuf](../standard-library/basic-stringbuf-class.md)< **Elem**, **Tr**, `Alloc`>.  
+ Returns the address of the stored stream buffer of type **pointer** to [basic_stringbuf](../standard-library/basic-stringbuf-class.md)< **Elem**, **Tr**, `Alloc`>.  
   
 ```  
 basic_stringbuf<Elem, Tr, Alloc> *rdbuf() const;
 ```  
   
-### <a name="return-value"></a>Возвращаемое значение  
- Адрес буфера сохраненного потока типа **pointer** в basic_stringbuf< **Elem**, **Tr**, `Alloc`>.  
+### <a name="return-value"></a>Return Value  
+ The address of the stored stream buffer of type **pointer** to basic_stringbuf< **Elem**, **Tr**, `Alloc`>.  
   
-### <a name="example"></a>Пример  
-  Пример, в котором используется `rdbuf`, см. в разделе [basic_filebuf::close](../standard-library/basic-filebuf-class.md#close).  
+### <a name="example"></a>Example  
+  See [basic_filebuf::close](../standard-library/basic-filebuf-class.md#close) for an example that uses `rdbuf`.  
   
 ##  <a name="str"></a>  basic_stringstream::str  
- Задает или получает текст в буфере строк без изменения позиции записи.  
+ Sets or gets the text in a string buffer without changing the write position.  
   
 ```  
 basic_string<Elem, Tr, Alloc> str() const;
@@ -143,22 +145,22 @@ void str(
     const basic_string<Elem, Tr, Alloc>& _Newstr);
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
  `_Newstr`  
- Новая строка.  
+ The new string.  
   
-### <a name="return-value"></a>Возвращаемое значение  
- Возвращает объект класса [basic_string](../standard-library/basic-string-class.md)< **Elem**, **Tr**, `Alloc`>, управляемая последовательность которого является копией последовательности, управляемой **\*this**.  
+### <a name="return-value"></a>Return Value  
+ Returns an object of class [basic_string](../standard-library/basic-string-class.md)< **Elem**, **Tr**, `Alloc`>, whose controlled sequence is a copy of the sequence controlled by **\*this**.  
   
-### <a name="remarks"></a>Примечания  
- Первая функция-член возвращает [rdbuf](#rdbuf) -> [str](../standard-library/basic-stringbuf-class.md#str). Вторая функция-член вызывает `rdbuf` -> **str**( `_Newstr`).  
+### <a name="remarks"></a>Remarks  
+ The first member function returns [rdbuf](#rdbuf) -> [str](../standard-library/basic-stringbuf-class.md#str). The second member function calls `rdbuf` -> **str**( `_Newstr`).  
   
-### <a name="example"></a>Пример  
-  Пример использования **str** см. в разделе [basic_stringbuf::str](../standard-library/basic-stringbuf-class.md#str).  
+### <a name="example"></a>Example  
+  See [basic_stringbuf::str](../standard-library/basic-stringbuf-class.md#str) for an example that uses **str**.  
   
-## <a name="see-also"></a>См. также  
- [Потокобезопасность в стандартной библиотеке C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)   
- [Программирование iostream](../standard-library/iostream-programming.md)   
- [Соглашения iostreams](../standard-library/iostreams-conventions.md)
+## <a name="see-also"></a>See Also  
+ [Thread Safety in the C++ Standard Library](../standard-library/thread-safety-in-the-cpp-standard-library.md)   
+ [iostream Programming](../standard-library/iostream-programming.md)   
+ [iostreams Conventions](../standard-library/iostreams-conventions.md)
 
 

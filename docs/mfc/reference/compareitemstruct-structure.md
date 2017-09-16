@@ -1,5 +1,5 @@
 ---
-title: "Структура COMPAREITEMSTRUCT | Документы Microsoft"
+title: COMPAREITEMSTRUCT Structure | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -13,7 +13,7 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- COMPAREITEMSTRUCT structure
+- COMPAREITEMSTRUCT structure [MFC]
 ms.assetid: 4b7131a5-5c7d-4e98-aac7-e85650262b52
 caps.latest.revision: 11
 author: mikeblome
@@ -33,17 +33,17 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 040985df34f2613b4e4fae29498721aef15d50cb
-ms.openlocfilehash: 6c38c3e362f2e97cb51f5474aaa0bc05098b1ec2
+ms.translationtype: MT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 3ca1c8370a64667578092bb3ad0046cdcc0d2cf1
 ms.contentlocale: ru-ru
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 09/12/2017
 
 ---
-# <a name="compareitemstruct-structure"></a>Структура COMPAREITEMSTRUCT
-`COMPAREITEMSTRUCT` Структура предоставляет список идентификаторов и данных приложений для двух элементов в отсортированном, определяемые владельцем списка или поля со списком.  
+# <a name="compareitemstruct-structure"></a>COMPAREITEMSTRUCT Structure
+The `COMPAREITEMSTRUCT` structure supplies the identifiers and application-supplied data for two items in a sorted, owner-drawn list box or combo box.  
   
-## <a name="syntax"></a>Синтаксис  
+## <a name="syntax"></a>Syntax  
   
 ```  
 typedef struct tagCOMPAREITEMSTRUCT {  
@@ -57,36 +57,36 @@ typedef struct tagCOMPAREITEMSTRUCT {
 } COMPAREITEMSTRUCT;  
 ```  
   
-#### <a name="parameters"></a>Параметры  
+#### <a name="parameters"></a>Parameters  
  `CtlType`  
- **ODT_LISTBOX** (который определяет список рисование владельцем) или **ODT_COMBOBOX** (указывает поле со списком рисование владельцем).  
+ **ODT_LISTBOX** (which specifies an owner-draw list box) or **ODT_COMBOBOX** (which specifies an owner-draw combo box).  
   
  `CtlID`  
- Идентификатор элемента управления для списка или поля со списком.  
+ The control ID for the list box or combo box.  
   
  `hwndItem`  
- Дескриптор окна элемента управления.  
+ The window handle of the control.  
   
  *itemID1*  
- Индекс первого элемента в список или поле со списком сравниваемых.  
+ The index of the first item in the list box or combo box being compared.  
   
  *itemData1*  
- Предоставляемый приложением данных сравниваемых первого элемента. Это значение было передано в вызове, добавлен элемент в поле со списком или списка.  
+ Application-supplied data for the first item being compared. This value was passed in the call that added the item to the combo or list box.  
   
  *itemID2*  
- Индекс второго элемента в список или поле со списком сравниваемых.  
+ Index of the second item in the list box or combo box being compared.  
   
  *itemData2*  
- Предоставляемый приложением данных сравниваемых второго элемента. Это значение было передано в вызове, добавлен элемент в поле со списком или списка.  
+ Application-supplied data for the second item being compared. This value was passed in the call that added the item to the combo or list box.  
   
-## <a name="remarks"></a>Примечания  
- Каждый раз, когда приложение добавляет новый элемент определяемые владельцем список или поле со списком создаются с **CBS_SORT** или **LBS_SORT** стиль, Windows отправляет владельца `WM_COMPAREITEM` сообщение. `lParam` Параметр сообщения содержит длинный указатель `COMPAREITEMSTRUCT` структуры. При получении сообщения, владелец сравнивает два элемента и возвращает значение, указывающее, какой элемент сортируется до другого.  
+## <a name="remarks"></a>Remarks  
+ Whenever an application adds a new item to an owner-drawn list box or combo box created with the **CBS_SORT** or **LBS_SORT** style, Windows sends the owner a `WM_COMPAREITEM` message. The `lParam` parameter of the message contains a long pointer to a `COMPAREITEMSTRUCT` structure. Upon receiving the message, the owner compares the two items and returns a value indicating which item sorts before the other.  
   
-## <a name="requirements"></a>Требования  
- **Заголовок:** winuser.h  
+## <a name="requirements"></a>Requirements  
+ **Header:** winuser.h  
   
-## <a name="see-also"></a>См. также  
- [Структуры, стили, обратные вызовы и схемы сообщений](../../mfc/reference/structures-styles-callbacks-and-message-maps.md)   
+## <a name="see-also"></a>See Also  
+ [Structures, Styles, Callbacks, and Message Maps](../../mfc/reference/structures-styles-callbacks-and-message-maps.md)   
  [CWnd::OnCompareItem](../../mfc/reference/cwnd-class.md#oncompareitem)
 
 

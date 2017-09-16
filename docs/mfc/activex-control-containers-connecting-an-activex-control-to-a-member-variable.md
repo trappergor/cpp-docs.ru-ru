@@ -1,52 +1,71 @@
 ---
-title: "Контейнеры элементов управления ActiveX. Соединение элемента управления ActiveX с переменной-членом | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "контейнер для элементов ActiveX [C++], доступ к элементам управления ActiveX"
-  - "контейнер для элементов ActiveX [C++], элементы управления ActiveX как переменные-члены"
-  - "элементы управления ActiveX [C++], доступ"
-  - "элементы управления ActiveX [C++], переменные-члены проекта"
-  - "подключение элементов управления ActiveX к переменным-членам контейнера"
-  - "переменные-члены [C++], элементы управления ActiveX в проекте"
+title: 'ActiveX Control Containers: Connecting an ActiveX Control to a Member Variable | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- ActiveX control containers [MFC], accessing ActiveX controls
+- ActiveX controls [MFC], member variables of project
+- connecting ActiveX controls to container member variables
+- ActiveX controls [MFC], accessing
+- member variables [MFC], ActiveX controls in project
+- ActiveX control containers [MFC], ActiveX controls as member variables
 ms.assetid: 7898a336-440d-4a60-be43-cb062b807aee
 caps.latest.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 5
----
-# Контейнеры элементов управления ActiveX. Соединение элемента управления ActiveX с переменной-членом
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 7d79444d098c1946f6cd54d8d904a06c17923c3f
+ms.contentlocale: ru-ru
+ms.lasthandoff: 09/12/2017
 
-Самый простой способ доступа к элементу управления ActiveX из своего приложения контейнера элементов управления, элемент управления ActiveX с переменной\-членом класса диалогового окна, содержащий элемент управления.  
+---
+# <a name="activex-control-containers-connecting-an-activex-control-to-a-member-variable"></a>ActiveX Control Containers: Connecting an ActiveX Control to a Member Variable
+The easiest way to access an ActiveX control from within its control container application is to associate the ActiveX control with a member variable of the dialog class that will contain the control.  
   
 > [!NOTE]
->  Это не единственного способа получения встроенный элемент управления из класса контейнера, но для этой статьи достаточно.  
+>  This is not the only way to access an embedded control from within a container class, but for the purposes of this article it is sufficient.  
   
-### Добавление в класс переменную\-член диалогового окна  
+### <a name="adding-a-member-variable-to-the-dialog-class"></a>Adding a member variable to the dialog class  
   
-1.  В представлении классов щелкните правой кнопкой мыши главный класс диалогового окна, чтобы открыть контекстное меню.  Например, `CContainerDlg`.  
+1.  From Class View, right-click the main dialog class to open the shortcut menu. For example, `CContainerDlg`.  
   
-2.  В контекстном меню, щелкните **Добавить**, а затем **Добавить переменную**.  
+2.  From the shortcut menu, click **Add** and then **Add Variable**.  
   
-3.  В мастере добавления переменной\-члена, щелкните **Переменная элемента управления**.  
+3.  In the Add Member Variable Wizard, click **Control variable**.  
   
-4.  В списке **Идентификатор элемента управления** выделите идентификатор элемента управления внутреннего элемента управления ActiveX.  Например, `IDC_CIRCCTRL1`.  
+4.  In the **Control ID** list box, select the control ID of the embedded ActiveX control. For example, `IDC_CIRCCTRL1`.  
   
-5.  В поле **Имя переменной** введите имя.  
+5.  In the **Variable Name** box, enter a name.  
   
-     Например, `m_circctl`.  
+     For example, `m_circctl`.  
   
-6.  Нажмите **Готово** , чтобы принимать возможные варианты и выйти из мастера добавления переменной\-члена.  
+6.  Click **Finish** to accept your choices and exit the Add Member Variable Wizard.  
   
-## См. также  
- [Контейнеры для элементов управления ActiveX](../mfc/activex-control-containers.md)
+## <a name="see-also"></a>See Also  
+ [ActiveX Control Containers](../mfc/activex-control-containers.md)
+
+

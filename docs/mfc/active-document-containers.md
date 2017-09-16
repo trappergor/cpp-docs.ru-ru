@@ -1,73 +1,90 @@
 ---
-title: "Контейнеры активных документов | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "контейнеры активных документов [C++]"
-  - "активные документы [C++], контейнеры"
-  - "контейнеры [C++], активный документ"
-  - "MFC COM [C++], вложение активного документа"
+title: Active Document Containers | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- active documents [MFC], containers
+- active document containers [MFC]
+- containers [MFC], active document
+- MFC COM, active document containment
 ms.assetid: ba20183a-8b4c-440f-9031-e5fcc41d391b
 caps.latest.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 6
----
-# Контейнеры активных документов
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 9a6d09ae7dc4e81051c8ea78106f8327a1c7103b
+ms.contentlocale: ru-ru
+ms.lasthandoff: 09/12/2017
 
-Контейнер активных документов, например Microsoft Office Binder или Internet Explorer, позволяет работать с несколькими документов типов приложений в одном кадр \(вместо реализации, создание и использование нескольких кадры приложения для каждого типа документа\).  
+---
+# <a name="active-document-containers"></a>Active Document Containers
+An active document container, such as Microsoft Office Binder or Internet Explorer, allows you to work with several documents of different application types within a single frame (instead of forcing you to create and use multiple application frames for each document type).  
   
- MFC предоставляет полную поддержку контейнеров активных документов в классе `COleDocObjectItem`.  С помощью мастера приложений MFC создание контейнера активных документов, установив флажок **Контейнер активных документов** на странице **Поддержка составн. док\-тов** мастера приложений MFC.  Дополнительные сведения см. в разделе [Создание приложения контейнера активных документов](../mfc/creating-an-active-document-container-application.md).  
+ MFC provides full support for active document containers in the `COleDocObjectItem` class. You can use the MFC Application Wizard to create an active document container by selecting the **Active document container** check box on the **Compound Document Support** page of the MFC Application Wizard. For more information, see [Creating an Active Document Container Application](../mfc/creating-an-active-document-container-application.md).  
   
- Контейнеров активных документов Дополнительные сведения о см. в разделе:  
+ For more information about active document containers, see:  
   
--   [Требования к контейнера](#container_requirements)  
+-   [Container Requirements](#container_requirements)  
   
--   [Объекты сайта документа](#document_site_objects)  
+-   [Document Site Objects](#document_site_objects)  
   
--   [Объекты представления сайта](#view_site_objects)  
+-   [View Site Objects](#view_site_objects)  
   
--   [Объект кадра](#frame_object)  
+-   [Frame Object](#frame_object)  
   
--   [Слияние меню " Справка "](../Topic/Help%20Menu%20Merging.md)  
+-   [Help Menu Merging](../mfc/help-menu-merging.md)  
   
--   [Программная печать](../mfc/programmatic-printing.md)  
+-   [Programmatic Printing](../mfc/programmatic-printing.md)  
   
--   [Конечные объекты command](../mfc/message-handling-and-command-targets.md)  
+-   [Command Targets](../mfc/message-handling-and-command-targets.md)  
   
-##  <a name="container_requirements"></a> Требования к контейнера  
- Поддержка активного документа в контейнер активных документов подразумевает не просто реализации интерфейса: она также статьи требует использования интерфейсов, содержащегося объекта.  Это также применяется к расширениям активного документа, где контейнер также должен знать, как использовать эти интерфейсы расширения сами активных в документах.  
+##  <a name="container_requirements"></a> Container Requirements  
+ Active document support in an active document container implies more than just interface implementations: it also requires knowledge of using the interfaces of a contained object. The same applies to active document extensions, where the container must also know how to use those extension interfaces on the active documents themselves.  
   
- Контейнер активных документов, использующим активные документы.  
+ An active document container that integrates active documents must:  
   
--   Поддерживает обработки хранилища объекта через интерфейс **IPersistStorage** , то есть он должен реализовать экземпляр `IStorage` каждый активный документ.  
+-   Be capable of handling object storage through the **IPersistStorage** interface, that is, it must provide an `IStorage` instance to each active document.  
   
--   Поддержка внедряя базовые функции OLE документов, требующей объектов «сайта» \(один для каждого документа или внедрения\), реализуйте **IOleClientSite**  и **IAdviseSink**.  
+-   Support the basic embedding features of OLE documents, necessitating "site" objects (one per document or embedding) that implement **IOleClientSite** and **IAdviseSink**.  
   
--   Встроенная поддержка активацию внедренных объектов или активных документов.  Объекты сайта контейнера должны реализовать `IOleInPlaceSite` и объект кадра контейнера должен предоставить **IOleInPlaceFrame**.  
+-   Support in-place activation of embedded objects or active documents. The container's site objects must implement `IOleInPlaceSite` and the container's frame object must provide **IOleInPlaceFrame**.  
   
--   Поддержка расширения активных документов путем реализации `IOleDocumentSite`, чтобы предоставить механизм для контейнера, чтобы контактировать с документом.  Кроме того, контейнер могут реализовывать интерфейсы `IOleCommandTarget` и `IContinueCallback` активного документа, чтобы работать с простые команды, такие как печать или сбережения.  
+-   Support the active documents' extensions by implementing `IOleDocumentSite` to provide the mechanism for the container to talk to the document. Optionally, the container can implement the active document interfaces `IOleCommandTarget` and `IContinueCallback` to pick up simple commands such as printing or saving.  
   
- Объект кадра, объекты представления и объект контейнера могут также реализовать **IOleCommandTarget**  для поддержки отправку некоторых команд, как описано в разделе [Конечные объекты command](../mfc/message-handling-and-command-targets.md).  Объекты представления и контейнера могут также дополнительно реализовать `IPrint` и `IContinueCallback`, для поддержки программную печать, как описано в разделе [Программная печать](../mfc/programmatic-printing.md).  
+ The frame object, the view objects, and the container object can optionally implement **IOleCommandTarget** to support the dispatch of certain commands, as discussed in [Command Targets](../mfc/message-handling-and-command-targets.md). View and container objects can also optionally implement `IPrint` and `IContinueCallback`, to support programmatic printing, as discussed in [Programmatic Printing](../mfc/programmatic-printing.md).  
   
- На следующем рисунке показаны основные связи между контейнером и компонентами в \(слева\) и активный документ и его на представления \(справа\).  Активный документ и управляет хранилище данных и представлении отображается или при необходимости выводит эти данные.  Интерфейсы полужирным шрифтом, необходимы для участия активного документа; эти полужирным шрифтом или курсивом необязательно.  Все другие необходимые интерфейсы.  
+ The following figure shows the conceptual relationships between a container and its components (at left), and the active document and its views (at right). The active document manages storage and data, and the view displays or optionally prints that data. Interfaces in bold are those required for active document participation; those bold and italic are optional. All other interfaces are required.  
   
- ![Интерфейсы контейнера активного документа](../mfc/media/vc37gj1.png "vc37gj1")  
+ ![Active document container interfaces](../mfc/media/vc37gj1.gif "vc37gj1")  
   
- Документ, который поддерживает только одно представление может реализовать и компоненты представления и документа \(то есть соответствующие интерфейсы\) на одном конкретном классе.  Кроме того, сайт контейнера, поддерживает только одно представление одновременно может быть сайт документа и сайт представления в один конкретный класс сайта.  Объект кадра контейнера, должен оставаться указанным и компонент документа контейнера просто включен здесь для предоставления полного рисунке архитектуры; он не влияет на архитектурой контейнера активных документов.  
+ A document that supports only a single view can implement both the view and document components (that is, their corresponding interfaces) on a single concrete class. In addition, a container site that only supports one view at a time can combine the document site and the view site into a single concrete site class. The container's frame object, however, must remain distinct, and the container's document component is merely included here to give a complete picture of the architecture; it is not affected by the active document containment architecture.  
   
-##  <a name="document_site_objects"></a> Объекты сайта документа  
- В архитектуре контейнера активных документов, сайт документа совпадает с сайта объект клиента OLE в документах после добавления интерфейса `IOleDocument`:  
+##  <a name="document_site_objects"></a> Document Site Objects  
+ In the active document containment architecture, a document site is the same as a client site object in OLE Documents with the addition of the `IOleDocument` interface:  
   
  `interface IOleDocumentSite : IUnknown`  
   
@@ -77,17 +94,19 @@ caps.handback.revision: 6
   
  `}`  
   
- Сайт документа по существу контейнер для одного или нескольких объектов сайта «представления».  Каждый объект сайта представления связан с отдельными объектами представления документа управлянного сайтом документа.  Если контейнер поддерживает только одно представление на сайт документа, он может реализовать сайт документа и сайт представления с одним определенным классом.  
+ The document site is conceptually the container for one or more "view site" objects. Each view site object is associated with individual view objects of the document managed by the document site. If the container only supports a single view per document site, then it can implement the document site and the view site with a single concrete class.  
   
-##  <a name="view_site_objects"></a> Объекты представления сайта  
- Объект представления сайта контейнера управляет места отображения для указанного представления документа.  Помимо поддержки стандартный интерфейс `IOleInPlaceSite`, сайт представления также обычно реализует `IContinueCallback` для программного управления печати. \(Обратите внимание, что запросы для представления объекта никогда `IContinueCallback` таким образом, его можно реализовать на любом объекте контейнер хочет\).  
+##  <a name="view_site_objects"></a> View Site Objects  
+ A container's view site object manages the display space for a particular view of a document. In addition to supporting the standard `IOleInPlaceSite` interface, a view site also generally implements `IContinueCallback` for programmatic printing control. (Note that the view object never queries for `IContinueCallback` so it can actually be implemented on any object the container desires.)  
   
- Контейнер, который поддерживает несколько представлений должен иметь возможность создания объектов сайта множественного представления в сайт документа.  Это гарантирует, что каждое представление с отдельной служб активации и выключения как это предусмотрено через `IOleInPlaceSite`.  
+ A container that supports multiple views must be able to create multiple view site objects within the document site. This provides each view with separate activation and deactivation services as provided through `IOleInPlaceSite`.  
   
-##  <a name="frame_object"></a> Объект кадра  
- Объект кадра контейнера, в большинстве случаев такой же кадр, используемый для встроенной активации в документах OLE, т е одного, обрабатывает согласование меню и панели инструментов.  Объект представления имеет доступ к этому объекту кадра через **IOleInPlaceSite::GetWindowContext**, который также предоставляет доступ к объекту контейнера, представляющий документ контейнера \(который может обрабатывать согласование инструмента уровня области и, который содержит перечисление объектов\).  
+##  <a name="frame_object"></a> Frame Object  
+ The container's frame object is, for the most part, the same frame that is used for in-place activation in OLE Documents, that is, the one that handles menu and toolbar negotiation. A view object has access to this frame object through **IOleInPlaceSite::GetWindowContext**, which also provides access to the container object representing the container document (which can handle pane-level toolbar negotiation and contained object enumeration).  
   
- Контейнер активных документов может повысить кадр, добавив `IOleCommandTarget`.  Это позволяет получения команды, расположенных в интерфейсе пользователя активного документа таким же образом, что этот интерфейс может разрешить контейнер отправлять такие же команды \(например, **Новый файл**, **Сохранить как**, **Открыть**, **Печать**; **Изменение копии**, **Вставить**, **Отменить** и др.\) к активному документу.  Дополнительные сведения см. в разделе [Конечные объекты command](../mfc/message-handling-and-command-targets.md).  
+ An active document container can augment the frame by adding `IOleCommandTarget`. This allows it to receive commands that originate in the active document's user interface in the same way that this interface can allow a container to send the same commands (such as **File New**, **Open**, **Save As**, **Print**; **Edit Copy**, **Paste**, **Undo**, and others) to an active document. For more information, see [Command Targets](../mfc/message-handling-and-command-targets.md).  
   
-## См. также  
- [Вложение активного документа](../mfc/active-document-containment.md)
+## <a name="see-also"></a>See Also  
+ [Active Document Containment](../mfc/active-document-containment.md)
+
+

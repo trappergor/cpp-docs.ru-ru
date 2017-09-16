@@ -1,5 +1,5 @@
 ---
-title: "Класс is_trivially_default_constructible | Документы Майкрософт"
+title: is_trivially_default_constructible Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -9,7 +9,6 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
-- is_trivially_default_constructible
 - type_traits/std::is_trivially_default_constructible
 dev_langs:
 - C++
@@ -34,50 +33,50 @@ translation.priority.mt:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 51fbd09793071631985720550007dddbe16f598f
-ms.openlocfilehash: dd41fbdcc33250bc60a0b919b17dd52862549a77
+ms.translationtype: MT
+ms.sourcegitcommit: 5d026c375025b169d5db8445cbb52c0c917b2d8d
+ms.openlocfilehash: 7378e982af31c1030012934924a053666fb4fff2
 ms.contentlocale: ru-ru
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 09/09/2017
 
 ---
-# <a name="istriviallydefaultconstructible-class"></a>Класс is_trivially_default_constructible
-Проверяет, есть ли у типа тривиальный конструктор по умолчанию.  
+# <a name="istriviallydefaultconstructible-class"></a>is_trivially_default_constructible Class
+Tests if type has trivial default constructor.  
   
-## <a name="syntax"></a>Синтаксис  
+## <a name="syntax"></a>Syntax  
   
 ```
 template <class Ty>
 struct is_trivially_default_constructible;
 ```  
   
-#### <a name="parameters"></a>Параметры  
+#### <a name="parameters"></a>Parameters  
  `Ty`  
- Запрашиваемый тип.  
+ The type to query.  
   
-## <a name="remarks"></a>Примечания  
- Экземпляр предиката типа содержит значение true, если тип `Ty` является классом, имеющим тривиальный конструктор, в противном случае — значение false.  
+## <a name="remarks"></a>Remarks  
+ An instance of the type predicate holds true if the type `Ty` is a class that has a trivial constructor, otherwise it holds false.  
   
- Конструктор по умолчанию для класса `Ty` является тривиальным, если:  
+ A default constructor for a class `Ty` is trivial if:  
   
--   он является конструктором по умолчанию, объявленным неявно;  
+-   it is an implicitly declared default constructor  
   
--   класс `Ty` не имеет виртуальных функций;  
+-   the class `Ty` has no virtual functions  
   
--   класс `Ty` не имеет виртуальных баз;  
+-   the class `Ty` has no virtual bases  
   
--   все прямые базы класса `Ty` имеют тривиальные конструкторы;  
+-   all the direct bases of the class `Ty` have trivial constructors  
   
--   классы всех нестатических элементов данных типа класса имеют тривиальные конструкторы;  
+-   the classes of all the non-static data members of class type have trivial constructors  
   
--   классы всех нестатических элементов данных массива типов класса имеют тривиальные конструкторы.  
+-   the classes of all the non-static data members of type array of class have trivial constructors  
   
-## <a name="requirements"></a>Требования  
- **Заголовок:** \<type_traits>  
+## <a name="requirements"></a>Requirements  
+ **Header:** \<type_traits>  
   
- **Пространство имен:** std  
+ **Namespace:** std  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>See Also  
  [<type_traits>](../standard-library/type-traits.md)
 
 

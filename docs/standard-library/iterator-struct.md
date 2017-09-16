@@ -1,5 +1,5 @@
 ---
-title: "Структура iterator | Документы Майкрософт"
+title: iterator Struct | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -9,7 +9,6 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
-- iterator
 - xutility/std::iterator
 dev_langs:
 - C++
@@ -35,17 +34,17 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 2d05749ba2837a3879c91886b9266de47dd2ece6
-ms.openlocfilehash: b14712f36d8cc7b4dbbdd4fd6a0cef3cb0667d8b
+ms.translationtype: MT
+ms.sourcegitcommit: 5d026c375025b169d5db8445cbb52c0c917b2d8d
+ms.openlocfilehash: c634a769384b34fde401a8089ac00c6ba5a2c664
 ms.contentlocale: ru-ru
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 09/09/2017
 
 ---
-# <a name="iterator-struct"></a>Структура iterator
-Пустая базовая структура, используемая для обеспечения правильной работы определяемого пользователем класса итератора с **iterator_trait**.  
+# <a name="iterator-struct"></a>iterator Struct
+An empty base struct used to ensure that a user-defined iterator class works properly with **iterator_trait**s.  
   
-## <a name="syntax"></a>Синтаксис  
+## <a name="syntax"></a>Syntax  
 ```    
 struct iterator {
    typedef Category iterator_category;
@@ -56,35 +55,35 @@ struct iterator {
    typedef Reference reference;
    };  
 ```    
-## <a name="remarks"></a>Примечания  
- Данная структура-шаблон используется как базовый тип для всех итераторов. Она определяет типы членов  
+## <a name="remarks"></a>Remarks  
+ The template struct serves as a base type for all iterators. It defines the member types  
   
-- `iterator_category` (синоним для параметра-шаблона `Category`).  
+- `iterator_category` (a synonym for the template parameter `Category`).  
   
-- `value_type` (синоним для параметра-шаблона **Type**).  
+- `value_type` (a synonym for the template parameter **Type**).  
   
-- `difference_type` (синоним для параметра-шаблона `Distance`).  
+- `difference_type` (a synonym for the template parameter `Distance`).  
   
-- `distance_type` (синоним для параметра-шаблона `Distance`)  
+- `distance_type` (a synonym for the template parameter `Distance`)  
   
-- `pointer` (синоним для параметра-шаблона `Pointer`).  
+- `pointer` (a synonym for the template parameter `Pointer`).  
   
-- `reference` (синоним для параметра-шаблона `Reference`).  
+- `reference` (a synonym for the template parameter `Reference`).  
   
- Обратите внимание, что `value_type` не должен быть типом константы, даже если **указатель** указывает на объект **типа** const и ссылка обозначает объект **типа** const.  
+ Note that `value_type` should not be a constant type even if **pointer** points at an object of const **Type** and reference designates an object of const **Type**.  
   
-## <a name="example"></a>Пример  
- См. раздел [iterator_traits](../standard-library/iterator-traits-struct.md) с примером того, как объявить и использовать типы в базовом классе итератора.  
+## <a name="example"></a>Example  
+ See [iterator_traits](../standard-library/iterator-traits-struct.md) for an example of how to declare and use the types in the iterator base class.  
   
-## <a name="requirements"></a>Требования  
- **Заголовок:** \<iterator>  
+## <a name="requirements"></a>Requirements  
+ **Header:** \<iterator>  
   
- **Пространство имен:** std  
+ **Namespace:** std  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>See Also  
  [\<iterator>](../standard-library/iterator.md)   
- [Потокобезопасность в стандартной библиотеке C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)   
- [Справочник по стандартной библиотеке C++](../standard-library/cpp-standard-library-reference.md)
+ [Thread Safety in the C++ Standard Library](../standard-library/thread-safety-in-the-cpp-standard-library.md)   
+ [C++ Standard Library Reference](../standard-library/cpp-standard-library-reference.md)
 
 
 

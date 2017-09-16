@@ -1,5 +1,5 @@
 ---
-title: "Параметры пользовательского интерфейса, мастер приложений MFC | Документы Microsoft"
+title: User Interface Features, MFC Application Wizard | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -33,57 +33,57 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3f91eafaf3b5d5c1b8f96b010206d699f666e224
-ms.openlocfilehash: 390d06ddb09786ac4e9960c1933e0b1a76531f5e
+ms.translationtype: MT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: d0612ca4dc78cbca0cffdd9f0ecb580864848ec5
 ms.contentlocale: ru-ru
-ms.lasthandoff: 04/01/2017
+ms.lasthandoff: 09/12/2017
 
 ---
-# <a name="user-interface-features-mfc-application-wizard"></a>Параметры пользовательского интерфейса, мастер приложений MFC
-В этом разделе описываются параметры, которые можно использовать для указания внешнего вида приложения. Возможности пользовательского интерфейса, доступные для проекта зависят от типа приложения, указанный в [тип приложения, мастер приложений MFC](../../mfc/reference/application-type-mfc-application-wizard.md) мастера приложений MFC. Например при создании приложения интерфейс одного документа, нельзя добавить стили дочернего фрейма.  
+# <a name="user-interface-features-mfc-application-wizard"></a>User Interface Features, MFC Application Wizard
+This topic explains the options that you can use to specify the look of your application. The user interface features available for your project depend on the type of application you specified in the [Application Type, MFC Application Wizard](../../mfc/reference/application-type-mfc-application-wizard.md) page of the MFC Application Wizard. For example, if you create a single document interface application, you cannot add child frame styles.  
   
- **Стили главного фрейма**  
- Определяет параметры фрейма главного окна приложения.  
+ **Main frame styles**  
+ Sets the features of your application's main window frame.  
   
-|Параметр|Описание|  
+|Option|Description|  
 |------------|-----------------|  
-|**Толстая кадра**|Создает окно, которое имеет границы для изменения размера. По умолчанию.|  
-|**Кнопка свертывания**|В окне главного фрейма есть кнопка свертывания. По умолчанию.|  
-|**Кнопка развертывания**|В окне главного фрейма есть кнопка развертывания. По умолчанию.|  
-|**Свернуто**|Открывается в виде значка фрейма главного окна.|  
-|**Развернуто**|Открывается окно главного фрейма в полный размер дисплея.|  
-|**Системное меню**|Включает системное меню в окне главного фрейма. По умолчанию.|  
-|**"О программе"**|Включает в себя **о** окна приложения. Он может использовать это поле в приложении **справки** меню. Значение по умолчанию и не подлежит изменению, если вы не выберете **на базе диалогового окна**в [тип приложения, мастер приложений MFC](../../mfc/reference/application-type-mfc-application-wizard.md) страницы.<br /><br /> **Примечание** обычно недоступен вариант означает, что мастер не применяются параметр в проект ли элемент недоступен флажок устанавливается или снимается. В этом случае мастер всегда добавляет **о** поле в проект, если не указать в проект как диалоговое окно на основе и снять флажок.|  
-|**Исходная строка состояния**|Добавляет строку состояния приложения. Строка состояния содержит автоматические индикаторы клавиш CAPS LOCK, NUM LOCK и SCROLL LOCK клавиатуры и строку сообщения, которая отображает справку строки для команды меню и панель инструментов кнопки. Если выбран этот параметр также добавляет команды меню, чтобы отобразить или скрыть строку состояния. По умолчанию приложение имеет строку состояния. Недоступно для типов приложений на базе диалогового окна.|  
-|**Разделение окон**|Предоставляет линией. Разделитель разделяет основные представления приложения. В приложении несколько интерфейса (MDI) документа дочерняя рамка MDI окно клиента является разделителем и в приложении однооконный интерфейс (SDI) и несколько документов верхнего уровня приложения, главное окно клиента имеет окна-разделителя. Недоступно для типов приложений на базе диалогового окна.|  
+|**Thick frame**|Creates a window that has a sizing border. The default.|  
+|**Minimize box**|Includes a minimize box in the main frame window. The default.|  
+|**Maximize box**|Includes a maximize box in the main frame window. The default.|  
+|**Minimized**|Opens the main frame window as an icon.|  
+|**Maximized**|Opens the main frame window to the full size of the display.|  
+|**System menu**|Includes a system menu in the main frame window. The default.|  
+|**About box**|Includes an **About** box for the application. The user can access this box from the application's **Help** menu. The default, and unchangeable unless you select **Dialog based**, in the [Application Type, MFC Application Wizard](../../mfc/reference/application-type-mfc-application-wizard.md) page.<br /><br /> **Note** Usually, an unavailable option indicates that the wizard does not apply the option to the project, whether the unavailable item's check box is selected or cleared. In this case, the wizard always adds an **About** box to the project unless you first specify the project as dialog based and then uncheck the box.|  
+|**Initial status bar**|Adds a status bar to your application. The status bar contains automatic indicators for the keyboard's CAPS LOCK, NUM LOCK, and SCROLL LOCK keys and a message line that displays help strings for menu commands and toolbar buttons. Clicking this option also adds menu commands to display or hide the status bar. By default, an application has a status bar. Not available for dialog-based application types.|  
+|**Split window**|Provides a splitter bar. The splitter bar splits the application's main views. In a multiple document interface (MDI) application, the MDI child frame's client window is a splitter window, and in a single document interface (SDI) application and multiple top level document application, the main frame's client window is a splitter window. Not available for dialog-based application types.|  
   
- **Стили дочернего фрейма**  
- Задает внешний вид и начальное состояние дочерних фреймов в вашем приложении. Стили дочернего фрейма доступны только для приложений MDI.  
+ **Child frame styles**  
+ Specifies the appearance and initial state of the child frames in your application. Child frame styles are available for MDI applications only.  
   
-|Параметр|Описание|  
+|Option|Description|  
 |------------|-----------------|  
-|**Кнопка свертывания дочернего окна**|Указывает, имеет ли дочернего окна кнопки свертывания (включено по умолчанию).|  
-|**Кнопка развертывания дочернего окна**|Указывает, имеет ли дочернего окна кнопки развертывания (включено по умолчанию).|  
-|**Дочернее окно развернуто**|Указывает ли дочернее окно изначально развернуто, задав флаг cs.style **WS_MAXIMIZE** в [PreCreateWindow](../../mfc/reference/cwnd-class.md#precreatewindow) функции-члена `CChildFrame`.|  
+|**Child minimize box**|Specifies whether a child window has a minimize button (enabled by default).|  
+|**Child maximize box**|Specifies whether a child window has a maximize button (enabled by default).|  
+|**Child maximized**|Specifies whether a child window is initially maximized by setting the cs.style flag **WS_MAXIMIZE** in the [PreCreateWindow](../../mfc/reference/cwnd-class.md#precreatewindow) member function of `CChildFrame`.|  
   
- **Панели команд (меню и панель инструментов, лента)**  
- Указывает, содержит ли приложение меню, панели инструментов или ленты. Недоступно для приложений на основе диалогового окна.  
+ **Command bars (menu/toolbar/ribbon)**  
+ Indicates whether your application includes menus, toolbars, and/or a ribbon. Not available for dialog-based applications.  
   
-|Параметр|Описание|  
+|Option|Description|  
 |------------|-----------------|  
-|**Используйте классическое меню**|Указывает, что приложение содержит меню классического, не поддерживается перетаскивание.|  
-|**Использовать классическую закрепляемую панель инструментов**|Стандартная панель инструментов Windows добавляет в приложение. Панель инструментов содержит кнопки для создания документа; Открытие и сохранение файлов документа; Вырезание, копирование, вставка и печать текста. и ввести режим справки. Включение этого параметра также добавляет команды меню, чтобы отобразить или скрыть панель инструментов.|  
-|**Используйте панель инструментов обозревателя стиля**|Добавляет панель инструментов в стиле с Internet Explorer к приложению.|  
-|**Используйте меню и панель инструментов**|Указывает, что приложение содержит используются меню и панель инструментов.|  
-|**Пользовательские панели инструментов и изображения**|Позволяет пользователю настраивать панели инструментов и изображениям значков панели инструментов во время выполнения.|  
-|**Использовать адаптированные меню**|Указывает, содержит ли меню полный список элементов, при открытии или если он содержит только команды, которые наиболее часто используемых данным пользователем.|  
-|**Использовать ленту**|Использует стиле Office 2007 ленты в приложении вместо строки меню или панели инструментов.|  
+|**Use a classic menu**|Specifies that your application contains a classic, non-draggable menu.|  
+|**Use a classic docking toolbar**|Adds a standard Windows toolbar to your application. The toolbar contains buttons for creating a new document; opening and saving document files; cutting copying, pasting, or printing text; and entering Help mode. Enabling this option also adds menu commands to display or hide the toolbar.|  
+|**Use a browser style toolbar**|Adds an Internet Explorer-style toolbar to your application.|  
+|**Use a menu bar and toolbar**|Indicates that your application contains a draggable menu bar and a toolbar.|  
+|**User-defined toolbars and images**|Allows the user to customize the toolbar and the toolbar images at runtime.|  
+|**Personalized menu behavior**|Specifies whether the menu contains the full list of items when opened, or if it contains only the commands that the user most frequently uses.|  
+|**Use a ribbon**|Uses an Office 2007-like ribbon in your application instead of a menu bar or toolbar.|  
   
- **Заголовок диалогового окна**  
- Для [класса CDialog](../../mfc/reference/cdialog-class.md)-только для приложений на основе этот заголовок отображается в строке заголовка диалогового окна. Чтобы изменить это поле, необходимо сначала выбрать **на базе диалогового окна** под флажком **тип приложения**. Дополнительные сведения см. в разделе [тип приложения, мастер приложений MFC](../../mfc/reference/application-type-mfc-application-wizard.md).  
+ **Dialog title**  
+ For [CDialog Class](../../mfc/reference/cdialog-class.md)-based applications only, this title appears in the title bar of the dialog box. To edit this field, you must first select the **Dialog based** option under **Application type**. For more information, see [Application Type, MFC Application Wizard](../../mfc/reference/application-type-mfc-application-wizard.md).  
   
-## <a name="see-also"></a>См. также  
- [Мастер приложений MFC](../../mfc/reference/mfc-application-wizard.md)
+## <a name="see-also"></a>See Also  
+ [MFC Application Wizard](../../mfc/reference/mfc-application-wizard.md)
 
 

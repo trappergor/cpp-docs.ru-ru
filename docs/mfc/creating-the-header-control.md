@@ -1,54 +1,73 @@
 ---
-title: "Создание элемента управления &quot;Заголовок&quot; | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "CHeaderCtrl - класс, создание"
-  - "элементы управления "заголовок", создание"
+title: Creating the Header Control | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- CHeaderCtrl class [MFC], creating
+- header controls [MFC], creating
 ms.assetid: 7864d9d2-4a2c-4622-b58b-7b110a1e28d2
 caps.latest.revision: 11
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 7
----
-# Создание элемента управления &quot;Заголовок&quot;
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 19990137630ff7074523f98399ca21b0accc00ee
+ms.contentlocale: ru-ru
+ms.lasthandoff: 09/12/2017
 
-Элемент управления " Заголовок непосредственно недоступен в редакторе диалоговых окон \(хотя можно добавить элементы управления Список, который включает элемент управления " Заголовок "\).  
+---
+# <a name="creating-the-header-control"></a>Creating the Header Control
+The header control is not directly available in the dialog editor (although you can add a list control, which includes a header control).  
   
-### Размещение элемента управления " Заголовок " в диалоговом окне  
+### <a name="to-put-a-header-control-in-a-dialog-box"></a>To put a header control in a dialog box  
   
-1.  Вручную внедрить переменную\-член типа [CHeaderCtrl](../Topic/CHeaderCtrl%20Class.md) в классе диалогового окна.  
+1.  Manually embed a member variable of type [CHeaderCtrl](../mfc/reference/cheaderctrl-class.md) in your dialog class.  
   
-2.  В [OnInitDialog](../Topic/CDialog::OnInitDialog.md), создайте и задайте стили для `CHeaderCtrl`, разместите и его отображение.  
+2.  In [OnInitDialog](../mfc/reference/cdialog-class.md#oninitdialog), create and set the styles for the `CHeaderCtrl`, position it, and display it.  
   
-3.  Добавление элементов в элемент управления " Заголовок ".  
+3.  Add items to the header control.  
   
-4.  Используйте окно свойств для сопоставления функции обработчика в классе диалогового окна для всех сообщений уведомлений заголовок\- элемента управления необходимо обработать \(см. [Сообщения сопоставления в функции](../Topic/Mapping%20Messages%20to%20Functions.md)\).  
+4.  Use the Properties window to map handler functions in the dialog class for any header-control notification messages you need to handle (see [Mapping Messages to Functions](../mfc/reference/mapping-messages-to-functions.md)).  
   
-### Размещение элемента управления " Заголовок в представление \(не CListView\)  
+### <a name="to-put-a-header-control-in-a-view-not-a-clistview"></a>To put a header control in a view (not a CListView)  
   
-1.  Внедрить класс объекта [CHeaderCtrl](../Topic/CHeaderCtrl%20Class.md) по в представлении.  
+1.  Embed a [CHeaderCtrl](../mfc/reference/cheaderctrl-class.md) object in your view class.  
   
-2.  Стиль, положения и отображает окно элемента управления " Заголовок в функциях\-членах [OnInitialUpdate](../Topic/CView::OnInitialUpdate.md) представления.  
+2.  Style, position, and display the header control window in the view's [OnInitialUpdate](../mfc/reference/cview-class.md#oninitialupdate) member function.  
   
-3.  Добавление элементов в элемент управления " Заголовок ".  
+3.  Add items to the header control.  
   
-4.  Используйте окно свойств для сопоставления функции обработчика в классе представления для всех сообщений уведомлений заголовок\- элемента управления необходимо обработать \(см. [Сообщения сопоставления в функции](../Topic/Mapping%20Messages%20to%20Functions.md)\).  
+4.  Use the Properties window to map handler functions in the view class for any header-control notification messages you need to handle (see [Mapping Messages to Functions](../mfc/reference/mapping-messages-to-functions.md)).  
   
- В любом случае объект внедренного элемента управления создается, когда представление или объект диалоговых окон.  Затем необходимо вызвать метод [CHeaderCtrl::Create](../Topic/CHeaderCtrl::Create.md) для создания окна элемента управления.  Чтобы разместить элемент управления вызовите [CHeaderCtrl::Layout](../Topic/CHeaderCtrl::Layout.md) для определения первоначального размера элемента управления и положения и [SetWindowPos](../Topic/CWnd::SetWindowPos.md), чтобы задать положение требуется.  Затем добавьте элементы, как описано в разделе [Добавление элементов в элемент управления " Заголовок "](../mfc/adding-items-to-the-header-control.md).  
+ In either case, the embedded control object is created when the view or dialog object is created. Then you must call [CHeaderCtrl::Create](../mfc/reference/cheaderctrl-class.md#create) to create the control window. To position the control, call [CHeaderCtrl::Layout](../mfc/reference/cheaderctrl-class.md#layout) to determine the control's initial size and position and [SetWindowPos](../mfc/reference/cwnd-class.md#setwindowpos) to set the position you want. Then add items as described in [Adding Items to the Header Control](../mfc/adding-items-to-the-header-control.md).  
   
- Дополнительные сведения см. в разделе [Создание элемента управления " Заголовок "](http://msdn.microsoft.com/library/windows/desktop/bb775238) в [!INCLUDE[winSDK](../atl/includes/winsdk_md.md)].  
+ For more information, see [Creating a Header Control](http://msdn.microsoft.com/library/windows/desktop/bb775238) in the Windows SDK.  
   
-## См. также  
- [Использование CHeaderCtrl](../mfc/using-cheaderctrl.md)   
- [Элементы управления](../mfc/controls-mfc.md)
+## <a name="see-also"></a>See Also  
+ [Using CHeaderCtrl](../mfc/using-cheaderctrl.md)   
+ [Controls](../mfc/controls-mfc.md)
+
+

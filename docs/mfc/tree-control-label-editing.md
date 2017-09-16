@@ -1,38 +1,57 @@
 ---
-title: "Редактирование меток древовидного элемента управления | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "CTreeCtrl - класс, редактирование меток"
-  - "редактирование меток элемента управления "дерево""
-  - "редактирование меток в классе CTreeCtrl"
-  - "элементы управления "дерево", редактирование меток"
+title: Tree Control Label Editing | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- editing tree control labels
+- CTreeCtrl class [MFC], editing labels
+- label editing in CTreeCtrl class [MFC]
+- tree controls [MFC], label editing
 ms.assetid: 6cde2ac3-43ee-468f-bac2-cf1a228ad32d
 caps.latest.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 6
----
-# Редактирование меток древовидного элемента управления
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 51c2f148861015f7d34c25f1f94c3047dd627aaa
+ms.contentlocale: ru-ru
+ms.lasthandoff: 09/12/2017
 
-Пользователь может непосредственного редактирования метки элементов в элементе управления дерева \([CTreeCtrl](../mfc/reference/ctreectrl-class.md)\), которое имеет стиль **TVS\_EDITLABELS**.  Пользователь начинает редактирования, щелкнув метку элемента, который имеет фокус.  Приложение начинает изменения с помощью функции\-члена [EditLabel](../Topic/CTreeCtrl::EditLabel.md).  Элемент управления "Дерево" отправляет уведомление, когда начинается редактирование и когда он отменен или завершения.  После завершения редактирования, ответственность за обновление метки элемента \(если требуется\).  
+---
+# <a name="tree-control-label-editing"></a>Tree Control Label Editing
+The user can directly edit the labels of items in a tree control ([CTreeCtrl](../mfc/reference/ctreectrl-class.md)) that has the **TVS_EDITLABELS** style. The user begins editing by clicking the label of the item that has the focus. An application begins editing by using the [EditLabel](../mfc/reference/ctreectrl-class.md#editlabel) member function. The tree control sends the notification when editing begins and when it is canceled or completed. When editing is completed, you are responsible for updating the item's label, if appropriate.  
   
- Когда начинается редактирование метки, элемент управления "Дерево" отправляет сообщение уведомления [TVN\_BEGINLABELEDIT](http://msdn.microsoft.com/library/windows/desktop/bb773506).  При обработке этого уведомления, можно разрешить изменение некоторых меток и предотвратить изменение других.  Возврат 0 позволяет редактировать и возвращением ненулевое препятствует его.  
+ When label editing begins, a tree control sends a [TVN_BEGINLABELEDIT](http://msdn.microsoft.com/library/windows/desktop/bb773506) notification message. By processing this notification, you can allow editing of some labels and prevent editing of others. Returning 0 allows editing, and returning nonzero prevents it.  
   
- При его редактирования метки или завершения, элемент управления "Дерево" отправляет сообщение уведомления [TVN\_ENDLABELEDIT](http://msdn.microsoft.com/library/windows/desktop/bb773515).  Параметр `lParam` адрес структуры [NMTVDISPINFO](http://msdn.microsoft.com/library/windows/desktop/bb773418).  Элемент **item** структура [TVITEM](http://msdn.microsoft.com/library/windows/desktop/bb773456), определяющий элемент и включает измененного текста.  Ответственность за обновление метки элемента, при необходимости возможно после проверки измененная строка.  Элемент **pszText**`TV_ITEM` 0, если изменение будет отменена.  
+ When label editing is canceled or completed, a tree control sends a [TVN_ENDLABELEDIT](http://msdn.microsoft.com/library/windows/desktop/bb773515) notification message. The `lParam` parameter is the address of a [NMTVDISPINFO](http://msdn.microsoft.com/library/windows/desktop/bb773418) structure. The **item** member is a [TVITEM](http://msdn.microsoft.com/library/windows/desktop/bb773456) structure that identifies the item and includes the edited text. You are responsible for updating the item's label, if appropriate, perhaps after validating the edited string. The **pszText** member of `TV_ITEM` is 0 if editing is canceled.  
   
- Во время редактирования метки, обычно в ответ на сообщение уведомления [TVN\_BEGINLABELEDIT](http://msdn.microsoft.com/library/windows/desktop/bb773506), можно получить указатель на элемент управления "Поле ввода", используемые для редактирования метки с помощью функции\-члена [GetEditControl](../Topic/CTreeCtrl::GetEditControl.md).  Можно вызвать функцию\-член [SetLimitText](../Topic/CEdit::SetLimitText.md) элемента управления "Поле ввода", чтобы ограничить количество текста пользователь может вводить или подкласс элемента управления " Поле ввода для перехвата и отменить недопустимые символы.  Обратите внимание, что элемент управления "Поле ввода" отображается только после **TVN\_BEGINLABELEDIT** передается.  
+ During label editing, typically in response to the [TVN_BEGINLABELEDIT](http://msdn.microsoft.com/library/windows/desktop/bb773506) notification message, you can get a pointer to the edit control used for label editing by using the [GetEditControl](../mfc/reference/ctreectrl-class.md#geteditcontrol) member function. You can call the edit control's [SetLimitText](../mfc/reference/cedit-class.md#setlimittext) member function to limit the amount of text a user can enter or subclass the edit control to intercept and discard invalid characters. Note, however, that the edit control is displayed only *after* **TVN_BEGINLABELEDIT** is sent.  
   
-## См. также  
- [Использование CTreeCtrl](../Topic/Using%20CTreeCtrl.md)   
- [Элементы управления](../mfc/controls-mfc.md)
+## <a name="see-also"></a>See Also  
+ [Using CTreeCtrl](../mfc/using-ctreectrl.md)   
+ [Controls](../mfc/controls-mfc.md)
+
+

@@ -1,5 +1,5 @@
 ---
-title: "Операторы &lt;tuple&gt; | Документы Майкрософт"
+title: '&lt;tuple&gt; operators | Microsoft Docs'
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -18,21 +18,21 @@ dev_langs:
 ms.assetid: f25752dc-d3e2-4e12-b5ac-9a8682ca60ed
 caps.latest.revision: 13
 manager: ghogen
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
-ms.openlocfilehash: 97cdd6afe672d902efd92a692b23e920f7d03647
+ms.translationtype: MT
+ms.sourcegitcommit: 5d026c375025b169d5db8445cbb52c0c917b2d8d
+ms.openlocfilehash: 8c3921cf6d1c4fc5a1d754f1bb08a247d9612319
 ms.contentlocale: ru-ru
-ms.lasthandoff: 04/29/2017
+ms.lasthandoff: 09/09/2017
 
 ---
-# <a name="lttuplegt-operators"></a>Операторы &lt;tuple&gt;
+# <a name="lttuplegt-operators"></a>&lt;tuple&gt; operators
 ||||  
 |-|-|-|  
-|[оператор!=](#op_neq)|[оператор&gt;](#op_gt)|[оператор&gt;=](#op_gt_eq)|  
-|[оператор&lt;](#op_lt)|[оператор&lt;=](#op_lt_eq)|[оператор==](#op_eq_eq)|  
+|[operator!=](#op_neq)|[operator&gt;](#op_gt)|[operator&gt;=](#op_gt_eq)|  
+|[operator&lt;](#op_lt)|[operator&lt;=](#op_lt_eq)|[operator==](#op_eq_eq)|  
   
-##  <a name="op_neq"></a>  оператор!=  
- Сравнивает объекты `tuple` на неравенство.  
+##  <a name="op_neq"></a>  operator!=  
+ Compare `tuple` objects for inequality.  
   
 ```  
 template <class T1, class T2, ..., class TN,  
@@ -41,14 +41,14 @@ bool operator!=(const tuple<T1, T2, ..., TN>& tpl1,
     const tuple<U1, U2, ..., UN>& tpl2);
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
  `TN`  
- Тип N-го элемента кортежа.  
+ The type of the Nth tuple element.  
   
-### <a name="remarks"></a>Примечания  
- Функция возвращает значение false, если `N` равно 0; в противном случае — значение `get<0>(tpl1) != get<0>(tpl2) || get<1>(tpl1) != get<1>(tpl2) || ... || get<N - 1>(tpl1) == get<N - 1>(tpl2)`.  
+### <a name="remarks"></a>Remarks  
+ The function returns false when `N` is 0, otherwise `get<0>(tpl1) != get<0>(tpl2) || get<1>(tpl1) != get<1>(tpl2) || ... || get<N - 1>(tpl1) == get<N - 1>(tpl2)`.  
   
-### <a name="example"></a>Пример  
+### <a name="example"></a>Example  
   
 ```cpp  
 // std__tuple__operator_ne.cpp   
@@ -93,8 +93,8 @@ false
 true  
 ```  
   
-##  <a name="op_lt"></a>  оператор&lt;  
- Сравнение объектов `tuple` на предмет меньшинства.  
+##  <a name="op_lt"></a>  operator&lt;  
+ Compare `tuple` objects for less.  
   
 ```  
 template <class T1, class T2, ..., class TN,  
@@ -103,14 +103,14 @@ bool operator<(const tuple<T1, T2, ..., TN>& tpl1,
     const tuple<U1, U2, ..., UN>& tpl2);
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
  `TN`  
- Тип N-го элемента кортежа.  
+ The type of the Nth tuple element.  
   
-### <a name="remarks"></a>Примечания  
- Функция возвращает значение true, если `N` больше 0, а первое отличающееся значение в `tpl1` при сравнении оказывается меньше, чем соответствующее значение `tpl2`; в противном случае возвращается значение false.  
+### <a name="remarks"></a>Remarks  
+ The function returns true when `N` is greater than 0 and the first differing value in `tpl1` compares less than the corresponding value in `tpl2`, otherwise it returns false.  
   
-### <a name="example"></a>Пример  
+### <a name="example"></a>Example  
   
 ```cpp  
 // std__tuple__operator_lt.cpp   
@@ -155,8 +155,8 @@ false
 true  
 ```  
   
-##  <a name="op_lt_eq"></a>  оператор&lt;=  
- Сравнение объектов `tuple` на предмет отношения меньше или равно.  
+##  <a name="op_lt_eq"></a>  operator&lt;=  
+ Compare `tuple` objects for less or equal.  
   
 ```  
 template <class T1, class T2, ..., class TN,  
@@ -165,14 +165,14 @@ bool operator<=(const tuple<T1, T2, ..., TN>& tpl1,
     const tuple<U1, U2, ..., UN>& tpl2);
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
  `TN`  
- Тип N-го элемента кортежа.  
+ The type of the Nth tuple element.  
   
-### <a name="remarks"></a>Примечания  
- Функция возвращает `!(tpl2 < tpl1)`.  
+### <a name="remarks"></a>Remarks  
+ The function returns `!(tpl2 < tpl1)`.  
   
-### <a name="example"></a>Пример  
+### <a name="example"></a>Example  
   
 ```cpp  
 // std__tuple__operator_le.cpp   
@@ -217,8 +217,8 @@ true
 false  
 ```  
   
-##  <a name="op_eq_eq"></a>  оператор==  
- Сравнение объектов `tuple` на равенство.  
+##  <a name="op_eq_eq"></a>  operator==  
+ Compare `tuple` objects for equality.  
   
 ```  
 template <class T1, class T2, ..., class TN,  
@@ -227,14 +227,14 @@ bool operator==(const tuple<T1, T2, ..., TN>& tpl1,
     const tuple<U1, U2, ..., UN>& tpl2);
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
  `TN`  
- Тип N-го элемента кортежа.  
+ The type of the Nth tuple element.  
   
-### <a name="remarks"></a>Примечания  
- Функция возвращает значение true, если `N` равно 0; в противном случае — значение `get<0>(tpl1) == get<0>(tpl2) && get<1>(tpl1) == get<1>(tpl2) && ... && get<N - 1>(tpl1) == get<N - 1>(tpl2)`.  
+### <a name="remarks"></a>Remarks  
+ The function returns true when `N` is 0, otherwise `get<0>(tpl1) == get<0>(tpl2) && get<1>(tpl1) == get<1>(tpl2) && ... && get<N - 1>(tpl1) == get<N - 1>(tpl2)`.  
   
-### <a name="example"></a>Пример  
+### <a name="example"></a>Example  
   
 ```cpp  
 // std__tuple__operator_eq.cpp   
@@ -279,8 +279,8 @@ true
 false  
 ```  
   
-##  <a name="op_gt"></a>  оператор&gt;  
- Сравнение объектов `tuple` на предмет большинства.  
+##  <a name="op_gt"></a>  operator&gt;  
+ Compare `tuple` objects for greater.  
   
 ```  
 template <class T1, class T2, ..., class TN,  
@@ -289,14 +289,14 @@ bool operator>(const tuple<T1, T2, ..., TN>& tpl1,
     const tuple<U1, U2, ..., UN>& tpl2);
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
  `TN`  
- Тип N-го элемента кортежа.  
+ The type of the Nth tuple element.  
   
-### <a name="remarks"></a>Примечания  
- Функция возвращает `tpl2 < tpl1`.  
+### <a name="remarks"></a>Remarks  
+ The function returns `tpl2 < tpl1`.  
   
-### <a name="example"></a>Пример  
+### <a name="example"></a>Example  
   
 ```cpp  
 // std__tuple__operator_gt.cpp   
@@ -341,8 +341,8 @@ false
 true  
 ```  
   
-##  <a name="op_gt_eq"></a>  оператор&gt;=  
- Сравнение объектов `tuple` на предмет большинства или равенства.  
+##  <a name="op_gt_eq"></a>  operator&gt;=  
+ Compare `tuple` objects for greater or equal.  
   
 ```  
 template <class T1, class T2, ..., class TN,  
@@ -351,14 +351,14 @@ bool operator>=(const tuple<T1, T2, ..., TN>& tpl1,
     const tuple<U1, U2, ..., UN>& tpl2);
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
  `TN`  
- Тип N-го элемента кортежа.  
+ The type of the Nth tuple element.  
   
-### <a name="remarks"></a>Примечания  
- Функция возвращает `!(tpl1 < tpl2)`.  
+### <a name="remarks"></a>Remarks  
+ The function returns `!(tpl1 < tpl2)`.  
   
-### <a name="example"></a>Пример  
+### <a name="example"></a>Example  
   
 ```cpp  
 // std__tuple__operator_ge.cpp   
@@ -403,7 +403,7 @@ true
 false  
 ```  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>See Also  
  [\<tuple>](../standard-library/tuple.md)
 
 

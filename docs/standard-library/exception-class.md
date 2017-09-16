@@ -1,5 +1,5 @@
 ---
-title: "Класс exception | Документы Майкрософт"
+title: exception Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -33,17 +33,17 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3f69f0c3176d2fbe19e11ce08c071691a72d858d
-ms.openlocfilehash: 6983a0e24f7422b708d7fbbfca6689bec629cb06
+ms.translationtype: MT
+ms.sourcegitcommit: 5d026c375025b169d5db8445cbb52c0c917b2d8d
+ms.openlocfilehash: 9cabffec21d8dd66cbbf50e2a5acfeb96e5aaef4
 ms.contentlocale: ru-ru
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 09/09/2017
 
 ---
-# <a name="exception-class"></a>Класс exception
-Этот класс служит базовым классом для всех исключений, создаваемых определенными выражениями и стандартной библиотекой C++.  
+# <a name="exception-class"></a>exception Class
+The class serves as the base class for all exceptions thrown by certain expressions and by the C++ Standard Library.  
   
-## <a name="syntax"></a>Синтаксис  
+## <a name="syntax"></a>Syntax  
 ```  
 class exception {
    public:
@@ -56,24 +56,24 @@ class exception {
    virtual const char *what() const;
    };  
 ``` 
-## <a name="remarks"></a>Примечания  
- В частности, этот базовый класс является корнем стандартных классов исключений, определенных в [\<stdexcept>](../standard-library/stdexcept.md). Значение строки в C, возвращаемое объектом `what`, не указывается конструктором по умолчанию, но может быть определено конструкторами для некоторых производных классов как строка C для заданной реализации. Ни одна из функций-членов не создает исключение.  
+## <a name="remarks"></a>Remarks  
+ Specifically, this base class is the root of the standard exception classes defined in [\<stdexcept>](../standard-library/stdexcept.md). The C string value returned by `what` is left unspecified by the default constructor, but may be defined by the constructors for certain derived classes as an implementation-defined C string. None of the member functions throw any exceptions.  
   
- Параметр `int` позволяет указать, что память не должна выделяться. Значение параметра `int` игнорируется.  
+ The `int` parameter allows you to specify that no memory should be allocated. The value of the `int` is ignored.  
   
 > [!NOTE]
->  Конструкторы `exception(const char* const &message)` и `exception(const char* const &message, int)` являются расширениями Майкрософт для стандартной библиотеки C++.  
+>  The constructors `exception(const char* const &message)` and `exception(const char* const &message, int)` are Microsoft extensions to the C++ Standard Library.  
   
-## <a name="example"></a>Пример  
- Примеры использования стандартных классов исключений, которые наследуют из класса `exception`, см. в любом классе, определенном в [\<stdexcept>](../standard-library/stdexcept.md).  
+## <a name="example"></a>Example  
+ For examples of the use of the standard exception classes that inherit from the `exception` class, see any of the classes defined in [\<stdexcept>](../standard-library/stdexcept.md).  
   
-## <a name="requirements"></a>Требования  
- **Заголовок:** \<exception>  
+## <a name="requirements"></a>Requirements  
+ **Header:** \<exception>  
   
- **Пространство имен:** std  
+ **Namespace:** std  
   
-## <a name="see-also"></a>См. также  
- [Потокобезопасность в стандартной библиотеке C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)
+## <a name="see-also"></a>See Also  
+ [Thread Safety in the C++ Standard Library](../standard-library/thread-safety-in-the-cpp-standard-library.md)
 
 
 

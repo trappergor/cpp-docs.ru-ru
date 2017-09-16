@@ -1,35 +1,54 @@
 ---
-title: "Классы документов и представлений, создаваемые с помощью Мастера приложений MFC | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "мастера приложений [C++], созданные классы документов и представлений"
-  - "классы документов"
-  - "классы документов, создано мастерами приложений"
-  - "классы представлений, создано мастерами приложений"
+title: Document and View Classes Created by the MFC Application Wizard | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- document classes [MFC]
+- document classes [MFC], created by application wizards
+- application wizards [MFC], document/view classes created
+- view classes [MFC], created by application wizards
 ms.assetid: 70c34a60-2701-4981-acea-c08a5787d8e6
 caps.latest.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 5
----
-# Классы документов и представлений, создаваемые с помощью Мастера приложений MFC
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 0e9dfa01e51a5f35fff079c37abd3d6dc80648f2
+ms.contentlocale: ru-ru
+ms.lasthandoff: 09/12/2017
 
-Мастер приложений MFC предоставляет удобный способ в программе разработки путем создания скелетные классы документов и представлений автоматически.  Затем можно [команды и сопоставления сообщения к этим классам](../Topic/Mapping%20Messages%20to%20Functions.md) и используйте редактор исходного кода Visual C\+\+, чтобы их записи функции\-члены.  
+---
+# <a name="document-and-view-classes-created-by-the-mfc-application-wizard"></a>Document and View Classes Created by the MFC Application Wizard
+The MFC Application Wizard gives you a head start on your program development by creating skeletal document and view classes for you. You can then [map commands and messages to these classes](../mfc/reference/mapping-messages-to-functions.md) and use the Visual C++ source code editor to write their member functions.  
   
- Класс документа, созданный с помощью мастера приложений MFC является производным от класса [CDocument](../Topic/CDocument%20Class.md).  Класс представления является производным от класса [CView](../Topic/CView%20Class.md).  Имена, мастер приложений предоставляет эти классы и файлы, содержащие их основываться на имени проекта указываются в диалоговом окне мастера приложений.  В мастере приложений можно использовать страницу созданных классов изменять имена по умолчанию.  
+ The document class created by the MFC Application Wizard is derived from class [CDocument](../mfc/reference/cdocument-class.md). The view class is derived from [CView](../mfc/reference/cview-class.md). The names that the Application Wizard gives these classes and the files that contain them are based on the project name you supply in the Application Wizard dialog box. In the Application Wizard, you can use the Generated Classes page to alter the default names.  
   
- Некоторые приложения могут несколько классов документа, класс представления, или класс фреймового окна.  Дополнительные сведения см. в разделе [Типы многооконного, представления и фреймовые окна](../mfc/multiple-document-types-views-and-frame-windows.md).  
+ Some applications might need more than one document class, view class, or frame-window class. For more information, see [Multiple Document Types, Views, and Frame Windows](../mfc/multiple-document-types-views-and-frame-windows.md).  
   
-## См. также  
- [Архитектура "документ\-представление"](../Topic/Document-View%20Architecture.md)
+## <a name="see-also"></a>See Also  
+ [Document/View Architecture](../mfc/document-view-architecture.md)
+
+

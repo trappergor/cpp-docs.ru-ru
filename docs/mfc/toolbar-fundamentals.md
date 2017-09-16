@@ -1,111 +1,130 @@
 ---
-title: "Основные сведения о панелях инструментов | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "RT_TOOLBAR"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "мастера приложений [C++], установка панелей инструментов приложения по умолчанию"
-  - "идентификаторы команд, кнопки панели инструментов"
-  - "CToolBar - класс, панели инструментов по умолчанию в мастере приложений"
-  - "внедрение панели инструментов в класс окна фрейма"
-  - "классы окна фрейма, панель инструментов, внедренная в"
-  - "LoadBitmap - метод, панели инструментов"
-  - "LoadToolBar - метод"
-  - "ресурсы [MFC], панель инструментов"
-  - "RT_TOOLBAR - ресурс"
-  - "SetButtons - метод"
-  - "элементы управления панели инструментов [MFC], идентификатор команды"
-  - "элементы управления панели инструментов [MFC], панели инструментов, созданные с использованием мастера приложений"
-  - "редактор панелей инструментов, мастер приложений"
-  - "панели инструментов [C++], добавление элемента по умолчанию с использованием мастера приложений"
-  - "панели инструментов [C++], создание"
+title: Toolbar Fundamentals | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- RT_TOOLBAR
+dev_langs:
+- C++
+helpviewer_keywords:
+- embedding toolbar in frame window class [MFC]
+- application wizards [MFC], installing default application toolbars
+- toolbars [MFC], creating
+- resources [MFC], toolbar
+- toolbar controls [MFC], toolbars created using Application Wizard
+- toolbar controls [MFC], command ID
+- RT_TOOLBAR resource [MFC]
+- toolbars [MFC], adding default using Application Wizard
+- LoadBitmap method [MFC], toolbars
+- Toolbar editor [MFC], Application Wizard
+- command IDs [MFC], toolbar buttons
+- SetButtons method [MFC]
+- CToolBar class [MFC], default toolbars in Application Wizard
+- frame window classes [MFC], toolbar embedded in
+- LoadToolBar method [MFC]
 ms.assetid: cc00aaff-8a56-433b-b0c0-b857d76b4ffd
 caps.latest.revision: 12
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 8
----
-# Основные сведения о панелях инструментов
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 23a13bba531e4faaedba2b87efd4dc2647a11026
+ms.contentlocale: ru-ru
+ms.lasthandoff: 09/12/2017
 
-В этом разделе описываются основные принципы реализации MFC, которая позволяет добавить панель инструментов по умолчанию в приложение, выбрав параметр в мастере приложений.  В разделе рассматриваются следующие вопросы:  
+---
+# <a name="toolbar-fundamentals"></a>Toolbar Fundamentals
+This article describes the fundamental MFC implementation that lets you add a default toolbar to your application by selecting an option in the Application Wizard. Topics covered include:  
   
--   [Параметр " мастера приложений](#_core_the_appwizard_toolbar_option)  
+-   [The Application Wizard toolbar option](#_core_the_appwizard_toolbar_option)  
   
--   [Панель инструментов в коде](#_core_the_toolbar_in_code)  
+-   [The toolbar in code](#_core_the_toolbar_in_code)  
   
--   [Изменение ресурса "](#_core_editing_the_toolbar_resource)  
+-   [Editing the toolbar resource](#_core_editing_the_toolbar_resource)  
   
--   [Несколько панелей инструментов](#_core_multiple_toolbars)  
+-   [Multiple toolbars](#_core_multiple_toolbars)  
   
-##  <a name="_core_the_appwizard_toolbar_option"></a> Параметр панели инструментов мастера приложений  
- Чтобы получить один панель инструментов с кнопками по умолчанию выберите стандартный параметр панели закрепления на странице с меткой функциями интерфейса пользователя.  Это позволяет добавить код в приложение, которые:  
+##  <a name="_core_the_appwizard_toolbar_option"></a> The Application Wizard Toolbar Option  
+ To get a single toolbar with default buttons, select the Standard Docking toolbar option on the page labeled User Interface Features. This adds code to your application that:  
   
--   Создает объект ".  
+-   Creates the toolbar object.  
   
--   Элемент управления панели инструментов, включая его возможности закрепление или плыть.  
+-   Manages the toolbar, including its ability to dock or to float.  
   
-##  <a name="_core_the_toolbar_in_code"></a> Панель инструментов в коде  
- Панель инструментов объект [CToolBar](../mfc/reference/ctoolbar-class.md) объявлен как члена данных класса **CMainFrame** приложения.  Другими словами, объект инструмента внедряется в основном объекте фреймового окна.  Это означает, что MFC создает инструмент при создании фреймовое окно и удаляет инструмент, когда он уничтожает фреймовое окно.  Следующее объявление разделяемого класса, \(MDI\) для приложения с многооконным интерфейсом, показаны элементы данных для внутреннего панели инструментов и внедренной строки состояния.  Также показаны переопределить функцию\-член `OnCreate`.  
+##  <a name="_core_the_toolbar_in_code"></a> The Toolbar in Code  
+ The toolbar is a [CToolBar](../mfc/reference/ctoolbar-class.md) object declared as a data member of your application's **CMainFrame** class. In other words, the toolbar object is embedded in the main frame window object. This means that MFC creates the toolbar when it creates the frame window and destroys the toolbar when it destroys the frame window. The following partial class declaration, for a multiple document interface (MDI) application, shows data members for an embedded toolbar and an embedded status bar. It also shows the override of the `OnCreate` member function.  
   
- [!code-cpp[NVC_MFCListView#6](../mfc/codesnippet/CPP/toolbar-fundamentals_1.h)]  
+ [!code-cpp[NVC_MFCListView#6](../atl/reference/codesnippet/cpp/toolbar-fundamentals_1.h)]  
   
- Создание панели инструментов происходит в **CMainFrame::OnCreate**.  MFC вызывает [OnCreate](../Topic/CWnd::OnCreate.md) после создания окно для кадра, но до того, как он станет видимым.  По умолчанию `OnCreate`, мастер приложений возникает инструмента выполняет следующие задачи:  
+ Toolbar creation occurs in **CMainFrame::OnCreate**. MFC calls [OnCreate](../mfc/reference/cwnd-class.md#oncreate) after creating the window for the frame but before it becomes visible. The default `OnCreate` that the Application Wizard generates does the following toolbar tasks:  
   
-1.  Вызывает функцию\-член [Создать](../Topic/CToolBar::Create.md) объекта `CToolBar` для создания основной объект [CToolBarCtrl](../mfc/reference/ctoolbarctrl-class.md).  
+1.  Calls the `CToolBar` object's [Create](../mfc/reference/ctoolbar-class.md#create) member function to create the underlying [CToolBarCtrl](../mfc/reference/ctoolbarctrl-class.md) object.  
   
-2.  Вызывает метод [LoadToolBar](../Topic/CToolBar::LoadToolBar.md), чтобы загрузить сведения о ресурсе инструмента.  
+2.  Calls [LoadToolBar](../mfc/reference/ctoolbar-class.md#loadtoolbar) to load the toolbar resource information.  
   
-3.  Вызывает функции, чтобы включить закрепление, плавать и всплывающие подсказки.  Дополнительные сведения об этих вызовах см. в статье [Усечение и панели инструментов с плавающей запятой](../mfc/docking-and-floating-toolbars.md).  
+3.  Calls functions to enable docking, floating, and tool tips. For details about these calls, see the article [Docking and Floating Toolbars](../mfc/docking-and-floating-toolbars.md).  
   
 > [!NOTE]
->  В примере MFC [DOCKTOOL](../top/visual-cpp-samples.md) общий включает рисунки и старых и новых инструментов MFC.  Инструменты, использующих **COldToolbar** требуется вызовов в шаге 2, с `LoadBitmap` \(а не `LoadToolBar`\) и в `SetButtons`.  Новые средства для вызовов `LoadToolBar`.  
+>  The MFC General sample [DOCKTOOL](../visual-cpp-samples.md) includes illustrations of both old and new MFC toolbars. The toolbars that use **COldToolbar** require calls in step 2 to `LoadBitmap` (rather than `LoadToolBar`) and to `SetButtons`. The new toolbars require calls to `LoadToolBar`.  
   
- Закрепление, плавать и вызовы всплывающих подсказок необязательно.  Можно удалить эти линии из `OnCreate` при необходимости.  Результат инструмент, остается неизменным, неспособным плыть или redock и не удается отобразить всплывающих подсказок.  
+ The docking, floating, and tool tips calls are optional. You can remove those lines from `OnCreate` if you prefer. The result is a toolbar that remains fixed, unable to float or redock and unable to display tool tips.  
   
-##  <a name="_core_editing_the_toolbar_resource"></a> Редактирование ресурс панели инструментов  
- Панель инструментов по умолчанию можно получить с помощью мастера приложений на основе пользовательского ресурсе **RT\_TOOLBAR**, введенном в MFC версии 4.0.  Можно правка этот ресурс с [редактор панели инструментов](../mfc/toolbar-editor.md).  Редактор позволяет легко добавление, удаление и изменение кнопки.  Он содержит графический редактор для кнопок, очень похож на общий редактор графики в Visual C\+\+.  Если редактируется инструментов в предыдущих версиях Visual C\+\+, вы найдете задача гораздо проще.  
+##  <a name="_core_editing_the_toolbar_resource"></a> Editing the Toolbar Resource  
+ The default toolbar you get with the Application Wizard is based on an **RT_TOOLBAR** custom resource, introduced in MFC version 4.0. You can edit this resource with the [toolbar editor](../windows/toolbar-editor.md). The editor lets you easily add, delete, and rearrange buttons. It contains a graphical editor for the buttons that is very similar to the general graphics editor in Visual C++. If you edited toolbars in previous versions of Visual C++, you'll find the task much easier now.  
   
- Для подключения кнопки панели инструментов в команде следует присвоить кнопке идентификатор команды такие как `ID_MYCOMMAND`.  Укажите идентификатор команды на странице свойств кнопки панели инструментов в редакторе.  Затем создайте функцию обработчика событий для команды \(дополнительные сведения см. в разделе [Сообщения сопоставления в функции](../Topic/Mapping%20Messages%20to%20Functions.md) \).  
+ To connect a toolbar button to a command, you give the button a command ID, such as `ID_MYCOMMAND`. Specify the command ID in the button's property page in the toolbar editor. Then create a handler function for the command (see [Mapping Messages to Functions](../mfc/reference/mapping-messages-to-functions.md) for more information).  
   
- Новый рабочий функций\-членов [CToolBar](../mfc/reference/ctoolbar-class.md) с ресурсом **RT\_TOOLBAR**.  [LoadToolBar](../Topic/CToolBar::LoadToolBar.md) теперь заменяет [LoadBitmap](../Topic/CToolBar::LoadBitmap.md) для загрузки образов растровое изображение кнопки панели инструментов и [SetButtons](../Topic/CToolBar::SetButtons.md), чтобы задать стили кнопки и подключить кнопки с растровым изображением отображает.  
+ New [CToolBar](../mfc/reference/ctoolbar-class.md) member functions work with the **RT_TOOLBAR** resource. [LoadToolBar](../mfc/reference/ctoolbar-class.md#loadtoolbar) now takes the place of [LoadBitmap](../mfc/reference/ctoolbar-class.md#loadbitmap) to load the bitmap of the toolbar button images, and [SetButtons](../mfc/reference/ctoolbar-class.md#setbuttons) to set the button styles and connect buttons with bitmap images.  
   
- Дополнительные сведения об использовании редактора инструмента см. в разделе [Редактор панелей инструментов](../mfc/toolbar-editor.md).  
+ For details about using the toolbar editor, see [Toolbar Editor](../windows/toolbar-editor.md).  
   
-##  <a name="_core_multiple_toolbars"></a> Несколько панелей инструментов  
- Мастер приложений предоставляет с одним панелью инструментов по умолчанию.  Если требуется несколько панели инструментов в приложении, можно смоделировать код для дополнительных инструментов, основанный на коде, созданном мастером для панели инструментов по умолчанию.  
+##  <a name="_core_multiple_toolbars"></a> Multiple Toolbars  
+ The Application Wizard provides you with one default toolbar. If you need more than one toolbar in your application, you can model your code for additional toolbars based on the wizard-generated code for the default toolbar.  
   
- Чтобы отобразить панель инструментов в результате команды, необходимо:  
+ If you want to display a toolbar as the result of a command, you'll need to:  
   
--   Создание нового ресурса с панели инструментов редактора и загрузите его в `OnCreate` с помощью функции\-члена [LoadToolbar](../Topic/CToolBar::LoadToolBar.md).  
+-   Create a new toolbar resource with the toolbar editor and load it in `OnCreate` with the [LoadToolbar](../mfc/reference/ctoolbar-class.md#loadtoolbar) member function.  
   
--   Внедрить новый объект [CToolBar](../mfc/reference/ctoolbar-class.md) в основном классе фреймового окна.  
+-   Embed a new [CToolBar](../mfc/reference/ctoolbar-class.md) object in your main frame window class.  
   
--   Вызывать соответствующие вызовы функций в `OnCreate` для закрепления или плыть панель инструментов, задайте его стили и т д  
+-   Make the appropriate function calls in `OnCreate` to dock or float the toolbar, set its styles, and so on.  
   
-### Дополнительные сведения  
+### <a name="what-do-you-want-to-know-more-about"></a>What do you want to know more about  
   
--   [Реализация панели инструментов MFC \(сведения о средствах\)](../mfc/mfc-toolbar-implementation.md)  
+-   [MFC Toolbar Implementation (overview information on toolbars)](../mfc/mfc-toolbar-implementation.md)  
   
--   [Закрепление и панели инструментов с плавающей запятой](../mfc/docking-and-floating-toolbars.md)  
+-   [Docking and floating toolbars](../mfc/docking-and-floating-toolbars.md)  
   
--   [Всплывающие подсказки панели инструментов](../Topic/Toolbar%20Tool%20Tips.md)  
+-   [Toolbar tool tips](../mfc/toolbar-tool-tips.md)  
   
--   Классы [CToolBar](../mfc/reference/ctoolbar-class.md) и [CToolBarCtrl](../mfc/reference/ctoolbarctrl-class.md)  
+-   The [CToolBar](../mfc/reference/ctoolbar-class.md) and [CToolBarCtrl](../mfc/reference/ctoolbarctrl-class.md) classes  
   
--   [Работа с элементом управления панели инструментов](../Topic/Working%20with%20the%20Toolbar%20Control.md)  
+-   [Working with the toolbar control](../mfc/working-with-the-toolbar-control.md)  
   
--   [С помощью панели инструментов старые](../Topic/Using%20Your%20Old%20Toolbars.md)  
+-   [Using your old toolbars](../mfc/using-your-old-toolbars.md)  
   
-## См. также  
- [Реализация панели инструментов MFC](../mfc/mfc-toolbar-implementation.md)
+## <a name="see-also"></a>See Also  
+ [MFC Toolbar Implementation](../mfc/mfc-toolbar-implementation.md)
+
+

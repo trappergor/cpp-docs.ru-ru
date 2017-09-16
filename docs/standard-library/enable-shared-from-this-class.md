@@ -1,5 +1,5 @@
 ---
-title: "Класс enable_shared_from_this | Документы Майкрософт"
+title: enable_shared_from_this Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -9,7 +9,6 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
-- enable_shared_from_this
 - memory/std::enable_shared_from_this
 dev_langs:
 - C++
@@ -35,17 +34,17 @@ translation.priority.mt:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
-ms.openlocfilehash: bfe398bf4829d6ef86543890bea28a351bcb4a3d
+ms.translationtype: MT
+ms.sourcegitcommit: 5d026c375025b169d5db8445cbb52c0c917b2d8d
+ms.openlocfilehash: 79690ccec24d8efc2f4b3a61bb889fa8ed109483
 ms.contentlocale: ru-ru
-ms.lasthandoff: 04/29/2017
+ms.lasthandoff: 09/09/2017
 
 ---
-# <a name="enablesharedfromthis-class"></a>Класс enable_shared_from_this
-Помогает сформировать `shared_ptr`.  
+# <a name="enablesharedfromthis-class"></a>enable_shared_from_this Class
+Helps generate a `shared_ptr`.  
   
-## <a name="syntax"></a>Синтаксис  
+## <a name="syntax"></a>Syntax  
 ```    
 class enable_shared_from_this {
 public:
@@ -59,34 +58,34 @@ protected:
     ~enable_shared_from_this();
 }; 
 ``` 
-#### <a name="parameters"></a>Параметры  
+#### <a name="parameters"></a>Parameters  
  `Ty`  
- Тип, управляемый общим указателем.  
+ The type controlled by the shared pointer.  
   
-## <a name="remarks"></a>Примечания  
- Объекты, производные от `enable_shared_from_this`, могут использовать методы `shared_from_this` в функциях-членах для создания владельцев [shared_ptr](../standard-library/shared-ptr-class.md) экземпляра, которые владеют им совместно с существующими владельцами `shared_ptr`. В противном случае, если создается новый `shared_ptr` с помощью `this`, он отличается от существующих владельцев `shared_ptr`, что может привести к недействительным ссылкам или к тому, что объект будет удален несколько раз.  
+## <a name="remarks"></a>Remarks  
+ Objects derived from `enable_shared_from_this` can use the `shared_from_this` methods in member functions to create [shared_ptr](../standard-library/shared-ptr-class.md) owners of the instance that share ownership with existing `shared_ptr` owners. Otherwise, if you create a new `shared_ptr` by using `this`, it is distinct from existing `shared_ptr` owners, which can lead to invalid references or cause the object to be deleted more than once.  
   
- Во избежание случайного неправильного использования конструктор, деструктор и оператор присваивания защищены. Тип аргумента шаблона `Ty` должен быть типом производного класса.  
+ The constructors, destructor, and assignment operator are protected to help prevent accidental misuse. The template argument type `Ty` must be the type of the derived class.  
   
- Пример использования см. в разделе [enable_shared_from_this::shared_from_this](#shared_from_this).  
+ For an example of usage, see [enable_shared_from_this::shared_from_this](#shared_from_this).  
   
-## <a name="requirements"></a>Требования  
- **Заголовок:** \<memory>  
+## <a name="requirements"></a>Requirements  
+ **Header:** \<memory>  
   
- **Пространство имен:** std  
+ **Namespace:** std  
   
 ##  <a name="shared_from_this"></a>  enable_shared_from_this::shared_from_this  
- Создает `shared_ptr`, который владеет экземпляром совместно с существующими владельцами `shared_ptr`.  
+ Generates a `shared_ptr` that shares ownership of the instance with existing `shared_ptr` owners.  
   
 ```  
 shared_ptr<T> shared_from_this();
 shared_ptr<const T> shared_from_this() const;
 ```  
   
-### <a name="remarks"></a>Примечания  
- При получении объектов из базового класса `enable_shared_from_this` функции члена шаблона `shared_from_this` возвращают объект [класса shared_ptr](../standard-library/shared-ptr-class.md), владеющий данным экземпляром совместно с существующими владельцами `shared_ptr`. В противном случае, если создается новый `shared_ptr` из `this`, он отличается от существующих владельцев `shared_ptr`, что может привести к недействительным ссылкам или к тому, что объект будет удален несколько раз. Поведение будет неопределенным, если вызвать `shared_from_this` в экземпляре, которым еще не владеет объект `shared_ptr`.  
+### <a name="remarks"></a>Remarks  
+ When you derive objects from the `enable_shared_from_this` base class, the `shared_from_this` template member functions return a [shared_ptr Class](../standard-library/shared-ptr-class.md) object that shares ownership of this instance with existing `shared_ptr` owners. Otherwise, if you create a new `shared_ptr` from `this`, it is distinct from existing `shared_ptr` owners, which can lead to invalid references or cause the object to be deleted more than once. The  behavior is undefined if you call `shared_from_this` on an instance that is not already owned by a `shared_ptr` object.  
   
-### <a name="example"></a>Пример  
+### <a name="example"></a>Example  
   
 ```cpp  
 // std_memory_shared_from_this.cpp   
@@ -120,6 +119,6 @@ int main()
 sp2->val == 3  
 ```  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>See Also  
  [enable_shared_from_this::shared_from_this](#shared_from_this)   
- [Класс shared_ptr](../standard-library/shared-ptr-class.md)
+ [shared_ptr Class](../standard-library/shared-ptr-class.md)

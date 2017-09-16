@@ -1,5 +1,5 @@
 ---
-title: "CMDIFrameWnd-класс | Документы Microsoft"
+title: CMDIFrameWnd Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -28,8 +28,20 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- MDI frame windows
-- CMDIFrameWnd class
+- CMDIFrameWnd [MFC], CMDIFrameWnd
+- CMDIFrameWnd [MFC], CreateClient
+- CMDIFrameWnd [MFC], CreateNewChild
+- CMDIFrameWnd [MFC], GetWindowMenuPopup
+- CMDIFrameWnd [MFC], MDIActivate
+- CMDIFrameWnd [MFC], MDICascade
+- CMDIFrameWnd [MFC], MDIGetActive
+- CMDIFrameWnd [MFC], MDIIconArrange
+- CMDIFrameWnd [MFC], MDIMaximize
+- CMDIFrameWnd [MFC], MDINext
+- CMDIFrameWnd [MFC], MDIPrev
+- CMDIFrameWnd [MFC], MDIRestore
+- CMDIFrameWnd [MFC], MDISetMenu
+- CMDIFrameWnd [MFC], MDITile
 ms.assetid: fa8736e6-511b-4c51-8b4d-eba78378aeb9
 caps.latest.revision: 22
 author: mikeblome
@@ -49,70 +61,70 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 128bd124c2536d86c8b673b54abc4b5505526b41
-ms.openlocfilehash: 8ede1eef9812bb7aa5a1f127ac571f101c40dd29
+ms.translationtype: MT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: d2b4ec4b4a6fde403a42bbc552e8287ca3086ca8
 ms.contentlocale: ru-ru
-ms.lasthandoff: 05/10/2017
+ms.lasthandoff: 09/12/2017
 
 ---
-# <a name="cmdiframewnd-class"></a>CMDIFrameWnd-класс
-Предоставляет функции фреймового окна многодокументного интерфейса Windows (MDI) и элементы для управления окном.  
+# <a name="cmdiframewnd-class"></a>CMDIFrameWnd Class
+Provides the functionality of a Windows multiple document interface (MDI) frame window, along with members for managing the window.  
   
-## <a name="syntax"></a>Синтаксис  
+## <a name="syntax"></a>Syntax  
   
 ```  
 class CMDIFrameWnd : public CFrameWnd  
 ```  
   
-## <a name="members"></a>Члены  
+## <a name="members"></a>Members  
   
-### <a name="public-constructors"></a>Открытые конструкторы  
+### <a name="public-constructors"></a>Public Constructors  
   
-|Имя|Описание|  
+|Name|Description|  
 |----------|-----------------|  
-|[CMDIFrameWnd::CMDIFrameWnd](#cmdiframewnd)|Создает документ `CMDIFrameWnd`.|  
+|[CMDIFrameWnd::CMDIFrameWnd](#cmdiframewnd)|Constructs a `CMDIFrameWnd`.|  
   
-### <a name="public-methods"></a>Открытые методы  
+### <a name="public-methods"></a>Public Methods  
   
-|Имя|Описание|  
+|Name|Description|  
 |----------|-----------------|  
-|[CMDIFrameWnd::CreateClient](#createclient)|Создается Windows **MDICLIENT** окна для этого `CMDIFrameWnd`. Вызывается методом `OnCreate` функции-члена `CWnd`.|  
-|[CMDIFrameWnd::CreateNewChild](#createnewchild)|Создает новое дочернее окно.|  
-|[CMDIFrameWnd::GetWindowMenuPopup](#getwindowmenupopup)|Возвращает окно во всплывающем меню.|  
-|[CMDIFrameWnd::MDIActivate](#mdiactivate)|Активирует другого дочернего окна MDI.|  
-|[CMDIFrameWnd::MDICascade](#mdicascade)|Упорядочивает все дочерние окна каскадом формат.|  
-|[CMDIFrameWnd::MDIGetActive](#mdigetactive)|Извлекает текущий активный дочернего окна MDI, а также флаг, указывающий, ли дочерние развернуто.|  
-|[CMDIFrameWnd::MDIIconArrange](#mdiiconarrange)|Упорядочивает все свернутые документа дочерние окна.|  
-|[CMDIFrameWnd::MDIMaximize](#mdimaximize)|Развертывает дочернего окна MDI.|  
-|[CMDIFrameWnd::MDINext](#mdinext)|Активирует дочернее окно сразу же за текущей активной дочернее окно и помещает в данный момент активное дочернее окно за все дочерние окна.|  
-|[CMDIFrameWnd::MDIPrev](#mdiprev)|Активирует предыдущих дочернее окно и помещает активного дочернего окна непосредственно под ним.|  
-|[CMDIFrameWnd::MDIRestore](#mdirestore)|Восстанавливает дочернего окна MDI из развернутого или свернутого размер.|  
-|[CMDIFrameWnd::MDISetMenu](#mdisetmenu)|Заменяет окне фрейма MDI в меню и окна во всплывающем меню.|  
-|[CMDIFrameWnd::MDITile](#mditile)|Упорядочивает все дочерние окна в формате мозаики.|  
+|[CMDIFrameWnd::CreateClient](#createclient)|Creates a Windows **MDICLIENT** window for this `CMDIFrameWnd`. Called by the `OnCreate` member function of `CWnd`.|  
+|[CMDIFrameWnd::CreateNewChild](#createnewchild)|Creates a new child window.|  
+|[CMDIFrameWnd::GetWindowMenuPopup](#getwindowmenupopup)|Returns the Window pop-up menu.|  
+|[CMDIFrameWnd::MDIActivate](#mdiactivate)|Activates a different MDI child window.|  
+|[CMDIFrameWnd::MDICascade](#mdicascade)|Arranges all child windows in a cascaded format.|  
+|[CMDIFrameWnd::MDIGetActive](#mdigetactive)|Retrieves the currently active MDI child window, along with a flag indicating whether or not the child is maximized.|  
+|[CMDIFrameWnd::MDIIconArrange](#mdiiconarrange)|Arranges all minimized document child windows.|  
+|[CMDIFrameWnd::MDIMaximize](#mdimaximize)|Maximizes an MDI child window.|  
+|[CMDIFrameWnd::MDINext](#mdinext)|Activates the child window immediately behind the currently active child window and places the currently active child window behind all other child windows.|  
+|[CMDIFrameWnd::MDIPrev](#mdiprev)|Activates the previous child window and places the currently active child window immediately behind it.|  
+|[CMDIFrameWnd::MDIRestore](#mdirestore)|Restores an MDI child window from maximized or minimized size.|  
+|[CMDIFrameWnd::MDISetMenu](#mdisetmenu)|Replaces the menu of an MDI frame window, the Window pop-up menu, or both.|  
+|[CMDIFrameWnd::MDITile](#mditile)|Arranges all child windows in a tiled format.|  
   
-## <a name="remarks"></a>Примечания  
- Чтобы создать полезные окно области MDI для приложения, создайте класс, производный от `CMDIFrameWnd`. Добавьте переменные-члены в производный класс для хранения данных, относящихся к конкретному приложению. Реализуйте в производном классе функции-члены обработчика сообщений и схему сообщений, чтобы указать, что происходит, когда сообщения направляются в окно.  
+## <a name="remarks"></a>Remarks  
+ To create a useful MDI frame window for your application, derive a class from `CMDIFrameWnd`. Add member variables to the derived class to store data specific to your application. Implement message-handler member functions and a message map in the derived class to specify what happens when messages are directed to the window.  
   
- Окно области MDI можно создать путем вызова [создать](../../mfc/reference/cframewnd-class.md#create) или [LoadFrame](../../mfc/reference/cframewnd-class.md#loadframe) функции-члена `CFrameWnd`.  
+ You can construct an MDI frame window by calling the [Create](../../mfc/reference/cframewnd-class.md#create) or [LoadFrame](../../mfc/reference/cframewnd-class.md#loadframe) member function of `CFrameWnd`.  
   
- Перед вызовом метода **создать** или `LoadFrame`, следует создать объект окна фрейма в куче, с помощью C++ **новый** оператор. Перед вызовом метода **создать** можно также зарегистрировать класс окна с [AfxRegisterWndClass](application-information-and-management.md#afxregisterwndclass) глобальной функции, чтобы задать значок и класс стили рамки.  
+ Before you call **Create** or `LoadFrame`, you must construct the frame window object on the heap using the C++ **new** operator. Before calling **Create** you can also register a window class with the [AfxRegisterWndClass](application-information-and-management.md#afxregisterwndclass) global function to set the icon and class styles for the frame.  
   
- Используйте **создать** функции-члена для передачи как интерпретации аргументов параметры создания фрейма.  
+ Use the **Create** member function to pass the frame's creation parameters as immediate arguments.  
   
- `LoadFrame`требуется меньшее количество аргументов, чем **создать**и вместо этого извлекает большую часть значений по умолчанию из ресурсов, включая заголовок, значок, таблицу сочетаний клавиш и меню опорного кадра. Доступ к `LoadFrame`, все эти ресурсы должны иметь один и тот же идентификатор ресурса (например, **IDR_MAINFRAME**).  
+ `LoadFrame` requires fewer arguments than **Create**, and instead retrieves most of its default values from resources, including the frame's caption, icon, accelerator table, and menu. To be accessed by `LoadFrame`, all these resources must have the same resource ID (for example, **IDR_MAINFRAME**).  
   
- Хотя **MDIFrameWnd** является производным от `CFrameWnd`, класс окна фрейма, производный от `CMDIFrameWnd` не требуется объявлять с `DECLARE_DYNCREATE`.  
+ Though **MDIFrameWnd** is derived from `CFrameWnd`, a frame window class derived from `CMDIFrameWnd` need not be declared with `DECLARE_DYNCREATE`.  
   
- `CMDIFrameWnd` Класс наследует большую часть его реализация по умолчанию из `CFrameWnd`. Подробный список этих функций см. в разделе [CFrameWnd](../../mfc/reference/cframewnd-class.md) Описание класса. `CMDIFrameWnd` Класс имеет следующие дополнительные возможности:  
+ The `CMDIFrameWnd` class inherits much of its default implementation from `CFrameWnd`. For a detailed list of these features, refer to the [CFrameWnd](../../mfc/reference/cframewnd-class.md) class description. The `CMDIFrameWnd` class has the following additional features:  
   
--   Управляет окне фрейма MDI **MDICLIENT** окна, изменения положения его вместе с панели элементов управления. Клиентское MDI окно является непосредственным родительским кадра дочерние MDI-окна. **WS_HSCROLL** и **WS_VSCROLL** окна стили, заданные на `CMDIFrameWnd` применяются к клиентское MDI окно вместо фрейма главного окна, поэтому пользователь может воспользоваться прокруткой клиентской области MDI (как программы Диспетчер Windows, например).  
+-   An MDI frame window manages the **MDICLIENT** window, repositioning it in conjunction with control bars. The MDI client window is the direct parent of MDI child frame windows. The **WS_HSCROLL** and **WS_VSCROLL** window styles specified on a `CMDIFrameWnd` apply to the MDI client window rather than the main frame window so the user can scroll the MDI client area (as in the Windows Program Manager, for example).  
   
--   Окно области MDI владеет меню по умолчанию, которое используется в качестве строки меню, при наличии не активную дочернюю MDI. При наличии активной дочерней формы MDI, окно области MDI меню автоматически заменяется окно дочернего меню MDI.  
+-   An MDI frame window owns a default menu that is used as the menu bar when there is no active MDI child window. When there is an active MDI child, the MDI frame window's menu bar is automatically replaced by the MDI child window menu.  
   
--   Окно области MDI работает совместно с текущее дочернее окно MDI-приложения, если таковой имеется. Для экземпляра сообщения команд, делегируются в текущей активной дочерней MDI-формы перед окно области MDI.  
+-   An MDI frame window works in conjunction with the current MDI child window, if there is one. For instance, command messages are delegated to the currently active MDI child before the MDI frame window.  
   
--   Окно области MDI содержит обработчики событий по умолчанию для следующих стандартных команд меню окна:  
+-   An MDI frame window has default handlers for the following standard Window menu commands:  
   
     - **ID_WINDOW_TILE_VERT**  
   
@@ -122,13 +134,13 @@ class CMDIFrameWnd : public CFrameWnd
   
     - **ID_WINDOW_ARRANGE**  
   
--   Окно области MDI, также содержит реализацию **ID_WINDOW_NEW**, которая создает новый фрейм и представление в текущем документе. Приложение может переопределить эти реализации по умолчанию команды для настройки обработки окна MDI.  
+-   An MDI frame window also has an implementation of **ID_WINDOW_NEW**, which creates a new frame and view on the current document. An application can override these default command implementations to customize MDI window handling.  
   
- Не используйте C++ **удалить** оператор для уничтожения окна фрейма. Взамен рекомендуется использовать `CWnd::DestroyWindow` . `CFrameWnd` Реализация `PostNcDestroy` приведет к удалению объекта C++ при уничтожении окна. Когда пользователь закрывает окно фрейма, значение по умолчанию `OnClose` обработчик вызовет `DestroyWindow`.  
+ Do not use the C++ **delete** operator to destroy a frame window. Use `CWnd::DestroyWindow` instead. The `CFrameWnd` implementation of `PostNcDestroy` will delete the C++ object when the window is destroyed. When the user closes the frame window, the default `OnClose` handler will call `DestroyWindow`.  
   
- Дополнительные сведения о `CMDIFrameWnd`, в разделе [фреймов](../../mfc/frame-windows.md).  
+ For more information on `CMDIFrameWnd`, see [Frame Windows](../../mfc/frame-windows.md).  
   
-## <a name="inheritance-hierarchy"></a>Иерархия наследования  
+## <a name="inheritance-hierarchy"></a>Inheritance Hierarchy  
  [CObject](../../mfc/reference/cobject-class.md)  
   
  [CCmdTarget](../../mfc/reference/ccmdtarget-class.md)  
@@ -139,24 +151,24 @@ class CMDIFrameWnd : public CFrameWnd
   
  `CMDIFrameWnd`  
   
-## <a name="requirements"></a>Требования  
- **Заголовок:** afxwin.h  
+## <a name="requirements"></a>Requirements  
+ **Header:** afxwin.h  
   
-##  <a name="cmdiframewnd"></a>CMDIFrameWnd::CMDIFrameWnd  
- Создает объект `CMDIFrameWnd`.  
+##  <a name="cmdiframewnd"></a>  CMDIFrameWnd::CMDIFrameWnd  
+ Constructs a `CMDIFrameWnd` object.  
   
 ```  
 CMDIFrameWnd();
 ```  
   
-### <a name="remarks"></a>Примечания  
- Вызовите **создать** или `LoadFrame` функции-члена для создания отображается окно области MDI.  
+### <a name="remarks"></a>Remarks  
+ Call the **Create** or `LoadFrame` member function to create the visible MDI frame window.  
   
-### <a name="example"></a>Пример  
- [!code-cpp[NVC_MFCWindowing #13](../../mfc/reference/codesnippet/cpp/cmdiframewnd-class_1.cpp)]  
+### <a name="example"></a>Example  
+ [!code-cpp[NVC_MFCWindowing#13](../../mfc/reference/codesnippet/cpp/cmdiframewnd-class_1.cpp)]  
   
-##  <a name="createclient"></a>CMDIFrameWnd::CreateClient  
- Создает клиентское MDI окно, который управляет `CMDIChildWnd` объектов.  
+##  <a name="createclient"></a>  CMDIFrameWnd::CreateClient  
+ Creates the MDI client window that manages the `CMDIChildWnd` objects.  
   
 ```  
 virtual BOOL CreateClient(
@@ -164,24 +176,24 @@ virtual BOOL CreateClient(
     CMenu* pWindowMenu);
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
  `lpCreateStruct`  
- Длинный указатель [CREATESTRUCT](../../mfc/reference/createstruct-structure.md) структуры.  
+ A long pointer to a [CREATESTRUCT](../../mfc/reference/createstruct-structure.md) structure.  
   
  `pWindowMenu`  
- Указатель на окно во всплывающем меню.  
+ A pointer to the Window pop-up menu.  
   
-### <a name="return-value"></a>Возвращаемое значение  
- Имеет ненулевое значение в случае успешного выполнения, иначе — 0.  
+### <a name="return-value"></a>Return Value  
+ Nonzero if successful; otherwise 0.  
   
-### <a name="remarks"></a>Примечания  
- Эта функция-член должен вызываться при переопределении `OnCreate` непосредственно функции-члена.  
+### <a name="remarks"></a>Remarks  
+ This member function should be called if you override the `OnCreate` member function directly.  
   
-### <a name="example"></a>Пример  
- [!code-cpp[NVC_MFCWindowing #14](../../mfc/reference/codesnippet/cpp/cmdiframewnd-class_2.cpp)]  
+### <a name="example"></a>Example  
+ [!code-cpp[NVC_MFCWindowing#14](../../mfc/reference/codesnippet/cpp/cmdiframewnd-class_2.cpp)]  
   
-##  <a name="createnewchild"></a>CMDIFrameWnd::CreateNewChild  
- Создает новое дочернее окно.  
+##  <a name="createnewchild"></a>  CMDIFrameWnd::CreateNewChild  
+ Creates a new child window.  
   
 ```  
 CMDIChildWnd* CreateNewChild(
@@ -191,177 +203,177 @@ CMDIChildWnd* CreateNewChild(
     HACCEL hAccel = NULL);
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
  `pClass`  
- Класс среды выполнения дочернего окна должен быть создан.  
+ The run-time class of the child window to be created.  
   
  *nResource*  
- Идентификатор общие ресурсы, связанные с дочернего окна.  
+ The ID of shared resources associated with the child window.  
   
  `hMenu`  
- Меню дочернего окна.  
+ The child window's menu.  
   
  `hAccel`  
- Дочернее окно сочетаний клавиш.  
+ The child window's accelerator.  
   
-### <a name="remarks"></a>Примечания  
- Эта функция создавать дочерние окна MDI рамки окна.  
+### <a name="remarks"></a>Remarks  
+ Use this function to create child windows of an MDI frame window.  
   
-### <a name="example"></a>Пример  
- [!code-cpp[NVC_MFCWindowing #15](../../mfc/reference/codesnippet/cpp/cmdiframewnd-class_3.cpp)]  
+### <a name="example"></a>Example  
+ [!code-cpp[NVC_MFCWindowing#15](../../mfc/reference/codesnippet/cpp/cmdiframewnd-class_3.cpp)]  
   
- В этом примере показан фрагмент кода из статьи базы знаний Q201045, «Практическое руководство: добавлять несколько типов окна MDI Non-документ/представление приложения.» Статьи базы знаний можно найти по адресу [http://support.microsoft.com](http://support.microsoft.com/).  
+ This example is an excerpt from Knowledge Base article Q201045, "HOWTO: Add Multiple Window Types to a Non-Document/View MDI App." Knowledge Base articles are available at [http://support.microsoft.com](http://support.microsoft.com/).  
   
-##  <a name="getwindowmenupopup"></a>CMDIFrameWnd::GetWindowMenuPopup  
- Вызовите эту функцию-член для получения дескриптора текущего всплывающего меню «Окно» (всплывающее меню с элементами для управления окном MDI) с именем.  
+##  <a name="getwindowmenupopup"></a>  CMDIFrameWnd::GetWindowMenuPopup  
+ Call this member function to obtain a handle to the current pop-up menu named "Window" (the pop-up menu with menu items for MDI window management).  
   
 ```  
 virtual HMENU GetWindowMenuPopup(HMENU hMenuBar);
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
  *hMenuBar*  
- В текущем меню.  
+ The current menu bar.  
   
-### <a name="return-value"></a>Возвращаемое значение  
- Окно всплывающего меню, если один существует; в противном случае **NULL**.  
+### <a name="return-value"></a>Return Value  
+ The Window pop-up menu if one exists; otherwise **NULL**.  
   
-### <a name="remarks"></a>Примечания  
- Реализация по умолчанию ищет всплывающего меню, например, содержащий стандартные команды меню "окно" **ID_WINDOW_NEW** и **ID_WINDOW_TILE_HORZ**.  
+### <a name="remarks"></a>Remarks  
+ The default implementation looks for a pop-up menu containing standard Window menu commands such as **ID_WINDOW_NEW** and **ID_WINDOW_TILE_HORZ**.  
   
- Переопределите эту функцию-член, если у вас есть меню окна, которые не используют идентификаторы команд меню «Стандартная».  
+ Override this member function if you have a Window menu that does not use the standard menu command IDs.  
   
-### <a name="example"></a>Пример  
- [!code-cpp[NVC_MFCWindowing № 16](../../mfc/reference/codesnippet/cpp/cmdiframewnd-class_4.cpp)]  
+### <a name="example"></a>Example  
+ [!code-cpp[NVC_MFCWindowing#16](../../mfc/reference/codesnippet/cpp/cmdiframewnd-class_4.cpp)]  
   
-##  <a name="mdiactivate"></a>CMDIFrameWnd::MDIActivate  
- Активирует другого дочернего окна MDI.  
+##  <a name="mdiactivate"></a>  CMDIFrameWnd::MDIActivate  
+ Activates a different MDI child window.  
   
 ```  
 void MDIActivate(CWnd* pWndActivate);
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
  *pWndActivate*  
- Указывает дочернего окна MDI, необходимо активировать.  
+ Points to the MDI child window to be activated.  
   
-### <a name="remarks"></a>Примечания  
- Эта функция-член отправляет [WM_MDIACTIVATE](../../mfc/reference/cwnd-class.md#onmdiactivate) сообщений дочернего окна активации и дочернее окно быть активным.  
+### <a name="remarks"></a>Remarks  
+ This member function sends the [WM_MDIACTIVATE](../../mfc/reference/cwnd-class.md#onmdiactivate) message to both the child window being activated and the child window being deactivated.  
   
- Это же сообщение отправляется при перемещении пользователем фокуса на дочернего окна MDI с помощью мыши или клавиатуры.  
+ This is the same message that is sent if the user changes the focus to an MDI child window by using the mouse or keyboard.  
   
 > [!NOTE]
->  Независимо от окно области MDI активации дочернего окна MDI. Когда кадр становится активным, дочернее окно, последний раз была активирована отправляется [WM_NCACTIVATE](../../mfc/reference/cwnd-class.md#onncactivate) сообщений для отрисовки активного окна фрейма и строки заголовка, но не принимаются `WM_MDIACTIVATE` сообщения.  
+>  An MDI child window is activated independently of the MDI frame window. When the frame becomes active, the child window that was last activated is sent a [WM_NCACTIVATE](../../mfc/reference/cwnd-class.md#onncactivate) message to draw an active window frame and caption bar, but it does not receive another `WM_MDIACTIVATE` message.  
   
-### <a name="example"></a>Пример  
- Далее приведен пример [CMDIFrameWnd::GetWindowMenuPopup](#getwindowmenupopup).  
+### <a name="example"></a>Example  
+ See the example for [CMDIFrameWnd::GetWindowMenuPopup](#getwindowmenupopup).  
   
-##  <a name="mdicascade"></a>CMDIFrameWnd::MDICascade  
- Упорядочивает все дочерние окна MDI в формате cascade.  
+##  <a name="mdicascade"></a>  CMDIFrameWnd::MDICascade  
+ Arranges all the MDI child windows in a cascade format.  
   
 ```  
 void MDICascade();  
 void MDICascade(int nType);
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
  `nType`  
- Задает флаг cascade. Можно указать только следующий флаг: `MDITILE_SKIPDISABLED`, что предотвращает каскадно отключенные дочерние окна MDI.  
+ Specifies a cascade flag. Only the following flag can be specified: `MDITILE_SKIPDISABLED`, which prevents disabled MDI child windows from being cascaded.  
   
-### <a name="remarks"></a>Примечания  
- В первой версии `MDICascade`, без параметров каскадным образом распространяется всех дочерних MDI-окон, включая отключена из них. Вторая версия (необязательно) не отключена cascade дочерних MDI-окон Если не указать `MDITILE_SKIPDISABLED` для `nType` параметра.  
+### <a name="remarks"></a>Remarks  
+ The first version of `MDICascade`, with no parameters, cascades all MDI child windows, including disabled ones. The second version optionally does not cascade disabled MDI child windows if you specify `MDITILE_SKIPDISABLED` for the `nType` parameter.  
   
-### <a name="example"></a>Пример  
- [!code-cpp[NVC_MFCWindowing 17](../../mfc/reference/codesnippet/cpp/cmdiframewnd-class_5.cpp)]  
+### <a name="example"></a>Example  
+ [!code-cpp[NVC_MFCWindowing#17](../../mfc/reference/codesnippet/cpp/cmdiframewnd-class_5.cpp)]  
   
-##  <a name="mdigetactive"></a>CMDIFrameWnd::MDIGetActive  
- Извлекает текущий активную дочернюю MDI, а также флаг, указывающий, развернута ли дочернего окна.  
+##  <a name="mdigetactive"></a>  CMDIFrameWnd::MDIGetActive  
+ Retrieves the current active MDI child window, along with a flag indicating whether the child window is maximized.  
   
 ```  
 CMDIChildWnd* MDIGetActive(BOOL* pbMaximized = NULL) const;  
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
  *pbMaximized*  
- Указатель на **BOOL** возвращаемое значение. Значение **TRUE** при возвращении, если это окно находится в развернутом состоянии; в противном случае **FALSE**.  
+ A pointer to a **BOOL** return value. Set to **TRUE** on return if the window is maximized; otherwise **FALSE**.  
   
-### <a name="return-value"></a>Возвращаемое значение  
- Указатель на активное дочернее окно MDI.  
+### <a name="return-value"></a>Return Value  
+ A pointer to the active MDI child window.  
   
-### <a name="example"></a>Пример  
- Далее приведен пример [CMDIChildWnd::MDIMaximize](../../mfc/reference/cmdichildwnd-class.md#mdimaximize).  
+### <a name="example"></a>Example  
+ See the example for [CMDIChildWnd::MDIMaximize](../../mfc/reference/cmdichildwnd-class.md#mdimaximize).  
   
-##  <a name="mdiiconarrange"></a>CMDIFrameWnd::MDIIconArrange  
- Упорядочивает все свернутые документа дочерние окна.  
+##  <a name="mdiiconarrange"></a>  CMDIFrameWnd::MDIIconArrange  
+ Arranges all minimized document child windows.  
   
 ```  
 void MDIIconArrange();
 ```  
   
-### <a name="remarks"></a>Примечания  
- Он не влияет на дочерние окна, которые не сворачиваются.  
+### <a name="remarks"></a>Remarks  
+ It does not affect child windows that are not minimized.  
   
-### <a name="example"></a>Пример  
- Далее приведен пример [CMDIFrameWnd::MDICascade](#mdicascade).  
+### <a name="example"></a>Example  
+ See the example for [CMDIFrameWnd::MDICascade](#mdicascade).  
   
-##  <a name="mdimaximize"></a>CMDIFrameWnd::MDIMaximize  
- Развертывает указанного дочернего окна MDI.  
+##  <a name="mdimaximize"></a>  CMDIFrameWnd::MDIMaximize  
+ Maximizes the specified MDI child window.  
   
 ```  
 void MDIMaximize(CWnd* pWnd);
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
  `pWnd`  
- Указатель на окно, чтобы максимально увеличить.  
+ Points to the window to maximize.  
   
-### <a name="remarks"></a>Примечания  
- Когда оно развернуто дочернее окно Windows изменяет его, чтобы изменения клиентской области заполнения в окне клиента. Windows помещает дочернего окна элемента управления меню в строке меню фрейма, пользователь имеет возможность восстановления и закрытия дочернего окна. Он также добавляет заголовок дочернего окна с заголовком окна фрейма.  
+### <a name="remarks"></a>Remarks  
+ When a child window is maximized, Windows resizes it to make its client area fill the client window. Windows places the child window's Control menu in the frame's menu bar so the user can restore or close the child window. It also adds the title of the child window to the frame-window title.  
   
- Если другой дочернее окно MDI активируется, когда оно развернуто дочернее окно текущего активного интерфейса MDI, Windows восстанавливает текущей активной дочерней и повышает вновь активированные дочернего окна.  
+ If another MDI child window is activated when the currently active MDI child window is maximized, Windows restores the currently active child and maximizes the newly activated child window.  
   
-### <a name="example"></a>Пример  
- Далее приведен пример [CMDIChildWnd::MDIMaximize](../../mfc/reference/cmdichildwnd-class.md#mdimaximize).  
+### <a name="example"></a>Example  
+ See the example for [CMDIChildWnd::MDIMaximize](../../mfc/reference/cmdichildwnd-class.md#mdimaximize).  
   
-##  <a name="mdinext"></a>CMDIFrameWnd::MDINext  
- Активирует дочернее окно сразу же за текущей активной дочернее окно и помещает в данный момент активное дочернее окно за все дочерние окна.  
+##  <a name="mdinext"></a>  CMDIFrameWnd::MDINext  
+ Activates the child window immediately behind the currently active child window and places the currently active child window behind all other child windows.  
   
 ```  
 void MDINext();
 ```  
   
-### <a name="remarks"></a>Примечания  
- Если развернуто дочернее окно текущего активного интерфейса MDI, функция-член восстанавливает текущей активной дочерней и повышает вновь активированные дочерних.  
+### <a name="remarks"></a>Remarks  
+ If the currently active MDI child window is maximized, the member function restores the currently active child and maximizes the newly activated child.  
   
-### <a name="example"></a>Пример  
- [!code-cpp[NVC_MFCWindowing 18](../../mfc/reference/codesnippet/cpp/cmdiframewnd-class_6.cpp)]  
+### <a name="example"></a>Example  
+ [!code-cpp[NVC_MFCWindowing#18](../../mfc/reference/codesnippet/cpp/cmdiframewnd-class_6.cpp)]  
   
-##  <a name="mdiprev"></a>CMDIFrameWnd::MDIPrev  
- Активирует предыдущих дочернее окно и помещает активного дочернего окна непосредственно под ним.  
+##  <a name="mdiprev"></a>  CMDIFrameWnd::MDIPrev  
+ Activates the previous child window and places the currently active child window immediately behind it.  
   
 ```  
 void MDIPrev();
 ```  
   
-### <a name="remarks"></a>Примечания  
- Если развернуто дочернее окно текущего активного интерфейса MDI, функция-член восстанавливает текущей активной дочерней и повышает вновь активированные дочерних.  
+### <a name="remarks"></a>Remarks  
+ If the currently active MDI child window is maximized, the member function restores the currently active child and maximizes the newly activated child.  
   
-##  <a name="mdirestore"></a>CMDIFrameWnd::MDIRestore  
- Восстанавливает дочернего окна MDI из развернутого или свернутого размер.  
+##  <a name="mdirestore"></a>  CMDIFrameWnd::MDIRestore  
+ Restores an MDI child window from maximized or minimized size.  
   
 ```  
 void MDIRestore(CWnd* pWnd);
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
  `pWnd`  
- Указывает для окна, чтобы восстановить.  
+ Points to the window to restore.  
   
-### <a name="example"></a>Пример  
- Далее приведен пример [CMDIChildWnd::MDIRestore](../../mfc/reference/cmdichildwnd-class.md#mdirestore).  
+### <a name="example"></a>Example  
+ See the example for [CMDIChildWnd::MDIRestore](../../mfc/reference/cmdichildwnd-class.md#mdirestore).  
   
-##  <a name="mdisetmenu"></a>CMDIFrameWnd::MDISetMenu  
- Заменяет окне фрейма MDI в меню и окна во всплывающем меню.  
+##  <a name="mdisetmenu"></a>  CMDIFrameWnd::MDISetMenu  
+ Replaces the menu of an MDI frame window, the Window pop-up menu, or both.  
   
 ```  
 CMenu* MDISetMenu(
@@ -369,60 +381,60 @@ CMenu* MDISetMenu(
     CMenu* pWindowMenu);
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
  *pFrameMenu*  
- Задает меню новое меню окна фрейма. Если **NULL**, меню не меняется.  
+ Specifies the menu of the new frame-window menu. If **NULL**, the menu is not changed.  
   
  `pWindowMenu`  
- Задает меню нового окна во всплывающем меню. Если **NULL**, меню не меняется.  
+ Specifies the menu of the new Window pop-up menu. If **NULL**, the menu is not changed.  
   
-### <a name="return-value"></a>Возвращаемое значение  
- Указатель на меню окна фрейма, заменяется это сообщение. Указатель может быть временным. Его не требуется сохранять для дальнейшего использования.  
+### <a name="return-value"></a>Return Value  
+ A pointer to the frame-window menu replaced by this message. The pointer may be temporary and should not be stored for later use.  
   
-### <a name="remarks"></a>Примечания  
- После вызова метода `MDISetMenu`, приложение должно вызвать [DrawMenuBar](../../mfc/reference/cwnd-class.md#drawmenubar) функции-члена `CWnd` для обновления строки меню.  
+### <a name="remarks"></a>Remarks  
+ After calling `MDISetMenu`, an application must call the [DrawMenuBar](../../mfc/reference/cwnd-class.md#drawmenubar) member function of `CWnd` to update the menu bar.  
   
- Если этот вызов заменяет всплывающего меню окна, элементы меню дочернего окна MDI удаляются из предыдущих меню окна и добавлены новые окна во всплывающем меню.  
+ If this call replaces the Window pop-up menu, MDI child-window menu items are removed from the previous Window menu and added to the new Window pop-up menu.  
   
- Если развернуто дочернего окна MDI и этот вызов заменяет меню окна фрейма MDI, элементы управления меню и восстановления удаляются из предыдущих меню окна фрейма и добавлено новое меню.  
+ If an MDI child window is maximized and this call replaces the MDI frame-window menu, the Control menu and restore controls are removed from the previous frame-window menu and added to the new menu.  
   
- Не вызывайте эту функцию-член, если использовать платформу для управления вашей дочерние окна MDI.  
+ Do not call this member function if you use the framework to manage your MDI child windows.  
   
-### <a name="example"></a>Пример  
- [!code-cpp[NVC_MFCWindowing 19](../../mfc/reference/codesnippet/cpp/cmdiframewnd-class_7.cpp)]  
+### <a name="example"></a>Example  
+ [!code-cpp[NVC_MFCWindowing#19](../../mfc/reference/codesnippet/cpp/cmdiframewnd-class_7.cpp)]  
   
- [!code-cpp[NVC_MFCWindowing № 20](../../mfc/reference/codesnippet/cpp/cmdiframewnd-class_8.cpp)]  
+ [!code-cpp[NVC_MFCWindowing#20](../../mfc/reference/codesnippet/cpp/cmdiframewnd-class_8.cpp)]  
   
-##  <a name="mditile"></a>CMDIFrameWnd::MDITile  
- Упорядочивает все дочерние окна в формате мозаики.  
+##  <a name="mditile"></a>  CMDIFrameWnd::MDITile  
+ Arranges all child windows in a tiled format.  
   
 ```  
 void MDITile();  
 void MDITile(int nType);
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
  `nType`  
- Задает флаг мозаичное заполнение. Этот параметр может иметь одно из следующих флагов:  
+ Specifies a tiling flag. This parameter can be any one of the following flags:  
   
-- `MDITILE_HORIZONTAL`Плитки дочерних MDI-окон, что одно окно появляется над другой.  
+- `MDITILE_HORIZONTAL` Tiles MDI child windows so that one window appears above another.  
   
-- `MDITILE_SKIPDISABLED`Запрещает выполняется мозаичное заполнение отключенные дочерние окна MDI.  
+- `MDITILE_SKIPDISABLED` Prevents disabled MDI child windows from being tiled.  
   
-- `MDITILE_VERTICAL`Плитки дочерних MDI-окон, что одно окно появится рядом с другом.  
+- `MDITILE_VERTICAL` Tiles MDI child windows so that one window appears beside another.  
   
-### <a name="remarks"></a>Примечания  
- В первой версии `MDITile`, без параметров, размещает окна по вертикали в группе Windows версии 3.1 и более поздней версии. Вторая версия плитки windows горизонтально или вертикально, в зависимости от значения `nType` параметра.  
+### <a name="remarks"></a>Remarks  
+ The first version of `MDITile`, without parameters, tiles the windows vertically under Windows versions 3.1 and later. The second version tiles windows vertically or horizontally, depending on the value of the `nType` parameter.  
   
-### <a name="example"></a>Пример  
- Далее приведен пример [CMDIFrameWnd::MDICascade](#mdicascade).  
+### <a name="example"></a>Example  
+ See the example for [CMDIFrameWnd::MDICascade](#mdicascade).  
   
-## <a name="see-also"></a>См. также  
- [Пример MFC MDI](../../visual-cpp-samples.md)   
- [Пример MFC MDIDOCVW](../../visual-cpp-samples.md)   
- [Пример MFC: SNAPVW](../../visual-cpp-samples.md)   
- [CFrameWnd-класс](../../mfc/reference/cframewnd-class.md)   
- [Диаграмма иерархии](../../mfc/hierarchy-chart.md)   
- [CWnd-класс](../../mfc/reference/cwnd-class.md)   
- [Класс CMDIChildWnd](../../mfc/reference/cmdichildwnd-class.md)
+## <a name="see-also"></a>See Also  
+ [MFC Sample MDI](../../visual-cpp-samples.md)   
+ [MFC Sample MDIDOCVW](../../visual-cpp-samples.md)   
+ [MFC Sample SNAPVW](../../visual-cpp-samples.md)   
+ [CFrameWnd Class](../../mfc/reference/cframewnd-class.md)   
+ [Hierarchy Chart](../../mfc/hierarchy-chart.md)   
+ [CWnd Class](../../mfc/reference/cwnd-class.md)   
+ [CMDIChildWnd Class](../../mfc/reference/cmdichildwnd-class.md)
 

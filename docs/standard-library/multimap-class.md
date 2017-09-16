@@ -1,15 +1,14 @@
 ---
-title: "Класс multimap | Документы Майкрософт"
+title: multimap Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
 ms.technology:
-- devlang-cpp
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
-- multimap
 - map/std::multimap
 - map/std::multimap::allocator_type
 - map/std::multimap::const_iterator
@@ -54,7 +53,47 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- multimap class
+- std::multimap [C++]
+- std::multimap [C++], allocator_type
+- std::multimap [C++], const_iterator
+- std::multimap [C++], const_pointer
+- std::multimap [C++], const_reference
+- std::multimap [C++], const_reverse_iterator
+- std::multimap [C++], difference_type
+- std::multimap [C++], iterator
+- std::multimap [C++], key_compare
+- std::multimap [C++], key_type
+- std::multimap [C++], mapped_type
+- std::multimap [C++], pointer
+- std::multimap [C++], reference
+- std::multimap [C++], reverse_iterator
+- std::multimap [C++], size_type
+- std::multimap [C++], value_type
+- std::multimap [C++], begin
+- std::multimap [C++], cbegin
+- std::multimap [C++], cend
+- std::multimap [C++], clear
+- std::multimap [C++], count
+- std::multimap [C++], crbegin
+- std::multimap [C++], crend
+- std::multimap [C++], emplace
+- std::multimap [C++], emplace_hint
+- std::multimap [C++], empty
+- std::multimap [C++], end
+- std::multimap [C++], equal_range
+- std::multimap [C++], erase
+- std::multimap [C++], find
+- std::multimap [C++], get_allocator
+- std::multimap [C++], insert
+- std::multimap [C++], key_comp
+- std::multimap [C++], lower_bound
+- std::multimap [C++], max_size
+- std::multimap [C++], rbegin
+- std::multimap [C++], rend
+- std::multimap [C++], size
+- std::multimap [C++], swap
+- std::multimap [C++], upper_bound
+- std::multimap [C++], value_comp
 ms.assetid: 8796ae05-37c4-475a-9e61-75fde9d4a463
 caps.latest.revision: 23
 author: corob-msft
@@ -74,17 +113,17 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
-ms.openlocfilehash: fb3454e66d682241b96b02f78e7aae6a0a3cf6b5
+ms.translationtype: MT
+ms.sourcegitcommit: 5d026c375025b169d5db8445cbb52c0c917b2d8d
+ms.openlocfilehash: 04726bf13a80ae4d490738770cea3ea365bc38b4
 ms.contentlocale: ru-ru
-ms.lasthandoff: 04/29/2017
+ms.lasthandoff: 09/09/2017
 
 ---
-# <a name="multimap-class"></a>Класс multimap
-Класс multimap в стандартной библиотеке С++ используется для хранения и извлечения данных из коллекции, в которой каждый элемент является парой, хранящей значение данных и ключ сортировки. Значение ключа может не быть уникальным и применяется для автоматической сортировки данных. Значение элементов в multimap, но не связанное с ним значение ключа, можно изменить напрямую. Значения ключей, связанные со старыми элементами, необходимо удалить и вставить новые значения ключей, связанные с новыми элементами.  
+# <a name="multimap-class"></a>multimap Class
+The C++ Standard Library multimap class is used for the storage and retrieval of data from a collection in which the each element is a pair that has both a data value and a sort key. The value of the key does not need to be unique and is used to order the data automatically. The value of an element in a multimap, but not its associated key value, may be changed directly. Instead, key values associated with old elements must be deleted and new key values associated with new elements inserted.  
   
-## <a name="syntax"></a>Синтаксис  
+## <a name="syntax"></a>Syntax  
   
 ```  
 template <class Key,   
@@ -94,129 +133,129 @@ template <class Key,
 class multimap;  
 ```  
   
-#### <a name="parameters"></a>Параметры  
+#### <a name="parameters"></a>Parameters  
  `Key`  
- Тип данных ключа для сохранения в контейнере multimap.  
+ The key data type to be stored in the multimap.  
   
  `Type`  
- Тип данных элемента, который необходимо сохранить в контейнере multimap.  
+ The element data type to be stored in the multimap.  
   
  `Traits`  
- Тип, предоставляющий объект функции, который может сравнивать два значения элемента как ключи сортировки, чтобы определить их относительный порядок в контейнере multimap. Бинарный предикат `less<Key>` является значением по умолчанию.  
+ The type that provides a function object that can compare two element values as sort keys to determine their relative order in the multimap. The binary predicate `less<Key>` is the default value.  
   
- В C++ 14 вы можете включить разнородный поиск, указав предикат `std::less<>` или `std::greater<>`, не имеющий параметров типа. Более подробные сведения см. в разделе [Разнородный поиск в ассоциативных контейнерах](../standard-library/stl-containers.md#sequence_containers)  
+ In C++14 you can enable heterogeneous lookup by specifying the `std::less<>` or `std::greater<>` predicate that has no type parameters. For more information, see [Heterogeneous Lookup in Associative Containers](../standard-library/stl-containers.md#sequence_containers)  
   
  `Allocator`  
- Тип, представляющий сохраненный объект распределителя, который инкапсулирует сведения о выделении и освобождении памяти для сопоставления. Этот аргумент является необязательным, и значением по умолчанию является `allocator<pair <const Key, Type> >`.  
+ The type that represents the stored allocator object that encapsulates details about the map's allocation and deallocation of memory. This argument is optional and the default value is `allocator<pair <const Key, Type> >`.  
   
-## <a name="remarks"></a>Примечания  
- Класс multimap в стандартной библиотеке С++ — это:  
+## <a name="remarks"></a>Remarks  
+ The C++ Standard Library multimap class is  
   
--   Ассоциативный контейнер, который является контейнером переменного размера, поддерживающим эффективное получение значений элементов на основе значения соответствующего ключа.  
+-   An associative container, which a variable size container that supports the efficient retrieval of element values based on an associated key value.  
   
--   Реверсивный, поскольку он предоставляет двунаправленные итераторы для получения доступа к его элементам.  
+-   Reversible, because it provides bidirectional iterators to access its elements.  
   
--   Сортированный, поскольку его элементы упорядочены по значениям ключей в контейнере в соответствии с заданной функцией сравнения.  
+-   Sorted, because its elements are ordered by key values within the container in accordance with a specified comparison function.  
   
--   Множественный, поскольку его элементы не обязательно должны иметь уникальные ключи, т. е. одному значению ключа может соответствовать много значений данных элементов, связанных с ним.  
+-   Multiple, because its elements do not need to have a unique keys, so that one key value may have many element data values associated with it.  
   
--   Является контейнером ассоциативной пары, поскольку его значения данных элементов отличаются от его значений ключей.  
+-   A pair associative container, because its element data values are distinct from its key values.  
   
--   Шаблонный класс шаблона, поскольку функции, которые он предоставляет, являются универсальными и, соответственно, не зависят от конкретного типа данных, содержащихся в виде элементов или ключей. Типы данных, используемые для элементов и ключей, вместо этого определяются как параметры в шаблоне класса вместе с функцией и распределителем сравнения.  
+-   A template class, because the functionality it provides is generic and so independent of the specific type of data contained as elements or keys. The data types to be used for elements and keys are, instead, specified as parameters in the class template along with the comparison function and allocator.  
   
- Итератор, предоставляемый классом map, является двунаправленным итератором, но функции-члены класса [insert](#insert) и [multimap](#multimap) имеют версии, которые принимают в качестве параметров-шаблонов более слабый итератор ввода, чьи функциональные требования ниже, чем гарантируемые классом двунаправленных итераторов. Различные концепции итераторов образуют семейство, связанное уточнениями функциональности. Каждая концепция итератора имеет собственный набор требований, а алгоритмы, работающие с ними, должны ограничивать свои предположения согласно требованиям, предоставляемым этим типом итератора. Можно предположить, что итератор ввода может быть разыменован для обращения к определенному объекту и инкрементирован до следующего итератора в последовательности. Это минимальный набор функциональных возможностей, но его достаточно, чтобы иметь возможность осмысленно говорить о диапазоне итераторов `[First, Last)`, в контексте функций-членов класса.  
+ The iterator provided by the map class is a bidirectional iterator, but the class member functions [insert](#insert) and [multimap](#multimap) have versions that take as template parameters a weaker input iterator, whose functionality requirements are more minimal than those guaranteed by the class of bidirectional iterators. The different iterator concepts form a family related by refinements in their functionality. Each iterator concept has its own set of requirements and the algorithms that work with them must limit their assumptions to the requirements provided by that type of iterator. It may be assumed that an input iterator may be dereferenced to refer to some object and that it may be incremented to the next iterator in the sequence. This is a minimal set of functionality, but it is enough to be able to talk meaningfully about a range of iterators `[First, Last)` in the context of the class's member functions.  
   
- Выбор типа контейнера должен в общем случае производиться на основе типа поиска и вставки, который требуется приложению. Ассоциативные контейнеры оптимизированы для операций поиска, вставки и удаления. Функции-члены, которые явно поддерживают эти операции, являются эффективными и в среднем выполняют их пропорционально логарифму числа элементов в контейнере. Вставка элементов не делает итераторы недействительными, а при удалении элементов недействительными становятся только итераторы, которые ранее указывали конкретно на удаленные элементы.  
+ The choice of container type should be based in general on the type of searching and inserting required by the application. Associative containers are optimized for the operations of lookup, insertion and removal. The member functions that explicitly support these operations are efficient, performing them in a time that is on average proportional to the logarithm of the number of elements in the container. Inserting elements invalidates no iterators, and removing elements invalidates only those iterators that had specifically pointed at the removed elements.  
   
- Класс multimap рекомендуется использовать в качестве ассоциативного контейнера, если условия, ассоциирующие значения с ключами, удовлетворяются приложением. Модель для этого типа структуры — это упорядоченный список ключевых слов со связанными значениями строк, предоставляющими, например, определения, в которых слова не всегда обладают уникальными определениями. Если же ключевые слова обладают уникальными определениями, и ключи уникальны, то сопоставление будет предпочтительным контейнером. Если же сохранен только список слов, то в качестве контейнера необходимо выбрать набор. Если допускается повторное использование слов, то подходящей структурой контейнера будет multiset.  
+ The multimap should be the associative container of choice when the conditions associating the values with their keys are satisfied by the application. A model for this type of structure is an ordered list of key words with associated string values providing, say, definitions, where the words were not always uniquely defined. If, instead, the key words were uniquely defined so that keys were unique, then a map would be the container of choice. If, on the other hand, just the list of words were being stored, then a set would be the correct container. If multiple occurrences of the words were allowed, then a multiset would be the appropriate container structure.  
   
- Мультиотображение упорядочивает контролируемую им последовательность посредством вызова хранимого объекта-функции типа [key_compare](#key_compare). Этот хранимый объект является функцией сравнения, доступ к которой можно получить через вызов функции-члена [key_comp](#key_comp). В целом, упорядочиваемые элементы должны лишь подлежать сравнению "меньше чем" для установления такого порядка, чтобы, имея любые два элемента, можно было определить, что они равны (ни один не меньше другого) или что один меньше другого. Это приводит к упорядочению неравнозначных элементов. С более технической точки зрения, функция сравнения является бинарным предикатом, который вызывает строгого слабое упорядочение в стандартном математически смысле. Бинарный предикат `f(x,y)` является объектом функции, обладающим двумя объектами аргументов `x` и `y`, а также возвращаемым значением true или false. Порядок, заданный для набора, является строгим слабым порядком, если бинарный предикат является нерефлексивным, антисимметричным и переходящим и если эквивалентность является переходящей, где два объекта `x` и `y` заданы как эквивалентные при том, что `f(x,y)` и `f(y,x)` имеют значение false. Если более строгое условие равенства между ключами заменяет условие эквивалентности, порядок становится общим (т.е. все элементы упорядочиваются относительно друг друга), и сопоставленные ключи будут неотличимы друг от друга.  
+ The multimap orders the sequence it controls by calling a stored function object of type [key_compare](#key_compare). This stored object is a comparison function that may be accessed by calling the member function [key_comp](#key_comp). In general, the elements need be merely less than comparable to establish this order: so that, given any two elements, it may be determined either that they are equivalent (in the sense that neither is less than the other) or that one is less than the other. This results in an ordering between the nonequivalent elements. On a more technical note, the comparison function is a binary predicate that induces a strict weak ordering in the standard mathematical sense. A binary predicate `f(x,y)` is a function object that has two argument objects `x` and `y` and a return value of true or false. An ordering imposed on a set is a strict weak ordering if the binary predicate is irreflexive, antisymmetric, and transitive and if equivalence is transitive, where two objects `x` and `y` are defined to be equivalent when both `f(x,y)` and `f(y,x)` are false. If the stronger condition of equality between keys replaces that of equivalence, then the ordering becomes total (in the sense that all the elements are ordered with respect to each other) and the keys matched will be indiscernible from each other.  
   
- В C++ 14 вы можете включить разнородный поиск, указав предикат `std::less<>` или `std::greater<>`, не имеющий параметров типа. Более подробные сведения см. в разделе [Разнородный поиск в ассоциативных контейнерах](../standard-library/stl-containers.md#sequence_containers)  
+ In C++14 you can enable heterogeneous lookup by specifying the `std::less<>` or `std::greater<>` predicate that has no type parameters. For more information, see [Heterogeneous Lookup in Associative Containers](../standard-library/stl-containers.md#sequence_containers)  
   
-## <a name="members"></a>Члены  
+## <a name="members"></a>Members  
   
-### <a name="constructors"></a>Конструкторы  
+### <a name="constructors"></a>Constructors  
   
 |||  
 |-|-|  
-|[multimap](#multimap)|Создает контейнер `multimap`, который является пустым или копией части или целого другого контейнера `multimap`.|  
+|[multimap](#multimap)|Constructs a `multimap` that is empty or that is a copy of all or part of some other `multimap`.|  
   
 ### <a name="typedefs"></a>Typedefs  
   
 |||  
 |-|-|  
-|[allocator_type](#allocator_type)|Тип, представляющий класс `allocator` для объекта `multimap`.|  
-|[const_iterator](#const_iterator)|Тип, предоставляющий двунаправленный итератор, который может считывать тот или иной элемент `const` в контейнере `multimap`.|  
-|[const_pointer](#const_pointer)|Тип, предоставляющий указатель на элемент `const` в контейнере `multimap`.|  
-|[const_reference](#const_reference)|Тип, предоставляющий ссылку на элемент `const`, сохраненный в контейнере `multimap` для чтения и выполнения операций `const`.|  
-|[const_reverse_iterator](#const_reverse_iterator)|Тип, предоставляющий двунаправленный итератор, который может считывать любой элемент `const` в контейнере `multimap`.|  
-|[difference_type](#difference_type)|Тип целого числа со знаком, пригодный для представления количества элементов в контейнере `multimap` в диапазоне между элементами, на которые указывают итераторы.|  
-|[iterator](#iterator)|Тип, который предоставляет различие между 2 итераторами, относящимися к элементам в одном контейнере `multimap`.|  
-|[key_compare](#key_compare)|Тип, предоставляющий объект функции, который может сравнить два ключа сортировки для определения относительного порядка двух элементов в контейнере `multimap`.|  
-|[key_type](#key_type)|Тип, описывающий объект ключа сортировки, составляющий каждый элемент контейнера `multimap`.|  
-|[mapped_type](#mapped_type)|Тип, который представляет тип данных, хранящийся в контейнере `multimap`.|  
-|[pointer](#pointer)|Тип, предоставляющий указатель на элемент `const` в контейнере `multimap`.|  
-|[reference](#reference)|Тип, предоставляющий ссылку на элемент, хранящийся в контейнере `multimap`.|  
-|[reverse_iterator](#reverse_iterator)|Тип, предоставляющий двунаправленный итератор, который может считывать или изменять элемент в обращенном контейнере `multimap`.|  
-|[size_type](#size_type)|Тип целого числа без знака, предоставляющий указатель на элемент `const` в контейнере `multimap`.|  
-|[value_type](#value_type)|Тип, предоставляющий объект функции, который может сравнить два элемента в качестве ключей сортировки для определения их относительного порядка в контейнере `multimap`.|  
+|[allocator_type](#allocator_type)|A type that represents the `allocator` class for the `multimap` object.|  
+|[const_iterator](#const_iterator)|A type that provides a bidirectional iterator that can read a `const` element in the `multimap`.|  
+|[const_pointer](#const_pointer)|A type that provides a pointer to a `const` element in a `multimap`.|  
+|[const_reference](#const_reference)|A type that provides a reference to a `const` element stored in a `multimap` for reading and performing `const` operations.|  
+|[const_reverse_iterator](#const_reverse_iterator)|A type that provides a bidirectional iterator that can read any `const` element in the `multimap`.|  
+|[difference_type](#difference_type)|A signed integer type that can be used to represent the number of elements of a `multimap` in a range between elements pointed to by iterators.|  
+|[iterator](#iterator)|A type that provides the difference between two iterators that refer to elements within the same `multimap`.|  
+|[key_compare](#key_compare)|A type that provides a function object that can compare two sort keys to determine the relative order of two elements in the `multimap`.|  
+|[key_type](#key_type)|A type that describes the sort key object that constitutes each element of the `multimap`.|  
+|[mapped_type](#mapped_type)|A type that represents the data type stored in a `multimap`.|  
+|[pointer](#pointer)|A type that provides a pointer to a `const` element in a `multimap`.|  
+|[reference](#reference)|A type that provides a reference to an element stored in a `multimap`.|  
+|[reverse_iterator](#reverse_iterator)|A type that provides a bidirectional iterator that can read or modify an element in a reversed `multimap`.|  
+|[size_type](#size_type)|An unsigned integer type that provides a pointer to a `const` element in a `multimap`.|  
+|[value_type](#value_type)|A type that provides a function object that can compare two elements as sort keys to determine their relative order in the `multimap`.|  
   
-### <a name="member-functions"></a>Функции-члены  
-  
-|||  
-|-|-|  
-|[begin](#begin)|Возвращает итератор, обращающийся к первый элемент в контейнере `multimap`.|  
-|[begin](#cbegin)|Возвращает итератор const, обращающийся к первому элементу в `multimap`.|  
-|[cend](#cend)|Возвращает итератор const, который обращается к месту, следующему за последним элементом в `multimap`.|  
-|[clear](#clear)|Стирает все элементы в `multimap`.|  
-|[count](#count)|Возвращает число элементов в контейнере `multimap`, ключи которых соответствуют ключу, заданному параметром.|  
-|[crbegin](#crbegin)|Возвращает итератор const, который обращается к первому элементу в обращенном контейнере `multimap`.|  
-|[crend](#crend)|Возвращает итератор const, который обращается к месту, следующему за последним элементом в обращенном контейнере `multimap`.|  
-|[emplace](#emplace)|Вставляет созданный на месте элемент в `multimap`.|  
-|[emplace_hint](#emplace_hint)|Вставляет созданный на месте элемент в `multimap` с подсказкой о размещении|  
-|[empty](#empty)|Проверяет, пуст ли `multimap`.|  
-|[end](#end)|Возвращает итератор, который обращается к месту, следующему за последним элементом в контейнере `multimap`.|  
-|[equal_range](#equal_range)|Находит диапазон элементов, где ключ элемента соответствует заданному значению.|  
-|[erase](#erase)|Удаляет элемент или диапазон элементов в `multimap` с заданных позиций или удаляет элементы, соответствующие заданному ключу.|  
-|[find](#find)|Возвращает итератор, который обращается к первому местоположению элемента в контейнере `multimap` с ключом, эквивалентным указанному ключу.|  
-|[get_allocator](#get_allocator)|Возвращает копию объекта `allocator`, который используется для создания контейнера `multimap`.|  
-|[insert](#insert)|Вставляет элемент или диапазон элементов в `multimap`.|  
-|[key_comp](#key_comp)|Извлекает копию объекта сравнения, который используется для упорядочивания ключей в контейнере `multimap`.|  
-|[lower_bound](#lower_bound)|Возвращает итератор, указывающий на первый элемент в контейнере `multimap` с ключом, который больше или равен указанному ключу.|  
-|[max_size](#max_size)|Возвращает максимальную длину `multimap`.|  
-|[rbegin](#rbegin)|Возвращает итератор, который обращается к первому элементу в обращенном контейнере `multimap`.|  
-|[rend](#rend)|Возвращает итератор, который обращается к месту, следующему за последним элементом в обращенном контейнере `multimap`.|  
-|[size](#size)|Возвращает количество элементов в контейнере `multimap`.|  
-|[swap](#swap)|Выполняет обмен элементами между двумя объектами `multimap`.|  
-|[upper_bound](#upper_bound)|Возвращает итератор, указывающий на первый элемент в контейнере `multimap` с ключом, который больше указанного ключа.|  
-|[value_comp](#value_comp)|Функция-член возвращает объект функции, который определяет порядок элементов в `multimap` путем сравнения значения ключа.|  
-  
-### <a name="operators"></a>Операторы  
+### <a name="member-functions"></a>Member Functions  
   
 |||  
 |-|-|  
-|[operator=](#op_eq)|Заменяет элементы `multimap` копией другого `multimap`.|  
+|[begin](#begin)|Returns an iterator addressing the first element in the `multimap`.|  
+|[cbegin](#cbegin)|Returns a const iterator addressing the first element in the `multimap`.|  
+|[cend](#cend)|Returns a const iterator that addresses the location succeeding the last element in a `multimap`.|  
+|[clear](#clear)|Erases all the elements of a `multimap`.|  
+|[count](#count)|Returns the number of elements in a `multimap` whose key matches a parameter-specified key.|  
+|[crbegin](#crbegin)|Returns a const iterator addressing the first element in a reversed `multimap`.|  
+|[crend](#crend)|Returns a const iterator that addresses the location succeeding the last element in a reversed `multimap`.|  
+|[emplace](#emplace)|Inserts an element constructed in place into a `multimap`.|  
+|[emplace_hint](#emplace_hint)|Inserts an element constructed in place into a `multimap`, with a placement hint|  
+|[empty](#empty)|Tests if a `multimap` is empty.|  
+|[end](#end)|Returns an iterator that addresses the location succeeding the last element in a `multimap`.|  
+|[equal_range](#equal_range)|Finds the range of elements where the key of the element matches a specified value.|  
+|[erase](#erase)|Removes an element or a range of elements in a `multimap` from specified positions or removes elements that match a specified key.|  
+|[find](#find)|Returns an iterator addressing the first location of an element in a `multimap` that has a key equivalent to a specified key.|  
+|[get_allocator](#get_allocator)|Returns a copy of the `allocator` object used to construct the `multimap`.|  
+|[insert](#insert)|Inserts an element or a range of elements into a `multimap`.|  
+|[key_comp](#key_comp)|Retrieves a copy of the comparison object used to order keys in a `multimap`.|  
+|[lower_bound](#lower_bound)|Returns an iterator to the first element in a `multimap` that with a key that is equal to or greater than a specified key.|  
+|[max_size](#max_size)|Returns the maximum length of the `multimap`.|  
+|[rbegin](#rbegin)|Returns an iterator addressing the first element in a reversed `multimap`.|  
+|[rend](#rend)|Returns an iterator that addresses the location succeeding the last element in a reversed `multimap`.|  
+|[size](#size)|Returns the number of elements in the `multimap`.|  
+|[swap](#swap)|Exchanges the elements of two `multimap`s.|  
+|[upper_bound](#upper_bound)|Returns an iterator to the first element in a `multimap` that with a key that is greater than a specified key.|  
+|[value_comp](#value_comp)|The member function returns a function object that determines the order of elements in a `multimap` by comparing their key values.|  
   
-## <a name="requirements"></a>Требования  
- **Заголовок:** \<map>  
+### <a name="operators"></a>Operators  
   
- **Пространство имен:** std  
+|||  
+|-|-|  
+|[operator=](#op_eq)|Replaces the elements of a `multimap` with a copy of another `multimap`.|  
   
- Пары ( **ключ**, **значение**) хранятся в мультиотображении в виде объектов типа `pair`. Класс pair требует заголовка \<utility>, который автоматически включается \<map>.  
+## <a name="requirements"></a>Requirements  
+ **Header:** \<map>  
+  
+ **Namespace:** std  
+  
+ The ( **key**, **value**) pairs are stored in a multimap as objects of type `pair`. The pair class requires the header \<utility>, which is automatically included by \<map>.  
   
 ##  <a name="allocator_type"></a>  multimap::allocator_type  
- Тип, который представляет класс распределителя для объекта-мультиотображения.  
+ A type that represents the allocator class for the multimap object.  
   
 ```  
 typedef Allocator allocator_type;  
 ```  
   
-### <a name="example"></a>Пример  
-  См. пример для [get_allocator](#get_allocator) в качестве примера и использования `allocator_type`.  
+### <a name="example"></a>Example  
+  See the example for [get_allocator](#get_allocator) for an example using `allocator_type`.  
   
 ##  <a name="begin"></a>  multimap::begin  
- Возвращает итератор, адресующий первый элемент в мультиотображении.  
+ Returns an iterator addressing the first element in the multimap.  
   
 ```  
 const_iterator begin() const;
@@ -224,10 +263,10 @@ const_iterator begin() const;
 iterator begin();
 ```  
   
-### <a name="return-value"></a>Возвращаемое значение  
- Двунаправленный итератор, адресующий первый элемент в мультиотображении или положение после пустого мультиотображения.  
+### <a name="return-value"></a>Return Value  
+ A bidirectional iterator addressing the first element in the multimap or the location succeeding an empty multimap.  
   
-### <a name="example"></a>Пример  
+### <a name="example"></a>Example  
   
 ```cpp  
 // multimap_begin.cpp  
@@ -269,19 +308,19 @@ First element of m1 is now 1
 ```  
   
 ##  <a name="cbegin"></a>  multimap::cbegin  
- Возвращает итератор `const`, направленный на первый элемент в диапазоне.  
+ Returns a `const` iterator that addresses the first element in the range.  
   
 ```  
 const_iterator cbegin() const;
 ```  
   
-### <a name="return-value"></a>Возвращаемое значение  
- Итератор двунаправленного доступа `const`, который указывает на первый элемент диапазона или расположение прямо за концом пустого диапазона (`cbegin() == cend()` для пустого диапазона).  
+### <a name="return-value"></a>Return Value  
+ A `const` bidirectional-access iterator that points at the first element of the range, or the location just beyond the end of an empty range (for an empty range, `cbegin() == cend()`).  
   
-### <a name="remarks"></a>Примечания  
- Элементы в диапазоне нельзя изменить с помощью возвращаемого значения `cbegin`.  
+### <a name="remarks"></a>Remarks  
+ With the return value of `cbegin`, the elements in the range cannot be modified.  
   
- Эту функцию-член можно использовать вместо функции-члена `begin()`, чтобы гарантировать, что возвращаемое значение будет `const_iterator`. Обычно используется вместе с ключевым словом вывода типа [auto](../cpp/auto-cpp.md), как показано в следующем примере. В примере `Container` следует рассматривать как изменяемый (не-`const`) контейнер любого вида, который поддерживает `begin()` и `cbegin()`.  
+ You can use this member function in place of the `begin()` member function to guarantee that the return value is `const_iterator`. Typically, it's used in conjunction with the [auto](../cpp/auto-cpp.md) type deduction keyword, as shown in the following example. In the example, consider `Container` to be a modifiable (non- `const`) container of any kind that supports `begin()` and `cbegin()`.  
   
 ```cpp  
 auto i1 = Container.begin();
@@ -292,19 +331,19 @@ auto i2 = Container.cbegin();
 ```  
   
 ##  <a name="cend"></a>  multimap::cend  
- Возвращает итератор `const`, который обращается к месту, следующему сразу за последним элементом в диапазоне.  
+ Returns a `const` iterator that addresses the location just beyond the last element in a range.  
   
 ```  
 const_iterator cend() const;
 ```  
   
-### <a name="return-value"></a>Возвращаемое значение  
- Итератор двунаправленного доступа `const`, который указывает на позицию сразу за концом диапазона.  
+### <a name="return-value"></a>Return Value  
+ A `const` bidirectional-access iterator that points just beyond the end of the range.  
   
-### <a name="remarks"></a>Примечания  
- `cend` используется для проверки того, прошел ли итератор конец диапазона.  
+### <a name="remarks"></a>Remarks  
+ `cend` is used to test whether an iterator has passed the end of its range.  
   
- Эту функцию-член можно использовать вместо функции-члена `end()`, чтобы гарантировать, что возвращаемое значение будет `const_iterator`. Обычно используется вместе с ключевым словом вывода типа [auto](../cpp/auto-cpp.md), как показано в следующем примере. В этом примере предположим, что `Container` является изменяемым контейнером (не `const`) любого типа, который поддерживает `end()` и `cend()`.  
+ You can use this member function in place of the `end()` member function to guarantee that the return value is `const_iterator`. Typically, it's used in conjunction with the [auto](../cpp/auto-cpp.md) type deduction keyword, as shown in the following example. In the example, consider `Container` to be a modifiable (non- `const`) container of any kind that supports `end()` and `cend()`.  
   
 ```cpp  
 auto i1 = Container.end();
@@ -314,17 +353,17 @@ auto i2 = Container.cend();
 // i2 is Container<T>::const_iterator  
 ```  
   
- Значение, возвращаемое `cend`, не должно быть подвергнуто удалению ссылки.  
+ The value returned by `cend` should not be dereferenced.  
   
 ##  <a name="clear"></a>  multimap::clear  
- Стирает все элементы мультиотображения.  
+ Erases all the elements of a multimap.  
   
 ```  
 void clear();
 ```  
   
-### <a name="example"></a>Пример  
-  В следующем примере иллюстрируется использование функции-члена multimap::clear.  
+### <a name="example"></a>Example  
+  The following example demonstrates the use of the multimap::clear member function.  
   
 ```  
 // multimap_clear.cpp  
@@ -359,44 +398,44 @@ The size of the multimap after clearing is 0.
 ```  
   
 ##  <a name="const_iterator"></a>  multimap::const_iterator  
- Тип, предоставляющий двунаправленный итератор, который может читать элемент **const** в мультиотображении.  
+ A type that provides a bidirectional iterator that can read a **const** element in the multimap.  
   
 ```  
 typedef implementation-defined const_iterator;  
 ```  
   
-### <a name="remarks"></a>Примечания  
- Тип `const_iterator`нельзя использовать для изменения значения элемента.  
+### <a name="remarks"></a>Remarks  
+ A type `const_iterator` cannot be used to modify the value of an element.  
   
- `const_iterator`, определенный мультиотображением, указывает на объекты [value_type](#value_type) типа `pair`*\<***const Key**, **Type***>*. Значение ключа доступно через первый член пары, а значение сопоставленного элемента доступно через второй член пары.  
+ The `const_iterator` defined by multimap points to objects of [value_type](#value_type), which are of type `pair`*\<***const Key**, **Type***>*. The value of the key is available through the first member pair and the value of the mapped element is available through the second member of the pair.  
   
- Для разыменования `const_iterator``cIter`, указывающего на элемент в мультиотображении, используйте оператор **->**.  
+ To dereference a `const_iterator` `cIter` pointing to an element in a multimap, use the **->** operator.  
   
- Для получения доступа к значению ключа для элемента используйте `cIter` -> **first**, что эквивалентно (\* `cIter`). **first**. Для получения доступа к значению сопоставленных данных элемента используйте `cIter` -> **second**, что эквивалентно (\* `cIter`). **second**.  
+ To access the value of the key for the element, use `cIter` -> **first**, which is equivalent to (\* `cIter`). **first**. To access the value of the mapped datum for the element, use `cIter` -> **second**, which is equivalent to (\* `cIter`). **second**.  
   
-### <a name="example"></a>Пример  
-  См. пример для [begin](#begin) в качестве примера использования `const_iterator`.  
+### <a name="example"></a>Example  
+  See the example for [begin](#begin) for an example using `const_iterator`.  
   
 ##  <a name="const_pointer"></a>  multimap::const_pointer  
- Тип, предоставляющий указатель на элемент **const** в мультиотображении.  
+ A type that provides a pointer to a **const** element in a multimap.  
   
 ```  
 typedef typename allocator_type::const_pointer const_pointer;  
 ```  
   
-### <a name="remarks"></a>Примечания  
- Тип `const_pointer`нельзя использовать для изменения значения элемента.  
+### <a name="remarks"></a>Remarks  
+ A type `const_pointer` cannot be used to modify the value of an element.  
   
- В большинстве случаев для доступа к элементам в объекте-мультиотображении следует использовать [iterator](#iterator).  
+ In most cases, an [iterator](#iterator) should be used to access the elements in a multimap object.  
   
 ##  <a name="const_reference"></a>  multimap::const_reference  
- Тип, который предоставляет ссылку на элемент **const**, хранящийся в мультиотображении, для чтения и выполнения операций **const**.  
+ A type that provides a reference to a **const** element stored in a multimap for reading and performing **const** operations.  
   
 ```  
 typedef typename allocator_type::const_reference const_reference;  
 ```  
   
-### <a name="example"></a>Пример  
+### <a name="example"></a>Example  
   
 ```cpp  
 // multimap_const_ref.cpp  
@@ -439,47 +478,47 @@ The data value of the first element in the multimap is 10.
 ```  
   
 ##  <a name="const_reverse_iterator"></a>  multimap::const_reverse_iterator  
- Тип, предоставляющий ссылку на двунаправленный итератор, который может читать любые элементы **const** в мультиотображении.  
+ A type that provides a bidirectional iterator that can read any **const** element in the multimap.  
   
 ```  
 typedef std::reverse_iterator<const_iterator> const_reverse_iterator;  
 ```  
   
-### <a name="remarks"></a>Примечания  
- Тип `const_reverse_iterator` не может изменять значение элемента и используется для перебора мультиотображения в обратном порядке.  
+### <a name="remarks"></a>Remarks  
+ A type `const_reverse_iterator` cannot modify the value of an element and is use to iterate through the multimap in reverse.  
   
- `const_reverse_iterator`, определенный мультиотображением, указывает на объекты [value_type](#value_type) типа `pair`*\<***const Key**, **Type***>*. Значение ключа доступно через первый член пары, а значение сопоставленного элемента доступно через второй член пары.  
+ The `const_reverse_iterator` defined by multimap points to objects of [value_type](#value_type), which are of type `pair`*\<***const Key**, **Type***>*. The value of the key is available through the first member pair and the value of the mapped element is available through the second member of the pair.  
   
- Для разыменования `const_reverse_iterator``crIter`, указывающего на элемент в мультиотображении, используйте оператор **->**.  
+ To dereference a `const_reverse_iterator` `crIter` pointing to an element in a multimap, use the **->** operator.  
   
- Для получения доступа к значению ключа для элемента используйте `crIter` -> **first**, что эквивалентно (\* `crIter`). **first**. Для получения доступа к значению сопоставленных данных элемента используйте `crIter` -> **second**, что эквивалентно (\* `crIter`). **first**.  
+ To access the value of the key for the element, use `crIter` -> **first**, which is equivalent to (\* `crIter`). **first**. To access the value of the mapped datum for the element, use `crIter` -> **second**, which is equivalent to (\* `crIter`). **first**.  
   
-### <a name="example"></a>Пример  
-  См. пример для [rend](#rend) в качестве примера объявления и использования `const_reverse_iterator`.  
+### <a name="example"></a>Example  
+  See the example for [rend](#rend) for an example of how to declare and use `const_reverse_iterator`.  
   
 ##  <a name="count"></a>  multimap::count  
- Возвращает число элементов в мультиотображении, ключи которых совпадают с ключом, заданным параметром.  
+ Returns the number of elements in a multimap whose keys match a parameter-specified key.  
   
 ```  
 size_type count(const Key& key) const;
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
  `key`  
- Ключ для сравнения с ключами элементов мультиотображения.  
+ The key of the elements to be matched from the multimap.  
   
-### <a name="return-value"></a>Возвращаемое значение  
- Число элементов, ключи сортировки которых совпадают с ключом параметра. 0, если мультиотображение не содержит ни одного элемента с совпадающим ключом.  
+### <a name="return-value"></a>Return Value  
+ The number of elements whose sort keys match the parameter key; 0 if the multimap doesn't contain an element with a matching key.  
   
-### <a name="remarks"></a>Примечания  
- Функция-член возвращает число элементов в диапазоне  
+### <a name="remarks"></a>Remarks  
+ The member function returns the number of elements in the range  
   
  [ `lower_bound` (_ *Key* ), `upper_bound` (\_ *Key* ) )  
   
- имеющий значение ключа `key`.  
+ that have a key value `key`.  
   
-### <a name="example"></a>Пример  
-  В следующем примере демонстрируется использование функции-члена multimap::count.  
+### <a name="example"></a>Example  
+  The following example demonstrates the use of the multimap::count member function.  
   
 ```  
 // multimap_count.cpp  
@@ -522,23 +561,23 @@ The number of elements in m1 with a sort key of 3 is: 0.
 ```  
   
 ##  <a name="crbegin"></a>  multimap::crbegin  
- Возвращает константный итератор, адресующий первый элемент в обратном мультиотображении.  
+ Returns a const iterator addressing the first element in a reversed multimap.  
   
 ```  
 const_reverse_iterator crbegin() const;
 ```  
   
-### <a name="return-value"></a>Возвращаемое значение  
- Константный обратный двунаправленный итератор, адресующий первый элемент в обратном [мультиотображении](../standard-library/multimap-class.md) или адресующий то, что было последним элементом в `multimap` до замены его порядка на противоположный.  
+### <a name="return-value"></a>Return Value  
+ A const reverse bidirectional iterator addressing the first element in a reversed [multimap](../standard-library/multimap-class.md) or addressing what had been the last element in the unreversed `multimap`.  
   
-### <a name="remarks"></a>Примечания  
- `crbegin` используется с обратным `multimap` так же, как [begin](#begin) используется с обычным `multimap`.  
+### <a name="remarks"></a>Remarks  
+ `crbegin` is used with a reversed `multimap` just as [begin](#begin) is used with a `multimap`.  
   
- Если возвращаемое значение `crbegin`, то объект `multimap` невозможно изменить.  
+ With the return value of `crbegin`, the `multimap` object cannot be modified.  
   
- `crbegin` можно использовать для перебора `multimap` в обратном порядке.  
+ `crbegin` can be used to iterate through a `multimap` backwards.  
   
-### <a name="example"></a>Пример  
+### <a name="example"></a>Example  
   
 ```cpp  
 // multimap_crbegin.cpp  
@@ -569,25 +608,25 @@ The first element of the reversed multimap m1 is 3.
 ```  
   
 ##  <a name="crend"></a>  multimap::crend  
- Возвращает константный итератор, адресующий положение после последнего элемента в обратном мультиотображении.  
+ Returns a const iterator that addresses the location succeeding the last element in a reversed multimap.  
   
 ```  
 const_reverse_iterator crend() const;
 ```  
   
-### <a name="return-value"></a>Возвращаемое значение  
- Константный обратный двунаправленный итератор, адресующий положение после последнего элемента в обратном [мультиотображении](../standard-library/multimap-class.md) (положение, которое предшествовало первому элементу в `multimap` до изменения его порядка на противоположный).  
+### <a name="return-value"></a>Return Value  
+ A const reverse bidirectional iterator that addresses the location succeeding the last element in a reversed [multimap](../standard-library/multimap-class.md) (the location that had preceded the first element in the unreversed `multimap`).  
   
-### <a name="remarks"></a>Примечания  
- `crend` используется с обратным `multimap` так же, как [multimap::end](#end) используется с обычным `multimap`.  
+### <a name="remarks"></a>Remarks  
+ `crend` is used with a reversed `multimap` just as [multimap::end](#end) is used with a `multimap`.  
   
- Если возвращаемое значение `crend`, то объект `multimap` невозможно изменить.  
+ With the return value of `crend`, the `multimap` object cannot be modified.  
   
- `crend` используется, чтобы проверить, достиг ли итератор конца `multimap`.  
+ `crend` can be used to test to whether a reverse iterator has reached the end of its `multimap`.  
   
- Значение, возвращаемое `crend`, не должно быть подвергнуто удалению ссылки.  
+ The value returned by `crend` should not be dereferenced.  
   
-### <a name="example"></a>Пример  
+### <a name="example"></a>Example  
   
 ```cpp  
 // multimap_crend.cpp  
@@ -619,18 +658,18 @@ The last element of the reversed multimap m1 is 1.
 ```  
   
 ##  <a name="difference_type"></a>  multimap::difference_type  
- Целочисленный тип со знаком, который можно использовать для представления числа элементов в мультиотображении в диапазоне между элементами, на которые указывают итераторы.  
+ A signed integer type that can be used to represent the number of elements of a multimap in a range between elements pointed to by iterators.  
   
 ```  
 typedef typename allocator_type::difference_type difference_type;  
 ```  
   
-### <a name="remarks"></a>Примечания  
- `difference_type` — тип, возвращаемый при вычитании или приращении через итераторы контейнера. `difference_type` Обычно используется для представления количества элементов в диапазоне [*первый*, *последний*) между итераторами `first` и `last`, содержит элемент, на который указывает `first` и диапазон элементов, но не включающую, элемент, на который указывает `last`.  
+### <a name="remarks"></a>Remarks  
+ The `difference_type` is the type returned when subtracting or incrementing through iterators of the container. The `difference_type` is typically used to represent the number of elements in the range [*first*, *last*) between the iterators `first` and `last`, includes the element pointed to by `first` and the range of elements up to, but not including, the element pointed to by `last`.  
   
- Обратите внимание, что хотя `difference_type` доступен для всех итераторов, удовлетворяющих требованиям итератора ввода, что включает класс двунаправленных итераторов, поддерживаемых обратимыми контейнерами, такими как набор, вычитание между итераторами поддерживается лишь итераторами произвольного доступа, предоставляемыми контейнерами произвольного доступа, такими как вектор.  
+ Note that although `difference_type` is available for all iterators that satisfy the requirements of an input iterator, which includes the class of bidirectional iterators supported by reversible containers such as set, subtraction between iterators is only supported by random-access iterators provided by a random-access container such as vector.  
   
-### <a name="example"></a>Пример  
+### <a name="example"></a>Example  
   
 ```cpp  
 // multimap_diff_type.cpp  
@@ -675,31 +714,31 @@ The number of elements in the multimap m1 is: 4.
 ```  
   
 ##  <a name="emplace"></a>  multimap::emplace  
- Вставляет элемент, созданный на месте (операции копирования или перемещения не выполняются).  
+ Inserts an element constructed in place (no copy or move operations are performed).  
   
 ```  
 template <class... Args>  
 iterator emplace(Args&&... args);
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
   
 |||  
 |-|-|  
-|Параметр|Описание|  
-|`args`|Аргументы, передаваемые для создания элемента, вставляемого в мультиотображение.|  
+|Parameter|Description|  
+|`args`|The arguments forwarded to construct an element to be inserted into the multimap.|  
   
-### <a name="return-value"></a>Возвращаемое значение  
- Итератор, указывающий на вновь вставленный элемент.  
+### <a name="return-value"></a>Return Value  
+ An iterator to the newly inserted element.  
   
-### <a name="remarks"></a>Примечания  
- Эта функция не делает недействительными никакие ссылки на элементы контейнера, но она может сделать недействительными все итераторы к контейнеру.  
+### <a name="remarks"></a>Remarks  
+ No references to container elements are invalidated by this function, but it may invalidate all iterators to the container.  
   
- Если во время вставки создается исключение, контейнер не изменяется и исключение создается повторно.  
+ If an exception is thrown during the insertion, the container is left unaltered and the exception is rethrown.  
   
- [value_type](../standard-library/map-class.md#value_type) элемента — это pair, поэтому значением элемента будет упорядоченная пара, первый компонент которой равен значению ключа, а второй — значению данных элемента.  
+ The [value_type](../standard-library/map-class.md#value_type) of an element is a pair, so that the value of an element will be an ordered pair with the first component equal to the key value and the second component equal to the data value of the element.  
   
-### <a name="example"></a>Пример  
+### <a name="example"></a>Example  
   
 ```cpp  
 // multimap_emplace.cpp  
@@ -742,7 +781,7 @@ int main()
 ```  
   
 ##  <a name="emplace_hint"></a>  multimap::emplace_hint  
- Вставляет элемент, созданный на месте (операции копирования или перемещения не выполняются) с подсказкой размещения.  
+ Inserts an element constructed in place (no copy or move operations are performed), with a placement hint.  
   
 ```  
 template <class... Args>  
@@ -751,37 +790,37 @@ iterator emplace_hint(
     Args&&... args);
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
   
 |||  
 |-|-|  
-|Параметр|Описание|  
-|`args`|Аргументы, передаваемые для создания элемента, вставляемого в мультиотображение.|  
-|`where`|Место начала поиска правильной точки вставки. (Если эта точка находится непосредственно перед `where`, вставка может быть выполнена в постоянном времени с поправкой на амортизацию, а не в логарифмическом времени.)|  
+|Parameter|Description|  
+|`args`|The arguments forwarded to construct an element to be inserted into the multimap.|  
+|`where`|The place to start searching for the correct point of insertion. (If that point immediately precedes `where`, insertion can occur in amortized constant time instead of logarithmic time.)|  
   
-### <a name="return-value"></a>Возвращаемое значение  
- Итератор, указывающий на вновь вставленный элемент.  
+### <a name="return-value"></a>Return Value  
+ An iterator to the newly inserted element.  
   
-### <a name="remarks"></a>Примечания  
- Эта функция не делает недействительными никакие ссылки на элементы контейнера, но она может сделать недействительными все итераторы к контейнеру.  
+### <a name="remarks"></a>Remarks  
+ No references to container elements are invalidated by this function, but it may invalidate all iterators to the container.  
   
- Если во время размещения создается исключение, состояние контейнера не изменяется.  
+ During emplacement, if an exception is thrown, the container's state is not modified.  
   
- [value_type](../standard-library/map-class.md#value_type) элемента — это pair, поэтому значением элемента будет упорядоченная пара, первый компонент которой равен значению ключа, а второй — значению данных элемента.  
+ The [value_type](../standard-library/map-class.md#value_type) of an element is a pair, so that the value of an element will be an ordered pair with the first component equal to the key value and the second component equal to the data value of the element.  
   
- Пример кода см. в разделе [map::emplace_hint](../standard-library/map-class.md#emplace_hint).  
+ For a code example, see [map::emplace_hint](../standard-library/map-class.md#emplace_hint).  
   
 ##  <a name="empty"></a>  multimap::empty  
- Проверяет, что мультиотображение пусто.  
+ Tests if a multimap is empty.  
   
 ```  
 bool empty() const;
 ```  
   
-### <a name="return-value"></a>Возвращаемое значение  
- **true**, если мультиотображение пустое; в противном случае **false**.  
+### <a name="return-value"></a>Return Value  
+ **true** if the multimap is empty; **false** if the multimap is nonempty.  
   
-### <a name="example"></a>Пример  
+### <a name="example"></a>Example  
   
 ```cpp  
 // multimap_empty.cpp  
@@ -815,7 +854,7 @@ The multimap m2 is empty.
 ```  
   
 ##  <a name="end"></a>  multimap::end  
- Возврат итератора после конца.  
+ Returns the past-the-end iterator.  
   
 ```  
 const_iterator end() const;
@@ -825,18 +864,18 @@ const_iterator end() const;
 iterator end();
 ```  
   
-### <a name="return-value"></a>Возвращаемое значение  
- Итератор после конца. Если мультикарта пуста, то `multimap::end() == multimap::begin()`.  
+### <a name="return-value"></a>Return Value  
+ The past-the-end iterator. If the multimap is empty, then `multimap::end() == multimap::begin()`.  
   
-### <a name="remarks"></a>Примечания  
- **end** используется для проверки, прошел ли итератор конец своего мультиотображения.  
+### <a name="remarks"></a>Remarks  
+ **end** is used to test whether an iterator has passed the end of its multimap.  
   
- Значение, возвращаемое **end**, не должно разыменовываться.  
+ The value returned by **end** should not be dereferenced.  
   
- Пример кода см. в разделе [multimap::find](#find).  
+ For a code example, see [multimap::find](#find).  
   
 ##  <a name="equal_range"></a>  multimap::equal_range  
- Находит диапазон элементов, где ключ элемента соответствует заданному значению.  
+ Finds the range of elements where the key of the element matches a specified value.  
   
 ```  
 pair <const_iterator, const_iterator> equal_range (const Key& key) const;
@@ -844,16 +883,16 @@ pair <const_iterator, const_iterator> equal_range (const Key& key) const;
 pair <iterator, iterator> equal_range (const Key& key);
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
  `key`  
- Аргумент-ключ для сравнения с ключом сортировки элемента из мультиотображения, в котором выполняется поиск.  
+ The argument key to be compared with the sort key of an element from the multimap being searched.  
   
-### <a name="return-value"></a>Возвращаемое значение  
- Пара итераторов, первый из которых является [lower_bound](#lower_bound) ключа, а второй — [upper_bound](#upper_bound) ключа.  
+### <a name="return-value"></a>Return Value  
+ A pair of iterators such that the first is the [lower_bound](#lower_bound) of the key and the second is the [upper_bound](#upper_bound) of the key.  
   
- Для доступа к первому итератору пары `pr`, возвращаемой функцией-членом, нужно использовать `pr`. **first**, а для разыменования итератора нижней границы используйте \*(`pr`. **first**). Для доступа к второму итератору пары `pr`, возвращаемой функцией-членом, нужно использовать `pr`. **second**, а для разыменования итератора верхней границы используйте \*(`pr`. **second**).  
+ To access the first iterator of a pair `pr` returned by the member function, use `pr`. **first** and to dereference the lower bound iterator, use \*( `pr`. **first**). To access the second iterator of a pair `pr` returned by the member function, use `pr`. **second** and to dereference the upper bound iterator, use \*( `pr`. **second**).  
   
-### <a name="example"></a>Пример  
+### <a name="example"></a>Example  
   
 ```cpp  
 // multimap_equal_range.cpp  
@@ -914,7 +953,7 @@ The multimap m1 doesn't have an element with a key less than 4.
 ```  
   
 ##  <a name="erase"></a>  multimap::erase  
- Удаляет элемент или диапазон элементов в мультиотображении из указанных позиций или удаляет элементы, соответствующие заданному ключу.  
+ Removes an element or a range of elements in a multimap from specified positions or removes elements that match a specified key.  
   
 ```  
 iterator erase(
@@ -928,29 +967,29 @@ size_type erase(
     const key_type& Key);
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
  `Where`  
- Положение удаляемого элемента.  
+ Position of the element to be removed.  
   
  `First`  
- Положение первого удаляемого элемента.  
+ Position of the first element to be removed.  
   
  `Last`  
- Позиция после последнего элемента для удаления.  
+ Position just beyond the last element to be removed.  
   
  `Key`  
- Ключевое значение элементов для удаления.  
+ The key of the elements to be removed.  
   
-### <a name="return-value"></a>Возвращаемое значение  
- Для первых двух функций-членов это двунаправленный итератор, обозначающий первый элемент, остающийся после любых удаленных элементов, или элемент в конце сопоставления, если таких элементов нет.  
+### <a name="return-value"></a>Return Value  
+ For the first two member functions, a bidirectional iterator that designates the first element remaining beyond any elements removed, or an element that is the end of the map if no such element exists.  
   
- Для третьей функции-члена возвращается количество элементов, которые были удалены из мультиотображения.  
+ For the third member function, returns the number of elements that have been removed from the multimap.  
   
-### <a name="remarks"></a>Примечания  
- Пример кода см. в разделе [map::erase](../standard-library/map-class.md#erase).  
+### <a name="remarks"></a>Remarks  
+ For a code example, see [map::erase](../standard-library/map-class.md#erase).  
   
 ##  <a name="find"></a>  multimap::find  
- Возвращает итератор, ссылающийся на элемент в мультикарте, ключ которого эквивалентен заданному ключу.  
+ Returns an iterator that refers to the first location of an element in a multimap that has a key equivalent to a specified key.  
   
 ```  
 iterator find(const Key& key);
@@ -959,19 +998,19 @@ iterator find(const Key& key);
 const_iterator find(const Key& key) const;
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
  `key`  
- Значение ключа, с которым сравнивается ключ сортировки элемента из мультикарты, по которой выполняется поиск.  
+ The key value to be matched by the sort key of an element from the multimap being searched.  
   
-### <a name="return-value"></a>Возвращаемое значение  
- Итератор, ссылающийся на положение элемента с указанным ключом или на положение после последнего элемента в мультиотображении ( `multimap::end()`), если соответствие для ключа не найдено.  
+### <a name="return-value"></a>Return Value  
+ An iterator that refers to the location of an element with a specified key, or the location succeeding the last element in the multimap ( `multimap::end()`) if no match is found for the key.  
   
-### <a name="remarks"></a>Примечания  
- Функция-член возвращает итератор, который ссылается на элемент в мультикарте с ключом сортировки, эквивалентным ключу аргумента согласно двоичному предикату, применяющему упорядочение на основе отношения сравнения «меньше».  
+### <a name="remarks"></a>Remarks  
+ The member function returns an iterator that refers to an element in the multimap whose sort key is equivalent to the argument key under a binary predicate that induces an ordering based on a less than comparability relation.  
   
- Если возвращаемое значение **find** назначается **const_iterator**, то объект-мультиотображение изменить нельзя. Если возвращаемое значение **find** назначается **iterator**, то объект-мультиотображение можно изменить.  
+ If the return value of **find** is assigned to a **const_iterator**, the multimap object cannot be modified. If the return value of **find** is assigned to an **iterator**, the multimap object can be modified.  
   
-### <a name="example"></a>Пример  
+### <a name="example"></a>Example  
   
 ```cpp  
 // compile with: /EHsc /W4 /MTd  
@@ -1035,19 +1074,19 @@ int main()
 ```  
   
 ##  <a name="get_allocator"></a>  multimap::get_allocator  
- Возвращает копию объекта-распределителя, использованного для создания мультиотображения.  
+ Returns a copy of the allocator object used to construct the multimap.  
   
 ```  
 allocator_type get_allocator() const;
 ```  
   
-### <a name="return-value"></a>Возвращаемое значение  
- Распределитель, использованный мультиотображением.  
+### <a name="return-value"></a>Return Value  
+ The allocator used by the multimap.  
   
-### <a name="remarks"></a>Примечания  
- Распределители для класса multimap определяют, как класс управляет памятью. Распределители по умолчанию для классов контейнеров из стандартной библиотеки C++ достаточны для большинства задач программирования. Написание и использование собственного класса распределителя требует расширенных навыков работы с C++.  
+### <a name="remarks"></a>Remarks  
+ Allocators for the multimap class specify how the class manages storage. The default allocators supplied with C++ Standard Library container classes are sufficient for most programming needs. Writing and using your own allocator class is an advanced C++ topic.  
   
-### <a name="example"></a>Пример  
+### <a name="example"></a>Example  
   
 ```cpp  
 // multimap_get_allocator.cpp  
@@ -1104,7 +1143,7 @@ int main( )
 ```  
   
 ##  <a name="insert"></a>  multimap::insert  
- Вставляет элемент или диапазон элементов в множественное сопоставление.  
+ Inserts an element or a range of elements into a multimap.  
   
 ```  
 // (1) single element  
@@ -1145,38 +1184,38 @@ void insert(
 IList);
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
   
 |||  
 |-|-|  
-|Параметр|Описание|  
-|`Val`|Значение элемента, вставляемого в множественное сопоставление.|  
-|`Where`|Место начала поиска правильной точки вставки. (Если эта точка находится непосредственно перед `Where`, вставка может быть выполнена в постоянном времени с поправкой на амортизацию, а не в логарифмическом времени.)|  
-|`ValTy`|Параметр-шаблон, определяющий тип аргумента, с помощью которого сопоставление формирует элемент типа [value_type`Val` и точно пересылает ](../standard-library/map-class.md#value_type) в качестве аргумента.|  
-|`First`|Позиция первого элемента, который следует скопировать.|  
-|`Last`|Позиция непосредственно перед последним элементом, который следует скопировать.|  
-|`InputIterator`|Аргумент функции-шаблона, который соответствует требованиям [итератора ввода](../standard-library/input-iterator-tag-struct.md), указывающего на элементы типа, которые можно использовать для создания объектов [value_type](../standard-library/map-class.md#value_type).|  
-|`IList`|[initializer_list](../standard-library/initializer-list.md), из которого нужно скопировать элементы.|  
+|Parameter|Description|  
+|`Val`|The value of an element to be inserted into the multimap.|  
+|`Where`|The place to start searching for the correct point of insertion. (If that point immediately precedes `Where`, insertion can occur in amortized constant time instead of logarithmic time.)|  
+|`ValTy`|Template parameter that specifies the argument type that the map can use to construct an element of [value_type](../standard-library/map-class.md#value_type), and perfect-forwards `Val` as an argument.|  
+|`First`|The position of the first element to be copied.|  
+|`Last`|The position just beyond the last element to be copied.|  
+|`InputIterator`|Template function argument that meets the requirements of an [input iterator](../standard-library/input-iterator-tag-struct.md) that points to elements of a type that can be used to construct [value_type](../standard-library/map-class.md#value_type) objects.|  
+|`IList`|The [initializer_list](../standard-library/initializer-list.md) from which to copy the elements.|  
   
-### <a name="return-value"></a>Возвращаемое значение  
- Одноэлементные функции-члены (1) и (2) возвращают итератор в позиции, где был вставлен новый элемент.  
+### <a name="return-value"></a>Return Value  
+ The single-element-insert member functions, (1) and (2), return an iterator to the position where the new element was inserted into the multimap.  
   
- Одноэлементные функции-члены с подсказкой (3) и (4) возвращают итератор, указывающий на позицию, где был вставлен новый элемент.  
+ The single-element-with-hint member functions, (3) and (4), return an iterator that points to the position where the new element was inserted into the multimap.  
   
-### <a name="remarks"></a>Примечания  
- Эта функция не делает никакие указатели или ссылки недействительными, но она может сделать недействительными все итераторы контейнера.  
+### <a name="remarks"></a>Remarks  
+ No pointers or references are invalidated by this function, but it may invalidate all iterators to the container.  
   
- Если во время вставки одного элемента вызывается исключение, состояние контейнера не изменяется. Если во время вставки нескольких элементов вызывается исключение, контейнер остается в неопределенном, но допустимом состоянии.  
+ During the insertion of just one element, if an exception is thrown, the container's state is not modified. During the insertion of multiple elements, if an exception is thrown, the container is left in an unspecified but valid state.  
   
- [value_type](../standard-library/map-class.md#value_type) контейнера — это определение типа, который принадлежит контейнеру. Для сопоставления `multimap<K, V>::value_type` — это `pair<const K, V>`. Значение элемента — это упорядоченная пара, в которой первый компонент эквивалентен значению ключа, а второй компонент — значению данных элемента.  
+ The [value_type](../standard-library/map-class.md#value_type) of a container is a typedef that belongs to the container, and for map, `multimap<K, V>::value_type` is `pair<const K, V>`. The value of an element is an ordered pair in which the first component is equal to the key value and the second component is equal to the data value of the element.  
   
- Функция-член с диапазоном (5) вставляет последовательность значений элементов в множественное сопоставление, соответствующее каждому элементу, адресованному итератором в диапазоне `[First, Last)`. Следовательно, `Last` не вставляется. Контейнер функции-члена `end()` ссылается на позицию сразу после последнего элемента в контейнере. Например, оператор `m.insert(v.begin(), v.end());` пытается вставить все элементы `v` в `m`.  
+ The range member function (5) inserts the sequence of element values into a multimap that corresponds to each element addressed by an iterator in the range `[First, Last)`; therefore, `Last` does not get inserted. The container member function `end()` refers to the position just after the last element in the container—for example, the statement `m.insert(v.begin(), v.end());` inserts all elements of `v` into `m`.  
   
- Функция-член списка инициализатора (6) использует [initializer_list](../standard-library/initializer-list.md) для копирования элементов в сопоставление.  
+ The initializer list member function (6) uses an [initializer_list](../standard-library/initializer-list.md) to copy elements into the map.  
   
- Для вставки элемента, созданного на месте (то есть без операций копирования или перемещения), см. разделы [multimap::emplace](#emplace) и [multimap::emplace_hint](#emplace_hint).  
+ For insertion of an element constructed in place—that is, no copy or move operations are performed—see [multimap::emplace](#emplace) and [multimap::emplace_hint](#emplace_hint).  
   
-### <a name="example"></a>Пример  
+### <a name="example"></a>Example  
   
 ```cpp  
 // multimap_insert.cpp  
@@ -1268,42 +1307,42 @@ int main()
 ```  
   
 ##  <a name="iterator"></a>  multimap::iterator  
- Тип, предоставляющий двунаправленный итератор, который может читать или изменять любой элемент в мультиотображении.  
+ A type that provides a bidirectional iterator that can read or modify any element in a multimap.  
   
 ```  
 typedef implementation-defined iterator;  
 ```  
   
-### <a name="remarks"></a>Примечания  
- **Итератор**, определенный мультиотображением, указывает на объекты [value_type](#value_type) типа `pair`*\<***const Key**, **Type***>*. Значение ключа доступно через первый член пары, а значение сопоставленного элемента доступно через второй член пары.  
+### <a name="remarks"></a>Remarks  
+ The **iterator** defined by multimap points to objects of [value_type](#value_type), which are of type `pair`*\<***const Key**, **Type***>*. The value of the key is available through the first member pair and the value of the mapped element is available through the second member of the pair.  
   
- Для разыменования **итератора**`Iter`, указывающего на элемент мультиотображения, используйте оператор **->**.  
+ To dereference an **iterator**`Iter` pointing to an element in a multimap, use the **->** operator.  
   
- Для получения доступа к значению ключа для элемента используйте `Iter` -> **first**, что эквивалентно (\* `Iter`). **first**. Для получения доступа к значению сопоставленных данных элемента используйте `Iter` -> **second**, что эквивалентно (\* `Iter`). **second**.  
+ To access the value of the key for the element, use `Iter` -> **first**, which is equivalent to (\* `Iter`). **first**. To access the value of the mapped datum for the element, use `Iter` -> **second**, which is equivalent to (\* `Iter`). **second**.  
   
- Тип **итератор** можно использовать для изменения значения элемента.  
+ A type **iterator** can be used to modify the value of an element.  
   
-### <a name="example"></a>Пример  
-  См. пример для [begin](#begin) в качестве примера объявления и использования **iterator**.  
+### <a name="example"></a>Example  
+  See the example for [begin](#begin) for an example of how to declare and use **iterator**.  
   
 ##  <a name="key_comp"></a>  multimap::key_comp  
- Извлекает копию объекта сравнения, использованного для упорядочивания ключей в мультиотображении.  
+ Retrieves a copy of the comparison object used to order keys in a multimap.  
   
 ```  
 key_compare key_comp() const;
 ```  
   
-### <a name="return-value"></a>Возвращаемое значение  
- Возвращает объект-функцию, которую мультиотображение использует для упорядочивания своих элементов.  
+### <a name="return-value"></a>Return Value  
+ Returns the function object that a multimap uses to order its elements.  
   
-### <a name="remarks"></a>Примечания  
- Хранимый объект определяет функцию-член  
+### <a name="remarks"></a>Remarks  
+ The stored object defines the member function  
   
  **bool operator**( **const Key&** *x*, **const Key&** *y*);  
   
- которая возвращает true, если *x* строго предшествует *y* в порядке сортировки.  
+ which returns true if *x* strictly precedes *y* in the sort order.  
   
-### <a name="example"></a>Пример  
+### <a name="example"></a>Example  
   
 ```cpp  
 // multimap_key_comp.cpp  
@@ -1355,37 +1394,37 @@ kc2( 2,3 ) returns value of false, where kc2 is the function object of m2.
 ```  
   
 ##  <a name="key_compare"></a>  multimap::key_compare  
- Тип, который предоставляет объект-функцию, которая может сравнить два ключа сортировки для определения относительного порядка двух элементов в мультиотображении.  
+ A type that provides a function object that can compare two sort keys to determine the relative order of two elements in the multimap.  
   
 ```  
 typedef Traits key_compare;  
 ```  
   
-### <a name="remarks"></a>Примечания  
- **key_compare** является синонимом для параметра-шаблона `Traits`.  
+### <a name="remarks"></a>Remarks  
+ **key_compare** is a synonym for the template parameter `Traits`.  
   
- Более подробную информацию по `Traits` см. в разделе [Класс multimap](../standard-library/multimap-class.md).  
+ For more information on `Traits` see the [multimap Class](../standard-library/multimap-class.md) topic.  
   
-### <a name="example"></a>Пример  
-  См. пример для [key_comp](#key_comp) в качестве примера объявления и использования `key_compare`.  
+### <a name="example"></a>Example  
+  See the example for [key_comp](#key_comp) for an example of how to declare and use `key_compare`.  
   
 ##  <a name="key_type"></a>  multimap::key_type  
- Тип, описывающий объект-ключ сортировки, который входит в каждый элемент мультиотображения.  
+ A type that describes the sort key object that constitutes each element of the multimap.  
   
 ```  
 typedef Key key_type;  
 ```  
   
-### <a name="remarks"></a>Примечания  
- **key_type** является синонимом для параметра-шаблона `Key`.  
+### <a name="remarks"></a>Remarks  
+ **key_type** is a synonym for the template parameter `Key`.  
   
- Более подробную информацию по `Key` см. в подразделе "Примечания" раздела [Класс multimap](../standard-library/multimap-class.md).  
+ For more information on `Key`, see the Remarks section of the [multimap Class](../standard-library/multimap-class.md) topic.  
   
-### <a name="example"></a>Пример  
-  См. пример для [value_type](#value_type) в качестве примера объявления и использования `key_type`.  
+### <a name="example"></a>Example  
+  See the example for [value_type](#value_type) for an example of how to declare and use `key_type`.  
   
 ##  <a name="lower_bound"></a>  multimap::lower_bound  
- Возвращает итератор, указывающий на первый элемент в мультиотображении с ключом, который равен указанному ключу или больше его.  
+ Returns an iterator to the first element in a multimap that with a key that is equal to or greater than a specified key.  
   
 ```  
 iterator lower_bound(const Key& key);
@@ -1393,16 +1432,16 @@ iterator lower_bound(const Key& key);
 const_iterator lower_bound(const Key& key) const;
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
  `key`  
- Аргумент-ключ для сравнения с ключом сортировки элемента из мультиотображения, в котором выполняется поиск.  
+ The argument key to be compared with the sort key of an element from the multimap being searched.  
   
-### <a name="return-value"></a>Возвращаемое значение  
- Итератор или `const_iterator`, адресующий положение элемента в мультиотображении, ключ которого равен ключу-аргументу или больше его, или адресующий положение после последнего элемента в мультиотображении, если сопоставление для ключа не найдено.  
+### <a name="return-value"></a>Return Value  
+ An iterator or `const_iterator` that addresses the location of an element in a multimap that with a key that is equal to or greater than the argument key, or that addresses the location succeeding the last element in the multimap if no match is found for the key.  
   
- Если возвращенное значение `lower_bound` назначается `const_iterator`, то объект-мультиотображение изменить нельзя. Если возвращенное значение `lower_bound` назначается **iterator**, то объект-мультиотображение можно изменить.  
+ If the return value of `lower_bound` is assigned to a `const_iterator`, the multimap object cannot be modified. If the return value of `lower_bound` is assigned to an **iterator**, the multimap object can be modified.  
   
-### <a name="example"></a>Пример  
+### <a name="example"></a>Example  
   
 ```cpp  
 // multimap_lower_bound.cpp  
@@ -1470,31 +1509,31 @@ This is not the last element of multimap m1.
 ```  
   
 ##  <a name="mapped_type"></a>  multimap::mapped_type  
- Тип, представляющий тип данных, хранящихся в мультиотображении.  
+ A type that represents the data type stored in a multimap.  
   
 ```  
 typedef Type mapped_type;  
 ```  
   
-### <a name="remarks"></a>Примечания  
- `mapped_type` является синонимом для параметра-шаблона `Type`.  
+### <a name="remarks"></a>Remarks  
+ `mapped_type` is a synonym for the template parameter `Type`.  
   
- Более подробную информацию по `Type` см. в разделе [Класс multimap](../standard-library/multimap-class.md).  
+ For more information on `Type` see the [multimap Class](../standard-library/multimap-class.md) topic.  
   
-### <a name="example"></a>Пример  
-  См. пример для [value_type](#value_type) в качестве примера объявления и использования `key_type`.  
+### <a name="example"></a>Example  
+  See the example for [value_type](#value_type) for an example of how to declare and use `key_type`.  
   
 ##  <a name="max_size"></a>  multimap::max_size  
- Возвращает максимальную длину мультиотображения.  
+ Returns the maximum length of the multimap.  
   
 ```  
 size_type max_size() const;
 ```  
   
-### <a name="return-value"></a>Возвращаемое значение  
- Максимально возможная длина мультиотображения.  
+### <a name="return-value"></a>Return Value  
+ The maximum possible length of the multimap.  
   
-### <a name="example"></a>Пример  
+### <a name="example"></a>Example  
   
 ```cpp  
 // multimap_max_size.cpp  
@@ -1515,7 +1554,7 @@ int main( )
 ```  
   
 ##  <a name="multimap"></a>  multimap::multimap  
- Создает мультиотображение, которое является пустым или копией всего или части другого мультиотображения.  
+ Constructs a multimap that is empty or that is a copy of all or part of some other multimap.  
   
 ```  
 multimap();
@@ -1564,36 +1603,36 @@ multimap(
     const Allocator& Al);
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
   
 |||  
 |-|-|  
-|Параметр|Описание|  
-|`Al`|Класс распределителя памяти для использования для этого объекта-мультиотображения. Значение по умолчанию — Allocator.|  
-|`Comp`|Функция сравнения типа **constTraits**, используемая для упорядочивания элементов в мультиотображении. Значение по умолчанию — **Traits**.|  
-|`Right`|Сопоставление, копией которого будет создаваемое сопоставление.|  
-|`First`|Положение первого элемента в диапазоне копируемых элементов.|  
-|`Last`|Положение первого элемента после диапазона копируемых элементов.|  
-|`IList`|Объект initializer_list, из которого копируются элементы.|  
+|Parameter|Description|  
+|`Al`|The storage allocator class to be used for this multimap object, which defaults to Allocator.|  
+|`Comp`|The comparison function of type **constTraits** used to order the elements in the map, which defaults to **Traits**.|  
+|`Right`|The map of which the constructed set is to be a copy.|  
+|`First`|The position of the first element in the range of elements to be copied.|  
+|`Last`|The position of the first element beyond the range of elements to be copied.|  
+|`IList`|The initializer_list from which to copy the elements.|  
   
-### <a name="remarks"></a>Примечания  
- Все конструкторы сохраняют тип объекта-распределителя, управляющего памятью для мультиотображения. Затем его можно получить путем вызова [get_allocator](#get_allocator). Параметр-распределитель часто не указывается в объявлениях класса и в макросах предварительной обработки, используемых для замены альтернативных распределителей.  
+### <a name="remarks"></a>Remarks  
+ All constructors store a type of allocator object that manages memory storage for the multimap and that can later be returned by calling [get_allocator](#get_allocator). The allocator parameter is often omitted in the class declarations and preprocessing macros used to substitute alternative allocators.  
   
- Все конструкторы инициализируют свои мультиотображения.  
+ All constructors initialize their multimap.  
   
- Все конструкторы сохраняют объект-функцию типа `Traits`, используемую для установления порядка ключей мультиотображения. Затем эту функцию можно получить путем вызова [key_comp](#key_comp).  
+ All constructors store a function object of type `Traits` that is used to establish an order among the keys of the multimap and that can later be returned by calling [key_comp](#key_comp).  
   
- Первые три конструктора указывают пустое начальное мультиотображение, второй указывает тип функции сравнения ( `Comp`) для использования при установлении порядка элементов, а третий явно указывает тип распределителя ( `Al`) для использования. Ключевое слово `explicit` подавляет некоторые виды автоматического преобразования типов.  
+ The first three constructors specify an empty initial multimap, the second specifying the type of comparison function ( `Comp`) to be used in establishing the order of the elements and the third explicitly specifying the allocator type ( `Al`) to be used. The key word `explicit` suppresses certain kinds of automatic type conversion.  
   
- Четвертый конструктор указывает копию мультиотображения `Right`.  
+ The fourth constructor specifies a copy of the multimap `Right`.  
   
- Пятый конструктор указывает копию мультиотображения путем перемещения `Right`.  
+ The fifth constructor specifies a copy of the multimap by moving `Right`.  
   
- Шестой, седьмой и восьмой конструкторы копируют члены initializer_list.  
+ The sixth, seventh, and eighth constructors copy the members of an initializer_list.  
   
- Следующие три конструктора копируют диапазон `[First, Last)` мультиотображения с повышением точности при указании типа функции сравнения класса **Traits** и распределителя.  
+ The next three constructors copy the range `[First, Last)` of a map with increasing explicitness in specifying the type of comparison function of class **Traits** and allocator.  
   
-### <a name="example"></a>Пример  
+### <a name="example"></a>Example  
   
 ```cpp  
 // multimap_ctor.cpp  
@@ -1703,7 +1742,7 @@ int main()
 ```  
   
 ##  <a name="op_eq"></a>  multimap::operator=  
- Заменяет элементы мультиотображения копией другого мультиотображения.  
+ Replaces the elements of a multimap with a copy of another multimap.  
   
 ```  
 multimap& operator=(const multimap& right);
@@ -1711,17 +1750,17 @@ multimap& operator=(const multimap& right);
 multimap& operator=(multimap&& right);
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
   
 |||  
 |-|-|  
-|Параметр|Описание|  
-|`right`|[Мультиотображение](../standard-library/multimap-class.md), которое будет копироваться в `multimap`.|  
+|Parameter|Description|  
+|`right`|The [multimap](../standard-library/multimap-class.md) being copied into the `multimap`.|  
   
-### <a name="remarks"></a>Примечания  
- После удаления всех существующих элементов в объекте `multimap` `operator=` копирует или перемещает содержимое `right` в объект `multimap`.  
+### <a name="remarks"></a>Remarks  
+ After erasing any existing elements in a `multimap`, `operator=` either copies or moves the contents of `right` into the `multimap`.  
   
-### <a name="example"></a>Пример  
+### <a name="example"></a>Example  
   
 ```cpp  
 // multimap_operator_as.cpp  
@@ -1759,19 +1798,19 @@ int main( )
 ```  
   
 ##  <a name="pointer"></a>  multimap::pointer  
- Тип, предоставляющий указатель на элемент мультиотображения.  
+ A type that provides a pointer to an element in a multimap.  
   
 ```  
 typedef typename allocator_type::pointer pointer;  
 ```  
   
-### <a name="remarks"></a>Примечания  
- Тип **pointer** может использоваться для изменения значения элемента.  
+### <a name="remarks"></a>Remarks  
+ A type **pointer** can be used to modify the value of an element.  
   
- В большинстве случаев для доступа к элементам в объекте-мультиотображении следует использовать [iterator](#iterator).  
+ In most cases, an [iterator](#iterator) should be used to access the elements in a multimap object.  
   
 ##  <a name="rbegin"></a>  multimap::rbegin  
- Возвращает итератор, адресующий первый элемент в обратном мультиотображении.  
+ Returns an iterator addressing the first element in a reversed multimap.  
   
 ```  
 const_reverse_iterator rbegin() const;
@@ -1779,17 +1818,17 @@ const_reverse_iterator rbegin() const;
 reverse_iterator rbegin();
 ```  
   
-### <a name="return-value"></a>Возвращаемое значение  
- Обратный двунаправленный итератор, адресующий первый элемент в обратном мультиотображении или адресующий то, что было последним элементом в мультиотображении до изменения его порядка на противоположный.  
+### <a name="return-value"></a>Return Value  
+ A reverse bidirectional iterator addressing the first element in a reversed multimap or addressing what had been the last element in the unreversed multimap.  
   
-### <a name="remarks"></a>Примечания  
- `rbegin` используется с обратным мультиотображением так же, как [begin](#begin) используется с прямым мультиотображением.  
+### <a name="remarks"></a>Remarks  
+ `rbegin` is used with a reversed multimap just as [begin](#begin) is used with a multimap.  
   
- Если возвращенное значение `rbegin` назначается `const_reverse_iterator`, то объект-мультиотображение изменить нельзя. Если возвращенное значение `rbegin` назначается `reverse_iterator`, то объект-мультиотображение можно изменить.  
+ If the return value of `rbegin` is assigned to a `const_reverse_iterator`, then the multimap object cannot be modified. If the return value of `rbegin` is assigned to a `reverse_iterator`, then the multimap object can be modified.  
   
- `rbegin` можно использовать для перебора мультиотображения в обратном порядке.  
+ `rbegin` can be used to iterate through a multimap backwards.  
   
-### <a name="example"></a>Пример  
+### <a name="example"></a>Example  
   
 ```cpp  
 // multimap_rbegin.cpp  
@@ -1848,13 +1887,13 @@ After the erasure, the first element in the reversed multimap is 2.
 ```  
   
 ##  <a name="reference"></a>  multimap::reference  
- Тип, который предоставляет ссылку на элемент, хранящийся в мультиотображении.  
+ A type that provides a reference to an element stored in a multimap.  
   
 ```  
 typedef typename allocator_type::reference reference;  
 ```  
   
-### <a name="example"></a>Пример  
+### <a name="example"></a>Example  
   
 ```cpp  
 // multimap_ref.cpp  
@@ -1904,7 +1943,7 @@ The modified data value of first element is 15.
 ```  
   
 ##  <a name="rend"></a>  multimap::rend  
- Возвращает итератор, адресующий положение после последнего элемента в обратном мультиотображении.  
+ Returns an iterator that addresses the location succeeding the last element in a reversed multimap.  
   
 ```  
 const_reverse_iterator rend() const;
@@ -1912,19 +1951,19 @@ const_reverse_iterator rend() const;
 reverse_iterator rend();
 ```  
   
-### <a name="return-value"></a>Возвращаемое значение  
- Обратный двунаправленный итератор, адресующий положение после последнего элемента в обратном мультиотображении (положение, которое предшествовало первому элементу в мультиотображении до изменения его порядка на противоположный).  
+### <a name="return-value"></a>Return Value  
+ A reverse bidirectional iterator that addresses the location succeeding the last element in a reversed multimap (the location that had preceded the first element in the unreversed multimap).  
   
-### <a name="remarks"></a>Примечания  
- `rend` используется с обратным мультиотображением так же, как [end](../standard-library/map-class.md#end) используется с обычным мультиотображением.  
+### <a name="remarks"></a>Remarks  
+ `rend` is used with a reversed multimap just as [end](../standard-library/map-class.md#end) is used with a multimap.  
   
- Если возвращенное значение `rend` назначается `const_reverse_iterator`, то объект-мультиотображение изменить нельзя. Если возвращенное значение `rend` назначается `reverse_iterator`, то объект-мультиотображение можно изменить.  
+ If the return value of `rend` is assigned to a `const_reverse_iterator`, then the multimap object cannot be modified. If the return value of `rend` is assigned to a `reverse_iterator`, then the multimap object can be modified.  
   
- `rend` можно использовать для проверки, достиг ли обратный итератор конца своего мультиотображения.  
+ `rend` can be used to test to whether a reverse iterator has reached the end of its multimap.  
   
- Значение, возвращаемое `rend`, не должно быть подвергнуто удалению ссылки.  
+ The value returned by `rend` should not be dereferenced.  
   
-### <a name="example"></a>Пример  
+### <a name="example"></a>Example  
   
 ```cpp  
 // multimap_rend.cpp  
@@ -1985,36 +2024,36 @@ After the erasure, the last element in the reversed multimap is 2.
 ```  
   
 ##  <a name="reverse_iterator"></a>  multimap::reverse_iterator  
- Тип, предоставляющий двунаправленный итератор, который может читать и изменять элемент в обратном мультиотображении.  
+ A type that provides a bidirectional iterator that can read or modify an element in a reversed multimap.  
   
 ```  
 typedef std::reverse_iterator<iterator> reverse_iterator;  
 ```  
   
-### <a name="remarks"></a>Примечания  
- Тип `reverse_iterator` используется для перебора мультиотображения в обратном порядке.  
+### <a name="remarks"></a>Remarks  
+ A type `reverse_iterator` is use to iterate through the multimap in reverse.  
   
- `reverse_iterator`, определенный мультиотображением, указывает на объекты [value_type](#value_type) типа `pair`*\<***const Key**, **Type***>*. Значение ключа доступно через первый член пары, а значение сопоставленного элемента доступно через второй член пары.  
+ The `reverse_iterator` defined by multimap points to objects of [value_type](#value_type), which are of type `pair`*\<***const Key**, **Type***>*. The value of the key is available through the first member pair and the value of the mapped element is available through the second member of the pair.  
   
- Для разыменования `reverse_iterator``rIter`, указывающего на элемент мультиотображения, используйте оператор ->.  
+ To dereference a `reverse_iterator` `rIter` pointing to an element in a multimap, use the -> operator.  
   
- Для получения доступа к значению ключа для элемента используйте `rIter` -> **first**, что эквивалентно (\* `rIter`). **first**. Для получения доступа к значению сопоставленных данных элемента используйте `rIter` -> **second**, что эквивалентно (\* `rIter`). **first**.  
+ To access the value of the key for the element, use `rIter` -> **first**, which is equivalent to (\* `rIter`). **first**. To access the value of the mapped datum for the element, use `rIter` -> **second**, which is equivalent to (\* `rIter`). **first**.  
   
-### <a name="example"></a>Пример  
-  См. пример для [rbegin](#rbegin) в качестве примера объявления и использования `reverse_iterator`.  
+### <a name="example"></a>Example  
+  See the example for [rbegin](#rbegin) for an example of how to declare and use `reverse_iterator`.  
   
 ##  <a name="size"></a>  multimap::size  
- Возвращает число элементов в мультиотображении.  
+ Returns the number of elements in the multimap.  
   
 ```  
 size_type size() const;
 ```  
   
-### <a name="return-value"></a>Возвращаемое значение  
- Текущая длина мультиотображения.  
+### <a name="return-value"></a>Return Value  
+ The current length of the multimap.  
   
-### <a name="example"></a>Пример  
-  В следующем примере демонстрируется использование функции-члена multimap::size.  
+### <a name="example"></a>Example  
+  The following example demonstrates the use of the multimap::size member function.  
   
 ```  
 // multimap_size.cpp  
@@ -2045,31 +2084,31 @@ The multimap length is now 2.
 ```  
   
 ##  <a name="size_type"></a>  multimap::size_type  
- Тип целого числа без знака, который подсчитывает число элементов в мультиотображении.  
+ An unsigned integer type that counts the number of elements in a multimap.  
   
 ```  
 typedef typename allocator_type::size_type size_type;  
 ```  
   
-### <a name="example"></a>Пример  
-  См. пример для [size](#size) в качестве примера объявления и использования `size_type`  
+### <a name="example"></a>Example  
+  See the example for [size](#size) for an example of how to declare and use `size_type`  
   
 ##  <a name="swap"></a>  multimap::swap  
- Обмен элементами между двумя мультиотображениями.  
+ Exchanges the elements of two multimaps.  
   
 ```  
 void swap(
     multimap<Key, Type, Traits, Allocator>& right);
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
  `right`  
- Мультиотображение, предоставляющее элементы для обмена, или мультиотображение, элементы которого должны быть заменены на элементы мультиотображения `left`.  
+ The multimap providing the elements to be swapped, or the multimap whose elements are to be exchanged with those of the multimap `left`.  
   
-### <a name="remarks"></a>Примечания  
- Функция-член не делает недействительным ссылки, указатели или итераторы, обозначающие элементы в двух мультиотображениях, для которых выполняется обмен элементами.  
+### <a name="remarks"></a>Remarks  
+ The member function invalidates no references, pointers, or iterators that designate elements in the two multimaps whose elements are being exchanged.  
   
-### <a name="example"></a>Пример  
+### <a name="example"></a>Example  
   
 ```cpp  
 // multimap_swap.cpp  
@@ -2121,7 +2160,7 @@ After swapping with m3, multimap m1 is: 300.
 ```  
   
 ##  <a name="upper_bound"></a>  multimap::upper_bound  
- Возвращает итератор, указывающий на первый элемент в мультиотображении с ключом, который больше указанного ключа.  
+ Returns an iterator to the first element in a multimap that with a key that is greater than a specified key.  
   
 ```  
 iterator upper_bound(const Key& key);
@@ -2129,16 +2168,16 @@ iterator upper_bound(const Key& key);
 const_iterator upper_bound(const Key& key) const;
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
  `key`  
- Аргумент-ключ для сравнения с ключом сортировки элемента из мультиотображения, в котором выполняется поиск.  
+ The argument key to be compared with the sort key of an element from the multimap being searched.  
   
-### <a name="return-value"></a>Возвращаемое значение  
- Итератор или `const_iterator`, адресующий положение элемента в мультиотображении с ключом, который равен ключу-аргументу или больше него, либо адресует положение после последнего элемента в мультиотображении, если соответствие для ключа не найдено.  
+### <a name="return-value"></a>Return Value  
+ An iterator or `const_iterator` that addresses the location of an element in a multimap that with a key that is greater than the argument key, or that addresses the location succeeding the last element in the multimap if no match is found for the key.  
   
- Если возвращенное значение назначается `const_iterator`, то объект-мультиотображение изменить нельзя. Если возвращенное значение назначается **iterator**, то объект-мультиотображение можно изменить.  
+ If the return value is assigned to a `const_iterator`, the multimap object cannot be modified. If the return value is assigned to a **iterator**, the multimap object can be modified.  
   
-### <a name="example"></a>Пример  
+### <a name="example"></a>Example  
   
 ```cpp  
 // multimap_upper_bound.cpp  
@@ -2197,19 +2236,19 @@ that of the initial element of m1 is: 20.
 ```  
   
 ##  <a name="value_comp"></a>  multimap::value_comp  
- Функция-член возвращает объект-функцию, которая определяет порядок элементов в мультиотображении путем сравнения их значений ключа.  
+ The member function returns a function object that determines the order of elements in a multimap by comparing their key values.  
   
 ```  
 value_compare value_comp() const;
 ```  
   
-### <a name="return-value"></a>Возвращаемое значение  
- Возвращает объект-функцию сравнения, которую мультиотображение использует для упорядочения своих элементов.  
+### <a name="return-value"></a>Return Value  
+ Returns the comparison function object that a multimap uses to order its elements.  
   
-### <a name="remarks"></a>Примечания  
- Для мультиотображения *m*, если два элемента *e*1( *k*1, *d*1) и *e*2( *k*2, `d`2) являются объектами типа `value_type`, где *k*1 и *k*2 — их ключи типа `key_type`, а `d`1 и `d`2 — их данные типа `mapped_type`, то *m.*`value_comp`( *e*1, *e*2) эквивалентно *m.*`key_comp`( *k*1, *k*2).  
+### <a name="remarks"></a>Remarks  
+ For a multimap *m*, if two elements *e*1( *k*1, *d*1) and *e*2( *k*2, `d`2) are objects of type `value_type`, where *k*1 and *k*2 are their keys of type `key_type` and `d`1 and `d`2 are their data of type `mapped_type`, then *m.*`value_comp`( *e*1, *e*2) is equivalent to *m.*`key_comp`( *k*1, *k*2).  
   
-### <a name="example"></a>Пример  
+### <a name="example"></a>Example  
   
 ```cpp  
 // multimap_value_comp.cpp  
@@ -2260,13 +2299,13 @@ The element ( 2,5 ) does not precede the element ( 1,10 ).
 ```  
   
 ##  <a name="value_type"></a>  multimap::value_type  
- Тип, представляющий тип объекта, который хранится в виде элемента в мультиотображении.  
+ A type that represents the type of object stored as an element in a map.  
   
 ```  
 typedef pair<const Key, Type> value_type;  
 ```  
   
-### <a name="example"></a>Пример  
+### <a name="example"></a>Example  
   
 ```cpp  
 // multimap_value_type.cpp  
@@ -2324,10 +2363,10 @@ The keys of the mapped elements are: 1 2.
 The values of the mapped elements are: 10 20.  
 ```  
   
-## <a name="see-also"></a>См. также  
- [Члены \<map>](http://msdn.microsoft.com/en-us/7e8f0bc2-6034-40f6-9d14-76d4cef86308)   
- [Контейнеры](../cpp/containers-modern-cpp.md)   
- [Потокобезопасность в стандартной библиотеке C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)   
- [Справочник по стандартной библиотеке C++](../standard-library/cpp-standard-library-reference.md)
+## <a name="see-also"></a>See Also  
+ [\<map> Members](http://msdn.microsoft.com/en-us/7e8f0bc2-6034-40f6-9d14-76d4cef86308)   
+ [Containers](../cpp/containers-modern-cpp.md)   
+ [Thread Safety in the C++ Standard Library](../standard-library/thread-safety-in-the-cpp-standard-library.md)   
+ [C++ Standard Library Reference](../standard-library/cpp-standard-library-reference.md)
 
 

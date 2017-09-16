@@ -1,85 +1,106 @@
 ---
-title: "Шаблоны и разрешение имен | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-dev_langs: 
-  - "C++"
+title: Templates and Name Resolution | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-language
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+dev_langs:
+- C++
 ms.assetid: 519ba7b5-cd25-4549-865a-9a7b9dffdc28
 caps.latest.revision: 6
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 6
----
-# Шаблоны и разрешение имен
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 83e4c6681f49b097c412040364d88bf8843ecbc5
+ms.contentlocale: ru-ru
+ms.lasthandoff: 09/12/2017
 
-В определениях шаблонов существует три типа имен:  
+---
+# <a name="templates-and-name-resolution"></a>Templates and Name Resolution
+
+In template definitions, there are three types of names.  
   
--   локально объявленные имена, включая имя самого шаблона, и все имена, объявленные в рамках определения шаблона;  
+-   Locally declared names, including the name of the template itself and any names declared inside the template definition.  
   
--   имена из внешней области видимости вне определения шаблона;  
+-   Names from the enclosing scope outside the template definition.  
   
--   имена, зависящие каким\-либо образом от аргументов шаблона \(называемые зависимыми именами\).  
+-   Names that depend in some way on the template arguments, referred to as dependent names.  
   
- Хотя первые два типа имен также относятся к областям видимости класса и функции, в определениях шаблонов необходимо иметь особые правила разрешения имен для устранения проблем, связанных с дополнительной сложностью зависимых имен.  Причина этого в том, что до создания экземпляра шаблона компилятор мало знает об этих именах, поскольку они могут быть совершенно разных типов в зависимости от используемых аргументов шаблона.  Поиск независимых имен осуществляется в соответствии с обычными правилами и в точке определения шаблона.  Эти имена, не зависящие от аргументов шаблона, ищутся один раз для всех специализаций шаблона.  Поиск зависимых имен не выполняется, пока не будет создан экземпляр шаблона, и такие имена ищутся отдельно для каждой специализации.  
+ While the first two names also pertain to class and function scopes, special rules for name resolution are required in template definitions to deal with the added complexity of dependent names. This is because the compiler knows little about these names until the template is instantiated, because they could be totally different types depending on which template arguments are used. Nondependent names are looked up according to the usual rules and at the point of definition of the template. These names, being independent of the template arguments, are looked up once for all template specializations. Dependent names are not looked up until the template is instantiated and are looked up separately for each specialization.  
   
- Тип является зависимым, если он зависит от аргументов шаблона.  В частности, он зависим, если представляет собой:  
+ A type is dependent if it depends on the template arguments. Specifically, a type is dependent if it is:  
   
--   аргумент шаблона:  
+-   The template argument itself:  
   
-    ```  
+    ```cpp
     T  
     ```  
   
--   полное имя с квалификацией, включающей зависимый тип:  
+-   A qualified name with a qualification including a dependent type:  
   
-    ```  
+    ```cpp
     T::myType  
     ```  
   
--   полное имя, если неопределенная часть идентифицирует зависимый тип:  
+-   A qualified name if the unqualified part identifies a dependent type:  
   
-    ```  
+    ```cpp
     N::T  
     ```  
   
--   тип const или volatile, для которого базовый тип является зависимым:  
+-   A const or volatile type for which the base type is a dependent type:  
   
-    ```  
+    ```cpp
     const T  
     ```  
   
--   тип указателя, ссылки, массива или указателя функции в зависимости от зависимого типа:  
+-   A pointer, reference, array, or function pointer type based on a dependent type:  
   
-    ```  
+    ```cpp
     T *, T &, T [10], T (*)()  
     ```  
   
--   массив, размер которого зависит от параметра шаблона:  
+-   An array whose size is based on a template parameter:  
   
-    ```  
+    ```cpp
     template <int arg> class X {  
     int x[arg] ; // dependent type  
     }  
     ```  
   
--   тип шаблона, созданного из параметра шаблона:  
+-   a template type constructed from a template parameter:  
   
-    ```  
+    ```cpp
     T<int>, MyTemplate<T>  
     ```  
   
-## Зависимость от типа и зависимость от значения  
- Имена и выражения, зависящие от параметра шаблона, классифицируются как зависящие от типа или значения в зависимости от того, является ли параметр шаблона параметром типа или параметром значения.  Кроме того, все идентификаторы, объявленные в шаблоне с типом, зависящим от аргумента шаблона, считаются зависимыми от значения, так как имеют целочисленный тип или тип перечисления, инициализированный выражением, зависящим от значения.  
+## <a name="type-dependence-and-value-dependence"></a>Type Dependence and Value Dependence
+
+ Names and expressions dependent on a template parameter are categorized as type dependent or value dependent, depending on whether the template parameter is a type parameter or a value parameter. Also, any identifiers declared in a template with a type dependent on the template argument are considered value dependent, as is a integral or enumeration type initialized with a value-dependent expression.  
   
- Выражения, зависящие от типа, и выражения, зависящие от значения, — это выражения, содержащие переменные, зависящие от типа или значения.  Эти выражения могут иметь семантику, зависящую от параметров, используемых для шаблона.  
+ Type-dependent and value-dependent expressions are expressions that involve variables that are type dependent or value dependent. These expressions can have semantics that differ, depending on the parameters used for the template.  
   
-## См. также  
- [Шаблоны](../Topic/Templates%20\(C++\).md)
+## <a name="see-also"></a>See Also
+
+ [Templates](../cpp/templates-cpp.md)
+

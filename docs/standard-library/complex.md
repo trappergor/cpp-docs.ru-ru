@@ -1,5 +1,5 @@
 ---
-title: "&lt;complex&gt; | Документы Майкрософт"
+title: '&lt;complex&gt; | Microsoft Docs'
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -9,9 +9,7 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
-- <complex>
-- std.<complex>
-- std::<complex>
+- <complex>", "std::<complex>
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -35,40 +33,40 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
-ms.openlocfilehash: 02d651b3e3ca4dc643b01463a85762a6427b8e83
+ms.translationtype: MT
+ms.sourcegitcommit: 5d026c375025b169d5db8445cbb52c0c917b2d8d
+ms.openlocfilehash: 03b72414921c6de42a7e5c4dd5bd91d1630c4ee4
 ms.contentlocale: ru-ru
-ms.lasthandoff: 04/29/2017
+ms.lasthandoff: 09/09/2017
 
 ---
 # <a name="ltcomplexgt"></a>&lt;complex&gt;
-Определяет класс шаблонов контейнеров **сложных** и его вспомогательные шаблоны.  
+Defines the container template class **complex** and its supporting templates.  
   
-## <a name="syntax"></a>Синтаксис  
+## <a name="syntax"></a>Syntax  
   
 ```  
 #include <complex>  
 ```  
   
-## <a name="remarks"></a>Примечания  
- Комплексные числа — это упорядоченная пара вещественных чисел. С геометрической точки зрения комплексная плоскость — это вещественная двумерная плоскость. Отличия комплексной плоскости от вещественной состоят в том, что у нее есть дополнительная алгебраическая структура. У этой структуры есть две основные операции.  
+## <a name="remarks"></a>Remarks  
+ A complex number is an ordered pair of real numbers. In purely geometrical terms, the complex plane is the real, two-dimensional plane. The special qualities of the complex plane that distinguish it from the real plane are due to its having an additional algebraic structure. This algebraic structure has two fundamental operations:  
   
 -   Addition defined as (*a*, *b*) + (*c*, *d*) = (*a* + *c*, *b* + *d*)  
   
 -   Multiplication defined as (*a*, *b*) \* (*c*, *d*) = (*ac* - *bd*, *ad* + *bc*)  
   
- Набор комплексных чисел с операциями комплексного сложения и комплексного умножения — это поле с точки зрения стандартной алгебры:  
+ The set of complex numbers with the operations of complex addition and complex multiplication are a field in the standard algebraic sense:  
   
--   Операции сложения и умножения коммутативны и ассоциативны, а умножение распределяется над сложением точно так же, как для вещественного сложения и умножения в поле вещественных чисел.  
+-   The operations of addition and multiplication are commutative and associative and multiplication distributes over addition exactly as it does with real addition and multiplication on the field of real numbers.  
   
--   Комплексное число (0, 0) имеет аддитивный идентификатор и (1, 0) — мультипликативный идентификатор.  
+-   The complex number (0, 0) is the additive identity and (1, 0) is the multiplicative identity.  
   
--   Аддитивная Инверсия комплексного числа (**, *b*) — (-**, -*b*), а мультипликативная Инверсия для всех таких комплексных чисел, за исключением (0, 0) —  
+-   The additive inverse for a complex number (*a*, *b*) is (-*a*, -*b*), and the multiplicative inverse for all such complex numbers except (0, 0) is  
   
      (*a*/(*a*<sup>2</sup> + *b*<sup>2</sup>), -*b*/(*a*<sup>2</sup> + *b*<sup>2</sup>))  
   
- Представляя комплексное число *z* = (**, *b*) в виде *z* = ** + *bi*, где *я*<sup>2</sup> = -1, правила алгебры набора вещественных чисел могут применяться к набору комплексных чисел и их компонентам. Пример:  
+ By representing a complex number *z* = (*a*, *b*) in the form *z* = *a* + *bi*, where *i*<sup>2</sup> = -1, the rules for the algebra of the set of real numbers can be applied to the set of complex numbers and to their components. For example:  
   
   (1 + 2*i*) \* (2 + 3*i*)  
   = 1 \* (2 + 3*i*) + 2*i* \* (2 + 3*i*)  
@@ -76,9 +74,9 @@ ms.lasthandoff: 04/29/2017
   = (2 - 6) + (3 + 4)*i*  
   = -4 + 7*i*  
   
- Система комплексных чисел — это поле, но оно не упорядоченное. Нет, не порядок комплексных чисел как поле вещественных чисел и их подмножеств, поэтому отношение неравенства не может применяться к комплексные числа, как они вещественных чисел.  
+ The system of complex numbers is a field, but it is not an ordered field. There is no ordering of the complex numbers as there is for the field of real numbers and its subsets, so inequalities cannot be applied to complex numbers as they are to real numbers.  
   
- Существует три общие формы представления комплексного числа *z*:  
+ There are three common forms of representing a complex number *z*:  
   
 -   Cartesian: *z* = *a* + *bi*  
   
@@ -86,75 +84,75 @@ ms.lasthandoff: 04/29/2017
   
 -   Exponential: *z* = *r* \* *e*<sup>*ip*</sup>  
   
- В этих стандартных представлениях комплексных чисел используются следующие термины.  
+ The terms used in these standard representations of a complex number are referred to as follows:  
   
--   Вещественный компонент арифметического представления или действительная часть *a*.  
+-   The real Cartesian component or real part *a*.  
   
--   Мнимый компонент арифметического представления или мнимая часть *b*.  
+-   The imaginary Cartesian component or imaginary part *b*.  
   
--   Модуль или абсолютное значение комплексного числа *r*.  
+-   The modulus or absolute value of a complex number *r*.  
   
--   Аргумент или угол фазы *p* в радианах.  
+-   The argument or phase angle *p* in radians.  
   
- Если не указано иное, функции, которые могут возвращать несколько значений, должны возвращать основное значение для их аргументов больше - π и меньше чем или равно + π, чтобы обеспечить одно значение. Все углы должны выражаться в радианах, где в круге 2π радиан (360 градусов).  
+ Unless otherwise specified, functions that can return multiple values are required to return a principal value for their arguments greater than -π and less than or equal to +π to keep them single valued. All angles must be expressed in radians, where there are 2π radians (360 degrees) in a circle.  
   
-### <a name="functions"></a>Функции  
-  
-|||  
-|-|-|  
-|[abs](../standard-library/complex-functions.md#abs)|Вычисляет модуль комплексного числа.|  
-|[arg](../standard-library/complex-functions.md#arg)|Извлекает аргумент из комплексного числа.|  
-|[conj](../standard-library/complex-functions.md#conj)|Возвращает комплексно-сопряженную величину комплексного числа.|  
-|[cos](../standard-library/complex-functions.md#cos)|Возвращает косинус комплексного числа.|  
-|[cosh](../standard-library/complex-functions.md#cosh)|Возвращает гиперболический косинус комплексного числа.|  
-|[exp](../standard-library/complex-functions.md#exp)|Возвращает экспоненциальную функцию комплексного числа.|  
-|[imag](../standard-library/complex-functions.md#imag)|Извлекает мнимую часть комплексного числа.|  
-|[log](../standard-library/complex-functions.md#log)|Возвращает натуральный логарифм комплексного числа.|  
-|[log10](../standard-library/complex-functions.md#log10)|Возвращает десятичный логарифм комплексного числа.|  
-|[norm](../standard-library/complex-functions.md#norm)|Извлекает норму комплексного числа.|  
-|[polar](../standard-library/complex-functions.md#polar)|Возвращает комплексное число, соответствующее указанному модулю и аргументу, в декартовой форме.|  
-|[pow](../standard-library/complex-functions.md#pow)|Вычисляет комплексное число, получаемое в результате возведения основания (комплексное число) в степень другого комплексного числа.|  
-|[real](../standard-library/complex-functions.md#real)|Извлекает вещественную часть комплексного числа.|  
-|[sin](../standard-library/complex-functions.md#sin)|Возвращает синус комплексного числа.|  
-|[sinh](../standard-library/complex-functions.md#sinh)|Возвращает гиперболический синус комплексного числа.|  
-|[sqrt](../standard-library/complex-functions.md#sqrt)|Возвращает квадратный корень комплексного числа.|  
-|[tan](../standard-library/complex-functions.md#tan)|Возвращает тангенс комплексного числа.|  
-|[tanh](../standard-library/complex-functions.md#tanh)|Возвращает гиперболический тангенс комплексного числа.|  
-  
-### <a name="operators"></a>Операторы  
+### <a name="functions"></a>Functions  
   
 |||  
 |-|-|  
-|[operator!=](../standard-library/complex-operators.md#op_neq)|Проверяет на неравенство два комплексных числа, по крайней мере одно из которых может принадлежать к подмножеству типа для вещественной и мнимой частей.|  
-|[operator*](../standard-library/complex-operators.md#op_star)|Умножает два комплексных числа, по крайней мере одно из которых может принадлежать к подмножеству типа для вещественной и мнимой частей.|  
-|[operator+](../standard-library/complex-operators.md#op_add)|Складывает два комплексных числа, по крайней мере одно из которых может принадлежать к подмножеству типа для вещественной и мнимой частей.|  
-|[operator-](../standard-library/complex-operators.md#operator-)|Вычитает два комплексных числа, по крайней мере одно из которых может принадлежать к подмножеству типа для вещественной и мнимой частей.|  
-|[operator/](../standard-library/complex-operators.md#op_div)|Делит два комплексных числа, по крайней мере одно из которых может принадлежать к подмножеству типа для вещественной и мнимой частей.|  
-|[operator<\<](../standard-library/complex-operators.md#op_lt_lt)|Функция шаблона, вставляющая комплексное число в поток вывода.|  
-|[operator==](../standard-library/complex-operators.md#op_eq_eq)|Проверяет на равенство два комплексных числа, по крайней мере одно из которых может принадлежать к подмножеству типа для вещественной и мнимой частей.|  
-|[operator>>](../standard-library/complex-operators.md#op_gt_gt)|Функция шаблона, извлекающая комплексное число из входного потока.|  
+|[abs](../standard-library/complex-functions.md#abs)|Calculates the modulus of a complex number.|  
+|[arg](../standard-library/complex-functions.md#arg)|Extracts the argument from a complex number.|  
+|[conj](../standard-library/complex-functions.md#conj)|Returns the complex conjugate of a complex number.|  
+|[cos](../standard-library/complex-functions.md#cos)|Returns the cosine of a complex number.|  
+|[cosh](../standard-library/complex-functions.md#cosh)|Returns the hyperbolic cosine of a complex number.|  
+|[exp](../standard-library/complex-functions.md#exp)|Returns the exponential function of a complex number.|  
+|[imag](../standard-library/complex-functions.md#imag)|Extracts the imaginary component of a complex number.|  
+|[log](../standard-library/complex-functions.md#log)|Returns the natural logarithm of a complex number.|  
+|[log10](../standard-library/complex-functions.md#log10)|Returns the base 10 logarithm of a complex number.|  
+|[norm](../standard-library/complex-functions.md#norm)|Extracts the norm of a complex number.|  
+|[polar](../standard-library/complex-functions.md#polar)|Returns the complex number, which corresponds to a specified modulus and argument, in Cartesian form.|  
+|[pow](../standard-library/complex-functions.md#pow)|Evaluates the complex number obtained by raising a base that is a complex number to the power of another complex number.|  
+|[real](../standard-library/complex-functions.md#real)|Extracts the real component of a complex number.|  
+|[sin](../standard-library/complex-functions.md#sin)|Returns the sine of a complex number.|  
+|[sinh](../standard-library/complex-functions.md#sinh)|Returns the hyperbolic sine of a complex number.|  
+|[sqrt](../standard-library/complex-functions.md#sqrt)|Returns the square root of a complex number.|  
+|[tan](../standard-library/complex-functions.md#tan)|Returns the tangent of a complex number.|  
+|[tanh](../standard-library/complex-functions.md#tanh)|Returns the hyperbolic tangent of a complex number.|  
   
-### <a name="classes"></a>Классы  
+### <a name="operators"></a>Operators  
   
 |||  
 |-|-|  
-|[complex\<double>](../standard-library/complex-double.md)|Явно специализированный класс шаблона описывает объект, который хранит упорядоченную пару объектов, оба типа **двойные**, где первый представляет вещественную часть комплексного числа, а второй представляет мнимую часть.|  
-|[complex\<float>](../standard-library/complex-float.md)|Явно специализированный класс шаблона описывает объект, который хранит упорядоченную пару объектов, оба типа **float**, где первый представляет вещественную часть комплексного числа, а второй представляет мнимую часть.|  
-|[complex\<long double>](../standard-library/complex-long-double.md)|Явно специализированный класс шаблона описывает объект, который хранит упорядоченную пару объектов, оба типа **long double**, где первый представляет вещественную часть комплексного числа, а второй представляет мнимую часть.|  
-|[complex](../standard-library/complex-class.md)|Этот класс шаблона описывает объект, используемый для представления системы комплексных чисел и выполнения сложных арифметических операций.|  
+|[operator!=](../standard-library/complex-operators.md#op_neq)|Tests for inequality between two complex numbers, one or both of which may belong to the subset of the type for the real and imaginary parts.|  
+|[operator*](../standard-library/complex-operators.md#op_star)|Multiplies two complex numbers, one or both of which may belong to the subset of the type for the real and imaginary parts.|  
+|[operator+](../standard-library/complex-operators.md#op_add)|Adds two complex numbers, one or both of which may belong to the subset of the type for the real and imaginary parts.|  
+|[operator-](../standard-library/complex-operators.md#operator-)|Subtracts two complex numbers, one or both of which may belong to the subset of the type for the real and imaginary parts.|  
+|[operator/](../standard-library/complex-operators.md#op_div)|Divides two complex numbers, one or both of which may belong to the subset of the type for the real and imaginary parts.|  
+|[operator<\<](../standard-library/complex-operators.md#op_lt_lt)|A template function that inserts a complex number into the output stream.|  
+|[operator==](../standard-library/complex-operators.md#op_eq_eq)|Tests for equality between two complex numbers, one or both of which may belong to the subset of the type for the real and imaginary parts.|  
+|[operator>>](../standard-library/complex-operators.md#op_gt_gt)|A template function that extracts a complex value from the input stream.|  
   
-### <a name="literals"></a>Литералы  
- Заголовок \<complex> определяет следующие [пользовательские литералы](../cpp/user-defined-literals-cpp.md), которые создают комплексное число с нулевой действительной частью и мнимой частью, являющейся значением входного параметра.  
+### <a name="classes"></a>Classes  
   
 |||  
 |-|-|  
-|`constexpr complex<long double> operator""il(long double d)`<br /><br /> `constexpr complex<long double> operator""il(unsigned long long d)`|Возвращает:`complex<long double>{0.0L, static_cast<long double>(d)}`|  
-|`constexpr complex<double> operator""i(long double d)`<br /><br /> `constexpr complex<double> operator""i(unsigned long long d)`|Возвращает `complex<double>{0.0, static_cast<double>(d)}`.|  
-|`constexpr complex<float> operator""if(long double d)`<br /><br /> `constexpr complex<float> operator""if(unsigned long long d)`|Возвращает `complex<float>{0.0f, static_cast<float>(d)}`.|  
+|[complex\<double>](../standard-library/complex-double.md)|The explicitly specialized template class describes an object that stores an ordered pair of objects, both of type **double**, where the first represents the real part of a complex number and the second represents the imaginary part.|  
+|[complex\<float>](../standard-library/complex-float.md)|The explicitly specialized template class describes an object that stores an ordered pair of objects, both of type **float**, where the first represents the real part of a complex number and the second represents the imaginary part.|  
+|[complex\<long double>](../standard-library/complex-long-double.md)|The explicitly specialized template class describes an object that stores an ordered pair of objects, both of type **long double**, where the first represents the real part of a complex number and the second represents the imaginary part.|  
+|[complex](../standard-library/complex-class.md)|The template class describes an object used to represent the complex number system and perform complex arithmetic operations.|  
   
-## <a name="see-also"></a>См. также  
- [Справочник по файлам заголовков](../standard-library/cpp-standard-library-header-files.md)   
- [Потокобезопасность в стандартной библиотеке C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)
+### <a name="literals"></a>Literals  
+ The \<complex> header defines the following [user-defined literals](../cpp/user-defined-literals-cpp.md) which create a complex number with the real part being zero and the imaginary part being the value of the input parameter.  
+  
+|||  
+|-|-|  
+|`constexpr complex<long double> operator""il(long double d)`<br /><br /> `constexpr complex<long double> operator""il(unsigned long long d)`|Returns: `complex<long double>{0.0L, static_cast<long double>(d)}`|  
+|`constexpr complex<double> operator""i(long double d)`<br /><br /> `constexpr complex<double> operator""i(unsigned long long d)`|Returns: `complex<double>{0.0, static_cast<double>(d)}`.|  
+|`constexpr complex<float> operator""if(long double d)`<br /><br /> `constexpr complex<float> operator""if(unsigned long long d)`|Returns: `complex<float>{0.0f, static_cast<float>(d)}`.|  
+  
+## <a name="see-also"></a>See Also  
+ [Header Files Reference](../standard-library/cpp-standard-library-header-files.md)   
+ [Thread Safety in the C++ Standard Library](../standard-library/thread-safety-in-the-cpp-standard-library.md)
 
 
 

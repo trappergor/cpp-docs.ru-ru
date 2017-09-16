@@ -1,5 +1,5 @@
 ---
-title: "Класс locale | Документы Майкрософт"
+title: locale Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -10,7 +10,6 @@ ms.tgt_pltfrm:
 ms.topic: article
 f1_keywords:
 - xlocale/std::locale
-- locale
 - locale/std::locale::category
 - locale/std::locale::combine
 - locale/std::locale::name
@@ -22,7 +21,14 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- locale class
+- std::locale [C++]
+- std::locale [C++], category
+- std::locale [C++], combine
+- std::locale [C++], name
+- std::locale [C++], classic
+- std::locale [C++], global
+- std::locale [C++], facet
+- std::locale [C++], id
 ms.assetid: 7dd6d271-472d-4750-8fb5-ea8f55fbef62
 caps.latest.revision: 28
 author: corob-msft
@@ -42,41 +48,41 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
-ms.openlocfilehash: 6e33e125d2689d37443bec58c5b01f5b7e72ccfd
+ms.translationtype: MT
+ms.sourcegitcommit: 5d026c375025b169d5db8445cbb52c0c917b2d8d
+ms.openlocfilehash: 43a9308d5dea59e8cff6165237ccf1f7778a3548
 ms.contentlocale: ru-ru
-ms.lasthandoff: 04/29/2017
+ms.lasthandoff: 09/09/2017
 
 ---
-# <a name="locale-class"></a>Класс locale
-Класс, описывающий объект языкового стандарта, инкапсулирующий данные по соответствующей культуре в качестве набора аспектов, которые собирательно определяют ту или иную локализованную среду.  
+# <a name="locale-class"></a>locale Class
+The class that describes a locale object that encapsulates culture-specific information as a set of facets that collectively define a specific localized environment.  
   
-## <a name="syntax"></a>Синтаксис  
+## <a name="syntax"></a>Syntax  
   
 ```  
 class locale;  
 ```  
   
-## <a name="remarks"></a>Примечания  
- Аспект — это указатель на объект класса, выведенного производным от класса [facet](#facet_class), который обладает общим объектом в формате:  
+## <a name="remarks"></a>Remarks  
+ A facet is a pointer to an object of a class derived from class [facet](#facet_class) that has a public object of the form:  
   
 ```  
 static locale::id id;  
 ```  
   
- Можно задать открытый набор данных аспектов. Можно также создать объект языкового стандарта, назначающий произвольное количество аспектов.  
+ You can define an open-ended set of these facets. You can also construct a locale object that designates an arbitrary number of facets.  
   
- Предопределенные группы этих аспектов представляют [категории языкового стандарта](#category), которыми в стандартной библиотеке C традиционно управляет функция `setlocale`.  
+ Predefined groups of these facets represent the [locale categories](#category) traditionally managed in the Standard C Library by the function `setlocale`.  
   
- Категория collate (LC_COLLATE) включает аспекты:  
+ Category collate (LC_COLLATE) includes the facets:  
   
 ```  
 collate<char>  
 collate<wchar_t>  
 ```  
   
- Категория ctype (LC_CTYPE) включает аспекты:  
+ Category ctype (LC_CTYPE) includes the facets:  
   
 ```  
 ctype<char>  
@@ -87,7 +93,7 @@ codecvt<char16_t, char, mbstate_t>
 codecvt<char32_t, char, mbstate_t>  
 ```  
   
- Категория monetary (LC_MONETARY) включает аспекты:  
+ Category monetary (LC_MONETARY) includes the facets:  
   
 ```  
 moneypunct<char, false>  
@@ -100,7 +106,7 @@ money_put<char, ostreambuf_iterator<char>>
 money_put<wchar_t, ostreambuf_iterator<wchar_t>>  
 ```  
   
- Категория numeric (LC_NUMERIC) включает аспекты:  
+ Category numeric (LC_NUMERIC) includes the facets:  
   
 ```  
 num_get<char, istreambuf_iterator<char>>  
@@ -111,7 +117,7 @@ numpunct<char>
 numpunct<wchar_t>  
 ```  
   
- Категория time (LC_TIME) включает аспекты:  
+ Category time (LC_TIME) includes the facets:  
   
 ```  
 time_get<char, istreambuf_iterator<char>>  
@@ -120,32 +126,32 @@ time_put<char, ostreambuf_iterator<char>>
 time_put<wchar_t, ostreambuf_iterator<wchar_t>>  
 ```  
   
- Категория messages (LC_MESSAGES) включает аспекты:  
+ Category messages (LC_MESSAGES) includes the facets:  
   
 ```  
 messages<char>  
 messages<wchar_t>  
 ```  
   
- (Последняя категория необходима Posix для, но не стандартной библиотеке C).  
+ (The last category is required by Posix, but not the C Standard.)  
   
- Некоторые из этих предопределенных аспектов используются классами iostreams для управления преобразованием числовых значений в текстовые последовательности и наоборот.  
+ Some of these predefined facets are used by the iostreams classes, to control the conversion of numeric values to and from text sequences.  
   
- Объект класса locale также сохраняет имя языкового стандарта в качестве объекта класса [string](../standard-library/string-typedefs.md#string). Использование недопустимого имени языкового стандарта для создания аспекта языкового стандарта или объекта языкового стандарта создает объект класса [runtime_error](../standard-library/runtime-error-class.md). Сохраненное имя языкового стандарта — `"*"`, если объект языкового стандарта не может быть уверен в том, что локальный стандарт языка C точно соответствует представленному данным объектом. В противном случае можно установить соответствующий языковой стандарт в стандартной библиотеке C, для объекта языкового стандарта `Loc`, путем вызова `setlocale`(LC_ALL `,` `Loc`. [name](#name)`().c_str()`).  
+ An object of class locale also stores a locale name as an object of class [string](../standard-library/string-typedefs.md#string). Using an invalid locale name to construct a locale facet or a locale object throws an object of class [runtime_error](../standard-library/runtime-error-class.md). The stored locale name is `"*"` if the locale object cannot be certain that a C-style locale corresponds exactly to that represented by the object. Otherwise, you can establish a matching locale within the Standard C Library, for the locale object `Loc`, by calling `setlocale`(LC_ALL `,` `Loc`. [name](#name)`().c_str()`).  
   
- В данном случае можно также вызвать статическую функцию-член:  
+ In this implementation, you can also call the static member function:  
   
 ```  
 static locale empty();
 ```  
   
- создать объект языкового стандарта без аспектов. Это также прозрачный языковой стандарт; если функции-шаблоны [has_facet](../standard-library/locale-functions.md#has_facet) и [use_facet](../standard-library/locale-functions.md#use_facet) не могут найти запрошенный аспект в прозрачном языковом стандарте, они в первую очередь обращаются к глобальному языковому стандарту, а затем, если таковой является прозрачным, к классическому языковому стандарту. Таким образом, можно написать:  
+ to construct a locale object that has no facets. It is also a transparent locale; if the template functions [has_facet](../standard-library/locale-functions.md#has_facet) and [use_facet](../standard-library/locale-functions.md#use_facet) cannot find the requested facet in a transparent locale, they consult first the global locale and then, if that is transparent, the classic locale. Thus, you can write:  
   
 ```  
 cout.imbue(locale::empty());
 ```  
   
-Последующие вставки в [cout](../standard-library/iostream.md#cout) облегчаются текущим состоянием глобального языкового стандарта. Можно даже написать:  
+Subsequent insertions to [cout](../standard-library/iostream.md#cout) are mediated by the current state of the global locale. You can even write:  
   
 ```  
 locale loc(locale::empty(),
@@ -155,56 +161,56 @@ locale loc(locale::empty(),
 cout.imbue(loc);
 ```   
   
- Числовые правила форматирования для последующих вставок в `cout` остаются такими же, как в языковом стандарте C, даже если глобальный языковой стандарт предоставляет другие правила вставки дат и денежных сумм.  
+ Numeric formatting rules for subsequent insertions to `cout` remain the same as in the C locale, even as the global locale supplies changing rules for inserting dates and monetary amounts.  
   
-### <a name="constructors"></a>Конструкторы  
+### <a name="constructors"></a>Constructors  
   
 |||  
 |-|-|  
-|[locale](#locale)|Создает языковой стандарт, копию языкового стандарта или копию языкового стандарта, в которой аспект или категория заменены аспектом или категорией из другого языкового стандарта.|  
+|[locale](#locale)|Creates a locale, or a copy of a locale, or a copy of locale where a facet or a category has been replaced by a facet or category from another locale.|  
   
 ### <a name="typedefs"></a>Typedefs  
   
 |||  
 |-|-|  
-|[category](#category)|Целочисленный тип, который содержит значения битовой маски для обозначения стандартных семейств аспектов.|  
+|[category](#category)|An integer type that provides bitmask values to denote standard facet families.|  
   
-### <a name="member-functions"></a>Функции-члены  
-  
-|||  
-|-|-|  
-|[combine](#combine)|Вставляет аспект из определенного языкового стандарта в целевой языковой стандарт.|  
-|[name](#name)|Возвращает имя сохраненного языкового стандарта.|  
-  
-### <a name="static-functions"></a>Статические функции  
+### <a name="member-functions"></a>Member Functions  
   
 |||  
 |-|-|  
-|[classic](#classic)|Данная статическая функция-член возвращает объект языкового стандарта, представляющий классический языковой стандарт C.|  
-|[global](#global)|Сброс языкового стандарта программы по умолчанию.|  
+|[combine](#combine)|Inserts a facet from a specified locale into a target locale.|  
+|[name](#name)|Returns the stored locale name.|  
   
-### <a name="operators"></a>Операторы  
-  
-|||  
-|-|-|  
-|[оператор!=](#op_neq)|Проверка двух языковых стандартов на неравенство.|  
-|[оператор( )](#op_call)|Сравнивает два объекта `basic_string`.|  
-|[оператор==](#op_eq_eq)|Проверка двух языковых стандартов на равенство.|  
-  
-### <a name="classes"></a>Классы  
+### <a name="static-functions"></a>Static Functions  
   
 |||  
 |-|-|  
-|[facet](#facet_class)|Класс, используемый как базовый класс для всех аспектов языкового стандарта.|  
-|[id](#id_class)|Класс члена содержит уникальный идентификатор аспекта, применяемый в качестве индекса для поиска аспектов в языковом стандарте.|  
+|[classic](#classic)|The static member function returns a locale object that represents the classic C locale.|  
+|[global](#global)|Resets the default local for the program.|  
   
-## <a name="requirements"></a>Требования  
- **Заголовок:** \<locale>  
+### <a name="operators"></a>Operators  
   
- **Пространство имен:** std  
+|||  
+|-|-|  
+|[operator!=](#op_neq)|Tests two locales for inequality.|  
+|[operator( )](#op_call)|Compares two `basic_string` objects.|  
+|[operator==](#op_eq_eq)|Tests two locales for equality.|  
+  
+### <a name="classes"></a>Classes  
+  
+|||  
+|-|-|  
+|[facet](#facet_class)|A class that serves as the base class for all locale facets.|  
+|[id](#id_class)|The member class provides a unique facet identification used as an index for looking up facets in a locale.|  
+  
+## <a name="requirements"></a>Requirements  
+ **Header:** \<locale>  
+  
+ **Namespace:** std  
   
 ##  <a name="category"></a>  locale::category  
- Целочисленный тип, который содержит значения битовой маски для обозначения стандартных семейств аспектов.  
+ An integer type that provides bitmask values to denote standard facet families.  
   
 ```  
 typedef int category;  
@@ -218,43 +224,43 @@ static const int all = LC_ALL;
 static const int none = 0;  
 ```  
   
-### <a name="remarks"></a>Примечания  
- Тип является синонимом типа `int`, который может представлять группу различающихся элементов типа bitmask, локальных для класса языкового стандарта, или может использоваться для представления любой из соответствующих категорий языкового стандарта C. Элементы:  
+### <a name="remarks"></a>Remarks  
+ The type is a synonym for an `int` type that can represent a group of distinct elements of a bitmask type local to class locale or can be used to represent any of the corresponding C locale categories. The elements are:  
   
-- **collate**, что соответствует категории LC_COLLATE в С  
+- **collate**, corresponding to the C category LC_COLLATE  
   
-- **ctype**, что соответствует категории LC_CTYPE в С  
+- **ctype**, corresponding to the C category LC_CTYPE  
   
-- **monetary**, что соответствует категории LC_MONETARY в С  
+- **monetary**, corresponding to the C category LC_MONETARY  
   
-- **numeric**, что соответствует категории LC_NUMERIC в С  
+- **numeric**, corresponding to the C category LC_NUMERIC  
   
-- **time**, что соответствует категории LC_TIME в С  
+- **time**, corresponding to the C category LC_TIME  
   
-- **messages**, что соответствует категории LC_MESSAGES в Posix  
+- **messages**, corresponding to the Posix category LC_MESSAGES  
   
- Кроме того, есть два полезных значения:  
+ In addition, two useful values are:  
   
-- **none**, что не соответствует никакой категории в C  
+- **none**, corresponding to none of the C categories  
   
-- **all**, что в С соответствует объединению всех категорий LC_ALL  
+- **all**, corresponding to the C union of all categories LC_ALL  
   
- Вы можете обозначить произвольную группу категорий с помощью `OR` с этими константами, например, **monetary** &#124; **time**.  
+ You can represent an arbitrary group of categories by using `OR` with these constants, as in **monetary** &#124; **time**.  
   
 ##  <a name="classic"></a>  locale::classic  
- Данная статическая функция-член возвращает объект языкового стандарта, представляющий классический языковой стандарт C.  
+ The static member function returns a locale object that represents the classic C locale.  
   
 ```  
 static const locale& classic();
 ```  
   
-### <a name="return-value"></a>Возвращаемое значение  
- Ссылка на языковой стандарт C.  
+### <a name="return-value"></a>Return Value  
+ A reference to the C locale.  
   
-### <a name="remarks"></a>Примечания  
- Классический языковой стандарт в C — U.S. English ASCII в стандартной библиотеке C. Он по умолчанию используется в программах, которые не поддерживают локализацию.  
+### <a name="remarks"></a>Remarks  
+ The classic C locale is the U.S. English ASCII locale within the Standard C Library that is implicitly used in programs that are not internationalized.  
   
-### <a name="example"></a>Пример  
+### <a name="example"></a>Example  
   
 ```cpp  
 // locale_classic.cpp  
@@ -294,21 +300,21 @@ The current locale is not classic.
 ```  
   
 ##  <a name="combine"></a>  locale::combine  
- Вставляет аспект из определенного языкового стандарта в целевой языковой стандарт.  
+ Inserts a facet from a specified locale into a target locale.  
   
 ```  
 template <class Facet>  
 locale combine(const locale& Loc) const;
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
  `Loc`  
- Языковой стандарт, содержащий аспект для вставки в целевой языковой стандарт.  
+ The locale containing the facet to be inserted into the target locale.  
   
-### <a name="return-value"></a>Возвращаемое значение  
- Функция-член возвращает объект языкового стандарта, которые выполняет замену в или добавление к **\*this** аспекта `Facet`, перечисленного в `Loc`.  
+### <a name="return-value"></a>Return Value  
+ The member function returns a locale object that replaces in or adds to **\*this** the facet `Facet` listed in `Loc`.  
   
-### <a name="example"></a>Пример  
+### <a name="example"></a>Example  
   
 ```cpp  
 // locale_combine.cpp  
@@ -338,8 +344,8 @@ int main() {
 }  
 ```  
   
-##  <a name="facet_class"></a>  Класс facet  
- Класс, используемый как базовый класс для всех аспектов языкового стандарта.  
+##  <a name="facet_class"></a>  facet Class  
+ A class that serves as the base class for all locale facets.  
 
 ```    
 class facet { 
@@ -352,29 +358,29 @@ private:
      // not defined    
 };  
 ```  
-### <a name="remarks"></a>Примечания  
- Обратите внимание, что объект класса аспект нельзя копировать или присваивать. Можно создавать и удалять объекты, производные от класса `locale::facet`, но не объекты правильного базового класса. Как правило, объект `_Myfac`, производный от аспекта, создается создании языкового стандарта, как в **localeloc**( `locale::classic`( ), **new**`_Myfac`);  
+### <a name="remarks"></a>Remarks  
+ Note that you cannot copy or assign an object of class facet. You can construct and destroy objects derived from class `locale::facet` but not objects of the base class proper. Typically, you construct an object `_Myfac` derived from facet when you construct a locale, as in **localeloc**( `locale::classic`( ), **new**`_Myfac`);  
   
- В таких случаях конструктор для базового класса аспекта должен иметь нулевое значение аргумента `_Refs`. Когда объект больше не нужен, он удаляется. Таким образом, необходимо указывать ненулевое значение аргумента _ *Refs* только в тех редких случаях, когда вы отвечаете за время жизни объекта.  
+ In such cases, the constructor for the base class facet should have a zero `_Refs` argument. When the object is no longer needed, it is deleted. Thus, you supply a nonzero _ *Refs* argument only in those rare cases where you take responsibility for the lifetime of the object.  
   
 ##  <a name="global"></a>  locale::global  
- Сброс языкового стандарта по умолчанию для программы. Это влияет на глобальный языковой стандарт C и C++.  
+ Resets the default locale for the program. This affects the global locale for both C and C++.  
   
 ```  
 static locale global(const locale& Loc);
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
  `Loc`  
- Языковой стандарт, который будет использоваться программой по умолчанию.  
+ The locale to be used as the default locale by the program.  
   
-### <a name="return-value"></a>Возвращаемое значение  
- Языковой стандарт до сброса языкового стандарта по умолчанию.  
+### <a name="return-value"></a>Return Value  
+ The previous locale before the default locale was reset.  
   
-### <a name="remarks"></a>Примечания  
- При запуске программы глобальный языковой стандарт совпадает в классическим языковым стандартом. Функция `global()` вызывает `setlocale( LC_ALL, loc.name. c_str())` для установки соответствующего языкового стандарта в стандартной библиотеке C.  
+### <a name="remarks"></a>Remarks  
+ At program startup, the global locale is the same as the classic locale. The `global()` function calls `setlocale( LC_ALL, loc.name. c_str())` to establish a matching locale in the Standard C library.  
   
-### <a name="example"></a>Пример  
+### <a name="example"></a>Example  
   
 ```cpp  
 // locale_global.cpp  
@@ -402,16 +408,16 @@ The current locale is: German_Germany.1252
 The previous locale was: C  
 ```  
   
-##  <a name="id_class"></a>  Класс id  
- Класс члена содержит уникальный идентификатор аспекта, применяемый в качестве индекса для поиска аспектов в языковом стандарте.  
+##  <a name="id_class"></a>  id Class  
+ The member class provides a unique facet identification used as an index for looking up facets in a locale.  
   
 class id { protected:    id(); private:    id(const id&) // not defined void operator=(const id&)  // not defined    };  
   
-### <a name="remarks"></a>Примечания  
- Класс-член описывает статический объект-член, необходимый для каждого уникального аспекта языкового стандарта. Обратите внимание, что объект класса **id** нельзя копировать или присваивать.  
+### <a name="remarks"></a>Remarks  
+ The member class describes the static member object required by each unique locale facet. Note that you cannot copy or assign an object of class **id**.  
   
 ##  <a name="locale"></a>  locale::locale  
- Создает языковой стандарт, копию языкового стандарта или копию языкового стандарта, в которой аспект или категория заменены аспектом или категорией из другого языкового стандарта.  
+ Creates a locale, or a copy of a locale, or a copy of locale where a facet or a category has been replaced by a facet or category from another locale.  
   
 ```  
 locale();
@@ -426,42 +432,42 @@ template <class Facet>
 locale(const locale& Loc, const Facet* Fac);
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
  `Locname`  
- Имя языкового стандарта.  
+ Name of a locale.  
   
  `Loc`  
- Языковой стандарт, который будет копироваться при создании нового языкового стандарта.  
+ A locale that is to be copied in constructing the new locale.  
   
  `Other`  
- Языковой стандарт, из которого будет выбираться категория.  
+ A locale from which to select a category.  
   
  `Cat`  
- Категория для замены в созданном языковом стандарте.  
+ The category to be substituted into the constructed locale.  
   
  `Fac`  
- Аспект для замены в созданном языковом стандарте.  
+ The facet to be substituted into the constructed locale.  
   
-### <a name="remarks"></a>Примечания  
- Первый конструктор инициализирует объект для соответствия глобальному языковому стандарту. Второй и третий конструкторы выполняют инициализацию всех категорий языкового стандарта, чтобы их поведение согласовалось языковым стандартом с именем `Locname`. Оставшиеся конструкторы копируют `Loc`, за исключением следующего:  
+### <a name="remarks"></a>Remarks  
+ The first constructor initializes the object to match the global locale. The second and third constructors initialize all the locale categories to have behavior consistent with the locale name `Locname`. The remaining constructors copy `Loc`, with the exceptions noted:  
   
  `locale(const locale& Loc, const locale& Other, category Cat);`  
   
- заменяет из `Other` аспекты, соответствующее категории C, для которой C & `Cat` имеет ненулевое значение.  
+ replaces from `Other` those facets corresponding to a category C for which C & `Cat` is nonzero.  
   
  `locale(const locale& Loc, const char* Locname, category Cat);`  
   
  `locale(const locale& Loc, const string& Locname, category Cat);`  
   
- заменяет из `locale(Locname, _All)` аспекты, соответствующее категории C, для которой C & `Cat` имеет ненулевое значение.  
+ replaces from `locale(Locname, _All)` those facets corresponding to a category C for which C & `Cat` is nonzero.  
   
  `template<class Facet> locale(const locale& Loc, Facet* Fac);`  
   
- заменяет в (или добавляет к) `Loc` аспект `Fac`, если `Fac` не является указателем null.  
+ replaces in (or adds to) `Loc` the facet `Fac`, if `Fac` is not a null pointer.  
   
- Если имя языкового стандарта `Locname` является пустым указателем или недопустимо, функция вызывает [runtime_error](../standard-library/runtime-error-class.md).  
+ If a locale name `Locname` is a null pointer or otherwise invalid, the function throws [runtime_error](../standard-library/runtime-error-class.md).  
   
-### <a name="example"></a>Пример  
+### <a name="example"></a>Example  
   
 ```cpp  
 // locale_locale.cpp  
@@ -502,16 +508,16 @@ int main( ) {
 ```  
   
 ##  <a name="name"></a>  locale::name  
- Возвращает имя сохраненного языкового стандарта.  
+ Returns the stored locale name.  
   
 ```  
 string name() const;
 ```  
   
-### <a name="return-value"></a>Возвращаемое значение  
- Строка, задающая имя языкового стандарта.  
+### <a name="return-value"></a>Return Value  
+ A string giving the name of the locale.  
   
-### <a name="example"></a>Пример  
+### <a name="example"></a>Example  
   
 ```cpp  
 // locale_name.cpp  
@@ -539,23 +545,23 @@ The name of the current locale is: German_Germany.1252.
 ```  
   
 ##  <a name="op_neq"></a>  locale::operator!=  
- Проверка двух языковых стандартов на неравенство.  
+ Tests two locales for inequality.  
   
 ```  
 bool operator!=(const locale& right) const;
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
  `right`  
- Один из языковых стандартов для проверки на неравенство.  
+ One of the locales to be tested for inequality.  
   
-### <a name="return-value"></a>Возвращаемое значение  
- Логическое значение, равное **true**, если языковые стандарты не являются копиями одного и того же языкового стандарта; в противном случае **false**.  
+### <a name="return-value"></a>Return Value  
+ A Boolean value that is **true** if the locales are not copies of the same locale; **false** if the locales are copies of the same locale.  
   
-### <a name="remarks"></a>Примечания  
- Языковые стандарты считаются равными, если они - один и тот же языковой стандарт, если один из них является копией другого, или если они имеют одинаковые имена.  
+### <a name="remarks"></a>Remarks  
+ Two locales are equal if they are the same locale, if one is a copy of the other, or if they have identical names.  
   
-### <a name="example"></a>Пример  
+### <a name="example"></a>Example  
   
 ```cpp  
 // locale_op_ne.cpp  
@@ -596,7 +602,7 @@ locales loc1 (German_Germany.1252) and
 ```  
   
 ##  <a name="op_call"></a>  locale::operator()  
- Сравнивает два объекта `basic_string`.  
+ Compares two `basic_string` objects.  
   
 ```  
 template <class CharType, class Traits, class Allocator>  
@@ -605,24 +611,24 @@ bool operator()(
     const basic_string<CharType, Traits, Allocator>& right) const;
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
  `left`  
- Левая строка.  
+ The left string.  
   
  `right`  
- Правая строка.  
+ The right string.  
   
-### <a name="return-value"></a>Возвращаемое значение  
- Функция-член возвращает:  
+### <a name="return-value"></a>Return Value  
+ The member function returns:  
   
--   –1, если первая последовательность оказывается меньше, чем вторая;  
+-   -1 if the first sequence compares less than the second sequence.  
   
--   +1, если вторая последовательность оказывается меньше, чем первая;  
+-   +1 if the second sequence compares less than the first sequence.  
   
--   0, если последовательности являются эквивалентными.  
+-   0 if the sequences are equivalent.  
   
-### <a name="remarks"></a>Примечания  
- Функция-член фактически выполняет:  
+### <a name="remarks"></a>Remarks  
+ The member function effectively executes:  
   
 ```  
 const collate<CharType>& fac = use_fac<collate<CharType>>(*this);
@@ -630,9 +636,9 @@ const collate<CharType>& fac = use_fac<collate<CharType>>(*this);
 return (fac.compare(left.begin(), left.end(), right.begin(), right.end()) < 0);
 ```  
   
- Таким образом, объект языкового стандарта можно использовать как объект-функцию.  
+ Thus, you can use a locale object as a function object.  
   
-### <a name="example"></a>Пример  
+### <a name="example"></a>Example  
   
 ```cpp  
 // locale_op_compare.cpp  
@@ -664,23 +670,23 @@ int main( )
 ```  
   
 ##  <a name="op_eq_eq"></a>  locale::operator==  
- Проверка двух языковых стандартов на равенство.  
+ Tests two locales for equality.  
   
 ```  
 bool operator==(const locale& right) const;
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
  `right`  
- Один из языковых стандартов для проверки на равенство.  
+ One of the locales to be tested for equality.  
   
-### <a name="return-value"></a>Возвращаемое значение  
- Логическое значение, равное **true**, если языковые стандарты являются копиями одного и того же языкового стандарта; в противном случае **false**.  
+### <a name="return-value"></a>Return Value  
+ A Boolean value that is **true** if the locales are copies of the same locale; **false** if the locales are not copies of the same locale.  
   
-### <a name="remarks"></a>Примечания  
- Языковые стандарты считаются равными, если они - один и тот же языковой стандарт, если один из них является копией другого, или если они имеют одинаковые имена.  
+### <a name="remarks"></a>Remarks  
+ Two locales are equal if they are the same locale, if one is a copy of the other, or if they have identical names.  
   
-### <a name="example"></a>Пример  
+### <a name="example"></a>Example  
   
 ```cpp  
 // locale_op_eq.cpp  
@@ -724,10 +730,10 @@ locales loc1 (German_Germany.1252)
  and loc3 (English_United States.1252) are not equal.  
 ```  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>See Also  
  [<locale>](../standard-library/locale.md)   
- [Кодовые страницы](../c-runtime-library/code-pages.md)   
- [Имена, языки и строки страны/региона языкового стандарта](../c-runtime-library/locale-names-languages-and-country-region-strings.md)   
- [Потокобезопасность в стандартной библиотеке C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)
+ [Code Pages](../c-runtime-library/code-pages.md)   
+ [Locale Names, Languages, and Country/Region Strings](../c-runtime-library/locale-names-languages-and-country-region-strings.md)   
+ [Thread Safety in the C++ Standard Library](../standard-library/thread-safety-in-the-cpp-standard-library.md)
 
 

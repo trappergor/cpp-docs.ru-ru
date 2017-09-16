@@ -1,106 +1,124 @@
 ---
-title: "Элементы управления ActiveX в MFC. Добавление пользовательских свойств | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "MFC ActiveX - элементы управления, свойства"
-  - "свойства [MFC], пользовательский"
+title: 'MFC ActiveX Controls: Adding Custom Properties | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- MFC ActiveX controls [MFC], properties
+- properties [MFC], custom
 ms.assetid: 85af5167-74c7-427b-b8f3-e0d7b73942e5
 caps.latest.revision: 11
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 7
----
-# Элементы управления ActiveX в MFC. Добавление пользовательских свойств
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: aaac18f6b8137aad6732bb69edb4b587e71aca2f
+ms.contentlocale: ru-ru
+ms.lasthandoff: 09/12/2017
 
-Пользовательские свойства отличаются от стандартных свойств в том, что пользовательские свойства еще не реализуемые классом `COleControl`.  Пользовательское свойство используется для предоставления некоторые состояния или внешний вид элемента управления ActiveX программистам с помощью элемента управления.  
+---
+# <a name="mfc-activex-controls-adding-custom-properties"></a>MFC ActiveX Controls: Adding Custom Properties
+Custom properties differ from stock properties in that custom properties are not already implemented by the `COleControl` class. A custom property is used to expose a certain state or appearance of an ActiveX control to a programmer using the control.  
   
- В этом разделе описываются способы добавления пользовательского свойства в элемент управления ActiveX с помощью мастера добавления свойства и объясняет полученную изменения кода.  Ниже приведен список разделов.  
+ This article describes how to add a custom property to the ActiveX control using the Add Property Wizard and explains the resulting code modifications. Topics include:  
   
--   [С помощью мастера добавления свойства для добавления пользовательского свойства](#_core_using_classwizard_to_add_a_custom_property)  
+-   [Using the Add Property Wizard to add a custom property](#_core_using_classwizard_to_add_a_custom_property)  
   
--   [Добавьте мастера изменения свойства для пользовательских свойств](#_core_classwizard_changes_for_custom_properties)  
+-   [Add Property Wizard changes for custom properties](#_core_classwizard_changes_for_custom_properties)  
   
- Пользовательские свойства только в 4 возможности реализации: Переменную\-член, переменную\-член с уведомлением, получает или задает методы и параметризованные.  
+ Custom properties come in four varieties of implementation: Member Variable, Member Variable with Notification, Get/Set Methods, and Parameterized.  
   
--   Реализация переменной\-члена  
+-   Member Variable Implementation  
   
-     Эта реализация представляет состояние свойства как переменную\-член в классе элемента управления.  Используйте реализацию переменной\-члена, когда не важно знать при изменении значения свойства.  3 Типов, эта реализация создает наименьшая объем кода поддержки для свойства.  Макрос записи схемы подготовки к отправке переменную\-член для реализации [DISP\_PROPERTY](../Topic/DISP_PROPERTY.md).  
+     This implementation represents the property's state as a member variable in the control class. Use the Member Variable implementation when it is not important to know when the property value changes. Of the three types, this implementation creates the least amount of support code for the property. The dispatch map entry macro for member variable implementation is [DISP_PROPERTY](../mfc/reference/dispatch-maps.md#disp_property).  
   
--   Переменную\-член с реализацией уведомления  
+-   Member Variable with Notification Implementation  
   
-     Эта реализация содержит переменную\-член и функции уведомления создаются с помощью мастера добавления свойства.  Функция уведомления автоматически вызывается платформой после значения свойств.  Используйте переменную\-член с реализацией уведомления при необходимости уведомления после значение свойства было изменено.  Эта реализация требует больше времени, поскольку она требует вызова функции.  Макрос записи схемы подготовки к отправке этой реализации [DISP\_PROPERTY\_NOTIFY](../Topic/DISP_PROPERTY_NOTIFY.md).  
+     This implementation consists of a member variable and a notification function created by the Add Property Wizard. The notification function is automatically called by the framework after the property value changes. Use the Member Variable with Notification implementation when you need to be notified after a property value has changed. This implementation requires more time because it requires a function call. The dispatch map entry macro for this implementation is [DISP_PROPERTY_NOTIFY](../mfc/reference/dispatch-maps.md#disp_property_notify).  
   
--   Get\/set реализацию методов  
+-   Get/Set Methods Implementation  
   
-     Эта реализация состоит из пары функции\-члены класса элемента управления.  Реализация методов get " и set автоматически вызывает функцию\-член получение при первом запросе элемента управления текущее значение свойства и задать функцию\-член при первом запросе элемента управления, свойству изменилось.  Используйте это поведение, если необходимо вычислить значение свойства во время выполнения, чтобы проверить значение переданного пользователем элемента управления перед изменением фактическое свойство, или реализовать чтение или доступные только на запись тип свойства.  Макрос записи схемы подготовки к отправке этой реализации [DISP\_PROPERTY\_EX](../Topic/DISP_PROPERTY_EX.md).  В следующем разделе, [С помощью мастера добавления свойства для добавления пользовательского свойства](#_core_using_classwizard_to_add_a_custom_property) использует пользовательское свойство CircleOffset для демонстрации это поведение.  
+     This implementation consists of a pair of member functions in the control class. The Get/Set Methods implementation automatically calls the Get member function when the control's user requests the current value of the property and the Set member function when the control's user requests that the property be changed. Use this implementation when you need to compute the value of a property during run time, validate a value passed by the control's user before changing the actual property, or implement a read- or write-only property type. The dispatch map entry macro for this implementation is [DISP_PROPERTY_EX](../mfc/reference/dispatch-maps.md#disp_property_ex). The following section, [Using the Add Property Wizard to Add a Custom Property](#_core_using_classwizard_to_add_a_custom_property), uses the CircleOffset custom property to demonstrate this implementation.  
   
--   Реализация параметризованный  
+-   Parameterized Implementation  
   
-     Параметризованный поддерживается реализацией мастера добавления свойства.  Параметризованное свойство \(иногда называемое массив свойств\) можно использовать для получения набора значений через отдельное свойство элемента управления.  Макрос записи схемы подготовки к отправке этой реализации `DISP_PROPERTY_PARAM`.  Дополнительные сведения о реализации этого типа см. в разделе [Реализация параметризованное свойство](../mfc/mfc-activex-controls-advanced-topics.md) в элементах управления ActiveX статьи: Дополнительные разделы.  
+     Parameterized implementation is supported by the Add Property Wizard. A parameterized property (sometimes called a property array) can be used to access a set of values through a single property of your control. The dispatch map entry macro for this implementation is `DISP_PROPERTY_PARAM`. For more information on implementing this type, see [Implementing a Parameterized Property](../mfc/mfc-activex-controls-advanced-topics.md) in the article ActiveX Controls: Advanced Topics.  
   
-##  <a name="_core_using_classwizard_to_add_a_custom_property"></a> С помощью мастера добавления свойства для добавления пользовательского свойства  
- В следующей процедуре показано добавление пользовательского свойства, CircleOffset, который использует реализацию методов get " и set.  Пользовательское свойство CircleOffset позволяет пользователю элемента управления для компенсации circle из центра ограничивающего прямоугольника элемента управления.  Процедуры для добавления пользовательских свойств с реализацией, кроме получает\/присваивается методы похожа.  
+##  <a name="_core_using_classwizard_to_add_a_custom_property"></a> Using the Add Property Wizard to Add a Custom Property  
+ The following procedure demonstrates adding a custom property, CircleOffset, which uses the Get/Set Methods implementation. The CircleOffset custom property allows the control's user to offset the circle from the center of the control's bounding rectangle. The procedure for adding custom properties with an implementation other than Get/Set Methods is very similar.  
   
- Эту одной процедуры можно также использовать для добавления дополнительных пользовательских свойств требуется.  Замените имя пользовательского свойства для имени свойства и параметров CircleOffset.  
+ This same procedure can also be used to add other custom properties you want. Substitute your custom property name for the CircleOffset property name and parameters.  
   
-#### Добавление пользовательского свойства CircleOffset с помощью мастера добавления свойства.  
+#### <a name="to-add-the-circleoffset-custom-property-using-the-add-property-wizard"></a>To add the CircleOffset custom property using the Add Property Wizard  
   
-1.  Загрузите проект элемента управления.  
+1.  Load your control's project.  
   
-2.  В представлении классов разверните узел библиотеки элемента управления.  
+2.  In Class View, expand the library node of your control.  
   
-3.  Щелкните правой кнопкой мыши узел интерфейса для элемента управления \(второго узла узла библиотеки\), чтобы открыть контекстное меню.  
+3.  Right-click the interface node for your control (the second node of the library node) to open the shortcut menu.  
   
-4.  В контекстном меню щелкните **Добавить**, а затем щелкните **Добавить свойство**.  
+4.  From the shortcut menu, click **Add** and then click **Add Property**.  
   
-     Это окно [Мастер добавления свойства](../ide/names-add-property-wizard.md).  
+     This opens the [Add Property Wizard](../ide/names-add-property-wizard.md).  
   
-5.  В поле **Имя свойства** введите `CircleOffset`.  
+5.  In the **Property Name** box, type `CircleOffset`.  
   
-6.  В поле **Тип реализации**, щелкните **Get\/set методы**.  
+6.  For **Implementation Type**, click **Get/Set Methods**.  
   
-7.  В поле **свойство Type**, выберите **short**.  
+7.  In the **Property Type** box, select **short**.  
   
-8.  Введите уникальное имя для своего получение и установка функции или примите имя по умолчанию.  
+8.  Type unique names for your Get and Set Functions, or accept the default names.  
   
-9. Нажмите кнопку **Готово**.  
+9. Click **Finish**.  
   
-##  <a name="_core_classwizard_changes_for_custom_properties"></a> Добавьте мастера изменения свойства для пользовательских свойств  
- При добавлении пользовательского свойства, CircleOffset мастера добавления свойства вносит изменения в качестве заголовка \(. H\) и файлы реализации \(CPP\) класса элемента управления.  
+##  <a name="_core_classwizard_changes_for_custom_properties"></a> Add Property Wizard Changes for Custom Properties  
+ When you add the CircleOffset custom property, the Add Property Wizard makes changes to the header (.H) and the implementation (.CPP) files of the control class.  
   
- Следующие линии добавляются в. Файл H для объявления функции 2, `GetCircleOffset` и `SetCircleOffset`:  
+ The following lines are added to the .H file to declare two functions called `GetCircleOffset` and `SetCircleOffset`:  
   
- [!code-cpp[NVC_MFC_AxUI#25](../mfc/codesnippet/CPP/mfc-activex-controls-adding-custom-properties_1.h)]  
+ [!code-cpp[NVC_MFC_AxUI#25](../mfc/codesnippet/cpp/mfc-activex-controls-adding-custom-properties_1.h)]  
   
- В следующей линия добавляется в файл .IDL элемента управления:  
+ The following line is added to your control's .IDL file:  
   
- [!code-cpp[NVC_MFC_AxUI#26](../mfc/codesnippet/CPP/mfc-activex-controls-adding-custom-properties_2.idl)]  
+ [!code-cpp[NVC_MFC_AxUI#26](../mfc/codesnippet/cpp/mfc-activex-controls-adding-custom-properties_2.idl)]  
   
- Эта линия присвоить свойству CircleOffset определенный идентификатор, используемой в позиции метода в методах и списке свойств мастера добавления свойства.  
+ This line assigns the CircleOffset property a specific ID number, taken from the method's position in the methods and properties list of the Add Property Wizard.  
   
- Кроме того, следующая линия добавляется в схеме подготовки к отправке \(в cpp\-файле класса элемента управления\) для сопоставления свойства CircleOffset к функциям обработчика элемента управления 2:  
+ In addition, the following line is added to the dispatch map (in the .CPP file of the control class) to map the CircleOffset property to the control's two handler functions:  
   
- [!code-cpp[NVC_MFC_AxUI#27](../mfc/codesnippet/CPP/mfc-activex-controls-adding-custom-properties_3.cpp)]  
+ [!code-cpp[NVC_MFC_AxUI#27](../mfc/codesnippet/cpp/mfc-activex-controls-adding-custom-properties_3.cpp)]  
   
- Наконец, реализации `GetCircleOffset` и функции `SetCircleOffset` добавляются в конец файла .cpp элемента управления.  В большинстве случаев следует изменить функции получения для возврата значения свойства.  Указывает функция обычно содержит код, который должен быть выполнен этот до или после изменения свойств.  
+ Finally, the implementations of the `GetCircleOffset` and `SetCircleOffset` functions are added to the end of the control's .CPP file. In most cases, you will modify the Get function to return the value of the property. The Set function will usually contain code that should be executed either before or after the property changes.  
   
- [!code-cpp[NVC_MFC_AxUI#28](../mfc/codesnippet/CPP/mfc-activex-controls-adding-custom-properties_4.cpp)]  
+ [!code-cpp[NVC_MFC_AxUI#28](../mfc/codesnippet/cpp/mfc-activex-controls-adding-custom-properties_4.cpp)]  
   
- Обратите внимание, что мастера добавления свойства автоматически добавляет вызов, в [SetModifiedFlag](../Topic/COleControl::SetModifiedFlag.md), установленной в тело функции.  При вызове этого функцией помечается как измененный элемент управления.  Если элемент управления был изменен, то его новое состояние будет сохранено при сохранении контейнер.  Эта функция должна вызываться, когда свойство, сохраненное как часть состояния элемента управления постоянного, изменяет значение.  
+ Note that the Add Property Wizard automatically adds a call, to [SetModifiedFlag](../mfc/reference/colecontrol-class.md#setmodifiedflag), to the body of the Set function. Calling this function marks the control as modified. If a control has been modified, its new state will be saved when the container is saved. This function should be called whenever a property, saved as part of the control's persistent state, changes value.  
   
-## См. также  
- [Элементы управления ActiveX MFC](../mfc/mfc-activex-controls.md)   
- [Элементы управления ActiveX в MFC. Свойства](../mfc/mfc-activex-controls-properties.md)   
- [Элементы управления ActiveX в MFC. Методы](../mfc/mfc-activex-controls-methods.md)   
+## <a name="see-also"></a>See Also  
+ [MFC ActiveX Controls](../mfc/mfc-activex-controls.md)   
+ [MFC ActiveX Controls: Properties](../mfc/mfc-activex-controls-properties.md)   
+ [MFC ActiveX Controls: Methods](../mfc/mfc-activex-controls-methods.md)   
  [COleControl Class](../mfc/reference/colecontrol-class.md)
+

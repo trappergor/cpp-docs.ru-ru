@@ -1,43 +1,62 @@
 ---
-title: "Установка режима объекта CStatusBarCtrl | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "CStatusBarCtrl"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "CStatusBarCtrl - класс, простые и непростые режимы"
-  - "IsSimple - метод, использование"
-  - "непростой режим и элементы управления строки состояния"
-  - "SetSimple - метод"
-  - "простой режим и элементы управления строки состояния"
-  - "элементы управления строкой состояния, простые и непростые режимы"
+title: Setting the Mode of a CStatusBarCtrl Object | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- CStatusBarCtrl
+dev_langs:
+- C++
+helpviewer_keywords:
+- simple mode and status bar controls
+- IsSimple method, using
+- SetSimple method [MFC]
+- status bar controls [MFC], simple and nonsimple modes
+- non-simple mode and status bar controls
+- CStatusBarCtrl class [MFC], simple and nonsimple modes
 ms.assetid: ca6076e5-1501-4e33-8d35-9308941e46c0
 caps.latest.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 6
----
-# Установка режима объекта CStatusBarCtrl
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: de773e6298a5bb33de9b3b07faa33f57fdbd7132
+ms.contentlocale: ru-ru
+ms.lasthandoff: 09/12/2017
 
-2 Режима для объекта `CStatusBarCtrl` : простой и nonsimple.  В большинстве случаев, элемент управления " Строка состояния будет иметь один или несколько частей вместе с текстом и Значком возможно или Значками.  Это называется режимом nonsimple.  Дополнительные сведения об этом режиме см. в разделе [Инициализация части объекта CStatusBarCtrl](../mfc/initializing-the-parts-of-a-cstatusbarctrl-object.md).  
+---
+# <a name="setting-the-mode-of-a-cstatusbarctrl-object"></a>Setting the Mode of a CStatusBarCtrl Object
+There are two modes for a `CStatusBarCtrl` object: simple and nonsimple. In the majority of cases, your status bar control will have one or more parts, along with text and perhaps an icon or icons. This is called the nonsimple mode. For more information on this mode, see [Initializing the Parts of a CStatusBarCtrl Object](../mfc/initializing-the-parts-of-a-cstatusbarctrl-object.md).  
   
- Однако в некоторых случаях необходимо только для отображения линии отдельную текста.  В этом случае простой режим достаточно для себя.  Чтобы изменить режим объекта `CStatusBarCtrl` простому, вызывать в функцию\-член [SetSimple](../Topic/CStatusBarCtrl::SetSimple.md).  После того как элемент управления " Строка состояния в простом режиме, установите текст, вызвав функцию\-член **SetText**, передавая 255 в качестве значения параметра **nPane**.  
+ However, there are cases where you only need to display a single line of text. In this case, the simple mode is sufficient for your needs. To change the mode of the `CStatusBarCtrl` object to simple, make a call to the [SetSimple](../mfc/reference/cstatusbarctrl-class.md#setsimple) member function. Once the status bar control is in simple mode, set the text by calling the **SetText** member function, passing 255 as the value for the **nPane** parameter.  
   
- Можно использовать функцию [IsSimple](../Topic/CStatusBarCtrl::IsSimple.md), чтобы определить объект `CStatusBarCtrl` в каком режиме.  
+ You can use the [IsSimple](../mfc/reference/cstatusbarctrl-class.md#issimple) function to determine what mode the `CStatusBarCtrl` object is in.  
   
 > [!NOTE]
->  Если объект строки состояния изменения из nonsimple простому, или наоборот, окно немедленно перерисовать и, если применимо, все определенные части автоматически будут восстановлены.  
+>  If the status bar object is being changed from nonsimple to simple, or vice versa, the window is immediately redrawn and, if applicable, any defined parts are automatically restored.  
   
-## См. также  
- [Использование CStatusBarCtrl](../mfc/using-cstatusbarctrl.md)   
- [Элементы управления](../mfc/controls-mfc.md)
+## <a name="see-also"></a>See Also  
+ [Using CStatusBarCtrl](../mfc/using-cstatusbarctrl.md)   
+ [Controls](../mfc/controls-mfc.md)
+
+

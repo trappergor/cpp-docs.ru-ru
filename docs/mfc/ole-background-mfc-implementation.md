@@ -1,61 +1,80 @@
 ---
-title: "Поддержка OLE. Реализация MFC | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "IMarshall"
-  - "IMoniker"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "IMarshall - класс"
-  - "IMoniker - интерфейс, MFC - библиотека"
-  - "MFC - библиотеки, реализация"
-  - "OLE IMarshal - интерфейс"
-  - "OLE IMoniker - интерфейс"
-  - "OLE IUnknown"
-  - "реализация библиотеки OLE MFC"
-  - "OLE, составные файлы"
+title: 'OLE Background: MFC Implementation | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- IMarshall
+- IMoniker
+dev_langs:
+- C++
+helpviewer_keywords:
+- MFC libraries, implementing
+- OLE MFC library implementation
+- OLE IMarshal interface
+- IMoniker interface, MFC
+- IMarshall class [MFC]
+- OLE, compound files
+- OLE IMoniker interface
+- OLE IUnknown
 ms.assetid: 2b67016a-d78e-4d60-925f-c28ec8fb6180
 caps.latest.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 6
----
-# Поддержка OLE. Реализация MFC
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: c814fe6b2c59d8b43329a46048e64e7ad42e322b
+ms.contentlocale: ru-ru
+ms.lasthandoff: 09/12/2017
 
-Из\-за размера и сложности начального OLE, вызов API напрямую для создания приложений OLE может быть без очень много времени.  Цель реализации библиотеки Microsoft Foundation Class OLE снизить объем работы необходимо выполнить для создания полнофункциональных, OLE\-; приложения.  
+---
+# <a name="ole-background-mfc-implementation"></a>OLE Background: MFC Implementation
+Because of the size and complexity of the raw OLE API, calling it directly to write OLE applications can be very time consuming. The goal of the Microsoft Foundation Class Library implementation of OLE is to reduce the amount of work you have to do to write full-featured, OLE-capable applications.  
   
- В этой статье описывается части OLE API, не реализован внутренний MFC.  Обсуждение также говорится, что они сопоставления OLE раздел [!INCLUDE[winSDK](../atl/includes/winsdk_md.md)].  
+ This article explains the parts of the OLE API that have not been implemented inside MFC. The discussion also explains how what is implemented maps to the OLE section of the Windows SDK.  
   
-##  <a name="_core_portions_of_ole_not_implemented_by_the_class_library"></a> Части не OLE, предоставляемые библиотекой классов  
- Несколько интерфейсов и функций MFC OLE, непосредственно не предоставляются.  Если необходимо использовать эти функции можно вызывать API OLE напрямую.  
+##  <a name="_core_portions_of_ole_not_implemented_by_the_class_library"></a> Portions of OLE Not Implemented by the Class Library  
+ A few interfaces and features of OLE are not directly provided by MFC. If you want to use these features, you can call the OLE API directly.  
   
- Интерфейс IMoniker  
- Интерфейс `IMoniker` реализован библиотекой классов \(например, класс `COleServerItem` \), но еще не были предоставлены программисту.  Дополнительные сведения см. в разделе о этот интерфейс OLE реализации моникера OLE в разделе [!INCLUDE[winSDK](../atl/includes/winsdk_md.md)].  Однако см. также классы [CMonikerFile](../Topic/CMonikerFile%20Class.md) и [CAsyncMonikerFile](../mfc/reference/casyncmonikerfile-class.md).  
+ IMoniker Interface  
+ The `IMoniker` interface is implemented by the class library (for example, the `COleServerItem` class) but has not previously been exposed to the programmer. For more information about this interface, see OLE Moniker Implementations in the OLE section of the Windows SDK. However, see also class [CMonikerFile](../mfc/reference/cmonikerfile-class.md) and [CAsyncMonikerFile](../mfc/reference/casyncmonikerfile-class.md).  
   
- IUnknown и интерфейсы IMarshal  
- Интерфейс **IUnknown** реализуется библиотекой классов, но не предоставляется программисту.  Интерфейс **IMarshal** не реализован библиотекой классов и используемый для внутреннего использования.  Серверы автоматизации, построенные с помощью библиотеки классов уже имеют встроенные возможности маршалинга.  
+ IUnknown and IMarshal Interfaces  
+ The **IUnknown** interface is implemented by the class library but is not exposed to the programmer. The **IMarshal** interface is not implemented by the class library but is used internally. Automation servers built using the class library already have marshaling capabilities built in.  
   
- Docfiles \(составные файлы\)  
- Составные файлы частично поддерживаются библиотекой классов.  Ни один из функций, которые напрямую управлять созданием составные файлы, поддерживаются.  MFC использует класс **COleFileStream** для поддержки обработку потоков с функциями стандартного файла.  Дополнительные сведения см. в статье [Контейнеры: Составные файлы](../mfc/containers-compound-files.md).  
+ Docfiles (Compound Files)  
+ Compound files are partially supported by the class library. None of the functions that directly manipulate compound files beyond creation are supported. MFC uses class **COleFileStream** to support manipulation of streams with standard file functions. For more information, see the article [Containers: Compound Files](../mfc/containers-compound-files.md).  
   
- Внутрипроцессные серверов и обработчики объекта  
- Внутрипроцессные серверов и обработчики объекта позволяют реализация визуального редактирования полные данные или объекты \(COM\) COM в библиотеку динамической компоновки \(DLL\).  Для этого можно реализовать библиотеки DLL с помощью вызова OLE API напрямую.  Однако при создании сервера автоматизации и сервер не предусмотрен интерфейс пользователя, можно использовать AppWizard внести в сервером внутрипроцессный сервер и поместить его полностью в библиотеке DLL.  Дополнительные сведения о эти разделы см. в разделе [Серверы автоматизации](../mfc/automation-servers.md).  
+ In-Process Servers and Object Handlers  
+ In-process servers and object handlers allow implementation of visual editing data or full Component Object Model (COM) objects in a dynamic-link library (DLL). To do this, you can implement your DLL by calling the OLE API directly. However, if you are writing an Automation server and your server has no user interface, you can use AppWizard to make your server an in-process server and put it completely into a DLL. For more information about these topics, see [Automation Servers](../mfc/automation-servers.md).  
   
 > [!TIP]
->  Самый простой способ реализации сервер автоматизации разместить его в библиотеку DLL.  MFC поддерживает этот подход.  
+>  The easiest way to implement an Automation server is to place it in a DLL. MFC supports this approach.  
   
- Дополнительные сведения об использовании класс OLE Microsoft Foundation реализации интерфейсов OLE технические заметки см. в разделах [38](../mfc/tn038-mfc-ole-iunknown-implementation.md), [39](../mfc/tn039-mfc-ole-automation-implementation.md) и [40](../mfc/tn040-mfc-ole-in-place-resizing-and-zooming.md) библиотеки MFC.  
+ For more information on how the Microsoft Foundation OLE classes implement OLE interfaces, see MFC Technical Notes [38](../mfc/tn038-mfc-ole-iunknown-implementation.md), [39](../mfc/tn039-mfc-ole-automation-implementation.md), and [40](../mfc/tn040-mfc-ole-in-place-resizing-and-zooming.md).  
   
-## См. также  
- [Поддержка OLE](../mfc/ole-background.md)   
- [Поддержка OLE. Стратегии реализации](../mfc/ole-background-implementation-strategies.md)
+## <a name="see-also"></a>See Also  
+ [OLE Background](../mfc/ole-background.md)   
+ [OLE Background: Implementation Strategies](../mfc/ole-background-implementation-strategies.md)
+
+

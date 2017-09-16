@@ -1,5 +1,5 @@
 ---
-title: "Имена элементов управления, мастер элементов управления ActiveX MFC | Документы Microsoft"
+title: Control Names, MFC ActiveX Control Wizard | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -33,73 +33,73 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: a82768750e6a7837bb81edd8a51847f83c294c20
-ms.openlocfilehash: 28ef331cb66ee184c4bc104fedddf69e9296367c
+ms.translationtype: MT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: c027e7a3f24c33e4fa15ec666bdc2b7838502f76
 ms.contentlocale: ru-ru
-ms.lasthandoff: 04/04/2017
+ms.lasthandoff: 09/12/2017
 
 ---
-# <a name="control-names-mfc-activex-control-wizard"></a>Имена элементов управления, мастер элементов управления ActiveX MFC
-Укажите имена для класса элемента управления и класса страницы свойств, имена типов и идентификаторы типов для элемента управления. За исключением элемента **короткое имя**, все поля, которые могут изменяться независимо друг от друга. Если изменить текст для **короткое имя**, это изменение отражается в имена всех других полей на этой странице. Эти принципы именования позволяют легко определить по вы все имена разработки элементов управления.  
+# <a name="control-names-mfc-activex-control-wizard"></a>Control Names, MFC ActiveX Control Wizard
+Specify the names for the control class and property page class, the type names, and type identifiers for your control. With the exception of **Short name**, all other fields can be edited independently. If you change the text for **Short name**, the change is reflected in the names of all other fields in this page. This naming behavior is designed to make all the names easily identifiable for you as you develop your control.  
   
- **Краткое имя**  
- Укажите сокращенное имя для элемента управления. По умолчанию это имя основано на имени проекта, указанный в **новый проект** диалоговое окно. Имя определяет имена классов, имена типов и идентификаторы типов, можно только после изменения этих полей по отдельности.  
+ **Short name**  
+ Provide an abbreviated name for the control. By default, this name is based on the project name you provided in the **New Project** dialog box. The name you provide determines the class names, the type names, and the type identifiers, unless you change those fields individually.  
   
- **Имя класса элемента управления**  
- По умолчанию имя класса элемента управления основан на короткое имя с `C` префиксом и `Ctrl` как суффикс. Например, если элемент управления короткое имя должен `Price`, имя класса элемента управления — `CPriceCtrl`.  
+ **Control class name**  
+ By default, the name of the control class is based on the short name, with `C` as a prefix and `Ctrl` as a suffix. For example, if your control's short name is `Price`, the control class name is `CPriceCtrl`.  
   
- **H-файл элемента управления**  
- По умолчанию имени файла заголовка берется краткое имя с `Ctrl` суффиксом и `.h` расширением файла. Например, если элемент управления короткое имя должен `Price`, имя файла заголовка будет `PriceCtrl.h`. Имя в этом поле должно соответствовать имени класса элемента управления.  
+ **Control .h file**  
+ By default, the name of the header file is based on the short name, with `Ctrl` as a suffix and `.h` as the file extension. For example, if your control's short name is `Price`, the header file name is `PriceCtrl.h`. The name in this field should match the control class name.  
   
- **CPP-файл элемента управления**  
- По умолчанию имени файла заголовка берется краткое имя с `Ctrl` суффиксом и `.cpp` расширением файла. Например, если элемент управления короткое имя должен `Price`, имя файла заголовка будет `PriceCtrl.cpp`. В этом поле имя должно соответствовать имени заголовка.  
+ **Control .cpp file**  
+ By default, the name of the header file is based on the short name, with `Ctrl` as a suffix and `.cpp` as the file extension. For example, if your control's short name is `Price`, the header file name is `PriceCtrl.cpp`. The name in this field should match the header name.  
   
- **Имя типа элемента управления**  
- По умолчанию имя типа элемента управления основан на короткое имя, за которым следует `Control`. Например, если элемент управления короткое имя должен `Price`, является именем типа класса элемента управления `Price Control`. Если изменить значение в этом поле, убедитесь, что имя указывает наследования.  
+ **Control type name**  
+ By default, the name of the control type is based on the short name, followed by `Control`. For example, if your control's short name is `Price`, the control class type name is `Price Control`. If you change the value in this field, make sure the name indicates an inheritance.  
   
- **Идентификатор типа элемента управления**  
- Задает идентификатор типа класса элемента управления. Элемент управления эта строка записывается в реестр, при добавлении в проект. Приложения контейнера использовать данную строку для создания экземпляра элемента управления.  
+ **Control type ID**  
+ Sets the control type ID of the control class. The control writes this string to the registry when it is added to a project. Container applications use this string to create an instance of the control.  
   
- По умолчанию идентификатор типа элемента управления основан на имени проекта, которое вы указываете в **новый проект** диалоговое окно и короткое имя. Это имя должно совпадать с именем типа.  
+ By default, the control type ID is based on the project name, which you indicated in the **New Project** dialog box, and the short name. This name should match the type name.  
   
- По умолчанию идентификатор типа элемента управления выглядит следующим образом:  
+ By default, the control type ID appears as follows:  
   
- *ProjectName.ShortName*CTRL.1.  
+ *ProjectName.ShortName*Ctrl.1  
   
- Если изменить краткое имя в этом диалоговом окне, идентификатор типа элемента управления выглядит следующим образом:  
+ If you change the short name in this dialog box, the control type ID appears as follows:  
   
- *ProjectName.NewShortName*CTRL.1.  
+ *ProjectName.NewShortName*Ctrl.1  
   
- **Имя класса PropPage**  
- По умолчанию имя класса страницы свойств основан на короткое имя с `C` префиксом и `PropPage` как суффикс. Например, если элемент управления короткое имя должен `Price`, имя класса страницы свойств будет `CPricePropPage`. Это имя должно соответствовать имени класса элемента управления, с добавлением `PropPage`.  
+ **PropPage class name**  
+ By default, the name of the property page class is based on the short name, with `C` as a prefix and `PropPage` as a suffix. For example, if your control's short name is `Price`, the property page class name is `CPricePropPage`. This name should match the control class name, appended with `PropPage`.  
   
- **PropPage h-файл**  
- По умолчанию имя файла заголовка страницы свойств основано на короткое имя с как `PropPage` суффиксом и `.h` расширением файла. Например, если элемент управления короткое имя должен `Price`, имя файла заголовка страницы свойств будет `PricePropPage.h`. Это имя должно соответствовать имени класса.  
+ **PropPage .h file**  
+ By default, the name of the property page header file is based on the short name, with as a `PropPage` as a suffix and `.h` as the file extension. For example, if your control's short name is `Price`, the property page header file name is `PricePropPage.h`. This name should match the class name.  
   
- **PropPage CPP-файл**  
- По умолчанию имя файла реализации страницы свойств основано на короткое имя с как `PropPage` суффиксом и `.cpp` расширением файла. Например, если элемент управления короткое имя должен `Price`, имя файла заголовка страницы свойств будет `PricePropPage.cpp`. Это имя должно соответствовать имени файла заголовка.  
+ **PropPage .cpp file**  
+ By default, the name of the property page implementation file is based on the short name, with as a `PropPage` as a suffix and `.cpp` as the file extension. For example, if your control's short name is `Price`, the property page header file name is `PricePropPage.cpp`. This name should match the header file name.  
   
- **Имя типа PropPage**  
- По умолчанию имени типа страницы свойств берется краткое имя, за которым следует `Property Page`. Например, если элемент управления короткое имя должен `Price`, имя типа страницы свойств будет `Price Property Page`. Если изменить значение в этом поле, убедитесь, что имя указывает на класс элемента управления.  
+ **PropPage type name**  
+ By default, the property page type name is based on the short name, followed by `Property Page`. For example, if your control's short name is `Price`, the property page type name is `Price Property Page`. If you change the value in this field, make sure the name indicates the control class.  
   
- **Идентификатор типа PropPage**  
- Задает идентификатор класса страницы свойств. Эта строка записывается элемента управления в реестре при применении к проекту. Эта строка используется в приложении-контейнере для создания экземпляра страницы свойств элемента управления.  
+ **PropPage type ID**  
+ Sets the ID of the property page class. The control writes this string in the registry when it is applied to a project. A container application uses this string to create an instance of the control's property page.  
   
- По умолчанию идентификатор типа страницы свойств основан на имени проекта, которое вы указываете в **новый проект** диалоговое окно и короткое имя. Это имя должно совпадать с именем типа.  
+ By default, the property page type ID is based on the project name, which you indicated in the **New Project** dialog box, and the short name. This name should match the type name.  
   
- По умолчанию идентификатор типа страницы свойств выглядит следующим образом:  
+ By default, the property page type ID appears as follows:  
   
  *ProjectName.ShortName*PropPage.1  
   
- Если изменить краткое имя в этом диалоговом окне, идентификатор типа страницы свойств выглядит следующим образом:  
+ If you change the short name in this dialog box, the property page type ID appears as follows:  
   
  *ProjectName.NewShortName*PropPage.1  
   
-## <a name="see-also"></a>См. также  
- [Мастер элементов управления ActiveX MFC](../../mfc/reference/mfc-activex-control-wizard.md)   
- [Параметры приложения, мастер элементов управления ActiveX MFC](../../mfc/reference/application-settings-mfc-activex-control-wizard.md)   
- [Параметры элементов управления, мастер элементов управления ActiveX MFC](../../mfc/reference/control-settings-mfc-activex-control-wizard.md)   
- [Типы файлов, создаваемых для проектов Visual C++](../../ide/file-types-created-for-visual-cpp-projects.md)
+## <a name="see-also"></a>See Also  
+ [MFC ActiveX Control Wizard](../../mfc/reference/mfc-activex-control-wizard.md)   
+ [Application Settings, MFC ActiveX Control Wizard](../../mfc/reference/application-settings-mfc-activex-control-wizard.md)   
+ [Control Settings, MFC ActiveX Control Wizard](../../mfc/reference/control-settings-mfc-activex-control-wizard.md)   
+ [File Types Created for Visual C++ Projects](../../ide/file-types-created-for-visual-cpp-projects.md)
 
 

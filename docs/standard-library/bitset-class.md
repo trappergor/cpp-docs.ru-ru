@@ -1,5 +1,5 @@
 ---
-title: "Класс bitset | Документы Майкрософт"
+title: bitset Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -10,7 +10,6 @@ ms.tgt_pltfrm:
 ms.topic: article
 f1_keywords:
 - bitset/std::bitset
-- bitset
 - bitset/std::bitset::element_type
 - bitset/std::bitset::all
 - bitset/std::bitset::any
@@ -28,7 +27,21 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- bitset class
+- std::bitset [C++]
+- std::bitset [C++], element_type
+- std::bitset [C++], all
+- std::bitset [C++], any
+- std::bitset [C++], count
+- std::bitset [C++], flip
+- std::bitset [C++], none
+- std::bitset [C++], reset
+- std::bitset [C++], set
+- std::bitset [C++], size
+- std::bitset [C++], test
+- std::bitset [C++], to_string
+- std::bitset [C++], to_ullong
+- std::bitset [C++], to_ulong
+- std::bitset [C++], reference
 ms.assetid: 28b86964-87b4-429c-8124-b6c251b6c50b
 caps.latest.revision: 21
 author: corob-msft
@@ -48,109 +61,109 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
-ms.openlocfilehash: 8e3518fb40cdd3e8bdd14b5ed64f4cc6dbcb1058
+ms.translationtype: MT
+ms.sourcegitcommit: 5d026c375025b169d5db8445cbb52c0c917b2d8d
+ms.openlocfilehash: 1c8e1e5aee495d11911aef2723e8e243a155fc63
 ms.contentlocale: ru-ru
-ms.lasthandoff: 04/29/2017
+ms.lasthandoff: 09/09/2017
 
 ---
-# <a name="bitset-class"></a>Класс bitset
-Описывает тип объекта, который хранит последовательность, состоящую из фиксированного числа битов, предоставляющих компактный способ хранения флагов для набора элементов или условий. Класс bitset поддерживает операции над объектами типа bitset, которые содержат коллекцию битов и обеспечивают доступ в константном времени к каждому биту.  
+# <a name="bitset-class"></a>bitset Class
+Describes a type of object that stores a sequence consisting of a fixed number of bits that provide a compact way of keeping flags for a set of items or conditions. The bitset class supports operations on objects of type bitset that contain a collection of bits and provide constant-time access to each bit.  
   
-## <a name="syntax"></a>Синтаксис  
+## <a name="syntax"></a>Syntax  
   
 ```  
 template <size_t N>  
 class bitset  
 ```  
   
-#### <a name="parameters"></a>Параметры  
+#### <a name="parameters"></a>Parameters  
  *N*  
- Задает количество битов в объекте bitset в виде ненулевого целого числа типа **size_t**, которое должно быть известно во время компиляции.  
+ Specifies the number of bits in the bitset object with a nonzero integer of type **size_t** that must be known at compile time.  
   
-## <a name="remarks"></a>Примечания  
- В отличие от аналогичного [класса vector\<bool>](../standard-library/vector-bool-class.md) у класса bitset нет итераторов, и он не является контейнером библиотеки стандартных программ C++. Он также отличается от vector\<bool> тем, что его размер зафиксирован во время компиляции в соответствии с размером, указанным в параметре шаблона **N** при объявлении **bitset\<N\>**.  
+## <a name="remarks"></a>Remarks  
+ Unlike the similar [vector\<bool> Class](../standard-library/vector-bool-class.md), the bitset class does not have iterators and is not a C++ Standard Library container. It also differs from vector\<bool> by being of some specific size that is fixed at compile time in accordance with the size specified by the template parameter **N** when the **bitset\<N\>** is declared.  
   
- Бит задан, если его значение равно 1, и сброшен, если его значение равно 0. Перевернуть или инвертировать бит — значит изменить его значение с 1 на 0 или с 0 на 1. **N** битов в bitset индексируются по целым значениям от 0 до **N** – 1, где 0 — это индекс первой позиции бита, а **N** – 1 — индекс конечной позиции бита.  
+ A bit is set if its value is 1 and reset if its value is 0. To flip or invert a bit is to change its value from 1 to 0 or from 0 to 1. The **N** bits in a bitset are indexed by integer values from 0 to **N** - 1, where 0 indexes the first bit position and **N** - 1 the final bit position.  
   
-### <a name="constructors"></a>Конструкторы  
+### <a name="constructors"></a>Constructors  
   
 |||  
 |-|-|  
-|[bitset](#bitset)|Создает объект класса `bitset\<N>` и инициализирует биты с нулевым значением до определенного указанного значения или до значений, полученных из символов в строке.|  
+|[bitset](#bitset)|Constructs an object of class `bitset\<N>` and initializes the bits to zero, to some specified value, or to values obtained from characters in a string.|  
   
 ### <a name="typedefs"></a>Typedefs  
   
 |||  
 |-|-|  
-|[element_type](#element_type)|Тип, который служит синонимом типа данных `bool` и может использоваться для ссылки на биты элементов в `bitset`.|  
+|[element_type](#element_type)|A type that is a synonym for the data type `bool` and can be used to reference element bits in a `bitset`.|  
   
-### <a name="member-functions"></a>Функции-члены  
-  
-|||  
-|-|-|  
-|[all](#all)|Проверяет все биты в этом объекте `bitset`, чтобы определить, имеют ли они все значение `true`.|  
-|[any](#any)|Функция-член проверяет, равен ли какой-либо бит в последовательности 1.|  
-|[count](#count)|Эта функция-член возвращает количество бит, заданных в последовательности бит.|  
-|[flip](#flip)|Инвертирует все биты в `bitset` или инвертирует один бит в указанной позиции.|  
-|[none](#none)|Проверяет, присвоено ли хотя бы одному биту в объекте `bitset` значение 1.|  
-|[reset](#reset)|Сбрасывает все биты в `bitset` в значение 0 или сбрасывает бит в указанной позиции в 0.|  
-|[set](#set)|Присваивает всем битам в `bitset` значение 1 или присваивает биту в указанной позиции значение 1.|  
-|[size](#size)|Возвращает количество бит в объекте `bitset`.|  
-|[test](#test)|Проверяет, присвоено ли биту в указанной позиции в `bitset` значение 1.|  
-|[to_string](#to_string)|Преобразует объект `bitset` в строковое представление.|  
-|[to_ullong](#to_ullong)|Возвращает сумму значений бит в `bitset` как `unsigned long long`.|  
-|[to_ulong](#to_ulong)|Преобразует объект `bitset` в `unsigned long`, чтобы получить последовательность его битов, если используется для инициализации `bitset`.|  
-  
-### <a name="member-classes"></a>Классы-члены  
+### <a name="member-functions"></a>Member Functions  
   
 |||  
 |-|-|  
-|[reference](#reference)|Прокси-класс, который предоставляет ссылки на биты в объекте `bitset`, используемые для доступа к отдельным битам и их обработки в качестве вспомогательного класса для `operator[]` класса `bitset`.|  
+|[all](#all)|Tests all of the bits in this `bitset` to determine whether they are all set to `true`.|  
+|[any](#any)|The member function tests whether any bit in the sequence is set to 1.|  
+|[count](#count)|The member function returns the number of bits set in the bit sequence.|  
+|[flip](#flip)|Inverts the value of all the bits in a `bitset` or inverts a single bit at a specified position.|  
+|[none](#none)|Tests if no bit has been set to 1 in a `bitset` object.|  
+|[reset](#reset)|Resets all the bits in a `bitset` to 0 or resets a bit at a specified position to 0.|  
+|[set](#set)|Sets all the bits in a `bitset` to 1 or sets a bit at a specified position to 1.|  
+|[size](#size)|Returns the number of bits in a `bitset` object.|  
+|[test](#test)|Tests whether the bit at a specified position in a `bitset` is set to 1.|  
+|[to_string](#to_string)|Converts a `bitset` object to a string representation.|  
+|[to_ullong](#to_ullong)|Returns the sum of the bit values in the `bitset` as an `unsigned long long`.|  
+|[to_ulong](#to_ulong)|Converts a `bitset` object to the `unsigned long` that would generate the sequence of bits contained if used to initialize the `bitset`.|  
   
-### <a name="operators"></a>Операторы  
+### <a name="member-classes"></a>Member Classes  
   
 |||  
 |-|-|  
-|[оператор!=](#op_neq)|Проверяет целевой объект `bitset` на неравенство относительно указанного объекта `bitset`.|  
-|[оператор&=](#op_and_eq)|Выполняет побитовое сочетание битовых массивов с использованием логической операции `AND`.|  
-|[оператор<<](#op_lshift)|Сдвигает биты в `bitset` влево на указанное число позиций и возвращает результат в новом объекте `bitset`.|  
-|[оператор<<=](#op_lshift_eq)|Сдвигает биты в `bitset` влево на указанное число позиций и возвращает результат в целевом объекте `bitset`.|  
-|[оператор==](#op_eq_eq)|Проверяет целевой объект `bitset` на равенство относительно указанного объекта `bitset`.|  
-|[оператор>>](#op_rshift)|Сдвигает биты в `bitset` вправо на указанное число позиций и возвращает результат в новом объекте `bitset`.|  
-|[оператор>>=](#op_rshift_eq)|Сдвигает биты в `bitset` вправо на указанное число позиций и возвращает результат в целевом объекте `bitset`.|  
-|[оператор&#91;&#93;](#op_at)|Возвращает ссылку на бит в указанной позиции в `bitset`, если `bitset` может быть изменен; в противном случае возвращается значение бита в этой позиции.|  
-|[оператор^=](#op_xor_eq)|Выполняет побитовое сочетание битовых массивов с использованием эксклюзивной операции `OR`.|  
-|[оператор&#124;=](#op_or_eq')|Выполняет побитовое сочетание битовых массивов с использованием инклюзивной операции `OR`.|  
-|[оператор~](#op_dtor)|Инвертирует все биты в целевом объекте `bitset` и возвращает результат.|  
+|[reference](#reference)|A proxy class that provides references to bits contained in a `bitset` that is used to access and manipulate the individual bits as a helper class for the `operator[]` of class `bitset`.|  
   
-## <a name="requirements"></a>Требования  
- **Заголовок:** \<bitset>  
+### <a name="operators"></a>Operators  
   
- **Пространство имен:** std  
+|||  
+|-|-|  
+|[operator!=](#op_neq)|Tests a target `bitset` for inequality with a specified `bitset`.|  
+|[operator&=](#op_and_eq)|Performs a bitwise combination of bitsets with the logical `AND` operation.|  
+|[operator<<](#op_lshift)|Shifts the bits in a `bitset` to the left a specified number of positions and returns the result to a new `bitset`.|  
+|[operator<<=](#op_lshift_eq)|Shifts the bits in a `bitset` to the left a specified number of positions and returns the result to the targeted `bitset`.|  
+|[operator==](#op_eq_eq)|Tests a target `bitset` for equality with a specified `bitset`.|  
+|[operator>>](#op_rshift)|Shifts the bits in a `bitset` to the right a specified number of positions and returns the result to a new `bitset`.|  
+|[operator>>=](#op_rshift_eq)|Shifts the bits in a `bitset` to the right a specified number of positions and returns the result to the targeted `bitset`.|  
+|[operator&#91;&#93;](#op_at)|Returns a reference to a bit at a specified position in a `bitset` if the `bitset` is modifiable; otherwise, it returns the value of the bit at that position.|  
+|[operator^=](#op_xor_eq)|Performs a bitwise combination of bitsets with the exclusive `OR` operation.|  
+|[operator&#124;=](#op_or_eq')|Performs a bitwise combination of bitsets with the inclusive `OR` operation.|  
+|[operator~](#op_dtor)|Inverts all the bits in a target `bitset` and returns the result.|  
+  
+## <a name="requirements"></a>Requirements  
+ **Header:** \<bitset>  
+  
+ **Namespace:** std  
   
 ##  <a name="all"></a>  bitset::all  
- Проверяет все биты в этом битовом массиве, чтобы определить, имеют ли они все значение true.  
+ Tests all of the bits in this bitset to determine if they are all set to true.  
   
 ```  
 bool all() const;
 ```  
   
-### <a name="return-value"></a>Возвращаемое значение  
- Возвращает значение true, если все биты в этом массиве имеют значение true. Возвращает **false**, если хотя бы один бит имеет значение false.  
+### <a name="return-value"></a>Return Value  
+ Returns true if all bits in this set are true. Returns **false** if one or more bits are false.  
   
 ##  <a name="any"></a>  bitset::any  
- Проверяет, равен ли какой-либо бит в последовательности 1.  
+ Tests whether any bit in the sequence is set to 1.  
   
 ```  
 bool any() const;
 ```  
   
-### <a name="return-value"></a>Возвращаемое значение  
- Значение **true**, если хотя бы один бит в битовом массиве равен 1; значение **false**, если все биты равны 0.  
+### <a name="return-value"></a>Return Value  
+ **true** if any bit in the bitset is set to 1; **false** if all the bits are 0.  
   
-### <a name="example"></a>Пример  
+### <a name="example"></a>Example  
   
 ```cpp  
 // bitset_any.cpp  
@@ -202,7 +215,7 @@ None of the bits in bitset b1 are set to 1.
 ```  
   
 ##  <a name="bitset"></a>  bitset::bitset  
- Создает объект класса `bitset\<N>` и инициализирует биты с нулевым значением, с определенным указанным значением или со значениями, полученными из символов в строке.  
+ Constructs an object of class `bitset\<N>` and initializes the bits to zero, or to some specified value, or to values obtained from characters in a string.  
   
 ```  
 bitset();
@@ -231,44 +244,44 @@ explicit bitset(
     CharType _One = CharType ('1'));
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
  `val`  
- Целое число без знака, чье представление с основанием 2 используется для инициализации битов в конструируемом битовом массиве.  
+ The unsigned integer whose base two representation is used to initialize the bits in the bitset being constructed.  
   
  `str`  
- Строка из нулей и единиц используется для инициализации значений битов в битовом массиве.  
+ The string of zeros and ones used to initialize the bitset bit values.  
   
  `_CStr`  
- Строка C-стиля из нулей и единиц используется для инициализации значений битов в битовом массиве.  
+ A C-style string of zeros and ones used to initialize the bitset bit values.  
   
  `_Pos`  
- Позиция символа в строке, если считать слева направо начиная с нуля, используемая для инициализации первого бита в битовом массиве.  
+ The position of the character in the string, counting from left to right and starting with zero, used to initialize the first bit in the bitset.  
   
  `count`  
- Число символов в строке, которая используется для предоставления начальных значений битам в битовом массиве.  
+ The number of characters in the string that is used to provide initial values for the bits in the bitset.  
   
  `_Zero`  
- Символ, который используется для представления нуля. Значение по умолчанию — 0.  
+ The character that is used to represent a zero. The default is '0'.  
   
  `_One`  
- Символ, который используется для представления единицы. Значение по умолчанию — 1.  
+ The character that is used to represent a one. The default is '1'.  
   
-### <a name="remarks"></a>Примечания  
- Для создания объектов класса `bitset\<N>` можно использовать три конструктора.  
+### <a name="remarks"></a>Remarks  
+ Three constructors can be used to construct obects of class `bitset\<N>`:  
   
--   Первый конструктор не принимает параметры, создает объект класса `bitset\<N>` и инициализирует все N битов значением по умолчанию 0.  
+-   The first constructor accepts no parameters, constructs an object of class `bitset\<N>` and initializes all N bits to a default value of zero.  
   
--   Второй конструктор создает объект класса `bitset\<N>` и инициализирует биты с помощью одного параметра `unsigned long long`.  
+-   The second constructor constructs an object of class `bitset\<N>` and initializes the bits by using the single `unsigned long long` parameter.  
   
--   Третий конструктор создает объект класса `bitset\<N>`, инициализируя N битов значениями, соответствующими символам, которые предоставляются в символьной строке C-стиля, состоящей из нулей и единиц. Конструктор вызывается без приведения строки в тип string: `bitset<5> b5("01011");`  
+-   The third constructor constructs an object of class `bitset\<N>`, initializing the N bits to values that correspond to the characters provided in a c-style character string of zeros and ones. You call the constructor without casting the string into a string type: `bitset<5> b5("01011");`  
   
- Кроме того, существует также два шаблона конструктора.  
+ There are also two constructor templates provided:  
   
--   Первый шаблон конструктора создает объект класса `bitset\<N>` и инициализирует биты из символов, предоставленных в строке из нулей и единиц. Если в строке обнаруживаются символы, отличные от 0 или 1, конструктор создает объект класса [invalid argument](../standard-library/invalid-argument-class.md). Если указанное положение (`_Pos`) выходит за пределы длины строки, то конструктор создает объект класса [out_of_range](../standard-library/out-of-range-class.md). Конструктор задает только те биты в позиции *j* в битовом массиве, для которых символ в строке в позиции `_Pos + j` равен 1. По умолчанию `_Pos` — 0.  
+-   The first constructor template constructs an object of class `bitset\<N>` and initializes bits from the characters provided in a string of zeros and ones. If any characters of the string are other than 0 or 1, the constructor throws an object of class [invalid argument](../standard-library/invalid-argument-class.md). If the position specified ( `_Pos`) is beyond the length of the string, then the constructor throws an object of class [out_of_range](../standard-library/out-of-range-class.md). The constructor sets only those bits at position *j* in the bitset for which the character in the string at position `_Pos + j` is 1. By default, `_Pos` is 0.  
   
--   Второй шаблон конструктора похож на первый, но содержит дополнительный параметр (`count`), с помощью которого указывается число битов для инициализации. Он также имеет два дополнительных параметра, `_Zero` и `_One`, которые указывают, какой символ в `str` должен интерпретироваться как бит 0 и как бит 1 соответственно.  
+-   The second constructor template is similar to the first, but includes an additional parameter ( `count`) that is used to specify the number of bits to initialize. It also has two optional parameters, `_Zero` and `_One`, which indicate what character in `str` is to be interpreted to mean a 0 bit and a 1 bit, respectively.  
   
-### <a name="example"></a>Пример  
+### <a name="example"></a>Example  
   
 ```cpp  
 // bitset_bitset.cpp  
@@ -344,19 +357,19 @@ The set of bits in bitset<9> b7( bitval, 2 ) is ( 110011011 ).
 ```  
   
 ##  <a name="count"></a>  bitset::count  
- Возвращает количество бит, заданных в последовательности бит.  
+ Returns the number of bits set in the bit sequence.  
   
 ```  
 size_t count() const;
 ```  
   
-### <a name="return-value"></a>Возвращаемое значение  
+### <a name="return-value"></a>Return Value  
   
-Количество бит, заданных в последовательности бит.  
+The number of bits set in the bit sequence.  
   
-### <a name="example"></a>Пример  
+### <a name="example"></a>Example  
   
-В следующем примере иллюстрируется использование функции-члена bitset::count.  
+The following example demonstrates the use of the bitset::count member function.  
   
 ```cpp  
 // bitset_count.cpp  
@@ -399,13 +412,13 @@ The number of bits in the bitset set to 1 is: 4.
 ```  
   
 ##  <a name="element_type"></a>  bitset::element_type  
- Тип, который служит синонимом типа данных `bool` и может использоваться для ссылки на биты элементов в битовом массиве.  
+ A type that is a synonym for the data type `bool` and can be used to reference element bits in a bitset.  
   
 ```  
 typedef bool element_type;  
 ```  
   
-### <a name="example"></a>Пример  
+### <a name="example"></a>Example  
   
 ```cpp  
 // bitset_elem_type.cpp  
@@ -454,24 +467,24 @@ The bit at position 2 of bitset b1has a value of 1.
 ```  
   
 ##  <a name="flip"></a>  bitset::flip  
- Инвертирует значения всех битов в битовом массиве или инвертирует один бит в указанной позиции.  
+ Inverts the value of all the bits in a bitset or inverts a single bit at a specified position.  
   
 ```  
 bitset\<N>& flip();  
 bitset\<N>& flip(size_t _Pos);
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
  `_Pos`  
- Позиция бита, значение которого следует инвертировать.  
+ The position of the bit whose value is to be inverted.  
   
-### <a name="return-value"></a>Возвращаемое значение  
- Копия измененного битового массива, для которого была вызвана функция-член.  
+### <a name="return-value"></a>Return Value  
+ A copy of the modified bitset for which the member function was invoked.  
   
-### <a name="remarks"></a>Примечания  
- Вторая функция-член вызывает исключение [out_of_range](../standard-library/out-of-range-class.md), если позиция, указанная в качестве параметра, больше, чем размер *N* **битового массива\<***N*  **>** , биты которого были инвертированы.  
+### <a name="remarks"></a>Remarks  
+ The second member function throws an [out_of_range](../standard-library/out-of-range-class.md) exception if the position specified as a parameter is greater than the size *N* of the **bitset\<***N***>** whose bit was inverted.  
   
-### <a name="example"></a>Пример  
+### <a name="example"></a>Example  
   
 ```cpp  
 // bitset_flip.cpp  
@@ -523,16 +536,16 @@ After flipping the fourth bit, the bitset becomes: ( 10001 )
 ```  
   
 ##  <a name="none"></a>  bitset::none  
- Проверяет, присвоено ли хотя бы одному биту в объекте bitset значение 1.  
+ Tests if no bit has been set to 1 in a bitset object.  
   
 ```  
 bool none() const;
 ```  
   
-### <a name="return-value"></a>Возвращаемое значение  
- Значение **true,**, если ни одному биту в битовом массиве не присвоено значение 1; значение **false**, если хотя бы один бит равен 1.  
+### <a name="return-value"></a>Return Value  
+ **true** if no bit in the bitset has been set to 1; **false** if at least one bit has been set to 1.  
   
-### <a name="example"></a>Пример  
+### <a name="example"></a>Example  
   
 ```cpp  
 // bitset_none.cpp  
@@ -578,23 +591,23 @@ None of the bits in bitset b1 are set to 1.
 ```  
   
 ##  <a name="op_neq"></a>  bitset::operator!=  
- Проверяет целевой битовый массив на неравенство относительно указанного битового массива.  
+ Tests a target bitset for inequality with a specified bitset.  
   
 ```  
 bool operator!=(const bitset\<N>& right) const;
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
  `right`  
- Битовый массив, который должен сравниваться с целевым битовым массивом на неравенство.  
+ The bitset that is to be compared to the target bitset for inequality.  
   
-### <a name="return-value"></a>Возвращаемое значение  
- Значение **true**, если битовые массивы различаются; значение **false**, если они совпадают.  
+### <a name="return-value"></a>Return Value  
+ **true** if the bitsets are different; **false** if they are the same.  
   
-### <a name="remarks"></a>Примечания  
- Битовые массивы должны иметь одинаковый размер для проверки на неравенство функцией оператора-члена.  
+### <a name="remarks"></a>Remarks  
+ Bitsets must be of the same size to be tested for inequality by the member operator function.  
   
-### <a name="example"></a>Пример  
+### <a name="example"></a>Example  
   
 ```cpp  
 // bitset_op_NE.cpp  
@@ -636,25 +649,25 @@ Bitset b1 is different from bitset b3.
 ```  
   
 ##  <a name="op_and_eq"></a>  bitset::operator&amp;=  
- Выполняет побитовое сочетание битовых массивов с использованием логической операции **AND**.  
+ Performs a bitwise combination of bitsets with the logical **AND** operation.  
   
 ```  
 bitset\<N>& operator&=(const bitset\<N>& right);
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
  `right`  
- Битовый массив для побитового сочетания с целевым битовым массивом.  
+ The bitset that is to be combined bitwise with the target bitset.  
   
-### <a name="return-value"></a>Возвращаемое значение  
- Измененный целевой битовый массив, полученный в результате побитовой операции **AND** с битовым массивом, указанным в качестве параметра.  
+### <a name="return-value"></a>Return Value  
+ The modified target bitset that results from the bitwise **AND** operation with the bitset specified as a parameter.  
   
-### <a name="remarks"></a>Примечания  
- Два бита, объединенные с помощью оператора **AND**, возвращают значение **true**, если каждый бит имеет значение true; в противном случае их комбинация возвращает значение **false**.  
+### <a name="remarks"></a>Remarks  
+ Two bits combined by the **AND** operator return **true** if each bit is true; otherwise, their combination returns **false**.  
   
- Битовые массивы должны иметь одинаковый размер для побитового сочетания функцией оператора-члена с помощью оператора **AND**.  
+ Bitsets must be of the same size to be combined bitwise with the **AND** operator by the member operator function.  
   
-### <a name="example"></a>Пример  
+### <a name="example"></a>Example  
   
 ```cpp  
 // bitset_op_bitwise.cpp  
@@ -700,23 +713,23 @@ The parameter bitset b2 remains: ( 01011 ).
 
 ##  <a name="op_lshift"></a> bitset::operator\<\<    
   
-Сдвигает биты в битовом массиве влево на указанное число позиций и возвращает результат в новый битовый массив.  
+Shifts the bits in a bitset to the left a specified number of positions and returns the result to a new bitset.  
   
 ```  
 bitset\<N> operator<<(size_t _Pos) const;
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
  `_Pos`  
- Количество позиций, на которое должны сдвигаться влево биты из битового массива.  
+ The number of positions to the left that the bits in the bitset are to be shifted.  
   
-### <a name="return-value"></a>Возвращаемое значение  
- Измененный битовый массив с битами, сдвинутыми влево на требуемое количество позиций.  
+### <a name="return-value"></a>Return Value  
+ The modified bitset with the bits shifted to the left the required number of positions.  
   
-### <a name="remarks"></a>Примечания  
- Функция оператора-члена возвращает **bitset**(**\*this**) **<<= pos,** где [<<=](#op_lshift_eq) сдвигает биты в битовом массиве влево на указанное число позиций и возвращает результат в целевой битовый массив.  
+### <a name="remarks"></a>Remarks  
+ The member operator function returns **bitset**( **\*this**) **<<= pos,** where [<<=](#op_lshift_eq) shifts the bits in a bitset to the left a specified number of positions and returns the result to the targeted bitset.  
   
-### <a name="example"></a>Пример  
+### <a name="example"></a>Example  
   
 ```cpp  
 // bitset_op_LS.cpp  
@@ -748,23 +761,23 @@ int main( )
 ```  
   
 ##  <a name="op_lshift_eq"></a>  bitset::operator&lt;&lt;=  
- Сдвигает биты в массиве битов влево на указанное число позиций и возвращает результат в целевой битовый массив.  
+ Shifts the bits in a bitset to the left a specified number of positions and returns the result to the targeted bitset.  
   
 ```  
 bitset\<N>& operator<<=(size_t _Pos);
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
  `_Pos`  
- Количество позиций, на которое должны сдвигаться влево биты из битового массива.  
+ The number of positions to the left the bits in the bitset are to be shifted.  
   
-### <a name="return-value"></a>Возвращаемое значение  
- Целевой битовый массив, измененный так, что биты сдвинуты влево на требуемое количество позиций.  
+### <a name="return-value"></a>Return Value  
+ The targeted bitset modified so that the bits have been shifted to the left the required number of positions.  
   
-### <a name="remarks"></a>Примечания  
- Если отсутствуют элементы для сдвига в эту позицию, функция сбрасывает бит в значение 0.  
+### <a name="remarks"></a>Remarks  
+ If no element exists to shift into the position, the function clears the bit to a value of 0.  
   
-### <a name="example"></a>Пример  
+### <a name="example"></a>Example  
   
 ```cpp  
 // bitset_op_LSE.cpp  
@@ -791,23 +804,23 @@ After shifting the bits 2 positions to the left,
 ```  
   
 ##  <a name="op_eq_eq"></a>  bitset::operator==  
- Проверяет целевой битовый массив на равенство относительно указанного битового массива.  
+ Tests a target bitset for equality with a specified bitset.  
   
 ```  
 bool operator==(const bitset\<N>& right) const;
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
  `right`  
- Битовый массив, который должен сравниваться с целевым битовым массивом на равенство.  
+ The bitset that is to be compared to the target bitset for equality.  
   
-### <a name="return-value"></a>Возвращаемое значение  
- Значение **true**, если битовые массивы совпадают; значение **false**, если они различаются.  
+### <a name="return-value"></a>Return Value  
+ **true** if the bitsets are the same; **false** if they are different.  
   
-### <a name="remarks"></a>Примечания  
- Битовые массивы должны иметь одинаковый размер для проверки на равенство функцией оператора-члена.  
+### <a name="remarks"></a>Remarks  
+ Bitsets must be of the same size to be tested for equality by the member operator function.  
   
-### <a name="example"></a>Пример  
+### <a name="example"></a>Example  
   
 ```cpp  
 // bitset_op_EQ.cpp  
@@ -848,20 +861,20 @@ Bitset b1 is different from bitset b3.
 ```  
   
 ##  <a name="op_rshift"></a>  bitset::operator&gt;&gt;  
- Сдвигает биты в битовом массиве вправо на указанное число позиций и возвращает результат в новый битовый массив.  
+ Shifts the bits in a bitset to the right a specified number of positions and returns the result to a new bitset.  
   
 ```  
 bitset\<N> operator>>(size_t _Pos) const;
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
  `_Pos`  
- Количество позиций, на которое должны сдвигаться вправо биты из битового массива.  
+ The number of positions to the right the bits in the bitset are to be shifted.  
   
-### <a name="return-value"></a>Возвращаемое значение  
- Новый битовый массив, в котором биты сдвинуты вправо на требуемое количество позиций по отношению к целевому массиву битов.  
+### <a name="return-value"></a>Return Value  
+ A new bitset where the bits have been shifted to the right the required number of positions relative to the targeted bitset.  
   
-### <a name="example"></a>Пример  
+### <a name="example"></a>Example  
   
 ```cpp  
 // bitset_op_RS.cpp  
@@ -898,23 +911,23 @@ After shifting the bits 1 position to the right,
 ```  
   
 ##  <a name="op_rshift_eq"></a>  bitset::operator&gt;&gt;=  
- Сдвигает биты в массиве битов вправо на указанное число позиций и возвращает результат в целевой битовый массив.  
+ Shifts the bits in a bitset to the right a specified number of positions and returns the result to the targeted bitset.  
   
 ```  
 bitset\<N>& operator>>=(size_t _Pos);
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
  `_Pos`  
- Количество позиций, на которое должны сдвигаться вправо биты из битового массива.  
+ The number of positions to the right the bits in the bitset are to be shifted.  
   
-### <a name="return-value"></a>Возвращаемое значение  
- Целевой битовый массив, измененный так, что биты сдвинуты вправо на требуемое количество позиций.  
+### <a name="return-value"></a>Return Value  
+ The targeted bitset modified so that the bits have been shifted to the right the required number of positions.  
   
-### <a name="remarks"></a>Примечания  
- Если отсутствуют элементы для сдвига в эту позицию, функция сбрасывает бит в значение 0.  
+### <a name="remarks"></a>Remarks  
+ If no element exists to shift into the position, the function clears the bit to a value of 0.  
   
-### <a name="example"></a>Пример  
+### <a name="example"></a>Example  
   
 ```cpp  
 // bitset_op_RSE.cpp  
@@ -942,21 +955,21 @@ After shifting the bits 2 positions to the right,
 ```  
   
 ##  <a name="op_at"></a>  bitset::operator[]  
- Возвращает ссылку на бит в указанной позиции в битовом массиве, если этот битовый массив может быть изменен; в противном случае возвращается значение бита в этой позиции.  
+ Returns a reference to a bit at a specified position in a bitset if the bitset is modifiable; otherwise, it returns the value of the bit at that position.  
   
 ```  
 bool operator[](size_t _Pos) const;
 reference operator[](size_t _Pos);
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
  `_Pos`  
- Позиция расположения бита в битовом массиве.  
+ The position locating the bit within the bitset.  
   
-### <a name="remarks"></a>Примечания  
-Если вы задаете [\_ITERATOR\_DEBUG\_LEVEL](../standard-library/iterator-debug-level.md) в качестве 1 или 2 в своей сборке, при попытке доступа к элементу вне границ массива битов в исполняемом файле произойдет ошибка времени выполнения. Дополнительные сведения см. в разделе [Проверенные итераторы](../standard-library/checked-iterators.md).  
+### <a name="remarks"></a>Remarks  
+When you define [\_ITERATOR\_DEBUG\_LEVEL](../standard-library/iterator-debug-level.md) as 1 or 2 in your build, a runtime error will occur in your executable if you attempt to access an element outside the bounds of the bitset. For more informations, see [Checked Iterators](../standard-library/checked-iterators.md).  
   
-### <a name="example"></a>Пример  
+### <a name="example"></a>Example  
   
 ```cpp  
 // bitset_op_REF.cpp  
@@ -983,25 +996,25 @@ int main( )
 ```  
   
 ##  <a name="op_xor_eq"></a>  bitset::operator^=  
- Выполняет побитовое сочетание битовых массивов с использованием эксклюзивной операции `OR`.  
+ Performs a bitwise combination of bitsets with the exclusive `OR` operation.  
   
 ```  
 bitset\<N>& operator^=(const bitset\<N>& right);
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
  `right`  
- Битовый массив для побитового сочетания с целевым битовым массивом.  
+ The bitset that is to be combined bitwise with the target bitset.  
   
-### <a name="return-value"></a>Возвращаемое значение  
- Измененный целевой битовый массив, полученный в результате побитовой исключающей операции `OR` с битовым массивом, указанным в качестве параметра.  
+### <a name="return-value"></a>Return Value  
+ The modified target bitset that results from the bitwise exclusive `OR` operation with the bitset specified as a parameter.  
   
-### <a name="remarks"></a>Примечания  
- Два бита, скомбинированные с помощью исключающего оператора **OR**, возвращают значение **true**, если один бит (но не оба бита) оценивается как **true**; в противном случае их комбинация возвращает значение **false**.  
+### <a name="remarks"></a>Remarks  
+ Two bits combined by the exclusive **OR** operator return **true** if at least one, but not both, of the bits is **true**; otherwise, their combination returns **false**.  
   
- Битовые массивы должны иметь одинаковый размер для побитового сочетания функцией оператора-члена с помощью исключающего оператора `OR`.  
+ Bitsets must be of the same size to be combined bitwise with the exclusive `OR` operator by the member operator function.  
   
-### <a name="example"></a>Пример  
+### <a name="example"></a>Example  
   
 ```cpp  
 // bitset_op_bitwiseOR.cpp  
@@ -1045,25 +1058,25 @@ The parameter bitset b2 remains: ( 01011 ).
 ```  
   
 ##  <a name="op_or_eq"></a>  bitset::operator&#124;=  
- Выполняет побитовое сочетание битовых массивов с использованием инклюзивной операции `OR`.  
+ Performs a bitwise combination of bitsets with the inclusive `OR` operation.  
   
 ```  
 bitset\<N>& operator|=(const bitset\<N>& right);
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
  `right`  
- Битовый массив для побитового сочетания с целевым битовым массивом.  
+ The bitset that is to be combined bitwise with the target bitset.  
   
-### <a name="return-value"></a>Возвращаемое значение  
- Измененный целевой битовый массив, полученный в результате побитовой включающей операции `OR` с битовым массивом, указанным в качестве параметра.  
+### <a name="return-value"></a>Return Value  
+ The modified target bitset that results from the bitwise inclusive `OR` operation with the bitset specified as a parameter.  
   
-### <a name="remarks"></a>Примечания  
- Два бита, скомбинированные с помощью включающего оператора `OR`, возвращают значение **true**, если хотя бы один бит оценивается как **true**; если оба бита оцениваются как **false**, их комбинация возвращает значение **false**.  
+### <a name="remarks"></a>Remarks  
+ Two bits combined by the inclusive `OR` operator return **true** if at least one of the bits is **true**; if both bits are **false**, their combination returns **false**.  
   
- Битовые массивы должны иметь одинаковый размер для побитового сочетания функцией оператора-члена с помощью включающего оператора `OR`.  
+ Bitsets must be of the same size to be combined bitwise with the inclusive `OR` operator by the member operator function.  
   
-### <a name="example"></a>Пример  
+### <a name="example"></a>Example  
   
 ```cpp  
 // bitset_op_BIO.cpp  
@@ -1108,16 +1121,16 @@ The parameter bitset b2 remains: ( 01011 ).
 ```  
   
 ##  <a name="op_dtor"></a>  bitset::operator~  
- Инвертирует все биты в целевом битовом массиве и возвращает результат.  
+ Inverts all the bits in a target bitset and returns the result.  
   
 ```  
 bitset\<N> operator~() const;
 ```  
   
-### <a name="return-value"></a>Возвращаемое значение  
- Битовый массив, все биты которого инвертированы по отношению к целевому битовому массиву.  
+### <a name="return-value"></a>Return Value  
+ The bitset with all its bits inverted with respect to the targeted bitset.  
   
-### <a name="example"></a>Пример  
+### <a name="example"></a>Example  
   
 ```cpp  
 // bitset_op_invert.cpp  
@@ -1151,7 +1164,7 @@ Bitset b3 = b1.flip( ) is: ( 11000 ).
 ```  
   
 ##  <a name="reference"></a>  bitset::reference  
- Прокси-класс, предоставляющий ссылки на биты в битовом массиве, который используется для доступа к отдельным битам и их обработки в качестве вспомогательного класса для `operator[]` класса bitset.  
+ A proxy class that provides references to bits contained in a bitset that is used to access and manipulate the individual bits as a helper class for the `operator[]` of class bitset.  
   
 ```  
 class reference {  
@@ -1165,28 +1178,28 @@ public:
 };  
 ```    
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
  `val`  
- Значение объекта типа `bool`, присваиваемое биту в битовом массиве.  
+ The value of the object of type `bool` to be assigned to a bit in a bitset.  
   
  `_Bitref`  
- Ссылка в формате *x [i]* на бит в позиции *i* в битовом массиве *x*.  
+ A reference of the form *x [ i ]* to the bit at position *i* in bitset *x*.  
   
-### <a name="return-value"></a>Возвращаемое значение  
- Ссылка на бит в битовом массиве, заданный позицией аргумента для первой, второй и пятой функций — членов класса reference, и значение **true** или **false**, чтобы отразить значение измененного бита в массиве битов для третьей и четвертой функции — члена класса reference.  
+### <a name="return-value"></a>Return Value  
+ A reference to the bit in the bitset specified by the argument position for the first, second, and fifth member functions of class reference, and **true** or **false**, to reflect the value of the modified bit in the bitset for the third and fourth member functions of class reference.  
   
-### <a name="remarks"></a>Примечания  
- Класс `reference` существует только как вспомогательный класс для битового массива `operator[]`. Класс member описывает объект, который может получать доступ к отдельному биту в битовом массиве. Предположим, *b* — объект типа `bool`, *x* и *y* — объекты типа **bitset\<***N***>** и *i* и *j* — допустимые позиции внутри такого объекта. Обозначение *x [i]* ссылается на бит в позиции *i* в битовом массиве *x*. Функции — члены класса `reference` предоставляют по порядку следующие операции.  
+### <a name="remarks"></a>Remarks  
+ The class `reference` exists only as a helper class for the bitset `operator[]`. The member class describes an object that can access an individual bit within a bitset. Let *b* be an object of type `bool`, *x* and *y* objects of type **bitset\<***N***>**, and *i* and *j* valid positions within such an object. The notation *x [i]* references the bit at position *i* in bitset *x*. The member functions of class `reference` provide, in order, the following operations:  
   
-|Операция|Определение|  
+|Operation|Definition|  
 |---------------|----------------|  
-|*x*[*i*] = *b*|Сохраняет значение `bool` *b* в битовой позиции *i* в битовом массиве *x*.|  
-|*x*[*i*] = *y*[*j*]|Сохраняет значение бита *y*[*j*] в битовой позиции *i* в битовом массиве *x*.|  
-|*b* = ~ *x*[*i*]|Сохраняет инвертированное значение бита *x*[*i*] в `bool` *b*.|  
-|*b* = *x*[*i*]|Сохраняет значение бита *x*[*i*] в `bool` *b*.|  
-|*x*[*i*]. `flip`( )|Сохраняет инвертированное значение бита *x*[*i*] обратно в битовой позиции *i* в *x*.|  
+|*x*[*i*] = *b*|Stores `bool` value *b* at bit position *i* in bitset *x*.|  
+|*x*[*i*] = *y*[*j*]|Stores the value of the bit *y*[ *j*] at bit position *i* in bitset *x*.|  
+|*b* = ~ *x*[*i*]|Stores the flipped value of the bit *x*[ *i*] in `bool` *b*.|  
+|*b* = *x*[*i*]|Stores the value of the bit *x*[ *i*] in `bool` *b*.|  
+|*x*[*i*]. `flip`( )|Stores the flipped value of the bit *x*[ *i*] back at bit position *i* in *x*.|  
   
-### <a name="example"></a>Пример  
+### <a name="example"></a>Example  
   
 ```cpp  
 // bitset_reference.cpp  
@@ -1269,24 +1282,24 @@ After a second flip, the value of the position 4 bit in b2 is now: 1.
 ```  
   
 ##  <a name="reset"></a>  bitset::reset  
- Сбрасывает все биты в битовом массиве в значение 0 или сбрасывает бит в указанной позиции в значение 0.  
+ Resets all the bits in a bitset to 0 or resets a bit at a specified position to 0.  
   
 ```  
 bitset\<N>& reset();  
 bitset\<N>& reset(size_t _Pos);
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
  `_Pos`  
- Позиция бита в битовом массиве, который следует сбросить в 0.  
+ The position of the bit in the bitset to be reset to 0.  
   
-### <a name="return-value"></a>Возвращаемое значение  
- Копия битового массива, для которого была вызвана функция-член.  
+### <a name="return-value"></a>Return Value  
+ A copy of the bitset for which the member function was invoked.  
   
-### <a name="remarks"></a>Примечания  
- Вторая функция-член вызывает исключение [out_of_range](../standard-library/out-of-range-class.md), если указанная позиция больше, чем размер битового массива.  
+### <a name="remarks"></a>Remarks  
+ The second member function throws an [out_of_range](../standard-library/out-of-range-class.md) exception if the position specified is greater than the size of the bitset.  
   
-### <a name="example"></a>Пример  
+### <a name="example"></a>Example  
   
 ```cpp  
 // bitset_reset.cpp  
@@ -1325,7 +1338,7 @@ The collecion of bits obtained from resetting all
 ```  
   
 ##  <a name="set"></a>  bitset::set  
- Устанавливает все биты в битовом массиве в значение 1 или устанавливает в значение 1 бит в указанной позиции.  
+ Sets all the bits in a bitset to 1 or sets a bit at a specified position to 1.  
   
 ```   
 bitset\<N>& set();
@@ -1335,20 +1348,20 @@ bitset\<N>& set(
     bool val = true);
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
  `_Pos`  
- Позиция бита в битовом массиве, которому будет присваиваться значение.  
+ The position of the bit in the bitset to be set to assigned a value.  
   
  `val`  
- Значение, присваиваемое биту в указанной позиции.  
+ The value to be assigned to the bit at the position specified.  
   
-### <a name="return-value"></a>Возвращаемое значение  
- Копия битового массива, для которого была вызвана функция-член.  
+### <a name="return-value"></a>Return Value  
+ A copy of the bitset for which the member function was invoked.  
   
-### <a name="remarks"></a>Примечания  
- Вторая функция-член вызывает исключение [out_of_range](../standard-library/out-of-range-class.md), если указанная позиция больше, чем размер битового массива.  
+### <a name="remarks"></a>Remarks  
+ The second member function throws an [out_of_range](../standard-library/out-of-range-class.md) exception if the position specified is greater than the size of the bitset.  
   
-### <a name="example"></a>Пример  
+### <a name="example"></a>Example  
   
 ```cpp  
 // bitset_set.cpp  
@@ -1387,17 +1400,17 @@ The collecion of bits obtained from setting all the
 ```  
   
 ##  <a name="size"></a>  bitset::size  
- Возвращает количество бит в битовом массиве.  
+ Returns the number of bits in a bitset object.  
   
 ```  
 size_t size() const;
 ```  
   
-### <a name="return-value"></a>Возвращаемое значение  
- Количество бит *N* в битовом массиве \<N>.  
+### <a name="return-value"></a>Return Value  
+ The number of bits, *N*, in a bitset\<N>.  
   
-### <a name="example"></a>Пример  
-  В следующем примере иллюстрируется использование функции-члена bitset::size.  
+### <a name="example"></a>Example  
+  The following example demonstrates the use of the bitset::size member function.  
   
 ```cpp  
 // bitset_size.cpp  
@@ -1428,20 +1441,20 @@ The number of bits in bitset b1 is: 5.
 ```  
   
 ##  <a name="test"></a>  bitset::test  
- Проверяет, присвоено ли биту в указанной позиции в битовом массиве значение 1.  
+ Tests whether the bit at a specified position in a bitset is set to 1.  
   
 ```  
 bool test(size_t _Pos) const;
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
  `_Pos`  
- Позиция бита в битовом массиве, значение которого следует проверить.  
+ The position of the bit in the bitset to be tested for its value.  
   
-### <a name="return-value"></a>Возвращаемое значение  
- Значение **true**, если бит, заданный позицией в аргументе, имеет значение 1; в противном случае — значение **false**.  
+### <a name="return-value"></a>Return Value  
+ **true** if the bit specified by the argument position is set to 1; otherwise, **false**.  
   
-### <a name="remarks"></a>Примечания  
- Функция-член вызывает исключение [out_of_range](../standard-library/out-of-range-class.md)
+### <a name="remarks"></a>Remarks  
+ The member function throws an [out_of_range](../standard-library/out-of-range-class.md)
 
 

@@ -1,69 +1,87 @@
 ---
-title: "Архитектура предварительного просмотра | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "предварительный просмотр печати"
-  - "предварительный просмотр, архитектура"
-  - "предварительный просмотр, изменения в MFC"
-  - "предварительный просмотр, процесс"
-  - "печать [MFC], предварительный просмотр"
+title: Print Preview Architecture | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- print preview [MFC], process
+- previewing printing
+- print preview [MFC], architecture
+- printing [MFC], print preview
+- print preview [MFC], modifications to MFC
 ms.assetid: 0efc87e6-ff8d-43c5-9d72-9b729a169115
 caps.latest.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 6
----
-# Архитектура предварительного просмотра
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: a4460ad3ea8377c566cfd55e50010db5f1ed9254
+ms.contentlocale: ru-ru
+ms.lasthandoff: 09/12/2017
 
-В этой статье описывается, как платформы MFC реализует функцию предварительного просмотра.  В разделе рассматриваются следующие вопросы:  
+---
+# <a name="print-preview-architecture"></a>Print Preview Architecture
+This article explains how the MFC framework implements print preview functionality. Topics covered include:  
   
--   [Процесс предварительного просмотра](#_core_the_print_preview_process)  
+-   [Print preview process](#_core_the_print_preview_process)  
   
--   [Изменение предварительный просмотр](#_core_modifying_print_preview)  
+-   [Modifying print preview](#_core_modifying_print_preview)  
   
- Предварительный просмотр несколько отличается от отображение на экране и печать, поскольку вместо непосредственно создать образ на устройстве, приложение должно имитировать принтера с помощью экрана.  Для включения этого библиотеки Microsoft Foundation Class определяет специальный \(незадокументированный\) класс, производный от [Класс CDC](../Topic/CDC%20Class.md), с именем **CPreviewDC**.  Все объекты `CDC` содержат 2 контекста устройства, но обычно они идентичны.  В объекте **CPreviewDC**, они отличаются: первый представляет, сымитированным принтера, а вторая представляет экран, на котором фактически результат.  
+ Print preview is somewhat different from screen display and printing because, instead of directly drawing an image on a device, the application must simulate the printer using the screen. To accommodate this, the Microsoft Foundation Class Library defines a special (undocumented) class derived from [CDC Class](../mfc/reference/cdc-class.md), called **CPreviewDC**. All `CDC` objects contain two device contexts, but usually they are identical. In a **CPreviewDC** object, they are different: the first represents the printer being simulated, and the second represents the screen on which output is actually displayed.  
   
-##  <a name="_core_the_print_preview_process"></a> Процесс предварительного просмотра  
- Когда пользователь выбирает команду предварительного просмотра в меню **Файл** платформа создает объект **CPreviewDC**.  Когда приложение выполняет операцию, которая задает контекста характеристики устройства принтера, платформа также выполняет операцию, в контексте устройства экрана.  Например, если приложение выделяет шрифт для печати, платформа выделяет шрифт для экранного отображения, который моделирует шрифт принтера.  Когда приложение отправитьTfо бы выходные данные на принтер, платформа вместо отправляет выходные данные на экране.  
+##  <a name="_core_the_print_preview_process"></a> The Print Preview Process  
+ When the user selects the Print Preview command from the **File** menu, the framework creates a **CPreviewDC** object. Whenever your application performs an operation that sets a characteristic of the printer device context, the framework also performs a similar operation on the screen device context. For example, if your application selects a font for printing, the framework selects a font for screen display that simulates the printer font. Whenever your application would send output to the printer, the framework instead sends the output to the screen.  
   
- Предварительный просмотр также отличается от печати в порядке, каждый из которых рисуются страницы документа.  Во время печати платформа печати цикл продолжается до тех пор, пока не будет представлен определенный диапазон страниц.  Во время предварительного просмотра, одна или две страницы отображаются в любое время, а затем приложение ожидает; никакие дополнительные действия страницы не отображается до тех пор, пока пользователь не будет отвечать.  Во время предварительного просмотра, приложение также должно реагировать на них `WM_PAINT`, так как он принимает во время обычного экранного отображения.  
+ Print preview also differs from printing in the order that each draws the pages of a document. During printing, the framework continues a print loop until a certain range of pages has been rendered. During print preview, one or two pages are displayed at any time, and then the application waits; no further pages are displayed until the user responds. During print preview, the application must also respond to `WM_PAINT` messages, just as it does during ordinary screen display.  
   
- Функция [CView::OnPreparePrinting](../Topic/CView::OnPreparePrinting.md) вызывается при вызове режим просмотра, точно так же как в начале заданий печати.  Структура [CPrintInfo Structure](../mfc/reference/cprintinfo-structure.md), переданная функции, содержит несколько членов, значения которых можно настроить для настройки определенных характеристик операции предварительного просмотра.  Например, можно задать элемент **m\_nNumPreviewPages**, чтобы определить, нужно ли предварительный просмотр документа с страницы или режиме 2 — страницы.  
+ The [CView::OnPreparePrinting](../mfc/reference/cview-class.md#onprepareprinting) function is called when preview mode is invoked, just as it is at the beginning of a print job. The [CPrintInfo Structure](../mfc/reference/cprintinfo-structure.md) structure passed to the function contains several members whose values you can set to adjust certain characteristics of the print preview operation. For example, you can set the **m_nNumPreviewPages** member to specify whether you want to preview the document in one-page or two-page mode.  
   
-##  <a name="_core_modifying_print_preview"></a> Изменение предварительный просмотр  
- Можно изменить расширение функциональности и внешний вид предварительного просмотра несколькими способами довольно легко.  Например, можно, помимо прочего:  
+##  <a name="_core_modifying_print_preview"></a> Modifying Print Preview  
+ You can modify the behavior and appearance of print preview in a number of ways rather easily. For example, you can, among other things:  
   
--   Сбой окно предварительного просмотра для отображения полосу прокрутки для упрощения доступа к любой странице документа.  
+-   Cause the print preview window to display a scroll bar for easy access to any page of the document.  
   
--   Сбой предварительный просмотр поддерживать положение пользователя в документе с начала его отображение на текущей странице.  
+-   Cause print preview to maintain the user's position in the document by beginning its display at the current page.  
   
--   Сбой другую инициализацию, выполняемых для предварительного просмотра и печати.  
+-   Cause different initialization to be performed for print preview and printing.  
   
--   Сбой предварительный просмотр для отображения числа страниц в пользовательских форматах.  
+-   Cause print preview to display page numbers in your own formats.  
   
- Если известно, как долго документ и вызывает `SetMaxPage` с соответствующим значением платформа может использовать эти сведения в режиме просмотра, так и во время печати.  После того как платформа знает длину документа, она может реализовать окно просмотра с полоса прокрутки, предоставляя пользователю туда и обратно с помощью страницы документа в режиме предварительного просмотра.  Если не задано длину документа, платформа не может расположить ползунок полосы прокрутки, чтобы отобразить текущее положение, поэтому платформа не добавляет полосы прокрутки.  В этом случае пользователь должен использовать следующие кнопки страница и предыдущей страницы на панели элементов управления окна просмотра на странице по документу.  
+ If you know how long the document is and call `SetMaxPage` with the appropriate value, the framework can use this information in preview mode as well as during printing. Once the framework knows the length of the document, it can provide the preview window with a scroll bar, allowing the user to page back and forth through the document in preview mode. If you haven't set the length of the document, the framework cannot position the scroll box to indicate the current position, so the framework doesn't add a scroll bar. In this case, the user must use the Next Page and Previous Page buttons on the preview window's control bar to page through the document.  
   
- Для предварительного просмотра он может оказаться полезным для присвоения значения на член `m_nCurPage``CPrintInfo`, даже если не выполнить, а для обычной печати.  Во время обычной печати, этот член передает сведения из платформы в класс представления.  Это представление, как платформа сообщает страница должна быть напечатана.  
+ For print preview, you may find it useful to assign a value to the `m_nCurPage` member of `CPrintInfo`, even though you would never do so for ordinary printing. During ordinary printing, this member carries information from the framework to your view class. This is how the framework tells the view which page should be printed.  
   
- Напротив, если режим предварительного просмотра запущен, член `m_nCurPage` передает сведения в противоположном направлении: из представления в платформе.  Платформа использует значение этого элемента, чтобы определить, какая страница должна быть предварительно сканирования первым.  Значение по умолчанию этого члена 1, поэтому первая страница отображается исходного документа.  Можно переопределить `OnPreparePrinting` для задания этот член в число, просмотренной страницы во время предварительного просмотра команда была вызвана функцией.  Таким образом, приложение поддерживает текущее положение пользователя переход с режима отображения в режим предварительного просмотра.  
+ By contrast, when print preview mode is started, the `m_nCurPage` member carries information in the opposite direction: from the view to the framework. The framework uses the value of this member to determine which page should be previewed first. The default value of this member is 1, so the first page of the document is displayed initially. You can override `OnPreparePrinting` to set this member to the number of the page being viewed at the time the Print Preview command was invoked. This way, the application maintains the user's current position when moving from normal display mode to print preview mode.  
   
- Иногда может потребоваться `OnPreparePrinting` выполнять другую инициализацию в зависимости от того, является ли она вызывается для задания печати или для предварительного просмотра.  Можно указать это прогнозы переменной\-члена **m\_bPreview** в структуре `CPrintInfo`.  Этот элемент имеет значение **TRUE**, если предварительный просмотр вызывается.  
+ Sometimes you may want `OnPreparePrinting` to perform different initialization depending on whether it is called for a print job or for print preview. You can determine this by examining the **m_bPreview** member variable in the `CPrintInfo` structure. This member is set to **TRUE** when print preview is invoked.  
   
- Структура `CPrintInfo` также содержит элемент с именем **m\_strPageDesc**, который используется для форматирования строки отображаются в нижней части окна в режимах одной страницы и нескольких страниц.  По умолчанию эти строки страницы формы « *n*» и «страниц *n* \- *m*», но можно изменить **m\_strPageDesc** из `OnPreparePrinting` и задает строки на что\-нибудь более уточнить.  В разделе [CPrintInfo Structure](../mfc/reference/cprintinfo-structure.md) в справочнике по MFC дополнительные сведения.  
+ The `CPrintInfo` structure also contains a member named **m_strPageDesc**, which is used to format the strings displayed at the bottom of the screen in single-page and multiple-page modes. By default these strings are of the form "Page *n*" and "Pages *n* - *m*," but you can modify **m_strPageDesc** from within `OnPreparePrinting` and set the strings to something more elaborate. See [CPrintInfo Structure](../mfc/reference/cprintinfo-structure.md) in the *MFC Reference* for more information.  
   
-## См. также  
- [Печать и предварительный просмотр печати](../mfc/printing-and-print-preview.md)   
- [Печать](../mfc/printing.md)   
- [CView Class](../Topic/CView%20Class.md)   
- [Класс CDC](../Topic/CDC%20Class.md)
+## <a name="see-also"></a>See Also  
+ [Printing and Print Preview](../mfc/printing-and-print-preview.md)   
+ [Printing](../mfc/printing.md)   
+ [CView Class](../mfc/reference/cview-class.md)   
+ [CDC Class](../mfc/reference/cdc-class.md)
+

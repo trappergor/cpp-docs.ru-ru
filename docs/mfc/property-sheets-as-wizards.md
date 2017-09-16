@@ -1,35 +1,54 @@
 ---
-title: "Вкладки свойств как мастера | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "страницы свойств, как мастеры"
+title: Property Sheets as Wizards | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- property sheets, as wizards
 ms.assetid: 1ea66ecb-23b0-484a-838d-58671a2999b5
 caps.latest.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 6
----
-# Вкладки свойств как мастера
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 0b590d9587fafe23e570e22fac04173d91ca1976
+ms.contentlocale: ru-ru
+ms.lasthandoff: 09/12/2017
 
-Ключ характеристика страницы свойств мастера, что переход связан с далее или завершение, back и Отмены вместо вкладок.  Необходимо вызвать [CPropertySheet::SetWizardMode](../Topic/CPropertySheet::SetWizardMode.md) перед вызовом [CPropertySheet::DoModal](../Topic/CPropertySheet::DoModal.md) в объекте страницы свойств для использования этой функции.  
+---
+# <a name="property-sheets-as-wizards"></a>Property Sheets as Wizards
+A key characteristic of a wizard property sheet is that navigation is provided with Next or Finish, Back, and Cancel buttons instead of tabs. You need to call [CPropertySheet::SetWizardMode](../mfc/reference/cpropertysheet-class.md#setwizardmode) before calling [CPropertySheet::DoModal](../mfc/reference/cpropertysheet-class.md#domodal) on the property sheet object to take advantage of this feature.  
   
- Пользователь получает те же [CPropertyPage::OnSetActive](../Topic/CPropertyPage::OnSetActive.md) и уведомления [CPropertyPage::OnKillActive](../Topic/CPropertyPage::OnKillActive.md) при перемещении с одной страницы на другую страницу.  Далее кнопки и завершения взаимноисключающих управления; то есть только одно из них будет отображаться одновременно.  На первой странице, следующую кнопку должна быть включена.  Если пользователь на последней странице, кнопку завершения должна быть включена.  Это не выполняется автоматически средой выполнения.  Необходимо вызвать [CPropertySheet::SetWizardButton](../Topic/CPropertySheet::SetWizardButtons.md) на последней странице для этого параметру.  
+ The user receives the same [CPropertyPage::OnSetActive](../mfc/reference/cpropertypage-class.md#onsetactive) and [CPropertyPage::OnKillActive](../mfc/reference/cpropertypage-class.md#onkillactive) notifications while moving from one page to another page. Next and Finish buttons are mutually exclusive controls; that is, only one of them will be shown at a time. On the first page, the Next button should be enabled. If the user is on the last page, the Finish button should be enabled. This is not done automatically by the framework. You have to call [CPropertySheet::SetWizardButton](../mfc/reference/cpropertysheet-class.md#setwizardbuttons) on the last page to achieve this.  
   
- Показать все кнопки по умолчанию необходимо показать mush кнопку завершения перемещения следующую кнопку.  Затем переместите сначала кнопку, чтобы будет поддерживается относительная его положение в следующую кнопку.  Дополнительные объяснения, поиска статьи Q143210 КБ.  Статьи базы знаний можно найти в библиотеке MSDN.  
+ To display all of the default buttons, you mush show the Finish button and move the Next button. Then move the Back button so that its relative position to the Next button is maintained.  
   
-## Пример  
- [!code-cpp[NVC_MFCDocView#5](../mfc/codesnippet/CPP/property-sheets-as-wizards_1.cpp)]  
+## <a name="example"></a>Example  
+ [!code-cpp[NVC_MFCDocView#5](../mfc/codesnippet/cpp/property-sheets-as-wizards_1.cpp)]  
   
-## См. также  
- [Страницы свойств](../mfc/property-sheets-mfc.md)
+## <a name="see-also"></a>See Also  
+ [Property Sheets](../mfc/property-sheets-mfc.md)
+
+

@@ -1,5 +1,5 @@
 ---
-title: "Класс CPagerCtrl | Документы Microsoft"
+title: CPagerCtrl Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -35,7 +35,27 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- CPagerCtrl class
+- CPagerCtrl [MFC], CPagerCtrl
+- CPagerCtrl [MFC], Create
+- CPagerCtrl [MFC], CreateEx
+- CPagerCtrl [MFC], ForwardMouse
+- CPagerCtrl [MFC], GetBkColor
+- CPagerCtrl [MFC], GetBorder
+- CPagerCtrl [MFC], GetButtonSize
+- CPagerCtrl [MFC], GetButtonState
+- CPagerCtrl [MFC], GetDropTarget
+- CPagerCtrl [MFC], GetScrollPos
+- CPagerCtrl [MFC], IsButtonDepressed
+- CPagerCtrl [MFC], IsButtonGrayed
+- CPagerCtrl [MFC], IsButtonHot
+- CPagerCtrl [MFC], IsButtonInvisible
+- CPagerCtrl [MFC], IsButtonNormal
+- CPagerCtrl [MFC], RecalcSize
+- CPagerCtrl [MFC], SetBkColor
+- CPagerCtrl [MFC], SetBorder
+- CPagerCtrl [MFC], SetButtonSize
+- CPagerCtrl [MFC], SetChild
+- CPagerCtrl [MFC], SetScrollPos
 ms.assetid: 65ac58dd-4f5e-4b7e-b15c-e0d435a7e884
 caps.latest.revision: 26
 author: mikeblome
@@ -55,63 +75,63 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0e0c08ddc57d437c51872b5186ae3fc983bb0199
-ms.openlocfilehash: 8b8bf05873239f274a9b1285797c01123fe071f7
+ms.translationtype: MT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: e8ef536f35e3ec4db57befc51b79549b346f71f4
 ms.contentlocale: ru-ru
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 09/12/2017
 
 ---
-# <a name="cpagerctrl-class"></a>Класс CPagerCtrl
-Класс `CPagerCtrl` создается элемент управления страничного навигатора Windows, который может выполнить прокрутку и отобразить содержащееся окно, которое не помещается в содержащее его окно.  
+# <a name="cpagerctrl-class"></a>CPagerCtrl Class
+The `CPagerCtrl` class wraps the Windows pager control, which can scroll into view a contained window that does not fit the containing window.  
   
-## <a name="syntax"></a>Синтаксис  
+## <a name="syntax"></a>Syntax  
   
 ```  
 class CPagerCtrl : public CWnd  
 ```  
   
-## <a name="members"></a>Члены  
+## <a name="members"></a>Members  
   
-### <a name="public-constructors"></a>Открытые конструкторы  
+### <a name="public-constructors"></a>Public Constructors  
   
-|Имя|Описание|  
+|Name|Description|  
 |----------|-----------------|  
-|[CPagerCtrl::CPagerCtrl](#cpagerctrl)|Создает объект `CPagerCtrl`.|  
+|[CPagerCtrl::CPagerCtrl](#cpagerctrl)|Constructs a `CPagerCtrl` object.|  
   
-### <a name="public-methods"></a>Открытые методы  
+### <a name="public-methods"></a>Public Methods  
   
-|Имя|Описание|  
+|Name|Description|  
 |----------|-----------------|  
-|[CPagerCtrl::Create](#create)|Создает элемент управления страничного навигатора со стилями и присоединяет его к текущему `CPagerCtrl` объекта.|  
-|[CPagerCtrl::CreateEx](#createex)|Создает элемент управления страничного навигатора с указанным расширенные стили и присоединяет его к текущему `CPagerCtrl` объекта.|  
-|[CPagerCtrl::ForwardMouse](#forwardmouse)|Включает или отключает пересылку [WM_MOUSEMOVE](http://msdn.microsoft.com/library/windows/desktop/ms645616) сообщения окна, которое содержится в текущем элементе управления страничного навигатора.|  
-|[CPagerCtrl::GetBkColor](#getbkcolor)|Получает цвет фона для текущего элемента управления страничного навигатора.|  
-|[CPagerCtrl::GetBorder](#getborder)|Получает размер границы текущего элемента управления страничного навигатора.|  
-|[CPagerCtrl::GetButtonSize](#getbuttonsize)|Получает размер кнопки для текущего элемента управления страничного навигатора.|  
-|[CPagerCtrl::GetButtonState](#getbuttonstate)|Получает состояние указанную кнопку в текущий элемент управления страничного навигатора.|  
-|[CPagerCtrl::GetDropTarget](#getdroptarget)|Извлекает [IDropTarget](http://msdn.microsoft.com/library/windows/desktop/ms679679) интерфейс для текущего элемента управления страничного навигатора.|  
-|[CPagerCtrl::GetScrollPos](#getscrollpos)|Получает позицию прокрутки текущего элемента управления страничного навигатора.|  
-|[CPagerCtrl::IsButtonDepressed](#isbuttondepressed)|Указывает, является ли указанную кнопку текущего элемента управления страничного навигатора в `pressed` состояние.|  
-|[CPagerCtrl::IsButtonGrayed](#isbuttongrayed)|Указывает, является ли указанную кнопку текущего элемента управления страничного навигатора в `grayed` состояние.|  
-|[CPagerCtrl::IsButtonHot](#isbuttonhot)|Указывает, является ли указанную кнопку текущего элемента управления страничного навигатора в `hot` состояние.|  
-|[CPagerCtrl::IsButtonInvisible](#isbuttoninvisible)|Указывает, является ли указанную кнопку текущего элемента управления страничного навигатора в `invisible` состояние.|  
-|[CPagerCtrl::IsButtonNormal](#isbuttonnormal)|Указывает, является ли указанную кнопку текущего элемента управления страничного навигатора в `normal` состояние.|  
-|[CPagerCtrl::RecalcSize](#recalcsize)|Вызывает текущий элемент управления страничного навигатора пересчитать размер автономной окна.|  
-|[CPagerCtrl::SetBkColor](#setbkcolor)|Задает цвет фона для текущего элемента управления страничного навигатора.|  
-|[CPagerCtrl::SetBorder](#setborder)|Задает размер границы текущего элемента управления страничного навигатора.|  
-|[CPagerCtrl::SetButtonSize](#setbuttonsize)|Задает размер кнопок текущего элемента управления страничного навигатора.|  
-|[CPagerCtrl::SetChild](#setchild)|Задает содержащееся окно текущего элемента управления страничного навигатора.|  
-|[CPagerCtrl::SetScrollPos](#setscrollpos)|Задает позицию прокрутки текущего элемента управления страничного навигатора.|  
+|[CPagerCtrl::Create](#create)|Creates a pager control with specified styles and attaches it to the current `CPagerCtrl` object.|  
+|[CPagerCtrl::CreateEx](#createex)|Creates a pager control with specified extended styles and attaches it to the current `CPagerCtrl` object.|  
+|[CPagerCtrl::ForwardMouse](#forwardmouse)|Enables or disables forwarding [WM_MOUSEMOVE](http://msdn.microsoft.com/library/windows/desktop/ms645616) messages to the window that is contained in the current pager control.|  
+|[CPagerCtrl::GetBkColor](#getbkcolor)|Retrieves the background color of the current pager control.|  
+|[CPagerCtrl::GetBorder](#getborder)|Retrieves the border size of the current pager control.|  
+|[CPagerCtrl::GetButtonSize](#getbuttonsize)|Retrieves the button size of the current pager control.|  
+|[CPagerCtrl::GetButtonState](#getbuttonstate)|Retrieves the state of the specified button in the current pager control.|  
+|[CPagerCtrl::GetDropTarget](#getdroptarget)|Retrieves the [IDropTarget](http://msdn.microsoft.com/library/windows/desktop/ms679679) interface for the current pager control.|  
+|[CPagerCtrl::GetScrollPos](#getscrollpos)|Retrieves the scroll position of the current pager control.|  
+|[CPagerCtrl::IsButtonDepressed](#isbuttondepressed)|Indicates whether the specified button of the current pager control is in `pressed` state.|  
+|[CPagerCtrl::IsButtonGrayed](#isbuttongrayed)|Indicates whether the specified button of the current pager control is in `grayed` state.|  
+|[CPagerCtrl::IsButtonHot](#isbuttonhot)|Indicates whether the specified button of the current pager control is in `hot` state.|  
+|[CPagerCtrl::IsButtonInvisible](#isbuttoninvisible)|Indicates whether the specified button of the current pager control is in `invisible` state.|  
+|[CPagerCtrl::IsButtonNormal](#isbuttonnormal)|Indicates whether the specified button of the current pager control is in `normal` state.|  
+|[CPagerCtrl::RecalcSize](#recalcsize)|Causes the current pager control to recalculate the size of the contained window.|  
+|[CPagerCtrl::SetBkColor](#setbkcolor)|Sets the background color of the current pager control.|  
+|[CPagerCtrl::SetBorder](#setborder)|Sets the border size of the current pager control.|  
+|[CPagerCtrl::SetButtonSize](#setbuttonsize)|Sets the button size of the current pager control.|  
+|[CPagerCtrl::SetChild](#setchild)|Sets the contained window for the current pager control.|  
+|[CPagerCtrl::SetScrollPos](#setscrollpos)|Sets the scroll position of the current pager control.|  
   
-## <a name="remarks"></a>Примечания  
- Элемент управления страничного навигатора является окно, содержащее другое окно линейной и больше, чем окна, который позволяет прокручивать окно содержащиеся в представление. Элемент управления страничного навигатора отображаются две кнопки прокрутки, которые автоматически исчезают при автономной окна прокручиваться его самый дальний степени и в противном случае на экране. Можно создать элемент управления страничного навигатора, горизонтально или вертикально.  
+## <a name="remarks"></a>Remarks  
+ A pager control is a window that contains another window that is linear and larger than the containing window, and enables you to scroll the contained window into view. The pager control displays two scroll buttons that automatically disappear when the contained window is scrolled to its farthest extent, and reappear otherwise. You can create a pager control that scrolls either horizontally or vertically.  
   
- Например если приложение содержит панель инструментов, недостаточен для отображения всех элементов, панели инструментов можно назначить элемент управления страничного навигатора, и пользователи смогут выполнять прокрутку влево или вправо для доступа ко всем элементов панели инструментов. Microsoft Internet Explorer версии 4.0 (версия commctrl.dll 4.71) представляет элемент управления страничного навигатора.  
+ For example, if your application has a toolbar that is not wide enough to show all of its items, you can assign the toolbar to a pager control and users will be able to scroll the toolbar to the left or right to access all of the items. Microsoft Internet Explorer Version 4.0 (commctrl.dll version 4.71) introduces the pager control.  
   
- `CPagerCtrl` Класс является производным от [CWnd](../../mfc/reference/cwnd-class.md) класса. Дополнительные сведения и пример элемента управления страничного навигатора см. в разделе [элементов управления Pager](http://msdn.microsoft.com/library/windows/desktop/bb760855).  
+ The `CPagerCtrl` class is derived from the [CWnd](../../mfc/reference/cwnd-class.md) class. For more information and an illustration of a pager control, see [Pager Controls](http://msdn.microsoft.com/library/windows/desktop/bb760855).  
   
-## <a name="inheritance-hierarchy"></a>Иерархия наследования  
+## <a name="inheritance-hierarchy"></a>Inheritance Hierarchy  
  [CObject](../../mfc/reference/cobject-class.md)  
   
  [CCmdTarget](../../mfc/reference/ccmdtarget-class.md)  
@@ -120,21 +140,21 @@ class CPagerCtrl : public CWnd
   
  `CPagerCtrl`  
   
-## <a name="requirements"></a>Требования  
- **Заголовок:** afxcmn.h  
+## <a name="requirements"></a>Requirements  
+ **Header:** afxcmn.h  
   
-##  <a name="cpagerctrl"></a>CPagerCtrl::CPagerCtrl  
- Создает объект `CPagerCtrl`.  
+##  <a name="cpagerctrl"></a>  CPagerCtrl::CPagerCtrl  
+ Constructs a `CPagerCtrl` object.  
   
 ```  
 CPagerCtrl();
 ```  
   
-### <a name="remarks"></a>Примечания  
- Используйте [CPagerCtrl::Create](#create) или [CPagerCtrl::CreateEx](#createex) метод для создания элемента управления страничного навигатора и присоединить его к `CPagerCtrl` объекта.  
+### <a name="remarks"></a>Remarks  
+ Use the [CPagerCtrl::Create](#create) or [CPagerCtrl::CreateEx](#createex) method to create a pager control and attach it to the `CPagerCtrl` object.  
   
-##  <a name="create"></a>CPagerCtrl::Create  
- Создает элемент управления страничного навигатора со стилями и присоединяет его к текущему `CPagerCtrl` объекта.  
+##  <a name="create"></a>  CPagerCtrl::Create  
+ Creates a pager control with specified styles and attaches it to the current `CPagerCtrl` object.  
   
 ```  
 virtual BOOL Create(
@@ -144,28 +164,28 @@ virtual BOOL Create(
     UINT nID);
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
   
-|Параметр|Описание|  
+|Parameter|Description|  
 |---------------|-----------------|  
-|[in] `dwStyle`|Побитовое сочетание (или) [стили окна](../../mfc/reference/window-styles.md) и [стили элемента управления страничного навигатора](http://msdn.microsoft.com/library/windows/desktop/bb760859) для применения к элементу управления.|  
-|[in] `rect`|Ссылку на [RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897) структура, содержащая положение и размер элемента управления в клиентских координатах.|  
-|[in] `pParentWnd`|Указатель на [CWnd](../../mfc/reference/cwnd-class.md) объекта, родительского окна элемента управления. Этот параметр не может быть `NULL`.|  
-|[in] `nID`|Идентификатор элемента управления.|  
+|[in] `dwStyle`|A bitwise combination (OR) of [window styles](../../mfc/reference/styles-used-by-mfc.md#window-styles) and [pager control styles](http://msdn.microsoft.com/library/windows/desktop/bb760859) to be applied to the control.|  
+|[in] `rect`|A reference to a [RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897) structure that contains the position and size of the control in client coordinates.|  
+|[in] `pParentWnd`|A pointer to a [CWnd](../../mfc/reference/cwnd-class.md) object that is the parent window of the control. This parameter cannot be `NULL`.|  
+|[in] `nID`|The ID of the control.|  
   
-### <a name="return-value"></a>Возвращаемое значение  
- `true`Если этот метод выполнен успешно; в противном случае — `false`.  
+### <a name="return-value"></a>Return Value  
+ `true` if this method is successful; otherwise, `false`.  
   
-### <a name="remarks"></a>Примечания  
- Чтобы создать элемент управления страничного навигатора, объявите `CPagerCtrl` переменной, затем вызовите [CPagerCtrl::Create](#create) или [CPagerCtrl::CreateEx](#createex) метод для этой переменной.  
+### <a name="remarks"></a>Remarks  
+ To create a pager control, declare a `CPagerCtrl` variable, then call the [CPagerCtrl::Create](#create) or [CPagerCtrl::CreateEx](#createex) method on that variable.  
   
-### <a name="example"></a>Пример  
- Следующий пример создает элемент управления страничного навигатора, а затем использует [CPagerCtrl::SetChild](#setchild) метод, чтобы связать элемент управления очень длинная кнопка с элементом управления страничного навигатора. Затем в примере используется [CPagerCtrl::SetButtonSize](#setbuttonsize) метод, чтобы задать высоту элемента управления страничного навигатора до 20 пикселов и [CPagerCtrl::SetBorder](#setborder) метод для задания толщины границы на 1 пиксель.  
+### <a name="example"></a>Example  
+ The following example creates a pager control, then uses the [CPagerCtrl::SetChild](#setchild) method to associate a very long button control with the pager control. The example then uses the [CPagerCtrl::SetButtonSize](#setbuttonsize) method to set the height of the pager control to 20 pixels, and the [CPagerCtrl::SetBorder](#setborder) method to set the border thickness to 1 pixel.  
   
- [!code-cpp[NVC_MFC_CSplitButton_s&#2;1](../../mfc/reference/codesnippet/cpp/cpagerctrl-class_1.cpp)]  
+ [!code-cpp[NVC_MFC_CSplitButton_s2#1](../../mfc/reference/codesnippet/cpp/cpagerctrl-class_1.cpp)]  
   
-##  <a name="createex"></a>CPagerCtrl::CreateEx  
- Создает элемент управления страничного навигатора с указанным расширенные стили и присоединяет его к текущему `CPagerCtrl` объекта.  
+##  <a name="createex"></a>  CPagerCtrl::CreateEx  
+ Creates a pager control with specified extended styles and attaches it to the current `CPagerCtrl` object.  
   
 ```  
 virtual BOOL CreateEx(
@@ -176,380 +196,380 @@ virtual BOOL CreateEx(
     UINT nID);
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
   
-|Параметр|Описание|  
+|Parameter|Description|  
 |---------------|-----------------|  
-|[in] `dwExStyle`|Побитовое сочетание расширенные стили, применяемые к элементу управления. Дополнительные сведения см. в разделе `dwExStyle` параметр [CreateWindowEx](http://msdn.microsoft.com/library/windows/desktop/ms632680) функции.|  
-|[in] `dwStyle`|Побитовое сочетание (или) [стили окна](../../mfc/reference/window-styles.md) и [стили элемента управления страничного навигатора](http://msdn.microsoft.com/library/windows/desktop/bb760859) для применения к элементу управления.|  
-|[in] `rect`|Ссылку на [RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897) структура, содержащая положение и размер элемента управления в клиентских координатах.|  
-|[in] `pParentWnd`|Указатель на [CWnd](../../mfc/reference/cwnd-class.md) объекта, родительского окна элемента управления. Этот параметр не может быть `NULL`.|  
-|[in] `nID`|Идентификатор элемента управления.|  
+|[in] `dwExStyle`|A bitwise combination of extended styles to be applied to the control. For more information, see the `dwExStyle` parameter of the [CreateWindowEx](http://msdn.microsoft.com/library/windows/desktop/ms632680) function.|  
+|[in] `dwStyle`|A bitwise combination (OR) of [window styles](../../mfc/reference/styles-used-by-mfc.md#window-styles) and [pager control styles](http://msdn.microsoft.com/library/windows/desktop/bb760859) to be applied to the control.|  
+|[in] `rect`|A reference to a [RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897) structure that contains the position and size of the control in client coordinates.|  
+|[in] `pParentWnd`|A pointer to a [CWnd](../../mfc/reference/cwnd-class.md) object that is the parent window of the control. This parameter cannot be `NULL`.|  
+|[in] `nID`|The ID of the control.|  
   
-### <a name="return-value"></a>Возвращаемое значение  
- `true`Если этот метод выполнен успешно; в противном случае — `false`.  
+### <a name="return-value"></a>Return Value  
+ `true` if this method is successful; otherwise, `false`.  
   
-### <a name="remarks"></a>Примечания  
- Чтобы создать элемент управления страничного навигатора, объявите `CPagerCtrl` переменной, затем вызовите [CPagerCtrl::Create](#create) или [CPagerCtrl::CreateEx](#createex) метод для этой переменной.  
+### <a name="remarks"></a>Remarks  
+ To create a pager control, declare a `CPagerCtrl` variable, then call the [CPagerCtrl::Create](#create) or [CPagerCtrl::CreateEx](#createex) method on that variable.  
   
-##  <a name="forwardmouse"></a>CPagerCtrl::ForwardMouse  
- Включает или отключает пересылку [WM_MOUSEMOVE](http://msdn.microsoft.com/library/windows/desktop/ms645616) сообщения окна, которое содержится в текущем элементе управления страничного навигатора.  
+##  <a name="forwardmouse"></a>  CPagerCtrl::ForwardMouse  
+ Enables or disables forwarding [WM_MOUSEMOVE](http://msdn.microsoft.com/library/windows/desktop/ms645616) messages to the window that is contained in the current pager control.  
   
 ```  
 void ForwardMouse(BOOL bForward);
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
   
-|Параметр|Описание|  
+|Parameter|Description|  
 |---------------|-----------------|  
-|[in] `bForward`|`true`для пересылки сообщений мыши или `false` не перенаправлять сообщения мыши.|  
+|[in] `bForward`|`true` to forward mouse messages, or `false` to not forward mouse messages.|  
   
-### <a name="remarks"></a>Примечания  
- Этот метод отправляет [PGM_FORWARDMOUSE](http://msdn.microsoft.com/library/windows/desktop/bb760867) сообщения, которое описано в [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
+### <a name="remarks"></a>Remarks  
+ This method sends the [PGM_FORWARDMOUSE](http://msdn.microsoft.com/library/windows/desktop/bb760867) message, which is described in the Windows SDK.  
   
-##  <a name="getborder"></a>CPagerCtrl::GetBorder  
- Получает размер границы текущего элемента управления страничного навигатора.  
+##  <a name="getborder"></a>  CPagerCtrl::GetBorder  
+ Retrieves the border size of the current pager control.  
   
 ```  
 int GetBorder() const;  
 ```  
   
-### <a name="return-value"></a>Возвращаемое значение  
- Текущий размер границы, измеряется в пикселях.  
+### <a name="return-value"></a>Return Value  
+ The current border size, measured in pixels.  
   
-### <a name="remarks"></a>Примечания  
- Этот метод отправляет [PGM_GETBORDER](http://msdn.microsoft.com/library/windows/desktop/bb760869) сообщения, которое описано в [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
+### <a name="remarks"></a>Remarks  
+ This method sends the [PGM_GETBORDER](http://msdn.microsoft.com/library/windows/desktop/bb760869) message, which is described in the Windows SDK.  
   
-### <a name="example"></a>Пример  
- В следующем примере используется [CPagerCtrl::GetBorder](#getborder) метод для извлечения толщины границы для элемента управления страничного навигатора.  
+### <a name="example"></a>Example  
+ The following example uses the [CPagerCtrl::GetBorder](#getborder) method to retrieve the thickness of the pager control's border.  
   
- [!code-cpp[NVC_MFC_CSplitButton_s&#2;5](../../mfc/reference/codesnippet/cpp/cpagerctrl-class_2.cpp)]  
+ [!code-cpp[NVC_MFC_CSplitButton_s2#5](../../mfc/reference/codesnippet/cpp/cpagerctrl-class_2.cpp)]  
   
-##  <a name="getbkcolor"></a>CPagerCtrl::GetBkColor  
- Получает цвет фона для текущего элемента управления страничного навигатора.  
+##  <a name="getbkcolor"></a>  CPagerCtrl::GetBkColor  
+ Retrieves the background color of the current pager control.  
   
 ```  
 COLORREF GetBkColor() const;  
 ```  
   
-### <a name="return-value"></a>Возвращаемое значение  
- Объект [COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449) значение, содержащее текущий цвет фона элемента управления страничного навигатора.  
+### <a name="return-value"></a>Return Value  
+ A [COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449) value that contains the current background color of the pager control.  
   
-### <a name="remarks"></a>Примечания  
- Этот метод отправляет [PGM_GETBKCOLOR](http://msdn.microsoft.com/library/windows/desktop/bb760868) сообщения, которое описано в [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
+### <a name="remarks"></a>Remarks  
+ This method sends the [PGM_GETBKCOLOR](http://msdn.microsoft.com/library/windows/desktop/bb760868) message, which is described in the Windows SDK.  
   
-### <a name="example"></a>Пример  
- В следующем примере используется [CPagerCtrl::SetBkColor](#setbkcolor) метод, чтобы задать цвет фона элемента управления страничного навигатора на красный и [CPagerCtrl::GetBkColor](#getbkcolor) метод, чтобы убедиться, что изменения.  
+### <a name="example"></a>Example  
+ The following example uses the [CPagerCtrl::SetBkColor](#setbkcolor) method to set the background color of the pager control to red, and the [CPagerCtrl::GetBkColor](#getbkcolor) method to confirm that the change was made.  
   
- [!code-cpp[NVC_MFC_CSplitButton_s&#2;4](../../mfc/reference/codesnippet/cpp/cpagerctrl-class_3.cpp)]  
+ [!code-cpp[NVC_MFC_CSplitButton_s2#4](../../mfc/reference/codesnippet/cpp/cpagerctrl-class_3.cpp)]  
   
-##  <a name="getbuttonsize"></a>CPagerCtrl::GetButtonSize  
- Получает размер кнопки для текущего элемента управления страничного навигатора.  
+##  <a name="getbuttonsize"></a>  CPagerCtrl::GetButtonSize  
+ Retrieves the button size of the current pager control.  
   
 ```  
 int GetButtonSize() const;  
 ```  
   
-### <a name="return-value"></a>Возвращаемое значение  
- Текущий размер кнопок, измеряется в пикселях.  
+### <a name="return-value"></a>Return Value  
+ The current button size, measured in pixels.  
   
-### <a name="remarks"></a>Примечания  
- Этот метод отправляет [PGM_GETBUTTONSIZE](http://msdn.microsoft.com/library/windows/desktop/bb760870) сообщения, которое описано в [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
+### <a name="remarks"></a>Remarks  
+ This method sends the [PGM_GETBUTTONSIZE](http://msdn.microsoft.com/library/windows/desktop/bb760870) message, which is described in the Windows SDK.  
   
- Если элемент управления страничного навигатора имеет `PGS_HORZ` стиль, размер кнопок определяет ширину кнопки страничного навигатора, и если есть элемент управления страничного навигатора `PGS_VERT` стиль, размер кнопок определяет высоту кнопки страничного навигатора. Дополнительные сведения см. в разделе [стили элемента управления страничного навигатора](http://msdn.microsoft.com/library/windows/desktop/bb760859).  
+ If the pager control has the `PGS_HORZ` style, the button size determines the width of the pager buttons, and if the pager control has the `PGS_VERT` style, the button size determines the height of the pager buttons. For more information, see [Pager Control Styles](http://msdn.microsoft.com/library/windows/desktop/bb760859).  
   
-##  <a name="getbuttonstate"></a>CPagerCtrl::GetButtonState  
- Получает состояние указанную кнопку прокрутки в текущий элемент управления страничного навигатора.  
+##  <a name="getbuttonstate"></a>  CPagerCtrl::GetButtonState  
+ Retrieves the state of the specified scroll button in the current pager control.  
   
 ```  
 DWORD GetButtonState(int iButton) const;  
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
   
-|Параметр|Описание|  
+|Parameter|Description|  
 |---------------|-----------------|  
-|[in] `iButton`|Указывает кнопки, для которого необходимо получить состояние. Если стиль элемента управления страничного навигатора `PGS_HORZ`, укажите `PGB_TOPORLEFT` для левой кнопки и `PGB_BOTTOMORRIGHT` для правой кнопкой мыши. Если стиль элемента управления страничного навигатора `PGS_VERT`, укажите `PGB_TOPORLEFT` для кнопки «top» и `PGB_BOTTOMORRIGHT` для кнопки «вниз». Дополнительные сведения см. в разделе [стили элемента управления страничного навигатора](http://msdn.microsoft.com/library/windows/desktop/bb760859).|  
+|[in] `iButton`|Indicates the button for which the state is retrieved. If the pager control style is `PGS_HORZ`, specify `PGB_TOPORLEFT` for the left button and `PGB_BOTTOMORRIGHT` for the right button. If the pager control style is `PGS_VERT`, specify `PGB_TOPORLEFT` for the top button and `PGB_BOTTOMORRIGHT` for the bottom button. For more information, see [Pager Control Styles](http://msdn.microsoft.com/library/windows/desktop/bb760859).|  
   
-### <a name="return-value"></a>Возвращаемое значение  
- Состояние кнопки, определяемой параметром `iButton` параметр. The state is either `PGF_INVISIBLE`, `PGF_NORMAL`, `PGF_GRAYED`, `PGF_DEPRESSED`, or `PGF_HOT`. Для получения дополнительной информации ознакомьтесь с разделом возвращают значение [PGM_GETBUTTONSTATE](http://msdn.microsoft.com/library/windows/desktop/bb760871) сообщений.  
+### <a name="return-value"></a>Return Value  
+ The state of the button specified by the `iButton` parameter. The state is either `PGF_INVISIBLE`, `PGF_NORMAL`, `PGF_GRAYED`, `PGF_DEPRESSED`, or `PGF_HOT`. For more information, see the Return Value section of the [PGM_GETBUTTONSTATE](http://msdn.microsoft.com/library/windows/desktop/bb760871) message.  
   
-### <a name="remarks"></a>Примечания  
- Этот метод отправляет [PGM_GETBUTTONSTATE](http://msdn.microsoft.com/library/windows/desktop/bb760871) сообщения, которое описано в [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
+### <a name="remarks"></a>Remarks  
+ This method sends the [PGM_GETBUTTONSTATE](http://msdn.microsoft.com/library/windows/desktop/bb760871) message, which is described in the Windows SDK.  
   
-##  <a name="getdroptarget"></a>CPagerCtrl::GetDropTarget  
- Извлекает [IDropTarget](http://msdn.microsoft.com/library/windows/desktop/ms679679) интерфейс для текущего элемента управления страничного навигатора.  
+##  <a name="getdroptarget"></a>  CPagerCtrl::GetDropTarget  
+ Retrieves the [IDropTarget](http://msdn.microsoft.com/library/windows/desktop/ms679679) interface for the current pager control.  
   
 ```  
 IDropTarget* GetDropTarget() const;  
 ```  
   
-### <a name="return-value"></a>Возвращаемое значение  
- Указатель на `IDropTarget` интерфейс для текущего элемента управления страничного навигатора.  
+### <a name="return-value"></a>Return Value  
+ A pointer to the `IDropTarget` interface for the current pager control.  
   
-### <a name="remarks"></a>Примечания  
- `IDropTarget`— один из интерфейсов, реализовать для поддержки операций и перетаскивания в приложении.  
+### <a name="remarks"></a>Remarks  
+ `IDropTarget` is one of the interfaces you implement to support drag-and-drop operations in your application.  
   
- Этот метод отправляет [PGM_GETDROPTARGET](http://msdn.microsoft.com/library/windows/desktop/bb760872) сообщения, которое описано в [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]. Код, вызывающий этот метод отвечает за вызов метода `Release` членом [IDropTarget](http://msdn.microsoft.com/library/windows/desktop/ms679679) интерфейс интерфейс больше не нужен.  
+ This method sends the [PGM_GETDROPTARGET](http://msdn.microsoft.com/library/windows/desktop/bb760872) message, which is described in the Windows SDK. The caller of this method is responsible for calling the `Release` member of the [IDropTarget](http://msdn.microsoft.com/library/windows/desktop/ms679679) interface when the interface is no longer needed.  
   
-##  <a name="getscrollpos"></a>CPagerCtrl::GetScrollPos  
- Получает позицию прокрутки текущего элемента управления страничного навигатора.  
+##  <a name="getscrollpos"></a>  CPagerCtrl::GetScrollPos  
+ Retrieves the scroll position of the current pager control.  
   
 ```  
 int GetScrollPos() const;  
 ```  
   
-### <a name="return-value"></a>Возвращаемое значение  
- Текущую позицию прокрутки, в пикселях.  
+### <a name="return-value"></a>Return Value  
+ The current scroll position, measured in pixels.  
   
-### <a name="remarks"></a>Примечания  
- Этот метод отправляет [PGM_GETPOS](http://msdn.microsoft.com/library/windows/desktop/bb760874) сообщения, которое описано в [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
+### <a name="remarks"></a>Remarks  
+ This method sends the [PGM_GETPOS](http://msdn.microsoft.com/library/windows/desktop/bb760874) message, which is described in the Windows SDK.  
   
-### <a name="example"></a>Пример  
- В следующем примере используется [CPagerCtrl::GetScrollPos](#getscrollpos) метод для извлечения текущую позицию прокрутки элемента управления страничного навигатора. Если элемент управления страничного навигатора не прокручивается до нуля, крайняя левая позиция в примере используется [CPagerCtrl::SetScrollPos](#setscrollpos) метод, чтобы установить позицию прокрутки до нуля.  
+### <a name="example"></a>Example  
+ The following example uses the [CPagerCtrl::GetScrollPos](#getscrollpos) method to retrieve the current scroll position of the pager control. If the pager control is not already scrolled to zero, the leftmost position, the example uses the [CPagerCtrl::SetScrollPos](#setscrollpos) method to set the scroll position to zero.  
   
- [!code-cpp[NVC_MFC_CSplitButton_s&#2;7](../../mfc/reference/codesnippet/cpp/cpagerctrl-class_4.cpp)]  
+ [!code-cpp[NVC_MFC_CSplitButton_s2#7](../../mfc/reference/codesnippet/cpp/cpagerctrl-class_4.cpp)]  
   
-##  <a name="isbuttondepressed"></a>CPagerCtrl::IsButtonDepressed  
- Указывает, является ли указанную кнопку прокрутки текущего элемента управления страничного навигатора в нажатом состоянии.  
+##  <a name="isbuttondepressed"></a>  CPagerCtrl::IsButtonDepressed  
+ Indicates whether the specified scroll button of the current pager control is in pressed state.  
   
 ```  
 BOOL IsButtonDepressed(int iButton) const;  
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
   
-|Параметр|Описание|  
+|Parameter|Description|  
 |---------------|-----------------|  
-|[in] `iButton`|Указывает кнопки, для которого необходимо получить состояние. Если стиль элемента управления страничного навигатора `PGS_HORZ`, укажите `PGB_TOPORLEFT` для левой кнопки и `PGB_BOTTOMORRIGHT` для правой кнопкой мыши. Если стиль элемента управления страничного навигатора `PGS_VERT`, укажите `PGB_TOPORLEFT` для кнопки «top» и `PGB_BOTTOMORRIGHT` для кнопки «вниз». Дополнительные сведения см. в разделе [стили элемента управления страничного навигатора](http://msdn.microsoft.com/library/windows/desktop/bb760859).|  
+|[in] `iButton`|Indicates the button for which the state is retrieved. If the pager control style is `PGS_HORZ`, specify `PGB_TOPORLEFT` for the left button and `PGB_BOTTOMORRIGHT` for the right button. If the pager control style is `PGS_VERT`, specify `PGB_TOPORLEFT` for the top button and `PGB_BOTTOMORRIGHT` for the bottom button. For more information, see [Pager Control Styles](http://msdn.microsoft.com/library/windows/desktop/bb760859).|  
   
-### <a name="return-value"></a>Возвращаемое значение  
- `true`Если указанный кнопка находится в нажатом состоянии; в противном случае — `false`.  
+### <a name="return-value"></a>Return Value  
+ `true` if the specified button is in pressed state; otherwise, `false`.  
   
-### <a name="remarks"></a>Примечания  
- Этот метод отправляет [PGM_GETBUTTONSTATE](http://msdn.microsoft.com/library/windows/desktop/bb760871) сообщения, которое описано в [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]. Затем он проверяет, является ли состояние, которое возвращается `PGF_DEPRESSED`. Для получения дополнительной информации ознакомьтесь с разделом возвращают значение [PGM_GETBUTTONSTATE](http://msdn.microsoft.com/library/windows/desktop/bb760871) сообщений.  
+### <a name="remarks"></a>Remarks  
+ This method sends the [PGM_GETBUTTONSTATE](http://msdn.microsoft.com/library/windows/desktop/bb760871) message, which is described in the Windows SDK. It then tests whether the state that is returned is `PGF_DEPRESSED`. For more information, see the Return Value section of the [PGM_GETBUTTONSTATE](http://msdn.microsoft.com/library/windows/desktop/bb760871) message.  
   
-##  <a name="isbuttongrayed"></a>CPagerCtrl::IsButtonGrayed  
- Указывает, является ли состояние серый указанную кнопку прокрутки текущего элемента управления страничного навигатора.  
+##  <a name="isbuttongrayed"></a>  CPagerCtrl::IsButtonGrayed  
+ Indicates whether the specified scroll button of the current pager control is in grayed state.  
   
 ```  
 BOOL IsButtonGrayed(int iButton) const;  
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
   
-|Параметр|Описание|  
+|Parameter|Description|  
 |---------------|-----------------|  
-|[in] `iButton`|Указывает кнопки, для которого необходимо получить состояние. Если стиль элемента управления страничного навигатора `PGS_HORZ`, укажите `PGB_TOPORLEFT` для левой кнопки и `PGB_BOTTOMORRIGHT` для правой кнопкой мыши. Если стиль элемента управления страничного навигатора `PGS_VERT`, укажите `PGB_TOPORLEFT` для кнопки «top» и `PGB_BOTTOMORRIGHT` для кнопки «вниз». Дополнительные сведения см. в разделе [стили элемента управления страничного навигатора](http://msdn.microsoft.com/library/windows/desktop/bb760859).|  
+|[in] `iButton`|Indicates the button for which the state is retrieved. If the pager control style is `PGS_HORZ`, specify `PGB_TOPORLEFT` for the left button and `PGB_BOTTOMORRIGHT` for the right button. If the pager control style is `PGS_VERT`, specify `PGB_TOPORLEFT` for the top button and `PGB_BOTTOMORRIGHT` for the bottom button. For more information, see [Pager Control Styles](http://msdn.microsoft.com/library/windows/desktop/bb760859).|  
   
-### <a name="return-value"></a>Возвращаемое значение  
- `true`Если указанный кнопка находится в состоянии отображается в сером цвете; в противном случае — `false`.  
+### <a name="return-value"></a>Return Value  
+ `true` if the specified button is in grayed state; otherwise, `false`.  
   
-### <a name="remarks"></a>Примечания  
- Этот метод отправляет [PGM_GETBUTTONSTATE](http://msdn.microsoft.com/library/windows/desktop/bb760871) сообщения, которое описано в [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]. Затем он проверяет, является ли состояние, которое возвращается `PGF_GRAYED`. Для получения дополнительной информации ознакомьтесь с разделом возвращают значение [PGM_GETBUTTONSTATE](http://msdn.microsoft.com/library/windows/desktop/bb760871) сообщений.  
+### <a name="remarks"></a>Remarks  
+ This method sends the [PGM_GETBUTTONSTATE](http://msdn.microsoft.com/library/windows/desktop/bb760871) message, which is described in the Windows SDK. It then tests whether the state that is returned is `PGF_GRAYED`. For more information, see the Return Value section of the [PGM_GETBUTTONSTATE](http://msdn.microsoft.com/library/windows/desktop/bb760871) message.  
   
-##  <a name="isbuttonhot"></a>CPagerCtrl::IsButtonHot  
- Указывает, является ли указанную кнопку прокрутки текущего элемента управления страничного навигатора в активном состоянии.  
+##  <a name="isbuttonhot"></a>  CPagerCtrl::IsButtonHot  
+ Indicates whether the specified scroll button of the current pager control is in hot state.  
   
 ```  
 BOOL IsButtonHot(int iButton) const;  
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
   
-|Параметр|Описание|  
+|Parameter|Description|  
 |---------------|-----------------|  
-|[in] `iButton`|Указывает кнопки, для которого необходимо получить состояние. Если стиль элемента управления страничного навигатора `PGS_HORZ`, укажите `PGB_TOPORLEFT` для левой кнопки и `PGB_BOTTOMORRIGHT` для правой кнопкой мыши. Если стиль элемента управления страничного навигатора `PGS_VERT`, укажите `PGB_TOPORLEFT` для кнопки «top» и `PGB_BOTTOMORRIGHT` для кнопки «вниз». Дополнительные сведения см. в разделе [стили элемента управления страничного навигатора](http://msdn.microsoft.com/library/windows/desktop/bb760859).|  
+|[in] `iButton`|Indicates the button for which the state is retrieved. If the pager control style is `PGS_HORZ`, specify `PGB_TOPORLEFT` for the left button and `PGB_BOTTOMORRIGHT` for the right button. If the pager control style is `PGS_VERT`, specify `PGB_TOPORLEFT` for the top button and `PGB_BOTTOMORRIGHT` for the bottom button. For more information, see [Pager Control Styles](http://msdn.microsoft.com/library/windows/desktop/bb760859).|  
   
-### <a name="return-value"></a>Возвращаемое значение  
- `true`Если указанный кнопка находится в активном состоянии; в противном случае — `false`.  
+### <a name="return-value"></a>Return Value  
+ `true` if the specified button is in hot state; otherwise, `false`.  
   
-### <a name="remarks"></a>Примечания  
- Этот метод отправляет [PGM_GETBUTTONSTATE](http://msdn.microsoft.com/library/windows/desktop/bb760871) сообщения, которое описано в [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]. Затем он проверяет, является ли состояние, которое возвращается `PGF_HOT`. Для получения дополнительной информации ознакомьтесь с разделом возвращают значение [PGM_GETBUTTONSTATE](http://msdn.microsoft.com/library/windows/desktop/bb760871) сообщений.  
+### <a name="remarks"></a>Remarks  
+ This method sends the [PGM_GETBUTTONSTATE](http://msdn.microsoft.com/library/windows/desktop/bb760871) message, which is described in the Windows SDK. It then tests whether the state that is returned is `PGF_HOT`. For more information, see the Return Value section of the [PGM_GETBUTTONSTATE](http://msdn.microsoft.com/library/windows/desktop/bb760871) message.  
   
-##  <a name="isbuttoninvisible"></a>CPagerCtrl::IsButtonInvisible  
- Указывает, является ли указанную кнопку прокрутки текущего элемента управления страничного навигатора в состоянии невидимым.  
+##  <a name="isbuttoninvisible"></a>  CPagerCtrl::IsButtonInvisible  
+ Indicates whether the specified scroll button of the current pager control is in invisible state.  
   
 ```  
 BOOL IsButtonInvisible(int iButton) const;  
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
   
-|Параметр|Описание|  
+|Parameter|Description|  
 |---------------|-----------------|  
-|[in] `iButton`|Указывает кнопки, для которого необходимо получить состояние. Если стиль элемента управления страничного навигатора `PGS_HORZ`, укажите `PGB_TOPORLEFT` для левой кнопки и `PGB_BOTTOMORRIGHT` для правой кнопкой мыши. Если стиль элемента управления страничного навигатора `PGS_VERT`, укажите `PGB_TOPORLEFT` для кнопки «top» и `PGB_BOTTOMORRIGHT` для кнопки «вниз». Дополнительные сведения см. в разделе [стили элемента управления страничного навигатора](http://msdn.microsoft.com/library/windows/desktop/bb760859).|  
+|[in] `iButton`|Indicates the button for which the state is retrieved. If the pager control style is `PGS_HORZ`, specify `PGB_TOPORLEFT` for the left button and `PGB_BOTTOMORRIGHT` for the right button. If the pager control style is `PGS_VERT`, specify `PGB_TOPORLEFT` for the top button and `PGB_BOTTOMORRIGHT` for the bottom button. For more information, see [Pager Control Styles](http://msdn.microsoft.com/library/windows/desktop/bb760859).|  
   
-### <a name="return-value"></a>Возвращаемое значение  
- `true`Если указанный кнопка находится в состоянии невидимым; в противном случае — `false`.  
+### <a name="return-value"></a>Return Value  
+ `true` if the specified button is in invisible state; otherwise, `false`.  
   
-### <a name="remarks"></a>Примечания  
- Windows делает кнопки прокрутки в определенном направлении невидимым при содержащееся окно прокручиваться его самый дальний экстент, так как дополнительные кнопки невозможно перевести большая часть содержащихся в представление.  
+### <a name="remarks"></a>Remarks  
+ Windows makes the scroll button in a particular direction invisible when the contained window is scrolled to its farthest extent because clicking the button further cannot bring more of the contained window into view.  
   
- Этот метод отправляет [PGM_GETBUTTONSTATE](http://msdn.microsoft.com/library/windows/desktop/bb760871) сообщения, которое описано в [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]. Затем он проверяет, является ли состояние, которое возвращается `PGF_INVISIBLE`. Для получения дополнительной информации ознакомьтесь с разделом возвращают значение [PGM_GETBUTTONSTATE](http://msdn.microsoft.com/library/windows/desktop/bb760871) сообщений.  
+ This method sends the [PGM_GETBUTTONSTATE](http://msdn.microsoft.com/library/windows/desktop/bb760871) message, which is described in the Windows SDK. It then tests whether the state that is returned is `PGF_INVISIBLE`. For more information, see the Return Value section of the [PGM_GETBUTTONSTATE](http://msdn.microsoft.com/library/windows/desktop/bb760871) message.  
   
-### <a name="example"></a>Пример  
- В следующем примере используется [CPagerCtrl::IsButtonInvisible](#isbuttoninvisible) метод для определения левого элемента управления страничного навигатора и отображаются кнопки прокрутки вправо.  
+### <a name="example"></a>Example  
+ The following example uses the [CPagerCtrl::IsButtonInvisible](#isbuttoninvisible) method to determine whether the pager control's left and right scroll buttons are visible.  
   
- [!code-cpp[NVC_MFC_CSplitButton_s2 №&6;](../../mfc/reference/codesnippet/cpp/cpagerctrl-class_5.cpp)]  
+ [!code-cpp[NVC_MFC_CSplitButton_s2#6](../../mfc/reference/codesnippet/cpp/cpagerctrl-class_5.cpp)]  
   
-##  <a name="isbuttonnormal"></a>CPagerCtrl::IsButtonNormal  
- Указывает, является ли указанную кнопку прокрутки текущего элемента управления страничного навигатора в обычном состоянии.  
+##  <a name="isbuttonnormal"></a>  CPagerCtrl::IsButtonNormal  
+ Indicates whether the specified scroll button of the current pager control is in normal state.  
   
 ```  
 BOOL IsButtonNormal(int iButton) const;  
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
   
-|Параметр|Описание|  
+|Parameter|Description|  
 |---------------|-----------------|  
-|[in] `iButton`|Указывает кнопки, для которого необходимо получить состояние. Если стиль элемента управления страничного навигатора `PGS_HORZ`, укажите `PGB_TOPORLEFT` для левой кнопки и `PGB_BOTTOMORRIGHT` для правой кнопкой мыши. Если стиль элемента управления страничного навигатора `PGS_VERT`, укажите `PGB_TOPORLEFT` для кнопки «top» и `PGB_BOTTOMORRIGHT` для кнопки «вниз». Дополнительные сведения см. в разделе [стили элемента управления страничного навигатора](http://msdn.microsoft.com/library/windows/desktop/bb760859).|  
+|[in] `iButton`|Indicates the button for which the state is retrieved. If the pager control style is `PGS_HORZ`, specify `PGB_TOPORLEFT` for the left button and `PGB_BOTTOMORRIGHT` for the right button. If the pager control style is `PGS_VERT`, specify `PGB_TOPORLEFT` for the top button and `PGB_BOTTOMORRIGHT` for the bottom button. For more information, see [Pager Control Styles](http://msdn.microsoft.com/library/windows/desktop/bb760859).|  
   
-### <a name="return-value"></a>Возвращаемое значение  
- `true`Если указанный кнопка находится в обычном состоянии; в противном случае — `false`.  
+### <a name="return-value"></a>Return Value  
+ `true` if the specified button is in normal state; otherwise, `false`.  
   
-### <a name="remarks"></a>Примечания  
- Этот метод отправляет [PGM_GETBUTTONSTATE](http://msdn.microsoft.com/library/windows/desktop/bb760871) сообщения, которое описано в [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]. Затем он проверяет, является ли состояние, которое возвращается `PGF_NORMAL`. Для получения дополнительной информации ознакомьтесь с разделом возвращают значение [PGM_GETBUTTONSTATE](http://msdn.microsoft.com/library/windows/desktop/bb760871) сообщений.  
+### <a name="remarks"></a>Remarks  
+ This method sends the [PGM_GETBUTTONSTATE](http://msdn.microsoft.com/library/windows/desktop/bb760871) message, which is described in the Windows SDK. It then tests whether the state that is returned is `PGF_NORMAL`. For more information, see the Return Value section of the [PGM_GETBUTTONSTATE](http://msdn.microsoft.com/library/windows/desktop/bb760871) message.  
   
-##  <a name="recalcsize"></a>CPagerCtrl::RecalcSize  
- Вызывает текущий элемент управления страничного навигатора пересчитать размер автономной окна.  
+##  <a name="recalcsize"></a>  CPagerCtrl::RecalcSize  
+ Causes the current pager control to recalculate the size of the contained window.  
   
 ```  
 void RecalcSize();
 ```  
   
-### <a name="remarks"></a>Примечания  
- Этот метод отправляет [PGM_RECALCSIZE](http://msdn.microsoft.com/library/windows/desktop/bb760876) сообщения, которое описано в [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]. Следовательно, элемент управления страничного навигатора отправляет [PGN_CALCSIZE](http://msdn.microsoft.com/library/windows/desktop/bb760864) уведомлений для получения прокручиваемый размеры автономной окна.  
+### <a name="remarks"></a>Remarks  
+ This method sends the [PGM_RECALCSIZE](http://msdn.microsoft.com/library/windows/desktop/bb760876) message, which is described in the Windows SDK. Consequently, the pager control sends the [PGN_CALCSIZE](http://msdn.microsoft.com/library/windows/desktop/bb760864) notification to obtain the scrollable dimensions of the contained window.  
   
-### <a name="example"></a>Пример  
- В следующем примере используется [CPagerCtrl::RecalcSize](#recalcsize) метод для запроса к пересчету его размера текущего элемента управления страничного навигатора.  
+### <a name="example"></a>Example  
+ The following example uses the [CPagerCtrl::RecalcSize](#recalcsize) method to request the current pager control to recalculate its size.  
   
- [!code-cpp[NVC_MFC_CSplitButton_s&#2;3](../../mfc/reference/codesnippet/cpp/cpagerctrl-class_6.cpp)]  
+ [!code-cpp[NVC_MFC_CSplitButton_s2#3](../../mfc/reference/codesnippet/cpp/cpagerctrl-class_6.cpp)]  
   
-### <a name="example"></a>Пример  
- В следующем примере используется [сообщений отражение](../../mfc/tn062-message-reflection-for-windows-controls.md) для включения управления страничного навигатора для пересчета собственный размер вместо диалогового окна родительского элемента управления для выполнения вычисления. В следующем примере создается `MyPagerCtrl` класса [класс CPagerCtrl](../../mfc/reference/cpagerctrl-class.md), затем использует схему сообщений, чтобы связать [PGN_CALCSIZE](http://msdn.microsoft.com/library/windows/desktop/bb760864) уведомление с `OnCalcsize` обработчика уведомлений. В этом примере обработчик уведомлений задает ширину и высоту элемента управления страничного навигатора фиксированных значений.  
+### <a name="example"></a>Example  
+ The following example uses [message reflection](../../mfc/tn062-message-reflection-for-windows-controls.md) to enable the pager control to recalculate its own size instead of requiring the control's parent dialog to perform the calculation. The example derives the `MyPagerCtrl` class from the [CPagerCtrl class](../../mfc/reference/cpagerctrl-class.md), then uses a message map to associate the [PGN_CALCSIZE](http://msdn.microsoft.com/library/windows/desktop/bb760864) notification with the `OnCalcsize` notification handler. In this example, the notification handler sets the width and height of the pager control to fixed values.  
   
- [!code-cpp[NVC_MFC_CSplitButton_s2 №&8;](../../mfc/reference/codesnippet/cpp/cpagerctrl-class_7.cpp)]  
+ [!code-cpp[NVC_MFC_CSplitButton_s2#8](../../mfc/reference/codesnippet/cpp/cpagerctrl-class_7.cpp)]  
   
-##  <a name="setbkcolor"></a>CPagerCtrl::SetBkColor  
- Задает цвет фона для текущего элемента управления страничного навигатора.  
+##  <a name="setbkcolor"></a>  CPagerCtrl::SetBkColor  
+ Sets the background color of the current pager control.  
   
 ```  
 COLORREF SetBkColor(COLORREF clrBk);
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
   
-|Параметр|Описание|  
+|Parameter|Description|  
 |---------------|-----------------|  
-|[in] `clrBk`|Объект [COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449) значение, содержащее новый цвет фона элемента управления страничного навигатора.|  
+|[in] `clrBk`|A [COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449) value that contains the new background color of the pager control.|  
   
-### <a name="return-value"></a>Возвращаемое значение  
- Объект [COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449) значение, содержащее предыдущий цвет фона элемента управления страничного навигатора.  
+### <a name="return-value"></a>Return Value  
+ A [COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449) value that contains the previous background color of the pager control.  
   
-### <a name="remarks"></a>Примечания  
- Этот метод отправляет [PGM_SETBKCOLOR](http://msdn.microsoft.com/library/windows/desktop/bb760878) сообщения, которое описано в [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
+### <a name="remarks"></a>Remarks  
+ This method sends the [PGM_SETBKCOLOR](http://msdn.microsoft.com/library/windows/desktop/bb760878) message, which is described in the Windows SDK.  
   
-### <a name="example"></a>Пример  
- В следующем примере используется [CPagerCtrl::SetBkColor](#setbkcolor) метод, чтобы задать цвет фона элемента управления страничного навигатора на красный и [CPagerCtrl::GetBkColor](#getbkcolor) метод, чтобы убедиться, что изменения.  
+### <a name="example"></a>Example  
+ The following example uses the [CPagerCtrl::SetBkColor](#setbkcolor) method to set the background color of the pager control to red, and the [CPagerCtrl::GetBkColor](#getbkcolor) method to confirm that the change was made.  
   
- [!code-cpp[NVC_MFC_CSplitButton_s&#2;4](../../mfc/reference/codesnippet/cpp/cpagerctrl-class_3.cpp)]  
+ [!code-cpp[NVC_MFC_CSplitButton_s2#4](../../mfc/reference/codesnippet/cpp/cpagerctrl-class_3.cpp)]  
   
-##  <a name="setborder"></a>CPagerCtrl::SetBorder  
- Задает размер границы текущего элемента управления страничного навигатора.  
+##  <a name="setborder"></a>  CPagerCtrl::SetBorder  
+ Sets the border size of the current pager control.  
   
 ```  
 int SetBorder(int iBorder);
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
   
-|Параметр|Описание|  
+|Parameter|Description|  
 |---------------|-----------------|  
-|[in] `iBorder`|Новый размер границы, измеряется в пикселях. Если `iBorder` параметр имеет отрицательное значение, размер границы присваивается нулевое значение.|  
+|[in] `iBorder`|The new border size, measured in pixels. If the `iBorder` parameter is negative, the border size is set to zero.|  
   
-### <a name="return-value"></a>Возвращаемое значение  
- Предыдущий размер границы, измеряется в пикселях.  
+### <a name="return-value"></a>Return Value  
+ The previous border size, measured in pixels.  
   
-### <a name="remarks"></a>Примечания  
- Этот метод отправляет [PGM_SETBORDER](http://msdn.microsoft.com/library/windows/desktop/bb760880) сообщения, которое описано в [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
+### <a name="remarks"></a>Remarks  
+ This method sends the [PGM_SETBORDER](http://msdn.microsoft.com/library/windows/desktop/bb760880) message, which is described in the Windows SDK.  
   
-### <a name="example"></a>Пример  
- Следующий пример создает элемент управления страничного навигатора, а затем использует [CPagerCtrl::SetChild](#setchild) метод, чтобы связать элемент управления очень длинная кнопка с элементом управления страничного навигатора. Затем в примере используется [CPagerCtrl::SetButtonSize](#setbuttonsize) метод, чтобы задать высоту элемента управления страничного навигатора до 20 пикселов и [CPagerCtrl::SetBorder](#setborder) метод для задания толщины границы на 1 пиксель.  
+### <a name="example"></a>Example  
+ The following example creates a pager control, then uses the [CPagerCtrl::SetChild](#setchild) method to associate a very long button control with the pager control. The example then uses the [CPagerCtrl::SetButtonSize](#setbuttonsize) method to set the height of the pager control to 20 pixels, and the [CPagerCtrl::SetBorder](#setborder) method to set the border thickness to 1 pixel.  
   
- [!code-cpp[NVC_MFC_CSplitButton_s&#2;1](../../mfc/reference/codesnippet/cpp/cpagerctrl-class_1.cpp)]  
+ [!code-cpp[NVC_MFC_CSplitButton_s2#1](../../mfc/reference/codesnippet/cpp/cpagerctrl-class_1.cpp)]  
   
-##  <a name="setbuttonsize"></a>CPagerCtrl::SetButtonSize  
- Задает размер кнопок текущего элемента управления страничного навигатора.  
+##  <a name="setbuttonsize"></a>  CPagerCtrl::SetButtonSize  
+ Sets the button size of the current pager control.  
   
 ```  
 int SetButtonSize(int iButtonSize);
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
   
-|Параметр|Описание|  
+|Parameter|Description|  
 |---------------|-----------------|  
-|[in] `iButtonSize`|Новый размер кнопок, измеряется в пикселях.|  
+|[in] `iButtonSize`|The new button size, measured in pixels.|  
   
-### <a name="return-value"></a>Возвращаемое значение  
- Предыдущий размер кнопки измеряется в пикселях.  
+### <a name="return-value"></a>Return Value  
+ The previous button size, measured in pixels.  
   
-### <a name="remarks"></a>Примечания  
- Этот метод отправляет [PGM_SETBUTTONSIZE](http://msdn.microsoft.com/library/windows/desktop/bb760886) сообщения, которое описано в [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
+### <a name="remarks"></a>Remarks  
+ This method sends the [PGM_SETBUTTONSIZE](http://msdn.microsoft.com/library/windows/desktop/bb760886) message, which is described in the Windows SDK.  
   
- Если элемент управления страничного навигатора имеет `PGS_HORZ` стиль, размер кнопок определяет ширину кнопки страничного навигатора, и если есть элемент управления страничного навигатора `PGS_VERT` стиль, размер кнопок определяет высоту кнопки страничного навигатора. Размер кнопки по умолчанию — три четверти ширины полосы прокрутки и кнопка минимальный размер — 12 пикселов. Дополнительные сведения см. в разделе [стили элемента управления страничного навигатора](http://msdn.microsoft.com/library/windows/desktop/bb760859).  
+ If the pager control has the `PGS_HORZ` style, the button size determines the width of the pager buttons, and if the pager control has the `PGS_VERT` style, the button size determines the height of the pager buttons. The default button size is three-fourths of the width of the scroll bar, and the minimum button size is 12 pixels. For more information, see [Pager Control Styles](http://msdn.microsoft.com/library/windows/desktop/bb760859).  
   
-### <a name="example"></a>Пример  
- Следующий пример создает элемент управления страничного навигатора, а затем использует [CPagerCtrl::SetChild](#setchild) метод, чтобы связать элемент управления очень длинная кнопка с элементом управления страничного навигатора. Затем в примере используется [CPagerCtrl::SetButtonSize](#setbuttonsize) метод, чтобы задать высоту элемента управления страничного навигатора до 20 пикселов и [CPagerCtrl::SetBorder](#setborder) метод для задания толщины границы на 1 пиксель.  
+### <a name="example"></a>Example  
+ The following example creates a pager control, then uses the [CPagerCtrl::SetChild](#setchild) method to associate a very long button control with the pager control. The example then uses the [CPagerCtrl::SetButtonSize](#setbuttonsize) method to set the height of the pager control to 20 pixels, and the [CPagerCtrl::SetBorder](#setborder) method to set the border thickness to 1 pixel.  
   
- [!code-cpp[NVC_MFC_CSplitButton_s&#2;1](../../mfc/reference/codesnippet/cpp/cpagerctrl-class_1.cpp)]  
+ [!code-cpp[NVC_MFC_CSplitButton_s2#1](../../mfc/reference/codesnippet/cpp/cpagerctrl-class_1.cpp)]  
   
-##  <a name="setchild"></a>CPagerCtrl::SetChild  
- Задает содержащееся окно текущего элемента управления страничного навигатора.  
+##  <a name="setchild"></a>  CPagerCtrl::SetChild  
+ Sets the contained window for the current pager control.  
   
 ```  
 void SetChild(HWND hwndChild);
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
   
-|Параметр|Описание|  
+|Parameter|Description|  
 |---------------|-----------------|  
-|[in] `hwndChild`|Дескриптор окна, которые будут храниться.|  
+|[in] `hwndChild`|Handle to the window to be contained.|  
   
-### <a name="remarks"></a>Примечания  
- Этот метод отправляет [PGM_SETCHILD](http://msdn.microsoft.com/library/windows/desktop/bb760884) сообщения, которое описано в [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
+### <a name="remarks"></a>Remarks  
+ This method sends the [PGM_SETCHILD](http://msdn.microsoft.com/library/windows/desktop/bb760884) message, which is described in the Windows SDK.  
   
- Этот метод не изменяет родительского окна автономной. только элемент управления страничного навигатора для прокрутки назначает дескриптор окна. В большинстве случаев содержащееся окно будет дочернего окна элемента управления страничного навигатора.  
+ This method does not change the parent of the contained window; it only assigns a window handle to the pager control for scrolling. In most cases, the contained window will be a child window of the pager control.  
   
-### <a name="example"></a>Пример  
- Следующий пример создает элемент управления страничного навигатора, а затем использует [CPagerCtrl::SetChild](#setchild) метод, чтобы связать элемент управления очень длинная кнопка с элементом управления страничного навигатора. Затем в примере используется [CPagerCtrl::SetButtonSize](#setbuttonsize) метод, чтобы задать высоту элемента управления страничного навигатора до 20 пикселов и [CPagerCtrl::SetBorder](#setborder) метод для задания толщины границы на 1 пиксель.  
+### <a name="example"></a>Example  
+ The following example creates a pager control, then uses the [CPagerCtrl::SetChild](#setchild) method to associate a very long button control with the pager control. The example then uses the [CPagerCtrl::SetButtonSize](#setbuttonsize) method to set the height of the pager control to 20 pixels, and the [CPagerCtrl::SetBorder](#setborder) method to set the border thickness to 1 pixel.  
   
- [!code-cpp[NVC_MFC_CSplitButton_s&#2;1](../../mfc/reference/codesnippet/cpp/cpagerctrl-class_1.cpp)]  
+ [!code-cpp[NVC_MFC_CSplitButton_s2#1](../../mfc/reference/codesnippet/cpp/cpagerctrl-class_1.cpp)]  
   
-##  <a name="setscrollpos"></a>CPagerCtrl::SetScrollPos  
- Задает позицию прокрутки текущего элемента управления страничного навигатора.  
+##  <a name="setscrollpos"></a>  CPagerCtrl::SetScrollPos  
+ Sets the scroll position of the current pager control.  
   
 ```  
 void SetScrollPos(int iPos);
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
   
-|Параметр|Описание|  
+|Parameter|Description|  
 |---------------|-----------------|  
-|[in] `iPos`|Новую позицию прокрутки, измеряется в пикселях.|  
+|[in] `iPos`|The new scroll position, measured in pixels.|  
   
-### <a name="remarks"></a>Примечания  
- Этот метод отправляет [PGM_SETPOS](http://msdn.microsoft.com/library/windows/desktop/bb760886) сообщения, которое описано в [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
+### <a name="remarks"></a>Remarks  
+ This method sends the [PGM_SETPOS](http://msdn.microsoft.com/library/windows/desktop/bb760886) message, which is described in the Windows SDK.  
   
-## <a name="see-also"></a>См. также  
- [Класс CPagerCtrl](../../mfc/reference/cpagerctrl-class.md)   
- [Диаграмма иерархии](../../mfc/hierarchy-chart.md)   
- [Элементы управления страничного навигатора](http://msdn.microsoft.com/library/windows/desktop/bb760855)
+## <a name="see-also"></a>See Also  
+ [CPagerCtrl Class](../../mfc/reference/cpagerctrl-class.md)   
+ [Hierarchy Chart](../../mfc/hierarchy-chart.md)   
+ [Pager Controls](http://msdn.microsoft.com/library/windows/desktop/bb760855)
 
 
 

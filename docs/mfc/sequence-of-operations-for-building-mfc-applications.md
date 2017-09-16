@@ -1,57 +1,76 @@
 ---
-title: "Последовательность операций для сборки приложений MFC | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "приложения [MFC], разработка"
+title: Sequence of Operations for Building MFC Applications | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- applications [MFC], developing
 ms.assetid: 6973c714-fe20-48c6-926b-de88356b3a3d
 caps.latest.revision: 11
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 7
----
-# Последовательность операций для сборки приложений MFC
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 836faeebb0af0848c0e04696765d0f933b8209cd
+ms.contentlocale: ru-ru
+ms.lasthandoff: 09/12/2017
 
-В следующей таблице приведены общие последовательности можно выполнить обычно во время разработки приложения MFC.  
+---
+# <a name="sequence-of-operations-for-building-mfc-applications"></a>Sequence of Operations for Building MFC Applications
+The following table explains the general sequence you might typically follow as you develop your MFC application.  
   
-### Последовательность для построения приложений с помощью платформы .NET Framework  
+### <a name="sequence-for-building-an-application-with-the-framework"></a>Sequence for Building an Application with the Framework  
   
-|Задача|Выполняется|.NET Framework.|  
-|------------|-----------------|---------------------|  
-|Создать общую схему приложения.|Выполните [Мастер приложений MFC](../Topic/MFC%20Application%20Wizard.md).  Необходимо указать параметры в страницах Параметры.  В число этих параметров входят внесения приложением компонент, контейнер, или к модели COM; добавление автоматизации; и создание приложений баз данных с учетом.|Мастер приложений MFC создает файлы для заготовку приложения, включая файлы источника для приложения, документа, представления и фреймовых windows; файл ресурсов. файл проекта; и другие; все портняжничанный к вашим спецификациям.|  
-|В разделе возможностей, которые и мастер приложений MFC таким образом, не добавляя линии собственного кода.|Создать общую схему приложения и запустить его в Visual C\+\+.|Запуск приложения многие стандартного вывода схемы **Файл**, **Изменить**, **Вид** и команды меню **Справка** из платформы.  В приложениях MDI, предусмотрена также полностью a — функциональное меню Windows, а среда управляют созданием, расположение и уничтожение дочерних окон MDI.|  
-|Построение пользовательского интерфейса приложения.|Используйте Visual C\+\+ [редакторы ресурсов](../mfc/resource-editors.md), чтобы визуально редактировать интерфейс пользователя приложения.<br /><br /> -   Создание меню.<br />-   Определение сочетаний клавиш.<br />-   Создайте диалоговые окна.<br />-   Создайте и правка растровые изображения, Значки, курсоры.<br />-   Правка инструмент автоматически созданный с помощью мастера приложений MFC.<br />-   Создание и изменяйте другие ресурсы.<br /><br /> Можно также тест диалоговые окна редактора диалоговых окон.|Файл ресурсов по умолчанию, созданный поставками мастера приложений MFC большое количество ресурсов.  C Visual C\+\+ позволяет изменять существующие ресурсы и добавить новые ресурсы легко и визуально.|  
-|Меню сопоставления в функции обработчика.|Используйте кнопку **События** в [Окно свойств](../Topic/Properties%20Window.md) для подключения меню и сочетаний клавиш в функции обработчика в коде.|Окно свойств вставляет записи сопоставления сообщений и шаблоны пустых функции в файлы источника указывается и управляет множеством ручных задач кодирования.|  
-|Напишите код ловушки.|Используйте представление классов, чтобы поскакать непосредственно в код в редакторе исходного кода.  Введите код для тестирования функций обработчика.  Дополнительные сведения об использовании представления классов и о мастерах, добавить код к проекту см. в разделе [Добавление функциональных возможностей с помощью мастеров кода](../ide/adding-functionality-with-code-wizards-cpp.md).|Представление классов будет открыт редактор, прокручивает пустому шаблона функции и позиции курсора автоматически.|  
-|Кнопки панели инструментов сопоставления команд.|Сопоставление каждую кнопку в панели инструментов в команде меню и сочетаний клавиш путем присвоения кнопке соответствующий идентификатор команды.|Управления платформы рисование, включение, отключение визуальных аспектов, проверки и другой кнопок панели инструментов.|  
-|Выполнение функций обработчика.|Перестройте программу и используйте встроенные средства отладки, чтобы проверить, что обработчики работают правильно.|Можно выполнить и трассировки по коду, чтобы увидеть, как обработчики вызываются.  Если заполняли код обработчика, обработчики уносят команды.  Среда выполнения автоматически приведет к отключению пунктов меню и кнопки панели инструментов, не обрабатываются.|  
-|Добавьте [диалоговые окна](../mfc/dialog-boxes.md).|Создайте ресурс шаблона диалоговых окон с помощью редактора диалоговых окон.  Затем создайте класс диалогового окна и код, который обрабатывает диалоговое окно.|Среда управляет диалоговое окно и облегчает извлекать данные, введенные пользователем.|  
-|Инициализация, проверьте, и извлечь данные диалоговых окон.|Можно также задать способ управления диалогового окна инициализированным и быть отмеченным.  Используйте Visual Studio для добавления переменные\-члены к классу диалогового окна и сопоставить их с элементами управления диалогового окна.  Определите правила проверки, применяются к каждому элементу управления по мере того, как пользователь вводит данные.  Укажите собственные проверки при необходимости.|Среда управляет инициализации и проверка диалоговых окон.  Если пользователь вводит недопустимую информацию, платформа показывает окно сообщения и позволяет пользователю повторно данные.|  
-|Создайте дополнительные классы.|Используйте представление классов для создания дополнительных документ, представление и классы фреймового окна за этими созданными автоматически с помощью мастера приложений MFC.  Можно создать дополнительные классы набора записей базы данных, классы диалогового окна, и т д \(С представлением классов можно создать классы, производные от классов MFC\).|Представление классов добавить эти классы к файлам источника и помогает определить их подключения к любому командам они обрабатывают.|  
-|Добавьте готовые к использованию компонентов в приложение.|Используйте `New Item dialog box` для добавления различные элементы.|Эти элементы просто для интеграции в приложение и сэкономить много функций.|  
-|Реализуйте класс документа.|Реализуйте специфичных для приложения документа класс или классы.  Добавьте переменные\-члены для хранения структуры данных.  Добавьте функции\-члены для реализации интерфейса данных.|Платформа уже известно, как взаимодействовать с файлами данных документа.  Она может открыть и закрыть фаил документа, прочитала и записывает сведения о документа и рассматривает другие интерфейсы пользователя.  Можно сфокусироваться на как данные управляются документа.|  
-|Реализация команды открытого, сохранения и сохранить как.|Напишите код для функции\-члена `Serialize` документа.|Платформа отображает диалоговые окна для **Открыть**, **Сохранить** и **Сохранить как** команд в меню **Файл**.  Она записывает считывает документ и обратно с помощью формата данных, указанных в функции\-члене `Serialize`.|  
-|Реализуйте класс представления.|Реализовать один или несколько классов представлений, которые в них.  Реализуйте функции\-члены представления, сопоставлена с интерфейсом пользователя с представлением классов.  [CView](../Topic/CView%20Class.md)\- различные производные классы доступны, включая [CListView](../mfc/reference/clistview-class.md) и [CTreeView](../mfc/reference/ctreeview-class.md).|Среда управляет большинство связей между документом и его представлением.  Функции\-члены представления получить документ представления для отображения его изображение на экране или напечатанной странице и обновление структуры данных документа в ответ на пользователь редактирования команды.|  
-|Увеличьте принтер по умолчанию.|Если необходима поддержка multipage печать, функции\-члены представления переопределения.|Платформа поддерживает **Печать**, **Параметры страницы** и **Предварительный просмотр** команды в меню **Файл**.  Необходимо указать его как для документа на несколько страниц.|  
-|Добавьте прокрутка.|Если необходима поддержка прокрутки, унаследуйте нужный класс или классы из представления [CScrollView](../mfc/reference/cscrollview-class.md).|Представление автоматически добавляет полосы прокрутки в окне представления будет слишком маленьким.|  
-|Создание представления формы.|Если требуется создать свои представления на ресурсах шаблона диалоговых окон, унаследуйте нужный класс или классы из представления [CFormView](../mfc/reference/cformview-class.md).|Представление использует ресурс шаблона диалоговых окон в элементы управления отображения.  Пользователь может перейти от элемента управления к элементу управления в представлении.|  
-|Создание форм баз данных.|Если требуется приложение доступа к данным на основе форм, он должен быть производным от класса представления [CRecordView](../mfc/reference/crecordview-class.md) для программирования \(ODBC\).|Просмотр рабочих любят представление формы, но его элементы управления подключены к полям объекта [CRecordset](../Topic/CRecordset%20Class.md), представляющий таблицу базы данных.  MFC перемещение данных между элементами управления и набором записей автоматически.|  
-|Создание простой текстовый редактор.|Если необходимо, чтобы просмотреть быть простым текстовым редактором, унаследуйте нужный класс представления или классы из [CEditView](../Topic/CEditView%20Class.md) или [CRichEditView](../mfc/reference/cricheditview-class.md).|Представление предоставляет функции редактирования, поддержка обмена и вход\-выход файла.  `CRichEditView` предоставляет с примененным стилем текст.|  
-|Добавьте окна\-разделители.|Если требуется поддерживать окно разделя, добавьте объект [CSplitterWnd](../mfc/reference/csplitterwnd-class.md) в фреймовому окно SDI или дочернему окну MDI\-приложения и обработчик его вверх в функциях\-членах [OnCreateClient](../Topic/CFrameWnd::OnCreateClient.md) окна.|Окна, элементы управления разделитель\- платформы рядом с полосами прокрутки и управляют разделение представления на несколько областей.  Если пользователь разделяет окно, платформа создает и вложение дополнительные объекты представления в документ.|  
-|Построение, тест и отладки приложения.|Используйте средства Visual C\+\+ для создания, выполнения и отладки приложения.|C Visual C\+\+ позволяет настроить компилируется, ссылки и другие параметры.  Он также позволяет просматривать в исходный код и структура класса.|  
+|Task|You do|The framework does|  
+|----------|------------|------------------------|  
+|Create a skeleton application.|Run the [MFC Application Wizard](../mfc/reference/mfc-application-wizard.md). Specify the options you want in the options pages. Options include making the application a COM component, container, or both; adding Automation; and making the application database-aware.|The MFC Application Wizard creates the files for a skeleton application, including source files for your application, document, view, and frame windows; a resource file; a project file; and others, all tailored to your specifications.|  
+|See what the framework and the MFC Application Wizard offer without adding a line of your own code.|Build the skeleton application and run it in Visual C++.|The running skeleton application derives many standard **File**, **Edit**, **View**, and **Help** menu commands from the framework. For MDI applications, you also get a fully functional Windows menu, and the framework manages creation, arrangement, and destruction of MDI child windows.|  
+|Construct your application's user interface.|Use the Visual C++ [resource editors](../windows/resource-editors.md) to visually edit the application's user interface:<br /><br /> -   Create menus.<br />-   Define accelerators.<br />-   Create dialog boxes.<br />-   Create and edit bitmaps, icons, and cursors.<br />-   Edit the toolbar created for you by the MFC Application Wizard.<br />-   Create and edit other resources.<br /><br /> You can also test the dialog boxes in the dialog editor.|The default resource file created by the MFC Application Wizard supplies many of the resources you need. Visual C++ lets you edit existing resources and add new resources easily and visually.|  
+|Map menus to handler functions.|Use the **Events** button in the [Properties window](/visualstudio/ide/reference/properties-window) to connect menus and accelerators to handler functions in your code.|The Properties window inserts message-map entries and empty function templates into the source files you specify and manages many manual coding tasks.|  
+|Write your handler code.|Use Class View to jump directly to the code in the source code editor. Fill in the code for your handler functions. For more information on using Class View and about wizards that add code to a project, see [Adding Functionality with Code Wizards](../ide/adding-functionality-with-code-wizards-cpp.md).|Class View opens the editor, scrolls to the empty function template and positions the cursor for you.|  
+|Map toolbar buttons to commands.|Map each button on your toolbar to a menu or accelerator command by assigning the button the appropriate command ID.|The framework controls the drawing, enabling, disabling, checking, and other visual aspects of the toolbar buttons.|  
+|Test your handler functions.|Rebuild the program and use the built-in debugging tools to test that your handlers work correctly.|You can step or trace through the code to see how your handlers are called. If you have filled out the handler code, the handlers carry out commands. The framework will automatically disable menu items and toolbar buttons that are not handled.|  
+|Add [dialog boxes](../mfc/dialog-boxes.md).|Design dialog-template resources with the dialog editor. Then create a dialog class and the code that handles the dialog box.|The framework manages the dialog box and facilitates retrieving information entered by the user.|  
+|Initialize, validate, and retrieve dialog-box data.|You can also define how the dialog box's controls are to be initialized and validated. Use Visual Studio to add member variables to the dialog class and map them to dialog controls. Specify validation rules to be applied to each control as the user enters data. Provide your own custom validations if you wish.|The framework manages dialog-box initialization and validation. If the user enters invalid information, the framework displays a message box and lets the user reenter the data.|  
+|Create additional classes.|Use Class View to create additional document, view, and frame-window classes beyond those created automatically by the MFC Application Wizard. You can create additional database recordset classes, dialog classes, and so on. (With Class View, you can create classes not derived from MFC classes.)|Class View adds these classes to your source files and helps you define their connections to any commands they handle.|  
+|Add ready-to-use components to your application.|Use the `New Item dialog box` to add a variety of items.|These items are easy to integrate into your application and save you a great deal of work.|  
+|Implement your document class.|Implement your application-specific document class or classes. Add member variables to hold data structures. Add member functions to provide an interface to the data.|The framework already knows how to interact with document data files. It can open and close document files, read and write the document's data, and handle other user interfaces. You can focus on how the document's data is manipulated.|  
+|Implement Open, Save, and Save As commands.|Write code for the document's `Serialize` member function.|The framework displays dialog boxes for the **Open**, **Save**, and **Save As** commands on the **File** menu. It writes and reads back a document using the data format specified in your `Serialize` member function.|  
+|Implement your view class.|Implement one or more view classes corresponding to your documents. Implement the view's member functions that you mapped to the user interface with Class View. A variety of [CView](../mfc/reference/cview-class.md)-derived classes are available, including [CListView](../mfc/reference/clistview-class.md) and [CTreeView](../mfc/reference/ctreeview-class.md).|The framework manages most of the relationship between a document and its view. The view's member functions access the view's document to render its image on the screen or printed page and to update the document's data structures in response to user editing commands.|  
+|Enhance default printing.|If you need to support multipage printing, override view member functions.|The framework supports the **Print**, **Page Setup**, and **Print Preview** commands on the **File** menu. You must tell it how to break your document into multiple pages.|  
+|Add scrolling.|If you need to support scrolling, derive your view class or classes from [CScrollView](../mfc/reference/cscrollview-class.md).|The view automatically adds scroll bars when the view window becomes too small.|  
+|Create form views.|If you want to base your views on dialog-template resources, derive your view class or classes from [CFormView](../mfc/reference/cformview-class.md).|The view uses the dialog-template resource to display controls. The user can tab from control to control in the view.|  
+|Create database forms.|If you want a form-based data-access application, derive your view class from [CRecordView](../mfc/reference/crecordview-class.md) (for ODBC programming).|The view works like a form view, but its controls are connected to the fields of a [CRecordset](../mfc/reference/crecordset-class.md) object representing a database table. MFC moves data between the controls and the recordset for you.|  
+|Create a simple text editor.|If you want your view to be a simple text editor, derive your view class or classes from [CEditView](../mfc/reference/ceditview-class.md) or [CRichEditView](../mfc/reference/cricheditview-class.md).|The view provides editing functions, Clipboard support, and file input/output. `CRichEditView` provides styled text.|  
+|Add splitter windows.|If you want to support window splitting, add a [CSplitterWnd](../mfc/reference/csplitterwnd-class.md) object to your SDI frame window or MDI child window and hook it up in the window's [OnCreateClient](../mfc/reference/cframewnd-class.md#oncreateclient) member function.|The framework supplies splitter-box controls next to the scroll bars and manages splitting your view into multiple panes. If the user splits a window, the framework creates and attaches additional view objects to the document.|  
+|Build, test, and debug your application.|Use the facilities of Visual C++ to build, test, and debug your application.|Visual C++ lets you adjust compile, link, and other options. It also lets you browse your source code and class structure.|  
   
-## См. также  
- [Последовательность операций для создания приложений OLE](../mfc/sequence-of-operations-for-creating-ole-applications.md)   
- [Последовательность операций при создании элементов управления ActiveX](../mfc/sequence-of-operations-for-creating-activex-controls.md)   
- [Последовательность операций для создания приложений баз данных](../mfc/sequence-of-operations-for-creating-database-applications.md)   
- [Сборка в платформе](../mfc/building-on-the-framework.md)
+## <a name="see-also"></a>See Also  
+ [Sequence of Operations for Creating OLE Applications](../mfc/sequence-of-operations-for-creating-ole-applications.md)   
+ [Sequence of Operations for Creating ActiveX Controls](../mfc/sequence-of-operations-for-creating-activex-controls.md)   
+ [Sequence of Operations for Creating Database Applications](../mfc/sequence-of-operations-for-creating-database-applications.md)   
+ [Building on the Framework](../mfc/building-on-the-framework.md)
+
+

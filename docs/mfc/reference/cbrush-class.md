@@ -1,5 +1,5 @@
 ---
-title: "CBrush-класс | Документы Microsoft"
+title: CBrush Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -23,8 +23,15 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- brushes, CBrush class
-- CBrush class
+- CBrush [MFC], CBrush
+- CBrush [MFC], CreateBrushIndirect
+- CBrush [MFC], CreateDIBPatternBrush
+- CBrush [MFC], CreateHatchBrush
+- CBrush [MFC], CreatePatternBrush
+- CBrush [MFC], CreateSolidBrush
+- CBrush [MFC], CreateSysColorBrush
+- CBrush [MFC], FromHandle
+- CBrush [MFC], GetLogBrush
 ms.assetid: e5ef2c62-dd95-4973-9090-f52f605900e1
 caps.latest.revision: 21
 author: mikeblome
@@ -44,68 +51,68 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0e0c08ddc57d437c51872b5186ae3fc983bb0199
-ms.openlocfilehash: efcbe2757de3a7e4621e2b20c88726ead111cf8c
+ms.translationtype: MT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 23a816363af6f77ff498890a4e4cca8ecc17d53a
 ms.contentlocale: ru-ru
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 09/12/2017
 
 ---
-# <a name="cbrush-class"></a>CBrush-класс
-Инкапсулирует кисть интерфейса графических устройств Windows (GDI).  
+# <a name="cbrush-class"></a>CBrush Class
+Encapsulates a Windows graphics device interface (GDI) brush.  
   
-## <a name="syntax"></a>Синтаксис  
+## <a name="syntax"></a>Syntax  
   
 ```  
 class CBrush : public CGdiObject  
 ```  
   
-## <a name="members"></a>Члены  
+## <a name="members"></a>Members  
   
-### <a name="public-constructors"></a>Открытые конструкторы  
+### <a name="public-constructors"></a>Public Constructors  
   
-|Имя|Описание|  
+|Name|Description|  
 |----------|-----------------|  
-|[CBrush::CBrush](#cbrush)|Создает объект `CBrush`.|  
+|[CBrush::CBrush](#cbrush)|Constructs a `CBrush` object.|  
   
-### <a name="public-methods"></a>Открытые методы  
+### <a name="public-methods"></a>Public Methods  
   
-|Имя|Описание|  
+|Name|Description|  
 |----------|-----------------|  
-|[CBrush::CreateBrushIndirect](#createbrushindirect)|Инициализирует кисть с стиль, цвет и шаблону, заданному в [LOGBRUSH](http://msdn.microsoft.com/library/windows/desktop/dd145035) структуры.|  
-|[CBrush::CreateDIBPatternBrush](#createdibpatternbrush)|Инициализирует кисти с шаблоном, определяемое аппаратно независимые точечный рисунок (DIB).|  
-|[CBrush::CreateHatchBrush](#createhatchbrush)|Инициализирует кисть с заданным шаблоном заштрихованного и цвет.|  
-|[CBrush::CreatePatternBrush](#createpatternbrush)|Инициализирует кисти с шаблоном, определяемое точечного рисунка.|  
-|[CBrush::CreateSolidBrush](#createsolidbrush)|Инициализирует кисть с указанным сплошным цветом.|  
-|[CBrush::CreateSysColorBrush](#createsyscolorbrush)|Создает кисть, которая является системный цвет по умолчанию.|  
-|[CBrush::FromHandle](#fromhandle)|Возвращает указатель на `CBrush` объект для заданного дескриптора окна `HBRUSH` объекта.|  
-|[CBrush::GetLogBrush](#getlogbrush)|Возвращает [LOGBRUSH](http://msdn.microsoft.com/library/windows/desktop/dd145035) структуры.|  
+|[CBrush::CreateBrushIndirect](#createbrushindirect)|Initializes a brush with the style, color, and pattern specified in a [LOGBRUSH](http://msdn.microsoft.com/library/windows/desktop/dd145035) structure.|  
+|[CBrush::CreateDIBPatternBrush](#createdibpatternbrush)|Initializes a brush with a pattern specified by a device-independent bitmap (DIB).|  
+|[CBrush::CreateHatchBrush](#createhatchbrush)|Initializes a brush with the specified hatched pattern and color.|  
+|[CBrush::CreatePatternBrush](#createpatternbrush)|Initializes a brush with a pattern specified by a bitmap.|  
+|[CBrush::CreateSolidBrush](#createsolidbrush)|Initializes a brush with the specified solid color.|  
+|[CBrush::CreateSysColorBrush](#createsyscolorbrush)|Creates a brush that is the default system color.|  
+|[CBrush::FromHandle](#fromhandle)|Returns a pointer to a `CBrush` object when given a handle to a Windows `HBRUSH` object.|  
+|[CBrush::GetLogBrush](#getlogbrush)|Gets a [LOGBRUSH](http://msdn.microsoft.com/library/windows/desktop/dd145035) structure.|  
   
-### <a name="public-operators"></a>Открытые операторы  
+### <a name="public-operators"></a>Public Operators  
   
-|Имя|Описание|  
+|Name|Description|  
 |----------|-----------------|  
-|[CBrush::operator HBRUSH](#operator_hbrush)|Возвращает дескриптор Windows, присоединенные к `CBrush` объекта.|  
+|[CBrush::operator HBRUSH](#operator_hbrush)|Returns the Windows handle attached to the `CBrush` object.|  
   
-## <a name="remarks"></a>Примечания  
- Для использования `CBrush` объекта, создания `CBrush` и передать его на любой `CDC` функция-член, требующий кисти.  
+## <a name="remarks"></a>Remarks  
+ To use a `CBrush` object, construct a `CBrush` object and pass it to any `CDC` member function that requires a brush.  
   
- Кисти может быть сплошной, hatched или узор.  
+ Brushes can be solid, hatched, or patterned.  
   
- Дополнительные сведения о `CBrush`, в разделе [графические объекты](../../mfc/graphic-objects.md).  
+ For more information on `CBrush`, see [Graphic Objects](../../mfc/graphic-objects.md).  
   
-## <a name="inheritance-hierarchy"></a>Иерархия наследования  
+## <a name="inheritance-hierarchy"></a>Inheritance Hierarchy  
  [CObject](../../mfc/reference/cobject-class.md)  
   
  [CGdiObject](../../mfc/reference/cgdiobject-class.md)  
   
  `CBrush`  
   
-## <a name="requirements"></a>Требования  
- **Заголовок:** afxwin.h  
+## <a name="requirements"></a>Requirements  
+ **Header:** afxwin.h  
   
-##  <a name="cbrush"></a>CBrush::CBrush  
- Создает объект `CBrush`.  
+##  <a name="cbrush"></a>  CBrush::CBrush  
+ Constructs a `CBrush` object.  
   
 ```  
 CBrush(); 
@@ -114,66 +121,66 @@ CBrush(int nIndex, COLORREF crColor);
 explicit CBrush(CBitmap* pBitmap);
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
  `crColor`  
- Указывает цвет кисти как цвета RGB. Если кисть hatched, этот параметр задает цвет штриховки.  
+ Specifies the foreground color of the brush as an RGB color. If the brush is hatched, this parameter specifies the color of the hatching.  
   
  `nIndex`  
- Задает стиль штриховки для кисти. Это может быть одно из следующих значений:  
+ Specifies the hatch style of the brush. It can be any one of the following values:  
   
-- `HS_BDIAGONAL`Штриховки вниз (слева направо) на 45 градусов  
+- `HS_BDIAGONAL` Downward hatch (left to right) at 45 degrees  
   
-- `HS_CROSS`Горизонтальные и вертикальные штриховки  
+- `HS_CROSS` Horizontal and vertical crosshatch  
   
-- `HS_DIAGCROSS`Перекрестная штриховка на 45 градусов  
+- `HS_DIAGCROSS` Crosshatch at 45 degrees  
   
-- `HS_FDIAGONAL`Диагональная штриховка (слева направо) на 45 градусов  
+- `HS_FDIAGONAL` Upward hatch (left to right) at 45 degrees  
   
-- `HS_HORIZONTAL`Горизонтальная штриховка  
+- `HS_HORIZONTAL` Horizontal hatch  
   
-- `HS_VERTICAL`Вертикальная штриховка  
+- `HS_VERTICAL` Vertical hatch  
   
  `pBitmap`  
- Указывает `CBitmap` , указывающий точечного рисунка, с которой кисть рисует.  
+ Points to a `CBitmap` object that specifies a bitmap with which the brush paints.  
   
-### <a name="remarks"></a>Примечания  
- `CBrush`имеет четыре перегруженные конструкторы. Конструктор без аргументов создает неинициализированный объект `CBrush` объект, который необходимо инициализировать, прежде чем можно будет использовать.  
+### <a name="remarks"></a>Remarks  
+ `CBrush` has four overloaded constructors.The constructor with no arguments constructs an uninitialized `CBrush` object that must be initialized before it can be used.  
   
- Если вы используете конструктор без аргументов, необходимо инициализировать итоговый `CBrush` объекта с [CreateSolidBrush](#createsolidbrush), [CreateHatchBrush](#createhatchbrush), [CreateBrushIndirect](#createbrushindirect), [CreatePatternBrush](#createpatternbrush), или [CreateDIBPatternBrush](#createdibpatternbrush). При использовании одного из конструкторов, которые принимают аргументы, затем дальнейшая инициализация необходима. Конструкторы с аргументами может создавать исключения, если возникли ошибки, хотя конструктор без аргументов всегда будет успешным.  
+ If you use the constructor with no arguments, you must initialize the resulting `CBrush` object with [CreateSolidBrush](#createsolidbrush), [CreateHatchBrush](#createhatchbrush), [CreateBrushIndirect](#createbrushindirect), [CreatePatternBrush](#createpatternbrush), or [CreateDIBPatternBrush](#createdibpatternbrush). If you use one of the constructors that takes arguments, then no further initialization is necessary. The constructors with arguments can throw an exception if errors are encountered, while the constructor with no arguments will always succeed.  
   
- Конструктор с одним [COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449) параметр создает сплошную кисть с указанным цветом. Цвет указывает значение RGB и могут создаваться с использованием `RGB` макрос в WINDOWS. З.  
+ The constructor with a single [COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449) parameter constructs a solid brush with the specified color. The color specifies an RGB value and can be constructed with the `RGB` macro in WINDOWS.H.  
   
- Конструктор с двумя параметрами кисть штриховки. `nIndex` Параметр указывает индекс заштрихованного шаблон. `crColor` Параметр определяет цвет.  
+ The constructor with two parameters constructs a hatch brush. The `nIndex` parameter specifies the index of a hatched pattern. The `crColor` parameter specifies the color.  
   
- Конструктор с `CBitmap` параметр узором кисть. Этот параметр идентифицирует точечного рисунка. Точечный рисунок предполагается, что были созданы с помощью [CBitmap::CreateBitmap](../../mfc/reference/cbitmap-class.md#createbitmap), [CBitmap::CreateBitmapIndirect](../../mfc/reference/cbitmap-class.md#createbitmapindirect), [CBitmap::LoadBitmap](../../mfc/reference/cbitmap-class.md#loadbitmap), или [CBitmap::CreateCompatibleBitmap](../../mfc/reference/cbitmap-class.md#createcompatiblebitmap). Минимальный размер растрового изображения для использования в узора заливки — 8 x 8 пикселей.  
+ The constructor with a `CBitmap` parameter constructs a patterned brush. The parameter identifies a bitmap. The bitmap is assumed to have been created by using [CBitmap::CreateBitmap](../../mfc/reference/cbitmap-class.md#createbitmap), [CBitmap::CreateBitmapIndirect](../../mfc/reference/cbitmap-class.md#createbitmapindirect), [CBitmap::LoadBitmap](../../mfc/reference/cbitmap-class.md#loadbitmap), or [CBitmap::CreateCompatibleBitmap](../../mfc/reference/cbitmap-class.md#createcompatiblebitmap). The minimum size for a bitmap to be used in a fill pattern is 8 pixels by 8 pixels.  
   
-### <a name="example"></a>Пример  
- [!code-cpp[NVC_MFCDocView&#21;](../../mfc/codesnippet/cpp/cbrush-class_1.cpp)]  
+### <a name="example"></a>Example  
+ [!code-cpp[NVC_MFCDocView#21](../../mfc/codesnippet/cpp/cbrush-class_1.cpp)]  
   
-##  <a name="createbrushindirect"></a>CBrush::CreateBrushIndirect  
- Инициализирует кисть с стиль, цвет и шаблону, заданному в [LOGBRUSH](http://msdn.microsoft.com/library/windows/desktop/dd145035) структуры.  
+##  <a name="createbrushindirect"></a>  CBrush::CreateBrushIndirect  
+ Initializes a brush with a style, color, and pattern specified in a [LOGBRUSH](http://msdn.microsoft.com/library/windows/desktop/dd145035) structure.  
   
 ```  
 BOOL CreateBrushIndirect(const LOGBRUSH* lpLogBrush);
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
  *lpLogBrush*  
- Указывает [LOGBRUSH](http://msdn.microsoft.com/library/windows/desktop/dd145035) структуру, содержащую сведения о кисти.  
+ Points to a [LOGBRUSH](http://msdn.microsoft.com/library/windows/desktop/dd145035) structure that contains information about the brush.  
   
-### <a name="return-value"></a>Возвращаемое значение  
- Ненулевое значение, если функция выполнена успешно; в противном случае — 0.  
+### <a name="return-value"></a>Return Value  
+ Nonzero if the function is successful; otherwise 0.  
   
-### <a name="remarks"></a>Примечания  
- Кисть впоследствии может быть выбран в качестве текущей кисти для любого контекста устройства.  
+### <a name="remarks"></a>Remarks  
+ The brush can subsequently be selected as the current brush for any device context.  
   
- Кисть, созданные с помощью точечного рисунка монохромный (плоскость 1, 1 бит на пиксель), рисуется с помощью текущих цветов текста и фона. Будет отображен представлены бит установлен в 0 пикселей цветом текста. Точек, представленных бит установлен в 1 будет рисоваться с текущим цветом фона.  
+ A brush created using a monochrome (1 plane, 1 bit per pixel) bitmap is drawn using the current text and background colors. Pixels represented by a bit set to 0 will be drawn with the current text color. Pixels represented by a bit set to 1 will be drawn with the current background color.  
   
-### <a name="example"></a>Пример  
- [!code-cpp[NVC_MFCDocView&#22;](../../mfc/codesnippet/cpp/cbrush-class_2.cpp)]  
+### <a name="example"></a>Example  
+ [!code-cpp[NVC_MFCDocView#22](../../mfc/codesnippet/cpp/cbrush-class_2.cpp)]  
   
-##  <a name="createdibpatternbrush"></a>CBrush::CreateDIBPatternBrush  
- Инициализирует кисти шаблону, определяемому аппаратно независимые точечный рисунок (DIB).  
+##  <a name="createdibpatternbrush"></a>  CBrush::CreateDIBPatternBrush  
+ Initializes a brush with the pattern specified by a device-independent bitmap (DIB).  
   
 ```  
 BOOL CreateDIBPatternBrush(
@@ -186,49 +193,49 @@ BOOL CreateDIBPatternBrush(
     UINT nUsage);
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
  *hPackedDIB*  
- Определяет объект глобальной памяти, содержащий упакованный аппаратно независимые точечный рисунок (DIB).  
+ Identifies a global-memory object containing a packed device-independent bitmap (DIB).  
   
  *nUsage*  
- Указывает ли **[bmiColors]** поля [BITMAPINFO](../../mfc/reference/bitmapinfo-structure.md) структуру данных (в составе «упакованные DIB») содержат явные значения RGB или индексов в палитре в настоящее время реализованных логических. Параметр должен иметь одно из следующих значений:  
+ Specifies whether the **bmiColors[]** fields of the [BITMAPINFO](../../mfc/reference/bitmapinfo-structure.md) data structure (a part of the "packed DIB") contain explicit RGB values or indices into the currently realized logical palette. The parameter must be one of the following values:  
   
-- **DIB_PAL_COLORS** таблица цветов состоит из массива 16-разрядными индексами.  
+- **DIB_PAL_COLORS** The color table consists of an array of 16-bit indexes.  
   
-- **DIB_RGB_COLORS** таблица цветов содержит литеральные значения RGB.  
+- **DIB_RGB_COLORS** The color table contains literal RGB values.  
   
  *lpPackedDIB*  
- Указывает упакованный DIB, состоящий из `BITMAPINFO` структуры немедленно следовать массив байтов, определение пикселов точечного рисунка.  
+ Points to a packed DIB consisting of a `BITMAPINFO` structure immediately followed by an array of bytes defining the pixels of the bitmap.  
   
-### <a name="return-value"></a>Возвращаемое значение  
- Имеет ненулевое значение в случае успешного выполнения, иначе — 0.  
+### <a name="return-value"></a>Return Value  
+ Nonzero if successful; otherwise 0.  
   
-### <a name="remarks"></a>Примечания  
- Кисть, которая впоследствии может быть выбран для любого контекста устройства, поддерживающий растровых операций.  
+### <a name="remarks"></a>Remarks  
+ The brush can subsequently be selected for any device context that supports raster operations.  
   
- Двух версий отличаются образом обработать DIB.  
+ The two versions differ in the way you handle the DIB:  
   
--   В первой версии, чтобы получить дескриптор для файла DIB вызове Windows **GlobalAlloc** функцию, чтобы выделить блок памяти глобальных и затем заполнить память упакованным DIB.  
+-   In the first version, to obtain a handle to the DIB you call the Windows **GlobalAlloc** function to allocate a block of global memory and then fill the memory with the packed DIB.  
   
--   Во второй версии, не нужно вызывать **GlobalAlloc** выделить память для упакованным DIB.  
+-   In the second version, it is not necessary to call **GlobalAlloc** to allocate memory for the packed DIB.  
   
- Упакованный DIB состоит из `BITMAPINFO` структуру данных, немедленно следовать массив байтов, определяющий пикселов точечного рисунка. Растровые изображения, используемых в качестве шаблонов для заполнения должно быть 8 пикселей на 8 пикселей. Если размер точечного рисунка Windows создает шаблон заполнения, с использованием только биты, соответствующие первые 8 строк и столбцов 8 пикселей в левом верхнем углу точечного рисунка.  
+ A packed DIB consists of a `BITMAPINFO` data structure immediately followed by the array of bytes that defines the pixels of the bitmap. Bitmaps used as fill patterns should be 8 pixels by 8 pixels. If the bitmap is larger, Windows creates a fill pattern using only the bits corresponding to the first 8 rows and 8 columns of pixels in the upper-left corner of the bitmap.  
   
- Когда приложение выбирает шаблон кисти DIB двух цветов в контексте монохромный устройства, Windows игнорирует цвета, указанные в DIB, а вместо них отображается шаблон кисти с использованием текущих цветов текста и фона контекста устройства. Пикселей сопоставляется первый цвет DIB (со смещением 0 в таблице цветов DIB) отображаются с помощью цвета текста. Пикселей сопоставляется второй цвет (со смещения 1 в таблице цветов), отображаются цветом фона.  
+ When an application selects a two-color DIB pattern brush into a monochrome device context, Windows ignores the colors specified in the DIB and instead displays the pattern brush using the current text and background colors of the device context. Pixels mapped to the first color (at offset 0 in the DIB color table) of the DIB are displayed using the text color. Pixels mapped to the second color (at offset 1 in the color table) are displayed using the background color.  
   
- Сведения об использовании следующих функций Windows см. в разделе [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]:  
+ For information about using the following Windows functions, see the Windows SDK:  
   
-- [CreateDIBPatternBrush](http://msdn.microsoft.com/library/windows/desktop/dd183492) (эта функция предназначена только для совместимости с приложениями, разработанными для операционных систем более ранних, чем 3.0; используйте **CreateDIBPatternBrushPt** функции.)  
+- [CreateDIBPatternBrush](http://msdn.microsoft.com/library/windows/desktop/dd183492) (This function is provided only for compatibility with applications written for versions of Windows earlier than 3.0; use the **CreateDIBPatternBrushPt** function.)  
   
-- [CreateDIBPatternBrushPt](http://msdn.microsoft.com/library/windows/desktop/dd183493) (эта функция должна использоваться для приложений на базе Win32.)  
+- [CreateDIBPatternBrushPt](http://msdn.microsoft.com/library/windows/desktop/dd183493) (This function should be used for Win32-based applications.)  
   
 - [GlobalAlloc](http://msdn.microsoft.com/library/windows/desktop/aa366574)  
   
-### <a name="example"></a>Пример  
- [!code-cpp[NVC_MFCDocView&#23;](../../mfc/codesnippet/cpp/cbrush-class_3.cpp)]  
+### <a name="example"></a>Example  
+ [!code-cpp[NVC_MFCDocView#23](../../mfc/codesnippet/cpp/cbrush-class_3.cpp)]  
   
-##  <a name="createhatchbrush"></a>CBrush::CreateHatchBrush  
- Инициализирует кисть с заданным шаблоном заштрихованного и цвет.  
+##  <a name="createhatchbrush"></a>  CBrush::CreateHatchBrush  
+ Initializes a brush with the specified hatched pattern and color.  
   
 ```  
 BOOL CreateHatchBrush(
@@ -236,176 +243,176 @@ BOOL CreateHatchBrush(
     COLORREF crColor);
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
  `nIndex`  
- Задает стиль штриховки для кисти. Это может быть одно из следующих значений:  
+ Specifies the hatch style of the brush. It can be any one of the following values:  
   
-- `HS_BDIAGONAL`Штриховки вниз (слева направо) на 45 градусов  
+- `HS_BDIAGONAL` Downward hatch (left to right) at 45 degrees  
   
-- `HS_CROSS`Горизонтальные и вертикальные штриховки  
+- `HS_CROSS` Horizontal and vertical crosshatch  
   
-- `HS_DIAGCROSS`Перекрестная штриховка на 45 градусов  
+- `HS_DIAGCROSS` Crosshatch at 45 degrees  
   
-- `HS_FDIAGONAL`Диагональная штриховка (слева направо) на 45 градусов  
+- `HS_FDIAGONAL` Upward hatch (left to right) at 45 degrees  
   
-- `HS_HORIZONTAL`Горизонтальная штриховка  
+- `HS_HORIZONTAL` Horizontal hatch  
   
-- `HS_VERTICAL`Вертикальная штриховка  
+- `HS_VERTICAL` Vertical hatch  
   
  `crColor`  
- Указывает цвет кисти цветом RGB (Цвет штриховки). В разделе [COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449) в [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)] для получения дополнительной информации.  
+ Specifies the foreground color of the brush as an RGB color (the color of the hatches). See [COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449) in the Windows SDK for more information.  
   
-### <a name="return-value"></a>Возвращаемое значение  
- Имеет ненулевое значение в случае успешного выполнения, иначе — 0.  
+### <a name="return-value"></a>Return Value  
+ Nonzero if successful; otherwise 0.  
   
-### <a name="remarks"></a>Примечания  
- Кисть впоследствии может быть выбран в качестве текущей кисти для любого контекста устройства.  
+### <a name="remarks"></a>Remarks  
+ The brush can subsequently be selected as the current brush for any device context.  
   
-### <a name="example"></a>Пример  
- [!code-cpp[NVC_MFCDocView&#24;](../../mfc/codesnippet/cpp/cbrush-class_4.cpp)]  
+### <a name="example"></a>Example  
+ [!code-cpp[NVC_MFCDocView#24](../../mfc/codesnippet/cpp/cbrush-class_4.cpp)]  
   
-##  <a name="createpatternbrush"></a>CBrush::CreatePatternBrush  
- Инициализирует кисти с шаблоном, определяемое точечного рисунка.  
+##  <a name="createpatternbrush"></a>  CBrush::CreatePatternBrush  
+ Initializes a brush with a pattern specified by a bitmap.  
   
 ```  
 BOOL CreatePatternBrush(CBitmap* pBitmap);
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
  `pBitmap`  
- Идентифицирует точечного рисунка.  
+ Identifies a bitmap.  
   
-### <a name="return-value"></a>Возвращаемое значение  
- Имеет ненулевое значение в случае успешного выполнения, иначе — 0.  
+### <a name="return-value"></a>Return Value  
+ Nonzero if successful; otherwise 0.  
   
-### <a name="remarks"></a>Примечания  
- Кисть, которая впоследствии может быть выбран для любого контекста устройства, поддерживающий растровых операций. Точечный рисунок, идентифицируемый `pBitmap` обычно инициализируются с помощью [CBitmap::CreateBitmap](../../mfc/reference/cbitmap-class.md#createbitmap), [CBitmap::CreateBitmapIndirect](../../mfc/reference/cbitmap-class.md#createbitmapindirect), [CBitmap::LoadBitmap](../../mfc/reference/cbitmap-class.md#loadbitmap), или [CBitmap::CreateCompatibleBitmap](../../mfc/reference/cbitmap-class.md#createcompatiblebitmap) функции.  
+### <a name="remarks"></a>Remarks  
+ The brush can subsequently be selected for any device context that supports raster operations. The bitmap identified by `pBitmap` is typically initialized by using the [CBitmap::CreateBitmap](../../mfc/reference/cbitmap-class.md#createbitmap), [CBitmap::CreateBitmapIndirect](../../mfc/reference/cbitmap-class.md#createbitmapindirect), [CBitmap::LoadBitmap](../../mfc/reference/cbitmap-class.md#loadbitmap), or [CBitmap::CreateCompatibleBitmap](../../mfc/reference/cbitmap-class.md#createcompatiblebitmap) function.  
   
- Растровые изображения, используемых в качестве шаблонов для заполнения должно быть 8 пикселей на 8 пикселей. Если размер точечного рисунка Windows будет использовать только биты, соответствующие первые 8 строк и столбцов точек в левом верхнем углу точечного рисунка.  
+ Bitmaps used as fill patterns should be 8 pixels by 8 pixels. If the bitmap is larger, Windows will only use the bits corresponding to the first 8 rows and columns of pixels in the upper-left corner of the bitmap.  
   
- Шаблон кисти могут быть удалены не влияя на связанный точечного рисунка. Это означает, что точечный рисунок можно использовать для создать любое количество шаблон кисти.  
+ A pattern brush can be deleted without affecting the associated bitmap. This means the bitmap can be used to create any number of pattern brushes.  
   
- Кисть, созданные с помощью монохромный точечный рисунок (1 цвет плоскости, 1 бит на пиксель), рисуется с помощью текущих цветов текста и фона. Представленный бит 0 пикселов цветом текста. Представленный бит установлен в 1 пикселов с текущим цветом фона.  
+ A brush created using a monochrome bitmap (1 color plane, 1 bit per pixel) is drawn using the current text and background colors. Pixels represented by a bit set to 0 are drawn with the current text color. Pixels represented by a bit set to 1 are drawn with the current background color.  
   
- Дополнительные сведения об использовании [CreatePatternBrush](http://msdn.microsoft.com/library/windows/desktop/dd183508), функции Windows, в разделе [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
+ For information about using [CreatePatternBrush](http://msdn.microsoft.com/library/windows/desktop/dd183508), a Windows function, see the Windows SDK.  
   
-### <a name="example"></a>Пример  
- [!code-cpp[NVC_MFCDocView&#25;](../../mfc/codesnippet/cpp/cbrush-class_5.cpp)]  
+### <a name="example"></a>Example  
+ [!code-cpp[NVC_MFCDocView#25](../../mfc/codesnippet/cpp/cbrush-class_5.cpp)]  
   
-##  <a name="createsolidbrush"></a>CBrush::CreateSolidBrush  
- Инициализирует кисти указанного сплошным цветом.  
+##  <a name="createsolidbrush"></a>  CBrush::CreateSolidBrush  
+ Initializes a brush with a specified solid color.  
   
 ```  
 BOOL CreateSolidBrush(COLORREF crColor);
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
  `crColor`  
- Объект [COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449) структура, которая задает цвет кисти. Цвет указывает значение RGB и могут создаваться с использованием `RGB` макрос в WINDOWS. З.  
+ A [COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449) structure that specifies the color of the brush. The color specifies an RGB value and can be constructed with the `RGB` macro in WINDOWS.H.  
   
-### <a name="return-value"></a>Возвращаемое значение  
- Имеет ненулевое значение в случае успешного выполнения, иначе — 0.  
+### <a name="return-value"></a>Return Value  
+ Nonzero if successful; otherwise 0.  
   
-### <a name="remarks"></a>Примечания  
- Кисть впоследствии может быть выбран в качестве текущей кисти для любого контекста устройства.  
+### <a name="remarks"></a>Remarks  
+ The brush can subsequently be selected as the current brush for any device context.  
   
- Когда приложение завершило кисти, созданные с помощью `CreateSolidBrush`, его следует выбрать кисти из контекста устройства.  
+ When an application has finished using the brush created by `CreateSolidBrush`, it should select the brush out of the device context.  
   
-### <a name="example"></a>Пример  
-  В примере показано [CBrush::CBrush](#cbrush).  
+### <a name="example"></a>Example  
+  See the example for [CBrush::CBrush](#cbrush).  
   
-##  <a name="createsyscolorbrush"></a>CBrush::CreateSysColorBrush  
- Инициализирует цвет кисти.  
+##  <a name="createsyscolorbrush"></a>  CBrush::CreateSysColorBrush  
+ Initializes a brush color.  
   
 ```  
 BOOL CreateSysColorBrush(int nIndex);
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
  `nIndex`  
- Определяет индекс как цвет. Это значение соответствует цвет, используемый для рисования один из элементов 21 окна. В разделе [GetSysColor](http://msdn.microsoft.com/library/windows/desktop/ms724371) в [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)] список значений.  
+ Specifies a color index. This value corresponds to the color used to paint one of the 21 window elements. See [GetSysColor](http://msdn.microsoft.com/library/windows/desktop/ms724371) in the Windows SDK for a list of values.  
   
-### <a name="return-value"></a>Возвращаемое значение  
- Имеет ненулевое значение в случае успешного выполнения, иначе — 0.  
+### <a name="return-value"></a>Return Value  
+ Nonzero if successful; otherwise 0.  
   
-### <a name="remarks"></a>Примечания  
- Кисть впоследствии может быть выбран в качестве текущей кисти для любого контекста устройства.  
+### <a name="remarks"></a>Remarks  
+ The brush can subsequently be selected as the current brush for any device context.  
   
- Когда приложение завершило кисти, созданные с помощью `CreateSysColorBrush`, его следует выбрать кисти из контекста устройства.  
+ When an application has finished using the brush created by `CreateSysColorBrush`, it should select the brush out of the device context.  
   
-### <a name="example"></a>Пример  
- [!code-cpp[NVC_MFCDocView&#26;](../../mfc/codesnippet/cpp/cbrush-class_6.cpp)]  
+### <a name="example"></a>Example  
+ [!code-cpp[NVC_MFCDocView#26](../../mfc/codesnippet/cpp/cbrush-class_6.cpp)]  
   
-##  <a name="fromhandle"></a>CBrush::FromHandle  
- Возвращает указатель на `CBrush` объект для заданного дескриптора окна [HBRUSH](#operator_hbrush) объекта.  
+##  <a name="fromhandle"></a>  CBrush::FromHandle  
+ Returns a pointer to a `CBrush` object when given a handle to a Windows [HBRUSH](#operator_hbrush) object.  
   
 ```  
 static CBrush* PASCAL FromHandle(HBRUSH hBrush);
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
  `hBrush`  
- `HANDLE`кисти Windows GDI.  
+ `HANDLE` to a Windows GDI brush.  
   
-### <a name="return-value"></a>Возвращаемое значение  
- Указатель на `CBrush` объекта, если успешно; в противном случае **NULL**.  
+### <a name="return-value"></a>Return Value  
+ A pointer to a `CBrush` object if successful; otherwise **NULL**.  
   
-### <a name="remarks"></a>Примечания  
- Если `CBrush` объект еще не присоединен к дескриптору временный `CBrush` объект создается и прикрепляется. Этот временный `CBrush` допустимо только до следующего приложения имеет время простоя в свой цикл событий. В настоящее время будут удалены все временные графические объекты. Другими словами временный объект является допустимым только во время обработки одного окна сообщения.  
+### <a name="remarks"></a>Remarks  
+ If a `CBrush` object is not already attached to the handle, a temporary `CBrush` object is created and attached. This temporary `CBrush` object is valid only until the next time the application has idle time in its event loop. At this time, all temporary graphic objects are deleted. In other words, the temporary object is valid only during the processing of one window message.  
   
- Дополнительные сведения об использовании графических объектов см. в разделе [объектов график](http://msdn.microsoft.com/library/windows/desktop/dd144962) в [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
+ For more information about using graphic objects, see [Graphic Objects](http://msdn.microsoft.com/library/windows/desktop/dd144962) in the Windows SDK.  
   
-### <a name="example"></a>Пример  
-  В примере показано [CBrush::CBrush](#cbrush).  
+### <a name="example"></a>Example  
+  See the example for [CBrush::CBrush](#cbrush).  
   
-##  <a name="getlogbrush"></a>CBrush::GetLogBrush  
- Вызовите эту функцию-член для получения `LOGBRUSH` структуры.  
+##  <a name="getlogbrush"></a>  CBrush::GetLogBrush  
+ Call this member function to retrieve the `LOGBRUSH` structure.  
   
 ```  
 int GetLogBrush(LOGBRUSH* pLogBrush);
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
  `pLogBrush`  
- Указывает [LOGBRUSH](http://msdn.microsoft.com/library/windows/desktop/dd145035) структуру, содержащую сведения о кисти.  
+ Points to a [LOGBRUSH](http://msdn.microsoft.com/library/windows/desktop/dd145035) structure that contains information about the brush.  
   
-### <a name="return-value"></a>Возвращаемое значение  
- Если функция выполняется успешно, и `pLogBrush` является допустимым указателем, возвращается число байтов, сохраненных в буфере.  
+### <a name="return-value"></a>Return Value  
+ If the function succeeds, and `pLogBrush` is a valid pointer, the return value is the number of bytes stored into the buffer.  
   
- Если функция выполняется успешно, и `pLogBrush` — **NULL**, возвращаемое значение — число байтов, необходимое для хранения информации о функции будет храниться в буфер.  
+ If the function succeeds, and `pLogBrush` is **NULL**, the return value is the number of bytes required to hold the information the function would store into the buffer.  
   
- Если функция завершается с ошибкой, то возвращаемое значение — 0.  
+ If the function fails, the return value is 0.  
   
-### <a name="remarks"></a>Примечания  
- `LOGBRUSH` Структура определяет стиль, цвет и шаблон кисти.  
+### <a name="remarks"></a>Remarks  
+ The `LOGBRUSH` structure defines the style, color, and pattern of a brush.  
   
- Например, вызов `GetLogBrush` для сопоставления определенного цвета или узора точечного рисунка.  
+ For example, call `GetLogBrush` to match the particular color or pattern of a bitmap.  
   
-### <a name="example"></a>Пример  
- [!code-cpp[NVC_MFCDocView&#27;](../../mfc/codesnippet/cpp/cbrush-class_7.cpp)]  
+### <a name="example"></a>Example  
+ [!code-cpp[NVC_MFCDocView#27](../../mfc/codesnippet/cpp/cbrush-class_7.cpp)]  
   
-##  <a name="operator_hbrush"></a>CBrush::operator HBRUSH  
- Этот оператор используется получить дескриптор вложенного Windows GDI `CBrush` объекта.  
+##  <a name="operator_hbrush"></a>  CBrush::operator HBRUSH  
+ Use this operator to get the attached Windows GDI handle of the `CBrush` object.  
   
 ```  
 operator HBRUSH() const;  
 ```  
   
-### <a name="return-value"></a>Возвращаемое значение  
- Если успешно, дескриптор объекта Windows GDI представлена `CBrush` объекта; в противном случае **NULL**.  
+### <a name="return-value"></a>Return Value  
+ If successful, a handle to the Windows GDI object represented by the `CBrush` object; otherwise **NULL**.  
   
-### <a name="remarks"></a>Примечания  
- Этот оператор — оператор приведения, который поддерживает непосредственное использование `HBRUSH` объекта.  
+### <a name="remarks"></a>Remarks  
+ This operator is a casting operator, which supports direct use of an `HBRUSH` object.  
   
- Дополнительные сведения об использовании графических объектов см. в разделе [объектов график](http://msdn.microsoft.com/library/windows/desktop/dd144962) в [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
+ For more information about using graphic objects, see [Graphic Objects](http://msdn.microsoft.com/library/windows/desktop/dd144962) in the Windows SDK.  
   
-### <a name="example"></a>Пример  
- [!code-cpp[NVC_MFCDocView&#28;](../../mfc/codesnippet/cpp/cbrush-class_8.cpp)]  
+### <a name="example"></a>Example  
+ [!code-cpp[NVC_MFCDocView#28](../../mfc/codesnippet/cpp/cbrush-class_8.cpp)]  
   
-## <a name="see-also"></a>См. также  
- [Пример MFC PROPDLG](../../visual-cpp-samples.md)   
- [Класс CGdiObject](../../mfc/reference/cgdiobject-class.md)   
- [Диаграмма иерархии](../../mfc/hierarchy-chart.md)   
- [CBitmap-класс](../../mfc/reference/cbitmap-class.md)   
- [CDC-класс](../../mfc/reference/cdc-class.md)
+## <a name="see-also"></a>See Also  
+ [MFC Sample PROPDLG](../../visual-cpp-samples.md)   
+ [CGdiObject Class](../../mfc/reference/cgdiobject-class.md)   
+ [Hierarchy Chart](../../mfc/hierarchy-chart.md)   
+ [CBitmap Class](../../mfc/reference/cbitmap-class.md)   
+ [CDC Class](../../mfc/reference/cdc-class.md)
 

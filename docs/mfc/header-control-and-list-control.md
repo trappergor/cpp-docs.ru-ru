@@ -1,49 +1,68 @@
 ---
-title: "Элементы управления &quot;Заголовок&quot; и &quot;Список&quot; | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "CHeaderCtrl - класс, с CListCtrl"
-  - "CListCtrl - класс, элементы управления "заголовок""
-  - "CListCtrl - класс, с CHeaderCtrl"
-  - "элементы управления [MFC], заголовок"
-  - "элементы управления "заголовок""
-  - "элементы управления "заголовок", элементы управления списком, используемые с"
+title: Header Control and List Control | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- CListCtrl class [MFC], with CHeaderCtrl
+- CListCtrl class [MFC], header controls
+- CHeaderCtrl class [MFC], with CListCtrl
+- controls [MFC], header
+- header controls [MFC]
+- header controls [MFC], list controls used with
 ms.assetid: b20194b1-1a6b-4e2f-b890-1b3cca6650bc
 caps.latest.revision: 11
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 7
----
-# Элементы управления &quot;Заголовок&quot; и &quot;Список&quot;
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 144e5ee7bd7e60ad152ddcaa7d4928706a5cf1d8
+ms.contentlocale: ru-ru
+ms.lasthandoff: 09/12/2017
 
-В большинстве случаев требуется использовать элемент управления " Заголовок, внедренного в объекте [CListCtrl](../Topic/CListCtrl%20Class.md) или [CListView](../mfc/reference/clistview-class.md).  Однако в некоторых случаях отдельный объект элемента управления " Заголовок " нежелательно, таких как обработка данных, располагается в столбцах и строках, в [CView](../Topic/CView%20Class.md)\- производного объекта.  В таких случаях требуется большой элемент управления над внешним видом и реакцией на событие по умолчанию внутреннего элемента управления " Заголовок ".  
+---
+# <a name="header-control-and-list-control"></a>Header Control and List Control
+In most cases, you will use the header control that is embedded in a [CListCtrl](../mfc/reference/clistctrl-class.md) or [CListView](../mfc/reference/clistview-class.md) object. However, there are cases where a separate header control object is desirable, such as manipulating data, arranged in columns or rows, in a [CView](../mfc/reference/cview-class.md)-derived object. In these cases, you need greater control over the appearance and default behavior of an embedded header control.  
   
- В общем случае требуется элемент управления " Заголовок служить стандартом, реакция на событие по умолчанию, возможно, потребуется использовать [CListCtrl](../Topic/CListCtrl%20Class.md) или [CListView](../mfc/reference/clistview-class.md).  Используйте внедренный `CListCtrl` следует использовать функцию элемента управления " Заголовок " сводка по умолчанию в элементе управления представления списка.  Использование встроенных [CListView](../mfc/reference/clistview-class.md) следует использовать функцию элемента управления " Заголовок " по умолчанию в объекте представления.  
+ In the common case that you want a header control to provide standard, default behavior, you may want to use [CListCtrl](../mfc/reference/clistctrl-class.md) or [CListView](../mfc/reference/clistview-class.md) instead. Use `CListCtrl` when you want the functionality of a default header control, embedded in a list view common control. Use [CListView](../mfc/reference/clistview-class.md) when you want the functionality of a default header control, embedded in a view object.  
   
 > [!NOTE]
->  Эти элементы управления только включают встроенный элемент управления " Заголовок ", если элемент управления создается список с использованием стиля `LVS_REPORT`.  
+>  These controls only include a built-in header control if the list view control is created using the `LVS_REPORT` style.  
   
- В большинстве случаев тип внутреннего элемента управления " Заголовок " может быть изменен путем изменения стилей, управления "список".  Кроме того, сведения об элементе управления Заголовок можно получить с помощью функций\-членов родительского элемента управления "список".  Однако для полного контроля и доступа к атрибутам, стилей и внутреннего элемента управления " Заголовок ", рекомендуется, чтобы был получен указатель на объект элемента управления " Заголовок ".  
+ In most cases, the appearance of the embedded header control can be modified by changing the styles of the containing list view control. In addition, information about the header control can be obtained through member functions of the parent list view control. However, for complete control, and access, to the attributes and styles of the embedded header control, it is recommended that a pointer to the header control object be obtained.  
   
- Встроенный объект элемента управления " Заголовок " с **CListCtrl**  или `CListView` с вызовом функцию\-член `GetHeaderCtrl` соответствующего класса.  Это демонстрируется в следующем коде:  
+ The embedded header control object can be accessed from either **CListCtrl** or `CListView` with a call to the respective class's `GetHeaderCtrl` member function. The following code demonstrates this:  
   
- [!code-cpp[NVC_MFCControlLadenDialog#14](../mfc/codesnippet/CPP/header-control-and-list-control_1.cpp)]  
+ [!code-cpp[NVC_MFCControlLadenDialog#14](../mfc/codesnippet/cpp/header-control-and-list-control_1.cpp)]  
   
-## Дополнительные сведения  
+## <a name="what-do-you-want-to-know-more-about"></a>What do you want to know more about  
   
--   [Использование списков изображений с элементами управления Заголовок](../mfc/using-image-lists-with-header-controls.md)  
+-   [Using image lists with header controls](../mfc/using-image-lists-with-header-controls.md)  
   
-## См. также  
- [Использование CHeaderCtrl](../mfc/using-cheaderctrl.md)   
- [Элементы управления](../mfc/controls-mfc.md)
+## <a name="see-also"></a>See Also  
+ [Using CHeaderCtrl](../mfc/using-cheaderctrl.md)   
+ [Controls](../mfc/controls-mfc.md)
+
+

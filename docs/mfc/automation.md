@@ -1,103 +1,120 @@
 ---
-title: "автоматизация | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Серверы автоматизации, о серверах автоматизации"
-  - "клиенты, автоматизация"
-  - "программный элемент управления [C++]"
-  - "свойства [MFC], автоматизация"
-  - "MFC [C++], поддержка COM"
-  - "Автоматизация OLE"
-  - "автоматизация"
-  - "серверы [C++], автоматизация"
-  - "Клиенты автоматизации"
-  - "примеры приложений [MFC], автоматизация"
-  - "методы [MFC]"
-  - "передача параметров, автоматизация"
-  - "Automation - метод"
-  - "автоматизация, передача параметров"
-  - "Automation - свойство"
-  - "MFC COM, автоматизация"
-  - "методы [MFC], автоматизация"
+title: Automation | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- Automation servers, about Automation servers
+- clients, Automation
+- programmatic control [MFC]
+- properties [MFC], Automation
+- MFC, COM support
+- OLE Automation
+- Automation
+- servers [MFC], Automation
+- Automation clients
+- sample applications [MFC], Automation
+- methods [MFC]
+- passing parameters, Automation
+- Automation method [MFC]
+- Automation, passing parameters
+- Automation property [MFC]
+- MFC COM, Automation
+- methods [MFC], Automation
 ms.assetid: 329117f0-c1aa-4680-a901-bfb71277dfba
 caps.latest.revision: 13
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 10
----
-# автоматизация
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- ru-ru
+- zh-cn
+- zh-tw
+translation.priority.mt:
+- cs-cz
+- pl-pl
+- pt-br
+- tr-tr
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 790e80684099d8e94c954a22672a4978e37c1082
+ms.contentlocale: ru-ru
+ms.lasthandoff: 09/12/2017
 
-Автоматизация \(ранее известная как OLE\-автоматизация\) позволяет одному приложению управлять объектами, реализованными в другом приложении, или выделять объекты для управления.  
+---
+# <a name="automation"></a>Automation
+Automation (formerly known as OLE Automation) makes it possible for one application to manipulate objects implemented in another application, or to expose objects so they can be manipulated.  
   
- [Сервер автоматизации](../mfc/automation-servers.md) — это приложение \(тип COM\-сервера\), предоставляющее свои функции через COM\-интерфейсы другим приложениям, называемым [клиентами автоматизации](../mfc/automation-clients.md). Это позволяет клиентам автоматизировать некоторые функции путем прямого доступа к объектам и использования предоставляемых ими возможностей.  
+ An [Automation server](../mfc/automation-servers.md) is an application (a type of COM server) that exposes its functionality through COM interfaces to other applications, called [Automation clients](../mfc/automation-clients.md). The exposure enables Automation clients to automate certain functions by directly accessing objects and using the services they provide.  
   
- Серверы и клиенты автоматизации используют COM\-интерфейсы, которые всегда являются производными от `IDispatch`, и принимают и возвращают определенный набор типов данных, называемых типами автоматизации. Предоставив методы и свойства, доступные из других приложений, можно автоматизировать любой объект, который позволяет обращаться к интерфейсу автоматизации. Автоматизация доступна для OLE\- и COM\-объектов. Автоматизированный объект может быть локальным или удаленным \(на другом компьютере, доступном по сети\), поэтому существует две категории автоматизации.  
+ Automation servers and clients use COM interfaces that are always derived from `IDispatch` and take and return a specific set of data types called Automation types. You can automate any object that exposes an Automation interface, providing methods and properties that you can access from other applications. Automation is available for both OLE and COM objects. The automated object might be local or remote (on another machine accessible across a network); therefore there are two categories of automation:  
   
--   Автоматизация \(локальная\).  
+-   Automation (local).  
   
--   [Удаленная автоматизация](../mfc/remote-automation.md) \(через сеть с использованием DCOM\).  
+-   [Remote Automation](../mfc/remote-automation.md) (over a network, using Distributed COM, or DCOM).  
   
- Предоставление доступа к объектам полезно в том случае, когда приложения предлагают функциональные возможности, полезные для других приложений. Например элемент управления ActiveX — это тип сервера автоматизации. Приложение, в котором размещается элемент управления ActiveX, является клиентом автоматизации этого элемента управления.  
+ Exposing objects is beneficial when applications provide functionality useful to other applications. For example, an ActiveX control is a type of Automation server; the application hosting the ActiveX control is the automation client of that control.  
   
- Другой пример: текстовый процессор может предоставлять свои функции по проверке орфографии другим программам. Благодаря доступу к объектам поставщики способны совершенствовать свои приложения с помощью готовых функциональных возможностей других приложений. Таким образом, автоматизация применяет некоторые принципы объектно\-ориентированного программирования, такие как возможность многократного использования и инкапсуляции, на уровне самих приложений.  
+ As another example, a word processor might expose its spell-checking functionality to other programs. Exposure of objects enables vendors to improve their applications by using the ready-made functionality of other applications. In this way, Automation applies some of the principles of object-oriented programming, such as reusability and encapsulation, at the level of applications themselves.  
   
- Особое значение имеет поддержка, предоставляемая автоматизацией пользователям и поставщикам решений. За счет доступа к функциональным возможностям приложений через стандартный и четко определенный интерфейс автоматизации позволяет создавать комплексные решения на одном общем языке программирования, например Visual Basic, а не прибегать к различным связанным с конкретными приложениями макроязыкам.  
+ More important is the support Automation provides to users and solution providers. By exposing application functionality through a common, well-defined interface, Automation makes it possible to build comprehensive solutions in a single general programming language, such as Microsoft Visual Basic, instead of in diverse application-specific macro languages.  
   
- Многие коммерческие приложения, например Microsoft Excel и Microsoft Visual C\+\+, допускают автоматизацию большей части своих функциональных возможностей. Например, в Visual C\+\+, можно написать макросы [VBScript](vtoriVBScript) для автоматизации построений, аспектов редактирования кода или задач отладки.  
+ Many commercial applications, such as Microsoft Excel and Microsoft Visual C++, allow you to automate much of their functionality. For example, in Visual C++, you can write VBScript macros to automate builds, aspects of code editing, or debugging tasks.  
   
-##  <a name="_core_passing_parameters_in_automation"></a> Передача параметров в автоматизации  
- Одна из сложностей при создании методов автоматизации заключается в обеспечении согласованного безопасного механизма для передачи данных между серверами и клиентами автоматизации. Для передачи данных автоматизация использует тип **VARIANT** . Тип **VARIANT** является помеченным объединением. У него есть элемент данных для значения \(это анонимное объединение C\+\+\) и элемент данных, указывающий тип сведений, хранящихся в объединении. Тип **VARIANT** поддерживает ряд стандартных типов данных: 2\- и 4\-байтовые целые числа, 4\- и 8\-байтовые числа с плавающей запятой, строки и логические значения. Кроме того, он поддерживает типы `HRESULT` \(коды ошибок OLE\), **CURRENCY** \(числовой тип с фиксированной запятой\) и **DATE** \(абсолютное значение даты и времени\), а также указатели на интерфейсы **IUnknown** и `IDispatch`.  
+##  <a name="_core_passing_parameters_in_automation"></a> Passing Parameters in Automation  
+ One difficulty in creating Automation methods is helping to provide a uniform "safe" mechanism to pass data between automation servers and clients. Automation uses the **VARIANT** type to pass data. The **VARIANT** type is a tagged union. It has a data member for the value (this is an anonymous C++ union) and a data member indicating the type of information stored in the union. The **VARIANT** type supports a number of standard data types: 2- and 4-byte integers, 4- and 8-byte floating-point numbers, strings, and Boolean values. In addition, it supports the `HRESULT` (OLE error codes), **CURRENCY** (a fixed-point numeric type), and **DATE** (absolute date and time) types, as well as pointers to **IUnknown** and `IDispatch` interfaces.  
   
- Тип **VARIANT** инкапсулирован в класс [COleVariant](../mfc/reference/colevariant-class.md). Поддерживаемые классы **CURRENCY** и **DATE** инкапсулированы в классы [COleCurrency](../Topic/COleCurrency%20Class.md) и [COleDateTime](../atl-mfc-shared/reference/coledatetime-class.md).  
+ The **VARIANT** type is encapsulated in the [COleVariant](../mfc/reference/colevariant-class.md) class. The supporting **CURRENCY** and **DATE** classes are encapsulated in the [COleCurrency](../mfc/reference/colecurrency-class.md) and [COleDateTime](../atl-mfc-shared/reference/coledatetime-class.md) classes.  
   
-## Примеры автоматизации  
+## <a name="automation-samples"></a>Automation Samples  
   
--   [AUTOCLIK](../top/visual-cpp-samples.md) Используйте этот пример, чтобы освоить приемы автоматизации и изучить основы удаленной автоматизации.  
+-   [AUTOCLIK](../visual-cpp-samples.md) Use this sample to learn Automation techniques and as a foundation for learning Remote Automation.  
   
--   [ACDUAL](../top/visual-cpp-samples.md) Добавляет сдвоенные интерфейсы в приложение сервера автоматизации.  
+-   [ACDUAL](../visual-cpp-samples.md) Adds dual interfaces to an Automation server application.  
   
--   [CALCDRIV](../top/visual-cpp-samples.md) Приложение клиента автоматизации для реализации MFCCALC.  
+-   [CALCDRIV](../visual-cpp-samples.md) Automation client application driving MFCCALC.  
   
--   [INPROC](../top/visual-cpp-samples.md) Демонстрирует приложение внутрипроцессного сервера автоматизации.  
+-   [INPROC](../visual-cpp-samples.md) Demonstrates an In-Process Automation server application.  
   
--   [CALCDRIV](../top/visual-cpp-samples.md) Приложение клиента автоматизации для реализации INPROC.  
+-   [IPDRIVE](../visual-cpp-samples.md) Automation client application driving INPROC.  
   
--   [MFCCALC](../top/visual-cpp-samples.md) Демонстрирует приложение клиента автоматизации.  
+-   [MFCCALC](../visual-cpp-samples.md) Demonstrates an Automation client application.  
   
-## Дополнительные сведения  
+## <a name="what-do-you-want-to-know-more-about"></a>What do you want to know more about  
   
--   [Клиенты автоматизации](../mfc/automation-clients.md)  
+-   [Automation Clients](../mfc/automation-clients.md)  
   
--   [Серверы автоматизации](../mfc/automation-servers.md)  
+-   [Automation Servers](../mfc/automation-servers.md)  
   
--   [Удаленная автоматизация](../mfc/remote-automation.md)  
+-   [Remote Automation](../mfc/remote-automation.md)  
   
 -   [OLE](../mfc/ole-in-mfc.md)  
   
--   [Active \- технология](../mfc/mfc-com.md)  
+-   [Active Technology](../mfc/mfc-com.md)  
   
-## Выберите действие  
+## <a name="what-do-you-want-to-do"></a>What do you want to do  
   
--   [Добавление класса автоматизации](../mfc/automation-servers.md)  
+-   [Add an Automation class](../mfc/automation-servers.md)  
   
--   [Использование библиотек типов](../Topic/Automation%20Clients:%20Using%20Type%20Libraries.md)  
+-   [Use type libraries](../mfc/automation-clients-using-type-libraries.md)  
+   
+-   [Access automation servers](../mfc/automation-servers.md)  
   
--   [Передача параметров в автоматизации](#_core_automation_topics)  
+-   [Write automation clients in C++](../mfc/automation-clients.md)  
   
--   [Доступ к серверам автоматизации](../mfc/automation-servers.md)  
-  
--   [Написание клиентов автоматизации на C\+\+](../mfc/automation-clients.md)  
-  
-## См. также  
+## <a name="see-also"></a>See Also  
  [MFC COM](../mfc/mfc-com.md)
+

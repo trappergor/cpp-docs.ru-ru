@@ -1,52 +1,71 @@
 ---
-title: "Шаблоны документов и процесс создания документов и представлений | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "CDocTemplate - класс"
-  - "шаблоны документов, и представления"
-  - "архитектура "документ-представление", создание документов и представлений"
-  - "значки, для нескольких шаблонов документов"
-  - "MFC - библиотека, шаблоны документов"
-  - "несколько шаблонов документов"
-  - "один шаблон документа"
-  - "шаблоны, шаблоны документов"
+title: Document Templates and the Document-View Creation Process | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- icons, for multiple document templates
+- document templates [MFC], and views
+- document/view architecture [MFC], creating document/view
+- single document template
+- MFC, document templates
+- multiple document template
+- CDocTemplate class [MFC]
+- templates [MFC], document templates
 ms.assetid: 311ce4cd-fbdf-4ea1-a51b-5bb043abbcee
 caps.latest.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 5
----
-# Шаблоны документов и процесс создания документов и представлений
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: a9df24e536d134962d189ed45a869bf793ae7b0a
+ms.contentlocale: ru-ru
+ms.lasthandoff: 09/12/2017
 
-Для управления сложный процесс создания документов с их связанными представлениями и фреймовыми окнами платформа использует 2 класса шаблона документа. [CSingleDocTemplate](../mfc/reference/csingledoctemplate-class.md) для приложений SDI и [CMultiDocTemplate](../mfc/reference/cmultidoctemplate-class.md) для приложений MDI.  `CSingleDocTemplate` может создать и сохранить один документ одного типа одновременно.  `CMultiDocTemplate` сохраняет список нескольких открытых документов одного типа.  
+---
+# <a name="document-templates-and-the-documentview-creation-process"></a>Document Templates and the Document/View Creation Process
+To manage the complex process of creating documents with their associated views and frame windows, the framework uses two document template classes: [CSingleDocTemplate](../mfc/reference/csingledoctemplate-class.md) for SDI applications and [CMultiDocTemplate](../mfc/reference/cmultidoctemplate-class.md) for MDI applications. A `CSingleDocTemplate` can create and store one document of one type at a time. A `CMultiDocTemplate` keeps a list of many open documents of one type.  
   
- Некоторые приложения поддерживают типы многооконного.  Например, приложение может поддерживать текстовые документы и документы графики.  В этом приложении, когда пользователь выбирает новой команды в меню "Файл" диалогового окна " отображает список возможных новых типов документа, чтобы открыть.  Для каждого поддерживаемого типа документа приложение использует указанный объект шаблона документа.  На следующем рисунке показана конфигурация приложения с интерфейсом MDI, которое поддерживает 2 типа документа и представлено несколько открытых документов.  
+ Some applications support multiple document types. For example, an application might support text documents and graphics documents. In such an application, when the user chooses the New command on the File menu, a dialog box shows a list of possible new document types to open. For each supported document type, the application uses a distinct document template object. The following figure illustrates the configuration of an MDI application that supports two document types and shows several open documents.  
   
- ![Приложение MDI, имеющее два типа документов](../mfc/media/vc387h1.png "vc387H1")  
-Приложение с интерфейсом MDI с типами 2 документа  
+ ![MDI application that has two document types](../mfc/media/vc387h1.gif "vc387h1")  
+An MDI Application with Two Document Types  
   
- Шаблоны документов создаются и обслуживаются объектом приложения.  Одним из ключевых задач, выполняемых во время функции `InitInstance` приложения построение один или несколько шаблонов документов соответствующего типа.  Эта функция описана в разделе [Создание шаблона документа](../Topic/Document%20Template%20Creation.md).  Объект приложения сохраняет указатель на каждый шаблон документов в списке шаблона и предоставляет интерфейс для добавления шаблоны документов.  
+ Document templates are created and maintained by the application object. One of the key tasks performed during your application's `InitInstance` function is to construct one or more document templates of the appropriate kind. This feature is described in [Document Template Creation](../mfc/document-template-creation.md). The application object stores a pointer to each document template in its template list and provides an interface for adding document templates.  
   
- Если необходима поддержка двух или более типов документа, необходимо добавить дополнительный вызов [AddDocTemplate](../Topic/CWinApp::AddDocTemplate.md) для каждого типа документа.  
+ If you need to support two or more document types, you must add an extra call to [AddDocTemplate](../mfc/reference/cwinapp-class.md#adddoctemplate) for each document type.  
   
- Значок регистрируется для всех шаблонов документов на основе его позиции в списке приложений шаблонов документов.  Порядок шаблонов документов определяется порядком они добавляются с вызовами `AddDocTemplate`.  MFC высказывать первый ресурс Значка в приложении значок приложения, следующий ресурс Значка первый Значок документа и т д  
+ An icon is registered for each document template based on its position in the application's list of document templates. The order of the document templates is determined by the order they are added with calls to `AddDocTemplate`. MFC assumes that the first Icon resource in the application is the application icon, the next Icon resource is the first document icon, and so on.  
   
- Например, шаблон документов третий 3 для приложения.  Если ресурс Значка в приложении по индексу 3, этот Значок используется для шаблона документа.  Если нет, Значок по индексу 0 используется по умолчанию.  
+ For example, a document template is the third of three for the application. If there is an Icon resource in the application at index 3, that icon is used for the document template. If not, the icon at index 0 is used as a default.  
   
-## См. также  
- [Общие разделы по MFC](../mfc/general-mfc-topics.md)   
- [Создание шаблонов документов](../Topic/Document%20Template%20Creation.md)   
- [Создание документа или представления](../mfc/document-view-creation.md)   
- [Отношения между объектами MFC](../mfc/relationships-among-mfc-objects.md)   
- [Создание новых документов, окон и представлений](../Topic/Creating%20New%20Documents,%20Windows,%20and%20Views.md)
+## <a name="see-also"></a>See Also  
+ [General MFC Topics](../mfc/general-mfc-topics.md)   
+ [Document Template Creation](../mfc/document-template-creation.md)   
+ [Document/View Creation](../mfc/document-view-creation.md)   
+ [Relationships Among MFC Objects](../mfc/relationships-among-mfc-objects.md)   
+ [Creating New Documents, Windows, and Views](../mfc/creating-new-documents-windows-and-views.md)
+
+

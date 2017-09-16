@@ -1,5 +1,5 @@
 ---
-title: "Класс CMFCImageEditorPaletteBar | Документы Microsoft"
+title: CMFCImageEditorPaletteBar Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -16,7 +16,8 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- CMFCImageEditorPaletteBar class
+- CMFCImageEditorPaletteBar [MFC], GetRowHeight
+- CMFCImageEditorPaletteBar [MFC], IsButtonExtraSizeAvailable
 ms.assetid: 3fb7ba8e-f254-4d56-b913-9941b4ed8138
 caps.latest.revision: 20
 author: mikeblome
@@ -36,38 +37,38 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0e0c08ddc57d437c51872b5186ae3fc983bb0199
-ms.openlocfilehash: f6b987a27b43d713835a71dd5c31587020f23f2f
+ms.translationtype: MT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: ec477422342f47dd7aa705f132b2afa3333ac9d7
 ms.contentlocale: ru-ru
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 09/12/2017
 
 ---
-# <a name="cmfcimageeditorpalettebar-class"></a>Класс CMFCImageEditorPaletteBar
-Предоставляет функциональные возможности панели палитры диалоговое окно редактора изображений.  
+# <a name="cmfcimageeditorpalettebar-class"></a>CMFCImageEditorPaletteBar Class
+Provides palette bar functionality to an image editor dialog box.  
   
-## <a name="syntax"></a>Синтаксис  
+## <a name="syntax"></a>Syntax  
   
 ```  
 class CMFCImageEditorPaletteBar : public CMFCToolBar  
 ```  
   
-## <a name="members"></a>Члены  
+## <a name="members"></a>Members  
   
-### <a name="public-methods"></a>Открытые методы  
+### <a name="public-methods"></a>Public Methods  
   
 |||  
 |-|-|  
-|Имя|Описание|  
-|[CMFCImageEditorPaletteBar::GetRowHeight](#getrowheight)|Возвращает высоту кнопки панели инструментов. (Переопределяет [CMFCToolBar::GetRowHeight](../../mfc/reference/cmfctoolbar-class.md#getrowheight).)|  
-|[CMFCImageEditorPaletteBar::IsButtonExtraSizeAvailable](#isbuttonextrasizeavailable)|Определяет, может ли отображать кнопки, расширена границы панели инструментов. (Переопределяет [CMFCToolBar::IsButtonExtraSizeAvailable](../../mfc/reference/cmfctoolbar-class.md#isbuttonextrasizeavailable).)|  
+|Name|Description|  
+|[CMFCImageEditorPaletteBar::GetRowHeight](#getrowheight)|Returns the height of toolbar buttons. (Overrides [CMFCToolBar::GetRowHeight](../../mfc/reference/cmfctoolbar-class.md#getrowheight).)|  
+|[CMFCImageEditorPaletteBar::IsButtonExtraSizeAvailable](#isbuttonextrasizeavailable)|Determines whether the toolbar can display buttons that have extended borders. (Overrides [CMFCToolBar::IsButtonExtraSizeAvailable](../../mfc/reference/cmfctoolbar-class.md#isbuttonextrasizeavailable).)|  
   
-### <a name="remarks"></a>Примечания  
- Этот класс не предназначен для непосредственного использования в коде.  
+### <a name="remarks"></a>Remarks  
+ This class is not intended to be used directly from your code.  
   
- Платформа использует этот класс для отображения панели палитры в диалоговое окно редактора изображений. Дополнительные сведения о диалоговом окне редактора изображений см. в разделе [CMFCImageEditorDialog класса](../../mfc/reference/cmfcimageeditordialog-class.md).  
+ The framework uses this class to display a palette bar in an image editor dialog box. For more information about the image editor dialog box, see [CMFCImageEditorDialog Class](../../mfc/reference/cmfcimageeditordialog-class.md).  
   
-## <a name="inheritance-hierarchy"></a>Иерархия наследования  
+## <a name="inheritance-hierarchy"></a>Inheritance Hierarchy  
  [CObject](../../mfc/reference/cobject-class.md)  
   
  [CCmdTarget](../../mfc/reference/ccmdtarget-class.md)  
@@ -84,31 +85,31 @@ class CMFCImageEditorPaletteBar : public CMFCToolBar
   
  [CMFCImageEditorPaletteBar](../../mfc/reference/cmfcimageeditorpalettebar-class.md)  
   
-## <a name="requirements"></a>Требования  
- **Заголовок:** afximageeditordialog.h  
+## <a name="requirements"></a>Requirements  
+ **Header:** afximageeditordialog.h  
   
-##  <a name="getrowheight"></a>CMFCImageEditorPaletteBar::GetRowHeight  
- Возвращает высоту кнопки панели инструментов.  
+##  <a name="getrowheight"></a>  CMFCImageEditorPaletteBar::GetRowHeight  
+ Returns the height of toolbar buttons.  
   
 ```  
 virtual int GetRowHeight() const;  
 ```  
   
-### <a name="return-value"></a>Возвращаемое значение  
- Высота каждой кнопки на панели инструментов.  
+### <a name="return-value"></a>Return Value  
+ The height of each button on the toolbar.  
   
-##  <a name="isbuttonextrasizeavailable"></a>CMFCImageEditorPaletteBar::IsButtonExtraSizeAvailable  
- Определяет, может ли отображать кнопки, расширена границы панели инструментов.  
+##  <a name="isbuttonextrasizeavailable"></a>  CMFCImageEditorPaletteBar::IsButtonExtraSizeAvailable  
+ Determines whether the toolbar can display buttons that have extended borders.  
   
 ```  
 virtual BOOL IsButtonExtraSizeAvailable() const;  
 ```  
   
-### <a name="return-value"></a>Возвращаемое значение  
- Этот метод возвращает `FALSE`.  
+### <a name="return-value"></a>Return Value  
+ This method returns `FALSE`.  
   
-## <a name="see-also"></a>См. также  
- [Диаграмма иерархии](../../mfc/hierarchy-chart.md)   
- [Классы](../../mfc/reference/mfc-classes.md)   
- [Класс CMFCImageEditorDialog](../../mfc/reference/cmfcimageeditordialog-class.md)
+## <a name="see-also"></a>See Also  
+ [Hierarchy Chart](../../mfc/hierarchy-chart.md)   
+ [Classes](../../mfc/reference/mfc-classes.md)   
+ [CMFCImageEditorDialog Class](../../mfc/reference/cmfcimageeditordialog-class.md)
 

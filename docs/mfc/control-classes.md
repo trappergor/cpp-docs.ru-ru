@@ -1,150 +1,169 @@
 ---
-title: "Классы элементов управления | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "vc.classes.control"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "кнопки, классы элементов управления MFC"
-  - "классы элементов управления"
-  - "классы элементов управления, MFC - библиотека"
-  - "элементы управления [C++], классы элементов управления MFC"
-  - "элементы управления [MFC]"
-  - "списки, классы элементов управления MFC"
-  - "элементы управления статическим отображением"
-  - "текст, элементы управления для ввода"
-  - "ввод данных пользователем, классы элементов управления MFC"
+title: Control Classes | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- vc.classes.control
+dev_langs:
+- C++
+helpviewer_keywords:
+- static display controls [MFC]
+- control classes [MFC]
+- buttons, MFC control classes
+- controls [MFC], MFC control classes
+- controls [MFC]
+- list boxes [MFC], MFC control classes
+- control classes [MFC], MFC
+- text, controls for input [MFC]
+- user input [MFC], MFC control classes
 ms.assetid: f9876606-9f5b-44cb-9135-213298d1df8f
 caps.latest.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 6
----
-# Классы элементов управления
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: dad536746997bbad1d506bac0676a277d760b126
+ms.contentlocale: ru-ru
+ms.lasthandoff: 09/12/2017
 
-Классы элементов управления инкапсулируют широкий набор стандартных элементов управления Windows — от статических текстовых элементов управления к элементам управления дерева.  Кроме того, MFC предоставляет некоторые новые элементы управления, включая кнопки с растровыми изображениями и панелями элементов управления.  
+---
+# <a name="control-classes"></a>Control Classes
+Control classes encapsulate a wide variety of standard Windows controls ranging from static text controls to tree controls. In addition, MFC provides some new controls, including buttons with bitmaps and control bars.  
   
- Элементы управления имена классов которых заканчиваются словом «**Ctrl**», появившиеся в версии 3.51 в Windows 95 и Windows NT.  
+ The controls whose class names end in "**Ctrl**" were new in Windows 95 and Windows NT version 3.51.  
   
-## Статические отображение элементов управления  
- [CStatic](../Topic/CStatic%20Class.md)  
- Окно статический\-отображения.  Статические элементы управления используются, чтобы метки, окно или отделить другие элементы управления в диалоговом окне или окна.  Они также могут указывать графических изображений, а не текста или окно.  
+## <a name="static-display-controls"></a>Static Display Controls  
+ [CStatic](../mfc/reference/cstatic-class.md)  
+ A static-display window. Static controls are used to label, box, or separate other controls in a dialog box or window. They may also display graphical images rather than text or a box.  
   
-## Текстовые элементы управления  
- [CEdit](../Topic/CEdit%20Class.md)  
- Окно элемента управления editable\- текста.  Элементы управления "Поле ввода" используются для приема текстовый ввод пользователя.  
+## <a name="text-controls"></a>Text Controls  
+ [CEdit](../mfc/reference/cedit-class.md)  
+ An editable-text control window. Edit controls are used to accept textual input from the user.  
   
  [CIPAddressCtrl](../mfc/reference/cipaddressctrl-class.md)  
- Поддерживает поле ввода для управления адрес \(IP\) протокола IP.  
+ Supports an edit box for manipulating an Internet Protocol (IP) address.  
   
- [CRichEditCtrl](../Topic/CRichEditCtrl%20Class.md)  
- Элемент управления, в котором пользователь может вводить и изменения текста.  В отличие от элемента управления инкапсулированный в `CEdit`, управление расширенного редактирования поддерживает символ и форматирование абзаца и объектов OLE.  
+ [CRichEditCtrl](../mfc/reference/cricheditctrl-class.md)  
+ A control in which the user can enter and edit text. Unlike the control encapsulated in `CEdit`, a rich edit control supports character and paragraph formatting and OLE objects.  
   
-## Элементы управления, которые представляют номера  
+## <a name="controls-that-represent-numbers"></a>Controls That Represent Numbers  
  [CSliderCtrl](../mfc/reference/csliderctrl-class.md)  
- Элемент управления, который пользователь перемещает ползунок, чтобы выделить значение или набор значений.  
+ A control containing a slider, which the user moves to select a value or set of values.  
   
  [CSpinButtonCtrl](../mfc/reference/cspinbuttonctrl-class.md)  
- Пары кнопок со стрелками пользователь может щелкнуть для увеличения или уменьшения значения.  
+ A pair of arrow buttons the user can click to increment or decrement a value.  
   
  [CProgressCtrl](../mfc/reference/cprogressctrl-class.md)  
- Показаны прямоугольник, который постепенно заполняется слева направо для отображения хода выполнения операции.  
+ Displays a rectangle that is gradually filled from left to right to indicate the progress of an operation.  
   
  [CScrollBar](../mfc/reference/cscrollbar-class.md)  
- Окно элемента управления полосы прокрутки.  Класс предоставляет функцию полосы прокрутки, для использования в качестве элемента управления в диалоговом окне, через которое пользователь может определить положение в пределах диапазона.  
+ A scroll-bar control window. The class provides the functionality of a scroll bar, for use as a control in a dialog box or window, through which the user can specify a position within a range.  
   
-## Кнопки  
+## <a name="buttons"></a>Buttons  
  [CButton](../mfc/reference/cbutton-class.md)  
- Окно управления кнопку.  Класс предоставляет программный интерфейс для кнопки, флажок или переключателя в диалоговом окне.  
+ A button control window. The class provides a programmatic interface for a push button, check box, or radio button in a dialog box or window.  
   
  [CBitmapButton](../mfc/reference/cbitmapbutton-class.md)  
- Кнопка с растровым изображением вместо заголовок текста.  
+ A button with a bitmap rather than a text caption.  
   
-## Списки  
- [CListBox](../Topic/CListBox%20Class.md)  
- Окно списка элемента управления.  Список отображает список элементов, которые пользователь может просматривать и выбрать.  
+## <a name="lists"></a>Lists  
+ [CListBox](../mfc/reference/clistbox-class.md)  
+ A list-box control window. A list box displays a list of items that the user can view and select.  
   
  [CDragListBox](../mfc/reference/cdraglistbox-class.md)  
- Предоставляет функциональные возможности списка Windows; позволяет пользователю к элементам списка перемещения, таких как имена файлов и строковые литералы, в списке.  Списки с этой возможностью полезны для списка элементов в порядке, отличном от алфавитного, например путях включения или файлы в проекте.  
+ Provides the functionality of a Windows list box; allows the user to move list box items, such as filenames and string literals, within the list box. List boxes with this capability are useful for an item list in an order other than alphabetical, such as include pathnames or files in a project.  
   
  [CComboBox](../mfc/reference/ccombobox-class.md)  
- Окно элемента управления " Поле со списком.  Поле со списком состоит из элемента управления "Поле ввода" и "список".  
+ A combo-box control window. A combo box consists of an edit control plus a list box.  
   
  [CComboBoxEx](../mfc/reference/ccomboboxex-class.md)  
- Расширяет элемент управления "поле со списком", предоставляя поддержку списков изображений.  
+ Extends the combo box control by providing support for image lists.  
   
  [CCheckListBox](../mfc/reference/cchecklistbox-class.md)  
- Отображает список элементов с флажками, которые пользователь может проверить или удалить, рядом с каждым элементом.  
+ Displays a list of items with check boxes, which the user can check or clear, next to each item.  
   
- [CListCtrl](../Topic/CListCtrl%20Class.md)  
- Отображает коллекцию элементов, каждый из которых состоит из Значка и метки, способом подобно правой панели проводника.  
+ [CListCtrl](../mfc/reference/clistctrl-class.md)  
+ Displays a collection of items, each consisting of an icon and a label, in a manner similar to the right pane of File Explorer.  
   
  [CTreeCtrl](../mfc/reference/ctreectrl-class.md)  
- Отображается иерархический список Значков и аранжированной метками способом похож на левой панели проводника.  
+ Displays a hierarchical list of icons and labels arranged in a manner similar to the left pane of File Explorer.  
   
-## Панели инструментов и строки состояния  
+## <a name="toolbars-and-status-bars"></a>Toolbars and Status Bars  
  [CToolBarCtrl](../mfc/reference/ctoolbarctrl-class.md)  
- Предоставляет функциональные возможности стандартного элемента управления "панель инструментов" Windows.  Большинство программ MFC используется [CToolBar](../mfc/reference/ctoolbar-class.md) вместо этого класса.  
+ Provides the functionality of the Windows toolbar common control. Most MFC programs use [CToolBar](../mfc/reference/ctoolbar-class.md) instead of this class.  
   
  [CStatusBarCtrl](../mfc/reference/cstatusbarctrl-class.md)  
- Горизонтальная окно, обычно разделяемое в области, в которых приложение может отображать сведения о состоянии.  Большинство программ MFC используется [CStatusBar](../mfc/reference/cstatusbar-class.md) вместо этого класса.  
+ A horizontal window, usually divided into panes, in which an application can display status information. Most MFC programs use [CStatusBar](../mfc/reference/cstatusbar-class.md) instead of this class.  
   
-## Различные элементы управления  
+## <a name="miscellaneous-controls"></a>Miscellaneous Controls  
  [CAnimateCtrl](../mfc/reference/canimatectrl-class.md)  
- Представлен простой видеоклип.  
+ Displays a simple video clip.  
   
- [CToolTipCtrl](../Topic/CToolTipCtrl%20Class.md)  
- Небольшое всплывающее окно, в котором отображается отдельную линии текста, цель средства в приложении.  
+ [CToolTipCtrl](../mfc/reference/ctooltipctrl-class.md)  
+ A small pop-up window that displays a single line of text describing the purpose of a tool in an application.  
   
  [CDateTimeCtrl](../mfc/reference/cdatetimectrl-class.md)  
- Поддерживает или расширенный элемент управления "Поле ввода", или простого элемента управления взаимодействием календаря, который позволяет пользователю выбирать конкретную дату или значения времени.  
+ Supports either an extended edit control, or a simple calendar interface control, that allows a user to choose a specific date or time value.  
   
- [CHeaderCtrl](../Topic/CHeaderCtrl%20Class.md)  
- Заголовки или метки для отображения столбцов.  
+ [CHeaderCtrl](../mfc/reference/cheaderctrl-class.md)  
+ Displays titles or labels for columns.  
   
  [CMonthCalCtrl](../mfc/reference/cmonthcalctrl-class.md)  
- Поддерживает простого элемента управления взаимодействием календаря, который позволяет пользователю для выбора даты.  
+ Supports a simple calendar interface control that allows a user to select a date.  
   
- [CTabCtrl](../Topic/CTabCtrl%20Class.md)  
- Элемент управления с вкладками, на которых пользователь может щелкнуть, аналогичными к разделителям в записной книжке.  
+ [CTabCtrl](../mfc/reference/ctabctrl-class.md)  
+ A control with tabs on which the user can click, analogous to the dividers in a notebook.  
   
  [CHotKeyCtrl](../mfc/reference/chotkeyctrl-class.md)  
- Позволяет пользователю создание горячей сочетания клавиш, которое пользователь может нажать для выполнения действий быстро.  
+ Enables the user to create a hot key combination, which the user can press to perform an action quickly.  
   
  [CLinkCtrl](../mfc/reference/clinkctrl-class.md)  
- Текст Renders маркированного — вверх и запускает соответствующие приложения, когда пользователь щелкает ссылку вложенной.  
+ Renders marked-up text and launches appropriate applications when the user clicks the embedded link.  
   
  [CHtmlEditCtrl](../mfc/reference/chtmleditctrl-class.md)  
- Предоставляет функциональные возможности элемента управления ActiveX WebBrowser в окне MFC.  
+ Provides the functionality of the WebBrowser ActiveX control in an MFC window.  
   
-## Связанные классы  
- [CImageList](../Topic/CImageList%20Class.md)  
- Предоставляет функциональные возможности списка изображение Windows.  Списки изображений используются с элементами управления списка и элементами управления дерева.  Их также можно использовать для хранения и архивируйте набор в том же измененных размер растровые изображения.  
+## <a name="related-classes"></a>Related Classes  
+ [CImageList](../mfc/reference/cimagelist-class.md)  
+ Provides the functionality of the Windows image list. Image lists are used with list controls and tree controls. They can also be used to store and archive a set of same-sized bitmaps.  
   
  [CCtrlView](../mfc/reference/cctrlview-class.md)  
- Базовый класс для всех представлений, связанной с элементами управления Windows.  Представления на основе элементов управления описаны ниже.  
+ The base class for all views associated with Windows controls. The views based on controls are described below.  
   
- [CEditView](../Topic/CEditView%20Class.md)  
- Представление, содержащее элемент управления "Поле ввода" стандарта Windows.  
+ [CEditView](../mfc/reference/ceditview-class.md)  
+ A view that contains a Windows standard edit control.  
   
  [CRichEditView](../mfc/reference/cricheditview-class.md)  
- Представление, содержащее элемент управления расширенного редактирования Windows.  
+ A view that contains a Windows rich edit control.  
   
  [CListView](../mfc/reference/clistview-class.md)  
- Представление, содержащее элемент управления "Список" Windows.  
+ A view that contains a Windows list control.  
   
  [CTreeView](../mfc/reference/ctreeview-class.md)  
- Представление, содержащее элемент управления "Дерево" Windows.  
+ A view that contains a Windows tree control.  
   
-## См. также  
- [Общие сведения о классах](../mfc/class-library-overview.md)
+## <a name="see-also"></a>See Also  
+ [Class Overview](../mfc/class-library-overview.md)
+
+

@@ -1,124 +1,142 @@
 ---
-title: "Элементы управления ActiveX в MFC. Страницы свойств | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "CPropertyPageDialog - класс"
-  - "DDP_ - функции"
-  - "DoDataExchange - метод"
-  - "MFC ActiveX - элементы управления, свойства"
-  - "MFC ActiveX - элементы управления, страницы свойств"
-  - "OLEIVERB_PROPERTIES"
-  - "страницы свойств, MFC ActiveX - элементы управления"
+title: 'MFC ActiveX Controls: Property Pages | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- DDP_ functions [MFC]
+- MFC ActiveX controls [MFC], properties
+- property pages [MFC], MFC ActiveX controls
+- DoDataExchange method [MFC]
+- OLEIVERB_PROPERTIES
+- CPropertyPageDialog class [MFC]
+- MFC ActiveX controls [MFC], property pages
 ms.assetid: 1506f87a-9fd6-4505-8380-0dbc9636230e
 caps.latest.revision: 11
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 7
----
-# Элементы управления ActiveX в MFC. Страницы свойств
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: b61c93f269b38bf4cca26c4cd27c64f8136e6954
+ms.contentlocale: ru-ru
+ms.lasthandoff: 09/12/2017
 
-Страницы свойств позволяют пользователю элемента управления ActiveX просматривать и изменять свойства элемента управления ActiveX.  Доступ к этим свойствам осуществляется путем вызова диалогового окна свойств элемента управления, которое содержит одно или несколько страниц свойств, предоставляющих настраиваемый графический интерфейс для просмотра и редактирования свойств элемента управления.  
+---
+# <a name="mfc-activex-controls-property-pages"></a>MFC ActiveX Controls: Property Pages
+Property pages allow an ActiveX control user to view and change ActiveX control properties. These properties are accessed by invoking a control properties dialog box, which contains one or more property pages that provide a customized, graphical interface for viewing and editing the control properties.  
   
- Страницы свойств элемента управления ActiveX отображаются в 2 вариантах.  
+ ActiveX control property pages are displayed in two ways:  
   
--   Когда команда свойств элемента управления \(**OLEIVERB\_PROPERTIES**\), как элемент управления будет открыто модальное диалоговое окно, содержащее страницы свойств для элемента управления.  
+-   When the control's Properties verb (**OLEIVERB_PROPERTIES**) is invoked, the control opens a modal property dialog box that contains the control's property pages.  
   
--   Контейнер может указать собственное безрежимное диалоговое окно, в котором отображается страницы свойств выбранного элемента управления.  
+-   The container can display its own modeless dialog box that shows the property pages of the selected control.  
   
- Диалоговое окно свойств \(показанное на следующем рисунке\) состоит из области для отображения текущей страницы свойств вкладок, для переключения между страницами свойства и коллекции кнопок, выполнять общие задачи, как закрыть диалоговое окно страницы свойств, отмена все изменения, или непосредственно применя все изменения элементов управления ActiveX.  
+ The properties dialog box (illustrated in the following figure) consists of an area for displaying the current property page, tabs for switching between property pages, and a collection of buttons that perform common tasks such as closing the property page dialog, canceling any changes made, or immediately applying any changes to the ActiveX control.  
   
- ![Диалоговое окно “Свойства” Circ3](../mfc/media/vc373i1.png "vc373I1")  
-Диалоговое окно " Свойства  
+ ![Properties dialog box for Circ3](../mfc/media/vc373i1.gif "vc373i1")  
+Properties Dialog Box  
   
- В этой статье содержатся разделы, относящиеся к использованию страниц свойств в элемент управления ActiveX.  К ним относятся:  
+ This article covers topics related to using property pages in an ActiveX control. These include:  
   
--   [Реализация страницы свойств по умолчанию для элемента управления ActiveX](#_core_implementing_the_default_property_page)  
+-   [Implementing the default property page for an ActiveX control](#_core_implementing_the_default_property_page)  
   
--   [Добавление элементов управления на страницу свойств](#_core_adding_controls_to_a_property_page)  
+-   [Adding controls to a property page](#_core_adding_controls_to_a_property_page)  
   
--   [Настраивать функции DoDataExchange](#_core_customizing_the_dodataexchange_function)  
+-   [Customizing the DoDataExchange function](#_core_customizing_the_dodataexchange_function)  
   
- Дополнительные сведения об использовании страниц свойств в элемент управления ActiveX см. в следующих статьях.  
+ For more information on using property pages in an ActiveX control, see the following articles:  
   
--   [Элементы управления ActiveX в MFC. Добавление дополнительной страницы пользовательских свойств](../mfc/mfc-activex-controls-adding-another-custom-property-page.md)  
+-   [MFC ActiveX Controls: Adding Another Custom Property Page](../mfc/mfc-activex-controls-adding-another-custom-property-page.md)  
   
--   [Элементы управления ActiveX в MFC. Использование стандартных страниц свойств](../mfc/mfc-activex-controls-using-stock-property-pages.md)  
+-   [MFC ActiveX Controls: Using Stock Property Pages](../mfc/mfc-activex-controls-using-stock-property-pages.md)  
   
- Дополнительные сведения об использовании страниц свойств в приложении MFC, отличный от элементов управления ActiveX см. в разделе [Страницы свойств](../mfc/property-sheets-mfc.md).  
+ For information on using property sheets in an MFC application other than an ActiveX control, see [Property Sheets](../mfc/property-sheets-mfc.md).  
   
-##  <a name="_core_implementing_the_default_property_page"></a> Реализация свойства по умолчанию страницы  
- При использовании мастера элементов управления ActiveX для создания проекта элемента управления, то мастер элемент управления ActiveX предоставляет класс страницы свойств по умолчанию для элемента управления, производного от [COlePropertyPage Class](../mfc/reference/colepropertypage-class.md).  Изначально, эта страница свойств пуста, но можно добавлять любые элемент управления или набора элементов управления диалогового окна на него.  Поскольку мастера элементов управления ActiveX создает только один класс страницы свойств по умолчанию, дополнительные страницы свойств \(также классы, производные от `COlePropertyPage`\) должен быть создан с помощью представления классов.  Дополнительные сведения об этой процедуре см. в разделе [Элементы управления ActiveX в MFC. Добавление дополнительной страницы пользовательских свойств](../mfc/mfc-activex-controls-adding-another-custom-property-page.md).  
+##  <a name="_core_implementing_the_default_property_page"></a> Implementing the Default Property Page  
+ If you use the ActiveX Control Wizard to create your control project, the ActiveX Control Wizard provides a default property page class for the control derived from [COlePropertyPage Class](../mfc/reference/colepropertypage-class.md). Initially, this property page is blank, but you can add any dialog box control or set of controls to it. Because the ActiveX Control Wizard creates only one property page class by default, additional property page classes (also derived from `COlePropertyPage`) must be created using Class View. For more information on this procedure, see [MFC ActiveX Controls: Adding Another Custom Property Page](../mfc/mfc-activex-controls-adding-another-custom-property-page.md).  
   
- Реализация страницы свойств \(в данном случае по умолчанию\) — двухступенчатый процесс 3:  
+ Implementing a property page (in this case, the default) is a three-step process:  
   
-#### Реализация страницы свойств  
+#### <a name="to-implement-a-property-page"></a>To implement a property page  
   
-1.  Добавьте `COlePropertyPage`\- производного класса в проект элемента управления.  Если проект был создан с помощью мастера элементов управления ActiveX \(как в этом случае\), класс страницы свойств по умолчанию уже существует.  
+1.  Add a `COlePropertyPage`-derived class to the control project. If the project was created using the ActiveX Control Wizard (as in this case), the default property page class already exists.  
   
-2.  Использование редактора диалоговых окон, чтобы добавить все элементы управления в шаблон страницы свойств.  
+2.  Use the dialog editor to add any controls to the property page template.  
   
-3.  Настраивать функции `COlePropertyPage`\- производный класс `DoDataExchange` в меновым стоимостям между элементом управления и страницы свойств элемента управления ActiveX.  
+3.  Customize the `DoDataExchange` function of the `COlePropertyPage`-derived class to exchange values between the property page control and the ActiveX control.  
   
- Например, следующие цели процедурами с самым простым примером элемента управления \(«»\).  Пример был создан с помощью мастера элементов управления ActiveX и содержит только свойство заголовка для хранения.  
+ For example purposes, the following procedures use a simple control (named "Sample"). Sample was created using the ActiveX Control Wizard and contains only the stock Caption property.  
   
-##  <a name="_core_adding_controls_to_a_property_page"></a> Добавление элементов управления на страницу свойств  
+##  <a name="_core_adding_controls_to_a_property_page"></a> Adding Controls to a Property Page  
   
-#### Добавление элементов управления на страницу свойств  
+#### <a name="to-add-controls-to-a-property-page"></a>To add controls to a property page  
   
-1.  С проектом элемента управления открытым, откройте представление ресурсов.  
+1.  With your control project open, open Resource View.  
   
-2.  Дважды щелкните Значок каталога **Диалоговое окно**.  
+2.  Double-click the **Dialog** directory icon.  
   
-3.  Открытие диалогового окна **IDD\_PROPPAGE\_SAMPLE** .  
+3.  Open the **IDD_PROPPAGE_SAMPLE** dialog box.  
   
-     Мастер элементов управления ActiveX добавляет имя проекта в конец идентификатор диалогового окна, в этом случае пример.  
+     The ActiveX Control Wizard appends the name of the project to the end of the dialog ID, in this case, Sample.  
   
-4.  Перетаскивание выбранного элемента управления из панели элементов в область диалогового окна.  
+4.  Drag and drop the selected control from the Toolbox onto the dialog box area.  
   
-5.  Для этого примера заголовок элемента управления текстовой подписи «: » и " поля ввода с идентификатором **IDC\_CAPTION** достаточно.  
+5.  For this example, a text label control "Caption :" and an edit box control with an **IDC_CAPTION** identifier are sufficient.  
   
-6.  Щелкните **Сохранить** на панели инструментов для сохранения изменений.  
+6.  Click **Save** on the Toolbar to save your changes.  
   
- Теперь, когда пользовательский интерфейс был изменен, необходимо связать поле ввода со свойством заголовка.  Это можно сделать в следующем разделе можно изменить с помощью функции `CSamplePropPage::DoDataExchange`.  
+ Now that the user interface has been modified, you need to link the edit box with the Caption property. This is done in the following section by editing the `CSamplePropPage::DoDataExchange` function.  
   
-##  <a name="_core_customizing_the_dodataexchange_function"></a> Настраивать функции DoDataExchange  
- Чтобы функциональность [CWnd::DoDataExchange](../Topic/CWnd::DoDataExchange.md) страницы свойств позволяет производить страницы свойств ссылки с фактическими значениями свойств в элементе управления.  Чтобы задать ссылки, необходимо сопоставить соответствующие поля страницы свойств к соответствующим свойствам элемента управления.  
+##  <a name="_core_customizing_the_dodataexchange_function"></a> Customizing the DoDataExchange Function  
+ Your property page [CWnd::DoDataExchange](../mfc/reference/cwnd-class.md#dodataexchange) function allows you to link property page values with the actual values of properties in the control. To establish links, you must map the appropriate property page fields to their respective control properties.  
   
- Эти сопоставления реализуются с помощью функции **DDP\_** страницы свойств.  Функция **DDP\_** работает подобно функции **DDX\_**, используемые в стандартных диалоговых окнах MFC с одним исключением.  В дополнение к ссылке на переменные\-члену, функции **DDP\_** имеют имя свойства элемента управления.  Ниже представлена типичная запись в функции `DoDataExchange` для страницы свойств.  
+ These mappings are implemented using the property page **DDP_** functions. The **DDP_** functions work like the **DDX_** functions used in standard MFC dialogs, with one exception. In addition to the reference to a member variable, **DDP_** functions take the name of the control property. The following is a typical entry in the `DoDataExchange` function for a property page.  
   
- [!code-cpp[NVC_MFC_AxUI#31](../mfc/codesnippet/CPP/mfc-activex-controls-property-pages_1.cpp)]  
+ [!code-cpp[NVC_MFC_AxUI#31](../mfc/codesnippet/cpp/mfc-activex-controls-property-pages_1.cpp)]  
   
- Эта функция связывает переменную\-член `m_caption` страницы свойств с заголовком, с помощью функции `DDP_TEXT`.  
+ This function associates the property page's `m_caption` member variable with the Caption, using the `DDP_TEXT` function.  
   
- После получения элемента управления страницы свойств intellisense, необходимо установить связь между элементом управления страницы свойств, `IDC_CAPTION` и фактическим свойством элемента управления, заголовком, с помощью функции **DDP\_Text**, как описано выше.  
+ After you have the property page control inserted, you need to establish a link between the property page control, `IDC_CAPTION`, and the actual control property, Caption, using the **DDP_Text** function as described above.  
   
- [Страницы свойств](../mfc/reference/property-pages-mfc.md) доступен для других типов элементов управления диалогового окна, например флажки, переключатели и списки.  В следующей таблице перечислены полный набор функций **DDP\_** страницы свойств и их целях.  
+ [Property Pages](../mfc/reference/property-pages-mfc.md) are available for other dialog control types, such as check boxes, radio buttons, and list boxes. The table below lists the entire set of property page **DDP_** functions and their purposes:  
   
-### Функции страницы свойств  
+### <a name="property-page-functions"></a>Property Page Functions  
   
-|Имя функции.|Используйте эту функцию для связывания|  
-|------------------|--------------------------------------------|  
-|`DDP_CBIndex`|Индекс выбранной строки в поле со списком со свойством элемента управления.|  
-|`DDP_CBString`|Выбранная строка в поле со списком со свойством элемента управления.  Выделенной строке может начинаться с тем же значением свойства букв, но не обязательно должно соответствовать этим полностью.|  
-|`DDP_CBStringExact`|Выбранная строка в поле со списком со свойством элемента управления.  Выбранная строка и строковое значение свойства должны в точности совпадать.|  
-|`DDP_Check`|Флажок со свойством элемента управления.|  
-|`DDP_LBIndex`|Индекс выбранной строки в списке со свойством элемента управления.|  
-|`DDP_LBString`|Выбранная строка в списке со свойством элемента управления.  Выделенной строке может начинаться с тем же значением свойства букв, но не обязательно должно соответствовать этим полностью.|  
-|`DDP_LBStringExact`|Выбранная строка в списке со свойством элемента управления.  Выбранная строка и строковое значение свойства должны в точности совпадать.|  
-|`DDP_Radio`|Переключатель со свойством элемента управления.|  
-|**DDP\_Text**|Текст со свойством элемента управления.|  
+|Function name|Use this function to link|  
+|-------------------|-------------------------------|  
+|`DDP_CBIndex`|The selected string's index in a combo box with a control property.|  
+|`DDP_CBString`|The selected string in a combo box with a control property. The selected string can begin with the same letters as the property's value but need not match it fully.|  
+|`DDP_CBStringExact`|The selected string in a combo box with a control property. The selected string and the property's string value must match exactly.|  
+|`DDP_Check`|A check box with a control property.|  
+|`DDP_LBIndex`|The selected string's index in a list box with a control property.|  
+|`DDP_LBString`|The selected string in a list box with a control property. The selected string can begin with the same letters as the property's value but need not match it fully.|  
+|`DDP_LBStringExact`|The selected string in a list box with a control property. The selected string and the property's string value must match exactly.|  
+|`DDP_Radio`|A radio button with a control property.|  
+|**DDP_Text**|Text with a control property.|  
   
-## См. также  
- [Элементы управления ActiveX MFC](../mfc/mfc-activex-controls.md)   
+## <a name="see-also"></a>See Also  
+ [MFC ActiveX Controls](../mfc/mfc-activex-controls.md)   
  [COlePropertyPage Class](../mfc/reference/colepropertypage-class.md)
+

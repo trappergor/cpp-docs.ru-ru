@@ -1,58 +1,77 @@
 ---
-title: "Создание приложений MFC | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/16/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "мастера приложений [C++], Интернет-приложения"
-  - "Интернет-приложения [C++], MFC - библиотека"
-  - "MFC [C++], разработка приложений"
-  - "MFC [C++], Интернет-приложения"
+title: Writing MFC Applications | Microsoft Docs
+ms.custom: 
+ms.date: 11/16/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- Internet applications [MFC], MFC
+- MFC, Internet applications
+- application wizards [MFC], Internet applications
+- MFC, application development
 ms.assetid: 6a8d8a03-abfa-4976-86c2-c5773a4b7179
 caps.latest.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 6
----
-# Создание приложений MFC
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 63072af612adf75290cbdab69867b37e9cbe1bc5
+ms.contentlocale: ru-ru
+ms.lasthandoff: 09/12/2017
 
-В этой статье описывается инициативные действия, предпринимаемые для разработки приложения.  Сначала необходимо решить, какой тип приложения для записи.  Несколько вариантов, описаны в разделе [Варианты разработки приложения](../mfc/application-design-choices.md).  Приложение будет:  
+---
+# <a name="writing-mfc-applications"></a>Writing MFC Applications
+This article explains the initial steps you take to develop your application. First, you must decide what kind of application you are writing. Several of the choices were discussed in [Application Design Choices](../mfc/application-design-choices.md). Will your application be:  
   
--   Щелкните в Интернете или интрасети.  
+-   Running on the Internet or an intranet  
   
--   Щелкните на клиенте или на сервере?  
+-   Running on a client or on a server  
   
--   Щелкните в браузере или в виде изолированного приложения?  
+-   Running in a browser or as a stand-alone application  
   
--   Использование модели COM или активной технологии?  
+-   Using COM or Active technology  
   
--   Сведения о загрузке с помощью WinInet или асинхронные моникеры?  
+-   Downloading data using WinInet or asynchronous monikers  
   
- Решений определяют, соответствующие классы для приложения.  Необходимые ответы также помогают определить выделения выполняется при для запуска мастера приложений для начала построения приложения.  
+ Your decisions determine which classes are appropriate for your application. Your answers also help determine the selections you make when you run the Application Wizard to begin constructing your application.  
   
- После выполнения начальной дизайнерские решения о своем интернет\-приложении можно с помощью мастера приложений приступить к работе.  Используйте мастер приложений, чтобы создать общую схему приложения и изменить код, как описано в следующих статьях.  
+ After you've made your initial design decisions about your Internet application, you can use the Application Wizard to get started. Use the Application Wizard to create a skeleton application and modify the code as described in the following articles:  
   
--   Для элементов управления ActiveX см. в разделе [Элементы управления ActiveX в Интернете](../mfc/activex-controls-on-the-internet.md).  
+-   For an ActiveX control, see [ActiveX Controls on the Internet](../mfc/activex-controls-on-the-internet.md).  
   
--   Для активного документа см. в разделе [Активные документы в Интернете](../Topic/Active%20Documents%20on%20the%20Internet.md).  
+-   For an Active document, see [Active Documents on the Internet](../mfc/active-documents-on-the-internet.md).  
   
- В следующих статьях также предоставляют инструкции помочь начать свои задачи программирования:  
+ The following articles also provide instructions to help you start your programming tasks:  
   
--   [Варианты разработки приложения](../mfc/application-design-choices.md)  
+-   [Application Design Choices](../mfc/application-design-choices.md)  
   
--   [Асинхронные моникеры в Интернете](../mfc/asynchronous-monikers-on-the-internet.md)  
+-   [Asynchronous Monikers on the Internet](../mfc/asynchronous-monikers-on-the-internet.md)  
   
--   [Основы WinInet](../mfc/wininet-basics.md)  
+-   [WinInet Basics](../mfc/wininet-basics.md)  
   
-## См. также  
- [Задачи программирования для интернет\-решений MFC](../mfc/mfc-internet-programming-tasks.md)   
- [Основы программирования для интернет\-решений MFC](../mfc/mfc-internet-programming-basics.md)
+## <a name="see-also"></a>See Also  
+ [MFC Internet Programming Tasks](../mfc/mfc-internet-programming-tasks.md)   
+ [MFC Internet Programming Basics](../mfc/mfc-internet-programming-basics.md)
+
+

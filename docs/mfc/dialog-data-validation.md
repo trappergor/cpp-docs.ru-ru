@@ -1,39 +1,58 @@
 ---
-title: "Проверка данных диалогового окна | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "проверка данных [C++], диалоговые окна"
-  - "проверка данных [C++], окна сообщений"
-  - "DDV (проверка данных диалогового окна) [C++]"
-  - "диалоговые окна [C++], проверка данных"
-  - "проверка данных [C++], запись данных диалогового окна"
-  - "проверка данных [C++], окна сообщений"
+title: Dialog Data Validation | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- validating data [MFC], message boxes
+- data validation [MFC], dialog boxes
+- dialog boxes [MFC], validating data
+- validating data [MFC], dialog box data entry
+- DDV (dialog data validation) [MFC]
+- data validation [MFC], message boxes
 ms.assetid: f070c309-2044-4ff2-8c92-1ec1ea84af58
 caps.latest.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 5
----
-# Проверка данных диалогового окна
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 5aebbd1b0f72717d134643762e238a6fb985695f
+ms.contentlocale: ru-ru
+ms.lasthandoff: 09/12/2017
 
-Можно задать проверку помимо обмена данными путем вызова функции DDV, как показано в примере в разделе [Обмена данными с диалоговым окном](../mfc/dialog-data-exchange.md).  Вызов `DDV_MaxChars` в примере проверяется, что строка вписанная в элементе управления текст\- окна не превышает 20 символов.  Функция DDV обычно предупреждает пользователя с окном сообщения при сбое проверки и помещает фокус на проблемную элемент управления, поэтому пользователь может повторно данные.  Функция DDV для данного элемента управления необходимо вызвать сразу после функции DDX для этого элемента управления.  
+---
+# <a name="dialog-data-validation"></a>Dialog Data Validation
+You can specify validation in addition to data exchange by calling DDV functions, as shown in the example in [Dialog Data Exchange](../mfc/dialog-data-exchange.md). The `DDV_MaxChars` call in the example validates that the string entered in the text-box control is not longer than 20 characters. The DDV function typically alerts the user with a message box if the validation fails and puts the focus on the offending control so the user can reenter the data. A DDV function for a given control must be called immediately after the DDX function for the same control.  
   
- Можно также определить собственные пользовательские процедуры DDX и DDV.  Сведения об этом и других аспектах из DDX и DDV см. в разделе [Техническом примечании MFC 26](../mfc/tn026-ddx-and-ddv-routines.md).  
+ You can also define your own custom DDX and DDV routines. For details on this and other aspects of DDX and DDV, see [MFC Technical Note 26](../mfc/tn026-ddx-and-ddv-routines.md).  
   
- [Мастер добавления переменной\-члена](../ide/add-member-variable-wizard.md) записывает все вызовы DDX и DDV в сопоставлении данных.  
+ The [Add Member Variable Wizard](../ide/add-member-variable-wizard.md) will write all of the DDX and DDV calls in the data map for you.  
   
-## См. также  
- [Обмен данными диалоговых окон и их проверка](../mfc/dialog-data-exchange-and-validation.md)   
- [Жизненный цикл диалогового окна](../mfc/life-cycle-of-a-dialog-box.md)   
- [Обмен данными диалоговых окон](../mfc/dialog-data-exchange.md)
+## <a name="see-also"></a>See Also  
+ [Dialog Data Exchange and Validation](../mfc/dialog-data-exchange-and-validation.md)   
+ [Life Cycle of a Dialog Box](../mfc/life-cycle-of-a-dialog-box.md)   
+ [Dialog Data Exchange](../mfc/dialog-data-exchange.md)
+
+

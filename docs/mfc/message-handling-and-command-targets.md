@@ -1,73 +1,81 @@
 ---
-title: "Обработка сообщений и цели команд | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "IOleCommandTarget"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "маршрутизация команд, целевые объекты команд"
-  - "целевые объекты команд"
-  - "IOleCommandTarget - интерфейс"
-  - "обработка сообщений, активные документы"
+title: Message Handling and Command Targets | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- IOleCommandTarget
+dev_langs:
+- C++
+helpviewer_keywords:
+- command targets [MFC]
+- message handling [MFC], active documents
+- IOleCommandTarget interface [MFC]
+- command routing [MFC], command targets
 ms.assetid: e45ce14c-e6b6-4262-8f3b-4e891e0ec2a3
 caps.latest.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 6
----
-# Обработка сообщений и цели команд
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 76940076c98329a33be2d1908c332a08939848a8
+ms.contentlocale: ru-ru
+ms.lasthandoff: 09/12/2017
 
-Интерфейс диспетчера `IOleCommandTarget` команды определяет простой и расширяемый механизм для запросов и выполняет команды.  Этот механизм проще, чем `IDispatch` автоматизации, поскольку он использует полностью на стандартном наборе команд; команды редко присутствуют аргументы и никаких сведений о типе не включено \(безопасность типов умалена для аргументов команды также\).  
+---
+# <a name="message-handling-and-command-targets"></a>Message Handling and Command Targets
+The command dispatch interface `IOleCommandTarget` defines a simple and extensible mechanism to query and execute commands. This mechanism is simpler than Automation's `IDispatch` because it relies entirely on a standard set of commands; commands rarely have arguments, and no type information is involved (type safety is diminished for command arguments as well).  
   
- При разработке интерфейса диспетчеризации команды, каждая команда принадлежит к группе «команды», которая сама определяется с помощью **Идентификатор GUID**.  Поэтому каждый может определить новую группу и определить все команды в эту группу без каких\-либо потребность в соответствии с Майкрософт или любым другим продавцем. \(Это фактически одинаковые означает определения как **dispinterface** и **dispIDs** в автоматизации.  Перекрытие здесь, этот механизм маршрутизации команд только для маршрутизации команд и не для скриптов и программирование в масштабах больших как дескрипторы автоматизации\).  
+ In the command dispatch interface design, each command belongs to a "command group" which is itself identified with a **GUID**. Therefore, anyone can define a new group and define all the commands within that group without any need to coordinate with Microsoft or any other vendor. (This is essentially the same means of definition as a **dispinterface** plus **dispIDs** in Automation. There is overlap here, although this command routing mechanism is only for command routing and not for scripting/programmability on a large scale as Automation handles.)  
   
- `IOleCommandTarget` обрабатывает следующие сценарии:  
+ `IOleCommandTarget` handles the following scenarios:  
   
--   Когда объект на месте активирован, только инструменты объекта обычно отображаются и панели инструментов объекта могут использовать кнопки для некоторых команд контейнера, например **Печать**, **Печать Просмотр**, **Сохранить**`New`, **Масштаб** и другие. \(Стандарты встроенной активации объектов, рекомендуется удалить те из них, кнопок инструментов или хотя бы запретят их.  Это позволяет включать эти команды, а также направленным к правильному обработчик\). В настоящее время, не существует способа для объекта для подготовки эти команды на контейнер.  
+-   When an object is in-place activated, only the object's toolbars are typically displayed and the object's toolbars may have buttons for some of the container commands like **Print**, **Print Preview**, **Save**, `New`, **Zoom**, and others. (In-place activation standards recommend that objects remove such buttons from their toolbars, or at least disable them. This design allows those commands to be enabled and yet routed to the right handler.) Currently, there is no mechanism for the object to dispatch these commands to the container.  
   
--   Когда активный документ внедряется в контейнер активных документов \(например Office Binder\), то контейнер может отправлять команды **Печать**, **Страница Установка**, **Свойства** и другие, содержащиеся в активный документ.  
+-   When an active document is embedded in an active document container (such as Office Binder), the container may need to send commands such **Print**, **Page Setup**, **Properties**, and others to the contained active document.  
   
- Эта простая маршрутизация команд может обрабатываться через существующие стандарты и `IDispatch` автоматизации.  Однако преимущество при отладке с `IDispatch` больше, чем необходимо здесь, поэтому `IOleCommandTarget` предоставляет простое означает добиться тех же всех:  
+ This simple command routing could be handled through existing Automation standards and `IDispatch`. However, the overhead involved with `IDispatch` is more than is necessary here, so `IOleCommandTarget` provides a simpler means to achieve the same ends:  
   
- `interface IOleCommandTarget : IUnknown`  
+```  
+interface IOleCommandTarget : IUnknown  
+    {  
+    HRESULT QueryStatus(  
+        [in] GUID *pguidCmdGroup,  
+        [in] ULONG cCmds,  
+        [in,out][size_is(cCmds)] OLECMD *prgCmds,  
+        [in,out] OLECMDTEXT *pCmdText);  
+    HRESULT Exec(  
+        [in] GUID *pguidCmdGroup,  
+        [in] DWORD nCmdID,  
+        [in] DWORD nCmdExecOpt,  
+        [in] VARIANTARG *pvaIn,  
+        [in,out] VARIANTARG *pvaOut);  
+    }  
+```  
   
- `{`  
+ The `QueryStatus` method here tests whether a particular set of commands, the set being identified with a **GUID**, is supported. This call fills an array of **OLECMD** values (structures) with the supported list of commands as well as returning text describing the name of a command and/or status information. When the caller wishes to invoke a command, it can pass the command (and the set **GUID**) to **Exec** along with options and arguments, getting back a return value.  
   
- `HRESULT QueryStatus(`  
-  
- `[in] GUID *pguidCmdGroup,`  
-  
- `[in] ULONG cCmds,`  
-  
- `[in,out][size_is(cCmds)] OLECMD *prgCmds,`  
-  
- `[in,out] OLECMDTEXT *pCmdText);`  
-  
- `HRESULT Exec(`  
-  
- `[in] GUID *pguidCmdGroup,`  
-  
- `[in] DWORD nCmdID,`  
-  
- `[in] DWORD nCmdExecOpt,`  
-  
- `[in] VARIANTARG *pvaIn,`  
-  
- `[in,out] VARIANTARG *pvaOut);`  
-  
- `}`  
-  
- Метод `QueryStatus` здесь, поддерживается ли указанный набор команд, набор определяемое с **Идентификатор GUID**.  Этот метод заполняет массив значений **OLECMD** \(структур\) со списком поддерживаемых команд, так и возвращает текст, описывающий имя команды или состоянии информации.  Если вызывающий объект желает вызвать команду, он может передавать команды \( **Идентификатор GUID**\) и задать значение **Exec** вместе с параметрами и аргументами, получение задний возвращаемое значение.  
-  
-## См. также  
- [Контейнеры активных документов](../mfc/active-document-containers.md)
+## <a name="see-also"></a>See Also  
+ [Active Document Containers](../mfc/active-document-containers.md)
+
+

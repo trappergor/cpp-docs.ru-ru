@@ -1,52 +1,71 @@
 ---
-title: "Перетаскивание. Реализация источника перетаскивания | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "перетаскивание, вызов DoDragDrop"
-  - "перетаскивание, источник перетаскивания"
-  - "перетаскивание, инициация операций перетаскивания"
-  - "перетаскивание OLE, вызов DoDragDrop"
-  - "перетаскивание OLE, источник перетаскивания"
-  - "перетаскивание OLE, инициация операций перетаскивания"
+title: 'Drag and Drop: Implementing a Drop Source | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- OLE drag and drop [MFC], initiating drag operations
+- drag and drop [MFC], calling DoDragDrop
+- OLE drag and drop [MFC], drop source
+- OLE drag and drop [MFC], calling DoDragDrop
+- drag and drop [MFC], initiating drag operations
+- drag and drop [MFC], drop source
 ms.assetid: 0ed2fda0-63fa-4b1e-b398-f1f142f40035
 caps.latest.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 6
----
-# Перетаскивание. Реализация источника перетаскивания
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: f3bb2f7b11c3ce4d46f0dda53980c0c751ec41ef
+ms.contentlocale: ru-ru
+ms.lasthandoff: 09/12/2017
 
-В этой статье описывается, как получить доступ к приложению предоставлять данные операции перетаскивания.  
+---
+# <a name="drag-and-drop-implementing-a-drop-source"></a>Drag and Drop: Implementing a Drop Source
+This article explains how to get your application to provide data to a drag-and-drop operation.  
   
- Базовая реализация источника размещения относительно проста.  Сначала необходимо определить, какие события начала операции перетаскивания.  Рекомендуемые правила пользовательского интерфейса определяют начало операции перетаскивания в качестве выделения данных и события `WM_LBUTTONDOWN`, выполненных в точке внутри выбранные данных.  Примеры MFC OLE [OCLIENT](../top/visual-cpp-samples.md) и [HIERSVR](../top/visual-cpp-samples.md) выполняют следующие рекомендации.  
+ Basic implementation of a drop source is relatively simple. The first step is to determine what events begin a drag operation. Recommended user interface guidelines define the beginning of a drag operation as the selection of data and a `WM_LBUTTONDOWN` event occurring on a point inside the selected data. The MFC OLE samples [OCLIENT](../visual-cpp-samples.md) and [HIERSVR](../visual-cpp-samples.md) follow these guidelines.  
   
- Если приложение контейнера и выбранные данные привязаны или внедренные объекты типа `COleClientItem`, следует вызвать функцию\-член `DoDragDrop`.  В противном случае создайте объект `COleDataSource`, инициализировать его с выделением и вызовите функцию\-член `DoDragDrop` объекта источника данных.  Если приложение сервера следует использовать `COleServerItem::DoDragDrop`.  Дополнительные сведения о настраивать расширение функциональности стандарта перетаскивания см. в статье [Перетаскивания: Настраивать](../Topic/Drag%20and%20Drop:%20Customizing.md).  
+ If your application is a container and the selected data is a linked or an embedded object of type `COleClientItem`, call its `DoDragDrop` member function. Otherwise, construct a `COleDataSource` object, initialize it with the selection, and call the data source object's `DoDragDrop` member function. If your application is a server, use `COleServerItem::DoDragDrop`. For information about customizing standard drag-and-drop behavior, see the article [Drag and Drop: Customizing](../mfc/drag-and-drop-customizing.md).  
   
- Если `DoDragDrop` возвращает `DROPEFFECT_MOVE`, удалите источники данных из исходного документа немедленно.  Ни одно возвращаемое значение в `DoDragDrop` не влияет на источнике перетаскивания.  
+ If `DoDragDrop` returns `DROPEFFECT_MOVE`, delete the source data from the source document immediately. No other return value from `DoDragDrop` has any effect on a drop source.  
   
- Дополнительные сведения см. в следующих разделах:  
+ For more information, see:  
   
--   [Реализация целевой объект перетаскивания](../mfc/drag-and-drop-implementing-a-drop-target.md)  
+-   [Implementing a Drop Target](../mfc/drag-and-drop-implementing-a-drop-target.md)  
   
--   [Настраивать перетаскивания](../Topic/Drag%20and%20Drop:%20Customizing.md)  
+-   [Customizing Drag and Drop](../mfc/drag-and-drop-customizing.md)  
   
--   [Создание и уничтожения объектов OLE данных и источников данных](../mfc/data-objects-and-data-sources-creation-and-destruction.md)  
+-   [Creating and Destroying OLE Data Objects and Data Sources](../mfc/data-objects-and-data-sources-creation-and-destruction.md)  
   
--   [Управление OLE объекты данных и источников данных](../mfc/data-objects-and-data-sources-manipulation.md)  
+-   [Manipulating OLE Data Objects and Data Sources](../mfc/data-objects-and-data-sources-manipulation.md)  
   
-## См. также  
- [Перетаскивание \(OLE\)](../mfc/drag-and-drop-ole.md)   
- [COleDataSource::DoDragDrop](../Topic/COleDataSource::DoDragDrop.md)   
- [COleClientItem::DoDragDrop](../Topic/COleClientItem::DoDragDrop.md)   
- [CView::OnDragLeave](../Topic/CView::OnDragLeave.md)
+## <a name="see-also"></a>See Also  
+ [Drag and Drop (OLE)](../mfc/drag-and-drop-ole.md)   
+ [COleDataSource::DoDragDrop](../mfc/reference/coledatasource-class.md#dodragdrop)   
+ [COleClientItem::DoDragDrop](../mfc/reference/coleclientitem-class.md#dodragdrop)   
+ [CView::OnDragLeave](../mfc/reference/cview-class.md#ondragleave)
+
+

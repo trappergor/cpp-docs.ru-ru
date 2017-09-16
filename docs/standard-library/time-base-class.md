@@ -1,5 +1,5 @@
 ---
-title: "Класс time_base | Документы Майкрософт"
+title: time_base Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -9,7 +9,6 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
-- time_base
 - locale/std::time_base
 dev_langs:
 - C++
@@ -34,17 +33,17 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
-ms.openlocfilehash: 54b8f19ef063727c21559ab85e85255643131b87
+ms.translationtype: MT
+ms.sourcegitcommit: 5d026c375025b169d5db8445cbb52c0c917b2d8d
+ms.openlocfilehash: 6342dfcacd83a83a39877b39328e5c2563205a25
 ms.contentlocale: ru-ru
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 09/09/2017
 
 ---
-# <a name="timebase-class"></a>Класс time_base
-Этот класс используется как базовый класс для аспектов класса шаблона time_get, указав только **dateorder** перечисляемого типа и несколько констант этого типа.  
+# <a name="timebase-class"></a>time_base Class
+The class serves as a base class for facets of template class time_get, defining just the enumerated type **dateorder** and several constants of this type.  
   
-## <a name="syntax"></a>Синтаксис  
+## <a name="syntax"></a>Syntax  
   
 ```
 class time_base : public locale::facet {
@@ -61,26 +60,26 @@ public:
 };
 ```  
   
-## <a name="remarks"></a>Примечания  
- Каждая константа характеризует свой способ упорядочивания компонентов даты. Используются следующие константы:  
+## <a name="remarks"></a>Remarks  
+ Each constant characterizes a different way to order the components of a date. The constants are:  
   
-- **no_order** не задает никакого определенного порядка.  
+- **no_order** specifies no particular order.  
   
-- **dmy** задает порядок даты "день, месяц, год", как во "2 декабря 1979".  
+- **dmy** specifies the order day, month, then year, as in 2 December 1979.  
   
-- **mdy** задает порядок даты "месяц, день, год", как в "декабрь, 2, 1979".  
+- **mdy** specifies the order month, day, then year, as in December 2, 1979.  
   
-- **ymd** задает порядок даты "год, месяц, день", как в "1979/12/2".  
+- **ymd** specifies the order year, month, then day, as in 1979/12/2.  
   
-- **ydm** задает порядок даты "год, день, месяц", как в "1979: 2 декабря".  
+- **ydm** specifies the order year, day, then month, as in 1979: 2 Dec.  
   
-## <a name="requirements"></a>Требования  
- **Заголовок:** \<locale>  
+## <a name="requirements"></a>Requirements  
+ **Header:** \<locale>  
   
- **Пространство имен:** std  
+ **Namespace:** std  
   
-## <a name="see-also"></a>См. также  
- [Потокобезопасность в стандартной библиотеке C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)
+## <a name="see-also"></a>See Also  
+ [Thread Safety in the C++ Standard Library](../standard-library/thread-safety-in-the-cpp-standard-library.md)
 
 
 

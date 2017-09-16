@@ -1,60 +1,79 @@
 ---
-title: "Общие принципы разработки классов | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "vc.classes.mfc"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "классы [C++], конструктор классов MFC"
-  - "разработка классов"
-  - "MFC [C++], API Windows"
-  - "Visual C, Вызовы API Windows"
-  - "Windows API [C++], и MFC"
+title: General Class Design Philosophy | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- vc.classes.mfc
+dev_langs:
+- C++
+helpviewer_keywords:
+- designing classes [MFC]
+- MFC, Windows API
+- Visual C, Windows API calls
+- classes [MFC], MFC class design
+- Windows API [MFC], and MFC
 ms.assetid: e6861ae0-1581-4d9c-9ddf-63f9afcdb913
 caps.latest.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 5
----
-# Общие принципы разработки классов
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 020ec3f850cb626206e14f2a8782b4a065670815
+ms.contentlocale: ru-ru
+ms.lasthandoff: 09/12/2017
 
-Microsoft Windows предусматривает перед язык C\+\+ стал популярным.  Поскольку тысячи приложения используют программный интерфейс \(API\) Windows\-приложение языка C\#, этот интерфейс будет поддерживаться для обозримое будущее.  Любой интерфейс Windows C\+\+, поэтому построение поверх процедурного API языка C\#.  Это гарантирует, что приложение C\+\+ будут сосуществовать с приложениями C.  
+---
+# <a name="general-class-design-philosophy"></a>General Class Design Philosophy
+Microsoft Windows was designed long before the C++ language became popular. Because thousands of applications use the C-language Windows application programming interface (API), that interface will be maintained for the foreseeable future. Any C++ Windows interface must therefore be built on top of the procedural C-language API. This guarantees that C++ applications will be able to coexist with C applications.  
   
- Библиотеки Microsoft Foundation Class объектно\-ориентированного интерфейса в Windows, соответствующих следующих целей разработки:  
+ The Microsoft Foundation Class Library is an object-oriented interface to Windows that meets the following design goals:  
   
--   В усилии значительно приоритета для создания приложения Windows.  
+-   Significant reduction in the effort to write an application for Windows.  
   
--   Скорость выполнения эквивалентна параметрам API языка C\#.  
+-   Execution speed comparable to that of the C-language API.  
   
--   Минимальная нагрузка размера кода.  
+-   Minimum code size overhead.  
   
--   Возможность вызова любая функция C Windows напрямую.  
+-   Ability to call any Windows C function directly.  
   
--   Более простое преобразование существующих приложений C в C\+\+.  
+-   Easier conversion of existing C applications to C++.  
   
--   Возможность использования существующей базы Windows C\# языка программирования взаимодействие.  
+-   Ability to leverage from the existing base of C-language Windows programming experience.  
   
--   Более легко использовать API Windows с C\+\+ с C.  
+-   Easier use of the Windows API with C++ than with C.  
   
--   Область для использования, но мощные абстракции осложненных функции, такие как элементы управления ActiveX, поддержка баз данных, печать, панели инструментов и строки состояния.  
+-   Easier to use yet powerful abstractions of complicated features such as ActiveX controls, database support, printing, toolbars, and status bars.  
   
--   True API Windows для C\+\+ эффективно использует функции языка C C\+\+.  
+-   True Windows API for C++ that effectively uses C++ language features.  
   
- Дополнительные по разработке библиотеки MFC см. в следующих разделах:  
+ For more on the design of the MFC Library, see:  
   
--   [Приложение .NET](../mfc/application-framework.md)  
+-   [The Application Framework](../mfc/application-framework.md)  
   
--   [Связь с API языка C.](../mfc/relationship-to-the-c-language-api.md)  
+-   [Relationship to the C-Language API](../mfc/relationship-to-the-c-language-api.md)  
   
-## См. также  
- [Общие сведения о классах](../mfc/class-library-overview.md)
+## <a name="see-also"></a>See Also  
+ [Class Overview](../mfc/class-library-overview.md)
+
+

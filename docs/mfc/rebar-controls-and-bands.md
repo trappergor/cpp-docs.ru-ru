@@ -1,52 +1,71 @@
 ---
-title: "Элементы управления и зоны главной панели | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "зоны, в элементах управления главной панели"
-  - "Элементы управления главной панели, работа с лентами в"
+title: Rebar Controls and Bands | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- rebar controls [MFC], working with bands in
+- bands, in rebar controls
 ms.assetid: b647e7a5-9ea7-48b1-8e5f-096d104748f0
 caps.latest.revision: 11
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 7
----
-# Элементы управления и зоны главной панели
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 17449db3f089f882e8314befe51ac69991e5d46a
+ms.contentlocale: ru-ru
+ms.lasthandoff: 09/12/2017
 
-Основное назначение элемента управления "Главная панель" действовать как контейнер для дочерних элементов управления windows forms, стандартного диалогового окна печати, меню, панели инструментов и т д  Такая вложенность поддерживается понятием «полосы». Каждая полоса главной панели может содержать любую комбинацию панель захвата, растровое изображение, метка текстовой подписи и дочернее окно.  
+---
+# <a name="rebar-controls-and-bands"></a>Rebar Controls and Bands
+The main purpose of a rebar control is to act as a container for child windows, common dialog controls, menus, toolbars, and so on. This containment is supported by the concept of a "band." Each rebar band can contain any combination of a gripper bar, a bitmap, a text label, and a child window.  
   
- Класс `CReBarCtrl` имеет много функций\-членов, которые можно использовать для получения и управления, сведения о конкретной полосы главной панели:  
+ Class `CReBarCtrl` has many member functions that you can use to retrieve, and manipulate, information for a specific rebar band:  
   
--   [GetBandCount](../Topic/CReBarCtrl::GetBandCount.md) Извлекает число текущих полос в элементе управления "Главная панель".  
+-   [GetBandCount](../mfc/reference/crebarctrl-class.md#getbandcount) Retrieves the number of current bands in the rebar control.  
   
--   [GetBandInfo](../Topic/CReBarCtrl::GetBandInfo.md) Инициализирует структуру **REBARBANDINFO** со сведениями из указанной полосы.  Соответствующую функцию\-член [SetBandInfo](../Topic/CReBarCtrl::SetBandInfo.md).  
+-   [GetBandInfo](../mfc/reference/crebarctrl-class.md#getbandinfo) Initializes a **REBARBANDINFO** structure with information from the specified band. There is a corresponding [SetBandInfo](../mfc/reference/crebarctrl-class.md#setbandinfo) member function.  
   
--   [GetRect](../Topic/CReBarCtrl::GetRect.md) Возвращает ограничивающий прямоугольник определенной полосы.  
+-   [GetRect](../mfc/reference/crebarctrl-class.md#getrect) Retrieves the bounding rectangle of a specified band.  
   
--   [GetRowCount](../Topic/CReBarCtrl::GetRowCount.md) Извлекает число строк полосы в элементе управления "Главная панель".  
+-   [GetRowCount](../mfc/reference/crebarctrl-class.md#getrowcount) Retrieves the number of band rows in a rebar control.  
   
--   [IDToIndex](../Topic/CReBarCtrl::IDToIndex.md) Извлекает индекс указанной полосы.  
+-   [IDToIndex](../mfc/reference/crebarctrl-class.md#idtoindex) Retrieves the index of a specified band.  
   
--   [GetBandBorders](../Topic/CReBarCtrl::GetBandBorders.md) Возвращает границы полосы.  
+-   [GetBandBorders](../mfc/reference/crebarctrl-class.md#getbandborders) Retrieves the borders of a band.  
   
- Помимо манипуляций нескольких функций\-членов, при условии, что разрешение, чтобы работать с конкретными полосы главной панели.  
+ In addition to manipulation, several member functions are provided that allow you to operate on specific rebar bands.  
   
- [InsertBand](../Topic/CReBarCtrl::InsertBand.md) [DeleteBand](../Topic/CReBarCtrl::DeleteBand.md) и добавлять и удалять полосы главной панели.  [MinimizeBand](../Topic/CReBarCtrl::MinimizeBand.md)[MaximizeBand](../Topic/CReBarCtrl::MaximizeBand.md) и влияет текущий размер полосы определенной главной панели.  [MoveBand](../Topic/CReBarCtrl::MoveBand.md) изменить индекс определенной полосы главной панели.  [ShowBand](../Topic/CReBarCtrl::ShowBand.md) показывает или скрывает полосу главной панели от пользователя.  
+ [InsertBand](../mfc/reference/crebarctrl-class.md#insertband) and [DeleteBand](../mfc/reference/crebarctrl-class.md#deleteband) add and remove rebar bands. [MinimizeBand](../mfc/reference/crebarctrl-class.md#minimizeband) and [MaximizeBand](../mfc/reference/crebarctrl-class.md#maximizeband) affect the current size of a specific rebar band. [MoveBand](../mfc/reference/crebarctrl-class.md#moveband) changes the index of a specific rebar band. [ShowBand](../mfc/reference/crebarctrl-class.md#showband) shows or hides a rebar band from the user.  
   
- В следующем примере показано добавление полоса панели инструментов \(`m_wndToolBar`\) на существующий элемент управления "Главная панель" \(`m_wndReBar`\).  При инициализации полоса описана структура `rbi` и затем вызывать функцию\-член `InsertBand`:  
+ The following example demonstrates adding a toolbar band (`m_wndToolBar`) to an existing rebar control (`m_wndReBar`). The band is described by initializing the `rbi` structure and then calling the `InsertBand` member function:  
   
- [!code-cpp[NVC_MFCControlLadenDialog#27](../mfc/codesnippet/CPP/rebar-controls-and-bands_1.cpp)]  
+ [!code-cpp[NVC_MFCControlLadenDialog#27](../mfc/codesnippet/cpp/rebar-controls-and-bands_1.cpp)]  
   
-## См. также  
- [Использование CReBarCtrl](../Topic/Using%20CReBarCtrl.md)   
- [Элементы управления](../mfc/controls-mfc.md)
+## <a name="see-also"></a>See Also  
+ [Using CReBarCtrl](../mfc/using-crebarctrl.md)   
+ [Controls](../mfc/controls-mfc.md)
+
+

@@ -1,54 +1,73 @@
 ---
-title: "Создание и использование элементов управления | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "стандартные элементы управления [C++], о стандартных элементах управления"
-  - "элементы управления [MFC], создание для диалоговых окон"
-  - "общие элементы управления Windows [C++], о стандартных элементах управления"
+title: Making and Using Controls | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- controls [MFC], creating for dialog boxes
+- Windows common controls [MFC], about common controls
+- common controls [MFC], about common controls
 ms.assetid: a252acad-3cc0-440e-bbc6-43eaaf8cb7bb
 caps.latest.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 6
----
-# Создание и использование элементов управления
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 65301b0ebc21425ec60ff0b51789f5c469942c8c
+ms.contentlocale: ru-ru
+ms.lasthandoff: 09/12/2017
 
-Выполняется большинство элементов управления для диалоговых окон в Visual C\+\+ — [редактор диалоговых окон](../mfc/dialog-editor.md).  Однако можно также создать элементы управления в любом диалоговом окне.  
+---
+# <a name="making-and-using-controls"></a>Making and Using Controls
+You make most controls for dialog boxes in the Visual C++ [dialog editor](../windows/dialog-editor.md). But you can also create controls in any dialog box or window.  
   
-## Дополнительные сведения  
+## <a name="what-do-you-want-to-know-more-about"></a>What do you want to know more about  
   
--   [Использование общих элементов управления в диалоговом окне](../mfc/using-common-controls-in-a-dialog-box.md)  
+-   [Using common controls in a dialog box](../mfc/using-common-controls-in-a-dialog-box.md)  
   
--   [С помощью редактора диалоговых окон для добавления элементов управления](../mfc/using-the-dialog-editor-to-add-controls.md)  
+-   [Using the dialog editor to add controls](../mfc/using-the-dialog-editor-to-add-controls.md)  
   
--   [Добавление элементов управления вручную](../mfc/adding-controls-by-hand.md) \(без редактора диалоговых окон\)  
+-   [Adding controls by hand](../mfc/adding-controls-by-hand.md) (without the dialog editor)  
   
--   [Производные элементы управления из стандартного элемента управления](../mfc/deriving-controls-from-a-standard-control.md)  
+-   [Deriving controls from a standard control](../mfc/deriving-controls-from-a-standard-control.md)  
   
--   [Использование общего элемента управления как дочернее окно](../mfc/using-a-common-control-as-a-child-window.md)  
+-   [Using a common control as a child window](../mfc/using-a-common-control-as-a-child-window.md)  
   
--   [Получения уведомления из общих элементов управления](../Topic/Receiving%20Notification%20from%20Common%20Controls.md)  
+-   [Receiving notification from common controls](../mfc/receiving-notification-from-common-controls.md)  
   
--   [Обмен данными в диалоговых окнах и проверка](../mfc/dialog-data-exchange-and-validation.md)  
+-   [Dialog Data Exchange and Validation](../mfc/dialog-data-exchange-and-validation.md)  
   
--   [Типобезопасный доступ к элементам управления с помощью мастеров кода](../mfc/type-safe-access-to-controls-with-code-wizards.md)  
+-   [Type-Safe Access to Controls With Code Wizards](../mfc/type-safe-access-to-controls-with-code-wizards.md)  
   
--   Отдельные элементы управления: в разделе [Элементы управления](../mfc/controls-mfc.md) для ссылок на всем общим элементам управления  
+-   Individual controls: see [Controls](../mfc/controls-mfc.md) for links to all common controls  
   
--   [Диалоговые окна](../mfc/dialog-boxes.md)  
+-   [Dialog boxes](../mfc/dialog-boxes.md)  
   
--   [Диалоговые панели](../mfc/dialog-bars.md)  
+-   [Dialog bars](../mfc/dialog-bars.md)  
   
-## См. также  
- [Элементы управления](../mfc/controls-mfc.md)
+## <a name="see-also"></a>See Also  
+ [Controls](../mfc/controls-mfc.md)
+
+

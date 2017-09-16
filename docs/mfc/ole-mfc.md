@@ -1,47 +1,65 @@
 ---
-title: "OLE (MFC) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "приложения [OLE], пользовательский интерфейс"
-  - "OLE [C++], разделы пользовательского интерфейса"
-  - "приложения OLE [C++], пользовательский интерфейс"
-  - "пользовательские интерфейсы, OLE"
+title: OLE (MFC) | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- OLE [MFC], user-interface topics
+- OLE applications [MFC], user interface
+- user interfaces, OLE
+- applications [OLE], user interface
 ms.assetid: 61cb5d3e-1108-4e9b-b301-a8d8fcc586cb
 caps.latest.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 6
----
-# OLE (MFC)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 098e40f6027715e67b361b899bbf13459e7c4979
+ms.contentlocale: ru-ru
+ms.lasthandoff: 09/12/2017
 
-Реализация OLE функцию в программе влияет на пользовательский интерфейс пользователя несколькими способами:  
+---
+# <a name="ole-mfc"></a>OLE (MFC)
+Implementing OLE functionality in your program affects your user interface in several ways:  
   
--   Визуального редактирования \(встроенная функция активация\) указывает интерфейс пользователя другой программы в окнах программы и изменяет меню программы с элементами из другой программы.  
+-   Visual editing (in-place activation) displays the user interface of another program in your program's windows and modifies your program's menus with items from the other program.  
   
--   Перетаскивание позволяет пользователям перетаскивать объекты в пределах и между окнами и даже между программами.  
+-   Drag and drop allows users to drag objects within and between windows and even between programs.  
   
--   Отслежыватели обеспечивают визуальные подсказки состояние объектов во время визуального редактирования и перетаскивания.  
+-   Trackers provide visual cues to the state of objects during visual editing and drag and drop.  
   
- Дополнительные сведения см. в следующих разделах:  
+ For more information, see:  
   
--   [OLE и MFC](../mfc/ole-in-mfc.md)  
+-   [OLE and MFC](../mfc/ole-in-mfc.md)  
   
--   [Активация визуального редактирования \(\)](../mfc/activation-cpp.md)  
+-   [Visual Editing (Activation)](../mfc/activation-cpp.md)  
   
--   [Перетаскивание](../mfc/drag-and-drop-ole.md)  
+-   [Drag and Drop](../mfc/drag-and-drop-ole.md)  
   
--   [Отслежыватели](../mfc/trackers.md)  
+-   [Trackers](../mfc/trackers.md)  
   
-## См. также  
- [Элементы пользовательского интерфейса](../mfc/user-interface-elements-mfc.md)
+## <a name="see-also"></a>See Also  
+ [User Interface Elements](../mfc/user-interface-elements-mfc.md)
+

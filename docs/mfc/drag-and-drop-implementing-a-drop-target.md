@@ -1,57 +1,75 @@
 ---
-title: "Перетаскивание. Реализация объекта-приемника | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "перетаскивание, цель перетаскивания"
-  - "перетаскивание OLE, цель перетаскивания"
-  - "перетаскивание OLE, реализация целей перетаскивания"
+title: 'Drag and Drop: Implementing a Drop Target | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- OLE drag and drop [MFC], implementing drop targets
+- OLE drag and drop [MFC], drop target
+- drag and drop [MFC], drop target
 ms.assetid: 0689f1ec-5326-4008-b226-4b373c881358
 caps.latest.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 6
----
-# Перетаскивание. Реализация объекта-приемника
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: f6d4fb84423e3d2b67ad6d5a91bf001be5098061
+ms.contentlocale: ru-ru
+ms.lasthandoff: 09/12/2017
 
-В этой статье которых, как сделать приложением целевой объект перетаскивания.  Реализация целевой объект перетаскивания требуется несколько больше операций, чем реализация источнику перетаскивания, но по\-прежнему относительно прост.  Эти методы также применяются к не OLE приложения.  
+---
+# <a name="drag-and-drop-implementing-a-drop-target"></a>Drag and Drop: Implementing a Drop Target
+This article outlines how to make your application a drop target. Implementing a drop target takes slightly more work than implementing a drop source, but it is still relatively simple. These techniques also apply to non-OLE applications.  
   
-#### Реализовать целевой объект перетаскивания  
+#### <a name="to-implement-a-drop-target"></a>To implement a drop target  
   
-1.  Добавьте переменную\-член в каждое представление в приложении, которые должны быть целевым объектом перетаскивания.  Этот переменную\-член должен иметь тип `COleDropTarget` или класс, производный от него.  
+1.  Add a member variable to each view in the application that you want to be a drop target. This member variable must be of type `COleDropTarget` or a class derived from it.  
   
-2.  Из функции класса представления, обрабатывающей сообщение `WM_CREATE` \(обычно `OnCreate`\), вызовите функцию\-член `Register` новой переменной\-члена.  `Revoke` будет вызываться автоматически, когда для представления будет уничтожается.  
+2.  From your view class's function that handles the `WM_CREATE` message (typically `OnCreate`), call the new member variable's `Register` member function. `Revoke` will be called automatically for you when your view is destroyed.  
   
-3.  Переопределите следующие функции.  Если требуется такое же расширение функциональности на протяжении всего приложения, следует переопределить класс этих функций по в представлении.  Если требуется изменить расширение функциональности в отдельных случаях или включить удаления не в окнах `CView`, переопределите эти функции в `COleDropTarget`\- производного класса.  
+3.  Override the following functions. If you want the same behavior throughout your application, override these functions in your view class. If you want to modify behavior in isolated cases or want to enable dropping on non-`CView` windows, override these functions in your `COleDropTarget`-derived class.  
   
-    |Переопределение|Разрешить|  
-    |---------------------|---------------|  
-    |`OnDragEnter`|Операции перетаскивания, который должен содержаться в поле.  Вызывается, когда курсор сначала вводит окно.|  
-    |`OnDragLeave`|Особое расширение функциональности при операции перетаскивания, отобразится окно.|  
-    |`OnDragOver`|Операции перетаскивания, который должен содержаться в поле.  Вызывается, когда курсор перетаскивания в окно.|  
-    |`OnDrop`|Обработка данных, удаленных в указанное поле.|  
-    |`OnScrollBy`|Особое расширение функциональности, когда прокрутки, в поле целевого объекта.|  
+    |Override|To allow|  
+    |--------------|--------------|  
+    |`OnDragEnter`|Drop operations to occur in the window. Called when the cursor first enters the window.|  
+    |`OnDragLeave`|Special behavior when the drag operation leaves the specified window.|  
+    |`OnDragOver`|Drop operations to occur in the window. Called when the cursor is being dragged across the window.|  
+    |`OnDrop`|Handling of data being dropped into the specified window.|  
+    |`OnScrollBy`|Special behavior for when scrolling is necessary in the target window.|  
   
- См. файл MAINVIEW.CPP, который является частью образца [OCLIENT](../top/visual-cpp-samples.md) для примера MFC OLE, как эти функции работают вместе.  
+ See the MAINVIEW.CPP file that is part of the MFC OLE sample [OCLIENT](../visual-cpp-samples.md) for an example of how these functions work together.  
   
- Дополнительные сведения см. в следующих разделах:  
+ For more information, see:  
   
--   [Реализация источнику перетаскивания](../mfc/drag-and-drop-implementing-a-drop-source.md)  
+-   [Implementing a Drop Source](../mfc/drag-and-drop-implementing-a-drop-source.md)  
   
--   [Создание и уничтожения объектов OLE данных и источников данных](../mfc/data-objects-and-data-sources-creation-and-destruction.md)  
+-   [Creating and Destroying OLE Data Objects and Data Sources](../mfc/data-objects-and-data-sources-creation-and-destruction.md)  
   
--   [Управление OLE объекты данных и источников данных](../mfc/data-objects-and-data-sources-manipulation.md)  
+-   [Manipulating OLE Data Objects and Data Sources](../mfc/data-objects-and-data-sources-manipulation.md)  
   
-## См. также  
- [Перетаскивание \(OLE\)](../mfc/drag-and-drop-ole.md)   
- [COleDropTarget Class](../Topic/COleDropTarget%20Class.md)
+## <a name="see-also"></a>See Also  
+ [Drag and Drop (OLE)](../mfc/drag-and-drop-ole.md)   
+ [COleDropTarget Class](../mfc/reference/coledroptarget-class.md)
+

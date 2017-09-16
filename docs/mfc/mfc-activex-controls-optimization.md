@@ -1,75 +1,94 @@
 ---
-title: "Элементы управления ActiveX в MFC. Оптимизация | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "контексты устройств, необрезанный для элементов управления ActiveX MFC"
-  - "немерцающие элементы управления ActiveX"
-  - "MFC ActiveX - элементы управления, активное и неактивное состояние"
-  - "MFC ActiveX - элементы управления, без мерцания"
-  - "MFC ActiveX - элементы управления, взаимодействие мыши"
-  - "MFC ActiveX - элементы управления, оптимизация"
-  - "MFC ActiveX - элементы управления, без окон"
-  - "оптимизация, элементы управления ActiveX"
-  - "оптимизация производительности, элементы управления ActiveX"
-  - "производительность, элементы управления ActiveX"
-  - "элементы управления ActiveX MFC без окон"
+title: 'MFC ActiveX Controls: Optimization | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- MFC ActiveX controls [MFC], windowless
+- flicker-free ActiveX controls
+- MFC ActiveX controls [MFC], mouse interaction
+- device contexts, unclipped for MFC ActiveX controls
+- MFC ActiveX controls [MFC], optimizing
+- performance, ActiveX controls
+- optimization, ActiveX controls
+- MFC ActiveX controls [MFC], flicker-free
+- windowless MFC ActiveX controls
+- MFC ActiveX controls [MFC], active/inactive state
+- optimizing performance, ActiveX controls
 ms.assetid: 8b11f26a-190d-469b-b594-5336094a0109
 caps.latest.revision: 8
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 4
----
-# Элементы управления ActiveX в MFC. Оптимизация
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 290a1296b46db5b2ce2544d07efb87c44faef15d
+ms.contentlocale: ru-ru
+ms.lasthandoff: 09/12/2017
 
-В этой статье описывается методы можно оптимизировать использование элементов управления ActiveX для повышения производительности.  
+---
+# <a name="mfc-activex-controls-optimization"></a>MFC ActiveX Controls: Optimization
+This article explains techniques you can use to optimize your ActiveX controls for better performance.  
   
- Разделы [Отключение активировать при видимый параметр](../mfc/turning-off-the-activate-when-visible-option.md) и [Обеспечивать взаимодействие с мышью, неактивный](../Topic/Providing%20Mouse%20Interaction%20While%20Inactive.md) обсуждается элементы управления, для создания окна до тех пор, пока не будут активированы.  Раздел [Предоставление безоконную активацию](../mfc/providing-windowless-activation.md) описывает элементы управления, которые никогда не создает окно, даже если они активированы.  
+ The topics [Turning Off the Activate When Visible Option](../mfc/turning-off-the-activate-when-visible-option.md) and [Providing Mouse Interaction While Inactive](../mfc/providing-mouse-interaction-while-inactive.md) discuss controls that don't create a window until activated. The topic [Providing Windowless Activation](../mfc/providing-windowless-activation.md) discusses controls that never create a window, even when they are activated.  
   
- Windows 2 имеет два недостатка для объектов OLE. они препятствуют объекты предотвращает прозрачный или при nonrectangular активными, и они добавляют большая нагрузка на план и отображения элементов управления.  Обычно создание окна принимает процент 60 времени создания элемента управления.  С одним общим контейнером окном \(обычно\) и некоторым подготовить кодом, элемент управления получает те же службы окна, обычно без потери производительности.  Иметь окно в основном лишняя служебные данные для объекта.  
+ Windows have two major drawbacks for OLE objects: they prevent objects from being transparent or nonrectangular when active, and they add a large overhead to the instantiation and display of controls. Typically, creating a window takes 60 percent of a control's creation time. With a single shared window (usually the container's) and some dispatching code, a control receives the same window services, generally without a loss of performance. Having a window is mostly unnecessary overhead for the object.  
   
- Некоторые виды оптимизации не обязательно повышает производительность, когда этот элемент управления используется в некоторых контейнерах.  Например, контейнеры освобожданные до 1996 не поддержке безоконную активацию, поэтому реализация этой функции не получает преимущество в старых контейнерах.  Однако почти каждый контейнер поддерживает сохранение, поэтому оптимизировать код сохранения элемента управления, повышает его производительность в одном контейнере.  Если элемент управления специально предназначен для использования с одним конкретным типом контейнера, можно изучить, этих оптимизации поддерживается этим контейнером.  Однако в общем случае следует попробовать реализовать столько этих методов как применим в определенному элементу управления, чтобы предоставить элемент управления выполняет насколько хорошо по мере их по возможности может в широком массиве контейнеров.  
+ Some optimizations do not necessarily improve performance when your control is used in certain containers. For example, containers released prior to 1996 did not support windowless activation, so implementing this feature will not provide a benefit in older containers. However, nearly every container supports persistence, so optimizing your control's persistence code will likely improve its performance in any container. If your control is specifically intended to be used with one particular type of container, you may want to research which of these optimizations is supported by that container. In general, however, you should try to implement as many of these techniques as are applicable to your particular control to ensure your control performs as well as it possibly can in a wide array of containers.  
   
- Можно реализовать многие из этих оптимизации посредством [Мастер элементов ActiveX MFC](../mfc/reference/mfc-activex-control-wizard.md), на странице [Параметры элементов управления](../mfc/reference/control-settings-mfc-activex-control-wizard.md).  
+ You can implement many of these optimizations through the [MFC ActiveX Control Wizard](../mfc/reference/mfc-activex-control-wizard.md), on the [Control Settings](../mfc/reference/control-settings-mfc-activex-control-wizard.md) page.  
   
-### Параметры оптимизации мастера элементов управления ActiveX MFC OLE  
+### <a name="mfc-activex-control-wizard-ole-optimization-options"></a>MFC ActiveX Control Wizard OLE Optimization Options  
   
-|Параметр элемента управления в мастере элемента управления ActiveX MFC|Действие|Дополнительные сведения|  
-|----------------------------------------------------------------------------|--------------|-----------------------------|  
-|флажок **Активировать при видимый**|Очистить|[Отключение активировать при видимый параметр](../mfc/turning-off-the-activate-when-visible-option.md)|  
-|флажок **Активация без окна**|Select|[Предоставление безоконную активацию](../mfc/providing-windowless-activation.md)|  
-|флажок **Unclipped контекст устройства**|Select|[С помощью Unclipped контекст устройства](../mfc/using-an-unclipped-device-context.md)|  
-|флажок **свободная от Мерцание активация**|Select|[Защита от свободной Мерцание активацию](../mfc/providing-flicker-free-activation.md)|  
-|флажок **Уведомления указателя мыши при неактивный**|Select|[Обеспечивать взаимодействие с мышью, неактивный](../Topic/Providing%20Mouse%20Interaction%20While%20Inactive.md)|  
-|флажок **Создание оптимизированного кода**|Select|[Оптимизировать рисование элементов управления](../mfc/optimizing-control-drawing.md)|  
+|Control setting in the MFC ActiveX Control Wizard|Action|More information|  
+|-------------------------------------------------------|------------|----------------------|  
+|**Activate when visible** check box|Clear|[Turning Off the Activate When Visible Option](../mfc/turning-off-the-activate-when-visible-option.md)|  
+|**Windowless activation** check box|Select|[Providing Windowless Activation](../mfc/providing-windowless-activation.md)|  
+|**Unclipped device context** check box|Select|[Using an Unclipped Device Context](../mfc/using-an-unclipped-device-context.md)|  
+|**Flicker-free activation** check box|Select|[Providing Flicker-Free Activation](../mfc/providing-flicker-free-activation.md)|  
+|**Mouse pointer notifications when inactive** check box|Select|[Providing Mouse Interaction While Inactive](../mfc/providing-mouse-interaction-while-inactive.md)|  
+|**Optimized drawing code** check box|Select|[Optimizing Control Drawing](../mfc/optimizing-control-drawing.md)|  
   
- Дополнительные сведения о функциях, которые реализуют эти оптимизации см. в разделе [COleControl](../mfc/reference/colecontrol-class.md).  Функции\-члены перечислены использованием, например [Безоконные операции](http://msdn.microsoft.com/ru-ru/e9e28f79-9a70-4ae4-a5aa-b3e92f1904df) и [Неактивный указатель функции.](http://msdn.microsoft.com/ru-ru/e9e28f79-9a70-4ae4-a5aa-b3e92f1904df)  
+ For detailed information about the member functions that implement these optimizations, see [COleControl](../mfc/reference/colecontrol-class.md). The member functions are listed by use, such as [Windowless Operations](http://msdn.microsoft.com/en-us/e9e28f79-9a70-4ae4-a5aa-b3e92f1904df) and [Inactive Pointer Handling Functions](http://msdn.microsoft.com/en-us/e9e28f79-9a70-4ae4-a5aa-b3e92f1904df).  
   
- Дополнительные сведения см. в следующих разделах:  
+ For more information, see:  
   
--   [Оптимизировать сохранение и инициализация](../mfc/optimizing-persistence-and-initialization.md)  
+-   [Optimizing Persistence and Initialization](../mfc/optimizing-persistence-and-initialization.md)  
   
--   [Предоставление безоконную активацию](../mfc/providing-windowless-activation.md)  
+-   [Providing Windowless Activation](../mfc/providing-windowless-activation.md)  
   
--   [Отключение активировать при видимый параметр](../mfc/turning-off-the-activate-when-visible-option.md)  
+-   [Turning Off the Activate When Visible Option](../mfc/turning-off-the-activate-when-visible-option.md)  
   
--   [Обеспечивать взаимодействие с мышью, неактивный](../Topic/Providing%20Mouse%20Interaction%20While%20Inactive.md)  
+-   [Providing Mouse Interaction While Inactive](../mfc/providing-mouse-interaction-while-inactive.md)  
   
--   [Защита от свободной Мерцание активацию](../mfc/providing-flicker-free-activation.md)  
+-   [Providing Flicker-Free Activation](../mfc/providing-flicker-free-activation.md)  
   
--   [С помощью Unclipped контекст устройства](../mfc/using-an-unclipped-device-context.md)  
+-   [Using an Unclipped Device Context](../mfc/using-an-unclipped-device-context.md)  
   
--   [Оптимизировать рисование элементов управления](../mfc/optimizing-control-drawing.md)  
+-   [Optimizing Control Drawing](../mfc/optimizing-control-drawing.md)  
   
-## См. также  
- [Элементы управления ActiveX MFC](../mfc/mfc-activex-controls.md)
+## <a name="see-also"></a>See Also  
+ [MFC ActiveX Controls](../mfc/mfc-activex-controls.md)
+
+

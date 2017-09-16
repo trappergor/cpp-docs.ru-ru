@@ -1,5 +1,5 @@
 ---
-title: "Форматирование CString и отображение окна сообщения | Документы Microsoft"
+title: CString Formatting and Message-Box Display | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -13,7 +13,7 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- CString objects, formatting and message boxes
+- CString objects [MFC], formatting and message boxes
 ms.assetid: d1068cf4-9cc5-4952-b9e7-d612c53cbc28
 caps.latest.revision: 14
 author: mikeblome
@@ -33,32 +33,32 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3d045736f9a54d344c67e3f7408198e65a0bc95f
-ms.openlocfilehash: 356562dc61971aa7a74ce9e9be94fc34af58f6f9
+ms.translationtype: MT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: abe0ce15f9fdf83c4cd15156916779e112ab72a8
 ms.contentlocale: ru-ru
-ms.lasthandoff: 03/29/2017
+ms.lasthandoff: 09/12/2017
 
 ---
-# <a name="cstring-formatting-and-message-box-display"></a>Форматирование CString и отображение окна сообщения
-Ряд функций, позволяющих форматирования и синтаксического анализа `CString` объектов. Эти функции можно использовать всякий раз, когда приходится манипулировать `CString` объектов, но они особенно полезны для форматирования строки, которые будут отображаться в текстовое окно сообщения.  
+# <a name="cstring-formatting-and-message-box-display"></a>CString Formatting and Message-Box Display
+A number of functions are provided to format and parse `CString` objects. You can use these functions whenever you have to manipulate `CString` objects, but they are particularly useful for formatting strings that will appear in message-box text.  
   
- Эта группа функций также содержит глобальные подпрограммы для отображения окна сообщения.  
+ This group of functions also includes a global routine for displaying a message box.  
   
-### <a name="cstring-functions"></a>Функции CString  
+### <a name="cstring-functions"></a>CString Functions  
   
 |||  
 |-|-|  
-|[AfxExtractSubString](#afxextractsubstring)|Извлечение подстрок, разделенные один символ из заданной исходной строки.|  
-|[AfxFormatString1](#afxformatstring1)|Замещает заданную строку для форматирования символов «%1» в строке содержится в таблице строк.|  
-|[AfxFormatString2](#afxformatstring2)|Замещает двух строк для формата символ «%1» и «%2» в строке содержится в таблице строк.|  
-|[AfxMessageBox](#afxmessagebox)|Отображает окно сообщения.|  
+|[AfxExtractSubString](#afxextractsubstring)|Extracts substrings separated by a single character from a given source string.|  
+|[AfxFormatString1](#afxformatstring1)|Substitutes a given string for the format characters "%1" in a string contained in the string table.|  
+|[AfxFormatString2](#afxformatstring2)|Substitutes two strings for the format characters "%1" and "%2" in a string contained in the string table.|  
+|[AfxMessageBox](#afxmessagebox)|Displays a message box.|  
   
-### <a name="requirements"></a>Требования  
-  **Заголовок** afxwin.h  
+### <a name="requirements"></a>Requirements  
+  **Header** afxwin.h  
   
-##  <a name="afxextractsubstring"></a>AfxExtractSubString  
- Это глобальная функция используется для извлечения подстроки из заданной исходной строки.  
+##  <a name="afxextractsubstring"></a>  AfxExtractSubString  
+ This global function can be used to extract a substring from a given source string.  
   
 ```   
 BOOL AFXAPI AfxExtractSubString (
@@ -68,35 +68,35 @@ BOOL AFXAPI AfxExtractSubString (
     TCHAR chSep  = '\n'); 
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
  *rString*  
- -   Ссылка на [CString](../../atl-mfc-shared/using-cstring.md) объект, который будет получать отдельные подстроки.  
+ -   Reference to a [CString](../../atl-mfc-shared/using-cstring.md) object that will receive an individual substring.  
   
  *lpszFullString*  
- -   Строка, содержащая полный текст строки для извлечения из.  
+ -   String containing the full text of the string to extract from.  
   
  *iSubString*  
- -   Отсчитываемый от нуля индекс подстроки, которую требуется извлечь из *lpszFullString*.  
+ -   Zero-based index of the substring to extract from *lpszFullString*.  
   
  *chSep*  
- -   Разделитель, который используется для разделения подстрок.  
+ -   Separator character used to delimit substrings.  
   
-### <a name="return-value"></a>Возвращаемое значение  
- **Значение TRUE,** Если функция успешно извлечь подстроку по указанному индексу; в противном случае **FALSE**.  
+### <a name="return-value"></a>Return Value  
+ **TRUE** if the function successfully extracted the substring at the provided index; otherwise, **FALSE**.  
   
-### <a name="remarks"></a>Примечания  
- Эта функция полезна для извлечения нескольких подстрок из строки источника, если известных один символ отделяет каждой подстроке. Эта функция осуществляет поиск с начала `lpszFullString` параметр при каждом вызове.  
+### <a name="remarks"></a>Remarks  
+ This function is useful for extracting multiple substrings from a source string when a known single character separates each substring. This function searches from the beginning of the `lpszFullString` parameter each time it is called.  
   
- Эта функция возвращает значение FALSE, если параметр `lpszFullString` равно **NULL** или функция достигает конца `lpszFullString` без поиск `iSubString`+ 1 вхождений указанным знаком-разделителем. `rString` Параметр не будет изменен исходное значение, если `lpszFullString` было задано значение **NULL**; в противном случае `rString` параметра задано на пустую строку, если не удалось извлечь подстроку по указанному индексу.  
+ This function will return FALSE if either `lpszFullString` is set to **NULL** or the function reaches the end of `lpszFullString` without finding `iSubString`+1 occurrences of the specified separator character. The `rString` parameter will not be modified from its original value if `lpszFullString` was set to **NULL**; otherwise, the `rString` parameter is set to the empty string if the substring could not be extracted for the specified index.  
   
-### <a name="example"></a>Пример  
- [!code-cpp[NVC_MFC_Utilities #48](../../mfc/codesnippet/cpp/cstring-formatting-and-message-box-display_1.cpp)]  
+### <a name="example"></a>Example  
+ [!code-cpp[NVC_MFC_Utilities#48](../../mfc/codesnippet/cpp/cstring-formatting-and-message-box-display_1.cpp)]  
   
-### <a name="requirements"></a>Требования  
-  **Заголовок** afxwin.h  
+### <a name="requirements"></a>Requirements  
+  **Header** afxwin.h  
   
-##  <a name="afxformatstring1"></a>AfxFormatString1  
- Замена строки, на который указывает `lpsz1` для любых экземпляров символов «%1» в ресурс строки шаблона, определенный `nIDS`.  
+##  <a name="afxformatstring1"></a>  AfxFormatString1  
+ Substitutes the string pointed to by `lpsz1` for any instances of the characters "%1" in the template string resource identified by `nIDS`.  
   
 ```  
 void  AfxFormatString1(
@@ -105,29 +105,29 @@ void  AfxFormatString1(
     LPCTSTR lpsz1); 
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
  `rString`  
- Ссылку на `CString` объект, который будет содержать результирующая строка после выполнения подстановки.  
+ A reference to a `CString` object that will contain the resultant string after the substitution is performed.  
   
  `nIDS`  
- Идентификатор ресурса строки шаблона, на котором выполняется замена.  
+ The resource ID of the template string on which the substitution will be performed.  
   
  `lpsz1`  
- Строка, которая заменит формат символов «%1» в строке шаблона.  
+ A string that will replace the format characters "%1" in the template string.  
   
-### <a name="remarks"></a>Примечания  
- Вновь сформированный строка хранится в `rString`. Например, если строка в таблице строк «Файла %1 не найден» и `lpsz1` равен «C:\MYFILE. TXT», затем `rString` будет содержать строку «файл C:\MYFILE. TXT не найден». Эта функция полезна для форматирования строк, отправляемых в окнах сообщений и других окнах.  
+### <a name="remarks"></a>Remarks  
+ The newly formed string is stored in `rString`. For example, if the string in the string table is "File %1 not found", and `lpsz1` is equal to "C:\MYFILE.TXT", then `rString` will contain the string "File C:\MYFILE.TXT not found". This function is useful for formatting strings sent to message boxes and other windows.  
   
- Если символы форматирования «%1» более одного раза появляется в строке, будут выполняться несколько подстановок.  
+ If the format characters "%1" appear in the string more than once, multiple substitutions will be made.  
   
-### <a name="example"></a>Пример  
- [!code-cpp[NVC_MFC_Utilities #25](../../mfc/codesnippet/cpp/cstring-formatting-and-message-box-display_2.cpp)]  
+### <a name="example"></a>Example  
+ [!code-cpp[NVC_MFC_Utilities#25](../../mfc/codesnippet/cpp/cstring-formatting-and-message-box-display_2.cpp)]  
   
-### <a name="requirements"></a>Требования  
-  **Заголовок** afxwin.h  
+### <a name="requirements"></a>Requirements  
+  **Header** afxwin.h  
   
-##  <a name="afxformatstring2"></a>AfxFormatString2  
- Замена строки, на который указывает `lpsz1` для любых экземпляров символов «%1», и строка, на который указывает `lpsz2` для любых экземпляров символов «%2» в ресурс строки шаблона, определенный `nIDS`.  
+##  <a name="afxformatstring2"></a>  AfxFormatString2  
+ Substitutes the string pointed to by `lpsz1` for any instances of the characters "%1", and the string pointed to by `lpsz2` for any instances of the characters "%2", in the template string resource identified by `nIDS`.  
   
 ```   
 void AfxFormatString2(
@@ -137,32 +137,32 @@ void AfxFormatString2(
     LPCTSTR lpsz2); 
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
  `rString`  
- Ссылку на `CString` , содержащий результирующие строки после выполнения подстановки.  
+ A reference to the `CString` that will contain the resultant string after the substitution is performed.  
   
  `nIDS`  
- Идентификатор строки таблицы строки шаблона, на котором выполняется замена.  
+ The string table ID of the template string on which the substitution will be performed.  
   
  `lpsz1`  
- Строка, которая заменит формат символов «%1» в строке шаблона.  
+ A string that will replace the format characters "%1" in the template string.  
   
  `lpsz2`  
- Строка, которая заменит формат символов «%2» в строке шаблона.  
+ A string that will replace the format characters "%2" in the template string.  
   
-### <a name="remarks"></a>Примечания  
- Вновь сформированный строка хранится в `rString`. Например, если строка в таблице строк «Файла %1 не найден в каталоге %2» `lpsz1` указывает на «MYFILE. "TXT», и `lpsz2` указывает на «C:\MYDIR», затем `rString` будет содержать строку «файла MYFILE. TXT, не найден в каталоге C:\MYDIR»  
+### <a name="remarks"></a>Remarks  
+ The newly formed string is stored in `rString`. For example, if the string in the string table is "File %1 not found in directory %2", `lpsz1` points to "MYFILE.TXT", and `lpsz2` points to "C:\MYDIR", then `rString` will contain the string "File MYFILE.TXT not found in directory C:\MYDIR"  
   
- Если формат символов «%1» или «%2» будут отображаться в строке несколько раз, будет выполнен несколько подстановок. Они не должны быть в числовом порядке.  
+ If the format characters "%1" or "%2" appear in the string more than once, multiple substitutions will be made. They do not have to be in numerical order.  
   
-### <a name="example"></a>Пример  
- [!code-cpp[NVC_MFC_Utilities #26](../../mfc/codesnippet/cpp/cstring-formatting-and-message-box-display_3.cpp)]  
+### <a name="example"></a>Example  
+ [!code-cpp[NVC_MFC_Utilities#26](../../mfc/codesnippet/cpp/cstring-formatting-and-message-box-display_3.cpp)]  
   
-### <a name="requirements"></a>Требования  
-  **Заголовок** afxwin.h  
+### <a name="requirements"></a>Requirements  
+  **Header** afxwin.h  
   
-##  <a name="afxmessagebox"></a>AfxMessageBox  
- Отображает окно сообщения на экране.  
+##  <a name="afxmessagebox"></a>  AfxMessageBox  
+ Displays a message box on the screen.  
   
 ```  
 int AfxMessageBox(
@@ -176,49 +176,49 @@ int AFXAPI AfxMessageBox(
     UINT nIDHelp = (UINT) -1); 
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
  `lpszText`  
- Указывает на `CString` объект или символом null строку, содержащую сообщение, отображаемое в окне сообщения.  
+ Points to a `CString` object or null-terminated string containing the message to be displayed in the message box.  
   
  `nType`  
- Стиль окна сообщения. Применить любой из [стили окна сообщений](../../mfc/reference/message-box-styles.md) в поле.  
+ The style of the message box. Apply any of the [message-box styles](../../mfc/reference/styles-used-by-mfc.md#message-box-styles) to the box.  
   
  `nIDHelp`  
- Идентификатор контекста справки для сообщения. 0 указывает, что будет использоваться контекст справки приложения по умолчанию.  
+ The Help context ID for the message; 0 indicates the application's default Help context will be used.  
   
  `nIDPrompt`  
- Уникальный идентификатор, используемый для ссылки на строки в таблице строк.  
+ A unique ID used to reference a string in the string table.  
   
-### <a name="return-value"></a>Возвращаемое значение  
- Нуль, если не хватает памяти для отображения окна сообщений. в противном случае возвращается одно из следующих значений:  
+### <a name="return-value"></a>Return Value  
+ Zero if there is not enough memory to display the message box; otherwise, one of the following values is returned:  
   
-- **IDABORT** выбран вариант Abort.  
+- **IDABORT** The Abort button was selected.  
   
-- **IDCANCEL** выбран вариант "Отмена".  
+- **IDCANCEL** The Cancel button was selected.  
   
-- **IDIGNORE** выбран вариант игнорировать.  
+- **IDIGNORE** The Ignore button was selected.  
   
-- **IDNO** выбран вариант Нет.  
+- **IDNO** The No button was selected.  
   
-- **IDOK** выбрана кнопка "ОК".  
+- **IDOK** The OK button was selected.  
   
-- **IDRETRY** выбран вариант, повторите попытку.  
+- **IDRETRY** The Retry button was selected.  
   
-- **IDYES** выбран вариант Да.  
+- **IDYES** The Yes button was selected.  
   
- Если окно сообщения содержит кнопку "Отмена", **IDCANCEL** будет возвращено значение, если нажата клавиша ESC или кнопку "Отмена". Если окно сообщения содержит нет кнопки "Отмена", нажав клавишу ESC не оказывает влияния.  
+ If a message box has a Cancel button, the **IDCANCEL** value will be returned if either the ESC key is pressed or the Cancel button is selected. If the message box has no Cancel button, pressing the ESC key has no effect.  
   
- Функции [AfxFormatString1](#afxformatstring1) и [AfxFormatString2](#afxformatstring2) можно использовать для форматирования текста, отображаемого в окне сообщения.  
+ The functions [AfxFormatString1](#afxformatstring1) and [AfxFormatString2](#afxformatstring2) can be useful in formatting text that appears in a message box.  
   
-### <a name="remarks"></a>Примечания  
- Первая форма перегруженные функции отображается строка текста, на который указывает `lpszText` в окне сообщения и использует `nIDHelp` для описания контекст справки. Контекст справки используется для перехода к соответствующие разделы справки, когда пользователь нажимает клавишу справки (обычно F1).  
+### <a name="remarks"></a>Remarks  
+ The first form of this overloaded function displays a text string pointed to by `lpszText` in the message box and uses `nIDHelp` to describe a Help context. The Help context is used to jump to an associated Help topic when the user presses the Help key (typically F1).  
   
- Вторая форма функции использует строковый ресурс с Идентификатором `nIDPrompt` для отображения сообщения в окне сообщения. Соответствующая страница справки находится с помощью значения `nIDHelp`. Если значение по умолчанию `nIDHelp` -используется (1), идентификатор строкового ресурса `nIDPrompt`, используется для контекста справки. Дополнительные сведения об определении контексты справки см. в разделе [технической Примечание 28](../../mfc/tn028-context-sensitive-help-support.md).  
+ The second form of the function uses the string resource with the ID `nIDPrompt` to display a message in the message box. The associated Help page is found through the value of `nIDHelp`. If the default value of `nIDHelp` is used (-1), the string resource ID, `nIDPrompt`, is used for the Help context. For more information about defining Help contexts, see [Technical Note 28](../../mfc/tn028-context-sensitive-help-support.md).  
   
-### <a name="example"></a>Пример  
- [!code-cpp[NVC_MFCWindowing #133](../../mfc/reference/codesnippet/cpp/cstring-formatting-and-message-box-display_4.cpp)]  
+### <a name="example"></a>Example  
+ [!code-cpp[NVC_MFCWindowing#133](../../mfc/reference/codesnippet/cpp/cstring-formatting-and-message-box-display_4.cpp)]  
   
-## <a name="see-also"></a>См. также  
- [Макросы и глобальные объекты](../../mfc/reference/mfc-macros-and-globals.md)   
- [Класс CStringT](../../atl-mfc-shared/reference/cstringt-class.md)
+## <a name="see-also"></a>See Also  
+ [Macros and Globals](../../mfc/reference/mfc-macros-and-globals.md)   
+ [CStringT Class](../../atl-mfc-shared/reference/cstringt-class.md)
 

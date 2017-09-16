@@ -1,5 +1,5 @@
 ---
-title: "Структура LOGPEN | Документы Microsoft"
+title: LOGPEN Structure | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -13,7 +13,7 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- LOGPEN structure
+- LOGPEN structure [MFC]
 ms.assetid: a89e8690-6b61-4af5-990c-7c82da24f3b0
 caps.latest.revision: 12
 author: mikeblome
@@ -33,17 +33,17 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 040985df34f2613b4e4fae29498721aef15d50cb
-ms.openlocfilehash: f3868d2ac6a7b18cfe43f7da8865aed0a3ecf88d
+ms.translationtype: MT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: d87f885848fd7f77b05475de0ab99e1214e474a7
 ms.contentlocale: ru-ru
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 09/12/2017
 
 ---
-# <a name="logpen-structure"></a>Структура LOGPEN
-`LOGPEN` Структура определяет стиль, ширину и цвет пера, графический объект, используемый для рисования линий и границ. [CPen::CreatePenIndirect](../../mfc/reference/cpen-class.md#createpenindirect) функция использует `LOGPEN` структуры.  
+# <a name="logpen-structure"></a>LOGPEN Structure
+The `LOGPEN` structure defines the style, width, and color of a pen, a drawing object used to draw lines and borders. The [CPen::CreatePenIndirect](../../mfc/reference/cpen-class.md#createpenindirect) function uses the `LOGPEN` structure.  
   
-## <a name="syntax"></a>Синтаксис  
+## <a name="syntax"></a>Syntax  
   
 ```  
 typedef struct tagLOGPEN {  /* lgpn */  
@@ -53,42 +53,42 @@ typedef struct tagLOGPEN {  /* lgpn */
 } LOGPEN;  
 ```  
   
-#### <a name="parameters"></a>Параметры  
+#### <a name="parameters"></a>Parameters  
  *lopnStyle*  
- Указывает тип пера. Этот член может принимать одно из следующих значений:  
+ Specifies the pen type. This member can be one of the following values:  
   
-- **PS_SOLID** создает сплошной перо.  
+- **PS_SOLID** Creates a solid pen.  
   
-- **PS_DASH** создает штрихового пера. (Действует только в том случае, если ширина пера равна 1.)  
+- **PS_DASH** Creates a dashed pen. (Valid only when the pen width is 1.)  
   
-- **PS_DOT** создает точечный перо. (Действует только в том случае, если ширина пера равна 1.)  
+- **PS_DOT** Creates a dotted pen. (Valid only when the pen width is 1.)  
   
-- **PS_DASHDOT** создает перо с чередованием, дефисы и точки. (Действует только в том случае, если ширина пера равна 1.)  
+- **PS_DASHDOT** Creates a pen with alternating dashes and dots. (Valid only when the pen width is 1.)  
   
-- **PS_DASHDOTDOT** создает с сменяющих друг друга штрихов и double точек пера. (Действует только в том случае, если ширина пера равна 1.)  
+- **PS_DASHDOTDOT** Creates a pen with alternating dashes and double dots. (Valid only when the pen width is 1.)  
   
-- **PS_NULL** создает null перо.  
+- **PS_NULL** Creates a null pen.  
   
-- **PS_INSIDEFRAME** создает перо, рисующее строки внутри кадра замкнутые фигуры, созданные выходные данные функций GDI, определяющие ограничивающий прямоугольник (например, **эллипс**, **прямоугольник**, `RoundRect`, `Pie`, и `Chord` функции-члены). При использовании этого стиля с помощью GDI выходных данных функции, которые не указывают ограничивающий прямоугольник (например, `LineTo` функции-члена), область рисования пера не ограничивается кадра.  
+- **PS_INSIDEFRAME** Creates a pen that draws a line inside the frame of closed shapes produced by GDI output functions that specify a bounding rectangle (for example, the **Ellipse**, **Rectangle**, `RoundRect`, `Pie`, and `Chord` member functions). When this style is used with GDI output functions that do not specify a bounding rectangle (for example, the `LineTo` member function), the drawing area of the pen is not limited by a frame.  
   
-     Если перо имеет **PS_INSIDEFRAME** стиль и цвет, который не соответствует цвет в таблице логических цветов нарисован с помощью сглаженный цвет пера. **PS_SOLID** стиль пера не может использоваться для создания с сглаженный цвет пера. **PS_INSIDEFRAME** стиль идентична **PS_SOLID** Если ширину пера меньше или равно 1.  
+     If a pen has the **PS_INSIDEFRAME** style and a color that does not match a color in the logical color table, the pen is drawn with a dithered color. The **PS_SOLID** pen style cannot be used to create a pen with a dithered color. The **PS_INSIDEFRAME** style is identical to **PS_SOLID** if the pen width is less than or equal to 1.  
   
-     При **PS_INSIDEFRAME** используется стиль с GDI-объекты, созданные функциями, кроме **эллипс**, **прямоугольник**, и `RoundRect`, строка не может быть полностью внутри заданного фрейма.  
+     When the **PS_INSIDEFRAME** style is used with GDI objects produced by functions other than **Ellipse**, **Rectangle**, and `RoundRect`, the line may not be completely inside the specified frame.  
   
  *lopnWidth*  
- Задает ширину пера в логических единицах. Если **lopnWidth** член равен 0, перо одну точку на устройствах растровых независимо от текущего режима сопоставления.  
+ Specifies the pen width, in logical units. If the **lopnWidth** member is 0, the pen is 1 pixel wide on raster devices regardless of the current mapping mode.  
   
  *lopnColor*  
- Задает цвет пера.  
+ Specifies the pen color.  
   
-## <a name="remarks"></a>Примечания  
- **y** значение в [ТОЧКИ](../../mfc/reference/point-structure1.md) структура для **lopnWidth** элемент не используется.  
+## <a name="remarks"></a>Remarks  
+ The **y** value in the [POINT](../../mfc/reference/point-structure1.md) structure for the **lopnWidth** member is not used.  
   
-## <a name="requirements"></a>Требования  
- **Заголовок:** wingdi.h  
+## <a name="requirements"></a>Requirements  
+ **Header:** wingdi.h  
   
-## <a name="see-also"></a>См. также  
- [Структуры, стили, обратные вызовы и схемы сообщений](../../mfc/reference/structures-styles-callbacks-and-message-maps.md)   
+## <a name="see-also"></a>See Also  
+ [Structures, Styles, Callbacks, and Message Maps](../../mfc/reference/structures-styles-callbacks-and-message-maps.md)   
  [CPen::CreatePenIndirect](../../mfc/reference/cpen-class.md#createpenindirect)
 
 

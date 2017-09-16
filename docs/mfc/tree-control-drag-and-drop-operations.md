@@ -1,39 +1,58 @@
 ---
-title: "Операции перетаскивания древовидного элемента управления | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "CTreeCtrl - класс, операции перетаскивания"
-  - "перетаскивание, CTreeCtrl"
-  - "элементы управления "дерево", операции перетаскивания"
+title: Tree Control Drag-and-Drop Operations | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- CTreeCtrl class [MFC], drag and drop operations
+- drag and drop [MFC], CTreeCtrl
+- tree controls [MFC], drag and drop operations
 ms.assetid: 3cf78b4c-4579-4fe1-9bc9-c5ab876e4af1
 caps.latest.revision: 12
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 8
----
-# Операции перетаскивания древовидного элемента управления
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 5beda5b1c08ed33e532d8987e1caee1a2745ff3c
+ms.contentlocale: ru-ru
+ms.lasthandoff: 09/12/2017
 
-Элемент управления "Дерево" \([CTreeCtrl](../mfc/reference/ctreectrl-class.md)\) отправляет уведомление при запуске пользователя для перетаскивания элементов.  Элемент управления отправляет сообщение уведомления [TVN\_BEGINDRAG](http://msdn.microsoft.com/library/windows/desktop/bb773504), если пользователь начинает перетаскивание элемента удерживая нажатой левую кнопку мыши и сообщением уведомления [TVN\_BEGINRDRAG](http://msdn.microsoft.com/library/windows/desktop/bb773509), если пользователь начинает перетаскивание с правой кнопкой.  Можно предотвратить элемент управления "Дерево" из отправлять эти уведомления, используя элемент управления "Дерево" стиль **TVS\_DISABLEDRAGDROP**.  
+---
+# <a name="tree-control-drag-and-drop-operations"></a>Tree Control Drag-and-Drop Operations
+A tree control ([CTreeCtrl](../mfc/reference/ctreectrl-class.md)) sends a notification when the user starts to drag an item. The control sends a [TVN_BEGINDRAG](http://msdn.microsoft.com/library/windows/desktop/bb773504) notification message when the user begins dragging an item with the left mouse button and a [TVN_BEGINRDRAG](http://msdn.microsoft.com/library/windows/desktop/bb773509) notification message when the user begins dragging with the right button. You can prevent a tree control from sending these notifications by giving the tree control the **TVS_DISABLEDRAGDROP** style.  
   
- При получении изображение для отображения во время операции перетаскивания, вызвав функцию\-член [CreateDragImage](../Topic/CTreeCtrl::CreateDragImage.md).  Элемент управления "Дерево" создает при перетаскивании растровое изображение на основе метку, перетащенным элемента.  Затем элемент управления "Дерево" создает список изображений, добавляет растровое изображение в него и возвращает указатель на объект [CImageList](../Topic/CImageList%20Class.md).  
+ You obtain an image to display during a drag operation by calling the [CreateDragImage](../mfc/reference/ctreectrl-class.md#createdragimage) member function. The tree control creates a dragging bitmap based on the label of the item being dragged. Then the tree control creates an image list, adds the bitmap to it, and returns a pointer to the [CImageList](../mfc/reference/cimagelist-class.md) object.  
   
- Необходимо предоставить код, который фактически перетаскивает элемент.  Обычно это включает использование при перетаскивании возможности функций списка изображений и обрабатывать сообщения, отправляемые [WM\_MOUSEMOVE](http://msdn.microsoft.com/library/windows/desktop/ms645616) и [WM\_LBUTTONUP](http://msdn.microsoft.com/library/windows/desktop/ms645608) \(или [WM\_RBUTTONUP](http://msdn.microsoft.com/library/windows/desktop/ms646243)\) после того, как начнется операция перетаскивания.  Дополнительные сведения о функции списка изображений см. в разделе [CImageList](../Topic/CImageList%20Class.md) в справочнике по MFC и [Списки изображений](http://msdn.microsoft.com/library/windows/desktop/bb761389) в [!INCLUDE[winSDK](../atl/includes/winsdk_md.md)].  Дополнительные сведения о при перетаскивании элемента управления "Дерево" см. в разделе [Перетаскивание элемента представления в виде дерева](http://msdn.microsoft.com/library/windows/desktop/bb760017), также в [!INCLUDE[winsdkshort](../atl/reference/includes/winsdkshort_md.md)].  
+ You must provide the code that actually drags the item. This typically involves using the dragging capabilities of the image list functions and processing the [WM_MOUSEMOVE](http://msdn.microsoft.com/library/windows/desktop/ms645616) and [WM_LBUTTONUP](http://msdn.microsoft.com/library/windows/desktop/ms645608) (or [WM_RBUTTONUP](http://msdn.microsoft.com/library/windows/desktop/ms646243)) messages sent after the drag operation has begun. For more information about the image list functions, see [CImageList](../mfc/reference/cimagelist-class.md) in the *MFC Reference* and [Image Lists](http://msdn.microsoft.com/library/windows/desktop/bb761389) in the Windows SDK. For more information about dragging a tree control item, see [Dragging the Tree View Item](http://msdn.microsoft.com/library/windows/desktop/bb760017), also in the [!INCLUDE[winsdkshort](../atl-mfc-shared/reference/includes/winsdkshort_md.md)].  
   
- Если элементы в элементе управления дерева быть целевыми объектами операции перетаскивания, необходимо знать, когда курсор мыши на элементе целевого объекта.  Можно узнать, вызвав функцию\-член [HitTest](../Topic/CTreeCtrl::HitTest.md).  Необходимо указать либо точку и целое число, или адрес структуры [TVHITTESTINFO](http://msdn.microsoft.com/library/windows/desktop/bb773448), которая содержит текущие координаты курсора мыши.  Если функция возвращает целое число, или структура содержит флажок, указывающее местоположение курсора мыши относительно элемент управления дерева.  Если курсор над элементом в элементе управления дерева, структура содержит дескриптор элемента также.  
+ If items in a tree control are to be the targets of a drag-and-drop operation, you need to know when the mouse cursor is on a target item. You can find out by calling the [HitTest](../mfc/reference/ctreectrl-class.md#hittest) member function. You specify either a point and integer, or the address of a [TVHITTESTINFO](http://msdn.microsoft.com/library/windows/desktop/bb773448) structure that contains the current coordinates of the mouse cursor. When the function returns, the integer or structure contains a flag indicating the location of the mouse cursor relative to the tree control. If the cursor is over an item in the tree control, the structure contains the handle of the item as well.  
   
- Это свойство указывает, что элемент целевой объект операции перетаскивания, вызвав функцию\-член [SetItem](../Topic/CTreeCtrl::SetItem.md), чтобы задать состояние в `TVIS_DROPHILITED` значение.  Элемент, имеющий это состояние строится в стиле " для обозначения перетаскивания целевой объект.  
+ You can indicate that an item is the target of a drag-and-drop operation by calling the [SetItem](../mfc/reference/ctreectrl-class.md#setitem) member function to set the state to the `TVIS_DROPHILITED` value. An item that has this state is drawn in the style used to indicate a drag-and-drop target.  
   
-## См. также  
- [Использование CTreeCtrl](../Topic/Using%20CTreeCtrl.md)   
- [Элементы управления](../mfc/controls-mfc.md)
+## <a name="see-also"></a>See Also  
+ [Using CTreeCtrl](../mfc/using-ctreectrl.md)   
+ [Controls](../mfc/controls-mfc.md)
+
+

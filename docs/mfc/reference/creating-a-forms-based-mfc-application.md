@@ -1,5 +1,5 @@
 ---
-title: "Создание приложений MFC на основе форм | Документы Microsoft"
+title: Creating a Forms-Based MFC Application | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -14,7 +14,7 @@ dev_langs:
 - C++
 helpviewer_keywords:
 - applications [MFC], forms-based
-- forms-based applications
+- forms-based applications [MFC]
 ms.assetid: 048d2f7d-b60d-4386-ad8e-71d49af9c05e
 caps.latest.revision: 12
 author: mikeblome
@@ -34,59 +34,59 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
-ms.openlocfilehash: b95d52f5ecf97f43bd21dd0f2a8c4fd478431ce3
+ms.translationtype: MT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: b23cd8d4c90f9d2e5dfc7cc63e622123b31305c4
 ms.contentlocale: ru-ru
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 09/12/2017
 
 ---
-# <a name="creating-a-forms-based-mfc-application"></a>Создание приложений MFC на основе форм
-Форма — это диалоговое окно с элементами управления, которые позволяют пользователю доступ и изменение данных возможно. Можно разработать приложение, в котором пользователь выбирает из набора форм. Обычно приложение на основе форм позволяет форм access пользователя щелкнуть **New** из **файл** меню. Приложение на основе диалоговое окно, в котором пользователям не предоставляется доступ к **New** параметр в **файл** меню, также считается приложений на основе форм.  
+# <a name="creating-a-forms-based-mfc-application"></a>Creating a Forms-Based MFC Application
+A form is a dialog box with controls that let a user access and possibly change data. You may want to develop an application in which the user selects from a selection of forms. Commonly, a forms-based application lets the user access forms by click **New** from the **File** menu. A dialog-based application, which does not give users access to a **New** option in the **File** menu, is also considered a forms-based application.  
   
- Однооконный интерфейс (SDI), приложения на основе форм позволяет только один экземпляр определенной формы для выполнения одновременно. Можно выполнять несколько разных форм одновременно в приложении SDI на основе форм, выбрав новую форму в **New** параметр в **файл** меню.  
+ A single document interface (SDI), forms-based application allows only one instance of a particular form to run at a time. It is possible to run different forms at the same time from an SDI forms-based application by selecting a new form from the **New** option in the **File** menu.  
   
- При создании многодокументный интерфейс (MDI), приложения на основе форм, приложение будет поддерживать запуск нескольких экземпляров той же форме.  
+ If you create a multiple document interface (MDI), forms-based application, the application will be able to support multiple instances of the same form.  
   
- При создании приложения с поддержкой нескольких документов верхнего уровня рабочий стол является косвенным родительским элементом для документа, а фрейм документа не ограничен клиентской области приложения. Можно открыть несколько экземпляров документов, каждый из которых имеет свой собственный фрейм, меню и значок в панели задач. Можно закрыть последующие экземпляры документов по отдельности, но если выбрать `Exit` вариант из **файл** меню исходного экземпляра, приложение закроет все экземпляры.  
+ If you create an application with multiple top-level document support, the desktop is the implicit parent for the document and the document's frame is not restricted to the client area of the application. You can open multiple instances of the document, each with its own frame, menu, and task bar icon. You can close subsequent instances of documents individually, but if you select the `Exit` option from the **File** menu of the initial instance, the application closes all instances.  
   
- Несколько документов верхнего уровня приложений, SDI и MDI, все формы на основе и используется архитектура документов и представлений.  
+ SDI, MDI, and multiple top-level document applications are all forms based and use the document/view architecture.  
   
- Любого диалогового окна приложения, по определению, — на основе форм. Диалоговое приложение не использует архитектура документов и представлений, поэтому необходимо управлять методами создания и доступа для дополнительных форм.  
+ Any dialog-based application, by definition, is forms based. A dialog-based application does not use the document/view architecture, so you must manage the creation and access methods for your own additional forms.  
   
- Базовый класс для приложений на основе форм — [CFormView](../../mfc/reference/cformview-class.md). Если приложение поддерживает базы данных, то можно также выбрать любой класс, производный от `CFormView`. Форма является любое окно, производное от `CFormView` или от любого класса, который наследует от `CFormView`.  
+ The base class for form-based applications is [CFormView](../../mfc/reference/cformview-class.md). If your application has database support, then you can also select any class that derives from `CFormView`. A form is any window derived from `CFormView` or from any class that inherits from `CFormView`.  
   
- Даже при использовании базового класса [CView](../../mfc/reference/cview-class.md), позднее можно сделать приложения на основе форм, [Добавление класса MFC](../../mfc/reference/adding-an-mfc-class.md) производным от `CFormView` и проверка **ресурсов Generate DocTemplate** флажок в [мастер классов MFC](../../mfc/reference/document-template-strings-mfc-add-class-wizard.md).  
+ Even if you use a base class such as [CView](../../mfc/reference/cview-class.md), you can later make your applications forms-based by [adding an MFC class](../../mfc/reference/adding-an-mfc-class.md) derived from `CFormView` and checking the **Generate DocTemplate resources** checkbox in the [MFC Class Wizard](../../mfc/reference/document-template-strings-mfc-add-class-wizard.md).  
   
- После завершения работы мастера будет открыт проект, и если вы выбрали `CFormView` (или класс, наследуемый от `CFormView`) в качестве базового класса или при создании диалоговое приложение Visual C++ откроется редактор диалоговых окон. На этом этапе вы готовы к созданию первой формы.  
+ Once you finish with the wizard, your project opens, and if you selected `CFormView` (or a class that inherits from `CFormView`) as your base class or if you created a dialog-based application, Visual C++ opens the dialog editor. At this point, you are ready to design your first form.  
   
-### <a name="to-begin-creating-a-forms-based-mfc-executable"></a>Чтобы начать создание приложения MFC на основе форм  
+### <a name="to-begin-creating-a-forms-based-mfc-executable"></a>To begin creating a forms-based MFC executable  
   
-1.  Следуйте указаниям, приведенным в [Создание приложения MFC](../../mfc/reference/creating-an-mfc-application.md).  
+1.  Follow the directions in [Creating an MFC Application](../../mfc/reference/creating-an-mfc-application.md).  
   
-2.  В мастере приложений MFC [тип приложения](../../mfc/reference/application-type-mfc-application-wizard.md) выберите **поддержка архитектуры Document/view** флажок.  
+2.  In the MFC Application Wizard [Application Type](../../mfc/reference/application-type-mfc-application-wizard.md) page, select the **Document/view architecture support** check box.  
   
-3.  Выберите **одного документа**, **нескольких документов**, или **несколько документов верхнего уровня**.  
+3.  Select **Single document**, **Multiple documents**, or **Multiple top-level documents**.  
   
     > [!NOTE]
-    >  При выборе SDI-приложения, MDI или несколько документов верхнего уровня приложения, по умолчанию `CView` задается как базовый класс для представления приложения на [классы, создаваемые](../../mfc/reference/generated-classes-mfc-application-wizard.md) мастера. Чтобы создать приложение на основе форм, необходимо выбрать `CFormView` как базовый класс для представления приложения. Обратите внимание, что мастер не обеспечивает поддержку печати для приложений на основе форм.  
+    >  If you chose a SDI, MDI, or multiple top-level document interface application, by default, `CView` is set as the base class for your application's view in the [Generated Classes](../../mfc/reference/generated-classes-mfc-application-wizard.md) page of the wizard. To create a forms-based application, you must select `CFormView` as the base class for the application's view. Note that the wizard provides no printing support for a forms-based application.  
   
-4.  Установите другие нужные параметры проекта на других страницах мастера.  
+4.  Set any other project options you want on the other pages of the wizard.  
   
-5.  Щелкните **Готово** для создания сетевых приложений.  
+5.  Click **Finish** to generate the skeleton application.  
   
- Дополнительные сведения:  
+ For more information, see:  
   
--   [Производные классы представлений](../../mfc/derived-view-classes-available-in-mfc.md)  
+-   [Derived View Classes](../../mfc/derived-view-classes-available-in-mfc.md)  
   
--   [Альтернативы для архитектуры документов и представлений](../../mfc/alternatives-to-the-document-view-architecture.md)  
+-   [Alternatives to the Document/View Architecture](../../mfc/alternatives-to-the-document-view-architecture.md)  
   
--   [Решения при разработке приложения](../../mfc/application-design-choices.md)  
+-   [Application Design Choices](../../mfc/application-design-choices.md)  
   
-## <a name="see-also"></a>См. также  
- [Мастер приложений MFC](../../mfc/reference/mfc-application-wizard.md)   
- [Представления форм](../../mfc/form-views-mfc.md)   
- [Создание приложения MFC в стиле проводника файла](../../mfc/reference/creating-a-file-explorer-style-mfc-application.md)   
- [Создание приложения MFC в стиле браузера веб](../../mfc/reference/creating-a-web-browser-style-mfc-application.md)
+## <a name="see-also"></a>See Also  
+ [MFC Application Wizard](../../mfc/reference/mfc-application-wizard.md)   
+ [Form Views](../../mfc/form-views-mfc.md)   
+ [Creating a File Explorer-Style MFC Application](../../mfc/reference/creating-a-file-explorer-style-mfc-application.md)   
+ [Creating a Web Browser-Style MFC Application](../../mfc/reference/creating-a-web-browser-style-mfc-application.md)
 
 

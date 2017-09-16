@@ -1,77 +1,96 @@
 ---
-title: "Точки подключения | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "IConnectionPoint"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "CCmdTarget - класс, и точки подключения"
-  - "COM, точки подключения"
-  - "точки подключения [C++]"
-  - "подключения, точки подключения"
-  - "IConnectionPoint - интерфейс"
-  - "интерфейсы, IConnectionPoint"
-  - "MFC [C++], поддержка COM"
-  - "MFC COM, точки подключения"
-  - "OLE COM - точки подключения"
-  - "приемники, точки подключения"
+title: Connection Points | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- IConnectionPoint
+dev_langs:
+- C++
+helpviewer_keywords:
+- IConnectionPoint interface
+- connections, connection points
+- OLE COM connection points
+- MFC COM, connection points
+- COM, connection points
+- interfaces, IConnectionPoint
+- MFC, COM support
+- connection points [MFC]
+- CCmdTarget class [MFC], and connection points
+- sinks, connection points
 ms.assetid: bc9fd7c7-8df6-4752-ac8c-0b177442c88d
 caps.latest.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 6
----
-# Точки подключения
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 7f2474c1533040128f2a7b805db4e6f15dc85bb5
+ms.contentlocale: ru-ru
+ms.lasthandoff: 09/12/2017
 
-В этой статье описывается, как реализовать точки подключения \(ранее называвшихся серверами OLE точки подключения\) с помощью классов `CCmdTarget` и `CConnectionPoint` MFC.  
+---
+# <a name="connection-points"></a>Connection Points
+This article explains how to implement connection points (formerly known as OLE connection points) using the MFC classes `CCmdTarget` and `CConnectionPoint`.  
   
- В прошлом, модель COM \(COM\) определять общий механизм \(**IUnknown::QueryInterface**\), разрешившего объекты для реализации и предоставить функцию в интерфейсах.  Однако соответствующий механизм, разрешившего объекты, чтобы сделать их возможность вызова определенных интерфейсов не был задан.  То есть, указанное в модели COM как входящие указателей на объекты \(указателям к интерфейсам этого объекта\), обрабатываются, но он не имеют точную модель для исходящих интерфейсов \(объект содержат указатели на другие объекты интерфейсы\).  Модель COM теперь содержит модель, которая точками подключения, которая поддерживает эту функцию.  
+ In the past, the Component Object Model (COM) defined a general mechanism (**IUnknown::QueryInterface**) that allowed objects to implement and expose functionality in interfaces. However, a corresponding mechanism that allowed objects to expose their capability to call specific interfaces was not defined. That is, COM defined how incoming pointers to objects (pointers to that object's interfaces) were handled, but it did not have an explicit model for outgoing interfaces (pointers the object holds to other objects' interfaces). COM now has a model, called connection points, that supports this functionality.  
   
- Подключение состоит из 2 частей: объект, вызывающий интерфейс с именем источника, а объект, реализующий интерфейс, называемый приемником.  Точка подключения интерфейс предоставленный источником.  Можно предоставлять точку подключения, источник приемников позволяет задавать подключения на себя \(источник\).  С помощью другого механизма точки подключения \(интерфейс **IConnectionPoint** \), указатель на интерфейс приемника передается в исходный объект.  Этот указатель предоставляет источника с доступом к реализации приемника набора функции\-члены.  Например, порождения события, приемником, источник может вызвать соответствующий метод реализации приемника.  На следующем рисунке показана описанную точку подключения только.  
+ A connection has two parts: the object calling the interface, called the source, and the object implementing the interface, called the sink. A connection point is the interface exposed by the source. By exposing a connection point, a source allows sinks to establish connections to itself (the source). Through the connection point mechanism (the **IConnectionPoint** interface), a pointer to the sink interface is passed to the source object. This pointer provides the source with access to the sink's implementation of a set of member functions. For example, to fire an event implemented by the sink, the source can call the appropriate method of the sink's implementation. The following figure demonstrates the connection point just described.  
   
- ![Реализованная точка подключения](../mfc/media/vc37lh1.png "vc37LH1")  
-, Реализованная точка подключения  
+ ![Implemented connection point](../mfc/media/vc37lh1.gif "vc37lh1")  
+An Implemented Connection Point  
   
- MFC реализует эту модель в классах [CConnectionPoint](../Topic/CConnectionPoint%20Class.md) и [CCmdTarget](../Topic/CCmdTarget%20Class.md).  Классы, производные от **CConnectionPoint**  реализует интерфейс **IConnectionPoint**, используется для предоставления точки подключения к другим объектам.  Классы, производные от `CCmdTarget` реализует интерфейс **IConnectionPointContainer**, который перечисляет все точки подключения объекта, или найти конкретную точку подключения.  
+ MFC implements this model in the [CConnectionPoint](../mfc/reference/cconnectionpoint-class.md) and [CCmdTarget](../mfc/reference/ccmdtarget-class.md) classes. Classes derived from **CConnectionPoint** implement the **IConnectionPoint** interface, used to expose connection points to other objects. Classes derived from `CCmdTarget` implement the **IConnectionPointContainer** interface, which can enumerate all of an object's available connection points or find a specific connection point.  
   
- Для каждой точки подключения, реализуемой в классе, необходимо объявить часть подключения, которая реализует точку подключения.  При реализации один или более точек подключения, необходимо также объявить одно сопоставление подключения в классе.  Сопоставление подключения таблице точек подключения поддерживаемых элементов управления ActiveX.  
+ For each connection point implemented in your class, you must declare a connection part that implements the connection point. If you implement one or more connection points, you must also declare a single connection map in your class. A connection map is a table of connection points supported by the ActiveX control.  
   
- В следующих примерах показано простое сопоставление подключения и одну точку подключения.  В первом примере объявляется и сопоставление точки подключения; второй пример реализует сопоставление и точку.  Обратите внимание, что `CMyClass`  должно быть `CCmdTarget`\- производным классом.  В первом примере код вставляется в объявление класса, в разделе **protected** .  
+ The following examples demonstrate a simple connection map and one connection point. The first example declares the connection map and point; the second example implements the map and point. Note that `CMyClass` must be a `CCmdTarget`-derived class. In the first example, code is inserted in the class declaration, under the **protected** section:  
   
- [!code-cpp[NVC_MFCConnectionPoints#1](../mfc/codesnippet/CPP/connection-points_1.h)]  
+ [!code-cpp[NVC_MFCConnectionPoints#1](../mfc/codesnippet/cpp/connection-points_1.h)]  
   
- `BEGIN_CONNECTION_PART` и макросы **END\_CONNECTION\_PART**  объявлен вложенный класс, `XSampleConnPt` \(производное от `CConnectionPoint`\), который реализует эту заданной точки подключения.  Если требуется переопределить какие\-либо функции\-члены `CConnectionPoint` или добавить функции\-члены, следует объявить их между этими 2 макросами.  Например, `CONNECTION_IID` переопределяет макрос функцию\-член `CConnectionPoint::GetIID` стоя между этими 2 макросами.  
+ The `BEGIN_CONNECTION_PART` and **END_CONNECTION_PART** macros declare an embedded class, `XSampleConnPt` (derived from `CConnectionPoint`), that implements this particular connection point. If you want to override any `CConnectionPoint` member functions or add member functions of your own, declare them between these two macros. For example, the `CONNECTION_IID` macro overrides the `CConnectionPoint::GetIID` member function when placed between these two macros.  
   
- Во втором примере код вставляется в файле реализации \(cpp\-файл\).  Этот код реализует сопоставление подключения, содержит точку подключения, `SampleConnPt`:  
+ In the second example, code is inserted in the control's implementation file (.cpp file). This code implements the connection map, which includes the connection point, `SampleConnPt`:  
   
- [!code-cpp[NVC_MFCConnectionPoints#2](../mfc/codesnippet/CPP/connection-points_2.cpp)]  
+ [!code-cpp[NVC_MFCConnectionPoints#2](../mfc/codesnippet/cpp/connection-points_2.cpp)]  
   
- Если класс имеет более одной точки подключения, введите дополнительные `BEGIN_CONNECTION_MAP` и макросы `CONNECTION_PART` между макросами `END_CONNECTION_MAP`.  
+ If your class has more than one connection point, insert additional `CONNECTION_PART` macros between the `BEGIN_CONNECTION_MAP` and `END_CONNECTION_MAP` macros.  
   
- Наконец, добавьте вызов `EnableConnections` в конструкторе класса.  Примеры.  
+ Finally, add a call to `EnableConnections` in the class's constructor. For example:  
   
- [!code-cpp[NVC_MFCConnectionPoints#3](../mfc/codesnippet/CPP/connection-points_3.cpp)]  
+ [!code-cpp[NVC_MFCConnectionPoints#3](../mfc/codesnippet/cpp/connection-points_3.cpp)]  
   
- После этого код был представлен, в `CCmdTarget`\- производный класс предоставляет точку подключения для интерфейса **ISampleSink** .  На следующем рисунке показаны в этом примере.  
+ Once this code has been inserted, your `CCmdTarget`-derived class exposes a connection point for the **ISampleSink** interface. The following figure illustrates this example.  
   
- ![Точка подключения, реализованная с помощью MFC](../mfc/media/vc37lh2.png "vc37LH2")  
-Точка подключения, реализованная с MFC  
+ ![Connection point implemented by using MFC](../mfc/media/vc37lh2.gif "vc37lh2")  
+A Connection Point Implemented with MFC  
   
- Как правило, точки подключения поддерживают «multicasting» — возможность широковещательной передачи в нескольких приемникам подключенным к одному и тому же интерфейс.  В следующем примере показано, как выполнить фрагмент Групповой передачи с помощью итерации каждый приемник в точке подключения:  
+ Usually, connection points support "multicasting" — the ability to broadcast to multiple sinks connected to the same interface. The following example fragment demonstrates how to multicast by iterating through each sink on a connection point:  
   
- [!code-cpp[NVC_MFCConnectionPoints#4](../mfc/codesnippet/CPP/connection-points_4.cpp)]  
+ [!code-cpp[NVC_MFCConnectionPoints#4](../mfc/codesnippet/cpp/connection-points_4.cpp)]  
   
- Этот пример возвращает текущий набор подключений в точке подключения `SampleConnPt` с вызовом `CConnectionPoint::GetConnections`.  Затем просматривает подключения и вызывает метод **ISampleSink::SinkFunc** для каждого активного подключения.  
+ This example retrieves the current set of connections on the `SampleConnPt` connection point with a call to `CConnectionPoint::GetConnections`. It then iterates through the connections and calls **ISampleSink::SinkFunc** on every active connection.  
   
-## См. также  
+## <a name="see-also"></a>See Also  
  [MFC COM](../mfc/mfc-com.md)
+
+

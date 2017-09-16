@@ -1,41 +1,60 @@
 ---
-title: "Технические примечания MFC | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "vc.mfc.technotes"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "MFC - библиотека, технические примечания"
-  - "технические примечания"
-  - "технические примечания, MFC - библиотека"
+title: MFC Technical Notes | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- vc.mfc.technotes
+dev_langs:
+- C++
+helpviewer_keywords:
+- MFC, technical notes
+- technical notes, MFC
+- technical notes [MFC]
 ms.assetid: 8aa01d66-0b07-4d0a-a080-4bb00c7baaac
 caps.latest.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 5
----
-# Технические примечания MFC
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 40beaf237d46d48d4c5f31c052bd252402061297
+ms.contentlocale: ru-ru
+ms.lasthandoff: 09/12/2017
 
-Техническое примечание документ, написанный для программистов программистами.  
+---
+# <a name="mfc-technical-notes"></a>MFC Technical Notes
+A technical note is a document written for programmers by programmers.  
   
- Каждое техническое примечание описывает проблему или функцию, выходящей за область остальной части документации MFC.  Технические заметки, отражают запросы информации от пользователей, так и специализированные сведения, разработчики MFC предвидеть опытным пользователям могут потребоваться.  
+ Each technical note describes a problem or feature that is beyond the scope of the rest of the MFC documentation. The technical notes supplied reflect requests for information from users, as well as specialized information that the MFC developers anticipate advanced users will want.  
   
- 2 Способа просмотра с помощью технические заметки.  
+ There are two ways to browse through the technical notes:  
   
--   [Технические заметки номером](../mfc/technical-notes-by-number.md)  
+-   [Technical Notes By Number](../mfc/technical-notes-by-number.md)  
   
--   [Технические заметки по категориям](../mfc/technical-notes-by-category.md)  
+-   [Technical Notes By Category](../mfc/technical-notes-by-category.md)  
   
-## См. также  
- [Visual C\+\+ Libraries Reference](http://msdn.microsoft.com/ru-ru/fec23c40-10c0-4857-9cdc-33a3b99b30ae)   
- [Приложения MFC для рабочего стола](../mfc/mfc-desktop-applications.md)
+## <a name="see-also"></a>See Also  
+ [Visual C++ Libraries Reference](http://msdn.microsoft.com/en-us/fec23c40-10c0-4857-9cdc-33a3b99b30ae)   
+ [MFC Desktop Applications](../mfc/mfc-desktop-applications.md)
+
+

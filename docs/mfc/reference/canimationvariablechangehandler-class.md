@@ -1,5 +1,5 @@
 ---
-title: "Класс CAnimationVariableChangeHandler | Документы Microsoft"
+title: CAnimationVariableChangeHandler Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -16,7 +16,8 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- CAnimationVariableChangeHandler class
+- CAnimationVariableChangeHandler [MFC], OnValueChanged
+- CAnimationVariableChangeHandler [MFC], SetAnimationController
 ms.assetid: 2ea4996d-5c04-4dfc-be79-d42d55050795
 caps.latest.revision: 19
 author: mikeblome
@@ -36,53 +37,53 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0e0c08ddc57d437c51872b5186ae3fc983bb0199
-ms.openlocfilehash: 46c4eb9210b69c527375b12100ab7cc22fef0176
+ms.translationtype: MT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 9c2aba7a6a7a0d66f829009e31d182611b9aea74
 ms.contentlocale: ru-ru
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 09/12/2017
 
 ---
-# <a name="canimationvariablechangehandler-class"></a>Класс CAnimationVariableChangeHandler
-Реализует обратный вызов, используемый API анимации при изменении значения переменной анимации.  
+# <a name="canimationvariablechangehandler-class"></a>CAnimationVariableChangeHandler Class
+Implements a callback, which is called by the Animation API when the value of an animation variable changes.  
   
-## <a name="syntax"></a>Синтаксис  
+## <a name="syntax"></a>Syntax  
   
 ```  
 class CAnimationVariableChangeHandler : public CUIAnimationVariableChangeHandlerBase<CAnimationVariableChangeHandler>;  
 ```  
   
-## <a name="members"></a>Члены  
+## <a name="members"></a>Members  
   
-### <a name="public-constructors"></a>Открытые конструкторы  
+### <a name="public-constructors"></a>Public Constructors  
   
-|Имя|Описание|  
+|Name|Description|  
 |----------|-----------------|  
-|`CAnimationVariableChangeHandler::CAnimationVariableChangeHandler`|Создает объект `CAnimationVariableChangeHandler`.|  
+|`CAnimationVariableChangeHandler::CAnimationVariableChangeHandler`|Constructs a `CAnimationVariableChangeHandler` object.|  
   
-### <a name="public-methods"></a>Открытые методы  
+### <a name="public-methods"></a>Public Methods  
   
-|Имя|Описание|  
+|Name|Description|  
 |----------|-----------------|  
-|`CAnimationVariableChangeHandler::CreateInstance`|Создает экземпляр `CAnimationVariableChangeHandler` объекта.|  
-|[CAnimationVariableChangeHandler::OnValueChanged](#onvaluechanged)|Вызывается при изменении значения переменной анимации. (Переопределяет `CUIAnimationVariableChangeHandlerBase::OnValueChanged`.)|  
-|[CAnimationVariableChangeHandler::SetAnimationController](#setanimationcontroller)|Хранит указатель на контроллер анимации для события маршрута.|  
+|`CAnimationVariableChangeHandler::CreateInstance`|Creates an instance of `CAnimationVariableChangeHandler` object.|  
+|[CAnimationVariableChangeHandler::OnValueChanged](#onvaluechanged)|Called when a value of an animation variable has changed. (Overrides `CUIAnimationVariableChangeHandlerBase::OnValueChanged`.)|  
+|[CAnimationVariableChangeHandler::SetAnimationController](#setanimationcontroller)|Stores a pointer to animation controller to route events.|  
   
-## <a name="remarks"></a>Примечания  
- Этот обработчик событий создается и передается `IUIAnimationVariable::SetVariableChangeHandler` при вызове метода `CAnimationVariable::EnableValueChangedEvent` или `CAnimationBaseObject::EnableValueChangedEvent` (позволяет это событие для всех переменных анимации, инкапсулированный в объекте анимации).  
+## <a name="remarks"></a>Remarks  
+ This event handler is created and passed to `IUIAnimationVariable::SetVariableChangeHandler` method, when you call `CAnimationVariable::EnableValueChangedEvent` or `CAnimationBaseObject::EnableValueChangedEvent` (which enables this event for all animation variables encapsulated in an animation object).  
   
-## <a name="inheritance-hierarchy"></a>Иерархия наследования  
+## <a name="inheritance-hierarchy"></a>Inheritance Hierarchy  
  `CUIAnimationCallbackBase`  
   
  `CUIAnimationVariableChangeHandlerBase`  
   
  `CAnimationVariableChangeHandler`  
   
-## <a name="requirements"></a>Требования  
- **Заголовок:** afxanimationcontroller.h  
+## <a name="requirements"></a>Requirements  
+ **Header:** afxanimationcontroller.h  
   
-##  <a name="onvaluechanged"></a>CAnimationVariableChangeHandler::OnValueChanged  
- Вызывается при изменении значения переменной анимации.  
+##  <a name="onvaluechanged"></a>  CAnimationVariableChangeHandler::OnValueChanged  
+ Called when a value of an animation variable has changed.  
   
 ```  
 IFACEMETHOD(OnValueChanged) (
@@ -92,33 +93,33 @@ IFACEMETHOD(OnValueChanged) (
     __in DOUBLE previousValue);
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
  `storyboard`  
- Раскадровки, который выполняет анимацию переменной.  
+ The storyboard that is animating the variable.  
   
  `variable`  
- Переменная анимации, которая была обновлена.  
+ The animation variable that was updated.  
   
  `newValue`  
- Новое значение.  
+ The new value.  
   
  `previousValue`  
- Предыдущее значение.  
+ The previous value.  
   
-### <a name="return-value"></a>Возвращаемое значение  
- Если метод завершается успешно, возвращается значение S_OK. В противном случае — возвращает код ошибки HRESULT.  
+### <a name="return-value"></a>Return Value  
+ If the method succeeds, it returns S_OK. Otherwise, it returns an HRESULT error code.  
   
-##  <a name="setanimationcontroller"></a>CAnimationVariableChangeHandler::SetAnimationController  
- Хранит указатель на контроллер анимации для события маршрута.  
+##  <a name="setanimationcontroller"></a>  CAnimationVariableChangeHandler::SetAnimationController  
+ Stores a pointer to animation controller to route events.  
   
 ```  
 void SetAnimationController(CAnimationController* pAnimationController);
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
  `pAnimationController`  
- Указатель на контроллер анимации, который будет получать события.  
+ A pointer to animation controller, which will receive events.  
   
-## <a name="see-also"></a>См. также  
- [Классы](../../mfc/reference/mfc-classes.md)
+## <a name="see-also"></a>See Also  
+ [Classes](../../mfc/reference/mfc-classes.md)
 

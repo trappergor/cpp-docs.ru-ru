@@ -1,5 +1,5 @@
 ---
-title: "Класс CUserException | Документы Microsoft"
+title: CUserException Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -13,12 +13,12 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- operations [C++], stopping
-- exceptions, throwing
-- CUserException class
-- errors [C++], trapping
-- operations [C++]
-- throwing exceptions, stopping user operations
+- operations [MFC], stopping
+- exceptions [MFC], throwing
+- CUserException class [MFC]
+- errors [MFC], trapping
+- operations [MFC]
+- throwing exceptions [MFC], stopping user operations
 ms.assetid: 2156ba6d-2cce-415a-9000-6f02c26fcd7d
 caps.latest.revision: 23
 author: mikeblome
@@ -38,34 +38,34 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 5187996fc377bca8633360082d07f7ec8a68ee57
-ms.openlocfilehash: 8548ffa7ad9032e174d650e210a70a29b0e3f19d
+ms.translationtype: MT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 35681dc28f5486a90acf8d07623cd0e3540e2355
 ms.contentlocale: ru-ru
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 09/12/2017
 
 ---
-# <a name="cuserexception-class"></a>Класс CUserException
-Создается для остановки операции пользователя.  
+# <a name="cuserexception-class"></a>CUserException Class
+Thrown to stop an end-user operation.  
   
-## <a name="syntax"></a>Синтаксис  
+## <a name="syntax"></a>Syntax  
   
 ```  
 class CUserException : public CSimpleException  
 ```  
   
-## <a name="remarks"></a>Примечания  
- Использовать `CUserException` Если вы хотите использовать механизм обработки исключений throw и catch для исключений, связанных с приложением. «Пользователь» в имени класса можно интерпретировать как «пользователей отслеживаем исключительные, что нужно обрабатывать.»  
+## <a name="remarks"></a>Remarks  
+ Use `CUserException` when you want to use the throw/catch exception mechanism for application-specific exceptions. "User" in the class name can be interpreted as "my user did something exceptional that I need to handle."  
   
- Объект `CUserException` обычно вызывается после вызова глобальной функции `AfxMessageBox` для уведомления пользователя, не удалось выполнить операцию. При написании обработчика исключений, обработки исключения, специально, поскольку пользователь обычно уже получил уведомление о сбое. В некоторых случаях, платформа создает это исключение. Для вызова `CUserException` самостоятельно, оповещения пользователя, а затем вызовите глобальную функцию `AfxThrowUserException`.  
+ A `CUserException` is usually thrown after calling the global function `AfxMessageBox` to notify the user that an operation has failed. When you write an exception handler, handle the exception specially since the user usually has already been notified of the failure. The framework throws this exception in some cases. To throw a `CUserException` yourself, alert the user and then call the global function `AfxThrowUserException`.  
   
- В следующем примере функция, содержащая операции, которые может завершиться ошибкой оповещает пользователя и выдает `CUserException`. Вызывающая функция перехватывает исключение и обрабатывает ее специально:  
+ In the example below, a function containing operations that may fail alerts the user and throws a `CUserException`. The calling function catches the exception and handles it specially:  
   
- [!code-cpp[NVC_MFCExceptions&#24;](../../mfc/codesnippet/cpp/cuserexception-class_1.cpp)]  
+ [!code-cpp[NVC_MFCExceptions#24](../../mfc/codesnippet/cpp/cuserexception-class_1.cpp)]  
   
- Дополнительные сведения об использовании `CUserException`, см. в статье [обработка исключений (MFC)](../../mfc/exception-handling-in-mfc.md).  
+ For more information on using `CUserException`, see the article [Exception Handling (MFC)](../../mfc/exception-handling-in-mfc.md).  
   
-## <a name="inheritance-hierarchy"></a>Иерархия наследования  
+## <a name="inheritance-hierarchy"></a>Inheritance Hierarchy  
  [CObject](../../mfc/reference/cobject-class.md)  
   
  [CException](../../mfc/reference/cexception-class.md)  
@@ -74,10 +74,10 @@ class CUserException : public CSimpleException
   
  `CUserException`  
   
-## <a name="requirements"></a>Требования  
- **Заголовок:** afxwin.h  
+## <a name="requirements"></a>Requirements  
+ **Header:** afxwin.h  
   
-## <a name="see-also"></a>См. также  
- [Диаграмма иерархии](../../mfc/hierarchy-chart.md)   
- [CException-класс](../../mfc/reference/cexception-class.md)
+## <a name="see-also"></a>See Also  
+ [Hierarchy Chart](../../mfc/hierarchy-chart.md)   
+ [CException Class](../../mfc/reference/cexception-class.md)
 

@@ -1,5 +1,5 @@
 ---
-title: "Структура WINDOWPLACEMENT | Документы Microsoft"
+title: WINDOWPLACEMENT Structure | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -13,7 +13,7 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- WINDOWPLACEMENT structure
+- WINDOWPLACEMENT structure [MFC]
 ms.assetid: ea7d61f6-eb57-478e-9b08-7c1d07091aa8
 caps.latest.revision: 11
 author: mikeblome
@@ -33,17 +33,17 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 040985df34f2613b4e4fae29498721aef15d50cb
-ms.openlocfilehash: 62cf7003f43d50d5998dd527ae5ad7b10ab95686
+ms.translationtype: MT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: e26448daeff10c576944e5d9af79fa08a67b86c4
 ms.contentlocale: ru-ru
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 09/12/2017
 
 ---
-# <a name="windowplacement-structure"></a>Структура WINDOWPLACEMENT
-`WINDOWPLACEMENT` Структура содержит сведения о размещении окна на экране**.**  
+# <a name="windowplacement-structure"></a>WINDOWPLACEMENT Structure
+The `WINDOWPLACEMENT` structure contains information about the placement of a window on the screen**.**  
   
-## <a name="syntax"></a>Синтаксис  
+## <a name="syntax"></a>Syntax  
   
 ```  
 typedef struct tagWINDOWPLACEMENT {     /* wndpl */  
@@ -56,54 +56,54 @@ typedef struct tagWINDOWPLACEMENT {     /* wndpl */
 } WINDOWPLACEMENT;  
 ```  
   
-#### <a name="parameters"></a>Параметры  
+#### <a name="parameters"></a>Parameters  
  *length*  
- Указывает длину в байтах структуры**.**  
+ Specifies the length, in bytes, of the structure**.**  
   
  `flags`  
- Задает флаги, определяющие положение свернутого окна, а также метод, по которому окно восстановлено. Этот член может быть одно или оба следующие флаги:  
+ Specifies flags that control the position of the minimized window and the method by which the window is restored. This member can be one or both of the following flags:  
   
-- **WPF_SETMINPOSITION** указывает, что можно указать x - и y позиции свернутого окна**.** Этот флаг должен быть указан, если координаты задаются **ptMinPosition** член.  
+- **WPF_SETMINPOSITION** Specifies that the x- and y-positions of the minimized window can be specified**.** This flag must be specified if the coordinates are set in the **ptMinPosition** member.  
   
-- **WPF_RESTORETOMAXIMIZED** указывает, что восстановленного окна будет развернуть, вне зависимости от того, было ли оно было максимальным, прежде чем оно было свернуто. Этот параметр применим только при очередном окно восстановлено. Он не изменяет поведения восстановления по умолчанию. Этот флаг доступен, только если **SW_SHOWMINIMIZED** указано значение для **showCmd** член.  
+- **WPF_RESTORETOMAXIMIZED** Specifies that the restored window will be maximized, regardless of whether it was maximized before it was minimized. This setting is valid only the next time the window is restored. It does not change the default restoration behavior. This flag is valid only when the **SW_SHOWMINIMIZED** value is specified for the **showCmd** member.  
   
  *showCmd*  
- Указывает текущее состояние отображения окна. Этот член может принимать одно из следующих значений:  
+ Specifies the current show state of the window. This member can be one of the following values:  
   
-- **SW_HIDE** скрывает окно и передает активации в другом окне.  
+- **SW_HIDE** Hides the window and passes activation to another window.  
   
-- **SW_MINIMIZE** сводит к минимуму указанного окна и активирует окно верхнего уровня в списке системы.  
+- **SW_MINIMIZE** Minimizes the specified window and activates the top-level window in the system's list.  
   
-- **SW_RESTORE** активация и появится окно. Если окно свернуто или развернуто, Windows восстанавливает его исходный размер и положение (то же, что **SW_SHOWNORMAL**).  
+- **SW_RESTORE** Activates and displays a window. If the window is minimized or maximized, Windows restores it to its original size and position (same as **SW_SHOWNORMAL**).  
   
-- **SW_SHOW** активирует окно и отображает его в его текущего размера и положения.  
+- **SW_SHOW** Activates a window and displays it in its current size and position.  
   
-- **SW_SHOWMAXIMIZED** активирует окно и отображает его в виде развернутого окна.  
+- **SW_SHOWMAXIMIZED** Activates a window and displays it as a maximized window.  
   
-- **SW_SHOWMINIMIZED** активирует окно и отображает его в виде значка.  
+- **SW_SHOWMINIMIZED** Activates a window and displays it as an icon.  
   
-- **SW_SHOWMINNOACTIVE** отображает окно, в виде значка. Окно активного остается активным.  
+- **SW_SHOWMINNOACTIVE** Displays a window as an icon. The window that is currently active remains active.  
   
-- **SW_SHOWNA** отображает окно в ее текущем состоянии. Окно активного остается активным.  
+- **SW_SHOWNA** Displays a window in its current state. The window that is currently active remains active.  
   
-- **SW_SHOWNOACTIVATE** отображает окно в свои последние размер и положение. Окно активного остается активным.  
+- **SW_SHOWNOACTIVATE** Displays a window in its most recent size and position. The window that is currently active remains active.  
   
-- **SW_SHOWNORMAL** активация и появится окно. Если окно свернуто или развернуто, Windows восстанавливает его исходный размер и положение (то же, что **SW_RESTORE**).  
+- **SW_SHOWNORMAL** Activates and displays a window. If the window is minimized or maximized, Windows restores it to its original size and position (same as **SW_RESTORE**).  
   
  *ptMinPosition*  
- Задает позицию верхнего левого угла окна свернутое окно.  
+ Specifies the position of the window's top-left corner when the window is minimized.  
   
  `ptMaxPosition`  
- Задает положение верхнего левого угла окна, если окно развернуто.  
+ Specifies the position of the window's top-left corner when the window is maximized.  
   
  *rcNormalPosition*  
- Задает координаты окна, когда окно находится в нормальной позиции (восстановленные).  
+ Specifies the window's coordinates when the window is in the normal (restored) position.  
   
-## <a name="requirements"></a>Требования  
- **Заголовок:** winuser.h  
+## <a name="requirements"></a>Requirements  
+ **Header:** winuser.h  
   
-## <a name="see-also"></a>См. также  
- [Структуры, стили, обратные вызовы и схемы сообщений](../../mfc/reference/structures-styles-callbacks-and-message-maps.md)   
+## <a name="see-also"></a>See Also  
+ [Structures, Styles, Callbacks, and Message Maps](../../mfc/reference/structures-styles-callbacks-and-message-maps.md)   
  [CWnd::SetWindowPlacement](../../mfc/reference/cwnd-class.md#setwindowplacement)
 
 

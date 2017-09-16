@@ -1,15 +1,14 @@
 ---
-title: "Класс chi_squared_distribution | Документы Майкрософт"
+title: chi_squared_distribution Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
 ms.technology:
-- devlang-cpp
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
-- chi_squared_distribution
 - random/std::chi_squared_distribution
 - random/std::chi_squared_distribution::reset
 - random/std::chi_squared_distribution::n
@@ -25,7 +24,14 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- chi_squared_distribution class
+- std::chi_squared_distribution [C++]
+- std::chi_squared_distribution [C++], reset
+- std::chi_squared_distribution [C++], n
+- std::chi_squared_distribution [C++], param
+- std::chi_squared_distribution [C++], min
+- std::chi_squared_distribution [C++], max
+- std::chi_squared_distribution [C++], param_type
+- std::chi_squared_distribution [C++], param_type
 ms.assetid: 9b603fbe-cafd-4a92-b8c5-a434d60b8122
 caps.latest.revision: 17
 author: corob-msft
@@ -45,17 +51,17 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
-ms.openlocfilehash: e02680da3c44f31d9a81e1dc83b18822b9583e1b
+ms.translationtype: MT
+ms.sourcegitcommit: 5d026c375025b169d5db8445cbb52c0c917b2d8d
+ms.openlocfilehash: 2c90370462a9388011a92d9474e97bc152075ceb
 ms.contentlocale: ru-ru
-ms.lasthandoff: 04/29/2017
+ms.lasthandoff: 09/09/2017
 
 ---
-# <a name="chisquareddistribution-class"></a>Класс chi_squared_distribution
-Формирует распределение хи-квадрат.  
+# <a name="chisquareddistribution-class"></a>chi_squared_distribution Class
+Generates a chi-squared distribution.  
   
-## <a name="syntax"></a>Синтаксис  
+## <a name="syntax"></a>Syntax  
   
 ```  
 template<class RealType = double>  
@@ -84,35 +90,35 @@ public:
     result_type max() const;
 };
 ```  
-#### <a name="parameters"></a>Параметры  
+#### <a name="parameters"></a>Parameters  
 *RealType*  
-По умолчанию тип с плавающей запятой имеет тип `double`. Возможные типы см. в разделе [\<random>](../standard-library/random.md).  
+The floating-point result type, defaults to `double`. For possible types, see [\<random>](../standard-library/random.md).  
   
-*РГСЧ*, механизм генератора случайных чисел. Возможные типы см. в разделе [\<random>](../standard-library/random.md).  
+*URNG* The uniform random number generator engine. For possible types, see [\<random>](../standard-library/random.md).  
   
-## <a name="remarks"></a>Примечания  
-Класс шаблона описывает распределение "хи-квадрат", которое формирует значения указанного пользователем типа с плавающей запятой или типа `double`, если тип не указан. В следующей таблице представлены ссылки на статьи об отдельных членах.  
+## <a name="remarks"></a>Remarks  
+The template class describes a distribution that produces values of a user-specified floating-point type, or type `double` if none is provided, distributed according to the Chi-Squared Distribution. The following table links to articles about individual members.  
   
 ||||  
 |-|-|-|  
 |[chi_squared_distribution](../standard-library/chi-squared-distribution-class.md)|`chi_squared_distribution::n`|`chi_squared_distribution::param`|  
 |`chi_squared_distribution::operator()`||[param_type](#param_type)|  
   
-Функция свойства `n()` возвращает значение для хранимого параметра распределения `n`.  
+The property function `n()` returns the value for the stored distribution parameter `n`.  
   
-Член свойства `param()` устанавливает или возвращает хранимый пакет параметров распределения `param_type`.  
+The property member `param()` sets or returns the `param_type` stored distribution parameter package.  
 
-Функции-члены `min()` и `max()` возвращают наименьший и наибольший из возможных результатов соответственно.  
+The `min()` and `max()` member functions return the smallest possible result and largest possible result, respectively.  
   
-Функция-член `reset()` удаляет любые кэшированные значения, чтобы результат следующего вызова `operator()` не зависел от любых значений, полученных от механизма перед вызовом.  
+The `reset()` member function discards any cached values, so that the result of the next call to `operator()` does not depend on any values obtained from the engine before the call.  
   
-Функции-члены `operator()` возвращают следующее значение, созданное механизмом РГСЧ, из текущего или указанного пакета параметров.
+The `operator()` member functions return the next generated value based on the URNG engine, either from the current parameter package, or the specified parameter package.
   
-Дополнительные сведения о классах распределения и их членах см. в разделе [\<random>](../standard-library/random.md).  
+For more information about distribution classes and their members, see [\<random>](../standard-library/random.md).  
   
-Подробные сведения о распределении "хи-квадрат" см. в статье Wolfram MathWorld [Распределение "хи-квадрат"](http://go.microsoft.com/fwlink/LinkId=400528).  
+For detailed information about the chi-squared distribution, see the Wolfram MathWorld article [Chi-Squared Distribution](http://go.microsoft.com/fwlink/LinkId=400528).  
   
-## <a name="example"></a>Пример  
+## <a name="example"></a>Example  
   
 ```cpp  
 // compile with: /EHsc /W4  
@@ -166,7 +172,7 @@ int main()
 }  
 ```  
   
-Первый запуск:  
+First run:  
   
 ```Output  
 Use CTRL-Z to bypass data entry and run using default values.  
@@ -189,7 +195,7 @@ Distribution for 10 samples:
     10: 1.5429743723  
 ```  
   
-Второй запуск:  
+Second run:  
   
 ```Output  
 Use CTRL-Z to bypass data entry and run using default values.  
@@ -212,7 +218,7 @@ Distribution for 10 samples:
     10: 1.3552086624  
 ```  
   
-Третий запуск:  
+Third run:  
   
 ```Output  
 Use CTRL-Z to bypass data entry and run using default values.  
@@ -235,35 +241,35 @@ Distribution for 10 samples:
     10: 1054.7051509381  
 ```  
   
-## <a name="requirements"></a>Требования  
-**Заголовок:** \<random>  
+## <a name="requirements"></a>Requirements  
+**Header:** \<random>  
   
-**Пространство имен:** std  
+**Namespace:** std  
   
 ##  <a name="chi_squared_distribution"></a>  chi_squared_distribution::chi_squared_distribution  
-Формирует распределение.  
+Constructs the distribution.  
   
 ```  
 explicit chi_squared_distribution(result_type n = 1.0);  
 explicit chi_squared_distribution(const param_type& parm);
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
 *n*  
-Параметр распределения `n`.  
+The `n` distribution parameter.  
   
 *parm*  
- Структура параметров, используемая для формирования распределения.  
+ The parameter structure used to construct the distribution.  
   
-### <a name="remarks"></a>Примечания  
-**Предусловие:** `0.0 < n`  
+### <a name="remarks"></a>Remarks  
+**Precondition:** `0.0 < n`  
   
-Первый конструктор создает объект, хранимое значение `n` которого содержит значение *n*.  
+The first constructor constructs an object whose stored `n` value holds the value *n*.  
   
-Второй конструктор создает объект, хранимые параметры которого инициализируются из *parm*. Вы можете получить и задать текущие параметры существующего распределения, вызвав функцию-член `param()`.  
+The second constructor constructs an object whose stored parameters are initialized from *parm*. You can obtain and set the current parameters of an existing distribution by calling the `param()` member function.  
   
 ##  <a name="param_type"></a>  chi_squared_distribution::param_type  
-Сохраняет параметры распределения.  
+Stores the parameters of the distribution.  
   
 ```cpp    
 struct param_type {  
@@ -276,19 +282,19 @@ struct param_type {
    };  
 ```  
 
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
 *n*  
-Параметр распределения `n`.  
+The `n` distribution parameter.  
   
 *right*  
-Объект `param_type`, который требуется сравнить с данным объектом.  
+The `param_type` object to compare to this.  
   
-### <a name="remarks"></a>Примечания  
-**Предварительные условия:** `0.0 < n`  
+### <a name="remarks"></a>Remarks  
+**Precondition:** `0.0 < n`  
   
-Эту структуру можно передать конструктору класса распределения во время создания экземпляра, функции-члену `param()` для установки хранимых параметров существующего распределения и `operator()` для использования вместо хранимых параметров.  
+This structure can be passed to the distribution's class constructor at instantiation, to the `param()` member function to set the stored parameters of an existing distribution, and to `operator()` to be used in place of the stored parameters.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>See Also  
  [\<random>](../standard-library/random.md)
 
 

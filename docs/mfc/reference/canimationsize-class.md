@@ -1,5 +1,5 @@
 ---
-title: "Класс CAnimationSize | Документы Microsoft"
+title: CAnimationSize Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -24,7 +24,16 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- CAnimationSize class
+- CAnimationSize [MFC], CAnimationSize
+- CAnimationSize [MFC], AddTransition
+- CAnimationSize [MFC], GetCX
+- CAnimationSize [MFC], GetCY
+- CAnimationSize [MFC], GetDefaultValue
+- CAnimationSize [MFC], GetValue
+- CAnimationSize [MFC], SetDefaultValue
+- CAnimationSize [MFC], GetAnimationVariableList
+- CAnimationSize [MFC], m_cxValue
+- CAnimationSize [MFC], m_cyValue
 ms.assetid: ea06d1b5-502c-44a3-82ca-8bd6ba6a9364
 caps.latest.revision: 17
 author: mikeblome
@@ -44,76 +53,76 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 73410ae17465880f455e5b15026f6cc010803c19
-ms.openlocfilehash: 84b9ae3b81f72f6c0ae8e88f78357c29e8d82ffd
+ms.translationtype: MT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 2f65230f8a54737c95e99925a9a7812686acad2f
 ms.contentlocale: ru-ru
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 09/12/2017
 
 ---
-# <a name="canimationsize-class"></a>Класс CAnimationSize
-Реализует функции объекта размера, размеры которого могут быть анимированы.  
+# <a name="canimationsize-class"></a>CAnimationSize Class
+Implements the functionality of a size object whose dimensions can be animated.  
   
-## <a name="syntax"></a>Синтаксис  
+## <a name="syntax"></a>Syntax  
   
 ```  
 class CAnimationSize : public CAnimationBaseObject;  
 ```  
   
-## <a name="members"></a>Члены  
+## <a name="members"></a>Members  
   
-### <a name="public-constructors"></a>Открытые конструкторы  
+### <a name="public-constructors"></a>Public Constructors  
   
-|Имя|Описание|  
+|Name|Description|  
 |----------|-----------------|  
-|[CAnimationSize::CAnimationSize](#canimationsize)|Перегружен. Создает объект размера анимации.|  
+|[CAnimationSize::CAnimationSize](#canimationsize)|Overloaded. Constructs an animation size object.|  
   
-### <a name="public-methods"></a>Открытые методы  
+### <a name="public-methods"></a>Public Methods  
   
-|Имя|Описание|  
+|Name|Description|  
 |----------|-----------------|  
-|[CAnimationSize::AddTransition](#addtransition)|Добавление переходов для ширины и высоты.|  
-|[CAnimationSize::GetCX](#getcx)|Предоставляет доступ к CAnimationVariable, представляющее ширину.|  
-|[CAnimationSize::GetCY](#getcy)|Предоставляет доступ к CAnimationVariable, представляющее высоту.|  
-|[CAnimationSize::GetDefaultValue](#getdefaultvalue)|Возвращает значения по умолчанию для ширины и высоты.|  
-|[CAnimationSize::GetValue](#getvalue)|Возвращает текущее значение.|  
-|[CAnimationSize::SetDefaultValue](#setdefaultvalue)|Задает значение по умолчанию.|  
+|[CAnimationSize::AddTransition](#addtransition)|Adds transitions for Width and Height.|  
+|[CAnimationSize::GetCX](#getcx)|Provides access to CAnimationVariable representing Width.|  
+|[CAnimationSize::GetCY](#getcy)|Provides access to CAnimationVariable representing Height.|  
+|[CAnimationSize::GetDefaultValue](#getdefaultvalue)|Returns the default values for Width and Height.|  
+|[CAnimationSize::GetValue](#getvalue)|Returns current value.|  
+|[CAnimationSize::SetDefaultValue](#setdefaultvalue)|Sets default value.|  
   
-### <a name="protected-methods"></a>Защищенные методы  
+### <a name="protected-methods"></a>Protected Methods  
   
-|Имя|Описание|  
+|Name|Description|  
 |----------|-----------------|  
-|[CAnimationSize::GetAnimationVariableList](#getanimationvariablelist)|Помещает инкапсулированный анимации переменные в список. (Переопределяет [CAnimationBaseObject::GetAnimationVariableList](../../mfc/reference/canimationbaseobject-class.md#getanimationvariablelist).)|  
+|[CAnimationSize::GetAnimationVariableList](#getanimationvariablelist)|Puts the encapsulated animation variables into a list. (Overrides [CAnimationBaseObject::GetAnimationVariableList](../../mfc/reference/canimationbaseobject-class.md#getanimationvariablelist).)|  
   
-### <a name="public-operators"></a>Открытые операторы  
+### <a name="public-operators"></a>Public Operators  
   
-|Имя|Описание|  
+|Name|Description|  
 |----------|-----------------|  
-|[CAnimationSize::operator CSize](#operator_csize)|Преобразует CAnimationSize CSize.|  
-|[CAnimationSize::operator =](#operator_eq)|Назначает szSrc CAnimationSize.|  
+|[CAnimationSize::operator CSize](#operator_csize)|Converts a CAnimationSize to a CSize.|  
+|[CAnimationSize::operator=](#operator_eq)|Assigns szSrc to CAnimationSize.|  
   
-### <a name="protected-data-members"></a>Защищенные члены данных  
+### <a name="protected-data-members"></a>Protected Data Members  
   
-|Имя|Описание|  
+|Name|Description|  
 |----------|-----------------|  
-|[CAnimationSize::m_cxValue](#m_cxvalue)|Инкапсулированный анимации переменная, которая представляет ширину анимации.|  
-|[CAnimationSize::m_cyValue](#m_cyvalue)|Переменная инкапсулированный анимации, представляющий высоту анимации.|  
+|[CAnimationSize::m_cxValue](#m_cxvalue)|The encapsulated animation variable that represents width of animation size.|  
+|[CAnimationSize::m_cyValue](#m_cyvalue)|The encapsulated animation variable that represents height of animation size.|  
   
-## <a name="remarks"></a>Примечания  
- Класс CAnimationSize инкапсулирует двух объектов CAnimationVariable и может представлять в приложениях размер. Например, этот класс можно использовать для анимации размер двух многомерных объектов на экране (например прямоугольник, управления и т. д). Использовать этот класс в приложении, просто создать экземпляр объекта этого класса, добавьте его с помощью CAnimationController::AddAnimationObject контроллер анимации и вызова AddTransition для каждого перехода, применяемый для ширины и высоты.  
+## <a name="remarks"></a>Remarks  
+ The CAnimationSize class encapsulates two CAnimationVariable objects and can represent in applications a size. For example, you can use this class to animate a size of any two dimensional object on the screen (like rectangle, control etc). To use this class in application, just instantiate an object of this class, add it to animation controller using CAnimationController::AddAnimationObject and call AddTransition for each transition to be applied to Width and/or Height.  
   
-## <a name="inheritance-hierarchy"></a>Иерархия наследования  
+## <a name="inheritance-hierarchy"></a>Inheritance Hierarchy  
  [CObject](../../mfc/reference/cobject-class.md)  
   
  [CAnimationBaseObject](../../mfc/reference/canimationbaseobject-class.md)  
   
  `CAnimationSize` 
   
-## <a name="requirements"></a>Требования  
- **Заголовок:** afxanimationcontroller.h  
+## <a name="requirements"></a>Requirements  
+ **Header:** afxanimationcontroller.h  
   
-##  <a name="addtransition"></a>CAnimationSize::AddTransition  
- Добавление переходов для ширины и высоты.  
+##  <a name="addtransition"></a>  CAnimationSize::AddTransition  
+ Adds transitions for Width and Height.  
   
 ```  
 void AddTransition(
@@ -121,18 +130,18 @@ void AddTransition(
     CBaseTransition* pCYTransition);
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
  `pCXTransition`  
- Указатель на переход для ширины.  
+ A pointer to transition for Width.  
   
  `pCYTransition`  
- Указатель на переход для высоты.  
+ A pointer to transition for Height.  
   
-### <a name="remarks"></a>Примечания  
- Эта функция вызывается для добавления указанного переходов во внутренний список переходов для применения к переменным анимации ширины и высоты. При добавлении переходов, они не применяются сразу и хранятся в внутренний список. Переходы применяются (Добавление в раскадровку для определенного значения) при вызове CAnimationController::AnimateGroup. Если не нужно применить переход к одному из измерений, можно передать значение NULL.  
+### <a name="remarks"></a>Remarks  
+ Call this function to add the specified transitions to the internal list of transitions to be applied to animation variables for Width and Height. When you add transitions, they are not applied immediately and stored in an internal list. Transitions are applied (added to a storyboard for a particular value) when you call CAnimationController::AnimateGroup. If you don't need to apply a transition to one of dimensions, you can pass NULL.  
   
-##  <a name="canimationsize"></a>CAnimationSize::CAnimationSize  
- Создает объект размера анимации.  
+##  <a name="canimationsize"></a>  CAnimationSize::CAnimationSize  
+ Constructs an animation size object.  
   
 ```  
 CAnimationSize();
@@ -145,24 +154,24 @@ CAnimationSize(
     DWORD dwUserData = 0);
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
  `szDefault`  
- Задает размер по умолчанию.  
+ Specifies default size.  
   
  `nGroupID`  
- Указывает идентификатор группы.  
+ Specifies Group ID.  
   
  `nObjectID`  
- Указывает идентификатор объекта.  
+ Specifies Object ID.  
   
  `dwUserData`  
- Задает определяемые пользователем данные.  
+ Specifies user-defined data.  
   
-### <a name="remarks"></a>Примечания  
- Объект создан со значениями по умолчанию для ширины, высоты объекта, идентификатор и идентификатор группы, которая будет иметь значение 0. Они могут быть изменены во время выполнения с помощью SetDefaultValue и SetID.  
+### <a name="remarks"></a>Remarks  
+ The object is constructed with default values for width, height, Object ID and Group ID, which will be set to 0. They can be changed later at runtime using SetDefaultValue and SetID.  
   
-##  <a name="getanimationvariablelist"></a>CAnimationSize::GetAnimationVariableList  
- Помещает инкапсулированный анимации переменные в список.  
+##  <a name="getanimationvariablelist"></a>  CAnimationSize::GetAnimationVariableList  
+ Puts the encapsulated animation variables into a list.  
   
 ```  
 virtual void GetAnimationVariableList(
@@ -170,121 +179,121 @@ virtual void GetAnimationVariableList(
     CAnimationVariable*>& lst);
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
  `lst`  
- Когда функция возвращает значение, он содержит указатели на два объекта CAnimationVariable, представляющая ширину и высоту.  
+ When the function returns, it contains pointers to two CAnimationVariable objects representing the width and height.  
   
-##  <a name="getcx"></a>CAnimationSize::GetCX  
- Предоставляет доступ к CAnimationVariable, представляющее ширину.  
+##  <a name="getcx"></a>  CAnimationSize::GetCX  
+ Provides access to CAnimationVariable representing Width.  
   
 ```  
 CAnimationVariable& GetCX();
 ```  
   
-### <a name="return-value"></a>Возвращаемое значение  
- Ссылка на инкапсулированный CAnimationVariable, представляющее ширину.  
+### <a name="return-value"></a>Return Value  
+ A reference to encapsulated CAnimationVariable representing Width.  
   
-### <a name="remarks"></a>Примечания  
- Можно вызвать этот метод, чтобы получить прямой доступ к базовой CAnimationVariable, представляющее ширину.  
+### <a name="remarks"></a>Remarks  
+ You can call this method to get direct access to underlying CAnimationVariable representing Width.  
   
-##  <a name="getcy"></a>CAnimationSize::GetCY  
- Предоставляет доступ к CAnimationVariable, представляющее высоту.  
+##  <a name="getcy"></a>  CAnimationSize::GetCY  
+ Provides access to CAnimationVariable representing Height.  
   
 ```  
 CAnimationVariable& GetCY();
 ```  
   
-### <a name="return-value"></a>Возвращаемое значение  
- Ссылка на инкапсулированный CAnimationVariable, представляющее высоту.  
+### <a name="return-value"></a>Return Value  
+ A reference to encapsulated CAnimationVariable representing Height.  
   
-### <a name="remarks"></a>Примечания  
- Можно вызвать этот метод, чтобы получить прямой доступ к базовой CAnimationVariable, представляющее высоту.  
+### <a name="remarks"></a>Remarks  
+ You can call this method to get direct access to underlying CAnimationVariable representing Height.  
   
-##  <a name="getdefaultvalue"></a>CAnimationSize::GetDefaultValue  
- Возвращает значения по умолчанию для ширины и высоты.  
+##  <a name="getdefaultvalue"></a>  CAnimationSize::GetDefaultValue  
+ Returns the default values for Width and Height.  
   
 ```  
 CSize GetDefaultValue();
 ```  
   
-### <a name="return-value"></a>Возвращаемое значение  
- Объект CSize, содержащий значения по умолчанию.  
+### <a name="return-value"></a>Return Value  
+ A CSize object containing default values.  
   
-### <a name="remarks"></a>Примечания  
- Эта функция вызывается для получения значения по умолчанию, которой было установлено ранее, конструктор или SetDefaultValue.  
+### <a name="remarks"></a>Remarks  
+ Call this function to retrieve default value, which was previously set by constructor or SetDefaultValue.  
   
-##  <a name="getvalue"></a>CAnimationSize::GetValue  
- Возвращает текущее значение.  
+##  <a name="getvalue"></a>  CAnimationSize::GetValue  
+ Returns current value.  
   
 ```  
 BOOL GetValue(CSize& szValue);
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
  `szValue`  
- Выходные данные. Содержит текущее значение при возвращении данного метода.  
+ Output. Contains the current value when this method returns.  
   
-### <a name="return-value"></a>Возвращаемое значение  
- Значение TRUE, если текущее значение были успешно извлечены; в противном случае — значение FALSE.  
+### <a name="return-value"></a>Return Value  
+ TRUE, if the current value was successfully retrieved; otherwise FALSE.  
   
-### <a name="remarks"></a>Примечания  
- Эта функция вызывается для получения текущего значения размера анимации. Если этот метод не или базовых объектов COM, ширину и размер не был инициализирован, szValue содержит значение по умолчанию, которое ранее было задано в конструкторе или SetDefaultValue.  
+### <a name="remarks"></a>Remarks  
+ Call this function to retrieve the current value of animation size. If this method fails or underlying COM objects for Width and Size have not been initialized, szValue contains default value, which was previously set in constructor or by SetDefaultValue.  
   
-##  <a name="m_cxvalue"></a>CAnimationSize::m_cxValue  
- Инкапсулированный анимации переменная, которая представляет ширину анимации.  
+##  <a name="m_cxvalue"></a>  CAnimationSize::m_cxValue  
+ The encapsulated animation variable that represents width of animation size.  
   
 ```  
 CAnimationVariable m_cxValue;  
 ```  
   
-##  <a name="m_cyvalue"></a>CAnimationSize::m_cyValue  
- Переменная инкапсулированный анимации, представляющий высоту анимации.  
+##  <a name="m_cyvalue"></a>  CAnimationSize::m_cyValue  
+ The encapsulated animation variable that represents height of animation size.  
   
 ```  
 CAnimationVariable m_cyValue;  
 ```  
   
-##  <a name="operator_csize"></a>CAnimationSize::operator CSize  
- Преобразует CAnimationSize CSize.  
+##  <a name="operator_csize"></a>  CAnimationSize::operator CSize  
+ Converts a CAnimationSize to a CSize.  
   
 ```  
 operator CSize();
 ```   
   
-### <a name="return-value"></a>Возвращаемое значение  
- Текущее значение размера анимации, CSize.  
+### <a name="return-value"></a>Return Value  
+ Current value of animation size as CSize.  
   
-### <a name="remarks"></a>Примечания  
- Эта функция выполняется внутренний вызов метода GetValue. Если GetValue для какой-либо причине не удается, возвращенный размер будет содержать значения по умолчанию для ширины и высоты.  
+### <a name="remarks"></a>Remarks  
+ This function internally calls GetValue. If GetValue for some reason fails, the returned size will contain default values for Width and Height.  
   
-##  <a name="operator_eq"></a>CAnimationSize::operator =  
- Назначает szSrc CAnimationSize.  
+##  <a name="operator_eq"></a>  CAnimationSize::operator=  
+ Assigns szSrc to CAnimationSize.  
   
 ```  
 void operator=(const CSize& szSrc);
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
  `szSrc`  
- Относится к CSize или размер.  
+ Refers to CSize or SIZE.  
   
-### <a name="remarks"></a>Примечания  
- Назначает szSrc CAnimationSize. Рекомендуется сделать это до начала анимации, так как этот оператор вызывает SetDefaultValue, который воссоздает базовые объекты COM для ширины и высоты, если они были созданы. Если подписка данного объекта анимации для события (ValueChanged или IntegerValueChanged), необходимо включить эти события.  
+### <a name="remarks"></a>Remarks  
+ Assigns szSrc to CAnimationSize. It's recommended to do that before animation start, because this operator calls SetDefaultValue, which recreates the underlying COM objects for Width and Height if they have been created. If you subscribed this animation object to events (ValueChanged or IntegerValueChanged), you need to re-enable these events.  
   
-##  <a name="setdefaultvalue"></a>CAnimationSize::SetDefaultValue  
- Задает значение по умолчанию.  
+##  <a name="setdefaultvalue"></a>  CAnimationSize::SetDefaultValue  
+ Sets default value.  
   
 ```  
 void SetDefaultValue(const CSize& szDefault);
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
  `szDefault`  
- Указывает новый размер по умолчанию.  
+ Specifies new default size.  
   
-### <a name="remarks"></a>Примечания  
- Эту функцию можно используйте для задания значения по умолчанию для объекта анимации. Этот метод присваивает значения по умолчанию ширину и высоту анимации. Также воссоздает базовых объектов COM, если они были созданы. Если подписка данного объекта анимации для события (ValueChanged или IntegerValueChanged), необходимо включить эти события.  
+### <a name="remarks"></a>Remarks  
+ Use this function to set a default value to animation object. This methods assigns default values to Width and Height of animation size. It also recreates underlying COM objects if they have been created. If you subscribed this animation object to events (ValueChanged or IntegerValueChanged), you need to re-enable these events.  
   
-## <a name="see-also"></a>См. также  
- [Классы](../../mfc/reference/mfc-classes.md)
+## <a name="see-also"></a>See Also  
+ [Classes](../../mfc/reference/mfc-classes.md)
 

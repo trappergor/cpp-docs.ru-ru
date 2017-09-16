@@ -1,54 +1,73 @@
 ---
-title: "Установка изображений для отдельного элемента | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "расширенные поля со списком, изображения"
-  - "изображения [C++], элементы поля со списком"
+title: Setting the Images for an Individual Item | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- extended combo boxes [MFC], images
+- images [MFC], combo box items
 ms.assetid: bde83db8-23a7-4e35-837a-c86447d2c0af
 caps.latest.revision: 11
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 7
----
-# Установка изображений для отдельного элемента
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: fc4ae8c5833256c105009348ebe8a4e2624eb51a
+ms.contentlocale: ru-ru
+ms.lasthandoff: 09/12/2017
 
-Различные типы изображений, используемых дополнительным элементом поля со списком определяются значениями в `iImage`, **iSelectedImage** и **iOverlay** членов структуры [COMBOBOXEXITEM](http://msdn.microsoft.com/library/windows/desktop/bb775746).  Каждое значение индекса образа в связанном списке изображений элемента управления.  По умолчанию эти члены задано значение 0, что элемент управления не отображаться. изображение элемента.  Если требуется использовать отображает для конкретного элемента, можно изменять структуру соответствующим образом при вставке элемента поля со списком или путем изменения существующего элемента поля со списком.  
+---
+# <a name="setting-the-images-for-an-individual-item"></a>Setting the Images for an Individual Item
+The different types of images used by the extended combo box item are determined by the values in the `iImage`, **iSelectedImage**, and **iOverlay** members of the [COMBOBOXEXITEM](http://msdn.microsoft.com/library/windows/desktop/bb775746) structure. Each value is the index of an image in the associated image list of the control. By default, these members are set to 0, causing the control to display no image for the item. If you want to use images for a specific item, you can modify the structure accordingly, either when inserting the combo box item or by modifying an existing combo box item.  
   
-## Параметр изображение для нового элемента  
- При вставке новый элемент, необходимо инициализировать `iImage`, **iSelectedImage** и **iOverlay** элементы структуры с правильными значениями и затем вставьте элемент с вызовом метода [CComboBoxEx::InsertItem](../Topic/CComboBoxEx::InsertItem.md).  
+## <a name="setting-the-image-for-a-new-item"></a>Setting the Image for a New Item  
+ If you are inserting a new item, initialize the `iImage`, **iSelectedImage**, and **iOverlay** structure members with the proper values and then insert the item with a call to [CComboBoxEx::InsertItem](../mfc/reference/ccomboboxex-class.md#insertitem).  
   
- Следующий пример вставляет новый расширенный элемент поля со списком \(`cbi`\) в расширенных элементов управления " Поле со списком \(`m_comboEx`\), указав индексы для всех 3 состояний образа.  
+ The following example inserts a new extended combo box item (`cbi`) into the extended combo box control (`m_comboEx`), supplying indices for all three image states:  
   
- [!code-cpp[NVC_MFCControlLadenDialog#12](../mfc/codesnippet/CPP/setting-the-images-for-an-individual-item_1.cpp)]  
+ [!code-cpp[NVC_MFCControlLadenDialog#12](../mfc/codesnippet/cpp/setting-the-images-for-an-individual-item_1.cpp)]  
   
-## Параметр изображение для существующего элемента  
- Если изменить существующий элемент, необходимо работать с членом **mask** структуры **COMBOBOXEXITEM**.  
+## <a name="setting-the-image-for-an-existing-item"></a>Setting the Image for an Existing Item  
+ If you are modifying an existing item, you need to work with the **mask** member of a **COMBOBOXEXITEM** structure.  
   
-#### Изменить существующий элемент для использования изображений  
+#### <a name="to-modify-an-existing-item-to-use-images"></a>To modify an existing item to use images  
   
-1.  Объявите структуру **COMBOBOXEXITEM** и задайте элемент данных **mask** значения необходимо настроить в изменения.  
+1.  Declare a **COMBOBOXEXITEM** structure and set the **mask** data member to the values you are interested in modifying.  
   
-2.  С помощью этой структуры, вызывать в [CComboBoxEx::GetItem](../Topic/CComboBoxEx::GetItem.md).  
+2.  Using this structure, make a call to [CComboBoxEx::GetItem](../mfc/reference/ccomboboxex-class.md#getitem).  
   
-3.  Измените **mask**, `iImage` и члены **iSelectedImage** вновь возвращенной структуры, используя соответствующие значения.  
+3.  Modify the **mask**, `iImage`, and **iSelectedImage** members of the newly returned structure, using the appropriate values.  
   
-4.  Вызывать в [CComboBoxEx::SetItem](../Topic/CComboBoxEx::SetItem.md), передав измененную структуру.  
+4.  Make a call to [CComboBoxEx::SetItem](../mfc/reference/ccomboboxex-class.md#setitem), passing in the modified structure.  
   
- Следующий пример демонстрирует эту процедуру с обменивать выбранные и не выбран образы удлиненного третьего элемента поля со списком.  
+ The following example demonstrates this procedure by swapping the selected and unselected images of the third extended combo box item:  
   
- [!code-cpp[NVC_MFCControlLadenDialog#13](../mfc/codesnippet/CPP/setting-the-images-for-an-individual-item_2.cpp)]  
+ [!code-cpp[NVC_MFCControlLadenDialog#13](../mfc/codesnippet/cpp/setting-the-images-for-an-individual-item_2.cpp)]  
   
-## См. также  
- [Использование CComboBoxEx](../mfc/using-ccomboboxex.md)   
- [Элементы управления](../mfc/controls-mfc.md)
+## <a name="see-also"></a>See Also  
+ [Using CComboBoxEx](../mfc/using-ccomboboxex.md)   
+ [Controls](../mfc/controls-mfc.md)
+
+

@@ -1,5 +1,5 @@
 ---
-title: "Класс CMFCRibbonUndoButton | Документы Microsoft"
+title: CMFCRibbonUndoButton Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -19,7 +19,11 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- CMFCRibbonUndoButton class
+- CMFCRibbonUndoButton [MFC], CMFCRibbonUndoButton
+- CMFCRibbonUndoButton [MFC], AddUndoAction
+- CMFCRibbonUndoButton [MFC], CleanUpUndoList
+- CMFCRibbonUndoButton [MFC], GetActionNumber
+- CMFCRibbonUndoButton [MFC], HasMenu
 ms.assetid: 5c42adf7-871d-4239-901e-47ae7fb816fc
 caps.latest.revision: 35
 author: mikeblome
@@ -39,48 +43,48 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0e0c08ddc57d437c51872b5186ae3fc983bb0199
-ms.openlocfilehash: d4406e21a7e2a945965020d85a748b93d66b5682
+ms.translationtype: MT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: e99fca219af62c4dc51db71c24caae6af50c11db
 ms.contentlocale: ru-ru
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 09/12/2017
 
 ---
-# <a name="cmfcribbonundobutton-class"></a>Класс CMFCRibbonUndoButton
-`CMFCRibbonUndoButton` Класс реализует кнопку раскрывающегося списка, содержащий последние команды пользователя. Пользователи могут выбрать один или несколько последних команд из раскрывающегося списка, чтобы вернуть или отменить их.  
+# <a name="cmfcribbonundobutton-class"></a>CMFCRibbonUndoButton Class
+The `CMFCRibbonUndoButton` class implements a drop-down list button that contains the most recent user commands. Users can select one or more of the most recent commands from the drop-down list to either redo or undo them.  
   
-## <a name="syntax"></a>Синтаксис  
+## <a name="syntax"></a>Syntax  
   
 ```  
 class CMFCRibbonUndoButton : public CMFCRibbonGallery  
 ```  
   
-## <a name="members"></a>Члены  
+## <a name="members"></a>Members  
   
-### <a name="public-constructors"></a>Открытые конструкторы  
+### <a name="public-constructors"></a>Public Constructors  
   
-|Имя|Описание|  
+|Name|Description|  
 |----------|-----------------|  
-|[CMFCRibbonUndoButton::CMFCRibbonUndoButton](#cmfcribbonundobutton)|Создает новый `CMFCRibbonUndoButton` объекта, используя идентификатор команды, указать, текстовую метку и изображений из списка изображений родительского объекта.|  
+|[CMFCRibbonUndoButton::CMFCRibbonUndoButton](#cmfcribbonundobutton)|Constructs a new `CMFCRibbonUndoButton` object by using the command ID that you specify, text label and images from the image list of the parent object.|  
   
-### <a name="public-methods"></a>Открытые методы  
+### <a name="public-methods"></a>Public Methods  
   
-|Имя|Описание|  
+|Name|Description|  
 |----------|-----------------|  
-|[CMFCRibbonUndoButton::AddUndoAction](#addundoaction)|Добавляет новое действие в списке действий.|  
-|[CMFCRibbonUndoButton::CleanUpUndoList](#cleanupundolist)|Очищает список действий, который представляет раскрывающегося списка.|  
-|[CMFCRibbonUndoButton::GetActionNumber](#getactionnumber)|Определяет количество элементов, которые пользователь выбрал из раскрывающегося списка.|  
-|[CMFCRibbonUndoButton::HasMenu](#hasmenu)|Указывает, содержит ли объект меню.|  
+|[CMFCRibbonUndoButton::AddUndoAction](#addundoaction)|Adds a new action to the list of actions.|  
+|[CMFCRibbonUndoButton::CleanUpUndoList](#cleanupundolist)|Clears the action list, which is the drop-down list.|  
+|[CMFCRibbonUndoButton::GetActionNumber](#getactionnumber)|Determines the number of items that a user selected from the drop-down list.|  
+|[CMFCRibbonUndoButton::HasMenu](#hasmenu)|Indicates whether the object contains a menu.|  
   
-## <a name="remarks"></a>Примечания  
- `CMFCRibbonUndoButton` Класс использует стек для представления раскрывающегося списка.  
+## <a name="remarks"></a>Remarks  
+ The `CMFCRibbonUndoButton` class uses a stack to represent the drop-down list.  
   
-## <a name="example"></a>Пример  
- Следующий пример демонстрирует создания объекта `CMFCRibbonUndoButton` и добавьте новое действие в списке действий. Этот фрагмент кода является частью [пример мини-приложения ленты](../../visual-cpp-samples.md).  
+## <a name="example"></a>Example  
+ The following example demonstrates how to construct an object of the `CMFCRibbonUndoButton` class, and add a new action to the list of actions. This code snippet is part of the [Ribbon Gadgets sample](../../visual-cpp-samples.md).  
   
- [!code-cpp[NVC_MFC_RibbonGadgets&#2;](../../mfc/reference/codesnippet/cpp/cmfcribbonundobutton-class_1.cpp)]  
+ [!code-cpp[NVC_MFC_RibbonGadgets#2](../../mfc/reference/codesnippet/cpp/cmfcribbonundobutton-class_1.cpp)]  
   
-## <a name="inheritance-hierarchy"></a>Иерархия наследования  
+## <a name="inheritance-hierarchy"></a>Inheritance Hierarchy  
  [CObject](../../mfc/reference/cobject-class.md)  
   
  [CMFCRibbonBaseElement](../../mfc/reference/cmfcribbonbaseelement-class.md)  
@@ -91,29 +95,29 @@ class CMFCRibbonUndoButton : public CMFCRibbonGallery
   
  [CMFCRibbonUndoButton](../../mfc/reference/cmfcribbonundobutton-class.md)  
   
-## <a name="requirements"></a>Требования  
- **Заголовок:** afxribbonundobutton.h  
+## <a name="requirements"></a>Requirements  
+ **Header:** afxribbonundobutton.h  
   
-##  <a name="addundoaction"></a>CMFCRibbonUndoButton::AddUndoAction  
- Добавляет новое действие в списке действий.  
+##  <a name="addundoaction"></a>  CMFCRibbonUndoButton::AddUndoAction  
+ Adds a new action to the list of actions.  
   
 ```  
 void AddUndoAction(LPCTSTR lpszLabel);
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
  [in] `lpszLabel`  
- Метка действия, которое будет отображаться в раскрывающемся списке.  
+ The action label that will be displayed in the drop-down list.  
   
-##  <a name="cleanupundolist"></a>CMFCRibbonUndoButton::CleanUpUndoList  
- Очищает список действий, который представляет раскрывающегося списка.  
+##  <a name="cleanupundolist"></a>  CMFCRibbonUndoButton::CleanUpUndoList  
+ Clears the action list, which is the drop-down list.  
   
 ```  
 void CleanUpUndoList();
 ```  
   
-##  <a name="cmfcribbonundobutton"></a>CMFCRibbonUndoButton::CMFCRibbonUndoButton  
- Создает новый `CMFCRibbonUndoButton` объекта, используя идентификатор команды, указать, текстовую метку и изображений из списка изображений родительского объекта.  
+##  <a name="cmfcribbonundobutton"></a>  CMFCRibbonUndoButton::CMFCRibbonUndoButton  
+ Constructs a new `CMFCRibbonUndoButton` object by using the command ID that you specify, text label and images from the image list of the parent object.  
   
 ```  
 CMFCRibbonUndoButton(
@@ -129,47 +133,47 @@ CMFCRibbonUndoButton(
     HICON hIcon);
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
  [in] `nID`  
- Указывает идентификатор команды.  
+ Specifies the command identifier.  
   
  [in] `lpszText`  
- Задает текст метки кнопки.  
+ Specifies the text label of the button.  
   
  [in] `nSmallImageIndex`  
- Отсчитываемый от нуля индекс в списке изображений родительского объекта небольшое изображение кнопки.  
+ Zero-based index in the image list of the parent object for the button's small image.  
   
  [in] `nLargeImageIndex`  
- Отсчитываемый от нуля индекс в списке изображений родительский объект для большого изображения кнопки.  
+ Zero-based index in the image list of the parent object for the of button's large image.  
   
  [in] `hIcon`  
- Дескриптор для значка, который можно использовать в качестве изображения кнопки.  
+ A handle to an icon that you can use as a button's image.  
   
-##  <a name="getactionnumber"></a>CMFCRibbonUndoButton::GetActionNumber  
- Определяет количество элементов, которые пользователь выбрал из раскрывающегося списка.  
+##  <a name="getactionnumber"></a>  CMFCRibbonUndoButton::GetActionNumber  
+ Determines the number of items that a user selected from the drop-down list.  
   
 ```  
 int GetActionNumber() const;  
 ```  
   
-### <a name="return-value"></a>Возвращаемое значение  
- Число элементов, которые выбрал пользователь.  
+### <a name="return-value"></a>Return Value  
+ The number of items that a user selected.  
   
-##  <a name="hasmenu"></a>CMFCRibbonUndoButton::HasMenu  
- Указывает, содержит ли объект меню.  
+##  <a name="hasmenu"></a>  CMFCRibbonUndoButton::HasMenu  
+ Indicates whether the object contains a menu.  
   
 ```  
 virtual BOOL HasMenu() const;  
 ```  
   
-### <a name="return-value"></a>Возвращаемое значение  
- Всегда возвращает значение `TRUE`.  
+### <a name="return-value"></a>Return Value  
+ Always returns `TRUE`.  
   
-### <a name="remarks"></a>Примечания  
+### <a name="remarks"></a>Remarks  
   
-## <a name="see-also"></a>См. также  
- [Диаграмма иерархии](../../mfc/hierarchy-chart.md)   
- [Классы](../../mfc/reference/mfc-classes.md)   
- [Класс CMFCRibbonGallery](../../mfc/reference/cmfcribbongallery-class.md)   
- [Класс CMFCRibbonButton](../../mfc/reference/cmfcribbonbutton-class.md)
+## <a name="see-also"></a>See Also  
+ [Hierarchy Chart](../../mfc/hierarchy-chart.md)   
+ [Classes](../../mfc/reference/mfc-classes.md)   
+ [CMFCRibbonGallery Class](../../mfc/reference/cmfcribbongallery-class.md)   
+ [CMFCRibbonButton Class](../../mfc/reference/cmfcribbonbutton-class.md)
 

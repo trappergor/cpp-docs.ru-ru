@@ -1,91 +1,110 @@
 ---
-title: "Сокеты Windows. Использование сокетов с архивами | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "архивы [C++], и сокеты Windows"
-  - "CSocket - класс, модель программирования"
-  - "сокеты [C++], с архивами"
-  - "Сокеты Windows [C++], архивы"
+title: 'Windows Sockets: Using Sockets with Archives | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- Windows Sockets [MFC], archives
+- sockets [MFC], with archives
+- archives [MFC], and Windows Sockets
+- CSocket class [MFC], programming model
 ms.assetid: 17e71a99-a09e-4e1a-9fda-13d62805c824
 caps.latest.revision: 12
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 8
----
-# Сокеты Windows. Использование сокетов с архивами
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: fa1f4d7e01e2c7fb66b0bec8868e4cfcc4185815
+ms.contentlocale: ru-ru
+ms.lasthandoff: 09/12/2017
 
-В этом разделе описываются [Модель программирования CSocket](#_core_the_csocket_programming_model).  Поддержка сокета предоставляет [CSocket](../mfc/reference/csocket-class.md) класса на более высоком уровне абстракции, что и класс [CAsyncSocket](../Topic/CAsyncSocket%20Class.md).  `CSocket` использует версию протокола сериализации MFC для передачи данных и обратное преобразование объекта сокета через объект [CArchive](../mfc/reference/carchive-class.md) библиотеки MFC.  `CSocket` предоставляет блокировку \(пока управление фоновый обработки сообщений Windows\) и предоставляет доступ к `CArchive`, управляющий множество аспектов сообщений, необходимо сделать использование или необработанные API или класс `CAsyncSocket`.  
+---
+# <a name="windows-sockets-using-sockets-with-archives"></a>Windows Sockets: Using Sockets with Archives
+This article describes the [CSocket programming model](#_core_the_csocket_programming_model). Class [CSocket](../mfc/reference/csocket-class.md) supplies socket support at a higher level of abstraction than does class [CAsyncSocket](../mfc/reference/casyncsocket-class.md). `CSocket` uses a version of the MFC serialization protocol to pass data to and from a socket object through an MFC [CArchive](../mfc/reference/carchive-class.md) object. `CSocket` provides blocking (while managing background processing of Windows messages) and gives you access to `CArchive`, which manages many aspects of the communication that you would have to do yourself using either the raw API or class `CAsyncSocket`.  
   
 > [!TIP]
->  Класс можно `CSocket` использоваться сама по себе, как более удобной версия `CAsyncSocket`, но наиболее простая модель программирования использовать `CSocket` с объектом `CArchive`.  
+>  You can use class `CSocket` by itself, as a more convenient version of `CAsyncSocket`, but the simplest programming model is to use `CSocket` with a `CArchive` object.  
   
- Дополнительные сведения о, как реализация сокетов с архивами работает, см. в разделе [Сокеты Windows. Работа сокетов с архивами](../mfc/windows-sockets-how-sockets-with-archives-work.md).  Например код см. в разделах [Сокеты Windows. Последовательность операций](../Topic/Windows%20Sockets:%20Sequence%20of%20Operations.md) и [Сокеты Windows. Пример сокетов с использованием архивов](../mfc/windows-sockets-example-of-sockets-using-archives.md).  Дополнительные сведения о некоторых функций можно увеличить свои собственные классы, производные от классов сокетов, см. в разделе [Сокеты Windows. Наследование от классов сокета](../mfc/windows-sockets-deriving-from-socket-classes.md).  
+ For more information about how the implementation of sockets with archives works, see [Windows Sockets: How Sockets with Archives Work](../mfc/windows-sockets-how-sockets-with-archives-work.md). For example code, see [Windows Sockets: Sequence of Operations](../mfc/windows-sockets-sequence-of-operations.md) and [Windows Sockets: Example of Sockets Using Archives](../mfc/windows-sockets-example-of-sockets-using-archives.md). For information about some of the functionality you can gain by deriving your own classes from the sockets classes, see [Windows Sockets: Deriving from Socket Classes](../mfc/windows-sockets-deriving-from-socket-classes.md).  
   
 > [!NOTE]
->  При создании клиентской программы MFC для связи с установленными серверами библиотек \(\), не отправлять объекты C\+\+ по архивным.  Если сервер не будет приложение MFC, понимает типы объектов требуется отправить, он не сможет получить и поиск объекты.  Для соответствующих материала на предмете взаимодействия с приложениями библиотеки также см. статью [Сокеты Windows. Порядок байтов](../mfc/windows-sockets-byte-ordering.md).  
+>  If you are writing an MFC client program to communicate with established (non-MFC) servers, do not send C++ objects through the archive. Unless the server is an MFC application that understands the kinds of objects you want to send, it will not be able to receive and deserialize your objects. For related material on the subject of communicating with non-MFC applications, also see the article [Windows Sockets: Byte Ordering](../mfc/windows-sockets-byte-ordering.md).  
   
-##  <a name="_core_the_csocket_programming_model"></a> Модель программирования CSocket  
- С помощью объекта `CSocket` включает в себя создание и связать вместе несколько объектов классов MFC.  В общей процедуре ниже, каждый предпринят сокетом как сервера, так и сокетом клиента, за исключением шага 3, в котором каждый тип сокета различаются действия.  
+##  <a name="_core_the_csocket_programming_model"></a> The CSocket Programming Model  
+ Using a `CSocket` object involves creating and associating together several MFC class objects. In the general procedure below, each step is taken by both the server socket and the client socket, except for step 3, in which each socket type requires a different action.  
   
 > [!TIP]
->  Во время выполнения, серверное приложение обычно запускается, чтобы быть готово «и требуется передачи данных», когда клиентское приложение ищет подключение.  Если сервер не готов, когда клиент пытается подключиться, обычно требует пользователя приложения попытаться подключиться попытку позже.  
+>  At run time, the server application usually starts first to be ready and "listening" when the client application seeks a connection. If the server is not ready when the client tries to connect, you typically require the user application to try connecting again later.  
   
-#### Настройка связь между сокетом сокетом клиента и сервера  
+#### <a name="to-set-up-communication-between-a-server-socket-and-a-client-socket"></a>To set up communication between a server socket and a client socket  
   
-1.  Создайте объект [CSocket](../mfc/reference/csocket-class.md).  
+1.  Construct a [CSocket](../mfc/reference/csocket-class.md) object.  
   
-2.  Использование объекта для создания основной дескриптор **SOCKET**.  
+2.  Use the object to create the underlying **SOCKET** handle.  
   
-     Для клиентской объектной `CSocket` необходимо обычно используются параметры по умолчанию в [Создать](../Topic/CAsyncSocket::Create.md), если вам не будет необходимости сокет датаграмм.  Для серверного объекта `CSocket` необходимо указать порт в вызове **Создать**.  
-  
-    > [!NOTE]
-    >  `CArchive` не работает с сокетами датаграмм.  Если необходимо использовать `CSocket` для сокета датаграмм, необходимо использовать класс, как можно использовать `CAsyncSocket`, т е не архива.  Поскольку датаграммы ненадежны \(не существует гарантированного, что приехал и может быть повторен или из последовательности\), они не совместимы с сериализацией по архивным.  Предполагается, что операция сериализации для выполнения всегда и в последовательности.  При попытке использовать `CSocket` с объектом `CArchive` для датаграммы, утверждение MFC завершается неудачей.  
-  
-3.  Если клиент сокет, вызов [CAsyncSocket::Connect](../Topic/CAsyncSocket::Connect.md) для подключения объект сокета сокета сервера.  
-  
-     – или –  
-  
-     Если сервер сокет, вызов [CAsyncSocket::Listen](../Topic/CAsyncSocket::Listen.md), чтобы начать прослушивает попытки подключения от клиента.  При получении запроса подключения, примите его с помощью метода [CAsyncSocket::Accept](../Topic/CAsyncSocket::Accept.md).  
+     For a `CSocket` client object, you should normally use the default parameters to [Create](../mfc/reference/casyncsocket-class.md#create), unless you need a datagram socket. For a `CSocket` server object, you must specify a port in the **Create** call.  
   
     > [!NOTE]
-    >  Функцию\-член **Принять** принимает ссылку на новый, пустой объект `CSocket` в качестве параметра.  Необходимо построить этот объект перед вызовом **Принять**.  Если этот объект сокета выходит за пределы области, закроет подключение.  Не вызывайте метод **Создать** для нового объекта сокета.  
+    >  `CArchive` does not work with datagram sockets. If you want to use `CSocket` for a datagram socket, you must use the class as you would use `CAsyncSocket`, that is, without an archive. Because datagrams are unreliable (not guaranteed to arrive and may be repeated or out of sequence), they are not compatible with serialization through an archive. You expect a serialization operation to complete reliably and in sequence. If you try to use `CSocket` with a `CArchive` object for a datagram, an MFC assertion fails.  
   
-4.  Создайте объект [CSocketFile](../Topic/CSocketFile%20Class.md) и сопоставляет объект `CSocket` с ним.  
+3.  If the socket is a client, call [CAsyncSocket::Connect](../mfc/reference/casyncsocket-class.md#connect) to connect the socket object to a server socket.  
   
-5.  Создайте объект [CArchive](../mfc/reference/carchive-class.md) для получения или загрузки \(\) или хранить сведения \(отправки\).  Архив связан с объектом `CSocketFile`.  
+     -or-  
   
-     Имейте в виду, что `CArchive` не работает с сокетами датаграмм.  
-  
-6.  Используйте объект `CArchive` для передачи данных между клиентом и сокетами сервера.  
-  
-     Имейте в виду, что заданный объект `CArchive` перемещает данные только в одном направлении. для загрузки \(или получение\) или сохранения \(отправки\).  В некоторых случаях используется 2 объекта `CArchive` : одно для отправки данных, — для получения подтверждения.  
-  
-     После принятия подключения и настраивать архив можно выполнять такие задачи, как проверка пароли.  
-  
-7.  Удалите архив, файл сокета, объекты сокета.  
+     If the socket is a server, call [CAsyncSocket::Listen](../mfc/reference/casyncsocket-class.md#listen) to begin listening for connect attempts from a client. Upon receiving a connection request, accept it by calling [CAsyncSocket::Accept](../mfc/reference/casyncsocket-class.md#accept).  
   
     > [!NOTE]
-    >  Предоставляет `CArchive` класса функцию\-член `IsBufferEmpty` специально для использования с классом `CSocket`.  Если буфер содержит несколько сообщений данных, например, необходимо воспроизвести до тех пор, пока все они не будут прочитаны и буфер.  В противном случае в следующее уведомление о том, что данные, которые необходимо получить может быть задержано неопределенно.  Используйте `IsBufferEmpty`, чтобы убедить, необходимо извлечь все данные.  
+    >  The **Accept** member function takes a reference to a new, empty `CSocket` object as its parameter. You must construct this object before you call **Accept**. If this socket object goes out of scope, the connection closes. Do not call **Create** for this new socket object.  
   
- На статью [Сокеты Windows. Последовательность операций](../Topic/Windows%20Sockets:%20Sequence%20of%20Operations.md) показано обе стороны этого процесса с примером кода.  
+4.  Create a [CSocketFile](../mfc/reference/csocketfile-class.md) object, associating the `CSocket` object with it.  
   
- Дополнительные сведения см. в следующих разделах:  
+5.  Create a [CArchive](../mfc/reference/carchive-class.md) object for either loading (receiving) or storing (sending) data. The archive is associated with the `CSocketFile` object.  
   
--   [Сокеты Windows. Сокеты потоков](../mfc/windows-sockets-stream-sockets.md)  
+     Keep in mind that `CArchive` does not work with datagram sockets.  
   
--   [Сокеты Windows. Сокеты датаграмм](../mfc/windows-sockets-datagram-sockets.md)  
+6.  Use the `CArchive` object to pass data between the client and server sockets.  
   
-## См. также  
- [Сокеты Windows в MFC](../mfc/windows-sockets-in-mfc.md)   
- [CSocket::Create](../Topic/CSocket::Create.md)
+     Keep in mind that a given `CArchive` object moves data in one direction only: either for loading (receiving) or storing (sending). In some cases, you will use two `CArchive` objects: one for sending data, the other for receiving acknowledgments.  
+  
+     After accepting a connection and setting up the archive, you can perform such tasks as validating passwords.  
+  
+7.  Destroy the archive, socket file, and socket objects.  
+  
+    > [!NOTE]
+    >  Class `CArchive` supplies the `IsBufferEmpty` member function specifically for use with class `CSocket`. If the buffer contains multiple data messages, for example, you need to loop until all of them are read and the buffer is cleared. Otherwise, your next notification that there is data to be received may be indefinitely delayed. Use `IsBufferEmpty` to assure that you retrieve all data.  
+  
+ The article [Windows Sockets: Sequence of Operations](../mfc/windows-sockets-sequence-of-operations.md) illustrates both sides of this process with example code.  
+  
+ For more information, see:  
+  
+-   [Windows Sockets: Stream Sockets](../mfc/windows-sockets-stream-sockets.md)  
+  
+-   [Windows Sockets: Datagram Sockets](../mfc/windows-sockets-datagram-sockets.md)  
+  
+## <a name="see-also"></a>See Also  
+ [Windows Sockets in MFC](../mfc/windows-sockets-in-mfc.md)   
+ [CSocket::Create](../mfc/reference/csocket-class.md#create)
+
+

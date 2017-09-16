@@ -1,5 +1,5 @@
 ---
-title: "Класс CScrollView | Документы Microsoft"
+title: CScrollView Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -25,9 +25,17 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- CScrollView class
-- views, scrolling
-- scrolling views
+- CScrollView [MFC], CScrollView
+- CScrollView [MFC], CheckScrollBars
+- CScrollView [MFC], FillOutsideRect
+- CScrollView [MFC], GetDeviceScrollPosition
+- CScrollView [MFC], GetDeviceScrollSizes
+- CScrollView [MFC], GetScrollPosition
+- CScrollView [MFC], GetTotalSize
+- CScrollView [MFC], ResizeParentToFit
+- CScrollView [MFC], ScrollToPosition
+- CScrollView [MFC], SetScaleToFitSize
+- CScrollView [MFC], SetScrollSizes
 ms.assetid: 4ba16dac-1acb-4be0-bb55-5fb695b6948d
 caps.latest.revision: 24
 author: mikeblome
@@ -47,81 +55,81 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0e0c08ddc57d437c51872b5186ae3fc983bb0199
-ms.openlocfilehash: 0dc937a9559306ff527779c45af9fdb62cf602df
+ms.translationtype: MT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: b7db2e86937ae306b2447592b12ba893f8ac8690
 ms.contentlocale: ru-ru
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 09/12/2017
 
 ---
-# <a name="cscrollview-class"></a>Класс CScrollView
-Объект [CView](../../mfc/reference/cview-class.md) с возможностями прокрутки.  
+# <a name="cscrollview-class"></a>CScrollView Class
+A [CView](../../mfc/reference/cview-class.md) with scrolling capabilities.  
   
-## <a name="syntax"></a>Синтаксис  
+## <a name="syntax"></a>Syntax  
   
 ```  
 class CScrollView : public CView  
 ```  
   
-## <a name="members"></a>Члены  
+## <a name="members"></a>Members  
   
-### <a name="protected-constructors"></a>Защищенные конструкторы  
+### <a name="protected-constructors"></a>Protected Constructors  
   
-|Имя|Описание|  
+|Name|Description|  
 |----------|-----------------|  
-|[CScrollView::CScrollView](#cscrollview)|Создает объект `CScrollView`.|  
+|[CScrollView::CScrollView](#cscrollview)|Constructs a `CScrollView` object.|  
   
-### <a name="public-methods"></a>Открытые методы  
+### <a name="public-methods"></a>Public Methods  
   
-|Имя|Описание|  
+|Name|Description|  
 |----------|-----------------|  
-|[CScrollView::CheckScrollBars](#checkscrollbars)|Указывает, имеет ли представление прокрутки горизонтальные и вертикальные полосы прокрутки.|  
-|[CScrollView::FillOutsideRect](#filloutsiderect)|Заполняет область представления за пределами области прокрутки.|  
-|[CScrollView::GetDeviceScrollPosition](#getdevicescrollposition)|Возвращает текущую позицию прокрутки в единицы устройства.|  
-|[CScrollView::GetDeviceScrollSizes](#getdevicescrollsizes)|Возвращает текущий режим сопоставления, общий размер и размеры страниц и прокрутки представления. Размеры указаны в единицы устройства.|  
-|[CScrollView::GetScrollPosition](#getscrollposition)|Возвращает текущую позицию прокрутки в логических единицах.|  
-|[CScrollView::GetTotalSize](#gettotalsize)|Возвращает общий размер представление прокрутки в логических единицах.|  
-|[CScrollView::ResizeParentToFit](#resizeparenttofit)|В результате размер представления для диктовки размер фрейма.|  
-|[CScrollView::ScrollToPosition](#scrolltoposition)|Прокручивает представление на определенный момент, указанный в логических единицах.|  
-|[CScrollView::SetScaleToFitSize](#setscaletofitsize)|Переводит представление прокрутки в режиме масштабирования ширины.|  
-|[CScrollView::SetScrollSizes](#setscrollsizes)|Задает режим сопоставления представления с прокруткой, общий размер и суммы вертикальной и горизонтальной прокрутки.|  
+|[CScrollView::CheckScrollBars](#checkscrollbars)|Indicates whether the scroll view has horizontal and vertical scroll bars.|  
+|[CScrollView::FillOutsideRect](#filloutsiderect)|Fills the area of a view outside the scrolling area.|  
+|[CScrollView::GetDeviceScrollPosition](#getdevicescrollposition)|Gets the current scroll position in device units.|  
+|[CScrollView::GetDeviceScrollSizes](#getdevicescrollsizes)|Gets the current mapping mode, the total size, and the line and page sizes of the scrollable view. Sizes are in device units.|  
+|[CScrollView::GetScrollPosition](#getscrollposition)|Gets the current scroll position in logical units.|  
+|[CScrollView::GetTotalSize](#gettotalsize)|Gets the total size of the scroll view in logical units.|  
+|[CScrollView::ResizeParentToFit](#resizeparenttofit)|Causes the size of the view to dictate the size of its frame.|  
+|[CScrollView::ScrollToPosition](#scrolltoposition)|Scrolls the view to a given point, specified in logical units.|  
+|[CScrollView::SetScaleToFitSize](#setscaletofitsize)|Puts the scroll view into scale-to-fit mode.|  
+|[CScrollView::SetScrollSizes](#setscrollsizes)|Sets the scroll view's mapping mode, total size, and horizontal and vertical scroll amounts.|  
   
-## <a name="remarks"></a>Примечания  
- Можно обработать самостоятельно прокрутку в класс, производный от стандартного `CView` путем переопределения сообщения сопоставлены [OnHScroll](../../mfc/reference/cwnd-class.md#onhscroll) и [OnVScroll](../../mfc/reference/cwnd-class.md#onvscroll) функции-члены. Но `CScrollView` добавляет следующие функции к ее `CView` возможности:  
+## <a name="remarks"></a>Remarks  
+ You can handle standard scrolling yourself in any class derived from `CView` by overriding the message-mapped [OnHScroll](../../mfc/reference/cwnd-class.md#onhscroll) and [OnVScroll](../../mfc/reference/cwnd-class.md#onvscroll) member functions. But `CScrollView` adds the following features to its `CView` capabilities:  
   
--   Он управляет размеры окна и окна просмотра и режимы сопоставления.  
+-   It manages window and viewport sizes and mapping modes.  
   
--   Он автоматически прокручивается в ответ на сообщения полосы прокрутки.  
+-   It scrolls automatically in response to scroll-bar messages.  
   
--   Он автоматически прокручивается в ответ на сообщения от клавиатуры, мыши без прокрутки или Поворачивайте колесико мыши.  
+-   It scrolls automatically in response to messages from the keyboard, a non-scrolling mouse, or the IntelliMouse wheel.  
   
- Чтобы автоматически перейти в ответ на сообщения с клавиатуры, добавьте сообщение WM_KEYDOWN и тестирования для VK_DOWN, VK_PREV и вызвать [SetScrollPos](http://msdn.microsoft.com/library/windows/desktop/bb787597).  
+ To scroll automatically in response to messages from the keyboard, add a WM_KEYDOWN message, and test for VK_DOWN, VK_PREV and call [SetScrollPos](http://msdn.microsoft.com/library/windows/desktop/bb787597).  
   
- Можно обработать прокрутка самостоятельно путем переопределения сопоставить сообщение колесика мыши [OnMouseWheel](../../mfc/reference/cwnd-class.md#onmousewheel) и [OnRegisteredMouseWheel](../../mfc/reference/cwnd-class.md#onregisteredmousewheel) функции-члены. Как для `CScrollView`, рекомендуемые действия для поддержки этих функций-членов [WM_MOUSEWHEEL](http://msdn.microsoft.com/library/windows/desktop/ms645617), сообщение поворота колесика.  
+ You can handle mouse wheel scrolling yourself by overriding the message-mapped [OnMouseWheel](../../mfc/reference/cwnd-class.md#onmousewheel) and [OnRegisteredMouseWheel](../../mfc/reference/cwnd-class.md#onregisteredmousewheel) member functions. As they are for `CScrollView`, these member functions support the recommended behaviour for [WM_MOUSEWHEEL](http://msdn.microsoft.com/library/windows/desktop/ms645617), the wheel rotation message.  
   
- Чтобы воспользоваться преимуществами автоматическую прокрутку, сформируйте класс представления из `CScrollView` вместо из `CView`. При представлении сначала создается, если требуется вычислить размер представления прокрутки, исходя из размера документа, вызов `SetScrollSizes` функции-члена из переопределение метода либо [CView::OnInitialUpdate](../../mfc/reference/cview-class.md#oninitialupdate) или [CView::OnUpdate](../../mfc/reference/cview-class.md#onupdate). (Необходимо написать собственный код для запроса размера документа. Например, в разделе [примера Scribble](../../visual-cpp-samples.md).)  
+ To take advantage of automatic scrolling, derive your view class from `CScrollView` instead of from `CView`. When the view is first created, if you want to calculate the size of the scrollable view based on the size of the document, call the `SetScrollSizes` member function from your override of either [CView::OnInitialUpdate](../../mfc/reference/cview-class.md#oninitialupdate) or [CView::OnUpdate](../../mfc/reference/cview-class.md#onupdate). (You must write your own code to query the size of the document. For an example, see the [Scribble sample](../../visual-cpp-samples.md).)  
   
- Вызов `SetScrollSizes` функция-член задает режим сопоставления, размеры общее представление прокрутки и суммы для прокрутки по горизонтали и вертикали. Все размеры указаны в логических единицах. Обычно размер логического представления вычисляется из данных, хранящихся в документе, но в некоторых случаях может потребоваться указать фиксированный размер. Примеры этих двух подходов см. [CScrollView::SetScrollSizes](#setscrollsizes).  
+ The call to the `SetScrollSizes` member function sets the view's mapping mode, the total dimensions of the scroll view, and the amounts to scroll horizontally and vertically. All sizes are in logical units. The logical size of the view is usually calculated from data stored in the document, but in some cases you may want to specify a fixed size. For examples of both approaches, see [CScrollView::SetScrollSizes](#setscrollsizes).  
   
- Укажите сумму для прокрутки по горизонтали и вертикали в логических единицах. По умолчанию, если пользователь нажимает кнопку стрелки панель прокрутки вне полосы прокрутки `CScrollView` прокручивает «страница». При нажатии стрелки прокрутки на любом конце полосу прокрутки `CScrollView` прокручивает «строка». По умолчанию страницы составляет 1/10 общий размер представления. Строка является 1/10 размер страницы. Переопределить значения по умолчанию, передав размеров в `SetScrollSizes` функции-члена. Например можно задать размер по горизонтали для определенной части ширину общий размер и размер по вертикали, чтобы высота строки текущим шрифтом.  
+ You specify the amounts to scroll horizontally and vertically in logical units. By default, if the user clicks a scroll bar shaft outside of the scroll box, `CScrollView` scrolls a "page." If the user clicks a scroll arrow at either end of a scroll bar, `CScrollView` scrolls a "line." By default, a page is 1/10 of the total size of the view; a line is 1/10 of the page size. Override these default values by passing custom sizes in the `SetScrollSizes` member function. For example, you might set the horizontal size to some fraction of the width of the total size and the vertical size to the height of a line in the current font.  
   
- Вместо прокрутки, `CScrollView` можно автоматически масштабировать представление текущего размера окна. В этом режиме представления не имеют полос прокрутки и логическое представление является растягивается или сжимается точно по размеру клиентской области окна. Чтобы использовать эти возможности масштабирования ширины, вызовите [CScrollView::SetScaleToFitSize](#setscaletofitsize). (Вызова какого-либо `SetScaleToFitSize` или `SetScrollSizes`, но не оба.)  
+ Instead of scrolling, `CScrollView` can automatically scale the view to the current window size. In this mode, the view has no scroll bars and the logical view is stretched or shrunk to exactly fit the window's client area. To use this scale-to-fit capability, call [CScrollView::SetScaleToFitSize](#setscaletofitsize). (Call either `SetScaleToFitSize` or `SetScrollSizes`, but not both.)  
   
- Прежде чем `OnDraw` вызывается функция-член класса производным представлением, `CScrollView` автоматически корректирует источником просмотра `CPaintDC` объект контекста устройства, он передает `OnDraw`.  
+ Before the `OnDraw` member function of your derived view class is called, `CScrollView` automatically adjusts the viewport origin for the `CPaintDC` device-context object that it passes to `OnDraw`.  
   
- Для настройки начала координат окна просмотра для прокрутки окна `CScrollView` переопределяет [CView::OnPrepareDC](../../mfc/reference/cview-class.md#onpreparedc). Этот параметр для автоматического `CPaintDC` контекста устройства, `CScrollView` передает `OnDraw`, но необходимо вызвать **CScrollView::OnPrepareDC** самостоятельно для контекстов устройство используется, например `CClientDC`. Можно переопределить **CScrollView::OnPrepareDC** задать пера, цвет фона и другие атрибуты рисования, но вызывают базовый класс для масштабирования.  
+ To adjust the viewport origin for the scrolling window, `CScrollView` overrides [CView::OnPrepareDC](../../mfc/reference/cview-class.md#onpreparedc). This adjustment is automatic for the `CPaintDC` device context that `CScrollView` passes to `OnDraw`, but you must call **CScrollView::OnPrepareDC** yourself for any other device contexts you use, such as a `CClientDC`. You can override **CScrollView::OnPrepareDC** to set the pen, background color, and other drawing attributes, but call the base class to do scaling.  
   
- Полосы прокрутки могут находиться в трех местах относительно представления, как показано в следующих случаях:  
+ Scroll bars can appear in three places relative to a view, as shown in the following cases:  
   
--   Стандартный стиль окна полосы прокрутки можно задать для представления с помощью **WS_HSCROLL** и **WS_VSCROLL**[стили Windows](../../mfc/reference/window-styles.md).  
+-   Standard window-style scroll bars can be set for the view using the **WS_HSCROLL** and **WS_VSCROLL**[Windows Styles](../../mfc/reference/styles-used-by-mfc.md#window-styles).  
   
--   Элементы управления полосы прокрутки можно также добавить кадр, содержащий представление, в котором пересылает случае платформа `WM_HSCROLL` и `WM_VSCROLL` сообщений от фрейма окна для активного представления.  
+-   Scroll-bar controls can also be added to the frame containing the view, in which case the framework forwards `WM_HSCROLL` and `WM_VSCROLL` messages from the frame window to the currently active view.  
   
--   Платформа также пересылает прокрутите сообщения от `CSplitterWnd` разделителя для активного разделенной области (представление). При помещении в [CSplitterWnd](../../mfc/reference/csplitterwnd-class.md) с полосами прокрутки общего `CScrollView` объекта будет использовать общие из них, а не создавать собственный.  
+-   The framework also forwards scroll messages from a `CSplitterWnd` splitter control to the currently active splitter pane (a view). When placed in a [CSplitterWnd](../../mfc/reference/csplitterwnd-class.md) with shared scroll bars, a `CScrollView` object will use the shared ones rather than creating its own.  
   
- Дополнительные сведения об использовании `CScrollView`, в разделе [архитектуры документ/представление](../../mfc/document-view-architecture.md) и [производный представление классов доступные в MFC](../../mfc/derived-view-classes-available-in-mfc.md).  
+ For more information on using `CScrollView`, see [Document/View Architecture](../../mfc/document-view-architecture.md) and [Derived View Classes Available in MFC](../../mfc/derived-view-classes-available-in-mfc.md).  
   
-## <a name="inheritance-hierarchy"></a>Иерархия наследования  
+## <a name="inheritance-hierarchy"></a>Inheritance Hierarchy  
  [CObject](../../mfc/reference/cobject-class.md)  
   
  [CCmdTarget](../../mfc/reference/ccmdtarget-class.md)  
@@ -132,11 +140,11 @@ class CScrollView : public CView
   
  `CScrollView`  
   
-## <a name="requirements"></a>Требования  
- **Заголовок:** afxwin.h  
+## <a name="requirements"></a>Requirements  
+ **Header:** afxwin.h  
   
-##  <a name="checkscrollbars"></a>CScrollView::CheckScrollBars  
- Вызовите эту функцию-член для определения горизонтальные и вертикальные полосы прокрутки представления.  
+##  <a name="checkscrollbars"></a>  CScrollView::CheckScrollBars  
+ Call this member function to determine if the scroll view has horizontal and vertical bars.  
   
 ```  
 void CheckScrollBars(
@@ -144,25 +152,25 @@ void CheckScrollBars(
     BOOL& bHasVertBar) const;  
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
  *bHasHorzBar*  
- Указывает, что приложение имеет горизонтальную полосу прокрутки.  
+ Indicates the application has a horizontal scroll bar.  
   
  *bHasVertBar*  
- Указывает, что приложение имеет вертикальную полосу прокрутки.  
+ Indicates the application has a vertical scroll bar.  
   
-##  <a name="cscrollview"></a>CScrollView::CScrollView  
- Создает объект `CScrollView`.  
+##  <a name="cscrollview"></a>  CScrollView::CScrollView  
+ Constructs a `CScrollView` object.  
   
 ```  
 CScrollView();
 ```  
   
-### <a name="remarks"></a>Примечания  
- Следует вызвать `SetScrollSizes` или `SetScaleToFitSize` перед прокрутки пригодна для представления.  
+### <a name="remarks"></a>Remarks  
+ You must call either `SetScrollSizes` or `SetScaleToFitSize` before the scroll view is usable.  
   
-##  <a name="filloutsiderect"></a>CScrollView::FillOutsideRect  
- Вызов `FillOutsideRect` для заполнения области представления, которое отображается вне области прокрутки.  
+##  <a name="filloutsiderect"></a>  CScrollView::FillOutsideRect  
+ Call `FillOutsideRect` to fill the area of the view that appears outside of the scrolling area.  
   
 ```  
 void FillOutsideRect(
@@ -170,36 +178,36 @@ void FillOutsideRect(
     CBrush* pBrush);
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
  `pDC`  
- Контекст устройства, в котором будет выполняться заполнение.  
+ Device context in which the filling is to be done.  
   
  `pBrush`  
- Кисть, с которым должен быть заполнен области.  
+ Brush with which the area is to be filled.  
   
-### <a name="remarks"></a>Примечания  
- Используйте `FillOutsideRect` в представление прокрутки `OnEraseBkgnd` функция обработчика для предотвращения чрезмерного фонового обновления.  
+### <a name="remarks"></a>Remarks  
+ Use `FillOutsideRect` in your scroll view's `OnEraseBkgnd` handler function to prevent excessive background repainting.  
   
-### <a name="example"></a>Пример  
- [!code-cpp[NVC_MFCDocView&#164;](../../mfc/codesnippet/cpp/cscrollview-class_1.cpp)]  
+### <a name="example"></a>Example  
+ [!code-cpp[NVC_MFCDocView#164](../../mfc/codesnippet/cpp/cscrollview-class_1.cpp)]  
   
-##  <a name="getdevicescrollposition"></a>CScrollView::GetDeviceScrollPosition  
- Вызов `GetDeviceScrollPosition` при необходимости текущей горизонтальной и вертикальной позиции прокрутки полей в полосы прокрутки.  
+##  <a name="getdevicescrollposition"></a>  CScrollView::GetDeviceScrollPosition  
+ Call `GetDeviceScrollPosition` when you need the current horizontal and vertical positions of the scroll boxes in the scroll bars.  
   
 ```  
 CPoint GetDeviceScrollPosition() const;  
 ```  
   
-### <a name="return-value"></a>Возвращаемое значение  
- Горизонтальные и вертикальные позиций (в единицах устройства) поля прокрутки `CPoint` объекта.  
+### <a name="return-value"></a>Return Value  
+ The horizontal and vertical positions (in device units) of the scroll boxes as a `CPoint` object.  
   
-### <a name="remarks"></a>Примечания  
- Место в документе, в который прокручивается в левый верхний угол представления соответствует этой парой координат. Это полезно для смещения позиций устройство мыши для представления с прокруткой устройства позиций.  
+### <a name="remarks"></a>Remarks  
+ This coordinate pair corresponds to the location in the document to which the upper-left corner of the view has been scrolled. This is useful for offsetting mouse-device positions to scroll-view device positions.  
   
- `GetDeviceScrollPosition`Возвращает значения в единицах устройства. Логические устройства, используйте `GetScrollPosition` вместо.  
+ `GetDeviceScrollPosition` returns values in device units. If you want logical units, use `GetScrollPosition` instead.  
   
-##  <a name="getdevicescrollsizes"></a>CScrollView::GetDeviceScrollSizes  
- `GetDeviceScrollSizes`Возвращает текущий режим сопоставления, общий размер и размеры страниц и прокрутки представления.  
+##  <a name="getdevicescrollsizes"></a>  CScrollView::GetDeviceScrollSizes  
+ `GetDeviceScrollSizes` gets the current mapping mode, the total size, and the line and page sizes of the scrollable view.  
   
 ```  
 void GetDeviceScrollSizes(
@@ -209,103 +217,103 @@ void GetDeviceScrollSizes(
     SIZE& sizeLine) const;  
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
  `nMapMode`  
- Возвращает текущий режим сопоставления для этого представления. Список возможных значений см. в разделе `SetScrollSizes`.  
+ Returns the current mapping mode for this view. For a list of possible values, see `SetScrollSizes`.  
   
  `sizeTotal`  
- Возвращает текущий размер общее представление прокрутки в единицы устройства.  
+ Returns the current total size of the scroll view in device units.  
   
  `sizePage`  
- Возвращает текущий суммы горизонтальной и вертикальной прокрутки в каждом направлении, в ответ на мыши щелкните стрелки полосы прокрутки. **Cx** член содержит сумму горизонтальной. **Cy** член содержит сумму вертикальной.  
+ Returns the current horizontal and vertical amounts to scroll in each direction in response to a mouse click in a scroll-bar shaft. The **cx** member contains the horizontal amount. The **cy** member contains the vertical amount.  
   
  `sizeLine`  
- Возвращает текущий суммы горизонтальной и вертикальной прокрутки в каждом направлении, в ответ на мыши щелкните стрелки прокрутки. **Cx** член содержит сумму горизонтальной. **Cy** член содержит сумму вертикальной.  
+ Returns the current horizontal and vertical amounts to scroll in each direction in response to a mouse click in a scroll arrow. The **cx** member contains the horizontal amount. The **cy** member contains the vertical amount.  
   
-### <a name="remarks"></a>Примечания  
- Размеры указаны в единицы устройства. Эта функция-член вызывается редко.  
+### <a name="remarks"></a>Remarks  
+ Sizes are in device units. This member function is rarely called.  
   
-##  <a name="getscrollposition"></a>CScrollView::GetScrollPosition  
- Вызов `GetScrollPosition` при необходимости текущей горизонтальной и вертикальной позиции прокрутки полей в полосы прокрутки.  
+##  <a name="getscrollposition"></a>  CScrollView::GetScrollPosition  
+ Call `GetScrollPosition` when you need the current horizontal and vertical positions of the scroll boxes in the scroll bars.  
   
 ```  
 CPoint GetScrollPosition() const;  
 ```  
   
-### <a name="return-value"></a>Возвращаемое значение  
- Горизонтальное и вертикальное положение (в логических единицах) поля прокрутки `CPoint` объекта.  
+### <a name="return-value"></a>Return Value  
+ The horizontal and vertical positions (in logical units) of the scroll boxes as a `CPoint` object.  
   
-### <a name="remarks"></a>Примечания  
- Место в документе, в который прокручивается в левый верхний угол представления соответствует этой парой координат.  
+### <a name="remarks"></a>Remarks  
+ This coordinate pair corresponds to the location in the document to which the upper-left corner of the view has been scrolled.  
   
- `GetScrollPosition`Возвращает значения в логических единицах. Единицы устройства, используйте `GetDeviceScrollPosition` вместо.  
+ `GetScrollPosition` returns values in logical units. If you want device units, use `GetDeviceScrollPosition` instead.  
   
-##  <a name="gettotalsize"></a>CScrollView::GetTotalSize  
- Вызов `GetTotalSize` для получения текущего горизонтального и вертикального размеров представление прокрутки.  
+##  <a name="gettotalsize"></a>  CScrollView::GetTotalSize  
+ Call `GetTotalSize` to retrieve the current horizontal and vertical sizes of the scroll view.  
   
 ```  
 CSize GetTotalSize() const;  
 ```  
   
-### <a name="return-value"></a>Возвращаемое значение  
- Общий размер представление прокрутки в логических единицах. Размер по горизонтали находится в **cx** членом `CSize` возвращаемое значение. Вертикальный размер становится в **cy** член.  
+### <a name="return-value"></a>Return Value  
+ The total size of the scroll view in logical units. The horizontal size is in the **cx** member of the `CSize` return value. The vertical size is in the **cy** member.  
   
-##  <a name="resizeparenttofit"></a>CScrollView::ResizeParentToFit  
- Вызов `ResizeParentToFit` позволяет размер представления определяют размер его рамки окна.  
+##  <a name="resizeparenttofit"></a>  CScrollView::ResizeParentToFit  
+ Call `ResizeParentToFit` to let the size of your view dictate the size of its frame window.  
   
 ```  
 void ResizeParentToFit(BOOL bShrinkOnly = TRUE);
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
  *bShrinkOnly*  
- Тип изменения размера для выполнения. Значение по умолчанию **TRUE**, сжимает фрейме окна при необходимости. Для представления больших или небольших кадров windows по-прежнему появятся полосы прокрутки. Значение **FALSE** в представлении всегда точно размера окна фрейма. Это может быть несколько опасно, так как окно области может получить помещается внутри нескольких фреймового окна многодокументного интерфейса (MDI) или экрана.  
+ The kind of resizing to perform. The default value, **TRUE**, shrinks the frame window if appropriate. Scroll bars will still appear for large views or small frame windows. A value of **FALSE** causes the view always to resize the frame window exactly. This can be somewhat dangerous since the frame window could get too big to fit inside the multiple document interface (MDI) frame window or the screen.  
   
-### <a name="remarks"></a>Примечания  
- Это рекомендуется только для представлений в кадр дочерние MDI-окна. Используйте `ResizeParentToFit` в `OnInitialUpdate` функция обработчика производный `CScrollView` класса. Пример эта функция-член, в разделе [CScrollView::SetScrollSizes](#setscrollsizes).  
+### <a name="remarks"></a>Remarks  
+ This is recommended only for views in MDI child frame windows. Use `ResizeParentToFit` in the `OnInitialUpdate` handler function of your derived `CScrollView` class. For an example of this member function, see [CScrollView::SetScrollSizes](#setscrollsizes).  
   
- `ResizeParentToFit`предполагается, что размер окна задан. Если размер окна представление не было задано при `ResizeParentToFit` является именем, вы получите утверждения. Чтобы убедиться, что этого не происходит, сделать следующий вызов перед вызовом метода `ResizeParentToFit`:  
+ `ResizeParentToFit` assumes that the size of the view window has been set. If the view window size has not been set when `ResizeParentToFit` is called, you will get an assertion. To ensure that this does not happen, make the following call before calling `ResizeParentToFit`:  
   
- [!code-cpp[NVC_MFCDocView&#165;](../../mfc/codesnippet/cpp/cscrollview-class_2.cpp)]  
+ [!code-cpp[NVC_MFCDocView#165](../../mfc/codesnippet/cpp/cscrollview-class_2.cpp)]  
   
-##  <a name="scrolltoposition"></a>CScrollView::ScrollToPosition  
- Вызов `ScrollToPosition` для прокрутки на определенный момент в представлении.  
+##  <a name="scrolltoposition"></a>  CScrollView::ScrollToPosition  
+ Call `ScrollToPosition` to scroll to a given point in the view.  
   
 ```  
 void ScrollToPosition(POINT pt);
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
  `pt`  
- Точка для прокрутки, в логических единицах. **x** член должен иметь положительное значение (больше или равно 0, до общего размера представления). То же самое верно для **y** член в режиме сопоставления `MM_TEXT`. **y** член имеет отрицательное значение в сопоставление режимов, отличных от `MM_TEXT`.  
+ The point to scroll to, in logical units. The **x** member must be a positive value (greater than or equal to 0, up to the total size of the view). The same is true for the **y** member when the mapping mode is `MM_TEXT`. The **y** member is negative in mapping modes other than `MM_TEXT`.  
   
-### <a name="remarks"></a>Примечания  
- Представление будет прокручиваться, чтобы эта точка находится в верхнем левом углу окна. Эта функция-член не должен вызываться, если представление масштабируется по размерам.  
+### <a name="remarks"></a>Remarks  
+ The view will be scrolled so that this point is at the upper-left corner of the window. This member function must not be called if the view is scaled to fit.  
   
-##  <a name="setscaletofitsize"></a>CScrollView::SetScaleToFitSize  
- Вызовите `SetScaleToFitSize` , если необходимо автоматически масштабировать размер окна просмотра текущего размера окна.  
+##  <a name="setscaletofitsize"></a>  CScrollView::SetScaleToFitSize  
+ Call `SetScaleToFitSize` when you want to scale the viewport size to the current window size automatically.  
   
 ```  
 void SetScaleToFitSize(SIZE sizeTotal);
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
  `sizeTotal`  
- Горизонтальные и вертикальные размеры, к которым это масштабирование. Размер представления с прокруткой измеряется в логических единицах. Размер по горизонтали, содержащихся в **cx** член. Размер по вертикали, содержащихся в **cy** член. Оба **cx** и **cy** должно быть больше или равно 0.  
+ The horizontal and vertical sizes to which the view is to be scaled. The scroll view's size is measured in logical units. The horizontal size is contained in the **cx** member. The vertical size is contained in the **cy** member. Both **cx** and **cy** must be greater than or equal to 0.  
   
-### <a name="remarks"></a>Примечания  
- С помощью полосы прокрутки часть логическое представление может отображаться в любой момент. Но с возможностью масштабирования ширины представления не имеют полос прокрутки и логическое представление является растягивается или сжимается точно по размеру клиентской области окна. При изменении размера окна представления рисует свои данные в новый масштаб, в зависимости от размера окна.  
+### <a name="remarks"></a>Remarks  
+ With scroll bars, only a portion of the logical view may be visible at any time. But with the scale-to-fit capability, the view has no scroll bars and the logical view is stretched or shrunk to exactly fit the window's client area. When the window is resized, the view draws its data at a new scale based on the size of the window.  
   
- Обычно поместим вызов `SetScaleToFitSize` в переопределении представления `OnInitialUpdate` функции-члена. Если не требуется автоматическое масштабирование, вызовите `SetScrollSizes` вместо этого функция-член.  
+ You'll typically place the call to `SetScaleToFitSize` in your override of the view's `OnInitialUpdate` member function. If you do not want automatic scaling, call the `SetScrollSizes` member function instead.  
   
- `SetScaleToFitSize`можно использовать для реализации операции «Масштаб по размеру». Используйте `SetScrollSizes` для повторной инициализации прокрутки.  
+ `SetScaleToFitSize` can be used to implement a "Zoom to Fit" operation. Use `SetScrollSizes` to reinitialize scrolling.  
   
- `SetScaleToFitSize`предполагается, что размер окна задан. Если размер окна представление не было задано при `SetScaleToFitSize` является именем, вы получите утверждения. Чтобы убедиться, что этого не происходит, сделать следующий вызов перед вызовом метода `SetScaleToFitSize`:  
+ `SetScaleToFitSize` assumes that the size of the view window has been set. If the view window size has not been set when `SetScaleToFitSize` is called, you will get an assertion. To ensure that this does not happen, make the following call before calling `SetScaleToFitSize`:  
   
- [!code-cpp[NVC_MFCDocView&#165;](../../mfc/codesnippet/cpp/cscrollview-class_2.cpp)]  
+ [!code-cpp[NVC_MFCDocView#165](../../mfc/codesnippet/cpp/cscrollview-class_2.cpp)]  
   
-##  <a name="setscrollsizes"></a>CScrollView::SetScrollSizes  
- Вызов `SetScrollSizes` при представлении скоро будет обновляться.  
+##  <a name="setscrollsizes"></a>  CScrollView::SetScrollSizes  
+ Call `SetScrollSizes` when the view is about to be updated.  
   
 ```  
 void SetScrollSizes(
@@ -315,52 +323,52 @@ void SetScrollSizes(
     const SIZE& sizeLine = sizeDefault);
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
  `nMapMode`  
- Режим сопоставления, чтобы задать для этого представления. Возможные допустимые значения приведены ниже.  
+ The mapping mode to set for this view. Possible values include:  
   
-|Режим сопоставления|Логическое устройство|Расширяет оси y —...|  
+|Mapping Mode|Logical Unit|Positive y-axis Extends...|  
 |------------------|------------------|---------------------------------|  
-|`MM_TEXT`|1 пиксель|Вниз|  
-|`MM_HIMETRIC`|0,01 мм|Вверх|  
-|`MM_TWIPS`|1-1440 в|Вверх|  
-|`MM_HIENGLISH`|0,001 дюйма|Вверх|  
-|`MM_LOMETRIC`|0,1 мм|Вверх|  
-|`MM_LOENGLISH`|0,01 дюйма|Вверх|  
+|`MM_TEXT`|1 pixel|Downward|  
+|`MM_HIMETRIC`|0.01 mm|Upward|  
+|`MM_TWIPS`|1/1440 in|Upward|  
+|`MM_HIENGLISH`|0.001 in|Upward|  
+|`MM_LOMETRIC`|0.1 mm|Upward|  
+|`MM_LOENGLISH`|0.01 in|Upward|  
   
- Все эти режимы определяются Windows. Два режима сопоставления стандартных `MM_ISOTROPIC` и `MM_ANISOTROPIC`, не используются для `CScrollView`. Библиотека классов предоставляет `SetScaleToFitSize` функции-члена для масштабирования до размера окна представления. Три столбца в таблице выше описывает ориентацию координат.  
+ All of these modes are defined by Windows. Two standard mapping modes, `MM_ISOTROPIC` and `MM_ANISOTROPIC`, are not used for `CScrollView`. The class library provides the `SetScaleToFitSize` member function for scaling the view to window size. Column three in the table above describes the coordinate orientation.  
   
  `sizeTotal`  
- Общий размер представления с прокруткой. **Cx** член содержит горизонтальной экстент. **Cy** член содержит верхнюю границу. Размеры указаны в логических единицах. Оба **cx** и **cy** должно быть больше или равно 0.  
+ The total size of the scroll view. The **cx** member contains the horizontal extent. The **cy** member contains the vertical extent. Sizes are in logical units. Both **cx** and **cy** must be greater than or equal to 0.  
   
  `sizePage`  
- Суммы горизонтальной и вертикальной прокрутки в каждом направлении, в ответ на мыши щелкните стрелки полосы прокрутки. **Cx** член содержит сумму горизонтальной. **Cy** член содержит сумму вертикальной.  
+ The horizontal and vertical amounts to scroll in each direction in response to a mouse click in a scroll-bar shaft. The **cx** member contains the horizontal amount. The **cy** member contains the vertical amount.  
   
  `sizeLine`  
- Суммы горизонтальной и вертикальной прокрутки в каждом направлении, в ответ на мыши щелкните стрелки прокрутки. **Cx** член содержит сумму горизонтальной. **Cy** член содержит сумму вертикальной.  
+ The horizontal and vertical amounts to scroll in each direction in response to a mouse click in a scroll arrow. The **cx** member contains the horizontal amount. The **cy** member contains the vertical amount.  
   
-### <a name="remarks"></a>Примечания  
- Вызовите его в переопределении `OnUpdate` функции-члена для настройки прокрутки характеристики, когда, например, изначально отображается документа или изменении размера.  
+### <a name="remarks"></a>Remarks  
+ Call it in your override of the `OnUpdate` member function to adjust scrolling characteristics when, for example, the document is initially displayed or when it changes size.  
   
- Обычно будет получать сведения о размере из представления связанных документов, вызвав функцию-член документа, может быть вызван `GetMyDocSize`, поставляемого с документа производного класса. В следующем коде показано этот подход:  
+ You will typically obtain size information from the view's associated document by calling a document member function, perhaps called `GetMyDocSize`, that you supply with your derived document class. The following code shows this approach:  
   
- [!code-cpp[NVC_MFCDocView&#166;](../../mfc/codesnippet/cpp/cscrollview-class_3.cpp)]  
+ [!code-cpp[NVC_MFCDocView#166](../../mfc/codesnippet/cpp/cscrollview-class_3.cpp)]  
   
- Кроме того иногда может потребоваться установить фиксированный размер, как показано в следующем коде:  
+ Alternatively, you might sometimes need to set a fixed size, as in the following code:  
   
- [!code-cpp[NVC_MFCDocView&167;](../../mfc/codesnippet/cpp/cscrollview-class_4.cpp)]  
+ [!code-cpp[NVC_MFCDocView#167](../../mfc/codesnippet/cpp/cscrollview-class_4.cpp)]  
   
- Необходимо установить режим сопоставления для всех режимов сопоставления Windows за исключением `MM_ISOTROPIC` или `MM_ANISOTROPIC`. Если вы хотите использовать режим неограниченного сопоставления, вызвать `SetScaleToFitSize` вместо функции-члена `SetScrollSizes`.  
+ You must set the mapping mode to any of the Windows mapping modes except `MM_ISOTROPIC` or `MM_ANISOTROPIC`. If you want to use an unconstrained mapping mode, call the `SetScaleToFitSize` member function instead of `SetScrollSizes`.  
   
-### <a name="example"></a>Пример  
- [!code-cpp[NVC_MFCDocView&#168;](../../mfc/codesnippet/cpp/cscrollview-class_5.cpp)]  
+### <a name="example"></a>Example  
+ [!code-cpp[NVC_MFCDocView#168](../../mfc/codesnippet/cpp/cscrollview-class_5.cpp)]  
   
- [!code-cpp[NVC_MFCDocView&#169;](../../mfc/codesnippet/cpp/cscrollview-class_6.cpp)]  
+ [!code-cpp[NVC_MFCDocView#169](../../mfc/codesnippet/cpp/cscrollview-class_6.cpp)]  
   
-## <a name="see-also"></a>См. также  
- [Пример MFC DIBLOOK](../../visual-cpp-samples.md)   
- [CView-класс](../../mfc/reference/cview-class.md)   
- [Диаграмма иерархии](../../mfc/hierarchy-chart.md)   
- [CView-класс](../../mfc/reference/cview-class.md)   
- [Класс CSplitterWnd](../../mfc/reference/csplitterwnd-class.md)
+## <a name="see-also"></a>See Also  
+ [MFC Sample DIBLOOK](../../visual-cpp-samples.md)   
+ [CView Class](../../mfc/reference/cview-class.md)   
+ [Hierarchy Chart](../../mfc/hierarchy-chart.md)   
+ [CView Class](../../mfc/reference/cview-class.md)   
+ [CSplitterWnd Class](../../mfc/reference/csplitterwnd-class.md)
 

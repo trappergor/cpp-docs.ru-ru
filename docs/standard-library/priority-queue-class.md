@@ -1,5 +1,5 @@
 ---
-title: "Класс priority_queue | Документы Майкрософт"
+title: priority_queue Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -9,7 +9,6 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
-- priority_queue
 - queue/std::priority_queue::container_type
 - queue/std::priority_queue::size_type
 - queue/std::priority_queue::value_type
@@ -21,7 +20,14 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- priority_queue class
+- std::priority_queue [C++], container_type
+- std::priority_queue [C++], size_type
+- std::priority_queue [C++], value_type
+- std::priority_queue [C++], empty
+- std::priority_queue [C++], pop
+- std::priority_queue [C++], push
+- std::priority_queue [C++], size
+- std::priority_queue [C++], top
 ms.assetid: 69fca9cc-a449-4be4-97b7-02ca5db9cbb2
 caps.latest.revision: 25
 author: corob-msft
@@ -41,105 +47,105 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
-ms.openlocfilehash: 31191f5109242dc239ac0237a2eab6ff459fe41b
+ms.translationtype: MT
+ms.sourcegitcommit: 5d026c375025b169d5db8445cbb52c0c917b2d8d
+ms.openlocfilehash: b9c684ff7931a22a5164f32c053d5f551fc0dafc
 ms.contentlocale: ru-ru
-ms.lasthandoff: 04/29/2017
+ms.lasthandoff: 09/09/2017
 
 ---
-# <a name="priorityqueue-class"></a>Класс priority_queue
-Класс-шаблон адаптера контейнера, который предоставляет ограничение функциональности, ограничивая доступ к верхнему элементу некоторого базового типа контейнера, который всегда является самым большим или имеет высший приоритет. Новые элементы можно добавлять в priority_queue, а верхний элемент priority_queue можно просмотреть или удалить.  
+# <a name="priorityqueue-class"></a>priority_queue Class
+A template container adaptor class that provides a restriction of functionality limiting access to the top element of some underlying container type, which is always the largest or of the highest priority. New elements can be added to the priority_queue and the top element of the priority_queue can be inspected or removed.  
   
-## <a name="syntax"></a>Синтаксис  
+## <a name="syntax"></a>Syntax  
   
 ```  
 template <class Type, class Container= vector <Type>, class Compare= less <typename Container ::value_type>>  
 class priority_queue  
 ```  
   
-#### <a name="parameters"></a>Параметры  
- *Тип*  
- Тип данных элемента для сохранения в priority_queue.  
+#### <a name="parameters"></a>Parameters  
+ *Type*  
+ The element data type to be stored in the priority_queue.  
   
  `Container`  
- Тип базового контейнера, используемый для реализации priority_queue.  
+ The type of the underlying container used to implement the priority_queue.  
   
  *Compare*  
- Тип, предоставляющий объект-функцию, который может сравнить два значения элементов как ключи сортировки, чтобы определить их относительный порядок в priority_queue. Этот аргумент — необязательный, в качестве значения по умолчанию используется двоичный предикат **less***\<***typename** *Container***::value_type***>*.  
+ The type that provides a function object that can compare two element values as sort keys to determine their relative order in the priority_queue. This argument is optional and the binary predicate **less***\<***typename** *Container***::value_type***>* is the default value.  
   
-## <a name="remarks"></a>Примечания  
- Элементы класса **Type**, заданные в первом параметре-шаблоне объекта очереди, являются синонимами [value_type](#value_type) и должны соответствовать типу элемента в классе базового контейнера **Container**, заданного вторым параметром-шаблоном. Класс **Type** должен быть назначаемым, чтобы можно было копировать объекты этого типа и присваивать значения переменным этого типа.  
+## <a name="remarks"></a>Remarks  
+ The elements of class **Type** stipulated in the first template parameter of a queue object are synonymous with [value_type](#value_type) and must match the type of element in the underlying container class **Container** stipulated by the second template parameter. The **Type** must be assignable, so that it is possible to copy objects of that type and to assign values to variables of that type.  
   
- Priority_queue упорядочивает последовательность, которой она управляет, путем обращения к сохраненному объекту-функции класса **Traits**. В целом, упорядочиваемые элементы должны лишь подлежать сравнению "меньше чем" для установления такого порядка, чтобы, имея любые два элемента, можно было определить, что они равны (ни один не меньше другого) или что один меньше другого. Это приводит к упорядочению неравнозначных элементов. С более технической точки зрения, функция сравнения является бинарным предикатом, который вызывает строгого слабое упорядочение в стандартном математически смысле.  
+ The priority_queue orders the sequence it controls by calling a stored function object of class **Traits**. In general, the elements need be merely less than comparable to establish this order: so that, given any two elements, it may be determined either that they are equivalent (in the sense that neither is less than the other) or that one is less than the other. This results in an ordering between the nonequivalent elements. On a more technical note, the comparison function is a binary predicate that induces a strict weak ordering in the standard mathematical sense.  
   
- Подходящие базовые классы контейнеров для priority_queue включают [класс deque](../standard-library/deque-class.md) и [класс vector](../standard-library/vector-class.md) (класс по умолчанию) или любой другой контейнер последовательности, который поддерживает операции `front`, `push_back` и `pop_back` и итератор произвольного доступа. Класс базового контейнера инкапсулирован в адаптер контейнера, который предоставляет только ограниченный набор функций-членов контейнера последовательностей в виде открытого интерфейса.  
+ Suitable underlying container classes for priority_queue include [deque Class](../standard-library/deque-class.md) and the default [vector Class](../standard-library/vector-class.md) or any other sequence container that supports the operations of `front`, `push_back`, and `pop_back` and a random-access iterator. The underlying container class is encapsulated within the container adaptor, which exposes only the limited set of the sequence container member functions as a public interface.  
   
- Добавление элементов в `priority_queue` и удаление элементов из него имеют логарифмическую сложность. Доступ к элементам в `priority_queue` имеет постоянную сложность.  
+ Adding elements to and removing elements from a `priority_queue` both have logarithmic complexity. Accessing elements in a `priority_queue` has constant complexity.  
   
- В стандартной библиотеке C++ определено три типа адаптеров контейнера: стек (stack), очередь (queue) и очередь с приоритетом (priority_queue). Каждый ограничивает функциональность некоторого базового класса контейнеров для обеспечения точно управляемого интерфейса к стандартной структуре данных.  
+ There are three types of container adaptors defined by the C++ Standard Library: stack, queue, and priority_queue. Each restricts the functionality of some underlying container class to provide a precisely controlled interface to a standard data structure.  
   
--   [Класс стека](../standard-library/stack-class.md) поддерживает структуру данных "последним поступил — первым обслужен" (LIFO). Хороший аналог такого подхода — стопка тарелок. Элементы (тарелки) можно вставлять, проверять или удалять только из верхней части стека, которая является последним элементом в конце базового контейнера. Ограничение на доступ только к верхнему элементу является причиной использования класса стека.  
+-   The [stack Class](../standard-library/stack-class.md) supports a last-in, first-out (LIFO) data structure. A good analogue to keep in mind would be a stack of plates. Elements (plates) may be inserted, inspected, or removed only from the top of the stack, which is the last element at the end of the base container. The restriction to accessing only the top element is the reason for using the stack class.  
   
--   [Класс queue](../standard-library/queue-class.md) поддерживает структуру данных "первым поступил — первым обслужен" (FIFO). Хороший аналог такого подхода — очередь из людей к банковскому служащему. Элементы (люди) можно добавлять в конец очереди и удалять из начала очереди. Проверять можно как начало, так и конец очереди. Ограничение на доступ только к переднему и заднему элементам в таком подходе является причиной использования класса очереди.  
+-   The [queue Class](../standard-library/queue-class.md) supports a first-in, first-out (FIFO) data structure. A good analogue to keep in mind would be people lining up for a bank teller. Elements (people) may be added to the back of the line and are removed from the front of the line. Both the front and the back of a line may be inspected. The restriction to accessing only the front and back elements in this way is the reason for using the queue class.  
   
--   Класс priority_queue упорядочивает элементы, чтобы наибольший элемент всегда находился сверху. Он поддерживает вставку элемента, а также проверку и удаление верхнего элемента. Хороший аналог такого подхода — очередь из людей, упорядоченная по возрасту, росту или любому другому критерию.  
+-   The priority_queue class orders its elements so that the largest element is always at the top position. It supports insertion of an element and the inspection and removal of the top element. A good analogue to keep in mind would be people lining up where they are arranged by age, height, or some other criterion.  
   
-### <a name="constructors"></a>Конструкторы  
+### <a name="constructors"></a>Constructors  
   
 |||  
 |-|-|  
-|[priority_queue](#priority_queue)|Создает `priority_queue`, который является пустым или копией диапазона объекта базового контейнера или другого `priority_queue`.|  
+|[priority_queue](#priority_queue)|Constructs a `priority_queue` that is empty or that is a copy of a range of a base container object or of other `priority_queue`.|  
   
 ### <a name="typedefs"></a>Typedefs  
   
 |||  
 |-|-|  
-|[container_type](#container_type)|Тип, предоставляющий базовый контейнер для принятия `priority_queue`.|  
-|[size_type](#size_type)|Целочисленный Typedef без знака, который может представлять число элементов в `priority_queue`.|  
-|[value_type](#value_type)|Тип, представляющий тип объекта, который хранится в виде элемента в `priority_queue`.|  
+|[container_type](#container_type)|A type that provides the base container to be adapted by a `priority_queue`.|  
+|[size_type](#size_type)|An unsigned integer type that can represent the number of elements in a `priority_queue`.|  
+|[value_type](#value_type)|A type that represents the type of object stored as an element in a `priority_queue`.|  
   
-### <a name="member-functions"></a>Функции-члены  
+### <a name="member-functions"></a>Member Functions  
   
 |||  
 |-|-|  
-|[empty](#empty)|Проверяет, является ли `priority_queue` пустым.|  
-|[pop](#pop)|Удаляет самый большой элемент `priority_queue` с верхней позиции.|  
-|[push](#push)|Добавляет элемент в очередь с приоритетом на основе приоритета элемента из оператора operator<.|  
-|[size](#size)|Возвращает количество элементов в контейнере `priority_queue`.|  
-|[top](#top)|Возвращает константную ссылку на наибольший элемент в верхней части `priority_queue`.|  
+|[empty](#empty)|Tests if the `priority_queue` is empty.|  
+|[pop](#pop)|Removes the largest element of the `priority_queue` from the top position.|  
+|[push](#push)|Adds an element to the priority queue based on the priority of the element from operator<.|  
+|[size](#size)|Returns the number of elements in the `priority_queue`.|  
+|[top](#top)|Returns a const reference to the largest element at the top of the `priority_queue`.|  
   
-## <a name="requirements"></a>Требования  
- **Заголовок:** \<queue>  
+## <a name="requirements"></a>Requirements  
+ **Header:** \<queue>  
   
- **Пространство имен:** std  
+ **Namespace:** std  
   
 ##  <a name="container_type"></a>  priority_queue::container_type  
- Тип, предоставляющий базовый контейнер для изменения.  
+ A type that provides the base container to be adapted.  
   
 ```  
 typedef Container container_type;  
 ```  
   
-### <a name="remarks"></a>Примечания  
- Этот тип является синонимом для параметра шаблона `Container`. Класс контейнера последовательности `deque` и класс по умолчанию `vector` из стандартной библиотеки С++ соответствуют требованиям для использования в качестве базового контейнера для объекта priority_queue. Также можно использовать пользовательские типы, удовлетворяющие требованиям.  
+### <a name="remarks"></a>Remarks  
+ The type is a synonym for the template parameter `Container`. The C++ Standard Library sequence container class `deque` and the default class `vector` meet the requirements to be used as the base container for a priority_queue object. User-defined types satisfying the requirements may also be used.  
   
- Дополнительные сведения о `Container` см. в разделе "Примечания" документации к [Класс priority_queue](../standard-library/priority-queue-class.md).  
+ For more information on `Container`, see the Remarks section of the [priority_queue Class](../standard-library/priority-queue-class.md) topic.  
   
-### <a name="example"></a>Пример  
-  См. пример для [priority_queue](#priority_queue) с примером объявления и использования `container_type`.  
+### <a name="example"></a>Example  
+  See the example for [priority_queue](#priority_queue) for an example of how to declare and use `container_type`.  
   
 ##  <a name="empty"></a>  priority_queue::empty  
- Проверяет, что priority_queue пуста.  
+ Tests if a priority_queue is empty.  
   
 ```  
 bool empty() const;
 ```  
   
-### <a name="return-value"></a>Возвращаемое значение  
- **true**, если очередь пуста; в противном случае **false**.  
+### <a name="return-value"></a>Return Value  
+ **true** if the priority_queue is empty; **false** if the priority_queue is nonempty.  
   
-### <a name="example"></a>Пример  
+### <a name="example"></a>Example  
   
 ```cpp  
 // pqueue_empty.cpp  
@@ -174,16 +180,16 @@ The priority_queue s2 is empty.
 ```  
   
 ##  <a name="pop"></a>  priority_queue::pop  
- Удаляет самый большой элемент в priority_queue с верхней позиции.  
+ Removes the largest element of the priority_queue from the top position.  
   
 ```  
 void pop();
 ```  
   
-### <a name="remarks"></a>Примечания  
- Для применения функции-члена класс priority_queue не должен быть пустым. Вверху priority_queue всегда находится самый большой элемент в контейнере.  
+### <a name="remarks"></a>Remarks  
+ The priority_queue must be nonempty to apply the member function. The top of the priority_queue is always occupied by the largest element in the container.  
   
-### <a name="example"></a>Пример  
+### <a name="example"></a>Example  
   
 ```cpp  
 // pqueue_pop.cpp  
@@ -228,7 +234,7 @@ After a pop, the element at the top of the priority_queue is 20.
 ```  
   
 ##  <a name="priority_queue"></a>  priority_queue::priority_queue  
- Создает priority_queue, которая пуста или является копией диапазона объекта базового контейнера или другой priority_queue.  
+ Constructs a priority_queue that is empty or that is a copy of a range of a base container object or of another priority_queue.  
   
 ```  
 priority_queue();
@@ -249,30 +255,30 @@ template <class InputIterator>
 priority_queue(InputIterator first, InputIterator last, const Traits&_comp, const container_type& _Cont);
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
  *_ comp*  
- Функция сравнения типа **constTraits** для упорядочивания элементов в priority_queue, по умолчанию используется функция сравнения базового контейнера.  
+ The comparison function of type **constTraits** used to order the elements in the priority_queue, which defaults to compare function of the base container.  
   
  `_Cont`  
- Базовый контейнер, из которого будет копироваться создаваемая priority_queue.  
+ The base container of which the constructed priority_queue is to be a copy.  
   
  `right`  
- Priority_queue, для которой создаваемый набор станет копией.  
+ The priority_queue of which the constructed set is to be a copy.  
   
  `first`  
- Положение первого элемента в диапазоне копируемых элементов.  
+ The position of the first element in the range of elements to be copied.  
   
  `last`  
- Положение первого элемента после диапазона копируемых элементов.  
+ The position of the first element beyond the range of elements to be copied.  
   
-### <a name="remarks"></a>Примечания  
- Каждый из первых трех конструкторов определяет пустую исходную priority_queue; второй также указывает тип функции сравнения (`comp`) для использования при установлении порядка элементов, а третий явно указывает `container_type` (`_Cont`) для использования. Ключевое слово **explicit** подавляет некоторые виды автоматического преобразования типов.  
+### <a name="remarks"></a>Remarks  
+ Each of the first three constructors specifies an empty initial priority_queue, the second also specifying the type of comparison function ( `comp`) to be used in establishing the order of the elements and the third explicitly specifying the `container_type` ( `_Cont`) to be used. The keyword **explicit** suppresses certain kinds of automatic type conversion.  
   
- Четвертый конструктор задает копию priority_queue `right`.  
+ The fourth constructor specifies a copy of the priority_queue `right`.  
   
- Последние три конструктора копируют диапазон [* первой, последней *) некоторые контейнера и значения можно использовать для инициализации priority_queue с увеличением explicitness при указании типа функции сравнения класса **признаки** и `container_type`.  
+ The last three constructors copy the range [ * first,  last*) of some container and use the values to initialize a priority_queue with increasing explicitness in specifying the type of comparison function of class **Traits** and `container_type`.  
   
-### <a name="example"></a>Пример  
+### <a name="example"></a>Example  
   
 ```cpp  
 // pqueue_ctor.cpp  
@@ -384,20 +390,20 @@ int main( )
 ```  
   
 ##  <a name="push"></a>  priority_queue::push  
- Добавляет элемент в очередь с приоритетом на основе приоритета элемента из оператора operator<.  
+ Adds an element to the priority queue based on the priority of the element from operator<.  
   
 ```  
 void push(const Type& val);
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
  `val`  
- Элемент, добавляемый в верхнюю часть priority_queue.  
+ The element added to the top of the priority_queue.  
   
-### <a name="remarks"></a>Примечания  
- Верхняя часть priority_queue — это позиция, занятая самым большим элементом в контейнере.  
+### <a name="remarks"></a>Remarks  
+ The top of the priority_queue is the position occupied by the largest element in the container.  
   
-### <a name="example"></a>Пример  
+### <a name="example"></a>Example  
   
 ```cpp  
 // pqueue_push.cpp  
@@ -430,16 +436,16 @@ The element at the top of the priority_queue is 30.
 ```  
   
 ##  <a name="size"></a>  priority_queue::size  
- Возвращает количество элементов в priority_queue.  
+ Returns the number of elements in the priority_queue.  
   
 ```  
 size_type size() const;
 ```  
   
-### <a name="return-value"></a>Возвращаемое значение  
- Текущая длина priority_queue.  
+### <a name="return-value"></a>Return Value  
+ The current length of the priority_queue.  
   
-### <a name="example"></a>Пример  
+### <a name="example"></a>Example  
   
 ```cpp  
 // pqueue_size.cpp  
@@ -469,32 +475,32 @@ The priority_queue length is now 2.
 ```  
   
 ##  <a name="size_type"></a>  priority_queue::size_type  
- Тип целого числа без знака, который может представлять количество элементов в priority_queue.  
+ An unsigned integer type that can represent the number of elements in a priority_queue.  
   
 ```  
 typedef typename Container::size_type size_type;  
 ```  
   
-### <a name="remarks"></a>Примечания  
- Тип является синонимом `size_type` базового контейнера, измененного priority_queue.  
+### <a name="remarks"></a>Remarks  
+ The type is a synonym for the `size_type` of the base container adapted by the priority_queue.  
   
-### <a name="example"></a>Пример  
-  См. пример для [size](#size) в качестве примера объявления и использования `size_type`.  
+### <a name="example"></a>Example  
+  See the example for [size](#size) for an example of how to declare and use `size_type`.  
   
 ##  <a name="top"></a>  priority_queue::top  
- Возвращает константную ссылку на наибольший элемент в верхней части priority_queue.  
+ Returns a const reference to the largest element at the top of the priority_queue.  
   
 ```  
 const_reference top() const;
 ```  
   
-### <a name="return-value"></a>Возвращаемое значение  
- Ссылка на самый большой элемент, как определено функцией **Traits**, объектом priority_queue.  
+### <a name="return-value"></a>Return Value  
+ A reference to the largest element, as determined by the **Traits** function, object of the priority_queue.  
   
-### <a name="remarks"></a>Примечания  
- Для применения функции-члена класс priority_queue не должен быть пустым.  
+### <a name="remarks"></a>Remarks  
+ The priority_queue must be nonempty to apply the member function.  
   
-### <a name="example"></a>Пример  
+### <a name="example"></a>Example  
   
 ```cpp  
 // pqueue_top.cpp  
@@ -527,16 +533,16 @@ The element at the top of the priority_queue is 30.
 ```  
   
 ##  <a name="value_type"></a>  priority_queue::value_type  
- Тип, представляющий тип объекта, который хранится в виде элемента в priority_queue.  
+ A type that represents the type of object stored as an element in a priority_queue.  
   
 ```  
 typedef typename Container::value_type value_type;  
 ```  
   
-### <a name="remarks"></a>Примечания  
- Тип является синонимом `value_type` базового контейнера, измененного priority_queue.  
+### <a name="remarks"></a>Remarks  
+ The type is a synonym for the `value_type` of the base container adapted by the priority_queue.  
   
-### <a name="example"></a>Пример  
+### <a name="example"></a>Example  
   
 ```cpp  
 // pqueue_value_type.cpp  
@@ -566,8 +572,8 @@ The value_type is AnInt = 69
 The element at the top of the priority_queue is 69.  
 ```  
   
-## <a name="see-also"></a>См. также  
- [Потокобезопасность в стандартной библиотеке C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)   
- [Справочник по стандартной библиотеке C++](../standard-library/cpp-standard-library-reference.md)
+## <a name="see-also"></a>See Also  
+ [Thread Safety in the C++ Standard Library](../standard-library/thread-safety-in-the-cpp-standard-library.md)   
+ [C++ Standard Library Reference](../standard-library/cpp-standard-library-reference.md)
 
 

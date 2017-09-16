@@ -1,5 +1,5 @@
 ---
-title: "Класс CMFCToolBarDateTimeCtrl | Документы Microsoft"
+title: CMFCToolBarDateTimeCtrl Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -35,13 +35,27 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- SetStyle method
-- OnCalculateSize method
-- OnDraw method
-- OnDrawOnCustomizeList method
-- CMFCToolBarDateTimeCtrl class
-- Serialize method
-- OnSize method
+- CMFCToolBarDateTimeCtrl [MFC], CMFCToolBarDateTimeCtrl
+- CMFCToolBarDateTimeCtrl [MFC], CanBeStretched
+- CMFCToolBarDateTimeCtrl [MFC], CopyFrom
+- CMFCToolBarButton [MFC], ExportToMenuButton
+- CMFCToolBarDateTimeCtrl [MFC], GetByCmd
+- CMFCToolBarDateTimeCtrl [MFC], GetDateTimeCtrl
+- CMFCToolBarDateTimeCtrl [MFC], GetHwnd
+- CMFCToolBarDateTimeCtrl [MFC], GetTime
+- CMFCToolBarDateTimeCtrl [MFC], GetTimeAll
+- CMFCToolBarDateTimeCtrl [MFC], HaveHotBorder
+- CMFCToolBarDateTimeCtrl [MFC], NotifyCommand
+- CMFCToolBarDateTimeCtrl [MFC], OnAddToCustomizePage
+- CMFCToolBarDateTimeCtrl [MFC], OnChangeParentWnd
+- CMFCToolBarDateTimeCtrl [MFC], OnClick
+- CMFCToolBarDateTimeCtrl [MFC], OnCtlColor
+- CMFCToolBarDateTimeCtrl [MFC], OnGlobalFontsChanged
+- CMFCToolBarDateTimeCtrl [MFC], OnMove
+- CMFCToolBarDateTimeCtrl [MFC], OnShow
+- CMFCToolBarDateTimeCtrl [MFC], OnUpdateToolTip
+- CMFCToolBarDateTimeCtrl [MFC], SetTime
+- CMFCToolBarDateTimeCtrl [MFC], SetTimeAll
 ms.assetid: a3853cb9-8ebc-444f-a1e4-9cf905e24c18
 caps.latest.revision: 30
 author: mikeblome
@@ -61,93 +75,93 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0e0c08ddc57d437c51872b5186ae3fc983bb0199
-ms.openlocfilehash: 9558d62710c7be571d6aefab2c44fe504ca56d60
+ms.translationtype: MT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: f0c0eeb3b3f1728659a21c12bc93e27e97ad7980
 ms.contentlocale: ru-ru
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 09/12/2017
 
 ---
-# <a name="cmfctoolbardatetimectrl-class"></a>Класс CMFCToolBarDateTimeCtrl
-Кнопка панели инструментов, который содержит элемент выбора даты и времени.  
+# <a name="cmfctoolbardatetimectrl-class"></a>CMFCToolBarDateTimeCtrl Class
+A toolbar button that contains a date and time picker control.  
   
-## <a name="syntax"></a>Синтаксис  
+## <a name="syntax"></a>Syntax  
   
 ```  
 class CMFCToolBarDateTimeCtrl : public CMFCToolBarButton  
 ```  
   
-## <a name="members"></a>Члены  
+## <a name="members"></a>Members  
   
-### <a name="public-constructors"></a>Открытые конструкторы  
+### <a name="public-constructors"></a>Public Constructors  
   
-|Имя|Описание|  
+|Name|Description|  
 |----------|-----------------|  
-|[CMFCToolBarDateTimeCtrl::CMFCToolBarDateTimeCtrl](#cmfctoolbardatetimectrl)|Создает объект `CMFCToolBarDateTimeCtrl`.|  
-|`CMFCToolBarDateTimeCtrl::~CMFCToolBarDateTimeCtrl`|Деструктор.|  
+|[CMFCToolBarDateTimeCtrl::CMFCToolBarDateTimeCtrl](#cmfctoolbardatetimectrl)|Constructs a `CMFCToolBarDateTimeCtrl` object.|  
+|`CMFCToolBarDateTimeCtrl::~CMFCToolBarDateTimeCtrl`|Destructor.|  
   
-### <a name="public-methods"></a>Открытые методы  
+### <a name="public-methods"></a>Public Methods  
   
-|Имя|Описание|  
+|Name|Description|  
 |----------|-----------------|  
-|[CMFCToolBarDateTimeCtrl::CanBeStretched](#canbestretched)|Указывает, может ли пользователь растянуть кнопки во время настройки. (Переопределяет [CMFCToolBarButton::CanBeStretched](../../mfc/reference/cmfctoolbarbutton-class.md#canbestretched).)|  
-|[CMFCToolBarDateTimeCtrl::CopyFrom](#copyfrom)|Копирует свойства кнопки панели инструментов, для текущей кнопки. (Переопределяет [CMFCToolBarButton::CopyFrom](../../mfc/reference/cmfctoolbarbutton-class.md#copyfrom).)|  
-|`CMFCToolBarDateTimeCtrl::DuplicateData`|Зарезервировано для будущего использования.|  
-|[CMFCToolBarButton::ExportToMenuButton](../../mfc/reference/cmfctoolbarbutton-class.md#exporttomenubutton)|Копирует текст из кнопки панели инструментов меню.|  
-|`CMFCToolBarDateTimeCtrl::CreateObject`|Используется платформой для создания динамического экземпляра этого типа класса.|  
-|[CMFCToolBarDateTimeCtrl::GetByCmd](#getbycmd)|Извлекает первый `CMFCToolBarDateTimeCtrl` объект в приложении, которое имеет идентификатор указанной команды.|  
-|[CMFCToolBarDateTimeCtrl::GetDateTimeCtrl](#getdatetimectrl)|Возвращает указатель на элемент управления выбора даты и времени.|  
-|[CMFCToolBarDateTimeCtrl::GetHwnd](#gethwnd)|Получает дескриптор окна, связанный с кнопкой панели инструментов. (Переопределяет [CMFCToolBarButton::GetHwnd](../../mfc/reference/cmfctoolbarbutton-class.md#gethwnd).)|  
-|`CMFCToolBarDateTimeCtrl::GetThisClass`|Используется инфраструктурой, чтобы получить указатель на [CRuntimeClass](../../mfc/reference/cruntimeclass-structure.md) объект, связанный с этим типом класса.|  
-|[CMFCToolBarDateTimeCtrl::GetTime](#gettime)|Возвращает время, выбранный из элемента управления выбора даты и времени и помещает его в указанном [SYSTEMTIME](http://msdn.microsoft.com/library/windows/desktop/ms724950) структуры.|  
-|[CMFCToolBarDateTimeCtrl::GetTimeAll](#gettimeall)|Возвращает время, выбранного с помощью кнопки управления выбора времени, имеет идентификатор указанной команды.|  
-|[CMFCToolBarDateTimeCtrl::HaveHotBorder](#havehotborder)|Определяет, отображается ли границы кнопки, когда пользователь выбирает кнопку. (Переопределяет [CMFCToolBarButton::HaveHotBorder](../../mfc/reference/cmfctoolbarbutton-class.md#havehotborder).)|  
-|[CMFCToolBarDateTimeCtrl::NotifyCommand](#notifycommand)|Указывает, обрабатывает ли кнопки [WM_COMMAND](http://msdn.microsoft.com/library/windows/desktop/ms647591) сообщение. (Переопределяет [CMFCToolBarButton::NotifyCommand](../../mfc/reference/cmfctoolbarbutton-class.md#notifycommand).)|  
-|[CMFCToolBarDateTimeCtrl::OnAddToCustomizePage](#onaddtocustomizepage)|Вызывается инфраструктурой при добавлении кнопки **Настройка** диалоговое окно. (Переопределяет [CMFCToolBarButton::OnAddToCustomizePage](../../mfc/reference/cmfctoolbarbutton-class.md#onaddtocustomizepage).)|  
-|`CMFCToolBarDateTimeCtrl::OnCalculateSize`|Вызывается платформой для вычисления размера кнопки для заданного контекста устройств и состояние закрепления. (Переопределяет [CMFCToolBarButton::OnCalculateSize](../../mfc/reference/cmfctoolbarbutton-class.md#oncalculatesize).)|  
-|[CMFCToolBarDateTimeCtrl::OnChangeParentWnd](#onchangeparentwnd)|Вызывается инфраструктурой при вставке кнопки в панели инструментов. (Переопределяет [CMFCToolBarButton::OnChangeParentWnd](../../mfc/reference/cmfctoolbarbutton-class.md#onchangeparentwnd).)|  
-|[CMFCToolBarDateTimeCtrl::OnClick](#onclick)|Вызывается платформой, когда пользователь щелкает элемент управления. (Переопределяет [CMFCToolBarButton::OnClick](../../mfc/reference/cmfctoolbarbutton-class.md#onclick).)|  
-|[CMFCToolBarDateTimeCtrl::OnCtlColor](#onctlcolor)|Вызывается инфраструктурой при обработке родительского инструментов `WM_CTLCOLOR` сообщение. (Переопределяет [CMFCToolBarButton::OnCtlColor](../../mfc/reference/cmfctoolbarbutton-class.md#onctlcolor).)|  
-|`CMFCToolBarDateTimeCtrl::OnDraw`|Вызывается платформой для отображения кнопки с помощью указанного стили и параметры. (Переопределяет [CMFCToolBarButton::OnDraw](../../mfc/reference/cmfctoolbarbutton-class.md#ondraw).)|  
-|`CMFCToolBarDateTimeCtrl::OnDrawOnCustomizeList`|Вызывается платформой для отображения кнопки в **команды** области **Настройка** диалоговое окно. (Переопределяет [CMFCToolBarButton::OnDrawOnCustomizeList](../../mfc/reference/cmfctoolbarbutton-class.md#ondrawoncustomizelist).)|  
-|[CMFCToolBarDateTimeCtrl::OnGlobalFontsChanged](#onglobalfontschanged)|Вызывается инфраструктурой при изменении глобальных шрифта. (Переопределяет [CMFCToolBarButton::OnGlobalFontsChanged](../../mfc/reference/cmfctoolbarbutton-class.md#onglobalfontschanged).)|  
-|[CMFCToolBarDateTimeCtrl::OnMove](#onmove)|Вызывается инфраструктурой при перемещении родительского инструментов. (Переопределяет [CMFCToolBarButton::OnMove](../../mfc/reference/cmfctoolbarbutton-class.md#onmove).)|  
-|[CMFCToolBarDateTimeCtrl::OnShow](#onshow)|Вызывается инфраструктурой при кнопка становится видимым или невидимым. (Переопределяет [CMFCToolBarButton::OnShow](../../mfc/reference/cmfctoolbarbutton-class.md#onshow).)|  
-|`CMFCToolBarDateTimeCtrl::OnSize`|Вызывается инфраструктурой при инструментов родительской изменении ее размера или положения и это изменение приводит к изменить размер кнопки. (Переопределяет [CMFCToolBarButton::OnSize](../../mfc/reference/cmfctoolbarbutton-class.md#onsize).)|  
-|[CMFCToolBarDateTimeCtrl::OnUpdateToolTip](#onupdatetooltip)|Вызывается средой во время обновления инструментов родительской его текст всплывающей подсказки. (Переопределяет [CMFCToolBarButton::OnUpdateToolTip](../../mfc/reference/cmfctoolbarbutton-class.md#onupdatetooltip).)|  
-|`CMFCToolBarDateTimeCtrl::Serialize`|Считывает этот объект из архива и записывает его в архив (переопределяет [CMFCToolBarButton::Serialize](../../mfc/reference/cmfctoolbarbutton-class.md#serialize).)|  
-|`CMFCToolBarDateTimeCtrl::SetStyle`|Задает стиль кнопки панели инструментов. (Переопределяет [CMFCToolBarButton::SetStyle](../../mfc/reference/cmfctoolbarbutton-class.md#setstyle).)|  
-|[CMFCToolBarDateTimeCtrl::SetTime](#settime)|Задает дату и время в элементе управления.|  
-|[CMFCToolBarDateTimeCtrl::SetTimeAll](#settimeall)|Задает дату и время в всем экземплярам элемента управления для выбора времени, указанному идентификатору команды.|  
+|[CMFCToolBarDateTimeCtrl::CanBeStretched](#canbestretched)|Specifies whether a user can stretch the button during customization. (Overrides [CMFCToolBarButton::CanBeStretched](../../mfc/reference/cmfctoolbarbutton-class.md#canbestretched).)|  
+|[CMFCToolBarDateTimeCtrl::CopyFrom](#copyfrom)|Copies the properties of another toolbar button to the current button. (Overrides [CMFCToolBarButton::CopyFrom](../../mfc/reference/cmfctoolbarbutton-class.md#copyfrom).)|  
+|`CMFCToolBarDateTimeCtrl::DuplicateData`|Reserved for future use.|  
+|[CMFCToolBarButton::ExportToMenuButton](../../mfc/reference/cmfctoolbarbutton-class.md#exporttomenubutton)|Copies text from the toolbar button to a menu.|  
+|`CMFCToolBarDateTimeCtrl::CreateObject`|Used by the framework to create a dynamic instance of this class type.|  
+|[CMFCToolBarDateTimeCtrl::GetByCmd](#getbycmd)|Retrieves the first `CMFCToolBarDateTimeCtrl` object in the application that has the specified command ID.|  
+|[CMFCToolBarDateTimeCtrl::GetDateTimeCtrl](#getdatetimectrl)|Returns a pointer to the date and time picker control.|  
+|[CMFCToolBarDateTimeCtrl::GetHwnd](#gethwnd)|Retrieves the window handle that is associated with the toolbar button. (Overrides [CMFCToolBarButton::GetHwnd](../../mfc/reference/cmfctoolbarbutton-class.md#gethwnd).)|  
+|`CMFCToolBarDateTimeCtrl::GetThisClass`|Used by the framework to obtain a pointer to the [CRuntimeClass](../../mfc/reference/cruntimeclass-structure.md) object that is associated with this class type.|  
+|[CMFCToolBarDateTimeCtrl::GetTime](#gettime)|Gets the selected time from a date and time picker control and puts it in a specified [SYSTEMTIME](http://msdn.microsoft.com/library/windows/desktop/ms724950) structure.|  
+|[CMFCToolBarDateTimeCtrl::GetTimeAll](#gettimeall)|Returns the selected time from the time picker control button that has a specified command ID.|  
+|[CMFCToolBarDateTimeCtrl::HaveHotBorder](#havehotborder)|Determines whether a border of the button is displayed when a user selects the button. (Overrides [CMFCToolBarButton::HaveHotBorder](../../mfc/reference/cmfctoolbarbutton-class.md#havehotborder).)|  
+|[CMFCToolBarDateTimeCtrl::NotifyCommand](#notifycommand)|Specifies whether the button processes the [WM_COMMAND](http://msdn.microsoft.com/library/windows/desktop/ms647591) message. (Overrides [CMFCToolBarButton::NotifyCommand](../../mfc/reference/cmfctoolbarbutton-class.md#notifycommand).)|  
+|[CMFCToolBarDateTimeCtrl::OnAddToCustomizePage](#onaddtocustomizepage)|Called by the framework when the button is added to a **Customize** dialog box. (Overrides [CMFCToolBarButton::OnAddToCustomizePage](../../mfc/reference/cmfctoolbarbutton-class.md#onaddtocustomizepage).)|  
+|`CMFCToolBarDateTimeCtrl::OnCalculateSize`|Called by the framework to calculate the size of the button for the specified device context and docking state. (Overrides [CMFCToolBarButton::OnCalculateSize](../../mfc/reference/cmfctoolbarbutton-class.md#oncalculatesize).)|  
+|[CMFCToolBarDateTimeCtrl::OnChangeParentWnd](#onchangeparentwnd)|Called by the framework when the button is inserted into a new toolbar. (Overrides [CMFCToolBarButton::OnChangeParentWnd](../../mfc/reference/cmfctoolbarbutton-class.md#onchangeparentwnd).)|  
+|[CMFCToolBarDateTimeCtrl::OnClick](#onclick)|Called by the framework when the user clicks the control. (Overrides [CMFCToolBarButton::OnClick](../../mfc/reference/cmfctoolbarbutton-class.md#onclick).)|  
+|[CMFCToolBarDateTimeCtrl::OnCtlColor](#onctlcolor)|Called by the framework when the parent toolbar handles a `WM_CTLCOLOR` message. (Overrides [CMFCToolBarButton::OnCtlColor](../../mfc/reference/cmfctoolbarbutton-class.md#onctlcolor).)|  
+|`CMFCToolBarDateTimeCtrl::OnDraw`|Called by the framework to draw the button by using the specified styles and options. (Overrides [CMFCToolBarButton::OnDraw](../../mfc/reference/cmfctoolbarbutton-class.md#ondraw).)|  
+|`CMFCToolBarDateTimeCtrl::OnDrawOnCustomizeList`|Called by the framework to draw the button in the **Commands** pane of the **Customize** dialog box. (Overrides [CMFCToolBarButton::OnDrawOnCustomizeList](../../mfc/reference/cmfctoolbarbutton-class.md#ondrawoncustomizelist).)|  
+|[CMFCToolBarDateTimeCtrl::OnGlobalFontsChanged](#onglobalfontschanged)|Called by the framework when the global font has changed. (Overrides [CMFCToolBarButton::OnGlobalFontsChanged](../../mfc/reference/cmfctoolbarbutton-class.md#onglobalfontschanged).)|  
+|[CMFCToolBarDateTimeCtrl::OnMove](#onmove)|Called by the framework when the parent toolbar moves. (Overrides [CMFCToolBarButton::OnMove](../../mfc/reference/cmfctoolbarbutton-class.md#onmove).)|  
+|[CMFCToolBarDateTimeCtrl::OnShow](#onshow)|Called by the framework when the button becomes visible or invisible. (Overrides [CMFCToolBarButton::OnShow](../../mfc/reference/cmfctoolbarbutton-class.md#onshow).)|  
+|`CMFCToolBarDateTimeCtrl::OnSize`|Called by the framework when the parent toolbar changes its size or position and this change causes the button to change size. (Overrides [CMFCToolBarButton::OnSize](../../mfc/reference/cmfctoolbarbutton-class.md#onsize).)|  
+|[CMFCToolBarDateTimeCtrl::OnUpdateToolTip](#onupdatetooltip)|Called by the framework when the parent toolbar updates its tooltip text. (Overrides [CMFCToolBarButton::OnUpdateToolTip](../../mfc/reference/cmfctoolbarbutton-class.md#onupdatetooltip).)|  
+|`CMFCToolBarDateTimeCtrl::Serialize`|Reads this object from an archive or writes it to an archive, (Overrides [CMFCToolBarButton::Serialize](../../mfc/reference/cmfctoolbarbutton-class.md#serialize).)|  
+|`CMFCToolBarDateTimeCtrl::SetStyle`|Sets the style of the toolbar button. (Overrides [CMFCToolBarButton::SetStyle](../../mfc/reference/cmfctoolbarbutton-class.md#setstyle).)|  
+|[CMFCToolBarDateTimeCtrl::SetTime](#settime)|Sets the time and date in the time picker control.|  
+|[CMFCToolBarDateTimeCtrl::SetTimeAll](#settimeall)|Sets the time and date in all instances of the time picker control that have a specified command ID.|  
   
-## <a name="remarks"></a>Примечания  
- Пример использования элемента управления выбора даты и времени см. Образец ToolbarDateTimePicker проекта. Сведения о добавлении кнопок панели инструментов в разделе [Пошаговое руководство: размещение элементов управления на панели инструментов](../../mfc/walkthrough-putting-controls-on-toolbars.md).  
+## <a name="remarks"></a>Remarks  
+ For an example of how to use a date and time picker control, see the ToolbarDateTimePicker sample project. For information about how to add control buttons to toolbars, see [Walkthrough: Putting Controls On Toolbars](../../mfc/walkthrough-putting-controls-on-toolbars.md).  
   
-## <a name="inheritance-hierarchy"></a>Иерархия наследования  
+## <a name="inheritance-hierarchy"></a>Inheritance Hierarchy  
  [CObject](../../mfc/reference/cobject-class.md)  
   
  [CMFCToolBarButton](../../mfc/reference/cmfctoolbarbutton-class.md)  
   
  [CMFCToolBarDateTimeCtrl](../../mfc/reference/cmfctoolbardatetimectrl-class.md)  
   
-## <a name="requirements"></a>Требования  
- **Заголовок:** afxtoolbardatetimectrl.h  
+## <a name="requirements"></a>Requirements  
+ **Header:** afxtoolbardatetimectrl.h  
   
-##  <a name="canbestretched"></a>CMFCToolBarDateTimeCtrl::CanBeStretched  
- Указывает, может ли пользователь растянуть кнопки во время настройки.  
+##  <a name="canbestretched"></a>  CMFCToolBarDateTimeCtrl::CanBeStretched  
+ Specifies whether a user can stretch the button during customization.  
   
 ```  
 virtual BOOL CanBeStretched() const;  
 ```  
   
-### <a name="return-value"></a>Возвращаемое значение  
- Этот метод возвращает `TRUE`.  
+### <a name="return-value"></a>Return Value  
+ This method returns `TRUE`.  
   
-### <a name="remarks"></a>Примечания  
- По умолчанию платформа не разрешается растянуть кнопки панели инструментов во время настройки. Этот метод расширяет реализацию базового класса ( [CMFCToolBarButton::CanBeStretched](../../mfc/reference/cmfctoolbarbutton-class.md#canbestretched)), позволяя пользователю растянуть кнопки даты и времени во время настройки.  
+### <a name="remarks"></a>Remarks  
+ By default, the framework does not allow the user to stretch a toolbar button during customization. This method extends the base class implementation ( [CMFCToolBarButton::CanBeStretched](../../mfc/reference/cmfctoolbarbutton-class.md#canbestretched)) by allowing the user to stretch a date and time toolbar button during customization.  
   
-##  <a name="cmfctoolbardatetimectrl"></a>CMFCToolBarDateTimeCtrl::CMFCToolBarDateTimeCtrl  
- Создает и инициализирует [CMFCToolBarDateTimeCtrl](../../mfc/reference/cmfctoolbardatetimectrl-class.md) объекта.  
+##  <a name="cmfctoolbardatetimectrl"></a>  CMFCToolBarDateTimeCtrl::CMFCToolBarDateTimeCtrl  
+ Creates and initializes a [CMFCToolBarDateTimeCtrl](../../mfc/reference/cmfctoolbardatetimectrl-class.md) object.  
   
 ```  
 CMFCToolBarDateTimeCtrl(
@@ -157,103 +171,103 @@ CMFCToolBarDateTimeCtrl(
     int iWidth=0);
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
  [in] `uiID`  
- Идентификатор элемента управления.  
+ The control ID.  
   
  [in] `iImage`  
- Индекс изображения в панели инструментов `CMFCToolBarImages` объекта.  
+ The index of the image in the toolbar's `CMFCToolBarImages` object.  
   
  [in] `dwStyle`  
- Стиль `CMFCToolBarDateTimeCtrlImpl` окно, которое создается, когда пользователь нажимает кнопку.  
+ The style of the `CMFCToolBarDateTimeCtrlImpl` window that is created when a user clicks the button.  
   
  [in] `iWidth`  
- Ширина элемента управления (в пикселях).  
+ The width of the control, in pixels.  
   
-### <a name="remarks"></a>Примечания  
- Этот объект инициализируется системной даты и времени. Внутренний стиль окна `CMFCToolBarDateTimeCtrlImpl` объект включает в себя `dwStyle` параметр и `WS_CHILD` и `WS_VISIBLE` стили. Не удается изменить эти стили с помощью `CMFCToolBarDateTimeCtrl::SetStyle`. Используйте `SetStyle` Чтобы изменить стиль `CMFCToolBarDateTimeCtrl` элемента управления.  
+### <a name="remarks"></a>Remarks  
+ This object is initialized to the system date and time. The window style of the internal `CMFCToolBarDateTimeCtrlImpl` object includes the `dwStyle` parameter and the `WS_CHILD` and `WS_VISIBLE` styles. You cannot change these styles by using `CMFCToolBarDateTimeCtrl::SetStyle`. Use `SetStyle` to change the style of the `CMFCToolBarDateTimeCtrl` control.  
   
-### <a name="example"></a>Пример  
- Следующий пример демонстрирует создания объекта `CMFCToolBarDateTimeCtrl` класса. Этот фрагмент кода является частью [образец инструментов Выбор даты и времени](../../visual-cpp-samples.md).  
+### <a name="example"></a>Example  
+ The following example demonstrates how to construct an object of the `CMFCToolBarDateTimeCtrl` class. This code snippet is part of the [Toolbar Date Time Picker sample](../../visual-cpp-samples.md).  
   
- [!code-cpp[NVC_MFC_ToolbarDateTimePicker&#1;](../../mfc/reference/codesnippet/cpp/cmfctoolbardatetimectrl-class_1.cpp)]  
+ [!code-cpp[NVC_MFC_ToolbarDateTimePicker#1](../../mfc/reference/codesnippet/cpp/cmfctoolbardatetimectrl-class_1.cpp)]  
   
-##  <a name="copyfrom"></a>CMFCToolBarDateTimeCtrl::CopyFrom  
- Копирует свойства кнопки панели инструментов, для текущей кнопки.  
+##  <a name="copyfrom"></a>  CMFCToolBarDateTimeCtrl::CopyFrom  
+ Copies the properties of another toolbar button to the current button.  
   
 ```  
 virtual void CopyFrom(const CMFCToolBarButton& src);
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
  [in] `src`  
- Ссылка «источник» для копирования.  
+ A reference to the source button from which to copy.  
   
-### <a name="remarks"></a>Примечания  
- Этот метод служит для копирования другой кнопки панели инструментов эта кнопка панели инструментов. `src`должен быть типа `CMFCToolBarDateTimeCtrl`.  
+### <a name="remarks"></a>Remarks  
+ Call this method to copy another toolbar button to this toolbar button. `src` must be of type `CMFCToolBarDateTimeCtrl`.  
   
-##  <a name="exporttomenubutton"></a>CMFCToolBarDateTimeCtrl::ExportToMenuButton  
- Копирует текст из кнопки панели инструментов меню.  
+##  <a name="exporttomenubutton"></a>  CMFCToolBarDateTimeCtrl::ExportToMenuButton  
+ Copies text from the toolbar button to a menu.  
   
 ```  
 virtual BOOL ExportToMenuButton(CMFCToolBarMenuButton& menuButton) const;  
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
  [in] `menuButton`  
- Ссылка на кнопке меню целевой.  
+ A reference to the target menu button.  
   
-### <a name="return-value"></a>Возвращаемое значение  
- Этот метод возвращает `TRUE`.  
+### <a name="return-value"></a>Return Value  
+ This method returns `TRUE`.  
   
-### <a name="remarks"></a>Примечания  
- Этот метод переопределяет реализацию базового класса ( [CMFCToolBarButton::ExportToMenuButton](../../mfc/reference/cmfctoolbarbutton-class.md#exporttomenubutton)), загрузив строковый ресурс, связанный с Идентификатором команды элемента управления. Дополнительные сведения о строковых ресурсов см. в разделе [CStringT::LoadString](../../atl-mfc-shared/reference/cstringt-class.md#loadstring).  
+### <a name="remarks"></a>Remarks  
+ This method overrides the base class implementation ( [CMFCToolBarButton::ExportToMenuButton](../../mfc/reference/cmfctoolbarbutton-class.md#exporttomenubutton)) by loading the string resource that is associated with the command ID of the control. For more information about string resources, see [CStringT::LoadString](../../atl-mfc-shared/reference/cstringt-class.md#loadstring).  
   
-##  <a name="getbycmd"></a>CMFCToolBarDateTimeCtrl::GetByCmd  
- Извлекает первый `CMFCToolBarDateTimeCtrl` объект в приложении, которое имеет идентификатор указанной команды.  
+##  <a name="getbycmd"></a>  CMFCToolBarDateTimeCtrl::GetByCmd  
+ Retrieves the first `CMFCToolBarDateTimeCtrl` object in the application that has the specified command ID.  
   
 ```  
 static CMFCToolBarDateTimeCtrl* __stdcall GetByCmd(UINT uiCmd);
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
  [in] `uiCmd`  
- Идентификатор команды кнопки для извлечения.  
+ The command ID of the button to retrieve.  
   
-### <a name="return-value"></a>Возвращаемое значение  
- Первый `CMFCToolBarDateTimeCtrl` объект в приложении, которое содержит заданный идентификатор команды, или `NULL` Если `CMFCToolBarDateTimeCtrl` объекты имеют идентификатор указанной команды.  
+### <a name="return-value"></a>Return Value  
+ The first `CMFCToolBarDateTimeCtrl` object in the application that has the specified command ID, or `NULL` if no `CMFCToolBarDateTimeCtrl` objects have the specified command ID.  
   
-### <a name="remarks"></a>Примечания  
- Этот метод служебной программы используется методы, такие как [CMFCToolBarDateTimeCtrl::SetTimeAll](#settimeall) и [CMFCToolBarDateTimeCtrl::GetTimeAll](#gettimeall) задать или получить время и дату всем экземплярам элемента управления для выбора времени, указанному идентификатору команды.  
+### <a name="remarks"></a>Remarks  
+ This shared utility method is used by methods such as [CMFCToolBarDateTimeCtrl::SetTimeAll](#settimeall) and [CMFCToolBarDateTimeCtrl::GetTimeAll](#gettimeall) to set or get the time and date of all instances of the time picker control that have a specified command ID.  
   
-##  <a name="getdatetimectrl"></a>CMFCToolBarDateTimeCtrl::GetDateTimeCtrl  
- Возвращает указатель на элемент управления выбора даты и времени.  
+##  <a name="getdatetimectrl"></a>  CMFCToolBarDateTimeCtrl::GetDateTimeCtrl  
+ Returns a pointer to the date and time picker control.  
   
 ```  
 CDateTimeCtrl* GetDateTimeCtrl() const;  
 ```  
   
-### <a name="return-value"></a>Возвращаемое значение  
- Указатель на управления выбора даты и времени; или `NULL` Если элемент управления не существует.  
+### <a name="return-value"></a>Return Value  
+ A pointer to date and time picker control; or `NULL` if the control does not exist.  
   
-### <a name="remarks"></a>Примечания  
- `CMFCToolBarDateTimeCtrl` Класса инициализирует `m_pWndDateTime` член данных при вставке `CMFCToolBarDateTimeCtrl` объекта в панели инструментов.  
+### <a name="remarks"></a>Remarks  
+ The `CMFCToolBarDateTimeCtrl` class initializes the `m_pWndDateTime` data member when you insert a `CMFCToolBarDateTimeCtrl` object into a toolbar.  
   
-##  <a name="gethwnd"></a>CMFCToolBarDateTimeCtrl::GetHwnd  
- Получает дескриптор окна, связанный с кнопкой панели инструментов.  
+##  <a name="gethwnd"></a>  CMFCToolBarDateTimeCtrl::GetHwnd  
+ Retrieves the window handle that is associated with the toolbar button.  
   
 ```  
 virtual HWND GetHwnd();
 ```  
   
-### <a name="return-value"></a>Возвращаемое значение  
- Дескриптор окна, связанный с кнопкой панели инструментов даты и времени.  
+### <a name="return-value"></a>Return Value  
+ The window handle that is associated with the date and time toolbar button.  
   
-### <a name="remarks"></a>Примечания  
- Этот метод переопределяет [CMFCToolBarButton::GetHwnd](../../mfc/reference/cmfctoolbarbutton-class.md#gethwnd) метод.  
+### <a name="remarks"></a>Remarks  
+ This method overrides the [CMFCToolBarButton::GetHwnd](../../mfc/reference/cmfctoolbarbutton-class.md#gethwnd) method.  
   
-##  <a name="gettime"></a>CMFCToolBarDateTimeCtrl::GetTime  
- Возвращает указанное время из связанных даты и элементе управления и помещает его в указанном [SYSTEMTIME](http://msdn.microsoft.com/library/windows/desktop/ms724950) структуры  
+##  <a name="gettime"></a>  CMFCToolBarDateTimeCtrl::GetTime  
+ Gets the selected time from the associated date and time picker control and puts it in a specified [SYSTEMTIME](http://msdn.microsoft.com/library/windows/desktop/ms724950) structure  
   
 ```  
 BOOL GetTime(COleDateTime& timeDest) const;
@@ -261,21 +275,21 @@ DWORD GetTime(CTime& timeDest) const;
 DWORD GetTime(LPSYSTEMTIME pTimeDest) const;  
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
  `[out] timeDest`  
- В первой перегрузке [COleDateTime класс](../../atl-mfc-shared/reference/coledatetime-class.md) объекта, который будет получать сведения о системе времени. Во второй перегрузке [CTime](../../atl-mfc-shared/reference/ctime-class.md) объекта, который будет получать сведения о системе времени.  
+ In the first overload, a [COleDateTime Class](../../atl-mfc-shared/reference/coledatetime-class.md) object that will receive the system time information. In the second overload, a [CTime](../../atl-mfc-shared/reference/ctime-class.md) object that will receive the system time information.  
   
  `[out] pTimeDest`  
- Указатель на [SYSTEMTIME](http://msdn.microsoft.com/library/windows/desktop/ms724950) структуру для получения сведений о системе времени. Значение не должно быть равно `NULL`.  
+ A pointer to the [SYSTEMTIME](http://msdn.microsoft.com/library/windows/desktop/ms724950) structure to receive the system time information. Must not be `NULL`.  
   
-### <a name="return-value"></a>Возвращаемое значение  
- В первой перегрузке ненулевое значение, если время успешно записан [COleDateTime класс](../../atl-mfc-shared/reference/coledatetime-class.md) объекта; в противном случае — 0. На второй и третьей перегрузки, возвращаемым значением является `DWORD` равен dwFlag элемент, который был задан в [NMDATETIMECHANGE](http://msdn.microsoft.com/library/windows/desktop/bb761730) структуры.  
+### <a name="return-value"></a>Return Value  
+ In the first overload, nonzero if the time is successfully written to the [COleDateTime Class](../../atl-mfc-shared/reference/coledatetime-class.md) object; otherwise 0. In the second and third overloads, the return value is a `DWORD` that is equal to the dwFlag member that was set in the [NMDATETIMECHANGE](http://msdn.microsoft.com/library/windows/desktop/bb761730) structure.  
   
-### <a name="remarks"></a>Примечания  
- Задает метод [NMDATETIMECHANGE](http://msdn.microsoft.com/library/windows/desktop/bb761730) структуры dwFlags члена для указания того, установлен ли элемент выбора даты и времени, даты и времени. Если значение равно GDT_NONE, элемент управления имеет значение `no date` состояние и использует стиль DTS_SHOWNONE. Если возвращаемое значение равно GDT_VALID, системное время успешно сохранен в месте назначения.  
+### <a name="remarks"></a>Remarks  
+ The method sets the [NMDATETIMECHANGE](http://msdn.microsoft.com/library/windows/desktop/bb761730) structure member dwFlags to indicate whether the date and time picker is set to a date and time. If the value equals GDT_NONE, the control is set to `no date` status, and uses the DTS_SHOWNONE style. If the value returned equals GDT_VALID, the system time is successfully stored in the destination location.  
   
-##  <a name="gettimeall"></a>CMFCToolBarDateTimeCtrl::GetTimeAll  
- Возвращает время, выбранное пользователем с помощью кнопки управления выбора времени, имеет идентификатор указанной команды.  
+##  <a name="gettimeall"></a>  CMFCToolBarDateTimeCtrl::GetTimeAll  
+ Returns the time selected by the user from the time picker control button that has a specified command ID.  
   
 ```  
 static BOOL GetTimeAll(
@@ -291,82 +305,82 @@ static DWORD GetTimeAll(
     LPSYSTEMTIME pTimeDest);
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
  `[in] uiCmd`  
- Указывает идентификатор команды кнопки панели инструментов.  
+ Specifies a toolbar button's command ID.  
   
  `[out] timeDest`  
- В первой перегрузке [COleDateTime класс](../../atl-mfc-shared/reference/coledatetime-class.md) объекта, который будет получать сведения о системе времени. Во второй перегрузке [CTime](../../atl-mfc-shared/reference/ctime-class.md) объекта, который будет получать сведения о системе времени.  
+ In the first overload, a [COleDateTime Class](../../atl-mfc-shared/reference/coledatetime-class.md) object that will receive the system time information. In the second overload, a [CTime](../../atl-mfc-shared/reference/ctime-class.md) object that will receive the system time information.  
   
  `[out] pTimeDest`  
- Указатель на [SYSTEMTIME](http://msdn.microsoft.com/library/windows/desktop/ms724950) структуру для получения сведений о системе времени. Значение не должно быть равно `NULL`.  
+ A pointer to the [SYSTEMTIME](http://msdn.microsoft.com/library/windows/desktop/ms724950) structure to receive the system time information. Must not be `NULL`.  
   
-### <a name="return-value"></a>Возвращаемое значение  
- Если платформа не удается найти кнопку панели инструментов, соответствующий идентификатор команды `uiCmd`, возвращаемое значение равно нулю, в первой перегрузке и GDT_NONE в другие перегрузки. При обнаружении кнопки панели инструментов, возвращается таким же, как возвращаемое значение вызова [CMFCToolBarDateTimeCtrl::GetTime](#gettime) этой кнопки. Возвращаемое значение&0; или GDT_NONE может произойти при обнаружении кнопки, который указывает, что вызов `GetTime` не вернул допустимое по другой причине.  
+### <a name="return-value"></a>Return Value  
+ If the framework cannot find a toolbar button that matches the command ID `uiCmd`, the return value is zero in the first overload, and GDT_NONE in the other overloads. If the toolbar button is found, the return value is the same as the return value from a call to [CMFCToolBarDateTimeCtrl::GetTime](#gettime) on that button. A return value of zero or GDT_NONE can occur when the button is found, which indicates that the call to `GetTime` did not return a valid date for some other reason.  
   
-### <a name="remarks"></a>Примечания  
- Этот метод ищет кнопку панели инструментов с заданным Идентификатором команды и вызывает метод [CMFCToolBarDateTimeCtrl::GetTime](#gettime) метод этой кнопки.  
+### <a name="remarks"></a>Remarks  
+ This method looks for a toolbar button that has the specified command ID and calls [CMFCToolBarDateTimeCtrl::GetTime](#gettime) method on that button.  
   
-##  <a name="havehotborder"></a>CMFCToolBarDateTimeCtrl::HaveHotBorder  
- Определяет, отображается ли границы кнопки, когда пользователь выбирает кнопку.  
+##  <a name="havehotborder"></a>  CMFCToolBarDateTimeCtrl::HaveHotBorder  
+ Determines whether a border of the button is displayed when a user selects the button.  
   
 ```  
 virtual BOOL HaveHotBorder() const;  
 ```  
   
-### <a name="return-value"></a>Возвращаемое значение  
- Ненулевое значение, если кнопка отображается его границы, если установлен; в противном случае — 0.  
+### <a name="return-value"></a>Return Value  
+ Nonzero if a button displays its border when selected; otherwise 0.  
   
-### <a name="remarks"></a>Примечания  
- Этот метод возвращает ненулевое значение, если элемент управления является видимым.  
+### <a name="remarks"></a>Remarks  
+ This method returns a nonzero value if the control is visible.  
   
-##  <a name="notifycommand"></a>CMFCToolBarDateTimeCtrl::NotifyCommand  
- Указывает, обрабатывает ли кнопки [WM_COMMAND](http://msdn.microsoft.com/library/windows/desktop/ms647591) сообщение.  
+##  <a name="notifycommand"></a>  CMFCToolBarDateTimeCtrl::NotifyCommand  
+ Specifies whether the button processes the [WM_COMMAND](http://msdn.microsoft.com/library/windows/desktop/ms647591) message.  
   
 ```  
 virtual BOOL NotifyCommand(int iNotifyCode);
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
  [in] `iNotifyCode`  
- Сообщение уведомления, связанный с командой.  
+ The notification message that is associated with the command.  
   
-### <a name="return-value"></a>Возвращаемое значение  
- `TRUE`Если кнопка обрабатывает `WM_COMMAND` сообщения, или `FALSE` для указания, что сообщение должно быть обработано родительским инструментов.  
+### <a name="return-value"></a>Return Value  
+ `TRUE` if the button processes the `WM_COMMAND` message, or `FALSE` to indicate that the message should be handled by the parent toolbar.  
   
-### <a name="remarks"></a>Примечания  
- Платформа вызывает этот метод, когда он собирается отправить [WM_COMMAND](http://msdn.microsoft.com/library/windows/desktop/ms647591) сообщение родительского окна.  
+### <a name="remarks"></a>Remarks  
+ The framework calls this method when it is about to send a [WM_COMMAND](http://msdn.microsoft.com/library/windows/desktop/ms647591) message to the parent window.  
   
- Этот метод расширяет реализацию базового класса ( [CMFCToolBarButton::NotifyCommand](../../mfc/reference/cmfctoolbarbutton-class.md#notifycommand)), обрабатывая [DTN_DATETIMECHANGE](http://msdn.microsoft.com/library/windows/desktop/bb761737) уведомления. Он обновляет состояние внутреннее время и обновляет свойство времени всех `CMFCToolBarDateTimeCtrl` команды объектов с тем же идентификатором.  
+ This method extends the base class implementation ( [CMFCToolBarButton::NotifyCommand](../../mfc/reference/cmfctoolbarbutton-class.md#notifycommand)) by processing the [DTN_DATETIMECHANGE](http://msdn.microsoft.com/library/windows/desktop/bb761737) notification. It updates the internal time status and updates the time property of all `CMFCToolBarDateTimeCtrl` objects with the same command ID.  
   
-##  <a name="onaddtocustomizepage"></a>CMFCToolBarDateTimeCtrl::OnAddToCustomizePage  
- Вызывается инфраструктурой при добавлении кнопки **Настройка** диалоговое окно.  
+##  <a name="onaddtocustomizepage"></a>  CMFCToolBarDateTimeCtrl::OnAddToCustomizePage  
+ Called by the framework when the button is added to a **Customize** dialog box.  
   
 ```  
 virtual void OnAddToCustomizePage();
 ```  
   
-### <a name="remarks"></a>Примечания  
- Этот метод расширяет реализацию базового класса, [CMFCToolBarButton::OnAddToCustomizePage](../../mfc/reference/cmfctoolbarbutton-class.md#onaddtocustomizepage), путем копирования свойств из первой даты и время управления в любой панели инструментов, который имеет тот же идентификатор команды, что и данный объект. Если нет панели инструментов управления даты и времени, который имеет тот же идентификатор команды, что и данный объект, этот метод не выполняет никаких действий.  
+### <a name="remarks"></a>Remarks  
+ This method extends the base class implementation, [CMFCToolBarButton::OnAddToCustomizePage](../../mfc/reference/cmfctoolbarbutton-class.md#onaddtocustomizepage), by copying the properties from the first date and time control in any toolbar that has the same command ID as this object. This method does nothing if no toolbar has a date and time control that has the same command ID as this object.  
   
- Дополнительные сведения о **Настройка** диалоговом разделе [CMFCToolBarsCustomizeDialog класса](../../mfc/reference/cmfctoolbarscustomizedialog-class.md).  
+ For more information about the **Customize** dialog box, see [CMFCToolBarsCustomizeDialog Class](../../mfc/reference/cmfctoolbarscustomizedialog-class.md).  
   
-##  <a name="onchangeparentwnd"></a>CMFCToolBarDateTimeCtrl::OnChangeParentWnd  
- Вызывается инфраструктурой при вставке кнопки в панели инструментов.  
+##  <a name="onchangeparentwnd"></a>  CMFCToolBarDateTimeCtrl::OnChangeParentWnd  
+ Called by the framework when the button is inserted into a new toolbar.  
   
 ```  
 virtual void OnChangeParentWnd(CWnd* pWndParent);
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
  [in] `pWndParent`  
- Новый родительского окна.  
+ The new parent window.  
   
-### <a name="remarks"></a>Примечания  
- Этот метод переопределяет реализацию базового класса ( [CMFCToolBarButton::OnChangeParentWnd](../../mfc/reference/cmfctoolbarbutton-class.md#onchangeparentwnd)), повторно создав внутренний `CMFCToolBarDateTimeCtrlImpl` объекта.  
+### <a name="remarks"></a>Remarks  
+ This method overrides the base class implementation ( [CMFCToolBarButton::OnChangeParentWnd](../../mfc/reference/cmfctoolbarbutton-class.md#onchangeparentwnd)) by recreating the internal `CMFCToolBarDateTimeCtrlImpl` object.  
   
-##  <a name="onclick"></a>CMFCToolBarDateTimeCtrl::OnClick  
- Вызывается платформой, когда пользователь щелкает элемент управления.  
+##  <a name="onclick"></a>  CMFCToolBarDateTimeCtrl::OnClick  
+ Called by the framework when the user clicks the control.  
   
 ```  
 virtual BOOL OnClick(
@@ -374,21 +388,21 @@ virtual BOOL OnClick(
     BOOL bDelay = TRUE);
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
  [in] `pWnd`  
- Не используется.  
+ Unused.  
   
  [in] `bDelay`  
- Не используется.  
+ Unused.  
   
-### <a name="return-value"></a>Возвращаемое значение  
- Ненулевое значение, если кнопка обрабатывает сообщение щелкните; в противном случае — 0.  
+### <a name="return-value"></a>Return Value  
+ Nonzero if the button processes the click message; otherwise 0.  
   
-### <a name="remarks"></a>Примечания  
- Этот метод переопределяет реализацию базового класса, [CMFCToolBarButton::OnClick](../../mfc/reference/cmfctoolbarbutton-class.md#onclick), возвращая ненулевое значение, если внутренний `CMFCToolBarDateTimeCtrlImpl` объект является видимым.  
+### <a name="remarks"></a>Remarks  
+ This method overrides the base class implementation, [CMFCToolBarButton::OnClick](../../mfc/reference/cmfctoolbarbutton-class.md#onclick), by returning a nonzero value if the internal `CMFCToolBarDateTimeCtrlImpl` object is visible.  
   
-##  <a name="onctlcolor"></a>CMFCToolBarDateTimeCtrl::OnCtlColor  
- Вызывается инфраструктурой при обработке родительского инструментов `WM_CTLCOLOR` сообщение.  
+##  <a name="onctlcolor"></a>  CMFCToolBarDateTimeCtrl::OnCtlColor  
+ Called by the framework when the parent toolbar handles a `WM_CTLCOLOR` message.  
   
 ```  
 virtual HBRUSH OnCtlColor(
@@ -396,73 +410,73 @@ virtual HBRUSH OnCtlColor(
     UINT nCtlColor);
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
  [in] `pDC`  
- Контекст устройства, который отображает кнопки.  
+ The device context that displays the button.  
   
  [in] `nCtlColor`  
- Не используется.  
+ Unused.  
   
-### <a name="return-value"></a>Возвращаемое значение  
- Дескриптор для глобального кисть, она используется для рисования фона кнопки.  
+### <a name="return-value"></a>Return Value  
+ A handle to the global brush that the framework uses to paint the background of the button.  
   
-### <a name="remarks"></a>Примечания  
- Этот метод переопределяет реализацию базового класса, [CMFCToolBarButton::OnCtlColor](../../mfc/reference/cmfctoolbarbutton-class.md#onctlcolor), установив текста и фоновых цветов контекста устройства, предоставленный глобальный текста и фона, соответственно.  
+### <a name="remarks"></a>Remarks  
+ This method overrides the base class implementation, [CMFCToolBarButton::OnCtlColor](../../mfc/reference/cmfctoolbarbutton-class.md#onctlcolor), by setting the text and background colors of the provided device context to the global text and background colors, respectively.  
   
- Дополнительные сведения о глобальных параметров, доступных для вашего приложения, в разделе [структура AFX_GLOBAL_DATA](../../mfc/reference/afx-global-data-structure.md).  
+ For more information about global options that are available to your application, see [AFX_GLOBAL_DATA Structure](../../mfc/reference/afx-global-data-structure.md).  
   
-##  <a name="onglobalfontschanged"></a>CMFCToolBarDateTimeCtrl::OnGlobalFontsChanged  
- Вызывается инфраструктурой при изменении глобальных шрифта.  
+##  <a name="onglobalfontschanged"></a>  CMFCToolBarDateTimeCtrl::OnGlobalFontsChanged  
+ Called by the framework when the global font has changed.  
   
 ```  
 virtual void OnGlobalFontsChanged();
 ```  
   
-### <a name="remarks"></a>Примечания  
- Этот метод расширяет реализацию базового класса ( [CMFCToolBarButton::OnGlobalFontsChanged](../../mfc/reference/cmfctoolbarbutton-class.md#onglobalfontschanged)) путем изменения шрифта элемента управления, глобальные шрифта.  
+### <a name="remarks"></a>Remarks  
+ This method extends the base class implementation ( [CMFCToolBarButton::OnGlobalFontsChanged](../../mfc/reference/cmfctoolbarbutton-class.md#onglobalfontschanged)) by changing the font of the control to that of the global font.  
   
- Дополнительные сведения о глобальных параметров, доступных для вашего приложения, в разделе [структура AFX_GLOBAL_DATA](../../mfc/reference/afx-global-data-structure.md).  
+ For more information about global options that are available to your application, see [AFX_GLOBAL_DATA Structure](../../mfc/reference/afx-global-data-structure.md).  
   
-##  <a name="onmove"></a>CMFCToolBarDateTimeCtrl::OnMove  
- Вызывается инфраструктурой при перемещении родительского инструментов.  
+##  <a name="onmove"></a>  CMFCToolBarDateTimeCtrl::OnMove  
+ Called by the framework when the parent toolbar moves.  
   
 ```  
 virtual void OnMove();
 ```  
   
-### <a name="remarks"></a>Примечания  
- Этот метод переопределяет реализацию класса по умолчанию ( [CMFCToolBarButton::OnMove](../../mfc/reference/cmfctoolbarbutton-class.md#onmove)), обновив положение внутренний `CMFCToolBarDateTimeCtrlImpl` объекта.  
+### <a name="remarks"></a>Remarks  
+ This method overrides the default class implementation ( [CMFCToolBarButton::OnMove](../../mfc/reference/cmfctoolbarbutton-class.md#onmove)) by updating the position of the internal `CMFCToolBarDateTimeCtrlImpl` object.  
   
-##  <a name="onshow"></a>CMFCToolBarDateTimeCtrl::OnShow  
- Вызывается инфраструктурой при кнопка становится видимым или невидимым.  
+##  <a name="onshow"></a>  CMFCToolBarDateTimeCtrl::OnShow  
+ Called by the framework when the button becomes visible or invisible.  
   
 ```  
 virtual void OnShow(BOOL bShow);
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
  [in] `bShow`  
- Указывает, видима ли кнопка. Если этот параметр равен `TRUE`, то кнопка отображается. В противном случае — кнопка не отображается.  
+ Specifies whether the button is visible. If this parameter is `TRUE`, the button is visible. Otherwise, the button is not visible.  
   
-### <a name="remarks"></a>Примечания  
- Этот метод расширяет реализацию базового класса ( [CMFCToolBarButton::OnShow](../../mfc/reference/cmfctoolbarbutton-class.md#onshow)), отображая кнопку, если `bShow` — `TRUE`. В противном случае этот метод скрывает кнопку.  
+### <a name="remarks"></a>Remarks  
+ This method extends the base class implementation ( [CMFCToolBarButton::OnShow](../../mfc/reference/cmfctoolbarbutton-class.md#onshow)) by displaying the button if `bShow` is `TRUE`. Otherwise, this method hides the button.  
   
-##  <a name="onsize"></a>CMFCToolBarDateTimeCtrl::OnSize  
- Вызывается инфраструктурой при инструментов родительской изменении ее размера или положения и это изменение приводит к изменить размер кнопки.  
+##  <a name="onsize"></a>  CMFCToolBarDateTimeCtrl::OnSize  
+ Called by the framework when the parent toolbar changes its size or position and this change causes the button to change size.  
   
 ```  
 virtual void OnSize(int iSize);
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
  [in] `iSize`  
- Новая ширина кнопки в пикселях.  
+ The new width of the button, in pixels.  
   
-### <a name="remarks"></a>Примечания  
- Этот метод переопределяет реализацию класса по умолчанию ( [CMFCToolBarButton::OnSize](../../mfc/reference/cmfctoolbarbutton-class.md#onsize)), обновив размер и положение внутреннего `CMFCToolBarDateTimeCtrlImpl` объекта.  
+### <a name="remarks"></a>Remarks  
+ This method overrides the default class implementation ( [CMFCToolBarButton::OnSize](../../mfc/reference/cmfctoolbarbutton-class.md#onsize)) by updating the size and position of the internal `CMFCToolBarDateTimeCtrlImpl` object.  
   
-##  <a name="onupdatetooltip"></a>CMFCToolBarDateTimeCtrl::OnUpdateToolTip  
- Вызывается средой во время обновления инструментов родительской его текст всплывающей подсказки.  
+##  <a name="onupdatetooltip"></a>  CMFCToolBarDateTimeCtrl::OnUpdateToolTip  
+ Called by the framework when the parent toolbar updates its tooltip text.  
   
 ```  
 virtual BOOL OnUpdateToolTip(
@@ -472,27 +486,27 @@ virtual BOOL OnUpdateToolTip(
     CString& str);
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
  [in] `pWndParent`  
- Родительское окно.  
+ The parent window.  
   
  [in] `iButtonIndex`  
- Отсчитываемый от нуля индекс кнопки в родительской коллекции кнопки.  
+ The zero-based index of the button in the parent button collection.  
   
  [in] `wndToolTip`  
- Элемент управления, отображающий текст всплывающей подсказки.  
+ The control that displays the tooltip text.  
   
- [выходной] `str`  
- Объект `CString` объект, который получает обновленный подсказку.  
+ [out] `str`  
+ A `CString` object that receives the updated tooltip text.  
   
-### <a name="return-value"></a>Возвращаемое значение  
- Ненулевое значение, если метод обновляет текст всплывающей подсказки; в противном случае — 0.  
+### <a name="return-value"></a>Return Value  
+ Nonzero if the method updates the tooltip text; otherwise 0.  
   
-### <a name="remarks"></a>Примечания  
- Этот метод расширяет реализацию базового класса ( [CMFCToolBarButton::OnUpdateToolTip](../../mfc/reference/cmfctoolbarbutton-class.md#onupdatetooltip)), отображая текст всплывающей подсказки, связанный с кнопкой. Если кнопка не закреплена горизонтально, этот метод не выполняет никаких действий и возвращает `FALSE`.  
+### <a name="remarks"></a>Remarks  
+ This method extends the base class implementation ( [CMFCToolBarButton::OnUpdateToolTip](../../mfc/reference/cmfctoolbarbutton-class.md#onupdatetooltip)) by displaying the tooltip text that is associated with the button. If the button is not docked horizontally, this method does nothing and returns `FALSE`.  
   
-##  <a name="settime"></a>CMFCToolBarDateTimeCtrl::SetTime  
- Задает дату и время в элементе управления.  
+##  <a name="settime"></a>  CMFCToolBarDateTimeCtrl::SetTime  
+ Sets the time and date in the time picker control.  
   
 ```  
 BOOL SetTime(const COleDateTime& timeNew);
@@ -500,21 +514,21 @@ BOOL SetTime(const CTime* timeNew);
 BOOL SetTime(LPSYSTEMTIME pTimeNew=NULL);
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
  `[in] timeNew`  
- В первой версии ссылку на [COleDateTime класс](../../atl-mfc-shared/reference/coledatetime-class.md) , содержащий время, к которому будет установить элемент управления. Во второй версии указатель [CTime](../../atl-mfc-shared/reference/ctime-class.md) объект, который содержит время, к которому будет установить элемент управления.  
+ In the first version, a reference to a [COleDateTime Class](../../atl-mfc-shared/reference/coledatetime-class.md) object that contains the time to which the control will be set. In the second version, a pointer to a [CTime](../../atl-mfc-shared/reference/ctime-class.md) object that contains the time to which the control will be set.  
   
  `[in] pTimeNew`  
- Указатель на [SYSTEMTIME](http://msdn.microsoft.com/library/windows/desktop/ms724950) структуру, содержащую время, к которому будет установить элемент управления.  
+ A pointer to the [SYSTEMTIME](http://msdn.microsoft.com/library/windows/desktop/ms724950) structure that contains the time to which the control will be set.  
   
-### <a name="return-value"></a>Возвращаемое значение  
- Имеет ненулевое значение в случае успешного выполнения, иначе — 0.  
+### <a name="return-value"></a>Return Value  
+ Nonzero if successful; otherwise 0.  
   
-### <a name="remarks"></a>Примечания  
- Задает время в элемент управления выбора даты и времени путем вызова [CDateTimeCtrl::SetTime](../../mfc/reference/cdatetimectrl-class.md#settime).  
+### <a name="remarks"></a>Remarks  
+ Sets the time in a date and time picker control by calling [CDateTimeCtrl::SetTime](../../mfc/reference/cdatetimectrl-class.md#settime).  
   
-##  <a name="settimeall"></a>CMFCToolBarDateTimeCtrl::SetTimeAll  
- Задает дату и время в всем экземплярам элемента управления для выбора времени, указанному идентификатору команды.  
+##  <a name="settimeall"></a>  CMFCToolBarDateTimeCtrl::SetTimeAll  
+ Sets the time and date in all instances of the time picker control that have a specified command ID.  
   
 ```  
 static BOOL SetTimeAll(
@@ -530,27 +544,27 @@ static BOOL SetTimeAll(
     LPSYSTEMTIME pTimeNew=NULL);
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
  `[in] uiCmd`  
- Указывает идентификатор команды кнопки панели инструментов.  
+ Specifies a toolbar button's command ID.  
   
  `[in] timeNew`  
- В первой версии [COleDateTime класс](../../atl-mfc-shared/reference/coledatetime-class.md) , содержащий время, к которому будет установить элемент управления. Во второй версии указатель [CTime](../../atl-mfc-shared/reference/ctime-class.md) объект, который содержит время, к которому будет установить элемент управления.  
+ In the first version, a [COleDateTime Class](../../atl-mfc-shared/reference/coledatetime-class.md) object that contains the time to which the control will be set. In the second version, a pointer to a [CTime](../../atl-mfc-shared/reference/ctime-class.md) object that contains the time to which the control will be set.  
   
  `[in] pTimeNew`  
- Указатель на [SYSTEMTIME](http://msdn.microsoft.com/library/windows/desktop/ms724950) структуру, содержащую время, к которому будет установить элемент управления.  
+ A pointer to the [SYSTEMTIME](http://msdn.microsoft.com/library/windows/desktop/ms724950) structure that contains the time to which the control will be set.  
   
-### <a name="return-value"></a>Возвращаемое значение  
- Имеет ненулевое значение в случае успешного выполнения, иначе — 0.  
+### <a name="return-value"></a>Return Value  
+ Nonzero if successful; otherwise 0.  
   
-### <a name="remarks"></a>Примечания  
- Ищет заданный идентификатор команды кнопки на панели управления и задает время в элементе управления выбора даты и времени путем вызова [CMFCToolBarDateTimeCtrl::SetTime](#settime).  
+### <a name="remarks"></a>Remarks  
+ Looks for a toolbar button with the specified command ID and sets the time in a date and time picker control by calling [CMFCToolBarDateTimeCtrl::SetTime](#settime).  
   
-## <a name="see-also"></a>См. также  
- [Диаграмма иерархии](../../mfc/hierarchy-chart.md)   
- [Классы](../../mfc/reference/mfc-classes.md)   
- [Класс CMFCToolBarButton](../../mfc/reference/cmfctoolbarbutton-class.md)   
- [Пошаговое руководство: Добавление элементов управления в панели инструментов](../../mfc/walkthrough-putting-controls-on-toolbars.md)
+## <a name="see-also"></a>See Also  
+ [Hierarchy Chart](../../mfc/hierarchy-chart.md)   
+ [Classes](../../mfc/reference/mfc-classes.md)   
+ [CMFCToolBarButton Class](../../mfc/reference/cmfctoolbarbutton-class.md)   
+ [Walkthrough: Putting Controls On Toolbars](../../mfc/walkthrough-putting-controls-on-toolbars.md)
 
 
 

@@ -1,56 +1,74 @@
 ---
-title: "Шаги для организации типичного клиентского приложения FTP | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "FTP (протокол передачи данных)"
-  - "FTP (протокол передачи данных), клиентские приложения"
-  - "Интернет-приложения, клиентские приложения FTP"
-  - "клиентские интернет-приложения, таблица FTP"
-  - "WinInet - классы, FTP"
+title: Steps in a Typical FTP Client Application | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- Internet client applications [MFC], FTP table
+- FTP (File Transfer Protocol)
+- WinInet classes [MFC], FTP
+- FTP (File Transfer Protocol) [MFC], client applications
+- Internet applications [MFC], FTP client applications
 ms.assetid: 70bed7b5-6040-40d1-bc77-702e63a698f2
 caps.latest.revision: 11
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 7
----
-# Шаги для организации типичного клиентского приложения FTP
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: d1607e23d88400afb2a3f5c3d6e6c2f52382b2bb
+ms.contentlocale: ru-ru
+ms.lasthandoff: 09/12/2017
 
-Типичное FTP клиентское приложение создает объект [CInternetSession](../Topic/CInternetSession%20Class.md) и [CFtpConnection](../mfc/reference/cftpconnection-class.md).  Обратите внимание, что эти классы MFC WinInet не так, элемент управления параметры типа прокси. IIS;  
+---
+# <a name="steps-in-a-typical-ftp-client-application"></a>Steps in a Typical FTP Client Application
+A typical FTP client application creates a [CInternetSession](../mfc/reference/cinternetsession-class.md) and a [CFtpConnection](../mfc/reference/cftpconnection-class.md) object. Note that these MFC WinInet classes do not actually control the proxy type settings; IIS does.  
   
- Также см. в следующих статьях базы знаний Майкрософт:  
+ Also, see these Knowledge Base articles:  
   
--   HOWTO: FTP с прокси\-сервером CERN\- с использованием API WinInet \(идентификатор статьи: Q166961\)  
+-   HOWTO: FTP with CERN-Based Proxy Using WinInet API (Article ID: Q166961)  
   
--   ПРИМЕР: FTP с прокси\-сервером CERN\-, защищенной паролем \(идентификатор статьи: Q216214\)  
+-   SAMPLE: FTP with CERN-Based Password Protected Proxy (Article ID: Q216214)  
   
--   Диспетчера служб Интернета невозможности отображения установленные службы прокси \(идентификатор статьи: Q216802\)  
+-   Internet Services Manager Fails to Show Installed Proxy Services (Article ID: Q216802)  
   
- В следующей таблице приведены шаги, могут выполняться обычным клиентском приложении FTP.  
+ The following table shows the steps you might perform in a typical FTP client application.  
   
-|Целью является|Действия, предпринимаемые|Произведенный эффект|  
-|--------------------|-------------------------------|--------------------------|  
-|Начать сеанс FTP.|Создайте объект [CInternetSession](../Topic/CInternetSession%20Class.md).|Инициализирует WinInet и к серверу.|  
-|Соединения с ftp\-сервером.|Используйте [CInternetSession::GetFtpConnection](../Topic/CInternetSession::GetFtpConnection.md).|Возвращает объект [CFtpConnection](../mfc/reference/cftpconnection-class.md).|  
-|Перейдите в новый каталог FTP на сервере.|Используйте [CFtpConnection::SetCurrentDirectory](../Topic/CFtpConnection::SetCurrentDirectory.md).|Перейдите в данный момент подключен к на сервер.|  
-|Найдите первый файл в каталоге FTP.|Используйте [CFtpFileFind::FindFile](../Topic/CFtpFileFind::FindFile.md).|Находит первый файл.  Возвращает ЛОЖНОЕ, если отсутствуют файлы не найдены.|  
-|Найдите следующий файл в каталоге FTP.|Используйте [CFtpFileFind::FindNextFile](../Topic/CFtpFileFind::FindNextFile.md).|Находит следующий файл.  Возвращает ЛОЖНОЕ, если файл не найден.|  
-|Открытие файла " **FindFile** или `FindNextFile` для чтения или записи.|Используйте [CFtpConnection::OpenFile](../Topic/CFtpConnection::OpenFile.md), используя имя файла, [FindFile](../Topic/CFtpFileFind::FindFile.md) или [FindNextFile](../Topic/CFtpFileFind::FindNextFile.md).|Файл будет открыт на сервере для чтения или записи.  Возвращает объект [CInternetFile](../mfc/reference/cinternetfile-class.md).|  
-|Чтение и запись в файл.|Используйте [CInternetFile::Read](../Topic/CInternetFile::Read.md) или [CInternetFile::Write](../Topic/CInternetFile::Write.md).|Считывает или записывает указанное число байтов, используя буфер был предоставлен.|  
-|Обработка исключений.|Используется класс [CInternetException](../mfc/reference/cinternetexception-class.md).|Обрабатывает все общие типы исключений Интернета.|  
-|Завершение сеанса FTP.|Dispose объекта [CInternetSession](../Topic/CInternetSession%20Class.md).|Автоматически очищает handles и открытие подключения файлов.|  
+|Your goal|Actions you take|Effects|  
+|---------------|----------------------|-------------|  
+|Begin an FTP session.|Create a [CInternetSession](../mfc/reference/cinternetsession-class.md) object.|Initializes WinInet and connects to server.|  
+|Connect to an FTP server.|Use [CInternetSession::GetFtpConnection](../mfc/reference/cinternetsession-class.md#getftpconnection).|Returns a [CFtpConnection](../mfc/reference/cftpconnection-class.md) object.|  
+|Change to a new FTP directory on the server.|Use [CFtpConnection::SetCurrentDirectory](../mfc/reference/cftpconnection-class.md#setcurrentdirectory).|Changes the directory you are currently connected to on the server.|  
+|Find the first file in the FTP directory.|Use [CFtpFileFind::FindFile](../mfc/reference/cftpfilefind-class.md#findfile).|Finds the first file. Returns FALSE if no files are found.|  
+|Find the next file in the FTP directory.|Use [CFtpFileFind::FindNextFile](../mfc/reference/cftpfilefind-class.md#findnextfile).|Finds the next file. Returns FALSE if the file is not found.|  
+|Open the file found by **FindFile** or `FindNextFile` for reading or writing.|Use [CFtpConnection::OpenFile](../mfc/reference/cftpconnection-class.md#openfile), using the file name returned by [FindFile](../mfc/reference/cftpfilefind-class.md#findfile) or [FindNextFile](../mfc/reference/cftpfilefind-class.md#findnextfile).|Opens the file on the server for reading or writing. Returns a [CInternetFile](../mfc/reference/cinternetfile-class.md) object.|  
+|Read from or write to the file.|Use [CInternetFile::Read](../mfc/reference/cinternetfile-class.md#read) or [CInternetFile::Write](../mfc/reference/cinternetfile-class.md#write).|Reads or writes the specified number of bytes, using a buffer you supply.|  
+|Handle exceptions.|Use the [CInternetException](../mfc/reference/cinternetexception-class.md) class.|Handles all common Internet exception types.|  
+|End the FTP session.|Dispose of the [CInternetSession](../mfc/reference/cinternetsession-class.md) object.|Automatically cleans up open file handles and connections.|  
   
-## См. также  
- [Расширения Интернета Win32 \(WinInet\)](../mfc/win32-internet-extensions-wininet.md)   
- [Необходимые компоненты для клиентских классов в Интернете](../Topic/Prerequisites%20for%20Internet%20Client%20Classes.md)   
- [Создание клиентских приложений в Интернете с использованием классов MFC WinInet](../mfc/writing-an-internet-client-application-using-mfc-wininet-classes.md)
+## <a name="see-also"></a>See Also  
+ [Win32 Internet Extensions (WinInet)](../mfc/win32-internet-extensions-wininet.md)   
+ [Prerequisites for Internet Client Classes](../mfc/prerequisites-for-internet-client-classes.md)   
+ [Writing an Internet Client Application Using MFC WinInet Classes](../mfc/writing-an-internet-client-application-using-mfc-wininet-classes.md)
+

@@ -1,5 +1,5 @@
 ---
-title: "Класс tuple | Документы Майкрософт"
+title: tuple Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -9,7 +9,6 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
-- tuple
 - tuple/std::tuple
 - tuple/std::tuple::operator=
 dev_langs:
@@ -35,17 +34,17 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
-ms.openlocfilehash: 29ff622d6411885682aa727a8040a3542f013d47
+ms.translationtype: MT
+ms.sourcegitcommit: 5d026c375025b169d5db8445cbb52c0c917b2d8d
+ms.openlocfilehash: 2b03aa8f21f3f9ee5dcbd34e44313df4fc345ea2
 ms.contentlocale: ru-ru
-ms.lasthandoff: 04/29/2017
+ms.lasthandoff: 09/09/2017
 
 ---
-# <a name="tuple-class"></a>Класс tuple
-Создает последовательность элементов фиксированной длины.  
+# <a name="tuple-class"></a>tuple Class
+Wraps a fixed-length sequence of elements.  
   
-## <a name="syntax"></a>Синтаксис  
+## <a name="syntax"></a>Syntax  
 ```  
 class tuple {  
 public:  
@@ -140,13 +139,13 @@ The tuples in the vector are
 ( 3, 0.033, three ).  
 ```  
   
-## <a name="requirements"></a>Требования  
- **Заголовок:** \<tuple>  
+## <a name="requirements"></a>Requirements  
+ **Header:** \<tuple>  
   
- **Пространство имен:** std  
+ **Namespace:** std  
   
 ##  <a name="op_eq"></a>  tuple::operator=  
- Назначает объект `tuple`.  
+ Assigns a `tuple` object.  
   
 ```  
 tuple& operator=(const tuple& right);
@@ -163,19 +162,19 @@ template <class U1, class U2>
    tuple& operator=(pair<U1, U2>&& right);
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
  `UN`  
- Тип n-го скопированного элемента кортежа.  
+ The type of the Nth copied tuple element.  
   
  `right`  
- Кортеж, из которого выполняется копирование.  
+ The tuple to copy from.  
   
-### <a name="remarks"></a>Примечания  
- Первые два оператора-члена назначают элементы `right` соответствующим элементам `*this`. Третий оператор-член назначает `right.first` элементу с индексом 0 в `*this` и `right.second` — элементу с индексом 1. Все три оператора-члена возвращают значение `*this`.  
+### <a name="remarks"></a>Remarks  
+ The first two member operators assign the elements of `right` to the corresponding elements of `*this`. The third member operator assigns `right.first` to the element at index 0 of `*this` and `right.second` to the element at index 1. All three member operators return `*this`.  
   
- Остальные операторы-члены являются аналогами более ранних версий, но с [деклараторами ссылок rvalue: &&](../cpp/rvalue-reference-declarator-amp-amp.md).  
+ The remaining member operators are analogs to earlier ones, but with [Rvalue Reference Declarator: &&](../cpp/rvalue-reference-declarator-amp-amp.md).  
   
-### <a name="example"></a>Пример  
+### <a name="example"></a>Example  
   
 ```cpp  
 // std__tuple__tuple_operator_as.cpp   
@@ -226,25 +225,25 @@ x 4
 ```  
   
 ##  <a name="tuple_swap"></a>  tuple:swap  
- Обмен элементами между двумя кортежами.  
+ Exchanges the elements of two tuples.  
   
 ```  
 template <class... Types>  
    void swap(tuple<Types...&> left, tuple<Types...&> right);
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
   
-|Параметр|Описание|  
+|Parameter|Description|  
 |---------------|-----------------|  
-|`left`|Кортеж, элементы которого должны быть заменены элементами кортежа `right`.|  
-|`right`|Кортеж, элементы которого должны быть заменены элементами кортежа `left`.|  
+|`left`|A tuple whose elements are to be exchanged with those of the tuple `right`.|  
+|`right`|A tuple whose elements are to be exchanged with those of the tuple `left`.|  
   
-### <a name="remarks"></a>Примечания  
- Функция выполняет `left.swap(right)`.  
+### <a name="remarks"></a>Remarks  
+ The function executes `left.swap(right)`.  
   
 ##  <a name="tuple"></a>  tuple::tuple  
- Создает объект `tuple`.  
+ Constructs a `tuple` object.  
   
 ```  
 constexpr tuple();
@@ -267,25 +266,25 @@ template <class U1, class U2>
    constexpr tuple(pair<U1, U2>&&);
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
  `UN`  
- Тип n-го скопированного элемента кортежа.  
+ The type of the Nth copied tuple element.  
   
  `right`  
- Кортеж, из которого выполняется копирование.  
+ The tuple to copy from.  
   
-### <a name="remarks"></a>Примечания  
- Первый конструктор создает объект, элементы которого создаются по умолчанию.  
+### <a name="remarks"></a>Remarks  
+ The first constructor constructs an object whose elements are default constructed.  
   
- Второй конструктор создает объект, элементы которого представляют собой копии, созданные из аргументов `P1`, `P2`, ..., `PN`, при этом каждый `Pi` инициализирует элемент с индексом `i - 1`.  
+ The second constructor constructs an object whose elements are copy constructed from the arguments `P1`, `P2`, ..., `PN` with each `Pi` initializing the element at index `i - 1`.  
   
- Третий и четвертый конструкторы создают объект, элементы которого представляют собой копии, созданные на основе соответствующего элемента `right`.  
+ The third and fourth constructors construct an object whose elements are copy constructed from the corresponding element of `right`.  
   
- Пятый конструктор создает объект, элемент которого с индексом 0 создан с копированием на основе `right.first`, а элемент с индексом 1 — создан копированием из `right.second`.  
+ The fifth constructor constructs an object whose element at index 0 is copy constructed from `right.first` and whose element at index 1 is copy constructed from `right.second`.  
   
- Остальные конструкторы являются аналогами более ранних версий, но с [декларатором ссылок Rvalue: &&](../cpp/rvalue-reference-declarator-amp-amp.md).  
+ The remaining constructors are analogs to earlier ones, but with [Rvalue Reference Declarator: &&](../cpp/rvalue-reference-declarator-amp-amp.md).  
   
-### <a name="example"></a>Пример  
+### <a name="example"></a>Example  
   
 ```cpp  
 // std__tuple__tuple_tuple.cpp   
@@ -354,7 +353,7 @@ int main()
  4 5 6 7  
 ```  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>See Also  
  [\<tuple>](../standard-library/tuple.md)   
  [make_tuple](../standard-library/tuple-functions.md#make_tuple)
 

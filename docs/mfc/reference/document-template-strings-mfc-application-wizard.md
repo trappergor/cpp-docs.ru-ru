@@ -1,5 +1,5 @@
 ---
-title: "Мастер приложений MFC строки шаблонов документов | Документы Microsoft"
+title: Document Template Strings, MFC Application Wizard | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -33,37 +33,37 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
-ms.openlocfilehash: 2feacba30f43ddcdde8250c21aca3d6b835307d5
+ms.translationtype: MT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 3aeaccbb050f93fb366f7352f8df0276e0327434
 ms.contentlocale: ru-ru
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 09/12/2017
 
 ---
-# <a name="document-template-strings-mfc-application-wizard"></a>Страница "Строки шаблонов документов" мастера приложений MFC
-На этой странице мастера приложений MFC предоставляются или дополняются следующие параметры для управления документами и локализации. Строки шаблонов документов доступны для приложений, включающих **поддержка архитектуры документ/представление** в [тип приложения](../../mfc/reference/application-type-mfc-application-wizard.md). Они недоступны для диалоговых окон. Поскольку большая часть строк шаблонов документов видимым и используются пользователями приложения, они переводятся на **язык ресурсов** в **тип приложения** мастера.  
+# <a name="document-template-strings-mfc-application-wizard"></a>Document Template Strings, MFC Application Wizard
+In this page of the MFC Application Wizard, provide or refine the following options to help with document management and localization. Document template strings are available for applications that include **Document/view architecture support** in the [Application Type](../../mfc/reference/application-type-mfc-application-wizard.md). They are not available for dialog boxes. Because most document template strings are visible and used by the application's users, they are localized into the **Resource language** indicated in the **Application Type** page of the wizard.  
   
- **Нелокализованные строки**  
- Применяется к приложениям, создающим пользовательские документы. Пользователям можно открыть, печатать и сохранять документы, легко Если указать расширение файла и идентификатор типа файла. Эти элементы не локализуются, поскольку они используются системой, а не пользователем.  
+ **Nonlocalized strings**  
+ Applies to applications that create user documents. Users can open, print, and save documents more easily if you provide a file extension and a file type ID. These items are not localized because they are used by the system rather than by the user.  
   
-|Параметр|Описание|  
+|Option|Description|  
 |------------|-----------------|  
-|**Расширение файла**|Задает расширение файла, сопоставленное с документами, которые сохраняет пользователь данного приложения. Например если проект называется Widget, можно назвать .wgt расширение файла. (При вводе расширения файла не нужно указывать период).<br /><br /> Если указать расширение файла обозревателя можно распечатать документы без запуска приложения после перемещения значка документа на значок принтера.<br /><br /> Если расширение не задано, пользователь должен указать расширение файла при сохранении файлов. Мастер не предоставляет расширение файла по умолчанию.|  
-|**Идентификатор типа файла**|Задает метку для данного типа документа в системном реестре.|  
+|**File extension**|Sets the file extension associated with the documents that the user saves when using the application. For example, if your project is named Widget, you could name the file extension .wgt. (When you enter the file extension, do not include the period.)<br /><br /> If you provide a file extension, the Explorer can print your application's documents without launching your application when the user drops the document icon on a printer icon.<br /><br /> If you do not specify an extension, a user must specify a file extension when saving files. The wizard does not provide a default file extension.|  
+|**File type ID**|Sets the label for your document type in the system registry.|  
   
- **Локализованные строки**  
- Создает строки, связанные с приложением и документом, считываются и используются пользователями приложения, поэтому эти строки локализуются.  
+ **Localized strings**  
+ Produces strings associated with the application and document that are read and used by the application's users, so the strings are localized.  
   
-|Параметр|Описание|  
+|Option|Description|  
 |------------|-----------------|  
-|**Язык**|Указывает язык, в котором отображаются строки для всех полей в разделе **локализованные строки**. Чтобы изменить значение в этом поле, выберите соответствующий язык в списке **язык ресурсов** в [тип приложения](../../mfc/reference/application-type-mfc-application-wizard.md) мастера приложений MFC.|  
-|**Заголовок главного фрейма**|Задает текст, отображаемый в верхней части главного фрейма приложения. По умолчанию имя проекта.|  
-|**Имя типа документа**|Определяет тип документа, в котором могут быть сгруппированы документа приложения. По умолчанию имя проекта. Изменение значения по умолчанию не изменяет никакие другие параметры в этом диалоговом окне.|  
-|**Имя фильтра**|Задает имя, которое пользователи смогут указывать для поиска файлов заданного типа. Этот параметр доступен из **файлы типа** и **тип** вариантов стандартных Windows **откройте** и **Сохранить как** диалоговые окна. По умолчанию, имя проекта, а также файлы, следуют указанное в поле **расширение файла**. Например, если проект называется Widget, а файл имеет расширение WGT, то поле **имя фильтра** — файлы Widget (*.wgt) по умолчанию.|  
-|**Короткое имя создаваемого файла**|Задает имя, отображаемое в стандартных Windows `New` диалоговое окно, если существует более одного нового шаблона документа. Если приложение является [сервера автоматизации](../../mfc/automation-servers.md), это имя используется в качестве краткого имени объекта автоматизации. По умолчанию имя проекта.|  
-|**Длинное имя типа файла**|Задает имя типа файла в системном реестре. Если приложение является сервером автоматизации, это имя используется в качестве длинного имени объекта автоматизации. По умолчанию это имя проекта плюс. Документ.|  
+|**Language**|Indicates the language in which strings are displayed for all the boxes under **Localized strings**. To change the value in this box, select the appropriate language under **Resource language** in the [Application Type](../../mfc/reference/application-type-mfc-application-wizard.md) page of the MFC Application Wizard.|  
+|**Main frame caption**|Sets the text appearing at the top of the main application frame. By default, the project name.|  
+|**Doc type name**|Identifies the type of document under which a document of the application can be grouped. By default, the project name. Changing the default does not change any other options in this dialog box.|  
+|**Filter name**|Sets the name your users can indicate to find files of your file type. This option is available from the **Files of type** and **Save as type** options in the standard Windows **Open** and **Save as** dialog boxes. By default, the project name plus Files, followed by the extension provided in **File extension**. For example, if your project is named Widget, and the file extension is .wgt, the **Filter name** is Widget Files (*.wgt) by default.|  
+|**File new short name**|Sets the name appearing in the standard Windows `New` dialog box, if there is more than one new document template. If your application is an [Automation server](../../mfc/automation-servers.md), this name is used as the short name of your Automation object. By default, the project name.|  
+|**File type long name**|Sets the file type name in the system registry. If your application is an Automation server, this name is used as the long name of your Automation object. By default, the project name plus .Document.|  
   
-## <a name="see-also"></a>См. также  
- [Мастер приложений MFC](../../mfc/reference/mfc-application-wizard.md)
+## <a name="see-also"></a>See Also  
+ [MFC Application Wizard](../../mfc/reference/mfc-application-wizard.md)
 
 

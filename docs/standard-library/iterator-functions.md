@@ -1,5 +1,5 @@
 ---
-title: "Функции &lt;iterator&gt; | Документы Майкрософт"
+title: '&lt;iterator&gt; functions | Microsoft Docs'
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -24,14 +24,29 @@ f1_keywords:
 ms.assetid: 4a57c9a3-7e36-411f-8655-e0be2eec88e7
 caps.latest.revision: 16
 manager: ghogen
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
-ms.openlocfilehash: 171fd87608b0afed1ebb0c2ae82d6118adff727f
+helpviewer_keywords:
+- std::advance [C++]
+- std::back_inserter [C++]
+- std::begin [C++]
+- std::cbegin [C++]
+- std::cend [C++]
+- std::distance [C++]
+- std::end [C++]
+- std::front_inserter [C++]
+- std::inserter [C++]
+- std::make_checked_array_iterator [C++]
+- std::make_move_iterator [C++]
+- std::make_unchecked_array_iterator [C++]
+- std::next [C++]
+- std::prev [C++]
+ms.translationtype: MT
+ms.sourcegitcommit: 5d026c375025b169d5db8445cbb52c0c917b2d8d
+ms.openlocfilehash: 8bb8fc00d90777a6ce2cfaa3a2e6db879a6e28c9
 ms.contentlocale: ru-ru
-ms.lasthandoff: 04/29/2017
+ms.lasthandoff: 09/09/2017
 
 ---
-# <a name="ltiteratorgt-functions"></a>Функции &lt;iterator&gt;
+# <a name="ltiteratorgt-functions"></a>&lt;iterator&gt; functions
 ||||  
 |-|-|-|  
 |[advance](#advance)|[back_inserter](#back_inserter)|[begin](#begin)|  
@@ -41,7 +56,7 @@ ms.lasthandoff: 04/29/2017
 |[next](#next)|[prev](#prev)|  
   
 ##  <a name="advance"></a>  advance  
- Увеличивает итератор на указанное количество позиций.  
+ Increments an iterator by a specified number of positions.  
   
 ```  
 template <class InputIterator, class Distance>  
@@ -50,21 +65,21 @@ void advance(
     Distance Off);
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
  `InIt`  
- Итератор, который должен увеличен, должен удовлетворять требованиям для итератора ввода.  
+ The iterator that is to be incremented and that must satisfy the requirements for an input iterator.  
   
  `Off`  
- Целочисленный тип, который можно преобразовать в тип отличия итератора, указывающий число приращений позиции итератора, необходимо сдвинуть вперед.  
+ An integral type that is convertible to the iterator's difference type and that specifies the number of increments the position of the iterator is to be advanced.  
   
-### <a name="remarks"></a>Примечания  
- Диапазон сдвижения должен быть несингулярным, а итераторы должны поддерживать удаление ссылок или находиться за пределами диапазона.  
+### <a name="remarks"></a>Remarks  
+ The range advanced through must be nonsingular, where the iterators must be dereferenceable or past the end.  
   
- Если **InputIterator** является двунаправленным итератором, значение `Off` может быть отрицательным. Если **InputIterator** является итератором ввода или прямым итератором, свойство `Off` должно быть неотрицательным.  
+ If the **InputIterator** satisfies the requirements for a bidirectional iterator type, then `Off` may be negative. If **InputIterator** is an input or forward iterator type, `Off` must be nonnegative.  
   
- Функция продвижения вперед обладает постоянным коэффициентом сложности, если **InputIterator** удовлетворяет требованиям для итератора произвольного доступа; в противном случае она имеет линейный коэффициент сложности и поэтому потенциально является ресурсоемкой.  
+ The advance function has constant complexity when **InputIterator** satisfies the requirements for a random-access iterator; otherwise, it has linear complexity and so is potentially expensive.  
   
-### <a name="example"></a>Пример  
+### <a name="example"></a>Example  
   
 ```cpp  
 // iterator_advance.cpp  
@@ -112,24 +127,24 @@ LPOS is moved 3 steps back to point to the 2nd element: 2.
 ```  
   
 ##  <a name="back_inserter"></a>  back_inserter  
- Создает итератор, может вставлять элементы с обратной стороны указанного контейнера.  
+ Creates an iterator that can insert elements at the back of a specified container.  
   
 ```  
 template <class Container>  
 back_insert_iterator<Container> back_inserter(Container& _Cont);
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
  `_Cont`  
- Контейнер, в который будет выполняться вставка с обратной стороны.  
+ The container into which the back insertion is to be executed.  
   
-### <a name="return-value"></a>Возвращаемое значение  
- `back_insert_iterator`, связанный с объектом-контейнером `_Cont`.  
+### <a name="return-value"></a>Return Value  
+ A `back_insert_iterator` associated with the container object `_Cont`.  
   
-### <a name="remarks"></a>Примечания  
- В стандартной библиотеке C++ аргумент должен ссылаться на один из трех контейнеров последовательности, которые имеют функцию-член `push_back`: [класс deque](../standard-library/deque-class.md), [класс list](../standard-library/list-class.md) или [класс vector](../standard-library/vector-class.md).  
+### <a name="remarks"></a>Remarks  
+ Within the C++ Standard Library, the argument must refer to one of the three sequence containers that have the member function `push_back`: [deque Class](../standard-library/deque-class.md), [list Class](../standard-library/list-class.md), or [vector Class](../standard-library/vector-class.md).  
   
-### <a name="example"></a>Пример  
+### <a name="example"></a>Example  
   
 ```cpp  
 // iterator_back_inserter.cpp  
@@ -179,7 +194,7 @@ After the insertions, the vector vec is: ( 0 1 2 30 40 500 600 ).
 ```  
   
 ##  <a name="begin"></a>  begin  
- Извлекает итератор для первого элемента в указанном контейнере.  
+ Retrieves an iterator to the first element in a specified container.  
   
 ```  
 template <class Container>  
@@ -194,20 +209,20 @@ template <class Ty, class Size>
 Ty *begin(Ty (& array)[Size]);
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
  `cont`  
- Контейнер.  
+ A container.  
   
  `array`  
- Массив объектов перечисления `Ty`.  
+ An array of objects of type `Ty`.  
   
-### <a name="return-value"></a>Возвращаемое значение  
- Первые две функции шаблона возвращают `cont.begin()`. Первая функция не является константой; вторая является константой.  
+### <a name="return-value"></a>Return Value  
+ The first two template functions return `cont.begin()`. The first function is non-constant; the second one is constant.  
   
- Третья функция шаблона возвращает `array`.  
+ The third template function returns `array`.  
   
-### <a name="example"></a>Пример  
-  Рекомендуется использовать эту же функцию шаблона вместо члена контейнера `begin()`, если требуется более стандартное поведение.  
+### <a name="example"></a>Example  
+  We recommend that you use this template function in place of container member `begin()` when more generic behavior is required.  
   
 ```cpp  
 // cl.exe /EHsc /nologo /W4 /MTd   
@@ -259,7 +274,7 @@ Output:
 160 106 80 70 53 40 35 23 20 16 10 8 5 4 2 1  
 ```  
   
-  Функция `reverse_sort` поддерживает контейнеры любого типа, кроме обычных массивов, поскольку она обращается к версиям `begin()`, не являющимся членами. Если `reverse_sort` было написано для использования члена контейнера `begin()`, выполните следующие действия.  
+  The function `reverse_sort` supports containers of any kind, in addition to regular arrays, because it calls the non-member version of `begin()`. If `reverse_sort` were coded to use the container member `begin()`:  
   
 ```cpp  
 template <typename C>  
@@ -272,14 +287,14 @@ void reverse_sort(C& c) {
 }  
 ```  
   
- Тогда отправка массива в данный контейнер вызовет следующую ошибку компилятора:  
+ Then sending an array to it would cause this compiler error:  
   
 ```  
 error C2228: left of '.begin' must have class/struct/union  
 ```  
   
 ##  <a name="cbegin"></a>  cbegin  
- Извлекает итератор const для первого элемента в указанном контейнере.  
+ Retrieves a const iterator to the first element in a specified container.  
   
 ```  
 template <class Container>  
@@ -287,17 +302,17 @@ auto cbegin(const Container& cont)   `
    -> decltype(cont.begin());
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
  `cont`  
- Контейнер или initializer_list.  
+ A container or initializer_list.  
   
-### <a name="return-value"></a>Возвращаемое значение  
- Константа `cont.begin()`.  
+### <a name="return-value"></a>Return Value  
+ A constant `cont.begin()`.  
   
-### <a name="remarks"></a>Примечания  
- Эта функция работает со всеми контейнерами стандартной библиотеки С++ и с [initializer_list](../standard-library/initializer-list-class.md).  
+### <a name="remarks"></a>Remarks  
+ This function works with all C++ Standard Library containers and with [initializer_list](../standard-library/initializer-list-class.md).  
   
- Эту функцию-член можно использовать вместо функции шаблона `begin()`, чтобы гарантировать, что возвращаемое значение будет `const_iterator`. Обычно используется вместе с ключевым словом вывода типа [auto](../cpp/auto-cpp.md), как показано в следующем примере. В этом примере предположим, что `Container` является изменяемым контейнером (не `const`) или `initializer_list` любого типа, который поддерживает `begin()` и `cbegin()`.  
+ You can use this member function in place of the `begin()` template function to guarantee that the return value is `const_iterator`. Typically, it's used in conjunction with the [auto](../cpp/auto-cpp.md) type deduction keyword, as shown in the following example. In the example, consider `Container` to be a modifiable (non- `const`) container or `initializer_list` of any kind that supports `begin()` and `cbegin()`.  
   
 ```cpp  
 auto i1 = Container.begin();
@@ -308,7 +323,7 @@ auto i2 = Container.cbegin();
 ```  
   
 ##  <a name="cend"></a>  cend  
- Извлекает итератор const для элемента, следующего за последним элементом в указанном контейнере.  
+ Retrieves a const iterator to the element that follows the last element in the specified container.  
   
 ```  
 template <class Container>  
@@ -316,17 +331,17 @@ auto cend(const Container& cont)   `
    -> decltype(cont.end());
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
  `cont`  
- Контейнер или initializer_list.  
+ A container or initializer_list.  
   
-### <a name="return-value"></a>Возвращаемое значение  
- Константа `cont.end()`.  
+### <a name="return-value"></a>Return Value  
+ A constant `cont.end()`.  
   
-### <a name="remarks"></a>Примечания  
- Эта функция работает со всеми контейнерами стандартной библиотеки С++ и с [initializer_list](../standard-library/initializer-list-class.md).  
+### <a name="remarks"></a>Remarks  
+ This function works with all C++ Standard Library containers and with [initializer_list](../standard-library/initializer-list-class.md).  
   
- Эту функцию-член можно использовать вместо функции шаблона [end()](../standard-library/iterator-functions.md#end), чтобы гарантировать, что возвращаемое значение будет `const_iterator`. Обычно используется вместе с ключевым словом вывода типа [auto](../cpp/auto-cpp.md), как показано в следующем примере. В этом примере предположим, что `Container` является изменяемым контейнером (не `const`) или `initializer_list` любого типа, который поддерживает `end()` и `cend()`.  
+ You can use this member function in place of the [end()](../standard-library/iterator-functions.md#end) template function to guarantee that the return value is `const_iterator`. Typically, it's used in conjunction with the [auto](../cpp/auto-cpp.md) type deduction keyword, as shown in the following example. In the example, consider `Container` to be a modifiable (non- `const`) container or `initializer_list` of any kind that supports `end()` and `cend()`.  
   
 ```cpp  
 auto i1 = Container.end();
@@ -337,27 +352,27 @@ auto i2 = Container.cend();
 ```  
   
 ##  <a name="distance"></a>  distance  
- Указывает количество приращений между позициями, которые адресуют два итератора.  
+ Determines the number of increments between the positions addressed by two iterators.  
   
 ```  
 template <class InputIterator>  
 typename iterator_traits<InputIterator>::difference_type distance(InputIterator first, InputIterator last);
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
  `first`  
- Первый итератор, для которого нужно определить расстояние до второго.  
+ The first iterator whose distance from the second is to be determined.  
   
  `last`  
- Второй итератор, для которого нужно определить расстояние от первого.  
+ The second iterator whose distance from the first is to be determined.  
   
-### <a name="return-value"></a>Возвращаемое значение  
- Число шагов увеличения `first`, пока он не сравняется с `last`.  
+### <a name="return-value"></a>Return Value  
+ The number of times that `first` must be incremented until it equal `last`.  
   
-### <a name="remarks"></a>Примечания  
- Функция расстояния обладает постоянным коэффициентом сложности, если **InputIterator** является итератором произвольного доступа; в противном случае она имеет линейный коэффициент сложности и поэтому потенциально является ресурсоемкой.  
+### <a name="remarks"></a>Remarks  
+ The distance function has constant complexity when **InputIterator** satisfies the requirements for a random-access iterator; otherwise, it has linear complexity and so is potentially expensive.  
   
-### <a name="example"></a>Пример  
+### <a name="example"></a>Example  
   
 ```cpp  
 // iterator_distance.cpp  
@@ -406,7 +421,7 @@ The distance from L.begin( ) to LPOS is: 7.
 ```  
   
 ##  <a name="end"></a>  end  
- Извлекает итератор для элемента, следующего за последним элементом в указанном контейнере.  
+ Retrieves an iterator to the element that follows the last element in the specified container.  
   
 ```  
 template <class Container>  
@@ -421,42 +436,42 @@ template <class Ty, class Size>
 Ty *end(Ty (& array)[Size]);
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
  `cont`  
- Контейнер.  
+ A container.  
   
  `array`  
- Массив объектов перечисления `Ty`.  
+ An array of objects of type `Ty`.  
   
-### <a name="return-value"></a>Возвращаемое значение  
- Первые две функции шаблона возвращают `cont.end()` (первая не является константой, вторая является константой).  
+### <a name="return-value"></a>Return Value  
+ The first two template functions return `cont.end()` (the first is non-constant and the second is constant).  
   
- Третья функция шаблона возвращает `array + Size`.  
+ The third template function returns `array + Size`.  
   
-### <a name="remarks"></a>Примечания  
- Пример кода см. в разделе [begin](../standard-library/iterator-functions.md#begin).  
+### <a name="remarks"></a>Remarks  
+ For a code example, see [begin](../standard-library/iterator-functions.md#begin).  
   
 ##  <a name="front_inserter"></a>  front_inserter  
- Создает итератор, может вставлять элементы с передней стороны указанного контейнера.  
+ Creates an iterator that can insert elements at the front of a specified container.  
   
 ```  
 template <class Container>  
 front_insert_iterator<Container> front_inserter(Container& _Cont);
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
  `_Cont`  
- Объект-контейнер, для которого выполняется вставка элемента в переднюю часть.  
+ The container object whose front is having an element inserted.  
   
-### <a name="return-value"></a>Возвращаемое значение  
- `front_insert_iterator`, связанный с объектом-контейнером `_Cont`.  
+### <a name="return-value"></a>Return Value  
+ A `front_insert_iterator` associated with the container object `_Cont`.  
   
-### <a name="remarks"></a>Примечания  
- Функция-член [front_insert_iterator](../standard-library/front-insert-iterator-class.md#front_insert_iterator) класса front_insert_iterator также может использоваться.  
+### <a name="remarks"></a>Remarks  
+ The member function [front_insert_iterator](../standard-library/front-insert-iterator-class.md#front_insert_iterator) of the front_insert_iterator class may also be used.  
   
- В стандартной библиотеке C++ аргумент должен ссылаться на один из двух контейнеров последовательности, которые имеют функцию-член `push_back`: [класс deque](../standard-library/deque-class.md) или "класс list".  
+ Within the C++ Standard Library, the argument must refer to one of the two sequence containers that have the member function `push_back`: [deque Class](../standard-library/deque-class.md) or "list Class".  
   
-### <a name="example"></a>Пример  
+### <a name="example"></a>Example  
   
 ```cpp  
 // iterator_front_inserter.cpp  
@@ -504,7 +519,7 @@ After the front insertions, the list L is:
 ```  
   
 ##  <a name="inserter"></a>  inserter  
- Вспомогательная функция шаблона, которая позволяет использовать `inserter(_Cont, _Where)` вместо `insert_iterator<Container>(_Cont, _Where)`.  
+ A helper template function that lets you use `inserter(_Cont, _Where)` instead of `insert_iterator<Container>(_Cont, _Where)`.  
   
 ```  
 template <class Container>  
@@ -514,17 +529,17 @@ inserter(
     typename Container::iterator _Where);
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
  `_Cont`  
- Контейнер, в который будут добавляться новые элементы.  
+ The container to which new elements are to be added.  
   
  `_Where`  
- Итератор, обнаруживающий точку вставки.  
+ An iterator locating the point of insertion.  
   
-### <a name="remarks"></a>Примечания  
- Функция шаблона возвращает [insert_iterator](../standard-library/insert-iterator-class.md#insert_iterator)`<Container>(_Cont, _Where)`.  
+### <a name="remarks"></a>Remarks  
+ The template function returns [insert_iterator](../standard-library/insert-iterator-class.md#insert_iterator)`<Container>(_Cont, _Where)`.  
   
-### <a name="example"></a>Пример  
+### <a name="example"></a>Example  
   
 ```cpp  
 // iterator_inserter.cpp  
@@ -572,10 +587,10 @@ After the insertions, the list L is:
 ```  
   
 ##  <a name="make_checked_array_iterator"></a>  make_checked_array_iterator  
- Создает [checked_array_iterator](../standard-library/checked-array-iterator-class.md), который может использоваться другими алгоритмами.  
+ Creates a [checked_array_iterator](../standard-library/checked-array-iterator-class.md) that can be used by other algorithms.  
   
 > [!NOTE]
->  Эта функция — расширение Майкрософт для стандартной библиотеки C++. Код, реализованный с помощью этой функции, нельзя перенести в стандартные среды сборки C, не поддерживающие это расширение Microsoft.  
+>  This function is a Microsoft extension of the C++ Standard Library. Code implemented by using this function is not portable to C++ Standard build environments that do not support this Microsoft extension.  
   
 ```  
 template <class Iter>  
@@ -586,26 +601,26 @@ checked_array_iterator<Iter>
     size_t Index = 0);
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
  `Ptr`  
- Указатель на массив назначения.  
+ A pointer to the destination array.  
   
  `Size`  
- Размер массива назначения.  
+ The size of the destination array.  
   
  `Index`  
- Необязательный индекс массива.  
+ Optional index into the array.  
   
-### <a name="return-value"></a>Возвращаемое значение  
- Экземпляр `checked_array_iterator`.  
+### <a name="return-value"></a>Return Value  
+ An instance of `checked_array_iterator`.  
   
-### <a name="remarks"></a>Примечания  
- Функция `make_checked_array_iterator` задается в пространстве имен `stdext`.  
+### <a name="remarks"></a>Remarks  
+ The `make_checked_array_iterator` function is defined in the `stdext` namespace.  
   
- Эта функция принимает необработанный указатель, который в обычном случае вызывает проблемы, связанные с выходом за границы, и помещает его в оболочку класса [checked_array_iterator](../standard-library/checked-array-iterator-class.md), который выполняет проверку. Так как этот класс помечен как проверенный, стандартная библиотека С++ не выдает предупреждение о нем. Дополнительные сведения и примеры кода см. в разделе [Проверенные итераторы](../standard-library/checked-iterators.md).  
+ This function takes a raw pointer—which would ordinarily cause concern about bounds overrun—and wraps it in a [checked_array_iterator](../standard-library/checked-array-iterator-class.md) class that does checking. Because that class is marked as checked, the C++ Standard Library doesn't warn about it. For more information and code examples, see [Checked Iterators](../standard-library/checked-iterators.md).  
   
-### <a name="example"></a>Пример  
-  В следующем примере создается и заполняется 10 элементами [вектор](../standard-library/vector-class.md). Содержимое вектора копируется в массив с помощью алгоритма копирования, а затем `make_checked_array_iterator` используется для указания назначения. Затем осуществляется проверка на преднамеренное нарушение границ для активации сбоя подтверждения отладки.  
+### <a name="example"></a>Example  
+  In the following example, a [vector](../standard-library/vector-class.md) is created and populated with 10 items. The contents of the vector are copied into an array by using the copy algorithm, and then `make_checked_array_iterator` is used to specify the destination. This is followed by an intentional violation of the bounds checking so that a debug assertion failure is triggered.  
   
 ```cpp  
 // make_checked_array_iterator.cpp  
@@ -662,7 +677,7 @@ int main()
 ```  
   
 ##  <a name="make_move_iterator"></a>  make_move_iterator  
- Создает `move iterator`, содержащий предоставленный итератор в качестве итератора `stored`.  
+ Creates a `move iterator` that contains the provided iterator as the `stored` iterator.  
   
 ```  
 template <class Iterator>  
@@ -670,18 +685,18 @@ move_iterator<Iterator>
 make_move_iterator(const Iterator& _It);
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
  `_It`  
- Итератор, хранящийся в новом итераторе перемещения.  
+ The iterator stored in the new move iterator.  
   
-### <a name="remarks"></a>Примечания  
- Функция-шаблон возвращает `move_iterator``<Iterator>(``_It``)`.  
+### <a name="remarks"></a>Remarks  
+ The template function returns `move_iterator` `<Iterator>(_It)`.  
   
 ##  <a name="make_unchecked_array_iterator"></a>  make_unchecked_array_iterator  
- Создает [unchecked_array_iterator](../standard-library/unchecked-array-iterator-class.md), который может использоваться другими алгоритмами.  
+ Creates an [unchecked_array_iterator](../standard-library/unchecked-array-iterator-class.md) that can be used by other algorithms.  
   
 > [!NOTE]
->  Эта функция — расширение Майкрософт для стандартной библиотеки C++. Код, реализованный с помощью этой функции, нельзя перенести в стандартные среды сборки C, не поддерживающие это расширение Microsoft.  
+>  This function is a Microsoft extension of the C++ Standard Library. Code implemented by using this function is not portable to C++ Standard build environments that do not support this Microsoft extension.  
   
 ```  
 template <class Iter>  
@@ -689,20 +704,20 @@ unchecked_array_iterator<Iter>
     make_unchecked_array_iterator(Iter Ptr);
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
  `Ptr`  
- Указатель на массив назначения.  
+ A pointer to the destination array.  
   
-### <a name="return-value"></a>Возвращаемое значение  
- Экземпляр `unchecked_array_iterator`.  
+### <a name="return-value"></a>Return Value  
+ An instance of `unchecked_array_iterator`.  
   
-### <a name="remarks"></a>Примечания  
- Функция `make_unchecked_array_iterator` задается в пространстве имен `stdext`.  
+### <a name="remarks"></a>Remarks  
+ The `make_unchecked_array_iterator` function is defined in the `stdext` namespace.  
   
- Эта функция принимает необработанный указатель и помещает его в класс, который не выполняет проверки, и поэтому оптимизирует к минимуму, но также подавляет предупреждения компилятора, например [C4996](../error-messages/compiler-warnings/compiler-warning-level-3-c4996.md). Соответственно, это целевой способ работы с предупреждениями непроверенных указателей без их глобального подавления или возникновения стоимости проверки. Дополнительные сведения и примеры кода см. в разделе [Проверенные итераторы](../standard-library/checked-iterators.md).  
+ This function takes a raw pointer and wraps it in a class that performs no checking and therefore optimizes away to nothing, but it also silences compiler warnings such as [C4996](../error-messages/compiler-warnings/compiler-warning-level-3-c4996.md). Therefore, this is a targeted way to deal with unchecked-pointer warnings without globally silencing them or incurring the cost of checking. For more information and code examples, see [Checked Iterators](../standard-library/checked-iterators.md).  
   
-### <a name="example"></a>Пример  
-  В следующем примере создается и заполняется 10 элементами [вектор](../standard-library/vector-class.md). Содержимое вектора копируется в массив с помощью алгоритма копирования, а затем `make_unchecked_array_iterator` используется для указания назначения.  
+### <a name="example"></a>Example  
+  In the following example, a [vector](../standard-library/vector-class.md) is created and populated with 10 items. The contents of the vector are copied into an array by using the copy algorithm, and then `make_unchecked_array_iterator` is used to specify the destination.  
   
 ```cpp  
 // make_unchecked_array_iterator.cpp  
@@ -753,7 +768,7 @@ int main()
 ```  
   
 ##  <a name="next"></a>  next  
- Выполняет итерацию заданное число раз и возвращает новую позицию итератора.  
+ Iterates a specified number of times and returns the new iterator position.  
   
 ```  
 template <class InputIterator>  
@@ -762,21 +777,21 @@ InputIterator next(
     typename iterator_traits<InputIterator>::difference_type _Off = 1);
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
  `first`  
- Текущая позиция.  
+ The current position.  
   
  `_Off`  
- Количество раз для прохода.  
+ The number of times to iterate.  
   
-### <a name="return-value"></a>Возвращаемое значение  
- Возвращает новую позицию итератора после прохода `_Off` раз.  
+### <a name="return-value"></a>Return Value  
+ Returns the new iterator position after iterating `_Off` times.  
   
-### <a name="remarks"></a>Примечания  
- Функция-шаблон возвращает `next`, приращенный `_Off` раз.  
+### <a name="remarks"></a>Remarks  
+ The template function returns `next` incremented `_Off` times  
   
 ##  <a name="prev"></a>  prev  
- Выполняет обратную итерацию заданное число раз и возвращает новую позицию итератора.  
+ Iterates in reverse a specified number of times and returns the new iterator position.  
   
 ```  
 template <class BidirectionalIterator>  
@@ -785,17 +800,17 @@ BidirectionalIterator prev(
     typename iterator_traits<BidirectionalIterator>::difference_type _Off = 1);
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
  `first`  
- Текущая позиция.  
+ The current position.  
   
  `_Off`  
- Количество раз для прохода.  
+ The number of times to iterate.  
   
-### <a name="remarks"></a>Примечания  
- Функция-шаблон возвращает `next`, уменьшенный `off` раз.  
+### <a name="remarks"></a>Remarks  
+ The template function returns `next` decremented `off` times.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>See Also  
  [\<iterator>](../standard-library/iterator.md)
 
 

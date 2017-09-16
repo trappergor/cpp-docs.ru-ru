@@ -1,5 +1,5 @@
 ---
-title: "Класс basic_fstream | Документы Microsoft"
+title: basic_fstream Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -9,7 +9,6 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
-- basic_fstream
 - fstream/std::basic_fstream
 - fstream/std::basic_fstream::close
 - fstream/std::basic_fstream::is_open
@@ -19,7 +18,12 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- basic_fstream class
+- std::basic_fstream [C++]
+- std::basic_fstream [C++], close
+- std::basic_fstream [C++], is_open
+- std::basic_fstream [C++], open
+- std::basic_fstream [C++], rdbuf
+- std::basic_fstream [C++], swap
 ms.assetid: 8473817e-42a4-430b-82b8-b476c86bcf8a
 caps.latest.revision: 24
 author: corob-msft
@@ -39,38 +43,38 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
-ms.openlocfilehash: f9d52128703d021ba3a880ff899ca71b144e89ec
+ms.translationtype: MT
+ms.sourcegitcommit: 5d026c375025b169d5db8445cbb52c0c917b2d8d
+ms.openlocfilehash: d121bfbf8452fa56cd8af596746cc9e9e8cba039
 ms.contentlocale: ru-ru
-ms.lasthandoff: 04/29/2017
+ms.lasthandoff: 09/09/2017
 
 ---
-# <a name="basicfstream-class"></a>Класс basic_fstream
-Описывает объект, управляющий вставкой и извлечением элементов и закодированных объектов с помощью буфера потока класса [basic_filebuf](../standard-library/basic-filebuf-class.md)< `Elem`, `Tr`> с элементами типа `Elem`, признаки символов которых определяются классом `Tr`.  
+# <a name="basicfstream-class"></a>basic_fstream Class
+Describes an object that controls insertion and extraction of elements and encoded objects using a stream buffer of class [basic_filebuf](../standard-library/basic-filebuf-class.md)< `Elem`, `Tr`>, with elements of type `Elem`, whose character traits are determined by the class `Tr`.  
   
-## <a name="syntax"></a>Синтаксис  
+## <a name="syntax"></a>Syntax  
   
 ```  
 template <class Elem, class Tr = char_traits<Elem>>  
 class basic_fstream : public basic_iostream<Elem, Tr>  
 ```  
   
-#### <a name="parameters"></a>Параметры  
+#### <a name="parameters"></a>Parameters  
  `Elem`  
- Базовый элемент буфера файла.  
+ The basic element of the file buffer.  
   
  `Tr`  
- Признаки базового элемента буфера файла (обычно `char_traits`< `Elem`>).  
+ The traits of the basic element of the file buffer (usually `char_traits`< `Elem`>).  
   
-## <a name="remarks"></a>Примечания  
- Объект сохраняет объект класса `basic_filebuf`< `Elem`, `Tr`>.  
+## <a name="remarks"></a>Remarks  
+ The object stores an object of class `basic_filebuf`< `Elem`, `Tr`>.  
   
 > [!NOTE]
->  Указатель get и указатель put объекта fstream **ЗАВИСЯТ** друг от друга. При перемещении указателя get указатель put также перемещается.  
+>  The get pointer and put pointer of an fstream object are **NOT** independent of each other. If the get pointer moves, so does the put pointer.  
   
-## <a name="example"></a>Пример  
- В следующем примере показано, как создать объект `basic_fstream`, из которого можно считать данные и в который можно записать данные.  
+## <a name="example"></a>Example  
+ The following example demonstrates how to create a `basic_fstream` object that can be read from and written to.  
   
 ```  
 // basic_fstream_class.cpp  
@@ -102,29 +106,29 @@ int main(int argc, char **argv)
 Writing to a basic_fstream object...  
 ```  
   
-### <a name="constructors"></a>Конструкторы  
+### <a name="constructors"></a>Constructors  
   
 |||  
 |-|-|  
-|[basic_fstream](#basic_fstream)|Создает объект типа `basic_fstream`.|  
+|[basic_fstream](#basic_fstream)|Constructs an object of type `basic_fstream`.|  
   
-### <a name="member-functions"></a>Функции-члены  
+### <a name="member-functions"></a>Member Functions  
   
 |||  
 |-|-|  
-|[close](#close)|Закрывает файл.|  
-|[is_open](#is_open)|Определяет, открыт ли файл.|  
-|[open](#open)|Открывает файл.|  
-|[rdbuf](#rdbuf)|Возвращает адрес буфера сохраненного потока типа pointer в [basic_filebuf](../standard-library/basic-filebuf-class.md)< `Elem`, `Tr`>.|  
-|[swap](#swap)|Меняет местами содержимое данного объекта с содержимым другого объекта `basic_fstream`.|  
+|[close](#close)|Closes a file.|  
+|[is_open](#is_open)|Determines if a file is open.|  
+|[open](#open)|Opens a file.|  
+|[rdbuf](#rdbuf)|Returns the address of the stored stream buffer, of type pointer to [basic_filebuf](../standard-library/basic-filebuf-class.md)< `Elem`, `Tr`>.|  
+|[swap](#swap)|Exchanges the content of this object with the content of another `basic_fstream` object.|  
   
-## <a name="requirements"></a>Требования  
- **Заголовок:** \<fstream>  
+## <a name="requirements"></a>Requirements  
+ **Header:** \<fstream>  
   
- **Пространство имен:** std  
+ **Namespace:** std  
   
 ##  <a name="basic_fstream"></a>  basic_fstream::basic_fstream  
- Создает объект типа `basic_fstream`.  
+ Constructs an object of type `basic_fstream`.  
   
 ```  
 basic_fstream();
@@ -142,57 +146,57 @@ explicit basic_fstream(
 basic_fstream(basic_fstream&& right);
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
  `_Filename`  
- Имя файла, который необходимо открыть.  
+ The name of the file to open.  
   
  `_Mode`  
- Одно из перечислений в [ios_base::openmode](../standard-library/ios-base-class.md#openmode).  
+ One of the enumerations in [ios_base::openmode](../standard-library/ios-base-class.md#openmode).  
   
  `_Prot`  
- Защита открытия файла по умолчанию, эквивалент параметра `shflag` в [_fsopen, _wfsopen](../c-runtime-library/reference/fsopen-wfsopen.md).  
+ The default file opening protection, equivalent to the `shflag` parameter in [_fsopen, _wfsopen](../c-runtime-library/reference/fsopen-wfsopen.md).  
   
-### <a name="remarks"></a>Примечания  
- Первый конструктор инициализирует базовый класс путем вызова [basic_iostream](../standard-library/basic-iostream-class.md)( **sb**), где **sb** — сохраненный объект класса [basic_filebuf](../standard-library/basic-filebuf-class.md) \< **Elem**, **Tr**>. Он также инициализирует **sb** путем вызова `basic_filebuf`\< **Elem**, **Tr**.  
+### <a name="remarks"></a>Remarks  
+ The first constructor initializes the base class by calling [basic_iostream](../standard-library/basic-iostream-class.md)( **sb**), where **sb** is the stored object of class [basic_filebuf](../standard-library/basic-filebuf-class.md)\< **Elem**, **Tr**>. It also initializes **sb** by calling `basic_filebuf`\< **Elem**, **Tr**>.  
   
- Второй и третий конструкторы инициализируют базовый класс путем вызова `basic_iostream`( **sb**). Он также инициализирует **sb** путем вызова `basic_filebuf`\< **Elem**, **Tr**>, затем **sb.**[open](../standard-library/basic-filebuf-class.md#open)(_ *Filename*, `_Mode`). Если последняя функция возвращает пустой указатель, конструктор вызывает [setstate](../standard-library/basic-ios-class.md#setstate)( **failbit**).  
+ The second and third constructors initializes the base class by calling `basic_iostream`( **sb**). It also initializes **sb** by calling `basic_filebuf`\< **Elem**, **Tr**>, and then **sb.**[open](../standard-library/basic-filebuf-class.md#open)(_ *Filename*, `_Mode`). If the latter function returns a null pointer, the constructor calls [setstate](../standard-library/basic-ios-class.md#setstate)( **failbit**).  
   
- Четвертый конструктор инициализирует объект с содержимым `right`, что рассматривается как ссылка rvalue.  
+ The fourth constructor initializes the object with the contents of `right`, treated as an rvalue reference.  
   
-### <a name="example"></a>Пример  
-  Пример использования `basic_fstream` см. в разделе [streampos](../standard-library/ios-typedefs.md#streampos).  
+### <a name="example"></a>Example  
+  See [streampos](../standard-library/ios-typedefs.md#streampos) for an example that uses `basic_fstream`.  
   
 ##  <a name="close"></a>  basic_fstream::close  
- Закрывает файл.  
+ Closes a file.  
   
 ```  
 void close();
 ```  
   
-### <a name="remarks"></a>Примечания  
- Эта функция-член вызывает [rdbuf](#rdbuf)**->** [close](../standard-library/basic-filebuf-class.md#close).  
+### <a name="remarks"></a>Remarks  
+ The member function calls [rdbuf](#rdbuf)**->** [close](../standard-library/basic-filebuf-class.md#close).  
   
-### <a name="example"></a>Пример  
-  Пример использования **close** см. в разделе [basic_filebuf::close](../standard-library/basic-filebuf-class.md#close).  
+### <a name="example"></a>Example  
+  See [basic_filebuf::close](../standard-library/basic-filebuf-class.md#close) for an example of how to use **close**.  
   
 ##  <a name="is_open"></a>  basic_fstream::is_open  
- Определяет, открыт ли файл.  
+ Determines if a file is open.  
   
 ```  
 bool is_open() const;
 ```  
   
-### <a name="return-value"></a>Возвращаемое значение  
- Значение **true**, если файл открыт, или **false** в противном случае.  
+### <a name="return-value"></a>Return Value  
+ **true** if the file is open, **false** otherwise.  
   
-### <a name="remarks"></a>Примечания  
- Функция-член возвращает [rdbuf](#rdbuf)**->**[is_open](../standard-library/basic-filebuf-class.md#is_open).  
+### <a name="remarks"></a>Remarks  
+ The member function returns [rdbuf](#rdbuf)**->**[is_open](../standard-library/basic-filebuf-class.md#is_open).  
   
-### <a name="example"></a>Пример  
-  Пример использования `is_open` см. в разделе [basic_filebuf::is_open](../standard-library/basic-filebuf-class.md#is_open).  
+### <a name="example"></a>Example  
+  See [basic_filebuf::is_open](../standard-library/basic-filebuf-class.md#is_open) for an example of how to use `is_open`.  
   
 ##  <a name="open"></a>  basic_fstream::open  
- Открывает файл.  
+ Opens a file.  
   
 ```  
 void open(
@@ -214,69 +218,69 @@ void open(
     ios_base::openmode _Mode);
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
  `_Filename`  
- Имя файла, который необходимо открыть.  
+ The name of the file to open.  
   
  `_Mode`  
- Одно из перечислений в [ios_base::openmode](../standard-library/ios-base-class.md#openmode).  
+ One of the enumerations in [ios_base::openmode](../standard-library/ios-base-class.md#openmode).  
   
  `_Prot`  
- Защита открытия файла по умолчанию, эквивалент параметра `shflag` в [_fsopen, _wfsopen](../c-runtime-library/reference/fsopen-wfsopen.md).  
+ The default file opening protection, equivalent to the `shflag` parameter in [_fsopen, _wfsopen](../c-runtime-library/reference/fsopen-wfsopen.md).  
   
-### <a name="remarks"></a>Примечания  
- Эта функция-член вызывает [rdbuf](#rdbuf) **->** [open](../standard-library/basic-filebuf-class.md#open)(_ *Filename*, `_Mode`). Если эта функция возвращает пустой указатель, конструктор вызывает [setstate](../standard-library/basic-ios-class.md#setstate)( **failbit**).  
+### <a name="remarks"></a>Remarks  
+ The member function calls [rdbuf](#rdbuf) **->** [open](../standard-library/basic-filebuf-class.md#open)(_ *Filename*, `_Mode`). If that function returns a null pointer, the function calls [setstate](../standard-library/basic-ios-class.md#setstate)( **failbit**).  
   
-### <a name="example"></a>Пример  
-  Пример использования **open** см. в разделе [basic_filebuf::open](../standard-library/basic-filebuf-class.md#open).  
+### <a name="example"></a>Example  
+  See [basic_filebuf::open](../standard-library/basic-filebuf-class.md#open) for an example of how to use **open**.  
   
 ##  <a name="op_eq"></a>  basic_fstream::operator=  
- Назначает этому объекту содержимое из указанного объекта потока. Это назначение перемещения с использованием rvalue, после которого не остается копии.  
+ Assigns to this object the content from a specified stream object. This is a move assignment that involves an rvalue that does not leave a copy behind.  
   
 ```  
 basic_fstream& operator=(basic_fstream&& right);
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
  `right`  
- Ссылка lvalue на объект `basic_fstream`.  
+ An lvalue reference to a `basic_fstream` object.  
   
-### <a name="return-value"></a>Возвращаемое значение  
- Возвращает `*this`.  
+### <a name="return-value"></a>Return Value  
+ Returns `*this`.  
   
-### <a name="remarks"></a>Примечания  
- Оператор-член заменяет содержимое объекта при помощи содержимого `right`, которое обрабатывается как ссылка rvalue.  
+### <a name="remarks"></a>Remarks  
+ The member operator replaces the contents of the object by using the contents of `right`, treated as an rvalue reference.  
   
 ##  <a name="rdbuf"></a>  basic_fstream::rdbuf  
- Возвращает адрес буфера сохраненного потока типа pointer в [basic_filebuf](../standard-library/basic-filebuf-class.md)\< **Elem**, **Tr**>.  
+ Returns the address of the stored stream buffer, of type pointer to [basic_filebuf](../standard-library/basic-filebuf-class.md)\< **Elem**, **Tr**>.  
   
 ```  
 basic_filebuf<Elem, Tr> *rdbuf() const 
 ```  
   
-### <a name="return-value"></a>Возвращаемое значение  
- Адрес сохраненного буфера потока.  
+### <a name="return-value"></a>Return Value  
+ The address of the stored stream buffer.  
   
-### <a name="example"></a>Пример  
-  Пример использования `rdbuf` см. в разделе [basic_filebuf::close](../standard-library/basic-filebuf-class.md#close).  
+### <a name="example"></a>Example  
+  See [basic_filebuf::close](../standard-library/basic-filebuf-class.md#close) for an example of how to use `rdbuf`.  
   
 ##  <a name="swap"></a>  basic_fstream::swap  
- Меняет местами содержимое двух объектов `basic_fstream`.  
+ Exchanges the contents of two `basic_fstream` objects.  
   
 ```  
 void swap(basic_fstream& right);
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
  `right`  
- Ссылка `lvalue` на объект `basic_fstream`.  
+ An `lvalue` reference to a `basic_fstream` object.  
   
-### <a name="remarks"></a>Примечания  
- Функция-член меняет местами содержимое этого объекта и содержимое `right`.  
+### <a name="remarks"></a>Remarks  
+ The member function exchanges the contents of this object and the contents of `right`.  
   
-## <a name="see-also"></a>См. также  
- [Потокобезопасность в стандартной библиотеке C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)   
- [Программирование iostream](../standard-library/iostream-programming.md)   
- [Соглашения iostreams](../standard-library/iostreams-conventions.md)
+## <a name="see-also"></a>See Also  
+ [Thread Safety in the C++ Standard Library](../standard-library/thread-safety-in-the-cpp-standard-library.md)   
+ [iostream Programming](../standard-library/iostream-programming.md)   
+ [iostreams Conventions](../standard-library/iostreams-conventions.md)
 
 

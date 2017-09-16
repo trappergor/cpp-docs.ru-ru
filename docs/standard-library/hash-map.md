@@ -1,5 +1,5 @@
 ---
-title: "&lt;hash_map&gt; | Документы Майкрософт"
+title: '&lt;hash_map&gt; | Microsoft Docs'
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -9,9 +9,7 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
-- std.<hash_map>
-- <hash_map>
-- std::<hash_map>
+- <hash_map>", "std::<hash_map>
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -36,59 +34,59 @@ translation.priority.mt:
 - pl-pl
 - pt-br
 - tr-tr
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
-ms.openlocfilehash: a1c256df1182c00c1b6045923ba9975f02c9bfa2
+ms.translationtype: MT
+ms.sourcegitcommit: 5d026c375025b169d5db8445cbb52c0c917b2d8d
+ms.openlocfilehash: c3807ad83dc756ce62acd3e4f3fb5168e6d2d624
 ms.contentlocale: ru-ru
-ms.lasthandoff: 04/29/2017
+ms.lasthandoff: 09/09/2017
 
 ---
 # <a name="lthashmapgt"></a>&lt;hash_map&gt;
 > [!NOTE]
->  Этот заголовок устарел. Вместо него следует использовать [<unordered_map>](../standard-library/unordered-map.md).  
+>  This header is obsolete. The alternative is [<unordered_map>](../standard-library/unordered-map.md).  
   
- Определяет контейнер шаблонных классов hash_map и hash_multimap и их поддерживаемые шаблоны.  
+ Defines the container template classes hash_map and hash_multimap and their supporting templates.  
   
- В Visual C++ .NET 2003 члены файлов заголовков <hash_map> и <hash_set> больше не находятся в пространстве имен std. Они перемещены в пространство имен stdext. Дополнительные сведения см. в разделе [Пространство имен stdext](../standard-library/stdext-namespace.md).  
+ In Visual C++ .NET 2003, members of the <hash_map> and <hash_set> header files are no longer in the std namespace, but rather have been moved into the stdext namespace. See [stdext Namespace](../standard-library/stdext-namespace.md) for more information.  
   
-## <a name="syntax"></a>Синтаксис  
+## <a name="syntax"></a>Syntax  
   
 ```  
 #include <hash_map>  
   
 ```  
   
-### <a name="operators"></a>Операторы  
+### <a name="operators"></a>Operators  
   
-|Версия hash_map|Версия hash_multimap|Описание|  
+|Hash_map version|Hash_multimap version|Description|  
 |-----------------------|----------------------------|-----------------|  
-|[operator!= (hash_map)](../standard-library/hash-map-operators.md#op_neq)|`operator!= (hash_multimap)`|Проверяет неравенство объекта hash_map или hash_multimap слева от оператора объекту hash_map или hash_multimap справа от оператора.|  
-|[ operator== (hash_map)](../standard-library/hash-map-operators.md#op_eq_eq)|`operator== (hash_multimap)`|Проверяет равенство объекта hash_map или hash_multimap слева от оператора объекту hash_map или hash_multimap справа от оператора.|  
+|[operator!= (hash_map)](../standard-library/hash-map-operators.md#op_neq)|`operator!= (hash_multimap)`|Tests if the hash_map or hash_multimap object on the left side of the operator is not equal to the hash_map or hash_multimap object on the right side.|  
+|[operator== (hash_map)](../standard-library/hash-map-operators.md#op_eq_eq)|`operator== (hash_multimap)`|Tests if the hash_map or hash_multimap object on the left side of the operator is equal to the hash_map or hash_multimap object on the right side.|  
   
-### <a name="specialized-template-functions"></a>Специализированные функции шаблонов  
+### <a name="specialized-template-functions"></a>Specialized Template Functions  
   
-|Версия hash_map|Версия hash_multimap|Описание|  
+|Hash_map version|Hash_multimap version|Description|  
 |-----------------------|----------------------------|-----------------|  
-|[swap (hash_map)](../standard-library/hash-map-class.md#swap)|[swap (hash_multimap)](../standard-library/hash-multimap-class.md#swap)|Меняет местами элементы двух объектов hash_map или hash_multimap.|  
+|[swap (hash_map)](../standard-library/hash-map-class.md#swap)|[swap (hash_multimap)](../standard-library/hash-multimap-class.md#swap)|Exchanges the elements of two hash_maps or hash_multimaps.|  
   
-### <a name="classes"></a>Классы  
+### <a name="classes"></a>Classes  
   
 |||  
 |-|-|  
-|[Класс hash_compare](../standard-library/hash-compare-class.md)|Описывает объект, который может использоваться любыми hash-ассоциативными контейнерами (hash_map, hash_multimap, hash_set или hash_multiset) как объект параметра **Traits** по умолчанию для сортировки и хэширования элементов в них.|  
-|[Класс value_compare](../standard-library/value-compare-class.md)|Предоставляет объект функции, который может сравнивать элементы hash_map путем сравнения значения ключей для определения относительного порядка в hash_map.|  
-|[Класс hash_map](../standard-library/hash-map-class.md)|Используется для хранения и быстрого считывания данных из коллекции, в которой каждый элемент — это пара, которая имеет отсортированный уникальный ключ и связанное с ним значение.|  
-|[Класс hash_multimap](../standard-library/hash-multimap-class.md)|Используется для хранения и быстрого считывания данных из коллекции, в которой каждый элемент — это пара, которая имеет ключ, значение которого не должно быть уникальным, и связанное с ним значение.|  
+|[hash_compare Class](../standard-library/hash-compare-class.md)|Describes an object that can be used by any of the hash associative containers — hash_map, hash_multimap, hash_set, or hash_multiset — as a default **Traits** parameter object to order and hash the elements they contain.|  
+|[value_compare Class](../standard-library/value-compare-class.md)|Provides a function object that can compare the elements of a hash_map by comparing the values of their keys to determine their relative order in the hash_map.|  
+|[hash_map Class](../standard-library/hash-map-class.md)|Used for the storage and fast retrieval of data from a collection in which each element is a pair that has a sort key whose value is unique and an associated data value.|  
+|[hash_multimap Class](../standard-library/hash-multimap-class.md)|Used for the storage and fast retrieval of data from a collection in which each element is a pair that has a sort key whose value need not be unique and an associated data value.|  
   
-## <a name="requirements"></a>Требования  
- **Заголовок:** \<hash_map>  
+## <a name="requirements"></a>Requirements  
+ **Header:** \<hash_map>  
   
- **Пространство имен:** stdext  
+ **Namespace:** stdext  
   
-## <a name="see-also"></a>См. также  
- [Справочник по файлам заголовков](../standard-library/cpp-standard-library-header-files.md)   
- [Потокобезопасность в стандартной библиотеке C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)   
- [Справочник по стандартной библиотеке C++](../standard-library/cpp-standard-library-reference.md)
+## <a name="see-also"></a>See Also  
+ [Header Files Reference](../standard-library/cpp-standard-library-header-files.md)   
+ [Thread Safety in the C++ Standard Library](../standard-library/thread-safety-in-the-cpp-standard-library.md)   
+ [C++ Standard Library Reference](../standard-library/cpp-standard-library-reference.md)
 
 
 

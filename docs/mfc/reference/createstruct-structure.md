@@ -1,5 +1,5 @@
 ---
-title: "Структура CREATESTRUCT | Документы Microsoft"
+title: CREATESTRUCT Structure | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -13,7 +13,7 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- CREATESTRUCT structure
+- CREATESTRUCT structure [MFC]
 ms.assetid: 028c7b5e-4fdc-48da-a550-d3e4f9e6cc85
 caps.latest.revision: 14
 author: mikeblome
@@ -33,17 +33,17 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 040985df34f2613b4e4fae29498721aef15d50cb
-ms.openlocfilehash: ec72d4725cb7e5959369b24a6ff7f0e3e9da1ca7
+ms.translationtype: MT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 0409e6ff80c9491ffc36b4ca7b6ecc05edfdb264
 ms.contentlocale: ru-ru
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 09/12/2017
 
 ---
-# <a name="createstruct-structure"></a>Структура CREATESTRUCT
-`CREATESTRUCT` Определяет структуру параметров инициализации, передаваемые в процедуру окна приложения.  
+# <a name="createstruct-structure"></a>CREATESTRUCT Structure
+The `CREATESTRUCT` structure defines the initialization parameters passed to the window procedure of an application.  
   
-## <a name="syntax"></a>Синтаксис  
+## <a name="syntax"></a>Syntax  
   
 ```  
 typedef struct tagCREATESTRUCT {  
@@ -62,48 +62,48 @@ typedef struct tagCREATESTRUCT {
 } CREATESTRUCT;  
 ```  
   
-#### <a name="parameters"></a>Параметры  
+#### <a name="parameters"></a>Parameters  
  `lpCreateParams`  
- Указывает данные, которые используются для создания окна.  
+ Points to data to be used to create the window.  
   
  `hInstance`  
- Идентифицирует дескриптор экземпляра модуля, которому принадлежит окно нового модуля.  
+ Identifies the module-instance handle of the module that owns the new window.  
   
  `hMenu`  
- Определяет меню для использования нового окна. Если дочернее окно, содержащее целочисленный идентификатор.  
+ Identifies the menu to be used by the new window. If a child window, contains the integer ID.  
   
  `hwndParent`  
- Определяет окно, которому принадлежит новое окно. Этот член представляет **NULL** Если новое окно является окном верхнего уровня.  
+ Identifies the window that owns the new window. This member is **NULL** if the new window is a top-level window.  
   
  `cy`  
- Высота нового окна.  
+ Specifies the height of the new window.  
   
  `cx`  
- Задает ширину нового окна.  
+ Specifies the width of the new window.  
   
  `y`  
- Задает координату y верхнего левого угла нового окна. Координаты указываются относительно родительского окна, если новое окно является окном дочернего; в противном случае координаты указываются относительно начала координат экрана.  
+ Specifies the y-coordinate of the upper left corner of the new window. Coordinates are relative to the parent window if the new window is a child window; otherwise coordinates are relative to the screen origin.  
   
  `x`  
- Задает координату x левого верхнего угла новое окно. Координаты указываются относительно родительского окна, если новое окно является окном дочернего; в противном случае координаты указываются относительно начала координат экрана.  
+ Specifies the x-coordinate of the upper left corner of the new window. Coordinates are relative to the parent window if the new window is a child window; otherwise coordinates are relative to the screen origin.  
   
  `style`  
- Указывает новое окно [стиль](../../mfc/reference/styles-used-by-mfc.md).  
+ Specifies the new window's [style](../../mfc/reference/styles-used-by-mfc.md).  
   
  `lpszName`  
- Указывает нулем строка, указывающая имя нового окна.  
+ Points to a null-terminated string that specifies the new window's name.  
   
  `lpszClass`  
- Указывает нулем строка, указывающая имя класса Windows новое окно ( [WNDCLASS](http://msdn.microsoft.com/library/windows/desktop/ms633576) структуры; Дополнительные сведения см. в разделе [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]).  
+ Points to a null-terminated string that specifies the new window's Windows class name (a [WNDCLASS](http://msdn.microsoft.com/library/windows/desktop/ms633576) structure; for more information, see the Windows SDK).  
   
  `dwExStyle`  
- Указывает [расширенный стиль](../../mfc/reference/extended-window-styles.md) для нового окна.  
+ Specifies the [extended style](../../mfc/reference/styles-used-by-mfc.md#extended-window-styles) for the new window.  
   
-## <a name="requirements"></a>Требования  
- **Заголовок:** winuser.h  
+## <a name="requirements"></a>Requirements  
+ **Header:** winuser.h  
   
-## <a name="see-also"></a>См. также  
- [Структуры, стили, обратные вызовы и схемы сообщений](../../mfc/reference/structures-styles-callbacks-and-message-maps.md)   
+## <a name="see-also"></a>See Also  
+ [Structures, Styles, Callbacks, and Message Maps](../../mfc/reference/structures-styles-callbacks-and-message-maps.md)   
  [CWnd::OnCreate](../../mfc/reference/cwnd-class.md#oncreate)
 
 

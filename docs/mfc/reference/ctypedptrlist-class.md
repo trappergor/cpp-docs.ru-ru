@@ -1,5 +1,5 @@
 ---
-title: "CTypedPtrList-класс | Документы Microsoft"
+title: CTypedPtrList Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -24,12 +24,16 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- CTypedPtrList class
-- type-safe collections
-- lists [C++]
-- template classes, CTypedPtrList class
-- linked lists [C++]
-- pointer lists
+- CTypedPtrList [MFC], AddHead
+- CTypedPtrList [MFC], AddTail
+- CTypedPtrList [MFC], GetAt
+- CTypedPtrList [MFC], GetHead
+- CTypedPtrList [MFC], GetNext
+- CTypedPtrList [MFC], GetPrev
+- CTypedPtrList [MFC], GetTail
+- CTypedPtrList [MFC], RemoveHead
+- CTypedPtrList [MFC], RemoveTail
+- CTypedPtrList [MFC], SetAt
 ms.assetid: c273096e-1756-4340-864b-4a08b674a65e
 caps.latest.revision: 24
 author: mikeblome
@@ -49,315 +53,315 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0e0c08ddc57d437c51872b5186ae3fc983bb0199
-ms.openlocfilehash: ca8d868333aa977710e387fc1bb13271dc8f99fa
+ms.translationtype: MT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: c049f0d54e6a583e21af5f67d03f6b1373c1d915
 ms.contentlocale: ru-ru
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 09/12/2017
 
 ---
-# <a name="ctypedptrlist-class"></a>CTypedPtrList-класс
-Предоставляет типобезопасную "программу-оболочку" для объектов класса `CPtrList`.  
+# <a name="ctypedptrlist-class"></a>CTypedPtrList Class
+Provides a type-safe "wrapper" for objects of class `CPtrList`.  
   
-## <a name="syntax"></a>Синтаксис  
+## <a name="syntax"></a>Syntax  
   
 ```  
 template<class BASE_CLASS, class TYPE>  
 class CTypedPtrList : public BASE_CLASS  
 ```  
   
-#### <a name="parameters"></a>Параметры  
+#### <a name="parameters"></a>Parameters  
  `BASE_CLASS`  
- Базовый класс для класса list типизированный указатель; должен быть классом список указатель ( `CObList` или `CPtrList`).  
+ Base class of the typed pointer list class; must be a pointer list class ( `CObList` or `CPtrList`).  
   
  `TYPE`  
- Тип элементов, хранящихся в списке базовых классов.  
+ Type of the elements stored in the base-class list.  
   
-## <a name="members"></a>Члены  
+## <a name="members"></a>Members  
   
-### <a name="public-methods"></a>Открытые методы  
+### <a name="public-methods"></a>Public Methods  
   
-|Имя|Описание|  
+|Name|Description|  
 |----------|-----------------|  
-|[CTypedPtrList::AddHead](#addhead)|Добавляет элемент (или все элементы в другом списке) в начало списка (делает нового заголовка).|  
-|[CTypedPtrList::AddTail](#addtail)|Добавляет элемент (или все элементы в другом списке) конца списка (делает новый заключительного фрагмента).|  
-|[CTypedPtrList::GetAt](#getat)|Возвращает элемент в заданной позиции.|  
-|[CTypedPtrList::GetHead](#gethead)|Возвращает элемент заголовка списка (не может быть пустым).|  
-|[CTypedPtrList::GetNext](#getnext)|Получает следующий элемент для итерации.|  
-|[CTypedPtrList::GetPrev](#getprev)|Возвращает предыдущий элемент для итерации.|  
-|[CTypedPtrList::GetTail](#gettail)|Возвращает элемент заключительного списка (не может быть пустым).|  
-|[CTypedPtrList::RemoveHead](#removehead)|Удаляет элемент в начало списка.|  
-|[CTypedPtrList::RemoveTail](#removetail)|Удаляет элемент из конца списка.|  
-|[CTypedPtrList::SetAt](#setat)|Задает элемент в заданной позиции.|  
+|[CTypedPtrList::AddHead](#addhead)|Adds an element (or all the elements in another list) to the head of the list (makes a new head).|  
+|[CTypedPtrList::AddTail](#addtail)|Adds an element (or all the elements in another list) to the tail of the list (makes a new tail).|  
+|[CTypedPtrList::GetAt](#getat)|Gets the element at a given position.|  
+|[CTypedPtrList::GetHead](#gethead)|Returns the head element of the list (cannot be empty).|  
+|[CTypedPtrList::GetNext](#getnext)|Gets the next element for iterating.|  
+|[CTypedPtrList::GetPrev](#getprev)|Gets the previous element for iterating.|  
+|[CTypedPtrList::GetTail](#gettail)|Returns the tail element of the list (cannot be empty).|  
+|[CTypedPtrList::RemoveHead](#removehead)|Removes the element from the head of the list.|  
+|[CTypedPtrList::RemoveTail](#removetail)|Removes the element from the tail of the list.|  
+|[CTypedPtrList::SetAt](#setat)|Sets the element at a given position.|  
   
-## <a name="remarks"></a>Примечания  
- При использовании `CTypedPtrList` вместо `CObList` или `CPtrList`, средство проверки типов C++ позволяет избежать ошибок, вызванных указатель несовпадающие типы.  
+## <a name="remarks"></a>Remarks  
+ When you use `CTypedPtrList` rather than `CObList` or `CPtrList`, the C++ type-checking facility helps eliminate errors caused by mismatched pointer types.  
   
- Кроме того `CTypedPtrList` оболочка выполняет большую часть приведения, которое было бы необходимо при использовании `CObList` или `CPtrList`.  
+ In addition, the `CTypedPtrList` wrapper performs much of the casting that would be required if you used `CObList` or `CPtrList`.  
   
- Так как все `CTypedPtrList` функций, встроенных, этот шаблон не влияет на значительно размер или скорость кода.  
+ Because all `CTypedPtrList` functions are inline, use of this template does not significantly affect the size or speed of your code.  
   
- Списки производным от `CObList` может быть сериализован, но которые являются производными от `CPtrList` невозможно.  
+ Lists derived from `CObList` can be serialized, but those derived from `CPtrList` cannot.  
   
- Когда `CTypedPtrList` удалить объект, или при удалении элементов, удаляются только указатели, не сущностями, которые они ссылаются.  
+ When a `CTypedPtrList` object is deleted, or when its elements are removed, only the pointers are removed, not the entities they reference.  
   
- Дополнительные сведения об использовании `CTypedPtrList`, см. в статьях [коллекции](../../mfc/collections.md) и [классы на основе шаблона](../../mfc/template-based-classes.md).  
+ For more information on using `CTypedPtrList`, see the articles [Collections](../../mfc/collections.md) and [Template-Based Classes](../../mfc/template-based-classes.md).  
   
-## <a name="example"></a>Пример  
- В этом примере создается экземпляр `CTypedPtrList`, добавляет один объект, сериализует список на диск и затем удаляет объект:  
+## <a name="example"></a>Example  
+ This example creates an instance of `CTypedPtrList`, adds one object, serializes the list to disk, and then deletes the object:  
   
- [!code-cpp[NVC_MFCCollections&#110;](../../mfc/codesnippet/cpp/ctypedptrlist-class_1.cpp)]  
+ [!code-cpp[NVC_MFCCollections#110](../../mfc/codesnippet/cpp/ctypedptrlist-class_1.cpp)]  
   
- [!code-cpp[NVC_MFCCollections&#111;](../../mfc/codesnippet/cpp/ctypedptrlist-class_2.cpp)]  
+ [!code-cpp[NVC_MFCCollections#111](../../mfc/codesnippet/cpp/ctypedptrlist-class_2.cpp)]  
   
-## <a name="inheritance-hierarchy"></a>Иерархия наследования  
+## <a name="inheritance-hierarchy"></a>Inheritance Hierarchy  
  `BASE_CLASS`  
   
  `_CTypedPtrList`  
   
  `CTypedPtrList`  
   
-## <a name="requirements"></a>Требования  
- **Заголовок:** afxtempl.h  
+## <a name="requirements"></a>Requirements  
+ **Header:** afxtempl.h  
   
-##  <a name="addhead"></a>CTypedPtrList::AddHead  
- Эта функция-член вызывает `BASE_CLASS` **:: AddHead**.  
+##  <a name="addhead"></a>  CTypedPtrList::AddHead  
+ This member function calls `BASE_CLASS`**::AddHead**.  
   
 ```  
 POSITION AddHead(TYPE newElement);  
 void AddHead(CTypedPtrList<BASE_CLASS, TYPE>* pNewList);
 ```  
   
-### <a name="parameters"></a>Параметры  
- *ТИП*  
- Тип элементов, хранящихся в списке базовых классов.  
+### <a name="parameters"></a>Parameters  
+ *TYPE*  
+ Type of the elements stored in the base-class list.  
   
  `newElement`  
- Указатель на объект для добавления в этот список. Объект **NULL** допустимое значение.  
+ The object pointer to be added to this list. A **NULL** value is allowed.  
   
  `BASE_CLASS`  
- Базовый класс для класса list типизированный указатель; должен быть классом список указатель ( [CObList](../../mfc/reference/coblist-class.md) или [CPtrList](../../mfc/reference/cptrlist-class.md)).  
+ Base class of the typed pointer list class; must be a pointer list class ( [CObList](../../mfc/reference/coblist-class.md) or [CPtrList](../../mfc/reference/cptrlist-class.md)).  
   
  `pNewList`  
- Указатель на другую [CTypedPtrList](../../mfc/reference/ctypedptrlist-class.md) объекта. Элементы в `pNewList` будут добавляться в этот список.  
+ A pointer to another [CTypedPtrList](../../mfc/reference/ctypedptrlist-class.md) object. The elements in `pNewList` will be added to this list.  
   
-### <a name="return-value"></a>Возвращаемое значение  
- Возвращает первую версию **ПОЗИЦИИ** значение вставленный элемент.  
+### <a name="return-value"></a>Return Value  
+ The first version returns the **POSITION** value of the newly inserted element.  
   
-### <a name="remarks"></a>Примечания  
- Первая версия добавляет новый элемент перед начало списка. Вторая версия добавляет другой список элементов, прежде чем заголовок.  
+### <a name="remarks"></a>Remarks  
+ The first version adds a new element before the head of the list. The second version adds another list of elements before the head.  
   
-##  <a name="addtail"></a>CTypedPtrList::AddTail  
- Эта функция-член вызывает `BASE_CLASS` **:: AddTail**.  
+##  <a name="addtail"></a>  CTypedPtrList::AddTail  
+ This member function calls `BASE_CLASS`**::AddTail**.  
   
 ```  
 POSITION AddTail(TYPE newElement);  
 void AddTail(CTypedPtrList<BASE_CLASS, TYPE>* pNewList);
 ```  
   
-### <a name="parameters"></a>Параметры  
- *ТИП*  
- Тип элементов, хранящихся в списке базовых классов.  
+### <a name="parameters"></a>Parameters  
+ *TYPE*  
+ Type of the elements stored in the base-class list.  
   
  `newElement`  
- Указатель на объект для добавления в этот список. Объект **NULL** допустимое значение.  
+ The object pointer to be added to this list. A **NULL** value is allowed.  
   
  `BASE_CLASS`  
- Базовый класс для класса list типизированный указатель; должен быть классом список указатель ( [CObList](../../mfc/reference/coblist-class.md) или [CPtrList](../../mfc/reference/cptrlist-class.md)).  
+ Base class of the typed pointer list class; must be a pointer list class ( [CObList](../../mfc/reference/coblist-class.md) or [CPtrList](../../mfc/reference/cptrlist-class.md)).  
   
  `pNewList`  
- Указатель на другую [CTypedPtrList](../../mfc/reference/ctypedptrlist-class.md) объекта. Элементы в `pNewList` будут добавляться в этот список.  
+ A pointer to another [CTypedPtrList](../../mfc/reference/ctypedptrlist-class.md) object. The elements in `pNewList` will be added to this list.  
   
-### <a name="return-value"></a>Возвращаемое значение  
- Возвращает первую версию **ПОЗИЦИИ** значение вставленный элемент.  
+### <a name="return-value"></a>Return Value  
+ The first version returns the **POSITION** value of the newly inserted element.  
   
-### <a name="remarks"></a>Примечания  
- Первая версия добавляет новый элемент после конца списка. Вторая версия добавляет другой список элементов после конца списка.  
+### <a name="remarks"></a>Remarks  
+ The first version adds a new element after the tail of the list. The second version adds another list of elements after the tail of the list.  
   
-##  <a name="getat"></a>CTypedPtrList::GetAt  
- Переменная типа **ПОЗИЦИИ** является ключом для списка.  
+##  <a name="getat"></a>  CTypedPtrList::GetAt  
+ A variable of type **POSITION** is a key for the list.  
   
 ```  
 TYPE& GetAt(POSITION position);  
 TYPE GetAt(POSITION position) const;  
 ```  
   
-### <a name="parameters"></a>Параметры  
- *ТИП*  
- Параметр шаблона, указав тип элементов, хранящихся в списке.  
+### <a name="parameters"></a>Parameters  
+ *TYPE*  
+ Template parameter specifying the type of elements stored in the list.  
   
- *положение*  
- Объект **ПОЗИЦИИ** значение, возвращенное предыдущим `GetHeadPosition` или **найти** вызова функции-члена.  
+ *position*  
+ A **POSITION** value returned by a previous `GetHeadPosition` or **Find** member function call.  
   
-### <a name="return-value"></a>Возвращаемое значение  
- Если список осуществляется через указатель на **const CTypedPtrList**, затем `GetAt` возвращает указатель типа, указанного в параметре шаблона *ТИПА*. Это позволяет функции для использования только в правой части оператора присваивания и тем самым защищает списка от изменения.  
+### <a name="return-value"></a>Return Value  
+ If the list is accessed through a pointer to a **const CTypedPtrList**, then `GetAt` returns a pointer of the type specified by the template parameter *TYPE*. This allows the function to be used only on the right side of an assignment statement and thus protects the list from modification.  
   
- Если список осуществляется напрямую или через указатель к `CTypedPtrList`, затем `GetAt` возвращает ссылку на указатель типа, указанного в параметре шаблона *ТИПА*. Это позволяет функции для использования с обеих сторон оператора присваивания, таким образом элементы списка изменить.  
+ If the list is accessed directly or through a pointer to a `CTypedPtrList`, then `GetAt` returns a reference to a pointer of the type specified by the template parameter *TYPE*. This allows the function to be used on either side of an assignment statement and thus allows the list entries to be modified.  
   
-### <a name="remarks"></a>Примечания  
- Не соответствует индекс, и не может работать с **ПОЗИЦИИ** значение самостоятельно. `GetAt`Извлекает `CObject` указатель, связанный с заданной позиции.  
+### <a name="remarks"></a>Remarks  
+ It is not the same as an index, and you cannot operate on a **POSITION** value yourself. `GetAt` retrieves the `CObject` pointer associated with a given position.  
   
- Необходимо убедиться, что ваш **ПОЗИЦИИ** значение представляет допустимую позицию в списке. Если он является недопустимым, утверждает отладочную версию библиотеки Microsoft Foundation Class.  
+ You must ensure that your **POSITION** value represents a valid position in the list. If it is invalid, then the Debug version of the Microsoft Foundation Class Library asserts.  
   
- Это встроенная функция вызывает `BASE_CLASS` **:: GetAt**.  
+ This inline function calls `BASE_CLASS`**::GetAt**.  
   
-##  <a name="gethead"></a>CTypedPtrList::GetHead  
- Получает указатель, представляющий элемент заголовка этого списка.  
+##  <a name="gethead"></a>  CTypedPtrList::GetHead  
+ Gets the pointer that represents the head element of this list.  
   
 ```  
 TYPE& GetHead();  
 TYPE GetHead() const;  
 ```  
   
-### <a name="parameters"></a>Параметры  
- *ТИП*  
- Параметр шаблона, указав тип элементов, хранящихся в списке.  
+### <a name="parameters"></a>Parameters  
+ *TYPE*  
+ Template parameter specifying the type of elements stored in the list.  
   
-### <a name="return-value"></a>Возвращаемое значение  
- Если список осуществляется через указатель на **const CTypedPtrList**, затем `GetHead` возвращает указатель типа, указанного в параметре шаблона *ТИПА*. Это позволяет функции для использования только в правой части оператора присваивания и тем самым защищает списка от изменения.  
+### <a name="return-value"></a>Return Value  
+ If the list is accessed through a pointer to a **const CTypedPtrList**, then `GetHead` returns a pointer of the type specified by the template parameter *TYPE*. This allows the function to be used only on the right side of an assignment statement and thus protects the list from modification.  
   
- Если список осуществляется напрямую или через указатель к `CTypedPtrList`, затем `GetHead` возвращает ссылку на указатель типа, указанного в параметре шаблона *ТИПА*. Это позволяет функции для использования с обеих сторон оператора присваивания, таким образом элементы списка изменить.  
+ If the list is accessed directly or through a pointer to a `CTypedPtrList`, then `GetHead` returns a reference to a pointer of the type specified by the template parameter *TYPE*. This allows the function to be used on either side of an assignment statement and thus allows the list entries to be modified.  
   
-### <a name="remarks"></a>Примечания  
- Необходимо убедиться, что список не пуст, перед вызовом метода `GetHead`. Если список пуст, утверждает отладочную версию библиотеки Microsoft Foundation Class. Используйте [IsEmpty](../../mfc/reference/coblist-class.md#isempty) чтобы убедиться, что список содержит элементы.  
+### <a name="remarks"></a>Remarks  
+ You must ensure that the list is not empty before calling `GetHead`. If the list is empty, then the Debug version of the Microsoft Foundation Class Library asserts. Use [IsEmpty](../../mfc/reference/coblist-class.md#isempty) to verify that the list contains elements.  
   
-##  <a name="getnext"></a>CTypedPtrList::GetNext  
- Возвращает элемент списка, определенный `rPosition`, затем устанавливает `rPosition` для **ПОЗИЦИИ** значение следующей записи в списке.  
+##  <a name="getnext"></a>  CTypedPtrList::GetNext  
+ Gets the list element identified by `rPosition`, then sets `rPosition` to the **POSITION** value of the next entry in the list.  
   
 ```  
 TYPE& GetNext(POSITION& rPosition);  
 TYPE GetNext(POSITION& rPosition) const;  
 ```  
   
-### <a name="parameters"></a>Параметры  
- *ТИП*  
- Параметр шаблона, указав тип элементов, содержащихся в данном списке.  
+### <a name="parameters"></a>Parameters  
+ *TYPE*  
+ Template parameter specifying the type of elements contained in this list.  
   
  `rPosition`  
- Ссылку на **ПОЗИЦИИ** значение, возвращенное предыдущим `GetNext`, `GetHeadPosition`, или другие вызова функции-члена.  
+ A reference to a **POSITION** value returned by a previous `GetNext`, `GetHeadPosition`, or other member function call.  
   
-### <a name="return-value"></a>Возвращаемое значение  
- Если список осуществляется через указатель на **const CTypedPtrList**, затем `GetNext` возвращает указатель типа, указанного в параметре шаблона *ТИПА*. Это позволяет функции для использования только в правой части оператора присваивания и тем самым защищает списка от изменения.  
+### <a name="return-value"></a>Return Value  
+ If the list is accessed through a pointer to a **const CTypedPtrList**, then `GetNext` returns a pointer of the type specified by the template parameter *TYPE*. This allows the function to be used only on the right side of an assignment statement and thus protects the list from modification.  
   
- Если список осуществляется напрямую или через указатель к `CTypedPtrList`, затем `GetNext` возвращает ссылку на указатель типа, указанного в параметре шаблона *ТИПА*. Это позволяет функции для использования с обеих сторон оператора присваивания, таким образом элементы списка изменить.  
+ If the list is accessed directly or through a pointer to a `CTypedPtrList`, then `GetNext` returns a reference to a pointer of the type specified by the template parameter *TYPE*. This allows the function to be used on either side of an assignment statement and thus allows the list entries to be modified.  
   
-### <a name="remarks"></a>Примечания  
- Можно использовать `GetNext` в прямой итерации цикла, если установить начальное положение, с помощью вызова `GetHeadPosition` или [CPtrList::Find](../../mfc/reference/coblist-class.md#find).  
+### <a name="remarks"></a>Remarks  
+ You can use `GetNext` in a forward iteration loop if you establish the initial position with a call to `GetHeadPosition` or [CPtrList::Find](../../mfc/reference/coblist-class.md#find).  
   
- Необходимо убедиться, что ваш **ПОЗИЦИИ** значение представляет допустимую позицию в списке. Если он является недопустимым, утверждает отладочную версию библиотеки Microsoft Foundation Class.  
+ You must ensure that your **POSITION** value represents a valid position in the list. If it is invalid, then the Debug version of the Microsoft Foundation Class Library asserts.  
   
- Если полученный элемент является последним в списке, то новое значение `rPosition` равен **NULL**.  
+ If the retrieved element is the last in the list, then the new value of `rPosition` is set to **NULL**.  
   
- Можно удалить элемент во время итерации. В примере показано [CObList::RemoveAt](../../mfc/reference/coblist-class.md#removeat).  
+ It is possible to remove an element during an iteration. See the example for [CObList::RemoveAt](../../mfc/reference/coblist-class.md#removeat).  
   
-##  <a name="getprev"></a>CTypedPtrList::GetPrev  
- Возвращает элемент списка, определенный `rPosition`, затем устанавливает `rPosition` для **ПОЗИЦИИ** значение предыдущей записи в списке.  
+##  <a name="getprev"></a>  CTypedPtrList::GetPrev  
+ Gets the list element identified by `rPosition`, then sets `rPosition` to the **POSITION** value of the previous entry in the list.  
   
 ```  
 TYPE& GetPrev(POSITION& rPosition);  
 TYPE GetPrev(POSITION& rPosition) const;  
 ```  
   
-### <a name="parameters"></a>Параметры  
- *ТИП*  
- Параметр шаблона, указав тип элементов, содержащихся в данном списке.  
+### <a name="parameters"></a>Parameters  
+ *TYPE*  
+ Template parameter specifying the type of elements contained in this list.  
   
  `rPosition`  
- Ссылку на **ПОЗИЦИИ** значение, возвращенное предыдущим `GetPrev` или других вызова функции-члена.  
+ A reference to a **POSITION** value returned by a previous `GetPrev` or other member function call.  
   
-### <a name="return-value"></a>Возвращаемое значение  
- Если список осуществляется через указатель на **const CTypedPtrList**, затем `GetPrev` возвращает указатель типа, указанного в параметре шаблона *ТИПА*. Это позволяет функции для использования только в правой части оператора присваивания и тем самым защищает списка от изменения.  
+### <a name="return-value"></a>Return Value  
+ If the list is accessed through a pointer to a **const CTypedPtrList**, then `GetPrev` returns a pointer of the type specified by the template parameter *TYPE*. This allows the function to be used only on the right side of an assignment statement and thus protects the list from modification.  
   
- Если список осуществляется напрямую или через указатель к `CTypedPtrList`, затем `GetPrev` возвращает ссылку на указатель типа, указанного в параметре шаблона *ТИПА*. Это позволяет функции для использования с обеих сторон оператора присваивания, таким образом элементы списка изменить.  
+ If the list is accessed directly or through a pointer to a `CTypedPtrList`, then `GetPrev` returns a reference to a pointer of the type specified by the template parameter *TYPE*. This allows the function to be used on either side of an assignment statement and thus allows the list entries to be modified.  
   
-### <a name="remarks"></a>Примечания  
- Можно использовать `GetPrev` в обратной итерации цикла, если установить начальное положение, с помощью вызова `GetTailPosition` или **найти**.  
+### <a name="remarks"></a>Remarks  
+ You can use `GetPrev` in a reverse iteration loop if you establish the initial position with a call to `GetTailPosition` or **Find**.  
   
- Необходимо убедиться, что ваш **ПОЗИЦИИ** значение представляет допустимую позицию в списке. Если он является недопустимым, утверждает отладочную версию библиотеки Microsoft Foundation Class.  
+ You must ensure that your **POSITION** value represents a valid position in the list. If it is invalid, then the Debug version of the Microsoft Foundation Class Library asserts.  
   
- Если полученный элемент является первым в списке, затем новое значение `rPosition` равен **NULL**.  
+ If the retrieved element is the first in the list, then the new value of `rPosition` is set to **NULL**.  
   
-##  <a name="gettail"></a>CTypedPtrList::GetTail  
- Получает указатель, представляющий элемент заголовка этого списка.  
+##  <a name="gettail"></a>  CTypedPtrList::GetTail  
+ Gets the pointer that represents the head element of this list.  
   
 ```  
 TYPE& GetTail();  
 TYPE GetTail() const;  
 ```  
   
-### <a name="parameters"></a>Параметры  
- *ТИП*  
- Параметр шаблона, указав тип элементов, хранящихся в списке.  
+### <a name="parameters"></a>Parameters  
+ *TYPE*  
+ Template parameter specifying the type of elements stored in the list.  
   
-### <a name="return-value"></a>Возвращаемое значение  
- Если список осуществляется через указатель на **const CTypedPtrList**, затем `GetTail` возвращает указатель типа, указанного в параметре шаблона *ТИПА*. Это позволяет функции для использования только в правой части оператора присваивания и тем самым защищает списка от изменения.  
+### <a name="return-value"></a>Return Value  
+ If the list is accessed through a pointer to a **const CTypedPtrList**, then `GetTail` returns a pointer of the type specified by the template parameter *TYPE*. This allows the function to be used only on the right side of an assignment statement and thus protects the list from modification.  
   
- Если список осуществляется напрямую или через указатель к `CTypedPtrList`, затем `GetTail` возвращает ссылку на указатель типа, указанного в параметре шаблона *ТИПА*. Это позволяет функции для использования с обеих сторон оператора присваивания, таким образом элементы списка изменить.  
+ If the list is accessed directly or through a pointer to a `CTypedPtrList`, then `GetTail` returns a reference to a pointer of the type specified by the template parameter *TYPE*. This allows the function to be used on either side of an assignment statement and thus allows the list entries to be modified.  
   
-### <a name="remarks"></a>Примечания  
- Необходимо убедиться, что список не пуст, перед вызовом метода `GetTail`. Если список пуст, утверждает отладочную версию библиотеки Microsoft Foundation Class. Используйте [IsEmpty](../../mfc/reference/coblist-class.md#isempty) чтобы убедиться, что список содержит элементы.  
+### <a name="remarks"></a>Remarks  
+ You must ensure that the list is not empty before calling `GetTail`. If the list is empty, then the Debug version of the Microsoft Foundation Class Library asserts. Use [IsEmpty](../../mfc/reference/coblist-class.md#isempty) to verify that the list contains elements.  
   
-##  <a name="removehead"></a>CTypedPtrList::RemoveHead  
- Удаляет элемент в начало списка и возвращает его.  
+##  <a name="removehead"></a>  CTypedPtrList::RemoveHead  
+ Removes the element from the head of the list and returns it.  
   
 ```  
 TYPE RemoveHead();
 ```  
   
-### <a name="parameters"></a>Параметры  
- *ТИП*  
- Параметр шаблона, указав тип элементов, хранящихся в списке.  
+### <a name="parameters"></a>Parameters  
+ *TYPE*  
+ Template parameter specifying the type of elements stored in the list.  
   
-### <a name="return-value"></a>Возвращаемое значение  
- Указатель ранее в начало списка. Этот указатель имеет тип, заданный параметром шаблона *ТИПА*.  
+### <a name="return-value"></a>Return Value  
+ The pointer previously at the head of the list. This pointer is of the type specified by the template parameter *TYPE*.  
   
-### <a name="remarks"></a>Примечания  
- Необходимо убедиться, что список не пуст, перед вызовом метода `RemoveHead`. Если список пуст, утверждает отладочную версию библиотеки Microsoft Foundation Class. Используйте [IsEmpty](../../mfc/reference/coblist-class.md#isempty) чтобы убедиться, что список содержит элементы.  
+### <a name="remarks"></a>Remarks  
+ You must ensure that the list is not empty before calling `RemoveHead`. If the list is empty, then the Debug version of the Microsoft Foundation Class Library asserts. Use [IsEmpty](../../mfc/reference/coblist-class.md#isempty) to verify that the list contains elements.  
   
-##  <a name="removetail"></a>CTypedPtrList::RemoveTail  
- Удаляет элемент из конца списка и возвращает его.  
+##  <a name="removetail"></a>  CTypedPtrList::RemoveTail  
+ Removes the element from the tail of the list and returns it.  
   
 ```  
 TYPE RemoveTail();
 ```  
   
-### <a name="parameters"></a>Параметры  
- *ТИП*  
- Параметр шаблона, указав тип элементов, хранящихся в списке.  
+### <a name="parameters"></a>Parameters  
+ *TYPE*  
+ Template parameter specifying the type of elements stored in the list.  
   
-### <a name="return-value"></a>Возвращаемое значение  
- Указатель ранее в конце списка. Этот указатель имеет тип, заданный параметром шаблона *ТИПА*.  
+### <a name="return-value"></a>Return Value  
+ The pointer previously at the tail of the list. This pointer is of the type specified by the template parameter *TYPE*.  
   
-### <a name="remarks"></a>Примечания  
- Необходимо убедиться, что список не пуст, перед вызовом метода `RemoveTail`. Если список пуст, утверждает отладочную версию библиотеки Microsoft Foundation Class. Используйте [IsEmpty](../../mfc/reference/coblist-class.md#isempty) чтобы убедиться, что список содержит элементы.  
+### <a name="remarks"></a>Remarks  
+ You must ensure that the list is not empty before calling `RemoveTail`. If the list is empty, then the Debug version of the Microsoft Foundation Class Library asserts. Use [IsEmpty](../../mfc/reference/coblist-class.md#isempty) to verify that the list contains elements.  
   
-##  <a name="setat"></a>CTypedPtrList::SetAt  
- Эта функция-член вызывает `BASE_CLASS` **:: SetAt**.  
+##  <a name="setat"></a>  CTypedPtrList::SetAt  
+ This member function calls `BASE_CLASS`**::SetAt**.  
   
 ```  
 void SetAt(POSITION pos, TYPE newElement);
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
  `pos`  
- **ПОЗИЦИИ** элемента, чтобы задать.  
+ The **POSITION** of the element to be set.  
   
- *ТИП*  
- Тип элементов, хранящихся в списке базовых классов.  
+ *TYPE*  
+ Type of the elements stored in the base-class list.  
   
  `newElement`  
- Указатель на объект для записи в списке.  
+ The object pointer to be written to the list.  
   
-### <a name="remarks"></a>Примечания  
- Переменная типа **ПОЗИЦИИ** является ключом для списка. Не соответствует индекс, и не может работать с **ПОЗИЦИИ** значение самостоятельно. `SetAt`Записывает указателя на объект в указанной позиции в списке.  
+### <a name="remarks"></a>Remarks  
+ A variable of type **POSITION** is a key for the list. It is not the same as an index, and you cannot operate on a **POSITION** value yourself. `SetAt` writes the object pointer to the specified position in the list.  
   
- Необходимо убедиться, что ваш **ПОЗИЦИИ** значение представляет допустимую позицию в списке. Если он является недопустимым, утверждает отладочную версию библиотеки Microsoft Foundation Class.  
+ You must ensure that your **POSITION** value represents a valid position in the list. If it is invalid, then the Debug version of the Microsoft Foundation Class Library asserts.  
   
- Дополнительные примечания см. в разделе [CObList::SetAt](../../mfc/reference/coblist-class.md#setat).  
+ For more detailed remarks, see [CObList::SetAt](../../mfc/reference/coblist-class.md#setat).  
   
-## <a name="see-also"></a>См. также  
- [Пример MFC сбор данных](../../visual-cpp-samples.md)   
- [Диаграмма иерархии](../../mfc/hierarchy-chart.md)   
- [Класс CPtrList](../../mfc/reference/cptrlist-class.md)   
- [Класс cObList](../../mfc/reference/coblist-class.md)
+## <a name="see-also"></a>See Also  
+ [MFC Sample COLLECT](../../visual-cpp-samples.md)   
+ [Hierarchy Chart](../../mfc/hierarchy-chart.md)   
+ [CPtrList Class](../../mfc/reference/cptrlist-class.md)   
+ [CObList Class](../../mfc/reference/coblist-class.md)
 

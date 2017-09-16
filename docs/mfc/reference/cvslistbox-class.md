@@ -1,5 +1,5 @@
 ---
-title: "Класс CVSListBox | Документы Microsoft"
+title: CVSListBox Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -25,8 +25,17 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- CVSListBox::PreTranslateMessage method
-- CVSListBox class
+- CVSListBox [MFC], CVSListBox
+- CVSListBox [MFC], AddItem
+- CVSListBox [MFC], EditItem
+- CVSListBox [MFC], GetCount
+- CVSListBox [MFC], GetItemData
+- CVSListBox [MFC], GetItemText
+- CVSListBox [MFC], GetSelItem
+- CVSListBox [MFC], RemoveItem
+- CVSListBox [MFC], SelectItem
+- CVSListBox [MFC], SetItemData
+- CVSListBox [MFC], GetListHwnd
 ms.assetid: c79be7b4-46ed-4af8-a41e-68962782d8ef
 caps.latest.revision: 30
 author: mikeblome
@@ -46,66 +55,66 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0e0c08ddc57d437c51872b5186ae3fc983bb0199
-ms.openlocfilehash: 4527249fc1a22a1db0623ea46954065fcbd071f4
+ms.translationtype: MT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: d84db3fe2c27925db01188f43a3d467e6119ca2b
 ms.contentlocale: ru-ru
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 09/12/2017
 
 ---
-# <a name="cvslistbox-class"></a>Класс CVSListBox
-`CVSListBox` Класс поддерживает элемент управления для редактирования списка.  
+# <a name="cvslistbox-class"></a>CVSListBox Class
+The `CVSListBox` class supports an editable list control.  
   
-## <a name="syntax"></a>Синтаксис  
+## <a name="syntax"></a>Syntax  
   
 ```  
 class CVSListBox : public CVSListBoxBase  
 ```  
   
-## <a name="members"></a>Члены  
+## <a name="members"></a>Members  
   
-### <a name="public-constructors"></a>Открытые конструкторы  
+### <a name="public-constructors"></a>Public Constructors  
   
-|Имя|Описание|  
+|Name|Description|  
 |----------|-----------------|  
-|[CVSListBox::CVSListBox](#cvslistbox)|Создает объект `CVSListBox`.|  
-|`CVSListBox::~CVSListBox`|Деструктор.|  
+|[CVSListBox::CVSListBox](#cvslistbox)|Constructs a `CVSListBox` object.|  
+|`CVSListBox::~CVSListBox`|Destructor.|  
   
-### <a name="public-methods"></a>Открытые методы  
+### <a name="public-methods"></a>Public Methods  
   
-|Имя|Описание|  
+|Name|Description|  
 |----------|-----------------|  
-|[CVSListBox::AddItem](#additem)|Добавляет строку в элементе управления списком. (Переопределяет `CVSListBoxBase::AddItem`.)|  
-|[CVSListBox::EditItem](#edititem)|Запускает операцию изменения в тексте элемента управления списка. (Переопределяет `CVSListBoxBase::EditItem`.)|  
-|[CVSListBox::GetCount](#getcount)|Получает число строк в элементе управления для редактирования списка. (Переопределяет `CVSListBoxBase::GetCount`.)|  
-|[CVSListBox::GetItemData](#getitemdata)|Извлекает значение 32-разрядные приложения, связанный с элементом управления для редактирования списка. (Переопределяет `CVSListBoxBase::GetItemData`.)|  
-|[CVSListBox::GetItemText](#getitemtext)|Извлекает текст элемента управления для редактирования списка. (Переопределяет `CVSListBoxBase::GetItemText`.)|  
-|[CVSListBox::GetSelItem](#getselitem)|Возвращает отсчитываемый от нуля индекс текущего выделенного элемента в элементе управления для редактирования списка. (Переопределяет `CVSListBoxBase::GetSelItem`.)|  
-|`CVSListBox::PreTranslateMessage`|Преобразует оконных сообщений перед их отправкой [TranslateMessage](http://msdn.microsoft.com/library/windows/desktop/ms644955) и [DispatchMessage](http://msdn.microsoft.com/library/windows/desktop/ms644934) функции Windows. Дополнительные сведения и синтаксиса см. в разделе [CWnd::PreTranslateMessage](../../mfc/reference/cwnd-class.md#pretranslatemessage). (Переопределяет `CVSListBoxBase::PreTranslateMessage`.)|  
-|[CVSListBox::RemoveItem](#removeitem)|Удаляет элемент из списка для редактирования элемента управления. (Переопределяет `CVSListBoxBase::RemoveItem`.)|  
-|[CVSListBox::SelectItem](#selectitem)|Выбирает строку элемента управления для редактирования списка. (Переопределяет `CVSListBoxBase::SelectItem`.)|  
-|[CVSListBox::SetItemData](#setitemdata)|Связывает значение 32-разрядные приложения с элементом управления для редактирования списка. (Переопределяет `CVSListBoxBase::SetItemData`.)|  
+|[CVSListBox::AddItem](#additem)|Adds a string to a list control. (Overrides `CVSListBoxBase::AddItem`.)|  
+|[CVSListBox::EditItem](#edititem)|Starts an edit operation on the text of a list control item. (Overrides `CVSListBoxBase::EditItem`.)|  
+|[CVSListBox::GetCount](#getcount)|Retrieves the number of strings in an editable list control. (Overrides `CVSListBoxBase::GetCount`.)|  
+|[CVSListBox::GetItemData](#getitemdata)|Retrieves an application-specific 32-bit value that is associated with an editable list control item. (Overrides `CVSListBoxBase::GetItemData`.)|  
+|[CVSListBox::GetItemText](#getitemtext)|Retrieves the text of an editable list control item. (Overrides `CVSListBoxBase::GetItemText`.)|  
+|[CVSListBox::GetSelItem](#getselitem)|Retrieves the zero-based index of the currently selected item in an editable list control. (Overrides `CVSListBoxBase::GetSelItem`.)|  
+|`CVSListBox::PreTranslateMessage`|Translates window messages before they are dispatched to the [TranslateMessage](http://msdn.microsoft.com/library/windows/desktop/ms644955) and [DispatchMessage](http://msdn.microsoft.com/library/windows/desktop/ms644934) Windows functions. For more information and method syntax, see [CWnd::PreTranslateMessage](../../mfc/reference/cwnd-class.md#pretranslatemessage). (Overrides `CVSListBoxBase::PreTranslateMessage`.)|  
+|[CVSListBox::RemoveItem](#removeitem)|Removes an item from an editable list control. (Overrides `CVSListBoxBase::RemoveItem`.)|  
+|[CVSListBox::SelectItem](#selectitem)|Selects an editable list control string. (Overrides `CVSListBoxBase::SelectItem`.)|  
+|[CVSListBox::SetItemData](#setitemdata)|Associates an application-specific 32-bit value with an editable list control item. (Overrides `CVSListBoxBase::SetItemData`.)|  
   
-### <a name="protected-methods"></a>Защищенные методы  
+### <a name="protected-methods"></a>Protected Methods  
   
-|Имя|Описание|  
+|Name|Description|  
 |----------|-----------------|  
-|[CVSListBox::GetListHwnd](#getlisthwnd)|Возвращает дескриптор текущего элемента управления представления списка embedded.|  
+|[CVSListBox::GetListHwnd](#getlisthwnd)|Returns the handle to the current embedded list view control.|  
   
-## <a name="remarks"></a>Примечания  
- `CVSListBox` Класс предоставляет набор кнопок редактирования, позволяющие создать, изменить, удалить или изменить порядок элементов в элементе управления списком.  
+## <a name="remarks"></a>Remarks  
+ The `CVSListBox` class provides a set of edit buttons that enable the user to create, modify, delete, or rearrange the items in a list control.  
   
- Ниже приведен рисунка для редактирования элемента управления. Второй список запись, которая называется «Item2», выбранных для редактирования.  
+ The following is a picture of the editable list control. The second list entry, which is titled "Item2", is selected for editing.  
   
- ![Элемент управления CVSListBox](../../mfc/reference/media/cvslistbox.png "cvslistbox")  
+ ![CVSListBox control](../../mfc/reference/media/cvslistbox.png "cvslistbox")  
   
- При использовании редактора ресурсов для добавления элемента управления для редактирования списка, обратите внимание, что **элементов** области редактора не предоставляет предварительно определенного списка для редактирования элемента управления. Вместо этого добавьте статический элемент управления, таких как **группа** элемента управления. Платформа использует статический элемент управления как заполнитель, чтобы указать размер и положение элемента управления для редактирования списка.  
+ If you use the resource editor to add an editable list control, notice that the **Toolbox** pane of the editor does not provide a predefined editable list control. Instead, add a static control such as the **Group Box** control. The framework uses the static control as a placeholder to specify the size and position of the editable list control.  
   
- Чтобы использовать элемент управления для редактирования списка в шаблон диалогового окна, объявите `CVSListBox` переменной в классе диалогового окна. Для поддержки обмена данными между переменной и элемента управления, определить `DDX_Control` запись макроса в `DoDataExchange` метод диалогового окна. По умолчанию элемент управления для редактирования списка создается без кнопки изменения. Чтобы включить кнопки edit используйте унаследованного метода CVSListBoxBase::SetStandardButtons.  
+ To use an editable list control in a dialog box template, declare a `CVSListBox` variable in your dialog box class. To support data exchange between the variable and the control, define a `DDX_Control` macro entry in the `DoDataExchange` method of the dialog box. By default, the editable list control is created without edit buttons. Use the inherited CVSListBoxBase::SetStandardButtons method to enable the edit buttons.  
   
- Дополнительные сведения см. в каталоге образцов `New Controls` образцы, файлы Page3.cpp и Page3.h.  
+ For more information, see the Samples directory, the `New Controls` sample, the Page3.cpp and Page3.h files.  
   
-## <a name="inheritance-hierarchy"></a>Иерархия наследования  
+## <a name="inheritance-hierarchy"></a>Inheritance Hierarchy  
  [CObject](../../mfc/reference/cobject-class.md)  
   
  [CCmdTarget](../../mfc/reference/ccmdtarget-class.md)  
@@ -118,11 +127,11 @@ class CVSListBox : public CVSListBoxBase
   
  [CVSListBox](../../mfc/reference/cvslistbox-class.md)  
   
-## <a name="requirements"></a>Требования  
- **Заголовок:** afxvslistbox.h  
+## <a name="requirements"></a>Requirements  
+ **Header:** afxvslistbox.h  
   
-##  <a name="additem"></a>CVSListBox::AddItem  
- Добавляет строку в элементе управления списком.  
+##  <a name="additem"></a>  CVSListBox::AddItem  
+ Adds a string to a list control.  
   
 ```  
 virtual int AddItem(
@@ -131,156 +140,156 @@ virtual int AddItem(
     int iIndex=-1);
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
  [in] `strIext`  
- Ссылка на строку.  
+ A reference to a string.  
   
  [in] `dwData`  
- Значение 32-разрядные приложения, связанного со строкой. Значение по умолчанию — 0.  
+ An application-specific 32-bit value that is associated with the string. The default value is 0.  
   
  [in] `iIndex`  
- Отсчитываемый от нуля индекс позиции, который будет содержать строку. Если `iIndex` параметр имеет значение -1, строка добавляется в конец списка. Значение по умолчанию — -1.  
+ The zero-based index of the position that will hold the string. If the `iIndex` parameter is -1, the string is added to the end of the list. The default value is -1.  
   
-### <a name="return-value"></a>Возвращаемое значение  
- Отсчитываемый от нуля индекс позиции строки в элементе управления списком.  
+### <a name="return-value"></a>Return Value  
+ The zero-based index of the position of the string in the list control.  
   
-### <a name="remarks"></a>Примечания  
- Используйте [CVSListBox::GetItemData](#getitemdata) метод для получения значения, который задается параметром `dwData` параметр. Это значение может быть целое число от приложения или указатель на другие данные.  
+### <a name="remarks"></a>Remarks  
+ Use the [CVSListBox::GetItemData](#getitemdata) method to retrieve the value that is specified by the `dwData` parameter. This value can be an application-specific integer or a pointer to other data.  
   
-##  <a name="cvslistbox"></a>CVSListBox::CVSListBox  
- Создает объект `CVSListBox`.  
+##  <a name="cvslistbox"></a>  CVSListBox::CVSListBox  
+ Constructs a `CVSListBox` object.  
   
 ```  
 CVSListBox();
 ```  
   
-### <a name="return-value"></a>Возвращаемое значение  
+### <a name="return-value"></a>Return Value  
   
-### <a name="remarks"></a>Примечания  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="edititem"></a>CVSListBox::EditItem  
- Запускает операцию изменения в тексте элемента управления списка.  
+##  <a name="edititem"></a>  CVSListBox::EditItem  
+ Starts an edit operation on the text of a list control item.  
   
 ```  
 virtual BOOL EditItem(int iIndex);
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
  [in] `iIndex`  
- Отсчитываемый от нуля индекс элемента управления списка.  
+ Zero-based index of a list control item.  
   
-### <a name="return-value"></a>Возвращаемое значение  
- `TRUE`Если операция редактирования запускается успешно. в противном случае — `FALSE`.  
+### <a name="return-value"></a>Return Value  
+ `TRUE` if the edit operation starts successfully; otherwise, `FALSE`.  
   
-### <a name="remarks"></a>Примечания  
- Пользователь запускает операцию редактирования, дважды щелкнув метку элемента или нажав **F2** или **пробел** ключ, если элемент имеет фокус.  
+### <a name="remarks"></a>Remarks  
+ The user starts an edit operation either by double-clicking the label of an item, or by pressing the **F2** or **SPACEBAR** key when an item has the focus.  
   
-##  <a name="getcount"></a>CVSListBox::GetCount  
- Получает число строк в элементе управления для редактирования списка.  
+##  <a name="getcount"></a>  CVSListBox::GetCount  
+ Retrieves the number of strings in an editable list control.  
   
 ```  
 virtual int GetCount() const;  
 ```  
   
-### <a name="return-value"></a>Возвращаемое значение  
- Число элементов в элементе управления "Список".  
+### <a name="return-value"></a>Return Value  
+ The number of items in the list control.  
   
-### <a name="remarks"></a>Примечания  
- Обратите внимание, что значение счетчика единицу больше, чем значение индекса последнего элемента, так как индекс начинается с нуля.  
+### <a name="remarks"></a>Remarks  
+ Note that the count is one greater than the index value of the last item because the index is zero-based.  
   
-##  <a name="getitemdata"></a>CVSListBox::GetItemData  
- Извлекает значение 32-разрядные приложения, связанный с элементом управления для редактирования списка.  
+##  <a name="getitemdata"></a>  CVSListBox::GetItemData  
+ Retrieves an application-specific 32-bit value that is associated with an editable list control item.  
   
 ```  
 virtual DWORD_PTR GetItemData(int iIndex) const;  
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
  [in] `iIndex`  
- Отсчитываемый от нуля индекс элемента управления для редактирования списка.  
+ The zero-based index of an editable list control item.  
   
-### <a name="return-value"></a>Возвращаемое значение  
- 32-разрядное значение, связанный с указанным элементом.  
+### <a name="return-value"></a>Return Value  
+ The 32-bit value that is associated with the specified item.  
   
-### <a name="remarks"></a>Примечания  
- Используйте [CVSListBox::SetItemData](#setitemdata) или [CVSListBox::AddItem](#additem) метода, чтобы установить 32-разрядное значение с элементом управления списка. Это значение может быть целое число от приложения или указатель на другие данные.  
+### <a name="remarks"></a>Remarks  
+ Use the [CVSListBox::SetItemData](#setitemdata) or [CVSListBox::AddItem](#additem) method to associate the 32-bit value with the list control item. This value can be an application-specific integer or a pointer to other data.  
   
-##  <a name="getitemtext"></a>CVSListBox::GetItemText  
- Извлекает текст элемента управления для редактирования списка.  
+##  <a name="getitemtext"></a>  CVSListBox::GetItemText  
+ Retrieves the text of an editable list control item.  
   
 ```  
 virtual CString GetItemText(int iIndex) const;  
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
  [in] `iIndex`  
- Отсчитываемый от нуля индекс элемента управления для редактирования списка.  
+ The zero-based index of an editable list control item.  
   
-### <a name="return-value"></a>Возвращаемое значение  
- Объект [CString](../../atl-mfc-shared/reference/cstringt-class.md) объекта, содержащего текст указанного элемента.  
+### <a name="return-value"></a>Return Value  
+ A [CString](../../atl-mfc-shared/reference/cstringt-class.md) object that contains the text of the specified item.  
   
-### <a name="remarks"></a>Примечания  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="getlisthwnd"></a>CVSListBox::GetListHwnd  
- Возвращает дескриптор текущего элемента управления представления списка embedded.  
+##  <a name="getlisthwnd"></a>  CVSListBox::GetListHwnd  
+ Returns the handle to the current embedded list view control.  
   
 ```  
 virtual HWND GetListHwnd() const;  
 ```  
   
-### <a name="return-value"></a>Возвращаемое значение  
- Дескриптор элемента управления списком embedded.  
+### <a name="return-value"></a>Return Value  
+ A handle to the embedded list view control.  
   
-### <a name="remarks"></a>Примечания  
- Этот метод используется для получения дескриптора для элемента управления списком внедренные, поддерживающий `CVSListBox` класса.  
+### <a name="remarks"></a>Remarks  
+ Use this method to retrieve a handle to the embedded list view control that supports the `CVSListBox` class.  
   
-##  <a name="getselitem"></a>CVSListBox::GetSelItem  
- Возвращает отсчитываемый от нуля индекс текущего выделенного элемента в элементе управления для редактирования списка.  
+##  <a name="getselitem"></a>  CVSListBox::GetSelItem  
+ Retrieves the zero-based index of the currently selected item in an editable list control.  
   
 ```  
 virtual int GetSelItem() const;  
 ```  
   
-### <a name="return-value"></a>Возвращаемое значение  
- Если этот метод выполнен успешно, отсчитываемый от нуля индекс элемента, выбранного в данный момент; в противном случае — значение -1.  
+### <a name="return-value"></a>Return Value  
+ If this method is successful, the zero-based index of the currently selected item; otherwise, -1.  
   
-### <a name="remarks"></a>Примечания  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="removeitem"></a>CVSListBox::RemoveItem  
- Удаляет элемент из списка для редактирования элемента управления.  
+##  <a name="removeitem"></a>  CVSListBox::RemoveItem  
+ Removes an item from an editable list control.  
   
 ```  
 virtual BOOL RemoveItem(int iIndex);
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
  [in] `iIndex`  
- Отсчитываемый от нуля индекс элемента управления для редактирования списка.  
+ The zero-based index of an editable list control item.  
   
-### <a name="return-value"></a>Возвращаемое значение  
- `TRUE`Если указанный элемент был удален. в противном случае — `FALSE`.  
+### <a name="return-value"></a>Return Value  
+ `TRUE` if the specified item is removed; otherwise, `FALSE`.  
   
-### <a name="remarks"></a>Примечания  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="selectitem"></a>CVSListBox::SelectItem  
- Выбирает строку элемента управления для редактирования списка.  
+##  <a name="selectitem"></a>  CVSListBox::SelectItem  
+ Selects an editable list control string.  
   
 ```  
 virtual BOOL SelectItem(int iItem);
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
  [in] `iItem`  
- Отсчитываемый от нуля индекс элемента управления для редактирования списка.  
+ The zero-based index of an editable list control item.  
   
-### <a name="return-value"></a>Возвращаемое значение  
- `TRUE`Если этот метод выполнен успешно; в противном случае — `FALSE`.  
+### <a name="return-value"></a>Return Value  
+ `TRUE` if this method is successful; otherwise, `FALSE`.  
   
-### <a name="remarks"></a>Примечания  
- Этот метод выбирает указанный элемент и при необходимости, прокрутке элемента.  
+### <a name="remarks"></a>Remarks  
+ This method selects the specified item, and if it is required, scrolls the item into view.  
   
-##  <a name="setitemdata"></a>CVSListBox::SetItemData  
- Связывает значение 32-разрядные приложения с элементом управления для редактирования списка.  
+##  <a name="setitemdata"></a>  CVSListBox::SetItemData  
+ Associates an application-specific 32-bit value with an editable list control item.  
   
 ```  
 virtual void SetItemData(
@@ -288,16 +297,16 @@ virtual void SetItemData(
     DWORD_PTR dwData);
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
  [in] `iIndex`  
- Отсчитываемый от нуля индекс элемента управления для редактирования списка.  
+ The zero-based index of an editable list control item.  
   
  [in] `dwData`  
- 32-разрядное значение. Это значение может быть целое число от приложения или указатель на другие данные.  
+ A 32-bit value. This value can be an application-specific integer or a pointer to other data.  
   
-### <a name="remarks"></a>Примечания  
+### <a name="remarks"></a>Remarks  
   
-## <a name="see-also"></a>См. также  
- [Диаграмма иерархии](../../mfc/hierarchy-chart.md)   
- [Классы](../../mfc/reference/mfc-classes.md)
+## <a name="see-also"></a>See Also  
+ [Hierarchy Chart](../../mfc/hierarchy-chart.md)   
+ [Classes](../../mfc/reference/mfc-classes.md)
 

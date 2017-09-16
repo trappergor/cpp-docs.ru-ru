@@ -1,55 +1,74 @@
 ---
-title: "Стили для элемента управления &quot;Индикатор выполнения&quot; | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "CProgressCtrl - класс, стили"
-  - "PBS_SMOOTH - стиль"
-  - "PBS_VERTICAL - стиль"
-  - "элементы управления хода выполнения [C++], стили"
+title: Styles for the Progress Control | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- PBS_SMOOTH style
+- progress controls [MFC], styles
+- PBS_VERTICAL style
+- CProgressCtrl class [MFC], styles
 ms.assetid: 39eb8081-bc20-4552-91b9-e7cdd1b7d8ae
 caps.latest.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 5
----
-# Стили для элемента управления &quot;Индикатор выполнения&quot;
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 2f7a2fd46e9a9af0e3de95f99b717629feab3357
+ms.contentlocale: ru-ru
+ms.lasthandoff: 09/12/2017
 
-При первоначальном создании элемент управления ходом выполнения \([CProgressCtrl::Create](../Topic/CProgressCtrl::Create.md)\), используйте параметр `dwStyle` для определения нужные стили окна для контроля за ходом выполнения.  Следующие сведения списка применимые стили окна.  Элемент управления игнорирует стиль окна, кроме одного, перечисленных ниже.  Всегда следует создать элемент управления, как дочернее окно, обычно родительская диалогового окна.  
+---
+# <a name="styles-for-the-progress-control"></a>Styles for the Progress Control
+When you initially create the progress control ([CProgressCtrl::Create](../mfc/reference/cprogressctrl-class.md#create)), use the `dwStyle` parameter to specify the desired window styles for your progress control. The following list details the applicable window styles. The control ignores any window style other than the ones listed here. You should always create the control as a child window, usually of a dialog box parent.  
   
-|Стиль окна|Действие|  
-|----------------|--------------|  
-|`WS_BORDER`|Создает границы вокруг окна.|  
-|**WS\_CHILD**|Создает дочернее окно \(всегда должен использоваться для `CProgressCtrl`\).|  
-|**WS\_CLIPCHILDREN**|Исключает область занятую дочерними окнами при рисовании внутри родительского окна.  Используется при создании родительского окна.|  
-|**WS\_CLIPSIBLINGS**|Привязывает дочерние окна относительно друг друга.|  
-|**WS\_DISABLED**|Создает окно, изначально запрещено.|  
-|**WS\_VISIBLE**|Создает окно, изначально видимым.|  
-|**WS\_TABSTOP**|Указывает, что элемент управления может получать фокус, когда пользователь нажимает клавишу TAB, чтобы перейти к нему.|  
+|Window style|Effect|  
+|------------------|------------|  
+|`WS_BORDER`|Creates a border around the window.|  
+|**WS_CHILD**|Creates a child window (should always be used for `CProgressCtrl`).|  
+|**WS_CLIPCHILDREN**|Excludes the area occupied by child windows when you draw within the parent window. Used when you create the parent window.|  
+|**WS_CLIPSIBLINGS**|Clips child windows relative to each other.|  
+|**WS_DISABLED**|Creates a window that is initially disabled.|  
+|**WS_VISIBLE**|Creates a window that is initially visible.|  
+|**WS_TABSTOP**|Specifies that the control can receive focus when the user presses the TAB key to move to it.|  
   
- Кроме того, можно указать 2 стиля, которые применяются только к контролю за ходом выполнения, `PBS_VERTICAL` и `PBS_SMOOTH`.  
+ In addition, you can specify two styles that apply only to the progress control, `PBS_VERTICAL` and `PBS_SMOOTH`.  
   
- Используйте `PBS_VERTICAL`, чтобы ориентировать элемент управления по вертикали, а не по горизонтали.  Используйте `PBS_SMOOTH` для заполнения элемента управления, вместо того, чтобы отображать малые определяемые квадратов, которые заполняют элемент управления последовательно.  
+ Use `PBS_VERTICAL` to orient the control vertically, rather than horizontally. Use `PBS_SMOOTH` to fill the control completely, rather than displaying small delineated squares that fill the control incrementally.  
   
- Без стиля `PBS_SMOOTH`:  
+ Without `PBS_SMOOTH` style:  
   
- ![Стандартный стиль индикатора выполнения](../mfc/media/vc4ruw1.png "vc4RUW1")  
+ ![Standard progress bar style](../mfc/media/vc4ruw1.gif "vc4ruw1")  
   
- С `PBS_SMOOTH` и стилями `PBS_VERTICAL`:  
+ With `PBS_SMOOTH` and `PBS_VERTICAL` styles:  
   
- ![Стиль индикатора выполнения, гладкий и вертикальный](../mfc/media/vc4ruw2.png "vc4RUW2")  
+ ![Progress bar style, smooth and vertical](../mfc/media/vc4ruw2.gif "vc4ruw2")  
   
- Дополнительные сведения см. в разделе [Стили окна](../mfc/reference/frame-window-styles-mfc.md) в *справочнике по MFC*.  
+ For more information, see [Window Styles](../mfc/reference/styles-used-by-mfc.md#frame-window-styles-mfc) in the *MFC Reference*.  
   
-## См. также  
- [Использование CProgressCtrl](../mfc/using-cprogressctrl.md)
+## <a name="see-also"></a>See Also  
+ [Using CProgressCtrl](../mfc/using-cprogressctrl.md)
+
+

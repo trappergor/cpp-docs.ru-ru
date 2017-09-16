@@ -1,39 +1,58 @@
 ---
-title: "Контейнеры. Проблемы пользовательского интерфейса | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "контейнеры, проблемы пользовательского интерфейса"
-  - "OLE - контейнеры, пользовательский интерфейс"
-  - "проблемы пользовательского интерфейса"
+title: 'Containers: User-Interface Issues | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- containers [MFC], user-interface issues
+- OLE containers [MFC], user interface
+- user interface issues
 ms.assetid: c833c249-a633-4f1c-82d6-ec6b4892863a
 caps.latest.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 6
----
-# Контейнеры. Проблемы пользовательского интерфейса
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: e2fbe71272393cbf019a76fc38502f18053f091b
+ms.contentlocale: ru-ru
+ms.lasthandoff: 09/12/2017
 
-Необходимо добавить несколько функций с интерфейсом пользователя приложения адекватно для управления и связанные вложенные элементы.  Эти функции включают изменения в структуре меню и на события, приложение обрабатывает.  Дополнительные сведения о них см. в следующих статьях.  
+---
+# <a name="containers-user-interface-issues"></a>Containers: User-Interface Issues
+You must add a number of features to a container application's user interface to adequately manage linked and embedded items. These features involve changes to the menu structure and to the events that the application handles. For detailed information about them, see the following articles:  
   
-|Сведения о|См.|  
-|----------------|---------|  
-|Добавление меню для контейнеров|[Меню и ресурсы: Добавление контейнера](../mfc/menus-and-resources-container-additions.md)|  
-|Дополнительные ресурсы для контейнеров|[Меню и ресурсы: Добавление контейнера](../mfc/menus-and-resources-container-additions.md)|  
-|Встроенные или связанные элементы рисования|[Пример контейнера](../top/visual-cpp-samples.md)|  
-|Новые диалоговые окна для контейнеров|[Диалоговые окна в OLE](../mfc/dialog-boxes-in-ole.md)|  
+|For information on|See|  
+|------------------------|---------|  
+|Menu additions for containers|[Menus and Resources: Container Additions](../mfc/menus-and-resources-container-additions.md)|  
+|Additional resources for containers|[Menus and Resources: Container Additions](../mfc/menus-and-resources-container-additions.md)|  
+|Painting linked or embedded items|[Container sample](../visual-cpp-samples.md)|  
+|New dialog boxes for containers|[Dialog Boxes in OLE](../mfc/dialog-boxes-in-ole.md)|  
   
-## См. также  
- [Контейнеры](../mfc/containers.md)   
- [Контейнеры. Дополнительные возможности](../mfc/containers-advanced-features.md)   
- [Меню и ресурсы \(OLE\)](../mfc/menus-and-resources-ole.md)
+## <a name="see-also"></a>See Also  
+ [Containers](../mfc/containers.md)   
+ [Containers: Advanced Features](../mfc/containers-advanced-features.md)   
+ [Menus and Resources (OLE)](../mfc/menus-and-resources-ole.md)
+
+

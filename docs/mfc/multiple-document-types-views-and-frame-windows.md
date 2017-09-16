@@ -1,94 +1,114 @@
 ---
-title: "Множественные типы документов, представления и окна фреймов | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "окна со статическим разделителем"
-  - "несколько представлений"
-  - "несколько типов документов"
-  - "несколько представлений, несколько окон фреймов"
-  - "классы документов, несколько"
-  - "документы [C++], несколько типов"
-  - "окна разделителей"
-  - "окна с динамическим разделителем"
-  - "окна [C++], динамический разделитель"
-  - "окна [C++], статический разделитель"
-  - "несколько окон фреймов"
-  - "окна разделителей, статический"
+title: Multiple Document Types, Views, and Frame Windows | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- static splitter windows [MFC]
+- multiple views [MFC]
+- multiple document types [MFC]
+- multiple views [MFC], frame windows
+- document classes [MFC], multiple
+- documents [MFC], multiple types of
+- splitter windows [MFC], dynamic
+- dynamic splitter windows [MFC]
+- windows [MFC], dynamic splitter
+- windows [MFC], static splitter
+- multiple frame windows [MFC]
+- splitter windows [MFC], static
 ms.assetid: c6b9e4e0-7c9c-45f1-a804-aeac39c9a128
 caps.latest.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 6
----
-# Множественные типы документов, представления и окна фреймов
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- ru-ru
+- zh-cn
+- zh-tw
+translation.priority.mt:
+- cs-cz
+- pl-pl
+- pt-br
+- tr-tr
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 0d9b5d66ae012516ba17b8590c158dee6284642a
+ms.contentlocale: ru-ru
+ms.lasthandoff: 09/12/2017
 
-Стандартная связь между документом, его представлением и окном фрейма описана в разделе [Создание документов и представлений](../mfc/document-view-creation.md). Многие приложения поддерживают один тип документов \(но возможно несколько открытых документов этого типа\) с одним представлением в документе и только с одним окном фрейма в каждом документе. Однако для некоторых приложений может потребоваться изменить один или несколько из этих значений по умолчанию.  
+---
+# <a name="multiple-document-types-views-and-frame-windows"></a>Multiple Document Types, Views, and Frame Windows
+The standard relationship among a document, its view, and its frame window is described in [Document/View Creation](../mfc/document-view-creation.md). Many applications support a single document type (but possibly multiple open documents of that type) with a single view on the document and only one frame window per document. But some applications may need to alter one or more of those defaults.  
   
-## Дополнительные сведения  
+## <a name="what-do-you-want-to-know-more-about"></a>What do you want to know more about  
   
--   [Несколько типов документов](#_core_multiple_document_types)  
+-   [Multiple document types](#_core_multiple_document_types)  
   
--   [Несколько представлений](#_core_multiple_views)  
+-   [Multiple views](#_core_multiple_views)  
   
--   [Несколько окон фреймов](#_core_multiple_frame_windows)  
+-   [Multiple frame windows](#_core_multiple_frame_windows)  
   
--   [Окна разделителей](#_core_splitter_windows)  
+-   [Splitter windows](#_core_splitter_windows)  
   
-##  <a name="_core_multiple_document_types"></a> Несколько типов документов  
- Мастер приложений MFC создаст для вас один класс документа. Однако в некоторых случаях может потребоваться поддержка нескольких типов документов. Например, в приложении могут понадобиться листы и диаграммы. Каждый тип документа представлен собственным классом документа и, возможно, собственным классом представления. Когда пользователь выбирает в меню "Файл" команду "Создать", платформа отображает диалоговое окно со списком поддерживаемых типов документов. Затем она создает документ типа, выбранного пользователем. Управление каждым типом документа осуществляет его собственный объект шаблона документа.  
+##  <a name="_core_multiple_document_types"></a> Multiple Document Types  
+ The MFC Application Wizard creates a single document class for you. In some cases, though, you may need to support more than one document type. For example, your application may need worksheet and chart documents. Each document type is represented by its own document class and probably by its own view class as well. When the user chooses the File New command, the framework displays a dialog box that lists the supported document types. Then it creates a document of the type that the user chooses. Each document type is managed by its own document-template object.  
   
- Сведения о создании дополнительных классов документов см. в разделе [Добавление класса](../Topic/Adding%20a%20Class%20\(Visual%20C++\).md). Выберите [CDocument](../Topic/CDocument%20Class.md) в качестве типа класса, от которого будет выполняться наследование, и укажите необходимые сведения о документе. Затем реализуйте данные нового класса.  
+ To create extra document classes, see [Adding a Class](../ide/adding-a-class-visual-cpp.md). Choose [CDocument](../mfc/reference/cdocument-class.md) as the Class Type to derive from and supply the requested document information. Then implement the new class's data.  
   
- Чтобы платформа узнала о дополнительном классе документов, добавьте второй вызов [AddDocTemplate](../Topic/CWinApp::AddDocTemplate.md) в переопределение [InitInstance](../Topic/CWinApp::InitInstance.md) класса приложения. Дополнительные сведения см. в статье [Шаблоны документов](../mfc/document-templates-and-the-document-view-creation-process.md).  
+ To let the framework know about your extra document class, you must add a second call to [AddDocTemplate](../mfc/reference/cwinapp-class.md#adddoctemplate) in your application class's [InitInstance](../mfc/reference/cwinapp-class.md#initinstance) override. For more information, see [Document Templates](../mfc/document-templates-and-the-document-view-creation-process.md).  
   
-##  <a name="_core_multiple_views"></a> Несколько представлений  
- Для многих документов требуется только одно представление. Однако существует возможность поддержки нескольких представлений одного документа. Чтобы пользователь мог реализовать несколько представлений, объект документа хранит список своих представлений, предоставляет функции\-члены для добавления и удаления представлений и предлагает функцию\-член [UpdateAllViews](../Topic/CDocument::UpdateAllViews.md) для предоставления ряду представлений сведений об изменении данных документа.  
+##  <a name="_core_multiple_views"></a> Multiple Views  
+ Many documents require only a single view, but it is possible to support more than one view of a single document. To help you implement multiple views, a document object keeps a list of its views, provides member functions for adding and removing views, and supplies the [UpdateAllViews](../mfc/reference/cdocument-class.md#updateallviews) member function for letting multiple views know when the document's data has changed.  
   
- MFC поддерживает три стандартных пользовательских интерфейса, требующих несколько представлений в одном документе. Вот эти модели.  
+ MFC supports three common user interfaces requiring multiple views on the same document. These models are:  
   
--   Объекты представления одного класса, каждое в отдельном окне фрейма документа MDI.  
+-   View objects of the same class, each in a separate MDI document frame window.  
   
-     Может потребоваться поддержка создания второго окна фрейма в документе. Нужно выбрать команду создания окна, чтобы открыть второй фрейм с представлением того же документа, а затем использовать два фрейма для одновременного просмотра разных частей документа. Платформа поддерживает команду создания окна в меню "Окно" в приложениях MDI путем дублирования исходного окна фрейма и представления, прикрепленного к документу.  
+     You might want to support creating a second frame window on a document. The user could choose a New Window command to open a second frame with a view of the same document and then use the two frames to view different portions of the document simultaneously. The framework supports the New Window command on the Window menu for MDI applications by duplicating the initial frame window and view attached to the document.  
   
--   Объекты представления одного класса в одном окне фрейма документа.  
+-   View objects of the same class in the same document frame window.  
   
-     Окна разделителей делят пространство для просмотра в одном окне документа на несколько отдельных представлений документа. Платформа создает несколько объектов представления из того же класса представления. Дополнительные сведения см. в разделе [Окна разделителей](#_core_splitter_windows).  
+     Splitter windows split the view space of a single document window into multiple separate views of the document. The framework creates multiple view objects from the same view class. For more information, see [Splitter Windows](#_core_splitter_windows).  
   
--   Объекты представления различных классов в одном окне фрейма.  
+-   View objects of different classes in a single frame window.  
   
-     В этой модели, являющейся разновидностью окна с разделителями, несколько представлений используют одно окно фрейма. Представления создаются из различных классов, каждое из них имеет свой способ просмотра одного и того же документа. Например, в одном представлении текстовый документ может отображаться в обычном режиме, а в другом — в режиме структуры. Элемент управления разделителя позволяет настраивать относительные размеры представления.  
+     In this model, a variation of the splitter window, multiple views share a single frame window. The views are constructed from different classes, each view providing a different way to view the same document. For example, one view might show a word-processing document in normal mode while the other view shows it in outline mode. A splitter control allows the user to adjust the relative sizes of the views.  
   
- На следующем рисунке, разделенном на части a, b и c, показаны три модели пользовательского интерфейса в указанном выше порядке.  
+ The following figure, divided into parts a, b, and c, shows the three user-interface models in the order presented above.  
   
- ![Пользовательские интерфейсы с несколькими представлениями](../mfc/media/vc37a71.png "vc37A71")  
-Пользовательские интерфейсы с несколькими представлениями  
+ ![Multiple&#45;view user interfaces](../mfc/media/vc37a71.gif "vc37a71")  
+Multiple-View User Interfaces  
   
- Платформа предоставляет эти модели путем реализации команды создания окна и предоставления класса [CSplitterWnd](../mfc/reference/csplitterwnd-class.md), как описано в разделе [Окна разделителей](#_core_splitter_windows). Их можно использовать в качестве отправной точки для реализации других моделей. Примеры программ, иллюстрирующие различные конфигурации представлений, окон фреймов и разделителей, см. в разделе [Примеры MFC](../top/visual-cpp-samples.md).  
+ The framework provides these models by implementing the New Window command and by providing class [CSplitterWnd](../mfc/reference/csplitterwnd-class.md), as discussed in [Splitter Windows](#_core_splitter_windows). You can implement other models using these as your starting point. For sample programs that illustrate different configurations of views, frame windows, and splitters, see [MFC Samples](../visual-cpp-samples.md).  
   
- Дополнительные сведения о `UpdateAllViews` см. в разделе о классе [CView](../Topic/CView%20Class.md) в *справочнике по библиотеке MFC* и в разделе [Пример Scribble](../top/visual-cpp-samples.md).  
+ For more information about `UpdateAllViews`, see class [CView](../mfc/reference/cview-class.md) in the *MFC Reference* and the [Scribble sample](../visual-cpp-samples.md).  
   
-##  <a name="_core_multiple_frame_windows"></a> Несколько окон фреймов  
- Для создания второго окна фрейма в том же документе можно использовать команду создания окна в меню "Окно" приложений MDI. Дополнительные сведения см. в первой модели на рисунке [Пользовательские интерфейсы с несколькими представлениями](#_core_multiple.2d.view_user_interfaces).  
+##  <a name="_core_multiple_frame_windows"></a> Multiple Frame Windows  
+ You can use the New Window command on the Window menu for MDI applications to create a second frame window on the same document. For more information, see the first model in the figure Multiple-View User Interfaces.  
   
-##  <a name="_core_splitter_windows"></a> Окна разделителей  
- В окне разделителя окно можно разделить на две или более прокручиваемые области. Элемент управления разделителя \(или поле разделения\) в фрейме окна рядом с полосами прокрутки позволяет изменять относительные размеры областей. Каждая область — это представление того же документа. В окнах с динамическими разделителями представления входят в один класс, как показано в части b рисунка [Пользовательские интерфейсы с несколькими представлениями](#_core_multiple.2d.view_user_interfaces). В окнах со статическими разделителями представления могут входить в разные классы. Окна разделителей обоих типов поддерживаются классом [CSplitterWnd](../mfc/reference/csplitterwnd-class.md).  
+##  <a name="_core_splitter_windows"></a> Splitter Windows  
+ In a splitter window, the window is, or can be, split into two or more scrollable panes. A splitter control (or "split box") in the window frame next to the scroll bars allows the user to adjust the relative sizes of the panes. Each pane is a view on the same document. In "dynamic" splitters, the views are of the same class, as shown in part b of the figure Multiple-View User Interfaces. In "static" splitters, the views can be of different classes. Splitter windows of both kinds are supported by class [CSplitterWnd](../mfc/reference/csplitterwnd-class.md).  
   
- Окна с динамическими разделителями с представлениями одного класса позволяют разделять окно на несколько областей с возможностью прокрутки разных областей для просмотра различных частей документа. Пользователь может также отменить разделение окна, чтобы удалить дополнительные представления. Примерами являются окна разделителей, добавленные в [пример Scribble](../top/visual-cpp-samples.md). В этом разделе описывается способ создания окон с динамическими разделителями. Окно с динамическим разделителем показано в части b рисунка [Пользовательские интерфейсы с несколькими представлениями](#_core_multiple.2d.view_user_interfaces).  
+ Dynamic splitter windows, with views of the same class, allow the user to split a window into multiple panes at will and then scroll different panes to see different parts of the document. The user can also unsplit the window to remove the additional views. The splitter windows added to the [Scribble sample](../visual-cpp-samples.md) are an example. That topic describes the technique for creating dynamic splitter windows. A dynamic splitter window is shown in part b of the figure Multiple-View User Interfaces.  
   
- Окна со статическими разделителями с представлениями разных классов представляют собой окно, разделенное на области, каждая из которых предназначена для разных целей. Например, в редакторе точечных рисунков Visual C\+\+ в окне изображения две области располагаются рядом друг с другом. В левой области точечный рисунок отображается в натуральную величину. В правой области этот же рисунок отображается в увеличенном виде. Области разделены полосой разделителя, которую можно перетаскивать, чтобы изменять размеры областей. Окно со статическим разделителем показано в части c рисунка [Пользовательские интерфейсы с несколькими представлениями](#_core_multiple.2d.view_user_interfaces).  
+ Static splitter windows, with views of different classes, start with the window split into multiple panes, each with a different purpose. For example, in the Visual C++ bitmap editor, the image window shows two panes side by side. The left-hand pane displays a life-sized image of the bitmap. The right-hand pane displays a zoomed or magnified image of the same bitmap. The panes are separated by a "splitter bar" that the user can drag to change the relative sizes of the panes. A static splitter window is shown in part c of the figure Multiple-View User Interfaces.  
   
- Дополнительные сведения см. в разделе о классе [CSplitterWnd](../mfc/reference/csplitterwnd-class.md) в *справочнике по библиотеке MFC* и в разделе [Примеры MFC](../top/visual-cpp-samples.md).  
+ For more information, see class [CSplitterWnd](../mfc/reference/csplitterwnd-class.md) in the *MFC Reference* and [MFC Samples](../visual-cpp-samples.md).  
   
-## См. также  
- [Архитектура "документ\-представление"](../Topic/Document-View%20Architecture.md)
+## <a name="see-also"></a>See Also  
+ [Document/View Architecture](../mfc/document-view-architecture.md)
+
+

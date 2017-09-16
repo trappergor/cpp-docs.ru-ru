@@ -1,5 +1,5 @@
 ---
-title: "Класс freelist | Документы Майкрософт"
+title: freelist Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -9,15 +9,15 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
-- stdext::freelist
-- freelist
 - allocators/stdext::freelist
 - allocators/stdext::freelist::pop
 - allocators/stdext::freelist::push
 dev_langs:
 - C++
 helpviewer_keywords:
-- freelist class
+- stdext::freelist
+- stdext::freelist [C++], pop
+- stdext::freelist [C++], push
 ms.assetid: 8ad7e35c-4c80-4479-8ede-1a2497b06d71
 caps.latest.revision: 17
 author: corob-msft
@@ -37,17 +37,17 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
-ms.openlocfilehash: 0e08b6f737616cf764f797681c5492840a9b044a
+ms.translationtype: MT
+ms.sourcegitcommit: 5d026c375025b169d5db8445cbb52c0c917b2d8d
+ms.openlocfilehash: 5c7366bbf75bb2bc3de753c4bca23d69d279d1a7
 ms.contentlocale: ru-ru
-ms.lasthandoff: 04/29/2017
+ms.lasthandoff: 09/09/2017
 
 ---
-# <a name="freelist-class"></a>Класс freelist
-Управляет списком блоков памяти.  
+# <a name="freelist-class"></a>freelist Class
+Manages a list of memory blocks.  
   
-## <a name="syntax"></a>Синтаксис  
+## <a name="syntax"></a>Syntax  
   
 ```
 template <std::size_t Sz, class Max>  
@@ -55,76 +55,76 @@ class freelist
  : public Max
 ```  
   
-#### <a name="parameters"></a>Параметры  
+#### <a name="parameters"></a>Parameters  
   
-|Параметр|Описание|  
+|Parameter|Description|  
 |---------------|-----------------|  
-|`Sz`|Число элементов в массиве, которые нужно выделить.|  
-|`Max`|Класс max, представляющий максимальное количество элементов, которые необходимо сохранить в свободном списке. Классом max может быть [max_none](../standard-library/max-none-class.md), [max_unbounded](../standard-library/max-unbounded-class.md), [max_fixed_size](../standard-library/max-fixed-size-class.md) или [max_variable_size](../standard-library/max-variable-size-class.md).|  
+|`Sz`|The number of elements in the array to be allocated.|  
+|`Max`|The max class representing the maximum number of elements to be stored in the free list. The max class can be [max_none](../standard-library/max-none-class.md), [max_unbounded](../standard-library/max-unbounded-class.md), [max_fixed_size](../standard-library/max-fixed-size-class.md), or [max_variable_size](../standard-library/max-variable-size-class.md).|  
   
-## <a name="remarks"></a>Примечания  
- Этот класс шаблона управляет списком блоков памяти размером `Sz` с максимальной длиной списка, которая определяется классом max, переданным в `Max`.  
+## <a name="remarks"></a>Remarks  
+ This template class manages a list of memory blocks of size `Sz` with the maximum length of the list determined by the max class passed in `Max`.  
   
-### <a name="constructors"></a>Конструкторы  
-  
-|||  
-|-|-|  
-|[freelist](#freelist)|Создает объект типа `freelist`.|  
-  
-### <a name="member-functions"></a>Функции-члены  
+### <a name="constructors"></a>Constructors  
   
 |||  
 |-|-|  
-|[pop](#pop)|Удаляет первый блок памяти из свободного списка.|  
-|[push](#push)|Добавляет блок памяти в список.|  
+|[freelist](#freelist)|Constructs an object of type `freelist`.|  
   
-## <a name="requirements"></a>Требования  
- **Заголовок:** \<allocators>  
+### <a name="member-functions"></a>Member Functions  
   
- **Пространство имен:** stdext  
+|||  
+|-|-|  
+|[pop](#pop)|Removes the first memory block from the free list.|  
+|[push](#push)|Adds a memory block to the list.|  
+  
+## <a name="requirements"></a>Requirements  
+ **Header:** \<allocators>  
+  
+ **Namespace:** stdext  
   
 ##  <a name="freelist"></a>  freelist::freelist  
- Создает объект типа `freelist`.  
+ Constructs an object of type `freelist`.  
   
 ```
 freelist();
 ```  
   
-### <a name="remarks"></a>Примечания  
+### <a name="remarks"></a>Remarks  
   
 ##  <a name="pop"></a>  freelist::pop  
- Удаляет первый блок памяти из свободного списка.  
+ Removes the first memory block from the free list.  
   
 ```
 void *pop();
 ```  
   
-### <a name="return-value"></a>Возвращаемое значение  
- Возвращает указатель на блок памяти, удаленный из списка.  
+### <a name="return-value"></a>Return Value  
+ Returns a pointer to the memory block removed from the list.  
   
-### <a name="remarks"></a>Примечания  
- Функция-член возвращает `NULL`, если список пуст. В противном случае удаляет первый блок памяти из списка.  
+### <a name="remarks"></a>Remarks  
+ The member function returns `NULL` if the list is empty. Otherwise, it removes the first memory block from the list.  
   
 ##  <a name="push"></a>  freelist::push  
- Добавляет блок памяти в список.  
+ Adds a memory block to the list.  
   
 ```
 bool push(void* ptr);
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
   
-|Параметр|Описание|  
+|Parameter|Description|  
 |---------------|-----------------|  
-|`ptr`|Указатель на блок памяти, которые необходимо добавить в свободный список.|  
+|`ptr`|A pointer to the memory block to be added to the free list.|  
   
-### <a name="return-value"></a>Возвращаемое значение  
- `true`, если функция `full` класса max возвращает `false`; в противном случае функция `push` возвращает `false`.  
+### <a name="return-value"></a>Return Value  
+ `true` if the `full` function of the max class returns `false`; otherwise, the `push` function returns `false`.  
   
-### <a name="remarks"></a>Примечания  
- Если функция `full` класса max возвращает `false`, эта функция-член добавляет блок памяти, на который указывает `ptr`, в начало списка.  
+### <a name="remarks"></a>Remarks  
+ If the `full` function of the max class returns `false`, this member function adds the memory block pointed to by `ptr` to the head of the list.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>See Also  
  [\<allocators>](../standard-library/allocators-header.md)
 
 

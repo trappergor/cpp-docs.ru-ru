@@ -1,5 +1,5 @@
 ---
-title: "CView-класс | Документы Microsoft"
+title: CView Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -37,17 +37,29 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- views [C++], view classes
-- multiple views
-- CView class
-- document/view architecture
-- input, and view class
-- MDI [C++], view windows
-- print preview, view windows
-- windows [C++], views
-- child windows, views
-- frame windows [C++], views
-- user input [C++], interpreting through view class
+- CView [MFC], CView
+- CView [MFC], DoPreparePrinting
+- CView [MFC], GetDocument
+- CView [MFC], IsSelected
+- CView [MFC], OnDragEnter
+- CView [MFC], OnDragLeave
+- CView [MFC], OnDragOver
+- CView [MFC], OnDragScroll
+- CView [MFC], OnDrop
+- CView [MFC], OnDropEx
+- CView [MFC], OnInitialUpdate
+- CView [MFC], OnPrepareDC
+- CView [MFC], OnScroll
+- CView [MFC], OnScrollBy
+- CView [MFC], OnActivateFrame
+- CView [MFC], OnActivateView
+- CView [MFC], OnBeginPrinting
+- CView [MFC], OnDraw
+- CView [MFC], OnEndPrinting
+- CView [MFC], OnEndPrintPreview
+- CView [MFC], OnPreparePrinting
+- CView [MFC], OnPrint
+- CView [MFC], OnUpdate
 ms.assetid: 9cff3c56-7564-416b-b9a4-71a9254ed755
 caps.latest.revision: 25
 author: mikeblome
@@ -67,102 +79,102 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0e0c08ddc57d437c51872b5186ae3fc983bb0199
-ms.openlocfilehash: ce5100a9ee4a1c20df04f79f0c8cd645ae3afce7
+ms.translationtype: MT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: f14c725b33e407cd797050304e5928fe90afdcfc
 ms.contentlocale: ru-ru
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 09/12/2017
 
 ---
-# <a name="cview-class"></a>CView-класс
-Предоставляет базовую функциональность для определяемых пользователем классов представления.  
+# <a name="cview-class"></a>CView Class
+Provides the basic functionality for user-defined view classes.  
   
-## <a name="syntax"></a>Синтаксис  
+## <a name="syntax"></a>Syntax  
   
 ```  
 class AFX_NOVTABLE CView : public CWnd  
 ```  
   
-## <a name="members"></a>Члены  
+## <a name="members"></a>Members  
   
-### <a name="protected-constructors"></a>Защищенные конструкторы  
+### <a name="protected-constructors"></a>Protected Constructors  
   
-|Имя|Описание|  
+|Name|Description|  
 |----------|-----------------|  
-|[CView::CView](#cview)|Создает объект `CView`.|  
+|[CView::CView](#cview)|Constructs a `CView` object.|  
   
-### <a name="public-methods"></a>Открытые методы  
+### <a name="public-methods"></a>Public Methods  
   
-|Имя|Описание|  
+|Name|Description|  
 |----------|-----------------|  
-|[CView::DoPreparePrinting](#doprepareprinting)|Отображает диалоговое окно «Печать» и создает контекст устройства принтера; При переопределении вызывать `OnPreparePrinting` функции-члена.|  
-|[CView::GetDocument](#getdocument)|Возвращает документ, связанный с представлением.|  
-|[CView::IsSelected](#isselected)|Проверяет, является ли выбран элемент документа. Требуется для поддержки OLE.|  
-|[CView::OnDragEnter](#ondragenter)|Вызывается, когда элемент сначала перетаскивается в область и перетащите представления.|  
-|[CView::OnDragLeave](#ondragleave)|Вызывается, когда перетаскиваемый элемент покидает область и перетащите представления.|  
-|[CView::OnDragOver](#ondragover)|Вызывается, когда элемент перетаскивается в область и перетаскивания элемента представления.|  
-|[CView::OnDragScroll](#ondragscroll)|Вызывается, чтобы определить, является ли курсор перетаскивается в область прокрутки окна.|  
-|[CView::OnDrop](#ondrop)|Вызывается, когда элемент был удален в области и перетащите представления, обработчик по умолчанию.|  
-|[CView::OnDropEx](#ondropex)|Вызывается, когда элемент был удален в области и перетащите представление первичного обработчика.|  
-|[CView::OnInitialUpdate](#oninitialupdate)|Вызывается после представления впервые присоединяется к документу.|  
-|[CView::OnPrepareDC](#onpreparedc)|Вызывается перед `OnDraw` функция-член вызывается для просмотра на экране или `OnPrint` функция-член вызывается для предварительного просмотра печати или печати.|  
-|[CView::OnScroll](#onscroll)|Вызывается при перетаскивании OLE-элементы за пределами границ в представлении.|  
-|[CView::OnScrollBy](#onscrollby)|Вызывается, когда представление, содержащее активные элементы на месте OLE может прокручиваться.|  
+|[CView::DoPreparePrinting](#doprepareprinting)|Displays Print dialog box and creates printer device context; call when overriding the `OnPreparePrinting` member function.|  
+|[CView::GetDocument](#getdocument)|Returns the document associated with the view.|  
+|[CView::IsSelected](#isselected)|Tests whether a document item is selected. Required for OLE support.|  
+|[CView::OnDragEnter](#ondragenter)|Called when an item is first dragged into the drag-and-drop region of a view.|  
+|[CView::OnDragLeave](#ondragleave)|Called when a dragged item leaves the drag-and-drop region of a view.|  
+|[CView::OnDragOver](#ondragover)|Called when an item is dragged over the drag-and-drop region of a view.|  
+|[CView::OnDragScroll](#ondragscroll)|Called to determine whether the cursor is dragged into the scroll region of the window.|  
+|[CView::OnDrop](#ondrop)|Called when an item has been dropped into the drag-and-drop region of a view, default handler.|  
+|[CView::OnDropEx](#ondropex)|Called when an item has been dropped into the drag-and-drop region of a view, primary handler.|  
+|[CView::OnInitialUpdate](#oninitialupdate)|Called after a view is first attached to a document.|  
+|[CView::OnPrepareDC](#onpreparedc)|Called before the `OnDraw` member function is called for screen display or the `OnPrint` member function is called for printing or print preview.|  
+|[CView::OnScroll](#onscroll)|Called when OLE items are dragged beyond the borders of the view.|  
+|[CView::OnScrollBy](#onscrollby)|Called when a view containing active in-place OLE items is scrolled.|  
   
-### <a name="protected-methods"></a>Защищенные методы  
+### <a name="protected-methods"></a>Protected Methods  
   
-|Имя|Описание|  
+|Name|Description|  
 |----------|-----------------|  
-|[CView::OnActivateFrame](#onactivateframe)|Вызывается, когда рамка окна, содержащего представление, активируется или деактивируется.|  
-|[CView::OnActivateView](#onactivateview)|Вызывается при активации представления.|  
-|[CView::OnBeginPrinting](#onbeginprinting)|Вызывается, когда начинается выполнение задания печати; Переопределение позволяет выделить графических устройств (GDI) ресурсов.|  
-|[CView::OnDraw](#ondraw)|Вызывается для отображения изображения экрана, печати и предварительного просмотра документа. Требуется реализация.|  
-|[CView::OnEndPrinting](#onendprinting)|Вызывается при завершении задания печати; переопределение для освобождения ресурсов GDI.|  
-|[CView::OnEndPrintPreview](#onendprintpreview)|Вызывается при выходе из режима предварительного просмотра.|  
-|[CView::OnPreparePrinting](#onprepareprinting)|Вызывается до печати документа или просмотра; переопределение для инициализации диалогового окна печати.|  
-|[CView::OnPrint](#onprint)|Вызывается для печати или просмотра страницы документа.|  
-|[CView::OnUpdate](#onupdate)|Вызывается для оповещения представление, которое его документ был изменен.|  
+|[CView::OnActivateFrame](#onactivateframe)|Called when the frame window containing the view is activated or deactivated.|  
+|[CView::OnActivateView](#onactivateview)|Called when a view is activated.|  
+|[CView::OnBeginPrinting](#onbeginprinting)|Called when a print job begins; override to allocate graphics device interface (GDI) resources.|  
+|[CView::OnDraw](#ondraw)|Called to render an image of the document for screen display, printing, or print preview. Implementation required.|  
+|[CView::OnEndPrinting](#onendprinting)|Called when a print job ends; override to deallocate GDI resources.|  
+|[CView::OnEndPrintPreview](#onendprintpreview)|Called when preview mode is exited.|  
+|[CView::OnPreparePrinting](#onprepareprinting)|Called before a document is printed or previewed; override to initialize Print dialog box.|  
+|[CView::OnPrint](#onprint)|Called to print or preview a page of the document.|  
+|[CView::OnUpdate](#onupdate)|Called to notify a view that its document has been modified.|  
   
-## <a name="remarks"></a>Примечания  
- Представление, прикрепленной к документу и действует как посредник между документом и пользователь: представление выводит на экран изображение документа на экран или принтер и интерпретирует как операции после документа ввод данных пользователем.  
+## <a name="remarks"></a>Remarks  
+ A view is attached to a document and acts as an intermediary between the document and the user: the view renders an image of the document on the screen or printer and interprets user input as operations upon the document.  
   
- Представление — дочерние окна фрейма. Несколько представлений могут совместно использовать окно, как и в случае окна-разделителя. Отношение между классом просмотра, класс фреймового окна и класс документа обеспечивается `CDocTemplate` объекта. Когда пользователь открывает новое окно или разбивает существующий один, платформа создает новое представление и присоединяет его к документу.  
+ A view is a child of a frame window. More than one view can share a frame window, as in the case of a splitter window. The relationship between a view class, a frame window class, and a document class is established by a `CDocTemplate` object. When the user opens a new window or splits an existing one, the framework constructs a new view and attaches it to the document.  
   
- Представление можно добавить только один документ, но документ может иметь несколько представлений, присоединенные к нему одновременно — например, если документ отображается в разделяемом окне или в нескольких дочерних окон в приложении несколько интерфейса (MDI) документа. Приложение может поддерживать различные типы представлений для типа данного документа; например текстовый процессор может предоставить полный текст представления документа и режим структуры, который показывает только заголовки разделов. Различных типов представлений, можно поместить в отдельный фрейм windows или в отдельных областях окна один кадр при использовании окна-разделителя.  
+ A view can be attached to only one document, but a document can have multiple views attached to it at once — for example, if the document is displayed in a splitter window or in multiple child windows in a multiple document interface (MDI) application. Your application can support different types of views for a given document type; for example, a word-processing program might provide both a complete text view of a document and an outline view that shows only the section headings. These different types of views can be placed in separate frame windows or in separate panes of a single frame window if you use a splitter window.  
   
- Представление может быть ответственность за обработку несколько различных типов входных данных, например ввода с клавиатуры, мыши или ввода через и перетаскивания, а также команды из меню, панели инструментов и полосы прокрутки. Представление получает команды, направляемые его фрейм окна. Если представление не обрабатывает данной команды, она передает команду, чтобы его связанный документ. Как и все целевые объекты команд представления обрабатывает сообщения через схему сообщений.  
+ A view may be responsible for handling several different types of input, such as keyboard input, mouse input or input via drag-and-drop, as well as commands from menus, toolbars, or scroll bars. A view receives commands forwarded by its frame window. If the view does not handle a given command, it forwards the command to its associated document. Like all command targets, a view handles messages via a message map.  
   
- Представление отвечает для отображения и изменения данных документа, но не для ее хранения. Документ предоставляет необходимые сведения о его данных в представление. Можно разрешить доступ к представление документа члены данных напрямую, или можно предоставить функции-члены в класс документа для класса представления для вызова.  
+ The view is responsible for displaying and modifying the document's data but not for storing it. The document provides the view with the necessary details about its data. You can let the view access the document's data members directly, or you can provide member functions in the document class for the view class to call.  
   
- При изменении данных документа, ответственный за изменения представления обычно вызывает [CDocument::UpdateAllViews](../../mfc/reference/cdocument-class.md#updateallviews) для документа, который уведомляет другие представления, вызвав функцию `OnUpdate` для каждой функции-члена. Реализация по умолчанию `OnUpdate` делает недействительной всю клиентскую область представления. Вы можете переопределить его, чтобы сделать недействительными только этих областей клиентской области, которые сопоставляются с измененной части документа.  
+ When a document's data changes, the view responsible for the changes typically calls the [CDocument::UpdateAllViews](../../mfc/reference/cdocument-class.md#updateallviews) function for the document, which notifies all the other views by calling the `OnUpdate` member function for each. The default implementation of `OnUpdate` invalidates the view's entire client area. You can override it to invalidate only those regions of the client area that map to the modified portions of the document.  
   
- Для использования `CView`, создайте класс, производный от него и реализации `OnDraw` функции-члена для выполнения изображения на экране. Можно также использовать `OnDraw` для выполнения печати и предварительного просмотра. Платформа framework обрабатывает цикла печати для печати и предварительного просмотра документа.  
+ To use `CView`, derive a class from it and implement the `OnDraw` member function to perform screen display. You can also use `OnDraw` to perform printing and print preview. The framework handles the print loop for printing and previewing your document.  
   
- Представление обрабатывает сообщения полосы прокрутки с [CWnd::OnHScroll](../../mfc/reference/cwnd-class.md#onhscroll) и [CWnd::OnVScroll](../../mfc/reference/cwnd-class.md#onvscroll) функции-члены. Полоса прокрутки обработку сообщений в эти функции можно реализовать, или можно использовать `CView` производный класс [CScrollView](../../mfc/reference/cscrollview-class.md) для обработки прокрутки для вас.  
+ A view handles scroll-bar messages with the [CWnd::OnHScroll](../../mfc/reference/cwnd-class.md#onhscroll) and [CWnd::OnVScroll](../../mfc/reference/cwnd-class.md#onvscroll) member functions. You can implement scroll-bar message handling in these functions, or you can use the `CView` derived class [CScrollView](../../mfc/reference/cscrollview-class.md) to handle scrolling for you.  
   
- Помимо `CScrollView`, библиотеки классов Microsoft Foundation предоставляет девять классы, производные от `CView`:  
+ Besides `CScrollView`, the Microsoft Foundation Class Library provides nine other classes derived from `CView`:  
   
-- [CCtrlView](../../mfc/reference/cctrlview-class.md), представление, которое позволяет документ - представление архитектуры с помощью дерева, список и широкие возможности редактирования элементов управления.  
+- [CCtrlView](../../mfc/reference/cctrlview-class.md), a view that allows usage of document - view architecture with tree, list, and rich edit controls.  
   
-- [CDaoRecordView](../../mfc/reference/cdaorecordview-class.md), представление, которое отображает записи базы данных в элементах управления диалоговых окон.  
+- [CDaoRecordView](../../mfc/reference/cdaorecordview-class.md), a view that displays database records in dialog-box controls.  
   
-- [CEditView](../../mfc/reference/ceditview-class.md), представление, которое предоставляет простой многострочном текстовом редакторе. Можно использовать `CEditView` объект как элемент управления в диалоговое окно, а также просмотр документа.  
+- [CEditView](../../mfc/reference/ceditview-class.md), a view that provides a simple multiline text editor. You can use a `CEditView` object as a control in a dialog box as well as a view on a document.  
   
-- [CFormView](../../mfc/reference/cformview-class.md), прокручиваемое представление, содержащее элементы управления диалоговых окон и основан на ресурсе шаблона диалогового окна.  
+- [CFormView](../../mfc/reference/cformview-class.md), a scrollable view that contains dialog-box controls and is based on a dialog template resource.  
   
-- [CListView](../../mfc/reference/clistview-class.md), представление, которое позволяет документ - представление архитектуры с элементами списка.  
+- [CListView](../../mfc/reference/clistview-class.md), a view that allows usage of document - view architecture with list controls.  
   
-- [CRecordView](../../mfc/reference/crecordview-class.md), представление, которое отображает записи базы данных в элементах управления диалоговых окон.  
+- [CRecordView](../../mfc/reference/crecordview-class.md), a view that displays database records in dialog-box controls.  
   
-- [CRichEditView](../../mfc/reference/cricheditview-class.md), представление, которое позволяет документ - представление архитектуры с широкими возможностями редактирования элементов управления.  
+- [CRichEditView](../../mfc/reference/cricheditview-class.md), a view that allows usage of document - view architecture with rich edit controls.  
   
-- [CScrollView](../../mfc/reference/cscrollview-class.md), представление, которое автоматически предоставляет поддержку прокрутки.  
+- [CScrollView](../../mfc/reference/cscrollview-class.md), a view that automatically provides scrolling support.  
   
-- [CTreeView](../../mfc/reference/ctreeview-class.md), представление, которое позволяет документ - представление архитектуры с помощью дерева элементов управления.  
+- [CTreeView](../../mfc/reference/ctreeview-class.md), a view that allows usage of document - view architecture with tree controls.  
   
- `CView` Классе имеется реализация производного класса с именем **CPreviewView**, который используется платформой для выполнения просмотра печати. Этот класс обеспечивает поддержку функций, уникальных для предварительного окна, например панель инструментов, просмотр одного или двойной страницы и масштабирования, который увеличить изображение. Не нужно вызывать или переопределять какие-либо **CPreviewView**Если нужно реализовать собственный интерфейс для предварительного просмотра (например, если требуется поддержка редактирования в режиме предварительного просмотра) функции-члены. Дополнительные сведения об использовании `CView`, в разделе [архитектуры документ/представление](../../mfc/document-view-architecture.md) и [печать](../../mfc/printing.md). Кроме того, в разделе [Технические заметки 30](../../mfc/tn030-customizing-printing-and-print-preview.md) Дополнительные сведения о настройке предварительного просмотра.  
+ The `CView` class also has a derived implementation class named **CPreviewView**, which is used by the framework to perform print previewing. This class provides support for the features unique to the print-preview window, such as a toolbar, single- or double-page preview, and zooming, that is, enlarging the previewed image. You don't need to call or override any of **CPreviewView**'s member functions unless you want to implement your own interface for print preview (for example, if you want to support editing in print preview mode). For more information on using `CView`, see [Document/View Architecture](../../mfc/document-view-architecture.md) and [Printing](../../mfc/printing.md). In addition, see [Technical Note 30](../../mfc/tn030-customizing-printing-and-print-preview.md) for more details on customizing print preview.  
   
-## <a name="inheritance-hierarchy"></a>Иерархия наследования  
+## <a name="inheritance-hierarchy"></a>Inheritance Hierarchy  
  [CObject](../../mfc/reference/cobject-class.md)  
   
  [CCmdTarget](../../mfc/reference/ccmdtarget-class.md)  
@@ -171,70 +183,70 @@ class AFX_NOVTABLE CView : public CWnd
   
  `CView`  
   
-## <a name="requirements"></a>Требования  
- **Заголовок:** afxwin.h  
+## <a name="requirements"></a>Requirements  
+ **Header:** afxwin.h  
   
-##  <a name="cview"></a>CView::CView  
- Создает объект `CView`.  
+##  <a name="cview"></a>  CView::CView  
+ Constructs a `CView` object.  
   
 ```  
 CView();
 ```  
   
-### <a name="remarks"></a>Примечания  
- Платформа вызывает конструктор при создании нового окна области или разбить окно. Переопределение [OnInitialUpdate](#oninitialupdate) функции-члена для инициализации представления после присоединения документа.  
+### <a name="remarks"></a>Remarks  
+ The framework calls the constructor when a new frame window is created or a window is split. Override the [OnInitialUpdate](#oninitialupdate) member function to initialize the view after the document is attached.  
   
-##  <a name="doprepareprinting"></a>CView::DoPreparePrinting  
- Эта функция вызывается из переопределение метода [OnPreparePrinting](#onprepareprinting) для вызова диалогового окна «Печать» и создать принтер контекста устройства.  
+##  <a name="doprepareprinting"></a>  CView::DoPreparePrinting  
+ Call this function from your override of [OnPreparePrinting](#onprepareprinting) to invoke the Print dialog box and create a printer device context.  
   
 ```  
 BOOL DoPreparePrinting(CPrintInfo* pInfo);
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
  `pInfo`  
- Указывает [CPrintInfo](../../mfc/reference/cprintinfo-structure.md) структуру, описывающую текущее задание печати.  
+ Points to a [CPrintInfo](../../mfc/reference/cprintinfo-structure.md) structure that describes the current print job.  
   
-### <a name="return-value"></a>Возвращаемое значение  
- Ненулевое значение, если можно начать предварительный просмотр печати или печати; 0, если операция была отменена.  
+### <a name="return-value"></a>Return Value  
+ Nonzero if printing or print preview can begin; 0 if the operation has been canceled.  
   
-### <a name="remarks"></a>Примечания  
- Эта функция поведение зависит от того, является ли он вызывается для предварительного просмотра печати или печати (определяется **m_bPreview** членом `pInfo` параметр). Если файл печатается, эта функция вызывает диалоговое окно печати, используя значения в [CPrintInfo](../../mfc/reference/cprintinfo-structure.md) структуру, в которой `pInfo` указывает; после пользователь закрыл диалоговое окно, функция создает контекст устройства принтера на основе параметров пользователя в диалоговом окне и возвращает этот контекст устройства через `pInfo` параметр. Этот контекст устройства используется для печати документа.  
+### <a name="remarks"></a>Remarks  
+ This function's behavior depends on whether it is being called for printing or print preview (specified by the **m_bPreview** member of the `pInfo` parameter). If a file is being printed, this function invokes the Print dialog box, using the values in the [CPrintInfo](../../mfc/reference/cprintinfo-structure.md) structure that `pInfo` points to; after the user has closed the dialog box, the function creates a printer device context based on settings the user specified in the dialog box and returns this device context through the `pInfo` parameter. This device context is used to print the document.  
   
- При просмотре файла, эта функция создает контекст устройства принтера с использованием текущих параметров печати; Этот контекст устройства используется для имитации принтер во время предварительного просмотра.  
+ If a file is being previewed, this function creates a printer device context using the current printer settings; this device context is used for simulating the printer during preview.  
   
-##  <a name="getdocument"></a>CView::GetDocument  
- Эта функция вызывается для получения указателя на просмотр документа.  
+##  <a name="getdocument"></a>  CView::GetDocument  
+ Call this function to get a pointer to the view's document.  
   
 ```  
 CDocument* GetDocument() const;  
 ```  
   
-### <a name="return-value"></a>Возвращаемое значение  
- Указатель на [CDocument](../../mfc/reference/cdocument-class.md) объект, связанный с представлением. **NULL** Если представление не присоединен к документу.  
+### <a name="return-value"></a>Return Value  
+ A pointer to the [CDocument](../../mfc/reference/cdocument-class.md) object associated with the view. **NULL** if the view is not attached to a document.  
   
-### <a name="remarks"></a>Примечания  
- Это позволяет вызывать функции-члены документа.  
+### <a name="remarks"></a>Remarks  
+ This allows you to call the document's member functions.  
   
-##  <a name="isselected"></a>CView::IsSelected  
- Вызывается платформой для проверки того, выбран ли элемент указанного документа.  
+##  <a name="isselected"></a>  CView::IsSelected  
+ Called by the framework to check whether the specified document item is selected.  
   
 ```  
 virtual BOOL IsSelected(const CObject* pDocItem) const;  
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
  `pDocItem`  
- Указывает элемент документа.  
+ Points to the document item being tested.  
   
-### <a name="return-value"></a>Возвращаемое значение  
- Ненулевое значение, если выбран элемент указанного документа; в противном случае — 0.  
+### <a name="return-value"></a>Return Value  
+ Nonzero if the specified document item is selected; otherwise 0.  
   
-### <a name="remarks"></a>Примечания  
- Реализация по умолчанию эта функция возвращает **FALSE**. Переопределить эту функцию, если вы реализуете выделения с помощью [CDocItem](../../mfc/reference/cdocitem-class.md) объектов. Необходимо переопределить эту функцию, если представление содержит OLE-элементы.  
+### <a name="remarks"></a>Remarks  
+ The default implementation of this function returns **FALSE**. Override this function if you are implementing selection using [CDocItem](../../mfc/reference/cdocitem-class.md) objects. You must override this function if your view contains OLE items.  
   
-##  <a name="onactivateframe"></a>CView::OnActivateFrame  
- Вызывается платформой, когда рамка окна, содержащего представление, активируется или деактивируется.  
+##  <a name="onactivateframe"></a>  CView::OnActivateFrame  
+ Called by the framework when the frame window containing the view is activated or deactivated.  
   
 ```  
 virtual void OnActivateFrame(
@@ -242,24 +254,24 @@ virtual void OnActivateFrame(
     CFrameWnd* pFrameWnd);
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
  `nState`  
- Указывает, выполняется ли окно активируется или деактивируется. Он может принимать одно из следующих значений:  
+ Specifies whether the frame window is being activated or deactivated. It can be one of the following values:  
   
-- **WA_INACTIVE** выключается фрейме окна.  
+- **WA_INACTIVE** The frame window is being deactivated.  
   
-- **WA_ACTIVE** окна фрейма активируется через какой-нибудь способ, отличные от нажатия кнопки мыши (например, с помощью интерфейса клавиатуры для выбора окна).  
+- **WA_ACTIVE** The frame window is being activated through some method other than a mouse click (for example, by use of the keyboard interface to select the window).  
   
-- **WA_CLICKACTIVE** окна фрейма активируется по щелчку мыши  
+- **WA_CLICKACTIVE** The frame window is being activated by a mouse click  
   
  `pFrameWnd`  
- Указатель на окно, которое необходимо активировать.  
+ Pointer to the frame window that is to be activated.  
   
-### <a name="remarks"></a>Примечания  
- Переопределите эту функцию-член, если требуется выполнять специальную обработку при окна фрейма, связанный с представлением, активируется или деактивируется. Например [CFormView](../../mfc/reference/cformview-class.md) выполняет это переопределение, когда он сохраняет и восстанавливает элемент управления, имеющий фокус.  
+### <a name="remarks"></a>Remarks  
+ Override this member function if you want to perform special processing when the frame window associated with the view is activated or deactivated. For example, [CFormView](../../mfc/reference/cformview-class.md) performs this override when it saves and restores the control that has focus.  
   
-##  <a name="onactivateview"></a>CView::OnActivateView  
- Вызывается платформой, когда представление активируется или деактивируется.  
+##  <a name="onactivateview"></a>  CView::OnActivateView  
+ Called by the framework when a view is activated or deactivated.  
   
 ```  
 virtual void OnActivateView(
@@ -268,25 +280,25 @@ virtual void OnActivateView(
     CView* pDeactiveView);
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
  `bActivate`  
- Указывает, является ли представление активируется или деактивируется.  
+ Indicates whether the view is being activated or deactivated.  
   
  `pActivateView`  
- Указывает объект представления, активируется.  
+ Points to the view object that is being activated.  
   
  `pDeactiveView`  
- Указывает объект представления, перестает быть активным.  
+ Points to the view object that is being deactivated.  
   
-### <a name="remarks"></a>Примечания  
- Реализация по умолчанию эта функция устанавливает фокус на представлении активируется. Переопределите эту функцию, если вы хотите выполнять специальную обработку, когда представление активируется или деактивируется. Например, для предоставления специальных визуальных подсказок, которые отличают активное представление от неактивные представления будет анализировать `bActivate` параметр и соответствующим образом обновлять внешний вид.  
+### <a name="remarks"></a>Remarks  
+ The default implementation of this function sets the focus to the view being activated. Override this function if you want to perform special processing when a view is activated or deactivated. For example, if you want to provide special visual cues that distinguish the active view from the inactive views, you would examine the `bActivate` parameter and update the view's appearance accordingly.  
   
- `pActivateView` И `pDeactiveView` пункт Параметры тем же самым представлением при активации без изменения в активном окне фрейма главного окна приложения — например, если фокус передается из другого приложения с данным, а не от одного представления к другому в рамках приложения или при переключении между дочерними окнами MDI. Это позволяет представление повторно реализовать палитру его при необходимости.  
+ The `pActivateView` and `pDeactiveView` parameters point to the same view if the application's main frame window is activated with no change in the active view — for example, if the focus is being transferred from another application to this one, rather than from one view to another within the application or when switching amongst MDI child windows. This allows a view to re-realize its palette, if needed.  
   
- Эти параметры отличаются при [CFrameWnd::SetActiveView](../../mfc/reference/cframewnd-class.md#setactiveview) вызывается с представлением, отличается от что [CFrameWnd::GetActiveView](../../mfc/reference/cframewnd-class.md#getactiveview) вернет. Чаще всего это происходит с помощью окна-разделители.  
+ These parameters differ when [CFrameWnd::SetActiveView](../../mfc/reference/cframewnd-class.md#setactiveview) is called with a view that is different from what [CFrameWnd::GetActiveView](../../mfc/reference/cframewnd-class.md#getactiveview) would return. This happens most often with splitter windows.  
   
-##  <a name="onbeginprinting"></a>CView::OnBeginPrinting  
- Вызывается платформой в начале задания печати или предварительного просмотра после вызова `OnPreparePrinting` .  
+##  <a name="onbeginprinting"></a>  CView::OnBeginPrinting  
+ Called by the framework at the beginning of a print or print preview job, after `OnPreparePrinting` has been called.  
   
 ```  
 virtual void OnBeginPrinting(
@@ -294,20 +306,20 @@ virtual void OnBeginPrinting(
     CPrintInfo* pInfo);
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
  `pDC`  
- Указывает на контекст принтера.  
+ Points to the printer device context.  
   
  `pInfo`  
- Указывает [CPrintInfo](../../mfc/reference/cprintinfo-structure.md) структуру, описывающую текущее задание печати.  
+ Points to a [CPrintInfo](../../mfc/reference/cprintinfo-structure.md) structure that describes the current print job.  
   
-### <a name="remarks"></a>Примечания  
- Реализация по умолчанию этой функции не выполняет никаких действий. Переопределите эту функцию, чтобы выделить все ресурсы GDI, такие как перья или шрифты, специально для печати. Выберите объекты GDI в контекст устройства изнутри [OnPrint](#onprint) функция-член для каждой страницы, использующий их. Если вы применяете один и тот же объект представления для вывода изображения на экран и печати, используйте отдельные переменные для ресурсов GDI, необходимых для каждого отображения. Это позволит обновлять экран во время печати.  
+### <a name="remarks"></a>Remarks  
+ The default implementation of this function does nothing. Override this function to allocate any GDI resources, such as pens or fonts, needed specifically for printing. Select the GDI objects into the device context from within the [OnPrint](#onprint) member function for each page that uses them. If you are using the same view object to perform both screen display and printing, use separate variables for the GDI resources needed for each display; this allows you to update the screen during printing.  
   
- Эту функцию также можно использовать для инициализаций, которые зависят от свойств контекста принтера. Например, число страниц, необходимых для печати документа, может зависеть от параметров, заданных пользователем в диалоговом окне печати (например, длина страницы). В таком случае нельзя указать длине документа в [OnPreparePrinting](#onprepareprinting) функция-член, где это обычно делается так, дождитесь, пока контекст устройства принтера был создан на основе параметров поля диалогового окна. [OnBeginPrinting](#onbeginprinting) Первая функция overridable, предоставляющий доступ к [CDC](../../mfc/reference/cdc-class.md) объект, представляющий контекст устройства принтера, чтобы длина документа можно задать из данной функции. Обратите внимание, что если к этому моменту длина документа не указана, во время предварительного просмотра полоса прокрутки отображаться не будет.  
+ You can also use this function to perform initializations that depend on properties of the printer device context. For example, the number of pages needed to print the document may depend on settings that the user specified from the Print dialog box (such as page length). In such a situation, you cannot specify the document length in the [OnPreparePrinting](#onprepareprinting) member function, where you would normally do so; you must wait until the printer device context has been created based on the dialog box settings. [OnBeginPrinting](#onbeginprinting) is the first overridable function that gives you access to the [CDC](../../mfc/reference/cdc-class.md) object representing the printer device context, so you can set the document length from this function. Note that if the document length is not specified by this time, a scroll bar is not displayed during print preview.  
   
-##  <a name="ondragenter"></a>CView::OnDragEnter  
- Вызывается платформой, когда указатель мыши впервые входит области без прокрутки окна цели перетаскивания.  
+##  <a name="ondragenter"></a>  CView::OnDragEnter  
+ Called by the framework when the mouse first enters the non-scrolling region of the drop target window.  
   
 ```  
 virtual DROPEFFECT OnDragEnter(
@@ -316,46 +328,46 @@ virtual DROPEFFECT OnDragEnter(
     CPoint point);
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
  `pDataObject`  
- Указывает [COleDataObject](../../mfc/reference/coledataobject-class.md) , перетаскиваемого в область представления.  
+ Points to the [COleDataObject](../../mfc/reference/coledataobject-class.md) being dragged into the drop area of the view.  
   
  `dwKeyState`  
- Содержит состояние клавиши-модификаторы. Это сочетание любое количество следующих: **MK_CONTROL**, **MK_SHIFT**, **MK_ALT**, **MK_LBUTTON**, **MK_MBUTTON**, и **MK_RBUTTON**.  
+ Contains the state of the modifier keys. This is a combination of any number of the following: **MK_CONTROL**, **MK_SHIFT**, **MK_ALT**, **MK_LBUTTON**, **MK_MBUTTON**, and **MK_RBUTTON**.  
   
  `point`  
- Текущее положение мыши относительно клиентской области представления.  
+ The current mouse position relative to the client area of the view.  
   
-### <a name="return-value"></a>Возвращаемое значение  
- Значение из `DROPEFFECT` перечислимый тип, который указывает тип перетаскивания, что произойдет, если пользователь удален объект в этой позиции. Тип удаления обычно зависит текущее состояние клавиш, определяется `dwKeyState`. Стандартная сопоставление ключевые для `DROPEFFECT` значений:  
+### <a name="return-value"></a>Return Value  
+ A value from the `DROPEFFECT` enumerated type, which indicates the type of drop that would occur if the user dropped the object at this position. The type of drop usually depends on the current key state indicated by `dwKeyState`. A standard mapping of keystates to `DROPEFFECT` values is:  
   
-- `DROPEFFECT_NONE`В этом окне невозможно удалить объект данных.  
+- `DROPEFFECT_NONE` The data object cannot be dropped in this window.  
   
-- `DROPEFFECT_LINK`для **MK_CONTROL | MK_SHIFT** создает связь между объектом и его сервер.  
+- `DROPEFFECT_LINK` for **MK_CONTROL &#124; MK_SHIFT** Creates a linkage between the object and its server.  
   
-- `DROPEFFECT_COPY`для **MK_CONTROL** создает копию перетаскиваемый объект.  
+- `DROPEFFECT_COPY` for **MK_CONTROL** Creates a copy of the dropped object.  
   
-- `DROPEFFECT_MOVE`для **MK_ALT** создает копию перетаскиваемый объект и удаления исходного объекта. Обычно это эффект перетаскивания по умолчанию, при представлении может принимать объект данных.  
+- `DROPEFFECT_MOVE` for **MK_ALT** Creates a copy of the dropped object and delete the original object. This is typically the default drop effect, when the view can accept this data object.  
   
- Дополнительные сведения см. в образце Дополнительные понятия MFC [OCLIENT](../../visual-cpp-samples.md).  
+ For more information, see the MFC Advanced Concepts sample [OCLIENT](../../visual-cpp-samples.md).  
   
-### <a name="remarks"></a>Примечания  
- Реализация по умолчанию — ничего не делать и вернуться `DROPEFFECT_NONE`.  
+### <a name="remarks"></a>Remarks  
+ Default implementation is to do nothing and return `DROPEFFECT_NONE`.  
   
- Переопределить эту функцию для подготовки для будущих вызовов [OnDragOver](#ondragover) функции-члена. Все данные, необходимые из объекта данных, которые должны быть получены в данный момент для последующего использования в `OnDragOver` функции-члена. Представления также должны обновляться в данный момент, чтобы дать пользователю визуальную обратную связь. Дополнительные сведения см. в статье [перетаскивание: реализация объекта-приемника](../../mfc/drag-and-drop-implementing-a-drop-target.md).  
+ Override this function to prepare for future calls to the [OnDragOver](#ondragover) member function. Any data required from the data object should be retrieved at this time for later use in the `OnDragOver` member function. The view should also be updated at this time to give the user visual feedback. For more information, see the article [Drag and Drop: Implementing a Drop Target](../../mfc/drag-and-drop-implementing-a-drop-target.md).  
   
-##  <a name="ondragleave"></a>CView::OnDragLeave  
- Вызывается средой во время операции перетаскивания при перемещении указателя мыши за пределы допустимой области для этого окна.  
+##  <a name="ondragleave"></a>  CView::OnDragLeave  
+ Called by the framework during a drag operation when the mouse is moved out of the valid drop area for that window.  
   
 ```  
 virtual void OnDragLeave();
 ```  
   
-### <a name="remarks"></a>Примечания  
- Переопределить эту функцию, если требуется очистить все действия, предпринятые во время текущего представления [OnDragEnter](#ondragenter) или [OnDragOver](#ondragover) вызовам, такие как удаление любые отзывы пользователей visual, пока объект был перетаскивать.  
+### <a name="remarks"></a>Remarks  
+ Override this function if the current view needs to clean up any actions taken during [OnDragEnter](#ondragenter) or [OnDragOver](#ondragover) calls, such as removing any visual user feedback while the object was dragged and dropped.  
   
-##  <a name="ondragover"></a>CView::OnDragOver  
- Вызывается средой во время операции перетаскивания при перемещении указателя мыши по окна цели перетаскивания.  
+##  <a name="ondragover"></a>  CView::OnDragOver  
+ Called by the framework during a drag operation when the mouse is moved over the drop target window.  
   
 ```  
 virtual DROPEFFECT OnDragOver(
@@ -364,36 +376,36 @@ virtual DROPEFFECT OnDragOver(
     CPoint point);
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
  `pDataObject`  
- Указывает [COleDataObject](../../mfc/reference/coledataobject-class.md) , перетаскиваемый над цели перетаскивания.  
+ Points to the [COleDataObject](../../mfc/reference/coledataobject-class.md) being dragged over the drop target.  
   
  `dwKeyState`  
- Содержит состояние клавиши-модификаторы. Это сочетание любое количество следующих: **MK_CONTROL**, **MK_SHIFT**, **MK_ALT**, **MK_LBUTTON**, **MK_MBUTTON**, и **MK_RBUTTON**.  
+ Contains the state of the modifier keys. This is a combination of any number of the following: **MK_CONTROL**, **MK_SHIFT**, **MK_ALT**, **MK_LBUTTON**, **MK_MBUTTON**, and **MK_RBUTTON**.  
   
  `point`  
- Текущая позиция мыши относительно клиентской области представления.  
+ The current mouse position relative to the view client area.  
   
-### <a name="return-value"></a>Возвращаемое значение  
- Значение из `DROPEFFECT` перечислимый тип, который указывает тип перетаскивания, что произойдет, если пользователь удален объект в этой позиции. Тип удаления часто зависит от текущего состояния ключа, обозначенный `dwKeyState`. Стандартная сопоставление ключевые для `DROPEFFECT` значений:  
+### <a name="return-value"></a>Return Value  
+ A value from the `DROPEFFECT` enumerated type, which indicates the type of drop that would occur if the user dropped the object at this position. The type of drop often depends on the current key state as indicated by `dwKeyState`. A standard mapping of keystates to `DROPEFFECT` values is:  
   
-- `DROPEFFECT_NONE`В этом окне невозможно удалить объект данных.  
+- `DROPEFFECT_NONE` The data object cannot be dropped in this window.  
   
-- `DROPEFFECT_LINK`для **MK_CONTROL | MK_SHIFT** создает связь между объектом и его сервер.  
+- `DROPEFFECT_LINK` for **MK_CONTROL &#124; MK_SHIFT** Creates a linkage between the object and its server.  
   
-- `DROPEFFECT_COPY`для **MK_CONTROL** создает копию перетаскиваемый объект.  
+- `DROPEFFECT_COPY` for **MK_CONTROL** Creates a copy of the dropped object.  
   
-- `DROPEFFECT_MOVE`для **MK_ALT** создает копию перетаскиваемый объект и удаления исходного объекта. Обычно это эффект перетаскивания по умолчанию, при представлении может принимать объект данных.  
+- `DROPEFFECT_MOVE` for **MK_ALT** Creates a copy of the dropped object and delete the original object. This is typically the default drop effect, when the view can accept the data object.  
   
- Дополнительные сведения см. в образце Дополнительные понятия MFC [OCLIENT](../../visual-cpp-samples.md).  
+ For more information, see the MFC Advanced Concepts sample [OCLIENT](../../visual-cpp-samples.md).  
   
-### <a name="remarks"></a>Примечания  
- Реализация по умолчанию является не выполняют никаких действий и вернуть `DROPEFFECT_NONE`.  
+### <a name="remarks"></a>Remarks  
+ The default implementation is to do nothing and return `DROPEFFECT_NONE`.  
   
- Переопределите эту функцию, чтобы дать пользователю визуальную обратную связь во время операции перетаскивания. Так как эта функция вызывается непрерывно, любой код, содержащийся в ней необходимо оптимизировать максимальной. Дополнительные сведения см. в статье [перетаскивание: реализация объекта-приемника](../../mfc/drag-and-drop-implementing-a-drop-target.md).  
+ Override this function to give the user visual feedback during the drag operation. Since this function is called continuously, any code contained within it should be optimized as much as possible. For more information, see the article [Drag and Drop: Implementing a Drop Target](../../mfc/drag-and-drop-implementing-a-drop-target.md).  
   
-##  <a name="ondragscroll"></a>CView::OnDragScroll  
- Вызывается средой перед вызовом метода [OnDragEnter](#ondragenter) или [OnDragOver](#ondragover) для определения, является ли точка находится в области прокрутки.  
+##  <a name="ondragscroll"></a>  CView::OnDragScroll  
+ Called by the framework before calling [OnDragEnter](#ondragenter) or [OnDragOver](#ondragover) to determine whether the point is in the scrolling region.  
   
 ```  
 virtual DROPEFFECT OnDragScroll(
@@ -401,51 +413,51 @@ virtual DROPEFFECT OnDragScroll(
     CPoint point);
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
  `dwKeyState`  
- Содержит состояние клавиши-модификаторы. Это сочетание любое количество следующих: **MK_CONTROL**, **MK_SHIFT**, **MK_ALT**, **MK_LBUTTON**, **MK_MBUTTON**, и **MK_RBUTTON**.  
+ Contains the state of the modifier keys. This is a combination of any number of the following: **MK_CONTROL**, **MK_SHIFT**, **MK_ALT**, **MK_LBUTTON**, **MK_MBUTTON**, and **MK_RBUTTON**.  
   
  `point`  
- Содержит расположение курсора в пикселях, относительно экрана.  
+ Contains the location of the cursor, in pixels, relative to the screen.  
   
-### <a name="return-value"></a>Возвращаемое значение  
- Значение из `DROPEFFECT` перечислимый тип, который указывает тип перетаскивания, что произойдет, если пользователь удален объект в этой позиции. Тип удаления обычно зависит текущее состояние клавиш, определяется `dwKeyState`. Стандартная сопоставление ключевые для `DROPEFFECT` значений:  
+### <a name="return-value"></a>Return Value  
+ A value from the `DROPEFFECT` enumerated type, which indicates the type of drop that would occur if the user dropped the object at this position. The type of drop usually depends on the current key state indicated by `dwKeyState`. A standard mapping of keystates to `DROPEFFECT` values is:  
   
-- `DROPEFFECT_NONE`В этом окне невозможно удалить объект данных.  
+- `DROPEFFECT_NONE` The data object cannot be dropped in this window.  
   
-- `DROPEFFECT_LINK`для **MK_CONTROL | MK_SHIFT** создает связь между объектом и его сервер.  
+- `DROPEFFECT_LINK` for **MK_CONTROL &#124; MK_SHIFT** Creates a linkage between the object and its server.  
   
-- `DROPEFFECT_COPY`для **MK_CONTROL** создает копию перетаскиваемый объект.  
+- `DROPEFFECT_COPY` for **MK_CONTROL** Creates a copy of the dropped object.  
   
-- `DROPEFFECT_MOVE`для **MK_ALT** создает копию перетаскиваемый объект и удаления исходного объекта.  
+- `DROPEFFECT_MOVE` for **MK_ALT** Creates a copy of the dropped object and delete the original object.  
   
-- `DROPEFFECT_SCROLL`Указывает, что операция перетаскивания прокрутки о или происходит в целевое представление.  
+- `DROPEFFECT_SCROLL` Indicates that a drag scroll operation is about to occur or is occurring in the target view.  
   
- Дополнительные сведения см. в образце Дополнительные понятия MFC [OCLIENT](../../visual-cpp-samples.md).  
+ For more information, see the MFC Advanced Concepts sample [OCLIENT](../../visual-cpp-samples.md).  
   
-### <a name="remarks"></a>Примечания  
- Переопределите эту функцию, если вы хотите предоставить специальное поведение для данного события. Реализация по умолчанию автоматически прокручивается windows, когда курсор перетаскивается в область прокрутки по умолчанию внутри границы каждого окна. Дополнительные сведения см. в статье [перетаскивание: реализация объекта-приемника](../../mfc/drag-and-drop-implementing-a-drop-target.md).  
+### <a name="remarks"></a>Remarks  
+ Override this function when you want to provide special behavior for this event. The default implementation automatically scrolls windows when the cursor is dragged into the default scroll region inside the border of each window.For more information, see the article [Drag and Drop: Implementing a Drop Target](../../mfc/drag-and-drop-implementing-a-drop-target.md).  
   
-##  <a name="ondraw"></a>CView::OnDraw  
- Вызывается платформой для визуализации изображения документа.  
+##  <a name="ondraw"></a>  CView::OnDraw  
+ Called by the framework to render an image of the document.  
   
 ```  
 virtual void OnDraw(CDC* pDC) = 0;  
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
  `pDC`  
- Указывает на контекст устройства для подготовки к просмотру изображения документа.  
+ Points to the device context to be used for rendering an image of the document.  
   
-### <a name="remarks"></a>Примечания  
- Платформа вызывает эту функцию для выполнения экрана, печати и предварительного просмотра и передает контекст различные устройства в каждом случае. Реализация по умолчанию отсутствует.  
+### <a name="remarks"></a>Remarks  
+ The framework calls this function to perform screen display, printing, and print preview, and it passes a different device context in each case. There is no default implementation.  
   
- Необходимо переопределить эту функцию, чтобы отобразить представление документа. Можно вызывать графических устройств (GDI) интерфейса с помощью [CDC](../../mfc/reference/cdc-class.md) объекта, на который указывает `pDC` параметр. Можно выбрать ресурсов GDI, таких как перьев или шрифты, в контекст устройства перед рисованием и отменить их позже. Часто код рисования может быть аппаратно независимые; то есть он не требует сведения о каком типе устройства отображается изображение.  
+ You must override this function to display your view of the document. You can make graphic device interface (GDI) calls using the [CDC](../../mfc/reference/cdc-class.md) object pointed to by the `pDC` parameter. You can select GDI resources, such as pens or fonts, into the device context before drawing and then deselect them afterwards. Often your drawing code can be device-independent; that is, it doesn't require information about what type of device is displaying the image.  
   
- Чтобы оптимизировать Рисование, вызовите [RectVisible](../../mfc/reference/cdc-class.md#rectvisible) контекст устройства, чтобы узнать, является ли данный прямоугольник будет отображаться функцию-член. Если необходимо различать отображения стандартного экрана и печати, вызвать [IsPrinting](../../mfc/reference/cdc-class.md#isprinting) функцию-член контекст устройства.  
+ To optimize drawing, call the [RectVisible](../../mfc/reference/cdc-class.md#rectvisible) member function of the device context to find out whether a given rectangle will be drawn. If you need to distinguish between normal screen display and printing, call the [IsPrinting](../../mfc/reference/cdc-class.md#isprinting) member function of the device context.  
   
-##  <a name="ondrop"></a>CView::OnDrop  
- Вызывается платформой, когда пользователь отпускает объект данных через является допустимой целью перетаскивания.  
+##  <a name="ondrop"></a>  CView::OnDrop  
+ Called by the framework when the user releases a data object over a valid drop target.  
   
 ```  
 virtual BOOL OnDrop(
@@ -454,35 +466,35 @@ virtual BOOL OnDrop(
     CPoint point);
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
  `pDataObject`  
- Указывает [COleDataObject](../../mfc/reference/coledataobject-class.md) , попадает в цели перетаскивания.  
+ Points to the [COleDataObject](../../mfc/reference/coledataobject-class.md) that is dropped into the drop target.  
   
  `dropEffect`  
- Пользователь запросил влияния перетаскивания.  
+ The drop effect that the user has requested.  
   
-- `DROPEFFECT_COPY`Создает копию объекта данных в процессе удаления.  
+- `DROPEFFECT_COPY` Creates a copy of the data object being dropped.  
   
-- `DROPEFFECT_MOVE`Перемещение объекта данных в текущем положении мыши.  
+- `DROPEFFECT_MOVE` Moves the data object to the current mouse location.  
   
-- `DROPEFFECT_LINK`Создает связь между объектом данных и сервером.  
+- `DROPEFFECT_LINK` Creates a link between a data object and its server.  
   
  `point`  
- Текущая позиция мыши относительно клиентской области представления.  
+ The current mouse position relative to the view client area.  
   
-### <a name="return-value"></a>Возвращаемое значение  
- Ненулевое значение, если освобождение прошло успешно; в противном случае — 0.  
+### <a name="return-value"></a>Return Value  
+ Nonzero if the drop was successful; otherwise 0.  
   
-### <a name="remarks"></a>Примечания  
- Реализация по умолчанию не выполняет никаких действий и возвращает **FALSE**.  
+### <a name="remarks"></a>Remarks  
+ The default implementation does nothing and returns **FALSE**.  
   
- Переопределите эту функцию, чтобы реализовать клиентскую область представления эффект перетаскивания OLE. Можно проверить объект данных через `pDataObject` для данных из буфера обмена форматы и данные удаляются в заданной точке.  
+ Override this function to implement the effect of an OLE drop into the client area of the view. The data object can be examined via `pDataObject` for Clipboard data formats and data dropped at the specified point.  
   
 > [!NOTE]
->  Платформа не вызывайте эту функцию, если существует переопределение, чтобы [OnDropEx](#ondropex) в этом классе представления.  
+>  The framework does not call this function if there is an override to [OnDropEx](#ondropex) in this view class.  
   
-##  <a name="ondropex"></a>CView::OnDropEx  
- Вызывается платформой, когда пользователь отпускает объект данных через является допустимой целью перетаскивания.  
+##  <a name="ondropex"></a>  CView::OnDropEx  
+ Called by the framework when the user releases a data object over a valid drop target.  
   
 ```  
 virtual DROPEFFECT OnDropEx(
@@ -492,57 +504,57 @@ virtual DROPEFFECT OnDropEx(
     CPoint point);
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
  `pDataObject`  
- Указывает [COleDataObject](../../mfc/reference/coledataobject-class.md) , попадает в цели перетаскивания.  
+ Points to the [COleDataObject](../../mfc/reference/coledataobject-class.md) that is dropped into the drop target.  
   
  `dropDefault`  
- Эффект, который пользователь выбрал для операции удаления по умолчанию, исходя из текущего состояния ключа. Это может быть `DROPEFFECT_NONE`. Эффектов перетаскивания рассматриваются в разделе «Примечания».  
+ The effect that the user chose for the default drop operation based on the current key state. It may be `DROPEFFECT_NONE`. Drop effects are discussed in the Remarks section.  
   
  `dropList`  
- Список эффектов перетаскивания, которые поддерживает источника перетаскивания. Значения эффект перетаскивания можно объединить с помощью побитового или ( **|**) операции. Эффектов перетаскивания рассматриваются в разделе «Примечания».  
+ A list of the drop effects that the drop source supports. Drop effect values can be combined using the bitwise OR ( **&#124;**) operation. Drop effects are discussed in the Remarks section.  
   
  `point`  
- Текущая позиция мыши относительно клиентской области представления.  
+ The current mouse position relative to the view client area.  
   
-### <a name="return-value"></a>Возвращаемое значение  
- Эффект, полученным в результате попытки удаления в расположении, заданном по `point`. Это должно быть одно из значений, обозначенными *dropEffectList*. Эффектов перетаскивания рассматриваются в разделе «Примечания».  
+### <a name="return-value"></a>Return Value  
+ The drop effect that resulted from the drop attempt at the location specified by `point`. This must be one of the values indicated by *dropEffectList*. Drop effects are discussed in the Remarks section.  
   
-### <a name="remarks"></a>Примечания  
- Реализация по умолчанию — ничего не делать и вернуться фиктивное значение (-1), чтобы указать, что платформа должна вызывать [OnDrop](#ondrop) обработчика.  
+### <a name="remarks"></a>Remarks  
+ The default implementation is to do nothing and return a dummy value ( -1 ) to indicate that the framework should call the [OnDrop](#ondrop) handler.  
   
- Переопределите эту функцию для реализации эффект правой кнопки мыши операции перетаскивания. Перетаскивание правой кнопки мыши обычно отображается меню вариантов при отпускании правой кнопки мыши.  
+ Override this function to implement the effect of an right mouse-button drag and drop. Right mouse-button drag and drop typically displays a menu of choices when the right mouse-button is released.  
   
- Переопределение метода `OnDropEx` необходимо запросить правой кнопки мыши. Можно вызвать [GetKeyState](http://msdn.microsoft.com/library/windows/desktop/ms646301) или сохранять состояние правой кнопки мыши от вашего [OnDragEnter](#ondragenter) обработчика.  
+ Your override of `OnDropEx` should query for the right mouse-button. You can call [GetKeyState](http://msdn.microsoft.com/library/windows/desktop/ms646301) or store the right mouse-button state from your [OnDragEnter](#ondragenter) handler.  
   
--   Если правой кнопки мыши не работает, переопределение должно отображаться в контекстном меню, которая предлагает поддержку эффектов перетаскивания источника перетаскивания.  
+-   If the right mouse-button is down, your override should display a popup menu which offers the drop effects support by the drop source.  
   
-    -   Изучите `dropList` для определения возможных эффектов перетаскивания, поддерживаемые источником перетаскивания. Включите эти действия во всплывающем меню.  
+    -   Examine `dropList` to determine the drop effects supported by the drop source. Enable only these actions on the popup menu.  
   
-    -   Используйте [SetMenuDefaultItem](http://msdn.microsoft.com/library/windows/desktop/ms647996) для задания действия по умолчанию, на основе `dropDefault`.  
+    -   Use [SetMenuDefaultItem](http://msdn.microsoft.com/library/windows/desktop/ms647996) to set the default action based on `dropDefault`.  
   
-    -   Наконец выполните действие определяется выбором из всплывающего меню.  
+    -   Finally, take the action indicated by the user selection from the popup menu.  
   
--   Если правой кнопки мыши не нажата, переопределение должно обрабатывать это как стандартная drop запрос. Эффект перетаскивания, указанного в `dropDefault`. Кроме того, переопределение может возвращать фиктивное значение (-1), чтобы указать, что `OnDrop` обработки этой операции перетаскивания.  
+-   If the right mouse-button is not down, your override should process this as a standard drop request. Use the drop effect specified in `dropDefault`. Alternately, your override can return the dummy value ( -1 ) to indicate that `OnDrop` will handle this drop operation.  
   
- Используйте `pDataObject` для изучения `COleDataObject` для данных из буфера обмена данные и формат удален в заданной точке.  
+ Use `pDataObject` to examine the `COleDataObject` for Clipboard data format and data dropped at the specified point.  
   
- Эффекты перетаскивания описаны действия, связанные с операцией перетаскивания. Следующий список эффектов перетаскивания см.:  
+ Drop effects describe the action associated with a drop operation. See the following list of drop effects:  
   
-- `DROPEFFECT_NONE`Удаление не допускается.  
+- `DROPEFFECT_NONE` A drop would not be allowed.  
   
-- `DROPEFFECT_COPY`Операция копирования будет выполнена.  
+- `DROPEFFECT_COPY` A copy operation would be performed.  
   
-- `DROPEFFECT_MOVE`Будет выполнена операция перемещения.  
+- `DROPEFFECT_MOVE` A move operation would be performed.  
   
-- `DROPEFFECT_LINK`Ссылка из перетаскиваемых данных с исходными данными будет установлено.  
+- `DROPEFFECT_LINK` A link from the dropped data to the original data would be established.  
   
-- `DROPEFFECT_SCROLL`Указывает, что операция перетаскивания прокрутки о или происходит в целевой базе данных.  
+- `DROPEFFECT_SCROLL` Indicates that a drag scroll operation is about to occur or is occurring in the target.  
   
- Дополнительные сведения о задании команду меню по умолчанию в разделе [SetMenuDefaultItem](http://msdn.microsoft.com/library/windows/desktop/ms647996) в [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)] и [CMenu::GetSafeHmenu](../../mfc/reference/cmenu-class.md#getsafehmenu) в этом томе.  
+ For more information on setting the default menu command, see [SetMenuDefaultItem](http://msdn.microsoft.com/library/windows/desktop/ms647996) in the Windows SDK and [CMenu::GetSafeHmenu](../../mfc/reference/cmenu-class.md#getsafehmenu) in this volume.  
   
-##  <a name="onendprinting"></a>CView::OnEndPrinting  
- Вызывается платформой после документа печати или предварительном просмотре.  
+##  <a name="onendprinting"></a>  CView::OnEndPrinting  
+ Called by the framework after a document has been printed or previewed.  
   
 ```  
 virtual void OnEndPrinting(
@@ -550,18 +562,18 @@ virtual void OnEndPrinting(
     CPrintInfo* pInfo);
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
  `pDC`  
- Указывает на контекст принтера.  
+ Points to the printer device context.  
   
  `pInfo`  
- Указывает [CPrintInfo](../../mfc/reference/cprintinfo-structure.md) структуру, описывающую текущее задание печати.  
+ Points to a [CPrintInfo](../../mfc/reference/cprintinfo-structure.md) structure that describes the current print job.  
   
-### <a name="remarks"></a>Примечания  
- Реализация по умолчанию этой функции не выполняет никаких действий. Переопределить эту функцию для освобождения любых ресурсов GDI, выделенных в [OnBeginPrinting](#onbeginprinting) функции-члена.  
+### <a name="remarks"></a>Remarks  
+ The default implementation of this function does nothing. Override this function to free any GDI resources you allocated in the [OnBeginPrinting](#onbeginprinting) member function.  
   
-##  <a name="onendprintpreview"></a>CView::OnEndPrintPreview  
- Вызывается платформой, когда пользователь выходит из режима предварительного просмотра.  
+##  <a name="onendprintpreview"></a>  CView::OnEndPrintPreview  
+ Called by the framework when the user exits print preview mode.  
   
 ```  
 virtual void OnEndPrintPreview(
@@ -571,36 +583,36 @@ virtual void OnEndPrintPreview(
     CPreviewView* pView);
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
  `pDC`  
- Указывает на контекст принтера.  
+ Points to the printer device context.  
   
  `pInfo`  
- Указывает [CPrintInfo](../../mfc/reference/cprintinfo-structure.md) структуру, описывающую текущее задание печати.  
+ Points to a [CPrintInfo](../../mfc/reference/cprintinfo-structure.md) structure that describes the current print job.  
   
  `point`  
- Задает точку на странице, предыдущей в режиме предварительного просмотра.  
+ Specifies the point on the page that was last displayed in preview mode.  
   
  `pView`  
- Указывает объект представления, используемые для предварительного просмотра.  
+ Points to the view object used for previewing.  
   
-### <a name="remarks"></a>Примечания  
- Реализация по умолчанию эта функция вызывает [OnEndPrinting](#onendprinting) функции-члена и восстанавливает фрейма главного окна в состояние, существовавшее до предварительного начала. Переопределите эту функцию, чтобы выполнять специальную обработку при завершении режим предварительного просмотра. Например, если вы хотите сохранить положение пользователя в документе при переходе из режима предварительного просмотра в обычный режим, прокрутить до позиции, описываемых `point` параметр и `m_nCurPage` членом `CPrintInfo` структуру, в которой `pInfo` указывает параметр.  
+### <a name="remarks"></a>Remarks  
+ The default implementation of this function calls the [OnEndPrinting](#onendprinting) member function and restores the main frame window to the state it was in before print preview began. Override this function to perform special processing when preview mode is terminated. For example, if you want to maintain the user's position in the document when switching from preview mode to normal display mode, you can scroll to the position described by the `point` parameter and the `m_nCurPage` member of the `CPrintInfo` structure that the `pInfo` parameter points to.  
   
- Всегда вызывайте метод версию базового класса `OnEndPrintPreview` из переопределения, обычно в конце функции.  
+ Always call the base class version of `OnEndPrintPreview` from your override, typically at the end of the function.  
   
-##  <a name="oninitialupdate"></a>CView::OnInitialUpdate  
- Вызывается платформой после представления впервые присоединяется к документу, но до первоначального отображения представления.  
+##  <a name="oninitialupdate"></a>  CView::OnInitialUpdate  
+ Called by the framework after the view is first attached to the document, but before the view is initially displayed.  
   
 ```  
 virtual void OnInitialUpdate();
 ```  
   
-### <a name="remarks"></a>Примечания  
- Реализация по умолчанию эта функция вызывает [OnUpdate](#onupdate) функции-члена без указания информации (то есть, используя значения по умолчанию 0 `lHint` параметр и **NULL** для `pHint` параметр). Переопределите эту функцию, чтобы выполнить однократную инициализацию, которая требует сведений о документе. Например если приложение содержит документы фиксированного размера, можно использовать эту функцию для инициализации представления прокрутки ограничения, исходя из размера документа. Если приложение поддерживает документы переменного размера, используйте [OnUpdate](#onupdate) обновление прокрутки ограничивает каждый раз изменения документа.  
+### <a name="remarks"></a>Remarks  
+ The default implementation of this function calls the [OnUpdate](#onupdate) member function with no hint information (that is, using the default values of 0 for the `lHint` parameter and **NULL** for the `pHint` parameter). Override this function to perform any one-time initialization that requires information about the document. For example, if your application has fixed-sized documents, you can use this function to initialize a view's scrolling limits based on the document size. If your application supports variable-sized documents, use [OnUpdate](#onupdate) to update the scrolling limits every time the document changes.  
   
-##  <a name="onpreparedc"></a>CView::OnPrepareDC  
- Вызывается средой перед [OnDraw](#ondraw) для просмотра на экране и перед вызовом функции-члена [OnPrint](#onprint) функция-член вызывается для каждой страницы во время предварительного просмотра печати или печати.  
+##  <a name="onpreparedc"></a>  CView::OnPrepareDC  
+ Called by the framework before the [OnDraw](#ondraw) member function is called for screen display and before the [OnPrint](#onprint) member function is called for each page during printing or print preview.  
   
 ```  
 virtual void OnPrepareDC(
@@ -608,67 +620,67 @@ virtual void OnPrepareDC(
     CPrintInfo* pInfo = NULL);
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
  `pDC`  
- Указывает на контекст устройства для подготовки к просмотру изображения документа.  
+ Points to the device context to be used for rendering an image of the document.  
   
  `pInfo`  
- Указывает [CPrintInfo](../../mfc/reference/cprintinfo-structure.md) структуру, описывающую текущее задание печати, если `OnPrepareDC` вызывается для предварительного просмотра печати или печати; `m_nCurPage` член определяет страницу готов к печати. Этот параметр является **NULL** Если `OnPrepareDC` вызывается для просмотра на экране.  
+ Points to a [CPrintInfo](../../mfc/reference/cprintinfo-structure.md) structure that describes the current print job if `OnPrepareDC` is being called for printing or print preview; the `m_nCurPage` member specifies the page about to be printed. This parameter is **NULL** if `OnPrepareDC` is being called for screen display.  
   
-### <a name="remarks"></a>Примечания  
- Если функция вызывается для просмотра на экране, реализация по умолчанию эта функция не выполняет никаких действий. Однако эта функция переопределяется в производных классах, таких как [CScrollView](../../mfc/reference/cscrollview-class.md), для настройки атрибутов контекста устройства; следовательно, следует всегда вызывать реализацию базового класса в начале переопределения.  
+### <a name="remarks"></a>Remarks  
+ The default implementation of this function does nothing if the function is called for screen display. However, this function is overridden in derived classes, such as [CScrollView](../../mfc/reference/cscrollview-class.md), to adjust attributes of the device context; consequently, you should always call the base class implementation at the beginning of your override.  
   
- Если функция вызывается для печати, реализация по умолчанию проверяет страницу сведений, хранящихся в `pInfo` параметр. Если длина документа не указан, `OnPrepareDC` предполагается возможность одной страницей документа и останавливает печати цикла после печати одной страницы. Функции печати цикла останавливается, задав `m_bContinuePrinting` член структуры **FALSE**.  
+ If the function is called for printing, the default implementation examines the page information stored in the `pInfo` parameter. If the length of the document has not been specified, `OnPrepareDC` assumes the document to be one page long and stops the print loop after one page has been printed. The function stops the print loop by setting the `m_bContinuePrinting` member of the structure to **FALSE**.  
   
- Переопределение `OnPrepareDC` по любой из следующих причин:  
+ Override `OnPrepareDC` for any of the following reasons:  
   
--   Для настройки атрибутов контекста устройства, необходимые для указанной страницы. Например если необходимо задать режим сопоставления и других характеристик контекста устройства, сделать в этой функции.  
+-   To adjust attributes of the device context as needed for the specified page. For example, if you need to set the mapping mode or other characteristics of the device context, do so in this function.  
   
--   Чтобы выполнить разбиение на страницы во время печати. Обычно указывается длина документа при печати начинается с помощью [OnPreparePrinting](#onprepareprinting) функции-члена. Тем не менее, если вы не знаете заранее документа (например, при печати неопределенное количество записей из базы данных), переопределите `OnPrepareDC` для проверки конца документа во время его вывода на печать. В случае больше документа на печать, установите `m_bContinuePrinting` членом `CPrintInfo` структуру **FALSE**.  
+-   To perform print-time pagination. Normally you specify the length of the document when printing begins, using the [OnPreparePrinting](#onprepareprinting) member function. However, if you don't know in advance how long the document is (for example, when printing an undetermined number of records from a database), override `OnPrepareDC` to test for the end of the document while it is being printed. When there is no more of the document to be printed, set the `m_bContinuePrinting` member of the `CPrintInfo` structure to **FALSE**.  
   
--   Чтобы отправить escape-кодами принтер на основе страницу по. Для отправки escape-кодами `OnPrepareDC`, вызовите **Escape** функцию-член `pDC` параметр.  
+-   To send escape codes to the printer on a page-by-page basis. To send escape codes from `OnPrepareDC`, call the **Escape** member function of the `pDC` parameter.  
   
- Вызовите версию базового класса `OnPrepareDC` в начале переопределения.  
+ Call the base class version of `OnPrepareDC` at the beginning of your override.  
   
-### <a name="example"></a>Пример  
- [!code-cpp[NVC_MFCDocView&#183;](../../mfc/codesnippet/cpp/cview-class_1.cpp)]  
+### <a name="example"></a>Example  
+ [!code-cpp[NVC_MFCDocView#183](../../mfc/codesnippet/cpp/cview-class_1.cpp)]  
   
-##  <a name="onprepareprinting"></a>CView::OnPreparePrinting  
- Вызывается платформой до печати или просмотра документа.  
+##  <a name="onprepareprinting"></a>  CView::OnPreparePrinting  
+ Called by the framework before a document is printed or previewed.  
   
 ```  
 virtual BOOL OnPreparePrinting(CPrintInfo* pInfo);
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
  `pInfo`  
- Указывает [CPrintInfo](../../mfc/reference/cprintinfo-structure.md) структуру, описывающую текущее задание печати.  
+ Points to a [CPrintInfo](../../mfc/reference/cprintinfo-structure.md) structure that describes the current print job.  
   
-### <a name="return-value"></a>Возвращаемое значение  
- Ненулевое значение для начала печати. 0, если задание было отменено.  
+### <a name="return-value"></a>Return Value  
+ Nonzero to begin printing; 0 if the print job has been canceled.  
   
-### <a name="remarks"></a>Примечания  
- Реализация по умолчанию не выполняет никаких действий.  
+### <a name="remarks"></a>Remarks  
+ The default implementation does nothing.  
   
- Необходимо переопределить эту функцию, чтобы включить печать и предварительный просмотр. Вызов [DoPreparePrinting](#doprepareprinting) функция-член, передавая ему `pInfo` параметра и возвращать его возвращаемое значение; `DoPreparePrinting` отображает диалоговое окно печати и создает контекст устройства принтера. Если требуется инициализировать диалоговое окно печати с помощью значения, отличного от значения по умолчанию, присвоения значений членам `pInfo`. Например, если вы знаете длина документа, значение передается методу [SetMaxPage](../../mfc/reference/cprintinfo-structure.md#setmaxpage) функцию-член `pInfo` перед вызовом метода `DoPreparePrinting`. Это значение отображается в поле Кому: поле в диапазоне части диалогового окна «Печать».  
+ You must override this function to enable printing and print preview. Call the [DoPreparePrinting](#doprepareprinting) member function, passing it the `pInfo` parameter, and then return its return value; `DoPreparePrinting` displays the Print dialog box and creates a printer device context. If you want to initialize the Print dialog box with values other than the defaults, assign values to the members of `pInfo`. For example, if you know the length of the document, pass the value to the [SetMaxPage](../../mfc/reference/cprintinfo-structure.md#setmaxpage) member function of `pInfo` before calling `DoPreparePrinting`. This value is displayed in the To: box in the Range portion of the Print dialog box.  
   
- `DoPreparePrinting`не отображать диалоговое окно печати для просмотра задания. Если вы хотите пропустить диалоговое окно печати задания печати, убедитесь, что **m_bPreview** членом `pInfo` — **FALSE** и установите его в **TRUE** перед его передачей `DoPreparePrinting`; сбросить его, чтобы **FALSE** позже.  
+ `DoPreparePrinting` does not display the Print dialog box for a preview job. If you want to bypass the Print dialog box for a print job, check that the **m_bPreview** member of `pInfo` is **FALSE** and then set it to **TRUE** before passing it to `DoPreparePrinting`; reset it to **FALSE** afterwards.  
   
- Требуется для выполнения инициализации, которым требуется доступ к `CDC` объект, представляющий контекст устройства принтера (например, необходимо знать размер страницы перед указанием длина документа), переопределите `OnBeginPrinting` функции-члена.  
+ If you need to perform initializations that require access to the `CDC` object representing the printer device context (for example, if you need to know the page size before specifying the length of the document), override the `OnBeginPrinting` member function.  
   
- Если вы хотите задать значение **m_nNumPreviewPages** или **m_strPageDesc** члены `pInfo` параметр, сделать после вызова метода `DoPreparePrinting`. `DoPreparePrinting` Функция наборы элементов **m_nNumPreviewPages** значение, найденное в приложении. INI-файл и задает **m_strPageDesc** значение по умолчанию.  
+ If you want to set the value of the **m_nNumPreviewPages** or **m_strPageDesc** members of the `pInfo` parameter, do so after calling `DoPreparePrinting`. The `DoPreparePrinting` member function sets **m_nNumPreviewPages** to the value found in the application's .INI file and sets **m_strPageDesc** to its default value.  
   
-### <a name="example"></a>Пример  
-  Переопределение `OnPreparePrinting` и вызвать `DoPreparePrinting` из переопределение, чтобы платформа будет отображаться диалоговое окно печати и создать для вас принтер контроллера домена.  
+### <a name="example"></a>Example  
+  Override `OnPreparePrinting` and call `DoPreparePrinting` from the override so that the framework will display a Print dialog box and create a printer DC for you.  
   
- [!code-cpp[NVC_MFCDocView&#184;](../../mfc/codesnippet/cpp/cview-class_2.cpp)]  
+ [!code-cpp[NVC_MFCDocView#184](../../mfc/codesnippet/cpp/cview-class_2.cpp)]  
   
- Если вы знаете, сколько страниц, документ содержит, задать максимальное страниц `OnPreparePrinting` перед вызовом метода `DoPreparePrinting`. Платформа будет отображаться номер страницы в поле «к» диалогового окна «Печать».  
+ If you know how many pages the document contains, set the maximum page in `OnPreparePrinting` before calling `DoPreparePrinting`. The framework will display the maximum page number in the "to" box of the Print dialog box.  
   
- [!code-cpp[NVC_MFCDocView&#185;](../../mfc/codesnippet/cpp/cview-class_3.cpp)]  
+ [!code-cpp[NVC_MFCDocView#185](../../mfc/codesnippet/cpp/cview-class_3.cpp)]  
   
-##  <a name="onprint"></a>CView::OnPrint  
- Вызывается платформой для печати или просмотра страницы документа.  
+##  <a name="onprint"></a>  CView::OnPrint  
+ Called by the framework to print or preview a page of the document.  
   
 ```  
 virtual void OnPrint(
@@ -676,39 +688,39 @@ virtual void OnPrint(
     CPrintInfo* pInfo);
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
  `pDC`  
- Указывает на контекст принтера.  
+ Points to the printer device context.  
   
  `pInfo`  
- Указывает `CPrintInfo` структуру, описывающую текущее задание печати.  
+ Points to a `CPrintInfo` structure that describes the current print job.  
   
-### <a name="remarks"></a>Примечания  
- Для каждой страницы Печать, платформа вызывает эту функцию сразу после вызова [OnPrepareDC](#onpreparedc) функции-члена. Печать страницы определяется `m_nCurPage` членом [CPrintInfo](../../mfc/reference/cprintinfo-structure.md) структуру, в которой `pInfo` указывает. Реализация по умолчанию вызывает [OnDraw](#ondraw) функция-член и передает его в контекст устройства принтера.  
+### <a name="remarks"></a>Remarks  
+ For each page being printed, the framework calls this function immediately after calling the [OnPrepareDC](#onpreparedc) member function. The page being printed is specified by the `m_nCurPage` member of the [CPrintInfo](../../mfc/reference/cprintinfo-structure.md) structure that `pInfo` points to. The default implementation calls the [OnDraw](#ondraw) member function and passes it the printer device context.  
   
- Переопределите эту функцию для любой из следующих причин:  
+ Override this function for any of the following reasons:  
   
--   Чтобы разрешить печать многостраничных документов. Отображать только часть документа, который соответствует странице в настоящее время печатается. Если вы используете `OnDraw` выполнять рендеринг, начало координат окна просмотра можно настроить таким образом, выведено соответствующую часть документа.  
+-   To allow printing of multipage documents. Render only the portion of the document that corresponds to the page currently being printed. If you're using `OnDraw` to perform the rendering, you can adjust the viewport origin so that only the appropriate portion of the document is printed.  
   
--   Чтобы сделать печатной отличался от изображения на экране (то есть, если приложение не WYSIWYG). Вместо передачи контекста устройства для принтера `OnDraw`, использовать контекст устройства для отображения изображения с помощью атрибутов не отображается на экране.  
+-   To make the printed image look different from the screen image (that is, if your application is not WYSIWYG). Instead of passing the printer device context to `OnDraw`, use the device context to render an image using attributes not shown on the screen.  
   
-     Если требуется ресурсов GDI для печати, не используйте для просмотра на экране, выберите их в контекст устройства перед рисованием и затем снимите флажок. Эти ресурсы GDI необходимо выделить в [OnBeginPrinting](#onbeginprinting) и выпуска в [OnEndPrinting](#onendprinting).  
+     If you need GDI resources for printing that you don't use for screen display, select them into the device context before drawing and deselect them afterwards. These GDI resources should be allocated in [OnBeginPrinting](#onbeginprinting) and released in [OnEndPrinting](#onendprinting).  
   
--   Чтобы реализовать верхние и нижние колонтитулы. Вы можете использовать `OnDraw` делать отрисовки путем ограничения области печати.  
+-   To implement headers or footers. You can still use `OnDraw` to do the rendering by restricting the area that it can print on.  
   
- Обратите внимание, что **m_rectDraw** членом `pInfo` параметр описывает области печати страницы в логических единицах.  
+ Note that the **m_rectDraw** member of the `pInfo` parameter describes the printable area of the page in logical units.  
   
- Не следует вызывать `OnPrepareDC` в переопределении `OnPrint`, платформа вызывает функцию `OnPrepareDC` автоматически перед вызовом метода `OnPrint`.  
+ Do not call `OnPrepareDC` in your override of `OnPrint`; the framework calls `OnPrepareDC` automatically before calling `OnPrint`.  
   
-### <a name="example"></a>Пример  
- Ниже приведен каркас для переопределенный `OnPrint` функции:  
+### <a name="example"></a>Example  
+ The following is a skeleton for an overridden `OnPrint` function:  
   
- [!code-cpp[NVC_MFCDocView&#186;](../../mfc/codesnippet/cpp/cview-class_4.cpp)]  
+ [!code-cpp[NVC_MFCDocView#186](../../mfc/codesnippet/cpp/cview-class_4.cpp)]  
   
- Еще один пример см. в разделе [CRichEditView::PrintInsideRect](../../mfc/reference/cricheditview-class.md#printinsiderect).  
+ For another example, see [CRichEditView::PrintInsideRect](../../mfc/reference/cricheditview-class.md#printinsiderect).  
   
-##  <a name="onscroll"></a>CView::OnScroll  
- Вызывается средой, чтобы определить, является ли прокрутка возможна.  
+##  <a name="onscroll"></a>  CView::OnScroll  
+ Called by the framework to determine whether scrolling is possible.  
   
 ```  
 virtual BOOL OnScroll(
@@ -717,38 +729,38 @@ virtual BOOL OnScroll(
     BOOL bDoScroll = TRUE);
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
  `nScrollCode`  
- Полоса прокрутки код, который указывает пользователь прокрутка запроса. Этот параметр состоит из двух частей: младший байт, который определяет тип возникновения прокрутки по горизонтали, а старший байт, который определяет тип возникновения прокрутки по вертикали:  
+ A scroll-bar code that indicates the user's scrolling request. This parameter is composed of two parts: a low-order byte, which determines the type of scrolling occurring horizontally, and a high-order byte, which determines the type of scrolling occurring vertically:  
   
-- **SB_BOTTOM** выполняет прокрутку вниз.  
+- **SB_BOTTOM** Scrolls to bottom.  
   
-- **SB_LINEDOWN** прокручивает одну строку вниз.  
+- **SB_LINEDOWN** Scrolls one line down.  
   
-- **SB_LINEUP** прокручивает одну строку вверх.  
+- **SB_LINEUP** Scrolls one line up.  
   
-- **SB_PAGEDOWN** прокручивании одной страницы.  
+- **SB_PAGEDOWN** Scrolls one page down.  
   
-- **SB_PAGEUP** прокручивает одну страницу вверх.  
+- **SB_PAGEUP** Scrolls one page up.  
   
-- **SB_THUMBTRACK** перетаскивания ползунка в указанной позиции. Текущее положение указывается в `nPos`.  
+- **SB_THUMBTRACK** Drags scroll box to specified position. The current position is specified in `nPos`.  
   
-- **SB_TOP** прокручивается в начало.  
+- **SB_TOP** Scrolls to top.  
   
  `nPos`  
- Содержит текущее положение ползунка полосы прокрутки, если код полосы прокрутки **SB_THUMBTRACK**; в противном случае он не используется. В зависимости от диапазона исходного прокрутки `nPos` может быть отрицательным и должен быть приведен к `int` при необходимости.  
+ Contains the current scroll-box position if the scroll-bar code is **SB_THUMBTRACK**; otherwise it is not used. Depending on the initial scroll range, `nPos` may be negative and should be cast to an `int` if necessary.  
   
  `bDoScroll`  
- Определяет ли его реального выполнения указанного действия прокрутки. Если **значение TRUE,** то прокрутка должно быть выполнено, если **FALSE**, прокрутка не должно выполняться.  
+ Determines whether you should actually do the specified scrolling action. If **TRUE,** then scrolling should take place; if **FALSE**, then scrolling should not occur.  
   
-### <a name="return-value"></a>Возвращаемое значение  
- Если `bDoScroll` — **TRUE** и фактически прокрутке представления, возвращается ненулевое значение; в противном случае — 0. Если `bDoScroll` — **FALSE**, возвращается значение, которое вы возвращала бы при `bDoScroll` были **TRUE**, даже если этого не сделать фактически прокрутки.  
+### <a name="return-value"></a>Return Value  
+ If `bDoScroll` is **TRUE** and the view was actually scrolled, then return nonzero; otherwise 0. If `bDoScroll` is **FALSE**, then return the value that you would have returned if `bDoScroll` were **TRUE**, even though you don't actually do the scrolling.  
   
-### <a name="remarks"></a>Примечания  
- В первом случае эта функция вызывается платформой с `bDoScroll` значение **TRUE** когда представление получает сообщение полосы прокрутки. В этом случае следует фактически прокрутки представления. В другом случае эта функция вызывается с `bDoScroll` значение **FALSE** при элемент OLE изначально перетаскивается в область автоматическая прокрутка конечного места перетаскивания до выполнения прокрутки на самом деле. В этом случае вы должны не прокрутки на самом деле.  
+### <a name="remarks"></a>Remarks  
+ In one case this function is called by the framework with `bDoScroll` set to **TRUE** when the view receives a scrollbar message. In this case, you should actually scroll the view. In the other case this function is called with `bDoScroll` set to **FALSE** when an OLE item is initially dragged into the auto-scrolling region of a drop target before scrolling actually takes place. In this case, you should not actually scroll the view.  
   
-##  <a name="onscrollby"></a>CView::OnScrollBy  
- Вызывается инфраструктурой при просмотре пользователем область за пределами имеется представление документа, либо путем перетаскивания объекта OLE с границами текущего представления, управляя вертикальной или горизонтальной полосы прокрутки.  
+##  <a name="onscrollby"></a>  CView::OnScrollBy  
+ Called by the framework when the user views an area beyond the present view of the document, either by dragging an OLE item against the view's current borders or by manipulating the vertical or horizontal scrollbars.  
   
 ```  
 virtual BOOL OnScrollBy(
@@ -756,25 +768,25 @@ virtual BOOL OnScrollBy(
     BOOL bDoScroll = TRUE);
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
  `sizeScroll`  
- Число пикселей прокрутки по горизонтали и вертикали.  
+ Number of pixels scrolled horizontally and vertically.  
   
  `bDoScroll`  
- Определяет, происходит ли прокрутка представления. Если **значение TRUE,** затем прокрутки происходит, если **FALSE**, то прокрутка не происходит.  
+ Determines whether scrolling of the view occurs. If **TRUE,** then scrolling takes place; if **FALSE**, then scrolling does not occur.  
   
-### <a name="return-value"></a>Возвращаемое значение  
- Ненулевое значение, если представление не удалось выполнить прокрутку; в противном случае — 0.  
+### <a name="return-value"></a>Return Value  
+ Nonzero if the view was able to be scrolled; otherwise 0.  
   
-### <a name="remarks"></a>Примечания  
- В производном классе этот метод проверяет ли представление прокрутки в направлении пользователь запросил и обновляет новую область при необходимости. Эта функция вызывается автоматически [CWnd::OnHScroll](../../mfc/reference/cwnd-class.md#onhscroll) и [CWnd::OnVScroll](../../mfc/reference/cwnd-class.md#onvscroll) для выполнения фактического запроса прокрутки.  
+### <a name="remarks"></a>Remarks  
+ In derived classes this method checks to see whether the view is scrollable in the direction the user requested and then updates the new region if necessary. This function is automatically called by [CWnd::OnHScroll](../../mfc/reference/cwnd-class.md#onhscroll) and [CWnd::OnVScroll](../../mfc/reference/cwnd-class.md#onvscroll) to perform the actual scrolling request.  
   
- Реализация по умолчанию этого метода не изменяет представление, но если не вызывается, представление не выполнять прокрутку в `CScrollView`-производного класса.  
+ The default implementation of this method does not change the view, but if it is not called, the view will not scroll in a `CScrollView`-derived class.  
   
- Если высота или ширина документа превышает 32767 пикселов, прокручивать за 32767 завершится ошибкой, поскольку `OnScrollBy` вызван с недопустимым `sizeScroll` аргумент.  
+ If the document width or height exceeds 32767 pixels, scrolling past 32767 will fail because `OnScrollBy` is called with an invalid `sizeScroll` argument.  
   
-##  <a name="onupdate"></a>CView::OnUpdate  
- Вызывается платформой после изменения просмотр документа; Эта функция вызывается [CDocument::UpdateAllViews](../../mfc/reference/cdocument-class.md#updateallviews) и позволяет представлению обновления экрана для отражения этих изменений.  
+##  <a name="onupdate"></a>  CView::OnUpdate  
+ Called by the framework after the view's document has been modified; this function is called by [CDocument::UpdateAllViews](../../mfc/reference/cdocument-class.md#updateallviews) and allows the view to update its display to reflect those modifications.  
   
 ```  
 virtual void OnUpdate(
@@ -783,33 +795,33 @@ virtual void OnUpdate(
     CObject* pHint);
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
  `pSender`  
- Указывает представление, изменение в документ или **NULL** Если все представления должны быть обновлены.  
+ Points to the view that modified the document, or **NULL** if all views are to be updated.  
   
  `lHint`  
- Содержит сведения об изменениях.  
+ Contains information about the modifications.  
   
  `pHint`  
- Указывает на объект хранения информации об изменениях.  
+ Points to an object storing information about the modifications.  
   
-### <a name="remarks"></a>Примечания  
- Он также вызывается реализация по умолчанию [OnInitialUpdate](#oninitialupdate). Реализация по умолчанию делает недействительной всю клиентскую область, пометив его рисования при следующем `WM_PAINT` сообщение. Переопределите эту функцию, если нужно обновить только области, которые сопоставляются с измененной части документа. Для этого необходимо передать сведения об изменениях, с помощью указания параметров.  
+### <a name="remarks"></a>Remarks  
+ It is also called by the default implementation of [OnInitialUpdate](#oninitialupdate). The default implementation invalidates the entire client area, marking it for painting when the next `WM_PAINT` message is received. Override this function if you want to update only those regions that map to the modified portions of the document. To do this you must pass information about the modifications using the hint parameters.  
   
- Для использования `lHint`, определить специальные Указание значения, обычно битовую маску или перечисляемого типа и документов, передайте одно из следующих значений. Для использования `pHint`, являются производными от класса указание [CObject](../../mfc/reference/cobject-class.md) и документов, передать указатель на объект подсказки; при переопределении метода `OnUpdate`, используйте [CObject::IsKindOf](../../mfc/reference/cobject-class.md#iskindof) функции-члена для определения типа времени выполнения объекта подсказку.  
+ To use `lHint`, define special hint values, typically a bitmask or an enumerated type, and have the document pass one of these values. To use `pHint`, derive a hint class from [CObject](../../mfc/reference/cobject-class.md) and have the document pass a pointer to a hint object; when overriding `OnUpdate`, use the [CObject::IsKindOf](../../mfc/reference/cobject-class.md#iskindof) member function to determine the run-time type of the hint object.  
   
- Как правило, не следует выполнять любой документ напрямую из `OnUpdate`. Вместо этого определения прямоугольника, описывающий координаты устройства область, которая требует обновления; Передайте этот прямоугольник для [CWnd::InvalidateRect](../../mfc/reference/cwnd-class.md#invalidaterect). В результате рисования, чтобы при следующем [WM_PAINT](http://msdn.microsoft.com/library/windows/desktop/dd145213) сообщение.  
+ Typically you should not perform any drawing directly from `OnUpdate`. Instead, determine the rectangle describing, in device coordinates, the area that requires updating; pass this rectangle to [CWnd::InvalidateRect](../../mfc/reference/cwnd-class.md#invalidaterect). This causes painting to occur the next time a [WM_PAINT](http://msdn.microsoft.com/library/windows/desktop/dd145213) message is received.  
   
- Если `lHint` равно 0 и `pHint` — **NULL**, документ отправил уведомление универсального обновления. Если представление получает уведомление об универсальных обновления, или он не может декодировать подсказки, необходимо сделать недействительным всей клиентской области.  
+ If `lHint` is 0 and `pHint` is **NULL**, the document has sent a generic update notification. If a view receives a generic update notification, or if it cannot decode the hints, it should invalidate its entire client area.  
   
-## <a name="see-also"></a>См. также  
- [MFC примера MDIDOCVW](../../visual-cpp-samples.md)   
- [CWnd-класс](../../mfc/reference/cwnd-class.md)   
- [Диаграмма иерархии](../../mfc/hierarchy-chart.md)   
- [CWnd-класс](../../mfc/reference/cwnd-class.md)   
- [CFrameWnd-класс](../../mfc/reference/cframewnd-class.md)   
- [Класс CSplitterWnd](../../mfc/reference/csplitterwnd-class.md)   
- [CDC-класс](../../mfc/reference/cdc-class.md)   
- [CDocTemplate-класс](../../mfc/reference/cdoctemplate-class.md)   
- [CDocument-класс](../../mfc/reference/cdocument-class.md)
+## <a name="see-also"></a>See Also  
+ [MFC Sample MDIDOCVW](../../visual-cpp-samples.md)   
+ [CWnd Class](../../mfc/reference/cwnd-class.md)   
+ [Hierarchy Chart](../../mfc/hierarchy-chart.md)   
+ [CWnd Class](../../mfc/reference/cwnd-class.md)   
+ [CFrameWnd Class](../../mfc/reference/cframewnd-class.md)   
+ [CSplitterWnd Class](../../mfc/reference/csplitterwnd-class.md)   
+ [CDC Class](../../mfc/reference/cdc-class.md)   
+ [CDocTemplate Class](../../mfc/reference/cdoctemplate-class.md)   
+ [CDocument Class](../../mfc/reference/cdocument-class.md)
 

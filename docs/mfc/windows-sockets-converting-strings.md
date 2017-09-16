@@ -1,47 +1,66 @@
 ---
-title: "Сокеты Windows. Преобразование строк | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "сокеты [C++], проблемы преобразования строк многобайтовых знаков"
-  - "преобразование строк, многобайтовые строки символов"
-  - "Сокеты Windows [C++], преобразование строк многобайтовых знаков"
+title: 'Windows Sockets: Converting Strings | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- Windows Sockets [MFC], multibyte character string conversion
+- sockets [MFC], multibyte character string conversion issues
+- string conversion, multibyte character strings
 ms.assetid: 9df522b5-6b23-41e0-bb96-e4e623baf141
 caps.latest.revision: 11
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 7
----
-# Сокеты Windows. Преобразование строк
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: fae6b9a092324ead56304b5498d6792873b377ff
+ms.contentlocale: ru-ru
+ms.lasthandoff: 09/12/2017
 
-Данная статья базы знаний 2 и сопутствующей описан ряд проблем в программировании Windows SSL.  В этой статье рассматриваются преобразования строк.  Другие проблемы описаны в [Windows SSL. Блокировка](../Topic/Windows%20Sockets:%20Blocking.md) и [Windows SSL. Порядок байтов](../mfc/windows-sockets-byte-ordering.md).  
+---
+# <a name="windows-sockets-converting-strings"></a>Windows Sockets: Converting Strings
+This article and two companion articles explain several issues in Windows Sockets programming. This article covers converting strings. The other issues are covered in [Windows Sockets: Blocking](../mfc/windows-sockets-blocking.md) and [Windows Sockets: Byte Ordering](../mfc/windows-sockets-byte-ordering.md).  
   
- При использовании или является производным от класса [CAsyncSocket](../Topic/CAsyncSocket%20Class.md), необходимо самостоятельно управлять этих проблем.  При использовании или является производным от класса [CSocket](../mfc/reference/csocket-class.md), MFC управляет их автоматически.  
+ If you use or derive from class [CAsyncSocket](../mfc/reference/casyncsocket-class.md), you will need to manage these issues yourself. If you use or derive from class [CSocket](../mfc/reference/csocket-class.md), MFC manages them for you.  
   
-## Преобразования строк  
- Если сообщения между приложениями, которые используют строки, которые хранятся в различных форматах юникод, например юникод или многобайтовые кодировки \(многобайтовая кодировка\) или между одним из этих и приложением с помощью символьные строки ANSI, должны самостоятельно управлять преобразования в `CAsyncSocket`.  Объект `CArchive`, используемый с объектом `CSocket` управляет это преобразование для вас через возможности класса [CString](../atl-mfc-shared/reference/cstringt-class.md).  Дополнительные сведения см. в спецификации Windows SSL, расположенная в [!INCLUDE[winSDK](../atl/includes/winsdk_md.md)].  
+## <a name="converting-strings"></a>Converting Strings  
+ If you communicate between applications that use strings stored in different wide-character formats, such as Unicode or multibyte character sets (MBCS), or between one of these and an application using ANSI character strings, you must manage the conversions yourself under `CAsyncSocket`. The `CArchive` object used with a `CSocket` object manages this conversion for you through the capabilities of class [CString](../atl-mfc-shared/reference/cstringt-class.md). For more information, see the Windows Sockets specification, located in the Windows SDK.  
   
- Дополнительные сведения см. в следующих разделах:  
+ For more information, see:  
   
--   [Windows SSL. С помощью класса CAsyncSocket](../mfc/windows-sockets-using-class-casyncsocket.md)  
+-   [Windows Sockets: Using Class CAsyncSocket](../mfc/windows-sockets-using-class-casyncsocket.md)  
   
--   [Windows SSL. С помощью сокетов с архивами](../mfc/windows-sockets-using-sockets-with-archives.md)  
+-   [Windows Sockets: Using Sockets with Archives](../mfc/windows-sockets-using-sockets-with-archives.md)  
   
--   [Windows SSL. Фон](../mfc/windows-sockets-background.md)  
+-   [Windows Sockets: Background](../mfc/windows-sockets-background.md)  
   
--   [Windows SSL. Сокеты потока](../mfc/windows-sockets-stream-sockets.md)  
+-   [Windows Sockets: Stream Sockets](../mfc/windows-sockets-stream-sockets.md)  
   
--   [Windows SSL. Сокеты датаграмм](../mfc/windows-sockets-datagram-sockets.md)  
+-   [Windows Sockets: Datagram Sockets](../mfc/windows-sockets-datagram-sockets.md)  
   
-## См. также  
- [Сокеты Windows в MFC](../mfc/windows-sockets-in-mfc.md)
+## <a name="see-also"></a>See Also  
+ [Windows Sockets in MFC](../mfc/windows-sockets-in-mfc.md)
+
+

@@ -1,5 +1,5 @@
 ---
-title: "CHotKeyCtrl-класс | Документы Microsoft"
+title: CHotKeyCtrl Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -22,9 +22,14 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- hot key controls
-- CHotKeyCtrl class
-- Windows common controls [C++], CHotKeyCtrl
+- CHotKeyCtrl [MFC], CHotKeyCtrl
+- CHotKeyCtrl [MFC], Create
+- CHotKeyCtrl [MFC], CreateEx
+- CHotKeyCtrl [MFC], GetHotKey
+- CHotKeyCtrl [MFC], GetHotKeyName
+- CHotKeyCtrl [MFC], GetKeyName
+- CHotKeyCtrl [MFC], SetHotKey
+- CHotKeyCtrl [MFC], SetRules
 ms.assetid: 896f9766-0718-4f58-aab2-20325e118ca6
 caps.latest.revision: 23
 author: mikeblome
@@ -44,54 +49,54 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0e0c08ddc57d437c51872b5186ae3fc983bb0199
-ms.openlocfilehash: cbcc720d2b934cde9f8beb9bb95499d9cc569413
+ms.translationtype: MT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 88fb6ec0631513bb65bd685e32401e08fd5bc26e
 ms.contentlocale: ru-ru
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 09/12/2017
 
 ---
-# <a name="chotkeyctrl-class"></a>CHotKeyCtrl-класс
-Предоставляет функциональные возможности стандартного элемента управления "горячая клавиша" Windows.  
+# <a name="chotkeyctrl-class"></a>CHotKeyCtrl Class
+Provides the functionality of the Windows common hot key control.  
   
-## <a name="syntax"></a>Синтаксис  
+## <a name="syntax"></a>Syntax  
   
 ```  
 class CHotKeyCtrl : public CWnd  
 ```  
   
-## <a name="members"></a>Члены  
+## <a name="members"></a>Members  
   
-### <a name="public-constructors"></a>Открытые конструкторы  
+### <a name="public-constructors"></a>Public Constructors  
   
-|Имя|Описание|  
+|Name|Description|  
 |----------|-----------------|  
-|[CHotKeyCtrl::CHotKeyCtrl](#chotkeyctrl)|Создает объект `CHotKeyCtrl`.|  
+|[CHotKeyCtrl::CHotKeyCtrl](#chotkeyctrl)|Constructs a `CHotKeyCtrl` object.|  
   
-### <a name="public-methods"></a>Открытые методы  
+### <a name="public-methods"></a>Public Methods  
   
-|Имя|Описание|  
+|Name|Description|  
 |----------|-----------------|  
-|[CHotKeyCtrl::Create](#create)|Создает элемент управления горячей ключа и присоединяется к `CHotKeyCtrl` объекта.|  
-|[CHotKeyCtrl::CreateEx](#createex)|Создает элемент управления горячей ключа с указанным расширенные стили Windows и присоединяется к `CHotKeyCtrl` объекта.|  
-|[CHotKeyCtrl::GetHotKey](#gethotkey)|Получает виртуальный ключа код и модификатор флаги сочетания клавиш из горячей ключа элемента управления.|  
-|[CHotKeyCtrl::GetHotKeyName](#gethotkeyname)|Возвращает имя ключа локального кодировка, назначенные сочетания клавиш.|  
-|[CHotKeyCtrl::GetKeyName](#getkeyname)|Возвращает имя ключа локального кодировка, назначенные указанным виртуальный код клавиши.|  
-|[CHotKeyCtrl::SetHotKey](#sethotkey)|Задает горячей сочетание клавиш для горячей ключа элемента управления.|  
-|[CHotKeyCtrl::SetRules](#setrules)|Определяет недопустимые комбинации и сочетания модификатор по умолчанию для горячей ключа элемента управления.|  
+|[CHotKeyCtrl::Create](#create)|Creates a hot key control and attaches it to a `CHotKeyCtrl` object.|  
+|[CHotKeyCtrl::CreateEx](#createex)|Creates a hot key control with the specified Windows extended styles and attaches it to a `CHotKeyCtrl` object.|  
+|[CHotKeyCtrl::GetHotKey](#gethotkey)|Retrieves the virtual key code and modifier flags of a hot key from a hot key control.|  
+|[CHotKeyCtrl::GetHotKeyName](#gethotkeyname)|Retrieves the key name, in the local character set, assigned to a hot key.|  
+|[CHotKeyCtrl::GetKeyName](#getkeyname)|Retrieves the key name, in the local character set, assigned to the specified virtual key code.|  
+|[CHotKeyCtrl::SetHotKey](#sethotkey)|Sets the hot key combination for a hot key control.|  
+|[CHotKeyCtrl::SetRules](#setrules)|Defines the invalid combinations and the default modifier combination for a hot key control.|  
   
-## <a name="remarks"></a>Примечания  
- «Горячей ключа управления» представляет собой окно, пользователь может создать сочетания клавиш. «Сочетания клавиш» является сочетание клавиш, которое пользователь может нажать для быстрого выполнения действия. (Например, пользователя можно создать сочетание клавиш, которое активирует данного окна и переводит ее в начало Z-порядка). Горячий ключа выводит выборы пользователя и гарантирует, что пользователь выберет допустимое сочетание клавиш.  
+## <a name="remarks"></a>Remarks  
+ A "hot key control" is a window that enables the user to create a hot key. A "hot key" is a key combination that the user can press to perform an action quickly. (For example, a user can create a hot key that activates a given window and brings it to the top of the Z order.) The hot key control displays the user's choices and ensures that the user selects a valid key combination.  
   
- Этот элемент управления (и, следовательно, `CHotKeyCtrl` класса) доступны только для программы, запущенные в Windows 95/98 и Windows NT версии 3.51 и более поздних версий.  
+ This control (and therefore the `CHotKeyCtrl` class) is available only to programs running under Windows 95/98 and Windows NT version 3.51 and later.  
   
- Если пользователь выбрал сочетание клавиш, приложение может получить заданное сочетание клавиш в элементе управления и использовать **WM_SETHOTKEY** сообщений, чтобы настроить сочетания клавиш в системе. Каждый раз, когда пользователь нажимает сочетание клавиш в дальнейшем из любой части системы, окно указано в **WM_SETHOTKEY** получает сообщение `WM_SYSCOMMAND` указание сообщение **SC_HOTKEY**. Это сообщение активирует окно, которое получает его. Сочетания клавиш остается действительным, пока приложение, которое называется **WM_SETHOTKEY** завершает работу.  
+ When the user has chosen a key combination, the application can retrieve the specified key combination from the control and use the **WM_SETHOTKEY** message to set up the hot key in the system. Whenever the user presses the hot key thereafter, from any part of the system, the window specified in the **WM_SETHOTKEY** message receives a `WM_SYSCOMMAND` message specifying **SC_HOTKEY**. This message activates the window that receives it. The hot key remains valid until the application that called **WM_SETHOTKEY** exits.  
   
- Этот механизм отличается от горячего поддержка ключа, зависит от **WM_HOTKEY** сообщений и Windows [RegisterHotKey](http://msdn.microsoft.com/library/windows/desktop/ms646309) и [UnregisterHotKey](http://msdn.microsoft.com/library/windows/desktop/ms646327) функции.  
+ This mechanism is different from the hot key support that depends on the **WM_HOTKEY** message and the Windows [RegisterHotKey](http://msdn.microsoft.com/library/windows/desktop/ms646309) and [UnregisterHotKey](http://msdn.microsoft.com/library/windows/desktop/ms646327) functions.  
   
- Дополнительные сведения об использовании `CHotKeyCtrl`, в разделе [управления](../../mfc/controls-mfc.md) и [CHotKeyCtrl с помощью](../../mfc/using-chotkeyctrl.md).  
+ For more information on using `CHotKeyCtrl`, see [Controls](../../mfc/controls-mfc.md) and [Using CHotKeyCtrl](../../mfc/using-chotkeyctrl.md).  
   
-## <a name="inheritance-hierarchy"></a>Иерархия наследования  
+## <a name="inheritance-hierarchy"></a>Inheritance Hierarchy  
  [CObject](../../mfc/reference/cobject-class.md)  
   
  [CCmdTarget](../../mfc/reference/ccmdtarget-class.md)  
@@ -100,18 +105,18 @@ class CHotKeyCtrl : public CWnd
   
  `CHotKeyCtrl`  
   
-## <a name="requirements"></a>Требования  
- **Заголовок:** afxcmn.h  
+## <a name="requirements"></a>Requirements  
+ **Header:** afxcmn.h  
   
-##  <a name="chotkeyctrl"></a>CHotKeyCtrl::CHotKeyCtrl  
- Создает объект `CHotKeyCtrl`.  
+##  <a name="chotkeyctrl"></a>  CHotKeyCtrl::CHotKeyCtrl  
+ Constructs a `CHotKeyCtrl` object.  
   
 ```  
 CHotKeyCtrl();
 ```  
   
-##  <a name="create"></a>CHotKeyCtrl::Create  
- Создает элемент управления горячей ключа и присоединяется к `CHotKeyCtrl` объекта.  
+##  <a name="create"></a>  CHotKeyCtrl::Create  
+ Creates a hot key control and attaches it to a `CHotKeyCtrl` object.  
   
 ```  
 virtual BOOL Create(
@@ -121,29 +126,29 @@ virtual BOOL Create(
     UINT nID);
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
  `dwStyle`  
- Задает стиль горячей ключа элемента управления. Примените любое сочетание стилей элемента управления. В разделе [общие стили элемента управления](http://msdn.microsoft.com/library/windows/desktop/bb775498) в [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)] для получения дополнительной информации.  
+ Specifies the hot key control's style. Apply any combination of control styles. See [Common Control Styles](http://msdn.microsoft.com/library/windows/desktop/bb775498) in the Windows SDK for more information.  
   
  `rect`  
- Задает размер и положение горячей ключа элемента управления. Это может быть либо [CRect](../../atl-mfc-shared/reference/crect-class.md) объекта или [структура RECT](../../mfc/reference/rect-structure1.md).  
+ Specifies the hot key control's size and position. It can be either a [CRect](../../atl-mfc-shared/reference/crect-class.md) object or a [RECT structure](../../mfc/reference/rect-structure1.md).  
   
  `pParentWnd`  
- Задает сочетания клавиш управления родительского окна, обычно [CDialog](../../mfc/reference/cdialog-class.md). Оно не должно быть **NULL**.  
+ Specifies the hot key control's parent window, usually a [CDialog](../../mfc/reference/cdialog-class.md). It must not be **NULL**.  
   
  `nID`  
- Указывает идентификатор горячей ключа элемента управления.  
+ Specifies the hot key control's ID.  
   
-### <a name="return-value"></a>Возвращаемое значение  
- Ненулевое значение, если инициализация выполнена успешно; в противном случае — 0.  
+### <a name="return-value"></a>Return Value  
+ Nonzero, if initialization was successful; otherwise 0.  
   
-### <a name="remarks"></a>Примечания  
- Создании `CHotKeyCtrl` объекта в два этапа. Во-первых, вызовите конструктор, а затем вызвать **создать**, который создает горячей ключа элемента управления и присоединяет его к `CHotKeyCtrl` объекта.  
+### <a name="remarks"></a>Remarks  
+ You construct a `CHotKeyCtrl` object in two steps. First, call the constructor and then call **Create**, which creates the hot key control and attaches it to the `CHotKeyCtrl` object.  
   
- Если вы хотите использовать с элементом управления windows расширенные стили, вызвать [CreateEx](#createex) вместо **создать**.  
+ If you want to use extended windows styles with your control, call [CreateEx](#createex) instead of **Create**.  
   
-##  <a name="createex"></a>CHotKeyCtrl::CreateEx  
- Эта функция вызывается для создания элемента управления (дочернего окна) и связать его с `CHotKeyCtrl` объекта.  
+##  <a name="createex"></a>  CHotKeyCtrl::CreateEx  
+ Call this function to create a control (a child window) and associate it with the `CHotKeyCtrl` object.  
   
 ```  
 virtual BOOL CreateEx(
@@ -154,30 +159,30 @@ virtual BOOL CreateEx(
     UINT nID);
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
  `dwExStyle`  
- Указывает расширенный стиль создаваемого элемента управления. Список расширенных стилей Windows см. в разделе `dwExStyle` параметр [CreateWindowEx](http://msdn.microsoft.com/library/windows/desktop/ms632680) в [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
+ Specifies the extended style of the control being created. For a list of extended Windows styles, see the `dwExStyle` parameter for [CreateWindowEx](http://msdn.microsoft.com/library/windows/desktop/ms632680) in the Windows SDK.  
   
  `dwStyle`  
- Задает стиль горячей ключа элемента управления. Примените любое сочетание стилей элемента управления. Дополнительные сведения см. в разделе [общие стили элемента управления](http://msdn.microsoft.com/library/windows/desktop/bb775498) в [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
+ Specifies the hot key control's style. Apply any combination of control styles. For more information, see [Common Control Styles](http://msdn.microsoft.com/library/windows/desktop/bb775498) in the Windows SDK.  
   
  `rect`  
- Ссылку на [RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897) структуры, описывающее размер и положение окна, чтобы создать, в клиентских координат `pParentWnd`.  
+ A reference to a [RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897) structure describing the size and position of the window to be created, in client coordinates of `pParentWnd`.  
   
  `pParentWnd`  
- Указатель на окно, который является родительским для элемента управления.  
+ A pointer to the window that is the control's parent.  
   
  `nID`  
- Идентификатор элемента управления дочернего окна.  
+ The control's child-window ID.  
   
-### <a name="return-value"></a>Возвращаемое значение  
- Имеет ненулевое значение в случае успешного выполнения, иначе — 0.  
+### <a name="return-value"></a>Return Value  
+ Nonzero if successful; otherwise 0.  
   
-### <a name="remarks"></a>Примечания  
- Используйте `CreateEx` вместо [создать](#create) для применения расширенных стилей Windows, заданные к ней префикс расширенный стиль Windows **WS_EX_**.  
+### <a name="remarks"></a>Remarks  
+ Use `CreateEx` instead of [Create](#create) to apply extended Windows styles, specified by the Windows extended style preface **WS_EX_**.  
   
-##  <a name="gethotkey"></a>CHotKeyCtrl::GetHotKey  
- Получает виртуальный ключа код и модификатор флаги сочетания клавиш из горячей ключа элемента управления.  
+##  <a name="gethotkey"></a>  CHotKeyCtrl::GetHotKey  
+ Retrieves the virtual key code and modifier flags of a keyboard shortcut from a hot key control.  
   
 ```  
 DWORD GetHotKey() const;  
@@ -187,43 +192,43 @@ void GetHotKey(
     WORD& wModifiers) const;  
 ```  
   
-### <a name="parameters"></a>Параметры  
- [выходной] `wVirtualKeyCode`  
- Виртуальный код клавиши сочетания клавиш. Список стандартных кодов виртуального ключа см. в разделе Winuser.h.  
+### <a name="parameters"></a>Parameters  
+ [out] `wVirtualKeyCode`  
+ Virtual key code of the keyboard shortcut. For a list of standard virtual key codes, see Winuser.h.  
   
- [выходной] `wModifiers`  
- Побитовое сочетание (или) флагов, указывающих клавиши-модификаторы клавиш.  
+ [out] `wModifiers`  
+ A bitwise combination (OR) of flags that indicate the modifier keys in the keyboard shortcut.  
   
- Флаги модификаторов выглядят следующим образом:  
+ The modifier flags are as follows:  
   
-|Flag|Соответствующий ключ|  
+|Flag|Corresponding Key|  
 |----------|-----------------------|  
-|`HOTKEYF_ALT`|ALT - клавиша|  
-|`HOTKEYF_CONTROL`|Нажмите клавишу CTRL|  
-|`HOTKEYF_EXT`|Расширенные ключ|  
-|`HOTKEYF_SHIFT`|Клавиша SHIFT|  
+|`HOTKEYF_ALT`|ALT key|  
+|`HOTKEYF_CONTROL`|CTRL key|  
+|`HOTKEYF_EXT`|Extended key|  
+|`HOTKEYF_SHIFT`|SHIFT key|  
   
-### <a name="return-value"></a>Возвращаемое значение  
- В первом перегруженный метод, `DWORD` , содержащий виртуальный ключа кода и флаги модификаторов. Младший байт младшее слово содержит виртуальный код клавиши, старший байт младшее слово содержит флаги модификаторов и старшее слово равно нулю.  
+### <a name="return-value"></a>Return Value  
+ In the first overloaded method, a `DWORD` that contains the virtual key code and modifier flags. The low-order byte of the low-order word contains the virtual key code, the high-order byte of the low-order word contains the modifier flags, and the high-order word is zero.  
   
-### <a name="remarks"></a>Примечания  
- Виртуальный код клавиши и клавиши-модификаторы вместе определяют сочетания клавиш.  
+### <a name="remarks"></a>Remarks  
+ The virtual key code and the modifier keys together define the keyboard shortcut.  
   
-##  <a name="gethotkeyname"></a>CHotKeyCtrl::GetHotKeyName  
- Вызовите эту функцию-член для получения локализованное имя сочетания клавиш.  
+##  <a name="gethotkeyname"></a>  CHotKeyCtrl::GetHotKeyName  
+ Call this member function to get the localized name of the hot key.  
   
 ```  
 CString GetHotKeyName() const;  
 ```  
   
-### <a name="return-value"></a>Возвращаемое значение  
- Локализованное имя выбранного сочетания клавиш. Если нет выбранных горячей ключа `GetHotKeyName` возвращает пустую строку.  
+### <a name="return-value"></a>Return Value  
+ The localized name of the currently selected hot key. If there is no selected hot key, `GetHotKeyName` returns an empty string.  
   
-### <a name="remarks"></a>Примечания  
- Имя, которое возвращает эта функция-член поступают из драйвер клавиатуры. Можно установить драйвер нелокализованное клавиатуры в локализованных версиях Windows и наоборот.  
+### <a name="remarks"></a>Remarks  
+ The name that this member function returns comes from the keyboard driver. You can install a non-localized keyboard driver in a localized version of Windows, and vice versa.  
   
-##  <a name="getkeyname"></a>CHotKeyCtrl::GetKeyName  
- Вызовите эту функцию-член для получения локализованных имя ключа, назначенные указанным виртуальный код клавиши.  
+##  <a name="getkeyname"></a>  CHotKeyCtrl::GetKeyName  
+ Call this member function to get the localized name of the key assigned to a specified virtual key code.  
   
 ```  
 static CString GetKeyName(
@@ -231,24 +236,24 @@ static CString GetKeyName(
     BOOL fExtended);
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
  `vk`  
- Виртуальный код клавиши.  
+ The virtual key code.  
   
  *fExtended*  
- Если виртуальный код клавиши является ключом расширенного **TRUE**; в противном случае **FALSE**.  
+ If the virtual key code is an extended key, **TRUE**; otherwise **FALSE**.  
   
-### <a name="return-value"></a>Возвращаемое значение  
- Локализованное имя ключа, заданного параметром `vk` параметр. Если ключ не имеет сопоставленного имени, `GetKeyName` возвращает пустую строку.  
+### <a name="return-value"></a>Return Value  
+ The localized name of the key specified by the `vk` parameter. If the key has no mapped name, `GetKeyName` returns an empty string.  
   
-### <a name="remarks"></a>Примечания  
- Имя ключа, которое возвращает эта функция поступает из драйвер клавиатуры, чтобы установить драйвер нелокализованное клавиатуры в локализованных версиях Windows и наоборот.  
+### <a name="remarks"></a>Remarks  
+ The key name that this function returns comes from the keyboard driver, so you can install a non-localized keyboard driver in a localized version of Windows, and vice versa.  
   
-### <a name="example"></a>Пример  
- [!code-cpp[NVC_MFCControlLadenDialog&#69;](../../mfc/codesnippet/cpp/chotkeyctrl-class_1.cpp)]  
+### <a name="example"></a>Example  
+ [!code-cpp[NVC_MFCControlLadenDialog#69](../../mfc/codesnippet/cpp/chotkeyctrl-class_1.cpp)]  
   
-##  <a name="sethotkey"></a>CHotKeyCtrl::SetHotKey  
- Задает сочетание клавиш для горячей ключа элемента управления.  
+##  <a name="sethotkey"></a>  CHotKeyCtrl::SetHotKey  
+ Sets the keyboard shortcut for a hot key control.  
   
 ```  
 void SetHotKey(
@@ -256,27 +261,27 @@ void SetHotKey(
     WORD wModifiers);
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
  [in] `wVirtualKeyCode`  
- Виртуальный код клавиши сочетания клавиш. Список стандартных кодов виртуального ключа см. в разделе Winuser.h.  
+ Virtual key code of the keyboard shortcut. For a list of standard virtual key codes, see Winuser.h.  
   
  [in] `wModifiers`  
- Побитовое сочетание (или) флагов, указывающих клавиши-модификаторы клавиш.  
+ A bitwise combination (OR) of flags that indicate the modifier keys in the keyboard shortcut.  
   
- Флаги модификаторов выглядят следующим образом:  
+ The modifier flags are as follows:  
   
-|Flag|Соответствующий ключ|  
+|Flag|Corresponding Key|  
 |----------|-----------------------|  
-|`HOTKEYF_ALT`|ALT - клавиша|  
-|`HOTKEYF_CONTROL`|Нажмите клавишу CTRL|  
-|`HOTKEYF_EXT`|Расширенные ключ|  
-|`HOTKEYF_SHIFT`|Клавиша SHIFT|  
+|`HOTKEYF_ALT`|ALT key|  
+|`HOTKEYF_CONTROL`|CTRL key|  
+|`HOTKEYF_EXT`|Extended key|  
+|`HOTKEYF_SHIFT`|SHIFT key|  
   
-### <a name="remarks"></a>Примечания  
- Виртуальный код клавиши и клавиши-модификаторы вместе определяют сочетания клавиш.  
+### <a name="remarks"></a>Remarks  
+ The virtual key code and the modifier keys together define the keyboard shortcut.  
   
-##  <a name="setrules"></a>CHotKeyCtrl::SetRules  
- Эта функция вызывается для определения недопустимые комбинации и сочетания модификатор по умолчанию для горячей ключа элемента управления.  
+##  <a name="setrules"></a>  CHotKeyCtrl::SetRules  
+ Call this function to define the invalid combinations and the default modifier combination for a hot key control.  
   
 ```  
 void SetRules(
@@ -284,35 +289,35 @@ void SetRules(
     WORD wModifiers);
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
  `wInvalidComb`  
- Массив флагов, задающий недопустимые сочетания клавиш. Это может быть сочетание следующих значений:  
+ Array of flags that specifies invalid key combinations. It can be a combination of the following values:  
   
-- `HKCOMB_A`ALT  
+- `HKCOMB_A` ALT  
   
-- `HKCOMB_C`CTRL  
+- `HKCOMB_C` CTRL  
   
-- `HKCOMB_CA`CTRL + ALT  
+- `HKCOMB_CA` CTRL+ALT  
   
-- `HKCOMB_NONE`Неизмененный ключей  
+- `HKCOMB_NONE` Unmodified keys  
   
-- `HKCOMB_S`SHIFT  
+- `HKCOMB_S` SHIFT  
   
-- `HKCOMB_SA`SHIFT + ALT  
+- `HKCOMB_SA` SHIFT+ALT  
   
-- `HKCOMB_SC`SHIFT + CTRL  
+- `HKCOMB_SC` SHIFT+CTRL  
   
-- `HKCOMB_SCA`SHIFT + CTRL + ALT  
+- `HKCOMB_SCA` SHIFT+CTRL+ALT  
   
  `wModifiers`  
- Массив флагов, задающий сочетание клавиш для использования, когда пользователь вводит недопустимое сочетание. Дополнительные сведения о флагах модификатор см [GetHotKey](#gethotkey).  
+ Array of flags that specifies the key combination to use when the user enters an invalid combination. For more information on the modifier flags, see [GetHotKey](#gethotkey).  
   
-### <a name="remarks"></a>Примечания  
- Если пользователь вводит недопустимое сочетание клавиш, как определяется флагов, заданных в `wInvalidComb`, система использует оператор OR для объединения ключей, введенные пользователем с помощью флагов, заданных в `wModifiers`. Получившееся в результате сочетание клавиш преобразуется в строку и затем отображаются в элементе управления горячей ключа.  
+### <a name="remarks"></a>Remarks  
+ When a user enters an invalid key combination, as defined by flags specified in `wInvalidComb`, the system uses the OR operator to combine the keys entered by the user with the flags specified in `wModifiers`. The resulting key combination is converted into a string and then displayed in the hot key control.  
   
-## <a name="see-also"></a>См. также  
- [CWnd-класс](../../mfc/reference/cwnd-class.md)   
- [Диаграмма иерархии](../../mfc/hierarchy-chart.md)
+## <a name="see-also"></a>See Also  
+ [CWnd Class](../../mfc/reference/cwnd-class.md)   
+ [Hierarchy Chart](../../mfc/hierarchy-chart.md)
 
 
 

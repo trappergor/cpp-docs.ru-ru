@@ -1,41 +1,60 @@
 ---
-title: "Управление списками изображений | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "CImageList - класс, обработка"
-  - "списки изображений [C++], обработка"
-  - "списки [C++], изображение"
+title: Manipulating Image Lists | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- image lists [MFC], manipulating
+- lists [MFC], image
+- CImageList class [MFC], manipulating
 ms.assetid: 043418f8-077e-4dce-b8bb-2b7b0d7b5156
 caps.latest.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 6
----
-# Управление списками изображений
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 1e913c26ad4fa616e215f3c732aa92ca612bf55d
+ms.contentlocale: ru-ru
+ms.lasthandoff: 09/12/2017
 
-Функцию\-член [Заменить](../Topic/CImageList::Replace.md) заменяет изображение в списке изображений \([CImageList](../Topic/CImageList%20Class.md)\) с новым образом.  Эта функция также удобно использовать при необходимости динамически увеличить количество изображений в объекте списка изображений.  Функция [SetImageCount](../Topic/CImageList::SetImageCount.md) динамически изменяется количество изображений, хранящихся в списке изображений.  Если увеличить размер списка изображений, вызовите **Заменить**  для добавления кода к новым областям образа.  Если задать размер списка изображений, удаляются образы за новым размером.  
+---
+# <a name="manipulating-image-lists"></a>Manipulating Image Lists
+The [Replace](../mfc/reference/cimagelist-class.md#replace) member function replaces an image in an image list ([CImageList](../mfc/reference/cimagelist-class.md)) with a new image. This function is also useful if you need to dynamically increase the number of images in an image list object. The [SetImageCount](../mfc/reference/cimagelist-class.md#setimagecount) function dynamically changes the number of images stored in the image list. If you increase the size of the image list, call **Replace** to add images to the new image slots. If you decrease the size of the image list, the images beyond the new size are freed.  
   
- Функцию\-член [Удалить](../Topic/CImageList::Remove.md) удаляет изображение из списка изображений.  Функцию\-член [Копировать](../Topic/CImageList::Copy.md) может скопировать или передать изображения в списке изображений.  Эта функция позволяет, чтобы указать, должен ли изображение источника скопировать к индексу назначения или образы источника и назначения должны быть местами.  
+ The [Remove](../mfc/reference/cimagelist-class.md#remove) member function removes an image from an image list. The [Copy](../mfc/reference/cimagelist-class.md#copy) member function can copy or swap images within an image list. This function allows you to indicate whether the source image should be copied to the destination index or the source and destination images should be swapped.  
   
- Чтобы создать новый список изображений путем объединения 2 списка изображений, используйте подходящую перегруженную функции\-члена [Создать](../Topic/CImageList::Create.md).  Данная перегруженная **Создать** оптимизатором первый образ существующих списков изображений, храните результирующий образ в новом объекте списка изображений.  Новый образ создается с помощью образ второй прозрачно за первым.  Для каждого нового образа a логический результат выполнения ОПЕРАЦИИ OR в битах маски для 2 существующих изображений.  
+ To create a new image list by merging two image lists, use the appropriate overload of the [Create](../mfc/reference/cimagelist-class.md#create) member function. This overload of **Create** merges the first image of the existing image lists, storing the resultant image in a new image list object. The new image is created by drawing the second image transparently over the first. The mask for the new image is the result of performing a logical-OR operation on the bits of the masks for the two existing images.  
   
- Это повторено до тех пор, пока все изображения не объединяются и добавляются в новый объект списка изображений.  
+ This is repeated until all images are merged and added to the new image list object.  
   
- Можно написать сведения об изображении в архив, вызвав функцию\-член [запись](../Topic/CImageList::Write.md) и с ее, вызвав функцию\-член [Чтение](../Topic/CImageList::Read.md).  
+ You can write the image information to an archive by calling the [Write](../mfc/reference/cimagelist-class.md#write) member function, and read it back by calling the [Read](../mfc/reference/cimagelist-class.md#read) member function.  
   
- [GetSafeHandle](../Topic/CImageList::GetSafeHandle.md), [Присоединиться](../Topic/CImageList::Attach.md) и функции\-члены [Отсоединить](../Topic/CImageList::Detach.md) позволяет управлять дескриптор вложенного списка изображений в объект `CImageList`, пока функцию\-член [DeleteImageList](../Topic/CImageList::DeleteImageList.md) удаляет список изображений, не удалить объект `CImageList`.  
+ The [GetSafeHandle](../mfc/reference/cimagelist-class.md#getsafehandle), [Attach](../mfc/reference/cimagelist-class.md#attach), and [Detach](../mfc/reference/cimagelist-class.md#detach) member functions allow you to manipulate the handle of the image list attached to the `CImageList` object, while the [DeleteImageList](../mfc/reference/cimagelist-class.md#deleteimagelist) member function deletes the image list without destroying the `CImageList` object.  
   
-## См. также  
- [Использование CImageList](../mfc/using-cimagelist.md)   
- [Элементы управления](../mfc/controls-mfc.md)
+## <a name="see-also"></a>See Also  
+ [Using CImageList](../mfc/using-cimagelist.md)   
+ [Controls](../mfc/controls-mfc.md)
+
+

@@ -1,5 +1,5 @@
 ---
-title: "Класс CMFCRibbonCustomizeDialog | Документы Microsoft"
+title: CMFCRibbonCustomizeDialog Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -15,10 +15,7 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- CMFCRibbonCustomizeDialog class
-- CMFCRibbonCustomizeDialog class, destructor
-- ~CMFCRibbonCustomizeDialog destructor
-- GetThisClass method
+- CMFCRibbonCustomizeDialog [MFC], CMFCRibbonCustomizeDialog
 ms.assetid: ce67de7f-5eaa-4c75-9b94-f290f36df073
 caps.latest.revision: 22
 author: mikeblome
@@ -38,45 +35,45 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 040985df34f2613b4e4fae29498721aef15d50cb
-ms.openlocfilehash: d27247f89901adad1778313cdde6fe206a569f0d
+ms.translationtype: MT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: b9c20532c5bbe799de3df8bd63c51489f128a300
 ms.contentlocale: ru-ru
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 09/12/2017
 
 ---
-# <a name="cmfcribboncustomizedialog-class"></a>Класс CMFCRibbonCustomizeDialog
-Лента отображается **Настройка** страницы.  
+# <a name="cmfcribboncustomizedialog-class"></a>CMFCRibbonCustomizeDialog Class
+Displays the ribbon **Customize** page.  
   
-## <a name="syntax"></a>Синтаксис  
+## <a name="syntax"></a>Syntax  
   
 ```  
 class CMFCRibbonCustomizeDialog : public CMFCPropertySheet  
 ```  
   
-## <a name="members"></a>Члены  
+## <a name="members"></a>Members  
   
-### <a name="public-constructors"></a>Открытые конструкторы  
+### <a name="public-constructors"></a>Public Constructors  
   
-|Имя|Описание|  
+|Name|Description|  
 |----------|-----------------|  
-|[CMFCRibbonCustomizeDialog::CMFCRibbonCustomizeDialog](#cmfcribboncustomizedialog)|Создает объект `CMFCRibbonCustomizeDialog`.|  
-|`CMFCRibbonCustomizeDialog::~CMFCRibbonCustomizeDialog`|Деструктор.|  
+|[CMFCRibbonCustomizeDialog::CMFCRibbonCustomizeDialog](#cmfcribboncustomizedialog)|Constructs a `CMFCRibbonCustomizeDialog` object.|  
+|`CMFCRibbonCustomizeDialog::~CMFCRibbonCustomizeDialog`|Destructor.|  
   
-### <a name="public-methods"></a>Открытые методы  
+### <a name="public-methods"></a>Public Methods  
   
-|Имя|Описание|  
+|Name|Description|  
 |----------|-----------------|  
-|`CMFCRibbonCustomizeDialog::GetThisClass`|Используется инфраструктурой, чтобы получить указатель на [CRuntimeClass](../../mfc/reference/cruntimeclass-structure.md) объект, связанный с этим типом класса.|  
+|`CMFCRibbonCustomizeDialog::GetThisClass`|Used by the framework to obtain a pointer to the [CRuntimeClass](../../mfc/reference/cruntimeclass-structure.md) object that is associated with this class type.|  
   
-## <a name="remarks"></a>Примечания  
- MFC автоматически создает этот класс не обрабатывать сообщение AFX_WM_ON_RIBBON_CUSTOMIZE или возвращают 0 из обработчика сообщений.  
+## <a name="remarks"></a>Remarks  
+ MFC instantiates this class automatically if you do not process the AFX_WM_ON_RIBBON_CUSTOMIZE message, or if you return 0 from the message handler.  
   
- Если вы хотите использовать этот класс в приложении для отображения на ленте **Настройка** диалоговом поле, просто создать его экземпляр и вызвать `DoModal` метод.  
+ If you want to use this class in your application to display the ribbon **Customize** dialog box, just instantiate it and call the `DoModal` method.  
   
- Поскольку этот класс является производным от [класса CMFCPropertySheet](../../mfc/reference/cmfcpropertysheet-class.md), можно добавить пользовательские страницы с помощью `CMFCPropertySheet` API.  
+ Because this class is derived from [CMFCPropertySheet Class](../../mfc/reference/cmfcpropertysheet-class.md), you can add custom pages by using the `CMFCPropertySheet` API.  
   
-## <a name="inheritance-hierarchy"></a>Иерархия наследования  
+## <a name="inheritance-hierarchy"></a>Inheritance Hierarchy  
  [CObject](../../mfc/reference/cobject-class.md)  
   
  [CCmdTarget](../../mfc/reference/ccmdtarget-class.md)  
@@ -89,11 +86,11 @@ class CMFCRibbonCustomizeDialog : public CMFCPropertySheet
   
  [CMFCRibbonCustomizeDialog](../../mfc/reference/cmfcribboncustomizedialog-class.md)  
   
-## <a name="requirements"></a>Требования  
- **Заголовок:** afxribboncustomizedialog.h  
+## <a name="requirements"></a>Requirements  
+ **Header:** afxribboncustomizedialog.h  
   
-##  <a name="cmfcribboncustomizedialog"></a>CMFCRibbonCustomizeDialog::CMFCRibbonCustomizeDialog  
- Создает объект `CMFCRibbonCustomizeDialog`.  
+##  <a name="cmfcribboncustomizedialog"></a>  CMFCRibbonCustomizeDialog::CMFCRibbonCustomizeDialog  
+ Constructs a `CMFCRibbonCustomizeDialog` object.  
   
 ```  
 CMFCRibbonCustomizeDialog(
@@ -101,22 +98,22 @@ CMFCRibbonCustomizeDialog(
     CMFCRibbonBar* pRibbon);
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
  [in] `pWndParent`  
- Указатель на родительское окно (обычно главного фрейма).  
+ A pointer to the parent window (usually the main frame).  
   
  [in] `pRibbon`  
- Указатель на `CMFCRibbonBar` , который будет настраиваться.  
+ A pointer to the `CMFCRibbonBar` that is to be customized.  
   
-### <a name="example"></a>Пример  
- Следующий пример демонстрирует `CMFCRibbonCustomizeDialog` объекта.  
+### <a name="example"></a>Example  
+ The following example demonstrates how to construct a `CMFCRibbonCustomizeDialog` object.  
   
- [!code-cpp[NVC_MFC_RibbonApp&18;](../../mfc/reference/codesnippet/cpp/cmfcribboncustomizedialog-class_1.cpp)]  
+ [!code-cpp[NVC_MFC_RibbonApp#18](../../mfc/reference/codesnippet/cpp/cmfcribboncustomizedialog-class_1.cpp)]  
   
-### <a name="remarks"></a>Примечания  
- Конструктор создает [CMFCRibbonCustomizePropertyPage класс](../../mfc/reference/cmfcribboncustomizepropertypage-class.md) объекта и добавляет его в коллекцию страницы свойств.  
+### <a name="remarks"></a>Remarks  
+ The constructor instantiates a [CMFCRibbonCustomizePropertyPage Class](../../mfc/reference/cmfcribboncustomizepropertypage-class.md) object and adds it to the collection of property sheet pages.  
   
-## <a name="see-also"></a>См. также  
- [Диаграмма иерархии](../../mfc/hierarchy-chart.md)   
- [Классы](../../mfc/reference/mfc-classes.md)
+## <a name="see-also"></a>See Also  
+ [Hierarchy Chart](../../mfc/hierarchy-chart.md)   
+ [Classes](../../mfc/reference/mfc-classes.md)
 

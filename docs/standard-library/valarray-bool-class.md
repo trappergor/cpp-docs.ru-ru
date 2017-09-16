@@ -1,5 +1,5 @@
 ---
-title: "Класс valarray&lt;bool&gt; | Документы Майкрософт"
+title: valarray&lt;bool&gt; Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -34,23 +34,23 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
-ms.openlocfilehash: ce56db41df8e24714038b3c52656df16fb3f268f
+ms.translationtype: MT
+ms.sourcegitcommit: 5d026c375025b169d5db8445cbb52c0c917b2d8d
+ms.openlocfilehash: 8cc524606c12bbf48ccdc579440e1d98d2b22661
 ms.contentlocale: ru-ru
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 09/09/2017
 
 ---
-# <a name="valarrayltboolgt-class"></a>Класс valarray&lt;bool&gt;
-Специализированная версия класса шаблона **valarray\<Type>** для элементов типа `bool`.  
+# <a name="valarrayltboolgt-class"></a>valarray&lt;bool&gt; Class
+A specialized version of the template class **valarray\<Type>** to elements of type `bool`.  
   
-## <a name="syntax"></a>Синтаксис  
+## <a name="syntax"></a>Syntax  
   
 ```  
 class valarray<bool>  
 ```  
   
-## <a name="example"></a>Пример  
+## <a name="example"></a>Example  
   
 ```cpp  
 // valarray_bool.cpp  
@@ -97,13 +97,13 @@ The result of the less-than comparison test is the
 *\  
 ```  
   
-## <a name="requirements"></a>Требования  
- **Заголовок:** \<valarray>  
+## <a name="requirements"></a>Requirements  
+ **Header:** \<valarray>  
   
- **Пространство имен:** std  
+ **Namespace:** std  
   
-## <a name="see-also"></a>См. также  
- [Класс valarray](../standard-library/valarray-class.md)   
- [Потокобезопасность в стандартной библиотеке C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)
+## <a name="see-also"></a>See Also  
+ [valarray Class](../standard-library/valarray-class.md)   
+ [Thread Safety in the C++ Standard Library](../standard-library/thread-safety-in-the-cpp-standard-library.md)
 
 

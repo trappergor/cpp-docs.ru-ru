@@ -1,5 +1,5 @@
 ---
-title: "Класс CMFCRibbonBaseElement | Документы Microsoft"
+title: CMFCRibbonBaseElement Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -127,7 +127,119 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- CMFCRibbonBaseElement class
+- CMFCRibbonBaseElement [MFC], AddToKeyList
+- CMFCRibbonBaseElement [MFC], AddToListBox
+- CMFCRibbonBaseElement [MFC], CanBeAddedToQuickAccessToolBar
+- CMFCRibbonBaseElement [MFC], CanBeCompacted
+- CMFCRibbonBaseElement [MFC], CanBeStretched
+- CMFCRibbonBaseElement [MFC], CanBeStretchedHorizontally
+- CMFCRibbonBaseElement [MFC], CleanUpSizes
+- CMFCRibbonBaseElement [MFC], ClosePopupMenu
+- CMFCRibbonBaseElement [MFC], CopyFrom
+- CMFCRibbonBaseElement [MFC], DestroyCtrl
+- CMFCRibbonBaseElement [MFC], DrawImage
+- CMFCRibbonBaseElement [MFC], Find
+- CMFCRibbonBaseElement [MFC], FindByData
+- CMFCRibbonBaseElement [MFC], FindByID
+- CMFCRibbonBaseElement [MFC], FindByOriginal
+- CMFCRibbonBaseElement [MFC], GetCompactSize
+- CMFCRibbonBaseElement [MFC], GetData
+- CMFCRibbonBaseElement [MFC], GetDescription
+- CMFCRibbonBaseElement [MFC], GetDroppedDown
+- CMFCRibbonBaseElement [MFC], GetElements
+- CMFCRibbonBaseElement [MFC], GetElementsByID
+- CMFCRibbonBaseElement [MFC], GetHighlighted
+- CMFCRibbonBaseElement [MFC], GetID
+- CMFCRibbonBaseElement [MFC], GetImageSize
+- CMFCRibbonBaseElement [MFC], GetIntermediateSize
+- CMFCRibbonBaseElement [MFC], GetKeys
+- CMFCRibbonBaseElement [MFC], GetKeyTipRect
+- CMFCRibbonBaseElement [MFC], GetKeyTipSize
+- CMFCRibbonBaseElement [MFC], GetLocationInGroup
+- CMFCRibbonBaseElement [MFC], GetMenuKeys
+- CMFCRibbonBaseElement [MFC], GetNotifyID
+- CMFCRibbonBaseElement [MFC], GetOriginal
+- CMFCRibbonBaseElement [MFC], GetParentCategory
+- CMFCRibbonBaseElement [MFC], GetParentPanel
+- CMFCRibbonBaseElement [MFC], GetParentRibbonBar
+- CMFCRibbonBaseElement [MFC], GetParentWnd
+- CMFCRibbonBaseElement [MFC], GetPressed
+- CMFCRibbonBaseElement [MFC], GetQuickAccessToolBarID
+- CMFCRibbonBaseElement [MFC], GetRect
+- CMFCRibbonBaseElement [MFC], GetRegularSize
+- CMFCRibbonBaseElement [MFC], GetSize
+- CMFCRibbonBaseElement [MFC], GetText
+- CMFCRibbonBaseElement [MFC], GetToolTipText
+- CMFCRibbonBaseElement [MFC], GetTopLevelRibbonBar
+- CMFCRibbonBaseElement [MFC], HasCompactMode
+- CMFCRibbonBaseElement [MFC], HasFocus
+- CMFCRibbonBaseElement [MFC], HasIntermediateMode
+- CMFCRibbonBaseElement [MFC], HasLargeMode
+- CMFCRibbonBaseElement [MFC], HasMenu
+- CMFCRibbonBaseElement [MFC], HitTest
+- CMFCRibbonBaseElement [MFC], IsAlignByColumn
+- CMFCRibbonBaseElement [MFC], IsAlwaysLargeImage
+- CMFCRibbonBaseElement [MFC], IsAutoRepeatMode
+- CMFCRibbonBaseElement [MFC], IsChecked
+- CMFCRibbonBaseElement [MFC], IsCompactMode
+- CMFCRibbonBaseElement [MFC], IsDefaultMenuLook
+- CMFCRibbonBaseElement [MFC], IsDisabled
+- CMFCRibbonBaseElement [MFC], IsDroppedDown
+- CMFCRibbonBaseElement [MFC], IsFocused
+- CMFCRibbonBaseElement [MFC], IsGalleryIcon
+- CMFCRibbonBaseElement [MFC], IsHighlighted
+- CMFCRibbonBaseElement [MFC], IsIntermediateMode
+- CMFCRibbonBaseElement [MFC], IsLargeMode
+- CMFCRibbonBaseElement [MFC], IsMenuMode
+- CMFCRibbonBaseElement [MFC], IsPressed
+- CMFCRibbonBaseElement [MFC], IsQATMode
+- CMFCRibbonBaseElement [MFC], IsSeparator
+- CMFCRibbonBaseElement [MFC], IsShowGroupBorder
+- CMFCRibbonBaseElement [MFC], IsShowTooltipOnBottom
+- CMFCRibbonBaseElement [MFC], IsTabStop
+- CMFCRibbonBaseElement [MFC], IsTextAlwaysOnRight
+- CMFCRibbonBaseElement [MFC], IsVisible
+- CMFCRibbonBaseElement [MFC], IsWholeRowHeight
+- CMFCRibbonBaseElement [MFC], NotifyCommand
+- CMFCRibbonBaseElement [MFC], NotifyHighlightListItem
+- CMFCRibbonBaseElement [MFC], OnAddToQAToolbar
+- CMFCRibbonBaseElement [MFC], OnAfterChangeRect
+- CMFCRibbonBaseElement [MFC], OnAutoRepeat
+- CMFCRibbonBaseElement [MFC], OnCalcTextSize
+- CMFCRibbonBaseElement [MFC], OnChangeMenuHighlight
+- CMFCRibbonBaseElement [MFC], OnDraw
+- CMFCRibbonBaseElement [MFC], OnDrawKeyTip
+- CMFCRibbonBaseElement [MFC], OnDrawMenuImage
+- CMFCRibbonBaseElement [MFC], OnDrawOnList
+- CMFCRibbonBaseElement [MFC], OnKey
+- CMFCRibbonBaseElement [MFC], OnMenuKey
+- CMFCRibbonBaseElement [MFC], OnRTLChanged
+- CMFCRibbonBaseElement [MFC], OnShow
+- CMFCRibbonBaseElement [MFC], OnShowPopupMenu
+- CMFCRibbonBaseElement [MFC], PostMenuCommand
+- CMFCRibbonBaseElement [MFC], Redraw
+- CMFCRibbonBaseElement [MFC], SetACCData
+- CMFCRibbonBaseElement [MFC], SetCompactMode
+- CMFCRibbonBaseElement [MFC], SetData
+- CMFCRibbonBaseElement [MFC], SetDefaultMenuLook
+- CMFCRibbonBaseElement [MFC], SetDescription
+- CMFCRibbonBaseElement [MFC], SetID
+- CMFCRibbonBaseElement [MFC], SetInitialMode
+- CMFCRibbonBaseElement [MFC], SetKeys
+- CMFCRibbonBaseElement [MFC], SetOriginal
+- CMFCRibbonBaseElement [MFC], SetParentCategory
+- CMFCRibbonBaseElement [MFC], SetParentMenu
+- CMFCRibbonBaseElement [MFC], SetParentRibbonBar
+- CMFCRibbonBaseElement [MFC], SetRect
+- CMFCRibbonBaseElement [MFC], SetText
+- CMFCRibbonBaseElement [MFC], SetTextAlwaysOnRight
+- CMFCRibbonBaseElement [MFC], SetToolTipText
+- CMFCRibbonBaseElement [MFC], SetVisible
+- CMFCRibbonBaseElement [MFC], StretchHorizontally
+- CMFCRibbonBaseElement [MFC], StretchToWholeRow
+- CMFCRibbonBaseElement [MFC], UpdateTooltipInfo
+- CMFCRibbonBaseElement [MFC], OnProcessKey
+- CMFCRibbonBaseElement [MFC], OnSetFocus
 ms.assetid: 419ea91b-5062-44cc-b0a3-f87d29566f62
 caps.latest.revision: 34
 author: mikeblome
@@ -147,195 +259,195 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0e0c08ddc57d437c51872b5186ae3fc983bb0199
-ms.openlocfilehash: c596d7ef6ba87ca0f084c03856cf4f54dc8eac49
+ms.translationtype: MT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 598454ba44dd00d83046bb67cb5024ca64e07400
 ms.contentlocale: ru-ru
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 09/12/2017
 
 ---
-# <a name="cmfcribbonbaseelement-class"></a>Класс CMFCRibbonBaseElement
-`CMFCRibbonBaseElement` Класс является базовым классом для всех элементов, которые можно добавить к [ленты](../../mfc/reference/cmfcribbonbar-class.md). Примеры элементов ленты — кнопки ленты, флажки ленты и поля со списком на ленте.  
+# <a name="cmfcribbonbaseelement-class"></a>CMFCRibbonBaseElement Class
+The `CMFCRibbonBaseElement` class is the base class for all elements that you can add to a [ribbon bar](../../mfc/reference/cmfcribbonbar-class.md). Examples of ribbon elements are ribbon buttons, ribbon check boxes, and ribbon combo boxes.  
   
-## <a name="syntax"></a>Синтаксис  
+## <a name="syntax"></a>Syntax  
   
 ```  
 class CMFCRibbonBaseElement : public CObject  
 ```  
   
-## <a name="members"></a>Члены  
+## <a name="members"></a>Members  
   
-### <a name="public-constructors"></a>Открытые конструкторы  
+### <a name="public-constructors"></a>Public Constructors  
   
-|Имя|Описание|  
+|Name|Description|  
 |----------|-----------------|  
-|`CMFCRibbonBaseElement`|Создает объект `CMFCRibbonBaseElement`.|  
+|`CMFCRibbonBaseElement`|Constructs a `CMFCRibbonBaseElement` object.|  
   
-### <a name="public-methods"></a>Открытые методы  
+### <a name="public-methods"></a>Public Methods  
   
-|Имя|Описание|  
+|Name|Description|  
 |----------|-----------------|  
-|[CMFCRibbonBaseElement::AddToKeyList](#addtokeylist)|Добавляет массив свойствами KeyTip значение свойства keytip элемента ленты.|  
-|[CMFCRibbonBaseElement::AddToListBox](#addtolistbox)|Добавляет элемент ленты к окну списка команд указанной ленты.|  
-|[CMFCRibbonBaseElement::CanBeAddedToQuickAccessToolBar](#canbeaddedtoquickaccesstoolbar)|Указывает, можно ли добавить элемент ленты на панель быстрого доступа.|  
-|[CMFCRibbonBaseElement::CanBeCompacted](#canbecompacted)|Указывает, может ли быть compact размер элемента ленты.|  
-|[CMFCRibbonBaseElement::CanBeStretched](#canbestretched)|Указывает ли высота элемента ленты может увеличиваться по вертикали в высоту строки ленты.|  
-|[CMFCRibbonBaseElement::CanBeStretchedHorizontally](#canbestretchedhorizontally)|Указывает, можно ли изменить ширину элемента ленты.|  
-|[CMFCRibbonBaseElement::CleanUpSizes](#cleanupsizes)|Очищает параметры измерения для элемента ленты.|  
-|[CMFCRibbonBaseElement::ClosePopupMenu](#closepopupmenu)|Закрывает всплывающее меню для элемента ленты.|  
-|[CMFCRibbonBaseElement::CopyFrom](#copyfrom)|Копирует состояние указанного `CMFCRibbonBaseElement` на текущий объект.|  
-|[CMFCRibbonBaseElement::DestroyCtrl](#destroyctrl)|Удаляет элемент ленты.|  
-|[CMFCRibbonBaseElement::DrawImage](#drawimage)|Рисует изображение для элемента ленты.|  
-|[CMFCRibbonBaseElement::Find](#find)|Возвращает заданный указатель на элемент ленты, он указывает на текущий объект.|  
-|[CMFCRibbonBaseElement::FindByData](#findbydata)|Извлекает указатель на элемент ленты, если он содержит указанные данные.|  
-|[CMFCRibbonBaseElement::FindByID](#findbyid)|Извлекает указатель на элемент ленты, если этот элемент идентифицируется по указанному идентификатору команды.|  
-|[CMFCRibbonBaseElement::FindByOriginal](#findbyoriginal)|Извлекает указатель на элемент ленты, если его исходный элемент ленты соответствует элемент указанной ленты.|  
-|[CMFCRibbonBaseElement::GetCompactSize](#getcompactsize)|Возвращает компактный размер элемента ленты.|  
-|[CMFCRibbonBaseElement::GetData](#getdata)|Получает определяемые пользователем данные, связанные с элементом ленты.|  
-|[CMFCRibbonBaseElement::GetDescription](#getdescription)|Возвращает описание элемента ленты.|  
-|[CMFCRibbonBaseElement::GetDroppedDown](#getdroppeddown)|Извлекает указатель на элемент ленты, если выстроены его во всплывающем меню.|  
-|[CMFCRibbonBaseElement::GetElements](#getelements)|Добавляет элемент в текущей ленты в указанный массив.|  
-|[CMFCRibbonBaseElement::GetElementsByID](#getelementsbyid)|Добавляет текущий элемент ленты в указанный массив, если текущий элемент ленты содержит идентификатор указанной команды.|  
-|[CMFCRibbonBaseElement::GetHighlighted](#gethighlighted)|Извлекает указатель на элемент ленты, если он выделен.|  
-|[CMFCRibbonBaseElement::GetID](#getid)|Возвращает идентификатор команды элемента ленты.|  
-|[CMFCRibbonBaseElement::GetImageSize](#getimagesize)|Возвращает размер изображения элемента ленты.|  
-|[CMFCRibbonBaseElement::GetIntermediateSize](#getintermediatesize)|Возвращает размер элемента ленты в промежуточное состояние.|  
-|[CMFCRibbonBaseElement::GetKeys](#getkeys)|Возвращает значение свойства keytip, связанный с элементом ленты.|  
-|[CMFCRibbonBaseElement::GetKeyTipRect](#getkeytiprect)|Получает значение свойства keytip ограничивающий прямоугольник для элемента ленты.|  
-|[CMFCRibbonBaseElement::GetKeyTipSize](#getkeytipsize)|Получает размер текста значение свойства keytip.|  
-|[CMFCRibbonBaseElement::GetLocationInGroup](#getlocationingroup)|Указывает папку отображения элемента ленты в группу ленты.|  
-|[CMFCRibbonBaseElement::GetMenuKeys](#getmenukeys)|Возвращает Ключевые подсказки, связанный с кнопкой.|  
-|[CMFCRibbonBaseElement::GetNotifyID](#getnotifyid)|Извлекает идентификатор команды уведомления для элемента ленты.|  
-|[CMFCRibbonBaseElement::GetOriginal](#getoriginal)|Получает исходный элемент ленты.|  
-|[CMFCRibbonBaseElement::GetParentCategory](#getparentcategory)|Получает категорию элемента ленты.|  
-|[CMFCRibbonBaseElement::GetParentPanel](#getparentpanel)|Получает панель ленты, который содержит элемент ленты.|  
-|[CMFCRibbonBaseElement::GetParentRibbonBar](#getparentribbonbar)|Извлекает строки ленты родительского элемента ленты.|  
-|[CMFCRibbonBaseElement::GetParentWnd](#getparentwnd)|Извлекает родительское окно для элемента ленты.|  
-|[CMFCRibbonBaseElement::GetPressed](#getpressed)|Извлекает указатель на элемент ленты, если пользователь нажимает ее в настоящее время.|  
-|[CMFCRibbonBaseElement::GetQuickAccessToolBarID](#getquickaccesstoolbarid)|Извлекает идентификатор команды элемента ленты, когда он находится в панель быстрого доступа.|  
-|[CMFCRibbonBaseElement::GetRect](#getrect)|Возвращает прямоугольник, ограничивающий элемента ленты.|  
-|[CMFCRibbonBaseElement::GetRegularSize](#getregularsize)|Возвращает стандартный размер элемента ленты.|  
-|[CMFCRibbonBaseElement::GetSize](#getsize)|Возвращает текущий размер элемента ленты.|  
-|[CMFCRibbonBaseElement::GetText](#gettext)|Возвращает текст, связанный с элементом ленты.|  
-|[CMFCRibbonBaseElement::GetToolTipText](#gettooltiptext)|Возвращает текст всплывающей подсказки элемента ленты.|  
-|[CMFCRibbonBaseElement::GetTopLevelRibbonBar](#gettoplevelribbonbar)|Извлекает строки верхнего уровня ленты для элемента ленты.|  
-|[CMFCRibbonBaseElement::HasCompactMode](#hascompactmode)|Задает, доступен ли для элемента ленты компактный режим.|  
-|[CMFCRibbonBaseElement::HasFocus](#hasfocus)|Указывает, является ли родительский элемент имеет фокус.|  
-|[CMFCRibbonBaseElement::HasIntermediateMode](#hasintermediatemode)|Задает, доступен ли для элемента ленты промежуточный режим.|  
-|[CMFCRibbonBaseElement::HasLargeMode](#haslargemode)|Указывает, имеет ли элемент ленты больших режим.|  
-|[CMFCRibbonBaseElement::HasMenu](#hasmenu)|Указывает, имеет ли элемент ленты меню.|  
-|[CMFCRibbonBaseElement::HitTest](#hittest)|Извлекает указатель на элемент ленты, если заданная точка находится в нем.|  
-|[CMFCRibbonBaseElement::IsAlignByColumn](#isalignbycolumn)|Указывает ли лента выравнивается по вертикали другие элементы ленты.|  
-|[CMFCRibbonBaseElement::IsAlwaysLargeImage](#isalwayslargeimage)|Указывает, является ли размер изображения элемента ленты всегда большой.|  
-|[CMFCRibbonBaseElement::IsAutoRepeatMode](#isautorepeatmode)|Указывает, является ли элемент ленты в режиме автоматического повтора.|  
-|[CMFCRibbonBaseElement::IsChecked](#ischecked)|Указывает, установлен ли флажок элемента ленты.|  
-|[CMFCRibbonBaseElement::IsCompactMode](#iscompactmode)|Указывает, является ли элемент ленты в компактном режиме.|  
+|[CMFCRibbonBaseElement::AddToKeyList](#addtokeylist)|Adds a keytip for the ribbon element to an array of keytips.|  
+|[CMFCRibbonBaseElement::AddToListBox](#addtolistbox)|Adds a ribbon element to the specified ribbon commands list box.|  
+|[CMFCRibbonBaseElement::CanBeAddedToQuickAccessToolBar](#canbeaddedtoquickaccesstoolbar)|Indicates whether the ribbon element can be added to the quick access toolbar.|  
+|[CMFCRibbonBaseElement::CanBeCompacted](#canbecompacted)|Indicates whether the size of the ribbon element can be compact.|  
+|[CMFCRibbonBaseElement::CanBeStretched](#canbestretched)|Indicates whether the height of the ribbon element can increase vertically to the height of a ribbon row.|  
+|[CMFCRibbonBaseElement::CanBeStretchedHorizontally](#canbestretchedhorizontally)|Indicates whether the width of the ribbon element can change.|  
+|[CMFCRibbonBaseElement::CleanUpSizes](#cleanupsizes)|Cleans up the dimension settings for the ribbon element.|  
+|[CMFCRibbonBaseElement::ClosePopupMenu](#closepopupmenu)|Closes the popup menu for the ribbon element.|  
+|[CMFCRibbonBaseElement::CopyFrom](#copyfrom)|Copies the state of the specified `CMFCRibbonBaseElement` to the current object.|  
+|[CMFCRibbonBaseElement::DestroyCtrl](#destroyctrl)|Destroys the ribbon element.|  
+|[CMFCRibbonBaseElement::DrawImage](#drawimage)|Draws the image for the ribbon element.|  
+|[CMFCRibbonBaseElement::Find](#find)|Returns the specified pointer to the ribbon element if it points to the current object.|  
+|[CMFCRibbonBaseElement::FindByData](#findbydata)|Retrieves a pointer to the ribbon element if it contains the specified data.|  
+|[CMFCRibbonBaseElement::FindByID](#findbyid)|Retrieves a pointer to the ribbon element if that element is identified by the specified command ID.|  
+|[CMFCRibbonBaseElement::FindByOriginal](#findbyoriginal)|Retrieves a pointer to the ribbon element if its original ribbon element matches the specified ribbon element.|  
+|[CMFCRibbonBaseElement::GetCompactSize](#getcompactsize)|Returns the compact size of the ribbon element.|  
+|[CMFCRibbonBaseElement::GetData](#getdata)|Retrieves the user-defined data associated with the ribbon element.|  
+|[CMFCRibbonBaseElement::GetDescription](#getdescription)|Returns the description of the ribbon element.|  
+|[CMFCRibbonBaseElement::GetDroppedDown](#getdroppeddown)|Retrieves a pointer to the ribbon element if its pop-up menu is dropped down.|  
+|[CMFCRibbonBaseElement::GetElements](#getelements)|Adds the current ribbon element to the specified array.|  
+|[CMFCRibbonBaseElement::GetElementsByID](#getelementsbyid)|Adds the current ribbon element to the specified array if the current ribbon element contains the specified command ID.|  
+|[CMFCRibbonBaseElement::GetHighlighted](#gethighlighted)|Retrieves a pointer to the ribbon element if it is highlighted.|  
+|[CMFCRibbonBaseElement::GetID](#getid)|Returns the command ID of the ribbon element.|  
+|[CMFCRibbonBaseElement::GetImageSize](#getimagesize)|Returns the image size of the ribbon element.|  
+|[CMFCRibbonBaseElement::GetIntermediateSize](#getintermediatesize)|Returns the size of the ribbon element in its intermediate state.|  
+|[CMFCRibbonBaseElement::GetKeys](#getkeys)|Returns the keytip associated with the ribbon element.|  
+|[CMFCRibbonBaseElement::GetKeyTipRect](#getkeytiprect)|Retrieves the keytip boundary rectangle for the ribbon element.|  
+|[CMFCRibbonBaseElement::GetKeyTipSize](#getkeytipsize)|Retrieves the size of the keytip text.|  
+|[CMFCRibbonBaseElement::GetLocationInGroup](#getlocationingroup)|Indicates the display location of the ribbon element in a ribbon group.|  
+|[CMFCRibbonBaseElement::GetMenuKeys](#getmenukeys)|Returns the keytips associated with a button.|  
+|[CMFCRibbonBaseElement::GetNotifyID](#getnotifyid)|Retrieves the notification command ID for the ribbon element.|  
+|[CMFCRibbonBaseElement::GetOriginal](#getoriginal)|Retrieves the original ribbon element.|  
+|[CMFCRibbonBaseElement::GetParentCategory](#getparentcategory)|Retrieves the ribbon category for the ribbon element.|  
+|[CMFCRibbonBaseElement::GetParentPanel](#getparentpanel)|Retrieves the ribbon panel that contains the ribbon element.|  
+|[CMFCRibbonBaseElement::GetParentRibbonBar](#getparentribbonbar)|Retrieves the parent ribbon bar for the ribbon element.|  
+|[CMFCRibbonBaseElement::GetParentWnd](#getparentwnd)|Retrieves the parent window for the ribbon element.|  
+|[CMFCRibbonBaseElement::GetPressed](#getpressed)|Retrieves a pointer to the ribbon element if the user currently presses it.|  
+|[CMFCRibbonBaseElement::GetQuickAccessToolBarID](#getquickaccesstoolbarid)|Retrieves the command ID of the ribbon element when it is located in the quick access toolbar.|  
+|[CMFCRibbonBaseElement::GetRect](#getrect)|Returns the bounding rectangle of the ribbon element.|  
+|[CMFCRibbonBaseElement::GetRegularSize](#getregularsize)|Returns the regular size of the ribbon element.|  
+|[CMFCRibbonBaseElement::GetSize](#getsize)|Returns the current size of the ribbon element.|  
+|[CMFCRibbonBaseElement::GetText](#gettext)|Returns the text associated with the ribbon element.|  
+|[CMFCRibbonBaseElement::GetToolTipText](#gettooltiptext)|Returns tooltip text of the ribbon element.|  
+|[CMFCRibbonBaseElement::GetTopLevelRibbonBar](#gettoplevelribbonbar)|Retrieves the top level ribbon bar for the ribbon element.|  
+|[CMFCRibbonBaseElement::HasCompactMode](#hascompactmode)|Specifies whether the ribbon element has a compact mode.|  
+|[CMFCRibbonBaseElement::HasFocus](#hasfocus)|Indicates whether the parent element has keyboard focus.|  
+|[CMFCRibbonBaseElement::HasIntermediateMode](#hasintermediatemode)|Specifies whether the ribbon element has an intermediate mode.|  
+|[CMFCRibbonBaseElement::HasLargeMode](#haslargemode)|Specifies whether the ribbon element has a large mode.|  
+|[CMFCRibbonBaseElement::HasMenu](#hasmenu)|Indicates whether the ribbon element has a menu.|  
+|[CMFCRibbonBaseElement::HitTest](#hittest)|Retrieves a pointer to the ribbon element if the specified point is located in it.|  
+|[CMFCRibbonBaseElement::IsAlignByColumn](#isalignbycolumn)|Indicates whether the ribbon element is aligned vertically with other ribbon elements.|  
+|[CMFCRibbonBaseElement::IsAlwaysLargeImage](#isalwayslargeimage)|Indicates whether the ribbon element image size is always large.|  
+|[CMFCRibbonBaseElement::IsAutoRepeatMode](#isautorepeatmode)|Indicates whether the ribbon element is in auto repeat mode.|  
+|[CMFCRibbonBaseElement::IsChecked](#ischecked)|Specifies whether the ribbon element is checked.|  
+|[CMFCRibbonBaseElement::IsCompactMode](#iscompactmode)|Specifies whether the ribbon element is in a compact mode.|  
 |[CMFCRibbonBaseElement::IsDefaultMenuLook](#isdefaultmenulook)||  
-|[CMFCRibbonBaseElement::IsDisabled](#isdisabled)|Указывает, отключен ли элемент ленты.|  
-|[CMFCRibbonBaseElement::IsDroppedDown](#isdroppeddown)|Определяет, отображается всплывающее меню элемент ленты и удалении.|  
-|[CMFCRibbonBaseElement::IsFocused](#isfocused)|Указывает, имеет ли элемент ленты фокус.|  
-|[CMFCRibbonBaseElement::IsGalleryIcon](#isgalleryicon)|Указывает, содержится ли в коллекции ленты элемента ленты.|  
-|[CMFCRibbonBaseElement::IsHighlighted](#ishighlighted)|Указывает, выделен ли элемент «лента».|  
-|[CMFCRibbonBaseElement::IsIntermediateMode](#isintermediatemode)|Указывает, является ли текущее изображение для элемента ленты промежуточного размера.|  
-|[CMFCRibbonBaseElement::IsLargeMode](#islargemode)|Указывает ли текущее изображение для элемента ленты большого размера.|  
-|[CMFCRibbonBaseElement::IsMenuMode](#ismenumode)|Указывает, содержится ли элемент ленты в меню.|  
-|[CMFCRibbonBaseElement::IsPressed](#ispressed)|Указывает, щелкнул ли пользователь элемента ленты.|  
-|[CMFCRibbonBaseElement::IsQATMode](#isqatmode)|Указывает, содержится ли элемент ленты в панель быстрого доступа.|  
-|[CMFCRibbonBaseElement::IsSeparator](#isseparator)|Указывает, является ли элемент ленты отображения разделителя.|  
-|[CMFCRibbonBaseElement::IsShowGroupBorder](#isshowgroupborder)|Указывает, содержится ли элемент ленты в группе, которая отображает общие границы.|  
-|[CMFCRibbonBaseElement::IsShowTooltipOnBottom](#isshowtooltiponbottom)|Указывает, отображается ли подсказка в элементе ленты.|  
-|[CMFCRibbonBaseElement::IsTabStop](#istabstop)|Указывает, можно выбрать элемент ленты с помощью клавиатуры.|  
-|[CMFCRibbonBaseElement::IsTextAlwaysOnRight](#istextalwaysonright)|Указывает, отображается ли в правом текст для элемента ленты.|  
-|[CMFCRibbonBaseElement::IsVisible](#isvisible)|Указывает, отображается ли в данный момент элемента ленты.|  
-|[CMFCRibbonBaseElement::IsWholeRowHeight](#iswholerowheight)|Указывает, совпадает ли heigth отображения элемента ленты Высота отображения панели ленты, содержащей его.|  
-|[CMFCRibbonBaseElement::NotifyCommand](#notifycommand)|Отправляет уведомление команда родительского окна элемента ленты.|  
-|[CMFCRibbonBaseElement::NotifyHighlightListItem](#notifyhighlightlistitem)|Уведомляет родительского окна ленты, когда пользователь выделяет элемент ленты, который находится в списке.|  
-|[CMFCRibbonBaseElement::OnAddToQAToolbar](#onaddtoqatoolbar)|Добавляет элемент в ленте панели инструментов быстрого доступа указанного.|  
-|[CMFCRibbonBaseElement::OnAfterChangeRect](#onafterchangerect)|Обновляет всплывающей подсказки для элемента ленты.|  
-|[CMFCRibbonBaseElement::OnAutoRepeat](#onautorepeat)|Обновляет элемент ленты в ответ на длительного ввода.|  
-|[CMFCRibbonBaseElement::OnCalcTextSize](#oncalctextsize)|Вычисляет размер текста для элемента ленты.|  
-|[CMFCRibbonBaseElement::OnChangeMenuHighlight](#onchangemenuhighlight)|Вызывается инфраструктурой при изменении выделения для элемента ленты, расположенный в меню.|  
-|[CMFCRibbonBaseElement::OnDraw](#ondraw)|Вызывается платформой для отрисовки элемента ленты.|  
-|[CMFCRibbonBaseElement::OnDrawKeyTip](#ondrawkeytip)|Вызывается платформой для рисования значение свойства keytip элемента ленты.|  
-|[CMFCRibbonBaseElement::OnDrawMenuImage](#ondrawmenuimage)|Вызывается инфраструктурой при рисовании изображения меню для элемента ленты.|  
-|[CMFCRibbonBaseElement::OnDrawOnList](#ondrawonlist)|Вызывается платформой для рисования элемента ленты в списке команд.|  
-|[CMFCRibbonBaseElement::OnKey](#onkey)|Вызывается платформой, когда пользователь нажимает значение свойства keytip и ленты элемент имеет фокус.|  
+|[CMFCRibbonBaseElement::IsDisabled](#isdisabled)|Specifies whether the ribbon element is disabled.|  
+|[CMFCRibbonBaseElement::IsDroppedDown](#isdroppeddown)|Determines whether the ribbon element displays a popup menu and is dropped down.|  
+|[CMFCRibbonBaseElement::IsFocused](#isfocused)|Specifies whether the ribbon element has the focus.|  
+|[CMFCRibbonBaseElement::IsGalleryIcon](#isgalleryicon)|Indicates whether the ribbon element is contained in a ribbon gallery.|  
+|[CMFCRibbonBaseElement::IsHighlighted](#ishighlighted)|Specifies whether ribbon element is highlighted.|  
+|[CMFCRibbonBaseElement::IsIntermediateMode](#isintermediatemode)|Indicates whether the current image for the ribbon element is intermediate size.|  
+|[CMFCRibbonBaseElement::IsLargeMode](#islargemode)|Indicates whether the current image for the ribbon element is large sized.|  
+|[CMFCRibbonBaseElement::IsMenuMode](#ismenumode)|Indicates whether the ribbon element is contained in a menu.|  
+|[CMFCRibbonBaseElement::IsPressed](#ispressed)|Indicates whether the user has clicked the ribbon element.|  
+|[CMFCRibbonBaseElement::IsQATMode](#isqatmode)|Indicates whether the ribbon element is contained in the quick access toolbar.|  
+|[CMFCRibbonBaseElement::IsSeparator](#isseparator)|Indicates whether the ribbon element is a display separator.|  
+|[CMFCRibbonBaseElement::IsShowGroupBorder](#isshowgroupborder)|Indicates whether the ribbon element is contained in a group that displays a common border.|  
+|[CMFCRibbonBaseElement::IsShowTooltipOnBottom](#isshowtooltiponbottom)|Indicates whether the tooltip is displayed under the ribbon element.|  
+|[CMFCRibbonBaseElement::IsTabStop](#istabstop)|Indicates whether the ribbon element can be selected with the keyboard.|  
+|[CMFCRibbonBaseElement::IsTextAlwaysOnRight](#istextalwaysonright)|Indicates whether the text for the ribbon element is displayed on the right.|  
+|[CMFCRibbonBaseElement::IsVisible](#isvisible)|Indicates whether the ribbon element is currently displayed.|  
+|[CMFCRibbonBaseElement::IsWholeRowHeight](#iswholerowheight)|Indicates whether the display heigth of the ribbon element is the same as the display height of the ribbon panel that contains it.|  
+|[CMFCRibbonBaseElement::NotifyCommand](#notifycommand)|Sends a command notification to the parent window of the ribbon element.|  
+|[CMFCRibbonBaseElement::NotifyHighlightListItem](#notifyhighlightlistitem)|Notifies the parent window of the ribbon bar when a user highlights a ribbon element that is located in a list.|  
+|[CMFCRibbonBaseElement::OnAddToQAToolbar](#onaddtoqatoolbar)|Adds the ribbon element to the specified quick access toolbar.|  
+|[CMFCRibbonBaseElement::OnAfterChangeRect](#onafterchangerect)|Updates the tooltip for the ribbon element.|  
+|[CMFCRibbonBaseElement::OnAutoRepeat](#onautorepeat)|Updates the ribbon element in response to sustained user input.|  
+|[CMFCRibbonBaseElement::OnCalcTextSize](#oncalctextsize)|Calculates the size of the text for the ribbon element.|  
+|[CMFCRibbonBaseElement::OnChangeMenuHighlight](#onchangemenuhighlight)|Called by the framework when the highlight changes for a ribbon element that is located in a menu.|  
+|[CMFCRibbonBaseElement::OnDraw](#ondraw)|Called by the framework to draw the ribbon element.|  
+|[CMFCRibbonBaseElement::OnDrawKeyTip](#ondrawkeytip)|Called by the framework to draw the keytip for the ribbon element.|  
+|[CMFCRibbonBaseElement::OnDrawMenuImage](#ondrawmenuimage)|Called by the framework when the menu image for the ribbon element is drawn.|  
+|[CMFCRibbonBaseElement::OnDrawOnList](#ondrawonlist)|Called by the framework to draw the ribbon element in a commands list box.|  
+|[CMFCRibbonBaseElement::OnKey](#onkey)|Called by the framework when the user presses a keytip and the ribbon element has the focus.|  
 |[CMFCRibbonBaseElement::OnMenuKey](#onmenukey)||  
-|[CMFCRibbonBaseElement::OnRTLChanged](#onrtlchanged)|Вызывается инфраструктурой при изменении направления макета.|  
-|[CMFCRibbonBaseElement::OnShow](#onshow)|Вызывается платформой для отображения или скрытия элементов ленты.|  
-|[CMFCRibbonBaseElement::OnShowPopupMenu](#onshowpopupmenu)|Вызывается платформой, когда элемент ленты подходит для отображения всплывающего меню.|  
+|[CMFCRibbonBaseElement::OnRTLChanged](#onrtlchanged)|Called by the framework when the layout changes direction.|  
+|[CMFCRibbonBaseElement::OnShow](#onshow)|Called by the framework to show or hide the ribbon element.|  
+|[CMFCRibbonBaseElement::OnShowPopupMenu](#onshowpopupmenu)|Called by the framework when the ribbon element is going to display a popup menu.|  
 |[CMFCRibbonBaseElement::PostMenuCommand](#postmenucommand)||  
-|[CMFCRibbonBaseElement::Redraw](#redraw)|Обновляет отображение элемента ленты.|  
-|[CMFCRibbonBaseElement::SetACCData](#setaccdata)|Задает данные специальных возможностей для элемента ленты.|  
-|[CMFCRibbonBaseElement::SetCompactMode](#setcompactmode)|Задает размер изображения для элемента ленты.|  
-|[CMFCRibbonBaseElement::SetData](#setdata)|Связывает элемент данных с помощью элемента ленты.|  
+|[CMFCRibbonBaseElement::Redraw](#redraw)|Updates the display for the ribbon element.|  
+|[CMFCRibbonBaseElement::SetACCData](#setaccdata)|Sets the accessibility data for the ribbon element.|  
+|[CMFCRibbonBaseElement::SetCompactMode](#setcompactmode)|Sets the display size for the ribbon element.|  
+|[CMFCRibbonBaseElement::SetData](#setdata)|Associates a data item with the ribbon element.|  
 |[CMFCRibbonBaseElement::SetDefaultMenuLook](#setdefaultmenulook)||  
-|[CMFCRibbonBaseElement::SetDescription](#setdescription)|Задает описание элемента ленты.|  
-|[CMFCRibbonBaseElement::SetID](#setid)|Задает идентификатор команды элемента ленты.|  
-|[CMFCRibbonBaseElement::SetInitialMode](#setinitialmode)|Задает размер первоначального отображения для элемента ленты.|  
-|[CMFCRibbonBaseElement::SetKeys](#setkeys)|Задает значение свойства keytip элемента ленты.|  
-|[CMFCRibbonBaseElement::SetOriginal](#setoriginal)|Задает исходный элемент ленты для элемента ленты.|  
-|[CMFCRibbonBaseElement::SetParentCategory](#setparentcategory)|Задает категорию родительского элемента ленты.|  
-|[CMFCRibbonBaseElement::SetParentMenu](#setparentmenu)|Задает родительский контейнер меню для элемента ленты.|  
-|[CMFCRibbonBaseElement::SetParentRibbonBar](#setparentribbonbar)|Задает лентой родительского элемента ленты.|  
-|[CMFCRibbonBaseElement::SetRect](#setrect)|Задает fot измерений, он отобразить прямоугольник для элемента ленты.|  
-|[CMFCRibbonBaseElement::SetText](#settext)|Задает текст элемента ленты.|  
-|[CMFCRibbonBaseElement::SetTextAlwaysOnRight](#settextalwaysonright)|Задает текст для элемента ленты для отображения справа.|  
-|[CMFCRibbonBaseElement::SetToolTipText](#settooltiptext)|Задает текст всплывающей подсказки для элемента ленты.|  
-|[CMFCRibbonBaseElement::SetVisible](#setvisible)|Задает состояние видимости элемента ленты.|  
-|[CMFCRibbonBaseElement::StretchHorizontally](#stretchhorizontally)|Увеличение ширины элемента ленты.|  
-|[CMFCRibbonBaseElement::StretchToWholeRow](#stretchtowholerow)|Изменяет высоту указанной строки отображаемой высоты элемента ленты.|  
-|[CMFCRibbonBaseElement::UpdateTooltipInfo](#updatetooltipinfo)|Обновляет текст всплывающей подсказки с помощью команды ресурса для элемента ленты.|  
+|[CMFCRibbonBaseElement::SetDescription](#setdescription)|Sets the description for the ribbon element.|  
+|[CMFCRibbonBaseElement::SetID](#setid)|Sets the command ID of the ribbon element.|  
+|[CMFCRibbonBaseElement::SetInitialMode](#setinitialmode)|Sets the initial display size for the ribbon element.|  
+|[CMFCRibbonBaseElement::SetKeys](#setkeys)|Sets a keytip for the ribbon element.|  
+|[CMFCRibbonBaseElement::SetOriginal](#setoriginal)|Sets the original ribbon element for the ribbon element.|  
+|[CMFCRibbonBaseElement::SetParentCategory](#setparentcategory)|Sets the parent category for the ribbon element.|  
+|[CMFCRibbonBaseElement::SetParentMenu](#setparentmenu)|Sets the parent menu container for the ribbon element.|  
+|[CMFCRibbonBaseElement::SetParentRibbonBar](#setparentribbonbar)|Sets the parent ribbon bar for the ribbon element.|  
+|[CMFCRibbonBaseElement::SetRect](#setrect)|Sets the dimensions fot he display rectangle for the ribbon element.|  
+|[CMFCRibbonBaseElement::SetText](#settext)|Sets the text for the ribbon element.|  
+|[CMFCRibbonBaseElement::SetTextAlwaysOnRight](#settextalwaysonright)|Sets the text for the ribbon element to display on the right.|  
+|[CMFCRibbonBaseElement::SetToolTipText](#settooltiptext)|Sets the tooltip text for the ribbon element.|  
+|[CMFCRibbonBaseElement::SetVisible](#setvisible)|Sets the visibility state of the ribbon element.|  
+|[CMFCRibbonBaseElement::StretchHorizontally](#stretchhorizontally)|Stretches the width of the ribbon element.|  
+|[CMFCRibbonBaseElement::StretchToWholeRow](#stretchtowholerow)|Changes the display height of the ribbon element to the specified row height.|  
+|[CMFCRibbonBaseElement::UpdateTooltipInfo](#updatetooltipinfo)|Updates the tooltip text by using the command resource for the ribbon element.|  
   
-### <a name="protected-methods"></a>Защищенные методы  
+### <a name="protected-methods"></a>Protected Methods  
   
-|Имя|Описание|  
+|Name|Description|  
 |----------|-----------------|  
-|[CMFCRibbonBaseElement::OnProcessKey](#onprocesskey)|Вызывается платформой, когда пользователь нажимает сочетание клавиш.|  
-|[CMFCRibbonBaseElement::OnSetFocus](#onsetfocus)|Вызывается платформой, когда элемент ленты Получает или теряет фокус ввода.|  
+|[CMFCRibbonBaseElement::OnProcessKey](#onprocesskey)|Called by the framework when the user presses a shortcut key.|  
+|[CMFCRibbonBaseElement::OnSetFocus](#onsetfocus)|Called by the framework when a ribbon element receives or loses the input focus.|  
   
-## <a name="remarks"></a>Примечания  
- `CMFCRibbonBaseElement` Класс определяет свойства, которые являются общими для всех элементов ленты, содержащие идентификатор команды, текстовую метку, текст подсказки, описание элемента и состояния (который может быть фокус, выделен, нажата, отключена, проверяется или выстроены).  
+## <a name="remarks"></a>Remarks  
+ The `CMFCRibbonBaseElement` class defines the properties that are common to all ribbon elements that include command ID, text label, tooltip text, element description, and state (which can be focused, highlighted, pressed, disabled, checked, or dropped down).  
   
- Размер изображения элемента ленты определяется `RibbonImageType` элемент, который может принимать одно из следующих значений:  
+ The image size of a ribbon element is defined by the `RibbonImageType` member, which can be one of the following values:  
   
 - `RibbonImageLarge`  
   
 - `RibbonImageSmall`  
   
- В зависимости от его размера элемент ленты отображает либо крупных или мелких изображения.  
+ Depending on its size, a ribbon element displays either a small or large image.  
   
-## <a name="example"></a>Пример  
- Ниже приведен пример, как использовать различные методы в `CMFCRibbonBaseElement` класса. В примере показано получение `CMFCRibbonBaseElement` объекта из `CMFCRibbonStatusBar` класса, задайте описание для элемента ленты, задайте текст, задайте значение свойства keytip, а текст подсказки для элемента ленты. Этот фрагмент кода является частью [пример рисования клиента](../../visual-cpp-samples.md).  
+## <a name="example"></a>Example  
+ The following example demonstrates how to use various methods in the `CMFCRibbonBaseElement` class. The example shows how to get a `CMFCRibbonBaseElement` object from a `CMFCRibbonStatusBar` class, set the description for the ribbon element, set the text, set a keytip, and set the tooltip text for the ribbon element. This code snippet is part of the [Draw Client sample](../../visual-cpp-samples.md).  
   
- [!code-cpp[NVC_MFC_DrawClient №&8;](../../mfc/reference/codesnippet/cpp/cmfcribbonbaseelement-class_1.cpp)]  
-[!code-cpp[NVC_MFC_DrawClient №&9;](../../mfc/reference/codesnippet/cpp/cmfcribbonbaseelement-class_2.cpp)]  
+ [!code-cpp[NVC_MFC_DrawClient#8](../../mfc/reference/codesnippet/cpp/cmfcribbonbaseelement-class_1.cpp)]  
+[!code-cpp[NVC_MFC_DrawClient#9](../../mfc/reference/codesnippet/cpp/cmfcribbonbaseelement-class_2.cpp)]  
   
-## <a name="inheritance-hierarchy"></a>Иерархия наследования  
+## <a name="inheritance-hierarchy"></a>Inheritance Hierarchy  
  [CObject](../../mfc/reference/cobject-class.md)  
   
  [CMFCRibbonBaseElement](../../mfc/reference/cmfcribbonbaseelement-class.md)  
   
-## <a name="requirements"></a>Требования  
- **Заголовок:** afxbaseribbonelement.h  
+## <a name="requirements"></a>Requirements  
+ **Header:** afxbaseribbonelement.h  
   
-##  <a name="addtokeylist"></a>CMFCRibbonBaseElement::AddToKeyList  
- Добавляет массив свойствами KeyTip значение свойства keytip элемента ленты.  
+##  <a name="addtokeylist"></a>  CMFCRibbonBaseElement::AddToKeyList  
+ Adds a keytip for the ribbon element to an array of keytips.  
   
 ```  
 virtual void AddToKeyList(
     CArray<CMFCRibbonKeyTip*, CMFCRibbonKeyTip*>& arElems);
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
  [in] `arElems`  
- Ссылка на [CArray](../../mfc/reference/carray-class.md) из подсказки клавиш.  
+ Reference to a [CArray](../../mfc/reference/carray-class.md) of keytips.  
   
-### <a name="remarks"></a>Примечания  
- Если включена функция подсказки клавиш ленты, платформа отображает свойствами KeyTip ленты, когда пользователь нажимает клавишу ALT и клавишу F10.  
+### <a name="remarks"></a>Remarks  
+ When the ribbon keytips feature is enabled, the framework displays ribbon keytips when the user presses the ALT key or the F10 key.  
   
-##  <a name="addtolistbox"></a>CMFCRibbonBaseElement::AddToListBox  
- Добавляет элемент ленты к окну списка команд указанной ленты.  
+##  <a name="addtolistbox"></a>  CMFCRibbonBaseElement::AddToListBox  
+ Adds a ribbon element to the specified ribbon commands list box.  
   
 ```  
 virtual int AddToListBox(
@@ -343,114 +455,114 @@ virtual int AddToListBox(
     BOOL bDeep);
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
  [in] `pWndListBox`  
- Указатель на список команд.  
+ Pointer to a commands list box.  
   
  [in] `bDeep`  
- Этот параметр не используется.  
+ This parameter is not used.  
   
-### <a name="return-value"></a>Возвращаемое значение  
- Отсчитываемый от нуля индекс элемента добавлены ленты.  
+### <a name="return-value"></a>Return Value  
+ The zero-based index of the added ribbon element.  
   
-### <a name="remarks"></a>Примечания  
- Платформа добавляет элементы ленты список команд, чтобы дать пользователю возможность настроить пользовательский интерфейс.  
+### <a name="remarks"></a>Remarks  
+ The framework adds ribbon elements to a commands list box to enable the user to customize the user interface.  
   
-##  <a name="canbeaddedtoquickaccesstoolbar"></a>CMFCRibbonBaseElement::CanBeAddedToQuickAccessToolBar  
- Указывает, можно ли добавить элемент ленты на панель быстрого доступа.  
+##  <a name="canbeaddedtoquickaccesstoolbar"></a>  CMFCRibbonBaseElement::CanBeAddedToQuickAccessToolBar  
+ Indicates whether the ribbon element can be added to the quick access toolbar.  
   
 ```  
 virtual BOOL CanBeAddedToQuickAccessToolBar() const;  
 ```  
   
-### <a name="return-value"></a>Возвращаемое значение  
- `TRUE`Если элемент может быть добавлен; в противном случае — `FALSE`.  
+### <a name="return-value"></a>Return Value  
+ `TRUE` if the element can be added; otherwise, `FALSE`.  
   
-### <a name="remarks"></a>Примечания  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="canbecompacted"></a>CMFCRibbonBaseElement::CanBeCompacted  
- Указывает, может ли быть compact размер элемента ленты.  
+##  <a name="canbecompacted"></a>  CMFCRibbonBaseElement::CanBeCompacted  
+ Indicates whether the size of the ribbon element can be compact.  
   
 ```  
 virtual BOOL CanBeCompacted() const;  
 ```  
   
-### <a name="return-value"></a>Возвращаемое значение  
- `TRUE`Если размер элемента ленты можно compact; в противном случае — `FALSE`.  
+### <a name="return-value"></a>Return Value  
+ `TRUE` if the size of the ribbon element can be compact; otherwise, `FALSE`.  
   
-### <a name="remarks"></a>Примечания  
- Размер элемента ленты можно compact, промежуточные и большой.  
+### <a name="remarks"></a>Remarks  
+ The size of a ribbon element can be compact, intermediate, or large.  
   
-##  <a name="canbestretched"></a>CMFCRibbonBaseElement::CanBeStretched  
- Указывает ли высота элемента ленты может увеличиваться по вертикали в высоту строки ленты.  
+##  <a name="canbestretched"></a>  CMFCRibbonBaseElement::CanBeStretched  
+ Indicates whether the height of the ribbon element can increase vertically to the height of a ribbon row.  
   
 ```  
 virtual BOOL CanBeStretched();
 ```  
   
-### <a name="return-value"></a>Возвращаемое значение  
- Всегда возвращает значение `TRUE`.  
+### <a name="return-value"></a>Return Value  
+ Always returns `TRUE`.  
   
-### <a name="remarks"></a>Примечания  
- По умолчанию этот метод всегда возвращает `TRUE`. Переопределите этот метод, чтобы указать ли высота элемента ленты может увеличиваться по вертикали в высоту строки ленты.  
+### <a name="remarks"></a>Remarks  
+ By default this method always returns `TRUE`. Override this method to indicate whether the height of the ribbon element can increase vertically to the height of a ribbon row.  
   
-##  <a name="canbestretchedhorizontally"></a>CMFCRibbonBaseElement::CanBeStretchedHorizontally  
- Указывает, можно ли изменить ширину элемента ленты.  
+##  <a name="canbestretchedhorizontally"></a>  CMFCRibbonBaseElement::CanBeStretchedHorizontally  
+ Indicates whether the width of the ribbon element can change.  
   
 ```  
 virtual BOOL CanBeStretchedHorizontally();
 ```  
   
-### <a name="return-value"></a>Возвращаемое значение  
- Всегда возвращает значение `FALSE`.  
+### <a name="return-value"></a>Return Value  
+ Always returns `FALSE`.  
   
-### <a name="remarks"></a>Примечания  
- По умолчанию этот метод всегда возвращает `FALSE`. Переопределите этот метод, чтобы указать, можно ли изменить ширину элемента ленты.  
+### <a name="remarks"></a>Remarks  
+ By default this method always returns `FALSE`. Override this method to indicate whether the width of the ribbon element can change.  
   
-##  <a name="cleanupsizes"></a>CMFCRibbonBaseElement::CleanUpSizes  
- Очищает параметры измерения для элемента ленты.  
+##  <a name="cleanupsizes"></a>  CMFCRibbonBaseElement::CleanUpSizes  
+ Cleans up the dimension settings for the ribbon element.  
   
 ```  
 virtual void CleanUpSizes();
 ```  
   
-### <a name="remarks"></a>Примечания  
- По умолчанию этот метод не выполняет никаких действий. Переопределите этот метод в производном классе, чтобы сбросить параметры измерения для элемента ленты.  
+### <a name="remarks"></a>Remarks  
+ By default this method does nothing. Override this method in a derived class to reset the dimension settings for the ribbon element.  
   
-##  <a name="closepopupmenu"></a>CMFCRibbonBaseElement::ClosePopupMenu  
- Закрытие контекстного меню для элемента ленты.  
+##  <a name="closepopupmenu"></a>  CMFCRibbonBaseElement::ClosePopupMenu  
+ Closes the pop-up menu for the ribbon element.  
   
 ```  
 virtual void ClosePopupMenu();
 ```  
   
-### <a name="remarks"></a>Примечания  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="copyfrom"></a>CMFCRibbonBaseElement::CopyFrom  
- Копирует состояние указанного [CMFCRibbonBaseElement](../../mfc/reference/cmfcribbonbaseelement-class.md) на текущий объект.  
+##  <a name="copyfrom"></a>  CMFCRibbonBaseElement::CopyFrom  
+ Copies the state of the specified [CMFCRibbonBaseElement](../../mfc/reference/cmfcribbonbaseelement-class.md) to the current object.  
   
 ```  
 virtual void CopyFrom(const CMFCRibbonBaseElement& src);
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
  [in] `src`  
- Источник [CMFCRibbonBaseElement](../../mfc/reference/cmfcribbonbaseelement-class.md) объекта.  
+ The source [CMFCRibbonBaseElement](../../mfc/reference/cmfcribbonbaseelement-class.md) object.  
   
-### <a name="remarks"></a>Примечания  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="destroyctrl"></a>CMFCRibbonBaseElement::DestroyCtrl  
- Удаляет элемент ленты.  
+##  <a name="destroyctrl"></a>  CMFCRibbonBaseElement::DestroyCtrl  
+ Destroys the ribbon element.  
   
 ```  
 virtual void DestroyCtrl();
 ```  
   
-### <a name="remarks"></a>Примечания  
- По умолчанию этот метод не выполняет никаких действий. Переопределите этот метод в производном классе для уничтожения элемента ленты.  
+### <a name="remarks"></a>Remarks  
+ By default this method does nothing. Override this method in a derived class to destroy the ribbon element.  
   
-##  <a name="drawimage"></a>CMFCRibbonBaseElement::DrawImage  
- Рисует изображение для элемента ленты.  
+##  <a name="drawimage"></a>  CMFCRibbonBaseElement::DrawImage  
+ Draws the image for the ribbon element.  
   
 ```  
 virtual void DrawImage(
@@ -459,157 +571,157 @@ virtual void DrawImage(
     CRect rectImage);
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
  [in] `pDC`  
- Указатель на контекст устройства.  
+ Pointer to a device context.  
   
  [in] `type`  
- Значение перечисления тип изображения. Список возможных значений см.  
+ An image type enumerated value. See the Remarks section for a list of possible values.  
   
  [in] `rectImage`  
- Прямоугольник изображения.  
+ The image rectangle.  
   
-### <a name="remarks"></a>Примечания  
- По умолчанию этот метод не выполняет никаких действий. Переопределите этот метод в производном классе для рисования изображения для элемента ленты.  
+### <a name="remarks"></a>Remarks  
+ By default this method does nothing. Override this method in a derived class to draw the image for the ribbon element.  
   
- В следующей таблице перечислены возможные значения для `type` параметр:  
+ The following table lists possible values for the `type` parameter:  
   
  `RibbonImageLarge`  
- Большой размер изображения размером 32 x 32 пикселя.  
+ Large 32x32 pixel image size.  
   
  `RibbonImageSmall`  
- Небольшой размер изображения 16 x 16 пикселей.  
+ Small 16x16 pixel image size.  
   
-##  <a name="find"></a>CMFCRibbonBaseElement::Find  
- Возвращает заданный указатель, он указывает на текущий объект.  
+##  <a name="find"></a>  CMFCRibbonBaseElement::Find  
+ Returns the specified pointer if it points to the current object.  
   
 ```  
 virtual CMFCRibbonBaseElement* Find(const CMFCRibbonBaseElement* pElement);
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
  [in] `pElement`  
- Указатель на элемент ленты.  
+ Pointer to a ribbon element.  
   
-### <a name="return-value"></a>Возвращаемое значение  
- Указатель на элемент ленты при `pElement` указывает на текущий объект; в противном случае `NULL`.  
+### <a name="return-value"></a>Return Value  
+ A pointer to the ribbon element if `pElement` points to the current object; otherwise `NULL`.  
   
-### <a name="remarks"></a>Примечания  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="findbydata"></a>CMFCRibbonBaseElement::FindByData  
- Извлекает указатель на элемент ленты, если он содержит указанные данные.  
+##  <a name="findbydata"></a>  CMFCRibbonBaseElement::FindByData  
+ Retrieves a pointer to the ribbon element if it contains the specified data.  
   
 ```  
 virtual CMFCRibbonBaseElement* FindByData(DWORD_PTR dwData);
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
  [in] `dwData`  
- Данные, связанные с элементом ленты.  
+ The data associated with a ribbon element.  
   
-### <a name="return-value"></a>Возвращаемое значение  
- Указатель на элемент ленты, если он содержит указанные данные; в противном случае `NULL`.  
+### <a name="return-value"></a>Return Value  
+ A pointer to the ribbon element if it contains the specified data; otherwise `NULL`.  
   
-### <a name="remarks"></a>Примечания  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="findbyid"></a>CMFCRibbonBaseElement::FindByID  
- Извлекает указатель на элемент ленты, если этот элемент идентифицируется по указанному идентификатору команды.  
+##  <a name="findbyid"></a>  CMFCRibbonBaseElement::FindByID  
+ Retrieves a pointer to the ribbon element if that element is identified by the specified command ID.  
   
 ```  
 virtual CMFCRibbonBaseElement* FindByID(UINT uiCmdID);
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
  [in] `uiCmdID`  
- Идентификатор команды для элемента ленты.  
+ Command ID for a ribbon element.  
   
-### <a name="return-value"></a>Возвращаемое значение  
- Указатель на элемент ленты, если этот элемент, заданный параметром заданный идентификатор команды; в противном случае `NULL`.  
+### <a name="return-value"></a>Return Value  
+ A pointer to the ribbon element if that element is identified by the specified command ID; otherwise `NULL`.  
   
-### <a name="remarks"></a>Примечания  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="findbyoriginal"></a>CMFCRibbonBaseElement::FindByOriginal  
- Извлекает указатель на текущий элемент ленты, если его исходного элемента ленты соответствует элементу указанной ленты.  
+##  <a name="findbyoriginal"></a>  CMFCRibbonBaseElement::FindByOriginal  
+ Retrieves a pointer to the current ribbon element if its original ribbon element matches the specified ribbon element.  
   
 ```  
 virtual CMFCRibbonBaseElement* FindByOriginal(CMFCRibbonBaseElement* pOriginal);
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
  [in] `pOriginal`  
- Указатель на элемент ленты.  
+ Pointer to a ribbon element.  
   
-### <a name="return-value"></a>Возвращаемое значение  
- Указатель на элемент ленты, если его исходного элемента ленты соответствует элементу указанной ленты; в противном случае `NULL`.  
+### <a name="return-value"></a>Return Value  
+ A pointer to the ribbon element if its original ribbon element matches the specified ribbon element; otherwise `NULL`.  
   
-### <a name="remarks"></a>Примечания  
- Элементы ленты, которые будут скопированы в другой контейнер сохраняют указатель на исходный элемент ленты.  
+### <a name="remarks"></a>Remarks  
+ Ribbon elements that are copied to another container retain a pointer to the original ribbon element.  
   
-##  <a name="getcompactsize"></a>CMFCRibbonBaseElement::GetCompactSize  
- Возвращает компактный размер элемента ленты.  
+##  <a name="getcompactsize"></a>  CMFCRibbonBaseElement::GetCompactSize  
+ Returns the compact size of the ribbon element.  
   
 ```  
 virtual CSize GetCompactSize(CDC* pDC);
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
  [in] `pDC`  
- Указатель на контекст устройства.  
+ A pointer to a device context.  
   
-### <a name="return-value"></a>Возвращаемое значение  
- Compact размер элемента ленты.  
+### <a name="return-value"></a>Return Value  
+ The compact size of a ribbon element.  
   
 > [!NOTE]
->  Компактные размеры означает, что элемент ленты усекается (отображает небольшое изображение или изображение без текста).  
+>  The compact size means that the ribbon element is truncated (it displays a small image, or an image without a text).  
   
-##  <a name="getdata"></a>CMFCRibbonBaseElement::GetData  
- Получает определяемые пользователем данные, связанные с элементом ленты.  
+##  <a name="getdata"></a>  CMFCRibbonBaseElement::GetData  
+ Retrieves the user-defined data associated with the ribbon element.  
   
 ```  
 DWORD_PTR GetData() const;  
 ```  
   
-### <a name="return-value"></a>Возвращаемое значение  
- Определяемые пользователем данные, связанные с элементом ленты.  
+### <a name="return-value"></a>Return Value  
+ The user-defined data associated with the ribbon element.  
   
-##  <a name="getdescription"></a>CMFCRibbonBaseElement::GetDescription  
- Возвращает описание элемента ленты.  
+##  <a name="getdescription"></a>  CMFCRibbonBaseElement::GetDescription  
+ Returns the description of the ribbon element.  
   
 ```  
 virtual CString GetDescription() const;  
 ```  
   
-### <a name="return-value"></a>Возвращаемое значение  
- Описание элемента ленты. Это описание будет отображаться в строке состояния или во всплывающей подсказке или в разделе «меню», если элемент ленты находится на [CMFCRibbonMainPanel класса](../../mfc/reference/cmfcribbonmainpanel-class.md).  
+### <a name="return-value"></a>Return Value  
+ The ribbon element description. The description is displayed either on the status bar, or in a tooltip, or under the menu button if the ribbon element is located on the [CMFCRibbonMainPanel Class](../../mfc/reference/cmfcribbonmainpanel-class.md).  
   
-##  <a name="getdroppeddown"></a>CMFCRibbonBaseElement::GetDroppedDown  
- Извлекает указатель на элемент ленты, если выстроены его во всплывающем меню.  
+##  <a name="getdroppeddown"></a>  CMFCRibbonBaseElement::GetDroppedDown  
+ Retrieves a pointer to the ribbon element if its pop-up menu is dropped down.  
   
 ```  
 virtual CMFCRibbonBaseElement* GetDroppedDown();
 ```  
   
-### <a name="return-value"></a>Возвращаемое значение  
- Указатель на элемент ленты, если его во всплывающем меню удаляется вниз; в противном случае `NULL`.  
+### <a name="return-value"></a>Return Value  
+ A pointer to the ribbon element if its pop-up menu is dropped down; otherwise `NULL`.  
   
-### <a name="remarks"></a>Примечания  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="getelements"></a>CMFCRibbonBaseElement::GetElements  
- Добавляет элемент в текущей ленты в указанный массив.  
+##  <a name="getelements"></a>  CMFCRibbonBaseElement::GetElements  
+ Adds the current ribbon element to the specified array.  
   
 ```  
 virtual void GetElements(
     CArray<CMFCRibbonBaseElement*, CMFCRibbonBaseElement*>& arElements);
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
  [in, out] `arElements`  
- Массив элементов ленты.  
+ An array of ribbon elements.  
   
-### <a name="remarks"></a>Примечания  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="getelementsbyid"></a>CMFCRibbonBaseElement::GetElementsByID  
- Добавляет текущий элемент ленты в указанный массив, если текущий элемент ленты содержит идентификатор указанной команды.  
+##  <a name="getelementsbyid"></a>  CMFCRibbonBaseElement::GetElementsByID  
+ Adds the current ribbon element to the specified array if the current ribbon element contains the specified command ID.  
   
 ```  
 virtual void GetElementsByID(
@@ -617,73 +729,73 @@ virtual void GetElementsByID(
     CArray<CMFCRibbonBaseElement*, CMFCRibbonBaseElement*>& arElements);
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
  [in] `uiCmdID`  
- Идентификатор команды элемента ленты.  
+ Command ID of a ribbon element.  
   
  [in] `arElements`  
- Массив элементов ленты.  
+ An array of ribbon elements.  
   
-### <a name="remarks"></a>Примечания  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="gethighlighted"></a>CMFCRibbonBaseElement::GetHighlighted  
- Извлекает указатель на элемент ленты, если он выделен.  
+##  <a name="gethighlighted"></a>  CMFCRibbonBaseElement::GetHighlighted  
+ Retrieves a pointer to the ribbon element if it is highlighted.  
   
 ```  
 virtual CMFCRibbonBaseElement* GetHighlighted();
 ```  
   
-### <a name="return-value"></a>Возвращаемое значение  
- Указатель на элемент ленты, если он выделен; в противном случае `NULL`.  
+### <a name="return-value"></a>Return Value  
+ A pointer to the ribbon element if it is highlighted; otherwise `NULL`.  
   
-### <a name="remarks"></a>Примечания  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="getid"></a>CMFCRibbonBaseElement::GetID  
- Возвращает идентификатор команды элемента ленты.  
+##  <a name="getid"></a>  CMFCRibbonBaseElement::GetID  
+ Returns the command ID of the ribbon element.  
   
 ```  
 UINT GetID() const;  
 ```  
   
-### <a name="return-value"></a>Возвращаемое значение  
- Идентификатор команды элемента ленты.  
+### <a name="return-value"></a>Return Value  
+ The command ID of the ribbon element.  
   
-##  <a name="getimagesize"></a>CMFCRibbonBaseElement::GetImageSize  
- Возвращает размер изображения элемента ленты.  
+##  <a name="getimagesize"></a>  CMFCRibbonBaseElement::GetImageSize  
+ Returns the image size of the ribbon element.  
   
 ```  
 virtual CSize GetImageSize(RibbonImageType R) const;  
 ```  
   
-### <a name="return-value"></a>Возвращаемое значение  
- Размер изображения элемента ленты.  
+### <a name="return-value"></a>Return Value  
+ The image size of the ribbon element.  
   
-##  <a name="getintermediatesize"></a>CMFCRibbonBaseElement::GetIntermediateSize  
- Возвращает размер элемента ленты в промежуточное состояние.  
+##  <a name="getintermediatesize"></a>  CMFCRibbonBaseElement::GetIntermediateSize  
+ Returns the size of the ribbon element in its intermediate state.  
   
 ```  
 virtual CSize GetIntermediateSize(CDC* pDC);
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
  [in] `pDC`  
- Указатель на контекст устройства.  
+ A pointer to a device context.  
   
-### <a name="return-value"></a>Возвращаемое значение  
- Размер элемента ленты в промежуточном состоянии.  
+### <a name="return-value"></a>Return Value  
+ The size of the ribbon element in its intermediate state.  
   
-##  <a name="getkeys"></a>CMFCRibbonBaseElement::GetKeys  
- Возвращает значение свойства keytip, связанный с элементом ленты.  
+##  <a name="getkeys"></a>  CMFCRibbonBaseElement::GetKeys  
+ Returns the keytip associated with the ribbon element.  
   
 ```  
 LPCTSTR GetKeys() const;  
 ```  
   
-### <a name="return-value"></a>Возвращаемое значение  
- Значение свойства keytip, связанный с элементом ленты.  
+### <a name="return-value"></a>Return Value  
+ A keytip associated with the ribbon element.  
   
-##  <a name="getkeytiprect"></a>CMFCRibbonBaseElement::GetKeyTipRect  
- Получает значение свойства keytip ограничивающий прямоугольник для элемента ленты.  
+##  <a name="getkeytiprect"></a>  CMFCRibbonBaseElement::GetKeyTipRect  
+ Retrieves the keytip boundary rectangle for the ribbon element.  
   
 ```  
 virtual CRect GetKeyTipRect(
@@ -691,710 +803,710 @@ virtual CRect GetKeyTipRect(
     BOOL bIsMenu);
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
  [in] `pDC`  
- Указатель на контекст устройства.  
+ Pointer to a device context.  
   
  [in] `bIsMenu`  
- `TRUE`Если элемент ленты отображаются во всплывающем меню. в противном случае `FALSE`.  
+ `TRUE` if the ribbon element displays a pop-up menu; otherwise `FALSE`.  
   
-### <a name="return-value"></a>Возвращаемое значение  
- Всегда возвращает прямоугольник с значение 0.  
+### <a name="return-value"></a>Return Value  
+ Always returns a rectangle with 0 values.  
   
-### <a name="remarks"></a>Примечания  
- Переопределите этот метод в производном классе, чтобы получить значение свойства keytip прямоугольник границы.  
+### <a name="remarks"></a>Remarks  
+ Override this method in a derived class to return the keytip boundary rectangle.  
   
-##  <a name="getkeytipsize"></a>CMFCRibbonBaseElement::GetKeyTipSize  
- Получает размер текста значение свойства keytip.  
+##  <a name="getkeytipsize"></a>  CMFCRibbonBaseElement::GetKeyTipSize  
+ Retrieves the size of the keytip text.  
   
 ```  
 virtual CSize GetKeyTipSize(CDC* pDC);
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
  [in] `pDC`  
- Указатель на контекст устройства.  
+ Pointer to a device context.  
   
-### <a name="return-value"></a>Возвращаемое значение  
- Размер текста значение свойства keytip.  
+### <a name="return-value"></a>Return Value  
+ The size of the keytip text.  
   
-### <a name="remarks"></a>Примечания  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="getlocationingroup"></a>CMFCRibbonBaseElement::GetLocationInGroup  
- Указывает папку отображения элемента ленты в группу ленты.  
+##  <a name="getlocationingroup"></a>  CMFCRibbonBaseElement::GetLocationInGroup  
+ Indicates the display location of the ribbon element in a ribbon group.  
   
 ```  
 RibbonElementLocation GetLocationInGroup() const;  
 ```  
   
-### <a name="return-value"></a>Возвращаемое значение  
- A `RibbonElementLocation` значение перечисления. В следующей таблице перечислены возможные значения.  
+### <a name="return-value"></a>Return Value  
+ A `RibbonElementLocation` enumerated value. The following table lists possible values.  
   
-|Значение|Описание|  
+|Value|Description|  
 |-----------|-----------------|  
-|`RibbonElementNotInGroup`|Элемент ленты не содержится в группу ленты.|  
-|`RibbonElementSingleInGroup`|Элемент лента отображается как единственный элемент в группу ленты.|  
-|`RibbonElementFirstInGroup`|Элемент лента отображается на левой стороне группу ленты.|  
-|`RibbonElementLastInGroup`|Элемент лента отображается в правом конце группы ленты.|  
-|`RibbonElementMiddleInGroup`|Элемент лента не отображается на любом конце группы ленты.|  
+|`RibbonElementNotInGroup`|The ribbon element is not contained in a ribbon group.|  
+|`RibbonElementSingleInGroup`|The ribbon element is displayed as the only item in a ribbon group.|  
+|`RibbonElementFirstInGroup`|The ribbon element is displayed on the left end of a ribbon group.|  
+|`RibbonElementLastInGroup`|The ribbon element is displayed on the right end of a ribbon group.|  
+|`RibbonElementMiddleInGroup`|The ribbon element is not displayed on either end of a ribbon group.|  
   
-### <a name="remarks"></a>Примечания  
- Группы элементов ленты только выравниваются по горизонтали.  
+### <a name="remarks"></a>Remarks  
+ Ribbon element groups are only aligned horizontally.  
   
-##  <a name="getmenukeys"></a>CMFCRibbonBaseElement::GetMenuKeys  
- Возвращает значение свойства keytip меню для элемента ленты.  
+##  <a name="getmenukeys"></a>  CMFCRibbonBaseElement::GetMenuKeys  
+ Returns the menu keytip for the ribbon element.  
   
 ```  
 LPCTSTR GetMenuKeys() const;  
 ```  
   
-### <a name="return-value"></a>Возвращаемое значение  
- Выберите значение свойства keytip связанный с элементом ленты.  
+### <a name="return-value"></a>Return Value  
+ The menu keytip associated with the ribbon element.  
   
-### <a name="remarks"></a>Примечания  
- При вызове значение свойства keytip меню появляется всплывающее меню.  
+### <a name="remarks"></a>Remarks  
+ When invoked, a menu keytip displays a pop-up menu.  
   
-##  <a name="getnotifyid"></a>CMFCRibbonBaseElement::GetNotifyID  
- Извлекает идентификатор команды уведомления для элемента ленты.  
+##  <a name="getnotifyid"></a>  CMFCRibbonBaseElement::GetNotifyID  
+ Retrieves the notification command ID for the ribbon element.  
   
 ```  
 virtual UINT GetNotifyID();
 ```  
   
-### <a name="return-value"></a>Возвращаемое значение  
- Идентификатор команды уведомления.  
+### <a name="return-value"></a>Return Value  
+ The notification command ID.  
   
-### <a name="remarks"></a>Примечания  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="getoriginal"></a>CMFCRibbonBaseElement::GetOriginal  
- Получает исходный элемент ленты.  
+##  <a name="getoriginal"></a>  CMFCRibbonBaseElement::GetOriginal  
+ Retrieves the original ribbon element.  
   
 ```  
 CMFCRibbonBaseElement* GetOriginal() const;  
 ```  
   
-### <a name="return-value"></a>Возвращаемое значение  
- Указатель на исходный элемент ленты.  
+### <a name="return-value"></a>Return Value  
+ A pointer to the original ribbon element.  
   
-### <a name="remarks"></a>Примечания  
- Элементы ленты, которые будут скопированы в другой контейнер сохраняют указатель на исходный элемент ленты.  
+### <a name="remarks"></a>Remarks  
+ Ribbon elements that are copied to another container retain a pointer to the original ribbon element.  
   
-##  <a name="getparentcategory"></a>CMFCRibbonBaseElement::GetParentCategory  
- Получает категорию элемента ленты.  
+##  <a name="getparentcategory"></a>  CMFCRibbonBaseElement::GetParentCategory  
+ Retrieves the ribbon category for the ribbon element.  
   
 ```  
 CMFCRibbonCategory* GetParentCategory() const;  
 ```  
   
-### <a name="return-value"></a>Возвращаемое значение  
- Указатель категория ленты.  
+### <a name="return-value"></a>Return Value  
+ A pointer to the ribbon category.  
   
-### <a name="remarks"></a>Примечания  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="getparentpanel"></a>CMFCRibbonBaseElement::GetParentPanel  
- Получает панель ленты, который содержит элемент ленты.  
+##  <a name="getparentpanel"></a>  CMFCRibbonBaseElement::GetParentPanel  
+ Retrieves the ribbon panel that contains the ribbon element.  
   
 ```  
 virtual CMFCRibbonPanel* GetParentPanel() const;  
 ```  
   
-### <a name="return-value"></a>Возвращаемое значение  
- Указатель на панель ленты, содержащей элемент ленты.  
+### <a name="return-value"></a>Return Value  
+ A pointer to the ribbon panel that contains the ribbon element.  
   
-### <a name="remarks"></a>Примечания  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="getparentribbonbar"></a>CMFCRibbonBaseElement::GetParentRibbonBar  
- Извлекает строки ленты родительского элемента ленты.  
+##  <a name="getparentribbonbar"></a>  CMFCRibbonBaseElement::GetParentRibbonBar  
+ Retrieves the parent ribbon bar for the ribbon element.  
   
 ```  
 CMFCRibbonBar* GetParentRibbonBar() const;  
 ```  
   
-### <a name="return-value"></a>Возвращаемое значение  
- Указатель на панель ленты родительского элемента ленты.  
+### <a name="return-value"></a>Return Value  
+ A pointer to the parent ribbon bar for the ribbon element.  
   
-### <a name="remarks"></a>Примечания  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="getparentwnd"></a>CMFCRibbonBaseElement::GetParentWnd  
- Извлекает родительское окно для элемента ленты.  
+##  <a name="getparentwnd"></a>  CMFCRibbonBaseElement::GetParentWnd  
+ Retrieves the parent window for the ribbon element.  
   
 ```  
 virtual CWnd* GetParentWnd() const;  
 ```  
   
-### <a name="return-value"></a>Возвращаемое значение  
- Указатель на родительское окно для элемента ленты, если метод был выполнен успешно; в противном случае — `NULL`.  
+### <a name="return-value"></a>Return Value  
+ A pointer to the parent window for the ribbon element if the method was successful; otherwise, `NULL`.  
   
-### <a name="remarks"></a>Примечания  
- Родительское окно для элемента ленты является [класса CMFCRibbonBar](../../mfc/reference/cmfcribbonbar-class.md) или [CMFCRibbonPanelMenuBar](http://msdn.microsoft.com/en-us/7bd4b986-8b7b-493e-9746-bd3161b78581).  
+### <a name="remarks"></a>Remarks  
+ The parent window for a ribbon element is a [CMFCRibbonBar Class](../../mfc/reference/cmfcribbonbar-class.md) or a [CMFCRibbonPanelMenuBar](http://msdn.microsoft.com/en-us/7bd4b986-8b7b-493e-9746-bd3161b78581).  
   
-##  <a name="getpressed"></a>CMFCRibbonBaseElement::GetPressed  
- Извлекает указатель на элемент ленты, если пользователь нажимает ее в настоящее время.  
+##  <a name="getpressed"></a>  CMFCRibbonBaseElement::GetPressed  
+ Retrieves a pointer to the ribbon element if the user currently presses it.  
   
 ```  
 virtual CMFCRibbonBaseElement* GetPressed();
 ```  
   
-### <a name="return-value"></a>Возвращаемое значение  
- Указатель на элемент ленты, если пользователь нажимает, в настоящее время. в противном случае — `NULL`.  
+### <a name="return-value"></a>Return Value  
+ A pointer to the ribbon element if the user currently presses it; otherwise, `NULL`.  
   
-### <a name="remarks"></a>Примечания  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="getquickaccesstoolbarid"></a>CMFCRibbonBaseElement::GetQuickAccessToolBarID  
- Извлекает идентификатор команды элемента ленты, когда он находится в панель быстрого доступа.  
+##  <a name="getquickaccesstoolbarid"></a>  CMFCRibbonBaseElement::GetQuickAccessToolBarID  
+ Retrieves the command ID of the ribbon element when it is located in the quick access toolbar.  
   
 ```  
 virtual UINT GetQuickAccessToolBarID() const;  
 ```  
   
-### <a name="return-value"></a>Возвращаемое значение  
- Идентификатор команды элемента ленты, когда он находится в панель быстрого доступа.  
+### <a name="return-value"></a>Return Value  
+ The command ID of the ribbon element when it is located in the quick access toolbar.  
   
-### <a name="remarks"></a>Примечания  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="getrect"></a>CMFCRibbonBaseElement::GetRect  
- Возвращает прямоугольник, ограничивающий элемента ленты.  
+##  <a name="getrect"></a>  CMFCRibbonBaseElement::GetRect  
+ Returns the bounding rectangle of the ribbon element.  
   
 ```  
 CRect GetRect() const;  
 ```  
   
-### <a name="return-value"></a>Возвращаемое значение  
- Ограничивающий прямоугольник элемента ленты. Положение прямоугольника — в координатах родительского элемента управления ленты.  
+### <a name="return-value"></a>Return Value  
+ The bounding rectangle of the ribbon element. The position of the rectangle is in the coordinates of the parent Ribbon control.  
   
-##  <a name="getregularsize"></a>CMFCRibbonBaseElement::GetRegularSize  
- Возвращает стандартный размер элемента ленты.  
+##  <a name="getregularsize"></a>  CMFCRibbonBaseElement::GetRegularSize  
+ Returns the regular size of the ribbon element.  
   
 ```  
 virtual CSize GetRegularSize(CDC* pDC) = 0;  
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
  [in] `pDC`  
- Указатель на контекст устройства.  
+ A pointer to a device context.  
   
-### <a name="return-value"></a>Возвращаемое значение  
- Обычный размер элемента ленты.  
+### <a name="return-value"></a>Return Value  
+ The regular size of the ribbon element.  
   
-### <a name="remarks"></a>Примечания  
+### <a name="remarks"></a>Remarks  
   
 > [!NOTE]
->  Обычный размер — максимально возможный размер элемента ленты.  
+>  The regular size is the maximal possible size of the ribbon element.  
   
-##  <a name="getsize"></a>CMFCRibbonBaseElement::GetSize  
- Возвращает текущий размер элемента ленты.  
+##  <a name="getsize"></a>  CMFCRibbonBaseElement::GetSize  
+ Returns the current size of the ribbon element.  
   
 ```  
 virtual CSize GetSize(CDC* pDC);
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
  [in] `pDC`  
- Указатель на контекст устройства.  
+ A pointer to a device context.  
   
-### <a name="return-value"></a>Возвращаемое значение  
- Текущий размер элемента ленты.  
+### <a name="return-value"></a>Return Value  
+ The current size of the ribbon element.  
   
-##  <a name="gettext"></a>CMFCRibbonBaseElement::GetText  
- Возвращает текст, связанный с элементом ленты.  
+##  <a name="gettext"></a>  CMFCRibbonBaseElement::GetText  
+ Returns the text associated with the ribbon element.  
   
 ```  
 LPCTSTR GetText() const;  
 ```  
   
-### <a name="return-value"></a>Возвращаемое значение  
- Текст, связанный с элементом ленты.  
+### <a name="return-value"></a>Return Value  
+ The text associated with the ribbon element.  
   
-##  <a name="gettooltiptext"></a>CMFCRibbonBaseElement::GetToolTipText  
- Возвращает текст всплывающей подсказки элемента ленты.  
+##  <a name="gettooltiptext"></a>  CMFCRibbonBaseElement::GetToolTipText  
+ Returns tooltip text of the ribbon element.  
   
 ```  
 virtual CString GetToolTipText() const;  
 ```  
   
-### <a name="return-value"></a>Возвращаемое значение  
- Текст подсказки для элемента ленты.  
+### <a name="return-value"></a>Return Value  
+ The tooltip text of the ribbon element.  
   
-##  <a name="gettoplevelribbonbar"></a>CMFCRibbonBaseElement::GetTopLevelRibbonBar  
- Извлекает строки верхнего уровня ленты для элемента ленты.  
+##  <a name="gettoplevelribbonbar"></a>  CMFCRibbonBaseElement::GetTopLevelRibbonBar  
+ Retrieves the top level ribbon bar for the ribbon element.  
   
 ```  
 CMFCRibbonBar* GetTopLevelRibbonBar() const;  
 ```  
   
-### <a name="return-value"></a>Возвращаемое значение  
- Указатель на панель ленты верхнего уровня для элемента ленты, если метод был выполнен успешно; в противном случае — `NULL`.  
+### <a name="return-value"></a>Return Value  
+ A pointer to the top level ribbon bar for the ribbon element if the method was successful; otherwise, `NULL`.  
   
-### <a name="remarks"></a>Примечания  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="hascompactmode"></a>CMFCRibbonBaseElement::HasCompactMode  
- Задает, доступен ли для элемента ленты компактный режим.  
+##  <a name="hascompactmode"></a>  CMFCRibbonBaseElement::HasCompactMode  
+ Specifies whether the ribbon element has a compact mode.  
   
 ```  
 virtual BOOL HasCompactMode() const;  
 ```  
   
-### <a name="return-value"></a>Возвращаемое значение  
- `TRUE`Если у элемента ленты компактный режим. В противном случае — значение `FALSE`.  
+### <a name="return-value"></a>Return Value  
+ `TRUE` if the ribbon element has a compact mode. `FALSE` otherwise.  
   
-### <a name="remarks"></a>Примечания  
+### <a name="remarks"></a>Remarks  
   
 > [!NOTE]
->  В компактном режиме элемент отображает только небольшое изображение.  
+>  In the compact mode, an element displays a small image only.  
   
-##  <a name="hasintermediatemode"></a>CMFCRibbonBaseElement::HasIntermediateMode  
- Задает, доступен ли для элемента ленты промежуточный режим.  
+##  <a name="hasintermediatemode"></a>  CMFCRibbonBaseElement::HasIntermediateMode  
+ Specifies whether the ribbon element has an intermediate mode.  
   
 ```  
 virtual BOOL HasIntermediateMode() const;  
 ```  
   
-### <a name="return-value"></a>Возвращаемое значение  
- `TRUE`Если у элемента ленты промежуточный режим `FALSE` в противном случае. В промежуточном режиме элемент отображает изображение и текст в правой части изображения.  
+### <a name="return-value"></a>Return Value  
+ `TRUE` if the ribbon element has an intermediate mode, `FALSE` otherwise. In the intermediate mode, an element displays a small image and text on the right of the image.  
   
-### <a name="remarks"></a>Примечания  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="haslargemode"></a>CMFCRibbonBaseElement::HasLargeMode  
- Определяет, доступен ли для элемента ленты крупный режим.  
+##  <a name="haslargemode"></a>  CMFCRibbonBaseElement::HasLargeMode  
+ Determines whether the ribbon element has a large mode.  
   
 ```  
 virtual BOOL HasLargeMode() const;  
 ```  
   
-### <a name="return-value"></a>Возвращаемое значение  
- `TRUE`Если элемент ленты имеет большой режиме. В противном случае — значение `FALSE`.  
+### <a name="return-value"></a>Return Value  
+ `TRUE` if the ribbon element has a large mode. `FALSE` otherwise.  
   
-### <a name="remarks"></a>Примечания  
- В режиме больших элемент может занять всю высоту родительской панели.  
+### <a name="remarks"></a>Remarks  
+ In the large mode, an element can take the full height of the parent panel.  
   
-##  <a name="hasmenu"></a>CMFCRibbonBaseElement::HasMenu  
- Указывает, имеет ли элемент ленты меню.  
+##  <a name="hasmenu"></a>  CMFCRibbonBaseElement::HasMenu  
+ Indicates whether the ribbon element has a menu.  
   
 ```  
 virtual BOOL HasMenu() const;  
 ```  
   
-### <a name="return-value"></a>Возвращаемое значение  
- Всегда возвращает значение `FALSE`.  
+### <a name="return-value"></a>Return Value  
+ Always returns `FALSE`.  
   
-### <a name="remarks"></a>Примечания  
- По умолчанию этот метод всегда возвращает `FALSE`. Переопределите этот метод в производном классе, чтобы указать, имеет ли элемент ленты меню.  
+### <a name="remarks"></a>Remarks  
+ By default this method always returns `FALSE`. Override this method in a derived class to indicate whether the ribbon element has a menu.  
   
-##  <a name="hittest"></a>CMFCRibbonBaseElement::HitTest  
- Извлекает указатель на элемент ленты, если заданная точка находится в нем.  
+##  <a name="hittest"></a>  CMFCRibbonBaseElement::HitTest  
+ Retrieves a pointer to the ribbon element if the specified point is located in it.  
   
 ```  
 virtual CMFCRibbonBaseElement* HitTest(CPoint point);
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
  [in] `point`  
- Этот параметр не используется.  
+ This parameter is not used.  
   
-### <a name="return-value"></a>Возвращаемое значение  
- Указатель на элемент ленты, если он существует; в противном случае `FALSE`.  
+### <a name="return-value"></a>Return Value  
+ A pointer to the ribbon element if it exists; otherwise `FALSE`.  
   
-### <a name="remarks"></a>Примечания  
- По умолчанию этот метод всегда возвращает допустимый указатель на элемент ленты, если он существует. Переопределите этот метод, чтобы указать, если точка находится в элементе ленты.  
+### <a name="remarks"></a>Remarks  
+ By default this method always returns a valid pointer to the ribbon element when it exists. Override this method to indicate if the point resides in the ribbon element.  
   
-##  <a name="isalignbycolumn"></a>CMFCRibbonBaseElement::IsAlignByColumn  
- Указывает ли лента выравнивается по вертикали другие элементы ленты.  
+##  <a name="isalignbycolumn"></a>  CMFCRibbonBaseElement::IsAlignByColumn  
+ Indicates whether the ribbon element is aligned vertically with other ribbon elements.  
   
 ```  
 virtual BOOL IsAlignByColumn() const;  
 ```  
   
-### <a name="return-value"></a>Возвращаемое значение  
- Всегда возвращает значение `TRUE`.  
+### <a name="return-value"></a>Return Value  
+ Always returns `TRUE`.  
   
-### <a name="remarks"></a>Примечания  
- По умолчанию этот метод всегда возвращает `TRUE`. Переопределите этот метод в производном классе, чтобы указать ли производный ленты выравнивается по вертикали другие элементы ленты.  
+### <a name="remarks"></a>Remarks  
+ By default this method always returns `TRUE`. Override this method in a derived class to indicate whether the derived ribbon element is aligned vertically with other ribbon elements.  
   
-##  <a name="isalwayslargeimage"></a>CMFCRibbonBaseElement::IsAlwaysLargeImage  
- Указывает, является ли размер изображения элемента ленты всегда большой.  
+##  <a name="isalwayslargeimage"></a>  CMFCRibbonBaseElement::IsAlwaysLargeImage  
+ Indicates whether the ribbon element image size is always large.  
   
 ```  
 virtual BOOL IsAlwaysLargeImage() const;  
 ```  
   
-### <a name="return-value"></a>Возвращаемое значение  
- `TRUE`Если размер изображения элемента ленты всегда велико; в противном случае `FALSE`.  
+### <a name="return-value"></a>Return Value  
+ `TRUE` if the ribbon element image size is always large; otherwise `FALSE`.  
   
-### <a name="remarks"></a>Примечания  
- Большое изображение размер — 32 x 32 пиксела.  
+### <a name="remarks"></a>Remarks  
+ Large image size is 32 x 32 pixels.  
   
-##  <a name="isautorepeatmode"></a>CMFCRibbonBaseElement::IsAutoRepeatMode  
- Указывает, является ли элемент ленты в режиме автоматического повтора.  
+##  <a name="isautorepeatmode"></a>  CMFCRibbonBaseElement::IsAutoRepeatMode  
+ Indicates whether the ribbon element is in auto repeat mode.  
   
 ```  
 virtual BOOL IsAutoRepeatMode(int& nDelay) const;  
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
  [in] `nDelay`  
- Этот параметр не используется.  
+ This parameter is not used.  
   
-### <a name="return-value"></a>Возвращаемое значение  
- Всегда возвращает значение `FALSE`.  
+### <a name="return-value"></a>Return Value  
+ Always returns `FALSE`.  
   
-### <a name="remarks"></a>Примечания  
- По умолчанию этот метод всегда возвращает `FALSE`. Переопределите этот метод для указания, является элемент ленты в режиме автоматического повтора.  
+### <a name="remarks"></a>Remarks  
+ By default this method always returns `FALSE`. Override this method to indicate whether the ribbon element is in auto repeat mode.  
   
- В автоматически режим повторения отвечает элемент ленты с заданным интервалом, измеряется в миллисекундах, на длительного пользовательский ввод.  
+ In auto repeat mode, the ribbon element responds at a set interval, measured in milliseconds, to sustained user input.  
   
-##  <a name="ischecked"></a>CMFCRibbonBaseElement::IsChecked  
- Указывает, установлен ли флажок элемента ленты.  
+##  <a name="ischecked"></a>  CMFCRibbonBaseElement::IsChecked  
+ Specifies whether the ribbon element is checked.  
   
 ```  
 virtual BOOL IsChecked() const;  
 ```  
   
-### <a name="return-value"></a>Возвращаемое значение  
- `TRUE`Если установлен флажок элемента ленты; в противном случае `FALSE`.  
+### <a name="return-value"></a>Return Value  
+ `TRUE` if the ribbon element is checked; otherwise `FALSE`.  
   
-##  <a name="iscompactmode"></a>CMFCRibbonBaseElement::IsCompactMode  
- Указывает, является ли элемент ленты в компактном режиме.  
+##  <a name="iscompactmode"></a>  CMFCRibbonBaseElement::IsCompactMode  
+ Specifies whether the ribbon element is in a compact mode.  
   
 ```  
 BOOL IsCompactMode() const;  
 ```  
   
-### <a name="return-value"></a>Возвращаемое значение  
- `TRUE`Если элемент ленты в компактном режиме; в противном случае `FALSE`.  
+### <a name="return-value"></a>Return Value  
+ `TRUE` if the ribbon element is in a compact mode; otherwise `FALSE`.  
   
-##  <a name="isdefaultmenulook"></a>CMFCRibbonBaseElement::IsDefaultMenuLook  
- Указывает, установлен ли элемент ленты в виде всплывающих команды.  
+##  <a name="isdefaultmenulook"></a>  CMFCRibbonBaseElement::IsDefaultMenuLook  
+ Indicates whether the ribbon element is set to appear as a pop-up command.  
   
 ```  
 BOOL IsDefaultMenuLook() const;  
 ```  
   
-### <a name="return-value"></a>Возвращаемое значение  
- `TRUE`Если элемент ленты появляются в виде всплывающих команды; в противном случае `FALSE`.  
+### <a name="return-value"></a>Return Value  
+ `TRUE` if the ribbon element is set to appear as a pop-up command; otherwise `FALSE`.  
   
-### <a name="remarks"></a>Примечания  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="isdisabled"></a>CMFCRibbonBaseElement::IsDisabled  
- Указывает, отключен ли элемент ленты.  
+##  <a name="isdisabled"></a>  CMFCRibbonBaseElement::IsDisabled  
+ Specifies whether the ribbon element is disabled.  
   
 ```  
 virtual BOOL IsDisabled() const;  
 ```  
   
-### <a name="return-value"></a>Возвращаемое значение  
- `TRUE`Если элемент ленты отключена; в противном случае `FALSE`.  
+### <a name="return-value"></a>Return Value  
+ `TRUE` if the ribbon element is disabled; otherwise `FALSE`.  
   
-##  <a name="isdroppeddown"></a>CMFCRibbonBaseElement::IsDroppedDown  
- Определяет, отображает контекстное меню элемента ленты и удалении.  
+##  <a name="isdroppeddown"></a>  CMFCRibbonBaseElement::IsDroppedDown  
+ Specifies whether the ribbon element displays a pop-up menu and is dropped down.  
   
 ```  
 virtual BOOL IsDroppedDown() const;  
 ```  
   
-### <a name="return-value"></a>Возвращаемое значение  
- `TRUE`Если элемент ленты удален и отображается во всплывающем меню. в противном случае `FALSE`.  
+### <a name="return-value"></a>Return Value  
+ `TRUE` if the ribbon element is dropped down and displays a pop-up menu; otherwise `FALSE`.  
   
-##  <a name="isfocused"></a>CMFCRibbonBaseElement::IsFocused  
- Указывает, имеет ли элемент ленты фокус.  
+##  <a name="isfocused"></a>  CMFCRibbonBaseElement::IsFocused  
+ Specifies whether the ribbon element has the focus.  
   
 ```  
 virtual BOOL IsFocused() const;  
 ```  
   
-### <a name="return-value"></a>Возвращаемое значение  
- `TRUE`Если лента элемент имеет фокус; в противном случае `FALSE`.  
+### <a name="return-value"></a>Return Value  
+ `TRUE` if the ribbon element has the focus; otherwise `FALSE`.  
   
-##  <a name="isgalleryicon"></a>CMFCRibbonBaseElement::IsGalleryIcon  
- Указывает, содержится ли в коллекции ленты элемента ленты.  
+##  <a name="isgalleryicon"></a>  CMFCRibbonBaseElement::IsGalleryIcon  
+ Indicates whether the ribbon element is contained in a ribbon gallery.  
   
 ```  
 virtual BOOL IsGalleryIcon() const;  
 ```  
   
-### <a name="return-value"></a>Возвращаемое значение  
- Всегда возвращает значение `FALSE`.  
+### <a name="return-value"></a>Return Value  
+ Always returns `FALSE`.  
   
-### <a name="remarks"></a>Примечания  
- По умолчанию этот метод всегда возвращает `FALSE`. Переопределите этот метод в производном классе, чтобы указать, содержится ли в коллекции ленты элемента ленты.  
+### <a name="remarks"></a>Remarks  
+ By default this method always returns `FALSE`. Override this method in a derived class to indicate whether the ribbon element is contained in a ribbon gallery.  
   
-##  <a name="ishighlighted"></a>CMFCRibbonBaseElement::IsHighlighted  
- Указывает, выделен ли элемент «лента».  
+##  <a name="ishighlighted"></a>  CMFCRibbonBaseElement::IsHighlighted  
+ Specifies whether ribbon element is highlighted.  
   
 ```  
 virtual BOOL IsHighlighted() const;  
 ```  
   
-### <a name="return-value"></a>Возвращаемое значение  
- `TRUE`Если выделен элемент ленты; в противном случае `FALSE`.  
+### <a name="return-value"></a>Return Value  
+ `TRUE` if the ribbon element is highlighted; otherwise `FALSE`.  
   
-### <a name="remarks"></a>Примечания  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="isintermediatemode"></a>CMFCRibbonBaseElement::IsIntermediateMode  
- Указывает, является ли текущее изображение для элемента ленты промежуточного размера.  
+##  <a name="isintermediatemode"></a>  CMFCRibbonBaseElement::IsIntermediateMode  
+ Indicates whether the current image for the ribbon element is intermediate size.  
   
 ```  
 BOOL IsIntermediateMode() const;  
 ```  
   
-### <a name="return-value"></a>Возвращаемое значение  
- `TRUE`Если изображение для элемента ленты промежуточного размера; в противном случае `FALSE`.  
+### <a name="return-value"></a>Return Value  
+ `TRUE` if the image for the ribbon element is intermediate size; otherwise `FALSE`.  
   
-### <a name="remarks"></a>Примечания  
- Промежуточные составляет 16 x 16 пикселей.  
+### <a name="remarks"></a>Remarks  
+ Intermediate image size is 16 x 16 pixels.  
   
-##  <a name="islargemode"></a>CMFCRibbonBaseElement::IsLargeMode  
- Указывает, является ли текущее изображение для элемента ленты большого размера.  
+##  <a name="islargemode"></a>  CMFCRibbonBaseElement::IsLargeMode  
+ Indicates whether the current image for the ribbon element is large size.  
   
 ```  
 BOOL IsLargeMode() const;  
 ```  
   
-### <a name="return-value"></a>Возвращаемое значение  
- `TRUE`Если изображение для элемента ленты имеет большой размер. в противном случае `FALSE`.  
+### <a name="return-value"></a>Return Value  
+ `TRUE` if the image for the ribbon element is large size; otherwise `FALSE`.  
   
-### <a name="remarks"></a>Примечания  
- Большое изображение размер — 32 x 32 пиксела.  
+### <a name="remarks"></a>Remarks  
+ Large image size is 32 x 32 pixels.  
   
-##  <a name="ismenumode"></a>CMFCRibbonBaseElement::IsMenuMode  
- Указывает, содержится ли элемент ленты в меню.  
+##  <a name="ismenumode"></a>  CMFCRibbonBaseElement::IsMenuMode  
+ Indicates whether the ribbon element is contained in a menu.  
   
 ```  
 BOOL IsMenuMode() const;  
 ```  
   
-### <a name="return-value"></a>Возвращаемое значение  
- `TRUE`Если лента элемент содержится в меню; в противном случае — `FALSE`.  
+### <a name="return-value"></a>Return Value  
+ `TRUE` if the ribbon element is contained in a menu; otherwise, `FALSE`.  
   
-### <a name="remarks"></a>Примечания  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="ispressed"></a>CMFCRibbonBaseElement::IsPressed  
- Указывает, щелкнул ли пользователь элемента ленты.  
+##  <a name="ispressed"></a>  CMFCRibbonBaseElement::IsPressed  
+ Indicates whether the user has clicked the ribbon element.  
   
 ```  
 virtual BOOL IsPressed() const;  
 ```  
   
-### <a name="return-value"></a>Возвращаемое значение  
- `TRUE`Если пользователь нажал на элемент ленты; в противном случае `FALSE`.  
+### <a name="return-value"></a>Return Value  
+ `TRUE` if the user has clicked the ribbon element; otherwise `FALSE`.  
   
-##  <a name="isqatmode"></a>CMFCRibbonBaseElement::IsQATMode  
- Указывает, содержится ли элемент ленты в панель быстрого доступа.  
+##  <a name="isqatmode"></a>  CMFCRibbonBaseElement::IsQATMode  
+ Indicates whether the ribbon element is contained in the quick access toolbar.  
   
 ```  
 BOOL IsQATMode() const;  
 ```  
   
-### <a name="return-value"></a>Возвращаемое значение  
- `TRUE`Если лента элемент содержится в панель быстрого доступа; в противном случае — `FALSE`.  
+### <a name="return-value"></a>Return Value  
+ `TRUE` if the ribbon element is contained in the quick access toolbar; otherwise, `FALSE`.  
   
-### <a name="remarks"></a>Примечания  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="isseparator"></a>CMFCRibbonBaseElement::IsSeparator  
- Указывает, является ли элемент ленты отображения разделителя.  
+##  <a name="isseparator"></a>  CMFCRibbonBaseElement::IsSeparator  
+ Indicates whether the ribbon element is a display separator.  
   
 ```  
 virtual BOOL IsSeparator() const;  
 ```  
   
-### <a name="return-value"></a>Возвращаемое значение  
- `TRUE`Если элемент ленты разделители отображения; в противном случае `FALSE`.  
+### <a name="return-value"></a>Return Value  
+ `TRUE` if the ribbon element is a display separator; otherwise `FALSE`.  
   
-### <a name="remarks"></a>Примечания  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="isshowgroupborder"></a>CMFCRibbonBaseElement::IsShowGroupBorder  
- Указывает, содержится ли элемент ленты в группе, которая отображает общие границы.  
+##  <a name="isshowgroupborder"></a>  CMFCRibbonBaseElement::IsShowGroupBorder  
+ Indicates whether the ribbon element is contained in a group that displays a common border.  
   
 ```  
 BOOL IsShowGroupBorder() const;  
 ```  
   
-### <a name="return-value"></a>Возвращаемое значение  
- `TRUE`Если элемент лента находится в группе, которая отображает общие границы; в противном случае — `FALSE`.  
+### <a name="return-value"></a>Return Value  
+ `TRUE` if the ribbon element is contained in a group that displays a common border; otherwise, `FALSE`.  
   
-### <a name="remarks"></a>Примечания  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="isshowtooltiponbottom"></a>CMFCRibbonBaseElement::IsShowTooltipOnBottom  
- Указывает, отображается ли подсказка в элементе ленты.  
+##  <a name="isshowtooltiponbottom"></a>  CMFCRibbonBaseElement::IsShowTooltipOnBottom  
+ Indicates whether the tooltip is displayed under the ribbon element.  
   
 ```  
 virtual BOOL IsShowTooltipOnBottom() const;  
 ```  
   
-### <a name="return-value"></a>Возвращаемое значение  
- `TRUE`Если подсказка отображается в элементе ленты; `FALSE` Если подсказка отображается около указателя.  
+### <a name="return-value"></a>Return Value  
+ `TRUE` if the tooltip is displayed under the ribbon element; `FALSE` if the tooltip is displayed near the pointer.  
   
-### <a name="remarks"></a>Примечания  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="istabstop"></a>CMFCRibbonBaseElement::IsTabStop  
- Указывает, можно выбрать элемент ленты с помощью клавиатуры.  
+##  <a name="istabstop"></a>  CMFCRibbonBaseElement::IsTabStop  
+ Indicates whether the ribbon element can be selected with the keyboard.  
   
 ```  
 virtual BOOL IsTabStop() const;  
 ```  
   
-### <a name="return-value"></a>Возвращаемое значение  
- Всегда возвращает значение `TRUE`.  
+### <a name="return-value"></a>Return Value  
+ Always returns `TRUE`.  
   
-### <a name="remarks"></a>Примечания  
- По умолчанию этот метод всегда возвращает `TRUE`. Переопределите этот метод, чтобы указать, можно ли выбрать элемент ленты с помощью клавиатуры.  
+### <a name="remarks"></a>Remarks  
+ By default this method always returns `TRUE`. Override this method to indicate whether the ribbon element can be selected with the keyboard.  
   
-##  <a name="istextalwaysonright"></a>CMFCRibbonBaseElement::IsTextAlwaysOnRight  
- Указывает, отображается ли в правом текст для элемента ленты.  
+##  <a name="istextalwaysonright"></a>  CMFCRibbonBaseElement::IsTextAlwaysOnRight  
+ Indicates whether the text for the ribbon element is displayed on the right.  
   
 ```  
 BOOL IsTextAlwaysOnRight() const;  
 ```  
   
-### <a name="return-value"></a>Возвращаемое значение  
- `TRUE`Если текст для элемента Лента отображается справа; в противном случае — `FALSE`.  
+### <a name="return-value"></a>Return Value  
+ `TRUE` if the text for the ribbon element is displayed on the right; otherwise, `FALSE`.  
   
-### <a name="remarks"></a>Примечания  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="isvisible"></a>CMFCRibbonBaseElement::IsVisible  
- Указывает, отображается ли в данный момент элемента ленты.  
+##  <a name="isvisible"></a>  CMFCRibbonBaseElement::IsVisible  
+ Indicates whether the ribbon element is currently displayed.  
   
 ```  
 BOOL IsVisible() const;  
 ```  
   
-### <a name="return-value"></a>Возвращаемое значение  
- `TRUE`Если в данный момент отображается элемент ленты; в противном случае — `FALSE`.  
+### <a name="return-value"></a>Return Value  
+ `TRUE` if the ribbon element is currently displayed; otherwise, `FALSE`.  
   
-### <a name="remarks"></a>Примечания  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="iswholerowheight"></a>CMFCRibbonBaseElement::IsWholeRowHeight  
- Указывает, является ли высота отображения элемента ленты таким же, как высота отображения панели ленты, содержащей его.  
+##  <a name="iswholerowheight"></a>  CMFCRibbonBaseElement::IsWholeRowHeight  
+ Indicates whether the display height of the ribbon element is the same as the display height of the ribbon panel that contains it.  
   
 ```  
 virtual BOOL IsWholeRowHeight() const;  
 ```  
   
-### <a name="return-value"></a>Возвращаемое значение  
- Всегда возвращает значение `FALSE`.  
+### <a name="return-value"></a>Return Value  
+ Always returns `FALSE`.  
   
-### <a name="remarks"></a>Примечания  
- По умолчанию этот метод всегда возвращает `FALSE`. Переопределите этот метод, чтобы указать высоту отображения элемента ленты является таким же, как высота отображения панели ленты, содержащей его.  
+### <a name="remarks"></a>Remarks  
+ By default this method always returns `FALSE`. Override this method to indicate whether the display height of the ribbon element is the same as the display height of the ribbon panel that contains it.  
   
-##  <a name="notifycommand"></a>CMFCRibbonBaseElement::NotifyCommand  
- Отправляет уведомление команда родительского окна элемента ленты.  
+##  <a name="notifycommand"></a>  CMFCRibbonBaseElement::NotifyCommand  
+ Sends a command notification to the parent window of the ribbon element.  
   
 ```  
 BOOL NotifyCommand(BOOL bWithDelay = FALSE);
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
  [in] `bWithDelay`  
- `TRUE`Добавление команды уведомления в очередь сообщений родительского окна; `FALSE` сообщение отправляется немедленно родительского окна.  
+ `TRUE` to add the command notification to the message queue of the parent window; `FALSE` to send the message immediately to the parent window.  
   
-### <a name="return-value"></a>Возвращаемое значение  
- `TRUE`Если сообщение было отправлено; в противном случае — `FALSE`.  
+### <a name="return-value"></a>Return Value  
+ `TRUE` if the message was sent; otherwise, `FALSE`.  
   
-### <a name="remarks"></a>Примечания  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="notifyhighlightlistitem"></a>CMFCRibbonBaseElement::NotifyHighlightListItem  
- Уведомляет родительского окна ленты, когда пользователь выделяет элемент ленты, который находится в списке.  
+##  <a name="notifyhighlightlistitem"></a>  CMFCRibbonBaseElement::NotifyHighlightListItem  
+ Notifies the parent window of the ribbon bar when a user highlights a ribbon element that is located in a list.  
   
 ```  
 virtual void NotifyHighlightListItem(int nIndex);
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
  [in] `nIndex`  
- Индекс элемента ленты в списке.  
+ The index of the ribbon element in the list.  
   
-### <a name="remarks"></a>Примечания  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="onaddtoqatoolbar"></a>CMFCRibbonBaseElement::OnAddToQAToolbar  
- Добавляет элемент в ленте панели инструментов быстрого доступа указанного.  
+##  <a name="onaddtoqatoolbar"></a>  CMFCRibbonBaseElement::OnAddToQAToolbar  
+ Adds the ribbon element to the specified quick access toolbar.  
   
 ```  
 virtual BOOL OnAddToQAToolbar(CMFCRibbonQuickAccessToolBar& qat);
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
  [in] `qat`  
- Панель быстрого доступа.  
+ The quick access toolbar.  
   
-### <a name="return-value"></a>Возвращаемое значение  
- Всегда возвращает `TRUE` , указывающее, ribbon элемент был добавлен на панель быстрого доступа.  
+### <a name="return-value"></a>Return Value  
+ Always returns `TRUE` indicating the ribbon element was added to the quick access toolbar.  
   
-### <a name="remarks"></a>Примечания  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="onafterchangerect"></a>CMFCRibbonBaseElement::OnAfterChangeRect  
- Обновляет всплывающей подсказки для элемента ленты.  
+##  <a name="onafterchangerect"></a>  CMFCRibbonBaseElement::OnAfterChangeRect  
+ Updates the tooltip for the ribbon element.  
   
 ```  
 virtual void OnAfterChangeRect(CDC* pDC);
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
  [in] `pDC`  
- Этот параметр не используется.  
+ This parameter is not used.  
   
-### <a name="remarks"></a>Примечания  
- По умолчанию этот метод обновляет всплывающей подсказки для элемента ленты. Переопределите этот метод для обновления элемента ribbon после изменения его отображаемый прямоугольник.  
+### <a name="remarks"></a>Remarks  
+ By default this method updates the tooltip for the ribbon element. Override this method to update the ribbon element after its display rectangle has changed.  
   
-##  <a name="onautorepeat"></a>CMFCRibbonBaseElement::OnAutoRepeat  
- Обновляет элемент ленты в ответ на длительного ввода.  
+##  <a name="onautorepeat"></a>  CMFCRibbonBaseElement::OnAutoRepeat  
+ Updates the ribbon element in response to sustained user input.  
   
 ```  
 virtual BOOL OnAutoRepeat();
 ```  
   
-### <a name="return-value"></a>Возвращаемое значение  
- Всегда возвращает значение `FALSE`.  
+### <a name="return-value"></a>Return Value  
+ Always returns `FALSE`.  
   
-### <a name="remarks"></a>Примечания  
- По умолчанию этот метод всегда возвращают `FALSE`. Переопределите этот метод для обработки входных данных пользователя на длительного.  
+### <a name="remarks"></a>Remarks  
+ By default this method always return `FALSE`. Override this method to process sustained user input.  
   
-##  <a name="oncalctextsize"></a>CMFCRibbonBaseElement::OnCalcTextSize  
- Вычисляет размер текста для элемента ленты.  
+##  <a name="oncalctextsize"></a>  CMFCRibbonBaseElement::OnCalcTextSize  
+ Calculates the size of the text for the ribbon element.  
   
 ```  
 virtual void OnCalcTextSize(CDC* pDC);
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
  [in] `pDC`  
- Этот параметр не используется.  
+ This parameter is not used.  
   
-### <a name="remarks"></a>Примечания  
- По умолчанию этот метод не выполняет никаких действий. Переопределите этот метод для вычисления размера текста для элемента ленты.  
+### <a name="remarks"></a>Remarks  
+ By default this method does nothing. Override this method to calculate the size of the text for the ribbon element.  
   
-##  <a name="onchangemenuhighlight"></a>CMFCRibbonBaseElement::OnChangeMenuHighlight  
- Вызывается инфраструктурой при изменении выделения для элемента ленты, расположенный в меню.  
+##  <a name="onchangemenuhighlight"></a>  CMFCRibbonBaseElement::OnChangeMenuHighlight  
+ Called by the framework when the highlight changes for a ribbon element that is located in a menu.  
   
 ```  
 virtual void OnChangeMenuHighlight(CMFCRibbonPanelMenuBar* pPanelMenuBar  
     CMFCRibbonBaseElement* pHot);
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
  [in] `pPanelMenuBar`  
- Этот параметр не используется.  
+ This parameter is not used.  
   
  [in] `pHot`  
- Этот параметр не используется.  
+ This parameter is not used.  
   
-### <a name="remarks"></a>Примечания  
- По умолчанию этот метод не выполняет никаких действий. Переопределите этот метод, чтобы обновить элемент ленты, расположенный в меню, при изменении выделения.  
+### <a name="remarks"></a>Remarks  
+ By default this method does nothing. Override this method to update a ribbon element that is located in a menu when the highlight changes.  
   
-##  <a name="ondraw"></a>CMFCRibbonBaseElement::OnDraw  
- Вызывается платформой для отрисовки элемента ленты.  
+##  <a name="ondraw"></a>  CMFCRibbonBaseElement::OnDraw  
+ Called by the framework to draw the ribbon element.  
   
 ```  
 virtual void OnDraw(CDC* pDC) = 0;  
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
  [in] `pDC`  
- Указатель на контекст устройства.  
+ A pointer to a device context.  
   
-### <a name="remarks"></a>Примечания  
- Переопределите этот метод в производном классе, если требуется настроить рисования элемента определенного ленты.  
+### <a name="remarks"></a>Remarks  
+ Override this method in a derived class if you want to customize the drawing of a specific ribbon element.  
   
-##  <a name="ondrawkeytip"></a>CMFCRibbonBaseElement::OnDrawKeyTip  
- Вызывается платформой для рисования значение свойства keytip элемента ленты.  
+##  <a name="ondrawkeytip"></a>  CMFCRibbonBaseElement::OnDrawKeyTip  
+ Called by the framework to draw the keytip for the ribbon element.  
   
 ```  
 virtual void OnDrawKeyTip(
@@ -1403,20 +1515,20 @@ virtual void OnDrawKeyTip(
     BOOL bIsMenu);
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
  [in] `pDC`  
- Указатель на контекст устройства.  
+ Pointer to a device context.  
   
  [in] `rect`  
- Значение свойства keytip прямоугольник границы.  
+ Boundary rectangle for the keytip.  
   
  [in] `bIsMenu`  
- `TRUE`Если значение свойства keytip для кнопки во всплывающем меню; в противном случае — `FALSE`.  
+ `TRUE` if the keytip is for a pop-up menu button; otherwise, `FALSE`.  
   
-### <a name="remarks"></a>Примечания  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="ondrawmenuimage"></a>CMFCRibbonBaseElement::OnDrawMenuImage  
- Вызывается инфраструктурой при рисовании изображения меню для элемента ленты.  
+##  <a name="ondrawmenuimage"></a>  CMFCRibbonBaseElement::OnDrawMenuImage  
+ Called by the framework when the menu image for the ribbon element is drawn.  
   
 ```  
 virtual BOOL OnDrawMenuImage(
@@ -1424,20 +1536,20 @@ virtual BOOL OnDrawMenuImage(
     CRect rect);
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
  [in] `pDC`  
- Указатель на контекст устройства.  
+ Pointer to a device context.  
   
  [in] `rect`  
- Меню изображений прямоугольник.  
+ Menu image rectangle.  
   
-### <a name="return-value"></a>Возвращаемое значение  
- Всегда возвращает `TRUE` для указания рисования изображения.  
+### <a name="return-value"></a>Return Value  
+ Always returns `TRUE` to indicate the image was drawn.  
   
-### <a name="remarks"></a>Примечания  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="ondrawonlist"></a>CMFCRibbonBaseElement::OnDrawOnList  
- Вызывается платформой для рисования элемента ленты в списке команд.  
+##  <a name="ondrawonlist"></a>  CMFCRibbonBaseElement::OnDrawOnList  
+ Called by the framework to draw the ribbon element in a commands list box.  
   
 ```  
 virtual void OnDrawOnList(
@@ -1449,152 +1561,152 @@ virtual void OnDrawOnList(
     BOOL bHighlighted);
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
  [in] `pDC`  
- Указатель на контекст устройства для элемента ленты.  
+ Pointer to a device context for the ribbon element.  
   
  [in] `strText`  
- Отображаемый текст.  
+ The display text.  
   
  [in] `nTextOffset`  
- Расстояние в точках с левой стороны окна списка для отображения текста.  
+ Distance, in pixels, from the left side of the list box to the display text.  
   
  [in] `rect`  
- Отображаемый прямоугольник для элемента ленты.  
+ The display rectangle for the ribbon element.  
   
  [in] `bIsSelected`  
- Этот параметр не используется.  
+ This parameter is not used.  
   
  [in] `bHighlighted`  
- Этот параметр не используется.  
+ This parameter is not used.  
   
-### <a name="remarks"></a>Примечания  
- Команды выводится список элементов ленты, чтобы пользователи могли настроить панель быстрого доступа.  
+### <a name="remarks"></a>Remarks  
+ The commands list box displays ribbon elements to enable users to customize the quick access toolbar.  
   
-##  <a name="onkey"></a>CMFCRibbonBaseElement::OnKey  
- Вызывается платформой, когда пользователь нажимает значение свойства keytip и ленты элемент имеет фокус.  
+##  <a name="onkey"></a>  CMFCRibbonBaseElement::OnKey  
+ Called by the framework when the user presses a keytip and the ribbon element has the focus.  
   
 ```  
 virtual BOOL OnKey(BOOL bIsMenuKey);
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
  [in] `bIsMenuKey`  
- `TRUE`Если значение свойства keytip отображаются во всплывающем меню. в противном случае — `FALSE`.  
+ `TRUE` if the keytip displays a pop-up menu; otherwise, `FALSE`.  
   
-### <a name="return-value"></a>Возвращаемое значение  
- `TRUE`Если событие было обработано; в противном случае `FALSE`.  
+### <a name="return-value"></a>Return Value  
+ `TRUE` if the event was handled; otherwise `FALSE`.  
   
-### <a name="remarks"></a>Примечания  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="onmenukey"></a>CMFCRibbonBaseElement::OnMenuKey  
- Вызывается платформой, когда пользователь нажимает значение свойства keytip меню на главной панели.  
+##  <a name="onmenukey"></a>  CMFCRibbonBaseElement::OnMenuKey  
+ Called by the framework when the user presses a menu keytip on the main panel.  
   
 ```  
 virtual BOOL OnMenuKey(UINT nUpperChar);
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
  [in] `nUpperChar`  
- Этот параметр не используется.  
+ This parameter is not used.  
   
-### <a name="return-value"></a>Возвращаемое значение  
- Всегда возвращает значение `FALSE`.  
+### <a name="return-value"></a>Return Value  
+ Always returns `FALSE`.  
   
-### <a name="remarks"></a>Примечания  
- По умолчанию этот метод всегда возвращает `FALSE`. Переопределите этот метод, чтобы ответить, когда пользователь нажимает значение свойства keytip меню на главной панели.  
+### <a name="remarks"></a>Remarks  
+ By default this method always returns `FALSE`. Override this method to respond when a user presses a menu keytip on the main panel.  
   
-##  <a name="onprocesskey"></a>CMFCRibbonBaseElement::OnProcessKey  
- Вызывается платформой, когда пользователь нажимает сочетание клавиш.  
+##  <a name="onprocesskey"></a>  CMFCRibbonBaseElement::OnProcessKey  
+ Called by the framework when the user presses a shortcut key.  
   
 ```  
 virtual BOOL OnProcessKey(UINT nChar);
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
  [in] `nChar`  
- Этот параметр не используется.  
+ This parameter is not used.  
   
-### <a name="return-value"></a>Возвращаемое значение  
- Всегда возвращает значение `FALSE`.  
+### <a name="return-value"></a>Return Value  
+ Always returns `FALSE`.  
   
-### <a name="remarks"></a>Примечания  
- Переопределите этот метод, если требуется элемент ленты для обработки сочетания клавиш.  
+### <a name="remarks"></a>Remarks  
+ Override this method if you want the ribbon element to process a shortcut key.  
   
-##  <a name="onrtlchanged"></a>CMFCRibbonBaseElement::OnRTLChanged  
- Вызывается инфраструктурой при изменении направления макета.  
+##  <a name="onrtlchanged"></a>  CMFCRibbonBaseElement::OnRTLChanged  
+ Called by the framework when the layout changes direction.  
   
 ```  
 virtual void OnRTLChanged(BOOL bIsRTL);
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
  [in] `bIsRTL`  
- Этот параметр не используется.  
+ This parameter is not used.  
   
-### <a name="remarks"></a>Примечания  
- По умолчанию этот метод не выполняет никаких действий. Переопределите этот метод для настройки ленты элемента при изменении направления макета. Направление макета по умолчанию — справа налево.  
+### <a name="remarks"></a>Remarks  
+ By default this method does nothing. Override this method to adjust the ribbon element when the layout changes direction. The default layout direction is left-to-right.  
   
-##  <a name="onsetfocus"></a>CMFCRibbonBaseElement::OnSetFocus  
- Вызывается платформой, когда элемент ленты Получает или теряет фокус ввода.  
+##  <a name="onsetfocus"></a>  CMFCRibbonBaseElement::OnSetFocus  
+ Called by the framework when a ribbon element receives or loses the input focus.  
   
 ```  
 virtual void OnSetFocus(BOOL B);
 ```  
   
-### <a name="remarks"></a>Примечания  
- Переопределите этот метод в производном классе, чтобы приложение могло обработать изменение фокуса элемента ленты.  
+### <a name="remarks"></a>Remarks  
+ Override this method in a derived class if you want your application to handle a change in the focus of a ribbon element.  
   
-##  <a name="onshow"></a>CMFCRibbonBaseElement::OnShow  
- Вызывается платформой для отображения или скрытия элементов ленты.  
+##  <a name="onshow"></a>  CMFCRibbonBaseElement::OnShow  
+ Called by the framework to show or hide the ribbon element.  
   
 ```  
 virtual void OnShow(BOOL bShow);
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
  [in] `bShow`  
- Этот параметр не используется.  
+ This parameter is not used.  
   
-### <a name="remarks"></a>Примечания  
- По умолчанию этот метод не выполняет никаких действий. Переопределите этот метод для отображения или скрытия элементов ленты.  
+### <a name="remarks"></a>Remarks  
+ By default this method does nothing. Override this method to show or hide the ribbon element.  
   
-##  <a name="onshowpopupmenu"></a>CMFCRibbonBaseElement::OnShowPopupMenu  
- Вызывается средой перед элемент ленты отображает раскрывающееся меню.  
+##  <a name="onshowpopupmenu"></a>  CMFCRibbonBaseElement::OnShowPopupMenu  
+ Called by the framework before the ribbon element shows a pop-up menu.  
   
 ```  
 virtual void OnShowPopupMenu();
 ```  
   
-### <a name="remarks"></a>Примечания  
- Этот метод уведомляет родительского окна ленты, что элемент ленты, будет отображать всплывающее меню.  
+### <a name="remarks"></a>Remarks  
+ This method notifies the parent window of the ribbon bar that the ribbon element will show a pop-up menu.  
   
-##  <a name="postmenucommand"></a>CMFCRibbonBaseElement::PostMenuCommand  
- Закрытие контекстного меню для элемента ленты и отправляет сообщение закрытия меню родительского окна.  
+##  <a name="postmenucommand"></a>  CMFCRibbonBaseElement::PostMenuCommand  
+ Closes the pop-up menu for the ribbon element and sends a close message to the parent menu.  
   
 ```  
 void PostMenuCommand(UINT uiCmdId);
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
  [in] `uiCmdId`  
- Параметр не используется.  
+ The parameter is not used.  
   
-### <a name="remarks"></a>Примечания  
- Сообщение о закрытии отправляется только в том случае, если элемент ленты находится в всплывающем меню.  
+### <a name="remarks"></a>Remarks  
+ The close message is only sent if the ribbon element is located on a pop-up menu.  
   
-##  <a name="redraw"></a>CMFCRibbonBaseElement::Redraw  
- Обновляет отображение элемента ленты.  
+##  <a name="redraw"></a>  CMFCRibbonBaseElement::Redraw  
+ Updates the display for the ribbon element.  
   
 ```  
 virtual void Redraw();
 ```  
   
-### <a name="remarks"></a>Примечания  
- Этот метод перерисовывает прямоугольник отображения для элемента ленты, путем вызова [CWnd::RedrawWindow](http://msdn.microsoft.com/library/windows/desktop/dd162911) с `RDW_INVALIDATE`, `RDW_ERASE`, и `RDW_UPDATENOW` установленными флагами.  
+### <a name="remarks"></a>Remarks  
+ This method redraws the display rectangle for the ribbon element by calling [CWnd::RedrawWindow](http://msdn.microsoft.com/library/windows/desktop/dd162911) with the `RDW_INVALIDATE`, `RDW_ERASE`, and `RDW_UPDATENOW` flags set.  
   
-##  <a name="setaccdata"></a>CMFCRibbonBaseElement::SetACCData  
- Задает данные специальных возможностей для элемента ленты.  
+##  <a name="setaccdata"></a>  CMFCRibbonBaseElement::SetACCData  
+ Sets the accessibility data for the ribbon element.  
   
 ```  
 virtual BOOL SetACCData(
@@ -1602,105 +1714,105 @@ virtual BOOL SetACCData(
     CAccessibilityData& data);
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
  `pParent`  
- Родительское окно для элемента ленты.  
+ The parent window for the ribbon element.  
   
  `data`  
- Данные специальных возможностей для элемента ленты.  
+ The accessibility data for the ribbon element.  
   
-### <a name="return-value"></a>Возвращаемое значение  
- Всегда возвращает значение `TRUE`.  
+### <a name="return-value"></a>Return Value  
+ Always returns `TRUE`.  
   
-### <a name="remarks"></a>Примечания  
- По умолчанию этот метод задает данные специальных возможностей для элемента ленты и всегда возвращает значение `TRUE`. Переопределите этот метод, чтобы задать данные специальных возможностей и возвращать значение, указывающее на успешное или неуспешное выполнение.  
+### <a name="remarks"></a>Remarks  
+ By default this method sets the accessibility data for the ribbon element and always returns `TRUE`. Override this method to set the accessibility data and return a value that indicates success or failure.  
   
-##  <a name="setcompactmode"></a>CMFCRibbonBaseElement::SetCompactMode  
- Задает размер изображения для элемента ленты.  
+##  <a name="setcompactmode"></a>  CMFCRibbonBaseElement::SetCompactMode  
+ Sets the display size for the ribbon element.  
   
 ```  
 virtual void SetCompactMode(BOOL bCompactMode = TRUE);
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
  [in] `bCompactMode`  
- `TRUE`Чтобы уменьшить размер отображения элемента ленты. `FALSE` увеличить размер отображения элемента ленты.  
+ `TRUE` to reduce the display size of the ribbon element; `FALSE` to increase the display size of the ribbon element.  
   
-### <a name="remarks"></a>Примечания  
- В следующей таблице перечислены логику для этого метода.  
+### <a name="remarks"></a>Remarks  
+ The following table summarizes the logic for this method.  
   
-|`bCompactMode`|Текущий размер элемента ленты|Новый размер элемента ленты|  
+|`bCompactMode`|Current ribbon element size|New ribbon element size|  
 |--------------------|---------------------------------|-----------------------------|  
-|`TRUE`|Компактный|Без изменений.|  
-|`TRUE`|Intermediate|Сжатие, если это возможно.|  
-|`TRUE`|Крупный|Средний уровень, если это возможно.|  
-|`FALSE`|Компактный|Средний уровень, если это возможно; в противном случае большой.|  
+|`TRUE`|Compact|No change.|  
+|`TRUE`|Intermediate|Compact if it is possible.|  
+|`TRUE`|Large|Intermediate if it is possible.|  
+|`FALSE`|Compact|Intermediate if it is possible; otherwise large.|  
   
-##  <a name="setdata"></a>CMFCRibbonBaseElement::SetData  
- Связывает элемент данных с помощью элемента ленты.  
+##  <a name="setdata"></a>  CMFCRibbonBaseElement::SetData  
+ Associates a data item with the ribbon element.  
   
 ```  
 void SetData(DWORD_PTR dwData);
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
  [in] `dwData`  
- Значение данных.  
+ The data value.  
   
-##  <a name="setdefaultmenulook"></a>CMFCRibbonBaseElement::SetDefaultMenuLook  
- Задает элемент ленты в виде всплывающих команды.  
+##  <a name="setdefaultmenulook"></a>  CMFCRibbonBaseElement::SetDefaultMenuLook  
+ Sets the ribbon element to appear as a pop-up command.  
   
 ```  
 void SetDefaultMenuLook(BOOL bIsDefaultMenuLook = TRUE);
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
  [in] `bIsDefaultMenuLook`  
- `TRUE`Чтобы задать элемент ленты в виде всплывающих команды; в противном случае `FALSE`.  
+ `TRUE` to set the ribbon element to appear as a pop-up command; otherwise `FALSE`.  
   
-### <a name="remarks"></a>Примечания  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="setdescription"></a>CMFCRibbonBaseElement::SetDescription  
- Задает описание элемента ленты.  
+##  <a name="setdescription"></a>  CMFCRibbonBaseElement::SetDescription  
+ Sets the description for the ribbon element.  
   
 ```  
 virtual void SetDescription(LPCTSTR lpszText);
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
  [in] `lpszText`  
- Описание элемента ленты.  
+ The description for the ribbon element.  
   
-### <a name="remarks"></a>Примечания  
- Платформа отображает новое описание в строке состояния или во всплывающей подсказке или в разделе «меню».  
+### <a name="remarks"></a>Remarks  
+ The framework displays the new description either on the status bar, or in the tooltip, or under the menu button.  
   
-##  <a name="setid"></a>CMFCRibbonBaseElement::SetID  
- Задает идентификатор команды элемента ленты.  
+##  <a name="setid"></a>  CMFCRibbonBaseElement::SetID  
+ Sets the command ID of the ribbon element.  
   
 ```  
 virtual void SetID(UINT nID);
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
  [in] `nID`  
- Идентификатор команды.  
+ The command ID.  
   
-##  <a name="setinitialmode"></a>CMFCRibbonBaseElement::SetInitialMode  
- Задает размер первоначального отображения для элемента ленты.  
+##  <a name="setinitialmode"></a>  CMFCRibbonBaseElement::SetInitialMode  
+ Sets the initial display size for the ribbon element.  
   
 ```  
 virtual void SetInitialMode(BOOL bOneRow = FALSE);
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
  [in] `bOneRow`  
- `TRUE`для ограничения размера отображения для элемента ribbon позволяет уменьшить или промежуточные; в противном случае — `FALSE`.  
+ `TRUE` to limit the display size for the ribbon element to compact or intermediate; otherwise, `FALSE`.  
   
-### <a name="remarks"></a>Примечания  
- Размер отображения элементов ленты можно compact, промежуточные и большой.  
+### <a name="remarks"></a>Remarks  
+ The display size of ribbon elements can be compact, intermediate, or large.  
   
-##  <a name="setkeys"></a>CMFCRibbonBaseElement::SetKeys  
- Задает ключевые подсказки для элемента ленты.  
+##  <a name="setkeys"></a>  CMFCRibbonBaseElement::SetKeys  
+ Sets the keytips for the ribbon element.  
   
 ```  
 virtual void SetKeys(
@@ -1708,95 +1820,95 @@ virtual void SetKeys(
     LPCTSTR lpszMenuKeys=NULL);
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
  [in] `lpszKeys`  
- Значение свойства keytip элемента ленты.  
+ The keytip for the ribbon element.  
   
  [in] `lpszMenuKeys`  
- Значение свойства keytip для контекстного меню элемента ленты.  
+ The keytip for the pop-up menu of the ribbon element.  
   
-##  <a name="setoriginal"></a>CMFCRibbonBaseElement::SetOriginal  
- Задает исходный элемент ленты для элемента ленты.  
+##  <a name="setoriginal"></a>  CMFCRibbonBaseElement::SetOriginal  
+ Sets the original ribbon element for the ribbon element.  
   
 ```  
 virtual void SetOriginal(CMFCRibbonBaseElement* pOriginal);
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
  [in] `pOriginal`  
- Указатель на элемент ленты.  
+ Pointer to a ribbon element.  
   
-### <a name="remarks"></a>Примечания  
- Элементы ленты, которые будут скопированы в другой контейнер сохраняют указатель на исходный элемент ленты.  
+### <a name="remarks"></a>Remarks  
+ Ribbon elements that are copied to another container retain a pointer to the original ribbon element.  
   
-##  <a name="setparentcategory"></a>CMFCRibbonBaseElement::SetParentCategory  
- Задает категорию родительского элемента ленты.  
+##  <a name="setparentcategory"></a>  CMFCRibbonBaseElement::SetParentCategory  
+ Sets the parent category for the ribbon element.  
   
 ```  
 virtual void SetParentCategory(CMFCRibbonCategory* pParent);
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
  [in] `pParent`  
- Указатель на нее категорию.  
+ Pointer to a ribbon category.  
   
-### <a name="remarks"></a>Примечания  
- Группы с вкладками в элементы управления ленты, называются категории.  
+### <a name="remarks"></a>Remarks  
+ The tabbed groups in ribbon controls are called categories.  
   
-##  <a name="setparentmenu"></a>CMFCRibbonBaseElement::SetParentMenu  
- Задает родительский контейнер меню для элемента ленты.  
+##  <a name="setparentmenu"></a>  CMFCRibbonBaseElement::SetParentMenu  
+ Sets the parent menu container for the ribbon element.  
   
 ```  
 virtual void SetParentMenu(CMFCRibbonPanelMenuBar* pMenuBar);
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
  [in] `pMenuBar`  
- Меню родительского окна.  
+ The parent menu.  
   
-### <a name="remarks"></a>Примечания  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="setparentribbonbar"></a>CMFCRibbonBaseElement::SetParentRibbonBar  
- Задает лентой родительского элемента ленты.  
+##  <a name="setparentribbonbar"></a>  CMFCRibbonBaseElement::SetParentRibbonBar  
+ Sets the parent ribbon bar for the ribbon element.  
   
 ```  
 virtual void SetParentRibbonBar(CMFCRibbonBar* pRibbonBar);
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
  [in] `pRibbonBar`  
- Указатель на панель ленты родительского.  
+ Pointer to the parent ribbon bar.  
   
-### <a name="remarks"></a>Примечания  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="setrect"></a>CMFCRibbonBaseElement::SetRect  
- Задает размеры прямоугольника отображения для элемента ленты.  
+##  <a name="setrect"></a>  CMFCRibbonBaseElement::SetRect  
+ Sets the dimensions of the display rectangle for the ribbon element.  
   
 ```  
 void SetRect(CRect rect);
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
  [in] `rect`  
- Размеры прямоугольника.  
+ The dimensions of the rectangle.  
   
-### <a name="remarks"></a>Примечания  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="settext"></a>CMFCRibbonBaseElement::SetText  
- Задает текст и значение свойства keytip элемента ленты.  
+##  <a name="settext"></a>  CMFCRibbonBaseElement::SetText  
+ Sets the text and keytip for the ribbon element.  
   
 ```  
 virtual void SetText(LPCTSTR lpszText);
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
  [in] `lpszText`  
- Текст и значение свойства keytip элемента ленты.  
+ The text and keytip for the ribbon element.  
   
-### <a name="remarks"></a>Примечания  
- Чтобы задать значение свойства keytip для элемента ленты, следует добавить escape-последовательность новой строки, следуют символы, значение свойства keytip `lpszText`.  
+### <a name="remarks"></a>Remarks  
+ To set the keytip for the ribbon element, append the newline escape sequence followed by the keytip characters to `lpszText`.  
   
-### <a name="example"></a>Пример  
+### <a name="example"></a>Example  
   
 ```  
 //Set the text for the ribbon element  
@@ -1807,55 +1919,55 @@ SetText(_T("Margins\nm"))
 SetText(_T("Line Numbers\nln"))  
 ```  
   
-##  <a name="settextalwaysonright"></a>CMFCRibbonBaseElement::SetTextAlwaysOnRight  
- Задает текст для элемента ленты для отображения справа.  
+##  <a name="settextalwaysonright"></a>  CMFCRibbonBaseElement::SetTextAlwaysOnRight  
+ Sets the text for the ribbon element to display on the right.  
   
 ```  
 virtual void SetTextAlwaysOnRight(BOOL bSet = TRUE);
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
  [in] `bSet`  
- `TRUE`для отображения текста справа; в противном случае `FALSE`.  
+ `TRUE` to display the text on the right; otherwise `FALSE`.  
   
-### <a name="remarks"></a>Примечания  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="settooltiptext"></a>CMFCRibbonBaseElement::SetToolTipText  
- Задает текст всплывающей подсказки для элемента ленты.  
+##  <a name="settooltiptext"></a>  CMFCRibbonBaseElement::SetToolTipText  
+ Sets the tooltip text for the ribbon element.  
   
 ```  
 virtual void SetToolTipText(LPCTSTR lpszText);
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
  [in] `lpszText`  
- Текст подсказки.  
+ The tooltip text.  
   
-##  <a name="setvisible"></a>CMFCRibbonBaseElement::SetVisible  
- Задает видимость элемента ленты.  
+##  <a name="setvisible"></a>  CMFCRibbonBaseElement::SetVisible  
+ Sets the visibility of the ribbon element.  
   
 ```  
 void SetVisible(BOOL bIsVisible);
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
  [in] `bIsVisible`  
- `TRUE`для отображения элемента ленты; `FALSE` для скрытия элемента ленты.  
+ `TRUE` to display the ribbon element; `FALSE` to hide the ribbon element.  
   
-### <a name="remarks"></a>Примечания  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="stretchhorizontally"></a>CMFCRibbonBaseElement::StretchHorizontally  
- Увеличение ширины элемента ленты.  
+##  <a name="stretchhorizontally"></a>  CMFCRibbonBaseElement::StretchHorizontally  
+ Stretches the width of the ribbon element.  
   
 ```  
 virtual void StretchHorizontally();
 ```  
   
-### <a name="remarks"></a>Примечания  
- По умолчанию этот метод создает Сбой утверждения в сборках отладки и поэтому его не следует вызывать. Переопределите этот метод, чтобы растянуть ширины элемента ленты.  
+### <a name="remarks"></a>Remarks  
+ By default this method generates an assertion failure in debug builds and therefore should not be called. Override this method to stretch the width of the ribbon element.  
   
-##  <a name="stretchtowholerow"></a>CMFCRibbonBaseElement::StretchToWholeRow  
- Изменяет высоту указанной строки отображаемой высоты элемента ленты.  
+##  <a name="stretchtowholerow"></a>  CMFCRibbonBaseElement::StretchToWholeRow  
+ Changes the display height of the ribbon element to the specified row height.  
   
 ```  
 virtual BOOL StretchToWholeRow(
@@ -1863,41 +1975,41 @@ virtual BOOL StretchToWholeRow(
     int nHeight);
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
  [in] `pDC`  
- Этот параметр не используется.  
+ This parameter is not used.  
   
  [in] `nHeight`  
- Высота строки.  
+ The height of the row.  
   
-### <a name="return-value"></a>Возвращаемое значение  
- `TRUE`Если задана высота экрана; в противном случае — `FALSE`.  
+### <a name="return-value"></a>Return Value  
+ `TRUE` if the display height was set; otherwise, `FALSE`.  
   
-### <a name="remarks"></a>Примечания  
- Переопределите этот метод, чтобы изменить высоту отображения элемента ленты по высоте указанной строки.  
+### <a name="remarks"></a>Remarks  
+ Override this method to change the display height of the ribbon element to the specified row height.  
   
-##  <a name="updatetooltipinfo"></a>CMFCRibbonBaseElement::UpdateTooltipInfo  
- Обновляет текст всплывающей подсказки с помощью команды ресурса для элемента ленты.  
+##  <a name="updatetooltipinfo"></a>  CMFCRibbonBaseElement::UpdateTooltipInfo  
+ Updates the tooltip text by using the command resource for the ribbon element.  
   
 ```  
 virtual void UpdateTooltipInfo();
 ```  
   
-### <a name="remarks"></a>Примечания  
+### <a name="remarks"></a>Remarks  
   
-##  <a name="hasfocus"></a>CMFCRibbonBaseElement::HasFocus  
- Указывает, является ли родительский элемент имеет фокус.  
+##  <a name="hasfocus"></a>  CMFCRibbonBaseElement::HasFocus  
+ Indicates whether the parent element has keyboard focus.  
   
 ```  
 virtual BOOL HasFocus() const;  
 ```  
   
-### <a name="return-value"></a>Возвращаемое значение  
- `TRUE`Если лента элемент имеет фокус; в противном случае `FALSE`.  
+### <a name="return-value"></a>Return Value  
+ `TRUE` if the ribbon element is focused; otherwise `FALSE`.  
   
-### <a name="remarks"></a>Примечания  
+### <a name="remarks"></a>Remarks  
   
-## <a name="see-also"></a>См. также  
- [Диаграмма иерархии](../../mfc/hierarchy-chart.md)   
- [Классы](../../mfc/reference/mfc-classes.md)
+## <a name="see-also"></a>See Also  
+ [Hierarchy Chart](../../mfc/hierarchy-chart.md)   
+ [Classes](../../mfc/reference/mfc-classes.md)
 

@@ -1,41 +1,60 @@
 ---
-title: "Компоненты диалоговых окон в платформе | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "классы диалоговых окон, компоненты диалоговых окон"
-  - "диалоговые шаблоны, Платформа MFC"
-  - "диалоговые окна MFC, о диалоговых окнах MFC"
-  - "диалоговые окна MFC, создание"
-  - "диалоговые окна MFC, диалоговый ресурс"
+title: Dialog-Box Components in the Framework | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- MFC dialog boxes [MFC], creating
+- dialog classes [MFC], dialog box components
+- MFC dialog boxes [MFC], about MFC dialog boxes
+- dialog templates [MFC], MFC framework
+- MFC dialog boxes [MFC], dialog resource
 ms.assetid: 592db160-0a8a-49be-ac72-ead278aca53f
 caps.latest.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 5
----
-# Компоненты диалоговых окон в платформе
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: febab670bf86f87701da0d6ea23784fa56979137
+ms.contentlocale: ru-ru
+ms.lasthandoff: 09/12/2017
 
-В платформе MFC, диалоговое окно содержит 2 компонента:  
+---
+# <a name="dialog-box-components-in-the-framework"></a>Dialog-Box Components in the Framework
+In the MFC framework, a dialog box has two components:  
   
--   Ресурс шаблона диалоговых окон, определяющий их размещение диалогового окна и управления.  
+-   A dialog-template resource that specifies the dialog box's controls and their placement.  
   
-     Ресурс диалогового окна хранит шаблона диалоговых окон, из которого создается окно Windows и отображения диалогового окна его.  Шаблон определяет характеристики диалогового окна, включая его размер и расположение, стиль и типы и положения элементов управления диалогового окна.  Обычно используется шаблон диалоговых окон, хранящиеся в качестве ресурса, но можно также создать собственный шаблон в памяти.  
+     The dialog resource stores a dialog template from which Windows creates the dialog window and displays it. The template specifies the dialog box's characteristics, including its size, location, style, and the types and positions of the dialog box's controls. You will usually use a dialog template stored as a resource, but you can also create your own template in memory.  
   
--   Класс диалогового окна, производный от [CDialog](../mfc/reference/cdialog-class.md), чтобы гарантировать программный интерфейс для управления диалогового окна.  
+-   A dialog class, derived from [CDialog](../mfc/reference/cdialog-class.md), to provide a programmatic interface for managing the dialog box.  
   
-     Диалоговое окно является окном и будет вложено в окно Windows при видимый.  Когда окно диалогового окна создается ресурс шаблона диалоговых окон, используется в качестве шаблона для создания дочернего окна для управления диалогового окна.  
+     A dialog box is a window and will be attached to a Windows window when visible. When the dialog window is created, the dialog-template resource is used as a template for creating child window controls for the dialog box.  
   
-## См. также  
- [Диалоговые окна](../mfc/dialog-boxes.md)   
- [Жизненный цикл диалогового окна](../mfc/life-cycle-of-a-dialog-box.md)
+## <a name="see-also"></a>See Also  
+ [Dialog Boxes](../mfc/dialog-boxes.md)   
+ [Life Cycle of a Dialog Box](../mfc/life-cycle-of-a-dialog-box.md)
+
+

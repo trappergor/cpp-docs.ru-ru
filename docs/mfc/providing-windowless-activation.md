@@ -1,67 +1,86 @@
 ---
-title: "Предоставление активации без окна | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "активация [C++], MFC ActiveX - элементы управления"
-  - "активация [C++], без окон"
-  - "элементы управления MFC ActiveX [C++], параметры активации"
-  - "активация элементов управления MFC ActiveX без окон"
+title: Providing Windowless Activation | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- windowless activation of MFC ActiveX controls
+- activation [MFC], MFC ActiveX controls
+- MFC ActiveX controls [MFC], activate options
+- activation [MFC], windowless
 ms.assetid: 094903b5-c344-42fa-96ff-ce01e16891c5
 caps.latest.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 6
----
-# Предоставление активации без окна
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 882240d66205fba2ebcfa348f6cc3edc110d0b57
+ms.contentlocale: ru-ru
+ms.lasthandoff: 09/12/2017
 
-Код создания окна \(т е все, возникает при вызове **CreateWindow**\) дорог для выполнения.  Элемент управления, который поддерживает на экране окно должен управлять сообщения для окна.  Безоконные элементы управления, поэтому быстрее, чем элементы управления с окнами.  
+---
+# <a name="providing-windowless-activation"></a>Providing Windowless Activation
+Window creation code (that is, everything that happens when you call **CreateWindow**) is costly to execute. A control that maintains an on-screen window has to manage messages for the window. Windowless controls are therefore faster than controls with windows.  
   
- Более следующее преимущество безоконных элементов управления, в отличие от windowed элементы управления, безоконные элементы управления поддерживают рисование прозрачной и nonrectangular области экрана.  Типичным примером прозрачного элемента управления текстовый элемент управления с прозрачным фоном.  Элементы управления красят текст, но не фон, поэтому все, что угодновсе, что любые под текстом отображает до конца.  Более новые формы часто используют nonrectangular элементы управления, например стрелки и круглые кнопки.  
+ A further advantage of windowless controls is that, unlike windowed controls, windowless controls support transparent painting and nonrectangular screen regions. A common example of a transparent control is a text control with a transparent background. The controls paints the text but not the background, so whatever is under the text shows through. Newer forms often make use of nonrectangular controls, such as arrows and round buttons.  
   
- Часто, элемент управления не должен окно его, и вместо этого не может использовать службы окна контейнера, при условии, что контейнер написан для поддержки безоконные объекты.  Безоконные элементы управления обратной совместимостью с предыдущими контейнерами.  В прежних контейнерах не, написанных для поддержки безоконные элементы управления, безоконные элементы управления создают окно, активно.  
+ Often, a control does not need a window of its own and, instead, can use the window services of its container, provided that the container has been written to support windowless objects. Windowless controls are backward compatible with older containers. In older containers not written to support windowless controls, the windowless controls create a window when active.  
   
- Поскольку безоконные элементы управления не имеют свои собственные окна, контейнер \(с окно\) отвечает за предоставление службы, в противном случае были бы предоставлены собственным окна элемента управления.  Например, если элементу управления требуется запрос фокус клавиатуры, захват мыши или получить контекст устройства, эти операции управлять контейнером.  Контейнер направляет сообщения вводимых пользователем данных, отправленных в окно безоконному его к соответствующему элементу управления, используя интерфейс `IOleInPlaceObjectWindowless`. \(См. *ActiveX SDK*  для описания данного интерфейса.\) функции\-члены `COleControl` вызывать эти службы из контейнера.  
+ Because windowless controls do not have their own windows, the container (which does have a window) is responsible for providing services that would otherwise have been provided by the control's own window. For example, if your control needs to query the keyboard focus, capture the mouse, or obtain a device context, these operations are managed by the container. The container routes user input messages sent to its window to the appropriate windowless control, using the `IOleInPlaceObjectWindowless` interface. (See the *ActiveX SDK* for a description of this interface.) `COleControl` member functions invoke these services from the container.  
   
- Чтобы использовать элемент управления безоконную активацию, включите флажок **windowlessActivate**  в наборе флажков, возвращенных методом [COleControl::GetControlFlags](../Topic/COleControl::GetControlFlags.md).  Примеры.  
+ To make your control use windowless activation, include the **windowlessActivate** flag in the set of flags returned by [COleControl::GetControlFlags](../mfc/reference/colecontrol-class.md#getcontrolflags). For example:  
   
- [!code-cpp[NVC_MFC_AxOpt#5](../mfc/codesnippet/CPP/providing-windowless-activation_1.cpp)]  
-[!code-cpp[NVC_MFC_AxOpt#6](../mfc/codesnippet/CPP/providing-windowless-activation_2.cpp)]  
-[!code-cpp[NVC_MFC_AxOpt#7](../mfc/codesnippet/CPP/providing-windowless-activation_3.cpp)]  
+ [!code-cpp[NVC_MFC_AxOpt#5](../mfc/codesnippet/cpp/providing-windowless-activation_1.cpp)]  
+[!code-cpp[NVC_MFC_AxOpt#6](../mfc/codesnippet/cpp/providing-windowless-activation_2.cpp)]  
+[!code-cpp[NVC_MFC_AxOpt#7](../mfc/codesnippet/cpp/providing-windowless-activation_3.cpp)]  
   
- Код, чтобы включить этот флажок создается автоматически, если выбирать параметр **Активация без окна** на странице [Параметры элементов управления](../mfc/reference/control-settings-mfc-activex-control-wizard.md) мастера элементов управления ActiveX MFC.  
+ The code to include this flag is automatically generated if you select the **Windowless activation** option on the [Control Settings](../mfc/reference/control-settings-mfc-activex-control-wizard.md) page of the MFC ActiveX Control Wizard.  
   
- При безоконная активация будет включена, контейнер делегирует сообщения ввода к интерфейсу `IOleInPlaceObjectWindowless` элемента управления.  реализация `COleControl` этого интерфейса диспетчеризация сообщений по схеме сообщений элемента управления, после изменения координаты мыши соответствующим образом.  Процесс можно сообщения, такие как обычные сообщения окна, добавив соответствующие записи в схеме сообщений.  В обработчиках для этих сообщений, избегайте использования переменной `m_hWnd` \(или любой функции\-члена, использующего\), необходимо проверить, его значение не равно **NULL**.  
+ When windowless activation is enabled, the container will delegate input messages to the control's `IOleInPlaceObjectWindowless` interface. `COleControl`'s implementation of this interface dispatches the messages through your control's message map, after adjusting the mouse coordinates appropriately. You can process the messages like ordinary window messages, by adding the corresponding entries to the message map. In your handlers for these messages, avoid using the `m_hWnd` member variable (or any member function that uses it) without first checking that its value is not **NULL**.  
   
- `COleControl` предоставляет функции\-члены, вызывают захват мыши, фокус клавиатуры, прокрутку и другие окна из контейнера службы при необходимости, в том числе:  
+ `COleControl` provides member functions that invoke mouse capture, keyboard focus, scrolling, and other window services from the container as appropriate, including:  
   
--   [GetFocus](../Topic/COleControl::GetFocus.md) [SetFocus](../Topic/COleControl::SetFocus.md),  
+-   [GetFocus](../mfc/reference/colecontrol-class.md#getfocus), [SetFocus](../mfc/reference/colecontrol-class.md#setfocus)  
   
--   [GetCapture](../Topic/COleControl::GetCapture.md) [SetCapture](../Topic/COleControl::SetCapture.md), [ReleaseCapture](../Topic/COleControl::ReleaseCapture.md)  
+-   [GetCapture](../mfc/reference/colecontrol-class.md#getcapture), [SetCapture](../mfc/reference/colecontrol-class.md#setcapture), [ReleaseCapture](../mfc/reference/colecontrol-class.md#releasecapture)  
   
--   [GetDC](../Topic/COleControl::GetDC.md) [ReleaseDC](../Topic/COleControl::ReleaseDC.md),  
+-   [GetDC](../mfc/reference/colecontrol-class.md#getdc), [ReleaseDC](../mfc/reference/colecontrol-class.md#releasedc)  
   
--   [InvalidateRgn](../Topic/COleControl::InvalidateRgn.md)  
+-   [InvalidateRgn](../mfc/reference/colecontrol-class.md#invalidatergn)  
   
--   [ScrollWindow](../Topic/COleControl::ScrollWindow.md)  
+-   [ScrollWindow](../mfc/reference/colecontrol-class.md#scrollwindow)  
   
--   [GetClientRect](../Topic/COleControl::GetClientRect.md)  
+-   [GetClientRect](../mfc/reference/colecontrol-class.md#getclientrect)  
   
- В безоконных элементов управления, следует всегда использовать функции\-члены `COleControl` вместо соответствующих функции\-члены `CWnd` или их соответствующих функций Win32 API.  
+ In windowless controls, you should always use the `COleControl` member functions instead of the corresponding `CWnd` member functions or their related Win32 API functions.  
   
- Может потребоваться безоконный элемент управления называется целевым объектом операции перетаскивания OLE.  Обычно это требовало бы, чтобы окно элемента управления зарегистрированное как целевой объект перетаскивания.  Поскольку элемент управления не имеет окно его, контейнер использует свое собственное окно как целевой объект перетаскивания.  Элемент управления предоставляет реализацию интерфейса `IDropTarget`, к которому контейнер может делегировать вызовы в соответствующее время.  Чтобы сделать этот интерфейс в контейнер, переопределите [COleControl::GetWindowlessDropTarget](../Topic/COleControl::GetWindowlessDropTarget.md).  Примеры.  
+ You may want a windowless control to be the target of an OLE drag-and-drop operation. Normally, this would require that the control's window be registered as a drop target. Since the control has no window of its own, the container uses its own window as a drop target. The control provides an implementation of the `IDropTarget` interface to which the container can delegate calls at the appropriate time. To expose this interface to the container, override [COleControl::GetWindowlessDropTarget](../mfc/reference/colecontrol-class.md#getwindowlessdroptarget). For example:  
   
- [!code-cpp[NVC_MFC_AxOpt#8](../mfc/codesnippet/CPP/providing-windowless-activation_4.cpp)]  
+ [!code-cpp[NVC_MFC_AxOpt#8](../mfc/codesnippet/cpp/providing-windowless-activation_4.cpp)]  
   
-## См. также  
- [Элементы управления ActiveX в MFC. Оптимизация](../mfc/mfc-activex-controls-optimization.md)
+## <a name="see-also"></a>See Also  
+ [MFC ActiveX Controls: Optimization](../mfc/mfc-activex-controls-optimization.md)
+
+

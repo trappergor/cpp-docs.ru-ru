@@ -1,5 +1,5 @@
 ---
-title: "Класс CNotSupportedException | Документы Microsoft"
+title: CNotSupportedException Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -15,9 +15,7 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- CNotSupportedException class
-- unsupported features
-- exceptions, not supported
+- CNotSupportedException [MFC], CNotSupportedException
 ms.assetid: e517391b-eb94-4c39-ae32-87b45bf7d624
 caps.latest.revision: 20
 author: mikeblome
@@ -37,36 +35,36 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 040985df34f2613b4e4fae29498721aef15d50cb
-ms.openlocfilehash: 6cb66448d0dadaf1f70c3606bc1b9027bd217a38
+ms.translationtype: MT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 83bc88d4618939650296e73a1c991b6e75883272
 ms.contentlocale: ru-ru
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 09/12/2017
 
 ---
-# <a name="cnotsupportedexception-class"></a>Класс CNotSupportedException
-Представляет исключение, являющееся результатом запроса неподдерживаемой возможности.  
+# <a name="cnotsupportedexception-class"></a>CNotSupportedException Class
+Represents an exception that is the result of a request for an unsupported feature.  
   
-## <a name="syntax"></a>Синтаксис  
+## <a name="syntax"></a>Syntax  
   
 ```  
 class CNotSupportedException : public CSimpleException  
 ```  
   
-## <a name="members"></a>Члены  
+## <a name="members"></a>Members  
   
-### <a name="public-constructors"></a>Открытые конструкторы  
+### <a name="public-constructors"></a>Public Constructors  
   
-|Имя|Описание|  
+|Name|Description|  
 |----------|-----------------|  
-|[CNotSupportedException::CNotSupportedException](#cnotsupportedexception)|Создает объект `CNotSupportedException`.|  
+|[CNotSupportedException::CNotSupportedException](#cnotsupportedexception)|Constructs a `CNotSupportedException` object.|  
   
-## <a name="remarks"></a>Примечания  
- Без дальнейшего уточнения необходимые или невозможна.  
+## <a name="remarks"></a>Remarks  
+ No further qualification is necessary or possible.  
   
- Дополнительные сведения об использовании `CNotSupportedException`, см. в статье [обработка исключений (MFC)](../../mfc/exception-handling-in-mfc.md).  
+ For more information on using `CNotSupportedException`, see the article [Exception Handling (MFC)](../../mfc/exception-handling-in-mfc.md).  
   
-## <a name="inheritance-hierarchy"></a>Иерархия наследования  
+## <a name="inheritance-hierarchy"></a>Inheritance Hierarchy  
  [CObject](../../mfc/reference/cobject-class.md)  
   
  [CException](../../mfc/reference/cexception-class.md)  
@@ -75,22 +73,22 @@ class CNotSupportedException : public CSimpleException
   
  `CNotSupportedException`  
   
-## <a name="requirements"></a>Требования  
- **Заголовок:** afx.h  
+## <a name="requirements"></a>Requirements  
+ **Header:** afx.h  
   
-##  <a name="cnotsupportedexception"></a>CNotSupportedException::CNotSupportedException  
- Создает объект `CNotSupportedException`.  
+##  <a name="cnotsupportedexception"></a>  CNotSupportedException::CNotSupportedException  
+ Constructs a `CNotSupportedException` object.  
   
 ```  
 CNotSupportedException();
 ```  
   
-### <a name="remarks"></a>Примечания  
- Не используйте этот конструктор, непосредственно, но вместо этого вызовите глобальную функцию [AfxThrowNotSupportedException](exception-processing.md#afxthrownotsupportedexception). Дополнительные сведения об обработке исключений см. в статье [обработка исключений в MFC](../exception-handling-in-mfc.md).  
+### <a name="remarks"></a>Remarks  
+ Do not use this constructor directly, but rather call the global function [AfxThrowNotSupportedException](exception-processing.md#afxthrownotsupportedexception). for more information about exception processing, see the article [Exception Handling in MFC](../exception-handling-in-mfc.md).  
   
-## <a name="see-also"></a>См. также  
- [CException-класс](cexception-class.md)   
- [Диаграмма иерархии](../hierarchy-chart.md)
+## <a name="see-also"></a>See Also  
+ [CException Class](cexception-class.md)   
+ [Hierarchy Chart](../hierarchy-chart.md)
 
 
 

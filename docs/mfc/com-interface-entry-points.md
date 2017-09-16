@@ -1,41 +1,58 @@
 ---
-title: "Точки входа интерфейса COM | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "интерфейсы COM, точки входа"
-  - "точки входа, интерфейсы COM"
-  - "MFC COM, точки входа интерфейса COM"
-  - "MFC - библиотека, управление данными состояния"
-  - "OLE, точки входа интерфейса"
-  - "управление состоянием, интерфейсы OLE/COM"
+title: COM Interface Entry Points | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- entry points, COM interfaces
+- state management, OLE/COM interfaces
+- MFC COM, COM interface entry points
+- OLE, interface entry points
+- MFC, managing state data
+- COM interfaces, entry points
 ms.assetid: 9e7421dc-0731-4748-9e1b-90acbaf26d77
 caps.latest.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 6
----
-# Точки входа интерфейса COM
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 3b97fa6891e35a6aff492c70baad967466a46eb4
+ms.contentlocale: ru-ru
+ms.lasthandoff: 09/12/2017
 
-Для функций\-членов COM\-интерфейса используйте макрос [METHOD\_PROLOGUE](../Topic/METHOD_PROLOGUE.md) для обеспечения правильного глобального состояния при вызове методов экспортированного интерфейса.  
+---
+# <a name="com-interface-entry-points"></a>COM Interface Entry Points
+For member functions of a COM interface, use the [METHOD_PROLOGUE](com-interface-entry-points.md#method_prologue) macro to maintain the proper global state when calling methods of an exported interface.  
   
- Как правило, функции\-члены интерфейсов, реализованных `CCmdTarget`\- производные объекты уже используют этот макрос, чтобы обеспечить автоматическую инициализацию указателя `pThis`.  Примеры.  
+ Typically, member functions of interfaces implemented by `CCmdTarget`-derived objects already use this macro to provide automatic initialization of the `pThis` pointer. For example:  
   
- [!code-cpp[NVC_MFCConnectionPoints#5](../mfc/codesnippet/CPP/com-interface-entry-points_1.cpp)]  
+ [!code-cpp[NVC_MFCConnectionPoints#5](../mfc/codesnippet/cpp/com-interface-entry-points_1.cpp)]  
   
- Дополнительные сведения см. в разделе [Техническое примечание 38](../mfc/tn038-mfc-ole-iunknown-implementation.md) для реализации MFC\/OLE **IUnknown**.  
+ For additional information, see [Technical Note 38](../mfc/tn038-mfc-ole-iunknown-implementation.md) on MFC/OLE **IUnknown** implementation.  
   
- Макрос `METHOD_PROLOGUE` определяется следующим образом:  
+ The `METHOD_PROLOGUE` macro is defined as:  
   
  `#define METHOD_PROLOGUE(theClass, localClass) \`  
   
@@ -45,11 +62,13 @@ caps.handback.revision: 6
   
  `AFX_MANAGE_STATE(pThis->m_pModuleState) \`  
   
- Часть макроса связанного с управлением глобального состояния выглядит следующим образом:  
+ The portion of the macro concerned with managing the global state is:  
   
  `AFX_MANAGE_STATE( pThis->m_pModuleState )`  
   
- В этом выражении предполагается, что будет *m\_pModuleState* переменной\-членом, содержащего объекта.  Он реализуется базовый класс `CCmdTarget` и инициализируется в соответствующее значение `COleObjectFactory`, когда объект экземпляра.  
+ In this expression, *m_pModuleState* is assumed to be a member variable of the containing object. It is implemented by the `CCmdTarget` base class and is initialized to the appropriate value by `COleObjectFactory`, when the object is instantiated.  
   
-## См. также  
- [Управление данными состояния модулей MFC](../mfc/managing-the-state-data-of-mfc-modules.md)
+## <a name="see-also"></a>See Also  
+ [Managing the State Data of MFC Modules](../mfc/managing-the-state-data-of-mfc-modules.md)
+
+

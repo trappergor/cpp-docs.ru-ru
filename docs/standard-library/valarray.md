@@ -1,5 +1,5 @@
 ---
-title: "&lt;valarray&gt; | Документы Майкрософт"
+title: '&lt;valarray&gt; | Microsoft Docs'
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -9,10 +9,7 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
-- std.<valarray>
-- valarray/std::<valarray>
-- std::<valarray>
-- <valarray>
+- valarray/std::<valarray>", "std::<valarray>", "<valarray>
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -36,92 +33,92 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
-ms.openlocfilehash: 830078013287ec0efc94d0b7fa3f0adb4ea6c22e
+ms.translationtype: MT
+ms.sourcegitcommit: 5d026c375025b169d5db8445cbb52c0c917b2d8d
+ms.openlocfilehash: b5e387caeb28b10fc0058f2d8d81e7684f64bdbe
 ms.contentlocale: ru-ru
-ms.lasthandoff: 04/29/2017
+ms.lasthandoff: 09/09/2017
 
 ---
 # <a name="ltvalarraygt"></a>&lt;valarray&gt;
-Определяет класс шаблона valarray и многочисленные вспомогательные классы и функции шаблонов.  
+Defines the template class valarray and numerous supporting template classes and functions.  
   
-## <a name="syntax"></a>Синтаксис  
+## <a name="syntax"></a>Syntax  
   
 ```  
 #include <valarray>  
   
 ```  
   
-## <a name="remarks"></a>Примечания  
- Эти классы и функции обладают нестандартной широтой для повышения производительности. В частности, любая функция, возвращающая объект типа **valarray\<**T1**>**, может возвращать объект другого типа T2. В этом случае любая функция, которая принимает один или несколько аргументов типа **valarray\<**T2**>**, должна иметь перегрузки, которые принимают произвольные сочетания этих аргументов, каждый из которых заменяется аргументом типа T2.  
+## <a name="remarks"></a>Remarks  
+ These template classes and functions are permitted unusual latitude in the interest of improved performance. Specifically, any function returning type **valarray\<**T1**>** may return an object of some other type T2. In that case, any function that accepts one or more arguments of type **valarray\<**T2**>** must have overloads that accept arbitrary combinations of those arguments, each replaced with an argument of type T2.  
   
-### <a name="functions"></a>Функции  
+### <a name="functions"></a>Functions  
   
 |||  
 |-|-|  
-|[abs](../standard-library/valarray-functions.md#abs)|Обрабатывает элементы входного valarray, возвращая массив valarray, элементы которого равны абсолютному значению элементов входного valarray.|  
-|[acos](../standard-library/valarray-functions.md#acos)|Обрабатывает элементы входного valarray, возвращая массив valarray, элементы которого равны арккосинусу элементов входного valarray.|  
-|[asin](../standard-library/valarray-functions.md#asin)|Обрабатывает элементы входного valarray, возвращая массив valarray, элементы которого равны арксинусу элементов входного valarray.|  
-|[atan](../standard-library/valarray-functions.md#atan)|Обрабатывает элементы входного valarray, возвращая массив valarray, элементы которого равны арифметическому значению арктангенса элементов входного valarray.|  
-|[atan2](../standard-library/valarray-functions.md#atan2)|Возвращает valarray, элементы которого равны арктангенсу декартовых компонентов, заданных сочетанием констант и элементов массивов valarray.|  
-|[cos](../standard-library/valarray-functions.md#cos)|Обрабатывает элементы входного valarray, возвращая массив valarray, элементы которого равны косинусу элементов входного valarray.|  
-|[cosh](../standard-library/valarray-functions.md#cosh)|Обрабатывает элементы входного valarray, возвращая массив valarray, элементы которого равны гиперболическому косинусу элементов входного valarray.|  
-|[exp](../standard-library/valarray-functions.md#exp)|Обрабатывает элементы входного valarray, возвращая массив valarray, элементы которого равны натуральной экспоненте элементов входного valarray.|  
-|[log](../standard-library/valarray-functions.md#log)|Обрабатывает элементы входного valarray, возвращая массив valarray, элементы которого равны натуральному логарифму элементов входного valarray.|  
-|[log10](../standard-library/valarray-functions.md#log10)|Обрабатывает элементы входного valarray, возвращая массив valarray, элементы которого равны десятичному логарифму элементов входного valarray.|  
-|[pow](../standard-library/valarray-functions.md#pow)|Обрабатывает элементы входных объектов valarray и констант, возвращая массив valarray, элементы которого равны основанию, заданному элементами входного valarray, или константу, возведенную в степень, заданную элементами входного valarray или константой.|  
-|[sin](../standard-library/valarray-functions.md#sin)|Обрабатывает элементы входного valarray, возвращая массив valarray, элементы которого равны синусу элементов входного valarray.|  
-|[sinh](../standard-library/valarray-functions.md#sinh)|Обрабатывает элементы входного valarray, возвращая массив valarray, элементы которого равны гиперболическому синусу элементов входного valarray.|  
-|[sqrt](../standard-library/valarray-functions.md#sqrt)|Обрабатывает элементы входного valarray, возвращая массив valarray, элементы которого равны квадратному корню элементов входного valarray.|  
+|[abs](../standard-library/valarray-functions.md#abs)|Operates on the elements of an input valarray, returning a valarray whose elements are equal to the absolute value of the elements of the input valarray.|  
+|[acos](../standard-library/valarray-functions.md#acos)|Operates on the elements of an input valarray, returning a valarray whose elements are equal to the arccosine of the elements of the input valarray.|  
+|[asin](../standard-library/valarray-functions.md#asin)|Operates on the elements of an input valarray, returning a valarray whose elements are equal to the arcsine of the elements of the input valarray.|  
+|[atan](../standard-library/valarray-functions.md#atan)|Operates on the elements of an input valarray, returning a valarray whose elements are equal to the principal value of the arctangent of the elements of the input valarray.|  
+|[atan2](../standard-library/valarray-functions.md#atan2)|Returns a valarray whose elements are equal to the arctangent of the Cartesian components specified by a combination of constants and elements of valarrays.|  
+|[cos](../standard-library/valarray-functions.md#cos)|Operates on the elements of an input valarray, returning a valarray whose elements are equal to the cosine of the elements of the input valarray.|  
+|[cosh](../standard-library/valarray-functions.md#cosh)|Operates on the elements of an input valarray, returning a valarray whose elements are equal to the hyperbolic cosine of the elements of the input valarray.|  
+|[exp](../standard-library/valarray-functions.md#exp)|Operates on the elements of an input valarray, returning a valarray whose elements are equal to the natural exponential of the elements of the input valarray.|  
+|[log](../standard-library/valarray-functions.md#log)|Operates on the elements of an input valarray, returning a valarray whose elements are equal to the natural logarithm of the elements of the input valarray.|  
+|[log10](../standard-library/valarray-functions.md#log10)|Operates on the elements of an input valarray, returning a valarray whose elements are equal to the base 10 or common logarithm of the elements of the input valarray.|  
+|[pow](../standard-library/valarray-functions.md#pow)|Operates on the elements of input valarrays and constants, returning a valarray whose elements are equal to a base specified either by the elements of an input valarray or a constant raised to an exponent specified either by the elements of an input valarray or a constant.|  
+|[sin](../standard-library/valarray-functions.md#sin)|Operates on the elements of an input valarray, returning a valarray whose elements are equal to the sine of the elements of the input valarray.|  
+|[sinh](../standard-library/valarray-functions.md#sinh)|Operates on the elements of an input valarray, returning a valarray whose elements are equal to the hyperbolic sine of the elements of the input valarray.|  
+|[sqrt](../standard-library/valarray-functions.md#sqrt)|Operates on the elements of an input valarray, returning a valarray whose elements are equal to the square root of the elements of the input valarray.|  
 |[swap](../standard-library/valarray-functions.md#swap)||  
-|[tan](../standard-library/valarray-functions.md#tan)|Обрабатывает элементы входного valarray, возвращая массив valarray, элементы которого равны тангенсу элементов входного valarray.|  
-|[tanh](../standard-library/valarray-functions.md#tanh)|Обрабатывает элементы входного valarray, возвращая массив valarray, элементы которого равны гиперболическому тангенсу элементов входного valarray.|  
+|[tan](../standard-library/valarray-functions.md#tan)|Operates on the elements of an input valarray, returning a valarray whose elements are equal to the tangent of the elements of the input valarray.|  
+|[tanh](../standard-library/valarray-functions.md#tanh)|Operates on the elements of an input valarray, returning a valarray whose elements are equal to the hyperbolic tangent of the elements of the input valarray.|  
   
-### <a name="operators"></a>Операторы  
-  
-|||  
-|-|-|  
-|[оператор!=](../standard-library/valarray-operators.md#op_neq)|Проверяет, не равны ли соответствующие элементы двух одинаковых по размеру valarray или не равны ли все элементы valarray указанному значению типа элемента valarray.|  
-|[оператор%](../standard-library/valarray-operators.md#op_mod)|Возвращает остаток от деления соответствующих элементов двух одинаковых по размеру valarray или от деления valarray на указанное значение типа элемента valarray или от деления указанного значения на valarray.|  
-|[оператор&](../standard-library/valarray-operators.md#op_amp)|Вычисляет результат применения побитовой операции **И** между соответствующими элементами двух одинаковых по размеру объектов valarray или между объектом valarray и указанным значением типа элемента.|  
-|[оператор&&](../standard-library/valarray-operators.md#op_amp_amp)|Вычисляет результат применения логической операции **И** между соответствующими элементами двух одинаковых по размеру объектов valarray или между объектом valarray и указанным значением типа элемента valarray.|  
-|[оператор>](../standard-library/valarray-operators.md#op_gt)|Проверяет, больше ли элементы одного valarray, чем элементы одинакового по размеру valarray либо больше или меньше ли все элементы valarray, чем указанное значение типа элемента valarray.|  
-|[оператор>=](../standard-library/valarray-operators.md#op_gt_eq)|Проверяет, больше или равны ли элементы одного valarray элементам одинакового по размеру valarray, или проверяет, больше или равны ли либо меньше или равны ли все элементы valarray указанному значению.|  
-|[оператор>>](../standard-library/valarray-operators.md#op_gt_gt)|Сдвигает вправо биты для каждого элемента valarray на указанное число позиций или на поэлементную сумму, указанную вторым valarray.|  
-|[оператор<](../standard-library/valarray-operators.md#op_lt)|Проверяет, меньше ли элементы одного valarray, чем элементы одинакового по размеру valarray или больше ли либо меньше ли все элементы valarray, чем указанное значение.|  
-|[оператор<=](../standard-library/valarray-operators.md#op_lt_eq)|Проверяет, меньше или равны ли элементы одного valarray элементам одинакового по размеру valarray, или проверяет, больше или равны ли либо меньше или равны ли все элементы valarray указанному значению.|  
-|[оператор<<](../standard-library/valarray-operators.md#op_lt_lt)|Сдвигает влево биты для каждого элемента valarray на указанное число позиций или на поэлементную сумму, указанную вторым valarray.|  
-|[оператор*](../standard-library/valarray-operators.md#op_star)|Получает результат поэлементного умножения соответствующих элементов двух одинаковых по размеру valarray или умножения valarray и указанного значения типа элемента valarray.|  
-|[оператор+](../standard-library/valarray-operators.md#op_add)|Получает результат поэлементной суммы соответствующих элементов двух одинаковых по размеру valarray или суммы valarray и указанного значения типа элемента valarray.|  
-|[оператор-](../standard-library/valarray-operators.md#operator-)|Получает результат поэлементного вычитания соответствующих элементов двух одинаковых по размеру valarray или вычитания valarray и указанного значения типа элемента valarray.|  
-|[оператор/](../standard-library/valarray-operators.md#op_div)|Получает результат поэлементного деления соответствующих элементов двух одинаковых по размеру valarray или деления valarray на указанное значение типа элемента valarray.|  
-|[оператор==](../standard-library/valarray-operators.md#op_eq_eq)|Проверяет, равны ли соответствующие элементы двух одинаковых по размеру valarray или равны ли все элементы valarray указанному значению типа элемента valarray.|  
-|[оператор^](../standard-library/valarray-operators.md#op_xor)|Получает результат применения побитовой эксклюзивной операции `OR` между соответствующими элементами двух одинаковых по размеру valarray или valarray и указанного значения типа элемента.|  
-|[оператор|](../standard-library/valarray-operators.md#op_or)|Получает результат применения побитовой операции `OR` между соответствующими элементами двух одинаковых по размеру valarray или valarray и указанного значения типа элемента.|  
-|[оператор||](../standard-library/valarray-operators.md#op_lor)|Получает результат применения логической операции `OR` между соответствующими элементами двух одинаковых по размеру valarray или valarray и указанного значения типа элемента valarray.|  
-  
-### <a name="classes"></a>Классы  
+### <a name="operators"></a>Operators  
   
 |||  
 |-|-|  
-|[Класс gslice](../standard-library/gslice-class.md)|Служебный класс, используемый для определения многомерных срезов valarray.|  
-|[Класс gslice_array](../standard-library/gslice-array-class.md)|Внутренний, вспомогательный класс шаблона, который поддерживает общие объекты срезов, предоставляя операции между массивами подмножеств, заданные общим срезом valarray.|  
-|[Класс indirect_array](../standard-library/indirect-array-class.md)|Внутренний, вспомогательный класс шаблона, который поддерживает объекты, представляющие подмножества valarray, предоставляя операции между массивами подмножеств, заданных в виде подмножества индексов родительского valarray.|  
-|[Класс mask_array](../standard-library/mask-array-class.md)|Внутренний, вспомогательный класс шаблона, который поддерживает объекты, представляющие подмножества родительских valarray, указанных логическим выражением, предоставляя операции между массивами подмножеств.|  
-|[Класс slice](../standard-library/slice-class.md)|Служебный класс, используемый для определения одномерных векторных подмножеств valarray.|  
-|[Класс slice_array](../standard-library/slice-array-class.md)|Внутренний, вспомогательный класс шаблона, который поддерживает объекты срезов, предоставляя операции между массивами подмножеств, заданные срезом valarray.|  
-|[Класс valarray](../standard-library/valarray-class.md)|Класс шаблона описывает объект, который управляет последовательностью элементов типа **Type**. Эти элементы хранятся в виде массива, предназначены для быстрого выполнения математических операций и оптимизированы для повышения производительности вычислений.|  
+|[operator!=](../standard-library/valarray-operators.md#op_neq)|Tests whether the corresponding elements of two equally sized valarrays are unequal or whether all the elements of a valarray are unequal a specified value of the valarray's element type.|  
+|[operator%](../standard-library/valarray-operators.md#op_mod)|Obtains the remainder of dividing the corresponding elements of two equally sized valarrays or of dividing a valarray by a specified value of the valarray's element type or of dividing a specified value by a valarray.|  
+|[operator&](../standard-library/valarray-operators.md#op_amp)|Obtains the bitwise **AND** between corresponding elements of two equally sized valarrays or between a valarray and a specified value of the element type.|  
+|[operator&&](../standard-library/valarray-operators.md#op_amp_amp)|Obtains the logical **AND** between corresponding elements of two equally sized valarrays or between a valarray and a specified value of the valarray's element type.|  
+|[operator>](../standard-library/valarray-operators.md#op_gt)|Tests whether the elements of one valarray are greater than the elements of an equally sized valarray or whether all the elements of a valarray are greater or less than a specified value of the valarray's element type.|  
+|[operator>=](../standard-library/valarray-operators.md#op_gt_eq)|Tests whether the elements of one valarray are greater than or equal to the elements of an equally sized valarray or whether all the elements of a valarray are greater than or equal to or less than or equal to a specified value.|  
+|[operator>>](../standard-library/valarray-operators.md#op_gt_gt)|Right-shifts the bits for each element of a valarray a specified number of positions or by an element-wise amount specified by a second valarray.|  
+|[operator<](../standard-library/valarray-operators.md#op_lt)|Tests whether the elements of one valarray are less than the elements of an equally sized valarray or whether all the elements of a valarray are greater or less than a specified value.|  
+|[operator<=](../standard-library/valarray-operators.md#op_lt_eq)|Tests whether the elements of one valarray are less than or equal to the elements of an equally sized valarray or whether all the elements of a valarray are greater than or equal to or less than or equal to a specified value.|  
+|[operator<<](../standard-library/valarray-operators.md#op_lt_lt)|Left shifts the bits for each element of a valarray a specified number of positions or by an element-wise amount specified by a second valarray.|  
+|[operator*](../standard-library/valarray-operators.md#op_star)|Obtains the element-wise product between corresponding elements of two equally sized valarrays or of between a valarray a specified value of the valarray's element type.|  
+|[operator+](../standard-library/valarray-operators.md#op_add)|Obtains the element-wise sum between corresponding elements of two equally sized valarrays or of between a valarray a specified value of the valarray's element type.|  
+|[operator-](../standard-library/valarray-operators.md#operator-)|Obtains the element-wise difference between corresponding elements of two equally sized valarrays or of between a valarray a specified value of the valarray's element type.|  
+|[operator/](../standard-library/valarray-operators.md#op_div)|Obtains the element-wise quotient between corresponding elements of two equally sized valarrays or of between a valarray a specified value of the valarray's element type.|  
+|[operator==](../standard-library/valarray-operators.md#op_eq_eq)|Tests whether the corresponding elements of two equally sized valarrays are equal or whether all the elements of a valarray are equal a specified value of the valarray's element type.|  
+|[operator^](../standard-library/valarray-operators.md#op_xor)|Obtains the bitwise exclusive `OR` between corresponding elements of two equally sized valarrays or between a valarray and a specified value of the element type.|  
+|[operator&#124;](../standard-library/valarray-operators.md#op_or)|Obtains the bitwise `OR` between corresponding elements of two equally sized valarrays or between a valarray and a specified value of the element type.|  
+|[operator&#124;&#124;](../standard-library/valarray-operators.md#op_lor)|Obtains the logical `OR` between corresponding elements of two equally sized valarrays or between a valarray and a specified value of the valarray's element type.|  
   
-### <a name="specializations"></a>Специализации  
+### <a name="classes"></a>Classes  
   
 |||  
 |-|-|  
-|Класс [valarray\<bool>](../standard-library/valarray-bool-class.md)|Специализированная версия класса шаблона valarray\<**Type>** для элементов типа `bool`.|  
+|[gslice Class](../standard-library/gslice-class.md)|A utility class to valarray that is used to define multi-dimensional slices of a valarray.|  
+|[gslice_array Class](../standard-library/gslice-array-class.md)|An internal, auxiliary template class that supports general slice objects by providing operations between subset arrays defined by the general slice of a valarray.|  
+|[indirect_array Class](../standard-library/indirect-array-class.md)|An internal, auxiliary template class that supports objects that are subsets of valarrays by providing operations between subset arrays defined by specifying a subset of indices of a parent valarray.|  
+|[mask_array Class](../standard-library/mask-array-class.md)|An internal, auxiliary template class that supports objects that are subsets of parent valarrays, specified with a Boolean expression, by providing operations between the subset arrays.|  
+|[slice Class](../standard-library/slice-class.md)|A utility class to valarray that is used to define one-dimensional, vector-like subsets of a valarray.|  
+|[slice_array Class](../standard-library/slice-array-class.md)|An internal, auxiliary template class that supports slice objects by providing operations between subset arrays defined by the slice of a valarray.|  
+|[valarray Class](../standard-library/valarray-class.md)|The template class describes an object that controls a sequence of elements of type **Type** that are stored as an array and designed for performing high-speed mathematical operations, optimized for computational performance.|  
   
-## <a name="see-also"></a>См. также  
- [Справочник по файлам заголовков](../standard-library/cpp-standard-library-header-files.md)   
- [Потокобезопасность в стандартной библиотеке C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)
+### <a name="specializations"></a>Specializations  
+  
+|||  
+|-|-|  
+|[valarray\<bool> Class](../standard-library/valarray-bool-class.md)|A specialized version of the template class valarray\<**Type**> to elements of type `bool`.|  
+  
+## <a name="see-also"></a>See Also  
+ [Header Files Reference](../standard-library/cpp-standard-library-header-files.md)   
+ [Thread Safety in the C++ Standard Library](../standard-library/thread-safety-in-the-cpp-standard-library.md)
 
 
 

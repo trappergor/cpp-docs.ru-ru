@@ -1,5 +1,5 @@
 ---
-title: "Класс rts_alloc | Документы Майкрософт"
+title: rts_alloc Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -9,16 +9,17 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
-- stdext::rts_alloc
 - allocators/stdext::rts_alloc
-- rts_alloc
 - allocators/stdext::rts_alloc::allocate
 - allocators/stdext::rts_alloc::deallocate
 - allocators/stdext::rts_alloc::equals
 dev_langs:
 - C++
 helpviewer_keywords:
-- rts_alloc class
+- stdext::rts_alloc
+- stdext::rts_alloc [C++], allocate
+- stdext::rts_alloc [C++], deallocate
+- stdext::rts_alloc [C++], equals
 ms.assetid: ab41bffa-83d1-4a1c-87b9-5707d516931f
 caps.latest.revision: 19
 author: corob-msft
@@ -38,99 +39,99 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
-ms.openlocfilehash: fe127f896fa902f4a8cdb44454cf6e4c5f449e79
+ms.translationtype: MT
+ms.sourcegitcommit: 5d026c375025b169d5db8445cbb52c0c917b2d8d
+ms.openlocfilehash: f3eb62d14b304decfe168b224f87f433ac0c39d9
 ms.contentlocale: ru-ru
-ms.lasthandoff: 04/29/2017
+ms.lasthandoff: 09/09/2017
 
 ---
-# <a name="rtsalloc-class"></a>Класс rts_alloc
-Класс шаблона rts_alloc описывает [фильтр](../standard-library/allocators-header.md), содержащий массив экземпляров кэша, и определяет, какой экземпляр нужно использовать для выделения и освобождения во время выполнения, а не во время компиляции.  
+# <a name="rtsalloc-class"></a>rts_alloc Class
+The rts_alloc template class describes a [filter](../standard-library/allocators-header.md) that holds an array of cache instances and determines which instance to use for allocation and deallocation at runtime instead of at compile time.  
   
-## <a name="syntax"></a>Синтаксис  
+## <a name="syntax"></a>Syntax  
   
 ```
 template <class Cache>  
 class rts_alloc
 ```  
   
-#### <a name="parameters"></a>Параметры  
+#### <a name="parameters"></a>Parameters  
   
-|Параметр|Описание|  
+|Parameter|Description|  
 |---------------|-----------------|  
-|`Cache`|Тип экземпляров кэша, содержащихся в массиве. Возможные типы: [Класс cache_chunklist](../standard-library/cache-chunklist-class.md), [cache_freelist](../standard-library/cache-freelist-class.md) или [cache_suballoc](../standard-library/cache-suballoc-class.md).|  
+|`Cache`|The type of cache instances contained in the array. This can be [cache_chunklist Class](../standard-library/cache-chunklist-class.md), [cache_freelist](../standard-library/cache-freelist-class.md), or [cache_suballoc](../standard-library/cache-suballoc-class.md).|  
   
-## <a name="remarks"></a>Примечания  
- Этот класс шаблона содержит несколько экземпляров распределителей блоков и определяет, какой экземпляр нужно использовать для выделения и освобождения во время выполнения, а не во время компиляции. Он используется с компиляторами, которые не могут скомпилировать повторную привязку.  
+## <a name="remarks"></a>Remarks  
+ This template class holds multiple block allocator instances and determines which instance to use for allocation or deallocation at runtime instead of at compile time. It is used with compilers that cannot compile rebind.  
   
-### <a name="member-functions"></a>Функции-члены  
+### <a name="member-functions"></a>Member Functions  
   
 |||  
 |-|-|  
-|[allocate](#allocate)|Выделяет блок памяти.|  
-|[deallocate](#deallocate)|Освобождает указанное число объектов из памяти, начиная с заданной позиции.|  
-|[equals](#equals)|Сравнивает два кэша на равенство.|  
+|[allocate](#allocate)|Allocates a block of memory.|  
+|[deallocate](#deallocate)|Frees a specified number of objects from storage beginning at a specified position.|  
+|[equals](#equals)|Compares two caches for equality.|  
   
-## <a name="requirements"></a>Требования  
- **Заголовок:** \<allocators>  
+## <a name="requirements"></a>Requirements  
+ **Header:** \<allocators>  
   
- **Пространство имен:** stdext  
+ **Namespace:** stdext  
   
 ##  <a name="allocate"></a>  rts_alloc::allocate  
- Выделяет блок памяти.  
+ Allocates a block of memory.  
   
 ```
 void *allocate(std::size_t count);
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
   
-|Параметр|Описание|  
+|Parameter|Description|  
 |---------------|-----------------|  
-|`count`|Число элементов в массиве, которые нужно выделить.|  
+|`count`|The number of elements in the array to be allocated.|  
   
-### <a name="return-value"></a>Возвращаемое значение  
- Указатель на выделяемый объект.  
+### <a name="return-value"></a>Return Value  
+ A pointer to the allocated object.  
   
-### <a name="remarks"></a>Примечания  
- Функция-член возвращает `caches[_IDX].allocate(count)`, где индекс `_IDX` определяется запрошенным размером блока `count` или возвращает `operator new(count)`, если `count` слишком большой. `cache`, представляющий объект кэша.  
+### <a name="remarks"></a>Remarks  
+ The member function returns `caches[_IDX].allocate(count)`, where the index `_IDX` is determined by the requested block size `count`, or, if `count` is too large, it returns `operator new(count)`. `cache`, which represents the cache object.  
   
 ##  <a name="deallocate"></a>  rts_alloc::deallocate  
- Освобождает указанное число объектов из памяти, начиная с заданной позиции.  
+ Frees a specified number of objects from storage beginning at a specified position.  
   
 ```
 void deallocate(void* ptr, std::size_t count);
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
   
-|Параметр|Описание|  
+|Parameter|Description|  
 |---------------|-----------------|  
-|`ptr`|Указатель на первый объект, который необходимо освободить из хранилища.|  
-|`count`|Количество объектов для освобождения из хранилища.|  
+|`ptr`|A pointer to the first object to be deallocated from storage.|  
+|`count`|The number of objects to be deallocated from storage.|  
   
-### <a name="remarks"></a>Примечания  
- Функция-член вызывает `caches[_IDX].deallocate(ptr, count)`, где индекс `_IDX` определяется запрошенным размером блока `count` или возвращает `operator delete(ptr)`, если `count` слишком большой.  
+### <a name="remarks"></a>Remarks  
+ The member function calls `caches[_IDX].deallocate(ptr, count)`, where the index `_IDX` is determined by the requested block size `count`, or, if `count` is too large, it returns `operator delete(ptr)`.  
   
 ##  <a name="equals"></a>  rts_alloc::equals  
- Сравнивает два кэша на равенство.  
+ Compares two caches for equality.  
   
 ```
 bool equals(const sync<_Cache>& _Other) const;
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
   
-|Параметр|Описание|  
+|Parameter|Description|  
 |---------------|-----------------|  
-|`_Cache`|Объект кэша, связанный с фильтром.|  
-|`_Other`|Объект кэша для сравнения на равенство.|  
+|`_Cache`|The cache object associated with the filter.|  
+|`_Other`|The cache object to compare for equality.|  
   
-### <a name="remarks"></a>Примечания  
- Значение `true`, если результат `caches[0].equals(other.caches[0])`; в противном случае — значение `false`. `caches` представляет массив объектов кэша.  
+### <a name="remarks"></a>Remarks  
+ `true` if the result of `caches[0].equals(other.caches[0])`; otherwise, `false`. `caches` represents the array of cache objects.  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>See Also  
  [ALLOCATOR_DECL](../standard-library/allocators-functions.md#allocator_decl)   
  [\<allocators>](../standard-library/allocators-header.md)
 

@@ -1,62 +1,81 @@
 ---
-title: "Жизненный цикл диалогового окна | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "диалоговые окна, жизненный цикл"
-  - "жизненный цикл диалоговых окон"
-  - "диалоговые окна MFC, жизненный цикл"
-  - "модальные диалоговые окна, жизненный цикл"
-  - "безрежимные диалоговые окна, жизненный цикл"
+title: Life Cycle of a Dialog Box | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- dialog boxes [MFC], life cycle
+- modal dialog boxes [MFC], life cycle
+- modeless dialog boxes [MFC], life cycle
+- MFC dialog boxes [MFC], life cycle
+- life cycle of dialog boxes [MFC]
 ms.assetid: e16fd78e-238d-4f31-8c9d-8564f3953bd9
 caps.latest.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 5
----
-# Жизненный цикл диалогового окна
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 244bc75dfdb4695184ca66b8810260d407507f54
+ms.contentlocale: ru-ru
+ms.lasthandoff: 09/12/2017
 
-Во время жизненного цикла диалогового окна, пользователь вызывает диалоговое окно, обычно внутри обработчика команды, который создает и инициализирует объект диалогового окна, пользователь взаимодействует с диалоговым окном, и закрывает диалоговое окно.  
+---
+# <a name="life-cycle-of-a-dialog-box"></a>Life Cycle of a Dialog Box
+During the life cycle of a dialog box, the user invokes the dialog box, typically inside a command handler that creates and initializes the dialog object, the user interacts with the dialog box, and the dialog box closes.  
   
- Для модальных окон обработчик собирает все данные, введенные пользователем, как только диалоговое окно закрывает.  Поскольку объект диалогового окна существует после его закрывает окно диалогового окна, можно просто использовать переменные\-члены класса диалогового окна извлекают данные.  
+ For modal dialog boxes, your handler gathers any data the user entered once the dialog box closes. Since the dialog object exists after its dialog window has closed, you can simply use the member variables of your dialog class to extract the data.  
   
- Для немодальных диалоговых окон часто можно извлечь данные из объекта диалогового окна, пока диалоговое окно по\-прежнему является видимым.  В некоторый момент, объект уничтожается диалогового окна. если это происходит зависит от коде.  
+ For modeless dialog boxes, you may often extract data from the dialog object while the dialog box is still visible. At some point, the dialog object is destroyed; when this happens depends on your code.  
   
-## Дополнительные сведения  
+## <a name="what-do-you-want-to-know-more-about"></a>What do you want to know more about  
   
--   [Создание и отображение диалоговые окна](../mfc/creating-and-displaying-dialog-boxes.md)  
+-   [Creating and displaying dialog boxes](../mfc/creating-and-displaying-dialog-boxes.md)  
   
--   [Создание модальные диалоговые окна](../mfc/creating-modal-dialog-boxes.md)  
+-   [Creating modal dialog boxes](../mfc/creating-modal-dialog-boxes.md)  
   
--   [Создание немодальные диалоговые окна](../mfc/creating-modeless-dialog-boxes.md)  
+-   [Creating modeless dialog boxes](../mfc/creating-modeless-dialog-boxes.md)  
   
--   [С помощью шаблона диалоговых окон в памяти](../mfc/using-a-dialog-template-in-memory.md)  
+-   [Using a dialog template in memory](../mfc/using-a-dialog-template-in-memory.md)  
   
--   [Устанавливать цвет фона диалогового окна](../mfc/setting-the-dialog-box’s-background-color.md)  
+-   [Setting the dialog box's background color](../mfc/setting-the-dialog-boxs-background-color.md)  
   
--   [Для инициализации диалогового окна](../mfc/initializing-the-dialog-box.md)  
+-   [Initializing the dialog box](../mfc/initializing-the-dialog-box.md)  
   
--   [Обработка сообщений Windows в диалоговом окне](../mfc/handling-windows-messages-in-your-dialog-box.md)  
+-   [Handling Windows messages in your dialog box](../mfc/handling-windows-messages-in-your-dialog-box.md)  
   
--   [Извлечь данные из объекта диалогового окна](../Topic/Retrieving%20Data%20from%20the%20Dialog%20Object.md)  
+-   [Retrieving data from the dialog object](../mfc/retrieving-data-from-the-dialog-object.md)  
   
--   [Закрыть диалоговое окно](../mfc/closing-the-dialog-box.md)  
+-   [Closing the dialog box](../mfc/closing-the-dialog-box.md)  
   
--   [Удалить диалоговое окно](../Topic/Destroying%20the%20Dialog%20Box.md)  
+-   [Destroying the dialog box](../mfc/destroying-the-dialog-box.md)  
   
--   [Данные диалогового окна \(DDX\) и проверка \(DDV\)](../mfc/dialog-data-exchange-and-validation.md)  
+-   [Dialog data exchange (DDX) and validation (DDV)](../mfc/dialog-data-exchange-and-validation.md)  
   
--   [Диалоговые окна " страницы свойств "](../mfc/property-sheets-and-property-pages-mfc.md)  
+-   [Property sheet dialog boxes](../mfc/property-sheets-and-property-pages-mfc.md)  
   
-## См. также  
- [Диалоговые окна](../mfc/dialog-boxes.md)
+## <a name="see-also"></a>See Also  
+ [Dialog Boxes](../mfc/dialog-boxes.md)
+
+

@@ -1,5 +1,5 @@
 ---
-title: "Класс CD2DSolidColorBrush | Документы Microsoft"
+title: CD2DSolidColorBrush Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -24,7 +24,16 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- CD2DSolidColorBrush class
+- CD2DSolidColorBrush [MFC], CD2DSolidColorBrush
+- CD2DSolidColorBrush [MFC], Attach
+- CD2DSolidColorBrush [MFC], Create
+- CD2DSolidColorBrush [MFC], Destroy
+- CD2DSolidColorBrush [MFC], Detach
+- CD2DSolidColorBrush [MFC], Get
+- CD2DSolidColorBrush [MFC], GetColor
+- CD2DSolidColorBrush [MFC], SetColor
+- CD2DSolidColorBrush [MFC], m_colorSolid
+- CD2DSolidColorBrush [MFC], m_pSolidColorBrush
 ms.assetid: d4506637-acce-4f74-8a9b-f0a45571a735
 caps.latest.revision: 16
 author: mikeblome
@@ -44,57 +53,57 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0e0c08ddc57d437c51872b5186ae3fc983bb0199
-ms.openlocfilehash: 5b6cbd6a6a5557f5ea23c0556a4b87011b510411
+ms.translationtype: MT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 3842452031c9cc952c7be740a877029985ae2b5a
 ms.contentlocale: ru-ru
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 09/12/2017
 
 ---
-# <a name="cd2dsolidcolorbrush-class"></a>Класс CD2DSolidColorBrush
-Программа-оболочка для ID2D1SolidColorBrush.  
+# <a name="cd2dsolidcolorbrush-class"></a>CD2DSolidColorBrush Class
+A wrapper for ID2D1SolidColorBrush.  
   
-## <a name="syntax"></a>Синтаксис  
+## <a name="syntax"></a>Syntax  
   
 ```  
 class CD2DSolidColorBrush : public CD2DBrush;  
 ```  
   
-## <a name="members"></a>Члены  
+## <a name="members"></a>Members  
   
-### <a name="public-constructors"></a>Открытые конструкторы  
+### <a name="public-constructors"></a>Public Constructors  
   
-|Имя|Описание|  
+|Name|Description|  
 |----------|-----------------|  
-|[CD2DSolidColorBrush::CD2DSolidColorBrush](#cd2dsolidcolorbrush)|Перегружен. Создает объект CD2DSolidColorBrush.|  
-|[CD2DSolidColorBrush:: ~ CD2DSolidColorBrush](#cd2dsolidcolorbrush__~cd2dsolidcolorbrush)|Деструктор Вызывается при уничтожении объекта D2D сплошной кисти.|  
+|[CD2DSolidColorBrush::CD2DSolidColorBrush](#cd2dsolidcolorbrush)|Overloaded. Constructs a CD2DSolidColorBrush object.|  
+|[CD2DSolidColorBrush::~CD2DSolidColorBrush](#cd2dsolidcolorbrush__~cd2dsolidcolorbrush)|The destructor. Called when a D2D solid brush object is being destroyed.|  
   
-### <a name="public-methods"></a>Открытые методы  
+### <a name="public-methods"></a>Public Methods  
   
-|Имя|Описание|  
+|Name|Description|  
 |----------|-----------------|  
-|[CD2DSolidColorBrush::Attach](#attach)|Присоединение существующих ресурсов интерфейса в объект|  
-|[CD2DSolidColorBrush::CREATE](#create)|Создает CD2DSolidColorBrush. (Переопределяет [CD2DResource::Create](../../mfc/reference/cd2dresource-class.md#create).)|  
-|[CD2DSolidColorBrush::destroy](#destroy)|Уничтожает объект CD2DSolidColorBrush. (Переопределяет [CD2DBrush::Destroy](../../mfc/reference/cd2dbrush-class.md#destroy).)|  
-|[CD2DSolidColorBrush::Detach](#detach)|Отсоединяет интерфейс ресурса из объекта|  
-|[CD2DSolidColorBrush::Get](#get)|Возвращает интерфейс ID2D1SolidColorBrush|  
-|[CD2DSolidColorBrush::GetColor](#getcolor)|Получает цвет сплошной цвет кисти|  
-|[CD2DSolidColorBrush::SetColor](#setcolor)|Указывает цвет этого Одноцветная кисть|  
+|[CD2DSolidColorBrush::Attach](#attach)|Attaches existing resource interface to the object|  
+|[CD2DSolidColorBrush::Create](#create)|Creates a CD2DSolidColorBrush. (Overrides [CD2DResource::Create](../../mfc/reference/cd2dresource-class.md#create).)|  
+|[CD2DSolidColorBrush::Destroy](#destroy)|Destroys a CD2DSolidColorBrush object. (Overrides [CD2DBrush::Destroy](../../mfc/reference/cd2dbrush-class.md#destroy).)|  
+|[CD2DSolidColorBrush::Detach](#detach)|Detaches resource interface from the object|  
+|[CD2DSolidColorBrush::Get](#get)|Returns ID2D1SolidColorBrush interface|  
+|[CD2DSolidColorBrush::GetColor](#getcolor)|Retrieves the color of the solid color brush|  
+|[CD2DSolidColorBrush::SetColor](#setcolor)|Specifies the color of this solid color brush|  
   
-### <a name="public-operators"></a>Открытые операторы  
+### <a name="public-operators"></a>Public Operators  
   
-|Имя|Описание|  
+|Name|Description|  
 |----------|-----------------|  
-|[CD2DSolidColorBrush::operator ID2D1SolidColorBrush *](#operator_id2d1solidcolorbrush_star)|Возвращает интерфейс ID2D1SolidColorBrush|  
+|[CD2DSolidColorBrush::operator ID2D1SolidColorBrush*](#operator_id2d1solidcolorbrush_star)|Returns ID2D1SolidColorBrush interface|  
   
-### <a name="protected-data-members"></a>Защищенные члены данных  
+### <a name="protected-data-members"></a>Protected Data Members  
   
-|Имя|Описание|  
+|Name|Description|  
 |----------|-----------------|  
-|[CD2DSolidColorBrush::m_colorSolid](#m_colorsolid)|Сплошной цвет кисти.|  
-|[CD2DSolidColorBrush::m_pSolidColorBrush](#m_psolidcolorbrush)|Хранит указатель на объект ID2D1SolidColorBrush.|  
+|[CD2DSolidColorBrush::m_colorSolid](#m_colorsolid)|Brush solid color.|  
+|[CD2DSolidColorBrush::m_pSolidColorBrush](#m_psolidcolorbrush)|Stores a pointer to an ID2D1SolidColorBrush object.|  
   
-## <a name="inheritance-hierarchy"></a>Иерархия наследования  
+## <a name="inheritance-hierarchy"></a>Inheritance Hierarchy  
  [CObject](../../mfc/reference/cobject-class.md)  
   
  [CD2DResource](../../mfc/reference/cd2dresource-class.md)  
@@ -103,29 +112,29 @@ class CD2DSolidColorBrush : public CD2DBrush;
   
  [CD2DSolidColorBrush](../../mfc/reference/cd2dsolidcolorbrush-class.md)  
   
-## <a name="requirements"></a>Требования  
- **Заголовок:** afxrendertarget.h  
+## <a name="requirements"></a>Requirements  
+ **Header:** afxrendertarget.h  
   
-##  <a name="_dtorcd2dsolidcolorbrush"></a>CD2DSolidColorBrush:: ~ CD2DSolidColorBrush  
- Деструктор Вызывается при уничтожении объекта D2D сплошной кисти.  
+##  <a name="_dtorcd2dsolidcolorbrush"></a>  CD2DSolidColorBrush::~CD2DSolidColorBrush  
+ The destructor. Called when a D2D solid brush object is being destroyed.  
   
 ```  
 virtual ~CD2DSolidColorBrush();
 ```  
   
-##  <a name="attach"></a>CD2DSolidColorBrush::Attach  
- Присоединение существующих ресурсов интерфейса в объект  
+##  <a name="attach"></a>  CD2DSolidColorBrush::Attach  
+ Attaches existing resource interface to the object  
   
 ```  
 void Attach(ID2D1SolidColorBrush* pResource);
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
  `pResource`  
- Существующий интерфейс ресурсов. Не может иметь значение NULL  
+ Existing resource interface. Cannot be NULL  
   
-##  <a name="cd2dsolidcolorbrush"></a>CD2DSolidColorBrush::CD2DSolidColorBrush  
- Создает объект CD2DSolidColorBrush.  
+##  <a name="cd2dsolidcolorbrush"></a>  CD2DSolidColorBrush::CD2DSolidColorBrush  
+ Constructs a CD2DSolidColorBrush object.  
   
 ```  
 CD2DSolidColorBrush(
@@ -143,108 +152,108 @@ CD2DSolidColorBrush(
     BOOL bAutoDestroy = TRUE);
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
  `pParentTarget`  
- Указатель на целевой объект отрисовки.  
+ A pointer to the render target.  
   
  `color`  
- Красный, зеленый, синий и альфа-значения цвет кисти.  
+ The red, green, blue, and alpha values of the brush's color.  
   
  `pBrushProperties`  
- Указатель непрозрачности и преобразование кисти.  
+ A pointer to the opacity and transformation of a brush.  
   
  `bAutoDestroy`  
- Указывает, что объект будет уничтожен владельцем (pParentTarget).  
+ Indicates that the object will be destroyed by owner (pParentTarget).  
   
  `nAlpha`  
- Непрозрачность цвета кисти.  
+ The opacity of the brush's color.  
   
-##  <a name="create"></a>CD2DSolidColorBrush::CREATE  
- Создает CD2DSolidColorBrush.  
+##  <a name="create"></a>  CD2DSolidColorBrush::Create  
+ Creates a CD2DSolidColorBrush.  
   
 ```  
 virtual HRESULT Create(CRenderTarget* pRenderTarget);
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
  `pRenderTarget`  
- Указатель на целевой объект отрисовки.  
+ A pointer to the render target.  
   
-### <a name="return-value"></a>Возвращаемое значение  
- Если метод завершается успешно, возвращается значение S_OK. В противном случае — возвращает код ошибки HRESULT.  
+### <a name="return-value"></a>Return Value  
+ If the method succeeds, it returns S_OK. Otherwise, it returns an HRESULT error code.  
   
-##  <a name="destroy"></a>CD2DSolidColorBrush::destroy  
- Уничтожает объект CD2DSolidColorBrush.  
+##  <a name="destroy"></a>  CD2DSolidColorBrush::Destroy  
+ Destroys a CD2DSolidColorBrush object.  
   
 ```  
 virtual void Destroy();
 ```  
   
-##  <a name="detach"></a>CD2DSolidColorBrush::Detach  
- Отсоединяет интерфейс ресурса из объекта  
+##  <a name="detach"></a>  CD2DSolidColorBrush::Detach  
+ Detaches resource interface from the object  
   
 ```  
 ID2D1SolidColorBrush* Detach();
 ```  
   
-### <a name="return-value"></a>Возвращаемое значение  
- Указатель на интерфейс отсоединенных ресурсов.  
+### <a name="return-value"></a>Return Value  
+ Pointer to detached resource interface.  
   
-##  <a name="get"></a>CD2DSolidColorBrush::Get  
- Возвращает интерфейс ID2D1SolidColorBrush  
+##  <a name="get"></a>  CD2DSolidColorBrush::Get  
+ Returns ID2D1SolidColorBrush interface  
   
 ```  
 ID2D1SolidColorBrush* Get();
 ```  
   
-### <a name="return-value"></a>Возвращаемое значение  
- Указатель на интерфейс ID2D1SolidColorBrush или значение NULL, если объект еще не инициализирован.  
+### <a name="return-value"></a>Return Value  
+ Pointer to an ID2D1SolidColorBrush interface or NULL if object is not initialized yet.  
   
-##  <a name="getcolor"></a>CD2DSolidColorBrush::GetColor  
- Получает цвет сплошной цвет кисти  
+##  <a name="getcolor"></a>  CD2DSolidColorBrush::GetColor  
+ Retrieves the color of the solid color brush  
   
 ```  
 D2D1_COLOR_F GetColor() const;  
 ```  
   
-### <a name="return-value"></a>Возвращаемое значение  
- Цвет этой Одноцветная кисть  
+### <a name="return-value"></a>Return Value  
+ The color of this solid color brush  
   
-##  <a name="m_colorsolid"></a>CD2DSolidColorBrush::m_colorSolid  
- Сплошной цвет кисти.  
+##  <a name="m_colorsolid"></a>  CD2DSolidColorBrush::m_colorSolid  
+ Brush solid color.  
   
 ```  
 D2D1_COLOR_F m_colorSolid;  
 ```  
   
-##  <a name="m_psolidcolorbrush"></a>CD2DSolidColorBrush::m_pSolidColorBrush  
- Хранит указатель на объект ID2D1SolidColorBrush.  
+##  <a name="m_psolidcolorbrush"></a>  CD2DSolidColorBrush::m_pSolidColorBrush  
+ Stores a pointer to an ID2D1SolidColorBrush object.  
   
 ```  
 ID2D1SolidColorBrush* m_pSolidColorBrush;  
 ```  
   
-##  <a name="operator_id2d1solidcolorbrush_star"></a>CD2DSolidColorBrush::operator ID2D1SolidColorBrush *  
- Возвращает интерфейс ID2D1SolidColorBrush  
+##  <a name="operator_id2d1solidcolorbrush_star"></a>  CD2DSolidColorBrush::operator ID2D1SolidColorBrush*  
+ Returns ID2D1SolidColorBrush interface  
   
 ```  
 operator ID2D1SolidColorBrush*();
 ```   
   
-### <a name="return-value"></a>Возвращаемое значение  
- Указатель на интерфейс ID2D1SolidColorBrush или значение NULL, если объект еще не инициализирован.  
+### <a name="return-value"></a>Return Value  
+ Pointer to an ID2D1SolidColorBrush interface or NULL if object is not initialized yet.  
   
-##  <a name="setcolor"></a>CD2DSolidColorBrush::SetColor  
- Указывает цвет этого Одноцветная кисть  
+##  <a name="setcolor"></a>  CD2DSolidColorBrush::SetColor  
+ Specifies the color of this solid color brush  
   
 ```  
 void SetColor(D2D1_COLOR_F color);
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
  `color`  
- Цвет этой Одноцветная кисть  
+ The color of this solid color brush  
   
-## <a name="see-also"></a>См. также  
- [Классы](../../mfc/reference/mfc-classes.md)
+## <a name="see-also"></a>See Also  
+ [Classes](../../mfc/reference/mfc-classes.md)
 

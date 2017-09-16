@@ -1,45 +1,64 @@
 ---
-title: "Буфер обмена. Выбор механизма буфера обмена | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "приложения [OLE], буфер обмена"
-  - "буфер обмена [C++], форматы"
-  - "буфер обмена [C++], механизмы"
-  - "форматы [C++], Буфер обмена для OLE"
-  - "Буфер обмена OLE, форматы"
-  - "Буфер обмена OLE, рекомендации"
+title: 'Clipboard: When to Use Each Clipboard Mechanism | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- applications [OLE], Clipboard
+- OLE Clipboard, guidelines
+- Clipboard [MFC], mechanisms
+- OLE Clipboard, formats
+- formats [MFC], Clipboard for OLE
+- Clipboard [MFC], formats
 ms.assetid: fd071996-ef8c-488b-81bd-89057095a201
 caps.latest.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 5
----
-# Буфер обмена. Выбор механизма буфера обмена
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: af3b8582086255077892ee3c243bccde7b1130be
+ms.contentlocale: ru-ru
+ms.lasthandoff: 09/12/2017
 
-Выполните следующие рекомендации по использованию обмена.  
+---
+# <a name="clipboard-when-to-use-each-clipboard-mechanism"></a>Clipboard: When to Use Each Clipboard Mechanism
+Follow these guidelines in using the Clipboard:  
   
--   Используйте OLE механизм буфера обмена теперь для включения новые возможности в будущем.  Хотя стандартное API обмена будет поддерживаться, возможные OLE механизм передачи данных.  
+-   Use the OLE Clipboard mechanism now to enable new capabilities in the future. While the standard Clipboard API will be maintained, the OLE mechanism is the future of data transfer.  
   
--   Используйте OLE механизм буфера обмена при написании приложения OLE или необходимо OLE все функции, например перетаскивания.  
+-   Use the OLE Clipboard mechanism if you are writing an OLE application or you want any of the OLE features, such as drag and drop.  
   
--   Используйте OLE механизм буфера обмена при защите OLE форматов.  
+-   Use the OLE Clipboard mechanism if you are providing OLE formats.  
   
-## Выберите действие.  
+## <a name="what-do-you-want-to-do"></a>What do you want to do  
   
--   [Используйте OLE механизм буфера обмена](../mfc/clipboard-using-the-ole-clipboard-mechanism.md)  
+-   [Use the OLE Clipboard mechanism](../mfc/clipboard-using-the-ole-clipboard-mechanism.md)  
   
--   [Используйте механизм буфера обмена Windows](../mfc/clipboard-using-the-windows-clipboard.md)  
+-   [Use the Windows Clipboard mechanism](../mfc/clipboard-using-the-windows-clipboard.md)  
   
-## См. также  
- [буфер обмена](../mfc/clipboard.md)
+## <a name="see-also"></a>See Also  
+ [Clipboard](../mfc/clipboard.md)
+
+

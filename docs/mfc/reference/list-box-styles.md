@@ -1,5 +1,5 @@
 ---
-title: "Стили списков | Документы Microsoft"
+title: List-Box Styles | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -28,22 +28,22 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- LBS_NOSEL constant
-- LBS_NOREDRAW constant
-- LBS_HASSTRINGS constant
-- LBS_OWNERDRAWFIXED constant
-- LBS_WANTKEYBOARDINPUT constant
-- LBS_STANDARD constant
-- LBS_MULTIPLESEL constant
-- LBS_OWNERDRAWVARIABLE constant
-- LBS_DISABLENOSCROLL constant
-- LBS_NODATA constant
-- list boxes, styles
-- LBS_EXTENDEDSEL constant
-- LBS_MULTICOLUMN constant
-- LBS_NOTIFY constant
-- LBS_USETABSTOPS constant
-- LBS_NOINTEGRALHEIGHT constant
+- LBS_NOSEL constant [MFC]
+- LBS_NOREDRAW constant [MFC]
+- LBS_HASSTRINGS constant [MFC]
+- LBS_OWNERDRAWFIXED constant [MFC]
+- LBS_WANTKEYBOARDINPUT constant [MFC]
+- LBS_STANDARD constant [MFC]
+- LBS_MULTIPLESEL constant [MFC]
+- LBS_OWNERDRAWVARIABLE constant [MFC]
+- LBS_DISABLENOSCROLL constant [MFC]
+- LBS_NODATA constant [MFC]
+- list boxes [MFC], styles
+- LBS_EXTENDEDSEL constant [MFC]
+- LBS_MULTICOLUMN constant [MFC]
+- LBS_NOTIFY constant [MFC]
+- LBS_USETABSTOPS constant [MFC]
+- LBS_NOINTEGRALHEIGHT constant [MFC]
 - LBS_SORT constant
 ms.assetid: 3f357b8d-9118-4f41-9e28-02ed92d1e88f
 caps.latest.revision: 12
@@ -64,51 +64,51 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 040985df34f2613b4e4fae29498721aef15d50cb
-ms.openlocfilehash: 8e038e5cef50bd15df85c9d7f8b213b54ed03825
+ms.translationtype: MT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: cad7dce447e41b72116dc8317f7a05649cd34e76
 ms.contentlocale: ru-ru
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 09/12/2017
 
 ---
-# <a name="list-box-styles"></a>Стили списков
--   **LBS_DISABLENOSCROLL** в списке существует отключено вертикальную полосу прокрутки, когда поле списка не содержит достаточно элементов для прокрутки. Если этот стиль не задан, полоса прокрутки будет скрыта при недостаточном количестве элементов в списке.  
+# <a name="list-box-styles"></a>List-Box Styles
+-   **LBS_DISABLENOSCROLL** The list box shows a disabled vertical scroll bar when the list box does not contain enough items to scroll. Without this style, the scroll bar is hidden when the list box does not contain enough items.  
   
--   **LBS_EXTENDEDSEL** пользователь может выбрать несколько элементов, используя клавишу SHIFT и мышь или специальные сочетания клавиш.  
+-   **LBS_EXTENDEDSEL** The user can select multiple items using the SHIFT key and the mouse or special key combinations.  
   
--   **LBS_HASSTRINGS** определяет список рисование владельцем, который содержит элементы, состоящие из строк. Поле списка поддерживает память и указатели для строк, поэтому приложение может использовать `GetText` функции-члена для получения текста для определенного элемента.  
+-   **LBS_HASSTRINGS** Specifies an owner-draw list box that contains items consisting of strings. The list box maintains the memory and pointers for the strings so the application can use the `GetText` member function to retrieve the text for a particular item.  
   
--   **LBS_MULTICOLUMN** Указывает список из нескольких столбцов, может прокручиваться по горизонтали. `SetColumnWidth` Функция-член задает ширину столбцов.  
+-   **LBS_MULTICOLUMN** Specifies a multicolumn list box that is scrolled horizontally. The `SetColumnWidth` member function sets the width of the columns.  
   
--   **LBS_MULTIPLESEL** выбора строки заменяется каждый раз пользователь нажимает или дважды щелкает строку. Можно выбрать любое число строк.  
+-   **LBS_MULTIPLESEL** String selection is toggled each time the user clicks or double-clicks the string. Any number of strings can be selected.  
   
--   **LBS_NODATA** указывает поле со списком без данных. Укажите стиль превышения числа элементов в списке тысяч. Поле со списком данных не должно быть **LBS_OWNERDRAWFIXED** стиля, но не должен иметь **LBS_SORT** или **LBS_HASSTRINGS** стиль.  
+-   **LBS_NODATA** Specifies a no-data list box. Specify this style when the count of items in the list box will exceed one thousand. A no-data list box must also have the **LBS_OWNERDRAWFIXED** style, but must not have the **LBS_SORT** or **LBS_HASSTRINGS** style.  
   
-     Поле со списком без данных напоминает определяемые владельцем списка, за исключением того, что он не содержит строку или точечный рисунок данных для элемента. Команды для добавления, вставки или удаления элемента всегда игнорировать любого конкретного элемента данных. запросы для поиска строки в списке всегда завершаться ошибкой. Система отправляет `WM_DRAWITEM` сообщений для окна-владельца, когда необходимо нарисовать элемент. ItemID членом `DRAWITEMSTRUCT` структура, переданная с `WM_DRAWITEM` сообщении указывается номер строки рисуемого элемента. Поле со списком без данных не отправляет `WM_DELETEITEM` сообщение.  
+     A no-data list box resembles an owner-drawn list box except that it contains no string or bitmap data for an item. Commands to add, insert, or delete an item always ignore any given item data; requests to find a string within the list box always fail. The system sends the `WM_DRAWITEM` message to the owner window when an item must be drawn. The itemID member of the `DRAWITEMSTRUCT` structure passed with the `WM_DRAWITEM` message specifies the line number of the item to be drawn. A no-data list box does not send a `WM_DELETEITEM` message.  
   
--   **LBS_NOINTEGRALHEIGHT** размер списка — точно размер, указанный для приложения, при создании списка. Обычно размер списка, чтобы поле списка избежать частичного отображения элементов.  
+-   **LBS_NOINTEGRALHEIGHT** The size of the list box is exactly the size specified by the application when it created the list box. Usually, Windows sizes a list box so that the list box does not display partial items.  
   
--   **LBS_NOREDRAW** списка не обновляется при внесении изменений. Этот стиль можно изменить в любое время путем отправки **WM_SETREDRAW** сообщений.  
+-   **LBS_NOREDRAW** List-box display is not updated when changes are made. This style can be changed at any time by sending a **WM_SETREDRAW** message.  
   
--   **LBS_NOSEL** указывает, что список содержит элементы, которые можно просматривать, но не выбран.  
+-   **LBS_NOSEL** Specifies that the list box contains items that can be viewed but not selected.  
   
--   **LBS_NOTIFY** родительское окно получает входящее сообщение каждый раз, когда пользователь нажимает или дважды щелкает строку.  
+-   **LBS_NOTIFY** Parent window receives an input message whenever the user clicks or double-clicks a string.  
   
--   **LBS_OWNERDRAWFIXED** владелец списка отвечает за рисование его содержимого; элементы в поле со списком, равной высоты.  
+-   **LBS_OWNERDRAWFIXED** The owner of the list box is responsible for drawing its contents; the items in the list box are the same height.  
   
--   **LBS_OWNERDRAWVARIABLE** владелец списка отвечает за рисование его содержимого; элементов в списке может меняться в высоту.  
+-   **LBS_OWNERDRAWVARIABLE** The owner of the list box is responsible for drawing its contents; the items in the list box are variable in height.  
   
--   **LBS_SORT** строки в списке сортируются по алфавиту.  
+-   **LBS_SORT** Strings in the list box are sorted alphabetically.  
   
--   **LBS_STANDARD** строки в списке сортируются по алфавиту, и родительское окно получает входящее сообщение каждый раз, когда пользователь нажимает или дважды щелкает строку. Список содержит границы со всех сторон.  
+-   **LBS_STANDARD** Strings in the list box are sorted alphabetically, and the parent window receives an input message whenever the user clicks or double-clicks a string. The list box contains borders on all sides.  
   
--   **LBS_USETABSTOPS** позволяет распознавать и расширять знаки табуляции при рисовании строк списка. Позиций табуляции по умолчанию — 32 единицы диалогового окна. (Единица диалогового окна — горизонтальное или вертикальное расстояние. Четверть текущей единице измерения базового ширину диалогового окна равно единице горизонтального диалоговое окно. Базовые единицы диалогового окна вычисляются на основе высота и ширина текущего системного шрифта. **GetDialogBaseUnits** функции Windows возвращает единицу текущего диалогового окна в пикселях.) Не следует использовать этот стиль с **LBS_OWNERDRAWFIXED**.  
+-   **LBS_USETABSTOPS** Allows a list box to recognize and expand tab characters when drawing its strings. The default tab positions are 32 dialog units. (A dialog unit is a horizontal or vertical distance. One horizontal dialog unit is equal to one-fourth of the current dialog base width unit. The dialog base units are computed based on the height and width of the current system font. The **GetDialogBaseUnits** Windows function returns the current dialog base units in pixels.) This style should not be used with **LBS_OWNERDRAWFIXED**.  
   
--   **LBS_WANTKEYBOARDINPUT** получает владельца списка `WM_VKEYTOITEM` или `WM_CHARTOITEM` сообщений при каждом нажатии клавиши, когда фокус ввода списка. Это позволяет приложению выполнять специальную обработку на клавиатуру.  
+-   **LBS_WANTKEYBOARDINPUT** The owner of the list box receives `WM_VKEYTOITEM` or `WM_CHARTOITEM` messages whenever the user presses a key while the list box has input focus. This allows an application to perform special processing on the keyboard input.  
   
-## <a name="see-also"></a>См. также  
- [Стили, используемые MFC](../../mfc/reference/styles-used-by-mfc.md)   
+## <a name="see-also"></a>See Also  
+ [Styles Used by MFC](../../mfc/reference/styles-used-by-mfc.md)   
  [CListBox::Create](../../mfc/reference/clistbox-class.md#create)   
- [Стили окна списка](http://msdn.microsoft.com/library/windows/desktop/bb775149)
+ [List Box Styles](http://msdn.microsoft.com/library/windows/desktop/bb775149)
 
 

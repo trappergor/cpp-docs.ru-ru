@@ -1,5 +1,5 @@
 ---
-title: "Мастер добавления классов MFC | Документы Microsoft"
+title: MFC Add Class Wizard | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -34,72 +34,72 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 4fafe461008e3545243d693e0d9e34acd57163e0
-ms.openlocfilehash: 08d258c2b8386a4dd0c1d24c6ac6aa10f6c04a63
+ms.translationtype: MT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: c7960628af7aefae7647ec185e461abc3aac5852
 ms.contentlocale: ru-ru
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 09/12/2017
 
 ---
-# <a name="mfc-add-class-wizard"></a>Мастер добавления классов MFC
-Используйте этот мастер код, чтобы добавить класс в существующий проект MFC или добавить класс в проект ATL с поддержкой MFC. Классы MFC можно также добавить в проекты Win32 с поддержкой MFC. Возможности, указанные при создании проекта определяют параметры в этом диалоговом окне.  
+# <a name="mfc-add-class-wizard"></a>MFC Add Class Wizard
+Use this code wizard to add a class to an existing MFC project, or to add a class to an ATL project that supports MFC. You can also add MFC classes to Win32 projects that have MFC support. The features you specified when you created your project determine the options available in this dialog box.  
   
-## <a name="names"></a>Имена  
- На этой странице укажите имя класса, базовый класс и имена файлов для нового класса.  
+## <a name="names"></a>Names  
+ In this page, specify the class name, the base class, and file names for the new class.  
   
- **Имя класса**  
- Задает имя нового класса и предоставляет основу по умолчанию для имен идентификаторов и файлов на этой странице. Классов C++ обычно начинаются с «C», например, «CMyClass» становится «MyClass.h», и т. д.  
+ **Class name**  
+ Specifies the name of the new class and provides the default basis for the names of IDs and files on this page. C++ classes typically start with "C", so for example, "CMyClass" becomes "MyClass.h", and so on.  
   
- **Базовый класс**  
- Указывает имя базового класса для нового класса. По умолчанию базовым классом является [CWnd](../../mfc/reference/cwnd-class.md). Выбранного базового класса определяет active остальные флажки на этой странице.  
+ **Base class**  
+ Specifies the name of the base class for the new class. By default, the base class is [CWnd](../../mfc/reference/cwnd-class.md). The base class you select determines whether other boxes on this page are active.  
   
- Тип класса выбранного базового класса определяет, имеет ли класс идентификатор диалогового окна или идентификатор ресурса. Ниже приведены основные типы классов:  
+ The type of class you set as the base class determines whether the class has a dialog ID or a resource ID. The general types of classes are as follows:  
   
--   Такие классы, как [CButton](../../mfc/reference/cbutton-class.md), [CWnd](../../mfc/reference/cwnd-class.md), или [CDocument](../../mfc/reference/cdocument-class.md), который требует диалоговое окно идентификатор или идентификатор ресурса. Эти классы не используют идентификатор диалогового окна или ресурса. При выборе одного из этих классов для базового класса, **идентификатор диалогового окна** поле и **идентификатор ресурса DHTML** подключен к Интернету.  
+-   Classes such as [CButton](../../mfc/reference/cbutton-class.md), [CWnd](../../mfc/reference/cwnd-class.md), or [CDocument](../../mfc/reference/cdocument-class.md), which do not require a dialog ID or resource ID. These classes do not use a dialog or resource ID. If you select one of these classes for your base class, the **Dialog ID** box and the **DHTML resource ID** box are dimmed.  
   
--   Такие классы, как [CDialog](../../mfc/reference/cdialog-class.md), [CFormView](../../mfc/reference/cformview-class.md), или [CPropertyPage](../../mfc/reference/cpropertypage-class.md), который требуется идентификатор диалогового окна  
+-   Classes such as [CDialog](../../mfc/reference/cdialog-class.md), [CFormView](../../mfc/reference/cformview-class.md), or [CPropertyPage](../../mfc/reference/cpropertypage-class.md), which require a dialog ID.  
   
--   Класс [CDHtmlDialog](../../mfc/reference/cdhtmldialog-class.md), которого требуется идентификатор диалогового окна, идентификатор ресурса DHTML и имя HTML-файла.  
+-   The class [CDHtmlDialog](../../mfc/reference/cdhtmldialog-class.md), which requires a dialog ID, a DHTML resource ID, and an HTML file name.  
   
- Для классов, которым требуется идентификатор диалогового окна, может оказаться более эффективно использовать [редактор ресурсов](../../windows/resource-editors.md) Создание ресурса диалогового окна, назначить ему идентификатор в [окно «Свойства»](/visualstudio/ide/reference/properties-window), а затем создать класс, связанный с этим идентификатором ресурса. В разделе [Создание нового диалогового окна](../../windows/creating-a-new-dialog-box.md) Дополнительные сведения о создании стандартного диалогового окна Windows.  
+ For classes requiring a dialog ID, you might find it more efficient to use the [Resource editor](../../windows/resource-editors.md) to create the dialog resource, assign its ID in the [Properties window](/visualstudio/ide/reference/properties-window), and then create a class associated with that resource ID. See [Creating a New Dialog Box](../../windows/creating-a-new-dialog-box.md) for more information on creating a standard Windows dialog box.  
   
 > [!NOTE]
->  Если сначала создать ресурс диалогового окна и новый класс из `CDHtmlDialog`, удаление стандартных Windows **ОК** и **отменить** кнопок, отображаемых в диалоговом окне по умолчанию. Стандартное диалоговое окно Windows размещает форму DHTML, которая содержит собственную **ОК** и **отменить** кнопки.  
+>  If you create a dialog resource first and derive its new class from `CDHtmlDialog`, delete the standard Windows **OK** and **Cancel** buttons that appear on the default dialog box. The standard Windows dialog box hosts the DHTML form, which contains its own **OK** and **Cancel** buttons.  
   
- Но диалогового окна может содержать элементы управления Windows и элементы управления DHTML, не рекомендуется.  
+ While your dialog box can contain both Windows controls and DHTML controls, it is not recommended.  
   
- **Идентификатор диалогового окна**  
- Указывает идентификатор диалогового окна, если вы выбрали `CDialog`, `CFormView`, `CPropertyPage`, или `CDHtmlDialog` как **базового класса**.  
+ **Dialog ID**  
+ Specifies the ID of the dialog, if you selected `CDialog`, `CFormView`, `CPropertyPage`, or `CDHtmlDialog` as the **Base class**.  
   
- **h-файл**  
- Задает имя файла заголовка для нового класса объекта. По умолчанию это имя основано на имени в **имя класса**. Нажмите кнопку с многоточием, чтобы сохранить файл в выбранное расположение или добавить объявление класса в существующий файл. Если выбран существующий файл, не он будет сохранен в выбранном месте пока вы щелкните **Готово** в мастере.  
+ **.h file**  
+ Sets the name of the header file for the new object's class. By default, this name is based on the name you provide in **Class name**. Click the ellipsis button to save the file name to the location of your choice, or to append the class declaration to an existing file. If you choose an existing file, the wizard will not save it to the selected location until you click **Finish** in the wizard.  
   
- Мастер не перезаписывает файл. Если выбрать имя существующего файла, после нажатия **Готово**, мастер попросит указать, следует ли добавить объявление класса к содержимому файла. Щелкните **Да** для добавления файла; щелкните **нет** вернуться в мастер и укажите другое имя файла.  
+ The wizard does not overwrite a file. If you select the name of an existing file, when you click **Finish**, the wizard prompts you to indicate whether the class declaration should be appended to the contents of the file. Click **Yes** to append the file; click **No** to return to the wizard and specify another file name.  
   
- **CPP-файл**  
- Задает имя файла реализации класса нового объекта. По умолчанию это имя основано на имени в **имя класса**. Нажмите кнопку с многоточием, чтобы сохранить файл в выбранное расположение. Файл не сохраняется в выбранном месте до нажатия **Готово** в мастере.  
+ **.cpp file**  
+ Sets the name of the implementation file for the new object's class. By default, this name is based on the name you provide in **Class name**. Click the ellipsis button to save the file name to the location of your choice. The file is not saved to the selected location until you click **Finish** in the wizard.  
   
- Мастер не перезаписывает файл. Если выбрать имя существующего файла, после нажатия **Готово**, мастер попросит указать, следует ли добавить реализацию класса к содержимому файла. Щелкните **Да** для добавления файла; щелкните **нет** вернуться в мастер и укажите другое имя файла.  
+ The wizard does not overwrite a file. If you select the name of an existing file, when you click **Finish**, the wizard prompts you to indicate whether the class implementation should be appended to the contents of the file. Click **Yes** to append the file; click **No** to return to the wizard and specify another file name.  
   
- **Библиотека Active accessibility**  
- Включает поддержку MFC для Active Accessibility, вызвав [EnableActiveAccessibility](../../mfc/reference/cwnd-class.md#enableactiveaccessibility) в конструкторе. Этот параметр доступен для классов, производных от [CWnd](../../mfc/reference/cwnd-class.md).  
+ **Active accessibility**  
+ Enables MFC's support for Active Accessibility by calling [EnableActiveAccessibility](../../mfc/reference/cwnd-class.md#enableactiveaccessibility) in the constructor. This option is available for classes derived from [CWnd](../../mfc/reference/cwnd-class.md).  
   
- **Идентификатор ресурса DHTML**  
- Применяется к классам, производным от `CDHtmlDialog` только. Указывает идентификатор ресурса диалогового окна DHTML. Идентификатор ресурса отображается в разделе HTML RC-файла проекта вместе с именем файла диалогового окна HTML. Ресурс DHTML, определяемый этим Идентификатором, размещается в диалоговом окне определяется **идентификатор диалогового окна**.  
+ **DHTML resource ID**  
+ Applies to classes derived from `CDHtmlDialog` only. Specifies the resource ID of the DHTML dialog box. The resource ID appears in the HTML section of the project's .rc file, along with the HTML dialog box file name. The DHTML resource, identified by this ID, is hosted by the dialog box, identified by **Dialog ID**.  
   
- **. HTM-файл**  
- Применяется к классам, производным от `CDHtmlDialog` только. Задает имя HTML-файла для диалогового окна DHTML. По умолчанию это имя файла основано на имени класса. Имя файла отображается в разделе HTML RC-файла проекта вместе с идентификатором ресурса поле диалогового окна DHTML  
+ **.HTM file**  
+ Applies to classes derived from `CDHtmlDialog` only. Sets the name of the HTML file for the DHTML dialog box. By default, this file name is based on the class name. The file name appears in the HTML section of the project's .rc file, along with the DHTML dialog box resource ID.  
   
- **Автоматизация**  
- Задает уровень поддержки для класса [автоматизации](../../mfc/automation.md). Автоматизация на уровне класса доступна для всех классов, поддерживающих автоматизацию. Также доступна для проектов, созданных с поддержкой автоматизации. То есть проектов MFC [ATL поддерживает](../../atl/reference/mfc-support-in-atl-projects.md), или проектов MFC, для которого установлен **автоматизации** флажок в [дополнительные функции](../../mfc/reference/advanced-features-mfc-application-wizard.md) мастера приложений MFC.  
+ **Automation**  
+ Sets the class level of support for [Automation](../../mfc/automation.md). Automation at the class level is available for all classes that support Automation. It is also available for projects created with support for Automation. That is, either an MFC project that [supports ATL](../../atl/reference/mfc-support-in-atl-projects.md), or an MFC project for which you selected the **Automation** check box in the [Advanced Features](../../mfc/reference/advanced-features-mfc-application-wizard.md) page of the MFC Application Wizard.  
   
-|Параметр|Описание|  
+|Option|Description|  
 |------------|-----------------|  
-|**None**|Указывает, что класс не поддерживает автоматизацию.|  
-|**Автоматизация**|Указывает, что класс поддерживает автоматизацию. Если выбран этот параметр, только что созданный класс доступен в программируемых объектов автоматизации клиентскими приложениями, например Microsoft Visual Basic и Microsoft Excel. Этот параметр недоступен для базовых классов, перечисленных после данной таблицы.|  
-|**Возможно создание по Идентификатору типа**|Означает, что класс и проект поддерживает другие приложения, создание объектов этого класса с использованием автоматизации. Этот параметр клиенты автоматизации могут напрямую создания объекта автоматизации. Идентификатор типа в текстовом поле используется клиентским приложением для указания объекта, который должен быть создан; он является общесистемным и должен быть уникальным. Этот параметр недоступен для базовых классов, перечисленных после данной таблицы.|  
+|**None**|Indicates that the class has no Automation support.|  
+|**Automation**|Indicates that the class supports Automation. If you select this option, the newly created class is available as a programmable object by Automation client applications, such as Microsoft Visual Basic and Microsoft Excel. This option is not available for the base classes listed after this table.|  
+|**Creatable by type ID**|Indicates that both the class and project support other applications creating objects of this class using Automation. With this option, automation clients can directly create an Automation object. The type ID in the text box is used by the client application to specify the object to be created; it is systemwide and must be unique. This option is not available for the base classes listed after this table.|  
   
- Поддержка автоматизации недоступна для следующих базовых классов:  
+ Automation support is not available for the following base classes:  
   
 -   `CAsyncMonitorFile`  
   
@@ -123,15 +123,15 @@ ms.lasthandoff: 02/24/2017
   
 -   `CSocket`  
   
- **Идентификатор типа**  
- Задает идентификатор типа класса. **Идентификатор типа** поле объединяет имя проекта и имя нового класса следующим образом: *MFCProj.MFCClass*. Этот идентификатор можно изменить только в том случае, если вы выбрали **автоматизации** параметр **возможно создание по Идентификатору типа**.  
+ **Type ID**  
+ Sets the type ID of the class. The **Type ID** box concatenates the project name and the new class name as follows: *MFCProj.MFCClass*. This ID is changeable only if you selected the **Automation** option **Creatable by type ID**.  
   
- **Создать ресурсы DocTemplate**  
- Указывает, что созданных приложением документов имеются ресурсы шаблонов документов. Чтобы активировать этот флажок, если проект поддерживает архитектуры документ/представление MFC и базовый класс этого класса должны быть [CFormView](../../mfc/reference/cformview-class.md).  
+ **Generate DocTemplate resources**  
+ Indicates that the documents created by the application have document template resources. To activate this check box, the project must support the MFC document/view architecture, and the base class of this class must be [CFormView](../../mfc/reference/cformview-class.md).  
   
- В разделе [шаблоны документов и процесс создания документов и представлений](../../mfc/document-templates-and-the-document-view-creation-process.md) подробнее.  
+ See [Document Templates and the Document/View Creation Process](../../mfc/document-templates-and-the-document-view-creation-process.md) for more information.  
   
-## <a name="see-also"></a>См. также  
- [Класс MFC](../../mfc/reference/adding-an-mfc-class.md)   
- [Добавление класса](../../ide/adding-a-class-visual-cpp.md)
+## <a name="see-also"></a>See Also  
+ [MFC Class](../../mfc/reference/adding-an-mfc-class.md)   
+ [Adding a Class](../../ide/adding-a-class-visual-cpp.md)
 

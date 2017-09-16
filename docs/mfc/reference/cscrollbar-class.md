@@ -1,5 +1,5 @@
 ---
-title: "Класс CScrollBar | Документы Microsoft"
+title: CScrollBar Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -26,11 +26,18 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- CScrollBar class
-- SCROLLBAR window class
-- scroll bars
-- Windows common controls [C++], CScrollBar
-- controls [MFC], scroll bar
+- CScrollBar [MFC], CScrollBar
+- CScrollBar [MFC], Create
+- CScrollBar [MFC], EnableScrollBar
+- CScrollBar [MFC], GetScrollBarInfo
+- CScrollBar [MFC], GetScrollInfo
+- CScrollBar [MFC], GetScrollLimit
+- CScrollBar [MFC], GetScrollPos
+- CScrollBar [MFC], GetScrollRange
+- CScrollBar [MFC], SetScrollInfo
+- CScrollBar [MFC], SetScrollPos
+- CScrollBar [MFC], SetScrollRange
+- CScrollBar [MFC], ShowScrollBar
 ms.assetid: f3735ca5-73ea-46dc-918b-4d824c9fe47f
 caps.latest.revision: 21
 author: mikeblome
@@ -50,60 +57,60 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0e0c08ddc57d437c51872b5186ae3fc983bb0199
-ms.openlocfilehash: 84b59f041f1a6cf73843c303e1a6b71adffc2101
+ms.translationtype: MT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 3686af908abc199f878576aea22b30b1952c2183
 ms.contentlocale: ru-ru
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 09/12/2017
 
 ---
-# <a name="cscrollbar-class"></a>Класс CScrollBar
-Предоставляет функции элемента управления полосой прокрутки Windows.  
+# <a name="cscrollbar-class"></a>CScrollBar Class
+Provides the functionality of a Windows scroll-bar control.  
   
-## <a name="syntax"></a>Синтаксис  
+## <a name="syntax"></a>Syntax  
   
 ```  
 class CScrollBar : public CWnd  
 ```  
   
-## <a name="members"></a>Члены  
+## <a name="members"></a>Members  
   
-### <a name="public-constructors"></a>Открытые конструкторы  
+### <a name="public-constructors"></a>Public Constructors  
   
-|Имя|Описание|  
+|Name|Description|  
 |----------|-----------------|  
-|[CScrollBar::CScrollBar](#cscrollbar)|Создает объект `CScrollBar`.|  
+|[CScrollBar::CScrollBar](#cscrollbar)|Constructs a `CScrollBar` object.|  
   
-### <a name="public-methods"></a>Открытые методы  
+### <a name="public-methods"></a>Public Methods  
   
-|Имя|Описание|  
+|Name|Description|  
 |----------|-----------------|  
-|[CScrollBar::Create](#create)|Полоса прокрутки Windows создает и присоединяет его к `CScrollBar` объекта.|  
-|[CScrollBar::EnableScrollBar](#enablescrollbar)|Включает или выключает одну или обе стрелки полосы прокрутки.|  
-|[CScrollBar::GetScrollBarInfo](#getscrollbarinfo)|Извлекает сведения о полосы с помощью прокрутки `SCROLLBARINFO` структуры.|  
-|[CScrollBar::GetScrollInfo](#getscrollinfo)|Извлекает сведения о полосе прокрутки.|  
-|[CScrollBar::GetScrollLimit](#getscrolllimit)|Извлекает ограничение полосы прокрутки|  
-|[CScrollBar::GetScrollPos](#getscrollpos)|Извлекает текущее положение ползунка.|  
-|[CScrollBar::GetScrollRange](#getscrollrange)|Извлекает текущей позиции минимальное и максимальное полосы прокрутки полосы прокрутки заданной.|  
-|[CScrollBar::SetScrollInfo](#setscrollinfo)|Задает сведения о полосе прокрутки.|  
-|[CScrollBar::SetScrollPos](#setscrollpos)|Задает текущее положение ползунка полосы прокрутки.|  
-|[CScrollBar::SetScrollRange](#setscrollrange)|Задает для указанной полосы прокрутки положения минимума и максимума.|  
-|[CScrollBar::ShowScrollBar](#showscrollbar)|Показывает или скрывает полосы прокрутки.|  
+|[CScrollBar::Create](#create)|Creates the Windows scroll bar and attaches it to the `CScrollBar` object.|  
+|[CScrollBar::EnableScrollBar](#enablescrollbar)|Enables or disables one or both arrows of a scroll bar.|  
+|[CScrollBar::GetScrollBarInfo](#getscrollbarinfo)|Retrieves information about the scroll bar using a `SCROLLBARINFO` structure.|  
+|[CScrollBar::GetScrollInfo](#getscrollinfo)|Retrieves information about the scroll bar.|  
+|[CScrollBar::GetScrollLimit](#getscrolllimit)|Retrieves the limit of the scroll bar|  
+|[CScrollBar::GetScrollPos](#getscrollpos)|Retrieves the current position of a scroll box.|  
+|[CScrollBar::GetScrollRange](#getscrollrange)|Retrieves the current minimum and maximum scroll-bar positions for the given scroll bar.|  
+|[CScrollBar::SetScrollInfo](#setscrollinfo)|Sets information about the scroll bar.|  
+|[CScrollBar::SetScrollPos](#setscrollpos)|Sets the current position of a scroll box.|  
+|[CScrollBar::SetScrollRange](#setscrollrange)|Sets minimum and maximum position values for the given scroll bar.|  
+|[CScrollBar::ShowScrollBar](#showscrollbar)|Shows or hides a scroll bar.|  
   
-## <a name="remarks"></a>Примечания  
- Создание элемента управления полосы прокрутки в два этапа. Во-первых, вызовите конструктор `CScrollBar` для создания `CScrollBar` , а затем вызвать [создать](#create) функции-члена для создания элемента управления полосой прокрутки Windows и присоединить его к `CScrollBar` объекта.  
+## <a name="remarks"></a>Remarks  
+ You create a scroll-bar control in two steps. First, call the constructor `CScrollBar` to construct the `CScrollBar` object, then call the [Create](#create) member function to create the Windows scroll-bar control and attach it to the `CScrollBar` object.  
   
- При создании `CScrollBar` объекта в диалоговое окно (с помощью ресурса диалогового окна) `CScrollBar` автоматически освобождается, когда пользователь закрывает окно.  
+ If you create a `CScrollBar` object within a dialog box (through a dialog resource), the `CScrollBar` is automatically destroyed when the user closes the dialog box.  
   
- При создании `CScrollBar` объекта в окне, необходимо уничтожить его.  
+ If you create a `CScrollBar` object within a window, you may also need to destroy it.  
   
- При создании `CScrollBar` объекта в стеке удаляется автоматически. При создании `CScrollBar` объектов в куче с помощью **новый** функции, необходимо вызвать **удаление** для объекта, чтобы уничтожить его, когда пользователь завершает полосу прокрутки Windows.  
+ If you create the `CScrollBar` object on the stack, it is destroyed automatically. If you create the `CScrollBar` object on the heap by using the **new** function, you must call **delete** on the object to destroy it when the user terminates the Windows scroll bar.  
   
- Если выделять память в `CScrollBar` объекта, переопределить `CScrollBar` деструктор для удаления распределения.  
+ If you allocate any memory in the `CScrollBar` object, override the `CScrollBar` destructor to dispose of the allocations.  
   
- Дополнительные сведения об использовании `CScrollBar`, в разделе [управления](../../mfc/controls-mfc.md).  
+ For related information about using `CScrollBar`, see [Controls](../../mfc/controls-mfc.md).  
   
-## <a name="inheritance-hierarchy"></a>Иерархия наследования  
+## <a name="inheritance-hierarchy"></a>Inheritance Hierarchy  
  [CObject](../../mfc/reference/cobject-class.md)  
   
  [CCmdTarget](../../mfc/reference/ccmdtarget-class.md)  
@@ -112,11 +119,11 @@ class CScrollBar : public CWnd
   
  `CScrollBar`  
   
-## <a name="requirements"></a>Требования  
- **Заголовок:** afxwin.h  
+## <a name="requirements"></a>Requirements  
+ **Header:** afxwin.h  
   
-##  <a name="create"></a>CScrollBar::Create  
- Полоса прокрутки Windows создает и присоединяет его к `CScrollBar` объекта.  
+##  <a name="create"></a>  CScrollBar::Create  
+ Creates the Windows scroll bar and attaches it to the `CScrollBar` object.  
   
 ```  
 virtual BOOL Create(
@@ -126,95 +133,95 @@ virtual BOOL Create(
     UINT nID);
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
  `dwStyle`  
- Указывает прокрутки стиль элемента диаграммы. Примените любое сочетание [стили полосы прокрутки](../../mfc/reference/scroll-bar-styles.md) полосу прокрутки.  
+ Specifies the scroll bar's style. Apply any combination of [scroll-bar styles](../../mfc/reference/styles-used-by-mfc.md#scroll-bar-styles) to the scroll bar.  
   
  `rect`  
- Указывает размер полосы прокрутки и положение. Может быть либо `RECT` структуры или `CRect` объекта.  
+ Specifies the scroll bar's size and position. Can be either a `RECT` structure or a `CRect` object.  
   
  `pParentWnd`  
- Указывает прокрутки линейки родительского окна, обычно `CDialog` объекта. Оно не должно быть **NULL**.  
+ Specifies the scroll bar's parent window, usually a `CDialog` object. It must not be **NULL**.  
   
  `nID`  
- Идентификатор элемента управления полосы прокрутки.  
+ The scroll bar's control ID.  
   
-### <a name="return-value"></a>Возвращаемое значение  
- Имеет ненулевое значение в случае успешного выполнения, иначе — 0.  
+### <a name="return-value"></a>Return Value  
+ Nonzero if successful; otherwise 0.  
   
-### <a name="remarks"></a>Примечания  
- Создании `CScrollBar` объекта в два этапа. Во-первых, вызовите конструктор, который создает `CScrollBar` объекта, затем вызовите **создать**, который создает и инициализирует полосу прокрутки связанные Windows и присоединяет его к `CScrollBar` объекта.  
+### <a name="remarks"></a>Remarks  
+ You construct a `CScrollBar` object in two steps. First, call the constructor, which constructs the `CScrollBar` object; then call **Create**, which creates and initializes the associated Windows scroll bar and attaches it to the `CScrollBar` object.  
   
- Примените следующий [стили окна](../../mfc/reference/window-styles.md) полосу прокрутки:  
+ Apply the following [window styles](../../mfc/reference/styles-used-by-mfc.md#window-styles) to a scroll bar:  
   
-- **WS_CHILD** всегда  
+- **WS_CHILD** Always  
   
-- **WS_VISIBLE** обычно  
+- **WS_VISIBLE** Usually  
   
-- **WS_DISABLED** редко  
+- **WS_DISABLED** Rarely  
   
-- **WS_GROUP** для группирования элементов управления  
+- **WS_GROUP** To group controls  
   
-### <a name="example"></a>Пример  
- [!code-cpp[NVC_MFC_CScrollBar&#1;](../../mfc/reference/codesnippet/cpp/cscrollbar-class_1.cpp)]  
+### <a name="example"></a>Example  
+ [!code-cpp[NVC_MFC_CScrollBar#1](../../mfc/reference/codesnippet/cpp/cscrollbar-class_1.cpp)]  
   
-##  <a name="cscrollbar"></a>CScrollBar::CScrollBar  
- Создает объект `CScrollBar`.  
+##  <a name="cscrollbar"></a>  CScrollBar::CScrollBar  
+ Constructs a `CScrollBar` object.  
   
 ```  
 CScrollBar();
 ```  
   
-### <a name="remarks"></a>Примечания  
- После создания объекта, вызовите метод **создать** функции-члена для создания и инициализации полосу прокрутки Windows.  
+### <a name="remarks"></a>Remarks  
+ After constructing the object, call the **Create** member function to create and initialize the Windows scroll bar.  
   
-### <a name="example"></a>Пример  
- [!code-cpp[NVC_MFC_CScrollBar&#2;](../../mfc/reference/codesnippet/cpp/cscrollbar-class_2.h)]  
+### <a name="example"></a>Example  
+ [!code-cpp[NVC_MFC_CScrollBar#2](../../mfc/reference/codesnippet/cpp/cscrollbar-class_2.h)]  
   
-##  <a name="enablescrollbar"></a>CScrollBar::EnableScrollBar  
- Включает или выключает одну или обе стрелки полосы прокрутки.  
+##  <a name="enablescrollbar"></a>  CScrollBar::EnableScrollBar  
+ Enables or disables one or both arrows of a scroll bar.  
   
 ```  
 BOOL EnableScrollBar(UINT nArrowFlags = ESB_ENABLE_BOTH);
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
  `nArrowFlags`  
- Указывает стрелками включена ли и какие стрелки включены или отключены. Этот параметр может принимать одно из следующих значений:  
+ Specifies whether the scroll arrows are enabled or disabled and which arrows are enabled or disabled. This parameter can be one of the following values:  
   
-- **ESB_ENABLE_BOTH** позволяет обе стрелки полосы прокрутки.  
+- **ESB_ENABLE_BOTH** Enables both arrows of a scroll bar.  
   
-- **ESB_DISABLE_LTUP** отключает стрелку влево для горизонтальной полосы прокрутки или со стрелкой вверх для вертикальной полосы прокрутки.  
+- **ESB_DISABLE_LTUP** Disables the left arrow of a horizontal scroll bar or the up arrow of a vertical scroll bar.  
   
-- **ESB_DISABLE_RTDN** отключает стрелку вправо для горизонтальной полосы прокрутки или стрелку вниз для вертикальной полосы прокрутки.  
+- **ESB_DISABLE_RTDN** Disables the right arrow of a horizontal scroll bar or the down arrow of a vertical scroll bar.  
   
-- **ESB_DISABLE_BOTH** отключает обе стрелки полосы прокрутки.  
+- **ESB_DISABLE_BOTH** Disables both arrows of a scroll bar.  
   
-### <a name="return-value"></a>Возвращаемое значение  
- Ненулевое значение, если включены или отключены в соответствии; стрелки в противном случае — 0, означающее, что стрелки уже запрошенное состояние или произошла ошибка.  
+### <a name="return-value"></a>Return Value  
+ Nonzero if the arrows are enabled or disabled as specified; otherwise 0, which indicates that the arrows are already in the requested state or that an error occurred.  
   
-### <a name="example"></a>Пример  
-  В примере показано [CScrollBar::SetScrollRange](#setscrollrange).  
+### <a name="example"></a>Example  
+  See the example for [CScrollBar::SetScrollRange](#setscrollrange).  
   
-##  <a name="getscrollbarinfo"></a>CScrollBar::GetScrollBarInfo  
- Возвращает сведения, **SCROLLBARINFO** структура поддерживает о полосы прокрутки.  
+##  <a name="getscrollbarinfo"></a>  CScrollBar::GetScrollBarInfo  
+ Retrieves the information that the **SCROLLBARINFO** structure maintains about a scroll bar.  
   
 ```  
 BOOL GetScrollBarInfo(PSCROLLBARINFO pScrollInfo) const;  
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
  *pScrollInfo*  
- Указатель на [SCROLLBARINFO](http://msdn.microsoft.com/library/windows/desktop/bb787535) структуры.  
+ A pointer to the [SCROLLBARINFO](http://msdn.microsoft.com/library/windows/desktop/bb787535) structure.  
   
-### <a name="return-value"></a>Возвращаемое значение  
- Возвращает **TRUE** в случае успешного выполнения **FALSE** в случае сбоя.  
+### <a name="return-value"></a>Return Value  
+ Returns **TRUE** on success, **FALSE** on failure.  
   
-### <a name="remarks"></a>Примечания  
- Эта функция-член эмулирует работу [SBM_SCROLLBARINFO](http://msdn.microsoft.com/library/windows/desktop/bb787545) сообщений, как описано в [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
+### <a name="remarks"></a>Remarks  
+ This member function emulates the functionality of the [SBM_SCROLLBARINFO](http://msdn.microsoft.com/library/windows/desktop/bb787545) message, as described in the Windows SDK.  
   
-##  <a name="getscrollinfo"></a>CScrollBar::GetScrollInfo  
- Извлекает данные о полосе прокрутки, содержащиеся в структуре `SCROLLINFO`.  
+##  <a name="getscrollinfo"></a>  CScrollBar::GetScrollInfo  
+ Retrieves the information that the `SCROLLINFO` structure maintains about a scroll bar.  
   
 ```  
 BOOL GetScrollInfo(
@@ -222,57 +229,57 @@ BOOL GetScrollInfo(
     UINT nMask = SIF_ALL);
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
  `lpScrollInfo`  
- Указатель на [SCROLLINFO](http://msdn.microsoft.com/library/windows/desktop/bb787537) структуры. В разделе [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)] Дополнительные сведения о структуре.  
+ A pointer to a [SCROLLINFO](http://msdn.microsoft.com/library/windows/desktop/bb787537) structure. See the Windows SDK for more information about this structure.  
   
  `nMask`  
- Указывает параметры панель прокрутки для извлечения. Типичное использование SIF_ALL, задает сочетание SIF_PAGE, SIF_POS, SIF_TRACKPOS и SIF_RANGE. В разделе `SCROLLINFO` Дополнительные сведения о значениях nMask.  
+ Specifies the scroll bar parameters to retrieve. Typical usage, SIF_ALL, specifies a combination of SIF_PAGE, SIF_POS, SIF_TRACKPOS, and SIF_RANGE. See `SCROLLINFO` for more information on the nMask values.  
   
-### <a name="return-value"></a>Возвращаемое значение  
- Если сообщение получено, все значения, возвращаемое значение **TRUE**. В противном случае, это **FALSE**.  
+### <a name="return-value"></a>Return Value  
+ If the message retrieved any values, the return is **TRUE**. Otherwise, it is **FALSE**.  
   
-### <a name="remarks"></a>Примечания  
- `GetScrollInfo`позволяет приложениям использовать позиции прокрутки 32-разрядной.  
+### <a name="remarks"></a>Remarks  
+ `GetScrollInfo` enables applications to use 32-bit scroll positions.  
   
- [SCROLLINFO](http://msdn.microsoft.com/library/windows/desktop/bb787537) структура содержит сведения о полосы прокрутки, включая минимальные и максимальные прокрутка позиций, размер страницы и положение полосы прокрутки (бегунком). В разделе `SCROLLINFO` раздел структуры в [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)] Дополнительные сведения об изменении структуры значения по умолчанию.  
+ The [SCROLLINFO](http://msdn.microsoft.com/library/windows/desktop/bb787537) structure contains information about a scroll bar, including the minimum and maximum scrolling positions, the page size, and the position of the scroll box (the thumb). See the `SCROLLINFO` structure topic in the Windows SDK for more information about changing the structure defaults.  
   
- Сообщения MFC Windows обработчики, которые указывают на расположение полосы прокрутки, [CWnd::OnHScroll](../../mfc/reference/cwnd-class.md#onhscroll) и [CWnd::OnVScroll](../../mfc/reference/cwnd-class.md#onvscroll), предоставляют только 16 битов позиции данных. `GetScrollInfo`и `SetScrollInfo` обеспечивают 32 бита полосы данных позиции прокрутки. Таким образом, приложение может вызвать `GetScrollInfo` при обработке либо `CWnd::OnHScroll` или `CWnd::OnVScroll` для получения данных позиции прокрутки 32-разрядной панели.  
+ The MFC Windows message handlers that indicate scroll bar position, [CWnd::OnHScroll](../../mfc/reference/cwnd-class.md#onhscroll) and [CWnd::OnVScroll](../../mfc/reference/cwnd-class.md#onvscroll), provide only 16 bits of position data. `GetScrollInfo` and `SetScrollInfo` provide 32 bits of scroll bar position data. Thus, an application can call `GetScrollInfo` while processing either `CWnd::OnHScroll` or `CWnd::OnVScroll` to obtain 32-bit scroll bar position data.  
   
-### <a name="example"></a>Пример  
-  В примере показано [CWnd::OnHScroll](../../mfc/reference/cwnd-class.md#onhscroll).  
+### <a name="example"></a>Example  
+  See the example for [CWnd::OnHScroll](../../mfc/reference/cwnd-class.md#onhscroll).  
   
-##  <a name="getscrolllimit"></a>CScrollBar::GetScrollLimit  
- Получает максимальное прокрутка положение полосы прокрутки.  
+##  <a name="getscrolllimit"></a>  CScrollBar::GetScrollLimit  
+ Retrieves the maximum scrolling position of the scroll bar.  
   
 ```  
 int GetScrollLimit();
 ```  
   
-### <a name="return-value"></a>Возвращаемое значение  
- Указывает положение полосы прокрутки в случае успешного выполнения; в противном случае — 0.  
+### <a name="return-value"></a>Return Value  
+ Specifies the maximum position of a scroll bar if successful; otherwise 0.  
   
-### <a name="example"></a>Пример  
-  В примере показано [CWnd::OnHScroll](../../mfc/reference/cwnd-class.md#onhscroll).  
+### <a name="example"></a>Example  
+  See the example for [CWnd::OnHScroll](../../mfc/reference/cwnd-class.md#onhscroll).  
   
-##  <a name="getscrollpos"></a>CScrollBar::GetScrollPos  
- Извлекает текущее положение ползунка.  
+##  <a name="getscrollpos"></a>  CScrollBar::GetScrollPos  
+ Retrieves the current position of a scroll box.  
   
 ```  
 int GetScrollPos() const;  
 ```  
   
-### <a name="return-value"></a>Возвращаемое значение  
- Задает текущее положение ползунка полосы прокрутки, если выполнено успешно; в противном случае — 0.  
+### <a name="return-value"></a>Return Value  
+ Specifies the current position of the scroll box if successful; otherwise 0.  
   
-### <a name="remarks"></a>Примечания  
- Текущая позиция находится относительное значение, от которого зависит от текущего диапазона прокрутки. Например если полосы прокрутки не в середине полосы прокрутки диапазон — от 100 до 200, текущая позиция — 150.  
+### <a name="remarks"></a>Remarks  
+ The current position is a relative value that depends on the current scrolling range. For example, if the scrolling range is 100 to 200 and the scroll box is in the middle of the bar, the current position is 150.  
   
-### <a name="example"></a>Пример  
-  В примере показано [CWnd::OnHScroll](../../mfc/reference/cwnd-class.md#onhscroll).  
+### <a name="example"></a>Example  
+  See the example for [CWnd::OnHScroll](../../mfc/reference/cwnd-class.md#onhscroll).  
   
-##  <a name="getscrollrange"></a>CScrollBar::GetScrollRange  
- Копирует в расположениях, указанных в текущей позиции минимальное и максимальное полосы прокрутки полосы прокрутки данного `lpMinPos` и `lpMaxPos`.  
+##  <a name="getscrollrange"></a>  CScrollBar::GetScrollRange  
+ Copies the current minimum and maximum scroll-bar positions for the given scroll bar to the locations specified by `lpMinPos` and `lpMaxPos`.  
   
 ```  
 void GetScrollRange(
@@ -280,21 +287,21 @@ void GetScrollRange(
     LPINT lpMaxPos) const;  
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
  `lpMinPos`  
- Указывает, получающего минимальной позиции целочисленной переменной.  
+ Points to the integer variable that is to receive the minimum position.  
   
  `lpMaxPos`  
- Указывает, получающего положение целочисленной переменной.  
+ Points to the integer variable that is to receive the maximum position.  
   
-### <a name="remarks"></a>Примечания  
- Диапазон по умолчанию для элемента управления полосы прокрутки пуст (оба значения равны 0).  
+### <a name="remarks"></a>Remarks  
+ The default range for a scroll-bar control is empty (both values are 0).  
   
-### <a name="example"></a>Пример  
-  В примере показано [CWnd::OnHScroll](../../mfc/reference/cwnd-class.md#onhscroll).  
+### <a name="example"></a>Example  
+  See the example for [CWnd::OnHScroll](../../mfc/reference/cwnd-class.md#onhscroll).  
   
-##  <a name="setscrollinfo"></a>CScrollBar::SetScrollInfo  
- Задает сведения, `SCROLLINFO` структура поддерживает о полосы прокрутки.  
+##  <a name="setscrollinfo"></a>  CScrollBar::SetScrollInfo  
+ Sets the information that the `SCROLLINFO` structure maintains about a scroll bar.  
   
 ```  
 BOOL SetScrollInfo(
@@ -302,26 +309,26 @@ BOOL SetScrollInfo(
     BOOL bRedraw = TRUE);
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
  `lpScrollInfo`  
- Указатель на [SCROLLINFO](http://msdn.microsoft.com/library/windows/desktop/bb787537) структуры.  
+ A pointer to a [SCROLLINFO](http://msdn.microsoft.com/library/windows/desktop/bb787537) structure.  
   
  `bRedraw`  
- Указывает, следует ли заново полосы прокрутки, с учетом новых данных. Если `bRedraw` — **TRUE**, перерисовке полосы прокрутки. Если это **FALSE**, не перерисовывается. По умолчанию перерисовке полосы прокрутки.  
+ Specifies whether the scroll bar should be redrawn to reflect the new information. If `bRedraw` is **TRUE**, the scroll bar is redrawn. If it is **FALSE**, it is not redrawn. The scroll bar is redrawn by default.  
   
-### <a name="return-value"></a>Возвращаемое значение  
- При успешном выполнении возвращается **TRUE**. В противном случае, это **FALSE**.  
+### <a name="return-value"></a>Return Value  
+ If successful, the return is **TRUE**. Otherwise, it is **FALSE**.  
   
-### <a name="remarks"></a>Примечания  
- Необходимо указать значения, необходимые для `SCROLLINFO` структуру параметров, включая значения флага.  
+### <a name="remarks"></a>Remarks  
+ You must provide the values required by the `SCROLLINFO` structure parameters, including the flag values.  
   
- `SCROLLINFO` Структура содержит сведения о полосы прокрутки, включая минимальные и максимальные прокрутка позиций, размер страницы и положение полосы прокрутки (бегунком). В разделе [SCROLLINFO](http://msdn.microsoft.com/library/windows/desktop/bb787537) раздел структуры в [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)] Дополнительные сведения об изменении структуры значения по умолчанию.  
+ The `SCROLLINFO` structure contains information about a scroll bar, including the minimum and maximum scrolling positions, the page size, and the position of the scroll box (the thumb). See the [SCROLLINFO](http://msdn.microsoft.com/library/windows/desktop/bb787537) structure topic in the Windows SDK for more information about changing the structure defaults.  
   
-### <a name="example"></a>Пример  
- [!code-cpp[NVC_MFC_CScrollBar&#3;](../../mfc/reference/codesnippet/cpp/cscrollbar-class_3.cpp)]  
+### <a name="example"></a>Example  
+ [!code-cpp[NVC_MFC_CScrollBar#3](../../mfc/reference/codesnippet/cpp/cscrollbar-class_3.cpp)]  
   
-##  <a name="setscrollpos"></a>CScrollBar::SetScrollPos  
- Задает текущее положение ползунка полосы прокрутки, указанному для `nPos` и, если указано, перерисовывает полосу прокрутки для отображения нового положения.  
+##  <a name="setscrollpos"></a>  CScrollBar::SetScrollPos  
+ Sets the current position of a scroll box to that specified by `nPos` and, if specified, redraws the scroll bar to reflect the new position.  
   
 ```  
 int SetScrollPos(
@@ -329,24 +336,24 @@ int SetScrollPos(
     BOOL bRedraw = TRUE);
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
  `nPos`  
- Указывает новое положение для полосы прокрутки. Он должен находиться в диапазоне прокрутки.  
+ Specifies the new position for the scroll box. It must be within the scrolling range.  
   
  `bRedraw`  
- Указывает, следует ли заново полосы прокрутки, с учетом новой позиции. Если `bRedraw` — **TRUE**, перерисовке полосы прокрутки. Если это **FALSE**, не перерисовывается. По умолчанию перерисовке полосы прокрутки.  
+ Specifies whether the scroll bar should be redrawn to reflect the new position. If `bRedraw` is **TRUE**, the scroll bar is redrawn. If it is **FALSE**, it is not redrawn. The scroll bar is redrawn by default.  
   
-### <a name="return-value"></a>Возвращаемое значение  
- Указывает, предыдущей позиции ползунка полосы прокрутки, если выполнено успешно; в противном случае — 0.  
+### <a name="return-value"></a>Return Value  
+ Specifies the previous position of the scroll box if successful; otherwise 0.  
   
-### <a name="remarks"></a>Примечания  
- Задайте `bRedraw` для **FALSE** каждый раз, когда полоса прокрутки перерисовывается при последующих вызовах другой функции, чтобы избежать необходимости полосы прокрутки, перерисовке дважды в течение короткого промежутка времени.  
+### <a name="remarks"></a>Remarks  
+ Set `bRedraw` to **FALSE** whenever the scroll bar will be redrawn by a subsequent call to another function to avoid having the scroll bar redrawn twice within a short interval.  
   
-### <a name="example"></a>Пример  
-  В примере показано [CScrollBar::SetScrollRange](#setscrollrange).  
+### <a name="example"></a>Example  
+  See the example for [CScrollBar::SetScrollRange](#setscrollrange).  
   
-##  <a name="setscrollrange"></a>CScrollBar::SetScrollRange  
- Задает для указанной полосы прокрутки положения минимума и максимума.  
+##  <a name="setscrollrange"></a>  CScrollBar::SetScrollRange  
+ Sets minimum and maximum position values for the given scroll bar.  
   
 ```  
 void SetScrollRange(
@@ -355,53 +362,53 @@ void SetScrollRange(
     BOOL bRedraw = TRUE);
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
  `nMinPos`  
- Задает минимальный позиции прокрутки.  
+ Specifies the minimum scrolling position.  
   
  `nMaxPos`  
- Определяет максимальное позиции прокрутки.  
+ Specifies the maximum scrolling position.  
   
  `bRedraw`  
- Указывает, следует ли полосы прокрутки перерисовку в соответствии с изменениями. Если `bRedraw` — **TRUE**, перерисовке полосы прокрутки; Если **FALSE**, не перерисовывается. Перерисовке по умолчанию.  
+ Specifies whether the scroll bar should be redrawn to reflect the change. If `bRedraw` is **TRUE**, the scroll bar is redrawn; if **FALSE**, it is not redrawn. It is redrawn by default.  
   
-### <a name="remarks"></a>Примечания  
- Задайте `nMinPos` и `nMaxPos` 0, чтобы скрыть полосы прокрутки standard.  
+### <a name="remarks"></a>Remarks  
+ Set `nMinPos` and `nMaxPos` to 0 to hide standard scroll bars.  
   
- Не вызывайте эту функцию, чтобы скрыть полосу прокрутки при обработке сообщения уведомления полосы прокрутки.  
+ Do not call this function to hide a scroll bar while processing a scroll-bar notification message.  
   
- Если вызов `SetScrollRange` сразу же после вызова функции для `SetScrollPos` функция-член, установите `bRedraw` в `SetScrollPos` 0, чтобы предотвратить перерисовываться дважды полосы прокрутки.  
+ If a call to `SetScrollRange` immediately follows a call to the `SetScrollPos` member function, set `bRedraw` in `SetScrollPos` to 0 to prevent the scroll bar from being redrawn twice.  
   
- Разница между значениями, указанными `nMinPos` и `nMaxPos` не должно быть больше 32 767. Диапазон по умолчанию для элемента управления полосы прокрутки пуст (оба `nMinPos` и `nMaxPos` , 0).  
+ The difference between the values specified by `nMinPos` and `nMaxPos` must not be greater than 32,767. The default range for a scroll-bar control is empty (both `nMinPos` and `nMaxPos` are 0).  
   
-### <a name="example"></a>Пример  
- [!code-cpp[NVC_MFC_CScrollBar&#4;](../../mfc/reference/codesnippet/cpp/cscrollbar-class_4.cpp)]  
+### <a name="example"></a>Example  
+ [!code-cpp[NVC_MFC_CScrollBar#4](../../mfc/reference/codesnippet/cpp/cscrollbar-class_4.cpp)]  
   
-##  <a name="showscrollbar"></a>CScrollBar::ShowScrollBar  
- Показывает или скрывает полосы прокрутки.  
+##  <a name="showscrollbar"></a>  CScrollBar::ShowScrollBar  
+ Shows or hides a scroll bar.  
   
 ```  
 void ShowScrollBar(BOOL bShow = TRUE);
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
  `bShow`  
- Указывает, показаны или скрыты полосы прокрутки. Если этот параметр равен **TRUE**, полоса прокрутки отображается; в противном случае он скрыт.  
+ Specifies whether the scroll bar is shown or hidden. If this parameter is **TRUE**, the scroll bar is shown; otherwise it is hidden.  
   
-### <a name="remarks"></a>Примечания  
- Приложение не должно вызывать эту функцию, чтобы скрыть полосу прокрутки при обработке сообщения уведомления полосы прокрутки.  
+### <a name="remarks"></a>Remarks  
+ An application should not call this function to hide a scroll bar while processing a scroll-bar notification message.  
   
-### <a name="example"></a>Пример  
-  В примере показано [CScrollBar::Create](#create).  
+### <a name="example"></a>Example  
+  See the example for [CScrollBar::Create](#create).  
   
-## <a name="see-also"></a>См. также  
- [CWnd-класс](../../mfc/reference/cwnd-class.md)   
- [Диаграмма иерархии](../../mfc/hierarchy-chart.md)   
- [CWnd-класс](../../mfc/reference/cwnd-class.md)   
- [Класс CButton](../../mfc/reference/cbutton-class.md)   
- [CComboBox-класс](../../mfc/reference/ccombobox-class.md)   
- [Класс CEdit](../../mfc/reference/cedit-class.md)   
- [CListBox-класс](../../mfc/reference/clistbox-class.md)   
- [Класс CStatic](../../mfc/reference/cstatic-class.md)   
- [CDialog-класс](../../mfc/reference/cdialog-class.md)
+## <a name="see-also"></a>See Also  
+ [CWnd Class](../../mfc/reference/cwnd-class.md)   
+ [Hierarchy Chart](../../mfc/hierarchy-chart.md)   
+ [CWnd Class](../../mfc/reference/cwnd-class.md)   
+ [CButton Class](../../mfc/reference/cbutton-class.md)   
+ [CComboBox Class](../../mfc/reference/ccombobox-class.md)   
+ [CEdit Class](../../mfc/reference/cedit-class.md)   
+ [CListBox Class](../../mfc/reference/clistbox-class.md)   
+ [CStatic Class](../../mfc/reference/cstatic-class.md)   
+ [CDialog Class](../../mfc/reference/cdialog-class.md)
 

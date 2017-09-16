@@ -1,85 +1,102 @@
 ---
-title: "Коллекции | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "шаблоны массивов"
-  - "массивы [C++], классы"
-  - "классы коллекций, сведения о классах коллекций"
-  - "классы коллекций, массивы"
-  - "классы коллекций, списки"
-  - "классы коллекций, соответствия"
-  - "классы коллекций, MFC - библиотека"
-  - "классы коллекций, фигуры"
-  - "классы коллекций, на основе шаблона"
-  - "коллекции, о коллекциях"
-  - "классы коллекций MFC"
-  - "MFC - библиотека, коллекции"
-  - "фигуры"
-  - "фигуры, коллекция"
+title: Collections | Microsoft Docs
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- MFC, collections
+- arrays [MFC], classes
+- MFC collection classes
+- shapes, collection
+- collection classes [MFC], MFC
+- collections, about collections
+- array templates [MFC]
+- collection classes [MFC], template-based
+- collection classes [MFC], about collection classes
+- collection classes [MFC], maps
+- collection classes [MFC], arrays
+- shapes
+- collection classes [MFC], lists
+- collection classes [MFC], shapes
 ms.assetid: 02586e4c-851d-41d0-a722-feb11c17c74c
 caps.latest.revision: 18
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 14
----
-# Коллекции
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: f4ae4981412a7cf494b551de7f5bb26c74512244
+ms.contentlocale: ru-ru
+ms.lasthandoff: 09/12/2017
 
-Библиотеки Microsoft Foundation Class классы коллекций для управления группами в составе объекты.  Эти классы типов: 2  
+---
+# <a name="collections"></a>Collections
+The Microsoft Foundation Class Library provides collection classes to manage groups of objects. These classes are of two types:  
   
--   [Классы коллекций, созданные из шаблонов C\+\+.](#_core_the_template.2d.based_collection_classes)  
+-   [Collection classes created from C++ templates](#_core_the_template_based_collection_classes)  
   
--   [Классы коллекций не, созданные из шаблонов](#_core_the_collection_classes_not_based_on_templates)  
+-   [Collection classes not created from templates](#_core_the_collection_classes_not_based_on_templates)  
   
 > [!NOTE]
->  Если код уже использует классы коллекций nontemplate можно продолжать использовать их.  При создании новых классов коллекции типобезопасной для собственных типов данных, рекомендуется использовать более новые класс, созданный на основе шаблона.  
+>  If your code already uses nontemplate collection classes, you can continue to use them. If you write new type-safe collection classes for your own data types, we recommend that you use the newer template-based classes.  
   
-##  <a name="_core_collection_shapes"></a> Форма коллекции  
- Класс коллекции охарактеризован своей формой типами «» и его элементов.  Фигура относится к способу объекты упорядочены и сохраняются коллекцией.  MFC предоставляет 3 базовых форма коллекции: списки, массивы и сопоставления \(называемые также словари\).  Можно выбрать фигуры коллекции, которая больше всего подходит для данной конкретной проблемы программирования.  
+##  <a name="_core_collection_shapes"></a> Collection Shapes  
+ A collection class is characterized by its "shape" and by the types of its elements. The shape refers to the way the objects are organized and stored by the collection. MFC provides three basic collection shapes: lists, arrays, and maps (also known as dictionaries). You can pick the collection shape that is most suited to your particular programming problem.  
   
- Каждая из 3, предоставляемых фигур коллекции кратко описано далее в этом разделе.  Для сравнения функции фигур, помогающие решить, что оптимальны для программы см. в разделе [Рекомендации по выбору класса коллекции](../Topic/Recommendations%20for%20Choosing%20a%20Collection%20Class.md).  
+ Each of the three provided collection shapes is described briefly later in this topic. To compare the features of the shapes to help you decide which is best for your program, see [Recommendations for Choosing a Collection Class](../mfc/recommendations-for-choosing-a-collection-class.md).  
   
 -   List  
   
-     Класс предоставляет списка, неиндексируемых упорядоченный список элементов, реализованный как двусвязный список.  Список содержит «головки» и «закрыть» и добавление или удаление элементов из головки или end или вставка или удаление элементов в среднем, очень быстро.  
+     The list class provides an ordered, nonindexed list of elements, implemented as a doubly linked list. A list has a "head" and a "tail," and adding or removing elements from the head or tail, or inserting or deleting elements in the middle, is very fast.  
   
--   Массив  
+-   Array  
   
-     Класс массив содержит динамически измененный размер, упорядоченных и целое число\- индексный массива объектов.  
+     The array class provides a dynamically sized, ordered, and integer-indexed array of objects.  
   
--   Сопоставление \(также известную как словарь\)  
+-   Map (also known as a dictionary)  
   
-     Сопоставление коллекции, которая связывает объект раздела с объектом значения.  
+     A map is a collection that associates a key object with a value object.  
   
-##  <a name="_core_the_template.2d.based_collection_classes"></a> Классы коллекций команды.  
- Самый простой способ реализации типобезопасную коллекцию, содержащую объекты любого типа использовать одно из класса, созданный на основе шаблона MFC.  Примеры этих классов см. в примере MFC [СОБЕРИТЕ](../top/visual-cpp-samples.md).  
+##  <a name="_core_the_template_based_collection_classes"></a> The Template-Based Collection Classes  
+ The easiest way to implement a type-safe collection that contains objects of any type is to use one of the MFC template-based classes. For examples of these classes, see the MFC sample [COLLECT](../visual-cpp-samples.md).  
   
- В следующей таблице перечислены классы коллекций MFC на основе команды.  
+ The following table lists the MFC template-based collection classes.  
   
-### Классы\-шаблоны коллекции  
+### <a name="collection-template-classes"></a>Collection Template Classes  
   
-|Содержимое коллекции|массивы;|Списки|Карты|  
-|--------------------------|--------------|------------|-----------|  
-|Коллекции объектов любого типа|`CArray`|`CList`|`CMap`|  
-|Коллекции указателей на объекты любого типа|`CTypedPtrArray`|`CTypedPtrList`|`CTypedPtrMap`|  
+|Collection contents|Arrays|Lists|Maps|  
+|-------------------------|------------|-----------|----------|  
+|Collections of objects of any type|`CArray`|`CList`|`CMap`|  
+|Collections of pointers to objects of any type|`CTypedPtrArray`|`CTypedPtrList`|`CTypedPtrMap`|  
   
-##  <a name="_core_the_collection_classes_not_based_on_templates"></a> Классы коллекций не на основе шаблонов  
- Если приложение уже использует классы nontemplate MFC можно продолжать использовать их.  Однако для новых коллекций, рекомендуется использовать класс, созданный на основе шаблона.  В следующей таблице перечислены классы коллекций MFC, которые не основаны на шаблонах.  
+##  <a name="_core_the_collection_classes_not_based_on_templates"></a> The Collection Classes Not Based on Templates  
+ If your application already uses MFC nontemplate classes, you can continue to use them. However, for new collections, we recommend that you use the template-based classes. The following table lists the MFC collection classes that are not based on templates.  
   
-### Классы коллекций Nontemplate  
+### <a name="nontemplate-collection-classes"></a>Nontemplate Collection Classes  
   
-|массивы;|Списки|Карты|  
-|--------------|------------|-----------|  
+|Arrays|Lists|Maps|  
+|------------|-----------|----------|  
 |`CObArray`|`CObList`|`CMapPtrToWord`|  
 |`CByteArray`|`CPtrList`|`CMapPtrToPtr`|  
 |`CDWordArray`|`CStringList`|`CMapStringToOb`|  
@@ -88,38 +105,40 @@ caps.handback.revision: 14
 |`CWordArray`||`CMapWordToOb`|  
 |`CUIntArray`||`CMapWordToPtr`|  
   
- Характеристики таблицы классов коллекций MFC в [Рекомендации по выбору класса коллекции](../Topic/Recommendations%20for%20Choosing%20a%20Collection%20Class.md) описываются классы коллекций MFC в терминах этим характеристикам \(кроме фигуры\).  
+ The Characteristics of MFC Collection Classes table in [Recommendations for Choosing a Collection Class](../mfc/recommendations-for-choosing-a-collection-class.md) describes the MFC collection classes in terms of these characteristics (other than shape):  
   
--   Используется ли класс шаблоны C C\+\+  
+-   Whether the class uses C++ templates  
   
--   Ли элементов, хранящихся в коллекции можно сериализовать  
+-   Whether the elements stored in the collection can be serialized  
   
--   Ли элементов, хранящихся в коллекции можно сбросить для диагностики  
+-   Whether the elements stored in the collection can be dumped for diagnostics  
   
--   Ли коллекция является типобезопасным  
+-   Whether the collection is type-safe  
   
-### Выберите действие.  
+### <a name="what-do-you-want-to-do"></a>What do you want to do  
   
-#### Общие задачи класса коллекции  
+#### <a name="general-collection-class-tasks"></a>General Collection-Class Tasks  
   
--   [Рекомендации по выбору класса коллекции](../Topic/Recommendations%20for%20Choosing%20a%20Collection%20Class.md)  
+-   [Recommendations for Choosing a Collection Class](../mfc/recommendations-for-choosing-a-collection-class.md)  
   
--   [Практическое руководство. Создание типобезопасных коллекций](../mfc/how-to-make-a-type-safe-collection.md)  
+-   [How to: Make a Type-Safe Collection](../mfc/how-to-make-a-type-safe-collection.md)  
   
--   [Создание коллекций стеков и очередей](../mfc/creating-stack-and-queue-collections.md)  
+-   [Creating Stack and Queue Collections](../mfc/creating-stack-and-queue-collections.md)  
   
--   [CArray::Add](../Topic/CArray::Add.md)  
+-   [CArray::Add](../mfc/reference/carray-class.md#add)  
   
-#### Задачи класса коллекции команды.  
+#### <a name="template-based-collection-class-tasks"></a>Template-Based Collection-Class Tasks  
   
--   [Классы на основе шаблонов](../Topic/Template-Based%20Classes.md)  
+-   [Template-Based Classes](../mfc/template-based-classes.md)  
   
-#### Доступ к членам коллекции \(команды, или нет\)  
+#### <a name="accessing-the-members-of-a-collection-template-based-or-not"></a>Accessing the Members of a Collection (Template-Based or Not)  
   
--   [Доступ ко всем членам коллекции](../mfc/accessing-all-members-of-a-collection.md)  
+-   [Accessing All Members of a Collection](../mfc/accessing-all-members-of-a-collection.md)  
   
--   [удаление всех объектов из коллекции CObject](../Topic/Deleting%20All%20Objects%20in%20a%20CObject%20Collection.md)  
+-   [Deleting All Objects in a CObject Collection](../mfc/deleting-all-objects-in-a-cobject-collection.md)  
   
-## См. также  
- [Основные понятия](../mfc/mfc-concepts.md)   
- [Общие разделы по MFC](../mfc/general-mfc-topics.md)
+## <a name="see-also"></a>See Also  
+ [Concepts](../mfc/mfc-concepts.md)   
+ [General MFC Topics](../mfc/general-mfc-topics.md)
+
+

@@ -1,5 +1,5 @@
 ---
-title: "Класс CKeyFrame | Документы Microsoft"
+title: CKeyFrame Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -24,7 +24,16 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- CKeyFrame class
+- CKeyFrame [MFC], CKeyFrame
+- CKeyFrame [MFC], AddToStoryboard
+- CKeyFrame [MFC], AddToStoryboardAfterTransition
+- CKeyFrame [MFC], AddToStoryboardAtOffset
+- CKeyFrame [MFC], GetExistingKeyframe
+- CKeyFrame [MFC], GetOffset
+- CKeyFrame [MFC], GetTransition
+- CKeyFrame [MFC], m_offset
+- CKeyFrame [MFC], m_pExistingKeyFrame
+- CKeyFrame [MFC], m_pTransition
 ms.assetid: d050a562-20f6-4c65-8ce5-ccb3aef1a20e
 caps.latest.revision: 18
 author: mikeblome
@@ -44,64 +53,64 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0e0c08ddc57d437c51872b5186ae3fc983bb0199
-ms.openlocfilehash: d8ecff2e36148fb114ee708712b6e8bd0fe558ed
+ms.translationtype: MT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 0f7fbeccae04eaeb02be295c45b33db20144f115
 ms.contentlocale: ru-ru
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 09/12/2017
 
 ---
-# <a name="ckeyframe-class"></a>Класс CKeyFrame
-Представляет ключевой кадр анимации.  
+# <a name="ckeyframe-class"></a>CKeyFrame Class
+Represents an animation keyframe.  
   
-## <a name="syntax"></a>Синтаксис  
+## <a name="syntax"></a>Syntax  
   
 ```  
 class CKeyFrame : public CBaseKeyFrame;  
 ```  
   
-## <a name="members"></a>Члены  
+## <a name="members"></a>Members  
   
-### <a name="public-constructors"></a>Открытые конструкторы  
+### <a name="public-constructors"></a>Public Constructors  
   
-|Имя|Описание|  
+|Name|Description|  
 |----------|-----------------|  
-|[CKeyFrame::CKeyFrame](#ckeyframe)|Перегружен. Создает ключевой кадр, который зависит от других опорного кадра.|  
+|[CKeyFrame::CKeyFrame](#ckeyframe)|Overloaded. Constructs a keyframe that depends on other keyframe.|  
   
-### <a name="public-methods"></a>Открытые методы  
+### <a name="public-methods"></a>Public Methods  
   
-|Имя|Описание|  
+|Name|Description|  
 |----------|-----------------|  
-|[CKeyFrame::AddToStoryboard](#addtostoryboard)|Добавляет раскадровку опорного кадра. (Переопределяет [CBaseKeyFrame::AddToStoryboard](../../mfc/reference/cbasekeyframe-class.md#addtostoryboard).)|  
-|[CKeyFrame::AddToStoryboardAfterTransition](#addtostoryboardaftertransition)|Добавляет кадр на раскадровку после перехода.|  
-|[CKeyFrame::AddToStoryboardAtOffset](#addtostoryboardatoffset)|Добавляет кадр на раскадровку смещением.|  
-|[CKeyFrame::GetExistingKeyframe](#getexistingkeyframe)|Возвращает указатель на ключевой кадр, от которых зависит этот кадр.|  
-|[CKeyFrame::GetOffset](#getoffset)|Возвращает смещение от других опорного кадра.|  
-|[CKeyFrame::GetTransition](#gettransition)|Возвращает указатель на переход, от которых зависит этот кадр.|  
+|[CKeyFrame::AddToStoryboard](#addtostoryboard)|Adds a keyframe to a storyboard. (Overrides [CBaseKeyFrame::AddToStoryboard](../../mfc/reference/cbasekeyframe-class.md#addtostoryboard).)|  
+|[CKeyFrame::AddToStoryboardAfterTransition](#addtostoryboardaftertransition)|Adds a keyframe to storyboard after transition.|  
+|[CKeyFrame::AddToStoryboardAtOffset](#addtostoryboardatoffset)|Adds a keyframe to storyboard at offset.|  
+|[CKeyFrame::GetExistingKeyframe](#getexistingkeyframe)|Returns a pointer to a keyframe this keyframe depends on.|  
+|[CKeyFrame::GetOffset](#getoffset)|Returns an offset from other keyframe.|  
+|[CKeyFrame::GetTransition](#gettransition)|Returns a pointer to a transition this keyframe depends on.|  
   
-### <a name="protected-data-members"></a>Защищенные члены данных  
+### <a name="protected-data-members"></a>Protected Data Members  
   
-|Имя|Описание|  
+|Name|Description|  
 |----------|-----------------|  
-|[CKeyFrame::m_offset](#m_offset)|Задает смещение этот кадр из опорный кадр, хранящиеся в m_pExistingKeyFrame.|  
-|[CKeyFrame::m_pExistingKeyFrame](#m_pexistingkeyframe)|Хранит указатель на существующих keframe. Этот ключевой кадр добавляется раскадровки с m_offset существующий ключевой кадр.|  
-|[CKeyFrame::m_pTransition](#m_ptransition)|Хранит указатель для перехода, которая начинается с этой ключевой кадр.|  
+|[CKeyFrame::m_offset](#m_offset)|Specifies offset of this keyframe from a keyframe stored in m_pExistingKeyFrame.|  
+|[CKeyFrame::m_pExistingKeyFrame](#m_pexistingkeyframe)|Stores a pointer to an existing keframe. This keyframe is added to storyboard with m_offset to the existing keyframe.|  
+|[CKeyFrame::m_pTransition](#m_ptransition)|Stores a pointer to transtion that begins at this keyframe.|  
   
-## <a name="remarks"></a>Примечания  
- Этот класс реализует кадр анимации. Опорный кадр представляет момент времени в пределах раскадровки и может использоваться для указания времени начала и окончания переходов. Опорный кадр может основываться на другой кадр и смещение (в секундах), или могут быть основаны на переход и представляют на момент времени, когда заканчивается этот переход.  
+## <a name="remarks"></a>Remarks  
+ This class implements an animation keyframe. A keyframe represents a moment in time within a storyboard and can be used to specify the start and end times of transitions. A keyframe may be based on other keyframe and have an offset (in seconds) from it, or may be based on a transition and represent a moment in time when this transition ends.  
   
-## <a name="inheritance-hierarchy"></a>Иерархия наследования  
+## <a name="inheritance-hierarchy"></a>Inheritance Hierarchy  
  [CObject](../../mfc/reference/cobject-class.md)  
   
  [CBaseKeyFrame](../../mfc/reference/cbasekeyframe-class.md)  
   
  [CKeyFrame](../../mfc/reference/ckeyframe-class.md)  
   
-## <a name="requirements"></a>Требования  
- **Заголовок:** afxanimationcontroller.h  
+## <a name="requirements"></a>Requirements  
+ **Header:** afxanimationcontroller.h  
   
-##  <a name="addtostoryboard"></a>CKeyFrame::AddToStoryboard  
- Добавляет раскадровку опорного кадра.  
+##  <a name="addtostoryboard"></a>  CKeyFrame::AddToStoryboard  
+ Adds a keyframe to a storyboard.  
   
 ```  
 virtual BOOL AddToStoryboard(
@@ -109,21 +118,21 @@ virtual BOOL AddToStoryboard(
     BOOL bDeepAdd);
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
  `pStoryboard`  
- Указатель раскадровки.  
+ A pointer to a storyboard.  
   
  `bDeepAdd`  
- Указывает, следует ли добавить опорный кадр или переход рекурсивно.  
+ Specifies whether to add keyframe or transition recursively.  
   
-### <a name="return-value"></a>Возвращаемое значение  
- Значение TRUE, если ключевой кадр был успешно добавлен.  
+### <a name="return-value"></a>Return Value  
+ TRUE, if keyframe was added successfully.  
   
-### <a name="remarks"></a>Примечания  
- Этот метод добавляет опорный кадр на раскадровку. Если он зависит от других опорного кадра или перехода и bDeepAdd имеет значение TRUE, этот метод пытается рекурсивно добавьте их.  
+### <a name="remarks"></a>Remarks  
+ This method adds a keyframe to storyboard. If it depends on other keyframe or transition and bDeepAdd is TRUE, this method tries to add them recursively.  
   
-##  <a name="addtostoryboardaftertransition"></a>CKeyFrame::AddToStoryboardAfterTransition  
- Добавляет кадр на раскадровку после перехода.  
+##  <a name="addtostoryboardaftertransition"></a>  CKeyFrame::AddToStoryboardAfterTransition  
+ Adds a keyframe to storyboard after transition.  
   
 ```  
 BOOL AddToStoryboardAfterTransition(
@@ -131,21 +140,21 @@ BOOL AddToStoryboardAfterTransition(
     BOOL bDeepAdd);
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
  `pStoryboard`  
- Указатель раскадровки.  
+ A pointer to a storyboard.  
   
  `bDeepAdd`  
- Указывает, следует ли добавить рекурсивно перехода.  
+ Specifies whether to add a transition recursively.  
   
-### <a name="return-value"></a>Возвращаемое значение  
- Значение TRUE, если ключевой кадр был успешно добавлен.  
+### <a name="return-value"></a>Return Value  
+ TRUE, if keyframe was added successfully.  
   
-### <a name="remarks"></a>Примечания  
- Эта функция вызывается платформой, чтобы добавить опорный кадр на раскадровку после перехода.  
+### <a name="remarks"></a>Remarks  
+ This function is called by the framework to add a keyframe to storyboard after transition.  
   
-##  <a name="addtostoryboardatoffset"></a>CKeyFrame::AddToStoryboardAtOffset  
- Добавляет кадр на раскадровку смещением.  
+##  <a name="addtostoryboardatoffset"></a>  CKeyFrame::AddToStoryboardAtOffset  
+ Adds a keyframe to storyboard at offset.  
   
 ```  
 virtual BOOL AddToStoryboardAtOffset(
@@ -153,21 +162,21 @@ virtual BOOL AddToStoryboardAtOffset(
     BOOL bDeepAdd);
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
  `pStoryboard`  
- Указатель раскадровки.  
+ A pointer to a storyboard.  
   
  `bDeepAdd`  
- Указывает ли добавить опорный кадр этот кадр зависят от рекурсивно.  
+ Specifies whether to add a keyframe this keyframe depend on recursively.  
   
-### <a name="return-value"></a>Возвращаемое значение  
- Значение TRUE, если ключевой кадр был успешно добавлен.  
+### <a name="return-value"></a>Return Value  
+ TRUE, if keyframe was added successfully.  
   
-### <a name="remarks"></a>Примечания  
- Эта функция вызывается платформой, чтобы добавить опорный кадр на раскадровку смещением.  
+### <a name="remarks"></a>Remarks  
+ This function is called by the framework to add a keyframe to storyboard at offset.  
   
-##  <a name="ckeyframe"></a>CKeyFrame::CKeyFrame  
- Создает ключевой кадр, который зависит от перехода.  
+##  <a name="ckeyframe"></a>  CKeyFrame::CKeyFrame  
+ Constructs a keyframe that depends on a transition.  
   
 ```  
 CKeyFrame(CBaseTransition* pTransition);
@@ -178,79 +187,79 @@ CKeyFrame(
     UI_ANIMATION_SECONDS offset = 0.0);
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
  `pTransition`  
- Указатель на переход.  
+ A pointer to a transition.  
   
  `pKeyframe`  
- Указатель опорного кадра.  
+ A pointer to keyframe.  
   
  `offset`  
- Смещение в секундах от определяемого pKeyframe опорного кадра.  
+ Offset, in seconds, from keyframe specified by pKeyframe.  
   
-### <a name="remarks"></a>Примечания  
- Сконструированный опорный кадр будет представлять на момент времени в раскадровке, после окончания указанного перехода.  
+### <a name="remarks"></a>Remarks  
+ The constructed keyframe will represent a moment in time within a storyboard when the specified transition ends.  
   
-##  <a name="getexistingkeyframe"></a>CKeyFrame::GetExistingKeyframe  
- Возвращает указатель на ключевой кадр, от которых зависит этот кадр.  
+##  <a name="getexistingkeyframe"></a>  CKeyFrame::GetExistingKeyframe  
+ Returns a pointer to a keyframe this keyframe depends on.  
   
 ```  
 CBaseKeyFrame* GetExistingKeyframe();
 ```  
   
-### <a name="return-value"></a>Возвращаемое значение  
- Допустимый указатель опорного кадра, или значение NULL, если этот кадр не зависит от других опорного кадра.  
+### <a name="return-value"></a>Return Value  
+ A valid pointer to keyframe, or NULL if this keyframe does not depend on other keyframe.  
   
-### <a name="remarks"></a>Примечания  
- Это метод доступа для опорного кадра, от которых зависит этот кадр.  
+### <a name="remarks"></a>Remarks  
+ This is an accessor to a keyframe this keyframe depends on.  
   
-##  <a name="getoffset"></a>CKeyFrame::GetOffset  
- Возвращает смещение от других опорного кадра.  
+##  <a name="getoffset"></a>  CKeyFrame::GetOffset  
+ Returns an offset from other keyframe.  
   
 ```  
 UI_ANIMATION_SECONDS GetOffset();
 ```  
   
-### <a name="return-value"></a>Возвращаемое значение  
- Смещение в секундах от других опорного кадра.  
+### <a name="return-value"></a>Return Value  
+ An offset in seconds from other keyframe.  
   
-### <a name="remarks"></a>Примечания  
- Этот метод должен вызываться для определения смещения в секундах от других опорного кадра.  
+### <a name="remarks"></a>Remarks  
+ This method should be called to determine an offset in seconds from other keyframe.  
   
-##  <a name="gettransition"></a>CKeyFrame::GetTransition  
- Возвращает указатель на переход, от которых зависит этот кадр.  
+##  <a name="gettransition"></a>  CKeyFrame::GetTransition  
+ Returns a pointer to a transition this keyframe depends on.  
   
 ```  
 CBaseTransition* GetTransition();
 ```  
   
-### <a name="return-value"></a>Возвращаемое значение  
- Допустимый указатель для перехода или значение NULL, если этот кадр не зависит от перехода.  
+### <a name="return-value"></a>Return Value  
+ A valid pointer to transition, or NULL if this keyframe does not depend on transition.  
   
-### <a name="remarks"></a>Примечания  
- Это метод доступа для перехода, от которых зависит этот кадр.  
+### <a name="remarks"></a>Remarks  
+ This is an accessor to a transition this keyframe depends on.  
   
-##  <a name="m_offset"></a>CKeyFrame::m_offset  
- Задает смещение этот кадр из опорный кадр, хранящиеся в m_pExistingKeyFrame.  
+##  <a name="m_offset"></a>  CKeyFrame::m_offset  
+ Specifies offset of this keyframe from a keyframe stored in m_pExistingKeyFrame.  
   
 ```  
 UI_ANIMATION_SECONDS m_offset;  
 ```  
   
-##  <a name="m_pexistingkeyframe"></a>CKeyFrame::m_pExistingKeyFrame  
- Хранит указатель на существующих keframe. Этот ключевой кадр добавляется раскадровки с m_offset существующий ключевой кадр.  
+##  <a name="m_pexistingkeyframe"></a>  CKeyFrame::m_pExistingKeyFrame  
+ Stores a pointer to an existing keframe. This keyframe is added to storyboard with m_offset to the existing keyframe.  
   
 ```  
 CBaseKeyFrame* m_pExistingKeyFrame;  
 ```  
   
-##  <a name="m_ptransition"></a>CKeyFrame::m_pTransition  
- Хранит указатель для перехода, которая начинается с этой ключевой кадр.  
+##  <a name="m_ptransition"></a>  CKeyFrame::m_pTransition  
+ Stores a pointer to transtion that begins at this keyframe.  
   
 ```  
 CBaseTransition* m_pTransition;  
 ```  
   
-## <a name="see-also"></a>См. также  
- [Классы](../../mfc/reference/mfc-classes.md)
+## <a name="see-also"></a>See Also  
+ [Classes](../../mfc/reference/mfc-classes.md)
 

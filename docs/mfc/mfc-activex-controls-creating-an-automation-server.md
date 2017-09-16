@@ -1,60 +1,79 @@
 ---
-title: "Элементы управления ActiveX в MFC. Создание сервера автоматизации | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "элементы управления ActiveX [C++], Сервер автоматизации"
-  - "Серверы автоматизации [C++], MFC ActiveX - элементы управления"
-  - "элементы управления MFC ActiveX [C++], Сервер автоматизации"
+title: 'MFC ActiveX Controls: Creating an Automation Server | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- Automation servers [MFC], MFC ActiveX controls
+- ActiveX controls [MFC], Automation server
+- MFC ActiveX controls [MFC], Automation server
 ms.assetid: e0c24ed2-d61c-49ad-a4fa-4e1098d1d39b
 caps.latest.revision: 11
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 7
----
-# Элементы управления ActiveX в MFC. Создание сервера автоматизации
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: 725d452e56a0729b76eed7889018cc21149596f8
+ms.contentlocale: ru-ru
+ms.lasthandoff: 09/12/2017
 
-Можно разработать элемент управления ActiveX MFC в качестве сервера автоматизации для программным образом внедрить этот элемент управления в другом приложении и вызывать методы в элементе управления из приложения.  Такой элемент управления по\-прежнему будет иметь доступны размещаться в контейнере элементов управления ActiveX.  
+---
+# <a name="mfc-activex-controls-creating-an-automation-server"></a>MFC ActiveX Controls: Creating an Automation Server
+You can develop an MFC ActiveX control as an Automation server for the purpose of programmatically embedding that control in another application and calling methods in the control from the application. Such a control would still be available to be hosted in an ActiveX control container.  
   
-### Создание элемента управления в качестве сервера автоматизации  
+### <a name="to-create-a-control-as-an-automation-server"></a>To create a control as an Automation server  
   
-1.  [Создать](../mfc/reference/mfc-activex-control-wizard.md) элемент управления.  
+1.  [Create](../mfc/reference/mfc-activex-control-wizard.md) the control.  
   
-2.  [Добавьте методы](../mfc/mfc-activex-controls-methods.md).  
+2.  [Add methods](../mfc/mfc-activex-controls-methods.md).  
   
-3.  Переопределение [IsInvokeAllowed](../Topic/COleControl::IsInvokeAllowed.md).  Дополнительные сведения см. в статье Q146120 информационной базы данных.  
+3.  Override [IsInvokeAllowed](../mfc/reference/colecontrol-class.md#isinvokeallowed). For more information, see Knowledge Base article Q146120.  
   
-4.  Сборка элемента управления.  
+4.  Build the control.  
   
-### Программный доступ к методам в сервере автоматизации  
+### <a name="to-programmatically-access-the-methods-in-an-automation-server"></a>To programmatically access the methods in an Automation server  
   
-1.  Создание приложения, например [EXE MFC](../Topic/MFC%20Application%20Wizard.md).  
+1.  Create an application, for example, an [MFC exe](../mfc/reference/mfc-application-wizard.md).  
   
-2.  В начале функции `InitInstance` добавьте следующую линия:  
+2.  At the beginning of the `InitInstance` function, add the following line:  
   
-     [!code-cpp[NVC_MFC_AxCont#17](../mfc/codesnippet/CPP/mfc-activex-controls-creating-an-automation-server_1.cpp)]  
+     [!code-cpp[NVC_MFC_AxCont#17](../mfc/codesnippet/cpp/mfc-activex-controls-creating-an-automation-server_1.cpp)]  
   
-3.  В представлении классов щелкните правой кнопкой мыши узел проекта и выберите **Добавление класса в библиотеку типов**, чтобы импортировать библиотеку типов.  
+3.  In Class View, right-click the project node and select **Add class from typelib** to import the type library.  
   
-     Это добавит файлы с расширениями имени файла h и cpp\-файл в проект.  
+     This will add files with the file name extensions .h and .cpp to the project.  
   
-4.  В файле заголовка класса, в котором вызывается один или несколько методов в элемент управления ActiveX, добавьте следующую линия: `#include filename.h`, где имя файла — имя файла заголовка, который был создан при импортированный библиотеки типов.  
+4.  In the header file of the class where you will call one or more methods in the ActiveX control, add the following line: `#include filename.h`, where file name is the name of the header file that was created when you imported the type library.  
   
-5.  В функции, в котором будет сделан вызов метода в элемент управления ActiveX, добавьте код, который создает объект класс\-оболочки элемента управления и создайте объект ActiveX.  Например, следующий код создает элемент управления MFC `CCirc`, получает свойство заголовка, и отображает результат нажатия кнопки " ОК " нажато в диалоговом окне.  
+5.  In the function where a call will be made to a method in the ActiveX control, add code that creates an object of the control's wrapper class and create the ActiveX object. For example, the following MFC code instantiates a `CCirc` control, gets the Caption property, and displays the result when the OK button is clicked in a dialog box:  
   
-     [!code-cpp[NVC_MFC_AxCont#18](../mfc/codesnippet/CPP/mfc-activex-controls-creating-an-automation-server_2.cpp)]  
+     [!code-cpp[NVC_MFC_AxCont#18](../mfc/codesnippet/cpp/mfc-activex-controls-creating-an-automation-server_2.cpp)]  
   
- Если добавить методы в элемент управления ActiveX, после использования его в приложении, вы можете использовать последнюю версию элемента управления в приложении путем удаления файлов, которые были созданы при импортированный библиотеки типов.  Затем следует импортировать библиотеку типов снова.  
+ If you add methods to the ActiveX control after you use it in an application, you can begin using the latest version of the control in the application by deleting the files that were created when you imported the type library. Then import the type library again.  
   
-## См. также  
- [Элементы управления ActiveX MFC](../mfc/mfc-activex-controls.md)
+## <a name="see-also"></a>See Also  
+ [MFC ActiveX Controls](../mfc/mfc-activex-controls.md)
+
+

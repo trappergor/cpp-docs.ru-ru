@@ -1,53 +1,72 @@
 ---
-title: "Элементы управления ActiveX в MFC. Методы | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "MFC ActiveX - элементы управления, методы"
+title: 'MFC ActiveX Controls: Methods | Microsoft Docs'
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- C++
+helpviewer_keywords:
+- MFC ActiveX controls [MFC], methods
 ms.assetid: e20271de-6ffa-4ba0-848b-bafe6c9e510c
 caps.latest.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 6
----
-# Элементы управления ActiveX в MFC. Методы
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: d4142b38abaed1bda6c1069da9e64e92328db222
+ms.contentlocale: ru-ru
+ms.lasthandoff: 09/12/2017
 
-Элемент управления ActiveX вызывает события для связи между собой и его контейнером элементов управления.  Контейнер также может взаимодействовать с элементом управления посредством методов и свойств.  Эти методы также называются функциями.  
+---
+# <a name="mfc-activex-controls-methods"></a>MFC ActiveX Controls: Methods
+An ActiveX control fires events to communicate between itself and its control container. A container can also communicate with a control by means of methods and properties. Methods are also called functions.  
   
- Методы и свойства предоставляют экспортированный интерфейс для использования другими приложениями, такие как контейнеры клиентов автоматизации и элемент управления ActiveX.  Дополнительные сведения о свойствах элементов управления ActiveX см. в статье [Элементы управления ActiveX MFC. Свойства](../mfc/mfc-activex-controls-properties.md).  
+ Methods and properties provide an exported interface for use by other applications, such as Automation clients and ActiveX control containers. For more information on ActiveX control properties, see the article [MFC ActiveX Controls: Properties](../mfc/mfc-activex-controls-properties.md).  
   
- Методы аналогичны в использовании и цели к функциям элемента класса C\+\+.  2 Типа методов элемент управления может реализовать: биржевая и пользовательский.  Похожи на стандартные события, стандартные методы эти методы, в которых [COleControl](../mfc/reference/colecontrol-class.md) предоставляет реализацию.  Дополнительные сведения о стандартных методах см. в разделе [Элементы управления ActiveX MFC. Чтобы добавить стандартные методы](../mfc/mfc-activex-controls-adding-stock-methods.md) статьи.  Пользовательские методы, определяемые разработчиком, позволяют дополнительные настройки элемента управления.  Дополнительные сведения см. в статье [Элементы управления ActiveX MFC. Добавление пользовательских методов](../mfc/mfc-activex-controls-adding-custom-methods.md).  
+ Methods are similar in use and purpose to the member functions of a C++ class. There are two types of methods your control can implement: stock and custom. Similar to stock events, stock methods are those methods for which [COleControl](../mfc/reference/colecontrol-class.md) provides an implementation. For more information on stock methods, see the article [MFC ActiveX Controls: Adding Stock Methods](../mfc/mfc-activex-controls-adding-stock-methods.md). Custom methods, defined by the developer, allow additional customization of the control. For more information, see the article [MFC ActiveX Controls: Adding Custom Methods](../mfc/mfc-activex-controls-adding-custom-methods.md).  
   
- Библиотеки Microsoft Foundation Class \(MFC\) реализует механизм, позволяющий элементу управления в биржевой и пользовательские методы поддержки.  Первая часть класса `COleControl`.  Производное от `CWnd`, функции\-члены `COleControl` поддерживают стандартные методы, которые являются общими для всех элементов управления ActiveX.  Вторая часть этого механизма схемы подготовки к сообщению.  Схема подготовки к отправке сообщений аналогична схеме; однако вместо сопоставления функции значение идентификатора сообщения Windows, схема подготовки к отправке сопоставляет виртуальные функции\-члена значение идентификатора IDispatch.  
+ The Microsoft Foundation Class Library (MFC) implements a mechanism that allows your control to support stock and custom methods. The first part is class `COleControl`. Derived from `CWnd`, `COleControl` member functions support stock methods that are common to all ActiveX controls. The second part of this mechanism is the dispatch map. A dispatch map is similar to a message map; however, instead of mapping a function to a Windows message ID, a dispatch map maps virtual member functions to IDispatch IDS.  
   
- Для элемента управления для поддержки различных методов правильно его класс должен объявлять схему подготовки к сообщению.  Это выполняется следующей строкой кода, расположенной в заголовке \(класса элемента управления. Файл H\).  
+ For a control to support various methods properly, its class must declare a dispatch map. This is accomplished by the following line of code located in control class header (.H) file:  
   
- [!code-cpp[NVC_MFC_AxUI#13](../mfc/codesnippet/CPP/mfc-activex-controls-methods_1.h)]  
+ [!code-cpp[NVC_MFC_AxUI#13](../mfc/codesnippet/cpp/mfc-activex-controls-methods_1.h)]  
   
- Основной целью схемы подготовки к отправке установить связь между именами метода используемыми внешним вызывающим объектом \(например, контейнера\) и функции\-членами класса элемента управления, реализующие методы.  После подготовки к отправке схема была объявлена, ему необходимо указывать в файле реализации элемента управления \(CPP\).  Следующие строки кода определяют схему подготовки к сообщению.  
+ The main purpose of the dispatch map is to establish the relationship between the method names used by an external caller (such as the container) and the member functions of the control's class that implement the methods. After the dispatch map has been declared, it needs to be defined in the control's implementation (.CPP) file. The following lines of code define the dispatch map:  
   
- [!code-cpp[NVC_MFC_AxUI#14](../mfc/codesnippet/CPP/mfc-activex-controls-methods_2.cpp)]  
-[!code-cpp[NVC_MFC_AxUI#15](../mfc/codesnippet/CPP/mfc-activex-controls-methods_3.cpp)]  
+ [!code-cpp[NVC_MFC_AxUI#14](../mfc/codesnippet/cpp/mfc-activex-controls-methods_2.cpp)]  
+[!code-cpp[NVC_MFC_AxUI#15](../mfc/codesnippet/cpp/mfc-activex-controls-methods_3.cpp)]  
   
- При использовании [Мастер элементов ActiveX MFC](../mfc/reference/mfc-activex-control-wizard.md), чтобы создать проект, то эти линии, добавляются автоматически.  Если мастер элемента управления ActiveX MFC не использовался, необходимо добавить эти линии вручную.  
+ If you used the [MFC ActiveX Control Wizard](../mfc/reference/mfc-activex-control-wizard.md) to create the project, these lines were added automatically. If the MFC ActiveX Control Wizard was not used, you must add these lines manually.  
   
- В следующих статьях подробно рассматриваются методы:  
+ The following articles discuss methods in detail:  
   
--   [Элементы управления ActiveX MFC. Чтобы добавить стандартные методы](../mfc/mfc-activex-controls-adding-stock-methods.md)  
+-   [MFC ActiveX Controls: Adding Stock Methods](../mfc/mfc-activex-controls-adding-stock-methods.md)  
   
--   [Элементы управления ActiveX MFC. Добавление пользовательских методов](../mfc/mfc-activex-controls-adding-custom-methods.md)  
+-   [MFC ActiveX Controls: Adding Custom Methods](../mfc/mfc-activex-controls-adding-custom-methods.md)  
   
--   [Элементы управления ActiveX MFC. Возвращает код ошибки из метода](../mfc/mfc-activex-controls-returning-error-codes-from-a-method.md)  
+-   [MFC ActiveX Controls: Returning Error Codes From a Method](../mfc/mfc-activex-controls-returning-error-codes-from-a-method.md)  
   
-## См. также  
- [Элементы управления ActiveX MFC](../mfc/mfc-activex-controls.md)
+## <a name="see-also"></a>See Also  
+ [MFC ActiveX Controls](../mfc/mfc-activex-controls.md)
+
+

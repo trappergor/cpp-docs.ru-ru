@@ -1,5 +1,5 @@
 ---
-title: "Класс COleInsertDialog | Документы Microsoft"
+title: COleInsertDialog Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -23,10 +23,15 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- OLE Insert Object dialog box
-- dialog boxes, OLE
-- COleInsertDialog class
-- Insert Object dialog box
+- COleInsertDialog [MFC], COleInsertDialog
+- COleInsertDialog [MFC], CreateItem
+- COleInsertDialog [MFC], DoModal
+- COleInsertDialog [MFC], GetClassID
+- COleInsertDialog [MFC], GetDrawAspect
+- COleInsertDialog [MFC], GetIconicMetafile
+- COleInsertDialog [MFC], GetPathName
+- COleInsertDialog [MFC], GetSelectionType
+- COleInsertDialog [MFC], m_io
 ms.assetid: a9ec610b-abde-431e-bd01-c40159a66dbb
 caps.latest.revision: 24
 author: mikeblome
@@ -46,59 +51,59 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0e0c08ddc57d437c51872b5186ae3fc983bb0199
-ms.openlocfilehash: 078f421dacc79ff929249cd35c520b0c4d4a222e
+ms.translationtype: MT
+ms.sourcegitcommit: 4e0027c345e4d414e28e8232f9e9ced2b73f0add
+ms.openlocfilehash: a890bca0062dd3089cf4a84f43150497262dd8f7
 ms.contentlocale: ru-ru
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 09/12/2017
 
 ---
-# <a name="coleinsertdialog-class"></a>Класс COleInsertDialog
-Используется для диалогового окна OLE "Вставить объект".  
+# <a name="coleinsertdialog-class"></a>COleInsertDialog Class
+Used for the OLE Insert Object dialog box.  
   
-## <a name="syntax"></a>Синтаксис  
+## <a name="syntax"></a>Syntax  
   
 ```  
 class COleInsertDialog : public COleDialog  
 ```  
   
-## <a name="members"></a>Члены  
+## <a name="members"></a>Members  
   
-### <a name="public-constructors"></a>Открытые конструкторы  
+### <a name="public-constructors"></a>Public Constructors  
   
-|Имя|Описание|  
+|Name|Description|  
 |----------|-----------------|  
-|[COleInsertDialog::COleInsertDialog](#coleinsertdialog)|Создает объект `COleInsertDialog`.|  
+|[COleInsertDialog::COleInsertDialog](#coleinsertdialog)|Constructs a `COleInsertDialog` object.|  
   
-### <a name="public-methods"></a>Открытые методы  
+### <a name="public-methods"></a>Public Methods  
   
-|Имя|Описание|  
+|Name|Description|  
 |----------|-----------------|  
-|[COleInsertDialog::CreateItem](#createitem)|Создание элемента, выбранного в диалоговом окне.|  
-|[COleInsertDialog::DoModal](#domodal)|Отображает диалоговое окно Вставка объекта OLE.|  
-|[COleInsertDialog::GetClassID](#getclassid)|Возвращает **CLSID** связанный с выбранным элементом.|  
-|[COleInsertDialog::GetDrawAspect](#getdrawaspect)|Сообщает ли для рисования элемента в виде значка.|  
-|[COleInsertDialog::GetIconicMetafile](#geticonicmetafile)|Возвращает дескриптор метафайла, связанные со значками форме этого элемента.|  
-|[COleInsertDialog::GetPathName](#getpathname)|Возвращает полный путь к файлу, выбранному в диалоговом окне.|  
-|[COleInsertDialog::GetSelectionType](#getselectiontype)|Возвращает тип выбранного объекта.|  
+|[COleInsertDialog::CreateItem](#createitem)|Creates the item selected in the dialog box.|  
+|[COleInsertDialog::DoModal](#domodal)|Displays the OLE Insert Object dialog box.|  
+|[COleInsertDialog::GetClassID](#getclassid)|Gets the **CLSID** associated with the chosen item.|  
+|[COleInsertDialog::GetDrawAspect](#getdrawaspect)|Tells whether to draw the item as an icon.|  
+|[COleInsertDialog::GetIconicMetafile](#geticonicmetafile)|Gets a handle to the metafile associated with the iconic form of this item.|  
+|[COleInsertDialog::GetPathName](#getpathname)|Gets the full path to the file chosen in the dialog box.|  
+|[COleInsertDialog::GetSelectionType](#getselectiontype)|Gets the type of object selected.|  
   
-### <a name="public-data-members"></a>Открытые члены данных  
+### <a name="public-data-members"></a>Public Data Members  
   
-|Имя|Описание|  
+|Name|Description|  
 |----------|-----------------|  
-|[COleInsertDialog::m_io](#m_io)|Структура типа **OLEUIINSERTOBJECT** , контролирует поведение диалогового окна.|  
+|[COleInsertDialog::m_io](#m_io)|A structure of type **OLEUIINSERTOBJECT** that controls the behavior of the dialog box.|  
   
-## <a name="remarks"></a>Примечания  
- Создание объекта класса `COleInsertDialog` когда необходимо вызвать это диалоговое окно предназначено. После `COleInsertDialog` объект был создан, можно использовать [m_io](#m_io) структуры для инициализации значения или состояния элементов управления в диалоговом окне. `m_io` Структуры имеет тип **OLEUIINSERTOBJECT**. Дополнительные сведения об использовании этого класса диалогового окна в разделе [DoModal](#domodal) функции-члена.  
+## <a name="remarks"></a>Remarks  
+ Create an object of class `COleInsertDialog` when you want to call this dialog box. After a `COleInsertDialog` object has been constructed, you can use the [m_io](#m_io) structure to initialize the values or states of controls in the dialog box. The `m_io` structure is of type **OLEUIINSERTOBJECT**. For more information about using this dialog class, see the [DoModal](#domodal) member function.  
   
 > [!NOTE]
->  Контейнер, созданный мастером код приложения использует этот класс.  
+>  Application Wizard-generated container code uses this class.  
   
- Дополнительные сведения см. в разделе [OLEUIINSERTOBJECT](http://msdn.microsoft.com/library/windows/desktop/ms691316) в структуре [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
+ For more information, see the [OLEUIINSERTOBJECT](http://msdn.microsoft.com/library/windows/desktop/ms691316) structure in the Windows SDK.  
   
- Дополнительные сведения о диалоговых окнах OLE конкретных см. в статье [диалоговые окна в OLE](../../mfc/dialog-boxes-in-ole.md).  
+ For more information regarding OLE-specific dialog boxes, see the article [Dialog Boxes in OLE](../../mfc/dialog-boxes-in-ole.md).  
   
-## <a name="inheritance-hierarchy"></a>Иерархия наследования  
+## <a name="inheritance-hierarchy"></a>Inheritance Hierarchy  
  [CObject](../../mfc/reference/cobject-class.md)  
   
  [CCmdTarget](../../mfc/reference/ccmdtarget-class.md)  
@@ -113,11 +118,11 @@ class COleInsertDialog : public COleDialog
   
  `COleInsertDialog`  
   
-## <a name="requirements"></a>Требования  
- **Заголовок:** afxodlgs.h  
+## <a name="requirements"></a>Requirements  
+ **Header:** afxodlgs.h  
   
-##  <a name="coleinsertdialog"></a>COleInsertDialog::COleInsertDialog  
- Эта функция создает только `COleInsertDialog` объекта.  
+##  <a name="coleinsertdialog"></a>  COleInsertDialog::COleInsertDialog  
+ This function constructs only a `COleInsertDialog` object.  
   
 ```  
 COleInsertDialog (
@@ -125,49 +130,49 @@ COleInsertDialog (
     CWnd* pParentWnd = NULL);
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
  `dwFlags`  
- Создание флаг, который содержит любое количество следующих значений для объединения с помощью оператора побитового или:  
+ Creation flag that contains any number of the following values to be combined using the bitwise-OR operator:  
   
-- **IOF_SHOWHELP** задает отображение кнопки справки при вызове диалоговое окно.  
+- **IOF_SHOWHELP** Specifies that the Help button will be displayed when the dialog box is called.  
   
-- **IOF_SELECTCREATENEW** указывает, что создать новый переключатель выберет изначально при вызове диалоговое окно. Это значение по умолчанию и не может использоваться с **IOF_SELECTCREATEFROMFILE**.  
+- **IOF_SELECTCREATENEW** Specifies that the Create New radio button will be selected initially when the dialog box is called. This is the default and cannot be used with **IOF_SELECTCREATEFROMFILE**.  
   
-- **IOF_SELECTCREATEFROMFILE** указывает, что переключатель Создать из файла выберет изначально при вызове диалоговое окно. Нельзя использовать с **IOF_SELECTCREATENEW**.  
+- **IOF_SELECTCREATEFROMFILE** Specifies that the Create From File radio button will be selected initially when the dialog box is called. Cannot be used with **IOF_SELECTCREATENEW**.  
   
-- **IOF_CHECKLINK** указывает, что флажок связь будет проверяться изначально при вызове диалоговое окно.  
+- **IOF_CHECKLINK** Specifies that the Link check box will be checked initially when the dialog box is called.  
   
-- **IOF_DISABLELINK** указывает, что флажок связь будет отключена при вызове диалоговое окно.  
+- **IOF_DISABLELINK** Specifies that the Link check box will be disabled when the dialog box is called.  
   
-- **IOF_CHECKDISPLAYASICON** указывает, что будет изначально установлен флажок виде значка, отображается значок текущего и изменить значок появится кнопка вызова диалогового.  
+- **IOF_CHECKDISPLAYASICON** Specifies that the Display As Icon check box will be checked initially, the current icon will be displayed, and the Change Icon button will be enabled when the dialog box is called.  
   
-- **IOF_VERIFYSERVERSEXIST** указывает проверки окно классов, он добавляет в список, гарантируя наличие серверов, указанных в базе данных регистрации перед откроется диалоговое окно. Установка этого флажка может существенно снизить общую производительность.  
+- **IOF_VERIFYSERVERSEXIST** Specifies that the dialog box should validate the classes it adds to the list box by ensuring that the servers specified in the registration database exist before the dialog box is displayed. Setting this flag can significantly impair performance.  
   
  `pParentWnd`  
- Указывает на объект окна родительского или владелец (типа `CWnd`), которому принадлежит объект диалогового окна. Если это **NULL**, главное окно приложения имеет значение родительского окна объекта диалогового окна.  
+ Points to the parent or owner window object (of type `CWnd`) to which the dialog object belongs. If it is **NULL**, the parent window of the dialog object is set to the main application window.  
   
-### <a name="remarks"></a>Примечания  
- Чтобы открыть диалоговое окно, вызовите [DoModal](#domodal) функции.  
+### <a name="remarks"></a>Remarks  
+ To display the dialog box, call the [DoModal](#domodal) function.  
   
-##  <a name="createitem"></a>COleInsertDialog::CreateItem  
- Эта функция вызывается для создания объекта типа [COleClientItem](../../mfc/reference/coleclientitem-class.md) только тогда, когда [DoModal](#domodal) возвращает **IDOK**.  
+##  <a name="createitem"></a>  COleInsertDialog::CreateItem  
+ Call this function to create an object of type [COleClientItem](../../mfc/reference/coleclientitem-class.md) only if [DoModal](#domodal) returns **IDOK**.  
   
 ```  
 BOOL CreateItem(COleClientItem* pItem);
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
  `pItem`  
- Указывает для создаваемого элемента.  
+ Points to the item to be created.  
   
-### <a name="return-value"></a>Возвращаемое значение  
- Ненулевое значение, если элемент был создан; в противном случае — 0.  
+### <a name="return-value"></a>Return Value  
+ Nonzero if item was created; otherwise 0.  
   
-### <a name="remarks"></a>Примечания  
- Необходимо выделить `COleClientItem` объекта перед вызовом этой функции.  
+### <a name="remarks"></a>Remarks  
+ You must allocate the `COleClientItem` object before you can call this function.  
   
-##  <a name="domodal"></a>COleInsertDialog::DoModal  
- Эта функция вызывается для отображения диалогового окна OLE вставить объект.  
+##  <a name="domodal"></a>  COleInsertDialog::DoModal  
+ Call this function to display the OLE Insert Object dialog box.  
   
 ```  
 virtual INT_PTR   
@@ -178,94 +183,94 @@ INT_PTR
     DoModal(DWORD  dwFlags);
 ```  
   
-### <a name="parameters"></a>Параметры  
+### <a name="parameters"></a>Parameters  
  `dwFlags`  
- Одно из следующих значений:  
+ One of the following values:  
   
- `COleInsertDialog::DocObjectsOnly`вставляет только DocObjects.  
+ `COleInsertDialog::DocObjectsOnly` inserts only DocObjects.  
   
- `COleInsertDialog::ControlsOnly`Вставляет элементы управления ActiveX.  
+ `COleInsertDialog::ControlsOnly` inserts only ActiveX controls.  
   
- Ноль вставляет DocObject ни элемент управления ActiveX. Это означает в одной и той же реализации как первый прототип перечисленных выше.  
+ Zero inserts neither a DocObject nor an ActiveX control. This value results in the same implementation as the first prototype listed above.  
   
-### <a name="return-value"></a>Возвращаемое значение  
- Состояние завершения для диалогового окна. Одно из следующих значений:  
+### <a name="return-value"></a>Return Value  
+ Completion status for the dialog box. One of the following values:  
   
--   IDOK, если успешно откроется диалоговое окно.  
+-   IDOK if the dialog box was successfully displayed.  
   
--   IDCANCEL, если пользователь отменил диалоговое окно.  
+-   IDCANCEL if the user canceled the dialog box.  
   
--   IDABORT, если произошла ошибка. Если возвращается IDABORT, вызовите [COleDialog::GetLastError](../../mfc/reference/coledialog-class.md#getlasterror) функции-члена для получения дополнительных сведений о типе возникшей ошибки. Список возможных ошибок см. в разделе [OleUIInsertObject](http://msdn.microsoft.com/library/windows/desktop/ms694325) работать в [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
+-   IDABORT if an error occurred. If IDABORT is returned, call the [COleDialog::GetLastError](../../mfc/reference/coledialog-class.md#getlasterror) member function to get more information about the type of error that occurred. For a listing of possible errors, see the [OleUIInsertObject](http://msdn.microsoft.com/library/windows/desktop/ms694325) function in the Windows SDK.  
   
-### <a name="remarks"></a>Примечания  
- Если требуется инициализировать различные диалоговыми окнами, задав члены [m_io](#m_io) структуры, это следует сделать до вызова метода `DoModal`, но после создания объекта диалогового окна.  
+### <a name="remarks"></a>Remarks  
+ If you want to initialize the various dialog box controls by setting members of the [m_io](#m_io) structure, you should do this before calling `DoModal`, but after the dialog object is constructed.  
   
- Если `DoModal` возвращает IDOK, можно вызвать другой член функции для получения параметров или данные, введенные в поле диалогового окна пользователем.  
+ If `DoModal` returns IDOK, you can call other member functions to retrieve the settings or information input into the dialog box by the user.  
   
-##  <a name="getclassid"></a>COleInsertDialog::GetClassID  
- Эта функция вызывается для получения **CLSID** связанные с выбранного элемента, только если [DoModal](#domodal) возвращает **IDOK** и тип выбора **COleInsertDialog::createNewItem**.  
+##  <a name="getclassid"></a>  COleInsertDialog::GetClassID  
+ Call this function to get the **CLSID** associated with the selected item only if [DoModal](#domodal) returns **IDOK** and the selection type is **COleInsertDialog::createNewItem**.  
   
 ```  
 REFCLSID GetClassID() const;  
 ```  
   
-### <a name="return-value"></a>Возвращаемое значение  
- Возвращает **CLSID** связанные с выбранным элементом.  
+### <a name="return-value"></a>Return Value  
+ Returns the **CLSID** associated with the selected item.  
   
-### <a name="remarks"></a>Примечания  
- Дополнительные сведения см. в разделе [раздел CLSID](http://msdn.microsoft.com/library/windows/desktop/ms691424) в [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
+### <a name="remarks"></a>Remarks  
+ For more information, see [CLSID Key](http://msdn.microsoft.com/library/windows/desktop/ms691424) in the Windows SDK.  
   
-##  <a name="getdrawaspect"></a>COleInsertDialog::GetDrawAspect  
- Эта функция вызывается для определения, если пользователь выбрал для отображения выбранного элемента в виде значка.  
+##  <a name="getdrawaspect"></a>  COleInsertDialog::GetDrawAspect  
+ Call this function to determine if the user chose to display the selected item as an icon.  
   
 ```  
 DVASPECT GetDrawAspect() const;  
 ```  
   
-### <a name="return-value"></a>Возвращаемое значение  
- Метод, необходимых для визуализации объекта.  
+### <a name="return-value"></a>Return Value  
+ The method needed to render the object.  
   
-- `DVASPECT_CONTENT`Возвращается, если не был установлен флажок виде значка.  
+- `DVASPECT_CONTENT` Returned if the Display As Icon check box was not checked.  
   
-- `DVASPECT_ICON`Возвращается, если был установлен флажок виде значка.  
+- `DVASPECT_ICON` Returned if the Display As Icon check box was checked.  
   
-### <a name="remarks"></a>Примечания  
- Вызов этой функции только в том случае, если [DoModal](#domodal) возвращает **IDOK**.  
+### <a name="remarks"></a>Remarks  
+ Call this function only if [DoModal](#domodal) returns **IDOK**.  
   
- Дополнительные сведения о рисовании аспект см. в разделе [FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177) структуры данных в [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
+ For more information on drawing aspect, see [FORMATETC](http://msdn.microsoft.com/library/windows/desktop/ms682177) data structure in the Windows SDK.  
   
-##  <a name="geticonicmetafile"></a>COleInsertDialog::GetIconicMetafile  
- Эта функция вызывается для получения дескриптора метафайла, содержит символическое аспектом выбранного элемента.  
+##  <a name="geticonicmetafile"></a>  COleInsertDialog::GetIconicMetafile  
+ Call this function to get a handle to the metafile that contains the iconic aspect of the selected item.  
   
 ```  
 HGLOBAL GetIconicMetafile() const;  
 ```  
   
-### <a name="return-value"></a>Возвращаемое значение  
- Дескриптор метафайла, содержащий значками аспектом выбранного элемента, если флажок виде значка был установлен после закрытия диалогового окна, выбрав **ОК**; в противном случае **NULL**.  
+### <a name="return-value"></a>Return Value  
+ The handle to the metafile containing the iconic aspect of the selected item, if the Display As Icon check box was checked when the dialog was dismissed by choosing **OK**; otherwise **NULL**.  
   
-##  <a name="getpathname"></a>COleInsertDialog::GetPathName  
- Эта функция вызывается для получения полного пути только если выбранный файл [DoModal](#domodal) возвращает **IDOK** и тип выбора не **COleInsertDialog::createNewItem**.  
+##  <a name="getpathname"></a>  COleInsertDialog::GetPathName  
+ Call this function to get the full path of the selected file only if [DoModal](#domodal) returns **IDOK** and the selection type is not **COleInsertDialog::createNewItem**.  
   
 ```  
 CString GetPathName() const;  
 ```  
   
-### <a name="return-value"></a>Возвращаемое значение  
- Полный путь к файлу, выбранному в диалоговом окне. Если тип выбора `createNewItem`, эта функция возвращает бессмысленной `CString` в режиме выпуска или вызывает проверочное утверждение в режиме отладки.  
+### <a name="return-value"></a>Return Value  
+ The full path to the file selected in the dialog box. If the selection type is `createNewItem`, this function returns a meaningless `CString` in release mode or causes an assertion in debug mode.  
   
-##  <a name="getselectiontype"></a>COleInsertDialog::GetSelectionType  
- Эта функция вызывается для получения выбран при отклонении в диалоговом окне Вставка объекта, выбрав тип выбора **ОК**.  
+##  <a name="getselectiontype"></a>  COleInsertDialog::GetSelectionType  
+ Call this function to get the selection type chosen when the Insert Object dialog box was dismissed by choosing **OK**.  
   
 ```  
 UINT GetSelectionType() const;  
 ```  
   
-### <a name="return-value"></a>Возвращаемое значение  
- Тип выбора, сделанного.  
+### <a name="return-value"></a>Return Value  
+ Type of selection made.  
   
-### <a name="remarks"></a>Примечания  
- Возвращаемый тип значений определяется **выбора** перечисления тип, объявленный в `COleInsertDialog` класса.  
+### <a name="remarks"></a>Remarks  
+ The return type values are specified by the **Selection** enumeration type declared in the `COleInsertDialog` class.  
   
 ```  
 enum Selection {
@@ -275,29 +280,29 @@ enum Selection {
     };  
 ```  
   
- Выполните краткое описание каждого из этих значений.  
+ Brief descriptions of these values follow:  
   
-- **COleInsertDialog::createNewItem** создать переключатель был выбран.  
+- **COleInsertDialog::createNewItem** The Create New radio button was selected.  
   
-- **COleInsertDialog::insertFromFile** был выбран переключатель Создать из файла и не был установлен флажок связь.  
+- **COleInsertDialog::insertFromFile** The Create From File radio button was selected and the Link check box was not checked.  
   
-- **COleInsertDialog::linkToFile** был выбран переключатель Создать из файла и был установлен флажок связь.  
+- **COleInsertDialog::linkToFile** The Create From File radio button was selected and the Link check box was checked.  
   
-##  <a name="m_io"></a>COleInsertDialog::m_io  
- Структура типа **OLEUIINSERTOBJECT** используется для управления поведением в диалоговом окне Вставка объекта.  
+##  <a name="m_io"></a>  COleInsertDialog::m_io  
+ Structure of type **OLEUIINSERTOBJECT** used to control the behavior of the Insert Object dialog box.  
   
 ```  
 OLEUIINSERTOBJECT m_io;  
 ```  
   
-### <a name="remarks"></a>Примечания  
- Можно изменить члены этой структуры, либо непосредственно, либо с помощью функций-членов.  
+### <a name="remarks"></a>Remarks  
+ Members of this structure can be modified either directly or through member functions.  
   
- Дополнительные сведения см. в разделе [OLEUIINSERTOBJECT](http://msdn.microsoft.com/library/windows/desktop/ms691316) в структуре [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
+ For more information, see the [OLEUIINSERTOBJECT](http://msdn.microsoft.com/library/windows/desktop/ms691316) structure in the Windows SDK.  
   
-## <a name="see-also"></a>См. также  
- [Пример MFC OCLIENT](../../visual-cpp-samples.md)   
- [Класс COleDialog](../../mfc/reference/coledialog-class.md)   
- [Диаграмма иерархии](../../mfc/hierarchy-chart.md)   
- [Класс COleDialog](../../mfc/reference/coledialog-class.md)
+## <a name="see-also"></a>See Also  
+ [MFC Sample OCLIENT](../../visual-cpp-samples.md)   
+ [COleDialog Class](../../mfc/reference/coledialog-class.md)   
+ [Hierarchy Chart](../../mfc/hierarchy-chart.md)   
+ [COleDialog Class](../../mfc/reference/coledialog-class.md)
 

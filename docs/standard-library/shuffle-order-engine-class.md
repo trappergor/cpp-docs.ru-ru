@@ -1,5 +1,5 @@
 ---
-title: "Класс shuffle_order_engine | Документы Майкрософт"
+title: shuffle_order_engine Class | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -9,7 +9,6 @@ ms.technology:
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
-- shuffle_order_engine
 - random/std::shuffle_order_engine
 - random/std::shuffle_order_engine::base
 - random/std::shuffle_order_engine::discard
@@ -19,7 +18,11 @@ f1_keywords:
 dev_langs:
 - C++
 helpviewer_keywords:
-- shuffle_order_engine class
+- std::shuffle_order_engine [C++]
+- std::shuffle_order_engine [C++], base
+- std::shuffle_order_engine [C++], discard
+- std::shuffle_order_engine [C++], base_type
+- std::shuffle_order_engine [C++], seed
 ms.assetid: 0bcd1fb0-44d7-4e59-bb1b-4a9b673a960d
 caps.latest.revision: 17
 author: corob-msft
@@ -39,48 +42,48 @@ translation.priority.mt:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 41b445ceeeb1f37ee9873cb55f62d30d480d8718
-ms.openlocfilehash: c4cb4367968c89c42df8580efef06db052c49396
+ms.translationtype: MT
+ms.sourcegitcommit: 5d026c375025b169d5db8445cbb52c0c917b2d8d
+ms.openlocfilehash: 0916a9009194481eab29d39a020cbeecc584a9e1
 ms.contentlocale: ru-ru
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 09/09/2017
 
 ---
-# <a name="shuffleorderengine-class"></a>Класс shuffle_order_engine
-Создает случайную последовательность, изменяя порядок значений, возвращенных базовым механизмом.  
+# <a name="shuffleorderengine-class"></a>shuffle_order_engine Class
+Generates a random sequence by reordering the values returned from its base engine.  
   
-## <a name="syntax"></a>Синтаксис  
+## <a name="syntax"></a>Syntax  
   
 ```  
 template <class Engine, size_t K>  
 class shuffle_order_engine;  
 ```  
   
-#### <a name="parameters"></a>Параметры  
+#### <a name="parameters"></a>Parameters  
  `Engine`  
- Тип базового механизма.  
+ The base engine type.  
   
  `K`  
- **Размер таблицы**. Количество элементов в буфере (таблице). **Предварительные условия**: `0 < K`  
+ **Table size**. Number of elements in the buffer (table). **Precondition**: `0 < K`  
   
-## <a name="members"></a>Члены  
+## <a name="members"></a>Members  
   
 ||||  
 |-|-|-|  
 |`shuffle_order_engine::shuffle_order_engine`|`shuffle_order_engine::base`|`shuffle_order_engine::discard`|  
 |`shuffle_order_engine::operator()`|`shuffle_order_engine::base_type`|`shuffle_order_engine::seed`|  
   
- Дополнительные сведения о членах механизма см. в разделе [\<random>](../standard-library/random.md).  
+ For more information about engine members, see [\<random>](../standard-library/random.md).  
   
-## <a name="remarks"></a>Примечания  
- Этот класс шаблона описывает *адаптер механизма*, формирующий значения путем изменения порядка значений, возвращаемых базовым механизмом. Каждый конструктор заполняет внутреннюю таблицу значениями `K`, возвращенными базовым механизмом, а случайный элемент выбирается из таблицы при запросе значения.  
+## <a name="remarks"></a>Remarks  
+ This template class describes an *engine adaptor* that produces values by reordering the values returned by its base engine. Each constructor fills the internal table with `K` values returned by the base engine, and a random element is selected from the table when a value is requested.  
   
-## <a name="requirements"></a>Требования  
- **Заголовок:** \<random>  
+## <a name="requirements"></a>Requirements  
+ **Header:** \<random>  
   
- **Пространство имен:** std  
+ **Namespace:** std  
   
-## <a name="see-also"></a>См. также  
+## <a name="see-also"></a>See Also  
  [\<random>](../standard-library/random.md)
 
 
