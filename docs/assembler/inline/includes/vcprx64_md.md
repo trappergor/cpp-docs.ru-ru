@@ -13,10 +13,10 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.translationtype: MT
+ms.translationtype: HT
 ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
-ms.openlocfilehash: 11974c021a18a2672f58208d0dc8dcfee6eddcbb
+ms.openlocfilehash: 161d27f68553a7fe9c8a22d8ad0db3afbbe6830f
 ms.contentlocale: ru-ru
 
 ---
-Юникод
+x64
