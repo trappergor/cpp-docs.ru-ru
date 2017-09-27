@@ -1,35 +1,52 @@
 ---
-title: "_com_ptr_t::CreateInstance | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-f1_keywords: 
-  - "_com_ptr_t::CreateInstance"
-  - "_com_ptr_t.CreateInstance"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "CreateInstance - метод"
+title: "_com_ptr_t::CreateInstance | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-language
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+f1_keywords:
+- _com_ptr_t::CreateInstance
+- _com_ptr_t.CreateInstance
+dev_langs:
+- C++
+helpviewer_keywords:
+- CreateInstance method
 ms.assetid: ab89b0e1-9da3-4784-a079-58b17340f111
 caps.latest.revision: 6
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 6
----
-# _com_ptr_t::CreateInstance
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
+ms.openlocfilehash: 1c07f7366c76c96580fc989475bd7f5ea23a38fe
+ms.contentlocale: ru-ru
+ms.lasthandoff: 09/25/2017
 
-**Блок, относящийся только к системам Microsoft**  
+---
+# <a name="comptrtcreateinstance"></a>_com_ptr_t::CreateInstance
+**Блок, относящийся только к системам Майкрософт**  
   
- Создает новый экземпляр объекта, учитывая **CLSID** или **ProgID**.  
+ Создает новый экземпляр объекта, заданного **CLSID** или **ProgID**.  
   
-## Синтаксис  
+## <a name="syntax"></a>Синтаксис  
   
 ```  
   
@@ -50,32 +67,32 @@ HRESULT CreateInstance(
 ) throw( );  
 ```  
   
-#### Параметры  
+#### <a name="parameters"></a>Параметры  
  `rclsid`  
  **CLSID** объекта.  
   
  `clsidString`  
- Строка Юникода, которая содержит либо **CLSID** \(начинается с символа "**{**"\), либо **ProgID**.  
+ Строка Юникода, которая содержит либо **CLSID** (начиная с «**{**») или **ProgID**.  
   
  `clsidStringA`  
- Многобайтовая строка с кодовой страницей ANSI, которая содержит либо **CLSID** \(начинается с символа "**{**"\), либо **ProgID**.  
+ Многобайтовая строка с кодовой страницей ANSI, которая содержит либо **CLSID** (начиная с «**{**») или **ProgID**.  
   
  `dwClsContext`  
  Контекст для выполняющегося исполняемого кода.  
   
  `pOuter`  
- Внешняя неизвестная строка для [агрегирования](../atl/aggregation.md).  
+ Внешняя Неизвестная строка для [статистической обработки](../atl/aggregation.md).  
   
-## Заметки  
- Эти функции\-члены вызывают `CoCreateInstance` для создания нового COM\-объект, а затем запрашивают тип интерфейса данного интеллектуального указателя.  Результирующий указатель затем инкапсулируется в этот объект `_com_ptr_t`.  Метод **Release** вызывается для уменьшения числа ссылок для ранее инкапсулированного указателя.  Эта процедура возвращает значение `HRESULT`, которое указывает успешность или сбой выполнения.  
+## <a name="remarks"></a>Примечания  
+ Эти функции-члены вызывают `CoCreateInstance` для создания нового COM-объект, а затем запрашивают тип интерфейса данного интеллектуального указателя. Результирующий указатель затем инкапсулируется в этот объект `_com_ptr_t`. **Выпуск** вызывается для уменьшения числа ссылок для ранее инкапсулированного указателя. Эта процедура возвращает значение `HRESULT`, которое указывает успешность или сбой выполнения.  
   
--   **CreateInstance\(**  `rclsid` **,**  `dwClsContext`  **\)** Создает новый выполняемый экземпляр объекта, учитывая **CLSID**.  
+-   **CreateInstance (** `rclsid` **,**`dwClsContext`**)** создает новый экземпляр объекта, заданного выполняющегося **CLSID**.        
   
--   **CreateInstance\(**  `clsidString` **,**  `dwClsContext`  **\)** Создает новый выполняемый экземпляр объекта, учитывая строку Юникода, содержащую **CLSID** \(начиная с "**{**"\) или **ProgID**.  
+-   **CreateInstance (** `clsidString` **,**`dwClsContext`**)** создает новый экземпляр объекта, заданного строка Юникода, которая содержит либо выполняющегося **CLSID** (начиная с «**{**») или **ProgID**.        
   
--   **CreateInstance\(**  `clsidStringA` **,**  `dwClsContext`  **\)** Создает новый выполняемый экземпляр объекта, учитывая строку многобайтовых символов, содержащую **CLSID** \(начиная с "**{**"\) или **ProgID**.  Вызывает метод [MultiByteToWideChar](http://msdn.microsoft.com/library/windows/desktop/dd319072), который предполагает, что строка имеет кодовую страницу ANSI, а не кодовую страницу OEM.  
+-   **CreateInstance (** `clsidStringA` **,**`dwClsContext`**)** создает новый экземпляр объекта, заданного строку многобайтовых символов, которая содержит либо выполнение ** CLSID** (начиная с «**{**») или **ProgID**.       Вызовы [MultiByteToWideChar](http://msdn.microsoft.com/library/windows/desktop/dd319072), который предполагает, что строка имеет кодовую страницу ANSI, а не кодовую страницу OEM.  
   
- **Завершение блока, относящегося только к системам Microsoft**  
+ **Завершение блока, относящегося только к системам Майкрософт**  
   
-## См. также  
- [Класс \_com\_ptr\_t](../cpp/com-ptr-t-class.md)
+## <a name="see-also"></a>См. также  
+ [Класс _com_ptr_t](../cpp/com-ptr-t-class.md)

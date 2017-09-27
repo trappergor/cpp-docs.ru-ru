@@ -1,34 +1,51 @@
 ---
-title: "_bstr_t::Detach | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-f1_keywords: 
-  - "_bstr_t::Detach"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Detach - метод"
+title: "_bstr_t::Detach | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-language
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+f1_keywords:
+- _bstr_t::Detach
+dev_langs:
+- C++
+helpviewer_keywords:
+- Detach method
 ms.assetid: cc8284bd-f68b-4fff-b2e6-ce8354dabf8b
 caps.latest.revision: 6
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 6
----
-# _bstr_t::Detach
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
+ms.openlocfilehash: 2bdc40741ab10ac180742a1e310285290daa08c6
+ms.contentlocale: ru-ru
+ms.lasthandoff: 09/25/2017
 
-**Блок, относящийся только к системам Microsoft**  
+---
+# <a name="bstrtdetach"></a>_bstr_t::Detach
+**Блок, относящийся только к системам Майкрософт**  
   
- Возвращает строку `BSTR`, инкапсулированную объектом `_bstr_t`, и отсоединяет ее \(`BSTR`\) от этого объекта \(`_bstr_t`\).  
+ Возвращает строку `BSTR`, инкапсулированную объектом `_bstr_t`, и отсоединяет ее (`BSTR`) от этого объекта (`_bstr_t`).  
   
-## Синтаксис  
+## <a name="syntax"></a>Синтаксис  
   
 ```  
   
@@ -36,13 +53,13 @@ BSTR Detach( ) throw;
   
 ```  
   
-## Возвращаемое значение  
+## <a name="return-value"></a>Возвращаемое значение  
  `BSTR` в оболочке `_bstr_t`.  
   
-## Пример  
- Пример использования команды **Detach** см. в разделе [\_bstr\_t::Assign](../cpp/bstr-t-assign.md).  
+## <a name="example"></a>Пример  
+ В разделе [_bstr_t::Assign](../cpp/bstr-t-assign.md) пример использования **отсоединения**.  
   
- **Завершение блока, относящегося только к системам Microsoft**  
+ **Завершение блока, относящегося только к системам Майкрософт**  
   
-## См. также  
- [Класс \_bstr\_t](../cpp/bstr-t-class.md)
+## <a name="see-also"></a>См. также  
+ [_bstr_t Class](../cpp/bstr-t-class.md)

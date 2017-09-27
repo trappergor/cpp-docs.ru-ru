@@ -1,35 +1,52 @@
 ---
-title: "Индексация | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "массивы [C++], индексация"
-  - "перегрузка операторов, примеры"
-  - "операторы [C++], перегрузка"
-  - "подстрочный оператор"
-  - "подстрочный оператор, перегруженные"
-  - "индексация"
+title: "Подписи пропущена | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-language
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+dev_langs:
+- C++
+helpviewer_keywords:
+- subscript operator, overloaded
+- arrays [C++], subscripting
+- subscripting
+- operators [C++], overloading
+- operator overloading, examples
+- subscript operator
 ms.assetid: eb151281-6733-401d-9787-39ab6754c62c
 caps.latest.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 8
----
-# Индексация
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
+ms.openlocfilehash: 82feaa68724e36c7ac7e739397d8a11a18e970a0
+ms.contentlocale: ru-ru
+ms.lasthandoff: 09/25/2017
 
-Оператор индекса \(**\[ \]**\), как и оператор вызова функции, считается бинарным оператором.  Оператор индекса должен быть нестатической функцией\-членом, которая принимает один аргумент.  Этот аргумент может быть любого типа и определяет требуемый индекс массива.  
+---
+# <a name="subscripting"></a>Индексация ;
+Оператор индекса (**[]**), такой как оператор вызова функции, считается бинарным оператором. Оператор индекса должен быть нестатической функцией-членом, которая принимает один аргумент. Этот аргумент может быть любого типа и определяет требуемый индекс массива.  
   
-## Пример  
+## <a name="example"></a>Пример  
  В следующем примере показано, как создать вектор типа `int`, в котором реализована проверка границ:  
   
 ```  
@@ -81,23 +98,26 @@ int main() {
 }  
 ```  
   
-  **Нарушение границ массива.**  
-**Элемент: \[0\] \= 0**  
-**Элемент: \[1\] \= 1**  
-**Элемент: \[2\] \= 2**  
-**Элемент: \[3\] \= 9**  
-**Элемент: \[4\] \= 4**  
-**Элемент: \[5\] \= 5**  
-**Элемент: \[6\] \= 6**  
-**Элемент: \[7\] \= 7**  
-**Элемент: \[8\] \= 8**  
-**Элемент: \[9\] \= 9**  
-**Нарушение границ массива.**  
-**Элемент: \[10\] \= 10**   
-## Комментарии  
+```Output  
+Array bounds violation.  
+Element: [0] = 0  
+Element: [1] = 1  
+Element: [2] = 2  
+Element: [3] = 9  
+Element: [4] = 4  
+Element: [5] = 5  
+Element: [6] = 6  
+Element: [7] = 7  
+Element: [8] = 8  
+Element: [9] = 9  
+Array bounds violation.  
+Element: [10] = 10  
+```  
+  
+## <a name="comments"></a>Комментарии  
  Когда в предыдущей программе для переменной `i` достигается значение 10, функция `operator[]` обнаруживает выход индекса за допустимые границы и выдает сообщение об ошибке.  
   
- Обратите внимание, что функция `operator[]` возвращает ссылочный тип.  В результате она является значением l\-value, что позволяет использовать выражения с индексами с любой стороны операторов присваивания.  
+ Обратите внимание, что функция `operator[]` возвращает ссылочный тип. В результате она является значением l-value, что позволяет использовать выражения с индексами с любой стороны операторов присваивания.  
   
-## См. также  
+## <a name="see-also"></a>См. также  
  [Перегрузка операторов](../cpp/operator-overloading.md)

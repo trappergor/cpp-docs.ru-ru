@@ -1,33 +1,50 @@
 ---
-title: "Ссылки на указатели | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "ссылки, к указателям"
+title: "Ссылки на указатели | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-language
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+dev_langs:
+- C++
+helpviewer_keywords:
+- references, to pointers
 ms.assetid: 4ce48b08-1511-4d2f-a31f-95f99eac0c70
 caps.latest.revision: 14
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 12
----
-# Ссылки на указатели
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
+ms.openlocfilehash: cf7a3fe930e8b862578286908598c9152943f134
+ms.contentlocale: ru-ru
+ms.lasthandoff: 09/25/2017
 
-Ссылки на указатели можно объявлять так же, как ссылки на объекты.  При объявлении ссылки на указатель создается изменяемое значение, используемое подобно обычному указателю.  
+---
+# <a name="references-to-pointers"></a>Ссылки на указатели
+Ссылки на указатели можно объявлять так же, как ссылки на объекты. При объявлении ссылки на указатель создается изменяемое значение, используемое подобно обычному указателю.  
   
-## Пример  
+## <a name="example"></a>Пример  
  В приведенных ниже примерах кода показывается различие между использованием указателя на указатель и ссылки на указатель.  
   
- Функции `Add1` и `Add2` функционально эквивалентны \(хотя вызываются по\-разному\).  Различие заключается в том, что в функции `Add1` используются двойные ссылки, а в функции `Add2` — ссылка на указатель.  
+ Функции `Add1` и `Add2` функционально эквивалентны (хотя вызываются по-разному). Различие заключается в том, что в функции `Add1` используются двойные ссылки, а в функции `Add2` — ссылка на указатель.  
   
 ```  
 // references_to_pointers.cpp  
@@ -36,7 +53,7 @@ caps.handback.revision: 12
 #include <iostream>  
 #include <string>  
   
-// STL namespace  
+// C++ Standard Library namespace  
 using namespace std;  
   
 enum {  
@@ -157,9 +174,15 @@ int Add2( BTree*& Root, char *szToAdd ) {
 }  
 ```  
   
-  **Использование: Refptr \[1 &#124; 2\]**  
-**Здесь:**  
-**1 использует двойное косвенное направление**  
-**2 использует ссылку на указатель.  Ввод — с stdin.**    
-## См. также  
+```Output  
+Usage: Refptr [1 | 2]  
+  
+where:  
+1 uses double indirection  
+2 uses a reference to a pointer.  
+  
+Input is from stdin.  
+```  
+  
+## <a name="see-also"></a>См. также  
  [Ссылки](../cpp/references-cpp.md)

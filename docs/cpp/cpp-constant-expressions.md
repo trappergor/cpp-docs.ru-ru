@@ -1,33 +1,49 @@
 ---
-title: "Постоянные выражения C++ | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "постоянные выражения"
-  - "постоянные выражения, синтаксис"
-  - "выражения [C++], константа"
+title: "Постоянные выражения C++ | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-language
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+dev_langs:
+- C++
+helpviewer_keywords:
+- constant expressions, syntax
+- constant expressions
+- expressions [C++], constant
 ms.assetid: b07245a5-4c21-4589-b503-e6ffd631996f
 caps.latest.revision: 8
-caps.handback.revision: 8
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
----
-# Постоянные выражения C++
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
+ms.openlocfilehash: 8333b761aa51de44c8225e5ace97885eaaed56da
+ms.contentlocale: ru-ru
+ms.lasthandoff: 09/25/2017
 
-Значение\-*константа* — это такое значение, которое не меняется.  В C\+\+ имеется два ключевых слова, позволяющих указать, что объект не должен изменяться, и для осуществления этого намерения.  
+---
+# <a name="c-constant-expressions"></a>Постоянные выражения C++
+Объект *константой* значение является одним из не изменяется. В C++ имеется два ключевых слова, позволяющих указать, что объект не должен изменяться, и для осуществления этого намерения.  
   
- В C\+\+ требуются константные выражения, то есть выражения, результатом вычисления которых является константа, для объявления следующих элементов.  
+ В C++ требуются константные выражения, то есть выражения, результатом вычисления которых является константа, для объявления следующих элементов.  
   
 -   Границы массива.  
   
@@ -47,7 +63,7 @@ manager: "ghogen"
   
 -   Выражения `sizeof`  
   
- Нецелочисленные константы должны преобразовываться \(явно или неявно\) в целочисленные типы, чтобы быть допустимыми в константном выражении.  Поэтому следующий код допустим.  
+ Нецелочисленные константы должны преобразовываться (явно или неявно) в целочисленные типы, чтобы быть допустимыми в константном выражении. Поэтому следующий код допустим.  
   
 ```  
 const double Size = 11.0;  
@@ -56,7 +72,7 @@ char chArray[(int)Size];
   
  Явные преобразования в целочисленные типы допустимы в константных выражениях. Все другие типы и производные типы недопустимы, за исключением случаев использования в качестве операндов оператора `sizeof`.  
   
- Запятую\-оператор и операторы присваивания невозможно использовать в константных выражениях.  
+ Запятую-оператор и операторы присваивания невозможно использовать в константных выражениях.  
   
-## См. также  
+## <a name="see-also"></a>См. также  
  [Типы выражений](../cpp/types-of-expressions.md)

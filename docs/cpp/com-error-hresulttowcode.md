@@ -1,36 +1,53 @@
 ---
-title: "_com_error::HRESULTToWCode | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-f1_keywords: 
-  - "HRESULTToWCode"
-  - "_com_error.HRESULTToWCode"
-  - "_com_error::HRESULTToWCode"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "HRESULTToWCode - метод"
+title: "_com_error::HRESULTToWCode | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-language
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+f1_keywords:
+- HRESULTToWCode
+- _com_error.HRESULTToWCode
+- _com_error::HRESULTToWCode
+dev_langs:
+- C++
+helpviewer_keywords:
+- HRESULTToWCode method
 ms.assetid: ff3789f5-1047-41a0-b7e3-86dd8f638dba
 caps.latest.revision: 6
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 6
----
-# _com_error::HRESULTToWCode
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
+ms.openlocfilehash: 296c6f43c1bc840ae13bdf4ad355d7f41e2cc3fd
+ms.contentlocale: ru-ru
+ms.lasthandoff: 09/25/2017
 
-**Блок, относящийся только к системам Microsoft**  
+---
+# <a name="comerrorhresulttowcode"></a>_com_error::HRESULTToWCode
+**Блок, относящийся только к системам Майкрософт**  
   
- Сопоставляет 32\-разрядное значение `HRESULT` с 16\-разрядным `wCode`.  
+ Сопоставляет 32-разрядный `HRESULT` с 16-разрядным `wCode`.  
   
-## Синтаксис  
+## <a name="syntax"></a>Синтаксис  
   
 ```  
   
@@ -39,19 +56,19 @@ caps.handback.revision: 6
 ) throw( );  
 ```  
   
-#### Параметры  
+#### <a name="parameters"></a>Параметры  
  `hr`  
- 32\-разрядное значение `HRESULT`, которое будет сопоставлено с 16\-разрядным `wCode`.  
+ 32-разрядный `HRESULT` должен быть сопоставлен 16-разрядное `wCode`.  
   
-## Возвращаемое значение  
- 16\-разрядный `wCode`, с которым будет сопоставлено 32\-разрядное значение `HRESULT`.  
+## <a name="return-value"></a>Возвращаемое значение  
+ 16-разрядное `wCode` , полученного из 32-разрядных `HRESULT`.  
   
-## Заметки  
- Дополнительные сведения см. в разделе [\_com\_error::WCode](../cpp/com-error-wcode.md).  
+## <a name="remarks"></a>Примечания  
+ В разделе [_com_error::WCode](../cpp/com-error-wcode.md) для получения дополнительной информации.  
   
- **Завершение блока, относящегося только к системам Microsoft**  
+ **Завершение блока, относящегося только к системам Майкрософт**  
   
-## См. также  
- [\_com\_error::WCode](../cpp/com-error-wcode.md)   
- [\_com\_error::WCodeToHRESULT](../Topic/_com_error::WCodeToHRESULT.md)   
- [Класс \_com\_error](../cpp/com-error-class.md)
+## <a name="see-also"></a>См. также  
+ [_com_error::WCode](../cpp/com-error-wcode.md)   
+ [_com_error::WCodeToHRESULT](../cpp/com-error-wcodetohresult.md)   
+ [Класс _com_error](../cpp/com-error-class.md)

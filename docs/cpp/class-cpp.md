@@ -1,84 +1,100 @@
 ---
-title: "class (C++) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-f1_keywords: 
-  - "class_cpp"
-  - "class"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "class - ключевое слово [C++]"
-  - "типы классов, операторы class"
+title: "класс (C++) | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-language
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+f1_keywords:
+- class_cpp
+- class
+dev_langs:
+- C++
+helpviewer_keywords:
+- class types, class statements
+- class keyword [C++]
 ms.assetid: dd23c09f-6598-4069-8bff-69c7f2518b9f
 caps.latest.revision: 8
-caps.handback.revision: 8
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
----
-# class (C++)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
+ms.openlocfilehash: 7cdd7b7cefcd9f3826cfe426008bdf1eefde82f6
+ms.contentlocale: ru-ru
+ms.lasthandoff: 09/25/2017
 
+---
+# <a name="class-c"></a>class (C++)
 Ключевое слово `class` объявляет тип класса или определяет объект типа класса.  
   
-## Синтаксис  
+## <a name="syntax"></a>Синтаксис  
   
 ```  
   
       [template-spec]  
        class [ms-decl-spec] [tag [: base-list ]]  
 {  
-   member-list  
+   member-list  
 } [declarators];  
 [ class ] tag declarators;  
 ```  
   
-#### Параметры  
+#### <a name="parameters"></a>Параметры  
  `template-spec`  
- Необязательные спецификации шаблона.  Дополнительные сведения см. в разделе [Спецификации шаблонов](../Topic/Template%20Specifications.md).  
+ Необязательные спецификации шаблона. Дополнительные сведения см. в [шаблоны](templates-cpp.md).  
   
  `class`  
  Ключевое слово `class`.  
   
  `ms-decl-spec`  
- Необязательная спецификация класса хранения.  Дополнительные сведения см. в разделе с описанием ключевого слова [\_\_declspec](../cpp/declspec.md).  
+ Необязательная спецификация класса хранения. Дополнительные сведения см. в [__declspec](../cpp/declspec.md) ключевое слово.  
   
  `tag`  
- Имя типа, присваиваемое классу.  Этот параметр tag становится зарезервированным ключевым словом в области класса.  Тег является необязательным.  Если он опущен, определяется анонимный класс.  Дополнительные сведения см. в разделе [Типы анонимных классов](../cpp/anonymous-class-types.md).  
+ Имя типа, присваиваемое классу. Этот параметр tag становится зарезервированным ключевым словом в области класса. Тег является необязательным. Если он опущен, определяется анонимный класс. Дополнительные сведения см. в разделе [типы анонимных классов](../cpp/anonymous-class-types.md).  
   
  `base-list`  
- Необязательный список классов или структур, от которых этот класс будет наследовать члены.  Дополнительные сведения см. в разделе [Базовые классы](../cpp/base-classes.md).  Каждому имени базового класса или структуры может предшествовать спецификатор доступа \([public](../cpp/public-cpp.md), [private](../Topic/private%20\(C++\).md), [protected](../Topic/protected%20\(C++\).md)\) и ключевое слово [virtual](../cpp/virtual-cpp.md).  Дополнительные сведения см. в таблице членского доступа в разделе [Управление доступом к членам класса](../misc/controlling-access-to-class-members.md).  
+ Необязательный список классов или структур, от которых этот класс будет наследовать члены. В разделе [базовые классы](../cpp/base-classes.md) для получения дополнительной информации. Каждый базовое имя класса или структуры может предшествовать спецификатор доступа ([открытый](../cpp/public-cpp.md), [закрытый](../cpp/private-cpp.md), [защищенных](../cpp/protected-cpp.md)) и [виртуальный](../cpp/virtual-cpp.md) Ключевое слово. См. в таблице доступа к членам [управление доступом к членам класса](member-access-control-cpp.md) для получения дополнительной информации.  
   
  `member-list`  
- Список членов класса.  Дополнительные сведения см. в разделе [Обзор членов класса](../Topic/Class%20Member%20Overview.md).  
+ Список членов класса. Ссылаться на [Общие сведения о членах класса](../cpp/class-member-overview.md) для получения дополнительной информации.  
   
  `declarators`  
- Список деклараторов, в котором указываются имена одного или нескольких экземпляров типа класса.  Деклараторы могут содержать списки инициализаторов, если все данные\-члены класса являются открытыми \(`public`\).  Это чаще используется не в классах, а в структурах, чьи данные\-члены имеют видимость по умолчанию `public`.  Дополнительные сведения см. в разделе [Общие сведения о деклараторах](../cpp/overview-of-declarators.md).  
+ Список деклараторов, в котором указываются имена одного или нескольких экземпляров типа класса. Деклараторы могут содержать списки инициализаторов, если все данные-члены класса являются открытыми (`public`). Это чаще используется не в классах, а в структурах, чьи данные-члены имеют видимость по умолчанию `public`. В разделе [Обзор деклараторы](../cpp/overview-of-declarators.md) для получения дополнительной информации.  
   
-## Заметки  
+## <a name="remarks"></a>Примечания  
  Дополнительные сведения о классах в целом см. в следующих разделах:  
   
 -   [struct](../cpp/struct-cpp.md)  
   
--   [union](../cpp/unions.md)  
+-   [объединение](../cpp/unions.md)  
   
--   [\_\_multiple\_inheritance](../cpp/inheritance-keywords.md)  
+-   [__multiple_inheritance](../cpp/inheritance-keywords.md)  
   
--   [\_\_single\_inheritance](../cpp/inheritance-keywords.md)  
+-   [__single_inheritance](../cpp/inheritance-keywords.md)  
   
--   [\_\_virtual\_inheritance](../cpp/inheritance-keywords.md)  
+-   [__virtual_inheritance](../cpp/inheritance-keywords.md)  
   
- Сведения об управляемых классах и структурах см. в разделе [Классы и структуры](../windows/classes-and-structs-cpp-component-extensions.md).  
+ Сведения об управляемых классах и структурах см. в разделе [классы и структуры](../windows/classes-and-structs-cpp-component-extensions.md)  
   
-## Пример  
+## <a name="example"></a>Пример  
   
 ```  
 // class.cpp  
@@ -151,6 +167,6 @@ int main()
 }  
 ```  
   
-## См. также  
- [Ключевые слова в C\+\+](../cpp/keywords-cpp.md)   
- [Классы и структуры](../Topic/Classes%20and%20Structs%20\(C++\).md)
+## <a name="see-also"></a>См. также  
+ [Ключевые слова](../cpp/keywords-cpp.md)   
+ [Классы и структуры](../cpp/classes-and-structs-cpp.md)

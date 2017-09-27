@@ -1,43 +1,61 @@
 ---
-title: "deprecated (C++) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-f1_keywords: 
-  - "deprecated"
-  - "deprecated_cpp"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "__declspec - ключевое слово [C++], нерекомендуемый"
-  - "__declspec - нерекомендованное ключевое слово"
+title: "устаревшие (C++) | Документы Microsoft"
+ms.custom: 
+ms.date: 03/28/2017
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-language
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+f1_keywords:
+- deprecated
+- deprecated_cpp
+dev_langs:
+- C++
+helpviewer_keywords:
+- __declspec keyword [C++], deprecated
+- deprecated __declspec keyword
 ms.assetid: beef1129-9434-4cb3-8392-f1eb29e04805
 caps.latest.revision: 9
-caps.handback.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
----
-# deprecated (C++)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
+ms.openlocfilehash: 9ac25648e2d19da82f6c213992699c237e05c01e
+ms.contentlocale: ru-ru
+ms.lasthandoff: 09/25/2017
 
-\(Используется только в системах Microsoft\) За указанным ниже исключением объявление **deprecated** предлагает те же функциональные возможности, что и директива pragma [deprecated](../Topic/deprecated%20\(C-C++\).md).  
+---
+# <a name="deprecated-c"></a>deprecated (C++)
+Этот раздел посвящен Майкрософт рекомендуется к использованию declspec объявления. Сведения о C ++ 14 `[[deprecated]]` атрибут и рекомендации по использованию этого атрибута и declspec характерные для Майкрософт или директивы pragma в разделе [стандартные атрибуты C++](attributes2.md).
+
+ За исключением указанных ниже **устаревшими** объявление предоставляет те же возможности, как [устаревшими](../preprocessor/deprecated-c-cpp.md) директивы pragma:  
   
--   Объявление **deprecated** позволяет указать определенные формы перегрузок функций как нерекомендуемые, тогда как форма директивы pragma применяется ко всем перегруженным формам имени функции.  
+-   **Устаревшими** объявление позволяет указать определенные формы перегрузок функций как нерекомендуемые, тогда как форма директивы pragma применяется ко всем перегруженным формам имени функции.  
   
--   Объявление **deprecated** позволяет указать сообщение, которое будет отображаться во время компиляции.  Текст сообщения может быть взят из макроса.  
+-   **Устаревшими** объявление позволяет указать сообщение, которое будет отображаться во время компиляции. Текст сообщения может быть взят из макроса.  
   
--   Макросы могут отмечаться как нерекомендуемые только с помощью директивы pragma **deprecated**.  
+-   Макросы только могут быть помечены как устаревшие с **устаревшими** pragma.  
   
- Если компилятор обнаруживает использование нерекомендуемого идентификатора, выдается предупреждение [C4996](../error-messages/compiler-warnings/compiler-warning-level-3-c4996.md).  
+ Если компилятор обнаруживает использование нерекомендуемого идентификатора или стандарт [ `[[deprecated]]` ](attributes2.md) атрибута [C4996](../error-messages/compiler-warnings/compiler-warning-level-3-c4996.md) выдается предупреждение.  
   
-## Пример  
+## <a name="example"></a>Пример  
  В следующем примере показано, как отметить функции как нерекомендуемые и как указать сообщение, которое будет отображаться во время компиляции, если будет использоваться нерекомендуемая функция.  
   
 ```  
@@ -57,7 +75,7 @@ int main() {
 }  
 ```  
   
-## Пример  
+## <a name="example"></a>Пример  
  В следующем примере показано, как отметить классы как нерекомендуемые и как указать сообщение, которое будет отображаться во время компиляции, если будет использоваться нерекомендуемый класс.  
   
 ```  
@@ -77,6 +95,6 @@ int main() {
 }  
 ```  
   
-## См. также  
- [\_\_declspec](../cpp/declspec.md)   
- [Ключевые слова в C\+\+](../cpp/keywords-cpp.md)
+## <a name="see-also"></a>См. также  
+ [__declspec](../cpp/declspec.md)   
+ [Ключевые слова](../cpp/keywords-cpp.md)

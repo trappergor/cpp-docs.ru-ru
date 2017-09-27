@@ -1,104 +1,121 @@
 ---
-title: "Выражения с бинарными операторами | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "двоичные операторы"
-  - "выражения [C++], двоичные операторы"
-  - "операторы [C++], двоичные"
+title: "Выражения с бинарными операторами | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-language
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+dev_langs:
+- C++
+helpviewer_keywords:
+- operators [C++], binary
+- binary operators
+- expressions [C++], binary operators
 ms.assetid: 6dea3df4-a4bd-42c3-9807-4a27c120ac9a
 caps.latest.revision: 7
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 7
----
-# Выражения с бинарными операторами
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
+ms.openlocfilehash: cedb72a925b21c6bf121092626bc52214fc9c0f0
+ms.contentlocale: ru-ru
+ms.lasthandoff: 09/25/2017
 
-Бинарные операторы действуют на два операнда в выражении.  Используются следующие бинарные операторы.  
+---
+# <a name="expressions-with-binary-operators"></a>Выражения с бинарными операторами
+Бинарные операторы действуют на два операнда в выражении. Используются следующие бинарные операторы.  
   
 -   [Мультипликативные операторы](../cpp/multiplicative-operators-and-the-modulus-operator.md)  
   
-    -   Умножение \(\*\)  
+    -   Умножение (*)  
   
-    -   Деление \(\/\)  
+    -   Деление (/)  
   
-    -   Остаток \(%\)  
+    -   Остаток (%)  
   
 -   [Аддитивные операторы](../cpp/additive-operators-plus-and.md)  
   
-    -   Сложение \(\+\)  
+    -   Сложение (+)  
   
-    -   Вычитание \(–\)  
+    -   Вычитание (-)  
   
--   [Операторы сдвига](../Topic/Left%20Shift%20and%20Right%20Shift%20Operators%20\(%3E%3E%20and%20%3C%3C\).md)  
+-   [Операторы сдвига](../cpp/left-shift-and-right-shift-operators-input-and-output.md)  
   
-    -   Сдвиг вправо \(\>\>\)  
+    -   Сдвиг вправо (>>)  
   
-    -   Сдвиг влево \(\<\<\)  
+    -   Сдвиг влево (<<)  
   
 -   [Операторы отношения и равенства](../cpp/relational-operators-equal-and-equal.md)  
   
-    -   Меньше \(\<\)  
+    -   Меньше (\<)  
   
-    -   Больше \(\>\)  
+    -   Больше (>)  
   
-    -   Меньше или равно \(\<\=\)  
+    -   Меньше или равно (\<=)  
   
-    -   Больше или равно \(\>\=\)  
+    -   Больше или равно (>=)  
   
-    -   Равно \(\=\=\)  
+    -   Равно (==)  
   
-    -   Не равно \(\!\=\)  
+    -   Не равно (!=)  
   
 -   Побитовые операторы  
   
-    -   [Побитовое И \(&\)](../cpp/bitwise-and-operator-amp.md)  
+    -   [Побитовое и (&)](../cpp/bitwise-and-operator-amp.md)  
   
-    -   [Побитовое исключающее ИЛИ \(^\)](../cpp/bitwise-exclusive-or-operator-hat.md)  
+    -   [Побитовое исключающее или (^)](../cpp/bitwise-exclusive-or-operator-hat.md)  
   
-    -   [Побитовое включающее ИЛИ \(&#124;\)](../cpp/bitwise-inclusive-or-operator-pipe.md)  
+    -   [Побитовое включающее или (&#124;)](../cpp/bitwise-inclusive-or-operator-pipe.md)  
   
 -   Логические операторы  
   
-    -   [Логическое И \(&&\)](../Topic/Logical%20AND%20Operator:%20&&.md)  
+    -   [Логическое и (& &)](../cpp/logical-and-operator-amp-amp.md)  
   
-    -   [Логическое ИЛИ \(&#124;&#124;\)](../cpp/logical-or-operator-pipe-pipe.md)  
+    -   [Логическое или (&#124; &#124;)](../cpp/logical-or-operator-pipe-pipe.md)  
   
 -   [Операторы присваивания](../cpp/assignment-operators.md)  
   
-    -   Присваивание \(\=\)  
+    -   Присваивание (=)  
   
-    -   Присваивание сложения \(\+\=\)  
+    -   Присваивание сложения (+=)  
   
-    -   Присваивание вычитания \(–\=\)  
+    -   Присваивание вычитания (-)  
   
-    -   Присваивание умножения \(\*\=\)  
+    -   Присваивание умножения (*=)  
   
-    -   Присваивание деления \(\/\=\)  
+    -   Присваивание деления (/=)  
   
-    -   Присваивание остатка \(%\=\)  
+    -   Присваивание остатка (%=)  
   
-    -   Присваивание сдвига влево \(\<\<\=\)  
+    -   Присваивание сдвига влево (<\<=)  
   
-    -   Присваивание сдвига вправо \(\>\>\=\)  
+    -   Присваивание сдвига вправо (>>=)  
   
-    -   Присваивание побитового И \(&\=\)  
+    -   Присваивание побитового И (&=)  
   
-    -   Присваивание побитового исключающего ИЛИ \(^\=\)  
+    -   Присваивание побитового исключающего ИЛИ (^=)  
   
-    -   Присваивание побитового включающего ИЛИ \(&#124;\=\)  
+    -   Побитовое назначение включительно или (&#124; =)  
   
--   [Оператор "запятая"](../cpp/comma-operator.md) \(,\)  
+-   [Оператор "запятая"](../cpp/comma-operator.md) (,)  
   
-## См. также  
+## <a name="see-also"></a>См. также  
  [Типы выражений](../cpp/types-of-expressions.md)

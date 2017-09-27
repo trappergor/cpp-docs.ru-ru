@@ -1,36 +1,52 @@
 ---
-title: "_variant_t::operator = | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-f1_keywords: 
-  - "_variant_t.operator="
-  - "_variant_t::operator="
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "= - оператор, с конкретными объектами Visual C++"
-  - "оператор =, вариант"
-  - "operator=, вариант"
+title: "_variant_t::operator = | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-language
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+f1_keywords:
+- _variant_t.operator=
+- _variant_t::operator=
+dev_langs:
+- C++
+helpviewer_keywords:
+- operator=, variant
+- operator =, variant
+- = operator, with specific Visual C++ objects
 ms.assetid: 77622723-6e49-4dec-9e0f-fa74028f1a3c
 caps.latest.revision: 6
-caps.handback.revision: 6
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
----
-# _variant_t::operator =
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
+ms.openlocfilehash: 850562235442ef8fed4f7b130948a5e92b15a1fb
+ms.contentlocale: ru-ru
+ms.lasthandoff: 09/25/2017
 
-**Блок, относящийся только к системам Microsoft**  
+---
+# <a name="varianttoperator-"></a>_variant_t::operator =
+**Блок, относящийся только к системам Майкрософт**  
   
-## Синтаксис  
+## <a name="syntax"></a>Синтаксис  
   
 ```  
   
@@ -127,42 +143,42 @@ _variant_t& operator=(
 );  
 ```  
   
-## Заметки  
+## <a name="remarks"></a>Примечания  
  Оператор присваивает новое значение объекту `_variant_t`.  
   
--   **operator\=\(**  *varSrc*  **\)** Присвоение существующего значения **VARIANT** объекту `_variant_t`.  
+-   **оператор = (***varSrc***)** присваивает существующий **VARIANT** для `_variant_t` объекта.      
   
--   **operator\=\(**  *pVarSrc*  **\)** Присвоение существующего **VARIANT** объекту `_variant_t`.  
+-   **оператор = (***pVarSrc***)** присваивает существующий **VARIANT** для `_variant_t` объекта.      
   
--   **operator\=\(**  *var\_t\_Src*  **\)** Присвоение существующего объекта `_variant_t` объекту `_variant_t`.  
+-   **оператор = (***var_t_Src***)** присваивает существующий `_variant_t` объект `_variant_t` объекта.      
   
--   **operator\=\(**  *sSrc*  **\)** Присвоение целочисленного значения **short** объекту `_variant_t`.  
+-   **оператор = (***sSrc***)** назначает **короткие** целочисленное значение для `_variant_t` объекта.      
   
--   **operator\=\(**  `lSrc`  **\)** Присвоение целочисленного значения **long** объекту `_variant_t`.  
+-   **оператор = (**`lSrc`**)** назначает **длинные** целочисленное значение для `_variant_t` объекта.      
   
--   **operator\=\(**  *fltSrc*  **\)** Присвоение числового значения **float** объекту `_variant_t`.  
+-   **оператор = (***fltSrc***)** назначает **float** числовое значение, которое `_variant_t` объекта.      
   
--   **operator\=\(**  *dblSrc*  **\)** Присвоение числового значения **double** объекту `_variant_t`.  
+-   **оператор = (***dblSrc***)** назначает **двойные** числовое значение, которое `_variant_t` объекта.      
   
--   **operator\=\(**  *cySrc*  **\)** Присвоение объекта **CY** объекту `_variant_t`.  
+-   **оператор = (***cySrc***)** назначает **CY** объект `_variant_t` объекта.      
   
--   **operator\=\(**  *bstrSrc*  **\)** Присвоение объекта `BSTR` объекту `_variant_t`.  
+-   **оператор = (***bstrSrc***)** назначает `BSTR` объект `_variant_t` объекта.      
   
--   **operator\=\(**  *wstrSrc*  **\)** Присвоение строки Юникода объекту `_variant_t`.  
+-   **оператор = (***wstrSrc***)** назначает строку в Юникоде `_variant_t` объекта.      
   
--   **operator\=\(**  `strSrc`  **\)** Присвоение многобайтовой строки объекту `_variant_t`.  
+-   **оператор = (**`strSrc`**)** назначает многобайтовой строки в `_variant_t` объекта.      
   
--   **operator\=\(**  `bSrc` **\)** Присвоение значения `bool` объекту `_variant_t`.  
+-   **оператор = (** `bSrc` **)** назначает `bool` значение `_variant_t` объекта.    
   
--   **operator\=\(**  *pDispSrc*  **\)** Присвоение объекта **VT\_DISPATCH** объекту `_variant_t`.  
+-   **оператор = (***pDispSrc***)** назначает **VT_DISPATCH** объект `_variant_t` объекта.      
   
--   **operator\=\(**  *pIUnknownSrc*  **\)** Присвоение объекта **VT\_UNKNOWN** объекту `_variant_t`.  
+-   **оператор = (***pIUnknownSrc***)** назначает **VT_UNKNOWN** объект `_variant_t` объекта.      
   
--   **operator\=\(**  *decSrc*  **\)** Присвоение значения **DECIMAL** объекту `_variant_t`.  
+-   **оператор = (***decSrc***)** назначает **ДЕСЯТИЧНОЕ** значение `_variant_t` объекта.      
   
--   **operator\=\(**  `bSrc` **\)** Присвоение значения **BYTE** объекту `_variant_t`.  
+-   **оператор = (** `bSrc` **)** назначает **БАЙТОВ** значение `_variant_t` объекта.    
   
- **Завершение блока, относящегося только к системам Microsoft**  
+ **Завершение блока, относящегося только к системам Майкрософт**  
   
-## См. также  
- [Класс \_variant\_t](../cpp/variant-t-class.md)
+## <a name="see-also"></a>См. также  
+ [Класс _variant_t](../cpp/variant-t-class.md)

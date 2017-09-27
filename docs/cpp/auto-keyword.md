@@ -1,51 +1,66 @@
 ---
-title: "Ключевое слово auto | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-f1_keywords: 
-  - "auto"
-  - "auto_cpp"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "auto - ключевое слово"
-  - "автоматический класс хранения, auto - ключевое слово"
+title: "Ключевое слово Auto | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-language
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+f1_keywords:
+- auto
+- auto_cpp
+dev_langs:
+- C++
+helpviewer_keywords:
+- automatic storage class, auto keyword
+- auto keyword
 ms.assetid: 744a41c0-2510-4140-a1be-96257e722908
 caps.latest.revision: 14
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 14
----
-# Ключевое слово auto
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
+ms.openlocfilehash: 0413fd47b486cf1613b7c249b93e6a3507a5577c
+ms.contentlocale: ru-ru
+ms.lasthandoff: 09/25/2017
 
-Ключевое слово `auto` является описателем объявления.  Однако стандарт языка C\+\+ определяет первоначальное и измененное значение данного ключевого слова.  До версии [!INCLUDE[cpp_dev10_long](../Token/cpp_dev10_long_md.md)] ключевое слово `auto` объявляло переменную в *автоматическом* классе хранения; то есть переменную с локальным временем существования.  Начиная с [!INCLUDE[cpp_dev10_long](../Token/cpp_dev10_long_md.md)] ключевое слово `auto` объявляет переменную, тип которой выводится из выражения инициализации в соответствующем объявлении.  Параметр компилятора [\/Zc:auto&#91;\-&#93;](../build/reference/zc-auto-deduce-variable-type.md) контролирует значение ключевого слова `auto`.  
+---
+# <a name="auto-keyword"></a>Ключевое слово auto
+Ключевое слово `auto` является описателем объявления. Однако стандарт языка C++ определяет первоначальное и измененное значение данного ключевого слова. До Visual C++ 2010 `auto` ключевое слово объявляло переменную в *автоматического* класса хранения, то есть переменную с локальным временем существования. Начиная с Visual C++ 2010 `auto` ключевое слово объявляет переменную, тип которой выводится из выражения инициализации в его объявлении. [/Zc: auto &#91;-&#93;](../build/reference/zc-auto-deduce-variable-type.md) параметр компилятора контролирует значение `auto` ключевое слово.  
   
-## Синтаксис  
+## <a name="syntax"></a>Синтаксис  
   
 ```cpp  
 auto declarator ;  
 auto declarator initializer;  
 ```  
   
-## Заметки  
- Определение ключевого слова `auto` меняется в языке программирования C\+\+, но не в С.  
+## <a name="remarks"></a>Примечания  
+ Определение ключевого слова `auto` меняется в языке программирования C++, но не в С.  
   
  В следующих разделах описывается ключевое слово `auto` и соответствующий параметр компилятора:  
   
--   [auto](../cpp/auto-cpp.md) описывает новое определение ключевого слова `auto`.  
+-   [Auto](../cpp/auto-cpp.md) описывается новое определение `auto` ключевое слово.  
   
--   [Ключевое слово auto \(спецификатор классов хранения\)](http://msdn.microsoft.com/ru-ru/c7d0cecf-393d-4058-a6e6-b39e31d9edb0) описывает исходное определение ключевого слова `auto`.  
   
--   [\/Zc:auto \(выведение типа переменной\)](../build/reference/zc-auto-deduce-variable-type.md) описывает параметр компилятора, который указывает компилятору, какое определение ключевого слова `auto` следует использовать.  
+-   [/ Zc: auto (выведение типа переменной)](../build/reference/zc-auto-deduce-variable-type.md) описание параметра компилятора, который сообщает компилятору, определение которого `auto` ключевое слово для использования.  
   
-## См. также  
- [\(NOTINBUILD\)Storage\-Class Specifiers](http://msdn.microsoft.com/ru-ru/10b3d22d-cb40-450b-994b-08cf9a211b6c)   
- [Ключевые слова в C\+\+](../cpp/keywords-cpp.md)
+## <a name="see-also"></a>См. также  
+ [Ключевые слова](../cpp/keywords-cpp.md)

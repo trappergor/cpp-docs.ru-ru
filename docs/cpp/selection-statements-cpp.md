@@ -1,34 +1,50 @@
 ---
-title: "Операторы выбора (C++) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "index-page "
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "операторы выбора"
-  - "операторы выбора, синтаксис"
+title: "Инструкции выбора (C++) | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-language
+ms.tgt_pltfrm: 
+ms.topic: 'index-page '
+dev_langs:
+- C++
+helpviewer_keywords:
+- selection statements, syntax
+- selection statements
 ms.assetid: 2ce662fc-5e62-461b-ac31-2c159d8ef33b
 caps.latest.revision: 6
-caps.handback.revision: 6
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
----
-# Операторы выбора (C++)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
+ms.openlocfilehash: 1aefe5d9b9e56e1fd88bfc1ecb150b704be7c5c0
+ms.contentlocale: ru-ru
+ms.lasthandoff: 09/25/2017
 
-Операторы выбора C\+\+, [if](../cpp/if-else-statement-cpp.md) и [switch](../cpp/switch-statement-cpp.md), позволяют выполнять те или иные участки кода в зависимости от выполнения условий.  
+---
+# <a name="selection-statements-c"></a>Операторы выбора (C++)
+Операторы выбора C++, [Если](../cpp/if-else-statement-cpp.md) и [переключения](../cpp/switch-statement-cpp.md), позволяют выполнять те или иные участки кода выполнения.  
   
- Операторы [\_\_if\_exists](../cpp/if-exists-statement.md) и [\_\_if\_not\_exists](../cpp/if-not-exists-statement.md) дают возможность включать код в зависимости от наличия определенного символа.  
+ [__If_exists](../cpp/if-exists-statement.md) и [__if_not_exists](../cpp/if-not-exists-statement.md) инструкции позволяют включать код в зависимости от наличия определенного символа.  
   
  Синтаксис этих операторов см. в соответствующих разделах.  
   
-## См. также  
- [Общие сведения об операторах в C\+\+](../cpp/overview-of-cpp-statements.md)
+## <a name="see-also"></a>См. также  
+ [Общие сведения об операторах в C++](../cpp/overview-of-cpp-statements.md)

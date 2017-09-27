@@ -1,31 +1,47 @@
 ---
-title: "public (C++) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-f1_keywords: 
-  - "public"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "public - ключевое слово [C++]"
+title: "Public (C++) | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-language
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+f1_keywords:
+- public
+dev_langs:
+- C++
+helpviewer_keywords:
+- public keyword [C++]
 ms.assetid: f3e10a59-39f6-4bcd-827e-3e99f8f89497
 caps.latest.revision: 10
-caps.handback.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
----
-# public (C++)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
+ms.openlocfilehash: 7ce4262b3f32f48b61e6f4e273ce74c8334f8f0c
+ms.contentlocale: ru-ru
+ms.lasthandoff: 09/25/2017
 
-## Синтаксис  
+---
+# <a name="public-c"></a>public (C++)
+## <a name="syntax"></a>Синтаксис  
   
 ```  
 public:  
@@ -33,26 +49,26 @@ public:
 public base-class  
 ```  
   
-## Заметки  
- Если ключевое слово **public** располагается перед списком членов класса, оно указывает, что эти члены доступны из любой функции.  Это применяется ко всем членам, объявленным до следующего описателя доступа или до конца класса.  
+## <a name="remarks"></a>Примечания  
+ Если перед списком членов класса **открытый** ключевое слово указывает, что эти члены доступны из любой функции. Это применяется ко всем членам, объявленным до следующего описателя доступа или до конца класса.  
   
- Если ключевое слово **public** располагается перед именем базового класса, оно указывает, что открытые и защищенные члены базового класса являются, соответственно, открытыми и защищенными членами производного класса.  
+ Если перед именем базового класса **открытый** ключевое слово указывает, что открытые и защищенные члены базового класса являются открытыми и защищенные члены, соответственно, производного класса.  
   
- Доступ членов в классе по умолчанию является закрытым.  Доступ членов в структуре или объединении по умолчанию является открытым.  
+ Доступ членов в классе по умолчанию является закрытым. Доступ членов в структуре или объединении по умолчанию является открытым.  
   
- Доступ базового класса по умолчанию является закрытым для классов и открытым для структур.  Объединения не могут иметь базовые классы.  
+ Доступ базового класса по умолчанию является закрытым для классов и открытым для структур. Объединения не могут иметь базовые классы.  
   
- Дополнительные сведения см. в разделах [private](../Topic/private%20\(C++\).md), [protected](../Topic/protected%20\(C++\).md) и [friend](../cpp/friend-cpp.md), а также в таблице доступа к членам в разделе [Управление доступом к членам класса](../misc/controlling-access-to-class-members.md).  
+ Дополнительные сведения см. в разделе [закрытый](../cpp/private-cpp.md), [защищенных](../cpp/protected-cpp.md), [friend](../cpp/friend-cpp.md)и таблица доступ к членам в [управление доступом к членам класса](member-access-control-cpp.md) .  
   
-## Специально для \/clr  
- В CLR\-типах ключевые слова описателя доступа C\+\+ \(**public**, `private` и `protected`\) могут повлиять на видимость типов и методов с точки зрения сборок.  Дополнительные сведения см. в статье [Видимость типов и членов](../Topic/Type%20and%20Member%20Visibility.md).  
+## <a name="clr-specific"></a>Специально для /clr  
+ В CLR-типах ключевые слова описателя доступа C++ (**открытый**, `private`, и `protected`) может повлиять на видимость типов и методов с точки зрения сборок. Дополнительные сведения см. в разделе [управление доступом к членам](member-access-control-cpp.md).  
   
 > [!NOTE]
->  Файлы, скомпилированные с параметром [\/LN](../build/reference/ln-create-msil-module.md), не затронуты этим поведением.  В этом случае все управляемые классы \(открытые или закрытые\) будут видны.  
+>  Файлы, скомпилированные с [/LN](../build/reference/ln-create-msil-module.md) не затронуты этим поведением. В этом случае все управляемые классы (открытые или закрытые) будут видны.  
   
-## КОНЕЦ специально для \/clr  
+## <a name="end-clr-specific"></a>КОНЕЦ специально для /clr  
   
-## Пример  
+## <a name="example"></a>Пример  
   
 ```  
 // keyword_public.cpp  
@@ -73,6 +89,6 @@ int main() {
 }  
 ```  
   
-## См. также  
- [Управление доступом к членам классов](../misc/controlling-access-to-class-members.md)   
- [Ключевые слова в C\+\+](../cpp/keywords-cpp.md)
+## <a name="see-also"></a>См. также  
+ [Управление доступом к членам класса](member-access-control-cpp.md)   
+ [Ключевые слова](../cpp/keywords-cpp.md)

@@ -1,33 +1,49 @@
 ---
-title: "Оператор побитового И: &amp; | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-f1_keywords: 
-  - "bitand"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "& - оператор, побитовые операторы"
-  - "AND - оператор"
-  - "побитовые операторы, AND - оператор"
+title: "Оператор побитового и: &amp; | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-language
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+f1_keywords:
+- bitand
+dev_langs:
+- C++
+helpviewer_keywords:
+- AND operator
+- bitwise operators, AND operator
+- '& operator, bitwise operators'
 ms.assetid: 76f40de3-c417-47b9-8a77-532f3fc990a5
 caps.latest.revision: 7
-caps.handback.revision: 7
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
----
-# Оператор побитового И: &amp;
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
+ms.openlocfilehash: 99ff65f38abf5cfcac135e2cc54e3df6df5f336d
+ms.contentlocale: ru-ru
+ms.lasthandoff: 09/25/2017
 
-## Синтаксис  
+---
+# <a name="bitwise-and-operator-amp"></a>Оператор побитового и:&amp;
+## <a name="syntax"></a>Синтаксис  
   
 ```  
   
@@ -37,17 +53,17 @@ expression
   
 ```  
   
-## Заметки  
- Выражения могут представлять собой другие and\-выражения или \(в зависимости от упомянутых ниже типов ограничений\) выражения равенства, выражения связей, выражения сложения, выражения умножения, выражения указателя на член, выражения приведения, унарные выражения, постфиксные выражения или основные выражения.  
+## <a name="remarks"></a>Примечания  
+ Выражения могут представлять собой другие and-выражения или (в зависимости от упомянутых ниже типов ограничений) выражения равенства, выражения связей, выражения сложения, выражения умножения, выражения указателя на член, выражения приведения, унарные выражения, постфиксные выражения или основные выражения.  
   
- Оператор побитового И \(**&**\) сравнивает каждый бит первого операнда с соответствующим битом второго операнда.  Если оба бита равны 1, соответствующий бит результата устанавливается равным единице.  в противном случае — нулю.  
+ Побитовый оператор AND (**&**) сравнивает каждый бит первого операнда с соответствующим битом второго операнда. Если оба бита равны 1, соответствующий бит результата устанавливается равным единице. в противном случае — нулю.  
   
- Оба операнда оператора побитового И должны иметь целочисленный тип.  К операндам применяются обычные арифметические преобразования, описанные в разделе [Арифметические преобразования](../misc/arithmetic-conversions.md).  
+ Оба операнда оператора побитового И должны иметь целочисленный тип. Обычные арифметические преобразования, описанные в [стандартные преобразования](standard-conversions.md), применяются к операндам.  
   
-## Ключевое слово оператора &  
- Текстовым эквивалентом оператора **&** является оператор `bitand`.  Чтобы получить доступ к оператору `bitand` в программах, следует включить файл заголовка `iso646.h` или выполнить компиляцию с параметром компилятора [\/Za](../build/reference/za-ze-disable-language-extensions.md) \("Отключить расширения языка"\).  
+## <a name="operator-keyword-for-"></a>Ключевое слово оператора &  
+ `bitand` Оператор является текстовым эквивалентом ** & **. Существует два способа доступа к `bitand` оператор в программах: включить файл заголовка `iso646.h`, или выполнить компиляцию с [/Za](../build/reference/za-ze-disable-language-extensions.md) параметр компилятора (отключить расширения языка).  
   
-## Пример  
+## <a name="example"></a>Пример  
   
 ```  
 // expre_Bitwise_AND_Operator.cpp  
@@ -63,8 +79,7 @@ int main() {
 }  
 ```  
   
-## См. также  
- [Побитовые операторы в C\+\+](../Topic/C++%20Bitwise%20Operators.md)   
- [Операторы C\+\+](../misc/cpp-operators.md)   
- [Операторы C\+\+, приоритет и ассоциативность](../cpp/cpp-built-in-operators-precedence-and-associativity.md)   
+## <a name="see-also"></a>См. также  
+ [Встроенные операторы C++, приоритет и ассоциативность](cpp-built-in-operators-precedence-and-associativity.md)  
+ [Встроенный C++ операторы, приоритет и ассоциативность операторов](../cpp/cpp-built-in-operators-precedence-and-associativity.md)   
  [Побитовые операторы в C](../c-language/c-bitwise-operators.md)

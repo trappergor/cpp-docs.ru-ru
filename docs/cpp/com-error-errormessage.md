@@ -1,36 +1,53 @@
 ---
-title: "_com_error::ErrorMessage | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-f1_keywords: 
-  - "_com_error::ErrorMessage"
-  - "_com_error.ErrorMessage"
-  - "ErrorMessage"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "ErrorMessage - метод"
+title: "_com_error::ErrorMessage | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-language
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+f1_keywords:
+- _com_error::ErrorMessage
+- _com_error.ErrorMessage
+- ErrorMessage
+dev_langs:
+- C++
+helpviewer_keywords:
+- ErrorMessage method
 ms.assetid: e47335b6-01af-4975-a841-121597479eb7
 caps.latest.revision: 6
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 6
----
-# _com_error::ErrorMessage
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
+ms.openlocfilehash: 01f244a07e46c70cbd4810af666f55dc899e5c3a
+ms.contentlocale: ru-ru
+ms.lasthandoff: 09/25/2017
 
-**Блок, относящийся только к системам Microsoft**  
+---
+# <a name="comerrorerrormessage"></a>_com_error::ErrorMessage
+**Блок, относящийся только к системам Майкрософт**  
   
  Извлекает строковое сообщение для `HRESULT`, хранящееся в объекте `_com_error`.  
   
-## Синтаксис  
+## <a name="syntax"></a>Синтаксис  
   
 ```  
   
@@ -38,13 +55,13 @@ const TCHAR * ErrorMessage( ) const throw( );
   
 ```  
   
-## Возвращаемое значение  
- Возвращает строковое сообщение для `HRESULT`, записанное в объекте `_com_error`.  Если `HRESULT` сопоставлен 16\-битный код [wCode](../cpp/com-error-wcode.md), возвращается универсальное сообщение "`IDispatch error #<wCode>`".  Если сообщение не найдено, возвращается универсальное сообщение "`Unknown error #<hresult>`".  В зависимости от состояния макроса **\_UNICODE**, возвращается строка Юникода или многобайтовая строка.  
+## <a name="return-value"></a>Возвращаемое значение  
+ Возвращает строковое сообщение для `HRESULT`, записанное в объекте `_com_error`. Если `HRESULT` будет сопоставлен 16-битный [wCode](../cpp/com-error-wcode.md), универсальное сообщение "`IDispatch error #<wCode>`" возвращается. Если сообщение не найдено, возвращается универсальное сообщение "`Unknown error #<hresult>`". Возвращаемая строка является Юникода или многобайтовая строка, в зависимости от состояния **_UNICODE** макрос.  
   
-## Заметки  
- Извлекает соответствующий текст системного сообщения для `HRESULT`, записанный в объекте `_com_error`.  Для получения текста системного сообщения вызывается функция Win32 [FormatMessage](http://msdn.microsoft.com/library/windows/desktop/ms679351).  Возвращаемая строка выделяется API `FormatMessage`; эта строка освобождается при уничтожении объекта `_com_error`.  
+## <a name="remarks"></a>Примечания  
+ Извлекает соответствующий текст системного сообщения для `HRESULT`, записанный в объекте `_com_error`. Текст системного сообщения получается путем вызова метода Win32 [FormatMessage](http://msdn.microsoft.com/library/windows/desktop/ms679351) функции. Возвращаемая строка выделяется API `FormatMessage`; эта строка освобождается при уничтожении объекта `_com_error`.  
   
- **Завершение блока, относящегося только к системам Microsoft**  
+ **Завершение блока, относящегося только к системам Майкрософт**  
   
-## См. также  
- [Класс \_com\_error](../cpp/com-error-class.md)
+## <a name="see-also"></a>См. также  
+ [Класс _com_error](../cpp/com-error-class.md)

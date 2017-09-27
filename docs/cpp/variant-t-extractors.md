@@ -1,89 +1,105 @@
 ---
-title: "Средства извлечения _variant_t | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-f1_keywords: 
-  - "_variant_t.operatordouble"
-  - "operatorlong"
-  - "_variant_t::operator_bstr_t"
-  - "operatordouble"
-  - "_variant_t.operatorCY"
-  - "operatorCY"
-  - "_variant_t::operatorCY"
-  - "_variant_t::operatordouble"
-  - "operatorfloat"
-  - "operatorBYTE"
-  - "_variant_t.operatorDECIMAL"
-  - "_variant_t::operatorlong"
-  - "operatorIDispatch"
-  - "_variant_t.operatorBYTE"
-  - "operatorDECIMAL"
-  - "_variant_t.operator_bstr_t"
-  - "_variant_t::operatorDECIMAL"
-  - "_variant_t.operatorIUnknown"
-  - "_variant_t.operatorlong"
-  - "_variant_t::operatorIDispatch"
-  - "_variant_t::operatorIUnknown"
-  - "operatorIUnknown"
-  - "_variant_t.operatorbool"
-  - "_variant_t::operatorBYTE"
-  - "_variant_t.operatorfloat"
-  - "operator_bstr_t"
-  - "_variant_t::operatorbool"
-  - "operatorshort"
-  - "_variant_t::operatorshort"
-  - "_variant_t::operatorfloat"
-  - "_variant_t.operatorIDispatch"
-  - "_variant_t.operatorshort"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "средства извлечения, _variant_t - класс"
-  - "_bstr_t - оператор"
-  - "bool - оператор"
-  - "BYTE - оператор"
-  - "CY - оператор"
-  - "DECIMAL - оператор"
-  - "double - оператор"
-  - "float - оператор"
-  - "IDispatch - оператор"
-  - "IUnknown - оператор"
-  - "long - оператор"
-  - "оператор SHORT"
+title: "средства извлечения _variant_t | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-language
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+f1_keywords:
+- _variant_t.operatordouble
+- operatorlong
+- _variant_t::operator_bstr_t
+- operatordouble
+- _variant_t.operatorCY
+- operatorCY
+- _variant_t::operatorCY
+- _variant_t::operatordouble
+- operatorfloat
+- operatorBYTE
+- _variant_t.operatorDECIMAL
+- _variant_t::operatorlong
+- operatorIDispatch
+- _variant_t.operatorBYTE
+- operatorDECIMAL
+- _variant_t.operator_bstr_t
+- _variant_t::operatorDECIMAL
+- _variant_t.operatorIUnknown
+- _variant_t.operatorlong
+- _variant_t::operatorIDispatch
+- _variant_t::operatorIUnknown
+- operatorIUnknown
+- _variant_t.operatorbool
+- _variant_t::operatorBYTE
+- _variant_t.operatorfloat
+- operator_bstr_t
+- _variant_t::operatorbool
+- operatorshort
+- _variant_t::operatorshort
+- _variant_t::operatorfloat
+- _variant_t.operatorIDispatch
+- _variant_t.operatorshort
+dev_langs:
+- C++
+helpviewer_keywords:
+- extractors, _variant_t class
+- operator CY
+- operator IDispatch
+- operator SHORT
+- operator double
+- operator long
+- operator _bstr_t
+- operator DECIMAL
+- operator float
+- operator bool
+- operator BYTE
+- operator IUnknown
 ms.assetid: 33c1782f-045a-4673-9619-1d750efc83a9
 caps.latest.revision: 6
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 6
----
-# Средства извлечения _variant_t
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: f460497071445cff87308fa9bf6e0d43c6f13a3e
+ms.openlocfilehash: 9ec02d82529a6772e079305c34c5f43ee163a2f7
+ms.contentlocale: ru-ru
+ms.lasthandoff: 09/25/2017
 
-**Блок, относящийся только к системам Microsoft**  
+---
+# <a name="variantt-extractors"></a>Средства извлечения _variant_t
+**Блок, относящийся только к системам Майкрософт**  
   
- Извлечение данных из инкапсулированного объекта **VARIANT**.  
+ Извлечение данных из инкапсулированного **VARIANT** объекта.  
   
-## Синтаксис  
+## <a name="syntax"></a>Синтаксис  
   
 ```  
-  
-      operator short( ) const;   
-operator long( ) const;   
-operator float( ) const;   
-operator double( ) const;   
-operator CY( ) const;   
-operator _bstr_t( ) const;   
-operator IDispatch*( ) const;   
-operator bool( ) const;   
-operator IUnknown*( ) const;   
-operator DECIMAL( ) const;   
+operator short( ) const;   
+operator long( ) const;   
+operator float( ) const;   
+operator double( ) const;   
+operator CY( ) const;   
+operator _bstr_t( ) const;   
+operator IDispatch*( ) const;   
+operator bool( ) const;   
+operator IUnknown*( ) const;   
+operator DECIMAL( ) const;   
 operator BYTE( ) const;  
 operator VARIANT() const throw();  
 operator char() const;  
@@ -95,32 +111,33 @@ operator __int64() const;
 operator unsigned __int64() const;  
 ```  
   
-## Заметки  
- Извлечение необработанных данных из инкапсулированного объекта **VARIANT**.  Если тип объекта **VARIANT** неправильный, для выполнения попытки преобразования используется **VariantChangeType**. В случае сбоя появляется ошибка.  
+## <a name="remarks"></a>Примечания  
+ Извлекает необработанные данные из инкапсулированного **VARIANT**. Если **VARIANT** еще не соответствующего типа **VariantChangeType** используется для выполнения попытки преобразования, и выводится сообщение об ошибке при сбое:  
   
--   **operator short\( \)** извлекает целочисленное значение типа **short**.  
+-   **Operator short ()** извлекает **короткие** целочисленное значение.  
   
--   **operator long\( \)** извлекает целочисленное значение типа **long**.  
+-   **Operator long ()** извлекает **длинные** целочисленное значение.  
   
--   **operator float\( \)** извлекает целочисленное значение типа **float**.  
+-   **operator float ()** извлекает **float** числовое значение.  
   
--   **operator double\( \)** извлекает целочисленное значение типа **double**.  
+-   **Operator double ()** извлекает **двойные** целочисленное значение.  
   
--   **operator CY\( \)** извлекает объект **CY**.  
+-   **Operator CY ()** извлекает **CY** объекта.  
   
--   **operator bool\( \)** извлекает значение типа `bool`.  
+-   **Operator bool ()** извлекает `bool` значение.  
   
--   **operator DECIMAL\( \)** извлекает значение типа **DECIMAL**.  
+-   **Operator DECIMAL ()** извлекает **ДЕСЯТИЧНОЕ** значение.  
   
--   **operator BYTE\( \)** извлекает значение типа **BYTE**.  
+-   **Operator BYTE ()** извлекает **БАЙТОВ** значение.  
   
--   **operator \_bstr\_t\(\)** извлекает строку, инкапсулированную в объекте `_bstr_t`.  
+-   **(оператор _bstr_t)** извлекает строку, которая инкапсулируется в `_bstr_t` объекта.  
   
--   **operator IDispatch\*\( \)** извлекает из инкапсулированного объекта **VARIANT** указатель на disp\-интерфейс.  Для результирующего указателя вызывается метод `AddRef`, поэтому для его освобождения следует вызвать метод **Release**.  
+-   **Operator IDispatch\*()** извлекает указатель на disp-интерфейса из инкапсулированного **VARIANT**. `AddRef`вызывается для результирующего указателя, поэтому его освобождения следует вызвать метод **выпуска** для его освобождения.  
   
--   **operator IUnknown\*\( \)** извлекает из инкапсулированного объекта **VARIANT** указатель на COM\-интерфейс.  Для результирующего указателя вызывается метод `AddRef`, поэтому для его освобождения следует вызвать метод **Release**.  
+-   **Operator IUnknown\*()** извлекает из инкапсулированного указателя интерфейса СОМ **VARIANT**. `AddRef`вызывается для результирующего указателя, поэтому его освобождения следует вызвать метод **выпуска** для его освобождения.  
   
- **Завершение блока, относящегося только к системам Microsoft**  
+ **Завершение блока, относящегося только к системам Майкрософт**  
   
-## См. также  
- [Класс \_variant\_t](../cpp/variant-t-class.md)
+## <a name="see-also"></a>См. также  
+ [Класс _variant_t](../cpp/variant-t-class.md)
+

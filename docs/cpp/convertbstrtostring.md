@@ -1,34 +1,51 @@
 ---
-title: "ConvertBSTRToString | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-f1_keywords: 
-  - "ConvertBSTRToString"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "ConvertBSTRToString - функция"
+title: "ConvertBSTRToString | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-language
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+f1_keywords:
+- ConvertBSTRToString
+dev_langs:
+- C++
+helpviewer_keywords:
+- ConvertBSTRToString function
 ms.assetid: ab6ce555-3d75-4e9c-9cb8-ada6d8ce43b1
 caps.latest.revision: 11
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 9
----
-# ConvertBSTRToString
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
+ms.openlocfilehash: c559509083d21ff8b742ef80a55ac161bbca2f53
+ms.contentlocale: ru-ru
+ms.lasthandoff: 09/25/2017
 
-**Блок, относящийся только к системам Microsoft**  
+---
+# <a name="convertbstrtostring"></a>ConvertBSTRToString
+**Блок, относящийся только к системам Майкрософт**  
   
- Преобразует значение `BSTR` в **char \***.  
+ Преобразует `BSTR` значение **char \* **.  
   
-## Синтаксис  
+## <a name="syntax"></a>Синтаксис  
   
 ```  
   
@@ -37,14 +54,14 @@ caps.handback.revision: 9
 );  
 ```  
   
-#### Параметры  
+#### <a name="parameters"></a>Параметры  
  `pSrc`  
  Переменная BSTR.  
   
-## Заметки  
+## <a name="remarks"></a>Примечания  
  `ConvertBSTRToString` выделяет строку для удаления.  
   
-## Пример  
+## <a name="example"></a>Пример  
   
 ```  
 // ConvertBSTRToString.cpp  
@@ -65,14 +82,17 @@ int main() {
 }  
 ```  
   
-  **BSTR text: Test**  
-**char \* text: Test**   
-## Завершение блока, относящегося только к системам Microsoft  
+```Output  
+BSTR text: Test  
+char * text: Test  
+```  
   
-## Требования  
+**Завершение блока, относящегося только к системам Майкрософт**  
+  
+## <a name="requirements"></a>Требования  
  **Заголовок:** comutil.h.  
   
- **Библиотека:** comsuppw.lib или comsuppwd.lib \(дополнительные сведения см. в разделе [\/Zc:wchar\_t \(wchar\_t – это собственный тип\)](../build/reference/zc-wchar-t-wchar-t-is-native-type.md)\)  
+ **LIB:** comsuppw.lib или comsuppwd.lib (в разделе [/Zc: wchar_t (wchar_t – это собственный тип)](../build/reference/zc-wchar-t-wchar-t-is-native-type.md) для получения дополнительной информации)  
   
-## См. также  
- [Глобальные функции компилятора COM](../cpp/compiler-com-global-functions.md)
+## <a name="see-also"></a>См. также  
+ [Глобальные функции COM-модели компилятора](../cpp/compiler-com-global-functions.md)

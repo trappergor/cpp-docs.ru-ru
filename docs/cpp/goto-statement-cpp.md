@@ -1,49 +1,65 @@
 ---
-title: "Оператор goto (C++) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-f1_keywords: 
-  - "goto_cpp"
-  - "goto"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "goto - ключевое слово [C++]"
+title: "Перейти к инструкции (C++) | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-language
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+f1_keywords:
+- goto_cpp
+- goto
+dev_langs:
+- C++
+helpviewer_keywords:
+- goto keyword [C++]
 ms.assetid: 724c5deb-2de1-42d8-8ef1-23589d9bf5ed
 caps.latest.revision: 13
-caps.handback.revision: 11
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
----
-# Оператор goto (C++)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
+ms.openlocfilehash: 3bdad97f36902762f34816a04a4fc0c5c0c16856
+ms.contentlocale: ru-ru
+ms.lasthandoff: 09/25/2017
 
+---
+# <a name="goto-statement-c"></a>Оператор goto (C++)
 Оператор `goto` осуществляет безусловную передачу управления оператору, метка которого задана идентификатором.  
   
-## Синтаксис  
+## <a name="syntax"></a>Синтаксис  
   
 ```  
 goto identifier;  
 ```  
   
-## Заметки  
- Оператор, метка которого задана в параметре `identifier`, должен находиться в текущей функции.  Все имена, заданные в параметре `identifier`, являются членами внутреннего пространства имен и, следовательно, не пересекаются с другими идентификаторами.  
+## <a name="remarks"></a>Примечания  
+ Оператор, метка которого задана в параметре `identifier`, должен находиться в текущей функции. Все имена, заданные в параметре `identifier`, являются членами внутреннего пространства имен и, следовательно, не пересекаются с другими идентификаторами.  
   
- Метка оператора имеет значение только для оператора `goto`; в остальных случаях метки операторов игнорируются.  Повторное объявление меток невозможно.  
+ Метка оператора имеет значение только для оператора `goto`; в остальных случаях метки операторов игнорируются. Повторное объявление меток невозможно.  
   
- Вместо `break` во всех случаях, когда это возможно, рекомендуется использовать операторы `continue`, `return` и `goto`.  Однако, поскольку оператор `break` выполняет выход только из одного уровня цикла, возможны ситуации, когда для выхода из глубоко вложенного цикла может потребоваться использовать оператор `goto`.  
+ Вместо `break` во всех случаях, когда это возможно, рекомендуется использовать операторы `continue`, `return` и `goto`. Однако, поскольку оператор `break` выполняет выход только из одного уровня цикла, возможны ситуации, когда для выхода из глубоко вложенного цикла может потребоваться использовать оператор `goto`.  
   
- Дополнительные сведения о метках и операторе `goto` см. в разделах [Операторы с метками](../cpp/labeled-statements.md) и [Использование меток с оператором goto](http://msdn.microsoft.com/ru-ru/6cd7c31a-9822-4241-8566-f79f51be48fe).  
+ Дополнительные сведения о метках и `goto` инструкции в разделе [операторы с метками](../cpp/labeled-statements.md) и [использование меток с оператором goto](http://msdn.microsoft.com/en-us/6cd7c31a-9822-4241-8566-f79f51be48fe).  
   
-## Пример  
+## <a name="example"></a>Пример  
  В этом примере оператор `goto` передает управление в точку с меткой `stop`, когда значение переменной `i` равно 3.  
   
 ```  
@@ -72,18 +88,21 @@ int main()
 }  
 ```  
   
-  **Outer loop executing.  i \= 0**  
- **Inner loop executing.  j \= 0**  
- **Inner loop executing.  j \= 1**  
-**Outer loop executing.  i \= 1**  
- **Inner loop executing.  j \= 0**  
- **Inner loop executing.  j \= 1**  
-**Outer loop executing.  i \= 2**  
- **Inner loop executing.  j \= 0**  
- **Inner loop executing.  j \= 1**  
-**Outer loop executing.  i \= 3**  
- **Inner loop executing.  j \= 0**  
-**Jumped to stop.  i \= 3**    
-## См. также  
+```Output  
+Outer loop executing. i = 0  
+ Inner loop executing. j = 0  
+ Inner loop executing. j = 1  
+Outer loop executing. i = 1  
+ Inner loop executing. j = 0  
+ Inner loop executing. j = 1  
+Outer loop executing. i = 2  
+ Inner loop executing. j = 0  
+ Inner loop executing. j = 1  
+Outer loop executing. i = 3  
+ Inner loop executing. j = 0  
+Jumped to stop. i = 3  
+```  
+  
+## <a name="see-also"></a>См. также  
  [Операторы перехода](../cpp/jump-statements-cpp.md)   
- [Ключевые слова в C\+\+](../cpp/keywords-cpp.md)
+ [Ключевые слова](../cpp/keywords-cpp.md)

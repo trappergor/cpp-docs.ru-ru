@@ -1,31 +1,48 @@
 ---
-title: "Передача управления | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "поток управления, ветвление"
-  - "поток управления, передача управления"
+title: "Передача управления | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-language
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+dev_langs:
+- C++
+helpviewer_keywords:
+- control flow, branching
+- control flow, transferring control
 ms.assetid: aa51e7f2-060f-4106-b0fe-331f04357423
 caps.latest.revision: 7
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 7
----
-# Передача управления
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
+ms.openlocfilehash: a604c95bb21ad0098a3d4563738971791fc94a07
+ms.contentlocale: ru-ru
+ms.lasthandoff: 09/25/2017
 
-Можно использовать оператор `goto` или метку **case** в операторе `switch`, чтобы указать программу, которая обойдет инициализатор.  Такой код не допускается, если объявление, содержащее инициализатор, не будет находиться в блоке, заключенном в блоке, в котором выполняется оператор jump.  
+---
+# <a name="transfers-of-control"></a>Передача управления
+Можно использовать `goto` инструкции или **случай** метки в `switch` инструкцию, чтобы указать программу, которая обойдет инициализатор. Такой код не допускается, если объявление, содержащее инициализатор, не будет находиться в блоке, заключенном в блоке, в котором выполняется оператор jump.  
   
- В следующем примере показан цикл, в котором выполняется объявление и инициализация объектов `total`, `ch` и `i`.  Также существует ошибочный оператор `goto`, который передает управление в обход инициализатора.  
+ В следующем примере показан цикл, в котором выполняется объявление и инициализация объектов `total`, `ch` и `i`. Также существует ошибочный оператор `goto`, который передает управление в обход инициализатора.  
   
 ```  
 // transfers_of_control.cpp  
@@ -57,9 +74,8 @@ int main()
 }  
 ```  
   
- В предыдущем примере оператор `goto` пытается передать управление в обход инициализации `i`.  Однако если бы объект `i` был объявлен, но не инициализирован, передача была бы допустима.  
+ В предыдущем примере оператор `goto` пытается передать управление в обход инициализации `i`. Однако если бы объект `i` был объявлен, но не инициализирован, передача была бы допустима.  
   
- Объекты `total` и `ch`, объявленные в блоке, который выступает в роли *оператора* оператора `while`, удаляются, когда этот блок завершается с помощью оператора `break`.  
+ Объекты `total` и `ch`, объявленные в блоке, который служит в качестве *инструкции* из `while` инструкции, удаляются при выходе из этого блока с помощью `break` инструкции.  
   
-## См. также  
- [\(NOTINBUILD\) Declaration of Automatic Objects](http://msdn.microsoft.com/ru-ru/81f941e9-c1b1-4d1c-a28d-70b6ee9765db)
+

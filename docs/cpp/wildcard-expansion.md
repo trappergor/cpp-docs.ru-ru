@@ -1,40 +1,57 @@
 ---
-title: "Развертывание знаков подстановки | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-f1_keywords: 
-  - "_setargv"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "_setargv - функция"
-  - "знак подстановки в виде звездочки"
-  - "командная строка, обработка аргументов"
-  - "командная строка, подстановочные знаки"
-  - "знаки подстановки в командной строке"
-  - "вопросительный знак, подстановочный знак"
+title: "Развертывание знаков подстановки | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-language
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+f1_keywords:
+- _setargv
+dev_langs:
+- C++
+helpviewer_keywords:
+- asterisk wildcard
+- _setargv function
+- command line, processing arguments
+- command line, wildcards
+- command-line wildcards
+- question mark, wildcard
 ms.assetid: 1a543398-607b-4404-93d1-45d290bde638
 caps.latest.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 9
----
-# Развертывание знаков подстановки
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
+ms.openlocfilehash: 779a788cae6523a48a82694e55edf3c1da5519d7
+ms.contentlocale: ru-ru
+ms.lasthandoff: 09/25/2017
 
-## Блок, относящийся только к системам Microsoft  
- Задавать имена файлов и пути к ним в аргументах командной строки можно при помощи знаков подстановки — вопросительного знака \(?\) и звездочки \(\*\).  
+---
+# <a name="wildcard-expansion"></a>Развертывание знаков подстановки
+## <a name="microsoft-specific"></a>Блок, относящийся только к системам Microsoft  
+ Задавать имена файлов и пути к ним в аргументах командной строки можно при помощи знаков подстановки — вопросительного знака (?) и звездочки (*).  
   
- Аргументы командной строки обрабатываются процедурой **\_setargv** \(или **\_wsetargv** в кодировке Юникода\), которая по умолчанию не развертывает знаки подстановки в отдельные строки в массиве строк `argv`.  Дополнительные сведения о том, как включить развертывание знаков подстановки, см. в разделе [Расширение аргументов заполнителей](../Topic/Expanding%20Wildcard%20Arguments.md).  
+ Аргументы командной строки обрабатываются процедурой **_setargv** (или **_wsetargv** в среде Юникода), которая по умолчанию не развертывает знаки подстановки в отдельные строки в `argv`массив строк. Дополнительные сведения о включении подстановочных знаков см. [расширение аргументов заполнителей](../c-language/expanding-wildcard-arguments.md).  
   
-## Завершение блока, относящегося только к системам Microsoft  
+**Завершение блока, относящегося только к системам Майкрософт**  
   
-## См. также  
- [Функция main. Запуск программы](../Topic/main:%20Program%20Startup.md)
+## <a name="see-also"></a>См. также  
+ [Функция main: запуск программы](../cpp/main-program-startup.md)

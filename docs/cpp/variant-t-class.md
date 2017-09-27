@@ -1,68 +1,85 @@
 ---
-title: "Класс _variant_t | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-f1_keywords: 
-  - "Variant"
-  - "_variant_t"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "_variant_t - класс"
-  - "_variant_t - класс, функция-член"
-  - "_variant_t - класс, операторы"
-  - "VARIANT - объект"
-  - "VARIANT - объект, инкапсуляция модели COM"
+title: "Класс _variant_t | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-language
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+f1_keywords:
+- Variant
+- _variant_t
+dev_langs:
+- C++
+helpviewer_keywords:
+- _variant_t class, operators
+- _variant_t class
+- _variant_t class, member functions
+- VARIANT object
+- VARIANT object, COM encapsulation
 ms.assetid: 6a3cbd4e-0ae8-425e-b4cf-ca0df894c93f
 caps.latest.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 10
----
-# Класс _variant_t
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
+ms.openlocfilehash: 3c074061955adbb1682bb7d96345a31fcf8f04e7
+ms.contentlocale: ru-ru
+ms.lasthandoff: 09/25/2017
 
-**Блок, относящийся только к системам Microsoft**  
+---
+# <a name="variantt-class"></a>Класс _variant_t
+**Блок, относящийся только к системам Майкрософт**  
   
- Объект `_variant_t` инкапсулирует тип данных `VARIANT`.  Этот класс управляет выделением и освобождением ресурсов и осуществляет необходимые вызовы функций **VariantInit** и **VariantClear**.  
+ Объект `_variant_t` инкапсулирует тип данных `VARIANT`. Данный класс управляет выделением и освобождением ресурсов и осуществляет необходимые вызовы функций **VariantInit** и **VariantClear** соответствующим образом.  
   
-### Создание  
-  
-|||  
-|-|-|  
-|[\_variant\_t](../Topic/_variant_t::_variant_t.md)|Создает объект `_variant_t`.|  
-  
-### Операции  
+### <a name="construction"></a>Создание экземпляра  
   
 |||  
 |-|-|  
-|[Attach](../cpp/variant-t-attach.md)|Помещает объект **VARIANT** в объект `_variant_t`.|  
-|[Clear](../cpp/variant-t-clear.md)|Удаляет инкапсулированный объект **VARIANT**.|  
-|[ChangeType](../Topic/_variant_t::ChangeType.md)|Меняет тип объекта `_variant_t` на указанный **VARTYPE**.|  
-|[Detach](../cpp/variant-t-detach.md)|Отключает инкапсулированный объект **VARIANT** от данного объекта `_variant_t`.|  
+|[_variant_t](../cpp/variant-t-variant-t.md)|Создает объект `_variant_t`.|  
+  
+### <a name="operations"></a>Операции  
+  
+|||  
+|-|-|  
+|[Attach](../cpp/variant-t-attach.md)|Присоединяет **VARIANT** объекта в `_variant_t` объекта.|  
+|[Очистить](../cpp/variant-t-clear.md)|Удаляет инкапсулированный **VARIANT** объекта.|  
+|[ChangeType](../cpp/variant-t-changetype.md)|Изменяет тип `_variant_t` на указанный **VARTYPE**.|  
+|[Detach](../cpp/variant-t-detach.md)|Отключает инкапсулированный **VARIANT** объекта из этого `_variant_t` объекта.|  
 |[SetString](../cpp/variant-t-setstring.md)|Присваивает строку данному объекту `_variant_t`.|  
   
-### Операторы  
+### <a name="operators"></a>Операторы  
   
 |||  
 |-|-|  
-|[Оператор \=](../cpp/variant-t-operator-equal.md)|Присваивает новое значение существующему объекту `_variant_t`.|  
-|[Оператор \=\=, \!\=](../cpp/variant-t-relational-operators.md)|Сравнивает два объекта `_variant_t` и определяет, равны ли они.|  
-|[Средства извлечения](../cpp/variant-t-extractors.md)|Извлечение данных из инкапсулированного объекта **VARIANT**.|  
+|[Оператор =](../cpp/variant-t-operator-equal.md)|Присваивает новое значение существующему объекту `_variant_t`.|  
+|[оператор ==,! =](../cpp/variant-t-relational-operators.md)|Сравнивает два объекта `_variant_t` и определяет, равны ли они.|  
+|[Средства извлечения](../cpp/variant-t-extractors.md)|Извлечение данных из инкапсулированного **VARIANT** объекта.|  
   
-## Завершение блока, относящегося только к системам Microsoft  
+**Завершение блока, относящегося только к системам Майкрософт**  
   
-## Требования  
+## <a name="requirements"></a>Требования  
  **Заголовок:** comutil.h  
   
- **Библиотека:** comsuppw.lib или comsuppwd.lib \(дополнительные сведения см. в разделе [\/Zc:wchar\_t \(wchar\_t – это собственный тип\)](../build/reference/zc-wchar-t-wchar-t-is-native-type.md)\)  
+ **LIB:** comsuppw.lib или comsuppwd.lib (в разделе [/Zc: wchar_t (wchar_t – это собственный тип)](../build/reference/zc-wchar-t-wchar-t-is-native-type.md) для получения дополнительной информации)  
   
-## См. также  
- [Классы поддержки компилятора COM](../cpp/compiler-com-support-classes.md)
+## <a name="see-also"></a>См. также  
+ [Классы поддержки модели COM компилятора](../cpp/compiler-com-support-classes.md)

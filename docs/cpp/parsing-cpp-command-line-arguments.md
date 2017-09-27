@@ -1,33 +1,50 @@
 ---
-title: "Анализ аргументов командной строки C++ | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "кавычки, аргументы командной строки"
-  - "двойные кавычки"
-  - "разбор командной строки"
-  - "анализа аргументов командной строки"
-  - "код запуска, анализ аргументов командной строки"
+title: "Анализ аргументов командной строки C++ | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-language
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+dev_langs:
+- C++
+helpviewer_keywords:
+- quotation marks, command-line arguments
+- double quotation marks
+- command line, parsing
+- parsing, command-line arguments
+- startup code, parsing command-line arguments
 ms.assetid: e634e733-ac2f-4298-abe2-7e9288c94951
 caps.latest.revision: 8
-caps.handback.revision: 8
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
----
-# Анализ аргументов командной строки C++
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- ru-ru
+- zh-cn
+- zh-tw
+translation.priority.mt:
+- cs-cz
+- pl-pl
+- pt-br
+- tr-tr
+ms.translationtype: HT
+ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
+ms.openlocfilehash: 5d3fbcd6b4e92d6e445d78a1b36efae319e472d7
+ms.contentlocale: ru-ru
+ms.lasthandoff: 09/25/2017
 
-**К системам Microsoft**  
+---
+# <a name="parsing-c-command-line-arguments"></a>Анализ аргументов командной строки C++
+**Блок, относящийся только к системам Майкрософт**  
   
  В коде запуска Microsoft C/C++ используются следующие правила при обработке аргументов, вводимых в командной строке операционной системы.  
   
@@ -35,9 +52,9 @@ manager: "ghogen"
   
 -   Символ каретки (^) не воспринимается как escape-символ или разделитель. Этот символ полностью обрабатывается синтаксическим анализатором командной строки в операционной системе, прежде чем передается в массив `argv` программы.  
   
--   Строка, заключенная в двойные кавычки (»*Строка*»), интерпретируется как один аргумент, независимо от пробельных символов, содержащихся в. Строку в кавычках можно встроить в аргумент.  
+-   Строка, заключенная в двойные кавычки (»*строка*»), интерпретируется как один аргумент, независимо от пробельных символов внутри. Строку в кавычках можно встроить в аргумент.  
   
--   Символ двойной кавычки после обратной косой (\\»), интерпретируется как символ двойной кавычки литерала ("«).  
+-   Символ двойной кавычки после обратной косой черты (\\") обрабатывается как символ двойной кавычки литерала (").  
   
 -   Символы обратной косой черты обрабатываются буквально, если только им не предшествует двойная кавычка.  
   
@@ -72,14 +89,14 @@ int main( int argc,      // Number of strings in array argv
   
 ### <a name="results-of-parsing-command-lines"></a>Результаты синтаксического анализа командной строки  
   
-|Данные в командной строке|argv[1]|argv [2]|argv [3]|  
+|Данные в командной строке|argv[1]|argv[2]|argv[3]|  
 |-------------------------|---------------|---------------|---------------|  
 |`"abc" d e`|`abc`|`d`|`e`|  
 |`a\\b d"e f"g h`|`a\\b`|`de fg`|`h`|  
 |`a\\\"b c d`|`a\"b`|`c`|`d`|  
 |`a\\\\"b c" d e`|`a\\b c`|`d`|`e`|  
   
-## <a name="end-microsoft-specific"></a>Завершение блока, относящегося только к системам Майкрософт  
+**Завершение блока, относящегося только к системам Майкрософт**  
   
-## <a name="see-also"></a>См. также раздел  
- [основной: запуск программы](../Topic/main:%20Program%20Startup.md)
+## <a name="see-also"></a>См. также  
+ [Функция main: запуск программы](../cpp/main-program-startup.md)

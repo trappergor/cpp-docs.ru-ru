@@ -1,39 +1,56 @@
 ---
-title: "novtable | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-f1_keywords: 
-  - "novtable"
-  - "novtable_cpp"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "__declspec - ключевое слово [C++], novtable"
-  - "novtable __declspec - ключевое слово"
+title: "novtable | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-language
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+f1_keywords:
+- novtable
+- novtable_cpp
+dev_langs:
+- C++
+helpviewer_keywords:
+- novtable __declspec keyword
+- __declspec keyword [C++], novtable
 ms.assetid: cfef09c5-8c1e-4b14-8a72-7d726ded4484
 caps.latest.revision: 11
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 9
----
-# novtable
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
+ms.openlocfilehash: 7064bd08a97f3eabbf337b1a351614e94d6458dd
+ms.contentlocale: ru-ru
+ms.lasthandoff: 09/25/2017
 
-## Блок, относящийся только к системам Microsoft  
+---
+# <a name="novtable"></a>novtable
+## <a name="microsoft-specific"></a>Блок, относящийся только к системам Microsoft  
  Представляет собой расширенный атрибут `__declspec`.  
   
- Эта форма ключевого слова `__declspec` применима к любым объявлениям классов, но ее следует применять только к чистым классам интерфейсов, т. е к классам, для которых никогда не будут создаваться собственные экземпляры.  `__declspec` не позволяет компилятору создавать код для инициализации vfptr в конструкторах и деструкторе класса.  Во многих случаях это приводит к удалению единственной ссылки на связанную с классом таблицу vtable, в результате чего компоновщик удаляет ее.  Использование такой формы `__declspec` может приводить к значительному сокращению размера кода.  
+ Эта форма ключевого слова `__declspec` применима к любым объявлениям классов, но ее следует применять только к чистым классам интерфейсов, т. е к классам, для которых никогда не будут создаваться собственные экземпляры. `__declspec` не позволяет компилятору создавать код для инициализации vfptr в конструкторах и деструкторе класса. Во многих случаях это приводит к удалению единственной ссылки на связанную с классом таблицу vtable, в результате чего компоновщик удаляет ее. Использование такой формы `__declspec` может приводить к значительному сокращению размера кода.  
   
- Если попытаться создать экземпляр класса, помеченного атрибутом `novtable`, а затем обратиться к члену класса, возникает нарушение прав доступа \(AV\).  
+ Если попытаться создать экземпляр класса, помеченного атрибутом `novtable`, а затем обратиться к члену класса, возникает нарушение прав доступа (AV).  
   
-## Пример  
+## <a name="example"></a>Пример  
   
 ```  
 // novtable.cpp  
@@ -58,9 +75,12 @@ int main() {
 }  
 ```  
   
-  **In Y**   
-## Завершение блока, относящегося только к системам Microsoft  
+```Output  
+In Y  
+```  
   
-## См. также  
- [\_\_declspec](../cpp/declspec.md)   
- [Ключевые слова в C\+\+](../cpp/keywords-cpp.md)
+**Завершение блока, относящегося только к системам Майкрософт**  
+  
+## <a name="see-also"></a>См. также  
+ [__declspec](../cpp/declspec.md)   
+ [Ключевые слова](../cpp/keywords-cpp.md)

@@ -1,31 +1,47 @@
 ---
-title: "Операторы перехода (C++) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "операторы перехода"
+title: "Операторы перехода (C++) | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-language
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+dev_langs:
+- C++
+helpviewer_keywords:
+- jump statements
 ms.assetid: 7d8ff59c-b1bd-4164-85e9-f508851ed62c
 caps.latest.revision: 9
-caps.handback.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
----
-# Операторы перехода (C++)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
+ms.openlocfilehash: f3b4187928587d564a3c608edefebea2573b976e
+ms.contentlocale: ru-ru
+ms.lasthandoff: 09/25/2017
 
-Оператор перехода C\+\+ выполняет немедленную локальную передачу контроля.  
+---
+# <a name="jump-statements-c"></a>Операторы перехода (C++)
+Оператор перехода C++ выполняет немедленную локальную передачу контроля.  
   
-## Синтаксис  
+## <a name="syntax"></a>Синтаксис  
   
 ```  
 break;  
@@ -34,16 +50,16 @@ return [expression];
 goto identifier;  
 ```  
   
-## Заметки  
- См. описание операторов перехода C\+\+ в следующих разделах.  
+## <a name="remarks"></a>Примечания  
+ См. описание операторов перехода C++ в следующих разделах.  
   
 -   [Оператор break](../cpp/break-statement-cpp.md)  
   
 -   [Оператор continue](../cpp/continue-statement-cpp.md)  
   
--   [Оператор return](../Topic/return%20Statement%20\(C++\).md)  
+-   [Оператор return](../cpp/return-statement-cpp.md)  
   
--   [Оператор goto](../cpp/goto-statement-cpp.md)  
+-   [Оператор GoTo](../cpp/goto-statement-cpp.md)  
   
-## См. также  
- [Общие сведения об операторах в C\+\+](../cpp/overview-of-cpp-statements.md)
+## <a name="see-also"></a>См. также  
+ [Общие сведения об операторах в C++](../cpp/overview-of-cpp-statements.md)

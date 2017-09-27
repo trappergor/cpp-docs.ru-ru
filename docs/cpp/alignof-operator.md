@@ -1,66 +1,83 @@
 ---
-title: "Оператор __alignof | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-f1_keywords: 
-  - "__alignof"
-  - "alignof"
-  - "alignas"
-  - "__alignof_cpp"
-  - "alignof_cpp"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "__alignof - ключевое слово [C++]"
-  - "alignas"
-  - "выравнивание структур"
-  - "alignof"
-  - "типы [C++], требования к выравниванию"
+title: "оператор __alignof | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-language
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+f1_keywords:
+- __alignof
+- alignof
+- alignas
+- __alignof_cpp
+- alignof_cpp
+dev_langs:
+- C++
+helpviewer_keywords:
+- alignas
+- alignment of structures
+- __alignof keyword [C++]
+- alignof
+- types [C++], alignment requirements
 ms.assetid: acb1eed7-6398-40bd-b0c5-684ceb64afbc
 caps.latest.revision: 11
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 11
----
-# Оператор __alignof
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
+ms.openlocfilehash: 66ec7ff196a4f22aec043d8b76faf0189e05cd0f
+ms.contentlocale: ru-ru
+ms.lasthandoff: 09/25/2017
 
-В C\+\+ 11 имеется оператор `alignof`, возвращающий выравнивание \(в байтах\) заданного типа.  Для обеспечения максимальной переносимости кода следует использовать оператор alignof вместо оператора \_\_alignof, тесно связанного с системами Майкрософт.  
+---
+# <a name="alignof-operator"></a>Оператор __alignof
+В C++ 11 имеется оператор `alignof`, возвращающий выравнивание (в байтах) заданного типа. Для обеспечения максимальной переносимости кода следует использовать оператор alignof вместо оператора __alignof, тесно связанного с системами Майкрософт.  
   
- **Блок, относящийся только к системам Microsoft**  
+ **Блок, относящийся только к системам Майкрософт**  
   
- Возвращает значение типа **size\_t**, которое является требованием к выравниванию типа.  
+ Возвращает значение типа **size_t** , является требованием к выравниванию типа.  
   
-## Синтаксис  
+## <a name="syntax"></a>Синтаксис  
   
 ```  
   
-        __alignof(   
-   type    
+      __alignof(   
+   type    
 )  
 ```  
   
-## Заметки  
+## <a name="remarks"></a>Примечания  
  Пример:  
   
 |Выражение|Значение|  
-|---------------|--------------|  
-|**\_\_alignof\( char \)**|1|  
-|**\_\_alignof\( short \)**|2|  
-|**\_\_alignof\( int \)**|4|  
-|**\_\_alignof\( \_\_int64 \)**|8|  
-|**\_\_alignof\( float \)**|4|  
-|**\_\_alignof\( double \)**|8|  
-|**\_\_alignof\( char\* \)**|4|  
+|----------------|-----------|  
+|**__alignof (char)**|1|  
+|**__alignof (краткое).**|2|  
+|**__alignof (int)**|4|  
+|**__alignof ( \__int64)**|8|  
+|**__alignof (float)**|4|  
+|**__alignof (double)**|8|  
+|**__alignof (char\* )**|4|  
   
- Значение `__alignof` совпадает со значением `sizeof` для базовых типов.  Однако рассмотрим следующий пример.  
+ Значение `__alignof` совпадает со значением `sizeof` для базовых типов. Однако рассмотрим следующий пример.  
   
 ```  
 typedef struct { int a; double b; } S;  
@@ -77,7 +94,7 @@ typedef __declspec(align(32)) struct { int a; } S;
   
  `__alignof(S)` равно `32`.  
   
- Одним из применений выражения `__alignof` является его использование в качестве параметра одной из пользовательских подпрограмм выделения памяти.  Например, в следующей определенной структуре `S` можно вызвать подпрограмму выделения памяти с именем `aligned_malloc` для выделения памяти на определенной границе выравнивания.  
+ Одним из применений выражения `__alignof` является его использование в качестве параметра одной из пользовательских подпрограмм выделения памяти. Например, в следующей определенной структуре `S` можно вызвать подпрограмму выделения памяти с именем `aligned_malloc` для выделения памяти на определенной границе выравнивания.  
   
 ```  
 typedef __declspec(align(32)) struct { int a; double b; } S;  
@@ -91,18 +108,18 @@ S* p = (S*)aligned_malloc(n * sizeof(S), __alignof(S));
   
 -   [align](../cpp/align-cpp.md)  
   
--   [\_\_unaligned](../cpp/unaligned.md)  
+-   [__unaligned](../cpp/unaligned.md)  
   
--   [\/Zp \(Выравнивание члена структуры\)](../Topic/-Zp%20\(Struct%20Member%20Alignment\).md)  
+-   [/Zp (выравнивание члена структуры)](../build/reference/zp-struct-member-alignment.md)  
   
--   [Примеры выравнивания структуры](../build/examples-of-structure-alignment.md) \(для x64\)  
+-   [Примеры выравнивания структуры](../build/examples-of-structure-alignment.md) (x64 64)  
   
- Дополнительные сведения о различиях в выравнивании в коде для 32\- \(x86\) и 64\-разрядных \(x64\) сред см. в статье  
+ Дополнительные сведения о различиях в выравнивании в коде для 32- (x86) и 64-разрядных (x64) сред см. в статье  
   
--   [Конфликты с компилятором x86](../Topic/Conflicts%20with%20the%20x86%20Compiler.md)  
+-   [Конфликты с 32-разрядным (x86) компилятором](../build/conflicts-with-the-x86-compiler.md)  
   
-## Завершение блока, относящегося только к системам Майкрософт  
+**Завершение блока, относящегося только к системам Майкрософт**  
   
-## См. также  
- [Выражения с унарными операторами](../Topic/Expressions%20with%20Unary%20Operators.md)   
- [Ключевые слова в C\+\+](../cpp/keywords-cpp.md)
+## <a name="see-also"></a>См. также  
+ [Выражения с унарными операторами](../cpp/expressions-with-unary-operators.md)   
+ [Ключевые слова](../cpp/keywords-cpp.md)

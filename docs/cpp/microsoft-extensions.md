@@ -1,60 +1,75 @@
 ---
-title: "Расширения Microsoft | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "расширения Microsoft в C/C++"
+title: "Расширения Microsoft | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-language
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+dev_langs:
+- C++
+helpviewer_keywords:
+- Microsoft extensions to C/C++
 ms.assetid: 68654516-24ef-4f33-aae2-175f86cc1979
 caps.latest.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 9
----
-# Расширения Microsoft
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
+ms.openlocfilehash: 9de205df0ff566c2638d09c627534bb8327de4f2
+ms.contentlocale: ru-ru
+ms.lasthandoff: 09/25/2017
 
-*оператор\-сборки*:  
- **\_\_asm**  *инструкция\-сборки* **;** необ  
+---
+# <a name="microsoft-extensions"></a>Расширения Майкрософт
+*оператор сборки*:  
+ **__asm***инструкции ассемблера* **;** необязательно    
   
- **\_\_asm {**  *список\-инструкций\-по\-сборке*  **};** необ  
+ **__asm {***список инструкций сборке***};** необязательно      
   
- *список\-инструкций\-по\-сборке*:  
- *инструкция\-по\-сборке* **;** необ  
+ *список инструкций сборке*:  
+ *инструкции ассемблера* **;** необязательно  
   
- *инструкция\-по\-сборке* **;** *список\-инструкций\-по\-сборке* **;** необ  
+ *инструкции ассемблера* **;** *список инструкций сборке* **;** необязательно  
   
- *список\-модификаторов\-ms*:  
- *модификатор\-ms список\-модификаторов\-ms* необ  
+ *Список модификаторов MS*:  
+ *модификатор MS ms список модификаторов-*необязательно  
   
- *модификатор\-ms*:  
- **\_\_cdecl**  
+ *модификатор MS*:  
+ **__cdecl**  
   
- **\_\_fastcall**  
+ **__fastcall**  
   
- **\_\_stdcall**  
+ **__stdcall**  
   
- **\_\_syscall** \(зарезервировано для будущих реализаций\)  
+ **__syscall** (зарезервировано для будущих реализаций)  
   
- **\_\_oldcall** \(зарезервировано для будущих реализаций\)  
+ **__oldcall** (зарезервировано для будущих реализаций)  
   
- **\_\_unaligned** \(зарезервировано для будущих реализаций\)  
+ **__unaligned** (зарезервировано для будущих реализаций)  
   
- *базовый\-модификатор*  
+ *Базовый модификатор*  
   
- *базовый\-модификатор*:  
- **\_\_based \(** *базовый\-тип* **\)**  
+ *Базовый модификатор*:  
+ **__based (** *типа на основе* **)**  
   
- *базовый\-тип*:  
- *имя*  
-  
-## См. также  
- [Сводка по грамматике](../misc/grammar-summary-cpp.md)
+ *на основе типа*:  
+ *name*  
+
