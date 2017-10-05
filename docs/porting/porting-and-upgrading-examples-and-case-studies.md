@@ -15,16 +15,6 @@ caps.latest.revision: 5
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
 translation.priority.mt:
 - cs-cz
 - pl-pl
@@ -37,12 +27,10 @@ ms.contentlocale: ru-ru
 ms.lasthandoff: 05/18/2017
 
 ---
-# Перенос и обновление: примеры и конкретные случаи
-<a id="porting-and-upgrading-examples-and-case-studies" class="xliff"></a>
+# <a name="porting-and-upgrading-examples-and-case-studies"></a>Перенос и обновление: примеры и конкретные случаи
 Чтобы получить представление о возможных проблемах, которые могут возникать при миграции с предыдущей версии Visual C++ на текущую версию, можно ознакомиться с историями успешной миграции.  
   
-## Примеры успешной миграции
-<a id="examples-of-successful-migrations" class="xliff"></a>  
+## <a name="examples-of-successful-migrations"></a>Примеры успешной миграции  
  В данном разделе можно ознакомиться с примерами миграции некоторых небольших примеров и инструментов в последнюю версию Visual C++. Все проблемы, возникающие при таких миграциях, являются типовыми и могут происходить в ходе любой миграции, но с одним существенным исключением — с размером кода. Разумеется, приведенные примеры очень малы по размеру и несопоставимы с кодом реальных приложений.  
   
 -   [MFC Scribble](../porting/porting-guide-mfc-scribble.md) — это пример, использующий основы MFC.  
@@ -51,6 +39,5 @@ ms.lasthandoff: 05/18/2017
   
 -   [Spy++](../porting/porting-guide-spy-increment.md) — это приложение, которое проверяет и предоставляет сведения об элементах пользовательского интерфейса в работающих приложениях.  
   
-## См. также
-<a id="see-also" class="xliff"></a>  
+## <a name="see-also"></a>См. также  
  [Руководство по переносу и обновлению Visual C++](../porting/visual-cpp-porting-and-upgrading-guide.md)
