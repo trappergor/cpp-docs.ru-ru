@@ -1,41 +1,58 @@
 ---
-title: "Интерпретация оператора индекса | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "массивы [C++], индексация"
-  - "интерпретация подстрочного оператора"
-  - "операторы [C++], интерпретация подстрочного символа"
-  - "подстрочный оператор, интерпретация"
+title: "Интерпретация оператора индекса | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-language
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+dev_langs:
+- C++
+helpviewer_keywords:
+- subscript operator, interpretation of
+- arrays [C++], subscripting
+- interpreting subscript operators
+- operators [C++], interpretation of subscript
 ms.assetid: 8852ca18-9d5b-43f7-b8bd-abc89364fbf2
 caps.latest.revision: 7
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 7
----
-# Интерпретация оператора индекса
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
+ms.openlocfilehash: 1a83ff6aea4380688d3b6298b93e04caab1dbb7f
+ms.contentlocale: ru-ru
+ms.lasthandoff: 09/25/2017
 
-Как и другие операторы, оператор индекса \(**\[ \]**\) может быть переопределен пользователем.  Поведение оператора индекса по умолчанию, если он не перегружен, — совмещать имя массива и индекс с помощью следующего метода.  
+---
+# <a name="interpretation-of-subscript-operator"></a>Интерпретация оператора индекса
+Как и другие операторы, оператор индекса (**[]**) может быть переопределен пользователем. Поведение оператора индекса по умолчанию, если он не перегружен, — совмещать имя массива и индекс с помощью следующего метода.  
   
- \*\(\(*имя\-массива*\) \+ \(*индекс*\)\)  
+ \*((*имя массива*) + (*индекс*))  
   
- Как всегда в добавлениях, включающих типы указателей, масштабирование выполняется автоматически с учетом размера типа.  Следовательно, результирующее значение — не *индекс* байтов из источника *имя\-массива*; а элемент массива с порядковым номером *индекс*. \(Дополнительные сведения об этом преобразовании см. в разделе [Операторы добавления](../cpp/additive-operators-plus-and.md)\).  
+ Как всегда в добавлениях, включающих типы указателей, масштабирование выполняется автоматически с учетом размера типа. Таким образом, конечное значение не *индекс* байтов от начала координат *имя массива*; вместо этого он *индекс*й элемент массива. (Дополнительные сведения об этом преобразовании см. в разделе [Аддитивные операторы](../cpp/additive-operators-plus-and.md).)  
   
  Аналогично, для многомерных массивов адрес извлекается с использованием следующего метода.  
   
- **\(\(**   
- ***имя\-массива* \) \+ \(**   
- ***индекс* 1**  *макс*2 *\* макс*3*...макс*n\)               **\+** *индекс*2 *\* макс*3*...макс*n\)                    . . .  *\+* *индекс*n\)\)  
+ **((**   
+ ***имя массива* ) + ()**   
+ ***Индекс* 1***max*2 * \* max*3*...max*n) ** + ** *индекс*2 * \* max*3*...max*n).   . . *+**индекс*n))  
   
-## См. также  
- [Массивы](../Topic/Arrays%20\(C++\).md)
+## <a name="see-also"></a>См. также  
+ [Массивы](../cpp/arrays-cpp.md)

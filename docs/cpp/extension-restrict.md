@@ -1,47 +1,63 @@
 ---
-title: "__restrict | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-f1_keywords: 
-  - "__restrict"
-  - "__restrict_cpp"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "__restrict - ключевое слово [C++]"
+title: "__restrict | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-language
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+f1_keywords:
+- __restrict
+- __restrict_cpp
+dev_langs:
+- C++
+helpviewer_keywords:
+- __restrict keyword [C++]
 ms.assetid: 2d151b4d-f930-49df-bd16-d8757ec7fa83
 caps.latest.revision: 13
-caps.handback.revision: 13
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
----
-# __restrict
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
+ms.openlocfilehash: c0ed875845323d4125a97ca004bb50385f59c53d
+ms.contentlocale: ru-ru
+ms.lasthandoff: 09/25/2017
 
-Как и модификатор **\_\_declspec \( [restrict](../cpp/restrict.md) \)**, ключевое слово `__restrict` означает, что в текущей области видимости псевдоним для символа не создается.  Ключевое слово `__restrict` отличается от модификатора `__declspec ( restrict )` следующим:  
+---
+# <a name="restrict"></a>__restrict
+Как **__declspec ( [ограничить](../cpp/restrict.md) )** модификатора, `__restrict` ключевое слово указывает, что символ не является псевдонимом в текущей области. Ключевое слово `__restrict` отличается от модификатора `__declspec ( restrict )` следующим:  
   
--   Ключевое слово `__restrict` допустимо только в переменных, а `__declspec ( restrict )` — только в объявлениях и определениях функций.  
+-   Ключевое слово `__restrict` допустимо только в переменных, а `__declspec ( restrict )` — только в объявлениях и определениях функций.  
   
--   Ключевое слово `__restrict` похоже на ключевое слово `restrict` из спецификации C99, однако ключевое слово `__restrict` может использоваться в программах C\+\+ и C.  
+-   Ключевое слово `__restrict` похоже на ключевое слово `restrict` из спецификации C99, однако ключевое слово `__restrict` может использоваться в программах C++ и C.  
   
--   Если используется ключевое слово `__restrict`, компилятор не распространяет свойство переменной no\-alias.  Иными словами, если переменная с ключевым словом `__restrict` присвоена переменной без ключевого слова `__restrict`, компилятор все еще будет допускать возможность создания псевдонима переменной без ключевого слова \_\_restrict.  Этим оно отличается от ключевого слова `restrict` из спецификации C99.  
+-   Если используется ключевое слово `__restrict`, компилятор не распространяет свойство переменной no-alias. Иными словами, если переменная с ключевым словом `__restrict` присвоена переменной без ключевого слова `__restrict`, компилятор все еще будет допускать возможность создания псевдонима переменной без ключевого слова __restrict. Этим оно отличается от ключевого слова `restrict` из спецификации C99.  
   
  Как правило, если вы намереваетесь подействовать на поведение всей функции, вместо этого ключевого слова лучше использовать `__declspec ( restrict )`.  
   
- В Visual Studio 2015 и более поздних версий `__restrict` может использоваться для ссылок C\+\+.  
+ В Visual Studio 2015 и более поздних версий `__restrict` может использоваться для ссылок C++.  
   
 > [!NOTE]
->  Если это ключевое слово используется для переменной вместе с ключевым словом [volatile](../cpp/volatile-cpp.md), то приоритет имеет `volatile`.  
+>  При использовании для переменной, которая также имеет [volatile](../cpp/volatile-cpp.md) ключевое слово, `volatile` будет иметь приоритет.  
   
-## Пример  
+## <a name="example"></a>Пример  
   
 ```  
 // __restrict_keyword.c  
@@ -65,5 +81,5 @@ union z {
 };  
 ```  
   
-## См. также  
- [Ключевые слова в C\+\+](../cpp/keywords-cpp.md)
+## <a name="see-also"></a>См. также  
+ [Ключевые слова](../cpp/keywords-cpp.md)

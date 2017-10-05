@@ -1,37 +1,53 @@
 ---
-title: "property (C++) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-f1_keywords: 
-  - "property_cpp"
-  - "Property"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "__declspec - ключевое слово [C++], свойство"
-  - "property __declspec - ключевое слово"
+title: "свойство (C++) | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-language
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+f1_keywords:
+- property_cpp
+- Property
+dev_langs:
+- C++
+helpviewer_keywords:
+- property __declspec keyword
+- __declspec keyword [C++], property
 ms.assetid: f3b850ba-bf48-4df7-a1d6-8259d97309ce
 caps.latest.revision: 7
-caps.handback.revision: 7
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
----
-# property (C++)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
+ms.openlocfilehash: d4cb68d02f9ee543c2d3271bc48ad4318352faa2
+ms.contentlocale: ru-ru
+ms.lasthandoff: 09/25/2017
 
-**Блок, относящийся только к системам Microsoft**  
+---
+# <a name="property-c"></a>property (C++)
+**Блок, относящийся только к системам Майкрософт**  
   
- Этот атрибут может применяться к нестатическим "виртуальным данным\-членам" в определении класса или структуры.  Компилятор обрабатывает эти "виртуальные данные\-члены" как данные\-член, заменяя ссылки вызовами функций.  
+ Этот атрибут может применяться к нестатическим "виртуальным данным-членам" в определении класса или структуры. Компилятор обрабатывает эти "виртуальные данные-члены" как данные-член, заменяя ссылки вызовами функций.  
   
-## Синтаксис  
+## <a name="syntax"></a>Синтаксис  
   
 ```  
   
@@ -40,20 +56,20 @@ __declspec( property( put=put_func_name ) ) declarator
 __declspec( property( get=get_func_name, put=put_func_name ) ) declarator  
 ```  
   
-## Заметки  
- Когда компилятор обнаруживает данные\-член с этим атрибутом в правой части оператора выбора члена \("**.**" или "**\-\>**"\), он преобразует операцию в функцию **get** или **put**, в зависимости от того, является ли это выражение значением l\-value или r\-value.  В более сложных контекстах, например "`+=`", перезапись выполняется с использованием обеих функций **get** и **put**.  
+## <a name="remarks"></a>Примечания  
+ Когда компилятор обнаруживает данные-член с этим атрибутом в правой части оператора выбора члена (»**.**«или»**->**»), он преобразует операцию **получить** или **поместить** функции, в зависимости от того, является ли это выражение значением l-value или r-value. В более сложных контекстах, например «`+=`«, перезапись выполняется с использованием обеих **получить** и **поместить**.  
   
- Этот атрибут также может использоваться при объявлении пустого массива в определении класса или структуры.  Например:  
+ Этот атрибут также может использоваться при объявлении пустого массива в определении класса или структуры. Например:  
   
 ```  
 __declspec(property(get=GetX, put=PutX)) int x[];  
 ```  
   
- Приведенный выше оператор указывает, что `x[]` может использоваться с одним или несколькими индексами массива.  В этом случае выражение `i=p->x[a][b]` будет преобразовано в `i=p->GetX(a, b)`, а выражение `p->x[a][b] = i` будет преобразовано в `p->PutX(a, b, i);`  
+ Приведенный выше оператор указывает, что `x[]` может использоваться с одним или несколькими индексами массива. В этом случае выражение `i=p->x[a][b]` будет преобразовано в `i=p->GetX(a, b)`, а выражение `p->x[a][b] = i` будет преобразовано в `p->PutX(a, b, i);`  
   
- **Завершение блока, относящегося только к системам Microsoft**  
+ **Завершение блока, относящегося только к системам Майкрософт**  
   
-## Пример  
+## <a name="example"></a>Пример  
   
 ```  
 // declspec_property.cpp  
@@ -77,6 +93,6 @@ int main() {
 }  
 ```  
   
-## См. также  
- [\_\_declspec](../cpp/declspec.md)   
- [Ключевые слова в C\+\+](../cpp/keywords-cpp.md)
+## <a name="see-also"></a>См. также  
+ [__declspec](../cpp/declspec.md)   
+ [Ключевые слова](../cpp/keywords-cpp.md)

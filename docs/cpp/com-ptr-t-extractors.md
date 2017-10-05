@@ -1,80 +1,97 @@
 ---
-title: "Средства извлечения _com_ptr_t | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-f1_keywords: 
-  - "_com_ptr_t::operatorInterface&"
-  - "operatorInterface*"
-  - "operatorInterface&"
-  - "_com_ptr_t::operatorbool"
-  - "_com_ptr_t.operator->"
-  - "_com_ptr_t.operator*"
-  - "_com_ptr_t::operator->"
-  - "_com_ptr_t::operator*"
-  - "_com_ptr_t.operatorInterface&"
-  - "_com_ptr_t.operatorbool"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "& - оператор, с конкретными объектами"
-  - "* - оператор, с конкретными объектами"
-  - "-> - оператор, с конкретными объектами"
-  - "средства извлечения"
-  - "средства извлечения, _com_ptr_t - класс"
-  - "оператор *"
-  - "bool - оператор"
-  - "оператор Interface&"
-  - "оператор Interface*"
-  - "operator&"
-  - "operator*"
-  - "operator->"
+title: "средства извлечения _com_ptr_t | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-language
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+f1_keywords:
+- _com_ptr_t::operatorInterface&
+- operatorInterface*
+- operatorInterface&
+- _com_ptr_t::operatorbool
+- _com_ptr_t.operator->
+- _com_ptr_t.operator*
+- _com_ptr_t::operator->
+- _com_ptr_t::operator*
+- _com_ptr_t.operatorInterface&
+- _com_ptr_t.operatorbool
+dev_langs:
+- C++
+helpviewer_keywords:
+- operator Interface&
+- '* operator, with specific objects'
+- operator&
+- operator*
+- -> operator, with specific objects
+- '& operator, with specific objects'
+- operator Interface*
+- operator *
+- operator->
+- operator bool
+- extractors, _com_ptr_t class
+- extractors
 ms.assetid: 194b9e0e-123c-49ff-a187-0a7fcd68145a
 caps.latest.revision: 6
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 6
----
-# Средства извлечения _com_ptr_t
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
+ms.openlocfilehash: 136afa55361ff25f9ad606886be938a00551393d
+ms.contentlocale: ru-ru
+ms.lasthandoff: 09/25/2017
 
-**Блок, относящийся только к системам Microsoft**  
+---
+# <a name="comptrt-extractors"></a>Средства извлечения _com_ptr_t
+**Блок, относящийся только к системам Майкрософт**  
   
- Извлекают инкапсулированный указатель на COM\-интерфейс.  
+ Извлекают инкапсулированный указатель на COM-интерфейс.  
   
-## Синтаксис  
+## <a name="syntax"></a>Синтаксис  
   
 ```  
   
-      operator Interface*( ) const throw( );   
-operator Interface&( ) const;   
-Interface& operator*( ) const;   
-Interface* operator->( ) const;   
-Interface** operator&( ) throw( );   
+      operator Interface*( ) const throw( );   
+operator Interface&( ) const;   
+Interface& operator*( ) const;   
+Interface* operator->( ) const;   
+Interface** operator&( ) throw( );   
 operator bool( ) const throw( );  
 ```  
   
-## Заметки  
+## <a name="remarks"></a>Примечания  
   
--   **operator Interface\*** Возвращает инкапсулированный указатель на интерфейс, который может иметь значение **NULL**.  
+-   **Оператор Interface\* ** возвращает инкапсулированный указатель на интерфейс, который может быть **NULL**.  
   
--   **operator Interface&** Возвращает ссылку на инкапсулированный указатель на интерфейс и создает ошибку, если указатель имеет значение **NULL**.  
+-   **Оператор Interface &** возвращает ссылку на инкапсулированный указатель на интерфейс и выдает ошибку, если указатель находится **NULL**.  
   
--   **operator\*** При разыменовании позволяет объекту интеллектуального указателя функционировать так, как если бы он сам является инкапсулированным интерфейсом.  
+-   **оператор\* ** позволяет объекту интеллектуального указателя функционировать как если бы он сам является инкапсулированным интерфейсом при разыменовании.  
   
--   **operator\-\>** При разыменовании позволяет объекту интеллектуального указателя функционировать так, как если бы он сам является инкапсулированным интерфейсом.  
+-   **operator ->** позволяет объекту интеллектуального указателя функционировать как если бы он сам является инкапсулированным интерфейсом при разыменовании.  
   
--   **operator&** Освобождает любой инкапсулированный указатель на интерфейс, заменяя его значением **NULL**, и возвращает адрес инкапсулированного указателя.  Благодаря этому интеллектуальный указатель можно передавать по адресу в функцию с параметром **out**, через которую он возвращает указатель на интерфейс.  
+-   **оператор &** освобождает любой инкапсулированный указатель на интерфейс, заменяя его значением **NULL**и возвращает адрес инкапсулированного указателя. Это позволяет использовать смарт-указатель можно передавать по адресу функции, которая имеет **out** параметра, через которую он возвращает указатель на интерфейс.  
   
--   **operator bool** Позволяет использовать объект интеллектуального указателя в условном выражении.  Этот оператор возвращает значение **true**, если указатель не **NULL**.  
+-   **Operator bool** позволяет объекту интеллектуального указателя для использования в условном выражении. Этот оператор возвращает **true** если указатель не имеет **NULL**.  
   
- **Завершение блока, относящегося только к системам Microsoft**  
+ **Завершение блока, относящегося только к системам Майкрософт**  
   
-## См. также  
- [Класс \_com\_ptr\_t](../cpp/com-ptr-t-class.md)
+## <a name="see-also"></a>См. также  
+ [Класс _com_ptr_t](../cpp/com-ptr-t-class.md)

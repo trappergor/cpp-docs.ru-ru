@@ -1,65 +1,82 @@
 ---
-title: "Оператор __if_exists | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-f1_keywords: 
-  - "__if_exists_cpp"
-  - "__if_exists"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "__if_exists - ключевое слово [C++]"
-  - "идентификаторы, проверка существования"
-  - "символы, проверка существования"
+title: "оператор __if_exists | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-language
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+f1_keywords:
+- __if_exists_cpp
+- __if_exists
+dev_langs:
+- C++
+helpviewer_keywords:
+- identifiers, testing for existence
+- symbols, testing for existence
+- __if_exists keyword [C++]
 ms.assetid: d3eb34b6-f3a9-4063-a286-b62a28c0c7fa
 caps.latest.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 10
----
-# Оператор __if_exists
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
+ms.openlocfilehash: 3d0eaa00abb1f833ef491fc27bfee01790776edb
+ms.contentlocale: ru-ru
+ms.lasthandoff: 09/25/2017
 
-Оператор `__if_exists` проверяет, существует ли указанный идентификатор.  Если идентификатор существует, выполняется определенный блок операторов.  
+---
+# <a name="ifexists-statement"></a>Оператор __if_exists
+Оператор `__if_exists` проверяет, существует ли указанный идентификатор. Если идентификатор существует, выполняется определенный блок операторов.  
   
-## Синтаксис  
+## <a name="syntax"></a>Синтаксис  
   
 ```  
-__if_exists ( identifier ) {   
+__if_exists ( identifier ) {   
 statements  
 };  
 ```  
   
-#### Параметры  
+#### <a name="parameters"></a>Параметры  
   
 |Параметр|Описание|  
-|--------------|--------------|  
+|---------------|-----------------|  
 |`identifier`|Идентификатор, наличие которого требуется проверить.|  
-|`statements`|Один или несколько операторов, которые будут выполнены, если `identifier` существует.|  
+|`statements`|Один или несколько операторов для выполнения, если `identifier` существует.|  
   
-## Заметки  
+## <a name="remarks"></a>Примечания  
   
 > [!CAUTION]
 >  Для получения самых надежных результатов используйте оператор `__if_exists` при следующих ограничениях.  
   
 -   Применяйте оператор `__if_exists` только к простым типам, а не шаблонам.  
   
--   Применяйте оператор `__if_exists` к идентификаторам как внутри, так и вне класса.  Не применяйте оператор `__if_exists` к локальным переменным.  
+-   Применяйте оператор `__if_exists` к идентификаторам как внутри, так и вне класса. Не применяйте оператор `__if_exists` к локальным переменным.  
   
--   Используйте оператор `__if_exists` только в теле функции.  За пределами тела функции оператор `__if_exists` может проверять только полностью определенные типы.  
+-   Используйте оператор `__if_exists` только в теле функции. За пределами тела функции оператор `__if_exists` может проверять только полностью определенные типы.  
   
 -   При проверке перегруженных функций невозможно выполнить проверку определенной формы перегрузки.  
   
- Дополнением к оператору `__if_exists` является оператор [\_\_if\_not\_exists](../cpp/if-not-exists-statement.md).  
+ Дополнением к `__if_exists` инструкция является [__if_not_exists](../cpp/if-not-exists-statement.md) инструкции.  
   
-## Пример  
+## <a name="example"></a>Пример  
  Обратите внимание, что в этом примере используются шаблоны, что не рекомендуется.  
   
 ```  
@@ -119,7 +136,7 @@ int main() {
 }  
 ```  
   
-## Output  
+## <a name="output"></a>Вывод  
   
 ```  
 In X<T>::Dump()  
@@ -130,7 +147,7 @@ g_bFlag = 1
 C::f exists  
 ```  
   
-## См. также  
- [Инструкции выбора](../cpp/selection-statements-cpp.md)   
- [Ключевые слова в C\+\+](../cpp/keywords-cpp.md)   
- [Оператор \_\_if\_not\_exists](../cpp/if-not-exists-statement.md)
+## <a name="see-also"></a>См. также  
+ [Операторы выбора](../cpp/selection-statements-cpp.md)   
+ [Ключевые слова](../cpp/keywords-cpp.md)   
+ [Оператор __if_not_exists](../cpp/if-not-exists-statement.md)

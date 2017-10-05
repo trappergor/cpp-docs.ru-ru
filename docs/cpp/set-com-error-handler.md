@@ -1,32 +1,49 @@
 ---
-title: "_set_com_error_handler | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "_set_com_error_handler - функция"
+title: "_set_com_error_handler | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-language
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+dev_langs:
+- C++
+helpviewer_keywords:
+- _set_com_error_handler function
 ms.assetid: 49fe4fca-5e37-4d83-abaf-15be5ce37f94
 caps.latest.revision: 11
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 9
----
-# _set_com_error_handler
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
+ms.openlocfilehash: 626227fb9c5162e5b9fc72fc64348b75ecb27e44
+ms.contentlocale: ru-ru
+ms.lasthandoff: 09/25/2017
 
-**Блок, относящийся только к системам Microsoft**  
+---
+# <a name="setcomerrorhandler"></a>_set_com_error_handler
+**Блок, относящийся только к системам Майкрософт**  
   
  Заменяет функцию по умолчанию, используемую для обработки ошибок COM.  
   
-## Синтаксис  
+## <a name="syntax"></a>Синтаксис  
   
 ```  
 void __stdcall _set_com_error_handler(  
@@ -37,7 +54,7 @@ void __stdcall _set_com_error_handler(
 );  
 ```  
   
-#### Параметры  
+#### <a name="parameters"></a>Параметры  
  `pHandler`  
  Указатель на функцию замены.  
   
@@ -47,12 +64,12 @@ void __stdcall _set_com_error_handler(
  `perrinfo`  
  Объект `IErrorInfo`.  
   
-## Заметки  
- По умолчанию [\_com\_raise\_error](../cpp/com-raise-error.md) обрабатывает все ошибки COM.  Это поведение можно изменить с помощью `_set_com_error_handler` для вызова собственной функции обработки ошибок.  
+## <a name="remarks"></a>Примечания  
+ По умолчанию [_com_raise_error](../cpp/com-raise-error.md) обрабатывает все COM-ошибки. Это поведение можно изменить с помощью `_set_com_error_handler` для вызова собственной функции обработки ошибок.  
   
  Функция замены должна иметь сигнатуру, эквивалентную сигнатуре `_com_raise_error`.  
   
-## Пример  
+## <a name="example"></a>Пример  
   
 ```  
 // _set_com_error_handler.cpp  
@@ -89,11 +106,14 @@ int main()
 }  
 ```  
   
-  **Возникает исключение: "Не удалось установить подключение\!"**   
-## Требования  
+```Output  
+Exception raised: Unable to establish the connection!  
+```  
+  
+## <a name="requirements"></a>Требования  
  **Заголовок:** comdef.h  
   
- **Lib.** Если параметр компилятора "wchar\_t — собственный тип" включен, используйте comsuppw.lib или comsuppwd.lib.  Если этот параметр отключен, используйте comsupp.lib.  Дополнительные сведения см. в разделе [\/Zc:wchar\_t \(wchar\_t – это собственный тип\)](../build/reference/zc-wchar-t-wchar-t-is-native-type.md).  
+ **LIB:** Если **wchar_t — собственный тип** включен параметр компилятора, используйте comsuppw.lib или comsuppwd.lib. Если **wchar_t — собственный тип** параметр отключен, используйте comsupp.lib. Дополнительные сведения см. в разделе [/Zc:wchar_t (wchar_t — это собственный тип)](../build/reference/zc-wchar-t-wchar-t-is-native-type.md).  
   
-## См. также  
- [Глобальные функции компилятора COM](../cpp/compiler-com-global-functions.md)
+## <a name="see-also"></a>См. также  
+ [Глобальные функции COM-модели компилятора](../cpp/compiler-com-global-functions.md)

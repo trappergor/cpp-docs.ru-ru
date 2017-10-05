@@ -1,41 +1,58 @@
 ---
-title: "noreturn | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-f1_keywords: 
-  - "noreturn_cpp"
-  - "noreturn"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "__declspec - ключевое слово [C++], noreturn"
-  - "noreturn __declspec - ключевое слово"
+title: "noreturn | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-language
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+f1_keywords:
+- noreturn_cpp
+- noreturn
+dev_langs:
+- C++
+helpviewer_keywords:
+- __declspec keyword [C++], noreturn
+- noreturn __declspec keyword
 ms.assetid: 9c6517e5-22d7-4051-9974-3d2200ae4d1d
 caps.latest.revision: 8
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 8
----
-# noreturn
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
+ms.openlocfilehash: 45de52c2c3c0b60a62bf19e38854c53e841ed500
+ms.contentlocale: ru-ru
+ms.lasthandoff: 09/25/2017
 
-## Блок, относящийся только к системам Microsoft  
- Атрибут `__declspec` сообщает компилятору, что функция не возвращается.  Как следствие, компилятор знает, что код после вызова функции **\_\_declspec\(noreturn\)** недостижим.  
+---
+# <a name="noreturn"></a>noreturn
+## <a name="microsoft-specific"></a>Блок, относящийся только к системам Microsoft  
+ Атрибут `__declspec` сообщает компилятору, что функция не возвращается. Как следствие, компилятор знает, что код после вызова **__declspec(noreturn)** функция недоступен.  
   
- Если компилятор обнаруживает функцию с путем элемента управления, которая не возвращает значение, он создает предупреждение \(C4715\) или сообщение об ошибке \(C2202\).  Если путь к элементу управления недостижим из\-за того, что функция никогда не возвращается, можно использовать **\_\_declspec\(noreturn\)**, чтобы избежать предупреждения или ошибки.  
+ Если компилятор обнаруживает функцию с путем элемента управления, которая не возвращает значение, он создает предупреждение (C4715) или сообщение об ошибке (C2202). Если путь управления недостижим из-за функции, которая никогда не возвращает, можно использовать **__declspec(noreturn)** Чтобы избежать предупреждения или ошибки.  
   
 > [!NOTE]
->  Добавление **\_\_declspec\(noreturn\)** в функцию, возврат которой ожидается, может привести к неопределенному поведению.  
+>  Добавление **__declspec(noreturn)** функции, которая возвращает может привести к неопределенному поведению.  
   
-## Пример  
- В следующем примере предложение **else** не содержит оператор return.  Объявление `fatal` как **\_\_declspec\(noreturn\)** позволяет избежать сообщения об ошибке или предупреждающего сообщения.  
+## <a name="example"></a>Пример  
+ В следующем примере **else** предложение не содержит оператор return.  Объявление `fatal` как **__declspec(noreturn)** позволяет избежать ошибку или предупреждение.  
   
 ```  
 // noreturn2.cpp  
@@ -51,6 +68,6 @@ int main() {
 }  
 ```  
   
-## См. также  
- [\_\_declspec](../cpp/declspec.md)   
- [Ключевые слова в C\+\+](../cpp/keywords-cpp.md)
+## <a name="see-also"></a>См. также  
+ [__declspec](../cpp/declspec.md)   
+ [Ключевые слова](../cpp/keywords-cpp.md)

@@ -1,29 +1,46 @@
 ---
-title: "Косвенное обращение типов массивов | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "массивы [C++], косвенное обращение к типу"
-  - "оператор косвенного обращения, типы массивов"
+title: "Косвенное обращение типов массивов | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-language
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+dev_langs:
+- C++
+helpviewer_keywords:
+- arrays [C++], indirection on type
+- indirection operator, array types
 ms.assetid: 4adc3840-68d1-4602-9db2-8809d4388279
 caps.latest.revision: 8
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 8
----
-# Косвенное обращение типов массивов
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
+ms.openlocfilehash: 7f59b40217da67d15d2191a54f2a981f4d541701
+ms.contentlocale: ru-ru
+ms.lasthandoff: 09/25/2017
 
-Использование оператора косвенного обращения \(**\***\) для *n*\-размерного массива приводит к созданию массива размерности *n*–1.  Если *n* равно 1, создается скаляр \(или элемент массива\).  
+---
+# <a name="indirection-on-array-types"></a>Двойные ссылки в типах массивов
+Использование оператора косвенного обращения (**\***) на * n *-возвращает тип одномерного массива * n *-1-мерный массив. Если * n * -1, получением скаляр (или элемент массива).  
   
-## См. также  
- [Массивы](../Topic/Arrays%20\(C++\).md)
+## <a name="see-also"></a>См. также  
+ [Массивы](../cpp/arrays-cpp.md)

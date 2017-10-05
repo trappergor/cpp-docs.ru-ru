@@ -1,35 +1,51 @@
 ---
-title: "Указатели | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "объявления, указатели"
-  - "деклараторы, указатели"
-  - "указатели"
-  - "указатели, объявления"
+title: "Указатели (C++) | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-language
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+dev_langs:
+- C++
+helpviewer_keywords:
+- declarators, pointers
+- declarations, pointers
+- pointers
+- pointers, declarations
 ms.assetid: 595387c5-8e58-4670-848f-344c7caf985e
 caps.latest.revision: 14
-caps.handback.revision: 12
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
----
-# Указатели
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
+ms.openlocfilehash: c164a934f14f7b65c159cf21feb576d0a8bdf36d
+ms.contentlocale: ru-ru
+ms.lasthandoff: 09/25/2017
 
+---
+# <a name="pointers-c"></a>Указатели (C++)
 Указатели объявляются с помощью следующей последовательности.  
   
 ```  
-[storage-class-specifiers] [cv-qualifiers] type-specifiers   
+[storage-class-specifiers] [cv-qualifiers] type-specifiers   
 [ms-modifier] declarator ;  
 ```  
   
@@ -39,17 +55,17 @@ manager: "ghogen"
 * [cv-qualifiers] identifier [= expression]  
 ```  
   
- 1.  Спецификаторы объявления:  
+ 1. Спецификаторы объявления:  
   
--   Необязательный спецификатор класса хранения.  Дополнительные сведения см. в разделе [Спецификаторы](../cpp/specifiers.md).  
+-   Необязательный спецификатор класса хранения. Дополнительные сведения см. в разделе [спецификаторы](../cpp/specifiers.md).  
   
 -   Необязательное ключевое слово `const` или `volatile`, относящееся к типу объекта, на который нужно указывать.  
   
 -   Спецификатор типа: имя типа, представляющее тип объекта, на который нужно указывать.  
   
- 2.  Декларатор:  
+ 2. Декларатор:  
   
--   Необязательный модификатор, используемый в системах Microsoft.  Дополнительные сведения см. в разделе [Модификаторы, используемые в системах Microsoft](../Topic/Microsoft-Specific%20Modifiers.md).  
+-   Необязательный модификатор, используемый в системах Microsoft. Дополнительные сведения см. в разделе [модификаторы, используемые Microsoft](../cpp/microsoft-specific-modifiers.md).  
   
 -   Оператор `*`.  
   
@@ -72,8 +88,6 @@ manager: "ghogen"
 * identifier [ [ constant-expression ] ]  
 ```  
   
--   Однако деклараторы указателей могут быть более сложными.  Дополнительные сведения см. в разделе [Деклараторы](http://msdn.microsoft.com/ru-ru/8a7b9b51-92bd-4ac0-b3fe-0c4abe771838).  
-  
 -   Несколько деклараторов и их инициализаторы могут присутствовать вместе в одном объявлении в разделенном запятыми списке после спецификатора объявления.  
   
  Простой пример объявления указателя:  
@@ -90,7 +104,7 @@ char *pch;
 static unsigned int * const ptr;  
 ```  
   
- В этом объявлении определяется, что `ptr` — это постоянный указатель на объект типа `unsigned` `int` со статической длительностью хранения.  
+ В этом объявлении определяется, `ptr` — это постоянный указатель на объект типа `unsigned` `int` со статической длительностью хранения.  
   
  В следующем примере показываются объявление и инициализация нескольких указателей.  
   
@@ -100,7 +114,7 @@ static int *p = &i, *q = &j;
   
  В этом примере указатели p и q указывают на объекты типа `int` и инициализируются с адресами i и j соответственно.  Спецификатор класса хранения `static` относится к обоим указателям.  
   
-## Пример  
+## <a name="example"></a>Пример  
   
 ```  
 // pointer.cpp  
@@ -176,18 +190,21 @@ int main() {
 }  
 ```  
   
-  **0x0012FEC8**  
-**0x0012FEC8 2**  
-**0x0012FEC8 7**  
-**j — 10**  
-**0x00320850 5**  
-**0x00320850 0**  
-**0x00320854 10**  
-**0x00320858 20**  
-**0x0032085C 30**  
-**0x00320860 40**  
-**dog dog**   
-## Пример  
+```Output  
+0x0012FEC8  
+0x0012FEC8 2  
+0x0012FEC8 7  
+j is 10  
+0x00320850 5  
+0x00320850 0  
+0x00320854 10  
+0x00320858 20  
+0x0032085C 30  
+0x00320860 40  
+dog dog  
+```  
+  
+## <a name="example"></a>Пример  
  В другом примере показывается использование указателей в структурах данных; в данном случае — в связанном списке.  
   
 ```  
@@ -248,18 +265,26 @@ int main() {
 }  
 ```  
   
-  **`a 45 d a 789 d q`a \(add node\) d \(display list\) q \(quit\)**  
-**enter a number:**   
-**a \(add node\) d \(display list\) q \(quit\)**  
-**node 1 \= 45**  
-**a \(add node\) d \(display list\) q \(quit\)**  
-**enter a number:**   
-**a \(add node\) d \(display list\) q \(quit\)**  
-**node 1 \= 45**  
-**node 2 \= 789**  
-**a \(add node\) d \(display list\) q \(quit\)**   
-## См. также  
- [C\+\+ Abstract Declarators](http://msdn.microsoft.com/ru-ru/e7e18c18-0cad-4450-942b-d27e1d4dd088)   
- [Добавление типов указателей](../misc/addition-of-pointer-types.md)   
- [Оператор косвенного обращения: \*](../cpp/indirection-operator-star.md)   
- [Оператор address\-of: &](../cpp/address-of-operator-amp.md)
+```Output  
+  
+      a  
+45  
+d  
+a  
+789  
+d  
+qa (add node)  d (display list)  q (quit)  
+enter a number:   
+a (add node)  d (display list)  q (quit)  
+node 1 = 45  
+a (add node)  d (display list)  q (quit)  
+enter a number:   
+a (add node)  d (display list)  q (quit)  
+node 1 = 45  
+node 2 = 789  
+a (add node)  d (display list)  q (quit)  
+```  
+  
+## <a name="see-also"></a>См. также  
+ [Оператор косвенного обращения: *](../cpp/indirection-operator-star.md)   
+ [Оператор address-of: &](../cpp/address-of-operator-amp.md)

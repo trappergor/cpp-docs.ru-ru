@@ -1,41 +1,57 @@
 ---
-title: "Явные переопределения (C++) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "производные классы, виртуальные функции"
-  - "явное переопределение виртуальных функций"
-  - "явные переопределения виртуальных функций"
-  - "переопределение, функции"
-  - "виртуальные функции, явные переопределения"
+title: "Явные переопределения (C++) | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-language
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+dev_langs:
+- C++
+helpviewer_keywords:
+- virtual functions, explicit overrides
+- overriding, functions
+- derived classes, virtual functions
+- explicit virtual function overrides
+- explicit override of virtual function
 ms.assetid: ee583234-5cda-4e90-b55e-3f9fbf079ced
 caps.latest.revision: 12
-caps.handback.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
----
-# Явные переопределения (C++)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
+ms.openlocfilehash: 9ee79034ca7c74094753094cce29fc4a11b044ff
+ms.contentlocale: ru-ru
+ms.lasthandoff: 09/25/2017
 
-**Блок, относящийся только к системам Microsoft**  
+---
+# <a name="explicit-overrides-c"></a>Явные переопределения (C++)
+**Блок, относящийся только к системам Майкрософт**  
   
- Если одна и та же виртуальная функция объявлена в двух и более [интерфейсах](../Topic/__interface.md) и некоторых класс является производным от этих интерфейсов, можно явным образом переопределить каждую виртуальную функцию.  
+ Если же виртуальная функция объявлена в двух или более [интерфейсы](../cpp/interface.md) и класс, производный от этих интерфейсов, можно явным образом переопределить каждую виртуальную функцию.  
   
- Сведения о явном переопределении в управляемом коде с использованием нового управляемого синтаксиса см. в разделе [Явное переопределение](../windows/explicit-overrides-cpp-component-extensions.md).  
+ Сведения о явном переопределении в управляемом коде с использованием нового управляемого синтаксиса см. в разделе [явное переопределение](../windows/explicit-overrides-cpp-component-extensions.md).  
   
- **Завершение блока, относящегося только к системам Microsoft**  
+ **Завершение блока, относящегося только к системам Майкрософт**  
   
-## Пример  
+## <a name="example"></a>Пример  
  В следующем примере кода показано использование явного переопределения:  
   
 ```  
@@ -113,17 +129,20 @@ int main() {
   
    // Cast to a CMyClass pointer so that the destructor gets called  
       CMyClass *p = dynamic_cast<CMyClass *>(pIMyInt1);  
-      delete p;  
+      delete p;  
 }  
 ```  
   
-  **In CMyClass::IMyInt1::mf1\(\)**  
-**In CMyClass::IMyInt1::mf1\(int\)**  
-**In CMyClass::IMyInt1::mf2\(\)**  
-**In CMyClass::IMyInt1::mf2\(int\)**  
-**In CMyClass::IMyInt2::mf1\(\)**  
-**In CMyClass::IMyInt2::mf1\(int\)**  
-**In CMyClass::IMyInt2::mf2\(\)**  
-**In CMyClass::IMyInt2::mf2\(int\)**   
-## См. также  
+```Output  
+In CMyClass::IMyInt1::mf1()  
+In CMyClass::IMyInt1::mf1(int)  
+In CMyClass::IMyInt1::mf2()  
+In CMyClass::IMyInt1::mf2(int)  
+In CMyClass::IMyInt2::mf1()  
+In CMyClass::IMyInt2::mf1(int)  
+In CMyClass::IMyInt2::mf2()  
+In CMyClass::IMyInt2::mf2(int)  
+```  
+  
+## <a name="see-also"></a>См. также  
  [Наследование](../cpp/inheritance-cpp.md)

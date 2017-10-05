@@ -1,74 +1,90 @@
 ---
-title: "Ссылки (C++) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "объявления, ссылки"
-  - "объекты [C++], создание ссылок"
-  - "ссылки"
-  - "ссылки, объявление"
-  - "ссылки, к указателям"
-  - "создание ссылок на объекты, синтаксис средства объявления"
+title: "Ссылки (C++) | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-language
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+dev_langs:
+- C++
+helpviewer_keywords:
+- objects [C++], referencing
+- references
+- references, to pointers
+- declarations, references
+- references, declaring
+- referencing objects, declarator syntax
 ms.assetid: 68156f7f-97a0-4b66-b26d-b25ade5e3bd8
 caps.latest.revision: 12
-caps.handback.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
----
-# Ссылки (C++)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
+ms.openlocfilehash: fb208f61d2da9e7daa7a53ac68fdcdfcdf1acab4
+ms.contentlocale: ru-ru
+ms.lasthandoff: 09/25/2017
 
-В ссылке, как и в указателе, хранится адрес объекта, расположенного в другой области памяти.  В отличие от указателя, после инициализации ссылку нельзя перенаправить на другой объект или присвоить ей нулевое значение.  Существует два типа ссылок: ссылки lvalue, указывающие на именованные переменные, и ссылки rvalue, указывающие на [временные объекты](../cpp/temporary-objects.md).  Оператором & обозначаются ссылки lvalue, а оператором &&, в зависимости от контекста, — ссылки rvalue или универсальные ссылки \(как rvalue, так и lvalue\).  
+---
+# <a name="references-c"></a>Ссылки (C++)
+В ссылке, как и в указателе, хранится адрес объекта, расположенного в другой области памяти. В отличие от указателя, после инициализации ссылку нельзя перенаправить на другой объект или присвоить ей нулевое значение. Существует два типа ссылок: ссылки lvalue, указывающие именованный переменной и ссылки rvalue, указывающие [временный объект](../cpp/temporary-objects.md). Оператором & обозначаются ссылки lvalue, а оператором &&, в зависимости от контекста, — ссылки rvalue или универсальные ссылки (как rvalue, так и lvalue).  
   
  Ссылки могут объявляться с помощью следующего синтаксиса.  
   
 ```  
-[storage-class-specifiers] [cv-qualifiers] type-specifiers   
+[storage-class-specifiers] [cv-qualifiers] type-specifiers   
 [ms-modifier] declarator [= expression];  
 ```  
   
- Можно использовать любой допустимый декларатор, задающий ссылку.  Следующий упрощенный синтаксис применяется всегда, кроме случаев, когда ссылка является ссылкой на функцию или тип массива.  
+ Можно использовать любой допустимый декларатор, задающий ссылку. Следующий упрощенный синтаксис применяется всегда, кроме случаев, когда ссылка является ссылкой на функцию или тип массива.  
   
 ```  
-[storage-class-specifiers] [cv-qualifiers] type-specifiers [& or &&]   
+[storage-class-specifiers] [cv-qualifiers] type-specifiers [& or &&]   
 [cv-qualifiers] identifier [= expression];  
 ```  
   
  Ссылки объявляются с использованием следующей последовательности.  
   
- 1.  Спецификаторы объявления:  
+ 1. Спецификаторы объявления:  
   
 -   Необязательный спецификатор класса хранения.  
   
--   Необязательные квалификаторы **const** и\(или\) `volatile`.  
+-   Необязательный **const** и/или `volatile` квалификаторы.  
   
 -   Спецификатор типа: имя типа.  
   
--   2.  Декларатор:  
+-   2. Декларатор:  
   
--   Необязательный модификатор, используемый в системах Microsoft.  Дополнительные сведения см. в разделе [Модификаторы, используемые в системах Microsoft](../Topic/Microsoft-Specific%20Modifiers.md).  
+-   Необязательный модификатор, используемый в системах Microsoft. Дополнительные сведения см. в разделе [модификаторы, используемые Microsoft](../cpp/microsoft-specific-modifiers.md).  
   
 -   Оператор & или &&.  
   
--   Необязательные квалификаторы **const** и\(или\) `volatile`.  
+-   Необязательный **const** и/или `volatile` квалификаторы.  
   
 -   Идентификатор.  
   
- 3.  Необязательный инициализатор.  
+ 3. Необязательный инициализатор.  
   
- Более сложные формы декларатора для указателей на массивы и функции также применяются к ссылкам на массивы и функции, см. разделы [указатели](../cpp/pointers-cpp.md) и [деклараторы](http://msdn.microsoft.com/ru-ru/8a7b9b51-92bd-4ac0-b3fe-0c4abe771838).  
+ Более сложные формы декларатора указатели на массивы и функции также применяются к ссылкам на массивы и функции, см. в разделе [указатели](../cpp/pointers-cpp.md) и [деклараторы](http://msdn.microsoft.com/en-us/8a7b9b51-92bd-4ac0-b3fe-0c4abe771838).  
   
- Несколько деклараторов и инициализаторов могут отображаться в разделенном запятыми списке после отдельного спецификатора объявления.  Пример:  
+ Несколько деклараторов и инициализаторов могут отображаться в разделенном запятыми списке после отдельного спецификатора объявления. Пример:  
   
 ```  
 int &i;   
@@ -85,7 +101,7 @@ int &ref, *ptr, k;
   
  В следующей программе обратите внимание, что имя объекта, `Today` и ссылка на объект, `TodayRef`, могут использоваться идентично в следующих программах.  
   
-## Пример  
+## <a name="example"></a>Пример  
   
 ```  
 // references.cpp  
@@ -108,11 +124,14 @@ int main() {
 }  
 ```  
   
-  **3**  
-**3**  
-**4**  
-**4**   
-## Примечание  
+```Output  
+3  
+3  
+4  
+4  
+```  
+  
+## <a name="comment"></a>Комментарий  
  Подразделы в этом разделе:  
   
 -   [Аргументы функции ссылочного типа](../cpp/reference-type-function-arguments.md)  
@@ -121,5 +140,4 @@ int main() {
   
 -   [Ссылки на указатели](../cpp/references-to-pointers.md)  
   
-## См. также  
- [Инициализация ссылок](../misc/initializing-references.md)
+

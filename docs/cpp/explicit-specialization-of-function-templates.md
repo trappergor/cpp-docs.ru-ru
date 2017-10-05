@@ -1,42 +1,59 @@
 ---
-title: "Явная специализация шаблонов функций | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "объявление функций, специализация шаблона функций"
-  - "явная специализация шаблонов функций"
-  - "шаблоны функций, специализация"
-  - "переопределение, функции"
-  - "специализация шаблонов функций"
+title: "Явная специализация шаблонов функций | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-language
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+dev_langs:
+- C++
+helpviewer_keywords:
+- overriding, functions
+- function templates, specialization
+- explicit specialization of function templates
+- declaring functions, specialization of function template
+- specialization of function templates
 ms.assetid: eb0fcb73-eaed-42a1-9b83-14b055a34bf8
 caps.latest.revision: 7
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 7
----
-# Явная специализация шаблонов функций
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: f460497071445cff87308fa9bf6e0d43c6f13a3e
+ms.openlocfilehash: c5caabae41383edbdc92806249026ce8a0daa5d5
+ms.contentlocale: ru-ru
+ms.lasthandoff: 09/25/2017
 
-Используя шаблон функции, можно указать особое поведение для определенного типа, предоставив явную специализацию \(переопределение\) шаблона функции для этого типа.  Например:  
+---
+# <a name="explicit-specialization-of-function-templates"></a>Явная специализация шаблонов функций
+Используя шаблон функции, можно указать особое поведение для определенного типа, предоставив явную специализацию (переопределение) шаблона функции для этого типа. Пример:  
   
-```  
+```cpp
 template<> void MySwap(double a, double b);  
 ```  
   
- Это объявление позволяет определить другую функцию для переменных **double**.  Как и в случае функций, не являющихся шаблоном, применяются стандартные преобразования типов \(например, преобразование типа **float** в **double**\).  
+ Это объявление позволяет определить другую функцию для **двойные** переменных. Подобно функциям, не являющимся шаблоном, стандартные преобразования типов (например, преобразование типа **float** для **двойные**) применяются.  
   
-## Пример  
+## <a name="example"></a>Пример  
   
-```  
+```cpp
 // explicit_specialization.cpp  
 template<class T> void f(T t)  
 {  
@@ -60,5 +77,6 @@ int main()
 }  
 ```  
   
-## См. также  
+## <a name="see-also"></a>См. также  
  [Шаблоны функций](../cpp/function-templates.md)
+

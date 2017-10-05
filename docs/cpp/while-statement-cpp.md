@@ -1,46 +1,62 @@
 ---
-title: "Оператор while (C++) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-f1_keywords: 
-  - "while_cpp"
-  - "while"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "ключевое слово while [C++]"
-  - "ключевое слово while [C++], синтаксис"
+title: "While-оператор (C++) | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-language
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+f1_keywords:
+- while_cpp
+- while
+dev_langs:
+- C++
+helpviewer_keywords:
+- while keyword [C++]
+- while keyword [C++], syntax
 ms.assetid: 358dbe76-5e5e-4af5-b575-c2293c636899
 caps.latest.revision: 8
-caps.handback.revision: 8
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
----
-# Оператор while (C++)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
+ms.openlocfilehash: 694852e40699ac7b2663392cb8a4c02218a422a7
+ms.contentlocale: ru-ru
+ms.lasthandoff: 09/25/2017
 
-Циклически выполняет *оператор* до тех пор, пока значение параметра *выражение* не будет равно нулю.  
+---
+# <a name="while-statement-c"></a>Оператор while (C++)
+Выполняет *инструкции* пока *выражение* равняется нулю.  
   
-## Синтаксис  
+## <a name="syntax"></a>Синтаксис  
   
 ```  
   
       while ( expression )  
-   statement  
+   statement  
 ```  
   
-## Заметки  
- Значение параметра *выражение* проверяется перед каждым выполнением цикла, поэтому цикл `while` выполняется ноль или несколько раз.  Параметр *выражение* должен иметь целочисленный тип, тип указателя или тип класса с однозначным преобразованием в целочисленный тип или тип указателя.  
+## <a name="remarks"></a>Примечания  
+ Проверка *выражение* выполняется перед каждым выполнением цикла; таким образом, `while` цикл выполняется ноль или более раз. *выражение* должен иметь целочисленный тип, тип указателя или тип класса с однозначным преобразованием в целочисленный тип или тип указателя.  
   
- Выполнение цикла `while` может прекращаться, когда в его теле будет выполнен оператор [break](../cpp/break-statement-cpp.md), [goto](../cpp/goto-statement-cpp.md) или [return](../Topic/return%20Statement%20\(C++\).md).  Чтобы прервать текущую итерацию без выхода из цикла `while`, используйте оператор [continue](../cpp/continue-statement-cpp.md).  Оператор **continue** передает управление в следующую итерацию цикла `while`.  
+ Объект `while` цикла может также прерываться, когда [разрыв](../cpp/break-statement-cpp.md), [goto](../cpp/goto-statement-cpp.md), или [возвращают](../cpp/return-statement-cpp.md) внутри оператора выполняется тело. Используйте [Продолжить](../cpp/continue-statement-cpp.md) чтобы прервать текущую итерацию без выхода `while` цикла. **Продолжить** передает управление следующей итерации цикла `while` цикла.  
   
  В следующем коде цикл `while` используется для усечения символов подчеркивания в конце строки.  
   
@@ -71,11 +87,11 @@ int main()
 }  
 ```  
   
- Условие завершения вычисляется в начале цикла.  Если символов подчеркивания в конце строки нет, цикл никогда не выполняется.  
+ Условие завершения вычисляется в начале цикла. Если символов подчеркивания в конце строки нет, цикл никогда не выполняется.  
   
-## См. также  
- [Операторы перебора](../cpp/iteration-statements-cpp.md)   
- [Ключевые слова в C\+\+](../cpp/keywords-cpp.md)   
- [Выражение do\-while \(C\+\+\)](../cpp/do-while-statement-cpp.md)   
- [Оператор for \(C\+\+\)](../cpp/for-statement-cpp.md)   
- [Основанное на диапазоне выражение for \(C\+\+\)](../Topic/Range-based%20for%20Statement%20\(C++\).md)
+## <a name="see-also"></a>См. также  
+ [Операторы итерации](../cpp/iteration-statements-cpp.md)   
+ [Ключевые слова](../cpp/keywords-cpp.md)   
+ [Оператор do-while (C++)](../cpp/do-while-statement-cpp.md)   
+ [Оператор for (C++)](../cpp/for-statement-cpp.md)   
+ [Основанный на диапазоне оператор for (C++)](../cpp/range-based-for-statement-cpp.md)

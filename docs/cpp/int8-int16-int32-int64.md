@@ -1,43 +1,60 @@
 ---
-title: "__int8, __int16, __int32, __int64 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-f1_keywords: 
-  - "__int8_cpp"
-  - "__int64"
-  - "__int8"
-  - "__int16"
-  - "__int16_cpp"
-  - "__int64_cpp"
-  - "__int32_cpp"
-  - "__int32"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "__int16 - ключевое слово [C++]"
-  - "__int32 - ключевое слово [C++]"
-  - "__int64 - ключевое слово [C++]"
-  - "__int8 - ключевое слово [C++]"
-  - "integer - тип данных, целочисленные типы в C++"
-  - "целочисленные типы [C++]"
+title: "__int8, __int16, __int32, __int64 | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-language
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+f1_keywords:
+- __int8_cpp
+- __int64
+- __int8
+- __int16
+- __int16_cpp
+- __int64_cpp
+- __int32_cpp
+- __int32
+dev_langs:
+- C++
+helpviewer_keywords:
+- __int16 keyword [C++]
+- integer data type, integer types in C++
+- __int32 keyword [C++]
+- integer types [C++]
+- __int8 keyword [C++]
+- __int64 keyword [C++]
 ms.assetid: 8e384602-2578-4980-8cc8-da63842356b2
 caps.latest.revision: 11
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 9
----
-# __int8, __int16, __int32, __int64
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
+ms.openlocfilehash: 82b06a776d40121b5f147388dadf053b5b072659
+ms.contentlocale: ru-ru
+ms.lasthandoff: 09/25/2017
 
-## Блок, относящийся только к системам Microsoft  
- В Microsoft C\/C\+\+ поддерживаются целочисленные типы с указанием размера.  Это позволяет объявлять 8\-, 16\-, 32\- и 64\-разрядные целочисленные переменные при помощи спецификатора типа **\_\_int***n* \(где *n* имеет значение 8, 16, 32 или 64\).  
+---
+# <a name="int8-int16-int32-int64"></a>__int8, __int16, __int32, __int64
+## <a name="microsoft-specific"></a>Блок, относящийся только к системам Microsoft  
+ В Microsoft C/C++ поддерживаются целочисленные типы с указанием размера. 8-, 16-, 32- или 64-разрядные целочисленные переменные можно объявить с помощью **__int** * n * спецификатор, где * n * 8, 16, 32 или 64.  
   
  В следующем примере объявляется по одной переменной каждого из этих целочисленных типов с указанием размера:  
   
@@ -48,10 +65,10 @@ __int32 nLarge;     // Declares 32-bit integer
 __int64 nHuge;      // Declares 64-bit integer  
 ```  
   
- Типы `__int8`, `__int16` и `__int32` аналогичны типам данных ANSI с таким же размером. Они могут использоваться для написания переносимого кода, который одинаково работает на разных платформах.  Тип данных `__int8` аналогичен типу `char`, тип `__int16` — типу **short**, а тип `__int32` — типу `int`.  Тип `__int64` не имеет эквивалента в ANSI.  
+ Типы `__int8`, `__int16` и `__int32` аналогичны типам данных ANSI с таким же размером. Они могут использоваться для написания переносимого кода, который одинаково работает на разных платформах. `__int8` Тип данных является синонимом типа `char`, `__int16` является синонимом типа **короткие**, и `__int32` является синонимом типа `int`. Тип `__int64` не имеет эквивалента в ANSI.  
   
-## Пример  
- В следующем примере показано, каким образом параметр \_\_int*xx* будет повышен до уровня `int`:  
+## <a name="example"></a>Пример  
+ Следующий пример показывает, что __int*xx* параметр будет повышен до `int`:  
   
 ```  
 // sized_int_types.cpp  
@@ -70,10 +87,13 @@ int main()
 }  
 ```  
   
-  **func**   
-## Завершение блока, относящегося только к системам Майкрософт  
+```Output  
+func  
+```  
   
-## См. также  
- [Ключевые слова в C\+\+](../cpp/keywords-cpp.md)   
- [Фундаментальные типы](../cpp/fundamental-types-cpp.md)   
+**Завершение блока, относящегося только к системам Майкрософт**  
+  
+## <a name="see-also"></a>См. также  
+ [Ключевые слова](../cpp/keywords-cpp.md)   
+ [Базовые типы](../cpp/fundamental-types-cpp.md)   
  [Диапазоны типов данных](../cpp/data-type-ranges.md)

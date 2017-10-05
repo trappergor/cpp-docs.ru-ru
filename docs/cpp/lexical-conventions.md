@@ -1,29 +1,47 @@
 ---
-title: "Лексические соглашения | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "index-page "
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "соглашения, лексический"
-  - "лексические соглашения"
+title: "Лексические соглашения | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-language
+ms.tgt_pltfrm: 
+ms.topic: 'index-page '
+dev_langs:
+- C++
+helpviewer_keywords:
+- lexical conventions
+- conventions, lexical
 ms.assetid: 03f9efff-bb95-45ef-9157-0a3fac809ccf
 caps.latest.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 10
----
-# Лексические соглашения
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- ru-ru
+- zh-cn
+- zh-tw
+translation.priority.mt:
+- cs-cz
+- pl-pl
+- pt-br
+- tr-tr
+ms.translationtype: HT
+ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
+ms.openlocfilehash: 6259610d0aefab5471d90d18d3b04764f11de95c
+ms.contentlocale: ru-ru
+ms.lasthandoff: 09/25/2017
 
-В этом разделе представлены базовые элементы программы на C\+\+. Эти элементы \(так называемые лексические элементы или токены\) используются для построения операторов, определений, объявлений других компонентов, из которых состоит вся программа. В этом разделе описываются следующие лексические элементы:  
+---
+# <a name="lexical-conventions"></a>Лексические соглашения
+В этом разделе представлены базовые элементы программы на C++. Эти элементы (так называемые лексические элементы или токены) используются для построения операторов, определений, объявлений других компонентов, из которых состоит вся программа. В этом разделе описываются следующие лексические элементы:  
   
 -   [Наборы символов](../cpp/character-sets2.md)  
   
@@ -37,13 +55,13 @@ caps.handback.revision: 10
   
 -   [Символы пунктуации](../cpp/punctuators-cpp.md)  
   
--   [Числовые, логические литералы и литералы\-указатели](../cpp/numeric-boolean-and-pointer-literals-cpp.md)  
+-   [Числовые, логические литералы и литералы-указатели](../cpp/numeric-boolean-and-pointer-literals-cpp.md)  
   
 -   [Строковые и символьные литералы](../cpp/string-and-character-literals-cpp.md)  
   
--   [Определенные пользователем литералы](../Topic/User-Defined%20Literals%20%20\(C++\).md)  
+-   [Определенные пользователем литералы](../cpp/user-defined-literals-cpp.md)  
   
- Этот раздел также содержит статью [Общие сведения о трансляции файлов](../cpp/cpp-built-in-operators-precedence-and-associativity.md).  
+ Этот раздел также содержит статью [Общие сведения о трансляции файлов](../cpp/cpp-built-in-operators-precedence-and-associativity.md) .  
   
-## См. также  
- [Справочник по языку C\+\+](../cpp/cpp-language-reference.md)
+## <a name="see-also"></a>См. также  
+ [Справочник по языку C++](../cpp/cpp-language-reference.md)

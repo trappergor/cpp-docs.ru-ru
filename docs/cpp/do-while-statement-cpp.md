@@ -1,59 +1,75 @@
 ---
-title: "Выражение do-while (C++) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-f1_keywords: 
-  - "do-while_cpp"
-  - "do-while"
-  - "do"
-  - "while_cpp"
-  - "do_cpp"
-  - "while"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "ключевое слово do [C++]"
-  - "ключевое слово do [C++], do-while"
-  - "ключевое слово do-while [C++]"
-  - "ключевое слово while [C++], do-while"
+title: "Выполните-while инструкции (C++) | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-language
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+f1_keywords:
+- do-while_cpp
+- do-while
+- do
+- while_cpp
+- do_cpp
+- while
+dev_langs:
+- C++
+helpviewer_keywords:
+- do keyword [C++], do-while
+- do-while keyword [C++]
+- do keyword [C++]
+- while keyword [C++], do-while
 ms.assetid: e01e6f7c-7da1-4591-87f9-c26ff848e7b0
 caps.latest.revision: 9
-caps.handback.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
----
-# Выражение do-while (C++)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
+ms.openlocfilehash: 8c81bbeea9f841a834d59186017b2932f83de862
+ms.contentlocale: ru-ru
+ms.lasthandoff: 09/25/2017
 
-Многократно выполняет *оператор*, пока указанное условие завершения \(*выражение*\) не будет равно нулю.  
+---
+# <a name="do-while-statement-c"></a>Выражение do-while (C++)
+Выполняет *инструкции* пока указанное условие завершения ( *выражение*) будет равно нулю.  
   
-## Синтаксис  
+## <a name="syntax"></a>Синтаксис  
   
 ```  
   
       do  
-   statement  
-   while ( expression ) ;  
+   statement  
+   while ( expression ) ;  
 ```  
   
-## Заметки  
- Проверка условия завершения выполняется после каждого выполнения цикла; поэтому цикл `do-while` выполняется один или несколько раз, в зависимости от значения выражения завершения.  Выполнение оператора `do-while` может также завершаться, если в теле оператора выполняется оператор [break](../cpp/break-statement-cpp.md), [goto](../cpp/goto-statement-cpp.md) или [return](../Topic/return%20Statement%20\(C++\).md).  
+## <a name="remarks"></a>Примечания  
+ Проверка условия завершения выполняется после каждого выполнения цикла; поэтому цикл `do-while` выполняется один или несколько раз, в зависимости от значения выражения завершения. `do-while` Инструкция может также прерываться, когда [разрыв](../cpp/break-statement-cpp.md), [goto](../cpp/goto-statement-cpp.md), или [возвращают](../cpp/return-statement-cpp.md) в теле оператора выполняется оператор.  
   
- *Выражение* должно иметь арифметический тип или тип указателя.  Выполнение происходит следующим образом:  
+ Выражение *expression* должно иметь арифметический тип или тип указателя. Выполнение происходит следующим образом:  
   
 1.  Выполняется тело оператора.  
   
-2.  Затем вычисляется значение *выражения*.  Если значение *выражения* ложно, выполнение оператора `do-while` завершается и управление передается следующему оператору программы.  Если значение *выражения* истинно \(не равно нулю\), процесс повторяется с шага 1.  
+2.  Затем вычисляется значение *expression*. Если *expression* имеет значение false, выполнение оператора `do-while` завершается и управление передается следующему оператору программы. Если *expression* имеет значение true (то есть не равно нулю), процесс повторяется с шага 1.  
   
-## Пример  
+## <a name="example"></a>Пример  
  В следующем примере показано использование оператора `do-while`:  
   
 ```  
@@ -69,9 +85,9 @@ int main()
 }  
 ```  
   
-## См. также  
- [Операторы перебора](../cpp/iteration-statements-cpp.md)   
- [Ключевые слова в C\+\+](../cpp/keywords-cpp.md)   
- [Оператор while \(C\+\+\)](../cpp/while-statement-cpp.md)   
- [Оператор for \(C\+\+\)](../cpp/for-statement-cpp.md)   
- [Основанное на диапазоне выражение for \(C\+\+\)](../Topic/Range-based%20for%20Statement%20\(C++\).md)
+## <a name="see-also"></a>См. также  
+ [Операторы итерации](../cpp/iteration-statements-cpp.md)   
+ [Ключевые слова](../cpp/keywords-cpp.md)   
+ [Оператор while (C++)](../cpp/while-statement-cpp.md)   
+ [Оператор for (C++)](../cpp/for-statement-cpp.md)   
+ [Основанный на диапазоне оператор for (C++)](../cpp/range-based-for-statement-cpp.md)

@@ -1,35 +1,52 @@
 ---
-title: "_bstr_t::copy | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-f1_keywords: 
-  - "_bstr_t::copy"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "BSTR - объект, копировать"
-  - "Copy - метод"
+title: "_bstr_t::Copy | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-language
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+f1_keywords:
+- _bstr_t::copy
+dev_langs:
+- C++
+helpviewer_keywords:
+- Copy method
+- BSTR object, copy
 ms.assetid: 00ba7311-e82e-4a79-8106-5329fa2f869a
 caps.latest.revision: 6
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 6
----
-# _bstr_t::copy
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
+ms.openlocfilehash: 25167305ae817ebd9d979c0145934996bbbfcddc
+ms.contentlocale: ru-ru
+ms.lasthandoff: 09/25/2017
 
-**Блок, относящийся только к системам Microsoft**  
+---
+# <a name="bstrtcopy"></a>_bstr_t::copy
+**Блок, относящийся только к системам Майкрософт**  
   
  Создает копию инкапсулированного объекта `BSTR`.  
   
-## Синтаксис  
+## <a name="syntax"></a>Синтаксис  
   
 ```  
   
@@ -38,14 +55,14 @@ caps.handback.revision: 6
 ) const;  
 ```  
   
-#### Параметры  
+#### <a name="parameters"></a>Параметры  
  `fCopy`  
- Если имеет значение **true**, то метод **copy** возвращает копию содержащегося объекта `BSTR`; в противном случае метод **copy** возвращает фактический объект BSTR.  
+ Если **true**, **копирования** возвращает копию содержащегося `BSTR`, в противном случае **копирования** возвращает фактический объект BSTR.  
   
-## Заметки  
+## <a name="remarks"></a>Примечания  
  Возвращает копию инкапсулированного объекта `BSTR`, для которого выделена память.  
   
-## Пример  
+## <a name="example"></a>Пример  
   
 ```  
 STDMETHODIMP CAlertMsg::get_ConnectionStr(BSTR *pVal){ //  m_bsConStr is _bstr_t  
@@ -53,7 +70,7 @@ STDMETHODIMP CAlertMsg::get_ConnectionStr(BSTR *pVal){ //  m_bsConStr is _bstr_t
 }  
 ```  
   
- **Завершение блока, относящегося только к системам Microsoft**  
+ **Завершение блока, относящегося только к системам Майкрософт**  
   
-## См. также  
- [Класс \_bstr\_t](../cpp/bstr-t-class.md)
+## <a name="see-also"></a>См. также  
+ [_bstr_t Class](../cpp/bstr-t-class.md)

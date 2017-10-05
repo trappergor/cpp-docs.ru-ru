@@ -1,30 +1,47 @@
 ---
-title: "Сопроцессор с плавающей запятой и соглашения о вызовах | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "сопроцессор с плавающей запятой"
-  - "числа с плавающей запятой"
-  - "числа с плавающей запятой, сопроцессор"
+title: "Сопроцессор с плавающей запятой и соглашения о вызовах | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-language
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+dev_langs:
+- C++
+helpviewer_keywords:
+- floating-point numbers, coprocessor
+- floating-point coprocessor
+- floating-point numbers
 ms.assetid: 3cc6615a-b308-4cf7-9570-83e192a832b3
 caps.latest.revision: 7
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 7
----
-# Сопроцессор с плавающей запятой и соглашения о вызовах
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
+ms.openlocfilehash: 6d14f7f445064316c83b31e9b4cdc421d68d7255
+ms.contentlocale: ru-ru
+ms.lasthandoff: 09/25/2017
 
-Если при написании подпрограмм сборки для сопроцессора вычислений с плавающей запятой значение **float** или **double** \(которое функция должна возвращать в ST\(0\)\) возвращаться не будет, следует сохранить контрольный регистр процессора с плавающей запятой и очистить стек сопроцессора.  
+---
+# <a name="floating-point-coprocessor-and-calling-conventions"></a>Сопроцессор для вычислений с плавающей запятой и соглашения о вызовах
+При создании сборки подпрограммы для вычислений с плавающей точки сопроцессора, необходимо сохранять значение с плавающей запятой и очистить стек сопроцессора, если только вы возвращаете **float** или **двойные** значение (которое функция должна возвращать в ST(0)).  
   
-## См. также  
- [Соглашения о вызовах](../Topic/Calling%20Conventions.md)
+## <a name="see-also"></a>См. также  
+ [Соглашения о вызовах](../cpp/calling-conventions.md)

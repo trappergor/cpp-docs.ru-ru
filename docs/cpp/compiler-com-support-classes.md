@@ -1,44 +1,61 @@
 ---
-title: "Классы поддержки компилятора COM | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-f1_keywords: 
-  - "_com_raise_error"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "cl.exe - компилятор, поддержка COM"
-  - "COM, поддержка компилятора"
+title: "Классы поддержки компилятора COM | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-language
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+f1_keywords:
+- _com_raise_error
+dev_langs:
+- C++
+helpviewer_keywords:
+- cl.exe compiler, COM support
+- COM, compiler support
 ms.assetid: 6d800d9b-b902-4033-9639-740a30b06f88
 caps.latest.revision: 6
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 6
----
-# Классы поддержки компилятора COM
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
+ms.openlocfilehash: 48540910db97e7662eeaa7e8a7febf7e44df653b
+ms.contentlocale: ru-ru
+ms.lasthandoff: 09/25/2017
 
-**Блок, относящийся только к системам Microsoft**  
+---
+# <a name="compiler-com-support-classes"></a>Классы поддержки компилятора COM
+**Блок, относящийся только к системам Майкрософт**  
   
- Стандартные классы используются для поддержки некоторых типов модели COM.  Классы определены в файле comdef.h и являются файлами заголовка, созданными из библиотеки типов.  
+ Стандартные классы используются для поддержки некоторых типов модели COM. Классы определены в файле comdef.h и являются файлами заголовка, созданными из библиотеки типов.  
   
 |Класс|Назначение|  
-|-----------|----------------|  
-|[\_bstr\_t](../cpp/bstr-t-class.md)|Создает программу оболочку для типа `BSTR`, предоставляя полезные операторы и методы.|  
-|[\_com\_error](../cpp/com-error-class.md)|Определяет объект ошибки, создаваемый [\_com\_raise\_error](../cpp/com-raise-error.md) в случае большинства сбоев.|  
-|[\_com\_ptr\_t](../cpp/com-ptr-t-class.md)|Инкапсулирует указатели COM\-интерфейса и автоматически выполняет необходимые вызовы методов `AddRef`, **Release** и `QueryInterface`.|  
-|[\_variant\_t](../cpp/variant-t-class.md)|Создает программу оболочку для типа **VARIANT**, предоставляя полезные операторы и методы.|  
+|-----------|-------------|  
+|[_bstr_t](../cpp/bstr-t-class.md)|Создает программу оболочку для типа `BSTR`, предоставляя полезные операторы и методы.|  
+|[_com_error](../cpp/com-error-class.md)|Определяет объект ошибки, вызванные [_com_raise_error](../cpp/com-raise-error.md) в случае большинства сбоев.|  
+|[_com_ptr_t](../cpp/com-ptr-t-class.md)|Инкапсулирует указатели COM-интерфейса и автоматически выполняет необходимые вызовы методов `AddRef`, **выпуска**, и `QueryInterface`.|  
+|[_variant_t](../cpp/variant-t-class.md)|Создает оболочку для **VARIANT** типа, предоставляя полезные операторы и методы.|  
   
-## Завершение блока, относящегося только к системам Microsoft  
+**Завершение блока, относящегося только к системам Майкрософт**  
   
-## См. также  
- [Поддержка компилятора COM](../Topic/Compiler%20COM%20Support.md)   
- [Глобальные функции компилятора COM](../cpp/compiler-com-global-functions.md)   
- [Справочник по языку C\+\+](../cpp/cpp-language-reference.md)
+## <a name="see-also"></a>См. также  
+ [Поддержка COM компилятора](../cpp/compiler-com-support.md)   
+ [Глобальные функции COM компилятора](../cpp/compiler-com-global-functions.md)   
+ [Справочник по языку C++](../cpp/cpp-language-reference.md)

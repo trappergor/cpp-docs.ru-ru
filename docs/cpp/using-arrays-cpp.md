@@ -1,29 +1,45 @@
 ---
-title: "Использование массивов (C++) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "массивы [C++]"
+title: "Использование массивов (C++) | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-language
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+dev_langs:
+- C++
+helpviewer_keywords:
+- arrays [C++]
 ms.assetid: 7818a7fe-7e82-4881-a3d1-7d25162b7fc7
 caps.latest.revision: 10
-caps.handback.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
----
-# Использование массивов (C++)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
+ms.openlocfilehash: 31402e2f113deb89fce6d2d8b6c3633f06a944be
+ms.contentlocale: ru-ru
+ms.lasthandoff: 09/25/2017
 
-К отдельным элементам массива можно обращаться при помощи оператора индекса массива \(`[ ]`\).  Если в выражении используется одномерный массив, в котором нет индекса, то вычисление преобразует имя массива в указатель на первый элемент массива.  
+---
+# <a name="using-arrays-c"></a>Использование массивов (C++)
+К отдельным элементам массива можно обращаться при помощи оператора индекса массива (`[ ]`). Если в выражении используется одномерный массив, в котором нет индекса, то вычисление преобразует имя массива в указатель на первый элемент массива.  
   
 ```  
 // using_arrays.cpp  
@@ -56,7 +72,7 @@ int main() {
 }  
 ```  
   
- В предыдущем примере объект `multi` представляет собой трехмерный массив типа `double`.  Указатель `p2multi` указывает на массив типа `double` с размером 3.  В этом примере массив используется с одним, двумя и тремя индексами.  Хотя чаще всего определяют все индексы, в операторе `cout` иногда бывает удобнее выбирать определенное подмножество элементов массива, как показано в операторах, следующих за указанием объекта `cout`.  
+ В предыдущем примере объект `multi` представляет собой трехмерный массив типа `double`. Указатель `p2multi` указывает на массив типа `double` с размером 3. В этом примере массив используется с одним, двумя и тремя индексами. Хотя чаще всего определяют все индексы, в операторе `cout` иногда бывает удобнее выбирать определенное подмножество элементов массива, как показано в операторах, следующих за указанием объекта `cout`.  
   
-## См. также  
- [Массивы](../Topic/Arrays%20\(C++\).md)
+## <a name="see-also"></a>См. также  
+ [Массивы](../cpp/arrays-cpp.md)

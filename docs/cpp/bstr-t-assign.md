@@ -1,34 +1,51 @@
 ---
-title: "_bstr_t::Assign | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-f1_keywords: 
-  - "_bstr_t::Assign"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Assign - метод"
+title: "_bstr_t::Assign | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-language
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+f1_keywords:
+- _bstr_t::Assign
+dev_langs:
+- C++
+helpviewer_keywords:
+- Assign method
 ms.assetid: 2e209bbe-77ca-4598-86d5-6c2ea213f43c
 caps.latest.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 7
----
-# _bstr_t::Assign
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
+ms.openlocfilehash: 11bbf30deb45e33bbc52354b3b1b03ac26e8a4ae
+ms.contentlocale: ru-ru
+ms.lasthandoff: 09/25/2017
 
-**Блок, относящийся только к системам Microsoft**  
+---
+# <a name="bstrtassign"></a>_bstr_t::Assign
+**Блок, относящийся только к системам Майкрософт**  
   
- Копирует объект `BSTR` в объект `BSTR`, инкапсулированный объектом **\_**`bstr_t`.  
+ Копирует `BSTR` в `BSTR` оболочкой **_**`bstr_t`.  
   
-## Синтаксис  
+## <a name="syntax"></a>Синтаксис  
   
 ```  
 void Assign(  
@@ -36,14 +53,14 @@ void Assign(
 );  
 ```  
   
-#### Параметры  
+#### <a name="parameters"></a>Параметры  
  `s`  
  Объект `BSTR`, копируемый в объект `BSTR`, инкапсулированный объектом `_bstr_t`.  
   
-## Заметки  
+## <a name="remarks"></a>Примечания  
  Функция `Assign` выполняет двоичное копирование; это означает. что `BSTR` копируется на всю длину безотносительно своего содержимого.  
   
-## Пример  
+## <a name="example"></a>Пример  
   
 ```  
 // _bstr_t_Assign.cpp  
@@ -104,16 +121,19 @@ int main()
 }  
 ```  
   
-  **bstrWrapper \= какой\-то текст**  
-**bstrWrapper \= \(null\)**  
-**bstr \= какой\-то текст**  
-**bstrWrapper \= SysAllocedString**  
-**bstrWrapper \= какой\-то текст**  
-**bstrWrapper \= какая\-то строка**  
-**bstrWrapper2 \= какой\-то текст**  
-**bstrWrapper \= меняет BSTR**  
-**bstrWrapper2 \= какой\-то текст**   
-## Завершение блока, относящегося только к системам Microsoft  
+```Output  
+bstrWrapper = some text  
+bstrWrapper = (null)  
+bstr = some text  
+bstrWrapper = SysAllocedString  
+bstrWrapper = some text  
+bstrWrapper = Yet another string  
+bstrWrapper2 = some text  
+bstrWrapper = changing BSTR  
+bstrWrapper2 = some text  
+```  
   
-## См. также  
- [Класс \_bstr\_t](../cpp/bstr-t-class.md)
+**Завершение блока, относящегося только к системам Майкрософт**  
+  
+## <a name="see-also"></a>См. также  
+ [_bstr_t Class](../cpp/bstr-t-class.md)

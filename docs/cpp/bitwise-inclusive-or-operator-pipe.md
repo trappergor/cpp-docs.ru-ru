@@ -1,35 +1,51 @@
 ---
-title: "Битовый оператор ИЛИ (включительно): | | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-f1_keywords: 
-  - "bitor"
-  - "|"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "| - оператор"
-  - "побитовые операторы, OR - оператор"
-  - "включающий оператор OR"
-  - "OR - оператор, побитовое включающее"
+title: "Побитовое включительно или оператор: || Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-language
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+f1_keywords:
+- bitor
+- '|'
+dev_langs:
+- C++
+helpviewer_keywords:
+- OR operator, bitwise inclusive
+- bitwise operators, OR operator
+- inclusive OR operator
+- '| operator'
 ms.assetid: 4c8a6a68-d828-447d-875a-aedb4ce3aa9a
 caps.latest.revision: 7
-caps.handback.revision: 7
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
----
-# Битовый оператор ИЛИ (включительно): |
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
+ms.openlocfilehash: bb2fcc7c85e112b80929b2a8392f0e6c19ab97f2
+ms.contentlocale: ru-ru
+ms.lasthandoff: 09/25/2017
 
-## Синтаксис  
+---
+# <a name="bitwise-inclusive-or-operator-"></a>Битовый оператор ИЛИ (включительно): |
+## <a name="syntax"></a>Синтаксис  
   
 ```  
   
@@ -39,15 +55,15 @@ expression
   
 ```  
   
-## Заметки  
- Оператор побитового ИЛИ \(         **&#124;** \) сравнивает каждый бит первого операнда с соответствующим битом второго операнда.  Если любой из битов равен единице, соответствующий бит результата устанавливается равным единице, а  в противном случае — нулю.  
+## <a name="remarks"></a>Примечания  
+ Оператора побитового или (**&#124;**) сравнивает каждый бит первого операнда с соответствующим битом второго операнда. Если любой из битов равен единице, соответствующий бит результата устанавливается равным единице, а в противном случае — нулю.  
   
- Оба операнда оператора побитового ИЛИ должны быть целочисленного типа.  К операндам применяются обычные арифметические преобразования, описанные в разделе [Арифметические преобразования](../misc/arithmetic-conversions.md).  
+ Оба операнда оператора побитового ИЛИ должны быть целочисленного типа. Обычные арифметические преобразования, описанные в [стандартные преобразования](standard-conversions.md) применяются к операндам.  
   
-## Ключевое слово оператора &#124;  
- Оператор `bitor` является текстовым эквивалентом оператора              **&#124;** .  Чтобы получить доступ к оператору `bitor` в программах, следует включить файл заголовка `iso646.h` или выполнить компиляцию с параметром компилятора [\/Za](../build/reference/za-ze-disable-language-extensions.md) \("Отключить расширения языка"\).  
+## <a name="operator-keyword-for-124"></a>Ключевое слово оператора &#124;  
+ `bitor` Оператор является текстовым эквивалентом **&#124;**. Существует два способа доступа к `bitor` оператор в программах: включить файл заголовка `iso646.h`, или выполнить компиляцию с [/Za](../build/reference/za-ze-disable-language-extensions.md) параметр компилятора (отключить расширения языка).  
   
-## Пример  
+## <a name="example"></a>Пример  
   
 ```  
 // expre_Bitwise_Inclusive_OR_Operator.cpp  
@@ -64,8 +80,8 @@ int main() {
 }  
 ```  
   
-## См. также  
- [Побитовые операторы в C\+\+](../Topic/C++%20Bitwise%20Operators.md)   
- [Операторы C\+\+](../misc/cpp-operators.md)   
- [Операторы C\+\+, приоритет и ассоциативность](../cpp/cpp-built-in-operators-precedence-and-associativity.md)   
+## <a name="see-also"></a>См. также  
+ [Встроенный C++ операторы, приоритет и ассоциативность операторов](../cpp/cpp-built-in-operators-precedence-and-associativity.md)   
  [Побитовые операторы в C](../c-language/c-bitwise-operators.md)
+
+

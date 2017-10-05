@@ -1,44 +1,65 @@
 ---
-title: "Оператор разрешения области: :: | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-f1_keywords: 
-  - "::"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - ":: - оператор"
-  - "операторы [C++], разрешение области"
-  - "оператор разрешения области"
-  - "область действия, оператор разрешения области"
+title: "Оператор разрешения области::: | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-language
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+f1_keywords:
+- '::'
+dev_langs:
+- C++
+helpviewer_keywords:
+- scope, scope resolution operator
+- operators [C++], scope resolution
+- scope resolution operator
+- ':: operator'
 ms.assetid: fd5de9d3-c716-4e12-bae9-03a16fd79a50
 caps.latest.revision: 8
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 8
----
-# Оператор разрешения области: ::
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
+ms.openlocfilehash: 715eb7c5e004d7e0731ef599e54beb5fc6690e50
+ms.contentlocale: ru-ru
+ms.lasthandoff: 09/25/2017
 
-Оператор разрешения области `::` используется для идентификации и устранения неоднозначности идентификаторов, которые используются в разных областях.  Дополнительные сведения об областях см. в разделе [Область](../cpp/scope-visual-cpp.md).  
+---
+# <a name="scope-resolution-operator-"></a>Оператор разрешения области: ::
+Оператор разрешения области `::` используется для идентификации и устранения неоднозначности идентификаторов, которые используются в разных областях. Дополнительные сведения об области см. в разделе [область](../cpp/scope-visual-cpp.md).  
   
-## Синтаксис  
+## <a name="syntax"></a>Синтаксис  
   
 ```  
-:: identifier class-name :: identifier namespace :: identifier enum class :: identifier enum struct :: identifier  
+:: identifier  
+class-name :: identifier  
+namespace :: identifier  
+enum class :: identifier  
+enum struct :: identifier  
 ```  
   
-## Заметки  
+## <a name="remarks"></a>Примечания  
  `identifier` может быть переменной, функцией или значением перечисления.  
   
-## С классами и пространствами имен  
+## <a name="with-classes-and-namespaces"></a>С классами и пространствами имен  
  В следующем примере показано, каким образом оператор разрешения области используется с пространствами имен и классами:  
   
 ```cpp  
@@ -85,7 +106,7 @@ int main() {
 }  
 ```  
   
- Оператор разрешения области можно использовать для идентификации члена пространства имен или пространства имен, которое определяет пространство имен члена в директиве using.  В примере ниже `NamespaceC` можно использовать для указания `ClassB`, даже если `ClassB` был объявлен в пространстве имен `NamespaceB`, поскольку `NamespaceB` было определено в `NamespaceC` с помощью директивы using.  
+ Оператор разрешения области можно использовать для идентификации члена пространства имен или пространства имен, которое определяет пространство имен члена в директиве using. В примере ниже `NamespaceC` можно использовать для указания `ClassB`, даже если `ClassB` был объявлен в пространстве имен `NamespaceB`, поскольку `NamespaceB` было определено в `NamespaceC` с помощью директивы using.  
   
 ```cpp  
 namespace NamespaceB {  
@@ -109,7 +130,7 @@ int main() {
   
 ```  
   
- Можно использовать цепочки операторов разрешения области.  В следующем примере `NamespaceD::NamespaceD1` определяет вложенное пространство имен `NamespaceD1`, а `NamespaceE::ClassE::ClassE1` определяет вложенный класс `ClassE1`.  
+ Можно использовать цепочки операторов разрешения области. В следующем примере `NamespaceD::NamespaceD1` определяет вложенное пространство имен `NamespaceD1`, а `NamespaceE::ClassE::ClassE1` определяет вложенный класс `ClassE1`.  
   
 ```cpp  
 namespace NamespaceD{  
@@ -137,7 +158,7 @@ int main() {
   
 ```  
   
-## Со статическими членами  
+## <a name="with-static-members"></a>Со статическими членами  
  Оператор разрешения области необходимо использовать для вызова статических членов класса.  
   
 ```cpp  
@@ -157,8 +178,8 @@ int main() {
   
 ```  
   
-## С ограниченными перечислениями  
- Оператор разрешения области также используется со значениями ограниченного перечисления \([Объявления перечислений](../cpp/enumerations-cpp.md)\) как в следующем примере:  
+## <a name="with-scoped-enumerations"></a>С ограниченными перечислениями  
+ Оператор разрешения области также используется со значениями ограниченного перечисления [объявления перечислений](../cpp/enumerations-cpp.md), как показано в следующем примере:  
   
 ```cpp  
 enum class EnumA{  
@@ -174,7 +195,6 @@ int main() {
   
 ```  
   
-## См. также  
- [Операторы C\+\+, приоритет и ассоциативность](../cpp/cpp-built-in-operators-precedence-and-associativity.md)   
+## <a name="see-also"></a>См. также  
+ [Встроенный C++ операторы, приоритет и ассоциативность операторов](../cpp/cpp-built-in-operators-precedence-and-associativity.md)   
  [Пространства имен](../cpp/namespaces-cpp.md)   
- [Имена и полные имена](../misc/names-and-qualified-names.md)

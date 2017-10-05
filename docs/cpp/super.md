@@ -1,35 +1,52 @@
 ---
-title: "__super | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-f1_keywords: 
-  - "__super_cpp"
-  - "__super"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "__super - ключевое слово [C++]"
+title: "__super | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-language
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+f1_keywords:
+- __super_cpp
+- __super
+dev_langs:
+- C++
+helpviewer_keywords:
+- __super keyword [C++]
 ms.assetid: f0957c31-9256-405b-b402-cad182404b5f
 caps.latest.revision: 7
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 7
----
-# __super
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
+ms.openlocfilehash: 64600f8cf642b0c7906873a73aa4da41897a57f5
+ms.contentlocale: ru-ru
+ms.lasthandoff: 09/25/2017
 
-**Блок, относящийся только к системам Microsoft**  
+---
+# <a name="super"></a>__super
+**Блок, относящийся только к системам Майкрософт**  
   
  Позволяет явно указать, что для переопределяемой функции вызывается реализация из базового класса.  
   
-## Синтаксис  
+## <a name="syntax"></a>Синтаксис  
   
 ```  
   
@@ -39,16 +56,16 @@ member_function
   
 ```  
   
-## Заметки  
+## <a name="remarks"></a>Примечания  
  На этапе разрешения перегрузки учитываются все доступные методы базового класса, и вызывается функция, которая обеспечивает наилучшее совпадение.  
   
- Ключевое слово `__super` может использоваться только в теле функции\-члена.  
+ Ключевое слово `__super` может использоваться только в теле функции-члена.  
   
- Ключевое слово `__super` не может использоваться с объявлением using.  Дополнительные сведения см. в разделе [Объявление using](../cpp/using-declaration.md).  
+ Ключевое слово `__super` не может использоваться с объявлением using. В разделе [объявление using](../cpp/using-declaration.md) для получения дополнительной информации.  
   
- В связи с введением [атрибутов](../windows/cpp-attributes-reference.md), внедряющих код, код может содержать один или несколько базовых классов с неизвестными именами, но включающих в себя методы, которые требуется вызвать.  
+ С появлением [атрибуты](../windows/cpp-attributes-reference.md) , внедряющих код, код может содержать один или несколько базовых классов, имена которых не всегда известно, но которые содержат методы, которые требуется вызвать.  
   
-## Пример  
+## <a name="example"></a>Пример  
   
 ```  
 // deriv_super.cpp  
@@ -71,7 +88,7 @@ struct D : B1, B2 {
 };  
 ```  
   
- **Завершение блока, относящегося только к системам Microsoft**  
+ **Завершение блока, относящегося только к системам Майкрософт**  
   
-## См. также  
- [Ключевые слова в C\+\+](../cpp/keywords-cpp.md)
+## <a name="see-also"></a>См. также  
+ [Ключевые слова](../cpp/keywords-cpp.md)

@@ -1,40 +1,54 @@
 ---
-title: "Базовые классы | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "базовые классы"
-  - "базовые классы, виртуальные"
-  - "производные классы, множество оснований"
-  - "наследование, несколько"
-  - "множественное наследование, базовые классы"
-  - "виртуальные базовые классы"
+title: "Базовые классы | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-language
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+dev_langs:
+- C++
+helpviewer_keywords:
+- inheritance, multiple
+- base classes, virtual
+- derived classes, multiple bases
+- multiple inheritance, base classes
+- virtual base classes
+- base classes
 ms.assetid: 6e6d54d0-6f21-4a16-9103-22935d98f596
 caps.latest.revision: 7
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 7
----
-# Базовые классы
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
+ms.openlocfilehash: 6b08321ffb027901683a4f85960579625ce98cc2
+ms.contentlocale: ru-ru
+ms.lasthandoff: 09/25/2017
 
-Процесс наследования создает новый производный класс, который состоит из членов базового класса или классов и всех новых элементов, добавленных производным классом.  В множественном наследовании можно создать граф наследования, где один и тот же базовый класс является частью нескольких производных классов.  На следующем рисунке показан такой граф.  
+---
+# <a name="base-classes"></a>Базовые классы
+Процесс наследования создает новый производный класс, который состоит из членов базового класса или классов и всех новых элементов, добавленных производным классом. В множественном наследовании можно создать граф наследования, где один и тот же базовый класс является частью нескольких производных классов. На следующем рисунке показан такой граф.  
   
- ![Несколько экземпляров базового класса](../cpp/media/vc38xn1.png "vc38XN1")  
+ ![Несколько экземпляров базового класса](../cpp/media/vc38xn1.gif "vc38XN1")  
 Несколько экземпляров одного базового класса  
   
- На рисунке представлены наглядные представления компонентов `CollectibleString` и `CollectibleSortable`.  Однако базовый класс \(`Collectible`\) находится в `CollectibleSortableString` на протяжении путей `CollectibleString` и `CollectibleSortable`.  Для устранения этой избыточности такие классы при наследовании можно объявлять как виртуальные базовые классы.  
+ На рисунке представлены наглядные представления компонентов `CollectibleString` и `CollectibleSortable`. Однако базовый класс (`Collectible`) находится в `CollectibleSortableString` на протяжении путей `CollectibleString` и `CollectibleSortable`. Для устранения этой избыточности такие классы при наследовании можно объявлять как виртуальные базовые классы.  
   
- Сведения об объявлении виртуальных базовых классов и составлении объектов с виртуальными базовыми классами см. в разделе [Виртуальные базовые классы](../Topic/Virtual%20Base%20Classes.md).  
-  
-## См. также  
- [Общие сведения о производных классах](../misc/overview-of-derived-classes.md)
+

@@ -1,36 +1,53 @@
 ---
-title: "Компоновка в именах в области блока | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "область действия блока [C++]"
-  - "внешняя компоновка, правила связи областей"
-  - "компоновка [C++], правила связи областей"
-  - "имена [C++], правила связи областей"
-  - "область [C++], правила связи"
+title: "Компоновка в именах в области видимости блока | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-language
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+dev_langs:
+- C++
+helpviewer_keywords:
+- scope [C++], linkage rules
+- linkage [C++], scope linkage rules
+- names [C++], scope linkage rules
+- block scope [C++]
+- external linkage, scope linkage rules
 ms.assetid: 73efa91a-f761-47f7-bbd9-9f9e3508e218
 caps.latest.revision: 8
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 8
----
-# Компоновка в именах в области блока
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+translation.priority.ht:
+- cs-cz
+- de-de
+- es-es
+- fr-fr
+- it-it
+- ja-jp
+- ko-kr
+- pl-pl
+- pt-br
+- ru-ru
+- tr-tr
+- zh-cn
+- zh-tw
+ms.translationtype: HT
+ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
+ms.openlocfilehash: de093c90e0da4a906d8aefebfb7048733c1a1f1d
+ms.contentlocale: ru-ru
+ms.lasthandoff: 09/25/2017
 
-Следующие правила компоновки применяются к именам с областью видимости "блок" \(локальные имена\).  
+---
+# <a name="linkage-in-names-with-block-scope"></a>Компоновка в именах в области видимости блока
+Следующие правила компоновки применяются к именам с областью видимости блока (локальные имена).  
   
--   Имена, объявленные как `extern`, имеют внешние ссылки. Исключение составляют случаи, когда они ранее были объявлены как **статические**.  
+-   Имена, объявленные как `extern` имеют внешнюю компоновку, если ранее они были объявлены как **статических**.  
   
--   Все остальные имена с областью видимости "блок" не имеют компоновки.  
+-   Все остальные имена с областью видимости блока не имеют компоновки.  
   
-## См. также  
+## <a name="see-also"></a>См. также  
  [Программа и компоновка](../cpp/program-and-linkage-cpp.md)
