@@ -1,34 +1,37 @@
 ---
-title: "Ошибка компилятора C2092 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C2092"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C2092"
+title: "Ошибка компилятора C2092 | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C2092
+dev_langs:
+- C++
+helpviewer_keywords:
+- C2092
 ms.assetid: 037e44ae-16c8-489a-a512-dcdf7f7795a6
 caps.latest.revision: 8
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 8
----
-# Ошибка компилятора C2092
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 45178f653871aea85071aa5df643ebd579f05419
+ms.contentlocale: ru-ru
+ms.lasthandoff: 10/09/2017
 
-"имя массива" : тип элемента массива не может быть функцией  
+---
+# <a name="compiler-error-c2092"></a>Ошибка компилятора C2092
+Тип элемента массива «имя массива» не может быть функцией  
   
- Массивы функций недопустимы.  Используйте массив указателей на функции.  
+ Массивы функций не разрешены. Используйте массив указателей на функции.  
   
-## Пример  
+## <a name="example"></a>Пример  
  Следующий пример приводит к возникновению ошибки C2092:  
   
 ```  
@@ -37,8 +40,8 @@ typedef void (F) ();
 typedef F AT[10];   // C2092  
 ```  
   
-## Пример  
- Возможный способ устранения данной ошибки:  
+## <a name="example"></a>Пример  
+ Возможное решение:  
   
 ```  
 // C2092b.cpp  

@@ -1,36 +1,39 @@
 ---
-title: "Ошибка компилятора C2274 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C2274"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C2274"
+title: "Ошибка компилятора C2274 | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C2274
+dev_langs:
+- C++
+helpviewer_keywords:
+- C2274
 ms.assetid: 8e874903-f499-45ef-8291-f821eee4cc1c
 caps.latest.revision: 9
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 9
----
-# Ошибка компилятора C2274
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 4315d1cfef9a0583b1f44c8caa264378e32f1a35
+ms.contentlocale: ru-ru
+ms.lasthandoff: 10/09/2017
 
-"type": недопустимо в качестве выражения с правой стороны оператора "."  
+---
+# <a name="compiler-error-c2274"></a>Ошибка компилятора C2274
+«Тип»: недопустимо в качестве правой стороны '.' оператор  
   
- В качестве правого операнда оператора доступа к членам \(.\) используется тип.  
+ Тип отображается как правый операнд оператора доступа к членам (.).  
   
- Эта ошибка может быть вызвана попыткой обращения к преобразованию типа, определенного пользователем.  Используйте ключевое слово `operator` между точкой и типом `type`.  
+ Эта ошибка может быть вызвано при обращении к преобразования определяемого пользователем типа. Используйте ключевое слово `operator` между период и `type`.  
   
- Следующий пример приводит к возникновению ошибки C2286:  
+ При компиляции следующего примера возникнет ошибка C2286:  
   
 ```  
 // C2274.cpp  

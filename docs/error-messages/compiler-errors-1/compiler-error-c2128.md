@@ -1,32 +1,35 @@
 ---
-title: "Ошибка компилятора C2128 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "c2128"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C2128"
+title: "Ошибка компилятора C2128 | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- c2128
+dev_langs:
+- C++
+helpviewer_keywords:
+- C2128
 ms.assetid: 08cbf734-75b3-49f2-9026-9b319947612d
 caps.latest.revision: 10
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 10
----
-# Ошибка компилятора C2128
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: d0739af6c84b2dc1a7f86c5cb4843ce66e85bf85
+ms.contentlocale: ru-ru
+ms.lasthandoff: 10/09/2017
 
-"функция" : директива pragma alloc\_text\/same\_seg применима только к функциям с компоновкой C  
+---
+# <a name="compiler-error-c2128"></a>Ошибка компилятора C2128
+«функция»: alloc_text и same_seg применимы только к функциям с компоновкой C  
   
- Директива `pragma` `alloc_text` может использоваться только с функциями, для которых объявлена компоновка C.  
+ `pragma``alloc_text` может использоваться только с помощью функции объявлены компоновки C.  
   
  Следующий пример приводит к возникновению ошибки C2128:  
   

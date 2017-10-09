@@ -1,34 +1,37 @@
 ---
-title: "Ошибка компилятора C2039 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C2039"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C2039"
+title: "Ошибка компилятора C2039 | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C2039
+dev_langs:
+- C++
+helpviewer_keywords:
+- C2039
 ms.assetid: f9dfd521-9b36-4454-a69c-d63f45b606bb
 caps.latest.revision: 19
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 19
----
-# Ошибка компилятора C2039
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 0a2fc962926a4a4d12232a9f785e7254fbcdb3f1
+ms.contentlocale: ru-ru
+ms.lasthandoff: 10/09/2017
 
-"идентификатор1": не является членом "идентификатора2"  
+---
+# <a name="compiler-error-c2039"></a>Ошибка компилятора C2039
+«идентификатор1»: не является членом «идентификатор2»  
   
  Код неправильно вызывает или ссылается на член структуры, класса или объединения.  
   
-## Пример  
+## <a name="example"></a>Пример  
  В следующем примере возникает ошибка C2039.  
   
 ```  
@@ -43,7 +46,7 @@ int main() {
 }  
 ```  
   
-## Пример  
+## <a name="example"></a>Пример  
  В следующем примере возникает ошибка C2039.  
   
 ```  
@@ -57,7 +60,7 @@ int main() {
 }  
 ```  
   
-## Пример  
+## <a name="example"></a>Пример  
  В следующем примере возникает ошибка C2039.  
   
 ```  
@@ -74,8 +77,8 @@ int S::get_Count() { return 0; }   // C2039
 int S::Count::get() { return 0; }   // OK  
 ```  
   
-## Пример  
- Ошибка C2039 также может возникнуть при неправильной попытке обратиться к индексатору по умолчанию.  В следующем примере определяется компонент, написанный на языке C\#.  
+## <a name="example"></a>Пример  
+ Ошибка C2039 также может возникать при попытке доступа к индексатору по умолчанию неправильно. В следующем примере определяется компонент, написанный на языке C#.  
   
 ```  
 // C2039_d.cs  
@@ -90,7 +93,7 @@ public class B {
 };  
 ```  
   
-## Пример  
+## <a name="example"></a>Пример  
  В следующем примере возникает ошибка C2039.  
   
 ```  
@@ -108,8 +111,8 @@ int main() {
 }  
 ```  
   
-## Пример  
- Ошибка C2039 также может возникнуть при использовании универсальных шаблонов.  В следующем примере возникает ошибка C2039.  
+## <a name="example"></a>Пример  
+ Ошибка C2039 также может возникнуть при использовании универсальных шаблонов. В следующем примере возникает ошибка C2039.  
   
 ```  
 // C2039_f.cpp  
@@ -132,8 +135,8 @@ int main() {
 }  
 ```  
   
-## Пример  
- C2039 может возникнуть при попытке освобождения управляемых или неуправляемых ресурсов.  Дополнительные сведения см. в разделе [Деструкторы и завершения](../../dotnet/how-to-define-and-consume-classes-and-structs-cpp-cli.md#BKMK_Destructors_and_finalizers).  
+## <a name="example"></a>Пример  
+ Ошибка C2039 может возникнуть при попытке освобождения управляемых и неуправляемых ресурсов. Дополнительные сведения см. в разделе [деструкторы и методы завершения](../../dotnet/how-to-define-and-consume-classes-and-structs-cpp-cli.md#BKMK_Destructors_and_finalizers).  
   
  В следующем примере возникает ошибка C2039.  
   

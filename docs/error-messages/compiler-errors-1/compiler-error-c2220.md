@@ -1,41 +1,44 @@
 ---
-title: "Ошибка компилятора C2220 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C2220"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C2220"
+title: "Ошибка компилятора C2220 | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C2220
+dev_langs:
+- C++
+helpviewer_keywords:
+- C2220
 ms.assetid: d610802c-64d7-40ad-a2a6-0ed0b6815a6c
 caps.latest.revision: 12
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 12
----
-# Ошибка компилятора C2220
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: dc31519b2153c66ea9bab42f536ba7c6be5b2a10
+ms.contentlocale: ru-ru
+ms.lasthandoff: 10/09/2017
 
-Предупреждение обработано как ошибка, объектный файл не создан  
+---
+# <a name="compiler-error-c2220"></a>Ошибка компилятора C2220
+Предупреждение, обрабатываемое как ошибка, объектный файл не создан  
   
- [\/WX](../../build/reference/compiler-option-warning-level.md) заставляет компилятор обрабатывать все предупреждения как ошибки.  Поскольку возникла ошибка, объект или исполняемый файл не был создан.  
+ [/ WX](../../build/reference/compiler-option-warning-level.md) указывает компилятору обрабатывать все предупреждения как ошибки. Из-за ошибки, объект или исполняемый файл был создан.  
   
- Эта ошибка появляется только при флажок **\/WX** задания и предупреждение возникает во время компиляции.  Чтобы устранить эту ошибку, необходимо удалить все предупреждения в проекте.  
+ Эта ошибка появляется, только когда **/WX** установлен флаг и возникновении предупреждения во время компиляции. Чтобы устранить эту ошибку, необходимо исключить каждое из них в проекте.  
   
-### Чтобы устранить, используйте один из следующих методов  
+### <a name="to-fix-use-one-of-the-following-techniques"></a>Чтобы устранить проблему, используйте один из следующих способов  
   
--   Исправить проблемы, вызывающие предупреждения в проекте.  
+-   Устранение проблем, которые выводят предупреждения в проекте.  
   
--   Компилировать в нижнем предупреждение уровень\- для примере используйте **\/W3** вместо **\/W4**.  
+-   На более низком уровне предупреждений компиляции — например, использовать **/W3** вместо **/W4**.  
   
--   Используйте директиву pragma [warning](../../preprocessor/warning.md), чтобы отключить или запретить определенное предупреждение.  
+-   Используйте [предупреждение](../../preprocessor/warning.md) pragma, чтобы отключить или запретить конкретное предупреждение.  
   
--   Не используйте **\/WX** компилироваться.
+-   Не используйте **/WX** для компиляции.

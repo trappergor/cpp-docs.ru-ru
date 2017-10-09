@@ -1,32 +1,35 @@
 ---
-title: "Ошибка компилятора C2106 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C2106"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C2106"
+title: "Ошибка компилятора C2106 | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C2106
+dev_langs:
+- C++
+helpviewer_keywords:
+- C2106
 ms.assetid: d5c91a2e-04e4-4770-8478-788b98c52a53
 caps.latest.revision: 8
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 8
----
-# Ошибка компилятора C2106
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 36196b87acfd2cd7aa064c414b2e9d0f4a2f7ead
+ms.contentlocale: ru-ru
+ms.lasthandoff: 10/09/2017
 
-\<оператор\> : левый операнд должен быть L\-value  
+---
+# <a name="compiler-error-c2106"></a>Ошибка компилятора C2106
+«оператор»: левый операнд должен быть l значение  
   
- Оператор должен быть L\-value, поскольку это левый операнд.  
+ Как левый операнд оператора должен иметь l значением.  
   
  Следующий пример приводит к возникновению ошибки C2106:  
   

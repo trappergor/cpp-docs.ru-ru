@@ -1,32 +1,35 @@
 ---
-title: "Ошибка компилятора C2254 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C2254"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C2254"
+title: "Ошибка компилятора C2254 | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C2254
+dev_langs:
+- C++
+helpviewer_keywords:
+- C2254
 ms.assetid: 49bb3d7e-3bdf-4af6-937c-fa627be412a9
 caps.latest.revision: 9
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 9
----
-# Ошибка компилятора C2254
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: cf8eb577b027b1d6cd4b62b28cb0da785349091f
+ms.contentlocale: ru-ru
+ms.lasthandoff: 10/09/2017
 
-"функция": в дружественной функции не допускаются чистый спецификатор или абстрактный спецификатор переопределения  
+---
+# <a name="compiler-error-c2254"></a>Ошибка компилятора C2254
+«функция»: чистый спецификатор или абстрактный спецификатор, не допускается в дружественной функции переопределения  
   
- Функция `friend` задается как чистая `virtual`.  
+ Объект `friend` указывается как чистая функция `virtual`.  
   
  Следующий пример приводит к возникновению ошибки C2254:  
   
