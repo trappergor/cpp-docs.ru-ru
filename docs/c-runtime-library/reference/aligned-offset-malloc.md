@@ -1,49 +1,52 @@
 ---
-title: "_aligned_offset_malloc | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-apiname: 
-  - "_aligned_offset_malloc"
-apilocation: 
-  - "msvcrt.dll"
-  - "msvcr80.dll"
-  - "msvcr90.dll"
-  - "msvcr100.dll"
-  - "msvcr100_clr0400.dll"
-  - "msvcr110.dll"
-  - "msvcr110_clr0400.dll"
-  - "msvcr120.dll"
-  - "msvcr120_clr0400.dll"
-  - "ucrtbase.dll"
-  - "api-ms-win-crt-heap-l1-1-0.dll"
-apitype: "DLLExport"
-f1_keywords: 
-  - "_aligned_offset_malloc"
-  - "aligned_offset_malloc"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "_aligned_offset_malloc - функция"
-  - "aligned_offset_malloc - функция"
+title: "_aligned_offset_malloc | Документы Майкрософт"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-standard-libraries
+ms.tgt_pltfrm: 
+ms.topic: article
+apiname:
+- _aligned_offset_malloc
+apilocation:
+- msvcrt.dll
+- msvcr80.dll
+- msvcr90.dll
+- msvcr100.dll
+- msvcr100_clr0400.dll
+- msvcr110.dll
+- msvcr110_clr0400.dll
+- msvcr120.dll
+- msvcr120_clr0400.dll
+- ucrtbase.dll
+- api-ms-win-crt-heap-l1-1-0.dll
+apitype: DLLExport
+f1_keywords:
+- _aligned_offset_malloc
+- aligned_offset_malloc
+dev_langs:
+- C++
+helpviewer_keywords:
+- _aligned_offset_malloc function
+- aligned_offset_malloc function
 ms.assetid: 447681a3-7c95-4655-86ba-fa3a4ca4c521
 caps.latest.revision: 17
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 17
----
-# _aligned_offset_malloc
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 7322f5a3fbf7bf3d9352181a68db17fad4bc9fcb
+ms.contentlocale: ru-ru
+ms.lasthandoff: 10/09/2017
 
-Выделяет память по определенной границе выравнивания.  
+---
+# <a name="alignedoffsetmalloc"></a>_aligned_offset_malloc
+Размещение памяти на указанной границе выравнивания.  
   
-## Синтаксис  
+## <a name="syntax"></a>Синтаксис  
   
 ```  
 void * _aligned_offset_malloc(  
@@ -53,36 +56,36 @@ void * _aligned_offset_malloc(
 );  
 ```  
   
-#### Параметры  
- \[входящий\] `size`  
+#### <a name="parameters"></a>Параметры  
+ [in] `size`  
  Размер запрошенного выделения памяти.  
   
- \[входящий\] `alignment`  
- Значение выравнивания, которое должно быть целочисленной степенью двойки.  
+ [входной] `alignment`  
+ Значение выравнивания, которое должно быть целой степенью числа 2.  
   
- \[входящий\] `offset`  
- Смещение в выделении памяти для обеспечения выравнивания.  
+ [входной] `offset`  
+ Смещение в выделение памяти для принудительного выполнения выравнивания.  
   
-## Возвращаемое значение  
- Указатель на блок памяти, который был выделен, или `NULL` , если операция завершилась неудачно.  
+## <a name="return-value"></a>Возвращаемое значение  
+ Указатель на выделенный блок памяти или значение `NULL` в случае сбоя операции.  
   
-## Заметки  
- `_aligned_offset_malloc` удобна, когда выравнивание необходимо во вложенном элементе; например, если выравнивание было необходимо во вложенном классе.  
+## <a name="remarks"></a>Примечания  
+ `_aligned_offset_malloc` можно использовать в ситуациях, когда необходимо выравнивание вложенного элемента, например, если требуется выравнивание вложенного класса.  
   
- `_aligned_offset_malloc` основана на `malloc`; дополнительные сведения см. в разделе [malloc](../../c-runtime-library/reference/malloc.md).  
+ Функция `_aligned_offset_malloc` основана на функции `malloc`. Дополнительные сведения см. в разделе [malloc](../../c-runtime-library/reference/malloc.md).  
   
- `_aligned_offset_malloc` помечена `__declspec(noalias)` и `__declspec(restrict)`, что означает, что функция гарантированно не изменит глобальные переменные, а для возвращаемого указателя не будет создан псевдоним.  Дополнительные сведения см. в разделах [noalias](../../cpp/noalias.md) и [restrict](../../cpp/restrict.md).  
+ Функция `_aligned_offset_malloc` имеет метки `__declspec(noalias)` и `__declspec(restrict)`, что означает, что функция гарантированно не изменит глобальные переменные, а для возвращаемого указателя не будет создан псевдоним. Дополнительные сведения см. в разделах [noalias](../../cpp/noalias.md) и [restrict](../../cpp/restrict.md).  
   
- Эта функция устанавливает `errno` в значение `ENOMEM`, выделение памяти завершилось неудачно, или если запрошенный размер был больше `_HEAP_MAXREQ`.  Дополнительные сведения о `errno` см. в разделе [errno, \_doserrno, \_sys\_errlist, and \_sys\_nerr](../Topic/errno,%20_doserrno,%20_sys_errlist,%20and%20_sys_nerr.md).  Кроме того, `_aligned_offset_malloc` проверяет свои параметры.  Если `alignment` не степень двойки, или если `offset` больше или равно `size` и отлично от нуля, эта функция вызывает обработчик недопустимого параметра, как описано в разделе [Проверка параметров](../../c-runtime-library/parameter-validation.md).  Если продолжение выполнения разрешено, эта функция возвращает `NULL` и устанавливает `errno` в значение `EINVAL`.  
+ Эта функция задает для `errno` значение `ENOMEM` в случае сбоя выделения памяти или если запрошенный размер был больше `_HEAP_MAXREQ`. Дополнительные сведения о функции `errno` см. в разделе [errno, _doserrno, _sys_errlist и _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md). Кроме того, `_aligned_offset_malloc` проверяет свои параметры. Если значение `alignment` не является степенью числа 2 или `offset` больше или равно `size` и не равно нулю, эта функция вызывает обработчик недопустимых параметров, как описано в разделе [Проверка параметров](../../c-runtime-library/parameter-validation.md). Если продолжение выполнения разрешено, эта функция возвращает `NULL` и задает для `errno` значение `EINVAL`.  
   
-## Требования  
+## <a name="requirements"></a>Требования  
   
 |Подпрограмма|Обязательный заголовок|  
-|------------------|----------------------------|  
-|`_aligned_offset_malloc`|\<malloc.h\>|  
+|-------------|---------------------|  
+|`_aligned_offset_malloc`|\<malloc.h>|  
   
-## Пример  
- Дополнительные сведения см. в разделе [\_aligned\_malloc](../../c-runtime-library/reference/aligned-malloc.md)  
+## <a name="example"></a>Пример  
+ Дополнительные сведения см. в разделе [_aligned_malloc](../../c-runtime-library/reference/aligned-malloc.md).  
   
-## См. также  
+## <a name="see-also"></a>См. также  
  [Выравнивание данных](../../c-runtime-library/data-alignment.md)

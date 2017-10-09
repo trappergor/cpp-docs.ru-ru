@@ -1,42 +1,47 @@
 ---
-title: "Добавление поставщика OLE DB ATL | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "поставщики OLE DB библиотеки ATL"
-  - "проекты ATL, добавление поставщиков ATL OLE DB"
-  - "OLE DB, добавление поставщиков ATL OLE DB в проект"
+title: "Добавление поставщика ATL OLE DB | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+dev_langs:
+- C++
+helpviewer_keywords:
+- OLE DB, adding ATL OLE DB provider to projects
+- ATL projects, adding ATL OLE DB providers
+- ATL OLE DB providers
 ms.assetid: 26fba1e3-880f-4bc6-90e5-2096a48a3a6c
 caps.latest.revision: 12
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 12
----
-# Добавление поставщика OLE DB ATL
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.translationtype: MT
+ms.sourcegitcommit: c55726a1728185f699afbac4ba68a6dc0f70c2bf
+ms.openlocfilehash: b71664847041d54d6aa86b1c013627e7ad7029d0
+ms.contentlocale: ru-ru
+ms.lasthandoff: 10/09/2017
 
-Этот мастер используется для добавления поставщика OLE DB ATL в проект.  Поставщик OLE DB ATL состоит из классов источника данных, сеанса, команды и набора строк.  Проект должен быть создан как COM\-приложение ATL.  
+---
+# <a name="adding-an-atl-ole-db-provider"></a>Добавление поставщика ATL OLE DB
+Этот мастер используется для добавления поставщика ATL OLE DB в проект. Поставщик ATL OLE DB состоит из источника данных, сеанса, команды и классы набора строк. Проект должен быть создан как ATL COM-приложение.  
   
-### Добавление в проект поставщика OLE DB ATL  
+### <a name="to-add-an-atl-ole-db-provider-to-your-project"></a>Чтобы добавить поставщика ATL OLE DB в проект  
   
-1.  Щелкните проект правой кнопкой мыши в окне классов.  В контекстном меню выберите команду **Добавить**, а затем выберите **Добавить класс**.  
+1.  В представлении классов щелкните правой кнопкой мыши проект. В контекстном меню щелкните **добавить** и нажмите кнопку **Добавление класса**.  
   
-2.  В папке Visual C\+\+ дважды щелкните значок **Поставщик OLE DB ATL** или выделите его и нажмите кнопку **Открыть**.  
+2.  В папке Visual C++ дважды щелкните **поставщика ATL OLE DB** значок или выберите его и нажмите кнопку **откройте**.  
   
-     Откроется мастер поставщиков OLE DB ATL.  
+     Откроется мастер поставщика ATL OLE DB.  
   
-3.  Задайте параметры, как указано в [мастере поставщиков OLE DB ATL](../../atl/reference/atl-ole-db-provider-wizard.md).  
+3.  Задайте параметры, как описано в [мастер поставщика ATL OLE DB](../../atl/reference/atl-ole-db-provider-wizard.md).  
   
-4.  Нажмите кнопку **Готово**, чтобы закрыть мастер. При этом заново созданный код поставщика OLE DB будет вставлен в проект.  
+4.  Нажмите кнопку **Готово** чтобы закрыть мастер, который будет вставлять только что созданный код поставщика OLE DB в своем проекте.  
   
-## См. также  
+## <a name="see-also"></a>См. также  
  [Добавление функциональных возможностей с помощью мастеров кода](../../ide/adding-functionality-with-code-wizards-cpp.md)
+
+

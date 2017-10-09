@@ -22,29 +22,15 @@ caps.latest.revision: 15
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 347e7bf7cd9173fb2815f44fc052ec23ab4055a6
-ms.openlocfilehash: 7456d441d7b3fb74f404f29c893c492feab10ed9
+ms.translationtype: MT
+ms.sourcegitcommit: c55726a1728185f699afbac4ba68a6dc0f70c2bf
+ms.openlocfilehash: 1e824c2b85e7f80ad93a1f154be7f2e680bd00a9
 ms.contentlocale: ru-ru
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 10/09/2017
 
 ---
 # <a name="atlbasemodule70-structure"></a>Структура _ATL_BASE_MODULE70
-Используемые любого проекта, использующего библиотеки ATL.  
+Используются проектом, которое использует ATL.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -69,7 +55,7 @@ struct _ATL_BASE_MODULE70 {
  **HInstance** для этого модуля (exe или dll).  
   
  `m_hInstResource`  
- По умолчанию экземпляр обработчика ресурсов.  
+ Дескриптор ресурса для экземпляра по умолчанию.  
   
  **m_bNT5orWin98**  
  Сведения о версии операционной системы. Используется внутренними механизмами ATL.  
@@ -84,10 +70,10 @@ struct _ATL_BASE_MODULE70 {
  Используется для синхронизации доступа к **m_rgResourceInstance** массива. Используется внутренними механизмами ATL.  
   
  **m_rgResourceInstance**  
- Массив, используемый для поиска ресурсов в экземпляры ресурсов, которых известно ATL. Используется внутренними механизмами ATL.  
+ Массив, используемый для поиска ресурсов во всех экземплярах ресурсов, в которых известно ATL. Используется внутренними механизмами ATL.  
   
 ## <a name="remarks"></a>Примечания  
- [_ATL_BASE_MODULE](atl-typedefs.md#_atl_base_module) определяется как typedef для `_ATL_BASE_MODULE70`.  
+ [_ATL_BASE_MODULE](atl-typedefs.md#_atl_base_module) определяется как typedef из `_ATL_BASE_MODULE70`.  
   
 ## <a name="requirements"></a>Требования  
  **Заголовок:** файле atlcore.h  

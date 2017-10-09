@@ -1,46 +1,49 @@
 ---
-title: "fwide | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-apiname: 
-  - "fwide"
-apilocation: 
-  - "msvcrt.dll"
-  - "msvcr80.dll"
-  - "msvcr90.dll"
-  - "msvcr100.dll"
-  - "msvcr100_clr0400.dll"
-  - "msvcr110.dll"
-  - "msvcr110_clr0400.dll"
-  - "msvcr120.dll"
-  - "msvcr120_clr0400.dll"
-  - "ucrtbase.dll"
-apitype: "DLLExport"
-f1_keywords: 
-  - "fwide"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "fwide - функция"
+title: "fwide | Документы Майкрософт"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-standard-libraries
+ms.tgt_pltfrm: 
+ms.topic: article
+apiname:
+- fwide
+apilocation:
+- msvcrt.dll
+- msvcr80.dll
+- msvcr90.dll
+- msvcr100.dll
+- msvcr100_clr0400.dll
+- msvcr110.dll
+- msvcr110_clr0400.dll
+- msvcr120.dll
+- msvcr120_clr0400.dll
+- ucrtbase.dll
+apitype: DLLExport
+f1_keywords:
+- fwide
+dev_langs:
+- C++
+helpviewer_keywords:
+- fwide function
 ms.assetid: a4641f5b-d74f-4946-95d5-53a64610d28d
 caps.latest.revision: 6
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 6
----
-# fwide
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.translationtype: MT
+ms.sourcegitcommit: 16d1bf59dfd4b3ef5f037aed9c0f6febfdf1a2e8
+ms.openlocfilehash: f10bd98a6dedba2181aa1d5ebba60f64dda093be
+ms.contentlocale: ru-ru
+ms.lasthandoff: 10/09/2017
 
+---
+# <a name="fwide"></a>fwide
 Не реализовано.  
   
-## Синтаксис  
+## <a name="syntax"></a>Синтаксис  
   
 ```  
 int fwide(  
@@ -49,23 +52,23 @@ int fwide(
 );  
 ```  
   
-#### Параметры  
+#### <a name="parameters"></a>Параметры  
  `stream`  
- Указатель на структуру `FILE` \(игнорируется\).  
+ Указатель на структуру `FILE` (игнорируется).  
   
  `mode`  
- Новая ширина потока: положительная для расширенных символов, отрицательная для byte, ноль, если оставить неизменной. \(Это значение игнорируется.\)  
+ Новая ширина потока: положительное значение для расширенных символов, отрицательное для байта, ноль, чтобы оставить без изменений. (Это значение игнорируется.)  
   
-## Возвращаемое значение  
- Эта функция в данный момент просто возвращает `mode`.  
+## <a name="return-value"></a>Возвращаемое значение  
+ Эта функция в настоящее время просто возвращает `mode`.  
   
-## Заметки  
- Текущая версия этой функции не соответствуют стандарту.  
+## <a name="remarks"></a>Примечания  
+ Текущая версия этой функции не соответствует стандарту.  
   
-## Требования  
+## <a name="requirements"></a>Требования  
   
 |Функция|Обязательный заголовок|  
-|-------------|----------------------------|  
-|`fwide`|\<wchar.h\>|  
+|--------------|---------------------|  
+|`fwide`|\<wchar.h>|  
   
- Для получения дополнительной информации см. [Совместимость](../../c-runtime-library/compatibility.md).
+ Дополнительные сведения см. в разделе [Совместимость](../../c-runtime-library/compatibility.md).

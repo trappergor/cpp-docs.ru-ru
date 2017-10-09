@@ -1,46 +1,49 @@
 ---
-title: "not_eq | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-apilocation: 
-  - "msvcrt.dll"
-  - "msvcr80.dll"
-  - "msvcr90.dll"
-  - "msvcr100.dll"
-  - "msvcr100_clr0400.dll"
-  - "msvcr110.dll"
-  - "msvcr110_clr0400.dll"
-  - "msvcr120.dll"
-  - "msvcr120_clr0400.dll"
-  - "ucrtbase.dll"
-apitype: "DLLExport"
-f1_keywords: 
-  - "not_eq"
-  - "std::not_eq"
-  - "std.not_eq"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "not_eq - функция"
+title: "not_eq | Документы Майкрософт"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-standard-libraries
+ms.tgt_pltfrm: 
+ms.topic: article
+apilocation:
+- msvcrt.dll
+- msvcr80.dll
+- msvcr90.dll
+- msvcr100.dll
+- msvcr100_clr0400.dll
+- msvcr110.dll
+- msvcr110_clr0400.dll
+- msvcr120.dll
+- msvcr120_clr0400.dll
+- ucrtbase.dll
+apitype: DLLExport
+f1_keywords:
+- not_eq
+- std::not_eq
+- std.not_eq
+dev_langs:
+- C++
+helpviewer_keywords:
+- not_eq function
 ms.assetid: d87ad299-8b50-4393-a57f-06f70e1f23fb
 caps.latest.revision: 12
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 12
----
-# not_eq
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.translationtype: MT
+ms.sourcegitcommit: 16d1bf59dfd4b3ef5f037aed9c0f6febfdf1a2e8
+ms.openlocfilehash: 55d31bbb9d7823161bd98d76884298f3cc089f4d
+ms.contentlocale: ru-ru
+ms.lasthandoff: 10/09/2017
 
-Альтернатива оператору \!\=.  
+---
+# <a name="noteq"></a>not_eq
+Альтернатива оператору !=.  
   
-## Синтаксис  
+## <a name="syntax"></a>Синтаксис  
   
 ```  
   
@@ -48,10 +51,10 @@ caps.handback.revision: 12
   
 ```  
   
-## Заметки  
- Макрос создает оператор \!\=.  
+## <a name="remarks"></a>Примечания  
+ Макрос создает оператор !=.  
   
-## Пример  
+## <a name="example"></a>Пример  
   
 ```  
 // iso646_not_eq.cpp  
@@ -72,7 +75,10 @@ int main( )
 }  
 ```  
   
-  **a не равно b**  
-**a не равно b**   
-## Требования  
- **Заголовок:** \<iso646.h\>
+```Output  
+a is not equal to b  
+a is not equal to b  
+```  
+  
+## <a name="requirements"></a>Требования  
+ **Заголовок:** \<iso646.h>

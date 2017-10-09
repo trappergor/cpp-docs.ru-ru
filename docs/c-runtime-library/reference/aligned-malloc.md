@@ -1,49 +1,52 @@
 ---
-title: "_aligned_malloc | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-apiname: 
-  - "_aligned_malloc"
-apilocation: 
-  - "msvcrt.dll"
-  - "msvcr80.dll"
-  - "msvcr90.dll"
-  - "msvcr100.dll"
-  - "msvcr100_clr0400.dll"
-  - "msvcr110.dll"
-  - "msvcr110_clr0400.dll"
-  - "msvcr120.dll"
-  - "msvcr120_clr0400.dll"
-  - "ucrtbase.dll"
-  - "api-ms-win-crt-heap-l1-1-0.dll"
-apitype: "DLLExport"
-f1_keywords: 
-  - "_aligned_malloc"
-  - "alligned_malloc"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "_aligned_malloc - функция"
-  - "aligned_malloc - функция"
+title: "_aligned_malloc | Документы Майкрософт"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-standard-libraries
+ms.tgt_pltfrm: 
+ms.topic: article
+apiname:
+- _aligned_malloc
+apilocation:
+- msvcrt.dll
+- msvcr80.dll
+- msvcr90.dll
+- msvcr100.dll
+- msvcr100_clr0400.dll
+- msvcr110.dll
+- msvcr110_clr0400.dll
+- msvcr120.dll
+- msvcr120_clr0400.dll
+- ucrtbase.dll
+- api-ms-win-crt-heap-l1-1-0.dll
+apitype: DLLExport
+f1_keywords:
+- _aligned_malloc
+- alligned_malloc
+dev_langs:
+- C++
+helpviewer_keywords:
+- aligned_malloc function
+- _aligned_malloc function
 ms.assetid: fb788d40-ee94-4039-aa4d-97d73dab1ca0
 caps.latest.revision: 25
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 25
----
-# _aligned_malloc
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.translationtype: MT
+ms.sourcegitcommit: 16d1bf59dfd4b3ef5f037aed9c0f6febfdf1a2e8
+ms.openlocfilehash: e81ecad3276abc34243f18a8df367d82122a1064
+ms.contentlocale: ru-ru
+ms.lasthandoff: 10/09/2017
 
+---
+# <a name="alignedmalloc"></a>_aligned_malloc
 Размещение памяти на указанной границе выравнивания.  
   
-## Синтаксис  
+## <a name="syntax"></a>Синтаксис  
   
 ```  
 void * _aligned_malloc(  
@@ -52,30 +55,30 @@ void * _aligned_malloc(
 );  
 ```  
   
-#### Параметры  
+#### <a name="parameters"></a>Параметры  
  `size`  
  Размер запрошенного размещения памяти.  
   
  `alignment`  
  Значение выравнивания, которое должно быть целочисленной степенью числа 2.  
   
-## Возвращаемое значение  
- Указатель на выделенный блок памяти или значение `NULL` в случае сбоя операции.  Указатель делится на `alignment`.  
+## <a name="return-value"></a>Возвращаемое значение  
+ Указатель на выделенный блок памяти или значение `NULL` в случае сбоя операции. Указатель делится на `alignment`.  
   
-## Заметки  
+## <a name="remarks"></a>Примечания  
  Функция `_aligned_malloc` основана на функции [malloc](../../c-runtime-library/reference/malloc.md).  
   
- Функция `_aligned_malloc` имеет метки `__declspec(noalias)` и `__declspec(restrict)`, что означает, что функция гарантированно не изменит глобальные переменные, а для возвращаемого указателя не будет создан псевдоним.  Дополнительные сведения см. в разделах [noalias](../../cpp/noalias.md) и [restrict](../../cpp/restrict.md).  
+ Функция `_aligned_malloc` имеет метки `__declspec(noalias)` и `__declspec(restrict)`, что означает, что функция гарантированно не изменит глобальные переменные, а для возвращаемого указателя не будет создан псевдоним. Дополнительные сведения см. в разделах [noalias](../../cpp/noalias.md) и [restrict](../../cpp/restrict.md).  
   
- Эта функция задает для `errno` значение `ENOMEM` в случае сбоя выделения памяти или если запрошенный размер был больше `_HEAP_MAXREQ`.  Дополнительные сведения о функции `errno` см. в разделе [errno, \_doserrno, \_sys\_errlist, and \_sys\_nerr](../Topic/errno,%20_doserrno,%20_sys_errlist,%20and%20_sys_nerr.md).  Кроме того, `_aligned_malloc` проверяет свои параметры.  Если `alignment` не является степенью числа 2 или `size` равен нулю, эта функция вызывает обработчик недопустимых параметров, как описано в разделе [Проверка параметров](../../c-runtime-library/parameter-validation.md).  Если продолжение выполнения разрешено, эта функция возвращает `NULL` и задает для `errno` значение `EINVAL`.  
+ Эта функция задает для `errno` значение `ENOMEM` в случае сбоя выделения памяти или если запрошенный размер был больше `_HEAP_MAXREQ`. Дополнительные сведения о функции `errno` см. в разделе [errno, _doserrno, _sys_errlist и _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md). Кроме того, `_aligned_malloc` проверяет свои параметры. Если `alignment` не является степенью числа 2 или `size` равен нулю, эта функция вызывает обработчик недопустимых параметров, как описано в разделе [Проверка параметров](../../c-runtime-library/parameter-validation.md). Если продолжение выполнения разрешено, эта функция возвращает `NULL` и задает для `errno` значение `EINVAL`.  
   
-## Требования  
+## <a name="requirements"></a>Требования  
   
 |Подпрограмма|Обязательный заголовок|  
-|------------------|----------------------------|  
-|`_aligned_malloc`|\<malloc.h\>|  
+|-------------|---------------------|  
+|`_aligned_malloc`|\<malloc.h>|  
   
-## Пример  
+## <a name="example"></a>Пример  
   
 ```  
 // crt_aligned_malloc.c  
@@ -150,9 +153,12 @@ int main() {
 }  
 ```  
   
-  **This pointer, 3280880, is aligned on 16**  
-**This pointer, 3280880, is aligned on 16**  
-**This pointer, 3280891, is offset by 5 on alignment of 16**  
-**This pointer, 3280891, is offset by 5 on alignment of 16**   
-## См. также  
+```Output  
+This pointer, 3280880, is aligned on 16  
+This pointer, 3280880, is aligned on 16  
+This pointer, 3280891, is offset by 5 on alignment of 16  
+This pointer, 3280891, is offset by 5 on alignment of 16  
+```  
+  
+## <a name="see-also"></a>См. также  
  [Выравнивание данных](../../c-runtime-library/data-alignment.md)

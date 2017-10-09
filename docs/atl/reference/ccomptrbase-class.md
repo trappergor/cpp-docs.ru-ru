@@ -30,25 +30,11 @@ caps.latest.revision: 19
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: d2d39abf526a58b8442107b5ee816f316ae841f5
-ms.openlocfilehash: 65541d9e6f15bcc56811fa6a5d9d168737131108
+ms.translationtype: MT
+ms.sourcegitcommit: c55726a1728185f699afbac4ba68a6dc0f70c2bf
+ms.openlocfilehash: 1e6bf79ce5de5d19468b3cbb230e16882483dc30
 ms.contentlocale: ru-ru
-ms.lasthandoff: 03/31/2017
+ms.lasthandoff: 10/09/2017
 
 ---
 # <a name="ccomptrbase-class"></a>Класс CComPtrBase
@@ -95,9 +81,9 @@ class CComPtrBase
 |[CComPtrBase::operator!](#operator_not)|Оператор NOT.|  
 |[CComPtrBase::operator &](#operator_amp)|& Оператор.|  
 |[CComPtrBase::operator *](#operator_star)|* Оператор.|  
-|[CComPtrBase::operator](#ccomptrbase__operator lt)|Меньше-оператор.|  
+|[CComPtrBase::operator <](#ccomptrbase__operator lt)|Меньше-оператор.|  
 |[CComPtrBase::operator ==](#operator_eq_eq)|Оператор равенства.|  
-|[CComPtrBase::operator->](#operator_ptr)|Оператор члены указателя.|  
+|[CComPtrBase::operator ->](#operator_ptr)|Оператор члены указателя.|  
   
 ### <a name="public-data-members"></a>Открытые члены данных  
   
@@ -238,7 +224,7 @@ bool IsEqualObject(IUnknown* pOther) throw();
   
 ### <a name="parameters"></a>Параметры  
  `pOther`  
- **IUnknown \*** для сравнения.  
+ **IUnknown \***  для сравнения.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
  Возвращает значение true, если объекты одинаковые.  

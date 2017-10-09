@@ -24,29 +24,15 @@ caps.latest.revision: 19
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 5a0c6a1062330f952bb8fa52bc934f6754465513
-ms.openlocfilehash: a06af7698afb24c1c2391b762673c7e3633018d4
+ms.translationtype: MT
+ms.sourcegitcommit: c55726a1728185f699afbac4ba68a6dc0f70c2bf
+ms.openlocfilehash: 8680fc73480fd95c8b2d613f716868d8162a96c8
 ms.contentlocale: ru-ru
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 10/09/2017
 
 ---
 # <a name="celementtraitsbase-class"></a>Класс CElementTraitsBase
-Этот класс предоставляет копии по умолчанию и переместить методы для класса коллекции.  
+Этот класс предоставляет копирования по умолчанию и переместить методы для класса коллекции.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -57,7 +43,7 @@ class CElementTraitsBase
   
 #### <a name="parameters"></a>Параметры  
  `T`  
- Тип данных, хранящихся в коллекции.  
+ Тип данных, хранимых в коллекции.  
   
 ## <a name="members"></a>Члены  
   
@@ -65,18 +51,18 @@ class CElementTraitsBase
   
 |Имя|Описание|  
 |----------|-----------------|  
-|[CElementTraitsBase::INARGTYPE](#inargtype)|Тип данных для добавления элементов в объекте класса коллекции.|  
-|[CElementTraitsBase::OUTARGTYPE](#outargtype)|Тип данных, использовать для получения элементов из объекта класса коллекции.|  
+|[CElementTraitsBase::INARGTYPE](#inargtype)|Тип данных, используемый для добавления элементов к такому объекту класса коллекции.|  
+|[CElementTraitsBase::OUTARGTYPE](#outargtype)|Тип данных для использования для получения элементов из объекта класса коллекции.|  
   
 ### <a name="public-methods"></a>Открытые методы  
   
 |Имя|Описание|  
 |----------|-----------------|  
-|[CElementTraitsBase::CopyElements](#copyelements)|Этот метод служит для копирования элементов в объекте класса коллекции.|  
+|[CElementTraitsBase::CopyElements](#copyelements)|Этот метод используется для копирования элементов в объекте класса коллекции.|  
 |[CElementTraitsBase::RelocateElements](#relocateelements)|Этот метод используется для перемещения элементов, хранящихся в объекте класса коллекции.|  
   
 ## <a name="remarks"></a>Примечания  
- Этот базовый класс определяет методы для копирование и перемещение элементов в класс коллекции. Оно используется классами [CDefaultElementTraits](../../atl/reference/cdefaultelementtraits-class.md), [CStringRefElementTraits](../../atl/reference/cstringrefelementtraits-class.md), и [CStringElementTraitsI](../../atl/reference/cstringelementtraitsi-class.md).  
+ Этот базовый класс определяет методы для копирования и перемещение элементов в классе коллекции. Он сейчас используется классами [CDefaultElementTraits](../../atl/reference/cdefaultelementtraits-class.md), [CStringRefElementTraits](../../atl/reference/cstringrefelementtraits-class.md), и [CStringElementTraitsI](../../atl/reference/cstringelementtraitsi-class.md).  
   
  Дополнительные сведения см. в разделе [классы коллекций ATL](../../atl/atl-collection-classes.md).  
   
@@ -84,7 +70,7 @@ class CElementTraitsBase
  **Заголовок:** atlcoll.h  
   
 ##  <a name="copyelements"></a>CElementTraitsBase::CopyElements  
- Этот метод служит для копирования элементов в объекте класса коллекции.  
+ Этот метод используется для копирования элементов в объекте класса коллекции.  
   
 ```
 static void CopyElements(
@@ -95,7 +81,7 @@ static void CopyElements(
   
 ### <a name="parameters"></a>Параметры  
  `pDest`  
- Указатель на первый элемент, который получит скопированные данные.  
+ Указатель на первый элемент, который получит копируемых данных.  
   
  `pSrc`  
  Указатель на первый элемент для копирования.  
@@ -107,14 +93,14 @@ static void CopyElements(
  Исходный и целевой элементы не должны перекрываться.  
   
 ##  <a name="inargtype"></a>CElementTraitsBase::INARGTYPE  
- Тип данных для добавления элементов в коллекцию.  
+ Тип данных, используемый для добавления элементов в коллекцию.  
   
 ```
 typedef const T& INARGTYPE;
 ```  
   
 ##  <a name="outargtype"></a>CElementTraitsBase::OUTARGTYPE  
- Тип данных, использовать для получения элементов из коллекции.  
+ Тип данных для использования для получения элементов из коллекции.  
   
 ```
 typedef T& OUTARGTYPE;
@@ -135,13 +121,13 @@ static void RelocateElements(
  Указатель на первый элемент, который получит перемещенный данные.  
   
  `pSrc`  
- Указатель на первый элемент для перемещения.  
+ Указатель на первый элемент в другое место.  
   
  `nElements`  
- Число элементов для перемещения.  
+ Количество элементов в другое место.  
   
 ### <a name="remarks"></a>Примечания  
- Этот метод вызывает метод [memmove](../../c-runtime-library/reference/memmove-wmemmove.md), которого достаточно для большинства типов данных. При перемещении объекты содержат указатели на свои собственные члены, этот метод необходимо переопределить.  
+ Этот метод вызывает метод [memmove](../../c-runtime-library/reference/memmove-wmemmove.md), что вполне достаточно для большинства типов данных. Перемещение объекты содержат указатели на свои собственные члены, этот метод необходимо переопределить.  
   
 ## <a name="see-also"></a>См. также  
  [Общие сведения о классе](../../atl/atl-class-overview.md)

@@ -22,25 +22,11 @@ caps.latest.revision: 19
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 050e7483670bd32f633660ba44491c8bb3fc462d
-ms.openlocfilehash: 01ff8a7205418583606cbfdb1c028d7097501e00
+ms.translationtype: MT
+ms.sourcegitcommit: c55726a1728185f699afbac4ba68a6dc0f70c2bf
+ms.openlocfilehash: 6d0e8c0a8ec941c7a7980b81fcd95df08298ea28
 ms.contentlocale: ru-ru
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 10/09/2017
 
 ---
 # <a name="iaxwinhostwindowlic-interface"></a>Интерфейс IAxWinHostWindowLic
@@ -58,13 +44,13 @@ interface IAxWinHostWindowLic : IAxWinHostWindow
   
 |||  
 |-|-|  
-|[CreateControlLic](#createcontrollic)|Создает лицензированный элемент управления и присоединяет его к объекту главного приложения.|  
-|[CreateControlLicEx](#createcontrollicex)|Создает лицензированный элемент управления, присоединяет его к объекту главного приложения и при необходимости устанавливает обработчик события.|  
+|[CreateControlLic](#createcontrollic)|Создает лицензированный элемент управления и прикрепляет его к объекту узла.|  
+|[CreateControlLicEx](#createcontrollicex)|Создает лицензированный элемент управления и прикрепляет его к объекту узла при необходимости устанавливает обработчик события.|  
   
 ## <a name="remarks"></a>Примечания  
  `IAxWinHostWindowLic`наследует от [IAxWinHostWindow](../../atl/reference/iaxwinhostwindow-interface.md) и добавляет методы, поддерживающие создание Лицензированные элементы управления.  
   
- В разделе [размещение AXHost с использованием ATL ActiveX элементы управления](../../atl/hosting-activex-controls-using-atl-axhost.md) для образца, использующего члены этого интерфейса.  
+ В разделе [размещение AXHost с использованием ATL ActiveX элементов управления](../../atl/hosting-activex-controls-using-atl-axhost.md) пример, использующий члены этого интерфейса.  
   
 ## <a name="requirements"></a>Требования  
  Определение этого интерфейса доступна как IDL или C++, как показано ниже.  
@@ -72,10 +58,10 @@ interface IAxWinHostWindowLic : IAxWinHostWindow
 |Определение типа|Файл|  
 |---------------------|----------|  
 |IDL|ATLIFace.idl|  
-|C++|Насколько (также входит в ATLBase.h)|  
+|C++|См (также входит в состав ATLBase.h)|  
   
 ##  <a name="createcontrollic"></a>IAxWinHostWindowLic::CreateControlLic  
- Создает лицензированный элемент управления, инициализирует его и размещает в окне, идентифицируемый `hWnd`.  
+ Создает лицензированный элемент управления, инициализирует его и размещает в окна, обозначенную `hWnd`.  
   
 ```
 STDMETHOD(CreateControlLic)(
@@ -87,7 +73,7 @@ STDMETHOD(CreateControlLic)(
   
 ### <a name="parameters"></a>Параметры  
  `bstrLic`  
- [in] BSTR, содержащее ключ лицензии для элемента управления.  
+ [in] BSTR, содержащий ключ лицензии для элемента управления.  
   
 ### <a name="remarks"></a>Примечания  
  В разделе [IAxWinHostWindow::CreateControl](../../atl/reference/iaxwinhostwindow-interface.md#createcontrol) описание оставшиеся параметры и возвращаемые значения.  
@@ -95,7 +81,7 @@ STDMETHOD(CreateControlLic)(
  Вызов этого метода эквивалентен вызову [IAxWinHostWindowLic::CreateControlLicEx](#createcontrollicex)  
   
 ### <a name="example"></a>Пример  
- В разделе [размещение AXHost с использованием ATL ActiveX элементы управления](../../atl/hosting-activex-controls-using-atl-axhost.md) пример, использующий `IAxWinHostWindowLic::CreateControlLic`.  
+ В разделе [размещение AXHost с использованием ATL ActiveX элементов управления](../../atl/hosting-activex-controls-using-atl-axhost.md) пример, использующий `IAxWinHostWindowLic::CreateControlLic`.  
   
 ##  <a name="createcontrollicex"></a>IAxWinHostWindowLic::CreateControlLicEx  
  Создает лицензированный элемент управления ActiveX, инициализирует его и размещает в указанном окне аналогично [IAxWinHostWindow::CreateControl](../../atl/reference/iaxwinhostwindow-interface.md#createcontrol).  
@@ -113,13 +99,13 @@ STDMETHOD(CreateControlLicEx)(
   
 ### <a name="parameters"></a>Параметры  
  `bstrLic`  
- [in] BSTR, содержащее ключ лицензии для элемента управления.  
+ [in] BSTR, содержащий ключ лицензии для элемента управления.  
   
 ### <a name="remarks"></a>Примечания  
  В разделе [IAxWinHostWindow::CreateControlEx](../../atl/reference/iaxwinhostwindow-interface.md#createcontrolex) описание оставшиеся параметры и возвращаемые значения.  
   
 ### <a name="example"></a>Пример  
- В разделе [размещение AXHost с использованием ATL ActiveX элементы управления](../../atl/hosting-activex-controls-using-atl-axhost.md) пример, использующий `IAxWinHostWindowLic::CreateControlLicEx`.
+ В разделе [размещение AXHost с использованием ATL ActiveX элементов управления](../../atl/hosting-activex-controls-using-atl-axhost.md) пример, использующий `IAxWinHostWindowLic::CreateControlLicEx`.
 
 
 

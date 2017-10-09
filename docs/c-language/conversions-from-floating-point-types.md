@@ -18,25 +18,11 @@ caps.latest.revision: 9
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Human Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: f9fa6126d27965f2d906bbfa877207f3fcedacbc
+ms.translationtype: HT
+ms.sourcegitcommit: 16d1bf59dfd4b3ef5f037aed9c0f6febfdf1a2e8
+ms.openlocfilehash: 4974edd25d0fcdd8d990b60459517bb1148c74ae
 ms.contentlocale: ru-ru
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 10/09/2017
 
 ---
 # <a name="conversions-from-floating-point-types"></a>Преобразования из типов с плавающей запятой
@@ -59,7 +45,7 @@ ms.lasthandoff: 02/24/2017
 |**float**|`char`|Преобразование в значение **long**; преобразование значения **long** в `char`|  
 |**float**|**short**|Преобразование в значение **long**; преобразование значения **long** в **short**|  
 |**float**|**long**|Усечение до десятичной запятой. Если результат слишком большой для представления в качестве значения **long**, результат не определен.|  
-|**float**|**unsigned short**|Преобразование в значение **long**; преобразование значения **long**в `unsigned` **short**|  
+|**float**|**unsigned short**|Преобразование в значение **long**; преобразование значения **long** в `unsigned` **short**|  
 |**float**|`unsigned long`|Преобразование в значение **long**; преобразование значения **long** в `unsigned` **long**|  
 |**float**|**double**|Изменение внутреннего представления|  
 |**float**|`long double`|Изменение внутреннего представления|  
@@ -72,7 +58,7 @@ ms.lasthandoff: 02/24/2017
 |`long double`|`char`|Преобразование в значение **float**; преобразование значения **float** в `char`|  
 |`long double`|**short**|Преобразование в значение **float**; преобразование значения **float** в **short**|  
 |`long double`|**long**|Усечение до десятичной запятой. Если результат слишком большой для представления в качестве значения **long**, результат не определен.|  
-|`long double`|**unsigned short**|Преобразование в значение **long**; преобразование значения **long**в `unsigned` **short**|  
+|`long double`|**unsigned short**|Преобразование в значение **long**; преобразование значения **long** в `unsigned` **short**|  
 |`long double`|`unsigned long`|Преобразование в значение **long**; преобразование значения **long** в `unsigned` **long**|  
 |`long double`|**float**|Представление в качестве значения **float**. Если значение **double** невозможно представить в точности как значение **float**, происходит потеря точности. Если значение слишком большое для представления в качестве значения **float**, результат не определен.|  
 |`long double`|**double**|Значение **long double** обрабатывается как **double**.|  

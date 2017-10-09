@@ -21,29 +21,15 @@ caps.latest.revision: 19
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 5a0c6a1062330f952bb8fa52bc934f6754465513
-ms.openlocfilehash: 5191327e5e60935829750c7d1e04ba89fcddc771
+ms.translationtype: MT
+ms.sourcegitcommit: c55726a1728185f699afbac4ba68a6dc0f70c2bf
+ms.openlocfilehash: 932969a5d06a3bd06755ec60d43b3257a4de9785
 ms.contentlocale: ru-ru
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 10/09/2017
 
 ---
 # <a name="cdefaulthashtraits-class"></a>Класс CDefaultHashTraits
-Этот класс предоставляет статические функции для вычисления хэш-значения.  
+Этот класс предоставляет статическую функцию для вычисления хэш-значения.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -54,7 +40,7 @@ class CDefaultHashTraits
   
 #### <a name="parameters"></a>Параметры  
  `T`  
- Тип данных, хранящихся в коллекции.  
+ Тип данных, хранимых в коллекции.  
   
 ## <a name="members"></a>Члены  
   
@@ -65,7 +51,7 @@ class CDefaultHashTraits
 |[CDefaultHashTraits::Hash](#hash)|(Статический) Эта функция вызывается для вычисления хэш-значение для данного элемента.|  
   
 ## <a name="remarks"></a>Примечания  
- Этот класс содержит одну статическую функцию, которая возвращает хэш-значение для данного элемента. Этот класс используется [CDefaultElementTraits класса](../../atl/reference/cdefaultelementtraits-class.md).  
+ Этот класс содержит один статическую функцию, которая возвращает значение хэша для данного элемента. Этот класс используется [CDefaultElementTraits класса](../../atl/reference/cdefaultelementtraits-class.md).  
   
  Дополнительные сведения см. в разделе [классы коллекций ATL](../../atl/atl-collection-classes.md).  
   
@@ -84,7 +70,7 @@ static ULONG Hash(const T& element) throw();
  Элемент.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
- Возвращает хэш-значение.  
+ Возвращает хэш-значения.  
   
 ### <a name="remarks"></a>Примечания  
  Значение по умолчанию алгоритм хеширования — очень простой: возвращаемое значение — число элементов. Переопределите эту функцию, если требуется более сложный алгоритм.  

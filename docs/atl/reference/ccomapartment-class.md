@@ -29,29 +29,15 @@ caps.latest.revision: 20
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 050e7483670bd32f633660ba44491c8bb3fc462d
-ms.openlocfilehash: 9359e2ab8c4a84ab66441e3eb8cfd39520fd4e8d
+ms.translationtype: MT
+ms.sourcegitcommit: c55726a1728185f699afbac4ba68a6dc0f70c2bf
+ms.openlocfilehash: beb2052a2dc7a8efbf6820c51dc2ff7a1f227795
 ms.contentlocale: ru-ru
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 10/09/2017
 
 ---
 # <a name="ccomapartment-class"></a>Класс CComApartment
-Этот класс предоставляет поддержку для управления помещения в модуле EXE-потоков в пул.  
+Этот класс обеспечивает поддержку для помещения в модуле EXE пула потоков управления.  
   
 > [!IMPORTANT]
 >  Этот класс и его члены не может использоваться в приложениях, выполняемых в среде выполнения Windows.  
@@ -75,7 +61,7 @@ class CComApartment
 |Имя|Описание|  
 |----------|-----------------|  
 |[CComApartment::Apartment](#apartment)|Отмечает начальный адрес потока.|  
-|[CComApartment::GetLockCount](#getlockcount)|Возвращает текущий счетчик блокировки потока.|  
+|[CComApartment::GetLockCount](#getlockcount)|Возвращает число блокировок текущего потока.|  
 |[CComApartment::Lock](#lock)|Увеличивает счетчик блокировки потока.|  
 |[CComApartment::Unlock](#unlock)|Уменьшает счетчик блокировки потока.|  
   
@@ -85,10 +71,10 @@ class CComApartment
 |----------|-----------------|  
 |[CComApartment::m_dwThreadID](#m_dwthreadid)|Содержит идентификатор потока.|  
 |[CComApartment::m_hThread](#m_hthread)|Содержит дескриптор потока.|  
-|[CComApartment::m_nLockCnt](#m_nlockcnt)|Содержит текущее число блокировки потока.|  
+|[CComApartment::m_nLockCnt](#m_nlockcnt)|Содержит число блокировок текущего потока.|  
   
 ## <a name="remarks"></a>Примечания  
- `CComApartment`используется [CComAutoThreadModule](../../atl/reference/ccomautothreadmodule-class.md) для управления подразделениями в модуле EXE-потоков в пул. `CComApartment`Предоставляет методы увеличивать и уменьшать блокировки подсчета в потоке.  
+ `CComApartment`используется [CComAutoThreadModule](../../atl/reference/ccomautothreadmodule-class.md) для управления как подразделение в модуле EXE пула потоков. `CComApartment`Предоставляет методы увеличивать и уменьшать блокировки подсчета в потоке.  
   
 ## <a name="requirements"></a>Требования  
  **Заголовок:** atlbase.h  
@@ -114,10 +100,10 @@ CComApartment();
 ```  
   
 ### <a name="remarks"></a>Примечания  
- Инициализирует `CComApartment` члены данных [m_nLockCnt](#m_nlockcnt) и [m_hThread](#m_hthread).  
+ Инициализирует `CComApartment` данные-члены [m_nLockCnt](#m_nlockcnt) и [m_hThread](#m_hthread).  
   
 ##  <a name="getlockcount"></a>CComApartment::GetLockCount  
- Возвращает текущий счетчик блокировки потока.  
+ Возвращает число блокировок текущего потока.  
   
 ```
 LONG GetLockCount();
@@ -139,7 +125,7 @@ LONG Lock();
 ### <a name="remarks"></a>Примечания  
  Вызывается методом [CComAutoThreadModule::Lock](../../atl/reference/ccomautothreadmodule-class.md#lock).  
   
- Число блокировок в потоке используется для статистических целей.  
+ Число блокировок в потоке используется для статистической обработки.  
   
 ##  <a name="m_dwthreadid"></a>CComApartment::m_dwThreadID  
  Содержит идентификатор потока.  
@@ -156,7 +142,7 @@ HANDLE m_hThread;
 ```  
   
 ##  <a name="m_nlockcnt"></a>CComApartment::m_nLockCnt  
- Содержит текущее число блокировки потока.  
+ Содержит число блокировок текущего потока.  
   
 ```
 LONG m_nLockCnt;
@@ -175,7 +161,7 @@ LONG Unlock();
 ### <a name="remarks"></a>Примечания  
  Вызывается методом [CComAutoThreadModule::Unlock](../../atl/reference/ccomautothreadmodule-class.md#lock).  
   
- Число блокировок в потоке используется для статистических целей.  
+ Число блокировок в потоке используется для статистической обработки.  
   
 ## <a name="see-also"></a>См. также  
  [Общие сведения о классе](../../atl/atl-class-overview.md)

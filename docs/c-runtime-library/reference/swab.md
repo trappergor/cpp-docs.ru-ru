@@ -1,52 +1,55 @@
 ---
-title: "_swab | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-apiname: 
-  - "_swab"
-  - "stdlib/_swab"
-apilocation: 
-  - "msvcrt.dll"
-  - "msvcr80.dll"
-  - "msvcr90.dll"
-  - "msvcr100.dll"
-  - "msvcr100_clr0400.dll"
-  - "msvcr110.dll"
-  - "msvcr110_clr0400.dll"
-  - "msvcr120.dll"
-  - "msvcr120_clr0400.dll"
-  - "ucrtbase.dll"
-  - "api-ms-win-crt-utility-l1-1-0.dll"
-apitype: "DLLExport"
-f1_keywords: 
-  - "_swab"
-  - "stdlib/_swab"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "_swab - функция"
-  - "байты, смена"
-  - "swab - функция"
-  - "смена байтов"
+title: "_swab | Документы Майкрософт"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-standard-libraries
+ms.tgt_pltfrm: 
+ms.topic: article
+apiname:
+- _swab
+- stdlib/_swab
+apilocation:
+- msvcrt.dll
+- msvcr80.dll
+- msvcr90.dll
+- msvcr100.dll
+- msvcr100_clr0400.dll
+- msvcr110.dll
+- msvcr110_clr0400.dll
+- msvcr120.dll
+- msvcr120_clr0400.dll
+- ucrtbase.dll
+- api-ms-win-crt-utility-l1-1-0.dll
+apitype: DLLExport
+f1_keywords:
+- _swab
+- stdlib/_swab
+dev_langs:
+- C++
+helpviewer_keywords:
+- _swab function
+- swapping bytes
+- swab function
+- bytes, swapping
 ms.assetid: 017142f2-050c-4f6a-8b49-6b094f58ec94
 caps.latest.revision: 18
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 18
----
-# _swab
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.translationtype: MT
+ms.sourcegitcommit: 16d1bf59dfd4b3ef5f037aed9c0f6febfdf1a2e8
+ms.openlocfilehash: a3043abf425055d8cb21108a30db2e6382e19c1a
+ms.contentlocale: ru-ru
+ms.lasthandoff: 10/09/2017
 
-Переставляет местами байты.  
+---
+# <a name="swab"></a>_swab
+Меняет местами байты.  
   
-## Синтаксис  
+## <a name="syntax"></a>Синтаксис  
   
 ```  
 void _swab(  
@@ -56,52 +59,56 @@ void _swab(
 );  
 ```  
   
-#### Параметры  
+## <a name="parameters"></a>Параметры  
  `src`  
- Данные для копирования и передачи.  
+ Данные, которые следует скопировать и поменять местами.  
   
  `dest`  
- Место хранения для передаваемых данных.  
+ Место хранения для переставленных местами данных.  
   
  `n`  
- Количество байт для копирования и перемены мест.  
+ Число байтов, которые следует скопировать и поменять местами.  
   
-## Заметки  
- Если `n` четное, то функция `_swab` копирует `n` байтов из `src`, меняет местами каждую пару смежных байтов и сохраняет результат в `dest`.  Если `n` нечетное, то `_swab` копирует и меняет местами первые `n-1` байтов из `src`.  `_swab`, как правило, используется для подготовки двоичных данных для передачи на компьютер, который использует другой порядок байтов.  
+## <a name="return-value"></a>Возвращаемое значение
+ Функция `swab` не возвращает значение. Функция задает для `errno` значение `EINVAL`, если указатель `src` или `dest` имеет значение NULL или параметр `n` меньше нуля, и вызывается обработчик недопустимых параметров, как описано в разделе [Проверка параметров](../../c-runtime-library/parameter-validation.md).  
   
-## Требования  
+ Дополнительные сведения об этих и других кодах возврата см. в разделе [_doserrno, errno, _sys_errlist и _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
+ 
+## <a name="remarks"></a>Примечания  
+ Если `n` является четным числом, функция `_swab` копирует `n` байт из `src`, меняет местами все соседние пары байтов и сохраняет результат в `dest`. Если `n` является нечетным числом, `_swab` копирует и меняет местами первые `n-1` байт из `src`, последний байт не копируется. Функция `_swab` обычно используется для подготовки двоичных данных для передачи на компьютер, который использует другой порядок байтов.  
   
+## <a name="requirements"></a>Требования  
 |Подпрограмма|Обязательный заголовок|  
-|------------------|----------------------------|  
-|`_swab`|\<stdlib.h\>|  
+|-------------|---------------------|  
+|`_swab`|C: \<stdlib.h> C++: \<cstdlib> или \<stdlib.h>|  
   
- Дополнительные сведения о совместимости см. в разделе [Совместимость](../../c-runtime-library/compatibility.md) во введении.  
+ Дополнительные сведения о совместимости см. в статье [Совместимость](../../c-runtime-library/compatibility.md) во введении.  
   
-## Пример  
-  
-```  
+## <a name="example"></a>Пример  
+```C 
 // crt_swab.c  
   
 #include <stdlib.h>  
 #include <stdio.h>  
   
 char from[] = "BADCFEHGJILKNMPORQTSVUXWZY";  
-char to[] =   "..........................";  
+char to[] =   "...........................";  
   
 int main()  
 {  
-    printf( "Before: %s\n        %s\n\n", from, to );  
-    _swab( from, to, sizeof( from ) );  
-    printf( "After:  %s\n        %s\n\n", from, to );  
+    printf("Before: %s  %d bytes\n        %s\n\n", from, sizeof(from), to);  
+    _swab(from, to, sizeof(from));  
+    printf("After:  %s\n        %s\n\n", from, to);  
 }  
 ```  
   
-  **Before: BADCFEHGJILKNMPORQTSVUXWZY**  
- **..........................**  
-**After:  BADCFEHGJILKNMPORQTSVUXWZY**  
- **ABCDEFGHIJKLMNOPQRSTUVWXYZ**   
-## Эквивалент в .NET Framework  
- Неприменимо. Для вызова стандартной функции C используйте `PInvoke`. Дополнительные сведения см. в разделе [Примеры вызовов неуправляемого кода](../Topic/Platform%20Invoke%20Examples.md).  
+```Output  
+Before: BADCFEHGJILKNMPORQTSVUXWZY  27 bytes  
+        ...........................  
   
-## См. также  
- [Манипуляция буфером](../Topic/Buffer%20Manipulation.md)
+After:  BADCFEHGJILKNMPORQTSVUXWZY  
+        ABCDEFGHIJKLMNOPQRSTUVWXYZ.  
+```  
+  
+## <a name="see-also"></a>См. также  
+ [Манипуляция буфером](../../c-runtime-library/buffer-manipulation.md)

@@ -12,25 +12,11 @@ ms.assetid: 5eeaa683-4e63-4c46-99ef-2d5f294040d4
 author: BrianPeek
 ms.author: brpeek
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Human Translation
-ms.sourcegitcommit: dff1e9e03911f65dfcffcd078e0739224f73f4aa
-ms.openlocfilehash: 0c3a944ab5067a465a014c5f63775bbf16ac0b4d
+ms.translationtype: HT
+ms.sourcegitcommit: 16d1bf59dfd4b3ef5f037aed9c0f6febfdf1a2e8
+ms.openlocfilehash: dd817a7d9fad4946cd0aa9f641f9e8f495f1be9a
 ms.contentlocale: ru-ru
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 10/09/2017
 
 ---
 
@@ -38,7 +24,7 @@ ms.lasthandoff: 02/24/2017
 
 При сборке код Linux копируется на удаленный компьютер Linux и затем компилируются в этой системе в соответствии с параметрами, выбранными в Visual Studio.  Чтобы настроить удаленное подключение:
 
-1. Постройте проект в первый раз или вручную создайте новую запись, выбрав в меню **> Параметры**, затем открыв узел **Кроссплатформенный > Диспетчер подключений** и нажав кнопку **Добавить**.
+1. Постройте проект в первый раз или вручную создайте новую запись, выбрав в меню  **> Параметры**, затем открыв узел **Кроссплатформенный > Диспетчер подключений** и нажав кнопку **Добавить**.
 
    ![Диспетчер подключений](media/settings_connectionmanager.png)
 
