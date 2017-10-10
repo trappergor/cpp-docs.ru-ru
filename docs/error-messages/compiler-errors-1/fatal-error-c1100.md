@@ -19,28 +19,14 @@ caps.latest.revision: 7
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
-ms.openlocfilehash: 1b347b28f30d6d40eb173dd6b4a77d1410c00af7
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 3a15104a9e0fe4699163212d35467f217bd9831c
 ms.contentlocale: ru-ru
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 10/09/2017
 
 ---
 # <a name="fatal-error-c1100"></a>Неустранимая ошибка C1100
-не удается инициализировать OLE: сообщение о системной ошибке  
+не удалось инициализировать OLE: системное сообщение об ошибке  
   
- Компилятор не может инициализировать библиотеку модели компонентных объектов (COM). В разделе [CoInitialize](http://msdn.microsoft.com/library/windows/desktop/ms678543).
+ Компилятор не может инициализировать библиотеку объектов модели компонентов (COM). В разделе [CoInitialize](http://msdn.microsoft.com/library/windows/desktop/ms678543).

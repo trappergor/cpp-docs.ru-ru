@@ -1,36 +1,39 @@
 ---
-title: "Compiler Error C2384 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C2384"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C2384"
+title: "Ошибка компилятора C2384 | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C2384
+dev_langs:
+- C++
+helpviewer_keywords:
+- C2384
 ms.assetid: 8145f7ad-31b1-406d-ac43-0d557feab635
 caps.latest.revision: 15
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 15
----
-# Compiler Error C2384
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 0d87769a2e02e6214e474dab2b74859e85a6880b
+ms.contentlocale: ru-ru
+ms.lasthandoff: 10/09/2017
 
-member: невозможно применить \_\_declspec\(thread\) к члену управляемого класса или класса WinRT  
+---
+# <a name="compiler-error-c2384"></a>Ошибка компилятора C2384
+member: невозможно применить __declspec(thread) к члену управляемого класса или класса WinRT  
   
- Модификатор [thread](../../cpp/thread.md) `__declspec` нельзя применять к членам управляемого класса или класса среды выполнения Windows.  
+ [Поток](../../cpp/thread.md) `__declspec` модификатор не может использоваться на членам управляемого класса или класса среды выполнения Windows.  
   
- Локальное хранилище статического потока в управляемом коде может использоваться только для статически загружаемых библиотек DLL \(библиотека  загружается статически при запуске процесса\).  Среда выполнения Windows не поддерживает локальное хранилище потока.  
+ Локальное хранилище статического потока в управляемом коде может использоваться только для статически загружаемых библиотек DLL (библиотека загружается статически при запуске процесса). Среда выполнения Windows не поддерживает локальное хранилище потока.  
   
- Следующая строка вызывает ошибку C2384. Также показано, как устранить ее в коде C\+\+\/CLI:  
+ Следующая строка вызывает ошибку C2384. Также показано, как устранить ее в коде C++/CLI:  
   
 ```  
 // C2384.cpp  

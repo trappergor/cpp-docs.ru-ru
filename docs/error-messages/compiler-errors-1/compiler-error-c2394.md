@@ -1,5 +1,5 @@
 ---
-title: "C2394 Ошибка компилятора | Документы Microsoft"
+title: "Ошибка компилятора C2394 | Документы Microsoft"
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -19,29 +19,15 @@ caps.latest.revision: 12
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
-ms.openlocfilehash: 5eac5a955dc79581338e6e13c71f94ede7df03d9
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: c716a3562a9f99ef0094d8ca7ba5fdf2d11f15f0
 ms.contentlocale: ru-ru
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 10/09/2017
 
 ---
 # <a name="compiler-error-c2394"></a>Ошибка компилятора C2394
-'тип::оператор'»: CLR или WinRToperator не является допустимым. Хотя бы один параметр должен быть следующих типов: "T^", "T^%", "T^&", где T = ваш тип  
+'your_type:: operator'op'»: среда CLR или WinRToperator не является допустимым. Хотя бы один параметр должен быть следующих типов: "T^", "T^%", "T^&", где T = ваш тип  
   
  Оператор в управляемом типе или типе среды выполнения Windows не содержал по крайней мере один параметр, тип которого совпадает с типом значения, возвращаемого оператором.  
   

@@ -1,32 +1,35 @@
 ---
-title: "Ошибка компилятора C2341 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C2341"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C2341"
+title: "Ошибка компилятора C2341 | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C2341
+dev_langs:
+- C++
+helpviewer_keywords:
+- C2341
 ms.assetid: aa2a7da5-e1c8-4225-9939-5bdc50158f31
 caps.latest.revision: 9
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 9
----
-# Ошибка компилятора C2341
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 5460ff70c95fd593539a16140c52fa1490bffc4e
+ms.contentlocale: ru-ru
+ms.lasthandoff: 10/09/2017
 
-"имя\_раздела": до использования сегмент должен быть определен с помощью \#pragma data\_seg, code\_seg или section  
+---
+# <a name="compiler-error-c2341"></a>Ошибка компилятора C2341
+» Имя раздела: сегмент должен быть определен с помощью #pragma data_seg, code_seg или предыдущего раздела, для использования  
   
- Оператор [allocate](../Topic/allocate.md) указывает на сегмент, который еще не был определен с помощью директив pragma [code\_seg](../../preprocessor/code-seg.md), [data\_seg](../../preprocessor/data-seg.md) или [section](../../preprocessor/section.md).  
+ [Выделить](../../cpp/allocate.md) Инструкция ссылается на еще не определен сегмент [code_seg](../../preprocessor/code-seg.md), [data_seg](../../preprocessor/data-seg.md), или [раздел](../../preprocessor/section.md) директивы pragma.  
   
  Следующий пример приводит к возникновению ошибки C2341:  
   
@@ -37,7 +40,7 @@ __declspec(allocate(".test"))   // C2341
 int j = 1;  
 ```  
   
- Возможный способ устранения данной ошибки:  
+ Возможное решение:  
   
 ```  
 // C2341b.cpp  

@@ -19,30 +19,16 @@ caps.latest.revision: 7
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
-ms.openlocfilehash: b90c1887135e80f2b2d423d4f3e44a1ca0419a14
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: f28876aabf4726ce31777885c5a6519bcfdbe62c
 ms.contentlocale: ru-ru
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 10/09/2017
 
 ---
 # <a name="fatal-error-c1065"></a>Неустранимая ошибка C1065
 ограничение компилятора: закончились теги  
   
- Исходный файл содержит более 65523 классов, структур, объединений, пространств имен или перечислений.  
+ Исходный файл содержит более 65523 классы, структуры, объединения, пространства имен или перечислений.  
   
- Разбейте файл на несколько файлов меньшего размера.
+ Разделите файл на меньшие файлы.

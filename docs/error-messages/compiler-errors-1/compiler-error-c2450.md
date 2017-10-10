@@ -1,32 +1,35 @@
 ---
-title: "Ошибка компилятора C2450 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C2450"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C2450"
+title: "Ошибка компилятора C2450 | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C2450
+dev_langs:
+- C++
+helpviewer_keywords:
+- C2450
 ms.assetid: 929f1c06-8774-468b-be2a-f428757875a2
 caps.latest.revision: 8
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 8
----
-# Ошибка компилятора C2450
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 484eeb2c8c586a3f552cb77b5afd1671c199a551
+ms.contentlocale: ru-ru
+ms.lasthandoff: 10/09/2017
 
-выражение switch типа "тип" недопустимо  
+---
+# <a name="compiler-error-c2450"></a>Ошибка компилятора C2450
+выражение switch типа «тип» не допускается  
   
- Выражение `switch` при вычислении сводится к недопустимому типу.  После вычисления выражение должно иметь целочисленный тип или тип класса с однозначным преобразованием в целый тип.  Если выражение дает в результате тип, определенный пользователем, необходимо предоставить оператор преобразования.  
+ `switch` Выражение принимает значение недопустимого типа. Его оценки должен быть целочисленный тип или тип класса с однозначным преобразованием в целочисленный тип. Если значение равно определяемого пользователем типа, вы должны предоставить оператор преобразования.  
   
  Следующий пример приводит к возникновению ошибки C2450:  
   
