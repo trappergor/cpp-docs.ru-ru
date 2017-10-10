@@ -19,25 +19,11 @@ caps.latest.revision: 10
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
-ms.openlocfilehash: 2eedca2eaa3c92cd7898543632a4941d55b27f5f
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 1f0fc4847cc6f3ab50f840b1ed5a097cc405cff8
 ms.contentlocale: ru-ru
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 10/10/2017
 
 ---
 # <a name="compiler-error-c2714"></a>Ошибка компилятора C2714
@@ -45,7 +31,7 @@ __alignof(void) не допускается
   
  Оператору передано недопустимое значение.  
   
- В разделе [__alignof оператор](../../cpp/alignof-operator.md) подробнее.  
+ В разделе [оператор __alignof](../../cpp/alignof-operator.md) для получения дополнительной информации.  
   
 ## <a name="example"></a>Пример  
  Следующий пример приводит к возникновению ошибки C2714.  

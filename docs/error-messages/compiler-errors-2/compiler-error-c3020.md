@@ -19,31 +19,17 @@ caps.latest.revision: 10
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
-ms.openlocfilehash: cb42a1c0e27896f8cbd19c4993c1e57997de5579
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 4da505740eba9b291d8c4139cf9cd6fded70fdfa
 ms.contentlocale: ru-ru
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 10/10/2017
 
 ---
 # <a name="compiler-error-c3020"></a>Ошибка компилятора C3020
-«переменная»: переменную индекса OpenMP цикла «for» нельзя изменять в теле цикла  
+«переменная»: переменная индекса из OpenMP цикла «for» нельзя изменять в теле цикла  
   
- OpenMP `for` цикл не может изменять индекс (счетчик цикла) в теле `for` цикла.  
+ OpenMP `for` цикла не может изменять индекс (счетчик цикла) в теле `for` цикла.  
   
  Следующий пример приводит к возникновению ошибки C3020:  
   
@@ -64,9 +50,9 @@ int main() {
 }  
 ```  
   
- Переменная, объявленная с [lastprivate](../../parallel/openmp/reference/lastprivate.md) нельзя использовать в качестве индекса внутри распараллеленного цикла.  
+ Переменная, объявленная с [lastprivate](../../parallel/openmp/reference/lastprivate.md) нельзя использовать в качестве индекса внутри Параллелизованный цикл.  
   
- Следующий пример даст C3020 для второй lastprivate, поскольку lastprivate, вызывающее запись в idx_a внутри внешнего цикла for. Первый параметр lastprivate не вызывает ошибку, поскольку запись в idx_a за пределами внешнего цикла (с технической точки зрения в самом конце последней итерации). Следующий пример приводит к возникновению ошибки C3020.  
+ Следующий пример даст C3020 для второй lastprivate, поскольку lastprivate, вызывающее запись в idx_a внутри самой внешней цикл for. Первый параметр lastprivate не вызывает ошибку, поскольку запись в idx_a за пределами внешнего цикла (с технической точки зрения в самом конце последней итерации). Следующий пример приводит к возникновению ошибки C3020.  
   
 ```  
 // C3020b.cpp  

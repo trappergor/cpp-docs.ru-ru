@@ -1,38 +1,41 @@
 ---
-title: "Ошибка компилятора C2831 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C2831"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C2831"
+title: "Ошибка компилятора C2831 | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C2831
+dev_langs:
+- C++
+helpviewer_keywords:
+- C2831
 ms.assetid: c8c04288-0889-4265-a077-17f94cbcdcc9
 caps.latest.revision: 9
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 9
----
-# Ошибка компилятора C2831
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 93eaffe8f94f7d0b5606f403a7f4fbd27560240b
+ms.contentlocale: ru-ru
+ms.lasthandoff: 10/10/2017
 
-"operator оператор" не может иметь параметры по умолчанию  
+---
+# <a name="compiler-error-c2831"></a>Ошибка компилятора C2831
+«оператор» не может иметь параметров по умолчанию  
   
- Параметры по умолчанию могут иметь только три оператора:  
+ Только три оператора может иметь параметров по умолчанию.  
   
 -   [new](../../cpp/new-operator-cpp.md)  
   
--   Присваивание "\=";  
+-   Назначение =  
   
--   Левая круглая скобка "\(".  
+-   Левая круглая скобка)  
   
  Следующий пример приводит к возникновению ошибки C2831:  
   

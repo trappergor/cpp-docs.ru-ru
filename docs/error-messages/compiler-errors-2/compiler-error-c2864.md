@@ -1,34 +1,37 @@
 ---
-title: "Ошибка компилятора C2864 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C2864"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C2864"
+title: "Ошибка компилятора C2864 | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C2864
+dev_langs:
+- C++
+helpviewer_keywords:
+- C2864
 ms.assetid: d0ca2ad9-90a6-4aef-8511-98a3b414c102
 caps.latest.revision: 13
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 13
----
-# Ошибка компилятора C2864
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: f205aeb886921439360191def0853e33e4eb0fea
+ms.contentlocale: ru-ru
+ms.lasthandoff: 10/10/2017
 
-"переменная": статические данные\-член с инициализатором в классе должен иметь целочисленный тип const без квалификатора volatile  
+---
+# <a name="compiler-error-c2864"></a>Ошибка компилятора C2864
+"переменная": статические данные-член с инициализатором в классе должен иметь целочисленный тип const без квалификатора volatile  
   
- Чтобы инициализировать данные\-член `static`, определенные как `volatile`, не имеющие квалификатора `const` или не имеющие целочисленный тип, используйте оператор определения членов.  Их невозможно инициализировать в объявлении.  
+ Чтобы инициализировать данные-член `static`, определенные как `volatile`, не имеющие квалификатора `const` или не имеющие целочисленный тип, используйте оператор определения членов. Их невозможно инициализировать в объявлении.  
   
- В следующем примере возникает ошибка C2864:  
+ Этот пример приводит к возникновению ошибки C2864:  
   
 ```  
 // C2864.cpp  

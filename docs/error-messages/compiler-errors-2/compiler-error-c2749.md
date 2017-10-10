@@ -19,31 +19,17 @@ caps.latest.revision: 8
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
-ms.openlocfilehash: f69795d2beda90a2b06957f3ab4c8bc35767139e
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 23eb174bd161f14351fae18ae4aba72f427da4ed
 ms.contentlocale: ru-ru
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 10/10/2017
 
 ---
 # <a name="compiler-error-c2749"></a>Ошибка компилятора C2749
-«Тип»: только может выдать или перехватить дескриптор для управляемого класса с помощью/CLR: safe  
+«Тип»: только выдать или перехватить дескриптор для управляемого класса с помощью/CLR: safe  
   
- При использовании **/CLR: safe**, вы throw или перехватить можно только ссылочный тип.  
+ При использовании **/CLR: safe**, вы можете выдать или перехватить только ссылочным типом.  
   
  Дополнительные сведения см. в разделе [/clr (компиляция CLR)](../../build/reference/clr-common-language-runtime-compilation.md).  
   

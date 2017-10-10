@@ -1,37 +1,40 @@
 ---
-title: "Ошибка компилятора C2885 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C2885"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C2885"
+title: "Ошибка компилятора C2885 | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C2885
+dev_langs:
+- C++
+helpviewer_keywords:
+- C2885
 ms.assetid: 7743e5f3-a034-44b4-9ee8-5a6254c27f8c
 caps.latest.revision: 14
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 14
----
-# Ошибка компилятора C2885
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: a19f209d53d7d0b37cddbf559fa3dc02ee50db7e
+ms.contentlocale: ru-ru
+ms.lasthandoff: 10/10/2017
 
-"класс::идентификатор": недопустимое объявление using вне области видимости класса  
+---
+# <a name="compiler-error-c2885"></a>Ошибка компилятора C2885
+«класс::идентификатор»: не недопустимое объявление в область вне класса  
   
- Недопустимое использование объявления [using](../../cpp/using-declaration.md).  
+ Вы использовали [с помощью](../../cpp/using-declaration.md) объявление неправильно.  
   
-## Пример  
- Эта ошибка может возникать в результате действий по обеспечению совместимости компилятора с Visual C\+\+ 2005. В текущей версии использование объявления `using` во вложенном типе не допускается. Необходимо явно задавать каждую ссылку на вложенный тип, поместить тип в пространство имен или создать определение типа.  
+## <a name="example"></a>Пример  
+ Эта ошибка может возникать в результате действий по обеспечению совместимости компилятора с Visual C++ 2005: больше не допустимо иметь `using` объявление вложенного типа необходимо явно квалифицировать каждой ссылки, внесенные во вложенном типе, поместить тип в имени пробел или создайте typedef.  
   
- В следующем примере возникает ошибка C2885.  
+ Следующий пример приводит к возникновению ошибки C2885.  
   
 ```  
 // C2885.cpp  
@@ -60,10 +63,10 @@ int main () {
 }  
 ```  
   
-## Пример  
- Если ключевое слово `using` используется с членом класса, в C\+\+ необходимо определить этот член внутри другого \(производного\) класса.  
+## <a name="example"></a>Пример  
+ Если вы используете `using` ключевое слово с членом класса C++ необходимо определить этот член внутри другого (производного класса).  
   
- В следующем примере возникает ошибка C2885.  
+ Следующий пример приводит к возникновению ошибки C2885.  
   
 ```  
 // C2885_b.cpp  

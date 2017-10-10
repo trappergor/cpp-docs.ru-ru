@@ -19,34 +19,20 @@ caps.latest.revision: 9
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 65e7a7bd56096fbeec61b651ab494d82edef9c90
-ms.openlocfilehash: ce6a597e0246cee5c62dd6612d48fe4946505e77
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 26d30e56c3e694b39f583b29d8bd378b6dcaee0f
 ms.contentlocale: ru-ru
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 10/10/2017
 
 ---
 # <a name="compiler-error-c3063"></a>Ошибка компилятора C3063
-оператор «оператор»: все операнды должны иметь тот же тип перечисления  
+оператор «оператор»: все операнды должны иметь одинаковый тип перечисления  
   
-При использовании операторов с перечислителями, оба операнда должны быть типа перечисления. Дополнительные сведения см. в разделе [Практическое руководство: определение и использование перечислений в C + +/ CLI](../../dotnet/how-to-define-and-consume-enums-in-cpp-cli.md).  
+При использовании операторов для перечислителей, оба операнда должны быть типа перечисления. Дополнительные сведения см. в разделе [как: определение и использование перечислений в C + +/ CLI](../../dotnet/how-to-define-and-consume-enums-in-cpp-cli.md).  
   
 ## <a name="example"></a>Пример  
-Следующий пример приводит к возникновению ошибки C3063 и показано, как исправить эту ошибку:  
+Следующий пример приводит к возникновению ошибки C3063 и приводятся сведения по ее устранению.  
   
 ```  
 // C3063.cpp  

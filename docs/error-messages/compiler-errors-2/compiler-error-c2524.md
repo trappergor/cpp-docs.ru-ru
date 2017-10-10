@@ -1,35 +1,38 @@
 ---
-title: "Ошибка компилятора C2524 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C2524"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C2524"
+title: "Ошибка компилятора C2524 | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C2524
+dev_langs:
+- C++
+helpviewer_keywords:
+- C2524
 ms.assetid: e71d17f5-2fc2-416b-8dbd-e9bed85eb33a
 caps.latest.revision: 10
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 10
----
-# Ошибка компилятора C2524
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: f0b80ac9029f530b68afdc379d7660bba1ff76cb
+ms.contentlocale: ru-ru
+ms.lasthandoff: 10/10/2017
 
-'destructor' : в деструкторе или методе завершения должен быть пустой список параметров  
+---
+# <a name="compiler-error-c2524"></a>Ошибка компилятора C2524
+«деструктор»: метод завершения или деструктор должен иметь список параметров «void»  
   
- В деструкторе или методе завершения список параметров не является [пустым](../../cpp/void-cpp.md).  Параметры других типов использовать нельзя.  
+ Деструктор или метод завершения бы список параметров, не [void](../../cpp/void-cpp.md). Другие типы параметров не допускаются.  
   
-## Пример  
- В следующем коде создается ошибка C2524:  
+## <a name="example"></a>Пример  
+ Следующий код ошибка C2524:  
   
 ```  
 // C2524.cpp  
@@ -42,8 +45,8 @@ class A {
 };  
 ```  
   
-## Пример  
- В следующем коде создается ошибка C2524:  
+## <a name="example"></a>Пример  
+ Следующий код ошибка C2524:  
   
 ```  
 // C2524_b.cpp  

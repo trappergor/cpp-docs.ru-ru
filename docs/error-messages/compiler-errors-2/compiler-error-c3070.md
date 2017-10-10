@@ -19,32 +19,17 @@ caps.latest.revision: 8
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0d9cbb01d1ad0f2ea65d59334cb88140ef18fce0
-ms.openlocfilehash: 83855b5e27641b1684133d69ce8f6c4e1a3d5871
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 7cbcfd17556c57c5a4640dfefb1095ba1da778d6
 ms.contentlocale: ru-ru
-ms.lasthandoff: 04/12/2017
+ms.lasthandoff: 10/10/2017
 
 ---
 # <a name="compiler-error-c3070"></a>Ошибка компилятора C3070
 "свойство": у свойства нет метода set  
   
- Метод доступа set свойства не был определен. Дополнительные сведения см. в разделе [свойства](../../windows/property-cpp-component-extensions.md).  
+ Метод доступа set свойства не был определен. Для получения дополнительной информации см. [property](../../windows/property-cpp-component-extensions.md).  
   
  В следующем примере возникает ошибка C3070.  
   

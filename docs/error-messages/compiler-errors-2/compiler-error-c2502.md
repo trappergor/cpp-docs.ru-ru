@@ -1,32 +1,35 @@
 ---
-title: "Ошибка компилятора C2502 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C2502"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C2502"
+title: "Ошибка компилятора C2502 | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C2502
+dev_langs:
+- C++
+helpviewer_keywords:
+- C2502
 ms.assetid: affa0b86-15fc-4e17-b7f2-6aad4a3771c4
 caps.latest.revision: 9
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 9
----
-# Ошибка компилятора C2502
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 396ec843c03843b506174308a5b548f50379c06f
+ms.contentlocale: ru-ru
+ms.lasthandoff: 10/10/2017
 
-"идентификатор": слишком много модификаторов доступа для базового класса  
+---
+# <a name="compiler-error-c2502"></a>Ошибка компилятора C2502
+«Идентификатор»: слишком много модификаторов доступа для базового класса  
   
- Для базового класса задано несколько модификаторов доступа.  Допускается наличие только одного модификатора доступа \(`public`, `private` или `protected`\).  
+ Базовый класс имеет несколько модификаторов доступа. Только один модификатор доступа (`public`, `private`, или `protected`) разрешено.  
   
  Следующий пример приводит к возникновению ошибки C2502:  
   

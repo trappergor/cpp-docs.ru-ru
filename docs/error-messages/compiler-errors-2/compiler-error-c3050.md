@@ -1,5 +1,5 @@
 ---
-title: "C3050 Ошибка компилятора | Документы Microsoft"
+title: "Ошибка компилятора C3050 | Документы Microsoft"
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -19,32 +19,17 @@ caps.latest.revision: 8
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
-ms.openlocfilehash: da348b26dc727284b131daaead9af71c66939bee
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 7754f04b271667165e5702e95491006bf82e61a1
 ms.contentlocale: ru-ru
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 10/10/2017
 
 ---
 # <a name="compiler-error-c3050"></a>Ошибка компилятора C3050
 "тип1": класс ref не может наследовать от "тип1"  
   
- `System::ValueType`не может быть базовым классом для ссылочного типа.  
+ `System::ValueType` не может быть базовым классом для ссылочного типа.  
   
  В следующем примере возникает ошибка C3050.  
   

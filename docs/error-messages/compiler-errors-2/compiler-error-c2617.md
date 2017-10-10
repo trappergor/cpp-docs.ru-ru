@@ -1,32 +1,35 @@
 ---
-title: "Ошибка компилятора C2617 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C2617"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C2617"
+title: "Ошибка компилятора C2617 | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C2617
+dev_langs:
+- C++
+helpviewer_keywords:
+- C2617
 ms.assetid: d6a435d2-7d95-4dbf-ad4a-abe4744f63e8
 caps.latest.revision: 7
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 7
----
-# Ошибка компилятора C2617
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 5e3272cb883469abbad5ee42538a7334ecd73d62
+ms.contentlocale: ru-ru
+ms.lasthandoff: 10/10/2017
 
-\<функция\> : несовместимый оператор return  
+---
+# <a name="compiler-error-c2617"></a>Ошибка компилятора C2617
+«функция»: несовместимый оператор return  
   
- Для конкретной функции не объявлен тип "return", а предыдущий оператор "return" не предоставил значение.  
+ Указанная функция не имеет объявленный тип возвращаемого значения, а предыдущий возвращаемое значение не предоставлено инструкции.  
   
  Следующий пример приводит к возникновению ошибки C2617:  
   
@@ -39,7 +42,7 @@ func() {   // no return type prototype
 }  
 ```  
   
- Возможный способ устранения данной ошибки:  
+ Возможное решение:  
   
 ```  
 // C2617b.cpp  
