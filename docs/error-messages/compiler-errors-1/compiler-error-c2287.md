@@ -19,31 +19,17 @@ caps.latest.revision: 9
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
-ms.openlocfilehash: b1e869d4e9113852af6cab93883695909ac62982
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: ed8537c7da77da7e5401448e8a6d579cfb4ebe07
 ms.contentlocale: ru-ru
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 10/09/2017
 
 ---
 # <a name="compiler-error-c2287"></a>Ошибка компилятора C2287
-«класс»: представление наследования: «Представление1», чем требуемое «представление&2;»  
+«класс»: представление наследования: «Представление1» более специализирован, чем требуется представление «2»  
   
- Класс объявляется с более простым представлением, чем необходимо.  
+ Класс объявлен с представлением проще, чем требуется.  
   
  Следующий пример приводит к возникновению ошибки C2287:  
   

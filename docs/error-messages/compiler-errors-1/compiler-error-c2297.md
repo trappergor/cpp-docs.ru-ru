@@ -1,34 +1,37 @@
 ---
-title: "Ошибка компилятора C2297 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C2297"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C2297"
+title: "Ошибка компилятора C2297 | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C2297
+dev_langs:
+- C++
+helpviewer_keywords:
+- C2297
 ms.assetid: 65849fe5-17e1-4b7e-b50c-f508b05ddaa4
 caps.latest.revision: 8
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 8
----
-# Ошибка компилятора C2297
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 2c621e1e2c19f69e82110d34bec86f6927bf7436
+ms.contentlocale: ru-ru
+ms.lasthandoff: 10/09/2017
 
-"оператор": неправильный правый операнд  
+---
+# <a name="compiler-error-c2297"></a>Ошибка компилятора C2297
+«оператор»: неправильный правый операнд  
   
- Правый операнд, используемый с параметром `operator`, является недопустимым.  
+ Правый операнд, используемый с `operator` является недопустимым.  
   
- Например, компилятор может обнаружить объявление там, где запланирован вызов функции.  
+ Например компилятор может обнаружить объявление там, где запланирован вызов функции.  
   
  Следующий пример приводит к возникновению ошибки C2297:  
   

@@ -1,32 +1,35 @@
 ---
-title: "Ошибка компилятора C2270 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C2270"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C2270"
+title: "Ошибка компилятора C2270 | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C2270
+dev_langs:
+- C++
+helpviewer_keywords:
+- C2270
 ms.assetid: b52c068e-0b61-42e7-b775-4d57b3ddcba0
 caps.latest.revision: 9
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 9
----
-# Ошибка компилятора C2270
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: bc380d8a44e61ac0f709b8440d788d12f3795922
+ms.contentlocale: ru-ru
+ms.lasthandoff: 10/09/2017
 
-функция: модификаторы недопустимы для функций, не являющихся членами  
+---
+# <a name="compiler-error-c2270"></a>Ошибка компилятора C2270
+«функция»: модификаторы недопустимы для функций  
   
- Функция, не являющаяся членом, объявлена при помощи [const](../../cpp/const-cpp.md), [volatile](../../cpp/volatile-cpp.md) или другого модификатора модели памяти.  
+ Функция, не является объявлена с [const](../../cpp/const-cpp.md), [volatile](../../cpp/volatile-cpp.md), или другого модификатора модели памяти.  
   
  Следующий пример приводит к возникновению ошибки C2270:  
   

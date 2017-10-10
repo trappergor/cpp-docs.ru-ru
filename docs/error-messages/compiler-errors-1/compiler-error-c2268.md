@@ -19,32 +19,17 @@ caps.latest.revision: 10
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0d9cbb01d1ad0f2ea65d59334cb88140ef18fce0
-ms.openlocfilehash: 29a09917ab80eb536050885a3c2cd9984f82a59a
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 38ac7b0aa76a16516652bfc1736826072ad473dd
 ms.contentlocale: ru-ru
-ms.lasthandoff: 04/12/2017
+ms.lasthandoff: 10/09/2017
 
 ---
 # <a name="compiler-error-c2268"></a>Ошибка компилятора C2268
 "функция" представляет определяемый компилятором модуль поддержки библиотеки. Модули поддержки библиотек не поддерживаются с параметром /GL; компилируйте объектный файл "файл" без параметра /GL.  
   
- Имя функции, определенной в исходном коде, совпадает с именем внутренней функции компилятора. Скомпилируйте модуль, содержащий функцию, без [/GL](../../build/reference/gl-whole-program-optimization.md).  
+ Имя функции, определенной в исходном коде, совпадает с именем внутренней функции компилятора. Скомпилируйте модуль, содержащий функцию, без параметра [/GL](../../build/reference/gl-whole-program-optimization.md).  
   
  Следующий пример приводит к возникновению ошибки C2268:  
   
