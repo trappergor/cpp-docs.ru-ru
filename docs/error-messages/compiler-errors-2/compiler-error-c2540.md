@@ -19,29 +19,15 @@ caps.latest.revision: 8
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
-ms.openlocfilehash: a50dc04079f3bb37ff1be1ff51b9dd6748fc1657
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 5267000782f03a0e512288139c77dc120df751ab
 ms.contentlocale: ru-ru
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 10/10/2017
 
 ---
 # <a name="compiler-error-c2540"></a>Ошибка компилятора C2540
-неконстантное выражение используется в качестве границы массива  
+неконстантное выражение в качестве границы массива  
   
  Массив должен иметь константную границу.  
   

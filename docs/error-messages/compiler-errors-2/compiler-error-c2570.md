@@ -1,32 +1,35 @@
 ---
-title: "Ошибка компилятора C2570 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C2570"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C2570"
+title: "Ошибка компилятора C2570 | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C2570
+dev_langs:
+- C++
+helpviewer_keywords:
+- C2570
 ms.assetid: d65d0b32-2fac-464a-bcdf-0ebcedf3bf32
 caps.latest.revision: 8
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 8
----
-# Ошибка компилятора C2570
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 6b5d53463e889504f202b7d50b8c5ac877f27cf8
+ms.contentlocale: ru-ru
+ms.lasthandoff: 10/10/2017
 
-"идентификатор" : объединение не может иметь базовые классы  
+---
+# <a name="compiler-error-c2570"></a>Ошибка компилятора C2570
+«Идентификатор»: объединение не может иметь базовые классы  
   
- Объединение является производным от класса, структур или объединения.  Это не допускается.  Объявите производный тип как класс или структуру.  
+ Объединение является производным от класса, структуры или объединения. Это не допускается. Объявите производный тип как класс или структуру.  
   
  Следующий пример приводит к возникновению ошибки C2570:  
   

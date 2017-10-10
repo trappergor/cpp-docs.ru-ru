@@ -19,33 +19,19 @@ caps.latest.revision: 8
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: cc82b83860786ffc3f0aee73ede18ecadef16a7a
-ms.openlocfilehash: 7420231e64515b556cfe81fc695eda5f75231506
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: f45e7617bbf162c23994897c42aab44abeacea88
 ms.contentlocale: ru-ru
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 10/10/2017
 
 ---
 # <a name="compiler-error-c2743"></a>Ошибка компилятора C2743
-«Тип»: невозможно перехватить собственный тип с деструктором __clrcall или конструктор копии  
+«Тип»: невозможно перехватить собственный тип с деструктором __clrcall или конструктором копии  
   
- Модуль, компилированный с **/CLR** выполнил попытку перехвата исключения собственного типа там, где деструктор типа или конструктор копии используют `__clrcall` соглашение о вызовах.  
+ Модуль компиляции с **/CLR** была предпринята попытка перехвата исключения собственного типа там, где деструктор или конструктор копии этого типа используют `__clrcall` соглашение о вызовах.  
   
- При компиляции с параметром **/CLR**, обработка исключений ожидает, что функции-члены собственного типа будут [__cdecl](../../cpp/cdecl.md) и не [__clrcall](../../cpp/clrcall.md). Собственные типы с функциями-членами с помощью `__clrcall` соглашение о вызовах, не может быть перехвачено в модуле, скомпилированном с **/CLR**.  
+ При компиляции с параметром **/CLR**, обработка исключений ожидает, что функции-члены собственного типа будут использовать [__cdecl](../../cpp/cdecl.md) и не [__clrcall](../../cpp/clrcall.md). Собственные типы с функциями-членами с помощью `__clrcall` соглашение о вызовах, не может быть перехвачено в модуле, скомпилированном с **/CLR**.  
   
  Дополнительные сведения см. в разделе [/clr (компиляция CLR)](../../build/reference/clr-common-language-runtime-compilation.md).  
   

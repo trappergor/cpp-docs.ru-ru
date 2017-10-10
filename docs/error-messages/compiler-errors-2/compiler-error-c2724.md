@@ -19,31 +19,17 @@ caps.latest.revision: 6
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
-ms.openlocfilehash: a90bad0c6e611544e98077918448d17e87b0a325
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 13c582f081d78e415b4c98bf300b18004fcc33bc
 ms.contentlocale: ru-ru
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 10/10/2017
 
 ---
 # <a name="compiler-error-c2724"></a>Ошибка компилятора C2724
-«Идентификатор»: «статический» не должен использоваться для функций-членов определены в области видимости файла  
+«Идентификатор»: «static» не должен использоваться для функций-членов определены в области видимости файла  
   
- Статические функции-члены необходимо объявлять с внешней компоновкой.  
+ Статические функции-члены должны объявляться с внешней компоновкой.  
   
  Следующий пример приводит к возникновению ошибки C2724:  
   

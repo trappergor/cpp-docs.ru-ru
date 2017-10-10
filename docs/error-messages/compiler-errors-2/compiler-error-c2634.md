@@ -19,31 +19,17 @@ caps.latest.revision: 7
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
-ms.openlocfilehash: 6cb83fc85d608f13682973a3a53eb5527b415e77
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 2aa4d35dedc49ad4fbb226cb47790b9bedcfa6fa
 ms.contentlocale: ru-ru
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 10/10/2017
 
 ---
 # <a name="compiler-error-c2634"></a>Ошибка компилятора C2634
-«& класс::член»: указатель на ссылочный член недопустим  
+"& класс::член": недопустимый указатель на ссылочный член  
   
- Объявлен указатель на ссылочный член.  
+ Указатель на ссылочный член объявлен.  
   
  Следующий пример приводит к возникновению ошибки C2634:  
   

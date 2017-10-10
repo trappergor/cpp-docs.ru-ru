@@ -1,34 +1,37 @@
 ---
-title: "Ошибка компилятора C2782 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C2782"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C2782"
+title: "Ошибка компилятора C2782 | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C2782
+dev_langs:
+- C++
+helpviewer_keywords:
+- C2782
 ms.assetid: 8b685422-294d-4f64-9f3d-c14eaf03a93d
 caps.latest.revision: 11
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 11
----
-# Ошибка компилятора C2782
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 125092771675363eb896d3524b8e093493f9719b
+ms.contentlocale: ru-ru
+ms.lasthandoff: 10/10/2017
 
-"объявление": неоднозначный параметр шаблона "идентификатор"  
+---
+# <a name="compiler-error-c2782"></a>Ошибка компилятора C2782
+«объявление»: параметр шаблона «идентификатор» является неоднозначным  
   
- Не удается определить тип аргумента шаблона во время компиляции.  
+ Компилятор не может определить тип аргумента шаблона.  
   
- Следующий пример приводит к возникновению ошибки C2782:  
+ В следующем примере возникает ошибка C2782:  
   
 ```  
 // C2782.cpp  
@@ -42,7 +45,7 @@ int main() {
 }  
 ```  
   
- Ошибка C2782 также может возникнуть при использовании универсальных шаблонов:  
+ C2782 также может возникнуть при использовании универсальных шаблонов:  
   
 ```  
 // C2782b.cpp  

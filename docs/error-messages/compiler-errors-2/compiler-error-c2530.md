@@ -19,25 +19,11 @@ caps.latest.revision: 9
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
-ms.openlocfilehash: 7a5d6831c293f6ef25eb53cdfb6216f8142908d2
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: f9438937ad99e66d9e623e1e3703dc6496f8153a
 ms.contentlocale: ru-ru
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 10/10/2017
 
 ---
 # <a name="compiler-error-c2530"></a>Ошибка компилятора C2530
@@ -47,11 +33,11 @@ ms.lasthandoff: 02/24/2017
   
 -   С помощью ключевого слова [extern](../../cpp/using-extern-to-specify-linkage.md).  
   
--   Как член класса, структуры или объединения (и инициализации его конструктора).  
+-   Как член класса, структуры или объединения (и инициализируется в конструкторе).  
   
 -   Как параметр в объявлении или определении функции.  
   
--   Возвращаемый тип функции.  
+-   Как возвращаемый тип функции.  
   
  Следующий пример приводит к возникновению ошибки C2530:  
   

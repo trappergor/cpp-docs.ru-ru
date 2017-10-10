@@ -19,29 +19,15 @@ caps.latest.revision: 9
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
-ms.openlocfilehash: c0d9d871feb7a673d0937ea65942c7a9733b4261
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: dc5d33bbb0dd1053a200791952848146450e9a16
 ms.contentlocale: ru-ru
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 10/10/2017
 
 ---
 # <a name="compiler-error-c2661"></a>Ошибка компилятора C2661
-«функция»: нет перегруженной функции, принимающей числовые параметры  
+«функция»: нет перегруженной функции принимает номер параметра  
   
  Возможные причины:  
   

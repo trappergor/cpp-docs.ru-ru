@@ -19,26 +19,11 @@ caps.latest.revision: 7
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 6cad5222fb0d97594d5b13b5cf8903eb2934ee88
-ms.openlocfilehash: 994729ca02158fd2291fab5421fc091a3ad8fc56
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 69e36c722ae7b93d338d0a6d7d2329ad0fe6b427
 ms.contentlocale: ru-ru
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 10/10/2017
 
 ---
 # <a name="fatal-error-c1904"></a>Неустранимая ошибка C1904
@@ -46,4 +31,4 @@ ms.lasthandoff: 02/24/2017
   
  Эта ошибка указывает на сбой поставщика атрибутов.  
   
- Соберите обстоятельствах появления ошибки, попытайтесь изолировать данную проблему и создать воспроизводимый тестовый случай, обратитесь в службу [обращайтесь к нам](/visualstudio/ide/talk-to-us).
+ Соберите сведения об обстоятельствах возникновения ошибки, попытайтесь изолировать проблему и создать воспроизводимый тестовый случай, а затем обратитесь [обращайтесь к нам](/visualstudio/ide/talk-to-us).

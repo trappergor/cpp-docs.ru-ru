@@ -19,31 +19,17 @@ caps.latest.revision: 7
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
-ms.openlocfilehash: 95a136660a660843a13685b822c1e65c4f4259ea
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 5a71216ee0c9b9bb824e9518691bc71730bb7465
 ms.contentlocale: ru-ru
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 10/10/2017
 
 ---
 # <a name="compiler-error-c2674"></a>Ошибка компилятора C2674
 универсальное объявление не допускается в этом контексте  
   
- Недопустимое использование универсального объявления. Дополнительные сведения см. в разделе [универсальных типов](../../windows/generics-cpp-component-extensions.md).  
+ Универсальный был объявлен неправильно. Дополнительные сведения см. в разделе [Универсальные типы](../../windows/generics-cpp-component-extensions.md).  
   
 ## <a name="example"></a>Пример  
  Следующий пример приводит к возникновению ошибки C2674.  

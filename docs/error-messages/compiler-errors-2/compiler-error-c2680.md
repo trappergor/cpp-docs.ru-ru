@@ -1,32 +1,35 @@
 ---
-title: "Ошибка компилятора C2680 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C2680"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C2680"
+title: "Ошибка компилятора C2680 | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C2680
+dev_langs:
+- C++
+helpviewer_keywords:
+- C2680
 ms.assetid: d6f7129e-dd17-4661-b680-18d6b925b1cc
 caps.latest.revision: 11
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 11
----
-# Ошибка компилятора C2680
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: f3a7d58aa7eb126392a0484ce28753c477d6137c
+ms.contentlocale: ru-ru
+ms.lasthandoff: 10/10/2017
 
-"тип" : недопустимый конечный тип для имени  
+---
+# <a name="compiler-error-c2680"></a>Ошибка компилятора C2680
+«Тип»: Недопустимый конечный тип для имени  
   
- Оператор приведения предпринял попытку преобразования в тип, который не является указателем ли ссылкой.  Оператор преобразования [dynamic\_cast](../../cpp/dynamic-cast-operator.md) может быть использован только для указателей и ссылок.  
+ Оператор приведения попытался преобразовать в тип, который не является указателем или ссылкой. [Dynamic_cast](../../cpp/dynamic-cast-operator.md) оператор может использоваться только для указателей и ссылок.  
   
  Следующий пример приводит к возникновению ошибки C2680:  
   
@@ -43,7 +46,7 @@ void g(B b) {
 }  
 ```  
   
- Ошибка C2680 может также возникнуть, когда конечный тип не определен:  
+ C2680 также может возникнуть, если целевой объект не определен.  
   
 ```  
 // C2680b.cpp  

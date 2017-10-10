@@ -1,29 +1,32 @@
 ---
-title: "Fatal Error C999 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C999"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C999"
+title: "Неустранимая ошибка C999 | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C999
+dev_langs:
+- C++
+helpviewer_keywords:
+- C999
 ms.assetid: a3a49a96-a352-4ff2-aa84-84eb6a9a81f1
 caps.latest.revision: 7
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 7
----
-# Fatal Error C999
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 462f2e87f5fa23ee1afd21f828312c313309cfbd
+ms.contentlocale: ru-ru
+ms.lasthandoff: 10/10/2017
 
-НЕИЗВЕСТНОЕ СООБЩЕНИЕ    Выберите команду «Техническая поддержка» в меню «Справка» Visual C\+\+ или откройте справочный файл технической поддержки для получения дополнительных сведений  
+---
+# <a name="fatal-error-c999"></a>Неустранимая ошибка C999
+Неизвестное сообщение. выберите команду технической поддержки в меню справки Visual C++ или откройте Справочный файл технической поддержки для получения дополнительной информации  
   
- Эта ошибка обычно означает наличие смешанных файлов, полученных с помощью разных версий компилятора, или повреждение установки на компьютере.  Используйте элемент панели управления **Программы и компоненты** для восстановления или переустановки продукта.
+ Эта ошибка обычно означает наличие смешанных файлов, полученных с помощью разных версий компилятора, или повреждение установки на компьютере. Используйте **программы и компоненты** элемент панели управления для восстановления или переустановки продукта.

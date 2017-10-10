@@ -1,30 +1,33 @@
 ---
-title: "Ошибка компилятора C2513 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C2513"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C2513"
+title: "Ошибка компилятора C2513 | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C2513
+dev_langs:
+- C++
+helpviewer_keywords:
+- C2513
 ms.assetid: ab5b21d3-61e2-4df7-8eea-6f14d6ba8620
 caps.latest.revision: 9
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 9
----
-# Ошибка компилятора C2513
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 7eb4e7c63821f449bf9677cb5fe03c448bbbc6ee
+ms.contentlocale: ru-ru
+ms.lasthandoff: 10/10/2017
 
-"тип": нет переменных, объявленных перед "\="  
+---
+# <a name="compiler-error-c2513"></a>Ошибка компилятора C2513
+«Тип»: нет переменных, объявленных перед «=»  
   
  Спецификатор типа в объявлении не имеет идентификатора переменной.  
   
@@ -38,7 +41,7 @@ int main() {
 }  
 ```  
   
- Это ошибка может также возникать в результате работы согласованности компилятора для Visual Studio .NET 2003: инициализация typedef больше не допускается.  Инициализация typedef не допускается в соответствии со стандартом и приводит теперь к возникновению ошибки компилятора.  
+ Эта ошибка может также возникать в результате изменений работы компилятора в Visual Studio .NET 2003: инициализация typedef больше не допускается. Инициализация typedef не допускается в соответствии со стандартом и теперь приводит к ошибке компилятора.  
   
 ```  
 // C2513b.cpp  
@@ -50,4 +53,4 @@ typedef struct S {
 // } S;  
 ```  
   
- В качестве альтернативы можно удалить `typedef`, чтобы определить переменную с помощью списка составных инициализаторов, однако делать это не рекомендуется, так как при этом будет создана переменная с тем же именем, что и тип, а имя типа будет скрыто.
+ Альтернативы можно удалить `typedef` определить переменную с помощью списка составных инициализаторов, однако это не рекомендуется, поскольку создает переменную с тем же именем, что и тип и скрыть имя типа.

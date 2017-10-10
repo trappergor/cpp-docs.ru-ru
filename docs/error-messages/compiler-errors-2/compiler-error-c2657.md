@@ -19,33 +19,19 @@ caps.latest.revision: 8
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
-ms.openlocfilehash: 8a9140955ff0bd35b13ee212fa890afcfc59678c
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 2e0e06104458961297a4d0a3de8b7cda756d16ab
 ms.contentlocale: ru-ru
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 10/10/2017
 
 ---
 # <a name="compiler-error-c2657"></a>Ошибка компилятора C2657
-"класс:: *" в начале оператора (вы забыли указать тип?)  
+"класс:: *" в начале оператора (забыли указать тип?)  
   
- Строка начата с идентификатора указателя на член.  
+ Строка начинается с идентификатора указателя на член.  
   
- Эта ошибка может быть вызвано отсутствует спецификатор типа в объявлении указателя на член.  
+ Эта ошибка может быть вызвана отсутствует спецификатор типа в объявлении указателя на член.  
   
  Следующий пример приводит к возникновению ошибки C2657:  
   
