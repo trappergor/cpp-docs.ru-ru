@@ -1,37 +1,40 @@
 ---
-title: "Предупреждение компилятора C4430 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C4430"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C4430"
+title: "Предупреждение компилятора C4430 | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C4430
+dev_langs:
+- C++
+helpviewer_keywords:
+- C4430
 ms.assetid: 12efbfff-aa58-4a86-a7d6-2c6a12d01dd3
 caps.latest.revision: 8
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 8
----
-# Предупреждение компилятора C4430
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 4455419ab6ce8a98dfb26bdb6575cc229d364c0f
+ms.contentlocale: ru-ru
+ms.lasthandoff: 10/10/2017
 
-отсутствует спецификатор типа — предполагается int.Примечание. C\+\+ не поддерживает int по умолчанию  
+---
+# <a name="compiler-warning-c4430"></a>Предупреждение компилятора C4430
+отсутствует спецификатор типа — предполагается int. Примечание: C++ не поддерживает int по умолчанию  
   
- Это ошибка может возникать в результате действий по обеспечению совместимости компилятора с Visual C\+\+ 2005: все объявления должны явно содержать тип; тип int больше не предполагается по умолчанию.  
+ Эта ошибка может возникать в результате действий по обеспечению совместимости компилятора с Visual C++ 2005: все объявления должны явно указывать тип; int больше не предполагается.  
   
- С4430 всегда выводится в качестве ошибки.  Возможно отключение этого предупреждения с помощью прагма\-директивы `#pragma warning` или параметра **\/wd**; дополнительные сведения см. в разделе [warning](../../preprocessor/warning.md) или [\/w, \/Wn, \/WX, \/Wall, \/wln, \/wdn, \/wen, \/won \(уровень предупреждений\)](../../build/reference/compiler-option-warning-level.md).  
+ C4430 всегда выдается как ошибка.  Можно отключить это предупреждение с `#pragma warning` или **/wd**; в разделе [предупреждение](../../preprocessor/warning.md) или  [ /w, помощью/W0, /W1, /W2, /W3, / W4, /w1, /w2, /w3, / W4, / Wall, /wd, и мы /wo, / wv, / WX (порог предупреждений)](../../build/reference/compiler-option-warning-level.md)для получения дополнительной информации.  
   
-## Пример  
- В следующем примере формируется сообщение об ошибке С4430.  
+## <a name="example"></a>Пример  
+ Следующий пример приводит к возникновению ошибки C4430.  
   
 ```  
 // C4430.cpp  

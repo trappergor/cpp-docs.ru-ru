@@ -23,25 +23,11 @@ caps.latest.revision: 21
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0e0c08ddc57d437c51872b5186ae3fc983bb0199
-ms.openlocfilehash: 24cee5c74819d9a880bedbcebcce4dabfabae960
+ms.translationtype: MT
+ms.sourcegitcommit: c55726a1728185f699afbac4ba68a6dc0f70c2bf
+ms.openlocfilehash: f6265f6c53133abbe8cd96b67bbbeb7657c98b26
 ms.contentlocale: ru-ru
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 10/09/2017
 
 ---
 # <a name="crtthreadtraits-class"></a>Класс CRTThreadTraits
@@ -65,7 +51,7 @@ class CRTThreadTraits
 |[CRTThreadTraits::CreateThread](#createthread)|(Статический) Эта функция вызывается для создания потока, можно использовать функции CRT.|  
   
 ## <a name="remarks"></a>Примечания  
- Поток признаки являются классами, предоставляющими функции создания для конкретного потока. Функция создания совпадает с той же сигнатуре и семантика Windows [CreateThread](http://msdn.microsoft.com/library/windows/desktop/ms682453) функции.  
+ Признаки потока являются классы, обеспечивающие функции создания определенного типа потока. Функции создания теми же подписи и семантику, что Windows [CreateThread](http://msdn.microsoft.com/library/windows/desktop/ms682453) функции.  
   
  Признаки потока используются следующие классы:  
   
@@ -73,7 +59,7 @@ class CRTThreadTraits
   
 - [CWorkerThread](../../atl/reference/cworkerthread-class.md)  
   
- Если поток не будет использоваться функции CRT, используйте [Win32ThreadTraits](../../atl/reference/win32threadtraits-class.md) вместо.  
+ Если поток не будет использоваться функции CRT, используйте [Win32ThreadTraits](../../atl/reference/win32threadtraits-class.md) вместо него.  
   
 ## <a name="requirements"></a>Требования  
  **Заголовок:** atlbase.h  
@@ -96,7 +82,7 @@ static HANDLE CreateThread(
  Атрибуты безопасности для нового потока.  
   
  `dwStackSize`  
- Размер стека для нового потока.  
+ Размер стека нового потока.  
   
  `pfnThreadProc`  
  Процедура потока нового потока.  
@@ -105,18 +91,18 @@ static HANDLE CreateThread(
  Параметр, передаваемый в процедуру потока.  
   
  `dwCreationFlags`  
- Создание флагов (0 или CREATE_SUSPENDED).  
+ Создание флаги (0 или CREATE_SUSPENDED).  
   
  `pdwThreadId`  
- [out] Адрес переменной типа DWORD, в случае успешного выполнения получает идентификатор созданного потока.  
+ [out] Адрес переменной типа DWORD, в случае успеха, получающий идентификатор потока для только что созданного потока.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
- Возвращает дескриптор вновь созданного потока или значение NULL в случае сбоя. Вызов [GetLastError](http://msdn.microsoft.com/library/windows/desktop/ms679360) Чтобы получить расширенные сведения об ошибке.  
+ Возвращает дескриптор только что созданного потока или значение NULL в случае ошибки. Вызовите [GetLastError](http://msdn.microsoft.com/library/windows/desktop/ms679360) Чтобы получить расширенные сведения об ошибке.  
   
 ### <a name="remarks"></a>Примечания  
  В разделе [CreateThread](http://msdn.microsoft.com/library/windows/desktop/ms682453) Дополнительные сведения о параметрах этой функции.  
   
- Эта функция вызывает функцию [_beginthreadex](../../c-runtime-library/reference/beginthread-beginthreadex.md) при создании потока.  
+ Эта функция вызывает [_beginthreadex](../../c-runtime-library/reference/beginthread-beginthreadex.md) при создании потока.  
   
 ## <a name="see-also"></a>См. также  
  [Общие сведения о классе](../../atl/atl-class-overview.md)

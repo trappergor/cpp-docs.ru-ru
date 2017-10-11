@@ -1,36 +1,39 @@
 ---
-title: "Ошибка компилятора C2362 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C2362"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C2362"
+title: "Ошибка компилятора C2362 | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C2362
+dev_langs:
+- C++
+helpviewer_keywords:
+- C2362
 ms.assetid: 7aafecbc-b3cf-45a6-9ec3-a17e3f222511
 caps.latest.revision: 8
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 8
----
-# Ошибка компилятора C2362
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: e3a921084d696e6cf7abebc75d02d403cbcda2be
+ms.contentlocale: ru-ru
+ms.lasthandoff: 10/09/2017
 
-пропуск инициализации "идентификатор" из\-за перехода "goto "метка""  
+---
+# <a name="compiler-error-c2362"></a>Ошибка компилятора C2362
+Пропуск инициализации «идентификатор», «goto "Метка»  
   
- В процессе компиляции с использованием параметра [\/Za](../../build/reference/za-ze-disable-language-extensions.md) из\-за перехода к метке не выполнена инициализация идентификатора.  
+ При компиляции с параметром [/Za](../../build/reference/za-ze-disable-language-extensions.md), перехода к метке предотвращает инициализацию идентификатор.  
   
- Переход после объявления с инициализатором допускается только в том случае, если объявление содержится в блоке, который не выполняется, или уже инициализирована переменная.  
+ Не удается переход после объявления с инициализатором, если объявление содержится в блоке, не будут сохранены или переменная уже инициализирован.  
   
- Следующий пример приводит к возникновению ошибки C2326:  
+ При компиляции следующего примера возникнет ошибка C2326:  
   
 ```  
 // C2362.cpp  
@@ -42,7 +45,7 @@ label1:;
 }  
 ```  
   
- Возможный способ устранения данной ошибки:  
+ Возможное решение:  
   
 ```  
 // C2362b.cpp  

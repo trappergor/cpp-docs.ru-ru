@@ -99,30 +99,15 @@ caps.latest.revision: 14
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: a82768750e6a7837bb81edd8a51847f83c294c20
-ms.openlocfilehash: ca0ae546af28c342db2e452bec432ced0437738a
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 43efb76381db85f4f1d601cb6d83dd82074e960a
 ms.contentlocale: ru-ru
-ms.lasthandoff: 04/04/2017
+ms.lasthandoff: 10/09/2017
 
 ---
 # <a name="rpt-rptf-rptw-rptfw-macros"></a>Макросы _RPT, _RPTF, _RPTW, _RPTFW
-Отслеживает ход выполнения приложения путем создания отчета отладки (только отладочная версия). Обратите внимание, что *n* определяет количество аргументов в параметре `args` и может быть 0, 1, 2, 3, 4 или 5.  
+Отслеживает ход выполнения приложения путем создания отчета отладки (только отладочная версия). Обратите внимание, что  *n*  указывает число аргументов в `args` и может быть 0, 1, 2, 3, 4 или 5.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -169,7 +154,7 @@ _RPTFWn(
   
  Макросы `_RPTW` и `_RPTFW` являются версиями этих макросов для расширенных символов. Они подобны функции `wprintf` и принимают в качестве аргументов строки расширенных символов.  
   
- Макросы `_RPT` вызывают функцию [_CrtDbgReport](../../c-runtime-library/reference/crtdbgreport-crtdbgreportw.md) для создания отчета по отладке с пользовательским сообщением. Макросы `_RPTW` вызывают функцию `_CrtDbgReportW` для создания того же отчета с расширенными символами. Макросы `_RPTF` и `_RPTFW` создают отчеты отладки, в котором помимо пользовательского сообщения указан файл исходного кода и номер строки, в которой был вызван макрос отчета. Пользовательское сообщение создается путем замены аргументов `arg`[*n*] в строке `format`, используя те же правила, которые определены функцией [printf](../../c-runtime-library/reference/printf-printf-l-wprintf-wprintf-l.md).  
+ Макросы `_RPT` вызывают функцию [_CrtDbgReport](../../c-runtime-library/reference/crtdbgreport-crtdbgreportw.md) для создания отчета по отладке с пользовательским сообщением. Макросы `_RPTW` вызывают функцию `_CrtDbgReportW` для создания того же отчета с расширенными символами. Макросы `_RPTF` и `_RPTFW` создают отчеты отладки, в котором помимо пользовательского сообщения указан файл исходного кода и номер строки, в которой был вызван макрос отчета. Сообщение для пользователя, созданного путем замены `arg`[*n*] аргументы в `format` строку, с использованием того же правилами, определенными в [printf](../../c-runtime-library/reference/printf-printf-l-wprintf-wprintf-l.md) функции.  
   
  Функция `_CrtDbgReport` или `_CrtDbgReportW` создает отчет отладки и определяет места его назначения на основании текущих режимов отчета и файла, определенных для `reportType`. Функции [_CrtSetReportMode](../../c-runtime-library/reference/crtsetreportmode.md) и [_CrtSetReportFile](../../c-runtime-library/reference/crtsetreportfile.md) используются для определения мест назначения для каждого типа отчета.  
   

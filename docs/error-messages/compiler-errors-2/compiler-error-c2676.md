@@ -1,35 +1,38 @@
 ---
-title: "Ошибка компилятора C2676 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C2676"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C2676"
+title: "Ошибка компилятора C2676 | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C2676
+dev_langs:
+- C++
+helpviewer_keywords:
+- C2676
 ms.assetid: 838a5e34-c92f-4f65-a597-e150bf8cf737
 caps.latest.revision: 11
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 11
----
-# Ошибка компилятора C2676
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: ed21b76da0834ff4a2aaa8af647d791fdaac075a
+ms.contentlocale: ru-ru
+ms.lasthandoff: 10/10/2017
 
-бинарный "оператор": "тип" не определяет этот оператор или преобразование к типу приемлемо к встроенному оператору  
+---
+# <a name="compiler-error-c2676"></a>Ошибка компилятора C2676
+бинарный «оператор»: «тип» не определяет этот оператор или преобразование к типу приемлемо к встроенному оператору  
   
- Чтобы использовать оператор, необходимо перегрузить его для указанного типа или определить преобразование в тип, для которого определен оператор.  
+ Чтобы использовать этот оператор, необходимо перегрузить его для указанного типа или определить преобразование в тип, для которого определен оператор.  
   
-## Пример  
- В следующем примере возникает ошибка C2676.  
+## <a name="example"></a>Пример  
+ Следующий пример приводит к возникновению ошибки C2676.  
   
 ```  
 // C2676.cpp  
@@ -59,12 +62,12 @@ int main() {
 }  
 ```  
   
-## Пример  
- Ошибка C2676 также может возникнуть при попытке создания арифметического указателя на базе указателя `this` ссылочного типа.  
+## <a name="example"></a>Пример  
+ C2676 также может возникнуть при попытке выполнить указателями на `this` указатель ссылочного типа.  
   
- Указатель `this` ссылочного типа представляет собой дескриптор типа.  Дополнительные сведения см. в разделе [Семантика этого указателя](../../dotnet/how-to-define-and-consume-classes-and-structs-cpp-cli.md#BKMK_Semantics_of_the_this_pointer).  
+ `this` Указатель представляет собой дескриптор типа в ссылочный тип. Дополнительные сведения см. в разделе [семантика этого указателя](../../dotnet/how-to-define-and-consume-classes-and-structs-cpp-cli.md#BKMK_Semantics_of_the_this_pointer).  
   
- В следующем примере возникает ошибка C2676.  
+ Следующий пример приводит к возникновению ошибки C2676.  
   
 ```  
 // C2676_a.cpp  

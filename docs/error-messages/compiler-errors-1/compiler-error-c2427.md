@@ -1,32 +1,35 @@
 ---
-title: "Ошибка компилятора C2427 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C2427"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C2427"
+title: "Ошибка компилятора C2427 | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C2427
+dev_langs:
+- C++
+helpviewer_keywords:
+- C2427
 ms.assetid: a7d421af-6180-40b4-b7a6-9f3bc7dfaaf9
 caps.latest.revision: 9
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 9
----
-# Ошибка компилятора C2427
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 416db305963b6357c6dce9c5b2d13f0a6ca186f3
+ms.contentlocale: ru-ru
+ms.lasthandoff: 10/09/2017
 
-"class": невозможно определить класс в этой области  
+---
+# <a name="compiler-error-c2427"></a>Ошибка компилятора C2427
+«класс»: невозможно определить класс в этой области  
   
- Предпринята попытка определить вложенный класс, однако вложенный класс является членом базового класса, а не внешнего содержащего класса.  
+ Была предпринята попытка определить вложенный класс, однако вложенный класс является членом базового класса, а не внешнего содержащего класса.  
   
  Следующий пример приводит к возникновению ошибки C2427:  
   

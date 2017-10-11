@@ -1,5 +1,5 @@
 ---
-title: "C3044 Ошибка компилятора | Документы Microsoft"
+title: "Ошибка компилятора C3044 | Документы Microsoft"
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -19,32 +19,17 @@ caps.latest.revision: 8
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
-ms.openlocfilehash: 53a542c913839c13e490c1a8513b1e95aca3b46e
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 313b5d1d6b0d8204d4d4716d0671e8093f4978d5
 ms.contentlocale: ru-ru
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 10/10/2017
 
 ---
 # <a name="compiler-error-c3044"></a>Ошибка компилятора C3044
 section: допускается только непосредственное вложение в директиву OpenMP "sections"  
   
- Компилятор обнаружил неправильное использование директивы `section` . Дополнительные сведения см. в разделе [разделы](../../parallel/openmp/reference/sections-openmp.md).  
+ Компилятор обнаружил неправильное использование директивы `section` . Дополнительные сведения см. в разделе [sections](../../parallel/openmp/reference/sections-openmp.md).  
   
  Следующий пример приводит к возникновению ошибки C3044:  
   

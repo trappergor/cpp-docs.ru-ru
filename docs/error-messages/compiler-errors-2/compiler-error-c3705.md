@@ -19,31 +19,17 @@ caps.latest.revision: 7
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
-ms.openlocfilehash: 0361be7eb3f86466ea7d379cd0919bb84addcfea
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: ba08854d9d9ac6f0e644a64a80133b1d8b70a167
 ms.contentlocale: ru-ru
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 10/10/2017
 
 ---
 # <a name="compiler-error-c3705"></a>Ошибка компилятора C3705
 «функция»: невозможно найти интерфейс событий  
   
- Необходимо определить интерфейс событий для использования COM-событий. Обратите внимание, что `#include` для использования COM-событий необходимы строки файлов заголовков ATL, представленные в примере ниже. Чтобы устранить эту ошибку, удалите комментарии с определения `IEvents` интерфейс в образце кода.  
+ Необходимо определить интерфейс событий для использования COM-событий. Обратите внимание, что `#include` для использования COM-событий необходимы строки файлов заголовков ATL, представленные в примере ниже. Чтобы устранить эту ошибку, удалите комментарии с определения `IEvents` интерфейс в примере кода.  
   
  В следующем примере возникает ошибка C3705:  
   

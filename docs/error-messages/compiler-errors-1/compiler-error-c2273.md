@@ -1,34 +1,37 @@
 ---
-title: "Ошибка компилятора C2273 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C2273"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C2273"
+title: "Ошибка компилятора C2273 | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C2273
+dev_langs:
+- C++
+helpviewer_keywords:
+- C2273
 ms.assetid: 3c682c66-97bf-4a23-a22c-d9a26a92bf95
 caps.latest.revision: 10
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 10
----
-# Ошибка компилятора C2273
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 58f7f13303b9941cf07e90685d68d7114213ea2d
+ms.contentlocale: ru-ru
+ms.lasthandoff: 10/09/2017
 
-«тип»: недопустимо в качестве выражения '\-\>' оператора  
+---
+# <a name="compiler-error-c2273"></a>Ошибка компилятора C2273
+«Тип»: недопустимо в качестве правой стороны оператора «->»  
   
- Тип отображается как правый операнд оператора `->`.  
+ Тип отображается как правый операнд `->` оператор.  
   
- Эта ошибка может быть вызвана попыткой обращения к преобразованию типа, определенного пользователем.  Используйте ключевое слово `operator` и\>`type`.  
+ Эта ошибка может быть вызвано при обращении к преобразования определяемого пользователем типа. Используйте ключевое слово `operator` между -> и `type`.  
   
  Следующий пример приводит к возникновению ошибки C2273:  
   

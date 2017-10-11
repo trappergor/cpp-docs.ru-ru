@@ -1,32 +1,35 @@
 ---
-title: "Ошибка компилятора C2762 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C2762"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C2762"
+title: "Ошибка компилятора C2762 | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C2762
+dev_langs:
+- C++
+helpviewer_keywords:
+- C2762
 ms.assetid: 8b81a801-fd48-40a1-8bee-0748795b12e4
 caps.latest.revision: 8
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 8
----
-# Ошибка компилятора C2762
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: e121ab82b8e49fb1727e626eea7d060e8def2b8c
+ms.contentlocale: ru-ru
+ms.lasthandoff: 10/10/2017
 
-"класс": недопустимое выражение в качестве аргумента шаблона для "аргумент"  
+---
+# <a name="compiler-error-c2762"></a>Ошибка компилятора C2762
+«класс»: Недопустимое выражение в качестве аргумента шаблона для «аргумент»  
   
- При использовании параметра компиляции [\/Za](../../build/reference/za-ze-disable-language-extensions.md) преобразование целочисленного значения в указатель не выполняется.  
+ При использовании [/Za](../../build/reference/za-ze-disable-language-extensions.md), компилятор не преобразует целочисленный к указателю.  
   
  Следующий пример приводит к возникновению ошибки C2762:  
   

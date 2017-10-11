@@ -1,34 +1,37 @@
 ---
-title: "Ошибка компилятора C2810 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C2810"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C2810"
+title: "Ошибка компилятора C2810 | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C2810
+dev_langs:
+- C++
+helpviewer_keywords:
+- C2810
 ms.assetid: f63e8f24-d7f6-42ac-904f-72ff49592ba6
 caps.latest.revision: 8
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 8
----
-# Ошибка компилятора C2810
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 80fdc399c5825b9bd625604e7f4366f98b9ee971
+ms.contentlocale: ru-ru
+ms.lasthandoff: 10/10/2017
 
-"интерфейс": интерфейс может быть производным только от другого интерфейса  
+---
+# <a name="compiler-error-c2810"></a>Ошибка компилятора C2810
+«интерфейс»: интерфейс может наследовать только от другого интерфейса  
   
- [Интерфейс](../Topic/__interface.md) может наследоваться только от другого интерфейса, но не от класса или структуры.  
+ [Интерфейс](../../cpp/interface.md) может наследовать только от другого интерфейса и не могут наследовать от класса или структуры.  
   
- Следующий пример приводит к возникновению ошибки C2810:  
+ В следующем примере возникает ошибка C2810:  
   
 ```  
 // C2810.cpp  

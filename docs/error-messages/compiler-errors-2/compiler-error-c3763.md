@@ -1,32 +1,35 @@
 ---
-title: "Ошибка компилятора C3763 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C3763"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C3763"
+title: "Ошибка компилятора C3763 | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C3763
+dev_langs:
+- C++
+helpviewer_keywords:
+- C3763
 ms.assetid: 58b1f079-cd1d-46e0-9431-ea18210106b7
 caps.latest.revision: 8
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 8
----
-# Ошибка компилятора C3763
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 51810524b36a714404ce45a51186bc635dacebd3
+ms.contentlocale: ru-ru
+ms.lasthandoff: 10/10/2017
 
-"тип": "retval" и "out" могут появляться только с указателем на данные  
+---
+# <a name="compiler-error-c3763"></a>Ошибка компилятора C3763
+«Тип»: «retval» и «out» могут использоваться только в тип данных указателя  
   
- Атрибуты [out](../Topic/out%20\(C++\).md) и [retval](../../windows/retval.md) могут появляться только в параметрах указателя типа.  Следует либо удалить атрибут, либо создать параметр указателя типа.  
+ [Out](../../windows/out-cpp.md) или [retval](../../windows/retval.md) атрибуты могут появляться только в параметрах типа указателя. Удалите атрибут или использовать параметр типа указателя.  
   
  Следующий пример приводит к возникновению ошибки C3763:  
   

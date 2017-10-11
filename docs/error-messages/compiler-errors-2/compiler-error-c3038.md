@@ -1,5 +1,5 @@
 ---
-title: "Ошибка компилятора сообщение об ошибке С3038 | Документы Microsoft"
+title: "Ошибка компилятора C3038 | Документы Microsoft"
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -19,32 +19,17 @@ caps.latest.revision: 7
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
-ms.openlocfilehash: d9aff323a1c00edb6646a6cd4b6125cc69a9418f
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 3ddd3aaface0e500dc92778333cd3672398909da
 ms.contentlocale: ru-ru
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 10/10/2017
 
 ---
 # <a name="compiler-error-c3038"></a>Ошибка компилятора C3038
 "переменная": переменная в предложении private не может быть редукционной переменной в охватывающем контексте  
   
- Переменные, которые отображаются в [сокращения](../../parallel/openmp/reference/reduction.md) предложение параллельной директивы не может быть указано в [частного](../../parallel/openmp/reference/private-openmp.md) предложение на директиву совместной работы, которая привязывается к параллельной конструкции.  
+ Переменная, используемая в предложении [reduction](../../parallel/openmp/reference/reduction.md) параллельной директивы, не может быть указана в предложении [private](../../parallel/openmp/reference/private-openmp.md) в директиве распределения рабочей нагрузки, которая привязывается к параллельной конструкции.  
   
  Следующий пример приводит к возникновению ошибки C3038:  
   

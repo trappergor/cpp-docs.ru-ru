@@ -19,31 +19,17 @@ caps.latest.revision: 10
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: c243063a9770542f137d5950e8a269f771960f74
-ms.openlocfilehash: bbc097048600700592d2ebb30d939ba216434d84
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 5be1886ad2404f0c0eb30cb5511111e4e8e97180
 ms.contentlocale: ru-ru
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 10/10/2017
 
 ---
 # <a name="compiler-error-c3648"></a>Ошибка компилятора C3648
-для данного синтаксиса явного переопределения необходим параметр /clr:oldSyntax  
+Этот синтаксис явного переопределения требует/CLR: oldSyntax  
   
-При компиляции для последней версии управляемого синтаксиса компилятор найден явную переопределяет синтаксис для предыдущих версий, более не поддерживается.  
+При компиляции для последней версии управляемого синтаксиса компилятор обнаружил явное переопределение синтаксис для предыдущих версий, больше не поддерживается.  
   
 Дополнительные сведения см. в разделе [явное переопределение](../../windows/explicit-overrides-cpp-component-extensions.md).  
   

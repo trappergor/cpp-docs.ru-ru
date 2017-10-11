@@ -19,33 +19,19 @@ caps.latest.revision: 13
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
-ms.openlocfilehash: 5b44d0cd891737f5fbd7a2870a6707568a729946
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 3df494f5d78a862e260fa4edfe0a2740e4fc8cdd
 ms.contentlocale: ru-ru
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 10/10/2017
 
 ---
 # <a name="compiler-error-c2682"></a>Ошибка компилятора C2682
-Невозможно использовать "оператор приведения" для преобразования из «типа1» в «тип2»  
+Невозможно использовать "оператор приведения" для преобразования из «тип1» в «тип2»  
   
  Оператор приведения предпринял попытку преобразования между двумя несовместимыми типами. Например, нельзя использовать [dynamic_cast](../../cpp/dynamic-cast-operator.md) оператор для преобразования указателя в ссылку. `dynamic_cast` Оператор не может использоваться для снятия квалификаторов. Все квалификаторы типов должны совпадать.  
   
- Можно использовать `const_cast` оператор удаления атрибутов, таких как `const`, `volatile`, или `__unaligned`.  
+ Можно использовать `const_cast` оператор, удалите атрибуты, такие как `const`, `volatile`, или `__unaligned`.  
   
  Следующий пример приводит к возникновению ошибки C2682:  
   

@@ -1,36 +1,39 @@
 ---
-title: "Ошибка компилятора C3804 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C3804"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C3804"
+title: "Ошибка компилятора C3804 | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C3804
+dev_langs:
+- C++
+helpviewer_keywords:
+- C3804
 ms.assetid: 7c4cda28-ec96-4d04-937b-36dbd9944722
 caps.latest.revision: 3
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 3
----
-# Ошибка компилятора C3804
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 06c9292c2da106c4a4eaeb6de07c923c973e4ce7
+ms.contentlocale: ru-ru
+ms.lasthandoff: 10/10/2017
 
-"метод\_доступа\_свойства": все методы доступа для свойства должны быть либо статическими, либо не статическими  
+---
+# <a name="compiler-error-c3804"></a>Ошибка компилятора C3804
+«метод_доступа_свойства»: методы доступа для свойства должны либо быть статическими, либо не статическими  
   
- При определении нетривиальных свойств функции методов доступа могут быть либо статическими, либо функциями экземпляра \(но не обоих видов одновременно\).  
+ При определении нетривиального свойства, функции доступа могут быть либо статическими или экземпляр, но не оба.  
   
- Дополнительные сведения см. в разделе [property](../../windows/property-cpp-component-extensions.md).  
+ Дополнительные сведения см. в разделе [property](../../windows/property-cpp-component-extensions.md) .  
   
-## Пример  
+## <a name="example"></a>Пример  
  В следующем примере возникает ошибка C3804.  
   
 ```  

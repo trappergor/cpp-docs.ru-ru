@@ -1,32 +1,35 @@
 ---
-title: "Неустранимая ошибка C1191 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C1191"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C1191"
+title: "Неустранимая ошибка C1191 | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C1191
+dev_langs:
+- C++
+helpviewer_keywords:
+- C1191
 ms.assetid: 2888c6c4-b4e6-449e-8ee0-7917f31086df
 caps.latest.revision: 10
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 10
----
-# Неустранимая ошибка C1191
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 95795ddfcc27a7cd150dec565f0e52a4f7eca00e
+ms.contentlocale: ru-ru
+ms.lasthandoff: 10/09/2017
 
-импорт "библиотеки" возможен только в глобальной области видимости  
+---
+# <a name="fatal-error-c1191"></a>Неустранимая ошибка C1191
+«dll» могут быть импортированы только в глобальной области видимости  
   
- В программе, скомпилированной с параметром \/clr, инструкция для импорта библиотеки mscorlib.dll должна находиться в глобальной области видимости, а не в пространстве имен или функции.  
+ Инструкция для импорта библиотеки mscorlib.dll в программу, с использованием параметра/CLR не может находиться в пространстве имен или функции, но должны находиться в глобальной области.  
   
  Следующий пример приводит к возникновению ошибки C1191:  
   
@@ -38,7 +41,7 @@ namespace sample {
 }  
 ```  
   
- Возможный способ устранения данной ошибки:  
+ Возможное решение:  
   
 ```  
 // C1191b.cpp  

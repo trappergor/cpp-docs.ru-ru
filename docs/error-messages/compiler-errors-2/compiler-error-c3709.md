@@ -19,31 +19,17 @@ caps.latest.revision: 7
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
-ms.openlocfilehash: 8162e214500b8d39edd1e02e917e00d2372c3abe
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 4d56a4c18543ad71e524a4cc08eecd35ab6e7e2e
 ms.contentlocale: ru-ru
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 10/10/2017
 
 ---
 # <a name="compiler-error-c3709"></a>Ошибка компилятора C3709
-«функция»: неверный синтаксис для задания события в __hook или\__unhook  
+«функция»: неправильный синтаксис для задания события в __hook или\__unhook  
   
- При указании источника события с [__hook](../../cpp/hook.md) или [__unhook](../../cpp/unhook.md), первый параметр должен быть действительным методом события, а второй параметр должен иметь допустимое событие исходного объекта (а не метода).  
+ При указании источника события с [__hook](../../cpp/hook.md) или [__unhook](../../cpp/unhook.md), первый параметр должен быть действительным методом события, а второй параметр должен быть допустимым событий исходного объекта (а не метода).  
   
  Следующий пример приводит к возникновению ошибки C3709:  
   

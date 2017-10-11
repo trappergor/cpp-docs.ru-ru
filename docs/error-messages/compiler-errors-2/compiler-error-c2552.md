@@ -1,34 +1,37 @@
 ---
-title: "Ошибка компилятора C2552 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C2552"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C2552"
+title: "Ошибка компилятора C2552 | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C2552
+dev_langs:
+- C++
+helpviewer_keywords:
+- C2552
 ms.assetid: 0e0ab759-788a-4faf-9337-80d4b9e2e8c9
 caps.latest.revision: 12
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 12
----
-# Ошибка компилятора C2552
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 0e001837ca3d9ea9e5c5db1770188d030e21d7d9
+ms.contentlocale: ru-ru
+ms.lasthandoff: 10/10/2017
 
+---
+# <a name="compiler-error-c2552"></a>Ошибка компилятора C2552
 "идентификатор": инициализация не агрегированных данных с помощью списка инициализации не допускается  
   
  Идентификатор агрегата был неверно инициализирован.  
   
- [Агрегаты](../../c-language/initializing-aggregate-types.md) определяются как:  
+ [Статистические выражения](../../c-language/initializing-aggregate-types.md) определяются как:  
   
 -   Массивы  
   
@@ -42,13 +45,13 @@ caps.handback.revision: 12
   
     -   Виртуальные функции  
   
- Кроме того, в Visual C\+\+ в агрегатах не допускаются типы данных, содержащие конструкторы.  
+ Кроме того, в Visual C++ в агрегатах не допускаются типы данных, содержащие конструкторы.  
   
- Ниже приведены причины, из\-за которых при попытке инициализации агрегата для типа может возникнуть ошибка C2552:  
+ Ниже приведены причины, из-за которых при попытке инициализации агрегата для типа может возникнуть ошибка C2552:  
   
 -   Тип имеет один или несколько пользовательских конструкторов.  
   
--   Тип имеет один или несколько нестатических, закрытых данных\-членов.  
+-   Тип имеет один или несколько нестатических, закрытых данных-членов.  
   
 -   Тип имеет одну или несколько виртуальных функций.  
   
@@ -56,7 +59,7 @@ caps.handback.revision: 12
   
 -   Тип является классом ссылки или интерфейсом среды CLR.  
   
--   Тим включает массив нефиксированного размера \(нулевой массив\), элементы которого имеют деструкторы.  
+-   Тим включает массив нефиксированного размера (нулевой массив), элементы которого имеют деструкторы.  
   
  Следующий пример приводит к возникновению ошибки C2552:  
   

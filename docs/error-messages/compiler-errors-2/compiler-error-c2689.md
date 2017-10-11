@@ -1,32 +1,35 @@
 ---
-title: "Ошибка компилятора C2689 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C2689"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C2689"
+title: "Ошибка компилятора C2689 | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C2689
+dev_langs:
+- C++
+helpviewer_keywords:
+- C2689
 ms.assetid: b5216fba-524d-4194-9168-26e9dc5210ce
 caps.latest.revision: 8
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 8
----
-# Ошибка компилятора C2689
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: faea544c9e2328521c5d302bbb2af935c94201c6
+ms.contentlocale: ru-ru
+ms.lasthandoff: 10/10/2017
 
-функция: нельзя определить дружественную функцию в пределах локального класса  
+---
+# <a name="compiler-error-c2689"></a>Ошибка компилятора C2689
+«функция»: нельзя определить дружественную функцию в пределах локального класса  
   
- Можно объявить, но нельзя определить дружественную функцию в локальном классе.  
+ Можно объявить, но не определить дружественную функцию в локальном классе.  
   
  Следующий пример приводит к возникновению ошибки C2689:  
   

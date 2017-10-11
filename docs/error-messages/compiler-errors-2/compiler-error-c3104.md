@@ -19,35 +19,21 @@ caps.latest.revision: 14
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: c243063a9770542f137d5950e8a269f771960f74
-ms.openlocfilehash: 5df018fe26e66ed480ed2464c19c876adfac8dd1
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 837ff564bc3b2795bce6de69caa85e1d1dcf2766
 ms.contentlocale: ru-ru
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 10/10/2017
 
 ---
 # <a name="compiler-error-c3104"></a>Ошибка компилятора C3104
-недопустимый аргумент атрибута  
+Недопустимый аргумент атрибута  
   
  Указан недопустимый аргумент для атрибута.  
   
- В разделе [типы параметров атрибутов](../../windows/attribute-parameter-types-cpp-component-extensions.md) подробнее.  
+ В разделе [типы параметров атрибутов](../../windows/attribute-parameter-types-cpp-component-extensions.md) для получения дополнительной информации.  
   
- Эта ошибка может возникать в результате действий по обеспечению совместимости компилятора с Visual C++ 2005: при передаче управляемых массивов в настраиваемые атрибуты, тип массива больше не выводится из списка инициализации статистических выражений. Теперь компилятор требует указать тип массива, а также список инициализаторов.  
+ Эта ошибка может возникать в результате действий по обеспечению совместимости компилятора с Visual C++ 2005: при передаче управляемых массивов в настраиваемых атрибутов, тип массива больше не выводится из списка инициализации статистических выражений. Компилятор теперь необходимо указать тип массива, а также список инициализаторов.  
   
 ## <a name="example"></a>Пример  
  Следующий пример приводит к возникновению ошибки C3104.  

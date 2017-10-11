@@ -19,25 +19,11 @@ caps.latest.revision: 11
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: c243063a9770542f137d5950e8a269f771960f74
-ms.openlocfilehash: 555b3a7ac8e0d1e5de8eacd763c9ee63101e5b78
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: dc5abf02a3210ca3d7bd858662e0c02d4f42d75d
 ms.contentlocale: ru-ru
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 10/10/2017
 
 ---
 # <a name="compiler-error-c3149"></a>Ошибка компилятора C3149
@@ -45,9 +31,9 @@ ms.lasthandoff: 02/24/2017
   
  Объявление не указан правильно.  
   
- Например может быть определен тип CLR в глобальной области видимости и предпринята попытка создать переменную типа как часть определения. Поскольку глобальные переменные типов CLR не допускаются, компилятор создаст ошибку C3149.  
+ Например может определения типа CLR в глобальной области видимости и пытается создать переменную типа в определении. Так как глобальные переменные типов среды CLR не допускаются, компилятор создаст C3149.  
   
- Чтобы устранить эту ошибку, объявите переменные типов CLR в определении функции или типа.  
+ Чтобы устранить эту ошибку, объявите переменные типов среды CLR в определении функции или типа.  
   
  Следующий пример приводит к возникновению ошибки C3149:  
   

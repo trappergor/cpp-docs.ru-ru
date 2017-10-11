@@ -1,29 +1,32 @@
 ---
-title: "Ошибка компилятора C3374 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C3374"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C3374"
+title: "Ошибка компилятора C3374 | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C3374
+dev_langs:
+- C++
+helpviewer_keywords:
+- C3374
 ms.assetid: 41431299-bd20-47d4-a0c8-1334dd79018b
 caps.latest.revision: 9
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 9
----
-# Ошибка компилятора C3374
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 16c857cf431462abd2acc21cf7444ec0aad2d075
+ms.contentlocale: ru-ru
+ms.lasthandoff: 10/10/2017
 
+---
+# <a name="compiler-error-c3374"></a>Ошибка компилятора C3374
 невозможно взять адрес 'функции' без создания экземпляра делегата  
   
  Адрес функции был взят в контексте, отличном от создания экземпляра делегата.  
@@ -51,5 +54,5 @@ int main() {
 }  
 ```  
   
-## См. также  
- [Практическое руководство. Определение и использование делегатов](../Topic/How%20to:%20Define%20and%20Use%20Delegates%20\(C++-CLI\).md)
+## <a name="see-also"></a>См. также  
+ [Практическое руководство. Определение и использование делегатов (C++/CLI)](../../dotnet/how-to-define-and-use-delegates-cpp-cli.md)

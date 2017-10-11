@@ -1,34 +1,37 @@
 ---
-title: "Ошибка компилятора C2244 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C2244"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C2244"
+title: "Ошибка компилятора C2244 | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C2244
+dev_langs:
+- C++
+helpviewer_keywords:
+- C2244
 ms.assetid: d9911c12-ceb5-4f93-ac47-b44a485215c2
 caps.latest.revision: 10
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 10
----
-# Ошибка компилятора C2244
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: fc2afb310e7fdee866d437631f4a20554fc7a872
+ms.contentlocale: ru-ru
+ms.lasthandoff: 10/09/2017
 
-"идентификатор" : не удается сопоставить определение функции существующему объявлению  
+---
+# <a name="compiler-error-c2244"></a>Ошибка компилятора C2244
+«Идентификатор»: не удается сопоставить определение функции существующему объявлению  
   
- Нестандартное использование унарного оператора с одновременным использованием оператора перед вызовом функции, не заключенным в круглые скобки.  
+ Нестандартное использование унарного оператора использовался перед вызовом функции, не содержит скобку.  
   
- Эта ошибка возникает только в проектах C\+\+.  
+ Эта ошибка возникает только в проектах C++.  
   
  Следующий пример приводит к возникновению ошибки C2244:  
   
@@ -47,7 +50,7 @@ int main() {
 }  
 ```  
   
- Ошибка C2244 также может возникать при использовании неверной подписи функции для функции\-члена шаблона класса.  
+ C2244 также может возникать при использовании неверной подписи функции для функции-члена шаблона класса.  
   
 ```  
 // C2244b.cpp  
@@ -63,7 +66,7 @@ void XYZ<T>::func(int i) {}   // C2244 wrong function signature
 // void XYZ<T>::func(T t) {}  
 ```  
   
- Ошибка C2244 может также возникнуть при использовании неверной подписи функции для шаблона функции\-члена.  
+ C2244 также может возникать при использовании неверной подписи функции для функции-члена шаблона.  
   
 ```  
 // C2244c.cpp  
@@ -79,7 +82,7 @@ void ABC::func(int i) {}   // C2244 wrong signature
 // void ABC::func(int i, T t) {}  
 ```  
   
- Вы не можете специализировать шаблон функции частично.  
+ Не удается частично специализировать шаблон функции.  
   
 ```  
 // C2244d.cpp  

@@ -1,32 +1,35 @@
 ---
-title: "Ошибка компилятора C2582 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C2582"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C2582"
+title: "Ошибка компилятора C2582 | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C2582
+dev_langs:
+- C++
+helpviewer_keywords:
+- C2582
 ms.assetid: ee1b9378-8bcd-4792-b87e-6d7a466d29ed
 caps.latest.revision: 13
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 13
----
-# Ошибка компилятора C2582
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: f210884bcc1fa9519e4f5fef01035356502c527b
+ms.contentlocale: ru-ru
+ms.lasthandoff: 10/10/2017
 
-функция 'function' недоступна в типе 'type'  
+---
+# <a name="compiler-error-c2582"></a>Ошибка компилятора C2582
+функция «функция» недоступен в «тип»  
   
- Предпринята попытка присвоить значение объекту, у которого нет оператора присвоения.  
+ Была предпринята попытка присвоить объект, который не имеет оператор присваивания.  
   
  Следующий пример приводит к возникновению ошибки C2582:  
   

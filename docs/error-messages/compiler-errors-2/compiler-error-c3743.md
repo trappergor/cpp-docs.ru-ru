@@ -19,31 +19,17 @@ caps.latest.revision: 8
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
-ms.openlocfilehash: 1a7f7e7b561e20f962aef4757d1248f1b7d3c6f5
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 71e35535a7e6c9916c6dd6ac563cfd5bdf76fbce
 ms.contentlocale: ru-ru
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 10/10/2017
 
 ---
 # <a name="compiler-error-c3743"></a>Ошибка компилятора C3743
-когда параметр "layout_dependent" для event_receiver имеет значение true, установка и удаление обработчика допускаются только для всего интерфейса  
+можно только обработчик или отсоединения весь интерфейс, когда параметр «layout_dependent» для event_receiver имеет значение true  
   
- [__Unhook](../../cpp/unhook.md) функции зависит от числа параметров, принимаемых на значение, передаваемое в `layout_dependent` параметр в [event_receiver](../../windows/event-receiver.md) класса.  
+ [__Unhook](../../cpp/unhook.md) функция меняется в число параметров, принимаемых на значение, передаваемое `layout_dependent` параметр в [event_receiver](../../windows/event-receiver.md) класса.  
   
  Следующий пример приводит к возникновению ошибки C3743:  
   

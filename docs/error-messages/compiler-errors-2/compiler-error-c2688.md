@@ -1,34 +1,37 @@
 ---
-title: "Ошибка компилятора C2688 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C2688"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C2688"
+title: "Ошибка компилятора C2688 | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C2688
+dev_langs:
+- C++
+helpviewer_keywords:
+- C2688
 ms.assetid: 168c9e9d-8f65-4664-af86-db71d3e6ee46
 caps.latest.revision: 6
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 6
----
-# Ошибка компилятора C2688
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: eaacdb4c7404dd370de31ad1bca6c07391279584
+ms.contentlocale: ru-ru
+ms.lasthandoff: 10/10/2017
 
-"C2::fgrv" : ковариантные возвращаемые значения с несколькими или виртуальными наследованиями не поддерживаются для функций "varargs"  
+---
+# <a name="compiler-error-c2688"></a>Ошибка компилятора C2688
+«C2::fgrv»: ковариантные возвращаемые значения с несколькими или виртуальными наследованиями не поддерживаются для функций varargs  
   
- Ковариантные возвращаемые значения возвращают типы, не поддерживаемые в Visual C\+\+, когда функция содержит переменные аргументы.  
+ Ковариантные возвращаемые типы не поддерживаются в Visual C++, если функция содержит переменные аргументы.  
   
- Чтобы разрешить эту ошибку, либо определите функции так, чтобы они не могли использовать переменные аргументы, либо сделайте значения возврата одинаковыми для всех виртуальных функций.  
+ Чтобы устранить эту ошибку, либо определите функции, чтобы они не используются переменные-аргументы или сделайте значения возврата одинаковы для всех виртуальных функций.  
   
  Следующий пример приводит к возникновению ошибки C2688:  
   

@@ -19,29 +19,15 @@ caps.latest.revision: 11
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
-ms.openlocfilehash: ebe16679641150a48c7b3ee01ae86b1dd631745a
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 67bd7d142f77012821b7e464dd73c416088bf48d
 ms.contentlocale: ru-ru
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 10/10/2017
 
 ---
 # <a name="compiler-error-c2914"></a>Ошибка компилятора C2914
-«Идентификатор»: не может вывести тип аргумента, как аргумент функции является неоднозначным  
+«Идентификатор»: невозможно вывести тип аргумента, как аргумент функции является неоднозначным  
   
  Компилятор не может определить, какие перегруженные функции следует использовать для аргумента шаблона или универсального.  
   

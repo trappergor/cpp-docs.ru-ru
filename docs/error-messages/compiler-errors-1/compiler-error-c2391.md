@@ -19,31 +19,17 @@ caps.latest.revision: 8
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
-ms.openlocfilehash: e1f75e50ee409eb0ebd02107f07e38cb245406d4
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 573cea44b0a39ff3cc0dff4469aa8c5f5a2459e5
 ms.contentlocale: ru-ru
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 10/09/2017
 
 ---
 # <a name="compiler-error-c2391"></a>Ошибка компилятора C2391
 «Идентификатор»: «friend» нельзя использовать во время определения типа  
   
- `friend` Объявление включает объявление полного класса. A `friend` объявления можно указать функцию-член или сложный спецификатор типа, но не объявление полного класса.  
+ `friend` Объявление включает объявление полного класса. Объект `friend` объявления можно указать функцию-член или сложный спецификатор типа, но не объявление полного класса.  
   
  При компиляции следующего примера возникнет ошибка C2326:  
   

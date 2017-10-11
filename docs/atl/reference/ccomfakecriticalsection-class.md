@@ -24,29 +24,15 @@ caps.latest.revision: 19
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 050e7483670bd32f633660ba44491c8bb3fc462d
-ms.openlocfilehash: 2c1269288e03a8ac9f359dad9acf1a81ddbc84c2
+ms.translationtype: MT
+ms.sourcegitcommit: c55726a1728185f699afbac4ba68a6dc0f70c2bf
+ms.openlocfilehash: 6232a3e8b6c392361a1e57681e9ba4dff66d6aa4
 ms.contentlocale: ru-ru
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 10/09/2017
 
 ---
 # <a name="ccomfakecriticalsection-class"></a>Класс CComFakeCriticalSection
-Этот класс предоставляет те же методы, как [CComCriticalSection](../../atl/reference/ccomcriticalsection-class.md) , но не предоставляет критический раздел.  
+Этот класс предоставляет те же методы, как [CComCriticalSection](../../atl/reference/ccomcriticalsection-class.md) , но не предоставляет критической секции.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -60,13 +46,13 @@ class CComFakeCriticalSection
   
 |Имя|Описание|  
 |----------|-----------------|  
-|[CComFakeCriticalSection::Init](#init)|Поскольку нет критических разделов не выполняет никаких действий.|  
-|[CComFakeCriticalSection::Lock](#lock)|Поскольку нет критических разделов не выполняет никаких действий.|  
-|[CComFakeCriticalSection::Term](#term)|Поскольку нет критических разделов не выполняет никаких действий.|  
-|[CComFakeCriticalSection::Unlock](#unlock)|Поскольку нет критических разделов не выполняет никаких действий.|  
+|[CComFakeCriticalSection::Init](#init)|Не выполняет никаких действий, так как она не критической секции.|  
+|[CComFakeCriticalSection::Lock](#lock)|Не выполняет никаких действий, так как она не критической секции.|  
+|[CComFakeCriticalSection::Term](#term)|Не выполняет никаких действий, так как она не критической секции.|  
+|[CComFakeCriticalSection::Unlock](#unlock)|Не выполняет никаких действий, так как она не критической секции.|  
   
 ## <a name="remarks"></a>Примечания  
- `CComFakeCriticalSection`зеркально отражает методов [CComCriticalSection](../../atl/reference/ccomcriticalsection-class.md). Однако `CComFakeCriticalSection` не предоставляет критический раздел; таким образом, его методы ничего не делать.  
+ `CComFakeCriticalSection`зеркально отражает методов [CComCriticalSection](../../atl/reference/ccomcriticalsection-class.md). Однако `CComFakeCriticalSection` не предоставляет критической секции; таким образом, его методы не выполняют никаких действий.  
   
  Как правило, используется `CComFakeCriticalSection` через `typedef` имя, либо `AutoCriticalSection` или `CriticalSection`. При использовании [CComSingleThreadModel](../../atl/reference/ccomsinglethreadmodel-class.md) или [CComMultiThreadModelNoCS](../../atl/reference/ccommultithreadmodelnocs-class.md), оба эти `typedef` имена ссылка `CComFakeCriticalSection`. При использовании [CComMultiThreadModel](../../atl/reference/ccommultithreadmodel-class.md), если они ссылаются на [CComAutoCriticalSection](../../atl/reference/ccomautocriticalsection-class.md) и `CComCriticalSection`соответственно.  
   
@@ -74,7 +60,7 @@ class CComFakeCriticalSection
  **Заголовок:** файле atlcore.h  
   
 ##  <a name="init"></a>CComFakeCriticalSection::Init  
- Поскольку нет критических разделов не выполняет никаких действий.  
+ Не выполняет никаких действий, так как она не критической секции.  
   
 ```
 HRESULT Init() throw();
@@ -84,7 +70,7 @@ HRESULT Init() throw();
  Возвращает значение S_OK.  
   
 ##  <a name="lock"></a>CComFakeCriticalSection::Lock  
- Поскольку нет критических разделов не выполняет никаких действий.  
+ Не выполняет никаких действий, так как она не критической секции.  
   
 ```
 HRESULT Lock() throw();
@@ -94,7 +80,7 @@ HRESULT Lock() throw();
  Возвращает значение S_OK.  
   
 ##  <a name="term"></a>CComFakeCriticalSection::Term  
- Поскольку нет критических разделов не выполняет никаких действий.  
+ Не выполняет никаких действий, так как она не критической секции.  
   
 ```
 HRESULT Term() throw();
@@ -104,7 +90,7 @@ HRESULT Term() throw();
  Возвращает значение S_OK.  
   
 ##  <a name="unlock"></a>CComFakeCriticalSection::Unlock  
- Поскольку нет критических разделов не выполняет никаких действий.  
+ Не выполняет никаких действий, так как она не критической секции.  
   
 ```
 HRESULT Unlock() throw();

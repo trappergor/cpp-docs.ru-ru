@@ -1,32 +1,35 @@
 ---
-title: "Ошибка компилятора C2910 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C2910"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C2910"
+title: "Ошибка компилятора C2910 | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C2910
+dev_langs:
+- C++
+helpviewer_keywords:
+- C2910
 ms.assetid: 09c50e6a-e099-42f6-8ed6-d80e292a7a36
 caps.latest.revision: 8
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 8
----
-# Ошибка компилятора C2910
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: db1c4d7b4533d6bbfb0848c1dc16a7336ad81eb0
+ms.contentlocale: ru-ru
+ms.lasthandoff: 10/10/2017
 
-"функция" : явная специализация невозможна  
+---
+# <a name="compiler-error-c2910"></a>Ошибка компилятора C2910
+«функция»: явная специализация невозможна  
   
- Компилятор обнаружил попытку повторной явной специализации функции.  
+ Компилятор обнаружил попытку явно специализации функции.  
   
  Следующий пример приводит к возникновению ошибки C2910:  
   
@@ -40,7 +43,7 @@ template <> struct S<int> { void f() {} };
 template <> void S<int>::f() {}   // C2910 delete this specialization  
 ```  
   
- Ошибка C2910 также может возникать при попытке явной специализации нешаблонного элемента.  Это означает, что явная специализация возможна только для функций\-шаблонов.  
+ C2910 также может возникать при попытке явной специализации нешаблонного элемента. То есть можно только явно специализировать шаблон функции.  
   
  Следующий пример приводит к возникновению ошибки C2910:  
   
@@ -63,9 +66,9 @@ template <> A<void>::A(void* p){}   // C2910
 // A<void>::A(void* p){}  
 ```  
   
- Данная ошибка также может возникать в результате работы по стандартизации компилятора, проведенной в Visual Studio .NET 2003.  
+ Эта ошибка может также возникать в результате изменений работы компилятора в Visual Studio .NET 2003:.  
   
- Для обеспечения допустимости кода в версиях Visual C\+\+ в средах Visual Studio .NET 2003 и Visual Studio .NET следует удалить `template <>`.  
+ Код будет допустим в версиях Visual C++ для Visual Studio .NET 2003 и Visual Studio .NET, удалите `template <>`.  
   
  Следующий пример приводит к возникновению ошибки C2910:  
   

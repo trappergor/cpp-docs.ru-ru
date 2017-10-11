@@ -1,5 +1,5 @@
 ---
-title: "C4950 Предупреждение компилятора | Документы Microsoft"
+title: "Предупреждение компилятора C4950 | Документы Microsoft"
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -19,32 +19,17 @@ caps.latest.revision: 11
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 4ac033535632e94a365aa8dafd849f2ab28a3af7
-ms.openlocfilehash: 937510b3fadf3dd2aff81defc08ea2c74b8b7dec
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 6a922a0ee324afcf5f263abe2189e4071c5575c7
 ms.contentlocale: ru-ru
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 10/10/2017
 
 ---
 # <a name="compiler-warning-c4950"></a>Предупреждение компилятора C4950
 ""тип_или_член": помечен как устаревший  
   
-Член или тип был помечен как устаревший с <xref:System.ObsoleteAttribute>атрибут.</xref:System.ObsoleteAttribute>  
+Член или тип был помечен как устаревший с <xref:System.ObsoleteAttribute> атрибута.  
   
 C4950 всегда выдается как ошибка. Это предупреждение можно отключить с помощью [предупреждение](../../preprocessor/warning.md) директива pragma или [/wd](../../build/reference/compiler-option-warning-level.md) параметр компилятора.  
   

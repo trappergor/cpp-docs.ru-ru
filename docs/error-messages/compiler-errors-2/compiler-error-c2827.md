@@ -19,29 +19,15 @@ caps.latest.revision: 6
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
-ms.openlocfilehash: 30becc5e2f196a3a383f6953c3494699cddbc8a1
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: e061c619ca936afaefe392fb808a22c1a19a27ba
 ms.contentlocale: ru-ru
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 10/10/2017
 
 ---
 # <a name="compiler-error-c2827"></a>Ошибка компилятора C2827
-«оператор» не может глобально переопределяться в унарной форме  
+«оператор» не может быть глобально переопределен унарной формой  
   
  Оператор не может иметь унарной форме вне объекта.  
   
@@ -49,4 +35,4 @@ ms.lasthandoff: 02/24/2017
   
 1.  Сделайте перегруженный оператор локального объекта.  
   
-2.  Выберите для перегрузки подходящий унарный оператор.
+2.  Выберите подходящий унарный оператор для перегрузки.

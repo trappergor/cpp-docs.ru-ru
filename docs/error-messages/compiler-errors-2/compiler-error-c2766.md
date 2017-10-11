@@ -19,31 +19,17 @@ caps.latest.revision: 9
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
-ms.openlocfilehash: 8dd90de8ac758a932c7859ec11507345b4836418
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: a74f3808f566c4977d2cffccc0030770e7ae0577
 ms.contentlocale: ru-ru
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 10/10/2017
 
 ---
 # <a name="compiler-error-c2766"></a>Ошибка компилятора C2766
-явная специализация; «специализация» уже определено.  
+явная специализация; «специализация» уже определен  
   
- Дублирование явной специализации не допускаются. Дополнительные сведения см. в разделе [явную специализацию шаблонов функций](../../cpp/explicit-specialization-of-function-templates.md).  
+ Дублирование явной специализации не допускаются. Дополнительные сведения см. в разделе [явной специализации шаблонов функций](../../cpp/explicit-specialization-of-function-templates.md).  
   
  Следующий пример приводит к возникновению ошибки C2766:  
   

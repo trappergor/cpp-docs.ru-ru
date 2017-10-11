@@ -22,29 +22,15 @@ caps.latest.revision: 16
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 4e393abb2a904a0f5e101efe3d78d0645664397b
-ms.openlocfilehash: ea1d87d3d500fc08f3da16de6820ca003e899419
+ms.translationtype: MT
+ms.sourcegitcommit: c55726a1728185f699afbac4ba68a6dc0f70c2bf
+ms.openlocfilehash: 104596d55ee2580cbee3cfc916ad9ef7390ce4c1
 ms.contentlocale: ru-ru
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 10/09/2017
 
 ---
 # <a name="atlmodule70-structure"></a>Структура _ATL_MODULE70
-Содержит данные, используемые для каждого модуля ATL.  
+Содержит данные, используемые каждый модуль ATL.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -65,13 +51,13 @@ struct _ATL_MODULE70 {
  Чтобы определить, как долго должны оставаться активным модуль счетчика ссылок.  
   
  **m_pTermFuncs**  
- Отслеживает функции, которые зарегистрированы для вызова при выключении ATL.  
+ Отслеживает функции, которые были зарегистрированы для вызова при закрытии ATL.  
   
  **m_csStaticDataInitAndTypeInfo**  
- Используется для координации доступа к внутренним данным в многопоточной ситуации.  
+ Используется для управления доступом к внутренним данным в многопоточных ситуациях.  
   
 ## <a name="remarks"></a>Примечания  
- [_ATL_MODULE](atl-typedefs.md#_atl_module) определяется как typedef для `_ATL_MODULE70`.  
+ [_ATL_MODULE](atl-typedefs.md#_atl_module) определяется как typedef из `_ATL_MODULE70`.  
   
 ## <a name="requirements"></a>Требования  
  **Заголовок:** atlbase.h  

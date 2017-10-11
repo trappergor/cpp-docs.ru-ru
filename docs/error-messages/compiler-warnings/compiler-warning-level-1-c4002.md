@@ -1,5 +1,5 @@
 ---
-title: "Компилятор C4002 предупреждение (уровень 1) | Документы Microsoft"
+title: "Ошибка компилятора предупреждение (уровень 1) C4002 | Документы Microsoft"
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -19,34 +19,19 @@ caps.latest.revision: 8
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
-ms.openlocfilehash: 983935ef0e48f94cee3ff08186f27502ea48a7d7
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 1bb1e3512074b2767977367b30ac5d01dc5758b0
 ms.contentlocale: ru-ru
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 10/10/2017
 
 ---
-# <a name="compiler-warning-level-1-c4002"></a>Предупреждение компилятора (уровень 1) C4002
+# <a name="compiler-warning-level-1-c4002"></a>Предупреждение компилятора (уровень 1) C4002
 слишком много фактических параметров для макроопределения "идентификатор"  
   
  Количество фактических параметров в макросе превышает количество формальных параметров в определении макроса. Препроцессор собирает лишние параметры, но игнорирует их в расширении макроса.  
   
- Ошибка C4002 может возникать в результате неправильного использования [макросы с переменным числом аргументов](../../preprocessor/variadic-macros.md).  
+ Ошибка C4002 может возникать в результате неправильного использования [Variadic Macros](../../preprocessor/variadic-macros.md).  
   
  Следующий пример приводит к возникновению предупреждения C4002:  
   

@@ -1,5 +1,5 @@
 ---
-title: "C4936 Предупреждение компилятора | Документы Microsoft"
+title: "Предупреждение компилятора C4936 | Документы Microsoft"
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -19,26 +19,11 @@ caps.latest.revision: 12
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: cc82b83860786ffc3f0aee73ede18ecadef16a7a
-ms.openlocfilehash: 58d702067c186eeeea94768a03836b64577961ca
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: a4342c749c5db4d66f206209a146ad7d7aef7041
 ms.contentlocale: ru-ru
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 10/10/2017
 
 ---
 # <a name="compiler-warning-c4936"></a>Предупреждение компилятора C4936
@@ -46,11 +31,11 @@ ms.lasthandoff: 02/24/2017
   
  **/CLR: pure** рекомендуется использовать параметр компилятора в Visual Studio 2015.  
   
- Объект `__declspec` модификатор использовался, `__declspec` модификатор допустим только при компиляции с одним из [/CLR](../../build/reference/clr-common-language-runtime-compilation.md) параметры.  
+ Использовался модификатор `__declspec` , но модификатор `__declspec` допустим только при компиляции с одним из параметров [/clr](../../build/reference/clr-common-language-runtime-compilation.md) .  
   
- Дополнительные сведения см. в разделе [appdomain](../../cpp/appdomain.md) и [процесс](../../cpp/process.md).  
+ Дополнительные сведения см. в разделах [appdomain](../../cpp/appdomain.md) и [process](../../cpp/process.md).  
   
- C4936 всегда выдается как ошибка.  Вы можете отключить C4936 с [предупреждение](../../preprocessor/warning.md) pragma.  
+ C4936 всегда выдается как ошибка.  Вы можете отключить C4936 с помощью директивы [warning](../../preprocessor/warning.md) .  
   
  При компиляции следующего примера возникнет ошибка C4936:  
   

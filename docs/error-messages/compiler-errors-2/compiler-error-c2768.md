@@ -1,34 +1,37 @@
 ---
-title: "Ошибка компилятора C2768 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C2768"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C2768"
+title: "Ошибка компилятора C2768 | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C2768
+dev_langs:
+- C++
+helpviewer_keywords:
+- C2768
 ms.assetid: a7f6047a-6a80-4737-ad5c-c12868639fb5
 caps.latest.revision: 9
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 9
----
-# Ошибка компилятора C2768
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 79693c3d7b337302698d7854b5cd447ce7c68334
+ms.contentlocale: ru-ru
+ms.lasthandoff: 10/10/2017
 
-"function": недопустимое использование явных аргументов шаблона  
+---
+# <a name="compiler-error-c2768"></a>Ошибка компилятора C2768
+«функция»: Недопустимое использование явных аргументов шаблона  
   
- Компилятору не удалось определить, должно ли определение функции использоваться в качестве явной специализации шаблона функции или в качестве определения новой функции.  
+ Компилятору не удалось определить, если определение функции должна быть явной специализации шаблона функции или определении функции должна быть новой функции.  
   
- Эта ошибка появилась вVisual Studio .NET 2003 в качестве одного из усовершенствований согласованности компилятора.  
+ Эта ошибка появилась в Visual Studio .NET 2003 в составе усовершенствований согласованности компилятора.  
   
  Следующий пример приводит к возникновению ошибки C2768:  
   

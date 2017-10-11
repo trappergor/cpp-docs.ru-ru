@@ -1,36 +1,39 @@
 ---
-title: "Ошибка компилятора C2786 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C2786"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C2786"
+title: "Ошибка компилятора C2786 | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C2786
+dev_langs:
+- C++
+helpviewer_keywords:
+- C2786
 ms.assetid: 6676d8c0-86dd-4a39-bdda-b75a35f4d137
 caps.latest.revision: 9
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 9
----
-# Ошибка компилятора C2786
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: d78b5664fa2853a3fe8f7934cba9ce5b8b3f782a
+ms.contentlocale: ru-ru
+ms.lasthandoff: 10/10/2017
 
-"тип": недопустимый операнд для \_\_uuidof  
+---
+# <a name="compiler-error-c2786"></a>Ошибка компилятора C2786
+«Тип»: недопустимый операнд для __uuidof  
   
- Оператор [\_\_uuidof](../../cpp/uuidof-operator.md) принимает в качестве операнда пользовательский тип с присоединенным идентификатором GUID или объект такого типа.  Возможные причины:  
+ [__Uuidof](../../cpp/uuidof-operator.md) оператор принимает определяемый пользователем тип с присоединенным идентификатором GUID или объект такого типа определяемых пользователем.  Возможные причины:  
   
-1.  Аргумент не принадлежит к пользовательскому типу.  
+1.  Аргумент не определяемого пользователем типа.  
   
-2.  Оператору `__uuidof` не удается извлечь идентификатор GUID из аргумента.  
+2.  `__uuidof`не удается извлечь идентификатор GUID из аргумента.  
   
  Следующий пример приводит к возникновению ошибки C2786:  
   

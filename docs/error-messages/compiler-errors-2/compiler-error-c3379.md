@@ -19,33 +19,19 @@ caps.latest.revision: 10
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: c243063a9770542f137d5950e8a269f771960f74
-ms.openlocfilehash: 16c62e48a0190096e04dc4ccf0c17ca66c2f4094
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: e6fa111a525d81c418d3285c05af86b700e8cb08
 ms.contentlocale: ru-ru
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 10/10/2017
 
 ---
 # <a name="compiler-error-c3379"></a>Ошибка компилятора C3379
-«класс»: вложенный класс не может иметь спецификатор доступа сборки как часть объявления  
+«класс»: вложенный класс не может иметь спецификатор уровня доступа сборки как часть объявления  
   
- При применении к управляемого типа, например класса или структуры, [открытый](../../cpp/public-cpp.md) и [частного](../../cpp/private-cpp.md) означают возможность предоставления класса посредством метаданных сборки. `public`или `private` не может применяться к вложенному классу, уровень доступа сборки, включающего класса.  
+ При применении к управляемому типу, например класса или структуры, [открытый](../../cpp/public-cpp.md) и [закрытый](../../cpp/private-cpp.md) означают возможность предоставления класса посредством метаданных сборки. `public`или `private` не может применяться к вложенному классу, уровень доступа сборки, включающего класса.  
   
- При использовании с [/CLR](../../build/reference/clr-common-language-runtime-compilation.md), `ref` и `value` означают, что класс является управляемым (см. [классы и структуры](../../windows/classes-and-structs-cpp-component-extensions.md)).  
+ При использовании с [/CLR](../../build/reference/clr-common-language-runtime-compilation.md), `ref` и `value` означают, что управляемый класс (в разделе [классы и структуры](../../windows/classes-and-structs-cpp-component-extensions.md)).  
   
  Следующий пример приводит к возникновению ошибки C3379:  
   

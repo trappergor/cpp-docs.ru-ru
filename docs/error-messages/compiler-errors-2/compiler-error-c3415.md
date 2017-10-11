@@ -19,34 +19,19 @@ caps.latest.revision: 7
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0d9cbb01d1ad0f2ea65d59334cb88140ef18fce0
-ms.openlocfilehash: aeb26c5a3b1add0f3b8ec3eb9ba9ae2c20fb094e
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 9a03e0dbb61dc6f57b1a6fe3cd345d46f78b05a9
 ms.contentlocale: ru-ru
-ms.lasthandoff: 04/12/2017
+ms.lasthandoff: 10/10/2017
 
 ---
 # <a name="compiler-error-c3415"></a>Ошибка компилятора C3415
 найдено несколько разделов "имя_раздела" с разными атрибутами ("значение")  
   
- Были указаны конфликтующие значения в [раздел](../../preprocessor/section.md) директивы pragma.  
+ Были указаны конфликтующие значения в прагмах [section](../../preprocessor/section.md) .  
   
- `value`значение текущего раздела, как указано в файле ntimage.h. Пример:  
+ `value` — текущий параметр для раздела, как указано в файле ntimage.h. Пример:  
   
 ```  
 // Section contains extended relocations.  

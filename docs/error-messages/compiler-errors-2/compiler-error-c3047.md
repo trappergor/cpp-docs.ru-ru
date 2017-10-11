@@ -19,32 +19,17 @@ caps.latest.revision: 8
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0d9cbb01d1ad0f2ea65d59334cb88140ef18fce0
-ms.openlocfilehash: b0315149cd3cea8ff0b3b6f05f4b728523a3fcd0
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 5d2133330ab45eb4667c100cde9495e54eec15e7
 ms.contentlocale: ru-ru
-ms.lasthandoff: 04/12/2017
+ms.lasthandoff: 10/10/2017
 
 ---
 # <a name="compiler-error-c3047"></a>Ошибка компилятора C3047
 Структурированному блоку в области OpenMP "sections" должна предшествовать директива "#pragma omp section"  
   
- Любой код в блоке кода, представленного [разделы](../../parallel/openmp/reference/sections-openmp.md) директива должна быть в блоке кода, представленного `section` директивы.  
+ Любой код в блоке кода, представленного директивой [sections](../../parallel/openmp/reference/sections-openmp.md) , должен быть в блоке кода, представленном директивой `section` .  
   
  Следующий пример приводит к возникновению ошибки C3047:  
   

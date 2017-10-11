@@ -19,33 +19,19 @@ caps.latest.revision: 17
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
-ms.openlocfilehash: 68971aec52fb03532b74be3b231598abfc0e8f6f
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: e71bf7f08591ed80489b6e83590696cabdb57c03
 ms.contentlocale: ru-ru
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 10/10/2017
 
 ---
 # <a name="compiler-error-c2599"></a>Ошибка компилятора C2599
-«перечисление»: запрещено предварительное объявление типа перечисления  
+«перечисление»: опережающее объявление перечисляемого типа не допускается  
   
  Компилятор больше не поддерживает предварительное объявление управляемого перечисления.  
   
- Предварительное объявление типа перечисления недопустимо [/Za](../../build/reference/za-ze-disable-language-extensions.md).  
+ Опережающее объявление перечисляемого типа не разрешен в [/Za](../../build/reference/za-ze-disable-language-extensions.md).  
   
  Следующий пример приводит к возникновению ошибки C2599:  
   

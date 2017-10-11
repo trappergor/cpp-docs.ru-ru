@@ -1,35 +1,38 @@
 ---
-title: "Ошибка компилятора C3918 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C3918"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C3918"
+title: "Ошибка компилятора C3918 | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C3918
+dev_langs:
+- C++
+helpviewer_keywords:
+- C3918
 ms.assetid: a8b3a90a-3fe1-4244-a5ff-a31cdae97d98
 caps.latest.revision: 9
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 9
----
-# Ошибка компилятора C3918
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 1bf9cf676cf7435eaf1f0b924fbadcaddef842b4
+ms.contentlocale: ru-ru
+ms.lasthandoff: 10/10/2017
 
-для использования необходимо, чтобы "member" был элементом данных  
+---
+# <a name="compiler-error-c3918"></a>Ошибка компилятора C3918
+«член» член данных требует использования  
   
  Ошибка C3918 может возникать по нескольким причинам, связанным с событиями.  
   
-## Пример  
- Ошибка C3918 может возникать потому, что в текущем контексте требуется член класса.  Следующий пример приводит к возникновению ошибки C3918.  
+## <a name="example"></a>Пример  
+ C3918 может возникать, если в текущем контексте требуется член класса. Следующий пример приводит к возникновению ошибки C3918.  
   
 ```  
 // C3918.cpp  
@@ -49,8 +52,8 @@ public:
 };  
 ```  
   
-## Пример  
- Ошибка C3918 также может возникать при попытке проверки тривиального события на наличие нулевого значения \(имя события больше не обеспечивает прямого доступа к делегату резервного хранения для события\).  
+## <a name="example"></a>Пример  
+ C3918 также может возникать при попытке проверки тривиального события со значением NULL (имя события более не будет предоставлять прямой доступ к делегату резервного хранилища для события).  
   
  Следующий пример приводит к возникновению ошибки C3918.  
   
@@ -73,8 +76,8 @@ ref struct EventSource : public IEFace {
 };  
 ```  
   
-## Пример  
- Ошибка C3918 также может возникать при неправильной подписке на событие.  Следующий пример приводит к возникновению ошибки C3918.  
+## <a name="example"></a>Пример  
+ Ошибка C3918 также может возникать, если неправильно подписаться на событие. Следующий пример приводит к возникновению ошибки C3918.  
   
 ```  
 // C3918_3.cpp  

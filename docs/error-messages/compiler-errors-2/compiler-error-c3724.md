@@ -1,32 +1,35 @@
 ---
-title: "Ошибка компилятора C3724 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C3724"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C3724"
+title: "Ошибка компилятора C3724 | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C3724
+dev_langs:
+- C++
+helpviewer_keywords:
+- C3724
 ms.assetid: cab8aba7-14fc-406f-8cc6-32744c8f31c1
 caps.latest.revision: 6
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 6
----
-# Ошибка компилятора C3724
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: ff6bbed7c54b3be98ed244b375ed05aca79c953f
+ms.contentlocale: ru-ru
+ms.lasthandoff: 10/10/2017
 
-\#include \<windows.h\> включение файла для использования многопотоковости с событиями  
+---
+# <a name="compiler-error-c3724"></a>Ошибка компилятора C3724
+необходимо #include \<windows.h > для использования многопоточности в событиях  
   
- Файл windows.h необходим при использовании многопотоковости с событиями.  Для устранения этой ошибки следует добавить в начало файла, в котором определяются источники и приемники событий, директиву `#include <windows.h>`.  
+ Файл windows.h необходим при использовании многопоточности в событиях. Чтобы устранить эту ошибку, добавьте `#include <windows.h>` в начало файла, в какие источники событий и событий определяются получателей.  
   
 ```  
 // C3724.cpp  

@@ -1,5 +1,5 @@
 ---
-title: "Ошибка компилятора предупреждение C4693 | Документы Microsoft"
+title: "Предупреждение компилятора C4693 | Документы Microsoft"
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -19,32 +19,17 @@ caps.latest.revision: 7
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
-ms.openlocfilehash: 0a2262d559f9771dc2ba4286e675de1bdea6c9ee
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 1bd881645b36e29be987850c1ceb9f3b4fd35b9d
 ms.contentlocale: ru-ru
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 10/10/2017
 
 ---
 # <a name="compiler-warning-c4693"></a>Предупреждение компилятора C4693
 "класс": у запечатанного абстрактного класса не может быть членов экземпляра "Тест"  
   
- Если тип отмечен [запечатанные](../../windows/sealed-cpp-component-extensions.md) и [абстрактный](../../windows/abstract-cpp-component-extensions.md), может иметь только статические члены.  
+ Если тип помечен [запечатанный](../../windows/sealed-cpp-component-extensions.md) и [абстрактный](../../windows/abstract-cpp-component-extensions.md), он может содержать только статические члены.  
   
 ## <a name="example"></a>Пример  
  Следующий пример приводит к возникновению предупреждения C4693:  

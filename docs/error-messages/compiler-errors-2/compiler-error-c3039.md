@@ -1,5 +1,5 @@
 ---
-title: "C3039 Ошибка компилятора | Документы Microsoft"
+title: "Ошибка компилятора C3039 | Документы Microsoft"
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -19,32 +19,17 @@ caps.latest.revision: 8
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
-ms.openlocfilehash: 6d935f373201831c2689b5dbbc072955afd30415
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: f3162ab8241781cda521fa4fc9dc51f14fa42897
 ms.contentlocale: ru-ru
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 10/10/2017
 
 ---
 # <a name="compiler-error-c3039"></a>Ошибка компилятора C3039
 "переменная": переменная индекса в операторе for директивы OpenMP не может быть редукционной переменной  
   
- Переменная индекса неявно закрытым, поэтому переменная не может использоваться в [сокращения](../../parallel/openmp/reference/reduction.md) предложение в конечном [параллельных](../../parallel/openmp/reference/parallel.md) директивы.  
+ Переменная индекса является неявно частной, поэтому ее нельзя использовать в предложении [reduction](../../parallel/openmp/reference/reduction.md) в заключающей директиве [parallel](../../parallel/openmp/reference/parallel.md) .  
   
 ## <a name="example"></a>Пример  
  При компиляции следующего примера возникнет ошибка C3039:  

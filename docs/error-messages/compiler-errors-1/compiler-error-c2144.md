@@ -1,41 +1,44 @@
 ---
-title: "Ошибка компилятора C2144 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C2144"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C2144"
+title: "Ошибка компилятора C2144 | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C2144
+dev_langs:
+- C++
+helpviewer_keywords:
+- C2144
 ms.assetid: 49f3959b-324f-4c06-9588-c0ecef5dc5b3
 caps.latest.revision: 16
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 16
----
-# Ошибка компилятора C2144
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 0f541465009dcc137b8853351d10ceb9d5db4d05
+ms.contentlocale: ru-ru
+ms.lasthandoff: 10/09/2017
 
-ошибка синтаксиса: перед "типом" требуется "лексема"  
+---
+# <a name="compiler-error-c2144"></a>Ошибка компилятора C2144
+Синтаксическая ошибка: «тип» должно предшествовать «лексема»  
   
- Компилятор рассчитывал обнаружить параметр `token`, но вместо него обнаружил параметр `type`.  
+ Компилятор ожидал `token` и найти `type` вместо него.  
   
- Данная ошибка могла возникнуть в результате пропуска закрывающей фигурной скобки, правой круглой скобки или двоеточия.  
+ Эта ошибка может быть вызвана отсутствует закрывающая фигурная скобка, правая круглая скобка или точка с запятой.  
   
- Ошибка C2144 также может возникать вследствие попытки создать макрос из ключевого слова среды CLR, содержащего символы пробелов.  
+ C2144 также может возникнуть при попытке создать макрос из ключевого слова среды CLR, который содержит символ пробела.  
   
- Ошибка C2144 также может быть следствием попытки передачи типа.  Дополнительные сведения см. в разделе [Перенаправление типов \(C\+\+\/CLI\)](../../windows/type-forwarding-cpp-cli.md).  
+ Может также появиться C2144 при попытке передачи типа. В разделе [переадресации типов (C + +/ CLI)](../../windows/type-forwarding-cpp-cli.md) для получения дополнительной информации.  
   
-## Пример  
- Следующий пример демонстрирует причины возникновения ошибки C2144:  
+## <a name="example"></a>Пример  
+ Следующий пример приводит к возникновению ошибки C2144.  
   
 ```  
 // C2144.cpp  
@@ -48,8 +51,8 @@ REF struct MyStruct0;   // C2144
 REF1 MyStruct1;  
 ```  
   
-## Пример  
- Следующий пример демонстрирует причины возникновения ошибки C2144:  
+## <a name="example"></a>Пример  
+ Следующий пример приводит к возникновению ошибки C2144.  
   
 ```  
 // C2144_2.cpp  

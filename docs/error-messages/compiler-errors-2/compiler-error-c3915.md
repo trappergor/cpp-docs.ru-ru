@@ -1,37 +1,40 @@
 ---
-title: "Ошибка компилятора C3915 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C3915"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C3915"
+title: "Ошибка компилятора C3915 | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C3915
+dev_langs:
+- C++
+helpviewer_keywords:
+- C3915
 ms.assetid: 2b0a5e5f-3aec-4a4b-9157-233031817084
 caps.latest.revision: 9
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 9
----
-# Ошибка компилятора C3915
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: b753abc02e84c8373fe6115a5bf2f2a0719094f3
+ms.contentlocale: ru-ru
+ms.lasthandoff: 10/10/2017
 
-"тип" не имеет индексированного свойства по умолчанию \(индексатора класса\)  
+---
+# <a name="compiler-error-c3915"></a>Ошибка компилятора C3915
+«тип» имеет не индексированное свойство по умолчанию (индексатора класса)  
   
- У типа нет индексированного свойства по умолчанию.  
+ Тип не имеет по умолчанию, индексированного свойства.  
   
- Дополнительные сведения см. в описании [property](../../windows/property-cpp-component-extensions.md).  
+ Дополнительные сведения см. в разделе [property](../../windows/property-cpp-component-extensions.md).  
   
-## Пример  
- В следующем примере продемонстрировано возникновение ошибки C3915.  
+## <a name="example"></a>Пример  
+ Следующий пример приводит к возникновению ошибки C3915.  
   
 ```  
 // C3915.cpp  
@@ -54,10 +57,10 @@ int main() {
 }  
 ```  
   
-## Пример  
- Также ошибка C3915 может возникать при попытке использовать индексатор по умолчанию в той же единице компиляции, в которой он был определен с атрибутом <xref:System.Reflection.DefaultMemberAttribute>.  
+## <a name="example"></a>Пример  
+ C3915 также может возникать при попытке использовать индексатор по умолчанию в той же единице компиляции, в котором он был определен с <xref:System.Reflection.DefaultMemberAttribute>.  
   
- В следующем примере продемонстрировано возникновение ошибки C3915.  
+ Следующий пример приводит к возникновению ошибки C3915.  
   
 ```  
 // C3915_b.cpp  

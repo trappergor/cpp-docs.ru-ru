@@ -19,31 +19,17 @@ caps.latest.revision: 9
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
-ms.openlocfilehash: 3e53605c9109b5b96e4758b2fa3d729108597b56
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 18c51d01b8f273d4546f3411405fe511e31799ef
 ms.contentlocale: ru-ru
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 10/10/2017
 
 ---
 # <a name="compiler-error-c2861"></a>Ошибка компилятора C2861
-«имя функции»: функция-член интерфейса не могут быть определены  
+«имя функции»: функция-член интерфейса не может быть определен  
   
- Компилятор обнаружил ключевое слово interface или вывести структуры как интерфейс, но затем найти член определение функции.  Интерфейс не может содержать определение функции-члена.  
+ Компилятор обнаружил ключевое слово интерфейса или вывести структуры в форме интерфейса, но найти член определение функции.  Интерфейс не может содержать определение функции-члена.  
   
 ## <a name="example"></a>Пример  
  Следующий пример приводит к возникновению ошибки C2861:  

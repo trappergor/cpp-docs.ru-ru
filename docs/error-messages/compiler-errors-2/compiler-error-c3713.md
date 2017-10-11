@@ -1,32 +1,35 @@
 ---
-title: "Ошибка компилятора C3713 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C3713"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C3713"
+title: "Ошибка компилятора C3713 | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C3713
+dev_langs:
+- C++
+helpviewer_keywords:
+- C3713
 ms.assetid: 75c6b9b6-955b-49bd-9bc8-ced88b496a1f
 caps.latest.revision: 7
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 7
----
-# Ошибка компилятора C3713
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 13387629ab4dda3965bc8b835e2e092ef29ef880
+ms.contentlocale: ru-ru
+ms.lasthandoff: 10/10/2017
 
-"метод": метод обработчика событий должен возвращать такие же параметры функции, как и исходный "метод"  
+---
+# <a name="compiler-error-c3713"></a>Ошибка компилятора C3713
+«метод»: метод обработчика событий должен возвращать такие же параметры функции, как и исходный «метод»  
   
- Определен метод обработчика событий, в котором используются параметры, отличные от метода исходного события.  Чтобы устранить ошибку, определите в обработчике событий те же параметры, что и в методе исходного события.  
+ Можно определить метод обработчика событий, которая не использует те же параметры как исходный метод события. Чтобы устранить эту ошибку, предоставьте метод обработчика событий те же параметры, что и исходный метод события.  
   
  Следующий пример приводит к возникновению ошибки C3713:  
   

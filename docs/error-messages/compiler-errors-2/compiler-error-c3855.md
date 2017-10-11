@@ -1,32 +1,35 @@
 ---
-title: "Ошибка компилятора C3855 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C3855"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C3855"
+title: "Ошибка компилятора C3855 | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C3855
+dev_langs:
+- C++
+helpviewer_keywords:
+- C3855
 ms.assetid: ed90f8c0-4154-4243-b066-493913df5727
 caps.latest.revision: 9
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 9
----
-# Ошибка компилятора C3855
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 76d9101fd58d419db227803d3964198523ce3630
+ms.contentlocale: ru-ru
+ms.lasthandoff: 10/10/2017
 
-'class': параметр типа 'param' несовместим с объявлением  
+---
+# <a name="compiler-error-c3855"></a>Ошибка компилятора C3855
+«класс»: параметр типа «параметр» несовместим с объявлением  
   
- Компилятор обнаружил нетиповые параметры шаблона или универсальные параметры с разными именами.  Это происходит, если указанный параметр шаблона в определении специализации шаблона несовместим с его объявлением.  
+ Компилятор обнаружил нетипизированный шаблона или универсальные параметры с разными именами. Это может произойти, если указанный параметр шаблона в определении специализации шаблона несовместим с объявлением.  
   
  Следующий пример приводит к возникновению ошибки C3855:  
   
@@ -41,7 +44,7 @@ template <char N>
 void C<N>::f() {}   // C3855  
 ```  
   
- Возможный способ устранения данной ошибки:  
+ Возможное решение:  
   
 ```  
 // C3855b.cpp  
@@ -55,7 +58,7 @@ template <int N>
 void C<N>::f() {}  
 ```  
   
- Ошибка C3855 также может возникать при использовании универсальных шаблонов:  
+ C3855 также может возникнуть при использовании универсальных шаблонов:  
   
 ```  
 // C3855c.cpp  
@@ -72,7 +75,7 @@ generic <class V>
 ref struct GC1<T>::GC2 { };   // C3855  
 ```  
   
- Возможный способ устранения данной ошибки:  
+ Возможное решение:  
   
 ```  
 // C3855d.cpp  

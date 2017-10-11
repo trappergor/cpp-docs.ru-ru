@@ -1,5 +1,5 @@
 ---
-title: "C3292 Ошибка компилятора | Документы Microsoft"
+title: "Ошибка компилятора C3292 | Документы Microsoft"
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -19,32 +19,17 @@ caps.latest.revision: 5
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
-ms.openlocfilehash: 873f0a2e57aff09435763a5091cc8a384294690a
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: b5bad02a4c7eae9a30855596ccb1695430c4f15e
 ms.contentlocale: ru-ru
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 10/10/2017
 
 ---
 # <a name="compiler-error-c3292"></a>Ошибка компилятора C3292
 пространство имен CLI нельзя открыть повторно  
   
- Пространство имен cli не может быть объявлено в вашем коде.  Дополнительные сведения см. в разделе [Platform, default и cli пространства имен](../../windows/platform-default-and-cli-namespaces-cpp-component-extensions.md).  
+ Пространство имен cli не может быть объявлено в вашем коде.  Дополнительные сведения см. в разделе [платформы, по умолчанию и пространства имен cli](../../windows/platform-default-and-cli-namespaces-cpp-component-extensions.md).  
   
 ## <a name="example"></a>Пример  
  В следующем примере возникает ошибка C3292.  

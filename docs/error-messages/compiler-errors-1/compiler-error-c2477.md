@@ -1,32 +1,35 @@
 ---
-title: "Ошибка компилятора C2477 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C2477"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C2477"
+title: "Ошибка компилятора C2477 | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C2477
+dev_langs:
+- C++
+helpviewer_keywords:
+- C2477
 ms.assetid: 60bc324b-6605-4833-8099-a291efc712e7
 caps.latest.revision: 9
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 9
----
-# Ошибка компилятора C2477
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 72b83b09ec97a2e7e68b2ee28429eeb31567178c
+ms.contentlocale: ru-ru
+ms.lasthandoff: 10/09/2017
 
-"член" : статический член данных не может инициализироваться через производный класс  
+---
+# <a name="compiler-error-c2477"></a>Ошибка компилятора C2477
+«член»: не удается инициализировать статические данные-член в производном классе  
   
- Неправильная инициализация статического члена данных класса шаблона.  Критические изменения внесены в версии компилятора Visual C\+\+, более ранних, чем Visual Studio .NET 2003, для соответствия стандартам ISO C\+\+.  
+ Статические данные-член шаблона класса был инициализирован неправильно. Это критическое изменение в версии компилятора Visual C++ до Visual Studio .NET 2003, в целях обеспечения соответствия стандарту ISO c++.  
   
  Следующий пример приводит к возникновению ошибки C2477:  
   

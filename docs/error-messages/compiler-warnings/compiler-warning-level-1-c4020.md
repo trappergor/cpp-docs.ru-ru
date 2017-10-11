@@ -1,32 +1,35 @@
 ---
-title: "Предупреждение компилятора (уровень 1) C4020 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C4020"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C4020"
+title: "Предупреждение (уровень 1) C4020 компилятора | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C4020
+dev_langs:
+- C++
+helpviewer_keywords:
+- C4020
 ms.assetid: 8c4cd6be-9371-4c8c-b0ff-a5ad367bbab0
 caps.latest.revision: 7
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 7
----
-# Предупреждение компилятора (уровень 1) C4020
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: f4980961746f2711fcf0655dd37b5f37d8d8124e
+ms.contentlocale: ru-ru
+ms.lasthandoff: 10/10/2017
 
-"функция": слишком много фактических параметров  
+---
+# <a name="compiler-warning-level-1-c4020"></a>Предупреждение (уровень 1) C4020 компилятора
+«функция»: слишком много фактических параметров  
   
- Число фактических параметров функции превышает число формальных параметров, заданное в прототипе или определении функции.  При компиляции избыточные фактические параметры передаются в соответствии с соглашением о вызове функции.  
+ Число фактических параметров в вызове функции превышает количество формальных параметров в прототипе или определении функции. Компилятор передает избыточные фактические параметры в соответствии с соглашением о вызовах функции.  
   
  Следующий пример приводит к возникновению ошибки C4020:  
   
@@ -39,7 +42,7 @@ int main() {
 }  
 ```  
   
- Возможный способ устранения данной ошибки:  
+ Возможное решение:  
   
 ```  
 // C4020b.c  

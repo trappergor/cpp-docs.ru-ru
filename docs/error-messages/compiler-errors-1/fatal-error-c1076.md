@@ -19,25 +19,11 @@ caps.latest.revision: 12
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
-ms.openlocfilehash: 1c712df22cec506556bbcc78d07f55cc841ef1bc
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 2e912cc4910ab1362719d94f374f145e90747e69
 ms.contentlocale: ru-ru
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 10/09/2017
 
 ---
 # <a name="fatal-error-c1076"></a>Неустранимая ошибка C1076
@@ -47,9 +33,9 @@ ms.lasthandoff: 02/24/2017
   
  Устранение ошибки  
   
-1.  Используйте [/Zm](../../build/reference/zm-specify-precompiled-header-memory-allocation-limit.md) параметр, чтобы задать предельный размер памяти компилятора значение, указанное в [C3859](../../error-messages/compiler-errors-2/compiler-error-c3859.md) сообщение об ошибке. Дополнительные сведения, включая способ задать это значение [!INCLUDE[vsprvs](../../assembler/masm/includes/vsprvs_md.md)], см. в разделе "Примечания" [/Zm (укажите предкомпилированный заголовок предел выделения памяти)](../../build/reference/zm-specify-precompiled-header-memory-allocation-limit.md).  
+1.  Используйте [/Zm](../../build/reference/zm-specify-precompiled-header-memory-allocation-limit.md) параметр, чтобы задать ограничение памяти компилятора значение, указанное в [C3859](../../error-messages/compiler-errors-2/compiler-error-c3859.md) сообщение об ошибке. Дополнительные сведения, включающие как задать это значение [!INCLUDE[vsprvs](../../assembler/masm/includes/vsprvs_md.md)], см. в разделе "Примечания" [/Zm (укажите предкомпилированный заголовок предел выделения памяти)](../../build/reference/zm-specify-precompiled-header-memory-allocation-limit.md).  
   
-2.  Если используются 32-разрядные размещенные компиляторы в 64-разрядной операционной системе, используйте 64-разрядные размещенные компиляторы. Дополнительные сведения см. в разделе [Практическое руководство: использование 64-разрядных инструментов Visual C++ в командной строке](../../build/how-to-enable-a-64-bit-visual-cpp-toolset-on-the-command-line.md).  
+2.  Если используются 32-разрядные размещенные компиляторы в 64-разрядной операционной системе, используйте 64-разрядные размещенные компиляторы. Дополнительные сведения см. в разделе [как: включить 64-разрядных инструментов Visual C++ в командной строке](../../build/how-to-enable-a-64-bit-visual-cpp-toolset-on-the-command-line.md).  
   
 3.  Удалите неиспользуемые включенные файлы.  
   
@@ -63,4 +49,4 @@ ms.lasthandoff: 02/24/2017
   
 8.  Разделите данный файл на меньшие файлы.  
   
- Если C1076 возникает непосредственно после начала построения, значение, указанное для **/Zm** , вероятно, слишком велико для вашей программы. Уменьшить **/Zm** значение.
+ Если C1076 возникает непосредственно после начала построения, значение, указанное для **/Zm** , возможно, слишком велико для вашей программы. Уменьшить **/Zm** значение.

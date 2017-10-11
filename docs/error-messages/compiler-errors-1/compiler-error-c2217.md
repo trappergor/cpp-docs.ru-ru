@@ -1,41 +1,44 @@
 ---
-title: "Ошибка компилятора C2217 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C2217"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C2217"
+title: "Ошибка компилятора C2217 | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C2217
+dev_langs:
+- C++
+helpviewer_keywords:
+- C2217
 ms.assetid: 1ce1e3f5-4171-4376-804d-967f7e612935
 caps.latest.revision: 9
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 9
----
-# Ошибка компилятора C2217
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 0f1795534af1332859fd1a33a137573df82643b4
+ms.contentlocale: ru-ru
+ms.lasthandoff: 10/09/2017
 
-"attribute1" требует наличия "attribute2"  
+---
+# <a name="compiler-error-c2217"></a>Ошибка компилятора C2217
+«атрибут1» требуется «атрибут2»  
   
- Первый атрибут функции требует наличия второго атрибута.  
+ Первый атрибут функции требует второй атрибут.  
   
-### Чтобы устранить ошибку, следует проверить следующие возможные причины ее возникновения.  
+### <a name="to-fix-by-checking-the-following-possible-causes"></a>Чтобы устранить ошибку, проверьте указанные ниже возможные причины ее возникновения.  
   
-1.  Функция обработки прерывания \(`__interrupt`\) описана как `near`.  Функции обработки прерываний должны иметь значение `far`.  
+1.  Прерывание (`__interrupt`) функция объявлена как `near`. Прерывание функции должны быть `far`.  
   
-2.  Функция обработки прерывания описана с помощью `__stdcall` или `__fastcall`.  Функции обработки прерываний должны использовать соглашения о вызове языка C.  
+2.  Прервать в функции, объявленной с `__stdcall`, или `__fastcall`. Функции обработки прерываний должны использовать C соглашения о вызовах.  
   
-## Пример  
- Ошибка C2217 также может возникнуть, если предпринята попытка привязки делегата к функции CLR, принимающей различные номера аргументов.  Если функция имеет перегруженный массив e param, то используйте его вместо нее.  В следующем примере формируется сообщение об ошибке C2217.  
+## <a name="example"></a>Пример  
+ C2217 также может возникать при попытке привязать делегат функции среды CLR, которая принимает переменное число аргументов. Если функция имеет массив e param, используйте ее. Следующий пример приводит к возникновению ошибки C2217.  
   
 ```  
 // C2217.cpp  

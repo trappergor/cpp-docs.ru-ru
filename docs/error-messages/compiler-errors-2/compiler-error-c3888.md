@@ -19,36 +19,21 @@ caps.latest.revision: 3
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0d9cbb01d1ad0f2ea65d59334cb88140ef18fce0
-ms.openlocfilehash: 4b85385c97f5873c1b370cd72f0866439263f787
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 26e55c8a675ada3fd2e88976bc9d9a51cfa8b751
 ms.contentlocale: ru-ru
-ms.lasthandoff: 04/12/2017
+ms.lasthandoff: 10/10/2017
 
 ---
 # <a name="compiler-error-c3888"></a>Ошибка компилятора C3888
 "имя": выражение константы, связанное с этими данными-членом литерала, не поддерживается в C++/CLI  
   
- *Имя* данные-член, объявленный с [литерала](../../windows/literal-cpp-component-extensions.md) ключевое слово инициализируется со значением, компилятор не поддерживает. Компилятор поддерживает только целочисленные константы, перечисления и строковые типы. Возможной причиной ошибки **C3888** может быть то, что член данных инициализирован с помощью байтового массива.  
+ Член данных *имя* , объявленный с помощью ключевого слова [literal](../../windows/literal-cpp-component-extensions.md) , инициализирован со значением, не поддерживаемым компилятором. Компилятор поддерживает только целочисленные константы, перечисления и строковые типы. Возможной причиной ошибки **C3888** может быть то, что член данных инициализирован с помощью байтового массива.  
   
 ### <a name="to-correct-this-error"></a>Исправление ошибки  
   
 1.  Проверьте, имеет ли объявленный член данных литерала поддерживаемый тип.  
   
 ## <a name="see-also"></a>См. также  
- [литерал](../../windows/literal-cpp-component-extensions.md)
+ [literal](../../windows/literal-cpp-component-extensions.md)

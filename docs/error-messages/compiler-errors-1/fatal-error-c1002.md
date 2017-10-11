@@ -1,37 +1,40 @@
 ---
-title: "Неустранимая ошибка C1002 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C1002"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C1002"
+title: "Неустранимая ошибка C1002 | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C1002
+dev_langs:
+- C++
+helpviewer_keywords:
+- C1002
 ms.assetid: bd6d274a-c7b4-43af-8bf2-23c5e442aa22
 caps.latest.revision: 6
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 6
----
-# Неустранимая ошибка C1002
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: cab0e1db2d84fb5ba84d773f28e70341faf10ac6
+ms.contentlocale: ru-ru
+ms.lasthandoff: 10/09/2017
 
-не хватает размера кучи на 2\-ом проходе компилятора  
+---
+# <a name="fatal-error-c1002"></a>Неустранимая ошибка C1002
+не хватает размера кучи на 2-ом проходе компилятора  
   
- Компилятор вышел за границы пространства динамической памяти во время второго прогона, возможно, из\-за того, что в программе слишком много символов или комплексных выражений.  
+ Компилятору недостаточно пространства динамической памяти во время второго прохода, возможно, из-за программа с слишком много символов или сложных выражений.  
   
-### Возможные способы устранения данной ошибки  
+### <a name="to-fix-by-using-the-following-possible-solutions"></a>Возможные способы устранения этой ошибки  
   
-1.  Разделите исходных файл на несколько меньших по размеру файлов.  
+1.  Разделите исходный файл на несколько файлов меньшего размера.  
   
-2.  Разделите выражения на более маленькие подвыражения.  
+2.  Разделите выражения на более мелкие части выражения.  
   
-3.  Удалите другие программы или драйвера, использующие память.
+3.  Удалите другие программы или драйверы, которые занимают память.

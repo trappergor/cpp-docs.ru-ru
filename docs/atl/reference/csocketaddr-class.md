@@ -26,25 +26,11 @@ caps.latest.revision: 19
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0e0c08ddc57d437c51872b5186ae3fc983bb0199
-ms.openlocfilehash: ee3f69874460d09e495a237985a98ace19134a01
+ms.translationtype: MT
+ms.sourcegitcommit: c55726a1728185f699afbac4ba68a6dc0f70c2bf
+ms.openlocfilehash: 33e82acc7b246c1c28eb991c49010f811420094b
 ms.contentlocale: ru-ru
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 10/09/2017
 
 ---
 # <a name="csocketaddr-class"></a>Класс CSocketAddr
@@ -70,14 +56,14 @@ class CSocketAddr
 |----------|-----------------|  
 |[CSocketAddr::FindAddr](#findaddr)|Вызовите этот метод, чтобы преобразовать указанное имя узла в адрес узла.|  
 |[CSocketAddr::FindINET4Addr](#findinet4addr)|Этот метод используется для преобразования имени узла IPv4 адрес узла.|  
-|[CSocketAddr::FindINET6Addr](#findinet6addr)|Этот метод используется для преобразования имени узла IPv6 адрес узла.|  
-|[CSocketAddr::GetAddrInfo](#getaddrinfo)|Вызовите этот метод для возврата указателя на определенный элемент в **addrinfo** списка.|  
+|[CSocketAddr::FindINET6Addr](#findinet6addr)|Этот метод используется для преобразования имени узла IPv6 в адрес узла.|  
+|[CSocketAddr::GetAddrInfo](#getaddrinfo)|Этот метод возвращает указатель для определенных элементов в **addrinfo** списка.|  
 |[CSocketAddr::GetAddrInfoList](#getaddrinfolist)|Вызовите этот метод для возврата указателя на **addrinfo** списка.|  
   
 ## <a name="remarks"></a>Примечания  
- Этот класс предоставляет IP версии, не зависящей от подход для поиска сетевых адресов для использования с Windows сокетов функций API и оболочки сокета в библиотеках.  
+ Этот класс предоставляет IP версии, сокеты независимые подход при поиске сетевых адресов для использования с Windows API-функций и оболочки сокета в библиотеках.  
   
- Члены этого класса, которые используются для поиска адресов сети используйте функцию Win32 API [getaddrinfo](http://msdn.microsoft.com/library/windows/desktop/ms738520).  
+ Члены этого класса, которые используются для поиска сетевых адресов используйте функцию Win32 API [getaddrinfo](http://msdn.microsoft.com/library/windows/desktop/ms738520).  
   
  Этот класс поддерживает оба адреса IPv4 andIPv6 сети.  
   
@@ -132,13 +118,13 @@ int FindAddr(
  Адрес семейства (например, PF_INET).  
   
  `sock_type`  
- Тип сокета (например неблокируемый).  
+ Тип сокета (например, SOCK_STREAM).  
   
  *ai_proto*  
  Протокол (например, IPPROTO_IP или IPPROTO_IPV6).  
   
 ### <a name="return-value"></a>Возвращаемое значение  
- Возвращает нуль, если адрес вычисляется успешно. Возвращает ненулевое значение кода ошибки Windows Socket при сбое. Если успешно, вычисляемые адрес, хранится в связанном списке, можно ссылаться с помощью `CSocketAddr::GetAddrInfoList` и `CSocketAddr::GetAddrInfo`.  
+ Возвращает нуль, если адрес вычисляется успешно. В неудачи возвращает ненулевой код ошибки Windows Socket. При успешной, вычисляемые адрес, хранится в связанном списке, который можно ссылаться с помощью `CSocketAddr::GetAddrInfoList` и `CSocketAddr::GetAddrInfo`.  
   
 ### <a name="remarks"></a>Примечания  
  Параметр имени узла может быть в формате IPv4 или IPv6. Этот метод вызывает функцию Win32 API [getaddrinfo](http://msdn.microsoft.com/library/windows/desktop/ms738520) для выполнения преобразования.  
@@ -165,16 +151,16 @@ int FindINET4Addr(
  0 или сочетание AI_PASSIVE, AI_CANONNAME или AI_NUMERICHOST.  
   
  `sock_type`  
- Тип сокета (например неблокируемый).  
+ Тип сокета (например, SOCK_STREAM).  
   
 ### <a name="return-value"></a>Возвращаемое значение  
- Возвращает нуль, если адрес вычисляется успешно. Возвращает ненулевое значение кода ошибки Windows Socket при сбое. Если успешно, вычисляемые адрес, хранится в связанном списке, можно ссылаться с помощью `CSocketAddr::GetAddrInfoList` и `CSocketAddr::GetAddrInfo`.  
+ Возвращает нуль, если адрес вычисляется успешно. В неудачи возвращает ненулевой код ошибки Windows Socket. При успешной, вычисляемые адрес, хранится в связанном списке, который можно ссылаться с помощью `CSocketAddr::GetAddrInfoList` и `CSocketAddr::GetAddrInfo`.  
   
 ### <a name="remarks"></a>Примечания  
  Этот метод вызывает функцию Win32 API [getaddrinfo](http://msdn.microsoft.com/library/windows/desktop/ms738520) для выполнения преобразования.  
   
 ##  <a name="findinet6addr"></a>CSocketAddr::FindINET6Addr  
- Этот метод используется для преобразования имени узла IPv6 адрес узла.  
+ Этот метод используется для преобразования имени узла IPv6 в адрес узла.  
   
 ```
 int FindINET6Addr(
@@ -195,16 +181,16 @@ int FindINET6Addr(
  0 или сочетание AI_PASSIVE, AI_CANONNAME или AI_NUMERICHOST.  
   
  `sock_type`  
- Тип сокета (например неблокируемый).  
+ Тип сокета (например, SOCK_STREAM).  
   
 ### <a name="return-value"></a>Возвращаемое значение  
- Возвращает нуль, если адрес вычисляется успешно. Возвращает ненулевое значение кода ошибки Windows Socket при сбое. Если успешно, вычисляемые адрес, хранится в связанном списке, можно ссылаться с помощью `CSocketAddr::GetAddrInfoList` и `CSocketAddr::GetAddrInfo`.  
+ Возвращает нуль, если адрес вычисляется успешно. В неудачи возвращает ненулевой код ошибки Windows Socket. При успешной, вычисляемые адрес, хранится в связанном списке, который можно ссылаться с помощью `CSocketAddr::GetAddrInfoList` и `CSocketAddr::GetAddrInfo`.  
   
 ### <a name="remarks"></a>Примечания  
  Этот метод вызывает функцию Win32 API [getaddrinfo](http://msdn.microsoft.com/library/windows/desktop/ms738520) для выполнения преобразования.  
   
 ##  <a name="getaddrinfo"></a>CSocketAddr::GetAddrInfo  
- Вызовите этот метод для возврата указателя на определенный элемент в **addrinfo** списка.  
+ Этот метод возвращает указатель для определенных элементов в **addrinfo** списка.  
   
 ```
 addrinfo* const GetAddrInfoint nIndex = 0) const;
@@ -225,7 +211,7 @@ addrinfo* const GetAddrInfoList() const;
 ```  
   
 ### <a name="return-value"></a>Возвращаемое значение  
- Указатель в связанный список из одного или нескольких `addrinfo` структур, содержащих ответ сведения об узле. Дополнительные сведения о `addrinfo` структуры, см. в статье «addrinfo» в [библиотеки MSDN](http://go.microsoft.com/fwlink/linkid=556)  
+ Указатель в связанный список из одного или нескольких `addrinfo` структуры, содержащие ответа сведения об узле. Дополнительные сведения о `addrinfo` структуры, см. в статье «addrinfo» [библиотеки MSDN](http://go.microsoft.com/fwlink/linkid=556)  
   
 ## <a name="see-also"></a>См. также  
  [Общие сведения о классе](../../atl/atl-class-overview.md)

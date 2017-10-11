@@ -19,31 +19,17 @@ caps.latest.revision: 9
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 65e7a7bd56096fbeec61b651ab494d82edef9c90
-ms.openlocfilehash: b09a83e77e906a4a65efa12cf51a067361fad95a
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 4bb972ffa8bee016dd158490d123353bd6f46a8e
 ms.contentlocale: ru-ru
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 10/10/2017
 
 ---
 # <a name="compiler-error-c2879"></a>Ошибка компилятора C2879
-«символ»: только для существующего пространства имен можно предоставить альтернативное имя, определение псевдонима пространства имен  
+«символ»: только для существующего пространства имен может быть дано альтернативное имя при определении псевдонима пространства имен  
   
- Не удается создать [псевдоним пространства имен](../../cpp/namespaces-cpp.md#namespace_aliases) для символа, отличного от пространства имен.  
+ Не удается создать [псевдоним пространства имен](../../cpp/namespaces-cpp.md#namespace_aliases) на символ, отличный от пространства имен.  
   
  Следующий пример приводит к возникновению ошибки C2879:  
   

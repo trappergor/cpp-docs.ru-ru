@@ -1,32 +1,35 @@
 ---
-title: "Ошибка компилятора C2648 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C2648"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C2648"
+title: "Ошибка компилятора C2648 | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C2648
+dev_langs:
+- C++
+helpviewer_keywords:
+- C2648
 ms.assetid: ce338337-9154-4f85-bb61-b05fdbfad75d
 caps.latest.revision: 8
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 8
----
-# Ошибка компилятора C2648
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 99d52f3c07c0c20e49fa46baeba4cde618e286c7
+ms.contentlocale: ru-ru
+ms.lasthandoff: 10/10/2017
 
-"идентификатор" : при использовании членов класса в качестве параметров по умолчанию можно использовать только статические члены  
+---
+# <a name="compiler-error-c2648"></a>Ошибка компилятора C2648
+«Идентификатор»: использование члена, как параметр по умолчанию должен быть статическим  
   
- В качестве параметра по умолчанию использован нестатический член.  
+ Нестатический член используется в качестве параметра по умолчанию.  
   
  Следующий пример приводит к возникновению ошибки C2648:  
   

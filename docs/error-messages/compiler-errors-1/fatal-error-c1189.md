@@ -1,34 +1,37 @@
 ---
-title: "Неустранимая ошибка C1189 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C1189"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C1189"
+title: "Неустранимая ошибка C1189 | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C1189
+dev_langs:
+- C++
+helpviewer_keywords:
+- C1189
 ms.assetid: 2e5c8a78-edd4-411c-b619-558a96be148a
 caps.latest.revision: 13
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 13
----
-# Неустранимая ошибка C1189
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 6e8d3c9ff44a436688accfe267141390d23c0eb5
+ms.contentlocale: ru-ru
+ms.lasthandoff: 10/09/2017
 
-\#error: сообщение об ошибке, указанное пользователем  
+---
+# <a name="fatal-error-c1189"></a>Неустранимая ошибка C1189
+\#Ошибка: сообщение об ошибке указанное пользователем  
   
- Ошибка C1189 создается директивой `#error`.  Разработчик, добавляющий в код эту директиву, задает текст сообщения об ошибке.  Для получения дополнительной информации см. [Директива \#error](../../preprocessor/hash-error-directive-c-cpp.md).  
+ Ошибка C1189 создается `#error` директивы. Разработчик, коды директива задает текст сообщения об ошибке. Дополнительные сведения см. в разделе [(C/C++) директива #error](../../preprocessor/hash-error-directive-c-cpp.md).  
   
- В следующем примере продемонстрировано возникновение ошибки C1189.  В этом примере разработчик задал пользовательское сообщение об ошибке, поскольку идентификатор `_WIN32` не определен.  
+ В следующем примере возникает ошибка C1189. В этом примере разработчик задал пользовательское сообщение об ошибке, поскольку `_WIN32` идентификатор не определен:  
   
 ```  
 // C1189.cpp  
@@ -38,9 +41,9 @@ caps.handback.revision: 13
 #endif  
 ```  
   
- Эта ошибка также возникает при построении проекта ATL с помощью параметра **\/robust** компилятора MIDL.  Используйте параметр **\/robust** для построения только [!INCLUDE[win2kfamily](../../c-runtime-library/includes/win2kfamily_md.md)] и более поздних версиях Windows.  Чтобы устранить эту ошибку, используйте одну из следующих процедур:  
+ Эта ошибка также может появиться при построении проекта ATL с помощью **/ robust** MIDL-параметр компилятора. Используйте **/ robust** коммутатора для построения только [!INCLUDE[win2kfamily](../../c-runtime-library/includes/win2kfamily_md.md)] и более поздних версиях Windows. Чтобы исправить эту ошибку, используйте один из следующих процедур:  
   
--   Измените следующую строку в файле dlldatax.c:  
+-   Измените эту строку в файле dlldatax.c:  
   
 ```  
 #define _WIN32_WINNT 0x0400   // for WinNT 4.0 or Windows 95 with DCOM  
@@ -52,7 +55,7 @@ caps.handback.revision: 13
 #define _WIN32_WINNT 0x0500   // for WinNT 4.0 or Windows 95 with DCOM  
 ```  
   
--   Воспользуйтесь страницей свойств **Дополнительно** в папке страниц свойств **MIDL**, чтобы удалить параметр **\/robust**, а затем укажите параметр **\/no\_robust**.  Для получения дополнительной информации см. [Страницы свойств MIDL: Дополнительно](../../ide/midl-property-pages-advanced.md).  
+-   Используйте **Дополнительно** на странице свойств в **MIDL** папка для страниц свойств для удаления **/ robust** переключения, а затем укажите **/no_robust** Неверный параметр. Дополнительные сведения см. в разделе [страницы свойств MIDL: Дополнительно](../../ide/midl-property-pages-advanced.md).  
   
-## См. также  
- [Директива \#define](../../preprocessor/hash-define-directive-c-cpp.md)
+## <a name="see-also"></a>См. также  
+ [Директива #define (C/C++)](../../preprocessor/hash-define-directive-c-cpp.md)

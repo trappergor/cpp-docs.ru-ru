@@ -19,33 +19,19 @@ caps.latest.revision: 11
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
-ms.openlocfilehash: 4d2481a724ac98d325dd2bd05714d410f5e75e3c
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: f9958ccb3daa537f8789d7485822fd623da8c703
 ms.contentlocale: ru-ru
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 10/09/2017
 
 ---
 # <a name="fatal-error-c1308"></a>Неустранимая ошибка C1308
-компоновка сборок не поддерживается  
+Связывание сборок не поддерживается  
   
- NETMODULE поддерживается как входной модуль компоновщика, но не сборка. Это ошибка может возникать при попытке связать сборки, скомпилированной с параметром `/clr:safe`.  
+ .Netmodule допустим в качестве входных данных компоновщика, но не сборка. Эта ошибка может возникать при попытке ссылки на сборку, скомпилированную с `/clr:safe`.  
   
- Дополнительные сведения см. в разделе [NETMODULE-файлы в качестве входных данных компоновщика](../../build/reference/netmodule-files-as-linker-input.md).  
+ Дополнительные сведения см. в разделе [NETMODULE-файлы в качестве входных файлов компоновщика](../../build/reference/netmodule-files-as-linker-input.md).  
   
  Следующий пример приводит к возникновению ошибки C1308:  
   

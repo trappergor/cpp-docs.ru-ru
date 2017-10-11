@@ -1,34 +1,37 @@
 ---
-title: "Ошибка компилятора C2581 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C2581"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C2581"
+title: "Ошибка компилятора C2581 | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C2581
+dev_langs:
+- C++
+helpviewer_keywords:
+- C2581
 ms.assetid: 24a4e4c1-24d3-4e42-b760-7dcaf9740b16
 caps.latest.revision: 10
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 10
----
-# Ошибка компилятора C2581
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 205d972237a71a05839dbc4236d248a11e6ee53d
+ms.contentlocale: ru-ru
+ms.lasthandoff: 10/10/2017
 
-"тип" : функция "operator \=" не может быть статической  
+---
+# <a name="compiler-error-c2581"></a>Ошибка компилятора C2581
+«Тип»: статический "operator =" функции не допускается  
   
- Оператор присваивания \(`=`\) объявлен как `static`, что недопустимо.  Операторы присваивания не могут объявляться как `static`.  Для получения дополнительной информации см. [Пользовательские операторы](../../dotnet/user-defined-operators-cpp-cli.md).  
+ Назначение (`=`) оператор объявлен как `static`. Операторы присваивания не может быть `static`. Дополнительные сведения см. в разделе [определяемые пользователем операторы (C + +/ CLI)](../../dotnet/user-defined-operators-cpp-cli.md).  
   
-## Пример  
+## <a name="example"></a>Пример  
  Следующий пример приводит к возникновению ошибки C2581.  
   
 ```  

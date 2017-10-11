@@ -19,32 +19,17 @@ caps.latest.revision: 7
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0d9cbb01d1ad0f2ea65d59334cb88140ef18fce0
-ms.openlocfilehash: 6eb80aa9b2aa3144d1025d7eedff25727693e494
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 7fc59984a3fb47d9dd00d479e771fd11f6bab242
 ms.contentlocale: ru-ru
-ms.lasthandoff: 04/12/2017
+ms.lasthandoff: 10/10/2017
 
 ---
 # <a name="compiler-error-c3037"></a>Ошибка компилятора C3037
 "переменная": переменная в предложении "reduction" должна быть общей в охватывающем контексте  
   
- Переменная, указанная в [сокращения](../../parallel/openmp/reference/reduction.md) предложения не может быть частной для каждого потока в контексте.  
+ Переменная, указанная в предложении [reduction](../../parallel/openmp/reference/reduction.md) , не может быть частной для любого потока в контексте.  
   
  При компиляции следующего примера возникнет ошибка C3037:  
   

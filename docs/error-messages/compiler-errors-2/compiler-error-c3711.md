@@ -1,32 +1,35 @@
 ---
-title: "Ошибка компилятора C3711 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C3711"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C3711"
+title: "Ошибка компилятора C3711 | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C3711
+dev_langs:
+- C++
+helpviewer_keywords:
+- C3711
 ms.assetid: 26d581cc-2153-4ee0-b814-a371184be3e1
 caps.latest.revision: 7
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 7
----
-# Ошибка компилятора C3711
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 0cfc4a2ffbbf65f1a1171a256ce08d5f498887a8
+ms.contentlocale: ru-ru
+ms.lasthandoff: 10/10/2017
 
-"метод": типом возвращаемого значения метода неуправляемого источника события должен быть void или целочисленный тип  
+---
+# <a name="compiler-error-c3711"></a>Ошибка компилятора C3711
+«метод»: исходный метод неуправляемого событий должен возвращать тип void или целочисленный тип  
   
- В источнике события определен метод, тип возвращаемого значения которого не является целочисленным типом или типом void.  Чтобы устранить эту ошибку, измените событие и обработчик событий так, чтобы в качестве типа возвращаемого значения в них использовался тип `void` или целочисленный тип, например `int` или `long`.  
+ Метод определен в источник события, который не возвращает значение void или целочисленный тип. Чтобы устранить эту ошибку, измените событие и обработчик событий, которые имеют тип возвращаемого значения `void` или целочисленный тип, такой как `int` или `long`.  
   
  Следующий пример приводит к возникновению ошибки C3711:  
   

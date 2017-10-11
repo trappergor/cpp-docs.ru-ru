@@ -1,36 +1,39 @@
 ---
-title: "Ошибка компилятора C3849 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C3849"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C3849"
+title: "Ошибка компилятора C3849 | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C3849
+dev_langs:
+- C++
+helpviewer_keywords:
+- C3849
 ms.assetid: 5347140e-1a81-4841-98c0-b63d98264b64
 caps.latest.revision: 6
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 6
----
-# Ошибка компилятора C3849
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 7fbe46ee4f83dc5477eeb67e0debf14fe4f9fad5
+ms.contentlocale: ru-ru
+ms.lasthandoff: 10/10/2017
 
-при вызове в стиле функции выражения типа "тип" будут потеряны квалификаторы const и volatile для всех доступных перегрузок операторов  
+---
+# <a name="compiler-error-c3849"></a>Ошибка компилятора C3849
+вызов в стиле функции выражения типа «тип» будут потеряны квалификаторы const и volatile для всех доступных перегрузок операторов  
   
- Переменная с указанным типом квалификатора const и volatile может только вызывать функции\-члены, определенные с помощью тех же или больших квалификаторов const и volatile.  
+ Переменная с указанным типом const и volatile можно вызвать только члена функции, определенные с помощью того же или более поздней const и volatile.  
   
- Чтобы устранить данную ошибку, необходимо предоставить соответствующую функцию\-член.  Невозможно выполнить преобразование для объекта, квалифицированного как const или volatile, если преобразование является причиной потери квалификации.  При преобразовании допустимо получать квалификаторы, но не утрачивать их.  
+ Чтобы устранить эту ошибку, предоставьте соответствующую функцию-член. Невозможно выполнить преобразование const или volatile уточненный объект, если преобразование приводит к потере квалификации. Можно получать квалификаторы, но не может потерять при преобразовании.  
   
- Следующий пример демонстрирует причины возникновения ошибки C3849:  
+ Следующий пример приводит к возникновению ошибки C3849:  
   
 ```  
 // C3849.cpp  

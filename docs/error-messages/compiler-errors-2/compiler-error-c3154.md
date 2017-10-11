@@ -1,37 +1,40 @@
 ---
-title: "Ошибка компилятора C3154 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C3154"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C3154"
+title: "Ошибка компилятора C3154 | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C3154
+dev_langs:
+- C++
+helpviewer_keywords:
+- C3154
 ms.assetid: 78005c74-eaaf-4ac2-88ae-6c25d01a302a
 caps.latest.revision: 7
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 7
----
-# Ошибка компилятора C3154
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: de38898f775d621edfec464de8a51d20c3bdb4f0
+ms.contentlocale: ru-ru
+ms.lasthandoff: 10/10/2017
 
-Перед многоточием требуется знак ",".В функциях массивов параметров не поддерживаются многоточия, не разделенные запятой.  
+---
+# <a name="compiler-error-c3154"></a>Ошибка компилятора C3154
+Ожидается «,» перед многоточием. Не разделенные запятой в функциях массивов параметров не поддерживаются многоточия.  
   
- Недопустимое объявление функции аргумента переменной.  
+ Переменное число аргументов функции, не был объявлен неправильно.  
   
- Для получения дополнительной информации см. [Списки аргументов переменных \(...\) \(C\+\+\/CLI\)](../../windows/variable-argument-lists-dot-dot-dot-cpp-cli.md).  
+ Дополнительные сведения см. в разделе [списками аргументов переменных (...) (C + +/ CLI) ](../../windows/variable-argument-lists-dot-dot-dot-cpp-cli.md).  
   
-## Пример  
- В следующем примере возникает ошибка C3154.  
+## <a name="example"></a>Пример  
+ Следующий пример приводит к возникновению ошибки C3154.  
   
 ```  
 // C3154.cpp  

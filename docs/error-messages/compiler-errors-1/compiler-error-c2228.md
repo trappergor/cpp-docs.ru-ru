@@ -1,5 +1,5 @@
 ---
-title: "C2228 Ошибка компилятора | Документы Microsoft"
+title: "Ошибка компилятора C2228 | Документы Microsoft"
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -19,32 +19,17 @@ caps.latest.revision: 10
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
-ms.openlocfilehash: 3e1a7fb29d792a5b72c2f6b67021c134c224bac2
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 6960d2a34a6a68925e04e0812730025d1ce2ff92
 ms.contentlocale: ru-ru
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 10/09/2017
 
 ---
 # <a name="compiler-error-c2228"></a>Ошибка компилятора C2228
 слева от ".identifier" должен быть указан класс, структура или объединение  
   
- Операнд слева от точки (.) не имеет класса, структуры или объединения.  
+ Операнд слева от точки (.) не класса, структуры или объединения.  
   
  Следующий пример приводит к возникновению ошибки C2228:  
   
@@ -67,6 +52,6 @@ int main() {
   
  Эта ошибка также возникает из-за неправильного синтаксиса при использовании управляемых расширений. В то время как в других языках Visual Studio для доступа к члену управляемого класса можно использовать оператор "точка", в C++ указатель на объект означает, что для доступа к члену вы должны использовать оператор ->:  
   
- Не так:`String * myString = checkedListBox1->CheckedItems->Item[0].ToString();`  
+ Неправильно: `String * myString = checkedListBox1->CheckedItems->Item[0].ToString();`  
   
- Правильно:`String * myString = checkedListBox1->CheckedItems->Item[0]->ToString();`
+ Правильно: `String * myString = checkedListBox1->CheckedItems->Item[0]->ToString();`

@@ -24,29 +24,15 @@ caps.latest.revision: 19
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 5a0c6a1062330f952bb8fa52bc934f6754465513
-ms.openlocfilehash: 4cf4cad1a3b1a4ac0a21ef76a0eaca35732abf3a
+ms.translationtype: MT
+ms.sourcegitcommit: c55726a1728185f699afbac4ba68a6dc0f70c2bf
+ms.openlocfilehash: 5f37deebe0524ef0198e87a989b79d7a7ef49ede
 ms.contentlocale: ru-ru
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 10/09/2017
 
 ---
 # <a name="ccomobjectnolock-class"></a>Класс CComObjectNoLock
-Этот класс реализует **IUnknown** для неагрегированные объекта, но не не приращения счетчик блокировок модуля в конструкторе.  
+Этот класс реализует **IUnknown** для неагрегированные объекта, но не не инкремента, счетчик блокировок модуля в конструкторе.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -57,7 +43,7 @@ class CComObjectNoLock : public Base
   
 #### <a name="parameters"></a>Параметры  
  `Base`  
- Класс, производный от [CComObjectRoot](../../atl/reference/ccomobjectroot-class.md) или [CComObjectRootEx](../../atl/reference/ccomobjectrootex-class.md), также как и из любого другого интерфейса, которую требуется поддерживать на объект.  
+ Класс, производный от [CComObjectRoot](../../atl/reference/ccomobjectroot-class.md) или [CComObjectRootEx](../../atl/reference/ccomobjectrootex-class.md), также как и из любого другого интерфейса, которые требуется поддерживать на объект.  
   
 ## <a name="members"></a>Члены  
   
@@ -72,14 +58,14 @@ class CComObjectNoLock : public Base
   
 |Имя|Описание|  
 |----------|-----------------|  
-|[CComObjectNoLock::AddRef](#addref)|Увеличивает значение счетчика ссылок на объект.|  
+|[CComObjectNoLock::AddRef](#addref)|Увеличивает счетчик ссылок на объект.|  
 |[CComObjectNoLock::QueryInterface](#queryinterface)|Возвращает указатель на запрошенный интерфейс.|  
 |[CComObjectNoLock::Release](#release)|Уменьшает счетчик ссылок на объект.|  
   
 ## <a name="remarks"></a>Примечания  
- `CComObjectNoLock`Аналогично [CComObject](../../atl/reference/ccomobject-class.md) в том, что он реализует [IUnknown](http://msdn.microsoft.com/library/windows/desktop/ms680509) неагрегированные объекта; Однако `CComObjectNoLock` выполняет подсчет приращения блокировки модуля в конструкторе.  
+ `CComObjectNoLock`Аналогично [CComObject](../../atl/reference/ccomobject-class.md) в том, что он реализует [IUnknown](http://msdn.microsoft.com/library/windows/desktop/ms680509) неагрегированные объекта, однако `CComObjectNoLock` выполняет подсчет приращения блокировки модуля в конструкторе.  
   
- Использует ATL `CComObjectNoLock` внутренне для фабрики классов. Как правило вы не будет использовать этот класс непосредственно.  
+ ATL использует `CComObjectNoLock` внутренне для фабрик классов. Как правило не используется этого класса напрямую.  
   
 ## <a name="inheritance-hierarchy"></a>Иерархия наследования  
  `Base`  
@@ -87,10 +73,10 @@ class CComObjectNoLock : public Base
  `CComObjectNoLock`  
   
 ## <a name="requirements"></a>Требования  
- **Заголовок:** файле atlcom.h  
+ **Заголовок:** atlcom.h  
   
 ##  <a name="addref"></a>CComObjectNoLock::AddRef  
- Увеличивает значение счетчика ссылок на объект.  
+ Увеличивает счетчик ссылок на объект.  
   
 ```
 STDMETHOD_(ULONG, AddRef)();
@@ -118,7 +104,7 @@ CComObjectNoLock(void* = NULL);
 ```  
   
 ### <a name="remarks"></a>Примечания  
- Освобождает все выделенные ресурсы и вызывает [FinalRelease](ccomobjectrootex-class.md#finalrelease).  
+ Освобождает все выделенные ресурсы и вызывает метод [FinalRelease](ccomobjectrootex-class.md#finalrelease).  
 
   
 ##  <a name="queryinterface"></a>CComObjectNoLock::QueryInterface  
@@ -133,7 +119,7 @@ STDMETHOD(QueryInterface)(REFIID iid, void** ppvObject);
  [in] Идентификатор запрашиваемого интерфейса.  
   
  `ppvObject`  
- [out] Указатель на указатель интерфейса, идентифицируемый `iid`. Если объект не поддерживает этот интерфейс `ppvObject` равен **NULL**.  
+ [out] Указатель на указатель на интерфейс, определяемый `iid`. Если объект не поддерживает этот интерфейс `ppvObject` равно **NULL**.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
  Стандартное значение `HRESULT` .  
@@ -146,7 +132,7 @@ STDMETHOD_(ULONG, Release)();
 ```  
   
 ### <a name="return-value"></a>Возвращаемое значение  
- В отладочных построениях **выпуска** возвращает значение, которое может быть полезно для диагностики и тестирования. В сборках неотладочные **выпуска** всегда возвращает значение 0.  
+ В отладочных построениях **выпуска** возвращает значение, которое может быть полезно для диагностики и тестирования. В неотладочных сборках **выпуска** всегда возвращает значение 0.  
   
 ## <a name="see-also"></a>См. также  
  [Общие сведения о классе](../../atl/atl-class-overview.md)

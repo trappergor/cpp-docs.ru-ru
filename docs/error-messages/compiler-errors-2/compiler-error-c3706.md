@@ -1,36 +1,39 @@
 ---
-title: "Ошибка компилятора C3706 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C3706"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C3706"
+title: "Ошибка компилятора C3706 | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C3706
+dev_langs:
+- C++
+helpviewer_keywords:
+- C3706
 ms.assetid: d20a33eb-d625-46c5-ac87-32075a590d07
 caps.latest.revision: 9
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 9
----
-# Ошибка компилятора C3706
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 20f7e14d22e1994213624d88ccab098844aa6ac4
+ms.contentlocale: ru-ru
+ms.lasthandoff: 10/10/2017
 
-"функция": для порождения COM\-событий должен быть COM\-интерфейсом  
+---
+# <a name="compiler-error-c3706"></a>Ошибка компилятора C3706
+«функция»: должен быть COM-интерфейса для порождения COM-событий  
   
- Интерфейс событий, используемый для порождения COM\-событий, должен быть интерфейсом COM.  В этой ситуации интерфейс должен либо задаваться с использованием атрибута Visual C\+\+, либо импортироваться с использованием команды [\#import](../Topic/%23import%20Directive%20\(C++\).md) из библиотеки типов с атрибутом импорта embedded\_idl.  
+ Интерфейс событий, который используется для порождения COM-событий должен быть COM-интерфейса. В этом случае интерфейса должны быть определены с использованием атрибута Visual C++ или импортировать с помощью [#import](../../preprocessor/hash-import-directive-cpp.md) из библиотеки типов с атрибутом embedded_idl #import элемента.  
   
- Имейте в виду, что для использования COM\-событий необходимы строки `#include` файлов заголовков ATL, представленные в примере ниже.  Для устранения этой ошибки преобразуйте `IEvents` \(интерфейс событий\) в COM\-интерфейс, применив один из следующих атрибутов к определению интерфейса: [object](../Topic/object%20\(C++\).md), [dual](../Topic/dual.md) или [dispinterface](../../windows/dispinterface.md).  
+ Обратите внимание, что `#include` для использования COM-событий необходимы строки файлов заголовков ATL, представленные в примере ниже. Чтобы устранить эту ошибку, `IEvents` (интерфейс событий) COM-интерфейс, применив один из следующих атрибутов к определению интерфейса: [объекта](../../windows/object-cpp.md), [двойного](../../windows/dual.md), или [ disp-интерфейса](../../windows/dispinterface.md).  
   
- Если интерфейс построен из файла заголовков, созданного MIDL, компилятор не распознает его как COM\-интерфейс.  
+ Если интерфейс из заголовка файла, созданного MIDL, компилятор не распознает его как COM-интерфейса.  
   
  Следующий пример приводит к возникновению ошибки C3706:  
   

@@ -1,32 +1,35 @@
 ---
-title: "Ошибка компилятора C2896 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C2896"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C2896"
+title: "Ошибка компилятора C2896 | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C2896
+dev_langs:
+- C++
+helpviewer_keywords:
+- C2896
 ms.assetid: b600407b-cb05-42e3-9069-2aa6960f0eaa
 caps.latest.revision: 9
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 9
----
-# Ошибка компилятора C2896
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: b60848dcaa06bb41ec290e3fb91a65fda025a8df
+ms.contentlocale: ru-ru
+ms.lasthandoff: 10/10/2017
 
-"функция 1": нельзя использовать функцию\-шаблон "функция 2" в качестве аргумента  
+---
+# <a name="compiler-error-c2896"></a>Ошибка компилятора C2896
+«функция1»: нельзя использовать в качестве аргумента шаблона функции «функция2»  
   
- Шаблон функции не может быть аргументом для другого шаблона функции.  
+ Шаблон функции не может быть аргумента для другого шаблона функции.  
   
  Следующий пример приводит к возникновению ошибки C2896:  
   
@@ -40,7 +43,7 @@ int main() {
 }  
 ```  
   
- Ошибка C2896 также может возникнуть при использовании универсальных шаблонов:  
+ C2896 также может возникнуть при использовании универсальных шаблонов:  
   
 ```  
 // C2896b.cpp  

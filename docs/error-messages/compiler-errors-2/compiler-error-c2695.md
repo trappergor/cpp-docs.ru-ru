@@ -19,32 +19,17 @@ caps.latest.revision: 7
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
-ms.openlocfilehash: 48599871b90a3ff74d97dcaff0ad19ea319771da
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 1ae253ade1093d447616a39e788a80b843290f6a
 ms.contentlocale: ru-ru
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 10/10/2017
 
 ---
 # <a name="compiler-error-c2695"></a>Ошибка компилятора C2695
-«функция1»: переопределение виртуальной функции отличается от «функции&2;» только соглашением о вызове  
+«функция1»: переопределение виртуальной функции отличается от «функция2» только соглашением о вызове  
   
- Подпись функции в производном классе не может переопределить функцию в базовом классе и изменить соглашение о вызовах.  
+ Сигнатура функции в производном классе нельзя переопределить функцию в базовом классе и изменить соглашение о вызовах.  
   
  Следующий пример приводит к возникновению ошибки C2695:  
   

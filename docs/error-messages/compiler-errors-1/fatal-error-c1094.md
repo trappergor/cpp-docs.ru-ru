@@ -1,32 +1,35 @@
 ---
-title: "Неустранимая ошибка C1094 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C1094"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C1094"
+title: "Неустранимая ошибка C1094 | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C1094
+dev_langs:
+- C++
+helpviewer_keywords:
+- C1094
 ms.assetid: 9e1193b2-cb95-44f9-bf6f-019e0d41dd97
 caps.latest.revision: 9
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 9
----
-# Неустранимая ошибка C1094
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 032eee2edf1570e46359d22379843157c6889b4b
+ms.contentlocale: ru-ru
+ms.lasthandoff: 10/09/2017
 
-"\-Zmval1" : параметр командной строки несовместим со значением, использованным для построения предкомпилированного заголовка \("\-Zmval2"\)  
+---
+# <a name="fatal-error-c1094"></a>Неустранимая ошибка C1094
+"-Zmval1": параметр командной строки несовместим со значением, использованным для сборки предкомпилированного заголовка ("-Zmval2")  
   
- Значение, указываемое с параметром [\/Yc](../../build/reference/yc-create-precompiled-header-file.md), должно совпадать со значением, указанным с параметром [\/Yu](../../build/reference/yu-use-precompiled-header-file.md) \(значения **\/Zm** должны быть одинаковыми во всех компиляциях, использующих или создающих один и тот же предкомпилированный заголовок\).  
+ Значение, передаваемое [/Yc](../../build/reference/yc-create-precompiled-header-file.md) должно быть то же значение, передаваемое [/Yu](../../build/reference/yu-use-precompiled-header-file.md) (**/Zm** значения должны быть одинаковыми во всех компиляциях, использующих или создающих же предкомпилированные файл заголовка).  
   
  Следующий пример приводит к возникновению ошибки C1094:  
   
@@ -35,7 +38,7 @@ caps.handback.revision: 9
 int func1();  
 ```  
   
- И далее,  
+ Затем:  
   
 ```  
 // C1094.cpp  
@@ -47,7 +50,7 @@ int main() {
 #include "C1094.h"  
 ```  
   
- И далее,  
+ Затем:  
   
 ```  
 // C1094b.cpp  

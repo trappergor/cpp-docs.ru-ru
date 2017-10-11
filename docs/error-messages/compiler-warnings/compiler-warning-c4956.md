@@ -19,36 +19,21 @@ caps.latest.revision: 9
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0d9cbb01d1ad0f2ea65d59334cb88140ef18fce0
-ms.openlocfilehash: 782735be55c043482679740afa9571ba7b29dfc4
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: bad7fac98e81e39457f484960ee566c16b6fe5bc
 ms.contentlocale: ru-ru
-ms.lasthandoff: 04/12/2017
+ms.lasthandoff: 10/10/2017
 
 ---
 # <a name="compiler-warning-c4956"></a>Предупреждение компилятора C4956
 "тип": этот тип недоступен для проверки  
   
- Это предупреждение возникает, когда [/CLR: safe](../../build/reference/clr-common-language-runtime-compilation.md) указан и ваш код содержит тип, не подлежащий проверке.  
+ Это предупреждение создается, если указано [/clr:safe](../../build/reference/clr-common-language-runtime-compilation.md) , но код содержит тип, не подлежащий проверке.  
   
  Дополнительные сведения см. в разделе [чистый и проверяемый код (C + +/ CLI)](../../dotnet/pure-and-verifiable-code-cpp-cli.md).  
   
- Это предупреждение выдается как ошибка и может быть отключено с [предупреждение](../../preprocessor/warning.md) pragma или [/wd](../../build/reference/compiler-option-warning-level.md) параметр компилятора.  
+ Это предупреждение выдается в качестве ошибки, и его можно отключить с помощью прагмы [warning](../../preprocessor/warning.md) или параметра компилятора [/wd](../../build/reference/compiler-option-warning-level.md) .  
   
  В следующем примере возникает ошибка C4956.  
   

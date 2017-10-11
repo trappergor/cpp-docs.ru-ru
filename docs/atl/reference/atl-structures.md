@@ -1,69 +1,75 @@
 ---
-title: "ATL Structures | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "index-page "
-f1_keywords: 
-  - "vc.atl.structures"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "ATL - библиотека, структуры"
-  - "структуры, ATL - библиотека"
+title: "ATL структуры | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: 'index-page '
+f1_keywords:
+- vc.atl.structures
+dev_langs:
+- C++
+helpviewer_keywords:
+- ATL, structures
+- structures, ATL
 ms.assetid: 622173c8-6f2e-457c-8fae-28d4e80ecdb5
 caps.latest.revision: 14
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 15
----
-# ATL Structures
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.translationtype: MT
+ms.sourcegitcommit: c55726a1728185f699afbac4ba68a6dc0f70c2bf
+ms.openlocfilehash: 2546608c3c84a2228fba35bb1470064f64c2212b
+ms.contentlocale: ru-ru
+ms.lasthandoff: 10/09/2017
 
-Библиотека шаблонных классов ATL содержит следующие структуры.  
+---
+# <a name="atl-structures"></a>Структуры ATL
+
+
+Библиотека активных шаблонов включает следующие структуры.  
   
-## В этом подразделе  
- [ATL\_DRAWINFO](../../atl/reference/atl-drawinfo-structure.md)  
- Содержит сведения, используемые для визуализации к разным целевым объектам, как принтер, метафайл или элемент управления ActiveX.  
+## <a name="in-this-section"></a>Содержание  
+ [ATL_DRAWINFO](../../atl/reference/atl-drawinfo-structure.md)  
+ Содержит сведения, используемые для подготовки к просмотру для различных целей, например принтер, метафайла или элемент управления ActiveX.  
   
- [\_AtlCreateWndData](../../atl/reference/atlcreatewnddata-structure.md)  
- Содержит данные экземпляра класса в коде над окнами в библиотеки ATL.  
+ [_AtlCreateWndData](../../atl/reference/atlcreatewnddata-structure.md)  
+ Содержит данные экземпляра класса в коде над окнами в ATL  
   
- [\_ATL\_BASE\_MODULE70](../Topic/_ATL_BASE_MODULE70%20Structure.md)  
- Общий каким\-либо проектом, использующий библиотеку ATL.  
+ [_ATL_BASE_MODULE70](../../atl/reference/atl-base-module70-structure.md)  
+ Используются проектом, которое использует ATL.  
   
- [\_ATL\_COM\_MODULE70](../../atl/reference/atl-com-module70-structure.md)  
- Общий Модель COM\- связанными кодом в библиотеки ATL.  
+ [_ATL_COM_MODULE70](../../atl/reference/atl-com-module70-structure.md)  
+ Используемый код с COM в ATL  
   
- [\_ATL\_FUNC\_INFORMATION](../../atl/reference/atl-func-info-structure.md)  
- Содержит сведения о типе, используемая для описания метод или свойство в диспетчерский интерфейс.  
+ [_ATL_FUNC_INFO](../../atl/reference/atl-func-info-structure.md)  
+ Содержит сведения о типе, используемый для описания метода или свойства на disp-интерфейса.  
   
- [\_ATL\_MODULE70](../../atl/reference/atl-module70-structure.md)  
- Содержит сведения, используемые каждым модулем библиотеки ATL.  
+ [_ATL_MODULE70](../../atl/reference/atl-module70-structure.md)  
+ Содержит данные, используемые каждый модуль ATL.  
   
- [\_ATL\_WIN\_MODULE70](../../atl/reference/atl-win-module70-structure.md)  
- Используемый кодом над окнами в библиотеки ATL.  
+ [_ATL_WIN_MODULE70](../../atl/reference/atl-win-module70-structure.md)  
+ Использовать в коде над окнами в ATL.  
   
-## Связанные подразделы  
- [Справочник по ATL](../../atl/atl-com-desktop-components.md)  
- Справочные материалы по библиотеке ATL, которая представляет собой набор основанных на шаблонах классов C\+\+, упрощающих написание объектов COM.  
+## <a name="related-sections"></a>Связанные разделы  
+ [Справочник по библиотеке ATL](../../atl/atl-com-desktop-components.md)  
+ Справочные материалы по библиотеке ATL, которая представляет собой набор основанных на шаблонах классов C++, упрощающих написание объектов COM.  
   
- [ATL\-функции](../../atl/reference/atl-functions.md)  
- Предоставляет справочный материал для глобальных функциях, упорядоченных по по алфавиту.  Содержит разделы, упорядочивая функции в категории.  
+ [Функции ATL](../../atl/reference/atl-functions.md)  
+ Предоставляет справочные материалы в глобальных функциях, которые упорядочены по алфавиту. Разделы, объединяя функции в категории.  
   
- [Глобальные переменные библиотеки ATL](../Topic/ATL%20Global%20Variables.md)  
- Предоставляет справочный материал для глобальных переменных, упорядоченных по по алфавиту.  
+ [Глобальные переменные ATL](../../atl/reference/atl-global-variables.md)  
+ Предоставляет справочные материалы, на глобальные переменные, которые упорядочены по алфавиту.  
   
- [Макросы библиотеки ATL](../../atl/reference/atl-macros.md)  
- Предоставляет справочный материал в макросах, упорядоченных по по алфавиту.  Содержит разделы, упорядочивая макросов в категории.  
+ [Макросы ATL](../../atl/reference/atl-macros.md)  
+ Предоставляет справочные материалы в макросы в алфавитном порядке. Разделы, объединяя макросы в категории.  
   
- [Typedef библиотеки ATL](../../atl/reference/atl-typedefs.md)  
- Предоставляет справочные материалы по алфавиту в typedef, упорядоченных по  
+ [Определения типов ATL](../../atl/reference/atl-typedefs.md)  
+ Предоставляет справочные материалы для определения типов, которые упорядочены по алфавиту  
   
- [Классы библиотеки ATL](../../atl/reference/atl-classes.md)  
- Предоставляет справочный материал для классов, упорядоченных по по алфавиту.
+ [ATL-классы](../../atl/reference/atl-classes.md)  
+ Предоставляет справочные материалы в классах, которые упорядочены по алфавиту.
+

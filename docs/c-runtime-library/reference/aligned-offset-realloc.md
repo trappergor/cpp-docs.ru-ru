@@ -1,49 +1,52 @@
 ---
-title: "_aligned_offset_realloc | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-apiname: 
-  - "_aligned_offset_realloc"
-apilocation: 
-  - "msvcrt.dll"
-  - "msvcr80.dll"
-  - "msvcr90.dll"
-  - "msvcr100.dll"
-  - "msvcr100_clr0400.dll"
-  - "msvcr110.dll"
-  - "msvcr110_clr0400.dll"
-  - "msvcr120.dll"
-  - "msvcr120_clr0400.dll"
-  - "ucrtbase.dll"
-  - "api-ms-win-crt-heap-l1-1-0.dll"
-apitype: "DLLExport"
-f1_keywords: 
-  - "aligned_offset_realloc"
-  - "_aligned_offset_realloc"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "aligned_offset_realloc - функция"
-  - "_aligned_offset_realloc - функция"
+title: "_aligned_offset_realloc | Документы Майкрософт"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-standard-libraries
+ms.tgt_pltfrm: 
+ms.topic: article
+apiname:
+- _aligned_offset_realloc
+apilocation:
+- msvcrt.dll
+- msvcr80.dll
+- msvcr90.dll
+- msvcr100.dll
+- msvcr100_clr0400.dll
+- msvcr110.dll
+- msvcr110_clr0400.dll
+- msvcr120.dll
+- msvcr120_clr0400.dll
+- ucrtbase.dll
+- api-ms-win-crt-heap-l1-1-0.dll
+apitype: DLLExport
+f1_keywords:
+- aligned_offset_realloc
+- _aligned_offset_realloc
+dev_langs:
+- C++
+helpviewer_keywords:
+- aligned_offset_realloc function
+- _aligned_offset_realloc function
 ms.assetid: e0263533-991e-41b0-acc9-1b8a51ab9ecd
 caps.latest.revision: 18
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 18
----
-# _aligned_offset_realloc
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 9b90b8b2ff057e42425825ae7d02b8d0901a5e45
+ms.contentlocale: ru-ru
+ms.lasthandoff: 10/09/2017
 
-Изменяет размер блока памяти, выделенного с помощью [\_aligned\_malloc](../../c-runtime-library/reference/aligned-malloc.md) или [\_aligned\_offset\_malloc](../../c-runtime-library/reference/aligned-offset-malloc.md).  
+---
+# <a name="alignedoffsetrealloc"></a>_aligned_offset_realloc
+Изменяет размер блока памяти, который был выделен с помощью функции [_aligned_malloc](../../c-runtime-library/reference/aligned-malloc.md) или [_aligned_offset_malloc](../../c-runtime-library/reference/aligned-offset-malloc.md).  
   
-## Синтаксис  
+## <a name="syntax"></a>Синтаксис  
   
 ```  
 void * _aligned_offset_realloc(  
@@ -54,39 +57,39 @@ void * _aligned_offset_realloc(
 );  
 ```  
   
-#### Параметры  
+#### <a name="parameters"></a>Параметры  
  `memblock`  
- Текущий указатель на блок памяти.  
+ Указатель текущего блока памяти.  
   
  `size`  
- Размер выделяемой памяти.  
+ Размер выделения памяти.  
   
  `alignment`  
- Значение выравнивания, которое должно быть целочисленной степенью двойки.  
+ Значение выравнивания, которое должно быть целочисленной степенью числа 2.  
   
  `offset`  
- Смещение в выделении памяти для обеспечения выравнивания.  
+ Смещение в выделение памяти для принудительного выполнения выравнивания.  
   
-## Возвращаемое значение  
- `_aligned_offset_realloc` возвращает void указатель на перераспределенный \(и, возможно, перемещенный\) блок памяти.  Возвращаемое значение равно `NULL`, если размер равен нулю и аргумент буфера не равен `NULL`, или если доступной памяти недостаточно, чтобы развернуть блок заданного размера.  В первом случае исходный блок освобождается.  Во втором случае исходный блок не изменяется.  Возвращаемое значение указывает на дисковое пространство, которое гарантированно выравнено подходящим для хранения любого типа объекта образом.  Чтобы получить указатель на тип, отличный от void, используйте приведение типа для возвращаемого значения.  
+## <a name="return-value"></a>Возвращаемое значение  
+ `_aligned_offset_realloc` возвращает указатель void на перераспределенный (и, возможно, перемещенный) блок памяти. Возвращаемое значение — `NULL`, если размер равен нулю и аргумент буфера не `NULL`, а также если недостаточно памяти для расширения блока до заданного размера. В первом случае исходный блок освобождается. Во втором случае исходный блок не изменяется. Возвращаемое значение указывает на пространство хранилища, которое гарантированно будет соответственно выровнено для хранения объектов любого типа. Чтобы получить указатель на тип, отличающийся от void, используйте приведение типа для возвращаемого значения.  
   
- `_aligned_offset_realloc` помечена `__declspec(noalias)` и `__declspec(restrict)`, что означает, что функция гарантированно не изменит глобальные переменные, а для возвращаемого указателя не будет создан псевдоним.  Дополнительные сведения см. в разделах [noalias](../../cpp/noalias.md) и [restrict](../../cpp/restrict.md).  
+ Функция `_aligned_offset_realloc` имеет метки `__declspec(noalias)` и `__declspec(restrict)`, что означает, что функция гарантированно не изменит глобальные переменные, а для возвращаемого указателя не будет создан псевдоним. Дополнительные сведения см. в разделах [noalias](../../cpp/noalias.md) и [restrict](../../cpp/restrict.md).  
   
-## Заметки  
- Подобно [\_aligned\_offset\_malloc](../../c-runtime-library/reference/aligned-offset-malloc.md), `_aligned_offset_realloc` позволяет, чтобы структура выравнивалась от смещения внутри структуры.  
+## <a name="remarks"></a>Примечания  
+ Как и [_aligned_offset_malloc](../../c-runtime-library/reference/aligned-offset-malloc.md), `_aligned_offset_realloc` позволяет выполнить выравнивание структуры со смещением в пределах структуры.  
   
- `_aligned_offset_realloc` основана на `malloc`.  Дополнительные сведения об использовании `_aligned_offset_malloc` см. в разделе [malloc](../../c-runtime-library/reference/malloc.md).  Если `memblock` равно `NULL`, функция вызывает `_aligned_offset_malloc` внутренне.  
+ Функция `_aligned_offset_realloc` основана на функции `malloc`. Дополнительные сведения об использовании `_aligned_offset_malloc` см. в разделе [malloc](../../c-runtime-library/reference/malloc.md). Если функция `memblock` имеет значение `NULL`, она вызывает `_aligned_offset_malloc` внутри системы.  
   
- Эта функция устанавливает `errno` в значение `ENOMEM`, выделение памяти завершилось неудачно, или если запрошенный размер был больше `_HEAP_MAXREQ`.  Дополнительные сведения о `errno` см. в разделе [errno, \_doserrno, \_sys\_errlist, and \_sys\_nerr](../Topic/errno,%20_doserrno,%20_sys_errlist,%20and%20_sys_nerr.md).  Кроме того, `_aligned_offset_realloc` проверяет свои параметры.  Если `alignment` не степень двойки, или если `offset` больше или равно `size` и отлично от нуля, эта функция вызывает обработчик недопустимого параметра, как описано в разделе [Проверка параметров](../../c-runtime-library/parameter-validation.md).  Если продолжение выполнения разрешено, эта функция возвращает `NULL` и устанавливает `errno` в значение `EINVAL`.  
+ Эта функция задает для `errno` значение `ENOMEM` в случае сбоя выделения памяти или если запрошенный размер был больше `_HEAP_MAXREQ`. Дополнительные сведения о функции `errno` см. в разделе [errno, _doserrno, _sys_errlist и _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md). Кроме того, `_aligned_offset_realloc` проверяет свои параметры. Если значение `alignment` не является степенью числа 2 или `offset` больше или равно `size` и не равно нулю, эта функция вызывает обработчик недопустимых параметров, как описано в разделе [Проверка параметров](../../c-runtime-library/parameter-validation.md). Если продолжение выполнения разрешено, эта функция возвращает `NULL` и задает для `errno` значение `EINVAL`.  
   
-## Требования  
+## <a name="requirements"></a>Требования  
   
 |Подпрограмма|Обязательный заголовок|  
-|------------------|----------------------------|  
-|`_aligned_offset_realloc`|\<malloc.h\>|  
+|-------------|---------------------|  
+|`_aligned_offset_realloc`|\<malloc.h>|  
   
-## Пример  
- Дополнительные сведения см. в разделе [\_aligned\_malloc](../../c-runtime-library/reference/aligned-malloc.md)  
+## <a name="example"></a>Пример  
+ Дополнительные сведения см. в разделе [_aligned_malloc](../../c-runtime-library/reference/aligned-malloc.md).  
   
-## См. также  
+## <a name="see-also"></a>См. также  
  [Выравнивание данных](../../c-runtime-library/data-alignment.md)
