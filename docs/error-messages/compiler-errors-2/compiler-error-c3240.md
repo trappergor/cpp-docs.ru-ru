@@ -19,29 +19,15 @@ caps.latest.revision: 6
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
-ms.openlocfilehash: 7eb5f52206d7f47a06814c050f11b68b58a33ebd
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 988c0a54b6c748acc7236642263a6c18390a44ed
 ms.contentlocale: ru-ru
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 10/10/2017
 
 ---
 # <a name="compiler-error-c3240"></a>Ошибка компилятора C3240
-«функция»: должна быть функцией-перегруженные абстрактный член «тип»  
+«функция»: должна быть функцией неперегруженным абстрактный член «тип»  
   
  Базовый тип содержит функцию, которая была определена. Функция должна быть виртуальной.  
   

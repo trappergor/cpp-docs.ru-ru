@@ -1,5 +1,5 @@
 ---
-title: "C3394 Ошибка компилятора | Документы Microsoft"
+title: "Ошибка компилятора C3394 | Документы Microsoft"
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -19,32 +19,17 @@ caps.latest.revision: 5
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
-ms.openlocfilehash: 9a0184512f1817e3f2de7119f483a2f5b5801344
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 69a4f9ebd8df95a5a65191b19d4d130eb6ede196
 ms.contentlocale: ru-ru
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 10/10/2017
 
 ---
 # <a name="compiler-error-c3394"></a>Ошибка компилятора C3394
 синтаксическая ошибка в предложении ограничения: для найденного "идентификатор" требуется тип  
   
- Ограничение было неправильно сформировано.  Дополнительные сведения см. в разделе [ограничения параметров универсального типа (C + +/ CLI)](../../windows/constraints-on-generic-type-parameters-cpp-cli.md).  
+ Ограничение было неправильно сформировано.  Дополнительные сведения см. в разделе [ограничений для параметров универсального типа (C + +/ CLI)](../../windows/constraints-on-generic-type-parameters-cpp-cli.md).  
   
 ## <a name="example"></a>Пример  
  В следующем примере возникает ошибка C3394:  

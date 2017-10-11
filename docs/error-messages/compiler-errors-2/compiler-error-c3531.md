@@ -1,39 +1,42 @@
 ---
-title: "Ошибка компилятора C3531 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C3531"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C3531"
+title: "Ошибка компилятора C3531 | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C3531
+dev_langs:
+- C++
+helpviewer_keywords:
+- C3531
 ms.assetid: 2bdb9fdc-9ddf-403e-8b92-02763d434487
 caps.latest.revision: 6
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 6
----
-# Ошибка компилятора C3531
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 7753e30e305b7b36adc3b4d2b535f755fa455bdd
+ms.contentlocale: ru-ru
+ms.lasthandoff: 10/10/2017
 
-"символ": символ, тип которого содержит "auto", должен иметь инициализатор  
+---
+# <a name="compiler-error-c3531"></a>Ошибка компилятора C3531
+«символ»: символ, тип которого содержит «auto» должно иметь инициализатор  
   
  Указанная переменная не имеет выражения инициализатора.  
   
-### Исправление этой ошибки  
+### <a name="to-correct-this-error"></a>Исправление ошибки  
   
-1.  При объявлении переменной укажите выражение инициализатора, например простое присвоение, использующее синтаксис со знаком равенства.  
+1.  Укажите выражение инициализатора, например простого присваивания, который использует синтаксис со знаком равенства, при объявлении переменной.  
   
-## Пример  
- Следующий пример вызывает ошибку C3531, поскольку переменные `x1`, `y1, y2, y3` и `z2` не инициализированы.  
+## <a name="example"></a>Пример  
+ Следующий пример вызывает ошибку C3531, поскольку переменные `x1`, `y1, y2, y3`, и `z2` не инициализированы.  
   
 ```  
 // C3531.cpp  
@@ -47,5 +50,5 @@ int main()
 }  
 ```  
   
-## См. также  
+## <a name="see-also"></a>См. также  
  [Ключевое слово auto](../../cpp/auto-keyword.md)

@@ -19,38 +19,24 @@ caps.latest.revision: 5
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
-ms.openlocfilehash: ddaa07e0c06a871815f42c4f5d6760befdb06b30
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 0d66e76fc3e44a037f52aa6e217fae848f1338d2
 ms.contentlocale: ru-ru
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 10/10/2017
 
 ---
 # <a name="compiler-error-c3530"></a>Ошибка компилятора C3530
-"auto" не может объединяться с любыми другими спецификаторами типа  
+«auto» не может объединяться с любыми другими спецификаторами типа  
   
- Описатель типа использован с `auto` ключевое слово.  
+ Описатель типа используется с `auto` ключевое слово.  
   
 ### <a name="to-correct-this-error"></a>Исправление ошибки  
   
 1.  Не используйте описатель типа в объявлении переменной, которая использует `auto` ключевое слово.  
   
 ## <a name="example"></a>Пример  
- Следующий пример вызывает ошибку C3530, так как переменная `x` объявляется как с `auto` ключевое слово и тип `int`, и поскольку код примера компилируется с **/Zc: auto**.  
+ Следующий пример вызывает ошибку C3530, так как переменная `x` объявлен с обоими `auto` ключевое слово и тип `int`, а потому, что код примера компилируется с **/Zc: auto**.  
   
 ```  
 // C3530.cpp  
@@ -63,4 +49,4 @@ int main()
 ```  
   
 ## <a name="see-also"></a>См. также  
- [Ключевое слово Auto](../../cpp/auto-keyword.md)
+ [Ключевое слово auto](../../cpp/auto-keyword.md)

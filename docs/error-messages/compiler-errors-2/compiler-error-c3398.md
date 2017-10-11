@@ -19,31 +19,16 @@ caps.latest.revision: 7
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0d9cbb01d1ad0f2ea65d59334cb88140ef18fce0
-ms.openlocfilehash: 66bd229369456da18d8bed60b25b6e6b07e03f27
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 54241a6e57bdfd8795d6f894a1410c1e6c90cf49
 ms.contentlocale: ru-ru
-ms.lasthandoff: 04/12/2017
+ms.lasthandoff: 10/10/2017
 
 ---
 # <a name="compiler-error-c3398"></a>Ошибка компилятора C3398
 "оператор": не удается преобразовать из "сигнатура_функции" в "указатель_функции". Исходное выражение должно являться символом функции  
   
- Когда [__clrcall](../../cpp/clrcall.md) соглашение о вызовах не указан при компиляции с параметром **/CLR**, компилятор создает две точки входа (адреса) для каждой функции, основную точку входа и управляемую точку входа.  
+ Когда соглашение о вызовах [__clrcall](../../cpp/clrcall.md) не указано, при компиляции с параметром **/clr**компилятор создает две точки входа (адреса) для каждой функции, основную точку входа и управляемую точку входа.  
   
  По умолчанию компилятор возвращает основную точку входа, но в некоторых случаях требуется управляемая точка входа (например, при назначении адреса указателю функции `__clrcall` ). Чтобы компилятор гарантированно выбрал управляемую точку входа в назначении, с правой стороны должен быть символ функции.

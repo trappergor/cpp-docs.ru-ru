@@ -1,5 +1,5 @@
 ---
-title: "C3353 Ошибка компилятора | Документы Microsoft"
+title: "Ошибка компилятора C3353 | Документы Microsoft"
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -19,31 +19,17 @@ caps.latest.revision: 10
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 65e7a7bd56096fbeec61b651ab494d82edef9c90
-ms.openlocfilehash: 051300b1c670381c0450b373058644fc5a84e7d4
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 47a0231a161a2502c26786fceeb1b3634b236eaf
 ms.contentlocale: ru-ru
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 10/10/2017
 
 ---
 # <a name="compiler-error-c3353"></a>Ошибка компилятора C3353
 delegate: создание делегата допускается только из глобальной функции или функции-члена управляемого типа или типа WinRT  
   
- Делегаты, объявленные с [делегировать](../../windows/delegate-cpp-component-extensions.md) ключевое слово, можно объявлять только в глобальной области.  
+ Делегаты, объявленные с [делегировать](../../windows/delegate-cpp-component-extensions.md) ключевое слово, можно объявлять только в глобальной области видимости.  
   
  Следующий пример приводит к возникновению ошибки C3353:  
   

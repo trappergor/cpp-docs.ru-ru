@@ -1,38 +1,41 @@
 ---
-title: "Ошибка компилятора C3163 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C3163"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C3163"
+title: "Ошибка компилятора C3163 | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C3163
+dev_langs:
+- C++
+helpviewer_keywords:
+- C3163
 ms.assetid: 17dcafa3-f416-4e04-a232-f9569218ba75
 caps.latest.revision: 8
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 8
----
-# Ошибка компилятора C3163
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 95fb254036d2883b6efe6b81bda54864d533c2a8
+ms.contentlocale: ru-ru
+ms.lasthandoff: 10/10/2017
 
-"construct": атрибуты не согласованы с предыдущим объявлением  
+---
+# <a name="compiler-error-c3163"></a>Ошибка компилятора C3163
+«конструктор»: атрибуты несовместимы с предыдущим объявлением  
   
- Атрибуты, применяемые к определению, конфликтуют с атрибутами, применяемыми к объявлению.  
+ Один или несколько атрибутов, которые применяются к определению, конфликтуют с атрибутами, которые применяются к объявлению.  
   
- Один из способов устранения ошибки C3163 заключается в удалении атрибутов из опережающего объявления.  Все атрибуты в опережающем объявлении должны быть меньше атрибутов определения или, по крайней мере, равны им.  
+ Один из способов устранения ошибки C3163 — атрибутов из опережающего объявления. Все атрибуты для опережающего объявления должна быть меньше, чем атрибуты в определении или не более равны им.  
   
- Возможная причина ошибки C3163 связана с языком заметок к исходному коду Майкрософт \(SAL\).  Макрос SAL развертывается только после компиляции проекта с флагом **\/analyze**.  Программа, скомпилированная без флага \/analyze, может создавать ошибку C3163 при попытке ее повторной компиляции с параметром \/analyze.  Дополнительные сведения о SAL см. в разделе [Примечания SAL](../../c-runtime-library/sal-annotations.md).  
+ Возможная причина ошибки C3163 включает в себя язык заметки исходного кода Microsoft (SAL). Макросы SAL не расширяться, если при компиляции проекта с помощью **/ analyze** флаг. Программа, которая компилируется без ошибок без / analyze может создавать ошибку C3163 при попытке повторной компиляции с помощью параметра / analyze. Дополнительные сведения о языке SAL см. в разделе [заметки SAL](../../c-runtime-library/sal-annotations.md).  
   
-## Пример  
+## <a name="example"></a>Пример  
  Следующий пример приводит к возникновению ошибки C3163.  
   
 ```  
@@ -46,5 +49,5 @@ using namespace System;
 // [CLSCompliant(true)] void f() {}  
 ```  
   
-## См. также  
- [Примечания SAL](../../c-runtime-library/sal-annotations.md)
+## <a name="see-also"></a>См. также  
+ [Заметки SAL](../../c-runtime-library/sal-annotations.md)

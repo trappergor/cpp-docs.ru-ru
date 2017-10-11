@@ -1,5 +1,5 @@
 ---
-title: "C3320 Ошибка компилятора | Документы Microsoft"
+title: "Ошибка компилятора C3320 | Документы Microsoft"
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -19,32 +19,17 @@ caps.latest.revision: 9
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 65e7a7bd56096fbeec61b651ab494d82edef9c90
-ms.openlocfilehash: 4b4acfe97e38cf13e336b7c58ffc868c69cf7a09
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: fbc375682bb42070d49dd08b711926462c17f32b
 ms.contentlocale: ru-ru
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 10/10/2017
 
 ---
 # <a name="compiler-error-c3320"></a>Ошибка компилятора C3320
 "тип": имя типа не может совпадать со свойством name модуля  
   
-Экспортированный определяемого пользователем типа (UDT), который может быть структура, класс, перечисление или объединение, не может иметь то же имя, как параметр, передаваемый [модуль](../../windows/module-cpp.md) свойства имени атрибута.  
+Экспортированный определяемых пользователем типов (UDT), который может быть структуры, класса, перечисления или объединения, не может иметь то же имя, как параметр, передаваемый в [модуль](../../windows/module-cpp.md) свойство имени атрибута.  
   
 ## <a name="example"></a>Пример  
 Следующий пример приводит к возникновению ошибки C3320:  

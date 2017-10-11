@@ -1,39 +1,42 @@
 ---
-title: "Ошибка компилятора C3451 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C3451"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C3451"
+title: "Ошибка компилятора C3451 | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C3451
+dev_langs:
+- C++
+helpviewer_keywords:
+- C3451
 ms.assetid: a4897a69-e3e7-40bb-bb1c-598644904012
 caps.latest.revision: 13
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 13
----
-# Ошибка компилятора C3451
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: c1c0f9de919fbe646eaa6303fa5b1e9fcba886eb
+ms.contentlocale: ru-ru
+ms.lasthandoff: 10/10/2017
 
-"атрибут": к "тип" невозможно применить неуправляемый атрибут  
+---
+# <a name="compiler-error-c3451"></a>Ошибка компилятора C3451
+«атрибут»: невозможно применить неуправляемый атрибут для «тип»  
   
- Атрибут C\+\+ не может быть применен к типу CLR.  Дополнительные сведения см. в разделе [C\+\+ Attributes Reference](../../windows/cpp-attributes-reference.md).  
+ Атрибут C++ не может применяться к типу CLR. В разделе [Справочник по атрибутам C++](../../windows/cpp-attributes-reference.md) для получения дополнительной информации.  
   
- Для получения дополнительной информации см. [Пользовательские атрибуты](../../windows/user-defined-attributes-cpp-component-extensions.md).  
+ Для получения дополнительной информации см. [User-Defined Attributes](../../windows/user-defined-attributes-cpp-component-extensions.md).  
   
- Это ошибка может возникать в результате действий по обеспечению совместимости компилятора с Visual C\+\+ 2005: атрибут [uuid](../../windows/uuid-cpp-attributes.md) больше не разрешается применять в пользовательском атрибуте при использовании программирования в среде CLR.  Взамен рекомендуется использовать <xref:System.Runtime.InteropServices.GuidAttribute>.  
+ Эта ошибка может возникать в результате действий по обеспечению совместимости компилятора с Visual C++ 2005: [uuid](../../windows/uuid-cpp-attributes.md) атрибут больше не допускается для пользовательского атрибута, с помощью программирования в среде CLR. Взамен рекомендуется использовать <xref:System.Runtime.InteropServices.GuidAttribute> .  
   
-## Пример  
- В следующем примере продемонстрировано возникновение ошибки C3451.  
+## <a name="example"></a>Пример  
+ Следующий пример приводит к возникновению ошибки C3451.  
   
 ```  
 // C3451.cpp  

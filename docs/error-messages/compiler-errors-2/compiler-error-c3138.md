@@ -1,32 +1,35 @@
 ---
-title: "Ошибка компилятора C3138 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C3138"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C3138"
+title: "Ошибка компилятора C3138 | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C3138
+dev_langs:
+- C++
+helpviewer_keywords:
+- C3138
 ms.assetid: 364ee9e8-9358-410e-bd35-9c4a226a3753
 caps.latest.revision: 7
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 7
----
-# Ошибка компилятора C3138
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 0ba06bed1ce02c8a3030720152892e0e35760afa
+ms.contentlocale: ru-ru
+ms.lasthandoff: 10/10/2017
 
-"интерфейс" : интерфейс с атрибутом "атрибут" должен наследовать от IDispatch или от интерфейса\-наследника IDispatch  
+---
+# <a name="compiler-error-c3138"></a>Ошибка компилятора C3138
+«интерфейс»: интерфейс «атрибут» должен наследовать от IDispatch или от интерфейса, который наследует от интерфейса IDispatch  
   
- Интерфейс с атрибутом [dual](../Topic/dual.md) или [dispinterface](../../windows/dispinterface.md) не является прямым или косвенным наследником интерфейса `IDispatch`.  
+ Интерфейс с [двойного](../../windows/dual.md) или [disp-интерфейса](../../windows/dispinterface.md) имеет атрибуты `IDispatch` как прямой или косвенный базовый интерфейс.  
   
  Следующий пример приводит к возникновению ошибки C3138:  
   

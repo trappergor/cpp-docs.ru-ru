@@ -1,5 +1,5 @@
 ---
-title: "C3297 Ошибка компилятора | Документы Microsoft"
+title: "Ошибка компилятора C3297 | Документы Microsoft"
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -19,26 +19,11 @@ caps.latest.revision: 3
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
-ms.openlocfilehash: dcdcee9235e0007c4d7a6d662b455d98a1cb55da
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: c2190bb4f2fe5c6195221deebe5b24097b614691
 ms.contentlocale: ru-ru
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 10/10/2017
 
 ---
 # <a name="compiler-error-c3297"></a>Ошибка компилятора C3297
@@ -46,7 +31,7 @@ ms.lasthandoff: 02/24/2017
   
  Классы значений являются запечатанными. Если ограничение является классом значений, другое ограничение не может производиться от него.  
   
- Дополнительные сведения см. в разделе [ограничения параметров универсального типа (C + +/ CLI)](../../windows/constraints-on-generic-type-parameters-cpp-cli.md).  
+ Дополнительные сведения см. в разделе [ограничений для параметров универсального типа (C + +/ CLI)](../../windows/constraints-on-generic-type-parameters-cpp-cli.md).  
   
 ## <a name="example"></a>Пример  
  В следующем примере возникает ошибка C3297:  

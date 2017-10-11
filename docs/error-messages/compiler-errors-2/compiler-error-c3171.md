@@ -1,36 +1,39 @@
 ---
-title: "Ошибка компилятора C3171 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C3171"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C3171"
+title: "Ошибка компилятора C3171 | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C3171
+dev_langs:
+- C++
+helpviewer_keywords:
+- C3171
 ms.assetid: 1ce26997-7ef1-4c9f-84da-003ea1a4251e
 caps.latest.revision: 9
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 9
----
-# Ошибка компилятора C3171
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: ebd64aa2c80f6e21b1e5c1829d8e165d46207718
+ms.contentlocale: ru-ru
+ms.lasthandoff: 10/10/2017
 
-"module": не удается указать другие атрибуты модуля в проекте  
+---
+# <a name="compiler-error-c3171"></a>Ошибка компилятора C3171
+«module»: невозможно указать другие атрибуты модуля в проекте  
   
- Атрибуты [module](../../windows/module-cpp.md) с различными списками параметров были найдены в двух файлах компиляции.  При компиляции может быть указан только один уникальный атрибут `module`.  
+ [модуль](../../windows/module-cpp.md) атрибуты с различными списками параметров были найдены в двух файлах при компиляции. Только один уникальный `module` атрибут можно задать на каждую компиляцию.  
   
- Аналогичные атрибуты `module` могут быть указаны в нескольких файлах исходного кода.  
+ Идентичные `module` атрибуты могут быть заданы в более чем один файл исходного кода.  
   
- Например, если найдены следующие атрибуты `module`:  
+ Например если следующие `module` обнаружены атрибуты:  
   
 ```  
 // C3171.cpp  
@@ -38,7 +41,7 @@ caps.handback.revision: 9
 int main() {}  
 ```  
   
- И далее,  
+ Затем:  
   
 ```  
 // C3171b.cpp  
@@ -47,4 +50,4 @@ int main() {}
 [ module(name="MyModule", uuid="373a1a4e-469b-11d3-a6b0-00c04f79ae8f", version="1.1") ];  
 ```  
   
- компилятор формирует сообщение об ошибке C3171 \(запишите значения разных версий\).
+ компилятор создаст C3171 (запишите значения разных версий).

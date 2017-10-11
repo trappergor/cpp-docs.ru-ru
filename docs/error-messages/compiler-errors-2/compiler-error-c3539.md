@@ -19,29 +19,15 @@ caps.latest.revision: 6
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
-ms.openlocfilehash: f7e9f8d260d17d7561077aabb0dfc26bf20f8c07
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 03283217be6aabbf216e2e60ad47abfc01a961d6
 ms.contentlocale: ru-ru
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 10/10/2017
 
 ---
 # <a name="compiler-error-c3539"></a>Ошибка компилятора C3539
-«Тип»: аргумент шаблона не может быть тип, который содержит «auto»  
+«Тип»: аргумент шаблона не может быть типом, содержащим «auto»  
   
  Указанный тип аргумента шаблона не может содержать `auto` ключевое слово.  
   
@@ -64,4 +50,4 @@ int main()
 ```  
   
 ## <a name="see-also"></a>См. также  
- [Ключевое слово Auto](../../cpp/auto-keyword.md)
+ [Ключевое слово auto](../../cpp/auto-keyword.md)

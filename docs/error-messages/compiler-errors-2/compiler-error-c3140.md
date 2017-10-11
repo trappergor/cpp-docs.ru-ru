@@ -19,31 +19,17 @@ caps.latest.revision: 8
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
-ms.openlocfilehash: de0d6d87ad305d66092f6c08afc3c263a3ed9059
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: e809ddaaa278e0c6a2660fbb71b84323dcd40018
 ms.contentlocale: ru-ru
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 10/10/2017
 
 ---
 # <a name="compiler-error-c3140"></a>Ошибка компилятора C3140
-наличие нескольких атрибутов "module" в одном блоке компиляции не допускается  
+не может иметь несколько атрибутов «module» в одном блоке компиляции  
   
- [Модуль](../../windows/module-cpp.md) атрибута может определяться только один раз на каждый проект.  
+ [Модуль](../../windows/module-cpp.md) атрибута могут определяться только один раз на один проект.  
   
  Следующий пример приводит к возникновению ошибки C3140:  
   

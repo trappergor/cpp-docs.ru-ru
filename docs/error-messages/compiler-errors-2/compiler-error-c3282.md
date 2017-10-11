@@ -1,5 +1,5 @@
 ---
-title: "C3282 Ошибка компилятора | Документы Microsoft"
+title: "Ошибка компилятора C3282 | Документы Microsoft"
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -19,31 +19,17 @@ caps.latest.revision: 5
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
-ms.openlocfilehash: 351d42b7fe7a8f94088d452dfb53c233aaabf80a
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 86baad7d8fc0b7dcced75af1453a9695b9b6762c
 ms.contentlocale: ru-ru
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 10/10/2017
 
 ---
 # <a name="compiler-error-c3282"></a>Ошибка компилятора C3282
-универсальный параметр списки могут появляться только в управляемых или WinRTclasses структуры и функции  
+универсальный параметр списки могут использоваться только в управляемых или WinRTclasses, структурах или функциях  
   
- Список универсальных параметров был использован неправильно.  Дополнительные сведения см. в разделе [универсальных типов](../../windows/generics-cpp-component-extensions.md).  
+ Список универсальных параметров был использован неправильно.  Дополнительные сведения см. в разделе [Универсальные типы](../../windows/generics-cpp-component-extensions.md).  
   
 ## <a name="example"></a>Пример  
  В следующем примере показано возникновение ошибки C3282 и приводятся сведения по ее устранению.  
