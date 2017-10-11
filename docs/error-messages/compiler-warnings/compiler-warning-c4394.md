@@ -1,39 +1,42 @@
 ---
-title: "Предупреждение компилятора C4394 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C4394"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C4394"
+title: "Предупреждение компилятора C4394 | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C4394
+dev_langs:
+- C++
+helpviewer_keywords:
+- C4394
 ms.assetid: 5de94de0-17e3-4e7c-92f4-5c3c1b825120
 caps.latest.revision: 11
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 11
----
-# Предупреждение компилятора C4394
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 5b201b95a2ec9d43c904de35ca581efbf31b7526
+ms.contentlocale: ru-ru
+ms.lasthandoff: 10/10/2017
 
-"функция": символ для каждого домена приложений не следует помечать с помощью \_\_declspec\(dllexport\)  
+---
+# <a name="compiler-warning-c4394"></a>Предупреждение компилятора C4394
+«функция»: символ по доменам приложения не следует помечать с помощью __declspec(dllexport)  
   
- Функция, помеченная модификатором [appdomain](../Topic/appdomain.md) `__declspec`, компилируется в код MSIL \(не в машинный код\), и экспортные таблицы \(модификатор [export](../../windows/export.md) `__declspec`\) не поддерживаются для управляемых функций.  
+ Функция, помеченная [appdomain](../../cpp/appdomain.md) `__declspec` модификатор компилируется в код MSIL (не в машинный код) и таблицы экспорта ([Экспорт](../../windows/export.md) `__declspec` модификатор) не поддерживаются для управляемых функций.  
   
- Можно объявить управляемую функцию, чтобы иметь общую специальных возможностей.  Дополнительные сведения см. в разделах [Видимость типа](../../dotnet/how-to-define-and-consume-classes-and-structs-cpp-cli.md#BKMK_Type_visibility) и [Видимость члена](../../dotnet/how-to-define-and-consume-classes-and-structs-cpp-cli.md#BKMK_Member_visibility).  
+ Можно объявить управляемой функции открытый доступ. Дополнительные сведения см. в разделе [введите видимость](../../dotnet/how-to-define-and-consume-classes-and-structs-cpp-cli.md#BKMK_Type_visibility) и [видимость членов](../../dotnet/how-to-define-and-consume-classes-and-structs-cpp-cli.md#BKMK_Member_visibility).  
   
- Предупреждение C4394 всегда выводится в качестве ошибки.  Возможно отключение этого предупреждения с помощью прагма\-директивы `#pragma warning` или параметра **\/wd**; дополнительные сведения см. в разделе [warning](../../preprocessor/warning.md) или [\/w, \/Wn, \/WX, \/Wall, \/wln, \/wdn, \/wen, \/won \(уровень предупреждений\)](../../build/reference/compiler-option-warning-level.md).  
+ C4394 всегда выдается как ошибка.  Можно отключить это предупреждение с `#pragma warning` или **/wd**; в разделе [предупреждение](../../preprocessor/warning.md) или  [ /w, помощью/W0, /W1, /W2, /W3, / W4, /w1, /w2, /w3, / W4, / Wall, /wd, и мы /wo, / wv, / WX (порог предупреждений)](../../build/reference/compiler-option-warning-level.md)для получения дополнительной информации.  
   
-## Пример  
- Следующий пример демонстрирует причины возникновения ошибки C4394.  
+## <a name="example"></a>Пример  
+ Следующий пример приводит к возникновению ошибки C4394.  
   
 ```  
 // C4394.cpp  

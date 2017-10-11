@@ -19,34 +19,20 @@ caps.latest.revision: 5
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 65e7a7bd56096fbeec61b651ab494d82edef9c90
-ms.openlocfilehash: fd21be63cc46f6108bd84615e9dbeccbcb39b1cc
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 4d38483d3edd477babb7a240a7b79841850f6a9e
 ms.contentlocale: ru-ru
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 10/10/2017
 
 ---
 # <a name="compiler-error-c3914"></a>Ошибка компилятора C3914
 свойство по умолчанию не может быть статическим  
   
-По умолчанию свойство объявлено неправильно.  Дополнительные сведения см. в разделе [Практическое руководство: использование свойства в C + +/ CLI](../../dotnet/how-to-use-properties-in-cpp-cli.md).  
+Свойство по умолчанию был объявлен неправильно.  Дополнительные сведения см. в разделе [как: используйте свойства в C + +/ CLI](../../dotnet/how-to-use-properties-in-cpp-cli.md).  
   
 ## <a name="example"></a>Пример  
-В следующем примере возникает ошибка C3914 и показано, как ее исправить.  
+Следующий пример приводит к возникновению ошибки C3914 и приводятся сведения по ее устранению.  
   
 ```  
 // C3914.cpp  

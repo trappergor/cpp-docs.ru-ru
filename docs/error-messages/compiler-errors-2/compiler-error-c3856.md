@@ -1,32 +1,35 @@
 ---
-title: "Ошибка компилятора C3856 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C3856"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C3856"
+title: "Ошибка компилятора C3856 | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C3856
+dev_langs:
+- C++
+helpviewer_keywords:
+- C3856
 ms.assetid: 242d9322-c325-4f20-be58-b2be6da56d60
 caps.latest.revision: 8
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 8
----
-# Ошибка компилятора C3856
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 9d2f74872939a2237f2c816e348242ebd58c8b3e
+ms.contentlocale: ru-ru
+ms.lasthandoff: 10/10/2017
 
-"тип": класс не является типом класса  
+---
+# <a name="compiler-error-c3856"></a>Ошибка компилятора C3856
+«Тип»: класс не является типом класса  
   
- Наиболее часто эта ошибка возникает в ситуациях, когда в точке определения присутствует больше списков параметров шаблона, чем в точке объявления.  
+ Наиболее распространенной причиной этой ошибки может существует более универсальный или точке определения списков параметров шаблона, чем при объявлении.  
   
  Следующий пример приводит к возникновению ошибки C3856:  
   
@@ -45,7 +48,7 @@ template <class T2>  // extra template parameter list in definition
 struct S<T>::S1{};  
 ```  
   
- Возможный способ устранения данной ошибки:  
+ Возможное решение:  
   
 ```  
 // C3856b.cpp  
@@ -62,7 +65,7 @@ template <class T1>
 struct S<T>::S1{};  
 ```  
   
- Ошибка C3856 также может возникнуть при использовании универсальных шаблонов:  
+ C3856 также может возникнуть при использовании универсальных шаблонов:  
   
 ```  
 // C3856c.cpp  
@@ -79,7 +82,7 @@ generic <class V>
 ref struct GS<T>::GS2 {};   // C3856  
 ```  
   
- Возможный способ устранения данной ошибки:  
+ Возможное решение:  
   
 ```  
 // C3856d.cpp  

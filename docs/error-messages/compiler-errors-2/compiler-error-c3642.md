@@ -1,36 +1,39 @@
 ---
-title: "Ошибка компилятора C3642 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C3642"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C3642"
+title: "Ошибка компилятора C3642 | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C3642
+dev_langs:
+- C++
+helpviewer_keywords:
+- C3642
 ms.assetid: 429790c2-9614-4d85-b31c-687c8d8f83ff
 caps.latest.revision: 13
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 13
----
-# Ошибка компилятора C3642
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 4b5d73344b99a42dfc4caf2b9f6b8cf7c9dc18bc
+ms.contentlocale: ru-ru
+ms.lasthandoff: 10/10/2017
 
-"return\_type\/args": невозможно вызвать функцию с помощью соглашения о вызове \_\_clrcall из машинного кода  
+---
+# <a name="compiler-error-c3642"></a>Ошибка компилятора C3642
+«return_type/args»: невозможно вызвать функцию с соглашением вызова из машинного кода __clrcall  
   
- Функция, помеченная соглашением о вызове [\_\_clrcall](../../cpp/clrcall.md), не может быть вызвана из машинного \(неуправляемого\) кода.  
+ Функция, которая отмечена [__clrcall](../../cpp/clrcall.md) соглашение о вызовах не может вызываться из машинного (неуправляемого) кода.  
   
- *return\_type\/args* или имя функции или тип функции `__clrcall` попытке вызова.  Тип используется при вызове через указатель функции.  
+ *return_type/args* либо имя функции или тип `__clrcall` попытка вызова функции.  Тип используется при вызове через указатель функции.  
   
- Чтобы вызвать управляемую функцию из собственного контекста, можно добавить функцию оболочки, которая вызовет функцию `__clrcall`.  Или можно использовать механизм маршалинга среды CLR; дополнительные сведения см. в разделе [Практическое руководство. Указатели функций маршалирования, использующие PInvoke](../../dotnet/how-to-marshal-function-pointers-using-pinvoke.md).  
+ Чтобы вызвать управляемую функцию из собственного контекста, можно добавить функцию оболочки, которая вызовет `__clrcall` функции. Или можно использовать механизм маршалинга среды CLR; в разделе [как: маршалирование функция указатели с помощью PInvoke](../../dotnet/how-to-marshal-function-pointers-using-pinvoke.md) для получения дополнительной информации.  
   
  Следующий пример приводит к возникновению ошибки C3642:  
   

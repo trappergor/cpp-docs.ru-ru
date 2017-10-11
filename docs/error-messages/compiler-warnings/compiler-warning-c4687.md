@@ -19,35 +19,21 @@ caps.latest.revision: 5
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
-ms.openlocfilehash: f2dc847b6d75a563379b46e1375f93ceab9c7531
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 266213deba94bdc925747d57dee184aca5f5f605
 ms.contentlocale: ru-ru
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 10/10/2017
 
 ---
 # <a name="compiler-warning-c4687"></a>Предупреждение компилятора C4687
 «класс»: Запечатанный абстрактный класс не может реализовывать интерфейс «интерфейс»  
   
- Запечатанный абстрактный тип обычно только полезны для хранения статических функций-членов.  
+ Запечатанный абстрактный тип полезен обычно только для хранения статических функций-членов.  
   
- Дополнительные сведения см. в разделе [абстрактный](../../windows/abstract-cpp-component-extensions.md)и [запечатанные](../../windows/sealed-cpp-component-extensions.md).  
+ Дополнительные сведения см. в разделе [абстрактный](../../windows/abstract-cpp-component-extensions.md)и [запечатанный](../../windows/sealed-cpp-component-extensions.md).  
   
- По умолчанию C4687 выдается как ошибка. Можно подавить вывод предупреждения C4687 с [предупреждение](../../preprocessor/warning.md) pragma. Если вы уверены, что вы хотите реализовать интерфейс в запечатанном абстрактном типе, можно подавить вывод C4687.  
+ C4687 выдается как ошибка, по умолчанию. Можно подавить вывод предупреждения C4687 с [предупреждение](../../preprocessor/warning.md) pragma. Если вы уверены, что нужно реализовать интерфейс в Запечатанный абстрактный тип, можно подавить вывод C4687.  
   
 ## <a name="example"></a>Пример  
  Следующий пример приводит к возникновению ошибки C4687.  

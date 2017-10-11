@@ -1,32 +1,35 @@
 ---
-title: "Ошибка компилятора C3860 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C3860"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C3860"
+title: "Ошибка компилятора C3860 | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C3860
+dev_langs:
+- C++
+helpviewer_keywords:
+- C3860
 ms.assetid: 1fb5110d-594e-4f1c-8773-888233af1313
 caps.latest.revision: 8
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 8
----
-# Ошибка компилятора C3860
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: c7f06878b5d7c364704cd028ae87a5b43bd0d738
+ms.contentlocale: ru-ru
+ms.lasthandoff: 10/10/2017
 
-список аргументов типа, следующий за именем типа класса, должен перечислять параметры в том порядке, в котором они использованы в списке аргументов типа  
+---
+# <a name="compiler-error-c3860"></a>Ошибка компилятора C3860
+список аргументов типа, за которым следует имя типа класса должен перечислять параметры в том порядке, в списке параметров типа  
   
- Список универсальных аргументов или аргументов шаблона имеет неверный формат.  
+ Список аргументов универсальный класс или шаблон имеет неправильный формат.  
   
  Следующий пример приводит к возникновению ошибки C3860:  
   
@@ -42,7 +45,7 @@ template <class T2, class T1>
 void A<T1, T2>::f() {}   // C3860  
 ```  
   
- Возможный способ устранения данной ошибки:  
+ Возможное решение:  
   
 ```  
 // C3860b.cpp  
@@ -56,7 +59,7 @@ template <class T2, class T1>
 void A<T2, T1>::f() {}  
 ```  
   
- Ошибка C3860 также может возникнуть при использовании универсальных шаблонов:  
+ C3860 также может возникнуть при использовании универсальных шаблонов:  
   
 ```  
 // C3860c.cpp  
@@ -70,7 +73,7 @@ generic<class T, class U>
 void GC<T,T>::f() {}   // C3860  
 ```  
   
- Возможный способ устранения данной ошибки:  
+ Возможное решение:  
   
 ```  
 // C3860d.cpp  

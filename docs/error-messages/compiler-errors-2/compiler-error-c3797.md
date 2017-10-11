@@ -1,36 +1,39 @@
 ---
-title: "Ошибка компилятора C3797 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C3797"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C3797"
+title: "Ошибка компилятора C3797 | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C3797
+dev_langs:
+- C++
+helpviewer_keywords:
+- C3797
 ms.assetid: ab27ff34-8c1d-4297-b004-9e39bd3a4f25
 caps.latest.revision: 4
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 4
----
-# Ошибка компилятора C3797
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: f03b677eac09b7935778590be605897e5eca1524
+ms.contentlocale: ru-ru
+ms.lasthandoff: 10/10/2017
 
-"переопределение": объявление события не может содержать спецификатор переопределения \(он должен быть размещен в методах события add\/remove\/raise\)  
+---
+# <a name="compiler-error-c3797"></a>Ошибка компилятора C3797
+«переопределение»: объявление события не может содержать спецификатор переопределения (должен быть размещен в методах добавления/remove/raise события вместо)  
   
- Невозможно определить тривиальное событие \(событие, не имеющие явно определенных методов доступа\) с помощью другого тривиального события.  Переопределяющее событие должно определять поведение события с помощью функций доступа.  
+ Тривиальное событие (событие без метода доступа явным образом определенных методов) с другим тривиального события нельзя переопределить. Переопределения событий необходимо определить его поведение с помощью функций доступа.  
   
- Для получения дополнительной информации см. [event](../../windows/event-cpp-component-extensions.md).  
+ Дополнительные сведения см. в разделе [событие](../../windows/event-cpp-component-extensions.md).  
   
-## Пример  
+## <a name="example"></a>Пример  
  Следующий пример приводит к возникновению ошибки C3797.  
   
 ```  

@@ -1,34 +1,37 @@
 ---
-title: "Ошибка компилятора C3894 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C3894"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C3894"
+title: "Ошибка компилятора C3894 | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C3894
+dev_langs:
+- C++
+helpviewer_keywords:
+- C3894
 ms.assetid: 6d5ac903-1dea-431d-8e3a-cebca4342983
 caps.latest.revision: 10
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 10
----
-# Ошибка компилятора C3894
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 46dffabb57e871e1635738434e7efb4812850379
+ms.contentlocale: ru-ru
+ms.lasthandoff: 10/10/2017
 
-"var": статический элемент статических данных initonly в виде l\-значения можно использовать только в конструкторе класса для класса "класс"  
+---
+# <a name="compiler-error-c3894"></a>Ошибка компилятора C3894
+«переменная»: l значения можно использовать статические данные-член initonly допускается только в конструкторе класса для класса «класс»  
   
- Статические члены данных [initonly](../../dotnet/initonly-cpp-cli.md) можно использовать только как l\-значения в точке их объявления, либо в статическом конструкторе.  
+ Статические [initonly](../../dotnet/initonly-cpp-cli.md) данные-члены можно использовать только как l значения в точке их объявления, либо в статическом конструкторе.  
   
- Члены данных экземпляра \(не статического\) initonly могут быть использованы только как l\-значения в точке их объявления, либо в конструкторах экземпляров \(не статических\).  
+ Члены данных экземпляра (не статического) initonly могут использоваться только как l значения в точке их объявления, либо в конструкторах экземпляров (не статического).  
   
  Следующий пример приводит к возникновению ошибки C3894:  
   

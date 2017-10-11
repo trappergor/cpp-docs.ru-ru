@@ -19,33 +19,19 @@ caps.latest.revision: 6
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: cc82b83860786ffc3f0aee73ede18ecadef16a7a
-ms.openlocfilehash: 48dbae62c367616a437db0607d84fa89e8006021
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: af959252ce5b404d8646ad61e02c5e480b41ed83
 ms.contentlocale: ru-ru
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 10/10/2017
 
 ---
 # <a name="compiler-error-c3862"></a>Ошибка компилятора C3862
-«функция»: не удается скомпилировать неуправляемой функции с параметром/clr: pure или/CLR: safe  
+«функция»: не удается скомпилировать неуправляемую функцию с параметром/clr: pure или/CLR: safe  
   
- **/CLR: pure** и **/CLR: safe** параметры компилятора в Visual Studio 2015 являются устаревшими.  
+ Параметры компилятора **/CLR: pure** и **/CLR: safe** в Visual Studio 2015 не рекомендуется использовать.  
   
- Компиляция с помощью **/CLR: pure** или **/CLR: safe** может дать только изображение MSIL, изображение с без машинного (неуправляемого) кода.  Следовательно, нельзя использовать `unmanaged` прагма-директиву **/CLR: pure** или **/CLR: safe** компиляции.  
+ Компиляция с **/CLR: pure** или **/CLR: safe** может дать только изображение MSIL, изображение с без машинного (неуправляемого) кода.  Следовательно, нельзя использовать `unmanaged` pragma в **/CLR: pure** или **/CLR: safe** компиляции.  
   
  Дополнительные сведения см. в разделе [/CLR (компиляция CLR)](../../build/reference/clr-common-language-runtime-compilation.md) и [управляемые, неуправляемые](../../preprocessor/managed-unmanaged.md).  
   

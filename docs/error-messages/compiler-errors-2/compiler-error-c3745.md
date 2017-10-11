@@ -1,32 +1,35 @@
 ---
-title: "Ошибка компилятора C3745 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C3745"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C3745"
+title: "Ошибка компилятора C3745 | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C3745
+dev_langs:
+- C++
+helpviewer_keywords:
+- C3745
 ms.assetid: 1e64aec5-7e53-47e5-bc7d-3905230cfc66
 caps.latest.revision: 7
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 7
----
-# Ошибка компилятора C3745
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 330e9c62e2235e1f352b64d1f236423d6786cc1d
+ms.contentlocale: ru-ru
+ms.lasthandoff: 10/10/2017
 
-"function": только событие может "raised"  
+---
+# <a name="compiler-error-c3745"></a>Ошибка компилятора C3745
+«функция»: только событие может быть «raised»  
   
- Только та функция, которая определена с ключевым словом [\_\_event](../../cpp/event.md), может быть передана ключевому слову [\_\_raise](../../cpp/raise.md).  
+ Только функции, определенной с [__event](../../cpp/event.md) ключевое слово может быть передан [__raise](../../cpp/raise.md) ключевое слово.  
   
  Следующий пример приводит к возникновению ошибки C3745:  
   

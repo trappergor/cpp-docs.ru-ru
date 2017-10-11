@@ -1,34 +1,37 @@
 ---
-title: "Ошибка компилятора C3645 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C3645"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C3645"
+title: "Ошибка компилятора C3645 | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C3645
+dev_langs:
+- C++
+helpviewer_keywords:
+- C3645
 ms.assetid: 346da528-ae86-4cd0-9654-f41bee26ac0d
 caps.latest.revision: 8
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 8
----
-# Ошибка компилятора C3645
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 43bda10ee2e4f2939061d70cfcf19da950909d03
+ms.contentlocale: ru-ru
+ms.lasthandoff: 10/10/2017
 
-"функция" : соглашение о вызове \_\_clrcall нельзя использовать с функциями, компилируемыми в машинном коде  
+---
+# <a name="compiler-error-c3645"></a>Ошибка компилятора C3645
+«функция»: __clrcall невозможно использовать с функциями, скомпилированными в машинный код  
   
- Присутствие некоторых ключевых слов в функции приводит к тому, что функция компилируется в машинном коде.  
+ Наличие некоторых ключевых слов в функции вызовет функцию для компиляции в машинный код.  
   
-## Пример  
+## <a name="example"></a>Пример  
  Следующий пример приводит к возникновению ошибки C3645.  
   
 ```  

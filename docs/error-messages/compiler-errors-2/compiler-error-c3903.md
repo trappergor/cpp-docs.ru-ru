@@ -1,32 +1,35 @@
 ---
-title: "Ошибка компилятора C3903 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C3903"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C3903"
+title: "Ошибка компилятора C3903 | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C3903
+dev_langs:
+- C++
+helpviewer_keywords:
+- C3903
 ms.assetid: cf47d7ad-a3bd-4f75-a253-71586e7a3be6
 caps.latest.revision: 9
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 9
----
-# Ошибка компилятора C3903
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 59dcfa1b7829b8367fdefb3fd89f5b9f1d5a7897
+ms.contentlocale: ru-ru
+ms.lasthandoff: 10/10/2017
 
-"свойство": методы "get" и "set" отсутствуют  
+---
+# <a name="compiler-error-c3903"></a>Ошибка компилятора C3903
+«свойство»: does не установлен или get-метод  
   
- Свойство должно иметь по меньшей мере один метод доступа \(`get` или `set`\).  Дополнительные сведения см. в описании [property](../../windows/property-cpp-component-extensions.md).  
+ Свойство должно иметь по крайней мере `get` или `set` метод. Дополнительные сведения см. в разделе [property](../../windows/property-cpp-component-extensions.md).  
   
  Следующий пример приводит к возникновению ошибки C3903:  
   

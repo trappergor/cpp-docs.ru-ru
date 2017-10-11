@@ -1,32 +1,35 @@
 ---
-title: "Ошибка компилятора C3898 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C3898"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C3898"
+title: "Ошибка компилятора C3898 | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C3898
+dev_langs:
+- C++
+helpviewer_keywords:
+- C3898
 ms.assetid: d9a90df6-87e4-4fe7-ab01-c226ee86bf10
 caps.latest.revision: 8
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 8
----
-# Ошибка компилятора C3898
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: c5ff2b3079de90efbf370082be4fee03dbfaab3e
+ms.contentlocale: ru-ru
+ms.lasthandoff: 10/10/2017
 
-"переменная" : элементы данных типа могут быть только элементами управляемых типов  
+---
+# <a name="compiler-error-c3898"></a>Ошибка компилятора C3898
+«переменная»: элементы данных типа может быть только членами управляемых типов  
   
- Элемент данных [initonly](../../dotnet/initonly-cpp-cli.md) объявлен в собственном классе.  Компонент данных `initonly` может быть объявлен только в классе CLR.  
+ [Initonly](../../dotnet/initonly-cpp-cli.md) данные-член объявлен в собственном классе.  `initonly` Данные-член можно объявлять только в классе CLR.  
   
  Следующий пример приводит к возникновению ошибки C3898:  
   
@@ -39,7 +42,7 @@ struct Y1 {
 };  
 ```  
   
- Возможный способ устранения данной ошибки:  
+ Возможное решение:  
   
 ```  
 // C3898b.cpp  

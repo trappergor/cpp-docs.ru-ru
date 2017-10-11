@@ -1,32 +1,35 @@
 ---
-title: "Ошибка компилятора C3761 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C3761"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C3761"
+title: "Ошибка компилятора C3761 | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C3761
+dev_langs:
+- C++
+helpviewer_keywords:
+- C3761
 ms.assetid: 0c16f093-7a78-4838-b90b-0c67ef6e9270
 caps.latest.revision: 7
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 7
----
-# Ошибка компилятора C3761
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: eb2cfc3a240f0383ffc4890ba9187b9eb2d63b4c
+ms.contentlocale: ru-ru
+ms.lasthandoff: 10/10/2017
 
-"функция": атрибут "retval" может применяться только к последнему аргументу функции  
+---
+# <a name="compiler-error-c3761"></a>Ошибка компилятора C3761
+«функция»: «retval» может использоваться только в последнем аргументе функции  
   
- Атрибут [retval](../../windows/retval.md) был применен к аргументу функции, не стоящему последним в списке.  
+ [Retval](../../windows/retval.md) атрибут был применен к аргументу функции, который не был последний аргумент в списке.  
   
  Следующий пример приводит к возникновению ошибки C3761:  
   

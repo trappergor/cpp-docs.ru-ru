@@ -1,32 +1,35 @@
 ---
-title: "Ошибка компилятора C3704 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C3704"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C3704"
+title: "Ошибка компилятора C3704 | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C3704
+dev_langs:
+- C++
+helpviewer_keywords:
+- C3704
 ms.assetid: ee40ea35-a214-4dec-9489-d7f155dd0ac2
 caps.latest.revision: 7
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 7
----
-# Ошибка компилятора C3704
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: ae48bc886aab0211063cc7a9c2e73f3c7bbdd368
+ms.contentlocale: ru-ru
+ms.lasthandoff: 10/10/2017
 
-'function' : метод vararg не может запускать события  
+---
+# <a name="compiler-error-c3704"></a>Ошибка компилятора C3704
+«функция»: метод vararg не может порождать события  
   
- Предпринята попытка использования [\_\_event](../../cpp/event.md) для метода vararg.  Чтобы устранить эту ошибку, следует заменить вызов `fireEvent(int i, ...)` на вызов `fireEvent(int i)`, как показано в следующем примере кода.  
+ Предпринята попытка использования [__event](../../cpp/event.md) в методе с переменным количеством аргументов. Чтобы устранить эту ошибку, замените `fireEvent(int i, ...)` вызов с `fireEvent(int i)` вызова, как показано в следующем образце кода.  
   
  Следующий пример приводит к возникновению ошибки C3704:  
   

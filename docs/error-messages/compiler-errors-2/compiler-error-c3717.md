@@ -19,31 +19,17 @@ caps.latest.revision: 7
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
-ms.openlocfilehash: 73ef7a00f1b1c080e3cbd4d4885b9384dfc762e7
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: f7256762ef4cf9c3850bd95bb09d23394c2e64f3
 ms.contentlocale: ru-ru
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 10/10/2017
 
 ---
 # <a name="compiler-error-c3717"></a>Ошибка компилятора C3717
-«метод»: метод, порождающий события не могут быть определены  
+«метод»: метод, порождающий события не может быть определен  
   
- Был объявлен метод события, включающий реализацию. [__Event](../../cpp/event.md) объявление метода не может иметь определения. Чтобы устранить эту ошибку, убедитесь, что объявления методов событий не имеют определений. Например, в приведенном ниже коде удалить тело функции из `event1` объявления, как указано в комментариях.  
+ Был объявлен метод событий, который включает в себя реализацию. [__Event](../../cpp/event.md) объявление метода не может иметь определение. Чтобы устранить эту ошибку, убедитесь, что объявления методов событий не имеют определений. Например, в следующем коде удалить тело функции из `event1` объявления, как указано в комментариях.  
   
  Следующий пример приводит к возникновению ошибки C3717:  
   

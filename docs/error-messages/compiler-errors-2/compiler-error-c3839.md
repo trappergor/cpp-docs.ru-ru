@@ -19,31 +19,17 @@ caps.latest.revision: 10
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
-ms.openlocfilehash: ce476fe84c4c998c1775cb9b492aaba5dae68da5
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 8a8c9fa9112128b86123693aea7443d68e8531d0
 ms.contentlocale: ru-ru
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 10/10/2017
 
 ---
 # <a name="compiler-error-c3839"></a>Ошибка компилятора C3839
 нельзя изменять выравнивание в управляемом типе или типе WinRT  
   
- Выравнивание переменных в управляемых или типов среды выполнения Windows управляет среда CLR или среды выполнения Windows и не может быть изменен с [выравнивания](../../cpp/align-cpp.md).  
+ Выравнивание переменных в управляемых или типов среды выполнения Windows управляется средой CLR или среды выполнения Windows и не может быть изменено с [выравнивание](../../cpp/align-cpp.md).  
   
  Следующий пример приводит к возникновению ошибки C3839:  
   

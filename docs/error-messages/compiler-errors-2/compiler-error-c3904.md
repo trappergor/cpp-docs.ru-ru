@@ -1,41 +1,44 @@
 ---
-title: "Ошибка компилятора C3904 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C3904"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C3904"
+title: "Ошибка компилятора C3904 | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C3904
+dev_langs:
+- C++
+helpviewer_keywords:
+- C3904
 ms.assetid: 08297605-e4f2-4c6c-b637-011f1fd40631
 caps.latest.revision: 11
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 11
----
-# Ошибка компилятора C3904
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 31a6f728fdbfb9540245cf85879adef8c1827d2e
+ms.contentlocale: ru-ru
+ms.lasthandoff: 10/10/2017
 
-"метод\_доступа\_свойства": необходимо указать "число" параметров  
+---
+# <a name="compiler-error-c3904"></a>Ошибка компилятора C3904
+«метод_доступа_свойства»: необходимо указать число параметров  
   
- Сверьте число параметров в методах `get` и `set` с измерениями свойства.  
+ Проверьте число параметров в вашей `get` и `set` методов с измерениями свойства.  
   
--   Количество параметров метода `get` должно равняться количеству измерений свойства или быть равным нулю для неиндексируемых свойств.  
+-   Количество параметров для `get` метод должен равняться количеству измерений свойства или ноль для неиндексированных свойств.  
   
--   Число параметров метода `set` должно превышать количество измерений свойства на единицу.  
+-   Число параметров типа `set` метод должен быть один больше числа измерений свойства.  
   
- Дополнительные сведения см. в описании [property](../../windows/property-cpp-component-extensions.md).  
+ Дополнительные сведения см. в разделе [property](../../windows/property-cpp-component-extensions.md).  
   
-## Пример  
- В следующем примере продемонстрировано возникновение ошибки C3904.  
+## <a name="example"></a>Пример  
+ Следующий пример приводит к возникновению ошибки C3904.  
   
 ```  
 // C3904.cpp  
@@ -55,8 +58,8 @@ ref class X {
 };  
 ```  
   
-## Пример  
- В следующем примере продемонстрировано возникновение ошибки C3904.  
+## <a name="example"></a>Пример  
+ Следующий пример приводит к возникновению ошибки C3904.  
   
 ```  
 // C3904b.cpp  

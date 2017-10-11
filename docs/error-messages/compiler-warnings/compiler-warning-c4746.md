@@ -1,29 +1,32 @@
 ---
-title: "Предупреждение компилятора C4746 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-dev_langs: 
-  - "C++"
+title: "C4746 Предупреждение компилятора | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+dev_langs:
+- C++
 ms.assetid: 5e79ab46-6031-499a-a986-716c866b6c0e
 caps.latest.revision: 2
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 2
----
-# Предупреждение компилятора C4746
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 1b88f51aa9365c0795c8d3d944ba9f3a8db059d9
+ms.contentlocale: ru-ru
+ms.lasthandoff: 10/10/2017
 
-часто доступ и '\<expression\>' \/volatile: \[ISO&#124;параметр госпожи\]; рассмотрим использование встроенных функций \_\_iso\_volatile\_load\/store.  
+---
+# <a name="compiler-warning-c4746"></a>C4746 Предупреждение компилятора
+переменное обращение "\<выражение >" является параметром/volatile: [iso &#124; ms]; попробуйте использовать встроенные функции __iso_volatile_load/store.  
   
- C4746 выдается, если испаряющая переменная доступна непосредственно.  Предназначен для помощи разработчикам указывать расположение кода, затронутых конкретной испаряющей определенной в настоящее время \(моделью, можно управлять с помощью параметра компилятора [\/volatile](../../build/reference/volatile-volatile-keyword-interpretation.md) \).  В частности, может быть полезно в поиск создаваемых компилятором барьеры памяти оборудования при \/volatile:ms.  
+ C4746 создается каждый раз, когда переменная с модификатором volatile осуществляется напрямую. Он предназначен для выявления кода расположений, которые зависят от конкретной модели volatile указанной в настоящее время (который можно управлять при помощи [/volatile](../../build/reference/volatile-volatile-keyword-interpretation.md) параметр компилятора). В частности может быть полезно для выявления барьеры памяти оборудования, созданный компилятором, если используется /volatile:ms.  
   
- Встроенные \_\_iso\_volatile\_load\/store можно использовать напрямую для получения испаряющая память, не распространяться действие политики на испаряющей моделью.  С помощью этих внутренних не активирует C4746.  
+ Встроенные функции __iso_volatile_load/store используется для прямого обращения к энергонезависимой памяти без влияния volatile модели. С помощью этих встроенных функций не будет вызывать C4746.  
   
- Данное предупреждение по умолчанию отключено.  Дополнительные сведения см. в разделе [Выключенные по умолчанию предупреждения компилятора](../Topic/Compiler%20Warnings%20That%20Are%20Off%20by%20Default.md).
+ Это предупреждение отключено по умолчанию. Подробнее: [Выключенные по умолчанию предупреждения компилятора](../../preprocessor/compiler-warnings-that-are-off-by-default.md) .

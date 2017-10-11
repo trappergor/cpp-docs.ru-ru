@@ -19,33 +19,19 @@ caps.latest.revision: 12
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: c243063a9770542f137d5950e8a269f771960f74
-ms.openlocfilehash: 24212b0df7b665f8c8ab2614b9a23e66f19586af
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 47e0a2ed3c824ed1598f7e998d4966b95cc9233b
 ms.contentlocale: ru-ru
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 10/10/2017
 
 ---
 # <a name="compiler-error-c3821"></a>Ошибка компилятора C3821
-«функция»: в неуправляемой функции нельзя использовать управляемого типа или функции  
+«функция»: управляемый тип или функция не может использоваться в неуправляемую функцию  
   
- Функции со встроенной сборкой или [setjmp](../../c-runtime-library/reference/setjmp.md) не могут содержать типы значения или управляемые классы. Чтобы устранить эту ошибку, удалите встроенная сборка и `setjmp` или удалите управляемые объекты.  
+ Функции со встроенной сборкой или [setjmp](../../c-runtime-library/reference/setjmp.md) не может содержать типы значений или управляемые классы. Чтобы устранить эту ошибку, удалите встроенной сборке и `setjmp` или удалите управляемые объекты.  
   
- C3821 также может возникать при попытке использования автоматического хранения в функции с переменным количеством аргументов.  Дополнительные сведения см. в разделе [переменными списками аргументов (...) (C + +/ CLI) ](../../windows/variable-argument-lists-dot-dot-dot-cpp-cli.md) и [семантика стека C++ для ссылочных типов](../../dotnet/cpp-stack-semantics-for-reference-types.md).  
+ C3821 также может возникать при попытке использования автоматического хранения в функции с переменным количеством аргументов.  Дополнительные сведения см. в разделе [списками аргументов переменных (...) (C + +/ CLI) ](../../windows/variable-argument-lists-dot-dot-dot-cpp-cli.md) и [семантика стека C++ для ссылочных типов](../../dotnet/cpp-stack-semantics-for-reference-types.md).  
   
 ## <a name="example"></a>Пример  
  Следующий пример приводит к возникновению ошибки C3821.  

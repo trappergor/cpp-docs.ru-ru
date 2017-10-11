@@ -19,33 +19,19 @@ caps.latest.revision: 5
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: cc82b83860786ffc3f0aee73ede18ecadef16a7a
-ms.openlocfilehash: 989f17e8f59afc6a04ed4101204053fc971c6a62
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: 4d6a255bebeccc0c63ba621a7c5886fd318ffd5f
 ms.contentlocale: ru-ru
-ms.lasthandoff: 02/24/2017
+ms.lasthandoff: 10/10/2017
 
 ---
 # <a name="compiler-error-c3808"></a>Ошибка компилятора C3808
-«Тип»: класс с атрибутом ComImport нельзя определить член «член» только абстрактный или функции dllimport разрешены  
+«Тип»: класс с атрибутом ComImport не может определять член «член» только абстрактные или функции dllimport разрешены  
   
- Тип, производный от <xref:System.Runtime.InteropServices.ComImportAttribute>нельзя определять `member`.</xref:System.Runtime.InteropServices.ComImportAttribute>  
+ Тип, производный от <xref:System.Runtime.InteropServices.ComImportAttribute> невозможно определить `member`.  
   
- **/CLR: pure** и **/CLR: safe** параметры компилятора в Visual Studio 2015 являются устаревшими.  
+ Параметры компилятора **/CLR: pure** и **/CLR: safe** в Visual Studio 2015 не рекомендуется использовать.  
   
 ## <a name="example"></a>Пример  
  Следующий пример приводит к возникновению ошибки C3808.  

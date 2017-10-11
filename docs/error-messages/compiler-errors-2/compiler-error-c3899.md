@@ -1,37 +1,40 @@
 ---
-title: "Ошибка компилятора C3899 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C3899"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C3899"
+title: "Ошибка компилятора C3899 | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords:
+- C3899
+dev_langs:
+- C++
+helpviewer_keywords:
+- C3899
 ms.assetid: 14e07e4a-f7a7-4309-baaa-649d69e12e23
 caps.latest.revision: 5
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 5
----
-# Ошибка компилятора C3899
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.translationtype: MT
+ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
+ms.openlocfilehash: c7d9d32b3063dbecde375159ad90eec5bf128d56
+ms.contentlocale: ru-ru
+ms.lasthandoff: 10/10/2017
 
-"var" : левостороннее использование элемента данных initonly не разрешается напрямую в параллельной области в классе "class"  
+---
+# <a name="compiler-error-c3899"></a>Ошибка компилятора C3899
+«переменная»: l значения можно использовать элементы данных initonly не разрешается напрямую в параллельной области в классе «класс»  
   
- Элемент данных [initonly](../../dotnet/initonly-cpp-cli.md) нельзя инициализировать внутри этой части конструктора, которая расположена в области [parallel](../../parallel/openmp/reference/parallel.md).  Это происходит потому что компилятор осуществляет внутреннее перемещение этого кода, из условия что этот код больше не является частью конструктора.  
+ [Initonly (C + +/ CLI)](../../dotnet/initonly-cpp-cli.md) член данных не может инициализироваться внутри этой части конструктора, которая расположена в [параллельных](../../parallel/openmp/reference/parallel.md) области.  Это, поскольку компилятор выполняет внутреннего перемещения этого кода, таким образом, что он является больше не является частью конструктора.  
   
- Чтобы устранить это, инициализируйте элемент данных initonly в конструкторе, но вне параллельной области.  
+ Чтобы решить, инициализируйте элемент данных initonly в конструкторе, но вне параллельной области.  
   
-## Пример  
- В следующем примере возникает сообщение об ошибке С3899.  
+## <a name="example"></a>Пример  
+ Следующий пример приводит к возникновению ошибки C3899.  
   
 ```  
 // C3899.cpp  
