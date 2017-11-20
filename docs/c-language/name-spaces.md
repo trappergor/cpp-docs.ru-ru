@@ -4,12 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-language
+ms.technology: cpp-language
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - union keyword [C], tags
 - enumeration tags
@@ -19,16 +17,15 @@ helpviewer_keywords:
 - tags, structure tags
 - union keyword [C]
 ms.assetid: b4bda1d1-cb5e-4f60-ac2b-29af93d8a9a2
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.translationtype: HT
-ms.sourcegitcommit: 16d1bf59dfd4b3ef5f037aed9c0f6febfdf1a2e8
 ms.openlocfilehash: ba0a5fcce92c0d8afe19e3b98d2ba20e1d22d6a4
-ms.contentlocale: ru-ru
-ms.lasthandoff: 10/09/2017
-
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="name-spaces"></a>Пространства имен
 Компилятор настраивает пространства имен, чтобы различать идентификаторы, используемые для различных типов элементов. Имена в каждом пространстве имен должны быть уникальными во избежание конфликтов, но одинаковые имена могут использоваться в нескольких пространствах имен. Это означает, что можно использовать один и тот же идентификатор для двух или более различных элементов при условии, что элементы расположены в разных пространствах имен. Компилятор может разрешить ссылки на основе синтаксического контекста идентификатора в программе.  

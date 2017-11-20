@@ -4,27 +4,24 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-language
+ms.technology: cpp-language
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - keywords [C]
 - redefining keywords
 - Microsoft-specific keywords
 ms.assetid: 2d932335-97bf-45cd-b367-4ae00db0ff42
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.translationtype: HT
-ms.sourcegitcommit: 16d1bf59dfd4b3ef5f037aed9c0f6febfdf1a2e8
 ms.openlocfilehash: 71e5c715c6065e8c05466bc3f09eba57606b304e
-ms.contentlocale: ru-ru
-ms.lasthandoff: 10/09/2017
-
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="c-keywords"></a>Ключевые слова в C
 Ключевыми словами называются слова, которые имеют особое значение для компилятора C. На 7 и 8 этапах трансляции идентификатор не может иметь такое же написание и регистр записи, что и ключевое слово C. (См. описание [этапов трансляции](../preprocessor/phases-of-translation.md) в *Справочнике по препроцессору*. Дополнительные сведения об идентификаторах см. в разделе [Идентификаторы](../c-language/c-identifiers.md).) В языке C используются следующие ключевые слова:  

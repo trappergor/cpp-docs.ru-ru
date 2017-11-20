@@ -4,26 +4,23 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-language
+ms.technology: cpp-language
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - converting floating point
 - floating-point conversion
 ms.assetid: 96804c8e-fa3b-4742-9006-0082ed9e57f2
-caps.latest.revision: 9
+caps.latest.revision: "9"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.translationtype: HT
-ms.sourcegitcommit: 16d1bf59dfd4b3ef5f037aed9c0f6febfdf1a2e8
 ms.openlocfilehash: 4974edd25d0fcdd8d990b60459517bb1148c74ae
-ms.contentlocale: ru-ru
-ms.lasthandoff: 10/09/2017
-
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="conversions-from-floating-point-types"></a>Преобразования из типов с плавающей запятой
 Значение **float**, преобразованное в **double** или `long double`, либо значение **double**, преобразованное в `long double`, не меняется. Значение **double**, преобразованное в значение **float**, по возможности представляется в точности. Точность может быть потеряна, если значение невозможно представить в точности. Если результат выходит за пределы диапазона, поведение не определено. Диапазон типов с плавающей запятой см. в разделе [Ограничения констант с плавающей запятой](../c-language/limits-on-floating-point-constants.md).  

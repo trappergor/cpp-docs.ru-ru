@@ -4,27 +4,24 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-language
+ms.technology: cpp-language
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - scope, levels
 - visibility
 - file scope [C++]
 ms.assetid: a019eb7c-66ed-46a7-bc9f-89a963930a56
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.translationtype: HT
-ms.sourcegitcommit: 16d1bf59dfd4b3ef5f037aed9c0f6febfdf1a2e8
 ms.openlocfilehash: 9e9dca1b95af3971045a1ce86807ef28be096546
-ms.contentlocale: ru-ru
-ms.lasthandoff: 10/09/2017
-
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="scope-and-visibility"></a>Область и видимость
 Видимость идентификатора определяет части программы, в которых можно сослаться на идентификатор, то есть ее область. Идентификатор является видимым (т. е. его можно использовать) только в частях программы, входящих в ее область, которая может быть ограничена (в порядке повышение количества ограничений) файлом, функцией, блоком или прототипом функции, в котором она отображается. Область идентификатора — это часть программы, в которой можно использовать имя. В некоторых случаях она называется лексической областью. Существует четыре типа области: функция, файл, блок и прототип функции.  

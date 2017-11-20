@@ -4,55 +4,36 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- c.files
-dev_langs:
-- C++
+f1_keywords: c.files
+dev_langs: C++
 helpviewer_keywords:
 - files [C++], handling
 - files [C++], opening
 - files [C++], manipulating
 ms.assetid: 48119e2e-e94f-4602-b08b-b72440f731d8
-caps.latest.revision: 17
+caps.latest.revision: "17"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-ms.translationtype: Human Translation
-ms.sourcegitcommit: e257f037a05c45f5b98e64ea55bd125af443b0be
-ms.openlocfilehash: fde5ffecc3046d181e5a0b6cfcd42ee3115fce97
-ms.contentlocale: ru-ru
-ms.lasthandoff: 03/30/2017
-
+ms.openlocfilehash: 2e35d3f9a248d280f4ba617da89eb3993414a525
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="file-handling"></a>Обработка файлов
 Эти подпрограммы предназначены для создания и удаления файлов, управления файлами, а также задания и проверки разрешений доступа к файлам.  
   
- В библиотеках времени выполнения C количество одновременно открытых файлов ограничено 512 файлами. Попытка открыть больше максимального количества дескрипторов файлов или файловых потоков приводит к сбою программы. Для изменения этого значения используйте функцию [_setmaxstdio](../c-runtime-library/reference/setmaxstdio.md).  
+ В библиотеках времени выполнения C количество одновременно открытых файлов ограничено 512 файлами. Попытка открыть больше максимального количества дескрипторов файлов или файловых потоков приводит к сбою программы. Для изменения этого значения используйте функцию [_setmaxstdio](../c-runtime-library/reference/setmaxstdio.md) .  
   
 ### <a name="file-handling-routines-file-descriptor"></a>Подпрограммы обработки файлов (дескриптор файла)  
   
  Эти подпрограммы работают с файлами, идентифицируемыми дескрипторами файлов.  
   
-|Подпрограмма|Применение|  
+|Подпрограмма|Для изменения этого значения используйте функцию|  
 |-------------|---------|  
 |[_chsize](../c-runtime-library/reference/chsize.md),[_chsize_s](../c-runtime-library/reference/chsize-s.md)|Изменяет размер файла|  
 |[_filelength, _filelengthi64](../c-runtime-library/reference/filelength-filelengthi64.md)|Получает длину файла|  
@@ -67,7 +48,7 @@ ms.lasthandoff: 03/30/2017
   
  Эти подпрограммы работают с файлами, указанными с помощью пути или имени файла.  
   
-|Подпрограмма|Применение|  
+|Подпрограмма|Для изменения этого значения используйте функцию|  
 |-------------|---------|  
 |[_access, _waccess](../c-runtime-library/reference/access-waccess.md), [_access_s, _waccess_s](../c-runtime-library/reference/access-s-waccess-s.md)|Проверяет параметры разрешений файла|  
 |[_chmod, _wchmod](../c-runtime-library/reference/chmod-wchmod.md)|Изменяет параметры разрешений файла|  
@@ -85,7 +66,7 @@ ms.lasthandoff: 03/30/2017
   
  Эти подпрограммы открывают файлы.  
   
-|Подпрограмма|Применение|  
+|Подпрограмма|Для изменения этого значения используйте функцию|  
 |-------------|---------|  
 |[fopen, _wfopen](../c-runtime-library/reference/fopen-wfopen.md), [fopen_s, _wfopen_s](../c-runtime-library/reference/fopen-s-wfopen-s.md)|Открывает файл и возвращает указатель на открытый файл.|  
 |[_fsopen, _wfsopen](../c-runtime-library/reference/fsopen-wfsopen.md)|Открывает поток в режиме совместного доступа к файлу и возвращает указатель на открытый файл.|  

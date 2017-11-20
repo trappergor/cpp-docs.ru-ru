@@ -4,25 +4,21 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-language
+ms.technology: cpp-language
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- C++
-helpviewer_keywords:
-- identifiers, designating objects
+dev_langs: C++
+helpviewer_keywords: identifiers, designating objects
 ms.assetid: d4602fe6-e7e6-40cc-9823-3b1ebf5d3d38
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.translationtype: HT
-ms.sourcegitcommit: 16d1bf59dfd4b3ef5f037aed9c0f6febfdf1a2e8
 ms.openlocfilehash: ce62a6ad0f0cb36678de0756d77155769393f760
-ms.contentlocale: ru-ru
-ms.lasthandoff: 10/09/2017
-
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="identifiers-in-primary-expressions"></a>Идентификаторы в первичных выражениях
 Идентификаторы могут иметь целочисленный тип, тип **float**, тип `enum`, тип `struct`, тип **объединения**, тип массива, тип указателя или тип функции. Идентификатор представляет собой основное выражение, его он был объявлен как обозначение объекта (тогда это l-значение) или как функция (тогда это обозначение функции). Определение левостороннего значения приводится в статье [Выражения L-Value и R-Value](../c-language/l-value-and-r-value-expressions.md).  

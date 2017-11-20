@@ -4,25 +4,21 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-language
+ms.technology: cpp-language
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- C++
-helpviewer_keywords:
-- for keyword [C]
+dev_langs: C++
+helpviewer_keywords: for keyword [C]
 ms.assetid: 560a8de4-19db-4868-9f18-dbe51b17900d
-caps.latest.revision: 9
+caps.latest.revision: "9"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.translationtype: HT
-ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
 ms.openlocfilehash: 13d292cebbb8aa3aa6a65fbc41b8b38934732b5f
-ms.contentlocale: ru-ru
-ms.lasthandoff: 10/09/2017
-
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="for-statement-c"></a>Оператор for (C)
 Оператор **for** позволяет повторить выполнение того или иного оператора или составного оператора заданное число раз. Тело оператора **for** выполняется ноль или более раз, пока необязательное условие не примет значение false. Внутри оператора **for** можно использовать необязательные выражения для инициализации и изменения значений во время выполнения этого оператора (**for**).  

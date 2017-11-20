@@ -4,12 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-language
+ms.technology: cpp-language
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - arithmetic conversions [C++]
 - type conversion [C++], arithmetic
@@ -18,16 +16,15 @@ helpviewer_keywords:
 - conversions [C++], arithmetic
 - arithmetic operators [C++], type conversions
 ms.assetid: bfa49803-0efd-45d0-b987-111412a140d7
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.translationtype: HT
-ms.sourcegitcommit: 16d1bf59dfd4b3ef5f037aed9c0f6febfdf1a2e8
 ms.openlocfilehash: 66736e9b131725475d6f10f4a332edaa980a54f8
-ms.contentlocale: ru-ru
-ms.lasthandoff: 10/09/2017
-
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="usual-arithmetic-conversions"></a>Обычные арифметические преобразования
 Большинство операторов C выполняют преобразования типов для приведения операндов выражения к общему типу или для расширения коротких значений в соответствии с размером целого числа, используемым в машинных операциях. Преобразования, выполняемые с помощью операторов С, зависят от конкретного оператора и типа операнда или операндов. Однако многие операторы выполняют аналогичные преобразования с операндами целочисленного типа и типа с плавающей запятой. Эти преобразования называются арифметическими преобразованиями. В результате преобразования значения операнда в совместимый тип значение не меняется.  

@@ -4,12 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-language
+ms.technology: cpp-language
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - extern keyword [C]
 - storage class specifiers, extern
@@ -17,16 +15,15 @@ helpviewer_keywords:
 - external linkage, storage-class specifiers
 - external linkage, extern modifier
 ms.assetid: 6e16d927-291f-49e4-986c-9d91a482a441
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.translationtype: HT
-ms.sourcegitcommit: 16d1bf59dfd4b3ef5f037aed9c0f6febfdf1a2e8
 ms.openlocfilehash: 0f11789f985c67b59b076bed7ec849a864688743
-ms.contentlocale: ru-ru
-ms.lasthandoff: 10/09/2017
-
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="extern-storage-class-specifier"></a>Спецификатор класса хранения extern
 Переменная, объявленная с описателем класса хранения `extern`, представляет собой ссылку на переменную с тем же именем, определенным на внешнем уровне в любом из файлов исходного кода программы. Внутреннее объявление `extern` используется, чтобы сделать определение переменной внешнего уровня видимым в блоке. Если иное не объявлено на внешнем уровне, переменная, объявленная с использованием ключевого слова `extern`, видна только в блоке, в котором она объявлена.  

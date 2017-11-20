@@ -4,27 +4,22 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- c.strings
-dev_langs:
-- C++
-helpviewer_keywords:
-- language strings
+f1_keywords: c.strings
+dev_langs: C++
+helpviewer_keywords: language strings
 ms.assetid: bbee63b1-af0b-4e44-9eaf-dd3e265c05fd
-caps.latest.revision: 17
+caps.latest.revision: "17"
 author: corob-msft
 ms.author: corob
 manager: ghogen
+ms.openlocfilehash: d65dc3b8d7dd62994eb0a8b546e290d1b6e47b9a
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
 ms.translationtype: HT
-ms.sourcegitcommit: 22da7776e46171467a37d46c3de3227f060eaf77
-ms.openlocfilehash: 51f99c8990015c6a9f3d50c31a370df5e3e22dbf
-ms.contentlocale: ru-ru
-ms.lasthandoff: 08/11/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="language-strings"></a>Language Strings
 Функции `setlocale` и `_create_locale` могут использовать поддерживаемые языки API многоязыковой поддержки Windows для операционных систем, которые не используют кодовую страницу Юникода. Список языков, поддерживаемых в разных версиях операционных систем, вы найдете в [документации по API многоязыковой поддержке (NLS)](https://www.microsoft.com/resources/msdn/goglobal/default.mspx). Строка языка может принимать любое из значений, перечисленных в столбцах **Язык** и **Сокращение названия языка** списка поддерживаемых языков. Дополнительные сведения о языковой поддержке по версии операционной системы см. в [приложении A: поведение продукта](http://msdn.microsoft.com/goglobal/bb896001.aspx) в статье [MS-LCID]: Windows Language Code Identifier (LCID) Reference ([MS-LCID]: справочник по коду языка Windows).   

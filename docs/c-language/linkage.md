@@ -4,26 +4,23 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-language
+ms.technology: cpp-language
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - linkage [C++]
 - linkage [C++], identifier names and scope
 ms.assetid: 986ee549-2d6c-487a-9e3b-a1f643bc5bdc
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.translationtype: HT
-ms.sourcegitcommit: 16d1bf59dfd4b3ef5f037aed9c0f6febfdf1a2e8
 ms.openlocfilehash: 10b05a8d994b1df7140c7f9bd4db984931b1896f
-ms.contentlocale: ru-ru
-ms.lasthandoff: 10/09/2017
-
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="linkage"></a>Компоновка
 Имена идентификаторов могут относиться к разным идентификаторам в разных областях. Идентификатор, объявленный в разных областях или в одной и той же области несколько раз, можно настроить таким образом, чтобы он ссылался на один идентификатор или функцию, с помощью процесса компоновки. Компоновка определяет части программы, в которых можно сослаться на идентификатор (его видимость). Существует три типа компоновки: [внутренняя](../c-language/internal-linkage.md), [внешняя](../c-language/external-linkage.md) и [без компоновки](../c-language/no-linkage.md).  

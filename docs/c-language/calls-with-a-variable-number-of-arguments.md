@@ -4,12 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-language
+ms.technology: cpp-language
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - arguments [C++], function
 - arguments [C++], variable number of
@@ -20,16 +18,15 @@ helpviewer_keywords:
 - '... ellipsis'
 - function calls, variable number of arguments
 ms.assetid: 8808fb26-4822-42f5-aba3-ac64b54e151b
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.translationtype: HT
-ms.sourcegitcommit: 16d1bf59dfd4b3ef5f037aed9c0f6febfdf1a2e8
 ms.openlocfilehash: 10f2eb4597808f726d55c3ece76b99c394d691c3
-ms.contentlocale: ru-ru
-ms.lasthandoff: 10/09/2017
-
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="calls-with-a-variable-number-of-arguments"></a>Вызовы с переменным количеством аргументов
 Частичный список параметров может завершаться многоточием (запятая и три точки за ней: **, ...**). Это означает возможность передать функции еще несколько аргументов, о которых не предоставляется дополнительной информации. Проверка типов в таких аргументах не выполняется. Хотя бы один параметр должен предшествовать блоку многоточия, и этот блок должен являться последним токеном в списке параметров. Без блока многоточия поведение функции является неопределенным, если она получает параметры в добавление к объявленным в списке параметров.  

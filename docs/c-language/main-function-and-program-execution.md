@@ -4,12 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-language
+ms.technology: cpp-language
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - program startup [C++]
 - entry points, program
@@ -18,16 +16,15 @@ helpviewer_keywords:
 - main function
 - programs [C++], terminating
 ms.assetid: 5984f1bd-072d-4e06-8640-122fb1454401
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.translationtype: HT
-ms.sourcegitcommit: 16d1bf59dfd4b3ef5f037aed9c0f6febfdf1a2e8
 ms.openlocfilehash: 7635595adedf961c014bf8792316ca4943dc84a7
-ms.contentlocale: ru-ru
-ms.lasthandoff: 10/09/2017
-
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="main-function-and-program-execution"></a>Функция main и выполнение программ
 Все программы, написанные на языке C, содержат основную функцию, которая должна иметь имя **main**. Если код соответствует модели программирования Юникода, можно использовать версию функции **main** для многобайтовых символов с именем **wmain**. Функция **main** является начальной точкой для выполнения программы. Она обычно управляет выполнением программы, вызывая другие ее функции. Как правило, выполнение программы завершается в конце функции **main**, но по разным причинам это может случиться и в других местах программы. Иногда (возможно, при обнаружении некоторой ошибки) может потребоваться принудительно завершить программу. Для этого используйте функцию **exit**. Сведения о функции [exit](../c-runtime-library/reference/exit-exit-exit.md) и пример ее использования см. в *Справочнике по библиотеке времени выполнения*.  
