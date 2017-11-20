@@ -1,47 +1,47 @@
 ---
-title: "Набор записей. Добавление нескольких записей (ODBC) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "пакетное добавление записей в наборы записей"
-  - "наборы записей ODBC, добавление записей"
-  - "наборы записей, добавление записей"
+title: ": Набор записей | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- ODBC recordsets, adding records
+- recordsets, adding records
+- bulk record additions to recordsets
 ms.assetid: 4685f656-14b9-4f10-a1c5-147b2b89a0b4
-caps.latest.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 9
+caps.latest.revision: "9"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 937e5273a0b999672dbbc98a927d34909d04136b
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/24/2017
 ---
-# Набор записей. Добавление нескольких записей (ODBC)
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Данный раздел относится к классам ODBC библиотеки MFC.  
+# <a name="recordset-adding-records-in-bulk-odbc"></a>Набор записей. Добавление нескольких записей (ODBC)
+Этот раздел относится к классам MFC ODBC.  
   
- Класс [CRecordset](../Topic/CRecordset%20Class.md) библиотеки MFC позволяет повысить эффективность при добавлении нескольких новых записей в таблицу.  
+ MFC [CRecordset](../../mfc/reference/crecordset-class.md) класс имеет новый оптимизации, который позволяет повысить эффективность при добавлении новых записей в пакетном режиме в таблицу.  
   
 > [!NOTE]
->  В этом разделе приведены сведения, относящиеся к объектам, производным от класса `CRecordset`, в котором групповая выборка строк не реализована.  При использовании групповой выборки строк следует ознакомиться с разделом [Набор записей: групповая выборка записей \(ODBC\)](../Topic/Recordset:%20Fetching%20Records%20in%20Bulk%20\(ODBC\).md).  
+>  Этот раздел относится к объектам, производным от `CRecordset` в какой строке массовая выборка не был реализован. Если используется выборка строк, см. раздел [набор записей: групповая выборка записей (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md).  
   
- Новый вариант параметра **dwOptions** функции\-члена [CRecordset::Open](../Topic/CRecordset::Open.md) — **optimizeBulkAdd** — повышает производительность при последовательном добавлении нескольких записей без вызова **Requery** или **Close**.  Поля, которые являются "грязными" до первого вызова **Update**, помечаются как "грязные" при последующих вызовах `AddNew`\/**Update**.  
+ Новый параметр для **dwOptions** параметр [CRecordset::Open](../../mfc/reference/crecordset-class.md#open) функции-члена **optimizeBulkAdd**, улучшает производительность при добавлении нескольких записей последовательное построение без вызова **Requery** или **закрыть**. Только поля, которые являются "грязными" до первого **обновление** вызова, помечаются как "грязные" при последующих `AddNew` / **обновление** вызовов.  
   
- При использовании классов базы данных, чтобы воспользоваться преимуществами функции **::SQLSetPos** ODBC API для добавления, изменения и удаления записей, эта оптимизация является необходимой.  
+ Если вы используете классы баз данных пользоваться преимуществами **:: SQLSetPos** функции ODBC API для добавления, изменения и удаления записей, эта оптимизация не требуется.  
   
- Если загружается библиотека курсоров ODBC или драйвер ODBC не поддерживает добавление, изменение и удаление с помощью функции **::SQLSetPos**, эта оптимизация повысит производительность при групповом добавлении.  Чтобы включить данную оптимизацию, задайте для параметра **dwOptions** в вызове **Open** для набора записей следующее значение:  
+ Если загружается библиотека курсоров ODBC или драйвер ODBC не поддерживает добавление, изменение и удаление с помощью **:: SQLSetPos**, эта оптимизация повысит массового добавления производительности. Чтобы включить данную оптимизацию, установите **dwOptions** параметр в **откройте** вызова для следующего набора записей:  
   
 ```  
 appendOnly | optimizeBulkAdd  
 ```  
   
-## См. также  
- [Набор записей \(ODBC\)](../../data/odbc/recordset-odbc.md)   
- [Набор записей. Добавление, обновление и удаление записей \(ODBC\)](../../data/odbc/recordset-adding-updating-and-deleting-records-odbc.md)   
- [Набор записей: блокировка \(ODBC\)](../../data/odbc/recordset-locking-records-odbc.md)
+## <a name="see-also"></a>См. также  
+ [Набор записей (ODBC)](../../data/odbc/recordset-odbc.md)   
+ [Набор записей: Добавление, обновление и удаление записей (ODBC)](../../data/odbc/recordset-adding-updating-and-deleting-records-odbc.md)   
+ [Набор записей. Блокировка (ODBC)](../../data/odbc/recordset-locking-records-odbc.md)

@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-windows
+ms.technology: cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
@@ -34,36 +33,20 @@ f1_keywords:
 - ATLBASE/ATL::CComModule::m_hInstResource
 - ATLBASE/ATL::CComModule::m_hInstTypeLib
 - ATLBASE/ATL::CComModule::m_pObjMap
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - CComModule class
 - DLL modules [C++], ATL
 ms.assetid: f5face2c-8fd8-40e6-9ec3-54ab74701769
-caps.latest.revision: 23
+caps.latest.revision: "23"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: d2d39abf526a58b8442107b5ee816f316ae841f5
-ms.openlocfilehash: 893efea83bd0d84813a70ec39e5d50fde47dd732
-ms.contentlocale: ru-ru
-ms.lasthandoff: 03/31/2017
-
+ms.openlocfilehash: c9e3d47f68575b27d65422f9adec2c24dee83425
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="ccommodule-class"></a>CComModule-класс
 Начиная с ATL 7.0 `CComModule` устарел: в разделе [модульные классы ATL](../../atl/atl-module-classes.md) для получения дополнительных сведений.  
@@ -363,10 +346,10 @@ HRESULT RegisterClassObjects(DWORD dwClsContext, DWORD dwFlags) throw();
   
 ### <a name="parameters"></a>Параметры  
  `dwClsContext`  
- [in] Указывает контекст, в котором будет выполняться объекта класса. Возможными значениями являются **CLSCTX_INPROC_SERVER**, **CLSCTX_INPROC_HANDLER**, или **CLSCTX_LOCAL_SERVER**. Описание этих значений см. в разделе [CLSCTX](http://msdn.microsoft.com/library/windows/desktop/ms693716) в [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
+ [in] Указывает контекст, в котором будет выполняться объекта класса. Возможными значениями являются **CLSCTX_INPROC_SERVER**, **CLSCTX_INPROC_HANDLER**, или **CLSCTX_LOCAL_SERVER**. Описание этих значений см. в разделе [CLSCTX](http://msdn.microsoft.com/library/windows/desktop/ms693716) в Windows SDK.  
   
  `dwFlags`  
- [in] Определяет типы подключения к такому объекту класса. Возможными значениями являются **REGCLS_SINGLEUSE**, **REGCLS_MULTIPLEUSE**, или **REGCLS_MULTI_SEPARATE**. Описание этих значений см. в разделе [REGCLS](http://msdn.microsoft.com/library/windows/desktop/ms679697) в [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
+ [in] Определяет типы подключения к такому объекту класса. Возможными значениями являются **REGCLS_SINGLEUSE**, **REGCLS_MULTIPLEUSE**, или **REGCLS_MULTI_SEPARATE**. Описание этих значений см. в разделе [REGCLS](http://msdn.microsoft.com/library/windows/desktop/ms679697) в Windows SDK.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
  Стандартное значение HRESULT.  
@@ -642,4 +625,3 @@ virtual HRESULT UpdateRegistryFromResourceS(
   
 ## <a name="see-also"></a>См. также  
  [Общие сведения о классе](../../atl/atl-class-overview.md)
-

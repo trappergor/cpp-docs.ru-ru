@@ -1,37 +1,35 @@
 ---
-title: "DQ | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "DQ"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "DQ directive"
+title: "DQ | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: DQ
+dev_langs: C++
+helpviewer_keywords: DQ directive
 ms.assetid: 15de9c41-db90-4bca-affc-426eeb38ebc0
-caps.latest.revision: 8
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: a5fea30e39094bf344bd87c823dfcf4b8b3b91e4
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/24/2017
 ---
-# DQ
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Выделяет и инициализирует 8 байт хранения для каждого `initializer`.  Также может использоваться как описатель типа везде, где допустим тип.  `DQ` синоним   [8 байт](../../assembler/masm/qword.md).  
+# <a name="dq"></a>DQ
+Выделяет и при необходимости инициализирует 8 байтов памяти для каждого `initializer`. Также можно использовать в качестве спецификатора типа в любом является допустимым типом. `DQ`— синоним [QWORD](../../assembler/masm/qword.md).  
   
-## Синтаксис  
+## <a name="syntax"></a>Синтаксис  
   
 ```  
 [[name]] DQ initializer [[, initializer]]...  
 ```  
   
-## См. также  
- [Directives Reference](../../assembler/masm/directives-reference.md)   
+## <a name="see-also"></a>См. также  
+ [Справочник по директивам](../../assembler/masm/directives-reference.md)   
  [QWORD](../../assembler/masm/qword.md)

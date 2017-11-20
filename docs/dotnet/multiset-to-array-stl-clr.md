@@ -1,41 +1,39 @@
 ---
-title: "multiset::to_array (STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::multiset::to_array"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "to_array - элемент [STL/CLR]"
+title: "MULTISET::to_array (STL/CLR) | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::multiset::to_array
+dev_langs: C++
+helpviewer_keywords: to_array member [STL/CLR]
 ms.assetid: 3ca4482d-2584-4a93-89b9-33ea29692de2
-caps.latest.revision: 13
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 11
+caps.latest.revision: "13"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: bb405955e20859529380198a02210fc443c624b3
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/24/2017
 ---
-# multiset::to_array (STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Копирует контролируемая последовательность в новый массив.  
+# <a name="multisettoarray-stlclr"></a>multiset::to_array (STL/CLR)
+Копирует управляемой последовательности в новый массив.  
   
-## Синтаксис  
+## <a name="syntax"></a>Синтаксис  
   
 ```  
 cli::array<value_type>^ to_array();  
 ```  
   
-## Заметки  
- Возвращает массив, содержащий функцию\-член контролируемую последовательность.  Он используется, чтобы получить копию контролируемой последовательности в форме массива.  
+## <a name="remarks"></a>Примечания  
+ Функция-член возвращает массив, содержащий управляемой последовательности. Используется для получения копии управляемой последовательности в виде массива.  
   
-## Пример  
+## <a name="example"></a>Пример  
   
 ```  
 // cliext_multiset_to_array.cpp   
@@ -67,12 +65,15 @@ int main()
   
 ```  
   
-  **B C d**  
- **a b c**   
-## Требования  
- **Заголовок:**\<cliext\/set\>  
+```Output  
+a b c d  
+a b c  
+```  
+  
+## <a name="requirements"></a>Требования  
+ **Заголовок:** \<cliext и set >  
   
  **Пространство имен:** cliext  
   
-## См. также  
- [multiset](../dotnet/multiset-stl-clr.md)
+## <a name="see-also"></a>См. также  
+ [multiset (STL/CLR)](../dotnet/multiset-stl-clr.md)

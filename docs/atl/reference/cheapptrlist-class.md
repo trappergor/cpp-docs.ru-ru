@@ -4,46 +4,28 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-windows
+ms.technology: cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
 - CHeapPtrList
 - ATLCOLL/ATL::CHeapPtrList
 - ATLCOLL/ATL::CHeapPtrList::CHeapPtrList
-dev_langs:
-- C++
-helpviewer_keywords:
-- CHeapPtrList class
+dev_langs: C++
+helpviewer_keywords: CHeapPtrList class
 ms.assetid: cc70e585-362a-4007-81db-c705eb181226
-caps.latest.revision: 20
+caps.latest.revision: "20"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 5a0c6a1062330f952bb8fa52bc934f6754465513
-ms.openlocfilehash: 9acf18d0e0a72f27a335cefca81341c95d530ae5
-ms.contentlocale: ru-ru
-ms.lasthandoff: 02/24/2017
-
+ms.openlocfilehash: 18d4847c53e7926abecba43dd55f44acd22ed2f0
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="cheapptrlist-class"></a>Класс CHeapPtrList
-Этот класс предоставляет методы, используемые при создании список указателей кучи.  
+Этот класс предоставляет методы, используемые при построении списка указателей кучи.  
   
 > [!IMPORTANT]
 >  Этот класс и его члены не может использоваться в приложениях, выполняемых в среде выполнения Windows.  
@@ -59,7 +41,7 @@ class CHeapPtrList
   
 #### <a name="parameters"></a>Параметры  
  `E`  
- Тип объекта для сохранения в класс коллекции.  
+ Тип объекта для сохранения в классе коллекции.  
   
  `Allocator`  
  Класс выделения памяти для использования. Значение по умолчанию — [CCRTAllocator](../../atl/reference/ccrtallocator-class.md).  
@@ -73,7 +55,7 @@ class CHeapPtrList
 |[CHeapPtrList::CHeapPtrList](#cheapptrlist)|Конструктор.|  
   
 ## <a name="remarks"></a>Примечания  
- Этот класс предоставляет конструктор и производным методов из [CAtlList](../../atl/reference/catllist-class.md) и [CHeapPtrElementTraits](../../atl/reference/cheapptrelementtraits-class.md) для упрощения создания объекта класса коллекции хранения указателей кучи.  
+ Этот класс предоставляет конструктор и наследует методы из [CAtlList](../../atl/reference/catllist-class.md) и [CHeapPtrElementTraits](../../atl/reference/cheapptrelementtraits-class.md) для упрощения создания объекта класса коллекции хранения указателей кучи.  
   
 ## <a name="inheritance-hierarchy"></a>Иерархия наследования  
  [CAtlList](../../atl/reference/catllist-class.md)  
@@ -95,11 +77,10 @@ CHeapPtrList(UINT nBlockSize = 10) throw();
  Размер блока.  
   
 ### <a name="remarks"></a>Примечания  
- Размер блока измеряется объем памяти, выделяемый при новый элемент является обязательным. Размер блока снизить вызовы процедур выделения памяти, но использует больше ресурсов.  
+ Размер блока — это мера, объем памяти, выделяемый при новый элемент является обязательным. Увеличенный размер блока, уменьшите количество вызовов процедур выделения памяти, но использует больше ресурсов.  
   
 ## <a name="see-also"></a>См. также  
  [Класс CAtlList](../../atl/reference/catllist-class.md)   
  [Класс CHeapPtr](../../atl/reference/cheapptr-class.md)   
  [Класс CHeapPtrElementTraits](../../atl/reference/cheapptrelementtraits-class.md)   
  [Общие сведения о классе](../../atl/atl-class-overview.md)
-

@@ -1,32 +1,30 @@
 ---
-title: "ALIAS (MASM) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "Alias"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "ALIAS directive"
+title: "ПСЕВДОНИМ (MASM) | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: Alias
+dev_langs: C++
+helpviewer_keywords: ALIAS directive
 ms.assetid: d9725c49-58de-41da-ab01-b06a56cf5cf2
-caps.latest.revision: 6
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 6
+caps.latest.revision: "6"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: 39f539c18ce23fb3ef9630e4bfdfca8f265beb33
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/24/2017
 ---
-# ALIAS (MASM)
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-**Псевдоним** директива создает другое имя функции.  Это позволяет создать несколько имен для функции или создает библиотеки, позволяющие компоновщик \(LINK.exe\) для сопоставления старая функции к новой функции.  
+# <a name="alias-masm"></a>ALIAS (MASM)
+**ПСЕВДОНИМ** директива создает альтернативное имя для функции.  Это позволяет создать несколько имен для функции или библиотеки, позволяющие компоновщик (LINK.exe) для сопоставления с новой функции в старой функции.  
   
-## Синтаксис  
+## <a name="syntax"></a>Синтаксис  
   
 ```  
   
@@ -38,12 +36,12 @@ actual-name
   
 ```  
   
-#### Параметры  
+#### <a name="parameters"></a>Параметры  
  `actual-name`  
- Фактическое имя функции или процедуры.  Угловые скобки требуются.  
+ Фактическое имя функции или процедуры.  Угловые скобки не требуется.  
   
  `alias`  
- Имя избыточности или псевдонима.  Угловые скобки требуются.  
+ Имя альтернативного или псевдоним.  Угловые скобки не требуется.  
   
-## См. также  
- [Directives Reference](../../assembler/masm/directives-reference.md)
+## <a name="see-also"></a>См. также  
+ [Справочник по директивам](../../assembler/masm/directives-reference.md)

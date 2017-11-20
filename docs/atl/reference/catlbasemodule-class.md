@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-windows
+ms.technology: cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
@@ -19,35 +18,18 @@ f1_keywords:
 - ATLCORE/ATL::CAtlBaseModule::RemoveResourceInstance
 - ATLCORE/ATL::CAtlBaseModule::SetResourceInstance
 - ATLCORE/ATL::CAtlBaseModule::m_bInitFailed
-dev_langs:
-- C++
-helpviewer_keywords:
-- CAtlBaseModule class
+dev_langs: C++
+helpviewer_keywords: CAtlBaseModule class
 ms.assetid: 55ade80c-9b0c-4c51-933e-2158436c1096
-caps.latest.revision: 18
+caps.latest.revision: "18"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0e0c08ddc57d437c51872b5186ae3fc983bb0199
-ms.openlocfilehash: 4897f6cf7e12a18401720ad663c90491bb0e599d
-ms.contentlocale: ru-ru
-ms.lasthandoff: 02/24/2017
-
+ms.openlocfilehash: 3249240ef90224dc1a297a848f1eba55d915fdac
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="catlbasemodule-class"></a>Класс CAtlBaseModule
 В каждом проекте ATL создается экземпляр этого класса.  
@@ -70,11 +52,11 @@ class CAtlBaseModule : public _ATL_BASE_MODULE
   
 |Имя|Описание|  
 |----------|-----------------|  
-|[CAtlBaseModule::AddResourceInstance](#addresourceinstance)|Добавляет экземпляр ресурса в список хранимых дескрипторов.|  
-|[CAtlBaseModule::GetHInstanceAt](#gethinstanceat)|Возвращает дескриптор экземпляра указанного ресурса.|  
+|[CAtlBaseModule::AddResourceInstance](#addresourceinstance)|Добавляет в список хранимых дескрипторов экземпляра ресурса.|  
+|[CAtlBaseModule::GetHInstanceAt](#gethinstanceat)|Возвращает дескриптор для указанного экземпляра ресурса.|  
 |[CAtlBaseModule::GetModuleInstance](#getmoduleinstance)|Возвращает экземпляр модуля из `CAtlBaseModule` объекта.|  
 |[CAtlBaseModule::GetResourceInstance](#getresourceinstance)|Возвращает экземпляр ресурса из `CAtlBaseModule` объекта.|  
-|[CAtlBaseModule::RemoveResourceInstance](#removeresourceinstance)|Удаляет экземпляр ресурса из списка хранимых маркеров.|  
+|[CAtlBaseModule::RemoveResourceInstance](#removeresourceinstance)|Удаляет экземпляр ресурса из списка хранимых дескрипторов.|  
 |[CAtlBaseModule::SetResourceInstance](#setresourceinstance)|Задает экземпляр ресурса `CAtlBaseModule` объекта.|  
   
 ### <a name="public-data-members"></a>Открытые члены данных  
@@ -84,9 +66,9 @@ class CAtlBaseModule : public _ATL_BASE_MODULE
 |[CAtlBaseModule::m_bInitFailed](#m_binitfailed)|Переменная, которая указывает на сбой при инициализации модуля.|  
   
 ## <a name="remarks"></a>Примечания  
- Экземпляр `CAtlBaseModule` именованных _AtlBaseModule присутствует в каждом проекте ATL, содержащая дескриптор экземпляра модуля, дескриптор модуля, содержащего ресурсы (которые по умолчанию одно и то же) и массив дескрипторов к модулям, предоставляя основные ресурсы. `CAtlBaseModule`можно безопасно обращаться из нескольких потоков.  
+ Экземпляр `CAtlBaseModule` именованный _AtlBaseModule присутствует в каждом проекте ATL, содержащая дескриптор экземпляра модуля, дескриптор модуля, содержащего ресурсы (которые по умолчанию находятся в одной и той же) и массив дескрипторов для модулей, предоставляя основной ресурсы. `CAtlBaseModule`безопасного доступа из нескольких потоков.  
   
- Этот класс заменяет устаревшие [CComModule](../../atl/reference/ccommodule-class.md) класс, используемый в предыдущих версиях библиотеки ATL.  
+ Этот класс заменяет устаревшее [CComModule](../../atl/reference/ccommodule-class.md) класс, используемый в предыдущих версиях библиотеки ATL.  
   
 ## <a name="inheritance-hierarchy"></a>Иерархия наследования  
  [_ATL_BASE_MODULE](atl-typedefs.md#_atl_base_module)  
@@ -97,7 +79,7 @@ class CAtlBaseModule : public _ATL_BASE_MODULE
  **Заголовок:** файле atlcore.h  
   
 ##  <a name="addresourceinstance"></a>CAtlBaseModule::AddResourceInstance  
- Добавляет экземпляр ресурса в список хранимых дескрипторов.  
+ Добавляет в список хранимых дескрипторов экземпляра ресурса.  
   
 ```
 bool AddResourceInstance(HINSTANCE hInst) throw();
@@ -105,10 +87,10 @@ bool AddResourceInstance(HINSTANCE hInst) throw();
   
 ### <a name="parameters"></a>Параметры  
  `hInst`  
- Чтобы добавить экземпляр ресурса.  
+ Добавление экземпляра ресурса.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
- Возвращает значение true, если ресурс был успешно добавлен значение, false в противном случае.  
+ Возвращает значение true, если ресурс успешно добавляемых false в противном случае.  
   
 ##  <a name="catlbasemodule"></a>CAtlBaseModule::CAtlBaseModule  
  Конструктор.  
@@ -121,7 +103,7 @@ CAtlBaseModule() throw();
  Создает объект `CAtlBaseModule`.  
   
 ##  <a name="gethinstanceat"></a>CAtlBaseModule::GetHInstanceAt  
- Возвращает дескриптор экземпляра указанного ресурса.  
+ Возвращает дескриптор для указанного экземпляра ресурса.  
   
 ```
 HINSTANCE GetHInstanceAt(int i) throw();
@@ -132,7 +114,7 @@ HINSTANCE GetHInstanceAt(int i) throw();
  Номер экземпляра ресурса.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
- Возвращает дескриптор экземпляра ресурса, или значение NULL, если отсутствует соответствующий экземпляр ресурса.  
+ Возвращает дескриптор экземпляра ресурса, или значение NULL, если существует без соответствующего экземпляра ресурса.  
   
 ##  <a name="getmoduleinstance"></a>CAtlBaseModule::GetModuleInstance  
  Возвращает экземпляр модуля из `CAtlBaseModule` объекта.  
@@ -165,7 +147,7 @@ static bool m_bInitFailed;
  Значение true, если модуль инициализирован, false, если не удалось выполнить инициализацию.  
   
 ##  <a name="removeresourceinstance"></a>CAtlBaseModule::RemoveResourceInstance  
- Удаляет экземпляр ресурса из списка хранимых маркеров.  
+ Удаляет экземпляр ресурса из списка хранимых дескрипторов.  
   
 ```
 bool RemoveResourceInstance(HINSTANCE hInst) throw();
@@ -173,7 +155,7 @@ bool RemoveResourceInstance(HINSTANCE hInst) throw();
   
 ### <a name="parameters"></a>Параметры  
  `hInst`  
- Чтобы удалить экземпляр ресурса.  
+ Для удаления экземпляра ресурса.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
  Возвращает значение true, если ресурс успешно удален, и false в противном случае.  
@@ -195,4 +177,3 @@ HINSTANCE SetResourceInstance(HINSTANCE hInst) throw();
 ## <a name="see-also"></a>См. также  
  [Общие сведения о классе](../../atl/atl-class-overview.md)   
  [Классы модуля](../../atl/atl-module-classes.md)
-

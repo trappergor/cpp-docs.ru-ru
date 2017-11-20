@@ -1,41 +1,39 @@
 ---
-title: "vector::size_type (STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::vector::size_type"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "size_type - элемент [STL/CLR]"
+title: "Vector::size_type (STL/CLR) | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::vector::size_type
+dev_langs: C++
+helpviewer_keywords: size_type member [STL/CLR]
 ms.assetid: 0789e887-e79a-42f9-a162-fc27f1341900
-caps.latest.revision: 17
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 15
+caps.latest.revision: "17"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 31e464d1880847751e1134c226b0964654270ee5
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/24/2017
 ---
-# vector::size_type (STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="vectorsizetype-stlclr"></a>vector::size_type (STL/CLR)
 Тип расстояния со знаком между двумя элементами.  
   
-## Синтаксис  
+## <a name="syntax"></a>Синтаксис  
   
 ```  
 typedef int size_type;  
 ```  
   
-## Заметки  
- Описывает тип неотрицательное число элементов.  
+## <a name="remarks"></a>Примечания  
+ Тип описывает элемент неотрицательное число.  
   
-## Пример  
+## <a name="example"></a>Пример  
   
 ```  
 // cliext_vector_size_type.cpp   
@@ -62,13 +60,16 @@ int main()
   
 ```  
   
-  **a b c**  
-**end\(\)\-begin\(\) \= 3**   
-## Требования  
- **Заголовок:**\<cliext\/vector\>  
+```Output  
+ a b c  
+end()-begin() = 3  
+```  
+  
+## <a name="requirements"></a>Требования  
+ **Заголовок:** \<cliext/vector >  
   
  **Пространство имен:** cliext  
   
-## См. также  
- [вектор](../dotnet/vector-stl-clr.md)   
- [vector::empty](../Topic/vector::empty%20\(STL-CLR\).md)
+## <a name="see-also"></a>См. также  
+ [вектор (STL/CLR)](../dotnet/vector-stl-clr.md)   
+ [vector::empty (STL/CLR)](../dotnet/vector-empty-stl-clr.md)

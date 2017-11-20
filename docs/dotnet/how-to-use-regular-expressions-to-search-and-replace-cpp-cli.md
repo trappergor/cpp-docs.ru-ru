@@ -1,35 +1,34 @@
 ---
-title: "Практическое руководство. Использование регулярных выражений для выполнения поиска и замены (C++/CLI) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/14/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "регулярные выражения [C++], поиск и замена"
-  - "Replace - метод"
-  - "поиск и замена"
+title: "Как: использование регулярных выражений для поиска и замены (C + +/ CLI) | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- search and replace
+- Replace method
+- regular expressions [C++], search and replace
 ms.assetid: 12fe3e18-fe10-4b25-a221-19dc5eab3821
-caps.latest.revision: 8
-caps.handback.revision: 8
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "8"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 17710654b0af2e03019a1e7b888d86e42c5e35c9
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/24/2017
 ---
-# Практическое руководство. Использование регулярных выражений для выполнения поиска и замены (C++/CLI)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-В следующем примере кода показаны способы использования класса регулярных выражений <xref:System.Text.RegularExpressions.Regex> для выполнения поиска и замены.  Для этого используется метод <xref:System.Text.RegularExpressions.Regex.Replace%2A>.  Используемая версия принимает в качестве входных данных две строки: строку, подлежащую изменению, и строку, подлежащую вставке вместо разделов, соответствующих шаблону, предоставленному объекту <xref:System.Text.RegularExpressions.Regex>, если таковые существуют.  
+# <a name="how-to-use-regular-expressions-to-search-and-replace-ccli"></a>Практическое руководство. Использование регулярных выражений для выполнения поиска и замены (C++/CLI)
+В следующем примере кода показано, как класс регулярного выражения <xref:System.Text.RegularExpressions.Regex> можно использовать для выполнения поиска и замены. Это делается с <xref:System.Text.RegularExpressions.Regex.Replace%2A> метод. Используемая версия принимает две строки в качестве входных данных: строка для изменения и строки для вставки вместо разделов (если таковые имеются), соответствующих шаблону, заданному для <xref:System.Text.RegularExpressions.Regex> объекта.  
   
- Этот код заменяет все цифры в строке на символ подчеркивания \(\_\), а затем заменяет их на пустую строку, фактически удаляя их.  Того же результата можно добиться и одним действием. Два действия показаны здесь только в демонстрационных целях.  
+ Данный код заменяет все цифры в строку с символами подчеркивания (_), а затем заменяет их на пустую строку, фактически удаляя их. Того же результата можно добиться за один шаг, но здесь используются два шага для демонстрационных целей.  
   
-## Пример  
+## <a name="example"></a>Пример  
   
 ```  
 // regex_replace.cpp  
@@ -55,6 +54,6 @@ int main()
 }  
 ```  
   
-## См. также  
- [Регулярные выражения в .NET Framework](../Topic/.NET%20Framework%20Regular%20Expressions.md)   
- [программирование .NET с использованием C\+\+\/CLI](../dotnet/dotnet-programming-with-cpp-cli-visual-cpp.md)
+## <a name="see-also"></a>См. также  
+ [Регулярные выражения в .NET Framework](/dotnet/standard/base-types/regular-expressions)   
+ [Программирование .NET с использованием C++/CLI (Visual C++)](../dotnet/dotnet-programming-with-cpp-cli-visual-cpp.md)

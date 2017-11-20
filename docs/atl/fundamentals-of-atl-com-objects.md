@@ -1,84 +1,85 @@
 ---
-title: "Fundamentals of ATL COM Objects | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "ATL COM objects"
-  - "ATL - библиотека, COM"
-  - "COM-объекты, ATL - библиотека"
-  - "COM, и ATL"
+title: "Основные принципы работы COM-объекты ATL | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- COM, and ATL
+- ATL, COM
+- ATL COM objects
+- COM objects, ATL
 ms.assetid: 0f9c9d98-cc28-45da-89ac-dc94cee422fe
-caps.latest.revision: 25
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 20
+caps.latest.revision: "25"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 30527a705d880e96620edfee5f7ad7897f9371a7
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/24/2017
 ---
-# Fundamentals of ATL COM Objects
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-На следующей иллюстрации показаны связи между классами и интерфейсы, используемые для идентификации com\-объекта библиотеки ATL.  
+# <a name="fundamentals-of-atl-com-objects"></a>Основные принципы работы COM-объекты ATL
+На следующем рисунке показана связь между классы и интерфейсы, которые используются для определения ATL COM-объекта.  
   
- ![Структура ATL](../atl/media/vc307y1.png "vc307Y1")  
+ ![Структура ATL](../atl/media/vc307y1.gif "vc307y1")  
   
 > [!NOTE]
->  На этой диаграмме показано, что `CComObject` является производным от `CYourClass` тогда как `CComAggObject` и `CComPolyObject` включают `CYourClass` в качестве переменной члена.  
+>  На этой диаграмме показано, что `CComObject` является производным от `CYourClass` в то время как `CComAggObject` и `CComPolyObject` включают `CYourClass` как переменную-член.  
   
- Существует три способа определения COM\-объект библиотеки ATL.  Стандартный параметр использовать класс `CComObject`, который является производным от `CYourClass`.  Второй параметр создать объединенный объект с помощью класса `CComAggObject`.  Третий параметр использовать класс `CComPolyObject`.  `CComPolyObject` действует как гибридный. он может работать как класс `CComObject` или как класс `CComAggObject` в зависимости от того, как он впервые создается.  Дополнительные сведения об использовании класса `CComPolyObject` см. в разделе [CComPolyObject Class](../atl/reference/ccompolyobject-class.md).  
+ Существует три способа определения ATL COM-объекта. Стандартный вариант — использовать `CComObject` класс, производный от `CYourClass`. Второй параметр — Создание вычисляемого объекта с помощью `CComAggObject` класса. Третий вариант — использовать `CComPolyObject` класса. `CComPolyObject`выступает в качестве гибридной: он может работать как `CComObject` класса или как `CComAggObject` класса, в зависимости от того, как он впервые создается. Дополнительные сведения об использовании `CComPolyObject` см. в описании [CComPolyObject класса](../atl/reference/ccompolyobject-class.md).  
   
- При использовании стандартного модели COM библиотеки ATL используется 2 объекта: внешний объект и внутренний объект.  Внешние клиенты получают доступ к функциональности внутреннего объекта до функция\-оболочки, определенные во внешнем объекте.  Внешний объект типа `CComObject`.  
+ При использовании стандартных ATL COM, можно использовать два объекта: объект внешнего и внутреннего объекта. Внешним клиентам доступ к функциям внутреннего объекта через функции-оболочки, которые определены в внешнего объекта. Внешний объект имеет тип `CComObject`.  
   
- При использовании объединенный объект, внешний объект не предоставляет программы\-оболочки для получения функциональности внутреннего объекта.  Вместо этого внешний объект содержит указатель, непосредственно обратиться к внешнему клиентами.  В этом сценарии внешний объект типа `CComAggObject`.  Внутренний объект переменную\-член внешнего объекта и его типа `CYourClass`.  
+ При использовании вычисляемого объекта внешний объект не предоставляет программы-оболочки для функциональности внутреннего объекта. Вместо этого внешний объект предоставляет указатель, который осуществляется непосредственно с внешним клиентам. В этом случае внешний объект имеет тип `CComAggObject`. Внутренний объект является переменной-членом внешнего объекта и имеет тип `CYourClass`.  
   
- Поскольку клиент не должен пройти по внешнему объекту взаимодействовать с внутренним объектом, агрегированные объекты обычно является более эффективным.  Кроме того, внешний объект не должен знать указанного функциональные возможности объединенного объекта, что интерфейс объединенного объекта непосредственно доступен клиенту.  Однако не все объекты могут быть агрегированными.  Для объекта для статистической обработки, для этого нужно конструированным с агрегатом.  
+ Поскольку клиент не придется проходить через внешний объект для взаимодействия с внутренний объект, статистические объекты обычно более эффективны. Кроме того внешний объект не требуется знать функции объекта статистические учитывая, что интерфейс сводный объект доступен напрямую клиенту. Однако не все объекты могут быть агрегированными. Объект статистической обработки ему следует проектировать с статистической обработки в виду.  
   
- Библиотеки ATL реализует [IUnknown](http://msdn.microsoft.com/library/windows/desktop/ms680509) в 2 действия.  
+ Реализует ATL [IUnknown](http://msdn.microsoft.com/library/windows/desktop/ms680509) в два этапа:  
   
--   Средства [CComObject](../atl/reference/ccomobject-class.md), [CComAggObject](../atl/reference/ccomaggobject-class.md) или [CComPolyObject](../atl/reference/ccompolyobject-class.md) методы **IUnknown**.  
+-   [CComObject](../atl/reference/ccomobject-class.md), [CComAggObject](../atl/reference/ccomaggobject-class.md), или [CComPolyObject](../atl/reference/ccompolyobject-class.md) реализует **IUnknown** методы.  
   
--   [CComObjectRoot](../atl/reference/ccomobjectroot-class.md) или [CComObjectRootEx](../atl/reference/ccomobjectrootex-class.md) управляют счетчик ссылок и внешний указатели **IUnknown**.  
+-   [CComObjectRoot](../atl/reference/ccomobjectroot-class.md) или [CComObjectRootEx](../atl/reference/ccomobjectrootex-class.md) управляет подсчетом ссылок и внешнее указатели **IUnknown**.  
   
- Другие аспекты своего COM\-объект библиотеки ATL корректируются другими классами:  
+ Другие аспекты ATL COM-объект обрабатываются другими классами.  
   
--   [CComCoClass](../Topic/CComCoClass%20Class.md) определяет модель фабрики классов и статистической обработки объекта по умолчанию.  
+-   [CComCoClass](../atl/reference/ccomcoclass-class.md) определяет объекта по умолчанию класс фабрики и статистической обработки модели.  
   
--   [IDispatchImpl](../atl/reference/idispatchimpl-class.md) предоставляет реализацию по умолчанию части `IDispatch Interface` всех повторяющихся интерфейсов объекта.  
+-   [IDispatchImpl](../atl/reference/idispatchimpl-class.md) предоставляет реализацию по умолчанию `IDispatch Interface` часть любой сдвоенные интерфейсы в объекте.  
   
--   [ISupportErrorInfoImpl](../atl/reference/isupporterrorinfoimpl-class.md) реализует интерфейс **ISupportErrorInfo**  который сведения об ошибках могут распространяться по цепочке вызовов правильно.  
+-   [ISupportErrorInfoImpl](../atl/reference/isupporterrorinfoimpl-class.md) реализует **ISupportErrorInfo** интерфейс, который обеспечивает сведения об ошибках могут копироваться в цепочке вызовов правильно.  
   
-## Содержание  
- [Реализация CComObjectRootEx](../Topic/Implementing%20CComObjectRootEx.md)  
- Отображение записи сопоставления модели COM примере для реализации `CComObjectRootEx`.  
+## <a name="in-this-section"></a>Содержание  
+ [Реализация CComObjectRootEx](../atl/implementing-ccomobjectrootex.md)  
+ Показать пример записях сопоставления COM. для реализации `CComObjectRootEx`.  
   
  [Реализация CComObject, CComAggObject и CComPolyObject](../atl/implementing-ccomobject-ccomaggobject-and-ccompolyobject.md)  
- Обсуждается макросы **DECLARE\_\*\_AGGREGATABLE** влияют на использование `CComObject`, `CComAggObject` и `CComPolyObject`.  
+ Рассматриваются как **DECLARE_\*_AGGREGATABLE** макросы влияет на использование `CComObject`, `CComAggObject`, и `CComPolyObject`.  
   
  [Поддержка IDispatch и IErrorInfo](../atl/supporting-idispatch-and-ierrorinfo.md)  
- Приводит список классов реализации библиотеки ATL для поддержки интерфейсов `IDispatch` и **IErrorInfo**.  
+ Список классов ATL реализации для поддержки `IDispatch` и **IErrorInfo** интерфейсов.  
   
  [Поддержка IDispEventImpl](../atl/supporting-idispeventimpl.md)  
- Рассматриваются шаги, чтобы реализовать точки подключения для класса.  
+ Описывает шаги по реализации точки подключения для класса.  
   
- [Изменить модель по умолчанию фабрики классов и агрегата](../atl/changing-the-default-class-factory-and-aggregation-model.md)  
- Показать, какие макросы, используемый для изменения по умолчанию используется фабрика класса и агрегат модель.  
+ [Изменение модели агрегирования и фабрики класса по умолчанию](../atl/changing-the-default-class-factory-and-aggregation-model.md)  
+ Показать макросы, используйте для изменения модели фабрики и статистической обработки классов по умолчанию.  
   
- [Создание объединенный объект](../atl/creating-an-aggregated-object.md)  
- Содержит инструкции по созданию объединенный объект.  
+ [Создание объединенного объекта](../atl/creating-an-aggregated-object.md)  
+ Приводятся инструкции по созданию вычисляемого объекта.  
   
-## Связанные разделы  
- [Создание проекта библиотеки ATL](../atl/reference/creating-an-atl-project.md)  
- Содержит сведения о создании COM\-объект библиотеки ATL.  
+## <a name="related-sections"></a>Связанные разделы  
+ [Создание проекта ATL](../atl/reference/creating-an-atl-project.md)  
+ Сведения о создании ATL COM-объекта.  
   
- [Библиотека ATL](../atl/active-template-library-atl-concepts.md)  
- Содержит ссылки на концептуальные разделы о том, как запрограммировать с помощью библиотека шаблонных классов ATL.  
+ [ATL](../atl/active-template-library-atl-concepts.md)  
+ Ссылки на разделы о программировании с использованием библиотеки ATL.  
   
-## См. также  
+## <a name="see-also"></a>См. также  
  [Основные понятия](../atl/active-template-library-atl-concepts.md)
+

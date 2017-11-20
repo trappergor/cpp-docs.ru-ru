@@ -1,42 +1,40 @@
 ---
-title: "hash_map::value_compare (STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::hash_map::value_compare"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "value_compare - элемент [STL/CLR]"
+title: "hash_map::value_compare (STL/CLR) | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::hash_map::value_compare
+dev_langs: C++
+helpviewer_keywords: value_compare member [STL/CLR]
 ms.assetid: a137d23f-0dd0-4858-ad5e-74782d85bf59
-caps.latest.revision: 8
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 6
+caps.latest.revision: "8"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 7b175f919b32d46591a65d44b18d0d38351b6d55
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/24/2017
 ---
-# hash_map::value_compare (STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Порядок делегат для 2 значений элементов.  
+# <a name="hashmapvaluecompare-stlclr"></a>hash_map::value_compare (STL/CLR)
+Делегат упорядочения для значения двух элементов.  
   
-## Синтаксис  
+## <a name="syntax"></a>Синтаксис  
   
 ```  
 Microsoft::VisualC::StlClr::BinaryDelegate<generic_value, generic_value, bool>  
     value_compare;  
 ```  
   
-## Заметки  
- Тип синоним для делегата, определяет порядок аргументов значение.  
+## <a name="remarks"></a>Примечания  
+ Тип является синонимом делегат, который определяет порядок его значения аргументов.  
   
-## Пример  
+## <a name="example"></a>Пример  
   
 ```  
 // cliext_hash_map_value_compare.cpp   
@@ -64,16 +62,19 @@ int main()
   
 ```  
   
-  **сравнение, L'a \(\[1\], \[L'a\], 1\) \= true**  
-**сравнение, L'a \(\[1\], \[L'b\], 2\) \= true**  
-**сравнение, L'b \(\[2\], \[L'a\], 1\) \= false**   
-## Требования  
- **Заголовок:**\<cliext\/hash\_map\>  
+```Output  
+compare([L'a', 1], [L'a', 1]) = True  
+compare([L'a', 1], [L'b', 2]) = True  
+compare([L'b', 2], [L'a', 1]) = False  
+```  
+  
+## <a name="requirements"></a>Требования  
+ **Заголовок:** \<cliext/hash_map >  
   
  **Пространство имен:** cliext  
   
-## См. также  
- [hash\_map](../dotnet/hash-map-stl-clr.md)   
- [hash\_map::key\_compare](../Topic/hash_map::key_compare%20\(STL-CLR\).md)   
- [hash\_map::value\_comp](../dotnet/hash-map-value-comp-stl-clr.md)   
- [hash\_map::value\_type](../dotnet/hash-map-value-type-stl-clr.md)
+## <a name="see-also"></a>См. также  
+ [hash_map (STL/CLR)](../dotnet/hash-map-stl-clr.md)   
+ [hash_map::key_compare (STL/CLR)](../dotnet/hash-map-key-compare-stl-clr.md)   
+ [hash_map::value_comp (STL/CLR)](../dotnet/hash-map-value-comp-stl-clr.md)   
+ [hash_map::value_type (STL/CLR)](../dotnet/hash-map-value-type-stl-clr.md)

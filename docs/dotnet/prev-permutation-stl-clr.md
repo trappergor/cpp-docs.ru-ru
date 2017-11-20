@@ -1,32 +1,30 @@
 ---
-title: "prev_permutation (STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::prev_permutation"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "prev_permutation - функция [STL/CLR]"
+title: "prev_permutation (STL/CLR) | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::prev_permutation
+dev_langs: C++
+helpviewer_keywords: prev_permutation function [STL/CLR]
 ms.assetid: 5294dbe5-1b5f-4369-a764-067dff86d1e8
-caps.latest.revision: 4
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 4
+caps.latest.revision: "4"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: e2023cfda5d434fd7302c66dd1a583186cb11adb
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/24/2017
 ---
-# prev_permutation (STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Порядок элементов в диапазоне, чтобы исходный порядок будет заменен лексикографически следующим большим пермутированием, если оно существует, где смысл следующего мая был определен с бинарным предикатом.  
+# <a name="prevpermutation-stlclr"></a>prev_permutation (STL/CLR)
+Изменяет порядок элементов в диапазоне, чтобы исходный порядок был заменен перестановкой "лексикографически следующий больший", если такая существует, где смысл термина "следующий" может быть задан бинарным предикатом.  
   
-## Синтаксис  
+## <a name="syntax"></a>Синтаксис  
   
 ```  
 template<class _BidIt> inline  
@@ -35,13 +33,13 @@ template<class _BidIt, class _Pr> inline
     bool prev_permutation(_BidIt _First, _BidIt _Last, _Pr _Pred);  
 ```  
   
-## Заметки  
- Эта функция работает аналогично функции `prev_permutation` STL.  Для получения дополнительной информации см. [prev\_permutation](../Topic/prev_permutation.md).  
+## <a name="remarks"></a>Примечания  
+ Эта функция работает так же, как функция стандартной библиотеки C++ `prev_permutation`. Дополнительные сведения см. в разделе [prev_permutation](../standard-library/algorithm-functions.md#prev_permutation).  
   
-## Требования  
- **Заголовок:**\<cliext\/algorithm\>  
+## <a name="requirements"></a>Требования  
+ **Заголовок:** \<cliext/алгоритм >  
   
  **Пространство имен:** cliext  
   
-## См. также  
- [algorithm](../Topic/algorithm%20\(STL-CLR\).md)
+## <a name="see-also"></a>См. также  
+ [algorithm (STL/CLR)](../dotnet/algorithm-stl-clr.md)

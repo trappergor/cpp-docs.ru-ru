@@ -1,46 +1,44 @@
 ---
-title: "ML Nonfatal Error A2008 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "A2008"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "A2008"
+title: "Некритичная ошибка ML A2008 | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: A2008
+dev_langs: C++
+helpviewer_keywords: A2008
 ms.assetid: ca24157f-c88a-4678-ae06-3bc3cd956001
-caps.latest.revision: 6
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 6
+caps.latest.revision: "6"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: 7bcef41e81ea0f3d6229cf828a661fdc8f8fdec4
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/24/2017
 ---
-# ML Nonfatal Error A2008
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-**синтаксическая ошибка:**  
+# <a name="ml-nonfatal-error-a2008"></a>Некритичная ошибка ML A2008
+**Синтаксическая ошибка:**  
   
- Токен в текущем расположении, вызвавшего синтаксическую ошибку.  
+ Маркер в текущем положении является причиной синтаксической ошибки.  
   
- Одно из следующих действий может происходить:  
+ Мог произойти одно из следующих:  
   
--   Префикс был добавлен знак многоточия или был пропущен в рекомендации.  
+-   Префикс точка был добавлен в или опущена директивы.  
   
--   Зарезервированое слово \(например, **C** OR  **Размер**\), используемый в качестве идентификатора.  
+-   Зарезервированные слова (такие как **C** или **размер**) использовать в качестве идентификатора.  
   
--   Инструкции использовалась, которая не была доступна с текущего выделения процессора или сопроцессора.  
+-   Инструкция была использована, недоступен с выделенной процессора или сопроцессора.  
   
--   Оператор среды выполнения сравнения \(например, `==`выписке\), используемого в условных сборки вместо реляционного оператора \(как  [EQ \(Равно\)](../../assembler/masm/operator-eq.md)\).  
+-   Во время выполнения оператора сравнения (например, `==`) был использован в операторе условной сборки вместо оператор сравнения (такие как [EQ](../../assembler/masm/operator-eq.md)).  
   
--   Данной инструкции или директиве слишком мало операндов.  
+-   Инструкции или директива указано слишком мало операндов.  
   
--   Директива устарелая была использована.  
+-   Использовался устаревший директиву.  
   
-## См. также  
- [ML Error Messages](../../assembler/masm/ml-error-messages.md)
+## <a name="see-also"></a>См. также  
+ [Сообщения об ошибках ML](../../assembler/masm/ml-error-messages.md)

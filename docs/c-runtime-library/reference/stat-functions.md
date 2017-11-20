@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-cpp
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
 apiname:
@@ -81,8 +80,7 @@ f1_keywords:
 - stat/_wstati64
 - stat/_wstat32i64
 - stat/_wstat64i32
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - files [C++], status information
 - _stat function
@@ -115,30 +113,15 @@ helpviewer_keywords:
 - _tstat64 function
 - files [C++], getting status information
 ms.assetid: 99a75ae6-ff26-47ad-af70-5ea7e17226a5
-caps.latest.revision: 26
+caps.latest.revision: "26"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.mt:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3f91eafaf3b5d5c1b8f96b010206d699f666e224
-ms.openlocfilehash: 1c3fc1e6ee3ca15d610d2c25ad38eedb795d0ebf
-ms.contentlocale: ru-ru
-ms.lasthandoff: 04/01/2017
-
+ms.openlocfilehash: 18cfdda310149c18ef8983b10afb5c901b256510
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="stat-stat32-stat64-stati64-stat32i64-stat64i32-wstat-wstat32-wstat64-wstati64-wstat32i64-wstat64i32"></a>_stat, _stat32, _stat64, _stati64, _stat32i64, _stat64i32, _wstat, _wstat32, _wstat64, _wstati64, _wstat32i64, _wstat64i32
 Получает сведения о состоянии файла.  
@@ -217,10 +200,10 @@ int _wstat64i32(
   
  Варианты этих функций поддерживают 32- или 64-разрядные типы времени и 32- или 64-разрядные значения длины файлов. Первый числовой суффикс (`32` или `64`) указывает размер используемого типа времени; второй суффикс `i32` или `i64`показывает, представлен ли размер файла как 32- или 64-разрядное целое число.  
   
- `_stat` is equivalent to `_stat64i32`, and `struct``_stat` contains a 64-bit time. This is true unless `_USE_32BIT_TIME_T` is defined, in which case the old behavior is in effect; `_stat` uses a 32-bit time, and `struct``_stat` contains a 32-bit time. Это же справедливо и для `_stati64`.  
+ `_stat` эквивалентна функции `_stat64i32`, и `struct _stat` содержит 64-разрядное время. Это верно, если не задана директива `_USE_32BIT_TIME_T` ; в противном случае действует старое поведение: функция `_stat` использует 32-разрядное время, и `struct _stat` содержит 32-разрядное время. Это же справедливо и для `_stati64`.  
   
 > [!NOTE]
-> Функция `_wstat` не работает с символьными ссылками [!INCLUDE[wiprlhext](../../c-runtime-library/reference/includes/wiprlhext_md.md)] . В таких случаях функция `_wstat` всегда возвращает размер файла, равный 0. Функция`_stat` правильно работает с символьными ссылками.  
+>  Функция `_wstat` не работает с символьными ссылками [!INCLUDE[wiprlhext](../../c-runtime-library/reference/includes/wiprlhext_md.md)]. В таких случаях функция `_wstat` всегда возвращает размер файла, равный 0. Функция`_stat` правильно работает с символьными ссылками.  
   
  Эта функция проверяет свои параметры. Если параметр `path` или `buffer` имеет значение `NULL`, вызывается обработчик недопустимого параметра, как описано в [Parameter Validation](../../c-runtime-library/parameter-validation.md).  
   

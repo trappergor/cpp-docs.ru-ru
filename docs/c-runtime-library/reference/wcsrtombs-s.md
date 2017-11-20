@@ -4,12 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-cpp
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
-apiname:
-- wcsrtombs_s
+apiname: wcsrtombs_s
 apilocation:
 - msvcrt.dll
 - msvcr80.dll
@@ -23,39 +21,22 @@ apilocation:
 - ucrtbase.dll
 - api-ms-win-crt-convert-l1-1-0.dll
 apitype: DLLExport
-f1_keywords:
-- wcsrtombs_s
-dev_langs:
-- C++
+f1_keywords: wcsrtombs_s
+dev_langs: C++
 helpviewer_keywords:
 - string conversion, wide characters
 - wcsrtombs_s function
 - wide characters, strings
 ms.assetid: 9dccb766-113c-44bb-9b04-07a634dddec8
-caps.latest.revision: 27
+caps.latest.revision: "27"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: e257f037a05c45f5b98e64ea55bd125af443b0be
-ms.openlocfilehash: 4c32ff2061e8ce52ae193c7679b40e69515d3ab0
-ms.contentlocale: ru-ru
-ms.lasthandoff: 03/30/2017
-
+ms.openlocfilehash: f8045010875713588fb20a8f05a230717a21a9a9
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="wcsrtombss"></a>wcsrtombs_s
 Преобразует строку расширенных символов в соответствующее представление многобайтовой строки. Версия функции [wcsrtombs](../../c-runtime-library/reference/wcsrtombs.md) с усовершенствованиями системы безопасности, описанными в разделе [Функции безопасности в CRT](../../c-runtime-library/security-features-in-the-crt.md).  
@@ -124,9 +105,9 @@ errno_t wcsrtombs_s(
   
  Если `count` имеет специальное значение [_TRUNCATE](../../c-runtime-library/truncate.md), то функция `wcsrtombs_s` преобразует строки до тех пор, пока буфер назначения не будет заполнен с учетом завершающего нуль-символа.  
   
- Если функция `wcsrtombs_s` успешно преобразует исходную строку, то размер преобразованной строки в байтах с учетом завершающего нуль-символа будет помещен в параметр `*``pReturnValue` (при условии, что `pReturnValue` не является `NULL`). Это происходит, даже если аргумент `mbstr` имеет значение `NULL`, что позволяет задать необходимый размер буфера. Обратите внимание, что если `mbstr` — `NULL`, `count` игнорируется.  
+ Если функция `wcsrtombs_s` успешно преобразует исходную строку, то размер преобразованной строки в байтах с учетом завершающего нуль-символа будет помещен в параметр `*pReturnValue` (при условии, что `pReturnValue` не является `NULL`). Это происходит, даже если аргумент `mbstr` имеет значение `NULL`, что позволяет задать необходимый размер буфера. Обратите внимание, что если `mbstr` — `NULL`, `count` игнорируется.  
   
- Если функция `wcsrtombs_s` обнаруживает расширенный символ, который не удается преобразовать в многобайтовый символ, то помещает в `*``pReturnValue` значение -1, устанавливает пустую строку в качестве целевого буфера, устанавливает `errno``EILSEQ` и возвращает `EILSEQ`.  
+ Если функция `wcsrtombs_s` обнаруживает расширенный символ, который не удается преобразовать в многобайтовый символ, то помещает в `*pReturnValue` значение -1, устанавливает пустую строку в качестве целевого буфера, устанавливает `errno``EILSEQ` и возвращает `EILSEQ`.  
   
  Если последовательности, на которые указывают параметры `wcstr` и `mbstr`, перекрываются, то поведение `wcsrtombs_s` не определено. На функцию `wcsrtombs_s` влияет категория LC_TYPE текущего языкового стандарта.  
   

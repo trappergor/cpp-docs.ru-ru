@@ -1,32 +1,30 @@
 ---
-title: "inplace_merge (STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::inplace_merge"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "inplace_merge - функция [STL/CLR]"
+title: "inplace_merge (STL/CLR) | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::inplace_merge
+dev_langs: C++
+helpviewer_keywords: inplace_merge function [STL/CLR]
 ms.assetid: e6948c03-8c5b-4a7c-915c-0a531946a321
-caps.latest.revision: 4
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 4
+caps.latest.revision: "4"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: ad06f2b7917413617adef6a151e75fb848e8da3e
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/24/2017
 ---
-# inplace_merge (STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Объединяет элементы из 2 последовательных упорядоченных диапазонов в один сортируемый диапазон, где критерий упорядочивания может быть указан бинарным предикатом.  
+# <a name="inplacemerge-stlclr"></a>inplace_merge (STL/CLR)
+Объединяет элементы из двух последовательных упорядоченных диапазонов в один упорядоченный диапазон, где критерий порядка сортировки может быть указан бинарным предикатом.  
   
-## Синтаксис  
+## <a name="syntax"></a>Синтаксис  
   
 ```  
 template<class _BidIt> inline  
@@ -36,13 +34,13 @@ template<class _BidIt, class _Pr> inline
         _Pr _Pred);  
 ```  
   
-## Заметки  
- Эта функция работает аналогично функции `inplace_merge` Дополнительные сведения см. в разделе [inplace\_merge](../Topic/inplace_merge.md) STL.  
+## <a name="remarks"></a>Примечания  
+ Эта функция работает так же, как функция стандартной библиотеки C++ `inplace_merge` Дополнительные сведения см. в разделе [inplace_merge](../standard-library/algorithm-functions.md#inplace_merge).  
   
-## Требования  
- **Заголовок:**\<cliext\/algorithm\>  
+## <a name="requirements"></a>Требования  
+ **Заголовок:** \<cliext/алгоритм >  
   
  **Пространство имен:** cliext  
   
-## См. также  
- [algorithm](../Topic/algorithm%20\(STL-CLR\).md)
+## <a name="see-also"></a>См. также  
+ [algorithm (STL/CLR)](../dotnet/algorithm-stl-clr.md)

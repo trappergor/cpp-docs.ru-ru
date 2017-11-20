@@ -1,67 +1,67 @@
 ---
-title: "/MIDL (Указание параметров командной строки MIDL) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "/midl"
-  - "VC.Project.VCLinkerTool.MidlCommandFile"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "/MIDL - параметр компоновщика"
-  - "MIDL"
-  - "MIDL - параметр компоновщика"
-  - "-MIDL - параметр компоновщика"
-  - "MIDL, параметры командной строки"
+title: "-MIDL (указание параметров командной строки MIDL) | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- /midl
+- VC.Project.VCLinkerTool.MidlCommandFile
+dev_langs: C++
+helpviewer_keywords:
+- -MIDL linker option
+- MIDL
+- /MIDL linker option
+- MIDL linker option
+- MIDL, command line options
 ms.assetid: 22dc259e-b34c-4ed3-a380-4beb734482c1
-caps.latest.revision: 8
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: 957d9679c57cd15162c5820ccd7dc41bdea0fa2d
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/24/2017
 ---
-# /MIDL (Указание параметров командной строки MIDL)
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="midl-specify-midl-command-line-options"></a>/MIDL (Указание параметров командной строки MIDL)
 ```  
 /MIDL:@file  
 ```  
   
-## Заметки  
- Здесь:  
+## <a name="remarks"></a>Примечания  
+ где:  
   
  `file`  
- Имя файла, который содержит [Параметры командной строки MIDL](http://msdn.microsoft.com/library/windows/desktop/aa366839).  
+ Имя файла, который содержит [параметров командной строки MIDL](http://msdn.microsoft.com/library/windows/desktop/aa366839).  
   
-## Заметки  
- Все параметры для преобразования IDL\-файла в TLB\-файл должны быть даны в `file`; параметры командной строки MIDL не могут быть указаны в командной строке компоновщика.  Если \/MIDL не указана, компилятор MIDL будет вызываться только с именем IDL\-файла без каких\-либо параметров.  
+## <a name="remarks"></a>Примечания  
+ Все параметры для преобразования IDL-файла в TLB-файл должны быть даны в `file`; Параметры командной строки MIDL нельзя указывать в командной строке компоновщика. Если/MIDL не указан, компилятор MIDL будет вызываться только имя файла IDL и другие параметры.  
   
- Файл должен содержать один параметр командной строки MIDL для каждой строки.  
+ Файл должен содержать один параметр командной строки MIDL каждой строки.  
   
-### Установка данного параметра компоновщика в среде разработки Visual Studio  
+### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>Задание данного параметра компоновщика в среде разработки Visual Studio  
   
-1.  Откройте диалоговое окно **Страницы свойств** проекта.  Дополнительные сведения см. в разделе [Задание свойств проекта C\+\+](../../ide/working-with-project-properties.md).  
+1.  Откройте диалоговое окно **Страницы свойств** проекта. Дополнительные сведения см. в разделе [задание свойств проекта Visual C++](../../ide/working-with-project-properties.md).  
   
-2.  Выберите папку **Компоновщик**.  
+2.  Нажмите кнопку **компоновщика** папки.  
   
-3.  Щелкните страницу свойств **Внедренный IDL**.  
+3.  Нажмите кнопку **внедренный IDL** страницу свойств.  
   
-4.  Измените свойство **Команды MIDL**.  
+4.  Изменить **MIDL-командах** свойство.  
   
-### Установка данного параметра компоновщика программным способом  
+### <a name="to-set-this-linker-option-programmatically"></a>Задание данного параметра компоновщика программным способом  
   
 -   См. раздел <xref:Microsoft.VisualStudio.VCProjectEngine.VCLinkerTool.MidlCommandFile%2A>.  
   
-## См. также  
+## <a name="see-also"></a>См. также  
  [Настройка параметров компоновщика](../../build/reference/setting-linker-options.md)   
  [Параметры компоновщика](../../build/reference/linker-options.md)   
- [\/IDLOUT \(присвоение имен выходным файлам MIDL\)](../Topic/-IDLOUT%20\(Name%20MIDL%20Output%20Files\).md)   
- [\/IGNOREIDL \(не преобразовывать атрибуты в MIDL\)](../../build/reference/ignoreidl-don-t-process-attributes-into-midl.md)   
- [\/TLBOUT \(задание имени TLB\-файла\)](../../build/reference/tlbout-name-dot-tlb-file.md)   
- [Building an Attributed Program](../../windows/building-an-attributed-program.md)
+ [/ IDLOUT (имен выходным файлам MIDL)](../../build/reference/idlout-name-midl-output-files.md)   
+ [/ IGNOREIDL (не преобразовывать атрибуты в MIDL)](../../build/reference/ignoreidl-don-t-process-attributes-into-midl.md)   
+ [/ TLBOUT (имя. TLB-файл)](../../build/reference/tlbout-name-dot-tlb-file.md)   
+ [Сборка атрибутированной программы](../../windows/building-an-attributed-program.md)

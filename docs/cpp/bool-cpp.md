@@ -4,29 +4,26 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-language
+ms.technology: cpp-language
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - bool_cpp
 - __BOOL_DEFINED
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - bool keyword [C++]
 - __BOOL_DEFINED macro
 ms.assetid: 9abed3f2-d21c-4eb4-97c5-716342e613d8
-caps.latest.revision: 9
+caps.latest.revision: "9"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.translationtype: HT
-ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
-ms.openlocfilehash: f2437d831ae155f916b69cc6b35d3b586be9819e
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/25/2017
-
+ms.openlocfilehash: 95027989b2f6d5bc71309530291db2f87f5ed191
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="bool-c"></a>bool (C++)
 Это ключевое слово является встроенным типом. Переменная этого типа может принимать значения [true](../cpp/true-cpp.md) и [false](../cpp/false-cpp.md). Условные выражения имеют тип `bool`, и поэтому имеют значения типа `bool`. Например `i!=0` теперь имеет **true** или **false** в зависимости от значения `i`.  

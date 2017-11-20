@@ -4,27 +4,24 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-language
+ms.technology: cpp-language
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - declaring arrays [C++], about declaring arrays
 - multidimensional arrays [C++]
 - arrays [C++]
 ms.assetid: 3f5986aa-485c-4ba4-9502-67e2ef924238
-caps.latest.revision: 12
+caps.latest.revision: "12"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.translationtype: HT
-ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
-ms.openlocfilehash: efd124254ece8f863afee13e132eea7945525a0e
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/25/2017
-
+ms.openlocfilehash: d925165e7345d715d74cdd213b01d3108be8e35d
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="arrays-c"></a>Массивы (C++)
 Массив — это коллекция похожих объектов. Простейший пример массива — вектор, который может быть объявлен следующей последовательностью:  
@@ -56,7 +53,7 @@ decl-specifier identifier [ constant-expression ]
   
  3. Необязательный инициализатор.  В разделе [инициализаторы](../cpp/initializers.md).  
   
- Количество элементов в массиве задается константным выражением. Первый элемент массива является нулевой элемент, а последний элемент — (*n*-1) элемента, где * n * — количество элементов, которые может содержать массив. *Константное выражение* должен быть целочисленного типа и должно быть больше 0. Массив нулевого размера допустим только в том случае, если массив является последним полем в `struct` или **объединение** и при включенных расширениях Microsoft (/Ze).  
+ Количество элементов в массиве задается константным выражением. Первый элемент массива является нулевой элемент, а последний элемент — (*n*-1) элемента, где  *n*  — количество элементов, которые может содержать массив. *Константное выражение* должен быть целочисленного типа и должно быть больше 0. Массив нулевого размера допустим только в том случае, если массив является последним полем в `struct` или **объединение** и при включенных расширениях Microsoft (/Ze).  
   
  В следующем примере показано, как определить массив во время выполнения.  
   

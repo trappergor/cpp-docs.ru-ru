@@ -4,12 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
-apiname:
-- _get_doserrno
+apiname: _get_doserrno
 apilocation:
 - msvcrt.dll
 - msvcr80.dll
@@ -26,36 +24,20 @@ apitype: DLLExport
 f1_keywords:
 - _get_doserrno
 - get_doserrno
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - get_doserrno function
 - _get_doserrno function
 ms.assetid: 7fec7be3-6e39-4181-846b-8ef24489361c
-caps.latest.revision: 19
+caps.latest.revision: "19"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: 98bad98f3de7c65ea504cac8046900e7689007af
-ms.contentlocale: ru-ru
-ms.lasthandoff: 02/24/2017
-
+ms.openlocfilehash: 67f546afa3059508787c7d3a5295d2b85651f125
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="getdoserrno"></a>_get_doserrno
 Получает значение ошибки, возвращенное операционной системой, до преобразования в значение `errno`.  
@@ -73,7 +55,7 @@ errno_t _get_doserrno(
  Указатель на целое число, в которое должно быть подставлено текущее значение глобального макроса `_doserrno`.  
   
 ## <a name="return-value"></a>Возвращаемое значение  
- Если макрос `_get_doserrno` выполняется успешно, он возвращает значение&0;, в случае сбоя — код ошибки. Если параметр `pValue` имеет значение `NULL`, вызывается обработчик недопустимых параметров, как описано в разделе [Проверка параметров](../../c-runtime-library/parameter-validation.md). Если выполнение может быть продолжено, эта функция задает для `errno` значение `EINVAL` и возвращает `EINVAL`.  
+ Если макрос `_get_doserrno` выполняется успешно, он возвращает значение 0, в случае сбоя — код ошибки. Если параметр `pValue` имеет значение `NULL`, вызывается обработчик недопустимых параметров, как описано в разделе [Проверка параметров](../../c-runtime-library/parameter-validation.md). Если выполнение может быть продолжено, эта функция задает для `errno` значение `EINVAL` и возвращает `EINVAL`.  
   
 ## <a name="remarks"></a>Примечания  
  Глобальный макрос `_doserrno` задается равным нулю во время инициализации CRT (до начала выполнения обработки). Ему присваивается значение ошибки операционной системы, возвращаемое вызовом любой функции уровня системы. Вызов возвращает ошибку операционной системы и никогда не сбрасывается до нуля во время выполнения. При написании кода для проверки значения ошибки, возвращаемого функцией, всегда выполняйте сброс `_doserrno` с помощью функции [_set_doserrno](../../c-runtime-library/reference/set-doserrno.md) до вызова функции. Поскольку другой вызов функции может перезаписать `_doserrno`, проверяйте значения, используя `_get_doserrno` сразу после вызова функции.  

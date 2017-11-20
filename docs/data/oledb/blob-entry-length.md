@@ -1,32 +1,30 @@
 ---
-title: "BLOB_ENTRY_LENGTH | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "BLOB_ENTRY_LENGTH"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "BLOB_ENTRY_LENGTH - макрос"
+title: "BLOB_ENTRY_LENGTH | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: BLOB_ENTRY_LENGTH
+dev_langs: C++
+helpviewer_keywords: BLOB_ENTRY_LENGTH macro
 ms.assetid: 832d21ab-5fdd-49ad-af6e-4fca5722ec93
-caps.latest.revision: 7
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 0de1707ab616aca49061590bfb76bf74360019ba
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/24/2017
 ---
-# BLOB_ENTRY_LENGTH
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Используется с `BEGIN_COLUMN_MAP` и `END_COLUMN_MAP` для привязки большой двоичный объект \([БОЛЬШОЙ ДВОИЧНЫЙ ОБЪЕКТ](https://msdn.microsoft.com/en-us/library/ms711511.aspx)\).  Аналогично [BLOB\_ENTRY](../Topic/BLOB_ENTRY.md), за исключением того, что этот макрос также получает длину в байтах столбцов БОЛЬШИХ ДВОИЧНОГО ОБЪЕКТА.  
+# <a name="blobentrylength"></a>BLOB_ENTRY_LENGTH
+При использовании `BEGIN_COLUMN_MAP` и `END_COLUMN_MAP` для привязки больших двоичных объектов ([больших двоичных ОБЪЕКТОВ](https://msdn.microsoft.com/en-us/library/ms711511.aspx)). Аналогично [BLOB_ENTRY](../../data/oledb/blob-entry.md), за исключением того, что этот макрос также возвращает длину в байтах столбца большого двоичного ОБЪЕКТА.  
   
-## Синтаксис  
+## <a name="syntax"></a>Синтаксис  
   
 ```  
   
@@ -44,33 +42,33 @@ length
   
 ```  
   
-#### Параметры  
+#### <a name="parameters"></a>Параметры  
  `nOrdinal`  
- \[in\] число столбцов.  
+ [in] Номер столбца.  
   
  *IID*  
- \[in\] интерфейс GUID, например **IDD\_ISequentialStream**, используется для извлечения БОЛЬШОЙ ДВОИЧНЫЙ ОБЪЕКТ.  
+ [in] Интерфейс GUID, таких как **IDD_ISequentialStream**, который применяется для получения большого двоичного ОБЪЕКТА.  
   
  `flags`  
- \[in\] флажки Хранилище\- режима заданное OLE составили модель хранения \(например, **STGM\_READ**\).  
+ [in] Режим хранения помечается как определяются моделью структурированного хранения OLE (например, **STGM_READ**).  
   
  `data`  
- \[in\] соответствующий элемент данных в записи пользователя.  
+ [in] Соответствующего члена данных в записи пользователя.  
   
  *length*  
- \[out\]\) \(фактическая длина в байтах столбцов БОЛЬШИХ ДВОИЧНОГО ОБЪЕКТА.  
+ [out] (Фактические) длина в байтах столбца большого двоичного ОБЪЕКТА.  
   
-## Пример  
- В разделе [Как определить, извлечение БОЛЬШОЙ ДВОИЧНЫЙ ОБЪЕКТ?](../../data/oledb/retrieving-a-blob.md).  
+## <a name="example"></a>Пример  
+ В разделе [способ получения большого двоичного ОБЪЕКТА?](../../data/oledb/retrieving-a-blob.md).  
   
-## Требования  
+## <a name="requirements"></a>Требования  
  **Заголовок:** atldbcli.h  
   
-## См. также  
- [Макросы и глобальные функции для шаблонов потребителей OLE DB](../Topic/Macros%20and%20Global%20Functions%20for%20OLE%20DB%20Consumer%20Templates.md)   
- [BEGIN\_COLUMN\_MAP](../Topic/BEGIN_COLUMN_MAP.md)   
- [END\_COLUMN\_MAP](../../data/oledb/end-column-map.md)   
- [COLUMN\_ENTRY](../../data/oledb/column-entry.md)   
- [BLOB\_ENTRY](../Topic/BLOB_ENTRY.md)   
- [BLOB\_ENTRY\_LENGTH\_STATUS](../../data/oledb/blob-entry-length-status.md)   
- [BLOB\_ENTRY\_STATUS](../Topic/BLOB_ENTRY_STATUS.md)
+## <a name="see-also"></a>См. также  
+ [Макросы и глобальные функции для шаблонов потребителей OLE DB](../../data/oledb/macros-and-global-functions-for-ole-db-consumer-templates.md)   
+ [BEGIN_COLUMN_MAP](../../data/oledb/begin-column-map.md)   
+ [END_COLUMN_MAP](../../data/oledb/end-column-map.md)   
+ [COLUMN_ENTRY](../../data/oledb/column-entry.md)   
+ [BLOB_ENTRY](../../data/oledb/blob-entry.md)   
+ [BLOB_ENTRY_LENGTH_STATUS](../../data/oledb/blob-entry-length-status.md)   
+ [BLOB_ENTRY_STATUS](../../data/oledb/blob-entry-status.md)

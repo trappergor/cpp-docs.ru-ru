@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-windows
+ms.technology: cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
@@ -13,35 +12,18 @@ f1_keywords:
 - ATLCOM/ATL::CComClassFactoryAutoThread
 - ATLCOM/ATL::CComClassFactoryAutoThread::CreateInstance
 - ATLCOM/ATL::CComClassFactoryAutoThread::LockServer
-dev_langs:
-- C++
-helpviewer_keywords:
-- CComClassFactoryAutoThread class
+dev_langs: C++
+helpviewer_keywords: CComClassFactoryAutoThread class
 ms.assetid: 22008042-533f-4dd9-bf7e-191ee571f9a1
-caps.latest.revision: 21
+caps.latest.revision: "21"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: d2d39abf526a58b8442107b5ee816f316ae841f5
-ms.openlocfilehash: 88728e6fccc4aea6e8a1f0bbb2811ed299dd4ad9
-ms.contentlocale: ru-ru
-ms.lasthandoff: 03/31/2017
-
+ms.openlocfilehash: dfeadfba46f1dd0b033f3d82571e82c59a449ec9
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="ccomclassfactoryautothread-class"></a>Класс CComClassFactoryAutoThread
 Этот класс реализует [IClassFactory](http://msdn.microsoft.com/library/windows/desktop/ms694364) интерфейса и позволяет создавать в нескольких подразделениях объекты.  
@@ -71,7 +53,7 @@ class CComClassFactoryAutoThread
   
  Объекты ATL обычно получить фабрику класса путем наследования от [CComCoClass](../../atl/reference/ccomcoclass-class.md). Этот класс содержит макрос [DECLARE_CLASSFACTORY](aggregation-and-class-factory-macros.md#declare_classfactory), который объявляет [CComClassFactory](../../atl/reference/ccomclassfactory-class.md) как фабрика класса по умолчанию. Для использования `CComClassFactoryAutoThread`, укажите [DECLARE_CLASSFACTORY_AUTO_THREAD](aggregation-and-class-factory-macros.md#declare_classfactory_auto_thread) макроса в определении класса объекта. Пример:  
   
- [!code-cpp[NVC_ATL_COM #9](../../atl/codesnippet/cpp/ccomclassfactoryautothread-class_1.h)]  
+ [!code-cpp[NVC_ATL_COM#9](../../atl/codesnippet/cpp/ccomclassfactoryautothread-class_1.h)]  
   
 ## <a name="inheritance-hierarchy"></a>Иерархия наследования  
  `CComObjectRootBase`  
@@ -137,4 +119,3 @@ STDMETHODIMP LockServer(BOOL fLock);
  [CComObjectRootEx-класс](../../atl/reference/ccomobjectrootex-class.md)   
  [CComGlobalsThreadModel](atl-typedefs.md#ccomglobalsthreadmodel)   
  [Общие сведения о классе](../../atl/atl-class-overview.md)
-

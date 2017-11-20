@@ -1,75 +1,74 @@
 ---
-title: "/CLRTHREADATTRIBUTE (Установка атрибута потока среды CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "VC.Project.VCLinkerTool.CLRThreadAttribute"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "/CLRTHREADATTRIBUTE - параметр компоновщика"
-  - "-CLRTHREADATTRIBUTE - параметр компоновщика"
+title: "-CLRTHREADATTRIBUTE (установите атрибут потока CLR) | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: VC.Project.VCLinkerTool.CLRThreadAttribute
+dev_langs: C++
+helpviewer_keywords:
+- /CLRTHREADATTRIBUTE linker option
+- -CLRTHREADATTRIBUTE linker option
 ms.assetid: 4907e9ef-5031-446c-aecf-0a0b32fae1e8
-caps.latest.revision: 14
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 14
+caps.latest.revision: "14"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: e928d24c6257bc64303d667e66cd1f968e003450
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/24/2017
 ---
-# /CLRTHREADATTRIBUTE (Установка атрибута потока среды CLR)
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Явно задавать атрибут потока точки входа CLR\-программы.  
+# <a name="clrthreadattribute-set-clr-thread-attribute"></a>/CLRTHREADATTRIBUTE (Установка атрибута потока среды CLR)
+Явно задавать атрибут потока для точки входа CLR-программы.  
   
-## Синтаксис  
+## <a name="syntax"></a>Синтаксис  
   
 ```  
 /CLRTHREADATTRIBUTE:{STA|MTA|NONE}  
 ```  
   
-#### Параметры  
- Многопотоковое подразделение  
+#### <a name="parameters"></a>Параметры  
+ MTA  
  Применяет атрибут MTAThreadAttribute к точке входа программы.  
   
  НЕТ  
- Эквивалентно ситуации, когда не задан параметр \/CLRTHREADATTRIBUTE.  Разрешает CLR задать стандартный атрибут потока.  
+ То же, как не указано /CLRTHREADATTRIBUTE.  Позволяет Common Language Runtime (CLR) задайте атрибут потока по умолчанию.  
   
- Однопотоковое подразделение  
+ STA  
  Применяет атрибут STAThreadAttribute к точке входа программы.  
   
-## Заметки  
- Установка данного атрибута потока допустима только при построении EXE\-файла, поскольку она влияет на точку ввода главного потока.  
+## <a name="remarks"></a>Примечания  
+ Установка атрибута потока допустим только при построении .exe, поскольку она влияет на точку входа для основного потока.  
   
- При использовании точки ввода по умолчанию \(например "main" или "wmain"\) следует указать поточную модель либо с помощью атрибута \/CLRTHREADATTRIBUTE, либо поместив атрибут потока \("STAThreadAttribute" или "MTAThreadAttribute"\) в функцию ввода по умолчанию.  
+ При использовании точкой входа по умолчанию (основной или wmain, например) указать потоковой модели с помощью /CLRTHREADATTRIBUTE или поместив работа с потоками (STAThreadAttribute или MTAThreadAttribute) для атрибута функцию входа по умолчанию.  
   
- При использовании точки ввода, отличной от точки ввода по умолчанию, следует указать поточную модель либо с помощью атрибута \/CLRTHREADATTRIBUTE, либо поместив атрибут потока в функцию ввода, отличную от функции ввода по умолчанию, а затем указав точку ввода, отличную от точки ввода по умолчанию, с помощью атрибута [\/ENTRY](../../build/reference/entry-entry-point-symbol.md).  
+ При использовании точки входа не по умолчанию, укажите потоковой модели при помощи /CLRTHREADATTRIBUTE или поместив threading атрибут функцию входа не по умолчанию, а затем укажите точку входа не по умолчанию с [/Entry](../../build/reference/entry-entry-point-symbol.md) .  
   
- Если потоковая модель, указанная в исходном коде, не согласуется с потоковой моделью, заданной с помощью атрибута \/CLRTHREADATTRIBUTE, компоновщик будет игнорировать атрибут \/CLRTHREADATTRIBUTE и будет применять ту поточную модель, которая задана в исходном коде.  
+ Если потоковая модель, указанная в исходном коде, не совпадает с потоковая модель, указанная с /CLRTHREADATTRIBUTE, компоновщик будет игнорировать атрибут/CLRTHREADATTRIBUTE и примените потоковая модель, указанная в исходном коде.  
   
- Необходимо использовать однопоточную модель, например, в том случае, если CLR\-программа содержит объект СОМ, который использует однопоточную модель.  Если CLR\-программа использует многопоточную модель, она не может содержать объекты СОМ, использующие однопоточную модель.  
+ Он будет необходимо использовать однопоточную, например, если COM-объект, который использует однопоточную размещаются CLR-программы.  Если CLR-программа использует многопоточную, COM-объект, который использует однопоточную невозможно разместить.  
   
-### Установка данного параметра компоновщика в среде разработки Visual Studio  
+### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>Задание данного параметра компоновщика в среде разработки Visual Studio  
   
-1.  Откройте диалоговое окно **Страницы свойств** проекта.  Дополнительные сведения см. в разделе [Открытие свойств страниц проекта](../../misc/how-to-open-project-property-pages.md).  
+1.  Откройте диалоговое окно **Страницы свойств** проекта. Дополнительные сведения см. в разделе [работа со свойствами проекта](../../ide/working-with-project-properties.md).  
   
-2.  Разверните узел **Свойства конфигурации**.  
+2.  Разверните **свойства конфигурации** узла.  
   
-3.  Разверните узел **Компоновщик**.  
+3.  Разверните **компоновщика** узла.  
   
-4.  Выберите страницу свойств **Дополнительно**.  
+4.  Выберите **Дополнительно** страницу свойств.  
   
-5.  Измените значение свойства **Атрибут потока среды CLR**.  
+5.  Изменить **атрибут потока CLR** свойство.  
   
-### Установка данного параметра компоновщика программным способом  
+### <a name="to-set-this-linker-option-programmatically"></a>Задание данного параметра компоновщика программным способом  
   
 1.  См. раздел <xref:Microsoft.VisualStudio.VCProjectEngine.VCLinkerTool.CLRThreadAttribute%2A>.  
   
-## См. также  
+## <a name="see-also"></a>См. также  
  [Настройка параметров компоновщика](../../build/reference/setting-linker-options.md)   
  [Параметры компоновщика](../../build/reference/linker-options.md)

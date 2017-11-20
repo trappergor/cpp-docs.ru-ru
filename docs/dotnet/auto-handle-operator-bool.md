@@ -1,48 +1,47 @@
 ---
-title: "auto_handle::operator bool | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "auto_handle.operator bool"
-  - "msclr.auto_handle.operator bool"
-  - "operator bool"
-  - "msclr::auto_handle::operator bool"
-  - "auto_handle::operator bool"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "auto_handle::operator bool"
+title: "auto_handle::operator bool | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords:
+- auto_handle.operator bool
+- msclr.auto_handle.operator bool
+- operator bool
+- msclr::auto_handle::operator bool
+- auto_handle::operator bool
+dev_langs: C++
+helpviewer_keywords: auto_handle::operator bool
 ms.assetid: 2e535e99-cf87-4008-b588-02c587d77453
-caps.latest.revision: 12
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 10
+caps.latest.revision: "12"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 45454de445b0f8304a78e46a098e23173bb9889f
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/24/2017
 ---
-# auto_handle::operator bool
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="autohandleoperator-bool"></a>auto_handle::operator bool
 Оператор для использования `auto_handle` в условном выражении.  
   
-## Синтаксис  
+## <a name="syntax"></a>Синтаксис  
   
 ```  
 operator bool();  
 ```  
   
-## Возвращаемое значение  
- `true` если от программу\-оболочку объект является допустимым; `false` в противном случае.  
+## <a name="return-value"></a>Возвращаемое значение  
+ `true`Если инкапсулированный объект, который является допустимым; `false` в противном случае.  
   
-## Заметки  
- Этот оператор не может быть преобразовано в значение `_detail_class::_safe_bool`, более безопасным, чем `bool`, поскольку он не может быть преобразован в целочисленный тип.  
+## <a name="remarks"></a>Примечания  
+ Этот оператор фактически преобразует `_detail_class::_safe_bool` которого является более безопасным, чем `bool` , так как его невозможно преобразовать в целочисленный тип.  
   
-## Пример  
+## <a name="example"></a>Пример  
   
 ```  
 // msl_auto_handle_operator_bool.cpp  
@@ -65,14 +64,17 @@ int main() {
 }  
 ```  
   
-  **s1 недопустим**  
-**допустимо s2**  
-**теперь s2 недопустимо**   
-## Требования  
- **Файл заголовка**\<msclr\\auto\_handle.h\>  
+```Output  
+s1 is invalid  
+s2 is valid  
+s2 is now invalid  
+```  
+  
+## <a name="requirements"></a>Требования  
+ **Файл заголовка** \<msclr\auto_handle.h >  
   
  **Пространство имен** msclr  
   
-## См. также  
- [Члены auto\_handle](../dotnet/auto-handle-members.md)   
- [auto\_handle::operator\!](../dotnet/auto-handle-operator-logical-not.md)
+## <a name="see-also"></a>См. также  
+ [Члены auto_handle](../dotnet/auto-handle-members.md)   
+ [auto_handle::operator!](../dotnet/auto-handle-operator-logical-not.md)

@@ -1,37 +1,37 @@
 ---
-title: "ICommandImpl::ICommandImpl | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "ATL.ICommandImpl.ICommandImpl"
-  - "ATL::ICommandImpl::ICommandImpl"
-  - "ICommandImpl"
-  - "ICommandImpl::ICommandImpl"
-  - "ICommandImpl.ICommandImpl"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "ICommandImpl - класс, конструктор"
-  - "ICommandImpl - конструктор"
+title: "ICommandImpl::ICommandImpl | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- ATL.ICommandImpl.ICommandImpl
+- ATL::ICommandImpl::ICommandImpl
+- ICommandImpl
+- ICommandImpl::ICommandImpl
+- ICommandImpl.ICommandImpl
+dev_langs: C++
+helpviewer_keywords:
+- ICommandImpl constructor
+- ICommandImpl class, constructor
 ms.assetid: 5dbf0716-785e-4db8-b36f-9e34364f7ac9
-caps.latest.revision: 8
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: ccbaa7e7ff4029c0ff6f0a8b4e1b9b9f4326da02
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/24/2017
 ---
-# ICommandImpl::ICommandImpl
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="icommandimplicommandimpl"></a>ICommandImpl::ICommandImpl
 Конструктор.  
   
-## Синтаксис  
+## <a name="syntax"></a>Синтаксис  
   
 ```  
   
@@ -39,8 +39,8 @@ ICommandImpl( );
   
 ```  
   
-## Требования  
- **Header:** atldb.h  
+## <a name="requirements"></a>Требования  
+ **Заголовок:** atldb.h  
   
-## См. также  
- [Класс ICommandImpl](../Topic/ICommandImpl%20Class.md)
+## <a name="see-also"></a>См. также  
+ [Класс ICommandImpl](../../data/oledb/icommandimpl-class.md)

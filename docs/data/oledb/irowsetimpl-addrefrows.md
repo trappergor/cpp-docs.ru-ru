@@ -1,36 +1,35 @@
 ---
-title: "IRowsetImpl::AddRefRows | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "IRowsetImpl::AddRefRows"
-  - "AddRefRows"
-  - "IRowsetImpl.AddRefRows"
-  - "ATL::IRowsetImpl::AddRefRows"
-  - "ATL.IRowsetImpl.AddRefRows"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "AddRefRows - метод"
+title: "IRowsetImpl::AddRefRows | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- IRowsetImpl::AddRefRows
+- AddRefRows
+- IRowsetImpl.AddRefRows
+- ATL::IRowsetImpl::AddRefRows
+- ATL.IRowsetImpl.AddRefRows
+dev_langs: C++
+helpviewer_keywords: AddRefRows method
 ms.assetid: adc0989b-7592-432e-82d9-df4445431531
-caps.latest.revision: 8
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: b890d549b6173982d4b63885f0a4ea5bf16e0007
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/24/2017
 ---
-# IRowsetImpl::AddRefRows
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="irowsetimpladdrefrows"></a>IRowsetImpl::AddRefRows
 Добавляет счетчик ссылок в дескриптор существующей строки.  
   
-## Синтаксис  
+## <a name="syntax"></a>Синтаксис  
   
 ```  
   
@@ -42,14 +41,14 @@ caps.handback.revision: 8
 );  
 ```  
   
-#### Параметры  
- В разделе [IRowset::AddRefRows](https://msdn.microsoft.com/en-us/library/ms719619.aspx) справочника *программиста OLE DB*.  
+#### <a name="parameters"></a>Параметры  
+ В разделе [IRowset::AddRefRows](https://msdn.microsoft.com/en-us/library/ms719619.aspx) в *справочника программиста OLE DB*.  
   
-## Требования  
- **Header:** atldb.h  
+## <a name="requirements"></a>Требования  
+ **Заголовок:** atldb.h  
   
-## См. также  
- [Класс IRowsetImpl](../Topic/IRowsetImpl%20Class.md)   
+## <a name="see-also"></a>См. также  
+ [Класс IRowsetImpl](../../data/oledb/irowsetimpl-class.md)   
  [IRowsetImpl::RefRows](../../data/oledb/irowsetimpl-refrows.md)   
  [IRowsetImpl::GetNextRows](../../data/oledb/irowsetimpl-getnextrows.md)   
  [IRowsetImpl::ReleaseRows](../../data/oledb/irowsetimpl-releaserows.md)

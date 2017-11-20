@@ -4,28 +4,24 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-language
+ms.technology: cpp-language
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-f1_keywords:
-- __hook_cpp
-dev_langs:
-- C++
+f1_keywords: __hook_cpp
+dev_langs: C++
 helpviewer_keywords:
 - __hook keyword [C++]
 - event handlers [C++], connecting events to
 ms.assetid: f4cabb10-d293-4c0e-a1d2-4745ef9cc22c
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.translationtype: HT
-ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
-ms.openlocfilehash: 21bb75853d8664ad46bc48fc907946ae5a147f9a
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/25/2017
-
+ms.openlocfilehash: 98a18a7e145a2b23b13e38bd07d5b29c5a397d6f
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="hook"></a>__hook
 Связывает метод обработчика с событием.  
@@ -86,7 +82,7 @@ long __hook(
 ## <a name="remarks"></a>Примечания  
  С помощью встроенной функции `__hook` в приемнике событий можно связать или присоединить метод обработчика к методу события. Затем, когда этот источник вызывает указанное событие, вызывается указанный обработчик. Можно подключить несколько обработчиков к одному событию или несколько событий к одному обработчику.  
   
- Существует две формы `__hook`. Можно использовать первую форму (четыре аргумента) в большинстве случаев, в частности, для приемников событий COM, в котором *layout_dependent* параметр [event_receiver](../windows/event-receiver.md) атрибут **false **.  
+ Существует две формы `__hook`. Можно использовать первую форму (четыре аргумента) в большинстве случаев, в частности, для приемников событий COM, в котором *layout_dependent* параметр [event_receiver](../windows/event-receiver.md) атрибут **false** .  
   
  В таких случаях не требуется присоединять все методы в интерфейсе перед порождением события в одном из методов; достаточно присоединить только метод, обрабатывающий событие. Можно использовать второй форме (с двумя аргументами) `__hook` только для приемника событий COM, в котором *layout_dependent***= true**.  
   

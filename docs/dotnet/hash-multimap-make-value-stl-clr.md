@@ -1,48 +1,46 @@
 ---
-title: "hash_multimap::make_value (STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::hash_multimap::make_value"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "make_value - элемент [STL/CLR]"
+title: "hash_multimap::make_value (STL/CLR) | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::hash_multimap::make_value
+dev_langs: C++
+helpviewer_keywords: make_value member [STL/CLR]
 ms.assetid: 300fb6ec-98c8-48d5-8626-0646878a8462
-caps.latest.revision: 15
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 13
+caps.latest.revision: "15"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 53fee6b9e1f77e7892e19a11976de4d4cb039aaf
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/24/2017
 ---
-# hash_multimap::make_value (STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Создает объект значение.  
+# <a name="hashmultimapmakevalue-stlclr"></a>hash_multimap::make_value (STL/CLR)
+Создает объект значения.  
   
-## Синтаксис  
+## <a name="syntax"></a>Синтаксис  
   
 ```  
 static value_type make_value(key_type key, mapped_type mapped);  
 ```  
   
-#### Параметры  
- key  
- Значение ключа, который следует использовать.  
+#### <a name="parameters"></a>Параметры  
+ клавиша  
+ Значение ключа для использования.  
   
- сопоставленного  
- Сопоставляемое значение, которое необходимо найти.  
+ Сопоставить  
+ Сопоставленное значение для поиска.  
   
-## Заметки  
- Функция\-член возвращает объект `value_type` ключ которого `key`, а сопоставленной значение `mapped`.  Он используется, формирующих объект, подходящий для использования с несколькими функциях\-членах.  
+## <a name="remarks"></a>Примечания  
+ Функция-член возвращает `value_type` объекта, ключ которого является `key` и сопоставленные, значение которого является `mapped`. Используется для создания объекта можно использовать с несколько других функций-членов.  
   
-## Пример  
+## <a name="example"></a>Пример  
   
 ```  
 // cliext_hash_multimap_make_value.cpp   
@@ -66,14 +64,17 @@ int main()
   
 ```  
   
-  **\[1\] \[2\] \[BC — 3\]**   
-## Требования  
- **Заголовок:**\<cliext\/hash\_map\>  
+```Output  
+[a 1] [b 2] [c 3]  
+```  
+  
+## <a name="requirements"></a>Требования  
+ **Заголовок:** \<cliext/hash_map >  
   
  **Пространство имен:** cliext  
   
-## См. также  
- [hash\_multimap](../dotnet/hash-multimap-stl-clr.md)   
- [hash\_multimap::key\_type](../dotnet/hash-multimap-key-type-stl-clr.md)   
- [hash\_multimap::mapped\_type](../Topic/hash_multimap::mapped_type%20\(STL-CLR\).md)   
- [hash\_multimap::value\_type](../dotnet/hash-multimap-value-type-stl-clr.md)
+## <a name="see-also"></a>См. также  
+ [hash_multimap (STL/CLR)](../dotnet/hash-multimap-stl-clr.md)   
+ [hash_multimap::key_type (STL/CLR)](../dotnet/hash-multimap-key-type-stl-clr.md)   
+ [hash_multimap::mapped_type (STL/CLR)](../dotnet/hash-multimap-mapped-type-stl-clr.md)   
+ [hash_multimap::value_type (STL/CLR)](../dotnet/hash-multimap-value-type-stl-clr.md)

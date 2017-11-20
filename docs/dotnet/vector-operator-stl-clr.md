@@ -1,45 +1,43 @@
 ---
-title: "vector::operator(STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::vector::operator[]"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "operatormember [] [STL/CLR]"
+title: "Vector::operator(STL/CLR) | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::vector::operator[]
+dev_langs: C++
+helpviewer_keywords: operatormember [] [STL/CLR]
 ms.assetid: 379a7029-460d-4de8-918b-c79e3e13b9d4
-caps.latest.revision: 17
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 15
+caps.latest.revision: "17"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 73d58a8e1c4a677a248c0a4af90199fd50b36d56
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/24/2017
 ---
-# vector::operator(STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Получает элемент в указанной позиции.  
+# <a name="vectoroperatorstlclr"></a>vector::operator(STL/CLR)
+Обращается к элементу в указанной позиции.  
   
-## Синтаксис  
+## <a name="syntax"></a>Синтаксис  
   
 ```  
 reference operator[](size_type pos);  
 ```  
   
-#### Параметры  
+#### <a name="parameters"></a>Параметры  
  pos  
- Положение элемента, к которому необходимо получить доступ.  
+ Позиция элемента, к которому осуществляется доступ.  
   
-## Заметки  
- Оператор возвращает referene члена к элементу в позиции `pos`.  Он используется для получения элемент положение которого известно.  
+## <a name="remarks"></a>Примечания  
+ Оператор-член возвращает referene на элемент в позиции `pos`. Используется для доступа к элементу, позиция которого известно.  
   
-## Пример  
+## <a name="example"></a>Пример  
   
 ```  
 // cliext_vector_operator_sub.cpp   
@@ -68,13 +66,16 @@ int main()
   
 ```  
   
-  **a b c**  
- **x C.**   
-## Требования  
- **Заголовок:**\<cliext\/vector\>  
+```Output  
+a b c  
+a x c  
+```  
+  
+## <a name="requirements"></a>Требования  
+ **Заголовок:** \<cliext/vector >  
   
  **Пространство имен:** cliext  
   
-## См. также  
- [вектор](../dotnet/vector-stl-clr.md)   
- [vector::at](../dotnet/vector-at-stl-clr.md)
+## <a name="see-also"></a>См. также  
+ [вектор (STL/CLR)](../dotnet/vector-stl-clr.md)   
+ [vector::at (STL/CLR)](../dotnet/vector-at-stl-clr.md)

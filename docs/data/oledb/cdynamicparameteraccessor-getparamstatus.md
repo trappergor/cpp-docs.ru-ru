@@ -1,36 +1,35 @@
 ---
-title: "CDynamicParameterAccessor::GetParamStatus | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "CDynamicParameterAccessor::GetParamStatus"
-  - "CDynamicParameterAccessor.GetParamStatus"
-  - "ATL.CDynamicParameterAccessor.GetParamStatus"
-  - "ATL::CDynamicParameterAccessor::GetParamStatus"
-  - "GetParamStatus"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "GetParamStatus - метод"
+title: "CDynamicParameterAccessor::GetParamStatus | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- CDynamicParameterAccessor::GetParamStatus
+- CDynamicParameterAccessor.GetParamStatus
+- ATL.CDynamicParameterAccessor.GetParamStatus
+- ATL::CDynamicParameterAccessor::GetParamStatus
+- GetParamStatus
+dev_langs: C++
+helpviewer_keywords: GetParamStatus method
 ms.assetid: 9300225a-616c-4a7d-82d0-8c2ecd4d8185
-caps.latest.revision: 8
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 483a6b8aea87d552d1397f70222323fbe8514747
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/24/2017
 ---
-# CDynamicParameterAccessor::GetParamStatus
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Извлекает состояние указанного параметра, хранящиеся в буфере.  
+# <a name="cdynamicparameteraccessorgetparamstatus"></a>CDynamicParameterAccessor::GetParamStatus
+Получает состояние указанного параметра, сохраненного в буфере.  
   
-## Синтаксис  
+## <a name="syntax"></a>Синтаксис  
   
 ```  
   
@@ -38,23 +37,23 @@ caps.handback.revision: 8
    DBORDINAL nParam,  
    DBSTATUS* pStatus  
 );  
-DBSTATUS* GetParamStatus(   
-   DBORDINAL nParam    
+DBSTATUS* GetParamStatus(   
+   DBORDINAL nParam    
 ) const throw( );  
 ```  
   
-#### Параметры  
+#### <a name="parameters"></a>Параметры  
  `nParam`  
- \[in\] параметр \(начиная с 1\).  Параметр 0 зарезервировано для возвращаемых значений.  Параметр индекс параметра на основании своего порядке в вызове SQL или хранимой процедуры.  Пример см. в разделе [SetParam](../../data/oledb/cdynamicparameteraccessor-setparam.md).  
+ [in] Номер параметра (начиная с 1). Параметр 0 зарезервирован для возвращаемых значений. Параметр с номером — это индекс параметра, в зависимости от порядка в SQL или хранимой процедуры. В разделе [SetParam](../../data/oledb/cdynamicparameteraccessor-setparam.md) в качестве примера.  
   
  `pStatus`  
- \[out\] указатель на переменную, содержащую состояние `DBSTATUS` указанного параметра.  Сведения о значениях `DBSTATUS` см. в разделе [Состояние](https://msdn.microsoft.com/en-us/library/ms722617.aspx) справочника *программиста OLE* DB или поиск `DBSTATUS` в oledb.h.  
+ [out] Указатель на переменную, содержащую `DBSTATUS` состояние указанного параметра. Сведения о `DBSTATUS` значения, в разделе [состояние](https://msdn.microsoft.com/en-us/library/ms722617.aspx) в *Справочник программиста OLE DB*, или выполните поиск `DBSTATUS` в oledb.h.  
   
-## Заметки  
- Первое переопределения возвращается **true** в успехе или **false** при сбое.  Второе переопределение указывает на память, содержащий состояние указанного параметра.  
+## <a name="remarks"></a>Примечания  
+ Первый переопределить возвращает **true** в случае успешного выполнения или **false** при сбое. Второй переопределить точек памяти, содержащей состояние указанного параметра.  
   
-## Требования  
+## <a name="requirements"></a>Требования  
  **Заголовок:** atldbcli.h  
   
-## См. также  
+## <a name="see-also"></a>См. также  
  [Класс CDynamicParameterAccessor](../../data/oledb/cdynamicparameteraccessor-class.md)

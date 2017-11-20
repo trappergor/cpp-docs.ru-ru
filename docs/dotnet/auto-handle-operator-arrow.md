@@ -1,45 +1,43 @@
 ---
-title: "auto_handle::operator-&gt; | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "msclr::auto_handle::operator->"
-  - "auto_handle.operator->"
-  - "auto_handle::operator->"
-  - "msclr.auto_handle.operator->"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "auto_handle::operator->"
+title: "auto_handle::operator -&gt; | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords:
+- msclr::auto_handle::operator->
+- auto_handle.operator->
+- auto_handle::operator->
+- msclr.auto_handle.operator->
+dev_langs: C++
+helpviewer_keywords: auto_handle::operator->
 ms.assetid: c8c7a771-ea15-41fa-981a-065b8d1162b4
-caps.latest.revision: 10
-caps.handback.revision: 8
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "10"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 06b663caf838c9ee828012fd70f568b5bf456586
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/24/2017
 ---
-# auto_handle::operator-&gt;
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Оператор доступа к члену.  
+# <a name="autohandleoperator-gt"></a>auto_handle::operator-&gt;
+Оператор доступа к членам.  
   
-## Синтаксис  
+## <a name="syntax"></a>Синтаксис  
   
 ```  
 _element_type ^ operator->();  
 ```  
   
-## Возвращаемое значение  
- Объект, заключенный в оболочку с помощью `auto_handle`.  
+## <a name="return-value"></a>Возвращаемое значение  
+ Объект, который является оболочкой для `auto_handle`.  
   
-## Пример  
+## <a name="example"></a>Пример  
   
 ```  
 // msl_auto_handle_op_arrow.cpp  
@@ -71,13 +69,16 @@ int main() {
 }  
 ```  
   
-  **Hello от первого суффикса\!**  
-**\_i\>ЦЕНТРАЛЬНОГО \= 5.**   
-## Требования  
- **Файл заголовка**\<msclr\\auto\_handle.h\>  
+```Output  
+Hello from first A!  
+a->m_i = 5  
+```  
+  
+## <a name="requirements"></a>Требования  
+ **Файл заголовка** \<msclr\auto_handle.h >  
   
  **Пространство имен** msclr  
   
-## См. также  
- [Члены auto\_handle](../dotnet/auto-handle-members.md)   
- [auto\_handle::get](../dotnet/auto-handle-get.md)
+## <a name="see-also"></a>См. также  
+ [Члены auto_handle](../dotnet/auto-handle-members.md)   
+ [auto_handle::get](../dotnet/auto-handle-get.md)

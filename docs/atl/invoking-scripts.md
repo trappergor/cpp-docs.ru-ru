@@ -1,46 +1,46 @@
 ---
-title: "Invoking Scripts | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "StringRegister"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "скрипты, invoking registry in ATL"
-  - "StringRegister method"
+title: "Вызов скрипты (ATL) | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: StringRegister
+dev_langs: C++
+helpviewer_keywords:
+- StringRegister method
+- scripts, invoking registry in ATL
 ms.assetid: eabd41ee-586b-4266-9e92-5aaad04b73a4
-caps.latest.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 5
+caps.latest.revision: "10"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: c1fc6893b02dccff6bb30d7a20d1a2c1dce9fbb1
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/24/2017
 ---
-# Invoking Scripts
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+# <a name="invoking-scripts"></a>Вызов скриптов
+[Использование подстановочных параметров (препроцессор регистратора)](../atl/using-replaceable-parameters-the-registrar-s-preprocessor.md) рассматриваются замены карты и указывается метод регистратора **AddReplacement**. Регистратор имеет восемь других методов, определенных в построении сценариев, и все описаны в следующей таблице.  
+  
+|Метод|Описание синтаксиса|  
+|------------|-------------------------|  
+|**ResourceRegister**|**Значение HRESULT ResourceRegister (LPCOLESTR***resFileName* **, UINT** `nID` **, LPCOLESTR** `szType` **);** <br /><br /> Регистрирует скрипт, содержащийся в модуле ресурсов. *resFileName* указывает путь UNC к сам модуль. `nID`и `szType` содержат ИД ресурса и типом, соответственно.|  
+|**ResourceUnregister**|**Значение HRESULT ResourceUnregister (LPCOLESTR***resFileName* **, UINT** `nID` **, LPCOLESTR** `szType` **);** <br /><br /> Отменяет регистрацию скрипт, содержащийся в модуле ресурсов. *resFileName* указывает путь UNC к сам модуль. `nID`и `szType` содержат ИД ресурса и типом, соответственно.|  
+|**ResourceRegisterSz**|**Значение HRESULT ResourceRegisterSz (LPCOLESTR***resFileName* **, LPCOLESTR***szID* **, LPCOLESTR** `szType` **);** <br /><br /> Регистрирует скрипт, содержащийся в модуле ресурсов. *resFileName* указывает путь UNC к сам модуль. *szID* и `szType` содержат строковый идентификатор ресурса и типом, соответственно.|  
+|**ResourceUnregisterSz**|**Значение HRESULT ResourceUnregisterSz (LPCOLESTR***resFileName* **, LPCOLESTR***szID* **, LPCOLESTR** `szType` **);** <br /><br /> Отменяет регистрацию скрипт, содержащийся в модуле ресурсов. *resFileName* указывает путь UNC к сам модуль. *szID* и `szType` содержат строковый идентификатор ресурса и типом, соответственно.|  
+|**FileRegister**|**Значение HRESULT FileRegister (LPCOLESTR***fileName***);** <br /><br /> Регистрирует скрипт в файле. *Имя файла* является UNC-путь в файл, содержащий (или) сценария ресурса.|  
+|**FileUnregister**|**Значение HRESULT FileUnregister (LPCOLESTR***fileName***);** <br /><br /> Отменяет регистрацию скрипт в файл. *Имя файла* является UNC-путь в файл, содержащий (или) сценария ресурса.|  
+|**StringRegister**|**Значение HRESULT StringRegister (LPCOLESTR***данные***);** <br /><br /> Регистрирует скрипт в строке. *данные* содержит сам скрипт.|  
+|**StringUnregister**|**Значение HRESULT StringUnregister (LPCOLESTR***данные***);** <br /><br /> Отменяет регистрацию скрипта в строке. *данные* содержит сам скрипт.|  
+  
+ **ResourceRegisterSz** и **ResourceUnregisterSz**, похожи на **ResourceRegister** и **ResourceUnregister**, но позволяют указать Идентификатор строки.  
+  
+ Методы **FileRegister** и **FileUnregister** полезны, если не требуется, чтобы скрипт в виде ресурса, или если требуется скрипт в отдельном файле. Методы **StringRegister** и **StringUnregister** разрешить RGS-файл должен храниться в динамически выделенные строки.  
+  
+## <a name="see-also"></a>См. также  
+ [Создание скриптов регистратора](../atl/creating-registrar-scripts.md)
 
-[Использование подстановочных параметров \(препроцессор регистратора\)](../atl/using-replaceable-parameters-the-registrar-s-preprocessor.md) описывает сопоставления замены и упоминает метод **AddReplacement** регистратора.  Регистратор принимает 8 других методов, определенных в сценарии и описаны в следующей таблице.  
-  
-|Метод|Синтаксис и описание|  
-|-----------|--------------------------|  
-|**ResourceRegister**|**HRESULT ResourceRegister\( LPCOLESTR**  *resFileName* **, UINT**  `nID` **, LPCOLESTR**  `szType` **\);**<br /><br /> Регистрирует скрипт, содержащихся в ресурсе модуля.  Указывает путь в формате unc *resFileName* самого к модулю.  `nID` и `szType` содержат идентификатор и тип ресурса, соответственно.|  
-|**ResourceUnregister**|**HRESULT ResourceUnregister\( LPCOLESTR**  *resFileName* **, UINT**  `nID` **, LPCOLESTR**  `szType` **\);**<br /><br /> Отменяет регистрацию скрипт, содержащихся в ресурсе модуля.  Указывает путь в формате unc *resFileName* самого к модулю.  `nID` и `szType` содержат идентификатор и тип ресурса, соответственно.|  
-|**ResourceRegisterSz**|**HRESULT ResourceRegisterSz\( LPCOLESTR**  *resFileName* **, LPCOLESTR**  *szID* **, LPCOLESTR**  `szType` **\);**<br /><br /> Регистрирует скрипт, содержащихся в ресурсе модуля.  Указывает путь в формате unc *resFileName* самого к модулю.  *szID* и `szType` содержат идентификатор и тип строки ресурсов соответственно.|  
-|**ResourceUnregisterSz**|**HRESULT ResourceUnregisterSz\( LPCOLESTR**  *resFileName* **, LPCOLESTR**  *szID* **, LPCOLESTR**  `szType` **\);**<br /><br /> Отменяет регистрацию скрипт, содержащихся в ресурсе модуля.  Указывает путь в формате unc *resFileName* самого к модулю.  *szID* и `szType` содержат идентификатор и тип строки ресурсов соответственно.|  
-|**FileRegister**|**HRESULT FileRegister\( LPCOLESTR**  *fileName*  **\);**<br /><br /> Регистрирует скрипт в файле.  *имя файла*  путь в формате unc к файлу, содержащему \(или\) скрипт ресурса.|  
-|**FileUnregister**|**HRESULT FileUnregister\( LPCOLESTR**  *fileName*  **\);**<br /><br /> Отменяет регистрацию скрипт в файле.  *имя файла*  путь в формате unc к файлу, содержащему \(или\) скрипт ресурса.|  
-|**StringRegister**|**HRESULT StringRegister\( LPCOLESTR**  *data*  **\);**<br /><br /> Регистрирует скрипт в строке.  *данные*  содержат скриптов.|  
-|**StringUnregister**|**HRESULT StringUnregister\( LPCOLESTR**  *data*  **\);**<br /><br /> Отменяет регистрацию скрипт в строке.  *данные*  содержат скриптов.|  
-  
- **ResourceRegisterSz** и **ResourceUnregisterSz**, похожи на **ResourceRegister** и **ResourceUnregister**, но позволяют указать идентификатор строки.  
-  
- Методы **FileRegister** и **FileUnregister** полезны, если не нужно, чтобы в ресурсе скрипт или скрипт в отдельном файле.  Методы **StringRegister** и **StringUnregister** позволяют файл .rgs, сохраняемый в динамически выбранной строки.  
-  
-## См. также  
- [Creating Registrar Scripts](../Topic/Creating%20Registrar%20Scripts.md)

@@ -1,41 +1,39 @@
 ---
-title: "list::reverse_iterator (STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::list::reverse_iterator"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "reverse_iterator - элемент [STL/CLR]"
+title: "List::reverse_iterator (STL/CLR) | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::list::reverse_iterator
+dev_langs: C++
+helpviewer_keywords: reverse_iterator member [STL/CLR]
 ms.assetid: 56853ed8-cb12-41d7-98b2-c511cd77945d
-caps.latest.revision: 16
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 14
+caps.latest.revision: "16"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: f502843c1bb97128af22dcfb0e18ee92ef0746fd
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/24/2017
 ---
-# list::reverse_iterator (STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Тип обратного итератора для контролируемой последовательности.  
+# <a name="listreverseiterator-stlclr"></a>list::reverse_iterator (STL/CLR)
+Тип обратного итератора для управляемой последовательности.  
   
-## Синтаксис  
+## <a name="syntax"></a>Синтаксис  
   
 ```  
 typedef T3 reverse_iterator;  
 ```  
   
-## Заметки  
- Описывает тип объекта неспецифицированного типа `T3`, который можно использовать в качестве обратного итератор для контролируемой последовательности.  
+## <a name="remarks"></a>Примечания  
+ Тип описывает объект незаданного типа `T3` , можно использовать в качестве обратного итератора для управляемой последовательности.  
   
-## Пример  
+## <a name="example"></a>Пример  
   
 ```  
 // cliext_list_reverse_iterator.cpp   
@@ -66,15 +64,18 @@ int main()
   
 ```  
   
-  **a B C.**  
- **x a B**   
-## Требования  
- **Заголовок:**\<cliext\/list\>  
+```Output  
+c b a  
+x b a  
+```  
+  
+## <a name="requirements"></a>Требования  
+ **Заголовок:** \<cliext/list >  
   
  **Пространство имен:** cliext  
   
-## См. также  
- [list](../dotnet/list-stl-clr.md)   
- [list::const\_iterator](../dotnet/list-const-iterator-stl-clr.md)   
- [list::const\_reverse\_iterator](../dotnet/list-const-reverse-iterator-stl-clr.md)   
- [list::iterator](../dotnet/list-iterator-stl-clr.md)
+## <a name="see-also"></a>См. также  
+ [список (STL/CLR)](../dotnet/list-stl-clr.md)   
+ [List::const_iterator (STL/CLR)](../dotnet/list-const-iterator-stl-clr.md)   
+ [List::const_reverse_iterator (STL/CLR)](../dotnet/list-const-reverse-iterator-stl-clr.md)   
+ [list::iterator (STL/CLR)](../dotnet/list-iterator-stl-clr.md)

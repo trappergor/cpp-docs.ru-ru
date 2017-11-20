@@ -1,31 +1,30 @@
 ---
-title: "Класс CMyProviderWindowsFile | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "cmyproviderwindowsfile"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "CMyProviderWindowsFile - класс"
-  - "поставщики OLE DB, файлы, созданные мастером"
+title: "CMyProviderWindowsFile | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: cmyproviderwindowsfile
+dev_langs: C++
+helpviewer_keywords:
+- CMyProviderWindowsFile class
+- OLE DB providers, wizard-generated files
 ms.assetid: 0e9e72ac-1e1e-445f-a7ac-690c20031f9d
-caps.latest.revision: 6
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 6
+caps.latest.revision: "6"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 63143532c5f5ad770c6234a24fbedf1b478ba143
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/24/2017
 ---
-# Класс CMyProviderWindowsFile
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-С помощью мастера создается класс `CMyProviderWindowsFile`, который содержит одну строку данных.  Приведенный ниже код класса `CMyProviderWindowsFile` автоматически создается с помощью мастера и используется для перечисления всех файлов в каталоге с использованием структуры **WIN32\_FIND\_DATA**.  Класс `CMyProviderWindowsFile` наследуется от структуры **WIN32\_FIND\_DATA**:  
+# <a name="cmyproviderwindowsfile"></a>Класс CMyProviderWindowsFile
+Мастер создает класс, содержащий одну строку данных. в этом случае вызывается `CMyProviderWindowsFile`. В следующем коде для `CMyProviderWindowsFile` — созданный мастером и выводит все файлы в каталоге с помощью **WIN32_FIND_DATA** структуры. `CMyProviderWindowsFile`наследует от **WIN32_FIND_DATA** структуры:  
   
 ```  
 /////////////////////////////////////////////////////////////////////  
@@ -45,9 +44,9 @@ END_PROVIDER_COLUMN_MAP()
 };  
 ```  
   
- Класс `CMyProviderWindowsFile` также называется [классом записей пользователя](../../data/oledb/user-record.md), поскольку в нем содержится сопоставление, описывающее столбцы в наборе строк поставщика.  С помощью макроса PROVIDER\_COLUMN\_ENTRY в сопоставление столбцов поставщика включается одна запись для каждого поля в наборе строк.  В макросе устанавливается имя и порядковый номер столбца, а также значение его смещения относительно записи структуры.  В записях столбцов поставщика в приведенном выше коде содержится значение смещения в структуре **WIN32\_FIND\_DATA**.  При вызове объектом\-получателем метода **IRowset::GetData** данные передаются в один непрерывный буфер.  С помощью сопоставления можно указать член данных вместо выполнения арифметических операций с указателями.  
+ `CMyProviderWindowsFile`вызывается [класс записей пользователя](../../data/oledb/user-record.md) , так как он также содержит сопоставление, описывающее столбцы в наборе строк поставщика. Сопоставление столбцов поставщика содержит одну запись для каждого поля в наборе строк с помощью макросов PROVIDER_COLUMN_ENTRY. Макросы укажите имя столбца, порядковый номер и смещения относительно записи структуры. В записях столбцов поставщика в приведенном выше коде содержится значение смещения в **WIN32_FIND_DATA** структуры. Когда потребитель вызывает метод **IRowset::GetData**, данные передаются в один непрерывный буфер. Вместо выполнения арифметических операций с указателями карты можно указать данные-член.  
   
- Класс `CMyProviderRowset` также содержит метод `Execute`.  Метод `Execute` предназначен для считывания данных из источника.  В следующем примере показан созданный с помощью мастера метод `Execute`.  В этой функции API\-интерфейсы Win32 **FindFirstFile** и `FindNextFile` используются для извлечения и передачи в экземпляр класса `CMyProviderWindowsFile` сведений о расположенных в каталоге файлах.  
+ `CMyProviderRowset` Класс также содержит `Execute` метод. `Execute`предназначен для считывания данных из источника. В следующем коде показано, созданный с помощью мастера `Execute` метод. Эта функция использует Win32 **FindFirstFile** и `FindNextFile` API-интерфейсы для извлечения сведений о файлах в каталоге и поместите их в экземпляры `CMyProviderWindowsFile` класса.  
   
 ```  
 /////////////////////////////////////////////////////////////////////  
@@ -80,9 +79,9 @@ HRESULT Execute(DBPARAMS * pParams, LONG* pcRowsAffected)
 }  
 ```  
   
- Каталог для поиска определяется в переменной `m_strCommandText`, в которой содержится текст, предоставляемый интерфейсом `ICommandText` в объекте команды.  Если каталог не указан, поиск выполняется в текущем каталоге.  
+ Представленный к каталогу для поиска `m_strCommandText`; содержит текст, определяемый `ICommandText` интерфейса в объекте command. Если каталог не указан, используется текущий каталог.  
   
- В этом методе для каждого файла создается одна запись \(соответствует строке\), которая помещается в член данных **m\_rgRowData**.  Член данных **m\_rgRowData** определяется в классе `CRowsetImpl`.  Данные в этом массиве представляют всю таблицу и используются во всех шаблонах.  
+ Метод создает одну запись для каждого файла (соответствует строке) и помещает его в **m_rgRowData** члена данных. `CRowsetImpl` Класс определяет **m_rgRowData** члена данных. Данные в этом массиве представляют всю таблицу и используется во всех шаблонах.  
   
-## См. также  
+## <a name="see-also"></a>См. также  
  [Созданные мастером поставщика файлы](../../data/oledb/provider-wizard-generated-files.md)

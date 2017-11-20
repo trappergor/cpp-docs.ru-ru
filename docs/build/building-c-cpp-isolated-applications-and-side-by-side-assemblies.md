@@ -1,55 +1,54 @@
 ---
-title: "Построение изолированных приложений и параллельных сборок C/C++ | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "изолированные приложения [C++]"
-  - "WinSxS [C++]"
-  - "собственный кэш сборок [C++]"
-  - "сборки [C++], изолированные приложения"
-  - "параллельные приложения [C++]"
-  - "сборки [C++], параллельные сборки"
+title: "Построение C/C++ изолированных приложений и сборок Side-by-side | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- isolated applications [C++]
+- WinSxS [C++]
+- native assembly cache [C++]
+- builds [C++], isolated applications
+- side-by-side applications [C++]
+- builds [C++], side-by-side assemblies
 ms.assetid: 9465904e-76f7-48bd-bb3f-c55d8f1699b6
-caps.latest.revision: 20
-caps.handback.revision: 18
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
+caps.latest.revision: "20"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: c91e6e6e4b74e1f2e9832d32b4bbf82cd62d6053
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/24/2017
 ---
-# Построение изолированных приложений и параллельных сборок C/C++
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Visual C\+\+ поддерживает модель развертывания клиентских приложений Windows, основанную на идее [изолированных приложений](http://msdn.microsoft.com/library/aa375190) и [параллельных сборок](_win32_side_by_side_assemblies). По умолчанию Visual C\+\+ выполняет построение всех машинных приложений C\/C\+\+ в качестве изолированных приложений, использующих [манифесты](http://msdn.microsoft.com/library/aa375365) для описания зависимостей от библиотек Visual C\+\+.  
+# <a name="building-cc-isolated-applications-and-side-by-side-assemblies"></a>Построение изолированных приложений и параллельных сборок C/C++
+Visual C++ поддерживает модель развертывания клиентских приложений Windows, основанную на идее [изолированных приложений](http://msdn.microsoft.com/library/aa375190) и [параллельных сборок](http://msdn.microsoft.com/library/ff951640). По умолчанию Visual C++ выполняет построение всех машинных приложений C/C++ в качестве изолированных приложений, использующих [манифесты](http://msdn.microsoft.com/library/aa375365) для описания зависимостей от библиотек Visual C++.  
   
- Построение программ C\/C\+\+ в качестве изолированных приложений предоставляет множество преимуществ. Например, на изолированное приложение не влияет установка или удаление библиотек Visual C\+\+ другими приложениями C\/C\+\+. Библиотеки Visual C\+\+, используемые изолированными приложениями, по\-прежнему могут распространяться в локальной папке приложения либо путем установки в собственный кэш сборок \(WinSxS\). Тем не менее обслуживание библиотек Visual C\+\+ для уже развернутых приложений можно упростить, воспользовавшись [файлом конфигурации издателя](http://msdn.microsoft.com/library/aa375680). С помощью модели развертывания изолированных приложений проще гарантировать, что приложения C\/C\+\+, выполняющиеся на конкретном компьютере, будут использовать самые свежие версии библиотек Visual C\+\+, по\-прежнему предоставляя системным администраторам и авторам приложений возможность управления явной привязкой версий приложений к зависимым библиотекам DLL.  
+ Построение программ C/C++ в качестве изолированных приложений предоставляет множество преимуществ. Например, на изолированное приложение не влияет установка или удаление библиотек Visual C++ другими приложениями C/C++. Библиотеки Visual C++, используемые изолированными приложениями, по-прежнему могут распространяться в локальной папке приложения либо путем установки в собственный кэш сборок (WinSxS). Тем не менее обслуживание библиотек Visual C++ для уже развернутых приложений можно упростить, воспользовавшись [файлом конфигурации издателя](http://msdn.microsoft.com/library/aa375680). С помощью модели развертывания изолированных приложений проще гарантировать, что приложения C/C++, выполняющиеся на конкретном компьютере, будут использовать самые свежие версии библиотек Visual C++, по-прежнему предоставляя системным администраторам и авторам приложений возможность управления явной привязкой версий приложений к зависимым библиотекам DLL.  
   
- В этом разделе рассматриваются способы построения изолированного приложения C\/C\+\+ и обеспечения его привязки к библиотекам Visual C\+\+ с помощью манифеста. Сведения в этом разделе в первую очередь актуальны для машинных \(или неуправляемых\) приложений Visual C\+\+. Подробнее о развертывании машинных приложений, построенных с помощью Visual C\+\+, см. в статье [Распространение файлов Visual C\+\+](../Topic/Redistributing%20Visual%20C++%20Files.md).  
+ В этом разделе рассматриваются способы построения изолированного приложения C/C++ и обеспечения его привязки к библиотекам Visual C++ с помощью манифеста. Сведения в этом разделе в первую очередь актуальны для машинных (или неуправляемых) приложений Visual C++. Подробнее о развертывании машинных приложений, построенных с помощью Visual C++, см. в статье [Redistributing Visual C++ Files](../ide/redistributing-visual-cpp-files.md).  
   
-## В этом подразделе  
+## <a name="in-this-section"></a>Содержание  
  [Основные понятия, связанные с изолированными приложениями и параллельными сборками](../build/concepts-of-isolated-applications-and-side-by-side-assemblies.md)  
   
- [Построение изолированных приложений C\/C\+\+](../build/building-c-cpp-isolated-applications.md)  
+ [Создание изолированных приложений на C/C++](../build/building-c-cpp-isolated-applications.md)  
   
- [Построение параллельных сборок C\/C\+\+](../build/building-c-cpp-side-by-side-assemblies.md)  
+ [Создание параллельных сборок на C/C++](../build/building-c-cpp-side-by-side-assemblies.md)  
   
  [Практическое руководство. Сборка не требующих регистрации компонентов COM](../build/how-to-build-registration-free-com-components.md)  
   
- [Практическое руководство. Построение изолированных приложений, использующих компоненты СОМ](../Topic/How%20to:%20Build%20Isolated%20Applications%20to%20Consume%20COM%20Components.md)  
+ [Практическое руководство. Сборка изолированных приложений, использующих компоненты СОМ](../build/how-to-build-isolated-applications-to-consume-com-components.md)  
   
- [Основные сведения о создании манифестов для программ C\/C\+\+](../Topic/Understanding%20Manifest%20Generation%20for%20C-C++%20Programs.md)  
+ [Основные сведения о создании манифестов для программ на C/C++](../build/understanding-manifest-generation-for-c-cpp-programs.md)  
   
- [Устранение неполадок](../build/troubleshooting-c-cpp-isolated-applications-and-side-by-side-assemblies.md)  
+ [Устранение неполадок в изолированных приложениях и параллельных сборках на C/C++](../build/troubleshooting-c-cpp-isolated-applications-and-side-by-side-assemblies.md)  
   
-## Связанные подразделы  
+## <a name="related-sections"></a>Связанные разделы  
  [Изолированные приложения и параллельные сборки](http://msdn.microsoft.com/library/dd408052)  
   
- [Развертывание классических приложений](../Topic/Deploying%20Native%20Desktop%20Applications%20\(Visual%20C++\).md)
+ [Развертывание приложений для настольных систем](../ide/deploying-native-desktop-applications-visual-cpp.md)

@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-windows
+ms.technology: cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
@@ -19,37 +18,21 @@ f1_keywords:
 - ATLCOM/ATL::CComPolyObject::QueryInterface
 - ATLCOM/ATL::CComPolyObject::Release
 - ATLCOM/ATL::CComPolyObject::m_contained
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - aggregate objects [C++], in ATL
 - aggregation [C++], ATL objects
 - CComPolyObject class
 ms.assetid: eaf67c18-e855-48ca-9b15-f1df3106121b
-caps.latest.revision: 19
+caps.latest.revision: "19"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: d2d39abf526a58b8442107b5ee816f316ae841f5
-ms.openlocfilehash: ee44fcec146ef8a8c68b917020ae52e2300eed5e
-ms.contentlocale: ru-ru
-ms.lasthandoff: 03/31/2017
-
+ms.openlocfilehash: 49945127d726c1a83ed01f70dee2190622a4c68d
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="ccompolyobject-class"></a>Класс CComPolyObject
 Этот класс реализует **IUnknown** для суммирования или неагрегированные объекта.  
@@ -80,7 +63,7 @@ class CComPolyObject : public IUnknown,
 |Имя|Описание|  
 |----------|-----------------|  
 |[CComPolyObject::AddRef](#addref)|Увеличивает значение счетчика ссылок объекта.|  
-|[CComPolyObject::CreateInstance](#createinstance)|(Статический) Позволяет создать новый **CComPolyObject** `contained` **>** объекта без использования [CoCreateInstance](http://msdn.microsoft.com/library/windows/desktop/ms686615).|  
+|[CComPolyObject::CreateInstance](#createinstance)|(Статический) Позволяет создать новый **CComPolyObject <** `contained`  **>**  объекта без использования [CoCreateInstance](http://msdn.microsoft.com/library/windows/desktop/ms686615).|  
 |[CComPolyObject::FinalConstruct](#finalconstruct)|Выполняет окончательной инициализации `m_contained`.|  
 |[CComPolyObject::FinalRelease](#finalrelease)|Выполняет окончательного удаления `m_contained`.|  
 |[CComPolyObject::QueryInterface](#queryinterface)|Извлекает указатель на запрошенный интерфейс.|  
@@ -154,7 +137,7 @@ CComPolyObject(void* pv);
  Освобождает все выделенные ресурсы, вызовы [FinalRelease](#finalrelease), и уменьшает счетчик блокировки модуля.  
   
 ##  <a name="createinstance"></a>CComPolyObject::CreateInstance  
- Позволяет создать новый **CComPolyObject** `contained` **>** объекта без использования [CoCreateInstance](http://msdn.microsoft.com/library/windows/desktop/ms686615).  
+ Позволяет создать новый **CComPolyObject <** `contained`  **>**  объекта без использования [CoCreateInstance](http://msdn.microsoft.com/library/windows/desktop/ms686615).  
   
 ```
 static HRESULT WINAPI CreateInstance(  
@@ -164,7 +147,7 @@ static HRESULT WINAPI CreateInstance(
   
 ### <a name="parameters"></a>Параметры  
  `pp`  
- [out] Указатель на **CComPolyObject** `contained` **>** указателя. Если `CreateInstance` завершается неудачно, `pp` равно **NULL**.  
+ [out] Указатель на **CComPolyObject <** `contained`  **>**  указателя. Если `CreateInstance` завершается неудачно, `pp` равно **NULL**.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
  Стандартное значение `HRESULT` .  
@@ -247,4 +230,3 @@ STDMETHOD_(ULONG, Release)();
  [CComObjectRootEx-класс](../../atl/reference/ccomobjectrootex-class.md)   
  [DECLARE_POLY_AGGREGATABLE](aggregation-and-class-factory-macros.md#declare_poly_aggregatable)   
  [Общие сведения о классе](../../atl/atl-class-overview.md)
-

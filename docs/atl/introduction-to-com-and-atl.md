@@ -1,44 +1,45 @@
 ---
-title: "Introduction to COM and ATL | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "index-page "
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "ATL - библиотека, COM"
-  - "COM-объекты, ATL - библиотека"
-  - "COM, и ATL"
+title: "Введение в COM и библиотеки ATL | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: 'index-page '
+dev_langs: C++
+helpviewer_keywords:
+- COM, and ATL
+- ATL, COM
+- COM objects, ATL
 ms.assetid: 35d6ae9c-abbb-42f0-9344-33f3c19ac3ce
-caps.latest.revision: 11
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 6
+caps.latest.revision: "11"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 62266dc46aec68747ba1b5c330f2736b36feb90e
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/24/2017
 ---
-# Introduction to COM and ATL
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+# <a name="introduction-to-com-and-atl"></a>Введение в COM и библиотеки ATL
+В этом разделе приводится краткое введение в COM и библиотеки ATL.  
+  
+## <a name="in-this-section"></a>Содержание  
+ [Введение в модель COM](../atl/introduction-to-com.md)  
+ Общие сведения о компоненте объекта модели (COM) Основные понятия, включая интерфейсы, **IUnknown**, подсчет ссылок, `QueryInterface`, маршалинг и статистической обработки.  
+  
+ [Введение в ATL](../atl/introduction-to-atl.md)  
+ Описывает, кратко, Active Template Library (ATL) была разработана для библиотеки шаблонов и ATL номера версий. Содержит рекомендации по выбору между ATL и MFC.  
+  
+## <a name="related-sections"></a>Связанные разделы  
+ [Модель COM](http://msdn.microsoft.com/library/windows/desktop/ms694363)  
+ [!INCLUDE[winSDK](../atl/includes/winsdk_md.md)] Расходы на COM.  
+  
+ [ATL](../atl/active-template-library-atl-concepts.md)  
+ Ссылки на разделы о программировании с использованием библиотеки ATL.  
+  
+ [Общие сведения о классах ATL](../atl/atl-class-overview.md)  
+ Содержит справочные сведения и ссылки для ATL-классы.
 
-В этом разделе приводится краткое введение в модели COM и библиотеки ATL.  
-  
-## В этом подразделе  
- [Введение в модели COM](../atl/introduction-to-com.md)  
- Обзор понятий модели COM, включая базовые интерфейсы, **IUnknown**, ссылку, `QueryInterface`, подсчитывая маршалинг и статистическую обработку.  
-  
- [Введение в библиотеку ATL](../Topic/Introduction%20to%20ATL.md)  
- Обсуждается, кратко, что библиотека шаблонных классов ATL \(библиотека ATL\) предназначено для библиотеки стандартных шаблонов и номер версии библиотеки ATL.  Содержит рекомендации по выбору между библиотеки ATL, MFC.  
-  
-## Связанные подразделы  
- [модель COM](http://msdn.microsoft.com/library/windows/desktop/ms694363)  
- Материал [!INCLUDE[winSDK](../atl/includes/winsdk_md.md)] на модели COM.  
-  
- [Библиотека ATL](../atl/active-template-library-atl-concepts.md)  
- Содержит ссылки на концептуальные разделы о том, как запрограммировать с помощью библиотека шаблонных классов ATL.  
-  
- [Общие сведения о классе библиотеки ATL](../atl/atl-class-overview.md)  
- Содержит справочные сведения и ссылки на классы библиотеки ATL.

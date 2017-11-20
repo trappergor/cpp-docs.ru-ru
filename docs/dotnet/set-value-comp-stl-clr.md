@@ -1,41 +1,39 @@
 ---
-title: "set::value_comp (STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::set::value_comp"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "value_comp - член [STL/CLR]"
+title: "set::value_comp (STL/CLR) | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::set::value_comp
+dev_langs: C++
+helpviewer_keywords: value_comp member [STL/CLR]
 ms.assetid: 3b7e469d-ca73-415b-bd20-24968c51107c
-caps.latest.revision: 8
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 6
+caps.latest.revision: "8"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 3383634c38db8d4e6e6ee0548207c0ab189ad5ea
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/24/2017
 ---
-# set::value_comp (STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Копирует порядок делегат для 2 значений элементов.  
+# <a name="setvaluecomp-stlclr"></a>set::value_comp (STL/CLR)
+Копирует делегат упорядочения для значения двух элементов.  
   
-## Синтаксис  
+## <a name="syntax"></a>Синтаксис  
   
 ```  
 value_compare^ value_comp();  
 ```  
   
-## Заметки  
- Возвращает порядок функцию\-член делегат, используемый для сортировки контролируемую последовательность.  Он используется для сравнения значений 2 элемента.  
+## <a name="remarks"></a>Примечания  
+ Функция-член возвращает упорядочивания делегат, используемый для упорядочения управляемой последовательности. Используется для сравнения двух значений элемента.  
   
-## Пример  
+## <a name="example"></a>Пример  
   
 ```  
 // cliext_set_value_comp.cpp   
@@ -60,15 +58,18 @@ int main()
   
 ```  
   
-  **сравнение \(L'a, L'а\) \= false**  
-**сравнение \(L'a, L'б\) \= true**  
-**сравнение \(L'b, L'а\) \= false**   
-## Требования  
- **Заголовок:**\<cliext\/set\>  
+```Output  
+compare(L'a', L'a') = False  
+compare(L'a', L'b') = True  
+compare(L'b', L'a') = False  
+```  
+  
+## <a name="requirements"></a>Требования  
+ **Заголовок:** \<cliext и set >  
   
  **Пространство имен:** cliext  
   
-## См. также  
- [набор](../dotnet/set-stl-clr.md)   
- [set::value\_compare](../Topic/set::value_compare%20\(STL-CLR\).md)   
- [set::value\_type](../dotnet/set-value-type-stl-clr.md)
+## <a name="see-also"></a>См. также  
+ [набор (STL/CLR)](../dotnet/set-stl-clr.md)   
+ [set::value_compare (STL/CLR)](../dotnet/set-value-compare-stl-clr.md)   
+ [set::value_type (STL/CLR)](../dotnet/set-value-type-stl-clr.md)

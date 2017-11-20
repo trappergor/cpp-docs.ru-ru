@@ -1,36 +1,34 @@
 ---
-title: "ML Fatal Error A1010 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "A1010"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "A1010"
+title: "Неустранимая ошибка ML A1010 | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: A1010
+dev_langs: C++
+helpviewer_keywords: A1010
 ms.assetid: 9e0b5241-67f4-4740-8701-3b2d2d1ad9e4
-caps.latest.revision: 6
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 6
+caps.latest.revision: "6"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: 22b9886587b07958650a0624386867d4bc69cfd9
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/24/2017
 ---
-# ML Fatal Error A1010
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-**несогласованная директива вложение блока:**  
+# <a name="ml-fatal-error-a1010"></a>Неустранимая ошибка ML A1010
+**вложенность несовпадающие блока:**  
   
- Начало блока не имело соответствующее конец или конец блока не имеет соответствующего начало.  Одно из следующих действий может быть включено:  
+ Начало блока не имеет соответствующего конечного или конца блока не имеет сопоставления начало. Может быть задействован одно из следующих:  
   
--   Высокоуровневая как директива [.IF](../Topic/.IF.md)"  [.REPEAT](../../assembler/masm/dot-repeat.md)или  [.WHILE](../../assembler/masm/dot-while.md).  
+-   Директиву высокого уровня, такие как [. Если](../../assembler/masm/dot-if.md), [. ПОВТОРИТЕ](../../assembler/masm/dot-repeat.md), или [. Во время](../../assembler/masm/dot-while.md).  
   
--   Директива условный\-сборки как [IF](../../assembler/masm/if-masm.md)"  [Повторение](../../assembler/masm/repeat.md)или  **ПОКА**.  
+-   Директива условной сборки как [IF](../../assembler/masm/if-masm.md), [ПОВТОРИТЕ](../../assembler/masm/repeat.md), или **при**.  
   
 -   Определение структуры или объединения.  
   
@@ -38,9 +36,9 @@ caps.handback.revision: 6
   
 -   Определение сегмента.  
   
--   A POPCONTEXT директива.  
+-   Объект [POPCONTEXT](../../assembler/masm/popcontext.md) директивы.  
   
--   Условный\-сборки, как директива [ELSE](../Topic/ELSE%20\(MASM\).md)"  [ELSEIF](../../assembler/masm/elseif-masm.md)или  **endif** без соответствующей  [IF](../../assembler/masm/if-masm.md).  
+-   Сборке условной директивы, такие как [ELSE](../../assembler/masm/else-masm.md), [ELSEIF](../../assembler/masm/elseif-masm.md), или **ENDIF** без соответствующего [IF](../../assembler/masm/if-masm.md).  
   
-## См. также  
- [ML Error Messages](../../assembler/masm/ml-error-messages.md)
+## <a name="see-also"></a>См. также  
+ [Сообщения об ошибках ML](../../assembler/masm/ml-error-messages.md)

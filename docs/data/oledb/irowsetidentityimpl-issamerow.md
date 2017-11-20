@@ -1,36 +1,35 @@
 ---
-title: "IRowsetIdentityImpl::IsSameRow | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "IsSameRow"
-  - "IRowsetIdentityImpl.IsSameRow"
-  - "ATL.IRowsetIdentityImpl.IsSameRow"
-  - "IRowsetIdentityImpl::IsSameRow"
-  - "ATL::IRowsetIdentityImpl::IsSameRow"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "IsSameRow - метод"
+title: "IRowsetIdentityImpl::IsSameRow | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- IsSameRow
+- IRowsetIdentityImpl.IsSameRow
+- ATL.IRowsetIdentityImpl.IsSameRow
+- IRowsetIdentityImpl::IsSameRow
+- ATL::IRowsetIdentityImpl::IsSameRow
+dev_langs: C++
+helpviewer_keywords: IsSameRow method
 ms.assetid: e35ad54e-73f1-4dc0-8d8c-9e98202baf0a
-caps.latest.revision: 8
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: baab48b21ab624d285fecac0e888f8d32e86342b
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/24/2017
 ---
-# IRowsetIdentityImpl::IsSameRow
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Сравнивает 2 дескриптора строки, чтобы проверить, что они ссылаются на той же строке.  
+# <a name="irowsetidentityimplissamerow"></a>IRowsetIdentityImpl::IsSameRow
+Сравнивает два дескрипторы строк для просмотра, если они ссылаются на той же строке.  
   
-## Синтаксис  
+## <a name="syntax"></a>Синтаксис  
   
 ```  
   
@@ -40,14 +39,14 @@ caps.handback.revision: 8
 );  
 ```  
   
-#### Параметры  
- В разделе [IRowsetIdentity::IsSameRow](https://msdn.microsoft.com/en-us/library/ms719629.aspx) справочника *программиста OLE DB*.  
+#### <a name="parameters"></a>Параметры  
+ В разделе [IRowsetIdentity::IsSameRow](https://msdn.microsoft.com/en-us/library/ms719629.aspx) в *справочника программиста OLE DB*.  
   
-## Заметки  
- Для сравнения дескрипторы строк этот метод возвращает дескрипторы **HROW** к элементам **RowClass** и вызывает `memcmp` для указателей.  
+## <a name="remarks"></a>Примечания  
+ Чтобы сравнить дескрипторы строк, этот метод приводит **HROW** дескрипторы для **RowClass** элементов и вызовов `memcmp` на указатели.  
   
-## Требования  
- **Header:** atldb.h  
+## <a name="requirements"></a>Требования  
+ **Заголовок:** atldb.h  
   
-## См. также  
- [Класс IRowsetIdentityImpl](../Topic/IRowsetIdentityImpl%20Class.md)
+## <a name="see-also"></a>См. также  
+ [Класс IRowsetIdentityImpl](../../data/oledb/irowsetidentityimpl-class.md)

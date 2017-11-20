@@ -1,32 +1,30 @@
 ---
-title: "When Do I Need to Call AtlAxWinInit? | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "AtlAxWinInit"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "AtlAxWinInit method"
+title: "Если нужно вызвать AtlAxWinInit? | Документы Майкрософт"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: AtlAxWinInit
+dev_langs: C++
+helpviewer_keywords: AtlAxWinInit method
 ms.assetid: 080b9cfe-d85a-4439-a9e9-ab3966ebaa8e
-caps.latest.revision: 11
-caps.handback.revision: 6
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "11"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 2ec7d8d15b8219071b593368ed539d92ff3c9032
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/24/2017
 ---
-# When Do I Need to Call AtlAxWinInit?
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+# <a name="when-do-i-need-to-call-atlaxwininit"></a>Если нужно вызвать AtlAxWinInit?
 
-[AtlAxWinInit](../Topic/AtlAxWinInit.md) регистрирует класс окна **"AtlAxWin80"** \(плюс несколько пользовательских сообщений окна\), поэтому эту функцию следует вызывать перед попыткой создания окна основного приложения.  Однако не всегда необходимо явно вызывать эту функцию, поскольку API размещения \(и классы, которые их используют\) часто вызывают эту функцию автоматически.  В этой функции нет вред вызывать несколько раз.  Дополнительные сведения см. в разделе [API Размещения, что Элемент управления\- библиотеки ATL?](../atl/what-is-the-atl-control-hosting-api-q.md).  
+[AtlAxWinInit](reference/composite-control-global-functions.md#atlaxwininit) регистрирует **«AtlAxWin80»** класса окна (а также пару пользовательских сообщений окна), поэтому эту функцию необходимо вызывать перед попыткой создания главного окна. Тем не менее, не всегда требуется эта функция вызывается явно, так как размещение API-интерфейсы (и классы, которые их используют) часто эта функция вызывается для вас. Нет никакого вреда вызов этой функции более одного раза. .  
   
-## См. также  
- [When Do I Need to Call AtlAxWinTerm?](../atl/when-do-i-need-to-call-atlaxwinterm-q.md)   
+## <a name="see-also"></a>См. также  
+ Если нужно вызвать AtlAxWinTerm     
  [Часто задаваемые вопросы о вложении элементов управления](../atl/atl-control-containment-faq.md)

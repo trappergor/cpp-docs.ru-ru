@@ -1,54 +1,53 @@
 ---
-title: "Класс com::ptr | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "com::ptr"
-  - "msclr::com::ptr"
-  - "msclr.com.ptr"
-  - "com.ptr"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "ptr - класс"
+title: "Класс COM::PTR | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords:
+- com::ptr
+- msclr::com::ptr
+- msclr.com.ptr
+- com.ptr
+dev_langs: C++
+helpviewer_keywords: ptr class
 ms.assetid: 0144d0e4-919c-45f9-a3f8-fbc9edba32bf
-caps.latest.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 8
+caps.latest.revision: "10"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: fc7dbfdd5ca20ab330a0c4dd855593b6c91fb953
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/24/2017
 ---
-# Класс com::ptr
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Программа\-оболочка для com\-объекта, который можно использовать в качестве члена класса среды CLR.  Программа\-оболочка также автоматизирует управления временем существования com\-объекта, освобождая все ссылки, принадлежащие объекта при его вызове деструктора.  Аналогичный в [CComPtr Class](../atl/reference/ccomptr-class.md).  
+# <a name="comptr-class"></a>Класс com::ptr
+Программа-оболочка для COM-объекта, который можно использовать в качестве члена класса среды CLR.  Оболочки также позволяет автоматизировать управление временем существования COM-объекта, освобождая все принадлежащие ссылки на объект при вызове его деструктора. Аналогично [класс CComPtr](../atl/reference/ccomptr-class.md).  
   
-## Синтаксис  
+## <a name="syntax"></a>Синтаксис  
   
 ```  
 template<class _interface_type>  
 ref class ptr;  
 ```  
   
-#### Параметры  
+#### <a name="parameters"></a>Параметры  
  `_interface_type`  
- Интерфейс модели COM.  
+ COM-интерфейса.  
   
-## Заметки  
- `com::ptr` также можно использовать в качестве локальной переменной функции для упрощения задачи различные модели COM и автоматизации управления временем существования.  
+## <a name="remarks"></a>Примечания  
+ Объект `com::ptr` также может быть использована как переменная локальной функции для упрощения различные задачи COM и автоматизация управления жизненным циклом.  
   
- `com::ptr` не может использоваться непосредственно в качестве параметра функции; используйте [Оператор отслеживания ссылок](../windows/tracking-reference-operator-cpp-component-extensions.md) или [Оператор дескриптора объекта \(^\)](../windows/handle-to-object-operator-hat-cpp-component-extensions.md).  
+ Объект `com::ptr` не может использоваться непосредственно в качестве параметра функции; используйте [оператор отслеживания ссылок](../windows/tracking-reference-operator-cpp-component-extensions.md) или [оператор дескриптора объекта (^)](../windows/handle-to-object-operator-hat-cpp-component-extensions.md) вместо него.  
   
- `com::ptr` непосредственно возврата из функции; используйте вместо этого дескриптора.  
+ Объект `com::ptr` не возвращается из функции напрямую; вместо этого используйте дескриптор.  
   
-## Пример  
- В этом примере реализуется класс CLR, который использует `com::ptr` для создания его объект `IXMLDOMDocument` закрытого члена.  Вызова открытых методов класса возникает при вызовах, который содержит объект `IXMLDOMDocument`.  Пример создает экземпляр XML\-документа, заполняет его с простого XML, а также упрощенную проверку узлов в схеме разобранную документации для печати XML на консоль.  
+## <a name="example"></a>Пример  
+ В этом примере реализуется класс CLR, который использует `com::ptr` программы-оболочки для своего закрытого члена `IXMLDOMDocument` объекта.  Вызова открытых методов класса результатов в вызовах содержащегося `IXMLDOMDocument` объекта.  Образец создает экземпляр XML-документа и заполняет простой XML-упрощенный обход узлов в дереве Проанализированный документ Печать XML на консоль.  
   
 ```  
 // comptr.cpp  
@@ -158,12 +157,15 @@ int main() {
 }  
 ```  
   
-  **\<word\>persnickety\<\/word\>**   
-## Требования  
- **Файл заголовка**\<msclr\\com\\ptr.h\>  
+```Output  
+<word>persnickety</word>  
+```  
+  
+## <a name="requirements"></a>Требования  
+ **Файл заголовка** \<msclr\com\ptr.h >  
   
  **Пространство имен** msclr::com  
   
-## См. также  
- [Библиотека поддержки C\+\+](../dotnet/cpp-support-library.md)   
+## <a name="see-also"></a>См. также  
+ [Библиотека поддержки C++](../dotnet/cpp-support-library.md)   
  [Члены ptr](../dotnet/ptr-members.md)

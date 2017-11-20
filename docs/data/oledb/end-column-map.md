@@ -1,32 +1,30 @@
 ---
-title: "END_COLUMN_MAP | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "END_COLUMN_MAP"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "END_COLUMN_MAP - макрос"
+title: "END_COLUMN_MAP | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: END_COLUMN_MAP
+dev_langs: C++
+helpviewer_keywords: END_COLUMN_MAP macro
 ms.assetid: b6418f19-84f5-49f4-84c7-67a40ed33364
-caps.latest.revision: 7
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 3db496e05b1bc1689d2747e70716714193502b8e
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/24/2017
 ---
-# END_COLUMN_MAP
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Отмечает конец записей сопоставления столбцов.  
+# <a name="endcolumnmap"></a>END_COLUMN_MAP
+Отмечает конец карты записей столбцов.  
   
-## Синтаксис  
+## <a name="syntax"></a>Синтаксис  
   
 ```  
   
@@ -34,17 +32,17 @@ END_COLUMN_MAP( )
   
 ```  
   
-## Заметки  
- Он используется с одним доступом в наборе строк.  Макрос `BEGIN_COLUMN_MAP` завершен с макросом `END_COLUMN_MAP`.  
+## <a name="remarks"></a>Примечания  
+ Он используется с одного метода доступа в наборе строк. Макрос `BEGIN_COLUMN_MAP` выполняется с помощью макроса `END_COLUMN_MAP` .  
   
-## Пример  
- В разделе [BEGIN\_COLUMN\_MAP](../Topic/BEGIN_COLUMN_MAP.md).  
+## <a name="example"></a>Пример  
+ В разделе [BEGIN_COLUMN_MAP](../../data/oledb/begin-column-map.md).  
   
-## Требования  
+## <a name="requirements"></a>Требования  
  **Заголовок:** atldbcli.h  
   
-## См. также  
- [Макросы и глобальные функции для шаблонов потребителей OLE DB](../Topic/Macros%20and%20Global%20Functions%20for%20OLE%20DB%20Consumer%20Templates.md)   
- [BEGIN\_COLUMN\_MAP](../Topic/BEGIN_COLUMN_MAP.md)   
- [COLUMN\_ENTRY](../../data/oledb/column-entry.md)   
- [COLUMN\_ENTRY\_EX](../../data/oledb/column-entry-ex.md)
+## <a name="see-also"></a>См. также  
+ [Макросы и глобальные функции для шаблонов потребителей OLE DB](../../data/oledb/macros-and-global-functions-for-ole-db-consumer-templates.md)   
+ [BEGIN_COLUMN_MAP](../../data/oledb/begin-column-map.md)   
+ [COLUMN_ENTRY](../../data/oledb/column-entry.md)   
+ [COLUMN_ENTRY_EX](../../data/oledb/column-entry-ex.md)

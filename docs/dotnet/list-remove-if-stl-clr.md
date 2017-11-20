@@ -1,46 +1,44 @@
 ---
-title: "list::remove_if (STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::list::remove_if"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "remove_if - член [STL/CLR]"
+title: "List::remove_if (STL/CLR) | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::list::remove_if
+dev_langs: C++
+helpviewer_keywords: remove_if member [STL/CLR]
 ms.assetid: cbc66192-751b-41c5-b557-d5d7bbc2a840
-caps.latest.revision: 15
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 13
+caps.latest.revision: "15"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 0707efbf12782336d74d6e0012146cc1b2b4a01b
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/24/2017
 ---
-# list::remove_if (STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Удаляет элементы, прошедшие определенного теста.  
+# <a name="listremoveif-stlclr"></a>list::remove_if (STL/CLR)
+Удаляет элементы, которые прошли заданный тест.  
   
-## Синтаксис  
+## <a name="syntax"></a>Синтаксис  
   
 ```  
 template<typename Pred1>  
     void remove_if(Pred1 pred);  
 ```  
   
-#### Параметры  
- pred  
- Тест для элемента, который необходимо удалить.  
+#### <a name="parameters"></a>Параметры  
+ Pred  
+ Тест для удаляемых элементов.  
   
-## Заметки  
- Функция\-член удаляет из контролируемой последовательности \(удаляются\) каждый элемент `X`, для которого `pred``(X)` true.  Он используется, чтобы удалить все элементы, которые удовлетворяют условию был определен как функция или делегат.  
+## <a name="remarks"></a>Примечания  
+ Функция-член удаляет из управляемой последовательности (стираниям) каждого элемента `X` для которого `pred(X)` имеет значение true. Используется для удаления всех элементов, которые определяют, как функции или делегат, удовлетворяющих заданному условию.  
   
-## Пример  
+## <a name="example"></a>Пример  
   
 ```  
 // cliext_list_remove_if.cpp   
@@ -79,17 +77,20 @@ int main()
   
 ```  
   
-  **B B B C.**  
- **B B B C.**  
- **B B B**   
-## Требования  
- **Заголовок:**\<cliext\/list\>  
+```Output  
+a b b b c  
+a b b b c  
+b b b  
+```  
+  
+## <a name="requirements"></a>Требования  
+ **Заголовок:** \<cliext/list >  
   
  **Пространство имен:** cliext  
   
-## См. также  
- [list](../dotnet/list-stl-clr.md)   
- [list::clear](../dotnet/list-clear-stl-clr.md)   
- [list::erase](../dotnet/list-erase-stl-clr.md)   
- [list::remove](../dotnet/list-remove-stl-clr.md)   
- [list::unique](../dotnet/list-unique-stl-clr.md)
+## <a name="see-also"></a>См. также  
+ [список (STL/CLR)](../dotnet/list-stl-clr.md)   
+ [List::Clear (STL/CLR)](../dotnet/list-clear-stl-clr.md)   
+ [List::Erase (STL/CLR)](../dotnet/list-erase-stl-clr.md)   
+ [List::Remove (STL/CLR)](../dotnet/list-remove-stl-clr.md)   
+ [list::unique (STL/CLR)](../dotnet/list-unique-stl-clr.md)

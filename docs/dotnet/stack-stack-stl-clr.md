@@ -1,32 +1,30 @@
 ---
-title: "stack::stack (STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::stack::stack"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "stack - элемент [STL/CLR]"
+title: "STACK::Stack (STL/CLR) | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::stack::stack
+dev_langs: C++
+helpviewer_keywords: stack member [STL/CLR]
 ms.assetid: f1cfb3fe-4d22-41e5-906b-e8faa0bcde9b
-caps.latest.revision: 15
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 13
+caps.latest.revision: "15"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: e12c704561cd56ac251479861740c7df205f1e37
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/24/2017
 ---
-# stack::stack (STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Создает объект адаптера контейнера.  
+# <a name="stackstack-stlclr"></a>stack::stack (STL/CLR)
+Создает объект контейнера адаптера.  
   
-## Синтаксис  
+## <a name="syntax"></a>Синтаксис  
   
 ```  
 stack();  
@@ -35,39 +33,39 @@ stack(stack<Value, Container>^ right);
 explicit stack(container_type% wrapped);  
 ```  
   
-#### Параметры  
- правый  
- Объект, подлежащих копированию.  
+#### <a name="parameters"></a>Параметры  
+ right  
+ Копируемый объект.  
   
- от программу\-оболочку  
- От программу\-оболочку контейнер, который следует использовать.  
+ в оболочку  
+ Упакованное контейнер для использования.  
   
-## Заметки  
+## <a name="remarks"></a>Примечания  
  Конструктор:  
   
  `stack();`  
   
- создает пустой от программу\-оболочку контейнер.  Он используется для определения начальную контролируемую пустую последовательность.  
+ Создает оболочку пустой контейнер. Используется, чтобы указать пустую начальную управляемую последовательность.  
   
  Конструктор:  
   
  `stack(stack<Value, Container>% right);`  
   
- создает от программу\-оболочку контейнер, являющийся копией `right.get_container()`.  Он используется, чтобы определить домашнюю контролируемую последовательность, копию последовательности контролируемой объектом `right` стека.  
+ Создает оболочку контейнер, который является копией `right.get_container()`. Они позволяют указать начальную управляемую последовательность, является копией последовательности, контролируемой объект стека `right`.  
   
  Конструктор:  
   
  `stack(stack<Value, Container>^ right);`  
   
- создает от программу\-оболочку контейнер, являющийся копией `right->get_container()`.  Он используется, чтобы определить домашнюю контролируемую последовательность, копию последовательности контролируемой объектом `*right` стека.  
+ Создает оболочку контейнер, который является копией `right->get_container()`. Они позволяют указать начальную управляемую последовательность, является копией последовательности, контролируемой объект стека `*right`.  
   
  Конструктор:  
   
  `explicit stack(container_type% wrapped);`  
   
- использует существующий контейнер `wrapped` как от программу\-оболочку контейнер.  Он используется для построения стека из существующего контейнера.  
+ использует существующий контейнер `wrapped` как изолированного контейнера. Используется для создания стека из существующего контейнера.  
   
-## Пример  
+## <a name="example"></a>Пример  
   
 ```  
 // cliext_stack_construct.cpp   
@@ -107,17 +105,20 @@ int main()
   
 ```  
   
-  **size\(\) \= 0**  
- **x x x x x**  
- **x x x x x**  
- **x x x x x**   
-## Требования  
- **Заголовок:**\<cliext\/stack\>  
+```Output  
+size() = 0  
+ x x x x x  
+ x x x x x  
+ x x x x x  
+```  
+  
+## <a name="requirements"></a>Требования  
+ **Заголовок:** \<cliext/stack >  
   
  **Пространство имен:** cliext  
   
-## См. также  
- [стек](../dotnet/stack-stl-clr.md)   
- [stack::assign](../Topic/stack::assign%20\(STL-CLR\).md)   
- [stack::generic\_container](../Topic/stack::generic_container%20\(STL-CLR\).md)   
- [stack::operator\=](../dotnet/stack-operator-assign-stl-clr.md)
+## <a name="see-also"></a>См. также  
+ [стек (STL/CLR)](../dotnet/stack-stl-clr.md)   
+ [STACK::Assign (STL/CLR)](../dotnet/stack-assign-stl-clr.md)   
+ [STACK::generic_container (STL/CLR)](../dotnet/stack-generic-container-stl-clr.md)   
+ [stack::operator= (STL/CLR)](../dotnet/stack-operator-assign-stl-clr.md)

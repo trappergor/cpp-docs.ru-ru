@@ -1,41 +1,39 @@
 ---
-title: "hash_set::key_type (STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::hash_set::key_type"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "key_type - элемент [STL/CLR]"
+title: "hash_set::key_type (STL/CLR) | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::hash_set::key_type
+dev_langs: C++
+helpviewer_keywords: key_type member [STL/CLR]
 ms.assetid: e79180b5-4fea-4884-93a7-1738d15c6126
-caps.latest.revision: 14
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 12
+caps.latest.revision: "14"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 2c3ccc6bea3ae2647ebd2817f98a9109cb9ca3fb
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/24/2017
 ---
-# hash_set::key_type (STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="hashsetkeytype-stlclr"></a>hash_set::key_type (STL/CLR)
 Тип ключа упорядочения.  
   
-## Синтаксис  
+## <a name="syntax"></a>Синтаксис  
   
 ```  
 typedef Key key_type;  
 ```  
   
-## Заметки  
- Тип синоним для параметра `Key` шаблона.  
+## <a name="remarks"></a>Примечания  
+ Этот тип является синонимом для параметра шаблона `Key`.  
   
-## Пример  
+## <a name="example"></a>Пример  
   
 ```  
 // cliext_hash_set_key_type.cpp   
@@ -63,13 +61,16 @@ int main()
   
 ```  
   
-  **a b c**   
-## Требования  
- **Заголовок:**\<cliext\/hash\_set\>  
+```Output  
+a b c  
+```  
+  
+## <a name="requirements"></a>Требования  
+ **Заголовок:** \<cliext/hash_set >  
   
  **Пространство имен:** cliext  
   
-## См. также  
- [hash\_set](../dotnet/hash-set-stl-clr.md)   
- [hash\_set::key\_compare](../Topic/hash_set::key_compare%20\(STL-CLR\).md)   
- [hash\_set::value\_type](../dotnet/hash-set-value-type-stl-clr.md)
+## <a name="see-also"></a>См. также  
+ [hash_set (STL/CLR)](../dotnet/hash-set-stl-clr.md)   
+ [hash_set::key_compare (STL/CLR)](../dotnet/hash-set-key-compare-stl-clr.md)   
+ [hash_set::value_type (STL/CLR)](../dotnet/hash-set-value-type-stl-clr.md)

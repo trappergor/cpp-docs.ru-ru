@@ -1,99 +1,77 @@
 ---
-title: "/O1, /O2 (минимизировать размер, максимизировать скорость) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "/o2"
-  - "/o1"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "/O1 - параметр компилятора [C++]"
-  - "/O2 - параметр компилятора [C++]"
-  - "быстрый код"
-  - "максимизация скорости - параметр компилятора [C++]"
-  - "минимизация скорости - параметр компилятора [C++]"
-  - "O1 - параметр компилятора [C++]"
-  - "-O1 - параметр компилятора [C++]"
-  - "O2 - параметр компилятора [C++]"
-  - "-O2 - параметр компилятора [C++]"
-  - "код небольшого размера"
+title: "-O1, - O2 (минимизировать размер, максимизировать скорость) | Документы Microsoft"
+ms.custom: 
+ms.date: 09/25/2017
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- /o2
+- /o1
+dev_langs: C++
+helpviewer_keywords:
+- maximize speed compiler option [C++]
+- minimize size compiler option [C++]
+- -O2 compiler option [C++]
+- fast code
+- small code
+- O2 compiler option [C++]
+- /O2 compiler option [C++]
+- -O1 compiler option [C++]
+- O1 compiler option [C++]
+- /O1 compiler option [C++]
 ms.assetid: 2d1423f5-53d9-44da-8908-b33a351656c2
-caps.latest.revision: 16
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 16
+caps.latest.revision: "16"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: 4498f19e6a228bdfb23103ab2ee25d69fcfae1e3
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/24/2017
 ---
-# /O1, /O2 (минимизировать размер, максимизировать скорость)
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+# <a name="o1-o2-minimize-size-maximize-speed"></a>/O1, /O2 (минимизировать размер, максимизировать скорость)
 
-Выбирает предварительно установленный набор параметров, которые влияют на размер файлов и быстродействие.  
-  
-## Синтаксис  
-  
-```  
-/O1  
-/O2  
-```  
-  
-## Заметки  
- В следующей таблице описываются параметры **\/O1** и **\/O2**.  
-  
-|Команда|Эквивалентен|Комментарий|  
-|-------------|------------------|-----------------|  
-|**\/O1** \(минимизировать размер\)|**\/Og \/Os \/Oy \/Ob2 \/Gs \/GF \/Gy**|В большинстве случаев создает код наименьшего размера.|  
-|**\/O2** \(максимизировать скорость\)|**\/Og \/Oi \/Ot \/Oy \/Ob2 \/Gs \/GF \/Gy**|В большинстве случаев создает самый быстрый код. \(этот параметр используется по умолчанию для окончательных построений\)|  
-  
- Параметры **\/O1** и **\/O2** также включают оптимизацию возврата именованных значений, благодаря чему уменьшается количество вызовов конструкторов копирования и деструкторов временных объектов, хранящихся в стеке.  Рассмотрим следующий пример.  Функция `Test` не будет вызывать конструктор копирования или деструктор.  Выписки выхода суммы к конструктору, деструктора и конструктор копии, чтобы увидеть эффект оптимизации возвращаемого значения Named при запуске программы.  [Именованная оптимизация возвращаемого значения в Visual C\+\+ 2005 C.](http://go.microsoft.com/fwlink/?linkid=131571) Дополнительные сведения в разделе в.  
-  
-```  
-// O1_O2_NRVO.cpp  
-// compile with: /O1  
-struct A {  
-   A() {}  
-   ~A() {}  
-   A(const A& aa) {}  
-};  
-  
-A Test() {  
-   A a;  
-   return a;  
-}  
-int main() {  
-   A aa;  
-   aa = Test();  
-}  
-```  
-  
- **Специфика для платформы x86**  
-  
- Эти параметры подразумевают, что используется параметр пропуска указателя стекового кадра \([\/Oy](../../build/reference/oy-frame-pointer-omission.md)\).  
-  
- **Специфика для платформы x86 — окончание**  
-  
-### Установка данного параметра компилятора в среде разработки Visual Studio  
-  
-1.  Откройте диалоговое окно **Страницы свойств** проекта.  Дополнительные сведения см. в разделе [Открытие свойств страниц проекта](../../misc/how-to-open-project-property-pages.md).  
-  
-2.  Откройте папку **C\/C\+\+**.  
-  
-3.  Перейдите на страницу свойств **Оптимизация**.  
-  
-4.  Измените значение свойства **Оптимизация**.  
-  
-### Установка данного параметра компилятора программным способом  
-  
--   См. раздел <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.Optimization%2A>.  
-  
-## См. также  
- [Параметры \/O \(оптимизация кода\)](../../build/reference/o-options-optimize-code.md)   
- [Параметры компилятора](../../build/reference/compiler-options.md)   
- [Настройка параметров компилятора](../Topic/Setting%20Compiler%20Options.md)   
- [Параметр \/EH \(модель обработки исключений\)](../../build/reference/eh-exception-handling-model.md)
+Можно выбрать стандартный набор параметров, влияющих на размер и скорость созданного кода.
+
+## <a name="syntax"></a>Синтаксис
+
+> /O1  
+> /O2
+
+## <a name="remarks"></a>Примечания
+
+**/O1** и **/O2** параметры компилятора — это быстрый способ задать несколько особенные параметры оптимизации за один раз. **/O1** параметр задает параметры отдельных оптимизации, создать наименьший в большинстве случаев. **/O2** параметр задает параметры, создать быстрый код в большинстве случаев. **/O2** параметр выбирается по умолчанию для сборки выпуска. В этой таблице показаны конкретные параметры, которые задаются **/O1** и **/O2**:
+
+|Параметр|Эквивалентно|
+|------------|-------------------|
+|**/ O1** (минимизировать размер)|[/Og](../../build/reference/og-global-optimizations.md) [/Os](../../build/reference/os-ot-favor-small-code-favor-fast-code.md) [/Oy](../../build/reference/oy-frame-pointer-omission.md) [/Ob2](../../build/reference/ob-inline-function-expansion.md) [/GS](../../build/reference/gs-control-stack-checking-calls.md) [/GF](../../build/reference/gf-eliminate-duplicate-strings.md) [/Gy](../../build/reference/gy-enable-function-level-linking.md)|
+|**/ O2** (максимизировать скорость)|[/Og](../../build/reference/og-global-optimizations.md) [/Oi](../../build/reference/oi-generate-intrinsic-functions.md) [/Ot](../../build/reference/os-ot-favor-small-code-favor-fast-code.md) [/Oy](../../build/reference/oy-frame-pointer-omission.md) [/Ob2](../../build/reference/ob-inline-function-expansion.md) [/GS](../../build/reference/gs-control-stack-checking-calls.md) [/GF](../../build/reference/gf-eliminate-duplicate-strings.md) [/Gy](../../build/reference/gy-enable-function-level-linking.md)|
+
+**/ O1** и **/O2** являются взаимоисключающими.
+
+> [!NOTE]  
+> **x86 конкретных**  
+> Эти параметры подразумевают использование подавление указателей фрейма ([/Oy](../../build/reference/oy-frame-pointer-omission.md)) параметра.
+
+### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Установка данного параметра компилятора в среде разработки Visual Studio
+
+1. Откройте диалоговое окно **Страницы свойств** проекта. Дополнительные сведения см. в разделе [работа со свойствами проекта](../../ide/working-with-project-properties.md).
+
+1. В разделе **свойства конфигурации**откройте **C/C++** и выберите **оптимизации** страницу свойств.
+
+1. Изменить **оптимизации** свойство.
+
+### <a name="to-set-this-compiler-option-programmatically"></a>Установка данного параметра компилятора программным способом
+
+- См. раздел <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.Optimization%2A>.
+
+## <a name="see-also"></a>См. также
+
+[Параметры /O (оптимизация кода)](../../build/reference/o-options-optimize-code.md)  
+[Параметры компилятора](../../build/reference/compiler-options.md)  
+[Настройка параметров компилятора](../../build/reference/setting-compiler-options.md)  
+[Параметр /EH (модель обработки исключений)](../../build/reference/eh-exception-handling-model.md)

@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-windows
+ms.technology: cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
@@ -14,7 +13,6 @@ f1_keywords:
 - ATLCOLL/ATL::Add
 - ATLCOLL/ATL::Append
 - ATLCOLL/ATL::AssertValid
-- ATLCOLL/ATL::CAtlArray
 - ATLCOLL/ATL::Copy
 - ATLCOLL/ATL::FreeExtra
 - ATLCOLL/ATL::GetAt
@@ -30,35 +28,18 @@ f1_keywords:
 - ATLCOLL/ATL::SetCount
 - ATLCOLL/ATL::INARGTYPE
 - ATLCOLL/ATL::OUTARGTYPE
-dev_langs:
-- C++
-helpviewer_keywords:
-- CAtlArray class
+dev_langs: C++
+helpviewer_keywords: CAtlArray class
 ms.assetid: 0b503aa8-2357-40af-a326-6654bf1da098
-caps.latest.revision: 21
+caps.latest.revision: "21"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: d2d39abf526a58b8442107b5ee816f316ae841f5
-ms.openlocfilehash: c81ee3121ffbb9d89374afd4e09a3a6044c4b70b
-ms.contentlocale: ru-ru
-ms.lasthandoff: 03/31/2017
-
+ms.openlocfilehash: b9f00bf8b1daac38a20b92e70a57570ad0681155
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="catlarray-class"></a>Класс CAtlArray
 Этот класс реализует объект массива.  
@@ -106,7 +87,7 @@ class CAtlArray
   
 |||  
 |-|-|  
-|[оператор&#91;&#93;](#operator_at)|Вызовите этот оператор возвращает ссылку на элемент в массиве.|  
+|[оператор &#91; &#93;](#operator_at)|Вызовите этот оператор возвращает ссылку на элемент в массиве.|  
 
   
 ### <a name="typedefs"></a>Typedefs  
@@ -147,7 +128,7 @@ size_t Add();
  Новый элемент добавляется в конец массива. Если элемент не указан, добавляется пустой элемент; то есть массива увеличивается размер так, будто реальные элемент был добавлен. Если операция завершается, [AtlThrow](debugging-and-error-reporting-global-functions.md#atlthrow) вызывается с аргументом E_OUTOFMEMORY.  
   
 ### <a name="example"></a>Пример  
- [!code-cpp[NVC_ATL_Utilities #1](../../atl/codesnippet/cpp/catlarray-class_1.cpp)]  
+ [!code-cpp[NVC_ATL_Utilities#1](../../atl/codesnippet/cpp/catlarray-class_1.cpp)]  
   
 ##  <a name="append"></a>CAtlArray::Append  
  Этот метод служит для добавления содержимого одного массива в другой конец.  
@@ -171,7 +152,7 @@ size_t Append(const CAtlArray<E, ETraits>& aSrc);
  В отладочных построениях, ATLASSERT при возникает `CAtlArray` аргумент не является допустимым массивом или если `aSrc` ссылается на тот же объект. В сборках выпуска недопустимые аргументы может привести к непредсказуемому поведению.  
   
 ### <a name="example"></a>Пример  
- [!code-cpp[NVC_ATL_Utilities #2](../../atl/codesnippet/cpp/catlarray-class_2.cpp)]  
+ [!code-cpp[NVC_ATL_Utilities#2](../../atl/codesnippet/cpp/catlarray-class_2.cpp)]  
   
 ##  <a name="assertvalid"></a>CAtlArray::AssertValid  
  Вызовите этот метод, чтобы подтвердить правильность объект массива.  
@@ -184,7 +165,7 @@ void AssertValid() const;
  Если объект массива является недопустимым, `ATLASSERT` вызовет утверждения. Этот метод доступен только в том случае, если определен _DEBUG.  
   
 ### <a name="example"></a>Пример  
- [!code-cpp[NVC_ATL_Utilities #3](../../atl/codesnippet/cpp/catlarray-class_3.cpp)]  
+ [!code-cpp[NVC_ATL_Utilities#3](../../atl/codesnippet/cpp/catlarray-class_3.cpp)]  
   
 ##  <a name="catlarray"></a>CAtlArray::CAtlArray  
  Конструктор.  
@@ -197,7 +178,7 @@ CAtlArray() throw();
  Инициализирует объект массива.  
   
 ### <a name="example"></a>Пример  
- [!code-cpp[NVC_ATL_Utilities #4](../../atl/codesnippet/cpp/catlarray-class_4.cpp)]  
+ [!code-cpp[NVC_ATL_Utilities#4](../../atl/codesnippet/cpp/catlarray-class_4.cpp)]  
   
 ##  <a name="dtor"></a>CAtlArray:: ~ CAtlArray  
  Деструктор  
@@ -231,7 +212,7 @@ void Copy(const CAtlArray<E, ETraits>& aSrc);
 > `CAtlArray::Copy`не поддерживает массивы, состоящий из элементов, созданных с помощью [CAutoPtr](../../atl/reference/cautoptr-class.md) класса.  
   
 ### <a name="example"></a>Пример  
- [!code-cpp[NVC_ATL_Utilities #5](../../atl/codesnippet/cpp/catlarray-class_5.cpp)]  
+ [!code-cpp[NVC_ATL_Utilities#5](../../atl/codesnippet/cpp/catlarray-class_5.cpp)]  
   
 ##  <a name="freeextra"></a>CAtlArray::FreeExtra  
  Вызовите этот метод, чтобы удалить все пустые элементы из массива.  
@@ -264,7 +245,7 @@ E& GetAt(size_t iElement) throw();
  В отладочных построениях, ATLASSERT при возникает `iElement` превышает число элементов в массиве. В сборках выпуска недопустимый аргумент может привести к непредсказуемому поведению.  
   
 ### <a name="example"></a>Пример  
- [!code-cpp[NVC_ATL_Utilities #6](../../atl/codesnippet/cpp/catlarray-class_6.cpp)]  
+ [!code-cpp[NVC_ATL_Utilities#6](../../atl/codesnippet/cpp/catlarray-class_6.cpp)]  
   
 ##  <a name="getcount"></a>CAtlArray::GetCount  
  Этот метод используется для возврата числа элементов, хранящихся в массиве.  
@@ -294,7 +275,7 @@ const E* GetData() const throw();
  Возвращает указатель на адрес в памяти, хранения первого элемента в массиве. Если нет элементов, возвращается значение NULL.  
   
 ### <a name="example"></a>Пример  
- [!code-cpp[NVC_ATL_Utilities #7](../../atl/codesnippet/cpp/catlarray-class_7.cpp)]  
+ [!code-cpp[NVC_ATL_Utilities#7](../../atl/codesnippet/cpp/catlarray-class_7.cpp)]  
   
 ##  <a name="inargtype"></a>CAtlArray::INARGTYPE  
  Тип данных, используемый для добавления элементов в массив.  
@@ -326,7 +307,7 @@ void InsertArrayAt(size_t iStart, const CAtlArray<E, ETraits>* paNew);
 > `CAtlArray::InsertArrayAt`не поддерживает массивы, состоящий из элементов, созданных с помощью [CAutoPtr](../../atl/reference/cautoptr-class.md) класса.  
   
 ### <a name="example"></a>Пример  
- [!code-cpp[NVC_ATL_Utilities #8](../../atl/codesnippet/cpp/catlarray-class_8.cpp)]  
+ [!code-cpp[NVC_ATL_Utilities#8](../../atl/codesnippet/cpp/catlarray-class_8.cpp)]  
   
 ##  <a name="insertat"></a>CAtlArray::InsertAt  
  Этот метод вызывается для вставки нового элемента (или несколько копий элемента) в объект array.  
@@ -351,7 +332,7 @@ void InsertAt(size_t iElement, INARGTYPE element, size_t nCount = 1);
  В отладочных построениях, ATLASSERT возникает если `CAtlArray` объект является недопустимым, число добавляемых элементов равно нулю или общее количество элементов слишком велико для массива для хранения. В окончательных сборках передавая недопустимые параметры может привести к непредсказуемым результатам.  
   
 ### <a name="example"></a>Пример  
- [!code-cpp[NVC_ATL_Utilities #9](../../atl/codesnippet/cpp/catlarray-class_9.cpp)]  
+ [!code-cpp[NVC_ATL_Utilities#9](../../atl/codesnippet/cpp/catlarray-class_9.cpp)]  
   
 ##  <a name="isempty"></a>CAtlArray::IsEmpty  
  Этот метод используется для проверки, если массив пуст.  
@@ -367,7 +348,7 @@ bool IsEmpty() const throw();
  Массив считается пустым, если он не содержит элементов. Таким образом даже если в массиве содержатся пустые элементы, она не пуста.  
   
 ### <a name="example"></a>Пример  
- [!code-cpp[NVC_ATL_Utilities #10](../../atl/codesnippet/cpp/catlarray-class_10.cpp)]  
+ [!code-cpp[NVC_ATL_Utilities#10](../../atl/codesnippet/cpp/catlarray-class_10.cpp)]  
   
 ##  <a name="operator_at"></a>[CAtlArray::operator]  
  Вызовите этот оператор возвращает ссылку на элемент в массиве.  
@@ -431,7 +412,7 @@ void RemoveAt(size_t iElement, size_t nCount = 1);
  В отладочных построениях, ATLASSERT при возникает `CAtlArray` объект не является допустимым, или, если общее число `iElement` и `nCount` превышает общее число элементов в массиве. В окончательных сборках недопустимые параметры может привести к непредсказуемым результатам.  
   
 ### <a name="example"></a>Пример  
- [!code-cpp[NVC_ATL_Utilities № 11](../../atl/codesnippet/cpp/catlarray-class_11.cpp)]  
+ [!code-cpp[NVC_ATL_Utilities#11](../../atl/codesnippet/cpp/catlarray-class_11.cpp)]  
   
 ##  <a name="setat"></a>CAtlArray::SetAt  
  Этот метод используется для задания значения элемента объекта массива.  
@@ -496,7 +477,7 @@ void SetAtGrow(size_t iElement, INARGTYPE element);
  Заменяет значение элемента, на который указывает индекс. Если `iElement` больше, чем текущий размер массива, массив автоматически увеличивается с помощью вызова [CAtlArray::SetCount](#setcount). В отладочных построениях, ATLASSERT при возникает `CAtlArray` недопустимый объект. В окончательных сборках недопустимые параметры может привести к непредсказуемым результатам.  
   
 ### <a name="example"></a>Пример  
- [!code-cpp[NVC_ATL_Utilities #12](../../atl/codesnippet/cpp/catlarray-class_12.cpp)]  
+ [!code-cpp[NVC_ATL_Utilities#12](../../atl/codesnippet/cpp/catlarray-class_12.cpp)]  
   
 ## <a name="see-also"></a>См. также  
  [Образец MMXSwarm](../../visual-cpp-samples.md)   
@@ -505,4 +486,3 @@ void SetAtGrow(size_t iElement, INARGTYPE element);
  [Образец Marquee](../../visual-cpp-samples.md)   
  [CArray-класс](../../mfc/reference/carray-class.md)   
  [Общие сведения о классе](../../atl/atl-class-overview.md)
-

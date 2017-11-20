@@ -1,45 +1,43 @@
 ---
-title: "/ALLOWBIND | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "/allowbind"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "ALLOWBIND - параметр программы editbin"
-  - "/ALLOWBIND - параметр программы editbin"
-  - "-ALLOWBIND - параметр программы editbin"
+title: "-ALLOWBIND | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: /allowbind
+dev_langs: C++
+helpviewer_keywords:
+- ALLOWBIND editbin option
+- /ALLOWBIND editbin option
+- -ALLOWBIND editbin option
 ms.assetid: eaadbb8c-4339-4281-9a75-3a1ce2352ff8
-caps.latest.revision: 10
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 10
+caps.latest.revision: "10"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: e1a039a6f62a3cf2dd296677f81f672ab462f7b9
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/24/2017
 ---
-# /ALLOWBIND
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Определяет, является ли библиотеки DLL можно выполнить привязку.  
+# <a name="allowbind"></a>/ALLOWBIND
+Указывает, можно ли привязать библиотеку DLL.  
   
 ```  
   
 /ALLOWBIND[:NO]  
-  
 ```  
   
-## Заметки  
- **\/ALLOWBIND** несколько наборов параметров в заголовке библиотеки DLL, которая отображается для Bind.exe, что изображение может быть привязанным.  Привязка может разрешить изображение на загрузку быстрее, когда загрузчику не должен rebase и запуск относительной адресной привязки адреса для каждого указанного библиотеки DLL.  Может потребоваться не привязанным dll\-файл, если это цифров подписывать\- привязка что сигнатура.  Привязка не имеет силы, если randomization \(ASLR\) макета адресного пространства включен для образа с помощью **\/DYNAMICBASE** о версиях Windows, поддерживающих ASLR.  
+## <a name="remarks"></a>Примечания  
+ **/ALLOWBIND** параметр задает бит в заголовке DLL, указывающих Bind.exe допустимости для привязки изображения. Привязки можно разрешить изображения загружаются быстрее, если загрузчик не rebase и выполнить адресную привязку для каждой библиотеки DLL, на которую указывает ссылка. Может потребоваться не библиотеку DLL, если он имеет цифровую подпись — подпись недействительной привязки. Привязка имеет смысл, если технология address space макета randomization (ASLR) включен для образа с помощью **/DYNAMICBASE** в версиях Windows, который поддерживает Технологию.  
   
- Используйте **\/ALLOWBIND:NO** для предотвращения Bind.exe привязки из библиотеки DLL.  
+ Используйте **/ALLOWBIND:NO** для предотвращения Bind.exe привязка библиотеки DLL.  
   
- Дополнительные сведения см. в параметр компоновщика [\/ALLOWBIND](../../build/reference/allowbind-prevent-dll-binding.md).  
+ Дополнительные сведения см. в разделе [/ALLOWBIND](../../build/reference/allowbind-prevent-dll-binding.md) компоновщика.  
   
-## См. также  
+## <a name="see-also"></a>См. также  
  [Параметры EDITBIN](../../build/reference/editbin-options.md)

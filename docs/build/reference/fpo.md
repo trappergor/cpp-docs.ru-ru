@@ -1,39 +1,38 @@
 ---
-title: "/FPO | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "/fpo"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "/FPO - параметр программы dumpbin"
-  - "FPO - параметр программы dumpbin"
-  - "-FPO - параметр программы dumpbin"
+title: "-FPO | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: /fpo
+dev_langs: C++
+helpviewer_keywords:
+- /FPO dumpbin option
+- -FPO dumpbin option
+- FPO dumpbin option
 ms.assetid: ee67f08b-bc5a-475a-bee3-c5614721755a
-caps.latest.revision: 7
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: b7bc3737f7a86bca3f06fb54f3ea70df07b4d64d
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/24/2017
 ---
-# /FPO
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="fpo"></a>/FPO
 ```  
 /FPO  
 ```  
   
-## Заметки  
- Данный параметр отображает записи оптимизации указателя фрейма \(FPO\).  
+## <a name="remarks"></a>Примечания  
+ Этот параметр отображает записи оптимизации (FPO) указателя фрейма.  
   
- В файлах, созданных с использованием параметра компилятора [\/GL](../../build/reference/gl-whole-program-optimization.md), может использоваться только параметр DUMPBIN [\/HEADERS](../../build/reference/headers.md).  
+ Только [/Headers](../../build/reference/headers.md) параметр программы DUMPBIN доступна для использования в файлах, созданных с помощью [/GL](../../build/reference/gl-whole-program-optimization.md) параметр компилятора.  
   
-## См. также  
+## <a name="see-also"></a>См. также  
  [Параметры DUMPBIN](../../build/reference/dumpbin-options.md)

@@ -1,57 +1,57 @@
 ---
-title: "modf, modff, modfl | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-apiname: 
-  - "modff"
-  - "modf"
-  - "modfl"
-apilocation: 
-  - "msvcrt.dll"
-  - "msvcr80.dll"
-  - "msvcr90.dll"
-  - "msvcr100.dll"
-  - "msvcr100_clr0400.dll"
-  - "msvcr110.dll"
-  - "msvcr110_clr0400.dll"
-  - "msvcr120.dll"
-  - "msvcr120_clr0400.dll"
-  - "ucrtbase.dll"
-  - "api-ms-win-crt-math-l1-1-0.dll"
-apitype: "DLLExport"
-f1_keywords: 
-  - "modff"
-  - "_modfl"
-  - "modf"
-  - "modfl"
-  - "math/modf"
-  - "math/modff"
-  - "math/modfl"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "modf - функция"
-  - "modff - функция"
-  - "функция modfl"
+title: "modf, modff, modfl | Документы Майкрософт"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-standard-libraries
+ms.tgt_pltfrm: 
+ms.topic: article
+apiname:
+- modff
+- modf
+- modfl
+apilocation:
+- msvcrt.dll
+- msvcr80.dll
+- msvcr90.dll
+- msvcr100.dll
+- msvcr100_clr0400.dll
+- msvcr110.dll
+- msvcr110_clr0400.dll
+- msvcr120.dll
+- msvcr120_clr0400.dll
+- ucrtbase.dll
+- api-ms-win-crt-math-l1-1-0.dll
+apitype: DLLExport
+f1_keywords:
+- modff
+- _modfl
+- modf
+- modfl
+- math/modf
+- math/modff
+- math/modfl
+dev_langs: C++
+helpviewer_keywords:
+- modf function
+- modff function
+- modfl function
 ms.assetid: b1c7abf5-d476-43ca-a03c-02072a86e32d
-caps.latest.revision: 11
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 11
+caps.latest.revision: "11"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: 72568970159c1b334232bb81f0295d829a5221af
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/24/2017
 ---
-# modf, modff, modfl
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Разбивает значение с плавающей запятой в долях и целое число частей.  
+# <a name="modf-modff-modfl"></a>modf, modff, modfl
+Разбивает значение с плавающей запятой на дробную и целую части.  
   
-## Синтаксис  
+## <a name="syntax"></a>Синтаксис  
   
 ```  
 double modf(  
@@ -76,35 +76,35 @@ long double modfl(
 );  
 ```  
   
-#### Параметры  
+#### <a name="parameters"></a>Параметры  
  *x*  
  Значение с плавающей запятой.  
   
  `intptr`  
- Указатель на целое число хранимых часть.  
+ Указатель на сохраненное значение целой части числа.  
   
-## Возвращаемое значение  
- Эта функция возвращает подписанный дробной части числа *x*. Ошибка не возвращается.  
+## <a name="return-value"></a>Возвращаемое значение  
+ Эта функция возвращает дробную часть числа *x* со знаком. Ошибка не возвращается.  
   
-## Заметки  
- `modf` Функции разбиения значение с плавающей запятой `x` в дробных частей целое число со знаком, каждый из которых имеет тот же знак, что и `x`. Подписанные дробной части числа `x` возвращается. Целая часть результата сохраняется как значение с плавающей запятой в `intptr.`  
+## <a name="remarks"></a>Примечания  
+ Функции `modf` разбивают значение с плавающей запятой `x` на дробную и целую части, каждая из которых имеет тот же знак, что и `x`. Возвращается дробная часть числа `x` со знаком. Целая часть сохраняется как значение с плавающей запятой в `intptr.`  
   
- `modf` содержит реализацию, использующий Streaming SIMD Extensions 2 \(SSE2\). В разделе [\_set\_SSE2\_enable](../Topic/_set_SSE2_enable.md) сведения и ограничения на использование реализации SSE2.  
+ `modf` содержит реализацию, которая использует Streaming SIMD Extensions 2 (SSE2). Сведения о реализации SSE2 и ограничения на использование реализации SSE2 см. в разделе [_set_SSE2_enable](../../c-runtime-library/reference/set-sse2-enable.md).  
   
- C\+\+ допускает перегрузки, поэтому можно вызывать перегрузки `modf` принимающие и возвращающие `float` или `long double` Параметры. В программе на языке C `modf` всегда принимает два значения типа double и возвращает значение типа double.  
+ C++ допускает перегрузку, поэтому можно вызывать перегрузки `modf`, которые принимают и возвращают параметры `float` или `long double`. В программе на языке C `modf` всегда принимает два двойных значения и возвращает двойное значение.  
   
-## Требования  
+## <a name="requirements"></a>Требования  
   
 |Подпрограмма|Обязательный заголовок|  
-|------------------|----------------------------|  
-|`modf`, `modff`, `modfl`|C: \< math.h \><br /><br /> C\+\+:, \< cmath \> или \< math.h \>|  
+|-------------|---------------------|  
+|`modf`, `modff`, `modfl`|C: \<math.h><br /><br /> C++: , \<cmath> или \<math.h>|  
   
  Дополнительные сведения о совместимости см. в разделе [Совместимость](../../c-runtime-library/compatibility.md) во введении.  
   
-## Библиотеки  
+## <a name="libraries"></a>Библиотеки  
  Все версии [библиотек времени выполнения языка C](../../c-runtime-library/crt-library-features.md).  
   
-## Пример  
+## <a name="example"></a>Пример  
   
 ```  
 // crt_modf.c  
@@ -124,13 +124,13 @@ int main( void )
 }  
 ```  
   
-## Вывод  
+## <a name="output"></a>Вывод  
   
 ```  
 For -14.876543, the fraction is -0.876543 and the integer is -14  
 ```  
   
-## См. также  
+## <a name="see-also"></a>См. также  
  [Поддержка чисел с плавающей запятой](../../c-runtime-library/floating-point-support.md)   
  [frexp](../../c-runtime-library/reference/frexp.md)   
  [ldexp](../../c-runtime-library/reference/ldexp.md)

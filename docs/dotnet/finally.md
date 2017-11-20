@@ -1,36 +1,35 @@
 ---
-title: "finally | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "finally - ключевое слово [C++]"
+title: "Наконец | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords: finally keyword [C++]
 ms.assetid: b55f3c8e-1af0-43e8-bcfb-99c3685d2578
-caps.latest.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 7
+caps.latest.revision: "9"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 55e2b77fbbcc607d802c4ea9e54d7ef56d473bd5
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/24/2017
 ---
-# finally
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Помимо `try` и предложениям `catch`, поддержка обработки исключений среды CLR предложение `finally`.  Семантика идентична блоку `__finally` в структурной обработке исключений \(SEH\).  Блок `__finally` может следовать блок `try` или `catch`.  
+# <a name="finally"></a>finally
+В дополнение к `try` и `catch` предложений, поддержка обработки исключений CLR `finally` предложения. Семантика идентична `__finally` блока в структурированную обработку исключений (SEH). Объект `__finally` блок можно выполнить `try` или `catch` блока.  
   
-## Заметки  
- Цель блока `finally` для освобождения любых ресурсов, которые еще после исключения было.  Обратите внимание, что блок `finally` выполняется всегда, даже если исключение не было создано.  Блок `catch` только выполняется, если управляемое исключение в соответствующий блок `try`.  
+## <a name="remarks"></a>Примечания  
+ Назначение `finally` блок — Чтобы очистить все ресурсы, после возникновения исключения. Обратите внимание, что `finally` блок выполняется всегда, даже если не возникло исключение. `catch` Блок выполняется только в том случае, если управляемое исключение возникает в пределах связанного `try` блока.  
   
- `finally` — контекстно\-зависимое ключевое слово; дополнительные сведения см. в разделе [Контекстные ключевые слова](../windows/context-sensitive-keywords-cpp-component-extensions.md).  
+ `finally`— Контекстно-зависимое ключевое слово; в разделе [контекстно-зависимые ключевые слова](../windows/context-sensitive-keywords-cpp-component-extensions.md) для получения дополнительной информации.  
   
-## Пример  
- В следующем примере показан простой блок `finally`:  
+## <a name="example"></a>Пример  
+ В следующем примере демонстрируется простой `finally` блока:  
   
 ```  
 // keyword__finally.cpp  
@@ -57,8 +56,11 @@ int main() {
 }  
 ```  
   
-  **в перехвате**  
-**MyException**  
-**в конце**   
-## См. также  
+```Output  
+in catch  
+MyException  
+in finally  
+```  
+  
+## <a name="see-also"></a>См. также  
  [Обработка исключений](../windows/exception-handling-cpp-component-extensions.md)

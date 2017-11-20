@@ -1,32 +1,30 @@
 ---
-title: "bind2nd (STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::bind2nd"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "bind2nd - функция [STL/CLR]"
+title: "bind2nd (STL/CLR) | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::bind2nd
+dev_langs: C++
+helpviewer_keywords: bind2nd function [STL/CLR]
 ms.assetid: 457cebea-38e4-4466-a468-fe9eb138e80c
-caps.latest.revision: 16
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 14
+caps.latest.revision: "16"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 484430c181e13508daa4936f29d078829ddda083
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/24/2017
 ---
-# bind2nd (STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Создает `binder2nd` для аргумента и функтором.  
+# <a name="bind2nd-stlclr"></a>bind2nd (STL/CLR)
+Приводит к возникновению ошибки `binder2nd` функтор и аргумента.  
   
-## Синтаксис  
+## <a name="syntax"></a>Синтаксис  
   
 ```  
 template<typename Fun,  
@@ -35,24 +33,24 @@ template<typename Fun,
         Arg right);  
 ```  
   
-## Параметры шаблона  
- Аргумент  
+## <a name="template-parameters"></a>Параметры шаблона  
+ Arg  
  Тип аргумента.  
   
- Функции  
- Тип функтором.  
+ Fun  
+ Тип функтора.  
   
-## Параметры функции  
- функтором  
- Функтором, создающееся.  
+## <a name="function-parameters"></a>Параметры функции  
+ функтор  
+ Функтор программы-оболочки.  
   
- правый  
- Второй аргумент, который необходимо создать.  
+ по правому краю  
+ Второй аргумент программы-оболочки.  
   
-## Заметки  
- Шаблонная функция [binder2nd](../Topic/binder2nd%20\(STL-CLR\).md) возвращает `<Fun>(functor, right)`.  Он используется как удобный способ создания функтором 2 — аргумента и его второй аргумент в функтором от аргумента, вызывает его с первым аргументом.  
+## <a name="remarks"></a>Примечания  
+ Функция шаблона возвращает [binder2nd (STL/CLR)](../dotnet/binder2nd-stl-clr.md)`<Fun>(functor, right)`. Используется в качестве удобный способ заключать функтор два аргумента и его второй аргумент в функтор один аргумент, который вызывает его с первым аргументом.  
   
-## Пример  
+## <a name="example"></a>Пример  
   
 ```  
 // cliext_bind2nd.cpp   
@@ -95,13 +93,16 @@ int main()
   
 ```  
   
-  **4 3**  
- **0 \-1**  
- **0 \-1**   
-## Требования  
- **Заголовок:**\<cliext\/functional\>  
+```Output  
+4 3  
+0 -1  
+0 -1  
+```  
+  
+## <a name="requirements"></a>Требования  
+ **Заголовок:** \<cliext и функционального >  
   
  **Пространство имен:** cliext  
   
-## См. также  
- [binder2nd](../Topic/binder2nd%20\(STL-CLR\).md)
+## <a name="see-also"></a>См. также  
+ [binder2nd (STL/CLR)](../dotnet/binder2nd-stl-clr.md)

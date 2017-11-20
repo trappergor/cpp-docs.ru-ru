@@ -1,70 +1,68 @@
 ---
-title: "Пространство имен Platform (C++/CX) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/30/2016"
-ms.prod: "windows-client-threshold"
-ms.technology: ""
-ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-f1_keywords: 
-  - "Platform/Platform"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Пространство имен Platform (C++/CX)"
+title: "Пространство имен Platform (C + +/ CX) | Документы Microsoft"
+ms.custom: 
+ms.date: 12/30/2016
+ms.technology: cpp-windows
+ms.reviewer: 
+ms.suite: 
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+f1_keywords: Platform/Platform
+dev_langs: C++
+helpviewer_keywords: Platform Namespace (C++/CX)
 ms.assetid: b160e822-d424-43d2-ba60-57b0e81f259c
-caps.latest.revision: 10
-author: "ghogen"
-ms.author: "ghogen"
-manager: "ghogen"
-caps.handback.revision: 8
+caps.latest.revision: "10"
+author: ghogen
+ms.author: ghogen
+manager: ghogen
+ms.openlocfilehash: 850156c2db7e57a357b1fa68337753ebd37db30d
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/24/2017
 ---
-# Пространство имен Platform (C++/CX)
+# <a name="platform-namespace-ccx"></a>Пространство имен Platform (C++/CX)
 Содержит встроенные типы, совместимые со средой выполнения Windows.  
   
-## Синтаксис  
+## <a name="syntax"></a>Синтаксис  
   
 ```cpp  
 using namespace Platform;  
 ```  
   
-## Члены  
- Пространство имен Platform наследуется от интерфейса IUnknown, но не содержит дополнительные члены.  
-  
+### <a name="members"></a>Члены  
  **Атрибуты**  
   
  Пространство имен Platform содержит атрибуты, классы, перечисления, интерфейсы и структуры. Platform также содержит вложенные пространства имен.  
   
 |Атрибут|Описание|  
-|-------------|--------------|  
-|Флаги|Указывает, что перечисление может обрабатываться как битовое поле \(т. е. набор флагов\).|  
-|MTAThread|Указывает, что потоковая модель для приложения является многопотоковым подразделением \(MTA\).|  
-|STAThread|Указывает, что потоковая модель для приложения является однопотоковым подразделением \(STA\).|  
+|---------------|-----------------|  
+|Флаги|Указывает, что перечисление может обрабатываться как битовое поле (т. е. набор флагов).|  
+|MTAThread|Указывает, что потоковая модель для приложения является многопотоковым подразделением (MTA).|  
+|STAThread|Указывает, что потоковая модель для приложения является однопотоковым подразделением (STA).|  
   
  **Классы**  
   
  Пространство имен Platform содержит следующие классы.  
   
 |Класс|Описание|  
-|-----------|--------------|  
+|-----------|-----------------|  
 |[Класс Platform::AccessDeniedException](../cppcx/platform-accessdeniedexception-class.md)|Возникает при запрете доступа к ресурсу или функции.|  
 |[Класс Platform::Agile](../cppcx/platform-agile-class.md)|Представляет объект, отличный от Agile, как объект Agile.|  
-|[Platform::Array \- класс](../cppcx/platform-array-class.md)|Представляет одномерный изменяемый массив.|  
+|[Класс Platform::Array](../cppcx/platform-array-class.md)|Представляет одномерный изменяемый массив.|  
 |[Класс Platform::ArrayReference](../cppcx/platform-arrayreference-class.md)|Представляет массив, инициализация которого оптимизирована, чтобы свести к минимуму число операций копирования.|  
-|[Класс Platform::Box](../cppcx/platform-box-class.md)|Используется для объявления упакованного типа, который инкапсулирует тип значений, например Windows::Foundation::DateTime или int64, когда этот тип передается через двоичный интерфейс приложения \(ABI\) или сохраняется в переменной типа [Platform::Object^](../cppcx/platform-object-class.md).|  
+|[Класс Platform::Box](../cppcx/platform-box-class.md)|Используется для объявления упакованного типа, который инкапсулирует тип значений, например Windows::Foundation::DateTime или int64, когда этот тип передается через двоичный интерфейс приложения (ABI) или сохраняется в переменной типа [Platform::Object^](../cppcx/platform-object-class.md).|  
 |[Класс Platform::ChangedStateException](../cppcx/platform-changedstateexception-class.md)|Возникает, если метод итератора коллекции или представления коллекции вызван после изменения родительской коллекции, что делает результаты метода недействительными.|  
-|[Класс Platform::ClassNotRegisteredException](../cppcx/platform-classnotregisteredexception-class.md)|Возникает, если COM\-класс не зарегистрирован.|  
+|[Класс Platform::ClassNotRegisteredException](../cppcx/platform-classnotregisteredexception-class.md)|Возникает, если COM-класс не зарегистрирован.|  
 |[Класс Platform::COMException](../cppcx/platform-comexception-class.md)|Представляет исключение, создаваемое при возвращении нераспознанного значения после вызова метода COM.|  
-|[Platform::Delegate \- класс](../cppcx/platform-delegate-class.md)|Представляет сигнатуру функции обратного вызова.|  
+|[Класс Platform::Delegate](../cppcx/platform-delegate-class.md)|Представляет сигнатуру функции обратного вызова.|  
 |[Класс Platform::DisconnectedException](../cppcx/platform-disconnectedexception-class.md)|Объект отключен от своих клиентов.|  
 |[Класс Platform::Exception](../cppcx/platform-exception-class.md)|Представляет ошибки, происходящие во время выполнения приложения. Базовый класс для исключений.|  
-|[Класс Platform::FailureException](../cppcx/platform-failureexception-class.md)|Вызывается, если операция вызвала сбой. Эквивалентно E\_FAIL HRESULT.|  
+|[Класс Platform::FailureException](../cppcx/platform-failureexception-class.md)|Вызывается, если операция вызвала сбой. Эквивалентно E_FAIL HRESULT.|  
 |[Класс значения Platform::Guid](../cppcx/platform-guid-value-class.md)|Представляет идентификатор GUID в системе типов среды выполнения Windows.|  
 |[Класс Platform::InvalidArgumentException](../cppcx/platform-invalidargumentexception-class.md)|Вызывается, если один из передаваемых методу аргументов является недопустимым.|  
 |[Класс Platform::InvalidCastException](../cppcx/platform-invalidcastexception-class.md)|Возникает в случаях недопустимого приведения или явного преобразования.|  
-|[Класс Platform::MTAThreadAttribute](../cppcx/platform-mtathreadattribute-class.md)|Указывает, что потоковая модель для приложения является многопотоковым подразделением \(MTA\).|  
+|[Класс Platform::MTAThreadAttribute](../cppcx/platform-mtathreadattribute-class.md)|Указывает, что потоковая модель для приложения является многопотоковым подразделением (MTA).|  
 |[Класс Platform::NotImplementedException](../cppcx/platform-notimplementedexception-class.md)|Возникает, если метод интерфейса не реализован в классе.|  
 |[Класс Platform::NullReferenceException](../cppcx/platform-nullreferenceexception-class.md)|Возникает при попытке разыменовать ссылку на объект NULL.|  
 |[Класс Platform::Object](../cppcx/platform-object-class.md)|Базовый класс, который обеспечивает общее поведение.|  
@@ -72,21 +70,21 @@ using namespace Platform;
 |[Класс Platform::OperationCanceledException](../cppcx/platform-operationcanceledexception-class.md)|Возникает при отмене операции.|  
 |[Класс Platform::OutOfBoundsException](../cppcx/platform-outofboundsexception-class.md)|Возникает, когда операция пытается получить доступ к данным за пределами допустимого диапазона.|  
 |[Класс Platform::OutOfMemoryException](../cppcx/platform-outofmemoryexception-class.md)|Возникает, если недостаточно памяти для выполнения операции.|  
-|[Класс Platform::STAThreadAttribute](../cppcx/platform-stathreadattribute-class.md)|Указывает, что потоковая модель для приложения является однопотоковым подразделением \(STA\).|  
+|[Класс Platform::STAThreadAttribute](../cppcx/platform-stathreadattribute-class.md)|Указывает, что потоковая модель для приложения является однопотоковым подразделением (STA).|  
 |[Класс Platform::String](../cppcx/platform-string-class.md)|Упорядоченная коллекция символов Юникода, используемая для представления текста.|  
 |[Класс Platform::StringReference](../cppcx/platform-stringreference-class.md)|Обеспечивает доступ к буферам строк с минимальной нагрузкой копирования.|  
 |[Класс Platform::Type](../cppcx/platform-type-class.md)|Указывает встроенный тип посредством перечисления категорий.|  
-|[Platform::ValueType \- класс](../cppcx/platform-valuetype-class.md)|Базовый класс для экземпляров типов значений.|  
+|[Класс Platform::ValueType](../cppcx/platform-valuetype-class.md)|Базовый класс для экземпляров типов значений.|  
 |[Класс Platform::WeakReference](../cppcx/platform-weakreference-class.md)|Предоставляет гибкую ссылку на объекты ссылочного класса, которая не увеличивает число ссылок.|  
 |[Класс Platform::WriteOnlyArray](../cppcx/platform-writeonlyarray-class.md)|Представляет доступный только для записи одномерный массив, используемый в качестве входного параметра в методах, реализующих шаблон FillArray.|  
-|[Класс Platform::WrongThreadException](../cppcx/platform-wrongthreadexception-class.md)|Вызывается, если поток выполняет вызов посредством указателя на интерфейс для прокси\-объекта, который не принадлежит к подразделению потока.|  
+|[Класс Platform::WrongThreadException](../cppcx/platform-wrongthreadexception-class.md)|Вызывается, если поток выполняет вызов посредством указателя на интерфейс для прокси-объекта, который не принадлежит к подразделению потока.|  
   
  **Реализации интерфейсов**  
   
  Пространство имен Platform определяет следующие интерфейсы.  
   
 |Интерфейс|Описание|  
-|---------------|--------------|  
+|---------------|-----------------|  
 |[Интерфейс Platform::IBox](../cppcx/platform-ibox-interface.md)|Используется для передачи типов значений в функции, параметры которых имеют тип Platform::Object^.|  
 |[Интерфейс Platform::IBoxArray](../cppcx/platform-iboxarray-interface.md)|Интерфейс, используемый для передачи массивов типов значений в функции, параметры которых имеют тип Platform::Array.|  
 |[Интерфейс Platform::IDisposable](../cppcx/platform-idisposable-interface.md)|Используется для освобождения неуправляемых ресурсов.|  
@@ -96,8 +94,8 @@ using namespace Platform;
  Пространство имен Platform содержит следующие перечисления.  
   
 |Интерфейс|Описание|  
-|---------------|--------------|  
-|[Platform::CallbackContext \- перечисление](../cppcx/platform-callbackcontext-enumeration.md)|Перечисление, используемое в качестве параметра конструктора делегата. Определяет, следует ли маршалировать обратный вызов в исходный поток или в поток вызывающего объекта.|  
+|---------------|-----------------|  
+|[Перечисление Platform::CallbackContext](../cppcx/platform-callbackcontext-enumeration.md)|Перечисление, используемое в качестве параметра конструктора делегата. Определяет, следует ли маршалировать обратный вызов в исходный поток или в поток вызывающего объекта.|  
 |[Перечисление Platform::TypeCode](../cppcx/platform-typecode-enumeration.md)|Указывает категорию чисел, представляющую встроенный тип.|  
   
  **Структуры**  
@@ -105,15 +103,15 @@ using namespace Platform;
  Пространство имен Platform содержит следующие структуры.  
   
 |Структура|Описание|  
-|---------------|--------------|  
+|---------------|-----------------|  
 |[Класс Platform::Enum](../cppcx/platform-enum-class.md)|Представляет константу с именем.|  
 |[Класс значения Platform::Guid](../cppcx/platform-guid-value-class.md)|Представляет идентификатор GUID.|  
-|[Класс значения Platform::IntPtr](../cppcx/platform-intptr-value-class.md)|Указатель со знаком, размер которого соответствует платформе \(32\-разрядной или 64\-разрядной\).|  
-|[Класс значения Platform::SizeT](../cppcx/platform-sizet-value-class.md)|Тип данных без знака, используемый для представления размера объекта.|  
-|[Класс значений Platform::UIntPtr](../cppcx/platform-uintptr-value-class.md)|Указатель без знака, размер которого соответствует платформе \(32\-разрядной или 64\-разрядной\).|  
+|[Класс значений Platform::IntPtr](../cppcx/platform-intptr-value-class.md)|Указатель со знаком, размер которого соответствует платформе (32-разрядной или 64-разрядной).|  
+|[Класс значений Platform::SizeT](../cppcx/platform-sizet-value-class.md)|Тип данных без знака, используемый для представления размера объекта.|  
+|[Класс значений Platform::UIntPtr](../cppcx/platform-uintptr-value-class.md)|Указатель без знака, размер которого соответствует платформе (32-разрядной или 64-разрядной).|  
   
-## См. также  
+## <a name="see-also"></a>См. также  
  [Пространство имен Platform::Collections](../cppcx/platform-collections-namespace.md)   
- [Пространство имен Platform::Runtime::CompilerServices](../cppcx/platform-runtime-compilerservices-namespace.md)   
- [Platform::Runtime::InteropServices \- пространство имен](../cppcx/platform-runtime-interopservices-namespace.md)   
+ [Пространство имен Platform::Runtime:: CompilerServices](../cppcx/platform-runtime-compilerservices-namespace.md)   
+ [Пространство имен Platform::Runtime::InteropServices](../cppcx/platform-runtime-interopservices-namespace.md)   
  [Пространство имен Platform::Metadata](../cppcx/platform-metadata-namespace.md)

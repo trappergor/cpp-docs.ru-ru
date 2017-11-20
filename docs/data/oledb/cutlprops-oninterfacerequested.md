@@ -1,32 +1,30 @@
 ---
-title: "CUtlProps::OnInterfaceRequested | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "CUtlProps"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "OnInterfaceRequested - метод"
+title: "CUtlProps::OnInterfaceRequested | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: CUtlProps
+dev_langs: C++
+helpviewer_keywords: OnInterfaceRequested method
 ms.assetid: a5e1a879-cff3-4e01-b902-2249a152984f
-caps.latest.revision: 8
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 860870628d8558ad252657c06d90f195fd707eb8
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/24/2017
 ---
-# CUtlProps::OnInterfaceRequested
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Обрабатывает запросы для дополнительного интерфейса, когда объект\-получатель вызывает метод для одного из интерфейсов поколения объектов.  
+# <a name="cutlpropsoninterfacerequested"></a>CUtlProps::OnInterfaceRequested
+Обрабатывает запросы к дополнительный интерфейс, когда потребитель вызывает метод для одного объекта создания интерфейсов.  
   
-## Синтаксис  
+## <a name="syntax"></a>Синтаксис  
   
 ```  
   
@@ -35,16 +33,16 @@ caps.handback.revision: 8
 );  
 ```  
   
-#### Параметры  
+#### <a name="parameters"></a>Параметры  
  `riid`  
- \[in\] идентификатор IID для запрошенного интерфейса.  Дополнительные сведения см. в описании параметра `riid``ICommand::Execute` справочника *программиста OLE DB* \(в *MDAC SDK*\).  
+ [in] Идентификатор IID запрошенного интерфейса. Дополнительные сведения см. в описании `riid` параметр `ICommand::Execute` в *Справочник программиста OLE DB* (в *MDAC SDK*).  
   
-## Заметки  
- **OnInterfaceRequested**  обрабатывает запросы объект\-получателя для дополнительного интерфейса, когда объект\-получатель вызывает метод для одного из интерфейсов создания объектов \(например, **IDBCreateSession**, **IDBCreateCommand**, `IOpenRowset` или `ICommand`\).  Он устанавливает соответствующие свойства OLE DB для запрошенного интерфейса.  Например, если запросы **IID\_IRowsetLocate** объект\-получателя, **OnInterfaceRequested** задает интерфейс **DBPROP\_IRowsetLocate**.  Этот прием поддерживает правильное состояния во время создания набора строк.  
+## <a name="remarks"></a>Примечания  
+ **OnInterfaceRequested** обрабатывает запросы потребителя дополнительный интерфейс, когда потребитель вызывает метод для одного объекта создания интерфейсов (такие как **IDBCreateSession**, **IDBCreateCommand**, `IOpenRowset`, или `ICommand`). Он задает соответствующее свойство OLE DB для запрошенного интерфейса. Например, если потребитель запрашивает **IID_IRowsetLocate**, **OnInterfaceRequested** задает **DBPROP_IRowsetLocate** интерфейса. Это обеспечивает правильное состояние во время создания набора строк.  
   
- Этот метод вызывается, когда объект\-получатель вызывает метод **IOpenRowset::OpenRowset** или `ICommand::Execute`.  
+ Этот метод вызывается, когда пользователь вызывает **IOpenRowset::OpenRowset** или `ICommand::Execute`.  
   
- Если объект\-получатель будет открыт объект и запросы необязательный интерфейс, поставщик должен установить свойство, связанной с этим интерфейсом к `VARIANT_TRUE`.  Чтобы разрешить свойств для обработки, метод **OnInterfaceRequested**  вызывается перед вызовом метода **Выполнить**  поставщика вызывается.  По умолчанию **OnInterfaceRequested**  обрабатывает следующие интерфейсы:  
+ Если потребитель открывает объект и запрашивает дополнительный интерфейс, поставщик следует установить свойство, связанное с этот интерфейс для `VARIANT_TRUE`. Разрешить обработку свойств **OnInterfaceRequested** вызывается перед поставщика **Execute** вызывается метод. По умолчанию **OnInterfaceRequested** обрабатывает следующие интерфейсы:  
   
 -   `IRowsetLocate`  
   
@@ -56,10 +54,10 @@ caps.handback.revision: 8
   
 -   `IRowsetScroll`  
   
- Если вы хотите обработать другие интерфейсы, переопределите этой функции в источнике данных, сеансе команде, или класс набора строк в отростчатым функциям.  Переопределенный должно пройти через обычный набор и задает, что интерфейсы свойств гарантирует, что настройки свойств также задает все свойства прикованные \(см. [OnPropertyChanged](../../data/oledb/cutlprops-onpropertychanged.md)\).  
+ При необходимости обработки других интерфейсов, переопределите эту функцию в классе источника, сеанса, команды или набора строк данных позволяет функции процесса. Переопределения должны проходить через интерфейсы свойства обычного set или get для убедитесь, что задание свойств устанавливает какие-либо связанные свойства (в разделе [OnPropertyChanged](../../data/oledb/cutlprops-onpropertychanged.md)).  
   
-## Требования  
- **Header:** atldb.h  
+## <a name="requirements"></a>Требования  
+ **Заголовок:** atldb.h  
   
-## См. также  
+## <a name="see-also"></a>См. также  
  [Класс CUtlProps](../../data/oledb/cutlprops-class.md)

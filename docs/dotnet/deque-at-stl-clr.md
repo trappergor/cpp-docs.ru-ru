@@ -1,45 +1,43 @@
 ---
-title: "deque::at (STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::deque::at"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "at - член [STL/CLR]"
+title: "deque::AT (STL/CLR) | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::deque::at
+dev_langs: C++
+helpviewer_keywords: at member [STL/CLR]
 ms.assetid: 9af83d8a-c519-4b2a-a25f-d3dc8bbb87fb
-caps.latest.revision: 18
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 16
+caps.latest.revision: "18"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: bf07c109bfd80fb34af007b0a66dd6f7a2dbd3af
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/24/2017
 ---
-# deque::at (STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Получает элемент в указанной позиции.  
+# <a name="dequeat-stlclr"></a>deque::at (STL/CLR)
+Обращается к элементу в указанной позиции.  
   
-## Синтаксис  
+## <a name="syntax"></a>Синтаксис  
   
 ```  
 reference at(size_type pos);  
 ```  
   
-#### Параметры  
+#### <a name="parameters"></a>Параметры  
  pos  
- Положение элемента, к которому необходимо получить доступ.  
+ Позиция элемента, к которому осуществляется доступ.  
   
-## Заметки  
- Функция\-член возвращает ссылку на элемент контролируемой последовательности в позиции `pos`.  Он используется для чтения и записи элемент положение которого известно.  
+## <a name="remarks"></a>Примечания  
+ Функция-член возвращает ссылку на элемент управляемой последовательности в позиции `pos`. Используется для чтения или записи элемент, позиция которого известно.  
   
-## Пример  
+## <a name="example"></a>Пример  
   
 ```  
 // cliext_deque_at.cpp   
@@ -68,13 +66,16 @@ int main()
   
 ```  
   
-  **a b c**  
- **x C.**   
-## Требования  
- **Заголовок:**\<cliext\/deque\>  
+```Output  
+a b c  
+a x c  
+```  
+  
+## <a name="requirements"></a>Требования  
+ **Заголовок:** \<cliext/deque >  
   
  **Пространство имен:** cliext  
   
-## См. также  
- [deque](../dotnet/deque-stl-clr.md)   
- [deque::operator](../Topic/deque::operator\(STL-CLR\).md)
+## <a name="see-also"></a>См. также  
+ [deque (STL/CLR)](../dotnet/deque-stl-clr.md)   
+ [deque::operator(STL/CLR)](../dotnet/deque-operator-stl-clr.md)

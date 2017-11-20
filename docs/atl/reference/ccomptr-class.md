@@ -4,46 +4,28 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-windows
+ms.technology: cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
 - CComPtr
 - ATLBASE/ATL::CComPtr
 - ATLBASE/ATL::CComPtr::CComPtr
-dev_langs:
-- C++
-helpviewer_keywords:
-- CComPtr class
+dev_langs: C++
+helpviewer_keywords: CComPtr class
 ms.assetid: 22d9ea8d-ed66-4c34-940f-141db11e83bd
-caps.latest.revision: 21
+caps.latest.revision: "21"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0e0c08ddc57d437c51872b5186ae3fc983bb0199
-ms.openlocfilehash: ae7bb5e85f23492bdbef4af86d9f68fa83c991e2
-ms.contentlocale: ru-ru
-ms.lasthandoff: 02/24/2017
-
+ms.openlocfilehash: 0fada073fd438bb2b3605c972f6598f2955b5f68
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="ccomptr-class"></a>Класс CComPtr
-Класс интеллектуального указателя для управления указателей интерфейса СОМ.  
+Класс интеллектуальный указатель для управления указателей интерфейса СОМ.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -68,16 +50,16 @@ class CComPtr
   
 |Имя|Описание|  
 |----------|-----------------|  
-|[CComPtr::operator =](#operator_eq)|Присваивает указатель на указатель элемента.|  
+|[CComPtr::operator =](#operator_eq)|Присваивает указатель на указатель на член.|  
   
 ## <a name="remarks"></a>Примечания  
- Использует ATL `CComPtr` и [CComQIPtr](../../atl/reference/ccomqiptr-class.md) для управления указателей интерфейса СОМ. Являются производными от [CComPtrBase](../../atl/reference/ccomptrbase-class.md), и оба выполняют автоматическим подсчетом ссылок.  
+ ATL использует `CComPtr` и [CComQIPtr](../../atl/reference/ccomqiptr-class.md) для управления указателей интерфейса СОМ. Являются производными от [CComPtrBase](../../atl/reference/ccomptrbase-class.md), и как выполнить подсчет автоматических ссылок.  
   
- **CComPtr** и [CComQIPtr](../../atl/reference/ccomqiptr-class.md) классов может помочь избежать утечек памяти, выполняя автоматическим подсчетом ссылок.  Следующие функции оба выполняют логические операции; Однако обратите внимание, как вторая версия может быть меньше ошибок с помощью **CComPtr** класса:  
+ **CComPtr** и [CComQIPtr](../../atl/reference/ccomqiptr-class.md) классы могут помочь устранить утечки памяти, выполняя автоматическим подсчетом ссылок.  Следующие функции оба выполняют логические операции; Однако обратите внимание, как вторая версия может быть меньше ошибок с помощью **CComPtr** класса:  
   
- [!code-cpp[NVC_ATL_Utilities&#130;](../../atl/codesnippet/cpp/ccomptr-class_1.cpp)]  
+ [!code-cpp[NVC_ATL_Utilities#130](../../atl/codesnippet/cpp/ccomptr-class_1.cpp)]  
   
- [!code-cpp[NVC_ATL_Utilities&#131;](../../atl/codesnippet/cpp/ccomptr-class_2.cpp)]  
+ [!code-cpp[NVC_ATL_Utilities#131](../../atl/codesnippet/cpp/ccomptr-class_2.cpp)]  
   
  В отладочных построениях свяжите atlsd.lib для трассировки кода.  
   
@@ -117,10 +99,9 @@ T* operator= (const CComPtr<T>& lp) throw ();
  Возвращает указатель на обновленный `CComPtr` объекта  
   
 ### <a name="remarks"></a>Примечания  
- Это операция AddRefs новый объект и выпусках существующий объект, если он существует.  
+ Данная операция AddRefs новый объект и выпуски существующий объект, если он существует.  
   
 ## <a name="see-also"></a>См. также  
  [CComPtr::CComPtr](#ccomptr)   
  [CComQIPtr::CComQIPtr](../../atl/reference/ccomqiptr-class.md#ccomqiptr)   
  [Общие сведения о классе](../../atl/atl-class-overview.md)
-

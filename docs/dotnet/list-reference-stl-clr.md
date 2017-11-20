@@ -1,41 +1,39 @@
 ---
-title: "list::reference (STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::list::reference"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "ссылочный элемент [STL/CLR]"
+title: "List::Reference (STL/CLR) | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::list::reference
+dev_langs: C++
+helpviewer_keywords: reference member [STL/CLR]
 ms.assetid: 318a4566-63f2-4744-8e06-14f7c5608d82
-caps.latest.revision: 17
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 15
+caps.latest.revision: "17"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 1ae988a9ee8da194fa6b7ff4b1224a286d0f5f7f
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/24/2017
 ---
-# list::reference (STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="listreference-stlclr"></a>list::reference (STL/CLR)
 Тип ссылки на элемент.  
   
-## Синтаксис  
+## <a name="syntax"></a>Синтаксис  
   
 ```  
 typedef value_type% reference;  
 ```  
   
-## Заметки  
- Описывает тип ссылку на элемент.  
+## <a name="remarks"></a>Примечания  
+ Тип описывает ссылку на элемент.  
   
-## Пример  
+## <a name="example"></a>Пример  
   
 ```  
 // cliext_list_reference.cpp   
@@ -72,14 +70,17 @@ int main()
   
 ```  
   
-  **a b c**  
- **B C.**   
-## Требования  
- **Заголовок:**\<cliext\/list\>  
+```Output  
+a b c  
+A B C  
+```  
+  
+## <a name="requirements"></a>Требования  
+ **Заголовок:** \<cliext/list >  
   
  **Пространство имен:** cliext  
   
-## См. также  
- [list](../dotnet/list-stl-clr.md)   
- [list::const\_reference](../dotnet/list-const-reference-stl-clr.md)   
- [list::value\_type](../dotnet/list-value-type-stl-clr.md)
+## <a name="see-also"></a>См. также  
+ [список (STL/CLR)](../dotnet/list-stl-clr.md)   
+ [List::const_reference (STL/CLR)](../dotnet/list-const-reference-stl-clr.md)   
+ [list::value_type (STL/CLR)](../dotnet/list-value-type-stl-clr.md)

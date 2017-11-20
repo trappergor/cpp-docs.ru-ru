@@ -1,76 +1,74 @@
 ---
-title: "nextafter, nextafterf, nextafterl, _nextafter, _nextafterf, nexttoward, nexttowardf, nexttowardl | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-apiname: 
-  - "nextafterf"
-  - "_nextafterf"
-  - "nextafter"
-  - "nextafterl"
-  - "_nextafter"
-  - "nexttoward"
-  - "nexttowardf"
-  - "nexttowardl"
-apilocation: 
-  - "msvcrt.dll"
-  - "msvcr80.dll"
-  - "msvcr90.dll"
-  - "msvcr100.dll"
-  - "msvcr100_clr0400.dll"
-  - "msvcr110.dll"
-  - "msvcr110_clr0400.dll"
-  - "msvcr120.dll"
-  - "msvcr120_clr0400.dll"
-  - "ucrtbase.dll"
-  - "api-ms-win-crt-math-l1-1-0.dll"
-apitype: "DLLExport"
-f1_keywords: 
-  - "nextafter"
-  - "_nextafter"
-  - "nextafterf"
-  - "nextafterl"
-  - "_nextafterf"
-  - "math/nextafter"
-  - "math/nextafterf"
-  - "math/nextafterl"
-  - "nexttoward"
-  - "nexttowardf"
-  - "nexttowardl"
-  - "math/nexttoward"
-  - "math/nexttowardf"
-  - "math/nexttowardl"
-dev_langs: 
-  - "C++"
-  - "C"
-helpviewer_keywords: 
-  - "_nextafter - функция"
-  - "nextafter - функция"
-  - "функция _nextafterf"
-  - "nextafterf - функция"
-  - "функция nextafterl"
-  - "функция nexttoward"
-  - "функция nexttowardf"
-  - "функция nexttowardl"
+title: "nextafter, nextafterf, nextafterl, _nextafter, _nextafterf, nexttoward, nexttowardf, nexttowardl | Документы Майкрософт"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-standard-libraries
+ms.tgt_pltfrm: 
+ms.topic: article
+apiname:
+- nextafterf
+- _nextafterf
+- nextafter
+- nextafterl
+- _nextafter
+- nexttoward
+- nexttowardf
+- nexttowardl
+apilocation:
+- msvcrt.dll
+- msvcr80.dll
+- msvcr90.dll
+- msvcr100.dll
+- msvcr100_clr0400.dll
+- msvcr110.dll
+- msvcr110_clr0400.dll
+- msvcr120.dll
+- msvcr120_clr0400.dll
+- ucrtbase.dll
+- api-ms-win-crt-math-l1-1-0.dll
+apitype: DLLExport
+f1_keywords:
+- nextafter
+- _nextafter
+- nextafterf
+- nextafterl
+- _nextafterf
+- math/nextafter
+- math/nextafterf
+- math/nextafterl
+- nexttoward
+- nexttowardf
+- nexttowardl
+- math/nexttoward
+- math/nexttowardf
+- math/nexttowardl
+dev_langs: C++
+helpviewer_keywords:
+- _nextafter function
+- nextafter function
+- _nextafterf function
+- nextafterf function
+- nextafterl function
+- nexttoward function
+- nexttowardf function
+- nexttowardl function
 ms.assetid: 9785bfb9-de53-4bd0-9637-f05fa0c1f6ab
-caps.latest.revision: 13
-caps.handback.revision: 13
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
+caps.latest.revision: "13"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: 3dad9078ba4c683b4d29d366943559ad8228cb31
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/24/2017
 ---
-# nextafter, nextafterf, nextafterl, _nextafter, _nextafterf, nexttoward, nexttowardf, nexttowardl
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Возвращает следующий представимым значением с плавающей запятой.  
+# <a name="nextafter-nextafterf-nextafterl-nextafter-nextafterf-nexttoward-nexttowardf-nexttowardl"></a>nextafter, nextafterf, nextafterl, _nextafter, _nextafterf, nexttoward, nexttowardf, nexttowardl
+Возвращает следующее представимое значение с плавающей запятой.  
   
-## Синтаксис  
+## <a name="syntax"></a>Синтаксис  
   
 ```  
 double nextafter(  
@@ -134,32 +132,32 @@ long double nexttowardl(
 );  
 ```  
   
-#### Параметры  
+#### <a name="parameters"></a>Параметры  
  `x`  
- Значение с плавающей запятой для запуска из.  
+ Начальное значение с плавающей запятой.  
   
  `y`  
- Значение с плавающей запятой, чтобы перейти к.  
+ Следующее значение с плавающей запятой.  
   
-## Возвращаемое значение  
- Возвращает следующий представимым значением с плавающей запятой для возвращаемого типа после `x` в направлении `y`. Если `x`\=`y`, функция возвращает `y`, преобразованным в возвращаемый тип, исключение не запускается. Если `x` не равен `y`, результатом является denormal или ноль, задаются FE\_UNDERFLOW и FE\_INEXACT состояния исключения с плавающей запятой и возвращается правильный результат. Если параметр `x` или `y` имеет значение NAN, то возвращаемое значение является одним из входного значения NaN. Если `x` ограниченно и результатом является бесконечной или не представить в типе, возвращается правильно подписанного бесконечность или NAN, заданы состояния исключения с плавающей запятой FE\_OVERFLOW и FE\_INEXACT, и `errno` задано значение ERANGE.  
+## <a name="return-value"></a>Возвращаемое значение  
+ Возвращает следующее представимое значение с плавающей запятой возвращаемого типа, следующее за значением `x` в направлении значения `y`. Если `x` = `y`, функция возвращает значение `y`, преобразованное в возвращаемый тип, при этом исключение не запускается. Если значение `x` не равно значению `y` и результатом является денормализованное число или нуль, то задаются состояния исключения с плавающей запятой FE_UNDERFLOW и FE_INEXACT, и возвращается правильный результат. Если параметр `x` или `y` имеет значение NAN, то возвращаемое значение является одним из входных значений NaN. Если функция `x` является конечной, а результат является бесконечным или не может быть представлен как имеющий тип, то возвращается значение NAN или соответствующая бесконечность со знаком, задаются состояния исключения с плавающей запятой FE_OVERFLOW и FE_INEXACT, а для`errno` задается значение ERANGE.  
   
-## Заметки  
- `nextafter` И `nexttoward` функция семейств эквивалентны, за исключением типа параметра `y`. Если `x` и `y` равны, возвращается значение `y` преобразуется в тип возвращаемого значения.  
+## <a name="remarks"></a>Примечания  
+ Семейства функций `nextafter` и `nexttoward` эквивалентны за исключением типа параметра `y`. Если значения `x` и `y` равны, возвращается значение `y`, преобразованное в возвращаемый тип.  
   
- Поскольку C\+\+ допускает перегрузки, при включении \< cmath \> можно вызывать перегрузки `nextafter` и `nexttoward` возвращающее `float` и `long double` типов. В программе на языке C `nextafter` и `nexttoward` всегда возвращать `double`.  
+ Так как C++ допускает перегрузку, то при включении \<cmath> можно вызывать перегрузки `nextafter` и `nexttoward`, которые возвращают типы `float` и `long double`. В программе на языке C функции `nextafter` и `nexttoward` всегда возвращают значения типа `double`.  
   
- `_nextafter` И `_nextafterf` функции, определенные Майкрософт.`_nextafterf` Функция доступна только при компиляции для x64.  
+ Функции `_nextafter` и `_nextafterf` относятся только к системам Майкрософт. Функция `_nextafterf` доступна только при компиляции для x64.  
   
-## Требования  
+## <a name="requirements"></a>Требования  
   
-|Подпрограмма|Обязательный заголовок \(C\)|Обязательный заголовок \(C\+\+\)|  
-|------------------|----------------------------------|--------------------------------------|  
-|`nextafter`, `nextafterf`, `nextafterl`, `_nextafterf`, `nexttoward`, `nexttowardf`, `nexttowardl`|\<math.h\>|\<math.h\> или \<cmath\>|  
-|`_nextafter`|\<float.h\>|\< float.h \> или \< cfloat \>|  
+|Подпрограмма|Обязательный заголовок (C)|Обязательный заголовок (C++)|  
+|-------------|---------------------------|-------------------------------|  
+|`nextafter`, `nextafterf`, `nextafterl`, `_nextafterf`, `nexttoward`, `nexttowardf`, `nexttowardl`|\<math.h>|\<math.h> или \<cmath>|  
+|`_nextafter`|\<float.h>|\<float.h> или \<cfloat>|  
   
  Дополнительные сведения о совместимости см. в разделе [Совместимость](../../c-runtime-library/compatibility.md) во введении.  
   
-## См. также  
+## <a name="see-also"></a>См. также  
  [Поддержка чисел с плавающей запятой](../../c-runtime-library/floating-point-support.md)   
- [isNaN \_isnan, \_isnanf](../../c-runtime-library/reference/isnan-isnan-isnanf.md)
+ [isnan, _isnan, _isnanf](../../c-runtime-library/reference/isnan-isnan-isnanf.md)

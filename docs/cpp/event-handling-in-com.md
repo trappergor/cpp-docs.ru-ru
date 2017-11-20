@@ -4,12 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-language
+ms.technology: cpp-language
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - event handling [C++], COM
 - event handling [C++], about event handling
@@ -25,16 +23,15 @@ helpviewer_keywords:
 - declaring events, in COM
 - declaring events, event handling in COM
 ms.assetid: 6b4617d4-a58e-440c-a8a6-1ad1c715b2bb
-caps.latest.revision: 11
+caps.latest.revision: "11"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.translationtype: HT
-ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
-ms.openlocfilehash: fc39584845bafa469b5d5ee8a925c2b4c5335345
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/25/2017
-
+ms.openlocfilehash: 3173d01898fc63327c5e4d4c6ce4f536b1245450
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="event-handling-in-com"></a>Обработка событий в COM
 Обработка событий COM, необходимо настроить событие источник и приемник событий с помощью [event_source](../windows/event-source.md) и [event_receiver](../windows/event-receiver.md) атрибуты, соответственно, указав `type` = **com**. Эти атрибуты вводят соответствующий код для пользовательского, сдвоенного интерфейса и интерфейса диспетчеризации, чтобы позволить классам, к которым они применяются, запускать и обрабатывать события через точки подключения COM.  

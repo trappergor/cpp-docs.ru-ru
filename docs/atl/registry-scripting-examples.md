@@ -1,121 +1,122 @@
 ---
-title: "Registry Scripting Examples | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "registrar scripts [ATL]"
-  - "реестр, Registrar"
-  - "сценарии, примеры"
-  - "скрипты, Registrar scripts"
+title: "Примеры сценариев реестра | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- scripting, examples
+- registrar scripts [ATL]
+- scripts, Registrar scripts
+- registry, Registrar
 ms.assetid: b6df80e1-e08b-40ee-9243-9b381b172460
-caps.latest.revision: 12
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 7
+caps.latest.revision: "12"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: bcb1b2307ccb16e7b842e221c48c0f2a99b31db6
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/24/2017
 ---
-# Registry Scripting Examples
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Создание сценариев в примерах этого раздела показано, как добавлять ключ в системный реестр, зарегистрировать сервер модели COM регистратора и указать несколько деревьев parse.  
+# <a name="registry-scripting-examples"></a>Примеры сценариев реестра
+Примеры сценариев в этом разделе показано, как добавить раздел в системный реестр, Регистрация сервера регистрации COM и указать несколько синтаксический анализ деревьев.  
   
-## Добавьте ключ к HKEY\_CURRENT\_USER  
- Следующие анализируют дерево иллюстрируют простой скрипт, который добавляет один ключ в системный реестр.  В частности, скрипт добавляет ключ, `MyVeryOwnKey`, в `HKEY_CURRENT_USER`.  Кроме того, по умолчанию будет присвоено строковое значение `HowGoesIt?` к новому ключу.  
+## <a name="add-a-key-to-hkeycurrentuser"></a>Добавление раздела в HKEY_CURRENT_USER  
+ Следующее дерево синтаксического анализа показан простой сценарий, который добавляет один ключ в системный реестр. В частности, сценарий добавляет ключ `MyVeryOwnKey`в `HKEY_CURRENT_USER`. Он также присваивает строковое значение по умолчанию `HowGoesIt` на новый ключ:  
   
 ```  
 HKEY_CURRENT_USER  
 {  
-   'MyVeryOwnKey' = s 'HowGoesIt?'  
+ 'MyVeryOwnKey' = s 'HowGoesIt'  
 }  
 ```  
   
- Этот скрипт можно легко расширить, чтобы определить несколько подразделов:  
+ Этот сценарий можно легко расширить, добавив задайте несколько подразделов следующим образом:  
   
 ```  
 HKCU  
 {  
-   'MyVeryOwnKey' = s 'HowGoesIt?'  
-   {  
-      'HasASubkey'  
-      {  
-         'PrettyCool?' = d '55'  
-         val 'ANameValue' = s 'WithANamedValue'  
-      }  
-   }  
+ 'MyVeryOwnKey' = s 'HowGoesIt'  
+ {  
+ 'HasASubkey'  
+ {  
+ 'PrettyCool' = d '55'  
+    val 'ANameValue' = s 'WithANamedValue'  
+ }  
+ }  
 }  
 ```  
   
- Теперь скрипт добавляет подраздел `HasASubkey`, в `MyVeryOwnKey`.  К этому подразделу, он добавляет и подраздел `PrettyCool?` \(значение по умолчанию `DWORD` 55\) и `ANameValue` именованное значение \(со строковым значением `WithANamedValue`\).  
+ Теперь сценарий добавляет подраздел, `HasASubkey`в `MyVeryOwnKey`. В этом подразделе, и он добавляет `PrettyCool` подраздел (значение по умолчанию `DWORD` значение 55) и `ANameValue` с именем value (со значением строки `WithANamedValue`).  
   
-##  <a name="_atl_register_the_registrar_com_server"></a> Зарегистрировать сервер модели COM регистратора  
- Следующий скрипт регистрирует сам сервер модели COM регистратора.  
+##  <a name="_atl_register_the_registrar_com_server"></a>Зарегистрируйте сервер COM регистратора  
+ Следующий скрипт регистрирует сам сервер COM регистратора.  
   
 ```  
 HKCR  
 {  
-   ATL.Registrar = s 'ATL Registrar Class'  
-   {  
-      CLSID = s '{44EC053A-400F-11D0-9DCD-00A0C90391D3}'  
-   }  
-   NoRemove CLSID  
-   {  
-      ForceRemove {44EC053A-400F-11D0-9DCD-00A0C90391D3} =  
-                   s 'ATL Registrar Class'  
-      {  
-         ProgID = s 'ATL.Registrar'  
-         InprocServer32 = s '%MODULE%'  
-         {  
-            val ThreadingModel = s 'Apartment'  
-         }  
-      }  
-   }  
+    ATL.Registrar = s 'ATL Registrar Class'  
+ {  
+    CLSID = s '{44EC053A-400F-11D0-9DCD-00A0C90391D3}'  
+ }  
+    NoRemove CLSID  
+ {  
+    ForceRemove {44EC053A-400F-11D0-9DCD-00A0C90391D3} = 
+    s 'ATL Registrar Class'  
+ {  
+    ProgID = s 'ATL.Registrar'  
+    InprocServer32 = s '%MODULE%'  
+ {  
+    val ThreadingModel = s 'Apartment'  
+ }  
+ }  
+ }  
 }  
 ```  
   
- Во время выполнения этом дерево синтаксического анализа добавляет ключ `ATL.Registrar` к `HKEY_CLASSES_ROOT`.  К этому новому ключу, затем.  
+ Во время выполнения, это дерево синтаксического анализа добавляет `ATL.Registrar` ключа для `HKEY_CLASSES_ROOT`. Этот новый ключ затем ИТ:  
   
--   Определяет `ATL Registrar Class` как строковое значение ключа по умолчанию.  
+-   Указывает `ATL Registrar Class` как строковое значение ключа по умолчанию.  
   
--   Добавляет `CLSID` например подраздела.  
+-   Добавляет `CLSID` виде подраздела.  
   
--   Определяет `{44EC053A-400F-11D0-9DCD-00A0C90391D3}` для `CLSID`.  \(Это значение CLSID регистратора для использования с `CoCreateInstance`\).  
+-   Указывает `{44EC053A-400F-11D0-9DCD-00A0C90391D3}` для `CLSID`. (Это значение является регистратора CLSID для использования с `CoCreateInstance`.)  
   
- Поскольку `CLSID` совместно использовано, он не должен быть удалено в режиме регистрация которого отменяется.  Оператор, `NoRemove CLSID`, делает это, указав, что `CLSID` должно быть открывается в режиме регистра и игнорирован в режиме регистрация которого отменяется.  
+ Поскольку `CLSID` является общим, его не следует удалять в режиме отменить регистрацию. Инструкции, `NoRemove CLSID`, делает это, означает, что `CLSID` должен быть открыт в режиме регистр и учитывается в режиме Unregister.  
   
- Оператор `ForceRemove` предоставляет функцию домоустройства путем удаления ключ и все его подразделов до повторного создания ключа.  Это может быть полезно, если изменились имена подразделов.  В этом сценарии примере `ForceRemove` проверяет наличие `{44EC053A-400F-11D0-9DCD-00A0C90391D3}` уже существует.  Если это так, `ForceRemove`:  
+ `ForceRemove` Инструкция предоставляет вспомогательные функции, удалив ключ и все его подразделы перед повторным созданием ключ. Это может быть полезно, если изменились имена подразделов. В этом примере сценария `ForceRemove` проверяет `{44EC053A-400F-11D0-9DCD-00A0C90391D3}` уже существует. В этом случае `ForceRemove`:  
   
--   Рекурсивно удаляет `{44EC053A-400F-11D0-9DCD-00A0C90391D3}` и все его подразделов.  
+-   Рекурсивно удаляет `{44EC053A-400F-11D0-9DCD-00A0C90391D3}` и все его подразделы.  
   
--   Воссоздает `{44EC053A-400F-11D0-9DCD-00A0C90391D3}`.  
+-   Повторно создает `{44EC053A-400F-11D0-9DCD-00A0C90391D3}`.  
   
--   Добавляет `ATL Registrar Class` как по умолчанию строковое значение для `{44EC053A-400F-11D0-9DCD-00A0C90391D3}`.  
+-   Добавляет `ATL Registrar Class` как строковое значение по умолчанию для `{44EC053A-400F-11D0-9DCD-00A0C90391D3}`.  
   
- Дерево синтаксического разбора теперь добавляет 2 новых подраздела к `{44EC053A-400F-11D0-9DCD-00A0C90391D3}`.  Первый ключ, `ProgID` возвращает строковое значение по умолчанию, ProgID.  Второй ключ, `InprocServer32` возвращает строковое значение, `%MODULE%`, которое является значением препроцессора объясненное в разделе [Использование подстановочных параметров \(препроцессор регистратора\)](../atl/using-replaceable-parameters-the-registrar-s-preprocessor.md), этой статьи.  `InprocServer32` также возвращает именованное значение, `ThreadingModel` со строковым значением `Apartment`.  
+ Дерево синтаксического анализа теперь добавляет два новых разделов в `{44EC053A-400F-11D0-9DCD-00A0C90391D3}`. Первый ключ `ProgID`, возвращает строковое значение по умолчанию, — это идентификатор ProgID. Второй ключ `InprocServer32`, возвращает строковое значение по умолчанию, `%MODULE%`, в котором препроцессора значение описано в разделе [с помощью подстановочные параметры (препроцессор регистратора)](../atl/using-replaceable-parameters-the-registrar-s-preprocessor.md), данной статьи. `InprocServer32`также возвращает именованное значение `ThreadingModel`, со значением строки `Apartment`.  
   
-## Определите несколько синтаксический анализ деревья  
- Чтобы указать более дерево синтаксического анализа в скрипте, просто устанавливает одно дерево в конце других.  Например, следующий скрипт добавляет ключ, `MyVeryOwnKey`, к деревьям проанализировать, как для `HKEY_CLASSES_ROOT`, так и для `HKEY_CURRENT_USER`:  
+## <a name="specify-multiple-parse-trees"></a>Укажите несколько синтаксический анализ деревьев  
+ Чтобы указать более одного дерево синтаксического анализа в скрипте, просто поместите в конце другого одно дерево. Например, следующий сценарий добавляет ключ `MyVeryOwnKey`, в деревья синтаксического анализа для обоих `HKEY_CLASSES_ROOT` и `HKEY_CURRENT_USER`:  
   
 ```  
 HKCR  
 {  
-   'MyVeryOwnKey' = s 'HowGoesIt?'  
+ 'MyVeryOwnKey' = s 'HowGoesIt'  
 }  
 HKEY_CURRENT_USER  
 {  
-   'MyVeryOwnKey' = s 'HowGoesIt?'  
+ 'MyVeryOwnKey' = s 'HowGoesIt'  
 }  
 ```  
   
 > [!NOTE]
->  В скрипте регистратора, 4K максимальный размер токена.  Токен любой элемент \(a узнаваемый в синтаксисе\). В предыдущем сценарии примере `HKCR`, `HKEY_CURRENT_USER`, `'MyVeryOwnKey'` и `'HowGoesIt?'` все токены.  
+>  В скрипте регистратора 4 КБ — максимальный размер маркера. (Маркер представляет любой элемент, распознаваемые в синтаксисе). В предыдущем примере сценария `HKCR`, `HKEY_CURRENT_USER`, `'MyVeryOwnKey'`, и `'HowGoesIt'` все маркеры.  
   
-## См. также  
- [Creating Registrar Scripts](../Topic/Creating%20Registrar%20Scripts.md)
+## <a name="see-also"></a>См. также  
+ [Создание скриптов регистратора](../atl/creating-registrar-scripts.md)
+

@@ -1,81 +1,81 @@
 ---
-title: "/MAP (создание файла сопоставления) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "/map"
-  - "VC.Project.VCLinkerTool.MapFileName"
-  - "VC.Project.VCLinkerTool.GenerateMapFile"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "/MAP - параметр компоновщика"
-  - "генерирование файла сопоставления - параметр компоновщика"
-  - "MAP - параметр компоновщика"
-  - "-MAP - параметр компоновщика"
-  - "файл сопоставления - параметр компоновщика"
-  - "файлы сопоставления, создание компоновщика"
-  - "файлы сопоставления, информация о компонующейся программе"
-  - "файлы сопоставления, указание имени файла"
+title: "-MAP (Создание файла сопоставления) | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- /map
+- VC.Project.VCLinkerTool.MapFileName
+- VC.Project.VCLinkerTool.GenerateMapFile
+dev_langs: C++
+helpviewer_keywords:
+- mapfiles, creating linker
+- generate mapfile linker option
+- mapfile linker option
+- mapfiles, information about program being linked
+- MAP linker option
+- -MAP linker option
+- mapfiles, specifying file name
+- /MAP linker option
 ms.assetid: 9ccce53d-4e36-43da-87b0-7603ddfdea63
-caps.latest.revision: 8
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: 2e776803ab6f7046b2db1f80899ee6e465deb399
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/24/2017
 ---
-# /MAP (создание файла сопоставления)
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="map-generate-mapfile"></a>/MAP (создание файла сопоставления)
 ```  
 /MAP[:filename]  
 ```  
   
-## Заметки  
- Здесь:  
+## <a name="remarks"></a>Примечания  
+ где:  
   
  *filename*  
- Заданное пользователем имя файла сопоставления.  Заменяет стандартное имя.  
+ Указанное пользователем имя файла сопоставления. Он заменяет имя по умолчанию.  
   
-## Заметки  
- Параметр \/MAP предписывает компоновщику создание файла сопоставления.  
+## <a name="remarks"></a>Примечания  
+ Параметр/MAP предписывает компоновщику Создание файла сопоставления.  
   
- По умолчанию компоновщик дает файлу сопоставления базовое имя программы и расширение MAP.  С помощью дополнительного параметра *filename* можно переопределить имя файла сопоставления, заданное по умолчанию.  
+ По умолчанию компоновщик дает файлу сопоставления базовое имя программы и расширение MAP. Необязательный *filename* позволяет переопределить имя по умолчанию для файла сопоставления.  
   
- Файл сопоставления представляет собой текстовый файл, в котором содержатся следующие сведения о компонуемой программе:  
+ Файл сопоставления представляет текстовый файл, содержащий следующие сведения о компонующейся программе:  
   
--   имя модуля, являющееся базовым именем файла;  
+-   Имя модуля, который является базовым именем файла  
   
--   отметка времени из заголовка файла программы \(не из файловой системы\);  
+-   Отметка времени из заголовка файла программы (не из файловой системы)  
   
--   список групп в программе с указанием адреса запуска \(в виде *секция*:*смещение*\), длины, имени и класса для каждой группы;  
+-   Список групп в программе, имеющий начальный адрес для каждой группы (как *раздел*:*смещение*), длина имени группы и класса  
   
--   список открытых символов с указанием адреса \(в виде *секция*:*смещение*\), имени, неструктурированного адреса для каждого символа, а также файла OBJ, в котором этот символ определен;  
+-   Список открытых символов с каждым адресом (как *раздел*:*смещение*), символ имени, неструктурированного адреса и OBJ-файл, в котором определен символ  
   
--   Точка входа \(в виде *секция*:*смещение*\).  
+-   Точка входа (как *раздел*:*смещение*)  
   
- Параметр [\/MAPINFO](../../build/reference/mapinfo-include-information-in-mapfile.md) задает дополнительные сведения, которые должны быть включены в файл сопоставления.  
+ [/MAPINFO](../../build/reference/mapinfo-include-information-in-mapfile.md) указывает Дополнительные сведения, которые будут включены в файл сопоставления.  
   
-### Установка данного параметра компоновщика в среде разработки Visual Studio  
+### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>Задание данного параметра компоновщика в среде разработки Visual Studio  
   
-1.  Откройте диалоговое окно **Страницы свойств** проекта.  Дополнительные сведения см. в разделе [Задание свойств проекта C\+\+](../../ide/working-with-project-properties.md).  
+1.  Откройте диалоговое окно **Страницы свойств** проекта. Дополнительные сведения см. в разделе [задание свойств проекта Visual C++](../../ide/working-with-project-properties.md).  
   
-2.  Выберите папку **Компоновщик**.  
+2.  Нажмите кнопку **компоновщика** папки.  
   
-3.  Выберите страницу свойств **Отладка**.  
+3.  Нажмите кнопку **отладки** страницу свойств.  
   
-4.  Измените свойство **Создавать файл сопоставления**.  
+4.  Изменить **Создание файла сопоставления** свойство.  
   
-### Установка данного параметра компоновщика программным способом  
+### <a name="to-set-this-linker-option-programmatically"></a>Задание данного параметра компоновщика программным способом  
   
 1.  См. разделы <xref:Microsoft.VisualStudio.VCProjectEngine.VCLinkerTool.GenerateMapFile%2A> и <xref:Microsoft.VisualStudio.VCProjectEngine.VCLinkerTool.MapFileName%2A>.  
   
-## См. также  
+## <a name="see-also"></a>См. также  
  [Настройка параметров компоновщика](../../build/reference/setting-linker-options.md)   
  [Параметры компоновщика](../../build/reference/linker-options.md)

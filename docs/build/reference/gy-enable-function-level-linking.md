@@ -1,70 +1,70 @@
 ---
-title: "/Gy (включение компоновки на уровне функций) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "VC.Project.VCCLCompilerTool.EnableFunctionLevelLinking"
-  - "/gy"
-  - "VC.Project.VCCLWCECompilerTool.EnableFunctionLevelLinking"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "/Gy - параметр компилятора [C++]"
-  - "COMDAT - функция"
-  - "включение компоновки на уровне функций - параметр компилятора [C++]"
-  - "Gy - параметр компилятора [C++]"
-  - "-Gy - параметр компилятора [C++]"
-  - "упакованные функции"
+title: "-Gy (включение компоновки на уровне функций) | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- VC.Project.VCCLCompilerTool.EnableFunctionLevelLinking
+- /gy
+- VC.Project.VCCLWCECompilerTool.EnableFunctionLevelLinking
+dev_langs: C++
+helpviewer_keywords:
+- enable function-level linking compiler option [C++]
+- COMDAT function
+- Gy compiler option [C++]
+- -Gy compiler option [C++]
+- /Gy compiler option [C++]
+- packaged functions
 ms.assetid: 0d3cf14c-ed7d-4ad3-b4b6-104e56f61046
-caps.latest.revision: 17
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 17
+caps.latest.revision: "17"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: e7d83e4409d9c46c926859f39029ea68f2411def
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/24/2017
 ---
-# /Gy (включение компоновки на уровне функций)
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Разрешает компилятору упаковывать отдельные функции в виде упакованных функций \(COMDATs\).  
+# <a name="gy-enable-function-level-linking"></a>/Gy (включение компоновки на уровне функций)
+Позволяет компилятору упаковывать отдельные функции в форме упакованных функций (COMDAT).  
   
-## Синтаксис  
+## <a name="syntax"></a>Синтаксис  
   
 ```  
 /Gy[-]  
 ```  
   
-## Заметки  
- Компоновщику необходимо, чтобы функции упаковывались в секции COMDAT по отдельности, чтобы исключить или упорядочить отдельные функции в DLL\- или EXE файле.  
+## <a name="remarks"></a>Примечания  
+ Компоновщик требует, что функции упаковывать отдельно как COMDAT, чтобы исключить или упорядочить отдельные функции в файл DLL или .exe.  
   
- Для исключения из файла EXE неиспользуемых упакованных функций применяется параметр компоновщика [Параметр \/OPT \(оптимизация\)](../../build/reference/opt-optimizations.md).  
+ Можно использовать параметр компоновщика [/OPT (оптимизации)](../../build/reference/opt-optimizations.md) исключаемый неиспользуемые упакованные функции из файла .exe.  
   
- Для помещения упакованных функций в EXE файл в заданном порядке используйте параметр компоновщика [\/ORDER \(размещение функций по порядку\)](../../build/reference/order-put-functions-in-order.md).  
+ Можно использовать параметр компоновщика [/Order (Put функций по порядку)](../../build/reference/order-put-functions-in-order.md) для помещения упакованных функций в указанном порядке, в файл .exe.  
   
- Встроенные функции всегда упаковываются, если их экземпляры создаются в качестве вызовов \(это, например, происходит, если встроенные функции отключены или используется адрес функции\).  Кроме того, функции\-члены C\+\+, определяемые внутри объявления класса, упаковываются автоматически, в отличие от прочих функций, и выбор этого параметра необходим для их компиляции в качестве упакованных функций.  
+ Встроенные функции всегда упаковываются, если их экземпляры создаются в качестве вызовов (это, например, происходит, если встраивание является отключены или используется адрес функции). Кроме того определенные в объявлении класса функций-членов C++ упаковываются автоматически; другие функции — это не, и при выборе этого параметра требуется компилировать их как упакованные функции.  
   
 > [!NOTE]
->  Параметр [\/ZI](../Topic/-Z7,%20-Zi,%20-ZI%20\(Debug%20Information%20Format\).md), используемый для обеспечения возможности применения операции "Изменить и продолжить", автоматически устанавливает параметр **\/Gy**.  
+>  [/ZI](../../build/reference/z7-zi-zi-debug-information-format.md) автоматически задает параметр, используемый изменить и продолжить, **/Gy** параметр.  
   
-### Установка данного параметра компилятора в среде разработки Visual Studio  
+### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Установка данного параметра компилятора в среде разработки Visual Studio  
   
-1.  Откройте диалоговое окно **Страницы свойств** проекта.  Дополнительные сведения см. в разделе [Открытие свойств страниц проекта](../../misc/how-to-open-project-property-pages.md).  
+1.  Откройте диалоговое окно **Страницы свойств** проекта. Дополнительные сведения см. в разделе [работа со свойствами проекта](../../ide/working-with-project-properties.md).  
   
-2.  Откройте папку **C\/C\+\+**.  
+2.  Откройте папку **C/C++** .  
   
-3.  Выберите страницу свойств **Создание кода**.  
+3.  Нажмите кнопку **создания кода** страницу свойств.  
   
-4.  Измените свойство **Включить компоновку на уровне функций**.  
+4.  Изменить **включение компоновки на уровне функций** свойство.  
   
-### Установка данного параметра компилятора программным способом  
+### <a name="to-set-this-compiler-option-programmatically"></a>Установка данного параметра компилятора программным способом  
   
 -   См. раздел <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.EnableFunctionLevelLinking%2A>.  
   
-## См. также  
+## <a name="see-also"></a>См. также  
  [Параметры компилятора](../../build/reference/compiler-options.md)   
- [Настройка параметров компилятора](../Topic/Setting%20Compiler%20Options.md)
+ [Настройка параметров компилятора](../../build/reference/setting-compiler-options.md)

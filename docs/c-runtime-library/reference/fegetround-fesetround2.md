@@ -30,35 +30,20 @@ f1_keywords:
 - fesetround
 - fenv/fegetround
 - fenv/fesetround
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - fegetround function
 - fesetround function
 ms.assetid: 596af00b-be2f-4f57-b2f5-460485f9ff0b
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.mt:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: d5dc5278320308f423040d0e07c6cb72af3dd362
-ms.lasthandoff: 02/24/2017
-
+ms.openlocfilehash: 7bc3fd0359f78e101565b5cb1bd01e0391df8bc6
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="fegetround-fesetround"></a>fegetround, fesetround
 Получает или задает текущий режим округления с плавающей запятой.  

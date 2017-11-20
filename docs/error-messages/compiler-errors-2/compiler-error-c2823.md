@@ -4,50 +4,34 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-tools
+ms.technology: cpp-tools
 ms.tgt_pltfrm: 
 ms.topic: error-reference
-f1_keywords:
-- C2823
-dev_langs:
-- C++
-helpviewer_keywords:
-- C2823
+f1_keywords: C2823
+dev_langs: C++
+helpviewer_keywords: C2823
 ms.assetid: 982b1b35-1a7c-456e-b711-f80cfe2d571e
-caps.latest.revision: 9
+caps.latest.revision: "9"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
-ms.openlocfilehash: ba953ae51024a21ac694193eefdd7a1472bd8545
-ms.contentlocale: ru-ru
-ms.lasthandoff: 02/24/2017
-
+ms.openlocfilehash: a9f577f0d353a3baa802973ccf9b036bb68cfc05
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/24/2017
 ---
-# <a name="compiler-error-c2823"></a>Ошибка компилятора C2823
-Недопустимый шаблон typedef  
+# <a name="compiler-error-c2823"></a>Ошибка компилятора C2823  
   
- Шаблоны не допускаются в [typedef](http://msdn.microsoft.com/en-us/cc96cf26-ba93-4179-951e-695d1f5fdcf1) определений.  
+> указан недопустимый шаблон typedef  
   
- Следующий пример приводит к возникновению ошибки C2823:  
+Шаблоны не допускаются в `typedef` определений.  
   
-```  
+## <a name="example"></a>Пример  
+  
+Следующий пример приводит к возникновению ошибки C2823 и показано, как исправить эту ошибку:  
+  
+```cpp  
 // C2823.cpp  
 template<class T>  
 typedef struct x {  

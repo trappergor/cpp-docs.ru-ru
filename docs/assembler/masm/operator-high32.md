@@ -1,39 +1,39 @@
 ---
-title: "operator HIGH32 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "HIGH32"
-  - "operator HIGH32"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "operator HIGH32"
-  - "HIGH32 operator"
+title: "оператор HIGH32 | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- HIGH32
+- operator HIGH32
+dev_langs: C++
+helpviewer_keywords:
+- operator HIGH32
+- HIGH32 operator
 ms.assetid: b32ae3b8-0bb3-42f8-b616-6f568791a618
-caps.latest.revision: 4
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 4
+caps.latest.revision: "4"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: 6bace8e4fdefcc875994b8ff208012d3e117ae1f
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/24/2017
 ---
-# operator HIGH32
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Возвращает старшие 32 *Выражение*.  Выражения MASM 64 значений.  
+# <a name="operator-high32"></a>Оператор HIGH32
+Возвращает старшие 32 разряда *выражение*. Выражения MASM являются 64-разрядными значениями.  
   
-## Синтаксис  
+## <a name="syntax"></a>Синтаксис  
   
 ```  
   
 HIGH32 expression  
 ```  
   
-## См. также  
- [Operators Reference](../Topic/Operators%20Reference.md)
+## <a name="see-also"></a>См. также  
+ [Справочник по операторам](../../assembler/masm/operators-reference.md)

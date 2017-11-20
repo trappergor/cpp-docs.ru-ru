@@ -1,52 +1,51 @@
 ---
-title: "What Is the ATL Control-Hosting API? | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "API - интерфейсы [C++], размещение"
-  - "control-hosting API"
-  - "элементы управления [ATL], хост-API"
+title: "Что такое библиотеки ATL размещение элементов управления API? | Документы Майкрософт"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- APIs [C++], hosting
+- control-hosting API
+- controls [ATL], hosting APIs
 ms.assetid: 75b27e45-cfba-4950-aa35-96cc7d8da753
-caps.latest.revision: 15
-caps.handback.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "15"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 4f04f5caa30ab860634f0f96ae18e9da03577ba2
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/24/2017
 ---
-# What Is the ATL Control-Hosting API?
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Элемент управления\- размещения API библиотеки ATL набор функций, который разрешает любое окно для использования в качестве контейнера элемента управления ActiveX.  Эти функции можно статически или динамически связывать в проект, поскольку они доступны как исходный код, предоставленный ATL90.dll.  Элемент управления\- функции размещения перечислены в таблице ниже.  
+# <a name="what-is-the-atl-control-hosting-api"></a>Что такое библиотеки ATL размещение элементов управления API?
+ATL, размещение элементов управления API — это набор функций, позволяющий любое окно в качестве контейнера элементов управления ActiveX. Эти функции могут быть статически или динамически связан в проект, так как они доступны в виде исходного кода и предоставляемые ATL90.dll. В следующей таблице перечислены функции размещение элементов управления.  
   
 |Функция|Описание|  
-|-------------|--------------|  
-|[AtlAxAttachControl](../Topic/AtlAxAttachControl.md)|Создает объект узла, он соединяется с предоставленным окно вложение, а затем существующий элемент управления.|  
-|[AtlAxCreateControl](../Topic/AtlAxCreateControl.md)|Создает объект узла, он соединяется с предоставленным окно, а затем загружает элемент управления.|  
-|[AtlAxCreateControlLic](../Topic/AtlAxCreateControlLic.md)|Создает лицензированное элемент управления ActiveX, инициализирует и размещение его в определенном окне, аналогично [AtlAxCreateControl](../Topic/AtlAxCreateControl.md).|  
-|[AtlAxCreateControlEx](../Topic/AtlAxCreateControlEx.md)|Создает объект узла, он соединяется с предоставленным окно, а затем загружает элемент управления также позволяет приемники событий, которые необходимо настроить.|  
-|[AtlAxCreateControlLicEx](../Topic/AtlAxCreateControlLicEx.md)|Создает лицензированное элемент управления ActiveX, инициализирует и размещение его в определенном окне, аналогично [AtlAxCreateControlLic](../Topic/AtlAxCreateControlLic.md).|  
-|[AtlAxCreateDialog](../Topic/AtlAxCreateDialog.md)|Создает безрежимное диалоговое окно из ресурса диалогового окна, и возвращает дескриптор окна.|  
-|[AtlAxDialogBox](../Topic/AtlAxDialogBox.md)|Создание модального диалогового окна из ресурса диалогового окна.|  
-|[AtlAxGetControl](../Topic/AtlAxGetControl.md)|Получает указатель интерфейса **IUnknown** элемента управления, который хозяйничают в окне.|  
-|[AtlAxGetHost](../Topic/AtlAxGetHost.md)|Получает указатель интерфейса **IUnknown** подключенного объекта основного приложения в окно.|  
-|[AtlAxWinInit](../Topic/AtlAxWinInit.md)|Инициализирует элемент управления\- код размещения.|  
-|[AtlAxWinTerm](../Topic/AtlAxWinTerm.md)|Uninitializes код элемента управления\- размещения.|  
+|--------------|-----------------|  
+|[AtlAxAttachControl](reference/composite-control-global-functions.md#atlaxattachcontrol)|Создает объект узла, подключает его указанного окна, а затем присоединяет существующий элемент управления.|  
+|[AtlAxCreateControl](reference/composite-control-global-functions.md#atlaxcreatecontrol)|Создает объект узла, подключает его указанного окна, а затем загружает в элемент управления.|  
+|[AtlAxCreateControlLic](reference/composite-control-global-functions.md#atlaxcreatecontrollic)|Создает лицензированный элемент управления ActiveX, инициализирует его и размещает в указанном окне аналогично [AtlAxCreateControl](reference/composite-control-global-functions.md#atlaxcreatecontrol).|  
+|[AtlAxCreateControlEx](reference/composite-control-global-functions.md#atlaxcreatecontrolex)|Создает объект узла, подключает его указанного окна, а затем загружает элемент управления (также позволяет настроить приемники событий).|  
+|[AtlAxCreateControlLicEx](reference/composite-control-global-functions.md#atlaxcreatecontrollicex)|Создает лицензированный элемент управления ActiveX, инициализирует его и размещает в указанном окне аналогично [AtlAxCreateControlLic](reference/composite-control-global-functions.md#atlaxcreatecontrollic).|  
+|[AtlAxCreateDialog](reference/composite-control-global-functions.md#atlaxcreatedialog)|Создает немодальное диалоговое окно из ресурса диалогового окна и возвращает дескриптор окна.|  
+|[AtlAxDialogBox](reference/composite-control-global-functions.md#atlaxdialogbox)|Создает модальное диалоговое из ресурса диалогового окна.|  
+|[AtlAxGetControl](reference/composite-control-global-functions.md#atlaxgetcontrol)|Возвращает **IUnknown** указатель интерфейса элемента управления, размещенного в окне.|  
+|[AtlAxGetHost](reference/composite-control-global-functions.md#atlaxgethost)|Возвращает **IUnknown** указатель на интерфейс объекта узла подключен к окну.|  
+|[AtlAxWinInit](reference/composite-control-global-functions.md#atlaxwininit)|Инициализирует код размещения элемента управления.|  
+|[AtlAxWinTerm](reference/composite-control-global-functions.md#atlaxwinterm)|Отменяет инициализацию кода размещения элемента управления.|  
   
- Параметры `HWND` в первых 3 функциях должны быть существующим окном \(почти\) любого типа.  При вызове любой из этих функций явно 3 \(обычно вы не сможете\), то не следует передавать дескриптор окна, которое уже действует как узел \(если это сделать, то не освобождается существующий объект узла\).  
+ `HWND` Параметры в первые три функции должны быть существующему окну практически любого типа. Если любой из этих трех функций явно вызывать (как правило, не придется), не передается дескриптор окна, уже работает в качестве узла (в противном случае существующий объект узла не будет освобождена).  
   
- Первый вызов 7 функций [AtlAxWinInit](../Topic/AtlAxWinInit.md) неявно.  
+ Первые семь функции вызывают [AtlAxWinInit](reference/composite-control-global-functions.md#atlaxwininit) неявно.  
   
 > [!NOTE]
->  Элемент управления\- API размещения основой форм поддержки библиотеки ATL для включения элемента управления ActiveX.  Однако обычно меньшяя необходимость вызова этих функций напрямую, если необходимо воспользоваться преимуществами или выполняют полную использование класс\-оболочек библиотеки ATL.  Дополнительные сведения см. в разделе [Библиотека ATL, который классифицирует облегчает вложенность элемент управления ActiveX?](../atl/which-atl-classes-facilitate-activex-control-containment-q.md).  
+>  API размещения элементов управления форм foundation поддержки ATL контейнеры элементов управления ActiveX. Однако обычно нет необходимости вызывать эти функции напрямую, если наиболее эффективно использовать классы-оболочки ATL или воспользоваться преимуществами. Дополнительные сведения см. в разделе [которого классы упрощают ActiveX вложении элементов управления ATL](which-atl-classes-facilitate-activex-control-containment-q.md).  
   
-## См. также  
- [Часто задаваемые вопросы о вложении элементов управления](../atl/atl-control-containment-faq.md)
+## <a name="see-also"></a>См. также  
+ [Часто задаваемые вопросы о вложении элементов управления](which-atl-classes-facilitate-activex-control-containment-q.md)

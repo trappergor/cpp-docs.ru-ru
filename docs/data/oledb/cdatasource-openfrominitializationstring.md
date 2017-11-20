@@ -1,62 +1,61 @@
 ---
-title: "CDataSource::OpenFromInitializationString | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "CDataSource.OpenFromInitializationString"
-  - "OpenFromInitializationString"
-  - "CDataSource::OpenFromInitializationString"
-  - "ATL::CDataSource::OpenFromInitializationString"
-  - "ATL.CDataSource.OpenFromInitializationString"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "OpenFromInitializationString - метод"
+title: "CDataSource::OpenFromInitializationString | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- CDataSource.OpenFromInitializationString
+- OpenFromInitializationString
+- CDataSource::OpenFromInitializationString
+- ATL::CDataSource::OpenFromInitializationString
+- ATL.CDataSource.OpenFromInitializationString
+dev_langs: C++
+helpviewer_keywords: OpenFromInitializationString method
 ms.assetid: 5ef1f1fd-92a9-4e1c-ad80-d3601b094b8c
-caps.latest.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 10
+caps.latest.revision: "10"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: aa25389a5924dc235791d11ee7d37eb1febe4259
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/24/2017
 ---
-# CDataSource::OpenFromInitializationString
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Источник данных будет открыт определенный пользователем строкой для инициализации.  
+# <a name="cdatasourceopenfrominitializationstring"></a>CDataSource::OpenFromInitializationString
+Открывает источник данных, указанной в строке инициализации, предоставленное пользователем.  
   
-## Синтаксис  
+## <a name="syntax"></a>Синтаксис  
   
 ```  
   
-      HRESULT OpenFromInitializationString(   
-   LPCOLESTR szInitializationString,   
-   bool fPromptForInfo = false    
+      HRESULT OpenFromInitializationString(   
+   LPCOLESTR szInitializationString,   
+   bool fPromptForInfo = false    
 ) throw( );  
 ```  
   
-#### Параметры  
+#### <a name="parameters"></a>Параметры  
  *szInitializationString*  
- \[in\] строка инициализации.  
+ [in] Строка инициализации.  
   
  *fPromptForInfo*  
- \[in\] если данный аргумент имеет значение **true**, `OpenFromInitializationString` установит свойство **DBPROP\_INIT\_PROMPT** значение **DBPROMPT\_COMPLETEREQUIRED**, которое указывает, чтобы пользователь был предложено, только если требуются дополнительные сведения.  Это полезно в случаях, в которых строка инициализации определяет базу данных, которая требует пароля, но строка не содержит пароль.  Пользователю будет предложено ввести пароль \(или любого другого отсутствующих сведений\) при попытке подключения к базе данных.  
+ [in] Если этот аргумент имеет значение **true**, затем `OpenFromInitializationString` установит **DBPROP_INIT_PROMPT** свойства **DBPROMPT_COMPLETEREQUIRED**, который указывает, что пользователь ввести только в том случае, если необходима дополнительная информация. Это полезно в ситуациях, в которых в строке инициализации указан базы данных, которая требует наличия пароля, но строка не содержит пароль. Пользователю предлагается ввести пароль (или все отсутствующие сведения) при попытке подключения к базе данных.  
   
- Значение по умолчанию **false**, которое указывает, что пользователь никогда не будет предложено \(наборы **DBPROP\_INIT\_PROMPT** значение **DBPROMPT\_NOPROMPT**\).  
+ Значение по умолчанию — **false**, которое указывает, что никогда не запрашивать пользователя (задает **DBPROP_INIT_PROMPT** для **DBPROMPT_NOPROMPT**).  
   
-## Возвращаемое значение  
- Стандартное `HRESULT`.  
+## <a name="return-value"></a>Возвращаемое значение  
+ Стандартный `HRESULT`.  
   
-## Заметки  
- Этот метод будет открыт объект источника данных с помощью компонентов служб в oledb32.dll; эта библиотека DLL содержит реализацию функций компонентов службы, таких как создание пулов ресурсов, автоматическое зачисление транзакций и т д  
+## <a name="remarks"></a>Примечания  
+ Этот метод открывает объект источника данных с помощью компонентов службы в oledb32.dll. Эта DLL-библиотека содержит реализацию возможностей компонентов службы, таких как создание пулов ресурсов, автоматическое прикрепление транзакций и т. д.  
   
-## Требования  
+## <a name="requirements"></a>Требования  
  **Заголовок:** atldbcli.h  
   
-## См. также  
- [Класс CDataSource](../Topic/CDataSource%20Class.md)
+## <a name="see-also"></a>См. также  
+ [Класс CDataSource](../../data/oledb/cdatasource-class.md)

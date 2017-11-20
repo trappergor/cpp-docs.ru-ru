@@ -1,67 +1,67 @@
 ---
-title: "/J (тип знака по умолчанию не подписан) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "VC.Project.VCCLCompilerTool.DefaultCharIsUnsigned"
-  - "VC.Project.VCCLWCECompilerTool.DefaultCharIsUnsigned"
-  - "/j"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "/J - параметр компилятора [C++]"
-  - "char - тип данных"
-  - "по умолчанию используется символьный тип без знака"
-  - "по умолчанию, тип char"
-  - "J - параметр компилятора [C++]"
-  - "-J - параметр компилятора [C++]"
+title: "-J (по умолчанию является тип unsigned char) | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- VC.Project.VCCLCompilerTool.DefaultCharIsUnsigned
+- VC.Project.VCCLWCECompilerTool.DefaultCharIsUnsigned
+- /j
+dev_langs: C++
+helpviewer_keywords:
+- defaults, char type
+- char data type
+- -J compiler option [C++]
+- /J compiler option [C++]
+- J compiler option [C++]
+- default char type is unsigned
 ms.assetid: 50973667-6638-491e-9c41-bff73acae19f
-caps.latest.revision: 19
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 19
+caps.latest.revision: "19"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: 6a49220bf5ee4d990096140f4b2139992b03ad95
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/24/2017
 ---
-# /J (тип знака по умолчанию не подписан)
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Изменяет тип `char` по умолчанию из `signed char` в `unsigned char` и тип `char` нулевым расширяется при расширен в тип `int`.  
+# <a name="j-default-char-type-is-unsigned"></a>/J (тип знака по умолчанию не подписан)
+Изменяет значение по умолчанию `char` из тип `signed char` для `unsigned char`и `char` тип является нулем при расширяется для `int` типа.  
   
-## Синтаксис  
+## <a name="syntax"></a>Синтаксис  
   
 ```  
 /J  
 ```  
   
-## Заметки  
- Если `char` значение явно объявляется как `signed`, параметр **\/J** не влияет на его и значение расширено знаком при его расширен в тип `int`.  
+## <a name="remarks"></a>Примечания  
+ Если `char` значение явно объявляется как `signed`, **/j.** параметр не влияет на его, а значение является расширением знака, когда он преобразуется в `int` типа.  
   
- Параметр **\/J** определяет `_CHAR_UNSIGNED`, используемый вместе с `#ifndef` в файле LIMITS.h для определения диапазона типа `char` по умолчанию.  
+ **/J.** определяет параметр `_CHAR_UNSIGNED`, который используется с `#ifndef` в файле LIMITS.h, чтобы определить диапазон по умолчанию `char` типа.  
   
- В ANSI C и C\+\+ специальная реализация типа `char` не требуется.  Данный параметр рекомендуется использовать при работе с символьными данными, которые будут в дальнейшем переведены и на другие языки, кроме английского.  
+ ANSI C и C++ не требуют реализации `char` типа. Этот параметр полезен при работе с символьными данными, которые будут в дальнейшем переведены на язык, отличный от английского.  
   
 > [!NOTE]
->  При использовании этого параметра компилятора с ATL\/MFC, ошибка может быть создана.  Хотя можно отключить эту ошибку, указав `_ATL_ALLOW_CHAR_UNSIGNED`, эта ошибка не поддерживается и может работать не всегда.  
+>  При использовании данного параметра компилятора с ATL и MFC, может быть сформирована ошибка. Несмотря на то, что их можно отключить эту ошибку путем определения `_ATL_ALLOW_CHAR_UNSIGNED`, этот обходной путь не поддерживается и может работать не всегда.  
   
-### Установка данного параметра компилятора в среде разработки Visual Studio  
+### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Установка данного параметра компилятора в среде разработки Visual Studio  
   
-1.  В области **Обозреватель решений** откройте контекстное меню для проекта и выберите пункт **Свойства**.  
+1.  В области **Обозреватель решений**откройте контекстное меню для проекта и выберите пункт **Свойства**.  
   
-2.  В диалоговом окне **Окна свойств** проекта, в левой панели в **Свойства конфигурации** разверните узел **C\/C\+\+**, а затем выберите **Командная строка**.  
+2.  В проекте **страницы свойств** в левой области в разделе диалогового **свойства конфигурации**, разверните **C/C++** , а затем выберите **командной строки**.  
   
-3.  В области **Дополнительные параметры** укажите параметр компиляции **\/J**.  
+3.  В **Дополнительные параметры** области, укажите **/j.** параметр компилятора.  
   
-### Установка данного параметра компилятора программным способом  
+### <a name="to-set-this-compiler-option-programmatically"></a>Установка данного параметра компилятора программным способом  
   
 -   См. раздел <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.DefaultCharIsUnsigned%2A>.  
   
-## См. также  
+## <a name="see-also"></a>См. также  
  [Параметры компилятора](../../build/reference/compiler-options.md)   
- [Настройка параметров компилятора](../Topic/Setting%20Compiler%20Options.md)   
- [Открытие свойств страниц проекта](../../misc/how-to-open-project-property-pages.md)
+ [Настройка параметров компилятора](../../build/reference/setting-compiler-options.md)   
+ [Работа со свойствами проектов](../../ide/working-with-project-properties.md)

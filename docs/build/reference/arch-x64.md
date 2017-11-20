@@ -1,60 +1,60 @@
 ---
-title: "/arch (x64) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
+title: "-arch (x64) | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
 ms.assetid: ecda22bf-5bed-43f4-99fb-88aedd83d9d8
-caps.latest.revision: 14
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 14
+caps.latest.revision: "14"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: 49da6dca3325836b10bf5e5848811be31ca60cca
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/24/2017
 ---
-# /arch (x64)
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Задает архитектуру для создания кода на платформе x64.  См. также [\/arch \(x86\)](../../build/reference/arch-x86.md) и [\/arch \(ARM\)](../../build/reference/arch-arm.md).  
+# <a name="arch-x64"></a>/arch (x64)
+Задает архитектуру для создания кода на платформе x64. См. также [/arch (x86)](../../build/reference/arch-x86.md) и [/arch (ARM)](../../build/reference/arch-arm.md).  
   
-## Синтаксис  
+## <a name="syntax"></a>Синтаксис  
   
 ```  
 /arch:[AVX|AVX2]  
 ```  
   
-## Аргументы  
- **\/arch:AVX**  
+## <a name="arguments"></a>Аргументы  
+ **/ arch: AVX**  
  Позволяет использовать инструкции Intel AVX.  
   
- **\/arch:AVX2**  
+ **/ arch: avx2**  
  Позволяет использовать инструкции Intel AVX 2.  
   
-## Заметки  
- **\/arch** влияет только на создание кода для собственных функций.  При компиляции с помощью [\/clr](../../build/reference/clr-common-language-runtime-compilation.md) параметр **\/arch** не оказывает влияния на создание кода для управляемых функций.  
+## <a name="remarks"></a>Примечания  
+ **/ arch** только влияет на создание кода для собственных функций. При использовании [/CLR](../../build/reference/clr-common-language-runtime-compilation.md) для компиляции, **/arch** не влияет на создание кода для управляемых функций.  
   
- Символ препроцессора `__AVX__` определяется, если указан параметр компилятора **\/arch:AVX**.  Символ препроцессора `__AVX2__` определяется, если указан параметр компилятора **\/arch:AVX2**.  Подробнее: [Предустановленный макрос](../../preprocessor/predefined-macros.md).  Параметр **\/arch:AVX2** появился в Visual Studio 2013 с обновлением 2 версии 12.0.34567.1.  
+ `__AVX__` Определен символ препроцессора при **/arch: AVX** указан параметр компилятора. `__AVX2__` Определен символ препроцессора при **/arch: avx2** указан параметр компилятора. Для получения дополнительной информации см. [Predefined Macros](../../preprocessor/predefined-macros.md). **/Arch: avx2** параметр впервые появился в Visual Studio 2013 с обновлением 2 версии 12.0.34567.1.  
   
-### Установка параметра компилятора \/arch:AVX или \/arch:AVX2 в Visual Studio  
+### <a name="to-set-the-archavx-or-archavx2-compiler-option-in-visual-studio"></a>Установка параметра компилятора /arch:AVX или /arch:AVX2 в Visual Studio  
   
-1.  Откройте диалоговое окно **Страницы свойств** проекта.  Подробнее: [Открытие свойств страниц проекта](../../misc/how-to-open-project-property-pages.md).  
+1.  Откройте **страницы свойств** диалоговое окно для проекта. Дополнительные сведения см. в разделе [работа со свойствами проекта](../../ide/working-with-project-properties.md).  
   
-2.  Выберите папку **Свойства конфигурации**, а затем папку **C\/C\+\+**.  
+2.  Выберите **свойства конфигурации**, **C/C++** папки.  
   
-3.  Выберете страницу свойств **Создание кода**.  
+3.  Выберите **создания кода** страницу свойств.  
   
-4.  В поле с раскрывающимся списком **Включить расширенный набор инструкций** выберите значение **Advanced Vector Extensions \(\/arch:AVX\)** или **Advanced Vector Extensions 2 \(\/arch:AVX2\)**.  
+4.  В **включить расширенный набор инструкций** раскрывающегося списка выберите **Advanced Vector Extensions (/ arch: AVX)** или **Advanced Vector Extensions 2 (/ arch: AVX2)**.  
   
-### Установка данного параметра компилятора программным способом  
+### <a name="to-set-this-compiler-option-programmatically"></a>Установка данного параметра компилятора программным способом  
   
 -   См. раздел <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.EnableEnhancedInstructionSet%2A>.  
   
-## См. также  
- [\/arch \(минимальная архитектура ЦП\)](../../build/reference/arch-minimum-cpu-architecture.md)   
+## <a name="see-also"></a>См. также  
+ [/ arch (минимальная архитектура ЦП)](../../build/reference/arch-minimum-cpu-architecture.md)   
  [Параметры компилятора](../../build/reference/compiler-options.md)   
- [Настройка параметров компилятора](../Topic/Setting%20Compiler%20Options.md)
+ [Настройка параметров компилятора](../../build/reference/setting-compiler-options.md)

@@ -1,39 +1,37 @@
 ---
-title: "DD | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "dd"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "DD directive"
+title: "ДД | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: dd
+dev_langs: C++
+helpviewer_keywords: DD directive
 ms.assetid: 0c238628-2fe2-437e-979d-a90bdae7b478
-caps.latest.revision: 9
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 9
+caps.latest.revision: "9"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: 6d7166c0729abed67328b4d47afba3fea65e273c
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/24/2017
 ---
-# DD
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Выделяет и инициализирует машинное двойное слово \(4 байта\) хранения для каждого `initializer`.  `DD` синоним   [dword](../../assembler/masm/dword.md).  
+# <a name="dd"></a>DD
+Выделяет и при необходимости инициализирует двойное слово (4 байта) хранилища для каждого `initializer`. `DD`— синоним [DWORD](../../assembler/masm/dword.md).  
   
-## Синтаксис  
+## <a name="syntax"></a>Синтаксис  
   
 ```  
 [[name]] DD initializer [[, initializer]]...  
 ```  
   
-## Заметки  
- Может также использоваться как описатель типа в любом месте, где допустим тип.  
+## <a name="remarks"></a>Примечания  
+ Можно также использовать как спецификатор типа в любом является допустимым типом.  
   
-## См. также  
- [Directives Reference](../../assembler/masm/directives-reference.md)
+## <a name="see-also"></a>См. также  
+ [Справочник по директивам](../../assembler/masm/directives-reference.md)

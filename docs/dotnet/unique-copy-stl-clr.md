@@ -1,32 +1,30 @@
 ---
-title: "unique_copy (STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::unique_copy"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "unique_copy - функция [STL/CLR]"
+title: "unique_copy (STL/CLR) | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::unique_copy
+dev_langs: C++
+helpviewer_keywords: unique_copy function [STL/CLR]
 ms.assetid: 37aa5b06-42c5-420d-94c5-00f00ad26471
-caps.latest.revision: 4
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 4
+caps.latest.revision: "4"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 521e45ab81e9d164e38c1ae9af8b7d0cf1048b4a
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/24/2017
 ---
-# unique_copy (STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Копирует элементы из источника в назначение диапазона диапазоне символов, за исключением элементов, рядом с друг с другом.  
+# <a name="uniquecopy-stlclr"></a>unique_copy (STL/CLR)
+Копирует элементы из исходного диапазона в диапазон назначения за исключением повторяющихся элементов, расположенных рядом друг с другом.  
   
-## Синтаксис  
+## <a name="syntax"></a>Синтаксис  
   
 ```  
 template<class _InIt, class _OutIt> inline  
@@ -36,13 +34,13 @@ template<class _InIt, class _OutIt, class _Pr> inline
         _Pr _Pred);  
 ```  
   
-## Заметки  
- Эта функция работает аналогично функции `unique_copy` STL.  Для получения дополнительной информации см. [unique\_copy](../Topic/unique_copy.md).  
+## <a name="remarks"></a>Примечания  
+ Эта функция работает так же, как функция стандартной библиотеки C++ `unique_copy`. Дополнительные сведения см. в разделе [unique_copy](../standard-library/algorithm-functions.md#unique_copy).  
   
-## Требования  
- **Заголовок:**\<cliext\/algorithm\>  
+## <a name="requirements"></a>Требования  
+ **Заголовок:** \<cliext/алгоритм >  
   
  **Пространство имен:** cliext  
   
-## См. также  
- [algorithm](../Topic/algorithm%20\(STL-CLR\).md)
+## <a name="see-also"></a>См. также  
+ [algorithm (STL/CLR)](../dotnet/algorithm-stl-clr.md)

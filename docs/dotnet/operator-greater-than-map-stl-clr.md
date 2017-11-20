@@ -1,33 +1,30 @@
 ---
-title: "operator&gt; (map) (STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::map::operator>"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "operator> - элемент [STL/CLR]"
+title: "оператор&gt; (map) (STL/CLR) | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::map::operator>
+dev_langs: C++
+helpviewer_keywords: operator> member [STL/CLR]
 ms.assetid: f57da93f-6bd7-4589-ac69-4869b055ba4b
-caps.latest.revision: 15
-caps.handback.revision: 13
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "15"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 50984cea64f503b2b2c27457d23f53d5ff95a9ad
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/24/2017
 ---
-# operator&gt; (map) (STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Список большей, чем сравнение.  
+# <a name="operatorgt-map-stlclr"></a>оператор&gt; (map) (STL/CLR)
+Список больше сравнения.  
   
-## Синтаксис  
+## <a name="syntax"></a>Синтаксис  
   
 ```  
 template<typename Key,  
@@ -36,17 +33,17 @@ template<typename Key,
         map<Key, Mapped>% right);  
 ```  
   
-#### Параметры  
- влево  
- Левый контейнер, с которым выполняется сравнение.  
+#### <a name="parameters"></a>Параметры  
+ left  
+ Левый контейнер для сравнения.  
   
- правый  
- Правой контейнер, с которым выполняется сравнение.  
+ по правому краю  
+ Правый контейнер для сравнения.  
   
-## Заметки  
- Функция возвращает оператора `right` `<` `left`.  Он используется для выполнения приказано ли `left` после `right` при сравнении 2 сопоставления элемент элементом.  
+## <a name="remarks"></a>Примечания  
+ Функция оператор возвращает `right` `<` `left`. Можно использовать для тестирования ли `left` упорядочен после `right` при два сопоставления, сравнение элемент элемент.  
   
-## Пример  
+## <a name="example"></a>Пример  
   
 ```  
 // cliext_map_operator_gt.cpp   
@@ -86,19 +83,22 @@ int main()
   
 ```  
   
-  **\[1\] \[2\] \[BC — 3\]**  
- **\[1\] \[2\] \[B4 d\]**  
-**\[B C\] \> \[B C\] false**  
-**\[B d\] \> \[B C\].**   
-## Требования  
- **Заголовок:**\<cliext\/map\>  
+```Output  
+ [a 1] [b 2] [c 3]  
+ [a 1] [b 2] [d 4]  
+[a b c] > [a b c] is False  
+[a b d] > [a b c] is True  
+```  
+  
+## <a name="requirements"></a>Требования  
+ **Заголовок:** \<cliext/map >  
   
  **Пространство имен:** cliext  
   
-## См. также  
- [map](../dotnet/map-stl-clr.md)   
- [operator\=\= \(map\)](../dotnet/operator-equality-map-stl-clr.md)   
- [operator\!\= \(map\)](../dotnet/operator-inequality-map-stl-clr.md)   
- [operator\< \(map\)](../Topic/operator%3C%20\(map\)%20\(STL-CLR\).md)   
- [operator\>\= \(map\)](../dotnet/operator-greater-or-equal-map-stl-clr.md)   
- [operator\<\= \(map\)](../dotnet/operator-less-or-equal-map-stl-clr.md)
+## <a name="see-also"></a>См. также  
+ [Карта (STL/CLR)](../dotnet/map-stl-clr.md)   
+ [оператор == (map) (STL/CLR)](../dotnet/operator-equality-map-stl-clr.md)   
+ [оператор! = (map) (STL/CLR)](../dotnet/operator-inequality-map-stl-clr.md)   
+ [оператор\< (map) (STL/CLR)](../dotnet/operator-less-than-map-stl-clr.md)   
+ [оператор > = (map) (STL/CLR)](../dotnet/operator-greater-or-equal-map-stl-clr.md)   
+ [operator<= (map) (STL/CLR)](../dotnet/operator-less-or-equal-map-stl-clr.md)

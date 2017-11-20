@@ -1,35 +1,34 @@
 ---
-title: "ptr::ptr | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "ptr::ptr"
-  - "ptr.ptr"
-  - "msclr.com.ptr.ptr"
-  - "msclr::com::ptr::ptr"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "ptr::ptr"
+title: "PTR::PTR | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords:
+- ptr::ptr
+- ptr.ptr
+- msclr.com.ptr.ptr
+- msclr::com::ptr::ptr
+dev_langs: C++
+helpviewer_keywords: ptr::ptr
 ms.assetid: 4f5883b4-7c0a-46c6-aa9f-4e49eed463eb
-caps.latest.revision: 8
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 99016a9006bb13be70fe38fd222ad25a08792b20
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/24/2017
 ---
-# ptr::ptr
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Создает `com::ptr` для создания com\-объекта.  
+# <a name="ptrptr"></a>ptr::ptr
+Создает `com::ptr` программы-оболочки COM-объектом.  
   
-## Синтаксис  
+## <a name="syntax"></a>Синтаксис  
   
 ```  
 ptr();  
@@ -38,19 +37,19 @@ ptr(
 );  
 ```  
   
-#### Параметры  
+#### <a name="parameters"></a>Параметры  
  `P`  
  Указатель интерфейса COM.  
   
-## Заметки  
- Конструктор без аргументов присвоить `nullptr` к базовому дескриптор объекта.  Последующие вызовы `com::ptr` проверяют внутренний объект и автоматически завершится ошибкой до тех пор, пока объект фактически не создается или будет вложен.  
+## <a name="remarks"></a>Примечания  
+ Конструктор без аргументов присваивает `nullptr` для базового объекта дескриптора. Последующие вызовы `com::ptr` будет проверить внутренний объект и автоматически ошибкой, пока объект имеет фактически или присоединенного.  
   
- Конструктор от аргумента добавляет ссылки на COM\-объект, но не освобождает ссылку вызывающего объекта, поэтому вызывающий объект должен вызвать `Release` com\-объекта действительно для освобождения элемента управления.  Если деструктор `com::ptr` вызывается автоматически освобождает его ссылки на COM\-объект.  
+ Один аргумент конструктора добавляет ссылку на COM-объекта, но не освобождает ссылку вызывающего, вызывающий объект должен вызвать `Release` действительно освобождать управления COM-объекта. При `com::ptr`его деструктор вызывается автоматически освобождает ссылки COM-объекта.  
   
- Передача `NULL` к этому конструктору аналогичен вызову версия без аргумента.  
+ Передача `NULL` для этого конструктора является таким же, как вызывать версию без аргументов.  
   
-## Пример  
- В этом примере реализуется класс CLR, который использует `com::ptr` для создания его объект `IXMLDOMDocument` закрытого члена.  Демонстрируется потребление обеих версий конструктора.  
+## <a name="example"></a>Пример  
+ В этом примере реализуется класс CLR, который использует `com::ptr` программы-оболочки для своего закрытого члена `IXMLDOMDocument` объекта. Он демонстрирует использование обеих версий конструктора.  
   
 ```  
 // comptr_ptr.cpp  
@@ -111,12 +110,12 @@ int main() {
 }  
 ```  
   
-## Требования  
- **Файл заголовка**\<msclr\\com\\ptr.h\>  
+## <a name="requirements"></a>Требования  
+ **Файл заголовка** \<msclr\com\ptr.h >  
   
  **Пространство имен** msclr::com  
   
-## См. также  
- [Члены ptr](../dotnet/ptr-members.md)   
- [ptr::CreateInstance](../dotnet/ptr-createinstance.md)   
+## <a name="see-also"></a>См. также  
+ [Члены PTR](../dotnet/ptr-members.md)   
+ [PTR::CreateInstance](../dotnet/ptr-createinstance.md)   
  [ptr::~ptr](../dotnet/ptr-tilde-ptr.md)

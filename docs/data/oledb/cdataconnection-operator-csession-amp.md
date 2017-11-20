@@ -1,37 +1,36 @@
 ---
-title: "CDataConnection::operator CSession&amp; | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "CSession&"
-  - "CDataConnection::operatorCSession&"
-  - "CDataConnection.operatorCSession&"
-  - "operatorCSession&"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "CSession& - оператор"
-  - "оператор CSession&"
+title: "CDataConnection::operator CSession&amp; | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- CSession&
+- CDataConnection::operatorCSession&
+- CDataConnection.operatorCSession&
+- operatorCSession&
+dev_langs: C++
+helpviewer_keywords:
+- operator CSession&
+- CSession& operator
 ms.assetid: fba1e498-e482-4dda-8e0f-2542163bf627
-caps.latest.revision: 9
-caps.handback.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "9"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 526d7957eacaca5c6198c369e08d23e0d3ecc319
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/24/2017
 ---
-# CDataConnection::operator CSession&amp;
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Возвращает ссылку на объект, который содержит `CSession`.  
+# <a name="cdataconnectionoperator-csessionamp"></a>CDataConnection::operator CSession&amp;
+Возвращает ссылку на содержащиеся в нем `CSession` объекта.  
   
-## Синтаксис  
+## <a name="syntax"></a>Синтаксис  
   
 ```  
   
@@ -39,19 +38,19 @@ operator const CSession&();
   
 ```  
   
-## Заметки  
- Этот оператор возвращает ссылку на объект, который содержит `CSession`, позволяя тем самым передать объект `CDataConnection`, ссылка `CSession` ожидается.  
+## <a name="remarks"></a>Примечания  
+ Этот оператор возвращает ссылку на содержащиеся в нем `CSession` объекта, что позволяет передавать `CDataConnection` объекта где `CSession` ожидается ссылка.  
   
-## Пример  
- Если имеется функция, \(например, `func` ниже\), принимает ссылку `CSession` можно использовать **CSession&** передать объект `CDataConnection` вместо.  
+## <a name="example"></a>Пример  
+ При наличии функции (такие как `func` ниже), который принимает `CSession` ссылки, можно использовать **CSession &** для передачи `CDataConnection` вместо этого объекта.  
   
- [!code-cpp[NVC_OLEDB_Consumer#5](../../data/oledb/codesnippet/CPP/cdataconnection-operator-csession-amp_1.cpp)]  
+ [!code-cpp[NVC_OLEDB_Consumer#5](../../data/oledb/codesnippet/cpp/cdataconnection-operator-csession-amp_1.cpp)]  
   
- [!code-cpp[NVC_OLEDB_Consumer#6](../../data/oledb/codesnippet/CPP/cdataconnection-operator-csession-amp_2.cpp)]  
+ [!code-cpp[NVC_OLEDB_Consumer#6](../../data/oledb/codesnippet/cpp/cdataconnection-operator-csession-amp_2.cpp)]  
   
-## Требования  
+## <a name="requirements"></a>Требования  
  **Заголовок:** atldbcli.h  
   
-## См. также  
- [Класс CDataConnection](../../data/oledb/cdataconnection-class.md)   
- [CDataConnection::operator CSession\*](../../data/oledb/cdataconnection-operator-csession-star.md)
+## <a name="see-also"></a>См. также  
+ [CDataConnection-класс](../../data/oledb/cdataconnection-class.md)   
+ [CDataConnection::operator CSession*](../../data/oledb/cdataconnection-operator-csession-star.md)

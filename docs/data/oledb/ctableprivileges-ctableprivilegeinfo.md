@@ -1,75 +1,75 @@
 ---
-title: "CTablePrivileges, CTablePrivilegeInfo | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "m_szCatalog"
-  - "m_bIsGrantable"
-  - "IS_GRANTABLE"
-  - "m_szType"
-  - "m_szSchema"
-  - "m_szGrantor"
-  - "GRANTOR"
-  - "GRANTEE"
-  - "CTablePrivileges"
-  - "CTablePrivilegeInfo"
-  - "m_szName"
-  - "m_szGrantee"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "CTablePrivilegeInfo - класс параметров"
-  - "CTablePrivileges typedef - класс"
-  - "GRANTEE"
-  - "GRANTOR"
-  - "IS_GRANTABLE"
-  - "m_bIsGrantable"
-  - "m_szCatalog"
-  - "m_szGrantee"
-  - "m_szGrantor"
-  - "m_szName"
-  - "m_szSchema"
-  - "m_szType"
-  - "TABLE_CATALOG"
-  - "TABLE_NAME"
-  - "TABLE_SCHEMA"
+title: "CTablePrivileges, CTablePrivilegeInfo | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- m_szCatalog
+- m_bIsGrantable
+- IS_GRANTABLE
+- m_szType
+- m_szSchema
+- m_szGrantor
+- GRANTOR
+- GRANTEE
+- CTablePrivileges
+- CTablePrivilegeInfo
+- m_szName
+- m_szGrantee
+dev_langs: C++
+helpviewer_keywords:
+- GRANTOR
+- CTablePrivilegeInfo parameter class
+- m_szSchema
+- TABLE_CATALOG
+- m_szType
+- m_szCatalog
+- TABLE_NAME
+- IS_GRANTABLE
+- TABLE_SCHEMA
+- m_szName
+- m_szGrantee
+- CTablePrivileges typedef class
+- m_szGrantor
+- GRANTEE
+- m_bIsGrantable
 ms.assetid: ffcd6f73-022e-452a-8342-f2b9362d256b
-caps.latest.revision: 6
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 6
+caps.latest.revision: "6"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 4fcf754b01190defdda5bf178cc037c2f9cb9c10
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/24/2017
 ---
-# CTablePrivileges, CTablePrivilegeInfo
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Вызовите **CTablePrivileges** класс typedef для реализации его класс **CTablePrivilegeInfo** параметра.  
+# <a name="ctableprivileges-ctableprivilegeinfo"></a>CTablePrivileges, CTablePrivilegeInfo
+Вызовите typedef-класс **CTablePrivileges** реализации класса своего параметра **CTablePrivilegeInfo**.  
   
-## Заметки  
- Дополнительные сведения см. в разделе [Классы набора строк схемы и классах typedef](../Topic/Schema%20Rowset%20Classes%20and%20Typedef%20Classes.md) при использовании классов typedef.  
+## <a name="remarks"></a>Примечания  
+ В разделе [классы набора строк схемы и классы Typedef](../../data/oledb/schema-rowset-classes-and-typedef-classes.md) Дополнительные сведения об использовании классов typedef.  
   
- Этот класс определяет таблицы, указанный в каталоге, которые доступны для данного пользователя.  
+ Этот класс определяет таблицы, определенные в каталоге, которые доступны данному пользователю.  
   
- В следующей таблице перечислены элементы данных класса и соответствующие столбцы OLE DB.  В разделе [Набор строк TABLE\_PRIVILEGES](https://msdn.microsoft.com/en-us/library/ms725428.aspx) справочника *программиста OLE DB* дополнительные сведения о схеме и столбцам.  
+ В следующей таблице перечислены данные-члены класса и их соответствующие OLE DB столбцы. В разделе [строк TABLE_PRIVILEGES](https://msdn.microsoft.com/en-us/library/ms725428.aspx) в *Справочник программиста OLE DB* Дополнительные сведения о схеме и столбцы.  
   
-|Элементы данных|Столбцы OLE DB|  
-|---------------------|--------------------|  
-|m\_szGrantor|GRANTOR|  
-|m\_szGrantee|GRANTEE|  
-|m\_szCatalog|TABLE\_CATALOG|  
-|m\_szSchema|TABLE\_SCHEMA|  
-|m\_szName|TABLE\_NAME|  
-|m\_szType|PRIVILEGE\_TYPE|  
-|m\_bIsGrantable|IS\_GRANTABLE|  
+|Члены данных|Столбцы OLE DB|  
+|------------------|--------------------|  
+|m_szGrantor|GRANTOR|  
+|m_szGrantee|GRANTEE|  
+|m_szCatalog|TABLE_CATALOG|  
+|m_szSchema|TABLE_SCHEMA|  
+|m_szName|TABLE_NAME|  
+|m_szType|PRIVILEGE_TYPE|  
+|m_bIsGrantable|IS_GRANTABLE|  
   
-## Требования  
- **Header:**  atldbsch.h  
+## <a name="requirements"></a>Требования  
+ **Заголовок:** atldbsch.h  
   
-## См. также  
- [Класс CRestrictions](../Topic/CRestrictions%20Class.md)
+## <a name="see-also"></a>См. также  
+ [Класс CRestrictions](../../data/oledb/crestrictions-class.md)

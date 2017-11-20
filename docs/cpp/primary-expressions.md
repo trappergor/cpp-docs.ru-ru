@@ -4,12 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-language
+ms.technology: cpp-language
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - primary expressions
 - expressions [C++], name
@@ -17,16 +15,15 @@ helpviewer_keywords:
 - expressions [C++], primary
 - expressions [C++], qualified names
 ms.assetid: 8ef9a814-6058-4b93-9b6e-e8eb8350b1ca
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.translationtype: HT
-ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
-ms.openlocfilehash: 2ba603c19a88849c15c9402e21d2acf39bb9f54d
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/25/2017
-
+ms.openlocfilehash: 980be1e393fab633f3417dcc250c1820def3ff90
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="primary-expressions"></a>Первичные выражения
 Основные выражения являются стандартными блоками более сложных выражений. Это литералы, имена и имена, уточняемые с помощью оператора разрешения области действия (`::`).  Основное выражение может иметь любую из следующих форм.  
@@ -42,7 +39,7 @@ ms.lasthandoff: 09/25/2017
   
  **Это** ключевое слово является указателем на объект класса. Он доступен в нестатических функциях-членах и указывает на экземпляр класса, для которого была вызвана функция. **Это** ключевое слово не может использоваться вне тела функции-члена класса.  
   
- Тип **это** указатель `type` ** \*const** (где `type` — это имя класса) внутри функций, не изменяющих **этот** указателя. В следующем примере показано член объявления функций и типов **это**:  
+ Тип **это** указатель `type`  **\*const** (где `type` — это имя класса) внутри функций, не изменяющих **этот** указателя. В следующем примере показано член объявления функций и типов **это**:  
   
 ```  
 // expre_Primary_Expressions.cpp  

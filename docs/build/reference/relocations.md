@@ -1,39 +1,38 @@
 ---
-title: "/RELOCATIONS | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "/relocations"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "/RELOCATIONS - параметр программы dumpbin"
-  - "RELOCATIONS - параметр (программа dumpbin)"
-  - "-RELOCATIONS - параметр (программа dumpbin)"
+title: "-RELOCATIONS | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: /relocations
+dev_langs: C++
+helpviewer_keywords:
+- RELOCATIONS dumpbin option
+- /RELOCATIONS dumpbin option
+- -RELOCATIONS dumpbin option
 ms.assetid: 535eba3a-781a-4809-bf33-f67d3060b02c
-caps.latest.revision: 7
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: 9e59e97d6de151f110fc7e7b7e87fb7d926b921a
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/24/2017
 ---
-# /RELOCATIONS
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="relocations"></a>/RELOCATIONS
 ```  
 /RELOCATIONS  
 ```  
   
-## Заметки  
- Данный параметр отображает все перемещения в объекте или образе.  
+## <a name="remarks"></a>Примечания  
+ Этот параметр отображает все перемещения в объекте или изображения.  
   
- В файлах, созданных с использованием параметра компилятора [\/GL](../../build/reference/gl-whole-program-optimization.md), может использоваться только параметр DUMPBIN [\/HEADERS](../../build/reference/headers.md).  
+ Только [/Headers](../../build/reference/headers.md) параметр программы DUMPBIN доступна для использования в файлах, созданных с помощью [/GL](../../build/reference/gl-whole-program-optimization.md) параметр компилятора.  
   
-## См. также  
+## <a name="see-also"></a>См. также  
  [Параметры DUMPBIN](../../build/reference/dumpbin-options.md)

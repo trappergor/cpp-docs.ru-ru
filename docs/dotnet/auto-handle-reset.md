@@ -1,35 +1,34 @@
 ---
-title: "auto_handle::reset | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "auto_handle.reset"
-  - "msclr::auto_handle::reset"
-  - "auto_handle::reset"
-  - "msclr.auto_handle.reset"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "auto_handle::reset"
+title: "auto_handle::Reset | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords:
+- auto_handle.reset
+- msclr::auto_handle::reset
+- auto_handle::reset
+- msclr.auto_handle.reset
+dev_langs: C++
+helpviewer_keywords: auto_handle::reset
 ms.assetid: 32dc3a83-80fd-45c9-8f79-8c4096c30f57
-caps.latest.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 8
+caps.latest.revision: "10"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: d40f2ad3192c89856c7cf5c485eb040f525cfd27
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/24/2017
 ---
-# auto_handle::reset
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Удалите текущий имеемый объект и при необходимости создайте нового владельца объекта.  
+# <a name="autohandlereset"></a>auto_handle::reset
+Удаление текущего владельца объекта и при необходимости выполните владения создается новый объект.  
   
-## Синтаксис  
+## <a name="syntax"></a>Синтаксис  
   
 ```  
 void reset(  
@@ -38,11 +37,11 @@ void reset(
 void reset();  
 ```  
   
-#### Параметры  
+#### <a name="parameters"></a>Параметры  
  `_new_ptr`  
- \(Необязательно\) Новый объект.  
+ (Необязательно) Новый объект.  
   
-## Пример  
+## <a name="example"></a>Пример  
   
 ```  
 // msl_auto_handle_reset.cpp  
@@ -82,18 +81,21 @@ int main()
 }  
 ```  
   
-  **Конструктор ClassA: сначала**  
-**Hello от первого суффикса\!**  
-**Конструктор ClassA: second**  
-**Деструктор ClassA: сначала**  
-**Hello из второго суффикса\!**  
-**Деструктор ClassA: second**  
-**done**   
-## Требования  
- **Файл заголовка**\<msclr\\auto\_handle.h\>  
+```Output  
+ClassA constructor: first  
+Hello from first A!  
+ClassA constructor: second  
+ClassA destructor: first  
+Hello from second A!  
+ClassA destructor: second  
+done  
+```  
+  
+## <a name="requirements"></a>Требования  
+ **Файл заголовка** \<msclr\auto_handle.h >  
   
  **Пространство имен** msclr  
   
-## См. также  
- [Члены auto\_handle](../dotnet/auto-handle-members.md)   
- [auto\_handle::release](../Topic/auto_handle::release.md)
+## <a name="see-also"></a>См. также  
+ [Члены auto_handle](../dotnet/auto-handle-members.md)   
+ [auto_handle::release](../dotnet/auto-handle-release.md)

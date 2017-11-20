@@ -1,45 +1,43 @@
 ---
-title: "fill_n (STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::fill_n"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "fill_n - функция"
+title: "fill_n (STL/CLR) | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::fill_n
+dev_langs: C++
+helpviewer_keywords: fill_n function
 ms.assetid: bb9f2f71-ba1d-44ec-8b47-6ece149dd6b8
-caps.latest.revision: 4
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 4
+caps.latest.revision: "4"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 47499b458fc343848cc5aa6d91a8630f63d2d4e9
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/24/2017
 ---
-# fill_n (STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Присваивает новое значение указанному количеству элементов в диапазоне, который начинается с определенного элемента.  
+# <a name="filln-stlclr"></a>fill_n (STL/CLR)
+Назначает новое значение указанному количеству элементов в диапазоне, начиная с определенного элемента.  
   
-## Синтаксис  
+## <a name="syntax"></a>Синтаксис  
   
 ```  
 template<class _OutIt, class _Diff, class _Ty> inline  
     void fill_n(_OutIt _First, _Diff _Count, const _Ty% _Val);  
 ```  
   
-## Заметки  
- Эта функция работает аналогично функции `fill_n` STL.  Для получения дополнительной информации см. [fill\_n](../Topic/fill_n.md).  
+## <a name="remarks"></a>Примечания  
+ Эта функция работает так же, как функция стандартной библиотеки C++ `fill_n`. Дополнительные сведения см. в разделе [fill_n](../standard-library/algorithm-functions.md#fill_n).  
   
-## Требования  
- **Заголовок:**\<cliext\/algorithm\>  
+## <a name="requirements"></a>Требования  
+ **Заголовок:** \<cliext/алгоритм >  
   
  **Пространство имен:** cliext  
   
-## См. также  
- [algorithm](../Topic/algorithm%20\(STL-CLR\).md)
+## <a name="see-also"></a>См. также  
+ [algorithm (STL/CLR)](../dotnet/algorithm-stl-clr.md)

@@ -1,36 +1,35 @@
 ---
-title: "Созданные мастером поставщика файлы | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "поставщики OLE DB, файлы, созданные мастером"
+title: "Созданные мастером поставщика файлы | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords: OLE DB providers, wizard-generated files
 ms.assetid: 6e1ac94b-eb90-4abf-82b3-06944b947ebc
-caps.latest.revision: 7
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 24da0ab4b3ab27cdb9a70c0f9cc05e3ca86e117d
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/24/2017
 ---
-# Созданные мастером поставщика файлы
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Мастер поставщика ATL OLE DB создает следующие файлы.  В разделах используется краткое обозначение "MyProvider", однако, конкретные имена файлов зависят от выбора пользователя во время создания поставщика.  
+# <a name="provider-wizard-generated-files"></a>Созданные мастером поставщика файлы
+Мастер поставщика ATL OLE DB создает следующие файлы. В последующих разделах используется короткое имя «MyProvider», но конкретные имена файлов зависят от выбора, внесенные при создании поставщика.  
   
 |Имя файла|Описание|  
-|---------------|--------------|  
-|MyProviderRS.cpp|Содержит метод поддержки команд `Execute` и сопоставления столбца поставщика.|  
-|MyProviderDS.h|Реализует объект источника данных.  Файл заголовка содержит сопоставляемые свойства в параметрах источника данных.|  
-|MyProviderDS.h|Реализует объекты команд и наборов строк  Файл заголовка содержит сопоставляемые свойства в параметрах набора срок и команд.|  
-|MyProviderSess.h|Реализует объект сеанса.  Файл заголовка содержит сопоставляемые свойства в параметрах сеанса.|  
+|---------------|-----------------|  
+|MyProviderRS.cpp|Содержит вспомогательные команды `Execute` метод и сопоставления столбца поставщика.|  
+|MyProviderDS.h|Реализует объект источника данных. Файл заголовка содержит сопоставление свойств для свойств источника данных.|  
+|MyProviderRS.h|Реализует объекты команд и наборов строк. Файл заголовка содержит сопоставление свойств для свойств наборов строк и команд.|  
+|MyProviderSess.h|Реализует объект сеанса. Файл заголовка содержит сопоставление свойств для свойств сеанса.|  
 |MyProvider.rgs|Содержит зарегистрированные объекты, созданные мастером поставщика OLE DB.|  
   
-## См. также  
+## <a name="see-also"></a>См. также  
  [Создание поставщика OLE DB](../../data/oledb/creating-an-ole-db-provider.md)

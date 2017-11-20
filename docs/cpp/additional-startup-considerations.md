@@ -4,27 +4,24 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-language
+ms.technology: cpp-language
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - program startup [C++]
 - startup code
 - initializing before main
 ms.assetid: 0e942aa6-8342-447c-b068-8980ed7622bd
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.translationtype: HT
-ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
-ms.openlocfilehash: cb437729d2c60f15bc798438ecbbba0637bf3d22
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/25/2017
-
+ms.openlocfilehash: 13471dae28bec066ebe8aeec785a1a060c7f975f
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="additional-startup-considerations"></a>Дополнительные сведения о запуске
 В языке C++ при создании и уничтожении объекта может выполняться пользовательский код. Таким образом, важно понимать, какие инициализации выполняются перед входом в **основной** и какие деструкторы вызываются после выхода из **основной**. (Дополнительные сведения о создании и уничтожении объектов см. в разделе [конструкторы](../cpp/constructors-cpp.md) и [деструкторы](../cpp/destructors-cpp.md).)  

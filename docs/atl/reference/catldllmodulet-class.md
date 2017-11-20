@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-windows
+ms.technology: cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
@@ -18,36 +17,18 @@ f1_keywords:
 - ATLBASE/ATL::CAtlDllModuleT::DllRegisterServer
 - ATLBASE/ATL::CAtlDllModuleT::DllUnregisterServer
 - ATLBASE/ATL::CAtlDllModuleT::GetClassObject
-dev_langs:
-- C++
-helpviewer_keywords:
-- CAtlDllModuleT class
+dev_langs: C++
+helpviewer_keywords: CAtlDllModuleT class
 ms.assetid: 351d5767-8257-4878-94be-45a85e31a72d
-caps.latest.revision: 19
+caps.latest.revision: "19"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0e0c08ddc57d437c51872b5186ae3fc983bb0199
-ms.openlocfilehash: 13cd0adb860660e06c92e8f02c07721ede391fb7
-ms.contentlocale: ru-ru
-ms.lasthandoff: 02/24/2017
-
+ms.openlocfilehash: c178cb10c6f14d257e9c03b499ea8f2fa01eddf4
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="catldllmodulet-class"></a>Класс CAtlDllModuleT
 Этот класс представляет модуль для библиотеки DLL.  
@@ -76,15 +57,15 @@ class ATL_NO_VTABLE CAtlDllModuleT : public CAtlModuleT<T>
   
 |Имя|Описание|  
 |----------|-----------------|  
-|[CAtlDllModuleT::DllCanUnloadNow](#dllcanunloadnow)|Проверяет DLL может быть выгружена.|  
-|[CAtlDllModuleT::DllGetClassObject](#dllgetclassobject)|Возвращает фабрику классов.|  
-|[CAtlDllModuleT::DllMain](#dllmain)|Точка входа необязательно в библиотеку динамической компоновки (DLL).|  
+|[CAtlDllModuleT::DllCanUnloadNow](#dllcanunloadnow)|Проверяет, если библиотека DLL может быть выгружен.|  
+|[CAtlDllModuleT::DllGetClassObject](#dllgetclassobject)|Возвращает фабрику класса.|  
+|[CAtlDllModuleT::DllMain](#dllmain)|Точка входа необязательно в библиотеке динамической компоновки (DLL).|  
 |[CAtlDllModuleT::DllRegisterServer](#dllregisterserver)|Добавляет записи в системный реестр для объектов в библиотеке DLL.|  
 |[CAtlDllModuleT::DllUnregisterServer](#dllunregisterserver)|Удаляет записи в системном реестре для объектов в библиотеке DLL.|  
-|[CAtlDllModuleT::GetClassObject](#getclassobject)|Возвращает фабрику классов. Вызываемый по [DllGetClassObject](#dllgetclassobject).|  
+|[CAtlDllModuleT::GetClassObject](#getclassobject)|Возвращает фабрику класса. Вызванный по [DllGetClassObject](#dllgetclassobject).|  
   
 ## <a name="remarks"></a>Примечания  
- `CAtlDllModuleT`Представляет модуль для библиотеки динамической компоновки (DLL) и предоставляет функции, которые используются всеми проектами библиотеки DLL. Это специализация [CAtlModuleT](../../atl/reference/catlmodulet-class.md) класс включает в себя поддержку для регистрации.  
+ `CAtlDllModuleT`Представляет модуль для библиотеки динамической компоновки (DLL) и предоставляет функции, которые используются всеми проектами библиотеки DLL. Это специализация [CAtlModuleT](../../atl/reference/catlmodulet-class.md) класс включает поддержку регистрации.  
   
  Дополнительные сведения о модулях в ATL см. в разделе [модульные классы ATL](../../atl/atl-module-classes.md).  
   
@@ -115,7 +96,7 @@ CAtlDllModuleT() throw();
 ```  
   
 ##  <a name="dllcanunloadnow"></a>CAtlDllModuleT::DllCanUnloadNow  
- Проверяет DLL может быть выгружена.  
+ Проверяет, если библиотека DLL может быть выгружен.  
   
 ```
 HRESULT DllCanUnloadNow() throw();
@@ -125,7 +106,7 @@ HRESULT DllCanUnloadNow() throw();
  Возвращает значение S_OK, если библиотека DLL может быть выгружен или S_FALSE, если это невозможно.  
   
 ##  <a name="dllgetclassobject"></a>CAtlDllModuleT::DllGetClassObject  
- Возвращает фабрику классов.  
+ Возвращает фабрику класса.  
   
 ```
 HRESULT DllGetClassObject(
@@ -142,13 +123,13 @@ HRESULT DllGetClassObject(
  Идентификатор IID запрошенного интерфейса.  
   
  `ppv`  
- Указатель на указатель интерфейса, идентифицируемый `riid`. Если объект не поддерживает этот интерфейс `ppv` имеет значение NULL.  
+ Указатель на указатель на интерфейс, определяемый `riid`. Если объект не поддерживает этот интерфейс `ppv` имеет значение NULL.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
- Возвращает значение S_OK в случае успешного выполнения или значение HRESULT ошибки в случае сбоя.  
+ Возвращает значение S_OK в случае успешного выполнения или ошибку HRESULT при сбое.  
   
 ##  <a name="dllmain"></a>CAtlDllModuleT::DllMain  
- Точка входа необязательно в библиотеку динамической компоновки (DLL).  
+ Точка входа необязательно в библиотеке динамической компоновки (DLL).  
   
 ```
 BOOL WINAPI DllMain(DWORD dwReason, LPVOID /* lpReserved*/) throw();
@@ -156,7 +137,7 @@ BOOL WINAPI DllMain(DWORD dwReason, LPVOID /* lpReserved*/) throw();
   
 ### <a name="parameters"></a>Параметры  
  `dwReason`  
- Если набор вызовов уведомления DLL_PROCESS_ATTACH, DLL_THREAD_ATTACH и DLL_THREAD_DETACH отключены.  
+ Если набор DLL_PROCESS_ATTACH, DLL_THREAD_ATTACH и DLL_THREAD_DETACH вызовы уведомления отключены.  
   
  *lpReserved*  
  Зарезервировано.  
@@ -165,7 +146,7 @@ BOOL WINAPI DllMain(DWORD dwReason, LPVOID /* lpReserved*/) throw();
  Всегда возвращает значение TRUE.  
   
 ### <a name="remarks"></a>Примечания  
- Отключение DLL_THREAD_ATTACH и DLL_THREAD_DETACH вызовы уведомлений может быть полезным оптимизации для многопоточных приложений, имеющих многие библиотеки DLL, часто создания и удаления потоков и эти уведомления уровня потока вложения или отсоединение не обязательно, для библиотек DLL.  
+ Отключение DLL_THREAD_ATTACH и DLL_THREAD_DETACH уведомление вызовов может быть полезно в целях оптимизации для многопоточных приложений, имеющих многие библиотеки DLL, часто, создавать и удалять потоков, и эти уведомления уровня потока не обязательно, для библиотек DLL вложение или отсоединения.  
   
 ##  <a name="dllregisterserver"></a>CAtlDllModuleT::DllRegisterServer  
  Добавляет записи в системный реестр для объектов в библиотеке DLL.  
@@ -179,7 +160,7 @@ HRESULT DllRegisterServer(BOOL bRegTypeLib = TRUE) throw();
  Значение TRUE, если для регистрации библиотеки типов. Значение по умолчанию — TRUE.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
- Возвращает значение S_OK в случае успешного выполнения или значение HRESULT ошибки в случае сбоя.  
+ Возвращает значение S_OK в случае успешного выполнения или ошибку HRESULT при сбое.  
   
 ##  <a name="dllunregisterserver"></a>CAtlDllModuleT::DllUnregisterServer  
  Удаляет записи в системном реестре для объектов в библиотеке DLL.  
@@ -190,10 +171,10 @@ HRESULT DllUnregisterServer(BOOL bUnRegTypeLib = TRUE) throw();
   
 ### <a name="parameters"></a>Параметры  
  `bUnRegTypeLib`  
- Значение TRUE, если библиотека типов удаляются из реестра. Значение по умолчанию — TRUE.  
+ Значение TRUE, если библиотека типов для удаляются из реестра. Значение по умолчанию — TRUE.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
- Возвращает значение S_OK в случае успешного выполнения или значение HRESULT ошибки в случае сбоя.  
+ Возвращает значение S_OK в случае успешного выполнения или ошибку HRESULT при сбое.  
   
 ##  <a name="getclassobject"></a>CAtlDllModuleT::GetClassObject  
  Создает объект для указанного идентификатора CLSID.  
@@ -213,10 +194,10 @@ HRESULT GetClassObject(
  Идентификатор IID запрошенного интерфейса.  
   
  `ppv`  
- Указатель на указатель интерфейса, идентифицируемый `riid`. Если объект не поддерживает этот интерфейс `ppv` имеет значение NULL.  
+ Указатель на указатель на интерфейс, определяемый `riid`. Если объект не поддерживает этот интерфейс `ppv` имеет значение NULL.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
- Возвращает значение S_OK в случае успешного выполнения или значение HRESULT ошибки в случае сбоя.  
+ Возвращает значение S_OK в случае успешного выполнения или ошибку HRESULT при сбое.  
   
 ### <a name="remarks"></a>Примечания  
  Этот метод вызывается методом [CAtlDllModuleT::DllGetClassObject](#dllgetclassobject) и включена для обратной совместимости.  
@@ -226,4 +207,3 @@ HRESULT GetClassObject(
  [Класс CAtlExeModuleT](../../atl/reference/catlexemodulet-class.md)   
  [Общие сведения о классе](../../atl/atl-class-overview.md)   
  [Классы модуля](../../atl/atl-module-classes.md)
-

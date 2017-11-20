@@ -1,47 +1,47 @@
 ---
-title: "Практическое руководство. Вызов свойств и методов элемента управления Windows Forms | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "get-started-article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "вызов методов, элемент управления Windows Forms"
-  - "вызов свойств"
-  - "вызов свойств, элемент управления Windows Forms"
-  - "вызовы метода, Windows Forms"
-  - "элементы управления Windows Forms [C++], методы"
-  - "элементы управления Windows Forms [C++], свойства"
+title: "Как: вызов свойств и методов в Windows Forms управления | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: get-started-article
+dev_langs: C++
+helpviewer_keywords:
+- method calls, Windows Forms
+- calling methods, Windows Forms control
+- calling properties, Windows Forms control
+- Windows Forms controls [C++], methods
+- calling properties
+- Windows Forms controls [C++], properties
 ms.assetid: 6e647d8a-fdaa-4aa1-b3fe-04f15cff8eb3
-caps.latest.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 9
+caps.latest.revision: "9"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 28e6d025d6c2aa485b5687117d64afeb7e402a79
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/24/2017
 ---
-# Практическое руководство. Вызов свойств и методов элемента управления Windows Forms
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Поскольку [CWinFormsView::GetControl](../Topic/CWinFormsView::GetControl.md) возвращает указатель на <xref:System.Windows.Forms.Control?displayProperty=fullName>, а не на `WindowsControlLibrary1::UserControl1`, рекомендуется добавить тип пользовательского элемента управления в и инициализировать его в [IView::OnInitialUpdate](../Topic/IView::OnInitialUpdate.md).  После этого можно использовать методы и свойства с помощью `m_ViewControl`.  
+# <a name="how-to-call-properties-and-methods-of-the-windows-forms-control"></a>Практическое руководство. Вызов свойств и методов элемента управления Windows Forms
+Так как [CWinFormsView::GetControl](../mfc/reference/cwinformsview-class.md#getcontrol) возвращает указатель на <xref:System.Windows.Forms.Control?displayProperty=fullName>, а не указатель `WindowsControlLibrary1::UserControl1`, то рекомендуется добавить член типа пользовательских элементов управления и инициализировать его в [IView::OnInitialUpdate ](../mfc/reference/iview-interface.md#oninitialupdate). После этого можно использовать методы и свойства с помощью `m_ViewControl`.  
   
- В этом разделе предполагается, что читатель знаком с содержанием разделов [Практическое руководство. Создание пользовательского элемента управления и ведущего приложения в диалоговом окне](../dotnet/how-to-create-the-user-control-and-host-in-a-dialog-box.md) и [Практическое руководство. Создание пользовательского элемента управления и просмотр ведущего интерфейса MDI](../dotnet/how-to-create-the-user-control-and-host-mdi-view.md).  
+ В этом разделе предполагается, вы выполнили ранее [как: Создание пользовательского элемента управления и ведущего приложения в диалоговом окне](../dotnet/how-to-create-the-user-control-and-host-in-a-dialog-box.md) и [как: Создание пользовательского элемента управления и просмотр ведущего интерфейса MDI](../dotnet/how-to-create-the-user-control-and-host-mdi-view.md).  
   
-### Создание ведущего приложения MFC  
+### <a name="to-create-the-mfc-host-application"></a>Создание ведущего приложения MFC  
   
-1.  Откройте приложение MFC, созданное в разделе [Практическое руководство. Создание пользовательского элемента управления и просмотр ведущего интерфейса MDI](../dotnet/how-to-create-the-user-control-and-host-mdi-view.md).  
+1.  Откройте приложение MFC, созданные в [как: Создание пользовательского элемента управления и просмотр ведущего интерфейса MDI](../dotnet/how-to-create-the-user-control-and-host-mdi-view.md).  
   
-2.  Добавьте следующую строку к общему разделу переопределений в объявлении класса `CMFC02View` в файле MFC02View.h.  
+2.  Добавьте следующую строку в раздел общих переопределения `CMFC02View` объявления в файле MFC02View.h класса.  
   
      `gcroot<WindowsFormsControlLibrary1::UserControl1 ^> m_ViewControl;`  
   
 3.  Добавьте переопределение для OnInitialupdate.  
   
-     Откройте окно **Свойства** \(нажав клавишу F4\).  В параметре **Представлении класса** \(CTRL\+SHIFT\+C\) выберите класс CMFC02View.  В окне **Свойства** выберите значок для переопределений.  Переместитесь вниз по списку к OnInitialUpdate.  Щелкните в раскрывающемся списке и выделите \<Add\>.  В MFC02View.cpp убедитесь, что текст функции OnInitialUpdate имеет следующий вид:  
+     Отображение **свойства** окна (F4). В **представление классов** (CTRL + SHIFT + C), выберите класс CMFC02View. В **свойства** окно, выберите значок для переопределений. Прокрутки вниз по списку, чтобы OnInitialUpdate. Щелкните раскрывающийся список и выберите \<Добавить >. В MFC02View.cpp. Убедитесь, что тело функции OnInitialUpdate таков:  
   
     ```  
     CWinFormsView::OnInitialUpdate();  
@@ -49,13 +49,13 @@ caps.handback.revision: 9
     m_ViewControl->textBox1->Text = gcnew System::String("hi");  
     ```  
   
-4.  Выполните построение и запуск проекта.  
+4.  Постройте и запустите проект.  
   
-     В меню **Построение** выберите **Построить решение**.  
+     В меню **Сборка** выберите **Собрать решение**.  
   
-     В меню **Отладка** выберите команду **Запуск без отладки**.  
+     На **отладки** меню, нажмите кнопку **Запуск без отладки**.  
   
-     Обратите внимание, что теперь текстовое поле инициализировано.  
+     Обратите внимание, что текстовое поле теперь инициализирован.  
   
-## См. также  
+## <a name="see-also"></a>См. также  
  [Размещение пользовательского элемента управления формы Windows Forms в качестве представления MFC](../dotnet/hosting-a-windows-forms-user-control-as-an-mfc-view.md)

@@ -1,71 +1,70 @@
 ---
-title: "CDynamicAccessor::GetLength | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "CDynamicAccessor.GetLength"
-  - "ATL.CDynamicAccessor.GetLength"
-  - "CDynamicAccessor::GetLength"
-  - "ATL::CDynamicAccessor::GetLength"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "GetLength - метод"
+title: "CDynamicAccessor::GetLength | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- CDynamicAccessor.GetLength
+- ATL.CDynamicAccessor.GetLength
+- CDynamicAccessor::GetLength
+- ATL::CDynamicAccessor::GetLength
+dev_langs: C++
+helpviewer_keywords: GetLength method
 ms.assetid: 3ae8983b-b267-4cf9-bfc0-3e191f79e646
-caps.latest.revision: 8
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 6d62a4d23bb25fec0f85b5230b0136b745fb0801
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/24/2017
 ---
-# CDynamicAccessor::GetLength
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Длину выбранного столбца.  
+# <a name="cdynamicaccessorgetlength"></a>CDynamicAccessor::GetLength
+Получает длину указанного столбца.  
   
-## Синтаксис  
+## <a name="syntax"></a>Синтаксис  
   
 ```  
   
-      bool GetLength(   
-   DBORDINAL nColumn,   
-   DBLENGTH* pLength    
+      bool GetLength(   
+   DBORDINAL nColumn,   
+   DBLENGTH* pLength    
 ) const throw( );  
-bool GetLength(   
-   const CHAR* pColumnName,   
-   DBLENGTH* pLength    
+bool GetLength(   
+   const CHAR* pColumnName,   
+   DBLENGTH* pLength    
 ) const throw( );  
-bool GetLength(   
-   const WCHAR* pColumnName,   
-   DBLENGTH* pLength    
+bool GetLength(   
+   const WCHAR* pColumnName,   
+   DBLENGTH* pLength    
 ) const throw( );  
 ```  
   
-#### Параметры  
+#### <a name="parameters"></a>Параметры  
  `nColumn`  
- \[in\] число столбцов.  Начало номера столбца с 1.  Значение 0 указывает на столбец закладки, если таковые имеются.  
+ [in] Номер столбца. Номера столбцов начинается с 1. Значение 0 ссылается на столбец закладки в том случае, если таковые имеются.  
   
  `pColumnName`  
- \[in\] указатель на символьной строки, содержащей имя столбца.  
+ [in] Указатель на символьную строку, содержащую имя столбца.  
   
  `pLength`  
- \[out\] указатель на целое число, содержащее длину столбца в байтах.  
+ [out] Указатель на целое число со знаком, содержащее длину столбца в байтах.  
   
-## Возвращаемое значение  
- Возвращает значение **true**, если указанный столбец найден.  В противном случае эта функция возвращает **false**.  
+## <a name="return-value"></a>Возвращаемое значение  
+ Возвращает **true** при обнаружении указанного столбца. В противном случае эта функция возвращает **false**.  
   
-## Заметки  
- Переопределение принимает первое число столбцов, а второе и третье переопределения принимают имя столбца в формате ANSI или Юникод, соответственно.  
+## <a name="remarks"></a>Примечания  
+ Первый переопределение принимает номер столбца и переопределения второй и третий принимают имя столбца в формате ANSI или Юникод, соответственно.  
   
-## Требования  
+## <a name="requirements"></a>Требования  
  **Заголовок:** atldbcli.h  
   
-## См. также  
- [Класс CDynamicAccessor](../../data/oledb/cdynamicaccessor-class.md)   
+## <a name="see-also"></a>См. также  
+ [CDynamicAccessor-класс](../../data/oledb/cdynamicaccessor-class.md)   
  [CDynamicAccessor::SetLength](../../data/oledb/cdynamicaccessor-setlength.md)

@@ -1,62 +1,61 @@
 ---
-title: "Выходные данные LINK | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "link"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "ILK-файлы"
-  - "DLL-библиотеки [C++], в качестве выходных данных компоновщика"
-  - "исполняемые файлы [C++], в качестве выходных данных компоновщика"
-  - "файлы [C++], LINK"
-  - "ILK-файлы"
-  - "библиотеки - импорт [C++], создание"
-  - "LINK - средство [C++], файл сопоставления"
-  - "LINK - средство [C++], результат"
-  - "компоновщик [C++], выходные файлы"
-  - "файлы сопоставления [C++]"
-  - "файлы сопоставления [C++], выходные данные LINK"
-  - "выходные файлы [C++], компоновщик"
+title: "Выходные данные LINK | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: link
+dev_langs: C++
+helpviewer_keywords:
+- mapfiles [C++]
+- ILK files
+- output files [C++], linker
+- files [C++], LINK
+- .ilk files
+- LINK tool [C++], output
+- import libraries [C++], creating
+- executable files [C++], as linker output
+- mapfiles [C++], LINK output
+- linker [C++], output files
+- DLLs [C++], as linker output
+- LINK tool [C++], mapfile
 ms.assetid: a98b557c-1947-447a-be1f-616fb45a9580
-caps.latest.revision: 6
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 6
+caps.latest.revision: "6"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: d01f19f31f83324beab1e44efe181086d6432175
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/24/2017
 ---
-# Выходные данные LINK
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-В результате работы инструмента LINK создаются EXE\-файлы, библиотеки DLL, файлы сопоставления и сообщения.  
+# <a name="link-output"></a>Выходные данные LINK
+Выходные данные Link включает файлы .exe, библиотеки DLL, файлы сопоставления и сообщения.  
   
-##  <a name="_core_output_files"></a> Выходные файлы  
- Выходным файлом LINK по умолчанию является EXE\-файл.  При указании параметра [\/DLL](../../build/reference/dll-build-a-dll.md) LINK создает DLL\-файл.  Имя выходного файла можно задавать с помощью параметра [Имя выходного файла \(\/OUT\)](../../build/reference/out-output-file-name.md).  
+##  <a name="_core_output_files"></a>Выходные файлы  
+ Выходной файл по умолчанию, перейдя по ССЫЛКЕ представляет собой файл .exe. Если [/DLL](../../build/reference/dll-build-a-dll.md) параметр указан, программа LINK создает DLL-файл. Можно задать имя выходного файла с [имя выходного файла (/ OUT)](../../build/reference/out-output-file-name.md) параметр.  
   
- В инкрементном режиме LINK создает ILK\-файл, в котором сохраняются сведения о состоянии для выполнения дальнейших последовательных построений программы.  Более подробные сведения о ILK\-файлах см. в разделе, посвященном [ILK\-файлам](../../build/reference/dot-ilk-files-as-linker-input.md).  Дополнительные сведения об инкрементной компоновке см. в разделе, посвященном параметру [Компоновать инкрементно \(\/INCREMENTAL\)](../../build/reference/incremental-link-incrementally.md).  
+ В инкрементном режиме LINK создает ILK-файл, сведения о состоянии для дальнейших последовательных построений программы. Дополнительные сведения о ILK-файлах см. в разделе [ILK-файлы](../../build/reference/dot-ilk-files-as-linker-input.md). Дополнительные сведения об инкрементной компоновке см. в разделе [постепенно связи (/ INCREMENTAL)](../../build/reference/incremental-link-incrementally.md) параметр.  
   
- При создании с помощью LINK программы, содержащей экспортируемые файлы \(как правило, библиотеки DLL\), также производится построение LIB\-файла, кроме того случая, если при построении использовался EXP\-файл.  Имя файла библиотеки импорта можно изменять с помощью параметра [\/IMPLIB](../Topic/-IMPLIB%20\(Name%20Import%20Library\).md).  
+ LINK создает программу, содержащую экспортирует (обычно DLL), также производится построение LIB-файл, если файл EXP использовался в сборке. Можно задать имя файла библиотеки импорта с [/IMPLIB](../../build/reference/implib-name-import-library.md) параметр.  
   
- Если задан параметр [Создать файл сопоставления \(\/MAP\)](../../build/reference/map-generate-mapfile.md), LINK создает файл сопоставления.  
+ Если [Создание файла сопоставления (/ MAP)](../../build/reference/map-generate-mapfile.md) параметр указан, LINK создает файл сопоставления.  
   
- Если задан параметр [Создать отладочную информацию \(\/DEBUG\)](../../build/reference/debug-generate-debug-info.md), LINK создает PDB\-файл для хранения отладочной информации о программе.  
+ Если [создать отладочную информацию (/ DEBUG)](../../build/reference/debug-generate-debug-info.md) параметр указан, LINK создает PDB-ФАЙЛ содержит отладочную информацию для программы.  
   
-##  <a name="_core_other_output"></a> Прочие выходные данные  
- При вводе в командную строку `link` без каких\-либо иных параметров LINK выводит сводную информацию об используемых параметрах.  
+##  <a name="_core_other_output"></a>Прочие выходные данные  
+ При вводе `link` без любые другие данные в командной строке, ссылка отображает сводную информацию об используемых параметрах.  
   
- LINK выводит сведения о версии и защите авторских прав, а также отображает команды, поступающие из командного файла, если не указан параметр [Отключить загрузочное объявление \(\/NOLOGO\)](../../build/reference/nologo-suppress-startup-banner-linker.md).  
+ ССЫЛКА отображает сообщение версии и авторских правах и выводит командного файла ввода, если не [отключить загрузочное объявление (/ NOLOGO)](../../build/reference/nologo-suppress-startup-banner-linker.md) используется параметр.  
   
- Для вывода дополнительных сведений о построении можно воспользоваться параметром [Печатать сообщения о ходе выполнения \(\/VERBOSE\)](../../build/reference/verbose-print-progress-messages.md).  
+ Можно использовать [печать сообщений о ходе выполнения (/ VERBOSE)](../../build/reference/verbose-print-progress-messages.md) параметр для отображения дополнительных сведений о сборке.  
   
- LINK выводит предупреждения и сообщения об ошибках в формате LNK*№№№№*.  Подобный префикс ошибки и диапазон номеров также используется программами LIB, DUMPBIN и EDITBIN.  
+ LINK выдает сообщения об ошибках и предупреждения в виде LNK*nnnn*. Этот префикс ошибки и диапазон номеров также используются LIB, DUMPBIN и EDITBIN.  
   
-## См. также  
+## <a name="see-also"></a>См. также  
  [Настройка параметров компоновщика](../../build/reference/setting-linker-options.md)   
  [Параметры компоновщика](../../build/reference/linker-options.md)

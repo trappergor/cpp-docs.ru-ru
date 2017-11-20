@@ -1,41 +1,39 @@
 ---
-title: "multiset::reverse_iterator (STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::multiset::reverse_iterator"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "reverse_iterator - элемент [STL/CLR]"
+title: "MULTISET::reverse_iterator (STL/CLR) | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::multiset::reverse_iterator
+dev_langs: C++
+helpviewer_keywords: reverse_iterator member [STL/CLR]
 ms.assetid: dde6ad36-ca59-4728-aa53-e3d117eb4f48
-caps.latest.revision: 14
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 12
+caps.latest.revision: "14"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: e700c02a9ed6ff267c113e79f82eccdb25ae813b
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/24/2017
 ---
-# multiset::reverse_iterator (STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Тип обратного итератора для контролируемой последовательности.  
+# <a name="multisetreverseiterator-stlclr"></a>multiset::reverse_iterator (STL/CLR)
+Тип обратного итератора для управляемой последовательности.  
   
-## Синтаксис  
+## <a name="syntax"></a>Синтаксис  
   
 ```  
 typedef T3 reverse_iterator;  
 ```  
   
-## Заметки  
- Описывает тип объекта неспецифицированного типа `T3`, который можно использовать в качестве обратного итератор для контролируемой последовательности.  
+## <a name="remarks"></a>Примечания  
+ Тип описывает объект незаданного типа `T3` , можно использовать в качестве обратного итератора для управляемой последовательности.  
   
-## Пример  
+## <a name="example"></a>Пример  
   
 ```  
 // cliext_multiset_reverse_iterator.cpp   
@@ -60,14 +58,17 @@ int main()
   
 ```  
   
-  **a B C.**   
-## Требования  
- **Заголовок:**\<cliext\/set\>  
+```Output  
+c b a  
+```  
+  
+## <a name="requirements"></a>Требования  
+ **Заголовок:** \<cliext и set >  
   
  **Пространство имен:** cliext  
   
-## См. также  
- [multiset](../dotnet/multiset-stl-clr.md)   
- [multiset::const\_iterator](../dotnet/multiset-const-iterator-stl-clr.md)   
- [multiset::const\_reverse\_iterator](../dotnet/multiset-const-reverse-iterator-stl-clr.md)   
- [multiset::iterator](../dotnet/multiset-iterator-stl-clr.md)
+## <a name="see-also"></a>См. также  
+ [мультинабор (STL/CLR)](../dotnet/multiset-stl-clr.md)   
+ [MULTISET::const_iterator (STL/CLR)](../dotnet/multiset-const-iterator-stl-clr.md)   
+ [MULTISET::const_reverse_iterator (STL/CLR)](../dotnet/multiset-const-reverse-iterator-stl-clr.md)   
+ [multiset::iterator (STL/CLR)](../dotnet/multiset-iterator-stl-clr.md)

@@ -1,55 +1,54 @@
 ---
-title: "CDataConnection::CDataConnection | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "CDataConnection.CDataConnection"
-  - "ATL.CDataConnection.CDataConnection"
-  - "CDataConnection::CDataConnection"
-  - "ATL::CDataConnection::CDataConnection"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "CDataConnection - класс, конструктор"
+title: "CDataConnection::CDataConnection | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- CDataConnection.CDataConnection
+- ATL.CDataConnection.CDataConnection
+- CDataConnection::CDataConnection
+- ATL::CDataConnection::CDataConnection
+dev_langs: C++
+helpviewer_keywords: CDataConnection class, constructor
 ms.assetid: ac25c9a0-44d3-4083-b13f-76c07772e12d
-caps.latest.revision: 8
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: e92019f3f49257e297bddb2f717cf416da62a3bc
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/24/2017
 ---
-# CDataConnection::CDataConnection
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Создает и инициализирует объект `CDataConnection`.  
+# <a name="cdataconnectioncdataconnection"></a>CDataConnection::CDataConnection
+Создает и инициализирует `CDataConnection` объекта.  
   
-## Синтаксис  
+## <a name="syntax"></a>Синтаксис  
   
 ```  
   
-      CDataConnection();   
+      CDataConnection();   
 CDataConnection(  
    const CDataConnection &ds  
 );  
 ```  
   
-#### Параметры  
+#### <a name="parameters"></a>Параметры  
  `ds`  
- \[in\] ссылка на существующее подключение данных.  
+ [in] Ссылка на существующее подключение к данным.  
   
-## Заметки  
- Первое переопределение создает новый объект `CDataConnection` с параметрами по умолчанию.  
+## <a name="remarks"></a>Примечания  
+ Первый переопределение создает новую `CDataConnection` объекта с параметрами по умолчанию.  
   
- Второе переопределение создает новый объект `CDataConnection` с соответствующими параметрами на объект источника данных необходимо указать.  
+ Второй переопределение создает новую `CDataConnection` объект с эквивалентный объект подключения к данным, можно указать параметры.  
   
-## Требования  
+## <a name="requirements"></a>Требования  
  **Заголовок:** atldbcli.h  
   
-## См. также  
+## <a name="see-also"></a>См. также  
  [Класс CDataConnection](../../data/oledb/cdataconnection-class.md)

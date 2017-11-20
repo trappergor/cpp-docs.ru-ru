@@ -1,33 +1,30 @@
 ---
-title: ".LISTMACROALL | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - ".LISTMACROALL"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - ".LISTMACROALL directive"
+title: ". LISTMACROALL | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: .LISTMACROALL
+dev_langs: C++
+helpviewer_keywords: .LISTMACROALL directive
 ms.assetid: 36f329fd-eff0-4414-8b4a-6223113f9fda
-caps.latest.revision: 7
-caps.handback.revision: 7
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
+caps.latest.revision: "7"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: 5e047b807304029dde3cb27b2ab7ef35f97a8520
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/24/2017
 ---
-# .LISTMACROALL
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Запускает список всех выписок в макросах.  
+# <a name="listmacroall"></a>.LISTMACROALL
+Список всех инструкций в макросах запускает.  
   
-## Синтаксис  
+## <a name="syntax"></a>Синтаксис  
   
 ```  
   
@@ -35,8 +32,8 @@ manager: "ghogen"
   
 ```  
   
-## Заметки  
- Аналогично .LALL.  
+## <a name="remarks"></a>Примечания  
+ То же, что [. LALL](../../assembler/masm/dot-lall.md).  
   
-## См. также  
- [Directives Reference](../../assembler/masm/directives-reference.md)
+## <a name="see-also"></a>См. также  
+ [Справочник по директивам](../../assembler/masm/directives-reference.md)

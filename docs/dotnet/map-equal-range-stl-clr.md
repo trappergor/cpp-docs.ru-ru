@@ -1,45 +1,43 @@
 ---
-title: "map::equal_range (STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::map::equal_range"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "equal_range - член [STL/CLR]"
+title: "MAP::equal_range (STL/CLR) | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::map::equal_range
+dev_langs: C++
+helpviewer_keywords: equal_range member [STL/CLR]
 ms.assetid: c0d7409c-344d-4102-99c4-aeab8643a073
-caps.latest.revision: 17
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 15
+caps.latest.revision: "17"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 13500bbd5842460dff5cf071bd626555bf1c5cc9
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/24/2017
 ---
-# map::equal_range (STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="mapequalrange-stlclr"></a>map::equal_range (STL/CLR)
 Находит диапазон, соответствующий указанному ключу.  
   
-## Синтаксис  
+## <a name="syntax"></a>Синтаксис  
   
 ```  
 cliext::pair<iterator, iterator> equal_range(key_type key);  
 ```  
   
-#### Параметры  
- key  
- Значение ключа, которое необходимо найти.  
+#### <a name="parameters"></a>Параметры  
+ клавиша  
+ Искомое значение ключа.  
   
-## Заметки  
- Функция\-член возвращает пару итераторов `cliext::pair<iterator, iterator>(` [map::lower\_bound](../dotnet/map-lower-bound-stl-clr.md)`(``key``),` [map::upper\_bound](../dotnet/map-upper-bound-stl-clr.md)`(``key``))`.  Он используется для определения диапазона элементов в контролируемой последовательности, соответствующие указанному ключу.  
+## <a name="remarks"></a>Примечания  
+ Функция-член возвращает пару итераторов `cliext::pair<iterator, iterator>(` [map::lower_bound (STL/CLR)](../dotnet/map-lower-bound-stl-clr.md) `(key),` [map::upper_bound (STL/CLR)](../dotnet/map-upper-bound-stl-clr.md)`(key))`. Используется для определения диапазона элементов в данный момент в управляемой последовательности, соответствующие заданному ключу.  
   
-## Пример  
+## <a name="example"></a>Пример  
   
 ```  
 // cliext_map_equal_range.cpp   
@@ -76,17 +74,20 @@ int main()
   
 ```  
   
-  **\[1\] \[2\] \[BC — 3\]**  
-**equal\_range L'x \(пустое\) \= true**  
- **\[B 2\]**   
-## Требования  
- **Заголовок:**\<cliext\/map\>  
+```Output  
+ [a 1] [b 2] [c 3]  
+equal_range(L'x') empty = True  
+ [b 2]  
+```  
+  
+## <a name="requirements"></a>Требования  
+ **Заголовок:** \<cliext/map >  
   
  **Пространство имен:** cliext  
   
-## См. также  
- [map](../dotnet/map-stl-clr.md)   
- [map::count](../dotnet/map-count-stl-clr.md)   
- [map::find](../Topic/map::find%20\(STL-CLR\).md)   
- [map::lower\_bound](../dotnet/map-lower-bound-stl-clr.md)   
- [map::upper\_bound](../dotnet/map-upper-bound-stl-clr.md)
+## <a name="see-also"></a>См. также  
+ [Карта (STL/CLR)](../dotnet/map-stl-clr.md)   
+ [MAP::Count (STL/CLR)](../dotnet/map-count-stl-clr.md)   
+ [MAP::Find (STL/CLR)](../dotnet/map-find-stl-clr.md)   
+ [MAP::lower_bound (STL/CLR)](../dotnet/map-lower-bound-stl-clr.md)   
+ [map::upper_bound (STL/CLR)](../dotnet/map-upper-bound-stl-clr.md)

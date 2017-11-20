@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
 apiname:
@@ -33,8 +32,7 @@ f1_keywords:
 - controlfp
 - control87_2
 - _control87_2
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - floating-point numbers, control word
 - _control87 function
@@ -47,30 +45,15 @@ helpviewer_keywords:
 - EM_AMBIGUOUS
 - control87_2 function
 ms.assetid: 0d09729d-d9a0-43d6-864c-43ff25e7e0c5
-caps.latest.revision: 34
+caps.latest.revision: "34"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 1a00023e4d3e31ddb6381e90a50231449b1de18d
-ms.openlocfilehash: 25dfd357f0b3385f1e9bdcc4249ad3cf4399e0b6
-ms.contentlocale: ru-ru
-ms.lasthandoff: 02/28/2017
-
+ms.openlocfilehash: ee8d874a84d8f1246c0990b4bf29d07c28237057
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="control87-controlfp-control872"></a>_control87, _controlfp, __control87_2
 Возвращает и задает управляющее слово блока операций с плавающей запятой. Доступна более безопасная версия функции `_controlfp`; см. раздел [_controlfp_s](../../c-runtime-library/reference/controlfp-s.md).  
@@ -147,7 +130,7 @@ _controlfp(_DN_FLUSH, _MCW_DN);
  В архитектурах ARM и [!INCLUDE[vcprx64](../../assembler/inline/includes/vcprx64_md.md)] изменение режима бесконечности или точности чисел с плавающей запятой не поддерживается. Если маска управления точностью используется на платформе [!INCLUDE[vcprx64](../../assembler/inline/includes/vcprx64_md.md)], функция создает утверждение и вызывается обработчик недопустимого параметра, как описано в разделе [Проверка параметров](../../c-runtime-library/parameter-validation.md).  
   
 > [!NOTE]
-> Функция  `__control87_2` не поддерживается в архитектурах ARM и [!INCLUDE[vcprx64](../../assembler/inline/includes/vcprx64_md.md)]. Если используется функция `__control87_2` и программа компилируется для архитектуры ARM или [!INCLUDE[vcprx64](../../assembler/inline/includes/vcprx64_md.md)], компилятор выдает ошибку.  
+>  Функция `__control87_2` не поддерживается в архитектурах ARM и [!INCLUDE[vcprx64](../../assembler/inline/includes/vcprx64_md.md)]. Если используется функция `__control87_2` и программа компилируется для архитектуры ARM или [!INCLUDE[vcprx64](../../assembler/inline/includes/vcprx64_md.md)], компилятор выдает ошибку.  
   
  Эти функции игнорируются при использовании [/CLR (компиляция CLR)](../../build/reference/clr-common-language-runtime-compilation.md) компиляции, поскольку общеязыковой среды выполнения (CLR) поддерживает только точность чисел с плавающей запятой по умолчанию.  
   

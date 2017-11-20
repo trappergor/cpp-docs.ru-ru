@@ -1,31 +1,31 @@
 ---
-title: "Практическое руководство. Преобразование строки System::String в стандартную строку | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "get-started-article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Стандартная библиотека C++, конвертирование System::String в стандартную строку"
-  - "преобразование строк, System::String"
+title: "Как: преобразование типа System::String в стандартную строку | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: get-started-article
+dev_langs: C++
+helpviewer_keywords:
+- C++ Standard Library, converting System::String to standard string
+- string conversion, System::String
 ms.assetid: 79e2537e-d4eb-459f-9506-0e738045b59e
-caps.latest.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 9
+caps.latest.revision: "9"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: e550c41c28f0d2bac4386d4a4a1c012785fc1526
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/24/2017
 ---
-# Практическое руководство. Преобразование строки System::String в стандартную строку
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Можно преобразовать <xref:System.String> в `std::string` или `std::wstring` без использования `PtrToStringChars` в файле Vcclr.h.  
+# <a name="how-to-convert-systemstring-to-standard-string"></a>Практическое руководство. Преобразование строки System::String в стандартную строку
+Вы можете преобразовать <xref:System.String> для `std::string` или `std::wstring`, без использования `PtrToStringChars` в Vcclr.h.  
   
-## Пример  
+## <a name="example"></a>Пример  
   
 ```  
 // convert_system_string.cpp  
@@ -71,5 +71,5 @@ abcd
 efgh  
 ```  
   
-## См. также  
- [Использование взаимодействия языка C\+\+ \(неявный PInvoke\)](../dotnet/using-cpp-interop-implicit-pinvoke.md)
+## <a name="see-also"></a>См. также  
+ [Использование взаимодействия языка C++ (неявный PInvoke)](../dotnet/using-cpp-interop-implicit-pinvoke.md)

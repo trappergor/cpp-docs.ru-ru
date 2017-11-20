@@ -1,42 +1,40 @@
 ---
-title: "list::generic_reverse_iterator (STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::list::generic_reverse_iterator"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "generic_reverse_iterator - элемент [STL/CLR]"
+title: "List::generic_reverse_iterator (STL/CLR) | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::list::generic_reverse_iterator
+dev_langs: C++
+helpviewer_keywords: generic_reverse_iterator member [STL/CLR]
 ms.assetid: 63435f10-5d2b-43fa-8d7a-7c5c4daf55ad
-caps.latest.revision: 8
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 6
+caps.latest.revision: "8"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 505a00c0a10d35b48c145671ca182849ed727dce
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/24/2017
 ---
-# list::generic_reverse_iterator (STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Тип обратного итератора для использования с универсальным интерфейсом для контейнера.  
+# <a name="listgenericreverseiterator-stlclr"></a>list::generic_reverse_iterator (STL/CLR)
+Тип обратного итератора для использования с универсальный интерфейс для контейнера.  
   
-## Синтаксис  
+## <a name="syntax"></a>Синтаксис  
   
 ```  
 typedef Microsoft::VisualC::StlClr::Generic::  
     ReverseBidirectionalIterator<generic_value> generic_reverse_iterator;  
 ```  
   
-## Заметки  
- Описывает тип универсальный обратный итератор, который можно использовать с универсальным интерфейсом для этого класса контейнера шаблона.  
+## <a name="remarks"></a>Примечания  
+ Тип Описывает универсальные Обратный итератор, который может использоваться с универсальный интерфейс для класса контейнера шаблона.  
   
-## Пример  
+## <a name="example"></a>Пример  
   
 ```  
 // cliext_list_generic_reverse_iterator.cpp   
@@ -73,15 +71,18 @@ int main()
   
 ```  
   
-  **a b c**  
- **a b c**  
- **Ответ. C C.**   
-## Требования  
- **Заголовок:**\<cliext\/list\>  
+```Output  
+a b c  
+a b c  
+a c c  
+```  
+  
+## <a name="requirements"></a>Требования  
+ **Заголовок:** \<cliext/list >  
   
  **Пространство имен:** cliext  
   
-## См. также  
- [list](../dotnet/list-stl-clr.md)   
- [list::generic\_container](../dotnet/list-generic-container-stl-clr.md)   
- [list::generic\_iterator](../Topic/list::generic_iterator%20\(STL-CLR\).md)
+## <a name="see-also"></a>См. также  
+ [список (STL/CLR)](../dotnet/list-stl-clr.md)   
+ [List::generic_container (STL/CLR)](../dotnet/list-generic-container-stl-clr.md)   
+ [list::generic_iterator (STL/CLR)](../dotnet/list-generic-iterator-stl-clr.md)

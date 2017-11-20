@@ -1,61 +1,59 @@
 ---
-title: "NotifyHandler | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "NotifyHandler"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "NotifyHandler function"
+title: "NotifyHandler | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: NotifyHandler
+dev_langs: C++
+helpviewer_keywords: NotifyHandler function
 ms.assetid: 5ff953ec-de35-42bc-8b3c-d384d636c139
-caps.latest.revision: 11
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 6
+caps.latest.revision: "11"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: ea725b470d08688ed824991d308677970e2c8277
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/24/2017
 ---
-# NotifyHandler
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Имя функции, указанной третьим параметром макроса `NOTIFY_HANDLER` в сопоставлении сообщений.  
+# <a name="notifyhandler"></a>NotifyHandler
+Имя функции, определяемому третий параметр `NOTIFY_HANDLER` макрос в схему сообщений.  
   
-## Синтаксис  
+## <a name="syntax"></a>Синтаксис  
   
 ```  
-  
-      LRESULT   
-      NotifyHandler  
-      (  
-   int idCtrl,  
-   LPNMHDR pnmh,  
-   BOOL& bHandled   
-);  
+ 
+    LRESULT 
+    NotifyHandler 
+ (
+    int idCtrl,  
+    LPNMHDR pnmh,  
+    BOOL& bHandled);
 ```  
   
-#### Параметры  
+#### <a name="parameters"></a>Параметры  
  `idCtrl`  
- Идентификатор элемента управления, отправляющий сообщение.  
+ Идентификатор элемента управления, отправляющего сообщения.  
   
  *pnmh*  
- Адрес структуры [NMHDR](http://msdn.microsoft.com/library/windows/desktop/bb775514), содержащая код и дополнительной информации уведомления.  Для некоторых сообщений уведомлений, точки этого параметра в большей структуре, которая имеет структуру **NMHDR** в качестве первого элемента.  
+ Адрес [NMHDR](http://msdn.microsoft.com/library/windows/desktop/bb775514) структура, содержащая код уведомления и Дополнительные сведения. Для некоторых сообщений уведомлений, этот параметр указывает на более крупной структуры, который имеет **NMHDR** структуру, что ее первого элемента.  
   
  `bHandled`  
- Сопоставление сообщений устанавливает `bHandled` к **TRUE**, прежде чем *NotifyHandler* вызываются.  Если *NotifyHandler* не полностью обрабатывает сообщение, оно должно установить `bHandled` к **FALSE** для указания необходимостей дальнейшую обработку сообщения.  
+ Сопоставление наборов сообщений `bHandled` для **TRUE** перед *NotifyHandler* вызывается. Если *NotifyHandler* не полностью обрабатывает сообщение, он должен устанавливать `bHandled` для **FALSE** для указания сообщения требуется дополнительная обработка.  
   
-## Возвращаемое значение  
- Результат обработки сообщения.  0, если успешно.  
+## <a name="return-value"></a>Возвращаемое значение  
+ Результат обработки сообщения. 0 в случае успеха.  
   
-## Заметки  
- Пример использования этого обработчика сообщений в сопоставлении сообщений см. в разделе [NOTIFY\_HANDLER](../Topic/NOTIFY_HANDLER.md).  
+## <a name="remarks"></a>Примечания  
+ Пример использования этого обработчика сообщений в схеме сообщений см. в разделе [NOTIFY_HANDLER](reference/message-map-macros-atl.md#notify_handler)).  
   
-## См. также  
- [Implementing a Window](../atl/implementing-a-window.md)   
- [Message Maps](../atl/message-maps-atl.md)   
- [WM\_NOTIFY](http://msdn.microsoft.com/library/windows/desktop/bb775583)
+## <a name="see-also"></a>См. также  
+ [Реализация окна](../atl/implementing-a-window.md)   
+ [Схемы сообщений](../atl/message-maps-atl.md)   
+ [WM_NOTIFY](http://msdn.microsoft.com/library/windows/desktop/bb775583)
+

@@ -4,28 +4,25 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-language
+ms.technology: cpp-language
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - members [C++], types of class members
 - members [C++]
 - class members [C++], types of
 - class members
 ms.assetid: 8802cfa9-705d-4f37-acde-245d6838010c
-caps.latest.revision: 9
+caps.latest.revision: "9"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.translationtype: HT
-ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
-ms.openlocfilehash: 0a5a62edf0e71b4fecf25cf10731af7d7c515da7
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/25/2017
-
+ms.openlocfilehash: 82daf0ecf506d55a6067b30ee568e11bf3e82364
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="class-member-overview"></a>Обзор членов класса
 Класс или структура состоит из членов. Действия, выполняемые классом, выполняются с помощью его функций-членов. Состояние, в котором он находится, хранится в его элементах данных. Инициализация членов выполняется конструкторы и очистке, например высвобождение памяти и ресурсов осуществляется деструкторы. В C++ 11 и более поздних версиях элементы данных можно (и обычно следует) инициализировать при объявлении.  
@@ -113,11 +110,11 @@ int TestRun::_instances{ 0 };
   
 2.  Конструктор копии  
   
-3.  **(C ++ 11) ** Конструктор перемещения  
+3.  **(C ++ 11)**  Конструктор перемещения  
   
 4.  Оператор присваивания копированием  
   
-5.  **(C ++ 11) ** Оператор присваивания перемещения  
+5.  **(C ++ 11)**  Оператор присваивания перемещения  
   
 6.  Деструктор  
   
@@ -179,4 +176,3 @@ int CanInit2::j = i;
   
 ## <a name="see-also"></a>См. также  
  [Классы и структуры](../cpp/classes-and-structs-cpp.md)
-

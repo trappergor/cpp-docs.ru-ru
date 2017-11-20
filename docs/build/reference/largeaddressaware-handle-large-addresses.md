@@ -1,55 +1,55 @@
 ---
-title: "/LARGEADDRESSAWARE (Обрабатывать большие адреса) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "VC.Project.VCLinkerTool.LargeAddressAware"
-  - "/largeaddressaware"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "/LARGEADDRESSAWARE - параметр компоновщика"
-  - "LARGEADDRESSAWARE - параметр компоновщика"
-  - "-LARGEADDRESSAWARE - параметр компоновщика"
+title: "-LARGEADDRESSAWARE (обрабатывать большие адреса) | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- VC.Project.VCLinkerTool.LargeAddressAware
+- /largeaddressaware
+dev_langs: C++
+helpviewer_keywords:
+- LARGEADDRESSAWARE linker option
+- -LARGEADDRESSAWARE linker option
+- /LARGEADDRESSAWARE linker option
 ms.assetid: a29756c8-e893-47a9-9750-1f0d25359385
-caps.latest.revision: 10
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 10
+caps.latest.revision: "10"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: 033e93b3f1f6457a1283a14371a3f7619fe60792
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/24/2017
 ---
-# /LARGEADDRESSAWARE (Обрабатывать большие адреса)
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="largeaddressaware-handle-large-addresses"></a>/LARGEADDRESSAWARE (Обрабатывать большие адреса)
 ```  
 /LARGEADDRESSAWARE[:NO]  
 ```  
   
-## Заметки  
- Параметр \/LARGEADDRESSAWARE сообщает компоновщику, что приложение может обрабатывать адреса размером свыше 2 гигабайт.  В 64\-разрядных компиляторах этот параметр включен по умолчанию.  В 32\-разрядных компиляторах включен параметр \/LARGEADDRESSAWARE:NO, если в строке компоновщика для параметра \/LARGEADDRESSAWARE не указано иное.  
+## <a name="remarks"></a>Примечания  
+ Параметр/LARGEADDRESSAWARE сообщает компоновщику, приложение может обрабатывать адреса размером более 2 ГБ. В 64-разрядные компиляторы этот параметр включен по умолчанию. В 32-разрядные компиляторы: No включен, если параметр/LARGEADDRESSAWARE не задан в строке компоновщика.  
   
- Если компоновка приложения производилась с параметром \/LARGEADDRESSAWARE, использование параметра DUMPBIN [\/HEADERS](../../build/reference/headers.md) приведет к отображению соответствующих сведений.  
+ Если приложение было скомпоновано с параметр/LARGEADDRESSAWARE, DUMPBIN [/Headers](../../build/reference/headers.md) будут отображаться сведения об ошибке.  
   
-### Установка данного параметра компоновщика в среде разработки Visual Studio  
+### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>Задание данного параметра компоновщика в среде разработки Visual Studio  
   
-1.  Откройте диалоговое окно **Страницы свойств** проекта.  Дополнительные сведения см. в разделе [Задание свойств проекта C\+\+](../../ide/working-with-project-properties.md).  
+1.  Откройте диалоговое окно **Страницы свойств** проекта. Дополнительные сведения см. в разделе [задание свойств проекта Visual C++](../../ide/working-with-project-properties.md).  
   
-2.  Выберите папку **Компоновщик**.  
+2.  Нажмите кнопку **компоновщика** папки.  
   
-3.  Выберите страницу свойств **Система**.  
+3.  Нажмите кнопку **системы** страницу свойств.  
   
-4.  Измените свойство **Включить большие адреса**.  
+4.  Изменить **включить большие адреса** свойство.  
   
-### Установка данного параметра компоновщика программным способом  
+### <a name="to-set-this-linker-option-programmatically"></a>Задание данного параметра компоновщика программным способом  
   
 -   См. раздел <xref:Microsoft.VisualStudio.VCProjectEngine.VCLinkerTool.LargeAddressAware%2A>.  
   
-## См. также  
+## <a name="see-also"></a>См. также  
  [Настройка параметров компоновщика](../../build/reference/setting-linker-options.md)   
  [Параметры компоновщика](../../build/reference/linker-options.md)

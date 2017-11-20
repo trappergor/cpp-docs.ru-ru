@@ -1,60 +1,60 @@
 ---
-title: "/GA (Оптимизация для приложений Windows) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "VC.Project.VCCLCompilerTool.OptimizeForWindowsApplication"
-  - "/ga"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "/GA - параметр компилятора [C++]"
-  - "GA - параметр компилятора [C++]"
-  - "-GA - параметр компилятора [C++]"
-  - "Оптимизация для параметров компилятора Windows"
+title: "-GA (оптимизация для приложений Windows) | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- VC.Project.VCCLCompilerTool.OptimizeForWindowsApplication
+- /ga
+dev_langs: C++
+helpviewer_keywords:
+- /GA compiler option [C++]
+- GA compiler option [C++]
+- -GA compiler option [C++]
+- Optimize for Windows compiler options
 ms.assetid: be97323e-15a0-4836-862c-95980b51926a
-caps.latest.revision: 10
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 10
+caps.latest.revision: "10"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: 51da2e950a28efdc8ff1159c9316b8068baabed0
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/24/2017
 ---
-# /GA (Оптимизация для приложений Windows)
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Получение большей эффективности кода для EXE\-файла для доступа к переменным локальной памяти потока.  
+# <a name="ga-optimize-for-windows-application"></a>/GA (Оптимизация для приложений Windows)
+Результаты более эффективного кода для файла .exe для доступа к переменным локальной памяти потока (TLS).  
   
-## Синтаксис  
+## <a name="syntax"></a>Синтаксис  
   
 ```  
 /GA  
 ```  
   
-## Заметки  
- **\/GA** скорость доступа к данным объявлена с помощью [\_\_declspec\(thread\)](../../cpp/declspec.md) в программе для Windows.  Когда этот параметр установлен, макрос [\_\_tls\_index](http://msdn.microsoft.com/library/windows/desktop/ms686749) предполагается равным 0.  
+## <a name="remarks"></a>Примечания  
+ **/GA** ускоряет доступ к данным объявлен с [__declspec(thread)](../../cpp/declspec.md) в Windows-приложение. Если этот параметр установлен, [__tls_index](http://msdn.microsoft.com/library/windows/desktop/ms686749) макрос полагается равным 0.  
   
- Использование **\/GA** для библиотеки DLL может привести к недопустимой генерации кода.  
+ С помощью **/GA** для библиотеки DLL может привести к недопустимой генерации кода.  
   
-### Установка данного параметра компилятора в среде разработки Visual Studio  
+### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Установка данного параметра компилятора в среде разработки Visual Studio  
   
-1.  Откройте диалоговое окно **Страницы свойств** проекта.  Дополнительные сведения см. в разделе [Открытие свойств страниц проекта](../../misc/how-to-open-project-property-pages.md).  
+1.  Откройте диалоговое окно **Страницы свойств** проекта. Дополнительные сведения см. в разделе [работа со свойствами проекта](../../ide/working-with-project-properties.md).  
   
-2.  Откройте папку **C\/C\+\+**.  
+2.  Откройте папку **C/C++** .  
   
-3.  Выберите страницу свойств **Командная строка**.  
+3.  Выберите страницу свойств **Командная строка** .  
   
-4.  Введите параметр компилятора в поле **Дополнительные параметры**.  
+4.  Введите параметр компилятора в поле **Дополнительные параметры** .  
   
-### Установка данного параметра компилятора программным способом  
+### <a name="to-set-this-compiler-option-programmatically"></a>Установка данного параметра компилятора программным способом  
   
 -   См. раздел <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.AdditionalOptions%2A>.  
   
-## См. также  
+## <a name="see-also"></a>См. также  
  [Параметры компилятора](../../build/reference/compiler-options.md)   
- [Настройка параметров компилятора](../Topic/Setting%20Compiler%20Options.md)
+ [Настройка параметров компилятора](../../build/reference/setting-compiler-options.md)

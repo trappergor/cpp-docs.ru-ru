@@ -4,12 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-language
+ms.technology: cpp-language
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - exceptions [C++], exception specifications
 - throwing exceptions [C++], throw keyword
@@ -17,16 +15,15 @@ helpviewer_keywords:
 - throw keyword [C++], throw() vs. throw(...)
 - throw keyword [C++], exception specifications
 ms.assetid: 4d3276df-6f31-4c7f-8cab-b9d2d003a629
-caps.latest.revision: 20
+caps.latest.revision: "20"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.translationtype: HT
-ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
-ms.openlocfilehash: 6577cf489ee1c9d64689938bb8a12660cec96893
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/25/2017
-
+ms.openlocfilehash: e308d95f25b25a99fecde976d8ba6433316f460f
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="exception-specifications-throw-noexcept-c"></a>Спецификации исключений (throw, noexcept) (C++)
 Спецификации исключений — это функция языка C++, которая показывает намерения программиста типы исключений, которые могут распространяться с помощью функции. Можно указать, функция может или не может закрыть это исключение с помощью *спецификацией исключений*. Компилятор может использовать эти сведения для оптимизации вызовы функции и завершение программы, если произошло непредвиденное исключение экранирует функции. Существует два вида спецификацией исключений. *Noexcept спецификации* новые возможности C ++ 11. Он указывает, является ли пустым набор возможных исключений, которые могут заключить такую функцию. *Спецификации динамических исключений*, или `throw(optional_type_list)` спецификация, рекомендуется использовать в C ++ 11 и поддерживается лишь частично с помощью Visual Studio. Эта спецификация исключений был разработан для обеспечения сводную информацию о какие исключения из функции, но на практике найден становится проблематичным. Спецификации динамических исключений один, которая оказаться полезным был безусловный `throw()` спецификации. Например, объявление функции:  

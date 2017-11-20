@@ -1,41 +1,39 @@
 ---
-title: "multiset::difference_type (STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::multiset::difference_type"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "difference_type - элемент [STL/CLR]"
+title: "MULTISET::difference_type (STL/CLR) | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::multiset::difference_type
+dev_langs: C++
+helpviewer_keywords: difference_type member [STL/CLR]
 ms.assetid: 841633e9-6b05-42e8-aced-f72962dba9b2
-caps.latest.revision: 15
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 13
+caps.latest.revision: "15"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 45549dacf961b97e33eaa8698296e6dc88c2f9a1
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/24/2017
 ---
-# multiset::difference_type (STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Типы подписанного расстояния между 2 элементами.  
+# <a name="multisetdifferencetype-stlclr"></a>multiset::difference_type (STL/CLR)
+Тип расстояния со знаком между двумя элементами.  
   
-## Синтаксис  
+## <a name="syntax"></a>Синтаксис  
   
 ```  
 typedef int difference_type;  
 ```  
   
-## Заметки  
- Тип описывает число возможно отрицательного элемента.  
+## <a name="remarks"></a>Примечания  
+ Тип, описывающий счетчик возможно отрицательное элементов.  
   
-## Пример  
+## <a name="example"></a>Пример  
   
 ```  
 // cliext_multiset_difference_type.cpp   
@@ -71,14 +69,17 @@ int main()
   
 ```  
   
-  **a b c**  
-**end\(\)\-begin\(\) \= 3**  
-**begin\(\)\-end\(\) \= \-3**   
-## Требования  
- **Заголовок:**\<cliext\/set\>  
+```Output  
+ a b c  
+end()-begin() = 3  
+begin()-end() = -3  
+```  
+  
+## <a name="requirements"></a>Требования  
+ **Заголовок:** \<cliext и set >  
   
  **Пространство имен:** cliext  
   
-## См. также  
- [multiset](../dotnet/multiset-stl-clr.md)   
- [multiset::size\_type](../dotnet/multiset-size-type-stl-clr.md)
+## <a name="see-also"></a>См. также  
+ [мультинабор (STL/CLR)](../dotnet/multiset-stl-clr.md)   
+ [multiset::size_type (STL/CLR)](../dotnet/multiset-size-type-stl-clr.md)

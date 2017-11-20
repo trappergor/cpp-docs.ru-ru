@@ -1,45 +1,43 @@
 ---
-title: "list::remove (STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::list::remove"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "remove - член [STL/CLR]"
+title: "List::Remove (STL/CLR) | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::list::remove
+dev_langs: C++
+helpviewer_keywords: remove member [STL/CLR]
 ms.assetid: eaf598ee-e8fd-4cc0-be69-ca81a80e1d51
-caps.latest.revision: 15
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 13
+caps.latest.revision: "15"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 306c758ba2278fcac9ceb0e6b701d298804e8b6e
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/24/2017
 ---
-# list::remove (STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="listremove-stlclr"></a>list::remove (STL/CLR)
 Удаляет элемент с указанным значением.  
   
-## Синтаксис  
+## <a name="syntax"></a>Синтаксис  
   
 ```  
 void remove(value_type val);  
 ```  
   
-#### Параметры  
- val  
- Значение элемента, который необходимо удалить.  
+#### <a name="parameters"></a>Параметры  
+ функция Val  
+ Значение элемента для удаления.  
   
-## Заметки  
- Удаляет элемент в функцию\-член контролируемой последовательности, для которых `((System::Object^)``val``)->Equals((System::Object^)x)` условий \(если есть\).  Он используется для удаления произвольный элемент с указанным значением.  
+## <a name="remarks"></a>Примечания  
+ Функция-член удаляет элемент управляемой последовательности, для которого `((System::Object^)val)->Equals((System::Object^)x)` имеет значение true (если таковые имеются). Используется для удаления произвольный элемент с указанным значением.  
   
-## Пример  
+## <a name="example"></a>Пример  
   
 ```  
 // cliext_list_remove.cpp   
@@ -74,16 +72,19 @@ int main()
   
 ```  
   
-  **a b c**  
- **a b c**  
- **Ответ. C.**   
-## Требования  
- **Заголовок:**\<cliext\/list\>  
+```Output  
+a b c  
+a b c  
+a c  
+```  
+  
+## <a name="requirements"></a>Требования  
+ **Заголовок:** \<cliext/list >  
   
  **Пространство имен:** cliext  
   
-## См. также  
- [list](../dotnet/list-stl-clr.md)   
- [list::clear](../dotnet/list-clear-stl-clr.md)   
- [list::erase](../dotnet/list-erase-stl-clr.md)   
- [list::remove\_if](../dotnet/list-remove-if-stl-clr.md)
+## <a name="see-also"></a>См. также  
+ [список (STL/CLR)](../dotnet/list-stl-clr.md)   
+ [List::Clear (STL/CLR)](../dotnet/list-clear-stl-clr.md)   
+ [List::Erase (STL/CLR)](../dotnet/list-erase-stl-clr.md)   
+ [list::remove_if (STL/CLR)](../dotnet/list-remove-if-stl-clr.md)

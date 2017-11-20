@@ -1,28 +1,28 @@
 ---
-title: "Члены ptr | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-dev_langs: 
-  - "C++"
+title: "Члены PTR | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+dev_langs: C++
 ms.assetid: 84607ea2-149b-4c6d-b802-282f7f59d42d
-caps.latest.revision: 4
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 4
+caps.latest.revision: "4"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: b644a78ddff41db1b2fa5bc13e2d2eb0bf897210
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/24/2017
 ---
-# Члены ptr
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="ptr-members"></a>Члены ptr
 Члены `com::ptr`.  
   
-## В этом подразделе  
+## <a name="in-this-section"></a>Содержание  
  [ptr::ptr](../dotnet/ptr-ptr.md)  
   
  [ptr::~ptr](../dotnet/ptr-tilde-ptr.md)  
@@ -31,7 +31,7 @@ caps.handback.revision: 4
   
  [ptr::CreateInstance](../dotnet/ptr-createinstance.md)  
   
- [ptr::Detach](../Topic/ptr::Detach.md)  
+ [ptr::Detach](../dotnet/ptr-detach.md)  
   
  [ptr::GetInterface](../dotnet/ptr-getinterface.md)  
   
@@ -39,13 +39,13 @@ caps.handback.revision: 4
   
  [ptr::Release](../dotnet/ptr-release.md)  
   
- [ptr::operator\=](../dotnet/ptr-operator-assign.md)  
+ [ptr::operator=](../dotnet/ptr-operator-assign.md)  
   
- [ptr::operator\-\>](../Topic/ptr::operator-%3E.md)  
+ [ptr::operator->](../dotnet/ptr-operator-arrow.md)  
   
- [ptr::operator\!](../Topic/ptr::operator!.md)  
+ [ptr::operator!](../dotnet/ptr-operator-logical-not.md)  
   
- [ptr::operator bool](../Topic/ptr::operator%20bool.md)  
+ [ptr::operator bool](../dotnet/ptr-operator-bool.md)  
   
-## См. также  
+## <a name="see-also"></a>См. также  
  [Класс com::ptr](../dotnet/com-ptr-class.md)

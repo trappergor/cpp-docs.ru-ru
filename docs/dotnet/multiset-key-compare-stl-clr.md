@@ -1,42 +1,40 @@
 ---
-title: "multiset::key_compare (STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::multiset::key_compare"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "key_compare - элемент [STL/CLR]"
+title: "MULTISET::key_compare (STL/CLR) | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::multiset::key_compare
+dev_langs: C++
+helpviewer_keywords: key_compare member [STL/CLR]
 ms.assetid: 172c1ac7-fc71-409e-898a-5521eea7201a
-caps.latest.revision: 17
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 15
+caps.latest.revision: "17"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 0f0d594b09f28cfcf99ae454640f30aa58a8e5a1
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/24/2017
 ---
-# multiset::key_compare (STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Порядок делегат для 2 ключей.  
+# <a name="multisetkeycompare-stlclr"></a>multiset::key_compare (STL/CLR)
+Делегат упорядочения для двух ключей.  
   
-## Синтаксис  
+## <a name="syntax"></a>Синтаксис  
   
 ```  
 Microsoft::VisualC::StlClr::BinaryDelegate<GKey, GKey, bool>  
     key_compare;  
 ```  
   
-## Заметки  
- Тип синоним для делегата, определяет порядок ключевых своих аргументов.  
+## <a name="remarks"></a>Примечания  
+ Тип является синонимом делегат, который определяет порядок аргументов ключа.  
   
-## Пример  
+## <a name="example"></a>Пример  
   
 ```  
 // cliext_multiset_key_compare.cpp   
@@ -72,19 +70,23 @@ int main()
   
 ```  
   
-  **сравнение \(L'a, L'а\) \= false**  
-**сравнение \(L'a, L'б\) \= true**  
-**сравнение \(L'b, L'а\) \= false**  
-**сравнение \(L'a, L'а\) \= false**  
-**сравнение \(L'a, L'б\) \= false**  
-**сравнение \(L'b, L'а\) \= true**   
-## Требования  
- **Заголовок:**\<cliext\/set\>  
+```Output  
+compare(L'a', L'a') = False  
+compare(L'a', L'b') = True  
+compare(L'b', L'a') = False  
+  
+compare(L'a', L'a') = False  
+compare(L'a', L'b') = False  
+compare(L'b', L'a') = True  
+```  
+  
+## <a name="requirements"></a>Требования  
+ **Заголовок:** \<cliext и set >  
   
  **Пространство имен:** cliext  
   
-## См. также  
- [multiset](../dotnet/multiset-stl-clr.md)   
- [multiset::key\_comp](../Topic/multiset::key_comp%20\(STL-CLR\).md)   
- [multiset::key\_type](../dotnet/multiset-key-type-stl-clr.md)   
- [multiset::value\_compare](../Topic/multiset::value_compare%20\(STL-CLR\).md)
+## <a name="see-also"></a>См. также  
+ [мультинабор (STL/CLR)](../dotnet/multiset-stl-clr.md)   
+ [MULTISET::key_comp (STL/CLR)](../dotnet/multiset-key-comp-stl-clr.md)   
+ [MULTISET::key_type (STL/CLR)](../dotnet/multiset-key-type-stl-clr.md)   
+ [multiset::value_compare (STL/CLR)](../dotnet/multiset-value-compare-stl-clr.md)

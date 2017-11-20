@@ -1,32 +1,30 @@
 ---
-title: "range_adapter (STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::range_adapter"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "range_adapter - класс [STL/CLR]"
+title: "range_adapter (STL/CLR) | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::range_adapter
+dev_langs: C++
+helpviewer_keywords: range_adapter class [STL/CLR]
 ms.assetid: 3fbe2a65-1216-46a0-a182-422816b80cfb
-caps.latest.revision: 16
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 16
+caps.latest.revision: "16"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 5455c1912b3108291f530ee9488a4e0078ba39a2
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/24/2017
 ---
-# range_adapter (STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Класс шаблона, который создается пара итераторов, используемые для реализации несколько интерфейсов \(BCL\) библиотеки базового класса.  Используется range\_adapter для управления диапазон STL\/CLR, как коллекции BCL.  
+# <a name="rangeadapter-stlclr"></a>range_adapter (STL/CLR)
+Класс шаблона, который создает оболочку для пары итераторы, которые позволяют реализовать несколько интерфейсов в библиотеке базовых классов (BCL). Range_adapter позволяет управлять диапазон STL/CLR, как если бы оно коллекции BCL.  
   
-## Синтаксис  
+## <a name="syntax"></a>Синтаксис  
   
 ```  
 template<typename Iter>  
@@ -39,37 +37,37 @@ template<typename Iter>
     { ..... };  
 ```  
   
-#### Параметры  
+#### <a name="parameters"></a>Параметры  
  Iter  
- Тип, связанный с создаватьыми программу\-оболочку итераторами.  
+ Тип, связанный с упакованного итераторов.  
   
-## Члены  
+## <a name="members"></a>Члены  
   
-|Функция Member|Описание|  
-|--------------------|--------------|  
-|[range\_adapter::range\_adapter](../dotnet/range-adapter-range-adapter-stl-clr.md)|Создает объект адаптера.|  
+|Функция-член|Описание|  
+|---------------------|-----------------|  
+|[range_adapter::range_adapter (STL/CLR)](../dotnet/range-adapter-range-adapter-stl-clr.md)|Создает объект адаптера.|  
   
 |Оператор|Описание|  
-|--------------|--------------|  
-|[range\_adapter::operator\=](../dotnet/range-adapter-operator-assign-stl-clr.md)|Заменяет сохраненного пары итератора.|  
+|--------------|-----------------|  
+|[range_adapter::operator= (STL/CLR)](../dotnet/range-adapter-operator-assign-stl-clr.md)|Заменяет сохраненный итератор пары.|  
   
-## Интерфейсы  
+## <a name="interfaces"></a>Интерфейсы  
   
 |Интерфейс|Описание|  
-|---------------|--------------|  
-|<xref:System.Collections.IEnumerable>|Выполняет перебор элементов коллекции.|  
-|<xref:System.Collections.ICollection>|Поддерживает группу в составе элементы.|  
-|<xref:System.Collections.Generic.IEnumerable%601>|Типизированные выполняет перебор элементов коллекции.|  
-|<xref:System.Collections.Generic.ICollection%601>|Поддерживает группу в составе типизированных элементов.|  
+|---------------|-----------------|  
+|<xref:System.Collections.IEnumerable>|Перебор элементов в коллекции.|  
+|<xref:System.Collections.ICollection>|Поддерживает группу элементов.|  
+|<xref:System.Collections.Generic.IEnumerable%601>|Перебор типизированных элементов в коллекции...|  
+|<xref:System.Collections.Generic.ICollection%601>|Поддерживает группу типизированных элементов.|  
   
-## Заметки  
- Range\_adapter сохраняет пару итераторов, которые, в свою очередь, разделяющие последовательность элементов.  Объект реализует 4 интерфейса BCL, позволяющие перебирать элементы в порядке.  Используется этот класс шаблона для управления диапазоны STL\/CLR подобно контейнеры BCL.  
+## <a name="remarks"></a>Примечания  
+ Range_adapter сохраняет пару итераторов, которые в свою очередь разделения последовательность элементов. Объект реализует четыре BCL интерфейсы, которые позволяют выполнять итерацию по элементам в порядке. Используйте этот класс шаблона для работы с STL/CLR диапазоны как контейнеры BCL.  
   
-## Требования  
- **Заголовок:**\<cliext\/adapter\>  
+## <a name="requirements"></a>Требования  
+ **Заголовок:** \<cliext адаптер >  
   
  **Пространство имен:** cliext  
   
-## См. также  
- [collection\_adapter](../Topic/collection_adapter%20\(STL-CLR\).md)   
- [make\_collection](../dotnet/make-collection-stl-clr.md)
+## <a name="see-also"></a>См. также  
+ [collection_adapter (STL/CLR)](../dotnet/collection-adapter-stl-clr.md)   
+ [make_collection (STL/CLR)](../dotnet/make-collection-stl-clr.md)

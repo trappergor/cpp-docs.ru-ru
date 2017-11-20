@@ -1,45 +1,45 @@
 ---
-title: "Источник данных. Создание таблицы в источнике данных ODBC программным путем | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "источники данных (ODBC), создание таблиц"
-  - "программное создание таблиц ODBC [C++]"
-  - "таблицы [C++]"
-  - "таблицы [C++], создание программным способом"
+title: "Программное создание таблицы в источнике данных ODBC | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- programmatically creating ODBC tables [C++]
+- tables [C++]
+- ODBC data sources, creating tables in
+- tables [C++], creating programmatically
 ms.assetid: 9ca68fb5-c3df-424a-a75c-e3fb01cc1b18
-caps.latest.revision: 11
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 11
+caps.latest.revision: "11"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 8009d587007e618bfecf46911c5b30486cf1aba4
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/24/2017
 ---
-# Источник данных. Создание таблицы в источнике данных ODBC программным путем
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-В этом разделе объясняется, как создать таблицу для источника данных, используя функцию\-член `ExecuteSQL` класса `CDatabase`, передавая функции строку, содержащую инструкцию SQL **CREATE TABLE**.  
+# <a name="data-source-programmatically-creating-a-table-in-an-odbc-data-source"></a>Источник данных. Создание таблицы в источнике данных ODBC программным путем
+В этом разделе объясняется, как создать таблицу для данных источника, используя `ExecuteSQL` функции-члена класса `CDatabase`, передавая функции строку, содержащую **CREATE TABLE** инструкции SQL.  
   
- Общие сведения об источниках данных ODBC в MFC см. в разделе [Источник данных \(ODBC\)](../../data/odbc/data-source-odbc.md).  В разделе [Источник данных. Настройка источника данных ODBC программным путем](../../data/odbc/data-source-programmatically-configuring-an-odbc-data-source.md) описано создание источников данных.  
+ Общие сведения об источниках данных ODBC в MFC см. в разделе [источника данных (ODBC)](../../data/odbc/data-source-odbc.md). Раздел [источника данных: Программная настройка источника данных ODBC](../../data/odbc/data-source-programmatically-configuring-an-odbc-data-source.md) описано создание источников данных.  
   
- Если имеются созданные источник данных, можно легко создавать таблицы, используя функцию\-член `ExecuteSQL` и инструкцию SQL **CREATE TABLE**.  Например, если имеется объект `CDatabase` с именем `myDB`, можно воспользоваться следующим кодом MFC для создания таблицы:  
+ При наличии созданные источник данных, можно легко создавать таблицы, используя `ExecuteSQL` функции-члена и **CREATE TABLE** инструкции SQL. Например, если у вас `CDatabase` объекта с именем `myDB`, можно использовать следующий код MFC для создания таблицы:  
   
 ```  
 myDB.ExecuteSQL("CREATE TABLE OFFICES (OfficeID TEXT(4)" ",   
                          OfficeName TEXT(10))");  
 ```  
   
- В этом примере кода создается таблица с именем "OFFICES" в подключении к источнику данных Microsoft Access, поддерживаемом объектом `myDB`; таблица содержит два поля: "OfficeID" и "OfficeName".  
+ Данный пример кода создает таблицу с именем «ОФИСОВ» в подключении к источнику данных Microsoft Access, поддерживаемом `myDB`; таблица содержит два поля «OfficeID» и «OfficeName».  
   
 > [!NOTE]
->  Типы полей, указанные в инструкции SQL **CREATE TABLE**, могут отличаться в зависимости от используемого драйвера ODBC.  Программа Microsoft Query \(распространяемая с Visual C\+\+ 1.5\) — это один из способов обнаружения доступных полей в источнике данных.  В Microsoft Query последовательно щелкните **Файл**, **Table\_Definition**, выберите в источнике данных таблицу и посмотрите, какой тип отображен в поле со списком **Тип**.  Синтаксис SQL также используется для создания указателей.  
+>  Типы полей, указанные в **CREATE TABLE** инструкции SQL может различаться в зависимости от драйвера ODBC, который вы используете. Программа Microsoft Query (поставляется с Visual C++ 1.5) — один из способов выяснить, какие поля доступны для источника данных. В Microsoft Query, нажмите кнопку **файл**, нажмите кнопку **Table_Definition**, выберите таблицу из источника данных и посмотрите на тип, показанный в **тип** поле со списком. Синтаксис SQL также используется для создания индексов.  
   
-## См. также  
- [Источник данных \(ODBC\)](../../data/odbc/data-source-odbc.md)
+## <a name="see-also"></a>См. также  
+ [Источник данных (ODBC)](../../data/odbc/data-source-odbc.md)

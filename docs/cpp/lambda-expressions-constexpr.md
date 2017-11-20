@@ -4,25 +4,21 @@ ms.custom:
 ms.date: 07/19/2017
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-language
+ms.technology: cpp-language
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-dev_langs:
-- C++
-helpviewer_keywords:
-- lambda expressions [C++], constexpr
+dev_langs: C++
+helpviewer_keywords: lambda expressions [C++], constexpr
 ms.assetid: b56346cd-fbff-475f-aeaa-ed2010c6d6f7
-caps.latest.revision: 0
+caps.latest.revision: "0"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.translationtype: HT
-ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
-ms.openlocfilehash: c6221118477c79d683d468469b1f87dfa33efded
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/25/2017
-
+ms.openlocfilehash: e33918193e92e432845052f875cba2e4baf22600
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="constexpr-lambda-expressions-in-c"></a>constexpr лямбда-выражения в C++
 **Visual Studio 2017 г 15,3 и более поздних версий** (с [/std: c ++ 17](../build/reference/std-specify-language-standard-version.md)): лямбда-выражение может быть объявлен как `constexpr` или использовать в выражении contant при инициализации каждого элемента данных, чтобы он захватывает или вводит может в константном выражении.  

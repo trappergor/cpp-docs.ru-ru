@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-tools
+ms.technology: cpp-tools
 ms.tgt_pltfrm: 
 ms.topic: error-reference
 f1_keywords:
@@ -186,7 +185,6 @@ f1_keywords:
 - LNK4020
 - LNK4030
 - LNK4031
-- LNK4037
 - LNK4038
 - LNK4040
 - LNK4041
@@ -302,39 +300,22 @@ f1_keywords:
 - R6022
 - R6023
 - R6034
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - builds [C++], errors
 - errors [C++]
 - error messages [C++], build errors
 - errors [C++], builds
 ms.assetid: 2470b496-28fa-47e7-a238-a086d99b06ca
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 4bac7b2942f9d72674b8092dc7bf64174dd3c349
-ms.openlocfilehash: 1a370ddc7c314cae0cb1a048cacb704480525b0a
-ms.contentlocale: ru-ru
-ms.lasthandoff: 04/24/2017
-
+ms.openlocfilehash: 25ec72c39a01474bc90a1ad20c73b1e3d28c7a6e
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="cc-build-errors"></a>Ошибки построения C/C++
 Статьи в данном разделе документации описывают сообщения об ошибках, которые создаются средствами сборки. Компилятор и средства сборки [!INCLUDE[vcprvc](../../build/includes/vcprvc_md.md)] могут обнаруживать многие типы ошибок и предупреждений. Средства сборки могут делать предположения о намерениях кода и вероятности предпринять попытку продолжить после обнаружения ошибки или предупреждения, что позволяет одновременно обнаруживать больше проблем. Если средства делают неверное предположение, последующие ошибки или предупреждения не могут применяться к проекту. При устранении проблем в проекте всегда начинайте с первой зарегистрированной ошибки (или предупреждения) и выполняйте повторную сборку как можно чаще.  

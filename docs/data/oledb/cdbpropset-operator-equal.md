@@ -1,48 +1,47 @@
 ---
-title: "CDBPropSet::operator = | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "CDBPropSet.operator="
-  - "ATL::CDBPropSet::operator="
-  - "ATL.CDBPropSet.operator="
-  - "CDBPropSet::operator="
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "= - оператор, с шаблонами OLE DB"
-  - "оператор =, наборы свойств"
-  - "operator=, наборы свойств"
+title: "CDBPropSet::operator = | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- CDBPropSet.operator=
+- ATL::CDBPropSet::operator=
+- ATL.CDBPropSet.operator=
+- CDBPropSet::operator=
+dev_langs: C++
+helpviewer_keywords:
+- operator =, property sets
+- = operator, with OLE DB templates
+- operator=, property sets
 ms.assetid: 1feb8c48-6ab4-4417-9982-226b1eac681b
-caps.latest.revision: 8
-caps.handback.revision: 8
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "8"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: cff0ec56d5b832e7f3f373d7e408257d9fe45328
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/24/2017
 ---
-# CDBPropSet::operator =
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Присвоить содержимое одного набора свойств в другой набор свойств.  
+# <a name="cdbpropsetoperator-"></a>CDBPropSet::operator =
+Назначает содержимое одно свойство, задать другой набор свойств.  
   
-## Синтаксис  
+## <a name="syntax"></a>Синтаксис  
   
 ```  
   
-      CDBPropSet& operator =(   
-   CDBPropSet& propset    
+      CDBPropSet& operator =(   
+   CDBPropSet& propset    
 ) throw( );  
 ```  
   
-## Требования  
+## <a name="requirements"></a>Требования  
  **Заголовок:** atldbcli.h  
   
-## См. также  
- [Класс CDBPropSet](../Topic/CDBPropSet%20Class.md)
+## <a name="see-also"></a>См. также  
+ [Класс CDBPropSet](../../data/oledb/cdbpropset-class.md)

@@ -1,41 +1,39 @@
 ---
-title: "deque::begin (STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::deque::begin"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "begin - член [STL/CLR]"
+title: "deque::Begin (STL/CLR) | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::deque::begin
+dev_langs: C++
+helpviewer_keywords: begin member [STL/CLR]
 ms.assetid: e99d20d2-bb33-415f-9bd6-fe331d8c2ba2
-caps.latest.revision: 15
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 13
+caps.latest.revision: "15"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 4943971a82d1a87515a6e2ebc96963adeb49c6d9
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/24/2017
 ---
-# deque::begin (STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="dequebegin-stlclr"></a>deque::begin (STL/CLR)
 Задает начало управляемой последовательности.  
   
-## Синтаксис  
+## <a name="syntax"></a>Синтаксис  
   
 ```  
 iterator begin();  
 ```  
   
-## Заметки  
- Возвращает произвольно\-доступный функцию\-член итератор, обозначает первый элемент контролируемой последовательности или только за пределы пустой последовательности.  Используется для получения итератора, который задает начало управляемой последовательности с параметром `current`, однако в случае изменения длины управляемой последовательности его состояние может измениться.  
+## <a name="remarks"></a>Примечания  
+ Функция-член возвращает итератор произвольного доступа, указывающий первый элемент управляемой последовательности или непосредственно за концом пустой последовательности. Используется для получения итератора, который обозначает `current` начало управляемой последовательности, но его состояние можно изменить при изменении длины управляемой последовательности.  
   
-## Пример  
+## <a name="example"></a>Пример  
   
 ```  
 // cliext_deque_begin.cpp   
@@ -70,17 +68,20 @@ int main()
   
 ```  
   
-  **a b c**  
-**\*begin\(\) \= a**  
-**\*\+\+begin\(\) \= B**  
- **x y C.**   
-## Требования  
- **Заголовок:**\<cliext\/deque\>  
+```Output  
+ a b c  
+*begin() = a  
+*++begin() = b  
+ x y c  
+```  
+  
+## <a name="requirements"></a>Требования  
+ **Заголовок:** \<cliext/deque >  
   
  **Пространство имен:** cliext  
   
-## См. также  
- [deque](../dotnet/deque-stl-clr.md)   
- [deque::end](../Topic/deque::end%20\(STL-CLR\).md)   
- [deque::front](../Topic/deque::front%20\(STL-CLR\).md)   
- [deque::front\_item](../dotnet/deque-front-item-stl-clr.md)
+## <a name="see-also"></a>См. также  
+ [deque (STL/CLR)](../dotnet/deque-stl-clr.md)   
+ [deque::End (STL/CLR)](../dotnet/deque-end-stl-clr.md)   
+ [deque::Front (STL/CLR)](../dotnet/deque-front-stl-clr.md)   
+ [deque::front_item (STL/CLR)](../dotnet/deque-front-item-stl-clr.md)

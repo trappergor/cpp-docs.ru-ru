@@ -1,57 +1,57 @@
 ---
-title: "/IGNOREIDL (не преобразовывать атрибуты в MIDL) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "VC.Project.VCLinkerTool.IgnoreEmbeddedIDL"
-  - "/ignoreidl"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "/IGNOREIDL - параметр компоновщика"
-  - "IGNOREIDL - параметр компоновщика"
-  - "-IGNOREIDL - параметр компоновщика"
+title: "-IGNOREIDL (Дон &#39; t процесса атрибуты в MIDL) | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- VC.Project.VCLinkerTool.IgnoreEmbeddedIDL
+- /ignoreidl
+dev_langs: C++
+helpviewer_keywords:
+- IGNOREIDL linker option
+- -IGNOREIDL linker option
+- /IGNOREIDL linker option
 ms.assetid: 29514098-6a1c-4317-af2f-1dc268972780
-caps.latest.revision: 8
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: 52242168dc40392f28db6bd360bc6c38d50d614d
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/24/2017
 ---
-# /IGNOREIDL (не преобразовывать атрибуты в MIDL)
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="ignoreidl-don39t-process-attributes-into-midl"></a>/ IGNOREIDL (Дон &#39; t процесса атрибуты в MIDL)
 ```  
 /IGNOREIDL  
 ```  
   
-## Заметки  
- Параметр \/IGNOREIDL указывает на то, что [атрибуты IDL](../../windows/idl-attributes.md) в исходном коде не следует преобразовывать в файл IDL.  
+## <a name="remarks"></a>Примечания  
+ Параметр/IGNOREIDL определяет любые [атрибуты IDL](../../windows/idl-attributes.md) в исходном коде не должны обрабатываться в IDL-файл.  
   
-### Установка данного параметра компоновщика в среде разработки Visual Studio  
+### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>Задание данного параметра компоновщика в среде разработки Visual Studio  
   
-1.  Откройте диалоговое окно **Страницы свойств** проекта.  Дополнительные сведения см. в разделе [Задание свойств проекта C\+\+](../../ide/working-with-project-properties.md).  
+1.  Откройте диалоговое окно **Страницы свойств** проекта. Дополнительные сведения см. в разделе [задание свойств проекта Visual C++](../../ide/working-with-project-properties.md).  
   
-2.  Выберите папку **Компоновщик**.  
+2.  Нажмите кнопку **компоновщика** папки.  
   
-3.  Щелкните страницу свойств **Внедренный IDL**.  
+3.  Нажмите кнопку **внедренный IDL** страницу свойств.  
   
-4.  Измените свойство **Игнорировать внедренные IDL**.  
+4.  Изменить **Игнорировать внедренные IDL** свойство.  
   
-### Установка данного параметра компоновщика программным способом  
+### <a name="to-set-this-linker-option-programmatically"></a>Задание данного параметра компоновщика программным способом  
   
 -   См. раздел <xref:Microsoft.VisualStudio.VCProjectEngine.VCLinkerTool.IgnoreEmbeddedIDL%2A>.  
   
-## См. также  
+## <a name="see-also"></a>См. также  
  [Настройка параметров компоновщика](../../build/reference/setting-linker-options.md)   
  [Параметры компоновщика](../../build/reference/linker-options.md)   
- [\/IDLOUT \(присвоение имен выходным файлам MIDL\)](../Topic/-IDLOUT%20\(Name%20MIDL%20Output%20Files\).md)   
- [\/TLBOUT \(задание имени TLB\-файла\)](../../build/reference/tlbout-name-dot-tlb-file.md)   
- [\/MIDL \(Указание параметров командной строки MIDL\)](../../build/reference/midl-specify-midl-command-line-options.md)   
- [Building an Attributed Program](../../windows/building-an-attributed-program.md)
+ [/ IDLOUT (имен выходным файлам MIDL)](../../build/reference/idlout-name-midl-output-files.md)   
+ [/ TLBOUT (имя. TLB-файл)](../../build/reference/tlbout-name-dot-tlb-file.md)   
+ [/ MIDL (указание параметров командной строки MIDL)](../../build/reference/midl-specify-midl-command-line-options.md)   
+ [Сборка атрибутированной программы](../../windows/building-an-attributed-program.md)

@@ -1,44 +1,43 @@
 ---
-title: "auto_handle::get | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "auto_handle::get"
-  - "msclr::auto_handle::get"
-  - "auto_handle.get"
-  - "msclr.auto_handle.get"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "auto_handle::get"
+title: "auto_handle::Get | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords:
+- auto_handle::get
+- msclr::auto_handle::get
+- auto_handle.get
+- msclr.auto_handle.get
+dev_langs: C++
+helpviewer_keywords: auto_handle::get
 ms.assetid: 8c75727b-8f21-44b3-be3e-7eb8858da4f7
-caps.latest.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 8
+caps.latest.revision: "10"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 3b8442ec99e19099e5f77ec6f9010e0f8fc235f8
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/24/2017
 ---
-# auto_handle::get
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Получает содержащуюся объект.  
+# <a name="autohandleget"></a>auto_handle::get
+Получает содержащийся объект.  
   
-## Синтаксис  
+## <a name="syntax"></a>Синтаксис  
   
 ```  
 _element_type ^ get();  
 ```  
   
-## Возвращаемое значение  
- , Который содержит объект.  
+## <a name="return-value"></a>Возвращаемое значение  
+ Содержащийся объект.  
   
-## Пример  
+## <a name="example"></a>Пример  
   
 ```  
 // msl_auto_handle_get.cpp  
@@ -78,15 +77,18 @@ int main() {
 }  
 ```  
   
-  **в конструкторе ClassA: сначала**  
-**Hello от первого суффикса\!**  
-**Hello от первого суффикса\!**  
-**Hello от первого суффикса\!**  
-**в деструкторе ClassA: сначала**   
-## Требования  
- **Файл заголовка**\<msclr\\auto\_handle.h\>  
+```Output  
+in ClassA constructor:first  
+Hello from first A!  
+Hello from first A!  
+Hello from first A!  
+in ClassA destructor:first  
+```  
+  
+## <a name="requirements"></a>Требования  
+ **Файл заголовка** \<msclr\auto_handle.h >  
   
  **Пространство имен** msclr  
   
-## См. также  
- [Члены auto\_handle](../dotnet/auto-handle-members.md)
+## <a name="see-also"></a>См. также  
+ [Члены auto_handle](../dotnet/auto-handle-members.md)

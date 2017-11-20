@@ -1,32 +1,30 @@
 ---
-title: "replace_copy_if (STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::replace_copy_if"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "replace_copy_if - функция [STL/CLR]"
+title: "replace_copy_if (STL/CLR) | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::replace_copy_if
+dev_langs: C++
+helpviewer_keywords: replace_copy_if function [STL/CLR]
 ms.assetid: 60edf9b8-34e6-4d94-a611-363ef7b7fb80
-caps.latest.revision: 4
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 4
+caps.latest.revision: "4"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 7e144636c5d1ce1a4ae7776ccedf675d5db473d6
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/24/2017
 ---
-# replace_copy_if (STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Проверяет каждый элемент в диапазон источника и заменяет его, если он удовлетворяет определенный предикат в процессе копирования результат в новый диапазон назначения.  
+# <a name="replacecopyif-stlclr"></a>replace_copy_if (STL/CLR)
+Проверяет каждый элемент в исходном диапазоне и заменяет его, если он соответствует заданному предикату, одновременно копируя результат в новый диапазон назначения.  
   
-## Синтаксис  
+## <a name="syntax"></a>Синтаксис  
   
 ```  
 template<class _InIt, class _OutIt, class _Pr, class _Ty> inline  
@@ -34,13 +32,13 @@ template<class _InIt, class _OutIt, class _Pr, class _Ty> inline
         _Pr _Pred, const _Ty% _Val);  
 ```  
   
-## Заметки  
- Эта функция работает аналогично функции `replace_copy_if` STL.  Для получения дополнительной информации см. [replace\_copy\_if](../Topic/replace_copy_if.md).  
+## <a name="remarks"></a>Примечания  
+ Эта функция работает так же, как функция стандартной библиотеки C++ `replace_copy_if`. Дополнительные сведения см. в разделе [replace_copy_if](../standard-library/algorithm-functions.md#replace_copy_if).  
   
-## Требования  
- **Заголовок:**\<cliext\/algorithm\>  
+## <a name="requirements"></a>Требования  
+ **Заголовок:** \<cliext/алгоритм >  
   
  **Пространство имен:** cliext  
   
-## См. также  
- [algorithm](../Topic/algorithm%20\(STL-CLR\).md)
+## <a name="see-also"></a>См. также  
+ [algorithm (STL/CLR)](../dotnet/algorithm-stl-clr.md)

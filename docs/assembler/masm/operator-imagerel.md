@@ -1,43 +1,43 @@
 ---
-title: "operator IMAGEREL | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "operator IMAGEREL"
-  - "IMAGEREL"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "operator IMAGEREL"
-  - "IMAGEREL operator"
+title: "оператор IMAGEREL | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- operator IMAGEREL
+- IMAGEREL
+dev_langs: C++
+helpviewer_keywords:
+- operator IMAGEREL
+- IMAGEREL operator
 ms.assetid: 5b5ea425-36f0-467c-9262-62c484b7fdb4
-caps.latest.revision: 5
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 5
+caps.latest.revision: "5"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: 7abcbbde7b2b0f6150169ee392681bad6bd74ba9
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/24/2017
 ---
-# operator IMAGEREL
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Возвращает смещение relative образа `expression`.  
+# <a name="operator-imagerel"></a>Оператор IMAGEREL
+Возвращает изображение относительном смещении `expression`.  
   
-## Синтаксис  
+## <a name="syntax"></a>Синтаксис  
   
 ```  
 IMAGEREL expression  
 ```  
   
-## Заметки  
- Результат часто называется или относительный виртуальный адрес RVA.  
+## <a name="remarks"></a>Примечания  
+ Результирующее значение часто называют RVA или относительный виртуальный адрес.  
   
- IMAGEREL доступно только при использовании излучением объектов COFF.  
+ IMAGEREL доступен только в вывод объекта COFF.  
   
-## См. также  
- [Operators Reference](../Topic/Operators%20Reference.md)
+## <a name="see-also"></a>См. также  
+ [Справочник по операторам](../../assembler/masm/operators-reference.md)

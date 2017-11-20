@@ -4,12 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-language
+ms.technology: cpp-language
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - objects [C++], destroying
 - Visual C++, destructors
@@ -18,16 +16,15 @@ helpviewer_keywords:
 - destructors, about destructors
 - destructors, C++
 ms.assetid: afa859b0-f3bc-4c4d-b250-c68b335b6004
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.translationtype: HT
-ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
-ms.openlocfilehash: 043143cc0a0a200f83642180b59b9576fefc4975
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/25/2017
-
+ms.openlocfilehash: 4fb96ae6763d9b2ca86f99ee42a10f56e93d7e3e
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="destructors-c"></a>Деструкторы (C++)
 Деструктор является функцией-членом, который вызывается автоматически, когда объект выходит за пределы области или удаляется явным образом с помощью вызова `delete`. Деструктор имеет то же имя, как класс, который предшествует знак тильды (`~`). Например, деструктор для класса `String` объявляется следующим образом: `~String()`. Если деструктор не определена, компилятор будет предоставлять значение по умолчанию. для многих классов этого достаточно. Необходимо определить пользовательский деструктор при класса хранит указатели на системные ресурсы, которые необходимо освободить, или указатели, которыми владеют память они указывают.
@@ -232,4 +229,3 @@ ps->~String();     // Virtual call
 ```  
   
  Нотация для явных вызовов деструкторов, показанная в предыдущем примере, может использоваться независимо от того, определяет ли тип деструктор. Это позволяет выполнять такие явные вызовы, не зная, определен ли деструктор для типа. Явный вызов деструктора, если ни один из них не определен, не имеет никакого эффекта.  
-

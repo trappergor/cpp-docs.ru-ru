@@ -1,34 +1,33 @@
 ---
-title: "ICommandImpl::GetDBSession | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "ICommandImpl::GetDBSession"
-  - "GetDBSession"
-  - "ICommandImpl.GetDBSession"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "GetDBSession - метод"
+title: "ICommandImpl::GetDBSession | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- ICommandImpl::GetDBSession
+- GetDBSession
+- ICommandImpl.GetDBSession
+dev_langs: C++
+helpviewer_keywords: GetDBSession method
 ms.assetid: e5b1cb13-453f-4698-90bf-f6bfe6814a54
-caps.latest.revision: 8
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: bb4a4f378d1446e722404a76a19d592a9eed0e20
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/24/2017
 ---
-# ICommandImpl::GetDBSession
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Возвращает указатель интерфейса к сеансу, создавшего команду.  
+# <a name="icommandimplgetdbsession"></a>ICommandImpl::GetDBSession
+Возвращает указатель на интерфейс для сеанса, создавшего команду.  
   
-## Синтаксис  
+## <a name="syntax"></a>Синтаксис  
   
 ```  
   
@@ -38,14 +37,14 @@ caps.handback.revision: 8
 );  
 ```  
   
-#### Параметры  
- В разделе [ICommand::GetDBSession](https://msdn.microsoft.com/en-us/library/ms719622.aspx) справочника *программиста OLE DB*.  
+#### <a name="parameters"></a>Параметры  
+ В разделе [ICommand::GetDBSession](https://msdn.microsoft.com/en-us/library/ms719622.aspx) в *справочника программиста OLE DB*.  
   
-## Заметки  
- Используются для извлечения свойства из сеанса.  
+## <a name="remarks"></a>Примечания  
+ Это полезно для получения свойств из сеанса.  
   
-## Требования  
- **Header:** atldb.h  
+## <a name="requirements"></a>Требования  
+ **Заголовок:** atldb.h  
   
-## См. также  
- [Класс ICommandImpl](../Topic/ICommandImpl%20Class.md)
+## <a name="see-also"></a>См. также  
+ [Класс ICommandImpl](../../data/oledb/icommandimpl-class.md)

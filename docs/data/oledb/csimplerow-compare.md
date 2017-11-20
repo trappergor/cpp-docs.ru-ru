@@ -1,52 +1,51 @@
 ---
-title: "CSimpleRow::Compare | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "CSimpleRow.Compare"
-  - "CSimpleRow::Compare"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Compare - метод"
+title: "CSimpleRow::Compare | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- CSimpleRow.Compare
+- CSimpleRow::Compare
+dev_langs: C++
+helpviewer_keywords: Compare method
 ms.assetid: 0bb65f09-c7bc-449b-aa4e-c828cac13510
-caps.latest.revision: 8
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 8e49dcc0356c563312c0d73041ab412716694c1a
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/24/2017
 ---
-# CSimpleRow::Compare
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Сравнивает 2 строки для просмотра, если они ссылаются на один и тот же экземпляр строки.  
+# <a name="csimplerowcompare"></a>CSimpleRow::Compare
+Сравнивает две строки, чтобы увидеть, если они ссылаются на один и тот же экземпляр строки.  
   
-## Синтаксис  
+## <a name="syntax"></a>Синтаксис  
   
 ```  
   
-      HRESULT Compare(   
-   CSimpleRow* pRow    
+      HRESULT Compare(   
+   CSimpleRow* pRow    
 );  
 ```  
   
-#### Параметры  
+#### <a name="parameters"></a>Параметры  
  `pRow`  
  Указатель на объект `CSimpleRow`.  
   
-## Возвращаемое значение  
- `HRESULT` значение, обычно `S_OK`, 2 строки один и тот же экземпляр строки, или **S\_FALSE**, показывающее, 2 строки другое.  В разделе [IRowsetIdentity::IsSameRow](https://msdn.microsoft.com/en-us/library/ms719629.aspx) справочника *программиста OLE DB* для других возможных возвращаемых значений.  
+## <a name="return-value"></a>Возвращаемое значение  
+ `HRESULT` Значение обычно `S_OK`, две строки имеют тот же экземпляр строки, позволяющее определить, или **S_FALSE**, две строки, указывающее, отличаются. В разделе [IRowsetIdentity::IsSameRow](https://msdn.microsoft.com/en-us/library/ms719629.aspx) в *Справочник программиста OLE DB* для другие возможные возвращаемые значения.  
   
-## Требования  
- **Header:** atldb.h  
+## <a name="requirements"></a>Требования  
+ **Заголовок:** atldb.h  
   
-## См. также  
- [Класс CSimpleRow](../Topic/CSimpleRow%20Class.md)   
- [CSimpleRow::ReleaseRow](../Topic/CSimpleRow::ReleaseRow.md)   
+## <a name="see-also"></a>См. также  
+ [CSimpleRow-класс](../../data/oledb/csimplerow-class.md)   
+ [CSimpleRow::ReleaseRow](../../data/oledb/csimplerow-releaserow.md)   
  [IRowsetImpl::RefRows](../../data/oledb/irowsetimpl-refrows.md)

@@ -4,41 +4,36 @@ ms.custom:
 ms.date: 03/28/2017
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-windows
+ms.technology: cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: reference
-dev_langs:
-- C++
-helpviewer_keywords:
-- COM interfaces, COM interface entry macros
+f1_keywords:
+- atlcom/ATL::COM_INTERFACE_ENTRY
+- atlcom/ATL::COM_INTERFACE_ENTRY_IID
+- atlcom/ATL::COM_INTERFACE_ENTRY_AGGREGATE
+- atlcom/ATL::COM_INTERFACE_ENTRY_AGGREGATE_BLIND
+- atlcom/ATL::COM_INTERFACE_ENTRY_AUTOAGGREGATE
+- atlcom/ATL::COM_INTERFACE_ENTRY_AUTOAGGREGATE_BLIND
+- atlcom/ATL::COM_INTERFACE_ENTRY_BREAK
+- atlcom/ATL::COM_INTERFACE_ENTRY_CACHED_TEAR_OFF
+- atlcom/ATL::COM_INTERFACE_ENTRY_TEAR_OFF
+- atlcom/ATL::COM_INTERFACE_ENTRY_CHAIN
+- atlcom/ATL::COM_INTERFACE_ENTRY_FUNC
+- atlcom/ATL::COM_INTERFACE_ENTRY_FUNC_BLIND
+- atlcom/ATL::COM_INTERFACE_ENTRY_NOINTERFACE
+dev_langs: C++
+helpviewer_keywords: COM interfaces, COM interface entry macros
 ms.assetid: 19dcb768-2e1f-4b8d-a618-453a01a4bd00
-caps.latest.revision: 16
+caps.latest.revision: "16"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: d2d39abf526a58b8442107b5ee816f316ae841f5
-ms.openlocfilehash: 7e9eb155d10a0a05916fc5f74cbe58fdf14b7475
-ms.contentlocale: ru-ru
-ms.lasthandoff: 03/31/2017
-
+ms.openlocfilehash: 281829593087a936f201000faaa42f698344d3b5
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/24/2017
 ---
-
 # <a name="cominterfaceentry-macros"></a>Макросы COM_INTERFACE_ENTRY  
  Эти макросы ввести интерфейсы объекта в его сопоставления COM, чтобы они могли быть доступны для `QueryInterface`. Порядок записей в карте COM является интерфейсы заказа будет проверяться соответствие **IID** во время `QueryInterface`.  
 
@@ -51,7 +46,7 @@ ms.lasthandoff: 03/31/2017
 |[COM_INTERFACE_ENTRY_AGGREGATE](#com_interface_entry_aggregate)|Если интерфейс определяется `iid` запрашиваются, `COM_INTERFACE_ENTRY_AGGREGATE` пересылает `punk`.|  
 |[COM_INTERFACE_ENTRY_AGGREGATE_BLIND](#com_interface_entry_aggregate_blind)|То же, что [COM_INTERFACE_ENTRY_AGGREGATE](#com_interface_entry_aggregate), за исключением того, что запрашивает все IID приведет к переадресации запросов в `punk`.|  
 |[COM_INTERFACE_ENTRY_AUTOAGGREGATE](#com_interface_entry_autoaggregate)|То же, что [COM_INTERFACE_ENTRY_AGGREGATE](#com_interface_entry_aggregate), кроме `punk` — **NULL**, он автоматически создает статистическое выражение, описываемое `clsid`.|  
-|[COM_INTERFACE_ENTRY_AUTOAGGREGATE_BLIND](#com_interface_entry_autoaggregate_blind)|То же, что [COM_INTERFACE_ENTRY_AUTOAGGREGATE](#com_interface_entry_autoaggregate), за исключением того, что запрашивает все IID приведет к переадресации запросов для `punk`и, если `punk` — **NULL**автоматически Создание статистическое выражение, описываемое `clsid`.|  
+|[COM_INTERFACE_ENTRY_AUTOAGGREGATE_BLIND](#com_interface_entry_autoaggregate_blind)|То же, что [COM_INTERFACE_ENTRY_AUTOAGGREGATE](#com_interface_entry_autoaggregate), за исключением того, что запрашивает все IID приведет к переадресации запросов для `punk`и если `punk` — **NULL**, автоматически создавая статистическое выражение, описываемое `clsid`.|  
 |[COM_INTERFACE_ENTRY_BREAK](#com_interface_entry_break)|Выполняется вызов [DebugBreak](http://msdn.microsoft.com/library/windows/desktop/ms679297) при запросе для указанного интерфейса.|  
 |[COM_INTERFACE_ENTRY_CACHED_TEAR_OFF](#com_interface_entry_cached_tear_off)|Сохраняет данные на уровне интерфейса для каждого экземпляра.|  
 |[COM_INTERFACE_ENTRY_TEAR_OFF](#com_interface_entry_tear_off)|Представляет перемещаемые интерфейсы.|  
@@ -60,6 +55,8 @@ ms.lasthandoff: 03/31/2017
 |[COM_INTERFACE_ENTRY_FUNC_BLIND](#com_interface_entry_func_blind)|То же, что [COM_INTERFACE_ENTRY_FUNC](#com_interface_entry_func), за исключением того, что запрос для любой IID приводит к вызову для `func`.|  
 |[COM_INTERFACE_ENTRY_NOINTERFACE](#com_interface_entry_nointerface)|Возвращает **E_NOINTERFACE** и завершает обработку карты COM, когда запрашиваются указанного интерфейса.|  
 
+## <a name="requirements"></a>Требования
+**Заголовок:** atlcom.h
 
 ## <a name="com_interface_entry"></a>COM_INTERFACE_ENTRY
 Вводит интерфейсы COM схему интерфейсов.
@@ -106,7 +103,7 @@ COM_INTERFACE_ENTRY2(x, x2)
   
   
 ### <a name="example"></a>Пример  
- [!code-cpp[NVC_ATL_Windowing #118](../../atl/codesnippet/cpp/com-map-macros_2.h)]  
+ [!code-cpp[NVC_ATL_Windowing#118](../../atl/codesnippet/cpp/com-map-macros_2.h)]  
   
 ##  <a name="com_interface_entry_iid"></a>COM_INTERFACE_ENTRY_IID  
  Используйте этот макрос для входа в интерфейс в сопоставление COM и укажите его IID.  
@@ -124,7 +121,7 @@ COM_INTERFACE_ENTRY_IID(iid, x)
   
  
 ### <a name="example"></a>Пример  
- [!code-cpp[NVC_ATL_Windowing #117](../../atl/codesnippet/cpp/com-map-macros_3.h)]  
+ [!code-cpp[NVC_ATL_Windowing#117](../../atl/codesnippet/cpp/com-map-macros_3.h)]  
   
 ##  <a name="com_interface_entry2_iid"></a>COM_INTERFACE_ENTRY2_IID  
  То же, что [COM_INTERFACE_ENTRY2](#com_interface_entry2), за исключением того, можно указать другой IID.  
@@ -163,7 +160,7 @@ COM_INTERFACE_ENTRY_AGGREGATE(iid, punk)
   
   
 ### <a name="example"></a>Пример  
- [!code-cpp[NVC_ATL_Windowing #112](../../atl/codesnippet/cpp/com-map-macros_4.h)]  
+ [!code-cpp[NVC_ATL_Windowing#112](../../atl/codesnippet/cpp/com-map-macros_4.h)]  
   
 ##  <a name="com_interface_entry_aggregate_blind"></a>COM_INTERFACE_ENTRY_AGGREGATE_BLIND  
  То же, что [COM_INTERFACE_ENTRY_AGGREGATE](#com_interface_entry_aggregate), за исключением того, что запрашивает все IID приведет к переадресации запросов в `punk`.  
@@ -182,7 +179,7 @@ COM_INTERFACE_ENTRY_AGGREGATE_BLIND(punk)
   
   
 ### <a name="example"></a>Пример  
- [!code-cpp[NVC_ATL_Windowing #113](../../atl/codesnippet/cpp/com-map-macros_5.h)]  
+ [!code-cpp[NVC_ATL_Windowing#113](../../atl/codesnippet/cpp/com-map-macros_5.h)]  
   
 
 ##  <a name="com_interface_entry_autoaggregate"></a>COM_INTERFACE_ENTRY_AUTOAGGREGATE  
@@ -206,10 +203,10 @@ COM_INTERFACE_ENTRY_AUTOAGGREGATE(iid, punk, clsid)
   
   
 ### <a name="example"></a>Пример  
- [!code-cpp[NVC_ATL_Windowing #114](../../atl/codesnippet/cpp/com-map-macros_6.h)]  
+ [!code-cpp[NVC_ATL_Windowing#114](../../atl/codesnippet/cpp/com-map-macros_6.h)]  
   
 ##  <a name="com_interface_entry_autoaggregate_blind"></a>COM_INTERFACE_ENTRY_AUTOAGGREGATE_BLIND  
- То же, что [COM_INTERFACE_ENTRY_AUTOAGGREGATE](#com_interface_entry_autoaggregate), за исключением того, что запрашивает все IID приведет к переадресации запросов для `punk`и, если `punk` — **NULL**автоматически Создание статистическое выражение, описываемое `clsid`.  
+ То же, что [COM_INTERFACE_ENTRY_AUTOAGGREGATE](#com_interface_entry_autoaggregate), за исключением того, что запрашивает все IID приведет к переадресации запросов для `punk`и если `punk` — **NULL**, автоматически создавая статистическое выражение, описываемое `clsid`.  
   
 ```
 COM_INTERFACE_ENTRY_AUTOAGGREGATE_BLIND(punk, clsid)
@@ -228,7 +225,7 @@ COM_INTERFACE_ENTRY_AUTOAGGREGATE_BLIND(punk, clsid)
   
   
 ### <a name="example"></a>Пример  
- [!code-cpp[NVC_ATL_Windowing #115](../../atl/codesnippet/cpp/com-map-macros_7.h)]  
+ [!code-cpp[NVC_ATL_Windowing#115](../../atl/codesnippet/cpp/com-map-macros_7.h)]  
   
 ##  <a name="com_interface_entry_break"></a>COM_INTERFACE_ENTRY_BREAK  
  Выполняется вызов [DebugBreak](http://msdn.microsoft.com/library/windows/desktop/ms679297) при запросе для указанного интерфейса.  
@@ -269,7 +266,7 @@ COM_INTERFACE_ENTRY_CACHED_TEAR_OFF(iid, x, punk)
   
   
 ### <a name="example"></a>Пример  
- [!code-cpp[NVC_ATL_COM #54](../../atl/codesnippet/cpp/com-map-macros_8.h)]  
+ [!code-cpp[NVC_ATL_COM#54](../../atl/codesnippet/cpp/com-map-macros_8.h)]  
   
 ##  <a name="com_interface_entry_tear_off"></a>COM_INTERFACE_ENTRY_TEAR_OFF  
  Представляет перемещаемые интерфейсы.  
@@ -291,7 +288,7 @@ COM_INTERFACE_ENTRY_TEAR_OFF(iid, x)
   
   
 ### <a name="example"></a>Пример  
- [!code-cpp[NVC_ATL_COM #1](../../atl/codesnippet/cpp/com-map-macros_1.h)]  
+ [!code-cpp[NVC_ATL_COM#1](../../atl/codesnippet/cpp/com-map-macros_1.h)]  
   
 ##  <a name="com_interface_entry_chain"></a>COM_INTERFACE_ENTRY_CHAIN  
  Выполняет сопоставление COM базового класса, когда будет достигнут этой записи в схеме COM.  
@@ -301,17 +298,17 @@ COM_INTERFACE_ENTRY_CHAIN(classname)
 ```  
   
 ### <a name="parameters"></a>Параметры  
- *className*  
+ *classname*  
  [in] Базовый класс для текущего объекта.  
   
 ### <a name="remarks"></a>Примечания  
  Например в следующем коде:  
   
- [!code-cpp[NVC_ATL_Windowing 116](../../atl/codesnippet/cpp/com-map-macros_9.h)]  
+ [!code-cpp[NVC_ATL_Windowing#116](../../atl/codesnippet/cpp/com-map-macros_9.h)]  
   
- Обратите внимание, что первая запись в схеме COM должен быть интерфейсом на объект, содержащий сопоставления COM. Таким образом, невозможно запустить на записях сопоставления COM. с `COM_INTERFACE_ENTRY_CHAIN`, чего сопоставление COM другого объекта для поиска в точке, где **COM_INTERFACE_ENTRY_CHAIN (**`COtherObject`**)** отображается в схеме вашего объекта COM. Поиск картой COM другого объекта в первую очередь следует добавить запись интерфейс для **IUnknown** сопоставление COM, затем цепочки сопоставления COM и другой объект. Пример:  
+ Обратите внимание, что первая запись в схеме COM должен быть интерфейсом на объект, содержащий сопоставления COM. Таким образом, невозможно запустить на записях сопоставления COM. с `COM_INTERFACE_ENTRY_CHAIN`, чего сопоставление COM другого объекта для поиска в точке, где **COM_INTERFACE_ENTRY_CHAIN (**`COtherObject`**)** отображается в сопоставление COM объекта. Поиск картой COM другого объекта в первую очередь следует добавить запись интерфейс для **IUnknown** сопоставление COM, затем цепочки сопоставления COM и другой объект. Пример:  
   
- [!code-cpp[NVC_ATL_Windowing #111](../../atl/codesnippet/cpp/com-map-macros_10.h)]  
+ [!code-cpp[NVC_ATL_Windowing#111](../../atl/codesnippet/cpp/com-map-macros_10.h)]  
   
   
   
@@ -371,7 +368,7 @@ COM_INTERFACE_ENTRY_NOINTERFACE(x)
  [in] Текст, используемый для создания идентификатора интерфейса.  
   
 ### <a name="remarks"></a>Примечания  
- Этот макрос можно использовать для предотвращения использования в конкретном случае интерфейс. Например, этот макрос можно вставить в ваш COM сопоставить моментом перед `COM_INTERFACE_ENTRY_AGGREGATE_BLIND` для предотвращения пересылаются на неизвестный внутреннее статистическое выражение запроса для интерфейса.  
+ Этот макрос можно использовать для предотвращения использования в конкретном случае интерфейс. Например, этот макрос можно вставить в ваш COM сопоставить прямо перед `COM_INTERFACE_ENTRY_AGGREGATE_BLIND` для предотвращения пересылаются на неизвестный внутреннее статистическое выражение запроса для интерфейса.  
   
  Будет создан путем добавления IID интерфейса *x* для `IID_`. Например если *x* — `IPersistStorage`, будет IID `IID_IPersistStorage`.  
   

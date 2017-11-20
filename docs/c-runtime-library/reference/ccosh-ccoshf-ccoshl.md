@@ -33,36 +33,21 @@ f1_keywords:
 - complex/ccosh
 - complex/ccoshf
 - complex/ccoshl
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - ccosh function
 - ccoshf function
 - ccoshl function
 ms.assetid: 79667449-4edf-4948-bf6b-720adf2b3f3b
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.mt:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: 4626b5afbc81a5c747d62813aa5fab40c2b6a27b
-ms.lasthandoff: 02/24/2017
-
+ms.openlocfilehash: 61b20bfec861988a82a05adab4684d76d93f179b
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="ccosh-ccoshf-ccoshl"></a>ccosh, ccoshf, ccoshl
 Извлекает гиперболический косинус комплексного числа.  

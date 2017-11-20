@@ -1,48 +1,47 @@
 ---
-title: "CDBPropIDSet::operator = | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "CDBPropIDSet.operator="
-  - "ATL.CDBPropIDSet.operator="
-  - "ATL::CDBPropIDSet::operator="
-  - "CDBPropIDSet::operator="
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "= - оператор, с шаблонами OLE DB"
-  - "оператор =, наборы свойств"
-  - "operator=, наборы свойств"
+title: "CDBPropIDSet::operator = | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- CDBPropIDSet.operator=
+- ATL.CDBPropIDSet.operator=
+- ATL::CDBPropIDSet::operator=
+- CDBPropIDSet::operator=
+dev_langs: C++
+helpviewer_keywords:
+- operator =, property sets
+- = operator, with OLE DB templates
+- operator=, property sets
 ms.assetid: 8741fca9-201e-4821-af61-71ba998d0886
-caps.latest.revision: 8
-caps.handback.revision: 8
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "8"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 20fa125fcfe238aef222f1d471c44821fc7e0c32
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/24/2017
 ---
-# CDBPropIDSet::operator =
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Присвоить содержимое одного заданного идентификатора свойства в другой набор свойств идентификатора.  
+# <a name="cdbpropidsetoperator-"></a>CDBPropIDSet::operator =
+Назначает содержимое задать другой набор свойств идентификатор идентификатор свойства.  
   
-## Синтаксис  
+## <a name="syntax"></a>Синтаксис  
   
 ```  
   
-      CDBPropIDSet& operator =(   
-   CDBPropIDSet& propset    
+      CDBPropIDSet& operator =(   
+   CDBPropIDSet& propset    
 ) throw( );  
 ```  
   
-## Требования  
+## <a name="requirements"></a>Требования  
  **Заголовок:** atldbcli.h  
   
-## См. также  
+## <a name="see-also"></a>См. также  
  [Класс CDBPropIDSet](../../data/oledb/cdbpropidset-class.md)

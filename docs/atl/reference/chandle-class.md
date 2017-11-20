@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-windows
+ms.technology: cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
@@ -16,35 +15,18 @@ f1_keywords:
 - ATLBASE/ATL::CHandle::Close
 - ATLBASE/ATL::CHandle::Detach
 - ATLBASE/ATL::CHandle::m_h
-dev_langs:
-- C++
-helpviewer_keywords:
-- CHandle class
+dev_langs: C++
+helpviewer_keywords: CHandle class
 ms.assetid: 883e9db5-40ec-4e29-9c74-4dd2ddd2e35d
-caps.latest.revision: 19
+caps.latest.revision: "19"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 604a4bf49490ad2599c857eb3afd527d67e1e25b
-ms.openlocfilehash: bbc0703ae5eaab01c0819be7e378509c7dc579ef
-ms.contentlocale: ru-ru
-ms.lasthandoff: 02/24/2017
-
+ms.openlocfilehash: ed254b49c61f873e1d85fd0600c371c03ac246a2
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="chandle-class"></a>Класс CHandle
 Этот класс предоставляет методы для создания и использования объекта дескриптора.  
@@ -68,9 +50,9 @@ class CHandle
   
 |Имя|Описание|  
 |----------|-----------------|  
-|[CHandle::Attach](#attach)|Этот метод вызывается для присоединения `CHandle` объекта для существующего дескриптора.|  
-|[CHandle::Close](#close)|Вызовите этот метод, чтобы закрыть `CHandle` объекта.|  
-|[CHandle::Detach](#detach)|Этот метод вызывается для отсоединения дескриптор из `CHandle` объекта.|  
+|[CHandle::Attach](#attach)|Этот метод вызывается для присоединения `CHandle` объект для существующего дескриптора.|  
+|[CHandle::Close](#close)|Вызовите этот метод для закрытия `CHandle` объекта.|  
+|[CHandle::Detach](#detach)|Этот метод вызывается для отсоединения дескриптора от `CHandle` объекта.|  
   
 ### <a name="public-operators"></a>Открытые операторы  
   
@@ -83,19 +65,19 @@ class CHandle
   
 |Имя|Описание|  
 |----------|-----------------|  
-|[CHandle::m_h](#m_h)|Член переменной для хранения дескриптора.|  
+|[CHandle::m_h](#m_h)|Переменной-члена, сохранение дескриптора.|  
   
 ## <a name="remarks"></a>Примечания  
- Объект `CHandle` объект можно использовать всякий раз, когда требуется маркер: основное различие заключается в, `CHandle` объекта будет автоматически удалено.  
+ Объект `CHandle` объект можно использовать всякий раз, когда требуется маркер: основное отличие заключается в, `CHandle` объект будет автоматически удален.  
   
 > [!NOTE]
->  Некоторые функции API будет использоваться как дескриптор пустое или недопустимое значение NULL, другие используют INVALID_HANDLE_VALUE. `CHandle`использует только значение NULL, а также будет считать INVALID_HANDLE_VALUE реального дескриптора. При вызове API, который может возвращать INVALID_HANDLE_VALUE необходимо проверить наличие это значение перед вызовом метода [CHandle::Attach](#attach) или передав его `CHandle` конструктор и вместо этого передайте значение NULL.  
+>  Некоторые функции API будет использовать как дескриптор пустое или недопустимое значение NULL, другие используют INVALID_HANDLE_VALUE. `CHandle`используются только значение NULL, а также будет считать INVALID_HANDLE_VALUE реальные дескриптор. При вызове API, которая может вернуть INVALID_HANDLE_VALUE необходимо проверить это значение перед вызовом [CHandle::Attach](#attach) или передать его `CHandle` конструктор и вместо этого передать значение NULL.  
   
 ## <a name="requirements"></a>Требования  
  **Заголовок:** atlbase.h  
   
 ##  <a name="attach"></a>CHandle::Attach  
- Этот метод вызывается для присоединения `CHandle` объекта для существующего дескриптора.  
+ Этот метод вызывается для присоединения `CHandle` объект для существующего дескриптора.  
   
 ```
 void Attach(HANDLE h) throw();
@@ -106,7 +88,7 @@ void Attach(HANDLE h) throw();
  `CHandle`будет распоряжаться дескриптор `h`.  
   
 ### <a name="remarks"></a>Примечания  
- Назначает `CHandle` объект `h` обработки. В сборках отлаживает ATLASSERT будет создано, если `h` имеет значение NULL. Проверка других относительно достоверности дескриптор не выполняется.  
+ Назначает `CHandle` объект `h` обработки. В сборках отлаживает ATLASSERT возникает если `h` имеет значение NULL. Проверка других допустимость дескриптора не проводится.  
   
 ##  <a name="chandle"></a>CHandle::CHandle  
  Конструктор.  
@@ -119,7 +101,7 @@ explicit CHandle(HANDLE h) throw();
   
 ### <a name="parameters"></a>Параметры  
  `h`  
- Дескриптор существующей или `CHandle`.  
+ Существующего дескриптора или `CHandle`.  
   
 ### <a name="remarks"></a>Примечания  
  Создает новый `CHandle` объекта, при необходимости с помощью существующего дескриптора или `CHandle` объекта.  
@@ -135,30 +117,30 @@ explicit CHandle(HANDLE h) throw();
  Освобождает `CHandle` путем вызова метода [CHandle::Close](#close).  
   
 ##  <a name="close"></a>CHandle::Close  
- Вызовите этот метод, чтобы закрыть `CHandle` объекта.  
+ Вызовите этот метод для закрытия `CHandle` объекта.  
   
 ```
 void Close() throw();
 ```  
   
 ### <a name="remarks"></a>Примечания  
- Закрывает дескриптор открытого объекта. Если дескриптор имеет значение NULL, который будет в том случае, если **закрыть** уже был вызван, ATLASSERT, будет создано в отладочных построениях.  
+ Закрывает дескриптор открытого объекта. Если маркер имеет значение NULL, которое будет в том случае, если **закрыть** уже был вызван, ATLASSERT будет вызываться в отладочных построениях.  
   
 ##  <a name="detach"></a>CHandle::Detach  
- Этот метод вызывается для отсоединения дескриптор из `CHandle` объекта.  
+ Этот метод вызывается для отсоединения дескриптора от `CHandle` объекта.  
   
 ```
 HANDLE Detach() throw();
 ```  
   
 ### <a name="return-value"></a>Возвращаемое значение  
- Возвращает дескриптор отсоединения.  
+ Возвращает дескриптор отключаемой.  
   
 ### <a name="remarks"></a>Примечания  
  Освобождает владение дескриптора.  
   
 ##  <a name="m_h"></a>CHandle::m_h  
- Член переменной для хранения дескриптора.  
+ Переменной-члена, сохранение дескриптора.  
   
 ```
 HANDLE m_h;
@@ -179,7 +161,7 @@ CHandle& operator=(CHandle& h) throw();
  Возвращает ссылку на новый `CHandle` объекта.  
   
 ### <a name="remarks"></a>Примечания  
- Если `CHandle` объект в настоящее время содержит дескриптор, оно будет закрыто. `CHandle` Объекта, передаваемого будет его дескриптор ссылки, присваивается значение NULL. Это гарантирует, что два `CHandle` объектов никогда не будет содержать тот же дескриптор active.  
+ Если `CHandle` объект в настоящее время содержит дескриптор, оно будет закрыто. `CHandle` Объектов, передаваемых в будет иметь свою ссылку дескриптор, присваивается значение NULL. Это гарантирует, что два `CHandle` объектов никогда не будет содержать тот же дескриптор active.  
   
 ##  <a name="operator_handle"></a>CHandle::operator ДЕСКРИПТОРА  
  Возвращает значение хранимого дескриптора.  
@@ -193,4 +175,3 @@ operator HANDLE() const throw();
   
 ## <a name="see-also"></a>См. также  
  [Общие сведения о классе](../../atl/atl-class-overview.md)
-

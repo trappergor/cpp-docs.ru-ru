@@ -1,45 +1,43 @@
 ---
-title: "multimap::upper_bound (STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::multimap::upper_bound"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "upper_bound - член [STL/CLR]"
+title: "multimap::upper_bound (STL/CLR) | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::multimap::upper_bound
+dev_langs: C++
+helpviewer_keywords: upper_bound member [STL/CLR]
 ms.assetid: bfb8cf64-cecf-4685-8ac9-e7228ecee809
-caps.latest.revision: 16
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 14
+caps.latest.revision: "16"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 64d02e102e17abae64367778f9de7ac5d51ca8be
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/24/2017
 ---
-# multimap::upper_bound (STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Находит конечную точку диапазона, соответствующий указанному ключу.  
+# <a name="multimapupperbound-stlclr"></a>multimap::upper_bound (STL/CLR)
+Конец находит диапазон, соответствующий указанному ключу.  
   
-## Синтаксис  
+## <a name="syntax"></a>Синтаксис  
   
 ```  
 iterator upper_bound(key_type key);  
 ```  
   
-#### Параметры  
- key  
- Значение ключа, которое необходимо найти.  
+#### <a name="parameters"></a>Параметры  
+ клавиша  
+ Искомое значение ключа.  
   
-## Заметки  
- Функция\-член определен последний элемент `X` в контролируемой последовательности, имеет соответствующий заказ на `key`.  Если такой элемент не существует, или если `X` последний элемент в контролируемой последовательности, она возвращает [multimap::end](../dotnet/multimap-end-stl-clr.md)`()`; в противном случае она возвращает первый элемент указывает итератор, за `X`.  Он используется для поиска конец последовательности элементов в контролируемой последовательности, соответствующие указанному ключу.  
+## <a name="remarks"></a>Примечания  
+ Функция-член определяет последний элемент `X` в управляемой последовательности, соответствующим образом для `key`. Если такого элемента не существует или `X` является последним элементом в управляемой последовательности, она возвращает [multimap::end (STL/CLR)](../dotnet/multimap-end-stl-clr.md)`()`; в противном случае он возвращает итератор, указывающий на первый элемент за пределами `X`. Используется для поиска конца последовательности элементов в данный момент в управляемой последовательности, которые соответствуют заданному ключу.  
   
-## Пример  
+## <a name="example"></a>Пример  
   
 ```  
 // cliext_multimap_upper_bound.cpp   
@@ -73,18 +71,21 @@ int main()
   
 ```  
   
-  **\[1\] \[2\] \[BC — 3\]**  
-**upper\_bound\(L'x'\)\=\=end\(\) \= true**  
-**\*upper\_bound \(L'а\) \= \[B 2\]**  
-**\*upper\_bound \(L'б\) \= \[C — 3\]**   
-## Требования  
- **Заголовок:**\<cliext\/map\>  
+```Output  
+ [a 1] [b 2] [c 3]  
+upper_bound(L'x')==end() = True  
+*upper_bound(L'a') = [b 2]  
+*upper_bound(L'b') = [c 3]  
+```  
+  
+## <a name="requirements"></a>Требования  
+ **Заголовок:** \<cliext/map >  
   
  **Пространство имен:** cliext  
   
-## См. также  
- [multimap](../dotnet/multimap-stl-clr.md)   
- [multimap::count](../dotnet/multimap-count-stl-clr.md)   
- [multimap::equal\_range](../dotnet/multimap-equal-range-stl-clr.md)   
- [multimap::find](../dotnet/multimap-find-stl-clr.md)   
- [multimap::lower\_bound](../dotnet/multimap-lower-bound-stl-clr.md)
+## <a name="see-also"></a>См. также  
+ [несколько карт (STL/CLR)](../dotnet/multimap-stl-clr.md)   
+ [multimap::Count (STL/CLR)](../dotnet/multimap-count-stl-clr.md)   
+ [multimap::equal_range (STL/CLR)](../dotnet/multimap-equal-range-stl-clr.md)   
+ [multimap::Find (STL/CLR)](../dotnet/multimap-find-stl-clr.md)   
+ [multimap::lower_bound (STL/CLR)](../dotnet/multimap-lower-bound-stl-clr.md)

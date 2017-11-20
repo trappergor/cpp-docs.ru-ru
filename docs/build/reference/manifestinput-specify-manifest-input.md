@@ -1,42 +1,42 @@
 ---
-title: "/MANIFESTINPUT (задание входных данных манифеста) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
+title: "-MANIFESTINPUT (задание входных данных манифеста) | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
 ms.assetid: a0b0c21e-1f9b-4d8c-bb3f-178f57fa7f1b
-caps.latest.revision: 5
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 5
+caps.latest.revision: "5"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: a32eb8c65e14684b818341121714ce0359f6521a
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/24/2017
 ---
-# /MANIFESTINPUT (задание входных данных манифеста)
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Задает входной файл манифеста для включения в манифест, внедренный в образ.  
+# <a name="manifestinput-specify-manifest-input"></a>/MANIFESTINPUT (задание входных данных манифеста)
+Задает входной файл манифеста для включения в манифесте, внедренных в изображение.  
   
-## Синтаксис  
+## <a name="syntax"></a>Синтаксис  
   
-```c#  
+```  
 /MANIFESTINPUT:filename  
 ```  
   
-#### Параметры  
+#### <a name="parameters"></a>Параметры  
  `filename`  
- Файл манифеста, включаемый во встроенный манифест.  
+ Файл манифеста для включения в внедренный манифест.  
   
-## Заметки  
- Параметр **\/MANIFESTINPUT** задает путь входного файла, который будет использоваться для создания внедренного манифеста в исполняемом образе.  При наличии нескольких входных файлов манифеста, следует использовать переключатель несколько раз, по одному разу для каждого входного файла.  Входные файлы манифеста объединяются для создания внедренного манифеста.  Этот параметр требует параметра **\/MANIFEST:EMBED**.  
+## <a name="remarks"></a>Примечания  
+ **/MANIFESTINPUT** параметр указывает путь к входной файл, используемый для создания внедренного манифеста в исполняемый образ. Если у вас есть несколько манифест входные файлы, используйте параметр несколько раз — один раз для каждого входного файла. Чтобы создать внедренный манифест объединяются входных файлов манифеста. Этот параметр требует **/MANIFEST: внедрить** параметр.  
   
- Этот параметр невозможно установить непосредственно в [!INCLUDE[vsprvs](../../assembler/masm/includes/vsprvs_md.md)].  Вместо этого используйте свойство **Дополнительные файлы манифеста** чтобы задать дополнительные файлы манифеста для включения.  Для получения дополнительной информации см. [Диалоговое окно страниц свойств \<Имя\_проекта\> «Свойства конфигурации», «Инструмент манифеста», «Входные и выходные»](../../ide/input-and-output-manifest-tool.md).  
+ Этот параметр невозможно задать непосредственно в [!INCLUDE[vsprvs](../../assembler/masm/includes/vsprvs_md.md)]. Вместо этого используйте **дополнительные файлы манифеста** свойство проекта, чтобы указать дополнительные файлы манифеста для включения. Дополнительные сведения см. в разделе [ввода и вывода, инструмент манифеста, свойства конфигурации \<имя_проекта > страницы свойств-диалоговое окно](../../ide/input-and-output-manifest-tool.md).  
   
-## См. также  
+## <a name="see-also"></a>См. также  
  [Настройка параметров компоновщика](../../build/reference/setting-linker-options.md)   
  [Параметры компоновщика](../../build/reference/linker-options.md)

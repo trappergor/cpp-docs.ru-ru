@@ -1,39 +1,37 @@
 ---
-title: "Входные LIB-файлы | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "Lib"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "входные файлы, LIB"
+title: "Входные LIB файлы | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: Lib
+dev_langs: C++
+helpviewer_keywords: input files, LIB
 ms.assetid: e1236f0d-cd90-446b-b900-f311f456085c
-caps.latest.revision: 7
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: f956dedb8be270eb9974fa035d38e7fbb6714499
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/24/2017
 ---
-# Входные LIB-файлы
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-LIB ожидает те или иные входные файлы в зависимости от режима использования, как показано в следующей таблице.  
+# <a name="lib-input-files"></a>Входные LIB-файлы
+Входные файлы LIB ожидает зависят от режима, в котором он используется, как показано в следующей таблице.  
   
-|Режим|Ввод|  
-|-----------|----------|  
-|По умолчанию \(создание или изменение библиотеки\)|Файлы объектов COFF \(.obj\), библиотеки COFF \(.lib\), 32\-битовые файлы объектов OMF \(.obj\)|  
-|Извлечение члена с помощью ключа \/EXTRACT|Библиотека COFF \(.lib\)|  
-|Создание файла экспорта и библиотеки импорта с помощью ключа \/DEF|Файлы определения модуля \(.def\), файлы объектов COFF \(.obj\), библиотеки COFF \(.lib\), 32\-битовые файлы объектов OMF \(.obj\)|  
+|Mode|Ввод|  
+|----------|-----------|  
+|По умолчанию (Создание или изменение библиотеки)|COFF-файлы объектов (OBJ), COFF библиотеки (LIB), 32-разрядных формат объекта модели (OMF) объектных файлах (.obj)|  
+|Извлечение члена с/Extract|COFF библиотеки (LIB)|  
+|Построение Экспорт файла и библиотеки импорта с/DEF|Файл определения модуля (DEF), COFF объектных файлах (.obj), COFF библиотеки (LIB), 32-разрядных OMF объектных файлах (.obj)|  
   
 > [!NOTE]
->  Библиотеки OMF, созданные в 16\-битовой версии LIB, нельзя использовать в качестве входных файлов в 32\-битовой версии LIB.  
+>  OMF-библиотеки, созданных 16-разрядную версию LIB не может использоваться как входные данные для 32-разрядной версии LIB.  
   
-## См. также  
+## <a name="see-also"></a>См. также  
  [Общие сведения о LIB](../../build/reference/overview-of-lib.md)

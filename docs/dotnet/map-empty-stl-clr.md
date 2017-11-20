@@ -1,41 +1,39 @@
 ---
-title: "map::empty (STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::map::empty"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "empty - член [STL/CLR]"
+title: "MAP::Empty (STL/CLR) | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::map::empty
+dev_langs: C++
+helpviewer_keywords: empty member [STL/CLR]
 ms.assetid: ce41d37a-2896-48df-87ea-d3f3b3e5ab45
-caps.latest.revision: 15
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 13
+caps.latest.revision: "15"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 5838e1daba1cbc6181d7fba4fc6df117850c9552
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/24/2017
 ---
-# map::empty (STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Тесты отсутствуют ли какие\-либо элементы.  
+# <a name="mapempty-stlclr"></a>map::empty (STL/CLR)
+Проверяет отсутствие элементов.  
   
-## Синтаксис  
+## <a name="syntax"></a>Синтаксис  
   
 ```  
 bool empty();  
 ```  
   
-## Заметки  
- Функция\-член возвращает значение true для пустой контролируемой последовательности.  Он эквивалентен [map::size](../Topic/map::size%20\(STL-CLR\).md)`() == 0`.  Он используется, чтобы проверить, является ли сопоставление пустым.  
+## <a name="remarks"></a>Примечания  
+ Эта функция-член возвращает значение true для пустой управляемой последовательности. Это эквивалентно [map::size (STL/CLR)](../dotnet/map-size-stl-clr.md)`() == 0`. Используется, чтобы проверить, является ли пустой карты.  
   
-## Пример  
+## <a name="example"></a>Пример  
   
 ```  
 // cliext_map_empty.cpp   
@@ -66,16 +64,19 @@ int main()
   
 ```  
   
-  **\[1\] \[2\] \[BC — 3\]**  
-**size\(\) \= 3**  
-**empty\(\) \= false**  
-**size\(\) \= 0**  
-**empty\(\) \= true**   
-## Требования  
- **Заголовок:**\<cliext\/map\>  
+```Output  
+ [a 1] [b 2] [c 3]  
+size() = 3  
+empty() = False  
+size() = 0  
+empty() = True  
+```  
+  
+## <a name="requirements"></a>Требования  
+ **Заголовок:** \<cliext/map >  
   
  **Пространство имен:** cliext  
   
-## См. также  
- [map](../dotnet/map-stl-clr.md)   
- [map::size](../Topic/map::size%20\(STL-CLR\).md)
+## <a name="see-also"></a>См. также  
+ [Карта (STL/CLR)](../dotnet/map-stl-clr.md)   
+ [map::size (STL/CLR)](../dotnet/map-size-stl-clr.md)

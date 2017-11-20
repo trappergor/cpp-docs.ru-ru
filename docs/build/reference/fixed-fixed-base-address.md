@@ -1,60 +1,60 @@
 ---
-title: "/FIXED (фиксированный базовый адрес) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "/fixed"
-  - "VC.Project.VCLinkerTool.FixedBaseAddress"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "/FIXED - параметр компоновщика"
-  - "FIXED - параметр компоновщика"
-  - "-FIXED - параметр компоновщика"
-  - "предпочтительный базовый адрес для загружаемой программы"
+title: "-FIXED (фиксированный базовый адрес) | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- /fixed
+- VC.Project.VCLinkerTool.FixedBaseAddress
+dev_langs: C++
+helpviewer_keywords:
+- preferred base address for loading program
+- /FIXED linker option
+- -FIXED linker option
+- FIXED linker option
 ms.assetid: 929bba5e-b7d8-40ed-943e-056aa3710fc5
-caps.latest.revision: 10
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 10
+caps.latest.revision: "10"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: 361a468ee81e54f090f3f715684fa155ceffc332
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/24/2017
 ---
-# /FIXED (фиксированный базовый адрес)
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="fixed-fixed-base-address"></a>/FIXED (фиксированный базовый адрес)
 ```  
 /FIXED[:NO]  
 ```  
   
-## Заметки  
- Указывает, что операционная система загружает программы только на предпочитаемом его базового адреса.  Если предпочтительный базовый адрес недоступен, операционная система не загружает файл.  Для получения дополнительной информации см. [\/BASE \(базовый адрес\)](../../build/reference/base-base-address.md).  
+## <a name="remarks"></a>Примечания  
+ Указывает операционной системе, чтобы загрузить программу только по ее предпочтительному базовому адресу. Если предпочтительный базовый адрес недоступен, операционная система не загрузить файл. Дополнительные сведения см. в разделе [Параметр /Base (базовый адрес)](../../build/reference/base-base-address.md).  
   
- \/FIXED:NO параметр по умолчанию для библиотеки DLL, и параметр \/FIXED по умолчанию для любых других типов проектов.  
+ / Fixed: No является значением по умолчанию для библиотеки DLL, а параметр/FIXED имеет значение по умолчанию для любого другого типа проекта.  
   
- Если задан параметр \/FIXED, то программа LINK не создает в программе секцию перемещения.  Во время выполнения, если операционная система не может загрузить программу по указанному адресу, он выдает сообщение об ошибке и не загружает программы.  
+ Если указан параметр/fixed, связь не создает раздел переадресации в программе. Во время выполнения Если операционная система не может загрузить программу по указанному адресу, он выдает сообщение об ошибке и не загрузить программу.  
   
- Для создания секции перемещения в программе следует задать параметр \/FIXED:NO.  
+ Укажите компоновщике для создания секции перемещения в программе.  
   
-### Установка данного параметра компоновщика в среде разработки Visual Studio  
+### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>Задание данного параметра компоновщика в среде разработки Visual Studio  
   
-1.  Откройте диалоговое окно **Страницы свойств** проекта.  Дополнительные сведения см. в разделе [Работа со свойствами проектов](../../ide/working-with-project-properties.md).  
+1.  Откройте диалоговое окно **Страницы свойств** проекта. Дополнительные сведения см. в разделе [работа со свойствами проекта](../../ide/working-with-project-properties.md).  
   
-2.  Выберите папку **Компоновщик**.  
+2.  Выберите **компоновщика** папки.  
   
-3.  Выберите страницу свойств **Командная строка**.  
+3.  Выберите **командной строки** страницу свойств.  
   
-4.  Введите имя и параметр в окне **Дополнительные параметры**.  
+4.  Введите имя параметра и задав в **Дополнительные параметры** поле.  
   
-### Установка данного параметра компоновщика программным способом  
+### <a name="to-set-this-linker-option-programmatically"></a>Задание данного параметра компоновщика программным способом  
   
 -   См. раздел <xref:Microsoft.VisualStudio.VCProjectEngine.VCLinkerTool.AdditionalOptions%2A>.  
   
-## См. также  
+## <a name="see-also"></a>См. также  
  [Настройка параметров компоновщика](../../build/reference/setting-linker-options.md)   
  [Параметры компоновщика](../../build/reference/linker-options.md)

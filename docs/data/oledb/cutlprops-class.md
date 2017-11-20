@@ -1,64 +1,62 @@
 ---
-title: "Класс CUtlProps | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "CUtlProps"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "CUtlProps - класс"
+title: "Класс CUtlProps | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: CUtlProps
+dev_langs: C++
+helpviewer_keywords: CUtlProps class
 ms.assetid: bb525178-765c-4e23-a110-c0fd70c05437
-caps.latest.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 9
+caps.latest.revision: "9"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 0f57894bc22cc469e000663d871be7c4739db22e
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/24/2017
 ---
-# Класс CUtlProps
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Реализует свойства для различных интерфейсов свойства OLE DB \(например, `IDBProperties`, `IDBProperties` и `IRowsetInfo`\).  
+# <a name="cutlprops-class"></a>Класс CUtlProps
+Реализует свойства для различных свойств интерфейсы OLE DB (например, `IDBProperties`, `IDBProperties`, и `IRowsetInfo`).  
   
-## Синтаксис  
+## <a name="syntax"></a>Синтаксис  
   
 ```  
 template < class T >  
 class ATL_NO_VTABLE CUtlProps : public CUtlPropsBase  
 ```  
   
-#### Параметры  
+#### <a name="parameters"></a>Параметры  
  `T`  
  Класс, содержащий `BEGIN_PROPSET_MAP`.  
   
-## Члены  
+## <a name="members"></a>Члены  
   
-### Методы  
+### <a name="methods"></a>Методы  
   
 |||  
 |-|-|  
-|[GetPropValue](../Topic/CUtlProps::GetPropValue.md)|Получает свойство из набора свойств.|  
-|[IsValidValue](../../data/oledb/cutlprops-isvalidvalue.md)|Используется для проверки, прежде чем устанавливать свойство.|  
-|[OnInterfaceRequested](../../data/oledb/cutlprops-oninterfacerequested.md)|Обрабатывает запросы для дополнительного интерфейса, когда объект\-получатель вызывает метод в интерфейсе поколения объектов.|  
-|[OnPropertyChanged](../../data/oledb/cutlprops-onpropertychanged.md)|Вызывается после установки свойства дескриптора приковал свойства.|  
-|[SetPropValue](../../data/oledb/cutlprops-setpropvalue.md)|Задает свойство в набор свойств.|  
+|[GetPropValue](../../data/oledb/cutlprops-getpropvalue.md)|Возвращает свойство из набора свойств.|  
+|[IsValidValue](../../data/oledb/cutlprops-isvalidvalue.md)|Используется для проверки значения перед заданием свойства.|  
+|[OnInterfaceRequested](../../data/oledb/cutlprops-oninterfacerequested.md)|Обрабатывает запросы к дополнительный интерфейс, когда потребитель вызывает метод в интерфейсе создания объекта.|  
+|[OnPropertyChanged](../../data/oledb/cutlprops-onpropertychanged.md)|Вызывается после задания свойства для обработки связанных свойств.|  
+|[SetPropValue](../../data/oledb/cutlprops-setpropvalue.md)|Задает свойство в наборе свойств.|  
   
-## Заметки  
- Большая часть этого класса подробности реализации.  
+## <a name="remarks"></a>Примечания  
+ Большая часть этого класса является элементом реализации.  
   
- `CUtlProps` содержит 2 члена для настройки свойств внутренне: [GetPropValue](../Topic/CUtlProps::GetPropValue.md) и [SetPropValue](../../data/oledb/cutlprops-setpropvalue.md).  
+ `CUtlProps`содержит два элемента для настройки свойств внутренне: [GetPropValue](../../data/oledb/cutlprops-getpropvalue.md) и [SetPropValue](../../data/oledb/cutlprops-setpropvalue.md).  
   
- Дополнительные сведения о макросах, используемых в сопоставлении набора свойств см. в разделах [BEGIN\_PROPSET\_MAP](../Topic/BEGIN_PROPSET_MAP.md) и [END\_PROPSET\_MAP](../../data/oledb/end-propset-map.md).  
+ Дополнительные сведения о макросы, используемые в сопоставление набора свойств см. в разделе [BEGIN_PROPSET_MAP](../../data/oledb/begin-propset-map.md) и [END_PROPSET_MAP](../../data/oledb/end-propset-map.md).  
   
-## Требования  
- **Header:**  atldb.h  
+## <a name="requirements"></a>Требования  
+ **Заголовок:** atldb.h  
   
-## См. также  
+## <a name="see-also"></a>См. также  
  [Шаблоны поставщика OLE DB](../../data/oledb/ole-db-provider-templates-cpp.md)   
  [Архитектура шаблона поставщика OLE DB](../../data/oledb/ole-db-provider-template-architecture.md)

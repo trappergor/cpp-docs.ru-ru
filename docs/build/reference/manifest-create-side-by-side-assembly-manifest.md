@@ -1,70 +1,69 @@
 ---
-title: "/MANIFEST (создание манифеста параллельной сборки) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "VC.Project.VCLinkerTool.GenerateManifest"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "/MANIFEST - параметр компоновщика"
-  - "MANIFEST - параметр компоновщика"
-  - "-MANIFEST - параметр компоновщика"
+title: "-МАНИФЕСТА (Создание манифеста сборки Side-by-Side) | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: VC.Project.VCLinkerTool.GenerateManifest
+dev_langs: C++
+helpviewer_keywords:
+- -MANIFEST linker option
+- /MANIFEST linker option
+- MANIFEST linker option
 ms.assetid: 98c52e1e-712c-4f49-b149-4d0a3501b600
-caps.latest.revision: 20
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 20
+caps.latest.revision: "20"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: 2067b0eb3cedb924c906e77bb549611bf8e8ed01
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/24/2017
 ---
-# /MANIFEST (создание манифеста параллельной сборки)
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="manifest-create-side-by-side-assembly-manifest"></a>/MANIFEST (создание манифеста параллельной сборки)
 ```  
 /MANIFEST[:{EMBED[,ID=#]|NO}]  
 ```  
   
-## Заметки  
- Параметр \/MANIFEST определяет, что компоновщик должен создать параллельный файл манифеста.  Дополнительные сведения о файлах манифеста см. в разделе [Manifest Files Reference](http://msdn.microsoft.com/library/aa375632).  
+## <a name="remarks"></a>Примечания  
+ Параметр / MANIFEST указывает, что компоновщик должен создать файл манифеста side-by-side. Дополнительные сведения о файлах манифеста см. в разделе [файлы манифеста ссылаются](http://msdn.microsoft.com/library/aa375632).  
   
- По умолчанию используется параметр \/MANIFEST.  
+ По умолчанию используется параметр/MANIFEST.  
   
- Параметр \/MANIFEST:EMBED указывает, что компоновщику следует внедрить файл манифеста в образе в качестве ресурса RT\_MANIFEST типа.  Необязательный параметр `ID` идентификатора ресурса, который будет использоваться для манифеста.  Используйте значение 1 для исполняемого файла.  Используйте значение 2 для библиотеки DLL, чтобы разрешить его определение закрытых зависимости.  Если параметр `ID` не указан, используется значение по умолчанию 2, если задан параметр \/DLL; в противном случае значение по умолчанию 1.  
+ Параметр/MANIFEST: внедрить параметр указывает, что компоновщик должен внедрять файл манифеста в образе как ресурс типа RT_MANIFEST. Необязательный `ID` параметр — идентификатор ресурса для использования для манифеста. Используйте значение 1 для исполняемого файла. Используйте значение 2 для библиотеки DLL для указания закрытого зависимостей. Если `ID` параметр не указан, значение по умолчанию — 2, если задан параметр/DLL; в противном случае — значение по умолчанию — 1.  
   
- Начиная с [!INCLUDE[vs_orcas_long](../../atl/reference/includes/vs_orcas_long_md.md)], в файлах манифестов для исполняемых файлов имеется раздел, в котором указываются данные по контролю учетных записей \(UAC\).  Если указать \/MANIFEST, но определяется как [\/MANIFESTUAC](../../build/reference/manifestuac-embeds-uac-information-in-manifest.md) или [\/DLL](../../build/reference/dll-build-a-dll.md), фрагмент функции контроля учетных записей по умолчанию, имеет уровень контроля учетных записей, равным *asInvoker* вставляется в манифест.  Дополнительные сведения об уровнях контроля учетных записей см. в описании [\/MANIFESTUAC \(встраивает в манифест сведений об UAC\)](../../build/reference/manifestuac-embeds-uac-information-in-manifest.md).  
+ Файлы манифеста для исполняемых файлов, начиная с Visual Studio 2008, содержать раздел, в котором указываются сведения управления учетных записей (UAC). Если указан параметр/MANIFEST, но не указать [/MANIFESTUAC](../../build/reference/manifestuac-embeds-uac-information-in-manifest.md) , ни [/DLL](../../build/reference/dll-build-a-dll.md), фрагмент контроля учетных Записей по умолчанию значением уровня контроля учетных Записей для *asInvoker* вставляется в манифест. Дополнительные сведения об уровнях контроля учетных Записей см. в разделе [/MANIFESTUAC (встраивает UAC сведения в манифесте)](../../build/reference/manifestuac-embeds-uac-information-in-manifest.md).  
   
- Чтобы изменить реакция на событие по умолчанию для контроля учетных записей, выполните одно из следующих:  
+ Чтобы изменить поведение по умолчанию для контроля учетных Записей, выполните одно из следующих:  
   
--   Задайте параметр \/MANIFESTUAC и укажите уровень контроля учетных записей нужное значение.  
+-   Укажите параметр/MANIFESTUAC и на уровне нужное значение.  
   
--   Или задайте параметр \/MANIFESTUAC:NO, если не требуется создать фрагмент функции контроля учетных записей в манифесте.  
+-   Или задайте параметр/MANIFESTUAC: No, если вы не хотите создать фрагмент контроля учетных Записей в манифесте.  
   
- Если не указать \/MANIFEST и указать комментарии [\/MANIFESTDEPENDENCY](../../build/reference/manifestdependency-specify-manifest-dependencies.md), создается файл манифеста.  Файл манифеста не создается при определении \/MANIFEST:NO.  
+ Если не указан параметр/MANIFEST, но указано [/MANIFESTDEPENDENCY](../../build/reference/manifestdependency-specify-manifest-dependencies.md) комментариях, создается файл манифеста. Файл манифеста не создается при указании /MANIFEST:NO.  
   
- Если указать \/MANIFEST, имя файла манифеста совпадает с именем выбранного выходного файла, но с MANIFEST в соответствии с именем файла.  Например, если имя файла вывода MyFile.exe очевидным, имя файла MyFile.exe.manifest.  Если указать \/MANIFESTFILE:,*name* манифеста, имя которого задается *name*.  
+ Если указан параметр/MANIFEST, имя файла манифеста совпадает имя выходного файла, но с расширением MANIFEST в имя файла. Например если MyFile.exe имени выходного файла, имя файла манифеста — MyFile.exe.manifest.  Если параметр/MANIFESTFILE:*имя*, имя манифеста является то, что указано в *имя*.  
   
-### Установка данного параметра компоновщика в среде разработки Visual Studio  
+### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>Задание данного параметра компоновщика в среде разработки Visual Studio  
   
-1.  Откройте диалоговое окно **Страницы свойств** проекта.  Дополнительные сведения см. в разделе [Открытие свойств страниц проекта](../../misc/how-to-open-project-property-pages.md).  
+1.  Откройте диалоговое окно **Страницы свойств** проекта. Дополнительные сведения см. в разделе [работа со свойствами проекта](../../ide/working-with-project-properties.md).  
   
-2.  Разверните узел **Свойства конфигурации**.  
+2.  Разверните **свойства конфигурации** узла.  
   
-3.  Разверните узел **Компоновщик**.  
+3.  Разверните **компоновщика** узла.  
   
-4.  Выберите страницу свойств **Файл манифеста**.  
+4.  Выберите **файл манифеста** страницу свойств.  
   
-5.  Измените свойство **Создавать манифест**.  
+5.  Изменить **создать манифест** свойство.  
   
-### Установка данного параметра компоновщика программным способом  
+### <a name="to-set-this-linker-option-programmatically"></a>Задание данного параметра компоновщика программным способом  
   
 1.  См. раздел <xref:Microsoft.VisualStudio.VCProjectEngine.VCLinkerTool.GenerateManifest%2A>.  
   
-## См. также  
+## <a name="see-also"></a>См. также  
  [Настройка параметров компоновщика](../../build/reference/setting-linker-options.md)   
  [Параметры компоновщика](../../build/reference/linker-options.md)

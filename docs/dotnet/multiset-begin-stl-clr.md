@@ -1,41 +1,39 @@
 ---
-title: "multiset::begin (STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::multiset::begin"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "begin - член [STL/CLR]"
+title: "MULTISET::Begin (STL/CLR) | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::multiset::begin
+dev_langs: C++
+helpviewer_keywords: begin member [STL/CLR]
 ms.assetid: 592a6331-0de5-484a-9962-0beda7082589
-caps.latest.revision: 16
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 14
+caps.latest.revision: "16"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: f8e7b09d3ecd86393ced44c742f5bae5e7dec8d3
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/24/2017
 ---
-# multiset::begin (STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="multisetbegin-stlclr"></a>multiset::begin (STL/CLR)
 Задает начало управляемой последовательности.  
   
-## Синтаксис  
+## <a name="syntax"></a>Синтаксис  
   
 ```  
 iterator begin();  
 ```  
   
-## Заметки  
- Функция\-член возвращает двунаправленный итератор, обозначает первый элемент контролируемой последовательности или только за пределы пустой последовательности.  Используется для получения итератора, который задает начало управляемой последовательности с параметром `current`, однако в случае изменения длины управляемой последовательности его состояние может измениться.  
+## <a name="remarks"></a>Примечания  
+ Функция-член возвращает двунаправленный итератор, указывающий первый элемент управляемой последовательности или непосредственно за концом пустой последовательности. Используется для получения итератора, который обозначает `current` начало управляемой последовательности, но его состояние можно изменить при изменении длины управляемой последовательности.  
   
-## Пример  
+## <a name="example"></a>Пример  
   
 ```  
 // cliext_multiset_begin.cpp   
@@ -64,14 +62,17 @@ int main()
   
 ```  
   
-  **a b c**  
-**\*begin\(\) \= a**  
-**\*\+\+begin\(\) \= B**   
-## Требования  
- **Заголовок:**\<cliext\/set\>  
+```Output  
+ a b c  
+*begin() = a  
+*++begin() = b  
+```  
+  
+## <a name="requirements"></a>Требования  
+ **Заголовок:** \<cliext и set >  
   
  **Пространство имен:** cliext  
   
-## См. также  
- [multiset](../dotnet/multiset-stl-clr.md)   
- [multiset::end](../dotnet/multiset-end-stl-clr.md)
+## <a name="see-also"></a>См. также  
+ [мультинабор (STL/CLR)](../dotnet/multiset-stl-clr.md)   
+ [multiset::end (STL/CLR)](../dotnet/multiset-end-stl-clr.md)

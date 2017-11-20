@@ -1,32 +1,30 @@
 ---
-title: "make_pair (STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::make_pair"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "make_pair - функция [STL/CLR]"
+title: "make_pair (STL/CLR) | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::make_pair
+dev_langs: C++
+helpviewer_keywords: make_pair function [STL/CLR]
 ms.assetid: 74733f2c-97b0-4d69-b431-5ab8f0de9e3e
-caps.latest.revision: 8
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 6
+caps.latest.revision: "8"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 8fba63cb9e10fcdccba8ed5c6a8a405184a4bca5
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/24/2017
 ---
-# make_pair (STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Выполните `pair` из пары значений.  
+# <a name="makepair-stlclr"></a>make_pair (STL/CLR)
+Сделать `pair` из пары значений.  
   
-## Синтаксис  
+## <a name="syntax"></a>Синтаксис  
   
 ```  
 template<typename Value1,  
@@ -34,25 +32,25 @@ template<typename Value1,
     pair<Value1, Value2> make_pair(Value1 first, Value2 second);  
 ```  
   
-#### Параметры  
- Value1  
- Тип первого создаватього программу\-оболочку значение.  
+#### <a name="parameters"></a>Параметры  
+ `Value1`  
+ Тип упакованного значения первой.  
   
- Value2  
- Тип второго создаватього программу\-оболочку значение.  
+ `Value2`  
+ Тип упакованного значение второго.  
   
- first  
- Первое значение, создающееся.  
+ `first`  
+ Первое значение программы-оболочки.  
   
- second  
- Во\-вторых, создающееся значение.  
+ `second`  
+ Второе значение для упаковки.  
   
-## Заметки  
- Шаблонная функция возвращает `pair<``Value1``,` `Value2``>(``first``,` `second``)`.  Он используется для создания объекта `pair``<``Value1``,` `Value2``>` из пары значений.  
+## <a name="remarks"></a>Примечания  
+ Эта функция шаблона возвращает `pair<Value1, Value2>(first, second)`. Можно использовать для создания `pair<Value1, Value2>` объекта из пары значений.  
   
-## Пример  
+## <a name="example"></a>Пример  
   
-```  
+```cpp  
 // cliext_make_pair.cpp   
 // compile with: /clr   
 #include <cliext/utility>   
@@ -69,12 +67,15 @@ int main()
   
 ```  
   
-  **\[x, 3\]**  
-**\[y, 4\]**   
-## Требования  
- **Заголовок:**\<cliext\/utility\>  
+```Output  
+[x, 3]  
+[y, 4]  
+```  
+  
+## <a name="requirements"></a>Требования  
+ **Заголовок:** \<cliext/программа >  
   
  **Пространство имен:** cliext  
   
-## См. также  
- [range\_adapter](../dotnet/range-adapter-stl-clr.md)
+## <a name="see-also"></a>См. также  
+ [range_adapter (STL/CLR)](../dotnet/range-adapter-stl-clr.md)

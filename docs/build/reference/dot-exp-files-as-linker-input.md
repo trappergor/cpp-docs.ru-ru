@@ -1,37 +1,36 @@
 ---
-title: "EXP-файлы в качестве входных файлов компоновщика | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "EXP-файлы [C++]"
-  - "EXP-файлы"
-  - "данные - экспортирование, EXP-файлы - экспорт"
-  - "функции - экспортирование"
-  - "функции - экспортирование, экспортируемые функции - информация"
-  - "функции [C++], экспорт"
-  - "библиотеки - импорт, компоновочные файлы"
-  - "связывание [C++], экспорты"
+title: ". EXP-файлы в качестве входных данных компоновщика | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- exporting functions
+- import libraries, linker files
+- linking [C++], exports
+- exporting functions, information about exported functions
+- exporting data, export (.exp) files
+- functions [C++], exporting
+- .exp files [C++]
+- EXP files
 ms.assetid: 399f5636-0a4d-462e-b500-5f5b9ae5ad22
-caps.latest.revision: 7
-caps.handback.revision: 7
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
+caps.latest.revision: "7"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: 39e515cadf2930cdbe5ef600bcba4c86cb79a191
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/24/2017
 ---
-# EXP-файлы в качестве входных файлов компоновщика
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Файлы экспорта \(EXP\) содержат сведения об экспортируемых функциях и элементах данных.  Когда программа LIB создает библиотеку импорта, она также создает и EXP\-файл.  EXP\-файл используется при компоновке программ, которые как экспортируют, так и импортируют объекты другой программы косвенно или напрямую.  При компоновке с EXP\-файлом программа LINK не создает библиотеку импорта, поскольку она предполагает, что программа LIB уже ее создала.  Дополнительные сведения о EXP\-файлах и библиотеках импорта см. в разделе [Работа с библиотеками импорта и файлами экспорта](../../build/reference/working-with-import-libraries-and-export-files.md).  
+# <a name="exp-files-as-linker-input"></a>EXP-файлы в качестве входных файлов компоновщика
+Файлы экспорта (EXP) содержат сведения о экспортируемые элементы функции и данные. Когда LIB создает библиотеку импорта, она также создает файл EXP. EXP-файл используется при компоновке программы, экспорт и импорт из другой программы, прямо или косвенно. При компоновке с EXP-файл, СВЯЗИ не создает библиотеку импорта, поскольку предполагается, что LIB уже создан. Дополнительные сведения о EXP файлы и библиотеки импорта в разделе [работа с библиотеками, импортировать и экспортировать файлы](../../build/reference/working-with-import-libraries-and-export-files.md).  
   
-## См. также  
- [Входные LINK\-файлы](../../build/reference/link-input-files.md)   
+## <a name="see-also"></a>См. также  
+ [Входные LINK-файлы](../../build/reference/link-input-files.md)   
  [Параметры компоновщика](../../build/reference/linker-options.md)

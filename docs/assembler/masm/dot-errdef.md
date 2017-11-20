@@ -1,38 +1,35 @@
 ---
-title: ".ERRDEF | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - ".ERRDEF"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - ".ERRDEF directive"
+title: ". ERRDEF | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: .ERRDEF
+dev_langs: C++
+helpviewer_keywords: .ERRDEF directive
 ms.assetid: 07e39826-56f7-4734-a9de-5ff72879af10
-caps.latest.revision: 7
-caps.handback.revision: 7
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
+caps.latest.revision: "7"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: 791c98cb8be29282650bfce9fc8cfb083eef4d47
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/24/2017
 ---
-# .ERRDEF
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Формирует ошибку, если *Имя* ранее определенные метка, переменная или символа.  
+# <a name="errdef"></a>.ERRDEF
+Если возникает ошибка *имя* ранее определенные метки, переменной или символ.  
   
-## Синтаксис  
+## <a name="syntax"></a>Синтаксис  
   
 ```  
   
 .ERRDEF name [[, message]]  
 ```  
   
-## См. также  
- [Directives Reference](../../assembler/masm/directives-reference.md)
+## <a name="see-also"></a>См. также  
+ [Справочник по директивам](../../assembler/masm/directives-reference.md)

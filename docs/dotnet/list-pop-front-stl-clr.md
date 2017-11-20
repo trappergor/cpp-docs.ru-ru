@@ -1,41 +1,39 @@
 ---
-title: "list::pop_front (STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::list::pop_front"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "pop_front - член [STL/CLR]"
+title: "List::pop_front (STL/CLR) | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::list::pop_front
+dev_langs: C++
+helpviewer_keywords: pop_front member [STL/CLR]
 ms.assetid: 6a0bad42-6796-41d9-a3e9-1488b3882574
-caps.latest.revision: 14
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 12
+caps.latest.revision: "14"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: aa9df1ea52b525d00aa77478f6fcbe1f3e29b29c
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/24/2017
 ---
-# list::pop_front (STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="listpopfront-stlclr"></a>list::pop_front (STL/CLR)
 Удаляет первый элемент.  
   
-## Синтаксис  
+## <a name="syntax"></a>Синтаксис  
   
 ```  
 void pop_front();  
 ```  
   
-## Заметки  
- Функция\-член удаляет первый элемент контролируемой последовательности, которая должна быть непустой.  Он используется для сокращения список одним элементом в начале.  
+## <a name="remarks"></a>Примечания  
+ Функция-член удаляет первый элемент управляемой последовательности, который должен быть пустым. Используется для уменьшения на один элемент в начале списка.  
   
-## Пример  
+## <a name="example"></a>Пример  
   
 ```  
 // cliext_list_pop_front.cpp   
@@ -64,15 +62,18 @@ int main()
   
 ```  
   
-  **a b c**  
- **B C.**   
-## Требования  
- **Заголовок:**\<cliext\/list\>  
+```Output  
+a b c  
+b c  
+```  
+  
+## <a name="requirements"></a>Требования  
+ **Заголовок:** \<cliext/list >  
   
  **Пространство имен:** cliext  
   
-## См. также  
- [list](../dotnet/list-stl-clr.md)   
- [list::pop\_back](../dotnet/list-pop-back-stl-clr.md)   
- [list::push\_back](../dotnet/list-push-back-stl-clr.md)   
- [list::push\_front](../Topic/list::push_front%20\(STL-CLR\).md)
+## <a name="see-also"></a>См. также  
+ [список (STL/CLR)](../dotnet/list-stl-clr.md)   
+ [List::pop_back (STL/CLR)](../dotnet/list-pop-back-stl-clr.md)   
+ [List::push_back (STL/CLR)](../dotnet/list-push-back-stl-clr.md)   
+ [list::push_front (STL/CLR)](../dotnet/list-push-front-stl-clr.md)

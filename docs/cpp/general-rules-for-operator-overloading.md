@@ -4,25 +4,21 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-language
+ms.technology: cpp-language
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- C++
-helpviewer_keywords:
-- operator overloading [C++], rules
+dev_langs: C++
+helpviewer_keywords: operator overloading [C++], rules
 ms.assetid: eb2b3754-35f7-4832-b1da-c502893dc0c7
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.translationtype: HT
-ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
-ms.openlocfilehash: 882c3777d2744a8a693512f564d7c3b1f1c1a46e
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/25/2017
-
+ms.openlocfilehash: 92bcbc85a3edf683d00818a4c1da76849dbc29cc
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="general-rules-for-operator-overloading"></a>Общие правила перегрузки операторов
 Приведенные ниже правила накладывают ограничения на реализацию перегруженных операторов. Тем не менее, они не применяются к [новый](../cpp/new-operator-cpp.md) и [удалить](../cpp/delete-operator-cpp.md) операторы, которые рассматриваются отдельно.  
@@ -58,7 +54,7 @@ ms.lasthandoff: 09/25/2017
   
 -   Бинарные операторы, объявленные как функции-члены, принимают один аргумент; при объявлении как глобальные функции они принимают два аргумента.  
   
--   Если оператор можно использовать как унарный и бинарный оператор (**&**, ** \* **, ** + **, и ** - **), каждая из которых использует можно перегрузить отдельно.  
+-   Если оператор можно использовать как унарный и бинарный оператор (**&**,  **\*** ,  **+** , и  **-** ), каждая из которых использует можно перегрузить отдельно.  
   
 -   Перегруженные операторы не могут иметь аргументов по умолчанию.  
   

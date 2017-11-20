@@ -4,12 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-language
+ms.technology: cpp-language
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - termination handlers [C++], handling exceptions in C++
 - structured exception handling [C++]
@@ -18,16 +16,15 @@ helpviewer_keywords:
 - try-catch keyword [C++], termination handlers
 - C++ exception handling, exception handlers
 ms.assetid: dd3b647d-c269-43a8-aab9-ad1458712976
-caps.latest.revision: 14
+caps.latest.revision: "14"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.translationtype: HT
-ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
-ms.openlocfilehash: 9098ac4914bdb9e054d4db27c0a5498c0f9d9ea8
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/25/2017
-
+ms.openlocfilehash: 60480cef84f04c8c962e94d8f550823f637cfd84
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="structured-exception-handling-cc"></a>Structured Exception Handling (C/C++)
 Хотя Windows и Visual C++ поддерживают структурированную обработку исключений (SEH), настоятельно рекомендуется использовать обработку исключений C++ в соответствии со стандартом ISO, поскольку это повышает переносимость и гибкость кода. Однако в имеющемся коде или в программах определенных видов можно продолжать использовать SEH.  

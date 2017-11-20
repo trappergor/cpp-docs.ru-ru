@@ -1,36 +1,35 @@
 ---
-title: "CDynamicAccessor::GetColumnCount | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "ATL.CDynamicAccessor.GetColumnCount"
-  - "ATL::CDynamicAccessor::GetColumnCount"
-  - "CDynamicAccessor::GetColumnCount"
-  - "CDynamicAccessor.GetColumnCount"
-  - "GetColumnCount"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "GetColumnCount - метод"
+title: "CDynamicAccessor::GetColumnCount | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- ATL.CDynamicAccessor.GetColumnCount
+- ATL::CDynamicAccessor::GetColumnCount
+- CDynamicAccessor::GetColumnCount
+- CDynamicAccessor.GetColumnCount
+- GetColumnCount
+dev_langs: C++
+helpviewer_keywords: GetColumnCount method
 ms.assetid: cd72cb01-6b89-4b13-9867-fbac6efc90d0
-caps.latest.revision: 8
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 19a105bae181f4186d6873f67b8cc4cb494f71b1
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/24/2017
 ---
-# CDynamicAccessor::GetColumnCount
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Извлекает число столбцов.  
+# <a name="cdynamicaccessorgetcolumncount"></a>CDynamicAccessor::GetColumnCount
+Возвращает число столбцов.  
   
-## Синтаксис  
+## <a name="syntax"></a>Синтаксис  
   
 ```  
   
@@ -38,11 +37,11 @@ DBORDINAL GetColumnCount( ) const throw( );
   
 ```  
   
-## Возвращаемое значение  
- Количество извлеченных столбцов.  
+## <a name="return-value"></a>Возвращаемое значение  
+ Получить число столбцов.  
   
-## Требования  
+## <a name="requirements"></a>Требования  
  **Заголовок:** atldbcli.h  
   
-## См. также  
+## <a name="see-also"></a>См. также  
  [Класс CDynamicAccessor](../../data/oledb/cdynamicaccessor-class.md)

@@ -33,36 +33,21 @@ f1_keywords:
 - complex/csinh
 - complex/csinhf
 - complex/csinhl
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - csinh function
 - csinhf function
 - csinhl function
 ms.assetid: cc616e55-d14d-4cd3-91f0-fbee03ce5edf
-caps.latest.revision: 11
+caps.latest.revision: "11"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.mt:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: 1bb16ced0ad3c7b0162c8000c2f8378aae612bd5
-ms.lasthandoff: 02/24/2017
-
+ms.openlocfilehash: 65c3a74ecfbdfba27d0b1ac4dff37915e8b4c3a3
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="csinh-csinhf-csinhl"></a>csinh, csinhf, csinhl
 Извлекает гиперболический синус комплексного числа.  

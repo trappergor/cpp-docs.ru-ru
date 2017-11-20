@@ -4,46 +4,28 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-windows
+ms.technology: cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
 - CInterfaceList
 - ATLCOLL/ATL::CInterfaceList
 - ATLCOLL/ATL::CInterfaceList::CInterfaceList
-dev_langs:
-- C++
-helpviewer_keywords:
-- CInterfaceList class
+dev_langs: C++
+helpviewer_keywords: CInterfaceList class
 ms.assetid: 2077764d-25e5-4b3d-96c8-08a287bbcd25
-caps.latest.revision: 19
+caps.latest.revision: "19"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 5a0c6a1062330f952bb8fa52bc934f6754465513
-ms.openlocfilehash: 50d86163080c5a0d0a7bb9ed6d77a40ac73722e7
-ms.contentlocale: ru-ru
-ms.lasthandoff: 02/24/2017
-
+ms.openlocfilehash: 86e92f86896ac7c5a06b73a68e2d6889d10ea87b
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="cinterfacelist-class"></a>Класс CInterfaceList
-Этот класс предоставляет методы, используемые при создании список указателей интерфейса СОМ.  
+Этот класс предоставляет методы, используемые при построении список указателей интерфейса СОМ.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -59,7 +41,7 @@ class CInterfaceList
  COM-интерфейс, указав тип указателя для сохранения.  
   
  `piid`  
- Указатель на идентификатор IID `I`.  
+ Указатель на IID `I`.  
   
 ## <a name="members"></a>Члены  
   
@@ -67,10 +49,10 @@ class CInterfaceList
   
 |Имя|Описание|  
 |----------|-----------------|  
-|[CInterfaceList::CInterfaceList](#cinterfacelist)|Конструктор для списка интерфейса.|  
+|[CInterfaceList::CInterfaceList](#cinterfacelist)|Конструктор список интерфейсов.|  
   
 ## <a name="remarks"></a>Примечания  
- Этот класс предоставляет конструктор и производные методы для создания списка указателей интерфейса СОМ. Используйте [CInterfaceArray](../../atl/reference/cinterfacearray-class.md) при массив является обязательным.  
+ Этот класс предоставляет конструктор и производные методы для создания списка указателей интерфейса СОМ. Используйте [CInterfaceArray](../../atl/reference/cinterfacearray-class.md) когда массив является обязательным.  
   
  Дополнительные сведения см. в разделе [классы коллекций ATL](../../atl/atl-collection-classes.md).  
   
@@ -83,7 +65,7 @@ class CInterfaceList
  **Заголовок:** atlcoll.h  
   
 ##  <a name="cinterfacelist"></a>CInterfaceList::CInterfaceList  
- Конструктор для списка интерфейса.  
+ Конструктор список интерфейсов.  
   
 ```
 CInterfaceList(UINT nBlockSize = 10) throw();
@@ -94,11 +76,10 @@ CInterfaceList(UINT nBlockSize = 10) throw();
  Размер блока по умолчанию 10.  
   
 ### <a name="remarks"></a>Примечания  
- Размер блока измеряется объем памяти, выделяемый при новый элемент является обязательным. Размер блока снизить вызовы процедур выделения памяти, но использует больше ресурсов.  
+ Размер блока — это мера, объем памяти, выделяемый при новый элемент является обязательным. Увеличенный размер блока, уменьшите количество вызовов процедур выделения памяти, но использует больше ресурсов.  
   
 ## <a name="see-also"></a>См. также  
  [Класс CAtlList](../../atl/reference/catllist-class.md)   
  [Класс CComQIPtr](../../atl/reference/ccomqiptr-class.md)   
  [Класс CComQIPtrElementTraits](../../atl/reference/ccomqiptrelementtraits-class.md)   
  [Общие сведения о классе](../../atl/atl-class-overview.md)
-

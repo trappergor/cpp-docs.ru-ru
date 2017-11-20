@@ -1,45 +1,43 @@
 ---
-title: "hash_set::lower_bound (STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::hash_set::lower_bound"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "lower_bound - член [STL/CLR]"
+title: "hash_set::lower_bound (STL/CLR) | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::hash_set::lower_bound
+dev_langs: C++
+helpviewer_keywords: lower_bound member [STL/CLR]
 ms.assetid: 54fe8ee5-1977-4192-9cc6-b51e84b03a16
-caps.latest.revision: 16
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 14
+caps.latest.revision: "16"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: ee6c0cbea5a6e4b2d4730de7bb55564bb8200e85
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/24/2017
 ---
-# hash_set::lower_bound (STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Находит начало диапазона, соответствующий указанному ключу.  
+# <a name="hashsetlowerbound-stlclr"></a>hash_set::lower_bound (STL/CLR)
+Начало находит диапазон, соответствующий указанному ключу.  
   
-## Синтаксис  
+## <a name="syntax"></a>Синтаксис  
   
 ```  
 iterator lower_bound(key_type key);  
 ```  
   
-#### Параметры  
- key  
- Значение ключа, которое необходимо найти.  
+#### <a name="parameters"></a>Параметры  
+ клавиша  
+ Искомое значение ключа.  
   
-## Заметки  
- Функция\-член определяет первый элемент `X` в контролируемой последовательности, хэширует к одному блоку как `key` и имеет соответствующий заказ на `key`.  Если такой элемент не существует, возвращается [hash\_set::end](../dotnet/hash-set-end-stl-clr.md)`()`; в противном случае возвращается итератор, обозначает `X`.  Он используется для поиска начало последовательности элементов в контролируемой последовательности, соответствующие указанному ключу.  
+## <a name="remarks"></a>Примечания  
+ Функция-член определяет первый элемент `X` в управляемой последовательности, которая хэширует с одним контейнером, как `key` и соответствующим образом для `key`. Если такого элемента не существует, она возвращает [hash_set::end (STL/CLR)](../dotnet/hash-set-end-stl-clr.md)`()`; в противном случае он возвращает итератор, задающий `X`. Используется для поиска в начале последовательности элементов в данный момент в управляемой последовательности, которые соответствуют заданному ключу.  
   
-## Пример  
+## <a name="example"></a>Пример  
   
 ```  
 // cliext_hash_set_lower_bound.cpp   
@@ -71,18 +69,21 @@ int main()
   
 ```  
   
-  **a b c**  
-**lower\_bound\(L'x'\)\=\=end\(\) \= true**  
-**\*lower\_bound \(L'а\) \= a**  
-**\*lower\_bound \(L'б\) \= B**   
-## Требования  
- **Заголовок:**\<cliext\/hash\_set\>  
+```Output  
+ a b c  
+lower_bound(L'x')==end() = True  
+*lower_bound(L'a') = a  
+*lower_bound(L'b') = b  
+```  
+  
+## <a name="requirements"></a>Требования  
+ **Заголовок:** \<cliext/hash_set >  
   
  **Пространство имен:** cliext  
   
-## См. также  
- [hash\_set](../dotnet/hash-set-stl-clr.md)   
- [hash\_set::count](../dotnet/hash-set-count-stl-clr.md)   
- [hash\_set::equal\_range](../dotnet/hash-set-equal-range-stl-clr.md)   
- [hash\_set::find](../Topic/hash_set::find%20\(STL-CLR\).md)   
- [hash\_set::upper\_bound](../dotnet/hash-set-upper-bound-stl-clr.md)
+## <a name="see-also"></a>См. также  
+ [hash_set (STL/CLR)](../dotnet/hash-set-stl-clr.md)   
+ [hash_set::Count (STL/CLR)](../dotnet/hash-set-count-stl-clr.md)   
+ [hash_set::equal_range (STL/CLR)](../dotnet/hash-set-equal-range-stl-clr.md)   
+ [hash_set::Find (STL/CLR)](../dotnet/hash-set-find-stl-clr.md)   
+ [hash_set::upper_bound (STL/CLR)](../dotnet/hash-set-upper-bound-stl-clr.md)

@@ -1,59 +1,119 @@
 ---
-title: "Класс Platform::MTAThreadAttribute | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/30/2016"
-ms.prod: "windows-client-threshold"
-ms.technology: ""
-ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-f1_keywords: 
-  - "Platform/Platform::MTAThreadAttribute"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Класс Platform::MTAThreadAttribute"
+title: "Класс Platform::MTAThreadAttribute | Документы Microsoft"
+ms.custom: 
+ms.date: 12/30/2016
+ms.technology: cpp-windows
+ms.reviewer: 
+ms.suite: 
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+f1_keywords:
+- VCCORLIB/Platform::MTAThreadAttribute::Equals
+- VCCORLIB/Platform::MTAThreadAttribute::GetHashCode
+- VCCORLIB/Platform::MTAThreadAttribute::ToString
+dev_langs: C++
+helpviewer_keywords: Platform::MTAThreadAttribute Class
 ms.assetid: bfc546a7-4333-4407-85b4-4721565e1f44
-caps.latest.revision: 4
-author: "ghogen"
-ms.author: "ghogen"
-manager: "ghogen"
-caps.handback.revision: 4
+caps.latest.revision: "4"
+author: ghogen
+ms.author: ghogen
+manager: ghogen
+ms.openlocfilehash: 6c45256272f7d72dd1da6b6486f9358eaf062b8d
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/24/2017
 ---
-# Класс Platform::MTAThreadAttribute
-Указывает, что потоковая модель для приложения является многопотоковым подразделением \(MTA\).  
+# <a name="platformmtathreadattribute-class"></a>Класс Platform::MTAThreadAttribute
+Указывает, что потоковая модель для приложения является многопотоковым подразделением (MTA).  
   
-## Синтаксис  
+## <a name="syntax"></a>Синтаксис  
   
 ```  
 public ref class MTAThreadAttribute sealed : Attribute  
 ```  
   
-## Члены  
+### <a name="members"></a>Члены  
   
-### Открытые конструкторы  
-  
-|Имя|Описание|  
-|---------|--------------|  
-|Конструктор [Конструктор MTAThreadAttribute](../cppcx/mtathreadattribute-constructor-1.md)|Инициализирует новый экземпляр класса.|  
-  
-### Открытые методы  
- Атрибут MTAThreadAttribute наследует от [Класс Platform::Object](../cppcx/platform-object-class.md). Атрибут MTAThreadAttribute также перегружает или имеет следующие члены:  
+### <a name="public-constructors"></a>Открытые конструкторы  
   
 |Имя|Описание|  
-|---------|--------------|  
-|[MTAThreadAttribute::Equals](../cppcx/mtathreadattribute-equals.md)|Определяет, равен ли заданный объект текущему объекту.|  
-|[MTAThreadAttribute::GetHashCode](../cppcx/mtathreadattribute-gethashcode.md)|Возвращает хэш\-код данного экземпляра.|  
-|[MTAThreadAttribute::ToString](../cppcx/mtathreadattribute-tostring.md)|Возвращает строку, представляющую текущий объект.|  
+|----------|-----------------|  
+|[1 конструктор MTAThreadAttribute](#ctor) конструктор|Инициализирует новый экземпляр класса.|  
   
-## Иерархия наследования  
+### <a name="public-methods"></a>Открытые методы  
+ Атрибут MTAThreadAttribute наследует от [класса Platform::Object](../cppcx/platform-object-class.md). Атрибут MTAThreadAttribute также перегружает или имеет следующие члены:  
+  
+|Имя|Описание|  
+|----------|-----------------|  
+|[MTAThreadAttribute::Equals](#equals)|Определяет, равен ли заданный объект текущему объекту.|  
+|[MTAThreadAttribute::GetHashCode](#gethashcode)|Возвращает хэш-код данного экземпляра.|  
+|[MTAThreadAttribute::ToString](#tostring)|Возвращает строку, представляющую текущий объект.|  
+  
+## <a name="inheritance-hierarchy"></a>Иерархия наследования  
  `Platform`  
   
-## Требования  
+### <a name="requirements"></a>Требования  
  **Метаданные:** platform.winmd  
   
  **Пространство имен:** Platform  
+
+
+
+## <a name="ctor"></a>Конструктор MTAThreadAttribute
+Инициализирует новый экземпляр класса MTAThreadAttribute.  
   
-## См. также  
- [\(NOTINBUILD\) Пространство имен Platform](http://msdn.microsoft.com/ru-ru/f3ce3eab-028c-4204-ba9f-9ab8af17c8c4)
+### <a name="syntax"></a>Синтаксис  
+  
+```cpp  
+public:MTAThreadAttribute()  
+```  
+  
+
+
+## <a name="equals"></a>MTAThreadAttribute::Equals
+Определяет, равен ли заданный объект текущему объекту.  
+  
+### <a name="syntax"></a>Синтаксис  
+  
+```cpp  
+public:virtual override bool Equals(  Object^ obj)  
+```  
+  
+### <a name="parameters"></a>Параметры  
+ obj  
+ Объект для сравнения.  
+  
+### <a name="return-value"></a>Возвращаемое значение  
+ Значение `true`, если объекты равны, в противном случае — значение `false`.  
+  
+
+
+## <a name="gethashcode"></a>MTAThreadAttribute::GetHashCode
+Возвращает хэш-код данного экземпляра.  
+  
+### <a name="syntax"></a>Синтаксис  
+  
+```cpp  
+public:int GetHashCode()  
+```  
+  
+### <a name="return-value"></a>Возвращаемое значение  
+ Хэш-код данного экземпляра.  
+  
+
+
+## <a name="tostring"></a>MTAThreadAttribute::ToString
+Возвращает строку, представляющую текущий объект.  
+  
+### <a name="syntax"></a>Синтаксис  
+  
+```cpp  
+public:String^ ToString()  
+```  
+  
+### <a name="return-value"></a>Возвращаемое значение  
+ Строка, представляющая текущий объект.  
+    
+## <a name="see-also"></a>См. также  
+ [Пространство имен Platform](platform-namespace-c-cx.md)

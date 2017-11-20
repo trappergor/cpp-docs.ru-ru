@@ -4,25 +4,21 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-language
+ms.technology: cpp-language
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-dev_langs:
-- C++
-helpviewer_keywords:
-- declarators, about declarators
+dev_langs: C++
+helpviewer_keywords: declarators, about declarators
 ms.assetid: 0f2e2312-80bd-4154-8345-718bd9ed2173
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.translationtype: HT
-ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
-ms.openlocfilehash: 4a8f795a23f4e93f02d5d6b5ce98d60555a432d6
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/25/2017
-
+ms.openlocfilehash: d64e375375deac828689f37475d9bfe04b08925b
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="overview-of-declarators"></a>Общие сведения о деклараторах
 Деклараторы — это компоненты объявления, которые определяют имена объектов или функций. Деклараторы также указывают, является ли именованный объект массивом, объектом, указателем или ссылкой.  Хотя деклараторы и не задают базовый тип, однако они изменяют хранящуюся в нем информацию о типе, что позволяет определять производные типы, например указатели, ссылки и массивы.  Применительно к функциям декларатор действует на спецификатор типа. Это дает возможность полностью определить тип возвращаемого функцией значения: объект, указатель или ссылка. (Спецификаторы, о которых говорится в [объявления и определения](declarations-and-definitions-cpp.md), передают такие свойства, такие как тип и класс хранения. Модификаторы, которые рассматриваются в этом разделе и в [модификаторы, используемые Microsoft](../cpp/microsoft-specific-modifiers.md), изменяют деклараторы.) На следующем рисунке представлено полное объявление функции `MyFunction` и указаны входящие в него компоненты.  
@@ -56,7 +52,7 @@ const char *pch, ch;
   
  **Деклараторы для указателей, ссылок и массивов**  
   
- Если перед именем находится оператор указателя, то объект создается как указатель или ссылка.  ** \* ** Оператор объявляет имя в качестве указателя, а ** & ** оператор объявляет его как ссылку.  
+ Если перед именем находится оператор указателя, то объект создается как указатель или ссылка.  **\***  Оператор объявляет имя в качестве указателя, а  **&**  оператор объявляет его как ссылку.  
   
 ```  
 int *i; // declarator is *i  

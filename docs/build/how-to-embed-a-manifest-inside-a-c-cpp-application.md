@@ -1,57 +1,56 @@
 ---
-title: "Практическое руководство. Внедрение манифеста в приложение C или C++ | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/15/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "внедренные манифесты"
-  - "makefile - файлы, обновление до внедренного манифеста"
-  - "манифесты [C++]"
+title: "Как: встраивания манифеста приложения C/C++ | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- manifests [C++]
+- embedding manifests
+- makefiles, updating to embed manifest
 ms.assetid: ec0bac69-2fdc-466c-ab0d-710a22974e5d
-caps.latest.revision: 16
-caps.handback.revision: 16
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
+caps.latest.revision: "16"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: 3bc7646dab51b9a1fdd73b23d1f58c7b474c363e
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/24/2017
 ---
-# Практическое руководство. Внедрение манифеста в приложение C или C++
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Рекомендуется встраивать в конечный двоичный файл приложения C или C\+\+ собственный манифест, так как это гарантирует корректное поведение во время выполнения почти во всех ситуациях.  По умолчанию среда [!INCLUDE[vsprvs](../assembler/masm/includes/vsprvs_md.md)] пытается встроить манифест при построении проекта из исходных файлов; дополнительные сведения см. в разделе [Создание манифестов в Visual Studio](../Topic/Manifest%20Generation%20in%20Visual%20Studio.md).  Однако, если сборка приложения выполнения с использованием nmake, необходимо внести некоторые изменения в существующий файл makefile.  В этом разделе показано, как изменить существующий файл makefile, чтобы автоматически встраивать манифест в конечный двоичный файл.  
+# <a name="how-to-embed-a-manifest-inside-a-cc-application"></a>Практическое руководство. Внедрение манифеста в приложение C или C++
+Что приложения C/C++ (или библиотека) имеют его манифестом, включаемым в конечный двоичный файл, так как это гарантирует поведения правильный во время выполнения, в большинстве случаев рекомендуется. По умолчанию [!INCLUDE[vsprvs](../assembler/masm/includes/vsprvs_md.md)] пытается встроить манифест при построении проекта из исходных файлов см. в разделе [создание манифеста в Visual Studio](../build/manifest-generation-in-visual-studio.md) для получения дополнительной информации. Однако если приложение создается с использованием nmake, необходимы некоторые изменения в существующий файл makefile. В этом разделе показано, как изменить существующий файл makefile, чтобы автоматически внедряют манифест в конечный двоичный файл.  
   
-## Два подхода  
- Существует два подхода для внедрения манифеста в приложение или библиотеку.  
+## <a name="two-approaches"></a>Два подхода  
+ Существует два способа внедрения манифеста в приложение или библиотека.  
   
--   Если не используется инкрементное построение, можно напрямую встроить манифест, используя командную строку, как показано ниже, после построения приложения:  
+-   Если вы не выполняете инкрементного построения можно непосредственно внедрить манифест, используя командную строку следующего вида как на этапе после построения:  
   
-     **mt.exe –manifest MyApp.exe.manifest \-outputresource:MyApp.exe;1**  
+     **MT.exe-манифеста MyApp.exe.manifest-outputresource:MyApp.exe;1**  
   
      или  
   
-     **mt.exe –manifest MyLibrary.dll.manifest \-outputresource:MyLibrary.dll;2**  
+     **MT.exe-манифеста MyLibrary.dll.manifest-outputresource:MyLibrary.dll;2**  
   
-     \(1 для EXE, 2 для DLL\).  
+     (1 для EXE-файла, 2 для библиотеки DLL).  
   
--   При инкрементном построении прямое редактирование ресурса, показанное выше, отключит инкрементное построение и вызовет повторную полную сборку, поэтому следует использовать другой подход.  
+-   При выполнении инкрементного построения прямое редактирование ресурса, как показано ниже, могут отключить инкрементное построение и вызвать полное перестроение; Поэтому необходимо принять другой подход.  
   
-    -   Скомпонуйте двоичный файл, чтобы создать файл MyApp.exe.manifest.  
+    -   Связывание двоичного файла для создания файла MyApp.exe.manifest.  
   
     -   Преобразуйте манифест в файл ресурсов.  
   
-    -   Выполните повторную компоновку \(инкрементную\), чтобы встроить ресурс манифеста в двоичный файл.  
+    -   Повторно инкрементная компоновка () для внедрения ресурса манифеста в двоичный файл.  
   
- В следующих примерах показано, как изменить файлы makefile, чтобы использовать оба подхода.  
+ В следующих примерах изменить файл makefile, чтобы включить оба способа.  
   
-## Файлы makefile \(перед изменением\)  
- Рассмотрим скрипт nmake для файла MyApp.exe, простого приложения, построенного из одного файла:  
+## <a name="makefiles-before"></a>Makefile-файлы (раньше)  
+ Рассмотрим сценарий nmake для MyApp.exe, простого приложения, построенного из одного файла.  
   
 ```  
 # build MyApp.exe  
@@ -71,9 +70,9 @@ clean :
     del MyApp.obj MyApp.exe  
 ```  
   
- Если этот скрипт выполняется без изменений в среде Visual C\+\+, то файл MyApp.exe успешно создается.  Также создается внешний файл манифеста MyApp.exe.manifest, который используется операционной системой для загрузки зависимых сборок во время выполнения.  
+ Если этот сценарий выполняется без изменений в Visual C++, успешно создается MyApp.exe. Он также создает внешний файл манифеста MyApp.exe.manifest, который для использования операционной системой для загрузки зависимых сборок во время выполнения.  
   
- Скрипт nmake для библиотеки MyLibrary.dll выглядит аналогично:  
+ Скрипт nmake для MyLibrary.dll очень похож:  
   
 ```  
 # build MyLibrary.dll  
@@ -96,8 +95,8 @@ clean :
     del MyLibrary.obj MyLibrary.dll  
 ```  
   
-## Файлы makefile \(после изменения\)  
- Для построения со встроенными манифестами следует внести четыре небольших изменения в файлы makefile.  Для файла makefile приложения MyApp.exe:  
+## <a name="makefiles-after"></a>Makefile-файлы (теперь)  
+ Для построения со встроенными манифестами следует внести четыре небольших изменения в файлы makefile. Для проекта makefile MyApp.exe:  
   
 ```  
 # build MyApp.exe  
@@ -127,7 +126,7 @@ clean :
 #^^^^^^^^^^^^^^^^^^^^^^^^^ Change #4. (Add full path if necessary.)  
 ```  
   
- Для файла makefile библиотеки MyLibrary.dll:  
+ Для проекта makefile MyLibrary.dll:  
   
 ```  
 # build MyLibrary.dll  
@@ -160,9 +159,9 @@ clean :
 #^^^^^^^^^^^^^^^^^^^^^^^^^ Change #4. (Add full path if necessary.)  
 ```  
   
- Теперь в файлы makefile включены два файла, выполняющие работу, makefile.inc и makefile.targ.inc.  
+ Makefile-файлы теперь включают два файла, выполните действия, makefile.inc и makefile.targ.inc.  
   
- Создайте файл makefile.inc и скопируйте в него следующий код:  
+ Создайте файл makefile.inc и скопируйте в него следующий:  
   
 ```  
 # makefile.inc -- Include this file into existing makefile at the very top.  
@@ -233,7 +232,7 @@ _VC_MANIFEST_CLEAN=
 ####################################################  
 ```  
   
- Теперь создайте файл makefile.targ.inc и скопируйте в него следующий код:  
+ Теперь создайте makefile.targ.inc и скопируйте в него следующий:  
   
 ```  
 # makefile.targ.inc - include this at the very bottom of the existing makefile  
@@ -260,5 +259,5 @@ $(_VC_MANIFEST_BASENAME).auto.manifest :
 # end of makefile.targ.inc  
 ```  
   
-## См. также  
- [Основные сведения о создании манифестов для программ C\/C\+\+](../Topic/Understanding%20Manifest%20Generation%20for%20C-C++%20Programs.md)
+## <a name="see-also"></a>См. также  
+ [Основные сведения о создании манифестов для программ на C/C++](../build/understanding-manifest-generation-for-c-cpp-programs.md)

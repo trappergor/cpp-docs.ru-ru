@@ -1,32 +1,32 @@
 ---
-title: "Практическое руководство. Использование gcnew для создания типов значений, а также использование неявной упаковки-преобразования | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "упаковка-преобразование, неявные"
-  - "gcnew - ключевое слово [C++], создание типов значений"
-  - "типы значений, создание"
+title: "Как: использование gcnew для создания типов значений и использование неявной упаковки-преобразования | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- gcnew keyword [C++], creating value types
+- boxing, implicit
+- value types, creating
 ms.assetid: ceb48841-d6bd-47be-a167-57f44c961603
-caps.latest.revision: 8
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: db569feb489fc73c7460e2444e3d2340c1a5be13
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/24/2017
 ---
-# Практическое руководство. Использование gcnew для создания типов значений, а также использование неявной упаковки-преобразования
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-С помощью [gcnew](../windows/ref-new-gcnew-cpp-component-extensions.md) от типа значения создает упакованный тип значения, которые затем могут быть помещены в управляемом, мусор\- собранная куча.  
+# <a name="how-to-use-gcnew-to-create-value-types-and-use-implicit-boxing"></a>Практическое руководство. Использование gcnew для создания типов значений, а также использование неявной упаковки-преобразования
+С помощью [gcnew](../windows/ref-new-gcnew-cpp-component-extensions.md) на значение типа создаст упакованным типом значения, который может быть помещен в куче, управляемая и сбора мусора.  
   
-## Пример  
+## <a name="example"></a>Пример  
   
 ```  
 // vcmcppv2_explicit_boxing4.cpp  
@@ -53,5 +53,5 @@ int main() {
 }  
 ```  
   
-## См. также  
- [Упаковка\-преобразование](../windows/boxing-cpp-component-extensions.md)
+## <a name="see-also"></a>См. также  
+ [Упаковка-преобразование](../windows/boxing-cpp-component-extensions.md)

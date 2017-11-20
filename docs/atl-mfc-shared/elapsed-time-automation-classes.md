@@ -1,49 +1,50 @@
 ---
-title: "Elapsed Time: Automation Classes | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "adding dates"
-  - "Automation classes, затраченное время"
-  - "calculating dates and times"
-  - "вычисления, дата и время"
-  - "даты, calculating intervals"
-  - "затраченное время, calculating in Automation"
-  - "intervals, дата и время"
-  - "время, elapsed"
+title: "Затраченное время: Классы автоматизации | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+dev_langs: C++
+helpviewer_keywords:
+- adding dates
+- calculating dates and times
+- dates, calculating intervals
+- elapsed time, calculating in Automation
+- Automation classes, elapsed time
+- time, elapsed
+- intervals, date and time
+- calculations, date and time
 ms.assetid: 26b34b37-c10e-4b91-82c3-1dc5ffb5361f
-caps.latest.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 6
+caps.latest.revision: "10"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 51479f73112ed80ee981f3919fd3941d1eb0c8f2
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/24/2017
 ---
-# Elapsed Time: Automation Classes
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+# <a name="elapsed-time-automation-classes"></a>Затраченное время: Классы автоматизации
+Эта процедура показано, как вычислить разницу между двумя `CTime` объектов и get `CTimeSpan` результат.  
+  
+#### <a name="to-calculate-elapsed-time"></a>Для вычисления истекшего времени  
+  
+1.  Создайте два `COleDateTime` объектов.  
+  
+2.  Задайте одно из `COleDateTime` объектов на текущий момент времени.  
+  
+3.  Выполнение некоторых трудоемкой задачей.  
+  
+4.  Задать другие `COleDateTime` объекта на текущий момент времени.  
+  
+5.  Найти разность между двумя значениями времени.  
+  
+     [!code-cpp[NVC_ATLMFC_Utilities#178](../atl-mfc-shared/codesnippet/cpp/elapsed-time-automation-classes_1.cpp)]  
+  
+## <a name="see-also"></a>См. также  
+ [Дата и время. Поддержка автоматизации](../atl-mfc-shared/date-and-time-automation-support.md)
 
-Эта процедура показывает, как вычислить разность между объектами `CTime` 2 и получить результат `CTimeSpan`.  
-  
-#### Вычислить общее затраченное время  
-  
-1.  Создание объекта `COleDateTime` 2.  
-  
-2.  Задайте один из объектов `COleDateTime` к текущему времени.  
-  
-3.  Выполнить некоторую трудоемких задачу.  
-  
-4.  Установите другой объект `COleDateTime` к текущему времени.  
-  
-5.  Предположим, что разница между временем 2.  
-  
-     [!code-cpp[NVC_ATLMFC_Utilities#178](../atl-mfc-shared/codesnippet/CPP/elapsed-time-automation-classes_1.cpp)]  
-  
-## См. также  
- [Date and Time: Automation Support](../Topic/Date%20and%20Time:%20Automation%20Support.md)

@@ -1,32 +1,30 @@
 ---
-title: "greater (STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::greater"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "greater - функция [STL/CLR]"
+title: "больше (STL/CLR) | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::greater
+dev_langs: C++
+helpviewer_keywords: greater function [STL/CLR]
 ms.assetid: a6dfe5e3-b5a5-4ec4-8e53-8dd33a37d10d
-caps.latest.revision: 18
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 16
+caps.latest.revision: "18"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 47a2e525158d76182387f8ff82d6d0e08fd003c8
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/24/2017
 ---
-# greater (STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Описание класса шаблона функтором, возвращает значение true, вызывается, только если первый аргумент больше, чем второй.  Он используется определяется объект функции с точки зрения его типа аргумента.  
+# <a name="greater-stlclr"></a>greater (STL/CLR)
+Класс шаблона описывает функтор, что при вызове возвращает значение true только в том случае, если первый аргумент больше, чем второй. Она используется укажите объект функции, с точки зрения его типа аргумента.  
   
-## Синтаксис  
+## <a name="syntax"></a>Синтаксис  
   
 ```  
 template<typename Arg>  
@@ -49,34 +47,34 @@ public:
     };  
 ```  
   
-#### Параметры  
- Аргумент  
+#### <a name="parameters"></a>Параметры  
+ Arg  
  Тип аргументов.  
   
-## Функции\-члены  
+## <a name="member-functions"></a>Функции-члены  
   
 |Определение типа|Описание|  
-|----------------------|--------------|  
-|delegate\_type|Тип универсального метод\-делегата.|  
-|first\_argument\_type|Тип первого аргумента функтором.|  
-|result\_type|Тип результата функтором.|  
-|second\_argument\_type|Тип второго аргумента функтором.|  
+|---------------------|-----------------|  
+|delegate_type|Тип универсального метода-делегата.|  
+|first_argument_type|Тип первого аргумента функтор.|  
+|result_type|Тип результата функтор.|  
+|second_argument_type|Тип второго аргумента функтор.|  
   
 |Член|Описание|  
-|----------|--------------|  
-|большой|Построение функтором.|  
+|------------|-----------------|  
+|greater|Создает функтор.|  
   
 |Оператор|Описание|  
-|--------------|--------------|  
-|operator\(\)|Вычисляет нужную функцию.|  
-|delegate\_type^ оператора|Возвращает функтором делегату.|  
+|--------------|-----------------|  
+|operator()|Вычисляет нужной функции.|  
+|delegate_type оператор ^|Приводит функтора к делегату.|  
   
-## Заметки  
- Описание класса шаблона функтором 2 — аргумента.  Он определяет оператор `operator()` члена, что, когда объект вызывается как функция возвращается только значение true, если первый аргумент больше, чем второй.  
+## <a name="remarks"></a>Примечания  
+ Класс шаблона описывает функтор двумя аргументами. Он определяет оператор-член `operator()` , чтобы при вызове объекта как функция, возвращается значение true, только если первый аргумент больше, чем второй.  
   
- Можно также передать объект в качестве аргумента функции, тип которого `delegate_type^` и он будет преобразован соответствующим образом.  
+ Объект также можно передать в качестве аргумента функции, тип которого является `delegate_type^` и он будет преобразован соответствующим образом.  
   
-## Пример  
+## <a name="example"></a>Пример  
   
 ```  
 // cliext_greater.cpp   
@@ -116,13 +114,16 @@ int main()
   
 ```  
   
-  **4 3**  
- **3 3**  
- **1 0**   
-## Требования  
- **Заголовок:**\<cliext\/functional\>  
+```Output  
+4 3  
+3 3  
+1 0  
+```  
+  
+## <a name="requirements"></a>Требования  
+ **Заголовок:** \<cliext и функционального >  
   
  **Пространство имен:** cliext  
   
-## См. также  
- [less\_equal](../dotnet/less-equal-stl-clr.md)
+## <a name="see-also"></a>См. также  
+ [less_equal (STL/CLR)](../dotnet/less-equal-stl-clr.md)

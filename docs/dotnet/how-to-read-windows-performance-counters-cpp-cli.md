@@ -1,42 +1,41 @@
 ---
-title: "Практическое руководство. Чтение из счетчиков производительности Windows (C++/CLI) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "счетчики, чтение из счетчиков производительности Windows"
-  - "производительность"
-  - "счетчики производительности"
-  - "счетчики производительности, чтение из счетчиков производительности Windows"
-  - "контроль производительности"
-  - "контроль производительности, счетчики производительности Windows"
-  - "производительность, счетчики"
+title: "Как: чтение из счетчиков производительности Windows (C + +/ CLI) | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- performance counters
+- performance counters, reading Windows performance counters
+- performance monitoring, Windows performance counters
+- performance, counters
+- counters, reading Windows performance counters
+- performance
+- performance monitoring
 ms.assetid: 9e1c836c-cb0f-4f37-9a93-3dca6412d6b1
-caps.latest.revision: 12
-caps.handback.revision: 12
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "12"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 3ad77e459d32ed0fc0b3798d2a37b4754d556f20
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/24/2017
 ---
-# Практическое руководство. Чтение из счетчиков производительности Windows (C++/CLI)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Некоторые приложения и подсистемы Windows предоставляют данные о производительности посредством системы производительности Windows.  Доступ к таким счетчикам может осуществляться с использованием классов <xref:System.Diagnostics.PerformanceCounterCategory> и <xref:System.Diagnostics.PerformanceCounter>, находящихся в пространстве имен <xref:System.Diagnostics?displayProperty=fullName>.  
+# <a name="how-to-read-windows-performance-counters-ccli"></a>Практическое руководство. Чтение из счетчиков производительности Windows (C++/CLI)
+Некоторые приложения и подсистемы Windows предоставляют данные о производительности посредством системы производительности Windows. Эти счетчики можно осуществлять с помощью <xref:System.Diagnostics.PerformanceCounterCategory> и <xref:System.Diagnostics.PerformanceCounter> классов, которые находятся в <xref:System.Diagnostics?displayProperty=fullName> пространства имен.  
   
- В следующем примере кода демонстрируется использование этих классов для получения и отображения счетчика, обновляемого Windows, для указания процента времени занятости процессора.  
+ В следующем примере кода используются эти классы для получения и отображения счетчика, обновляемого Windows, чтобы указать процент времени, когда процессор был занят.  
   
 > [!NOTE]
->  Для выполнения этого примера в среде Windows Vista требуются права администратора.  
+>  В этом примере требуются права администратора для работы в Windows Vista.  
   
-## Пример  
+## <a name="example"></a>Пример  
   
 ```  
 // processor_timer.cpp  
@@ -125,7 +124,7 @@ int main()
 }  
 ```  
   
-## См. также  
- [Introduction to Monitoring Performance](http://msdn.microsoft.com/ru-ru/d40f10b9-e2b7-4ec8-a9b3-706929e5bf35)   
- [Операции Windows](../dotnet/windows-operations-cpp-cli.md)   
- [программирование .NET с использованием C\+\+\/CLI](../dotnet/dotnet-programming-with-cpp-cli-visual-cpp.md)
+## <a name="see-also"></a>См. также  
+ [Общие сведения о наблюдении за производительностью](http://msdn.microsoft.com/en-us/d40f10b9-e2b7-4ec8-a9b3-706929e5bf35)   
+ [Операции Windows (C + +/ CLI)](../dotnet/windows-operations-cpp-cli.md)   
+ [Программирование .NET с использованием C++/CLI (Visual C++)](../dotnet/dotnet-programming-with-cpp-cli-visual-cpp.md)

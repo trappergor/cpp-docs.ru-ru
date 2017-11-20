@@ -1,106 +1,106 @@
 ---
-title: "CForeignKeys, CForeignKeysInfo | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "m_nOrdinal"
-  - "m_szPKColumnName"
-  - "FK_TABLE_NAME"
-  - "m_guidFKColumn"
-  - "FK_COLUMN_NAME"
-  - "m_guidPKColumn"
-  - "DELETE_RULE"
-  - "m_szPKTableSchema"
-  - "FK_COLUMN_PROPID"
-  - "m_nFKColumnPropID"
-  - "m_szFKTableCatalog"
-  - "CForeignKeysInfo"
-  - "FK_TABLE_SCHEMA"
-  - "m_szPKTableCatalog"
-  - "m_szDeleteRule"
-  - "m_szUpdateRule"
-  - "m_szPKTableName"
-  - "m_szFKTableSchema"
-  - "ORDINAL"
-  - "m_nPKColumnPropID"
-  - "m_szFKColumnName"
-  - "FK_TABLE_CATALOG"
-  - "FK_COLUMN_GUID"
-  - "m_szFKTableName"
-  - "CForeignKeys"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "CForeignKeys typedef - класс"
-  - "CForeignKeysInfo - класс параметров"
-  - "DELETE_RULE"
-  - "FK_COLUMN_GUID"
-  - "FK_COLUMN_NAME"
-  - "FK_COLUMN_PROPID"
-  - "FK_TABLE_CATALOG"
-  - "FK_TABLE_NAME"
-  - "FK_TABLE_SCHEMA"
-  - "m_guidFKColumn"
-  - "m_guidPKColumn"
-  - "m_nFKColumnPropID"
-  - "m_nOrdinal"
-  - "m_nPKColumnPropID"
-  - "m_szDeleteRule"
-  - "m_szFKColumnName"
-  - "m_szFKTableCatalog"
-  - "m_szFKTableName"
-  - "m_szFKTableSchema"
-  - "m_szPKColumnName"
-  - "m_szPKTableCatalog"
-  - "m_szPKTableName"
-  - "m_szPKTableSchema"
-  - "m_szUpdateRule"
-  - "ORDINAL - данные-член"
+title: "CForeignKeys, CForeignKeysInfo | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- m_nOrdinal
+- m_szPKColumnName
+- FK_TABLE_NAME
+- m_guidFKColumn
+- FK_COLUMN_NAME
+- m_guidPKColumn
+- DELETE_RULE
+- m_szPKTableSchema
+- FK_COLUMN_PROPID
+- m_nFKColumnPropID
+- m_szFKTableCatalog
+- CForeignKeysInfo
+- FK_TABLE_SCHEMA
+- m_szPKTableCatalog
+- m_szDeleteRule
+- m_szUpdateRule
+- m_szPKTableName
+- m_szFKTableSchema
+- ORDINAL
+- m_nPKColumnPropID
+- m_szFKColumnName
+- FK_TABLE_CATALOG
+- FK_COLUMN_GUID
+- m_szFKTableName
+- CForeignKeys
+dev_langs: C++
+helpviewer_keywords:
+- m_szPKTableCatalog
+- FK_COLUMN_GUID
+- m_szPKColumnName
+- m_szFKTableName
+- ORDINAL data member
+- m_nPKColumnPropID
+- m_szDeleteRule
+- DELETE_RULE
+- m_guidFKColumn
+- FK_COLUMN_PROPID
+- m_szPKTableSchema
+- m_szFKTableCatalog
+- CForeignKeysInfo parameter class
+- m_szFKTableSchema
+- FK_TABLE_SCHEMA
+- FK_COLUMN_NAME
+- m_szUpdateRule
+- m_szFKColumnName
+- FK_TABLE_CATALOG
+- m_nOrdinal
+- m_szPKTableName
+- CForeignKeys typedef class
+- m_nFKColumnPropID
+- m_guidPKColumn
+- FK_TABLE_NAME
 ms.assetid: 1c401a4a-0827-4255-9214-bc893e1cd79d
-caps.latest.revision: 6
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 6
+caps.latest.revision: "6"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 53082b43f529bebb8c2b3d6b9f96608aadf5a3f3
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/24/2017
 ---
-# CForeignKeys, CForeignKeysInfo
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Вызовите **CForeignKeys** класс typedef для реализации его класс **CForeignKeysInfo** параметра.  
+# <a name="cforeignkeys-cforeignkeysinfo"></a>CForeignKeys, CForeignKeysInfo
+Вызовите typedef-класс **CForeignKeys** реализации класса своего параметра **CForeignKeysInfo**.  
   
-## Заметки  
- Дополнительные сведения см. в разделе [Классы набора строк схемы и классах typedef](../Topic/Schema%20Rowset%20Classes%20and%20Typedef%20Classes.md) при использовании классов typedef.  
+## <a name="remarks"></a>Примечания  
+ В разделе [классы набора строк схемы и классы Typedef](../../data/oledb/schema-rowset-classes-and-typedef-classes.md) Дополнительные сведения об использовании классов typedef.  
   
- Этот класс определяет столбцы внешнего ключа, указанного в каталоге, заданном пользователем.  
+ Этот класс определяет внешние ключевые столбцы, определенные в каталоге данным пользователем.  
   
- В следующей таблице перечислены элементы данных класса и соответствующие столбцы OLE DB.  В разделе [Набор строк FOREIGN\_KEYS](https://msdn.microsoft.com/en-us/library/ms711276.aspx) справочника *программиста OLE DB* дополнительные сведения о схеме и столбцам.  
+ В следующей таблице перечислены данные-члены класса и их соответствующие OLE DB столбцы. В разделе [набор строк FOREIGN_KEYS](https://msdn.microsoft.com/en-us/library/ms711276.aspx) в *Справочник программиста OLE DB* Дополнительные сведения о схеме и столбцы.  
   
-|Элементы данных|Столбцы OLE DB|  
-|---------------------|--------------------|  
-|m\_szPKTableCatalog|PK\_TABLE\_CATALOG|  
-|m\_szPKTableSchema|PK\_TABLE\_SCHEMA|  
-|m\_szPKTableName|PK\_TABLE\_NAME|  
-|m\_szPKColumnName|PK\_COLUMN\_NAME|  
-|m\_guidPKColumn|PK\_COLUMN\_GUID|  
-|m\_nPKColumnPropID|PK\_COLUMN\_PROPID|  
-|m\_szFKTableCatalog|FK\_TABLE\_CATALOG|  
-|m\_szFKTableSchema|FK\_TABLE\_SCHEMA|  
-|m\_szFKTableName|FK\_TABLE\_NAME|  
-|m\_szFKColumnName|FK\_COLUMN\_NAME|  
-|m\_guidFKColumn|FK\_COLUMN\_GUID|  
-|m\_nFKColumnPropID|FK\_COLUMN\_PROPID|  
-|m\_nOrdinal|ПОРЯДКОВЫЙ НОМЕР|  
-|m\_szUpdateRule|UPDATE\_RULE|  
-|m\_szDeleteRule|DELETE\_RULE|  
+|Члены данных|Столбцы OLE DB|  
+|------------------|--------------------|  
+|m_szPKTableCatalog|PK_TABLE_CATALOG|  
+|m_szPKTableSchema|PK_TABLE_SCHEMA|  
+|m_szPKTableName|PK_TABLE_NAME|  
+|m_szPKColumnName|PK_COLUMN_NAME|  
+|m_guidPKColumn|PK_COLUMN_GUID|  
+|m_nPKColumnPropID|PK_COLUMN_PROPID|  
+|m_szFKTableCatalog|FK_TABLE_CATALOG|  
+|m_szFKTableSchema|FK_TABLE_SCHEMA|  
+|m_szFKTableName|FK_TABLE_NAME|  
+|m_szFKColumnName|FK_COLUMN_NAME|  
+|m_guidFKColumn|FK_COLUMN_GUID|  
+|m_nFKColumnPropID|FK_COLUMN_PROPID|  
+|m_nOrdinal|ПОРЯДКОВЫЙ НОМЕР|  
+|m_szUpdateRule|ПРИЗНАК UPDATE_RULE|  
+|m_szDeleteRule|DELETE_RULE|  
   
-## Требования  
- **Header:**  atldbsch.h  
+## <a name="requirements"></a>Требования  
+ **Заголовок:** atldbsch.h  
   
-## См. также  
- [Класс CRestrictions](../Topic/CRestrictions%20Class.md)
+## <a name="see-also"></a>См. также  
+ [Класс CRestrictions](../../data/oledb/crestrictions-class.md)

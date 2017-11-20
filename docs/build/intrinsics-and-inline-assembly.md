@@ -1,28 +1,28 @@
 ---
-title: "Внутренний и подставляемый ассемблерный код | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
+title: "Внутренний и подставляемый ассемблерный | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
 ms.assetid: 8affd4bb-279d-46f3-851f-8be0a9c5ed3f
-caps.latest.revision: 10
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 10
+caps.latest.revision: "10"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: c60932b719b25365c7d8f65a4649ef782a4f9888
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/24/2017
 ---
-# Внутренний и подставляемый ассемблерный код
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Одним из ограничений компилятора [!INCLUDE[vcprx64](../Token/vcprx64_md.md)] является отсутствие поддержки подставляемого ассемблерного кода.  Это значит, что функции, которые нельзя написать средствами языков C или C\+\+, должны быть представлены в виде подпрограмм или внутренних функций, поддерживаемых компилятором.  Некоторые функции чувствительны к производительности, другие – нет.  Функции, чувствительные к производительности, должны быть реализованы как внутренние функции.  
+# <a name="intrinsics-and-inline-assembly"></a>Внутренний и подставляемый ассемблерный код
+Одно из ограничений для [!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)] компилятор будет для них не поддерживается встроенный ассемблер. Это означает, что функции, не может быть написаны на C или C++, должны быть написаны как подпрограмм или внутренних функций, поддерживаемых компилятором. Некоторые функции являются чувствительны к производительности, а другие — нет. Функции, чувствительные к производительности должны быть реализованы как встроенные функции.  
   
- Описание встроенных средств, поддерживаемых компилятором, представлено в документе [Встроенные средства компилятора](../intrinsics/compiler-intrinsics.md).  
+ Компилятор поддерживает встроенные функции описаны в [встроенные объекты компилятора](../intrinsics/compiler-intrinsics.md).  
   
-## См. также  
- [Программные соглашения x64](../build/x64-software-conventions.md)
+## <a name="see-also"></a>См. также  
+ [Программные соглашения для X64](../build/x64-software-conventions.md)

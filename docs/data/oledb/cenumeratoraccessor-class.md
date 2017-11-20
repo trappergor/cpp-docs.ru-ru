@@ -1,57 +1,56 @@
 ---
-title: "Класс CEnumeratorAccessor | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "ATL::CEnumeratorAccessor"
-  - "CEnumeratorAccessor"
-  - "ATL.CEnumeratorAccessor"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "CEnumeratorAccessor - класс"
+title: "Класс CEnumeratorAccessor | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- ATL::CEnumeratorAccessor
+- CEnumeratorAccessor
+- ATL.CEnumeratorAccessor
+dev_langs: C++
+helpviewer_keywords: CEnumeratorAccessor class
 ms.assetid: 21e8e7ea-3511-4afe-b33f-d520f4ff82bb
-caps.latest.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 10
+caps.latest.revision: "10"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: b78307c1b8f9df1945ab2376b939db2c41b8ad23
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/24/2017
 ---
-# Класс CEnumeratorAccessor
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Используется [CEnumerator](../../data/oledb/cenumerator-class.md) для получения данных из набора строк перечислителя.  
+# <a name="cenumeratoraccessor-class"></a>Класс CEnumeratorAccessor
+Используемые [CEnumerator](../../data/oledb/cenumerator-class.md) доступ к данным из перечислитель набора строк.  
   
-## Синтаксис  
+## <a name="syntax"></a>Синтаксис  
   
 ```  
 class CEnumeratorAccessor  
 ```  
   
-## Члены  
+## <a name="members"></a>Члены  
   
-### Элементы данных  
+### <a name="data-members"></a>Элементы данных  
   
 |||  
 |-|-|  
-|[m\_bIsParent](../../data/oledb/cenumeratoraccessor-m-bisparent.md)|Переменная, указывающее, является ли перечислитель родительский перечислитель, если строка перечислитель.|  
-|[m\_nType](../../data/oledb/cenumeratoraccessor-m-ntype.md)|Переменная, указывающее, содержит ли строка источника данных или перечислитель.|  
-|[m\_szDescription](../Topic/CEnumeratorAccessor::m_szDescription.md)|Описание источника данных или перечислителя.|  
-|[m\_szName](../../data/oledb/cenumeratoraccessor-m-szname.md)|Имя источника данных или перечислителя.|  
-|[m\_szParseName](../../data/oledb/cenumeratoraccessor-m-szparsename.md)|Строка, которую требуется передать [IParseDisplayName](http://msdn.microsoft.com/library/windows/desktop/ms680604) для получения моникер для источника данных или перечислителя.|  
+|[m_bIsParent](../../data/oledb/cenumeratoraccessor-m-bisparent.md)|Переменная, показывающего, является Перечислитель перечислитель родительский, если строка находится перечислитель.|  
+|[m_nType](../../data/oledb/cenumeratoraccessor-m-ntype.md)|Переменная, позволяющее определить, описывает ли строка источника данных или перечислителя.|  
+|[m_szDescription](../../data/oledb/cenumeratoraccessor-m-szdescription.md)|Описание источника данных или перечислителя.|  
+|[m_szName](../../data/oledb/cenumeratoraccessor-m-szname.md)|Имя источника данных или перечислителя.|  
+|[m_szParseName](../../data/oledb/cenumeratoraccessor-m-szparsename.md)|Строка для [IParseDisplayName](http://msdn.microsoft.com/library/windows/desktop/ms680604) для получения моникера для источника данных или перечислителя.|  
   
-## Заметки  
- Этот набор строк содержит источников данных и для перечислителей из текущего перечислителя.  
+## <a name="remarks"></a>Примечания  
+ Этот набор строк состоит из источников данных и перечислителей, видимый из текущего перечислителя.  
   
-## Требования  
- **Header:**  atldbcli.h  
+## <a name="requirements"></a>Требования  
+ **Заголовок:** atldbcli.h  
   
-## См. также  
- [Шаблоны потребителей OLE DB](../../data/oledb/ole-db-consumer-templates-cpp.md)   
- [Ссылка на шаблоны потребителя OLE DB](../../data/oledb/ole-db-consumer-templates-reference.md)
+## <a name="see-also"></a>См. также  
+ [Шаблоны потребителя OLE DB](../../data/oledb/ole-db-consumer-templates-cpp.md)   
+ [Ссылка на шаблоны объекта-получателя OLE DB](../../data/oledb/ole-db-consumer-templates-reference.md)

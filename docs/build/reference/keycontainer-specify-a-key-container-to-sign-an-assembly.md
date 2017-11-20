@@ -1,75 +1,75 @@
 ---
-title: "/KEYCONTAINER (задание контейнера ключей для подписи сборки) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "VC.Project.VCLinkerTool.KeyContainer"
-  - "/keycontainer"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "/KEYCONTAINER - параметр компоновщика"
-  - "KEYCONTAINER - параметр компоновщика"
-  - "-KEYCONTAINER - параметр компоновщика"
+title: "-KEYCONTAINER (задание контейнера ключей для подписи сборки) | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- VC.Project.VCLinkerTool.KeyContainer
+- /keycontainer
+dev_langs: C++
+helpviewer_keywords:
+- KEYCONTAINER linker option
+- /KEYCONTAINER linker option
+- -KEYCONTAINER linker option
 ms.assetid: 94882d12-b77a-49c7-96d0-18a31aee001e
-caps.latest.revision: 12
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 12
+caps.latest.revision: "12"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: c8aa93168b2ad5bf76eab5417a03bc4903777db8
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/24/2017
 ---
-# /KEYCONTAINER (задание контейнера ключей для подписи сборки)
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="keycontainer-specify-a-key-container-to-sign-an-assembly"></a>/KEYCONTAINER (задание контейнера ключей для подписи сборки)
 ```  
 /KEYCONTAINER:name  
 ```  
   
-## Заметки  
+## <a name="remarks"></a>Примечания  
  где  
   
  *name*  
- Имя контейнера, содержащего ключ.  Если эта строка содержит пробел, следует заключать ее в двойные кавычки \(""""\).  
+ Контейнер, содержащий ключ. Заключать строку в двойные кавычки (» «), если он содержит пробелы.  
   
-## Заметки  
- Компоновщик создает подписанную сборку, вставляя в манифест сборки открытый ключ и подписывая окончательную сборку закрытым ключом.  Чтобы создать файл ключа, введите в командной строке [sn \-k](../Topic/Sn.exe%20\(Strong%20Name%20Tool\).md) `file`.  Параметр **sn \-i** устанавливает пару ключей в контейнер.  
+## <a name="remarks"></a>Примечания  
+ Компоновщик создает подписанную сборку путем вставки открытого ключа в манифест сборки и подписывая окончательную сборку закрытым ключом. Чтобы создать файл ключа, введите [sn -k](/dotnet/framework/tools/sn-exe-strong-name-tool) *filename* из командной строки. **sn -i** устанавливает пару ключей в контейнер.  
   
- При компиляции с параметром [\/LN](../../build/reference/ln-create-msil-module.md) имя файла ключа хранится в модуле и внедряется в создаваемую сборку либо при компиляции сборки, включающей явную ссылку на этот модуль посредством директивы [\#using](../../preprocessor/hash-using-directive-cpp.md), либо при компоновке с параметром [\/ASSEMBLYMODULE](../../build/reference/assemblymodule-add-a-msil-module-to-the-assembly.md).  
+ Если компиляция выполняется с [/LN](../../build/reference/ln-create-msil-module.md), имя файла ключа сохраняется в модуле и включается в сборку, созданная при компиляции сборки, включающей явную ссылку на модуль через [#using](../../preprocessor/hash-using-directive-cpp.md), либо при компоновке с [/ASSEMBLYMODULE](../../build/reference/assemblymodule-add-a-msil-module-to-the-assembly.md).  
   
- Данные о шифровании можно также передать компилятору с помощью параметра [\/KEYFILE](../../build/reference/keyfile-specify-key-or-key-pair-to-sign-an-assembly.md).  Если требуется частично подписанная сборка, следует использовать параметр [\/DELAYSIGN](../../build/reference/delaysign-partially-sign-an-assembly.md).  Дополнительные сведения о подписи сборки см. в разделе [Сборки со строгими именами \(подписывание сборок\)](../../dotnet/strong-name-assemblies-assembly-signing-cpp-cli.md).  
+ Можно также передать сведения о шифровании компилятору с [/keyfile](../../build/reference/keyfile-specify-key-or-key-pair-to-sign-an-assembly.md). Используйте [/delaysign](../../build/reference/delaysign-partially-sign-an-assembly.md) Если необходимо использовать частично подписанную сборку. В разделе [строгое имя сборки (подписывание сборки) (C + +/ CLI)](../../dotnet/strong-name-assemblies-assembly-signing-cpp-cli.md) Дополнительные сведения о подписи сборки.  
   
- Ниже перечислены прочие параметры компоновщика, влияющие на создание сборок:  
+ Доступны следующие параметры компоновщика, влияющие на создание сборки.  
   
--   [\/ASSEMBLYDEBUG](../Topic/-ASSEMBLYDEBUG%20\(Add%20DebuggableAttribute\).md)  
+-   [/ASSEMBLYDEBUG](../../build/reference/assemblydebug-add-debuggableattribute.md)  
   
--   [\/ASSEMBLYLINKRESOURCE](../../build/reference/assemblylinkresource-link-to-dotnet-framework-resource.md)  
+-   [/ASSEMBLYLINKRESOURCE](../../build/reference/assemblylinkresource-link-to-dotnet-framework-resource.md)  
   
--   [\/ASSEMBLYMODULE](../../build/reference/assemblymodule-add-a-msil-module-to-the-assembly.md)  
+-   [/ASSEMBLYMODULE](../../build/reference/assemblymodule-add-a-msil-module-to-the-assembly.md)  
   
--   [\/ASSEMBLYRESOURCE](../../build/reference/assemblyresource-embed-a-managed-resource.md)  
+-   [/ASSEMBLYRESOURCE](../../build/reference/assemblyresource-embed-a-managed-resource.md)  
   
--   [\/NOASSEMBLY](../../build/reference/noassembly-create-a-msil-module.md)  
+-   [/NOASSEMBLY](../../build/reference/noassembly-create-a-msil-module.md)  
   
-### Установка данного параметра компоновщика в среде разработки Visual Studio  
+### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>Задание данного параметра компоновщика в среде разработки Visual Studio  
   
-1.  Откройте диалоговое окно **Страницы свойств** проекта.  Дополнительные сведения см. в разделе [Задание свойств проекта C\+\+](../../ide/working-with-project-properties.md).  
+1.  Откройте диалоговое окно **Страницы свойств** проекта. Дополнительные сведения см. в разделе [задание свойств проекта Visual C++](../../ide/working-with-project-properties.md).  
   
-2.  Выберите папку **Компоновщик**.  
+2.  Нажмите кнопку **компоновщика** папки.  
   
-3.  Выберите страницу свойств **Командная строка**.  
+3.  Выберите страницу свойств **Командная строка** .  
   
-4.  Введите параметр в поле **Дополнительные параметры**.  
+4.  Введите параметр в **Дополнительные параметры** поле.  
   
-### Установка данного параметра компоновщика программным способом  
+### <a name="to-set-this-linker-option-programmatically"></a>Задание данного параметра компоновщика программным способом  
   
 -   См. раздел <xref:Microsoft.VisualStudio.VCProjectEngine.VCLinkerTool.AdditionalOptions%2A>.  
   
-## См. также  
+## <a name="see-also"></a>См. также  
  [Настройка параметров компоновщика](../../build/reference/setting-linker-options.md)   
  [Параметры компоновщика](../../build/reference/linker-options.md)

@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-cpp
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
 apiname:
@@ -27,38 +26,21 @@ apitype: DLLExport
 f1_keywords:
 - _mbstowcs_s_l
 - mbstowcs_s
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - _mbstowcs_s_l function
 - mbstowcs_s function
 - mbstowcs_s_l function
 ms.assetid: 2fbda953-6918-498f-b440-3e7b21ed65a4
-caps.latest.revision: 31
+caps.latest.revision: "31"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: e257f037a05c45f5b98e64ea55bd125af443b0be
-ms.openlocfilehash: 8858827e65ad342f2c48dba26b3be7f7f9dd2ca3
-ms.contentlocale: ru-ru
-ms.lasthandoff: 03/30/2017
-
+ms.openlocfilehash: 4501b310f71921c9e79910f0585d85eb647f3e4f
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="mbstowcss-mbstowcssl"></a>mbstowcs_s, _mbstowcs_s_l
 Преобразует последовательность многобайтовых символов в соответствующую последовательность расширенных символов. Это версии функции [mbstowcs, _mbstowcs_l](../../c-runtime-library/reference/mbstowcs-mbstowcs-l.md) с усовершенствованной безопасностью, как описано в разделе [Усовершенствования безопасности в CRT](../../c-runtime-library/security-features-in-the-crt.md).  
@@ -142,9 +124,9 @@ errno_t _mbstowcs_s_l(
   
  Если `count` имеет специальное значение [_TRUNCATE](../../c-runtime-library/truncate.md), то функция `mbstowcs_s` преобразует строки до тех пор, пока буфер назначения не будет заполнен с учетом завершающего нуль-символа.  
   
- Если функция `mbstowcs_s` успешно преобразует исходную строку, то размер преобразованной строки в расширенных символах с учетом завершающего нуль-символа будет помещен в параметр `*``pReturnValue` (при условии, что `pReturnValue` не является указателем `NULL`). Это происходит, даже если аргумент `wcstr` имеет значение `NULL`, что позволяет задать необходимый размер буфера. Обратите внимание, что если `wcstr` имеет значение `NULL`, `count` игнорируется и `sizeInWords` должно быть равно 0.  
+ Если функция `mbstowcs_s` успешно преобразует исходную строку, то размер преобразованной строки в расширенных символах с учетом завершающего нуль-символа будет помещен в параметр `*pReturnValue` (при условии, что `pReturnValue` не является указателем `NULL`). Это происходит, даже если аргумент `wcstr` имеет значение `NULL`, что позволяет задать необходимый размер буфера. Обратите внимание, что если `wcstr` имеет значение `NULL`, `count` игнорируется и `sizeInWords` должно быть равно 0.  
   
- Если функция `mbstowcs_s` обнаруживает недопустимый многобайтовый символ, то помещает в `*``pReturnValue` значение 0, устанавливает пустую строку в качестве целевого буфера, присваивает `errno` значение `EILSEQ` и возвращает `EILSEQ`.  
+ Если функция `mbstowcs_s` обнаруживает недопустимый многобайтовый символ, то помещает в `*pReturnValue` значение 0, устанавливает пустую строку в качестве целевого буфера, присваивает `errno` значение `EILSEQ` и возвращает `EILSEQ`.  
   
  Если последовательности, на которые указывают параметры `mbstr` и `wcstr`, перекрываются, то поведение `mbstowcs_s` не определено.  
   
