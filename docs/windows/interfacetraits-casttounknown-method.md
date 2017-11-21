@@ -1,32 +1,30 @@
 ---
-title: "Метод InterfaceTraits::CastToUnknown | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "implements/Microsoft::WRL::Details::InterfaceTraits::CastToUnknown"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "CastToUnknown - метод"
+title: "Метод InterfaceTraits::CastToUnknown | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: implements/Microsoft::WRL::Details::InterfaceTraits::CastToUnknown
+dev_langs: C++
+helpviewer_keywords: CastToUnknown method
 ms.assetid: aca47fa0-3c60-47f2-a73c-258f7160adff
-caps.latest.revision: 5
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 5
+caps.latest.revision: "5"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 9c37be3cd27c70a0128d1a382af3efe9c96d6cc8
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/24/2017
 ---
-# Метод InterfaceTraits::CastToUnknown
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Предназначено для поддержки инфраструктуры WRL, а не для непосредственного использования в коде.  
+# <a name="interfacetraitscasttounknown-method"></a>Метод InterfaceTraits::CastToUnknown
+Поддерживает инфраструктуру WRL и не предназначен для использования непосредственно из программного кода.  
   
-## Синтаксис  
+## <a name="syntax"></a>Синтаксис  
   
 ```  
 template<  
@@ -37,26 +35,26 @@ static __forceinline IUnknown* CastToUnknown(
 );  
 ```  
   
-#### Параметры  
+#### <a name="parameters"></a>Параметры  
  `T`  
  Тип параметра `ptr`.  
   
  `ptr`  
  Указатель на тип `T`.  
   
-## Возвращаемое значение  
- Указатель на IUnknown, для которого `Base` является производным.  
+## <a name="return-value"></a>Возвращаемое значение  
+ Указатель на интерфейс IUnknown, из которого `Base` является производным.  
   
-## Примечания  
- Приводит определенный указатель к указателю на IUnknown.  
+## <a name="remarks"></a>Примечания  
+ Приводит определенный указатель на указатель на IUnknown.  
   
- Дополнительные сведения о `Base` см. в разделе Общедоступные определения типов в [Структура InterfaceTraits](../windows/interfacetraits-structure.md).  
+ Дополнительные сведения о `Base`, см. в разделе определения открытых типов в [InterfaceTraits-структура](../windows/interfacetraits-structure.md).  
   
-## Требования  
+## <a name="requirements"></a>Требования  
  **Заголовок:** implements.h  
   
- **Пространство имен:** Microsoft::WRL::Details  
+ **Пространство имен:** Microsoft::wrl:: Details  
   
-## См. также  
- [Структура InterfaceTraits](../windows/interfacetraits-structure.md)   
+## <a name="see-also"></a>См. также  
+ [InterfaceTraits-структура](../windows/interfacetraits-structure.md)   
  [Пространство имен Microsoft::WRL::Details](../windows/microsoft-wrl-details-namespace.md)

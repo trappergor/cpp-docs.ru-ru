@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-windows
+ms.technology: cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -21,35 +20,18 @@ f1_keywords:
 - AGENTS/concurrency::multitype_join::reserve
 - AGENTS/concurrency::multitype_join::unlink_target
 - AGENTS/concurrency::multitype_join::unlink_targets
-dev_langs:
-- C++
-helpviewer_keywords:
-- multitype_join class
+dev_langs: C++
+helpviewer_keywords: multitype_join class
 ms.assetid: 236e87a0-4867-49fd-869a-bef4010e49a7
-caps.latest.revision: 20
+caps.latest.revision: "20"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 5faef5bd1be6cc02d6614a6f6193c74167a8ff23
-ms.openlocfilehash: 03cb8520f9c4511aaff238f672f77b74b623b349
-ms.contentlocale: ru-ru
-ms.lasthandoff: 03/17/2017
-
+ms.openlocfilehash: a53206c32b59ab5cac9f14d51bed42a4870b94fa
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="multitypejoin-class"></a>Класс multitype_join
 Блок обмена сообщениями `multitype_join` — это блок с несколькими источниками и одной целью, который объединяет сообщения разных типов от каждого из своих источников и предлагает кортеж объединенных сообщений своему целевому объекту.  
@@ -84,21 +66,21 @@ class multitype_join: public ISource<typename _Unwrap<T>::type>;
 |Имя|Описание|  
 |----------|-----------------|  
 |[multitype_join](#ctor)|Перегружен. Создает блок обмена сообщениями `multitype_join` .|  
-|[~ multitype_join деструктор](#dtor)|Уничтожает `multitype_join` блок обмена сообщениями.|  
+|[~ multitype_join деструктор](#dtor)|Уничтожает `multitype_join` блока обмена сообщениями.|  
   
 ### <a name="public-methods"></a>Открытые методы  
   
 |Имя|Описание|  
 |----------|-----------------|  
-|[принять](#accept)|Принимает сообщение, предложенное это `multitype_join` блоком, передавая владение вызывающему объекту.|  
-|[acquire_ref](#acquire_ref)|Получает значение счетчика ссылок на это `multitype_join` блок сообщений, чтобы предотвратить удаление.|  
-|[Использование](#consume)|Потребляет сообщение, ранее предложенное `multitype_join` блок обмена сообщениями и успешно зарезервированное целевым объектом, передавая владение вызывающему объекту.|  
-|[link_target](#link_target)|Это связывает целевой блок `multitype_join` блок обмена сообщениями.|  
+|[принять](#accept)|Принимает сообщение, которое было предложено это `multitype_join` блоком, передавая владение вызывающему объекту.|  
+|[acquire_ref](#acquire_ref)|Получает значение счетчика ссылок на это `multitype_join` блока обмена сообщениями, чтобы предотвратить удаление.|  
+|[использовать](#consume)|Получает сообщение, ранее предложенное `multitype_join` блок обмена сообщениями и успешно зарезервированное целевым объектом, передавая владение вызывающему объекту.|  
+|[link_target](#link_target)|Ссылки на это целевой блок `multitype_join` блока обмена сообщениями.|  
 |[release](#release)|Освобождает предыдущее успешное резервирование сообщения.|  
-|[release_ref](#release_ref)|Освобождает значение счетчика ссылок на это `multiple_join` блок обмена сообщениями.|  
-|[reserve](#reserve)|Резервирует сообщение, которое было предложено это `multitype_join` блок обмена сообщениями.|  
-|[unlink_target](#unlink_target)|Удаляет связь целевого блока с это `multitype_join` блок обмена сообщениями.|  
-|[unlink_targets](#unlink_targets)|Удаляет связь всех целевых объектов из этого `multitype_join` блок обмена сообщениями. (Переопределяет [ISource::unlink_targets](isource-class.md#unlink_targets).)|  
+|[release_ref](#release_ref)|Освобождает значение счетчика ссылок на это `multiple_join` блока обмена сообщениями.|  
+|[reserve](#reserve)|Резервирует сообщение, которое было предложено это `multitype_join` блока обмена сообщениями.|  
+|[unlink_target](#unlink_target)|Удаляет связь из этого блока целевого `multitype_join` блока обмена сообщениями.|  
+|[unlink_targets](#unlink_targets)|Удаляет связь все целевые объекты из этого `multitype_join` блока обмена сообщениями. (Переопределяет [ISource::unlink_targets](isource-class.md#unlink_targets).)|  
   
 ## <a name="remarks"></a>Примечания  
  Дополнительные сведения см. в разделе [асинхронные блоки сообщений](../../../parallel/concrt/asynchronous-message-blocks.md).  
@@ -115,7 +97,7 @@ class multitype_join: public ISource<typename _Unwrap<T>::type>;
   
 ##  <a name="accept"></a>принять 
 
- Принимает сообщение, предложенное это `multitype_join` блоком, передавая владение вызывающему объекту.  
+ Принимает сообщение, которое было предложено это `multitype_join` блоком, передавая владение вызывающему объекту.  
   
 ```  
 virtual message<_Destination_type>* accept(
@@ -128,14 +110,14 @@ virtual message<_Destination_type>* accept(
  `runtime_object_identity` Из предложенных `message` объекта.  
   
  `_PTarget`  
- Указатель на целевой блок, вызывающий `accept` метод.  
+ Указатель на целевой блок, который вызывает `accept` метод.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
  Указатель на сообщение, которое теперь принадлежит вызывающей стороне.  
   
 ##  <a name="acquire_ref"></a>acquire_ref 
 
- Получает значение счетчика ссылок на это `multitype_join` блок сообщений, чтобы предотвратить удаление.  
+ Получает значение счетчика ссылок на это `multitype_join` блока обмена сообщениями, чтобы предотвратить удаление.  
   
 ```  
 virtual void acquire_ref(_Inout_ ITarget<_Destination_type>* _PTarget);
@@ -146,11 +128,11 @@ virtual void acquire_ref(_Inout_ ITarget<_Destination_type>* _PTarget);
  Указатель на целевой блок, вызывающий этот метод.  
   
 ### <a name="remarks"></a>Примечания  
- Этот метод вызывается методом `ITarget` объекта, который связан с этим источником во время `link_target` метод.  
+ Этот метод вызывается методом `ITarget` объекту, связанному этого источника во время `link_target` метод.  
   
-##  <a name="consume"></a>Использование 
+##  <a name="consume"></a>использовать 
 
- Потребляет сообщение, ранее предложенное `multitype_join` блок обмена сообщениями и успешно зарезервированное целевым объектом, передавая владение вызывающему объекту.  
+ Получает сообщение, ранее предложенное `multitype_join` блок обмена сообщениями и успешно зарезервированное целевым объектом, передавая владение вызывающему объекту.  
   
 ```  
 virtual message<_Destination_type>* consume(
@@ -163,17 +145,17 @@ virtual message<_Destination_type>* consume(
  `runtime_object_identity` Зарезервированных `message` объекта.  
   
  `_PTarget`  
- Указатель на целевой блок, вызывающий `consume` метод.  
+ Указатель на целевой блок, который вызывает `consume` метод.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
  Указатель на `message` объект, вызывающий теперь принадлежит.  
   
 ### <a name="remarks"></a>Примечания  
- `consume` Метод аналогичен `accept`, но всегда должно начинаться с помощью вызова `reserve` , возвращается `true`.  
+ `consume` Аналогичен методу `accept`, но всегда должно начинаться с помощью вызова `reserve` , которые вернули `true`.  
   
 ##  <a name="link_target"></a>link_target 
 
- Это связывает целевой блок `multitype_join` блок обмена сообщениями.  
+ Ссылки на это целевой блок `multitype_join` блока обмена сообщениями.  
   
 ```  
 virtual void link_target(_Inout_ ITarget<_Destination_type>* _PTarget);
@@ -181,7 +163,7 @@ virtual void link_target(_Inout_ ITarget<_Destination_type>* _PTarget);
   
 ### <a name="parameters"></a>Параметры  
  `_PTarget`  
- Указатель на `ITarget` блок, чтобы создать ссылку на этот `multitype_join` блок обмена сообщениями.  
+ Указатель на `ITarget` блок, чтобы создать ссылку на этот `multitype_join` блока обмена сообщениями.  
   
 ##  <a name="ctor"></a>multitype_join 
 
@@ -226,7 +208,7 @@ multitype_join(
   
 ##  <a name="dtor"></a>~ multitype_join 
 
- Уничтожает `multitype_join` блок обмена сообщениями.  
+ Уничтожает `multitype_join` блока обмена сообщениями.  
   
 ```  
 ~multitype_join();
@@ -244,14 +226,14 @@ virtual void release(
   
 ### <a name="parameters"></a>Параметры  
  `_MsgId`  
- `runtime_object_identity` Из `message` объект освобожден.  
+ `runtime_object_identity` Из `message` объекта освобождение.  
   
  `_PTarget`  
- Указатель на целевой блок, вызывающий `release` метод.  
+ Указатель на целевой блок, который вызывает `release` метод.  
   
 ##  <a name="release_ref"></a>release_ref 
 
- Освобождает значение счетчика ссылок на это `multiple_join` блок обмена сообщениями.  
+ Освобождает значение счетчика ссылок на это `multiple_join` блока обмена сообщениями.  
   
 ```  
 virtual void release_ref(_Inout_ ITarget<_Destination_type>* _PTarget);
@@ -266,7 +248,7 @@ virtual void release_ref(_Inout_ ITarget<_Destination_type>* _PTarget);
   
 ##  <a name="reserve"></a>Резерв 
 
- Резервирует сообщение, которое было предложено это `multitype_join` блок обмена сообщениями.  
+ Резервирует сообщение, которое было предложено это `multitype_join` блока обмена сообщениями.  
   
 ```  
 virtual bool reserve(
@@ -279,17 +261,17 @@ virtual bool reserve(
  `runtime_object_identity` Из `message` объекта резервируются.  
   
  `_PTarget`  
- Указатель на целевой блок, вызывающий `reserve` метод.  
+ Указатель на целевой блок, который вызывает `reserve` метод.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
  `true`Если сообщение было успешно зарезервированы, `false` в противном случае. Резервирования могут завершаться неудачей по ряду причин, включая следующие: сообщение уже было зарезервировано или принято другим целевым объектом, источник может отклонять резервирования и т. п.  
   
 ### <a name="remarks"></a>Примечания  
- После вызова метода `reserve`, если он завершается успешно, необходимо вызвать либо `consume` или `release` чтобы принять или высвободить владение сообщением, соответственно.  
+ После вызова метода `reserve`, если он завершается успешно, следует вызвать `consume` или `release` чтобы принять или высвободить владение сообщением, соответственно.  
   
 ##  <a name="unlink_target"></a>unlink_target 
 
- Удаляет связь целевого блока с это `multitype_join` блок обмена сообщениями.  
+ Удаляет связь из этого блока целевого `multitype_join` блока обмена сообщениями.  
   
 ```  
 virtual void unlink_target(_Inout_ ITarget<_Destination_type>* _PTarget);
@@ -297,11 +279,11 @@ virtual void unlink_target(_Inout_ ITarget<_Destination_type>* _PTarget);
   
 ### <a name="parameters"></a>Параметры  
  `_PTarget`  
- Указатель на `ITarget` блок отсоединиться от этого `multitype_join` блок обмена сообщениями.  
+ Указатель на `ITarget` блок, чтобы удалить связь из этого `multitype_join` блока обмена сообщениями.  
   
 ##  <a name="unlink_targets"></a>unlink_targets 
 
- Удаляет связь всех целевых объектов из этого `multitype_join` блок обмена сообщениями.  
+ Удаляет связь все целевые объекты из этого `multitype_join` блока обмена сообщениями.  
   
 ```  
 virtual void unlink_targets();
@@ -311,4 +293,3 @@ virtual void unlink_targets();
  [пространство имен Concurrency](concurrency-namespace.md)   
  [Класс Choice](choice-class.md)   
  [Класс join](join-class.md)
-

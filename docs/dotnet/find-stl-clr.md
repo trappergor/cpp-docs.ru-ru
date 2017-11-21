@@ -1,45 +1,43 @@
 ---
-title: "find (STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::find"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "find - функция [STL/CLR]"
+title: "найти (STL/CLR) | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::find
+dev_langs: C++
+helpviewer_keywords: find function [STL/CLR]
 ms.assetid: 88391e24-1239-4087-b1c2-96efba0337c1
-caps.latest.revision: 4
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 4
+caps.latest.revision: "4"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: c1e8d78b299541cddc30b6030020054809fab765
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/24/2017
 ---
-# find (STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Находит позицию первого вхождения элемента в диапазон с заданным значением.  
+# <a name="find-stlclr"></a>find (STL/CLR)
+Находит позицию первого вхождения элемента с заданным значением в диапазон.  
   
-## Синтаксис  
+## <a name="syntax"></a>Синтаксис  
   
 ```  
 template<class _InIt, class _Ty> inline  
     _InIt find(_InIt _First, _InIt _Last, const _Ty% _Val);  
 ```  
   
-## Заметки  
- Эта функция работает аналогично функции `find` STL.  Для получения дополнительной информации см. [find](../Topic/find%20\(STL\).md).  
+## <a name="remarks"></a>Примечания  
+ Эта функция работает так же, как функция стандартной библиотеки C++ `find`. Дополнительные сведения см. в разделе [найти](../standard-library/algorithm-functions.md#find).  
   
-## Требования  
- **Заголовок:**\<cliext\/algorithm\>  
+## <a name="requirements"></a>Требования  
+ **Заголовок:** \<cliext/алгоритм >  
   
  **Пространство имен:** cliext  
   
-## См. также  
- [algorithm](../Topic/algorithm%20\(STL-CLR\).md)
+## <a name="see-also"></a>См. также  
+ [algorithm (STL/CLR)](../dotnet/algorithm-stl-clr.md)

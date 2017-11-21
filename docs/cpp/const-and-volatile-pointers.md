@@ -4,28 +4,25 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-language
+ms.technology: cpp-language
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - volatile keyword [C++], and pointers
 - pointers, and const
 - pointers, and volatile
 - const keyword [C++], volatile pointers
 ms.assetid: 0c92dc6c-400e-4342-b345-63ddfe649d7e
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.translationtype: HT
-ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
-ms.openlocfilehash: bebd757f304de2377ab2337e5b41a577a2b492b6
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/25/2017
-
+ms.openlocfilehash: ebf8d12c7c3b0f9578724fe772f24c0bc8c845ac
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="const-and-volatile-pointers"></a>Указатели с ключевыми словами const и volatile
 [Const](../cpp/const-cpp.md) и [volatile](../cpp/volatile-cpp.md) ключевые слова изменить способы обработки указателей. **Const** ключевое слово указывает, что указатель невозможно изменить после инициализации; он защищен от последующих изменений.  
@@ -99,7 +96,7 @@ errno_t strcpy_s( char *strDestination, size_t numberOfElements, const char *str
  Выше инструкции объявляется функция, [strcpy_s](../c-runtime-library/reference/strcpy-s-wcscpy-s-mbscpy-s.md), в которой два из трех аргументов являются тип указателя на `char`. Так как аргументы передаются по ссылке, а не по значению, функция могла бы свободно изменить и `strDestination` и `strSource` Если `strSource` не были объявлены как **const**. Объявление `strSource` как **const** вызывающий объект гарантирует, что `strSource` вызываемая функция не может быть изменено.  
   
 > [!NOTE]
->  Поскольку стандартное преобразование из *typename* ** \* ** для **const** *typename* ** \* **, можно передать аргумент типа **char \* ** для [strcpy_s](../c-runtime-library/reference/strcpy-s-wcscpy-s-mbscpy-s.md). Однако обратное неверно; неявные преобразования не существует для удаления **const** атрибут из объекта или указателя.  
+>  Поскольку стандартное преобразование из *typename*  **\***  для **const** *typename*  **\*** , можно передать аргумент типа **char \***  для [strcpy_s](../c-runtime-library/reference/strcpy-s-wcscpy-s-mbscpy-s.md). Однако обратное неверно; неявные преобразования не существует для удаления **const** атрибут из объекта или указателя.  
   
  Объект **const** указатель данного типа могут быть назначены указатель того же типа. Однако указатель, не **const** не может быть назначен **const** указателя. В следующем коде показано одно верное и одно неверное присваивание.  
   

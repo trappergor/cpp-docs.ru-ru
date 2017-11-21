@@ -1,46 +1,44 @@
 ---
-title: "rename_search_namespace | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "rename_search_namespace"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "rename_search_namespace - атрибут"
+title: "rename_search_namespace | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: rename_search_namespace
+dev_langs: C++
+helpviewer_keywords: rename_search_namespace attribute
 ms.assetid: 47c9d7fd-59dc-4c62-87a1-9011a0040167
-caps.latest.revision: 4
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 4
+caps.latest.revision: "4"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: 6c7680c531ba82fdeac849ebf98abd772541f972
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/24/2017
 ---
-# rename_search_namespace
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-**Блок, относящийся только к языку C\+\+**  
+# <a name="renamesearchnamespace"></a>rename_search_namespace
+**Конкретных C++**  
   
- Имеет ту же функцию, что и атрибут [rename\_namespace](../preprocessor/rename-namespace.md), однако применяется для библиотек типов, для которых вы использовали директиву \#import с атрибутом [auto\_search](../preprocessor/auto-search.md).  
+ Имеет ту же функциональность, что [rename_namespace](../preprocessor/rename-namespace.md) атрибута, но используется для библиотек типов, которые можно использовать директиву #import с [auto_search](../preprocessor/auto-search.md) атрибута.  
   
-## Синтаксис  
+## <a name="syntax"></a>Синтаксис  
   
 ```  
 rename_search_namespace("NewName")  
 ```  
   
-#### Параметры  
+#### <a name="parameters"></a>Параметры  
  `NewName`  
  Новое имя пространства имен.  
   
-## Заметки  
- **Завершение блока, относящегося только к языку C\+\+**  
+## <a name="remarks"></a>Примечания  
+ **КОНЕЦ определенного C++**  
   
-## См. также  
- [Атрибуты \#import](../preprocessor/hash-import-attributes-cpp.md)   
- [Директива \#import](../Topic/%23import%20Directive%20\(C++\).md)
+## <a name="see-also"></a>См. также  
+ [атрибуты #import](../preprocessor/hash-import-attributes-cpp.md)   
+ [директива #import](../preprocessor/hash-import-directive-cpp.md)

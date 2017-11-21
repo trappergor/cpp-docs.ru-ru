@@ -1,34 +1,32 @@
 ---
-title: "Практическое руководство. Использование отслеживаемых ссылок в C++/CLI | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "CLR-типы, передача по ссылке"
+title: "Как: использование отслеживаемых ссылок в C + +/ CLI | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords: CLR types, passing by reference
 ms.assetid: d91e471c-34ff-4786-9e0d-c6db0494b946
-caps.latest.revision: 11
-caps.handback.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "11"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: f7e03106c9a4e49e727e278538ca984b740ad446
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/24/2017
 ---
-# Практическое руководство. Использование отслеживаемых ссылок в C++/CLI
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-В данной статье показано, как использовать ссылку отслеживания \(%\) в [!INCLUDE[cppcli](../build/reference/includes/cppcli_md.md)] \(CLR\) в типы среды CLR передавать по ссылке.  
+# <a name="how-to-use-tracking-references-in-ccli"></a>Практическое руководство. Использование отслеживаемых ссылок в C++/CLI
+В этой статье показано, как использовать отслеживаемую ссылку (%) в C + +/ CLI для передачи типов среды выполнения (CLR) общий язык по ссылке.  
   
-## Типы CLR передавать по ссылке  
- В следующем примере показано, как использовать ссылку отслеживания для передачи типы CLR по ссылке.  
+## <a name="to-pass-clr-types-by-reference"></a>Для передачи типов CLR по ссылке  
+ Следующий пример показано, как использовать отслеживаемую ссылку для передачи типов CLR по ссылке.  
   
-```  
+```cpp  
 // tracking_reference_handles.cpp  
 // compile with: /clr  
 using namespace System;  
@@ -75,11 +73,13 @@ int main() {
 }  
 ```  
   
- **Output**  
-  
-  **zip \=\= 20100** Следующий пример демонстрирует, что этот адрес параметра ссылки отслеживания возвращает значение [interior\_ptr \(C\+\+\/CLI\)](../windows/interior-ptr-cpp-cli.md), и описание изменения и доступа к данным через ссылку отслеживания.  
-  
+```Output  
+zip == 20100  
 ```  
+  
+ Следующий пример показывает, что получение адреса отслеживаемую ссылку возвращает [interior_ptr (C + +/ CLI)](../windows/interior-ptr-cpp-cli.md)и приводятся способы изменения и получить доступ к данным посредством отслеживаемой ссылки.  
+  
+```cpp  
 // tracking_reference_data.cpp  
 // compile with: /clr  
 using namespace System;  
@@ -124,14 +124,15 @@ int main() {
 }  
 ```  
   
- **Output**  
-  
-  **ctor: R \(int\)**  
-**ctor: N \(int i\)**   
-## Отслеживания ссылок и внутренние указатели  
- В следующем примере кода показана, можно преобразовать между связями отслеживания и внутренними указателями.  
-  
+```Output  
+ctor: R(int)  
+ctor: N(int i)  
 ```  
+  
+## <a name="tracking-references-and-interior-pointers"></a>Отслеживание ссылок и внутренних указателей  
+ В следующем образце кода показано, что можно выполнять преобразование из отслеживания ссылок и внутренних указателей.  
+  
+```cpp  
 // tracking_reference_interior_ptr.cpp  
 // compile with: /clr  
 using namespace System;  
@@ -177,20 +178,30 @@ int main() {
 }  
 ```  
   
- **Output**  
-  
-  **ctor: R \(int\)**  
-**ctor: N \(int i\)**   
-## Отслеживания ссылок и типы значений  
- Этот пример показывает простое упаковка\-преобразование отслеживания через ссылку на тип значения.  
-  
-```  
-// tracking_reference_valuetypes_1.cpp// compile with: /clrusing namespace System;int main() {   int i = 10;   int % j = i;   Object ^ o = j;   // j is implicitly boxed and assigned to o}  
+```Output  
+ctor: R(int)  
+ctor: N(int i)  
 ```  
   
- В следующем примере показано, что можно иметь и ссылки и собственные отслеживания ссылок на типы значения.  
+## <a name="tracking-references-and-value-types"></a>Отслеживание ссылок и типов значений  
+ В этом примере показан простой упаковки-преобразования через отслеживаемую ссылку на тип значения:  
   
+```cpp  
+// tracking_reference_valuetypes_1.cpp
+// compile with: /clr
+
+using namespace System;
+
+int main() {
+   int i = 10;   
+   int % j = i;   
+   Object ^ o = j;   // j is implicitly boxed and assigned to o
+}  
 ```  
+  
+ Следующий пример показывает, что может иметь отслеживаемых ссылок и собственных ссылок на типы значения.  
+  
+```cpp  
 // tracking_reference_valuetypes_2.cpp  
 // compile with: /clr  
 using namespace System;  
@@ -207,13 +218,15 @@ int main() {
 }  
 ```  
   
- **Output**  
-  
-  **13**  
-**13**  
-**13** В следующем примере показаны ссылки, который можно использовать для отслеживания вместе с типами значений и собственными типами.  
-  
+```Output  
+13  
+13  
+13  
 ```  
+  
+ Ниже приведен пример, которые можно использовать отслеживаемые ссылки, а также типы значений и собственные типы.  
+  
+```cpp  
 // tracking_reference_valuetypes_3.cpp  
 // compile with: /clr  
 value struct G {  
@@ -239,14 +252,16 @@ int main() {
 }  
 ```  
   
- **Output**  
-  
-  **4**  
-**4**  
-**5**  
-**5** Этот пример выводит отслеживания, который можно привязать ссылку на тип значения, находящийся в куче:  
-  
+```Output  
+4  
+4  
+5  
+5  
 ```  
+  
+ В этом примере показано, что вы можете привязать отслеживаемую ссылку на тип значения в куче сбора мусора:  
+  
+```cpp  
 // tracking_reference_valuetypes_4.cpp  
 // compile with: /clr  
 using namespace System;  
@@ -275,16 +290,17 @@ int main() {
 }  
 ```  
   
- **Output**  
-  
-  **\- V: 2, отслеживание ссылку упакованный v: 1**  
-**Отслеживание ссылку упакованный v: 3**  
-**Упакованное новую копию v: 1**  
-**\- V: 4, ссылку на исходный дескриптору упакованного v: 1**   
-## Шаблонные функции, которые принимают собственных, значение или ссылочных параметров  
- С помощью ссылки отслеживания в сигнатуре функции шаблона необходимо указывать, что функция может быть вызвана параметром, тип которого собственен, по ссылке CLR значение или CLR.  
-  
+```Output  
+Original V: 2, Tracking reference to boxed V: 1  
+Tracking reference to boxed V: 3  
+Boxed new copy V: 1  
+Original V: 4, Reference to handle of originally boxed V: 1  
 ```  
+  
+## <a name="template-functions-that-take-native-value-or-reference-parameters"></a>Шаблон функции, которые принимают собственного, значения или ссылочные параметры  
+ С помощью отслеживаемую ссылку в сигнатуре функции шаблона, убедитесь, что функция может вызываться параметр с типом собственного, значение CLR или ссылочного типа CLR.  
+  
+```cpp  
 // tracking_reference_template.cpp  
 // compile with: /clr  
 using namespace System;  
@@ -305,7 +321,7 @@ public:
    }  
 };  
   
-// Class Defintions  
+// Class Definitions  
 ref struct R {  
    int i;  
 };  
@@ -323,10 +339,11 @@ int main() {
 }  
 ```  
   
- **Output**  
+```Output  
+T %  
+T %  
+T &  
+```  
   
-  **T %**  
-**T %**  
-**T &**   
-## См. также  
+## <a name="see-also"></a>См. также  
  [Оператор отслеживания ссылок](../windows/tracking-reference-operator-cpp-component-extensions.md)

@@ -1,56 +1,56 @@
 ---
-title: "Добавление элемента управления в диалоговое окно | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "vc.editors.dialog.dialog"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "диалоговые окна, добавление элементов управления в"
-  - "элементы управления диалоговых окон, добавление в диалоговые окна"
-  - "элементы управления [C++], добавление в диалоговые окна"
+title: "Добавление элемента управления в диалоговое окно | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: vc.editors.dialog.dialog
+dev_langs: C++
+helpviewer_keywords:
+- dialog boxes, adding controls to
+- dialog box controls, adding to dialog boxes
+- controls [C++], adding to dialog boxes
 ms.assetid: b2a26d19-093f-49ca-93da-fef00dfbb381
-caps.latest.revision: 11
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 7
+caps.latest.revision: "11"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 021b655312419f52fc120c3d86f2dcc79790739f
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/24/2017
 ---
-# Добавление элемента управления в диалоговое окно
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-### Добавление элемента управления в диалоговое окно  
+# <a name="adding-a-control-to-a-dialog-box"></a>Добавление элемента управления в диалоговое окно
+### <a name="to-add-a-control-to-a-dialog-box"></a>Добавление элемента управления в диалоговое окно  
   
 1.  Убедитесь, что диалоговое окно с вкладками открыто как текущий документ в окне редактора. Если диалоговое окно не является текущим документом, вы не увидите вкладку **Редактор диалоговых окон** в **панели элементов**.  
   
-2.  На вкладке [Редактор диалоговых окон](../mfc/dialog-editor-tab-toolbox.md)[панели элементов](../Topic/Toolbox.md) выберите нужный элемент управления, а затем выполните следующие действия.  
+2.  На вкладке [Редактор диалоговых окон](../windows/dialog-editor-tab-toolbox.md) [панели элементов](/visualstudio/ide/reference/toolbox)выберите нужный элемент управления, а затем выполните следующие действия.  
   
-    -   Щелкните диалоговое окно в том месте, где требуется поместить элемент управления. Элемент управления появится на выбранном месте. Дополнительные сведения см. в разделе [Добавление нескольких элементов управления](../mfc/adding-multiple-controls.md).  
+    -   Щелкните диалоговое окно в том месте, где требуется поместить элемент управления. Элемент управления появится на выбранном месте. Дополнительные сведения см. в разделе [Добавление нескольких элементов управления](../windows/adding-multiple-controls.md).  
   
-         \-или\-  
+         \- или -  
   
-    -   Перетащите элемент управления из панели элементов на нужное место в диалоговом окне. Дополнительные сведения см. в разделе [Изменение размера элемента управления при его добавлении](../Topic/Sizing%20a%20Control%20While%20You%20Add%20It.md).  
+    -   Перетащите элемент управления из панели элементов на нужное место в диалоговом окне. Дополнительные сведения см. в разделе [Изменение размера элемента управления при его добавлении](../windows/sizing-a-control-while-you-add-it.md).  
   
-         \-или\-  
+         \- или -  
   
-    -   Дважды щелкните элемент управления в панели элементов \(отображается на диалоговом окне\), а затем переместите его в нужное место.  
+    -   Дважды щелкните элемент управления в панели элементов (отображается на диалоговом окне), а затем переместите его в нужное место.  
   
- Дополнительные сведения о типах элементов управления, доступных в окне "Панель элементов", см. в разделе [Панель элементов, вкладка "Редактор диалоговых окон"](../mfc/dialog-editor-tab-toolbox.md).  
+ Дополнительные сведения о типах элементов управления, доступных в окне "Панель элементов", см. в разделе [Панель элементов, вкладка "Редактор диалоговых окон"](../windows/dialog-editor-tab-toolbox.md).  
   
- Сведения о добавлении ресурсов в проекты управляемого кода см. в разделе [Ресурсы приложений](../Topic/Resources%20in%20Desktop%20Apps.md)*Руководства разработчика .NET Framework*. Сведения о том, как вручную добавлять файлы ресурсов в проекты управляемого кода, осуществлять доступ к ресурсам, отображать статические ресурсы и присваивать строки ресурсов свойствам, см. в разделах [Пошаговое руководство. Локализация Windows Forms](http://msdn.microsoft.com/ru-ru/9a96220d-a19b-4de0-9f48-01e5d82679e5) и [Walkthrough: Using Resources for Localization with ASP.NET](../Topic/Walkthrough:%20Using%20Resources%20for%20Localization%20with%20ASP.NET.md).  
+ Сведения о добавлении ресурсов в управляемые проекты см. в разделе [ресурсы в классических приложениях](https://msdn.microsoft.com/library/f45fce5x.aspx) в *руководства разработчика .NET Framework.* Сведения о вручную добавлять файлы ресурсов в управляемые проекты, осуществлять доступ к ресурсам, отображать статические ресурсы и присваивать строки ресурсов свойствам см. в разделе [Создание файлов ресурсов для приложений рабочего стола](https://msdn.microsoft.com/library/xbx3z216.aspx). Сведения о глобализации и локализации ресурсов в управляемых приложениях см. в разделе [Globalizing и локализация приложений .NET Framework](https://msdn.microsoft.com/library/h6270d0z.aspx).  
   
  Требования  
   
  Win32  
   
-## См. также  
- [Controls in Dialog Boxes](../mfc/controls-in-dialog-boxes.md)   
- [Adding Event Handlers for Dialog Box Controls](../mfc/adding-event-handlers-for-dialog-box-controls.md)   
- [Элементы управления "Диалоговые окна" и типы переменных](../Topic/Dialog%20Box%20Controls%20and%20Variable%20Types.md)
+## <a name="see-also"></a>См. также  
+ [Элементы управления в диалоговых окнах](../windows/controls-in-dialog-boxes.md)   
+ [Добавление обработчиков событий для элементов управления диалогового окна](../windows/adding-event-handlers-for-dialog-box-controls.md)   
+ [Элементы управления "Диалоговое окно" и типы переменных](../ide/dialog-box-controls-and-variable-types.md)
+

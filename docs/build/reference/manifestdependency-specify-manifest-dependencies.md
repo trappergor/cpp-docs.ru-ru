@@ -1,55 +1,54 @@
 ---
-title: "/MANIFESTDEPENDENCY (Указать зависимости манифеста) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "VC.Project.VCLinkerTool.AdditionalManifestDependencies"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "/MANIFESTDEPENDENCY - параметр компоновщика"
-  - "MANIFESTDEPENDENCY - параметр компоновщика"
-  - "-MANIFESTDEPENDENCY - параметр компоновщика"
+title: "-MANIFESTDEPENDENCY (указать зависимости манифеста) | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: VC.Project.VCLinkerTool.AdditionalManifestDependencies
+dev_langs: C++
+helpviewer_keywords:
+- MANIFESTDEPENDENCY linker option
+- /MANIFESTDEPENDENCY linker option
+- -MANIFESTDEPENDENCY linker option
 ms.assetid: e4b68313-33a2-4c3e-908e-ac2b9f7d6a73
-caps.latest.revision: 12
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 12
+caps.latest.revision: "12"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: 070adfa51103d2ab91b371918107aa432ee5aa70
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/24/2017
 ---
-# /MANIFESTDEPENDENCY (Указать зависимости манифеста)
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="manifestdependency-specify-manifest-dependencies"></a>/MANIFESTDEPENDENCY (Указать зависимости манифеста)
 ```  
 /MANIFESTDEPENDENCY:manifest_dependency  
 ```  
   
-## Заметки  
- \/MANIFESTDEPENDENCY позволяет определить атрибуты, которые помещаются в разделе \<dependency\> файла манифеста.  
+## <a name="remarks"></a>Примечания  
+ / MANIFESTDEPENDENCY позволяет указать атрибуты, которые будут помещены в \<зависимостей > раздел файла манифеста.  
   
- Дополнительные сведения о создании файла манифеста см. в разделе [\/MANIFEST \(создание манифеста параллельной сборки\)](../../build/reference/manifest-create-side-by-side-assembly-manifest.md).  
+ В разделе [параметр/MANIFEST (Создание Side-by-Side манифеста сборки)](../../build/reference/manifest-create-side-by-side-assembly-manifest.md) сведения о том, как создать файл манифеста.  
   
- Дополнительные сведения см. в разделе \<dependency\> файла манифеста см. в разделе [Файлы конфигурации издателя](http://msdn.microsoft.com/library/aa375682).  
+ Дополнительные сведения о \<зависимостей > раздел файла манифеста, в разделе [файлов конфигурации издателя](http://msdn.microsoft.com/library/aa375682).  
   
- Сведения, заданные с помощью \/MANIFESTDEPENDENCY, можно передать компоновщику двумя способами:  
+ / MANIFESTDEPENDENCY информация может быть передана в компоновщик одним из двух способов:  
   
--   Непосредственно в командной строке \(или в файле ответов\) с помощью параметра \/MANIFESTDEPENDENCY.  
+-   Непосредственно в командной строке (или в файле ответов) с помощью параметра/MANIFESTDEPENDENCY.  
   
--   С помощью директивы pragma [comment](../../preprocessor/comment-c-cpp.md).  
+-   Через [комментарий](../../preprocessor/comment-c-cpp.md) pragma.  
   
- В следующем примере кода показано примечание \/MANIFESTDEPENDENCY, переданное с помощью директивы pragma,  
+ В следующем примере показано комментария/MANIFESTDEPENDENCY, переданная с помощью директивы pragma  
   
 ```  
 #pragma comment(linker, "\"/manifestdependency:type='Win32' name='Test.Research.SampleAssembly' version='6.0.0.0' processorArchitecture='X86' publicKeyToken='0000000000000000' language='*'\"")  
 ```  
   
- в результате чего в файле манифеста появляется следующая запись:  
+ что приводит к следующей записи в файл манифеста:  
   
 ```  
 <dependency>  
@@ -59,30 +58,30 @@ caps.handback.revision: 12
 </dependency>  
 ```  
   
- То же самое примечание \/MANIFESTDEPENDENCY можно передать с помощью командной строки:  
+ Одинаковые примечания/MANIFESTDEPENDENCY может быть передан в командной строке следующим образом:  
   
 ```  
 "/manifestdependency:type='Win32' name='Test.Research.SampleAssembly' version='6.0.0.0' processorArchitecture='X86' publicKeyToken='0000000000000000' language='*'\"  
 ```  
   
- Компоновщик соберет примечания \/MANIFESTDEPENDENCY, удалит повторяющиеся записи, а затем добавит результирующую строку XML в файл манифеста.  Если компоновщик обнаружит конфликтующие записи, файл манифеста будет поврежден и приложение не будет запускаться \(в журнал событий будет добавлена запись о причине сбоя\).  
+ Компоновщик соберет примечания/MANIFESTDEPENDENCY, удалит повторяющиеся записи и затем добавьте результирующую строку XML в файл манифеста.  Если компоновщик обнаруживает конфликтующие записи, файл манифеста будет поврежден и приложение не запустится (будет добавлена запись в журнал событий, указывающий источник сбоя).  
   
-### Установка данного параметра компоновщика в среде разработки Visual Studio  
+### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>Задание данного параметра компоновщика в среде разработки Visual Studio  
   
-1.  Откройте диалоговое окно **Страницы свойств** проекта.  Дополнительные сведения см. в разделе [Открытие свойств страниц проекта](../../misc/how-to-open-project-property-pages.md).  
+1.  Откройте диалоговое окно **Страницы свойств** проекта. Дополнительные сведения см. в разделе [работа со свойствами проекта](../../ide/working-with-project-properties.md).  
   
-2.  Разверните узел **Свойства конфигурации**.  
+2.  Разверните **свойства конфигурации** узла.  
   
-3.  Разверните узел **Компоновщик**.  
+3.  Разверните **компоновщика** узла.  
   
-4.  Выберите страницу свойств **Файл манифеста**.  
+4.  Выберите **файл манифеста** страницу свойств.  
   
-5.  Измените свойство **Дополнительные зависимости манифеста**.  
+5.  Изменить **Дополнительные зависимости манифеста** свойство.  
   
-### Установка данного параметра компоновщика программным способом  
+### <a name="to-set-this-linker-option-programmatically"></a>Задание данного параметра компоновщика программным способом  
   
 1.  См. раздел <xref:Microsoft.VisualStudio.VCProjectEngine.VCLinkerTool.AdditionalManifestDependencies%2A>.  
   
-## См. также  
+## <a name="see-also"></a>См. также  
  [Настройка параметров компоновщика](../../build/reference/setting-linker-options.md)   
  [Параметры компоновщика](../../build/reference/linker-options.md)

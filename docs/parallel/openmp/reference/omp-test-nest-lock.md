@@ -1,32 +1,30 @@
 ---
-title: "omp_test_nest_lock | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "omp_test_nest_lock"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "omp_test_nest_lock OpenMP function"
+title: "omp_test_nest_lock | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: omp_test_nest_lock
+dev_langs: C++
+helpviewer_keywords: omp_test_nest_lock OpenMP function
 ms.assetid: 4c909bbe-80e0-4100-aca6-d415d7dc5294
-caps.latest.revision: 12
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 12
+caps.latest.revision: "12"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 938a79bc164a940050dea126dc513d2f61cb9feb
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/24/2017
 ---
-# omp_test_nest_lock
-[!INCLUDE[vs2017banner](../../../assembler/inline/includes/vs2017banner.md)]
-
-Пытается перевести nestable блокировки, но не блокируют выполнение потока.  
+# <a name="omptestnestlock"></a>omp_test_nest_lock
+Пытается установить блокировку, которая, но не блокирует выполнение потока.  
   
-## Синтаксис  
+## <a name="syntax"></a>Синтаксис  
   
 ```  
 int omp_test_nest_lock(  
@@ -34,16 +32,16 @@ int omp_test_nest_lock(
 );  
 ```  
   
-## Заметки  
- Здесь:  
+## <a name="remarks"></a>Примечания  
+ где  
   
  `lock`  
- Переменная типа [omp\_nest\_lock\_t](../Topic/omp_nest_lock_t.md) это был инициализирован с  [omp\_init\_nest\_lock](../Topic/omp_init_nest_lock.md).  
+ Переменная типа [omp_nest_lock_t](../../../parallel/openmp/reference/omp-nest-lock-t.md) , инициализированный с [omp_init_nest_lock](../../../parallel/openmp/reference/omp-init-nest-lock.md).  
   
-## Заметки  
- Дополнительные сведения см. в разделе [3.2.5 omp\_test\_lock and omp\_test\_nest\_lock Functions](../Topic/3.2.5%20omp_test_lock%20and%20omp_test_nest_lock%20Functions.md).  
+## <a name="remarks"></a>Примечания  
+ Дополнительные сведения см. в разделе [3.2.5 функции omp_test_lock и omp_test_nest_lock](../../../parallel/openmp/3-2-5-omp-test-lock-and-omp-test-nest-lock-functions.md).  
   
-## Пример  
+## <a name="example"></a>Пример  
   
 ```  
 // omp_test_nest_lock.cpp  
@@ -81,36 +79,39 @@ int main() {
 }  
 ```  
   
-  **Поток 1 \- приобретенное nestable\_lock**  
-**Поток 0 \- " не удалось получить nestable\_lock**  
-**1 \- Приобретенное поток снова nestable\_lock**  
-**Поток 0 \- " не удалось получить nestable\_lock**  
-**Поток 1 \- освобожданное nestable\_lock**  
-**Поток 0 \- " не удалось получить nestable\_lock**  
-**Поток 1 \- освобожданное nestable\_lock**  
-**Поток 0 \- " не удалось получить nestable\_lock**  
-**Поток 3 \- приобретенное nestable\_lock**  
-**Поток 0 \- " не удалось получить nestable\_lock**  
-**3 \- Приобретенное поток снова nestable\_lock**  
-**Поток 0 \- " не удалось получить nestable\_lock**  
-**Поток 2 \- " не удалось получить nestable\_lock**  
-**Поток 3 \- освобожданное nestable\_lock**  
-**Поток 2 \- " не удалось получить nestable\_lock**  
-**Поток 3 \- освобожданное nestable\_lock**  
-**Поток 2 \- " не удалось получить nestable\_lock**  
-**Поток 0 \- приобретенное nestable\_lock**  
-**Поток 2 \- " не удалось получить nestable\_lock**  
-**Поток 2 \- " не удалось получить nestable\_lock**  
-**Поток 2 \- " не удалось получить nestable\_lock**  
-**0 \- Приобретенное поток снова nestable\_lock**  
-**Поток 2 \- " не удалось получить nestable\_lock**  
-**Поток 0 \- освобожданное nestable\_lock**  
-**Поток 2 \- " не удалось получить nestable\_lock**  
-**Поток 0 \- освобожданное nestable\_lock**  
-**Поток 2 \- " не удалось получить nestable\_lock**  
-**Поток 2 \- приобретенное nestable\_lock**  
-**2 \- Приобретенное поток снова nestable\_lock**  
-**Поток 2 \- освобожданное nestable\_lock**  
-**Поток 2 \- освобожданное nestable\_lock**   
-## См. также  
- [Functions](../../../parallel/openmp/reference/openmp-functions.md)
+```Output  
+Thread 1 - acquired nestable_lock  
+Thread 0 - failed to acquire nestable_lock  
+Thread 1 - acquired nestable_lock again  
+Thread 0 - failed to acquire nestable_lock  
+Thread 1 - released nestable_lock  
+Thread 0 - failed to acquire nestable_lock  
+Thread 1 - released nestable_lock  
+Thread 0 - failed to acquire nestable_lock  
+Thread 3 - acquired nestable_lock  
+Thread 0 - failed to acquire nestable_lock  
+Thread 3 - acquired nestable_lock again  
+Thread 0 - failed to acquire nestable_lock  
+Thread 2 - failed to acquire nestable_lock  
+Thread 3 - released nestable_lock  
+Thread 2 - failed to acquire nestable_lock  
+Thread 3 - released nestable_lock  
+Thread 2 - failed to acquire nestable_lock  
+Thread 0 - acquired nestable_lock  
+Thread 2 - failed to acquire nestable_lock  
+Thread 2 - failed to acquire nestable_lock  
+Thread 2 - failed to acquire nestable_lock  
+Thread 0 - acquired nestable_lock again  
+Thread 2 - failed to acquire nestable_lock  
+Thread 0 - released nestable_lock  
+Thread 2 - failed to acquire nestable_lock  
+Thread 0 - released nestable_lock  
+Thread 2 - failed to acquire nestable_lock  
+Thread 2 - acquired nestable_lock  
+Thread 2 - acquired nestable_lock again  
+Thread 2 - released nestable_lock  
+Thread 2 - released nestable_lock  
+```  
+  
+## <a name="see-also"></a>См. также  
+ [Функции](../../../parallel/openmp/reference/openmp-functions.md)

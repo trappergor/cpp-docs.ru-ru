@@ -1,69 +1,68 @@
 ---
-title: "__stosw | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "__stosw"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Инструкция stosw"
-  - "Встроенная функция __stosw"
-  - "Инструкция rep stosw"
+title: "__stosw | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: __stosw
+dev_langs: C++
+helpviewer_keywords:
+- stosw instruction
+- __stosw intrinsic
+- rep stosw instruction
 ms.assetid: 7620fd1d-dba5-40e3-8e07-01aa68895133
-caps.latest.revision: 15
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 13
+caps.latest.revision: "15"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: c81be0e3c1687a54eb06f4f091a406059523d3a4
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/24/2017
 ---
-# __stosw
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-**Только для систем Microsoft**  
+# <a name="stosw"></a>__stosw
+**Блок, относящийся только к системам Майкрософт**  
   
- Формирует инструкцию строки хранилища \(`rep stosw`\).  
+ Создает инструкцию строка хранилища (`rep stosw`).  
   
-## Синтаксис  
+## <a name="syntax"></a>Синтаксис  
   
 ```  
-void __stosw(   
-   unsigned short* Dest,   
-   unsigned short Data,   
-   size_t Count   
+void __stosw(   
+   unsigned short* Dest,   
+   unsigned short Data,   
+   size_t Count   
 );  
 ```  
   
-#### Параметры  
- \[исходящий\] `Dest`  
- Назначение операции.  
+#### <a name="parameters"></a>Параметры  
+ [выходной] `Dest`  
+ Целевой для операции.  
   
- \[входящий\] `Data`  
- Сохраняемые данные.  
+ [in] `Data`  
+ Для хранения данных.  
   
- \[входящий\] `Count`  
- Длина блока слов, которые требуется записать.  
+ [in] `Count`  
+ Длина блока слов для записи.  
   
-## Требования  
+## <a name="requirements"></a>Требования  
   
-|Встроенный объект|Архитектура|  
-|-----------------------|-----------------|  
-|`__stosw`|x86, [!INCLUDE[vcprx64](../Token/vcprx64_md.md)]|  
+|Встроенная функция|Архитектура|  
+|---------------|------------------|  
+|`__stosw`|x86, [!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|  
   
- **Файл заголовка** \<intrin.h\>  
+ **Файл заголовка** \<intrin.h >  
   
-## Заметки  
- В результате слово `Data` записывается в блоке `Count` слов в строке `Dest`.  
+## <a name="remarks"></a>Примечания  
+ Результат —, слово `Data` записывается в блок `Count` слова в `Dest` строку.  
   
- Эта процедура доступна только в качестве внутреннего элемента.  
+ Эта процедура доступна только как встроенная функция.  
   
-## Пример  
+## <a name="example"></a>Пример  
   
 ```  
 // stosw.c  
@@ -83,8 +82,11 @@ int main()
 }  
 ```  
   
-  **0 128 128 0**   
-## ЭЛЕМЕНТ, относящийся Майкрософт  
+```Output  
+0 128 128 0  
+```  
   
-## См. также  
- [Встроенные объекты компилятора](../intrinsics/compiler-intrinsics.md)
+**Завершение блока, относящегося только к системам Майкрософт**  
+  
+## <a name="see-also"></a>См. также  
+ [Встроенные инструкции компилятора](../intrinsics/compiler-intrinsics.md)

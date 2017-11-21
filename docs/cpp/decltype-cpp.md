@@ -4,30 +4,26 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-language
+ms.technology: cpp-language
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-f1_keywords:
-- decltype_cpp
-dev_langs:
-- C++
+f1_keywords: decltype_cpp
+dev_langs: C++
 helpviewer_keywords:
 - operators [C++], decltype
 - decltype operator
 - operators [C++], type of an expression
 - operators [C++], deduce expression type
 ms.assetid: 6dcf8888-8196-4f13-af50-51e3797255d4
-caps.latest.revision: 14
+caps.latest.revision: "14"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.translationtype: HT
-ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
-ms.openlocfilehash: 1f07590275ca6e2b65d6f3d58bcea825acc71f73
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/25/2017
-
+ms.openlocfilehash: 472b09b268fe9f493a4df025950a3565fd6c944c
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="decltype--c"></a>decltype (C++)
 Описатель типа `decltype` предоставляет тип заданного выражения. `decltype` Описатель типа вместе с [ключевое слово auto](../cpp/auto-cpp.md), используется главным образом для разработчиков, которые создают библиотеки шаблонов. Используйте `auto` и `decltype` для объявления функции шаблонов, возвращаемый тип которой зависит от типов аргументов его шаблонов. Либо используйте `auto` и `decltype` для объявления функции шаблона, которая создает программу-оболочку для вызова другой функции, а затем возвращает возвращаемый тип функции с программой-оболочкой.  
@@ -90,7 +86,7 @@ UNKNOWN func(T&& t, U&& u){ return t + u; };
   
  Следующий прототип иллюстрирует синтаксис альтернативного объявления функции. Обратите внимание, что `const` и `volatile` квалификаторы и `throw` [спецификацией исключений](../cpp/exception-specifications-throw-cpp.md) являются необязательными. *Тело_функции* заполнитель представляет составную инструкцию, которая указывает, что делает функция. Как с рекомендацией *выражение* заполнителя в `decltype` оператор должен соответствовать выражению, заданному `return` инструкции, если таковая имеется, в *тело_функции*.  
   
- **Auto** *function_name* **(** *параметры*<sub>необ</sub> **)** ** const**<sub>необ</sub> **volatile**<sub>необ</sub> ** -> ** **decltype (** *выражение* **)** **throw**<sub>необ</sub> **{** *тело_функции* **};**  
+ **Auto** *function_name* **(** *параметры*<sub>необ</sub> **)**  **const**<sub>необ</sub> **volatile**<sub>необ</sub>  **->**  **decltype (** *выражение* **)** **throw**<sub>необ</sub> **{** *тело_функции* **};**  
   
  В следующем примере кода поздно заданный возвращаемый тип функции шаблона `myFunc` определяется типами аргументов шаблона `t` и `u`. Как с рекомендацией, в примере кода также используются ссылки rvalue и `forward` функции шаблона, который поддерживает *точную пересылку*. Дополнительные сведения см. в статье [Декларатор ссылки Rvalue: &&](../cpp/rvalue-reference-declarator-amp-amp.md).  
   
@@ -214,4 +210,3 @@ static_assert(test2, "PASS2");
   
  `decltype(auto)`требуется Visual Studio 2015 или более поздней версии.  
   
-

@@ -1,48 +1,47 @@
 ---
-title: "/PDBALTPATH (использовать альтернативный путь к PDB-файлу) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "/pdbaltpath"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "PDB-файлы, путь"
-  - "/PDBALTPATH - параметр (программа dumpbin)"
-  - "PDB-файлы, путь"
-  - "PDBALTPATH - параметр (программа dumpbin)"
-  - "-PDBALTPATH - параметр (программа dumpbin)"
+title: "-PDBALTPATH (использовать альтернативный PDB путь к файлу) | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: /pdbaltpath
+dev_langs: C++
+helpviewer_keywords:
+- .pdb files, path
+- PDBALTPATH dumpbin option
+- -PDBALTPATH dumpbin option
+- /PDBALTPATH dumpbin option
+- PDB files, path
 ms.assetid: 72e200aa-e2c3-4ad8-b687-25528da1aaaf
-caps.latest.revision: 12
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 12
+caps.latest.revision: "12"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: 1a35e83f28a78acf199e74118cc1fef359666cf1
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/24/2017
 ---
-# /PDBALTPATH (использовать альтернативный путь к PDB-файлу)
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="pdbaltpath-use-alternate-pdb-path"></a>/PDBALTPATH (использовать альтернативный путь к PDB-файлу)
 ```  
 /PDBALTPATH:pdb_file_name  
 ```  
   
-## Заметки  
- Здесь:  
+## <a name="remarks"></a>Примечания  
+ где:  
   
- *pdb\_file\_name*  
+ *pdb_file_name*  
  Путь к файлу PDB и его имя.  
   
-## Заметки  
- Этот параметр используется, чтобы указать альтернативное расположение для файла базы данных программы \(PDB\) в скомпилированном двоичном файле.  В общем случае компоновщик записывает расположение файла PDB в создаваемых двоичных файлах.  Этот параметр можно использовать для указания другого пути и имени файла PDB.  Информация, предоставляемая с помощью параметра \/PDBALTPATH, не изменяет фактическое расположение и имя файла PDB; изменяется лишь информация, записываемая компоновщиком в двоичный файл.  Это позволяет указать путь, не зависящий от структуры файлов на компьютере, на котором выполняется сборка.  Наиболее распространенные случаи применения этого параметра — указание сетевого пути или файла, не имеющего данных о пути.  
+## <a name="remarks"></a>Примечания  
+ Этот параметр используется, чтобы указать альтернативное расположение для файла базы данных программы (PDB) в скомпилированном двоичном файле. В общем случае компоновщик записывает расположение файла PDB в создаваемых двоичных файлах. Этот параметр можно использовать для указания другого пути и имени файла PDB. Информация, предоставляемая с помощью параметра /PDBALTPATH, не изменяет фактическое расположение и имя файла PDB; изменяется лишь информация, записываемая компоновщиком в двоичный файл. Это позволяет указать путь, не зависящий от структуры файлов на компьютере, на котором выполняется сборка. Наиболее распространенные случаи применения этого параметра — указание сетевого пути или файла, не имеющего данных о пути.  
   
- Значение *pdb\_file\_name* может быть произвольной строкой, переменной среды или **%\_PDB%**.  Компоновщик расширяет переменную среды, такую как **%SystemRoot%**, до ее значения.  Компоновщик определяет переменные среды **%\_PDB%** и **%\_EXT%**.  **%\_PDB%** расширяется до имени фактического файла PDB без каких\-либо данных о пути, а **%\_EXT%** — это расширение создаваемого исполняемого файла.  
+ Значение *pdb_file_name* может быть произвольной строкой, переменной среды или **% _PDB %**. Компоновщик расширяет переменную среды, такую как **% SystemRoot %**, чтобы его значение. Компоновщик определяет переменные среды **% _PDB %** и **% _EXT %**. **% _PDB %** разворачивается в имя файла фактического файла PDB без включения данных пути и **% _EXT %** — это расширение создаваемого исполняемого файла.  
   
-## См. также  
+## <a name="see-also"></a>См. также  
  [Параметры DUMPBIN](../../build/reference/dumpbin-options.md)   
- [\/PDBPATH](../../build/reference/pdbpath.md)
+ [/ PDBPATH](../../build/reference/pdbpath.md)

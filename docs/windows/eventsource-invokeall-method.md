@@ -1,30 +1,28 @@
 ---
-title: "Метод EventSource::InvokeAll | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "event/Microsoft::WRL::EventSource::InvokeAll"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "InvokeAll - метод"
+title: "Метод EventSource::InvokeAll | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: event/Microsoft::WRL::EventSource::InvokeAll
+dev_langs: C++
+helpviewer_keywords: InvokeAll method
 ms.assetid: 1506618f-0421-4428-a4d0-4ea2b10a3bf6
-caps.latest.revision: 7
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 279d40bf8da171547e27313c4f1a9a3578d93be2
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/24/2017
 ---
-# Метод EventSource::InvokeAll
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Вызывает каждый обработчик событий, связанных с текущим [EventSource](../windows/eventsource-class.md) объекта с помощью указанным типам аргументов и аргументов.  
+# <a name="eventsourceinvokeall-method"></a>Метод EventSource::InvokeAll
+Вызывает каждый обработчик событий, связанный с текущим [EventSource](../windows/eventsource-class.md) с использованием указанным типам аргументов и аргументов.  
   
 ## <a name="syntax"></a>Синтаксис  
   

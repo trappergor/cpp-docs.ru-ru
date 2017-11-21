@@ -1,67 +1,67 @@
 ---
-title: "/PDB (Использование базы данных программы) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "/pdb"
-  - "VC.Project.VCLinkerTool.ProgramDatabaseFile"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "PDB-файлы, создание"
-  - "/PDB - параметр компоновщика"
-  - "PDB-файлы, создание"
-  - "PDB - параметр компоновщика"
-  - "-PDB - параметр компоновщика"
+title: "-PDB (использование базы данных программы) | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- /pdb
+- VC.Project.VCLinkerTool.ProgramDatabaseFile
+dev_langs: C++
+helpviewer_keywords:
+- -PDB linker option
+- /PDB linker option
+- PDB linker option
+- PDB files, creating
+- .pdb files, creating
 ms.assetid: d23db0ce-10cb-427a-bc60-d6b2a852723d
-caps.latest.revision: 8
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: 0ea27dd7106e8490e9ba8ec9eacdcbbb02d33036
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/24/2017
 ---
-# /PDB (Использование базы данных программы)
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="pdb-use-program-database"></a>/PDB (Использование базы данных программы)
 ```  
 /PDB:filename  
 ```  
   
-## Заметки  
- Здесь:  
+## <a name="remarks"></a>Примечания  
+ где:  
   
  *filename*  
- Указанное пользователем имя базы данных программы \(PDB\), созданной компоновщиком.  Заменяет стандартное имя.  
+ Пользовательское имя для базы данных программы (PDB), создаваемой компоновщиком. Он заменяет имя по умолчанию.  
   
-## Заметки  
- По умолчанию при указании параметра [\/DEBUG](../../build/reference/debug-generate-debug-info.md) компоновщик создает базу данных программы \(PDB\), которая содержит отладочную информацию.  Стандартное имя файла для PDB содержит имя программы и расширение .pdb.  
+## <a name="remarks"></a>Примечания  
+ По умолчанию когда [/DEBUG](../../build/reference/debug-generate-debug-info.md) указан, компоновщик создает базу данных программы (PDB), содержащий отладочную информацию. Имя файла по умолчанию для PDB-ФАЙЛ имеет базовое имя программы и расширение PDB.  
   
- Используйте \/PDB:*имя\_файла* для указания имени PDB\-файла.  Если параметр \/DEBUG не определен, параметр \/PDB игнорируется.  
+ Используйте/PDB:*filename* для указания имени PDB-файл. Если не задан параметр/debug, / PDB-параметр игнорируется.  
   
- PDB\-файл может иметь размер до 2 ГБ.  
+ PDB-файл может быть размером до 2 ГБ.  
   
- For more information, see [PDB\-файла как входные данные компоновщика](../../build/reference/dot-pdb-files-as-linker-input.md).  
+ Дополнительные сведения см. в разделе [PDB-файлы в качестве входных данных компоновщика](../../build/reference/dot-pdb-files-as-linker-input.md).  
   
-### Установка данного параметра компоновщика в среде разработки Visual Studio  
+### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>Задание данного параметра компоновщика в среде разработки Visual Studio  
   
-1.  Откройте диалоговое окно **Страницы свойств** проекта.  Дополнительные сведения см. в разделе [Задание свойств проекта C\+\+](../../ide/working-with-project-properties.md).  
+1.  Откройте диалоговое окно **Страницы свойств** проекта. Дополнительные сведения см. в разделе [задание свойств проекта Visual C++](../../ide/working-with-project-properties.md).  
   
-2.  Выберите папку **Компоновщик**.  
+2.  Нажмите кнопку **компоновщика** папки.  
   
-3.  Выберите страницу свойств **Отладка**.  
+3.  Нажмите кнопку **отладки** страницу свойств.  
   
-4.  Измените свойство **Создавать файл базы данных программы**.  
+4.  Изменить **создавать файл базы данных программы** свойство.  
   
-### Установка данного параметра компоновщика программным способом  
+### <a name="to-set-this-linker-option-programmatically"></a>Задание данного параметра компоновщика программным способом  
   
 -   См. раздел <xref:Microsoft.VisualStudio.VCProjectEngine.VCLinkerTool.ProgramDatabaseFile%2A>.  
   
-## См. также  
+## <a name="see-also"></a>См. также  
  [Настройка параметров компоновщика](../../build/reference/setting-linker-options.md)   
  [Параметры компоновщика](../../build/reference/linker-options.md)

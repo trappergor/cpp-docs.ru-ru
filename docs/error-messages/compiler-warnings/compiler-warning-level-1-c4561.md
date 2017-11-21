@@ -1,32 +1,30 @@
 ---
-title: "Предупреждение компилятора (уровень 1) C4561 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C4561"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C4561"
+title: "Предупреждение (уровень 1) C4561 компилятора | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords: C4561
+dev_langs: C++
+helpviewer_keywords: C4561
 ms.assetid: 3a10c12c-601b-4b6c-9861-331fd022e021
-caps.latest.revision: 9
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 9
+caps.latest.revision: "9"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: e3706257138c1825e4075c7b131ae272df811626
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/24/2017
 ---
-# Предупреждение компилятора (уровень 1) C4561
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-соглашение "\_\_fastcall" несовместимо с параметром "\/clr": переход на соглашение "\_\_stdcall"  
+# <a name="compiler-warning-level-1-c4561"></a>Предупреждение компилятора (уровень 1) C4561
+соглашение «__fastcall» несовместимо с "/ clr" параметр: преобразование "\__stdcall"  
   
- Соглашение о вызове функций [\_\_fastcall](../../cpp/fastcall.md) не может использоваться с параметром компилятора [\/clr](../../build/reference/clr-common-language-runtime-compilation.md).  Компилятор игнорирует вызовы `__fastcall`.  Чтобы устранить это предупреждение, либо удалите вызовы к **\_\_fastcall**, либо не используйте при компиляции параметр **\/clr**.  
+ [__Fastcall](../../cpp/fastcall.md) соглашение о вызовах функции не может использоваться с [/CLR](../../build/reference/clr-common-language-runtime-compilation.md) параметр компилятора. Компилятор игнорирует вызовы `__fastcall`. Чтобы устранить это предупреждение, удалите вызовы **__fastcall** или выполнить компиляцию без **/CLR**.  
   
  Следующий пример приводит к возникновению ошибки C4561:  
   

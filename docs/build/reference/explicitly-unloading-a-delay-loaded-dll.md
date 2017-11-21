@@ -1,35 +1,35 @@
 ---
-title: "Явная выгрузка библиотеки DLL, загруженной с задержкой | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "/DELAY:UNLOAD - параметр компоновщика"
-  - "__FUnloadDelayLoadedDLL2"
-  - "DELAY:UNLOAD - параметр компоновщика"
-  - "отложенная загрузка библиотек DLL, выгрузка"
+title: "Явная выгрузка библиотеки DLL, загружаемых с задержкой | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- /DELAY:UNLOAD linker option
+- DELAY:UNLOAD linker option
+- __FUnloadDelayLoadedDLL2
+- delayed loading of DLLs, unloading
 ms.assetid: 1c4c5172-fd06-45d3-9e4f-f12343176b3c
-caps.latest.revision: 7
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: b59ad181ea39382a4f79b1af5e6f1d1dbc1ded62
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/24/2017
 ---
-# Явная выгрузка библиотеки DLL, загруженной с задержкой
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Параметр компоновщика [\/delay](../../build/reference/delay-delay-load-import-settings.md):unload позволяет выгружать библиотек DLL, загруженную с задержкой.  По умолчанию, когда код выгружает библиотеку DLL \(используя \/delay:unload и **\_\_FUnloadDelayLoadedDLL2**\), импортирование, загружаемое с задержкой, остается в таблице импорта адресов \(IAT\).  Тем не менее, при использовании в командной строке построителя \/delay:unload, функция помощника будет поддерживать явную выгрузку библиотеки DLL, сбрасывая значения IAT в первоначальное состояние. Недействительные в данный момент указатели будут перезаписаны.  IAT является полем [ImgDelayDescr](../../build/reference/calling-conventions-parameters-and-return-type.md), содержащим адрес копии оригинальной IAT \(если она существует\).  
+# <a name="explicitly-unloading-a-delay-loaded-dll"></a>Явная выгрузка библиотеки DLL, загруженной с задержкой
+[/Delay](../../build/reference/delay-delay-load-import-settings.md): unload-параметр компоновщика позволяет выгружать библиотеку DLL, которая построена с отложенной загрузки. По умолчанию, когда ваш код выгружает библиотеку DLL (с помощью/DELAY: unload и **__FUnloadDelayLoadedDLL2**), импорты, загружаемые с задержкой, остаются в таблице адресов импорта (IAT). Однако при использовании/DELAY: unload в командной строке компоновщика вспомогательная функция будет поддерживать явную выгрузку библиотеки DLL, сбрасывая значения IAT в первоначальное состояние. Теперь недопустимые указатели будут перезаписаны. IAT является полем [ImgDelayDescr](../../build/reference/calling-conventions-parameters-and-return-type.md) , содержащий адрес копии оригинальной IAT (если он существует).  
   
-## Пример  
+## <a name="example"></a>Пример  
   
-### Код  
+### <a name="code"></a>Код  
   
 ```  
 // link with /link /DELAYLOAD:MyDLL.dll /DELAY:UNLOAD  
@@ -56,14 +56,14 @@ int main()
 }  
 ```  
   
-### Комментарии  
- Важные замечания при выгрузке библиотеки DLL, загруженной с задержкой:  
+### <a name="comments"></a>Комментарии  
+ Важные примечания по выгрузка библиотеки DLL, загружаемых с задержкой.  
   
--   Описание процесса реализации функции **\_\_FUnloadDelayLoadedDLL2** можно найти в файле \\VC7\\INCLUDE\\DELAYHLP.CPP.  
+-   Может найти реализацию **__FUnloadDelayLoadedDLL2** функции в файле \VC7\INCLUDE\DELAYHLP. CPP.  
   
--   Имя параметра функции **\_\_FUnloadDelayLoadedDLL2** должно полностью совпадать \(включая регистр\) с содержимым библиотеки импорта \(эта строка тоже находится в таблице импорта образа\).  Содержимое библиотеки импорта можно посмотреть с использованием параметра [DUMPBIN \/DEPENDENTS](../Topic/-DEPENDENTS.md).  В нечувствительных к регистру строках совпадение не обязательно, **\_\_FUnloadDelayLoadedDLL2** можно обновить для использования функций CRT\-строки или вызова Windows API.  
+-   Имя параметра **__FUnloadDelayLoadedDLL2** функции должно точно соответствовать (включая регистр) Библиотека импорта содержимое (которая также присутствует строка в таблице импорта на рисунке). Можно просмотреть содержимое библиотеки импорта с [DUMPBIN/DEPENDENTS](../../build/reference/dependents.md). Можно изменить, если требуется соответствие строк без учета регистра, **__FUnloadDelayLoadedDLL2** с использованием одного из строковых функций CRT, или вызов Windows API.  
   
- Дополнительные сведения см. в разделе [Выгрузка библиотеки DLL, загруженной с задержкой](../../build/reference/unloading-a-delay-loaded-dll.md).  
+ В разделе [выгрузка библиотеки DLL с Delay-Loaded](../../build/reference/unloading-a-delay-loaded-dll.md) для получения дополнительной информации.  
   
-## См. также  
- [Поддержка компоновщика для DLLs, загружаемых с задержкой](../../build/reference/linker-support-for-delay-loaded-dlls.md)
+## <a name="see-also"></a>См. также  
+ [Поддержка компоновщика для библиотек DLL с отложенной загрузкой](../../build/reference/linker-support-for-delay-loaded-dlls.md)

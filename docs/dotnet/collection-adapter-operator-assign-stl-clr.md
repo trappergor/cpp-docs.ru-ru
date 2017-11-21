@@ -1,46 +1,43 @@
 ---
-title: "collection_adapter::operator= (STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::collection_adapter::operator="
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "operator= - член [STL/CLR]"
+title: "collection_adapter::operator = (STL/CLR) | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::collection_adapter::operator=
+dev_langs: C++
+helpviewer_keywords: operator= member [STL/CLR]
 ms.assetid: 45365a33-3b56-4cb7-962f-81c20d8901d3
-caps.latest.revision: 9
-caps.handback.revision: 7
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "9"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 51ebc0fd2b3d13227cec2db5a755bed8a6739674
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/24/2017
 ---
-# collection_adapter::operator= (STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Заменяет сохраненного дескриптора BCL.  
+# <a name="collectionadapteroperator-stlclr"></a>collection_adapter::operator= (STL/CLR)
+Заменяет дескриптор хранимых BCL.  
   
-## Синтаксис  
+## <a name="syntax"></a>Синтаксис  
   
 ```  
 collection_adapter<Coll>% operator=(collection_adapter<Coll>% right);  
 ```  
   
-#### Параметры  
- правый  
- Адаптер, который необходимо скопировать.  
+#### <a name="parameters"></a>Параметры  
+ right  
+ Адаптер для копирования.  
   
-## Заметки  
- Член оператор копирует `right` к объекту, а затем возвращает `*this`.  Он используется, чтобы заменить сохраненного дескриптора BCL копией сохраненного дескриптора BCL в `right`.  
+## <a name="remarks"></a>Примечания  
+ Копирует оператор член `right` объекту, затем возвращает `*this`. Используется для замены сохраненного дескриптора BCL копию хранимой BCL дескриптора в `right`.  
   
-## Пример  
+## <a name="example"></a>Пример  
   
 ```  
 // cliext_collection_adapter_operator_as.cpp   
@@ -74,12 +71,15 @@ int main()
   
 ```  
   
-  **a b c**  
- **a b c**   
-## Требования  
- **Заголовок:**\<cliext\/adapter\>  
+```Output  
+a b c  
+a b c  
+```  
+  
+## <a name="requirements"></a>Требования  
+ **Заголовок:** \<cliext адаптер >  
   
  **Пространство имен:** cliext  
   
-## См. также  
- [collection\_adapter](../Topic/collection_adapter%20\(STL-CLR\).md)
+## <a name="see-also"></a>См. также  
+ [collection_adapter (STL/CLR)](../dotnet/collection-adapter-stl-clr.md)

@@ -1,32 +1,30 @@
 ---
-title: "oleautomation | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-f1_keywords: 
-  - "vc-attr.oleautomation"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "oleautomation attribute"
+title: "oleautomation | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+f1_keywords: vc-attr.oleautomation
+dev_langs: C++
+helpviewer_keywords: oleautomation attribute
 ms.assetid: c1086c91-260b-4dc3-b244-662852d09906
-caps.latest.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 9
+caps.latest.revision: "9"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 846194b5c032ecea86e92078ae3b0bb3a8ed77b3
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/24/2017
 ---
-# oleautomation
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Указывает, что интерфейс совместимый с автоматизацией.  
+# <a name="oleautomation"></a>oleautomation
+Указывает, что интерфейс совместим с автоматизацией.  
   
-## Синтаксис  
+## <a name="syntax"></a>Синтаксис  
   
 ```  
   
@@ -34,26 +32,25 @@ caps.handback.revision: 9
   
 ```  
   
-## Заметки  
- **oleautomation** Атрибут C\+\+ имеет ту же функциональность, что и  [oleautomation](http://msdn.microsoft.com/library/windows/desktop/aa367129) атрибут MIDL.  
+## <a name="remarks"></a>Примечания  
+ **Oleautomation** языка C++ имеет ту же функциональность, что [oleautomation](http://msdn.microsoft.com/library/windows/desktop/aa367129) языка MIDL.  
   
-## Пример  
- См. примеры [defaultvalue](../Topic/defaultvalue.md) и  [nonextensible](../Topic/nonextensible.md) для использования образцы  **oleautomation**.  
+## <a name="example"></a>Пример  
+ См. в примерах для [defaultvalue](../windows/defaultvalue.md) и [nonextensible](../windows/nonextensible.md) для приведен пример использования **oleautomation**.  
   
-## Требования  
+## <a name="requirements"></a>Требования  
   
-### Контекст атрибута  
+### <a name="attribute-context"></a>Контекст атрибута  
   
 |||  
 |-|-|  
 |**Применение**|`interface`|  
-|**Repeatable**|Нет|  
-|**Обязательные атрибуты**|None|  
+|**Повторяемый**|Нет|  
+|**Обязательные атрибуты**|Нет|  
 |**Недопустимые атрибуты**|**dispinterface**|  
   
- Дополнительные сведения о контекстах атрибута см. в разделе [Контексты атрибута](../windows/attribute-contexts.md).  
+ Дополнительные сведения о контекстах атрибутов см. в разделе [Контексты атрибутов](../windows/attribute-contexts.md).  
   
-## См. также  
- [IDL Attributes](../windows/idl-attributes.md)   
- [Interface Attributes](../windows/interface-attributes.md)   
- [Attributes Samples](http://msdn.microsoft.com/ru-ru/558ebdb2-082f-44dc-b442-d8d33bf7bdb8)
+## <a name="see-also"></a>См. также  
+ [Атрибуты IDL](../windows/idl-attributes.md)   
+ [Атрибуты интерфейса](../windows/interface-attributes.md)   

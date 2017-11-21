@@ -1,44 +1,43 @@
 ---
-title: "3.1 Execution Environment Functions | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
+title: "3.1 функции среды выполнения | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
 ms.assetid: 7d3e6f47-ce01-4dab-946b-bccc220e2ddd
-caps.latest.revision: 4
-caps.handback.revision: 4
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "4"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 8adf595c8b2460bda2c977e4467d34dd1cbb3f48
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/24/2017
 ---
-# 3.1 Execution Environment Functions
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Функции, описанные в этом разделе, влияющие на потоки и контролируют, процессоры и параллельную среду.  
+# <a name="31-execution-environment-functions"></a>3.1 Функции среды выполнения
+Функции, описанные в этом разделе влияет на и отслеживать потоки, процессоры и параллельные среды:  
   
--   omp\_set\_num\_threads функция.  
+-   **omp_set_num_threads** функции.  
   
--   omp\_get\_num\_threads функция.  
+-   **omp_get_num_threads** функции.  
   
--   omp\_get\_max\_threads функция.  
+-   **omp_get_max_threads** функции.  
   
--   omp\_get\_thread\_num функция.  
+-   **omp_get_thread_num** функции.  
   
--   omp\_get\_num\_procs функция.  
+-   **omp_get_num_procs** функции.  
   
--   omp\_in\_parallel функция.  
+-   **omp_in_parallel** функции.  
   
--   omp\_set\_dynamic функция.  
+-   **omp_set_dynamic** функции.  
   
--   omp\_get\_dynamic функция.  
+-   **omp_get_dynamic** функции.  
   
--   omp\_set\_nested функция.  
+-   **omp_set_nested** функции.  
   
--   omp\_get\_nested функция.
+-   **omp_get_nested** функции.

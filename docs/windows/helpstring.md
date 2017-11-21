@@ -1,32 +1,30 @@
 ---
-title: "helpstring | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-f1_keywords: 
-  - "vc-attr.helpstring"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "helpstring attribute [C++]"
+title: "HelpString | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+f1_keywords: vc-attr.helpstring
+dev_langs: C++
+helpviewer_keywords: helpstring attribute [C++]
 ms.assetid: 0401e905-a63e-4fad-98d0-d1efea111966
-caps.latest.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 9
+caps.latest.revision: "9"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 27cf95f5017775fbf7a0315341cea19931f64068
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/24/2017
 ---
-# helpstring
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Задает символьную строку, используемую для описания элемента, к которому она применяется.  
+# <a name="helpstring"></a>helpstring
+Определяет строку символов, используемый для описания элемента, к которому он применяется.  
   
-## Синтаксис  
+## <a name="syntax"></a>Синтаксис  
   
 ```  
   
@@ -35,35 +33,34 @@ caps.handback.revision: 9
 ) ]  
 ```  
   
-#### Параметры  
+#### <a name="parameters"></a>Параметры  
  `string`  
- Текст строки справки.  
+ Текст справки строки.  
   
-## Заметки  
- **Сттрока справки** Атрибут C\+\+ имеет ту же функциональность, что и  [Сттрока справки](http://msdn.microsoft.com/library/windows/desktop/aa366856) атрибут MIDL.  
+## <a name="remarks"></a>Примечания  
+ **Helpstring** языка C++ имеет ту же функциональность, что [helpstring](http://msdn.microsoft.com/library/windows/desktop/aa366856) языка MIDL.  
   
-## Пример  
- Эти пример [defaultvalue](../Topic/defaultvalue.md) пример использования  **Сттрока справки**.  
+## <a name="example"></a>Пример  
+ Далее приведен пример [defaultvalue](../windows/defaultvalue.md) пример демонстрирует использование **helpstring**.  
   
-## Требования  
+## <a name="requirements"></a>Требования  
   
-### Контекст атрибута  
+### <a name="attribute-context"></a>Контекст атрибута  
   
 |||  
 |-|-|  
-|**Применение**|`interface`"  `typedef`"  **класс**метод, свойство|  
-|**Repeatable**|Нет|  
-|**Обязательные атрибуты**|None|  
-|**Недопустимые атрибуты**|None|  
+|**Применение**|`interface`, `typedef`, **класса**, метод, свойство|  
+|**Повторяемый**|Нет|  
+|**Обязательные атрибуты**|Нет|  
+|**Недопустимые атрибуты**|Нет|  
   
- Дополнительные сведения см. в разделе [Контексты атрибута](../windows/attribute-contexts.md).  
+ Дополнительные сведения см. в разделе [Контексты атрибутов](../windows/attribute-contexts.md).  
   
-## См. также  
- [IDL Attributes](../windows/idl-attributes.md)   
- [Interface Attributes](../windows/interface-attributes.md)   
- [Class Attributes](../windows/class-attributes.md)   
- [Method Attributes](../windows/method-attributes.md)   
- [Typedef, Enum, Union, and Struct Attributes](../windows/typedef-enum-union-and-struct-attributes.md)   
- [helpfile](../Topic/helpfile.md)   
+## <a name="see-also"></a>См. также  
+ [Атрибуты IDL](../windows/idl-attributes.md)   
+ [Атрибуты интерфейса](../windows/interface-attributes.md)   
+ [Атрибуты классов](../windows/class-attributes.md)   
+ [Атрибуты метода](../windows/method-attributes.md)   
+ [TypeDef, Enum, Union и Struct атрибуты](../windows/typedef-enum-union-and-struct-attributes.md)   
+ [файл справки](../windows/helpfile.md)   
  [helpcontext](../windows/helpcontext.md)   
- [Attributes Samples](http://msdn.microsoft.com/ru-ru/558ebdb2-082f-44dc-b442-d8d33bf7bdb8)

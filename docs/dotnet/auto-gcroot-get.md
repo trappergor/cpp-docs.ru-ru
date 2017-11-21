@@ -1,44 +1,43 @@
 ---
-title: "auto_gcroot::get | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "msclr::auto_gcroot::get"
-  - "msclr.auto_gcroot.get"
-  - "auto_gcroot::get"
-  - "auto_gcroot.get"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "auto_gcroot::get"
+title: "auto_gcroot::Get | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords:
+- msclr::auto_gcroot::get
+- msclr.auto_gcroot.get
+- auto_gcroot::get
+- auto_gcroot.get
+dev_langs: C++
+helpviewer_keywords: auto_gcroot::get
 ms.assetid: 0e922019-1cf5-4220-b5ab-6c4a2a6b40ec
-caps.latest.revision: 13
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 11
+caps.latest.revision: "13"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 4c5dbf86956de4a4df226bd87e970197f300f03b
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/24/2017
 ---
-# auto_gcroot::get
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Получает содержащуюся объект.  
+# <a name="autogcrootget"></a>auto_gcroot::get
+Получает содержащийся объект.  
   
-## Синтаксис  
+## <a name="syntax"></a>Синтаксис  
   
 ```  
 _element_type get() const;  
 ```  
   
-## Возвращаемое значение  
- , Который содержит объект.  
+## <a name="return-value"></a>Возвращаемое значение  
+ Содержащийся объект.  
   
-## Пример  
+## <a name="example"></a>Пример  
   
 ```  
 // msl_auto_gcroot_get.cpp  
@@ -78,15 +77,18 @@ int main() {
 }  
 ```  
   
-  **в конструкторе ClassA: сначала**  
-**Hello от первого суффикса\!**  
-**Hello от первого суффикса\!**  
-**Hello от первого суффикса\!**  
-**в деструкторе ClassA: сначала**   
-## Требования  
- **Файл заголовка**\<msclr\\auto\_gcroot.h\>  
+```Output  
+in ClassA constructor:first  
+Hello from first A!  
+Hello from first A!  
+Hello from first A!  
+in ClassA destructor:first  
+```  
+  
+## <a name="requirements"></a>Требования  
+ **Файл заголовка** \<msclr\auto_gcroot.h >  
   
  **Пространство имен** msclr  
   
-## См. также  
- [Члены auto\_gcroot](../dotnet/auto-gcroot-members.md)
+## <a name="see-also"></a>См. также  
+ [Члены auto_gcroot](../dotnet/auto-gcroot-members.md)

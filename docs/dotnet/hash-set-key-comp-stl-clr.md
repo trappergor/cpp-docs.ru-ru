@@ -1,41 +1,39 @@
 ---
-title: "hash_set::key_comp (STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::hash_set::key_comp"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "key_comp - член [STL/CLR]"
+title: "hash_set::key_comp (STL/CLR) | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::hash_set::key_comp
+dev_langs: C++
+helpviewer_keywords: key_comp member [STL/CLR]
 ms.assetid: d5dc46c3-c2ee-4591-8f03-d8c9d3df0519
-caps.latest.revision: 15
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 13
+caps.latest.revision: "15"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: a76db0965f3f8ef7381d85f1fccdfbeaa69f8b85
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/24/2017
 ---
-# hash_set::key_comp (STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Копирует порядок делегат для 2 ключей.  
+# <a name="hashsetkeycomp-stlclr"></a>hash_set::key_comp (STL/CLR)
+Копирует делегат упорядочения для двух ключей.  
   
-## Синтаксис  
+## <a name="syntax"></a>Синтаксис  
   
 ```  
 key_compare^key_comp();  
 ```  
   
-## Заметки  
- Возвращает порядок функцию\-член делегат, используемый для сортировки контролируемую последовательность.  Используется для сравнения двух ключей.  
+## <a name="remarks"></a>Примечания  
+ Функция-член возвращает упорядочивания делегат, используемый для упорядочения управляемой последовательности. Используется для сравнения двух ключей.  
   
-## Пример  
+## <a name="example"></a>Пример  
   
 ```  
 // cliext_hash_set_key_comp.cpp   
@@ -71,18 +69,22 @@ int main()
   
 ```  
   
-  **сравнение \(L'a, L'а\) \= true**  
-**сравнение \(L'a, L'б\) \= true**  
-**сравнение \(L'b, L'а\) \= false**  
-**сравнение \(L'a, L'а\) \= false**  
-**сравнение \(L'a, L'б\) \= false**  
-**сравнение \(L'b, L'а\) \= true**   
-## Требования  
- **Заголовок:**\<cliext\/hash\_set\>  
+```Output  
+compare(L'a', L'a') = True  
+compare(L'a', L'b') = True  
+compare(L'b', L'a') = False  
+  
+compare(L'a', L'a') = False  
+compare(L'a', L'b') = False  
+compare(L'b', L'a') = True  
+```  
+  
+## <a name="requirements"></a>Требования  
+ **Заголовок:** \<cliext/hash_set >  
   
  **Пространство имен:** cliext  
   
-## См. также  
- [hash\_set](../dotnet/hash-set-stl-clr.md)   
- [hash\_set::key\_compare](../Topic/hash_set::key_compare%20\(STL-CLR\).md)   
- [hash\_set::key\_type](../dotnet/hash-set-key-type-stl-clr.md)
+## <a name="see-also"></a>См. также  
+ [hash_set (STL/CLR)](../dotnet/hash-set-stl-clr.md)   
+ [hash_set::key_compare (STL/CLR)](../dotnet/hash-set-key-compare-stl-clr.md)   
+ [hash_set::key_type (STL/CLR)](../dotnet/hash-set-key-type-stl-clr.md)

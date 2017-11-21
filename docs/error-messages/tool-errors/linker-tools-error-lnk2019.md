@@ -4,29 +4,25 @@ ms.custom:
 ms.date: 05/17/2017
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-tools
+ms.technology: cpp-tools
 ms.tgt_pltfrm: 
 ms.topic: error-reference
-f1_keywords:
-- LNK2019
-dev_langs:
-- C++
+f1_keywords: LNK2019
+dev_langs: C++
 helpviewer_keywords:
 - nochkclr.obj
 - LNK2019
 - _check_commonlanguageruntime_version
 ms.assetid: 4392be92-195c-4eb2-bd4d-49cfac3ca291
-caps.latest.revision: 39
+caps.latest.revision: "39"
 author: corob-msft
 ms.author: corob
 manager: ghogen
+ms.openlocfilehash: ce3fddc9977f0abda1d776fd66172dbb49e86d3a
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
 ms.translationtype: MT
-ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
-ms.openlocfilehash: 4cb4413b8c0b53b407724dd16083027b89b91b37
-ms.contentlocale: ru-ru
-ms.lasthandoff: 10/09/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="linker-tools-error-lnk2019"></a>Ошибка средств компоновщика LNK2019
 неразрешенный внешний символ "*символ*«ссылка на функцию»*функция*"  
@@ -61,6 +57,8 @@ ms.lasthandoff: 10/09/2017
   
 -   **Построение консольного приложения выполняется с использованием параметров для приложения Windows**. Если появилось сообщение об ошибке похожее на **unresolved external symbol WinMain referenced in function**`function_name`, выполните компоновку с помощью **/SUBSYSTEM:CONSOLE** вместо **/SUBSYSTEM:WINDOWS**. Дополнительные сведения об этом параметре и инструкции о том, как задать это свойство в Visual Studio, см. в статье [/SUBSYSTEM (Specify Subsystem)](../../build/reference/subsystem-specify-subsystem.md).  
   
+-   **При попытке связать 64-разрядные библиотеки 32-разрядного кода или 32-разрядные библиотеки для 64-разрядного кода.** Библиотеки и объектных файлов, связанных с код должен быть скомпилирован для ту же архитектуру, что ваш код. Убедитесь, что ссылки проекта компилируются на ту же архитектуру, что и проект библиотеки. Убедитесь, что [/LIBPATH](../../build/reference/libpath-additional-libpath.md) или **Дополнительные каталоги библиотек** параметр пути, используемые точками компоновщика для библиотек, разработанных для обеспечения правильной архитектуры.
+
 -   **Для встраивания функции в различные исходные файлы используются разные параметры компилятора.** Использование встроенных функций, определенных в CPP-файлах, и смешение в различных исходных файлах параметров компилятора для встраивания функций может привести к возникновению ошибки LNK2019. Для получения дополнительной информации см. [Function Inlining Problems](../../error-messages/tool-errors/function-inlining-problems.md).  
   
 -   **Автоматические переменные используются за пределами их области видимости.** Автоматические переменные (области видимости функции) могут использоваться только в области видимости данной функции. Эти переменные не могут объявляться `extern` и использоваться в других исходных файлах. Пример см. в разделе [Automatic (Function Scope) Variables](../../error-messages/tool-errors/automatic-function-scope-variables.md).  
@@ -194,5 +192,4 @@ int main() {
 ## <a name="additional-resources"></a>Дополнительные ресурсы  
   
 Дополнительные сведения о возможных причинах проблем и решений для LNK2001 см. в разделе вопросу переполнения стека [возможности ошибка неопределенной ссылки или неразрешенного внешнего символа и как ее исправить?](http://stackoverflow.com/q/12573816/2002113).  
-
 

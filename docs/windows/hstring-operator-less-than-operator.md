@@ -1,54 +1,51 @@
 ---
-title: "Оператор HString::Operator&lt; | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "corewrappers/Microsoft::WRL::Wrappers::HString::operator<"
-dev_langs: 
-  - "C++"
+title: "HString::Operator&lt; оператор | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: corewrappers/Microsoft::WRL::Wrappers::HString::operator<
+dev_langs: C++
 ms.assetid: 48a051cb-4609-42be-b48c-d35fc99d1eab
-caps.latest.revision: 2
-caps.handback.revision: 2
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "2"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 84725ca0ceeb4778bec2add60c7e96eff3ab3bfb
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/24/2017
 ---
-# Оператор HString::Operator&lt;
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Указывает, меньше ли первый параметр второго.  
+# <a name="hstringoperatorlt-operator"></a>HString::Operator&lt; оператор
+Указывает, является ли первый параметр меньше второго параметра.  
   
-## Синтаксис  
+## <a name="syntax"></a>Синтаксис  
   
 ```cpp  
-  
 inline bool operator<(  
     const HString& lhs,   
     const HString& rhs) throw()  
   
 ```  
   
-#### Параметры  
+#### <a name="parameters"></a>Параметры  
  `lhs`  
- Первый параметр для сравнения.  `lhs` может быть ссылкой на HString.  
+ Первый параметр для сравнения. `lhs`может быть ссылкой на HString.  
   
  `rhs`  
- Второй параметр для сравнения.  `rhs` может быть ссылкой на HString.  
+ Второй параметр для сравнения. `rhs`может быть ссылкой на HString.  
   
-## Возвращаемое значение  
- `true`, если значение параметра `lhs` меньше значения параметра `rhs`; в противном случае — значение `false`.  
+## <a name="return-value"></a>Возвращаемое значение  
+ `true`Если `lhs` параметр меньше, чем `rhs` параметр; в противном случае `false`.  
   
-## Требования  
+## <a name="requirements"></a>Требования  
  **Заголовок:** corewrappers.h  
   
- **Пространство имен:** Microsoft::WRL::Wrappers  
+ **Пространство имен:** Microsoft::wrl:: wrappers  
   
-## См. также  
+## <a name="see-also"></a>См. также  
  [Класс HString](../windows/hstring-class.md)

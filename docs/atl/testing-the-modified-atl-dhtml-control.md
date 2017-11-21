@@ -1,54 +1,55 @@
 ---
-title: "Testing the Modified ATL DHTML Control | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "DHTML controls, проверка"
-  - "элементы управления HTML, проверка"
-  - "testing controls"
+title: "Тестирование измененный элемент управления ATL DHTML | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- HTML controls, testing
+- testing controls
+- DHTML controls, testing
 ms.assetid: 42316118-9433-410f-9d8a-0efcc1eff824
-caps.latest.revision: 11
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 6
+caps.latest.revision: "11"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 84b9aa9ffb04b807cba07fdd3577622f62f6ab45
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/24/2017
 ---
-# Testing the Modified ATL DHTML Control
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Попробуйте вне новый элемент управления, чтобы проверить, как он работает.  
+# <a name="testing-the-modified-atl-dhtml-control"></a>Тестирование измененный элемент управления ATL DHTML
+Пробное использование нового элемента управления для просмотра их работу.  
   
-#### Построение и тестирование измененный элемент управления  
+#### <a name="to-build-and-test-the-modified-control"></a>Построение и тестирование измененного элемента управления  
   
-1.  Перестройте проект и откройте его в тестовом контейнере.  См. раздел [свойства и события тестирования с тестовым контейнером](../mfc/testing-properties-and-events-with-test-container.md) дополнительные сведения о доступе к тестовый контейнер.  
+1.  Перестройте проект и откройте его в тестовом контейнере. В разделе [тестирование свойств и событий с использованием тестового контейнера](../mfc/testing-properties-and-events-with-test-container.md) сведения о том, как получить доступ к контейнеру теста.  
   
-     Измените размер элемента управления, чтобы отобразить все кнопки добавления.  
+     Размер элемента управления для отображения всех кнопок, которые вы добавили.  
   
-2.  Просмотрите 2 кнопки, вставленным путем редактирования HTML.  Каждая кнопка содержит метку, указанной в [Изменение элемент управления DHTML библиотеки ATL](../atl/modifying-the-atl-dhtml-control.md): **Обновить** и **HelloHTML**.  
+2.  Изучите две кнопки, которые вставлены путем изменения HTML. Каждая кнопка имеет метку, определенных в [изменения элемента управления ATL DHTML](../atl/modifying-the-atl-dhtml-control.md): **обновление** и **HelloHTML**.  
   
-3.  Проверьте 2 новых кнопки, чтобы просмотреть, как они работают.  
+3.  Проверьте две новые кнопки, чтобы увидеть, как они работают.  
   
- Теперь тест методы, которые не являются частью пользовательского интерфейса.  
+ Теперь можно проверьте методы, которые не являются частью пользовательского интерфейса.  
   
-1.  Выберите элемент управления, поэтому граница активируется.  
+1.  Выделите элемент управления, чтобы активировать границы.  
   
-2.  В меню **Управление** нажмите кнопку **Invoke Methods**.  
+2.  На **управления** меню, нажмите кнопку **вызов методов**.  
   
- Методы в списке **Имя метода** методы, которые может вызвать контейнер. `MethodInvoked`  и  `GoToURL`.  Все другие методы управляются пользовательским интерфейсом.  
+ Методы в списке с меткой **имя метода** представляют собой методы, которые могут вызывать контейнера: `MethodInvoked` и `GoToURL`. Все другие методы управляются пользовательского интерфейса.  
   
-1.  Выберите метод, который необходимо вызвать, и щелкните `Invoke` для отображения окна сообщения метода или для перехода на www.microsoft.com.  
+1.  Выберите способ вызова неуправляемого кода и нажмите кнопку `Invoke` для отображения окна сообщения метода или для перехода к www.microsoft.com.  
   
-2.  В диалоговом окне **Invoke Methods** нажмите кнопку **Закрыть**.  
+2.  В **вызов методов** диалоговое окно, нажмите кнопку **закрыть**.  
   
- Дополнительные сведения о различных элементах и файлов, составляющих элемент управления DHTML библиотеки ATL см. в разделе [Идентификация элементов проекта элемента управления DHTML](../atl/identifying-the-elements-of-the-dhtml-control-project.md).  
+ Дополнительные сведения о различных элементов и файлов, составляющих элемент управления ATL DHTML см. в разделе [определения элементов управления DHTML проекта](../atl/identifying-the-elements-of-the-dhtml-control-project.md).  
   
-## См. также  
+## <a name="see-also"></a>См. также  
  [Поддержка элементов управления DHTML](../atl/atl-support-for-dhtml-controls.md)
+

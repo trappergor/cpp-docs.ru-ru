@@ -1,32 +1,30 @@
 ---
-title: "Класс ClassFactory | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "module/Microsoft::WRL::ClassFactory"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "ClassFactory - класс"
+title: "Класс ClassFactory | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: module/Microsoft::WRL::ClassFactory
+dev_langs: C++
+helpviewer_keywords: ClassFactory class
 ms.assetid: f13e6bce-722b-4f18-b7cf-3ffa6345c1db
-caps.latest.revision: 4
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 4
+caps.latest.revision: "4"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 2c1dfeafab3ffa3c9a25c5c2284f6ca2c047a6c2
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/24/2017
 ---
-# Класс ClassFactory
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="classfactory-class"></a>ClassFactory - класс
 Реализует базовую функциональность интерфейса IClassFactory.  
   
-## Синтаксис  
+## <a name="syntax"></a>Синтаксис  
   
 ```  
 template <  
@@ -44,9 +42,9 @@ class ClassFactory : public Details::RuntimeClass<
       false>;  
 ```  
   
-#### Параметры  
+#### <a name="parameters"></a>Параметры  
  `I0`  
- Нулевой интерфейс.  
+ Интерфейс нулевой.  
   
  `I1`  
  Первый интерфейс.  
@@ -54,31 +52,31 @@ class ClassFactory : public Details::RuntimeClass<
  `I2`  
  Второй интерфейс.  
   
-## Примечания  
- Используйте `ClassFactory` для указания определенной пользователем реализации фабрики.  
+## <a name="remarks"></a>Примечания  
+ Использовать `ClassFactory` для реализации пользовательской фабрики.  
   
- Следующий шаблон программирования демонстрирует использование структуры [Implements](../Topic/Implements%20Structure.md) для указания более трех интерфейсов для фабрики класса.  
+ Следующий шаблон программирования демонстрируется использование [реализует](../windows/implements-structure.md) структура для указания более трех интерфейсов на фабрику классов.  
   
  `struct MyFactory : ClassFactory<Implements<I1, I2, I3>, I4, I5>`  
   
-## Члены  
+## <a name="members"></a>Члены  
   
-### Открытые конструкторы  
-  
-|Имя|Описание|  
-|---------|--------------|  
-|[Конструктор ClassFactory::ClassFactory](../Topic/ClassFactory::ClassFactory%20Constructor.md)||  
-  
-### Открытые методы  
+### <a name="public-constructors"></a>Открытые конструкторы  
   
 |Имя|Описание|  
-|---------|--------------|  
-|[Метод ClassFactory::AddRef](../Topic/ClassFactory::AddRef%20Method.md)|Увеличивает значение счетчика ссылок для текущего объекта ClassFactory.|  
-|[Метод ClassFactory::LockServer](../windows/classfactory-lockserver-method.md)|Увеличивает или уменьшает число основных объектов, отслеживаемых текущим объектом ClassFactory.|  
-|[Метод ClassFactory::QueryInterface](../windows/classfactory-queryinterface-method.md)|Извлекает указатель на интерфейс, указанный параметром.|  
-|[Метод ClassFactory::Release](../windows/classfactory-release-method.md)|Уменьшает значение счетчика ссылок для текущего объекта ClassFactory.|  
+|----------|-----------------|  
+|[Конструктор ClassFactory::ClassFactory](../windows/classfactory-classfactory-constructor.md)||  
   
-## Иерархия наследования  
+### <a name="public-methods"></a>Открытые методы  
+  
+|Имя|Описание|  
+|----------|-----------------|  
+|[Метод ClassFactory::AddRef](../windows/classfactory-addref-method.md)|Увеличивает счетчик ссылок для текущим объектом ClassFactory.|  
+|[Метод ClassFactory::LockServer](../windows/classfactory-lockserver-method.md)|Увеличивает или уменьшает число базовых объектов, отслеживаемых текущим объектом ClassFactory.|  
+|[Метод ClassFactory::QueryInterface](../windows/classfactory-queryinterface-method.md)|Извлекает указатель на интерфейс, определяемый параметром.|  
+|[Метод ClassFactory::Release](../windows/classfactory-release-method.md)|Уменьшает счетчик ссылок для текущим объектом ClassFactory.|  
+  
+## <a name="inheritance-hierarchy"></a>Иерархия наследования  
  `I0`  
   
  `ChainInterfaces`  
@@ -99,11 +97,11 @@ class ClassFactory : public Details::RuntimeClass<
   
  `ClassFactory`  
   
-## Требования  
+## <a name="requirements"></a>Требования  
  **Заголовок:** module.h  
   
  **Пространство имен:** Microsoft::WRL  
   
-## См. также  
+## <a name="see-also"></a>См. также  
  [Пространство имен Microsoft::WRL](../windows/microsoft-wrl-namespace.md)   
  [Перечисление RuntimeClassType](../windows/runtimeclasstype-enumeration.md)

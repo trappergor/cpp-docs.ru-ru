@@ -4,42 +4,22 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-tools
+ms.technology: cpp-tools
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- C3490
-dev_langs:
-- C++
-helpviewer_keywords:
-- C3490
+f1_keywords: C3490
+dev_langs: C++
+helpviewer_keywords: C3490
 ms.assetid: 7638559a-fd06-4527-a9c1-0c8ae68b3123
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: a82768750e6a7837bb81edd8a51847f83c294c20
-ms.openlocfilehash: 83a215b1c4883ba7ed4b285af8c4efafe2cfaa05
-ms.contentlocale: ru-ru
-ms.lasthandoff: 04/04/2017
-
+ms.openlocfilehash: 42923edc2d238e7f0b64858561f7d23d211abd80
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="compiler-error-c3490"></a>Ошибка компилятора C3490
 "переменная" не может быть изменен, поскольку доступ к нему осуществляется через константный объект  
@@ -51,7 +31,7 @@ ms.lasthandoff: 04/04/2017
 -   Удалите модификатор `const` из объявления метода.  
   
 ## <a name="example"></a>Пример  
- Следующий пример вызывает ошибку C3490, так как она изменяет переменной-члена `_i` в `const` метод:  
+ Приведенный ниже пример вызывает ошибку C3490, так как переменная-член `_i` изменяется в методе `const` .  
   
 ```  
 // C3490a.cpp  

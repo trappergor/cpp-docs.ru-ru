@@ -4,27 +4,22 @@ ms.custom:
 ms.date: 05/17/2017
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-tools
+ms.technology: cpp-tools
 ms.tgt_pltfrm: 
 ms.topic: error-reference
-f1_keywords:
-- LNK1104
-dev_langs:
-- C++
-helpviewer_keywords:
-- LNK1104
+f1_keywords: LNK1104
+dev_langs: C++
+helpviewer_keywords: LNK1104
 ms.assetid: 9ca6f929-0efc-4055-8354-3cf5b4e636dc
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.translationtype: MT
-ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
 ms.openlocfilehash: ebc0b23a7d92c94373b9ae5be01a0ef50476e433
-ms.contentlocale: ru-ru
-ms.lasthandoff: 10/09/2017
-
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="linker-tools-error-lnk1104"></a>Ошибка средств компоновщика LNK1104
 не удается открыть файл "*filename*"  
@@ -70,4 +65,3 @@ ms.lasthandoff: 10/09/2017
 -   Если *filename* называется LNK*n*, которая является именем файла компоновщиком для временного файла, каталог, указанный в переменной среды TMP не существует, или несколько для переменной среды TMP, может быть указан каталог. Только один путь к каталогу должен быть указан для переменной среды TMP.  
   
 -   Если это сообщение об ошибке касается имени библиотеки и MAK-файл был недавно перенесен из предыдущей системы разработки Microsoft Visual C++, то, возможно, эта библиотека больше не действительна. Убедитесь, что имя библиотеки указано правильно и все еще существует в указанном расположении или обновить путь LIB, чтобы он указывал на новое место.  
-

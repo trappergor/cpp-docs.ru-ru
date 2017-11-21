@@ -1,41 +1,39 @@
 ---
-title: "vector::front_item (STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::vector::front_item"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "front_item - член [STL/CLR]"
+title: "Vector::front_item (STL/CLR) | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::vector::front_item
+dev_langs: C++
+helpviewer_keywords: front_item member [STL/CLR]
 ms.assetid: 7db87868-3e54-4c67-a06b-01bcfff3128d
-caps.latest.revision: 16
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 14
+caps.latest.revision: "16"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 8f55a2aaa679d17da27b4ff80bdd3a2342078707
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/24/2017
 ---
-# vector::front_item (STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Получение первого элемента.  
+# <a name="vectorfrontitem-stlclr"></a>vector::front_item (STL/CLR)
+Обращается к первому элементу.  
   
-## Синтаксис  
+## <a name="syntax"></a>Синтаксис  
   
 ```  
 property value_type front_item;  
 ```  
   
-## Заметки  
- Свойство получения первого элемента контролируемой последовательности, которая должна быть непустой.  Он используется для чтения и записи первый элемент, если известно, что он существует.  
+## <a name="remarks"></a>Примечания  
+ Свойство обращается к первый элемент управляемой последовательности, который должен быть пустым. Используется для чтения или записи первый элемент, если известно, что он существует.  
   
-## Пример  
+## <a name="example"></a>Пример  
   
 ```  
 // cliext_vector_front_item.cpp   
@@ -67,16 +65,19 @@ int main()
   
 ```  
   
-  **a b c**  
-**front\_item \= a**  
- **x B C.**   
-## Требования  
- **Заголовок:**\<cliext\/vector\>  
+```Output  
+ a b c  
+front_item = a  
+ x b c  
+```  
+  
+## <a name="requirements"></a>Требования  
+ **Заголовок:** \<cliext/vector >  
   
  **Пространство имен:** cliext  
   
-## См. также  
- [вектор](../dotnet/vector-stl-clr.md)   
- [vector::back](../dotnet/vector-back-stl-clr.md)   
- [vector::back\_item](../dotnet/vector-back-item-stl-clr.md)   
- [vector::front](../dotnet/vector-front-stl-clr.md)
+## <a name="see-also"></a>См. также  
+ [вектор (STL/CLR)](../dotnet/vector-stl-clr.md)   
+ [Vector::Back (STL/CLR)](../dotnet/vector-back-stl-clr.md)   
+ [Vector::back_item (STL/CLR)](../dotnet/vector-back-item-stl-clr.md)   
+ [vector::front (STL/CLR)](../dotnet/vector-front-stl-clr.md)

@@ -1,36 +1,34 @@
 ---
-title: "auto_gcroot::operator= | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "auto_gcroot.operator="
-  - "msclr::auto_gcroot::operator="
-  - "msclr.auto_gcroot.operator="
-  - "auto_gcroot::operator="
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "operator="
+title: "auto_gcroot::operator = | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords:
+- auto_gcroot.operator=
+- msclr::auto_gcroot::operator=
+- msclr.auto_gcroot.operator=
+- auto_gcroot::operator=
+dev_langs: C++
+helpviewer_keywords: operator=
 ms.assetid: 99eba5eb-5a2c-4edf-b3d5-c903f818233d
-caps.latest.revision: 13
-caps.handback.revision: 11
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "13"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 8cd87111bf28cc758094936b0fb586fce2e475f3
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/24/2017
 ---
-# auto_gcroot::operator=
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Оператор присваивания.  
+# <a name="autogcrootoperator"></a>auto_gcroot::operator=
+Оператор присвоения.  
   
-## Синтаксис  
+## <a name="syntax"></a>Синтаксис  
   
 ```  
 auto_gcroot<_element_type> & operator=(  
@@ -45,14 +43,14 @@ auto_gcroot<_element_type> & operator=(
 );  
 ```  
   
-#### Параметры  
+#### <a name="parameters"></a>Параметры  
  `_right`  
- Объект или `auto_gcroot`, чтобы присвоить текущий `auto_gcroot`.  
+ Объект или `auto_gcroot` должен назначаться текущего `auto_gcroot`.  
   
-## Возвращаемое значение  
- Текущее `auto_gcroot`, теперь, `_right`.  
+## <a name="return-value"></a>Возвращаемое значение  
+ Текущий `auto_gcroot`, теперь владельца `_right`.  
   
-## Пример  
+## <a name="example"></a>Пример  
   
 ```  
 // msl_auto_gcroot_operator_equals.cpp  
@@ -105,21 +103,24 @@ int main()
 }  
 ```  
   
-  **в конструкторе ClassA: сначала**  
-**Hello от первого суффикса\!**  
-**в конструкторе ClassA: second**  
-**в деструкторе ClassA: сначала**  
-**в конструкторе ClassA: третье**  
-**Hello\! из третьего B**  
-**в деструкторе ClassA: second**  
-**Hello из третьего суффикса\!**  
-**done**  
-**в деструкторе ClassA: третье**   
-## Требования  
- **Файл заголовка**\<msclr\\auto\_gcroot.h\>  
+```Output  
+in ClassA constructor: first  
+Hello from first A!  
+in ClassA constructor: second  
+in ClassA destructor: first  
+in ClassA constructor: third  
+Hello from third B!  
+in ClassA destructor: second  
+Hello from third A!  
+done  
+in ClassA destructor: third  
+```  
+  
+## <a name="requirements"></a>Требования  
+ **Файл заголовка** \<msclr\auto_gcroot.h >  
   
  **Пространство имен** msclr  
   
-## См. также  
- [Члены auto\_gcroot](../dotnet/auto-gcroot-members.md)   
- [auto\_gcroot::attach](../dotnet/auto-gcroot-attach.md)
+## <a name="see-also"></a>См. также  
+ [Члены auto_gcroot](../dotnet/auto-gcroot-members.md)   
+ [auto_gcroot::attach](../dotnet/auto-gcroot-attach.md)

@@ -1,48 +1,46 @@
 ---
-title: "function (C/C++) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "function_CPP"
-  - "vc-pragma.function"
-dev_langs: 
-  - "C++"
-  - "C"
-helpviewer_keywords: 
-  - "прагма функции"
-  - "прагмы, функция"
+title: "функции (C/C++) | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- function_CPP
+- vc-pragma.function
+dev_langs: C++
+helpviewer_keywords:
+- function pragma
+- pragmas, function
 ms.assetid: cbd1bd60-fabf-4b5a-9c3d-2d9f4b871365
-caps.latest.revision: 10
-caps.handback.revision: 8
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
+caps.latest.revision: "10"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: 956c02d7b7df4998187c82cc1dd1c31f196e68b3
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/24/2017
 ---
-# function (C/C++)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Указывает, что для функций из списка аргументов директивы \#pragma будут создаваться вызовы.  
+# <a name="function-cc"></a>function (C/C++)
+Указывает, что для функций из списка аргументов директивы #pragma будут создаваться вызовы.  
   
-## Синтаксис  
+## <a name="syntax"></a>Синтаксис  
   
 ```  
   
 #pragma function( function1 [, function2, ...] )  
 ```  
   
-## Заметки  
- Если с помощью директивы \#pragma **intrinsic** \(или \/Oi\) компилятору задано, что требуется создавать встроенные функции \(встроенные функции создаются как встроенный код, а не как вызовы функций\), можно использовать директиву \#pragma **function**, чтобы явно принудительно задать вызов функции.  После появления директивы \#pragma она действует на первое определение функции, содержащее указанную встроенную функцию.  Действие продолжается до конца исходного файла или до появления директивы \#pragma **intrinsic**, указывающей ту же встроенную функцию.  Директива \#pragma **function** может использоваться только за пределами функции — на глобальном уровне.  
+## <a name="remarks"></a>Примечания  
+ При использовании **встроенная функция** pragma (или /Oi) компилятору задано, что требуется создавать встроенные функции (встроенные функции создаются как встроенный код, а не как вызовы функций), можно использовать **функция** директивы pragma Чтобы явно принудительно задать вызов функции. После появления директивы #pragma она действует на первое определение функции, содержащее указанную встроенную функцию. Действие продолжается до конца исходного файла, либо во внешний вид **встроенная функция** pragma, указав ту же встроенную функцию. **Функция** pragma может использоваться только за пределами функции — на глобальном уровне.  
   
- Списки функций, имеющих встроенные формы, см. в разделе [\#pragma intrinsic](../preprocessor/intrinsic.md).  
+ Список функций, которые имеют встроенные формы см [#pragma intrinsic](../preprocessor/intrinsic.md).  
   
-## Пример  
+## <a name="example"></a>Пример  
   
 ```  
 // pragma_directive_function.cpp  
@@ -89,7 +87,10 @@ int main() {
 }  
 ```  
   
-  **str is 'Now\*\*\*\*\*\*\*\*\*\*\*\*'**  
-**str is '\!\!\!\!\!\!\!\!\!\!\!\!\!\!\!'**   
-## См. также  
- [Директивы Pragma и ключевое слово \_\_Pragma](../preprocessor/pragma-directives-and-the-pragma-keyword.md)
+```Output  
+str is 'Now************'  
+str is '!!!!!!!!!!!!!!!'  
+```  
+  
+## <a name="see-also"></a>См. также  
+ [Директивы Pragma и ключевое слово __Pragma](../preprocessor/pragma-directives-and-the-pragma-keyword.md)

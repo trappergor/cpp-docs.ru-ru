@@ -1,40 +1,40 @@
 ---
-title: "Обращение к свойству в поставщике | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "поставщики OLE DB, свойства"
-  - "ссылки, на свойства (поставщики)"
-  - "ссылки на свойства (поставщики)"
+title: "Обращение к свойству в поставщике | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- OLE DB providers, properties
+- references, to properties in providers
+- referencing properties in providers
 ms.assetid: bfbb3851-5eed-467a-a179-4a97a9515525
-caps.latest.revision: 7
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 9ccd06ab229f5bf6643145c03d8396d48c45a303
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/24/2017
 ---
-# Обращение к свойству в поставщике
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Определите группу и идентификатор требуемого свойства.  Дополнительные сведения см. в разделе [Свойства OLE DB](https://msdn.microsoft.com/en-us/library/ms722734.aspx) *Справочника программиста по OLE DB*.  
+# <a name="referencing-a-property-in-your-provider"></a>Обращение к свойству в поставщике
+Для свойства, которое требуется найти группы свойств и идентификатор свойства. Дополнительные сведения см. в разделе [свойства OLE DB](https://msdn.microsoft.com/en-us/library/ms722734.aspx) в *Справочник программиста OLE DB*.  
   
- В следующем примере предполагается, что пользователь пытается получить свойство из набора строк.  Код для использования сеанса или команды аналогичен, но в нем используется другой интерфейс.  
+ В следующем примере предполагается, что вы пытаетесь получить свойство из набора строк. Код для использования сеанса или команды аналогичен, но использует другой интерфейс.  
   
- Следует создать объект [CDBPropSet](../Topic/CDBPropSet%20Class.md), используя группу свойств в качестве параметра конструктора.  Примеры.  
+ Создание [CDBPropSet](../../data/oledb/cdbpropset-class.md) объекта, используя группу свойств в качестве параметра конструктору. Пример:  
   
 ```  
 CDBPropSet propset(DBPROPSET_ROWSET);  
 ```  
   
- Вызовите метод [AddProperty](../../data/oledb/cdbpropset-addproperty.md), передав идентификатор свойства и значение, которое ему надо присвоить.  Тип значения этого свойства зависит от используемого свойства.  
+ Вызовите [AddProperty](../../data/oledb/cdbpropset-addproperty.md), передав идентификатор свойства и значение, присваиваемое свойству. Тип значения, зависит от свойства, которое вы используете.  
   
 ```  
 CDBPropSet propset(DBPROPSET_ROWSET);  
@@ -43,7 +43,7 @@ propset.AddProperty(DBPROP_UPDATABILITY,
 DBPROPVAL_UP_INSERT | DBPROPVAL_UP_CHANGE | DBPROPVAL_UP_DELETE);  
 ```  
   
- Используйте интерфейс `IRowset` для вызова метода **GetProperties**.  Передайте свойство в качестве параметра.  Ниже приведен конечный код:  
+ Используйте `IRowset` интерфейс для вызова **GetProperties**. Передайте свойство в качестве параметра. Ниже приведен конечный код:  
   
 ```  
 CAgentRowset<CMyProviderCommand>* pRowset = (CAgentRowset<CMyProviderCommand>*) pThis;  
@@ -72,5 +72,5 @@ if (pPropSet)
 }  
 ```  
   
-## См. также  
+## <a name="see-also"></a>См. также  
  [Работа с шаблонами поставщика OLE DB](../../data/oledb/working-with-ole-db-provider-templates.md)

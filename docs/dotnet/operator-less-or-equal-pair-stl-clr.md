@@ -1,33 +1,30 @@
 ---
-title: "operator&lt;= (pair) (STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::pair::operator<="
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "operator<= - элемент [STL/CLR]"
+title: "оператор&lt;= (пару) (STL/CLR) | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::pair::operator<=
+dev_langs: C++
+helpviewer_keywords: operator<= member [STL/CLR]
 ms.assetid: 94a4cc0a-cef4-4050-bd59-f826bd318e7b
-caps.latest.revision: 8
-caps.handback.revision: 6
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "8"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 31fe33f274a60b3fba69fa7b800e5e2c6c92ce20
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/24/2017
 ---
-# operator&lt;= (pair) (STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Пара меньше или равное сравнение.  
+# <a name="operatorlt-pair-stlclr"></a>оператор&lt;= (пару) (STL/CLR)
+Меньше или равно пары сравнения.  
   
-## Синтаксис  
+## <a name="syntax"></a>Синтаксис  
   
 ```  
 template<typename Value1,  
@@ -36,17 +33,17 @@ template<typename Value1,
         pair<Value1, Value2>% right);  
 ```  
   
-#### Параметры  
- влево  
- Левые пары, с которым выполняется сравнение.  
+#### <a name="parameters"></a>Параметры  
+ left  
+ Левый пара для сравнения.  
   
- правый  
- Правая пары, с которым выполняется сравнение.  
+ по правому краю  
+ Правый пара для сравнения.  
   
-## Заметки  
- Функция возвращает оператора `!(``right` `<` `left``)`.  Он используется для выполнения не приказано ли `left` после `right` при сравнении 2 пары элемент элементом.  
+## <a name="remarks"></a>Примечания  
+ Функция оператор возвращает `!(right < left)`. Можно использовать для тестирования ли `left` не упорядочен после `right` при две пары, сравниваемые элемент элемент.  
   
-## Пример  
+## <a name="example"></a>Пример  
   
 ```  
 // cliext_pair_operator_le.cpp   
@@ -69,19 +66,22 @@ int main()
   
 ```  
   
-  **\[x, 3\]**  
-**\[x, 4\]**  
-**\[x3\] \<\= \[x3\].**  
-**\[x4\] \<\= \[\] x3 false**   
-## Требования  
- **Заголовок:**\<cliext\/utility\>  
+```Output  
+[x, 3]  
+[x, 4]  
+[x 3] <= [x 3] is True  
+[x 4] <= [x 3] is False  
+```  
+  
+## <a name="requirements"></a>Требования  
+ **Заголовок:** \<cliext/программа >  
   
  **Пространство имен:** cliext  
   
-## См. также  
- [pair](../dotnet/pair-stl-clr.md)   
- [operator\=\= \(pair\)](../dotnet/operator-equality-pair-stl-clr.md)   
- [operator\!\= \(pair\)](../dotnet/operator-inequality-pair-stl-clr.md)   
- [operator\< \(pair\)](../dotnet/operator-less-than-pair-stl-clr.md)   
- [operator\>\= \(pair\)](../dotnet/operator-greater-or-equal-pair-stl-clr.md)   
- [operator\> \(pair\)](../dotnet/operator-greater-than-pair-stl-clr.md)
+## <a name="see-also"></a>См. также  
+ [пара (STL/CLR)](../dotnet/pair-stl-clr.md)   
+ [оператор == (пару) (STL/CLR)](../dotnet/operator-equality-pair-stl-clr.md)   
+ [оператор! = (пару) (STL/CLR)](../dotnet/operator-inequality-pair-stl-clr.md)   
+ [оператор\< (пару) (STL/CLR)](../dotnet/operator-less-than-pair-stl-clr.md)   
+ [оператор > = (пару) (STL/CLR)](../dotnet/operator-greater-or-equal-pair-stl-clr.md)   
+ [operator> (pair) (STL/CLR)](../dotnet/operator-greater-than-pair-stl-clr.md)

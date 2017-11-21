@@ -4,40 +4,23 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-tools
+ms.technology: cpp-tools
 ms.tgt_pltfrm: 
 ms.topic: error-reference
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - function body
 - variables, missing
 ms.assetid: 1a88d809-b14f-46a4-97c4-3e48beb418f2
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 4bac7b2942f9d72674b8092dc7bf64174dd3c349
-ms.openlocfilehash: c80a5626e7f674ddca7d44e94aa8ab64c735c81e
-ms.contentlocale: ru-ru
-ms.lasthandoff: 04/24/2017
-
+ms.openlocfilehash: ba591b6bba935ff5ee6669dd0feb62fb9bd05177
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="missing-function-body-or-variable"></a>Отсутствует тело функции или переменная
 С прототипом функции компилятор может продолжать работу без ошибок, но компоновщик не может разрешить вызов адреса, поскольку код функции или переменная интервала зарезервированы. Эта ошибка не увидят до создания вызова функции, которую должен разрешить компоновщик.  

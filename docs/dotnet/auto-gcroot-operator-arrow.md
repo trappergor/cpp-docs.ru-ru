@@ -1,45 +1,43 @@
 ---
-title: "auto_gcroot::operator-&gt; | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "auto_gcroot.operator->"
-  - "msclr::auto_gcroot::operator->"
-  - "auto_gcroot::operator->"
-  - "msclr.auto_gcroot.operator->"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "operator->"
+title: "auto_gcroot::operator -&gt; | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords:
+- auto_gcroot.operator->
+- msclr::auto_gcroot::operator->
+- auto_gcroot::operator->
+- msclr.auto_gcroot.operator->
+dev_langs: C++
+helpviewer_keywords: operator->
 ms.assetid: 2c77bc53-5f77-4544-9485-c950cd8e0bb1
-caps.latest.revision: 13
-caps.handback.revision: 11
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "13"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: ab60b6cdb0d1718784a9ad3c3c47f3d60909af5c
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/24/2017
 ---
-# auto_gcroot::operator-&gt;
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Оператор доступа к члену.  
+# <a name="autogcrootoperator-gt"></a>auto_gcroot::operator-&gt;
+Оператор доступа к членам.  
   
-## Синтаксис  
+## <a name="syntax"></a>Синтаксис  
   
 ```  
 _element_type operator->() const;  
 ```  
   
-## Возвращаемое значение  
- Объект, заключенный в оболочку с помощью `auto_gcroot`.  
+## <a name="return-value"></a>Возвращаемое значение  
+ Объект, который является оболочкой для `auto_gcroot`.  
   
-## Пример  
+## <a name="example"></a>Пример  
   
 ```  
 // msl_auto_gcroot_op_arrow.cpp  
@@ -71,13 +69,16 @@ int main() {
 }  
 ```  
   
-  **Hello от первого суффикса\!**  
-**\_i\>ЦЕНТРАЛЬНОГО \= 5.**   
-## Требования  
- **Файл заголовка**\<msclr\\auto\_gcroot.h\>  
+```Output  
+Hello from first A!  
+a->m_i = 5  
+```  
+  
+## <a name="requirements"></a>Требования  
+ **Файл заголовка** \<msclr\auto_gcroot.h >  
   
  **Пространство имен** msclr  
   
-## См. также  
- [Члены auto\_gcroot](../dotnet/auto-gcroot-members.md)   
- [auto\_gcroot::get](../dotnet/auto-gcroot-get.md)
+## <a name="see-also"></a>См. также  
+ [Члены auto_gcroot](../dotnet/auto-gcroot-members.md)   
+ [auto_gcroot::get](../dotnet/auto-gcroot-get.md)

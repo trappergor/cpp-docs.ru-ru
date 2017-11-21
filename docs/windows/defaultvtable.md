@@ -1,32 +1,30 @@
 ---
-title: "defaultvtable | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-f1_keywords: 
-  - "vc-attr.defaultvtable"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "defaultvtable attribute"
+title: "defaultvtable | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+f1_keywords: vc-attr.defaultvtable
+dev_langs: C++
+helpviewer_keywords: defaultvtable attribute
 ms.assetid: 5b3ed483-f69e-44dd-80fc-952028eb9d73
-caps.latest.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 10
+caps.latest.revision: "10"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 0753887cef2b169758351be9fafc0ec532bacb05
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/24/2017
 ---
-# defaultvtable
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Задает интерфейс в качестве интерфейса по умолчанию vtable для com\-объекта.  
+# <a name="defaultvtable"></a>defaultvtable
+Определяет интерфейс как интерфейс vtable по умолчанию для COM-объекта.  
   
-## Синтаксис  
+## <a name="syntax"></a>Синтаксис  
   
 ```  
   
@@ -35,15 +33,15 @@ caps.handback.revision: 10
 ) ]  
 ```  
   
-#### Параметры  
+#### <a name="parameters"></a>Параметры  
  `interface`  
- Назначенный интерфейс, который необходимо иметь значение по умолчанию vtable для com\-объекта.  
+ Указанный интерфейс, должны быть vtable по умолчанию для COM-объекта.  
   
-## Заметки  
- **defaultvtable** Атрибут C\+\+ имеет ту же функциональность, что и  [defaultvtable](http://msdn.microsoft.com/library/windows/desktop/aa366795) атрибут MIDL.  
+## <a name="remarks"></a>Примечания  
+ **Defaultvtable** языка C++ имеет ту же функциональность, что [defaultvtable](http://msdn.microsoft.com/library/windows/desktop/aa366795) языка MIDL.  
   
-## Пример  
- В следующем примере кода показаны атрибуты в классе, использующих defaultvtable определить интерфейс по умолчанию:  
+## <a name="example"></a>Пример  
+ В следующем коде показано атрибуты для класса, используйте **defaultvtable** указание интерфейс по умолчанию:  
   
 ```  
 // cpp_attr_ref_defaultvtable.cpp  
@@ -71,20 +69,19 @@ uuid("00000000-0000-0000-0000-000000000004")]
 class CMyC3 : public IMyI3 {};  
 ```  
   
-## Требования  
+## <a name="requirements"></a>Требования  
   
-### Контекст атрибута  
+### <a name="attribute-context"></a>Контекст атрибута  
   
 |||  
 |-|-|  
-|**Применение**|**класс**"  `struct`|  
-|**Repeatable**|Нет|  
-|**Обязательные атрибуты**|**CoClass**|  
-|**Недопустимые атрибуты**|None|  
+|**Применение**|**class**, `struct`|  
+|**Повторяемый**|Нет|  
+|**Обязательные атрибуты**|**coclass**|  
+|**Недопустимые атрибуты**|Нет|  
   
- Дополнительные сведения см. в разделе [Контексты атрибута](../windows/attribute-contexts.md).  
+ Дополнительные сведения см. в разделе [Контексты атрибутов](../windows/attribute-contexts.md).  
   
-## См. также  
- [IDL Attributes](../windows/idl-attributes.md)   
- [Class Attributes](../windows/class-attributes.md)   
- [Attributes Samples](http://msdn.microsoft.com/ru-ru/558ebdb2-082f-44dc-b442-d8d33bf7bdb8)
+## <a name="see-also"></a>См. также  
+ [Атрибуты IDL](../windows/idl-attributes.md)   
+ [Атрибуты классов](../windows/class-attributes.md)   

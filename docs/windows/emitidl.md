@@ -1,80 +1,75 @@
 ---
-title: "emitidl | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-f1_keywords: 
-  - "vc-attr.emitidl"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "emitidl attribute"
+title: "emitidl | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+f1_keywords: vc-attr.emitidl
+dev_langs: C++
+helpviewer_keywords: emitidl attribute
 ms.assetid: 85b80c56-578e-4392-ac03-8443c74ebb7d
-caps.latest.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 10
+caps.latest.revision: "10"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 09174362718c8e8efd30f901394650fbbb5ebf63
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/24/2017
 ---
-# emitidl
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Определяет, будут ли обработаны все последующие атрибуты IDL, а будут помещены в созданном файле idl.  
+# <a name="emitidl"></a>emitidl
+Указывает, обрабатываются ли все последующие атрибуты IDL и помещен в сгенерированный IDL-файл.  
   
-## Синтаксис  
+## <a name="syntax"></a>Синтаксис  
   
+```
+[ emitidl(state, defaultimports=boolean) ];
 ```  
   
-      [ emitidl([boolean],  
-   defaultimports=[boolean]  
-) ] ;  
-```  
+### <a name="parameters"></a>Параметры  
+*state*  
+Одно из следующих возможных значений: **true**, **false**, **принудительно**, **ограниченных**, **принудительной**, или **pop**.  
   
-#### Параметры  
- `boolean`  
- Возможные значения: **true**"  **false**"  **forced**"  **restricted**"  **push**или  **шипучка**.  
+-   Если **true**, категории атрибуты IDL в файле исходного кода, помещаются в сгенерированный IDL-файл. Это значение по умолчанию для **emitidl**.  
   
--   If **true**все атрибуты категории IDL, обнаруженные в файле исходного кода будут помещены в созданном файле idl.  Это параметр по умолчанию emitidl.  
+-   Если **false**, категории атрибуты IDL в файл с исходным кодом не помещаются в сгенерированный IDL-файл.  
   
--   If **false**все атрибуты категории IDL, обнаруженные в файле исходного кода не будут помещены в созданном файле idl.  
+-   Если **ограниченных**, позволяет атрибуты IDL в файл без [модуль](../windows/module-cpp.md) атрибута. Компилятор не создает файл IDL.  
   
--   If **restricted**позволяет атрибуты IDL, чтобы находиться в файле без a  [Модуль](../windows/module-cpp.md) атрибут.  Компилятор не создаст файл idl.  
+-   Если **принудительно**, переопределяет последующем **ограниченных** атрибут, который требуется создать файл имеют **модуль** атрибут при наличии IDL атрибуты в файле.  
   
--   If **forced**переопределяет последующее  **restricted** атрибут, который требует файла \- a  **Модуль** атрибут если атрибуты IDL в файле.  
+-   **Принудительная** позволяет сохранить текущий **emitidl** параметры во внутренний **emitidl** стека, и **pop** позволяет задать **emitidl**любое значение, которое в верхней части внутренний **emitidl** стека.  
   
--   **push** позволяет сохранять текущие  **emitidl** параметры внутренней  **emitidl** стек.  **шипучка** позволяет устанавливать  **emitidl** на любое значение в верхней части внутренней  **emitidl** стек.  
+`defaultimports=`*логическое* \(необязательно)  
+-   Если *логическое* — **true**, docobj.idl импортируется в сгенерированный IDL-файл. Кроме того Если файл IDL-файл с тем же именем, что .h, который был `#include` в ваш исходный код находится в каталоге, где h-файл, а затем для созданного IDL-файла содержит инструкцию import для этого IDL-файл.  
   
- **defaultimports**\=\[  `boolean`\(необязательно\)\]  
- -   If `boolean` существует  **true**, docobj.idl будет импортировано в созданный файл idl.  Кроме того, если в idl\-файл с таким же именем в файле, h, `#include` в свой исходный код находится в том же каталоге, что и файл .h, то созданный файл idl будут содержать выписку импорта в idl\-файл.  
+-   Если *логическое* — **false**, docobj.idl не импортируется в сгенерированный IDL-файл. Необходимо явным образом импортировать IDL-файлы с [импорта](../windows/import.md).  
   
--   If `boolean` существует  **false**, docobj.idl не импортировано в созданный файл idl.  Необходимо явно импортировать idl\-файлы с [импорт](../windows/import.md).  
+## <a name="remarks"></a>Примечания  
+После **emitidl** обнаружен атрибут C++ в файле исходного кода, атрибуты IDL категории помещаются в сгенерированный IDL-файл. При наличии не **emitidl** атрибут атрибуты IDL в исходном файле кода, выводятся созданного IDL-файл.  
   
-## Заметки  
- После emitidl Атрибут C\+\+ обнаружен в файле исходного кода, атрибутах IDL категории будет помещен в созданном файле idl.  Если нет emitidl атрибут атрибуты IDL в файле исходного кода, будет выведен в созданный файл idl.  
+Можно иметь несколько **emitidl** атрибутов в файл исходного кода. Если `[emitidl(false)];` встречается в файле без последующих `[emitidl(true)];`, то атрибуты не обрабатываются в сгенерированный IDL-файл.  
   
- Можно иметь несколько emitidl атрибуты в файле исходного кода.  If `[emitidl(false)];` встречает в файле без последующего  `[emitidl(true)];`после этого атрибуты не обрабатываются в созданный файл idl.  
+Каждый раз, компилятор обнаружит новый файл **emitidl** устанавливается значение **true**.  
   
- Каждый раз, когда компилятор встречает новый файл **emitidl** неявно присваивается  **true**.  
+## <a name="requirements"></a>Требования  
   
-## Требования  
-  
-### Контекст атрибута  
+### <a name="attribute-context"></a>Контекст атрибута  
   
 |||  
 |-|-|  
-|**Применение**|Любой|  
-|**Repeatable**|Нет|  
-|**Обязательные атрибуты**|None|  
-|**Недопустимые атрибуты**|None|  
+|**Применение**|В любом месте|  
+|**Повторяемый**|Нет|  
+|**Обязательные атрибуты**|Нет|  
+|**Недопустимые атрибуты**|Нет|  
   
- Дополнительные сведения см. в разделе [Контексты атрибута](../windows/attribute-contexts.md).  
+Дополнительные сведения см. в разделе [Контексты атрибутов](../windows/attribute-contexts.md).  
   
-## См. также  
- [Compiler Attributes](../windows/compiler-attributes.md)   
- [Stand\-Alone Attributes](../Topic/Stand-Alone%20Attributes.md)   
- [Attributes Samples](http://msdn.microsoft.com/ru-ru/558ebdb2-082f-44dc-b442-d8d33bf7bdb8)
+## <a name="see-also"></a>См. также  
+[Атрибуты компилятора](../windows/compiler-attributes.md)   
+[Изолированные атрибуты](../windows/stand-alone-attributes.md)   
+[Примеры атрибутов](http://msdn.microsoft.com/en-us/558ebdb2-082f-44dc-b442-d8d33bf7bdb8)

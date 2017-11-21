@@ -1,34 +1,33 @@
 ---
-title: "Практическое руководство. Запись данных в реестр Windows (C++/CLI) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "реестр, запись в"
-  - "Visual C++, запись в регистр Windows"
+title: "Как: запись данных в реестр Windows (C + +/ CLI) | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- registry, writing to
+- Visual C++, writing to Windows Registry
 ms.assetid: 3d40b978-4baa-4779-bfe3-47e2917b757f
-caps.latest.revision: 9
-caps.handback.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "9"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 8bb95ab9a70fd0144256f85d3fae6ccc3c034c1c
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/24/2017
 ---
-# Практическое руководство. Запись данных в реестр Windows (C++/CLI)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-В следующем примере используется ключ <xref:Microsoft.Win32.Registry.CurrentUser> для создания доступного для записи экземпляра класса <xref:Microsoft.Win32.RegistryKey>, соответствующего разделу **Software**.  Затем с помощью метода <xref:Microsoft.Win32.RegistryKey.CreateSubKey%2A> создается новый раздел и добавляются пары "ключ\-значение".  
+# <a name="how-to-write-data-to-the-windows-registry-ccli"></a>Практическое руководство. Запись данных в реестр Windows (C++/CLI)
+Следующий пример кода использует <xref:Microsoft.Win32.Registry.CurrentUser> ключ для создания записи экземпляра <xref:Microsoft.Win32.RegistryKey> соответствующий класс **программного обеспечения** ключа. <xref:Microsoft.Win32.RegistryKey.CreateSubKey%2A> Метод затем используется для создания нового ключа и добавления в пары "ключ значение".  
   
-## Пример  
+## <a name="example"></a>Пример  
   
-### Код  
+### <a name="code"></a>Код  
   
 ```  
 // registry_write.cpp  
@@ -74,9 +73,9 @@ int main()
 }  
 ```  
   
-## Примечания  
- В платформе .NET Framework для обращения к реестру используются классы <xref:Microsoft.Win32.Registry> и [RegistryKey](https://msdn.microsoft.com/en-us/library/microsoft.win32.registrykey.aspx), определенные в пространстве имен <xref:Microsoft.Win32>.  Класс **Registry** представляет собой контейнер статических экземпляров класса <xref:Microsoft.Win32.RegistryKey>.  Каждый экземпляр представляет корневой узел реестра.  К этим экземплярам относятся <xref:Microsoft.Win32.Registry.ClassesRoot>, <xref:Microsoft.Win32.Registry.CurrentConfig>, <xref:Microsoft.Win32.Registry.CurrentUser>, <xref:Microsoft.Win32.Registry.LocalMachine> и <xref:Microsoft.Win32.Registry.Users>.  
+## <a name="remarks"></a>Примечания  
+ Платформа .NET Framework можно использовать для доступа к реестру с <xref:Microsoft.Win32.Registry> и [RegistryKey](https://msdn.microsoft.com/en-us/library/microsoft.win32.registrykey.aspx) классы, оба из которых определены в <xref:Microsoft.Win32> пространства имен. **Реестра** класс — это контейнер для статических экземпляров <xref:Microsoft.Win32.RegistryKey> класса. Каждый экземпляр представляет корневой узел реестра. Экземпляры <xref:Microsoft.Win32.Registry.ClassesRoot>, <xref:Microsoft.Win32.Registry.CurrentConfig>, <xref:Microsoft.Win32.Registry.CurrentUser>, <xref:Microsoft.Win32.Registry.LocalMachine>, и <xref:Microsoft.Win32.Registry.Users>.  
   
-## См. также  
- [Практическое руководство. Чтение данных из реестра Windows](../dotnet/how-to-read-data-from-the-windows-registry-cpp-cli.md)   
- [программирование .NET с использованием C\+\+\/CLI](../dotnet/dotnet-programming-with-cpp-cli-visual-cpp.md)
+## <a name="see-also"></a>См. также  
+ [Как: чтение данных из реестра Windows (C + +/ CLI)](../dotnet/how-to-read-data-from-the-windows-registry-cpp-cli.md)   
+ [Программирование .NET с использованием C++/CLI (Visual C++)](../dotnet/dotnet-programming-with-cpp-cli-visual-cpp.md)

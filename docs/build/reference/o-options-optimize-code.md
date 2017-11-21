@@ -1,57 +1,60 @@
 ---
-title: "Параметры /O (оптимизация кода) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "VC.Project.VCCLCompilerTool.Optimization"
-  - "/o"
-  - "VC.Project.VCCLWCECompilerTool.Optimization"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "cl.exe - компилятор, производительность"
-  - "производительность, компилятор cle.exe"
+title: "-O параметры (оптимизация кода) | Документы Microsoft"
+ms.custom: 
+ms.date: 09/25/2017
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- VC.Project.VCCLCompilerTool.Optimization
+- /o
+- VC.Project.VCCLWCECompilerTool.Optimization
+dev_langs: C++
+helpviewer_keywords:
+- performance, cle.exe compiler
+- cl.exe compiler, performance
 ms.assetid: 77997af9-5555-4b3d-aa57-6615b27d4d5d
-caps.latest.revision: 11
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 11
+caps.latest.revision: "11"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: 58f8aeda2570fef394b5a47d49c5dda090d8e1ca
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/24/2017
 ---
-# Параметры /O (оптимизация кода)
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+# <a name="o-options-optimize-code"></a>Параметры /O (оптимизация кода)
 
-Параметры **\/O** обеспечивают управление различными способами оптимизации, предназначенными для создания кода максимальной производительности или минимального размера.  
-  
--   [\/O1](../../build/reference/o1-o2-minimize-size-maximize-speed.md) — оптимизация для получения минимального размера кода.  
-  
--   [\/O2](../../build/reference/o1-o2-minimize-size-maximize-speed.md) — оптимизация кода для получения максимальной скорости его выполнения.  
-  
--   [\/Ob](../../build/reference/ob-inline-function-expansion.md) — контроль над расширением встроенных функций.  
-  
--   [\/Od](../../build/reference/od-disable-debug.md) — отключение оптимизации для ускорения компиляции и упрощения отладки.  
-  
--   [\/Og](../../build/reference/og-global-optimizations.md) — включение глобальной оптимизации.  
-  
--   [\/Oi](../Topic/-Oi%20\(Generate%20Intrinsic%20Functions\).md) — создание встроенных функций для соответствующих вызовов функций.  
-  
--   [\/Os](../../build/reference/os-ot-favor-small-code-favor-fast-code.md) — задание для компилятора приоритетности оптимизации для уменьшения размера кода над оптимизацией для увеличения скорости его выполнения.  
-  
--   [\/Ot](../../build/reference/os-ot-favor-small-code-favor-fast-code.md) \(настройка по умолчанию\) — задание для компилятора приоритетности оптимизации для уменьшения размера кода над оптимизацией для увеличения скорости его выполнения.  
-  
--   [\/Ox](../../build/reference/ox-full-optimization.md) — выбор полной оптимизации.  
-  
--   [\/Oy](../../build/reference/oy-frame-pointer-omission.md) — отключение создания указателей фреймов для стека вызовов, что позволяет повысить скорость вызова функций.  
-  
-## Примечания  
- Также можно объединить несколько параметров **\/O** в один оператор option.  Например, `/Odi` — то же самое, что `/Od /Oi`.  
-  
-## См. также  
- [Параметры компилятора](../../build/reference/compiler-options.md)   
- [Настройка параметров компилятора](../Topic/Setting%20Compiler%20Options.md)
+**/O** управляют различные оптимизации, которые помогают создавать код для максимально быстрого или минимального размера.
+
+- [/ O1](../../build/reference/o1-o2-minimize-size-maximize-speed.md) задает сочетание оптимизаций, создающих код минимальный размер.
+
+- [/ O2](../../build/reference/o1-o2-minimize-size-maximize-speed.md) задает сочетание оптимизаций, выполняет оптимизацию кода для максимальной скорости.
+
+- [Параметр /OB](../../build/reference/ob-inline-function-expansion.md) управляет подставляемых функций.
+
+- [/Od](../../build/reference/od-disable-debug.md) Отключение оптимизации для ускорения компиляции и упрощения отладки.
+
+- [/Og](../../build/reference/og-global-optimizations.md) включает глобальную оптимизацию.
+
+- [/Oi](../../build/reference/oi-generate-intrinsic-functions.md) создание встроенных функций для соответствующих вызовов функций.
+
+- [/ OS](../../build/reference/os-ot-favor-small-code-favor-fast-code.md) указывает компилятору предпочитать процессы оптимизации быстродействия размера кода.
+
+- [/Ot](../../build/reference/os-ot-favor-small-code-favor-fast-code.md) (по умолчанию) указывает компилятору предпочитать процессы оптимизации быстродействия размера кода.
+
+- [/ Ox](../../build/reference/ox-full-optimization.md) — это комбинация вариант, который выбирает некоторые оптимизации, с акцентом на скорость. Он является строгим подмножеством **/O2** оптимизации.
+
+- [/Oy](../../build/reference/oy-frame-pointer-omission.md) отменяет создание указателей на фреймы в стеке вызовов для ускорения вызовов функций.
+
+## <a name="remarks"></a>Примечания
+
+Можно объединять несколько **/o** параметры в отчет один параметр. Например **/Odi** совпадает со значением **/Od /Oi**. Некоторые параметры являются взаимно исключающими и вызывают ошибку компилятора при совместном использовании. В разделе отдельные **/o** параметры для получения дополнительной информации.
+
+## <a name="see-also"></a>См. также
+
+[Параметры компилятора](../../build/reference/compiler-options.md)   
+[Настройка параметров компилятора](../../build/reference/setting-compiler-options.md)

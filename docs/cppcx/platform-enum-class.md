@@ -1,49 +1,49 @@
 ---
-title: "Класс Platform::Enum | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/30/2016"
-ms.prod: "windows-client-threshold"
-ms.technology: ""
-ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-f1_keywords: 
-  - "Platform/Platform::Enum"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Структура Platform::Enum"
+title: "Класс Platform::Enum | Документы Microsoft"
+ms.custom: 
+ms.date: 12/30/2016
+ms.technology: cpp-windows
+ms.reviewer: 
+ms.suite: 
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+f1_keywords: VCCORLIB/Platform::Enum
+dev_langs: C++
+helpviewer_keywords: Platform::Enum Struct
 ms.assetid: cf82f0eb-7a37-4e4e-bbe7-e4aebbc9ec0a
-caps.latest.revision: 5
-author: "ghogen"
-ms.author: "ghogen"
-manager: "ghogen"
-caps.handback.revision: 5
+caps.latest.revision: "5"
+author: ghogen
+ms.author: ghogen
+manager: ghogen
+ms.openlocfilehash: 1c05eed9e49a24ed17beeec8ffeb54ecdad5474a
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/24/2017
 ---
-# Класс Platform::Enum
+# <a name="platformenum-class"></a>Класс Platform::Enum
 Класс значений, представляющий набор именованных констант.  
   
-## Синтаксис  
+## <a name="syntax"></a>Синтаксис  
   
 ```cpp  
 public class Enum  
 ```  
   
-## Участники  
- Класс Enum наследует методы Equals\(\), GetHashCode\(\) и ToString\(\) от [Класс Platform::Object](../cppcx/platform-object-class.md).  
+### <a name="members"></a>Члены  
+ Класс Enum наследует методы Equals(), GetHashCode() и ToString() от [Platform::Object Class](../cppcx/platform-object-class.md).  
   
-## Заметки  
- Используйте ключевое слово [public enum class](~/windows/enum-class-cpp-component-extensions.md) для создания перечислений. Не используйте тип Platform::Enum в явном виде. Для получения дополнительной информации см. [Перечислимые типы](../cppcx/enums-c-cx.md).  
+### <a name="remarks"></a>Примечания  
+ Используйте ключевое слово [public enum class](../windows/enum-class-cpp-component-extensions.md) для создания перечислений. Не используйте тип Platform::Enum в явном виде. Дополнительные сведения см. в разделе [Перечисления](../cppcx/enums-c-cx.md).  
   
-## Требования  
- **Минимальный поддерживаемый клиент:** [!INCLUDE[win8](../cppcx/includes/win8-md.md)]  
+### <a name="requirements"></a>Требования  
+ **Минимальный поддерживаемый клиент:** Windows 8  
   
- **Минимальный поддерживаемый сервер:** [!INCLUDE[winserver8](../cppcx/includes/winserver8-md.md)]  
+ **Минимальный поддерживаемый сервер:** Windows Server 2012  
   
  **Пространство имен:** Platform  
   
  **Метаданные:** platform.winmd  
   
-## См. также  
+## <a name="see-also"></a>См. также  
  [Пространство имен Platform](../cppcx/platform-namespace-c-cx.md)

@@ -1,62 +1,60 @@
 ---
-title: "Класс ISessionPropertiesImpl | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "ISessionPropertiesImpl"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "ISessionPropertiesImpl - класс"
+title: "Класс ISessionPropertiesImpl | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: ISessionPropertiesImpl
+dev_langs: C++
+helpviewer_keywords: ISessionPropertiesImpl class
 ms.assetid: ca0ba254-c7dc-4c52-abec-cf895a0c6a63
-caps.latest.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 9
+caps.latest.revision: "9"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: f8824ac2081ffd214402a23c6a5975e027ecf9ae
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/24/2017
 ---
-# Класс ISessionPropertiesImpl
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Предоставляет реализацию интерфейса [ISessionProperties](https://msdn.microsoft.com/en-us/library/ms713721.aspx).  
+# <a name="isessionpropertiesimpl-class"></a>Класс ISessionPropertiesImpl
+Предоставляет реализацию [ISessionProperties](https://msdn.microsoft.com/en-us/library/ms713721.aspx) интерфейса.  
   
-## Синтаксис  
+## <a name="syntax"></a>Синтаксис  
   
 ```  
 template <class T, class PropClass = T>  
 class ATL_NO_VTABLE ISessionPropertiesImpl :  
-   public ISessionProperties,    
+   public ISessionProperties,    
    public CUtlProps<PropClass>  
 ```  
   
-#### Параметры  
+#### <a name="parameters"></a>Параметры  
  `T`  
  Класс, производный от `ISessionPropertiesImpl`.  
   
  `PropClass`  
- Класс определимый пользователем свойства, устанавливается значение по умолчанию `T`.  
+ Класс определяемые пользователем свойства, значение по умолчанию `T`.  
   
-## Члены  
+## <a name="members"></a>Члены  
   
-### Методы Interface  
+### <a name="interface-methods"></a>Методы интерфейса  
   
 |||  
 |-|-|  
-|[GetProperties](../../data/oledb/isessionpropertiesimpl-getproperties.md)|Возвращает список свойств в группе свойств сеанса, в настоящее время установлены на сеанс.|  
+|[GetProperties](../../data/oledb/isessionpropertiesimpl-getproperties.md)|Возвращает список свойств в группе свойств сеанса, заданных в настоящее время в сеансе.|  
 |[SetProperties](../../data/oledb/isessionpropertiesimpl-setproperties.md)|Задает свойства в группе свойств сеанса.|  
   
-## Заметки  
- Обязательный интерфейс на сеансах.  Этот класс реализует свойства сеанса, вызвав статическая функция, [сопоставление набора свойств](../Topic/BEGIN_PROPSET_MAP.md).  Сопоставление набора свойств должно быть указано в классе сеанса.  
+## <a name="remarks"></a>Примечания  
+ Обязательный интерфейс для сеансов. Этот класс реализует свойства сеанса, вызвав статическую функцию, определяемую [сопоставление набора свойств](../../data/oledb/begin-propset-map.md). Сопоставление набора свойств должен быть указан в классе сеанса.  
   
-## Требования  
- **Header:**  atldb.h  
+## <a name="requirements"></a>Требования  
+ **Заголовок:** atldb.h  
   
-## См. также  
+## <a name="see-also"></a>См. также  
  [Шаблоны поставщика OLE DB](../../data/oledb/ole-db-provider-templates-cpp.md)   
  [Архитектура шаблона поставщика OLE DB](../../data/oledb/ole-db-provider-template-architecture.md)

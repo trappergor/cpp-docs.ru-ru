@@ -4,46 +4,27 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-windows
+ms.technology: cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- omp_nest_lock_t
-dev_langs:
-- C++
-helpviewer_keywords:
-- omp_nest_lock_t OpenMP data type
+f1_keywords: omp_nest_lock_t
+dev_langs: C++
+helpviewer_keywords: omp_nest_lock_t OpenMP data type
 ms.assetid: fceac9fb-96d2-42b0-af19-c9b078380618
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
-ms.openlocfilehash: a6331cac637b409051eac5a239606a041afed8dc
-ms.contentlocale: ru-ru
-ms.lasthandoff: 02/24/2017
-
+ms.openlocfilehash: 73615a6c8e4b09aae01369c5a2fed07117fe490c
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="ompnestlockt"></a>omp_nest_lock_t
-Тип, который содержит следующие сведения о блокировки: ли доступна блокировка и идентификатора потока, которому принадлежит блокировка и вложенности число.  
+Тип, содержащий следующие сведения о блокировке: ли блокировки, и идентификатор потока, которому принадлежит блокировка и вложенности count.  
   
- Следующие функции используют **omp_nest_lock_t**:  
+ Следующие функции используйте **omp_nest_lock_t**:  
   
 -   [omp_init_nest_lock](../../../parallel/openmp/reference/omp-init-nest-lock.md)  
   

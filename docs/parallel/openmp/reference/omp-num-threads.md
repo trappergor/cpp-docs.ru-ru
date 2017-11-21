@@ -4,44 +4,25 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-windows
+ms.technology: cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- OMP_NUM_THREADS
-dev_langs:
-- C++
-helpviewer_keywords:
-- OMP_NUM_THREADS OpenMP environment variable
+f1_keywords: OMP_NUM_THREADS
+dev_langs: C++
+helpviewer_keywords: OMP_NUM_THREADS OpenMP environment variable
 ms.assetid: 4b558124-1387-4c30-a6a5-ff5345a9ced6
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
-ms.openlocfilehash: 9fc343fd41bf0661099aee2cb4f890a215a64fed
-ms.contentlocale: ru-ru
-ms.lasthandoff: 02/24/2017
-
+ms.openlocfilehash: 2139ecfc719bd6e5836a67d9387b3ff2f4289bc6
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="ompnumthreads"></a>OMP_NUM_THREADS
-Задает максимальное число потоков в параллельной области, если они не переопределены [omp_set_num_threads](../../../parallel/openmp/reference/omp-set-num-threads.md) или [num_threads](../../../parallel/openmp/reference/num-threads.md).  
+Задает максимальное число потоков в параллельной области, если иное не переопределено [omp_set_num_threads](../../../parallel/openmp/reference/omp-set-num-threads.md) или [num_threads](../../../parallel/openmp/reference/num-threads.md).  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -53,12 +34,12 @@ set OMP_NUM_THREADS[=num]
  где  
   
  `num`  
- Максимальное число потоков в параллельной области, до 64 в реализации Visual C++.  
+ Максимальное число потоков в параллельной области, не более 64 реализации в Visual C++.  
   
 ## <a name="remarks"></a>Примечания  
- **OMP_NUM_THREADS** переменной среды могут быть переопределены [omp_set_num_threads](../../../parallel/openmp/reference/omp-set-num-threads.md) функции или [num_threads](../../../parallel/openmp/reference/num-threads.md).  
+ **OMP_NUM_THREADS** переменной среды может быть переопределено [omp_set_num_threads](../../../parallel/openmp/reference/omp-set-num-threads.md) функции или [num_threads](../../../parallel/openmp/reference/num-threads.md).  
   
- Значение по умолчанию `num` в Visual C++ реализация стандарта OpenMP — количество виртуальных процессоров, включая процессоры с технологией Hyper-Threading.  
+ Значение по умолчанию `num` в Visual C++ реализацию стандарта OpenMP — количество виртуальных процессоров, включая ЦП Hyper-Threading.  
   
  Дополнительные сведения см. в разделе [4.2 OMP_NUM_THREADS](../../../parallel/openmp/4-2-omp-num-threads.md).  
   
@@ -69,7 +50,7 @@ set OMP_NUM_THREADS[=num]
 set OMP_NUM_THREADS=16  
 ```  
   
- Следующая команда отображает текущее значение **OMP_NUM_THREADS** переменной среды:  
+ Следующая команда отображает текущее значение параметра **OMP_NUM_THREADS** переменной среды:  
   
 ```  
 set OMP_NUM_THREADS  

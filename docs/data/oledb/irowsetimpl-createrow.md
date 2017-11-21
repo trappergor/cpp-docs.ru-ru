@@ -1,36 +1,35 @@
 ---
-title: "IRowsetImpl::CreateRow | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "IRowsetImpl.CreateRow"
-  - "ATL.IRowsetImpl.CreateRow"
-  - "ATL::IRowsetImpl::CreateRow"
-  - "CreateRow"
-  - "IRowsetImpl::CreateRow"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "CreateRow - метод"
+title: "IRowsetImpl::CreateRow | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- IRowsetImpl.CreateRow
+- ATL.IRowsetImpl.CreateRow
+- ATL::IRowsetImpl::CreateRow
+- CreateRow
+- IRowsetImpl::CreateRow
+dev_langs: C++
+helpviewer_keywords: CreateRow method
 ms.assetid: b01c430c-9484-4fef-a6cf-a2e8d9d99130
-caps.latest.revision: 8
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 2f455935a1736eae2c70d95f4528d216a80e782a
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/24/2017
 ---
-# IRowsetImpl::CreateRow
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Вспомогательный метод [GetNextRows](../../data/oledb/irowsetimpl-getnextrows.md) вызывается, чтобы выделить новый объект **HROW**.  
+# <a name="irowsetimplcreaterow"></a>IRowsetImpl::CreateRow
+Вспомогательный метод, вызываемый [GetNextRows](../../data/oledb/irowsetimpl-getnextrows.md) выделить новый **HROW**.  
   
-## Синтаксис  
+## <a name="syntax"></a>Синтаксис  
   
 ```  
   
@@ -41,21 +40,21 @@ caps.handback.revision: 8
 );  
 ```  
   
-#### Параметры  
+#### <a name="parameters"></a>Параметры  
  *lRowsOffset*  
- Позиция курсора создаваемому строки.  
+ Позиция курсора создаваемой строки.  
   
  *cRowsObtained*  
- Ссылка прошла пользователю, указывающее количество создаваемых строк.  
+ Ссылка передается обратно в пользователя, указывая число созданных строк.  
   
  *rgRows*  
- Массив объектов **HROW**, возвращаемый вызывающему объекту с созданными последними дескрипторами строк.  
+ Массив **HROW**s возвращается вызывающему с дескрипторами только что созданной строки.  
   
-## Заметки  
- Если строка существует, этот метод вызывает метод [AddRefRows](../../data/oledb/irowsetimpl-addrefrows.md) и возвращают.  В противном случае она выделяет новый экземпляр переменной шаблона RowClass и добавляет ее в [m\_rgRowHandles](../../data/oledb/irowsetimpl-m-rgrowhandles.md).  
+## <a name="remarks"></a>Примечания  
+ Если строка существует, этот метод вызывает метод [AddRefRows](../../data/oledb/irowsetimpl-addrefrows.md) и возвращает. В противном случае он выделяет новый экземпляр переменной шаблона RowClass и добавляет его в [m_rgRowHandles](../../data/oledb/irowsetimpl-m-rgrowhandles.md).  
   
-## Требования  
- **Header:** atldb.h  
+## <a name="requirements"></a>Требования  
+ **Заголовок:** atldb.h  
   
-## См. также  
- [Класс IRowsetImpl](../Topic/IRowsetImpl%20Class.md)
+## <a name="see-also"></a>См. также  
+ [Класс IRowsetImpl](../../data/oledb/irowsetimpl-class.md)

@@ -1,48 +1,45 @@
 ---
-title: "Оператор ComPtrRefBase::operator IUnknown** | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "client/Microsoft::WRL::Details::ComPtrRefBase::operator IUnknown**"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "operator IUnknown** - оператор"
+title: "Оператор ComPtrRefBase::operator IUnknown ** | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: client/Microsoft::WRL::Details::ComPtrRefBase::operator IUnknown**
+dev_langs: C++
+helpviewer_keywords: operator IUnknown** operator
 ms.assetid: c2950abf-a7aa-480a-ba41-615703e7f931
-caps.latest.revision: 5
-caps.handback.revision: 5
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "5"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 3881dbec0af43f87ff3f880da71299efdf26c64a
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/24/2017
 ---
-# Оператор ComPtrRefBase::operator IUnknown**
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Предназначено для поддержки инфраструктуры WRL, а не для непосредственного использования в коде.  
+# <a name="comptrrefbaseoperator-iunknown-operator"></a>Оператор ComPtrRefBase::operator IUnknown**
+Поддерживает инфраструктуру WRL и не предназначен для использования непосредственно из программного кода.  
   
-## Синтаксис  
+## <a name="syntax"></a>Синтаксис  
   
 ```  
 operator IUnknown**() const;  
 ```  
   
-## Примечания  
- Приводит текущие данные\-член [ptr\_](../windows/comptrrefbase-ptr-data-member.md) к указателю\-на\-указатель\-на интерфейс IUnknown.  
+## <a name="remarks"></a>Примечания  
+ Приводит текущие [ptr_](../windows/comptrrefbase-ptr-data-member.md) данные-член к указатель в a указатель интерфейса IUnknown.  
   
- Ошибка появляется, если текущий ComPtrRefBase не является производным от IUnknown.  
+ Если текущий ComPtrRefBase не является производным от IUnknown, выдается ошибка.  
   
-## Требования  
+## <a name="requirements"></a>Требования  
  **Заголовок:** client.h  
   
- **Пространство имен:** Microsoft::WRL::Details  
+ **Пространство имен:** Microsoft::wrl:: Details  
   
-## См. также  
- [Класс ComPtrRefBase](../windows/comptrrefbase-class.md)   
+## <a name="see-also"></a>См. также  
+ [Comptrrefbase-класс](../windows/comptrrefbase-class.md)   
  [Пространство имен Microsoft::WRL::Details](../windows/microsoft-wrl-details-namespace.md)

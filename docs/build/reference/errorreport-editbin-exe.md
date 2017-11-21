@@ -1,40 +1,38 @@
 ---
-title: "/ERRORREPORT (editbin.exe) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "/ERRORREPORT"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "/ERRORREPORT - параметр программы editbin"
-  - "ERRORREPORT - параметр программы editbin"
-  - "-ERRORREPORT - параметр программы editbin"
+title: "-ERRORREPORT (editbin.exe) | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: /ERRORREPORT
+dev_langs: C++
+helpviewer_keywords:
+- -ERRORREPORT editbin option
+- ERRORREPORT editbin option
+- /ERRORREPORT editbin option
 ms.assetid: eca66ac3-b754-4bd7-9dd4-e04fc79a71b6
-caps.latest.revision: 5
-caps.handback.revision: 5
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
+caps.latest.revision: "5"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: 8fccfb508475cf139398061b75d73ce51917c458
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/24/2017
 ---
-# /ERRORREPORT (editbin.exe)
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="errorreport-editbinexe"></a>/ERRORREPORT (editbin.exe)
 ```  
 /ERRORREPORT[NONE | PROMPT | QUEUE | SEND ]  
 ```  
   
-## Заметки  
- Если во время выполнения editbin.exe возникает ошибка, можно использовать параметр **\/ERRORREPORT**, чтобы отправить сведения об этих ошибках Майкрософт.  
+## <a name="remarks"></a>Примечания  
+ Если editbin.exe завершается ошибкой во время выполнения, можно использовать **/errorReport** в корпорацию Майкрософт сведения об этих ошибках.  
   
- Дополнительные сведения о **\/ERRORREPORT** см. в разделе [Параметр \/errorReport \(отчет о внутренних ошибках компилятора\)](../Topic/-errorReport%20\(Report%20Internal%20Compiler%20Errors\).md).  
+ Дополнительные сведения о **/errorReport**, в разделе [/errorReport (отчет внутренних ошибках компилятора)](../../build/reference/errorreport-report-internal-compiler-errors.md).  
   
-## См. также  
+## <a name="see-also"></a>См. также  
  [Параметры EDITBIN](../../build/reference/editbin-options.md)

@@ -1,37 +1,37 @@
 ---
-title: "QueryInterface | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "QueryInterface"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "интерфейсы, доступность"
-  - "интерфейсы, указатели"
-  - "QueryInterface - метод"
+title: "QueryInterface | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: QueryInterface
+dev_langs: C++
+helpviewer_keywords:
+- interfaces, pointers
+- interfaces, availability
+- QueryInterface method
 ms.assetid: 62fce95e-aafa-4187-b50b-e6611b74c3b3
-caps.latest.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 5
+caps.latest.revision: "10"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: b269ed51cc9a1648de7a52f9c250919c9ef4c1c3
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/24/2017
 ---
-# QueryInterface
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+# <a name="queryinterface"></a>QueryInterface
+Несмотря на то, что существуют механизмы, с помощью которых объект можно выразить функциональные возможности, он предоставляет статически (до создания его экземпляра), основной механизм COM является использование **IUnknown** метод с именем [QueryInterface ](http://msdn.microsoft.com/library/windows/desktop/ms682521).  
+  
+ Каждый интерфейс является производным от **IUnknown**, поэтому каждый интерфейс содержит реализацию `QueryInterface`. Независимо от реализации этот метод отправляет запрос с помощью IID интерфейса, к которому вызывающий указатель объекта. Если объект поддерживает этот интерфейс `QueryInterface` извлекает указатель на интерфейс, при вызове также `AddRef`. В противном случае он возвращает **E_NOINTERFACE** код ошибки.  
+  
+ Обратите внимание, что должен подчиняться [подсчет ссылок](../atl/reference-counting.md) правила в любое время. При вызове метода **выпуска** на указатель интерфейса, для уменьшения числа ссылок в ноль, не следует использовать этот указатель еще раз. Иногда может потребоваться получить слабую ссылку на объект (то есть, вы можете получить указатель на один из интерфейсов без приращения счетчика ссылок), но не является приемлемым для этого нужно вызвать `QueryInterface` следуют  **Выпуск**. Указатель, полученный таким образом, является недопустимым и не должны использоваться. Это более легко становится очевидной при [_ATL_DEBUG_INTERFACES](reference/debugging-and-error-reporting-macros.md#_atl_debug_interfaces) определен, поэтому определение этого макроса — удобный способ подсчета ошибок поиск ссылок.  
+  
+## <a name="see-also"></a>См. также  
+ [Знакомство с COM](../atl/introduction-to-com.md)   
+ [QueryInterface: Навигация в объект](http://msdn.microsoft.com/library/windows/desktop/ms687230)
 
-Хотя механизмы объект может представить функциональные возможности его предоставляют статически \(\), прежде чем он создан базовый механизм модели COM использовать метод с именем **IUnknown** [QueryInterface](http://msdn.microsoft.com/library/windows/desktop/ms682521).  
-  
- Каждый интерфейс является производным от **IUnknown**, поэтому каждый интерфейс имеет реализацию `QueryInterface`.  Независимо от реализации этот метод извлекает объект, используя идентификатор IID интерфейса, к которым вызывающий объект должен указатель.  , Если обозреватель, взаимодействующие, `QueryInterface` объекта получают указатель на интерфейс, а также при вызове `AddRef`.  В противном случае функция возвращает код ошибки **E\_NOINTERFACE**.  
-  
- Обратите внимание, что необходимо повиноваться правилам [Подсчет ссылок](../atl/reference-counting.md) все время.  При вызове **Выпуск** указателя интерфейса для уменьшения счетчика ссылок, равное нулю, не следует использовать этот указатель снова.  Иногда можно получить слабую ссылку на объект \(то есть можно пожелать получить указатель на один из его интерфейсов без выполнить приращение счетчика ссылок\), но не желательно сделать путем вызова `QueryInterface` выполните **Выпуск**.  Указатель, полученный таким способом является недопустимым и не должен использоваться.  Этот более легко будет ясным при [\_ATL\_DEBUG\_INTERFACES](../Topic/_ATL_DEBUG_INTERFACES.md) указано, поэтому указание этот макрос полезный способ найти ссылку учета ошибок.  
-  
-## См. также  
- [Введение в COM](../atl/introduction-to-com.md)   
- [QueryInterface: Navigating in an Object](http://msdn.microsoft.com/library/windows/desktop/ms687230)

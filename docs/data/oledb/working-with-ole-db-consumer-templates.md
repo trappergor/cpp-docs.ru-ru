@@ -1,37 +1,37 @@
 ---
-title: "Работа с шаблонами объекта-получателя OLE DB | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "шаблоны потребителя OLE DB, сведения о шаблонах потребителя"
-  - "учебные приложения [C++], Шаблоны OLE DB"
+title: "Работа с шаблоны потребителя OLE DB | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- sample applications [C++], OLE DB Templates
+- OLE DB consumer templates, about consumer templates
 ms.assetid: 526aa897-5961-4396-85cb-c84f77113551
-caps.latest.revision: 8
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: be52ccf8ba42b61d7393c32587e54a5a768d2f40
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/24/2017
 ---
-# Работа с шаблонами объекта-получателя OLE DB
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-В следующих разделах рассматриваются примеры использования шаблонов объекта\-получателя OLE DB в обычных скриптах.  
+# <a name="working-with-ole-db-consumer-templates"></a>Работа с шаблонами объекта-получателя OLE DB
+В следующих разделах приводятся некоторые примеры того, как использовать шаблоны потребителей OLE DB в общих сценариях:  
   
 -   [Упрощение доступа к данным с помощью атрибутов базы данных](../../data/oledb/simplifying-data-access-with-database-attributes.md)  
   
--   [Статус поля элементов данных в мастере создания методов доступа](../Topic/Field%20Status%20Data%20Members%20in%20Wizard-Generated%20Accessors.md)  
+-   [Статус поля элементов данных в методах доступа, создаваемых мастером](../../data/oledb/field-status-data-members-in-wizard-generated-accessors.md)  
   
--   [Перебор простого набора строк](../Topic/Traversing%20a%20Simple%20Rowset.md)  
+-   [Перебор простого набора строк](../../data/oledb/traversing-a-simple-rowset.md)  
   
--   [Выполнение параметризированного запроса](../../data/oledb/issuing-a-parameterized-query.md)  
+-   [Выполнение параметризованного запроса](../../data/oledb/issuing-a-parameterized-query.md)  
   
 -   [Выборка данных](../../data/oledb/fetching-data.md)  
   
@@ -39,7 +39,7 @@ caps.handback.revision: 8
   
 -   [Использование хранимых процедур](../../data/oledb/using-stored-procedures.md)  
   
--   [Использование метода доступа](../../data/oledb/using-accessors.md)  
+-   [Использование методов доступа](../../data/oledb/using-accessors.md)  
   
 -   [Получение метаданных в схеме набора строк](../../data/oledb/obtaining-metadata-with-schema-rowsets.md)  
   
@@ -49,23 +49,23 @@ caps.handback.revision: 8
   
 -   [Использование существующего набора записей ADO](../../data/oledb/using-an-existing-ado-recordset.md)  
   
--   [Обновление столбца при наличии ссылки на строку в другой таблице](../../data/oledb/updating-a-column-when-another-table-contains-a-reference-to-the-row.md)  
+-   [Обновление столбца при наличии ссылки в другой таблице на данную строку](../../data/oledb/updating-a-column-when-another-table-contains-a-reference-to-the-row.md)  
   
 -   [Использование закладок](../../data/oledb/using-bookmarks.md)  
   
--   [Извлечение двоичного объекта \(BLOB\)](../../data/oledb/retrieving-a-blob.md)  
+-   [Извлечение большого двоичного объекта](../../data/oledb/retrieving-a-blob.md)  
   
 -   [Получение уведомлений](../../data/oledb/receiving-notifications.md)  
   
- Пример создания и использования объекта\-получателя OLE DB см. в разделе [Создание простого объекта\-получателя](../../data/oledb/creating-an-ole-db-consumer.md).  
+ Пример создания и реализации потребителя OLE DB см. в разделе [создание простого объекта-получателя](../../data/oledb/creating-an-ole-db-consumer.md).  
   
- См. примеры использования шаблонов объекта\-получателя OLE DB в следующих образцах:  
+ Также можно найти примеры использования шаблонов потребителей OLE DB в следующих примерах:  
   
--   [CatDB](http://msdn.microsoft.com/ru-ru/003d516b-2bf6-444e-8be5-4ebaa0b66046)  
+-   [CatDB](http://msdn.microsoft.com/en-us/003d516b-2bf6-444e-8be5-4ebaa0b66046)  
   
--   [DBViewer](http://msdn.microsoft.com/ru-ru/07620f99-c347-4d09-9ebc-2459e8049832)  
+-   [DBViewer](http://msdn.microsoft.com/en-us/07620f99-c347-4d09-9ebc-2459e8049832)  
   
--   [MultiRead](http://msdn.microsoft.com/ru-ru/21459014-4409-413c-b826-a41f0413be61)  
+-   [MultiRead](http://msdn.microsoft.com/en-us/21459014-4409-413c-b826-a41f0413be61)  
   
-## См. также  
- [Шаблоны потребителей OLE DB](../../data/oledb/ole-db-consumer-templates-cpp.md)
+## <a name="see-also"></a>См. также  
+ [Шаблоны потребителя OLE DB](../../data/oledb/ole-db-consumer-templates-cpp.md)

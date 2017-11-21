@@ -4,46 +4,27 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-tools
+ms.technology: cpp-tools
 ms.tgt_pltfrm: 
 ms.topic: error-reference
-f1_keywords:
-- C4099
-dev_langs:
-- C++
-helpviewer_keywords:
-- C4099
+f1_keywords: C4099
+dev_langs: C++
+helpviewer_keywords: C4099
 ms.assetid: 00bb803d-cae7-4ab8-8969-b46f54139ac8
-caps.latest.revision: 9
+caps.latest.revision: "9"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
-ms.openlocfilehash: 855b31903ba36f6c1ab3030e91354175441451a9
-ms.contentlocale: ru-ru
-ms.lasthandoff: 02/24/2017
-
+ms.openlocfilehash: af0f7aacb5e4600b48120576135b2052af2a5315
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="compiler-warning-level-2-c4099"></a>Предупреждение компилятора (уровень 2) C4099
-«Идентификатор»: имя типа, впервые встречается с помощью objecttype1 теперь «типобъекта2»  
+«Идентификатор»: имя типа, ранее отображенное с помощью objecttype1 теперь отображено с помощью «objecttype2»  
   
- Объект, объявленный как структура, определяется как класс или объект, объявленный как класс определен как структура. Компилятор использует тип, указанный в определении.  
+ Объект, объявленный как структура определен как класс или объекта, объявленного как класс определен как структура. Компилятор использует тип, указанный в определении.  
   
 ## <a name="example"></a>Пример  
  Следующий пример приводит к возникновению ошибки C4099.  

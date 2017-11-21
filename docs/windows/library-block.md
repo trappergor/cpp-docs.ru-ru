@@ -1,32 +1,30 @@
 ---
-title: "library_block | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-f1_keywords: 
-  - "vc-attr.library_block"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "library_block attribute"
+title: "library_block | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+f1_keywords: vc-attr.library_block
+dev_langs: C++
+helpviewer_keywords: library_block attribute
 ms.assetid: ae7a7ebe-5e1a-4eda-a058-11bbd058ece8
-caps.latest.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 10
+caps.latest.revision: "10"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 4e0255002a8235f4e8a36d4b43df520d6e26865b
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/24/2017
 ---
-# library_block
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Задает конструкцию внутри блока библиотеки IDL.  
+# <a name="libraryblock"></a>library_block
+Помещает конструкцию внутри блока библиотеки IDL.  
   
-## Синтаксис  
+## <a name="syntax"></a>Синтаксис  
   
 ```  
   
@@ -34,11 +32,11 @@ caps.handback.revision: 10
   
 ```  
   
-## Заметки  
- При установке конструкцию внутри блока библиотеки, можно гарантировать, что он будут передаваться в библиотеку типов, независимо от того, является ли она ссылается.  По умолчанию только измененные конструкции [CoClass](../windows/coclass.md)"  [dispinterface](../windows/dispinterface.md)и  [idl\_module](../windows/idl-module.md) атрибуты помещаются в блоке библиотеки.  
+## <a name="remarks"></a>Примечания  
+ При размещении конструкции внутри блока библиотеки убедитесь, оно передается в библиотеку типов, независимо от того, является ли ссылка на. По умолчанию, единственными конструкциями изменяемом [coclass](../windows/coclass.md), [disp-интерфейса](../windows/dispinterface.md), и [idl_module](../windows/idl-module.md) атрибуты помещаются в блок library.  
   
-## Пример  
- В следующем коде пользовательский интерфейс размещается внутри блока библиотеки.  
+## <a name="example"></a>Пример  
+ В следующем коде пользовательский интерфейс помещается внутри блока библиотеки.  
   
 ```  
 // cpp_attr_ref_library_block.cpp  
@@ -51,20 +49,19 @@ __interface IMyInterface {
 };  
 ```  
   
-## Требования  
+## <a name="requirements"></a>Требования  
   
-### Контекст атрибута  
+### <a name="attribute-context"></a>Контекст атрибута  
   
 |||  
 |-|-|  
-|**Применение**|Любой|  
-|**Repeatable**|Нет|  
-|**Обязательные атрибуты**|None|  
-|**Недопустимые атрибуты**|None|  
+|**Применение**|В любом месте|  
+|**Повторяемый**|Нет|  
+|**Обязательные атрибуты**|Нет|  
+|**Недопустимые атрибуты**|Нет|  
   
- Дополнительные сведения см. в разделе [Контексты атрибута](../windows/attribute-contexts.md).  
+ Дополнительные сведения см. в разделе [Контексты атрибутов](../windows/attribute-contexts.md).  
   
-## См. также  
- [Compiler Attributes](../windows/compiler-attributes.md)   
- [Stand\-Alone Attributes](../Topic/Stand-Alone%20Attributes.md)   
- [Attributes Samples](http://msdn.microsoft.com/ru-ru/558ebdb2-082f-44dc-b442-d8d33bf7bdb8)
+## <a name="see-also"></a>См. также  
+ [Атрибуты компилятора](../windows/compiler-attributes.md)   
+ [Изолированные атрибуты](../windows/stand-alone-attributes.md)   

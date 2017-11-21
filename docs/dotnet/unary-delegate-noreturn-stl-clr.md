@@ -1,44 +1,42 @@
 ---
-title: "unary_delegate_noreturn (STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::unary_delegate_noreturn"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "unary_delegate_noreturn - функция [STL/CLR]"
+title: "unary_delegate_noreturn (STL/CLR) | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::unary_delegate_noreturn
+dev_langs: C++
+helpviewer_keywords: unary_delegate_noreturn function [STL/CLR]
 ms.assetid: 3c3fb143-f60f-4e28-a66b-690e3a7b2f9b
-caps.latest.revision: 8
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 6
+caps.latest.revision: "8"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 5c7513955a99c12456960d68d8c4a35baa51f860
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/24/2017
 ---
-# unary_delegate_noreturn (STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Genereic класс описывает делегат от аргумента, который возвращает `void`.  Он используется определить делегат с точки зрения его типа аргумента.  
+# <a name="unarydelegatenoreturn-stlclr"></a>unary_delegate_noreturn (STL/CLR)
+Класс genereic описывает один аргумент делегата, который возвращает `void`. Она используется Укажите делегат с точки зрения его типа аргумента.  
   
-## Синтаксис  
+## <a name="syntax"></a>Синтаксис  
   
 ```  
 generic<typename Arg>  
     delegate void unary_delegate_noreturn(Arg);  
 ```  
   
-#### Параметры  
- Аргумент  
+#### <a name="parameters"></a>Параметры  
+ Arg  
  Тип аргумента.  
   
-## Заметки  
- Genereic делегата описывает от аргумента функции, которая возвращает `void`.  
+## <a name="remarks"></a>Примечания  
+ Делегат genereic описывает один аргумент функции, которая возвращает `void`.  
   
  Обратите внимание, что для:  
   
@@ -46,15 +44,15 @@ generic<typename Arg>
   
  `unary_delegare_noreturn<int> Fun2;`  
   
- типы `Fun1` и `Fun2` синонимы, а для:  
+ типы `Fun1` и `Fun2` являются синонимами, а для:  
   
  `delegate void Fun1(int);`  
   
  `delegate void Fun2(int);`  
   
- они не одного типа.  
+ они не относятся к одному типу.  
   
-## Пример  
+## <a name="example"></a>Пример  
   
 ```  
 // cliext_unary_delegate_noreturn.cpp   
@@ -79,14 +77,17 @@ int main()
   
 ```  
   
-  **хэш \(а\) \= 5**  
-**хэш \(B\) \= 22**   
-## Требования  
- **Заголовок:**\<cliext\/functional\>  
+```Output  
+hash(a) = 5  
+hash(b) = 22  
+```  
+  
+## <a name="requirements"></a>Требования  
+ **Заголовок:** \<cliext и функционального >  
   
  **Пространство имен:** cliext  
   
-## См. также  
- [binary\_delegate](../Topic/binary_delegate%20\(STL-CLR\).md)   
- [binary\_delegate\_noreturn](../dotnet/binary-delegate-noreturn-stl-clr.md)   
- [unary\_delegate](../dotnet/unary-delegate-stl-clr.md)
+## <a name="see-also"></a>См. также  
+ [binary_delegate (STL/CLR)](../dotnet/binary-delegate-stl-clr.md)   
+ [binary_delegate_noreturn (STL/CLR)](../dotnet/binary-delegate-noreturn-stl-clr.md)   
+ [unary_delegate (STL/CLR)](../dotnet/unary-delegate-stl-clr.md)

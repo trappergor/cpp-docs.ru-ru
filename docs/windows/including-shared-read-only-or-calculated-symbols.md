@@ -1,40 +1,39 @@
 ---
-title: "Including Shared (Read-Only) or Calculated Symbols | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "vc.editors.symbol.shared.calculated"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "symbols, read-only"
-  - "symbols, shared"
-  - "symbols, calculated"
-  - "read-only symbols"
-  - "symbol directives"
-  - "calculated symbols"
-  - "shared symbols"
+title: "Включение общих (только для чтения) или вычисляемых символов | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: vc.editors.symbol.shared.calculated
+dev_langs: C++
+helpviewer_keywords:
+- symbols, read-only
+- symbols, shared
+- symbols, calculated
+- read-only symbols
+- symbol directives
+- calculated symbols
+- shared symbols
 ms.assetid: 32b77faf-a066-4371-a072-9a5b84c0766d
-caps.latest.revision: 8
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: fefc31c6ac9eb1f66c2fb6481bd7bb63171a8a8f
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/24/2017
 ---
-# Including Shared (Read-Only) or Calculated Symbols
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Когда среда разработки первый раз считывает файл ресурса, созданный другим приложением, она помечает все включаемые файлы заголовков как доступные только для чтения.  Впоследствии можно с помощью [диалогового окна "Включения ресурсов"](../windows/resource-includes-dialog-box.md) добавить дополнительные файлы символов заголовков с доступом только для чтения.  
+# <a name="including-shared-read-only-or-calculated-symbols"></a>Включение общих (только для чтения) или вычисляемых символов
+Когда среда разработки первый раз считывает файл ресурса, созданный другим приложением, она помечает все включаемые файлы заголовков как доступные только для чтения. Впоследствии можно использовать [включения ресурсов-диалоговое окно](../windows/resource-includes-dialog-box.md) для добавления дополнительных символов только для чтения файлы заголовков.  
   
  Одна из причин, по которой может потребоваться использование определений символов с доступом только для чтения — это наличие файлов символов, которые планируется совместно использовать в нескольких проектах.  
   
- Включаемые файлы символов могут также потребоваться при наличии существующих ресурсов с определениями символов, использующими выражения для определения значения символа, а не просто целые числа.  Пример:  
+ Включаемые файлы символов могут также потребоваться при наличии существующих ресурсов с определениями символов, использующими выражения для определения значения символа, а не просто целые числа. Пример:  
   
 ```  
 #define   IDC_CONTROL1 2100  
@@ -52,21 +51,21 @@ caps.handback.revision: 8
 > [!NOTE]
 >  Если ожидается строковое или числовое выражение, выражение не вычисляется.  
   
-### Включение общих \(только для чтения\) символов в файл ресурсов  
+### <a name="to-include-shared-read-only-symbols-in-your-resource-file"></a>Включение общих (только для чтения) символов в файл ресурсов  
   
-1.  На панели [Представление ресурсов](../windows/resource-view-window.md) щелкните правой кнопкой мыши RC\-файл и выберите в контекстном меню команду [Включения ресурсов](../windows/resource-includes-dialog-box.md).  
+1.  В [представление ресурсов](../windows/resource-view-window.md), щелкните правой кнопкой мыши RC-файл и выберите [включения ресурсов](../windows/resource-includes-dialog-box.md) в контекстном меню.  
   
     > [!NOTE]
-    >  Если в проекте еще нет RC\-файлов, см. статью [Создание нового файла описания ресурсов](../windows/how-to-create-a-resource-script-file.md).  
+    >  Если в проекте еще нет RC-файла, см. раздел [Создание нового файла описания ресурсов](../windows/how-to-create-a-resource-script-file.md).  
   
-2.  В поле **Директивы символов только для чтения** используйте директиву компилятора **\#include**, чтобы задать файл, в котором должны храниться символы с доступом только для чтения.  
+2.  В **директивы символов только для чтения** используйте **#include** директивы компилятора, чтобы задать файл, в котором должны храниться символы только для чтения.  
   
      Не указывайте файл Resource.h, так как это имя файла обычно используется для главного файла символов заголовков.  
   
     > [!NOTE]
-    >  **Важно** То, что вы вводите в поле директивы символов только для чтения, включается в файл ресурсов точно в таком же виде.  Убедитесь в том, что вводимый текст не содержит орфографических или синтаксических ошибок.  
+    >  **Важные** вводимых в поле директивы символов только для чтения включаются в файл ресурсов точно в том случае, при вводе. Убедитесь в том, что вводимый текст не содержит орфографических или синтаксических ошибок.  
   
-     Используйте поле **Директивы символов только для чтения** только для того, чтобы включать файлы с определениями символов.  Не включайте определения ресурсов. Иначе будут созданы повторяющиеся определения ресурсов при сохранении файла.  
+     Используйте **директивы символов только для чтения** поле содержит файлы с определениями символов только. Не включайте определения ресурсов. Иначе будут созданы повторяющиеся определения ресурсов при сохранении файла.  
   
 3.  Поместите символы в указанный файл.  
   
@@ -74,14 +73,14 @@ caps.handback.revision: 8
   
 4.  Нажмите кнопку **ОК**.  
   
- Сведения о добавлении ресурсов в управляемые проекты см. в разделе [Ресурсы приложений](../Topic/Resources%20in%20Desktop%20Apps.md) *Руководства разработчика .NET Framework*. Сведения о том, как вручную добавлять файлы ресурсов в управляемые проекты, осуществлять доступ к ресурсам, отображать статические ресурсы и присваивать строки ресурсов свойствам, см. в статье [Walkthrough: Using Resources for Localization with ASP.NET](../Topic/Walkthrough:%20Using%20Resources%20for%20Localization%20with%20ASP.NET.md).  
+
   
  Требования  
   
  Win32  
   
-## См. также  
- [Symbol Name Restrictions](../windows/symbol-name-restrictions.md)   
- [Symbol Value Restrictions](../Topic/Symbol%20Value%20Restrictions.md)   
- [Predefined Symbol IDs](../windows/predefined-symbol-ids.md)   
- [Symbols: Resource Identifiers](../mfc/symbols-resource-identifiers.md)
+## <a name="see-also"></a>См. также  
+ [Ограничения для имен символов](../windows/symbol-name-restrictions.md)   
+ [Ограничения для значений символов](../windows/symbol-value-restrictions.md)   
+ [Стандартные идентификаторы символов](../windows/predefined-symbol-ids.md)   
+ [Символы: идентификаторы ресурсов](../windows/symbols-resource-identifiers.md)

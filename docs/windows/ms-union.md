@@ -1,32 +1,30 @@
 ---
-title: "ms_union | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-f1_keywords: 
-  - "vc-attr.ms_union"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "ms_union attribute"
+title: "ms_union | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+f1_keywords: vc-attr.ms_union
+dev_langs: C++
+helpviewer_keywords: ms_union attribute
 ms.assetid: bb548689-6962-457e-af56-8ffdf68987eb
-caps.latest.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 9
+caps.latest.revision: "9"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: f70f4403c3318729ae0dcf42e717902c48c8759b
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/24/2017
 ---
-# ms_union
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Контролирует выравнивание представлений сведениям о сети nonencapsulated соединений.  
+# <a name="msunion"></a>ms_union
+Управляет выравниванием представление данных сети nonencapsulated объединений.  
   
-## Синтаксис  
+## <a name="syntax"></a>Синтаксис  
   
 ```  
   
@@ -34,11 +32,11 @@ caps.handback.revision: 9
   
 ```  
   
-## Заметки  
- **ms\_union** Атрибут C\+\+ имеет ту же функциональность, что и  [ms\_union](http://msdn.microsoft.com/library/windows/desktop/aa367100) атрибут MIDL.  
+## <a name="remarks"></a>Примечания  
+ **Ms_union** языка C++ имеет ту же функциональность, что [ms_union](http://msdn.microsoft.com/library/windows/desktop/aa367100) языка MIDL.  
   
-## Пример  
- Следующий код демонстрирует размещение **ms\_union**.  
+## <a name="example"></a>Пример  
+ В следующем коде показано размещение **ms_union**:  
   
 ```  
 // cpp_attr_ref_ms_union.cpp  
@@ -63,20 +61,19 @@ __interface IFireTabCtrl {
 [module(name="ATLFIRELib")];  
 ```  
   
-## Требования  
+## <a name="requirements"></a>Требования  
   
-### Контекст атрибута  
+### <a name="attribute-context"></a>Контекст атрибута  
   
 |||  
 |-|-|  
-|**Применение**|Соединения Nonencapsulated|  
-|**Repeatable**|Нет|  
-|**Обязательные атрибуты**|None|  
+|**Применение**|Nonencapsulated объединения|  
+|**Повторяемый**|Нет|  
+|**Обязательные атрибуты**|Нет|  
 |**Недопустимые атрибуты**|**dispinterface**|  
   
- Дополнительные сведения см. в разделе [Контексты атрибута](../windows/attribute-contexts.md).  
+ Дополнительные сведения см. в разделе [Контексты атрибутов](../windows/attribute-contexts.md).  
   
-## См. также  
- [IDL Attributes](../windows/idl-attributes.md)   
- [Typedef, Enum, Union, and Struct Attributes](../windows/typedef-enum-union-and-struct-attributes.md)   
- [Attributes Samples](http://msdn.microsoft.com/ru-ru/558ebdb2-082f-44dc-b442-d8d33bf7bdb8)
+## <a name="see-also"></a>См. также  
+ [Атрибуты IDL](../windows/idl-attributes.md)   
+ [Атрибуты Typedef, Enum, Union и Struct](../windows/typedef-enum-union-and-struct-attributes.md)   

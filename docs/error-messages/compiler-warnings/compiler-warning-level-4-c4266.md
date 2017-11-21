@@ -1,34 +1,32 @@
 ---
-title: "Предупреждение компилятора (уровень 4) C4266 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C4266"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C4266"
+title: "Предупреждение (уровень 4) C4266 компилятора | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords: C4266
+dev_langs: C++
+helpviewer_keywords: C4266
 ms.assetid: 90ec5f5b-3451-4c16-bb1b-c30a626bdaa0
-caps.latest.revision: 7
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: 88cd587c142243b1a97ee6afd59cbc519b36180a
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/24/2017
 ---
-# Предупреждение компилятора (уровень 4) C4266
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-"функция" : нет доступного переопределения для виртуальной функции\-члена из базового типа "тип"; функция скрыта  
+# <a name="compiler-warning-level-4-c4266"></a>Предупреждение компилятора (уровень 4) C4266
+«функция»: нет доступного переопределения для виртуальной функции-члена из базового типа «тип»; функция скрыта  
   
  Производный класс не переопределяет все перегрузки виртуальной функции.  
   
- Данное предупреждение по умолчанию отключено.  Дополнительные сведения см. в разделе [Выключенные по умолчанию предупреждения компилятора](../Topic/Compiler%20Warnings%20That%20Are%20Off%20by%20Default.md).  
+ Это предупреждение отключено по умолчанию.  Подробнее: [Выключенные по умолчанию предупреждения компилятора](../../preprocessor/compiler-warnings-that-are-off-by-default.md) .  
   
  Следующий пример приводит к возникновению ошибки C4266:  
   
@@ -47,7 +45,7 @@ class LocalBinding : private Engine {
 };   // C4266  
 ```  
   
- Возможный способ устранения данной ошибки:  
+ Возможное решение:  
   
 ```  
 // C4266b.cpp  

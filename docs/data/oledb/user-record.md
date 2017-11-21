@@ -1,32 +1,32 @@
 ---
-title: "Запись пользователя | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "поставщики OLE DB, запись пользователя"
-  - "записи, пользователь"
-  - "наборы строк, запись пользователя"
-  - "записи пользователя"
-  - "записи пользователя, описание"
+title: "Записи пользователя | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- records, user
+- OLE DB providers, user record
+- user records
+- user records, described
+- rowsets, user record
 ms.assetid: 9c0d2864-2738-4f62-a750-1016d9c3523f
-caps.latest.revision: 8
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 08b0e369629bc93002ee73a31978ef8d00493f6d
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/24/2017
 ---
-# Запись пользователя
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Пользовательская запись предоставляет код и структуру данных, представляющую данные столбца для набора строк.  Пользовательская запись может быть создана во время компиляции или выполнения.  При создании поставщика с помощью мастера поставщика ATL OLE DB мастер создает пользовательскую запись, имеющую следующий вид \(предполагается, что указано имя поставщика \[краткое имя\] "MyProvider"\):  
+# <a name="user-record"></a>Запись пользователя
+Запись пользователя предоставляет структуру кода и данных, представляющий данные столбца для набора строк. Записи пользователя могут создаваться во время компиляции или во время выполнения. При создании поставщика, используя мастер поставщика ATL OLE DB, мастер создает запись пользователя по умолчанию, выглядит следующим образом (предполагается, что указано имя поставщика [краткое имя] «MyProvider»):  
   
 ```  
 class CWindowsFile:  
@@ -45,7 +45,7 @@ END_PROVIDER_COLUMN_MAP()
 };  
 ```  
   
- Шаблоны поставщика OLE DB обрабатывают все характеристики OLE DB, касающиеся взаимодействия с клиентом.  Для получения необходимых для отклика данных столбца поставщик вызывает функцию `GetColumnInfo`, которую необходимо поместить в пользовательскую запись.  Можно явно переопределить оператор `GetColumnInfo` в пользовательской записи, например объявив его в H\-файле, как показано ниже:  
+ Шаблоны поставщика OLE DB обрабатывают все характеристики OLE DB, касающиеся взаимодействия с клиентом. Для получения необходимых для отклика данных столбца, поставщик вызывает `GetColumnInfo` функция, которую необходимо поместить в записи пользователя. Можно явно переопределить `GetColumnInfo` в записи пользователя, например, путем объявления его в h-файл как показано ниже:  
   
 ```  
 template <class T>  
@@ -59,21 +59,21 @@ static ATLCOLUMNINFO* GetColumnInfo(CommandClass* pThis, ULONG* pcCols)
 static ATLCOLUMNINFO* GetColumnInfo(RowsetClass* pThis, ULONG* pcCols)  
 ```  
   
- Необходимо также обеспечить реализацию `GetColumnInfo` в CPP\-файле пользовательской записи.  
+ Необходимо также реализовать `GetColumnInfo` в записи пользователя CPP-файле.  
   
- Макрос PROVIDER\_COLUMN\_MAP создает функцию `GetColumnInfo`:  
+ Макросы PROVIDER_COLUMN_MAP помочь в создании `GetColumnInfo` функции:  
   
--   BEGIN\_PROVIDER\_COLUMN\_MAP определяет прототип функции и статический массив структур **ATLCOLUMNINFO**.  
+-   BEGIN_PROVIDER_COLUMN_MAP определяет прототип функции и статического массива **ATLCOLUMNINFO** структуры.  
   
--   PROVIDER\_COLUMN\_ENTRY определяет и инициализирует одну структуру **ATLCOLUMNINFO**.  
+-   PROVIDER_COLUMN_ENTRY определяет и инициализирует один **ATLCOLUMNINFO**.  
   
--   END\_PROVIDER\_COLUMN\_MAP закрывает массив и функцию.  Он также помещает число элементов массива в параметр `pcCols`.  
+-   END_PROVIDER_COLUMN_MAP закрывает массива и функции. Он также помещает число элементов массива в `pcCols` параметра.  
   
- Если пользовательская запись создается во время выполнения, **GetColumnInfo** использует параметр `pThis` для получения указателя на набор строк или экземпляр команды.  Команды и наборы строк должны поддерживать интерфейс `IColumnsInfo`, чтобы из указателя могли быть извлечены сведения о столбцах.  
+ При создании записи пользователя во время выполнения **GetColumnInfo** использует `pThis` параметр для получения указателя на экземпляр набора или команды. Команды и наборы строк должны поддерживать `IColumnsInfo` интерфейс, поэтому можно получить сведения о столбцах из этот указатель.  
   
- **CommandClass** и **RowsetClass** являются командой и набором строк, использующими пользовательскую запись.  
+ **CommandClass** и **RowsetClass** команды и набора строк, с помощью записи пользователя.  
   
- Более подробные примеры переопределения `GetColumnInfo` в пользовательской записи представлены в разделе [Динамическое определение столбцов для возврата потребителю](../../data/oledb/dynamically-determining-columns-returned-to-the-consumer.md).  
+ Более подробный пример переопределения `GetColumnInfo` в записи пользователя, в разделе [динамически определить столбцы, возвращенные объекту-получателю](../../data/oledb/dynamically-determining-columns-returned-to-the-consumer.md).  
   
-## См. также  
+## <a name="see-also"></a>См. также  
  [Архитектура шаблона поставщика OLE DB](../../data/oledb/ole-db-provider-template-architecture.md)

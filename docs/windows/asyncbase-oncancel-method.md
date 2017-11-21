@@ -1,32 +1,30 @@
 ---
-title: "Метод AsyncBase::OnCancel | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "async/Microsoft::WRL::AsyncBase::OnCancel"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "OnCancel - метод"
+title: "Метод AsyncBase::OnCancel | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: async/Microsoft::WRL::AsyncBase::OnCancel
+dev_langs: C++
+helpviewer_keywords: OnCancel method
 ms.assetid: 4bd0b68e-a9df-4913-9f6c-e093ed55c3f9
-caps.latest.revision: 3
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 3
+caps.latest.revision: "3"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: e46f673329697ef503dafcc6a3b683fa2224525a
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/24/2017
 ---
-# Метод AsyncBase::OnCancel
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="asyncbaseoncancel-method"></a>Метод AsyncBase::OnCancel
 При переопределении в производном классе отменяет асинхронную операцию.  
   
-## Синтаксис  
+## <a name="syntax"></a>Синтаксис  
   
 ```  
 virtual void OnCancel(  
@@ -34,11 +32,11 @@ virtual void OnCancel(
 ) = 0;  
 ```  
   
-## Требования  
+## <a name="requirements"></a>Требования  
  **Заголовок:** async.h  
   
  **Пространство имен:** Microsoft::WRL  
   
-## См. также  
+## <a name="see-also"></a>См. также  
  [Класс AsyncBase](../windows/asyncbase-class.md)   
- [Метод AsyncBase::Cancel](../Topic/AsyncBase::Cancel%20Method.md)
+ [Метод AsyncBase::Cancel](../windows/asyncbase-cancel-method.md)

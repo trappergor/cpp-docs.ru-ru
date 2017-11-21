@@ -1,68 +1,68 @@
 ---
-title: "/INCLUDE (принудительные ссылки на символы) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "/include"
-  - "VC.Project.VCLinkerTool.ForceSymbolReferences"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "/INCLUDE - параметр компоновщика"
-  - "принудительные ссылки на символы - параметр компоновщика"
-  - "INCLUDE - параметр компоновщика"
-  - "-INCLUDE - параметр компоновщика"
-  - "принудительные ссылки на символы компоновщика"
-  - "символы, добавление в таблицу символов"
+title: "-INCLUDE (Принудительная ссылка на символ) | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- /include
+- VC.Project.VCLinkerTool.ForceSymbolReferences
+dev_langs: C++
+helpviewer_keywords:
+- INCLUDE linker option
+- force symbol references linker option
+- symbol references linker force
+- /INCLUDE linker option
+- symbols, add to symbol table
+- -INCLUDE linker option
 ms.assetid: 4a039677-360a-480f-bd0b-448e239b449c
-caps.latest.revision: 8
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: 85fe7b45d17ea7263ca2445aaa97cbf007532e4a
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/24/2017
 ---
-# /INCLUDE (принудительные ссылки на символы)
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="include-force-symbol-references"></a>/INCLUDE (принудительные ссылки на символы)
 ```  
 /INCLUDE:symbol  
 ```  
   
-## Заметки  
- Здесь:  
+## <a name="remarks"></a>Примечания  
+ где:  
   
  `symbol`  
  Указывает символ для добавления в таблицу символов.  
   
-## Заметки  
- Параметр \/INCLUDE предписывает компоновщику добавить заданный символ в таблицу символов.  
+## <a name="remarks"></a>Примечания  
+ Параметр/include предписывает компоновщику добавить заданный символ в таблицу символов.  
   
- Для указания нескольких символов следует разделять имя символов запятой \(,\), точкой с запятой \(;\) или пробелом.  В командной строке необходимо указать \/INCLUDE:`symbol` один раз для каждого символа.  
+ Чтобы указать несколько символов, введите запятую (,), точка с запятой (;) или пробел между имена символов. В командной строке необходимо указать/include:`symbol` один раз для каждого символа.  
   
- Компоновщик разрешает параметр `symbol` посредством добавления объекта, содержащего определение символа для программы.  Данная функциональная возможность позволяет включать библиотеку объектов, которая иначе не будет связана с программой.  
+ Компоновщик разрешает `symbol` , добавляя объект, содержащий определения символа в программу. Эта возможность полезна для включения объект библиотеки, в противном случае не будут связаны в программу.  
   
- Назначение данного параметра для символа переопределяет удаление данного символа с помощью параметра [\/OPT:REF](../../build/reference/opt-optimizations.md).  
+ Указание символ этот параметр переопределяет удаление данного символа с [/OPT: ref](../../build/reference/opt-optimizations.md).  
   
-### Установка данного параметра компоновщика в среде разработки Visual Studio  
+### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>Задание данного параметра компоновщика в среде разработки Visual Studio  
   
-1.  Откройте диалоговое окно **Страницы свойств** проекта.  Дополнительные сведения см. в разделе [Задание свойств проекта C\+\+](../../ide/working-with-project-properties.md).  
+1.  Откройте диалоговое окно **Страницы свойств** проекта. Дополнительные сведения см. в разделе [задание свойств проекта Visual C++](../../ide/working-with-project-properties.md).  
   
-2.  Выберите папку **Компоновщик**.  
+2.  Нажмите кнопку **компоновщика** папки.  
   
-3.  Выберите страницу свойств **Ввод**.  
+3.  Нажмите кнопку **ввода** страницу свойств.  
   
-4.  Измените значение свойства **Принудительная ссылка на символы**.  
+4.  Изменить **принудительные ссылки на символы** свойство.  
   
-### Установка данного параметра компоновщика программным способом  
+### <a name="to-set-this-linker-option-programmatically"></a>Задание данного параметра компоновщика программным способом  
   
 -   См. раздел <xref:Microsoft.VisualStudio.VCProjectEngine.VCLinkerTool.ForceSymbolReferences%2A>.  
   
-## См. также  
+## <a name="see-also"></a>См. также  
  [Настройка параметров компоновщика](../../build/reference/setting-linker-options.md)   
  [Параметры компоновщика](../../build/reference/linker-options.md)

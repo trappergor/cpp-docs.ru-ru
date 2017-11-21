@@ -1,32 +1,30 @@
 ---
-title: "Метод AsyncBase::Close | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "async/Microsoft::WRL::AsyncBase::Close"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Close - метод"
+title: "Метод AsyncBase::Close | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: async/Microsoft::WRL::AsyncBase::Close
+dev_langs: C++
+helpviewer_keywords: Close method
 ms.assetid: a52b1124-754b-4393-b491-64aae0c22f1c
-caps.latest.revision: 3
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 3
+caps.latest.revision: "3"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: dbdc52eec476b973c3d3549cfb0ff9413a46f6f3
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/24/2017
 ---
-# Метод AsyncBase::Close
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Закрывает асинхронную операцию.  
+# <a name="asyncbaseclose-method"></a>Метод AsyncBase::Close
+Закрывает асинхронной операции.  
   
-## Синтаксис  
+## <a name="syntax"></a>Синтаксис  
   
 ```  
 STDMETHOD(  
@@ -34,16 +32,16 @@ STDMETHOD(
 )(void) override;  
 ```  
   
-## Возвращаемое значение  
- S\_OK, если операция закрывается или уже закрыта; в противном случае E\_ILLEGAL\_STATE\_CHANGE.  
+## <a name="return-value"></a>Возвращаемое значение  
+ Значение S_OK, если операция закрывается или уже закрыт; в противном случае E_ILLEGAL_STATE_CHANGE.  
   
-## Примечания  
- Close\(\) является реализацией по умолчанию для IAsyncInfo::Close и фактически не делает ничего.  Для фактического закрытия асинхронной операции переопределите чисто виртуальный метод OnClose\(\).  
+## <a name="remarks"></a>Примечания  
+ Close() IAsyncInfo::Close это реализация по умолчанию, а не фактический работает. Действительно закрыть асинхронную операцию, переопределите OnClose() чисто виртуального метода.  
   
-## Требования  
+## <a name="requirements"></a>Требования  
  **Заголовок:** async.h  
   
  **Пространство имен:** Microsoft::WRL  
   
-## См. также  
+## <a name="see-also"></a>См. также  
  [Класс AsyncBase](../windows/asyncbase-class.md)

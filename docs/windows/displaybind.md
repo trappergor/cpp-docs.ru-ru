@@ -1,32 +1,30 @@
 ---
-title: "displaybind | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-f1_keywords: 
-  - "vc-attr.displaybind"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "displaybind attribute"
+title: "displaybind | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+f1_keywords: vc-attr.displaybind
+dev_langs: C++
+helpviewer_keywords: displaybind attribute
 ms.assetid: b3d70396-78e4-43d9-9583-16ddb8c9bb1f
-caps.latest.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 9
+caps.latest.revision: "9"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 1b590b9342212180a898960539be2d2665bf4069
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/24/2017
 ---
-# displaybind
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Указывает свойство, которое должно отображаться пользователю как связываемая.  
+# <a name="displaybind"></a>displaybind
+Указывает свойство, которое должно отображаться пользователю как связываемое.  
   
-## Синтаксис  
+## <a name="syntax"></a>Синтаксис  
   
 ```  
   
@@ -34,30 +32,29 @@ caps.handback.revision: 9
   
 ```  
   
-## Заметки  
- **displaybind** Атрибут C\+\+ имеет ту же функциональность, что и  [displaybind](http://msdn.microsoft.com/library/windows/desktop/aa366804) атрибут MIDL.  
+## <a name="remarks"></a>Примечания  
+ **Displaybind** языка C++ имеет ту же функциональность, что [displaybind](http://msdn.microsoft.com/library/windows/desktop/aa366804) языка MIDL.  
   
-## Пример  
- См. пример [bindable](../windows/bindable.md) пример использования  **displaybind**.  
+## <a name="example"></a>Пример  
+ Далее приведен пример [привязываемых](../windows/bindable.md) пример демонстрирует использование **displaybind**.  
   
-## Требования  
+## <a name="requirements"></a>Требования  
   
-### Контекст атрибута  
+### <a name="attribute-context"></a>Контекст атрибута  
   
 |||  
 |-|-|  
 |**Применение**|Метод интерфейса|  
-|**Repeatable**|Нет|  
-|**Обязательные атрибуты**|None|  
-|**Недопустимые атрибуты**|None|  
+|**Повторяемый**|Нет|  
+|**Обязательные атрибуты**|Нет|  
+|**Недопустимые атрибуты**|Нет|  
   
- Дополнительные сведения см. в разделе [Контексты атрибута](../windows/attribute-contexts.md).  
+ Дополнительные сведения см. в разделе [Контексты атрибутов](../windows/attribute-contexts.md).  
   
-## См. также  
- [IDL Attributes](../windows/idl-attributes.md)   
- [Method Attributes](../windows/method-attributes.md)   
- [Data Member Attributes](../windows/data-member-attributes.md)   
+## <a name="see-also"></a>См. также  
+ [Атрибуты IDL](../windows/idl-attributes.md)   
+ [Атрибуты метода](../windows/method-attributes.md)   
+ [Атрибуты членов данных](../windows/data-member-attributes.md)   
  [defaultbind](../windows/defaultbind.md)   
  [immediatebind](../windows/immediatebind.md)   
  [requestedit](../windows/requestedit.md)   
- [Attributes Samples](http://msdn.microsoft.com/ru-ru/558ebdb2-082f-44dc-b442-d8d33bf7bdb8)

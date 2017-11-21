@@ -1,36 +1,35 @@
 ---
-title: "list (STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::list"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "<cliext/list> - заголовок [STL/CLR]"
-  - "<list> - заголовок [STL/CLR]"
-  - "list - класс [STL/CLR]"
+title: "список (STL/CLR) | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::list
+dev_langs: C++
+helpviewer_keywords:
+- <cliext/list> header [STL/CLR]
+- list class [STL/CLR]
+- <list> header [STL/CLR]
 ms.assetid: a70c45c8-a257-4f6b-8434-b27ff6685bac
-caps.latest.revision: 17
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 17
+caps.latest.revision: "17"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 991b72b312c8ad1b36a9a401a6452ec36ea25d6e
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/24/2017
 ---
-# list (STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Описание объекта класса шаблона, что элементы управления менять\- длины последовательность элементов являются двунаправленными, имеет доступ.  Используется контейнер `list` для управления последовательность элементов в качестве двунаправленного связанного списка узлов, каждый расположении один элемент.  
+# <a name="list-stlclr"></a>list (STL/CLR)
+Класс шаблона описывает объект, управляющий последовательностью элементов переменной длины с двунаправленный доступ. Используйте контейнер `list` управления последовательность элементов в качестве двунаправленного связанного списка узлов, в каждой хранения одного элемента.  
   
- В описании ниже, `GValue` совпадает с `Value` если здесь не будет ссылочного типа, в случае которого это `Value^`.  
+ В следующем описании `GValue` совпадает со значением `Value` Если последний является типом ссылки, в этом случае он является `Value^`.  
   
-## Синтаксис  
+## <a name="syntax"></a>Синтаксис  
   
 ```  
 template<typename Value>  
@@ -45,104 +44,104 @@ template<typename Value>
     { ..... };  
 ```  
   
-#### Параметры  
+#### <a name="parameters"></a>Параметры  
  Значение  
  Тип элемента в управляемой последовательности.  
   
-## Члены  
+## <a name="members"></a>Члены  
   
 |Определение типа|Описание|  
-|----------------------|--------------|  
-|[list::const\_iterator](../dotnet/list-const-iterator-stl-clr.md)|Тип постоянного итератора для управляемой последовательности.|  
-|[list::const\_reference](../dotnet/list-const-reference-stl-clr.md)|Тип постоянной ссылки на элемент.|  
-|[list::const\_reverse\_iterator](../dotnet/list-const-reverse-iterator-stl-clr.md)|Тип константы обратного итератора для контролируемой последовательности.|  
-|[list::difference\_type](../dotnet/list-difference-type-stl-clr.md)|Тип расстояния со знаком между двумя элементами.|  
-|[list::generic\_container](../dotnet/list-generic-container-stl-clr.md)|Тип универсального интерфейса для контейнера.|  
-|[list::generic\_iterator](../Topic/list::generic_iterator%20\(STL-CLR\).md)|Тип итератора для универсального интерфейса для контейнера.|  
-|[list::generic\_reverse\_iterator](../dotnet/list-generic-reverse-iterator-stl-clr.md)|Тип обратного итератора для универсального интерфейса для контейнера.|  
-|[list::generic\_value](../dotnet/list-generic-value-stl-clr.md)|Тип элемента для универсального интерфейса для контейнера.|  
-|[list::iterator](../dotnet/list-iterator-stl-clr.md)|Тип итератора для управляемой последовательности.|  
-|[list::reference](../dotnet/list-reference-stl-clr.md)|Тип ссылки на элемент.|  
-|[list::reverse\_iterator](../dotnet/list-reverse-iterator-stl-clr.md)|Тип обратного итератора для контролируемой последовательности.|  
-|[list::size\_type](../dotnet/list-size-type-stl-clr.md)|Тип расстояния со знаком между двумя элементами.|  
-|[list::value\_type](../dotnet/list-value-type-stl-clr.md)|Тип элемента.|  
+|---------------------|-----------------|  
+|[list::const_iterator (STL/CLR)](../dotnet/list-const-iterator-stl-clr.md)|Тип постоянного итератора для управляемой последовательности.|  
+|[list::const_reference (STL/CLR)](../dotnet/list-const-reference-stl-clr.md)|Тип постоянной ссылки на элемент.|  
+|[list::const_reverse_iterator (STL/CLR)](../dotnet/list-const-reverse-iterator-stl-clr.md)|Тип постоянного обратного итератора для управляемой последовательности.|  
+|[list::difference_type (STL/CLR)](../dotnet/list-difference-type-stl-clr.md)|Тип расстояния со знаком между двумя элементами.|  
+|[list::generic_container (STL/CLR)](../dotnet/list-generic-container-stl-clr.md)|Тип универсального интерфейса для контейнера.|  
+|[list::generic_iterator (STL/CLR)](../dotnet/list-generic-iterator-stl-clr.md)|Тип итератора для универсальный интерфейс для контейнера.|  
+|[list::generic_reverse_iterator (STL/CLR)](../dotnet/list-generic-reverse-iterator-stl-clr.md)|Тип обратного итератора для универсальный интерфейс для контейнера.|  
+|[list::generic_value (STL/CLR)](../dotnet/list-generic-value-stl-clr.md)|Тип элемента для универсального интерфейса для контейнера.|  
+|[list::iterator (STL/CLR)](../dotnet/list-iterator-stl-clr.md)|Тип итератора для управляемой последовательности.|  
+|[list::reference (STL/CLR)](../dotnet/list-reference-stl-clr.md)|Тип ссылки на элемент.|  
+|[list::reverse_iterator (STL/CLR)](../dotnet/list-reverse-iterator-stl-clr.md)|Тип обратного итератора для управляемой последовательности.|  
+|[list::size_type (STL/CLR)](../dotnet/list-size-type-stl-clr.md)|Тип расстояния со знаком между двумя элементами.|  
+|[list::value_type (STL/CLR)](../dotnet/list-value-type-stl-clr.md)|Тип элемента.|  
   
-|Функция Member|Описание|  
-|--------------------|--------------|  
-|[list::assign](../dotnet/list-assign-stl-clr.md)|Заменяет все элементы.|  
-|[list::back](../dotnet/list-back-stl-clr.md)|Получает последний элемент.|  
-|[list::begin](../Topic/list::begin%20\(STL-CLR\).md)|Задает начало управляемой последовательности.|  
-|[list::clear](../dotnet/list-clear-stl-clr.md)|Удаляет все элементы.|  
-|[list::empty](../dotnet/list-empty-stl-clr.md)|Тесты отсутствуют ли какие\-либо элементы.|  
-|[list::end](../Topic/list::end%20\(STL-CLR\).md)|Задает конец управляемой последовательности.|  
-|[list::erase](../dotnet/list-erase-stl-clr.md)|Удаляет элементы в указанных положениях.|  
-|[list::front](../dotnet/list-front-stl-clr.md)|Получение первого элемента.|  
-|[list::insert](../dotnet/list-insert-stl-clr.md)|Добавляет элементы в указанной позиции.|  
-|[list::list](../dotnet/list-list-stl-clr.md)|Создает объект контейнера.|  
-|[list::merge](../dotnet/list-merge-stl-clr.md)|Объединяет две упорядоченные управляемые последовательности.|  
-|[list::pop\_back](../dotnet/list-pop-back-stl-clr.md)|Удаляет последний элемент.|  
-|[list::pop\_front](../dotnet/list-pop-front-stl-clr.md)|Удаляет первый элемент.|  
-|[list::push\_back](../dotnet/list-push-back-stl-clr.md)|Добавляет новый последний элемент.|  
-|[list::push\_front](../Topic/list::push_front%20\(STL-CLR\).md)|Добавляет новый первый элемент.|  
-|[list::rbegin](../dotnet/list-rbegin-stl-clr.md)|Задает начало обратной управляемой последовательности.|  
-|[list::remove](../dotnet/list-remove-stl-clr.md)|Удаляет элемент с указанным значением.|  
-|[list::remove\_if](../dotnet/list-remove-if-stl-clr.md)|Удаляет элементы, прошедшие определенного теста.|  
-|[list::rend](../Topic/list::rend%20\(STL-CLR\).md)|Задает конец обратной управляемой последовательности.|  
-|[list::resize](../dotnet/list-resize-stl-clr.md)|Изменяет количество элементов.|  
-|[list::reverse](../dotnet/list-reverse-stl-clr.md)|Возвращает контролируемую последовательность.|  
-|[list::size](../dotnet/list-size-stl-clr.md)|Подсчитывает количество элементов.|  
-|[list::sort](../dotnet/list-sort-stl-clr.md)|Упорядочивает управляемую последовательность.|  
-|[list::splice](../Topic/list::splice%20\(STL-CLR\).md)|Ссылки Restitches между узлами.|  
-|[list::swap](../Topic/list::swap%20\(STL-CLR\).md)|Меняет местами содержимое двух контейнеров.|  
-|[list::to\_array](../dotnet/list-to-array-stl-clr.md)|Копирует контролируемая последовательность в новый массив.|  
-|[list::unique](../dotnet/list-unique-stl-clr.md)|Удаляет смежные элементы, которые прошли заданный тест.|  
+|Функция-член|Описание|  
+|---------------------|-----------------|  
+|[list::assign (STL/CLR)](../dotnet/list-assign-stl-clr.md)|Заменяет все элементы.|  
+|[list::back (STL/CLR)](../dotnet/list-back-stl-clr.md)|Обращается к последнему элементу.|  
+|[list::begin (STL/CLR)](../dotnet/list-begin-stl-clr.md)|Задает начало управляемой последовательности.|  
+|[list::clear (STL/CLR)](../dotnet/list-clear-stl-clr.md)|Удаляет все элементы.|  
+|[list::empty (STL/CLR)](../dotnet/list-empty-stl-clr.md)|Проверяет отсутствие элементов.|  
+|[list::end (STL/CLR)](../dotnet/list-end-stl-clr.md)|Задает конец управляемой последовательности.|  
+|[list::erase (STL/CLR)](../dotnet/list-erase-stl-clr.md)|Удаляет элементы в указанных позициях.|  
+|[list::front (STL/CLR)](../dotnet/list-front-stl-clr.md)|Обращается к первому элементу.|  
+|[list::insert (STL/CLR)](../dotnet/list-insert-stl-clr.md)|Добавляет элементы в заданной позиции.|  
+|[list::list (STL/CLR)](../dotnet/list-list-stl-clr.md)|Создает объект контейнера.|  
+|[list::merge (STL/CLR)](../dotnet/list-merge-stl-clr.md)|Объединяет две упорядоченные управляемые последовательности.|  
+|[list::pop_back (STL/CLR)](../dotnet/list-pop-back-stl-clr.md)|Удаляет последний элемент.|  
+|[list::pop_front (STL/CLR)](../dotnet/list-pop-front-stl-clr.md)|Удаляет первый элемент.|  
+|[list::push_back (STL/CLR)](../dotnet/list-push-back-stl-clr.md)|Добавляет новый последний элемент.|  
+|[list::push_front (STL/CLR)](../dotnet/list-push-front-stl-clr.md)|Добавляет новый первый элемент.|  
+|[list::rbegin (STL/CLR)](../dotnet/list-rbegin-stl-clr.md)|Задает начало обратной управляемой последовательности.|  
+|[list::remove (STL/CLR)](../dotnet/list-remove-stl-clr.md)|Удаляет элемент с указанным значением.|  
+|[list::remove_if (STL/CLR)](../dotnet/list-remove-if-stl-clr.md)|Удаляет элементы, которые прошли заданный тест.|  
+|[list::rend (STL/CLR)](../dotnet/list-rend-stl-clr.md)|Задает конец обратной управляемой последовательности.|  
+|[list::resize (STL/CLR)](../dotnet/list-resize-stl-clr.md)|Изменяет количество элементов.|  
+|[list::reverse (STL/CLR)](../dotnet/list-reverse-stl-clr.md)|Отмена управляемой последовательности.|  
+|[list::size (STL/CLR)](../dotnet/list-size-stl-clr.md)|Подсчитывает количество элементов.|  
+|[list::sort (STL/CLR)](../dotnet/list-sort-stl-clr.md)|Упорядочивает управляемую последовательность.|  
+|[list::splice (STL/CLR)](../dotnet/list-splice-stl-clr.md)|Восстанавливает ссылки между узлами.|  
+|[list::swap (STL/CLR)](../dotnet/list-swap-stl-clr.md)|Меняет местами содержимое двух контейнеров.|  
+|[list::to_array (STL/CLR)](../dotnet/list-to-array-stl-clr.md)|Копирует управляемой последовательности в новый массив.|  
+|[list::unique (STL/CLR)](../dotnet/list-unique-stl-clr.md)|Удаляет смежные элементы, которые прошли заданный тест.|  
   
 |Свойство|Описание|  
-|--------------|--------------|  
-|[list::back\_item](../Topic/list::back_item%20\(STL-CLR\).md)|Получает последний элемент.|  
-|[list::front\_item](../dotnet/list-front-item-stl-clr.md)|Получение первого элемента.|  
+|--------------|-----------------|  
+|[list::back_item (STL/CLR)](../dotnet/list-back-item-stl-clr.md)|Обращается к последнему элементу.|  
+|[list::front_item (STL/CLR)](../dotnet/list-front-item-stl-clr.md)|Обращается к первому элементу.|  
   
 |Оператор|Описание|  
-|--------------|--------------|  
-|[list::operator\=](../dotnet/list-operator-assign-stl-clr.md)|Заменяет контролируемая последовательность.|  
-|[operator\!\= \(list\)](../dotnet/operator-inequality-list-stl-clr.md)|Определяет, является ли объект `list` не равен другому объекту `list`.|  
-|[operator\< \(list\)](../dotnet/operator-less-than-list-stl-clr.md)|Определяет, является ли объект `list` меньше другой объект `list`.|  
-|[operator\<\= \(list\)](../dotnet/operator-less-or-equal-list-stl-clr.md)|Определяет, является ли объект `list` меньше или равно другому объекту `list`.|  
-|[operator\=\= \(list\)](../dotnet/operator-equality-list-stl-clr.md)|Определяет, является ли объект `list` равен другому объекту `list`.|  
-|[operator\> \(list\)](../Topic/operator%3E%20\(list\)%20\(STL-CLR\).md)|Определяет, является ли объект `list` больше другого объекта `list`.|  
-|[operator\>\= \(list\)](../dotnet/operator-greater-or-equal-list-stl-clr.md)|Определяет, является ли объект `list` больше или равно другому объекту `list`.|  
+|--------------|-----------------|  
+|[list::operator= (STL/CLR)](../dotnet/list-operator-assign-stl-clr.md)|Заменяет управляемую последовательность.|  
+|[operator!= (list) (STL/CLR)](../dotnet/operator-inequality-list-stl-clr.md)|Определяет, если `list` объект не равен другому `list` объекта.|  
+|[operator< (list) (STL/CLR)](../dotnet/operator-less-than-list-stl-clr.md)|Определяет, если `list` объект меньше другого `list` объекта.|  
+|[operator<= (list) (STL/CLR)](../dotnet/operator-less-or-equal-list-stl-clr.md)|Определяет, если `list` объекта меньше или равно другому `list` объекта.|  
+|[operator== (list) (STL/CLR)](../dotnet/operator-equality-list-stl-clr.md)|Определяет, если `list` объект равен другому `list` объекта.|  
+|[operator> (list) (STL/CLR)](../dotnet/operator-greater-than-list-stl-clr.md)|Определяет, если `list` объект больше другого `list` объекта.|  
+|[operator>= (list) (STL/CLR)](../dotnet/operator-greater-or-equal-list-stl-clr.md)|Определяет, если `list` объекта больше или равно другому `list` объекта.|  
   
-## Интерфейсы  
+## <a name="interfaces"></a>Интерфейсы  
   
 |Интерфейс|Описание|  
-|---------------|--------------|  
-|<xref:System.ICloneable>|Дублируйте объект.|  
-|<xref:System.Collections.IEnumerable>|Последовательность между элементами.|  
-|<xref:System.Collections.ICollection>|Обеспечение группу в составе элементы.|  
-|<xref:System.Collections.Generic.IEnumerable%601>|Через последовательность типизированных элементов.|  
-|<xref:System.Collections.Generic.ICollection%601>|Обеспечение группу в составе типизированных элементов.|  
-|IList\<Value\>|Обслуживайте универсальный контейнер.|  
+|---------------|-----------------|  
+|<xref:System.ICloneable>|Создание дубликата объекта.|  
+|<xref:System.Collections.IEnumerable>|Последовательность элементов.|  
+|<xref:System.Collections.ICollection>|Ведение группы элементов.|  
+|<xref:System.Collections.Generic.IEnumerable%601>|Последовательности типизированных элементов.|  
+|<xref:System.Collections.Generic.ICollection%601>|Ведение группы типизированных элементов.|  
+|IList\<значение >|Ведение универсального контейнера.|  
   
-## Заметки  
- Объект выделяет и освобождает хранилище для последовательности его элементы управления, как отдельные узлы в двунаправленной связи ".  Он выполняет переупорядочивание элементов, изменив ссылки между узлами, не скопировать содержимое одного узла на другой.  Это означает, что можно добавлять и удалять элементы свободно, не нарушая остальных элементов.  Таким образом, список хорошим кандидатом для основного контейнера для шаблона класса шаблона класса [queue](../Topic/queue%20\(STL-CLR\).md) или [стек](../dotnet/stack-stl-clr.md).  
+## <a name="remarks"></a>Примечания  
+ Объект выделяет и освобождает память для последовательность, в которой он управляет, как отдельные узлы в списке двунаправленных ссылок. Он упорядочение элементов путем изменения связи между узлами, никогда не копируя содержимое одного узла на другой. Это означает, что можно вставлять и удалять элементы без нарушения работы оставшиеся элементы. Таким образом, список является хорошим кандидатом для базового контейнера для шаблона класса [очереди (STL/CLR)](../dotnet/queue-stl-clr.md) или класс шаблона [стека (STL/CLR)](../dotnet/stack-stl-clr.md).  
   
- Объект `list` поддерживает двунаправленные итераторы. это означает, что можно выполнить с соседним элементам заданного итератор, обозначает элемент в контролируемой последовательности.  Специальный головной узел соответствует итератору возвращенным [list::end](../Topic/list::end%20\(STL-CLR\).md)`()`.  Можно декремент такой итератор для достижения последнего элемента в контролируемой последовательности, если в настоящий момент.  Можно увеличить итератор списка для достижения головного узла, а затем сравнивает равно `end()`.  Однако нельзя разыменование итератор, `end()`.  
+ Объект `list` объект поддерживает Двунаправленные итераторы, это означает, что переходе на соседние элементы, учитывая итератор, указывающий на элемент управляемой последовательности. Специальные головной узел соответствует итератора, возвращаемого методом [list::end (STL/CLR)](../dotnet/list-end-stl-clr.md)`()`. Можно уменьшить этот итератор для достижения последнего элемента в управляемой последовательности, при его наличии. Можно увеличить значение итератора списка, чтобы достичь головного узла, а затем будет считаться равным `end()`. Но нельзя переименовать итератора, возвращаемого методом `end()`.  
   
- Обратите внимание, что нельзя ссылаться на элемент списка непосредственно заданного свою позицию численную \-\- это требует произвольного доступа итератора.  Поэтому список `not` имени. в качестве основной контейнер для шаблона класса [priority\_queue](../Topic/priority_queue%20\(STL-CLR\).md).  
+ Обратите внимание, что нельзя ссылаться на элемент списка, непосредственно заданным его порядкового номера--, требующий итератора произвольного доступа. Поэтому список `not` использования в качестве базового контейнера для шаблона класса [priority_queue (STL/CLR)](../dotnet/priority-queue-stl-clr.md).  
   
- Итератор списка содержит дескриптор его связанный узел списка, который в свою очередь содержит дескриптор его связанный контейнер.  Можно использовать итераторы только со связанными объектами контейнера.  Итератор списка остается допустимым, пока его связанный узел списка связан с некоторым списком.  Кроме того, допустимый итератор dereferencable \-\- его можно использовать для доступа или изменения значения элемента он обозначает \-\- пока не равно `end()`.  
+ Итератор список сохраняет дескриптор его узел связанного списка, который в свою очередь, сохраняет дескриптор связанного контейнера. Вы можете использовать итераторы только с свои объекты связанного контейнера. Итератор список остается допустимым до тех пор, пока его узел связанного списка связан с какого-либо списка. Кроме того, допустимым итератором dereferencable — используется для доступа или изменить значение элемента, он обозначает--до тех пор, пока не равно `end()`.  
   
- Стирающ или удаление элементов вызывает деструктор этого сохраненного значения.  Удалить контейнер удаляются все элементы.  Таким образом, тип которого контейнер элемента ссылочный класс гарантирует, что никаких элементов не переживают контейнер.  Однако стоит отметить, что контейнер дескрипторов делает `not` уничтожает его элементы.  
+ Удаление или удалении элементов вызывает деструктор для сохраненное значение. Уничтожение контейнера удаляет все элементы. Таким образом контейнера, тип элементов которого является класс ссылки гарантирует, что ни один элемент пережить контейнера. Тем не менее, делает это контейнер, содержащий дескрипторы `not` уничтожить его элементов.  
   
-## Требования  
- **Заголовок:**\<cliext\/list\>  
+## <a name="requirements"></a>Требования  
+ **Заголовок:** \<cliext/list >  
   
  **Пространство имен:** cliext  
   
-## См. также  
- [deque](../dotnet/deque-stl-clr.md)   
- [priority\_queue](../Topic/priority_queue%20\(STL-CLR\).md)   
- [queue](../Topic/queue%20\(STL-CLR\).md)   
- [стек](../dotnet/stack-stl-clr.md)   
- [вектор](../dotnet/vector-stl-clr.md)   
- [Библиотека STL\/CLR](../dotnet/stl-clr-library-reference.md)
+## <a name="see-also"></a>См. также  
+ [deque (STL/CLR)](../dotnet/deque-stl-clr.md)   
+ [priority_queue (STL/CLR)](../dotnet/priority-queue-stl-clr.md)   
+ [очереди (STL/CLR)](../dotnet/queue-stl-clr.md)   
+ [стек (STL/CLR)](../dotnet/stack-stl-clr.md)   
+ [вектор (STL/CLR)](../dotnet/vector-stl-clr.md)   
+ [Справочник по библиотеке STL/CLR](../dotnet/stl-clr-library-reference.md)

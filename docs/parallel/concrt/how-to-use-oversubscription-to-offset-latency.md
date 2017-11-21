@@ -1,85 +1,91 @@
 ---
-title: "Практическое руководство. Использование лимита подписки для устранения задержек | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "превышение лимита подписки, использование [среда выполнения с параллелизмом]"
-  - "использование превышения лимита подписки [среда выполнения с параллелизмом]"
+title: "Как: использование лимита подписки для устранения задержек | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- oversubscription, using [Concurrency Runtime]
+- using oversubscription [Concurrency Runtime]
 ms.assetid: a1011329-2f0a-4afb-b599-dd4043009a10
-caps.latest.revision: 17
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 14
+caps.latest.revision: "17"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 7159d5489459bd32566c8665a5bbf42337fd8837
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/24/2017
 ---
-# Практическое руководство. Использование лимита подписки для устранения задержек
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Превышение лимита подписки может повысить общую эффективность некоторых приложений, содержащих задачи с большими задержками.  В этом разделе показано, как использовать превышение лимита подписки для компенсации задержки, вызванной чтением данных из сетевого подключения.  
+# <a name="how-to-use-oversubscription-to-offset-latency"></a>Практическое руководство. Использование лимита подписки для устранения задержек
+Превышение лимита подписки может повысить общую эффективность некоторых приложений, которые содержат задачи, которые имеют большое количество задержки. В этом разделе описывается использование лимита подписки для смещения задержки, вызванные чтение данных из сетевого подключения.  
   
-## Пример  
- В этом примере для загрузки файлов с HTTP\-серверов используется библиотека [Библиотека асинхронных агентов](../../parallel/concrt/asynchronous-agents-library.md).  Класс `http_reader` наследуется от класса [Concurrency::agent](../../parallel/concrt/reference/agent-class.md) и использует передачу сообщений для асинхронного чтения URL\-имен, которые требуется загрузить.  
+## <a name="example"></a>Пример  
+ В этом примере используется [библиотеки асинхронных агентов](../../parallel/concrt/asynchronous-agents-library.md) для загрузки файлов с HTTP-серверами. `http_reader` Класс является производным от [concurrency::agent](../../parallel/concrt/reference/agent-class.md) и использует передачу сообщений для асинхронного чтения URL-имен для загрузки.  
   
- Класс `http_reader` использует класс [Concurrency::task\_group](../Topic/task_group%20Class.md) для параллельного чтения всех файлов.  Каждая задача вызывает метод [Concurrency::Context::Oversubscribe](../Topic/Context::Oversubscribe%20Method.md), в котором для параметра `_BeginOversubscription` задано значение `true`, чтобы разрешить превышение лимита подписки в текущем контексте.  Затем каждая задача использует классы библиотеки Microsoft Foundation Classes \(MFC\) [CInternetSession](../Topic/CInternetSession%20Class.md) и [CHttpFile](../Topic/CHttpFile%20Class.md) для загрузки файла.  Наконец, каждая задача вызывает метод `Context::Oversubscribe`, в котором для параметра `_BeginOversubscription` задано значение `false`, чтобы отключить превышение лимита подписки.  
+ `http_reader` Класс использует [concurrency::task_group](reference/task-group-class.md) класса для параллельного чтения всех файлов. Каждая задача вызывает [Concurrency::Context:: Oversubscribe](reference/context-class.md#oversubscribe) метод с `_BeginOversubscription` равным `true` чтобы разрешить превышение лимита подписки в текущем контексте. Каждая задача затем использует Microsoft Foundation Classes (MFC) [CInternetSession](../../mfc/reference/cinternetsession-class.md) и [CHttpFile](../../mfc/reference/chttpfile-class.md) классы для загрузки файла. Наконец, каждая задача вызывает `Context::Oversubscribe` с `_BeginOversubscription` равным `false` отключить превышение лимита подписки.  
   
- Если включено превышение лимита подписки, среда выполнения создает по одному дополнительному потоку, в котором будут выполняться задачи.  Каждый из этих потоков также может использовать превышение лимита подписки в текущем контексте и, таким образом, создать дополнительные потоки.  Класс `http_reader` использует объект [Concurrency::unbounded\_buffer](../Topic/unbounded_buffer%20Class.md) для ограничения количества потоков, используемых приложением.  Агент инициализирует буфер с использованием фиксированного числа значений токенов.  Для каждой операции загрузки агент считывает значение токена из буфера до начала операции, затем записывает это значение обратно в буфер после завершения операции.  Если буфер пуст, агент ожидает, пока одна из операций загрузки запишет значение обратно в буфер.  
+ Если включено превышение лимита подписки, среда выполнения создает один дополнительный поток, в котором будут выполняться задачи. Каждый из этих потоков может также превышать лимит подписки текущего контекста и таким образом, создать дополнительные потоки. `http_reader` Класс использует [concurrency::unbounded_buffer](reference/unbounded-buffer-class.md) объекта ограничивает число потоков, которые используются приложением. Агент инициализирует буфер с фиксированным числом значений маркера. Для каждой операции загрузки агент считывает значение токена из буфера до начала операции, затем записывает это значение обратно в буфер после завершения операции. Если буфер пуст, агент ожидает один из операций загрузки, чтобы записать значение в буфер.  
   
- В приведенном ниже примере количество одновременно выполняемых задач ограничено числом доступных аппаратных потоков, умноженным на два.  Это значение является хорошей отправной точкой при экспериментах с превышением лимита подписки.  Можно использовать значение, подходящее конкретной вычислительной среде, или динамически изменять это значение в соответствии с фактической рабочей нагрузкой.  
+ В следующем примере ограничиваются количество одновременно выполняемых задач в два раза количество доступных аппаратных потоков. Это значение является хорошей отправной точкой для использования при экспериментах с превышение лимита подписки. Можно использовать значение, подходящее конкретной вычислительной среде, или динамически изменять это значение в соответствии с фактической рабочей нагрузкой.  
   
- [!CODE [concrt-download-oversubscription#1](../CodeSnippet/VS_Snippets_ConcRT/concrt-download-oversubscription#1)]  
+ [!code-cpp[concrt-download-oversubscription#1](../../parallel/concrt/codesnippet/cpp/how-to-use-oversubscription-to-offset-latency_1.cpp)]  
   
- На четырехпроцессорном компьютере этот пример создает следующие выходные данные.  
+ В этом примере выводятся следующие данные на четырехпроцессорном компьютере:  
   
-  **Downloading http:\/\/www.adatum.com\/...**  
-**Downloading http:\/\/www.adventure\-works.com\/...**  
-**Downloading http:\/\/www.alpineskihouse.com\/...**  
-**Downloading http:\/\/www.cpandl.com\/...**  
-**Downloading http:\/\/www.cohovineyard.com\/...**  
-**Downloading http:\/\/www.cohowinery.com\/...**  
-**Downloading http:\/\/www.cohovineyardandwinery.com\/...**  
-**Downloading http:\/\/www.contoso.com\/...**  
-**Downloading http:\/\/www.consolidatedmessenger.com\/...**  
-**Downloading http:\/\/www.fabrikam.com\/...**  
-**Downloading http:\/\/www.fourthcoffee.com\/...**  
-**Downloading http:\/\/www.graphicdesigninstitute.com\/...**  
-**Downloading http:\/\/www.humongousinsurance.com\/...**  
-**Downloading http:\/\/www.litwareinc.com\/...**  
-**Downloading http:\/\/www.lucernepublishing.com\/...**  
-**Downloading http:\/\/www.margiestravel.com\/...**  
-**Downloading http:\/\/www.northwindtraders.com\/...**  
-**Downloading http:\/\/www.proseware.com\/...**  
-**Downloading http:\/\/www.fineartschool.net...**  
-**Downloading http:\/\/www.tailspintoys.com\/...**  
-**Downloaded 1801040 bytes in 3276 ms.** Данный пример может выполняться быстрее при включенном превышении лимита подписки, потому что возможно выполнение дополнительных задач, пока другие задачи ожидают завершения долго выполняющихся операций.  
+```Output  
+Downloading http://www.adatum.com/...  
+Downloading http://www.adventure-works.com/...  
+Downloading http://www.alpineskihouse.com/...  
+Downloading http://www.cpandl.com/...  
+Downloading http://www.cohovineyard.com/...  
+Downloading http://www.cohowinery.com/...  
+Downloading http://www.cohovineyardandwinery.com/...  
+Downloading http://www.contoso.com/...  
+Downloading http://www.consolidatedmessenger.com/...  
+Downloading http://www.fabrikam.com/...  
+Downloading http://www.fourthcoffee.com/...  
+Downloading http://www.graphicdesigninstitute.com/...  
+Downloading http://www.humongousinsurance.com/...  
+Downloading http://www.litwareinc.com/...  
+Downloading http://www.lucernepublishing.com/...  
+Downloading http://www.margiestravel.com/...  
+Downloading http://www.northwindtraders.com/...  
+Downloading http://www.proseware.com/...  
+Downloading http://www.fineartschool.net...  
+Downloading http://www.tailspintoys.com/...  
+Downloaded 1801040 bytes in 3276 ms.  
+```  
   
-## Компиляция кода  
- Скопируйте код примера и вставьте его в проект Visual Studio или в файл с именем `download-oversubscription.cpp`, затем выполните в окне командной строки одну из следующих команд.  
+ Данный пример может выполняться быстрее при включении превышение лимита подписки, так как выполнение дополнительных задач, пока другие задачи ожидать завершения выполняющихся операций.  
   
- **cl.exe \/EHsc \/MD \/D "\_AFXDLL" download\-oversubscription.cpp**  
+## <a name="compiling-the-code"></a>Компиляция кода  
+ Скопируйте код примера и вставьте его в проект Visual Studio или вставить его в файл с именем `download-oversubscription.cpp` и затем выполните одну из следующих команд в окне командной строки Visual Studio.  
   
- **cl.exe \/EHsc \/MT download\-oversubscription.cpp**  
+ **CL.exe/EHsc/MD /D «_AFXDLL» download-oversubscription.cpp**  
   
-## Отказоустойчивость  
- Обязательно выключайте превышение лимита подписки, если оно больше не требуется.  Рассмотрим функцию, которая не обрабатывает исключение, созданное другой функцией.  Если перед возвратом функции не отключить превышение лимита подписки, любая дополнительная параллельная работа будет также использовать превышение лимита подписки текущего контекста.  
+ **/ EHsc/MT CL.exe download-oversubscription.cpp**  
   
- Для ограничения превышения лимита подписки до заданного масштаба можно воспользоваться шаблоном *Получение ресурса есть инициализация* \(RAII\).  При использовании шаблона RAII структура данных располагается в стеке.  Эта структура данных инициализирует или приобретает ресурс во время создания структуры и уничтожает или освобождает ресурс во время уничтожения структуры данных.  Шаблон RAII гарантирует, что деструктор вызывается до выхода из внешней области видимости.  Следовательно, ресурс эффективно управляется при создании исключения или если функция содержит несколько операторов `return`.  
+## <a name="robust-programming"></a>Отказоустойчивость  
+ Всегда отключите превышение лимита подписки после больше не требуется. Рассмотрим функцию, которая не обрабатывает исключение, вызванное другой функции. Если не отключить превышение лимита подписки до выполнения возврата функцией, любая дополнительная параллельная работа также будет превышать лимит подписки текущего контекста.  
   
- В следующем примере определяется структура с именем `scoped_blocking_signal`.  Конструктор структуры `scoped_blocking_signal` включает превышение лимита подписки, а деструктор отключает превышение лимита подписки.  
+ Можно использовать *Получение ресурса есть инициализация* шаблон (RAII) для ограничения превышения лимита подписки для данной области. При использовании шаблона RAII структура данных выделяется в стеке. Что структуры данных инициализирует или приобретает ресурс, когда он создается и уничтожает или освобождает ресурс, при уничтожении структуры данных. Шаблон RAII гарантирует, что деструктор вызывается до выхода из внешней области видимости. Таким образом, ресурс эффективно управляется при возникновении исключения или если функция содержит несколько `return` инструкции.  
   
- [!CODE [concrt-download-oversubscription#2](../CodeSnippet/VS_Snippets_ConcRT/concrt-download-oversubscription#2)]  
+ В следующем примере определяется структура, которая называется `scoped_blocking_signal`. Конструктор `scoped_blocking_signal` структуры включает превышение лимита подписки, а деструктор отключает превышение лимита подписки.  
   
- В следующем примере тело метода `download` изменяется таким образом, чтобы он использовал шаблон RAII для обеспечения отключения превышения лимита подписки перед возвратом функции.  Эта техника обеспечивает безопасность метода `download` в случае возникновения исключений.  
+ [!code-cpp[concrt-download-oversubscription#2](../../parallel/concrt/codesnippet/cpp/how-to-use-oversubscription-to-offset-latency_2.cpp)]  
   
- [!CODE [concrt-download-oversubscription#3](../CodeSnippet/VS_Snippets_ConcRT/concrt-download-oversubscription#3)]  
+ В следующем примере изменяется текст `download` метод, используемый для обеспечения превышения лимита подписки RAII отключена до выполнения возврата функцией. Этот метод гарантирует, что `download` метод исключений.  
   
-## См. также  
+ [!code-cpp[concrt-download-oversubscription#3](../../parallel/concrt/codesnippet/cpp/how-to-use-oversubscription-to-offset-latency_3.cpp)]  
+  
+## <a name="see-also"></a>См. также  
  [Контексты](../../parallel/concrt/contexts.md)   
- [Метод Context::Oversubscribe](../Topic/Context::Oversubscribe%20Method.md)
+ [Метод Context::Oversubscribe](reference/context-class.md#oversubscribe)
+
+

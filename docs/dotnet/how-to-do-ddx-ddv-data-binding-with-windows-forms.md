@@ -1,42 +1,42 @@
 ---
-title: "Практическое руководство. Привязка данных DDX/DDV к элементам управления Windows Forms | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "get-started-article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "MFC [C++], размещение элемента управления Windows Forms"
-  - "Windows Forms [C++], поддержка MFC"
+title: "Как: привязка данных DDX DDV Windows Forms | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: get-started-article
+dev_langs: C++
+helpviewer_keywords:
+- MFC [C++], hosting a Windows Forms Control
+- Windows Forms [C++], MFC support
 ms.assetid: b2957370-cf1f-4779-94ac-228cd393686c
-caps.latest.revision: 13
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 13
+caps.latest.revision: "13"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: d339be4d907e0cfaaea1e80830b3fe77b1cc09b4
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/24/2017
 ---
-# Практическое руководство. Привязка данных DDX/DDV к элементам управления Windows Forms
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-[DDX\_ManagedControl](../Topic/DDX_ManagedControl.md) вызывает метод [CWinFormsControl::CreateManagedControl](../Topic/CWinFormsControl::CreateManagedControl.md) для создания элемента управления, соответствующего идентификатору элемента управления ресурса.  Если функция `DDX_ManagedControl` используется для элемента управления `CWinFormsControl` \(в коде, созданном мастером\), не следует напрямую вызывать метод `CreateManagedControl` для этого же элемента управления.  
+# <a name="how-to-do-ddxddv-data-binding-with-windows-forms"></a>Практическое руководство. Привязка данных DDX/DDV к элементам управления Windows Forms
+[DDX_ManagedControl](../mfc/reference/standard-dialog-data-exchange-routines.md#ddx_managedcontrol) вызовы [CWinFormsControl::CreateManagedControl](../mfc/reference/cwinformscontrol-class.md#createmanagedcontrol) для создания элемента управления, сопоставление идентификатора элемента управления ресурса Если вы используете `DDX_ManagedControl` для `CWinFormsControl` управления (в код, созданный мастером), не следует вызывать `CreateManagedControl` явным образом для того же элемента управления.  
   
- Следует вызвать функцию `DDX_ManagedControl` в [CWnd::DoDataExchange](../Topic/CWnd::DoDataExchange.md) для создания элементов управления на основе идентификатора ресурса.  Для обмена данными необязательно использовать функции DDX\/DDV с элементами управления Windows Forms.  Вместо этого можно разместить код для получения доступа к свойствам управляемого элемента управления в методе `DoDataExchange` класса диалогового окна \(или представления\), как в следующем примере.  
+ Вызовите `DDX_ManagedControl` в [CWnd::DoDataExchange](../mfc/reference/cwnd-class.md#dodataexchange) для создания элементов управления из идентификаторы ресурсов. Для обмена данными необязательно использовать функции DDX/DDV с элементами управления Windows Forms. Вместо этого можно поместить код для доступа к свойствам управляемого элемента управления в `DoDataExchange` метод класса диалогового окна (или представления), как показано в следующем примере.  
   
- В следующем примере показано, как выполнить привязку строки C\+\+ к пользовательскому элементу управления .NET.  
+ Приведенный ниже показано, как выполнить привязку строки C++ к пользовательскому элементу управления .NET.  
   
-## Пример  
- В следующем примере демонстрируется привязка данных DDX\/DDV строки MFC `m_str` к определенному пользователем свойству `NameText` пользовательского элемента управления .NET.  
+## <a name="example"></a>Пример  
+ Ниже приведен пример привязка данных DDX/DDV строки MFC `m_str` с определяемой пользователем `NameText` свойство пользовательского элемента управления .NET.  
   
- Элемент управления создается, когда метод [CDialog::OnInitDialog](../Topic/CDialog::OnInitDialog.md) в первый раз вызывает метод `CMyDlg::DoDataExchange`, поэтому любой другой код, ссылающийся на элемент управления `m_UserControl`, должен располагаться после вызова `DDX_ManagedControl`.  
+ Элемент управления создается [CDialog::OnInitDialog](../mfc/reference/cdialog-class.md#oninitdialog) вызовы `CMyDlg::DoDataExchange` в первый раз, так что любой код, который ссылается `m_UserControl` должен следовать после `DDX_ManagedControl` вызова.  
   
- Этот код можно реализовать в приложении MFC01, созданном в разделе [Практическое руководство. Создание пользовательского элемента управления и ведущего приложения в диалоговом окне](../dotnet/how-to-create-the-user-control-and-host-in-a-dialog-box.md).  
+ Этот код можно реализовать в приложении MFC01, созданный в [как: Создание пользовательского элемента управления и ведущего приложения в диалоговом окне](../dotnet/how-to-create-the-user-control-and-host-in-a-dialog-box.md).  
   
- В разделе объявлений CMFC01Dlg добавьте следующий код:  
+ Поместите следующий код в объявление CMFC01Dlg добавьте:  
   
 ```  
 class CMFC01Dlg : public CDialog  
@@ -46,8 +46,8 @@ class CMFC01Dlg : public CDialog
 };  
 ```  
   
-## Пример  
- В разделе реализации CMFC01Dlg добавьте следующий код:  
+## <a name="example"></a>Пример  
+ Поместите следующий код в реализации CMFC01Dlg добавьте:  
   
 ```  
 void CMFC01Dlg::DoDataExchange(CDataExchange* pDX)  
@@ -64,8 +64,8 @@ void CMFC01Dlg::DoDataExchange(CDataExchange* pDX)
 }  
 ```  
   
-## Пример  
- Теперь следует добавить метод обработчика события нажатия кнопки "ОК".  Выберите вкладку **Ресурсы**.  На вкладке "Ресурсы" дважды щелкните объект `IDD_MFC01_DIALOG`.  В редакторе ресурсов появится ресурс диалогового окна.  Дважды нажмите кнопку "ОК".  
+## <a name="example"></a>Пример  
+ Теперь мы будем добавлять метод обработчика события click кнопки «ОК». Нажмите кнопку **представление ресурсов** вкладки. В представлении ресурсов дважды щелкните `IDD_MFC01_DIALOG`. Ресурс диалогового окна откроется в редакторе ресурсов. Затем дважды нажмите кнопку "ОК"...  
   
  Определите обработчик следующим образом.  
   
@@ -77,16 +77,16 @@ void CMFC01Dlg::OnBnClickedOk()
 }  
 ```  
   
-## Пример  
- В разделе реализации BOOL CMFC01Dlg::OnInitDialog\(\) добавьте следующую строку.  
+## <a name="example"></a>Пример  
+ И добавьте следующую строку в реализацию BOOL CMFC01Dlg::OnInitDialog().  
   
 ```  
 m_MyControl.GetControl()->textBox1->Text = "hello";  
 ```  
   
- Теперь можно выполнить построение и запустить приложение.  Обратите внимание, что при закрытии приложения любой текст в текстовом поле отображается в всплывающем окне сообщения.  
+ Теперь можно построить и запустить приложение. Обратите внимание, что любой текст в текстовом поле будет отображаться в всплывающее сообщение об ошибке при закрытии приложения.  
   
-## См. также  
- [CWinFormsControl Class](../mfc/reference/cwinformscontrol-class.md)   
- [DDX\_ManagedControl](../Topic/DDX_ManagedControl.md)   
- [CWnd::DoDataExchange](../Topic/CWnd::DoDataExchange.md)
+## <a name="see-also"></a>См. также  
+ [Класс CWinFormsControl](../mfc/reference/cwinformscontrol-class.md)   
+ [DDX_ManagedControl](../mfc/reference/standard-dialog-data-exchange-routines.md#ddx_managedcontrol)   
+ [CWnd::DoDataExchange](../mfc/reference/cwnd-class.md#dodataexchange)

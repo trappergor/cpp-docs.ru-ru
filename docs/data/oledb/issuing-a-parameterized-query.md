@@ -1,28 +1,27 @@
 ---
-title: "Выполнение параметризированного запроса | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "запросы с параметрами, запуск использования класса CCommand"
+title: "Выполнение параметризированного запроса | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords: parameter queries, running using CCommand class
 ms.assetid: aedb0fce-52a4-4c97-a5c9-b2114be6c3b0
-caps.latest.revision: 7
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 8386358a2dea8949d069384029ea110e8463a45d
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/24/2017
 ---
-# Выполнение параметризированного запроса
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-В следующем примере представлен простой параметризированный запрос, который извлекает записи с полем возраст \(со значением больше 30\) из таблицы базы данных Microsoft Access.  Для поддержки параметра пользовательская запись должна иметь дополнительную схему.  В следующем примере кода в проекте ATL используется класс `CCommand` вместо класса `CTable`, используемого в предыдущем примере [Обход простого набора строк](../Topic/Traversing%20a%20Simple%20Rowset.md).  
+# <a name="issuing-a-parameterized-query"></a>Выполнение параметризированного запроса
+Следующий пример выполняет простой параметризованный запрос, который извлекает записи с полем возраст (то есть больше 30) из таблицы в базе данных Microsoft Access. Для поддержки параметра пользовательская запись должна иметь дополнительную схему. Следующий код в проект ATL использует `CCommand` вместо класса `CTable` класс, используемый в предыдущем примере [перебор простого набора строк](../../data/oledb/traversing-a-simple-rowset.md).  
   
 ```  
 #include <atldbcli.h>  
@@ -50,7 +49,7 @@ while (artists.MoveNext() == S_OK)
 }  
 ```  
   
- Пользовательская запись `CArtists` выглядит следующим образом:  
+ Записи пользователя, `CArtists`, выглядит следующим образом:  
   
 ```  
 class CArtists  
@@ -76,5 +75,5 @@ END_PARAM_MAP()
 };  
 ```  
   
-## См. также  
- [Работа с шаблонами объекта\-получателя OLE DB](../../data/oledb/working-with-ole-db-consumer-templates.md)
+## <a name="see-also"></a>См. также  
+ [Работа с шаблонами объекта-получателя OLE DB](../../data/oledb/working-with-ole-db-consumer-templates.md)

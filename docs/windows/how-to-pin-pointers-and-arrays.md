@@ -1,33 +1,33 @@
 ---
-title: "Практическое руководство. Закрепление указателей и массивов | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "массивы [C++], закрепление"
-  - "указатели, закрепление"
+title: "Как: закрепление указателей и массивов | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+dev_langs: C++
+helpviewer_keywords:
+- pointers, pinning
+- arrays [C++], pinning
 ms.assetid: ee783260-e676-46b8-a38e-11a06f1d57b0
-caps.latest.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 10
+caps.latest.revision: "10"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 02c0f42042f5cdda0898e7d2c74754e68fb67113
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/24/2017
 ---
-# Практическое руководство. Закрепление указателей и массивов
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Закрепление части объекта, определенной в управляемом объекте, имеет эффект закрепления всего объекта.  Например, если закреплен любой элемент массива, весь массив также закреплен.  В языке нет расширений для объявления закрепленного массива.  Для закрепления массива, объявите закрепляющий указатель на тип элемента, и прикрепите один из элементов массива.  
+# <a name="how-to-pin-pointers-and-arrays"></a>Практическое руководство. Закрепление указателей и массивов
+Закрепление части объекта, определенной в управляемом объекте, имеет эффект закрепления всего объекта.  Например, если закреплен любой элемент массива, весь массив также закреплен. В языке нет расширений для объявления закрепленного массива. Чтобы закрепить массив, объявите закрепляющий указатель на тип элементов массива и закрепите один из элементов массива.  
   
-## Пример  
+## <a name="example"></a>Пример  
   
-### Код  
+### <a name="code"></a>Код  
   
 ```  
 // pin_ptr_array.cpp  
@@ -49,11 +49,11 @@ int main() {
 }  
 ```  
   
-### Output  
+### <a name="output"></a>Вывод  
   
 ```  
 ++  
 ```  
   
-## См. также  
- [pin\_ptr \(C\+\+\/CLI\)](../Topic/pin_ptr%20\(C++-CLI\).md)
+## <a name="see-also"></a>См. также  
+ [pin_ptr (C++/CLI)](../windows/pin-ptr-cpp-cli.md)

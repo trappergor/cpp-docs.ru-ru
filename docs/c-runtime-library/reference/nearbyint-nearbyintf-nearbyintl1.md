@@ -1,57 +1,58 @@
 ---
-title: "nearbyint, nearbyintf, nearbyintl1 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "cpp"
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-apiname: 
-  - "nearbyint"
-  - "nearbyintf"
-  - "nerabyintl"
-apilocation: 
-  - "msvcrt.dll"
-  - "msvcr80.dll"
-  - "msvcr90.dll"
-  - "msvcr100.dll"
-  - "msvcr100_clr0400.dll"
-  - "msvcr110.dll"
-  - "msvcr110_clr0400.dll"
-  - "msvcr120.dll"
-  - "msvcr120_clr0400.dll"
-  - "ucrtbase.dll"
-  - "api-ms-win-crt-math-l1-1-0.dll"
-apitype: "DLLExport"
-f1_keywords: 
-  - "nearbyint"
-  - "nearbyintf"
-  - "nearbyintl"
-  - "math/nearbyint"
-  - "math/narbyintf"
-  - "math/narbyintl"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "nearbyint - функция"
-  - "nearbyintf - функция"
-  - "функция nearbyintl"
+title: "nearbyint, nearbyintf, nearbyintl1 | Документы Майкрософт"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+apiname:
+- nearbyint
+- nearbyintf
+- nerabyintl
+apilocation:
+- msvcrt.dll
+- msvcr80.dll
+- msvcr90.dll
+- msvcr100.dll
+- msvcr100_clr0400.dll
+- msvcr110.dll
+- msvcr110_clr0400.dll
+- msvcr120.dll
+- msvcr120_clr0400.dll
+- ucrtbase.dll
+- api-ms-win-crt-math-l1-1-0.dll
+apitype: DLLExport
+f1_keywords:
+- nearbyint
+- nearbyintf
+- nearbyintl
+- math/nearbyint
+- math/narbyintf
+- math/narbyintl
+dev_langs: C++
+helpviewer_keywords:
+- nearbyint function
+- nearbyintf function
+- nearbyintl function
 ms.assetid: dd39cb68-96b0-434b-820f-6ff2ea65584f
-caps.latest.revision: 12
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 12
+caps.latest.revision: "12"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: 205381e315cf703a9fded4b24812a32c4aef4a9a
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/24/2017
 ---
-# nearbyint, nearbyintf, nearbyintl
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Округляет заданное значение с плавающей запятой в целое число и возвращает это значение в формате с плавающей запятой.  
+# <a name="nearbyint-nearbyintf-nearbyintl"></a>nearbyint, nearbyintf, nearbyintl
+Округляет заданное значение с плавающей запятой до целого числа и возвращает это значение в формате с плавающей запятой.  
   
-## Синтаксис  
+## <a name="syntax"></a>Синтаксис  
   
 ```  
 double nearbyint(  
@@ -76,33 +77,33 @@ long double nearbyintl(
   
 ```  
   
-#### Параметры  
- \[in\] `x`  
+#### <a name="parameters"></a>Параметры  
+ [in] `x`  
  Значение для округления.  
   
-## Возвращаемое значение  
- В случае успеха возвращает `x`, округленное до ближайшего целого числа, используя текущий формат округления в соответствии с fegetround. В противном случае функция может возвращать одно из следующих значений:  
+## <a name="return-value"></a>Возвращаемое значение  
+ В случае успеха возвращает значение `x`, округленное до ближайшего целого числа с использованием текущего формата округления в соответствии с функцией fegetround. В противном случае функция может вернуть одно из следующих значений:  
   
 |Проблеми|Назад|  
-|--------------|-----------|  
-|`x` \= ±INFINITY|±INFINITY, без изменений|  
-|`x` \= ±0|±0, без изменений|  
-|`x` \= NaN|NaN|  
+|-----------|------------|  
+|`x` = ±INFINITY|±INFINITY, без изменений|  
+|`x` = ±0|±0, без изменений|  
+|`x` = NaN|NaN|  
   
- Ошибки не выводятся в [\_matherr](../../c-runtime-library/reference/matherr.md)в частности, эта функция не сообщает о FE\_INEXACT исключений.  
+ Функция [_matherr](../../c-runtime-library/reference/matherr.md) не сообщает об ошибках, в частности, эта функция не сообщает об исключениях FE_INEXACT.  
   
-## Заметки  
- Основное различие между этой функции и `rint` является, что эта функция не вызывает неточный исключения с плавающей точки.  
+## <a name="remarks"></a>Примечания  
+ Основное различие между этой функцией и функцией `rint` заключается в том, что эта функция не вызывает неточного исключения с плавающей запятой.  
   
- Поскольку максимальные значения с плавающей запятой являются точное целых чисел, эта функция будет переполнение никогда не происходит само по себе; Вместо этого выходных данных может привести к переполнению возвращаемого значения, используйте в зависимости от того, какая версия функции.  
+ Так как максимальные значения с плавающей запятой являются точными целыми числами, эта функция никогда не будет переполняться сама по себе; вместо этого выходные данные могут привести к переполнению возвращаемого значения в зависимости от используемой функции.  
   
-## Требования  
+## <a name="requirements"></a>Требования  
   
-|Функция|Заголовок C|Заголовок C\+\+|  
-|-------------|-----------------|---------------------|  
-|`nearbyint`, `nearbyintf`,  `nearbyintl`|\<math.h\>|\<cmath\>|  
+|Функция|Заголовок C|Заголовок C++|  
+|--------------|--------------|------------------|  
+|`nearbyint`,                `nearbyintf`, `nearbyintl`|\<math.h>|\<cmath>|  
   
  Дополнительные сведения о совместимости см. в статье [Совместимость](../../c-runtime-library/compatibility.md).  
   
-## См. также  
+## <a name="see-also"></a>См. также  
  [Алфавитный указатель функций](../../c-runtime-library/reference/crt-alphabetical-function-reference.md)

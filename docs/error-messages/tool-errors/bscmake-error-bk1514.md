@@ -4,49 +4,30 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-tools
+ms.technology: cpp-tools
 ms.tgt_pltfrm: 
 ms.topic: error-reference
-f1_keywords:
-- BK1514
-dev_langs:
-- C++
-helpviewer_keywords:
-- BK1514
+f1_keywords: BK1514
+dev_langs: C++
+helpviewer_keywords: BK1514
 ms.assetid: 7c7e2504-a490-44ab-bb1f-47385ee2f4b0
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
-ms.openlocfilehash: 59c8f6e52c92d22955698f9d6bf14110d47f252e
-ms.contentlocale: ru-ru
-ms.lasthandoff: 02/24/2017
-
+ms.openlocfilehash: 9ce1c53ee64947986080a79ed3342e96bd306193
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="bscmake-error-bk1514"></a>Ошибка BSCMAKE BK1514
-все. Усечение SBR-файлы, не найдено в имени файла  
+все. Усечение SBR-файлы, не найдено в имя файла  
   
- Ни один из заданных для обновления SBR-файлы были частью исходного файла для просмотра информации (.bsc). Чтобы определить имена SBR-файлов, вызвавших эту ошибку, [BK4502](../../error-messages/tool-errors/bscmake-warning-bk4502.md) предупреждений, которые следует поставить перед ним.  
+ Ни один из SBR-файлов, заданных для обновления были частью исходного файла для просмотра информации (.bsc). Чтобы найти имена SBR-файлов, вызвавшей эту ошибку, прочитайте [BK4502](../../error-messages/tool-errors/bscmake-warning-bk4502.md) предупреждения, расположенные перед ним.  
   
 ### <a name="to-fix-by-checking-the-following-possible-causes"></a>Чтобы устранить ошибку, проверьте указанные ниже возможные причины ее возникновения.  
   
-1.  SBR-файл или BSC-файла указано неправильное имя.  
+1.  Неверное имя файла SBR- или BSC-файл.  
   
-2.  BSC-файл поврежден BSCMAKE для повторного построения его.
+2.  BSC-файл поврежден BSCMAKE перестроить его.

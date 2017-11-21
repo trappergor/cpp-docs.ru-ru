@@ -1,61 +1,59 @@
 ---
-title: "literal (расширения компонентов C++) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/16/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-f1_keywords: 
-  - "literal"
-  - "literal_cpp"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "literal - ключевое слово [C++]"
+title: "Literal (расширения компонентов C++) | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+f1_keywords:
+- literal
+- literal_cpp
+dev_langs: C++
+helpviewer_keywords: literal keyword [C++]
 ms.assetid: 6b1a1f36-2e1d-4a23-8eb6-172f4f3c477f
-caps.latest.revision: 20
-caps.handback.revision: 20
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "20"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: d13c8b081f3bcc3efbf20be3c31e2601baa6ca02
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/24/2017
 ---
-# literal (расширения компонентов C++)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Переменная \(элемент данных\), помеченная как `literal` в компиляции **\/clr** является эквивалентом `static const` переменной.  
+# <a name="literal-c-component-extensions"></a>literal (расширения компонентов C++)
+Переменная (элемент данных) помечен как `literal` в **/CLR** компиляции эквивалентно собственного `static const` переменной.  
   
-## Все платформы  
- **Примечания**  
+## <a name="all-platforms"></a>Все платформы  
+ **Заметки**  
   
- \(Отсутствует комментарий для этой функции языка, которая применяется ко всем средам выполнения\).  
+ (Отсутствуют комментарии для этой возможности языка, которая применяется во всех средах выполнения.)  
   
-## [!INCLUDE[wrt](../atl/reference/includes/wrt_md.md)]  
- **Примечания**  
+## <a name="windows-runtime"></a>Среда выполнения Windows  
+ **Заметки**  
   
- \(Отсутствуют комментарии для этой функции языка, которая применяется только в среде выполнения Windows\).  
+ (Отсутствуют комментарии для этой возможности языка, которая применяется только в среде выполнения Windows).  
   
-### Требования  
- Параметр компилятора: **\/ZW**  
+### <a name="requirements"></a>Требования  
+ Параметр компилятора: **/ZW**  
   
-## Среда CLR  
+## <a name="common-language-runtime"></a>Среда CLR  
   
-## Заметки  
- Элемент данных, помеченный как `literal`, необходимо инициализировать при объявлении, и значение должно быть целой константой, перечислением или строковым типом.  Преобразование из типа выражения инициализации к типу статического константного члена данных не должно требовать определенного пользователем преобразования.  
+## <a name="remarks"></a>Примечания  
+ Член данных помечен как `literal` должны быть инициализированы при объявлении и значение должны иметь целочисленные константы, перечисления или строковый тип. Преобразование из типа выражения инициализации в тип статического константного элемента данных не должно требовать определенного пользователем преобразования.  
   
- Во время выполнения для полей литералов память не выделяется; компилятор только вставляет его значение в метаданные класса.  
+ Во время выполнения для полей литералов память не выделяется; компилятор только вставляет свое значение в метаданные класса.  
   
  Переменная, помеченная как `static const`, не будет доступна в метаданных другим компиляторам.  
   
- Дополнительные сведения см. в разделах [Static](../misc/static-cpp.md) и [const](../cpp/const-cpp.md).  
+ Дополнительные сведения см. в разделе [статических](../cpp/storage-classes-cpp.md) и [const](../cpp/const-cpp.md).  
   
- `literal` — это контекстно\-зависимое ключевое слово.  Дополнительные сведения см. в разделе [Контекстные ключевые слова](../windows/context-sensitive-keywords-cpp-component-extensions.md).  
+ `literal` — контекстно-зависимое ключевое слово. В разделе [контекстно-зависимые ключевые слова](../windows/context-sensitive-keywords-cpp-component-extensions.md) для получения дополнительной информации.  
   
-## Пример  
- В этом примере показано, что переменная `literal` подразумевает модификатор `static`.  
+## <a name="example"></a>Пример  
+ В следующем примере показано, что переменная `literal` подразумевает ключевое слово `static`.  
   
 ```  
 // mcppv2_literal.cpp  
@@ -69,8 +67,8 @@ int main() {
 }  
 ```  
   
-## Пример  
- В следующем примере показано влияние литералов в метаданных:  
+## <a name="example"></a>Пример  
+ В следующем примере показано влияние литералов в метаданных.  
   
 ```  
 // mcppv2_literal2.cpp  
@@ -81,7 +79,7 @@ public ref struct A {
 };  
 ```  
   
- Обратите внимание на разницу в метаданных для `sc` и `lit`: директива `modopt` применяется к `sc`, а значит она может быть пропущена другими компиляторами.  
+ Обратите внимание на разницу в метаданных для `sc` и `lit`: директива `modopt` применяется к `sc` и поэтому она может игнорироваться другими компиляторами.  
   
 ```  
 .field public static int32 modopt([mscorlib]System.Runtime.CompilerServices.IsConst) sc = int32(0x0000000A)  
@@ -91,8 +89,8 @@ public ref struct A {
 .field public static literal int32 lit = int32(0x0000000A)  
 ```  
   
-## Пример  
- Следующий пример, написанный на C\#, ссылается на метаданные, созданные в предыдущем примере и отображает влияние `literal` и `static const` переменных:  
+## <a name="example"></a>Пример  
+ В следующем примере, написанном на языке C#, осуществляется ссылка на метаданные, созданные в предыдущем примере, и показывается влияние переменных `literal` и `static const`.  
   
 ```  
 // mcppv2_literal3.cs  
@@ -123,8 +121,8 @@ class B {
 }  
 ```  
   
-## Требования  
- Параметр компилятора: **\/clr**  
+## <a name="requirements"></a>Требования  
+ Параметр компилятора: **/clr**  
   
-## См. также  
+## <a name="see-also"></a>См. также  
  [Расширения компонентов для платформ среды выполнения](../windows/component-extensions-for-runtime-platforms.md)

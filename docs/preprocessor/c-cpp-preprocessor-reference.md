@@ -1,57 +1,55 @@
 ---
-title: "Справочник по препроцессору C/C++ | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-  - "C"
-helpviewer_keywords: 
-  - "препроцессор"
-  - "препроцессор, обзор справочника"
+title: "Справочник по препроцессору C/C++ | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- preprocessor
+- preprocessor, reference overview
 ms.assetid: e4a52843-7016-4f6d-8b40-cb1ace18f805
-caps.latest.revision: 9
-caps.handback.revision: 9
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
+caps.latest.revision: "9"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: e0ce24f1f7b50a899f02cc8578a293aa5734548b
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/24/2017
 ---
-# Справочник по препроцессору C/C++
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-В *Справочнике препроцессора C\/C\+\+* рассматривается реализация препроцессора в Microsoft C\/C\+\+.  Препроцессор выполняет предварительные операции с файлами C и C\+\+ перед их передачей компилятору.  Препроцессор можно использовать для условной компиляции кода, вставки файлов, задания сообщений для ошибок времени компиляции, а также для применения правил, зависящих от компьютера, к разделам кода.  
+# <a name="cc-preprocessor-reference"></a>Cправочник препроцессора /C++
+*Справочника по препроцессору C/C++* Описание препроцессора, реализованного в Microsoft C и C++. Препроцессор выполняет предварительные операции с файлами C и C++ перед их передачей компилятору. Препроцессор можно использовать для условной компиляции кода, вставки файлов, задания сообщений для ошибок времени компиляции, а также для применения правил, зависящих от компьютера, к разделам кода.  
   
-## В этом подразделе  
+## <a name="in-this-section"></a>Содержание  
  [Директивы препроцессора](../preprocessor/preprocessor-directives.md)  
  Описание директив, обычно используемых, чтобы исходные программы можно было легко изменять и компилировать в разных средах выполнения.  
   
  [Операторы препроцессора](../preprocessor/preprocessor-operators.md)  
  Описание четырех относящихся к препроцессору операторов, используемых в контексте директивы `#define`.  
   
- [Предустановленные макросы](../preprocessor/predefined-macros.md)  
- Описание предустановленных макросов согласно спецификации ANSI и Microsoft C\+\+.  
+ [Предопределенные макросы](../preprocessor/predefined-macros.md)  
+ Описание предустановленных макросов согласно спецификации ANSI и Microsoft C++.  
   
  [Директивы pragma](../preprocessor/pragma-directives-and-the-pragma-keyword.md)  
- Описание директив \#pragma, которые позволяют каждому компилятору предоставлять функции, зависящие от компьютера и операционной системы, в то же время сохраняя общую совместимость с языками C и C\+\+.  
+ Описание директив #pragma, которые позволяют каждому компилятору предоставлять возможности, зависящие от компьютера и операционной системы, в то же время сохраняя общую совместимость с языками C и C++.  
   
-## Связанные подразделы  
- [Справочник по языку C\+\+](../cpp/cpp-language-reference.md)  
- Справочные материалы по реализации языка C\+\+ корпорации Microsoft.  
+## <a name="related-sections"></a>Связанные разделы  
+ [Справочник по языку C++](../cpp/cpp-language-reference.md)  
+ Справочные материалы по реализации языка C++ корпорации Microsoft.  
   
- [Справочник по языку C](../Topic/C%20Language%20Reference.md)  
+ [Справочник по языку C#](../c-language/c-language-reference.md)  
  Справочные материалы по реализации языка C корпорации Microsoft.  
   
- [Построение программы C\/C\+\+](../Topic/C-C++%20Building%20Reference.md)  
+ [Построение программы C/C++](../build/reference/c-cpp-building-reference.md)  
  Ссылки на разделы, в которых рассматриваются параметры компилятора и компоновщика.  
   
- [Библиотеки Visual C\+\+](http://msdn.microsoft.com/ru-ru/fec23c40-10c0-4857-9cdc-33a3b99b30ae)  
- Ссылки на различные библиотеки, входящие в состав Visual C\+\+, включая ATL, MFC, OLE DB, библиотеку времени выполнения языка C, а также стандартную библиотеку C\+\+.  
+ [Справочные материалы по библиотекам Visual C++](http://msdn.microsoft.com/en-us/fec23c40-10c0-4857-9cdc-33a3b99b30ae)  
+ Ссылки на различные библиотеки, в состав Visual C++, включая ATL, MFC, OLE DB, библиотеку времени выполнения C и стандартной библиотеки C++.  
   
- [Создание проектов Visual C\+\+ и управление ими](../ide/creating-and-managing-visual-cpp-projects.md)  
- Описание пользовательского интерфейса в Visual Studio, позволяющего определять каталоги, в которых система проектов будет выполнять поиск файлов для проекта C\+\+.
+ [Создание проектов Visual C++ и управление ими](../ide/creating-and-managing-visual-cpp-projects.md)  
+ Описание пользовательского интерфейса в Visual Studio, позволяющего определять каталоги, в которых система проектов будет выполнять поиск файлов для проекта C++.

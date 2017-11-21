@@ -1,57 +1,55 @@
 ---
-title: "private (OpenMP) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "private"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "private OpenMP clause"
+title: "закрытый (OpenMP) | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: private
+dev_langs: C++
+helpviewer_keywords: private OpenMP clause
 ms.assetid: 772904a2-1345-4562-90e6-eb4dc85aea1a
-caps.latest.revision: 12
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 12
+caps.latest.revision: "12"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 21193361d10acdbf506e0b9f8e09ba5d7da598d4
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/24/2017
 ---
-# private (OpenMP)
-[!INCLUDE[vs2017banner](../../../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="private-openmp"></a>private (OpenMP)
 Указывает, что каждый поток должен иметь собственный экземпляр переменной.  
   
-## Синтаксис  
+## <a name="syntax"></a>Синтаксис  
   
 ```  
 private(var)  
 ```  
   
-## Заметки  
- Здесь:  
+## <a name="remarks"></a>Примечания  
+ где  
   
  `var`  
- Переменная, чтобы получить экземпляры в каждом потоке.  
+ Переменная, которая имеет экземпляров в каждом потоке.  
   
-## Заметки  
- **private** применяется к следующим рекомендациям:  
+## <a name="remarks"></a>Примечания  
+ **закрытый** применяет следующие директивы:  
   
--   [for](../Topic/for%20\(OpenMP\).md)  
+-   [for](../../../parallel/openmp/reference/for-openmp.md)  
   
 -   [parallel](../../../parallel/openmp/reference/parallel.md)  
   
--   [sections](../../../parallel/openmp/reference/sections-openmp.md)  
+-   [разделы](../../../parallel/openmp/reference/sections-openmp.md)  
   
--   [single](../Topic/single.md)  
+-   [single](../../../parallel/openmp/reference/single.md)  
   
- Дополнительные сведения см. в разделе [2.7.2.1 private](../../../parallel/openmp/2-7-2-1-private.md).  
+ Дополнительные сведения см. в разделе [2.7.2.1 частного](../../../parallel/openmp/2-7-2-1-private.md).  
   
-## Пример  
+## <a name="example"></a>Пример  
   
 ```  
 // openmp_private.c  
@@ -157,55 +155,77 @@ int main() {
 }  
 ```  
   
-  **Эти переменные перед записью в параллельной области.  nThreadPrivate \= 4**  
- **nPrivate \= 4**  
- **nFirstPrivate \= 4**  
- **nLastPrivate \= 4**  
- **nShared \= 4**  
-**Эти переменные на записи цикла 1 потока 0.  nThreadPrivate \= 4**  
- **nPrivate \= 1310720**  
- **nFirstPrivate \= 4**  
- **nLastPrivate \= 1245104**  
- **nShared \= 3**  
-**Эти переменные на записи цикла 1 потоков на 1.  nThreadPrivate \= 4**  
- **nPrivate \= 4488**  
- **nFirstPrivate \= 4**  
- **nLastPrivate \= 19748**  
- **nShared \= 0**  
-**Эти переменные на записи цикла 1 потоков на 2.  nThreadPrivate \= 4**  
- **nPrivate \= \-132514848**  
- **nFirstPrivate \= 4**  
- **nLastPrivate \= \-513199792**  
- **nShared \= 4**  
-**Эти переменные на записи цикла 1 потоков на 3.  nThreadPrivate \= 4**  
- **nPrivate \= 1206**  
- **nFirstPrivate \= 4**  
- **nLastPrivate \= 1204**  
- **nShared \= 2**  
-**Эти переменные на записи цикла 2 потока 0.  nThreadPrivate \= 0**  
- **nPrivate \= 0**  
- **nFirstPrivate \= 3**  
- **nLastPrivate \= 0**  
- **nShared \= 0**  
-**Эти переменные на записи цикла 2 потоков на 1.  nThreadPrivate \= 1**  
- **nPrivate \= 1**  
- **nFirstPrivate \= 3**  
- **nLastPrivate \= 1**  
- **nShared \= 1**  
-**Эти переменные на записи цикла 2 потоков на 2.  nThreadPrivate \= 2**  
- **nPrivate \= 2**  
- **nFirstPrivate \= 3**  
- **nLastPrivate \= 2**  
- **nShared \= 2**  
-**Эти переменные на записи цикла 2 потоков на 3.  nThreadPrivate \= 3**  
- **nPrivate \= 3**  
- **nFirstPrivate \= 3**  
- **nLastPrivate \= 3**  
- **nShared \= 3**  
-**Эти переменные выберите оставить от параллельной области.  nThreadPrivate \= 0 \(последнее значение в главном потоке\)**  
- **nPrivate \= 4 \(значение вставка параллельной области\)**  
- **nFirstPrivate \= 4 \(значение вставка параллельной области\)**  
- **nLastPrivate \= 3 \(с последней итерации цикла\)**  
- **nShared \= 1 \(значение, присвоенное из задержанного потока, 1\)**    
-## См. также  
- [Clauses](../../../parallel/openmp/reference/openmp-clauses.md)
+```Output  
+These are the variables before entry into the parallel region.  
+nThreadPrivate = 4  
+      nPrivate = 4  
+ nFirstPrivate = 4  
+  nLastPrivate = 4  
+       nShared = 4  
+  
+These are the variables at entry of loop 1 of thread 0.  
+nThreadPrivate = 4  
+      nPrivate = 1310720  
+ nFirstPrivate = 4  
+  nLastPrivate = 1245104  
+       nShared = 3  
+  
+These are the variables at entry of loop 1 of thread 1.  
+nThreadPrivate = 4  
+      nPrivate = 4488  
+ nFirstPrivate = 4  
+  nLastPrivate = 19748  
+       nShared = 0  
+  
+These are the variables at entry of loop 1 of thread 2.  
+nThreadPrivate = 4  
+      nPrivate = -132514848  
+ nFirstPrivate = 4  
+  nLastPrivate = -513199792  
+       nShared = 4  
+  
+These are the variables at entry of loop 1 of thread 3.  
+nThreadPrivate = 4  
+      nPrivate = 1206  
+ nFirstPrivate = 4  
+  nLastPrivate = 1204  
+       nShared = 2  
+  
+These are the variables at entry of loop 2 of thread 0.  
+nThreadPrivate = 0  
+      nPrivate = 0  
+ nFirstPrivate = 3  
+  nLastPrivate = 0  
+       nShared = 0  
+  
+These are the variables at entry of loop 2 of thread 1.  
+nThreadPrivate = 1  
+      nPrivate = 1  
+ nFirstPrivate = 3  
+  nLastPrivate = 1  
+       nShared = 1  
+  
+These are the variables at entry of loop 2 of thread 2.  
+nThreadPrivate = 2  
+      nPrivate = 2  
+ nFirstPrivate = 3  
+  nLastPrivate = 2  
+       nShared = 2  
+  
+These are the variables at entry of loop 2 of thread 3.  
+nThreadPrivate = 3  
+      nPrivate = 3  
+ nFirstPrivate = 3  
+  nLastPrivate = 3  
+       nShared = 3  
+  
+These are the variables after exit from the parallel region.  
+nThreadPrivate = 0 (The last value in the master thread)  
+      nPrivate = 4 (The value prior to entering parallel region)  
+ nFirstPrivate = 4 (The value prior to entering parallel region)  
+  nLastPrivate = 3 (The value from the last iteration of the loop)  
+       nShared = 1 (The value assigned, from the delayed thread, 1)  
+```  
+  
+## <a name="see-also"></a>См. также  
+ [Предложения](../../../parallel/openmp/reference/openmp-clauses.md)

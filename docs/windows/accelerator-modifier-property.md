@@ -1,43 +1,42 @@
 ---
-title: "Свойство &quot;Модификатор&quot; сочетания клавиш | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Modifier - свойство"
+title: "Свойство \"модификатор\" сочетания | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords: Modifier property
 ms.assetid: f05a9379-e037-4cfb-b6ef-d2c655bcfa7f
-caps.latest.revision: 5
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 5
+caps.latest.revision: "5"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: d54c131af740c9c2248c4d923176b0a5c55d9e33
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/24/2017
 ---
-# Свойство &quot;Модификатор&quot; сочетания клавиш
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Ниже приведены допустимые значения свойства "Модификатор" для таблицы сочетаний клавиш.  
+# <a name="accelerator-modifier-property"></a>Свойство "Модификатор" сочетания клавиш
+Ниже приведены допустимые значения для свойства "модификатор" в таблице сочетаний клавиш.  
   
 |Значение|Описание|  
-|--------------|--------------|  
-|**None**|Пользователь нажимает только одну клавишу.  Этот вариант лучше всего подходит для значений ASCII\/ANSI в диапазоне от 001 до 026, которые интерпретируются как сочетания от ^A до ^Z \(от CTRL\-A до CTRL\-Z\).|  
-|**Alt**|Пользователь должен прижать клавишу ALT, прежде чем нажать другую клавишу.|  
-|**CTRL**|Пользователь должен нажать клавишу CTRL, прежде чем нажать другую клавишу.  Нельзя использовать для значений типа ASCII.|  
-|**Сдвиг**|Пользователь должен прижать клавишу SHIFT, прежде чем нажать другую клавишу.|  
-|**CTRL\+ALT**|Пользователь должен прижать клавиши ALT и CTRL, прежде чем нажать другую клавишу.  Нельзя использовать для значений типа ASCII.|  
-|**CTRL\+SHIFT**|Пользователь должен прижать клавиши CTRL и SHIFT, прежде чем нажать другую клавишу.  Нельзя использовать для значений типа ASCII.|  
-|**ALT\+SHIFT**|Пользователь должен прижать клавиши ALT и SHIFT, прежде чем нажать другую клавишу.  Нельзя использовать для значений типа ASCII.|  
-|**CTRL\+ALT\+SHIFT**|Пользователь должен прижать клавиши ALT, CTRL и SHIFT, прежде чем нажать другую клавишу.  Нельзя использовать для значений типа ASCII.|  
+|-----------|-----------------|  
+|**None**|Пользователь нажимает только значения ключа. Наиболее эффективно используется со значениями ASCII/ANSI 001 до 026, которые интерпретируются как ^ A – ^ Z (CTRL + A до CTRL-Z).|  
+|**ALT**|Пользователь должен клавишу ALT перед значением ключа.|  
+|**CTRL**|Пользователь должен клавишу CTRL перед значением ключа. Не является допустимым типа ASCII.|  
+|**SHIFT**|Пользователь должен клавишу SHIFT перед значением ключа.|  
+|**Ctrl + Alt**|Пользователь должен нажать клавишу CTRL и ALT, прежде чем значения ключа. Не является допустимым типа ASCII.|  
+|**Ctrl + Shift**|Пользователь должен нажать клавишу CTRL и SHIFT, прежде чем значения ключа. Не является допустимым типа ASCII.|  
+|**Alt + Shift**|Пользователь должен нажать клавишу ALT и клавишу SHIFT, прежде чем значения ключа. Не является допустимым типа ASCII.|  
+|**Ctrl + Alt + Shift**|Пользователь должен нажать клавишу CTRL, SHIFT и ALT перед значением ключа. Не является допустимым типа ASCII.|  
   
-## Требования  
+## <a name="requirements"></a>Требования  
  Win32  
   
-## См. также  
- [Setting Accelerator Properties](../windows/setting-accelerator-properties.md)   
- [Accelerator Editor](../Topic/Accelerator%20Editor.md)
+## <a name="see-also"></a>См. также  
+ [Задание свойств сочетаний клавиш](../windows/setting-accelerator-properties.md)   
+ [Редактор сочетаний клавиш](../windows/accelerator-editor.md)

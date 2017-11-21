@@ -1,42 +1,41 @@
 ---
-title: "/SYMBOLS | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "/symbols"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "/SYMBOLS - параметр программа dumpbin"
-  - "открытые символы"
-  - "таблицы символов"
-  - "SYMBOLS - параметр (программа dumpbin)"
-  - "-SYMBOLS - параметр (программа dumpbin)"
-  - "символы, таблица COFF-символов - отображение"
-  - "символы, дамп"
+title: "-SYMBOLS | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: /symbols
+dev_langs: C++
+helpviewer_keywords:
+- symbols, dumping
+- public symbols
+- symbols, displaying COFF symbol table
+- symbol tables
+- SYMBOLS dumpbin option
+- /SYMBOLS dumpbin option
+- -SYMBOLS dumpbin option
 ms.assetid: 34bcae90-4561-4c77-a80c-065508dec39a
-caps.latest.revision: 7
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: 360f26de5043eae7f5cdb4688612f95b96be8fbd
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/24/2017
 ---
-# /SYMBOLS
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="symbols"></a>/SYMBOLS
 ```  
 /SYMBOLS  
 ```  
   
- При выборе этого параметра отображается таблица символов COFF.  Таблицы символов есть во всех объектных файлах.  Таблица символов COFF присутствует в файле образа только в том случае, если он был скомпонован с параметром \/DEBUG.  
+ Этот параметр отображает таблица символов COFF. Таблицы символов есть во всех объектных файлах. Таблица символов COFF появляется в файл изображения, только в том случае, если он связан с параметром/Debug.  
   
- Далее приведено описание сведений, выводимых при использовании параметра \/SYMBOLS.  Дополнительные сведения о значении информации, выводимой при использовании параметра \/SYMBOLS, можно найти в файле winnt.h \(IMAGE\_SYMBOL и IMAGE\_AUX\_SYMBOL\) или документации COFF.  
+ Ниже приведено описание для/Symbols выходных данных. Дополнительные сведения о значении/Symbols выходных данных можно найти путем поиска в winnt.h (IMAGE_SYMBOL и IMAGE_AUX_SYMBOL) или документации COFF.  
   
  Рассмотрим следующий пример дампа:  
   
@@ -63,18 +62,18 @@ Summary
       23 .text  
 ```  
   
-## Заметки  
- В приведенном ниже описании строк, начинающихся с номера символа, описываются столбцы, содержащие сведения, представляющие интерес для пользователей:  
+## <a name="remarks"></a>Примечания  
+ Следующие описания для строки, которые начинаются с номера символа, описываются столбцы, содержащие сведения, представляющие интерес для пользователей:  
   
--   Первое трехзначное число — это индекс или номер символа.  
+-   Первое число из трех цифр является индекс или номер символа.  
   
--   Если в третьем столбце стоит SECT*x*, то символ определен в соответствующей секции объектного файла.  Если там стоит UNDEF, то символ не определен в этом объектном файле и должен разрешаться извне.  
+-   Если третий столбец содержит РАЗДЕЛ*x*, символ определен в этом разделе файла объекта. Но если UNDEF, не определен в этом объекте и должны быть разрешены в другом месте.  
   
--   Пятый столбец \(Static, External\) позволяет определить, будет ли символ видим только внутри этого объектного файла, или же он будет общедоступен \(видим извне\).  Статический символ \_sym не будет скомпонован с общедоступным символом \_sym; это два разных экземпляра функций с именем \_sym.  
+-   Пятый столбец (Static, External) сообщает символ видим только в рамках этого объекта, или же оно является общей (видимым извне). Статический символ _sym не будет скомпонован с общедоступным символом _sym; Это будут два разных экземпляра функций с именем _sym.  
   
- Последний столбец в нумерованной строке содержит как декорированное, так и недекорированное имя символа.  
+ Последний столбец в нумерованной строке является имя символа, внутренних и внешних.  
   
- В файлах, созданных с использованием параметра компилятора [\/GL](../../build/reference/gl-whole-program-optimization.md), может использоваться только параметр DUMPBIN [\/HEADERS](../../build/reference/headers.md).  
+ Только [/Headers](../../build/reference/headers.md) параметр программы DUMPBIN доступна для использования в файлах, созданных с помощью [/GL](../../build/reference/gl-whole-program-optimization.md) параметр компилятора.  
   
-## См. также  
+## <a name="see-also"></a>См. также  
  [Параметры DUMPBIN](../../build/reference/dumpbin-options.md)

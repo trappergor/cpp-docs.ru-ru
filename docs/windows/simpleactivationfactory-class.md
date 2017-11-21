@@ -1,32 +1,30 @@
 ---
-title: "Класс SimpleActivationFactory | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "module/Microsoft::WRL::SimpleActivationFactory"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "SimpleActivationFactory - класс"
+title: "Класс SimpleActivationFactory | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: module/Microsoft::WRL::SimpleActivationFactory
+dev_langs: C++
+helpviewer_keywords: SimpleActivationFactory class
 ms.assetid: aff768e0-0038-4fd7-95d2-ad7d308da41c
-caps.latest.revision: 4
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 4
+caps.latest.revision: "4"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 3c56d03b74080ae65f84ffbad8c4dd2092be1082
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/24/2017
 ---
-# Класс SimpleActivationFactory
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="simpleactivationfactory-class"></a>SimpleActivationFactory - класс
 Предоставляет основной механизм для создания базового класса среды выполнения Windows или классической модели COM.  
   
-## Синтаксис  
+## <a name="syntax"></a>Синтаксис  
   
 ```  
 template<  
@@ -35,28 +33,28 @@ template<
 class SimpleActivationFactory : public ActivationFactory<>;  
 ```  
   
-#### Параметры  
+#### <a name="parameters"></a>Параметры  
  `Base`  
  Базовый класс.  
   
-## Примечания  
- У базового класса должен быть конструктор по умолчанию.  
+## <a name="remarks"></a>Примечания  
+ Базовый класс должен предоставлять конструктор по умолчанию.  
   
- В следующем примере кода показано использование SimpleActivationFactory с макросом [ActivatableClassWithFactoryEx](../Topic/ActivatableClass%20Macros.md).  
+ В следующем примере кода демонстрируется использование SimpleActivationFactory с [ActivatableClassWithFactoryEx](../windows/activatableclass-macros.md) макрос.  
   
  `ActivatableClassWithFactoryEx(MyClass, SimpleActivationFactory, MyServerName);`  
   
-## Члены  
+## <a name="members"></a>Члены  
   
-### Открытые методы  
+### <a name="public-methods"></a>Открытые методы  
   
 |Имя|Описание|  
-|---------|--------------|  
+|----------|-----------------|  
 |[Метод SimpleActivationFactory::ActivateInstance](../windows/simpleactivationfactory-activateinstance-method.md)|Создает экземпляр указанного интерфейса.|  
 |[Метод SimpleActivationFactory::GetRuntimeClassName](../windows/simpleactivationfactory-getruntimeclassname-method.md)|Получает имя класса среды выполнения экземпляра класса, указанного в параметре шаблона класса `Base`.|  
-|[Метод SimpleActivationFactory::GetTrustLevel](../Topic/SimpleActivationFactory::GetTrustLevel%20Method.md)|Возвращает уровень доверия экземпляра класса, заданного параметром шаблона класса `Base`.|  
+|[Метод SimpleActivationFactory::GetTrustLevel](../windows/simpleactivationfactory-gettrustlevel-method.md)|Возвращает уровень доверия экземпляра класса, указанного параметром `Base` параметре шаблона класса.|  
   
-## Иерархия наследования  
+## <a name="inheritance-hierarchy"></a>Иерархия наследования  
  `I0`  
   
  `ChainInterfaces`  
@@ -79,10 +77,10 @@ class SimpleActivationFactory : public ActivationFactory<>;
   
  `SimpleActivationFactory`  
   
-## Требования  
+## <a name="requirements"></a>Требования  
  **Заголовок:** module.h  
   
  **Пространство имен:** Microsoft::WRL  
   
-## См. также  
+## <a name="see-also"></a>См. также  
  [Пространство имен Microsoft::WRL](../windows/microsoft-wrl-namespace.md)

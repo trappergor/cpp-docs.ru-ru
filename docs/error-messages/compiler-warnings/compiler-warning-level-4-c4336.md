@@ -1,34 +1,32 @@
 ---
-title: "Предупреждение компилятора (уровень 4) C4336 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C4336"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C4336"
+title: "Предупреждение (уровень 4) C4336 компилятора | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords: C4336
+dev_langs: C++
+helpviewer_keywords: C4336
 ms.assetid: 93f199dd-d6dd-42c0-82d8-c12d101a7235
-caps.latest.revision: 10
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 10
+caps.latest.revision: "10"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: 2cbb27a524caf5c02cbc99d8792c93ecc134390a
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/24/2017
 ---
-# Предупреждение компилятора (уровень 4) C4336
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-импортируйте библиотеку типов "библиотека\_типов1", на которую имеется перекрестная ссылка, перед импортом "библиотеки\_типов2"  
+# <a name="compiler-warning-level-4-c4336"></a>Предупреждение компилятора (уровень 4) C4336
+Импорт библиотеки «type_lib1» перекрестные перед импортом «type_lib2»  
   
- На библиотеку типов была ссылка в директиве [\#import](../Topic/%23import%20Directive%20\(C++\).md).  Однако эта библиотека типов содержит ссылку на другую библиотеку типов, на которую нет ссылок в директиве `#import`.  Компилятором был найден TLB\-файл другой библиотеки.  
+ Библиотека типов была ссылка в [#import](../../preprocessor/hash-import-directive-cpp.md) директивы. Однако эта библиотека типов содержит ссылку на другую библиотеку типов, который не был указан с `#import`. TLB-файл другой найден компилятором.  
   
- Две указанные библиотеки типов создаются из двух следующих файлов \(компилиремых с помощью программы midl.exe\):  
+ Две указанные библиотеки типов создаются из следующих двух файлах (скомпилированный с midl.exe):  
   
 ```  
 // c4336a.idl  
@@ -43,7 +41,7 @@ library c4336aLib
 };  
 ```  
   
- Вторая библиотека типов:  
+ Второй библиотеки типов:  
   
 ```  
 // c4336b.idl  

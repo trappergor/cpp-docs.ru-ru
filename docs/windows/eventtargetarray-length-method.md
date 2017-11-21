@@ -1,48 +1,46 @@
 ---
-title: "Метод EventTargetArray::Length | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "event/Microsoft::WRL::Details::EventTargetArray::Length"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Length - метод"
+title: "Метод EventTargetArray::Length | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: event/Microsoft::WRL::Details::EventTargetArray::Length
+dev_langs: C++
+helpviewer_keywords: Length method
 ms.assetid: f8bd8d42-977b-4695-b07a-227a68be5259
-caps.latest.revision: 5
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 5
+caps.latest.revision: "5"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 4f17a9b5e25053d2e3afe61ce9a510a15353d67a
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/24/2017
 ---
-# Метод EventTargetArray::Length
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Предназначено для поддержки инфраструктуры WRL, а не для непосредственного использования в коде.  
+# <a name="eventtargetarraylength-method"></a>Метод EventTargetArray::Length
+Поддерживает инфраструктуру WRL и не предназначен для использования непосредственно из программного кода.  
   
-## Синтаксис  
+## <a name="syntax"></a>Синтаксис  
   
 ```  
 size_t Length();  
 ```  
   
-## Возвращаемое значение  
- Текущее количество элементов во внутреннем массиве обработчиков событий.  
+## <a name="return-value"></a>Возвращаемое значение  
+ Текущее количество элементов в массиве внутреннего обработчиков событий.  
   
-## Заметки  
- Поучает текущее количество элементов во внутреннем массиве обработчиков событий.  
+## <a name="remarks"></a>Примечания  
+ Возвращает текущее количество элементов в массиве внутреннего обработчиков событий.  
   
-## Требования  
+## <a name="requirements"></a>Требования  
  **Заголовок:** event.h  
   
- **Пространство имен:** Microsoft::WRL::Details  
+ **Пространство имен:** Microsoft::wrl:: Details  
   
-## См. также  
- [Класс EventTargetArray](../windows/eventtargetarray-class.md)   
+## <a name="see-also"></a>См. также  
+ [Eventtargetarray-класс](../windows/eventtargetarray-class.md)   
  [Пространство имен Microsoft::WRL::Details](../windows/microsoft-wrl-details-namespace.md)

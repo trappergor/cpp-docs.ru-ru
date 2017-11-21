@@ -1,38 +1,37 @@
 ---
-title: "Практическое руководство. Маршалинг VARIANT для ADO.NET (C++/CLI) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/14/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "get-started-article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "ADO.NET [C++], маршалинг типов Variant"
-  - "VARIANT"
-  - "VARIANT, маршалинг"
+title: "Как: маршалинг VARIANT для ADO.NET (C + +/ CLI) | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: get-started-article
+dev_langs: C++
+helpviewer_keywords:
+- VARIANT, marshaling
+- ADO.NET [C++], marshaling VARIANT types
+- VARIANT
 ms.assetid: 67a180a7-5691-48ab-8d85-7f75a68dde91
-caps.latest.revision: 10
-caps.handback.revision: 8
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "10"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 166116f54882048f3cd763b2f61e6b4fd56e5357
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/24/2017
 ---
-# Практическое руководство. Маршалинг VARIANT для ADO.NET (C++/CLI)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-В данном разделе описывается способ добавления машинного `VARIANT` в базу данных, а также способа маршалирования <xref:System.Object?displayProperty=fullName> из базы данных в машинный `VARIANT`.  
+# <a name="how-to-marshal-a-variant-for-adonet-ccli"></a>Практическое руководство. Маршалинг VARIANT для ADO.NET (C++/CLI)
+Показано, как добавить собственный `VARIANT` в базу данных, а также каким образом следует маршалировать <xref:System.Object?displayProperty=fullName> из базы данных в собственную `VARIANT`.  
   
-## Пример  
- В данном примере класс DatabaseClass создается для взаимодействия с объектом <xref:System.Data.DataTable> ADO.NET.  Обратите внимание, что этот класс должен представлять собой исходный класс C\+\+ `class` \(по сравнению с `ref class` или `value class`\).  Это необходимо, поскольку данный класс будет использоваться в машинном коде, в котором применение управляемых типов недопустимо.  Данный класс будет компилироваться для среды CLR в соответствии с директивой `#pragma managed`, предшествующей объявлению класса.  Дополнительные сведения об этой директиве см. в разделе [managed, unmanaged](../preprocessor/managed-unmanaged.md).  
+## <a name="example"></a>Пример  
+ В этом примере класса DatabaseClass создания класса для взаимодействия с ADO.NET <xref:System.Data.DataTable> объекта. Обратите внимание, что этот класс машинного кода C++ `class` (по сравнению с `ref class` или `value class`). Это необходимо, так как мы будем использовать этот класс из машинного кода, а управляемые типы нельзя использовать в машинном коде. Этот класс будет компилироваться для среды CLR в соответствии с `#pragma managed` директивы, предшествующие объявлению класса. Дополнительные сведения об этой директиве см. в разделе [управляемые, неуправляемые](../preprocessor/managed-unmanaged.md).  
   
- Обратите внимание на закрытый член класса DatabaseClass: `gcroot<DataTable ^> table`.  Поскольку собственные типы не могут содержать управляемые типы, необходимо использовать ключевое слово `gcroot`.  Дополнительные сведения о `gcroot` см. в разделе [Практическое руководство. Объявление дескрипторов в собственных типах](../dotnet/how-to-declare-handles-in-native-types.md).  
+ Обратите внимание, закрытый член класса класса DatabaseClass: `gcroot<DataTable ^> table`. Поскольку собственные типы не могут содержать управляемые типы `gcroot` ключевое слово не требуется. Дополнительные сведения о `gcroot`, в разделе [как: объявить дескрипторов в собственных типов](../dotnet/how-to-declare-handles-in-native-types.md).  
   
- Остальная часть кода в данном примере представляет собой машинный код C\+\+ в соответствии с директивой `#pragma unmanaged`, предшествующей `main`.  В данном примере создается новый экземпляр класса DatabaseClass, а также вызываются его методы для создания таблицы и добавления в нее нескольких строк.  Обратите внимание, что машинные типы `VARIANT` передаются как значения для столбца базы данных ObjectCol.  Внутри класса DatabaseClass эти типы `VARIANT` преобразуются в управляемые объекты с помощью механизма маршалинга пространства имен <xref:System.Runtime.InteropServices?displayProperty=fullName>.  В частности, используется метод <xref:System.Runtime.InteropServices.Marshal.GetObjectForNativeVariant%2A> для маршалинга `VARIANT` в <xref:System.Object> и метод <xref:System.Runtime.InteropServices.Marshal.GetNativeVariantForObject%2A> — для маршалинга <xref:System.Object> в `VARIANT`.  
+ Остальная часть кода в данном примере — машинного кода C++, как указано в `#pragma unmanaged` директиву перед `main`. В этом примере мы создания нового экземпляра класса DatabaseClass и вызвав его методы, чтобы создать таблицу и заполнить некоторые строки в таблице. Обратите внимание, что машинные `VARIANT` типы передаются как значения для столбца базы данных ObjectCol. Внутри класса DatabaseClass эти `VARIANT` типы маршалируются в управляемые объекты с помощью механизма маршалинга <xref:System.Runtime.InteropServices?displayProperty=fullName> пространства имен. В частности, метод <xref:System.Runtime.InteropServices.Marshal.GetObjectForNativeVariant%2A> используется для маршалирования `VARIANT` для <xref:System.Object>, а также метод <xref:System.Runtime.InteropServices.Marshal.GetNativeVariantForObject%2A> используется для маршалирования <xref:System.Object> для `VARIANT`.  
   
 ```  
 // adonet_marshal_variant.cpp  
@@ -150,22 +149,25 @@ int main()
 }  
 ```  
   
-  **ObjectCol: это строка BSTR в объекте VARIANT.**  
-**ObjectCol: 42**   
-## Компиляция кода  
+```Output  
+ObjectCol: This is a BSTR in a VARIANT.  
+ObjectCol: 42  
+```  
   
--   Чтобы скомпилировать код из командной строки, сохраните пример кода в файл adonet\_marshal\_variant.cpp и введите нижеуказанный оператор:  
+## <a name="compiling-the-code"></a>Компиляция кода  
+  
+-   Чтобы скомпилировать код из командной строки, сохраните пример кода в файл adonet_marshal_variant.cpp и введите следующую инструкцию:  
   
     ```  
     cl /clr /FU System.dll /FU System.Data.dll /FU System.Xml.dll adonet_marshal_variant.cpp  
     ```  
   
-## Безопасность платформы .NET Framework  
- Дополнительные сведения о вопросах безопасности, связанные с ADO.NET, см. в разделе [Защита приложений ADO.NET](../Topic/Securing%20ADO.NET%20Applications.md).  
+## <a name="net-framework-security"></a>Безопасность платформы .NET Framework  
+ Сведения о вопросах безопасности, связанные с ADO.NET см. в разделе [защита приложений ADO.NET](/dotnet/framework/data/adonet/securing-ado-net-applications).  
   
-## См. также  
+## <a name="see-also"></a>См. также  
  <xref:System.Runtime.InteropServices>   
- [Доступ к данным](../dotnet/data-access-using-adonet-cpp-cli.md)   
- [ADO.NET](../Topic/ADO.NET.md)   
- [Interoperability](http://msdn.microsoft.com/ru-ru/afcc2e7d-3f32-48d2-8141-1c42acf29084)   
- [Взаимодействие исходного кода и платформы.NET](../Topic/Native%20and%20.NET%20Interoperability.md)
+ [Доступ к данным с помощью ADO.NET (C + +/ CLI)](../dotnet/data-access-using-adonet-cpp-cli.md)   
+ [ADO.NET](/dotnet/framework/data/adonet/index)   
+ [Взаимодействие](http://msdn.microsoft.com/en-us/afcc2e7d-3f32-48d2-8141-1c42acf29084)   
+ [Взаимодействие исходного кода и платформы.NET](../dotnet/native-and-dotnet-interoperability.md)

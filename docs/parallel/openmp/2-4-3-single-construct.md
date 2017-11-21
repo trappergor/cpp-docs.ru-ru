@@ -1,51 +1,49 @@
 ---
-title: "2.4.3 single Construct | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
+title: "2.4.3 одна конструкция | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
 ms.assetid: 15c180cd-e462-4b41-bf8c-cb8b1afb1a9b
-caps.latest.revision: 7
-caps.handback.revision: 7
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "7"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 3efb6c833227140440d327ea47906f8239769689
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/24/2017
 ---
-# 2.4.3 single Construct
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-**Одинарный** директива задает конструкцию, которая указывает, что связанный структурированном блоке выполняется только одним потоком в рабочей группе \(не обязательно\) главном потоке.  Синтаксис  **Одинарный** директива выглядит следующим образом:  
+# <a name="243-single-construct"></a>2.4.3 Конструкция single
+**Одного** директива идентифицирует конструкцию, которая указывает, что связанный структурированный блок выполняется только одним потоком в группе (не обязательно главного потока). Синтаксис **одного** директивы таков:  
   
 ```  
-#pragma omp single [clause[[,] clause] ...] new-line  
-   structured-block  
+#pragma omp single [clause[[,] clause] ...] new-linestructured-block  
 ```  
   
- Предложение одно из следующих действий:  
+ Предложение является одним из следующих:  
   
- **private \(**список переменных**\)**  
+ **закрытый (** *списка переменной* **)**  
   
- **\(firstprivate**список переменных**\)**  
+ **firstprivate (** *списка переменной* **)**  
   
- **\(copyprivate**список переменных**\)**  
+ **copyprivate (** *списка переменной* **)**  
   
  **nowait**  
   
- Неявный барьера после **Одинарный** конструкция, если a  **nowait** предложение distinct.  
+ Отсутствует неявное барьера после **один** создать, если **nowait** указано предложение.  
   
- Ограничения **Одинарный** директива выглядит следующим образом:  
+ Ограничения для **одного** директивы, следующим образом:  
   
--   Только одного **nowait** предложение может отображаться на a  **Одинарный** директива.  
+-   Только один **nowait** предложение могут отображаться на **одного** директивы.  
   
--   **copyprivate** предложение следует использовать с  **nowait** предложение.  
+-   **Copyprivate** предложение не должны использоваться с **nowait** предложения.  
   
-## Перекрестные ссылки:  
+## <a name="cross-references"></a>Перекрестные ссылки:  
   
--   **private**"  **firstprivate**и  **copyprivate** предложения см. в разделе  [Раздел 2.7.2](../Topic/2.7.2%20Data-Sharing%20Attribute%20Clauses.md) на странице 25.
+-   **закрытый**, **firstprivate**, и **copyprivate** предложений, в разделе [раздел 2.7.2](../../parallel/openmp/2-7-2-data-sharing-attribute-clauses.md) на странице 25.

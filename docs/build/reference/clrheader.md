@@ -1,55 +1,56 @@
 ---
-title: "/CLRHEADER | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "/CLRHEADER"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "/CLRHEADER - параметр программы dumpbin"
-  - "CLRHEADER - параметр (программа dumpbin)"
-  - "-CLRHEADER - параметр (программа dumpbin)"
+title: "-CLRHEADER | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: /CLRHEADER
+dev_langs: C++
+helpviewer_keywords:
+- -CLRHEADER dumpbin option
+- /CLRHEADER dumpbin option
+- CLRHEADER dumpbin option
 ms.assetid: cf73424f-4541-47e2-b94e-69b95266ef2a
-caps.latest.revision: 9
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 9
+caps.latest.revision: "9"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: 699fa0e97236b1c5cf207e73dcbb39156bfbb130
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/24/2017
 ---
-# /CLRHEADER
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="clrheader"></a>/CLRHEADER
 ```  
 /CLRHEADER file  
 ```  
   
-## Заметки  
- Здесь:  
+## <a name="remarks"></a>Примечания  
+ где:  
   
  `file`  
- Файл образа, построенный с использованием параметра [\/clr](../../build/reference/clr-common-language-runtime-compilation.md).  
+ Файл изображения созданного с помощью [/CLR](../../build/reference/clr-common-language-runtime-compilation.md).  
   
-## Заметки  
- Параметр CLRHEADER отображает сведения о заголовках .NET, используемых в любой управляемой программе.  При этом выводится местоположение и размер \(в байтах\) заголовка .NET и разделов в заголовке.  
+## <a name="remarks"></a>Примечания  
+ CLRHEADER отображает сведения о заголовках .NET, используемых в любом управляемом приложении. Выходные данные показывают расположение и размер в байтах заголовка .NET и разделов в заголовке.  
   
- В файлах, созданных с использованием параметра компилятора [\/GL](../../build/reference/gl-whole-program-optimization.md), может использоваться только параметр DUMPBIN [\/HEADERS](../../build/reference/headers.md).  
+ Только [/Headers](../../build/reference/headers.md) параметр программы DUMPBIN доступна для использования в файлах, созданных с помощью [/GL](../../build/reference/gl-whole-program-optimization.md) параметр компилятора.  
   
- Когда параметр \/CLRHEADER применяется для файла, скомпилированного с параметром \/clr, в выводе программы dumpbin будет присутствовать раздел **clr Header:**.  Значение аргумента **flags** указывает, какой именно параметр \/clr был использован:  
+ Когда параметр/CLRHEADER применяется для файла, который был скомпилирован с параметром/CLR, будет **заголовка clr:** раздела dumpbin выходные данные.  Значение **флаги** указывает, использовалась/CLR-параметр:  
   
--   0 — \/clr \(образ может содержать машинный код\).  
+-   0 — / CLR (образ может содержать машинный код).  
   
--   1 — \/clr:safe \(образ содержит только код MSIL, может работать на любой платформе CLR и, возможно, поддается проверке\).  
+-   1 — / CLR: safe (образ содержит код MSIL, только работать на любой платформе CLR и возможно, поддается проверке).  
   
--   3 — \/clr:pure \(образ содержит только код MSIL, но может работать только на платформах x86\).  
+-   3 — / CLR: pure (образ содержит только код MSIL, но может работать на x86 только платформы).  
   
- Также существует возможность программной проверки того, был ли образ построен для среды CLR.  Для получения дополнительной информации см. [Практическое руководство. Машинный код или среда CLR: определение цели созданного изображения](../Topic/How%20to:%20Determine%20if%20an%20Image%20is%20Native%20or%20CLR.md).  
+ Программным путем можно проверить, если изображение было создано для среды CLR.  Дополнительные сведения см. в разделе [как: определить, является ли изображение машинный код или CLR](../../dotnet/how-to-determine-if-an-image-is-native-or-clr.md).  
   
-## См. также  
+ Параметры компилятора **/CLR: pure** и **/CLR: safe** в Visual Studio 2015 не рекомендуется использовать.  
+  
+## <a name="see-also"></a>См. также  
  [Параметры DUMPBIN](../../build/reference/dumpbin-options.md)

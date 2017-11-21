@@ -1,70 +1,76 @@
 ---
-title: "Практическое руководство. Использование класса combinable для повышения производительности | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Класс combinable, пример"
-  - "повышение параллельной производительности с помощью класса combinable [среда выполнения с параллелизмом]"
+title: "Как: использование класса combinable для повышения производительности | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- combinable class, example
+- improving parallel performance with combinable [Concurrency Runtime]
 ms.assetid: fa730580-1c94-4b2d-8aec-57c91dc0497e
-caps.latest.revision: 17
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 14
+caps.latest.revision: "17"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 7bd035b74988758142fe9d0fedc43946f35c2d58
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/24/2017
 ---
-# Практическое руководство. Использование класса combinable для повышения производительности
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-В этом примере показано, как использовать класс [concurrency::combinable](../../parallel/concrt/reference/combinable-class.md), чтобы вычислять сумму простых чисел в объекте [std::array](../../standard-library/array-class-stl.md).  Класс `combinable` повышает производительность за счет исключения совместно используемого состояния.  
+# <a name="how-to-use-combinable-to-improve-performance"></a>Практическое руководство. Использование класса combinable для повышения производительности
+В этом примере показано, как использовать [concurrency::combinable](../../parallel/concrt/reference/combinable-class.md) класса для вычисления суммы чисел в [std::array](../../standard-library/array-class-stl.md) объекта, которые являются простыми. `combinable` Класс повысить производительность, устраняя общее состояние.  
   
 > [!TIP]
->  В некоторых случаях параллельное сопоставление \([concurrency::parallel\_transform](../Topic/parallel_transform%20Function.md)\) и снижение \([concurrency:: parallel\_reduce](../Topic/parallel_reduce%20Function.md)\) может предоставлять увеличение производительности по сравнению с `combinable`.  Пример, использующий операции сопоставления и снижения для получения тех же результатов, что и в этом примере, см. в разделе [Параллельные алгоритмы](../Topic/Parallel%20Algorithms.md).  
+>  В некоторых случаях параллельное сопоставление ([concurrency::parallel_transform](reference/concurrency-namespace-functions.md#parallel_transform)) и уменьшения ([параллелизма:: parallel_reduce](reference/concurrency-namespace-functions.md#parallel_reduce)) может дать выигрыш в производительности по `combinable`. Пример сопоставления использует, а также уменьшить объем операций, чтобы получить те же результаты, как в этом примере, в разделе [параллельные алгоритмы](../../parallel/concrt/parallel-algorithms.md).  
   
-## Пример  
- В следующем примере функция [std::accumulate](../Topic/accumulate.md) используется для вычисления суммы элементов массива, которые являются простыми числами.  В этом примере `a` является объектом `array`, а функция `is_prime` определяет, является ли входное значение простым числом.  
+## <a name="example"></a>Пример  
+ В следующем примере используется [std::accumulate](../../standard-library/numeric-functions.md#accumulate) функции для вычисления суммы элементов массива, которые являются простыми числами. В этом примере `a` — `array` объекта и `is_prime` функция определяет, является ли входное значение простым.  
   
- [!code-cpp[concrt-parallel-sum-of-primes#1](../../parallel/concrt/codesnippet/CPP/how-to-use-combinable-to-improve-performance_1.cpp)]  
+ [!code-cpp[concrt-parallel-sum-of-primes#1](../../parallel/concrt/codesnippet/cpp/how-to-use-combinable-to-improve-performance_1.cpp)]  
   
-## Пример  
- В следующем примере демонстрируется наивный способ параллельного выполнения предыдущего примера.  В этом примере алгоритм [concurrency::parallel\_for\_each](../Topic/parallel_for_each%20Function.md) используется для параллельной обработки массива, а объект [concurrency::critical\_section](../../parallel/concrt/reference/critical-section-class.md) используется для синхронизации доступа к переменной `prime_sum`.  Этот пример не является масштабируемым, так как каждый поток должен ожидать, пока станет доступным совместно используемый ресурс.  
+## <a name="example"></a>Пример  
+
+ В следующем примере показано упрощенный способ параллельного выполнения предыдущего примера. В этом примере используется [concurrency::parallel_for_each](reference/concurrency-namespace-functions.md#parallel_for_each) алгоритм для обработки массиве в параллельном режиме и [concurrency::critical_section](../../parallel/concrt/reference/critical-section-class.md) объект для синхронизации доступа к `prime_sum` переменной . В этом примере не масштабируется, так как каждый поток должен ждать общий ресурс станет доступным.  
   
- [!code-cpp[concrt-parallel-sum-of-primes#2](../../parallel/concrt/codesnippet/CPP/how-to-use-combinable-to-improve-performance_2.cpp)]  
+ [!code-cpp[concrt-parallel-sum-of-primes#2](../../parallel/concrt/codesnippet/cpp/how-to-use-combinable-to-improve-performance_2.cpp)]  
   
-## Пример  
- В следующем примере объект `combinable` используется повышения производительности предыдущего примера.  В этом примере исключается необходимость в объектах синхронизации; он является масштабируемым, так как объект `combinable` позволяет каждому потоку выполнять свою задачу независимо.  
+## <a name="example"></a>Пример  
+ В следующем примере используется `combinable` объекта для повышения производительности в предыдущем примере. В этом примере устраняет необходимость в объектах синхронизации; он является масштабируемым, так как `combinable` объекта позволяет каждому потоку выполнять свою задачу независимо друг от друга.  
   
- Объект `combinable` обычно используется в два этапа.  Сначала для создания последовательности мелких фрагментов вычислений для параллельной обработки.  Затем для объединения \(или сокращения\) вычислений в конечный результат.  В этом примере для получения ссылки на локальную сумму используется метод [concurrency::combinable::local](../Topic/combinable::local%20Method.md).  Затем используются метод [concurrency::combinable::combine](../Topic/combinable::combine%20Method.md) и объект [std::plus](../../standard-library/plus-struct.md), чтобы объединить вычисления в конечный результат.  
+ Объект `combinable` обычно используется в два этапа. Во-первых для создания последовательности детализированные вычисления, выполняя работу в параллельном режиме. Затем объединения (или уменьшить) вычислений в конечный результат. В этом примере используется [concurrency::combinable::local](reference/combinable-class.md#local) метод для получения ссылки на локальную сумму. Затем он использует [Concurrency::combinable::](reference/combinable-class.md#combine) метод и [std::plus](../../standard-library/plus-struct.md) объекта для объединения локальных вычислений в конечный результат.  
+
   
- [!code-cpp[concrt-parallel-sum-of-primes#3](../../parallel/concrt/codesnippet/CPP/how-to-use-combinable-to-improve-performance_3.cpp)]  
+ [!code-cpp[concrt-parallel-sum-of-primes#3](../../parallel/concrt/codesnippet/cpp/how-to-use-combinable-to-improve-performance_3.cpp)]  
   
-## Пример  
- В следующем полном примере сумма простых чисел вычисляется как последовательно, так и параллельно.  В этом примере на консоль выводится продолжительность выполнения этих двух вычислений.  
+## <a name="example"></a>Пример  
+ Следующий пример вычисляет сумму оба простых чисел последовательно и параллельно. Пример выводит на консоль время, необходимое на выполнение обоих вычислений.  
   
- [!code-cpp[concrt-parallel-sum-of-primes#4](../../parallel/concrt/codesnippet/CPP/how-to-use-combinable-to-improve-performance_4.cpp)]  
+ [!code-cpp[concrt-parallel-sum-of-primes#4](../../parallel/concrt/codesnippet/cpp/how-to-use-combinable-to-improve-performance_4.cpp)]  
   
  В следующем примере показаны выходные данные, полученные на четырехпроцессорном компьютере.  
   
-  **1709600813**  
-**последовательное время: 6178 мс**  
-**1709600813**  
-**параллельное время: 1638 мс**   
-## Компиляция кода  
- Чтобы скомпилировать код, скопируйте и вставьте его в проект Visual Studio или в файл с именем `parallel-sum-of-primes.cpp`, затем выполните в окне командной строки Visual Studio следующую команду.  
+```Output  
+1709600813  
+serial time: 6178 ms  
+ 
+1709600813  
+parallel time: 1638 ms  
+```  
   
- **cl.exe \/EHsc parallel\-sum\-of\-primes.cpp**  
+## <a name="compiling-the-code"></a>Компиляция кода  
+ Чтобы скомпилировать код, скопируйте его и затем вставьте его в проект Visual Studio или в файл с именем `parallel-sum-of-primes.cpp` , а затем запустите следующую команду в окне командной строки Visual Studio.  
   
-## Отказоустойчивость  
- Пример, использующий операции сопоставление и снижения, чтобы получить те же результаты, см. в разделе [Параллельные алгоритмы](../Topic/Parallel%20Algorithms.md).  
+ **CL.exe/EHsc параллельного sum-of-primes.cpp**  
   
-## См. также  
+## <a name="robust-programming"></a>Отказоустойчивость  
+ Пример сопоставления использует, а также уменьшить объем операций можно получить те же результаты, в разделе [параллельные алгоритмы](../../parallel/concrt/parallel-algorithms.md).  
+  
+## <a name="see-also"></a>См. также  
  [Параллельные контейнеры и объекты](../../parallel/concrt/parallel-containers-and-objects.md)   
  [Класс combinable](../../parallel/concrt/reference/combinable-class.md)   
- [Класс critical\_section](../../parallel/concrt/reference/critical-section-class.md)
+ [Класс critical_section](../../parallel/concrt/reference/critical-section-class.md)

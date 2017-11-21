@@ -1,66 +1,66 @@
 ---
-title: "/vmb, /vmg (метод представления) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "/vmb"
-  - "/vmg"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "/vmb - параметр компилятора [C++]"
-  - "/vmg - параметр компилятора [C++]"
-  - "метод представления - параметры компилятора [C++]"
-  - "vmb - параметр компилятора [C++]"
-  - "-vmb - параметр компилятора [C++]"
-  - "vmg - параметр компилятора [C++]"
-  - "-vmg - параметр компилятора [C++]"
+title: "-vmb, - vmg (метод представления) | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- /vmb
+- /vmg
+dev_langs: C++
+helpviewer_keywords:
+- vmb compiler option [C++]
+- -vmg compiler option [C++]
+- vmg compiler option [C++]
+- -vmb compiler option [C++]
+- /vmb compiler option [C++]
+- representation method compiler options [C++]
+- /vmg compiler option [C++]
 ms.assetid: ecdb391c-7dab-40b1-916b-673d10889fd4
-caps.latest.revision: 9
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 9
+caps.latest.revision: "9"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: 061943dc029a566b7bc636a2bb4b37e276413245
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/24/2017
 ---
-# /vmb, /vmg (метод представления)
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Выберите метод, используемый компилятором для представления указателей членам класса.  
+# <a name="vmb-vmg-representation-method"></a>/vmb, /vmg (метод представления)
+Выберите метод, используемый компилятором для представления указателей на члены класса.  
   
- Следует использовать параметр **\/vmb**, если класс определяется перед объявлением указателя на член класса.  
+ Используйте **/vmb** Если всегда определении класса перед объявлением указателя на член класса.  
   
- Следует использовать параметр **\/vmg** для объявления указателя на член класса перед определением самого класса.  Это может понадобиться при определении членов в двух различных классах, ссылающихся друг на друга.  В этом случае необходимо указать ссылку на один класс перед его объявлением.  
+ Используйте **/vmg** для объявления указателя на член класса перед определением класса. Это может понадобиться при определении членов в двух различных классах, которые ссылаются друг на друга. Для таких взаимно ссылающейся классов одного класса следует вызывать до ее определения.  
   
-## Синтаксис  
+## <a name="syntax"></a>Синтаксис  
   
 ```  
 /vmb  
 /vmg  
 ```  
   
-## Заметки  
- Можно также использовать [pointers\_to\_members](../Topic/pointers_to_members.md) или [Ключевые слова наследования](../../cpp/inheritance-keywords.md) в коде, чтобы задать представление указателя.  
+## <a name="remarks"></a>Примечания  
+ Можно также использовать [pointers_to_members](../../preprocessor/pointers-to-members.md) или [ключевые слова наследования](../../cpp/inheritance-keywords.md) в коде, чтобы указать представление указателя.  
   
-### Установка данного параметра компилятора в среде разработки Visual Studio  
+### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Установка данного параметра компилятора в среде разработки Visual Studio  
   
-1.  Откройте диалоговое окно **Страницы свойств** проекта.  Дополнительные сведения см. в разделе [Открытие свойств страниц проекта](../../misc/how-to-open-project-property-pages.md).  
+1.  Откройте диалоговое окно **Страницы свойств** проекта. Дополнительные сведения см. в разделе [работа со свойствами проекта](../../ide/working-with-project-properties.md).  
   
-2.  Откройте папку **C\/C\+\+**.  
+2.  Откройте папку **C/C++** .  
   
-3.  Выберите страницу свойств **Командная строка**.  
+3.  Выберите страницу свойств **Командная строка** .  
   
-4.  Введите параметр компилятора в поле **Дополнительные параметры**.  
+4.  Введите параметр компилятора в поле **Дополнительные параметры** .  
   
-### Установка данного параметра компилятора программным способом  
+### <a name="to-set-this-compiler-option-programmatically"></a>Установка данного параметра компилятора программным способом  
   
 -   См. раздел <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.AdditionalOptions%2A>.  
   
-## См. также  
+## <a name="see-also"></a>См. также  
  [Параметры компилятора](../../build/reference/compiler-options.md)   
- [Настройка параметров компилятора](../Topic/Setting%20Compiler%20Options.md)
+ [Настройка параметров компилятора](../../build/reference/setting-compiler-options.md)

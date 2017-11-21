@@ -1,39 +1,36 @@
 ---
-title: "Структура InterfaceTraits | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "implements/Microsoft::WRL::Details::InterfaceTraits"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "InterfaceTraits - структура"
+title: "Структура InterfaceTraits | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: implements/Microsoft::WRL::Details::InterfaceTraits
+dev_langs: C++
+helpviewer_keywords: InterfaceTraits structure
 ms.assetid: ede0c284-19a7-4892-9738-ff3da4923d0a
-caps.latest.revision: 5
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 5
+caps.latest.revision: "5"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 494942ce3c50889cae7a8867dc2b86ed6a609313
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/24/2017
 ---
-# Структура InterfaceTraits
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Предназначено для поддержки инфраструктуры WRL, а не для непосредственного использования в коде.  
+# <a name="interfacetraits-structure"></a>InterfaceTraits - структура
+Поддерживает инфраструктуру WRL и не предназначен для использования непосредственно из программного кода.  
   
-## Синтаксис  
+## <a name="syntax"></a>Синтаксис  
   
 ```  
 template<  
    typename I0  
 >  
 struct __declspec(novtable) InterfaceTraits;  
-  
 template<  
    typename CloakedType  
 >  
@@ -43,49 +40,49 @@ template<>
 struct __declspec(novtable) InterfaceTraits<Nil>;  
 ```  
   
-#### Параметры  
+#### <a name="parameters"></a>Параметры  
  `I0`  
  Имя интерфейса.  
   
  `CloakedType`  
- Для RuntimeClass, Implements и ChainInterfaces, интерфейс, который не может быть в списке поддерживаемых идентификаторов интерфейса.  
+ Для RuntimeClass, Implements и ChainInterfaces интерфейс, который не будет в списке поддерживаемых идентификаторов интерфейсов.  
   
-## Примечания  
+## <a name="remarks"></a>Примечания  
  Реализует общие характеристики интерфейса.  
   
- Второй шаблон является специализацией для замаскированных интерфейсов.  Третий шаблон является специализацией для параметров Nil.  
+ Второй шаблон является специализацией замаскированных интерфейсов. Третий шаблон является специализацией Nil параметров.  
   
-## Члены  
+## <a name="members"></a>Члены  
   
-### Общедоступные Typedefs  
+### <a name="public-typedefs"></a>Общедоступные определения типов  
   
 |Имя|Описание|  
-|---------|--------------|  
+|----------|-----------------|  
 |`Base`|Синоним для параметра шаблона `I0`.|  
   
-### Открытые методы  
+### <a name="public-methods"></a>Открытые методы  
   
 |Имя|Описание|  
-|---------|--------------|  
-|[Метод InterfaceTraits::CanCastTo](../Topic/InterfaceTraits::CanCastTo%20Method.md)|Показывает, можно ли определенный указатель привести к указателю на `Base`.|  
+|----------|-----------------|  
+|[Метод InterfaceTraits::CanCastTo](../windows/interfacetraits-cancastto-method.md)|Указывает ли заданный указатель может быть приведен к указателю на `Base`.|  
 |[Метод InterfaceTraits::CastToBase](../windows/interfacetraits-casttobase-method.md)|Приводит определенный указатель к указателю на `Base`.|  
-|[Метод InterfaceTraits::CastToUnknown](../windows/interfacetraits-casttounknown-method.md)|Приводит определенный указатель к указателю на IUnknown.|  
-|[Метод InterfaceTraits::FillArrayWithIid](../windows/interfacetraits-fillarraywithiid-method.md)|Присваивает идентификатор интерфейса `Base` к элементу массива, указанному аргументом индекса.|  
-|[Метод InterfaceTraits::Verify](../Topic/InterfaceTraits::Verify%20Method.md)|Проверяет, что Base наследуется правильно.|  
+|[Метод InterfaceTraits::CastToUnknown](../windows/interfacetraits-casttounknown-method.md)|Приводит определенный указатель на указатель на IUnknown.|  
+|[Метод InterfaceTraits::FillArrayWithIid](../windows/interfacetraits-fillarraywithiid-method.md)|Назначает идентификатор интерфейса `Base` на элемент массива, заданного аргументом индекса.|  
+|[Метод InterfaceTraits::Verify](../windows/interfacetraits-verify-method.md)|Проверяет, что базовый правильно производный.|  
   
-### Открытые константы  
+### <a name="public-constants"></a>Открытые константы  
   
 |Имя|Описание|  
-|---------|--------------|  
-|[Константа InterfaceTraits::IidCount](../Topic/InterfaceTraits::IidCount%20Constant.md)|Содержит количество идентификаторов интерфейса, связанных с текущим объектом InterfaceTraits.|  
+|----------|-----------------|  
+|[Константа InterfaceTraits::IidCount](../windows/interfacetraits-iidcount-constant.md)|Содержит количество идентификаторов, связанного с текущим объектом InterfaceTraits интерфейса.|  
   
-## Иерархия наследования  
+## <a name="inheritance-hierarchy"></a>Иерархия наследования  
  `InterfaceTraits`  
   
-## Требования  
+## <a name="requirements"></a>Требования  
  **Заголовок:** implements.h  
   
- **Пространство имен:** Microsoft::WRL::Details  
+ **Пространство имен:** Microsoft::wrl:: Details  
   
-## См. также  
+## <a name="see-also"></a>См. также  
  [Пространство имен Microsoft::WRL::Details](../windows/microsoft-wrl-details-namespace.md)

@@ -1,53 +1,52 @@
 ---
-title: "default (OpenMP) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "default"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "default OpenMP clause"
-  - "defaults, OpenMP clause"
+title: "по умолчанию (OpenMP) | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: default
+dev_langs: C++
+helpviewer_keywords:
+- default OpenMP clause
+- defaults, OpenMP clause
 ms.assetid: 96055106-a8f0-40b3-8319-e412b6e07bf8
-caps.latest.revision: 8
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: caafb7818c32dad7b21ac7a05d10f77753c1da73
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/24/2017
 ---
-# default (OpenMP)
-[!INCLUDE[vs2017banner](../../../assembler/inline/includes/vs2017banner.md)]
-
-Определяет расширение функциональности unscoped переменных в параллельной области.  
+# <a name="default-openmp"></a>default (OpenMP)
+Задает поведение неограниченного переменных в параллельной области.  
   
-## Синтаксис  
+## <a name="syntax"></a>Синтаксис  
   
 ```  
 default(shared | none)  
 ```  
   
-## Заметки  
- `shared`в результате, если  `default` предложение не указано, не означает, что любая переменная обрабатывается в параллельной области если было задано off  [shared](../../../parallel/openmp/reference/shared-openmp.md) предложение.  `none` означает, что все переменные, используемые в параллельной области, которые выполняются с  [private](../../../parallel/openmp/reference/private-openmp.md)"  [shared](../../../parallel/openmp/reference/shared-openmp.md)"  [reduction](../../../parallel/openmp/reference/reduction.md)"  [firstprivate](../Topic/firstprivate.md)или  [lastprivate](../../../parallel/openmp/reference/lastprivate.md) предложения вызовет ошибку компилятора.  
+## <a name="remarks"></a>Примечания  
+ `shared`, который фактически является Если `default` предложение не указано, означает, что любой переменной в параллельной области будут рассматриваться, как если бы он был указан с [общего](../../../parallel/openmp/reference/shared-openmp.md) предложения. `none`означает, что все переменные, используемые в параллельной области, не ограничены областью с [закрытый](../../../parallel/openmp/reference/private-openmp.md), [общего](../../../parallel/openmp/reference/shared-openmp.md), [сокращения](../../../parallel/openmp/reference/reduction.md), [firstprivate](../../../parallel/openmp/reference/firstprivate.md), или [lastprivate](../../../parallel/openmp/reference/lastprivate.md) предложение приведет к ошибке компилятора.  
   
- `default` применяется к следующим рекомендациям:  
+ `default`применяется к следующие директивы:  
   
 -   [parallel](../../../parallel/openmp/reference/parallel.md)  
   
--   [for](../Topic/for%20\(OpenMP\).md)  
+-   [for](../../../parallel/openmp/reference/for-openmp.md)  
   
--   [sections](../../../parallel/openmp/reference/sections-openmp.md)  
+-   [разделы](../../../parallel/openmp/reference/sections-openmp.md)  
   
- Дополнительные сведения см. в разделе [2.7.2.5 default](../../../parallel/openmp/2-7-2-5-default.md).  
+ Дополнительные сведения см. в разделе [2.7.2.5 по умолчанию](../../../parallel/openmp/2-7-2-5-default.md).  
   
-## Пример  
- См. [private](../../../parallel/openmp/reference/private-openmp.md) пример использования  `default`.  
+## <a name="example"></a>Пример  
+ В разделе [закрытый](../../../parallel/openmp/reference/private-openmp.md) пример использования `default`.  
   
-## См. также  
- [Clauses](../../../parallel/openmp/reference/openmp-clauses.md)
+## <a name="see-also"></a>См. также  
+ [Предложения](../../../parallel/openmp/reference/openmp-clauses.md)

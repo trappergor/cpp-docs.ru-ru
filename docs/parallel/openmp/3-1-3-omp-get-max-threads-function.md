@@ -1,34 +1,33 @@
 ---
-title: "3.1.3 omp_get_max_threads Function | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
+title: "3.1.3 функция omp_get_max_threads | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
 ms.assetid: 5548897c-546e-4d19-b37b-a76f6b30a0a9
-caps.latest.revision: 8
-caps.handback.revision: 8
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "8"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: e021f0873aa94f53a1218a3278a744a0c7740e65
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/24/2017
 ---
-# 3.1.3 omp_get_max_threads Function
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-**omp\_get\_max\_threads** функция возвращает целое число, которое гарантирует, что хотя бы как большим, как количество потоков, которые используются для формирования команды при параллельной области без a  **num\_threads** предложение было быть столкнутым на этом этапе в коде.  Формат следующий:  
+# <a name="313-ompgetmaxthreads-function"></a>3.1.3 Функция omp_get_max_threads
+**Omp_get_max_threads** функция возвращает целое число, которое гарантированно будет по крайней мере число потоков, которые используются для формирования команды при параллельной области без **num_threads** предложения бы быть обнаружены в этой точке в коде. Он следующий:  
   
 ```  
 #include <omp.h>  
 int omp_get_max_threads(void);  
 ```  
   
- Следующее express нижнюю границу на значении omp\_get\_max\_threads.  
+ Следующие выражает нижняя граница диапазона на значении **omp_get_max_threads**:  
   
 ```  
   
@@ -37,16 +36,16 @@ threads-used-for-next-team
   
 ```  
   
- Обратите внимание, что если последующая параллельной области использует **num\_threads** предложение, чтобы запросить определенное количество потоков, гарантии на нижней границы результата  **omp\_get\_max\_threads** не существует длинное не содержит.  
+ Обратите внимание, что если последующие параллельной области использует **num_threads** предложений, чтобы запросить определенное число потоков, гарантии на нижней границей, равной результат **omp_get_max_threads** не содержит много.  
   
- Omp\_get\_max\_threads возвращаемое значение функции могут быть использованы для динамического выбора наличии соответствующего места для всех потоков в рабочей группе сформированной в последующей параллельной области.  
+ **Omp_get_max_threads** возвращаемое значение функции можно использовать для динамического выделения достаточно дискового пространства для всех потоков в формирование в последующих параллельной области группы.  
   
-## Перекрестные ссылки:  
+## <a name="cross-references"></a>Перекрестные ссылки:  
   
--   **omp\_get\_num\_threads** функция см. в разделе  [Раздел 3.1.2](../../parallel/openmp/3-1-2-omp-get-num-threads-function.md) на странице 37.  
+-   **omp_get_num_threads** см. в разделе [раздел 3.1.2](../../parallel/openmp/3-1-2-omp-get-num-threads-function.md) на странице 37.  
   
--   **omp\_set\_num\_threads** функция см. в разделе  [Раздел 3.1.1](../../parallel/openmp/3-1-1-omp-set-num-threads-function.md) на странице 36.  
+-   **omp_set_num_threads** см. в разделе [раздел 3.1.1](../../parallel/openmp/3-1-1-omp-set-num-threads-function.md) на стр.  
   
--   **omp\_set\_dynamic** функция см. в разделе  [Раздел 3.1.7](../../parallel/openmp/3-1-7-omp-set-dynamic-function.md) на странице 39.  
+-   **omp_set_dynamic** см. в разделе [раздел 3.1.7](../../parallel/openmp/3-1-7-omp-set-dynamic-function.md) на странице 39.  
   
--   **num\_threads** предложение см. в разделе  [Раздел 2.3](../../parallel/openmp/2-3-parallel-construct.md) на странице 8.
+-   **num_threads** предложение, в разделе [разделе 2.3](../../parallel/openmp/2-3-parallel-construct.md) на странице 8.

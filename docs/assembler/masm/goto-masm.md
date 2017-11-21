@@ -1,32 +1,30 @@
 ---
-title: "GOTO (MASM) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "goto"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "GOTO directive"
+title: "ОПЕРАТОР GOTO (MASM) | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: goto
+dev_langs: C++
+helpviewer_keywords: GOTO directive
 ms.assetid: 6a5f73e7-6784-4eae-ac52-4fc77a7f369f
-caps.latest.revision: 7
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: 896d99b2ed4abe2080e646b6a541eb1e489d2b75
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/24/2017
 ---
-# GOTO (MASM)
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Передает сборку в помеченной линии .macrolabel.  
+# <a name="goto-masm"></a>GOTO (MASM)
+Передает строку, помеченную сборки **:***macrolabel*.  
   
-## Синтаксис  
+## <a name="syntax"></a>Синтаксис  
   
 ```  
   
@@ -35,8 +33,8 @@ macrolabel
   
 ```  
   
-## Заметки  
- **GOTO** разрешает только внутри  [макроопределение](../Topic/MACRO.md)"  [ДЛЯ](../../assembler/masm/for-masm.md)"  [FORC](../Topic/FORC.md)"  [Повторение](../../assembler/masm/repeat.md)и  **ПОКА** блоки.  Метка должна быть единственной директивой на линии и должна стоять ведущим двоеточием.  
+## <a name="remarks"></a>Примечания  
+ **Оператор GOTO** разрешены только в [МАКРОС](../../assembler/masm/macro.md), [для](../../assembler/masm/for-masm.md), [FORC](../../assembler/masm/forc.md), [ПОВТОРИТЕ](../../assembler/masm/repeat.md), и **при**блоки. Метка должна быть только директивой в строке и должен предшествовать начальное двоеточие.  
   
-## См. также  
- [Directives Reference](../../assembler/masm/directives-reference.md)
+## <a name="see-also"></a>См. также  
+ [Справочник по директивам](../../assembler/masm/directives-reference.md)

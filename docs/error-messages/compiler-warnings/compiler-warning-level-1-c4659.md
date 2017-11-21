@@ -1,32 +1,30 @@
 ---
-title: "Предупреждение компилятора (уровень 1) C4659 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C4659"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C4659"
+title: "Предупреждение (уровень 1) C4659 компилятора | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords: C4659
+dev_langs: C++
+helpviewer_keywords: C4659
 ms.assetid: e29ba8db-7917-43f6-8e34-868b752279ae
-caps.latest.revision: 7
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: abaef666a5553969ab1290118b8668c50c2bba3c
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/24/2017
 ---
-# Предупреждение компилятора (уровень 1) C4659
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Директива \#pragma "pragma": при использовании зарезервированного сегмента "сегмент" поведение не определено; используйте \#pragma comment\(linker, ...\)  
+# <a name="compiler-warning-level-1-c4659"></a>Предупреждение компилятора (уровень 1) C4659
+\#Директива #pragma «pragma»: использование зарезервированного сегмента «сегмент» поведение не определено, используйте #pragma comment (linker,...)  
   
- Параметр .drectve использовался для передачи параметра компоновщику.  Вместо этого для передачи параметра компоновщика рекомендуется использовать директиву pragma [comment](../../preprocessor/comment-c-cpp.md).  
+ Параметр .drectve использовался для передачи параметра компоновщика. Вместо этого используйте директиву #pragma [комментарий](../../preprocessor/comment-c-cpp.md) для передачи параметра компоновщика.  
   
 ```  
 // C4659.cpp  

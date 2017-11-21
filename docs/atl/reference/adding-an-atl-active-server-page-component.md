@@ -1,52 +1,53 @@
 ---
-title: "Добавление ASP-компонента библиотеки ATL | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "компоненты ASP"
-  - "компоненты ASP, adding"
-  - "компоненты ATL ASP"
-  - "ATL - библиотека, компоненты ASP"
+title: "Добавление компонентов страницы активного сервера ATL | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+dev_langs: C++
+helpviewer_keywords:
+- ASP components, adding
+- ASP components
+- ATL, ASP components
+- ATL ASP components
 ms.assetid: 7be2204c-6e58-4099-8892-001b848c8987
-caps.latest.revision: 13
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 13
+caps.latest.revision: "13"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 844e38be9b182a597054b931eae81ce22621dce2
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/24/2017
 ---
-# Добавление ASP-компонента библиотеки ATL
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Чтобы добавить в проект объект библиотеки шаблонных классов ATL, проект должен быть создан как COM\-приложение ATL или как приложение MFC, поддерживающее ATL.  Приложение ATL можно создать с помощью [мастера проектов ATL](../Topic/ATL%20Project%20Wizard.md) или выбрать пункт **Добавить поддержку ATL в MFC** в диалоговом окне [Добавление класса](../../ide/add-class-dialog-box.md), или [добавить объект ATL в приложение MFC](../../mfc/reference/adding-atl-support-to-your-mfc-project.md) для реализации поддержки ATL в приложении MFC.  
+# <a name="adding-an-atl-active-server-page-component"></a>Добавление компонентов страницы активного сервера ATL
+Добавление в проект объект Active Template Library (ATL), проект должен создан как COM-приложение ATL или как приложение MFC с поддержкой ATL. Можно использовать [мастер проектов ATL](../../atl/reference/atl-project-wizard.md) для создания приложения ATL, можно выбрать **Добавление поддержки ATL в MFC** из [класс диалоговое окно Добавление](../../ide/add-class-dialog-box.md) диалоговое окно, или вы можете [добавить объект ATL в приложение MFC](../../mfc/reference/adding-atl-support-to-your-mfc-project.md) для реализации поддержки ATL в приложении MFC.  
   
- ASP\-компоненты являются частью архитектуры служб IIS, которая предоставляет следующие дополнительные возможности для веб\-разработки:  
+ ASP-компоненты являются частью архитектуры служб IIS, который предоставляет следующие дополнительные возможности веб-разработки.  
   
--   ASP\-компоненты можно внедрять в HTML\-страницы для создания динамического не зависящего от браузера содержимого;  
+-   ASP-компоненты можно внедрять в HTML-страницы для создания динамического содержимого зависят от обозревателя.  
   
--   ASP\-страницы можно использовать для предоставления возможности стандартизованного подключения к базам данных;  
+-   ASP-страниц можно использовать для подключения к базам данных, основанную на стандартах.  
   
--   также можно использовать функции обработки ошибок ASP для веб\-приложений.  
+-   Можно использовать функции обработки ошибок ASP для веб-приложений.  
   
-### Добавление в проект ASP\-компонента ATL  
+### <a name="to-add-an-atl-active-server-pages-component-to-your-project"></a>Чтобы добавить компонент ATL Active Server Pages в проект  
   
-1.  В окне **Обозреватель решений** или [Представление классов](http://msdn.microsoft.com/ru-ru/8d7430a9-3e33-454c-a9e1-a85e3d2db925) щелкните правой кнопкой имя проекта, в который необходимо добавить ASP\-компонент библиотеки ATL.  
+1.  В любом **обозревателе решений** или [представление классов](http://msdn.microsoft.com/en-us/8d7430a9-3e33-454c-a9e1-a85e3d2db925), щелкните правой кнопкой мыши имя проекта, к которому нужно добавить компонент ATL Active Server Pages.  
   
-2.  Выберите в контекстном меню команду **Добавить**, а затем **Добавить класс**.  
+2.  В контекстном меню щелкните **добавить**, а затем нажмите кнопку **Добавление класса**.  
   
-3.  В области "Шаблоны" диалогового окна [Добавление класса](../../ide/add-class-dialog-box.md) щелкните **ASP\-компонент ATL**, а затем нажмите кнопку **Открыть**, чтобы открылся [Мастер ASP\-компонентов библиотеки ATL](../../atl/reference/atl-active-server-page-component-wizard.md).  
+3.  В [добавить класс](../../ide/add-class-dialog-box.md) щелкните в области шаблонов диалогового **компонентов страницы активного сервера ATL**, а затем нажмите кнопку **откройте** для отображения [активного сервера ATL Мастер компонентов страницы](../../atl/reference/atl-active-server-page-component-wizard.md).  
   
-## См. также  
- [Добавление класса](../Topic/Adding%20a%20Class%20\(Visual%20C++\).md)   
- [Добавление нового интерфейса в проект ATL](../Topic/Adding%20a%20New%20Interface%20in%20an%20ATL%20Project.md)   
- [Adding Connection Points to an Object](../../atl/adding-connection-points-to-an-object.md)   
+## <a name="see-also"></a>См. также  
+ [Добавление класса](../../ide/adding-a-class-visual-cpp.md)   
+ [Добавление нового интерфейса в проект ATL](../../atl/reference/adding-a-new-interface-in-an-atl-project.md)   
+ [Добавление объекта точки подключения](../../atl/adding-connection-points-to-an-object.md)   
  [Добавление метода](../../ide/adding-a-method-visual-cpp.md)   
  [Класс MFC](../../mfc/reference/adding-an-mfc-class.md)   
- [Добавление универсального класса C\+\+](../../ide/adding-a-generic-cpp-class.md)
+ [Добавление универсального класса C++](../../ide/adding-a-generic-cpp-class.md)
+

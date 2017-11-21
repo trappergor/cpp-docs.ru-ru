@@ -4,27 +4,24 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-language
+ms.technology: cpp-language
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - literals, C++
 - constants, literals
 - literals [C++]
 ms.assetid: 17c09fc3-3ad7-47e2-8b48-ba8ae994edc8
-caps.latest.revision: 16
+caps.latest.revision: "16"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.translationtype: HT
-ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
-ms.openlocfilehash: 5c4a9a7aca2f11956e0ba47cced37a86733dcce8
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/25/2017
-
+ms.openlocfilehash: a55a608246403f427107869cbb275fa10b5569b1
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="numeric-boolean-and-pointer-literals--c"></a>Числовые, логические литералы и литералы-указатели (C++)
 Литерал — это элемент программы, который непосредственно представляет значение. В этой статье описываются литералы целого типа, с плавающей запятой, логического типа и типа указателя. Сведения о строковых и символьных литералах см. в разделе [строковые и символьные литералы (C++)](../cpp/string-and-character-literals-cpp.md). Можно также определить собственные литералы на основе любого из этих категорий; Дополнительные сведения см. [определяемые пользователем литералы (C++)](../cpp/user-defined-literals-cpp.md)  
@@ -108,7 +105,7 @@ long long i = 24'847'458'121
   
  Показатель степени может быть указан с помощью **e** или **E**, которые имеют одинаковое значение, затем следует необязательный знак (+ или -) и последовательность цифр.  Если указан показатель степени, десятичная точка в конце целых чисел не требуется, например `18E0`.  
   
- Литералы с плавающей запятой по умолчанию тип **двойные**. С помощью суффиксов **f** или **l** (или **F** или **L** — суффикс регистр не учитывается), литерала может быть указан как ** число с плавающей запятой** или `long double`соответственно.  
+ Литералы с плавающей запятой по умолчанию тип **двойные**. С помощью суффиксов **f** или **l** (или **F** или **L** — суффикс регистр не учитывается), литерала может быть указан как  **число с плавающей запятой** или `long double`соответственно.  
   
  Несмотря на то что `long double` и **двойные** имеют одинаковое представление, они не относятся к одному типу. Например, можно задать приведенные ниже перегруженные функции  
   

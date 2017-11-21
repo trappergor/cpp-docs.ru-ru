@@ -1,32 +1,30 @@
 ---
-title: "deque::deque (STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::deque::deque"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "deque - элемент [STL/CLR]"
+title: "deque::deque (STL/CLR) | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::deque::deque
+dev_langs: C++
+helpviewer_keywords: deque member [STL/CLR]
 ms.assetid: e5bc9511-619e-469c-b50a-e06858e7fce7
-caps.latest.revision: 17
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 15
+caps.latest.revision: "17"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: fc08403d0d8cf7875700ca539a3e68a0ed788104
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/24/2017
 ---
-# deque::deque (STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="dequedeque-stlclr"></a>deque::deque (STL/CLR)
 Создает объект контейнера.  
   
-## Синтаксис  
+## <a name="syntax"></a>Синтаксис  
   
 ```  
 deque();  
@@ -39,52 +37,52 @@ template<typename InIt>
 deque(System::Collections::Generic::IEnumerable<Value>^ right);  
 ```  
   
-#### Параметры  
- count  
- Число элементов, который необходимо вставить.  
+#### <a name="parameters"></a>Параметры  
+ `count`  
+ Число элементов для вставки.  
   
- first  
- Начало диапазона, который необходимо вставить.  
+ `first`  
+ Начало диапазона для вставки.  
   
- last  
- Элемент диапазона, который необходимо вставить.  
+ `last`  
+ Конец диапазона для вставки.  
   
- правый  
+ `right`  
  Объект или диапазон для вставки.  
   
- val  
- Значение элемента, который необходимо вставить.  
+ `val`  
+ Значение элемента, который требуется вставить.  
   
-## Заметки  
+## <a name="remarks"></a>Примечания  
  Конструктор:  
   
  `deque();`  
   
- инициализирует контролируемая последовательность без элементов.  Он используется для определения начальную контролируемую пустую последовательность.  
+ Инициализирует управляемой последовательности без элементов. Используется, чтобы указать пустую начальную управляемую последовательность.  
   
  Конструктор:  
   
  `deque(deque<Value>% right);`  
   
- инициализирует контролируемая последовательность с последовательностью `[``right``.`[deque::begin](../dotnet/deque-begin-stl-clr.md)`(),` `right``.`[deque::end](../Topic/deque::end%20\(STL-CLR\).md)`())`.  Он используется, чтобы определить домашнюю контролируемую последовательность, копию последовательности контролируемой объектом `right` deque.  
+ Инициализирует управляемой последовательности с последовательностью [`right.begin()`, `right.end()`). Они позволяют указать начальную управляемую последовательность, является копией последовательности, контролируемой объекта deque `right`. Дополнительные сведения об итераторах см. в разделе [deque::begin (STL/CLR)](../dotnet/deque-begin-stl-clr.md) и [deque::end (STL/CLR)](../dotnet/deque-end-stl-clr.md).  
   
  Конструктор:  
   
  `deque(deque<Value>^ right);`  
   
- инициализирует контролируемая последовательность с последовательностью `[``right``->`[deque::begin](../dotnet/deque-begin-stl-clr.md)`(),` `right``->`[deque::end](../Topic/deque::end%20\(STL-CLR\).md)`())`.  Он используется, чтобы определить домашнюю контролируемую последовательность, копию последовательности контролируемой объектом deque дескриптор которого `right`.  
+ Инициализирует управляемой последовательности с последовательностью [`right->begin()`, `right->end()`). Используется для указания начальной управляемой последовательности, который представляет собой копию последовательности, управляемой с дескриптором объекта deque `right`.  
   
  Конструктор:  
   
  `explicit deque(size_type count);`  
   
- инициализирует контролируемая последовательность с элементами `count` каждое со значением `value_type()`.  Он используется для заполнения контейнер с элементами, все значения по умолчанию.  
+ Инициализирует управляемой последовательности с `count` элементы каждого со значением `value_type()`. Используется для заполнения контейнера с элементами, каждый из которых по умолчанию.  
   
  Конструктор:  
   
  `deque(size_type count, value_type val);`  
   
- инициализирует контролируемая последовательность с элементами `count` каждое со значением `val`.  Он используется для заполнения контейнер с элементами, все одно и то же значение.  
+ Инициализирует управляемой последовательности с `count` элементы каждого со значением `val`. Используется для заполнения элементов контейнера всех, имеющих то же значение.  
   
  Конструктор:  
   
@@ -92,17 +90,17 @@ deque(System::Collections::Generic::IEnumerable<Value>^ right);
   
  `deque(InIt first, InIt last);`  
   
- инициализирует контролируемая последовательность с последовательностью `[``first``,` `last``)`.  Он используется, чтобы сделать контролируемой последовательностью копии другой последовательности.  
+ Инициализирует управляемой последовательности с последовательностью [`first`, `last`). Используется для создания копии другой последовательности управляемой последовательности.  
   
  Конструктор:  
   
  `deque(System::Collections::Generic::IEnumerable<Value>^ right);`  
   
- инициализирует контролируемая последовательность с последовательность — это специализированная перечислителем `right`.  Он используется, чтобы сделать контролируемой последовательностью копии другой последовательности две перечислителем.  
+ Инициализирует управляемой последовательности с последовательности, указанной с помощью перечислителя `right`. Используется для создания копии другой последовательности, описываемого перечислитель управляемой последовательности.  
   
-## Пример  
+## <a name="example"></a>Пример  
   
-```  
+```cpp  
 // cliext_deque_construct.cpp   
 // compile with: /clr   
 #include <cliext/deque>   
@@ -156,20 +154,23 @@ int main()
   
 ```  
   
-  **size\(\) \= 0**  
- **0 0 0**  
- **x x x x x x**  
- **x x x x x**  
- **x x x x x x**  
- **x x x x x x**  
- **x x x x x x**   
-## Требования  
- **Заголовок:**\<cliext\/deque\>  
+```Output  
+size() = 0  
+ 0 0 0  
+ x x x x x x  
+ x x x x x  
+ x x x x x x  
+ x x x x x x  
+ x x x x x x  
+```  
+  
+## <a name="requirements"></a>Требования  
+ **Заголовок:** \<cliext/deque >  
   
  **Пространство имен:** cliext  
   
-## См. также  
- [deque](../dotnet/deque-stl-clr.md)   
- [deque::assign](../dotnet/deque-assign-stl-clr.md)   
- [deque::generic\_container](../Topic/deque::generic_container%20\(STL-CLR\).md)   
- [operator\= \(deque\)](../dotnet/operator-assign-deque-stl-clr.md)
+## <a name="see-also"></a>См. также  
+ [deque (STL/CLR)](../dotnet/deque-stl-clr.md)   
+ [deque::Assign (STL/CLR)](../dotnet/deque-assign-stl-clr.md)   
+ [deque::generic_container (STL/CLR)](../dotnet/deque-generic-container-stl-clr.md)   
+ [operator= (deque) (STL/CLR)](../dotnet/operator-assign-deque-stl-clr.md)

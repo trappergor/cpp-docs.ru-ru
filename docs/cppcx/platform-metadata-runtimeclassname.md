@@ -1,43 +1,45 @@
 ---
-title: "Platform::Metadata::RuntimeClassName | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/30/2016"
-ms.prod: "windows-client-threshold"
-ms.technology: ""
-ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-f1_keywords: 
-  - "Platform/Platform::Metadata::RuntimeClassName"
-helpviewer_keywords: 
-  - "RuntimeClassName"
-  - "Platform::Metadata::RuntimeClassName"
+title: "Platform::Metadata::RuntimeClassName | Документы Microsoft"
+ms.custom: 
+ms.date: 12/30/2016
+ms.technology: cpp-windows
+ms.reviewer: 
+ms.suite: 
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+f1_keywords: VCCORLIB/Platform::Metadata::RuntimeClassName
+helpviewer_keywords:
+- RuntimeClassName
+- Platform::Metadata::RuntimeClassName
 ms.assetid: fdef8f85-ab94-4edd-ba50-ee0da9358ff6
-caps.latest.revision: 2
-author: "ghogen"
-ms.author: "ghogen"
-manager: "ghogen"
-caps.handback.revision: 2
+caps.latest.revision: "2"
+author: ghogen
+ms.author: ghogen
+manager: ghogen
+ms.openlocfilehash: 301e012c1d421348ea252019d892b2e526d6aefc
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/24/2017
 ---
-# Platform::Metadata::RuntimeClassName
+# <a name="platformmetadataruntimeclassname"></a>Platform::Metadata::RuntimeClassName
 При применении к определению класса, проверяет, возвращает ли функция GetRuntimeClassName допустимое имя в закрытый класс.  
   
-## Синтаксис  
+## <a name="syntax"></a>Синтаксис  
   
-```vb  
+```cpp  
 [Platform::Metadata::RuntimeClassName] name  
 ```  
   
-#### Параметры  
+#### <a name="parameters"></a>Параметры  
  имя  
   
  Имя существующего открытого типа, который виден в среде выполнения Windows.  
   
-## Заметки  
+### <a name="remarks"></a>Примечания  
  Этот атрибут используется в закрытых классах ссылок для указания имени пользовательского типа среды выполнения. Задает в качестве имени открытый интерфейс, реализуемый классом.  
   
-## Пример  
+### <a name="example"></a>Пример  
  В следующем примере показано использование атрибута. В этом примере имя типа среды выполнения HellowWorldImpl является интерфейсом Test::Native::MyComponent::IHelloWorld.  
   
 ```  
@@ -69,5 +71,5 @@ namespace Test
 }  
 ```  
   
-## См. также  
+## <a name="see-also"></a>См. также  
  [Пространство имен Platform::Metadata](../cppcx/platform-metadata-namespace.md)

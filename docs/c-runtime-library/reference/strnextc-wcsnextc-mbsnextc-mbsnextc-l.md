@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
 apiname:
@@ -39,8 +38,7 @@ f1_keywords:
 - _ftcsnextc
 - _strnextc
 - wcsnextc
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - _mbsnextc function
 - _tcsnextc function
@@ -53,36 +51,21 @@ helpviewer_keywords:
 - mbsnextc_l function
 - wcsnextc function
 ms.assetid: e3086173-9eb5-4540-a23a-5d866bd05340
-caps.latest.revision: 20
+caps.latest.revision: "20"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: a82768750e6a7837bb81edd8a51847f83c294c20
-ms.openlocfilehash: cd787e4c18cf947760a31b5ee61f5ce7b83a7a2f
-ms.contentlocale: ru-ru
-ms.lasthandoff: 04/04/2017
-
+ms.openlocfilehash: d9d2554bb581fb63df0453ea664e5b76c41994fd
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="strnextc-wcsnextc-mbsnextc-mbsnextcl"></a>_strnextc, _wcsnextc, _mbsnextc, _mbsnextc_l
 Находит следующий символ в строке.  
   
 > [!IMPORTANT]
-> Функции  `_mbsnextc` и `_mbsnextc_l` не могут использоваться в приложениях, запускаемых в среде выполнения Windows. Дополнительные сведения см. в статье [Функции CRT, которые не поддерживаются с ключом /ZW](http://msdn.microsoft.com/library/windows/apps/jj606124.aspx).  
+>  Функции `_mbsnextc` и `_mbsnextc_l` не могут использоваться в приложениях, запускаемых в среде выполнения Windows. Дополнительные сведения см. в статье [Функции CRT, которые не поддерживаются с ключом /ZW](http://msdn.microsoft.com/library/windows/apps/jj606124.aspx).  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -126,7 +109,7 @@ unsigned int _mbsnextc_l(
 |---------------------|--------------------------------------|--------------------|-----------------------|  
 |`_tcsnextc`|`_strnextc`|`_mbsnextc`|`_wcsnextc`|  
   
- `_strnextc`и `_wcsnextc` одного байт символа строки и двухбайтовая строка версии `_mbsnextc`. `_wcsnextc` возвращает целочисленное значение следующего расширенного символа в `string`; `_strnextc` возвращает целочисленное значение следующего однобайтового символа в `string`. `_strnextc` и `_wcsnextc` предоставляются только для этого сопоставления и не должны использоваться иным образом. Дополнительные сведения см. в разделах [Использование универсальных текстовых сопоставлений](../../c-runtime-library/using-generic-text-mappings.md) и [Универсальные текстовые сопоставления](../../c-runtime-library/generic-text-mappings.md).  
+ `_strnextc`и `_wcsnextc` одного байт символа строки и версий строки расширенных символов `_mbsnextc`. `_wcsnextc` возвращает целочисленное значение следующего расширенного символа в `string`; `_strnextc` возвращает целочисленное значение следующего однобайтового символа в `string`. `_strnextc` и `_wcsnextc` предоставляются только для этого сопоставления и не должны использоваться иным образом. Дополнительные сведения см. в разделах [Использование универсальных текстовых сопоставлений](../../c-runtime-library/using-generic-text-mappings.md) и [Универсальные текстовые сопоставления](../../c-runtime-library/generic-text-mappings.md).  
   
  `_mbsnextc_l` идентична указанной за исключением того, что использует языковой стандарт, переданный в качестве параметра. Дополнительные сведения см. в разделе [Языковой стандарт](../../c-runtime-library/locale.md).  
   
@@ -139,7 +122,7 @@ unsigned int _mbsnextc_l(
 |`_strnextc`|\<tchar.h>|  
 |`_wcsnextc`|\<tchar.h>|  
   
- Дополнительные сведения о совместимости см. в разделе [Совместимость](../../c-runtime-library/compatibility.md).  
+ Дополнительные сведения о совместимости см. в разделе [Compatibility](../../c-runtime-library/compatibility.md).  
   
 ## <a name="see-also"></a>См. также  
  [Операции со строками](../../c-runtime-library/string-manipulation-crt.md)   

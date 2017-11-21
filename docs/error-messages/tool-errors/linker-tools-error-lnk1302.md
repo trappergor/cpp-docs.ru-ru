@@ -1,37 +1,35 @@
 ---
-title: "Ошибка средств компоновщика LNK1302 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "LNK1302"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "LNK1302"
+title: "Ошибка средств компоновщика LNK1302 | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords: LNK1302
+dev_langs: C++
+helpviewer_keywords: LNK1302
 ms.assetid: aea3c753-c2c4-4249-bbc3-f2d4f0164b5e
-caps.latest.revision: 10
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 10
+caps.latest.revision: "10"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: 7154cc538e17050eafec251729cf26a3cd62e573
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/24/2017
 ---
-# Ошибка средств компоновщика LNK1302
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-поддерживаются только ссылки безопасное .netmodules; не удается выполнить компоновку .netmodule  
+# <a name="linker-tools-error-lnk1302"></a>Ошибка средств компоновщика LNK1302
+поддерживается только компоновка безопасных .netmodule; не удалось связать файл NETMODULE-файл  
   
- \(.netmodule Компилированное с **\/LN**\) было передано компоновщиком при попытке пользователя вызвать связывание MSIL.  Компоновка MSIL модуля C\+\+ допустима, только если он скомпилирован с параметром **\/clr:safe**.  
+ .Netmodule (скомпилированный с **/LN**) был передан компоновщику пользователя при попытке вызвать компоновку MSIL.  Модуль C++ является допустимым компоновка MSIL, если она скомпилирована с **/CLR: safe**.  
   
- Чтобы устранить данную ошибку, произведите компиляцию с параметром **\/clr:safe**, чтобы сделать возможной компоновку MSIL, либо передайте компоновщику вместо модуля OBJ\-файл **\/clr** или **\/clr:pure**.  
+ Чтобы исправить эту ошибку, компиляция с **/CLR: safe** Чтобы включить компоновку MSIL, либо передайте **/CLR** или **/CLR: pure** вместо модуле компоновщик OBJ-файл.  
   
- Дополнительные сведения см. в следующем разделе.  
+ Дополнительные сведения см. в разделе .  
   
--   [\/LN \(создание модуля MSIL\)](../../build/reference/ln-create-msil-module.md)  
+-   [/LN (Создание модуля MSIL)](../../build/reference/ln-create-msil-module.md)  
   
--   [.NETMODULE\-файлы в качестве входных файлов компоновщика](../Topic/.netmodule%20Files%20as%20Linker%20Input.md)
+-   [NETMODULE-файлы в качестве входных файлов компоновщика](../../build/reference/netmodule-files-as-linker-input.md)

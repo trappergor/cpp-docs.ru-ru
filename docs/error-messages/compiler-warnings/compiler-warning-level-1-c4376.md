@@ -1,35 +1,33 @@
 ---
-title: "Предупреждение компилятора (уровень 1) C4376 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C4376"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C4376"
+title: "Предупреждение компилятора (уровень 1) C4376 | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords: C4376
+dev_langs: C++
+helpviewer_keywords: C4376
 ms.assetid: 5f202c74-9489-48fe-b36f-19cd882b1589
-caps.latest.revision: 6
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 6
+caps.latest.revision: "6"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: b78407a29ade4c6792afbd8e15295199b7d6b2c4
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/24/2017
 ---
-# Предупреждение компилятора (уровень 1) C4376
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-спецификатор доступа "устаревший\_спецификатор": более не поддерживается: вместо этого следует использовать "новый\_спецификатор"  
+# <a name="compiler-warning-level-1-c4376"></a>Предупреждение компилятора (уровень 1) C4376
+спецификатор доступа "old_specifier:" больше не поддерживается: используйте "новый_спецификатор:" вместо  
   
- Дополнительные сведения о указание типа и специальных возможностей члена в метаданных см. в разделах [Видимость типа](../../dotnet/how-to-define-and-consume-classes-and-structs-cpp-cli.md#BKMK_Type_visibility) и [Видимость члена](../../dotnet/how-to-define-and-consume-classes-and-structs-cpp-cli.md#BKMK_Member_visibility) в [Практическое руководство. Определение и использование классов и структур](../../dotnet/how-to-define-and-consume-classes-and-structs-cpp-cli.md).  
+ Дополнительные сведения об определении доступа типов и членов в метаданных см. в разделе [введите видимость](../../dotnet/how-to-define-and-consume-classes-and-structs-cpp-cli.md#BKMK_Type_visibility) и [видимость членов](../../dotnet/how-to-define-and-consume-classes-and-structs-cpp-cli.md#BKMK_Member_visibility) в [как: определение и использование классов и структур (C + +/ CLI) ](../../dotnet/how-to-define-and-consume-classes-and-structs-cpp-cli.md).  
   
-## Пример  
- Следующий пример демонстрирует причины возникновения ошибки C4376.  
+## <a name="example"></a>Пример  
+ Следующий пример приводит к возникновению ошибки C4376.  
   
 ```  
 // C4376.cpp  

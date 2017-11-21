@@ -1,47 +1,46 @@
 ---
-title: "Страница свойств Средство создания XML-данных. | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "VC.Project.VCXMLDataGeneratorTool.GeneratedProxyLanguage"
-  - "VC.Project.VCXMLDataGeneratorTool.Output"
-  - "VC.Project.VCXMLDataGeneratorTool.SupressStartupBanner"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Средство создания XML-данных - страница свойств"
+title: "Страница свойств средство создания XML-данных | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-ide
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- VC.Project.VCXMLDataGeneratorTool.GeneratedProxyLanguage
+- VC.Project.VCXMLDataGeneratorTool.Output
+- VC.Project.VCXMLDataGeneratorTool.SupressStartupBanner
+dev_langs: C++
+helpviewer_keywords: XML Data Generator Tool property page
 ms.assetid: b2ef1c12-3419-429d-bb9d-bd7d9ffe1ffb
-caps.latest.revision: 8
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 8bf594f6c6a647ee930b173d58bed91e0ced778e
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/24/2017
 ---
-# Страница свойств Средство создания XML-данных.
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Страница свойств **Инструмент создания XML\-данных** доступна при добавлении набора данных в проект.  
+# <a name="xml-data-generator-tool-property-page"></a>Средство создания XML-данных - страница свойств
+**Средство создания XML-данных** страницу свойств становится доступным при добавлении набора данных в проект.  
   
- Страница свойств **Инструмент создания XML\-данных** содержит следующие свойства:  
+ **Средство создания XML-данных** страница свойств содержит следующие свойства:  
   
  **Выходной файл**  
- Задает имя используемого выходного файла.  
+ Задает имя выходного файла для использования.  
   
- **Отключить отображение приветствия при загрузке**  
- Отключает отображение приветствия при загрузке и информационных сообщений.  
+ **Отключить загрузочное объявление**  
+ Отключает отображение загрузочного баннера и информационных сообщений.  
   
  **Язык для создаваемых прокси**  
- Определяет, порождается ли управляемый код.  
+ Определяет, следует ли выдавать управляемого кода.  
   
- Сведения о том, как получить доступ к странице свойств **Инструмент создания XML\-данных**, см. в разделе [Практическое руководство. Задание свойств проекта при помощи страниц свойств](../Topic/How%20to:%20Specify%20Project%20Properties%20with%20Property%20Pages.md).  
+ Сведения о доступе к **средство создания XML-данных** страницу свойств в разделе [работа со свойствами проекта](../ide/working-with-project-properties.md).  
   
- Сведения о программном доступе к членам данного объекта см. в разделе <xref:Microsoft.VisualStudio.VCProjectEngine.VCXMLDataGeneratorTool>.  
+ Сведения о том, как программно получить доступ к членам этого объекта см. в разделе<xref:Microsoft.VisualStudio.VCProjectEngine.VCXMLDataGeneratorTool>  
   
-## См. также  
+## <a name="see-also"></a>См. также  
  [Страницы свойств](../ide/property-pages-visual-cpp.md)

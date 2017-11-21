@@ -1,40 +1,39 @@
 ---
-title: "Практическое руководство. Объявление типов значений с использованием ключевого слова interior_ptr (C++/CLI) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "_ptr - ключевое слово"
-  - "типы значений, объявление"
+title: "Как: объявление типов значений с использованием ключевого слова interior_ptr (C + +/ CLI) | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+dev_langs: C++
+helpviewer_keywords:
+- _ptr keyword
+- value types, declaring
 ms.assetid: 49eea66e-eeba-49bd-95b0-ba297be436e3
-caps.latest.revision: 13
-caps.handback.revision: 13
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "13"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: df675ca7168157c5ffa9529ab630b2100abda11a
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/24/2017
 ---
-# Практическое руководство. Объявление типов значений с использованием ключевого слова interior_ptr (C++/CLI)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="how-to-declare-value-types-with-the-interiorptr-keyword-ccli"></a>Практическое руководство. Объявление типов значений с использованием ключевого слова interior_ptr (C++/CLI)
 `interior_ptr` можно использовать с типом значения.  
   
 > [!IMPORTANT]
->  Эта функция языка поддерживается параметром компилятора **\/clr**, но не параметром компилятора **\/ZW**.  
+>  Эта функция языка поддерживается **/CLR** параметр компилятора, а не **/zw** параметр компилятора.  
   
-## Пример  
+## <a name="example"></a>Пример  
   
-### Описание  
- В следующем примере [!INCLUDE[cppcli](../build/reference/includes/cppcli_md.md)] показано, как использовать `interior_ptr` с типом значения.  
+### <a name="description"></a>Описание  
+ Следующие C + +/ CLI образце показано, как использовать `interior_ptr` с типом значения.  
   
-### Код  
+### <a name="code"></a>Код  
   
 ```  
 // interior_ptr_value_types.cpp  
@@ -64,7 +63,7 @@ int main() {
 }  
 ```  
   
-### Output  
+### <a name="output"></a>Вывод  
   
 ```  
 1  
@@ -75,14 +74,14 @@ int main() {
 3  
 ```  
   
-## Пример  
+## <a name="example"></a>Пример  
   
-### Описание  
- В типе значения, указатель `this` равен interior\_ptr.  
+### <a name="description"></a>Описание  
+ В типе значения указатель `this` равен interior_ptr.  
   
- В теле нестатической функции\-члене типа значения `V` `this` является выражением типа `interior_ptr<V>`, значением которого является адрес объекта, для которого вызывается функция.  
+ В теле нестатической функции-члена типа значения `V` указатель `this` является выражением типа `interior_ptr<V>`. Значение этого выражения — адрес объекта, для которого вызывается эта функция.  
   
-### Код  
+### <a name="code"></a>Код  
   
 ```  
 // interior_ptr_value_types_this.cpp  
@@ -96,14 +95,14 @@ value struct V {
 };  
 ```  
   
-## Пример  
+## <a name="example"></a>Пример  
   
-### Описание  
- В следующем примере показано, как использовать оператор address\-of со статическими членами.  
+### <a name="description"></a>Описание  
+ В следующем примере показано использование оператора взятия адреса со статическими членами.  
   
- Адрес статического члена типа Visual C\+\+ создает собственный указатель.  Адрес статического члена типа значения является управляемым указателем, так как член типа значения выделен в куче среды выполнения и может быть перемещен сборщиком мусора.  
+ Адрес статического члена типа Visual C++ создает собственный указатель.  Адрес статического члена типа значения является управляемым указателем, так как член типа значения выделяется в куче среды выполнения и может быть перемещен сборщиком мусора.  
   
-### Код  
+### <a name="code"></a>Код  
   
 ```  
 // interior_ptr_value_static.cpp  
@@ -129,7 +128,7 @@ int main() {
 }  
 ```  
   
-### Output  
+### <a name="output"></a>Вывод  
   
 ```  
 22  
@@ -137,5 +136,5 @@ int main() {
 hello  
 ```  
   
-## См. также  
- [interior\_ptr \(C\+\+\/CLI\)](../windows/interior-ptr-cpp-cli.md)
+## <a name="see-also"></a>См. также  
+ [interior_ptr (C++/CLI)](../windows/interior-ptr-cpp-cli.md)

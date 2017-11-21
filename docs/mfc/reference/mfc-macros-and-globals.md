@@ -4,14 +4,11 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-windows
+ms.technology: cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- vc.mfc.macros
-dev_langs:
-- C++
+f1_keywords: vc.mfc.macros
+dev_langs: C++
 helpviewer_keywords:
 - MFC, global functions and variables
 - MFC, macros
@@ -22,16 +19,15 @@ helpviewer_keywords:
 - Afx naming convention
 - macros
 ms.assetid: add4e33f-0e62-4d27-be14-896cb8675d22
-caps.latest.revision: 18
+caps.latest.revision: "18"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.translationtype: MT
-ms.sourcegitcommit: 4a770b6508067913aec51b8b3878f33e30eed4bb
 ms.openlocfilehash: 71011177634e92b22cce1bc88a2ee711ad9537ed
-ms.contentlocale: ru-ru
-ms.lasthandoff: 10/09/2017
-
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="mfc-macros-and-globals"></a>Макросы и глобальные объекты MFC
 Библиотеки классов Microsoft Foundation можно разделить на два основных раздела: (1) классы MFC и (2) макросы и глобальные переменные. Если функция или переменная не является членом класса, это глобальная функция или переменная.  
@@ -140,7 +136,6 @@ ms.lasthandoff: 10/09/2017
   
 ## <a name="see-also"></a>См. также  
  [Общие сведения о классе](../../mfc/class-library-overview.md)
-
 
 
 

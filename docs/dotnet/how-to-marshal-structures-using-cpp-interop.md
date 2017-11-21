@@ -1,38 +1,37 @@
 ---
-title: "Практическое руководство. Маршалирование структур с помощью взаимодействия C++ | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/14/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "get-started-article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "взаимодействие C++, структуры"
-  - "маршалинг данных [C++], структуры"
-  - "взаимодействие [C++], структуры"
-  - "маршалинг [C++], структуры"
-  - "структуры [C++], маршалинг"
+title: "Как: маршалирование структур с помощью взаимодействия C++ | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: get-started-article
+dev_langs: C++
+helpviewer_keywords:
+- C++ Interop, structures
+- structures [C++], marshaling
+- data marshaling [C++], structures
+- interop [C++], structures
+- marshaling [C++], structures
 ms.assetid: c2080200-f983-4d6e-a557-cd870f060a54
-caps.latest.revision: 15
-caps.handback.revision: 15
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "15"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 640b3cdbfe9bd88faa337737b0423e3f759b41dc
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/24/2017
 ---
-# Практическое руководство. Маршалирование структур с помощью взаимодействия C++
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-В этом разделе продемонстрирован еще один аспект возможностей взаимодействия Visual C\+\+.  Для получения дополнительной информации см. [Использование взаимодействия языка C\+\+ \(неявный PInvoke\)](../dotnet/using-cpp-interop-implicit-pinvoke.md).  
+# <a name="how-to-marshal-structures-using-c-interop"></a>Практическое руководство. Маршалирование структур с помощью взаимодействия C++
+В этом разделе демонстрируется один аспект возможностей взаимодействия Visual C++. Дополнительные сведения см. в разделе [с помощью взаимодействия C++ (неявный PInvoke)](../dotnet/using-cpp-interop-implicit-pinvoke.md).  
   
- В следующем примере кода используются директивы \#pragma [managed, unmanaged](../preprocessor/managed-unmanaged.md), которые встраивают управляемые и неуправляемые функции в один файл. Эти функции также взаимодействуют и в случае их распределения в отдельные файлы.  Файлы, содержащие только неуправляемые функции, не требуется компилировать с использованием параметра [\/clr \(компиляция CLR\)](../build/reference/clr-common-language-runtime-compilation.md).  
+ В следующем примере кода используются [управляемые, неуправляемые](../preprocessor/managed-unmanaged.md) директивы #pragma управляемых и неуправляемых функций в одном файле, но эти функции взаимодействия так же, если они определены в отдельных файлах. Файлы, содержащие только неуправляемые функции, не обязательно должны быть скомпилированы с [/CLR (компиляция CLR)](../build/reference/clr-common-language-runtime-compilation.md).  
   
-## Пример  
- В следующем примере демонстрируется передача структуры из управляемой в неуправляемую функцию как по значению, так и по ссылке.  Так как структура в данном примере содержит только простые встроенные типы данных \(см. раздел [Blittable and Non\-Blittable Types](../Topic/Blittable%20and%20Non-Blittable%20Types.md)\), специального маршалинга не требуется.  Сведения о маршалировании непреобразуемых структур, например структур, содержащих указатели, см. в разделе [Практическое руководство. Упаковка встроенных указателей посредством взаимодействия C\+\+](../dotnet/how-to-marshal-embedded-pointers-using-cpp-interop.md).  
+## <a name="example"></a>Пример  
+ Ниже приведен пример передача структуры из управляемой в неуправляемую функцию, по значению и по ссылке. Так как структура в данном примере содержит только простые встроенные типы данных (в разделе [преобразуемые и непреобразуемые не типы](http://msdn.microsoft.com/Library/d03b050e-2916-49a0-99ba-f19316e5c1b3)), специального маршалинга не требуется. Преобразуемых структур, например те, которые содержат указатели, в разделе [как: маршалинг внедренных указателей с помощью взаимодействия C++](../dotnet/how-to-marshal-embedded-pointers-using-cpp-interop.md).  
   
 ```  
 // PassStruct1.cpp  
@@ -88,8 +87,8 @@ int main() {
 }  
 ```  
   
-## Пример  
- В следующем примере демонстрируется передача структуры из неуправляемой в управляемую функцию как по значению, так и по ссылке.  Так как структура в данном примере содержит только простые встроенные типы данных \(см. раздел [Blittable and Non\-Blittable Types](../Topic/Blittable%20and%20Non-Blittable%20Types.md)\), специального маршалирования не требуется.  Сведения о маршалировании непреобразуемых структур, например структур, содержащих указатели, см. в разделе [Практическое руководство. Упаковка встроенных указателей посредством взаимодействия C\+\+](../dotnet/how-to-marshal-embedded-pointers-using-cpp-interop.md).  
+## <a name="example"></a>Пример  
+ Ниже приведен пример передача структуры из неуправляемой управляемой функции по значению и по ссылке. Так как структура в данном примере содержит только простые встроенные типы данных (в разделе [преобразуемые и непреобразуемые не типы](http://msdn.microsoft.com/Library/d03b050e-2916-49a0-99ba-f19316e5c1b3)), специального маршалирования не требуется. Преобразуемых структур, например те, которые содержат указатели, в разделе [как: маршалинг внедренных указателей с помощью взаимодействия C++](../dotnet/how-to-marshal-embedded-pointers-using-cpp-interop.md).  
   
 ```  
 // PassStruct2.cpp  
@@ -154,5 +153,5 @@ int main() {
 }  
 ```  
   
-## См. также  
- [Использование взаимодействия языка C\+\+ \(неявный PInvoke\)](../dotnet/using-cpp-interop-implicit-pinvoke.md)
+## <a name="see-also"></a>См. также  
+ [Использование взаимодействия языка C++ (неявный PInvoke)](../dotnet/using-cpp-interop-implicit-pinvoke.md)

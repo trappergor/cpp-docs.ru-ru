@@ -1,63 +1,62 @@
 ---
-title: "/PDBPATH | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "/pdbpath"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "PDB-файлы, путь"
-  - "/PDBPATH - параметр (программа dumpbin)"
-  - "PDB-файлы, путь"
-  - "PDBPATH - параметр (программа dumpbin)"
-  - "-PDBPATH - параметр (программа dumpbin)"
+title: "-PDBPATH | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: /pdbpath
+dev_langs: C++
+helpviewer_keywords:
+- .pdb files, path
+- -PDBPATH dumpbin option
+- /PDBPATH dumpbin option
+- PDBPATH dumpbin option
+- PDB files, path
 ms.assetid: ccf67dcd-0b23-4250-ad47-06c48acbe82b
-caps.latest.revision: 8
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: 024e6bae368a171b4bd35434d99261155947d4ae
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/24/2017
 ---
-# /PDBPATH
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="pdbpath"></a>/PDBPATH
 ```  
 /PDBPATH[:VERBOSE] filename  
 ```  
   
-## Заметки  
- Здесь:  
+## <a name="remarks"></a>Примечания  
+ где:  
   
  *filename*  
- Имя файла DLL или EXE, для которого нужно найти соответствующий файл PDB.  
+ Имя файла .dll или .exe, для которого требуется найти соответствующий файл PDB.  
   
- VERBOSE \(необязательный аргумент\)  
- Перечисление всех каталогов, в которых производится попытка найти файл PDB.  
+ VERBOSE (необязательно)  
+ Сообщает все каталоги, где была предпринята попытка найти PDB-файл.  
   
-## Заметки  
- При использовании параметра \/PDBPATH поиск производится на компьютере по тем же путям, по которым отладчик искал бы файл PDB; при этом перечисляются все файлы PDB, соответствующие файлу, указанному с помощью аргумента *filename*, если такие файлы будут найдены.  
+## <a name="remarks"></a>Примечания  
+ / PDBPATH поиск производится на компьютере по тем же путям, отладчик может найти PDB-файл и сообщает соответствующие, если таковые имеются, PDB-файлы для файла, указанного в *filename*.  
   
- При использовании отладчика Visual Studio может возникать проблема, связанная с тем, что отладчик использует файл PDB, относящийся к другой версии отлаживаемого файла.  
+ При использовании отладчика Visual Studio, проблема может возникнуть из-за того, что отладчик использует PDB-файл для различных версий файла, для которого выполняется отладка.  
   
- При использовании параметра \/PDBPATH поиск файлов PDB производится по следующим путям:  
+ / PDBPATH поиск PDB-файлов по следующим путям:  
   
--   Проверяется место, где находится исполняемый файл.  
+-   Проверьте расположение, где находится исполняемый файл.  
   
--   Проверяется место, где расположен файл PDB, указанный в исполняемом файле.  Обычно это место на момент компоновки образа.  
+-   Проверьте расположение PDB-ФАЙЛ, записанных в исполняемый файл. Обычно это расположение во время образ был связан.  
   
--   Проверяется путь поиска, заданный в интегрированной среде разработки Visual Studio.  
+-   Проверьте путь поиска, настроенные в Интегрированной среде разработки Visual Studio.  
   
--   Проверяются пути из переменных среды \_NT\_SYMBOL\_PATH и \_NT\_ALT\_SYMBOL\_PATH.  
+-   Проверьте по путям в _NT_SYMBOL_PATH и _NT_ALT_SYMBOL_PATH переменные среды.  
   
--   Возвращение каталога Windows.  
+-   Проверьте в каталоге Windows.  
   
-## См. также  
+## <a name="see-also"></a>См. также  
  [Параметры DUMPBIN](../../build/reference/dumpbin-options.md)   
- [\/PDBALTPATH \(использовать альтернативный путь к PDB\-файлу\)](../../build/reference/pdbaltpath-use-alternate-pdb-path.md)
+ [/ PDBALTPATH (использовать альтернативный PDB путь к файлу)](../../build/reference/pdbaltpath-use-alternate-pdb-path.md)

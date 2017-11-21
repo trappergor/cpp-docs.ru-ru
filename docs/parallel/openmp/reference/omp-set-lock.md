@@ -1,32 +1,30 @@
 ---
-title: "omp_set_lock | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "omp_set_lock"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "omp_set_lock OpenMP function"
+title: "omp_set_lock | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: omp_set_lock
+dev_langs: C++
+helpviewer_keywords: omp_set_lock OpenMP function
 ms.assetid: ded839cb-ca19-403f-8622-eb52ce512d31
-caps.latest.revision: 7
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: f2d63074ce989aa4bc96c829639386e3477ff523
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/24/2017
 ---
-# omp_set_lock
-[!INCLUDE[vs2017banner](../../../assembler/inline/includes/vs2017banner.md)]
-
-Блоки поток выполнения до тех пор, пока блокировка не будет доступна.  
+# <a name="ompsetlock"></a>omp_set_lock
+Блоки потоков выполнения, пока блокировка не освободится.  
   
-## Синтаксис  
+## <a name="syntax"></a>Синтаксис  
   
 ```  
 void omp_set_lock(  
@@ -34,17 +32,17 @@ void omp_set_lock(
 );  
 ```  
   
-## Заметки  
- Здесь:  
+## <a name="remarks"></a>Примечания  
+ где  
   
  `lock`  
- Переменная типа [omp\_lock\_t](../../../parallel/openmp/reference/omp-lock-t.md) это был инициализирован с  [omp\_init\_lock](../../../parallel/openmp/reference/omp-init-lock.md).  
+ Переменная типа [omp_lock_t](../../../parallel/openmp/reference/omp-lock-t.md) , инициализированный с [omp_init_lock](../../../parallel/openmp/reference/omp-init-lock.md).  
   
-## Заметки  
- Дополнительные сведения см. в разделе [3.2.3 omp\_set\_lock and omp\_set\_nest\_lock Functions](../Topic/3.2.3%20omp_set_lock%20and%20omp_set_nest_lock%20Functions.md).  
+## <a name="remarks"></a>Примечания  
+ Дополнительные сведения см. в разделе [3.2.3 функции omp_set_lock и omp_set_nest_lock](../../../parallel/openmp/3-2-3-omp-set-lock-and-omp-set-nest-lock-functions.md).  
   
-## Примеры  
- См. [omp\_init\_lock](../../../parallel/openmp/reference/omp-init-lock.md) пример использования  `omp_set_lock`.  
+## <a name="examples"></a>Примеры  
+ В разделе [omp_init_lock](../../../parallel/openmp/reference/omp-init-lock.md) пример использования `omp_set_lock`.  
   
-## См. также  
- [Functions](../../../parallel/openmp/reference/openmp-functions.md)
+## <a name="see-also"></a>См. также  
+ [Функции](../../../parallel/openmp/reference/openmp-functions.md)

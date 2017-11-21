@@ -1,49 +1,48 @@
 ---
-title: "/RAWDATA | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "/rawdata"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "/RAWDATA - параметр программы dumpbin"
-  - "необработанные данный"
-  - "RAWDATA - параметр (программа dumpbin)"
-  - "-RAWDATA - параметр (программа dumpbin)"
+title: "-RAWDATA | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: /rawdata
+dev_langs: C++
+helpviewer_keywords:
+- RAWDATA dumpbin option
+- raw data
+- -RAWDATA dumpbin option
+- /RAWDATA dumpbin option
 ms.assetid: 41cba845-5e1f-415e-9fe4-604a52235983
-caps.latest.revision: 7
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: 0a0d9517bae5bdd1eed6cfafda496643aee666d4
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/24/2017
 ---
-# /RAWDATA
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="rawdata"></a>/RAWDATA
 ```  
 /RAWDATA[:{1|2|4|8|NONE[,number]]  
 ```  
   
-## Заметки  
- Этот параметр отображает необработанное содержимое каждого раздела в файле.  Аргументы управляют форматом отображения, как показано ниже:  
+## <a name="remarks"></a>Примечания  
+ Этот параметр отображает необработанное содержимое каждого раздела в файле. Аргументы определяют формат отображения, как показано ниже:  
   
 |Аргумент|Результат|  
-|--------------|---------------|  
-|1|Это значение используется по умолчанию.  Содержимое отображается в шестнадцатеричных байтах, а также как знаки ASCII, если имеют печатное представление.|  
-|2|Содержимое отображается как шестнадцатеричные 2\-байтовые значения.|  
-|4|Содержимое отображается как шестнадцатеричные 4\-байтовые значения.|  
-|8|Содержимое отображается как шестнадцатеричные 8\-байтовые значения.|  
-|НЕТ|Необработанные данные отбрасываются.  Этот аргумент полезен для управления выводом \/ALL.|  
-|*Числовой*|Отображенные строки устанавливаются по ширине в соответствии со значениями `number` для каждой строки.|  
+|--------------|------------|  
+|1|По умолчанию. Содержимое отображается в шестнадцатеричных байтов, а также как знаки ASCII, если они имеют печатной представление.|  
+|2|Содержимое отображаются в виде шестнадцатеричных значений длиной 2 байта.|  
+|4|Содержимое отображаются в виде шестнадцатеричных значений 4 байта.|  
+|8|Содержимое отображаются в виде шестнадцатеричных значений размером 8 байт.|  
+|НЕТ|Необработанные данные отбрасываются. Этот аргумент полезен для управления выводом/ALL.|  
+|*Число*|Отображенные строки устанавливаются по ширине, который содержит `number` значений для каждой строки.|  
   
- В файлах, созданных с использованием параметра компилятора [\/GL](../../build/reference/gl-whole-program-optimization.md), может использоваться только параметр DUMPBIN [\/HEADERS](../../build/reference/headers.md).  
+ Только [/Headers](../../build/reference/headers.md) параметр программы DUMPBIN доступна для использования в файлах, созданных с помощью [/GL](../../build/reference/gl-whole-program-optimization.md) параметр компилятора.  
   
-## См. также  
+## <a name="see-also"></a>См. также  
  [Параметры DUMPBIN](../../build/reference/dumpbin-options.md)

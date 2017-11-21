@@ -1,39 +1,37 @@
 ---
-title: "Навигация по структуре классов (Visual C++) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "vc.codewiz.classes.structure"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "классы [C++], структура"
-  - "обозреватель объектов, переходы"
+title: "Перемещение по структуре класса (Visual C++) | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-ide
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: vc.codewiz.classes.structure
+dev_langs: C++
+helpviewer_keywords:
+- classes [C++], structure
+- Object Browser, navigating
 ms.assetid: 3bd9427d-c920-41fd-b27c-3063dd924e0c
-caps.latest.revision: 6
-caps.handback.revision: 6
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "6"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 3a70dc0150c1fc8427fbc27211c27cb025cc427e
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/24/2017
 ---
-# Навигация по структуре классов (Visual C++)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Перемещаться по структуре классов проекта, включая функции, наследование и интерфейсы, можно либо с помощью [Представления классов](http://msdn.microsoft.com/ru-ru/8d7430a9-3e33-454c-a9e1-a85e3d2db925), либо с помощью [Обозревателя объектов](http://msdn.microsoft.com/ru-ru/f89acfc5-1152-413d-9f56-3dc16e3f0470).  
+# <a name="navigating-the-class-structure-visual-c"></a>Навигация по структуре классов (Visual C++)
+Вы можете переходить к структуре классов проекта, включая функции, наследование и интерфейсы, с помощью [представление классов](http://msdn.microsoft.com/en-us/8d7430a9-3e33-454c-a9e1-a85e3d2db925) или [обозревателя объектов](http://msdn.microsoft.com/en-us/f89acfc5-1152-413d-9f56-3dc16e3f0470).  
   
- Чтобы перейти к объявлению функции, дважды щелкните имя функции в представлении классов.  Чтобы перейти к определению класса, дважды щелкните имя класса в представлении классов.  
+ Можно перейти к объявлению функции, дважды щелкнув имя функции в представлении классов. Можно перейти к определению класса, дважды щелкнув имя класса в представлении классов.  
   
-## См. также  
+## <a name="see-also"></a>См. также  
  [Добавление функциональных возможностей с помощью мастеров кода](../ide/adding-functionality-with-code-wizards-cpp.md)   
- [Добавление класса](../Topic/Adding%20a%20Class%20\(Visual%20C++\).md)   
- [Добавление функции\-члена](../ide/adding-a-member-function-visual-cpp.md)   
- [Добавление переменной\-члена](../ide/adding-a-member-variable-visual-cpp.md)   
- [Переопределение виртуальной функции](../Topic/Overriding%20a%20Virtual%20Function%20\(Visual%20C++\).md)   
+ [Добавление класса](../ide/adding-a-class-visual-cpp.md)   
+ [Добавление функции-члена](../ide/adding-a-member-function-visual-cpp.md)   
+ [Добавление переменной-члена](../ide/adding-a-member-variable-visual-cpp.md)   
+ [Переопределение виртуальной функции](../ide/overriding-a-virtual-function-visual-cpp.md)   
  [Обработчик сообщений MFC](../mfc/reference/adding-an-mfc-message-handler.md)

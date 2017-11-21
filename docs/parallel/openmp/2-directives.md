@@ -1,24 +1,23 @@
 ---
-title: "2. Directives | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
+title: "2. Директивы | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
 ms.assetid: d1a69374-6c03-45fb-8c86-e91cea8adae8
-caps.latest.revision: 4
-caps.handback.revision: 4
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "4"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 768dd8d50f777cbd7b3c3131d61ab17ec50e5645
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/24/2017
 ---
-# 2. Directives
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Правила основаны **\#pragma** правила, определенные в стандартах c и C\+\+.  Компиляторы, которые поддерживают интерфейс API OpenMP c и C\+\+ будут включать параметр командной строки, который позволяет активировать и интерпретация компилятора всех директив OpenMP.
+# <a name="2-directives"></a>2. Директивы
+На основе директивы **#pragma** директивы, определенный в стандартах C и C++.  Компиляторы, поддерживающие OpenMP C и C++ API будет включать параметр командной строки, которая активирует и позволяет интерпретацию все директивы компилятора OpenMP.

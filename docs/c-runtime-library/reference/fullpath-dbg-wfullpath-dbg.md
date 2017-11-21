@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
 apiname:
@@ -28,8 +27,7 @@ f1_keywords:
 - _wfullpath_dbg
 - _fullpath_dbg
 - fullpath_dbg
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - _fullpath_dbg function
 - relative file paths
@@ -38,30 +36,15 @@ helpviewer_keywords:
 - _wfullpath_dbg function
 - wfullpath_dbg function
 ms.assetid: 81f72f85-07da-4f5c-866a-598e0fb03f6b
-caps.latest.revision: 16
+caps.latest.revision: "16"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: a82768750e6a7837bb81edd8a51847f83c294c20
-ms.openlocfilehash: 6af4d6ba5df2305b5181e47cf0a0557650aa0406
-ms.contentlocale: ru-ru
-ms.lasthandoff: 04/04/2017
-
+ms.openlocfilehash: d4a89e5599823bb60d65f0845044185fbbe560dd
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="fullpathdbg-wfullpathdbg"></a>_fullpath_dbg, _wfullpath_dbg
 Версии [_fullpath, _wfullpath](../../c-runtime-library/reference/fullpath-wfullpath.md), которые используют отладочную версию `malloc` для выделения памяти.  
@@ -110,7 +93,7 @@ wchar_t *_wfullpath_dbg(
  Каждая функция возвращает указатель на буфер, который содержит абсолютный путь (`absPath`). При наличии ошибки (например, если значение, передаваемое в `relPath`, включает недопустимую букву диска или букву диска, которую не удается найти, или если длина созданного абсолютного пути (`absPath`) превышает `maxLength`), функция возвращает значение `NULL`.  
   
 ## <a name="remarks"></a>Примечания  
- `_fullpath_dbg` И `_wfullpath_dbg` идентичны `_fullpath` и `_wfullpath` за исключением того, что, когда `_DEBUG` — определен, эти функции используют отладочную версию `malloc`, `_malloc_dbg`для выделения памяти, если в качестве первого параметра передается значение NULL. Сведения о средствах отладки `_malloc_dbg` см. в разделе [_malloc_dbg](../../c-runtime-library/reference/malloc-dbg.md).  
+ `_fullpath_dbg` И `_wfullpath_dbg` идентичны `_fullpath` и `_wfullpath` за исключением того, что, когда `_DEBUG` — определен, эти функции используют отладочную версию `malloc`, `_malloc_dbg`для выделения памяти, если имеет значение NULL передана в качестве первого параметра. Сведения о средствах отладки `_malloc_dbg` см. в разделе [_malloc_dbg](../../c-runtime-library/reference/malloc-dbg.md).  
   
  Как правило, явно вызывать эти функции не требуется. Вместо этого можно определить флаг `_CRTDBG_MAP_ALLOC`. Если определен флаг `_CRTDBG_MAP_ALLOC`, вызовы функций `_fullpath` и `_wfullpath` повторно сопоставляются с `_fullpath_dbg` и `_wfullpath_dbg` соответственно, а для параметра `blockType` задается тип `_NORMAL_BLOCK`. Таким образом, не требуется явно вызывать эти функции, если только нет необходимости пометить блоки кучи как `_CLIENT_BLOCK`. Дополнительные сведения см. в разделе [Типы блоков в отладочной куче](/visualstudio/debugger/crt-debug-heap-details).  
   

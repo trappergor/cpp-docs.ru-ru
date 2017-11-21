@@ -1,52 +1,52 @@
 ---
-title: "fp_contract | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "vc-pragma.fp_contract"
-  - "fp_contract_CPP"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "fp_contract - прагма"
-  - "прагмы, fp_contract"
+title: "fp_contract | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- vc-pragma.fp_contract
+- fp_contract_CPP
+dev_langs: C++
+helpviewer_keywords:
+- pragmas, fp_contract
+- fp_contract pragma
 ms.assetid: 15b97338-6680-4287-ba2a-2dccc5b2ccf5
-caps.latest.revision: 12
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 10
+caps.latest.revision: "12"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: 95b7e8e4147e168cb36e8a5e4be023def6960a4f
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/24/2017
 ---
-# fp_contract
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="fpcontract"></a>fp_contract
 Определяет, будет ли выполняться сокращение чисел с плавающей запятой.  
   
-## Синтаксис  
+## <a name="syntax"></a>Синтаксис  
   
 ```  
 #pragma fp_contract [ON | OFF]  
 ```  
   
-## Заметки  
- По умолчанию ключевое слово `fp_contract` имеет значение ON \(включено\).  
+## <a name="remarks"></a>Примечания  
+ По умолчанию ключевое слово `fp_contract` имеет значение ON (включено).  
   
- Дополнительные сведения о поведении чисел с плавающей запятой см. в разделе [\/fp \(Определение поведения с плавающей запятой\)](../build/reference/fp-specify-floating-point-behavior.md).  
+ Дополнительные сведения о работе с плавающей запятой см. в разделе [/FP (указать поведение с плавающей запятой)](../build/reference/fp-specify-floating-point-behavior.md).  
   
  Другие типы директив pragma для значений с плавающей запятой:  
   
--   [fenv\_access](../preprocessor/fenv-access.md)  
+-   [fenv_access](../preprocessor/fenv-access.md)  
   
--   [float\_control](../Topic/float_control.md)  
+-   [float_control](../preprocessor/float-control.md)  
   
-## Пример  
- В приведенном примере не используется инструкция совмещенного умножения\-сложения \(**fma**\) на процессорах Itanium.  Если закомментировать строку `#pragma fp_contract (off)`, то в полученном коде будет использоваться инструкция **fma**.  
+## <a name="example"></a>Пример  
+ Код, созданный в этом примере не использует совмещенного умножения-сложения (**fma**) инструкции на процессорах Itanium. Если закомментировать строку `#pragma fp_contract (off)`, созданный код будет использовать **fma** инструкции.  
   
 ```  
 // pragma_directive_fp_contract.cpp  
@@ -70,15 +70,18 @@ int main() {
 }  
 ```  
   
-  **out\=0.000000000000000e\+000**  
-**out\=6.152500152587891e\+001**  
-**out\=2.351000061035156e\+002**  
-**out\=5.207249755859375e\+002**  
-**out\=9.184000244140625e\+002**  
-**out\=1.428125000000000e\+003**  
-**out\=2.049899902343750e\+003**  
-**out\=2.783724853515625e\+003**  
-**out\=3.629600097656250e\+003**  
-**out\=4.587524902343750e\+003**   
-## См. также  
- [Директивы Pragma и ключевое слово \_\_Pragma](../preprocessor/pragma-directives-and-the-pragma-keyword.md)
+```Output  
+out=0.000000000000000e+000  
+out=6.152500152587891e+001  
+out=2.351000061035156e+002  
+out=5.207249755859375e+002  
+out=9.184000244140625e+002  
+out=1.428125000000000e+003  
+out=2.049899902343750e+003  
+out=2.783724853515625e+003  
+out=3.629600097656250e+003  
+out=4.587524902343750e+003  
+```  
+  
+## <a name="see-also"></a>См. также  
+ [Директивы Pragma и ключевое слово __Pragma](../preprocessor/pragma-directives-and-the-pragma-keyword.md)

@@ -1,79 +1,79 @@
 ---
-title: "__readgsbyte, __readgsdword, __readgsqword, __readgsword | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "__readgsbyte"
-  - "__readgsdword"
-  - "__readgsqword"
-  - "__readgsword"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Встроенная функция __readgsword"
-  - "Встроенная функция __readgsdword"
-  - "Встроенная функция __readgsqword"
-  - "Встроенная функция __readgsbyte"
+title: "__readgsbyte __readgsdword, __readgsqword __readgsword | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- __readgsbyte
+- __readgsdword
+- __readgsqword
+- __readgsword
+dev_langs: C++
+helpviewer_keywords:
+- __readgsword intrinsic
+- __readgsdword intrinsic
+- __readgsqword intrinsic
+- __readgsbyte intrinsic
 ms.assetid: f822632d-854c-4558-a71b-cdfc3eea2236
-caps.latest.revision: 10
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 10
+caps.latest.revision: "10"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: 10fe156448e62d0d072522a262194a7aba9426cb
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/24/2017
 ---
-# __readgsbyte, __readgsdword, __readgsqword, __readgsword
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-**Только для систем Microsoft**  
+# <a name="readgsbyte-readgsdword-readgsqword-readgsword"></a>__readgsbyte, __readgsdword, __readgsqword, __readgsword
+**Блок, относящийся только к системам Майкрософт**  
   
- Память для чтения начиная с позиции, указанной смещением относительно начала сегмента GS.  
+ Чтение памяти в расположении, указанном в качестве смещения относительно начала сегмента GS.  
   
-## Синтаксис  
+## <a name="syntax"></a>Синтаксис  
   
 ```  
-unsigned char __readgsbyte(   
-   unsigned long Offset   
+unsigned char __readgsbyte(   
+   unsigned long Offset   
 );  
-unsigned short __readgsword(   
-   unsigned long Offset   
+unsigned short __readgsword(   
+   unsigned long Offset   
 );  
-unsigned long __readgsdword(   
+unsigned long __readgsdword(   
    unsigned long Offset  
 );  
-unsigned __int64 __readgsqword(   
-   unsigned long Offset   
+unsigned __int64 __readgsqword(   
+   unsigned long Offset   
 );  
 ```  
   
-#### Параметры  
- \[входящий\] `Offset`  
- Смещение в байтах от начала `GS`, из которого выполняется чтение.  
+#### <a name="parameters"></a>Параметры  
+ [in] `Offset`  
+ Смещение от начала `GS` из которого выполняется чтение.  
   
-## Возвращаемое значение  
- Содержимое памяти в байтах, слова, повторяющегося слова или quadword \(как показано в разделе имя вызываемой функции\) на месте `GS:[``Offset``]`.  
+## <a name="return-value"></a>Возвращаемое значение  
+ Содержимое памяти байт, слово, двойное слово или quadword (как указано в имени функции, вызываемой) в расположении `GS:[Offset]`.  
   
-## Требования  
+## <a name="requirements"></a>Требования  
   
-|Встроенный объект|Архитектура|  
-|-----------------------|-----------------|  
-|`__readgsbyte`|[!INCLUDE[vcprx64](../Token/vcprx64_md.md)]|  
-|`__readgsdword`|[!INCLUDE[vcprx64](../Token/vcprx64_md.md)]|  
-|`__readgsqword`|[!INCLUDE[vcprx64](../Token/vcprx64_md.md)]|  
-|`__readgsword`|[!INCLUDE[vcprx64](../Token/vcprx64_md.md)]|  
+|Встроенная функция|Архитектура|  
+|---------------|------------------|  
+|`__readgsbyte`|[!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|  
+|`__readgsdword`|[!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|  
+|`__readgsqword`|[!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|  
+|`__readgsword`|[!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|  
   
- **Файл заголовка** \<intrin.h\>  
+ **Файл заголовка** \<intrin.h >  
   
-## Заметки  
- Эти встроенные функции доступны только в режиме ядра и подпрограммы доступны только в качестве встроенных функций.  
+## <a name="remarks"></a>Примечания  
+ Эти встроенные функции доступны только в режиме ядра и процедуры доступны только как встроенные объекты.  
   
-## ЭЛЕМЕНТ, относящийся Майкрософт  
+**Завершение блока, относящегося только к системам Майкрософт**  
   
-## См. также  
- [\_\_writegsbyte, \_\_writegsdword, \_\_writegsqword, \_\_writegsword](../intrinsics/writegsbyte-writegsdword-writegsqword-writegsword.md)   
- [Встроенные объекты компилятора](../intrinsics/compiler-intrinsics.md)
+## <a name="see-also"></a>См. также  
+ [__writegsbyte, \__writegsdword, \__writegsqword, \__writegsword](../intrinsics/writegsbyte-writegsdword-writegsqword-writegsword.md)   
+ [Встроенные инструкции компилятора](../intrinsics/compiler-intrinsics.md)

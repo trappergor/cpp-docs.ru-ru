@@ -1,35 +1,33 @@
 ---
-title: "Ошибка средств компоновщика LNK2031 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "LNK2031"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "LNK2031"
+title: "Ошибка средств компоновщика LNK2031 | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords: LNK2031
+dev_langs: C++
+helpviewer_keywords: LNK2031
 ms.assetid: 18ed4b6e-3e75-443c-bbd8-2f6030dc89ee
-caps.latest.revision: 6
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 6
+caps.latest.revision: "6"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: 8732b9deaf1da2e27b8f95aed63d09e9f4c41dec
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/24/2017
 ---
-# Ошибка средств компоновщика LNK2031
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-не удается создать p\/invoke для "function\_declaration" decorated\_name; соглашение о вызове отсутствует в метаданных  
+# <a name="linker-tools-error-lnk2031"></a>Ошибка средств компоновщика LNK2031
+не удалось создать p/invoke для decorated_name «function_declaration»; в метаданных отсутствует соглашение о вызовах  
   
- При попытке импортирования внутренней функции в чистый образ следует помнить о том, что явный вызов соглашений отличается во внутренней и чистой компиляции.  Дополнительные сведения о "чистых" образах см. в разделе [Чистый и проверяемый код](../../dotnet/pure-and-verifiable-code-cpp-cli.md).  
+ При попытке импортировать собственную функцию в чистом образе, следует помнить, что неявные соглашения о вызовах различаются внутренней и чистой компиляции. Дополнительные сведения об образах чисто см [чистый и проверяемый код (C + +/ CLI)](../../dotnet/pure-and-verifiable-code-cpp-cli.md).  
   
-## Пример  
- В примере этого кода создается компонент с экспортированной и внутренней функцией, явно вызывающий соглашение [\_\_cdecl](../Topic/__cdecl.md).  
+## <a name="example"></a>Пример  
+ Этот пример кода приводит к возникновению ошибки компонента с экспортированного native, функции которого соглашение о вызовах является неявно [__cdecl](../../cpp/cdecl.md).  
   
 ```  
 // LNK2031.cpp  
@@ -39,8 +37,8 @@ extern "C" {
 };  
 ```  
   
-## Пример  
- В следующем примере создается чистый клиент, использующий внутреннюю функцию.  Однако вызов соглашения в **\/clr:pure** представляет из себя [\_\_clrcall](../../cpp/clrcall.md).  В следующем примере формируется сообщение об ошибке LNK2031.  
+## <a name="example"></a>Пример  
+ В следующем примере создается чистый клиент, использующий внутреннюю функцию. Тем не менее соглашение о вызовах в **/CLR: pure** — [__clrcall](../../cpp/clrcall.md). Следующий пример приводит к возникновению ошибки LNK2031.  
   
 ```  
 // LNK2031_b.cpp  
@@ -53,8 +51,8 @@ int main() {
 }  
 ```  
   
-## Пример  
- В следующем примере показано, как использовать внутреннюю функцию для чистого образа.  Обратите внимание на явный вызов описателя соглашения **\_\_cdecl**.  
+## <a name="example"></a>Пример  
+ Следующий пример показано, как использовать внутреннюю функцию для чистого образа. Обратите внимание на явный **__cdecl** вызов описателя соглашения.  
   
 ```  
 // LNK2031_c.cpp  

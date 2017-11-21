@@ -1,31 +1,29 @@
 ---
-title: "Оператор operator== (Microsoft::WRL) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "client/Microsoft::WRL::operator=="
-dev_langs: 
-  - "C++"
+title: "Оператор Operator == (Microsoft::WRL) | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: client/Microsoft::WRL::operator==
+dev_langs: C++
 ms.assetid: 94f383a5-17a9-40c7-9d9c-778acdc54b27
-caps.latest.revision: 3
-caps.handback.revision: 3
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "3"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 3bf8690e92140b503695de79cc6f6d96d3003a32
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/24/2017
 ---
-# Оператор operator== (Microsoft::WRL)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Оператор равенства для объектов [ComPtr](../windows/comptr-class.md) и [ComPtrRef](../Topic/ComPtrRef%20Class.md).  
+# <a name="operator-operator-microsoftwrl"></a>Оператор operator== (Microsoft::WRL)
+Оператор равенства для [ComPtr](../windows/comptr-class.md) и [ComPtrRef](../windows/comptrref-class.md) объектов.  
   
-## Синтаксис  
+## <a name="syntax"></a>Синтаксис  
   
 ```  
 WRL_NOTHROW bool operator==(  
@@ -62,20 +60,20 @@ WRL_NOTHROW bool operator==(
 );  
 ```  
   
-#### Параметры  
+#### <a name="parameters"></a>Параметры  
  `a`  
  Левый объект.  
   
  `b`  
  Правый объект.  
   
-## Возвращаемое значение  
- Значение `true`, если объекты равны; в противном случае — значение `false`.  
+## <a name="return-value"></a>Возвращаемое значение  
+ Значение `true`, если объекты равны, в противном случае — значение `false`.  
   
-## Требования  
+## <a name="requirements"></a>Требования  
  **Заголовок:** client.h  
   
  **Пространство имен:** Microsoft::WRL  
   
-## См. также  
+## <a name="see-also"></a>См. также  
  [Пространство имен Microsoft::WRL](../windows/microsoft-wrl-namespace.md)

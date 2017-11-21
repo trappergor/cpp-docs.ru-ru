@@ -1,42 +1,39 @@
 ---
-title: "Деструктор SRWLock::~SRWLock | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "corewrappers/Microsoft::WRL::Wrappers::SRWLock::~SRWLock"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "~SRWLock, деструктор"
+title: "SRWLock:: ~ SRWLock деструктор | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: corewrappers/Microsoft::WRL::Wrappers::SRWLock::~SRWLock
+dev_langs: C++
+helpviewer_keywords: ~SRWLock, destructor
 ms.assetid: 3a3b132c-1a2f-4955-aaf8-69c899a689f9
-caps.latest.revision: 3
-caps.handback.revision: 3
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "3"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 97568e466e89fed90fed6e75ba22e42945130f85
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/24/2017
 ---
-# Деструктор SRWLock::~SRWLock
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Деиницилизирует экземпляр класса SRWLock.  
+# <a name="srwlocksrwlock-destructor"></a>Деструктор SRWLock::~SRWLock
+Отменяет инициализацию экземпляра класса SRWLock.  
   
-## Синтаксис  
+## <a name="syntax"></a>Синтаксис  
   
 ```  
 ~SRWLock();  
 ```  
   
-## Требования  
+## <a name="requirements"></a>Требования  
  **Заголовок:** corewrappers.h  
   
- **Пространство имен:** Microsoft::WRL::Wrappers  
+ **Пространство имен:** Microsoft::wrl:: wrappers  
   
-## См. также  
+## <a name="see-also"></a>См. также  
  [Класс SRWLock](../windows/srwlock-class.md)

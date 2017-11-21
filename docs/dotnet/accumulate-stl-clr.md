@@ -1,32 +1,30 @@
 ---
-title: "accumulate (STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::accumulate"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "accumulate - функция [STL/CLR]"
+title: "Accumulate (STL/CLR) | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::accumulate
+dev_langs: C++
+helpviewer_keywords: accumulate function [STL/CLR]
 ms.assetid: b80e1ef1-1858-4c1d-817b-c42ad1f17a2f
-caps.latest.revision: 4
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 4
+caps.latest.revision: "4"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 50334d4468f34afa10639ad18b649c964b126ee4
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/24/2017
 ---
-# accumulate (STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Вычисляет сумму всех элементов в заданном диапазоне, включая некоторые начальное значение путем группирования последовательные частично суммы или вычисляет результат последовательных частично результатов аналогично полученных от использования определенной бинарной операции, отличный от суммы.  
+# <a name="accumulate-stlclr"></a>accumulate (STL/CLR)
+Вычисляет сумму всех элементов в указанном диапазоне, включая некоторое начальное значение, путем вычисления последовательных частичных сумм или вычисляет результат последовательных частичных сумм, аналогичным образом полученных от использования указанной бинарной операции, отличной от суммы.  
   
-## Синтаксис  
+## <a name="syntax"></a>Синтаксис  
   
 ```  
 template<class _InIt, class _Ty> inline  
@@ -35,13 +33,13 @@ template<class _InIt, class _Ty, class _Fn2> inline
     _Ty accumulate(_InIt _First, _InIt _Last, _Ty _Val, _Fn2 _Func);  
 ```  
   
-## Заметки  
- Эта функция работает аналогично функции `accumulate` STL числовые.  Для получения дополнительной информации см. [accumulate](../Topic/accumulate.md).  
+## <a name="remarks"></a>Примечания  
+ Эта функция работает так же, как числовая функция стандартной библиотеки C++ `accumulate`. Дополнительные сведения см. в разделе [накапливаться](../standard-library/numeric-functions.md#accumulate).  
   
-## Требования  
- **Заголовок:**\<cliext\/numeric\>  
+## <a name="requirements"></a>Требования  
+ **Заголовок:** \<cliext/numeric >  
   
  **Пространство имен:** cliext  
   
-## См. также  
- [числовой](../dotnet/numeric-stl-clr.md)
+## <a name="see-also"></a>См. также  
+ [numeric (STL/CLR)](../dotnet/numeric-stl-clr.md)

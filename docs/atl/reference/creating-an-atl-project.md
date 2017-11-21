@@ -1,50 +1,50 @@
 ---
-title: "Создание проекта библиотеки ATL | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "vc.appwiz.ATL.project"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "_ATL_MIN_CRT - макрос"
-  - "проекты ATL, создание"
-  - "ATL70.DLL"
-  - "распространение файлов с компонентами ATL"
+title: "Создание проекта ATL | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: vc.appwiz.ATL.project
+dev_langs: C++
+helpviewer_keywords:
+- ATL projects, creating
+- ATL70.DLL
+- _ATL_MIN_CRT macro
+- distributing files with ATL components
 ms.assetid: 061d5f98-f669-440e-9380-42f017a0f9e8
-caps.latest.revision: 13
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 13
+caps.latest.revision: "13"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 190a10d83ab4935f8c0f891bbd449b7eb9762b62
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/24/2017
 ---
-# Создание проекта библиотеки ATL
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Проект ATL проще всего создать с помощью мастера проектов ATL, расположенного в папке "Проекты Win32" диалогового окна **Создать проект**.  
+# <a name="creating-an-atl-project"></a>Создание проекта библиотеки ATL
+Для создания проекта ATL проще всего использовать мастер проектов ATL, расположенный в папке проекты Win32 **диалоговое окно нового проекта**.  
   
-### Создание проекта ATL с помощью мастера проектов ATL  
+### <a name="to-create-an-atl-project-using-the-atl-project-wizard"></a>Для создания проекта ATL с помощью мастера проектов ATL  
   
-1.  Следуйте инструкциям, приведенным в разделе [Создание приложения с помощью мастера приложений Visual C\+\+](../../ide/creating-desktop-projects-by-using-application-wizards.md).  
+1.  Следуйте инструкциям в разделе [Создание проекта с использованием мастера приложений Visual C++](../../ide/creating-desktop-projects-by-using-application-wizards.md).  
   
-2.  Чтобы открыть мастер проектов ATL, выберите значок **Проект ATL** в панели "Шаблоны".  
+2.  Выберите **проект ATL** значок в области шаблонов, чтобы открыть мастер проектов ATL.  
   
-3.  Определите параметры приложения на странице [Параметры приложения](../Topic/Application%20Settings,%20ATL%20Project%20Wizard.md) мастера `ATL Project Wizard`.  
+3.  Задайте параметры приложения с помощью [параметры приложения](../../atl/reference/application-settings-atl-project-wizard.md) страница `ATL Project Wizard`.  
   
     > [!NOTE]
     >  Для сохранения параметров, заданных в мастере по умолчанию, пропустите этот шаг.  
   
-4.  Нажмите кнопку **Готово** для завершения работы мастера и откройте новый проект в среде разработки.  
+4.  Нажмите кнопку **Готово** завершить работу мастера и откройте новый проект в среде разработки.  
   
- После создания проекта можно просмотреть его файлы при помощи **обозревателя решений**.  Дополнительные сведения о файлах, создаваемых мастером для проекта, см. в созданном проектом файле ReadMe.txt.  Дополнительные сведения о типах файлов см. в разделе [Типы файлов, создаваемых для проектов Visual C\+\+](../../ide/file-types-created-for-visual-cpp-projects.md).  Сведения о конфигурациях для нового проекта ATL и их изменении см. в разделе [Конфигурации проектов ATL по умолчанию](../../atl/reference/default-atl-project-configurations.md).  
+ После создания проекта можно просмотреть файлы, созданные в **обозревателе решений**. Дополнительные сведения о файлах, создаваемых мастером для проекта, см. в созданном для проекта файле ReadMe.txt. Дополнительные сведения о типах файлов см. в разделе [типы файлов, создаваемых для проектов Visual C++](../../ide/file-types-created-for-visual-cpp-projects.md). Дополнительные сведения о конфигурациях для нового проекта ATL и их изменении см. в разделе [конфигурации по умолчанию для проекта ATL](../../atl/reference/default-atl-project-configurations.md).  
   
-## См. также  
+## <a name="see-also"></a>См. также  
  [Добавление функциональных возможностей с помощью мастеров кода](../../ide/adding-functionality-with-code-wizards-cpp.md)   
  [Страницы свойств](../../ide/property-pages-visual-cpp.md)   
- [Deploying Applications](http://msdn.microsoft.com/ru-ru/4ff8881d-0daf-47e7-bfe7-774c625031b4)
+ [Развертывание приложений](http://msdn.microsoft.com/en-us/4ff8881d-0daf-47e7-bfe7-774c625031b4)
+

@@ -1,72 +1,69 @@
 ---
-title: "/doc (обработка комментариев документации) (C/C++) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "VC.Project.VCCLCompilerTool.GenerateXMLDocumentationFiles"
-  - "/doc"
-  - "VC.Project.VCCLCompilerTool.XMLDocumentationFileName"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "/doc - параметр компилятора [C++]"
-  - "комментарии, в коде C++"
-  - "-doc - параметр компилятора [C++]"
-  - "документация XML, комментарии в исходных файлах"
+title: "-doc (обработка комментариев документации) (C/C++) | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- VC.Project.VCCLCompilerTool.GenerateXMLDocumentationFiles
+- /doc
+- VC.Project.VCCLCompilerTool.XMLDocumentationFileName
+dev_langs: C++
+helpviewer_keywords:
+- /doc compiler option [C++]
+- comments, C++ code
+- XML documentation, comments in source files
+- -doc compiler option [C++]
 ms.assetid: b54f7e2c-f28f-4f46-9ed6-0db09be2cc63
-caps.latest.revision: 17
-caps.handback.revision: 17
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
+caps.latest.revision: "17"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: 083eb8742308f986e3261711039bbd29a914d97e
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/24/2017
 ---
-# /doc (обработка комментариев документации) (C/C++)
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Вызывает компилятор, чтобы обработать комментарии документации в файлах источника кода, и создает XDC\-файл для каждого файла с исходным кодом, в котором есть комментарии к документации.  
+# <a name="doc-process-documentation-comments-cc"></a>/doc (обработка комментариев документации) (C/C++)
+Указывает компилятору на необходимость обработать комментарии документации в файлах исходного кода и создания XDC-файл для каждого файла исходного кода с комментариями документации.  
   
-## Синтаксис  
+## <a name="syntax"></a>Синтаксис  
   
 ```  
 /doc[name]  
 ```  
   
-## Аргументы  
+## <a name="arguments"></a>Аргументы  
  `name`  
- Имя XDC\-файла, который будет создан компилятором.  Только корректный CPP\-файл передается для компиляции.  
+ Имя XDC-файл, компилятор создаст. Действительно только когда CPP-файл передается в компиляцию.  
   
-## Заметки  
- XDC\-файлы выполняются в XML\-файле при помощи xdcmake.exe.  Для получения дополнительной информации см. [Справочник по XDCMake](../../ide/xdcmake-reference.md).  
+## <a name="remarks"></a>Примечания  
+ В XML-файл с xdcmake.exe обрабатываются XDC-файлах. Дополнительные сведения см. в разделе [Справочник по XDCMake](../../ide/xdcmake-reference.md).  
   
- Можно добавить комментарии документации в файл с исходным кодом.  Для получения дополнительной информации см. [Рекомендуемые теги для комментариев документации](../Topic/Recommended%20Tags%20for%20Documentation%20Comments%20\(Visual%20C++\).md).  
+ Можно добавить комментарии к документации в файлах исходного кода. Дополнительные сведения см. в разделе [Рекомендуемые теги для комментариев документации](../../ide/recommended-tags-for-documentation-comments-visual-cpp.md).  
   
- Параметр **\/doc** несовместим с параметром **\/clr:oldSyntax**.  Дополнительные сведения см. в разделе [\/clr \(компиляция CLR\)](../../build/reference/clr-common-language-runtime-compilation.md).  
+ Чтобы использовать созданный XML-файл с поддержкой технологии IntelliSense, сделайте имя файла XML-файла, таким же, как сборка, которую требуется поддерживать и поместить XML-файл находится в том же каталоге, что и сборка. При ссылке на сборку в проекте Visual Studio также находится XML-файл. Дополнительные сведения см. в разделе [использование IntelliSense](/visualstudio/ide/using-intellisense) и [Создание примечаний к коду XML](/visualstudio/ide/supplying-xml-code-comments).  
   
- Чтобы использовать созданный XML\-файл с помощью функции IntelliSense, имя XML\-файла должно совпадать с именем сборки, а сам XML\-файл должен находиться в одном каталоге со сборкой.  Таким образом, если в проект Visual Studio добавляется ссылка на сборку, то XML\-файл также будет найден.  Дополнительные сведения см. в разделах [Использование технологии IntelliSense](../Topic/Using%20IntelliSense.md) и [Создание XML\-примечаний к коду](../Topic/Supplying%20XML%20Code%20Comments.md).  
+### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Установка данного параметра компилятора в среде разработки Visual Studio  
   
-### Установка данного параметра компилятора в среде разработки Visual Studio  
+1.  Откройте диалоговое окно **Страницы свойств** проекта. Дополнительные сведения см. в разделе [работа со свойствами проекта](../../ide/working-with-project-properties.md).  
   
-1.  Откройте диалоговое окно **Страницы свойств** проекта.  Дополнительные сведения см. в разделе [Открытие свойств страниц проекта](../../misc/how-to-open-project-property-pages.md).  
+2.  Разверните **свойства конфигурации** узла.  
   
-2.  Разверните узел **Свойства конфигурации**.  
+3.  Разверните **C/C++** узла.  
   
-3.  Разверните узел **C\/C\+\+**.  
+4.  Выберите **выходные файлы** страницу свойств.  
   
-4.  Щелкните страницу свойств **Выходные файлы**.  
+5.  Изменить **создавать файлы XML-документации** свойство.  
   
-5.  Измените свойство **Создать файлы XML\-документации**.  
-  
-### Установка данного параметра компоновщика программным способом  
+### <a name="to-set-this-linker-option-programmatically"></a>Задание данного параметра компоновщика программным способом  
   
 1.  См. раздел <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.GenerateXMLDocumentationFiles%2A>.  
   
-## См. также  
+## <a name="see-also"></a>См. также  
  [Параметры компилятора](../../build/reference/compiler-options.md)   
- [Настройка параметров компилятора](../Topic/Setting%20Compiler%20Options.md)
+ [Настройка параметров компилятора](../../build/reference/setting-compiler-options.md)

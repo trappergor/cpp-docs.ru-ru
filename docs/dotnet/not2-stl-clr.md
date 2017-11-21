@@ -1,50 +1,48 @@
 ---
-title: "not2 (STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::not2"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "not2 - функция [STL/CLR]"
+title: "not2 (STL/CLR) | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::not2
+dev_langs: C++
+helpviewer_keywords: not2 function [STL/CLR]
 ms.assetid: f8aedcca-e4d1-4430-93b4-83dd55579d04
-caps.latest.revision: 15
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 13
+caps.latest.revision: "15"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 7ba2ae563bd63c50039af0921bdffd9317db77e3
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/24/2017
 ---
-# not2 (STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Создает `binary_negate` для функтором.  
+# <a name="not2-stlclr"></a>not2 (STL/CLR)
+Приводит к возникновению ошибки `binary_negate` для функтором.  
   
-## Синтаксис  
+## <a name="syntax"></a>Синтаксис  
   
 ```  
 template<typename Fun>  
     binary_negate<Fun> not2(Fun% functor);  
 ```  
   
-## Параметры шаблона  
- Функции  
- Тип функтором.  
+## <a name="template-parameters"></a>Параметры шаблона  
+ Fun  
+ Тип функтора.  
   
-## Параметры функции  
- функтором  
- Функтором, создающееся.  
+## <a name="function-parameters"></a>Параметры функции  
+ функтор  
+ Функтор программы-оболочки.  
   
-## Заметки  
- Шаблонная функция [binary\_negate](../dotnet/binary-negate-stl-clr.md) возвращает `<``Fun``>(functor)`.  Он используется как удобный способ создания функтором 2 — аргумента в функтором, доставляет его логическое НЕ.  
+## <a name="remarks"></a>Примечания  
+ Функция шаблона возвращает [binary_negate (STL/CLR)](../dotnet/binary-negate-stl-clr.md)`<Fun>(functor)`. Используется в качестве удобный способ в функтор, который доставляет его логическое не вокруг функтор двумя аргументами.  
   
-## Пример  
+## <a name="example"></a>Пример  
   
 ```  
 // cliext_not2.cpp   
@@ -94,14 +92,17 @@ int main()
   
 ```  
   
-  **4 3**  
- **4 4**  
- **1 0**  
- **1 0**   
-## Требования  
- **Заголовок:**\<cliext\/functional\>  
+```Output  
+4 3  
+4 4  
+1 0  
+1 0  
+```  
+  
+## <a name="requirements"></a>Требования  
+ **Заголовок:** \<cliext и функционального >  
   
  **Пространство имен:** cliext  
   
-## См. также  
- [binary\_negate](../dotnet/binary-negate-stl-clr.md)
+## <a name="see-also"></a>См. также  
+ [binary_negate (STL/CLR)](../dotnet/binary-negate-stl-clr.md)

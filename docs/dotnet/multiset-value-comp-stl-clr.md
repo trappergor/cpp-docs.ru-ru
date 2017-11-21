@@ -1,41 +1,39 @@
 ---
-title: "multiset::value_comp (STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::multiset::value_comp"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "value_comp - член [STL/CLR]"
+title: "MULTISET::value_comp (STL/CLR) | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::multiset::value_comp
+dev_langs: C++
+helpviewer_keywords: value_comp member [STL/CLR]
 ms.assetid: 6b418e7a-9e82-4d35-a25d-f07b79a875a6
-caps.latest.revision: 8
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 6
+caps.latest.revision: "8"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 021c6185308ea021be334e5a7ec262b009832151
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/24/2017
 ---
-# multiset::value_comp (STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Копирует порядок делегат для 2 значений элементов.  
+# <a name="multisetvaluecomp-stlclr"></a>multiset::value_comp (STL/CLR)
+Копирует делегат упорядочения для значения двух элементов.  
   
-## Синтаксис  
+## <a name="syntax"></a>Синтаксис  
   
 ```  
 value_compare^ value_comp();  
 ```  
   
-## Заметки  
- Возвращает порядок функцию\-член делегат, используемый для сортировки контролируемую последовательность.  Он используется для сравнения значений 2 элемента.  
+## <a name="remarks"></a>Примечания  
+ Функция-член возвращает упорядочивания делегат, используемый для упорядочения управляемой последовательности. Используется для сравнения двух значений элемента.  
   
-## Пример  
+## <a name="example"></a>Пример  
   
 ```  
 // cliext_multiset_value_comp.cpp   
@@ -60,15 +58,18 @@ int main()
   
 ```  
   
-  **сравнение \(L'a, L'а\) \= false**  
-**сравнение \(L'a, L'б\) \= true**  
-**сравнение \(L'b, L'а\) \= false**   
-## Требования  
- **Заголовок:**\<cliext\/set\>  
+```Output  
+compare(L'a', L'a') = False  
+compare(L'a', L'b') = True  
+compare(L'b', L'a') = False  
+```  
+  
+## <a name="requirements"></a>Требования  
+ **Заголовок:** \<cliext и set >  
   
  **Пространство имен:** cliext  
   
-## См. также  
- [multiset](../dotnet/multiset-stl-clr.md)   
- [multiset::value\_compare](../Topic/multiset::value_compare%20\(STL-CLR\).md)   
- [multiset::value\_type](../dotnet/multiset-value-type-stl-clr.md)
+## <a name="see-also"></a>См. также  
+ [мультинабор (STL/CLR)](../dotnet/multiset-stl-clr.md)   
+ [MULTISET::value_compare (STL/CLR)](../dotnet/multiset-value-compare-stl-clr.md)   
+ [multiset::value_type (STL/CLR)](../dotnet/multiset-value-type-stl-clr.md)

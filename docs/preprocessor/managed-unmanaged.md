@@ -1,69 +1,69 @@
 ---
-title: "managed, unmanaged | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "vc-pragma.unmanaged"
-  - "managed_CPP"
-  - "unmanaged_CPP"
-  - "vc-pragma.managed"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "управляемая прагма"
-  - "прагмы, управляемая"
-  - "прагмы, неуправляемые"
-  - "неуправляемая прагма"
+title: "управляемые, неуправляемые | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- vc-pragma.unmanaged
+- managed_CPP
+- unmanaged_CPP
+- vc-pragma.managed
+dev_langs: C++
+helpviewer_keywords:
+- managed pragma
+- pragmas, unmanaged
+- pragmas, managed
+- unmanaged pragma
 ms.assetid: f072ddcc-e1ec-408a-8ce1-326ddb60e4a4
-caps.latest.revision: 15
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 13
+caps.latest.revision: "15"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: 38047e535c53a1f463e3c0a7c5d210fab480cb71
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/24/2017
 ---
-# managed, unmanaged
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="managed-unmanaged"></a>managed, unmanaged
 Позволяет на уровне функций контролировать режим их компиляции: с управляемым или неуправляемым кодом.  
   
-## Синтаксис  
+## <a name="syntax"></a>Синтаксис  
   
 ```  
   
-        #pragma managed  
+      #pragma managed  
 #pragma unmanaged  
 #pragma managed([push,] on | off)  
 #pragma managed(pop)  
 ```  
   
-## Заметки  
- Параметр компилятора [\/clr](../build/reference/clr-common-language-runtime-compilation.md) позволяет управлять режимом компиляции функций \(управляемый или неуправляемый код\) на уровне модуля.  
+## <a name="remarks"></a>Примечания  
+ [/CLR](../build/reference/clr-common-language-runtime-compilation.md) параметр компилятора предоставляет управление доступом на уровне модуля для компиляции функции управляемый или неуправляемый.  
   
  Неуправляемая функция компилируется для собственной платформы, и среда CLR передает выполнение этой части программы в собственную платформу.  
   
- При использовании параметра **\/clr** по умолчанию функции компилируются как управляемые.  
+ Функции компилируются как управляемые по умолчанию при **/CLR** используется.  
   
  При применении этих директив pragma выполните следующие действия.  
   
--   Добавляйте директиву \#pragma перед функцией, а не в теле функции.  
+-   Добавляйте директиву #pragma перед функцией, а не в теле функции.  
   
--   Добавьте директиву pragma после операторов `#include`.  Не используйте эти директивы pragma перед операторами `#include`.  
+-   Добавьте директиву pragma после операторов `#include`. Не используйте эти директивы pragma перед операторами `#include`.  
   
- Компилятор игнорирует директивы \#pragma `managed` и `unmanaged`, если при компиляции не используется параметр **\/clr**.  
+ Компилятор игнорирует `managed` и `unmanaged` директивы pragma Если **/CLR** при компиляции не используется.  
   
- При создании экземпляра шаблонной функции режим ее компиляции \(управляемый или неуправляемый код\) определяется состоянием этой директивы \#pragma в момент определения шаблона.  
+ При создании экземпляра шаблонной функции режим ее компиляции (управляемый или неуправляемый код) определяется состоянием этой директивы #pragma в момент определения шаблона.  
   
- Дополнительные сведения см. в статье [Инициализация смешанных сборок](../Topic/Initialization%20of%20Mixed%20Assemblies.md).  
+ Дополнительные сведения см. в разделе [Инициализация смешанных сборок](../dotnet/initialization-of-mixed-assemblies.md).  
   
-## Пример  
+## <a name="example"></a>Пример  
   
-```  
+```cpp  
 // pragma_directives_managed_unmanaged.cpp  
 // compile with: /clr  
 #include <stdio.h>  
@@ -92,6 +92,10 @@ int main() {
 }  
 ```  
   
-  **В управляемой функции.  В неуправляемой функции.**    
-## См. также  
- [Директивы Pragma и ключевое слово \_\_Pragma](../preprocessor/pragma-directives-and-the-pragma-keyword.md)
+```Output  
+In managed function.  
+In unmanaged function.  
+```  
+  
+## <a name="see-also"></a>См. также  
+ [Директивы Pragma и ключевое слово __Pragma](../preprocessor/pragma-directives-and-the-pragma-keyword.md)

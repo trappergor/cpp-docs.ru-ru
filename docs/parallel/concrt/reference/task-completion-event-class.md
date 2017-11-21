@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-windows
+ms.technology: cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -14,35 +13,18 @@ f1_keywords:
 - PPLTASKS/concurrency::task_completion_event::task_completion_event
 - PPLTASKS/concurrency::task_completion_event::set
 - PPLTASKS/concurrency::task_completion_event::set_exception
-dev_langs:
-- C++
-helpviewer_keywords:
-- task_completion_event class
+dev_langs: C++
+helpviewer_keywords: task_completion_event class
 ms.assetid: fb19ed98-f245-48dc-9ba5-487ba879b28a
-caps.latest.revision: 11
+caps.latest.revision: "11"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 5faef5bd1be6cc02d6614a6f6193c74167a8ff23
-ms.openlocfilehash: b37ecb250c0794370fc586f0463f93023ca47603
-ms.contentlocale: ru-ru
-ms.lasthandoff: 03/17/2017
-
+ms.openlocfilehash: 78c5cb9bdd1da0876abacda48000a914c884d25a
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="taskcompletionevent-class"></a>Класс task_completion_event
 Класс `task_completion_event` позволяет отложить выполнение задачи до выполнения условия или запустить задачу в ответ на внешнее событие.  
@@ -108,10 +90,10 @@ bool set() const ;
  Чтобы установить это событие с результат.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
- Метод возвращает `true` при успешной установке события. Он возвращает `false` Если событие уже установлено.  
+ Метод возвращает `true` успешную при задании события. Он возвращает `false` Если событие уже установлено.  
   
 ### <a name="remarks"></a>Примечания  
- При наличии нескольких или одновременных вызовов для `set`, только первый вызов будет успешным, и его результат (если таковые имеются) будут храниться в событие завершения задачи. Остальные наборы учитываются, и метод возвращает значение false. При установке события завершения задачи все задачи создаваемых событий немедленно завершается, что ее продолжение, будут планироваться. Задача выполнения объектов, имеющих `_ResultType` не `void` передаст значение их продолжения.  
+ При наличии нескольких или одновременных вызовов `set`, только первый вызов будет выполнен успешно, и его результат (если таковые имеются) будут храниться в событие завершения задачи. Остальные наборы учитываются, и метод будет возвращать значение false. При установке события завершения задачи всех задачах, созданных из немедленно завершит событие, которое ее продолжение, если таковые имеются, будет запланирована. Задача выполнения объектов, у которых `_ResultType` отличный от `void` передает значение их продолжениями.  
   
 ##  <a name="set_exception"></a>set_exception 
 
@@ -141,4 +123,3 @@ task_completion_event();
   
 ## <a name="see-also"></a>См. также  
  [Пространство имен concurrency](concurrency-namespace.md)
-

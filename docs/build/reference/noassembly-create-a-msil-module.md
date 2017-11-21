@@ -1,73 +1,73 @@
 ---
-title: "/NOASSEMBLY (создать модуль MSIL) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "/NOASSEMBLY"
-  - "VC.Project.VCLinkerTool.TurnOffAssemblyGeneration"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "/NOASSEMBLY - параметр компоновщика"
-  - "сборки [C++]"
-  - "сборки [C++], несоздание сборки"
-  - "NOASSEMBLY - параметр компоновщика"
-  - "-NOASSEMBLY - параметр компоновщика"
+title: "-NOASSEMBLY (создать модуль MSIL) | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- /NOASSEMBLY
+- VC.Project.VCLinkerTool.TurnOffAssemblyGeneration
+dev_langs: C++
+helpviewer_keywords:
+- assemblies [C++]
+- -NOASSEMBLY linker option
+- /NOASSEMBLY linker option
+- NOASSEMBLY linker option
+- assemblies [C++], not creating an assembly
 ms.assetid: 3cea4e70-f451-4395-a626-1930b1b127fe
-caps.latest.revision: 11
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 11
+caps.latest.revision: "11"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: a8bbb816ebedcb82b198a70532fdacb80b74bf8a
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/24/2017
 ---
-# /NOASSEMBLY (создать модуль MSIL)
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="noassembly-create-a-msil-module"></a>/NOASSEMBLY (создать модуль MSIL)
 ```  
 /NOASSEMBLY  
 ```  
   
-## Заметки  
- Параметр \/NOASSEMBLY предписывает компоновщику создание образа текущего выходного файла без сборки .NET Framework.  Выходной файл без манифеста сборки называется модулем.  
+## <a name="remarks"></a>Примечания  
+ Параметр/NOASSEMBLY предписывает компоновщику Создание образа текущего выходного файла без сборки .NET Framework. Выходной файл MSIL без манифеста сборки называется модуля.  
   
- По умолчанию создается сборка.  Для создания модуля можно также использовать параметр компилятора [\/LN \(создание модуля MSIL\)](../../build/reference/ln-create-msil-module.md).  
+ По умолчанию создается сборка. Можно также использовать [/LN (Создание модуля MSIL)](../../build/reference/ln-create-msil-module.md) параметр компилятора для создания модуля.  
   
- Ниже перечислены прочие параметры компоновщика, влияющие на создание сборок:  
+ Доступны следующие параметры компоновщика, влияющие на создание сборки.  
   
--   [\/ASSEMBLYDEBUG](../Topic/-ASSEMBLYDEBUG%20\(Add%20DebuggableAttribute\).md)  
+-   [/ASSEMBLYDEBUG](../../build/reference/assemblydebug-add-debuggableattribute.md)  
   
--   [\/ASSEMBLYLINKRESOURCE](../../build/reference/assemblylinkresource-link-to-dotnet-framework-resource.md)  
+-   [/ASSEMBLYLINKRESOURCE](../../build/reference/assemblylinkresource-link-to-dotnet-framework-resource.md)  
   
--   [\/ASSEMBLYMODULE](../../build/reference/assemblymodule-add-a-msil-module-to-the-assembly.md)  
+-   [/ASSEMBLYMODULE](../../build/reference/assemblymodule-add-a-msil-module-to-the-assembly.md)  
   
--   [\/ASSEMBLYRESOURCE](../../build/reference/assemblyresource-embed-a-managed-resource.md)  
+-   [/ASSEMBLYRESOURCE](../../build/reference/assemblyresource-embed-a-managed-resource.md)  
   
--   [\/DELAYSIGN](../../build/reference/delaysign-partially-sign-an-assembly.md)  
+-   [/DELAYSIGN](../../build/reference/delaysign-partially-sign-an-assembly.md)  
   
--   [\/KEYFILE](../../build/reference/keyfile-specify-key-or-key-pair-to-sign-an-assembly.md)  
+-   [/KEYFILE](../../build/reference/keyfile-specify-key-or-key-pair-to-sign-an-assembly.md)  
   
--   [\/KEYCONTAINER](../../build/reference/keycontainer-specify-a-key-container-to-sign-an-assembly.md)  
+-   [/KEYCONTAINER](../../build/reference/keycontainer-specify-a-key-container-to-sign-an-assembly.md)  
   
-### Установка данного параметра компоновщика в среде разработки Visual Studio  
+### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>Задание данного параметра компоновщика в среде разработки Visual Studio  
   
-1.  Откройте диалоговое окно **Страницы свойств** проекта.  Дополнительные сведения см. в разделе [Задание свойств проекта C\+\+](../../ide/working-with-project-properties.md).  
+1.  Откройте диалоговое окно **Страницы свойств** проекта. Дополнительные сведения см. в разделе [задание свойств проекта Visual C++](../../ide/working-with-project-properties.md).  
   
-2.  Выберите папку **Компоновщик**.  
+2.  Нажмите кнопку **компоновщика** папки.  
   
-3.  Перейдите на страницу свойств **Дополнительно**.  
+3.  Нажмите кнопку **Дополнительно** страницу свойств.  
   
-4.  Измените свойство **Отключить создание сборки**.  
+4.  Изменить **отключить создание сборки** свойство.  
   
-### Установка данного параметра компоновщика программным способом  
+### <a name="to-set-this-linker-option-programmatically"></a>Задание данного параметра компоновщика программным способом  
   
 -   См. раздел <xref:Microsoft.VisualStudio.VCProjectEngine.VCLinkerTool.TurnOffAssemblyGeneration%2A>.  
   
-## См. также  
+## <a name="see-also"></a>См. также  
  [Настройка параметров компоновщика](../../build/reference/setting-linker-options.md)   
  [Параметры компоновщика](../../build/reference/linker-options.md)

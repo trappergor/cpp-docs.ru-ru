@@ -1,32 +1,30 @@
 ---
-title: "Метод FtmBase::GetMarshalSizeMax | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "ftm/Microsoft::WRL::FtmBase::GetMarshalSizeMax"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "GetMarshalSizeMax - метод"
+title: "Метод FtmBase::GetMarshalSizeMax | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: ftm/Microsoft::WRL::FtmBase::GetMarshalSizeMax
+dev_langs: C++
+helpviewer_keywords: GetMarshalSizeMax method
 ms.assetid: b416b1bf-c73e-45d5-abb8-04921c1a0c94
-caps.latest.revision: 3
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 3
+caps.latest.revision: "3"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 3597d19e1bcdc6b1b14e150c66236585f8c35fb8
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/24/2017
 ---
-# Метод FtmBase::GetMarshalSizeMax
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Получите количество байт, задающих верхнюю границу, необходимую для маршалирования заданного указателя интерфейсов в указанном объекте.  
+# <a name="ftmbasegetmarshalsizemax-method"></a>Метод FtmBase::GetMarshalSizeMax
+Верхняя граница получите число байтов, необходимое для маршалинга заданный указатель интерфейса на указанный объект.  
   
-## Синтаксис  
+## <a name="syntax"></a>Синтаксис  
   
 ```  
 STDMETHODIMP GetMarshalSizeMax(  
@@ -39,36 +37,36 @@ STDMETHODIMP GetMarshalSizeMax(
 ) override;  
 ```  
   
-#### Параметры  
+#### <a name="parameters"></a>Параметры  
  `riid`  
- Ссылка на идентификатор интерфейса для маршалинга.  
+ Ссылка на идентификатор интерфейса, который необходимо маршалировать.  
   
  `pv`  
- Указатель интерфейса, который следует маршалировать; может иметь значение NULL.  
+ Указатель на интерфейс для маршалинга; может иметь значение NULL.  
   
  `dwDestContext`  
- Контекст назначения, в котором указанный интерфейс должен быть демаршалирован.  
+ Контекст назначения, где должна быть распаковать указанный интерфейс.  
   
  Укажите одно или несколько значений перечисления MSHCTX.  
   
- В настоящее время демаршалирование может произойти в другом подразделении текущего процесса \(MSHCTX\_INPROC\) или в другом процессе на том же компьютере, где находится текущий процесс \(MSHCTX\_LOCAL\).  
+ В настоящее время распаковка может произойти в другое подразделение (MSHCTX_INPROC) текущего процесса или в другом процессе на том же компьютере, как текущий процесс (MSHCTX_LOCAL).  
   
  `pvDestContext`  
- Зарезервировано для будущего использования; должно быть NULL.  
+ Зарезервировано для будущего использования; должен иметь значение NULL.  
   
  `mshlflags`  
- Флаг указывает, могут ли данные, которые должны быть маршалированы, передаваться обратно в процесс клиента — типичный случай — или быть записаны в глобальную таблицу, где их могут извлечь несколько клиентов.  Укажите одно или несколько значений перечисления MSHLFLAGS.  
+ Флаг, указывающий, будет ли передаваться обратно в процессе клиента данные для маршалинга — типичный случай — диска или записываются на глобальной таблицы, где можно получить несколькими клиентами. Укажите одно или несколько значений перечисления MSHLFLAGS.  
   
  `pSize`  
- Когда эта операция будет завершена, указатель на верхнюю границу объема данных должен быть записан в поток маршалинга.  
+ После завершения этой операции представляет указатель на верхнюю границу объема данных для записи в поток маршалинга.  
   
-## Возвращаемое значение  
- S\_OK, если операция завершилась удачно; в противном случае E\_FAIL или E\_NOINTERFACE.  
+## <a name="return-value"></a>Возвращаемое значение  
+ Значение S_OK, если успешно; в противном случае — значение E_FAIL или E_NOINTERFACE.  
   
-## Требования  
+## <a name="requirements"></a>Требования  
  **Заголовок:** ftm.h  
   
  **Пространство имен:** Microsoft::WRL  
   
-## См. также  
+## <a name="see-also"></a>См. также  
  [Класс FtmBase](../windows/ftmbase-class.md)

@@ -1,34 +1,33 @@
 ---
-title: "Практическое руководство. Использование регулярных выражений для изменения порядка данных (C++/CLI) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/14/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "данные [C++], переупорядочение"
-  - "регулярные выражения [C++], перегруппировка данных"
+title: "Как: использование регулярных выражений для изменения порядка данных (C + +/ CLI) | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- regular expressions [C++], rearranging data
+- data [C++], rearranging
 ms.assetid: 5f91e777-9471-424e-ba75-dca3d1b49e42
-caps.latest.revision: 9
-caps.handback.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "9"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 62154cf33ba3705c89a5ad5a520b678e3f516498
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/24/2017
 ---
-# Практическое руководство. Использование регулярных выражений для изменения порядка данных (C++/CLI)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-На следующем примере кода демонстрируется использование поддержки регулярных выражений на базе платформы .NET Framework во время изменения порядка или формата данных.  В следующем примере кода используются классы <xref:System.Text.RegularExpressions.Regex> и <xref:System.Text.RegularExpressions.Match>, которые извлекают первые и последние имена элементов строки и отображают их в обратном порядке.  
+# <a name="how-to-use-regular-expressions-to-rearrange-data-ccli"></a>Практическое руководство. Использование регулярных выражений для изменения порядка данных (C++/CLI)
+В следующем примере кода показано, как поддержка регулярных выражений .NET Framework можно использовать для изменения порядка или формата данных. Следующий пример кода использует <xref:System.Text.RegularExpressions.Regex> и <xref:System.Text.RegularExpressions.Match> классы для извлечения имени и фамилии из строки и отображения этих имен элементов в обратном порядке.  
   
- Класс <xref:System.Text.RegularExpressions.Regex> используется для построения регулярного выражения, которое характеризует текущий формат данных.  Два имени разделяются запятой и можно использовать любое количество пробелов вокруг запятой.  Затем применяется метод <xref:System.Text.RegularExpressions.Match>, который позволяет анализировать отдельно каждую строку.  При удачно выполненном анализе первые и последние имена извлекаются из объекта <xref:System.Text.RegularExpressions.Match> для отображения.  
+ <xref:System.Text.RegularExpressions.Regex> Класс используется для создания регулярного выражения, описывающий текущий формат данных. Два имени считаются разделяемых запятыми и можно использовать любое количество пробелов вокруг запятой. <xref:System.Text.RegularExpressions.Match> Метод используется для анализа каждой строки. В случае успешного выполнения, имена и фамилии извлекаются из <xref:System.Text.RegularExpressions.Match> объекта и отображается.  
   
-## Пример  
+## <a name="example"></a>Пример  
   
 ```  
 // regex_reorder.cpp  
@@ -66,6 +65,6 @@ int main()
 }  
 ```  
   
-## См. также  
- [Регулярные выражения в .NET Framework](../Topic/.NET%20Framework%20Regular%20Expressions.md)   
- [программирование .NET с использованием C\+\+\/CLI](../dotnet/dotnet-programming-with-cpp-cli-visual-cpp.md)
+## <a name="see-also"></a>См. также  
+ [Регулярные выражения в .NET Framework](/dotnet/standard/base-types/regular-expressions)   
+ [Программирование .NET с использованием C++/CLI (Visual C++)](../dotnet/dotnet-programming-with-cpp-cli-visual-cpp.md)

@@ -1,35 +1,34 @@
 ---
-title: "IRowsetLocateImpl::Compare | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "ATL.IRowsetLocateImpl.Compare"
-  - "IRowsetLocateImpl::Compare"
-  - "IRowsetLocateImpl.Compare"
-  - "ATL::IRowsetLocateImpl::Compare"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Compare - метод"
+title: "IRowsetLocateImpl::Compare | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- ATL.IRowsetLocateImpl.Compare
+- IRowsetLocateImpl::Compare
+- IRowsetLocateImpl.Compare
+- ATL::IRowsetLocateImpl::Compare
+dev_langs: C++
+helpviewer_keywords: Compare method
 ms.assetid: 6f84052c-c68c-480a-982f-03748faa7d5d
-caps.latest.revision: 8
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 2dba219ef2b2e0747d800d45950217e220ab1449
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/24/2017
 ---
-# IRowsetLocateImpl::Compare
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Сравнивает 2 закладки.  
+# <a name="irowsetlocateimplcompare"></a>IRowsetLocateImpl::Compare
+Сравнивает две закладки.  
   
-## Синтаксис  
+## <a name="syntax"></a>Синтаксис  
   
 ```  
   
@@ -43,24 +42,24 @@ caps.handback.revision: 8
 );  
 ```  
   
-#### Параметры  
- В разделе [IRowsetLocate::Compare](https://msdn.microsoft.com/en-us/library/ms709539.aspx) справочника *программиста OLE DB*.  
+#### <a name="parameters"></a>Параметры  
+ В разделе [IRowsetLocate::Compare](https://msdn.microsoft.com/en-us/library/ms709539.aspx) в *справочника программиста OLE DB*.  
   
-## Заметки  
- Любая из закладок может быть стандартным [стандартная закладки](https://msdn.microsoft.com/en-us/library/ms712954.aspx) базы данных заданным OLE \(**DBBMK\_FIRST**, **DBBMK\_LAST** или **DBBMK\_INVALID**\).  Значение, возвращаемое в `pComparison` показана связь между 2 закладками.  
+## <a name="remarks"></a>Примечания  
+ Одно из закладки может быть стандартной определяемых OLE DB [Стандартная закладка](https://msdn.microsoft.com/en-us/library/ms712954.aspx) (**DBBMK_FIRST**, **DBBMK_LAST**, или **DBBMK_INVALID**). Значение, возвращаемое в `pComparison` показывает связь между двумя закладки:  
   
--   **DBCOMPARE\_LT** \(`cbBookmark1` перед `cbBookmark2`\).  
+-   **DBCOMPARE_LT** (`cbBookmark1` перед `cbBookmark2`.)  
   
--   **DBCOMPARE\_EQ** \(`cbBookmark1` равно `cbBookmark2`\).  
+-   **DBCOMPARE_EQ** (`cbBookmark1` равен `cbBookmark2`.)  
   
--   **DBCOMPARE\_GT** \(`cbBookmark1` после `cbBookmark2`\).  
+-   **DBCOMPARE_GT** (`cbBookmark1` после `cbBookmark2`.)  
   
--   **DBCOMPARE\_NE** \(закладки равны и не упорядочены\).  
+-   **DBCOMPARE_NE** (закладки, равно и не упорядоченными.)  
   
--   **DBCOMPARE\_NOTCOMPARABLE** \(закладки нельзя сравнивать\).  
+-   **DBCOMPARE_NOTCOMPARABLE** (нельзя сравнивать закладки.)  
   
-## Требования  
- **Header:** atldb.h  
+## <a name="requirements"></a>Требования  
+ **Заголовок:** atldb.h  
   
-## См. также  
+## <a name="see-also"></a>См. также  
  [Класс IRowsetLocateImpl](../../data/oledb/irowsetlocateimpl-class.md)

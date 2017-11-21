@@ -1,50 +1,50 @@
 ---
-title: "Запуск программы NMAKE | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "командные файлы"
-  - "командные файлы, NMAKE - программа"
-  - "программа NMAKE, выполнение"
-  - "программа NMAKE, целевые объекты"
-  - "файлы ответа, NMAKE - программа"
-  - "целевые объекты"
-  - "целевые объекты, построение"
+title: "Запуск программы NMAKE | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- targets, building
+- response files, NMAKE
+- targets
+- command files
+- NMAKE program, targets
+- NMAKE program, running
+- command files, NMAKE
 ms.assetid: 0421104d-8b7b-4bf3-86c1-928d9b7c1a8c
-caps.latest.revision: 7
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: 1d3ff8c58b411d796ceb72876d5728a358e885f8
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/24/2017
 ---
-# Запуск программы NMAKE
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-## Синтаксис  
+# <a name="running-nmake"></a>Запуск программы NMAKE
+## <a name="syntax"></a>Синтаксис  
   
 ```  
 NMAKE [option...] [macros...] [targets...] [@commandfile...]  
 ```  
   
-## Заметки  
- Программа NMAKE создает только указанные целевые объекты *targets* или первый целевой объект файла makefile, если целевые объекты не заданы.  Первый целевой объект файла makefile может быть [псевдоцелевым объектом](../build/pseudotargets.md), создающим другие целевые объекты.  NMAKE использует файлы makefile, задаваемые с помощью параметра \/F. Если параметр \/F не указан, программа использует файл makefile, расположенный в текущем каталоге.  Если файл makefile не указан, то программа использует правила вывода для построения целевых объектов *targets* командной строки.  
+## <a name="remarks"></a>Примечания  
+ Только указанные сборки NMAKE *цели* или, если он не задан, первый для целевых платформ в файле makefile. Первый целевой объект файла makefile может быть [псевдоцелью](../build/pseudotargets.md) , создающим другие целевые объекты. Программа NMAKE использует сборочных файлов проекта, указанный в параметре /F; Если /F не указан, используется файл Makefile в текущем каталоге. Если файл makefile не указан, он использует правила вывода для построения командной строки *цели*.  
   
- Текстовый файл `commandfile` \(или файл ответов\) содержит ввод командной строки.  Другие вводимые данные могут предшествовать конструкции @`commandfile` или следовать за ней.  Допускается указание пути.  В файле `commandfile` разрывы строк обрабатываются как пробелы.  Макроопределения следует заключать в кавычки, если они содержат пробелы.  
+ `commandfile` Текстовый файл (или файл ответов) содержит данные в командной строке. Другие входные данные могут указываться перед или после`commandfile`. Допускается указание пути. В `commandfile`, разрывы строк обрабатываются как пробелы. Макроопределения следует заключайте в кавычки, если они содержат пробелы.  
   
-## Дополнительные сведения  
- [Параметры NMAKE](../Topic/NMAKE%20Options.md)  
+## <a name="what-do-you-want-to-know-more-about"></a>Дополнительные сведения  
+ [Параметры NMAKE](../build/nmake-options.md)  
   
  [Tools.ini и NMAKE](../build/tools-ini-and-nmake.md)  
   
  [Коды выхода из NMAKE](../build/exit-codes-from-nmake.md)  
   
-## См. также  
+## <a name="see-also"></a>См. также  
  [Справочник по программе NMAKE](../build/nmake-reference.md)

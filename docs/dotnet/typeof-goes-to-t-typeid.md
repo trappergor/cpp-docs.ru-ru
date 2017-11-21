@@ -1,32 +1,32 @@
 ---
-title: "Переход typeof в T::typeid | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "__typeof - ключевое слово"
-  - "typeid - ключевое слово [C++]"
-  - "typeid - оператор"
+title: "Переход TypeOf в T::typeid | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- typeid operator
+- __typeof keyword
+- typeid keyword [C++]
 ms.assetid: 6a0d35a7-7a1a-4070-b187-cff37cfdc205
-caps.latest.revision: 8
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 90c75b67dc6496f51d335f83a49242b7f7ae0b29
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/24/2017
 ---
-# Переход typeof в T::typeid
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Оператор `typeof`, используемый в управляемых расширениях для C\+\+, был заменен ключевым словом `typeid` в [!INCLUDE[cpp_current_long](../dotnet/includes/cpp_current_long_md.md)].  
+# <a name="typeof-goes-to-ttypeid"></a>Переход typeof в T::typeid
+`typeof` Оператор, используемый в управляемых расширениях для C++ причинах замещения `typeid` ключевого слова в Visual C++.  
   
- В управляемых расширениях оператор `__typeof()` возвращает связанный объект `Type*` при передаче ему имени управляемого типа.  Примеры.  
+ В управляемых расширениях `__typeof()` оператор возвращает связанный `Type*` объекта при передаче ему имени управляемого типа. Например:  
   
 ```  
 // Creates and initializes a new Array instance.  
@@ -34,7 +34,7 @@ Array* myIntArray =
    Array::CreateInstance( __typeof(Int32), 5 );  
 ```  
   
- В новом синтаксисе `__typeof` заменяется дополнительной формой `typeid`, возвращающей `Type^` после указания управляемого типа.  
+ В новом синтаксисе `__typeof` будет заменен дополнительной формы `typeid` , возвращающий `Type^` при указании управляемого типа.  
   
 ```  
 // Creates and initializes a new Array instance.  
@@ -42,6 +42,6 @@ Array^ myIntArray =
    Array::CreateInstance( Int32::typeid, 5 );  
 ```  
   
-## См. также  
- [Общие изменения в языке](../Topic/General%20Language%20Changes%20\(C++-CLI\).md)   
- [typeid](../Topic/typeid%20%20\(C++%20Component%20Extensions\).md)
+## <a name="see-also"></a>См. также  
+ [Общие изменения в языке (C + +/ CLI)](../dotnet/general-language-changes-cpp-cli.md)   
+ [typeid](../windows/typeid-cpp-component-extensions.md)

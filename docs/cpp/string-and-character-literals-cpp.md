@@ -4,14 +4,11 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-language
+ms.technology: cpp-language
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-f1_keywords:
-- R
-dev_langs:
-- C++
+f1_keywords: R
+dev_langs: C++
 helpviewer_keywords:
 - L constant
 - escape sequences
@@ -25,16 +22,15 @@ helpviewer_keywords:
 - NULL, character constant
 - wide characters, strings
 ms.assetid: 61de8f6f-2714-4e7b-86b6-a3f885d3b9df
-caps.latest.revision: 36
+caps.latest.revision: "36"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.translationtype: HT
-ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
-ms.openlocfilehash: c7254d4cc8dcbbaa0916a77ee6c52da05dc8ec9c
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/25/2017
-
+ms.openlocfilehash: 181cd7dd55a41d5452ae02f48db9012e02a41041
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="string-and-character-literals--c"></a>Строковые и символьные литералы (C++)
 В C++ поддерживаются различные типы строк и символов, а также доступны различные способы выражения значений литералов каждого из этих типов. В исходном коде содержимое символьных и строковых литералов выражается с помощью кодировки. Универсальные имена символов и escape-символы позволяют представить любую строку, используя только основную кодировку исходного кода. Необработанные строковые литералы позволяют не использовать escape-символы и могут применяться для выражения всех типов строковых литералов. Можно также создать литералы std::string без необходимости выполнять дополнительные действия по созданию или преобразованию.  

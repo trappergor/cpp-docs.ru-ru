@@ -1,34 +1,32 @@
 ---
-title: "Предупреждение компилятора (уровень 4) C4235 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C4235"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C4235"
+title: "Предупреждение компилятора (уровень 4) C4235 | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords: C4235
+dev_langs: C++
+helpviewer_keywords: C4235
 ms.assetid: d4214799-d62c-4674-b4e2-9e201c303303
-caps.latest.revision: 8
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: f4266a2aae53254bbb7c2a043ccf3240d69cc63a
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/24/2017
 ---
-# Предупреждение компилятора (уровень 4) C4235
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-использовано нестандартное расширение: ключевое слово "ключевое слово" данной архитектурой не поддерживается  
+# <a name="compiler-warning-level-4-c4235"></a>Предупреждение компилятора (уровень 4) C4235
+использовано нестандартное расширение: «ключевое слово» данной архитектурой не поддерживается  
   
  Компилятор не поддерживает используемое ключевое слово.  
   
- Данное предупреждение автоматически переходит в разряд ошибки.  Для устранения этого состояния следует использовать предупреждение директивы [\#pragma](../../preprocessor/warning.md).  Например, чтобы перевести предупреждение компилятора C4235 на уровень 2, используйте следующую строку кода  
+ Это предупреждение автоматически повышается до ошибки. Если вы хотите изменить такое поведение, используйте [#pragma warning](../../preprocessor/warning.md). Например чтобы сделать C4235 предупреждение уровня 2, используйте следующую строку кода  
   
 ```  
 #pragma warning(2:4235)  

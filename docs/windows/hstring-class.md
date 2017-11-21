@@ -1,75 +1,74 @@
 ---
-title: "Класс HString | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "corewrappers/Microsoft::WRL::Wrappers::HString"
-dev_langs: 
-  - "C++"
+title: "Класс HString | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: corewrappers/Microsoft::WRL::Wrappers::HString
+dev_langs: C++
 ms.assetid: 6709dd2e-8d72-4675-8ec7-1baa7d71854d
-caps.latest.revision: 3
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 3
+caps.latest.revision: "3"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: eb71f24cb62beb672979fab30ad335181dbfaba1
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/24/2017
 ---
-# Класс HString
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Обеспечивает поддержку манипулирования дескрипторами HSTRING.  
+# <a name="hstring-class"></a>Класс HString
+Вспомогательный класс для управления временем жизни HSTRING, используя шаблон RAII.
   
-## Синтаксис  
+## <a name="syntax"></a>Синтаксис  
   
 ```cpp  
 class HString;  
 ```  
   
-## Примечания  
- [!INCLUDE[wrt](../atl/reference/includes/wrt_md.md)] предоставляет доступ к строкам посредством дескрипторов HSTRING.  Класс HString предоставляет удобные функции и операторы для упрощения использования дескрипторов HSTRING.  
+## <a name="remarks"></a>Примечания  
+ Среда выполнения Windows предоставляет доступ к строки через дескрипторов HSTRING. Класс HString предоставляет удобных функций и операторов, чтобы упростить использование дескрипторов HSTRING. Этот класс может обрабатывать HSTRING, он владеет через шаблон RAII времени существования. 
   
-## Члены  
+## <a name="members"></a>Члены  
   
-### Открытые конструкторы  
+### <a name="public-constructors"></a>Открытые конструкторы  
   
-|Name|Описание|  
-|----------|--------------|  
+|Имя|Описание|  
+|----------|-----------------|  
 |[Конструктор HString::HString](../windows/hstring-hstring-constructor.md)|Инициализирует новый экземпляр класса HString.|  
-|[Деструктор HString::~HString](../windows/hstring-tilde-hstring-destructor.md)|Ликвидирует текущий экземпляр класса HString.|  
+|[Деструктор HString::~HString](../windows/hstring-tilde-hstring-destructor.md)|Удаляет текущий экземпляр класса HString.|  
   
-### Члены  
+### <a name="members"></a>Члены  
   
-|Name|Описание|  
-|----------|--------------|  
-|[Метод HString::Set](../Topic/HString::Set%20Method.md)|Устанавливает значение текущего объекта HString равным указанной двухбайтовой строке или параметру HString.|  
-|[Метод HString::Attach](../windows/hstring-attach-method.md)|Связывает указанный объект HString с текущим объектом HString.|  
-|[Метод HString::CopyTo](../windows/hstring-copyto-method.md)|Копирует текущий объект HString в объект HSTRING.|  
-|[Метод HString::Detach](../Topic/HString::Detach%20Method.md)|Отменяет связь указанного объекта HString с его базовым значением.|  
+|Имя|Описание|  
+|----------|-----------------|  
+|[Метод HString::Set](../windows/hstring-set-method.md)|Задает значение текущий объект HString указанную строку расширенных символов или параметра HString.|  
+|[Метод HString::Attach](../windows/hstring-attach-method.md)|Связывает указанный объект HString с текущий объект HString.|  
+|[Метод HString::CopyTo](../windows/hstring-copyto-method.md)|Копирует текущий HString объект к объекту HSTRING.|  
+|[Метод HString::Detach](../windows/hstring-detach-method.md)|Отсоединяет указанный объект HString из его базовое значение.|  
 |[Метод HString::GetAddressOf](../windows/hstring-getaddressof-method.md)|Извлекает указатель на базовый дескриптор HSTRING.|  
-|[Метод HString::Get](../Topic/HString::Get%20Method.md)|Извлекает значение базового дескриптора HSTRING.|  
-|[Метод HString::Release](../windows/hstring-release-method.md)|Удаляет базовое строковое значение и инициализирует текущий объект HString пустым значением.|  
-|[Метод HString::MakeReference](../Topic/HString::MakeReference%20Method.md)|Создает объект HStringReference из указанного строкового параметра.|  
+|[Метод HString::Get](../windows/hstring-get-method.md)|Возвращает значение базового дескриптора HSTRING.|  
+|[Метод HString::Release](../windows/hstring-release-method.md)|Удаляет значение исходной строки и инициализирует текущий объект HString пустым.|  
+|[Метод HString::MakeReference](../windows/hstring-makereference-method.md)|Создает объект HStringReference из указанного строкового параметра.|  
   
-### Открытые операторы  
+### <a name="public-operators"></a>Открытые операторы  
   
-|Name|Описание|  
-|----------|--------------|  
-|[Оператор HString::Operator\=](../Topic/HString::Operator=%20Operator.md)|Перемещает значение другого объекта HString в текущий объект HString.|  
-|[Оператор HString::Operator\=\=](../windows/hstring-operator-equality-operator.md)|Указывает, действительно ли два параметра равны.|  
-|[Оператор HString::Operator\!\=](../windows/hstring-operator-inequality-operator.md)|Указывает, действительно ли два параметра не равны.|  
+|Имя|Описание|  
+|----------|-----------------|  
+|[Оператор HString::Operator=](../windows/hstring-operator-assign-operator.md)|Перемещает текущий объект HString значение другого объекта HString.|  
+|[Оператор HString::Operator==](../windows/hstring-operator-equality-operator.md)|Указывает, равны ли два параметра.|  
+|[Оператор HString::Operator!=](../windows/hstring-operator-inequality-operator.md)|Указывает, равны ли два параметра.|  
   
-## Иерархия наследования  
+## <a name="inheritance-hierarchy"></a>Иерархия наследования  
  `HString`  
   
-## Требования  
+## <a name="requirements"></a>Требования  
  **Заголовок:** corewrappers.h  
   
- **Пространство имен:** Microsoft::WRL::Wrappers  
+ **Пространство имен:** Microsoft::wrl:: wrappers  
   
-## См. также  
- [Пространство имен Microsoft::WRL::Wrappers](../Topic/Microsoft::WRL::Wrappers%20Namespace.md)
+## <a name="see-also"></a>См. также  
+ [Пространство имен Microsoft::WRL::Wrappers](../windows/microsoft-wrl-wrappers-namespace.md)

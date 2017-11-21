@@ -4,42 +4,22 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-tools
+ms.technology: cpp-tools
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- C3224
-dev_langs:
-- C++
-helpviewer_keywords:
-- C3224
+f1_keywords: C3224
+dev_langs: C++
+helpviewer_keywords: C3224
 ms.assetid: 129be22f-8f3e-4fc6-9ccd-d27d8ef91251
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0d9cbb01d1ad0f2ea65d59334cb88140ef18fce0
-ms.openlocfilehash: 1d844f9558528cbb96f822e7db97673d84ce08f2
-ms.contentlocale: ru-ru
-ms.lasthandoff: 04/12/2017
-
+ms.openlocfilehash: 383d7a5d4eb77efeaaabbbd2e29c3618f9a7b582
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="compiler-error-c3224"></a>Ошибка компилятора C3224
 "тип": никакой перегруженный универсальный класс не принимает "число" аргументов универсального типа  

@@ -1,41 +1,39 @@
 ---
-title: "collection_adapter::begin (STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::collection_adapter::begin"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "begin - член [STL/CLR]"
+title: "collection_adapter::Begin (STL/CLR) | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::collection_adapter::begin
+dev_langs: C++
+helpviewer_keywords: begin member [STL/CLR]
 ms.assetid: fba55a3f-c1c6-4679-8c94-54cbb468e44c
-caps.latest.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 7
+caps.latest.revision: "9"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: cedaf603f3d737f60bf1f1cbc1d18e7f2a13710f
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/24/2017
 ---
-# collection_adapter::begin (STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="collectionadapterbegin-stlclr"></a>collection_adapter::begin (STL/CLR)
 Задает начало управляемой последовательности.  
   
-## Синтаксис  
+## <a name="syntax"></a>Синтаксис  
   
 ```  
 iterator begin();  
 ```  
   
-## Заметки  
- Функция\-член возвращает итератор ввода, который обозначает первый элемент контролируемой последовательности или только за пределы пустой последовательности.  
+## <a name="remarks"></a>Примечания  
+ Функция-член возвращает итератор ввода, указывающий первый элемент управляемой последовательности или непосредственно за концом пустой последовательности.  
   
-## Пример  
+## <a name="example"></a>Пример  
   
 ```  
 // cliext_collection_adapter_begin.cpp   
@@ -67,14 +65,17 @@ int main()
   
 ```  
   
-  **a b c**  
-**\*begin\(\) \= a**  
-**\*\+\+begin\(\) \= B**   
-## Требования  
- **Заголовок:**\<cliext\/adapter\>  
+```Output  
+ a b c  
+*begin() = a  
+*++begin() = b  
+```  
+  
+## <a name="requirements"></a>Требования  
+ **Заголовок:** \<cliext адаптер >  
   
  **Пространство имен:** cliext  
   
-## См. также  
- [collection\_adapter](../Topic/collection_adapter%20\(STL-CLR\).md)   
- [collection\_adapter::end](../dotnet/collection-adapter-end-stl-clr.md)
+## <a name="see-also"></a>См. также  
+ [collection_adapter (STL/CLR)](../dotnet/collection-adapter-stl-clr.md)   
+ [collection_adapter::end (STL/CLR)](../dotnet/collection-adapter-end-stl-clr.md)

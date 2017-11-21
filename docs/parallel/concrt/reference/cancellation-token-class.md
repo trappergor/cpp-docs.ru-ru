@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-windows
+ms.technology: cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -17,35 +16,18 @@ f1_keywords:
 - PPLCANCELLATION_TOKEN/concurrency::cancellation_token::is_canceled
 - PPLCANCELLATION_TOKEN/concurrency::cancellation_token::none
 - PPLCANCELLATION_TOKEN/concurrency::cancellation_token::register_callback
-dev_langs:
-- C++
-helpviewer_keywords:
-- cancellation_token class
+dev_langs: C++
+helpviewer_keywords: cancellation_token class
 ms.assetid: 2787df2b-e9d3-440e-bfd0-841a46a9835f
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 5faef5bd1be6cc02d6614a6f6193c74167a8ff23
-ms.openlocfilehash: d17505a117c0affd8106afad9004e6ec86602a26
-ms.contentlocale: ru-ru
-ms.lasthandoff: 03/17/2017
-
+ms.openlocfilehash: e4e656fa567342dde9ba990bff5b0d8081337385
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="cancellationtoken-class"></a>Класс cancellation_token
 Класс `cancellation_token` представляет возможность определить, получала ли некоторая операция запрос на отмену. Заданный токен можно связать с `task_group`, `structured_task_group` или `task` для предоставления неявной отмены. Его также можно опрашивать на предмет отмены или зарегистрировать обратный вызов для той ситуации, когда отменяется связанный `cancellation_token_source`.  
@@ -205,8 +187,7 @@ template<typename _Function>
  Объект функции, вызываемый при отмене этого `cancellation_token`.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
- Объект `cancellation_token_registration`, который можно использовать в методе `deregister` для отмены регистрации ранее зарегистрированного обратного вызова и предотвращения его выполнения. Метод создает исключение [invalid_operation](invalid-operation-class.md) исключение, если он вызывается для `cancellation_token` объект, который был создан с помощью [cancellation_token::none](#none) метод.  
+ Объект `cancellation_token_registration`, который можно использовать в методе `deregister` для отмены регистрации ранее зарегистрированного обратного вызова и предотвращения его выполнения. Метод вызывает исключение [invalid_operation](invalid-operation-class.md) исключение, если он вызывается на `cancellation_token` объект, который был создан с помощью [cancellation_token::none](#none) метод.  
   
 ## <a name="see-also"></a>См. также  
  [Пространство имен concurrency](concurrency-namespace.md)
-

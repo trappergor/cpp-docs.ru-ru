@@ -1,41 +1,39 @@
 ---
-title: "LIBRARY | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "LIBRARY"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "LIBRARY - оператор DEF-файла"
+title: "БИБЛИОТЕКА | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: LIBRARY
+dev_langs: C++
+helpviewer_keywords: LIBRARY .def file statement
 ms.assetid: 1d7ccc92-e088-4ef7-9ef0-25c3862cc051
-caps.latest.revision: 7
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: 75f337f563707a1ab2b1dabe0042b678c03172e7
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/24/2017
 ---
-# LIBRARY
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Указывает LINK для создания библиотеки DLL.  В то же время, LINK создает библиотеку импорта, если EXP\-файл не используется в построении.  
+# <a name="library"></a>LIBRARY
+Указывает ССЫЛКУ, чтобы создать библиотеку DLL. В то же время LINK создает библиотеку импорта, если только не используется файл EXP в сборке.  
   
 ```  
 LIBRARY [library][BASE=address]  
 ```  
   
-## Заметки  
- Аргумент *library* указывает имя библиотеки DLL.  Также можно использовать параметр компоновщика [\/OUT](../../build/reference/out-output-file-name.md), чтобы указать выходное имя библиотеки DLL.  
+## <a name="remarks"></a>Примечания  
+ *Библиотеки* аргумент задает имя библиотеки DLL. Можно также использовать [/OUT](../../build/reference/out-output-file-name.md) компоновщика, чтобы указать имя выходной библиотеки DLL.  
   
- Аргумент BASE\=*address* задает базовый адрес, который операционная система использует для загрузки библиотеки DLL.  Этот аргумент переопределяет расположение библиотеки DLL по умолчанию 0x10000000.  Подробные сведения о базовых адресах см. в описании параметра [\/BASE](../../build/reference/base-base-address.md).  
+ БАЗОВЫЙ =*адрес* аргумент задает базовый адрес, который операционная система использует для загрузки библиотеки DLL. Этот аргумент переопределяет расположение библиотеки DLL по умолчанию 0x10000000. См. в описании [/BASE](../../build/reference/base-base-address.md) подробные сведения о базовых адресов.  
   
- При построении библиотеки DLL следует помнить об использовании параметра компоновщика [\/DLL](../../build/reference/dll-build-a-dll.md).  
+ Не забывайте использовать [/DLL](../../build/reference/dll-build-a-dll.md) компоновщика при построении библиотеки DLL.  
   
-## См. также  
+## <a name="see-also"></a>См. также  
  [Правила для операторов определения модуля](../../build/reference/rules-for-module-definition-statements.md)

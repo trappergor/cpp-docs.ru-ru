@@ -1,35 +1,33 @@
 ---
-title: "Ошибка BSCMAKE BK1507 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "BK1507"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "BK1507"
+title: "Ошибка BSCMAKE BK1507 | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords: BK1507
+dev_langs: C++
+helpviewer_keywords: BK1507
 ms.assetid: 3c5220d7-ccb3-45b4-9da0-cb06147311f6
-caps.latest.revision: 6
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 6
+caps.latest.revision: "6"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: beca820e4a6b5fbfef4c88d85b195c8c4d6e42ac
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/24/2017
 ---
-# Ошибка BSCMAKE BK1507
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-невозможно открыть временный файл "имя\_файла"\[: причина\].  
+# <a name="bscmake-error-bk1507"></a>Ошибка BSCMAKE BK1507
+не удается открыть временный файл «имя_файла» [: причина]  
   
- BSCMAKE не может открыть временный файл.  
+ BSCMAKE не удается открыть временный файл.  
   
-### Чтобы устранить ошибку, следует проверить следующие возможные причины ее возникновения.  
+### <a name="to-fix-by-checking-the-following-possible-causes"></a>Чтобы устранить ошибку, проверьте указанные ниже возможные причины ее возникновения.  
   
-1.  Для переменной среды **TMP** не установлен правильный диск или каталог.  
+1.  **TMP** переменная среды не устанавливается допустимый диск и каталог.  
   
 2.  Диск переполнен.

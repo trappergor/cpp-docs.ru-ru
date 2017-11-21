@@ -1,38 +1,37 @@
 ---
-title: "event_receiver | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-f1_keywords: 
-  - "vc-attr.event_receiver"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "event_receiver attribute"
-  - "event receivers"
-  - "events [C++], event receivers (sinks)"
-  - "event handling [C++], attributes"
-  - "event handling [C++], creating receiver"
-  - "event sinks, creating"
-  - "event sinks"
+title: "event_receiver | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+f1_keywords: vc-attr.event_receiver
+dev_langs: C++
+helpviewer_keywords:
+- event_receiver attribute
+- event receivers
+- events [C++], event receivers (sinks)
+- event handling [C++], attributes
+- event handling [C++], creating receiver
+- event sinks, creating
+- event sinks
 ms.assetid: bf8fe770-3ea2-4128-b46b-166222ee4097
-caps.latest.revision: 13
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 13
+caps.latest.revision: "13"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 4995d413cfce885bf1a78068948bc7a06518692e
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/24/2017
 ---
-# event_receiver
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Создает приемник событий \(получатель\).  
+# <a name="eventreceiver"></a>event_receiver
+Создает приемник событий (получатель).  
   
-## Синтаксис  
+## <a name="syntax"></a>Синтаксис  
   
 ```  
   
@@ -42,13 +41,13 @@ caps.handback.revision: 13
 ) ]  
 ```  
   
-#### Параметры  
+#### <a name="parameters"></a>Параметры  
  `type`  
- Перечисление одно из следующих значений:  
+ Перечисление одного из следующих значений:  
   
--   `native` для неуправляемого кода C\/C\+\+ \(по умолчанию для собственных классов\).  
+-   `native`для неуправляемого кода C/C++ (по умолчанию для собственных классов).  
   
--   `com` для кода модели COM.  Это значение необходимо включить следующие файлы заголовков:  
+-   `com` для кода COM. Это значение требует включить следующие файлы заголовка:  
   
     ```  
     #define _ATL_ATTRIBUTES  
@@ -56,41 +55,40 @@ caps.handback.revision: 13
     #include <atlcom.h>  
     ```  
   
- layout\_dependent  
- Определение layout\_dependent только если `type`\=**com**.  *layout\_dependent* логическое значение:  
+ **layout_dependent**  
+ Укажите *layout_dependent* только тогда, когда `type` = **com**. *layout_dependent* является логическое значение:  
   
--   **true** означает, что подпись приемников делегатов в случае должно точно соответствовать разделах, к которым они закрепленный в случае источник.  Имена обработчиков приемника событий должны соответствовать именам, определенным в соответствующем интерфейсе источника события.  Необходимо использовать **CoClass** после layout\_dependent существует  **true**.  Он немного более эффективно определять **true**.  
+-   **значение true,** означает, что в сигнатуру делегатов в приемник должны совпадать к которым они прикреплены событий источника событий. Имена обработчиков событий приемника должны совпадать с именами, указанный в интерфейсе источника соответствующее событие. Необходимо использовать **coclass** при *layout_dependent* — **true**. Немного более эффективно, чтобы указать **true**.  
   
--   **false** \(по умолчанию\) означает, что вызывающий класс соглашения и хранения \(фактически, статическими и различаются\) не должен соответствовать методу события и обработчики; не выполняет обработчик имена должны соответствовать именам методов интерфейса источника события.  
+-   **false** (по умолчанию) означает, что вызывающий соглашение и класс хранения (виртуальный, статический и другие) не обязательно совпадают с метод события и обработчики; ни имена обработчиков должны соответствовать имена методов интерфейса источника событий.  
   
-## Заметки  
- Event\_receiver Атрибут C\+\+ определяет, что класс или структура, к которому он применяется будет приемником событий, используя модель события универсальную Visual C\+\+.  
+## <a name="remarks"></a>Примечания  
+ **Event_receiver** C++ атрибут указывает, класса или структуры, к которому применяется приемника событий, с помощью модели единой событий Visual C++.  
   
- **event\_receiver** используется с  [event\_source](../windows/event-source.md) атрибут и  [\_\_hook](../cpp/hook.md) и  [\_\_unhook](../cpp/unhook.md) ключевые слова.  Используйте event\_source создание источников событий.  Используйте `__hook` внутри методов приемника событий для сопоставления \("обработчик"\) методы приемника событий события источника события.  Используйте `__unhook` разъединить их.  
+ **event_receiver** используется с [event_source](../windows/event-source.md) атрибута и [__hook](../cpp/hook.md) и [__unhook](../cpp/unhook.md) ключевые слова. Используйте **event_source** для создания источников событий. Используйте `__hook` в методах приемника событий для связи («обработчик») методы приемника событий к событиям источника события. Используйте `__unhook` отменить связь с ними.  
   
- layout\_dependent определяет только для приемников событий модели COM \(`type`\=**com**\).  Значение по умолчанию layout\_dependent существует **false**.  
+ *layout_dependent* задается только для приемников событий COM (`type`=**com**). Значение по умолчанию для *layout_dependent* — **false**.  
   
 > [!NOTE]
->  Класс\-шаблон или структура не могут содержать события.  
+>  Класс-шаблон или структура не могут содержать события.  
   
-## Требования  
+## <a name="requirements"></a>Требования  
   
-### Контекст атрибута  
+### <a name="attribute-context"></a>Контекст атрибута  
   
 |||  
 |-|-|  
-|**Применение**|**класс**"  `struct`|  
-|**Repeatable**|Нет|  
-|**Обязательные атрибуты**|**CoClass** после layout\_dependent\=**true**|  
-|**Недопустимые атрибуты**|None|  
+|**Применение**|**class**, `struct`|  
+|**Повторяемый**|Нет|  
+|**Обязательные атрибуты**|**Компонентный класс** при *layout_dependent*=**true**|  
+|**Недопустимые атрибуты**|Нет|  
   
- Дополнительные сведения см. в разделе [Контексты атрибута](../windows/attribute-contexts.md).  
+ Дополнительные сведения см. в разделе [Контексты атрибутов](../windows/attribute-contexts.md).  
   
-## См. также  
- [Compiler Attributes](../windows/compiler-attributes.md)   
- [event\_source](../windows/event-source.md)   
- [\_\_event](../cpp/event.md)   
- [\_\_hook](../cpp/hook.md)   
- [\_\_unhook](../cpp/unhook.md)   
- [Class Attributes](../windows/class-attributes.md)   
- [Attributes Samples](http://msdn.microsoft.com/ru-ru/558ebdb2-082f-44dc-b442-d8d33bf7bdb8)
+## <a name="see-also"></a>См. также  
+ [Атрибуты компилятора](../windows/compiler-attributes.md)   
+ [event_source](../windows/event-source.md)   
+ [__event](../cpp/event.md)   
+ [__hook](../cpp/hook.md)   
+ [__unhook](../cpp/unhook.md)   
+ [Атрибуты классов](../windows/class-attributes.md)   

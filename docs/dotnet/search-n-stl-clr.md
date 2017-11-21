@@ -1,32 +1,30 @@
 ---
-title: "search_n (STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::search_n"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "search_n - функция [STL/CLR]"
+title: "search_n (STL/CLR) | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::search_n
+dev_langs: C++
+helpviewer_keywords: search_n function [STL/CLR]
 ms.assetid: 34d9fd07-b160-4b1e-a632-303200740dfc
-caps.latest.revision: 4
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 4
+caps.latest.revision: "4"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: bdf58555a995b5be0c5726f3136afc8eafd64bfc
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/24/2017
 ---
-# search_n (STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Поиск первого subsequence в диапазоне, заданного числа элементов, имеющих определенное значение или отношение к этому значение, указанное бинарным предикатом.  
+# <a name="searchn-stlclr"></a>search_n (STL/CLR)
+Выполняет поиск первой подпоследовательности в диапазоне заданного числа элементов, имеющих определенное значение или связанных с этим значением отношением, указанным бинарным предикатом.  
   
-## Синтаксис  
+## <a name="syntax"></a>Синтаксис  
   
 ```  
 template<class _FwdIt1, class _Diff2, class _Ty> inline  
@@ -37,13 +35,13 @@ template<class _FwdIt1, class _Diff2, class _Ty, class _Pr> inline
         _Diff2 _Count, const _Ty& _Val, _Pr _Pred);  
 ```  
   
-## Заметки  
- Эта функция работает аналогично функции `search_n` STL.  Для получения дополнительной информации см. [search\_n](../Topic/search_n.md).  
+## <a name="remarks"></a>Примечания  
+ Эта функция работает так же, как функция стандартной библиотеки C++ `search_n`. Дополнительные сведения см. в разделе [search_n](../standard-library/algorithm-functions.md#search_n).  
   
-## Требования  
- **Заголовок:**\<cliext\/algorithm\>  
+## <a name="requirements"></a>Требования  
+ **Заголовок:** \<cliext/алгоритм >  
   
  **Пространство имен:** cliext  
   
-## См. также  
- [algorithm](../Topic/algorithm%20\(STL-CLR\).md)
+## <a name="see-also"></a>См. также  
+ [algorithm (STL/CLR)](../dotnet/algorithm-stl-clr.md)

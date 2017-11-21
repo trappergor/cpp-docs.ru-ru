@@ -1,54 +1,54 @@
 ---
-title: "__debugbreak | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "__debugbreak_cpp"
-  - "__debugbreak"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "встроенная функция __debugbreak"
-  - "точки останова, встроенная функция __debugbreak"
+title: "__debugbreak | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- __debugbreak_cpp
+- __debugbreak
+dev_langs: C++
+helpviewer_keywords:
+- breakpoints, __debugbreak intrinsic
+- __debugbreak intrinsic
 ms.assetid: 1d1e1c0c-891a-4613-ae4b-d790094ba830
-caps.latest.revision: 16
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 16
+caps.latest.revision: "16"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: 7d067798f981e86edea1b83557925c41e8f8a3d9
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/24/2017
 ---
-# __debugbreak
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-**Блок, относящийся только к системам Microsoft**  
+# <a name="debugbreak"></a>__debugbreak
+**Блок, относящийся только к системам Майкрософт**  
   
  Вызывает точку останова в коде, где пользователю будет предложено запустить отладчик.  
   
-## Синтаксис  
+## <a name="syntax"></a>Синтаксис  
   
 ```  
 void __debugbreak();  
 ```  
   
-## Требования  
+## <a name="requirements"></a>Требования  
   
 |Встроенная функция|Архитектура|Header|  
-|------------------------|-----------------|------------|  
-|`__debugbreak`|x86, ARM, [!INCLUDE[vcprx64](../Token/vcprx64_md.md)]|\<intrin.h\>|  
+|---------------|------------------|------------|  
+|`__debugbreak`|x86, ARM, [!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|\<Intrin.h >|  
   
-## Заметки  
- Встроенная функция компилятора `__debugbreak`, аналогичная функции [DebugBreak](http://msdn.microsoft.com/library/windows/desktop/ms679297.aspx), — это переносимое средство Win32 для создания точки останова.  
+## <a name="remarks"></a>Примечания  
+ `__debugbreak` Компилятора встроенная функция, как и для [DebugBreak](http://msdn.microsoft.com/library/windows/desktop/ms679297.aspx), переносимый способ Win32 для создания точки останова.  
   
 > [!NOTE]
->  При компиляции с использованием **\/clr** функция, содержащая `__debugbreak`, будет компилироваться в MSIL.  При использовании `asm int 3` функция компилируется в машинный код.  Для получения дополнительной информации см. [\_\_asm](../assembler/inline/asm.md).  
+>  При компиляции с параметром **/CLR**, функция, содержащая `__debugbreak` компилируются в MSIL-код. При использовании `asm int 3` функция компилируется в машинный код. Дополнительные сведения см. в разделе [__asm](../assembler/inline/asm.md).  
   
- Например:  
+ Пример:  
   
 ```  
 main() {  
@@ -70,8 +70,8 @@ main() {
   
  Эта процедура доступна только как встроенная функция.  
   
-## Завершение блока, относящегося только к системам Майкрософт  
+**Завершение блока, относящегося только к системам Майкрософт**  
   
-## См. также  
+## <a name="see-also"></a>См. также  
  [Встроенные объекты компилятора](../intrinsics/compiler-intrinsics.md)   
- [Ключевые слова в C\+\+](../cpp/keywords-cpp.md)
+ [Ключевые слова](../cpp/keywords-cpp.md)

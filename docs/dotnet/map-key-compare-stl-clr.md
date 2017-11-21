@@ -1,42 +1,40 @@
 ---
-title: "map::key_compare (STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::map::key_compare"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "key_compare - элемент [STL/CLR]"
+title: "MAP::key_compare (STL/CLR) | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::map::key_compare
+dev_langs: C++
+helpviewer_keywords: key_compare member [STL/CLR]
 ms.assetid: 6cde0e22-f1cb-4b92-b76d-bab6cbd9c825
-caps.latest.revision: 14
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 12
+caps.latest.revision: "14"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: c390832895130aa362fb78db6594e1a22a894748
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/24/2017
 ---
-# map::key_compare (STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Порядок делегат для 2 ключей.  
+# <a name="mapkeycompare-stlclr"></a>map::key_compare (STL/CLR)
+Делегат упорядочения для двух ключей.  
   
-## Синтаксис  
+## <a name="syntax"></a>Синтаксис  
   
 ```  
 Microsoft::VisualC::StlClr::BinaryDelegate<GKey, GKey, bool>  
     key_compare;  
 ```  
   
-## Заметки  
- Тип синоним для делегата, определяет порядок ключевых своих аргументов.  
+## <a name="remarks"></a>Примечания  
+ Тип является синонимом делегат, который определяет порядок аргументов ключа.  
   
-## Пример  
+## <a name="example"></a>Пример  
   
 ```  
 // cliext_map_key_compare.cpp   
@@ -72,19 +70,23 @@ int main()
   
 ```  
   
-  **сравнение \(L'a, L'а\) \= false**  
-**сравнение \(L'a, L'б\) \= true**  
-**сравнение \(L'b, L'а\) \= false**  
-**сравнение \(L'a, L'а\) \= false**  
-**сравнение \(L'a, L'б\) \= false**  
-**сравнение \(L'b, L'а\) \= true**   
-## Требования  
- **Заголовок:**\<cliext\/map\>  
+```Output  
+compare(L'a', L'a') = False  
+compare(L'a', L'b') = True  
+compare(L'b', L'a') = False  
+  
+compare(L'a', L'a') = False  
+compare(L'a', L'b') = False  
+compare(L'b', L'a') = True  
+```  
+  
+## <a name="requirements"></a>Требования  
+ **Заголовок:** \<cliext/map >  
   
  **Пространство имен:** cliext  
   
-## См. также  
- [map](../dotnet/map-stl-clr.md)   
- [map::key\_comp](../dotnet/map-key-comp-stl-clr.md)   
- [map::key\_type](../dotnet/map-key-type-stl-clr.md)   
- [map::value\_compare](../dotnet/map-value-compare-stl-clr.md)
+## <a name="see-also"></a>См. также  
+ [Карта (STL/CLR)](../dotnet/map-stl-clr.md)   
+ [MAP::key_comp (STL/CLR)](../dotnet/map-key-comp-stl-clr.md)   
+ [MAP::key_type (STL/CLR)](../dotnet/map-key-type-stl-clr.md)   
+ [map::value_compare (STL/CLR)](../dotnet/map-value-compare-stl-clr.md)

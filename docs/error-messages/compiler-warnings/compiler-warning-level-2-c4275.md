@@ -4,41 +4,22 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-tools
+ms.technology: cpp-tools
 ms.tgt_pltfrm: 
 ms.topic: error-reference
-f1_keywords:
-- C4275
-dev_langs:
-- C++
-helpviewer_keywords:
-- C4275
+f1_keywords: C4275
+dev_langs: C++
+helpviewer_keywords: C4275
 ms.assetid: 18de967a-0a44-4dbc-a2e8-fc4c067ba909
-caps.latest.revision: 14
+caps.latest.revision: "14"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3f91eafaf3b5d5c1b8f96b010206d699f666e224
-ms.openlocfilehash: f9ecbe931c14cfde1d48438bdb76f70452e324d3
-ms.contentlocale: ru-ru
-ms.lasthandoff: 04/01/2017
-
+ms.openlocfilehash: 46204fb7b87c556756db3debbe9bdc9031c9c343
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="compiler-warning-level-2-c4275"></a>Предупреждение компилятора (уровень 2) C4275
 не - интерфейс DLL classkey «идентификатор» используется в качестве базы для classkey интерфейс DLL «идентификатор»  

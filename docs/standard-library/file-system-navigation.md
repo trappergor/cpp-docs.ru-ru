@@ -4,38 +4,20 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- C++
+dev_langs: C++
 ms.assetid: f7cc5f5e-a541-4e00-87c7-a3769ef6096d
-caps.latest.revision: 14
+caps.latest.revision: "14"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
-ms.openlocfilehash: 1a3e7e0cc81bae89b0560c1aebb989e4d140e059
-ms.contentlocale: ru-ru
-ms.lasthandoff: 04/29/2017
-
+ms.openlocfilehash: 7ed9a10434f0128de871a426f7e6be46212d4098
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="file-system-navigation"></a>Навигация по файловой системе
 Заголовок \<<filesystem> реализует техническую спецификацию файловой системы ISO/IEC TS 18822:2015 (окончательный вариант: [ISO/IEC JTC 1/SC 22/WG 21 N4100](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2014/n4100.pdf)), а также имеет типы и функции, позволяющие разрабатывать независимый от платформы код для навигации по файловой системе. Так как он является кроссплатформенным, он содержит API-интерфейсы, которые не являются релевантными для систем Windows. Например, это означает, что `is_fifo(const path&)` всегда возвращает `false` в Windows.   
@@ -231,4 +213,3 @@ Press Enter to exit
 Заголовок \<filesystem> предоставляет тип [directory_iterator](../standard-library/directory-iterator-class.md) для выполнения итерации по одиночным каталогам, а также класс [recursive_directory_iterator](../standard-library/recursive-directory-iterator-class.md) для рекурсивного выполнения итерации по каталогу и его подкаталогам. После создания итератора путем передачи ему объекта `path` итератор указывает на первое значение directory_entry в пути. Создайте конечный итератор путем вызова конструктора по умолчанию.  
   
 При проходе по каталогу можно обнаружить элементы нескольких типов, включая каталоги, файлы, символические ссылки и файлы сокетов, но не ограничиваясь ими. `directory_iterator` возвращает свои элементы как объекты [directory_entry](../standard-library/directory-entry-class.md).  
-

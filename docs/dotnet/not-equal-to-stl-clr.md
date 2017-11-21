@@ -1,32 +1,30 @@
 ---
-title: "not_equal_to (STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::not_equal_to"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "not_equal_to - функция [STL/CLR]"
+title: "not_equal_to (STL/CLR) | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::not_equal_to
+dev_langs: C++
+helpviewer_keywords: not_equal_to function [STL/CLR]
 ms.assetid: 1b66e0ca-eace-4672-8da9-ed16f8608bca
-caps.latest.revision: 16
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 14
+caps.latest.revision: "16"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 6def975ac9de8f069394c822e756e56c227e2f89
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/24/2017
 ---
-# not_equal_to (STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Описание класса шаблона функтором, возвращает значение true, вызывается, только если первый аргумент не равен второму.  Он используется определяется объект функции с точки зрения его типа аргумента.  
+# <a name="notequalto-stlclr"></a>not_equal_to (STL/CLR)
+Класс шаблона описывает функтор, что при вызове возвращает значение true только в том случае, если первый аргумент не равен второму. Она используется укажите объект функции, с точки зрения его типа аргумента.  
   
-## Синтаксис  
+## <a name="syntax"></a>Синтаксис  
   
 ```  
 template<typename Arg>  
@@ -49,34 +47,34 @@ public:
     };  
 ```  
   
-#### Параметры  
- Аргумент  
+#### <a name="parameters"></a>Параметры  
+ Arg  
  Тип аргументов.  
   
-## Функции\-члены  
+## <a name="member-functions"></a>Функции-члены  
   
 |Определение типа|Описание|  
-|----------------------|--------------|  
-|delegate\_type|Тип универсального метод\-делегата.|  
-|first\_argument\_type|Тип первого аргумента функтором.|  
-|result\_type|Тип результата функтором.|  
-|second\_argument\_type|Тип второго аргумента функтором.|  
+|---------------------|-----------------|  
+|delegate_type|Тип универсального метода-делегата.|  
+|first_argument_type|Тип первого аргумента функтор.|  
+|result_type|Тип результата функтор.|  
+|second_argument_type|Тип второго аргумента функтор.|  
   
 |Член|Описание|  
-|----------|--------------|  
-|not\_equal\_to|Построение функтором.|  
+|------------|-----------------|  
+|not_equal_to|Создает функтор.|  
   
 |Оператор|Описание|  
-|--------------|--------------|  
-|operator\(\)|Вычисляет нужную функцию.|  
-|delegate\_type^ оператора|Возвращает функтором делегату.|  
+|--------------|-----------------|  
+|operator()|Вычисляет нужной функции.|  
+|delegate_type оператор ^|Приводит функтора к делегату.|  
   
-## Заметки  
- Описание класса шаблона функтором 2 — аргумента.  Он определяет оператор `operator()` члена, что, когда объект вызывается как функция возвращается только значение true, если первый аргумент не равен второму.  
+## <a name="remarks"></a>Примечания  
+ Класс шаблона описывает функтор двумя аргументами. Он определяет оператор-член `operator()` , чтобы при вызове объекта как функция, возвращается значение true, только если первый аргумент не равен второму.  
   
- Можно также передать объект в качестве аргумента функции, тип которого `delegate_type^` и он будет преобразован соответствующим образом.  
+ Объект также можно передать в качестве аргумента функции, тип которого является `delegate_type^` и он будет преобразован соответствующим образом.  
   
-## Пример  
+## <a name="example"></a>Пример  
   
 ```  
 // cliext_not_equal_to.cpp   
@@ -116,13 +114,16 @@ int main()
   
 ```  
   
-  **4 3**  
- **4 4**  
- **0 1**   
-## Требования  
- **Заголовок:**\<cliext\/functional\>  
+```Output  
+4 3  
+4 4  
+0 1  
+```  
+  
+## <a name="requirements"></a>Требования  
+ **Заголовок:** \<cliext и функционального >  
   
  **Пространство имен:** cliext  
   
-## См. также  
- [equal\_to](../dotnet/equal-to-stl-clr.md)
+## <a name="see-also"></a>См. также  
+ [equal_to (STL/CLR)](../dotnet/equal-to-stl-clr.md)

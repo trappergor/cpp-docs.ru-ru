@@ -4,15 +4,13 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-language
+ms.technology: cpp-language
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - --
 - ++
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - increment operators [C++], syntax
 - member-selection operators [C++]
@@ -23,16 +21,15 @@ helpviewer_keywords:
 - operators [C++], postfix
 - decrement operators [C++]
 ms.assetid: 0204d5c8-51b0-4108-b8a1-074c5754d89c
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.translationtype: HT
-ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
-ms.openlocfilehash: b9e8939e810336150fe3d46be4c72ee1946aebcf
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/25/2017
-
+ms.openlocfilehash: cbf22e57abaefc7b14be9c4eab404f7c20cb9359
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="postfix-increment-and-decrement-operators--and---"></a>Постфиксные операторы увеличения и уменьшения ++ и --
 ## <a name="syntax"></a>Синтаксис  
@@ -55,7 +52,7 @@ i++;
   
  Если же постфиксный оператор применяется к аргументу функции, то инкремент или декремент значения аргумента необязательно будет выполнен до его передачи в функцию.  Дополнительные сведения см. в разделе 1.9.17 стандарта C++.  
   
- Применения постфиксного оператора инкремента к указателю на массив объектов типа **длинные** фактически прибавляется 4 внутреннее представление указателя. Это приводит к возникновению указатель, который раньше относился * n *й элемент массива, для обращения к (*n*+ 1) элемент th.  
+ Применения постфиксного оператора инкремента к указателю на массив объектов типа **длинные** фактически прибавляется 4 внутреннее представление указателя. Это приводит к возникновению указатель, который раньше относился  *n* й элемент массива, для обращения к (*n*+ 1) элемент th.  
   
  Операнды для постфиксных операторов декремента должны иметь изменяемые (не **const**) l значения арифметического или указательного типа. Тип результата — так же, как *Постфиксное выражение*, но больше не является l значением.  
   

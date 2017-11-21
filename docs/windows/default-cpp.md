@@ -1,61 +1,57 @@
 ---
-title: "default (C++) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-f1_keywords: 
-  - "vc-attr.default"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "default - атрибут"
-  - "атрибуты [C#], атрибут default"
-  - "атрибут default"
+title: "по умолчанию (C++) | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+f1_keywords: vc-attr.default
+dev_langs: C++
+helpviewer_keywords:
+- default attribute
+- attributes [C#], default attribute
+- defaults, default attribute
 ms.assetid: 0cdca716-1ba8-46d7-9399-167e55492870
-caps.latest.revision: 11
-caps.handback.revision: 11
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "11"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 352fca07ecb9528bb11ff1cb5cc1f701bfa01e1c
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/24/2017
 ---
-# default (C++)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Указывает, что настраиваемый или disp\-интерфейс, определенный в коклассе, представляет интерфейс программирования по умолчанию.  
+# <a name="default-c"></a>default (C++)
+Указывает, что настраиваемый или disp-интерфейс, определенный в коклассе, представляет интерфейс программирования по умолчанию.  
   
-## Синтаксис  
+## <a name="syntax"></a>Синтаксис  
   
 ```  
   
-[ default(  
-interface1  
-,  
+      [ default(  
+   interface1,  
    interface2  
 ) ]  
-  
 ```  
   
-#### Параметры  
+#### <a name="parameters"></a>Параметры  
  *interface1*  
- Интерфейс по умолчанию, который будет доступен в средах разработки сценариев, где создаются объекты на основе класса, определенного с помощью атрибута **default**.  
+ Интерфейс по умолчанию, который будет доступен в средах разработки сценариев, где создаются объекты на основе класса, определенного с помощью атрибута **default** .  
   
  Если исходный интерфейс по умолчанию не указан, в качестве интерфейса по умолчанию используется первое вхождение неисходного интерфейса.  
   
- *interface2*\(необязательно\)  
- Исходный интерфейс по умолчанию. Этот интерфейс также необходимо указать с помощью атрибута [source](../Topic/source%20\(C++\).md).  
+ *interface2*(необязательно)  
+ Исходный интерфейс по умолчанию. Этот интерфейс также необходимо указать с помощью атрибута [source](../windows/source-cpp.md) .  
   
  Если исходный интерфейс по умолчанию не указан, в качестве интерфейса по умолчанию используется первый исходный интерфейс.  
   
-## Заметки  
- Атрибут **default** языка C\+\+ имеет ту же функциональность, что и атрибут [default](http://msdn.microsoft.com/library/windows/desktop/aa366787) языка MIDL. Атрибут **default** также используется вместе с атрибутом [case](../windows/case-cpp.md).  
+## <a name="remarks"></a>Примечания  
+ Атрибут **default** языка C++ имеет ту же функциональность, что и атрибут [default](http://msdn.microsoft.com/library/windows/desktop/aa366787) языка MIDL. Атрибут **default** также используется вместе с атрибутом [case](../windows/case-cpp.md) .  
   
-## Пример  
+## <a name="example"></a>Пример  
  В приведенном далее коде показано использование атрибута **default** в определении кокласса для указания **ICustomDispatch** в качестве интерфейса программирования по умолчанию.  
   
 ```  
@@ -107,23 +103,22 @@ int main() {
 }  
 ```  
   
- Атрибут [source](../Topic/source%20\(C++\).md) также содержит пример использования атрибута **default**.  
+ Атрибут [source](../windows/source-cpp.md) также содержит пример использования атрибута **default**.  
   
-## Требования  
+## <a name="requirements"></a>Требования  
   
-### Контекст атрибута  
+### <a name="attribute-context"></a>Контекст атрибута  
   
 |||  
 |-|-|  
 |**Применение**|**класс**, `struct`, элемент данных|  
 |**Повторяемый**|Нет|  
-|**Обязательные атрибуты**|**кокласс** \(при применении к **классу** или `struct`\)|  
+|**Обязательные атрибуты**|**кокласс** (при применении к **классу** или `struct`)|  
 |**Недопустимые атрибуты**|Нет|  
   
  Дополнительные сведения см. в разделе [Контексты атрибутов](../windows/attribute-contexts.md).  
   
-## См. также  
- [IDL Attributes](../windows/idl-attributes.md)   
- [Class Attributes](../windows/class-attributes.md)   
+## <a name="see-also"></a>См. также  
+ [Атрибуты IDL](../windows/idl-attributes.md)   
+ [Атрибуты классов](../windows/class-attributes.md)   
  [coclass](../windows/coclass.md)   
- [Attributes Samples](http://msdn.microsoft.com/ru-ru/558ebdb2-082f-44dc-b442-d8d33bf7bdb8)

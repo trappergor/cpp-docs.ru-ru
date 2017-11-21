@@ -1,36 +1,33 @@
 ---
-title: "Контекстные ключевые слова (расширения компонентов C++) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/16/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-f1_keywords: 
-  - "internal_CPP"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "контекстные ключевые слова"
+title: "Контекстные ключевые слова (расширения компонентов C++) | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+f1_keywords: internal_CPP
+dev_langs: C++
+helpviewer_keywords: context-sensitive keywords
 ms.assetid: e33da089-f434-44e9-8cce-4668d05a8939
-caps.latest.revision: 19
-caps.handback.revision: 17
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "19"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 68ff63d5b596d575f26ec0f56a3ac7a568c8471e
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/24/2017
 ---
-# Контекстные ключевые слова (расширения компонентов C++)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-*Контекстно\-зависимые ключевые слова* — элементы языка, которые имеют определенное значение в конкретном контексте.  Вне указанного контекста они могут быть символами, которые определяются пользователем.  
+# <a name="context-sensitive-keywords--c-component-extensions"></a>Контекстные ключевые слова (расширения компонентов C++)
+*Контекстные ключевые слова* – это языковые элементы, которые распознаются только в определенном контексте. Вне указанного контекста они могут быть символами, которые определяются пользователем.  
   
-## Все среды выполнения  
- **Примечания**  
+## <a name="all-runtimes"></a>Все среды выполнения  
+ **Заметки**  
   
- Ниже приведен список контекстно\-зависимых ключевых слов:  
+ Ниже приведен список контекстно-зависимых ключевых слов:  
   
 -   [abstract](../windows/abstract-cpp-component-extensions.md)  
   
@@ -44,40 +41,40 @@ manager: "ghogen"
   
 -   [initonly](../dotnet/initonly-cpp-cli.md)  
   
--   `internal` \(см. раздел [Видимость членов](../Topic/Member%20Visibility.md)\).  
+-   `internal`   
   
--   [literal](../windows/literal-cpp-component-extensions.md)  
+-   [литерал](../windows/literal-cpp-component-extensions.md)  
   
 -   [override](../windows/override-cpp-component-extensions.md)  
   
--   [свойство;](../windows/property-cpp-component-extensions.md)  
+-   [Свойство](../windows/property-cpp-component-extensions.md)  
   
 -   [sealed](../windows/sealed-cpp-component-extensions.md)  
   
--   `where` \(часть [Универсальные шаблоны](../windows/generics-cpp-component-extensions.md)\)  
+-   `where`(часть [универсальных шаблонов](../windows/generics-cpp-component-extensions.md))  
   
- Для повышения удобочитаемости можно ограничить использование контекстно\-зависимых ключевых слов в качестве символов, определяемых пользователем.  
+ Для повышения удобочитаемости можно ограничить использование контекстно-зависимые ключевые слова как символов, определенных пользователем.  
   
-## [!INCLUDE[wrt](../atl/reference/includes/wrt_md.md)]  
- **Примечания**  
+## <a name="windows-runtime"></a>Среда выполнения Windows  
+ **Заметки**  
   
- \(Отсутствуют комментарии для данной функции в рамках этой платформы\).  
+ (Отсутствуют комментарии для данной возможности в рамках этой платформы).  
   
-### Требования  
- Параметр компилятора: **\/ZW**  
+### <a name="requirements"></a>Требования  
+ Параметр компилятора: **/ZW**  
   
-## [!INCLUDE[clr_for_headings](../dotnet/includes/clr_for_headings_md.md)]  
- **Примечания**  
+## <a name="common-language-runtime"></a>Среда CLR 
+ **Заметки**  
   
- \(Отсутствуют комментарии для данной функции в рамках этой платформы\).  
+ (Отсутствуют комментарии для данной возможности в рамках этой платформы).  
   
-### Требования  
- Параметр компилятора: **\/clr**  
+### <a name="requirements"></a>Требования  
+ Параметр компилятора: **/clr**  
   
-### Примеры  
+### <a name="examples"></a>Примеры  
  **Пример**  
   
- В следующем примере кода показано, что в соответствующем контексте контекстно\-зависимое ключевое слово `property` можно использовать для определения свойства и переменной.  
+ В следующем примере кода показано, что в соответствующем контексте контекстно-зависимое ключевое слово `property` можно использовать для определения свойства и переменной.  
   
 ```  
 // context_sensitive_keywords.cpp  
@@ -100,8 +97,11 @@ int main() {
 }  
 ```  
   
- **Output**  
+ **Вывод**  
   
-  **100**   
-## См. также  
+```Output  
+100  
+```  
+  
+## <a name="see-also"></a>См. также  
  [Расширения компонентов для платформ среды выполнения](../windows/component-extensions-for-runtime-platforms.md)

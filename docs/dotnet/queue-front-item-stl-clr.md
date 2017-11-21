@@ -1,41 +1,39 @@
 ---
-title: "queue::front_item (STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::queue::front_item"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "front_item - член [STL/CLR]"
+title: "Queue::front_item (STL/CLR) | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::queue::front_item
+dev_langs: C++
+helpviewer_keywords: front_item member [STL/CLR]
 ms.assetid: 389ab030-4351-48e6-9b03-417f1d3fcb86
-caps.latest.revision: 15
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 13
+caps.latest.revision: "15"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: bef48cb7ba1914b5c5bef82543e464faaba8f8d1
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/24/2017
 ---
-# queue::front_item (STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Получение первого элемента.  
+# <a name="queuefrontitem-stlclr"></a>queue::front_item (STL/CLR)
+Обращается к первому элементу.  
   
-## Синтаксис  
+## <a name="syntax"></a>Синтаксис  
   
 ```  
 property value_type front_item;  
 ```  
   
-## Заметки  
- Свойство получения первого элемента контролируемой последовательности, которая должна быть непустой.  Он используется для чтения и записи первый элемент, если известно, что он существует.  
+## <a name="remarks"></a>Примечания  
+ Свойство обращается к первый элемент управляемой последовательности, который должен быть пустым. Используется для чтения или записи первый элемент, если известно, что он существует.  
   
-## Пример  
+## <a name="example"></a>Пример  
   
 ```  
 // cliext_queue_front_item.cpp   
@@ -68,17 +66,20 @@ int main()
   
 ```  
   
-  **a b c**  
-**front\_item \= a**  
- **x B C.**   
-## Требования  
- **Заголовок:**\<cliext\/queue\>  
+```Output  
+ a b c  
+front_item = a  
+ x b c  
+```  
+  
+## <a name="requirements"></a>Требования  
+ **Заголовок:** \<cliext/очереди >  
   
  **Пространство имен:** cliext  
   
-## См. также  
- [queue](../Topic/queue%20\(STL-CLR\).md)   
- [queue::back](../dotnet/queue-back-stl-clr.md)   
- [queue::back\_item](../dotnet/queue-back-item-stl-clr.md)   
- [queue::front](../Topic/queue::front%20\(STL-CLR\).md)   
- [queue::front](../Topic/queue::front%20\(STL-CLR\).md)
+## <a name="see-also"></a>См. также  
+ [очереди (STL/CLR)](../dotnet/queue-stl-clr.md)   
+ [Queue::Back (STL/CLR)](../dotnet/queue-back-stl-clr.md)   
+ [Queue::back_item (STL/CLR)](../dotnet/queue-back-item-stl-clr.md)   
+ [Queue::Front (STL/CLR)](../dotnet/queue-front-stl-clr.md)   
+ [queue::front (STL/CLR)](../dotnet/queue-front-stl-clr.md)

@@ -1,69 +1,68 @@
 ---
-title: "__stosq | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "__stosq"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Инструкция rep stosq"
-  - "Инструкция stosq"
-  - "Встроенная функция __stosq"
+title: "__stosq | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: __stosq
+dev_langs: C++
+helpviewer_keywords:
+- rep stosq instruction
+- stosq instruction
+- __stosq intrinsic
 ms.assetid: 3ea28297-4369-4c2d-bf0c-91fa539ce209
-caps.latest.revision: 9
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 9
+caps.latest.revision: "9"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: 6195632e6f0c395b225325ec7546a254b90cbf3b
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/24/2017
 ---
-# __stosq
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-**Только для систем Microsoft**  
+# <a name="stosq"></a>__stosq
+**Блок, относящийся только к системам Майкрософт**  
   
- Формирует инструкцию строки хранилища \(`rep stosq`\).  
+ Создает инструкцию строка хранилища (`rep stosq`).  
   
-## Синтаксис  
+## <a name="syntax"></a>Синтаксис  
   
 ```  
-void __stosb(   
-   unsigned __int64* Dest,   
-   unsigned __int64 Data,   
-   size_t Count   
+void __stosb(   
+   unsigned __int64* Dest,   
+   unsigned __int64 Data,   
+   size_t Count   
 );  
 ```  
   
-#### Параметры  
- \[исходящий\] `Dest`  
- Назначение операции.  
+#### <a name="parameters"></a>Параметры  
+ [выходной] `Dest`  
+ Целевой для операции.  
   
- \[входящий\] `Data`  
- Сохраняемые данные.  
+ [in] `Data`  
+ Для хранения данных.  
   
- \[входящий\] `Count`  
- Длина блока quadwords, которые требуется записать.  
+ [in] `Count`  
+ Длина блока учетверенных слова для записи.  
   
-## Требования  
+## <a name="requirements"></a>Требования  
   
-|Встроенный объект|Архитектура|  
-|-----------------------|-----------------|  
+|Встроенная функция|Архитектура|  
+|---------------|------------------|  
 |`__stosq`|AMD64|  
   
- **Файл заголовка** \<intrin.h\>  
+ **Файл заголовка** \<intrin.h >  
   
-## Заметки  
- В результате quadword `Data` помещается в блок quadwords `Count` в строке `Dest`.  
+## <a name="remarks"></a>Примечания  
+ Результатом является то, что quadword `Data` записывается в блок `Count` учетверенных слова в `Dest` строку.  
   
- Эта процедура доступна только в качестве внутреннего элемента.  
+ Эта процедура доступна только как встроенная функция.  
   
-## Пример  
+## <a name="example"></a>Пример  
   
 ```  
 // stosq.c  
@@ -83,13 +82,13 @@ int main()
 }  
 ```  
   
-## Output  
+## <a name="output"></a>Вывод  
   
 ```  
 0 ffffffffffff ffffffffffff 0  
 ```  
   
-### ЭЛЕМЕНТ, относящийся Майкрософт  
+**Завершение блока, относящегося только к системам Майкрософт**  
   
-## См. также  
- [Встроенные объекты компилятора](../intrinsics/compiler-intrinsics.md)
+## <a name="see-also"></a>См. также  
+ [Встроенные инструкции компилятора](../intrinsics/compiler-intrinsics.md)

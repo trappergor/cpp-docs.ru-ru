@@ -1,90 +1,90 @@
 ---
-title: "CTableConstraints, CTableConstraintInfo | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "m_szTableSchema"
-  - "CONSTRAINT_TYPE"
-  - "m_szCatalog"
-  - "CTableConstraints"
-  - "m_bInitiallyDeferred"
-  - "CONSTRAINT_NAME"
-  - "m_szTableCatalog"
-  - "m_szType"
-  - "m_szSchema"
-  - "INITIALLY_DEFERRED"
-  - "CTableConstraintInfo"
-  - "m_szTableName"
-  - "m_bIsDeferrable"
-  - "m_szName"
-  - "CONSTRAINT_CATALOG"
-  - "CONSTRAINT_SCHEMA"
-  - "IS_DEFERRABLE"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "CONSTRAINT_CATALOG"
-  - "CONSTRAINT_NAME"
-  - "CONSTRAINT_SCHEMA"
-  - "CONSTRAINT_TYPE"
-  - "CTableConstraintInfo - класс параметров"
-  - "CTableConstraints typedef - класс"
-  - "DESCRIPTION - данные-член класса"
-  - "INITIALLY_DEFERRED"
-  - "IS_DEFERRABLE"
-  - "m_bInitiallyDeferred"
-  - "m_bIsDeferrable"
-  - "m_szCatalog"
-  - "m_szDescription"
-  - "m_szName"
-  - "m_szSchema"
-  - "m_szTableCatalog"
-  - "m_szTableName"
-  - "m_szTableSchema"
-  - "m_szType"
-  - "TABLE_CATALOG"
-  - "TABLE_NAME"
-  - "TABLE_SCHEMA"
+title: "CTableConstraints, CTableConstraintInfo | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- m_szTableSchema
+- CONSTRAINT_TYPE
+- m_szCatalog
+- CTableConstraints
+- m_bInitiallyDeferred
+- CONSTRAINT_NAME
+- m_szTableCatalog
+- m_szType
+- m_szSchema
+- INITIALLY_DEFERRED
+- CTableConstraintInfo
+- m_szTableName
+- m_bIsDeferrable
+- m_szName
+- CONSTRAINT_CATALOG
+- CONSTRAINT_SCHEMA
+- IS_DEFERRABLE
+dev_langs: C++
+helpviewer_keywords:
+- DESCRIPTION class data member
+- CTableConstraints typedef class
+- IS_DEFERRABLE
+- m_szSchema
+- m_bInitiallyDeferred
+- CONSTRAINT_CATALOG
+- m_szTableSchema
+- TABLE_CATALOG
+- m_szType
+- m_szCatalog
+- TABLE_NAME
+- CONSTRAINT_NAME
+- CONSTRAINT_TYPE
+- CONSTRAINT_SCHEMA
+- TABLE_SCHEMA
+- m_szName
+- m_szTableCatalog
+- m_szDescription
+- CTableConstraintInfo parameter class
+- m_szTableName
+- INITIALLY_DEFERRED
+- m_bIsDeferrable
 ms.assetid: aaa07ade-0bfa-41d0-94df-8342152a4ff0
-caps.latest.revision: 6
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 6
+caps.latest.revision: "6"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: cda2e1ccfa479eb2b71a4a21f49b67b127e9984c
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/24/2017
 ---
-# CTableConstraints, CTableConstraintInfo
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Вызовите **CTableConstraints** класс typedef для реализации его класс **CTableConstraintInfo** параметра.  
+# <a name="ctableconstraints-ctableconstraintinfo"></a>CTableConstraints, CTableConstraintInfo
+Вызовите typedef-класс **CTableConstraints** реализации класса своего параметра **CTableConstraintInfo**.  
   
-## Заметки  
- Дополнительные сведения см. в разделе [Классы набора строк схемы и классах typedef](../Topic/Schema%20Rowset%20Classes%20and%20Typedef%20Classes.md) при использовании классов typedef.  
+## <a name="remarks"></a>Примечания  
+ В разделе [классы набора строк схемы и классы Typedef](../../data/oledb/schema-rowset-classes-and-typedef-classes.md) Дополнительные сведения об использовании классов typedef.  
   
- Этот класс определяет ограничения таблицы, определенные в каталоге, принадлежащих заданных пользователем.  
+ Этот класс определяет ограничения таблицы, определенные в каталоге, которые принадлежат данному пользователю.  
   
- В следующей таблице перечислены элементы данных класса и соответствующие столбцы OLE DB.  В разделе [Набор строк TABLE\_CONSTRAINTS](https://msdn.microsoft.com/en-us/library/ms715921.aspx) справочника *программиста OLE DB* дополнительные сведения о схеме и столбцам.  
+ В следующей таблице перечислены данные-члены класса и их соответствующие OLE DB столбцы. В разделе [строк TABLE_CONSTRAINTS](https://msdn.microsoft.com/en-us/library/ms715921.aspx) в *Справочник программиста OLE DB* Дополнительные сведения о схеме и столбцы.  
   
-|Элементы данных|Столбцы OLE DB|  
-|---------------------|--------------------|  
-|m\_szCatalog|CONSTRAINT\_CATALOG|  
-|m\_szSchema|CONSTRAINT\_SCHEMA|  
-|m\_szName|CONSTRAINT\_NAME|  
-|m\_szTableCatalog|TABLE\_CATALOG|  
-|m\_szTableSchema|TABLE\_SCHEMA|  
-|m\_szTableName|TABLE\_NAME|  
-|m\_szType|CONSTRAINT\_TYPE|  
-|m\_bIsDeferrable|IS\_DEFERRABLE|  
-|m\_bInitiallyDeferred|INITIALLY\_DEFERRED|  
-|m\_szDescription|DESCRIPTION|  
+|Члены данных|Столбцы OLE DB|  
+|------------------|--------------------|  
+|m_szCatalog|CONSTRAINT_CATALOG|  
+|m_szSchema|CONSTRAINT_SCHEMA|  
+|m_szName|CONSTRAINT_NAME|  
+|m_szTableCatalog|TABLE_CATALOG|  
+|m_szTableSchema|TABLE_SCHEMA|  
+|m_szTableName|TABLE_NAME|  
+|m_szType|CONSTRAINT_TYPE|  
+|m_bIsDeferrable|IS_DEFERRABLE|  
+|m_bInitiallyDeferred|INITIALLY_DEFERRED|  
+|m_szDescription|DESCRIPTION|  
   
-## Требования  
- **Header:**  atldbsch.h  
+## <a name="requirements"></a>Требования  
+ **Заголовок:** atldbsch.h  
   
-## См. также  
- [Класс CRestrictions](../Topic/CRestrictions%20Class.md)
+## <a name="see-also"></a>См. также  
+ [Класс CRestrictions](../../data/oledb/crestrictions-class.md)

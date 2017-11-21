@@ -1,70 +1,69 @@
 ---
-title: "/F (Задание размера стека) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "/f"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "/F - параметр компилятора [C++]"
-  - "F - параметр компилятора [C++]"
-  - "-F - параметр компилятора [C++]"
-  - "задание размера стека - параметр компилятора"
-  - "стек, установка размера"
+title: "-F (задание размера стека) | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: /f
+dev_langs: C++
+helpviewer_keywords:
+- set stack size compiler option
+- F compiler option [C++]
+- -F compiler option [C++]
+- /F compiler option [C++]
+- stack, setting size
 ms.assetid: 17320b6f-8305-445b-9ec2-75833f4b29e0
-caps.latest.revision: 11
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 11
+caps.latest.revision: "11"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: b75c5c014dfcfa2e90a507d2948c573632e650a0
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/24/2017
 ---
-# /F (Задание размера стека)
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="f-set-stack-size"></a>/F (Задание размера стека)
 Задает размер стека программы в байтах.  
   
-## Синтаксис  
+## <a name="syntax"></a>Синтаксис  
   
 ```  
 /F number  
 ```  
   
-## Аргументы  
+## <a name="arguments"></a>Аргументы  
  `number`  
  Размер стека в байтах.  
   
-## Заметки  
- Без этого параметра размер стека по умолчанию равен 1 МБ.  Аргумент `number` может быть в десятичном выражении либо в нотации языка Си.  Аргумент может изменяться от 1 до максимального размера стека, допускаемого компоновщиком.  Компоновщик округляет указанное значение до ближайших 4 байт.  Пробел между **\/F** и `number`является необязательным.  
+## <a name="remarks"></a>Примечания  
+ Без этого параметра размер стека по умолчанию равно 1 МБ. `number` Аргумент может быть в десятичном или нотации языка. Аргумент находится в диапазоне от 1 до максимального размера стека допускаемого компоновщиком. Компоновщик Округляет указанное значение до ближайших 4 байт. Расстояние между **/F** и `number` является необязательным.  
   
- Возможно потребуется увеличение размера стека, если программа возвращает сообщения о переполнении стека.  
+ Может потребоваться увеличить размер стека, если программа возвращает сообщения о переполнении стека.  
   
- Размер стека также можно задать:  
+ Можно также задать размер стека:  
   
--   Используя параметр компоновщика **\/STACK**.  Для получения дополнительной информации см. [\/STACK](../../build/reference/stack.md).  
+-   С помощью **/STACK** компоновщика. Дополнительные сведения см. в разделе [/STACK](../../build/reference/stack.md).  
   
--   Используя EDITBIN в EXE\-файле.  Для получения дополнительной информации см. [Справочник ЕDITBIN](../Topic/EDITBIN%20Reference.md).  
+-   С помощью EDITBIN файл .exe. Дополнительные сведения см. в разделе [Справочник ЕDITBIN](../../build/reference/editbin-reference.md).  
   
-### Установка данного параметра компилятора в среде разработки Visual Studio  
+### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Установка данного параметра компилятора в среде разработки Visual Studio  
   
-1.  Откройте диалоговое окно **Страницы свойств** проекта.  Дополнительные сведения см. в разделе [Открытие свойств страниц проекта](../../misc/how-to-open-project-property-pages.md).  
+1.  Откройте диалоговое окно **Страницы свойств** проекта. Дополнительные сведения см. в разделе [работа со свойствами проекта](../../ide/working-with-project-properties.md).  
   
-2.  Откройте папку **C\/C\+\+**.  
+2.  Откройте папку **C/C++** .  
   
-3.  Выберите страницу свойств **Командная строка**.  
+3.  Выберите страницу свойств **Командная строка** .  
   
-4.  Введите параметр компилятора в поле **Дополнительные параметры**.  
+4.  Введите параметр компилятора в поле **Дополнительные параметры** .  
   
-### Установка данного параметра компилятора программным способом  
+### <a name="to-set-this-compiler-option-programmatically"></a>Установка данного параметра компилятора программным способом  
   
 -   См. раздел <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.AdditionalOptions%2A>.  
   
-## См. также  
+## <a name="see-also"></a>См. также  
  [Параметры компилятора](../../build/reference/compiler-options.md)   
- [Настройка параметров компилятора](../Topic/Setting%20Compiler%20Options.md)
+ [Настройка параметров компилятора](../../build/reference/setting-compiler-options.md)

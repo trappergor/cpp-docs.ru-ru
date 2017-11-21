@@ -4,44 +4,25 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-windows
+ms.technology: cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- for
-dev_langs:
-- C++
-helpviewer_keywords:
-- for OpenMP directive
+f1_keywords: for
+dev_langs: C++
+helpviewer_keywords: for OpenMP directive
 ms.assetid: 8b54e034-9db2-4c1a-a2b1-72e14e930506
-caps.latest.revision: 13
+caps.latest.revision: "13"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
-ms.openlocfilehash: 59b424cc0efb429ed6d01fb46a469594b2737dbe
-ms.contentlocale: ru-ru
-ms.lasthandoff: 02/24/2017
-
+ms.openlocfilehash: 8c1e7f5df003796050958f803cc931a49d2d52d3
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="for-openmp"></a>for (OpenMP)
-Вызывает работу в цикле внутри параллельной области для будет разделен между потоками.  
+В результаты работы вызывает для цикла внутри параллельной области, чтобы разделить между потоками.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -54,10 +35,10 @@ ms.lasthandoff: 02/24/2017
  где  
   
  `clause` (необязательно)  
- Ноль или несколько предложений. В разделе «Примечания» на список предложений, поддерживаемые **для**.  
+ Ноль или несколько предложений. . В разделе «Примечания» в список предложений, поддерживаемых **для**.  
   
  `for_statement`  
- Объект для цикла. Если в коде пользователя приведет к неопределенному поведению цикла изменений переменной индекса.  
+ Объект для цикла. Если в код пользователя приведет к неопределенному поведению цикла изменений переменная индекса.  
   
 ## <a name="remarks"></a>Примечания  
  **Для** директива поддерживает следующие предложения OpenMP:  
@@ -72,11 +53,11 @@ ms.lasthandoff: 02/24/2017
   
 -   [private](../../../parallel/openmp/reference/private-openmp.md)  
   
--   [Сокращение](../../../parallel/openmp/reference/reduction.md)  
+-   [reduction](../../../parallel/openmp/reference/reduction.md)  
   
--   [расписание](../../../parallel/openmp/reference/schedule.md)  
+-   [schedule](../../../parallel/openmp/reference/schedule.md)  
   
- Если **параллельных** указан, `clause` предложения принимаются по **параллельных** или **для** директивы, за исключением **nowait**.  
+ Если **параллельных** также указан `clause` любые предложения, принимаются по **параллельных** или **для** директивы, за исключением **nowait**.  
   
  Дополнительные сведения см. в разделе [2.4.1 конструкция for](../../../parallel/openmp/2-4-1-for-construct.md).  
   

@@ -1,55 +1,55 @@
 ---
-title: "_AddressOfReturnAddress | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "_AddressOfReturnAddress_cpp"
-  - "_AddressOfReturnAddress"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Встроенная функция _AddressOfReturnAddress"
-  - "Встроенная функция AddressOfReturnAddress"
+title: "_AddressOfReturnAddress | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- _AddressOfReturnAddress_cpp
+- _AddressOfReturnAddress
+dev_langs: C++
+helpviewer_keywords:
+- _AddressOfReturnAddress intrinsic
+- AddressOfReturnAddress intrinsic
 ms.assetid: c7e10b8c-445e-4236-a602-e2d90200f70a
-caps.latest.revision: 17
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 15
+caps.latest.revision: "17"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: 0808f1053475b1f4919ada60615f91dc8cc0cba0
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/24/2017
 ---
-# _AddressOfReturnAddress
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-**Только для систем Microsoft**  
+# <a name="addressofreturnaddress"></a>_AddressOfReturnAddress
+**Блок, относящийся только к системам Майкрософт**  
   
- Предоставляет адрес области памяти, в котором находится возвращаемый адрес текущей функции.  Этот адрес не может быть использован для доступа к другим областей памяти \(например, аргументы функции\).  
+ Предоставляет адрес области памяти, хранящий адрес возврата текущей функции. Этот адрес не может использоваться для доступа к другим расположениям памяти (например, аргументов функции).  
   
-## Синтаксис  
+## <a name="syntax"></a>Синтаксис  
   
 ```  
 void * _AddressOfReturnAddress();  
 ```  
   
-## Требования  
+## <a name="requirements"></a>Требования  
   
-|Встроенный объект|Архитектура|  
-|-----------------------|-----------------|  
-|`_AddressOfReturnAddress`|x86, [!INCLUDE[vcprx64](../Token/vcprx64_md.md)]|  
+|Встроенная функция|Архитектура|  
+|---------------|------------------|  
+|`_AddressOfReturnAddress`|x86, [!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|  
   
- **Файл заголовка** \<intrin.h\>  
+ **Файл заголовка** \<intrin.h >  
   
-## Заметки  
- При `_AddressOfReturnAddress` используется в программе компилированной с [\/clr](../build/reference/clr-common-language-runtime-compilation.md) функция, содержащего вызов `_AddressOfReturnAddress` компилированна как собственная функция.  При вызове компилированные функцией, такие как управляемые в функцию, содержащий `_AddressOfReturnAddress`, `_AddressOfReturnAddress` могут не работать ожидаемым образом.  
+## <a name="remarks"></a>Примечания  
+ Когда `_AddressOfReturnAddress` используется в программе, которая скомпилирована с [/CLR](../build/reference/clr-common-language-runtime-compilation.md), функция, содержащая `_AddressOfReturnAddress` вызов скомпилирована как собственная функция. Когда функция скомпилирована как управляемые вызовы в функцию, содержащую `_AddressOfReturnAddress`, `_AddressOfReturnAddress` может вести себя неожиданным образом.  
   
- Эта процедура доступна только в качестве внутреннего элемента.  
+ Эта процедура доступна только как встроенная функция.  
   
-## Пример  
+## <a name="example"></a>Пример  
   
 ```  
 // compiler_intrinsics_AddressOfReturnAddress.cpp  
@@ -75,9 +75,14 @@ int main() {
 }  
 ```  
   
-  **0012FF78 00401058 00401058**   
-## ЭЛЕМЕНТ, относящийся Майкрософт  
+```Output  
+0012FF78  
+00401058  
+00401058  
+```  
   
-## См. также  
+**Завершение блока, относящегося только к системам Майкрософт**  
+  
+## <a name="see-also"></a>См. также  
  [Встроенные объекты компилятора](../intrinsics/compiler-intrinsics.md)   
- [Ключевые слова в C\+\+](../cpp/keywords-cpp.md)
+ [Ключевые слова](../cpp/keywords-cpp.md)

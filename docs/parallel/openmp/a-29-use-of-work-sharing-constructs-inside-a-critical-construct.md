@@ -1,27 +1,26 @@
 ---
-title: "A.29   Use of Work-Sharing Constructs Inside a critical Construct | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
+title: "A.29 совместной работы для использования создает внутри конструкция critical | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
 ms.assetid: d5c8a83f-2f51-4f23-8ddf-d267e347507f
-caps.latest.revision: 5
-caps.handback.revision: 5
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "5"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 2aac51541574ee1cf0363a77f40891ac37a18c49
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/24/2017
 ---
-# A.29   Use of Work-Sharing Constructs Inside a critical Construct
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-В следующем примере демонстрируется использование рабочий\-совместно, используя конструкцию in a `critical` конструкция.  В этом примере, поскольку рабочий\-совместно несовместимый с помощью конструкции и `critical` конструкция не привязан к одной и той же параллельной области.  
+# <a name="a29---use-of-work-sharing-constructs-inside-a-critical-construct"></a>A.29   Использование конструкций совместной работы в конструкции critical
+В следующем примере показано использование конструкции совместной работы внутри `critical` построения. В этом примере является совместимым, поскольку совместной работы для конструирования и `critical` конструкция не привязаны к одной и той же параллельной области.  
   
 ```  
 void f()  

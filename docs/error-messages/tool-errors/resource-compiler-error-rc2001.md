@@ -4,51 +4,32 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-tools
+ms.technology: cpp-tools
 ms.tgt_pltfrm: 
 ms.topic: error-reference
-f1_keywords:
-- RC2001
-dev_langs:
-- C++
-helpviewer_keywords:
-- RC2001
+f1_keywords: RC2001
+dev_langs: C++
+helpviewer_keywords: RC2001
 ms.assetid: 92bfb4c0-1879-4606-bb9f-ef7368707b4a
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
-ms.openlocfilehash: ba9e855e61af80d29a682738a3f04377f49b6bdf
-ms.contentlocale: ru-ru
-ms.lasthandoff: 02/24/2017
-
+ms.openlocfilehash: 23b853db3cbea89bf9cb1ba43607c312e5264394
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="resource-compiler-error-rc2001"></a>Ошибка компилятора ресурсов RC2001
-newline в константе  
+символ новой строки в константе  
   
- Строковая константа была продолжена на второй строке без либо обратную косую черту (**\\**) или закрытия и открытия двойные кавычки (**»**).  
+ Строковая константа была продолжена на второй строке отсутствует либо обратную косую черту (**\\**) или закрытия и открытия двойные кавычки (**»**).  
   
- Прервать строковую константу на две строки в исходном файле, выполните одно из следующих действий.  
+ Чтобы приостановить выполнение строковая константа, на две строки в исходном файле, выполните одно из следующих:  
   
--   Закончить первую строку символом продолжения строки обратную косую черту.  
+-   Завершите первую строку символом продолжения строки обратную косую черту.  
   
--   Строки в первой строке с двойной кавычкой закрыть и открыть строку на следующую строку другими двойными кавычками.  
+-   Строки в первой строке с двойной кавычкой закройте и откройте строку на следующую строку с еще один символ кавычек.  
   
- Недостаточно завершить первую строку escape-последовательность для внедрения символ новой строки в строковую константу "\n".
+ Первая строка escape-последовательность для внедрения символа новой строки в строковую константу "\n" недостаточно.

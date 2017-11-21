@@ -4,28 +4,25 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-language
+ms.technology: cpp-language
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - '* operator'
 - indirection operator
 - operators [C++], indirection
 - indirection operator [C++], syntax
 ms.assetid: c50309e1-6c02-4184-9fcb-2e13c1f4ac03
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.translationtype: HT
-ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
-ms.openlocfilehash: 1f9b758e3bfa1a01ed2b2a428758c3e4a982fdae
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/25/2017
-
+ms.openlocfilehash: 271708c8908e6d213047283c431e03726946e059
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="indirection-operator-"></a>Оператор косвенного обращения: *
 ## <a name="syntax"></a>Синтаксис  
@@ -36,7 +33,7 @@ ms.lasthandoff: 09/25/2017
 ```  
   
 ## <a name="remarks"></a>Примечания  
- Унарный оператор косвенного обращения (**\***) разыменовывает указатель; то есть преобразует значение указателя в l значением. Операнд косвенного оператора должен быть указателем на тип. Результат косвенного выражения — тип, производным которого является тип указателя. Использование ** \* ** в этом контексте отличается от его значения как бинарного оператора, то есть умножения.  
+ Унарный оператор косвенного обращения (**\***) разыменовывает указатель; то есть преобразует значение указателя в l значением. Операнд косвенного оператора должен быть указателем на тип. Результат косвенного выражения — тип, производным которого является тип указателя. Использование  **\***  в этом контексте отличается от его значения как бинарного оператора, то есть умножения.  
   
  Если операнд указывает на функцию, результатом является указатель функции. Если он указывает на место хранения, результатом является l-значение, указывающее на место хранения.  
   

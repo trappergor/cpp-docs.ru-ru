@@ -1,34 +1,33 @@
 ---
-title: "3.3.1 omp_get_wtime Function | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
+title: "3.3.1 функция omp_get_wtime | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
 ms.assetid: 90188bd2-c53e-4398-8946-d3ecc92fa0f6
-caps.latest.revision: 7
-caps.handback.revision: 7
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "7"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: c5f48f2cbc5cb77d20884632881b779986dac6d8
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/24/2017
 ---
-# 3.3.1 omp_get_wtime Function
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-`omp_get_wtime` функция возвращает значение с плавающей запятой двойной точности, эквивалентное истеченному реальное время в секундах с момента некоторые "создаст в прошлом".  Фактическое "время" в прошлом произвольно, но гарантирует, какие изменения во время выполнения программы приложения.  Формат следующий:  
+# <a name="331-ompgetwtime-function"></a>3.3.1 Функция omp_get_wtime
+`omp_get_wtime` Функция возвращает значение двойной точности с плавающей запятой равно затраченное время по часам в секундах с момента некоторых «времени в прошлом».  Фактическое «время в прошлом» может быть произвольным, но оно не изменяются во время выполнения приложения. Он следующий:  
   
 ```  
 #include <omp.h>  
 double omp_get_wtime(void);  
 ```  
   
- Предвидится, что функция будет использоваться для измерения затраченные раз, как показано в следующем примере:  
+ Предполагается, что функция будет использоваться для измерения затраченного времени, как показано в следующем примере:  
   
 ```  
 double start;  
@@ -39,4 +38,4 @@ end = omp_get_wtime();
 printf_s("Work took %f sec. time.\n", end-start);  
 ```  
   
- Возвращаемые значения времени "создаст в\-поток", что значено, что они должны иметь глобально последовательно через все потоки, участвующих в приложении.
+ Возвращается выполняются «время потоков», которая предназначена, что они не должны быть глобально согласованного во всех потоках, участвующих в приложении.

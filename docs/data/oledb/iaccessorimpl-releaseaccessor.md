@@ -1,36 +1,35 @@
 ---
-title: "IAccessorImpl::ReleaseAccessor | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "ReleaseAccessor"
-  - "IAccessorImpl::ReleaseAccessor"
-  - "ATL.IAccessorImpl.ReleaseAccessor"
-  - "ATL::IAccessorImpl::ReleaseAccessor"
-  - "IAccessorImpl.ReleaseAccessor"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "ReleaseAccessor - метод"
+title: "IAccessorImpl::ReleaseAccessor | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- ReleaseAccessor
+- IAccessorImpl::ReleaseAccessor
+- ATL.IAccessorImpl.ReleaseAccessor
+- ATL::IAccessorImpl::ReleaseAccessor
+- IAccessorImpl.ReleaseAccessor
+dev_langs: C++
+helpviewer_keywords: ReleaseAccessor method
 ms.assetid: 1526e360-bd9c-4ecd-967e-5afdd7506d2a
-caps.latest.revision: 8
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 772a43cacebf6ccd9562dc224cabcc7e0e2656bb
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/24/2017
 ---
-# IAccessorImpl::ReleaseAccessor
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="iaccessorimplreleaseaccessor"></a>IAccessorImpl::ReleaseAccessor
 Освобождает метод доступа.  
   
-## Синтаксис  
+## <a name="syntax"></a>Синтаксис  
   
 ```  
   
@@ -40,13 +39,13 @@ caps.handback.revision: 8
 );  
 ```  
   
-#### Параметры  
- В разделе [IAccessor::ReleaseAccessor](https://msdn.microsoft.com/en-us/library/ms719717.aspx) справочника *программиста OLE DB*.  
+#### <a name="parameters"></a>Параметры  
+ В разделе [IAccessor::ReleaseAccessor](https://msdn.microsoft.com/en-us/library/ms719717.aspx) в *справочника программиста OLE DB*.  
   
-## Требования  
- **Header:** atldb.h  
+## <a name="requirements"></a>Требования  
+ **Заголовок:** atldb.h  
   
-## См. также  
- [Класс IAccessorImpl](../../data/oledb/iaccessorimpl-class.md)   
+## <a name="see-also"></a>См. также  
+ [IAccessorImpl-класс](../../data/oledb/iaccessorimpl-class.md)   
  [IAccessorImpl::CreateAccessor](../../data/oledb/iaccessorimpl-createaccessor.md)   
  [IAccessorImpl::AddRefAccessor](../../data/oledb/iaccessorimpl-addrefaccessor.md)

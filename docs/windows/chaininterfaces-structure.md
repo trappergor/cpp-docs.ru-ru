@@ -1,32 +1,30 @@
 ---
-title: "Структура ChainInterfaces | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "implements/Microsoft::WRL::ChainInterfaces"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "ChainInterfaces - структура"
+title: "Структура ChainInterfaces | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: implements/Microsoft::WRL::ChainInterfaces
+dev_langs: C++
+helpviewer_keywords: ChainInterfaces structure
 ms.assetid: d7415b59-5468-4bef-a3fd-8d82b12f0e9c
-caps.latest.revision: 3
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 3
+caps.latest.revision: "3"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 3d48aac7e14092c8406db28910263e7048c17bee
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/24/2017
 ---
-# Структура ChainInterfaces
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Определяет функции проверки и инициализации, которые можно применить к набору идентификаторов интерфейсов.  
+# <a name="chaininterfaces-structure"></a>ChainInterfaces - структура
+Указывает функции проверки и инициализации, которые могут применяться к набору идентификаторов интерфейсов.  
   
-## Синтаксис  
+## <a name="syntax"></a>Синтаксис  
   
 ```  
 template <  
@@ -59,36 +57,36 @@ template <
 struct ChainInterfaces<MixIn<DerivedType, BaseType, hasImplements>, I1, I2, I3, I4, I5, I6, I7, I8, I9>;  
 ```  
   
-#### Параметры  
+#### <a name="parameters"></a>Параметры  
  `I0`  
- \(Обязательный\) Идентификатор интерфейса 0.  
+ (Обязательно) Интерфейс с Идентификатором 0.  
   
  `I1`  
- \(Обязательный\) Идентификатор интерфейса 1.  
+ (Обязательно) Идентификатор интерфейса 1.  
   
  `I2`  
- \(Необязательный\). Идентификатор интерфейса 2.  
+ (Необязательно) Интерфейс с Идентификатором 2.  
   
  `I3`  
- \(Необязательный\). Идентификатор интерфейса 3.  
+ (Необязательно) Идентификатор интерфейса 3.  
   
  `I4`  
- \(Необязательный\). Идентификатор интерфейса 4.  
+ (Необязательно) Идентификатор интерфейса 4.  
   
  `I5`  
- \(Необязательный\). Идентификатор интерфейса 5.  
+ (Необязательно) Идентификатор интерфейса 5.  
   
  `I6`  
- \(Необязательный\). Идентификатор интерфейса 6.  
+ (Необязательно) Идентификатор интерфейса 6.  
   
  `I7`  
- \(Необязательный\). Идентификатор интерфейса 7.  
+ (Необязательно) Идентификатор интерфейса 7.  
   
  `I8`  
- \(Необязательный\). Идентификатор интерфейса 8.  
+ (Необязательно) Идентификатор интерфейса 8.  
   
  `I9`  
- \(Необязательный\). Идентификатор интерфейса 9.  
+ (Необязательно) Идентификатор интерфейса 9.  
   
  `DerivedType`  
  Производный тип.  
@@ -97,34 +95,34 @@ struct ChainInterfaces<MixIn<DerivedType, BaseType, hasImplements>, I1, I2, I3, 
  Базовый тип производного типа.  
   
  `hasImplements`  
- Логическое значение, если `true`, то нельзя использовать структуру [MixIn](../windows/mixin-structure.md) с классом, который не является производным от структуры [Implements](../Topic/Implements%20Structure.md).  
+ Логическое значение, если `true`, значит, нельзя использовать [MixIn](../windows/mixin-structure.md) структуры с классом, который является производным от [реализует](../windows/implements-structure.md) структура.  
   
-## Члены  
+## <a name="members"></a>Члены  
   
-### Защищенные методы  
+### <a name="protected-methods"></a>Защищенные методы  
   
-|Name|Описание|  
-|----------|--------------|  
-|[Метод ChainInterfaces::CanCastTo](../Topic/ChainInterfaces::CanCastTo%20Method.md)|Указывает, может ли идентификатор указанного интерфейса быть приведен к каждой из спецификаций, определенных параметрами шаблонов ChainInterface.|  
-|[Метод ChainInterfaces::CastToUnknown](../windows/chaininterfaces-casttounknown-method.md)|Приводит указатель интерфейса типа, указанного в параметре шаблона `I0` к указателю на интерфейс IUnknown.|  
-|[Метод ChainInterfaces::FillArrayWithIid](../Topic/ChainInterfaces::FillArrayWithIid%20Method.md)|Хранит идентификатор интерфейса, заданный параметром шаблона `I0` в указанное место в указанном массиве идентификаторов интерфейса.|  
-|[Метод ChainInterfaces::Verify](../windows/chaininterfaces-verify-method.md)|Проверяет, что каждый интерфейс, заданный параметрами `I0` шаблона через `I9` наследуется от IUnknown и\/или IInspectable, и что `I0` наследуется от `I1` через `I9`.|  
+|Имя|Описание|  
+|----------|-----------------|  
+|[Метод ChainInterfaces::CanCastTo](../windows/chaininterfaces-cancastto-method.md)|Указывает ли идентификатор указанный интерфейс может быть приведен к каждой специализации, определяемая параметрами ChainInterface шаблона.|  
+|[Метод ChainInterfaces::CastToUnknown](../windows/chaininterfaces-casttounknown-method.md)|Приводит указатель интерфейса типа, определяемого `I0` параметр шаблона в указатель на IUnknown.|  
+|[Метод ChainInterfaces::FillArrayWithIid](../windows/chaininterfaces-fillarraywithiid-method.md)|Сохраняет идентификатор интерфейса определяются `I0` параметр шаблона в указанном месте в указанном массиве идентификаторов интерфейсов.|  
+|[Метод ChainInterfaces::Verify](../windows/chaininterfaces-verify-method.md)|Проверяет, чтобы каждый интерфейс определены параметры шаблона `I0` через `I9` наследует от IUnknown или IInspectable и который `I0` наследует от `I1` через `I9`.|  
   
-### Защищенные константы  
+### <a name="protected-constants"></a>Защищенные константы  
   
-|Name|Описание|  
-|----------|--------------|  
-|[Константа ChainInterfaces::IidCount](../windows/chaininterfaces-iidcount-constant.md)|Общее число идентификаторов интерфейса, содержащихся в интерфейсах, указанных параметрами `I0` шаблона через `I9`.|  
+|Имя|Описание|  
+|----------|-----------------|  
+|[Константа ChainInterfaces::IidCount](../windows/chaininterfaces-iidcount-constant.md)|Общее количество идентификаторов, содержащихся в интерфейсах, заданные параметры шаблона интерфейса `I0` через `I9`.|  
   
-## Иерархия наследования  
+## <a name="inheritance-hierarchy"></a>Иерархия наследования  
  `I0`  
   
  `ChainInterfaces`  
   
-## Требования  
+## <a name="requirements"></a>Требования  
  **Заголовок:** implements.h  
   
  **Пространство имен:** Microsoft::WRL  
   
-## См. также  
+## <a name="see-also"></a>См. также  
  [Пространство имен Microsoft::WRL](../windows/microsoft-wrl-namespace.md)

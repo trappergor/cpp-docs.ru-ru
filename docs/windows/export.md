@@ -1,32 +1,30 @@
 ---
-title: "export | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-f1_keywords: 
-  - "vc-attr.export"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "export attribute"
+title: "Экспорт | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+f1_keywords: vc-attr.export
+dev_langs: C++
+helpviewer_keywords: export attribute
 ms.assetid: 70b3e848-fad6-4e09-8c72-be60ca72a4df
-caps.latest.revision: 11
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 11
+caps.latest.revision: "11"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 7a3229b1cc924c0268bf9a79df53bc18ce2684a1
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/24/2017
 ---
-# export
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Структура данных будет располагаться в idl\-файле.  
+# <a name="export"></a>экспорт
+В результате структуру данных помещается в IDL-файл.  
   
-## Синтаксис  
+## <a name="syntax"></a>Синтаксис  
   
 ```  
   
@@ -34,17 +32,17 @@ caps.handback.revision: 11
   
 ```  
   
-## Заметки  
- **Экспорт** Атрибут C\+\+ будет структуру данных располагаться в idl\-файле, а затем быть доступен в библиотеке типов в формате binary\-совместимого, который делает его доступным для использования с любым языком.  
+## <a name="remarks"></a>Примечания  
+ **Экспорт** языка C++ вызывает структуру данных помещается в IDL-файл и затем быть доступны в библиотеке типов в совместимых формате, который делает доступными для использования с любым языком.  
   
- Нельзя применить **Экспорт** атрибут к классу, даже если класс имеет только открытые члены \(количество a  `struct`\).  
+ Не удается применить **Экспорт** атрибута к классу, даже если класс имеет только открытые члены (эквивалент `struct`).  
   
- При экспорте безымянное `enum`s или  `struct`s, они будут заданными именами, начинающиеся с символа  **\_\_unnamed**x, где x последовательный номер.  
+ Если вы экспортируете неименованные `enum`s или `struct`s, они будут имена, начинающиеся с **__unnamed***x*, где *x* — это последовательный номер.  
   
- Определения типов допустимые для экспорта базовые типы, структуры, объединения, перечисления или идентификаторы типа.  См. [typedef](http://msdn.microsoft.com/library/windows/desktop/aa367287) для получения дополнительных сведений.  
+ Определения типов, допустимый для экспорта: базовые типы, структуры, объединения, перечисления, либо введите идентификаторы.  В разделе [typedef](http://msdn.microsoft.com/library/windows/desktop/aa367287) для получения дополнительной информации.  
   
-## Пример  
- В следующем примере кода демонстрируется применение **Экспорт** атрибут:  
+## <a name="example"></a>Пример  
+ Следующий код показывает, как использовать **Экспорт** атрибута:  
   
 ```  
 // cpp_attr_ref_export.cpp  
@@ -57,20 +55,19 @@ struct MyStruct {
 };  
 ```  
   
-## Требования  
+## <a name="requirements"></a>Требования  
   
-### Контекст атрибута  
+### <a name="attribute-context"></a>Контекст атрибута  
   
 |||  
 |-|-|  
-|**Применение**|**union**"  `typedef`"  `enum`"  `struct`или  `interface`|  
-|**Repeatable**|Нет|  
-|**Обязательные атрибуты**|None|  
-|**Недопустимые атрибуты**|None|  
+|**Применение**|**Объединение**, `typedef`, `enum`, `struct`, или`interface`|  
+|**Повторяемый**|Нет|  
+|**Обязательные атрибуты**|Нет|  
+|**Недопустимые атрибуты**|Нет|  
   
- Дополнительные сведения см. в разделе [Контексты атрибута](../windows/attribute-contexts.md).  
+ Дополнительные сведения см. в разделе [Контексты атрибутов](../windows/attribute-contexts.md).  
   
-## См. также  
- [Compiler Attributes](../windows/compiler-attributes.md)   
- [Typedef, Enum, Union, and Struct Attributes](../windows/typedef-enum-union-and-struct-attributes.md)   
- [Attributes Samples](http://msdn.microsoft.com/ru-ru/558ebdb2-082f-44dc-b442-d8d33bf7bdb8)
+## <a name="see-also"></a>См. также  
+ [Атрибуты компилятора](../windows/compiler-attributes.md)   
+ [Атрибуты Typedef, Enum, Union и Struct](../windows/typedef-enum-union-and-struct-attributes.md)   

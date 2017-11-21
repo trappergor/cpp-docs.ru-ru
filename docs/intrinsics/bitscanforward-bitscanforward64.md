@@ -1,67 +1,74 @@
 ---
-title: "_BitScanForward, _BitScanForward64 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "_BitScanForward"
-  - "_BitScanForward_cpp"
-  - "_BitScanForward64_cpp"
-  - "_BitScanForward64"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "_BitScanForward intrinsic"
-  - "BitScanForward intrinsic"
-  - "bsf instruction"
+title: "_BitScanForward _BitScanForward64 | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- _BitScanForward
+- _BitScanForward_cpp
+- _BitScanForward64_cpp
+- _BitScanForward64
+dev_langs: C++
+helpviewer_keywords:
+- _BitScanForward intrinsic
+- bsf instruction
+- BitScanForward intrinsic
 ms.assetid: 405e60fb-0815-42a7-9b02-6fc035122203
-caps.latest.revision: 12
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 12
+caps.latest.revision: "12"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: 94fe30e65cc501e16fe31bd04b5cb786a323ccdb
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/24/2017
 ---
-# _BitScanForward, _BitScanForward64
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-**Блок, относящийся только к системам Microsoft**  
+# <a name="bitscanforward-bitscanforward64"></a>_BitScanForward, _BitScanForward64
+**Блок, относящийся только к системам Майкрософт**  
   
- Поиск данных маски от наименьшего значащего разряда \(LSB\) к наибольшему значащему разряду \(MSB\) для значащего разряда \(1\).  
+ Поиск данных маски от наименьшего значащего разряда (LSB) к наибольшему значащему разряду (MSB) для значащего разряда (1).  
   
-## Синтаксис  
+## <a name="syntax"></a>Синтаксис  
   
 ```  
-unsigned char _BitScanForward(    unsigned long * Index,    unsigned long Mask ); unsigned char _BitScanForward64(    unsigned long * Index,    unsigned __int64 Mask );  
+unsigned char _BitScanForward(  
+   unsigned long * Index,  
+   unsigned long Mask  
+);  
+unsigned char _BitScanForward64(  
+   unsigned long * Index,  
+   unsigned __int64 Mask  
+);  
 ```  
   
-#### Параметры  
- \[выходной\] `Index`  
- Загруженный с позиции разряда первый значащий разряд \(1\) найден.  
+#### <a name="parameters"></a>Параметры  
+ [выходной] `Index`  
+ Загруженный с позиции разряда первый значащий разряд (1) найден.  
   
- \[in\] `Mask`  
- 32\-разрядное или 64\-разрядное значение для поиска.  
+ [in] `Mask`  
+ 32-разрядное или 64-разрядное значение для поиска.  
   
-## Возвращаемое значение  
+## <a name="return-value"></a>Возвращаемое значение  
  0, если маска равна нулю; ненулевое значение в противном случае.  
   
-## Заметки  
- Если найден значащий разряд, положение разряда первого найденного значащего разряда возвращается в качестве первого параметра.  Если значащий разряд не найден, возвращается 0; в противном случае возвращается 1.  
+## <a name="remarks"></a>Примечания  
+ Если найден значащий разряд, положение разряда первого найденного значащего разряда возвращается в качестве первого параметра. Если значащий разряд не найден, возвращается 0; в противном случае возвращается 1.  
   
-## Требования  
+## <a name="requirements"></a>Требования  
   
 |Встроенная функция|Архитектура|  
-|------------------------|-----------------|  
-|`_BitScanForward`|x86, ARM, [!INCLUDE[vcprx64](../Token/vcprx64_md.md)]|  
-|`_BitScanForward64`|ARM, [!INCLUDE[vcprx64](../Token/vcprx64_md.md)]|  
+|---------------|------------------|  
+|`_BitScanForward`|x86, ARM, [!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|  
+|`_BitScanForward64`|ARM,[!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|  
   
- **Файл заголовка** \<intrin.h\>  
+ **Файл заголовка** \<intrin.h >  
   
-## Пример  
+## <a name="example"></a>Пример  
   
 ```  
 // BitScanForward.cpp  
@@ -92,20 +99,20 @@ int main()
 }  
 ```  
   
-## Ввод  
+## <a name="input"></a>Ввод  
   
 ```  
 12  
 ```  
   
-## Пример результатов выполнения  
+## <a name="sample-output"></a>Пример результатов выполнения  
   
 ```  
 Enter a positive integer as the mask:   
 Mask: 12 Index: 2  
 ```  
   
-### Завершение блока, относящегося только к системам Майкрософт  
+**Завершение блока, относящегося только к системам Майкрософт**  
   
-## См. также  
- [Встроенные объекты компилятора](../intrinsics/compiler-intrinsics.md)
+## <a name="see-also"></a>См. также  
+ [Встроенные инструкции компилятора](../intrinsics/compiler-intrinsics.md)

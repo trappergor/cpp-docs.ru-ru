@@ -1,0 +1,48 @@
+---
+title: "Сокеты Windows: Преобразование строки | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- Windows Sockets [MFC], multibyte character string conversion
+- sockets [MFC], multibyte character string conversion issues
+- string conversion, multibyte character strings
+ms.assetid: 9df522b5-6b23-41e0-bb96-e4e623baf141
+caps.latest.revision: "11"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 4b0b66cb83dc13f74e5417cab7f8cec0fe65b73a
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/24/2017
+---
+# <a name="windows-sockets-converting-strings"></a>Сокеты Windows. Преобразование строк
+В этой статье и в двух статей дополнительное приведены некоторые проблемы в программировании Windows Sockets. В этой статье рассматриваются преобразования строк. Другие проблемы рассматриваются в [Windows Sockets: блокирование](../mfc/windows-sockets-blocking.md) и [Windows Sockets: порядок байтов](../mfc/windows-sockets-byte-ordering.md).  
+  
+ Если вы используете или являются производными от класса [CAsyncSocket](../mfc/reference/casyncsocket-class.md), потребуется самостоятельно управлять эти проблемы. Если вы используете или являются производными от класса [CSocket](../mfc/reference/csocket-class.md), MFC автоматически управляет ими.  
+  
+## <a name="converting-strings"></a>Преобразование строк  
+ При обмене данными между приложениями, использующими строк, которые хранятся в различных форматах расширенных символов, таких как Юникода и многобайтовой кодировки (MBCS) или от одного из этих и приложения с помощью строки символов ANSI, необходимо управлять преобразования самостоятельно под `CAsyncSocket`. `CArchive` Объект, используемый с `CSocket` управляет такое преобразование через возможности класса [CString](../atl-mfc-shared/reference/cstringt-class.md). Дополнительные сведения см. в спецификации Windows Sockets, расположенный в Windows SDK.  
+  
+ Дополнительные сведения:  
+  
+-   [Сокеты Windows. Использование класса CAsyncSocket](../mfc/windows-sockets-using-class-casyncsocket.md)  
+  
+-   [Сокеты Windows. Использование сокетов с архивами](../mfc/windows-sockets-using-sockets-with-archives.md)  
+  
+-   [Сокеты Windows. Фон](../mfc/windows-sockets-background.md)  
+  
+-   [Сокеты Windows. Сокеты потоков](../mfc/windows-sockets-stream-sockets.md)  
+  
+-   [Сокеты Windows. Сокеты датаграмм](../mfc/windows-sockets-datagram-sockets.md)  
+  
+## <a name="see-also"></a>См. также  
+ [Сокеты Windows в MFC](../mfc/windows-sockets-in-mfc.md)
+

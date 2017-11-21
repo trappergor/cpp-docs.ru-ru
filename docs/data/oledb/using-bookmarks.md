@@ -1,31 +1,31 @@
 ---
-title: "Использование закладок | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "закладки, OLE DB"
-  - "шаблоны поставщика OLE DB, закладки"
-  - "поставщики OLE DB, поддержка закладок"
-  - "наборы строк, закладки"
+title: "С помощью закладок | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- rowsets, bookmarks
+- OLE DB provider templates, bookmarks
+- bookmarks, OLE DB
+- OLE DB providers, bookmark support
 ms.assetid: 7fa1d1a8-5063-4aa9-93ee-815bb9c98fae
-caps.latest.revision: 7
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 4b7c5c1a7722e378e313e1b0fe8e9ed10d97ddb9
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/24/2017
 ---
-# Использование закладок
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Перед открытием набора строк сообщите поставщику про намерение использовать закладки.  Чтобы выполнить это действие, присвойте свойству **DBPROP\_BOOKMARKS** набора свойств значение **true**.  Поставщик извлекает закладки как нулевой столбец, поэтому можно использовать особый макрос `BOOKMARK_ENTRY` и класс `CBookmark`, если используется статический метод доступа.  `CBookmark` является классом шаблона, в котором аргумент является длиной буфера закладок \(в байтах\).  Длина буфера, необходимая для закладки, зависит от типа поставщика.  При использовании поставщика OLE DB ODBC в соответствии со следующим примером, длина буфера должна составлять 4 байта.  
+# <a name="using-bookmarks"></a>Использование закладок
+Перед открытием набора строк необходимо указать поставщику, что вы хотите использовать закладки. Чтобы сделать это, задайте **DBPROP_BOOKMARKS** свойства **true** в свойство. Поставщик извлекает закладки как нулевой столбец, поэтому необходимо использовать специальный макрос `BOOKMARK_ENTRY` и `CBookmark` класса при использовании статического доступа. `CBookmark`— Это класс шаблона, где аргумент имеет длину в байтах буфера закладки. Длина буфера, необходимая для закладки зависит от поставщика. При использовании поставщика OLE DB для ODBC, как показано в следующем примере размер буфера должен быть 4 байта.  
   
 ```  
 class CProducts  
@@ -45,7 +45,7 @@ CTable<CAccessor<CProducts> > product;
 product.Open(session, "Products", &propset);  
 ```  
   
- При использовании `CDynamicAccessor`, буфер динамически выделяется во время выполнения.  В этом случае используется особая версия `CBookmark`, в которой не требуется указывать длину буфера.  Используйте функцию `GetBookmark`, чтобы извлечь закладку из текущей записи, как показано в примере кода:  
+ Если вы используете `CDynamicAccessor`, буфер выделяется динамически во время выполнения. В этом случае можно использовать специализированную версию `CBookmark` для которого не указывать длину буфера. Используйте функцию `GetBookmark` для получения закладку из текущей записи, как показано в этом примере кода:  
   
 ```  
 CTable<CDynamicAccessor> product;  
@@ -58,7 +58,7 @@ product.MoveNext();
 product.GetBookmark(&bookmark);  
 ```  
   
- Дополнительные сведения о поддержке закладок в поставщиках см. в разделе [Поддержка поставщика для закладок](../../data/oledb/provider-support-for-bookmarks.md).  
+ Сведения о поддержке закладок в поставщиках см. в разделе [Поддержка закладок поставщиками](../../data/oledb/provider-support-for-bookmarks.md).  
   
-## См. также  
+## <a name="see-also"></a>См. также  
  [Использование методов доступа](../../data/oledb/using-accessors.md)

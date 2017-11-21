@@ -1,40 +1,40 @@
 ---
-title: "Получение уведомлений | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "события [C++], напоминания в OLE DB"
-  - "уведомления [C++], события"
-  - "уведомления [C++], потребители OLE DB"
-  - "потребители OLE DB, уведомления"
-  - "поставщики OLE DB, уведомления"
-  - "получение напоминаний в OLE DB"
-  - "наборы строк, уведомления о событиях"
+title: "Получение уведомлений | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- notifications [C++], OLE DB consumers
+- receiving notifications in OLE DB
+- events [C++], notifications in OLE DB
+- notifications [C++], events
+- OLE DB consumers, notifications
+- rowsets, event notifications
+- OLE DB providers, notifications
 ms.assetid: 305a1103-0c87-40c8-94bc-7fbbdd52ae32
-caps.latest.revision: 7
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: ed9c82d97a1d96777ae9b7e3c28b8ffa0de4507a
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/24/2017
 ---
-# Получение уведомлений
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-В OLE DB предусматриваются интерфейсы для получения уведомлений в случае возникновения событий.  Дополнительные сведения см. в разделе [Уведомления объектов OLE DB](https://msdn.microsoft.com/en-us/library/ms725406.aspx) в *справочнике программиста OLE DB*.  При настройке этих событий используется стандартный механизм точки подключения COM.  Например, для получения событий в объекте ATL посредством интерфейса `IRowsetNotify` следует реализовать интерфейс `IRowsetNotify`. Для этого добавьте интерфейс `IRowsetNotify` в список производных объектов класса и предоставьте его с помощью макроса **COM\_INTERFACE\_ENTRY**.  
+# <a name="receiving-notifications"></a>Получение уведомлений
+OLE DB предоставляет интерфейсы для получения уведомлений при возникновении событий. Они описаны в [уведомления объект OLE DB](https://msdn.microsoft.com/en-us/library/ms725406.aspx) в *Справочник программиста OLE DB*. Программа установки этих событий использует стандартный механизм COM точки подключения. Например, объект ATL, который хочет получить событий с помощью `IRowsetNotify` реализует `IRowsetNotify` интерфейс, добавив `IRowsetNotify` в списке производный класс и предоставляя его через **COM_INTERFACE_ENTRY** макрос.  
   
- В интерфейсе `IRowsetNotify` предусматривается три метода, которые вызываются в различных ситуациях.  Чтобы реагировать только на один из этих методов, используйте класс [IRowsetNotifyImpl](../Topic/IRowsetNotifyImpl%20Class.md), который возвращает значение **E\_NOTIMPL** для нужного метода.  
+ `IRowsetNotify`имеется три метода, которые могут быть вызваны в различные моменты времени. Если вы хотите ответить только один из этих методов, можно использовать [IRowsetNotifyImpl](../../data/oledb/irowsetnotifyimpl-class.md) класса, который возвращает **E_NOTIMPL** для методов, которые вас не интересуют.  
   
- При создании набора строк необходимо указать поставщику, что возвращаемый объект набора строк должен поддерживать интерфейс **IConnectionPointContainer**, который используется для настройки уведомлений.  
+ При создании набора строк необходимо указать поставщику нужных объектов возвращаемого набора строк для поддержки **IConnectionPointContainer**, который необходим для настройки уведомлений.  
   
- В следующем примере описывается порядок открытия набора строк из объекта ATL, а также настройка приемника уведомлений с помощью функции `AtlAdvise`.  Функция `AtlAdvise` возвращает файл cookie, который используется при вызове функции `AtlUnadvise`.  
+ Ниже показано, как открыть набор строк из объекта ATL и использовать `AtlAdvise` функции, чтобы настроить уведомления стока. `AtlAdvise`Возвращает объект cookie, который используется при вызове `AtlUnadvise`.  
   
 ```  
 CDBPropSet propset(DBPROPSET_ROWSET);  
@@ -45,5 +45,5 @@ product.Open(session, _T("Products"), &propset);
 AtlAdvise(product.m_spRowset, GetUnknown(), IID_IRowsetNotify, &m_dwCookie);  
 ```  
   
-## См. также  
+## <a name="see-also"></a>См. также  
  [Использование методов доступа](../../data/oledb/using-accessors.md)

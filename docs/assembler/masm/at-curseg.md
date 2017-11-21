@@ -1,33 +1,30 @@
 ---
-title: "@CurSeg | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "@CurSeg"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "@CurSeg symbol"
+title: "@CurSeg| Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: '@CurSeg'
+dev_langs: C++
+helpviewer_keywords: '@CurSeg symbol'
 ms.assetid: 8fbf90c1-7734-4113-9ba2-6ec664b3b59f
-caps.latest.revision: 6
-caps.handback.revision: 6
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
+caps.latest.revision: "6"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: ebfb7a90b46588685983d7b9f889568f3c31e76e
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/24/2017
 ---
-# @CurSeg
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Имя текущего сегмента \(макроса текста\).  
+# <a name="curseg"></a>@CurSeg
+Имя текущего сегмента (макрос текста).  
   
-## Синтаксис  
+## <a name="syntax"></a>Синтаксис  
   
 ```  
   
@@ -35,5 +32,5 @@ manager: "ghogen"
   
 ```  
   
-## См. также  
- [Symbols Reference](../../assembler/masm/symbols-reference.md)
+## <a name="see-also"></a>См. также  
+ [Справочник по символам](../../assembler/masm/symbols-reference.md)

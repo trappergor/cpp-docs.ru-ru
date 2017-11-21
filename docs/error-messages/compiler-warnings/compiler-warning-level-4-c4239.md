@@ -1,34 +1,32 @@
 ---
-title: "Предупреждение компилятора (уровень 4) C4239 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C4239"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C4239"
+title: "Предупреждение (уровень 4) C4239 компилятора | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords: C4239
+dev_langs: C++
+helpviewer_keywords: C4239
 ms.assetid: a23dc16a-649e-4870-9a24-275de1584fcd
-caps.latest.revision: 10
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 10
+caps.latest.revision: "10"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: ac667ac760e9dbee33da7beb2abcaf3a00e0edbc
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/24/2017
 ---
-# Предупреждение компилятора (уровень 4) C4239
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-нестандартное расширение: token: преобразование "type" в "type"  
+# <a name="compiler-warning-level-4-c4239"></a>Предупреждение компилятора (уровень 4) C4239
+использовано нестандартное расширение: «токен»: преобразование из «тип» в «тип»  
   
- Данный тип преобразования не допускается стандартом C\+\+, однако в данном случае разрешается в качестве расширения.  После этого предупреждения следует как минимум одна строка с описанием нарушенного правила языка.  
+ Это преобразование типа не допускается стандартом C++, но разрешается здесь в качестве расширения. Это предупреждение всегда следует хотя бы одна строка с описанием нарушенного правила языка.  
   
-## Пример  
+## <a name="example"></a>Пример  
  Следующий пример приводит к возникновению ошибки C4239.  
   
 ```  
@@ -45,8 +43,8 @@ void func(void) {
 }  
 ```  
   
-## Пример  
- Преобразование целочисленного типа в перечисляемый тип не является безусловно разрешенным.  
+## <a name="example"></a>Пример  
+ Преобразование целочисленного типа в перечисляемый тип строго не допускается.  
   
  Следующий пример приводит к возникновению ошибки C4239.  
   

@@ -1,32 +1,30 @@
 ---
-title: "Предупреждение компилятора (уровень 1) C4667 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C4667"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C4667"
+title: "Предупреждение (уровень 1) C4667 компилятора | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords: C4667
+dev_langs: C++
+helpviewer_keywords: C4667
 ms.assetid: 5d2b7fe0-4f0e-4cd6-b432-ca02c3d194ab
-caps.latest.revision: 6
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 6
+caps.latest.revision: "6"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: 1fd488cc755bf805ec9af469cabab77108565f37
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/24/2017
 ---
-# Предупреждение компилятора (уровень 1) C4667
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-"функция": не определено ни одной функции\-шаблона, которая бы соответствовала принудительному созданию экземпляра  
+# <a name="compiler-warning-level-1-c4667"></a>Предупреждение компилятора (уровень 1) C4667
+«функция»: функция шаблон не определен, соответствующий принудительному созданию экземпляра  
   
- Нельзя создать экземпляр необъявленного шаблона функции.  
+ Не удается создать экземпляр шаблона функции, который не был объявлен.  
   
  Следующий пример вызывает ошибку C4667:  
   
@@ -37,7 +35,7 @@ template
 void max(const int &, const int &); // C4667 expected  
 ```  
   
- Чтобы разрешить данное предупреждение, следует сначала объявить шаблон функции:  
+ Чтобы избежать этого предупреждения, необходимо сначала объявите шаблон функции:  
   
 ```  
 // C4667b.cpp  

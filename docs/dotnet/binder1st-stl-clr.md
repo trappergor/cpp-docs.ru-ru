@@ -1,32 +1,30 @@
 ---
-title: "binder1st (STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::binder1st"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "binder1st - функция [STL/CLR]"
+title: "binder1st (STL/CLR) | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::binder1st
+dev_langs: C++
+helpviewer_keywords: binder1st function [STL/CLR]
 ms.assetid: a989c9cc-a485-45d9-bd19-519018e6974b
-caps.latest.revision: 18
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 16
+caps.latest.revision: "18"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: ae786f50700d59c5f4a24ed0ec7de1c11718f352
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/24/2017
 ---
-# binder1st (STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Описание класса шаблона функтором от аргумента, при вызове возвращает его, хранящихся функтором 2 — аргумента, называемое со своим первым аргументом, хранящихся и предоставить вторым аргументом.  Он используется определяется объект функции с точки зрения его, хранящихся функтором.  
+# <a name="binder1st-stlclr"></a>binder1st (STL/CLR)
+Класс шаблона описывает функтор один аргумент, при вызове возвращает его хранимой двумя аргументами функтор вызывается хранимой первым аргументом и предоставленного второго аргумента. Она используется укажите объект функции, с точки зрения его хранимых функтор.  
   
-## Синтаксис  
+## <a name="syntax"></a>Синтаксис  
   
 ```  
 template<typename Fun>  
@@ -49,35 +47,35 @@ public:
     };  
 ```  
   
-#### Параметры  
- Функции  
- Тип, хранящихся функтором.  
+#### <a name="parameters"></a>Параметры  
+ Fun  
+ Тип хранимой функтора.  
   
-## Функции\-члены  
+## <a name="member-functions"></a>Функции-члены  
   
 |Определение типа|Описание|  
-|----------------------|--------------|  
-|delegate\_type|Тип универсального метод\-делегата.|  
-|first\_argument\_type|Тип первого аргумента функтором.|  
-|result\_type|Тип результата функтором.|  
-|second\_argument\_type|Тип второго аргумента функтором.|  
-|stored\_function\_type|Тип функтором.|  
+|---------------------|-----------------|  
+|delegate_type|Тип универсального метода-делегата.|  
+|first_argument_type|Тип первого аргумента функтор.|  
+|result_type|Тип результата функтор.|  
+|second_argument_type|Тип второго аргумента функтор.|  
+|stored_function_type|Тип функтора.|  
   
 |Член|Описание|  
-|----------|--------------|  
-|binder1st|Построение функтором.|  
+|------------|-----------------|  
+|binder1st|Создает функтор.|  
   
 |Оператор|Описание|  
-|--------------|--------------|  
-|operator\(\)|Вычисляет нужную функцию.|  
-|оператор delegate\_type^\(\)|Возвращает функтором делегату.|  
+|--------------|-----------------|  
+|operator()|Вычисляет нужной функции.|  
+|оператор delegate_type^()|Приводит функтора к делегату.|  
   
-## Заметки  
- Описание класса шаблона функтором от аргумента, хранящий функтором 2 — два аргумента, первый аргумент.  Он определяет оператор `operator()` члена, что, когда объект вызывается как функция возвращается результат вызова, хранящихся функтором с предоставленным аргументом хранят первым и вторым аргументом.  
+## <a name="remarks"></a>Примечания  
+ Класс шаблона описывает функтор один аргумент, который хранит функтор два аргумента и первый аргумент. Он определяет оператор-член `operator()` , чтобы при вызове объекта как функцию, он возвращает результат вызова хранимых функтор хранимых первого аргумента и предоставленного второго аргумента.  
   
- Можно также передать объект в качестве аргумента функции, тип которого `delegate_type^` и он будет преобразован соответствующим образом.  
+ Объект также можно передать в качестве аргумента функции, тип которого является `delegate_type^` и он будет преобразован соответствующим образом.  
   
-## Пример  
+## <a name="example"></a>Пример  
   
 ```  
 // cliext_binder1st.cpp   
@@ -120,13 +118,16 @@ int main()
   
 ```  
   
-  **4 3**  
- **\-1 0**  
- **\-1 0**   
-## Требования  
- **Заголовок:**\<cliext\/functional\>  
+```Output  
+4 3  
+-1 0  
+-1 0  
+```  
+  
+## <a name="requirements"></a>Требования  
+ **Заголовок:** \<cliext и функционального >  
   
  **Пространство имен:** cliext  
   
-## См. также  
- [bind1st](../dotnet/bind1st-stl-clr.md)
+## <a name="see-also"></a>См. также  
+ [bind1st (STL/CLR)](../dotnet/bind1st-stl-clr.md)

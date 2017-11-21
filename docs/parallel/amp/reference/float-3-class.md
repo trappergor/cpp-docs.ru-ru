@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-windows
+ms.technology: cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -78,35 +77,18 @@ f1_keywords:
 - amp_short_vectors/Concurrency::graphics::float_3::gbr
 - amp_short_vectors/Concurrency::graphics::float_3::operator*=
 - amp_short_vectors/Concurrency::graphics::float_3::get_xy
-dev_langs:
-- C++
-helpviewer_keywords:
-- amp_short_vectors/Concurrency::graphics::float_3
+dev_langs: C++
+helpviewer_keywords: amp_short_vectors/Concurrency::graphics::float_3
 ms.assetid: 209df7a5-08d7-48b4-8ba5-77603642cdd8
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 5faef5bd1be6cc02d6614a6f6193c74167a8ff23
-ms.openlocfilehash: 2cd5e44d60ce02a1acf781812a0cc72e1e7657cf
-ms.contentlocale: ru-ru
-ms.lasthandoff: 03/17/2017
-
+ms.openlocfilehash: 713f3545ea2604db1313abab729ec726cce3cd75
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="float3-class"></a>Класс float_3
 Представляет короткий вектор из трех значений с плавающей запятой.  
@@ -290,7 +272,7 @@ explicit inline float_3(
  Значение для инициализации элемента 0.  
   
  `_V1`  
- Значение для инициализации элемент 1.  
+ Значение для инициализации элемента 1.  
   
  `_V2`  
  Значение для инициализации элемента 2.  
@@ -309,4 +291,3 @@ static const int size = 3;
   
 ## <a name="see-also"></a>См. также  
  [Пространство имен Concurrency::graphics](concurrency-graphics-namespace.md)
-

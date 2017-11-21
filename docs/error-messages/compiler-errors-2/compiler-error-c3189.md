@@ -1,32 +1,30 @@
 ---
-title: "Ошибка компилятора C3189 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C3189"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C3189"
+title: "Ошибка компилятора C3189 | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords: C3189
+dev_langs: C++
+helpviewer_keywords: C3189
 ms.assetid: b254de79-931e-4a59-a9f4-1c690d90ca5e
-caps.latest.revision: 9
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 9
+caps.latest.revision: "9"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: ad89c163dfaaa4eaa3a0304160c403977700fe95
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/24/2017
 ---
-# Ошибка компилятора C3189
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-идентификатор\<type abstract declarator\>': ' этот синтаксис больше не поддерживается, ::typeid вместо использования  
+# <a name="compiler-error-c3189"></a>Ошибка компилятора C3189
+' typeid\<введите абстрактный декларатор > ": этот синтаксис больше не поддерживается, используйте:: typeid вместо  
   
- Была использована устаревшая форма [typeid](../Topic/typeid%20%20\(C++%20Component%20Extensions\).md), используйте новую форму.  
+ Устаревшая форма [typeid](../../windows/typeid-cpp-component-extensions.md) было использовать, используйте новую форму.  
   
  Следующий пример приводит к возникновению ошибки C3189:  
   

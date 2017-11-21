@@ -1,47 +1,46 @@
 ---
-title: "Страница свойств управляемых ресурсов | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "VC.Project.VCManagedResourceCompilerTool.ResourceFileName"
-  - "VC.Project.VCManagedResourceCompilerTool.OutputFileName"
-  - "VC.Project.VCManagedResourceCompilerTool.DefaultLocalizedResources"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "страница свойств управляемых ресурсов"
+title: "Страница свойств ресурсов управляемых | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-ide
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- VC.Project.VCManagedResourceCompilerTool.ResourceFileName
+- VC.Project.VCManagedResourceCompilerTool.OutputFileName
+- VC.Project.VCManagedResourceCompilerTool.DefaultLocalizedResources
+dev_langs: C++
+helpviewer_keywords: Managed Resources property page
 ms.assetid: 80b80384-ee55-494d-9f0e-907bb98cfc19
-caps.latest.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 9
+caps.latest.revision: "9"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 9efcebf81ec98d32a22fa406e9dd42a0d12dc883
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/24/2017
 ---
-# Страница свойств управляемых ресурсов
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Включает параметры компилятора ресурсов.  
+# <a name="managed-resources-property-page"></a>страница свойств управляемых ресурсов
+Включает параметры для компилятора ресурсов.  
   
- Страница свойств **Управляемые ресурсы** содержит следующие свойства:  
+ **Управляемых ресурсов** страница свойств содержит следующие свойства:  
   
  **Логическое имя ресурса**  
- Задает *логическое имя* созданного промежуточного файла ресурсов \(с расширением RESOURCES\).  Логическое имя — это имя, используемое для загрузки ресурса.  Если логическое имя не указано, то в качестве логического имени используется имя файла ресурсов \(с расширением RESX\).  
+ Указывает *логическое имя* созданный промежуточного RESOURCES-файла. Логическое имя имеет имя, используемое для загрузки ресурса. Если логическое имя не указано, имя файла ресурсов (RESX) используется как логическое имя.  
   
  **Имя выходного файла**  
- Указывает имя окончательного выходного файла, в создании которого принимает участие файл ресурсов \(с расширением RESX\).  
+ Указывает имя окончательного выходного файла, файла ресурсов (RESX).  
   
- **Локализованные ресурсы по умолчанию**  
- Указывает, относится ли заданный RESX\-файл к ресурсам по умолчанию или к вспомогательной библиотеке DLL.  
+ **По умолчанию локализованные ресурсы**  
+ Указывает, участвует ли заданный RESX-файл в ресурсы по умолчанию или к вспомогательной библиотеке DLL.  
   
- Дополнительные сведения о доступе к страницы свойств **Управляемые ресурсы** см. в разделе [Практическое руководство. Задание свойств проекта при помощи страниц свойств](../Topic/How%20to:%20Specify%20Project%20Properties%20with%20Property%20Pages.md).  
+ Сведения о доступе к **управляемых ресурсов** страницу свойств в разделе [работа со свойствами проекта](../ide/working-with-project-properties.md).  
   
-## См. также  
- [Using RC \(The RC Command Line\)](http://msdn.microsoft.com/library/windows/desktop/aa381055)   
+## <a name="see-also"></a>См. также  
+ [С помощью версии-Кандидата (RC командной строки)](http://msdn.microsoft.com/library/windows/desktop/aa381055)   
  [Страницы свойств](../ide/property-pages-visual-cpp.md)   
- [\/ASSEMBLYRESOURCE \(внедрение управляемого ресурса\)](../build/reference/assemblyresource-embed-a-managed-resource.md)
+ [/ ASSEMBLYRESOURCE (внедрение управляемого ресурса)](../build/reference/assemblyresource-embed-a-managed-resource.md)

@@ -1,41 +1,39 @@
 ---
-title: "vector::push_back (STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::vector::push_back"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "push_back - член [STL/CLR]"
+title: "Vector::push_back (STL/CLR) | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::vector::push_back
+dev_langs: C++
+helpviewer_keywords: push_back member [STL/CLR]
 ms.assetid: 4a4c302b-e29f-4b68-b759-2f831814d896
-caps.latest.revision: 14
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 12
+caps.latest.revision: "14"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 15543574c29cea7bab8e99cc2e96d891c03c1282
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/24/2017
 ---
-# vector::push_back (STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="vectorpushback-stlclr"></a>vector::push_back (STL/CLR)
 Добавляет новый последний элемент.  
   
-## Синтаксис  
+## <a name="syntax"></a>Синтаксис  
   
 ```  
 void push_back(value_type val);  
 ```  
   
-## Заметки  
- Функция\-член вставляет элемент со значением `val` в конце контролируемой последовательности.  Он используется для добавления другого элемента в вектору.  
+## <a name="remarks"></a>Примечания  
+ Функция-член вставляет элемент со значением `val` на конец управляемой последовательности. Используется для добавления другого элемента в вектор.  
   
-## Пример  
+## <a name="example"></a>Пример  
   
 ```  
 // cliext_vector_push_back.cpp   
@@ -58,12 +56,15 @@ int main()
   
 ```  
   
-  **a b c**   
-## Требования  
- **Заголовок:**\<cliext\/vector\>  
+```Output  
+a b c  
+```  
+  
+## <a name="requirements"></a>Требования  
+ **Заголовок:** \<cliext/vector >  
   
  **Пространство имен:** cliext  
   
-## См. также  
- [вектор](../dotnet/vector-stl-clr.md)   
- [vector::pop\_back](../Topic/vector::pop_back%20\(STL-CLR\).md)
+## <a name="see-also"></a>См. также  
+ [вектор (STL/CLR)](../dotnet/vector-stl-clr.md)   
+ [vector::pop_back (STL/CLR)](../dotnet/vector-pop-back-stl-clr.md)

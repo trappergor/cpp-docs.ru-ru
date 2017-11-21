@@ -1,32 +1,30 @@
 ---
-title: "SCHEMA_ENTRY | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "SCHEMA_ENTRY"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "SCHEMA_ENTRY - макрос"
+title: "SCHEMA_ENTRY | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: SCHEMA_ENTRY
+dev_langs: C++
+helpviewer_keywords: SCHEMA_ENTRY macro
 ms.assetid: e8bee479-80f3-417e-8f41-cdaddd49690c
-caps.latest.revision: 8
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 0919f2ba6474633d98c73cde758dbe6c81549f4f
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/24/2017
 ---
-# SCHEMA_ENTRY
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="schemaentry"></a>SCHEMA_ENTRY
 Связывает GUID с классом.  
   
-## Синтаксис  
+## <a name="syntax"></a>Синтаксис  
   
 ```  
   
@@ -36,34 +34,37 @@ caps.handback.revision: 8
 );   
 ```  
   
-#### Параметры  
+#### <a name="parameters"></a>Параметры  
  `guid`  
- Набор строк схемы GUID.  В разделе [IDBSchemaRowset](https://msdn.microsoft.com/en-us/library/ms713686.aspx) справочника *программиста OLE DB* список наборов строк схемы и их GUID.  
+ GUID набора строк схемы. В разделе [IDBSchemaRowset](https://msdn.microsoft.com/en-us/library/ms713686.aspx) в *Справочник программиста OLE DB* список наборов строк схемы и их идентификаторы GUID.  
   
  *rowsetClass*  
  Класс, который будет создан для представления набора строк схемы.  
   
-## Заметки  
- [IDBSchemaRowsetImpl](../../data/oledb/idbschemarowsetimpl-class.md) можно затем запрос сопоставление для списка GUID, он может создать набор строк, если ему присваивается идентификатор GUID.  Набор строк схемы `IDBSchemaRowsetImpl` создает аналогичен стандартному `CRowsetImpl`\- производного класса, за исключением того, что он должен предоставить метод **Выполнить**, который имеет следующую сигнатуру:  
+## <a name="remarks"></a>Примечания  
+ [IDBSchemaRowsetImpl](../../data/oledb/idbschemarowsetimpl-class.md) можно затем запрос карты список идентификаторов GUID, или его можно создать набор строк, если ему присваивается идентификатор GUID. Набор строк схемы `IDBSchemaRowsetImpl` создает аналогична стандартной `CRowsetImpl`-производного класса, за исключением того, он должен предоставлять **Execute** метод, который имеет следующую сигнатуру:  
   
- `HRESULT Execute (LONG* pcRowsAffected, ULONG cRestrictions,`  
+```  
+HRESULT Execute (
+    LONG* pcRowsAffected,  
+    ULONG cRestrictions,  
+    const VARIANT* rgRestrictions);  
+```  
   
- `const VARIANT* rgRestrictions)`  
-  
- Эта функция **Выполнить** заполняет данные набора строк.  Мастер проекта библиотеки ATL создает, как описано в разделе [IDBSchemaRowset](https://msdn.microsoft.com/en-us/library/ms713686.aspx) в *справочнике программиста OLE DB*, 3 начальных наборов строк схемы в проекте для каждой из 3 необходимых схем OLE DB:  
+ Это **Execute** функция заполняет данными набора строк. Создает мастер проектов ATL, как описано в [IDBSchemaRowset](https://msdn.microsoft.com/en-us/library/ms713686.aspx) в *Справочник программиста OLE DB*, три начальный наборов строк схемы в проекте для каждого из трех обязательной схемы OLE DB:  
   
 -   `DBSCHEMA_TABLES`  
   
--   **DBSCHEMA\_COLUMNS**  
+-   **DBSCHEMA_COLUMNS**  
   
--   **DBSCHEMA\_PROVIDER\_TYPES**  
+-   **DBSCHEMA_PROVIDER_TYPES**  
   
- Мастер также добавляет 3 соответствующей записи в сопоставлении схемы.  Дополнительные сведения см. в разделе [Создание шаблона поставщика OLE DB](../../data/oledb/creating-an-ole-db-provider.md) об использовании мастера для создания поставщика.  
+ Мастер также добавляет три соответствующие записи в карте схемы. В разделе [Создание поставщика OLE DB шаблона](../../data/oledb/creating-an-ole-db-provider.md) Дополнительные сведения об использовании мастера для создания поставщика.  
   
-## Требования  
- **Header:** atldb.h  
+## <a name="requirements"></a>Требования  
+ **Заголовок:** atldb.h  
   
-## См. также  
+## <a name="see-also"></a>См. также  
  [Макросы для шаблонов поставщика OLE DB](../../data/oledb/macros-for-ole-db-provider-templates.md)   
- [BEGIN\_SCHEMA\_MAP](../../data/oledb/begin-schema-map.md)   
- [END\_SCHEMA\_MAP](../../data/oledb/end-schema-map.md)
+ [BEGIN_SCHEMA_MAP](../../data/oledb/begin-schema-map.md)   
+ [END_SCHEMA_MAP](../../data/oledb/end-schema-map.md)

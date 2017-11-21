@@ -1,34 +1,32 @@
 ---
-title: "Предупреждение компилятора (уровень 4) C4268 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C4268"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C4268"
+title: "Предупреждение (уровень 4) C4268 компилятора | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords: C4268
+dev_langs: C++
+helpviewer_keywords: C4268
 ms.assetid: d0511e80-904f-4ee1-b4d7-39b5c0bd8234
-caps.latest.revision: 6
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 6
+caps.latest.revision: "6"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: ef285e3c093dec39c181e92071fd7b16161d4377
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/24/2017
 ---
-# Предупреждение компилятора (уровень 4) C4268
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-"идентификатор": статические \(глобальные\) "const"\-данные, инициализированные конструктором по умолчанию, который был создан компилятором, заполняют объект нулями  
+# <a name="compiler-warning-level-4-c4268"></a>Предупреждение компилятора (уровень 4) C4268
+«Идентификатор»: «const» глобальные и статические данные, инициализированные конструктором по умолчанию, создаваемый компилятором заполняет объект нулями  
   
- Статические или глобальные экземпляры **const** нетривиального класса инициализированы конструктором по умолчанию, созданным компилятором.  
+ Объект **const** глобальная или статическая экземпляры нетривиального класса инициализированы конструктором по умолчанию, созданный компилятором.  
   
-## Пример  
+## <a name="example"></a>Пример  
   
 ```  
 // C4268.cpp  
@@ -41,4 +39,4 @@ public:
 const X x1;   // C4268  
 ```  
   
- Так как этот образец класса является переменной **const**, значение `m_data` не может быть изменено.
+ Как этот экземпляр класса **const**, значение `m_data` не может быть изменено.

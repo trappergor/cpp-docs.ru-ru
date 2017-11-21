@@ -1,32 +1,30 @@
 ---
-title: "omp_init_lock | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "omp_init_lock"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "omp_init_lock OpenMP function"
+title: "omp_init_lock | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: omp_init_lock
+dev_langs: C++
+helpviewer_keywords: omp_init_lock OpenMP function
 ms.assetid: 7a65e3e2-2e31-4645-964c-c1e82e2a4d0e
-caps.latest.revision: 15
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 15
+caps.latest.revision: "15"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 30ced1bc649a8a6caed1cef4c77967abdd1e1868
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/24/2017
 ---
-# omp_init_lock
-[!INCLUDE[vs2017banner](../../../assembler/inline/includes/vs2017banner.md)]
-
-Инициализирует простая блокировка.  
+# <a name="ompinitlock"></a>omp_init_lock
+Инициализирует простые блокировки.  
   
-## Синтаксис  
+## <a name="syntax"></a>Синтаксис  
   
 ```  
 void omp_init_lock(  
@@ -34,14 +32,14 @@ void omp_init_lock(
 );  
 ```  
   
-#### Параметры  
+#### <a name="parameters"></a>Параметры  
  `lock`  
- Переменная типа omp\_lock\_t.  
+ Переменная типа [omp_lock_t](../../../parallel/openmp/reference/omp-lock-t.md).  
   
-## Заметки  
- Дополнительные сведения см. в разделе [3.2.1 omp\_init\_lock and omp\_init\_nest\_lock Functions](../../../parallel/openmp/3-2-1-omp-init-lock-and-omp-init-nest-lock-functions.md).  
+## <a name="remarks"></a>Примечания  
+ Дополнительные сведения см. в разделе [3.2.1 функции omp_init_lock and omp_init_nest_lock](../../../parallel/openmp/3-2-1-omp-init-lock-and-omp-init-nest-lock-functions.md).  
   
-## Пример  
+## <a name="example"></a>Пример  
   
 ```  
 // omp_init_lock.cpp  
@@ -71,45 +69,48 @@ int main() {
 }  
 ```  
   
-  **0 \- Запуск блокированных поток области**  
-**0 \- Область поток блокированных окончания**  
-**0 \- Запуск блокированных поток области**  
-**0 \- Область поток блокированных окончания**  
-**0 \- Запуск блокированных поток области**  
-**0 \- Область поток блокированных окончания**  
-**0 \- Запуск блокированных поток области**  
-**0 \- Область поток блокированных окончания**  
-**0 \- Запуск блокированных поток области**  
-**0 \- Область поток блокированных окончания**  
-**1 \- Запуск блокированных поток области**  
-**1 \- Область поток блокированных окончания**  
-**1 \- Запуск блокированных поток области**  
-**1 \- Область поток блокированных окончания**  
-**1 \- Запуск блокированных поток области**  
-**1 \- Область поток блокированных окончания**  
-**1 \- Запуск блокированных поток области**  
-**1 \- Область поток блокированных окончания**  
-**1 \- Запуск блокированных поток области**  
-**1 \- Область поток блокированных окончания**  
-**2 \- Запуск блокированных поток области**  
-**2 \- Область поток блокированных окончания**  
-**2 \- Запуск блокированных поток области**  
-**2 \- Область поток блокированных окончания**  
-**2 \- Запуск блокированных поток области**  
-**2 \- Область поток блокированных окончания**  
-**2 \- Запуск блокированных поток области**  
-**2 \- Область поток блокированных окончания**  
-**2 \- Запуск блокированных поток области**  
-**2 \- Область поток блокированных окончания**  
-**3 \- Запуск блокированных поток области**  
-**3 \- Область поток блокированных окончания**  
-**3 \- Запуск блокированных поток области**  
-**3 \- Область поток блокированных окончания**  
-**3 \- Запуск блокированных поток области**  
-**3 \- Область поток блокированных окончания**  
-**3 \- Запуск блокированных поток области**  
-**3 \- Область поток блокированных окончания**  
-**3 \- Запуск блокированных поток области**  
-**3 \- Область поток блокированных окончания**   
-## См. также  
- [Functions](../../../parallel/openmp/reference/openmp-functions.md)
+```Output  
+Thread 0 - starting locked region  
+Thread 0 - ending locked region  
+Thread 0 - starting locked region  
+Thread 0 - ending locked region  
+Thread 0 - starting locked region  
+Thread 0 - ending locked region  
+Thread 0 - starting locked region  
+Thread 0 - ending locked region  
+Thread 0 - starting locked region  
+Thread 0 - ending locked region  
+Thread 1 - starting locked region  
+Thread 1 - ending locked region  
+Thread 1 - starting locked region  
+Thread 1 - ending locked region  
+Thread 1 - starting locked region  
+Thread 1 - ending locked region  
+Thread 1 - starting locked region  
+Thread 1 - ending locked region  
+Thread 1 - starting locked region  
+Thread 1 - ending locked region  
+Thread 2 - starting locked region  
+Thread 2 - ending locked region  
+Thread 2 - starting locked region  
+Thread 2 - ending locked region  
+Thread 2 - starting locked region  
+Thread 2 - ending locked region  
+Thread 2 - starting locked region  
+Thread 2 - ending locked region  
+Thread 2 - starting locked region  
+Thread 2 - ending locked region  
+Thread 3 - starting locked region  
+Thread 3 - ending locked region  
+Thread 3 - starting locked region  
+Thread 3 - ending locked region  
+Thread 3 - starting locked region  
+Thread 3 - ending locked region  
+Thread 3 - starting locked region  
+Thread 3 - ending locked region  
+Thread 3 - starting locked region  
+Thread 3 - ending locked region  
+```  
+  
+## <a name="see-also"></a>См. также  
+ [Функции](../../../parallel/openmp/reference/openmp-functions.md)

@@ -1,34 +1,33 @@
 ---
-title: "Практическое руководство. Применение ключевого слова C# &quot;lock&quot; (C++/CLI) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "get-started-article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "lock - ключевое слово C# [C++]"
-  - "lock - оператор"
+title: "Как: применение ключевого слова C# lock (C + +/ CLI) | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: get-started-article
+dev_langs: C++
+helpviewer_keywords:
+- lock statement
+- lock C# keyword [C++]
 ms.assetid: 436fe544-ffb7-49b9-9798-90794e9974de
-caps.latest.revision: 12
-caps.handback.revision: 12
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "12"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 8f126968805e38d1435f4f24862183f84d089b36
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/24/2017
 ---
-# Практическое руководство. Применение ключевого слова C# &quot;lock&quot; (C++/CLI)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-В данном разделе рассматриваются способы использования ключевого слова C\# `lock` в Visual C\+\+.  Для получения дополнительной информации см. [Оператор lock](../Topic/lock%20Statement%20\(C%23%20Reference\).md).  
+# <a name="how-to-implement-the-lock-c-keyword-ccli"></a>Практическое руководство. Применение ключевого слова C# "lock" (C++/CLI)
+В этом разделе показано, как реализовать C# `lock` ключевого слова в Visual C++. 
   
- Также можно использовать класс `lock` в библиотеке поддержки C\+\+.  Дополнительные сведения см. в разделе [Синхронизация \(класс lock\)](../dotnet/synchronization-lock-class.md).  
+ Можно также использовать `lock` класса в библиотека поддержки C++. В разделе [синхронизация (класс lock)](../dotnet/synchronization-lock-class.md) для получения дополнительной информации.  
   
-## Пример  
+## <a name="example"></a>Пример  
   
 ```  
 // CS_lock_in_CPP.cpp  
@@ -65,5 +64,5 @@ int main()
 }  
 ```  
   
-## См. также  
- [Совместимость с другими языками .NET](../dotnet/interoperability-with-other-dotnet-languages-cpp-cli.md)
+## <a name="see-also"></a>См. также  
+ [Совместимость с другими языками .NET (C++/CLI)](../dotnet/interoperability-with-other-dotnet-languages-cpp-cli.md)

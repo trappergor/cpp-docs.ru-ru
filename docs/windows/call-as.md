@@ -1,32 +1,30 @@
 ---
-title: "call_as | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-f1_keywords: 
-  - "vc-attr.call_as"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "call_as attribute"
+title: "call_as | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+f1_keywords: vc-attr.call_as
+dev_langs: C++
+helpviewer_keywords: call_as attribute
 ms.assetid: a09d7f1f-353b-4870-9b45-f0284161695d
-caps.latest.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 10
+caps.latest.revision: "10"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 4ce0123f6f06d47d920ed55a1460944393960ff6
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/24/2017
 ---
-# call_as
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Включает файл a [Локальная](../windows/local-cpp.md) функция для сопоставления с удаленным функции, чтобы при вызове удаленной функции, локальная функция будет инициировано.  
+# <a name="callas"></a>call_as
+Включает [локального](../windows/local-cpp.md) функции для сопоставления удаленной функции так, что при вызове удаленной функции локальной функции.  
   
-## Синтаксис  
+## <a name="syntax"></a>Синтаксис  
   
 ```  
   
@@ -35,15 +33,15 @@ caps.handback.revision: 10
 ) ]  
 ```  
   
-#### Параметры  
- *функция*  
- Локальная функция, которую требуется вызываться, когда удаленная функция, вызываемая.  
+#### <a name="parameters"></a>Параметры  
+ *function*  
+ Локальная функция, которую требуется вызывать при вызове удаленной функции.  
   
-## Заметки  
- **call\_as** Атрибут C\+\+ имеет ту же функциональность, что и  [call\_as](http://msdn.microsoft.com/library/windows/desktop/aa366748) атрибут MIDL.  
+## <a name="remarks"></a>Примечания  
+ **Call_as** языка C++ имеет ту же функциональность, что [call_as](http://msdn.microsoft.com/library/windows/desktop/aa366748) языка MIDL.  
   
-## Пример  
- Следующий код показывает, как можно использовать **call\_as** функция сопоставления \(не поддерживающие удаленное взаимодействие**f1**для функции \(удаленное взаимодействие**Remf1**\):  
+## <a name="example"></a>Пример  
+ В следующем коде показано, как использовать **call_as** сопоставляется функции не поддерживающие удаленное взаимодействие (**f1**) функции удаленного взаимодействия (**Remf1**):  
   
 ```  
 // cpp_attr_ref_call_as.cpp  
@@ -57,21 +55,20 @@ __interface IMInterface {
 };  
 ```  
   
-## Требования  
+## <a name="requirements"></a>Требования  
   
-### Контекст атрибута  
+### <a name="attribute-context"></a>Контекст атрибута  
   
 |||  
 |-|-|  
 |**Применение**|Метод интерфейса|  
-|**Repeatable**|Нет|  
-|**Обязательные атрибуты**|None|  
-|**Недопустимые атрибуты**|None|  
+|**Повторяемый**|Нет|  
+|**Обязательные атрибуты**|Нет|  
+|**Недопустимые атрибуты**|Нет|  
   
- Дополнительные сведения о контекстах атрибута см. в разделе [Контексты атрибута](../windows/attribute-contexts.md).  
+ Дополнительные сведения о контекстах атрибутов см. в разделе [Контексты атрибутов](../windows/attribute-contexts.md).  
   
-## См. также  
- [IDL Attributes](../windows/idl-attributes.md)   
- [Method Attributes](../windows/method-attributes.md)   
- [local](../windows/local-cpp.md)   
- [Attributes Samples](http://msdn.microsoft.com/ru-ru/558ebdb2-082f-44dc-b442-d8d33bf7bdb8)
+## <a name="see-also"></a>См. также  
+ [Атрибуты IDL](../windows/idl-attributes.md)   
+ [Атрибуты метода](../windows/method-attributes.md)   
+ [локальные](../windows/local-cpp.md)   

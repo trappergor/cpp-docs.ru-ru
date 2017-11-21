@@ -1,27 +1,26 @@
 ---
-title: "A.13   Using the flush Directive with a List | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
+title: "Использование директивы очистки со списком а.13 | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
 ms.assetid: 6c9d0736-07c2-47b1-a216-5293f03b6397
-caps.latest.revision: 6
-caps.handback.revision: 6
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "6"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: fc10c427f92ed602975fdb56436911dafbd94532
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/24/2017
 ---
-# A.13   Using the flush Directive with a List
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Следующий пример использует `flush` директива для синхронизации " точка\-точка " конкретных объектов между парами потоков.  
+# <a name="a13---using-the-flush-directive-with-a-list"></a>A.13   Использование директивы flush со списком
+В следующем примере используется `flush` директив для синхронизации между узлами определенных объектов между парами потоков:  
   
 ```  
 int   sync[NUMBER_OF_THREADS];  

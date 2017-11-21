@@ -1,41 +1,39 @@
 ---
-title: "multimap::key_comp (STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::multimap::key_comp"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "key_comp - член [STL/CLR]"
+title: "multimap::key_comp (STL/CLR) | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::multimap::key_comp
+dev_langs: C++
+helpviewer_keywords: key_comp member [STL/CLR]
 ms.assetid: 05250549-d589-4e1d-8ae9-321ff4ad384b
-caps.latest.revision: 15
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 13
+caps.latest.revision: "15"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 949ae36cf90fbef3eab2060c6add796ef0f49916
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/24/2017
 ---
-# multimap::key_comp (STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Копирует порядок делегат для 2 ключей.  
+# <a name="multimapkeycomp-stlclr"></a>multimap::key_comp (STL/CLR)
+Копирует делегат упорядочения для двух ключей.  
   
-## Синтаксис  
+## <a name="syntax"></a>Синтаксис  
   
 ```  
 key_compare^key_comp();  
 ```  
   
-## Заметки  
- Возвращает порядок функцию\-член делегат, используемый для сортировки контролируемую последовательность.  Используется для сравнения двух ключей.  
+## <a name="remarks"></a>Примечания  
+ Функция-член возвращает упорядочивания делегат, используемый для упорядочения управляемой последовательности. Используется для сравнения двух ключей.  
   
-## Пример  
+## <a name="example"></a>Пример  
   
 ```  
 // cliext_multimap_key_comp.cpp   
@@ -71,18 +69,22 @@ int main()
   
 ```  
   
-  **сравнение \(L'a, L'а\) \= false**  
-**сравнение \(L'a, L'б\) \= true**  
-**сравнение \(L'b, L'а\) \= false**  
-**сравнение \(L'a, L'а\) \= false**  
-**сравнение \(L'a, L'б\) \= false**  
-**сравнение \(L'b, L'а\) \= true**   
-## Требования  
- **Заголовок:**\<cliext\/map\>  
+```Output  
+compare(L'a', L'a') = False  
+compare(L'a', L'b') = True  
+compare(L'b', L'a') = False  
+  
+compare(L'a', L'a') = False  
+compare(L'a', L'b') = False  
+compare(L'b', L'a') = True  
+```  
+  
+## <a name="requirements"></a>Требования  
+ **Заголовок:** \<cliext/map >  
   
  **Пространство имен:** cliext  
   
-## См. также  
- [multimap](../dotnet/multimap-stl-clr.md)   
- [multimap::key\_compare](../dotnet/multimap-key-compare-stl-clr.md)   
- [multimap::key\_type](../dotnet/multimap-key-type-stl-clr.md)
+## <a name="see-also"></a>См. также  
+ [несколько карт (STL/CLR)](../dotnet/multimap-stl-clr.md)   
+ [multimap::key_compare (STL/CLR)](../dotnet/multimap-key-compare-stl-clr.md)   
+ [multimap::key_type (STL/CLR)](../dotnet/multimap-key-type-stl-clr.md)

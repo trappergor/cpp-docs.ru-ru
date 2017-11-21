@@ -1,67 +1,72 @@
 ---
-title: "Практическое руководство. Предоставление рабочих функций классам call и transformer | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "класс call, пример"
-  - "использование класса transformer [среда выполнения с параллелизмом]"
-  - "использование класса call [среда выполнения с параллелизмом]"
+title: "Как: предоставление рабочих функций классам call и transformer | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- call class, example
+- using the transformer class [Concurrency Runtime]
+- using the call class [Concurrency Runtime]
 ms.assetid: df715ce4-8507-41ca-b204-636d11707a73
-caps.latest.revision: 15
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 12
+caps.latest.revision: "15"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: aafa676a1c6b885b303634c4fc31bcbfc1c6f0ab
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/24/2017
 ---
-# Практическое руководство. Предоставление рабочих функций классам call и transformer
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+# <a name="how-to-provide-work-functions-to-the-call-and-transformer-classes"></a>Практическое руководство. Предоставление рабочих функций классам call и transformer
+В этом разделе приводится несколько способов предоставления рабочих функций [concurrency::call](../../parallel/concrt/reference/call-class.md) и [concurrency::transformer](../../parallel/concrt/reference/transformer-class.md) классы.  
+  
+ Первый пример показывает, как передавать лямбда-выражение, `call` объекта. Во втором примере показано, как передать объект функции в `call` объекта. Третий пример показано, как привязать метод класса для `call` объекта.  
+  
+ Иллюстрации каждого примера в этом разделе используются `call` класса. Пример, использующий `transformer` см. в описании [как: использование преобразователя в конвейере данных](../../parallel/concrt/how-to-use-transformer-in-a-data-pipeline.md).  
+  
+## <a name="example"></a>Пример  
+ В следующем примере показано простой способ использования `call` класса. В этом примере передается лямбда-функцией для `call` конструктор.  
+  
+ [!code-cpp[concrt-call-lambda#1](../../parallel/concrt/codesnippet/cpp/how-to-provide-work-functions-to-the-call-and-transformer-classes_1.cpp)]  
+  
+ В этом примере формируются следующие данные:  
+  
+```Output  
+13 squared is 169.  
+```  
+  
+## <a name="example"></a>Пример  
+ Следующий пример похож на предыдущий, за исключением того, что он использует `call` класса вместе с объектом функции (функтор).  
+  
+ [!code-cpp[concrt-call-functor#1](../../parallel/concrt/codesnippet/cpp/how-to-provide-work-functions-to-the-call-and-transformer-classes_2.cpp)]  
+  
+## <a name="example"></a>Пример  
 
-Этот раздел иллюстрирует несколько способов предоставления рабочих функций для классов [concurrency::call](../../parallel/concrt/reference/call-class.md) и [concurrency::transformer](../../parallel/concrt/reference/transformer-class.md).  
+ Следующий пример похож на предыдущий, за исключением того, что он использует [std::bind1st](../../standard-library/functional-functions.md#bind1st) и [std::mem_fun](../../standard-library/functional-functions.md#mem_fun) функции связываемом `call` объекта к методу класса.  
+
   
- Первый пример демонстрирует, как передать лямбда\-выражение объекту `call`.  Второй пример демонстрирует, как передать объект функции объекту `call`.  Третий пример демонстрирует, как привязать метод класса к объекту `call`.  
+ Этот метод следует использовать, если требуется привязать `call` или `transformer` в метод определенного класса, а не к оператору вызова функции `operator()`.  
   
- Для иллюстрации во всех примерах этого раздела используется класс `call`.  Пример, который использует класс `transformer`, см. в разделе [Практическое руководство. Использование преобразователя в конвейере данных](../../parallel/concrt/how-to-use-transformer-in-a-data-pipeline.md).  
+ [!code-cpp[concrt-call-method#1](../../parallel/concrt/codesnippet/cpp/how-to-provide-work-functions-to-the-call-and-transformer-classes_3.cpp)]  
   
-## Пример  
- В следующем примере показан обычный способ использования класса `call`.  В этом примере конструктору `call` передается лямбда\-функция.  
+ Можно также назначить результат `bind1st` функция [std::function](../../standard-library/function-class.md) или `auto` ключевое слово, как показано в следующем примере.  
   
- [!code-cpp[concrt-call-lambda#1](../../parallel/concrt/codesnippet/CPP/how-to-provide-work-functions-to-the-call-and-transformer-classes_1.cpp)]  
+ [!code-cpp[concrt-call-method#2](../../parallel/concrt/codesnippet/cpp/how-to-provide-work-functions-to-the-call-and-transformer-classes_4.cpp)]  
   
- В результате выполнения примера получается следующий результат:  
+## <a name="compiling-the-code"></a>Компиляция кода  
+ Скопируйте код примера и вставьте его в проект Visual Studio или вставить его в файл с именем `call.cpp` , а затем запустите следующую команду в окне командной строки Visual Studio.  
   
-  **13 в квадрате равно 169.**   
-## Пример  
- Следующий пример похож на предыдущий, но в нем класс `call` используется совместно с объектом функции \(функтором\).  
+ **CL.exe call.cpp/EHsc**  
   
- [!code-cpp[concrt-call-functor#1](../../parallel/concrt/codesnippet/CPP/how-to-provide-work-functions-to-the-call-and-transformer-classes_2.cpp)]  
-  
-## Пример  
- Следующий пример похож на предыдущий, но использует функции [std::bind1st](../Topic/bind1st%20Function.md) и [std::mem\_fun](../Topic/mem_fun%20Function.md) для привязки объекта `call` к методу класса.  
-  
- Используйте этот способ, если требуется привязать объект `call` или `transformer` к конкретному методу класса, а не к оператору вызова функции, `operator()`.  
-  
- [!code-cpp[concrt-call-method#1](../../parallel/concrt/codesnippet/CPP/how-to-provide-work-functions-to-the-call-and-transformer-classes_3.cpp)]  
-  
- Результат функции `bind1st` также можно назначать объекту [std::function](../../standard-library/function-class.md) или использовать ключевое слово `auto`, как показано в следующем примере.  
-  
- [!code-cpp[concrt-call-method#2](../../parallel/concrt/codesnippet/CPP/how-to-provide-work-functions-to-the-call-and-transformer-classes_4.cpp)]  
-  
-## Компиляция кода  
- Скопируйте код примера и вставьте его в проект Visual Studio или в файл с именем `call.cpp`, затем выполните в окне командной строки Visual Studio следующую команду.  
-  
- **cl.exe \/EHsc call.cpp**  
-  
-## См. также  
+## <a name="see-also"></a>См. также  
  [Библиотека асинхронных агентов](../../parallel/concrt/asynchronous-agents-library.md)   
  [Асинхронные блоки сообщений](../../parallel/concrt/asynchronous-message-blocks.md)   
- [Практическое руководство. Использование преобразователя в конвейере данных](../../parallel/concrt/how-to-use-transformer-in-a-data-pipeline.md)   
- [Класс call](../../parallel/concrt/reference/call-class.md)   
+ [Как: использование преобразователя в конвейере данных](../../parallel/concrt/how-to-use-transformer-in-a-data-pipeline.md)   
+ [Класс Call](../../parallel/concrt/reference/call-class.md)   
  [Класс transformer](../../parallel/concrt/reference/transformer-class.md)

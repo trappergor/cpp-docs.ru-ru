@@ -1,32 +1,30 @@
 ---
-title: "critical | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "Critical"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "critical OpenMP directive"
+title: "критические | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: Critical
+dev_langs: C++
+helpviewer_keywords: critical OpenMP directive
 ms.assetid: 2ab87d6d-5ca4-43ae-9f0a-1f517a6a2bab
-caps.latest.revision: 12
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 12
+caps.latest.revision: "12"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: c3527d7716edc30a7b8265881f0a3bd674c68957
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/24/2017
 ---
-# critical
-[!INCLUDE[vs2017banner](../../../assembler/inline/includes/vs2017banner.md)]
-
-Указывает, что код был выполнен только в одном потоке одновременно.  
+# <a name="critical"></a>critical
+Указывает, что код является только выполняться в одном потоке одновременно.  
   
-## Синтаксис  
+## <a name="syntax"></a>Синтаксис  
   
 ```  
 #pragma omp critical [(name)]  
@@ -35,18 +33,18 @@ caps.handback.revision: 12
 }  
 ```  
   
-## Заметки  
- Здесь:  
+## <a name="remarks"></a>Примечания  
+ где  
   
- \(`name`\(необязательно\)\)  
- Имя для идентификации критический код.  Видит, что имя должно быть заключено в скобки.  
+ (`name`) (необязательно)  
+ Имя для идентификации критический код. Обратите внимание, что имя должно быть заключено в круглые скобки.  
   
-## Заметки  
- **Критические** директива не поддерживает никаких предложений OpenMP.  
+## <a name="remarks"></a>Примечания  
+ **Критические** директива поддерживает без предложения OpenMP.  
   
- Дополнительные сведения см. в разделе [2.6.2 critical Construct](../../../parallel/openmp/2-6-2-critical-construct.md).  
+ Дополнительные сведения см. в разделе [2.6.2 критические создания](../../../parallel/openmp/2-6-2-critical-construct.md).  
   
-## Пример  
+## <a name="example"></a>Пример  
   
 ```  
 // omp_critical.cpp  
@@ -90,16 +88,19 @@ int main()
 }  
 ```  
   
-  **41**  
-**18467**  
-**6334**  
-**26500**  
-**19169**  
-**15724**  
-**11478**  
-**29358**  
-**26962**  
-**24464**  
-**максимальное количество \= 29358**   
-## См. также  
- [Directives](../../../parallel/openmp/reference/openmp-directives.md)
+```Output  
+41  
+18467  
+6334  
+26500  
+19169  
+15724  
+11478  
+29358  
+26962  
+24464  
+max = 29358  
+```  
+  
+## <a name="see-also"></a>См. также  
+ [Директивы](../../../parallel/openmp/reference/openmp-directives.md)

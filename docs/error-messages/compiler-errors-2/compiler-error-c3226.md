@@ -4,42 +4,22 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-tools
+ms.technology: cpp-tools
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- C3226
-dev_langs:
-- C++
-helpviewer_keywords:
-- C3226
+f1_keywords: C3226
+dev_langs: C++
+helpviewer_keywords: C3226
 ms.assetid: 636106ca-6f4e-4303-a6a0-8803221ec67d
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0d9cbb01d1ad0f2ea65d59334cb88140ef18fce0
-ms.openlocfilehash: 6ddc0ed06febb7c2e82339dc340afa5d00aed01a
-ms.contentlocale: ru-ru
-ms.lasthandoff: 04/12/2017
-
+ms.openlocfilehash: 4dbba2964b99dd059f27d4bc4917a74fec664ab2
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="compiler-error-c3226"></a>Ошибка компилятора C3226
 Объявление шаблона недопустимо внутри универсального объявления  

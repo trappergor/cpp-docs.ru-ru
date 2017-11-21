@@ -4,12 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-language
+ms.technology: cpp-language
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - array-element initializers
 - initializing arrays [C++], initializers
@@ -17,16 +15,15 @@ helpviewer_keywords:
 - declarators, as initializers
 - initializers, array element
 ms.assetid: ce301ed8-aa1c-47b2-bb39-9f0541b4af85
-caps.latest.revision: 9
+caps.latest.revision: "9"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.translationtype: HT
-ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
-ms.openlocfilehash: d58a1d8ed688f927719411bdae29fe08969961c5
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/25/2017
-
+ms.openlocfilehash: 17231b9d541163d5b14509bafb991fcd32215fca
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="initializers"></a>Инициализаторы
 Инициализатор определяет начальное значение переменной. Можно инициализировать переменные в этих контекстах:  
@@ -530,11 +527,10 @@ int main()
  ![Граф принятия решений для инициализации типов ссылок](../cpp/media/vc38s71.gif "vc38S71")  
 Граф принятия решений для инициализации ссылочных типов  
   
- Ссылки на `volatile` типов (объявленные как `volatile` *typename* ** & ** *идентификатор*) можно инициализировать с `volatile` объекты того же типа или с объектами, которые не были объявлены как `volatile`. Их нельзя, однако, инициализируемый **const** объектов этого типа. Аналогично, ссылки на **const** типов (объявленные как **const** *typename* ** & ** *идентификатор *) можно инициализировать с **const** объектов того же типа (или все, что имеется преобразование для этого типа или с объектами, которые не были объявлены как **const**). Однако их невозможно инициировать с помощью объектов `volatile` этого типа.  
+ Ссылки на `volatile` типов (объявленные как `volatile` *typename*  **&**  *идентификатор*) можно инициализировать с `volatile` объекты того же типа или с объектами, которые не были объявлены как `volatile`. Их нельзя, однако, инициализируемый **const** объектов этого типа. Аналогично, ссылки на **const** типов (объявленные как **const** *typename*  **&**  *идентификатор* ) можно инициализировать с **const** объектов того же типа (или все, что имеется преобразование для этого типа или с объектами, которые не были объявлены как **const**). Однако их невозможно инициировать с помощью объектов `volatile` этого типа.  
   
  Ссылки, которые не дополняются либо **const** или `volatile` ключевое слово может инициализироваться только значением объекты, объявленные как ни **const** , ни `volatile`.  
   
 ### <a name="initialization-of-external-variables"></a>Инициализация внешних переменных  
  Объявления автоматических, статических и внешних переменных могут содержать инициализаторы. Однако объявления внешних переменных могут содержать инициализаторы, только если эти переменные не объявлены как `extern`.
   
-

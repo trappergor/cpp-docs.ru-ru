@@ -1,32 +1,30 @@
 ---
-title: "IF2 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "IF2"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "IF2 directive"
+title: "IF2 | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: IF2
+dev_langs: C++
+helpviewer_keywords: IF2 directive
 ms.assetid: a0f75564-b51b-4e39-ad3b-f7421e7ecad6
-caps.latest.revision: 7
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: d2b843b48d8b2293cd7fbcfb0614b8fa08b3b786
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/24/2017
 ---
-# IF2
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-**IF** блок вычисляется при каждом проходе, если сборки  **ПАРАМЕТР: SETIF2** существует  **True**.  
+# <a name="if2"></a>IF2
+**Если** блок вычисляется при каждом проходе сборки, если **параметр: SETIF2** — **TRUE**.  
   
-## Синтаксис  
+## <a name="syntax"></a>Синтаксис  
   
 ```  
   
@@ -35,8 +33,8 @@ expression
   
 ```  
   
-## Заметки  
- См. IF для полного синтаксиса.  
+## <a name="remarks"></a>Примечания  
+ В разделе [IF](../../assembler/masm/if-masm.md) сложный синтаксис.  
   
-## См. также  
- [Directives Reference](../../assembler/masm/directives-reference.md)
+## <a name="see-also"></a>См. также  
+ [Справочник по директивам](../../assembler/masm/directives-reference.md)

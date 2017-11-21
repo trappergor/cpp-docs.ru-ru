@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
 apiname:
@@ -33,8 +32,7 @@ f1_keywords:
 - strrchr
 - wcsrchr
 - _mbsrchr
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - _mbsrchr function
 - tcsrchr function
@@ -50,36 +48,21 @@ helpviewer_keywords:
 - _ftcsrchr function
 - _mbsrchr_l function
 ms.assetid: 75cf2664-758e-49bb-bf6b-8a139cd474d2
-caps.latest.revision: 28
+caps.latest.revision: "28"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: e257f037a05c45f5b98e64ea55bd125af443b0be
-ms.openlocfilehash: a545d1813bb03160495c331b3213f947603b20b9
-ms.contentlocale: ru-ru
-ms.lasthandoff: 03/30/2017
-
+ms.openlocfilehash: 5e0def391fa76a52a401feeb3c3e81f359409a8e
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="strrchr-wcsrchr-mbsrchr-mbsrchrl"></a>strrchr, wcsrchr, _mbsrchr, _mbsrchr_l
 Ищет последнее вхождение символа в строке.  
   
 > [!IMPORTANT]
-> Функции  `_mbsrchr` и `_mbsrchr_l` не могут использоваться в приложениях, запускаемых в среде выполнения Windows. Дополнительные сведения см. в статье [Функции CRT, которые не поддерживаются с ключом /ZW](http://msdn.microsoft.com/library/windows/apps/jj606124.aspx).  
+>  Функции `_mbsrchr` и `_mbsrchr_l` не могут использоваться в приложениях, запускаемых в среде выполнения Windows. Дополнительные сведения см. в статье [Функции CRT, которые не поддерживаются с ключом /ZW](http://msdn.microsoft.com/library/windows/apps/jj606124.aspx).  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -155,7 +138,7 @@ const unsigned char *_mbsrchr_l(
   
  Функции `wcsrchr` и `_mbsrchr` являются версиями функции `strrchr` для расширенных и многобайтовых символов. Аргументы и возвращаемое значение `wcsrchr` представляют собой двухбайтовые строки; аргументы и возвращаемое значение `_mbsrchr` представляют собой многобайтовые строки.  
   
- В языке C эти функции принимают указатель `const` в качестве первого аргумента. В языке C++ доступны две перегрузки. Перегрузка, принимающая указатель на `const`, возвращает указатель на `const`; версия, которая принимает указатель на не-`const`, возвращает указатель на не-`const`. Макрос _CONST_CORRECT_OVERLOADS определен, если одновременно доступны версии `const` и не-`const` этих функций. Чтобы реализовать поведение не-`const` для обеих перегрузок в языке C++, определите символ _CONST_RETURN.  
+ В языке C эти функции принимают указатель `const` в качестве первого аргумента. В языке C++ доступны две перегрузки. Перегрузка, принимающая указатель на `const`, возвращает указатель на `const`; версия, которая принимает указатель на не-`const`, возвращает указатель на не-`const`. Макрос `_CRT_CONST_CORRECT_OVERLOADS` определяется, если оба `const` и не-`const` доступны версии этих функций. Если требуется не`const` поведение для обоих перегрузки C++ определения символа `_CONST_RETURN`.  
   
  `_mbsrchr` проверяет свои параметры. Если параметр `str` имеет значение `NULL`, вызывается обработчик недопустимых параметров, как описано в разделе [Проверка параметров](../../c-runtime-library/parameter-validation.md). Если выполнение может быть продолжено, параметр `errno` принимает значение `EINVAL`, а функция `_mbsrchr` возвращает значение 0. Функции `strrchr` и `wcsrchr` не проверяют свои параметры. В остальном эти три функции ведут себя идентично.  
   

@@ -1,32 +1,30 @@
 ---
-title: "Конструктор ComPtr::ComPtr | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "client/Microsoft::WRL::ComPtr::ComPtr"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "ComPtr, конструктор"
+title: "Конструктор ComPtr::ComPtr | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: client/Microsoft::WRL::ComPtr::ComPtr
+dev_langs: C++
+helpviewer_keywords: ComPtr, constructor
 ms.assetid: eaf70907-beac-458f-a503-2e5e27b0c196
-caps.latest.revision: 4
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 4
+caps.latest.revision: "4"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 5b31fdcbad35bc65b2d8ca26ccab69e875c1d3aa
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/24/2017
 ---
-# Конструктор ComPtr::ComPtr
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Инициализирует новый экземпляр класса ComPtr.  Перегрузки предоставляют конструкторы по умолчанию, копирования, перемещения и преобразования.  
+# <a name="comptrcomptr-constructor"></a>Конструктор ComPtr::ComPtr
+Инициализирует новый экземпляр класса ComPtr. Перегрузки предоставляют конструкторы по умолчанию, конструкторы копирования, перемещения и преобразования.  
   
-## Синтаксис  
+## <a name="syntax"></a>Синтаксис  
   
 ```  
 WRL_NOTHROW ComPtr();  
@@ -63,28 +61,28 @@ WRL_NOTHROW ComPtr(
    void *>;  
 ```  
   
-#### Параметры  
+#### <a name="parameters"></a>Параметры  
  `U`  
  Тип параметра `other`.  
   
  `other`  
  Объект типа `U`.  
   
-## Возвращаемое значение  
+## <a name="return-value"></a>Возвращаемое значение  
   
-## Заметки  
- Первый конструктор является конструктором по умолчанию, который неявно создает пустой объект.  Второй конструктор определяет [\_\_nullptr](../windows/nullptr-cpp-component-extensions.md), который явным образом создает пустой объект.  
+## <a name="remarks"></a>Примечания  
+ Первый конструктор является конструктором по умолчанию, который неявно создает пустой объект. Второй конструктор определяет [__nullptr](../windows/nullptr-cpp-component-extensions.md), который явно создает пустой объект.  
   
- Третий конструктор создает объект из определенного указателем объекта.  
+ Третий конструктор создает объект из объекта, указанного при помощи указателя.  
   
- Четвертый и пятый конструкторы являются конструкторами копирования.  Пятый конструктор копирует объект, если он может быть преобразован к текущему типу.  
+ Четвертый и пятый конструкторы являются copy-конструкторами. Пятый конструктор копирует объект, если его преобразовать текущий тип.  
   
- Шестой и седьмой конструкторы являются конструкторами перемещения.  Седьмой конструктор перемещает объект, если он может быть преобразован к текущему типу.  
+ Шестой и седьмой конструкторы являются конструкторы перемещения. Седьмой конструктор перемещает объект, если его преобразовать текущий тип.  
   
-## Требования  
+## <a name="requirements"></a>Требования  
  **Заголовок:** client.h  
   
  **Пространство имен:** Microsoft::WRL  
   
-## См. также  
+## <a name="see-also"></a>См. также  
  [Класс ComPtr](../windows/comptr-class.md)

@@ -1,32 +1,30 @@
 ---
-title: "Структура InvokeHelper | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "event/Microsoft::WRL::Details::InvokeHelper"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "InvokeHelper - структура"
+title: "Структура InvokeHelper | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: event/Microsoft::WRL::Details::InvokeHelper
+dev_langs: C++
+helpviewer_keywords: InvokeHelper structure
 ms.assetid: 555ad2bc-4dd6-4e65-a2e2-1242c395f0e5
-caps.latest.revision: 5
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 5
+caps.latest.revision: "5"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 52dc2118f537535b81163d375db483a57c5a9854
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/24/2017
 ---
-# Структура InvokeHelper
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Предназначено для поддержки инфраструктуры WRL, а не для непосредственного использования в коде.  
+# <a name="invokehelper-structure"></a>InvokeHelper - структура
+Поддерживает инфраструктуру WRL и не предназначен для использования непосредственно из программного кода.  
   
-## Синтаксис  
+## <a name="syntax"></a>Синтаксис  
   
 ```  
 template<  
@@ -87,50 +85,50 @@ template<
 struct InvokeHelper<TDelegateInterface, TCallback, 9> : Microsoft::WRL::RuntimeClass<RuntimeClassFlags<Delegate>, TDelegateInterface>;  
 ```  
   
-#### Параметры  
+#### <a name="parameters"></a>Параметры  
  `TDelegateInterface`  
  `TCallback`  
  Тип функции обработчика событий.  
   
  `argCount`  
- Количество аргументов в специализации InvokeHelper.  
+ Число аргументов в специализации InvokeHelper.  
   
-## Заметки  
- Предоставляет реализацию метода Invoke\(\) на основе заданного количества и типа аргументов.  
+## <a name="remarks"></a>Примечания  
+ Предоставляет реализацию на основе заданного числа и тип аргументов метода Invoke().  
   
-## Члены  
+## <a name="members"></a>Члены  
   
-### Общедоступные Typedefs  
-  
-|Имя|Описание|  
-|---------|--------------|  
-|`Traits`|Синоним для класса, определяющего тип каждого аргумента обработчика событий.|  
-  
-### Открытые конструкторы  
+### <a name="public-typedefs"></a>Общедоступные определения типов  
   
 |Имя|Описание|  
-|---------|--------------|  
+|----------|-----------------|  
+|`Traits`|Синоним для класса, который определяет тип каждого аргумента обработчика событий.|  
+  
+### <a name="public-constructors"></a>Открытые конструкторы  
+  
+|Имя|Описание|  
+|----------|-----------------|  
 |[Конструктор InvokeHelper::InvokeHelper](../windows/invokehelper-invokehelper-constructor.md)|Инициализирует новый экземпляр класса InvokeHelper.|  
   
-### Открытые методы  
+### <a name="public-methods"></a>Открытые методы  
   
 |Имя|Описание|  
-|---------|--------------|  
+|----------|-----------------|  
 |[Метод InvokeHelper::Invoke](../windows/invokehelper-invoke-method.md)|Вызывает обработчик событий, сигнатура которого содержит указанное число аргументов.|  
   
-### Открытые члены данных  
+### <a name="public-data-members"></a>Открытые члены данных  
   
 |Имя|Описание|  
-|---------|--------------|  
-|[Элемент данных InvokeHelper::callback\_](../windows/invokehelper-callback-data-member.md)|Представляет обработчик события для вызова, когда происходит событие.|  
+|----------|-----------------|  
+|[Элемент данных InvokeHelper::callback_](../windows/invokehelper-callback-data-member.md)|Представляет обработчик событий вызывается при возникновении события.|  
   
-## Иерархия наследования  
+## <a name="inheritance-hierarchy"></a>Иерархия наследования  
  `InvokeHelper`  
   
-## Требования  
+## <a name="requirements"></a>Требования  
  **Заголовок:** event.h  
   
- **Пространство имен:** Microsoft::WRL::Details  
+ **Пространство имен:** Microsoft::wrl:: Details  
   
-## См. также  
+## <a name="see-also"></a>См. также  
  [Пространство имен Microsoft::WRL::Details](../windows/microsoft-wrl-details-namespace.md)

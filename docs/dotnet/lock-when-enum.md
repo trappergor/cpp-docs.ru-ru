@@ -1,34 +1,33 @@
 ---
-title: "Перечисление lock_when | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "msclr::lock_when"
-  - "msclr.lock_when"
-  - "lock_when"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "lock_when - перечисление"
+title: "Перечисление lock_when | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords:
+- msclr::lock_when
+- msclr.lock_when
+- lock_when
+dev_langs: C++
+helpviewer_keywords: lock_when enum
 ms.assetid: 6b87bbe9-63cd-450d-a02e-bb91ffd0dcea
-caps.latest.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 7
+caps.latest.revision: "9"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: c13325f92f3b17f5881be1deffd9710108ecf4be
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/24/2017
 ---
-# Перечисление lock_when
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Указывает отложил блокирования.  
+# <a name="lockwhen-enum"></a>Перечисление lock_when
+Указывает отложенное блокировки.  
   
-## Синтаксис  
+## <a name="syntax"></a>Синтаксис  
   
 ```  
 enum lock_when {  
@@ -36,11 +35,11 @@ enum lock_when {
 };  
 ```  
   
-## Заметки  
- При передаче в [lock::lock](../dotnet/lock-lock.md), `lock_later` указывает, что блокировка не будет принятого ".  
+## <a name="remarks"></a>Примечания  
+ При передаче в [lock::lock](../dotnet/lock-lock.md), `lock_later` указывает, что блокировка не, которое должно предприниматься, теперь.  
   
-## Пример  
- В этом примере используется единственный экземпляр класса через несколько потоков.  Класс использует блокировку для себя, чтобы обеспечить доступ к его внутренним данным согласуются для каждого потока.  Поток основного приложения использует блокировку на том же экземпляре класса периодически для проверки, чтобы определить наличие рабочие потоки все еще существуют, и ожидает, чтобы оставить, пока все рабочие потоки не будут завершения своих задач.  
+## <a name="example"></a>Пример  
+ Этот пример использует один экземпляр класса в нескольких потоках.  Этот класс использует блокировку на себя для обеспечения согласованности для каждого потока доступов к внутренних данных.  Основной поток приложения использует блокировку на том же экземпляре класса для периодической проверки ли все рабочие потоки по-прежнему существует и ожиданий для выхода, пока все рабочие потоки завершили свои задачи.  
   
 ```  
 // msl_lock_lock_when.cpp  
@@ -114,21 +113,24 @@ int main() {
 }  
 ```  
   
-  **В потоке 3, счетчик \= 0**  
-**В потоке 3, счетчик \= 10**  
-**В потоке 5, счетчик \= 0**  
-**В потоке 5, счетчик \= 10**  
-**В потоке 7, счетчик \= 0**  
-**В потоке 7, счетчик \= 10**  
-**В потоке 4, счетчик \= 0**  
-**В потоке 4, счетчик \= 10**  
-**В потоке 6, счетчик \= 0**  
-**В потоке 6, счетчик \= 10**  
-**Все завершения потоков.**   
-## Требования  
- **Файл заголовка**\<msclr\\lock.h\>  
+```Output  
+In thread 3, Counter = 0  
+In thread 3, Counter = 10  
+In thread 5, Counter = 0  
+In thread 5, Counter = 10  
+In thread 7, Counter = 0  
+In thread 7, Counter = 10  
+In thread 4, Counter = 0  
+In thread 4, Counter = 10  
+In thread 6, Counter = 0  
+In thread 6, Counter = 10  
+All threads completed.  
+```  
+  
+## <a name="requirements"></a>Требования  
+ **Файл заголовка** \<msclr\lock.h >  
   
  **Пространство имен** msclr  
   
-## См. также  
+## <a name="see-also"></a>См. также  
  [lock](../dotnet/lock.md)

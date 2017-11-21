@@ -1,46 +1,46 @@
 ---
-title: "Настройка параметров компоновщика | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "файлы [C++], LINK"
-  - "входные файлы [C++]"
-  - "входные файлы [C++], компоновщик"
-  - "компоновщик [C++], параметры"
-  - "компоновщик [C++], способы установки параметров"
-  - "модули объектов/библиотек"
+title: "Настройка параметров компоновщика | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- files [C++], LINK
+- input files [C++], linker
+- linker [C++], ways to set options
+- linker [C++], switches
+- input files [C++]
+- object/library modules
 ms.assetid: e08fb487-0f2e-4f24-87db-232dbc8bd2e2
-caps.latest.revision: 7
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: b64b1dfd342598735124940d01b1bb4939242e10
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/24/2017
 ---
-# Настройка параметров компоновщика
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Параметры компоновщика можно задать в среде разработки или за ее пределами.  В каждом разделе, посвященном тому или иному параметру компоновщика, объясняется, как можно задать этот параметр в среде разработки.  Полный список см. в разделе [Параметры компоновщика](../../build/reference/linker-options.md).  
+# <a name="setting-linker-options"></a>Настройка параметров компоновщика
+Можно задать параметры компоновщика, внутри или вне среды разработки. В этом разделе для каждого параметра компоновщика обсуждается, как это можно сделать в среде разработки. В разделе [параметры компоновщика](../../build/reference/linker-options.md) полный список.  
   
- Если компоновщик LINK запущен за пределами среды разработки, входные параметры можно задать несколькими способами:  
+ При выполнении ссылки вне среды разработки, можно указать входные данные в один или несколько способов:  
   
--   В [командной строке](../../build/reference/linker-command-line-syntax.md)  
+-   На [командной строки](../../build/reference/linker-command-line-syntax.md)  
   
--   С помощью [файлов команд](../../build/reference/link-command-files.md)  
+-   С помощью [командные файлы](../../build/reference/link-command-files.md)  
   
--   С помощью [переменных среды](../../build/reference/link-environment-variables.md)  
+-   В [переменные среды](../../build/reference/link-environment-variables.md)  
   
- Компилятор LINK сначала обрабатывает параметры, заданные в переменной среды LINK, а затем остальные параметры в том порядке, в котором они указаны в командной строке и файлах команд.  При наличии одинаковых параметров с разными аргументами, приоритет имеет последний обработанный параметр.  
+ СВЯЗЬ первого обрабатывает параметры, заданные в переменной среды ссылки, следуют параметры в порядке, они были указаны в командной строке и в командных файлах. Если параметр повторяется с разными аргументами, обработанных последнее из них имеет приоритет.  
   
- Параметры применяются ко всему построению, ни один из них нельзя применить к отдельному входному файлу.  
+ Параметры применяются ко всей сборке; параметры не могут применяться для определенных входных файлов.  
   
-## См. также  
- [Образец построения C\/C\+\+](../Topic/C-C++%20Building%20Reference.md)   
+## <a name="see-also"></a>См. также  
+ [Справочные сведения о построении C/C++](../../build/reference/c-cpp-building-reference.md)   
  [Параметры компоновщика](../../build/reference/linker-options.md)

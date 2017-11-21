@@ -1,37 +1,38 @@
 ---
-title: "Справочник по пространствам имен (C++/CX) | Microsoft Docs"
-ms.custom: ""
-ms.date: "01/22/2017"
-ms.prod: "windows-client-threshold"
-ms.technology: ""
-ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "пространства имен C++/CX"
+title: "Справочник по пространствам имен (C + +/ CX) | Документы Microsoft"
+ms.custom: 
+ms.date: 01/22/2017
+ms.technology: cpp-windows
+ms.reviewer: 
+ms.suite: 
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+dev_langs: C++
+helpviewer_keywords: C++/CX namespaces
 ms.assetid: 5ebc0b49-1f22-48a7-90c4-a310bab9aba6
-caps.latest.revision: 5
-author: "ghogen"
-ms.author: "ghogen"
-manager: "ghogen"
-caps.handback.revision: 5
+caps.latest.revision: "5"
+author: ghogen
+ms.author: ghogen
+manager: ghogen
+ms.openlocfilehash: d2c241add0893535be3932e85f1a37daa0d5b642
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/24/2017
 ---
-# Справочник по пространствам имен (C++/CX)
-Статьи в этом разделе документации описывают пространства имен, которые поддерживают компилятор для [!INCLUDE[cppwrt](../cppcx/includes/cppwrt-md.md)] \([!INCLUDE[cppwrt_short](../cppcx/includes/cppwrt-short-md.md)]\).  
+# <a name="namespaces-reference-ccx"></a>Справочник по пространствам имен (C++/CX)
+Статьи в этом разделе документации описывают пространства имен, которые поддерживают компилятор C + +/ CX.  
   
-## Пространства имен, предоставляемые компилятором  
- Чтобы упростить написание кода программ для [!INCLUDE[wrt](../cppcx/includes/wrt-md.md)], компилятор [!INCLUDE[cppwrt_short](../cppcx/includes/cppwrt-short-md.md)] и его вспомогательные файлы заголовков предоставляют пространства имен, определяющие широкий диапазон типов. Эти пространства имен определяют встроенные числовые типы, строки, массивы и коллекции, исключения Visual C\+\+, представляющие ошибки [!INCLUDE[wrt](../cppcx/includes/wrt-md.md)], и усовершенствования стандартных типов [!INCLUDE[wrt](../cppcx/includes/wrt-md.md)] для конкретных языков.  
+## <a name="compiler-supplied-namespaces"></a>Пространства имен, предоставляемые компилятором  
+ Чтобы упростить написание кода программ, предназначенных для среды выполнения Windows, C + +/ CX компилятора и его вспомогательные файлы заголовков предоставляют пространства имен, определяющие широкий диапазон типов. Эти пространства имен определяют встроенные числовые типы; строки, массивы и коллекции, Visual C++ исключений, которые представляют ошибки среды выполнения Windows; и усовершенствования стандартных типов среды выполнения Windows конкретного языка.  
   
-## См. также  
+## <a name="related-topics"></a>См. также  
   
 |Заголовок|Описание|  
-|---------------|--------------|  
-|[Пространство имен default](../cppcx/default-namespace.md)|Содержит описания встроенных основных типов.|  
+|-----------|-----------------|  
+|[Пространство имен по умолчанию](../cppcx/default-namespace.md)|Содержит описания встроенных основных типов.|  
 |[Пространство имен Platform](../cppcx/platform-namespace-c-cx.md)|Содержит описания типов, которые можно использовать, а также внутренних типов, которые используются только инфраструктурой компилятора.|  
-|[Пространство имен Windows::Foundation::Collections](../cppcx/windows-foundation-collections-namespace-c-cx.md)|Содержит описание усовершенствований и расширений пространства имен [!INCLUDE[wrt](../cppcx/includes/wrt-md.md)]`Windows::Foundation::Collections`.|  
+|[Пространство имен Windows::Foundation:: Collections](../cppcx/windows-foundation-collections-namespace-c-cx.md)|Содержит описание усовершенствований и расширений в среду выполнения Windows`Windows::Foundation::Collections` пространства имен.|  
   
-## См. также  
- [Справочник по языку C\+\+](../cppcx/visual-c-language-reference-c-cx.md)
+## <a name="see-also"></a>См. также  
+ [Справочник по языку Visual C++](../cppcx/visual-c-language-reference-c-cx.md)

@@ -1,52 +1,32 @@
 ---
-title: "C3421 Ошибка компилятора | Документы Microsoft"
+title: "Ошибка компилятора C3421 | Документы Microsoft"
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-tools
+ms.technology: cpp-tools
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- C3421
-dev_langs:
-- C++
-helpviewer_keywords:
-- C3421
+f1_keywords: C3421
+dev_langs: C++
+helpviewer_keywords: C3421
 ms.assetid: b52050c6-17a4-424a-8894-337b0cec7010
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: c243063a9770542f137d5950e8a269f771960f74
-ms.openlocfilehash: 8f7a25ee2cb8b36c8e56edf4edb2bf152d6bfd9e
-ms.contentlocale: ru-ru
-ms.lasthandoff: 02/24/2017
-
+ms.openlocfilehash: c70d062f90410f6af170af45e8213c65777d3977
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="compiler-error-c3421"></a>Ошибка компилятора C3421
 "тип": невозможно вызвать метод завершения для данного класса, поскольку он либо недоступен, либо не существует  
   
  Метод завершения является неявно закрытым, поэтому его нельзя вызвать за пределами включающего типа.  
   
- Дополнительные сведения см. в разделе [деструкторы и методы завершения в Практическое руководство: определение и использование классов и структур (C + +/ CLI)](../../dotnet/how-to-define-and-consume-classes-and-structs-cpp-cli.md#BKMK_Destructors_and_finalizers).  
+ Дополнительные сведения см. в разделе [деструкторы и методы завершения в разделе: определение и использование классов и структур (C + +/ CLI)](../../dotnet/how-to-define-and-consume-classes-and-structs-cpp-cli.md#BKMK_Destructors_and_finalizers).  
   
 ## <a name="example"></a>Пример  
  Следующий пример приводит к возникновению ошибки C3421:  

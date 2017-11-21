@@ -1,79 +1,78 @@
 ---
-title: "/Za, /Ze (отключить расширения языка) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "VC.Project.VCCLWCECompilerTool.DisableLanguageExtensions"
-  - "/za"
-  - "/ze"
-  - "VC.Project.VCCLCompilerTool.DisableLanguageExtensions"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "/Za - параметр компилятора [C++]"
-  - "/Ze - параметр компилятора [C++]"
-  - "Отключить расширения языка - параметр компилятора"
-  - "включить расширения языка"
-  - "расширения языка"
-  - "расширения языка, отключение в компиляторе"
-  - "Za - параметр компилятора [C++]"
-  - "-Za - параметр компилятора [C++]"
-  - "Ze - параметр компилятора [C++]"
-  - "-Ze - параметр компилятора [C++]"
+title: "-Za, - Ze (отключить расширения языка) | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- VC.Project.VCCLWCECompilerTool.DisableLanguageExtensions
+- /za
+- /ze
+- VC.Project.VCCLCompilerTool.DisableLanguageExtensions
+dev_langs: C++
+helpviewer_keywords:
+- -Za compiler option [C++]
+- Za compiler option [C++]
+- language extensions, disabling in compiler
+- -Ze compiler option [C++]
+- language extensions
+- enable language extensions
+- /Za compiler option [C++]
+- /Ze compiler option [C++]
+- Disable Language Extensions compiler option
+- Ze compiler option [C++]
 ms.assetid: 65e49258-7161-4289-a176-7c5c0656b1a2
-caps.latest.revision: 18
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 16
+caps.latest.revision: "18"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: 1e1d0c5f76c0eb71b631ef9bffbc1e60e5ceb069
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/24/2017
 ---
-# /Za, /Ze (отключить расширения языка)
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Параметр компилятора **\/Za** выдает ошибку для языковых конструкций, несовместимых либо с ANSI C, либо с ANSI C\+\+.  Параметр компилятора **\/Ze**, установленный по умолчанию, включает расширения Microsoft.  
+# <a name="za-ze-disable-language-extensions"></a>/Za, /Ze (отключить расширения языка)
+**/Za** параметр компилятор выдает ошибку для языковых конструкций, которые не совместимы с ANSI C89 или ISO C ++ 11. **/Ze** параметр компилятора, который включен по умолчанию, включает расширения Microsoft.  
   
-## Синтаксис  
+## <a name="syntax"></a>Синтаксис  
   
 ```  
 /Za  
 /Ze  
 ```  
   
-## Заметки  
+## <a name="remarks"></a>Примечания  
   
 > [!NOTE]
->  Параметр **\/Ze** не рекомендуется к использованию.  Для получения дополнительной информации см. [Deprecated Compiler Options in Visual C\+\+ 2005](http://msdn.microsoft.com/ru-ru/aa59fce3-50b8-4f66-9aeb-ce09a7a84cce).  
+>  **/Ze** параметр является устаревшим, так как его поведение включено по умолчанию. Рекомендуется использовать [/Zc (соответствие)](../../build/reference/zc-conformance.md) параметры компилятора для управления функциями расширения для конкретного языка. Список параметров компилятора см. в разделе **нерекомендуемые и удаленные параметры компилятора** статьи [параметры компилятора, упорядоченные по категориям](../../build/reference/compiler-options-listed-by-category.md).  
   
- Компилятор [!INCLUDE[vcprvc](../../build/includes/vcprvc_md.md)] предоставляет ряд дополнительных функциональных возможностей, помимо обусловленных стандартами ANSI C или ANSI C\+\+.  Данные функциональные возможности называются расширениями Microsoft для С и С\+\+.  Расширения доступны в тех случаях, когда задан параметр **\/Ze**, и недоступны, если задан параметр **\/Za**.  Дополнительные сведения см. в разделе [Расширения Майкрософт для языков C и C\+\+](../../build/reference/microsoft-extensions-to-c-and-cpp.md).  
+ [!INCLUDE[vcprvc](../../build/includes/vcprvc_md.md)] Компилятора предлагает несколько возможностей, не указанные в стандартам ANSI C89, ISO C99 или ISO C++. Эти компоненты называются расширениями Microsoft для языков C и C++. Эти расширения по умолчанию и не доступен при **/Za** параметра. Дополнительные сведения о конкретных расширениях см. в разделе [расширения Майкрософт для языков C и C++](../../build/reference/microsoft-extensions-to-c-and-cpp.md).  
   
- Если планируется переносить программу в другие среды, данные расширения языков необходимо отключить.  Компилятор обрабатывает расширенные ключевые слова как простые идентификаторы, отключает другие расширения Microsoft и автоматически назначает предварительно определенный макрос `__STDC__` для программ на С.  
+ Рекомендуется отключить расширения языка, указав **/Za** вариант, если планируется переносить программы в другие среды. Когда **/Za** указан, компилятор обрабатывает расширенные ключевые слова как простые идентификаторы Майкрософт, отключает другие расширения Microsoft и автоматически определяет `__STDC__` предварительно определенный макрос для программ.  
   
- Еще один параметр компилятора, используемый с **\/Za**, может повлиять на обеспечение компилятором соответствия стандартам ANSI.  Например, параметры **\/Za** и [\/fp \(Определение поведения с плавающей запятой\)](../../build/reference/fp-specify-floating-point-behavior.md) могут стать причиной непрогнозируемого поведения.  
+ Другие параметры компилятора, используемые с **/Za** может повлиять на том, как компилятор гарантирует соответствие стандартам. Например **/Za** и [/FP (указать поведение с плавающей запятой)](../../build/reference/fp-specify-floating-point-behavior.md) может привести к поведению рекламной акции типа с плавающей запятой, которое не соответствует ISO C99 и C ++ 11 стандартам.  
   
- Способы обеспечения стандартного поведения при использовании параметра **\/Za** см. в описании параметра компилятора [\/Zc](../../build/reference/zc-conformance.md).  
+ Способов для указания конкретных стандартам параметры поведения в разделе [/Zc](../../build/reference/zc-conformance.md) параметр компилятора.  
   
- Дополнительные сведения о проблемах несоответствия стандартам в [!INCLUDE[vcprvc](../../build/includes/vcprvc_md.md)] см. в разделе [Проблемы совместимости и соответствия в Visual C\+\+](../../misc/compatibility-and-compliance-issues-in-visual-cpp.md).  
+ Дополнительные сведения о вопросах соответствия с [!INCLUDE[vcprvc](../../build/includes/vcprvc_md.md)], в разделе [нестандартное поведение](../../cpp/nonstandard-behavior.md).  
   
-### Установка данного параметра компилятора в среде разработки Visual Studio  
+### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Установка данного параметра компилятора в среде разработки Visual Studio  
   
-1.  Откройте диалоговое окно **Страницы свойств** проекта.  Дополнительные сведения см. в разделе [Открытие свойств страниц проекта](../../misc/how-to-open-project-property-pages.md).  
+1.  Откройте диалоговое окно **Страницы свойств** проекта. Дополнительные сведения см. в разделе [работа со свойствами проекта](../../ide/working-with-project-properties.md).  
   
-2.  Откройте папку **C\/C\+\+**.  
+2.  В области навигации выберите **свойства конфигурации**, **C/C++**, **языка**.  
   
-3.  Выберите страницу свойств **Язык**.  
+3.  Изменить **отключить расширения языка** свойство.  
   
-4.  Измените значение свойства **Отключить расширения языка**.  
-  
-### Установка данного параметра компилятора программным способом  
+### <a name="to-set-this-compiler-option-programmatically"></a>Установка данного параметра компилятора программным способом  
   
 -   См. раздел <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.DisableLanguageExtensions%2A>.  
   
-## См. также  
+## <a name="see-also"></a>См. также  
  [Параметры компилятора](../../build/reference/compiler-options.md)   
- [Настройка параметров компилятора](../Topic/Setting%20Compiler%20Options.md)
+ [Настройка параметров компилятора](../../build/reference/setting-compiler-options.md)   
+ [/Zc (соответствие)](../../build/reference/zc-conformance.md)

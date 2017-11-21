@@ -1,57 +1,57 @@
 ---
-title: "Преобразование проектов из смешанного режима в чистый промежуточный язык | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "промежуточный язык, приложения в смешанном режиме"
-  - "приложения в смешанном режиме"
-  - "приложения в смешанном режиме, промежуточный язык"
-  - "проекты [C++], конвертирование в промежуточный язык"
+title: "Преобразование проектов из смешанного режима в чистый промежуточный язык | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- intermediate language, mixed-mode applications
+- mixed-mode applications
+- mixed-mode applications, intermediate language
+- projects [C++], converting to intermediate language
 ms.assetid: 855f9e3c-4f09-4bfe-8eab-a45f68292be9
-caps.latest.revision: 8
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: f59a90828f338d918f753c8ba79236fd7edc1587
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/24/2017
 ---
-# Преобразование проектов из смешанного режима в чистый промежуточный язык
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Все проекты среды CLR Visual C\+\+ по умолчанию ссылаются на библиотеки времени выполнения C.  Следовательно, эти проекты классифицируются как приложения смешанного режима, поскольку в них объединяется машинный код и код, предназначенный для среды CLR \(т.е. управляемый код\).  Они компилируются в промежуточный язык \(IL\), также называемый языком MSIL.  
+# <a name="converting-projects-from-mixed-mode-to-pure-intermediate-language"></a>Преобразование проектов из смешанного режима в чистый промежуточный язык
+Все проекты Visual C++ CLR ссылки на библиотеки времени выполнения C по умолчанию. Следовательно эти проекты классифицируются как приложения в смешанном режиме, поскольку в них объединяется машинный код с кодом языка среды CLR (управляемого кода). При компиляции, они компилируются в промежуточный язык (IL), также известный как промежуточный язык Майкрософт (MSIL).  
   
-### Преобразование проектов из смешанного режима в чистый промежуточный язык  
+### <a name="to-convert-your-mixed-mode-application-into-pure-intermediate-language"></a>Для преобразования приложения смешанного режима в чистый промежуточный язык  
   
-1.  Удалите ссылки на [библиотеки времени выполнения C](../c-runtime-library/crt-library-features.md) \(CRT\):  
+1.  Удалите ссылки на [библиотеки времени выполнения C](../c-runtime-library/crt-library-features.md) (CRT):  
   
-    1.  В CPP\-файле, определяющем точку входа приложения, измените точку входа на `Main()`.  Значение `Main()` указывает, что данный проект не ссылается на CRT.  
+    1.  В CPP-файле, определяющем точку входа приложения, изменить точку входа `Main()`. С помощью `Main()` указывает, что проект ссылается на CRT.  
   
-    2.  В обозревателе решений щелкните правой кнопкой мыши проект и выберите в контекстном меню пункт **Свойства**, чтобы открыть страницы свойств приложения.  
+    2.  В обозревателе решений щелкните правой кнопкой мыши проект и выберите **свойства** в контекстном меню, чтобы открыть страницы свойств для приложения.  
   
-    3.  На странице свойств **Дополнительно** узла **Компоновщика** проекта введите для параметра **точка входа** значение **Main**.  
+    3.  В **Дополнительно** страницы свойств проекта для **компоновщика**выберите **точки входа** , а затем введите **Main** в этом поле.  
   
-    4.  Для консольных приложений на странице свойств **Система** узла **Компоновщика** проекта выберите поле **Подсистема** и измените его значение на **Console \(\/SUBSYSTEM:CONSOLE\)**.  
+    4.  Для консольных приложений в **системы** страницы свойств проекта для **компоновщика**выберите **подсистемы** поле и измените его значение на **консоли (/ SUBSYSTEM:Console)**.  
   
         > [!NOTE]
-        >  Для приложений Windows Forms это свойство устанавливать не нужно, поскольку поле **Подсистема** по умолчанию имеет значение **Windows \(\/SUBSYSTEM:WINDOWS\)**.  
+        >  Необходимо задать это свойство для приложений Windows Forms, так как **подсистемы** имеет значение **Windows (/ SUBSYSTEM: WINDOWS)** по умолчанию.  
   
-    5.  В файле stdafx.h закомментируйте все операторы `#include`.  Например, в консольных приложениях:  
+    5.  Добавьте в файл stdafx.h закомментируйте все `#include` инструкции. Например в консольных приложениях:  
   
         ```  
         // #include <iostream>  
         // #include <tchar.h>  
         ```  
   
-         – или –  
+         -или-  
   
-         В приложениях Windows Forms:  
+         Например в приложениях Windows Forms:  
   
         ```  
         // #include <stdlib.h>  
@@ -60,13 +60,13 @@ caps.handback.revision: 8
         // #include <tchar.h>  
         ```  
   
-    6.  Для приложений Windows Forms в файле Form1.cpp закомментируйте оператор `#include`, который ссылается на файл windows.h.  Примеры.  
+    6.  Для приложений Windows Forms, в Form1.cpp, закомментируйте `#include` инструкцию, которая ссылается на windows.h. Например:  
   
         ```  
         // #include <windows.h>  
         ```  
   
-2.  Добавьте в файл stdafx.h следующий код:  
+2.  Добавьте следующий код в файле stdafx.h:  
   
     ```  
     #ifndef __FLTUSED__  
@@ -77,26 +77,26 @@ caps.handback.revision: 8
   
 3.  Удалите все неуправляемые типы:  
   
-    1.  Везде, где это возможно, замените неуправляемые типы ссылками на структуры из пространства имен [System](https://msdn.microsoft.com/en-us/library/system.appdomainmanager.appdomainmanager.aspx).  Основные управляемые типы перечислены в следующей таблице.  
+    1.  Везде, где это возможно, замените неуправляемые типы ссылками на структуры из [системы](https://msdn.microsoft.com/en-us/library/system.appdomainmanager.appdomainmanager.aspx) пространства имен. В следующей таблице перечислены распространенные управляемых типов.  
   
         |Структура|Описание|  
-        |---------------|--------------|  
-        |[\<caps:sentence id\="tgt24" sentenceid\="84e2c64f38f78ba3ea5c905ab5a2da27" class\="tgtSentence"\>Boolean\<\/caps:sentence\>](https://msdn.microsoft.com/en-us/library/system.boolean\(v=vs.140\).aspx)|Представляет логическое значение.|  
-        |[\<caps:sentence id\="tgt26" sentenceid\="40ea57d3ee3c07bf1c102b466e1c3091" class\="tgtSentence"\>Byte\<\/caps:sentence\>](https://msdn.microsoft.com/en-us/library/system.byte\(v=vs.140\).aspx)|Представляет 8\-битовое целое число без знака.|  
-        |[\<caps:sentence id\="tgt28" sentenceid\="a87deb01c5f539e6bda34829c8ef2368" class\="tgtSentence"\>Char\<\/caps:sentence\>](https://msdn.microsoft.com/en-us/library/system.char\(v=vs.140\).aspx)|Представляет символ Юникода.|  
-        |[\<caps:sentence id\="tgt30" sentenceid\="dfeaaeb4316477bd556ea5e8c3295887" class\="tgtSentence"\>DateTime\<\/caps:sentence\>](https://msdn.microsoft.com/en-us/library/system.datetime.datetime.aspx)|Представляет текущее время, обычно выраженное как дата и время суток.|  
-        |[\<caps:sentence id\="tgt32" sentenceid\="bdaa3c20a3e3851599514f7c6be5f62f" class\="tgtSentence"\>Десятичный\<\/caps:sentence\>](https://msdn.microsoft.com/en-us/library/system.decimal\(v=vs.140\).aspx)|Представляет десятичное число.|  
-        |[\<caps:sentence id\="tgt34" sentenceid\="e8cd7da078a86726031ad64f35f5a6c0" class\="tgtSentence"\>Double\<\/caps:sentence\>](https://msdn.microsoft.com/en-us/library/system.double\(v=vs.140\).aspx)|Представляет число двойной точности с плавающей запятой.|  
-        |[\<caps:sentence id\="tgt36" sentenceid\="1e0ca5b1252f1f6b1e0ac91be7e7219e" class\="tgtSentence"\>Guid\<\/caps:sentence\>](https://msdn.microsoft.com/en-us/library/system.guid\(v=vs.140\).aspx)|Представляет глобальный уникальный идентификатор \(GUID\).|  
-        |[\<caps:sentence id\="tgt38" sentenceid\="ce80d5ec65b1d2a2f1049eadc100db23" class\="tgtSentence"\>Int16\<\/caps:sentence\>](https://msdn.microsoft.com/en-us/library/system.int16\(v=vs.140\).aspx)|Представляет 16\-разрядное целое число со знаком.|  
-        |[\<caps:sentence id\="tgt40" sentenceid\="0241adbbd83925f051b694d40f02747f" class\="tgtSentence"\>Int32\<\/caps:sentence\>](https://msdn.microsoft.com/en-us/library/system.int32\(v=vs.140\).aspx)|Представляет 32\-разрядное целое число со знаком.|  
-        |[\<caps:sentence id\="tgt42" sentenceid\="ff9b3f96d37353c528517bc3656a00a8" class\="tgtSentence"\>Int64\<\/caps:sentence\>](https://msdn.microsoft.com/en-us/library/system.int64\(v=vs.140\).aspx)|Представляет 64\-разрядное целое число со знаком.|  
-        |[\<caps:sentence id\="tgt44" sentenceid\="7f1db863563907cf33604ed7fad6b111" class\="tgtSentence"\>IntPtr;\<\/caps:sentence\>](https://msdn.microsoft.com/en-us/library/system.intptr\(v=vs.140\).aspx)|Определяемый платформой тип, который используется для представления указателя или дескриптора.|  
-        |[\<caps:sentence id\="tgt46" sentenceid\="943756eb7841efcc43b7cd37d7254c76" class\="tgtSentence"\>SByte\<\/caps:sentence\>](https://msdn.microsoft.com/en-us/library/system.byte.aspx)|Представляет 8\-разрядное целое число со знаком.|  
-        |[\<caps:sentence id\="tgt48" sentenceid\="dd5c07036f2975ff4bce568b6511d3bc" class\="tgtSentence"\>Single\<\/caps:sentence\>](https://msdn.microsoft.com/en-us/library/system.single.aspx)|Представляет число одиночной точности с плавающей запятой.|  
-        |[\<caps:sentence id\="tgt50" sentenceid\="90150402997ea9c8dc45cc4d41bb28cb" class\="tgtSentence"\>TimeSpan\<\/caps:sentence\>](https://msdn.microsoft.com/en-us/library/system.timespan\(v=vs.140\).aspx)|Представляет интервал времени.|  
-        |[\<caps:sentence id\="tgt52" sentenceid\="a00ef2ef85ff67b7b39339886f19044f" class\="tgtSentence"\>UInt16\<\/caps:sentence\>](https://msdn.microsoft.com/en-us/library/system.uint16\(v=vs.140\).aspx)|Представляет беззнаковое 16\-разрядное целое число.|  
-        |[\<caps:sentence id\="tgt54" sentenceid\="3de84ad0700f2a1571f633d399e1900e" class\="tgtSentence"\>UInt32\<\/caps:sentence\>](https://msdn.microsoft.com/en-us/library/system.uint32\(v=vs.140\).aspx)|Представляет беззнаковое 32\-разрядное целое число.|  
-        |[\<caps:sentence id\="tgt56" sentenceid\="2e8d31865e5d4b9d8611e1b991baed07" class\="tgtSentence"\>UInt64\<\/caps:sentence\>](https://msdn.microsoft.com/en-us/library/system.uint64\(v=vs.140\).aspx)|Представляет беззнаковое 64\-битовое целое число.|  
-        |[\<caps:sentence id\="tgt58" sentenceid\="92d74abda31865424016b16e2c806a66" class\="tgtSentence"\>UIntPtr\<\/caps:sentence\>](https://msdn.microsoft.com/en-us/library/system.uintptr\(v=vs.140\).aspx)|Определяемый платформой тип, который используется для представления указателя или дескриптора.|  
-        |[\<caps:sentence id\="tgt60" sentenceid\="cab8111fd0b710a336c898e539090e34" class\="tgtSentence"\>Void\<\/caps:sentence\>](https://msdn.microsoft.com/en-us/library/system.void\(v=vs.140\).aspx)|Указывает метод, который не возвращает значение, т.е. метод, который имеет тип возвращаемого значения "Void".|
+        |---------------|-----------------|  
+        |[Boolean](https://msdn.microsoft.com/en-us/library/system.boolean\(v=vs.140\).aspx)|Представляет логическое значение.|  
+        |[Byte](https://msdn.microsoft.com/en-us/library/system.byte\(v=vs.140\).aspx)|Представляет 8-битовое целое число без знака.|  
+        |[Char](https://msdn.microsoft.com/en-us/library/system.char\(v=vs.140\).aspx)|Представляет символ Юникода.|  
+        |[DateTime](https://msdn.microsoft.com/en-us/library/system.datetime.datetime.aspx)|Представляет текущее время, обычно выраженное как дата и время суток.|  
+        |[Decimal](https://msdn.microsoft.com/en-us/library/system.decimal\(v=vs.140\).aspx)|Представляет десятичное число.|  
+        |[Double](https://msdn.microsoft.com/en-us/library/system.double\(v=vs.140\).aspx)|Представляет число двойной точности с плавающей запятой.|  
+        |[Guid](https://msdn.microsoft.com/en-us/library/system.guid\(v=vs.140\).aspx)|Представляет глобальный уникальный идентификатор (GUID).|  
+        |[Int16](https://msdn.microsoft.com/en-us/library/system.int16\(v=vs.140\).aspx)|Представляет 16-разрядное целое число со знаком.|  
+        |[Int32](https://msdn.microsoft.com/en-us/library/system.int32\(v=vs.140\).aspx)|Представляет 32-разрядное целое число со знаком.|  
+        |[Int64](https://msdn.microsoft.com/en-us/library/system.int64\(v=vs.140\).aspx)|Представляет 64-разрядное целое число со знаком.|  
+        |[IntPtr](https://msdn.microsoft.com/en-us/library/system.intptr\(v=vs.140\).aspx)|Определяемый платформой тип, который используется для представления указателя или дескриптора.|  
+        |[SByte](https://msdn.microsoft.com/en-us/library/system.byte.aspx)|Представляет 8-разрядное целое число со знаком.|  
+        |[Single](https://msdn.microsoft.com/en-us/library/system.single.aspx)|Представляет число с плавающей запятой одиночной точности.|  
+        |[TimeSpan](https://msdn.microsoft.com/en-us/library/system.timespan\(v=vs.140\).aspx)|Представляет интервал времени.|  
+        |[UInt16](https://msdn.microsoft.com/en-us/library/system.uint16\(v=vs.140\).aspx)|Представляет 16-битовое целое число без знака.|  
+        |[UInt32](https://msdn.microsoft.com/en-us/library/system.uint32\(v=vs.140\).aspx)|Представляет 32-битовое целое число без знака.|  
+        |[UInt64](https://msdn.microsoft.com/en-us/library/system.uint64\(v=vs.140\).aspx)|Представляет 64-битовое целое число без знака.|  
+        |[UIntPtr](https://msdn.microsoft.com/en-us/library/system.uintptr\(v=vs.140\).aspx)|Определяемый платформой тип, который используется для представления указателя или дескриптора.|  
+        |[Void](https://msdn.microsoft.com/en-us/library/system.void\(v=vs.140\).aspx)|Указывает метод, который не возвращает значений. то есть метод имеет тип возврата void.|

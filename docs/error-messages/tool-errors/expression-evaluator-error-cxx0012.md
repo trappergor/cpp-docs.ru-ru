@@ -1,32 +1,31 @@
 ---
-title: "Ошибка вычислителя выражений CXX0012 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "CXX0012"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "CAN0012"
-  - "CXX0012"
+title: "Ошибка вычислителя выражений CXX0012 | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords: CXX0012
+dev_langs: C++
+helpviewer_keywords:
+- CXX0012
+- CAN0012
 ms.assetid: bf547e21-6708-4854-ad23-2ae5a889fd82
-caps.latest.revision: 6
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 6
+caps.latest.revision: "6"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: e825118a7ce27d0c28f145328f380f7b71267097
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/24/2017
 ---
-# Ошибка вычислителя выражений CXX0012
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="expression-evaluator-error-cxx0012"></a>Ошибка вычислителя выражений CXX0012
 отсутствует левая фигурная скобка  
   
- Это выражение содержит неравное количество правых и левых фигурных скобок.  Перепечатайте выражение с правильным количеством правых и левых фигурных скобок.  
+ Выражение содержит несбалансированной фигурную скобку. Повторно введите выражение с балансировкой фигурные скобки.  
   
  Эта ошибка идентична ошибке CAN0012.

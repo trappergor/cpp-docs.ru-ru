@@ -1,48 +1,47 @@
 ---
-title: "&lt;remarks&gt; (Visual C++) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "remarks"
-  - "<remarks>"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "<remarks> - XML-тег C++"
-  - "remarks - XML-тег C++"
+title: "&lt;Примечания&gt; (Visual C++) | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-ide
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- remarks
+- <remarks>
+dev_langs: C++
+helpviewer_keywords:
+- <remarks> C++ XML tag
+- remarks C++ XML tag
 ms.assetid: c820083b-3192-40ab-9ec8-1472c55b4247
-caps.latest.revision: 9
-caps.handback.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "9"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 369a8b7a2addaf2fcc39b598b7ce6582c26e1e98
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/24/2017
 ---
-# &lt;remarks&gt; (Visual C++)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Тег \<remarks\> используется для добавления сведений о типе, дополняющих сведения, указанные в [\<summary\>](../ide/summary-visual-cpp.md).  Эти сведения отображаются в [Обозреватель объектов](http://msdn.microsoft.com/ru-ru/f89acfc5-1152-413d-9f56-3dc16e3f0470) и в веб\-отчет комментариев кода.  
+# <a name="ltremarksgt-visual-c"></a>&lt;Примечания&gt; (Visual C++)
+Тег \<remarks> позволяет добавить сведения о типе, дополняющие информацию, указанную с помощью тега [\<summary>](../ide/summary-visual-cpp.md). Эта информация отображается в [обозревателя объектов](http://msdn.microsoft.com/en-us/f89acfc5-1152-413d-9f56-3dc16e3f0470) и в веб-отчете комментариев кода.  
   
-## Синтаксис  
+## <a name="syntax"></a>Синтаксис  
   
 ```  
 <remarks>description</remarks>  
 ```  
   
-#### Параметры  
+#### <a name="parameters"></a>Параметры  
  `description`  
- Описание члена.  
+ Описание элемента.  
   
-## Заметки  
- Чтобы обработать и сохранить комментарии документации в файл, при компиляции необходимо использовать параметр [\/doc](../build/reference/doc-process-documentation-comments-c-cpp.md).  
+## <a name="remarks"></a>Примечания  
+ Чтобы обработать и сохранить комментарии документации в файл, при компиляции необходимо использовать параметр [/doc](../build/reference/doc-process-documentation-comments-c-cpp.md).  
   
-## Пример  
+## <a name="example"></a>Пример  
   
 ```  
 // xml_remarks_tag.cpp  
@@ -60,5 +59,5 @@ using namespace System;
 public ref class MyClass {};  
 ```  
   
-## См. также  
+## <a name="see-also"></a>См. также  
  [Документация XML](../ide/xml-documentation-visual-cpp.md)

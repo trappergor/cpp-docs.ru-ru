@@ -4,44 +4,25 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-windows
+ms.technology: cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- omp_get_max_threads
-dev_langs:
-- C++
-helpviewer_keywords:
-- omp_get_max_threads OpenMP function
+f1_keywords: omp_get_max_threads
+dev_langs: C++
+helpviewer_keywords: omp_get_max_threads OpenMP function
 ms.assetid: f47c3725-3e40-469f-8bc8-a1e47f264cc3
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
-ms.openlocfilehash: 8acb323a72300a3e613c0b8df8f5dfadd6de7643
-ms.contentlocale: ru-ru
-ms.lasthandoff: 02/24/2017
-
+ms.openlocfilehash: a24fd6adbe2af8c868cad61e9a2bf967f1fbf0ae
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="ompgetmaxthreads"></a>omp_get_max_threads
-Возвращает целое число, равное или больше, чем количество потоков, которые были бы доступны, если область параллельной без [num_threads](../../../parallel/openmp/reference/num-threads.md) были определены в этот момент в коде.  
+Возвращает целое число, равное или больше, чем число потоков, которые были бы доступны, если параллельной области без [num_threads](../../../parallel/openmp/reference/num-threads.md) были определены в этой точке в коде.  
   
 ## <a name="syntax"></a>Синтаксис  
   

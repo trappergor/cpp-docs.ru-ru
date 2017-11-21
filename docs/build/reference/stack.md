@@ -1,42 +1,41 @@
 ---
-title: "/STACK | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "/stack"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "/STACK - параметр программы editbin"
-  - "STACK - параметр (программа editbin)"
-  - "-STACK - параметр (программа editbin)"
-  - "стек, установка размера"
+title: "-STACK | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: /stack
+dev_langs: C++
+helpviewer_keywords:
+- -STACK editbin option
+- STACK editbin option
+- stack, setting size
+- /STACK editbin option
 ms.assetid: a39bcff0-c945-4355-80cc-8e4f24a5f142
-caps.latest.revision: 7
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: ae6696123ffa016a1c3f64ed2310efe571b55978
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/24/2017
 ---
-# /STACK
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="stack"></a>/STACK
 ```  
 /STACK:reserve[,commit]  
 ```  
   
-## Заметки  
- Данный параметр задает размер стека в байтах и принимает аргументы в десятичной нотации или нотации языка C.  Параметр \/STACK применяется только к исполняемому файлу.  
+## <a name="remarks"></a>Примечания  
+ Этот параметр задает размер стека в байтах и принимает аргументы в десятичной нотации или языка C нотации. Параметр/Stack применяется только к исполняемым файлом.  
   
- Аргумент *reserve* определяет общий объем виртуальной памяти, выделяемой под стек.  EDITBIN округляет указанное значение до ближайших 4 байт.  
+ *Зарезервировать* аргумент задает все выделение стека в виртуальной памяти. EDITBIN округляет указанное значение до ближайших 4 байт.  
   
- Необязательный аргумент `commit` интерпретируется операционной системой.  В Windows NT, Windows 95 и Windows 98 аргумент `commit` определяет объем одновременно выделяемой физической памяти.  Выделенная виртуальная память резервирует пространство в файле разбиения по страницам.  Увеличение значения `commit` позволяет сэкономить время, если приложению требуется больший объем стека, однако повышает требования к памяти и может увеличивать время запуска приложения.  
+ Необязательный `commit` аргумент интерпретируется операционной системой. В Windows NT, Windows 95 и Windows 98 `commit` указывает объем физической памяти для выделения одновременно. Выделенная виртуальная память резервирует пространство в файле подкачки. Более высокий `commit` значение экономит время, когда приложению требуется больший объем стека, однако увеличивает требования к памяти и, возможно, время запуска.  
   
-## См. также  
+## <a name="see-also"></a>См. также  
  [Параметры EDITBIN](../../build/reference/editbin-options.md)

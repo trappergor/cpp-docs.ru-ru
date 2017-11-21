@@ -1,60 +1,60 @@
 ---
-title: "Экспорт функций на языке C++ для использования в исполняемых модулях, исходный код которых написан на языке C | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "экспорт библиотек DLL [C++], Функции C++ в реализации C"
-  - "функции - экспортирование [C++], Функции C++ в реализации C"
-  - "функции [C++], Функции C++ в реализации C"
-  - "функции [C++], экспорт"
+title: "Экспорт функций C++ для использования в исполняемых файлах языка C | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- functions [C++], C++ functions in C executables
+- exporting DLLs [C++], C++ functions in C executables
+- exporting functions [C++], C++ functions in C executables
+- functions [C++], exporting
 ms.assetid: 80b9e982-f52d-4312-a891-f73cc69f3c2b
-caps.latest.revision: 7
-caps.handback.revision: 7
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
+caps.latest.revision: "7"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: 56e275b6c97bf319ab3d2bacb014423e6c0efd20
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/24/2017
 ---
-# Экспорт функций на языке C++ для использования в исполняемых модулях, исходный код которых написан на языке C
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Если к функциям в библиотеках DLL, исходный код которых написан на языке C\+\+, требуется доступ из модуля, написанного на языке C, то эти функции следует объявить с помощью компоновки C, а не C\+\+.  Если не указано иное, компилятор C\+\+ использует типобезопасное именование C\+\+ \(или оформление имен\), а также соглашения о вызовах C\+\+, которые трудно реализовать средствами языка C.  
+# <a name="exporting-c-functions-for-use-in-c-language-executables"></a>Экспорт функций на языке C++ для использования в исполняемых модулях, исходный код которых написан на языке C  
   
- Чтобы указать компоновку C, в объявлениях функций укажите **extern**"**C**".  Примеры.  
+Если есть функции в DLL, написанным на языке C++, которым требуется доступ из модуля языка C, следует объявить эти функции с компоновкой C, а не C++. Если не указано иное, компилятор C++ использует C++ типобезопасный именования (оформление имен) и C++, соглашения о вызовах, которые трудно реализовать средствами языка C.  
+  
+Чтобы указать компоновку C, укажите `extern "C"` объявлениях функций. Пример:  
   
 ```  
 extern "C" __declspec( dllexport ) int MyFunc(long parm1);  
 ```  
   
-## Выберите действие.  
+## <a name="what-do-you-want-to-do"></a>Выберите действие  
   
--   [Экспорт из библиотеки DLL с использованием DEF\-файлов](../build/exporting-from-a-dll-using-def-files.md)  
+-   [Экспорт из библиотеки DLL с использованием DEF-файлы](../build/exporting-from-a-dll-using-def-files.md)  
   
--   [Экспорт из библиотеки DLL с использованием \_\_declspec\(dllexport\)](../build/exporting-from-a-dll-using-declspec-dllexport.md)  
+-   [Экспорт из библиотеки DLL с помощью __declspec(dllexport)](../build/exporting-from-a-dll-using-declspec-dllexport.md)  
   
--   [Экспорт и импорт с использованием AFX\_EXT\_CLASS](../build/exporting-and-importing-using-afx-ext-class.md)  
+-   [Экспорт и импорт с использованием AFX_EXT_CLASS](../build/exporting-and-importing-using-afx-ext-class.md)  
   
--   [Экспорт функций на языке C для использования в файлах, исходный код которых написан на языке C или C\+\+](../build/exporting-c-functions-for-use-in-c-or-cpp-language-executables.md)  
+-   [Экспорт функций на языке C для использования в исполняемых файлах C или C++-язык](../build/exporting-c-functions-for-use-in-c-or-cpp-language-executables.md)  
   
--   [Определение подходящего метода экспорта](../build/determining-which-exporting-method-to-use.md)  
+-   [Выбор подходящего метода экспорта для использования](../build/determining-which-exporting-method-to-use.md)  
   
--   [Импорт в приложение с использованием \_\_declspec\(dllimport\)](../build/importing-into-an-application-using-declspec-dllimport.md)  
+-   [Импорт в приложение с помощью __declspec(dllimport)](../build/importing-into-an-application-using-declspec-dllimport.md)  
   
--   [Инициализацию DLL](../build/initializing-a-dll.md)  
+-   [Инициализация библиотеки DLL](../build/run-time-library-behavior.md#initializing-a-dll)  
   
-## Дополнительные сведения  
+## <a name="what-do-you-want-to-know-more-about"></a>Дополнительные сведения  
   
--   [Декорированные имена](../Topic/Decorated%20Names.md)  
+-   [Внутренние имена](../build/reference/decorated-names.md)  
   
--   [Спецификации компоновки](http://msdn.microsoft.com/ru-ru/d2b0cff1-7798-4c38-9ac8-61c3bfe2bfb9)  
+-   [Использование ключевого слова extern для задания компоновки](../cpp/using-extern-to-specify-linkage.md)  
   
-## См. также  
+## <a name="see-also"></a>См. также  
  [Экспорт из библиотеки DLL](../build/exporting-from-a-dll.md)

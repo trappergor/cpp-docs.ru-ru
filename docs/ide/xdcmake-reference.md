@@ -1,65 +1,63 @@
 ---
-title: "Справочник по XDCMake | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "xdcmake"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "программа xdcmake"
+title: "Справочник по XDCMake | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-ide
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: xdcmake
+dev_langs: C++
+helpviewer_keywords: xdcmake program
 ms.assetid: 14e65747-d000-4343-854b-8393bf01cbac
-caps.latest.revision: 17
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 17
+caps.latest.revision: "17"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: ad0744da891c93dab44c980ed10aa4213a4dddb3
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/24/2017
 ---
-# Справочник по XDCMake
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-xdcmake.exe программы, компилировать файлы .xdc в XML\-файл.  Файл .xdc создается компилятором Visual C\+\+ C для каждого файла исходного кода, когда исходный код компилироваться с [\/doc](../build/reference/doc-process-documentation-comments-c-cpp.md) и когда файл исходного кода комментариями документации, помеченные тегами вверх с XML.  
+# <a name="xdcmake-reference"></a>Справочник по XDCMake
+xdcmake.exe — это программа, которая компилирует XDC-файлы в XML-файл. XDC-файл создается компилятором Visual C++ для каждого файла исходного кода при компиляции исходного кода с [/doc](../build/reference/doc-process-documentation-comments-c-cpp.md) и когда файл исходного кода содержит комментарии, помеченные XML-теги.  
   
-### Использовать xdcmake.exe среды разработки Visual Studio  
+### <a name="to-use-xdcmakeexe-in-the-visual-studio-development-environment"></a>Чтобы использовать xdcmake.exe в среде разработки Visual Studio  
   
-1.  Откройте диалоговое окно **Страницы свойств** проекта.  Дополнительные сведения см. в разделе [Открытие свойств страниц проекта](../misc/how-to-open-project-property-pages.md).  
+1.  Откройте диалоговое окно **Страницы свойств** проекта. Дополнительные сведения см. в разделе [работа со свойствами проекта](../ide/working-with-project-properties.md).  
   
-2.  Откройте папку **Свойства конфигурации**.  
+2.  Откройте **свойства конфигурации** папки.  
   
-3.  Щелкните страницу свойств **Документирующие комментарии XML**.  
+3.  Нажмите кнопку **комментариев XML-документа** страницу свойств.  
   
 > [!NOTE]
->  параметры xdcmake.exe в командной строке отличаются от параметров при xdcmake.exe используется среды разработки \(страниц свойств\).  Дополнительные сведения об использовании xdcmake.exe среды разработки см. в разделе [Страницы свойств средства создания XML\-документов](../Topic/XML%20Document%20Generator%20Tool%20Property%20Pages.md).  
+>  Параметры xdcmake.exe в командной строке отличаются от параметров, при использовании xdcmake.exe в среде разработки (страницы свойств). Сведения об использовании xdcmake.exe в среде разработки см. в разделе [страницы свойств средства создания документа XML](../ide/xml-document-generator-tool-property-pages.md).  
   
-## Синтаксис  
- xdcmake `input_filename options`  
+## <a name="syntax"></a>Синтаксис  
+ Программа xdcmake`input_filename options`  
   
-## Параметры  
- Здесь:  
+## <a name="parameters"></a>Параметры  
+ где:  
   
  `input_filename`  
- Имя файлов .xdc, используемых в качестве входных данных для xdcmake.exe.  Укажите один или несколько файлов .xdc или используйте \*.xdc использование всех файлов .xdc в текущем каталоге.  
+ Имя файла XDC-файлах, используемых в качестве входных для xdcmake.exe. Укажите один или несколько файлов .xdc или используйте *.xdc для использования всех XDC-файлы в текущем каталоге.  
   
  `options`  
- Одно или несколько из следующих действий:  
+ Ноль или несколько из следующих действий:  
   
 |Параметр|Описание|  
-|--------------|--------------|  
-|\/? \- \/help|Отображение справки для xdcmake.exe.|  
-|\/assembly:*имя файла*|Позволяет задать значение тега \<assembly\> XML\-файла.  По умолчанию значение тега \<assembly\> совпадает с именем файла XML.|  
-|\/nologo|Уведомление об авторских правах не выводится.|  
-|\/out:*имя файла*|Позволяет задать имя файла XML.  По умолчанию имя файла XML имя файла первого файла .xdc обрабатываемого xdcmake.exe.|  
+|------------|-----------------|  
+|/?, / help|Отображение справки для xdcmake.exe.|  
+|/ Assembly:*имя файла*|Вы можете задать значение \<сборки > тегов в XML-файле.  По умолчанию значение \<сборки > тег является таким же, как имя файла XML-файла.|  
+|/nologo|Подавлять сообщения об авторских правах.|  
+|/ out:*имя файла*|Позволяет указать имя XML-файла.  По умолчанию имя XML-файла является имя первого XDC-файла, обрабатываемых xdcmake.exe.|  
   
-## Заметки  
- Visual Studio будет xdcmake.exe автоматически при построении проекта.  Можно также вызвать xdcmake.exe в командной строке.  
+## <a name="remarks"></a>Примечания  
+ Visual Studio будет вызывать xdcmake.exe автоматически при построении проекта. Можно также вызвать xdcmake.exe из командной строки.  
   
- Дополнительные сведения см. в разделе [Рекомендуемые теги для комментариев документации](../Topic/Recommended%20Tags%20for%20Documentation%20Comments%20\(Visual%20C++\).md) на добавление документирующие комментарии к файлам исходного кода.  
+ В разделе [Рекомендуемые теги для комментариев документации](../ide/recommended-tags-for-documentation-comments-visual-cpp.md) Дополнительные сведения о добавлении комментариев документации в файлах исходного кода.  
   
-## См. также  
+## <a name="see-also"></a>См. также  
  [Документация XML](../ide/xml-documentation-visual-cpp.md)

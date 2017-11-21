@@ -1,66 +1,67 @@
 ---
-title: "/DRIVER (драйвер режима ядра Windows NT) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "VC.Project.VCLinkerTool.driver"
-  - "/driver"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "/DRIVER - параметр компоновщика"
-  - "DRIVER - параметр компоновщика"
-  - "-DRIVER - параметр компоновщика"
-  - "драйвер, работающий в режиме ядра"
+title: "-DRIVER (драйвер режима ядра Windows NT) | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- VC.Project.VCLinkerTool.driver
+- /driver
+dev_langs: C++
+helpviewer_keywords:
+- kernel mode driver
+- -DRIVER linker option
+- DRIVER linker option
+- /DRIVER linker option
 ms.assetid: aeee8e28-5d97-40f5-ba16-9f370fe8a1b8
-caps.latest.revision: 10
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 10
+caps.latest.revision: "10"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: 819efe8de1e1cc4f5e12c3d20834556e15de1132
+ms.sourcegitcommit: ca2f94dfd015e0098a6eaf5c793ec532f1c97de1
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/31/2017
 ---
-# /DRIVER (драйвер режима ядра Windows NT)
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+# <a name="driver-windows-nt-kernel-mode-driver"></a>/DRIVER (драйвер режима ядра Windows NT)
 
-```  
-/DRIVER[:UPONLY | :WDM]  
-```  
-  
-## Заметки  
- Использовать параметр компоновщика \/DRIVER для построения драйвера в режиме ядра Windows NT.  
-  
- При использовании **\/DRIVER:UPONLY** компоновщик добавляет битовый флаг **IMAGE\_FILE\_UP\_SYSTEM\_ONLY** к атрибутам выходного заголовка для указания на то, что это однопроцессорный драйвер.  Операционная система отклонит загрузку UP\-драйвера в многопроцессорной \(MP\) системе.  
-  
- При использовании **\/DRIVER:WDM** компоновщик устанавливает битовый флаг **IMAGE\_DLLCHARACTERISTICS\_WDM\_DRIVER** в поле DllCharacteristics дополнительного заголовка.  
-  
- Если параметр **\/DRIVER** не указан, эти битовые флаги не устанавливаются компоновщиком.  
-  
- Если параметр **\/DRIVER** указан, происходит следующее.  
-  
--   Действует параметр \/FIXED:NO \([\/FIXED \(фиксированный базовый адрес\)](../../build/reference/fixed-fixed-base-address.md)\).  
-  
--   Выходной файл получает расширение .sys  Для изменения имени файла и расширения по умолчанию используется параметр **\/OUT** \([\/OUT \(имя выходного файла\)](../../build/reference/out-output-file-name.md)\).  
-  
-### Установка данного параметра компоновщика в среде разработки Visual Studio  
-  
-1.  Откройте диалоговое окно **Страницы свойств** проекта.  Дополнительные сведения см. в разделе [Задание свойств проекта C\+\+](../../ide/working-with-project-properties.md).  
-  
-2.  Выберите папку **Компоновщик**.  
-  
-3.  Выберите страницу свойств **Система**.  
-  
-4.  Измените значение свойства **Драйвер**.  
-  
-### Установка данного параметра компоновщика программным способом  
-  
-1.  См. раздел `P:Microsoft.VisualStudio.VCProjectEngine.VCLinkerTool.driver`.  
-  
-## См. также  
- [Настройка параметров компоновщика](../../build/reference/setting-linker-options.md)   
- [Параметры компоновщика](../../build/reference/linker-options.md)
+>ИЛИ ДРАЙВЕР [: UPONLY |: WDM]
+
+## <a name="remarks"></a>Примечания
+
+Используйте **/Driver** компоновщика для построения драйвер режима ядра Windows NT.
+
+**/DRIVER:UPONLY** указывает компоновщику добавить **IMAGE_FILE_UP_SYSTEM_ONLY** бит в характеристики в выходном заголовке, чтобы указать, что это однопроцессорный (UP) драйвер. Операционная система отклонит загрузку UP-драйвера в многопроцессорной (MP) системе.
+
+**/DRIVER:WDM** указывает компоновщику задать **бита параметра** бит в поле DllCharacteristics необязательного заголовка.
+
+Если **/Driver** не указан, эти битовые флаги не устанавливаются компоновщиком.
+
+Если **/Driver** указано:
+
+- **/ Fixed: no** действует. Дополнительные сведения см. в разделе [Параметр /FIXED (фиксированный базовый адрес)](../../build/reference/fixed-fixed-base-address.md).
+
+- Расширение выходного файла задано значение .sys. Используйте **/OUT** Чтобы изменить имя файла по умолчанию и расширение. Дополнительные сведения см. в разделе [Параметр /OUT (имя выходного файла)](../../build/reference/out-output-file-name.md).
+
+### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>Задание данного параметра компоновщика в среде разработки Visual Studio
+
+1. Откройте диалоговое окно **Страницы свойств** проекта. Дополнительные сведения см. в разделе [задание свойств проекта Visual C++](../../ide/working-with-project-properties.md).
+
+1. Нажмите кнопку **компоновщика** папки.
+
+1. Нажмите кнопку **системы** страницу свойств.
+
+1. Изменить **драйвер** свойство.
+
+### <a name="to-set-this-linker-option-programmatically"></a>Задание данного параметра компоновщика программным способом
+
+- В разделе [VCLinkerTool.driver свойства](https://docs.microsoft.com/dotnet/api/microsoft.visualstudio.vcprojectengine.vclinkertool.driver?view=visualstudiosdk-2017#Microsoft_VisualStudio_VCProjectEngine_VCLinkerTool_driver).
+
+## <a name="see-also"></a>См. также
+
+[Настройка параметров компоновщика](../../build/reference/setting-linker-options.md)   
+[Параметры компоновщика](../../build/reference/linker-options.md)

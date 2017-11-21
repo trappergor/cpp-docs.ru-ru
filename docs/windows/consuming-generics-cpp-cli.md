@@ -1,43 +1,34 @@
 ---
-title: "Использование универсальных типов (C++/CLI) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "универсальные [C++], из языков .NET"
+title: "Использование универсальных типов (C + +/ CLI) | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+dev_langs: C++
+helpviewer_keywords: generics [C++], consuming from .NET languages
 ms.assetid: e6330ef5-e907-432e-b527-7a22f5899639
-caps.latest.revision: 14
-caps.handback.revision: 14
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "14"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 0e1abb5cdebca8c19aeeb4ec00fbc46b3120170d
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/24/2017
 ---
-# Использование универсальных типов (C++/CLI)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Универсальные шаблоны, созданные на одном языке .NET, могут использоваться в других языках .NET.  В отличие от шаблонов, универсальный шаблон в компилированной сборке остается универсальным.  Таким образом, можно создать универсальный тип в другой сборке и даже на языке, отличном от языка сборки, в которой универсальный тип был определен.  
+# <a name="consuming-generics-ccli"></a>Использование универсальных типов (C++/CLI)
+Универсальные шаблоны, созданные на одном языке .NET, могут использоваться в других языках .NET. В отличие от обычных шаблонов, универсальный шаблон в скомпилированной сборке остается универсальным. Таким образом, экземпляр универсального типа можно создать в другой сборке и даже на языке, отличном от языка сборки, в которой был определен универсальный тип.  
   
-## Примечания  
- Дополнительные сведения см. в следующих разделах:  
+## <a name="example"></a>Пример  
   
--   [Введение в универсальные шаблоны](../Topic/Introduction%20to%20Generics%20\(C%23%20Programming%20Guide\).md)  
+### <a name="description"></a>Описание  
+ В этом примере показан универсальный класс, определенный в C#.  
   
--   [Универсальные типы в Visual Basic](../Topic/Generic%20Types%20in%20Visual%20Basic%20\(Visual%20Basic\).md)  
-  
-## Пример  
-  
-### Описание  
- В этом примере показан универсальный класс, определенный в C\#.  
-  
-### Код  
+### <a name="code"></a>Код  
   
 ```  
 // consuming_generics_from_other_NET_languages.cs  
@@ -95,12 +86,12 @@ public class CircularList<ItemType> {
 }  
 ```  
   
-## Пример  
+## <a name="example"></a>Пример  
   
-### Описание  
- В этом примере используется сборка, созданная в C\#.  
+### <a name="description"></a>Описание  
+ В этом примере используется сборка, созданная в C#.  
   
-### Код  
+### <a name="code"></a>Код  
   
 ```  
 // consuming_generics_from_other_NET_languages_2.cpp  
@@ -121,7 +112,7 @@ int main() {
 }  
 ```  
   
-### Output  
+### <a name="output"></a>Вывод  
   
 ```  
 90  
@@ -134,5 +125,5 @@ int main() {
 10  
 ```  
   
-## См. также  
+## <a name="see-also"></a>См. также  
  [Универсальные шаблоны](../windows/generics-cpp-component-extensions.md)

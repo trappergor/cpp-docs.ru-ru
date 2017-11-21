@@ -1,44 +1,42 @@
 ---
-title: "Метод RuntimeClass::InternalAddRef | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "implements/Microsoft::WRL::RuntimeClass::InternalAddRef"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "InternalAddRef - метод"
+title: "Метод RuntimeClass::InternalAddRef | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: implements/Microsoft::WRL::RuntimeClass::InternalAddRef
+dev_langs: C++
+helpviewer_keywords: InternalAddRef method
 ms.assetid: b8ed7f93-83d8-47ec-988c-98fe65104e7a
-caps.latest.revision: 4
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 4
+caps.latest.revision: "4"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: fc63ef7feeb6cf1491bbde4e99a2860485fb0497
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/24/2017
 ---
-# Метод RuntimeClass::InternalAddRef
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Увеличивает значение счетчика ссылок для текущего объекта RuntimeClass.  
+# <a name="runtimeclassinternaladdref-method"></a>Метод RuntimeClass::InternalAddRef
+Увеличивает счетчик ссылок с текущим объектом RuntimeClass.  
   
-## Синтаксис  
+## <a name="syntax"></a>Синтаксис  
   
 ```  
 ULONG InternalAddRef();  
 ```  
   
-## Возвращаемое значение  
- Результирующее значение счетчика ссылок.  
+## <a name="return-value"></a>Возвращаемое значение  
+ Счетчик ссылок.  
   
-## Требования  
+## <a name="requirements"></a>Требования  
  **Заголовок:** implements.h  
   
  **Пространство имен:** Microsoft::WRL  
   
-## См. также  
+## <a name="see-also"></a>См. также  
  [Класс RuntimeClass](../windows/runtimeclass-class.md)

@@ -1,32 +1,30 @@
 ---
-title: "Класс Module | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "module/Microsoft::WRL::Module"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Module - класс"
+title: "Класс Module | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: module/Microsoft::WRL::Module
+dev_langs: C++
+helpviewer_keywords: Module class
 ms.assetid: dd67e3b8-c2e1-4f53-8c0f-565a140ba649
-caps.latest.revision: 6
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 6
+caps.latest.revision: "6"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: b2536d406293d84db2ce5d5bd3e0292e0e57920e
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/24/2017
 ---
-# Класс Module
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="module-class"></a>Module - класс
 Представляет коллекцию связанных объектов.  
   
-## Синтаксис  
+## <a name="syntax"></a>Синтаксис  
   
 ```  
   
@@ -42,83 +40,83 @@ template<>
 class Module<OutOfProc> : public Module<InProc>;  
 ```  
   
-#### Параметры  
+#### <a name="parameters"></a>Параметры  
  `moduleType`  
- Сочетание одного или нескольких значений перечисления [ModuleType](../Topic/ModuleType%20Enumeration.md).  
+ Сочетание одного или нескольких [ModuleType](../windows/moduletype-enumeration.md) значений перечисления.  
   
-## Члены  
+## <a name="members"></a>Члены  
   
-### Защищенные классы  
-  
-|Имя|Описание|  
-|---------|--------------|  
-|[Класс Module::GenericReleaseNotifier](../windows/module-genericreleasenotifier-class.md)|Вызывает обработчик событий при освобождении последнего объекта в текущем модуле.  Обработчик событий определяется в лямбда\-выражении, функтором или указателем\-на\-функцию.|  
-|[Класс Module::MethodReleaseNotifier](../Topic/Module::MethodReleaseNotifier%20Class.md)|Вызывает обработчик событий при освобождении последнего объекта в текущем модуле.  Обработчик событий определяется объектом и его членом\-указателем\-на\-метод.|  
-|[Класс Module::ReleaseNotifier](../Topic/Module::ReleaseNotifier%20Class.md)|Вызывает обработчик событий при освобождении последнего объекта в модуле.|  
-  
-### Открытые конструкторы  
+### <a name="protected-classes"></a>Защищенные классы  
   
 |Имя|Описание|  
-|---------|--------------|  
+|----------|-----------------|  
+|[Класс Module::GenericReleaseNotifier](../windows/module-genericreleasenotifier-class.md)|Вызывает обработчик событий при освобождении последнего объекта в текущем модуле. Обработчик событий задается лямбда-выражением, функтором или указателем на функцию.|  
+|[Класс Module::MethodReleaseNotifier](../windows/module-methodreleasenotifier-class.md)|Вызывает обработчик событий при освобождении последнего объекта в текущем модуле. Обработчик событий задается объектом и его элементом указателя для метода.|  
+|[Класс Module::ReleaseNotifier](../windows/module-releasenotifier-class.md)|Вызывает обработчик событий при освобождении последнего объекта в модуле.|  
+  
+### <a name="public-constructors"></a>Открытые конструкторы  
+  
+|Имя|Описание|  
+|----------|-----------------|  
 |[Деструктор Module::~Module](../windows/module-tilde-module-destructor.md)|Деинициализирует текущий экземпляр класса Module.|  
   
-### Защищенные конструкторы  
+### <a name="protected-constructors"></a>Защищенные конструкторы  
   
 |Имя|Описание|  
-|---------|--------------|  
+|----------|-----------------|  
 |[Конструктор Module::Module](../windows/module-module-constructor.md)|Инициализирует новый экземпляр класса Module.|  
   
-### Открытые методы  
+### <a name="public-methods"></a>Открытые методы  
   
 |Имя|Описание|  
-|---------|--------------|  
+|----------|-----------------|  
 |[Метод Module::Create](../windows/module-create-method.md)|Создает экземпляр модуля.|  
-|[Метод Module::DecrementObjectCount](../windows/module-decrementobjectcount-method.md)|Уменьшает количество объектов, отслеживаемых модулем.|  
+|[Метод Module::DecrementObjectCount](../windows/module-decrementobjectcount-method.md)|Уменьшает число объектов, отслеживаемых модулем.|  
 |[Метод Module::GetActivationFactory](../windows/module-getactivationfactory-method.md)|Получает фабрику активации для модуля.|  
 |[Метод Module::GetClassObject](../windows/module-getclassobject-method.md)|Извлекает кэш фабрик классов.|  
-|[Метод Module::GetModule](../Topic/Module::GetModule%20Method.md)|Создает экземпляр модуля.|  
+|[Метод Module::GetModule](../windows/module-getmodule-method.md)|Создает экземпляр модуля.|  
 |[Метод Module::GetObjectCount](../windows/module-getobjectcount-method.md)|Извлекает количество объектов, управляемых этим модулем.|  
-|[Метод Module::IncrementObjectCount](../windows/module-incrementobjectcount-method.md)|Увеличивает количество объектов, отслеживаемых модулем.|  
-|[Метод Module::RegisterCOMObject](../windows/module-registercomobject-method.md)|Регистрирует один или несколько объектов модели COM таким образом, что другие приложения смогут подключиться к ним.|  
-|[Метод Module::RegisterObjects](../windows/module-registerobjects-method.md)|Регистрирует объекты модели COM или [!INCLUDE[wrt](../atl/reference/includes/wrt_md.md)] таким образом, что другие приложения смогут подключиться к ним.|  
-|[Метод Module::RegisterWinRTObject](../windows/module-registerwinrtobject-method.md)|Регистрирует один или несколько объектов [!INCLUDE[wrt](../atl/reference/includes/wrt_md.md)] таким образом, что другие приложения смогут подключиться к ним.|  
+|[Метод Module::IncrementObjectCount](../windows/module-incrementobjectcount-method.md)|Увеличивает число объектов, отслеживаемых модулем.|  
+|[Метод Module::RegisterCOMObject](../windows/module-registercomobject-method.md)|Регистрирует один или несколько объектов модели COM, чтобы другие приложения могли к ним подключиться.|  
+|[Метод Module::RegisterObjects](../windows/module-registerobjects-method.md)|Регистрирует объекты COM или среды выполнения Windows, чтобы другие приложения могли к ним подключиться.|  
+|[Метод Module::RegisterWinRTObject](../windows/module-registerwinrtobject-method.md)|Регистрирует один или несколько объектов среды выполнения Windows, чтобы другие приложения могли к ним подключиться.|  
 |[Метод Module::Terminate](../windows/module-terminate-method.md)|Приводит к завершению работы всех экземпляров фабрик, созданных модулем.|  
-|[Метод Module::UnregisterCOMObject](../Topic/Module::UnregisterCOMObject%20Method.md)|Отменяет регистрацию одного или нескольких объектов модели COM, что предотвращает подключение к ним других приложений.|  
-|[Метод Module::UnregisterObjects](../windows/module-unregisterobjects-method.md)|Отменяет регистрацию объектов в указанном модуле таким образом, что другие приложения не смогут подключиться к ним.|  
-|[Метод Module::UnregisterWinRTObject](../windows/module-unregisterwinrtobject-method.md)|Отменяет регистрацию одно или несколько объектов [!INCLUDE[wrt](../atl/reference/includes/wrt_md.md)] таким образом, что другие приложения не смогут подключиться к ним.|  
+|[Метод Module::UnregisterCOMObject](../windows/module-unregistercomobject-method.md)|Отменяет регистрацию одного или нескольких объектов модели COM, что предотвращает подключение к ним других приложений.|  
+|[Метод Module::UnregisterObjects](../windows/module-unregisterobjects-method.md)|Отменяет регистрацию объектов в указанном модуле. Таким образом другие приложения не смогут подключиться к ним.|  
+|[Метод Module::UnregisterWinRTObject](../windows/module-unregisterwinrtobject-method.md)|Отменяет регистрацию одного или нескольких объектов среды выполнения Windows, чтобы другие приложения не смогут подключиться к ним.|  
   
-### Защищенные методы  
+### <a name="protected-methods"></a>Защищенные методы  
   
 |Имя|Описание|  
-|---------|--------------|  
+|----------|-----------------|  
 |[Метод Module::Create](../windows/module-create-method.md)|Создает экземпляр модуля.|  
   
-### Защищенные члены данных  
+### <a name="protected-data-members"></a>Защищенные члены данных  
   
 |Имя|Описание|  
-|---------|--------------|  
-|[Элемент данных Module::objectCount\_](../windows/module-objectcount-data-member.md)|Отслеживает количество классов, созданных функцией [Make](../windows/make-function.md).|  
-|[Элемент данных Module::releaseNotifier\_](../windows/module-releasenotifier-data-member.md)|Сохраняет указатель на объект ReleaseNotifier.|  
+|----------|-----------------|  
+|[Элемент данных Module::objectCount_](../windows/module-objectcount-data-member.md)|Хранит список количества классов были созданы при помощи [сделать](../windows/make-function.md) функции.|  
+|[Элемент данных Module::releaseNotifier_](../windows/module-releasenotifier-data-member.md)|Содержит указатель на объект ReleaseNotifier.|  
   
-### Макросы  
+### <a name="macros"></a>Макросы  
   
 |||  
 |-|-|  
-|[ActivatableClass](../Topic/ActivatableClass%20Macros.md)|Заполняет внутренний кэш, который содержит фабрику, которая может создать экземпляр указанного класса.  Этот макрос указывает фабрику по умолчанию и параметры идентификатора группы.|  
-|[ActivatableClassWithFactory](../Topic/ActivatableClass%20Macros.md)|Заполняет внутренний кэш, который содержит фабрику, которая может создать экземпляр указанного класса.  Этот макрос позволяет указать определенный параметр фабрики.|  
-|[ActivatableClassWithFactoryEx](../Topic/ActivatableClass%20Macros.md)|Заполняет внутренний кэш, который содержит фабрику, которая может создать экземпляр указанного класса.  Этот макрос позволяет указать определенные параметры фабрики и идентификатора группы.|  
+|[ActivatableClass](../windows/activatableclass-macros.md)|Заполняет внутренний кэш, который содержит фабрику, можно создать экземпляр указанного класса. Этот макрос задает параметры идентификатора фабрики и группы по умолчанию.|  
+|[ActivatableClassWithFactory](../windows/activatableclass-macros.md)|Заполняет внутренний кэш, который содержит фабрику, можно создать экземпляр указанного класса. Этот макрос позволяет задать параметр конкретного фабрики.|  
+|[ActivatableClassWithFactoryEx](../windows/activatableclass-macros.md)|Заполняет внутренний кэш, который содержит фабрику, можно создать экземпляр указанного класса. Этот макрос можно указать определенный фабрики и параметры идентификатора группы.|  
   
-## Иерархия наследования  
+## <a name="inheritance-hierarchy"></a>Иерархия наследования  
  `ModuleBase`  
   
  `Module`  
   
  `Module`  
   
-## Требования  
+## <a name="requirements"></a>Требования  
  **Заголовок:** module.h  
   
  **Пространство имен:** Microsoft::WRL  
   
-## См. также  
+## <a name="see-also"></a>См. также  
  [Пространство имен Microsoft::WRL](../windows/microsoft-wrl-namespace.md)

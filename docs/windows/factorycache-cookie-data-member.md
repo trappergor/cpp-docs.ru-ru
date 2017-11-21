@@ -1,32 +1,30 @@
 ---
-title: "Элемент данных FactoryCache::cookie | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "module/Microsoft::WRL::Details::FactoryCache::cookie"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "cookie - элемент данных"
+title: "Элемент данных Factorycache::cookie | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: module/Microsoft::WRL::Details::FactoryCache::cookie
+dev_langs: C++
+helpviewer_keywords: cookie data member
 ms.assetid: b1bc79af-a896-4e3b-8afa-64733022eddf
-caps.latest.revision: 7
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: c3cca7b708f7fc2a0fdaa5b975396958b967210a
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/24/2017
 ---
-# Элемент данных FactoryCache::cookie
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Предназначено для поддержки инфраструктуры [!INCLUDE[cppwrl](../windows/includes/cppwrl_md.md)], а не для непосредственного использования в коде.  
+# <a name="factorycachecookie-data-member"></a>Элемент данных FactoryCache::cookie
+Поддерживает инфраструктуру библиотека шаблонов C++ среды выполнения Windows и не предназначен для использования непосредственно из программного кода.  
   
-## Синтаксис  
+## <a name="syntax"></a>Синтаксис  
   
 ```  
 union {   
@@ -35,14 +33,14 @@ union {
 } cookie;  
 ```  
   
-## Заметки  
- Содержит значение, которое определяет зарегистрированный [!INCLUDE[wrt](../atl/reference/includes/wrt_md.md)] или объект COM\-класса, а затем используется для отмены регистрации объекта.  
+## <a name="remarks"></a>Примечания  
+ Содержит значение, которое идентифицирует зарегистрированный объект класса среды выполнения Windows или COM, а впоследствии будет использоваться для отмены регистрации объекта.  
   
-## Требования  
+## <a name="requirements"></a>Требования  
  **Заголовок:** module.h  
   
- **Пространство имен:** Microsoft::WRL::Details  
+ **Пространство имен:** Microsoft::wrl:: Details  
   
-## См. также  
- [Структура FactoryCache](../Topic/FactoryCache%20Structure.md)   
+## <a name="see-also"></a>См. также  
+ [Factorycache-структура](../windows/factorycache-structure.md)   
  [Пространство имен Microsoft::WRL::Details](../windows/microsoft-wrl-details-namespace.md)

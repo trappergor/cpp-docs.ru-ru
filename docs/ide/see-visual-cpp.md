@@ -1,55 +1,54 @@
 ---
-title: "&lt;see&gt; (Visual C++) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "<see>"
-  - "see"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "<see> - XML-тег C++"
-  - "see - XML-тег C++"
+title: "&lt;в разделе&gt; (Visual C++) | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-ide
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- <see>
+- see
+dev_langs: C++
+helpviewer_keywords:
+- <see> C++ XML tag
+- see C++ XML tag
 ms.assetid: 20ef66f4-b278-45cf-8613-63919edf5720
-caps.latest.revision: 15
-caps.handback.revision: 15
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "15"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 25dc28c993289942d0eafd2f20fb5c849f1658c4
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/24/2017
 ---
-# &lt;see&gt; (Visual C++)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Тег \<see\> позволяет определить ссылку в тексте.  Используйте [\<seealso\>](../Topic/%3Cseealso%3E%20\(Visual%20C++\).md) для отображения текста, возможно, появится в разделе " см. также ".  
+# <a name="ltseegt-visual-c"></a>&lt;в разделе&gt; (Visual C++)
+Тег \<see> позволяет задать ссылку из текста. Используйте [ \<seealso >](../ide/seealso-visual-cpp.md) для указания текста, который может отображаться в разделе см. также.  
   
-## Синтаксис  
+## <a name="syntax"></a>Синтаксис  
   
 ```  
 <see cref="member"/>  
 ```  
   
-#### Параметры  
+#### <a name="parameters"></a>Параметры  
  `member`  
- Ссылка на член или поле, которое может вызываться из текущей среды компиляции.  Заключить его в одинарные или двойные кавычки.  
+ Ссылка на член или поле, которые доступны для вызова из текущей среды компиляции.  Заключите имя в одинарные или двойные кавычки.  
   
- Компилятор проверяет, что данный элемент кода существует и позволяет `member` с именем элемента в выходных XML\-данных.  Компилятор выдает предупреждение, если не удается найти `member`.  
+ Компилятор проверяет, что данный элемент кода существует и устраняет `member` имени элемента в выходных данных XML.  Если компилятору не удается найти `member`, он выдает предупреждение.  
   
-## Заметки  
- Чтобы обработать и сохранить комментарии документации в файл, при компиляции необходимо использовать параметр [\/doc](../build/reference/doc-process-documentation-comments-c-cpp.md).  
+## <a name="remarks"></a>Примечания  
+ Чтобы обработать и сохранить комментарии документации в файл, при компиляции необходимо использовать параметр [/doc](../build/reference/doc-process-documentation-comments-c-cpp.md).  
   
- В разделе [\<summary\>](../ide/summary-visual-cpp.md) пример использования \<see\>.  
+ В разделе [ \<сводки >](../ide/summary-visual-cpp.md) пример использования \<см >.  
   
- Компилятор C Visual C\+\+ пытается разрешить ссылки cref в одном прохождении через документирующие комментарии.  Поэтому при использовании правила поиска C, C\+\+, символ не найден компилятором, ссылка будет помечена как не разрешен.  Дополнительные сведения см. в разделе [\<seealso\>](../Topic/%3Cseealso%3E%20\(Visual%20C++\).md).  
+ Компилятор Visual C++ будет пытаться разрешить ссылки cref за один проход по комментариям документации.  Поэтому если при использовании правил поиска C++ компилятор не найдет символ, ссылка будет помечена как не разрешенная. В разделе [ \<seealso >](../ide/seealso-visual-cpp.md) для получения дополнительной информации.  
   
-## Пример  
- В следующем примере показано, как можно сделать ссылку на универсальному типу, то cref, что компилятор разрешает ссылку.  
+## <a name="example"></a>Пример  
+ Следующий пример показывает, как сделать cref ссылка на универсальный тип, таким образом, что компилятор будет разрешить ссылку на.  
   
 ```  
 // xml_see_cref_example.cpp  
@@ -76,5 +75,5 @@ generic<class T>
 ref class C {};  
 ```  
   
-## См. также  
+## <a name="see-also"></a>См. также  
  [Документация XML](../ide/xml-documentation-visual-cpp.md)

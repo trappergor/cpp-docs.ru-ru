@@ -1,41 +1,41 @@
 ---
-title: "Практическое руководство. Маршалинг внедренных указателей с помощью PInvoke | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "get-started-article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "маршалинг данных [C++], встроенные указатели"
-  - "встроенные указатели [C++]"
-  - "взаимодействие [C++], встроенные указатели"
-  - "маршалинг [C++], встроенные указатели"
-  - "вызов неуправляемого кода [C++], встроенные указатели"
+title: "Как: маршалинг встроенных указателей посредством PInvoke | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: get-started-article
+dev_langs: C++
+helpviewer_keywords:
+- embedded pointers [C++]
+- interop [C++], embedded pointers
+- platform invoke [C++], embedded pointers
+- marshaling [C++], embedded pointers
+- data marshaling [C++], embedded pointers
 ms.assetid: f12c1b9a-4f82-45f8-83c8-3fc9321dbb98
-caps.latest.revision: 21
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 21
+caps.latest.revision: "21"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: c8f6716a11919c300dc3153ca678767503a35088
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/24/2017
 ---
-# Практическое руководство. Маршалинг внедренных указателей с помощью PInvoke
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Функции, реализованные в неуправляемых библиотеках DLL, могут вызываться из управляемого кода с помощью вызова неуправляемого кода P\/Invoke.  Если исходный код библиотеки DLL недоступен, вызов P\/Invoke является единственным вариантом обеспечения взаимодействия.  В отличие от других языков .NET в Visual C\+\+ предусматривается альтернатива вызову P\/Invoke.  Дополнительные сведения см. в разделах [Использование взаимодействия языка C\+\+ \(неявный PInvoke\)](../dotnet/using-cpp-interop-implicit-pinvoke.md) и [Практическое руководство. Упаковка встроенных указателей посредством взаимодействия C\+\+](../dotnet/how-to-marshal-embedded-pointers-using-cpp-interop.md).  
+# <a name="how-to-marshal-embedded-pointers-using-pinvoke"></a>Практическое руководство. Маршалинг внедренных указателей с помощью PInvoke
+Функции, реализованные в неуправляемых библиотек DLL может вызываться из управляемого кода с помощью функциональной возможности вызова неуправляемого кода (P/Invoke). Если исходный код для библиотеки DLL недоступен, P/Invoke является единственным вариантом обеспечения взаимодействия. Однако в отличие от других языков .NET, Visual C++ предоставляет альтернативы P/Invoke. Дополнительные сведения см. в разделе [с помощью взаимодействия C++ (неявный PInvoke)](../dotnet/using-cpp-interop-implicit-pinvoke.md) и [как: маршалинг внедренных указателей с помощью взаимодействия C++](../dotnet/how-to-marshal-embedded-pointers-using-cpp-interop.md).  
   
-## Пример  
- Структура передачи данных в машинный код требует, чтобы была создана управляемая структура с параметрами компоновки данных эквивалентными машинной структуре.  Однако структуры, содержащие указатели, требуют особой обработки.  Для каждого внедренного указателя в машинной структуре управляемая версия структуры должна содержать экземпляр типа <xref:System.IntPtr>.  Также память должна явно выделяться, инициализироваться и освобождаться с помощью методов <xref:System.Runtime.InteropServices.Marshal.AllocCoTaskMem%2A>, <xref:System.Runtime.InteropServices.Marshal.StructureToPtr%2A> и <xref:System.Runtime.InteropServices.Marshal.FreeCoTaskMem%2A>.  
+## <a name="example"></a>Пример  
+ Передача структур в машинный код требует, создается управляемая структура с параметрами компоновки данных эквивалентными машинной структуре. Однако структуры, содержащие указатели требуют специальной обработки. Для каждого внедренного указателя в машинной структуре управляемую версию структуры должна содержать экземпляр <xref:System.IntPtr> типа. Кроме того, память для этих экземпляров, должен быть явно выделен, инициализации и освобождены с помощью <xref:System.Runtime.InteropServices.Marshal.AllocCoTaskMem%2A>, <xref:System.Runtime.InteropServices.Marshal.StructureToPtr%2A>, и <xref:System.Runtime.InteropServices.Marshal.FreeCoTaskMem%2A> методы.  
   
- В следующем примере кода представлены неуправляемый и управляемый модули.  Неуправляемый модуль является библиотекой DLL, определяющей функцию, которая принимает структуру по имени ListString, которая содержит указатель, и функцию по имени TakesListStruct.  Управляемый модуль является приложением командной строки, импортирующим функцию TakesListStruct, и содержит структуру с именем MListStruct эквивалентную машинной структуре ListStruct за исключением того, что двойная звездочка \(\*\*\) заменена на <xref:System.IntPtr>.  Перед вызовом TakesListStruct основная функция выделяет и инициализирует память, на которую ссылается данное поле.  
+ Следующий код состоит из неуправляемый и управляемый модуль. Неуправляемый модуль является библиотекой DLL, определяющей функцию, которая принимает структуру ListString, которая содержит указатель и функция, вызываемая TakesListStruct. Управляемый модуль является приложением командной строки, импортирующим функцию TakesListStruct и содержит структуру с именем MListStruct эквивалентно собственного ListStruct за исключением того, что double * с <xref:System.IntPtr> экземпляра. Перед вызовом TakesListStruct основная функция выделяет и инициализирует память, на который ссылается это поле.  
   
- Управляемый модуль компилируется с параметром \/clr, также возможна компиляция с \/clr:pure.  
+ Управляемый модуль компилируется с параметром/CLR, но/CLR: pure работает также. Параметры компилятора **/CLR: pure** и **/CLR: safe** в Visual Studio 2015 не рекомендуется использовать.  
   
-```  
+```cpp  
 // TraditionalDll6.cpp  
 // compile with: /EHsc /LD  
 #include <stdio.h>  
@@ -65,7 +65,7 @@ void TakesListStruct(ListStruct list) {
 }  
 ```  
   
-```  
+```cpp  
 // EmbeddedPointerMarshalling.cpp  
 // compile with: /clr  
 using namespace System;  
@@ -107,7 +107,7 @@ int main() {
 }  
 ```  
   
- Обратите внимание, что в управляемом коде никакие компоненты библиотеки DLL не предоставляются с помощью стандартной директивы \#include.  Фактически доступ к библиотеке DLL происходит только во время выполнения, поэтому проблемы с функциями, импортируемыми с помощью <xref:System.Runtime.InteropServices.DllImportAttribute> не обнаруживаются во время компиляции.  
+ Обратите внимание, что никакие компоненты библиотеки DLL не предоставляются для управляемого кода, с помощью стандартной #include. На самом деле DLL осуществляется во время выполнения, поэтому проблемы с функциями импортированы с <xref:System.Runtime.InteropServices.DllImportAttribute> во время компиляции не обнаруживаются.  
   
-## См. также  
- [Использование явного вызова Pinvoke в C\+\+ \(атрибут DllImport\)](../dotnet/using-explicit-pinvoke-in-cpp-dllimport-attribute.md)
+## <a name="see-also"></a>См. также  
+ [Использование явного вызова Pinvoke в C++ (атрибут DllImport)](../dotnet/using-explicit-pinvoke-in-cpp-dllimport-attribute.md)

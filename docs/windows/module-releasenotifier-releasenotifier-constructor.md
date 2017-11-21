@@ -1,47 +1,45 @@
 ---
-title: "Конструктор Module::ReleaseNotifier::ReleaseNotifier | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "module/Microsoft::WRL::Module::ReleaseNotifier::ReleaseNotifier"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "ReleaseNotifier, конструктор"
+title: "Конструктор Module::releasenotifier:: releasenotifier | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: module/Microsoft::WRL::Module::ReleaseNotifier::ReleaseNotifier
+dev_langs: C++
+helpviewer_keywords: ReleaseNotifier, constructor
 ms.assetid: 889a3c9a-2366-44a1-ba7d-a59c1885e7f3
-caps.latest.revision: 3
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 3
+caps.latest.revision: "3"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: a82f8d2f753325c123d78cacbb10fdc25449fd51
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/24/2017
 ---
-# Конструктор Module::ReleaseNotifier::ReleaseNotifier
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="modulereleasenotifierreleasenotifier-constructor"></a>Конструктор Module::ReleaseNotifier::ReleaseNotifier
 Инициализирует новый экземпляр класса Module::ReleaseNotifier.  
   
-## Синтаксис  
+## <a name="syntax"></a>Синтаксис  
   
 ```cpp  
 ReleaseNotifier(bool release) throw();  
 ```  
   
-#### Параметры  
+#### <a name="parameters"></a>Параметры  
  `release`  
- `true` для удаления этого экземпляра, когда вызывается метод Release; `false`, чтобы не удалять этот экземпляр.  
+ `true`Удаление этого экземпляра при вызове метода Release; `false` не удалить этот экземпляр.  
   
-## Исключения  
+## <a name="exceptions"></a>Исключения  
   
-## Требования  
+## <a name="requirements"></a>Требования  
  **Заголовок:** module.h  
   
  **Пространство имен:** Microsoft::WRL  
   
-## См. также  
- [Класс Module::ReleaseNotifier](../Topic/Module::ReleaseNotifier%20Class.md)
+## <a name="see-also"></a>См. также  
+ [Класс Module::ReleaseNotifier](../windows/module-releasenotifier-class.md)

@@ -1,57 +1,55 @@
 ---
-title: "__writecr3 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "_writecr3"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Встроенная функция _writecr3"
+title: "__writecr3 | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: _writecr3
+dev_langs: C++
+helpviewer_keywords: _writecr3 intrinsic
 ms.assetid: 959d49fa-69d5-47cf-88d2-7688367fe38f
-caps.latest.revision: 11
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 11
+caps.latest.revision: "11"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: 2a6b6bf6d8ad7d24a5081f8bf5ee80fca2683b9b
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/24/2017
 ---
-# __writecr3
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-**Только для систем Microsoft**  
+# <a name="writecr3"></a>__writecr3
+**Блок, относящийся только к системам Майкрософт**  
   
- Записывает значение `Data` к регистру CR3.  
+ Записывает значение `Data` CR3 регистрацию.  
   
-## Синтаксис  
+## <a name="syntax"></a>Синтаксис  
   
 ```  
-void writecr3(   
-   unsigned __int64 Data   
+void writecr3(   
+   unsigned __int64 Data   
 );  
 ```  
   
-#### Параметры  
- \[входящий\] `Data`  
- Записываемое значение CR3 к регистру.  
+#### <a name="parameters"></a>Параметры  
+ [in] `Data`  
+ Значение для записи в CR3 регистр.  
   
-## Требования  
+## <a name="requirements"></a>Требования  
   
-|Встроенный объект|Архитектура|  
-|-----------------------|-----------------|  
-|`__writecr3`|x86, [!INCLUDE[vcprx64](../Token/vcprx64_md.md)]|  
+|Встроенная функция|Архитектура|  
+|---------------|------------------|  
+|`__writecr3`|x86, [!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|  
   
- **Файл заголовка** \<intrin.h\>  
+ **Файл заголовка** \<intrin.h >  
   
-## Заметки  
- Этот встроенный доступен только в режиме ядра и процедура доступна только в качестве внутреннего элемента.  
+## <a name="remarks"></a>Примечания  
+ Эта встроенная функция доступна только в режиме ядра и процедура доступна только как встроенная.  
   
-## ЭЛЕМЕНТ, относящийся Майкрософт  
+**Завершение блока, относящегося только к системам Майкрософт**  
   
-## См. также  
- [Встроенные объекты компилятора](../intrinsics/compiler-intrinsics.md)
+## <a name="see-also"></a>См. также  
+ [Встроенные инструкции компилятора](../intrinsics/compiler-intrinsics.md)

@@ -1,26 +1,26 @@
 ---
-title: "Функции без прототипа | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
+title: "Функции без прототипа | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
 ms.assetid: 34200b8c-5b52-4f0d-aff8-9f70d82868ed
-caps.latest.revision: 7
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: dbc9324753f6ec2c9a332af00a00dd85116e1943
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/24/2017
 ---
-# Функции без прототипа
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Для функций без прототипа вызывающий объект передает целые числа в виде значений типа Integer, а значения с плавающей запятой — в виде чисел двойной точности.  \(Только для значений с плавающей запятой\) Если вызываемый объект предполагает наличие значения в регистре операций с целыми числами, в регистрах операций с целыми числами и числами с плавающей запятой одновременно будут содержаться значения с плавающей запятой.  
+# <a name="unprototyped-functions"></a>Функции без прототипа
+Для функций без прототипа вызывающий объект передает целочисленные значения как целые числа и значения с плавающей запятой двойной точности. Для значений с плавающей запятой только регистр целых чисел и чисел с плавающей запятой регистра будет содержать значение с плавающей запятой в случае, если вызываемый ожидает значение в целочисленные регистры.  
   
 ```  
 func1();  
@@ -29,5 +29,5 @@ func2() {   // RCX = 2, RDX = XMM1 = 1.0, and R8 = 7
 }  
 ```  
   
-## См. также  
+## <a name="see-also"></a>См. также  
  [Соглашение о вызовах](../build/calling-convention.md)

@@ -4,25 +4,21 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-language
+ms.technology: cpp-language
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-dev_langs:
-- C++
-helpviewer_keywords:
-- new keyword [C++]
+dev_langs: C++
+helpviewer_keywords: new keyword [C++]
 ms.assetid: 69fee812-1c28-4882-8fda-d1ad17860004
-caps.latest.revision: 11
+caps.latest.revision: "11"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.translationtype: HT
-ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
-ms.openlocfilehash: a7386d45f5188e7217ebfd4c235c0763bfd70044
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/25/2017
-
+ms.openlocfilehash: 05b83a284dcf599890985f1f01d8327ac5ef75e4
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="new-operator-c"></a>Оператор new (C++)
 Выделяет память для объекта или массива объектов *имя типа* из свободного хранилища и возвращает подходящим образом типизированный ненулевой указатель на объект.  
@@ -238,7 +234,7 @@ int main()
   
  **Новый** оператор вызывает функцию `operator new`. Для массивов любого типа, а также для объектов, которые не имеют **класса**, `struct`, или **объединение** типы, глобальная функция **:: оператор new**, вызывается для выделения памяти. Объекты типа класса могут определять собственную статическую функцию-член `operator new` на уровне класса.  
   
- Когда компилятор встречает **новый** оператор, чтобы выделить объект типа `type`, он отправляет вызов для `type` **:: оператор new (sizeof (** `type` **)) ** или, если нет пользовательских `operator new` определен, **:: оператор new (sizeof (** `type` **))**. Таким образом **новый** оператор можно выделить нужный объем памяти для объекта.  
+ Когда компилятор встречает **новый** оператор, чтобы выделить объект типа `type`, он отправляет вызов для `type` **:: оператор new (sizeof (** `type` **))**  или, если нет пользовательских `operator new` определен, **:: оператор new (sizeof (** `type` **))**. Таким образом **новый** оператор можно выделить нужный объем памяти для объекта.  
   
 > [!NOTE]
 >  Аргумент `operator new` относится к типу **size_t**. Этот тип определяется в DIRECT.H, MALLOC.H, MEMORY.H, SEARCH.H, STDDEF.H, STDIO.H, STDLIB.H, STRING.H и TIME.H.  

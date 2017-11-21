@@ -1,65 +1,65 @@
 ---
-title: "/SWAPRUN (загрузка выходных данных компоновщика в файл подкачки) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "VC.Project.VCLinkerTool.SwapRunFromNet"
-  - "/swaprun"
-  - "VC.Project.VCLinkerTool.SwapRunFromCD"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "/SWAPRUN - параметр компоновщика"
-  - "файлы [C++], LINK"
-  - "LINK - средство [C++], результат"
-  - "компоновщик [C++], копирование вывода в файл подкачки"
-  - "выходные файлы, компоновщик"
-  - "файл подкачки для вывода компоновщика"
-  - "SWAPRUN - параметр компоновщика"
-  - "-SWAPRUN - параметр компоновщика"
+title: "-SWAPRUN (загрузка выходных данных компоновщика в файл подкачки) | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- VC.Project.VCLinkerTool.SwapRunFromNet
+- /swaprun
+- VC.Project.VCLinkerTool.SwapRunFromCD
+dev_langs: C++
+helpviewer_keywords:
+- -SWAPRUN linker option
+- files [C++], LINK
+- LINK tool [C++], output
+- linker [C++], copying output to swap file
+- swap file for linker output
+- output files, linker
+- /SWAPRUN linker option
+- SWAPRUN linker option
 ms.assetid: 4a1e7f46-4399-4161-8dfc-d6a71beaf683
-caps.latest.revision: 8
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: f41a89e74ec2e9ed34e0add12717dd0c135ce723
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/24/2017
 ---
-# /SWAPRUN (загрузка выходных данных компоновщика в файл подкачки)
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="swaprun-load-linker-output-to-swap-file"></a>/SWAPRUN (загрузка выходных данных компоновщика в файл подкачки)
 ```  
 /SWAPRUN:{NET|CD}  
 ```  
   
-## Заметки  
- Параметр \/SWAPRUN предписывает операционной системе сначала копировать выходные данные компоновщика в файл подкачки, а затем запускать образ оттуда.  Эта функция поддерживается операционной системой Windows NT 4.0 \(и более поздних версий\).  
+## <a name="remarks"></a>Примечания  
+ Параметр/SWAPRUN предписывает операционной системе сначала Копировать компоновщика выходные данные в файл подкачки, а затем запускать образ оттуда. Это средство Windows NT 4.0 (и более поздние версии).  
   
- Если задан параметр NET, операционная система сначала копирует двоичный образ в файл подкачки и запускает его оттуда.  Этот параметр используется для запуска приложений по сети.  Если задан параметр, CD операционная система выполнит копирование образа в файл ресурса страницы на съемный диск, а затем выполнит его загрузку.  
+ Если задан параметр NET, операционная система сначала копирует двоичный образ из сети в файл подкачки и загрузит его оттуда. Этот параметр полезен для запуска приложений по сети. Когда задан компакт-ДИСК, операционная система копирует образ на съемном диске файл подкачки и их загрузка.  
   
-### Установка данного параметра компоновщика в среде разработки Visual Studio  
+### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>Задание данного параметра компоновщика в среде разработки Visual Studio  
   
-1.  Откройте диалоговое окно **Страницы свойств** проекта.  Дополнительные сведения см. в разделе [Задание свойств проекта C\+\+](../../ide/working-with-project-properties.md).  
+1.  Откройте диалоговое окно **Страницы свойств** проекта. Дополнительные сведения см. в разделе [задание свойств проекта Visual C++](../../ide/working-with-project-properties.md).  
   
-2.  Выберите папку **Компоновщик**.  
+2.  Нажмите кнопку **компоновщика** папки.  
   
-3.  Выберите страницу свойств **Система**.  
+3.  Нажмите кнопку **системы** страницу свойств.  
   
-4.  Измените значение одного из следующих свойств:  
+4.  Измените один из следующих свойств:  
   
-    -   **Запуск с компакт\-диска с помощью файла подкачки**  
+    -   **Поменять местами запуска с компакт-диска**  
   
-    -   **Запускать из сети с помощью файла подкачки**  
+    -   **Поменять местами запуска из сети**  
   
-### Установка данного параметра компоновщика программным способом  
+### <a name="to-set-this-linker-option-programmatically"></a>Задание данного параметра компоновщика программным способом  
   
 1.  См. описание свойств <xref:Microsoft.VisualStudio.VCProjectEngine.VCLinkerTool.SwapRunFromCD%2A> и <xref:Microsoft.VisualStudio.VCProjectEngine.VCLinkerTool.SwapRunFromNet%2A>.  
   
-## См. также  
+## <a name="see-also"></a>См. также  
  [Настройка параметров компоновщика](../../build/reference/setting-linker-options.md)   
  [Параметры компоновщика](../../build/reference/linker-options.md)

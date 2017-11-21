@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-windows
+ms.technology: cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -25,38 +24,21 @@ f1_keywords:
 - AMPRT/Concurrency::accelerator_view:is_debug
 - AMPRT/Concurrency::accelerator_view:queuing_mode
 - AMPRT/Concurrency::accelerator_view:version
-dev_langs:
-- C++
-helpviewer_keywords:
-- accelerator_view class
+dev_langs: C++
+helpviewer_keywords: accelerator_view class
 ms.assetid: 9f298c21-bf62-46e0-88b8-01c5c78ef144
-caps.latest.revision: 18
+caps.latest.revision: "18"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 5faef5bd1be6cc02d6614a6f6193c74167a8ff23
-ms.openlocfilehash: f5e6fd5689cf034cc260649fa005f7dfe6e9fd69
-ms.contentlocale: ru-ru
-ms.lasthandoff: 03/17/2017
-
+ms.openlocfilehash: 66d98297d681f3c2c377a7bccb7b988169aca76d
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="acceleratorview-class"></a>Класс accelerator_view
-Представляет абстракцию виртуального устройства в ускорителе C++ AMP параллельными данными.  
+Представляет виртуальное устройство абстракции ускорителем C++ AMP параллельными данными.  
   
 ### <a name="syntax"></a>Синтаксис  
   
@@ -70,17 +52,17 @@ class accelerator_view;
   
 |Имя|Описание|  
 |----------|-----------------|  
-|[Конструктор accelerator_view](#ctor)|Инициализирует новый экземпляр класса `accelerator_view`.|  
-|[~ accelerator_view деструктор](#dtor)|Уничтожает `accelerator_view` объекта.|  
+|[accelerator_view, конструктор](#ctor)|Инициализирует новый экземпляр класса `accelerator_view`.|  
+|[~ accelerator_view, деструктор](#dtor)|Уничтожает `accelerator_view` объекта.|  
   
 ### <a name="public-methods"></a>Открытые методы  
   
 |Имя|Описание|  
 |----------|-----------------|  
-|[create_marker](#create_marker)|Возвращает будущее отслеживать выполнение всех команд, переданных пока это `accelerator_view` объекта.|  
-|[flush](#flush)|Отправляет все ожидающие команды в очереди на `accelerator_view` объект для сочетаний клавиш для выполнения.|  
+|[create_marker](#create_marker)|Возвращает будущее отслеживать выполнение всех команд, переданных в данный момент к этому `accelerator_view` объекта.|  
+|[flush](#flush)|Отправляет все команды, ожидающие в очереди на `accelerator_view` объект для сочетания клавиш для выполнения.|  
 |[get_accelerator](#get_accelerator)|Возвращает объект `accelerator` для объекта `accelerator_view`.|  
-|[get_is_auto_selection](#get_is_auto_selection)|Возвращает логическое значение, указывающее ли среда выполнения автоматически выбирает соответствующий ускоритель при `accelerator_view` передается объект [parallel_for_each](concurrency-namespace-functions-amp.md#parallel_for_each).|  
+|[get_is_auto_selection](#get_is_auto_selection)|Возвращает логическое значение, указывающее ли среда выполнения автоматически выбирает соответствующий ускоритель при `accelerator_view` объект передается [parallel_for_each](concurrency-namespace-functions-amp.md#parallel_for_each).|  
 |[get_is_debug](#get_is_debug)|Возвращает логическое значение, указывающее, является ли `accelerator_view` объект имеет уровень отладки расширенные отчеты об ошибках.|  
 |[get_queuing_mode](#get_queuing_mode)|Возвращает режим постановки в очередь для `accelerator_view` объекта.|  
 |[get_version](#get_version)|Возвращает версию `accelerator_view`.|  
@@ -90,16 +72,16 @@ class accelerator_view;
   
 |Имя|Описание|  
 |----------|-----------------|  
-|[operator!=](#operator_neq)|Сравнивает этот `accelerator_view` и возвращает объект с другим `false` , если они совпадают; в противном случае — возвращает `true`.|  
+|[operator!=](#operator_neq)|Сравнивает этот `accelerator_view` с другим и возвращает `false` если они совпадают; в противном случае возвращает `true`.|  
 |[operator=](#operator_eq)|Копирует содержимое указанного `accelerator_view` объекта в другой.|  
-|[operator==](#operator_eq_eq)|Сравнивает этот `accelerator_view` и возвращает объект с другим `true` , если они совпадают; в противном случае — возвращает `false`.|  
+|[operator==](#operator_eq_eq)|Сравнивает этот `accelerator_view` с другим и возвращает `true` если они совпадают; в противном случае возвращает `false`.|  
   
 ### <a name="public-data-members"></a>Открытые члены данных  
   
 |Имя|Описание|  
 |----------|-----------------|  
 |[сочетаний клавиш](#accelerator)|Возвращает объект `accelerator` для объекта `accelerator_view`.|  
-|[is_auto_selection](#is_auto_selection)|Возвращает логическое значение, указывающее ли среда выполнения автоматически выбирает соответствующий ускоритель при `accelerator_view` передается объект [parallel_for_each](concurrency-namespace-functions-amp.md#parallel_for_each).|  
+|[is_auto_selection](#is_auto_selection)|Возвращает логическое значение, указывающее ли среда выполнения автоматически выбирает соответствующий ускоритель при `accelerator_view` объект передается [parallel_for_each](concurrency-namespace-functions-amp.md#parallel_for_each).|  
 |[is_debug](#is_debug)|Возвращает логическое значение, указывающее, является ли `accelerator_view` объект имеет уровень отладки расширенные отчеты об ошибках.|  
 |[queuing_mode](#queuing_mode)|Получает режим постановки в очередь для `accelerator_view` объекта.|  
 |[version](#version)|Возвращает версию сочетания клавиш.|  
@@ -108,11 +90,11 @@ class accelerator_view;
  `accelerator_view`  
   
 ### <a name="remarks"></a>Примечания  
- `accelerator_view` Представляет логический изолированное представление ускорителя. Одного физического вычислительного устройства может иметь множество логических, изолированное `accelerator_view` объектов. Каждый ускоритель по умолчанию имеет `accelerator_view` объекта. Дополнительные `accelerator_view` объекты могут быть созданы.  
+ `accelerator_view` Логические, изолированное представление ускорителя представляет объект. Одном вычислительном физического устройства может иметь множество логические, изолированных `accelerator_view` объектов. Каждый ускоритель по умолчанию имеет значение `accelerator_view` объекта. Дополнительные `accelerator_view` объекты могут быть созданы.  
   
- Физические устройства могут совместно использоваться многими потоками клиента. Клиентские потоки могут совместно использовать тот же `accelerator_view` объект ускоритель или каждый клиент может взаимодействовать с устройством вычислений через независимый `accelerator_view` объекта для изоляции от других потоков клиента.  
+ Физические устройства могут совместно использоваться многими потоками клиента. Потоков клиента можно совместно использовать те же `accelerator_view` объект ускоритель или каждый клиент может связаться с устройством вычислений через независимой `accelerator_view` объект для изоляции от других потоков клиента.  
   
- `accelerator_view` Объект может иметь один из двух [перечисление queuing_mode](concurrency-namespace-enums-amp.md#queuing_mode) состояния. Если режим постановки в очередь `immediate`, такие команды как `copy` и `parallel_for_each` отправляются по мере их возвращения вызывающему соответствующее устройство сочетаний клавиш. Если режим постановки в очередь `deferred`, таких команд в очередь на очереди команд, которые соответствуют `accelerator_view` объекта. Команды не отправляются на самом деле устройства до `flush()` вызывается.  
+ `accelerator_view` Объект может иметь один из двух [перечисление queuing_mode](concurrency-namespace-enums-amp.md#queuing_mode) состояния. Если режим постановки в очередь `immediate`, такие команды как `copy` и `parallel_for_each` отправляются соответствующее устройство сочетаний клавиш, как только они возвращают вызывающему объекту. Если режим постановки в очередь `deferred`, таких команд помещено в очередь команду, соответствующий `accelerator_view` объекта. Команды не отправляются фактически устройства до `flush()` вызывается.  
   
 ## <a name="requirements"></a>Требования  
  **Заголовок:** amprt.h  
@@ -121,7 +103,7 @@ class accelerator_view;
 
 ## <a name="accelerator"></a>сочетаний клавиш 
 
-Получает объект сочетаний клавиш для объекта accelerator_view.  
+Возвращает объект сочетаний клавиш для объекта accelerator_view.  
   
 ### <a name="syntax"></a>Синтаксис  
   
@@ -145,7 +127,7 @@ accelerator_view( const accelerator_view & _Other );
   
 ## <a name="accelerator_view__create_marker"></a>create_marker 
 
-Возвращает будущее отслеживать выполнение всех команд, переданных пока это `accelerator_view` объекта.  
+Возвращает будущее отслеживать выполнение всех команд, переданных в данный момент к этому `accelerator_view` объекта.  
   
 ### <a name="syntax"></a>Синтаксис  
   
@@ -154,11 +136,11 @@ concurrency::completion_future create_marker();
 ```  
   
 ### <a name="return-value"></a>Возвращаемое значение  
- Будущее отслеживать выполнение всех команд, переданных пока это `accelerator_view` объекта.  
+ Будущее отслеживать выполнение всех команд, переданных в данный момент к этому `accelerator_view` объекта.  
   
-## <a name="flush"></a>Очистить 
+## <a name="flush"></a>диск 
 
-Отправка всех ожидающих применения команд в очереди объекта accelerator_view accelerator для выполнения.  
+Отправка всех ожидающих выполнения команд из очереди accelerator_view объекту сочетания клавиш для выполнения.  
   
 ### <a name="syntax"></a>Синтаксис  
   
@@ -190,7 +172,7 @@ bool get_is_auto_selection() const;
 ```  
   
 ### <a name="return-value"></a>Возвращаемое значение  
- `true`Если среда выполнения автоматически выбирает соответствующий сочетаний клавиш; в противном случае — `false`.  
+ `true`Если среда выполнения автоматически выбирает соответствующий сочетаний клавиш; в противном случае `false`.  
   
 ## <a name="accelerator_view__get_is_debug"></a>get_is_debug 
 
@@ -253,7 +235,7 @@ __declspec(property(get= get_is_debug)) bool is_debug;
   
 ## <a name="accelerator_view__operator_neq"></a>оператор! = 
 
-Сравнивает этот объект accelerator_view с другого и возвращает `false` , если они совпадают; в противном случае — возвращает `true`.  
+Сравнивает данный объект accelerator_view с другим и возвращает `false` если они совпадают; в противном случае возвращает `true`.  
   
 ### <a name="syntax"></a>Синтаксис  
   
@@ -263,14 +245,14 @@ bool operator!= (    const accelerator_view & _Other ) const;
   
 ### <a name="parameters"></a>Параметры  
  `_Other`  
- `accelerator_view` Объект, сравниваемый с данным элементом.  
+ `accelerator_view` Объект, сравниваемый с этим параметром.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
  Значение `false`, если объекты совпадают; в противном случае — значение `true`.  
   
 ## <a name="accelerator_view__operator_eq"></a>оператор = 
 
-Копирует содержимое объекта указанного accelerator_view в другой.  
+Копирует содержимое указанного accelerator_view объекта в другой.  
   
 ### <a name="syntax"></a>Синтаксис  
   
@@ -280,14 +262,14 @@ accelerator_view & operator= (    const accelerator_view & _Other );
   
 ### <a name="parameters"></a>Параметры  
  `_Other`  
- `accelerator_view` Для копирования.  
+ `accelerator_view` Объект для копирования из.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
  Ссылку на измененный `accelerator_view` объекта.  
   
 ## <a name="accelerator_view__operator_eq_eq"></a>оператор == 
 
-Сравнивает этот объект accelerator_view с другого и возвращает `true` , если они совпадают; в противном случае — возвращает `false`.  
+Сравнивает данный объект accelerator_view с другим и возвращает `true` если они совпадают; в противном случае возвращает `false`.  
   
 ### <a name="syntax"></a>Синтаксис  
   
@@ -297,7 +279,7 @@ bool operator= = (    const accelerator_view & _Other ) const;
   
 ### <a name="parameters"></a>Параметры  
  `_Other`  
- `accelerator_view` Объект, сравниваемый с данным элементом.  
+ `accelerator_view` Объект, сравниваемый с этим параметром.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
  Значение `true`, если объекты совпадают; в противном случае — значение `false`.  
@@ -324,7 +306,7 @@ __declspec(property(get= get_version)) unsigned int version;
   
 ## <a name="accelerator_view__wait"></a>Ожидание 
 
-Ожидания для всех команд, переданных объекту accelerator_view, Готово.  
+Ожидает завершения всех команд, переданных объекту accelerator_view, Готово.  
   
 ### <a name="syntax"></a>Синтаксис  
   
@@ -353,4 +335,3 @@ void wait();
  
 ## <a name="see-also"></a>См. также  
  [Пространство имен Concurrency (C++ AMP)](concurrency-namespace-cpp-amp.md)
-

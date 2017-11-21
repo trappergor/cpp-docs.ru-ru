@@ -1,43 +1,44 @@
 ---
-title: "Changing the Properties of a Toolbar Button | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "toolbar controls [MFC], command ID"
-  - "toolbar buttons (in Toolbar editor), setting properties"
-  - "Toolbar editor, toolbar button properties"
-  - "command IDs, toolbar buttons"
+title: "Изменение свойств кнопки панели инструментов | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- toolbar controls [MFC], command ID
+- toolbar buttons (in Toolbar editor), setting properties
+- Toolbar editor, toolbar button properties
+- command IDs, toolbar buttons
 ms.assetid: b16a0635-e703-4156-acea-a54df279295a
-caps.latest.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 6
+caps.latest.revision: "10"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 0dff9064f6a7f27838049f98114259cf228aaebe
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/24/2017
 ---
-# Changing the Properties of a Toolbar Button
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-### Изменение свойств кнопки панели инструментов  
+# <a name="changing-the-properties-of-a-toolbar-button"></a>Изменение свойств кнопки панели инструментов
+### <a name="to-change-the-properties-of-a-toolbar-button"></a>Изменение свойств кнопки панели инструментов  
   
 1.  Выберите кнопку панели инструментов.  
   
-2.  Введите новый идентификатор в свойстве **ИД** в [окне свойств](../Topic/Properties%20Window.md) или выберите новый **ИД** в раскрывающемся списке.  
+2.  Введите новый идентификатор в **идентификатор** свойство в [окно свойств](/visualstudio/ide/reference/properties-window), или раскрывающемся списке выберите новый **идентификатор**.  
   
- Сведения о добавлении ресурсов в управляемые проекты см. в разделе [Ресурсы приложений](../Topic/Resources%20in%20Desktop%20Apps.md) *Руководства разработчика .NET Framework*. Сведения о том, как вручную добавлять файлы ресурсов в управляемые проекты, осуществлять доступ к ресурсам, отображать статические ресурсы и присваивать строки ресурсов свойствам см. в разделах [Пошаговое руководство. Локализация приложений Windows Forms](http://msdn.microsoft.com/ru-ru/9a96220d-a19b-4de0-9f48-01e5d82679e5) и [Walkthrough: Using Resources for Localization with ASP.NET](../Topic/Walkthrough:%20Using%20Resources%20for%20Localization%20with%20ASP.NET.md).  
+ Сведения о добавлении ресурсов в управляемые проекты см. в разделе [ресурсы в классических приложениях](https://msdn.microsoft.com/library/f45fce5x.aspx) в *руководства разработчика .NET Framework.* Сведения о вручную добавлять файлы ресурсов в управляемые проекты, осуществлять доступ к ресурсам, отображать статические ресурсы и присваивать строки ресурсов свойствам см. в разделе [Создание файлов ресурсов для приложений рабочего стола](https://msdn.microsoft.com/library/xbx3z216.aspx). Сведения о глобализации и локализации ресурсов в управляемых приложениях см. в разделе [Globalizing и локализация приложений .NET Framework](https://msdn.microsoft.com/library/h6270d0z.aspx).  
   
  Требования  
   
  MFC или ATL  
   
-## См. также  
- [Toolbar Button Properties](../mfc/toolbar-button-properties.md)   
- [Creating, Moving, and Editing Toolbar Buttons](../mfc/creating-moving-and-editing-toolbar-buttons.md)   
- [Toolbar Editor](../mfc/toolbar-editor.md)
+## <a name="see-also"></a>См. также  
+ [Свойства кнопок панели инструментов](../windows/toolbar-button-properties.md)   
+ [Создание, перемещение и редактирование кнопок панели инструментов](../windows/creating-moving-and-editing-toolbar-buttons.md)   
+ [Редактор панелей инструментов](../windows/toolbar-editor.md)
+

@@ -1,35 +1,34 @@
 ---
-title: "Практическое руководство. Извлечение времени, прошедшего с момента запуска Windows (C++/CLI) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "счетчики, затраченное время"
-  - "начальные"
-  - "начальные, время, прошедшее с момента"
-  - "счетчики тактов"
-  - "время, время, прошедшее с момента запуска"
+title: "Как: извлечение времени, прошедшего с момента запуска (C + +/ CLI) | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- time, elapsed since startup
+- counters, elapsed time
+- startup, time elapsed since
+- tick counts
+- startup
 ms.assetid: a31fdecc-099e-4dd1-a176-f682289c5dd0
-caps.latest.revision: 9
-caps.handback.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "9"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 56f73aec78af0fe34d8c3881911a6ae1d7f26501
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/24/2017
 ---
-# Практическое руководство. Извлечение времени, прошедшего с момента запуска Windows (C++/CLI)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-В следующем примере кода показано, как определить счетчик тактов или число миллисекунд, прошедших с момента запуска Windows.  Данное значение хранится в свойстве <xref:System.Environment.TickCount%2A?displayProperty=fullName> и в связи с тем, что это значение является 32\-битным, оно обнуляется приблизительно каждые 24,9 дней.  
+# <a name="how-to-retrieve-time-elapsed-since-startup-ccli"></a>Практическое руководство. Извлечение времени, прошедшего с момента запуска Windows (C++/CLI)
+В следующем примере кода показано, как определить счетчик тактов или число миллисекунд, прошедших с Windows запущена. Это значение хранится в <xref:System.Environment.TickCount%2A?displayProperty=fullName> члена и, поскольку это 32-разрядное значение, оно обнуляется приблизительно каждые 24,9 дней.  
   
-## Пример  
+## <a name="example"></a>Пример  
   
 ```  
 // startup_time.cpp  
@@ -54,6 +53,6 @@ int main( )
 }  
 ```  
   
-## См. также  
- [Операции Windows](../dotnet/windows-operations-cpp-cli.md)   
- [программирование .NET с использованием C\+\+\/CLI](../dotnet/dotnet-programming-with-cpp-cli-visual-cpp.md)
+## <a name="see-also"></a>См. также  
+ [Операции Windows (C + +/ CLI)](../dotnet/windows-operations-cpp-cli.md)   
+ [Программирование .NET с использованием C++/CLI (Visual C++)](../dotnet/dotnet-programming-with-cpp-cli-visual-cpp.md)

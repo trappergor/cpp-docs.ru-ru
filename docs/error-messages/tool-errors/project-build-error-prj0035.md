@@ -1,35 +1,33 @@
 ---
-title: "Ошибка построения проекта PRJ0035 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "PRJ0035"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "PRJ0035"
+title: "Ошибка построения проекта PRJ0035 | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords: PRJ0035
+dev_langs: C++
+helpviewer_keywords: PRJ0035
 ms.assetid: 0667116d-338c-40a4-972c-da875f778cb5
-caps.latest.revision: 6
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 6
+caps.latest.revision: "6"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: 28d216625f64bab88da76279bb742d02679adfd2
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/24/2017
 ---
-# Ошибка построения проекта PRJ0035
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-XML\-файл "файл" имеет содержимое в кодировке Юникод, которое не удается преобразовать к кодовой странице ANSI пользователя.  
+# <a name="project-build-error-prj0035"></a>Ошибка построения проекта PRJ0035
+XML-файл «файл», содержащий знаки Юникода, не может быть преобразована в кодовую страницу ANSI пользователя.  
   
  ***Содержимое файла в кодировке Юникод***  
   
- ***файл***  — это XML\-файл, созданный в качестве командной строки для инструмента веб\-развертывания.  
+ ***файл*** XML-файл, создается как командную строку для инструмента веб-развертывания.  
   
- Система работы с проектами обнаружила символы Юникода в некоторых свойствах на странице свойств средства веб\-развертывания, которые не удается корректно преобразовать в кодировку ANSI.  
+ Система проектов обнаружила символы Юникода в некоторых свойствах на странице свойств веб-развертывания, не может быть преобразован неправильно ANSI.  
   
- Чтобы исправить эту ошибку, обновите содержимое свойства, используя кодировку ANSI, или установите кодовую страницу на компьютере и укажите ее в качестве системной страницы по умолчанию.
+ Способ устранения этой ошибки является обновление содержимое свойства использовать ANSI, а также установите кодовую страницу на компьютере и укажите ее как системный объект по умолчанию.

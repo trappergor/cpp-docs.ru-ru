@@ -1,43 +1,42 @@
 ---
-title: "_ReturnAddress | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "_ReturnAddress"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Встроенная функция _ReturnAddress"
-  - "Встроенная функция ReturnAddress"
+title: "_ReturnAddress | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: _ReturnAddress
+dev_langs: C++
+helpviewer_keywords:
+- _ReturnAddress intrinsic
+- ReturnAddress intrinsic
 ms.assetid: 7f4a5811-35e6-4f64-ba7c-21203380eeda
-caps.latest.revision: 8
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: 7cc2682aa4c6d4662e188911dab0d0a61baf49ba
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/24/2017
 ---
-# _ReturnAddress
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-## Только для систем Microsoft  
- Встроенный `_ReturnAddress` предоставляет адрес инструкции в вызывающей функции, которая будет выполнена после того как элемент управления будет возвращено вызывающему объекту.  
+# <a name="returnaddress"></a>_ReturnAddress
+## <a name="microsoft-specific"></a>Блок, относящийся только к системам Microsoft  
+ `_ReturnAddress` Предоставляет адрес инструкции в вызывающей функции, которая будет выполняться после возврата управления в вызывающий объект.  
   
- Постройте следующие программы и через его в отладчике.  При заходе с помощью программы обратите внимание, адрес, который возвращается из `_ReturnAddress`.  Затем сразу после возврата из функции, `_ReturnAddress` использовалось, откройте [Практическое руководство. Использование окна дизассемблирования](../Topic/How%20to:%20Use%20the%20Disassembly%20Window.md) и обратите внимание, что адресом следующей инструкции при выполнении быть совпадения адрес, возвращенные из `_ReturnAddress`.  
+ Построение следующие программы и в пошаговом режиме в отладчике. При пошаговом выполнении программы Обратите внимание на адрес, который возвращается из `_ReturnAddress`. Затем, сразу после возврата из функции где `_ReturnAddress` используется, и откройте [как: использование окна дизассемблирования](/visualstudio/debugger/how-to-use-the-disassembly-window) и обратите внимание, что адрес следующую инструкцию для выполнения отвечает адрес, возвращенный из `_ReturnAddress`.  
   
- Оптимизация как встраивание могут повлиять на обратный адрес.  Например, если образец программы ниже компилироваться с [\/Ob1](../build/reference/ob-inline-function-expansion.md), то `inline_func` будет встроенным в вызывающем функцию, `main`.  Поэтому вызовы `_ReturnAddress` из `inline_func` и `main` будут каждую продукцию одно и то же значение.  
+ Оптимизацию, например встраивание может повлиять на обратный адрес. Например, если ниже примера программы компилируется с [/Ob1](../build/reference/ob-inline-function-expansion.md), `inline_func` будет подставляться в вызывающей функции `main`. Таким образом, вызовы `_ReturnAddress` из `inline_func` и `main` будет каждая из которых создает то же значение.  
   
- При `_ReturnAddress` будет использоваться в программе компилированной с [\/clr](../build/reference/clr-common-language-runtime-compilation.md) функция, содержащего вызов `_ReturnAddress` будет компилированна как собственная функция.  При вызове компилированные функцией, такие как управляемые в функцию, содержащий `_ReturnAddress`, `_ReturnAddress` не могут вести себя так, как ожидалось.  
+ Когда `_ReturnAddress` используется в программе, которая скомпилирована с [/CLR](../build/reference/clr-common-language-runtime-compilation.md), функция, содержащая `_ReturnAddress` вызов будет компилироваться как собственную функцию. Когда функция скомпилирована как управляемые вызовы в функцию, содержащую `_ReturnAddress`, `_ReturnAddress` может вести себя неожиданным образом.  
   
-## Требования  
- **Файл заголовка** \<intrin.h\>  
+## <a name="requirements"></a>Требования  
+ **Файл заголовка** \<intrin.h >  
   
-## Пример  
+## <a name="example"></a>Пример  
   
 ```  
 // compiler_intrinsics__ReturnAddress.cpp  
@@ -68,9 +67,9 @@ int main(void)
 }  
 ```  
   
-## ЭЛЕМЕНТ, относящийся Майкрософт  
+**Завершение блока, относящегося только к системам Майкрософт**  
   
-## См. также  
- [\_AddressOfReturnAddress](../intrinsics/addressofreturnaddress.md)   
+## <a name="see-also"></a>См. также  
+ [_AddressOfReturnAddress](../intrinsics/addressofreturnaddress.md)   
  [Встроенные объекты компилятора](../intrinsics/compiler-intrinsics.md)   
- [Ключевые слова в C\+\+](../cpp/keywords-cpp.md)
+ [Ключевые слова](../cpp/keywords-cpp.md)

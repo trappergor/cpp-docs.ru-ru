@@ -1,41 +1,39 @@
 ---
-title: "list::to_array (STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::list::to_array"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "to_array - элемент [STL/CLR]"
+title: "List::to_array (STL/CLR) | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::list::to_array
+dev_langs: C++
+helpviewer_keywords: to_array member [STL/CLR]
 ms.assetid: 3ea7b90c-127b-43cd-804b-019b86b77582
-caps.latest.revision: 14
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 12
+caps.latest.revision: "14"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 113c6330e9fd3e82c83e2d4bf018e4ea101c64c6
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/24/2017
 ---
-# list::to_array (STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Копирует контролируемая последовательность в новый массив.  
+# <a name="listtoarray-stlclr"></a>list::to_array (STL/CLR)
+Копирует управляемой последовательности в новый массив.  
   
-## Синтаксис  
+## <a name="syntax"></a>Синтаксис  
   
 ```  
 cli::array<Value>^ to_array();  
 ```  
   
-## Заметки  
- Возвращает массив, содержащий функцию\-член контролируемую последовательность.  Он используется, чтобы получить копию контролируемой последовательности в форме массива.  
+## <a name="remarks"></a>Примечания  
+ Функция-член возвращает массив, содержащий управляемой последовательности. Используется для получения копии управляемой последовательности в виде массива.  
   
-## Пример  
+## <a name="example"></a>Пример  
   
 ```  
 // cliext_list_to_array.cpp   
@@ -66,12 +64,15 @@ int main()
   
 ```  
   
-  **B C d**  
- **a b c**   
-## Требования  
- **Заголовок:**\<cliext\/list\>  
+```Output  
+a b c d  
+a b c  
+```  
+  
+## <a name="requirements"></a>Требования  
+ **Заголовок:** \<cliext/list >  
   
  **Пространство имен:** cliext  
   
-## См. также  
- [list](../dotnet/list-stl-clr.md)
+## <a name="see-also"></a>См. также  
+ [list (STL/CLR)](../dotnet/list-stl-clr.md)

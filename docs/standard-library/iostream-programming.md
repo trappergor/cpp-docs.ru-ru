@@ -4,12 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - text output [C++]
 - text [C++], formatting
@@ -26,30 +24,15 @@ helpviewer_keywords:
 - programming [C++], iostream programming
 - text input [C++]
 ms.assetid: 1aa0a0be-4dd8-4dac-ac1f-d2afdaeab769
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3f69f0c3176d2fbe19e11ce08c071691a72d858d
-ms.openlocfilehash: 58f49647766d21369145474d908bd3c0436deae8
-ms.contentlocale: ru-ru
-ms.lasthandoff: 02/24/2017
-
+ms.openlocfilehash: c817ab67fecb1479971d729977ad55d6b3e506fc
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="iostream-programming"></a>Программирование iostream
 В этом разделе содержится [общее описание](../standard-library/what-a-stream-is.md) классов iostream классов, а затем описываются [потоки вывода](../standard-library/output-streams.md), [потоки ввода](../standard-library/input-streams.md), и [потоки ввода-вывода](../standard-library/input-output-streams.md). В конце раздела представлены сведения об углубленном программировании iostream.  
@@ -70,5 +53,4 @@ ms.lasthandoff: 02/24/2017
 ## <a name="see-also"></a>См. также  
  [Стандартная библиотека C++](../standard-library/cpp-standard-library-reference.md)   
  [Соглашения iostreams](../standard-library/iostreams-conventions.md)
-
 

@@ -1,65 +1,66 @@
 ---
-title: "Controls in Dialog Boxes | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "controls [C++], dialog boxes"
-  - "dialog box controls, about dialog box controls"
-  - "dialog box controls"
+title: "Элементы управления в диалоговых окнах | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- controls [C++], dialog boxes
+- dialog box controls, about dialog box controls
+- dialog box controls
 ms.assetid: e216c4f9-2fd4-429d-889a-8ebce7bad177
-caps.latest.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 5
+caps.latest.revision: "9"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 314bd0fb81c3ff33f268cea4f3f9f2786cbe3c68
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/24/2017
 ---
-# Controls in Dialog Boxes
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Для добавления элементов управления в диалоговое окно можно использовать вкладку [Редактор диалоговых окон](../mfc/dialog-editor-tab-toolbox.md) в [окне панели элементов](../Topic/Toolbox.md), на которой можно выбрать нужный элемент управления, а затем перетащить его в диалоговое окно.  По умолчанию окно панели элементов автоматически скрывается.  Оно отображается в виде вкладки на левом поле решения, когда открыт редактор диалоговых окон.  Однако, можно изменить настройки окна панели элементов таким образом, чтобы оно отображалось постоянно. Для этого необходимо нажать кнопку\-переключатель **Автоматическое скрытие** в правом верхнем углу окна.  Дополнительные сведения об управлении поведением этого окна см. в разделе [Управление окнами](../Topic/Customizing%20window%20layouts%20in%20Visual%20Studio.md).  
+# <a name="controls-in-dialog-boxes"></a>Элементы управления в диалоговых окнах
+Можно добавить элементы управления в диалоговое окно с помощью [редактор диалоговых окон](../windows/dialog-editor-tab-toolbox.md) в [окно панели элементов](/visualstudio/ide/reference/toolbox), позволяет выбрать элемент управления должен и перетащите его в диалоговом окне. По умолчанию окно панели элементов имеет значение для автоматического скрытия. Оно появляется в виде вкладки на левом краю решения, если открыт редактор диалоговых окон. Тем не менее, вы можете закрепить окно панели элементов в нужное место, щелкнув **Автоскрытие** кнопку в правом верхнем углу окна. Дополнительные сведения о том, как управлять поведением этого окна см. в разделе [Управление окнами](/visualstudio/ide/customizing-window-layouts-in-visual-studio).  
   
- Метод перетаскивания позволяет наиболее быстро и эффективно добавить элемент управления в диалоговое окно и переместить элемент управления в рамках одного диалогового окна, а также из одного диалогового окна в другое.  При перетаскивании позиция элемента управления обозначается пунктирной линией, пока пользователь удерживает кнопку мыши нажатой.  Элементу управления, который добавляется в диалоговое окно методом перетаскивания, присваивается стандартная высота для данного типа элементов управления.  
+ Самый быстрый способ добавление элементов управления в диалоговое окно, положение существующих элементов управления или переместить элементы управления из одного диалогового в другой — с помощью метода перетаскивания и вставки. Положение элемента управления появлялся пунктирная линия до своего удаления в диалоговом окне. При добавлении элемента управления в диалоговое окно с помощью метода и перетащите элемент управления получает стандартной высоты для данного типа элемента управления.  
   
- Когда пользователь добавляет в диалоговое окно элемент управления или когда изменяет его положение, окончательная позиция элемента управления может быть обозначена направляющими или полями, или же сеткой макета, если она включена.  
+ При добавлении элемента управления в диалоговое или положение, окончательная позиция может определяться направляющими или полями, или имеется включен сетки макета.  
   
- После того, как элемент управления будет добавлен в диалоговое окно, в [окне свойств](../Topic/Properties%20Window.md) можно будет изменить свойства этого элемента управления, например, заголовок.  Можно выбрать несколько элементов управления и изменить определенные свойства для всей группы сразу.  
+ После добавления элемента управления в диалоговое окно, можно изменить свойства, такие как фактически [окно свойств](/visualstudio/ide/reference/properties-window). Можно выбрать несколько элементов управления и изменение их свойств за один раз.  
   
--   [Добавление, изменение и удаление элементов управления](../mfc/adding-editing-or-deleting-controls.md)  
+-   [Добавление, изменение и удаление элементов управления](adding-editing-or-deleting-controls.md)  
   
--   [Выбор элементов управления](../mfc/selecting-controls.md)  
+-   [Выбор элементов управления](../windows/selecting-controls.md)  
   
--   [Изменение размера отдельных элементов управления](../mfc/sizing-individual-controls.md)  
+-   [Изменение размера отдельных элементов управления](../windows/sizing-individual-controls.md)  
   
--   [Выравнивание элементов управления по размеру](../mfc/making-controls-the-same-width-height-or-size.md)  
+-   [Выравнивание элементов управления по размеру](../windows/making-controls-the-same-width-height-or-size.md)  
   
--   [Задание размера для поля со списком и соответствующего раскрывающегося списка](../mfc/setting-the-size-of-the-combo-box-and-its-drop-down-list.md)  
+-   [Задание размера для поля со списком и соответствующего раскрывающегося списка](setting-the-size-of-the-combo-box-and-its-drop-down-list.md)  
   
--   [Добавление значений в элемент управления поля со списком](../mfc/adding-values-to-a-combo-box-control.md)  
+-   [Добавление значений в элемент управления "Поле со списком"](../windows/adding-values-to-a-combo-box-control.md)  
   
--   [Задание ширины горизонтальной полосы прокрутки](../Topic/Setting%20the%20Width%20of%20a%20Horizontal%20Scroll%20Bar.md)  
+-   [Задание ширины горизонтальной полосы прокрутки](../windows/setting-the-width-of-a-horizontal-scroll-bar.md)  
   
--   [Упорядочение элементов управления в диалоговых окнах](../mfc/arrangement-of-controls-on-dialog-boxes.md)  
+-   [Размещение элементов управления в диалоговые окна](../windows/arrangement-of-controls-on-dialog-boxes.md)  
   
--   [Пользовательские элементы управления в редакторе диалогов](../mfc/custom-controls-in-the-dialog-editor.md)  
+-   [Пользовательские элементы управления в редакторе диалоговых окон](custom-controls-in-the-dialog-editor.md)  
   
--   [Определение клавиш доступа](../mfc/defining-mnemonics-access-keys.md)  
+-   [Определение клавиш доступа](../windows/defining-mnemonics-access-keys.md)  
   
--   [Задание местоположения и размера диалогового окна](../mfc/specifying-the-location-and-size-of-a-dialog-box.md)  
+-   [Задание местоположения и размера диалогового окна](../windows/specifying-the-location-and-size-of-a-dialog-box.md)  
   
- Сведения о добавлении ресурсов в управляемые проекты см. в разделе [Ресурсы приложений](../Topic/Resources%20in%20Desktop%20Apps.md) *Руководства разработчика .NET Framework*. Сведения о том, как вручную добавлять файлы ресурсов в управляемые проекты, осуществлять доступ к ресурсам, отображать статические ресурсы и присваивать строки ресурсов свойствам см. в разделах [Пошаговое руководство. Локализация приложений Windows Forms](http://msdn.microsoft.com/ru-ru/9a96220d-a19b-4de0-9f48-01e5d82679e5) и [Walkthrough: Using Resources for Localization with ASP.NET](../Topic/Walkthrough:%20Using%20Resources%20for%20Localization%20with%20ASP.NET.md).  
+ Сведения о добавлении ресурсов в управляемые проекты см. в разделе [ресурсы в классических приложениях](https://msdn.microsoft.com/library/f45fce5x.aspx) в *руководства разработчика .NET Framework.* Сведения о вручную добавлять файлы ресурсов в управляемые проекты, осуществлять доступ к ресурсам, отображать статические ресурсы и присваивать строки ресурсов свойствам см. в разделе [Создание файлов ресурсов для приложений рабочего стола](https://msdn.microsoft.com/library/xbx3z216.aspx). Сведения о глобализации и локализации ресурсов в управляемых приложениях см. в разделе [Globalizing и локализация приложений .NET Framework](https://msdn.microsoft.com/library/h6270d0z.aspx).  
   
-## Требования  
+## <a name="requirements"></a>Требования  
  Win32  
   
-## См. также  
- [Adding Event Handlers for Dialog Box Controls](../mfc/adding-event-handlers-for-dialog-box-controls.md)   
- [Элементы управления "Диалоговые окна" и типы переменных](../Topic/Dialog%20Box%20Controls%20and%20Variable%20Types.md)   
- [Dialog Editor](../mfc/dialog-editor.md)
+## <a name="see-also"></a>См. также  
+ [Добавление обработчиков событий для элементов управления диалогового окна](../windows/adding-event-handlers-for-dialog-box-controls.md)   
+ [Элементы управления диалоговых окон и типы переменных](../ide/dialog-box-controls-and-variable-types.md)   
+ [Редактор диалоговых окон](../windows/dialog-editor.md)
+

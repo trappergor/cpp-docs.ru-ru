@@ -1,59 +1,57 @@
 ---
-title: "@ (указать файл ответа компилятора) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "@"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "@ - параметр компилятора"
-  - "cl.exe - компилятор, файлы ответа - указание"
-  - "файлы ответа, компилятор C/C++"
+title: "@ (Указать файл ответа компилятора) | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: '@'
+dev_langs: C++
+helpviewer_keywords:
+- response files, C/C++ compiler
+- '@ compiler option'
+- cl.exe compiler, specifying response files
 ms.assetid: 400fffee-909d-4f60-bf76-45833e822685
-caps.latest.revision: 10
-caps.handback.revision: 10
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
+caps.latest.revision: "10"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: fcbadb55b2116b0939bbb954e4f544c40caacebb
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/24/2017
 ---
-# @ (указать файл ответа компилятора)
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="-specify-a-compiler-response-file"></a>@ (указать файл ответа компилятора)
 Указывает файл ответа компилятора.  
   
-## Синтаксис  
+## <a name="syntax"></a>Синтаксис  
   
 ```  
 @response_file  
 ```  
   
-## Аргументы  
+## <a name="arguments"></a>Аргументы  
  `response_file`  
- Текстовый файл, содержащий команды компилятора.  
+ Текстовый файл, содержащий команды для компилятора.  
   
-## Заметки  
- Файл ответа может содержать любые команды, указанные в командной строке.  Это может быть полезно, если аргументы командной строки превышает 127 символов.  
+## <a name="remarks"></a>Примечания  
+ Файл ответа может содержать любые команды, указанные в командной строке. Это может быть полезно в том случае, если аргументы командной строки превышает 127 символов.  
   
- Из файла ответа невозможно указать параметр **@**.  То есть файл ответа не может включать другой файл ответа.  
+ Не удается указать  **@**  параметр в файле ответов. То есть файл ответа не удается внедрить другой файл ответа.  
   
- Из командной строки можно указать неограниченное число параметров файла ответа \(например `@respfile.1 @respfile.2`\).  
+ Из командной строки можно указать любое количество параметров файла ответа (например, `@respfile.1 @respfile.2`) как требуется.  
   
-### Установка данного параметра компилятора в среде разработки Visual Studio  
+### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Установка данного параметра компилятора в среде разработки Visual Studio  
   
--   Файл ответа не может быть указан из среды разработки и должен быть указан в командной строке.  
+-   Файл ответа не может быть указана из среды разработки и должен быть указан в командной строке.  
   
-### Установка данного параметра компилятора программным способом  
+### <a name="to-set-this-compiler-option-programmatically"></a>Установка данного параметра компилятора программным способом  
   
--   Этот параметр компилятора нельзя изменить программным способом.  
+-   Данного параметра компилятора программным способом нельзя.  
   
-## См. также  
+## <a name="see-also"></a>См. также  
  [Параметры компилятора](../../build/reference/compiler-options.md)   
- [Настройка параметров компилятора](../Topic/Setting%20Compiler%20Options.md)
+ [Настройка параметров компилятора](../../build/reference/setting-compiler-options.md)

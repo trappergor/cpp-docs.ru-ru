@@ -4,44 +4,37 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-tools
+ms.technology: cpp-tools
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- C2338
-dev_langs:
-- C++
-helpviewer_keywords:
-- C2338
+f1_keywords: C2338
+dev_langs: C++
+helpviewer_keywords: C2338
 ms.assetid: 49bba575-1de4-4963-86c6-ce3226a2ba51
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0d9cbb01d1ad0f2ea65d59334cb88140ef18fce0
-ms.openlocfilehash: 516708d97b99fd8fb7acf05a04b42936702b4176
-ms.contentlocale: ru-ru
-ms.lasthandoff: 04/12/2017
-
+ms.openlocfilehash: 3b5f8773daa61b2ac7703b1ee0e5672818278e87
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/24/2017
 ---
-# <a name="compiler-error-c2338"></a>Ошибка компилятора C2338
-"идентификатор" поставщик атрибутов ATL  
+# <a name="compiler-error-c2338"></a>Ошибка компилятора C2338  
   
- Атрибут ссылается на необъявленный идентификатор. Появится это сообщение об ошибке, связанные с [Ошибка поставщика ATL ATL2010](http://msdn.microsoft.com/en-us/27a25924-b52b-4971-80d3-c3b3e9ffbe41).
+> *Сообщение об ошибке*  
+  
+Эта ошибка может быть вызвана `static_assert` ошибки во время компиляции. Предоставляемые сообщения `static_assert` параметров.   
+  
+Это сообщение об ошибке также могут быть вызваны внешних поставщиков для компилятора. В большинстве случаев эти сообщает об ошибках поставщика атрибутов DLL, например ATLPROV. Перечислены некоторые распространенные виды это сообщение.
+
+> "*атрибута*" поставщик атрибутов Atl: ошибка ATL*номер* *сообщения*  
+  
+> Неправильное использование атрибута "*атрибута*"
+  
+> "*использование*": неправильный формат для атрибута «использование»  
+  
+Эти ошибки часто являются неустранимой и может следовать ошибку компилятора Неустранимая.  
+  
+Чтобы устранить эти неполадки, устраните использование атрибута. Например, в некоторых случаях атрибут параметры необходимо объявлять прежде чем можно будет использовать. Если номер ошибки ATL, обратитесь к документации для этой ошибки более подробные сведения.  

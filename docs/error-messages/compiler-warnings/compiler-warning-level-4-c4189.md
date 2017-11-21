@@ -1,47 +1,27 @@
 ---
-title: "Компилятор C4189 предупреждение (уровень 4) | Документы Microsoft"
+title: "Предупреждение (уровень 4) C4189 компилятора | Документы Microsoft"
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-tools
+ms.technology: cpp-tools
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- C4189
-dev_langs:
-- C++
-helpviewer_keywords:
-- C4189
+f1_keywords: C4189
+dev_langs: C++
+helpviewer_keywords: C4189
 ms.assetid: 7ad9242c-228e-4054-8244-5e914b618ef3
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
-ms.openlocfilehash: aa0f1f0520bb5edacf6df4d5a7971b274dad0c21
-ms.contentlocale: ru-ru
-ms.lasthandoff: 02/24/2017
-
+ms.openlocfilehash: 538cd40563890cef2441eeb02f22408c876d7bc2
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/24/2017
 ---
-# <a name="compiler-warning-level-4-c4189"></a>Предупреждение компилятора (уровень 4) C4189
+# <a name="compiler-warning-level-4-c4189"></a>Предупреждение компилятора (уровень 4) C4189
 "идентификатор": локальная переменная инициализирована, но не использована  
   
  Переменная объявлена и инициализирована, но не используется.  

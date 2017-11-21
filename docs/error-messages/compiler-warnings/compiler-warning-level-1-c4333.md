@@ -1,34 +1,32 @@
 ---
-title: "Предупреждение компилятора (уровень 1) C4333 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C4333"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C4333"
+title: "Предупреждение (уровень 1) C4333 компилятора | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords: C4333
+dev_langs: C++
+helpviewer_keywords: C4333
 ms.assetid: d3763c52-6110-4da0-84db-5264e3f3f166
-caps.latest.revision: 6
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 6
+caps.latest.revision: "6"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: 505181ea2008680c20a4e63a4d2a1a0e89d91f01
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/24/2017
 ---
-# Предупреждение компилятора (уровень 1) C4333
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-"оператор": слишком большое смещение вправо; потеря данных  
+# <a name="compiler-warning-level-1-c4333"></a>Предупреждение компилятора (уровень 1) C4333
+«оператор»: сдвиг вправо слишком большое значение, потери данных  
   
- Операция сдвига вправо привела к слишком большому смещению данных.  Все значимые биты сдвинуты без сохранения выдвигаемых разрядов, поэтому результат будет всегда равен нулю.  
+ Операция сдвига вправо была слишком большой процент.  Все значимые биты сдвинуты без и результат всегда будет равно нулю.  
   
-## Пример  
+## <a name="example"></a>Пример  
  Следующий пример приводит к возникновению ошибки C4333.  
   
 ```  

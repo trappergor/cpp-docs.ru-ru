@@ -1,32 +1,32 @@
 ---
-title: "Создание встроенных текстовых стилей | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "встроенные файлы, создание текста"
-  - "программа NMAKE, встроенные файлы"
-  - "текст, встроенный файл"
+title: "Создание встроенных текстовых | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- inline files, creating text
+- NMAKE program, inline files
+- text, inline file
 ms.assetid: b8a332ed-8244-4ff8-89e6-029d7f659725
-caps.latest.revision: 8
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: 174160657e5494f5566fd0828815b3c0f1b3d601
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/24/2017
 ---
-# Создание встроенных текстовых стилей
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="creating-inline-file-text"></a>Создание встроенных текстовых стилей
 Встроенные файлы являются постоянными или временными.  
   
-## Синтаксис  
+## <a name="syntax"></a>Синтаксис  
   
 ```  
   
@@ -37,10 +37,10 @@ caps.handback.revision: 8
 <<[KEEP | NOKEEP]  
 ```  
   
-## Заметки  
- Укажите *inlinetext* в первой после команды строке.  Пометьте конец с существующими угловыми скобки \(\<\<\) в начале отдельной линии.  Файл содержит все *inlinetext* перед разделяющими скобками.  *inlinetext* может иметь расширения макроса и подстановки, но не директивы или комментарии makefile.  Пробелы, символы табуляции и символы новой строки воспринимаются буквально.  
+## <a name="remarks"></a>Примечания  
+ Укажите *inlinetext* в первой строке после команды. Отметить конец строки при помощи двойные угловые скобки (<<) в начале отдельной строке. Файл содержит все *inlinetext* перед разделяющими скобками. *Inlinetext* может иметь расширения макроса и подстановки, но не директивы или комментарии makefile. Пробелы, знаки табуляции и символы новой строки обрабатываются буквально.  
   
- Временные файлы существуют во время сеанса и могут быть использованы другими командами.  Укажите **KEEP** после закрытия угловых скобок, чтобы сохранить файл после сессии NMAKE; неуправляемый файл сохраняется на диске под сгенерированным именем файла.  Укажите **NOKEEP** или ничего не указывайте для временного файла.  **KEEP** и **NOKEEP** не учитывают регистр.  
+ Временный файл существует в течение всего сеанса и могут быть использованы другими командами. Укажите **Сохранить** после закрывающие угловые скобки, чтобы сохранить файл после сессии NMAKE; безымянный файл сохраняется на диске с именем созданного файла. Укажите **NOKEEP** или ничего для временного файла. **Сохранить** и **NOKEEP** не учитывается регистр.  
   
-## См. также  
+## <a name="see-also"></a>См. также  
  [Подставляемые файлы в Makefile](../build/inline-files-in-a-makefile.md)

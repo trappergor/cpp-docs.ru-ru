@@ -1,33 +1,30 @@
 ---
-title: "readonly (C++) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-f1_keywords: 
-  - "vc-attr.readonly"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "readonly - атрибут"
+title: "только для чтения (C++) | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+f1_keywords: vc-attr.readonly
+dev_langs: C++
+helpviewer_keywords: readonly attribute
 ms.assetid: 1246cadd-5304-43a9-beea-51153d12704d
-caps.latest.revision: 9
-caps.handback.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "9"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 52ee0c600cf12a9709072a8c1cb502dada70f708
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/24/2017
 ---
-# readonly (C++)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="readonly-c"></a>readonly (C++)
 Запрещает назначение элементу данных.  
   
-## Синтаксис  
+## <a name="syntax"></a>Синтаксис  
   
 ```  
   
@@ -35,13 +32,13 @@ manager: "ghogen"
   
 ```  
   
-## Заметки  
- Атрибут **readonly** языка C\+\+ имеет ту же функциональность, что и атрибут [readonly](http://msdn.microsoft.com/library/windows/desktop/aa367152) языка MIDL.  
+## <a name="remarks"></a>Примечания  
+ Атрибут **readonly** языка C++ имеет ту же функциональность, что и атрибут [readonly](http://msdn.microsoft.com/library/windows/desktop/aa367152) языка MIDL.  
   
- Если вы хотите запретить изменение параметра метода, используйте атрибут [in](../Topic/in%20\(C++\).md).  
+ Если вы хотите запретить изменение параметра метода, используйте атрибут [in](../windows/in-cpp.md) .  
   
-## Пример  
- В следующем коде показано использование атрибута **readonly**:  
+## <a name="example"></a>Пример  
+ В следующем коде показано использование атрибута **readonly** :  
   
 ```  
 // cpp_attr_ref_readonly.cpp  
@@ -57,9 +54,9 @@ __interface IFireTabCtrl
 };  
 ```  
   
-## Требования  
+## <a name="requirements"></a>Требования  
   
-### Контекст атрибута  
+### <a name="attribute-context"></a>Контекст атрибута  
   
 |||  
 |-|-|  
@@ -70,7 +67,6 @@ __interface IFireTabCtrl
   
  Дополнительные сведения о контекстах атрибутов см. в разделе [Контексты атрибутов](../windows/attribute-contexts.md).  
   
-## См. также  
- [IDL Attributes](../windows/idl-attributes.md)   
- [Data Member Attributes](../windows/data-member-attributes.md)   
- [Attributes Samples](http://msdn.microsoft.com/ru-ru/558ebdb2-082f-44dc-b442-d8d33bf7bdb8)
+## <a name="see-also"></a>См. также  
+ [Атрибуты IDL](../windows/idl-attributes.md)   
+ [Атрибуты элементов данных](../windows/data-member-attributes.md)   

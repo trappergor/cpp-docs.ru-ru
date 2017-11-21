@@ -1,36 +1,35 @@
 ---
-title: "vector (STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::vector"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "<cliext/vector> - заголовок [STL/CLR]"
-  - "<vector> - заголовок [STL/CLR]"
-  - "vector - класс [STL/CLR]"
+title: "вектор (STL/CLR) | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::vector
+dev_langs: C++
+helpviewer_keywords:
+- vector class [STL/CLR]
+- <cliext/vector> header [STL/CLR]
+- <vector> header [STL/CLR]
 ms.assetid: f90060d5-097a-4e9d-9a26-a634b5b9c6c2
-caps.latest.revision: 18
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 18
+caps.latest.revision: "18"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 4ee3debcaf651a2a11ef51cac405edf816c5b8ba
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/24/2017
 ---
-# vector (STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Описание объекта класса шаблона, что элементы управления менять\- длины последовательность элементов с прямой доступ.  Используется контейнер `vector` для управления последовательность элементов в непрерывном блоке хранилища.  Блок реализуется как массив, который увеличивается по требованию.  
+# <a name="vector-stlclr"></a>vector (STL/CLR)
+Класс шаблона описывает объект, управляющий последовательностью элементов переменной длины с произвольного доступа. Используйте контейнер `vector` для управления последовательностью элементов как непрерывный блок памяти. Блок реализуется как массив, который увеличивается по требованию.  
   
- В описании ниже, `GValue` совпадает с `Value` если здесь не будет ссылочного типа, в случае которого это `Value^`.  
+ В следующем описании `GValue` совпадает со значением `Value` Если последний является типом ссылки, в этом случае он является `Value^`.  
   
-## Синтаксис  
+## <a name="syntax"></a>Синтаксис  
   
 ```  
 template<typename Value>  
@@ -46,100 +45,101 @@ template<typename Value>
     { ..... };  
 ```  
   
-#### Параметры  
+#### <a name="parameters"></a>Параметры  
  Значение  
  Тип элемента в управляемой последовательности.  
   
-## Члены  
+## <a name="members"></a>Члены  
   
 |Определение типа|Описание|  
-|----------------------|--------------|  
-|[vector::const\_iterator](../dotnet/vector-const-iterator-stl-clr.md)|Тип постоянного итератора для управляемой последовательности.|  
-|[vector::const\_reference](../dotnet/vector-const-reference-stl-clr.md)|Тип постоянной ссылки на элемент.|  
-|[vector::const\_reverse\_iterator](../dotnet/vector-const-reverse-iterator-stl-clr.md)|Тип константы обратного итератора для контролируемой последовательности.|  
-|[vector::difference\_type](../dotnet/vector-difference-type-stl-clr.md)|Тип расстояния со знаком между двумя элементами.|  
-|[vector::generic\_container](../dotnet/vector-generic-container-stl-clr.md)|Тип универсального интерфейса для контейнера.|  
-|[vector::generic\_iterator](../dotnet/vector-generic-iterator-stl-clr.md)|Тип итератора для универсального интерфейса для контейнера.|  
-|[vector::generic\_reverse\_iterator](../Topic/vector::generic_reverse_iterator%20\(STL-CLR\).md)|Тип обратного итератора для универсального интерфейса для контейнера.|  
-|[vector::generic\_value](../dotnet/vector-generic-value-stl-clr.md)|Тип элемента для универсального интерфейса для контейнера.|  
-|[vector::iterator](../dotnet/vector-iterator-stl-clr.md)|Тип итератора для управляемой последовательности.|  
-|[vector::reference](../dotnet/vector-reference-stl-clr.md)|Тип ссылки на элемент.|  
-|[vector::reverse\_iterator](../dotnet/vector-reverse-iterator-stl-clr.md)|Тип обратного итератора для контролируемой последовательности.|  
-|[vector::size\_type](../dotnet/vector-size-type-stl-clr.md)|Тип расстояния со знаком между двумя элементами.|  
-|[vector::value\_type](../Topic/vector::value_type%20\(STL-CLR\).md)|Тип элемента.|  
+|---------------------|-----------------|  
+|[vector::const_iterator (STL/CLR)](../dotnet/vector-const-iterator-stl-clr.md)|Тип постоянного итератора для управляемой последовательности.|  
+|[vector::const_reference (STL/CLR)](../dotnet/vector-const-reference-stl-clr.md)|Тип постоянной ссылки на элемент.|  
+|[vector::const_reverse_iterator (STL/CLR)](../dotnet/vector-const-reverse-iterator-stl-clr.md)|Тип постоянного обратного итератора для управляемой последовательности.|  
+|[vector::difference_type (STL/CLR)](../dotnet/vector-difference-type-stl-clr.md)|Тип расстояния со знаком между двумя элементами.|  
+|[vector::generic_container (STL/CLR)](../dotnet/vector-generic-container-stl-clr.md)|Тип универсального интерфейса для контейнера.|  
+|[vector::generic_iterator (STL/CLR)](../dotnet/vector-generic-iterator-stl-clr.md)|Тип итератора для универсальный интерфейс для контейнера.|  
+|[vector::generic_reverse_iterator (STL/CLR)](../dotnet/vector-generic-reverse-iterator-stl-clr.md)|Тип обратного итератора для универсальный интерфейс для контейнера.|  
+|[vector::generic_value (STL/CLR)](../dotnet/vector-generic-value-stl-clr.md)|Тип элемента для универсального интерфейса для контейнера.|  
+|[vector::iterator (STL/CLR)](../dotnet/vector-iterator-stl-clr.md)|Тип итератора для управляемой последовательности.|  
+|[vector::reference (STL/CLR)](../dotnet/vector-reference-stl-clr.md)|Тип ссылки на элемент.|  
+|[vector::reverse_iterator (STL/CLR)](../dotnet/vector-reverse-iterator-stl-clr.md)|Тип обратного итератора для управляемой последовательности.|  
+|[vector::size_type (STL/CLR)](../dotnet/vector-size-type-stl-clr.md)|Тип расстояния со знаком между двумя элементами.|  
+|[vector::value_type (STL/CLR)](../dotnet/vector-value-type-stl-clr.md)|Тип элемента.|  
   
-|Функция Member|Описание|  
-|--------------------|--------------|  
-|[vector::assign](../Topic/vector::assign%20\(STL-CLR\).md)|Заменяет все элементы.|  
-|[vector::at](../dotnet/vector-at-stl-clr.md)|Получает элемент в указанной позиции.|  
-|[vector::back](../dotnet/vector-back-stl-clr.md)|Получает последний элемент.|  
-|[vector::begin](../dotnet/vector-begin-stl-clr.md)|Задает начало управляемой последовательности.|  
-|[vector::capacity](../dotnet/vector-capacity-stl-clr.md)|Возвращает объем пространства, выделенного для хранения контейнера.|  
-|[vector::clear](../dotnet/vector-clear-stl-clr.md)|Удаляет все элементы.|  
-|[vector::empty](../Topic/vector::empty%20\(STL-CLR\).md)|Тесты отсутствуют ли какие\-либо элементы.|  
-|[vector::end](../dotnet/vector-end-stl-clr.md)|Задает конец управляемой последовательности.|  
-|[vector::erase](../dotnet/vector-erase-stl-clr.md)|Удаляет элементы в указанных положениях.|  
-|[vector::front](../dotnet/vector-front-stl-clr.md)|Получение первого элемента.|  
-|[vector::insert](../Topic/vector::insert%20\(STL-CLR\).md)|Добавляет элементы в указанной позиции.|  
-|[vector::pop\_back](../Topic/vector::pop_back%20\(STL-CLR\).md)|Удаляет последний элемент.|  
-|[vector::push\_back](../dotnet/vector-push-back-stl-clr.md)|Добавляет новый последний элемент.|  
-|[vector::rbegin](../dotnet/vector-rbegin-stl-clr.md)|Задает начало обратной управляемой последовательности.|  
-|[vector::rend](../dotnet/vector-rend-stl-clr.md)|Задает конец обратной управляемой последовательности.|  
-|[vector::reserve](../Topic/vector::reserve%20\(STL-CLR\).md)|Предоставляет минимальные ресурсы роста для контейнера.|  
-|[vector::resize](../Topic/vector::resize%20\(STL-CLR\).md)|Изменяет количество элементов.|  
-|[vector::size](../dotnet/vector-size-stl-clr.md)|Подсчитывает количество элементов.|  
-|[vector::swap](../dotnet/vector-swap-stl-clr.md)|Меняет местами содержимое двух контейнеров.|  
-|[vector::to\_array](../dotnet/vector-to-array-stl-clr.md)|Копирует контролируемая последовательность в новый массив.|  
-|[vector::vector](../dotnet/vector-vector-stl-clr.md)|Создает объект контейнера.|  
+|Функция-член|Описание|  
+|---------------------|-----------------|  
+|[vector::assign (STL/CLR)](../dotnet/vector-assign-stl-clr.md)|Заменяет все элементы.|  
+|[vector::at (STL/CLR)](../dotnet/vector-at-stl-clr.md)|Обращается к элементу в указанной позиции.|  
+|[vector::back (STL/CLR)](../dotnet/vector-back-stl-clr.md)|Обращается к последнему элементу.|  
+|[vector::begin (STL/CLR)](../dotnet/vector-begin-stl-clr.md)|Задает начало управляемой последовательности.|  
+|[vector::capacity (STL/CLR)](../dotnet/vector-capacity-stl-clr.md)|Показывает размер хранилища, выделенного для контейнера.|  
+|[vector::clear (STL/CLR)](../dotnet/vector-clear-stl-clr.md)|Удаляет все элементы.|  
+|[vector::empty (STL/CLR)](../dotnet/vector-empty-stl-clr.md)|Проверяет отсутствие элементов.|  
+|[vector::end (STL/CLR)](../dotnet/vector-end-stl-clr.md)|Задает конец управляемой последовательности.|  
+|[vector::erase (STL/CLR)](../dotnet/vector-erase-stl-clr.md)|Удаляет элементы в указанных позициях.|  
+|[vector::front (STL/CLR)](../dotnet/vector-front-stl-clr.md)|Обращается к первому элементу.|  
+|[vector::insert (STL/CLR)](../dotnet/vector-insert-stl-clr.md)|Добавляет элементы в заданной позиции.|  
+|[vector::pop_back (STL/CLR)](../dotnet/vector-pop-back-stl-clr.md)|Удаляет последний элемент.|  
+|[vector::push_back (STL/CLR)](../dotnet/vector-push-back-stl-clr.md)|Добавляет новый последний элемент.|  
+|[vector::rbegin (STL/CLR)](../dotnet/vector-rbegin-stl-clr.md)|Задает начало обратной управляемой последовательности.|  
+|[vector::rend (STL/CLR)](../dotnet/vector-rend-stl-clr.md)|Задает конец обратной управляемой последовательности.|  
+|[vector::reserve (STL/CLR)](../dotnet/vector-reserve-stl-clr.md)|Обеспечивает минимальное рост емкости для контейнера.|  
+|[vector::resize (STL/CLR)](../dotnet/vector-resize-stl-clr.md)|Изменяет количество элементов.|  
+|[vector::size (STL/CLR)](../dotnet/vector-size-stl-clr.md)|Подсчитывает количество элементов.|  
+|[vector::swap (STL/CLR)](../dotnet/vector-swap-stl-clr.md)|Меняет местами содержимое двух контейнеров.|  
+|[vector::to_array (STL/CLR)](../dotnet/vector-to-array-stl-clr.md)|Копирует управляемой последовательности в новый массив.|  
+|[vector::vector (STL/CLR)](../dotnet/vector-vector-stl-clr.md)|Создает объект контейнера.|  
   
 |Свойство|Описание|  
-|--------------|--------------|  
-|[vector::back\_item](../dotnet/vector-back-item-stl-clr.md)|Получает последний элемент.|  
-|[vector::front\_item](../dotnet/vector-front-item-stl-clr.md)|Получение первого элемента.|  
+|--------------|-----------------|  
+|[vector::back_item (STL/CLR)](../dotnet/vector-back-item-stl-clr.md)|Обращается к последнему элементу.|  
+|[vector::front_item (STL/CLR)](../dotnet/vector-front-item-stl-clr.md)|Обращается к первому элементу.|  
   
 |Оператор|Описание|  
-|--------------|--------------|  
-|[vector::operator\=](../dotnet/vector-operator-assign-stl-clr.md)|Заменяет контролируемая последовательность.|  
-|[vector::operator](../dotnet/vector-operator-stl-clr.md)|Получает элемент в указанной позиции.|  
-|[operator\!\= \(vector\)](../Topic/operator!=%20\(vector\)%20\(STL-CLR\).md)|Определяет, является ли объект `vector` не равен другому объекту `vector`.|  
-|[operator\< \(vector\)](../dotnet/operator-less-than-vector-stl-clr.md)|Определяет, является ли объект `vector` меньше другой объект `vector`.|  
-|[operator\<\= \(vector\)](../dotnet/operator-less-or-equal-vector-stl-clr.md)|Определяет, является ли объект `vector` меньше или равно другому объекту `vector`.|  
-|[operator\=\= \(vector\)](../Topic/operator==%20\(vector\)%20\(STL-CLR\).md)|Определяет, является ли объект `vector` равен другому объекту `vector`.|  
-|[operator\> \(vector\)](../dotnet/operator-greater-than-vector-stl-clr.md)|Определяет, является ли объект `vector` больше другого объекта `vector`.|  
-|[operator\>\= \(vector\)](../Topic/operator%3E=%20\(vector\)%20\(STL-CLR\).md)|Определяет, является ли объект `vector` больше или равно другому объекту `vector`.|  
+|--------------|-----------------|  
+|[vector::operator= (STL/CLR)](../dotnet/vector-operator-assign-stl-clr.md)|Заменяет управляемую последовательность.|  
+|[vector::operator (STL/CLR)](../dotnet/vector-operator-stl-clr.md)|Обращается к элементу в указанной позиции.|  
+|[operator!= (vector) (STL/CLR)](../dotnet/operator-inequality-vector-stl-clr.md)|Определяет, если `vector` объект не равен другому `vector` объекта.|  
+|[operator< (vector) (STL/CLR)](../dotnet/operator-less-than-vector-stl-clr.md)|Определяет, если `vector` объект меньше другого `vector` объекта.|  
+|[operator<= (vector) (STL/CLR)](../dotnet/operator-less-or-equal-vector-stl-clr.md)|Определяет, если `vector` объекта меньше или равно другому `vector` объекта.|  
+|[operator== (vector) (STL/CLR)](../dotnet/operator-equality-vector-stl-clr.md)|Определяет, если `vector` объект равен другому `vector` объекта.|  
+|[operator> (vector) (STL/CLR)](../dotnet/operator-greater-than-vector-stl-clr.md)|Определяет, если `vector` объект больше другого `vector` объекта.|  
+|[operator>= (vector) (STL/CLR)](../dotnet/operator-greater-or-equal-vector-stl-clr.md)|Определяет, если `vector` объекта больше или равно другому `vector` объекта.|  
   
-## Интерфейсы  
+## <a name="interfaces"></a>Интерфейсы  
   
 |Интерфейс|Описание|  
-|---------------|--------------|  
-|<xref:System.ICloneable>|Дублируйте объект.|  
-|<xref:System.Collections.IEnumerable>|Последовательность между элементами.|  
-|<xref:System.Collections.ICollection>|Обеспечение группу в составе элементы.|  
-|<xref:System.Collections.Generic.IEnumerable%601>|Через последовательность типизированных элементов.|  
-|<xref:System.Collections.Generic.ICollection%601>|Обеспечение группу в составе типизированных элементов.|  
-|<xref:System.Collections.Generic.IList%601>|Maintain является группу в составе типизированных элементов.|  
-|IVector\<Value\>|Обслуживайте универсальный контейнер.|  
+|---------------|-----------------|  
+|<xref:System.ICloneable>|Создание дубликата объекта.|  
+|<xref:System.Collections.IEnumerable>|Последовательность элементов.|  
+|<xref:System.Collections.ICollection>|Ведение группы элементов.|  
+|<xref:System.Collections.Generic.IEnumerable%601>|Последовательности типизированных элементов.|  
+|<xref:System.Collections.Generic.ICollection%601>|Ведение группы типизированных элементов.|  
+|<xref:System.Collections.Generic.IList%601>|Ведение упорядоченная группа типизированных элементов.|  
+|IVector < значение\>|Ведение универсального контейнера.|  
   
-## Заметки  
- Объект выделяет и освобождает хранилище для последовательности его элементов управления с помощью сохраненного массив элементов `Value`, который увеличивается по требованию.  Рост происходит таким образом, что затраты добавить новый элемент амортизирована постоянно время.  Другими словами, стоимость добавлений элементов в конце не растет, в среднем, как длина контролируемой последовательности получает крупнее.  Таким образом, вектор хорошим кандидатом для основного контейнера для шаблона класса [стек](../dotnet/stack-stl-clr.md).  
+## <a name="remarks"></a>Примечания  
+ Объект выделяет и освобождает память для им последовательность через хранимые массива `Value` элементы, которые увеличивается по требованию. Увеличение размера происходит таким образом, что добавление нового элемента обходится амортизацию константой времени. Другими словами затраты на добавление элементов в конце не увеличивается, в среднем, как длина больше возвращает управляемой последовательности. Таким образом, вектор является хорошим кандидатом для базового контейнера для шаблона класса [стека (STL/CLR)](../dotnet/stack-stl-clr.md).  
   
- `vector` поддерживает произвольного доступа являются итераторы. это означает, что можно непосредственно ссылается на элемент заданного численную свою позицию, подсчитывая с нуля первого \(переднего\) элемента, в [vector::size](../dotnet/vector-size-stl-clr.md)`() - 1` для последнего \(заднего\) элемента.  Это также означает, что вектор хорошим кандидатом для основного контейнера для шаблона класса [priority\_queue](../Topic/priority_queue%20\(STL-CLR\).md).  
+ Объект `vector` итераторами произвольного доступа поддерживает, т. е. можно ссылаться на элемент, непосредственно заданным его порядкового номера, начиная с нуля для первого элемента (на передней панели), для `size() - 1` для последнего элемента (назад). Это также означает, что вектор является хорошим кандидатом для базового контейнера для шаблона класса [priority_queue (STL/CLR)](../dotnet/priority-queue-stl-clr.md).  
   
- Итератор вектора содержит дескриптор его связанный объект вектора вместе с смещением элемента он указывает.  Можно использовать итераторы только со связанными объектами контейнера.  Смещение элементов вектора совпадает с его положение.  
+ Итератор вектор сохраняет дескриптор объекта его связанного вектор, а также смещение элемента, на которую он обозначает. Вы можете использовать итераторы только с свои объекты связанного контейнера. Смещение элемента вектора является таким же, как его положение.  
   
- Вставка или стирать элементы могут изменять значения элемента, хранящегося в заданном положении, поэтому значение значение итератором также может изменить. \(Контейнер может копировать элементы вверх или вниз, чтобы создать передать перед вставкой или заполнить передать после стирания\). Однако итератор вектора остается допустимым, пока его смещение в диапазоне `[0,` [vector::size](../dotnet/vector-size-stl-clr.md)`()]`.  Кроме того, допустимый итератор остается dereferencable \-\- его можно использовать для доступа или изменения значения элемента он обозначает \-\- при его смещение не равно `size()`.  
+ Вставка или удаление элементов можно изменить значение элемента, сохраняются в заданной позиции, поэтому можно также изменить значение, обозначенное итератор. (Контейнер может потребоваться копировать элементы вверх или вниз для создания отверстия перед вставкой или применить после очистки.) Тем не менее, итератор вектор действителен до тех пор, пока его смещение находится в диапазоне `[0, size()]`. Кроме того, остается dereferencable допустимым итератором, его можно использовать для доступа или изменить значение элемента, он обозначает--до тех пор, пока его смещение не равно `size()`.  
   
- Стирающ или удаление элементов вызывает деструктор этого сохраненного значения.  Удалить контейнер удаляются все элементы.  Таким образом, тип которого контейнер элемента ссылочный класс гарантирует, что никаких элементов не переживают контейнер.  Однако стоит отметить, что контейнер дескрипторов делает `not` уничтожает его элементы.  
+ Удаление или удалении элементов вызывает деструктор для сохраненное значение. Уничтожение контейнера удаляет все элементы. Таким образом контейнера, тип элементов которого является класс ссылки гарантирует, что ни один элемент пережить контейнера. Обратите внимание, что контейнер дескрипторов уничтожит его элементов.  
   
-## Требования  
- **Заголовок:**\<cliext\/vector\>  
+## <a name="requirements"></a>Требования  
+ **Заголовок:** \<cliext/vector >  
   
  **Пространство имен:** cliext  
   
-## См. также  
- [deque](../dotnet/deque-stl-clr.md)   
- [list](../dotnet/list-stl-clr.md)   
- [priority\_queue](../Topic/priority_queue%20\(STL-CLR\).md)   
- [queue](../Topic/queue%20\(STL-CLR\).md)   
- [стек](../dotnet/stack-stl-clr.md)   
- [Библиотека STL\/CLR](../dotnet/stl-clr-library-reference.md)
+## <a name="see-also"></a>См. также  
+ [deque (STL/CLR)](../dotnet/deque-stl-clr.md)   
+ [список (STL/CLR)](../dotnet/list-stl-clr.md)   
+ [priority_queue (STL/CLR)](../dotnet/priority-queue-stl-clr.md)   
+ [очереди (STL/CLR)](../dotnet/queue-stl-clr.md)   
+ [стек (STL/CLR)](../dotnet/stack-stl-clr.md)   
+ [vector::size (STL/CLR)](../dotnet/vector-size-stl-clr.md)  
+ [Справочник по библиотеке STL/CLR](../dotnet/stl-clr-library-reference.md)

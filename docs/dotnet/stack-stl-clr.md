@@ -1,36 +1,35 @@
 ---
-title: "stack (STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::stack"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "<cliext/stack> - заголовок [STL/CLR]"
-  - "<stack> - заголовок [STL/CLR]"
-  - "stack - класс [STL/CLR]"
+title: "стек (STL/CLR) | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::stack
+dev_langs: C++
+helpviewer_keywords:
+- <stack> header [STL/CLR]
+- <cliext/stack> header [STL/CLR]
+- stack class [STL/CLR]
 ms.assetid: 6ee96b9f-8a33-4cf7-b7e0-6535c24bdefb
-caps.latest.revision: 14
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 14
+caps.latest.revision: "14"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: dad00eecc05b8b3020dcf024b297b4b090317ee4
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/24/2017
 ---
-# stack (STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Описание объекта класса шаблона, что элементы управления менять\- длины последовательность элементов с " последним пришел — первым в доступе.  Используется адаптер `stack` контейнера для управления основной контейнер как стека внедрения — вниз.  
+# <a name="stack-stlclr"></a>stack (STL/CLR)
+Класс шаблона описывает объект, управляющий последовательностью элементов переменной длины с доступом к последней обслужен. Используйте адаптер контейнера `stack` управление базового контейнера, что стек принудительной передачи.  
   
- В описании ниже, `GValue` совпадает с `Value` если здесь не будет ссылочного типа, в случае которого это `Value^`.  Аналогично, `GContainer` совпадает с `Container` если здесь не будет ссылочного типа, в случае которого это `Container^`.  
+ В следующем описании `GValue` совпадает со значением `Value` Если последний является типом ссылки, в этом случае он является `Value^`. Аналогичным образом `GContainer` совпадает со значением `Container` Если последний является типом ссылки, в этом случае он является `Container^`.  
   
-## Синтаксис  
+## <a name="syntax"></a>Синтаксис  
   
 ```  
 template<typename Value,  
@@ -42,71 +41,71 @@ template<typename Value,
     { ..... };  
 ```  
   
-#### Параметры  
+#### <a name="parameters"></a>Параметры  
  Значение  
  Тип элемента в управляемой последовательности.  
   
  Контейнер  
  Тип базового контейнера.  
   
-## Члены  
+## <a name="members"></a>Члены  
   
 |Определение типа|Описание|  
-|----------------------|--------------|  
-|[stack::const\_reference](../dotnet/stack-const-reference-stl-clr.md)|Тип постоянной ссылки на элемент.|  
-|[stack::container\_type](../dotnet/stack-container-type-stl-clr.md)|Тип базового контейнера.|  
-|[stack::difference\_type](../dotnet/stack-difference-type-stl-clr.md)|Тип расстояния со знаком между двумя элементами.|  
-|[stack::generic\_container](../Topic/stack::generic_container%20\(STL-CLR\).md)|Тип универсального интерфейса для адаптера контейнера.|  
-|[stack::generic\_value](../dotnet/stack-generic-value-stl-clr.md)|Тип элемента для универсального интерфейса для адаптера контейнера.|  
-|[stack::reference](../dotnet/stack-reference-stl-clr.md)|Тип ссылки на элемент.|  
-|[stack::size\_type](../dotnet/stack-size-type-stl-clr.md)|Тип расстояния со знаком между двумя элементами.|  
-|[stack::value\_type](../dotnet/stack-value-type-stl-clr.md)|Тип элемента.|  
+|---------------------|-----------------|  
+|[stack::const_reference (STL/CLR)](../dotnet/stack-const-reference-stl-clr.md)|Тип постоянной ссылки на элемент.|  
+|[stack::container_type (STL/CLR)](../dotnet/stack-container-type-stl-clr.md)|Тип базового контейнера.|  
+|[stack::difference_type (STL/CLR)](../dotnet/stack-difference-type-stl-clr.md)|Тип расстояния со знаком между двумя элементами.|  
+|[stack::generic_container (STL/CLR)](../dotnet/stack-generic-container-stl-clr.md)|Тип универсального интерфейса для адаптера контейнера.|  
+|[stack::generic_value (STL/CLR)](../dotnet/stack-generic-value-stl-clr.md)|Тип элемента для универсальный интерфейс для адаптера контейнера.|  
+|[stack::reference (STL/CLR)](../dotnet/stack-reference-stl-clr.md)|Тип ссылки на элемент.|  
+|[stack::size_type (STL/CLR)](../dotnet/stack-size-type-stl-clr.md)|Тип расстояния со знаком между двумя элементами.|  
+|[stack::value_type (STL/CLR)](../dotnet/stack-value-type-stl-clr.md)|Тип элемента.|  
   
-|Функция Member|Описание|  
-|--------------------|--------------|  
-|[stack::assign](../Topic/stack::assign%20\(STL-CLR\).md)|Заменяет все элементы.|  
-|[stack::empty](../dotnet/stack-empty-stl-clr.md)|Тесты отсутствуют ли какие\-либо элементы.|  
-|[stack::get\_container](../Topic/stack::get_container%20\(STL-CLR\).md)|Осуществляет доступ к базовому контейнеру.|  
-|[stack::pop](../Topic/stack::pop%20\(STL-CLR\).md)|Удаляет последний элемент.|  
-|[stack::push](../dotnet/stack-push-stl-clr.md)|Добавляет новый последний элемент.|  
-|[stack::size](../dotnet/stack-size-stl-clr.md)|Подсчитывает количество элементов.|  
-|[stack::stack](../dotnet/stack-stack-stl-clr.md)|Создает объект контейнера.|  
-|[stack::top](../dotnet/stack-top-stl-clr.md)|Получает последний элемент.|  
-|[stack::to\_array](../dotnet/stack-to-array-stl-clr.md)|Копирует контролируемая последовательность в новый массив.|  
+|Функция-член|Описание|  
+|---------------------|-----------------|  
+|[stack::assign (STL/CLR)](../dotnet/stack-assign-stl-clr.md)|Заменяет все элементы.|  
+|[stack::empty (STL/CLR)](../dotnet/stack-empty-stl-clr.md)|Проверяет отсутствие элементов.|  
+|[stack::get_container (STL/CLR)](../dotnet/stack-get-container-stl-clr.md)|Обращается к базового контейнера.|  
+|[stack::pop (STL/CLR)](../dotnet/stack-pop-stl-clr.md)|Удаляет последний элемент.|  
+|[stack::push (STL/CLR)](../dotnet/stack-push-stl-clr.md)|Добавляет новый последний элемент.|  
+|[stack::size (STL/CLR)](../dotnet/stack-size-stl-clr.md)|Подсчитывает количество элементов.|  
+|[stack::stack (STL/CLR)](../dotnet/stack-stack-stl-clr.md)|Создает объект контейнера.|  
+|[stack::top (STL/CLR)](../dotnet/stack-top-stl-clr.md)|Обращается к последнему элементу.|  
+|[stack::to_array (STL/CLR)](../dotnet/stack-to-array-stl-clr.md)|Копирует управляемой последовательности в новый массив.|  
   
 |Свойство|Описание|  
-|--------------|--------------|  
-|[stack::top\_item](../dotnet/stack-top-item-stl-clr.md)|Получает последний элемент.|  
+|--------------|-----------------|  
+|[stack::top_item (STL/CLR)](../dotnet/stack-top-item-stl-clr.md)|Обращается к последнему элементу.|  
   
 |Оператор|Описание|  
-|--------------|--------------|  
-|[stack::operator\=](../dotnet/stack-operator-assign-stl-clr.md)|Заменяет контролируемая последовательность.|  
-|[operator\!\= \(stack\)](../dotnet/operator-inequality-stack-stl-clr.md)|Определяет, является ли объект `stack` не равен другому объекту `stack`.|  
-|[operator\< \(stack\)](../dotnet/operator-less-than-stack-stl-clr.md)|Определяет, является ли объект `stack` меньше другой объект `stack`.|  
-|[operator\<\= \(stack\)](../dotnet/operator-less-or-equal-stack-stl-clr.md)|Определяет, является ли объект `stack` меньше или равно другому объекту `stack`.|  
-|[operator\=\= \(stack\)](../dotnet/operator-equality-stack-stl-clr.md)|Определяет, является ли объект `stack` равен другому объекту `stack`.|  
-|[operator\> \(stack\)](../dotnet/operator-greater-than-stack-stl-clr.md)|Определяет, является ли объект `stack` больше другого объекта `stack`.|  
-|[operator\>\= \(stack\)](../Topic/operator%3E=%20\(stack\)%20\(STL-CLR\).md)|Определяет, является ли объект `stack` больше или равно другому объекту `stack`.|  
+|--------------|-----------------|  
+|[stack::operator= (STL/CLR)](../dotnet/stack-operator-assign-stl-clr.md)|Заменяет управляемую последовательность.|  
+|[operator!= (stack) (STL/CLR)](../dotnet/operator-inequality-stack-stl-clr.md)|Определяет, если `stack` объект не равен другому `stack` объекта.|  
+|[operator< (stack) (STL/CLR)](../dotnet/operator-less-than-stack-stl-clr.md)|Определяет, если `stack` объект меньше другого `stack` объекта.|  
+|[operator<= (stack) (STL/CLR)](../dotnet/operator-less-or-equal-stack-stl-clr.md)|Определяет, если `stack` объекта меньше или равно другому `stack` объекта.|  
+|[operator== (stack) (STL/CLR)](../dotnet/operator-equality-stack-stl-clr.md)|Определяет, если `stack` объект равен другому `stack` объекта.|  
+|[operator> (stack) (STL/CLR)](../dotnet/operator-greater-than-stack-stl-clr.md)|Определяет, если `stack` объект больше другого `stack` объекта.|  
+|[operator>= (stack) (STL/CLR)](../dotnet/operator-greater-or-equal-stack-stl-clr.md)|Определяет, если `stack` объекта больше или равно другому `stack` объекта.|  
   
-## Интерфейсы  
+## <a name="interfaces"></a>Интерфейсы  
   
 |Интерфейс|Описание|  
-|---------------|--------------|  
-|<xref:System.ICloneable>|Дублируйте объект.|  
-|IStack\<Value, Container\>|Обслуживайте универсальный адаптер контейнера.|  
+|---------------|-----------------|  
+|<xref:System.ICloneable>|Создание дубликата объекта.|  
+|IStack\<значение, контейнер >|Ведение адаптера универсального контейнера.|  
   
-## Заметки  
- Объект выделяет и освобождает хранилище для последовательности его элементы управления через основной контейнер, типа `Container`, который хранит элементы `Value` и увеличивается по требованию.  Объект ограничивает доступ к отправлять и извлечь только последний элемент, реализующий a " последним пришел — первым обслужен out очереди \(также известной как очередь, или стек LIFO\).  
+## <a name="remarks"></a>Примечания  
+ Объект выделяет и освобождает память для им последовательность через базового контейнера, типа `Container`, в которых хранятся `Value` элементы и увеличивается по требованию. Объект ограничивает доступ к помещают и извлекают только последнего элемента, реализации очереди последнего обслужен (также известный как LIFO очередь или стек).  
   
-## Требования  
- **Заголовок:**\<cliext\/stack\>  
+## <a name="requirements"></a>Требования  
+ **Заголовок:** \<cliext/stack >  
   
  **Пространство имен:** cliext  
   
-## См. также  
- [deque](../dotnet/deque-stl-clr.md)   
- [list](../dotnet/list-stl-clr.md)   
- [priority\_queue](../Topic/priority_queue%20\(STL-CLR\).md)   
- [queue](../Topic/queue%20\(STL-CLR\).md)   
- [вектор](../dotnet/vector-stl-clr.md)   
- [Библиотека STL\/CLR](../dotnet/stl-clr-library-reference.md)
+## <a name="see-also"></a>См. также  
+ [deque (STL/CLR)](../dotnet/deque-stl-clr.md)   
+ [список (STL/CLR)](../dotnet/list-stl-clr.md)   
+ [priority_queue (STL/CLR)](../dotnet/priority-queue-stl-clr.md)   
+ [очереди (STL/CLR)](../dotnet/queue-stl-clr.md)   
+ [вектор (STL/CLR)](../dotnet/vector-stl-clr.md)   
+ [Справочник по библиотеке STL/CLR](../dotnet/stl-clr-library-reference.md)

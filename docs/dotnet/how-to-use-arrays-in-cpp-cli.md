@@ -1,34 +1,32 @@
 ---
-title: "Практическое руководство. Использование массивов в C++/CLI | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "массивы [C++], одномерные"
+title: "Как: использование массивов в C + +/ CLI | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords: arrays [C++], single-dimension
 ms.assetid: 301cfb3e-199f-42c8-8151-629dce9e87f3
-caps.latest.revision: 15
-caps.handback.revision: 13
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "15"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 8867d6a2a7871d1785e1a1fdbeb9856de4bd9904
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/24/2017
 ---
-# Практическое руководство. Использование массивов в C++/CLI
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Этот раздел описывает использование массивов в [!INCLUDE[cppcli](../build/reference/includes/cppcli_md.md)].  
+# <a name="how-to-use-arrays-in-ccli"></a>Практическое руководство. Использование массивов в C++/CLI
+В этой статье описывается использование массивов в C + +/ CLI.  
   
-## Одномерные массивы  
- В следующем примере показано, как создать одномерные массивы ссылок, значений и типов собственного указателя.  Также показано, как вернуть одномерный массив из функции и способ передачи одномерный массив в качестве аргумента функции.  
+## <a name="single-dimension-arrays"></a>Одномерные массивы  
+ Следующий пример кода демонстрируется создание одномерных массивов ссылочных типов, значение и типов собственных указателей. Также показано, как вернуть одномерный массив из функции и способ передачи одномерный массив в качестве аргумента в функцию.  
   
-```  
+```cpp  
 // mcppv2_sdarrays.cpp  
 // compile with: /clr  
 using namespace System;  
@@ -138,25 +136,31 @@ int main() {
    for (i = 0 ; i < ARRAY_SIZE ; i++)  
       Console::WriteLine("MyStruct1[{0}] = {1}", i, MyStruct1[i].m_i);  
 }  
-  
 ```  
   
- **Output**  
+```Output  
+MyClass0[0] = 0  
+MyClass0[1] = 1  
   
-  **MyClass0 \[0\] \= 0**  
-**MyClass0 \[1\] \= 1**  
-**IntArray \[0\] \= 10**  
-**IntArray \[1\] \= 11**  
-**MyClass1 \[0\] \= 20**  
-**MyClass1 \[1\] \= 21**  
-**MyClass2 \[0\] \= 30**  
-**MyClass2 \[1\] \= 31**  
-**MyClass2 \[0\] \= 32**  
-**MyClass2 \[1\] \= 33**  
-**MyStruct1 \[0\] \= 40**  
-**MyStruct1 \[1\] \= 41** В следующем примере показано, как выполнять статистическую инициализацию в управляемых массивов одного измерения.  
+IntArray[0] = 10  
+IntArray[1] = 11  
   
+MyClass1[0] = 20  
+MyClass1[1] = 21  
+  
+MyClass2[0] = 30  
+MyClass2[1] = 31  
+  
+MyClass2[0] = 32  
+MyClass2[1] = 33  
+  
+MyStruct1[0] = 40  
+MyStruct1[1] = 41  
 ```  
+  
+ Следующий пример показано, как провести агрегатной инициализации одномерные управляемые массивы.  
+  
+```cpp  
 // mcppv2_sdarrays_aggregate_init.cpp  
 // compile with: /clr  
 using namespace System;  
@@ -193,21 +197,23 @@ int main() {
    array<N*>^ native1 = gcnew array<N*>{new N(0), new N(1), new N(2)};  
    array<N*>^ native2 = {new N(0), new N(1), new N(2)};  
 }  
-  
 ```  
   
- **Output**  
+```Output  
+MyClass0[0, 0] = 0  
+MyClass0[0, 1] = 0  
+MyClass0[1, 0] = 1  
+MyClass0[1, 1] = 1  
   
-  **MyClass0 \[0, 0\] \= 0**  
-**MyClass0 \[0, 1\] \= 0**  
-**MyClass0 \[1, 0\] \= 1**  
-**MyClass0 \[1, 1\] \= 1**  
-**IntArray \[0, 0\] \= 10**  
-**IntArray \[0, 1\] \= 10**  
-**IntArray \[1, 0\] \= 11**  
-**IntArray \[1, 1\] \= 11** В этом примере показано, как выполнить статистическую инициализацию для управляемого массива с несколькими измерения:  
-  
+IntArray[0, 0] = 10  
+IntArray[0, 1] = 10  
+IntArray[1, 0] = 11  
+IntArray[1, 1] = 11  
 ```  
+  
+ В этом примере показано, как провести Агрегатная Инициализация многомерного массива:  
+  
+```cpp  
 // mcppv2_mdarrays_aggregate_initialization.cpp  
 // compile with: /clr  
 using namespace System;  
@@ -249,10 +255,10 @@ int main() {
 }  
 ```  
   
-## Массивы массивов  
- В этом разделе рассматривается создание одномерные массивы управляемых массивов ссылок, значений и типов собственного указателя.  Также показано, как вернуть одномерного массива управляемых массивов из функции и способ передачи одномерный массив в качестве аргумента функции.  
+## <a name="jagged-arrays"></a>Массивы массивов  
+ В этом разделе показано создание одномерных массивов из управляемых массивов ссылочных типов, значение и типов собственных указателей. Также показано, как вернуть одномерный массив управляемых массивов из функции и способ передачи одномерный массив в качестве аргумента в функцию.  
   
-```  
+```cpp  
 // mcppv2_array_of_arrays.cpp  
 // compile with: /clr  
 using namespace System;  
@@ -330,23 +336,26 @@ int main() {
    for (i = 0 ; i < ARRAY_SIZE ; i++)  
       Console::WriteLine(MyStruct1[i].m_i);  
 }  
-  
 ```  
   
- **Output**  
+```Output  
+MyClass0[0] = 0  
+MyClass0[0] = 0  
+MyClass0[1] = 1  
+MyClass0[1] = 1  
   
-  **MyClass0 \[0\] \= 0**  
-**MyClass0 \[0\] \= 0**  
-**MyClass0 \[1\] \= 1**  
-**MyClass0 \[1\] \= 1**  
-**IntArray \[0\] \= 10**  
-**IntArray \[0\] \= 10**  
-**IntArray \[1\] \= 11**  
-**IntArray \[1\] \= 11**  
-**40**  
-**41** В следующем примере показано, как выполнять статистическую инициализацию с массивами массивов.  
+IntArray[0] = 10  
+IntArray[0] = 10  
+IntArray[1] = 11  
+IntArray[1] = 11  
   
+40  
+41  
 ```  
+  
+ Следующий пример демонстрирует агрегатной инициализации с массивы массивов.  
+  
+```cpp  
 // mcppv2_array_of_arrays_aggregate_init.cpp  
 // compile with: /clr  
 using namespace System;  
@@ -431,25 +440,28 @@ int main() {
       Console::WriteLine();  
    }  
 }  
-  
 ```  
   
- **Output**  
+```Output  
+MyClass0[0] = 0  
+MyClass0[0] = 0  
+MyClass0[1] = 1  
+MyClass0[1] = 1  
   
-  **MyClass0 \[0\] \= 0**  
-**MyClass0 \[0\] \= 0**  
-**MyClass0 \[1\] \= 1**  
-**MyClass0 \[1\] \= 1**  
-**\[ 1 2 \]**  
-**\[ 3 4 5 \]**  
-**\[ 0 1 \]**  
-**\[ 2 3 4 \]**  
-**\[ B C d, e, f\]**  
-**\[ g h\]**   
-## Управляемые массивы в качестве параметров типа шаблона  
- В этом примере показано, как использовать управляемый массив в качестве параметра в шаблон.  
+[ 1 2 ]  
+[ 3 4 5 ]  
   
+[ 0 1 ]  
+[ 2 3 4 ]  
+  
+[ a b c d e f ]  
+[ g h ]  
 ```  
+  
+## <a name="managed-arrays-as-template-type-parameters"></a>Управляемых массивов в качестве параметров типа шаблона  
+ В этом примере показано, как использовать управляемый массив в качестве параметра шаблона:  
+  
+```cpp  
 // mcppv2_template_type_params.cpp  
 // compile with: /clr  
 using namespace System;  
@@ -469,16 +481,16 @@ int main() {
    retval += larr->Length - 10;  
    Console::WriteLine("Return Code: {0}", retval);  
 }  
-  
 ```  
   
- **Output**  
-  
-  **Код возврата: 0**   
-## typedef для управляемых массивов  
- В этом примере показано, как сделать typedef для управляемого массива.  
-  
+```Output  
+Return Code: 0  
 ```  
+  
+## <a name="typedefs-for-managed-arrays"></a>определения типов для управляемых массивов  
+ В этом примере показан способ создания определения типов для управляемого массива.  
+  
+```cpp  
 // mcppv2_typedef_arrays.cpp  
 // compile with: /clr  
 using namespace System;  
@@ -489,15 +501,14 @@ typedef array<array<G^>^> jagged_array;
 int main() {  
    jagged_array ^ MyArr = gcnew jagged_array (10);  
 }  
-  
 ```  
   
-## Сортировка массивов  
- В отличие от стандартных массивы C\+\+, управляемые массивы неявно являются производными от базового класса массива, из которого они наследуются общее расширения функциональности.  Пример метода `Sort`, который можно использовать для сортировки элементов в каждом массиве.  
+## <a name="sorting-arrays"></a>Сортировка массивов  
+ В отличие от массивов standard C++ управляемые массивы неявно являются производными от базового класса массив, из которого они наследуются общее поведение. Например, `Sort` метод, который можно использовать для упорядочения элементов в массив.  
   
- Для массивов, содержащие основные внутренние типы, можно вызвать метод `Sort`.  Можно переопределить критерии сортировки, и этот прием не требуется, если необходимо выполнить сортировку для массивов сложных типов.  В этом случае тип элементов массива должен реализовывать метод [IComparable::CompareTo](https://msdn.microsoft.com/en-us/library/system.icomparable.compareto.aspx).  
+ Массивы, содержащие встроенные базовые типы, можно вызвать `Sort` метод. Можно переопределить критерии сортировки и делать так является обязательным, если необходимо отсортировать для массивов сложных типов. В этом случае необходимо реализовать тип элемента массива [IComparable::CompareTo](https://msdn.microsoft.com/en-us/library/system.icomparable.compareto.aspx) метод.  
   
-```  
+```cpp  
 // array_sort.cpp  
 // compile with: /clr  
 using namespace System;  
@@ -508,15 +519,14 @@ int main() {
    for (int i=0; i < a->Length; i++)  
       Console::Write("{0} ", a[i] );  
 }  
-  
 ```  
   
-## Сортировка массивов с помощью пользовательского условия  
- Для сортировки массивы, содержащие основные внутренние типы, просто вызовите метод `Array::Sort`.  Однако для сортировки массивы, выполняющих сложные типы или переопределить критерии сортировки по умолчанию, переопределите метод [IComparable::CompareTo](https://msdn.microsoft.com/en-us/library/system.icomparable.compareto.aspx).  
+## <a name="sorting-arrays-by-using-custom-criteria"></a>Сортировка массивов с помощью пользовательских критериев  
+ Для сортировки массивов, которые содержат встроенные базовые типы, просто вызвать `Array::Sort` метод. Тем не менее, для сортировки массивов, содержащих сложные типы, или переопределить параметры сортировки по умолчанию можно переопределить [IComparable::CompareTo](https://msdn.microsoft.com/en-us/library/system.icomparable.compareto.aspx) метод.  
   
- В следующем примере структура с именем `Element` является производным от <xref:System.IComparable>, и создается для предоставления метод <xref:System.IComparable.CompareTo%2A>, использующий среднее значение 2 целых чисел в качестве критерия сортировки.  
+ В следующем примере структура с именем `Element` является производным от <xref:System.IComparable>и запись для предоставления <xref:System.IComparable.CompareTo%2A> метод, который использует среднее значение из двух целых чисел в качестве критерия сортировки.  
   
-```  
+```cpp  
 using namespace System;  
   
 value struct Element : public IComparable {  
@@ -558,10 +568,10 @@ int main() {
 }  
 ```  
   
-## Ковариантность массива  
- Данный класс является ссылочным D с прямым или косвенным наследником класса B, D массив типа может быть присвоен переменной массива типа B.  
+## <a name="array-covariance"></a>Ковариация массивов  
+ Если ссылочный класс D с прямой или косвенный базовый класс B, массив элементов типа D могут быть назначены переменной массива типа б.  
   
-```  
+```cpp  
 // clr_array_covariance.cpp  
 // compile with: /clr  
 using namespace System;  
@@ -572,11 +582,11 @@ int main() {
 }  
 ```  
   
- Присвоение элементу массива назначение\- будет совместимо с динамическим типом массива.  Присвоение элементу массива, имеющего несовместимый тип приводит к `System::ArrayTypeMismatchException` делегатом.  
+ Назначение элементу массива должны быть совместимы по назначению с динамический тип массива. Приводит к элементу массива, который имеет несовместимый тип назначения `System::ArrayTypeMismatchException` исключение.  
   
- Ковариантность массива не применяется к массивам типа класса.  Например, массивы Int32 невозможно преобразовать к массивам Object^, даже не с помощью упаковка\-преобразования.  
+ Ковариация массивов не применяется к массивам значения типа класса. Например, массив Int32 нельзя преобразовать в объект ^ массивы даже при помощи упаковки.  
   
-```  
+```cpp  
 // clr_array_covariance2.cpp  
 // compile with: /clr  
 using namespace System;  
@@ -609,5 +619,5 @@ int main() {
 }  
 ```  
   
-## См. также  
+## <a name="see-also"></a>См. также  
  [Массивы](../windows/arrays-cpp-component-extensions.md)

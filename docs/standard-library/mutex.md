@@ -4,25 +4,21 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- <mutex>
-dev_langs:
-- C++
+f1_keywords: <mutex>
+dev_langs: C++
 ms.assetid: efb60c89-687a-4e38-8fe4-694e11c4e8a3
-caps.latest.revision: 17
+caps.latest.revision: "17"
 author: corob-msft
 ms.author: corob
 manager: ghogen
+ms.openlocfilehash: 65629b16b03503f70f7c966e19282391c512e4ee
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
 ms.translationtype: MT
-ms.sourcegitcommit: 65f4e356ad0d46333b0d443d0fd6ac0b9f2b6f58
-ms.openlocfilehash: 78c6476712f17c5a730b54f7db1a87e187af3720
-ms.contentlocale: ru-ru
-ms.lasthandoff: 10/03/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="ltmutexgt"></a>&lt;Мьютекс&gt;
 Включите стандартный заголовок \<mutex> для определения классов `mutex`, `recursive_mutex`, `timed_mutex` и `recursive_timed_mutex`, шаблонов `lock_guard` и `unique_lock`, а также поддерживающих типов и функций, определяющих взаимоисключающие регионы кода.  
@@ -96,7 +92,6 @@ ms.lasthandoff: 10/03/2017
   
 ## <a name="see-also"></a>См. также  
  [Справочник по файлам заголовков](../standard-library/cpp-standard-library-header-files.md)
-
 
 
 

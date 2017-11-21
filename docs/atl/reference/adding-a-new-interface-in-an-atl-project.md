@@ -4,47 +4,29 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-windows
+ms.technology: cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: reference
-f1_keywords:
-- vc.appwiz.ATL.interface
-dev_langs:
-- C++
+f1_keywords: vc.appwiz.ATL.interface
+dev_langs: C++
 helpviewer_keywords:
 - interfaces, adding to ATL objects
 - Implement Interface ATL wizard
 - controls [ATL], interfaces
 - ATL projects, adding interfaces
 ms.assetid: 7d34b023-2c6b-4155-aca3-d47a40968063
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: d2d39abf526a58b8442107b5ee816f316ae841f5
-ms.openlocfilehash: 10b252047a7bae1bbd54e854445dcd90db06a341
-ms.contentlocale: ru-ru
-ms.lasthandoff: 03/31/2017
-
+ms.openlocfilehash: 21aeda51a917bcb48b16ff8f9c2bc505adc18f1d
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="adding-a-new-interface-in-an-atl-project"></a>Добавление нового интерфейса в проект ATL
-При добавлении интерфейса для объекта или элемента управления создается усеченные функции для каждого метода этого интерфейса. В объект или элемент управления можно добавлять только те интерфейсы, которые в данный момент найдено в существующую библиотеку типов. Кроме того, необходимо реализовать класс, в котором можно добавить интерфейс [BEGIN_COM_MAP](com-map-macros.md#begin_com_map) макроса или, если проект имеет атрибуты, он должен иметь `coclass` атрибута.  
+При добавлении интерфейса для объекта или элемента управления создается усеченные функции для каждого метода этого интерфейса. В объект или элемент управления можно добавлять только те интерфейсы, которые в данный момент найдено в существующую библиотеку типов. Кроме того, необходимо реализовать класс, в котором можно добавить интерфейс [BEGIN_COM_MAP](com-map-macros.md#begin_com_map) макрос или, если проект имеет атрибуты, он должен иметь `coclass` атрибута.  
   
  Можно добавить новый интерфейс для управления одним из двух способов: вручную или с помощью мастеров кода в представлении классов.  
   
@@ -73,5 +55,4 @@ ms.lasthandoff: 03/31/2017
  [Программирование с использованием ATL и кода среды выполнения C](../../atl/programming-with-atl-and-c-run-time-code.md)   
  [Основные принципы работы COM-объекты ATL](../../atl/fundamentals-of-atl-com-objects.md)   
  [Конфигурации проектов ATL по умолчанию](../../atl/reference/default-atl-project-configurations.md)
-
 

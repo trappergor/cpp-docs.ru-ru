@@ -1,39 +1,37 @@
 ---
-title: "Предупреждение компилятора (уровень 1) C4692 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C4692"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C4692"
+title: "Предупреждение компилятора (уровень 1) C4692 | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords: C4692
+dev_langs: C++
+helpviewer_keywords: C4692
 ms.assetid: f6fb3acc-8228-491a-9c30-ce302d8a9c75
-caps.latest.revision: 9
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 9
+caps.latest.revision: "9"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: 546259d172b8718a62e62e5efd01ce7717d3578f
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/24/2017
 ---
-# Предупреждение компилятора (уровень 1) C4692
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="compiler-warning-level-1-c4692"></a>Предупреждение компилятора (уровень 1) C4692
 "функция": подпись не частного члена содержит частный собственный тип сборки "частныйТип"  
   
- Тип, видимый извне сборки, содержит функцию\-член, сигнатура которой содержит собственный тип, невидимый за пределами сборки.  Поэтому не следует вызывать функцию\-член, если экземпляры содержащегося внутри ее типа создаются за пределами сборки.  
+ Тип, видимый за пределами сборки, содержит функцию-член, сигнатура которого содержит собственный тип, который не отображается за пределами сборки. Таким образом функция-член не должен вызываться, если его содержащий тип создается за пределами сборки.  
   
- Дополнительные сведения см. в разделе [Видимость типа](../../dotnet/how-to-define-and-consume-classes-and-structs-cpp-cli.md#BKMK_Type_visibility).  
+ Дополнительные сведения см. в разделе [введите видимость](../../dotnet/how-to-define-and-consume-classes-and-structs-cpp-cli.md#BKMK_Type_visibility).  
   
- Данное предупреждение по умолчанию отключено.  Для получения дополнительной информации см. [Выключенные по умолчанию предупреждения компилятора](../Topic/Compiler%20Warnings%20That%20Are%20Off%20by%20Default.md).  
+ Это предупреждение отключено по умолчанию. Дополнительные сведения см. в разделе [Compiler Warnings That Are Off by Default](../../preprocessor/compiler-warnings-that-are-off-by-default.md).  
   
-## Пример  
- В следующем примере возникает предупреждение C4692.  
+## <a name="example"></a>Пример  
+ Следующий пример приводит к возникновению ошибки C4692.  
   
 ```  
 // C4692.cpp  

@@ -1,40 +1,40 @@
 ---
-title: "Пути поиска в правилах | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "правила вывода (NMAKE)"
-  - "правила, вывод"
-  - "пути поиска - правила вывода (NMAKE)"
+title: "Пути поиска в правилах | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- search paths in NMAKE inference rules
+- inference rules in NMAKE
+- rules, inference
 ms.assetid: 38feded6-536d-425d-bf40-fff3173a5506
-caps.latest.revision: 7
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: 808ec39bafd6ad5c7982f63055ba92fccff7a285
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/24/2017
 ---
-# Пути поиска в правилах
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="search-paths-in-rules"></a>Пути поиска в правилах
 ```  
 {frompath}.fromext{topath}.toext:  
    commands  
 ```  
   
-## Примечания  
- Правило вывода применимо к зависимости только в том случае, если пути, указанные в зависимости, в точности соответствуют путям правила вывода.  Каталог зависимого объекта задается в параметре *frompath*, а каталог целевого объекта задается в параметре *topath*; пробелы не допускаются.  Для каждого разрешения указывается только один путь.  Наличие пути у одного расширения требует наличия пути у другого.  Чтобы указать текущий каталог, следует использовать точку \("."\) или пустые фигурные скобки \("{ }"\).  Пути *frompath* и *topath* могут представляться макросами; они вызываются в ходе предобработки.  
+## <a name="remarks"></a>Примечания  
+ Правило вывода применимо к зависимости только в том случае, если пути, указанные в зависимости точно соответствует путям правила вывода. Укажите каталог зависимого объекта, в *параметре frompath* и каталог целевого объекта в *параметре topath*; пробелы не допускаются. Укажите только один путь для каждого расширения. Путь на одно расширение требуется указать путь на другом. Чтобы указать текущий каталог, используйте точку (.) или пустые фигурные скобки ({}). Макросы могут представлять *параметре frompath* и *параметре topath*; они вызываются во время предварительной обработки.  
   
-## Пример  
+## <a name="example"></a>Пример  
   
-### Код  
+### <a name="code"></a>Код  
   
 ```  
 {dbi\}.cpp{$(ODIR)}.obj::  
@@ -65,5 +65,5 @@ caps.handback.revision: 7
         $(CC) $(CFLAGS) $<  
 ```  
   
-## См. также  
+## <a name="see-also"></a>См. также  
  [Определение правила](../build/defining-a-rule.md)

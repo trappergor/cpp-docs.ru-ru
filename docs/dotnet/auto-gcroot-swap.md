@@ -1,35 +1,34 @@
 ---
-title: "auto_gcroot::swap | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "msclr.auto_gcroot.swap"
-  - "msclr::auto_gcroot::swap"
-  - "auto_gcroot::swap"
-  - "auto_gcroot.swap"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "auto_gcroot::swap"
+title: "auto_gcroot::Swap | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords:
+- msclr.auto_gcroot.swap
+- msclr::auto_gcroot::swap
+- auto_gcroot::swap
+- auto_gcroot.swap
+dev_langs: C++
+helpviewer_keywords: auto_gcroot::swap
 ms.assetid: 4915c629-6a53-432c-8155-3a7511dc70cb
-caps.latest.revision: 12
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 10
+caps.latest.revision: "12"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 3f3876550ed48c0ab570220042b64ccadc4cff33
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/24/2017
 ---
-# auto_gcroot::swap
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Замена объекты с другим `auto_gcroot`.  
+# <a name="autogcrootswap"></a>auto_gcroot::swap
+Меняет местами объекты с другой `auto_gcroot`.  
   
-## Синтаксис  
+## <a name="syntax"></a>Синтаксис  
   
 ```  
 void swap(  
@@ -37,11 +36,11 @@ void swap(
 );  
 ```  
   
-#### Параметры  
+#### <a name="parameters"></a>Параметры  
  `_right`  
- `auto_gcroot`, чтобы передать объекты.  
+ `auto_gcroot` С помощью которого поменять местами объекты.  
   
-## Пример  
+## <a name="example"></a>Пример  
   
 ```  
 // msl_auto_gcroot_swap.cpp  
@@ -63,13 +62,16 @@ int main() {
 }  
 ```  
   
-  **s1 \= «строка» одно, s2 \= «строка» 2**  
-**s1 \= «строка» 2, s2 \= строка «один»**   
-## Требования  
- **Файл заголовка**\<msclr\\auto\_gcroot.h\>  
+```Output  
+s1 = 'string one', s2 = 'string two'  
+s1 = 'string two', s2 = 'string one'  
+```  
+  
+## <a name="requirements"></a>Требования  
+ **Файл заголовка** \<msclr\auto_gcroot.h >  
   
  **Пространство имен** msclr  
   
-## См. также  
- [Члены auto\_gcroot](../dotnet/auto-gcroot-members.md)   
- [Функция swap \(auto\_gcroot\)](../dotnet/swap-function-auto-gcroot.md)
+## <a name="see-also"></a>См. также  
+ [Члены auto_gcroot](../dotnet/auto-gcroot-members.md)   
+ [Функция swap (auto_gcroot)](../dotnet/swap-function-auto-gcroot.md)

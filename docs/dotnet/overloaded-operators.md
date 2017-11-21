@@ -1,31 +1,31 @@
 ---
-title: "Перегруженные операторы | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "перегрузка операторов, в классе CLR"
-  - "операторы [C++], перегрузка"
+title: "Перегруженные операторы | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- operator overloading, in a CLR class
+- operators [C++], overloading
 ms.assetid: 30391426-afe7-4497-bf22-e4816c1e48c8
-caps.latest.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 9
+caps.latest.revision: "9"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 21d006aabc83af2021bb2b6d8bfa6a35588de12f
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/24/2017
 ---
-# Перегруженные операторы
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-По сравнению с управляемыми расширениями для C\+\+, в [!INCLUDE[cpp_current_long](../dotnet/includes/cpp_current_long_md.md)] существенно изменился порядок перегрузки операторов.  
+# <a name="overloaded-operators"></a>Перегруженные операторы
+Перегрузка операторов значительно изменилась с управляемых расширений для C++ к Visual C++.  
   
- Например, в объявлении ссылочного типа вместо синтаксиса неуправляемого кода `operator+` использовалась явная запись базового внутреннего имени оператора \(в этом случае — `op_Addition`\).  Кроме того, вызов оператора осуществлялся явным образом с использованием его имени, в связи с чем не были реализованы два основных преимущества перегрузки операторов: интуитивно понятный синтаксис и возможность использования новых типов совместно с существующими.  Примеры.  
+ В объявлении типа ссылки, для примера, а не с помощью собственного `operator+` синтаксис, использовалась явная запись базового внутреннего имени оператора - в этом случае `op_Addition`. Кроме того, вызов оператора должен явным образом вызывать с помощью этого имени таким образом защищена от два основных преимущества перегрузки операторов: (a) интуитивно понятный синтаксис и (б) возможность использования новых типов с существующие типы совместно. Например:  
   
 ```  
 public __gc __sealed class Vector {  
@@ -52,7 +52,7 @@ int main()
 }  
 ```  
   
- В новом синтаксисе объявление и использование статических операторов осуществляется способом, знакомым программисту по работе с неуправляемым кодом C\+\+.  Ниже приведен пример класса `Vector`, реализованного с использованием нового синтаксиса:  
+ В новом синтаксисе восстанавливаются обычные ожиданий собственного разработчиком на языке C++, как в объявление и использование статических операторов. Вот `Vector` класс преобразуется в новый синтаксис:  
   
 ```  
 public ref class Vector sealed {  
@@ -79,5 +79,5 @@ int main()
 }  
 ```  
   
-## См. также  
- [Объявления членов в пределах класса или интерфейса \(C\+\+\/CLI\)](../dotnet/member-declarations-within-a-class-or-interface-cpp-cli.md)
+## <a name="see-also"></a>См. также  
+ [Объявления членов в пределах класса или интерфейса (C++/CLI)](../dotnet/member-declarations-within-a-class-or-interface-cpp-cli.md)

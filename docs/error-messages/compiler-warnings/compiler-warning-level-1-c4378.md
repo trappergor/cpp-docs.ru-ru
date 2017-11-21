@@ -1,34 +1,32 @@
 ---
-title: "Предупреждение компилятора (уровень 1) C4378 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C4378"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C4378"
+title: "Предупреждение (уровень 1) C4378 компилятора | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords: C4378
+dev_langs: C++
+helpviewer_keywords: C4378
 ms.assetid: d08e11ef-891a-4752-9a5e-360e7394acf7
-caps.latest.revision: 6
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 6
+caps.latest.revision: "6"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: c3ed33157c73c48b4d00b85e37f36a110ab3f721
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/24/2017
 ---
-# Предупреждение компилятора (уровень 1) C4378
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Для запуска инициализаторов необходимо получить указатели функций; рассмотрите вариант System::ModuleHandle::ResolveMethodHandle  
+# <a name="compiler-warning-level-1-c4378"></a>Предупреждение компилятора (уровень 1) C4378
+Необходимо получить указатели функций для запуска инициализаторов; Рассмотрите вариант System::ModuleHandle::  
   
- В среде **\/clr** символы инициализатора содержат маркеры функций, а не указатели функций.  Необходимо преобразовать маркеры в указатели с помощью <xref:System.ModuleHandle.ResolveMethodHandle%2A>.  
+ В разделе **/CLR**, символы инициализатора содержат маркеры функций, а не указатели функций.  Необходимо преобразовать маркеры в указатели с помощью <xref:System.ModuleHandle.ResolveMethodHandle%2A>.  
   
-## Пример  
+## <a name="example"></a>Пример  
  Следующий пример приводит к возникновению ошибки C4378.  
   
 ```  
@@ -71,8 +69,8 @@ int main () {
 }  
 ```  
   
-## Пример  
- В следующем примере показано устранение ошибки C4378.  
+## <a name="example"></a>Пример  
+ Следующий пример показано, как разрешить C4378.  
   
 ```  
 // C4378_b.cpp  

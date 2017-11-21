@@ -4,47 +4,29 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-tools
+ms.technology: devlang-cpp
 ms.tgt_pltfrm: 
 ms.topic: error-reference
-f1_keywords:
-- C1853
-dev_langs:
-- C++
-helpviewer_keywords:
-- C1853
+f1_keywords: C1853
+dev_langs: C++
+helpviewer_keywords: C1853
 ms.assetid: ceb9b4a5-92bf-4573-8a9f-3109cc7743ce
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
-ms.openlocfilehash: d312a819b5e91386d805635fdd588b72ee842cfe
-ms.contentlocale: ru-ru
-ms.lasthandoff: 02/24/2017
-
+ms.openlocfilehash: 23b5302428fc216a8349e8cf022c184caa57202c
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="fatal-error-c1853"></a>Неустранимая ошибка C1853
-файл предкомпилированного заголовка «ИмяФайла» предыдущей версии компилятора, или предкомпилированного заголовка является C++ и использовании из C (или наоборот)  
   
- Возможные причины:  
+> "*filename*" файла предкомпилированного заголовка с предыдущей версии компилятора или предкомпилированный заголовок — C++ и используется из C (или наоборот)  
   
--   Предкомпилированный заголовок был создан с помощью предыдущей версии компилятора. Попробуйте перекомпилировать заголовок с помощью текущего компилятора.  
+Возможные причины:  
   
--   Предкомпилированный заголовок является C++ и используется в C. Попробуйте перекомпилировать заголовок для использования в C, указав один из [/Tc](../../build/reference/tc-tp-tc-tp-specify-source-file-type.md) параметры компилятора, или измените суффикс исходного файла на «c». Дополнительные сведения см. в разделе [два варианта предварительной компиляции кода](../../build/reference/two-choices-for-precompiling-code.md).
+-   Предкомпилированный заголовок был скомпилирован с помощью предыдущей версии компилятора. Попробуйте перекомпилировать заголовок с помощью текущего компилятора.  
+  
+-   — Предкомпилированный заголовок C++ и его использовании в C. Попробуйте перекомпилировать заголовок для использования в C, указав одно из [/Tc](../../build/reference/tc-tp-tc-tp-specify-source-file-type.md) параметры компилятора, или измените суффикс исходного файла на «c». Дополнительные сведения см. в разделе [два варианта предварительной компиляции кода](../../build/reference/creating-precompiled-header-files.md#two-choices-for-precompiling-code).

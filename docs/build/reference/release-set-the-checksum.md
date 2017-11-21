@@ -1,58 +1,58 @@
 ---
-title: "/RELEASE (установить контрольную сумму) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "/release"
-  - "VC.Project.VCLinkerTool.SetChecksum"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "/RELEASE - параметр компоновщика"
-  - "установка контрольной суммы"
-  - "RELEASE - параметр компоновщика"
-  - "-RELEASE - параметр компоновщика"
+title: "-RELEASE (установить контрольную сумму) | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- /release
+- VC.Project.VCLinkerTool.SetChecksum
+dev_langs: C++
+helpviewer_keywords:
+- -RELEASE linker option
+- /RELEASE linker option
+- checksum setting
+- RELEASE linker option
 ms.assetid: 93bcadf4-29ac-4824-914b-6997e3751d22
-caps.latest.revision: 8
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: 5f561d96d46fadd24bc6dd7a4d473f3fcdc3bec7
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/24/2017
 ---
-# /RELEASE (установить контрольную сумму)
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="release-set-the-checksum"></a>/RELEASE (установить контрольную сумму)
 ```  
 /RELEASE  
 ```  
   
-## Заметки  
- Параметр \/RELEASE задает контрольную сумму в заголовке EXE\-файла.  
+## <a name="remarks"></a>Примечания  
+ Параметр/Release задает контрольную сумму в заголовке файла .exe.  
   
- Операционная система запрашивает контрольную сумму для драйверов устройств.  Чтобы гарантировать совместимость с будущими операционными системами, следует устанавливать контрольную сумму для окончательных версий драйверов устройств.  
+ Операционная система запрашивает контрольную сумму для драйверов устройств. Установите контрольную сумму для предварительных версий драйверов устройств для обеспечения совместимости с будущими операционными системами.  
   
- Если указан параметр [\/SUBSYSTEM:NATIVE](../../build/reference/subsystem-specify-subsystem.md), то параметр \/RELEASE устанавливается по умолчанию.  
+ Параметр/Release имеет значение по умолчанию при [указан](../../build/reference/subsystem-specify-subsystem.md) параметра.  
   
-### Установка данного параметра компоновщика в среде разработки Visual Studio  
+### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>Задание данного параметра компоновщика в среде разработки Visual Studio  
   
-1.  Откройте диалоговое окно **Страницы свойств** проекта.  Дополнительные сведения см. в разделе [Задание свойств проекта C\+\+](../../ide/working-with-project-properties.md).  
+1.  Откройте диалоговое окно **Страницы свойств** проекта. Дополнительные сведения см. в разделе [задание свойств проекта Visual C++](../../ide/working-with-project-properties.md).  
   
-2.  Выберите папку **Компоновщик**.  
+2.  Нажмите кнопку **компоновщика** папки.  
   
-3.  Перейдите на страницу свойств **Дополнительно**.  
+3.  Нажмите кнопку **Дополнительно** страницу свойств.  
   
-4.  Измените значение свойства **Установить контрольную сумму**.  
+4.  Изменить **установить контрольную сумму** свойство.  
   
-### Установка данного параметра компоновщика программным способом  
+### <a name="to-set-this-linker-option-programmatically"></a>Задание данного параметра компоновщика программным способом  
   
 -   См. раздел <xref:Microsoft.VisualStudio.VCProjectEngine.VCLinkerTool.SetChecksum%2A>.  
   
-## См. также  
+## <a name="see-also"></a>См. также  
  [Настройка параметров компоновщика](../../build/reference/setting-linker-options.md)   
  [Параметры компоновщика](../../build/reference/linker-options.md)

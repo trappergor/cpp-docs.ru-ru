@@ -4,27 +4,22 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-windows
+ms.technology: cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- WM_
-dev_langs:
-- C++
-helpviewer_keywords:
-- WM_ messages [MFC]
+f1_keywords: WM_
+dev_langs: C++
+helpviewer_keywords: WM_ messages [MFC]
 ms.assetid: cad81690-90bf-4f77-943f-a435e7563bdd
-caps.latest.revision: 11
+caps.latest.revision: "11"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.translationtype: MT
-ms.sourcegitcommit: 4a770b6508067913aec51b8b3878f33e30eed4bb
 ms.openlocfilehash: 107b354125ce15f0d0d6e76a9bbda03c58f20ec8
-ms.contentlocale: ru-ru
-ms.lasthandoff: 10/09/2017
-
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="handlers-for-wm-messages"></a>Обработчики для сообщений WM_
 Следующие разделы соответствуют записей карты.  
@@ -42,5 +37,4 @@ ms.lasthandoff: 10/09/2017
   
 ## <a name="see-also"></a>См. также  
  [Схемы сообщений](../../mfc/reference/message-maps-mfc.md)
-
 

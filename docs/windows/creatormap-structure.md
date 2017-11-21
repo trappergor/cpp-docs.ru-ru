@@ -1,67 +1,66 @@
 ---
-title: "Структура CreatorMap | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "module/Microsoft::WRL::Details::CreatorMap"
-  - "implements/Microsoft::WRL::Details::CreatorMap"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "CreatorMap - структура"
+title: "Структура CreatorMap | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords:
+- module/Microsoft::WRL::Details::CreatorMap
+- implements/Microsoft::WRL::Details::CreatorMap
+dev_langs: C++
+helpviewer_keywords: CreatorMap structure
 ms.assetid: 94e40927-90c3-4107-bca3-3ad2dc4beda9
-caps.latest.revision: 7
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: c61238a809da49686975acbfb8016996cf5d5c1a
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/24/2017
 ---
-# Структура CreatorMap
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Предназначено для поддержки инфраструктуры [!INCLUDE[cppwrl](../windows/includes/cppwrl_md.md)], а не для непосредственного использования в коде.  
+# <a name="creatormap-structure"></a>CreatorMap - структура
+Поддерживает инфраструктуру библиотека шаблонов C++ среды выполнения Windows и не предназначен для использования непосредственно из программного кода.  
   
-## Синтаксис  
+## <a name="syntax"></a>Синтаксис  
   
 ```  
 struct CreatorMap;  
 ```  
   
-## Примечания  
- Содержит сведения об инициализации, регистрации и отмене регистрации объектов.  
+## <a name="remarks"></a>Примечания  
+ Содержит сведения об инициализации, регистрировать и отменять регистрацию объектов.  
   
- CreatorMap содержит следующие подразделы:  
+ CreatorMap содержит следующие сведения:  
   
--   Процедура инициализации, регистрации и отмены регистрации объектов.  
+-   Как инициализировать, регистрировать и отменять регистрацию объектов.  
   
--   Процедура сравнения сведений об активации в зависимости от классической модели COM или фабрики [!INCLUDE[wrt](../atl/reference/includes/wrt_md.md)].  
+-   Как сравнить данные активации, в зависимости от фабрику классического COM или среды выполнения Windows.  
   
--   Сведения о кэше фабрики и имени сервера для интерфейса.  
+-   Сведения о фабрики кэша и имя сервера для интерфейса.  
   
-## Члены  
+## <a name="members"></a>Члены  
   
-### Открытые члены данных  
+### <a name="public-data-members"></a>Открытые члены данных  
   
 |Имя|Описание|  
-|---------|--------------|  
-|[Элемент данных CreatorMap::activationId](../windows/creatormap-activationid-data-member.md)|Представляет идентификатор объекта, который определен или идентификатором класса классической модели COM, или именем [!INCLUDE[wrt](../atl/reference/includes/wrt_md.md)].|  
-|[Элемент данных CreatorMap::factoryCache](../windows/creatormap-factorycache-data-member.md)|Сохраняет указатель на кэш фабрики для CreatorMap.|  
-|[Элемент данных CreatorMap::factoryCreator](../Topic/CreatorMap::factoryCreator%20Data%20Member.md)|Создает фабрику для указанного CreatorMap.|  
-|[Элемент данных CreatorMap::serverName](../windows/creatormap-servername-data-member.md)|Хранит имя сервера для CreatorMap.|  
+|----------|-----------------|  
+|[Элемент данных CreatorMap::activationId](../windows/creatormap-activationid-data-member.md)|Представляет идентификатор объекта, определяемого по классического COM-код класса или имя среды выполнения Windows.|  
+|[Элемент данных CreatorMap::factoryCache](../windows/creatormap-factorycache-data-member.md)|Хранит указатель на кэш фабрики для объекта CreatorMap.|  
+|[Элемент данных CreatorMap::factoryCreator](../windows/creatormap-factorycreator-data-member.md)|Создает фабрику для указанного объекта CreatorMap.|  
+|[Элемент данных CreatorMap::serverName](../windows/creatormap-servername-data-member.md)|Хранит имя сервера для объекта CreatorMap.|  
   
-## Иерархия наследования  
+## <a name="inheritance-hierarchy"></a>Иерархия наследования  
  `CreatorMap`  
   
-## Требования  
+## <a name="requirements"></a>Требования  
  **Заголовок:** module.h  
   
- **Пространство имен:** Microsoft::WRL::Details  
+ **Пространство имен:** Microsoft::wrl:: Details  
   
-## См. также  
+## <a name="see-also"></a>См. также  
  [Пространство имен Microsoft::WRL::Details](../windows/microsoft-wrl-details-namespace.md)

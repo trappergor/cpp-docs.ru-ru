@@ -1,32 +1,30 @@
 ---
-title: "first_is | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-f1_keywords: 
-  - "vc-attr.first_is"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "first_is attribute"
+title: "first_is | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+f1_keywords: vc-attr.first_is
+dev_langs: C++
+helpviewer_keywords: first_is attribute
 ms.assetid: 89acbf56-3b38-4d44-83e8-1ce2f6f74ffd
-caps.latest.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 9
+caps.latest.revision: "9"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 478b4f501e16ab9fff2e66a4b36fac6e8d29ac70
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/24/2017
 ---
-# first_is
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Определяет индекс первого элемента массива, которые необходимо передать.  
+# <a name="firstis"></a>first_is
+Указывает индекс первого элемента массива для передачи.  
   
-## Синтаксис  
+## <a name="syntax"></a>Синтаксис  
   
 ```  
   
@@ -35,15 +33,15 @@ caps.handback.revision: 9
 ) ]  
 ```  
   
-#### Параметры  
- *expression*  
- Одно или несколько выражений языка C.  Пустые ячейки аргумента допускаются.  
+#### <a name="parameters"></a>Параметры  
+ *выражение*  
+ Одно или несколько выражений языка C. Допускаются слоты пустой аргумент.  
   
-## Заметки  
- **first\_is** Атрибут C\+\+ имеет ту же функциональность, что и  [first\_is](http://msdn.microsoft.com/library/windows/desktop/aa366831) атрибут MIDL.  
+## <a name="remarks"></a>Примечания  
+ **First_is** языка C++ имеет ту же функциональность, что [first_is](http://msdn.microsoft.com/library/windows/desktop/aa366831) языка MIDL.  
   
-## Пример  
- В следующем коде показаны различные способы определения раздел в массиве.  
+## <a name="example"></a>Пример  
+ В следующем коде показано несколько способов определения раздел в массиве:  
   
 ```  
 // cpp_attr_ref_first_is.cpp  
@@ -65,25 +63,24 @@ requestedit] HRESULT get_I([out, retval]long *i);
 };  
 ```  
   
-## Требования  
+## <a name="requirements"></a>Требования  
   
-### Контекст атрибута  
+### <a name="attribute-context"></a>Контекст атрибута  
   
 |||  
 |-|-|  
-|**Применение**|Поле `struct` OR  **union**параметр интерфейса, метод интерфейса|  
-|**Repeatable**|Нет|  
-|**Обязательные атрибуты**|None|  
-|**Недопустимые атрибуты**|None|  
+|**Применение**|Поле в `struct` или **объединение**, интерфейс параметр, метод|  
+|**Повторяемый**|Нет|  
+|**Обязательные атрибуты**|Нет|  
+|**Недопустимые атрибуты**|Нет|  
   
- Дополнительные сведения см. в разделе [Контексты атрибута](../windows/attribute-contexts.md).  
+ Дополнительные сведения см. в разделе [Контексты атрибутов](../windows/attribute-contexts.md).  
   
-## См. также  
- [IDL Attributes](../windows/idl-attributes.md)   
- [Typedef, Enum, Union, and Struct Attributes](../windows/typedef-enum-union-and-struct-attributes.md)   
- [Parameter Attributes](../windows/parameter-attributes.md)   
- [last\_is](../windows/last-is.md)   
- [max\_is](../windows/max-is.md)   
- [length\_is](../windows/length-is.md)   
- [size\_is](../Topic/size_is.md)   
- [Attributes Samples](http://msdn.microsoft.com/ru-ru/558ebdb2-082f-44dc-b442-d8d33bf7bdb8)
+## <a name="see-also"></a>См. также  
+ [Атрибуты IDL](../windows/idl-attributes.md)   
+ [TypeDef, Enum, Union и Struct атрибуты](../windows/typedef-enum-union-and-struct-attributes.md)   
+ [Атрибуты параметра](../windows/parameter-attributes.md)   
+ [last_is](../windows/last-is.md)   
+ [max_is](../windows/max-is.md)   
+ [length_is](../windows/length-is.md)   
+ [size_is](../windows/size-is.md)   

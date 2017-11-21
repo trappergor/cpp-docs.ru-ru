@@ -1,31 +1,29 @@
 ---
-title: "Предупреждение компилятора (уровень 2) C4653 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C4653"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C4653"
+title: "Предупреждение (уровень 2) C4653 компилятора | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords: C4653
+dev_langs: C++
+helpviewer_keywords: C4653
 ms.assetid: 90ec3317-3d39-4b4c-bcd1-97e7c799e1b6
-caps.latest.revision: 7
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: 627039bdebc0f339ea09c144967356b7e288c2ab
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/24/2017
 ---
-# Предупреждение компилятора (уровень 2) C4653
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-параметр компилятора "параметр" несовместим с предкомпилированным заголовком; текущий параметр командной строки пропускается  
+# <a name="compiler-warning-level-2-c4653"></a>Предупреждение компилятора (уровень 2) C4653
+параметр компилятора «параметр» несовместим с предкомпилированным заголовком; текущий параметр командной строки пропускается  
   
- Параметр, заданный с помощью параметра [\/Yu](../../build/reference/yu-use-precompiled-header-file.md) \(использовать предкомпилированные заголовки\), несовместим с параметрами, заданными во время создания предкомпилированного заголовка.  Данная компиляция использовала параметр, заданный при создании предкомпилированного заголовка.  
+ Параметр, заданный с использование предкомпилированных заголовков ([/Yu](../../build/reference/yu-use-precompiled-header-file.md)) параметр несовместим с параметрами, заданными во время создания предкомпилированного заголовка. Этой компиляции используется параметр, заданный при создании предкомпилированного заголовка.  
   
- Это предупреждение может возникать, если при компиляции предкомпилированного заголовка в параметре [\/Zp](../Topic/-Zp%20\(Struct%20Member%20Alignment\).md) было указано другое значение.
+ Это предупреждение может возникать, если другое значение для параметра пакета структуры ([/Zp](../../build/reference/zp-struct-member-alignment.md)) был указан во время компиляции предкомпилированного заголовка.

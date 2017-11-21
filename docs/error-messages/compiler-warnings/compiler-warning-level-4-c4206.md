@@ -1,31 +1,29 @@
 ---
-title: "Предупреждение компилятора (уровень 4) C4206 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C4206"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C4206"
+title: "Предупреждение (уровень 4) C4206 компилятора | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords: C4206
+dev_langs: C++
+helpviewer_keywords: C4206
 ms.assetid: 3df97812-3ed7-4003-9769-057acf97ce3c
-caps.latest.revision: 6
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 6
+caps.latest.revision: "6"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: d6d2de50cc1be83931fcc0f59c9063b06f745659
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/24/2017
 ---
-# Предупреждение компилятора (уровень 4) C4206
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-**нестандартное расширение: пустая запись преобразования**  
+# <a name="compiler-warning-level-4-c4206"></a>Предупреждение компилятора (уровень 4) C4206
+**использовано нестандартное расширение: Единица преобразования пуста**  
   
  Файл был пустым после предварительной обработки.  
   
- Это расширение может предотвратить перенос кода в другие компиляторы.  Оно создает ошибку при ANSI\-совместимости \([\/Za](../../build/reference/za-ze-disable-language-extensions.md)\) и применимо только к исходному коду C.
+ Этот модуль может помешать кода в другие компиляторы. Он выдает ошибку в режиме совместимости с ANSI ([/Za](../../build/reference/za-ze-disable-language-extensions.md)) и применяется только к исходному коду C.

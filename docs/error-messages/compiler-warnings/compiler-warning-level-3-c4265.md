@@ -1,34 +1,32 @@
 ---
-title: "Предупреждение компилятора (уровень 3) C4265 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C4265"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C4265"
+title: "Предупреждение (уровень 3) C4265 компилятора | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords: C4265
+dev_langs: C++
+helpviewer_keywords: C4265
 ms.assetid: 20547159-6f30-4cc4-83aa-927884c8bb4c
-caps.latest.revision: 7
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: 59dd816641748061d3d5316a2a61b342bec876fe
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/24/2017
 ---
-# Предупреждение компилятора (уровень 3) C4265
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-"class" : класс имеет виртуальные функции, но деструктор не является виртуальным  
+# <a name="compiler-warning-level-3-c4265"></a>Предупреждение компилятора (уровень 3) C4265
+«класс»: класс имеет виртуальные функции, но деструктор не является виртуальным  
   
- Если класс имеет виртуальные функции, но деструктор этого класса не является виртуальным, объекты и типы могут быть не уничтожены надлежащим образом при уничтожении класса через указатель базового класса.  
+ Если класс имеет виртуальные функции, но невиртуальный деструктор, объекты типа могут быть не уничтожены надлежащим образом при уничтожении класса через указатель базового класса.  
   
- Данное предупреждение по умолчанию отключено.  Дополнительные сведения см. в разделе [Отключенные по умолчанию предупреждения компилятора](../Topic/Compiler%20Warnings%20That%20Are%20Off%20by%20Default.md).  
+ Это предупреждение отключено по умолчанию. Подробнее: [Выключенные по умолчанию предупреждения компилятора](../../preprocessor/compiler-warnings-that-are-off-by-default.md) .  
   
  Следующий пример приводит к возникновению ошибки C4265:  
   

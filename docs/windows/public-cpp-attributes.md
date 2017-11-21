@@ -1,34 +1,30 @@
 ---
-title: "public (C++ Attributes) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-f1_keywords: 
-  - "vc-attr.public"
-  - "vc-attr.public_cpp"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "public attribute"
+title: "Public (атрибуты C++) | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+f1_keywords: vc-attr.public
+dev_langs: C++
+helpviewer_keywords: public attribute
 ms.assetid: c42e1fd5-6cb1-48fe-8a03-95f2a2e0137c
-caps.latest.revision: 9
-caps.handback.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "9"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: c464f2fe2261018f2f18282b3cf3c2a62f31fde4
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/24/2017
 ---
-# public (C++ Attributes)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Гарантирует, что typedef переместится в библиотеку типов, несмотря на него нет ссылок из файла idl.  
+# <a name="public-c-attributes"></a>public (атрибуты C++)
+Гарантирует, что typedef перейдет в библиотеке типов, даже если нет ссылок из в IDL-файл.  
   
-## Синтаксис  
+## <a name="syntax"></a>Синтаксис  
   
 ```  
   
@@ -36,11 +32,11 @@ manager: "ghogen"
   
 ```  
   
-## Заметки  
- **Открытый** Атрибут C\+\+ имеет ту же функциональность, что и  [Открытый](http://msdn.microsoft.com/library/windows/desktop/aa367150) атрибут MIDL.  
+## <a name="remarks"></a>Примечания  
+ **Открытый** языка C++ имеет ту же функциональность, что [открытый](http://msdn.microsoft.com/library/windows/desktop/aa367150) языка MIDL.  
   
-## Пример  
- В следующем примере кода демонстрируется применение **Открытый** атрибут:  
+## <a name="example"></a>Пример  
+ Следующий код показывает, как использовать **открытый** атрибута:  
   
 ```  
 // cpp_attr_ref_public.cpp  
@@ -56,20 +52,19 @@ __interface IFireTabCtrl : IDispatch
 };  
 ```  
   
-## Требования  
+## <a name="requirements"></a>Требования  
   
-### Контекст атрибута  
+### <a name="attribute-context"></a>Контекст атрибута  
   
 |||  
 |-|-|  
 |**Применение**|`typedef`|  
-|**Repeatable**|Нет|  
-|**Обязательные атрибуты**|None|  
-|**Недопустимые атрибуты**|None|  
+|**Повторяемый**|Нет|  
+|**Обязательные атрибуты**|Нет|  
+|**Недопустимые атрибуты**|Нет|  
   
- Дополнительные сведения о контекстах атрибута см. в разделе [Контексты атрибута](../windows/attribute-contexts.md).  
+ Дополнительные сведения о контекстах атрибутов см. в разделе [Контексты атрибутов](../windows/attribute-contexts.md).  
   
-## См. также  
- [IDL Attributes](../windows/idl-attributes.md)   
- [Typedef, Enum, Union, and Struct Attributes](../windows/typedef-enum-union-and-struct-attributes.md)   
- [Attributes Samples](http://msdn.microsoft.com/ru-ru/558ebdb2-082f-44dc-b442-d8d33bf7bdb8)
+## <a name="see-also"></a>См. также  
+ [Атрибуты IDL](../windows/idl-attributes.md)   
+ [Атрибуты Typedef, Enum, Union и Struct](../windows/typedef-enum-union-and-struct-attributes.md)   
