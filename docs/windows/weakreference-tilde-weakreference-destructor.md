@@ -1,31 +1,28 @@
 ---
-title: "Деструктор WeakReference::~WeakReference | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "implements/Microsoft::WRL::Details::WeakReference::~WeakReference"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "~WeakReference, деструктор"
+title: "WeakReference:: ~ WeakReference деструктор | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: implements/Microsoft::WRL::Details::WeakReference::~WeakReference
+dev_langs: C++
+helpviewer_keywords: ~WeakReference, destructor
 ms.assetid: 176d24a0-df14-41fa-9c17-2f6e69f932be
-caps.latest.revision: 8
-caps.handback.revision: 8
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "8"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: d9559763b8db3e75645109c1cbbb53210a6b9e9f
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/24/2017
 ---
-# Деструктор WeakReference::~WeakReference
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Поддерживает инфраструктуру WRL и не предназначен для непосредственного использования в коде.  
+# <a name="weakreferenceweakreference-destructor"></a>Деструктор WeakReference::~WeakReference
+Поддерживает инфраструктуру WRL и не предназначен для использования непосредственно из программного кода.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -44,5 +41,4 @@ virtual ~WeakReference();
  **Пространство имен:** Microsoft::wrl:: Details  
   
 ## <a name="see-also"></a>См. также  
- [Пространство имен Microsoft::wrl:: details](../windows/microsoft-wrl-details-namespace.md)
- [класс WeakReference](../windows/weakreference-class1.md)
+ [Пространство имен Microsoft::wrl:: details](../windows/microsoft-wrl-details-namespace.md) [WeakReference-класс](../windows/weakreference-class1.md)

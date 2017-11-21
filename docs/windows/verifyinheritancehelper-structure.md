@@ -1,32 +1,30 @@
 ---
-title: "Структура VerifyInheritanceHelper | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "implements/Microsoft::WRL::Details::VerifyInheritanceHelper"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "VerifyInheritanceHelper - структура"
+title: "Структура VerifyInheritanceHelper | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: implements/Microsoft::WRL::Details::VerifyInheritanceHelper
+dev_langs: C++
+helpviewer_keywords: VerifyInheritanceHelper structure
 ms.assetid: 8a48a702-0f71-4807-935b-8311f0a7a8b6
-caps.latest.revision: 5
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 5
+caps.latest.revision: "5"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 926ed226b67ae510647d2523e4992f6ee3c79a5b
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/24/2017
 ---
-# Структура VerifyInheritanceHelper
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Предназначено для поддержки инфраструктуры WRL, а не для непосредственного использования в коде.  
+# <a name="verifyinheritancehelper-structure"></a>VerifyInheritanceHelper - структура
+Поддерживает инфраструктуру WRL и не предназначен для использования непосредственно из программного кода.  
   
-## Синтаксис  
+## <a name="syntax"></a>Синтаксис  
   
 ```  
 template <  
@@ -40,31 +38,31 @@ template <
 struct VerifyInheritanceHelper<I, Nil>;  
 ```  
   
-#### Параметры  
+#### <a name="parameters"></a>Параметры  
  `I`  
  Тип.  
   
  `Base`  
  Другой тип.  
   
-## Заметки  
- Проверяет, является ли один интерфейс производным от другого интерфейса.  
+## <a name="remarks"></a>Примечания  
+ Проверяет, является ли один интерфейс является производным от другого интерфейса.  
   
-## Члены  
+## <a name="members"></a>Члены  
   
-### Открытые методы  
+### <a name="public-methods"></a>Открытые методы  
   
-|Name|Описание|  
-|----------|--------------|  
-|[Метод VerifyInheritanceHelper::Verify](../windows/verifyinheritancehelper-verify-method.md)|Проверяет два интерфейса, заданные текущими параметрами шаблона, и определяет, является ли один интерфейс производным от другого.|  
+|Имя|Описание|  
+|----------|-----------------|  
+|[Метод VerifyInheritanceHelper::Verify](../windows/verifyinheritancehelper-verify-method.md)|Проверяет два интерфейса, указанный параметрами шаблона и определяет, является ли один интерфейс является производным от другого.|  
   
-## Иерархия наследования  
+## <a name="inheritance-hierarchy"></a>Иерархия наследования  
  `VerifyInheritanceHelper`  
   
-## Требования  
+## <a name="requirements"></a>Требования  
  **Заголовок:** implements.h  
   
- **Пространство имен:** Microsoft::WRL::Details  
+ **Пространство имен:** Microsoft::wrl:: Details  
   
-## См. также  
+## <a name="see-also"></a>См. также  
  [Пространство имен Microsoft::WRL::Details](../windows/microsoft-wrl-details-namespace.md)

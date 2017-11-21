@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-windows
+ms.technology: cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -18,35 +17,18 @@ f1_keywords:
 - AGENTS/concurrency::multi_link_registry::count
 - AGENTS/concurrency::multi_link_registry::remove
 - AGENTS/concurrency::multi_link_registry::set_bound
-dev_langs:
-- C++
-helpviewer_keywords:
-- multi_link_registry class
+dev_langs: C++
+helpviewer_keywords: multi_link_registry class
 ms.assetid: b2aa73a8-e8a6-4255-b117-d07530c328b2
-caps.latest.revision: 19
+caps.latest.revision: "19"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 5faef5bd1be6cc02d6614a6f6193c74167a8ff23
-ms.openlocfilehash: b52ee20ed16a4ce8d0b9f11b6acf25112464b49b
-ms.contentlocale: ru-ru
-ms.lasthandoff: 03/17/2017
-
+ms.openlocfilehash: 39c93cf2c2e3642d2ed6c3fcf08cadafea4ce8bf
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="multilinkregistry-class"></a>Класс multi_link_registry
 Объект `multi_link_registry` представляет собой `network_link_registry`, управляющий несколькими блоками источников или целевыми блоками.  
@@ -75,10 +57,10 @@ class multi_link_registry : public network_link_registry<_Block>;
   
 |Имя|Описание|  
 |----------|-----------------|  
-|[add](#add)|Добавляет ссылку на `multi_link_registry` объект. (Переопределяет [network_link_registry::add](network-link-registry-class.md#add).)|  
+|[add](#add)|Добавляет ссылку на `multi_link_registry` объекта. (Переопределяет [network_link_registry::add](network-link-registry-class.md#add).)|  
 |[begin](#begin)|Возвращает итератор на первый элемент в `multi_link_registry` объекта. (Переопределяет [network_link_registry::begin](network-link-registry-class.md#begin).)|  
 |[содержит](#contains)|Поиск `multi_link_registry` объекта для указанного блока. (Переопределяет [network_link_registry::contains](network-link-registry-class.md#contains).)|  
-|[count](#count)|Подсчитывает число элементов в `multi_link_registry` объекта. (Переопределяет [network_link_registry::count](network-link-registry-class.md#count).)|  
+|[count](#count)|Подсчитывает количество элементов в `multi_link_registry` объекта. (Переопределяет [network_link_registry::count](network-link-registry-class.md#count).)|  
 |[remove](#remove)|Удаляет ссылку из `multi_link_registry` объекта. (Переопределяет [network_link_registry::remove](network-link-registry-class.md#remove).)|  
 |[set_bound](#set_bound)|Устанавливает верхний предел на число ссылок `multi_link_registry` могут храниться в объекте.|  
   
@@ -94,7 +76,7 @@ class multi_link_registry : public network_link_registry<_Block>;
   
 ##  <a name="add"></a>добавить 
 
- Добавляет ссылку на `multi_link_registry` объект.  
+ Добавляет ссылку на `multi_link_registry` объекта.  
   
 ```
 virtual void add(_EType _Link);
@@ -105,7 +87,7 @@ virtual void add(_EType _Link);
  Указатель на блок для добавления.  
   
 ### <a name="remarks"></a>Примечания  
- Метод создает [invalid_link_target](invalid-link-target-class.md) Если ссылка уже присутствует в реестре, или если ограничение уже было установлено исключение с `set_bound` функции и ссылки был удален.  
+ Метод создает [invalid_link_target](invalid-link-target-class.md) Если связь уже существует в реестре или если ограничение уже было установлено исключение с `set_bound` функции и ссылки был удален.  
   
 ##  <a name="begin"></a>начать 
 
@@ -136,9 +118,9 @@ virtual bool contains(_EType _Link);
 ### <a name="return-value"></a>Возвращаемое значение  
  `true`Если указанная блокировка найдена, `false` в противном случае.  
   
-##  <a name="count"></a>число 
+##  <a name="count"></a>Счетчик 
 
- Подсчитывает число элементов в `multi_link_registry` объекта.  
+ Подсчитывает количество элементов в `multi_link_registry` объекта.  
   
 ```
 virtual size_t count();
@@ -176,7 +158,7 @@ virtual bool remove(_EType _Link);
   
 ### <a name="parameters"></a>Параметры  
  `_Link`  
- Указатель на блок удаляется, если найден.  
+ Указатель на блок удалены, если найден.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
  `true`Если ссылка была найдена и удалена, `false` в противном случае.  
@@ -199,4 +181,3 @@ void set_bound(size_t _MaxLinks);
 ## <a name="see-also"></a>См. также  
  [пространство имен Concurrency](concurrency-namespace.md)   
  [Класс single_link_registry](single-link-registry-class.md)
-

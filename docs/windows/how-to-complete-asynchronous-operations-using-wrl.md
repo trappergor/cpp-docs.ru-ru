@@ -1,70 +1,70 @@
 ---
-title: "Практическое руководство. Завершение асинхронных операций с использованием WRL | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-dev_langs: 
-  - "C++"
+title: "Как: завершение асинхронных операций с использованием WRL | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+dev_langs: C++
 ms.assetid: 02173eae-731b-49bc-b412-f1f69388b99d
-caps.latest.revision: 13
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 13
+caps.latest.revision: "13"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 25ac6c80689e60a412f0e5b66ddbf3aa0d8ab271
+ms.sourcegitcommit: 1b480aa74886930b3bd0435d71cfcc3ccda36424
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 11/15/2017
 ---
-# Практическое руководство. Завершение асинхронных операций с использованием WRL
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Этот документ показывает использование [!INCLUDE[cppwrl](../windows/includes/cppwrl_md.md)] \([!INCLUDE[cppwrl_short](../windows/includes/cppwrl_short_md.md)]\) для запуска асинхронных операций и выполнения работы при завершении операций.  
+# <a name="how-to-complete-asynchronous-operations-using-wrl"></a>Практическое руководство. Завершение асинхронных операций с использованием WRL
+В этом документе показано, как использовать среды выполнения C++ шаблон библиотеки Windows (WRL) для запуска асинхронных операций и выполнения работы при завершении операций.  
   
- В этом документе показано два примера.  Первый пример запускает асинхронный таймер и ожидает окончания таймера.  В этом примере при создании объекта таймера указывается асинхронное действие.  Во втором примере выполняется фоновый рабочий поток.  В этом примере показано, как работать с методом [!INCLUDE[wrt](../atl/reference/includes/wrt_md.md)], который возвращает интерфейс `IAsyncInfo`.  Функция [Обратный вызов](../windows/callback-function-windows-runtime-cpp-template-library.md) является важной частью обоих примеров, так как она позволяет определить обработчик событий для обработки результатов асинхронных операций.  
+ Здесь приведено два примера. В первом из них показан запуск и ожидание окончания работы асинхронного таймера. В этом примере при создании объекта таймера задается асинхронное действие. Во втором примере показан запуск рабочего потока в фоновом режиме. В этом примере показано, как работать с методом среды выполнения Windows, который возвращает `IAsyncInfo` интерфейса. [Обратного вызова](../windows/callback-function-windows-runtime-cpp-template-library.md) функция является важной частью обоих примеров, поскольку она позволяет задать обработчик событий для обработки результатов асинхронных операций.  
   
- Для более базового примера, который создает экземпляр этого компонента и получает значение свойства, см. [Практическое руководство. Активация и использование компонента среды выполнения Windows](../windows/how-to-activate-and-use-a-windows-runtime-component-using-wrl.md).  
+ Более простой пример, который создает экземпляр компонента и извлекает значение свойства, в разделе [как: активация и использование компонента среды выполнения Windows](../windows/how-to-activate-and-use-a-windows-runtime-component-using-wrl.md).  
   
 > [!TIP]
->  В этих примерах используйте лямбда\-выражения для определения обратных вызовов.  Можно также использовать объекты функций \(функторы\), указатели на функции или объекты [std::function](../standard-library/function-class.md).  Дополнительные сведения о лямбда\-выражениях в C\+\+ см. в разделе [Лямбда\-выражения](../cpp/lambda-expressions-in-cpp.md).  
+>  В этих примерах используются лямбда-выражения для определения обратных вызовов. Можно также использовать объекты функций (функторы), указатели на функции или [std::function](../standard-library/function-class.md) объектов. Дополнительные сведения о лямбда-выражения C++ см. в разделе [лямбда-выражения](../cpp/lambda-expressions-in-cpp.md).  
   
-## Пример: Работа с таймером  
- Следующие действия запускают асинхронный таймер и ожидают окончания действия таймера.  Полный пример кода выглядит следующим образом.  
+## <a name="example-working-with-a-timer"></a>Пример: работа с таймером  
+ Следующие действия запускают асинхронный таймер и ожидают окончания его действия. Далее приведен полный пример.  
   
 > [!WARNING]
->  Хотя обычно используется [!INCLUDE[cppwrl_short](../windows/includes/cppwrl_short_md.md)] в приложении [!INCLUDE[win8_appname_long](../build/includes/win8_appname_long_md.md)], в этом образце для иллюстрации используется консольное приложение.  Функции, такие как `wprintf_s`, недоступны из приложения [!INCLUDE[win8_appname_long](../build/includes/win8_appname_long_md.md)].  Дополнительные сведения о типах и функциях, которые можно использовать в приложении [!INCLUDE[win8_appname_long](../build/includes/win8_appname_long_md.md)] см. [Функции CRT, не поддерживаемые \/ZW](http://msdn.microsoft.com/library/windows/apps/jj606124.aspx) и [Win32 и модели COM для приложений Магазина Windows](http://msdn.microsoft.com/library/windows/apps/br205757.aspx).  
+>  Несмотря на то, что обычно используется библиотека шаблонов C++ среды выполнения Windows в приложении универсальной платформы Windows, в этом примере используется консольное приложение для иллюстрации. Функции, такие как `wprintf_s` недоступны в приложении универсальной платформы Windows. Дополнительные сведения о типах и функции, которые можно использовать в приложении универсальной платформы Windows см. в разделе [функции CRT не поддерживаются с параметром/zw](http://msdn.microsoft.com/library/windows/apps/jj606124.aspx) и [приложений Win32 и COM для магазина Windows](http://msdn.microsoft.com/library/windows/apps/br205757.aspx).  
   
-1.  Включите \(`#include`\) все необходимые заголовки [!INCLUDE[wrt](../atl/reference/includes/wrt_md.md)], [!INCLUDE[cppwrl_short](../windows/includes/cppwrl_short_md.md)] или стандартной библиотеки C\+\+.  
+1.  Включить (`#include`) все необходимые среды выполнения Windows, библиотека шаблонов C++ среды выполнения Windows или заголовков стандартной библиотеки C++.  
   
      [!code-cpp[wrl-consume-async#2](../windows/codesnippet/CPP/how-to-complete-asynchronous-operations-using-wrl_1.cpp)]  
   
-     Windows.System.Threading.h объявляет типы, необходимые для использования асинхронного таймера.  
+     В файле Windows.System.Threading.h объявлены типы, необходимые для использования асинхронного таймера.  
   
-     Рекомендуется использовать директиву `using namespace` в CPP\-файле, чтобы сделать код более удобочитаемым.  
+     Рекомендуется использовать директиву `using namespace` в CPP-файле, чтобы сделать код более удобочитаемым.  
   
-2.  Инициализируйте [!INCLUDE[wrt](../atl/reference/includes/wrt_md.md)].  
+2.  Инициализирует среду выполнения Windows.  
   
      [!code-cpp[wrl-consume-async#3](../windows/codesnippet/CPP/how-to-complete-asynchronous-operations-using-wrl_2.cpp)]  
   
-3.  Создание фабрики активации для интерфейса `ABI::Windows::System::Threading::IThreadPoolTimer`.  
+3.  Создайте фабрику активации для интерфейса `ABI::Windows::System::Threading::IThreadPoolTimer`.  
   
      [!code-cpp[wrl-consume-async#4](../windows/codesnippet/CPP/how-to-complete-asynchronous-operations-using-wrl_3.cpp)]  
   
-     В [!INCLUDE[wrt](../atl/reference/includes/wrt_md.md)] используются полные имена для идентификации типов.  Параметр `RuntimeClass_Windows_System_Threading_ThreadPoolTimer` является строкой, предоставляемой [!INCLUDE[wrt](../atl/reference/includes/wrt_md.md)], которая содержит требуемое имя класса среды выполнения.  
+     Среда выполнения Windows использует полные имена для определения типов. `RuntimeClass_Windows_System_Threading_ThreadPoolTimer` Параметр представляет собой строку, предоставляемые средой выполнения Windows и содержит имя класса необходимая среда выполнения.  
   
-4.  Создайте объект [Событие](../windows/event-class-windows-runtime-cpp-template-library.md), который синхронизирует обратный вызов таймера с основным приложением.  
+4.  Создание [событие](../windows/event-class-windows-runtime-cpp-template-library.md) объект, который синхронизирует обратный вызов таймера с основным приложением.  
   
      [!code-cpp[wrl-consume-async#5](../windows/codesnippet/CPP/how-to-complete-asynchronous-operations-using-wrl_4.cpp)]  
   
     > [!NOTE]
-    >  Это событие только для демонстрации в составе консольного приложения.  В этом примере используется событие, чтобы гарантировать, что асинхронная операция окончится до завершения приложения.  В большинстве приложений обычно не ожидается выполнение асинхронной операции.  
+    >  Это событие выполняется только для демонстрации в составе консольного приложения. В этом примере используется объект-событие, чтобы удостовериться, что асинхронная операция окончится до завершения приложения. В большинстве приложений обычно не ожидается выполнение асинхронной операции.  
   
-5.  Создайте объект `IThreadPoolTimer`, который истекает через две секунды.  Используйте функцию `Callback` для создания обработчика событий \(объект `ABI::Windows::System::Threading::ITimerElapsedHandler`\).  
+5.  Создайте объект `IThreadPoolTimer`, время действия которого истекает через две секунды. Используйте функцию `Callback` для создания обработчика событий (объект `ABI::Windows::System::Threading::ITimerElapsedHandler`).  
   
      [!code-cpp[wrl-consume-async#6](../windows/codesnippet/CPP/how-to-complete-asynchronous-operations-using-wrl_5.cpp)]  
   
-6.  Выведите сообщение на консоль и дождитесь выполнения обратного вызова таймера.  Все объекты `ComPtr` и RAII покидают область действия и автоматически освобождаются.  
+6.  Выведите сообщение в окно консоли и дождитесь выполнения обратного вызова таймера. Все объекты `ComPtr` и RAII покидают область действия и автоматически освобождаются.  
   
      [!code-cpp[wrl-consume-async#7](../windows/codesnippet/CPP/how-to-complete-asynchronous-operations-using-wrl_6.cpp)]  
   
@@ -72,47 +72,47 @@ caps.handback.revision: 13
   
  [!code-cpp[wrl-consume-async#1](../windows/codesnippet/CPP/how-to-complete-asynchronous-operations-using-wrl_7.cpp)]  
   
-### Компиляция кода  
- Чтобы скомпилировать код, скопируйте и вставьте его в проект Visual Studio или в файл с именем `wrl-consume-async.cpp`, а затем выполните в окне командной строки Visual Studio следующую команду.  
+### <a name="compiling-the-code"></a>Компиляция кода  
+ Чтобы скомпилировать код, скопируйте его и затем вставьте его в проект Visual Studio или в файл с именем `wrl-consume-async.cpp` , а затем запустите следующую команду в окне командной строки Visual Studio.  
   
- **cl.exe wrl\-consume\-async.cpp runtimeobject.lib**  
+ **CL.exe wrl-consume-async.cpp runtimeobject.lib**  
   
-## Пример: Работа с фоновым потоком  
- Следующие действия запускают рабочий поток и определяют действие, которое выполняется этим потоком.  Полный пример кода выглядит следующим образом.  
+## <a name="example-working-with-a-background-thread"></a>Пример: работа с фоновым потоком  
+ Следующие действия запускают рабочий поток и определяют действие, которое выполняется этим потоком. Далее приведен полный пример.  
   
 > [!TIP]
->  В этом примере показано, как работать с интерфейсом `ABI::Windows::Foundation::IAsyncAction`.  Можно применить этот шаблон к любому интерфейсу, реализующему `IAsyncInfo`: `IAsyncAction`, `IAsyncActionWithProgress`, `IAsyncOperation` и `IAsyncOperationWithProgress`.  
+>  В этом примере показано, как работать с интерфейсом `ABI::Windows::Foundation::IAsyncAction`. Можно применить этот шаблон к любому интерфейсу, реализующему `IAsyncInfo`: `IAsyncAction`, `IAsyncActionWithProgress`, `IAsyncOperation` и `IAsyncOperationWithProgress`.  
   
-1.  Включите \(`#include`\) все необходимые заголовки [!INCLUDE[wrt](../atl/reference/includes/wrt_md.md)], [!INCLUDE[cppwrl_short](../windows/includes/cppwrl_short_md.md)] или стандартной библиотеки C\+\+.  
+1.  Включить (`#include`) все необходимые среды выполнения Windows, библиотека шаблонов C++ среды выполнения Windows или заголовков стандартной библиотеки C++.  
   
      [!code-cpp[wrl-consume-asyncOp#2](../windows/codesnippet/CPP/how-to-complete-asynchronous-operations-using-wrl_8.cpp)]  
   
-     Windows.System.Threading.h объявляет типы, необходимые для использования рабочего потока.  
+     В файле Windows.System.Threading.h объявлены типы, необходимые для использования рабочего потока.  
   
-     Рекомендуется использовать директиву `using namespace` в .cpp\-файле, чтобы сделать код более удобочитаемым.  
+     Рекомендуется использовать директиву `using namespace` в CPP-файле, чтобы сделать код более удобочитаемым.  
   
-2.  Инициализируйте [!INCLUDE[wrt](../atl/reference/includes/wrt_md.md)].  
+2.  Инициализирует среду выполнения Windows.  
   
      [!code-cpp[wrl-consume-asyncOp#3](../windows/codesnippet/CPP/how-to-complete-asynchronous-operations-using-wrl_9.cpp)]  
   
-3.  Создание фабрики активации для интерфейса `ABI::Windows::System::Threading::IThreadPoolStatics`.  
+3.  Создайте фабрику активации для интерфейса `ABI::Windows::System::Threading::IThreadPoolStatics`.  
   
      [!code-cpp[wrl-consume-asyncOp#4](../windows/codesnippet/CPP/how-to-complete-asynchronous-operations-using-wrl_10.cpp)]  
   
-4.  Создайте объект [Событие](../windows/event-class-windows-runtime-cpp-template-library.md), который синхронизирует завершение рабочего потока с основным приложением.  
+4.  Создание [событие](../windows/event-class-windows-runtime-cpp-template-library.md) объект, который синхронизирует завершение рабочего потока с основным приложением.  
   
      [!code-cpp[wrl-consume-asyncOp#5](../windows/codesnippet/CPP/how-to-complete-asynchronous-operations-using-wrl_11.cpp)]  
   
     > [!NOTE]
-    >  Это событие только для демонстрации в составе консольного приложения.  В этом примере используется событие, чтобы гарантировать, что асинхронная операция окончится до завершения приложения.  В большинстве приложений обычно не ожидается выполнение асинхронной операции.  
+    >  Это событие выполняется только для демонстрации в составе консольного приложения. В этом примере используется объект-событие, чтобы удостовериться, что асинхронная операция окончится до завершения приложения. В большинстве приложений обычно не ожидается выполнение асинхронной операции.  
   
-5.  Вызовите метод `IThreadPoolStatics::RunAsync` для создания рабочего потока.  Используйте функцию `Callback` для задания действия.  
+5.  Вызовите метод `IThreadPoolStatics::RunAsync` для создания рабочего потока. Используйте функцию `Callback`для определения действия.  
   
      [!code-cpp[wrl-consume-asyncOp#6](../windows/codesnippet/CPP/how-to-complete-asynchronous-operations-using-wrl_12.cpp)]  
   
      Функция `IsPrime` определена в следующем полном примере.  
   
-6.  Выведите сообщение на консоль и дождитесь выполнения потока.  Все объекты `ComPtr` и RAII покидают область действия и автоматически освобождаются.  
+6.  Выведите сообщение в окно консоли и дождитесь выполнения потока. Все объекты `ComPtr` и RAII покидают область действия и автоматически освобождаются.  
   
      [!code-cpp[wrl-consume-asyncOp#7](../windows/codesnippet/CPP/how-to-complete-asynchronous-operations-using-wrl_13.cpp)]  
   
@@ -120,10 +120,10 @@ caps.handback.revision: 13
   
  [!code-cpp[wrl-consume-asyncOp#1](../windows/codesnippet/CPP/how-to-complete-asynchronous-operations-using-wrl_14.cpp)]  
   
-### Компиляция кода  
- Чтобы скомпилировать код, скопируйте и вставьте его в проект Visual Studio или в файл с именем `wrl-consume-asyncOp.cpp`, а затем выполните в окне командной строки Visual Studio следующую команду.  
+### <a name="compiling-the-code"></a>Компиляция кода  
+ Чтобы скомпилировать код, скопируйте его и затем вставьте его в проект Visual Studio или в файл с именем `wrl-consume-asyncOp.cpp` , а затем запустите следующую команду в окне командной строки Visual Studio.  
   
- **cl.exe wrl\-consume\-asyncOp.cpp runtimeobject.lib**  
+ **CL.exe wrl-consume-asyncOp.cpp runtimeobject.lib**  
   
-## См. также  
- [Библиотека шаблонов C\+\+ среды выполнения Windows \(WRL\)](../Topic/Windows%20Runtime%20C++%20Template%20Library%20\(WRL\).md)
+## <a name="see-also"></a>См. также  
+ [Библиотека шаблонов C++ среды выполнения Windows (WRL)](../windows/windows-runtime-cpp-template-library-wrl.md)

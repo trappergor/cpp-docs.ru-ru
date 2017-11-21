@@ -1,45 +1,44 @@
 ---
-title: "Метод HString::GetAddressOf | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "corewrappers/Microsoft::WRL::Wrappers::HString::GetAddressOf"
-dev_langs: 
-  - "C++"
+title: "Метод HString::GetAddressOf | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: corewrappers/Microsoft::WRL::Wrappers::HString::GetAddressOf
+dev_langs: C++
 ms.assetid: 6050decf-5f99-49f0-9497-1c8192c485ae
-caps.latest.revision: 2
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 2
+caps.latest.revision: "2"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 0432a8f5966f6544808ffa4668777d2900ee5066
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/24/2017
 ---
-# Метод HString::GetAddressOf
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="hstringgetaddressof-method"></a>Метод HString::GetAddressOf
 Извлекает указатель на базовый дескриптор HSTRING.  
   
-## Синтаксис  
+## <a name="syntax"></a>Синтаксис  
   
 ```  
 HSTRING* GetAddressOf() throw()  
 ```  
   
-## Возвращаемое значение  
+## <a name="return-value"></a>Возвращаемое значение  
  Указатель на базовый дескриптор HSTRING.  
   
-## Примечания  
- После этой операции строковое значение основного дескриптора HSTRING будет уничтожено.  
+## <a name="remarks"></a>Примечания  
+ После этой операции строковое значение базового дескриптора HSTRING будет уничтожено.  
   
-## Требования  
+## <a name="requirements"></a>Требования  
  **Заголовок:** corewrappers.h  
   
- **Пространство имен:** Microsoft::WRL::Wrappers  
+ **Пространство имен:** Microsoft::wrl:: wrappers  
   
-## См. также  
+## <a name="see-also"></a>См. также  
  [Класс HString](../windows/hstring-class.md)

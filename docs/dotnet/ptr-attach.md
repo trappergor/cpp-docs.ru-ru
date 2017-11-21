@@ -1,35 +1,34 @@
 ---
-title: "ptr::Attach | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "msclr::com::ptr::Attach"
-  - "ptr::Attach"
-  - "ptr.Attach"
-  - "msclr.com.ptr.Attach"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Attach - метод"
+title: "PTR::Attach | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords:
+- msclr::com::ptr::Attach
+- ptr::Attach
+- ptr.Attach
+- msclr.com.ptr.Attach
+dev_langs: C++
+helpviewer_keywords: Attach method
 ms.assetid: 81d930de-cb2a-4c30-9bd6-94d65942c47a
-caps.latest.revision: 8
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: a776a19d3b06fce5c7355ba512693d63e529d3b6
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/24/2017
 ---
-# ptr::Attach
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Вложение com\-объекта в `com::ptr`.  
+# <a name="ptrattach"></a>ptr::Attach
+Присоединяет на COM-объект `com::ptr`.  
   
-## Синтаксис  
+## <a name="syntax"></a>Синтаксис  
   
 ```  
 void Attach(  
@@ -37,20 +36,20 @@ void Attach(
 );  
 ```  
   
-#### Параметры  
+#### <a name="parameters"></a>Параметры  
  `_right`  
- Указатель COM\-интерфейса, чтобы вложить.  
+ Указатель интерфейса COM для присоединения.  
   
-## Исключения  
- Если `com::ptr` уже имеет ссылку на com\-объекты, `Attach` создает <xref:System.InvalidOperationException>.  
+## <a name="exceptions"></a>Исключения  
+ Если `com::ptr` уже владеет ссылку на COM-объект `Attach` вызывает <xref:System.InvalidOperationException>.  
   
-## Заметки  
- Вызов `Attach` ссылается на com\-объекты, но не освобождает ссылку на него вызывающего объекта.  
+## <a name="remarks"></a>Примечания  
+ Вызов `Attach` ссылается на COM-объекта, но не освобождает вызывающего ссылку на него.  
   
- Передача `NULL` в `Attach` приводит к никаком, приниманным действии.  
+ Передача `NULL` для `Attach` приводит не будет предпринято никаких действий.  
   
-## Пример  
- В этом примере реализуется класс CLR, который использует `com::ptr` для создания его объект `IXMLDOMDocument` закрытого члена.  Сначала вызывает `Release` функции\-члена `ReplaceDocument` на любом ранее была объект и затем вызывает метод `Attach` вложить новый объект документа.  
+## <a name="example"></a>Пример  
+ В этом примере реализуется класс CLR, который использует `com::ptr` программы-оболочки для своего закрытого члена `IXMLDOMDocument` объекта. `ReplaceDocument` Функция-член первого вызывает `Release` для какого-либо ранее владеет объектом, а затем вызывает метод `Attach` для присоединения объекта документа.  
   
 ```  
 // comptr_attach.cpp  
@@ -124,12 +123,12 @@ int main() {
 }  
 ```  
   
-## Требования  
- **Файл заголовка**\<msclr\\com\\ptr.h\>  
+## <a name="requirements"></a>Требования  
+ **Файл заголовка** \<msclr\com\ptr.h >  
   
  **Пространство имен** msclr::com  
   
-## См. также  
- [Члены ptr](../dotnet/ptr-members.md)   
- [ptr::operator\=](../dotnet/ptr-operator-assign.md)   
+## <a name="see-also"></a>См. также  
+ [Члены PTR](../dotnet/ptr-members.md)   
+ [PTR::operator =](../dotnet/ptr-operator-assign.md)   
  [ptr::Release](../dotnet/ptr-release.md)

@@ -1,67 +1,63 @@
 ---
-title: "Функция CreateActivationFactory | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "module/Microsoft::WRL::Details::CreateActivationFactory"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "CreateActivationFactory - функция"
+title: "Функция CreateActivationFactory | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: module/Microsoft::WRL::Details::CreateActivationFactory
+dev_langs: C++
+helpviewer_keywords: CreateActivationFactory function
 ms.assetid: a1a53e04-6757-4faf-a4c8-ecf06e43b959
-caps.latest.revision: 2
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 2
+caps.latest.revision: "2"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: e36a76de38290cfd1571f1c5743745561f14e438
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/24/2017
 ---
-# Функция CreateActivationFactory
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Создает фабрику, которая производит экземпляры указанного класса, которые могут быть активированы средой выполнения Windows.  
+# <a name="createactivationfactory-function"></a>CreateActivationFactory - функция
+Создает фабрику, производящую экземпляры указанного класса, которые могут быть активированы средой выполнения Windows.  
   
-## Синтаксис  
+## <a name="syntax"></a>Синтаксис  
   
 ```cpp  
-  
 template<typename Factory>  
    inline HRESULT STDMETHODCALLTYPE CreateActivationFactory(  
-      _In_ unsigned int *flags,    
-      _In_ const CreatorMap* entry,   
+      _In_ unsigned int *flags,        _In_ const CreatorMap* entry,   
       REFIID riid,   
      _Outptr_ IUnknown **ppFactory) throw();  
   
 ```  
   
-#### Параметры  
+#### <a name="parameters"></a>Параметры  
  `flags`  
- Сочетание одного или нескольких значений перечисления [RuntimeClassType](../windows/runtimeclasstype-enumeration.md).  
+ Сочетание одного или нескольких [RuntimeClassType](../windows/runtimeclasstype-enumeration.md) значений перечисления.  
   
  `entry`  
- Указатель на [CreatorMap](../windows/creatormap-structure.md), содержащий сведения об инициализации и регистрации параметра `riid`.  
+ Указатель на [CreatorMap](../windows/creatormap-structure.md) , содержащий сведения о параметра инициализации и регистрации `riid`.  
   
  `riid`  
  Ссылка на идентификатор интерфейса.  
   
  `ppFactory`  
- Если эта операция завершается успешно, то указатель на фабрику активации.  
+ Если эта операция завершается успешно, указатель на фабрику активации.  
   
-## Возвращаемое значение  
- Значение S\_ОК в случае успеха; в противном случае — значение HRESULT, указывающее на ошибку.  
+## <a name="return-value"></a>Возвращаемое значение  
+ Значение S_OK, если операция завершилась успешно; в противном случае — значение HRESULT, указывающее на ошибку.  
   
-## Примечания  
- Ошибка утверждения создается, если параметр `Factory` шаблона не является производным от интерфейса IActivationFactory.  
+## <a name="remarks"></a>Примечания  
+ Если выдается ошибка утверждения параметр шаблона `Factory` не является производным от интерфейса представляет интерфейс IActivationFactory.  
   
-## Требования  
+## <a name="requirements"></a>Требования  
  **Заголовок:** module.h  
   
  **Пространство имен:** Microsoft::WRL  
   
-## См. также  
+## <a name="see-also"></a>См. также  
  [Пространство имен Microsoft::WRL::Wrappers::Details](../windows/microsoft-wrl-wrappers-details-namespace.md)

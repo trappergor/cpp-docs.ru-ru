@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-windows
+ms.technology: cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
@@ -17,38 +16,21 @@ f1_keywords:
 - ATLCORE/ATL::CComCriticalSection::Term
 - ATLCORE/ATL::CComCriticalSection::Unlock
 - ATLCORE/ATL::CComCriticalSection::m_sec
-dev_langs:
-- C++
-helpviewer_keywords:
-- CComCriticalSection class
+dev_langs: C++
+helpviewer_keywords: CComCriticalSection class
 ms.assetid: 44e1edd2-90be-4bfe-9739-58e8b419e7d1
-caps.latest.revision: 21
+caps.latest.revision: "21"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 050e7483670bd32f633660ba44491c8bb3fc462d
-ms.openlocfilehash: a7c4fbc87ff06bb09766eb3e4ad0d7c5275eed65
-ms.contentlocale: ru-ru
-ms.lasthandoff: 02/24/2017
-
+ms.openlocfilehash: ef8ca542ef9bda72bd89b633d42db727bce3e94a
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="ccomcriticalsection-class"></a>Класс CComCriticalSection
-Этот класс предоставляет методы для получения и освобождения владельца объекта критической секции.  
+Этот класс предоставляет методы для получения и освобождения владения объект критической секции.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -70,7 +52,7 @@ class CComCriticalSection
 |----------|-----------------|  
 |[CComCriticalSection::Init](#init)|Создает и инициализирует объект критической секции.|  
 |[CComCriticalSection::Lock](#lock)|Получает права владельца объекта критической секции.|  
-|[CComCriticalSection::Term](#term)|Освобождает системные ресурсы, используемые объект критической секции.|  
+|[CComCriticalSection::Term](#term)|Освобождает системные ресурсы, используемые объектом критической секции.|  
 |[CComCriticalSection::Unlock](#unlock)|Освобождает владение объект критической секции.|  
   
 ### <a name="public-data-members"></a>Открытые члены данных  
@@ -98,30 +80,30 @@ CComCriticalSection() throw();
 ```  
   
 ### <a name="remarks"></a>Примечания  
- Наборы [m_sec](#m_sec) член данных NULL **.**  
+ Наборы [m_sec](#m_sec) данные-член NULL **.**  
   
 ##  <a name="init"></a>CComCriticalSection::Init  
- Вызывает функцию Win32 [InitializeCriticalSection](http://msdn.microsoft.com/library/windows/desktop/ms683472), который инициализирует объект критической секции, содержащиеся в [m_sec](#m_sec) данные-член.  
+ Вызывает функцию Win32 [InitializeCriticalSection](http://msdn.microsoft.com/library/windows/desktop/ms683472), который инициализирует объект критической секции, содержащиеся в [m_sec](#m_sec) члена данных.  
   
 ```
 HRESULT Init() throw();
 ```  
   
 ### <a name="return-value"></a>Возвращаемое значение  
- Возвращает `S_OK` в случае успешного выполнения **E_OUTOFMEMORY** или **E_FAIL** в случае сбоя.  
+ Возвращает `S_OK` при успешном выполнении **E_OUTOFMEMORY** или **E_FAIL** при сбое.  
   
 ##  <a name="lock"></a>CComCriticalSection::Lock  
- Вызывает функцию Win32 [EnterCriticalSection](http://msdn.microsoft.com/library/windows/desktop/ms682608), который ожидает, пока поток может стать владельцем объект критической секции, содержащиеся в [m_sec](#m_sec) данные-член.  
+ Вызывает функцию Win32 [EnterCriticalSection](http://msdn.microsoft.com/library/windows/desktop/ms682608), который ожидает, пока поток может стать владельцем объект критической секции, содержащиеся в [m_sec](#m_sec) члена данных.  
   
 ```
 HRESULT Lock() throw();
 ```  
   
 ### <a name="return-value"></a>Возвращаемое значение  
- Возвращает `S_OK` в случае успешного выполнения **E_OUTOFMEMORY** или **E_FAIL** в случае сбоя.  
+ Возвращает `S_OK` при успешном выполнении **E_OUTOFMEMORY** или **E_FAIL** при сбое.  
   
 ### <a name="remarks"></a>Примечания  
- Сначала необходимо инициализировать объект критической секции с помощью вызова [Init](#init) метод. По завершении выполнения защищенный код поток должен вызвать [Unlock](#unlock) владения критический раздел.  
+ Сначала необходимо инициализировать объект критической секции с помощью вызова [Init](#init) метод. По завершении выполнения защищенный код поток должен вызвать [Unlock](#unlock) владения критической секции.  
   
 ##  <a name="m_sec"></a>CComCriticalSection::m_sec  
  Содержит объект критической секции, который используется всеми `CComCriticalSection` методы.  
@@ -131,7 +113,7 @@ CRITICAL_SECTION m_sec;
 ```  
   
 ##  <a name="term"></a>CComCriticalSection::Term  
- Вызывает функцию Win32 [DeleteCriticalSection](http://msdn.microsoft.com/library/windows/desktop/ms682552), который освобождает все ресурсы, используемые объект критической секции, содержащиеся в [m_sec](#m_sec) данные-член.  
+ Вызывает функцию Win32 [DeleteCriticalSection](http://msdn.microsoft.com/library/windows/desktop/ms682552), который освобождает все ресурсы, используемые объект критической секции, содержащиеся в [m_sec](#m_sec) члена данных.  
   
 ```
 HRESULT Term() throw();
@@ -141,10 +123,10 @@ HRESULT Term() throw();
  Возвращает `S_OK`.  
   
 ### <a name="remarks"></a>Примечания  
- Один раз `Term` был вызван, критический раздел больше не может использоваться для синхронизации.  
+ Один раз `Term` был вызван, критически важные раздел больше не может использоваться для синхронизации.  
   
 ##  <a name="unlock"></a>CComCriticalSection::Unlock  
- Вызывает функцию Win32 [LeaveCriticalSection](http://msdn.microsoft.com/library/windows/desktop/ms684169), который освобождает владение объект критической секции, содержащиеся в [m_sec](#m_sec) данные-член.  
+ Вызывает функцию Win32 [LeaveCriticalSection](http://msdn.microsoft.com/library/windows/desktop/ms684169), который освобождает владение объект критической секции, содержащиеся в [m_sec](#m_sec) члена данных.  
   
 ```
 HRESULT Unlock() throw();
@@ -154,10 +136,9 @@ HRESULT Unlock() throw();
  Возвращает `S_OK`.  
   
 ### <a name="remarks"></a>Примечания  
- Чтобы сначала получить права владельца, поток должен вызвать [блокировки](#lock) метод. Каждый вызов `Lock` требует соответствующего вызова `Unlock` владения критический раздел.  
+ Чтобы сначала получить права владельца, необходимо вызвать поток [блокировки](#lock) метод. Каждый вызов `Lock` требуется соответствующий вызов `Unlock` для освобождения владения критической секции.  
   
 ## <a name="see-also"></a>См. также  
  [Класс CComFakeCriticalSection](../../atl/reference/ccomfakecriticalsection-class.md)   
  [Общие сведения о классе](../../atl/atl-class-overview.md)   
  [Класс CComCritSecLock](../../atl/reference/ccomcritseclock-class.md)
-

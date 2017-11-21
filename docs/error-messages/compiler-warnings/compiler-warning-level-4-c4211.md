@@ -1,34 +1,32 @@
 ---
-title: "Предупреждение компилятора (уровень 4) C4211 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C4211"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C4211"
+title: "Предупреждение (уровень 4) C4211 компилятора | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords: C4211
+dev_langs: C++
+helpviewer_keywords: C4211
 ms.assetid: 3eea3455-6faa-4cdb-8730-73db7026bd1f
-caps.latest.revision: 7
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: 9e985dd1a2742fff675642b1dcd1bdddcd8d7379
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/24/2017
 ---
-# Предупреждение компилятора (уровень 4) C4211
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-нестандартное расширение: переопределение extern в static  
+# <a name="compiler-warning-level-4-c4211"></a>Предупреждение компилятора (уровень 4) C4211
+использовано нестандартное расширение: переопределение extern в static  
   
- С расширениями по умолчанию Майкрософт \(\/Ze\) можно переопределить идентификатор `extern` как **static**.  
+ Расширения Microsoft по умолчанию (/Ze), можно переопределить `extern` идентификатор как **статических**.  
   
-## Пример  
+## <a name="example"></a>Пример  
   
 ```  
 // C4211.c  
@@ -41,7 +39,8 @@ int main()
 }  
 ```  
   
- Такие переопределения недействительны для ANSI\-совместимости \([\/Za](../../build/reference/za-ze-disable-language-extensions.md)\).  
+ Такие переопределения недействительны в режиме совместимости с ANSI ([/Za](../../build/reference/za-ze-disable-language-extensions.md)).  
   
-## См. также  
- [\(NOTINBUILD\)Static Storage\-Class Specifiers](http://msdn.microsoft.com/ru-ru/3ba9289a-a412-4a17-b319-ceb2c087df48)
+## <a name="see-also"></a>См. также  
+
+

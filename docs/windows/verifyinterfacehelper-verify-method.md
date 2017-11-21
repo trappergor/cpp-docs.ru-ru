@@ -1,45 +1,43 @@
 ---
-title: "Метод VerifyInterfaceHelper::Verify | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "implements/Microsoft::WRL::Details::VerifyInterfaceHelper::Verify"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Verify - метод"
+title: "Метод VerifyInterfaceHelper::Verify | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: implements/Microsoft::WRL::Details::VerifyInterfaceHelper::Verify
+dev_langs: C++
+helpviewer_keywords: Verify method
 ms.assetid: 619752f0-f0b0-4711-a7d4-efb48c2f8798
-caps.latest.revision: 5
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 5
+caps.latest.revision: "5"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: d09c16c7e9a5a331a196b3ebfe24bfe432628017
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/24/2017
 ---
-# Метод VerifyInterfaceHelper::Verify
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Предназначено для поддержки инфраструктуры WRL, а не для непосредственного использования в коде.  
+# <a name="verifyinterfacehelperverify-method"></a>Метод VerifyInterfaceHelper::Verify
+Поддерживает инфраструктуру WRL и не предназначен для использования непосредственно из программного кода.  
   
-## Синтаксис  
+## <a name="syntax"></a>Синтаксис  
   
 ```  
 static void Verify();  
 ```  
   
-## Заметки  
- Проверяет, что интерфейс, заданный текущим параметром шаблона, отвечает определенным требованиям.  
+## <a name="remarks"></a>Примечания  
+ Проверяет, отвечает ли определенным требованиям интерфейс, заданный текущим параметром шаблона.  
   
-## Требования  
+## <a name="requirements"></a>Требования  
  **Заголовок:** implements.h  
   
- **Пространство имен:** Microsoft::WRL::Details  
+ **Пространство имен:** Microsoft::wrl:: Details  
   
-## См. также  
- [Структура VerifyInterfaceHelper](../windows/verifyinterfacehelper-structure.md)   
+## <a name="see-also"></a>См. также  
+ [Verifyinterfacehelper-структура](../windows/verifyinterfacehelper-structure.md)   
  [Пространство имен Microsoft::WRL::Details](../windows/microsoft-wrl-details-namespace.md)

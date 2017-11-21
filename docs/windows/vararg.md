@@ -1,32 +1,30 @@
 ---
-title: "vararg | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-f1_keywords: 
-  - "vc-attr.vararg"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "vararg attribute"
+title: "vararg | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+f1_keywords: vc-attr.vararg
+dev_langs: C++
+helpviewer_keywords: vararg attribute
 ms.assetid: 20fc3244-18e9-411c-990e-d5b4fa29a570
-caps.latest.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 9
+caps.latest.revision: "9"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 96689914ae299700f2640fa205cbad8887692454
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/24/2017
 ---
-# vararg
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="vararg"></a>vararg
 Указывает, что функция принимает переменное число аргументов.  
   
-## Синтаксис  
+## <a name="syntax"></a>Синтаксис  
   
 ```  
   
@@ -34,11 +32,11 @@ caps.handback.revision: 9
   
 ```  
   
-## Заметки  
- **vararg** Атрибут C\+\+ имеет ту же функциональность, что и  [vararg](http://msdn.microsoft.com/library/windows/desktop/aa367304) атрибут MIDL.  
+## <a name="remarks"></a>Примечания  
+ **Vararg** языка C++ имеет ту же функциональность, что [vararg](http://msdn.microsoft.com/library/windows/desktop/aa367304) языка MIDL.  
   
-## Пример  
- В следующем коде показано использование функции vararg.  
+## <a name="example"></a>Пример  
+ В следующем коде показано использование **vararg**:  
   
 ```  
 // cpp_attr_ref_vararg.cpp  
@@ -54,20 +52,19 @@ __interface X : public IUnknown
 };  
 ```  
   
-## Требования  
+## <a name="requirements"></a>Требования  
   
-### Контекст атрибута  
+### <a name="attribute-context"></a>Контекст атрибута  
   
 |||  
 |-|-|  
 |**Применение**|Метод интерфейса|  
-|**Repeatable**|Нет|  
-|**Обязательные атрибуты**|None|  
-|**Недопустимые атрибуты**|None|  
+|**Повторяемый**|Нет|  
+|**Обязательные атрибуты**|Нет|  
+|**Недопустимые атрибуты**|Нет|  
   
- Дополнительные сведения о контекстах атрибута см. в разделе [Контексты атрибута](../windows/attribute-contexts.md).  
+ Дополнительные сведения о контекстах атрибутов см. в разделе [Контексты атрибутов](../windows/attribute-contexts.md).  
   
-## См. также  
- [IDL Attributes](../windows/idl-attributes.md)   
- [Method Attributes](../windows/method-attributes.md)   
- [Attributes Samples](http://msdn.microsoft.com/ru-ru/558ebdb2-082f-44dc-b442-d8d33bf7bdb8)
+## <a name="see-also"></a>См. также  
+ [Атрибуты IDL](../windows/idl-attributes.md)   
+ [Атрибуты метода](../windows/method-attributes.md)   

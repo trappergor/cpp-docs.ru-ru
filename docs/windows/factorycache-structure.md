@@ -1,0 +1,54 @@
+---
+title: "Структура FactoryCache | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: module/Microsoft::WRL::Details::FactoryCache
+dev_langs: C++
+helpviewer_keywords: FactoryCache structure
+ms.assetid: 624544e6-0989-47f6-a3e9-edb60e1ee6d4
+caps.latest.revision: "7"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: fbb6b32fbd34794c13d2f4b7dc75e242464bc7b9
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/24/2017
+---
+# <a name="factorycache-structure"></a>FactoryCache - структура
+Поддерживает инфраструктуру библиотека шаблонов C++ среды выполнения Windows и не предназначен для использования непосредственно из программного кода.  
+  
+## <a name="syntax"></a>Синтаксис  
+  
+```  
+struct FactoryCache;  
+```  
+  
+## <a name="remarks"></a>Примечания  
+ Содержит местоположение фабрики класса и значение, которое идентифицирует зарегистрированный среды выполнения Windows или COM-класса объекта.  
+  
+## <a name="members"></a>Члены  
+  
+### <a name="public-data-members"></a>Открытые члены данных  
+  
+|Имя|Описание|  
+|----------|-----------------|  
+|[Элемент данных FactoryCache::cookie](../windows/factorycache-cookie-data-member.md)|Содержит значение, которое идентифицирует зарегистрированный объект класса среды выполнения Windows или COM, а впоследствии будет использоваться для отмены регистрации объекта.|  
+|[Элемент данных FactoryCache::factory](../windows/factorycache-factory-data-member.md)|Указывает на фабрику классов среды выполнения Windows или COM.|  
+  
+## <a name="inheritance-hierarchy"></a>Иерархия наследования  
+ `FactoryCache`  
+  
+## <a name="requirements"></a>Требования  
+ **Заголовок:** module.h  
+  
+ **Пространство имен:** Microsoft::wrl:: Details  
+  
+## <a name="see-also"></a>См. также  
+ [Пространство имен Microsoft::WRL::Details](../windows/microsoft-wrl-details-namespace.md)

@@ -1,34 +1,33 @@
 ---
-title: "Класс CCommand | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "ATL::CCommand"
-  - "CCommand"
-  - "ATL.CCommand"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "CCommand - класс"
+title: "Класс CCommand | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- ATL::CCommand
+- CCommand
+- ATL.CCommand
+dev_langs: C++
+helpviewer_keywords: CCommand class
 ms.assetid: 0760bfc5-b9ee-4aee-8e54-31bd78714d3a
-caps.latest.revision: 11
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 11
+caps.latest.revision: "11"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 1ad74a5a763c39ce4f2ef765662b8f88ce083732
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/24/2017
 ---
-# Класс CCommand
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Предоставляет методы для настройки и выполнения.  
+# <a name="ccommand-class"></a>Класс CCommand
+Предоставляет методы для установки и выполнить команду.  
   
-## Синтаксис  
+## <a name="syntax"></a>Синтаксис  
   
 ```  
 template <  
@@ -45,48 +44,48 @@ class CCommand :
    public TMultiple  
 ```  
   
-#### Параметры  
+#### <a name="parameters"></a>Параметры  
  `TAccessor`  
- Тип класса доступа \(например `CDynamicParameterAccessor`, `CDynamicStringAccessor` или `CEnumeratorAccessor`\), необходимо использовать команду.  По умолчанию `CNoAccessor`, которое указывает, что параметры или класса не поддерживают выходные столбцы.  
+ Тип класса метода доступа (такие как `CDynamicParameterAccessor`, `CDynamicStringAccessor`, или `CEnumeratorAccessor`), необходимо, чтобы использовался. Значение по умолчанию — `CNoAccessor`, который указывает, что класс не поддерживает параметры или выходные столбцы.  
   
  `TRowset`  
- Тип класса набора строк \(например, `CArrayRowset` или `CNoRowset`\), необходимо использовать команду.  Значение по умолчанию — `CRowset`.  
+ Тип класса набора строк (таких как `CArrayRowset` или `CNoRowset`), необходимо, чтобы использовался. Значение по умолчанию — `CRowset`.  
   
  `TMultiple`  
- Для использования команды OLE DB может возвратить несколько результатов укажите [CMultipleResults](../../data/oledb/cmultipleresults-class.md).  В противном случае используйте [CNoMultipleResults](../../data/oledb/cnomultipleresults-class.md).  Дополнительные сведения см. в разделе [IMultipleResults](https://msdn.microsoft.com/en-us/library/ms721289.aspx).  
+ Чтобы использовать команду OLE DB, которая может вернуть несколько результатов, укажите [CMultipleResults](../../data/oledb/cmultipleresults-class.md). В противном случае используйте [CNoMultipleResults](../../data/oledb/cnomultipleresults-class.md). Дополнительные сведения см. в разделе [IMultipleResults](https://msdn.microsoft.com/en-us/library/ms721289.aspx).  
   
-## Члены  
+## <a name="members"></a>Члены  
   
-### Методы  
-  
-|||  
-|-|-|  
-|[Закрыть](../Topic/CCommand::Close.md)|Закрывает текущую команду.|  
-|[GetNextResult](../Topic/CCommand::GetNextResult.md)|Получить следующий результат при использовании несколько результирующих наборов.|  
-|[Откройте .](../../data/oledb/ccommand-open.md)|Выполняется и при необходимости привязывает команду.|  
-  
-### Методы Inherited  
+### <a name="methods"></a>Методы  
   
 |||  
 |-|-|  
-|[Create](../../data/oledb/ccommand-create.md)|Создает новую команду для указанного сеанса, затем задает текст команды.|  
-|[CreateCommand](../Topic/CCommand::CreateCommand.md)|Создает новую команду.|  
-|[GetParameterInfo](../Topic/CCommand::GetParameterInfo.md)|Получает список параметров команды, их имена и их типов.|  
+|[Закрыть](../../data/oledb/ccommand-close.md)|Закрывает текущую команду.|  
+|[GetNextResult](../../data/oledb/ccommand-getnextresult.md)|Извлекает следующий результат, когда использование нескольких результирующих наборов.|  
+|[Открыть](../../data/oledb/ccommand-open.md)|Выполняет и при необходимости привязывает команды.|  
+  
+### <a name="inherited-methods"></a>Унаследованные методы  
+  
+|||  
+|-|-|  
+|[Создание](../../data/oledb/ccommand-create.md)|Создание новой команды для указанного сеанса, а затем задает текст команды.|  
+|[CreateCommand](../../data/oledb/ccommand-createcommand.md)|Создание новой команды.|  
+|[GetParameterInfo](../../data/oledb/ccommand-getparameterinfo.md)|Возвращает список параметров команды, их имена и их типы.|  
 |[Подготовка](../../data/oledb/ccommand-prepare.md)|Проверяет и оптимизирует текущую команду.|  
-|[ReleaseCommand](../Topic/CCommand::ReleaseCommand.md)|Выпуски доступ параметра при необходимости, затем выпуски команду.|  
-|[SetParameterInfo](../../data/oledb/ccommand-setparameterinfo.md)|Определяет собственный тип каждого параметра команды.|  
-|[Unprepare](../../data/oledb/ccommand-unprepare.md)|Отменяет текущий план выполнения команды.|  
+|[ReleaseCommand](../../data/oledb/ccommand-releasecommand.md)|Освобождает параметрическим при необходимости, а затем освобождает команды.|  
+|[Метод SetParameterInfo](../../data/oledb/ccommand-setparameterinfo.md)|Задает собственный тип каждого параметра команды.|  
+|[Аннулирующие](../../data/oledb/ccommand-unprepare.md)|Отменяет план выполнения текущей команды.|  
   
-## Заметки  
- Используйте этот класс при выполнении команды или операции, основанной на параметрах.  Если необходимо просто следует открыть простой набор строк, следует использовать [CTable](../../data/oledb/ctable-class.md).  
+## <a name="remarks"></a>Примечания  
+ Этот класс используется, когда требуется выполнить операцию на основе параметров или для выполнения команды. Если необходимо просто открыть простого набора строк, используйте [CTable](../../data/oledb/ctable-class.md) вместо него.  
   
- Класс доступа используется определяет метод параметров и данные привязки.  
+ Класс доступа, которую вы используете определяет метод привязки параметров и данных.  
   
- Обратите внимание, что нельзя использовать хранимые процедуры с поставщиком OLE DB для jet, поскольку этот поставщик не поддерживает хранимые процедуры \(только константы недопустимы в строках запроса\).  
+ Обратите внимание, что нельзя использовать хранимые процедуры с поставщиком OLE DB для Jet, поскольку этот поставщик не поддерживает хранимые процедуры, (только константы допускаются в строках запроса).  
   
-## Требования  
- **Header:**  atldbcli.h  
+## <a name="requirements"></a>Требования  
+ **Заголовок:** atldbcli.h  
   
-## См. также  
- [Шаблоны потребителей OLE DB](../../data/oledb/ole-db-consumer-templates-cpp.md)   
- [Ссылка на шаблоны потребителя OLE DB](../../data/oledb/ole-db-consumer-templates-reference.md)
+## <a name="see-also"></a>См. также  
+ [Шаблоны потребителя OLE DB](../../data/oledb/ole-db-consumer-templates-cpp.md)   
+ [Ссылка на шаблоны объекта-получателя OLE DB](../../data/oledb/ole-db-consumer-templates-reference.md)

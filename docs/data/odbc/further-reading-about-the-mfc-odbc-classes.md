@@ -1,36 +1,35 @@
 ---
-title: "Дополнительные сведения о классах ODBC MFC | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Классы MFC ODBC"
+title: "Дополнительные сведения о классах MFC ODBC | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords: MFC ODBC classes
 ms.assetid: 155c092b-3577-4cb8-b00e-f1adf4cb2adc
-caps.latest.revision: 8
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 8940a85085d564404a2dd95f8707b9b986047113
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/24/2017
 ---
-# Дополнительные сведения о классах ODBC MFC
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-В следующих разделах приводятся дополнительные сведения о понятиях и методах, описанных в данном разделе.  
+# <a name="further-reading-about-the-mfc-odbc-classes"></a>Дополнительные сведения о классах ODBC MFC
+Дополнительно в следующих разделах описаны принципы и методы, представленные в этом разделе:  
   
--   [Поддержка баз данных, мастер настройки приложений MFC](../../mfc/reference/database-support-mfc-application-wizard.md)  
+-   [Поддержка базы данных, мастер приложений MFC](../../mfc/reference/database-support-mfc-application-wizard.md)  
   
 -   [Добавление потребителя ODBC MFC](../../mfc/reference/adding-an-mfc-odbc-consumer.md)  
   
--   [Источник данных \(ODBC\)](../../data/odbc/data-source-odbc.md)  
+-   [Источник данных (ODBC)](../../data/odbc/data-source-odbc.md)  
   
--   [Динамическое подмножество данных](../../data/odbc/dynaset.md)  
+-   [Динамический набор](../../data/odbc/dynaset.md)  
   
 -   [Исключения. Исключения баз данных](../../mfc/exceptions-database-exceptions.md)  
   
@@ -42,24 +41,24 @@ caps.handback.revision: 8
   
 -   [Администратор ODBC](../../data/odbc/odbc-administrator.md)  
   
--   [Обмен полями записей \(RFX\)](../../data/odbc/record-field-exchange-rfx.md)  
+-   [Обмен данными полей записей (RFX)](../../data/odbc/record-field-exchange-rfx.md)  
   
--   [Набор записей \(ODBC\)](../../data/odbc/recordset-odbc.md)  
+-   [Набор записей (ODBC)](../../data/odbc/recordset-odbc.md)  
   
 -   [Представления записей](../../data/record-views-mfc-data-access.md)  
   
--   [Сериализация: Сериализация или ввода\-вывода базы данных](../../mfc/serialization-serialization-vs-database-input-output.md)  
+-   [Сериализация. Сериализация или База данных ввода вывода](../../mfc/serialization-serialization-vs-database-input-output.md)  
   
--   [Моментальный снимок](../Topic/Snapshot.md)  
+-   [Снимок](../../data/odbc/snapshot.md)  
   
 -   [SQL](../../data/odbc/sql.md)  
   
--   [Транзакция \(ODBC\)](../../data/odbc/transaction-odbc.md)  
+-   [Транзакция (ODBC)](../../data/odbc/transaction-odbc.md)  
   
- Рекомендуется начать ознакомление с раздела [Набор записей \(ODBC\)](../../data/odbc/recordset-odbc.md).  
+ — Хорошая начать ознакомление с [записей (ODBC)](../../data/odbc/recordset-odbc.md).  
   
- В разделе *Справочные материалы по MFC* см. сведения о классах [CDatabase](../../mfc/reference/cdatabase-class.md), [CRecordset](../Topic/CRecordset%20Class.md), [CRecordView](../../mfc/reference/crecordview-class.md), [CFieldExchange](../../mfc/reference/cfieldexchange-class.md) и [CDBException](../../mfc/reference/cdbexception-class.md).  
+ В *Справочник по библиотеке MFC*, в разделе [CDatabase](../../mfc/reference/cdatabase-class.md), [CRecordset](../../mfc/reference/crecordset-class.md), [CRecordView](../../mfc/reference/crecordview-class.md), [разделе](../../mfc/reference/cfieldexchange-class.md), и [CDBException](../../mfc/reference/cdbexception-class.md).  
   
-## См. также  
+## <a name="see-also"></a>См. также  
  [ODBC и MFC](../../data/odbc/odbc-and-mfc.md)   
- [Программирование доступа к данным \(MFC\/ATL\)](../../data/data-access-programming-mfc-atl.md)
+ [Доступ к данным программирования (MFC/ATL)](../../data/data-access-programming-mfc-atl.md)

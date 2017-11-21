@@ -1,34 +1,32 @@
 ---
-title: "version (C++) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-f1_keywords: 
-  - "vc-attr.version"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "version attribute"
-  - "version information, version attribute"
+title: "версия (C++) | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+f1_keywords: vc-attr.version
+dev_langs: C++
+helpviewer_keywords:
+- version attribute
+- version information, version attribute
 ms.assetid: db6ce5d8-82c2-4329-b1a8-8ca2f67342cb
-caps.latest.revision: 10
-caps.handback.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "10"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 757ab7a6d2c8b846a51da359c4b8dc5a72c6e9e8
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/24/2017
 ---
-# version (C++)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Определяет конкретную версию среди нескольких версий класса.  
+# <a name="version-c"></a>version (C++)
+Определяет конкретную версию несколькими версиями класса.  
   
-## Синтаксис  
+## <a name="syntax"></a>Синтаксис  
   
 ```  
   
@@ -37,30 +35,29 @@ manager: "ghogen"
 ) ]  
 ```  
   
-#### Параметры  
- *версия*  
- Номер версии компонентного класса.  Если не указано, 1,0 будут помещены в idl\-файле.  
+#### <a name="parameters"></a>Параметры  
+ *version*  
+ Номер версии компонентного класса. Если не указан, 1.0 помещается в IDL-файл.  
   
-## Заметки  
- **версия** Атрибут C\+\+ имеет ту же функциональность, что и  [версия](http://msdn.microsoft.com/library/windows/desktop/aa367306) Атрибут MIDL и передается через к созданному файлу idl.  
+## <a name="remarks"></a>Примечания  
+ **Версии** языка C++ имеет ту же функциональность, что [версии](http://msdn.microsoft.com/library/windows/desktop/aa367306) языка MIDL и передается через созданного IDL-файла.  
   
-## Пример  
- См. [bindable](../windows/bindable.md) пример использования образца  **версия**.  
+## <a name="example"></a>Пример  
+ В разделе [привязываемых](../windows/bindable.md) пример приведен пример использования **версии**.  
   
-## Требования  
+## <a name="requirements"></a>Требования  
   
-### Контекст атрибута  
+### <a name="attribute-context"></a>Контекст атрибута  
   
 |||  
 |-|-|  
-|**Применение**|**класс**"  `struct`|  
-|**Repeatable**|Нет|  
-|**Обязательные атрибуты**|**CoClass**|  
-|**Недопустимые атрибуты**|None|  
+|**Применение**|**class**, `struct`|  
+|**Повторяемый**|Нет|  
+|**Обязательные атрибуты**|**coclass**|  
+|**Недопустимые атрибуты**|Нет|  
   
- Дополнительные сведения о контекстах атрибута см. в разделе [Контексты атрибута](../windows/attribute-contexts.md).  
+ Дополнительные сведения о контекстах атрибутов см. в разделе [Контексты атрибутов](../windows/attribute-contexts.md).  
   
-## См. также  
- [Compiler Attributes](../windows/compiler-attributes.md)   
- [Class Attributes](../windows/class-attributes.md)   
- [Attributes Samples](http://msdn.microsoft.com/ru-ru/558ebdb2-082f-44dc-b442-d8d33bf7bdb8)
+## <a name="see-also"></a>См. также  
+ [Атрибуты компилятора](../windows/compiler-attributes.md)   
+ [Атрибуты классов](../windows/class-attributes.md)   

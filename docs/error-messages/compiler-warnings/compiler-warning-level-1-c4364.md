@@ -1,37 +1,35 @@
 ---
-title: "Предупреждение компилятора (уровень 1) C4364 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C4364"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C4364"
+title: "Предупреждение (уровень 1) C4364 компилятора | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords: C4364
+dev_langs: C++
+helpviewer_keywords: C4364
 ms.assetid: 1477634c-d60f-4570-ad16-1aaeae24ac7f
-caps.latest.revision: 8
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: 94004ea52d76d39657da1fdb79e0b61777524d47
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/24/2017
 ---
-# Предупреждение компилятора (уровень 1) C4364
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-\#using для сборки "file" ранее увиденный в расположении \(line\_number\) без атрибута as\_friend; поскольку as\_friend не использовался  
+# <a name="compiler-warning-level-1-c4364"></a>Предупреждение компилятора (уровень 1) C4364
+\#с помощью для сборки «файл», полученные ранее в location(line_number) без атрибута as_friend; as_friend не применяется  
   
- Директива `#using` была повторена для данного файла метаданных, но квалификатор `as_friend` не использовался в первом случае; компилятор отклонит второй `as_friend`.  
+ Объект `#using` директива была повторена для данного файла метаданных, но `as_friend` квалификатор не использовался в первом случае; компилятор игнорирует второй `as_friend`.  
   
- Для получения дополнительной информации см. [Дружественные сборки \(C\+\+\)](../../dotnet/friend-assemblies-cpp.md).  
+ Дополнительные сведения см. в разделе [дружественные сборки (C++)](../../dotnet/friend-assemblies-cpp.md).  
   
-## Пример  
- В следующем примере показано создание компонента.  
+## <a name="example"></a>Пример  
+ В приведенном ниже примере создается компонент.  
   
 ```  
 // C4364.cpp  
@@ -39,8 +37,8 @@ caps.handback.revision: 8
 ref class A {};  
 ```  
   
-## Пример  
- В следующем примере формируется сообщение об ошибке С4364.  
+## <a name="example"></a>Пример  
+ Следующий пример приводит к возникновению ошибки C4364.  
   
 ```  
 // C4364_b.cpp  

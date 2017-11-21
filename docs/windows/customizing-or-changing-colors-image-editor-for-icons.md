@@ -1,60 +1,60 @@
 ---
-title: "Customizing or Changing Colors (Image Editor for Icons) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "dithered color, Image editor"
-  - "Custom Color Selector dialog box"
-  - "Image editor [C++], Colors Palette"
-  - "colors [C++], image"
-  - "bitmaps [C++], colors"
-  - "images [C++], colors"
-  - "HSL values"
-  - "luminosity"
-  - "Colors Palette, Image editor"
-  - "RGB color values"
-  - "Adjust Colors command"
-  - "Image editor [C++], dithered color"
+title: "Настройка и изменение цветов (редактор изображений для значков) | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- dithered color, Image editor
+- Custom Color Selector dialog box
+- Image editor [C++], Colors Palette
+- colors [C++], image
+- bitmaps [C++], colors
+- images [C++], colors
+- HSL values
+- luminosity
+- Colors Palette, Image editor
+- RGB color values
+- Adjust Colors command
+- Image editor [C++], dithered color
 ms.assetid: e58f6b32-f435-4d9a-a570-7569433661ae
-caps.latest.revision: 7
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 822ce325d188eb371427e5245701a653cc159878
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/24/2017
 ---
-# Customizing or Changing Colors (Image Editor for Icons)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+# <a name="customizing-or-changing-colors-image-editor-for-icons"></a>Настройка и изменение цветов (редактор изображений для значков)
+Редактор изображений [палитра цветов](../windows/colors-window-image-editor-for-icons.md) изначально отображает 16 стандартных цветов. В дополнение к отображаемым цветам вы можете создавать свои собственные цвета. После этого можно [сохранить и загрузить пользовательскую цветовую палитру](../windows/saving-and-loading-different-color-palettes-image-editor-for-icons.md).  
+  
+### <a name="to-change-colors-on-the-colors-palette"></a>Изменение цветов в палитре цветов  
+  
+1.  Из **изображения** меню, выберите **Настройка цветов**.  
+  
+2.  В [диалоговое окно «Выбор цвета»](../windows/custom-color-selector-dialog-box-image-editor-for-icons.md), определите цвет путем ввода значений RGB или HSL в соответствующие текстовые поля или выберите цвет в **Отображение цветового градиента** поле.  
+  
+3.  Отрегулируйте яркость, перемещая ползунок на **яркость** панель.  
+  
+4.  Многие пользовательские цвета сглажены. Если нужен сплошной цвет ближайший к сглаженному, дважды щелкните **цвет** поле.  
+  
+     Если позднее вы хотите сглаженный цвет, переместите ползунок на **яркость** или передвиньте перекрестие **Отображение цветового градиента** поле, чтобы получить желаемый результат.  
+  
+5.  Нажмите кнопку **ОК** Чтобы добавить новый цвет.  
+  
 
-В окне редактора изображений [палитра цветов](../Topic/Colors%20Window%20\(Image%20Editor%20for%20Icons\).md) изначально отображает 16 стандартных цветов.  В дополнение к отображаемым цветам вы можете создавать свои собственные цвета.  После того, как это будет сделано, можно [Сохранить и загрузить пользовательскую палитру цветов](../windows/saving-and-loading-different-color-palettes-image-editor-for-icons.md).  
-  
-### Изменение цветов в палитре цветов  
-  
-1.  В меню **Изображение** выберите пункт **Настройка цветов**.  
-  
-2.  В [диалоговом окне "Выбор цвета"](../windows/custom-color-selector-dialog-box-image-editor-for-icons.md) определите цвет путем ввода значений RGB или HSL в соответствующие поля или выберите цвет в поле **Отображение цветового градиента**.  
-  
-3.  Отрегулируйте яркость, перемещая ползунок на панели **Яркость**.  
-  
-4.  Многие пользовательские цвета сглажены.  Если вам нужен сплошной цвет ближайший к сглаженному, дважды щелкните поле **Цвет**.  
-  
-     Если впоследствии вам снова потребуется сглаженный цвет, переместите ползунок на панели **Яркость** или передвиньте перекрестие в поле **Отображение цветового градиента** так, чтобы получить желаемый результат.  
-  
-5.  Нажмите кнопку **ОК**, чтобы добавить новый цвет.  
-  
- Сведения о добавлении ресурсов в управляемые проекты см. в разделе [Ресурсы приложений](../Topic/Resources%20in%20Desktop%20Apps.md) *Руководства разработчика .NET Framework*. Сведения о том, как вручную добавлять файлы ресурсов в управляемые проекты, осуществлять доступ к ресурсам, отображать статические ресурсы и присваивать строки ресурсов свойствам, см. в статье [Walkthrough: Using Resources for Localization with ASP.NET](../Topic/Walkthrough:%20Using%20Resources%20for%20Localization%20with%20ASP.NET.md).  
   
  Требования  
   
  Нет  
   
-## См. также  
- [Accelerator Keys](../mfc/accelerator-keys-image-editor-for-icons.md)   
- [Working with Color](../mfc/working-with-color-image-editor-for-icons.md)
+## <a name="see-also"></a>См. также  
+ [Сочетания клавиш](../windows/accelerator-keys-image-editor-for-icons.md)   
+ [Работа с цветом](../windows/working-with-color-image-editor-for-icons.md)

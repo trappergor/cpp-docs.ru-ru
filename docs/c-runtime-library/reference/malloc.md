@@ -4,12 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-cpp
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
-apiname:
-- malloc
+apiname: malloc
 apilocation:
 - msvcrt.dll
 - msvcr80.dll
@@ -23,38 +21,21 @@ apilocation:
 - ucrtbase.dll
 - api-ms-win-crt-heap-l1-1-0.dll
 apitype: DLLExport
-f1_keywords:
-- malloc
-dev_langs:
-- C++
+f1_keywords: malloc
+dev_langs: C++
 helpviewer_keywords:
 - malloc function
 - memory allocation
 ms.assetid: 144fcee2-be34-4a03-bb7e-ed6d4b99eea0
-caps.latest.revision: 22
+caps.latest.revision: "22"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: e257f037a05c45f5b98e64ea55bd125af443b0be
-ms.openlocfilehash: 3c024862e1bf993c4e602846d4da125599f3fe7f
-ms.contentlocale: ru-ru
-ms.lasthandoff: 03/30/2017
-
+ms.openlocfilehash: 72dd949aa8d894ba49f53a6440de20beea070e2b
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="malloc"></a>malloc
 Размещение блоков памяти  
@@ -72,7 +53,7 @@ void *malloc(
  Байты для размещения.  
   
 ## <a name="return-value"></a>Возвращаемое значение  
- Функция `malloc` возвращает указатель void на выделенное пространство или значение `NULL`, если памяти недостаточно. Чтобы вернуть указатель на тип, отличный от `void`, используйте приведение типов для возвращаемого значения. Дисковое пространство, на который указывает возвращаемое значение, будет гарантированно соответствовать требованиям к выравниванию для хранения объектов любого типа, если таковые требования не превышают базовые. (В Visual C++ в качестве базовых устанавливаются требования к выравниванию для типа `double` или 8 байтов. В коде для 64-разрядных платформ это ограничение составляет 16 байтов.) Функция [_aligned_malloc](../../c-runtime-library/reference/aligned-malloc.md) выделяет пространство для хранения объектов с более высокими требованиями к выравниванию. Например, это могут быть типы SSE [__m128](../../cpp/m128.md) и `__m256`, а также типы, объявленные с использованием `__declspec(align(``n``))`, где `n` больше 8. Если значение `size` равно 0, функция `malloc` выделяет элемент нулевой длины в куче и возвращает допустимый указатель на этот элемент. Всегда проверяйте возвращаемое функцией `malloc` значение, даже если объем запрошенной памяти мал.  
+ Функция `malloc` возвращает указатель void на выделенное пространство или значение `NULL`, если памяти недостаточно. Чтобы вернуть указатель на тип, отличный от `void`, используйте приведение типов для возвращаемого значения. Дисковое пространство, на который указывает возвращаемое значение, будет гарантированно соответствовать требованиям к выравниванию для хранения объектов любого типа, если таковые требования не превышают базовые. (В Visual C++ в качестве базовых устанавливаются требования к выравниванию для типа `double` или 8 байтов. В коде для 64-разрядных платформ это ограничение составляет 16 байтов.) Функция [_aligned_malloc](../../c-runtime-library/reference/aligned-malloc.md) выделяет пространство для хранения объектов с более высокими требованиями к выравниванию. Например, это могут быть типы SSE [__m128](../../cpp/m128.md) и `__m256`, а также типы, объявленные с использованием `__declspec(align( n ))`, где `n` больше 8. Если значение `size` равно 0, функция `malloc` выделяет элемент нулевой длины в куче и возвращает допустимый указатель на этот элемент. Всегда проверяйте возвращаемое функцией `malloc` значение, даже если объем запрошенной памяти мал.  
   
 ## <a name="remarks"></a>Примечания  
  Функция `malloc` выделяет блок памяти размером не менее `size` байтов. Размер блока может превышать `size` байтов из-за дополнительных затрат места на хранение информации о выравнивании и обслуживании.  
@@ -154,4 +135,3 @@ Memory freed
  [free](../../c-runtime-library/reference/free.md)   
  [realloc](../../c-runtime-library/reference/realloc.md)   
  [_aligned_malloc](../../c-runtime-library/reference/aligned-malloc.md)
-

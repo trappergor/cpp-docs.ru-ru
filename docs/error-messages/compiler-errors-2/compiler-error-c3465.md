@@ -4,42 +4,22 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-tools
+ms.technology: cpp-tools
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- C3465
-dev_langs:
-- C++
-helpviewer_keywords:
-- C3465
+f1_keywords: C3465
+dev_langs: C++
+helpviewer_keywords: C3465
 ms.assetid: aeb815e5-b3fc-4525-afe2-d738e9321df1
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0d9cbb01d1ad0f2ea65d59334cb88140ef18fce0
-ms.openlocfilehash: 07dfd738cdfdd8cca85df6f70139fc0bbf0b7a4e
-ms.contentlocale: ru-ru
-ms.lasthandoff: 04/12/2017
-
+ms.openlocfilehash: 716eb175d03cc97389c84b9fa382ac92153071f5
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="compiler-error-c3465"></a>Ошибка компилятора C3465
 для использования типа "тип" необходима ссылка на сборку "сборка"  

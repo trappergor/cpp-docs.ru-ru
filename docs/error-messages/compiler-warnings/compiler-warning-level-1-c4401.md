@@ -1,34 +1,32 @@
 ---
-title: "Предупреждение компилятора (уровень 1) C4401 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C4401"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C4401"
+title: "Предупреждение (уровень 1) C4401 компилятора | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords: C4401
+dev_langs: C++
+helpviewer_keywords: C4401
 ms.assetid: 2e7ca136-f144-4b40-b847-82976e8643fc
-caps.latest.revision: 6
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 6
+caps.latest.revision: "6"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: cabb50ca025390cd00f4c9db68f3aa97d606fa57
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/24/2017
 ---
-# Предупреждение компилятора (уровень 1) C4401
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-"битовоеполе": член является битовым полем  
+# <a name="compiler-warning-level-1-c4401"></a>Предупреждение компилятора (уровень 1) C4401
+«битовое поле»: член является битовым полем  
   
- Встроенный код на языке ассемблера пытается обратиться к члену, являющемуся битовым полем.  Для встроенного кода ассемблера битовые поля\-члены недоступны, поэтому используется последняя граница упаковки перед членом, являющимся битовым полем.  
+ Встроенный код ассемблера пытается получить доступ к члена битового поля. Встроенная сборка нет доступа к членами-битовыми полями, поэтому используется последняя граница упаковки перед члена битового поля.  
   
- Чтобы устранить это предупреждение, необходимо привести битовое поле к подходящему типу перед тем, как использовать его во встроенном коде на языке ассемблера.  Следующий пример приводит к возникновению ошибки C4401:  
+ Чтобы избежать этого предупреждения, прежде чем использовать его во встроенный код ассемблера необходимо привести битовое поле в соответствующий тип. Следующий пример приводит к возникновению ошибки C4401:  
   
 ```  
 // C4401.cpp  

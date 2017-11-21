@@ -1,32 +1,30 @@
 ---
-title: "lcid | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-f1_keywords: 
-  - "vc-attr.lcid"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "LCID attribute"
+title: "LCID | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+f1_keywords: vc-attr.lcid
+dev_langs: C++
+helpviewer_keywords: LCID attribute
 ms.assetid: 7f248c69-ee1c-42c3-9411-39cf27c9f43d
-caps.latest.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 10
+caps.latest.revision: "10"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: fc811d4522872f14d86ea08fc93e5253830f779b
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/24/2017
 ---
-# lcid
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Позволяет передавать код языка для функции.  
+# <a name="lcid"></a>lcid
+Позволяет передавать код языка функции.  
   
-## Синтаксис  
+## <a name="syntax"></a>Синтаксис  
   
 ```  
   
@@ -34,10 +32,10 @@ caps.handback.revision: 10
   
 ```  
   
-## Заметки  
- **lcid** Атрибут C\+\+ реализует функциональность  [lcid](http://msdn.microsoft.com/library/windows/desktop/aa367067) атрибут MIDL.  Если необходимо реализовать языковой стандарт для блока библиотеки, используйте **lcid\=**`lcid` параметр  [Модуль](../windows/module-cpp.md) атрибут.  
+## <a name="remarks"></a>Примечания  
+ **Lcid** атрибута C++ реализует функциональность [lcid](http://msdn.microsoft.com/library/windows/desktop/aa367067) языка MIDL. Если вы хотите реализовать языковой стандарт для блока библиотеки, используйте **lcid =** `lcid` параметр [модуль](../windows/module-cpp.md) атрибута.  
   
-## Пример  
+## <a name="example"></a>Пример  
   
 ```  
 // cpp_attr_ref_lcid.cpp  
@@ -52,20 +50,19 @@ __interface IStatic {
 };  
 ```  
   
-## Требования  
+## <a name="requirements"></a>Требования  
   
-### Контекст атрибута  
+### <a name="attribute-context"></a>Контекст атрибута  
   
 |||  
 |-|-|  
 |**Применение**|Параметр интерфейса|  
-|**Repeatable**|Нет|  
-|**Обязательные атрибуты**|None|  
-|**Недопустимые атрибуты**|None|  
+|**Повторяемый**|Нет|  
+|**Обязательные атрибуты**|Нет|  
+|**Недопустимые атрибуты**|Нет|  
   
- Дополнительные сведения см. в разделе [Контексты атрибута](../windows/attribute-contexts.md).  
+ Дополнительные сведения см. в разделе [Контексты атрибутов](../windows/attribute-contexts.md).  
   
-## См. также  
- [IDL Attributes](../windows/idl-attributes.md)   
- [Parameter Attributes](../windows/parameter-attributes.md)   
- [Attributes Samples](http://msdn.microsoft.com/ru-ru/558ebdb2-082f-44dc-b442-d8d33bf7bdb8)
+## <a name="see-also"></a>См. также  
+ [Атрибуты IDL](../windows/idl-attributes.md)   
+ [Атрибуты параметра](../windows/parameter-attributes.md)   

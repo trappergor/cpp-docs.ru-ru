@@ -1,34 +1,32 @@
 ---
-title: "Ошибка компилятора C3540 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C3540"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C3540"
+title: "Ошибка компилятора C3540 | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords: C3540
+dev_langs: C++
+helpviewer_keywords: C3540
 ms.assetid: 3c0c959c-e3b7-40eb-b922-ccac44bd9d85
-caps.latest.revision: 8
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: 0ff7a017ce86e567d0aabcf494e11f48d1cdea05
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/24/2017
 ---
-# Ошибка компилятора C3540
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-"тип": невозможно применить sizeof к типу, содержащему "auto"  
+# <a name="compiler-error-c3540"></a>Ошибка компилятора C3540
+«Тип»: невозможно применить sizeof к типу, который содержит «auto»  
   
- Оператор [sizeof](../../cpp/sizeof-operator.md) нельзя применить к указанному типу, поскольку он содержит описатель `auto`.  
+ [Sizeof](../../cpp/sizeof-operator.md) оператор не может применяться к указанному типу, так как он содержит `auto` спецификатор.  
   
-## Пример  
+## <a name="example"></a>Пример  
  Следующий пример вызывает ошибку C3540.  
   
 ```  
@@ -42,7 +40,7 @@ int main() {
 }  
 ```  
   
-## См. также  
- [Ключевое слово auto](../../cpp/auto-keyword.md)   
- [\/Zc:auto \(выведение типа переменной\)](../../build/reference/zc-auto-deduce-variable-type.md)   
+## <a name="see-also"></a>См. также  
+ [Ключевое слово Auto](../../cpp/auto-keyword.md)   
+ [/ Zc: auto (выведение типа переменной)](../../build/reference/zc-auto-deduce-variable-type.md)   
  [Оператор sizeof](../../cpp/sizeof-operator.md)

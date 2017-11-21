@@ -1,35 +1,34 @@
 ---
-title: "__vmx_on | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "__vmx_on"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Инструкция VMXON"
-  - "Встроенная функция __vmx_on"
+title: "__vmx_on | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: __vmx_on
+dev_langs: C++
+helpviewer_keywords:
+- VMXON instruction
+- __vmx_on intrinsic
 ms.assetid: 16804991-6a75-4adf-8ec2-bc95acfa4801
-caps.latest.revision: 5
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 5
+caps.latest.revision: "5"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: 364b883e9106d8356c1f68bead6a9ba0d00dafe2
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/24/2017
 ---
-# __vmx_on
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-**Только для систем Microsoft**  
+# <a name="vmxon"></a>__vmx_on
+**Блок, относящийся только к системам Майкрософт**  
   
- Активировать операция расширений виртуальной машины \(VMX\) в процессоре.  
+ Активирует операции расширения (VMX) виртуальной машины в процессоре.  
   
-## Синтаксис  
+## <a name="syntax"></a>Синтаксис  
   
 ```  
 unsigned char __vmx_on(  
@@ -37,30 +36,30 @@ unsigned char __vmx_on(
 );  
 ```  
   
-#### Параметры  
- \[входящий\] `VmsSupportPhysicalAddress`  
- Указатель к физическому адресу с пакетом обновления 64 \(sp2\), указывающий на структуре элемента управления виртуальной машины \(VMCS\).  
+#### <a name="parameters"></a>Параметры  
+ [in] `VmsSupportPhysicalAddress`  
+ Указатель на 64-разрядных физический адрес, который указывает на структуру управления виртуальной машины (VMCS).  
   
-## Возвращаемое значение  
+## <a name="return-value"></a>Возвращаемое значение  
   
-|Значение|Значение|  
-|--------------|--------------|  
-|0|Операция завершилась успешно.|  
-|1|Операция завершилась неуспешно с расширенным доступным текущего состояния в `VM-instruction error field` VMCS.|  
-|2|Эта операция окончилась неудачей без доступных состояний.|  
+|Значение|Смысл|  
+|-----------|-------------|  
+|0|Операция успешно выполнена.|  
+|1|Не удалось выполнить операцию; расширенные сведения о состоянии доступны в `VM-instruction error field` текущей структуре VMCS.|  
+|2|Сбой операции без сведений о состоянии.|  
   
-## Заметки  
- Функция `__vmx_on` соответствует инструкцие на компьютере `VMXON`.  Эта функция поддерживает взаимодействие монитора виртуальной машины узла с операционной системой для виртуальной машине и своими приложениями.  Дополнительные сведения см. в документе «технические данные виртуализации Intel для IA\-32 архитектуры Intel,» номер документа C97063\-002, на [Intel Корпорация](http://go.microsoft.com/fwlink/?LinkId=127) сайте.  
+## <a name="remarks"></a>Примечания  
+ `__vmx_on` Соответствует функции `VMXON` инструкции компьютера. Эта функция поддерживает взаимодействие монитора виртуальной машины узла с гостевой операционной системой и ее приложениями. Для поиска документа «Intel виртуализации технические спецификации для архитектуры IA-32 Intel,» Дополнительные сведения документа номера C97063-002, на [Корпорация Intel](http://go.microsoft.com/fwlink/?LinkId=127) сайта.  
   
-## Требования  
+## <a name="requirements"></a>Требования  
   
-|Встроенный объект|Архитектура|  
-|-----------------------|-----------------|  
-|`__vmx_on`|[!INCLUDE[vcprx64](../Token/vcprx64_md.md)]|  
+|Встроенная функция|Архитектура|  
+|---------------|------------------|  
+|`__vmx_on`|[!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|  
   
- **Файл заголовка** \<intrin.h\>  
+ **Файл заголовка** \<intrin.h >  
   
-## ЭЛЕМЕНТ, относящийся Майкрософт  
+**Завершение блока, относящегося только к системам Майкрософт**  
   
-## См. также  
- [Встроенные объекты компилятора](../intrinsics/compiler-intrinsics.md)
+## <a name="see-also"></a>См. также  
+ [Встроенные инструкции компилятора](../intrinsics/compiler-intrinsics.md)

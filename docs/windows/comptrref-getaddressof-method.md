@@ -1,48 +1,46 @@
 ---
-title: "Метод ComPtrRef::GetAddressOf | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "client/Microsoft::WRL::Details::ComPtrRef::GetAddressOf"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "GetAddressOf - метод"
+title: "Метод ComPtrRef::GetAddressOf | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: client/Microsoft::WRL::Details::ComPtrRef::GetAddressOf
+dev_langs: C++
+helpviewer_keywords: GetAddressOf method
 ms.assetid: 797df323-a2fa-412b-ab60-32cce3721096
-caps.latest.revision: 5
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 5
+caps.latest.revision: "5"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: f82aa0908206c24dd4ebbbfd19d71bb567d2898f
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/24/2017
 ---
-# Метод ComPtrRef::GetAddressOf
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Предназначено для поддержки инфраструктуры WRL, а не для непосредственного использования в коде.  
+# <a name="comptrrefgetaddressof-method"></a>Метод ComPtrRef::GetAddressOf
+Поддерживает инфраструктуру WRL и не предназначен для использования непосредственно из программного кода.  
   
-## Синтаксис  
+## <a name="syntax"></a>Синтаксис  
   
 ```  
 InterfaceType* const * GetAddressOf() const;  
 ```  
   
-## Возвращаемое значение  
+## <a name="return-value"></a>Возвращаемое значение  
  Адрес указателя на интерфейс, представленный текущим объектом ComPtrRef.  
   
-## Заметки  
+## <a name="remarks"></a>Примечания  
  Извлекает адрес указателя на интерфейс, представленный текущим объектом ComPtrRef.  
   
-## Требования  
+## <a name="requirements"></a>Требования  
  **Заголовок:** client.h  
   
- **Пространство имен:** Microsoft::WRL::Details  
+ **Пространство имен:** Microsoft::wrl:: Details  
   
-## См. также  
- [Класс ComPtrRef](../Topic/ComPtrRef%20Class.md)   
+## <a name="see-also"></a>См. также  
+ [ComPtrRef-класс](../windows/comptrref-class.md)   
  [Пространство имен Microsoft::WRL::Details](../windows/microsoft-wrl-details-namespace.md)

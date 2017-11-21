@@ -1,30 +1,28 @@
 ---
-title: "Метод SyncLockWithStatusT::GetStatus | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "corewrappers/Microsoft::WRL::Wrappers::Details::SyncLockWithStatusT::GetStatus"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "GetStatus - метод"
+title: "Метод SyncLockWithStatusT::GetStatus | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: corewrappers/Microsoft::WRL::Wrappers::Details::SyncLockWithStatusT::GetStatus
+dev_langs: C++
+helpviewer_keywords: GetStatus method
 ms.assetid: d448b51d-a63d-40d9-a9ee-4aad3204118d
-caps.latest.revision: 6
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 6
+caps.latest.revision: "6"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: dd9fe5d9c572b48904bff820466e5665291f6808
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/24/2017
 ---
-# Метод SyncLockWithStatusT::GetStatus
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Поддерживает инфраструктуру WRL и не предназначен для непосредственного использования в коде.  
+# <a name="synclockwithstatustgetstatus-method"></a>Метод SyncLockWithStatusT::GetStatus
+Поддерживает инфраструктуру WRL и не предназначен для использования непосредственно из программного кода.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -33,12 +31,12 @@ DWORD GetStatus() const;
 ```  
   
 ## <a name="return-value"></a>Возвращаемое значение  
- Результат операции ожидания объекта, например основан на класс SyncLockWithStatusT [мьютекс](Mutex%20Class1.md) или [семафора](../windows/semaphore-class.md). Ноль (0) указывает, что операция ожидания возвращается сигнальным; в противном случае — другое состояние произошла, такие как истечения времени ожидания.  
+ Результат операции ожидания на объект, который основан на класс SyncLockWithStatusT, такие как [мьютекс](../windows/mutex-class1.md) или [семафора](../windows/semaphore-class.md). Ноль (0) указывает, что операция ожидания возвращается сигнальное состояние; в противном случае другое состояние произошла, такие как истекло время ожидания.  
   
 ## <a name="remarks"></a>Примечания  
- Получает состояние ожидания объекта SyncLockWithStatusT.  
+ Извлекает состояние ожидания в текущем объекте SyncLockWithStatusT.  
   
- Функция GetStatus() возвращает значение базового [status_](../windows/synclockwithstatust-status-data-member.md) данные-член. Когда объект на основе класса SyncLockWithStatusT выполняет операцию блокировки, объект сначала ожидает объект станет доступным. Результат этой операции ожидания сохраняется в `status_` элемент данных. Возможные значения `status_` член данных – возвращаемого значения операции ожидания. Дополнительные сведения см. в разделе возвращаемые значения **WaitForSingleObjectEx()** функции в библиотеке MSDN.  
+ Функция GetStatus() возвращает значение базового [status_](../windows/synclockwithstatust-status-data-member.md) члена данных. Если объект по SyncLockWithStatusT-класс выполняет операцию блокировки, объект сначала ожидает объект станет доступен. Результат этой операции ожидания сохраняется в `status_` элемент данных. Возможные значения `status_` член данных являются возвращаемыми значениями операции ожидания. Дополнительные сведения см. в разделе возвращаемых значений **WaitForSingleObjectEx()** функции в библиотеке MSDN.  
   
 ## <a name="requirements"></a>Требования  
  **Заголовок:** corewrappers.h  

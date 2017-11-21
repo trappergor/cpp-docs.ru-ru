@@ -1,32 +1,30 @@
 ---
-title: "logical_not (STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::logical_not"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "logical_not - функция [STL/CLR]"
+title: "logical_not (STL/CLR) | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::logical_not
+dev_langs: C++
+helpviewer_keywords: logical_not function [STL/CLR]
 ms.assetid: 32a2c6e2-1c58-41ac-8827-f3ee5adfe81d
-caps.latest.revision: 18
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 16
+caps.latest.revision: "18"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 013f559376739584e393f79516b1626cc1fc99f3
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/24/2017
 ---
-# logical_not (STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Описание класса шаблона функтором, при вызове возвращает значение true только в том случае, если все его аргумент, как false.  Он используется определяется объект функции с точки зрения его типа аргумента.  
+# <a name="logicalnot-stlclr"></a>logical_not (STL/CLR)
+Класс шаблона описывает функтор, что при вызове возвращает значение true, только если его аргумент проверяет как false. Она используется укажите объект функции, с точки зрения его типа аргумента.  
   
-## Синтаксис  
+## <a name="syntax"></a>Синтаксис  
   
 ```  
 template<typename Arg>  
@@ -47,33 +45,33 @@ public:
     };  
 ```  
   
-#### Параметры  
- Аргумент  
+#### <a name="parameters"></a>Параметры  
+ Arg  
  Тип аргументов.  
   
-## Функции\-члены  
+## <a name="member-functions"></a>Функции-члены  
   
 |Определение типа|Описание|  
-|----------------------|--------------|  
-|argument\_type|Тип аргумента функтором.|  
-|delegate\_type|Тип универсального метод\-делегата.|  
-|result\_type|Тип результата функтором.|  
+|---------------------|-----------------|  
+|argument_type|Тип аргумента функтор.|  
+|delegate_type|Тип универсального метода-делегата.|  
+|result_type|Тип результата функтор.|  
   
 |Член|Описание|  
-|----------|--------------|  
-|logical\_not|Построение функтором.|  
+|------------|-----------------|  
+|logical_not|Создает функтор.|  
   
 |Оператор|Описание|  
-|--------------|--------------|  
-|operator\(\)|Вычисляет нужную функцию.|  
-|delegate\_type^ оператора|Возвращает функтором делегату.|  
+|--------------|-----------------|  
+|operator()|Вычисляет нужной функции.|  
+|delegate_type оператор ^|Приводит функтора к делегату.|  
   
-## Заметки  
- Описание класса шаблона функтором от аргумента.  Он определяет оператор `operator()` члена, что, когда объект вызывается как функция, он возвращает значение true, только если его аргумент, как false.  
+## <a name="remarks"></a>Примечания  
+ Класс шаблона описывает функтор один аргумент. Он определяет оператор-член `operator()` , чтобы при вызове объекта как функцию, она возвращает значение true только при его аргумент тесты со значением false.  
   
- Можно также передать объект в качестве аргумента функции, тип которого `delegate_type^` и он будет преобразован соответствующим образом.  
+ Объект также можно передать в качестве аргумента функции, тип которого является `delegate_type^` и он будет преобразован соответствующим образом.  
   
-## Пример  
+## <a name="example"></a>Пример  
   
 ```  
 // cliext_logical_not.cpp   
@@ -106,12 +104,15 @@ int main()
   
 ```  
   
-  **4 0**  
- **0 1**   
-## Требования  
- **Заголовок:**\<cliext\/functional\>  
+```Output  
+4 0  
+0 1  
+```  
+  
+## <a name="requirements"></a>Требования  
+ **Заголовок:** \<cliext и функционального >  
   
  **Пространство имен:** cliext  
   
-## См. также  
- [negate](../Topic/negate%20\(STL-CLR\).md)
+## <a name="see-also"></a>См. также  
+ [negate (STL/CLR)](../dotnet/negate-stl-clr.md)

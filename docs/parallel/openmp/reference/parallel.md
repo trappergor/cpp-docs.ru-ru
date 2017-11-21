@@ -1,32 +1,30 @@
 ---
-title: "parallel | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "parallel"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "parallel OpenMP directive"
+title: "Параллельные | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: parallel
+dev_langs: C++
+helpviewer_keywords: parallel OpenMP directive
 ms.assetid: b8e90073-e85b-4d39-8ed8-0364441794fb
-caps.latest.revision: 12
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 12
+caps.latest.revision: "12"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 289a4928c9c46f6d758ddc2f30ed864488ab725e
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/24/2017
 ---
-# parallel
-[!INCLUDE[vs2017banner](../../../assembler/inline/includes/vs2017banner.md)]
-
-Определяет параллельной области, которая код, который будет выполнен несколькими потоками одновременно.  
+# <a name="parallel"></a>parallel
+Определяет параллельной области, который является код, который будет выполняться несколько потоков параллельно.  
   
-## Синтаксис  
+## <a name="syntax"></a>Синтаксис  
   
 ```  
 #pragma omp parallel [clauses]  
@@ -35,37 +33,37 @@ caps.handback.revision: 12
 }  
 ```  
   
-## Заметки  
- Здесь:  
+## <a name="remarks"></a>Примечания  
+ где  
   
- `clause` \(необязательный параметр\)  
- Ноль или несколько предложений.  Эти раздел " примечания " список предложений, поддерживаемых by **Параллельно**.  
+ `clause` (необязательно)  
+ Ноль или несколько предложений.  . В разделе «Примечания» в список предложений, поддерживаемых **параллельных**.  
   
-## Заметки  
- **Параллельно** директива поддерживает следующие предложений OpenMP.  
+## <a name="remarks"></a>Примечания  
+ **Параллельных** директива поддерживает следующие предложения OpenMP:  
   
--   [copyin](../Topic/copyin.md)  
+-   [copyin](../../../parallel/openmp/reference/copyin.md)  
   
 -   [default](../../../parallel/openmp/reference/default-openmp.md)  
   
--   [firstprivate](../Topic/firstprivate.md)  
+-   [firstprivate](../../../parallel/openmp/reference/firstprivate.md)  
   
 -   [if](../../../parallel/openmp/reference/if-openmp.md)  
   
--   [num\_threads](../../../parallel/openmp/reference/num-threads.md)  
+-   [num_threads](../../../parallel/openmp/reference/num-threads.md)  
   
 -   [private](../../../parallel/openmp/reference/private-openmp.md)  
   
 -   [reduction](../../../parallel/openmp/reference/reduction.md)  
   
--   [shared](../../../parallel/openmp/reference/shared-openmp.md)  
+-   [Общие](../../../parallel/openmp/reference/shared-openmp.md)  
   
- **Параллельно** может также использоваться с  [sections](../../../parallel/openmp/reference/sections-openmp.md) и  [for](../Topic/for%20\(OpenMP\).md) директивы.  
+ **Параллельные** также может использоваться с [разделы](../../../parallel/openmp/reference/sections-openmp.md) и [для](../../../parallel/openmp/reference/for-openmp.md) директивы.  
   
- Дополнительные сведения см. в разделе [2.3 parallel Construct](../../../parallel/openmp/2-3-parallel-construct.md).  
+ Дополнительные сведения см. в разделе [2.3 конструкция parallel](../../../parallel/openmp/2-3-parallel-construct.md).  
   
-## Пример  
- В следующем образце показано, как задать число потоков и определить параллельной области.  По умолчанию количество потоков равно количество логических процессоров в компьютере.  Например, если имеется физический компьютер с одним процессором, включен hyperthreading, он будет иметь 2 логических процессоров и 2 потоков.  
+## <a name="example"></a>Пример  
+ Следующий пример показано, как настроить число потоков и определить параллельной области. По умолчанию количество потоков равно числу логических процессоров на компьютере. Например при наличии машины с одного физического процессора с технологией Hyper-Threading включена, он будет иметь два логических процессора и, следовательно, два потока.  
   
 ```  
 // omp_parallel.cpp  
@@ -82,12 +80,15 @@ int main() {
 }  
 ```  
   
-  **Hello из потока 0**  
-**Hello из потока 1**  
-**Hello из потока 2**  
-**Hello из потока 3**   
-## Комментарий  
- Видит, что порядок вывода могут различаться на разных компьютерах.  
+```Output  
+Hello from thread 0  
+Hello from thread 1  
+Hello from thread 2  
+Hello from thread 3  
+```  
   
-## См. также  
- [Directives](../../../parallel/openmp/reference/openmp-directives.md)
+## <a name="comment"></a>Комментарий  
+ Обратите внимание, что порядок вывода могут различаться на разных компьютерах.  
+  
+## <a name="see-also"></a>См. также  
+ [Директивы](../../../parallel/openmp/reference/openmp-directives.md)

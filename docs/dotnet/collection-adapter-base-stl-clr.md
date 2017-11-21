@@ -1,41 +1,39 @@
 ---
-title: "collection_adapter::base (STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::collection_adapter::base"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "base - элемент [STL/CLR]"
+title: "collection_adapter::Base (STL/CLR) | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::collection_adapter::base
+dev_langs: C++
+helpviewer_keywords: base member [STL/CLR]
 ms.assetid: 44928046-3fda-4974-817f-bc61a6f11b9f
-caps.latest.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 7
+caps.latest.revision: "9"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 87d8c557250f0ff97c0ef1d53e8cd4bb65b0476e
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/24/2017
 ---
-# collection_adapter::base (STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Обозначает от программу\-оболочку интерфейс BCL.  
+# <a name="collectionadapterbase-stlclr"></a>collection_adapter::base (STL/CLR)
+Обозначает упакованного интерфейса BCL.  
   
-## Синтаксис  
+## <a name="syntax"></a>Синтаксис  
   
 ```  
 Coll^ base();  
 ```  
   
-## Заметки  
- Функция\-член возвращает сохраненного дескриптора интерфейса BCL.  
+## <a name="remarks"></a>Примечания  
+ Функция-член возвращает хранимые дескриптора интерфейса BCL.  
   
-## Пример  
+## <a name="example"></a>Пример  
   
 ```  
 // cliext_collection_adapter_base.cpp   
@@ -61,12 +59,15 @@ int main()
   
 ```  
   
-  **x x x x x x**  
-**base\(\) те же \= true**   
-## Требования  
- **Заголовок:**\<cliext\/adapter\>  
+```Output  
+ x x x x x x  
+base() same = True  
+```  
+  
+## <a name="requirements"></a>Требования  
+ **Заголовок:** \<cliext адаптер >  
   
  **Пространство имен:** cliext  
   
-## См. также  
- [collection\_adapter](../Topic/collection_adapter%20\(STL-CLR\).md)
+## <a name="see-also"></a>См. также  
+ [collection_adapter (STL/CLR)](../dotnet/collection-adapter-stl-clr.md)

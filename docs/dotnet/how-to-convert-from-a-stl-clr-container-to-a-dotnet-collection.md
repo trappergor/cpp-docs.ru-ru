@@ -1,41 +1,40 @@
 ---
-title: "Практическое руководство. Преобразование из контейнера STL/CLR в коллекцию .NET | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "STL/CLR - контейнеры [STL/CLR]"
-  - "STL/CLR, преобразование в коллекции .NET"
+title: "Как: преобразование из контейнера STL/CLR в коллекцию .NET | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+dev_langs: C++
+helpviewer_keywords:
+- STL/CLR Containers [STL/CLR]
+- STL/CLR, converting to .NET collections
 ms.assetid: 70b2dfd9-869c-4e0f-9a29-b1ee0cb0d107
-caps.latest.revision: 8
-caps.handback.revision: 6
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "8"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 817f04af0f6d2c24296b5775a9863b8c34dccd30
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/24/2017
 ---
-# Практическое руководство. Преобразование из контейнера STL/CLR в коллекцию .NET
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-В этом разделе показано, как преобразовать контейнеры STL\/CLR их соответствующим коллекциям .NET.  Например, на экране отображается, как преобразовать STL\/CLR [vector](../dotnet/vector-stl-clr.md) в .NET <xref:System.Collections.Generic.ICollection%601> и преобразовании STL\/CLR [КАРТА](../dotnet/map-stl-clr.md) в .NET <xref:System.Collections.Generic.IDictionary%602>, но процедура подобна для всех коллекций и контейнеров.  
+# <a name="how-to-convert-from-a-stlclr-container-to-a-net-collection"></a>Практическое руководство. Преобразование из контейнера STL/CLR в коллекцию .NET
+В этом разделе показано, как преобразовать контейнеры STL/CLR в эквивалентные в коллекциях .NET. В качестве примера мы показывают, как преобразовать STL/CLR [вектор](../dotnet/vector-stl-clr.md) для .NET <xref:System.Collections.Generic.ICollection%601> и преобразование STL/CLR [карты](../dotnet/map-stl-clr.md) для .NET <xref:System.Collections.Generic.IDictionary%602>, но процедура одинакова для всех коллекций и контейнеры.  
   
-### Создание коллекции из контейнера  
+### <a name="to-create-a-collection-from-a-container"></a>Чтобы создать коллекцию из контейнера  
   
 1.  Используйте один из следующих методов:  
   
-    -   Преобразовать часть контейнера, необходимо вызвать функцию [make\_collection](../dotnet/make-collection-stl-clr.md), и передать итератор разработки и итератор конца контейнера STL\/CLR, которое должно быть скопировано в коллекцию .NET.  Эта итератор STL\/CLR шаблонная функция принимает в качестве аргумента шаблона.  Первый пример демонстрирует этот метод.  
+    -   Чтобы преобразовать частью контейнера, вызовите [make_collection](../dotnet/make-collection-stl-clr.md) функцией и передать begin итератора и итератора после конца контейнера STL/CLR, необходимо скопировать в коллекции .NET. Эта функция шаблона принимает итератор STL/CLR в качестве аргумента шаблона. В первом примере этот метод.  
   
-    -   Чтобы преобразовать весь контейнер, преобразуйте контейнер в соответствующие интерфейс коллекции .NET или коллекции интерфейса.  Второй пример демонстрирует этот метод.  
+    -   Для преобразования всего контейнера, приведите контейнера, соответствующий интерфейс коллекции .NET или коллекцию интерфейса. Во втором примере демонстрируется этот метод.  
   
-## Пример  
- В этом примере мы создадим STL\/CLR `vector` и добавить в него 5 элементов.  Затем мы создадим коллекция .NET путем вызова функции `make_collection`.  Наконец, на экране отображается содержимое вновь созданной коллекции.  
+## <a name="example"></a>Пример  
+ В этом примере мы создадим STL/CLR `vector` и добавьте в нее 5 элементов. Затем мы создайте коллекцию .NET путем вызова `make_collection` функции. Наконец мы можем отобразить содержимое созданную коллекцию.  
   
 ```  
 // cliext_convert_vector_to_icollection.cpp  
@@ -70,12 +69,15 @@ int main(array<System::String ^> ^args)
 }  
 ```  
   
-  **Содержимое System::Collections::Generic::ICollection:**  
-**3**  
-**5**  
-**7**   
-## Пример  
- В этом примере мы создадим STL\/CLR `map` и добавить в него 5 элементов.  Затем мы создадим .NET <xref:System.Collections.Generic.IDictionary%602> и присвоим `map` непосредственно на него.  Наконец, на экране отображается содержимое вновь созданной коллекции.  
+```Output  
+The contents of the System::Collections::Generic::ICollection are:  
+3  
+5  
+7  
+```  
+  
+## <a name="example"></a>Пример  
+ В этом примере мы создадим STL/CLR `map` и добавьте в нее 5 элементов. Затем мы создаем .NET <xref:System.Collections.Generic.IDictionary%602> и назначить `map` непосредственно к ней. Наконец мы можем отобразить содержимое созданную коллекцию.  
   
 ```  
 // cliext_convert_map_to_idictionary.cpp  
@@ -107,13 +109,16 @@ int main(array<System::String ^> ^args)
 }  
 ```  
   
-  **Содержимое IDictionary:**  
-**Key: 0.00 Value: 0**  
-**Key: 13.00 Value: 13**  
-**Key: 22.00 Value: 22**  
-**Key: 42.00 Value: 42**  
-**Key: 74.00 Value: 74**   
-## См. также  
- [Библиотека STL\/CLR](../dotnet/stl-clr-library-reference.md)   
- [Практическое руководство. Преобразование из коллекции .NET в контейнер STL\/CLR](../dotnet/how-to-convert-from-a-dotnet-collection-to-a-stl-clr-container.md)   
- [range\_adapter](../dotnet/range-adapter-stl-clr.md)
+```Output  
+The contents of the IDictionary are:  
+Key: 0.00 Value: 0  
+Key: 13.00 Value: 13  
+Key: 22.00 Value: 22  
+Key: 42.00 Value: 42  
+Key: 74.00 Value: 74  
+```  
+  
+## <a name="see-also"></a>См. также  
+ [Справочник по библиотеке STL/CLR](../dotnet/stl-clr-library-reference.md)   
+ [Как: преобразование из коллекции .NET в контейнер STL/CLR](../dotnet/how-to-convert-from-a-dotnet-collection-to-a-stl-clr-container.md)   
+ [range_adapter (STL/CLR)](../dotnet/range-adapter-stl-clr.md)

@@ -1,45 +1,43 @@
 ---
-title: "generate (STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::generate"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "generate - функция [STL/CLR]"
+title: "Создание (STL/CLR) | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::generate
+dev_langs: C++
+helpviewer_keywords: generate function [STL/CLR]
 ms.assetid: 970f209f-31db-47c4-a0bb-4c3e579adb52
-caps.latest.revision: 4
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 4
+caps.latest.revision: "4"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 2a2941894e6aa63708f9878abbf33f1335f812ef
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/24/2017
 ---
-# generate (STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Присвоить значения, создаваемые объектом функции к каждому элементу в диапазон.  
+# <a name="generate-stlclr"></a>generate (STL/CLR)
+Присваивает значения, создаваемые объектом функции, каждому элементу в диапазоне.  
   
-## Синтаксис  
+## <a name="syntax"></a>Синтаксис  
   
 ```  
 template<class _FwdIt, class _Fn0> inline  
     void generate(_FwdIt _First, _FwdIt _Last, _Fn0 _Func);  
 ```  
   
-## Заметки  
- Эта функция работает аналогично функции `generate` STL.  Для получения дополнительной информации см. [создание](../Topic/generate.md).  
+## <a name="remarks"></a>Примечания  
+ Эта функция работает так же, как функция стандартной библиотеки C++ `generate`. Дополнительные сведения см. в разделе [создания](../standard-library/algorithm-functions.md#generate).  
   
-## Требования  
- **Заголовок:**\<cliext\/algorithm\>  
+## <a name="requirements"></a>Требования  
+ **Заголовок:** \<cliext/алгоритм >  
   
  **Пространство имен:** cliext  
   
-## См. также  
- [algorithm](../Topic/algorithm%20\(STL-CLR\).md)
+## <a name="see-also"></a>См. также  
+ [algorithm (STL/CLR)](../dotnet/algorithm-stl-clr.md)

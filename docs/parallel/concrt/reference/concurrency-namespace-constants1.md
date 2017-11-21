@@ -1,5 +1,5 @@
 ---
-title: "константы имен параллелизма | Документы Microsoft"
+title: "константы пространство имен Concurrency | Документы Microsoft"
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -19,18 +19,17 @@ f1_keywords:
 - concrt/concurrency::ResourceManagerEventGuid
 - concrt/concurrency::ScheduleGroupEventGuid
 - concrt/concurrency::VirtualProcessorEventGuid
-dev_langs:
-- C++
+dev_langs: C++
 ms.assetid: 6f81fc4c-b10c-479e-8717-9c292360d5a0
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translationtype: Machine Translation
-ms.sourcegitcommit: 5faef5bd1be6cc02d6614a6f6193c74167a8ff23
-ms.openlocfilehash: 807579ee48ec543a050d9e96bf0672fc91b1f2f5
-ms.lasthandoff: 03/17/2017
-
+ms.openlocfilehash: a30b1c8a9949ab00259dc3335bb842ffc80a0f4f
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="concurrency-namespace-constants"></a>параллелизм констант пространства имен
 ||||  
@@ -58,7 +57,7 @@ const __declspec(selectany) GUID ChoreEventGuid =
 ```  
   
 ### <a name="remarks"></a>Примечания  
- Эта категория событий в данный момент не срабатывают средой выполнения с параллелизмом.  
+ Эта категория событий средой выполнения с параллелизмом в настоящее время не срабатывает.  
   
 ##  <a name="concrt_providerguid"></a>ConcRT_ProviderGuid  
  GUID поставщика трассировки событий Windows для среды выполнения с параллелизмом.  
@@ -84,7 +83,7 @@ const __declspec(selectany) GUID ConcRTEventGuid =
 ```  
   
 ### <a name="remarks"></a>Примечания  
- Эта категория событий в данный момент не срабатывают средой выполнения с параллелизмом.  
+ Эта категория событий средой выполнения с параллелизмом в настоящее время не срабатывает.  
   
 ##  <a name="cooperative_timeout_infinite"></a>COOPERATIVE_TIMEOUT_INFINITE  
  Значение, указывающее, что время ожидания никогда не должно истечь.  
@@ -124,7 +123,7 @@ const __declspec(selectany) GUID LockEventGuid =
 ```  
   
 ### <a name="remarks"></a>Примечания  
- Эта категория событий в данный момент не срабатывают средой выполнения с параллелизмом.  
+ Эта категория событий средой выполнения с параллелизмом в настоящее время не срабатывает.  
   
 ##  <a name="maxexecutionresources"></a>MaxExecutionResources  
  Специальное значение для ключей политики `MinConcurrency` и `MaxConcurrency`. По умолчанию соответствует числу аппаратных потоков на компьютере при отсутствии других ограничений.  
@@ -166,7 +165,7 @@ const __declspec(selectany) GUID ResourceManagerEventGuid =
 ```  
   
 ### <a name="remarks"></a>Примечания  
- Эта категория событий в данный момент не срабатывают средой выполнения с параллелизмом.  
+ Эта категория событий средой выполнения с параллелизмом в настоящее время не срабатывает.  
   
 ##  <a name="schedulegroupeventguid"></a>ScheduleGroupEventGuid  
  GUID категории, описывающий события трассировки событий Windows, инициированные средой выполнения с параллелизмом, которые непосредственно связаны с группами расписаний.  
@@ -177,7 +176,7 @@ const __declspec(selectany) GUID ScheduleGroupEventGuid =
 ```  
   
 ### <a name="remarks"></a>Примечания  
- Эта категория событий в данный момент не срабатывают средой выполнения с параллелизмом.  
+ Эта категория событий средой выполнения с параллелизмом в настоящее время не срабатывает.  
   
 ##  <a name="schedulereventguid"></a>SchedulerEventGuid  
  GUID категории, описывающий события трассировки событий Windows, инициированные средой выполнения с параллелизмом, которые непосредственно связаны с действиями планировщика.  
@@ -197,4 +196,3 @@ const __declspec(selectany) GUID VirtualProcessorEventGuid =
   
 ## <a name="see-also"></a>См. также  
  [Пространство имен concurrency](concurrency-namespace.md)
-

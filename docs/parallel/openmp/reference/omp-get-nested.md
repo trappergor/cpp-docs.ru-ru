@@ -1,47 +1,45 @@
 ---
-title: "omp_get_nested | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "omp_get_nested"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "omp_get_nested OpenMP function"
+title: "omp_get_nested | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: omp_get_nested
+dev_langs: C++
+helpviewer_keywords: omp_get_nested OpenMP function
 ms.assetid: e9784847-516e-40d3-89f7-b8b6898d8667
-caps.latest.revision: 8
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 2d67008fde4d8d3093c33bfc9389004ce3b339db
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/24/2017
 ---
-# omp_get_nested
-[!INCLUDE[vs2017banner](../../../assembler/inline/includes/vs2017banner.md)]
-
-Возвращает значение, указывающее наличие вложенных параллелизм включена.  
+# <a name="ompgetnested"></a>omp_get_nested
+Возвращает значение, указывающее, включено ли вложенный параллелизм.  
   
-## Синтаксис  
+## <a name="syntax"></a>Синтаксис  
   
 ```  
 int omp_get_nested( );  
 ```  
   
-## Возвращаемое значение  
- Если значение ненулевое, вложенные параллелизм включена.  
+## <a name="return-value"></a>Возвращаемое значение  
+ Если значение ненулевое, вложенный параллелизм включен.  
   
-## Заметки  
- Параллелизм указанной с помощью вложенных [omp\_set\_nested](../../../parallel/openmp/reference/omp-set-nested.md) и  [OMP\_NESTED](../../../parallel/openmp/reference/omp-nested.md).  
+## <a name="remarks"></a>Примечания  
+ Вложенный параллелизм, указанном с помощью [omp_set_nested](../../../parallel/openmp/reference/omp-set-nested.md) и [OMP_NESTED](../../../parallel/openmp/reference/omp-nested.md).  
   
- Дополнительные сведения см. в разделе [3.1.10 omp\_get\_nested Function](../../../parallel/openmp/3-1-10-omp-get-nested-function.md).  
+ Дополнительные сведения см. в разделе [3.1.10 функция omp_get_nested](../../../parallel/openmp/3-1-10-omp-get-nested-function.md).  
   
-## Пример  
- См. [omp\_set\_nested](../../../parallel/openmp/reference/omp-set-nested.md) пример использования  `omp_get_nested`.  
+## <a name="example"></a>Пример  
+ В разделе [omp_set_nested](../../../parallel/openmp/reference/omp-set-nested.md) пример использования `omp_get_nested`.  
   
-## См. также  
- [Functions](../../../parallel/openmp/reference/openmp-functions.md)
+## <a name="see-also"></a>См. также  
+ [Функции](../../../parallel/openmp/reference/openmp-functions.md)

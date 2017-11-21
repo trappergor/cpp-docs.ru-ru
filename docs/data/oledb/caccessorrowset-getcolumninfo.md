@@ -1,34 +1,33 @@
 ---
-title: "CAccessorRowset::GetColumnInfo | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "GetColumnInfo"
-  - "CAccessorRowset.GetColumnInfo"
-  - "CAccessorRowset::GetColumnInfo"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "GetColumnInfo - метод"
+title: "CAccessorRowset::GetColumnInfo | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- GetColumnInfo
+- CAccessorRowset.GetColumnInfo
+- CAccessorRowset::GetColumnInfo
+dev_langs: C++
+helpviewer_keywords: GetColumnInfo method
 ms.assetid: 8ade2388-3c58-43cd-8ed6-499ee0531291
-caps.latest.revision: 8
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 3f982c516ef6c85ae2650bb26e2a7e1cdf28b7be
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/24/2017
 ---
-# CAccessorRowset::GetColumnInfo
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="caccessorrowsetgetcolumninfo"></a>CAccessorRowset::GetColumnInfo
 Возвращает сведения о столбцах из открытого набора строк.  
   
-## Синтаксис  
+## <a name="syntax"></a>Синтаксис  
   
 ```  
   
@@ -43,19 +42,19 @@ HRESULT GetColumnInfo(
 );  
 ```  
   
-#### Параметры  
- В разделе [IColumnsInfo::GetColumnInfo](https://msdn.microsoft.com/en-us/library/ms722704.aspx) справочника *программиста OLE DB*.  
+#### <a name="parameters"></a>Параметры  
+ В разделе [IColumnsInfo::GetColumnInfo](https://msdn.microsoft.com/en-us/library/ms722704.aspx) в *справочника программиста OLE DB*.  
   
-## Возвращаемое значение  
- Стандартное `HRESULT`.  
+## <a name="return-value"></a>Возвращаемое значение  
+ Стандартный `HRESULT`.  
   
-## Заметки  
- Пользователь должен освободить буфер возвращает сведения о столбцах и строках.  Используйте вторую версию этого метода, если используется [CDynamicAccessor](../../data/oledb/cdynamicaccessor-class.md) и переопределен привязки.  
+## <a name="remarks"></a>Примечания  
+ Пользователь должен освободить сведения возвращаемого столбца и строки буфера. Использовать второй версии данного метода, при использовании [CDynamicAccessor](../../data/oledb/cdynamicaccessor-class.md) и нуждаются в переопределении привязок.  
   
- Дополнительные сведения см. в разделе [IColumnsInfo::GetColumnInfo](https://msdn.microsoft.com/en-us/library/ms722704.aspx) в *справочнике программиста OLE DB*.  
+ Дополнительные сведения см. в разделе [IColumnsInfo::GetColumnInfo](https://msdn.microsoft.com/en-us/library/ms722704.aspx) в *Справочник программиста OLE DB*.  
   
-## Требования  
+## <a name="requirements"></a>Требования  
  **Заголовок:** atldbcli.h  
   
-## См. также  
- [Класс CAccessorRowset](../Topic/CAccessorRowset%20Class.md)
+## <a name="see-also"></a>См. также  
+ [Класс CAccessorRowset](../../data/oledb/caccessorrowset-class.md)

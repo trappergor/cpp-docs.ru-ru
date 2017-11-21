@@ -1,54 +1,55 @@
 ---
-title: "Диалоговое окно &quot;Шрифт текста&quot; (редактор изображений для значков) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Шрифт текста - диалоговое окно"
-  - "шрифты, изменение на изображении"
-  - "текст, на изображениях"
+title: "\"Шрифт текста диалогового окна\" (редактор изображений для значков) | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- Text Tool Font dialog box
+- fonts, changing on an image
+- text, on images
 ms.assetid: c398e2e7-0263-43c1-9ab4-768a280c2407
-caps.latest.revision: 8
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 4
+caps.latest.revision: "8"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: f14e398943d71cab4e520b373834b7373146f221
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/24/2017
 ---
-# Диалоговое окно &quot;Шрифт текста&quot; (редактор изображений для значков)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Позволяет задать параметры шрифта в процессе работы с диалоговым окном [Текст](../Topic/Text%20Tool%20Dialog%20Box%20\(Image%20Editor%20for%20Icons\).md) в [редакторе изображений](../mfc/image-editor-for-icons.md).  
+# <a name="text-tool-font-dialog-box-image-editor-for-icons"></a>Диалоговое окно "Шрифт текста" (редактор изображений для значков)
+Задает параметры шрифта, при использовании [диалоговое окно "текст"](../windows/text-tool-dialog-box-image-editor-for-icons.md) из [редактора изображений](../windows/image-editor-for-icons.md).  
   
- Это диалоговое окно позволяет выполнять следующие действия:  
+ Используйте это диалоговое окно предназначено для:  
   
--   [Изменение шрифта текста на изображении](../mfc/changing-the-font-of-text-on-an-image-image-editor-for-icons.md)  
+-   [Изменение шрифта текста на изображении](../windows/changing-the-font-of-text-on-an-image-image-editor-for-icons.md)  
   
- Чтобы открыть это диалоговое окно, нажмите кнопку **Шрифт** в диалоговом окне "Текст".  
+ Чтобы открыть это диалоговое окно, нажмите кнопку **шрифта** кнопку в диалоговом окне средства текста.  
   
  **Шрифт**  
- Выводит список доступных шрифтов.  
+ Список доступных шрифтов.  
   
  **Стиль шрифта**  
- Выводит список доступных стилей для выбранного шрифта.  
+ Список доступных стилей для выбранного шрифта.  
   
- **Размер**  
- Выводит список всех доступных размеров для выбранного шрифта.  
+ **Size**  
+ Список доступных размеров для выбранного шрифта.  
   
  **Пример**  
- Позволяет просмотреть, как будет выглядеть текст с заданными параметрами шрифта.  
+ Показывает, как будет выглядеть текст с заданным шрифтом образец.  
   
- **Script**  
- Выводит список всех доступных языковых скриптов для выбранного шрифта.  Если пользователь выбирает другой языковой скрипт, набор символов для этого языка станет доступен при создании многоязычных документов.  
+ **Сценарий**  
+ Список всех доступных языковых скриптов для выбранного шрифта. При выборе другого языка, набор символов для этого языка станет доступен при создании многоязычных документов.  
   
-## Требования  
- None  
+## <a name="requirements"></a>Требования  
+ Нет  
   
-## См. также  
- [Editing Graphical Resources](../mfc/editing-graphical-resources-image-editor-for-icons.md)
+## <a name="see-also"></a>См. также  
+ [Редактирование графических ресурсов](../windows/editing-graphical-resources-image-editor-for-icons.md)
+

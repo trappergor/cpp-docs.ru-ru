@@ -1,58 +1,56 @@
 ---
-title: "reduction | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "reduction"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "reduction OpenMP clause"
+title: "Сокращение | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: reduction
+dev_langs: C++
+helpviewer_keywords: reduction OpenMP clause
 ms.assetid: a2b051af-5a1b-4c00-9cc7-692bb43653fb
-caps.latest.revision: 11
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 11
+caps.latest.revision: "11"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 33c629253db2d891f5e52347db291a3eec00bd03
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/24/2017
 ---
-# reduction
-[!INCLUDE[vs2017banner](../../../assembler/inline/includes/vs2017banner.md)]
-
-Указывает, что одну или несколько переменных, которые являются закрытыми к каждому потоку в операции уменьшения в конце параллельной области.  
+# <a name="reduction"></a>reduction
+Указывает, что одна или несколько переменных, которые принадлежат каждому потоку субъект операцию редукции в конце параллельной области.  
   
-## Синтаксис  
+## <a name="syntax"></a>Синтаксис  
   
 ```  
 reduction(operation:var)  
 ```  
   
-## Заметки  
- Здесь:  
+## <a name="remarks"></a>Примечания  
+ где  
   
  `operation`  
- Оператор для операции выполнения переменных \(`var`\) в конце параллельной области.  
+ Оператор для операции для выполнения на переменные (`var`) в конце параллельной области.  
   
  `var`  
- Одно более несколько переменных, на которых выполнить скалярную снижение.  Если более чем одна переменная задана, то отдельные имена переменных с запятой.  
+ Один для получения дополнительных переменные для выполнения скалярная редукция. Если указано более одной переменной, разделяйте имена переменных запятыми.  
   
-## Заметки  
- `reduction` применяется к следующим рекомендациям:  
+## <a name="remarks"></a>Примечания  
+ `reduction`применяется к следующие директивы:  
   
--   [for](../Topic/for%20\(OpenMP\).md)  
+-   [for](../../../parallel/openmp/reference/for-openmp.md)  
   
 -   [parallel](../../../parallel/openmp/reference/parallel.md)  
   
--   [sections](../../../parallel/openmp/reference/sections-openmp.md)  
+-   [разделы](../../../parallel/openmp/reference/sections-openmp.md)  
   
- Дополнительные сведения см. в разделе [2.7.2.6 reduction](../../../parallel/openmp/2-7-2-6-reduction.md).  
+ Дополнительные сведения см. в разделе [2.7.2.6 сокращения](../../../parallel/openmp/2-7-2-6-reduction.md).  
   
-## Пример  
+## <a name="example"></a>Пример  
   
 ```  
 // omp_reduction.cpp  
@@ -159,7 +157,11 @@ int main( )
 }  
 ```  
   
-  **Параллельный раздел выполнялся 4 раза в параллельном режиме.  Сумма последовательных целых чисел от 1 до 10 55**  
-**Все функции, func1 через func5 преуспели\!**    
-## См. также  
- [Clauses](../../../parallel/openmp/reference/openmp-clauses.md)
+```Output  
+The parallel section was executed 4 times in parallel.  
+The sum of the consecutive integers from 1 to 10, is 55  
+All of the the functions, func1 through func5 succeeded!  
+```  
+  
+## <a name="see-also"></a>См. также  
+ [Предложения](../../../parallel/openmp/reference/openmp-clauses.md)

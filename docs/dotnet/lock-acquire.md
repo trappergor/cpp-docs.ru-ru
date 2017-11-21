@@ -1,36 +1,35 @@
 ---
-title: "lock::acquire | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "lock::acquire"
-  - "acquire"
-  - "msclr.lock.acquire"
-  - "msclr::lock::acquire"
-  - "lock.acquire"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "acquire - метод"
+title: "Lock::acquire | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords:
+- lock::acquire
+- acquire
+- msclr.lock.acquire
+- msclr::lock::acquire
+- lock.acquire
+dev_langs: C++
+helpviewer_keywords: acquire method
 ms.assetid: c214274e-7519-4739-82aa-91b04a32d3f9
-caps.latest.revision: 14
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 12
+caps.latest.revision: "14"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: f1145c0ba2f5394fd7744fe91a1b949dca256c1a
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/24/2017
 ---
-# lock::acquire
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Получает блокировку объекта, при необходимости, чтобы получить блокировку навсегда, для конкретно указанного промежутка времени, или не происходит вообще.  
+# <a name="lockacquire"></a>lock::acquire
+Получает блокировку для объекта, при необходимости ожидания бесконечно, получения блокировки на указанный период времени, или совсем.  
   
-## Синтаксис  
+## <a name="syntax"></a>Синтаксис  
   
 ```  
 void acquire();  
@@ -42,20 +41,20 @@ void acquire(
 );  
 ```  
   
-#### Параметры  
+#### <a name="parameters"></a>Параметры  
  `_timeout`  
- Значение времени ожидания в миллисекундах или как <xref:System.TimeSpan>.  
+ Значение времени ожидания в миллисекундах, или как <xref:System.TimeSpan>.  
   
-## Исключения  
- Создает <xref:System.ApplicationException> если метод блокировки не происходит перед ожиданием.  
+## <a name="exceptions"></a>Исключения  
+ Создает <xref:System.ApplicationException> Если получения блокировки не происходит до истечения времени ожидания.  
   
-## Заметки  
- Если значение времени ожидания не указан, то время ожидания по умолчанию <xref:System.Threading.Timeout.Infinite>.  
+## <a name="remarks"></a>Примечания  
+ Если значение времени ожидания не задан, по умолчанию время ожидания — <xref:System.Threading.Timeout.Infinite>.  
   
- Если блокировку уже было приобретено, эта функция не выполняет никаких действий.  
+ Если блокировка уже была получена, эта функция не выполняет никаких действий.  
   
-## Пример  
- В этом примере используется единственный экземпляр класса через несколько потоков.  Класс использует блокировку для себя, чтобы обеспечить доступ к его внутренним данным согласуются для каждого потока.  Поток основного приложения использует блокировку на том же экземпляре класса периодически для проверки, чтобы определить наличие рабочие потоки все еще существуют, и ожидает, чтобы оставить, пока все рабочие потоки не будут завершения своих задач.  
+## <a name="example"></a>Пример  
+ Этот пример использует один экземпляр класса в нескольких потоках.  Этот класс использует блокировку на себя для обеспечения согласованности для каждого потока доступов к внутренних данных.  Основной поток приложения использует блокировку на том же экземпляре класса для периодической проверки ли все рабочие потоки по-прежнему существует и ожиданий для выхода, пока все рабочие потоки завершили свои задачи.  
   
 ```  
 // msl_lock_acquire.cpp  
@@ -129,22 +128,25 @@ int main() {
 }  
 ```  
   
-  **В потоке 3, счетчик \= 0**  
-**В потоке 3, счетчик \= 10**  
-**В потоке 5, счетчик \= 0**  
-**В потоке 5, счетчик \= 10**  
-**В потоке 7, счетчик \= 0**  
-**В потоке 7, счетчик \= 10**  
-**В потоке 4, счетчик \= 0**  
-**В потоке 4, счетчик \= 10**  
-**В потоке 6, счетчик \= 0**  
-**В потоке 6, счетчик \= 10**  
-**Все завершения потоков.**   
-## Требования  
- **Файл заголовка**\<msclr\\lock.h\>  
+```Output  
+In thread 3, Counter = 0  
+In thread 3, Counter = 10  
+In thread 5, Counter = 0  
+In thread 5, Counter = 10  
+In thread 7, Counter = 0  
+In thread 7, Counter = 10  
+In thread 4, Counter = 0  
+In thread 4, Counter = 10  
+In thread 6, Counter = 0  
+In thread 6, Counter = 10  
+All threads completed.  
+```  
+  
+## <a name="requirements"></a>Требования  
+ **Файл заголовка** \<msclr\lock.h >  
   
  **Пространство имен** msclr  
   
-## См. также  
+## <a name="see-also"></a>См. также  
  [Блокировка членов](../dotnet/lock-members.md)   
- [lock::try\_acquire](../Topic/lock::try_acquire.md)
+ [lock::try_acquire](../dotnet/lock-try-acquire.md)

@@ -1,45 +1,43 @@
 ---
-title: "find_if (STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::find_if"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "find_if - функция [STL/CLR]"
+title: "find_if (STL/CLR) | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::find_if
+dev_langs: C++
+helpviewer_keywords: find_if function [STL/CLR]
 ms.assetid: fd0db2be-a1e1-417e-8eea-653b08c9577e
-caps.latest.revision: 4
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 4
+caps.latest.revision: "4"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 40a77691582ea80a06baf05638feb3f6d5173cf1
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/24/2017
 ---
-# find_if (STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Находит позицию первого вхождения элемента в диапазон, который удовлетворяет указанному условию.  
+# <a name="findif-stlclr"></a>find_if (STL/CLR)
+Находит позицию первого вхождения элемента, удовлетворяющего определенному условию, в диапазон.  
   
-## Синтаксис  
+## <a name="syntax"></a>Синтаксис  
   
 ```  
 template<class _InIt, class _Pr> inline  
     _InIt find_if(_InIt _First, _InIt _Last, _Pr _Pred);  
 ```  
   
-## Заметки  
- Эта функция работает аналогично функции `find_if` STL.  Для получения дополнительной информации см. [find\_if](../Topic/find_if.md).  
+## <a name="remarks"></a>Примечания  
+ Эта функция работает так же, как функция стандартной библиотеки C++ `find_if`. Дополнительные сведения см. в разделе [find_if](../standard-library/algorithm-functions.md#find_if).  
   
-## Требования  
- **Заголовок:**\<cliext\/algorithm\>  
+## <a name="requirements"></a>Требования  
+ **Заголовок:** \<cliext/алгоритм >  
   
  **Пространство имен:** cliext  
   
-## См. также  
- [algorithm](../Topic/algorithm%20\(STL-CLR\).md)
+## <a name="see-also"></a>См. также  
+ [algorithm (STL/CLR)](../dotnet/algorithm-stl-clr.md)

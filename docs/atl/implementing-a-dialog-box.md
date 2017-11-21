@@ -1,56 +1,57 @@
 ---
-title: "Implementing a Dialog Box | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "ATL - библиотека, диалоговые окна"
-  - "CAxDialogImpl class, implementing dialog boxes in ATL"
-  - "CSimpleDialog class, implementing dialog boxes in ATL"
-  - "диалоговые окна, ATL - библиотека"
+title: "Реализация диалогового | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- CSimpleDialog class, implementing dialog boxes in ATL
+- dialog boxes, ATL
+- CAxDialogImpl class, implementing dialog boxes in ATL
+- ATL, dialog boxes
 ms.assetid: 478525f2-aa6a-435a-b162-68fc8aa98a8e
-caps.latest.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 5
+caps.latest.revision: "10"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 6e4a8f0d4ef6e8f5ea73352f0d4a62acee1c8c89
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/24/2017
 ---
-# Implementing a Dialog Box
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-2 Способа диалоговое окно добавление в проект библиотеки ATL: используйте мастер диалогового окна библиотеки ATL или добавить его вручную.  
+# <a name="implementing-a-dialog-box"></a>Реализация диалоговое окно
+Существует два способа диалоговое окно добавления в проект ATL: используйте мастер диалоговых окон ATL или добавить ее вручную.  
   
-## Диалоговое окно добавить с помощью мастера диалогового окна библиотеки ATL  
- В [Диалоговое окно " добавление класса](../ide/add-class-dialog-box.md) выберите объект диалогового окна библиотеку ATL для диалоговое окно добавление в проект библиотеки ATL.  Заполните мастер диалогового окна библиотеки ATL, как соответствующее и нажмите кнопку **Готово**.  Мастер добавит класс, производный от [CAxDialogImpl](../Topic/CAxDialogImpl%20Class.md) в проект.  Откройте представление ресурсов из меню **Вид** найдите диалоговое окно, и дважды щелкните его, чтобы открыть его в редакторе ресурсов.  
+## <a name="adding-a-dialog-box-with-the-atl-dialog-wizard"></a>Добавление диалогового окна с мастер диалоговых окон ATL  
+ В [диалоговое окно "Добавление класса"](../ide/add-class-dialog-box.md), выберите объект ATL диалоговое окно на диалоговое окно добавления в проект ATL. Заполните мастер диалоговых окон ATL соответствующим образом и нажмите кнопку **Готово**. Мастер добавляет класс, производный от [CAxDialogImpl](../atl/reference/caxdialogimpl-class.md) в проект. Откройте представление ресурсов из **представление** меню ваше диалоговое окно и дважды щелкните его, чтобы открыть в редакторе ресурсов.  
   
 > [!NOTE]
->  Если диалоговое окно выводится из `CAxDialogImpl`, то оно может размещения и управления ActiveX и Windows.  Если вы не хотите издержки поддержки элементов управления ActiveX в классе диалогового окна, используйте [CSimpleDialog](../atl/reference/csimpledialog-class.md) или [CDialogImpl](../Topic/CDialogImpl%20Class.md).  
+>  Если диалогового окна является производным от `CAxDialogImpl`, он может содержать оба ActiveX и элементов управления Windows. Если вы не хотите издержки, связанные с поддержкой элементов управления ActiveX в классе диалогового окна, используйте [CSimpleDialog](../atl/reference/csimpledialog-class.md) или [CDialogImpl](../atl/reference/cdialogimpl-class.md) вместо него.  
   
- Сообщение и обработчики событий можно добавлять к классу диалогового окна из представления класса.  Дополнительные сведения см. в разделе [Добавление обработчика сообщений ATL](../atl/adding-an-atl-message-handler.md).  
+ Сообщения и обработчики событий можно добавить классов диалоговых окон из представления классов. Дополнительные сведения см. в разделе [Добавление обработчика сообщения ATL](../atl/adding-an-atl-message-handler.md).  
   
-## Добавление диалоговое окно вручную  
- Реализация диалоговое окно аналогично реализация окно.  Необходимо создать производный класс от или [CAxDialogImpl](../Topic/CAxDialogImpl%20Class.md), [CDialogImpl](../Topic/CDialogImpl%20Class.md) или [CSimpleDialog](../atl/reference/csimpledialog-class.md) и объявить [сопоставление сообщений](../atl/message-maps-atl.md) для обработки сообщения.  Однако необходимо также указать идентификатор ресурса шаблона диалоговых окон в производном классе.  Пользовательский класс должен иметь элемент данных с именем `IDD`, чтобы оставить это значение.  
+## <a name="adding-a-dialog-box-manually"></a>Добавление диалогового окна вручную  
+ Реализация диалогового аналогична реализация окна. Класс наследуется от либо [CAxDialogImpl](../atl/reference/caxdialogimpl-class.md), [CDialogImpl](../atl/reference/cdialogimpl-class.md), или [CSimpleDialog](../atl/reference/csimpledialog-class.md) и объявите [схему сообщений](../atl/message-maps-atl.md) для обработки сообщений. Тем не менее необходимо также указать идентификатор ресурса шаблона диалогового окна в производном классе. Класс должен иметь член данных с именем `IDD` для хранения этого значения.  
   
 > [!NOTE]
->  При создании диалоговое окно с помощью мастера диалогового окна библиотеки ATL мастер автоматически добавляет элемент `IDD` как тип `enum`.  
+>  При создании диалоговое окно, используя мастер диалоговых окон ATL, мастер автоматически добавляет `IDD` элемент в качестве `enum` типа.  
   
- `CDialogImpl` позволяет реализовать диалоговое окно режимного или немодального то управления Windows узлов.  `CAxDialogImpl` позволяет реализовать диалоговое окно режимного или немодального, размещение и управления ActiveX и Windows.  
+ `CDialogImpl`позволяет реализовать модального или немодального диалогового окна, элементы управления Windows. `CAxDialogImpl`позволяет реализовать модального или немодального диалогового окна, элементы управления ActiveX и Windows.  
   
- Для создания модального диалогового окна, создайте экземпляр производного `CDialogImpl`\(или производный класс `CAxDialogImpl`\-\) и затем вызывает метод [DoModal](../Topic/CDialogImpl::DoModal.md).  Чтобы закрыть модального диалогового окна, вызовите метод [EndDialog](../Topic/CDialogImpl::EndDialog.md) из обработчика сообщений.  Для создания безрежимного диалогового окна, вызовите метод [Создание](../Topic/CDialogImpl::Create.md) вместо `DoModal`.  Уничтожить безрежимное диалоговое окно, вызов [DestroyWindow](../Topic/CDialogImpl::DestroyWindow.md).  
+ Создание модального диалогового окна, создайте экземпляр вашего `CDialogImpl`-производным (или `CAxDialogImpl`-производного) класса, а затем вызвать [DoModal](../atl/reference/cdialogimpl-class.md#domodal) метод. Чтобы закрыть модальное диалоговое окно, вызовите [EndDialog](../atl/reference/cdialogimpl-class.md#enddialog) метод из обработчика сообщений. Чтобы создать немодального диалогового окна, вызовите [создать](../atl/reference/cdialogimpl-class.md#create) вместо метода `DoModal`. Чтобы окончательно удалить немодального диалогового окна, вызовите [DestroyWindow](../atl/reference/cdialogimpl-class.md#destroywindow).  
   
- Тонуть события автоматически выполняется в [CAxDialogImpl](../Topic/CAxDialogImpl%20Class.md).  Реализуйте обработчики сообщений диалогового окна, как обработчики в `CWindowImpl`\- производный класс.  Если возвращаемое значение сообщение\- определенной, верните ее в качестве `LRESULT`.  Возвращаемые значения `LRESULT` сопоставлены библиотеки ATL для правильной обработки диспетчером диалогового окна Windows.  Дополнительные сведения см. в разделе исходный код для [CDialogImplBaseT::DialogProc](../Topic/CDialogImpl::DialogProc.md) в atlwin.h.  
+ Получение событий выполняется автоматически в [CAxDialogImpl](../atl/reference/caxdialogimpl-class.md). Реализовать обработчики сообщений диалоговое окно «», как обработчики в `CWindowImpl`-производного класса. Если возвращаемое значение конкретного сообщения, возвращается как `LRESULT`. Возвращенный `LRESULT` значения сопоставляются с ATL для правильной обработки диспетчером диалоговое окно Windows. Дополнительные сведения см. исходный код для [CDialogImplBaseT::DialogProc](../atl/reference/cdialogimpl-class.md#dialogproc) в atlwin.h.  
   
-## Пример  
+## <a name="example"></a>Пример  
  Следующий класс реализует диалоговое окно:  
   
- [!code-cpp[NVC_ATL_Windowing#66](../atl/codesnippet/CPP/implementing-a-dialog-box_1.h)]  
+ [!code-cpp[NVC_ATL_Windowing#66](../atl/codesnippet/cpp/implementing-a-dialog-box_1.h)]  
   
-## См. также  
- [Классы окон](../Topic/ATL%20Window%20Classes.md)
+## <a name="see-also"></a>См. также  
+ [Классы окон](../atl/atl-window-classes.md)
+

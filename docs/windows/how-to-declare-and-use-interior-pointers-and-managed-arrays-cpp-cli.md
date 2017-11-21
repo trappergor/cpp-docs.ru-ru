@@ -1,37 +1,36 @@
 ---
-title: "Практическое руководство. Объявление и использование внутренних указателей и управляемых массивов (C++/CLI) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "массивы [C++], управляемая"
-  - "указатели, внутренние"
+title: "Как: объявление и использование внутренних указателей и управляемых массивов (C + +/ CLI) | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+dev_langs: C++
+helpviewer_keywords:
+- pointers, interior
+- arrays [C++], managed
 ms.assetid: e61a2c09-a7d0-4867-91ea-6b8788a01079
-caps.latest.revision: 10
-caps.handback.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "10"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 83cd51bbba64a9b28e8b3cf7f9a1ecadd369d16b
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/24/2017
 ---
-# Практическое руководство. Объявление и использование внутренних указателей и управляемых массивов (C++/CLI)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-В следующем примере [!INCLUDE[cppcli](../build/reference/includes/cppcli_md.md)] показано, как можно объявить и использовать внутренний указатель на массив.  
+# <a name="how-to-declare-and-use-interior-pointers-and-managed-arrays-ccli"></a>Практическое руководство. Объявление и использование внутренних указателей и управляемых массивов (C++/CLI)
+Следующие C + +/ CLI образце показано, как объявить и использовать внутренний указатель в массив.  
   
 > [!IMPORTANT]
->  Эта функция языка поддерживается параметром компилятора **\/clr**, но не параметром компилятора **\/ZW**.  
+>  Эта функция языка поддерживается **/CLR** параметр компилятора, а не **/zw** параметр компилятора.  
   
-## Пример  
+## <a name="example"></a>Пример  
   
-### Код  
+### <a name="code"></a>Код  
   
 ```  
 // interior_ptr_arrays.cpp  
@@ -57,7 +56,7 @@ int main() {
 }  
 ```  
   
-### Output  
+### <a name="output"></a>Вывод  
   
 ```  
 1st element in arr holds: 1  
@@ -65,5 +64,5 @@ ipi points to memory address whose value is: 1
 after incrementing ipi, it points to memory address whose value is: 2  
 ```  
   
-## См. также  
- [interior\_ptr \(C\+\+\/CLI\)](../windows/interior-ptr-cpp-cli.md)
+## <a name="see-also"></a>См. также  
+ [interior_ptr (C++/CLI)](../windows/interior-ptr-cpp-cli.md)

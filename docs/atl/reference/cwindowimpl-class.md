@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-windows
+ms.technology: cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
@@ -21,42 +20,26 @@ f1_keywords:
 - ATLWIN/ATL::GetWndClassInfo
 - ATLWIN/ATL::WindowProc
 - ATLWIN/ATL::m_pfnSuperWindowProc
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - CWindowImpl class
 - subclassing windows, ATL
 ms.assetid: 02eefd45-a0a6-4d1b-99f6-dbf627e2cc2f
-caps.latest.revision: 22
+caps.latest.revision: "22"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: d2d39abf526a58b8442107b5ee816f316ae841f5
-ms.openlocfilehash: e9145c3c91eb9507f6383e8971325e5eaab53c3c
-ms.contentlocale: ru-ru
-ms.lasthandoff: 03/31/2017
-
+ms.openlocfilehash: ba2633fe88b83dda2f0d0edcf58d477f8f760b89
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="cwindowimpl-class"></a>Класс CWindowImpl
 Предоставляет методы для создания или создание подкласса для окна.  
   
 > [!IMPORTANT]
->  Этот класс и его члены не может использоваться в приложениях, выполняемых в [!INCLUDE[wrt](../../atl/reference/includes/wrt_md.md)].  
+>  Этот класс и его члены не может использоваться в приложениях, выполняемых в среде выполнения Windows.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -112,7 +95,7 @@ class ATL_NO_VTABLE CWindowImpl : public CWindowImplBaseT<TBase, TWinTraits>
   
  `CWindowImpl::Create`Создает окно на основе сведений класса окна, под управлением [CWndClassInfo](../../atl/reference/cwndclassinfo-class.md). `CWindowImpl`содержит [DECLARE_WND_CLASS](window-class-macros.md#declare_wnd_class) макросом, который означает `CWndClassInfo` регистрирует новый класс окна. Если вы хотите суперкласса существующего класса окна, получении класса из `CWindowImpl` и включать [DECLARE_WND_SUPERCLASS](window-class-macros.md#declare_wnd_superclass) макрос. В этом случае `CWndClassInfo` регистрирует класс окна, который основан на существующем классе, но использует `CWindowImpl::WindowProc`. Пример:  
   
- [!code-cpp[NVC_ATL_Windowing #43](../../atl/codesnippet/cpp/cwindowimpl-class_1.h)]  
+ [!code-cpp[NVC_ATL_Windowing#43](../../atl/codesnippet/cpp/cwindowimpl-class_1.h)]  
   
 > [!NOTE]
 >  Поскольку `CWndClassInfo` управляет данными только один класс окна каждого окна, созданные с помощью экземпляра `CWindowImpl` основан на один класс.  
@@ -173,10 +156,10 @@ HWND Create(
  [in] Задает имя окна. Значение по умолчанию — **NULL**.  
   
  `dwStyle`  
- [in] Стиль окна. Это значение объединяется с использованием стиля, предоставляемый классом признаки для окна. Значение по умолчанию предоставляет признаки класса полный контроль над стиль. Список возможных значений см. в разделе [CreateWindow](http://msdn.microsoft.com/library/windows/desktop/ms632679) в [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
+ [in] Стиль окна. Это значение объединяется с использованием стиля, предоставляемый классом признаки для окна. Значение по умолчанию предоставляет признаки класса полный контроль над стиль. Список возможных значений см. в разделе [CreateWindow](http://msdn.microsoft.com/library/windows/desktop/ms632679) в Windows SDK.  
   
  `dwExStyle`  
- [in] Стиль окна расширенного. Это значение объединяется с использованием стиля, предоставляемый классом признаки для окна. Значение по умолчанию предоставляет признаки класса полный контроль над стиль. Список возможных значений см. в разделе [CreateWindowEx](http://msdn.microsoft.com/library/windows/desktop/ms632680) в [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
+ [in] Стиль окна расширенного. Это значение объединяется с использованием стиля, предоставляемый классом признаки для окна. Значение по умолчанию предоставляет признаки класса полный контроль над стиль. Список возможных значений см. в разделе [CreateWindowEx](http://msdn.microsoft.com/library/windows/desktop/ms632680) в Windows SDK.  
   
  `MenuOrID`  
  [in] Для дочернего окна идентификатор окна. Для окна верхнего уровня, дескриптор меню для окна. Значение по умолчанию — **0U**.  
@@ -371,4 +354,3 @@ static LRESULT CALLBACK WindowProc(
  [BEGIN_MSG_MAP](message-map-macros-atl.md#begin_msg_map)   
  [Класс CComControl](../../atl/reference/ccomcontrol-class.md)   
  [Общие сведения о классе](../../atl/atl-class-overview.md)
-

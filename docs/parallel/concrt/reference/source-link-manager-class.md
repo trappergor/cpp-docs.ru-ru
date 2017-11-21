@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-windows
+ms.technology: cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -21,35 +20,18 @@ f1_keywords:
 - AGENTS/concurrency::source_link_manager::release
 - AGENTS/concurrency::source_link_manager::remove
 - AGENTS/concurrency::source_link_manager::set_bound
-dev_langs:
-- C++
-helpviewer_keywords:
-- source_link_manager class
+dev_langs: C++
+helpviewer_keywords: source_link_manager class
 ms.assetid: 287487cf-e0fe-4c35-aa3c-24f081d1ddae
-caps.latest.revision: 17
+caps.latest.revision: "17"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 5faef5bd1be6cc02d6614a6f6193c74167a8ff23
-ms.openlocfilehash: 8e875fdd02a42e1cb1c144b0b7da07a1f4e9a184
-ms.contentlocale: ru-ru
-ms.lasthandoff: 03/17/2017
-
+ms.openlocfilehash: 75be5687e63fe38f1ffa8f91c41963dfa1171e48
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="sourcelinkmanager-class"></a>Класс source_link_manager
 Объект `source_link_manager` управляет сетевыми соединениями блоков обмена сообщениями с блоками `ISource`.  
@@ -71,10 +53,10 @@ class source_link_manager;
   
 |Имя|Описание|  
 |----------|-----------------|  
-|`const_pointer`|Тип, который предоставляет указатель на `const` элемент в `source_link_manager` объекта.|  
+|`const_pointer`|Тип, предоставляющий указатель на `const` элемент в `source_link_manager` объекта.|  
 |`const_reference`|Тип, предоставляющий ссылку на `const` элемент хранится в `source_link_manager` объект для чтения и выполнения операций const.|  
-|`iterator`|Тип, который предоставляет итератор, который может читать или изменять любой элемент в `source_link_manager` объекта.|  
-|`type`|Тип реестр ссылок, который управляется `source_link_manager` объекта.|  
+|`iterator`|Тип, предоставляющий итератор, который может считывать или изменять любой элемент в `source_link_manager` объекта.|  
+|`type`|Тип реестр ссылок, которые управляются этим `source_link_manager` объекта.|  
   
 ### <a name="public-constructors"></a>Открытые конструкторы  
   
@@ -91,14 +73,14 @@ class source_link_manager;
 |[begin](#begin)|Возвращает итератор на первый элемент в `source_link_manager` объекта.|  
 |[содержит](#contains)|Поиск `network_link_registry` в рамках этого `source_link_manager` объекта для указанного блока.|  
 |[count](#count)|Подсчитывает количество связанных блоков в `source_link_manager` объекта.|  
-|[reference](#reference)|Получает ссылку на `source_link_manager` объект.|  
+|[reference](#reference)|Получает ссылку на `source_link_manager` объекта.|  
 |[register_target_block](#register_target_block)|Регистрирует целевой блок, который содержит это `source_link_manager` объекта.|  
-|[release](#release)|Освобождает ссылку на `source_link_manager` объект.|  
+|[release](#release)|Освобождает ссылку на `source_link_manager` объекта.|  
 |[remove](#remove)|Удаляет ссылку из `source_link_manager` объекта.|  
 |[set_bound](#set_bound)|Задает максимальное число ссылок источника, который может быть добавлен к этому `source_link_manager` объекта.|  
   
 ## <a name="remarks"></a>Примечания  
- В настоящее время блоки источника подлежат подсчету. Это оболочка на `network_link_registry` объект, который допускает параллельный доступ к ссылкам и предоставляет возможность ссылаться на связи через обратные вызовы. Блоки сообщений ( `target_block`s или `propagator_block`s) следует использовать этот класс для связи их источника.  
+ В настоящее время блоки источника имеется счетчик ссылок. Это оболочка на `network_link_registry` объект, который допускает параллельный доступ к ссылкам и предоставляет возможность обращаться ссылки через обратные вызовы. Блоки сообщений ( `target_block`s или `propagator_block`s) следует использовать этот класс для их связей "источник".  
   
 ## <a name="inheritance-hierarchy"></a>Иерархия наследования  
  `source_link_manager`  
@@ -149,7 +131,7 @@ bool contains(_EType _Link);
 ### <a name="return-value"></a>Возвращаемое значение  
  `true`Если указанная блокировка найдена, `false` в противном случае.  
   
-##  <a name="count"></a>число 
+##  <a name="count"></a>Счетчик 
 
  Подсчитывает количество связанных блоков в `source_link_manager` объекта.  
   
@@ -162,7 +144,7 @@ size_t count();
   
 ##  <a name="reference"></a>ссылка 
 
- Получает ссылку на `source_link_manager` объект.  
+ Получает ссылку на `source_link_manager` объекта.  
   
 ```
 void reference();
@@ -182,7 +164,7 @@ void register_target_block(_Inout_ ITarget<typename _Block::source_type>* _PTarg
   
 ##  <a name="release"></a>выпуск 
 
- Освобождает ссылку на `source_link_manager` объект.  
+ Освобождает ссылку на `source_link_manager` объекта.  
   
 ```
 void release();
@@ -198,7 +180,7 @@ bool remove(_EType _Link);
   
 ### <a name="parameters"></a>Параметры  
  `_Link`  
- Указатель на блок удаляется, если найден.  
+ Указатель на блок удалены, если найден.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
  `true`Если ссылка была найдена и удалена, `false` в противном случае.  
@@ -235,4 +217,3 @@ source_link_manager();
  [пространство имен Concurrency](concurrency-namespace.md)   
  [Класс single_link_registry](single-link-registry-class.md)   
  [Класс multi_link_registry](multi-link-registry-class.md)
-

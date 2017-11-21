@@ -1,64 +1,71 @@
 ---
-title: "_rotr8, _rotr16 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "_rotr16"
-  - "_rotr8"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "_rotr16 intrinsic"
-  - "_rotr8 intrinsic"
+title: "_rotr8 _rotr16 | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- _rotr16
+- _rotr8
+dev_langs: C++
+helpviewer_keywords:
+- _rotr8 intrinsic
+- _rotr16 intrinsic
 ms.assetid: dfbd2c82-82b4-427a-ad52-51609027ebff
-caps.latest.revision: 17
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 15
+caps.latest.revision: "17"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: ffa10eb29796be61b2c5f35809fd0ac65fc158a2
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/24/2017
 ---
-# _rotr8, _rotr16
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-**Блок, относящийся только к системам Microsoft**  
+# <a name="rotr8-rotr16"></a>_rotr8, _rotr16
+**Блок, относящийся только к системам Майкрософт**  
   
- Поворот входных значений вправо к наименьшему значащему разряду \(LSB\) на указанное число позиций разрядов.  
+ Поворот входных значений вправо к наименьшему значащему разряду (LSB) на указанное число позиций разрядов.  
   
-## Синтаксис  
+## <a name="syntax"></a>Синтаксис  
   
 ```  
-unsigned char _rotr8(     unsigned char value,     unsigned char shift  ); unsigned short _rotr16(     unsigned short value,     unsigned char shift  );  
+unsigned char _rotr8(   
+   unsigned char value,   
+   unsigned char shift   
+);  
+unsigned short _rotr16(   
+   unsigned short value,   
+   unsigned char shift   
+);  
 ```  
   
-#### Параметры  
- \[in\] `value`  
+#### <a name="parameters"></a>Параметры  
+ [in] `value`  
  Значение для поворота.  
   
- \[in\] `shift`  
+ [in] `shift`  
  Число разрядов для поворота.  
   
-## Возвращаемое значение  
+## <a name="return-value"></a>Возвращаемое значение  
  Итоговое значение.  
   
-## Требования  
+## <a name="requirements"></a>Требования  
   
 |Встроенная функция|Архитектура|  
-|------------------------|-----------------|  
-|`_rotr8`|x86, ARM, [!INCLUDE[vcprx64](../Token/vcprx64_md.md)]|  
-|`_rotr16`|x86, ARM, [!INCLUDE[vcprx64](../Token/vcprx64_md.md)]|  
+|---------------|------------------|  
+|`_rotr8`|x86, ARM, [!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|  
+|`_rotr16`|x86, ARM, [!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|  
   
- **Файл заголовка** \<intrin.h\>  
+ **Файл заголовка** \<intrin.h >  
   
-## Заметки  
+## <a name="remarks"></a>Примечания  
  В отличие от операции сдвига вправо, при выполнении правого поворота младшими, упал нулём перемещаются в позиции битов высокого порядка.  
   
-## Пример  
+## <a name="example"></a>Пример  
   
 ```  
 // rotr.cpp  
@@ -86,9 +93,20 @@ int main()
 }  
 ```  
   
-  **Поворот 0x41 влево на 0 разрядов дает 0x41 Поворот 0x41 влево на 1 разряд дает 0x82 Поворот 0x41 влево на 2 разряда дает 0x5 Поворот 0x41 влево на 3 разряда дает 0xa Поворот 0x41 влево на 4 разряда дает 0x14 Поворот 0x41 влево на 5 разрядов дает 0x28 Поворот 0x41 влево на 6 разрядов дает 0x50 Поворот 0x41 влево на 7 разрядов дает 0xa0 Поворот без знакового короткого 0x12 влево на 10 разрядов дает 0x480**   
-## Завершение блока, относящегося только к системам Майкрософт  
+```Output  
+Rotating 0x41 right by 0 bits gives 0x41  
+Rotating 0x41 right by 1 bits gives 0xa0  
+Rotating 0x41 right by 2 bits gives 0x50  
+Rotating 0x41 right by 3 bits gives 0x28  
+Rotating 0x41 right by 4 bits gives 0x14  
+Rotating 0x41 right by 5 bits gives 0xa  
+Rotating 0x41 right by 6 bits gives 0x5  
+Rotating 0x41 right by 7 bits gives 0x82  
+Rotating unsigned short 0x12 right by 10 bits gives 0x480  
+```  
   
-## См. также  
- [\_rotl8, \_rotl16](../intrinsics/rotl8-rotl16.md)   
- [Встроенные объекты компилятора](../intrinsics/compiler-intrinsics.md)
+**Завершение блока, относящегося только к системам Майкрософт**  
+  
+## <a name="see-also"></a>См. также  
+ [_rotl8 _rotl16](../intrinsics/rotl8-rotl16.md)   
+ [Встроенные инструкции компилятора](../intrinsics/compiler-intrinsics.md)

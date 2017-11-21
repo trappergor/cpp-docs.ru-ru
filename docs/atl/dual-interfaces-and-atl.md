@@ -1,47 +1,48 @@
 ---
-title: "Dual Interfaces and ATL | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "ATL - библиотека, сдвоенные интерфейсы"
-  - "COM, и ATL"
-  - "сдвоенные интерфейсы, about dual interfaces"
+title: "Сдвоенные интерфейсы и ATL | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- COM, and ATL
+- ATL, dual interfaces
+- dual interfaces, about dual interfaces
 ms.assetid: 5a390e89-d2c4-41f0-8538-cab2c5e5d4c8
-caps.latest.revision: 11
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 6
+caps.latest.revision: "11"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 7fc4859d9008135cf1e8ff39b0f00f1a86d35088
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/24/2017
 ---
-# Dual Interfaces and ATL
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Сдвоенный интерфейс позволяет своим методам, которые требуется получить доступ как методы диспетчерский интерфейс или vtable методы.  Этот раздел охватывает некоторые из функций сдвоенных интерфейсов с точки зрения библиотеки ATL.  
+# <a name="dual-interfaces-and-atl"></a>Сдвоенные интерфейсы и ATL
+Сдвоенный интерфейс позволяет получить доступ как к методам disp-интерфейс или как методы vtable его методы. В этом разделе рассматриваются некоторые возможности сдвоенные интерфейсы с точки зрения ATL.  
   
-## Содержание  
- [Реализация сдвоенный интерфейс](../atl/implementing-a-dual-interface.md)  
- Описывает классы и мастера, которые участвуют в реализации сдвоенный интерфейс.  
+## <a name="in-this-section"></a>Содержание  
+ [Реализация сдвоенного интерфейса](../atl/implementing-a-dual-interface.md)  
+ Описание классов и мастеров, связанной с реализацией сдвоенный интерфейс.  
   
- [Несколько сдвоенные интерфейсы](../atl/multiple-dual-interfaces.md)  
- Содержит сведения о том, как предоставить несколько сдвоенных интерфейсов в одном объекте.  
+ [Несколько сдвоенных интерфейсов](../atl/multiple-dual-interfaces.md)  
+ Описывает способ предоставления нескольких сдвоенные интерфейсы с одним объектом.  
   
- [nonextensible атрибут](../atl/nonextensible-attribute.md)  
- Содержит сведения о том, когда следует использовать атрибут **nonextensible** в определении интерфейса.  
+ [Nonextensible-атрибут](../atl/nonextensible-attribute.md)  
+ Описание использования **nonextensible** атрибута в определении интерфейса.  
   
  [Сдвоенные интерфейсы и события](../atl/dual-interfaces-and-events.md)  
- Описание причины конструкции для это событие не взаимодействовать сдвоенный интерфейс.  
+ Описание разработки причин не интерфейс сдвоенный интерфейс события.  
   
-## Связанные разделы  
- [Библиотека ATL](../atl/active-template-library-atl-concepts.md)  
- Содержит ссылки на концептуальные разделы о том, как запрограммировать с помощью библиотека шаблонных классов ATL.  
+## <a name="related-sections"></a>Связанные разделы  
+ [ATL](../atl/active-template-library-atl-concepts.md)  
+ Ссылки на разделы о программировании с использованием библиотеки ATL.  
   
-## См. также  
+## <a name="see-also"></a>См. также  
  [Основные понятия](../atl/active-template-library-atl-concepts.md)
+

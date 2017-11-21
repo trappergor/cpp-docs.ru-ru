@@ -1,73 +1,72 @@
 ---
-title: "Класс CArrayRowset | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "ATL.CArrayRowset<TAccessor>"
-  - "ATL.CArrayRowset"
-  - "CArrayRowset"
-  - "ATL::CArrayRowset"
-  - "ATL::CArrayRowset<TAccessor>"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "CArrayRowset - класс"
+title: "Класс CArrayRowset | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- ATL.CArrayRowset<TAccessor>
+- ATL.CArrayRowset
+- CArrayRowset
+- ATL::CArrayRowset
+- ATL::CArrayRowset<TAccessor>
+dev_langs: C++
+helpviewer_keywords: CArrayRowset class
 ms.assetid: 511427e1-73ca-4fd8-9ba1-ae9463557cb6
-caps.latest.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 10
+caps.latest.revision: "10"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 82c209938c7d124e787310cb859aeb6191f32c8d
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/24/2017
 ---
-# Класс CArrayRowset
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Доступ к элементам набора строк с помощью синтаксиса массива.  
+# <a name="carrayrowset-class"></a>Класс CArrayRowset
+Обращается к элементы набора строк, используя синтаксис массива.  
   
-## Синтаксис  
+## <a name="syntax"></a>Синтаксис  
   
 ```  
 template < class TAccessor >  
 class CArrayRowset :   
-   public CVirtualBuffer <TAccessor>,   
+   public CVirtualBuffer <TAccessor>,   
    protected CBulkRowset <TAccessor>  
 ```  
   
-#### Параметры  
+#### <a name="parameters"></a>Параметры  
  `TAccessor`  
- Тип класса доступа, который требуется использовать набор строк.  
+ Тип метода доступа класса, который вы хотите использовать набор строк.  
   
-## Члены  
+## <a name="members"></a>Члены  
   
-### Методы  
+### <a name="methods"></a>Методы  
   
 |||  
 |-|-|  
 |[CArrayRowset](../../data/oledb/carrayrowset-carrayrowset.md)|Конструктор.|  
-|[Моментальный снимок](../../data/oledb/carrayrowset-snapshot.md)|Считывает весь набор строк в память.|  
+|[Снимок](../../data/oledb/carrayrowset-snapshot.md)|Считывает весь набор строк в памяти.|  
   
-### Операторы  
-  
-|||  
-|-|-|  
-|[Оператор &#91;&#93;](../Topic/CArrayRowset::operator.md)|Получает элемент набора строк.|  
-  
-### Элементы данных  
+### <a name="operators"></a>Операторы  
   
 |||  
 |-|-|  
-|[CArrayRowset::m\_nRowsRead](../../data/oledb/carrayrowset-m-nrowsread.md)|Количество прочитанных строк уже.|  
+|[Оператор &#91; &#93;](../../data/oledb/carrayrowset-operator.md)|Обращается к элементу набора строк.|  
   
-## Требования  
- **Header:**  atldbcli.h  
+### <a name="data-members"></a>Элементы данных  
   
-## См. также  
- [Шаблоны потребителей OLE DB](../../data/oledb/ole-db-consumer-templates-cpp.md)   
+|||  
+|-|-|  
+|[CArrayRowset::m_nRowsRead](../../data/oledb/carrayrowset-m-nrowsread.md)|Число строк, уже считано.|  
+  
+## <a name="requirements"></a>Требования  
+ **Заголовок:** atldbcli.h  
+  
+## <a name="see-also"></a>См. также  
+ [Шаблоны потребителя OLE DB](../../data/oledb/ole-db-consumer-templates-cpp.md)   
  [Ссылка на шаблоны потребителя OLE DB](../../data/oledb/ole-db-consumer-templates-reference.md)   
- [Класс CRowset](../Topic/CRowset%20Class.md)
+ [Класс CRowset](../../data/oledb/crowset-class.md)

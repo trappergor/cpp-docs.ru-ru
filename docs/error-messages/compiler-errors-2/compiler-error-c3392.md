@@ -1,53 +1,33 @@
 ---
-title: "C3392 Ошибка компилятора | Документы Microsoft"
+title: "Ошибка компилятора C3392 | Документы Microsoft"
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-tools
+ms.technology: cpp-tools
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- C3392
-dev_langs:
-- C++
-helpviewer_keywords:
-- C3392
+f1_keywords: C3392
+dev_langs: C++
+helpviewer_keywords: C3392
 ms.assetid: e4757596-e2aa-4314-b01e-5c4bfd2110e9
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: b551b1a7e0ae03a7de5108a1d114155786972847
-ms.openlocfilehash: ca0d37c75c61e1280c0f13ef6a26cd4ab920d1d9
-ms.contentlocale: ru-ru
-ms.lasthandoff: 02/24/2017
-
+ms.openlocfilehash: 12ed6dbcc7351926d51df4aa9e3397f3bb598f10
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="compiler-error-c3392"></a>Ошибка компилятора C3392
 "аргумент_типа": недопустимый аргумент типа для универсального параметра "параметр" универсального типа "универсальный_тип"; должен быть открытый конструктор без параметров  
   
- Экземпляр универсального типа был создан неправильно. Проверьте определение типа. Дополнительные сведения см. в разделе [универсальных типов](../../windows/generics-cpp-component-extensions.md).  
+ Экземпляр универсального типа был создан неправильно. Проверьте определение типа. Дополнительные сведения см. в разделе [универсальные шаблоны](../../windows/generics-cpp-component-extensions.md).  
   
 ## <a name="example"></a>Пример  
-В следующем примере используется C# для создания компонента, который содержит универсальный тип, который имеет некоторые ограничения, которые не поддерживаются при создании универсальных типов в C + +/ CLI. Дополнительные сведения см. в разделе [ограничения параметров типа](/dotnet/articles/csharp/programming-guide/generics/constraints-on-type-parameters).  
+В следующем образце используется C# для создания компонента, который содержит универсальный тип, который имеет определенные ограничения, которые не поддерживаются при создании универсальных типов в C + +/ CLI. Дополнительные сведения см. в разделе [Ограничения параметров типа](/dotnet/csharp/programming-guide/generics/constraints-on-type-parameters).  
   
 ```cs  
 // C3392.cs  
@@ -59,7 +39,7 @@ where V : struct
 where N : new() {}  
 ```  
   
-Когда компонент C3392.dll доступен, следующий пример приводит к возникновению ошибки C3392.  
+Если компонент C3392.dll доступен, в следующем примере возникает ошибка C3392.  
   
 ```cpp  
 // C3392_b.cpp  

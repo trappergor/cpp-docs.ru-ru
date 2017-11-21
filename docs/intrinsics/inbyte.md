@@ -1,36 +1,36 @@
 ---
-title: "__inbyte | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "__inbyte"
-  - "__inbyte_cpp"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Инструкция in"
-  - "Встроенная функция __inbyte"
+title: "__inbyte | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- __inbyte
+- __inbyte_cpp
+dev_langs: C++
+helpviewer_keywords:
+- in instruction
+- __inbyte intrinsic
 ms.assetid: 03b61799-2a08-474d-adc4-2cbf7c81a4d5
-caps.latest.revision: 12
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 12
+caps.latest.revision: "12"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: adf3e2ccd864eee1a92c24551cfc73bb080e572e
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/24/2017
 ---
-# __inbyte
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-**Только для систем Microsoft**  
+# <a name="inbyte"></a>__inbyte
+**Блок, относящийся только к системам Майкрософт**  
   
- Создает инструкцию `in`, возвращая один байт, считанный из указанного `Port` порта.  
+ Приводит к возникновению ошибки `in` инструкции, возвращая один байт чтения из портом, указанным `Port`.  
   
-## Синтаксис  
+## <a name="syntax"></a>Синтаксис  
   
 ```  
 unsigned char __inbyte(  
@@ -38,25 +38,25 @@ unsigned char __inbyte(
 );  
 ```  
   
-#### Параметры  
- \[входящий\] `Port`  
+#### <a name="parameters"></a>Параметры  
+ [in] `Port`  
  Порт, из которого выполняется чтение.  
   
-## Возвращаемое значение  
+## <a name="return-value"></a>Возвращаемое значение  
  Байт, считанный из указанного порта.  
   
-## Требования  
+## <a name="requirements"></a>Требования  
   
-|Встроенный объект|Архитектура|  
-|-----------------------|-----------------|  
-|`__inbyte`|x86, [!INCLUDE[vcprx64](../Token/vcprx64_md.md)]|  
+|Встроенная функция|Архитектура|  
+|---------------|------------------|  
+|`__inbyte`|x86, [!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|  
   
- **Файл заголовка** \<intrin.h\>  
+ **Файл заголовка** \<intrin.h >  
   
-## ЭЛЕМЕНТ, относящийся Майкрософт  
+**Завершение блока, относящегося только к системам Майкрософт**  
   
-## Заметки  
- Эта процедура доступна только в качестве внутреннего элемента.  
+## <a name="remarks"></a>Примечания  
+ Эта процедура доступна только как встроенная функция.  
   
-## См. также  
- [Встроенные объекты компилятора](../intrinsics/compiler-intrinsics.md)
+## <a name="see-also"></a>См. также  
+ [Встроенные инструкции компилятора](../intrinsics/compiler-intrinsics.md)

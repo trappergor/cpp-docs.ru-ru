@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
 apiname:
@@ -28,8 +27,7 @@ f1_keywords:
 - tempnam_dbg
 - _tempnam_dbg
 - _wtempnam_dbg
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - file names [C++], creating temporary
 - tempnam_dbg function
@@ -39,30 +37,15 @@ helpviewer_keywords:
 - _tempnam_dbg function
 - _wtempnam_dbg function
 ms.assetid: e3760bb4-bb01-4808-b689-2c45af56a170
-caps.latest.revision: 13
+caps.latest.revision: "13"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: a82768750e6a7837bb81edd8a51847f83c294c20
-ms.openlocfilehash: 260c5ae7348516683d8e749a2dcb6cdac6ea0943
-ms.contentlocale: ru-ru
-ms.lasthandoff: 04/04/2017
-
+ms.openlocfilehash: 6d1c4013dcfcbc6049957978316398566c60089b
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="tempnamdbg-wtempnamdbg"></a>_tempnam_dbg, _wtempnam_dbg
 Версии функции [_tempnam, _wtempnam, tmpnam, _wtmpnam](../../c-runtime-library/reference/tempnam-wtempnam-tmpnam-wtmpnam.md), которые используют отладочную версию`malloc, _malloc_dbg`.  
@@ -106,7 +89,7 @@ wchar_t *_wtempnam_dbg(
  Каждая функция возвращает указатель на созданное имя или значение `NULL` в случае сбоя. Сбой может возникнуть, если в переменной среды TMP и в параметре `dir` указано недопустимое имя каталога.  
   
 > [!NOTE]
-> Не требуется вызывать  `free` (или `free_dbg`) для указателей, выделенных функциями `_tempnam_dbg` и `_wtempnam_dbg`.  
+>  Не требуется вызывать `free` (или `free_dbg`) для указателей, выделенных функциями `_tempnam_dbg` и `_wtempnam_dbg`.  
   
 ## <a name="remarks"></a>Примечания  
  `_tempnam_dbg` И `_wtempnam_dbg` идентичны `_tempnam` и `_wtempnam` за исключением того, что, когда `_DEBUG` — определен, эти функции используют отладочную версию `malloc` и `_malloc_dbg`для выделения памяти, если `NULL` передается в качестве первого параметра. Дополнительные сведения см. в разделе [_malloc_dbg](../../c-runtime-library/reference/malloc-dbg.md).  

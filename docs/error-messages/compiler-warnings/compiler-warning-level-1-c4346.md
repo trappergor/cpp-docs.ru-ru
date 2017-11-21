@@ -1,34 +1,30 @@
 ---
-title: "Предупреждение компилятора (уровень 1) C4346 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C4346"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C4346"
+title: "Предупреждение (уровень 1) C4346 компилятора | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords: C4346
+dev_langs: C++
+helpviewer_keywords: C4346
 ms.assetid: 68ee562d-cca9-4a2a-9a1b-14ad1a1e7396
-caps.latest.revision: 8
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: 17e4644901d127bf11637bc24ea155072f83e03c
+ms.sourcegitcommit: ca2f94dfd015e0098a6eaf5c793ec532f1c97de1
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/31/2017
 ---
-# Предупреждение компилятора (уровень 1) C4346
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-"имя": зависимое имя не является типом  
+# <a name="compiler-warning-level-1-c4346"></a>Предупреждение компилятора (уровень 1) C4346
+«Имя»: зависимое имя не является типом  
   
- Требуется ключевое слово [имя типа](../Topic/typename.md) в случае, если зависимое имя должно обрабатываться как тип.  Такие радикальные изменения в компилятор Visual C\+\+ .NET 2003 были внесены в целях соответствия стандартам ISO C\+\+.  
-  
- Чтобы код функционировал одинаково во всех версиях Visual C\+\+, следует добавить к объявлению `typename`.  
+ [Typename](../../cpp/typename.md) ключевое слово является обязательным, если зависимое имя должно рассматриваться как тип. Для кода, который работает одинаково во всех версиях Visual C++, добавьте `typename` к объявлению.  
   
  Следующий пример приводит к возникновению ошибки C4346:  
   
@@ -43,7 +39,7 @@ struct C {
 };  
 ```  
   
- В следующем примере демонстрируются другие случаи, когда необходимо использование ключевого слова **имя типа**:  
+ В следующем примере демонстрируются другие примеры где **typename** требуется ключевое слово:  
   
 ```  
 // C4346b.cpp  

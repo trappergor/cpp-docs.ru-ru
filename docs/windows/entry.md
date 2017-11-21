@@ -1,32 +1,30 @@
 ---
-title: "entry | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-f1_keywords: 
-  - "vc-attr.entry"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "entry attribute"
+title: "запись | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+f1_keywords: vc-attr.entry
+dev_langs: C++
+helpviewer_keywords: entry attribute
 ms.assetid: ba4843e3-d7ad-4b86-9a15-0b4192f0f698
-caps.latest.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 9
+caps.latest.revision: "9"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 3d586e2ceaeb922d5f9f96aaa175a5e33ad6ed64
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/24/2017
 ---
-# entry
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Определяет, экспортированные функции или константы в модуле, указав точки входа в DLL.  
+# <a name="entry"></a>entry
+Указывает экспортированной функции или константы в модуле, определяя точки входа в библиотеку DLL.  
   
-## Синтаксис  
+## <a name="syntax"></a>Синтаксис  
   
 ```  
   
@@ -35,29 +33,28 @@ caps.handback.revision: 9
 ) ]  
 ```  
   
-#### Параметры  
+#### <a name="parameters"></a>Параметры  
  `id`  
  Идентификатор точки входа.  
   
-## Заметки  
- **запись** Атрибут C\+\+ имеет ту же функциональность, что и  [запись](http://msdn.microsoft.com/library/windows/desktop/aa366815) атрибут MIDL.  
+## <a name="remarks"></a>Примечания  
+ **Входа** языка C++ имеет ту же функциональность, что [входа](http://msdn.microsoft.com/library/windows/desktop/aa366815) языка MIDL.  
   
-## Пример  
- См. пример [idl\_module](../windows/idl-module.md) для использования примера  **запись**.  
+## <a name="example"></a>Пример  
+ Далее приведен пример [idl_module](../windows/idl-module.md) для пример использования **входа**.  
   
-## Требования  
+## <a name="requirements"></a>Требования  
   
-### Контекст атрибута  
+### <a name="attribute-context"></a>Контекст атрибута  
   
 |||  
 |-|-|  
 |**Применение**|Атрибут `idl_module`|  
-|**Repeatable**|Нет|  
-|**Обязательные атрибуты**|None|  
-|**Недопустимые атрибуты**|None|  
+|**Повторяемый**|Нет|  
+|**Обязательные атрибуты**|Нет|  
+|**Недопустимые атрибуты**|Нет|  
   
- Дополнительные сведения см. в разделе [Контексты атрибута](../windows/attribute-contexts.md).  
+ Дополнительные сведения см. в разделе [Контексты атрибутов](../windows/attribute-contexts.md).  
   
-## См. также  
- [IDL Attributes](../windows/idl-attributes.md)   
- [Attributes Samples](http://msdn.microsoft.com/ru-ru/558ebdb2-082f-44dc-b442-d8d33bf7bdb8)
+## <a name="see-also"></a>См. также  
+ [Атрибуты IDL](../windows/idl-attributes.md)   

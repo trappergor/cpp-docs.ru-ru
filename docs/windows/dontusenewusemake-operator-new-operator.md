@@ -1,32 +1,30 @@
 ---
-title: "Оператор DontUseNewUseMake::operator new | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "implements/Microsoft::WRL::Details::DontUseNewUseMake::operator new"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "operator new - оператор"
+title: "Оператор Dontusenewusemake::operator new | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: implements/Microsoft::WRL::Details::DontUseNewUseMake::operator new
+dev_langs: C++
+helpviewer_keywords: operator new operator
 ms.assetid: 6af07a0d-2271-430c-9d9b-5a4223fed049
-caps.latest.revision: 5
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 5
+caps.latest.revision: "5"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 5424108692bd97bdea890aff85ab7428276dd430
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/24/2017
 ---
-# Оператор DontUseNewUseMake::operator new
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Предназначено для поддержки инфраструктуры WRL, а не для непосредственного использования в коде.  
+# <a name="dontusenewusemakeoperator-new-operator"></a>Оператор DontUseNewUseMake::operator new
+Поддерживает инфраструктуру WRL и не предназначен для использования непосредственно из программного кода.  
   
-## Синтаксис  
+## <a name="syntax"></a>Синтаксис  
   
 ```  
 void* operator new(  
@@ -35,24 +33,24 @@ void* operator new(
 );  
 ```  
   
-#### Параметры  
+#### <a name="parameters"></a>Параметры  
  `__unnamed0`  
  Неименованный параметр, который определяет количество байт памяти для выделения.  
   
  `placement`  
  Выделяемый тип.  
   
-## Возвращаемое значение  
+## <a name="return-value"></a>Возвращаемое значение  
  Предоставляет способ передачи дополнительных аргументов при перегрузке оператора `new`.  
   
-## Заметки  
+## <a name="remarks"></a>Примечания  
  Перегружает оператор `new` и препятствует его использованию в RuntimeClass.  
   
-## Требования  
+## <a name="requirements"></a>Требования  
  **Заголовок:** implements.h  
   
- **Пространство имен:** Microsoft::WRL::Details  
+ **Пространство имен:** Microsoft::wrl:: Details  
   
-## См. также  
- [Класс DontUseNewUseMake](../windows/dontusenewusemake-class.md)   
+## <a name="see-also"></a>См. также  
+ [Dontusenewusemake-класс](../windows/dontusenewusemake-class.md)   
  [Пространство имен Microsoft::WRL::Details](../windows/microsoft-wrl-details-namespace.md)

@@ -1,35 +1,36 @@
 ---
-title: "Design Principles for Collection and Enumerator Interfaces | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "collection interfaces"
-  - "enumerator interfaces"
+title: "Разработка коллекции и интерфейсы перечислителя (ATL) | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- enumerator interfaces
+- collection interfaces
 ms.assetid: ea19a39e-6333-41a1-be62-5435c236640e
-caps.latest.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 5
+caps.latest.revision: "10"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 40aa94226b93a42b14dfd23a64e12fff00e22729
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/24/2017
 ---
-# Design Principles for Collection and Enumerator Interfaces
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Различные основные принципы разработки за каждым типом интерфейса:  
+# <a name="design-principles-for-collection-and-enumerator-interfaces"></a>Принципы разработки для сбора и интерфейсы перечислителя
+Существуют принципы другую структуру каждого типа интерфейса:  
   
--   Интерфейс коллекции предоставляет *прямой доступ* к *одному* элементу в коллекции с помощью метода **item**, он позволяет клиентам определить, сколько элементов в коллекции посредством свойства **Счетчик** и часто позволяет клиентам добавлять и удалять элементы.  
+-   Предоставляет интерфейс коллекции *случайных* доступ к *один* элементов в коллекции посредством **элемент** метод, он дает клиентам возможность обнаружения, количество элементов, содержащихся в коллекции через **число** свойство, и зачастую позволяет клиентам добавлять и удалять элементы.  
   
--   Интерфейс перечислителя предоставляет *серийный* доступ к *нескольким* элементам в коллекции, он не позволяет клиенту узнать число элементов в коллекции \(до тех пор, пока не будет остановлена возвращает перечислитель элементов\), и он не предоставляет никакой способ добавлять или удалять элементы.  
+-   Предоставляет интерфейс перечислителя *последовательной* доступ к *несколько* элементов в коллекции, он не допускал клиента для обнаружения, количество элементов, содержащихся в коллекции (пока перечислитель перестанет возврат элементы), и он не предоставляет каким-либо образом, добавление или удаление элементов.  
   
- Каждый тип интерфейса должен играть в другую роль безопасности доступа к элементам в коллекции.  
+ Каждый тип интерфейса играет другую роль в предоставлении доступа к элементам в коллекции.  
   
-## См. также  
+## <a name="see-also"></a>См. также  
  [Коллекции и перечислители](../atl/atl-collections-and-enumerators.md)
+

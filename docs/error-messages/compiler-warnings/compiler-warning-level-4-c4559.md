@@ -1,32 +1,30 @@
 ---
-title: "Предупреждение компилятора (уровень 4) C4559 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C4559"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C4559"
+title: "Предупреждение (уровень 4) C4559 компилятора | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords: C4559
+dev_langs: C++
+helpviewer_keywords: C4559
 ms.assetid: ed542f60-454d-45cb-85da-987ede61b1ab
-caps.latest.revision: 6
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 6
+caps.latest.revision: "6"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: 046a3186554603d4a33b2eec78084dd76ec64e40
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/24/2017
 ---
-# Предупреждение компилятора (уровень 4) C4559
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-'function' : повторное определение; функции добавлен \_\_declspec \(модификатор\)  
+# <a name="compiler-warning-level-4-c4559"></a>Предупреждение компилятора (уровень 4) C4559
+«функция»: переопределение; функции добавлен __declspec  
   
- Функция была повторно определена или объявлена, и в новом определении или объявлении добавлен модификатор \_\_**declspec** \(***модификатор***\).  Это предупреждение является информационным.  Чтобы устранить это предупреждение, удалите одно из определений.  
+ Функция была или определении и определении или объявлении добавлен __**declspec** модификатор (***модификатор***). Это предупреждение носит информационный характер. Чтобы устранить это предупреждение, удалите одно из определений.  
   
  Следующий пример приводит к возникновению ошибки C4559:  
   

@@ -1,32 +1,30 @@
 ---
-title: "SafeModulus | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-f1_keywords: 
-  - "SafeModulus"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "SafeModulus - функция"
+title: "SafeModulus | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+f1_keywords: SafeModulus
+dev_langs: C++
+helpviewer_keywords: SafeModulus function
 ms.assetid: ae5c81eb-5dcf-45a5-aa76-465fdfe68654
-caps.latest.revision: 6
-author: "ghogen"
-ms.author: "ghogen"
-manager: "ghogen"
-caps.handback.revision: 6
+caps.latest.revision: "6"
+author: ghogen
+ms.author: ghogen
+manager: ghogen
+ms.openlocfilehash: 29a7c04c2bb2037cb181957e2e0a08649b24cbe5
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/24/2017
 ---
-# SafeModulus
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Выполняет операцию модуля на номерах 2.  
+# <a name="safemodulus"></a>SafeModulus
+Выполняет операцию остатка от деления двух чисел.  
   
-## Синтаксис  
+## <a name="syntax"></a>Синтаксис  
   
 ```  
 template<typename T, typename U>  
@@ -37,34 +35,34 @@ inline bool SafeModulus (
 ) throw ();  
 ```  
   
-#### Параметры  
- \[входящий\] `t`  
- Делитель.  Это должно быть типа T.  
+#### <a name="parameters"></a>Параметры  
+ [in] `t`  
+ Делитель. Это должен быть типа T.  
   
- \[входящий\] `u`  
- Делимое.  Это должно быть типа U.  
+ [in] `u`  
+ Делимое. Это должен быть типа u.  
   
- \[исходящий\] `result`  
- Параметр, `SafeModulus` сохраняет результат.  
+ [выходной] `result`  
+ Параметр где `SafeModulus` сохраняет результат.  
   
-## Возвращаемое значение  
- `true`, если ошибка не возникает. `false` при возникновении ошибки.  
+## <a name="return-value"></a>Возвращаемое значение  
+ `true`При отсутствии ошибок; `false` при возникновении ошибки.  
   
-## Заметки  
- Этот метод часть [Библиотека SafeInt](../windows/safeint-library.md) и предназначен для одной операции модуля без создания экземпляра [Класс SafeInt](../windows/safeint-class.md).  
+## <a name="remarks"></a>Примечания  
+ Этот метод является частью [библиотека SafeInt](../windows/safeint-library.md) и предназначена для операции одного модуля без создания экземпляра [класс SafeInt](../windows/safeint-class.md).  
   
 > [!NOTE]
->  Этот метод должен использоваться, только если одна математических операций необходимо защитить.  Если несколько операций, то следует использовать класс `SafeInt` вместо вызова отдельных изолированных функции.  
+>  Этот метод использовать только в том случае, когда один математической операции должны быть защищены. При наличии нескольких операций, следует использовать `SafeInt` класса вместо вызова автономного отдельных функций.  
   
- Дополнительные сведения о типах T шаблона и U см. в разделе [Функции SafeInt](../windows/safeint-functions.md).  
+ Дополнительные сведения о типах шаблонов T и U см. в разделе [функции SafeInt](../windows/safeint-functions.md).  
   
-## Требования  
+## <a name="requirements"></a>Требования  
  **Заголовок:** safeint.h  
   
  **Пространство имен:** Microsoft::Utilities  
   
-## См. также  
+## <a name="see-also"></a>См. также  
  [Функции SafeInt](../windows/safeint-functions.md)   
  [Библиотека SafeInt](../windows/safeint-library.md)   
- [Класс SafeInt](../windows/safeint-class.md)   
+ [SafeInt-класс](../windows/safeint-class.md)   
  [SafeDivide](../windows/safedivide.md)

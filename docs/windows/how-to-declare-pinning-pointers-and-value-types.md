@@ -1,33 +1,33 @@
 ---
-title: "Практическое руководство. Объявление закрепляющих указателей и типов значений | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "закрепление указателей"
-  - "типы значений, объявление"
+title: "Как: объявление закрепляющих указателей и типы значений | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+dev_langs: C++
+helpviewer_keywords:
+- value types, declaring
+- pinning pointers
 ms.assetid: 57c5ec8a-f85a-48c4-ba8b-a81268bcede0
-caps.latest.revision: 8
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 04ee5a54ec797324aa0bad6e72f8cfc0861d2a38
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/24/2017
 ---
-# Практическое руководство. Объявление закрепляющих указателей и типов значений
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Типы значений могут упаковываться неявно.  Затем можно объявить закрепляющий указатель на сам объект типа значения и использовать **pin\_ptr** на упакованный тип значения.  
+# <a name="how-to-declare-pinning-pointers-and-value-types"></a>Практическое руководство. Объявление закрепляющих указателей и типов значений
+Тип значения можно упаковать неявно. Затем можно объявить закрепляющий указатель на объект с типом значения, сам и использование **pin_ptr** упакованный тип значения.  
   
-## Пример  
+## <a name="example"></a>Пример  
   
-### Код  
+### <a name="code"></a>Код  
   
 ```  
 // pin_ptr_value.cpp  
@@ -47,7 +47,7 @@ int main() {
 }  
 ```  
   
-### Output  
+### <a name="output"></a>Вывод  
   
 ```  
 8  
@@ -55,5 +55,5 @@ int main() {
 7  
 ```  
   
-## См. также  
- [pin\_ptr \(C\+\+\/CLI\)](../Topic/pin_ptr%20\(C++-CLI\).md)
+## <a name="see-also"></a>См. также  
+ [pin_ptr (C++/CLI)](../windows/pin-ptr-cpp-cli.md)

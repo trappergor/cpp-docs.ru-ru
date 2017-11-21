@@ -1,41 +1,39 @@
 ---
-title: "deque::front_item (STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::deque::front_item"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "front_item - член [STL/CLR]"
+title: "deque::front_item (STL/CLR) | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::deque::front_item
+dev_langs: C++
+helpviewer_keywords: front_item member [STL/CLR]
 ms.assetid: 6243e52d-47fb-45d8-ade8-70debd97887d
-caps.latest.revision: 18
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 16
+caps.latest.revision: "18"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 1b49a19e4927956ed593a9b28e6dd8a4dba4a35e
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/24/2017
 ---
-# deque::front_item (STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Получение первого элемента.  
+# <a name="dequefrontitem-stlclr"></a>deque::front_item (STL/CLR)
+Обращается к первому элементу.  
   
-## Синтаксис  
+## <a name="syntax"></a>Синтаксис  
   
 ```  
 property value_type front_item;  
 ```  
   
-## Заметки  
- Свойство получения первого элемента контролируемой последовательности, которая должна быть непустой.  Он используется для чтения и записи первый элемент, если известно, что он существует.  
+## <a name="remarks"></a>Примечания  
+ Свойство обращается к первый элемент управляемой последовательности, который должен быть пустым. Используется для чтения или записи первый элемент, если известно, что он существует.  
   
-## Пример  
+## <a name="example"></a>Пример  
   
 ```  
 // cliext_deque_front_item.cpp   
@@ -67,16 +65,19 @@ int main()
   
 ```  
   
-  **a b c**  
-**front\_item \= a**  
- **x B C.**   
-## Требования  
- **Заголовок:**\<cliext\/deque\>  
+```Output  
+ a b c  
+front_item = a  
+ x b c  
+```  
+  
+## <a name="requirements"></a>Требования  
+ **Заголовок:** \<cliext/deque >  
   
  **Пространство имен:** cliext  
   
-## См. также  
- [deque](../dotnet/deque-stl-clr.md)   
- [deque::back](../dotnet/deque-back-stl-clr.md)   
- [deque::back\_item](../Topic/deque::back_item%20\(STL-CLR\).md)   
- [deque::front](../Topic/deque::front%20\(STL-CLR\).md)
+## <a name="see-also"></a>См. также  
+ [deque (STL/CLR)](../dotnet/deque-stl-clr.md)   
+ [deque::Back (STL/CLR)](../dotnet/deque-back-stl-clr.md)   
+ [deque::back_item (STL/CLR)](../dotnet/deque-back-item-stl-clr.md)   
+ [deque::front (STL/CLR)](../dotnet/deque-front-stl-clr.md)

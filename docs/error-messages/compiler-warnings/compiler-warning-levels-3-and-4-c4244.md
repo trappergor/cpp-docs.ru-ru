@@ -1,53 +1,34 @@
 ---
-title: "Компилятора (уровни 3 и 4) предупреждение C4244 | Документы Microsoft"
+title: "Предупреждение (уровни 3 и 4) C4244 компилятора | Документы Microsoft"
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-tools
+ms.technology: cpp-tools
 ms.tgt_pltfrm: 
 ms.topic: error-reference
-f1_keywords:
-- C4244
-dev_langs:
-- C++
-helpviewer_keywords:
-- C4244
+f1_keywords: C4244
+dev_langs: C++
+helpviewer_keywords: C4244
 ms.assetid: f116bb09-c479-4b4e-a647-fe629a1383f6
-caps.latest.revision: 16
+caps.latest.revision: "16"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
-ms.openlocfilehash: ffc1f0012d7b65ab959503c3845b1f7a04268676
-ms.contentlocale: ru-ru
-ms.lasthandoff: 02/24/2017
-
+ms.openlocfilehash: bbcbe9d1c37827a28ce07849d909d58f5784a5a6
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="compiler-warning-levels-3-and-4-c4244"></a>Предупреждение компилятора (уровни 3 и 4) C4244
 conversion: преобразование из type1 в type2, возможна потеря данных  
   
- Целочисленный тип преобразуется в меньший целочисленный тип. Если это предупреждение уровня&4; *type1* — `int` и *type2* меньше, чем `int`. В противном случае — это уровень 3 (присвоено значение типа [__int64](../../cpp/int8-int16-int32-int64.md) переменной типа `unsigned int`). Возможна потеря данных.  
+ Целочисленный тип преобразуется в меньший целочисленный тип. Это предупреждение уровня 4, если *тип1* — `int` и *тип2* меньше, чем `int`. В противном случае — это уровень 3 (значение типа [__int64](../../cpp/int8-int16-int32-int64.md) переменной типа `unsigned int`). Возможна потеря данных.  
   
  При возникновении ошибки C4244 следует изменить программу так, чтобы использовались совместимые типы, или добавить в код логику, чтобы диапазон возможных значений всегда был совместим с типами, которые вы используете.  
   
- Предупреждение C4244 может появиться и на уровне 2. в разделе [Предупреждение компилятора (уровень 2) C4244](../../error-messages/compiler-warnings/compiler-warning-level-2-c4244.md) подробнее.  
+ Предупреждение C4244 также может возникнуть на уровне 2. в разделе [Предупреждение компилятора (уровень 2) C4244](../../error-messages/compiler-warnings/compiler-warning-level-2-c4244.md) для получения дополнительной информации.  
   
  Это преобразование может вызвать проблемы из-за неявных преобразований.  
   

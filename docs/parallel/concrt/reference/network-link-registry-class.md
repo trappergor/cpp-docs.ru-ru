@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-windows
+ms.technology: cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -16,35 +15,18 @@ f1_keywords:
 - AGENTS/concurrency::network_link_registry::contains
 - AGENTS/concurrency::network_link_registry::count
 - AGENTS/concurrency::network_link_registry::remove
-dev_langs:
-- C++
-helpviewer_keywords:
-- network_link_registry class
+dev_langs: C++
+helpviewer_keywords: network_link_registry class
 ms.assetid: 3e7b4097-09f1-4252-964e-b15b8f7f7fc6
-caps.latest.revision: 20
+caps.latest.revision: "20"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 5faef5bd1be6cc02d6614a6f6193c74167a8ff23
-ms.openlocfilehash: 28c13f1e2bf80624da3a7aba441944c051790d27
-ms.contentlocale: ru-ru
-ms.lasthandoff: 03/17/2017
-
+ms.openlocfilehash: 348964eb2f9b17a00188dd3a2589ce0711767e64
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="networklinkregistry-class"></a>Класс network_link_registry
 Абстрактный базовый класс `network_link_registry` управляет связями между блоками источников и целевыми блоками.  
@@ -66,17 +48,17 @@ class network_link_registry;
   
 |Имя|Описание|  
 |----------|-----------------|  
-|`const_pointer`|Тип, который предоставляет указатель на `const` элемент в `network_link_registry` объекта.|  
+|`const_pointer`|Тип, предоставляющий указатель на `const` элемент в `network_link_registry` объекта.|  
 |`const_reference`|Тип, предоставляющий ссылку на `const` элемент хранится в `network_link_registry` объект для чтения и выполнения операций const.|  
-|`iterator`|Тип, который предоставляет итератор, который может читать или изменять любой элемент в `network_link_registry` объекта.|  
+|`iterator`|Тип, предоставляющий итератор, который может считывать или изменять любой элемент в `network_link_registry` объекта.|  
 |`type`|Тип, представляющий тип блока, хранящиеся в `network_link_registry` объекта.|  
   
 ### <a name="public-methods"></a>Открытые методы  
   
 |Имя|Описание|  
 |----------|-----------------|  
-|[add](#add)|При переопределении в производном классе, добавляет ссылку на `network_link_registry` объект.|  
-|[begin](#begin)|При переопределении в производном классе возвращает итератор на первый элемент в `network_link_registry` объекта.|  
+|[add](#add)|При переопределении в производном классе, добавляет ссылку на `network_link_registry` объекта.|  
+|[begin](#begin)|При переопределении в производном классе, возвращает итератор на первый элемент в `network_link_registry` объекта.|  
 |[содержит](#contains)|При переопределении в производном классе выполняет `network_link_registry` объекта для указанного блока.|  
 |[count](#count)|При переопределении в производном классе, возвращает количество элементов в `network_link_registry` объекта.|  
 |[remove](#remove)|При переопределении в производном классе удаляет заданный блок из `network_link_registry` объекта.|  
@@ -94,7 +76,7 @@ class network_link_registry;
   
 ##  <a name="add"></a>добавить 
 
- При переопределении в производном классе, добавляет ссылку на `network_link_registry` объект.  
+ При переопределении в производном классе, добавляет ссылку на `network_link_registry` объекта.  
   
 ```
 virtual void add(_EType _Link) = 0;
@@ -106,7 +88,7 @@ virtual void add(_EType _Link) = 0;
   
 ##  <a name="begin"></a>начать 
 
- При переопределении в производном классе возвращает итератор на первый элемент в `network_link_registry` объекта.  
+ При переопределении в производном классе, возвращает итератор на первый элемент в `network_link_registry` объекта.  
   
 ```
 virtual iterator begin() = 0;
@@ -133,7 +115,7 @@ virtual bool contains(_EType _Link) = 0;
 ### <a name="return-value"></a>Возвращаемое значение  
  `true`Если блокировка была найдена, `false` в противном случае.  
   
-##  <a name="count"></a>число 
+##  <a name="count"></a>Счетчик 
 
  При переопределении в производном классе, возвращает количество элементов в `network_link_registry` объекта.  
   
@@ -154,7 +136,7 @@ virtual bool remove(_EType _Link) = 0;
   
 ### <a name="parameters"></a>Параметры  
  `_Link`  
- Указатель на блок удаляется, если найден.  
+ Указатель на блок удалены, если найден.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
  `true`Если ссылка была найдена и удалена, `false` в противном случае.  
@@ -163,4 +145,3 @@ virtual bool remove(_EType _Link) = 0;
  [пространство имен Concurrency](concurrency-namespace.md)   
  [Класс single_link_registry](single-link-registry-class.md)   
  [Класс multi_link_registry](multi-link-registry-class.md)
-

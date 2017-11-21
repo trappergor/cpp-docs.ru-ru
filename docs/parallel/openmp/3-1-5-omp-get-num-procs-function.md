@@ -1,27 +1,26 @@
 ---
-title: "3.1.5 omp_get_num_procs Function | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
+title: "3.1.5 функция omp_get_num_procs | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
 ms.assetid: bbfbf17b-0c68-4ba6-a25d-07c36ecb551f
-caps.latest.revision: 5
-caps.handback.revision: 5
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "5"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 48e91bb2e728111cf76649ce89efcf991c794782
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/24/2017
 ---
-# 3.1.5 omp_get_num_procs Function
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-`omp_get_num_procs` функция возвращает число процессоров, доступных для программы при вызове функции.  Формат следующий:  
+# <a name="315-ompgetnumprocs-function"></a>3.1.5 Функция omp_get_num_procs
+`omp_get_num_procs` Функция возвращает количество процессоров, доступных для программы во время вызова функции. Он следующий:  
   
 ```  
 #include <omp.h>  

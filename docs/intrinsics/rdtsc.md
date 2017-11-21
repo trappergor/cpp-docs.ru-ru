@@ -1,58 +1,57 @@
 ---
-title: "__rdtsc | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "__rdtsc"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Встроенная функция __rdtsc"
-  - "Инструкция rdtsc"
-  - "Инструкция "Чтение счетчика отметок времени""
+title: "__rdtsc | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: __rdtsc
+dev_langs: C++
+helpviewer_keywords:
+- __rdtsc intrinsic
+- rdtsc instruction
+- Read Time Stamp Counter instruction
 ms.assetid: e31d0e51-c9bb-42ca-bbe9-a81ffe662387
-caps.latest.revision: 17
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 15
+caps.latest.revision: "17"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: fa161bcc1845ab058773ca8ebdecfb5233235e54
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/24/2017
 ---
-# __rdtsc
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-**Только для систем Microsoft**  
+# <a name="rdtsc"></a>__rdtsc
+**Блок, относящийся только к системам Майкрософт**  
   
- Создает инструкцию `rdtsc`, которая возвращает отметку времени процессора.  Отметка времени процессора записывает число тактов с момента возврата.  
+ Приводит к возникновению ошибки `rdtsc` инструкции, которая возвращает отметку времени процессора. Отметка времени процессора регистрирует число тактов с момента последнего сброса.  
   
-## Синтаксис  
+## <a name="syntax"></a>Синтаксис  
   
 ```  
 unsigned __int64 __rdtsc();  
 ```  
   
-## Возвращаемое значение  
- 64 32\-разрядное Целое число без знака, представляющее счетчик тактов.  
+## <a name="return-value"></a>Возвращаемое значение  
+ 64-разрядное целое число без знака, представляющее счетчик тактов.  
   
-## Требования  
+## <a name="requirements"></a>Требования  
   
-|Встроенный объект|Архитектура|  
-|-----------------------|-----------------|  
-|`__rdtsc`|x86, [!INCLUDE[vcprx64](../Token/vcprx64_md.md)]|  
+|Встроенная функция|Архитектура|  
+|---------------|------------------|  
+|`__rdtsc`|x86, [!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|  
   
- **Файл заголовка** \<intrin.h\>  
+ **Файл заголовка** \<intrin.h >  
   
-## Заметки  
- Эта процедура доступна только в качестве внутреннего элемента.  
+## <a name="remarks"></a>Примечания  
+ Эта процедура доступна только как встроенная функция.  
   
- Интерпретация значения TSC в этом поколении оборудования отличается от в более ранних версиях [!INCLUDE[vcprx64](../Token/vcprx64_md.md)].  См. раздел аппаратные руководства дополнительные сведения.  
+ Интерпретация значения TSC в этом поколении оборудования отличается от более ранних версиях [!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]. В разделе руководства оборудования для получения дополнительной информации.  
   
-## Пример  
+## <a name="example"></a>Пример  
   
 ```  
 // rdtsc.cpp  
@@ -70,8 +69,11 @@ int main()
 }  
 ```  
   
-  **3363423610155519 тактов**   
-## ЭЛЕМЕНТ, относящийся Майкрософт  
+```Output  
+3363423610155519 ticks  
+```  
   
-## См. также  
- [Встроенные объекты компилятора](../intrinsics/compiler-intrinsics.md)
+**Завершение блока, относящегося только к системам Майкрософт**  
+  
+## <a name="see-also"></a>См. также  
+ [Встроенные инструкции компилятора](../intrinsics/compiler-intrinsics.md)

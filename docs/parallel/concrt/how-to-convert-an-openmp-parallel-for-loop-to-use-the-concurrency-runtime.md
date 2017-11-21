@@ -1,59 +1,66 @@
 ---
-title: "Практическое руководство. Преобразование параллельного цикла for OpenMP для использования среды выполнения с параллелизмом | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "преобразование OpenMP в среду выполнения с параллелизмом, параллельные циклы for"
-  - "преобразование OpenMP в среду выполнения с параллелизмом, параллельные циклы"
-  - "параллельные циклы for, преобразование OpenMP в среду выполнения с параллелизмом"
-  - "параллельные циклы, преобразование OpenMP в среду выполнения с параллелизмом"
+title: "Как: преобразование параллельного цикла использовать среду выполнения с параллелизмом OpenMP | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- converting from OpenMP to the Concurrency Runtime, parallel for loops
+- converting from OpenMP to the Concurrency Runtime, parallel loops
+- parallel for loops, converting from OpenMP to the Concurrency Runtime
+- parallel loops, converting from OpenMP to the Concurrency Runtime
 ms.assetid: d8a7b656-f86c-456e-9c5d-a7d52f94646e
-caps.latest.revision: 13
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 10
+caps.latest.revision: "13"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 7304b45f59219c529be5c1d430ea3183febd958a
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/24/2017
 ---
-# Практическое руководство. Преобразование параллельного цикла for OpenMP для использования среды выполнения с параллелизмом
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+# <a name="how-to-convert-an-openmp-parallel-for-loop-to-use-the-concurrency-runtime"></a>Практическое руководство. Преобразование параллельного цикла for OpenMP для использования среды выполнения с параллелизмом
 
-В этом примере показано, как преобразовать простой цикл, использующий директивы [parallel](../../parallel/openmp/reference/parallel.md) и [for](../Topic/for%20\(OpenMP\).md) OpenMP, для использования алгоритма [concurrency::parallel\_for](../Topic/parallel_for%20Function.md) среды выполнения с параллелизмом.  
+В этом примере показано, как преобразовать простой цикл, использующий OpenMP [параллельных](../../parallel/concrt/how-to-use-parallel-invoke-to-write-a-parallel-sort-routine.md#parallel) и [для](../../parallel/openmp/reference/for-openmp.md) директивы для использования среды выполнения с параллелизмом [concurrency::parallel_for](reference/concurrency-namespace-functions.md#parallel_for) алгоритм.  
   
-## Пример  
- В этом примере для подсчета простых чисел в массиве произвольных значений используется как OpenMP, так и среда выполнения с параллелизмом.  
+## <a name="example"></a>Пример  
+ В этом примере используется как OpenMP, так и среда выполнения с параллелизмом для вычисления количества простых чисел в массиве случайных значений.  
   
- [!code-cpp[concrt-openmp#1](../../parallel/concrt/codesnippet/CPP/how-to-convert-an-openmp-parallel-for-loop-to-use-the-concurrency-runtime_1.cpp)]  
+ [!code-cpp[concrt-openmp#1](../../parallel/concrt/codesnippet/cpp/how-to-convert-an-openmp-parallel-for-loop-to-use-the-concurrency-runtime_1.cpp)]  
   
- В результате выполнения примера получается следующий результат:  
+ В этом примере формируются следующие данные:  
   
-  **Использование OpenMP…**  
-**найденные простые числа 107254.**  
-**использование среды выполнения с параллелизмом...**  
-**найденные простые числа 107254.** Алгоритм `parallel_for` и OpenMP 3.0 допускают, чтобы тип индекса был целочисленным типом со знаком или без знака.  Алгоритм `parallel_for` также следит, чтобы указанный диапазон не переполнял тип со знаком.  OpenMP версий 2.0 и 2.5 допускает только целочисленные типы индекса со знаком.  OpenMP также не проверяет диапазон индекса.  
+```Output  
+Using OpenMP...  
+found 107254 prime numbers.  
+Using the Concurrency Runtime...  
+found 107254 prime numbers.  
+```  
   
- Версия этого примера, использующая среду выполнения с параллелизмом, также использует объект [concurrency::combinable](../../parallel/concrt/reference/combinable-class.md) вместо директивы [atomic](../../parallel/openmp/reference/atomic.md), чтобы увеличивать значение счетчика без необходимости синхронизации.  
+ `parallel_for` Алгоритм и OpenMP 3.0 позволяют тип индекса быть целочисленным типом со знаком или без знака целочисленный тип. `parallel_for` Алгоритм также гарантирует, что указанный диапазон не переполнений тип со знаком. OpenMP версий 2.0 и 2.5 позволяют знаком только целочисленные типы индекса. OpenMP также не проверяет диапазон индекса.  
   
- Дополнительные сведения об алгоритме `parallel_for` и других параллельных алгоритмах см. в разделе [Параллельные алгоритмы](../Topic/Parallel%20Algorithms.md).  Дополнительные сведения о классе `combinable` см. в разделе [Параллельные контейнеры и объекты](../../parallel/concrt/parallel-containers-and-objects.md).  
+ Версия этого примера, который использует среду выполнения с параллелизмом также использует [concurrency::combinable](../../parallel/concrt/reference/combinable-class.md) объекта вместо [atomic](../../parallel/openmp/reference/atomic.md) директивы для увеличения значения счетчика без необходимости синхронизация.  
   
-## Пример  
- Этот пример отличается от предыдущего тем, что работает с объектом [std::array](../../standard-library/array-class-stl.md), а не с собственным массивом.  Так как OpenMP версий 2.0 и 2.5 допускает целочисленные типы индекса со знаком только в конструкции `parallel` `for`, для параллельного доступа к элементам контейнера стандартной библиотеки шаблонов \(STL\) нельзя использовать итераторы.  Библиотека параллельных шаблонов \(PPL\) предоставляет алгоритм [Concurrency::parallel\_for\_each](../Topic/parallel_for_each%20Function.md), который параллельно выполняет задачи в итеративном контейнере, например предоставленные библиотекой STL.  В нем используется такая же логика секционирования, что и в алгоритме `parallel_for`.  Алгоритм `parallel_for_each` похож на алгоритм [std::for\_each](../Topic/for_each.md) из библиотеки STL, но алгоритм `parallel_for_each` выполняет задачи параллельно.  
+ Дополнительные сведения о `parallel_for` и других параллельных алгоритмах см. в разделе [параллельные алгоритмы](../../parallel/concrt/parallel-algorithms.md). Дополнительные сведения о `combinable` см. в описании [параллельные контейнеры и объекты](../../parallel/concrt/parallel-containers-and-objects.md).  
   
- [!code-cpp[concrt-openmp#10](../../parallel/concrt/codesnippet/CPP/how-to-convert-an-openmp-parallel-for-loop-to-use-the-concurrency-runtime_2.cpp)]  
+## <a name="example"></a>Пример  
+
+ В этом примере изменяется предыдущий действовать от [std::array](../../standard-library/array-class-stl.md) объекта вместо на собственный массив. Так как OpenMP версий 2.0 и 2.5 разрешается только в со знаком целочисленные типы индекса `parallel_for` конструкции, итераторы нельзя использовать для доступа к элементам контейнера стандартной библиотеки C++ в параллельном режиме. Библиотека параллельных шаблонов (PPL) предоставляет [concurrency::parallel_for_each](reference/concurrency-namespace-functions.md#parallel_for_each) алгоритм, который выполняет задачи, в параллельном режиме, в итеративном контейнере, например предоставленных библиотекой стандартной библиотеки C++. Он использует ту же логику секционирования, `parallel_for` алгоритмом. `parallel_for_each` Стандартной библиотеки C++ напоминает алгоритм [std::for_each](../../standard-library/algorithm-functions.md#for_each) алгоритм, за исключением того, что `parallel_for_each` алгоритм выполняет задачи параллельно.  
   
-## Компиляция кода  
- Скопируйте код примера и вставьте его в проект  или в файл с именем concrt\-omp\-count\-primes.cpp, затем выполните в окне командной строки следующую команду.  
+ [!code-cpp[concrt-openmp#10](../../parallel/concrt/codesnippet/cpp/how-to-convert-an-openmp-parallel-for-loop-to-use-the-concurrency-runtime_2.cpp)]  
   
- **cl.exe \/EHsc \/openmp concrt\-omp\-count\-primes.cpp**  
+## <a name="compiling-the-code"></a>Компиляция кода  
+ Скопируйте код примера и вставьте его в проект Visual Studio или вставить его в файл с именем `concrt-omp-count-primes.cpp` , а затем запустите следующую команду в окне командной строки Visual Studio.  
   
-## См. также  
+ **CL.exe/EHsc/OpenMP concrt-omp-count-primes.cpp**  
+  
+## <a name="see-also"></a>См. также  
  [Переход от OpenMP к среде выполнения с параллелизмом](../../parallel/concrt/migrating-from-openmp-to-the-concurrency-runtime.md)   
- [Параллельные алгоритмы](../Topic/Parallel%20Algorithms.md)   
+ [Параллельные алгоритмы](../../parallel/concrt/parallel-algorithms.md)   
  [Параллельные контейнеры и объекты](../../parallel/concrt/parallel-containers-and-objects.md)
+

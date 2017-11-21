@@ -1,32 +1,30 @@
 ---
-title: "copy_backward (STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::copy_backward"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "copy_backward - функция [STL/CLR]"
+title: "copy_backward (STL/CLR) | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::copy_backward
+dev_langs: C++
+helpviewer_keywords: copy_backward function [STL/CLR]
 ms.assetid: 649db3fd-5a79-44b6-bea9-ecbcbeba1f32
-caps.latest.revision: 4
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 4
+caps.latest.revision: "4"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 9d9138ef071acd984826add535bba57f86b00864
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/24/2017
 ---
-# copy_backward (STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Присвоить значения элементов из диапазона источника в качестве назначения, повторяя через последовательность элементов источника и присвоению ему новые позиции в направление обратно.  
+# <a name="copybackward-stlclr"></a>copy_backward (STL/CLR)
+Присваивает значения элементов из исходного диапазона диапазону назначения, выполняя итерации в исходной последовательности элементов и присваивая им новые позиции в обратном направлении.  
   
-## Синтаксис  
+## <a name="syntax"></a>Синтаксис  
   
 ```  
 template<class _BidIt1, class _BidIt2> inline  
@@ -34,13 +32,13 @@ template<class _BidIt1, class _BidIt2> inline
         _BidIt2 _Dest);  
 ```  
   
-## Заметки  
- Эта функция работает аналогично функции `copy_backward` STL.  Для получения дополнительной информации см. [copy\_backward](../Topic/copy_backward.md).  
+## <a name="remarks"></a>Примечания  
+ Эта функция работает так же, как функция стандартной библиотеки C++ `copy_backward`. Дополнительные сведения см. в разделе [copy_backward](../standard-library/algorithm-functions.md#copy_backward).  
   
-## Требования  
- **Заголовок:**\<cliext\/algorithm\>  
+## <a name="requirements"></a>Требования  
+ **Заголовок:** \<cliext/алгоритм >  
   
  **Пространство имен:** cliext  
   
-## См. также  
- [algorithm](../Topic/algorithm%20\(STL-CLR\).md)
+## <a name="see-also"></a>См. также  
+ [algorithm (STL/CLR)](../dotnet/algorithm-stl-clr.md)

@@ -1,35 +1,32 @@
 ---
-title: "Функция CreateClassFactory | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "module/Microsoft::WRL::Details::CreateClassFactory"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "CreateClassFactory - функция"
+title: "Функция CreateClassFactory | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: module/Microsoft::WRL::Details::CreateClassFactory
+dev_langs: C++
+helpviewer_keywords: CreateClassFactory function
 ms.assetid: 772d5d1b-8872-4745-81ca-521a39564713
-caps.latest.revision: 2
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 2
+caps.latest.revision: "2"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 5ac438e233c675b6d650af83354edd36f877602d
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/24/2017
 ---
-# Функция CreateClassFactory
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="createclassfactory-function"></a>CreateClassFactory - функция
 Создает фабрику, которая создает экземпляры указанного класса.  
   
-## Синтаксис  
+## <a name="syntax"></a>Синтаксис  
   
 ```cpp  
-  
 template<typename Factory>  
 inline HRESULT STDMETHODCALLTYPE CreateClassFactory(  
    _In_ unsigned int *flags,   
@@ -40,29 +37,29 @@ inline HRESULT STDMETHODCALLTYPE CreateClassFactory(
   
 ```  
   
-#### Параметры  
+#### <a name="parameters"></a>Параметры  
  `flags`  
- Сочетание одного или нескольких значений перечисления [RuntimeClassType](../windows/runtimeclasstype-enumeration.md).  
+ Сочетание одного или нескольких [RuntimeClassType](../windows/runtimeclasstype-enumeration.md) значений перечисления.  
   
  `entry`  
- Указатель на [CreatorMap](../windows/creatormap-structure.md), содержащий сведения об инициализации и регистрации параметра `riid`.  
+ Указатель на [CreatorMap](../windows/creatormap-structure.md) , содержащий сведения о параметра инициализации и регистрации `riid`.  
   
  `riid`  
  Ссылка на идентификатор интерфейса.  
   
  `ppFactory`  
- Если эта операция завершена успешно, указатель на фабрики класса.  
+ Если эта операция завершается успешно, указатель на фабрику классов.  
   
-## Возвращаемое значение  
- Значение S\_ОК в случае успеха; в противном случае — значение HRESULT, указывающее на ошибку.  
+## <a name="return-value"></a>Возвращаемое значение  
+ Значение S_OK, если операция завершилась успешно; в противном случае — значение HRESULT, указывающее на ошибку.  
   
-## Примечания  
- Ошибка утверждения создается, если параметр `Factory` шаблона не является производным от интерфейса IClassFactory.  
+## <a name="remarks"></a>Примечания  
+ Если выдается ошибка утверждения параметр шаблона `Factory` не является производным от интерфейса IClassFactory.  
   
-## Требования  
+## <a name="requirements"></a>Требования  
  **Заголовок:** module.h  
   
  **Пространство имен:** Microsoft::WRL  
   
-## См. также  
+## <a name="see-also"></a>См. также  
  [Пространство имен Microsoft::WRL::Wrappers::Details](../windows/microsoft-wrl-wrappers-details-namespace.md)

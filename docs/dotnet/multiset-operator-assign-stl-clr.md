@@ -1,46 +1,43 @@
 ---
-title: "multiset::operator= (STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::multiset::operator="
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "operator= - член [STL/CLR]"
+title: "MULTISET::operator = (STL/CLR) | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::multiset::operator=
+dev_langs: C++
+helpviewer_keywords: operator= member [STL/CLR]
 ms.assetid: 74e60042-d0d6-471f-8fdb-79b3c6856440
-caps.latest.revision: 8
-caps.handback.revision: 6
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "8"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 1339d26047e65a5a509ab1a17295de5928f38f3d
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/24/2017
 ---
-# multiset::operator= (STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Заменяет контролируемая последовательность.  
+# <a name="multisetoperator-stlclr"></a>multiset::operator= (STL/CLR)
+Заменяет управляемую последовательность.  
   
-## Синтаксис  
+## <a name="syntax"></a>Синтаксис  
   
 ```  
 multiset<Key>% operator=(multiset<Key>% right);  
 ```  
   
-#### Параметры  
- правый  
- Контейнер, которые необходимо скопировать.  
+#### <a name="parameters"></a>Параметры  
+ right  
+ Контейнер для копирования.  
   
-## Заметки  
- Член оператор копирует `right` к объекту, а затем возвращает `*this`.  Он используется, чтобы заменить контролируемая последовательность копией контролируемой последовательности в `right`.  
+## <a name="remarks"></a>Примечания  
+ Копирует оператор член `right` объекту, затем возвращает `*this`. Он позволяет заменить управляемую последовательность копией управляемой последовательности в `right`.  
   
-## Пример  
+## <a name="example"></a>Пример  
   
 ```  
 // cliext_multiset_operator_as.cpp   
@@ -72,12 +69,15 @@ int main()
   
 ```  
   
-  **a b c**  
- **a b c**   
-## Требования  
- **Заголовок:**\<cliext\/set\>  
+```Output  
+a b c  
+a b c  
+```  
+  
+## <a name="requirements"></a>Требования  
+ **Заголовок:** \<cliext и set >  
   
  **Пространство имен:** cliext  
   
-## См. также  
- [multiset](../dotnet/multiset-stl-clr.md)
+## <a name="see-also"></a>См. также  
+ [multiset (STL/CLR)](../dotnet/multiset-stl-clr.md)

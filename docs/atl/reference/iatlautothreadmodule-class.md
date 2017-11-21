@@ -4,47 +4,30 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-cpp
+ms.technology: devlang-cpp
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
 - IAtlAutoThreadModule
 - atlbase/ATL::IAtlAutoThreadModule
-dev_langs:
-- C++
-helpviewer_keywords:
-- IAtlAutoThreadModule class
+dev_langs: C++
+helpviewer_keywords: IAtlAutoThreadModule class
 ms.assetid: fcb58cf9-a427-4be9-89eb-04e1ab5cc3a1
-caps.latest.revision: 18
+caps.latest.revision: "18"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: 8232df949d3bdcbaab16af1802d7275a9a8642f3
-ms.openlocfilehash: 172607cfd6fd0998ede5411fe5aef1f9208b000e
-ms.lasthandoff: 03/30/2017
-
+ms.openlocfilehash: afee3671afb6e306e07839d93ad7ece8d3409fa8
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="iatlautothreadmodule-class"></a>Класс IAtlAutoThreadModule
 Этот класс представляет интерфейс для `CreateInstance` метод.  
   
 > [!IMPORTANT]
->  Этот класс и его члены не может использоваться в приложениях, выполняемых в [!INCLUDE[wrt](../../atl/reference/includes/wrt_md.md)].  
+>  Этот класс и его члены не может использоваться в приложениях, выполняемых в среде выполнения Windows.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -60,4 +43,3 @@ __interface IAtlAutoThreadModule
   
 ## <a name="see-also"></a>См. также  
  [Общие сведения о классе](../../atl/atl-class-overview.md)
-

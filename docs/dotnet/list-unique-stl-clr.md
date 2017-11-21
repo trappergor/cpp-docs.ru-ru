@@ -1,32 +1,30 @@
 ---
-title: "list::unique (STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::list::unique"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "unique - член [STL/CLR]"
+title: "List::UNIQUE (STL/CLR) | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::list::unique
+dev_langs: C++
+helpviewer_keywords: unique member [STL/CLR]
 ms.assetid: c3a29e4e-0ec1-4472-b050-7a9511037132
-caps.latest.revision: 17
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 15
+caps.latest.revision: "17"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: ca78fcc1de8b579a647dd9080dc64db0fde54e9b
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/24/2017
 ---
-# list::unique (STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="listunique-stlclr"></a>list::unique (STL/CLR)
 Удаляет смежные элементы, которые прошли заданный тест.  
   
-## Синтаксис  
+## <a name="syntax"></a>Синтаксис  
   
 ```  
 void unique();  
@@ -34,16 +32,16 @@ template<typename Pred2>
     void unique(Pred2 pred);  
 ```  
   
-#### Параметры  
- pred  
- Сравнение для пар элементов.  
+#### <a name="parameters"></a>Параметры  
+ Pred  
+ Компаратор для пар элементов.  
   
-## Заметки  
- Первый функцию\-член удаляет из контролируемой последовательности \(удаляются\) каждый элемент, который сравнивает равно его элементу: \-\- если элемент `X` предшествующего элемента `Y` и `X == Y`, функцию\-член удаляет `Y`.  Он используется, чтобы удалить все, кроме одна копия каждого subsequence соседних элементов, которые сравнивают равенство.  Обратите внимание, что если контролируемая последовательность упорядочена, например путем вызова [list::sort](../dotnet/list-sort-stl-clr.md)`()`, функцию\-член, отображается только элементы с уникальными значениями. \(Это имя\).  
+## <a name="remarks"></a>Примечания  
+ Первая функция-член удаляет из управляемой последовательности (стираниям) равным предшествующим элементом — каждый элемент, если элемент `X` предшествующий элемент `Y` и `X == Y`, функция-член удаляет `Y`. Используется для удаления только один копия каждой подпоследовательности соседние элементы, сравнение равенства. Обратите внимание, что если управляемой последовательности упорядочен, например путем вызова [list::sort (STL/CLR)](../dotnet/list-sort-stl-clr.md)`()`, функция-член оставляет только элементы с уникальными значениями. (Поэтому они так и называются.)  
   
- Второй функцию\-член работает аналогично во\-первых, за исключением того, что он удаляет каждый элемент `Y` после элемента `X`, для которого `pred``(X, Y)`.  Он используется, чтобы удалить все, кроме одна копия каждого subsequence соседних элементов, которые удовлетворяют функции предиката\) или делегируете, необходимо задать.  Обратите внимание, что если контролируемая последовательность упорядочена, например путем вызова `sort(``pred``)`, функцию\-член, отображается только те элементы, которые не имеют соответствующего упорядочение со всеми другими элементами.  
+ Вторая функция-член работает так же, как первая, за исключением удаляет каждый элемент `Y` следующий элемент `X` которого `pred(X, Y)`. Используется для удаления копии каждой подпоследовательности соседние элементы, удовлетворяющие функции предиката или делегат, который можно указать только один. Обратите внимание, что если управляемой последовательности упорядочен, например путем вызова `sort(pred)`, функция-член оставляет только элементы, которые имеют эквивалентное упорядочение с любых других элементов.  
   
-## Пример  
+## <a name="example"></a>Пример  
   
 ```  
 // cliext_list_unique.cpp   
@@ -81,16 +79,19 @@ int main()
   
 ```  
   
-  **a a b c**  
- **a b c**  
- **a**   
-## Требования  
- **Заголовок:**\<cliext\/list\>  
+```Output  
+a a b c  
+a b c  
+a a  
+```  
+  
+## <a name="requirements"></a>Требования  
+ **Заголовок:** \<cliext/list >  
   
  **Пространство имен:** cliext  
   
-## См. также  
- [list](../dotnet/list-stl-clr.md)   
- [list::remove](../dotnet/list-remove-stl-clr.md)   
- [list::remove\_if](../dotnet/list-remove-if-stl-clr.md)   
- [list::sort](../dotnet/list-sort-stl-clr.md)
+## <a name="see-also"></a>См. также  
+ [список (STL/CLR)](../dotnet/list-stl-clr.md)   
+ [List::Remove (STL/CLR)](../dotnet/list-remove-stl-clr.md)   
+ [List::remove_if (STL/CLR)](../dotnet/list-remove-if-stl-clr.md)   
+ [list::sort (STL/CLR)](../dotnet/list-sort-stl-clr.md)

@@ -1,60 +1,60 @@
 ---
-title: "Обмен полями записей. Использование функций RFX | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "типы данных [C++], обмен полями записей (ODBC)"
-  - "DoFieldExchange - метод, и RFX - функции"
-  - "вызовы функций, функции RFX"
-  - "ODBC [C++], типы данных"
-  - "ODBC [C++], RFX"
-  - "библиотеки RFX (ODBC) [C++], типы данных"
-  - "библиотеки RFX (ODBC) [C++], параметры и синтаксис функции"
+title: "Обмен полями записей: Использование функций RFX | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- ODBC [C++], data types
+- data types [C++], ODBC record field exchange
+- RFX (ODBC) [C++], function syntax and parameters
+- DoFieldExchange method, and RFX functions
+- ODBC [C++], RFX
+- RFX (ODBC) [C++], data types
+- function calls, RFX functions
 ms.assetid: c594300b-5a29-4119-a68b-e7ca32def696
-caps.latest.revision: 8
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 6c330ee2f9d3952068e2a400cd8f6e23103dc20e
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/24/2017
 ---
-# Обмен полями записей. Использование функций RFX
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-В данном разделе описывается способ использования вызовов функций RFX, которые являются основой переопределения `DoFieldExchange`.  
+# <a name="record-field-exchange-using-the-rfx-functions"></a>Обмен полями записей. Использование функций RFX
+В этом разделе описывается использование функции RFX, составляющих тело вашей `DoFieldExchange` переопределения.  
   
 > [!NOTE]
->  Этот раздел относится к классам, производным от класса [CRecordset](../Topic/CRecordset%20Class.md), в котором групповая выборка строк не реализована.  При использовании групповой выборки строк реализуется групповой обмен данными с полями записей \(групповой RFX\).  Групповой RFX и обычный RFX похожи.  Описание различий см. в разделе [Набор записей: групповая выборка записей ODBC](../Topic/Recordset:%20Fetching%20Records%20in%20Bulk%20\(ODBC\).md).  
+>  Этот раздел относится к классы, производные от [CRecordset](../../mfc/reference/crecordset-class.md) в какой строке массовая выборка не был реализован. Если вы используете выборка строк, реализуется блочный обмен полей записей (Bulk RFX). Bulk RFX аналогичен RFX. О различиях в разделе [набор записей: групповая выборка записей (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md).  
   
- Глобальные функции RFX обеспечивают обмен данными между столбцами источника данных и членами\-полями данных набора записей.  Вызовы функций RFX располагаются в коде функции\-члена [DoFieldExchange](../Topic/CRecordset::DoFieldExchange.md) набора записей.  В этом разделе приводится краткое описание функций, а также приводятся типы данных, доступные для каждой функции RFX.  В [Технической заметке № 43](../Topic/TN043:%20RFX%20Routines.md) описывается способ создания собственных функций RFX, поддерживающих дополнительные типы данных.  
+ Глобальные функции RFX обмен данными между столбцами, элементам данных источника и полей данных в наборе записей. Записывать вызовы функций RFX в наборе записей [DoFieldExchange](../../mfc/reference/crecordset-class.md#dofieldexchange) функции-члена. В этом разделе кратко описаны функции и показаны типы данных, для RFX доступных функций. [Технические примечания 43](../../mfc/tn043-rfx-routines.md) рассматривается написание функций RFX для дополнительных типов данных.  
   
-##  <a name="_core_rfx_function_syntax"></a> Синтаксис функции RFX  
- Каждая функция RFX принимает три параметра \(некоторые могут принимать дополнительно четвертый и пятый параметры\):  
+##  <a name="_core_rfx_function_syntax"></a>Синтаксис функции RFX  
+ Каждая функция RFX принимает три параметра (и некоторые имеют дополнительный четвертый и пятый параметр):  
   
--   Указатель на объект [CFieldExchange](../../mfc/reference/cfieldexchange-class.md).  Следует просто передать указатель `pFX`, переданный функции\-члену `DoFieldExchange`.  
+-   Указатель на [разделе](../../mfc/reference/cfieldexchange-class.md) объекта. Следует просто передать `pFX` указатель передан в `DoFieldExchange`.  
   
--   Имя исходного столбца в источнике данных.  
+-   Имя столбца, как он отображается в источнике данных.  
   
 -   Имя соответствующего элемента данных поля или элемента данных параметра в классе набора записей.  
   
--   В некоторых функциях — максимальная длина передаваемой строки или массива \(необязательно\).  По умолчанию имеет значение размером 255 байт, однако при необходимости значение можно изменить.  Максимальный размер ограничивается максимальным размером объекта `CString` — **INT\_MAX** байт \(2 147 483 647 байт\). Однако этот размер может быть ранее ограничен драйвером.  
+-   (Необязательно) В некоторых функций, максимальная длина строки или массива, передаваемый. По умолчанию используется 255 байт, но может потребоваться изменить его. Максимальный размер зависит от максимального размера `CString` объекта — **INT_MAX** (2 147 483 647) байт — но, вероятно, приведет к ограничивается драйвера.  
   
--   В функции `RFX_Text` иногда используется пятый параметр для указания типа данных для столбца \(необязательно\).  
+-   (Необязательно) В `RFX_Text` функции, иногда пятый параметр используется для указания типа данных столбца.  
   
- Дополнительные сведения см. в описании функций RFX в разделе [Макросы и глобальные объекты](../Topic/Macros,%20Global%20Functions,%20and%20Global%20Variables.md) *Справочника по библиотеке классов*.  Примеры ситуаций, в которых может потребоваться особое использование параметров, см. в разделе [Наборы записей. Суммирование и получение иных статистических результатов \(ODBC\)](../../data/odbc/recordset-obtaining-sums-and-other-aggregate-results-odbc.md).  
+ Дополнительные сведения см. в разделе функций RFX под [макросы и глобальные объекты](../../mfc/reference/mfc-macros-and-globals.md) в *Справочник по библиотеке классов*. Например, при которых может потребоваться особое использование параметров см. в разделе [набор записей: получения сумм и других статистических результатов (ODBC)](../../data/odbc/recordset-obtaining-sums-and-other-aggregate-results-odbc.md).  
   
-##  <a name="_core_rfx_data_types"></a> Типы данных RFX  
- Библиотека классов предоставляет функции RFX для обмена данными различных типов между источником данных и набором записей.  В следующем списке перечислены функции RFX по типу данных.  При необходимости написания собственных вызовов функций RFX следует выбрать одну из данных функций, исходя из типа данных.  
+##  <a name="_core_rfx_data_types"></a>Типы данных RFX  
+ Библиотека классов предоставляет функции RFX для обмена данными различных типов между источником данных и набором записей. В следующем списке перечислены функции RFX по типу данных. В случаях, необходимо написать собственные функции RFX выберите один из этих функций по типам данных.  
   
 |Функция|Тип данных|  
-|-------------|----------------|  
+|--------------|---------------|  
 |`RFX_Bool`|**BOOL**|  
 |`RFX_Byte`|**BYTE**|  
 |`RFX_Binary`|`CByteArray`|  
@@ -66,12 +66,13 @@ caps.handback.revision: 8
 |`RFX_Text`|`CString`|  
 |`RFX_Date`|`CTime`|  
   
- Дополнительные сведения см. в документации по функциям RFX в разделе [Макросы и глобальные объекты](../Topic/Macros,%20Global%20Functions,%20and%20Global%20Variables.md) *Справочника по библиотеке классов*.  Сведения о сопоставлении типов данных C\+\+ и типов данных SQL см. в таблице "Сопоставление типов данных ANSI SQL и типов данных C\+\+", приведенной в разделе [SQL. Типы данных SQL и C\+\+ \(ODBC\)](../../data/odbc/sql-sql-and-cpp-data-types-odbc.md).  
+
+ Дополнительные сведения см. в документации функции RFX под [макросы и глобальные объекты](../../mfc/reference/mfc-macros-and-globals.md) в *Справочник по библиотеке классов*. Сведения о сопоставлении типов данных C++ типов данных SQL см. в таблице ANSI SQL данные типы сопоставлены типы данных C++ в [SQL: SQL и типы данных C++ (ODBC)](../../data/odbc/sql-sql-and-cpp-data-types-odbc.md).  
   
-## См. также  
- [Обмен данными полями записей \(RFX\)](../../data/odbc/record-field-exchange-rfx.md)   
- [Обмен данными с полями записей: Принцип работы RFX](../../data/odbc/record-field-exchange-how-rfx-works.md)   
- [Набор записей. Параметризация набора записей \(ODBC\)](../../data/odbc/recordset-parameterizing-a-recordset-odbc.md)   
- [Набор записей. Динамическая привязка столбцов данных \(ODBC\)](../../data/odbc/recordset-dynamically-binding-data-columns-odbc.md)   
- [CRecordset Class](../Topic/CRecordset%20Class.md)   
- [CFieldExchange Class](../../mfc/reference/cfieldexchange-class.md)
+## <a name="see-also"></a>См. также  
+ [Обмен полями записей (RFX)](../../data/odbc/record-field-exchange-rfx.md)   
+ [Обмен полями записей: Принцип работы RFX](../../data/odbc/record-field-exchange-how-rfx-works.md)   
+ [Набор записей: Параметризация набора записей (ODBC)](../../data/odbc/recordset-parameterizing-a-recordset-odbc.md)   
+ [Набор записей: Динамическая привязка столбцов данных (ODBC)](../../data/odbc/recordset-dynamically-binding-data-columns-odbc.md)   
+ [CRecordset-класс](../../mfc/reference/crecordset-class.md)   
+ [Класс CFieldExchange](../../mfc/reference/cfieldexchange-class.md)

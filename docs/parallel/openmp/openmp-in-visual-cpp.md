@@ -1,48 +1,47 @@
 ---
-title: "OpenMP in Visual C++ | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "OpenMP in Visual C++"
-  - "explicit parallelization"
-  - "explicit parallelization, OpenMP in Visual C++"
+title: "OpenMP в Visual C++ | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- OpenMP in Visual C++
+- explicit parallelization
+- explicit parallelization, OpenMP in Visual C++
 ms.assetid: 54d8d0da-1f47-4312-9f25-5875c7dc08ed
-caps.latest.revision: 7
-caps.handback.revision: 7
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "7"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: df7c1681daf0f0ccae7d6307b2f6c000c01a313c
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/24/2017
 ---
-# OpenMP in Visual C++
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Интерфейс OpenMP примененных программ на языках c и C\+\+ позволяет писать приложения, эффективно использующих несколько процессоров.  Visual C\+\+ поддерживает стандарт OpenMP 2,0.  
+# <a name="openmp-in-visual-c"></a>OpenMP в Visual C++
+OpenMP C и C++ программном интерфейсе позволяет создавать приложения, которые эффективно использовать несколько процессоров. Visual C++ поддерживает стандарт OpenMP 2.0.  
   
-## В этом подразделе  
- [Directives](../../parallel/openmp/reference/openmp-directives.md)  
- Предоставляет ссылки на инструкции, используемые в API модели OpenMP.  
+## <a name="in-this-section"></a>Содержание  
+ [Директивы](../../parallel/openmp/reference/openmp-directives.md)  
+ Ссылки на директивы использования в OpenMP API.  
   
- [Clauses](../../parallel/openmp/reference/openmp-clauses.md)  
- Ссылки на выражения, используемые в API модели OpenMP.  
+ [Предложения](../../parallel/openmp/reference/openmp-clauses.md)  
+ Ссылки на предложения, используемые в OpenMP API.  
   
- [Library Reference](../../parallel/openmp/reference/openmp-library-reference.md)  
- Ссылки на конструкции, используемые в API модели OpenMP.  
+ [Справочник по библиотеке](../../parallel/openmp/reference/openmp-library-reference.md)  
+ Ссылки на конструкции, используемые в OpenMP API.  
   
- [C and C\+\+ Application Program Interface](../../parallel/openmp/openmp-c-and-cpp-application-program-interface.md)  
- Обсуждается API OpenMP c и C\+\+, такие как зарегистрировано в спецификации версии 2.0 из доска проверкам архитектуры OpenMP.  
+ [C и C++ интерфейс прикладного программирования](../../parallel/openmp/openmp-c-and-cpp-application-program-interface.md)  
+ Описывает OpenMP C и C++ API, как описано в спецификации версии 2.0 на доске OpenMP архитектура проверки.  
   
-## Связанные подразделы  
- [\/openmp \(включение поддержки OpenMP 2.0\)](../../build/reference/openmp-enable-openmp-2-0-support.md)  
- Указывает компилятору обрабатывать `#pragma omp`.  
+## <a name="related-sections"></a>Связанные разделы  
+ [/ OpenMP (Включение поддержки OpenMP 2.0)](../../build/reference/openmp-enable-openmp-2-0-support.md)  
+ Указывает компилятору на необходимость обработки `#pragma omp`.  
   
- [Предустановленный макрос](../../preprocessor/predefined-macros.md)  
- Имена предопределенный ANSI c и макросы реализации microsoft C\+\+.  Эти макрос \_OPENMP.
+ [Предопределенные макросы](../../preprocessor/predefined-macros.md)  
+ Имена предопределенных макросов реализации ANSI C и C++ Корпорация Майкрософт. В разделе _OPENMP-макрос.

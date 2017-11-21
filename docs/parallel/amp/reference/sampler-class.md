@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-windows
+ms.technology: cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -18,36 +17,20 @@ f1_keywords:
 - AMP_GRAPHICS/concurrency::sampler::graphics::address_mode
 - AMP_GRAPHICS/concurrency::sampler::graphics::border_color
 - AMP_GRAPHICS/concurrency::sampler::graphics::filter_mode
-dev_langs:
-- C++
+dev_langs: C++
 ms.assetid: 9a6a9807-497d-402d-b092-8c4d86275b80
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 5faef5bd1be6cc02d6614a6f6193c74167a8ff23
-ms.openlocfilehash: f81208e40cb2a211b714af1efe801e81cd567374
-ms.contentlocale: ru-ru
-ms.lasthandoff: 03/17/2017
-
+ms.openlocfilehash: a925f476d67ac4bc5abd2270f6c0b96df67c4466
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="sampler-class"></a>Класс sampler
-Класс выборки собираются данные конфигурации выборки для дискретизации текстур.  
+Класс пробы агрегирует данные конфигурации выборки, используемый для дискретизации текстур.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -67,9 +50,9 @@ class sampler;
   
 |Имя|Описание|  
 |----------|-----------------|  
-|[get_address_mode](#get_address_mode)|Возвращает `address_mode` , связанную с объектом выборки.|  
-|[get_border_color](#get_border_color)|Возвращает цвет границы, который связан с объектом выборки.|  
-|[get_filter_mode](#get_filter_mode)|Возвращает `filter_mode` , связанную с объектом выборки.|  
+|[get_address_mode](#get_address_mode)|Возвращает `address_mode` , связанную с объектом пробы.|  
+|[get_border_color](#get_border_color)|Возвращает цвет границы, связанный с объектом пробы.|  
+|[get_filter_mode](#get_filter_mode)|Возвращает `filter_mode` , связанную с объектом пробы.|  
   
 ### <a name="public-operators"></a>Открытые операторы  
   
@@ -81,7 +64,7 @@ class sampler;
   
 |Имя|Описание|  
 |----------|-----------------|  
-|[address_mode](#address_mode)|Возвращает адрес режим `sampler` объекта.|  
+|[address_mode](#address_mode)|Возвращает режим адрес `sampler` объекта.|  
 |[border_color](#border_color)|Возвращает цвет границы `sampler` объекта.|  
 |[filter_mode](#filter_mode)|Возвращает режим фильтра `sampler` объекта.|  
   
@@ -95,7 +78,7 @@ class sampler;
   
 ##  <a name="ctor"></a>Образец 
 
- Создает экземпляр класса [образец класса](sampler-class.md).  
+ Создает экземпляр класса [класс sampler](sampler-class.md).  
   
 ```  
 sampler() restrict(cpu);
@@ -145,14 +128,14 @@ sampler(// [6] move constructor
   
  `_Other`  
  [5] конструктор копий  
- `sampler` Объекта, чтобы скопировать в новый `sampler` экземпляра.  
+ `sampler` Объект для копирования в новый `sampler` экземпляра.  
   
  [6] конструктор перемещения  
- `sampler` Объект для перемещения в новый `sampler` экземпляра.  
+ `sampler` Объекта, чтобы переместить в новый `sampler` экземпляра.  
   
 ##  <a name="address_mode"></a>address_mode 
 
- Возвращает адрес режим `sampler` объекта.  
+ Возвращает режим адрес `sampler` объекта.  
   
 ```  
 __declspec(property(get= get_address_mode)) Concurrency::graphics::address_mode address_mode;  
@@ -176,14 +159,14 @@ __declspec(property(get= get_filter_mode)) Concurrency::graphics::filter_mode fi
   
 ##  <a name="get_address_mode"></a>get_address_mode 
 
- Возвращает режим фильтрации, настроенный для этого `sampler`.  
+ Возвращает режим фильтра, настроенный для этого `sampler`.  
   
 ```  
 Concurrency::graphics::address_mode get_address_mode() const __GPU;  
 ```  
   
 ### <a name="return-value"></a>Возвращаемое значение  
- Режим адресации, настроенного на пробу.  
+ Режим адрес, настроенный для образцом.  
   
 ##  <a name="get_border_color"></a>get_border_color 
 
@@ -198,18 +181,18 @@ Concurrency::graphics::float_4 get_border_color() const restrict(amp, cpu);
   
 ##  <a name="get_filter_mode"></a>get_filter_mode 
 
- Возвращает режим фильтрации, настроенный для этого `sampler`.  
+ Возвращает режим фильтра, настроенный для этого `sampler`.  
   
 ```  
 Concurrency::graphics::filter_mode get_filter_mode() const restrict(amp, cpu);
 ```  
   
 ### <a name="return-value"></a>Возвращаемое значение  
- Режим фильтрации, настроенный для пробы.  
+ Режим фильтра, настроенный для образцом.  
   
 ##  <a name="operator_eq"></a>оператор = 
 
- Присваивает значение другого объекта пробы существующий образец.  
+ Присваивает значение другого объекта пробы существующей пробы.  
   
 ```  
 sampler& operator= (// [1] copy assignment operator const sampler& _Other) restrict(amp,
@@ -222,15 +205,14 @@ sampler& operator= (// [2] move assingment operator sampler&& _Other) restrict(a
   
 ### <a name="parameters"></a>Параметры  
  `_Other`  
- [1] оператор присваивания копий  
- `sampler` Объекта для копирования в это `sampler`.  
+ [1] оператор присваивания копированием  
+ `sampler` Объект для копирования в этот `sampler`.  
   
  [2] оператор присваивания перемещения  
- `sampler` Объект переместиться в эту `sampler`.  
+ `sampler` Объектов для перемещения в это `sampler`.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
  Ссылка на этот экземпляр образца.  
   
 ## <a name="see-also"></a>См. также  
  [Пространство имен Concurrency::graphics](concurrency-graphics-namespace.md)
-

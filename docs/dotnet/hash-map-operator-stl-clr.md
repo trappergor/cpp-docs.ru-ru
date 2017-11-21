@@ -1,45 +1,43 @@
 ---
-title: "hash_map::operator(STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::hash_map::operator[]"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "operator[] - элемент [STL/CLR]"
+title: "hash_map::operator(STL/CLR) | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::hash_map::operator[]
+dev_langs: C++
+helpviewer_keywords: operator[] member [STL/CLR]
 ms.assetid: b0b8c1bd-4250-447d-9c69-3f8c34e9b6af
-caps.latest.revision: 16
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 14
+caps.latest.revision: "16"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: ae7a414f08a0bc40ab39c3835084a4456e02b685
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/24/2017
 ---
-# hash_map::operator(STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Сопоставляет ключ, связанный с его сопоставлянному значение.  
+# <a name="hashmapoperatorstlclr"></a>hash_map::operator(STL/CLR)
+Сопоставляет сопоставленных связанное с ним значение ключа.  
   
-## Синтаксис  
+## <a name="syntax"></a>Синтаксис  
   
 ```  
 mapped_type operator[](key_type key);  
 ```  
   
-#### Параметры  
- key  
- Значение ключа, которое необходимо найти.  
+#### <a name="parameters"></a>Параметры  
+ клавиша  
+ Искомое значение ключа.  
   
-## Заметки  
- Функции\-члены стремятся найти элемент с соответствующий заказ на `key`.  При обнаружении одно, возвращается сопоставляются связанное значение; в противном случае он содержит `value_type(``key``, mapped_type())` и возвращает соответствующее \(по умолчанию\) сопоставляются значению.  Он используется, чтобы искать сопоставляются значение заданного его связанный ключ, или убедиться, что запись существует для ключа, если не найдено.  
+## <a name="remarks"></a>Примечания  
+ Он стремится, чтобы найти элемент с соответствующим образом для функций-членов `key`. При обнаружении, он возвращает связанное значение сопоставленных; в противном случае он вставляет `value_type(key, mapped_type())` и возвращает связанный с ним значение сопоставлен (по умолчанию). Используется для поиска сопоставленных значение, заданное его связанный ключ или убедитесь, что запись существует для ключа, если он не найден.  
   
-## Пример  
+## <a name="example"></a>Пример  
   
 ```  
 // cliext_hash_map_operator_sub.cpp   
@@ -80,17 +78,20 @@ int main()
   
 ```  
   
-  **\[1\] \[2\] \[BC — 3\]**  
-**a \[c1\] \= 0**  
-**c1\] \[B \= 2**  
- **\[1\] \[0\] \[a B \[2\]C — 3\]**  
- **\[1\] \[A10\] \[2\] \[BC — 13\]**   
-## Требования  
- **Заголовок:**\<cliext\/hash\_map\>  
+```Output  
+ [a 1] [b 2] [c 3]  
+c1[A] = 0  
+c1[b] = 2  
+ [a 1] [A 0] [b 2] [c 3]  
+ [a 1] [A 10] [b 2] [c 13]  
+```  
+  
+## <a name="requirements"></a>Требования  
+ **Заголовок:** \<cliext/hash_map >  
   
  **Пространство имен:** cliext  
   
-## См. также  
- [hash\_map](../dotnet/hash-map-stl-clr.md)   
- [hash\_map::find](../dotnet/hash-map-find-stl-clr.md)   
- [hash\_map::insert](../Topic/hash_map::insert%20\(STL-CLR\).md)
+## <a name="see-also"></a>См. также  
+ [hash_map (STL/CLR)](../dotnet/hash-map-stl-clr.md)   
+ [hash_map::Find (STL/CLR)](../dotnet/hash-map-find-stl-clr.md)   
+ [hash_map::insert (STL/CLR)](../dotnet/hash-map-insert-stl-clr.md)

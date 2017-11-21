@@ -1,32 +1,30 @@
 ---
-title: "wire_marshal | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-f1_keywords: 
-  - "vc-attr.wire_marshal"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "wire_marshal attribute"
+title: "wire_marshal | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+f1_keywords: vc-attr.wire_marshal
+dev_langs: C++
+helpviewer_keywords: wire_marshal attribute
 ms.assetid: 244f9d72-776d-4ebd-b60a-cee600a126b5
-caps.latest.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 10
+caps.latest.revision: "10"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: aa35ba4b49e491ec8529c3067548dd1cde9b1dc1
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/24/2017
 ---
-# wire_marshal
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Определяет тип данных, который будет использоваться для передачи конкретного приложения вместо этого типа данных.  
+# <a name="wiremarshal"></a>wire_marshal
+Указывает тип данных, который будет использоваться для передачи данных вместо типа данных приложения.  
   
-## Синтаксис  
+## <a name="syntax"></a>Синтаксис  
   
 ```  
   
@@ -34,11 +32,11 @@ caps.handback.revision: 10
   
 ```  
   
-## Заметки  
- **wire\_marshal** Атрибут C\+\+ имеет ту же функциональность, что и  [wire\_marshal](http://msdn.microsoft.com/library/windows/desktop/aa367309) атрибут MIDL.  
+## <a name="remarks"></a>Примечания  
+ **Wire_marshal** языка C++ имеет ту же функциональность, что [wire_marshal](http://msdn.microsoft.com/library/windows/desktop/aa367309) языка MIDL.  
   
-## Пример  
- В следующем коде показано использование функции **wire\_marshal**.  
+## <a name="example"></a>Пример  
+ В следующем коде показано использование **wire_marshal**:  
   
 ```  
 // cpp_attr_ref_wire_marshal.cpp  
@@ -56,20 +54,19 @@ caps.handback.revision: 10
 [export, wire_marshal(TWO_X_TWO_BYTE_DATA)] typedef _FOUR_BYTE_DATA FOUR_BYTE_DATA;  
 ```  
   
-## Требования  
+## <a name="requirements"></a>Требования  
   
-### Контекст атрибута  
+### <a name="attribute-context"></a>Контекст атрибута  
   
 |||  
 |-|-|  
 |**Применение**|`typedef`|  
-|**Repeatable**|Нет|  
-|**Обязательные атрибуты**|None|  
-|**Недопустимые атрибуты**|None|  
+|**Повторяемый**|Нет|  
+|**Обязательные атрибуты**|Нет|  
+|**Недопустимые атрибуты**|Нет|  
   
- Дополнительные сведения о контекстах атрибута см. в разделе [Контексты атрибута](../windows/attribute-contexts.md).  
+ Дополнительные сведения о контекстах атрибутов см. в разделе [Контексты атрибутов](../windows/attribute-contexts.md).  
   
-## См. также  
- [IDL Attributes](../windows/idl-attributes.md)   
- [Typedef, Enum, Union, and Struct Attributes](../windows/typedef-enum-union-and-struct-attributes.md)   
- [Attributes Samples](http://msdn.microsoft.com/ru-ru/558ebdb2-082f-44dc-b442-d8d33bf7bdb8)
+## <a name="see-also"></a>См. также  
+ [Атрибуты IDL](../windows/idl-attributes.md)   
+ [Атрибуты Typedef, Enum, Union и Struct](../windows/typedef-enum-union-and-struct-attributes.md)   

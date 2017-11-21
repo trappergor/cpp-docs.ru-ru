@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-windows
+ms.technology: cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -454,48 +453,31 @@ f1_keywords:
 - concrt/Concurrency::details::_Timer::_Stop
 - concrt/Concurrency::details::_TaskCollectionBase::_M_pParent
 - agents/Concurrency::_Network_link_iterator::operator->
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - DWORD typedef
 - HANDLE typedef
 - LPSECURITY_ATTRIBUTES typedef
 - HRESULT typedef
 ms.assetid: a057c776-7caa-4605-8f33-9815cf6f9b27
-caps.latest.revision: 15
+caps.latest.revision: "15"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: fa774c7f025b581d65c28d65d83e22ff2d798230
-ms.openlocfilehash: 88de4e73c29e222009a4ca90b3b22c4701b21e70
-ms.contentlocale: ru-ru
-ms.lasthandoff: 02/24/2017
-
+ms.openlocfilehash: b97785b2853b278e93f5f13aa2c40741d10c9d9c
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="reference-concurrency-runtime"></a>Справочные материалы (среда выполнения с параллелизмом)
-В этом разделе содержатся справочные сведения для среды выполнения с параллелизмом.
-**Примечание** стандарт языка C++ предполагает использование идентификаторов, начинающихся со знака подчеркивания (_) для реализаций, как библиотеки. Не используйте такие имена в коде. Поведение элементов кода, имена которых соответствуют этому соглашению, не гарантируется и может быть изменено в будущем. По этим причинам такие элементы кода исключены из документации, среда выполнения с параллелизмом.
+Этот раздел содержит справочные сведения о среде выполнения с параллелизмом.
+**Примечание** стандарт языка C++ резервирует использование идентификаторов, начинающиеся с символа подчеркивания (_) для реализаций, таких как библиотеки. Не используйте такие имена в коде. Поведение элементов кода, имена которых соответствуют этому соглашению, не гарантируется и может быть изменено в будущем. По этим причинам такие элементы кода, не включаются в документации среда выполнения с параллелизмом.
 
 ## <a name="in-this-section"></a>Содержание
-[пространство имен Concurrency](concurrency-namespace.md) concurrency-пространство имен предоставляет классы и функции, предоставляющие доступ к среда выполнения с параллелизмом, является платформой параллельного программирования для C++. Дополнительные сведения см.в статье [Concurrency Runtime](../concurrency-runtime.md) (Среда выполнения с параллелизмом).
+[пространство имен Concurrency](concurrency-namespace.md) concurrency-пространство имен предоставляет классы и функции, предоставляющие доступ к среде выполнения с параллелизмом, является платформой параллельного программирования для C++. Дополнительные сведения см.в статье [Concurrency Runtime](../concurrency-runtime.md) (Среда выполнения с параллелизмом).
 
 [пространство имен std](std-namespace.md)
-[имен пространство stdx](stdx-namespace.md)
-
+[пространство имен stdx](stdx-namespace.md)
 
 

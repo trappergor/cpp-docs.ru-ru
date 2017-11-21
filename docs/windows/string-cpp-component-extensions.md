@@ -1,41 +1,39 @@
 ---
-title: "String (расширения компонентов C++) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "/clr - параметр компилятора [C++], поддержка строк"
-  - "поддержка строк с использованием /clr"
+title: "Строка (расширения компонентов C++) | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+dev_langs: C++
+helpviewer_keywords:
+- string support with /clr
+- /clr compiler option [C++], string support
 ms.assetid: c695f965-9be0-4e20-9661-373bfee6557e
-caps.latest.revision: 19
-caps.handback.revision: 17
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "19"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 3fb87578a0046a70da9a68ab6a1a08b2d6a9f4d1
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/24/2017
 ---
-# String (расширения компонентов C++)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Компилятор Visual C\+\+ поддерживает *строки*, являющиеся объектами, которые представляют текст как последовательность символов.  Visual C\+\+ поддерживает строковые переменные, значения которых являются неявными, и литералы, значением которых является явная строка в кавычках.  
+# <a name="string--c-component-extensions"></a>String (расширения компонентов C++)
+Компилятор Visual C++ поддерживает *строки*, которые являются объекты, представляющие текст как последовательность знаков. Visual C++ поддерживает строковые переменные с неявными значениями и литералы, значения которых — явные строки в кавычках.  
   
-## Все среды выполнения  
- Среда выполнения Windows и среда CLR представляют строки как объекты, чья выделяемая память управляется автоматически.  Это значит, что не требуется явно отменять память для строки, если переменная выходит за пределы области видимости или приложение завершается.  Чтобы указать, что время существования объекта строки должно управляться автоматически, объявите тип string с помощью модификатора [дескриптор\-объекта \(^\)](../windows/handle-to-object-operator-hat-cpp-component-extensions.md).  
+## <a name="all-runtimes"></a>Все среды выполнения  
+ Среда выполнения Windows и среда CLR представляют строки в виде объектов, управление выделяемой памятью которых осуществляется автоматически. Это значит, что в случае выхода строковой переменной за пределы области видимости или завершении работы приложения явно отменять память для строки не требуется. Чтобы указать время существования строкового объекта должно осуществляться автоматически, следует объявить тип string с [дескриптор объекта (^)](../windows/handle-to-object-operator-hat-cpp-component-extensions.md) модификатор.  
   
-## среда выполнения Windows  
- Архитектура среды выполнения Windows требует Visual C\+\+ реализовывать тип данных `String` в пространстве имен `Platform`.  Для удобства Visual C\+\+ также предоставляет тип данных `string`, синоним для `Platform::String` в пространстве имен `default`.  
+## <a name="windows-runtime"></a>Среда выполнения Windows  
+ Архитектура среды выполнения Windows требует от Visual C++ реализации типа данных `String` в пространстве имен `Platform`. Для удобства в Visual C++ также предусмотрен тип данных `string`, являющийся синонимом для `Platform::String` в пространстве имен `default`.  
   
-### Синтаксис  
+### <a name="syntax"></a>Синтаксис  
   
 ```cpp  
-  
 // compile with /ZW  
 using namespace Platform;  
 using namespace default;  
@@ -45,45 +43,43 @@ using namespace default;
   
 ```  
   
-### Примечания  
- Дополнительные сведения и примеры со строками см. в разделе [Platform::String, std::wstring, and Literals \(Platform\)](http://msdn.microsoft.com/ru-ru/ec92fbc6-edf3-4137-a85e-8e29bdb857a8).  
+### <a name="remarks"></a>Примечания  
+ Дополнительные сведения и примеры о строках см. в разделе [Platform::String, std::wstring и литералы (платформы)](http://msdn.microsoft.com/en-us/ec92fbc6-edf3-4137-a85e-8e29bdb857a8)  
   
-### Требования  
- Параметр компилятора: **\/ZW**  
+### <a name="requirements"></a>Требования  
+ Параметр компилятора: **/ZW**  
   
-## Среда CLR  
- В этом разделе рассматривается, как компилятор Visual C\+\+ обрабатывает строковые литералы при запуске с помощью параметра компилятора **\/clr**.  Для использования **\/clr**, необходимо использовать среду CLR, синтаксис C\+\+\/CLI и управляемые объекты.  Дополнительные сведения о **\/clr** см. в разделе [\/clr \(компиляция CLR\)](../build/reference/clr-common-language-runtime-compilation.md).  
+## <a name="common-language-runtime"></a>Среда CLR  
+ В этом разделе обсуждается, как компилятор Visual C++ обрабатывает строковых литералов при запуске с помощью **/CLR** параметр компилятора. Для использования **/CLR**, необходимо также использовать среду CLR, C + +/ CLI синтаксис и управляемых объектов. Дополнительные сведения о **/CLR**, в разделе [/CLR (компиляция CLR)](../build/reference/clr-common-language-runtime-compilation.md).  
   
- При компилировании с **\/clr**, компилятор преобразует строковые литералы в строки типа <xref:System.String>.  Для сохранения обратной совместимости с существующим кодом есть два исключения:  
+ При компиляции с параметром **/CLR**, компилятор преобразует строковые литералы в строки типа <xref:System.String>. Для сохранения обратной совместимости с существующим кодом у этого правила есть два исключения:  
   
--   Обработка исключений.  Если возникает строковый литерал, компилятор будет перехватывать его как строковый литерал.  
+-   Обработка исключений. Если появляется строковый литерал, компилятор перехватывает его как строковый литерал.  
   
--   Вывод шаблона.  Если строковый литерал передается в качестве аргумента шаблона, компилятор не преобразует его в <xref:System.String>.  Обратите внимание, что строковые литералы, переданные как универсальный аргумент, будут повышены до <xref:System.String>.  
+-   Определение шаблона. Если строковый литерал передается в качестве аргумента шаблона, компилятор не преобразует его в <xref:System.String>. Обратите внимание, что строковые литералы, переданные в качестве универсального аргумента, повышаются до <xref:System.String>.  
   
- Компилятор также имеет встроенную поддержку трех операторов, которые можно переопределить для изменения их поведения.  
+ В компиляторе также есть встроенная поддержка трех операторов, которые можно переопределять для настройки их поведения:  
   
--   System::String ^ operator \+\( System::String, System::String\);  
+-   System::String ^ operator +( System::String, System::String);  
   
--   System::String ^ operator \+\( System::Object, System::String\);  
+-   System::String ^ operator +( System::Object, System::String);  
   
--   System::String ^ operator \+\( System::String, System::Object\);  
+-   System::String ^ operator +( System::String, System::Object);  
   
- После передачи <xref:System.String>, компилятор будет упаковывать, если необходимо, а затем сцеплять объект \(с ToString\) со строкой.  
-  
- При компилировании с **\/clr:oldSyntax**, строковые литералы не будут преобразованы в <xref:System.String>.  
+ После передачи <xref:System.String> компилятор при необходимости упаковывает, а затем объединяет объект (с помощью ToString) со строкой.  
   
 > [!NOTE]
->  Курсор \("^"\) означает, что объявленная переменная является дескриптором управляемого объекта C\+\+\/CLI.  
+>  Курсор ("^") означает, что объявленная переменная является дескриптором управляемого объекта C++/CLI.  
   
- Дополнительные сведения см. в разделе [Строковые и символьные литералы](../cpp/string-and-character-literals-cpp.md).  
+ Дополнительные сведения см. [строковые и символьные литералы](../cpp/string-and-character-literals-cpp.md).  
   
-### Требования  
- Параметр компилятора: **\/clr**  
+### <a name="requirements"></a>Требования  
+ Параметр компилятора: **/clr**  
   
-### Примеры  
+### <a name="examples"></a>Примеры  
  **Пример**  
   
- В следующем примере кода демонстрируется сцепление и сравнение строк.  
+ В следующем примере кода демонстрируется объединение и сравнение строк.  
   
 ```cpp  
 // string_operators.cpp  
@@ -140,24 +136,41 @@ int main() {
 }  
 ```  
   
- **Output**  
+ **Вывод**  
   
-  **abcdef**  
- **abcghi**  
- **ghiabc**  
- **c**  
- **abcdefghi**  
- **abczzz**  
- **abc1**  
- **abc97**  
- **abc3.1**  
- **abcdef**  
- **a и b равны**  
- **a и b не равны**  
- **abc**  
- **n пусто** **Пример**  
+```Output  
+abcdef  
   
- В следующем примере показано, что можно перегружать предоставленные компилятором операции, и что компилятор будет искать перегрузку функции на основе типа <xref:System.String>.  
+abcghi  
+  
+ghiabc  
+  
+c  
+  
+abcdefghi  
+  
+abczzz  
+  
+abc1  
+  
+abc97  
+  
+abc3.1  
+  
+abcdef  
+  
+a and b are equal  
+  
+a and b are not equal  
+  
+abc  
+  
+n is empty  
+```  
+  
+ **Пример**  
+  
+ В следующем примере показано, что предоставляемые компилятором операторы можно перегружать, и что компилятор будет искать перегрузку функции на основе типа <xref:System.String>.  
   
 ```cpp  
 // string_operators_2.cpp  
@@ -203,15 +216,23 @@ int main() {
 }  
 ```  
   
- **Output**  
+ **Вывод**  
   
-  **overloaded \+\(String ^ a, String ^ b\)**   
- **overloaded \+\(String ^ a, Object ^ b\)**   
- **overloaded \+\(Object ^ a, String ^ b\)**   
- **String ^ a**  
- **const char \* a** **Пример**  
+```Output  
+overloaded +(String ^ a, String ^ b)   
   
- Следующий пример демонстрирует, что компилятор делает различия между собственными строками и строками <xref:System.String>.  
+overloaded +(String ^ a, Object ^ b)   
+  
+overloaded +(Object ^ a, String ^ b)   
+  
+String ^ a  
+  
+const char * a  
+```  
+  
+ **Пример**  
+  
+ В следующем примере показано, что компилятор различает собственные строки и строки <xref:System.String>.  
   
 ```cpp  
 // string_operators_3.cpp  
@@ -250,13 +271,19 @@ int main() {
 }  
 ```  
   
- **Output**  
+ **Вывод**  
   
-  **char \***  
- **String^ str**  
- **System.SByte\***  
- **System.String**   
-## См. также  
+```Output  
+char *  
+  
+String^ str  
+  
+System.SByte*  
+  
+System.String  
+```  
+  
+## <a name="see-also"></a>См. также  
  [Расширения компонентов для платформ среды выполнения](../windows/component-extensions-for-runtime-platforms.md)   
  [Строковые и символьные литералы](../cpp/string-and-character-literals-cpp.md)   
- [\/clr \(компиляция CLR\)](../build/reference/clr-common-language-runtime-compilation.md)
+ [/ CLR (компиляция CLR)](../build/reference/clr-common-language-runtime-compilation.md)

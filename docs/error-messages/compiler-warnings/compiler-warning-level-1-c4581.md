@@ -1,37 +1,35 @@
 ---
-title: "Предупреждение компилятора (уровень 1) C4581 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C4581"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C4581"
+title: "Предупреждение (уровень 1) C4581 компилятора | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords: C4581
+dev_langs: C++
+helpviewer_keywords: C4581
 ms.assetid: 598bcd87-257d-4eb3-94e4-15bb31aadc99
-caps.latest.revision: 12
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 12
+caps.latest.revision: "12"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: 0f5c8e5c103c7da2cca580fb4f2c12f7ae25dd89
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/24/2017
 ---
-# Предупреждение компилятора (уровень 1) C4581
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-нерекомендуемое поведение: "строка 1" заменяется на "строка 2" для обработки атрибута  
+# <a name="compiler-warning-level-1-c4581"></a>Предупреждение компилятора (уровень 1) C4581
+Рекомендуется использовать поведение: «string1» заменить «строка 2» для обработки атрибута  
   
- Данная ошибка может возникать в результате действий по обеспечению совместимости компилятора с Visual C\+\+ 2005: проверка параметров для атрибутов Visual C\+\+.  
+ Эта ошибка может возникать в результате действий по обеспечению совместимости компилятора с Visual C++ 2005: проверка параметров для атрибутов Visual C++.  
   
- В предыдущих версиях значения атрибутов принимались вне зависимости от того, были они заключены в кавычки или нет.  Если значение является перечислением, оно не должно заключаться в кавычки.  
+ В предыдущих версиях значения атрибутов, приняты ли они были заключены в кавычки. Если значение является перечислением, оно не должно заключаться в кавычки.  
   
-## Пример  
- В следующем примере продемонстрировано возникновение ошибки C4581.  
+## <a name="example"></a>Пример  
+ Следующий пример приводит к возникновению ошибки C4581.  
   
 ```  
 // C4581.cpp  

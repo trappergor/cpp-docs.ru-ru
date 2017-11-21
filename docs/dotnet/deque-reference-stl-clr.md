@@ -1,41 +1,39 @@
 ---
-title: "deque::reference (STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::deque::reference"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "ссылочный элемент [STL/CLR]"
+title: "deque::Reference (STL/CLR) | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::deque::reference
+dev_langs: C++
+helpviewer_keywords: reference member [STL/CLR]
 ms.assetid: 059f023b-f60c-451b-8944-162cc14ca862
-caps.latest.revision: 17
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 15
+caps.latest.revision: "17"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 1e91745857158666ca85f2d1c11ba3e3d266f23e
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/24/2017
 ---
-# deque::reference (STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="dequereference-stlclr"></a>deque::reference (STL/CLR)
 Тип ссылки на элемент.  
   
-## Синтаксис  
+## <a name="syntax"></a>Синтаксис  
   
 ```  
 typedef value_type% reference;  
 ```  
   
-## Заметки  
- Описывает тип ссылку на элемент.  
+## <a name="remarks"></a>Примечания  
+ Тип описывает ссылку на элемент.  
   
-## Пример  
+## <a name="example"></a>Пример  
   
 ```  
 // cliext_deque_reference.cpp   
@@ -72,14 +70,17 @@ int main()
   
 ```  
   
-  **a b c**  
- **B C.**   
-## Требования  
- **Заголовок:**\<cliext\/deque\>  
+```Output  
+a b c  
+A B C  
+```  
+  
+## <a name="requirements"></a>Требования  
+ **Заголовок:** \<cliext/deque >  
   
  **Пространство имен:** cliext  
   
-## См. также  
- [deque](../dotnet/deque-stl-clr.md)   
- [deque::const\_reference](../dotnet/deque-const-reference-stl-clr.md)   
- [deque::value\_type](../Topic/deque::value_type%20\(STL-CLR\).md)
+## <a name="see-also"></a>См. также  
+ [deque (STL/CLR)](../dotnet/deque-stl-clr.md)   
+ [deque::const_reference (STL/CLR)](../dotnet/deque-const-reference-stl-clr.md)   
+ [deque::value_type (STL/CLR)](../dotnet/deque-value-type-stl-clr.md)

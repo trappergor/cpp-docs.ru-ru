@@ -1,52 +1,51 @@
 ---
-title: "__wbinvd | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "__wbinvd"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Встроенная функция __wbinvd"
-  - "Инструкция wbinvd"
+title: "__wbinvd | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: __wbinvd
+dev_langs: C++
+helpviewer_keywords:
+- __wbinvd intrinsic
+- wbinvd instruction
 ms.assetid: 628d0981-39e5-49e1-bd43-706d123af121
-caps.latest.revision: 11
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 11
+caps.latest.revision: "11"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: 6efbb1388974e74e76c0f4ec88a3ffdcfe2ee6f3
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/24/2017
 ---
-# __wbinvd
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-**Только для систем Microsoft**  
+# <a name="wbinvd"></a>__wbinvd
+**Блок, относящийся только к системам Майкрософт**  
   
- Создает выполнять обратную запись, и сделать недействительным инструкция кэша \(`wbinvd`\).  
+ Создает режим обратной записи и сделать недействительным кэш (`wbinvd`) инструкции.  
   
-## Синтаксис  
+## <a name="syntax"></a>Синтаксис  
   
 ```  
 void __wbinvd(void);  
 ```  
   
-## Требования  
+## <a name="requirements"></a>Требования  
   
-|Встроенный объект|Архитектура|  
-|-----------------------|-----------------|  
-|`__wbinvd`|x86, [!INCLUDE[vcprx64](../Token/vcprx64_md.md)]|  
+|Встроенная функция|Архитектура|  
+|---------------|------------------|  
+|`__wbinvd`|x86, [!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|  
   
- **Файл заголовка** \<intrin.h\>  
+ **Файл заголовка** \<intrin.h >  
   
-## Заметки  
- Эта функция доступна только в режиме ядра с уровнем прав доступа \(ПОЛНОЕ\) 0, а процедура доступна только в качестве внутреннего элемента.  
+## <a name="remarks"></a>Примечания  
+ Эта функция доступна только в режиме ядра с уровнем привилегий (Диалогового) 0, а процедура доступна только как встроенная функция.  
   
-## ЭЛЕМЕНТ, относящийся Майкрософт  
+**Завершение блока, относящегося только к системам Майкрософт**  
   
-## См. также  
- [Встроенные объекты компилятора](../intrinsics/compiler-intrinsics.md)
+## <a name="see-also"></a>См. также  
+ [Встроенные инструкции компилятора](../intrinsics/compiler-intrinsics.md)

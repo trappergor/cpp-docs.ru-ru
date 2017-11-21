@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-windows
+ms.technology: cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
@@ -26,38 +25,22 @@ f1_keywords:
 - ATLSNAP/ATL::CSnapInPropertyPageImpl::QuerySiblings
 - ATLSNAP/ATL::CSnapInPropertyPageImpl::SetModified
 - ATLSNAP/ATL::CSnapInPropertyPageImpl::m_psp
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - snap-ins, property pages
 - snap-ins
 - property pages, ATL
 - CSnapInPropertyPageImpl class
 ms.assetid: 75bdce5a-985e-4166-bd44-493132e023c4
-caps.latest.revision: 20
+caps.latest.revision: "20"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3f91eafaf3b5d5c1b8f96b010206d699f666e224
-ms.openlocfilehash: 57f43a1ab82c2441d271ac88ef712309bb1315dd
-ms.contentlocale: ru-ru
-ms.lasthandoff: 04/01/2017
-
+ms.openlocfilehash: 230ebd2543a559712d491d5acacdbc1f660b3450
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="csnapinpropertypageimpl-class"></a>Класс CSnapInPropertyPageImpl
 Этот класс предоставляет методы для реализации объекта страницы свойств оснастки.  
@@ -91,7 +74,7 @@ CSnapInPropertyPageImpl : public CDialogImplBase
 |[CSnapInPropertyPageImpl::OnQueryCancel](#onquerycancel)|Вызывается платформой, когда пользователь щелкает **отменить** кнопки и до отмены.|  
 |[CSnapInPropertyPageImpl::OnReset](#onreset)|Вызывается платформой, когда пользователь щелкает **Сброс** кнопки при использовании листа свойств мастера.|  
 |[CSnapInPropertyPageImpl::OnSetActive](#onsetactive)|Вызывается платформой, когда текущая страница становится активным.|  
-|[CSnapInPropertyPageImpl::OnWizardBack](#onwizardback)|Вызывается платформой, когда пользователь щелкает **Назад** кнопки при использовании листа свойств мастера.|  
+|[CSnapInPropertyPageImpl::OnWizardBack](#onwizardback)|Вызывается платформой, когда пользователь щелкает **обратно** кнопки при использовании листа свойств мастера.|  
 |[CSnapInPropertyPageImpl::OnWizardFinish](#onwizardfinish)|Вызывается платформой, когда пользователь щелкает **Готово** кнопки при использовании листа свойств мастера.|  
 |[CSnapInPropertyPageImpl::OnWizardNext](#onwizardnext)|Вызывается платформой, когда пользователь щелкает `Next` кнопки при использовании листа свойств мастера.|  
 |[CSnapInPropertyPageImpl::QuerySiblings](#querysiblings)|Пересылает текущее сообщение для всех страниц свойств.|  
@@ -163,7 +146,7 @@ PROPSHEETPAGE m_psp;
 ### <a name="remarks"></a>Примечания  
  Используйте эту структуру для инициализации внешний вид страницы свойств, после его создания.  
   
- Дополнительные сведения об этой структуры, в том числе список его элементов. в разделе [PROPSHEETPAGE](http://msdn.microsoft.com/library/aa815151) в [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
+ Дополнительные сведения об этой структуры, в том числе список его элементов. в разделе [PROPSHEETPAGE](http://msdn.microsoft.com/library/aa815151) в Windows SDK.  
   
 ##  <a name="onapply"></a>CSnapInPropertyPageImpl::OnApply  
  Эта функция-член вызывается, когда пользователь щелкает **ОК** или **применить** кнопки.  
@@ -260,7 +243,7 @@ BOOL OnWizardBack();
   
 -   значение -1, чтобы предотвратить изменение страницы.  
   
- Чтобы перейти на страницу, отличном от того, далее, возвращают идентификатор для отображения диалогового окна.  
+ Чтобы перейти на страницу, отличном от того, далее, возвращайте идентификатор для отображения диалогового окна.  
   
 ### <a name="remarks"></a>Примечания  
  Переопределить эту функцию-член для указания некоторые действия, когда должен выполнить пользователь **обратно** кнопки.  
@@ -291,7 +274,7 @@ BOOL OnWizardNext();
   
 -   значение -1, чтобы предотвратить изменение страницы.  
   
- Чтобы перейти на страницу, отличном от того, далее, возвращают идентификатор для отображения диалогового окна.  
+ Чтобы перейти на страницу, отличном от того, далее, возвращайте идентификатор для отображения диалогового окна.  
   
 ### <a name="remarks"></a>Примечания  
  Переопределить эту функцию-член для указания некоторые действия, когда должен выполнить пользователь `Next` кнопки.  
@@ -332,4 +315,3 @@ void SetModified(BOOL bChanged = TRUE);
   
 ## <a name="see-also"></a>См. также  
  [Общие сведения о классе](../../atl/atl-class-overview.md)
-

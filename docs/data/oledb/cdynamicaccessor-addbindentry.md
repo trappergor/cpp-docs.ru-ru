@@ -1,56 +1,55 @@
 ---
-title: "CDynamicAccessor::AddBindEntry | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "ATL::CDynamicAccessor::AddBindEntry"
-  - "AddBindEntry"
-  - "CDynamicAccessor.AddBindEntry"
-  - "CDynamicAccessor::AddBindEntry"
-  - "ATL.CDynamicAccessor.AddBindEntry"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "AddBindEntry - метод"
+title: "CDynamicAccessor::AddBindEntry | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- ATL::CDynamicAccessor::AddBindEntry
+- AddBindEntry
+- CDynamicAccessor.AddBindEntry
+- CDynamicAccessor::AddBindEntry
+- ATL.CDynamicAccessor.AddBindEntry
+dev_langs: C++
+helpviewer_keywords: AddBindEntry method
 ms.assetid: 8f139376-7db3-4193-ba3b-63fe938ffa79
-caps.latest.revision: 8
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 9b11409a7bbff2ef3f9c89f62fd361755d99f5d5
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/24/2017
 ---
-# CDynamicAccessor::AddBindEntry
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Добавляет запись привязки к выходным столбцам.  
+# <a name="cdynamicaccessoraddbindentry"></a>CDynamicAccessor::AddBindEntry
+Добавляет запись привязки выходных столбцов.  
   
-## Синтаксис  
+## <a name="syntax"></a>Синтаксис  
   
 ```  
   
-      HRESULT AddBindEntry(   
-   const DBCOLUMNINFO& info    
+      HRESULT AddBindEntry(   
+   const DBCOLUMNINFO& info    
 ) throw( );  
 ```  
   
-#### Параметры  
+#### <a name="parameters"></a>Параметры  
  `info`  
- \[in\] структуре **DBCOLUMNINFO**, содержащая сведения о столбцах.  В разделе «структуры DBCOLUMNINFO» в разделе [IColumnsInfo::GetColumnInfo](https://msdn.microsoft.com/en-us/library/ms722704.aspx) в *справочнике программиста OLE DB*.  
+ [in] Объект **DBCOLUMNINFO** структуру, содержащую сведения о столбце. В разделе «Структуры DBCOLUMNINFO» в [IColumnsInfo::GetColumnInfo](https://msdn.microsoft.com/en-us/library/ms722704.aspx) в *справочника программиста OLE DB*.  
   
-## Возвращаемое значение  
- Один из стандартных значений `HRESULT`.  
+## <a name="return-value"></a>Возвращаемое значение  
+ Один из стандартных `HRESULT` значения.  
   
-## Заметки  
- Этот метод предоставляет доступ по умолчанию, созданный с `CDynamicAccessor` \(см. [Данные выборки инструкции](../../data/oledb/fetching-data.md)\).  
+## <a name="remarks"></a>Примечания  
+ Используйте этот метод, переопределяя метод доступа по умолчанию, созданных с помощью `CDynamicAccessor` (см. [инструкции по выполнению выборки данных?](../../data/oledb/fetching-data.md)).  
   
-## Требования  
+## <a name="requirements"></a>Требования  
  **Заголовок:** atldbcli.h  
   
-## См. также  
+## <a name="see-also"></a>См. также  
  [Класс CDynamicAccessor](../../data/oledb/cdynamicaccessor-class.md)

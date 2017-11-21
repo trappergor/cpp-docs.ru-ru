@@ -1,32 +1,30 @@
 ---
-title: "minus (STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::minus"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "minus - функция [STL/CLR]"
+title: "минус (STL/CLR) | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::minus
+dev_langs: C++
+helpviewer_keywords: minus function [STL/CLR]
 ms.assetid: 810ec6fd-ed0e-446b-b18e-1e612fb1fff4
-caps.latest.revision: 18
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 16
+caps.latest.revision: "18"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 76017cd4a63f6c8bd1956c6f871fc10027b9b6d1
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/24/2017
 ---
-# minus (STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Описание класса шаблона функтором, при вызове возвращает первый аргумент минус второе.  Он используется определяется объект функции с точки зрения его типа аргумента.  
+# <a name="minus-stlclr"></a>minus (STL/CLR)
+Класс шаблона описывает функтор, при вызове возвращает первый аргумент минус за секунду. Она используется укажите объект функции, с точки зрения его типа аргумента.  
   
-## Синтаксис  
+## <a name="syntax"></a>Синтаксис  
   
 ```  
 template<typename Arg>  
@@ -49,34 +47,34 @@ public:
     };  
 ```  
   
-#### Параметры  
- Аргумент  
+#### <a name="parameters"></a>Параметры  
+ Arg  
  Тип аргументов и возвращаемого значения.  
   
-## Функции\-члены  
+## <a name="member-functions"></a>Функции-члены  
   
 |Определение типа|Описание|  
-|----------------------|--------------|  
-|delegate\_type|Тип универсального метод\-делегата.|  
-|first\_argument\_type|Тип первого аргумента функтором.|  
-|result\_type|Тип результата функтором.|  
-|second\_argument\_type|Тип второго аргумента функтором.|  
+|---------------------|-----------------|  
+|delegate_type|Тип универсального метода-делегата.|  
+|first_argument_type|Тип первого аргумента функтор.|  
+|result_type|Тип результата функтор.|  
+|second_argument_type|Тип второго аргумента функтор.|  
   
 |Член|Описание|  
-|----------|--------------|  
-|отрицательный|Построение функтором.|  
+|------------|-----------------|  
+|minus|Создает функтор.|  
   
 |Оператор|Описание|  
-|--------------|--------------|  
-|operator\(\)|Вычисляет нужную функцию.|  
-|delegate\_type^ оператора|Возвращает функтором делегату.|  
+|--------------|-----------------|  
+|operator()|Вычисляет нужной функции.|  
+|delegate_type оператор ^|Приводит функтора к делегату.|  
   
-## Заметки  
- Описание класса шаблона функтором 2 — аргумента.  Он определяет оператор `operator()` члена, что, когда объект вызывается как функция возвращается первый аргумент минус второе.  
+## <a name="remarks"></a>Примечания  
+ Класс шаблона описывает функтор двумя аргументами. Он определяет оператор-член `operator()` , чтобы при вызове объекта как функцию, он возвращает первый аргумент минус за секунду.  
   
- Можно также передать объект в качестве аргумента функции, тип которого `delegate_type^` и он будет преобразован соответствующим образом.  
+ Объект также можно передать в качестве аргумента функции, тип которого является `delegate_type^` и он будет преобразован соответствующим образом.  
   
-## Пример  
+## <a name="example"></a>Пример  
   
 ```  
 // cliext_minus.cpp   
@@ -116,13 +114,16 @@ int main()
   
 ```  
   
-  **4 3**  
- **2 1**  
- **2 2**   
-## Требования  
- **Заголовок:**\<cliext\/functional\>  
+```Output  
+4 3  
+2 1  
+2 2  
+```  
+  
+## <a name="requirements"></a>Требования  
+ **Заголовок:** \<cliext и функционального >  
   
  **Пространство имен:** cliext  
   
-## См. также  
- [plus](../dotnet/plus-stl-clr.md)
+## <a name="see-also"></a>См. также  
+ [plus (STL/CLR)](../dotnet/plus-stl-clr.md)

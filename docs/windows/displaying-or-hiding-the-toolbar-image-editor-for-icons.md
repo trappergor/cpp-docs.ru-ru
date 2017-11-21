@@ -1,45 +1,46 @@
 ---
-title: "Displaying or Hiding the Toolbar (Image Editor for Icons) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Image editor [C++], toolbar"
-  - "toolbars [C++], showing"
-  - "toolbars [C++], hiding"
+title: "Отображение или скрытие панели инструментов (редактор изображений для значков) | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- Image editor [C++], toolbar
+- toolbars [C++], showing
+- toolbars [C++], hiding
 ms.assetid: 78d25184-a8f4-457f-aa6f-069a5a27bcf8
-caps.latest.revision: 11
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 7
+caps.latest.revision: "11"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 78755b526ba5073224c2c9942526b1e8d09e4860
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/24/2017
 ---
-# Displaying or Hiding the Toolbar (Image Editor for Icons)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Поскольку многие из инструментов для рисования доступны с [клавиатуры](../mfc/accelerator-keys-image-editor-for-icons.md), в некоторых случаях бывает полезно скрыть панель инструментов редактора изображений.  
+# <a name="displaying-or-hiding-the-toolbar-image-editor-for-icons"></a>Отображение или скрытие панели инструментов (редактор изображений для значков)
+Поскольку многие из инструментов рисования доступны из [клавиатуры](../windows/accelerator-keys-image-editor-for-icons.md), иногда полезно скрыть панель инструментов редактора изображений.  
   
-### Чтобы отобразить или скрыть панель инструментов редактор изображений  
+### <a name="to-display-or-hide-the-image-editor-toolbar"></a>Чтобы отобразить или скрыть панель инструментов редактора изображений  
   
-1.  В меню **Вид** щелкните **Панели инструментов**, а затем выберите **Редактор изображений**.  
+1.  На **представление** меню **панели инструментов** выберите **редактора изображений**.  
   
     > [!NOTE]
-    >  Элементы этой панели инструментов будут отображаться как недоступные, если файл изображения текущего проекта или решения не будет открыт в редакторе изображений.  См. раздел [Creating an Icon or Other Image](../mfc/creating-an-icon-or-other-image-image-editor-for-icons.md) для получения сведений о добавлении файлов изображений в проекты.  
+    >  Элементы этой панели инструментов будут отображаться как недоступные, если файл изображения из текущего проекта или решения не будет открыт в редакторе изображений. В разделе [создание значка или другие изображения](../windows/creating-an-icon-or-other-image-image-editor-for-icons.md), сведения о добавлении файлов изображений в проект.  
   
- Сведения о добавлении ресурсов в управляемые проекты см. в разделе [Ресурсы приложений](../Topic/Resources%20in%20Desktop%20Apps.md) *Руководства разработчика .NET Framework*. Сведения о том, как вручную добавлять файлы ресурсов в управляемые проекты, осуществлять доступ к ресурсам, отображать статические ресурсы и присваивать строки ресурсов свойствам см. в разделах [Пошаговое руководство. Локализация приложений Windows Forms](http://msdn.microsoft.com/ru-ru/9a96220d-a19b-4de0-9f48-01e5d82679e5) и [Walkthrough: Using Resources for Localization with ASP.NET](../Topic/Walkthrough:%20Using%20Resources%20for%20Localization%20with%20ASP.NET.md).  
+ Сведения о добавлении ресурсов в управляемые проекты см. в разделе [ресурсы в классических приложениях](https://msdn.microsoft.com/library/f45fce5x.aspx) в *руководства разработчика .NET Framework.* Сведения о вручную добавлять файлы ресурсов в управляемые проекты, осуществлять доступ к ресурсам, отображать статические ресурсы и присваивать строки ресурсов свойствам см. в разделе [Создание файлов ресурсов для приложений рабочего стола](https://msdn.microsoft.com/library/xbx3z216.aspx). Сведения о глобализации и локализации ресурсов в управляемых приложениях см. в разделе [Globalizing и локализация приложений .NET Framework](https://msdn.microsoft.com/library/h6270d0z.aspx).  
   
  Требования  
   
- None  
+ Нет  
   
-## См. также  
- [Окно "Цвета"](../Topic/Colors%20Window%20\(Image%20Editor%20for%20Icons\).md)   
- [Toolbar](../mfc/toolbar-image-editor-for-icons.md)   
- [Image Editor for Icons](../mfc/image-editor-for-icons.md)
+## <a name="see-also"></a>См. также  
+ [Окно "цвета"](../windows/colors-window-image-editor-for-icons.md)   
+ [Панель инструментов](../windows/toolbar-image-editor-for-icons.md)   
+ [Редактор изображений для значков](../windows/image-editor-for-icons.md)
+

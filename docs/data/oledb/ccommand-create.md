@@ -1,33 +1,32 @@
 ---
-title: "CCommand::Create | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "CCommand.Create"
-  - "CCommand::Create"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Create - метод [C++]"
+title: "CCommand::Create | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- CCommand.Create
+- CCommand::Create
+dev_langs: C++
+helpviewer_keywords: Create method [C++]
 ms.assetid: e4bede7a-68bd-491a-97f4-89b03d45cd24
-caps.latest.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 9
+caps.latest.revision: "9"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 425e86008b97defe50e2c47e099b3b21c900bc1c
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/24/2017
 ---
-# CCommand::Create
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Вызывает метод [CCommand::CreateCommand](../Topic/CCommand::CreateCommand.md), чтобы создать команду для указанного сеанса, а затем вызывает метод [ICommandText::SetCommandText](https://msdn.microsoft.com/en-us/library/ms709825.aspx), чтобы указать текст команды.  
+# <a name="ccommandcreate"></a>CCommand::Create
+Вызовы [CCommand::CreateCommand](../../data/oledb/ccommand-createcommand.md) для создания команды для указанного сеанса, затем вызывает метод [ICommandText::SetCommandText](https://msdn.microsoft.com/en-us/library/ms709825.aspx) для задания текста команды.  
   
-## Синтаксис  
+## <a name="syntax"></a>Синтаксис  
   
 ```  
   
@@ -43,27 +42,27 @@ HRESULT CCommandBase::Create(
 ) throw ( );  
 ```  
   
-#### Параметры  
+#### <a name="parameters"></a>Параметры  
  `session`  
- \[in\] сеанс, в котором a, чтобы создать команду.  
+ [in] Сеанс, для которого требуется создать команду.  
   
  `wszCommand`  
- \[in\] указатель на текст юникода командной строки.  
+ [in] Указатель на текст в Юникоде командной строки.  
   
  `szCommand`  
- \[in\] указатель на текст ANSI командной строки.  
+ [in] Указатель на текст ANSI командной строки.  
   
  `guidCommand`  
- \[in\] идентификатор GUID, определяющий синтаксис и общие правила для поставщика использовать при анализе текст команды.  Описание диалектов см. в разделе [ICommandText::GetCommandText](https://msdn.microsoft.com/en-us/library/ms709825.aspx) справочника *программиста OLE DB*.  
+ [in] GUID, который определяет синтаксис и общие правила для поставщика, используемого при синтаксическом анализе текста команды. Описание диалекта см. в разделе [ICommandText::GetCommandText](https://msdn.microsoft.com/en-us/library/ms709825.aspx) в *Справочник программиста OLE DB*.  
   
-## Возвращаемое значение  
- Стандартное `HRESULT`.  
+## <a name="return-value"></a>Возвращаемое значение  
+ Стандартный `HRESULT`.  
   
-## Заметки  
- Первая форма **Создать** принимает командную строку юникода.  Вторая форма **Создать** принимает командную строку ANSI \(для для обратной совместимости с существующими приложениями ANSI\).  
+## <a name="remarks"></a>Примечания  
+ Первая форма **создать** принимает командной строки в Юникоде. Во второй форме **создать** принимает командной строки ANSI (предоставляется для обеспечения обратной совместимости с существующими приложениями ANSI).  
   
-## Требования  
+## <a name="requirements"></a>Требования  
  **Заголовок:** atldbcli.h  
   
-## См. также  
+## <a name="see-also"></a>См. также  
  [Класс CCommand](../../data/oledb/ccommand-class.md)

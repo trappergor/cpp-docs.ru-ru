@@ -1,41 +1,39 @@
 ---
-title: "omp_get_num_procs | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "omp_get_num_procs"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "omp_get_num_procs OpenMP function"
+title: "omp_get_num_procs | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: omp_get_num_procs
+dev_langs: C++
+helpviewer_keywords: omp_get_num_procs OpenMP function
 ms.assetid: 14a10b8f-e59b-4211-a292-687648c9f760
-caps.latest.revision: 14
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 14
+caps.latest.revision: "14"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 4a90da24d9c780ebd59d8e15272ac66615bbb323
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/24/2017
 ---
-# omp_get_num_procs
-[!INCLUDE[vs2017banner](../../../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="ompgetnumprocs"></a>omp_get_num_procs
 Возвращает количество процессоров, доступных при вызове функции.  
   
-## Синтаксис  
+## <a name="syntax"></a>Синтаксис  
   
 ```  
 int omp_get_num_procs();  
 ```  
   
-## Заметки  
- Дополнительные сведения см. в разделе [3.1.5 omp\_get\_num\_procs Function](../../../parallel/openmp/3-1-5-omp-get-num-procs-function.md).  
+## <a name="remarks"></a>Примечания  
+ Дополнительные сведения см. в разделе [3.1.5 функция omp_get_num_procs](../../../parallel/openmp/3-1-5-omp-get-num-procs-function.md).  
   
-## Пример  
+## <a name="example"></a>Пример  
   
 ```  
 // omp_get_num_procs.cpp  
@@ -54,8 +52,11 @@ int main( )
 }  
 ```  
   
-  **\/\/Ожидает следующий результат, когда примере выполняется на компьютере 2 процессора:**  
-**2**  
-**2**   
-## См. также  
- [Functions](../../../parallel/openmp/reference/openmp-functions.md)
+```Output  
+// Expect the following output when the example is run on a two-processor machine:  
+2  
+2  
+```  
+  
+## <a name="see-also"></a>См. также  
+ [Функции](../../../parallel/openmp/reference/openmp-functions.md)

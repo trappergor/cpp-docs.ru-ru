@@ -1,36 +1,34 @@
 ---
-title: "auto_handle::operator= | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "auto_handle::operator="
-  - "msclr.auto_handle.operator="
-  - "msclr::auto_handle::operator="
-  - "auto_handle.operator="
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "auto_handle::operator="
+title: "auto_handle::operator = | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords:
+- auto_handle::operator=
+- msclr.auto_handle.operator=
+- msclr::auto_handle::operator=
+- auto_handle.operator=
+dev_langs: C++
+helpviewer_keywords: auto_handle::operator=
 ms.assetid: 503ca172-e766-4a78-af98-36fd48c931ee
-caps.latest.revision: 10
-caps.handback.revision: 8
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "10"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 49b05ad1fe25c7e5e99c02fdb0af3a554b324f42
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/24/2017
 ---
-# auto_handle::operator=
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Оператор присваивания.  
+# <a name="autohandleoperator"></a>auto_handle::operator=
+Оператор присвоения.  
   
-## Синтаксис  
+## <a name="syntax"></a>Синтаксис  
   
 ```  
 auto_handle<_element_type> % operator=(  
@@ -42,14 +40,14 @@ auto_handle<_element_type> % operator=(
 );  
 ```  
   
-#### Параметры  
+#### <a name="parameters"></a>Параметры  
  `_right`  
- `auto_handle`, чтобы присвоить текущий `auto_handle`.  
+ `auto_handle` Должен назначаться текущего `auto_handle`.  
   
-## Возвращаемое значение  
- Текущее `auto_handle`, теперь, `_right`.  
+## <a name="return-value"></a>Возвращаемое значение  
+ Текущий `auto_handle`, теперь владельца `_right`.  
   
-## Пример  
+## <a name="example"></a>Пример  
   
 ```  
 // msl_auto_handle_op_assign.cpp  
@@ -99,18 +97,21 @@ int main()
 }  
 ```  
   
-  **в конструкторе ClassA: сначала**  
-**Hello от первого суффикса\!**  
-**в конструкторе ClassA: second**  
-**Hello\! из второго B**  
-**в деструкторе ClassA: сначала**  
-**Hello из второго суффикса\!**  
-**done**  
-**в деструкторе ClassA: second**   
-## Требования  
- **Файл заголовка**\<msclr\\auto\_handle.h\>  
+```Output  
+in ClassA constructor: first  
+Hello from first A!  
+in ClassA constructor: second  
+Hello from second B!  
+in ClassA destructor: first  
+Hello from second A!  
+done  
+in ClassA destructor: second  
+```  
+  
+## <a name="requirements"></a>Требования  
+ **Файл заголовка** \<msclr\auto_handle.h >  
   
  **Пространство имен** msclr  
   
-## См. также  
- [Члены auto\_handle](../dotnet/auto-handle-members.md)
+## <a name="see-also"></a>См. также  
+ [Члены auto_handle](../dotnet/auto-handle-members.md)

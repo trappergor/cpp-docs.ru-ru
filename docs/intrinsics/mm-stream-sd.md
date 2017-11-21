@@ -1,35 +1,34 @@
 ---
-title: "_mm_stream_sd | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "_mm_stream_sd"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Встроенная функция _mm_stream_sd"
-  - "Инструкция movntsd"
+title: "_mm_stream_sd | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: _mm_stream_sd
+dev_langs: C++
+helpviewer_keywords:
+- _mm_stream_sd intrinsic
+- movntsd instruction
 ms.assetid: 2b4bea5e-e64e-45fa-9afc-88a2e4b82cfc
-caps.latest.revision: 14
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 12
+caps.latest.revision: "14"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: b5489fc1503a57011560a679d5e4f226279e4aa0
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/24/2017
 ---
-# _mm_stream_sd
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-**Только для систем Microsoft**  
+# <a name="mmstreamsd"></a>_mm_stream_sd
+**Блок, относящийся только к системам Майкрософт**  
   
- Записывает 64 бита данных в расположение в памяти без polluting кэши.  
+ Записывает данные в 64-разрядных расположение в памяти без избавляют кэшей.  
   
-## Синтаксис  
+## <a name="syntax"></a>Синтаксис  
   
 ```  
 void _mm_stream_sd(  
@@ -38,30 +37,30 @@ void _mm_stream_sd(
 );  
 ```  
   
-#### Параметры  
- \[out\]`Dest`  
- Указатель на место, где начальной записываются данные.  
+#### <a name="parameters"></a>Параметры  
+ [выходной] `Dest`  
+ Указатель на расположение, куда будет записан в источнике данных.  
   
- \[входящий\] `Source`  
- Битовое значение 128, содержащих `double`, записываемое в его битах снизу 64.  
+ [in] `Source`  
+ 128-разрядное значение, содержащее `double` значение для записи в его нижней 64 бита...  
   
-## Возвращаемое значение  
+## <a name="return-value"></a>Возвращаемое значение  
  Отсутствует.  
   
-## Требования  
+## <a name="requirements"></a>Требования  
   
-|Встроенный объект|Архитектура|  
-|-----------------------|-----------------|  
+|Встроенная функция|Архитектура|  
+|---------------|------------------|  
 |`_mm_stream_sd`|SSE4a|  
   
- **Файл заголовка** \<intrin.h\>  
+ **Файл заголовка** \<intrin.h >  
   
-## Заметки  
- Этот встроенный создает инструкцию `movntsd`.  Чтобы определить аппаратную поддержку этой инструкции вызовите внутреннего элемента `__cpuid` с `InfoType=0x80000001` и контрольный двоичный разряд 6 `CPUInfo[2] (ECX)`.  Этот бит 1, если оборудование поддерживает эту инструкцию, и 0 \- в противном случае.  
+## <a name="remarks"></a>Примечания  
+ Эта встроенная функция приводит к возникновению ошибки `movntsd` инструкции. Чтобы определить поддержку оборудования для данной инструкции, вызовите `__cpuid` встроенная функция с `InfoType=0x80000001` и проверьте бит 6 `CPUInfo[2] (ECX)`. Этот бит равен 1, если оборудование поддерживает эту инструкцию и 0 в противном случае.  
   
- Если запустить код, который использует внутренние `_mm_stream_sd` на оборудовании, не поддерживает инструкцию `movntsd` результаты становятся непредсказуемыми.  
+ При выполнении кода, использующего `_mm_stream_sd` на оборудовании, которое не поддерживает встроенные `movntsd` инструкции, результаты будут непредсказуемыми.  
   
-## Пример  
+## <a name="example"></a>Пример  
   
 ```  
 // Compile this sample with: /EHsc  
@@ -84,13 +83,15 @@ int main()
   
 ```  
   
-  **d \[0\] \= \-1 d \[1\] \= 1**   
-## ЭЛЕМЕНТ, относящийся Майкрософт  
- Авторские права 2007 предварительными микро\- Устройствами, Inc все права защищены.  Воспроизведено с разрешением от предварительных микро\- Устройств, Inc  
+```Output  
+d[0] = -1, d[1] = 1  
+```  
   
-## См. также  
- [\_mm\_stream\_ss](../Topic/_mm_stream_ss.md)   
- [\_mm\_store\_sd](http://msdn.microsoft.com/ru-ru/8e672d0d-0a96-45b9-a783-392a2457de42)   
- [\_mm\_sfence](http://msdn.microsoft.com/ru-ru/b6c0d18e-3628-4318-826b-45f66782e870)   
- [Streaming SIMD Extensions that Support the Cache](http://msdn.microsoft.com/ru-ru/8f03493a-d5f5-4457-892e-0b6540494872)   
- [Встроенные объекты компилятора](../intrinsics/compiler-intrinsics.md)
+**Завершение блока, относящегося только к системам Майкрософт**  
+ Авторские права, 2007 дополнительных устройств Micro, Inc. Все права защищены. Воспроизвести с разрешения Дополнительно Micro устройств, Inc.  
+  
+## <a name="see-also"></a>См. также  
+ [_mm_stream_ss](../intrinsics/mm-stream-ss.md)   
+ [_mm_store_sd](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_store_sd)   
+ [_mm_sfence](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_sfence)   
+ [Встроенные инструкции компилятора](../intrinsics/compiler-intrinsics.md)

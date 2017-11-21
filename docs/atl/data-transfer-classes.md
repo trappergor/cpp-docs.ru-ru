@@ -1,36 +1,36 @@
 ---
-title: "Data Transfer Classes | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "_U_STRINGorID"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "data transfer [C++]"
-  - "data transfer [C++], classes"
-  - "data transfer classes [C++]"
+title: "Передача данных классов (ATL) | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: _U_STRINGorID
+dev_langs: C++
+helpviewer_keywords:
+- data transfer [C++]
+- data transfer [C++], classes
+- data transfer classes [C++]
 ms.assetid: c10bcdc8-b90c-4c2a-9179-fd3de80461da
-caps.latest.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 5
+caps.latest.revision: "10"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 4492afe125546a73cbd7dc0851fc3ad275cef763
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/24/2017
 ---
-# Data Transfer Classes
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="data-transfer-classes"></a>Классы передачи данных
 Следующие классы поддерживают различные типы передачи данных:  
   
--   Передача данных [IDataObjectImpl](../atl/reference/idataobjectimpl-class.md) однородный обозреватель с помощью стандартных форматов для получения и задания сведений.  Обрабатывает уведомления об изменении данных, управление соединениями, чтобы advise приемникам.  
+-   [IDataObjectImpl](../atl/reference/idataobjectimpl-class.md) поддерживает унифицированная передача данных с помощью стандартных форматов для извлечения и установки данных. Уведомления об изменении данных дескрипторы по управления соединениями с приемников уведомлений.  
   
--   Асинхронный моникер [CBindStatusCallback](../Topic/CBindStatusCallback%20Class.md) позволяет отправлять и получать сведения об асинхронной передаче данных в и из объекта.  
+-   [CBindStatusCallback](../atl/reference/cbindstatuscallback-class.md) позволяет асинхронной моникера для отправки и получения сведений о асинхронную передачу данных в и из объекта.  
   
-## См. также  
- [Class Overview](../atl/atl-class-overview.md)
+## <a name="see-also"></a>См. также  
+ [Общие сведения о классе](../atl/atl-class-overview.md)
+

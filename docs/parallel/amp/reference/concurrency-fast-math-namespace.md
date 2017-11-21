@@ -4,42 +4,24 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-windows
+ms.technology: cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- amp_math/Concurrency::fast_math
-dev_langs:
-- C++
+f1_keywords: amp_math/Concurrency::fast_math
+dev_langs: C++
 ms.assetid: 54fed939-9902-49db-9f29-e98fd9821508
-caps.latest.revision: 9
+caps.latest.revision: "9"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 5faef5bd1be6cc02d6614a6f6193c74167a8ff23
-ms.openlocfilehash: d8a94b0911b772f4972416722757bec24a4826ed
-ms.contentlocale: ru-ru
-ms.lasthandoff: 03/17/2017
-
+ms.openlocfilehash: 14bdfdf5ab570567f78befd3c99bca5c56c5195e
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="concurrencyfastmath-namespace"></a>Пространство имен Concurrency::fast_math
-Функции в `fast_math` пространство имен имеет точность ниже, поддерживают только одинарной точности (`float`) и вызывать встроенные функции DirectX. Существуют две версии каждой функции, например `cos` и `cosf`. Обе версии, принимающие и возвращающие `float`, однако каждый вызов же DirectX встроенная функция.  
+Функции в `fast_math` пространство имен имеет точность ниже, поддерживают только одинарной точности (`float`) и вызывать встроенные функции DirectX. Существуют две версии каждой функции, например `cos` и `cosf`. Обе версии, принимающие и возвращающие `float`, однако каждый вызов одной DirectX встроенная функция.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -58,8 +40,8 @@ namespace fast_math;
 |[asin](concurrency-fast-math-namespace-functions.md#asin)|Вычисляет гиперболический арксинус аргумента|  
 |[asinf](concurrency-fast-math-namespace-functions.md#asinf)|Вычисляет гиперболический арксинус аргумента|  
 |[atan](concurrency-fast-math-namespace-functions.md#atan)|Вычисляет арктангенс аргумента.|  
-|[atan2](concurrency-fast-math-namespace-functions.md#atan2)|Вычисляет арктангенс _Y или _X|  
-|[atan2f](concurrency-fast-math-namespace-functions.md#atan2f)|Вычисляет арктангенс _Y или _X|  
+|[atan2](concurrency-fast-math-namespace-functions.md#atan2)|Вычисляет арктангенс _Y/_X|  
+|[atan2f](concurrency-fast-math-namespace-functions.md#atan2f)|Вычисляет арктангенс _Y/_X|  
 |[atanf](concurrency-fast-math-namespace-functions.md#atanf)|Вычисляет арктангенс аргумента.|  
 |[ceil](concurrency-fast-math-namespace-functions.md#ceil)|Вычисляет ceiling аргумента|  
 |[ceilf](concurrency-fast-math-namespace-functions.md#ceilf)|Вычисляет ceiling аргумента|  
@@ -79,31 +61,31 @@ namespace fast_math;
 |[fmaxf](concurrency-fast-math-namespace-functions.md#fmaxf)|Определите максимальное числовое значение аргументов|  
 |[fmin](concurrency-fast-math-namespace-functions.md#fmin)|Определите минимальное числовое значение аргументов|  
 |[fminf](concurrency-fast-math-namespace-functions.md#fminf)|Определите минимальное числовое значение аргументов|  
-|[fmod](concurrency-fast-math-namespace-functions.md#fmod)|Вычисляет остаток с плавающей запятой от _X или _Y|  
-|[fmodf](concurrency-fast-math-namespace-functions.md#fmodf)|Вычисляет остаток с плавающей запятой от _X или _Y|  
-|[frexp](concurrency-fast-math-namespace-functions.md#frexp)|Возвращает мантиссы и экспоненты _X|  
-|[frexpf](concurrency-fast-math-namespace-functions.md#frexpf)|Возвращает мантиссы и экспоненты _X|  
+|[fmod](concurrency-fast-math-namespace-functions.md#fmod)|Вычисляет остаток с плавающей запятой от _X/_Y|  
+|[fmodf](concurrency-fast-math-namespace-functions.md#fmodf)|Вычисляет остаток с плавающей запятой от _X/_Y|  
+|[frexp](concurrency-fast-math-namespace-functions.md#frexp)|Возвращает мантисса и степень из _X|  
+|[frexpf](concurrency-fast-math-namespace-functions.md#frexpf)|Возвращает мантисса и степень из _X|  
 |[isFinite](concurrency-fast-math-namespace-functions.md#isfinite)|Определяет, имеет ли аргумент конечное значение|  
 |[isinf](concurrency-fast-math-namespace-functions.md#isinf)|Определяет, является ли аргумент бесконечности|  
-|[isnan](concurrency-fast-math-namespace-functions.md#isnan)|Определяет, является ли аргумент значение NaN|  
-|[ldexp](concurrency-fast-math-namespace-functions.md#ldexp)|Вычисляет действительное число мантисса и степень|  
-|[ldexpf](concurrency-fast-math-namespace-functions.md#ldexpf)|Вычисляет действительное число мантисса и степень|  
-|[log](concurrency-fast-math-namespace-functions.md#log)|Вычисляет логарифм аргумента|  
-|[log10](concurrency-fast-math-namespace-functions.md#log10)|Вычисляет логарифм по основанию&10; аргумента|  
-|[log10f](concurrency-fast-math-namespace-functions.md#log10f)|Вычисляет логарифм по основанию&10; аргумента|  
-|[log2](concurrency-fast-math-namespace-functions.md#log2)|Вычисляет логарифм по основанию&2; аргумента|  
-|[log2f](concurrency-fast-math-namespace-functions.md#log2f)|Вычисляет логарифм по основанию&2; аргумента|  
-|[logf](concurrency-fast-math-namespace-functions.md#logf)|Вычисляет логарифм аргумента|  
-|[modf](concurrency-fast-math-namespace-functions.md#modf)|Разделяет _X в долях и целое число частей.|  
-|[modff](concurrency-fast-math-namespace-functions.md#modff)|Разделяет _X в долях и целое число частей.|  
+|[isnan](concurrency-fast-math-namespace-functions.md#isnan)|Определяет, является ли аргумент NaN|  
+|[ldexp](concurrency-fast-math-namespace-functions.md#ldexp)|Вычисляет вещественное число от мантисса и степень|  
+|[ldexpf](concurrency-fast-math-namespace-functions.md#ldexpf)|Вычисляет вещественное число от мантисса и степень|  
+|[log](concurrency-fast-math-namespace-functions.md#log)|Вычисляет логарифм с основанием e аргумента|  
+|[log10](concurrency-fast-math-namespace-functions.md#log10)|Вычисляет логарифм по основанию 10 аргумента|  
+|[log10f](concurrency-fast-math-namespace-functions.md#log10f)|Вычисляет логарифм по основанию 10 аргумента|  
+|[log2](concurrency-fast-math-namespace-functions.md#log2)|Вычисляет логарифм по основанию 2 аргумента|  
+|[log2f](concurrency-fast-math-namespace-functions.md#log2f)|Вычисляет логарифм по основанию 2 аргумента|  
+|[logf](concurrency-fast-math-namespace-functions.md#logf)|Вычисляет логарифм с основанием e аргумента|  
+|[modf](concurrency-fast-math-namespace-functions.md#modf)|Разбивает _X в долях и частей целое число со знаком.|  
+|[modff](concurrency-fast-math-namespace-functions.md#modff)|Разбивает _X в долях и частей целое число со знаком.|  
 |[pow](concurrency-fast-math-namespace-functions.md#pow)|Вычисляет _X, возведенное в степень _Y|  
 |[powf](concurrency-fast-math-namespace-functions.md#powf)|Вычисляет _X, возведенное в степень _Y|  
-|[round](concurrency-fast-math-namespace-functions.md#round)|Округляет _X до ближайшего целого числа|  
-|[roundf](concurrency-fast-math-namespace-functions.md#roundf)|Округляет _X до ближайшего целого числа|  
+|[round](concurrency-fast-math-namespace-functions.md#round)|Округляет _X до ближайшего целого|  
+|[roundf](concurrency-fast-math-namespace-functions.md#roundf)|Округляет _X до ближайшего целого|  
 |[rsqrt](concurrency-fast-math-namespace-functions.md#rsqrt)|Возвращает обратное квадратного корня аргумент|  
 |[rsqrtf](concurrency-fast-math-namespace-functions.md#rsqrtf)|Возвращает обратное квадратного корня аргумент|  
-|[signbit](concurrency-fast-math-namespace-functions.md#signbit)|Возвращает знак аргумента|  
-|[signbitf](concurrency-fast-math-namespace-functions.md#signbitf)|Возвращает знак аргумента|  
+|[signbit](concurrency-fast-math-namespace-functions.md#signbit)|Возвращает знак значения аргумента|  
+|[signbitf](concurrency-fast-math-namespace-functions.md#signbitf)|Возвращает знак значения аргумента|  
 |[sin](concurrency-fast-math-namespace-functions.md#sin)|Вычисляет синус аргумента|  
 |[sincos](concurrency-fast-math-namespace-functions.md#sincos)|Вычисляет синус и косинус значение _X|  
 |[sincosf](concurrency-fast-math-namespace-functions.md#sincosf)|Вычисляет синус и косинус значение _X|  
@@ -116,8 +98,8 @@ namespace fast_math;
 |[tanf](concurrency-fast-math-namespace-functions.md#tanf)|Вычисляет тангенс значение аргумента|  
 |[tanh](concurrency-fast-math-namespace-functions.md#tanh)|Вычисляет гиперболический тангенс значение аргумента|  
 |[tanhf](concurrency-fast-math-namespace-functions.md#tanhf)|Вычисляет гиперболический тангенс значение аргумента|  
-|[trunc](concurrency-fast-math-namespace-functions.md#trunc)|Усекает для целочисленный аргумент|  
-|[truncf](concurrency-fast-math-namespace-functions.md#truncf)|Усекает для целочисленный аргумент|  
+|[trunc](concurrency-fast-math-namespace-functions.md#trunc)|Усекает целочисленный аргумент|  
+|[truncf](concurrency-fast-math-namespace-functions.md#truncf)|Усекает целочисленный аргумент|  
 
 ## <a name="requirements"></a>Требования  
  **Заголовок:** amp_math.h  
@@ -126,4 +108,3 @@ namespace fast_math;
   
 ## <a name="see-also"></a>См. также  
  [Пространство имен Concurrency (C++ AMP)](concurrency-namespace-cpp-amp.md)
-

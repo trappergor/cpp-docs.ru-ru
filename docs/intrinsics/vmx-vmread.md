@@ -1,35 +1,34 @@
 ---
-title: "__vmx_vmread | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "__vmx_vmread"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Инструкция VMREAD"
-  - "Встроенная функция __vmx_vmread"
+title: "__vmx_vmread | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: __vmx_vmread
+dev_langs: C++
+helpviewer_keywords:
+- VMREAD instruction
+- __vmx_vmread intrinsic
 ms.assetid: 08bdd7a0-6435-4ea6-b9a0-f592d870e5aa
-caps.latest.revision: 5
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 5
+caps.latest.revision: "5"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: 2ff3bfba5409715f2e5022e62dd74fa94360d10b
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/24/2017
 ---
-# __vmx_vmread
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-**Только для систем Microsoft**  
+# <a name="vmxvmread"></a>__vmx_vmread
+**Блок, относящийся только к системам Майкрософт**  
   
- Считывает указанное поле из текущей структуры элемента управления виртуальной машины \(VMCS\) и мест в указанном месте.  
+ Считывает указанное поле из текущую структуру управления виртуальной машины (VMCS) и помещает его в указанном расположении.  
   
-## Синтаксис  
+## <a name="syntax"></a>Синтаксис  
   
 ```  
 unsigned char __vmx_vmread(  
@@ -38,34 +37,34 @@ unsigned char __vmx_vmread(
 );  
 ```  
   
-#### Параметры  
+#### <a name="parameters"></a>Параметры  
   
 |Параметр|Описание|  
-|--------------|--------------|  
-|\[входящий\] `Field`|Поле VMCS для чтения.|  
-|\[входящий\] `FieldValue`|Указатель на место для хранения значения, считанные из поля VMCS, заданного параметром `Field`.|  
+|---------------|-----------------|  
+|[in] `Field`|VMCS поле для чтения.|  
+|[in] `FieldValue`|Указатель на расположение для хранения значения чтения из поля VMCS, заданного `Field` параметра.|  
   
-## Возвращаемое значение  
+## <a name="return-value"></a>Возвращаемое значение  
   
-|Значение|Значение|  
-|--------------|--------------|  
-|0|Операция завершилась успешно.|  
-|1|Операция завершилась неуспешно с расширенным доступным текущего состояния в `VM-instruction error field` VMCS.|  
-|2|Эта операция окончилась неудачей без доступных состояний.|  
+|Значение|Смысл|  
+|-----------|-------------|  
+|0|Операция успешно выполнена.|  
+|1|Не удалось выполнить операцию; расширенные сведения о состоянии доступны в `VM-instruction error field` текущей структуре VMCS.|  
+|2|Сбой операции без сведений о состоянии.|  
   
-## Заметки  
- Функция `__vmx_vmread` эквивалентна инструкцие на компьютере `VMREAD`.  Значение параметра `Field` закодированный показатель неоднородности поля, описанный в документации Intel.  Дополнительные сведения см. в документе «технические данные виртуализации Intel для IA\-32 архитектуры Intel,» номер документа C97063\-002, на [Intel Корпорация](http://go.microsoft.com/fwlink/?LinkId=127) сайте, затем советует с приложением C\# этого документа.  
+## <a name="remarks"></a>Примечания  
+ `__vmx_vmread` Функция эквивалентна `VMREAD` инструкции компьютера. Значение `Field` параметра является индексом кодировке поля, как описано в документации Intel. Для поиска документа «Intel виртуализации технические спецификации для архитектуры IA-32 Intel,» Дополнительные сведения документа номера C97063-002, на [Корпорация Intel](http://go.microsoft.com/fwlink/?LinkId=127) сайта, а затем обратитесь к приложении C этого документа .  
   
-## Требования  
+## <a name="requirements"></a>Требования  
   
-|Встроенный объект|Архитектура|  
-|-----------------------|-----------------|  
-|`__vmx_vmread`|[!INCLUDE[vcprx64](../Token/vcprx64_md.md)]|  
+|Встроенная функция|Архитектура|  
+|---------------|------------------|  
+|`__vmx_vmread`|[!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|  
   
- **Файл заголовка** \<intrin.h\>  
+ **Файл заголовка** \<intrin.h >  
   
-## ЭЛЕМЕНТ, относящийся Майкрософт  
+**Завершение блока, относящегося только к системам Майкрософт**  
   
-## См. также  
+## <a name="see-also"></a>См. также  
  [Встроенные объекты компилятора](../intrinsics/compiler-intrinsics.md)   
- [\_\_vmx\_vmwrite](../intrinsics/vmx-vmwrite.md)
+ [__vmx_vmwrite](../intrinsics/vmx-vmwrite.md)

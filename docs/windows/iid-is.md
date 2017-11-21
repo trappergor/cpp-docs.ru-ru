@@ -1,32 +1,30 @@
 ---
-title: "iid_is | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-f1_keywords: 
-  - "vc-attr.iid_is"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "iid_is attribute"
+title: "iid_is | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+f1_keywords: vc-attr.iid_is
+dev_langs: C++
+helpviewer_keywords: iid_is attribute
 ms.assetid: 2f9b42a9-7130-4b08-9b1e-0d5d360e10ff
-caps.latest.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 9
+caps.latest.revision: "9"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: c2f4ccdf469ac41c6313626cc80e2256a50e7782
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/24/2017
 ---
-# iid_is
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Указывает идентификатор IID интерфейса модели COM, заданного на указатель интерфейса.  
+# <a name="iidis"></a>iid_is
+Задает COM-интерфейса, на который указывает указатель интерфейса IID.  
   
-## Синтаксис  
+## <a name="syntax"></a>Синтаксис  
   
 ```  
   
@@ -35,15 +33,15 @@ caps.handback.revision: 9
 ) ]  
 ```  
   
-#### Параметры  
- *expression*  
- Выражение языка c, указывающее идентификатор IID интерфейса модели COM указало на указатель интерфейса.  
+#### <a name="parameters"></a>Параметры  
+ *выражение*  
+ Выражение языка C, которое определяет IID для интерфейса COM, на который указывает указатель на интерфейс.  
   
-## Заметки  
- **iid\_is** Атрибут C\+\+ имеет ту же функциональность, что и  [iid\_is](http://msdn.microsoft.com/library/windows/desktop/aa367044) атрибут MIDL.  
+## <a name="remarks"></a>Примечания  
+ **Iid_is** языка C++ имеет ту же функциональность, что [iid_is](http://msdn.microsoft.com/library/windows/desktop/aa367044) языка MIDL.  
   
-## Пример  
- В следующем коде показано использование функции **iid\_is**.  
+## <a name="example"></a>Пример  
+ В следующем коде показано использование **iid_is**:  
   
 ```  
 // cpp_attr_ref_iid_is.cpp  
@@ -60,20 +58,19 @@ __interface IFireTabCtrl : IDispatch
 [module(name="ATLFIRELib")];  
 ```  
   
-## Требования  
+## <a name="requirements"></a>Требования  
   
-### Контекст атрибута  
+### <a name="attribute-context"></a>Контекст атрибута  
   
 |||  
 |-|-|  
 |**Применение**|Параметр интерфейса, элемент данных|  
-|**Repeatable**|Нет|  
-|**Обязательные атрибуты**|None|  
-|**Недопустимые атрибуты**|None|  
+|**Повторяемый**|Нет|  
+|**Обязательные атрибуты**|Нет|  
+|**Недопустимые атрибуты**|Нет|  
   
- Дополнительные сведения см. в разделе [Контексты атрибута](../windows/attribute-contexts.md).  
+ Дополнительные сведения см. в разделе [Контексты атрибутов](../windows/attribute-contexts.md).  
   
-## См. также  
- [IDL Attributes](../windows/idl-attributes.md)   
- [Parameter Attributes](../windows/parameter-attributes.md)   
- [Attributes Samples](http://msdn.microsoft.com/ru-ru/558ebdb2-082f-44dc-b442-d8d33bf7bdb8)
+## <a name="see-also"></a>См. также  
+ [Атрибуты IDL](../windows/idl-attributes.md)   
+ [Атрибуты параметра](../windows/parameter-attributes.md)   

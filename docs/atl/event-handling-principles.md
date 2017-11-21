@@ -1,55 +1,56 @@
 ---
-title: "Event Handling Principles | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "сдвоенные интерфейсы, event interfaces"
-  - "обработка событий, advising event sources"
-  - "обработка событий, dual event interfaces"
-  - "обработка событий, реализация"
-  - "интерфейсы, event and event sink"
+title: "Обработка принципы (ATL) событий | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- event handling, implementing
+- event handling, advising event sources
+- interfaces, event and event sink
+- dual interfaces, event interfaces
+- event handling, dual event interfaces
 ms.assetid: d17ca7cb-54f2-4658-ab8b-b721ac56801d
-caps.latest.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 5
+caps.latest.revision: "10"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: c37544f7b9083bbfa890961ef40e0c9f26aecc2c
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/24/2017
 ---
-# Event Handling Principles
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-3 Общего шага на весь обработки событий.  Необходимо:  
+# <a name="event-handling-principles"></a>Принципы обработки событий
+Существует три действия, общие для всех обработки событий. Требуется:  
   
--   Реализуйте интерфейс события в объекте.  
+-   Реализует интерфейс событий объекта.  
   
--   Источник события посоветуйте, что объект хочет получать события.  
+-   Рекомендуется использовать источник события объекта хочет получать события.  
   
--   Unadvise источник события, когда конкретному объекту больше не нужно получать события.  
+-   Разъединения источника события, если объект больше не нужна для получения событий.  
   
- Способ, с помощью которого необходимо будет реализовать интерфейс события будет зависеть от его типа.  Интерфейс событий может быть виртуальной таблицы, двойной или диспетчерский интерфейс.  Он до конструктора источника события, чтобы определить интерфейс; это значение необходимо для реализации этого интерфейса.  
+ Способ, что будет реализован интерфейс события будет зависеть от его типа. Интерфейс событий может быть vtable, двойная или диспетчерский интерфейс. Он работает в конструктор источника событий для определения интерфейса; именно для реализации этого интерфейса.  
   
 > [!NOTE]
->  Хотя никаких технических причине, интерфейс события не может быть двойной хороших причинам некоторые конструкции избегайте использования удваивают.  Однако это решение сделанное конструктором или разработчик *источника* события.  Поскольку вы работаете с точки зрения события `sink`, допускать возможность, что не могут иметь любой вариант, но реализация сдвоенный интерфейс события.  Дополнительные сведения о сдвоенных интерфейсах см. в разделе [Сдвоенные интерфейсы и библиотеки ATL](../atl/dual-interfaces-and-atl.md).  
+>  Несмотря на технические причины, по которым интерфейс событий не может быть двух, существует ряд причин для правильной разработки избегать использования duals. Тем не менее, это решение, внесенных в конструкторе или исполнитель события *источника*. Так как вы работаете с точки зрения события `sink`, требуется возможность того, что у вас нет любой выбор, но реализует интерфейс два события. Дополнительные сведения о сдвоенных интерфейсов см. в разделе [сдвоенные интерфейсы и ATL](../atl/dual-interfaces-and-atl.md).  
   
- Advise источнику события можно разбить на шаге 3.  
+ О том, источник события можно разделить на три этапа:  
   
--   Запросите исходный объект для [IConnectionPointContainer](http://msdn.microsoft.com/library/windows/desktop/ms683857).  
+-   Исходный объект для запроса [IConnectionPointContainer](http://msdn.microsoft.com/library/windows/desktop/ms683857).  
   
--   Вызов [IConnectionPointContainer::FindConnectionPoint](http://msdn.microsoft.com/library/windows/desktop/ms692476) указав идентификатор IID интерфейса события, интересует вас.  Если успешно, оно возвратит интерфейс [IConnectionPoint](http://msdn.microsoft.com/library/windows/desktop/ms694318) для объекта точки подключения.  
+-   Вызовите [IConnectionPointContainer::FindConnectionPoint](http://msdn.microsoft.com/library/windows/desktop/ms692476) передав идентификатор IID интерфейса событий, которые нужно просмотреть. При успешном выполнении возвращается [IConnectionPoint](http://msdn.microsoft.com/library/windows/desktop/ms694318) интерфейс для объекта точки подключения.  
   
--   Вызов [IConnectionPoint::Advise](http://msdn.microsoft.com/library/windows/desktop/ms678815) указав **IUnknown** приемника событий.  Если успешно, оно возвратит файл cookie `DWORD`, представляющий соединение.  
+-   Вызовите [IConnectionPoint::Advise](http://msdn.microsoft.com/library/windows/desktop/ms678815) передачи **IUnknown** приемника событий. При успешном выполнении возвращается `DWORD` куки-файл, представляющий соединение.  
   
- Как только вы успешно зарегистрирован у процент при получении события, методы интерфейса события конкретного объекта будут Вызываются события инициированный в соответствии с исходным объектом.  Если которые больше не нужно получать события можно передать файл cookie обратно в точке подключения через [IConnectionPoint::Unadvise](http://msdn.microsoft.com/library/windows/desktop/ms686608).  Это нарушит связь между источником и утонет.  
+ После успешной регистрации ваш интерес при получении события методы интерфейса событий объекта будет вызываться в соответствии с событий, произошедших в исходный объект. Если больше нет необходимости для получения событий, можно передать куки-файл обратно в точку подключения через [IConnectionPoint::Unadvise](http://msdn.microsoft.com/library/windows/desktop/ms686608). Это приведет к разрыву соединения между источником и приемником.  
   
- Следите за тем, чтобы избежать базисные циклы обработка событий.  
+ Будьте внимательны и не ссылка циклами при обработке событий.  
   
-## См. также  
- [Обработка событий](../Topic/Event%20Handling%20and%20ATL.md)
+## <a name="see-also"></a>См. также  
+ [Обработка событий](../atl/event-handling-and-atl.md)
+

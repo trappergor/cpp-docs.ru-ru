@@ -4,25 +4,21 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- <future>
-dev_langs:
-- C++
+f1_keywords: <future>
+dev_langs: C++
 ms.assetid: 2f5830fc-455d-44f9-9e3d-94ea051596a2
-caps.latest.revision: 23
+caps.latest.revision: "23"
 author: corob-msft
 ms.author: corob
 manager: ghogen
+ms.openlocfilehash: e741324e6871846aba8912d53ca9aad5ce1cb739
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
 ms.translationtype: MT
-ms.sourcegitcommit: 65f4e356ad0d46333b0d443d0fd6ac0b9f2b6f58
-ms.openlocfilehash: fa19a2df51eb53d7cbd66b13b650580df61d9877
-ms.contentlocale: ru-ru
-ms.lasthandoff: 10/03/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="ltfuturegt"></a>&lt;future&gt;
 Включить стандартный заголовок \<future> для определения классов шаблонов и вспомогательных шаблонов, которые упрощают работу функции — возможно, в отдельном потоке — и получение результата. Результатом является значение, возвращаемое функцией, или исключение, которое вызывается функцией, но не перехватывается в функции.  
@@ -93,7 +89,6 @@ ms.lasthandoff: 10/03/2017
   
 ## <a name="see-also"></a>См. также  
  [Справочник по файлам заголовков](../standard-library/cpp-standard-library-header-files.md)
-
 
 
 

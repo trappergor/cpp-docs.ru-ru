@@ -1,64 +1,62 @@
 ---
-title: "__mulh | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "__mulh"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Встроенная функция __mulh"
+title: "__mulh | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: __mulh
+dev_langs: C++
+helpviewer_keywords: __mulh intrinsic
 ms.assetid: cd2ab093-9ef6-404d-ac34-0bee033882f3
-caps.latest.revision: 14
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 12
+caps.latest.revision: "14"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: 76fd85d99a1c38540700b75cd44cf4e0c576729c
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/24/2017
 ---
-# __mulh
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-**Только для систем Microsoft**  
+# <a name="mulh"></a>__mulh
+**Блок, относящийся только к системам Майкрософт**  
   
- Возвращает старшие 64 2 64 знаковых продукта 32\-разрядных целых чисел.  
+ Возвращает старшие 64 разряда произведения двух 64-разрядных целых чисел со знаком.  
   
-## Синтаксис  
+## <a name="syntax"></a>Синтаксис  
   
 ```  
-__int64 __mulh(   
-   __int64 a,   
-   __int64 b   
+__int64 __mulh(   
+   __int64 a,   
+   __int64 b   
 );  
 ```  
   
-#### Параметры  
- \[входящий\] `a`  
- Первое число для перемножения.  
+#### <a name="parameters"></a>Параметры  
+ [in] `a`  
+ Первое число для умножения.  
   
- \[входящий\] `b`  
- Второе число для перемножения.  
+ [in] `b`  
+ Второе число для умножения.  
   
-## Возвращаемое значение  
- Старшие 64 128 бит умножения результата.  
+## <a name="return-value"></a>Возвращаемое значение  
+ Старшие 64 разряда 128-разрядного результата умножения.  
   
-## Требования  
+## <a name="requirements"></a>Требования  
   
-|Встроенный объект|Архитектура|  
-|-----------------------|-----------------|  
-|`__mulh`|[!INCLUDE[vcprx64](../Token/vcprx64_md.md)]|  
+|Встроенная функция|Архитектура|  
+|---------------|------------------|  
+|`__mulh`|[!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|  
   
- **Файл заголовка** \<intrin.h\>  
+ **Файл заголовка** \<intrin.h >  
   
-## Заметки  
- Эта процедура доступна только в качестве внутреннего элемента.  
+## <a name="remarks"></a>Примечания  
+ Эта процедура доступна только как встроенная функция.  
   
-## Пример  
+## <a name="example"></a>Пример  
   
 ```  
 // mulh.cpp  
@@ -81,8 +79,11 @@ int main()
 }  
 ```  
   
-  **0xfffffffffffffff \* 0xf0000000 \= 0xeffffffffffffff10000000**   
-## ЭЛЕМЕНТ, относящийся Майкрософт  
+```Output  
+0xfffffffffffffff * 0xf0000000 = 0xeffffffffffffff10000000  
+```  
   
-## См. также  
- [Встроенные объекты компилятора](../intrinsics/compiler-intrinsics.md)
+**Завершение блока, относящегося только к системам Майкрософт**  
+  
+## <a name="see-also"></a>См. также  
+ [Встроенные инструкции компилятора](../intrinsics/compiler-intrinsics.md)

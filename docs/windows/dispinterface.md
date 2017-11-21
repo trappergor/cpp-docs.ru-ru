@@ -1,32 +1,30 @@
 ---
-title: "dispinterface | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-f1_keywords: 
-  - "vc-attr.dispinterface"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "dispinterface - атрибут"
+title: "disp-интерфейса | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+f1_keywords: vc-attr.dispinterface
+dev_langs: C++
+helpviewer_keywords: dispinterface attribute
 ms.assetid: 61c5a4a1-ae92-47e9-8ee4-f847be90172b
-caps.latest.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 9
+caps.latest.revision: "9"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: e52d050b9b05ccb72969c531297367e729c258b1
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/24/2017
 ---
-# dispinterface
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Помещает интерфейс в IDL\-файл в качестве интерфейса диспетчеризации.  
+# <a name="dispinterface"></a>dispinterface
+Помещает интерфейс в IDL-файл в качестве интерфейса диспетчеризации.  
   
-## Синтаксис  
+## <a name="syntax"></a>Синтаксис  
   
 ```  
   
@@ -34,8 +32,8 @@ caps.handback.revision: 9
   
 ```  
   
-## Заметки  
- Если интерфейсу предшествует атрибут **dispinterface** языка C\+\+, это вызывает помещение интерфейса в блок library созданного IDL\-файла.  
+## <a name="remarks"></a>Примечания  
+ Если интерфейсу предшествует атрибут **dispinterface** языка C++, это вызывает помещение интерфейса в блок library созданного IDL-файла.  
   
  Если не указать базовый класс, интерфейс диспетчеризации будет производным от `IDispatch`. Необходимо указать [идентификатор](../windows/id.md) для членов интерфейса диспетчеризации.  
   
@@ -46,30 +44,29 @@ dispinterface helloPro
    { interface hello; };   
 ```  
   
- не является допустимым для атрибута **dispinterface**.  
+ не является допустимым для атрибута **dispinterface** .  
   
-## Пример  
- Просмотрите пример с [bindable](../windows/bindable.md), чтобы увидеть, как можно использовать **dispinterface**.  
+## <a name="example"></a>Пример  
+ Просмотрите пример с [bindable](../windows/bindable.md) , чтобы увидеть, как можно использовать **dispinterface**.  
   
-## Требования  
+## <a name="requirements"></a>Требования  
   
-### Контекст атрибута  
+### <a name="attribute-context"></a>Контекст атрибута  
   
 |||  
 |-|-|  
 |**Применение**|`interface`|  
 |**Повторяемый**|Нет|  
 |**Обязательные атрибуты**|Нет|  
-|**Недопустимые атрибуты**|**dual**, **object**, **oleautomation**, `local`, **ms\_union**|  
+|**Недопустимые атрибуты**|**dual**, **object**, **oleautomation**, `local`, **ms_union**|  
   
  Дополнительные сведения см. в разделе [Контексты атрибутов](../windows/attribute-contexts.md).  
   
-## См. также  
- [IDL Attributes](../windows/idl-attributes.md)   
- [Attributes by Usage](../windows/attributes-by-usage.md)   
- [uuid](../windows/uuid-cpp-attributes.md)   
- [dual](../Topic/dual.md)   
- [custom](../windows/custom-cpp.md)   
- [object](../Topic/object%20\(C++\).md)   
- [\_\_interface](../Topic/__interface.md)   
- [Attributes Samples](http://msdn.microsoft.com/ru-ru/558ebdb2-082f-44dc-b442-d8d33bf7bdb8)
+## <a name="see-also"></a>См. также  
+ [Атрибуты IDL](../windows/idl-attributes.md)   
+ [Список атрибутов по использованию](../windows/attributes-by-usage.md)   
+ [UUID](../windows/uuid-cpp-attributes.md)   
+ [Двойная](../windows/dual.md)   
+ [пользовательские](../windows/custom-cpp.md)   
+ [object](../windows/object-cpp.md)   
+ [__interface](../cpp/interface.md)   

@@ -1,68 +1,75 @@
 ---
-title: "Практическое руководство. Преобразование цикла OpenMP, использующего обработку исключений для использования среды выполнения с параллелизмом | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "обработка исключений, преобразование OpenMP в среду выполнения с параллелизмом"
-  - "преобразование OpenMP в среду выполнения с параллелизмом, обработка исключений"
+title: "Как: преобразование цикла OpenMP, использующего обработку исключений для использования среды выполнения с параллелизмом | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- exception handling, converting from OpenMP to the Concurrency Runtime
+- converting from OpenMP to the Concurrency Runtime, exception handling
 ms.assetid: 03c28196-21ba-439e-8641-afab1c283e1a
-caps.latest.revision: 11
-caps.handback.revision: 8
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "11"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: beac8ca095388428986569433f0461a505f2a7e8
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/24/2017
 ---
-# Практическое руководство. Преобразование цикла OpenMP, использующего обработку исключений для использования среды выполнения с параллелизмом
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+# <a name="how-to-convert-an-openmp-loop-that-uses-exception-handling-to-use-the-concurrency-runtime"></a>Практическое руководство. Преобразование цикла OpenMP, использующего обработку исключений для использования среды выполнения с параллелизмом
+В этом примере показано, как преобразовать OpenMP [параллельных](../../parallel/concrt/how-to-use-parallel-invoke-to-write-a-parallel-sort-routine.md#parallel)[для](../../parallel/openmp/reference/for-openmp.md) цикл, который выполняет обработку исключений, чтобы использовать механизм обработки исключений среды выполнения с параллелизмом.  
+  
+ В OpenMP исключение, возникающее в параллельной области необходимо перехвачено и обработано в одном регионе тем же потоком. Перехвачено исключение, которое экранирует параллельной области обработчик необработанных исключений, который завершает процесс по умолчанию.  
+  
 
-В этом примере показано, как преобразовать цикл OpenMP [parallel](../../parallel/openmp/reference/parallel.md) [for](../Topic/for%20\(OpenMP\).md), позволяющий использовать механизм обработки исключений среды выполнения с параллелизмом.  
+ В среде выполнения с параллелизмом, при создании исключения в теле рабочей функции, передаваемого в группу задач, таких как [concurrency::task_group](reference/task-group-class.md) или [concurrency::structured_task_group](../../parallel/concrt/reference/structured-task-group-class.md) объекта, или для параллельного алгоритма, такие как [concurrency::parallel_for](reference/concurrency-namespace-functions.md#parallel_for), среда выполнения хранит это исключение и маршалирует его в контекст, ожидающий группы задач или алгоритма для завершения. Для групп задач, ожидающих контекст, в контекст, вызывающий [Concurrency::task_group:: wait](reference/task-group-class.md#wait), [Concurrency::structured_task_group:: wait](reference/structured-task-group-class.md#wait), [concurrency::task_group::run_and _wait](reference/task-group-class.md#run_and_wait), или [Concurrency::structured_task_group::](reference/structured-task-group-class.md#run_and_wait). Для параллельного алгоритма ожидающим является контекст, вызвавший этот алгоритм. Среда выполнения также останавливает все активные задачи, которые находятся в группе задач, включая задачи дочерних групп, и удаляет любые задачи, которые еще не запущен.  
+
+
   
- В OpenMP исключение, возникшее в параллельной области, должно быть перехвачено и обработано в той же области тем же потоком.  Исключение, покинувшее параллельную область, перехватывается обработчиком необработанных исключений, который по умолчанию завершает процесс.  
+## <a name="example"></a>Пример  
+ В этом примере показано, как обрабатывать исключения в OpenMP `parallel` области и в вызове `parallel_for`. `do_work` Функция выполняет запрос выделения памяти, который заканчивается неудачей и создает исключение типа [std::bad_alloc](../../standard-library/bad-alloc-class.md). В версии, использующей OpenMP поток, который создает исключение, должен его перехватить. Другими словами в каждой итерации параллельного цикла OpenMP должна обрабатывать исключение. В версии, использующей среду выполнения с параллелизмом основной поток перехватывает исключение, созданное другим потоком.  
   
- В среде выполнения с параллелизмом при создании исключения в основной части рабочей функции, передаваемой такой группе задач, как объект [concurrency::task\_group](../Topic/task_group%20Class.md) или [concurrency::structured\_task\_group](../../parallel/concrt/reference/structured-task-group-class.md), либо такому параллельному алгоритму, как [concurrency::parallel\_for](../Topic/parallel_for%20Function.md), среда выполнения сохраняет это исключение и маршалирует его в контекст, ожидающий завершения группы задач или алгоритма.  Для групп задач ожидающим контекстом является контекст, вызывающий метод [concurrency::task\_group::wait](../Topic/task_group::wait%20Method.md), [concurrency::structured\_task\_group::wait](../Topic/structured_task_group::wait%20Method.md), [concurrency::task\_group::run\_and\_wait](../Topic/task_group::run_and_wait%20Method.md) или [concurrency::structured\_task\_group::run\_and\_wait](../Topic/structured_task_group::run_and_wait%20Method.md).  Для параллельного алгоритма ожидающим является контекст, вызвавший этот алгоритм.  Среда выполнения также останавливает все активные задачи в данной группе задач, включая задачи дочерних групп, и удаляет все не начатые задачи.  
+ [!code-cpp[concrt-openmp#3](../../parallel/concrt/codesnippet/cpp/convert-an-openmp-loop-that uses-exception-handling_1.cpp)]  
   
-## Пример  
- В этом примере показано, как обрабатывать исключения в области OpenMP `parallel` и в вызове к `parallel_for`.  Функция `do_work` выполняет запрос выделения памяти, который заканчивается неудачей и создает исключение типа [std::bad\_alloc](../../standard-library/bad-alloc-class.md).  В версии, использующей OpenMP, поток, создающий исключение, должен его перехватить.  Иными словами, каждая итерация параллельного цикла OpenMP должна обрабатывать исключение.  В версии, использующей среду выполнения с параллелизмом, основной поток перехватывает исключение, созданное другим потоком.  
+ В этом примере формируются следующие данные:  
   
- [!code-cpp[concrt-openmp#3](../../parallel/concrt/codesnippet/CPP/convert-an-openmp-loop-that uses-exception-handling_1.cpp)]  
+```Output  
+Using OpenMP...  
+An error of type 'class std::bad_alloc' occurred.  
+An error of type 'class std::bad_alloc' occurred.  
+An error of type 'class std::bad_alloc' occurred.  
+An error of type 'class std::bad_alloc' occurred.  
+An error of type 'class std::bad_alloc' occurred.  
+An error of type 'class std::bad_alloc' occurred.  
+An error of type 'class std::bad_alloc' occurred.  
+An error of type 'class std::bad_alloc' occurred.  
+An error of type 'class std::bad_alloc' occurred.  
+An error of type 'class std::bad_alloc' occurred.  
+Using the Concurrency Runtime...  
+An error of type 'class std::bad_alloc' occurred.  
+```  
   
- В результате выполнения примера получается следующий результат:  
+ В версии этого примера, использующей OpenMP исключение происходит в и обрабатывается в каждой итерации цикла. В версии, использующей среду выполнения с параллелизмом, среда выполнения хранит это исключение, останавливает все активные задачи, удаляет любые задачи, которые еще не запущен и маршалирует его в контекст, вызывающий `parallel_for`.  
   
-  **Использование OpenMP…**  
-**Произошла ошибка типа «std::bad\_alloc».**  
-**Произошла ошибка типа «std::bad\_alloc».**  
-**Произошла ошибка типа «std::bad\_alloc».**  
-**Произошла ошибка типа «std::bad\_alloc».**  
-**Произошла ошибка типа «std::bad\_alloc».**  
-**Произошла ошибка типа «std::bad\_alloc».**  
-**Произошла ошибка типа «std::bad\_alloc».**  
-**Произошла ошибка типа «std::bad\_alloc».**  
-**Произошла ошибка типа «std::bad\_alloc».**  
-**Произошла ошибка типа «std::bad\_alloc».**  
-**использование среды выполнения с параллелизмом...**  
-**Произошла ошибка типа «std::bad\_alloc».** В версии этого примера, использующей OpenMP, исключение возникает и обрабатывается в каждой итерации цикла.  В версии, использующей среду выполнения с параллелизмом, среда выполнения сохраняет исключение, останавливает все активные задачи, удаляет все не начатые задачи и маршалирует исключение в контекст, вызывающий метод `parallel_for`.  
+ Если требуется, версии, использующей OpenMP завершается после возникновения исключения, чтобы сообщить другим итерации цикла, произошедшей ошибки можно использовать логический флаг. Как показано в примере в разделе [как: преобразование цикла OpenMP, использует отмены для использования среды выполнения с параллелизмом](../../parallel/concrt/convert-an-openmp-loop-that-uses-cancellation.md), последующие итерации бы ничего не делать, если флаг установлен. И наоборот Если требуется, цикл, использующий среду выполнения с параллелизмом продолжает работу после возникновения исключения, следует обрабатывайте исключение в основной части параллельного цикла, сам.  
   
- Если нужно, чтобы версия, использующая OpenMP, завершала работу после возникновения исключения, можно использовать логический флаг, указывающий другим итерациям цикла, что произошла ошибка.  Если задан этот флаг, последующие итерации не будут делать ничего, как в примере в разделе [Практическое руководство. Преобразование цикла OpenMP, использующего отмену для использования среды выполнения с параллелизмом](../../parallel/concrt/convert-an-openmp-loop-that-uses-cancellation.md).  И наоборот, если нужно, чтобы цикл, использующий среду выполнения с параллелизмом, продолжал работу после возникновения исключения, следует обрабатывать исключение в самом основной части параллельного цикла.  
+ Другие компоненты среды выполнения с параллелизмом, например асинхронных агентов и упрощенных задач не передавать исключения. Вместо этого необработанные исключения перехватываются обработчик необработанных исключений, который завершает процесс по умолчанию. Дополнительные сведения об обработке исключений см. в разделе [обработка исключений](../../parallel/concrt/exception-handling-in-the-concurrency-runtime.md).  
   
- Другие компоненты среды выполнения с параллелизмом, например асинхронные агенты и упрощенные задачи, не транспортируют исключения.  Вместо этого необработанные исключения перехватываются обработчиком необработанных исключений, который по умолчанию завершает процесс.  Дополнительные сведения об обработке исключений см. в разделе [Обработка исключений](../Topic/Exception%20Handling%20in%20the%20Concurrency%20Runtime.md).  
+ Дополнительные сведения о `parallel_for` и других параллельных алгоритмах см. в разделе [параллельные алгоритмы](../../parallel/concrt/parallel-algorithms.md).  
   
- Дополнительные сведения об алгоритме `parallel_for` и других параллельных алгоритмах см. в разделе [Параллельные алгоритмы](../Topic/Parallel%20Algorithms.md).  
+## <a name="compiling-the-code"></a>Компиляция кода  
+ Скопируйте код примера и вставьте его в проект Visual Studio или вставить его в файл с именем `concrt-omp-exceptions.cpp` , а затем запустите следующую команду в окне командной строки Visual Studio.  
   
-## Компиляция кода  
- Скопируйте пример кода и вставьте его в проект Visual Studio или файл с именем `concrt-omp-exceptions.cpp`, затем выполните в окне командной строки Visual Studio следующую команду.  
+ **/ EHsc/OpenMP CL.exe concrt-omp-exceptions.cpp**  
   
- **cl.exe \/EHsc \/openmp concrt\-omp\-exceptions.cpp**  
-  
-## См. также  
+## <a name="see-also"></a>См. также  
  [Переход от OpenMP к среде выполнения с параллелизмом](../../parallel/concrt/migrating-from-openmp-to-the-concurrency-runtime.md)   
- [Обработка исключений](../Topic/Exception%20Handling%20in%20the%20Concurrency%20Runtime.md)   
- [Параллельные алгоритмы](../Topic/Parallel%20Algorithms.md)
+ [Обработка исключений](../../parallel/concrt/exception-handling-in-the-concurrency-runtime.md)   
+ [Параллельные алгоритмы](../../parallel/concrt/parallel-algorithms.md)
+

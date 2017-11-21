@@ -1,58 +1,58 @@
 ---
-title: "Реализация многопоточности на языке C с помощью функций Win32 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "многопоточность [C++], C и Win32"
-  - "работа с потоками [C]"
-  - "работа с потоками [C++], C и Win32"
-  - "Visual C, многопоточность"
-  - "Win32 [C++], многопоточность"
-  - "приложения Win32 [C++], многопоточность"
-  - "Windows API [C++], многопоточность"
+title: "Многопоточность с C и Win32 | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- Windows API [C++], multithreading
+- multithreading [C++], C and Win32
+- Visual C, multithreading
+- Win32 applications [C++], multithreading
+- threading [C++], C and Win32
+- Win32 [C++], multithreading
+- threading [C]
 ms.assetid: 67cdc99e-1ad9-452b-a042-ed246b70040e
-caps.latest.revision: 8
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 0e2ce9377d0ea4b2bd7b04255eb1c8099341af39
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/24/2017
 ---
-# Реализация многопоточности на языке C с помощью функций Win32
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Microsoft Visual C\+\+ предоставляет поддержку для создания многопоточных приложений в операционных системах Microsoft Windows: Windows XP, Windows 2000, Windows NT, Windows Me и Windows 98.  Возможно, потребуется использовать более одного потока, если приложению приходится управлять несколькими действиями, например одновременным вводом с клавиатуры и с помощью мыши.  Один поток может обрабатывать ввод с клавиатуры, в то время как второй поток фильтрует действия, выполненные с помощью мыши.  Третий поток может обновлять отображение на мониторе на основе данных, полученных из потоков обработки действий мыши и клавиатуры.  В то же время другие потоки могут обращаться к файлам на диске или получать данные из СОМ\-порта.  
+# <a name="multithreading-with-c-and-win32"></a>Реализация многопоточности на языке C с помощью функций Win32
+Microsoft Visual C++ поддерживает создание многопоточных приложений с Microsoft Windows: Windows XP, Windows 2000, Windows NT, Windows Me и Windows 98. Можно использовать более одного потока, если приложению приходится управлять несколькими действиями, например одновременных клавиатуры и мыши. Один поток может обрабатывать ввод с клавиатуры, а второй поток фильтрует действия мыши. Третий поток можно обновить экран, на основе данных из потоков с помощью мыши и клавиатуры. В то же время другие потоки доступ к файлам на диске или получить данные из COM-портом.  
   
- При использовании Visual C\+\+ существует два способа программирования многопоточных приложений: с использованием библиотеки Microsoft Foundation Class \(MFC\) или библиотеки времени выполнения на языке С и Win32 API.  Дополнительные сведения о создании многопоточных приложений с использованием библиотеки MFC см. в разделе [Реализация многопоточности на языке С \+\+ с помощью MFC](../parallel/multithreading-with-cpp-and-mfc.md) после ознакомления со следующими разделами, касающихся многопоточности на языке С.  
+ С помощью Visual C++ существует два способа для программы с несколькими потоками: использование библиотеки Microsoft Foundation Class (MFC) или библиотеки времени выполнения C и Win32 API. Сведения о создании многопоточных приложений с MFC см. в разделе [многопоточность с помощью C++ и MFC](../parallel/multithreading-with-cpp-and-mfc.md) после считывания в следующих разделах о многопоточность на языке C.  
   
- В этих разделах описываются функции Visual C\+\+, поддерживающие создание многопоточных программ.  
+ В этих разделах приведены компоненты Visual C++, поддерживающие создание многопоточных программ.  
   
-## Дополнительные сведения  
+## <a name="what-do-you-want-to-know-more-about"></a>Дополнительные сведения  
   
--   [Что представляет собой многопоточность](../parallel/multithread-programs.md)  
+-   [Что многопоточность вскоре](../parallel/multithread-programs.md)  
   
--   [Поддержка многопоточности библиотеками](../parallel/library-support-for-multithreading.md)  
+-   [Поддержка библиотек для многопоточности](../parallel/library-support-for-multithreading.md)  
   
 -   [Включаемые файлы для многопоточности](../parallel/include-files-for-multithreading.md)  
   
--   [Функции управления потоками в библиотеке времени выполнения на языке C](../parallel/c-run-time-library-functions-for-thread-control.md)  
+-   [Функции управления потоками в библиотеке времени выполнения C](../parallel/c-run-time-library-functions-for-thread-control.md)  
   
--   [Пример многопоточной программы на языке С](../parallel/sample-multithread-c-program.md)  
+-   [Образец многопотоковой программы на языке C](../parallel/sample-multithread-c-program.md)  
   
--   [Написание многопоточной программы Win32](../Topic/Writing%20a%20Multithreaded%20Win32%20Program.md)  
+-   [Написание многопоточной программы Win32](../parallel/writing-a-multithreaded-win32-program.md)  
   
--   [Компиляция и связывание многопоточных программ](../parallel/compiling-and-linking-multithread-programs.md)  
+-   [Компиляция и компоновка многопоточных программ](../parallel/compiling-and-linking-multithread-programs.md)  
   
--   [Устранение потенциальных проблем при работе с многопоточными программами](../Topic/Avoiding%20Problem%20Areas%20with%20Multithread%20Programs.md)  
+-   [Устранение потенциальных проблем при работе с многопотоковыми программами](../parallel/avoiding-problem-areas-with-multithread-programs.md)  
   
--   [Локальное хранилище потока \(TLS\)](../parallel/thread-local-storage-tls.md)  
+-   [Локальное хранилище потока (TLS)](../parallel/thread-local-storage-tls.md)  
   
-## См. также  
- [Поддержка многопоточности для устаревшего кода \(Visual C\+\+\)](../parallel/multithreading-support-for-older-code-visual-cpp.md)
+## <a name="see-also"></a>См. также  
+ [Поддержка многопоточности для устаревшего кода (Visual C++)](../parallel/multithreading-support-for-older-code-visual-cpp.md)

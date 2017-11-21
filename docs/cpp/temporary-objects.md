@@ -4,26 +4,23 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-language
+ms.technology: cpp-language
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - temporary objects
 - objects [C++], temporary
 ms.assetid: 4c8cec02-391e-4225-9bc6-06d150201412
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.translationtype: HT
-ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
-ms.openlocfilehash: 2f1e30ce63374a3b8fddb52f7d2afa3f219287d4
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/25/2017
-
+ms.openlocfilehash: 8cfea84beb3e6e2bef7c0b58d8932cbdc7a44f6b
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="temporary-objects"></a>Временные объекты
 В некоторых случаях компилятору необходимо создавать временные объекты. Такие объекты могут создаваться по следующим причинам.  
@@ -58,4 +55,3 @@ ms.lasthandoff: 09/25/2017
 |Результат вычисления выражения|Все временные объекты, созданные в результате вычисления выражения, удаляются в конце оператора-выражения (т. е. в месте расположения точки с запятой) или в конце управляющих выражений операторов `for`, `if`, `while`, `do` и `switch`.|  
 |Инициализация ссылок `const`|Если инициализатором не является L-значение того же типа, что и инициализируемая ссылка, создается временный объект базового типа объекта, инициализируемый выражением инициализации. Этот временный объект удаляется сразу после удаления объекта ссылки, с которым он связан.|  
   
-

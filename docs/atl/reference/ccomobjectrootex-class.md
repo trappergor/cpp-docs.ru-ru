@@ -4,13 +4,11 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-windows
+ms.technology: cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
 - CComObjectRootEx
-- ATLCOM/ATL::CComObjectRootEx
 - ATLCOM/ATL::CComObjectRootEx
 - ATLCOM/ATL::InternalAddRef
 - ATLCOM/ATL::InternalRelease
@@ -25,35 +23,18 @@ f1_keywords:
 - ATLCOM/ATL::ObjectMain
 - ATLCOM/ATL::m_dwRef
 - ATLCOM/ATL::m_pOuterUnknown
-dev_langs:
-- C++
-helpviewer_keywords:
-- reference counting
+dev_langs: C++
+helpviewer_keywords: reference counting
 ms.assetid: 894a3d7c-2daf-4fd0-8fa4-e6a05bcfb631
-caps.latest.revision: 20
+caps.latest.revision: "20"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: d2d39abf526a58b8442107b5ee816f316ae841f5
-ms.openlocfilehash: ff699c5d4620de01bd1f2ed1e3b87a4d77aa8396
-ms.contentlocale: ru-ru
-ms.lasthandoff: 03/31/2017
-
+ms.openlocfilehash: 987d8fcb8464ab691b915c576194f530cb50842e
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="ccomobjectrootex-class"></a>CComObjectRootEx-класс
 Этот класс предоставляет методы для обработки объекта управления счетчиками ссылок для неагрегированные и статистические объекты.  
@@ -111,9 +92,9 @@ class CComObjectRootEx : public CComObjectRootBase
   
  Класс, который реализует COM-сервера должен наследовать от `CComObjectRootEx` или [CComObjectRoot](../../atl/reference/ccomobjectroot-class.md).  
   
- При определении класса указывает [DECLARE_POLY_AGGREGATABLE](aggregation-and-class-factory-macros.md#declare_poly_aggregatable) макрос, ATL создает экземпляр **CComPolyObject\<окне отслеживания TRACE появляется настроек** при **IClassFactory::CreateInstance** вызывается. Во время создания проверяется значение внешняя Неизвестная строка. Если это **NULL**, **IUnknown** реализуется для неагрегированные объекта. Если внешняя Неизвестная строка не **NULL**, **IUnknown** реализуется для вычисляемого объекта.  
+ При определении класса указывает [DECLARE_POLY_AGGREGATABLE](aggregation-and-class-factory-macros.md#declare_poly_aggregatable) макрос, ATL создает экземпляр **CComPolyObject\<окне отслеживания TRACE появляется >** при **IClassFactory:: CreateInstance** вызывается. Во время создания проверяется значение внешняя Неизвестная строка. Если это **NULL**, **IUnknown** реализуется для неагрегированные объекта. Если внешняя Неизвестная строка не **NULL**, **IUnknown** реализуется для вычисляемого объекта.  
   
- Если класс не указывает `DECLARE_POLY_AGGREGATABLE` макрос, ATL создает экземпляр **CAggComObject\<окне отслеживания TRACE появляется настроек** статистические объекты или экземпляр **CComObject\<окне отслеживания TRACE появляется настроек** неагрегированные объектов.  
+ Если класс не указывает `DECLARE_POLY_AGGREGATABLE` макрос, ATL создает экземпляр **CAggComObject\<окне отслеживания TRACE появляется >** статистические объекты или экземпляр **CComObject\<окне отслеживания TRACE появляется >** неагрегированные объектов.  
   
  Преимущество использования `CComPolyObject` — избежать обладает и разрешением `CComAggObject` и `CComObject` в модуле для обработки случаев, статистические и нестатистические. Один `CComPolyObject` объект обрабатывает в обоих случаях. Таким образом только одна копия виртуальной таблице и одна копия функции существуют в модуле. При большом вашей vtable это существенно уменьшить размер вашего модуля. Тем не менее, используемой при небольших вашей vtable `CComPolyObject` может привести к немного больший размер модуля, так как он не оптимизирован для суммирования или неагрегированные объекта, как `CComAggObject` и `CComObject`.  
   
@@ -155,9 +136,9 @@ HRESULT FinalConstruct();
      Однако `FinalConstruct` вызывается сразу после наиболее производный класс полностью созданы, что позволяет вызывать виртуальные функции и использовать реализацию подсчета ссылок, предоставляемые ATL.  
   
 ### <a name="example"></a>Пример  
- Как правило, переопределите этот метод в класс, производный от `CComObjectRootEx` для создания любой статистическая обработка объектов. Например:  
+ Как правило, переопределите этот метод в класс, производный от `CComObjectRootEx` для создания любой статистическая обработка объектов. Пример:  
   
- [!code-cpp[NVC_ATL_COM #40](../../atl/codesnippet/cpp/ccomobjectrootex-class_1.h)]  
+ [!code-cpp[NVC_ATL_COM#40](../../atl/codesnippet/cpp/ccomobjectrootex-class_1.h)]  
   
  При сбое построения может возвращать ошибку. Можно также использовать макрос [DECLARE_PROTECT_FINAL_CONSTRUCT](aggregation-and-class-factory-macros.md#declare_protect_final_construct) для защиты вашей внешний объект дают удалены, если во время создания внутреннего объекта статистические увеличивает счетчик ссылок, а затем уменьшает число 0.  
   
@@ -310,10 +291,10 @@ static void WINAPI ObjectMain(bool bStarting);
 ### <a name="remarks"></a>Примечания  
  Значение `bStarting` параметр указывает, является ли модуль инициализируется или завершен. Реализация по умолчанию `ObjectMain` не выполняет никаких действий, но можно переопределить эту функцию в классе для инициализации или освобождения ресурсов, которые нужно выделить для класса. Обратите внимание, что `ObjectMain` вызывается перед запрашиваются все экземпляры класса.  
   
- `ObjectMain`вызывается из точки входа библиотеки DLL, поэтому ограничен тип операции, которые может выполнить функцию точки входа. Дополнительные сведения об этих ограничениях см. в разделе [поведение библиотеки времени выполнения](../../build/run-time-library-behavior.md) и [DllMain](http://msdn.microsoft.com/library/windows/desktop/ms682583).  
+ `ObjectMain`вызывается из точки входа библиотеки DLL, поэтому ограничен тип операции, которые может выполнить функцию точки входа. Дополнительные сведения об этих ограничениях см. в разделе [библиотек DLL и Visual C++ поведение библиотеки времени выполнения](../../build/run-time-library-behavior.md) и [DllMain](http://msdn.microsoft.com/library/windows/desktop/ms682583).  
   
 ### <a name="example"></a>Пример  
- [!code-cpp[NVC_ATL_COM #41](../../atl/codesnippet/cpp/ccomobjectrootex-class_2.h)]  
+ [!code-cpp[NVC_ATL_COM#41](../../atl/codesnippet/cpp/ccomobjectrootex-class_2.h)]  
   
 ##  <a name="outeraddref"></a>CComObjectRootEx::OuterAddRef  
  Увеличивает счетчик ссылок внешняя Неизвестная строка статистической обработки.  
@@ -369,4 +350,3 @@ void Unlock();
  [Класс CComObject](../../atl/reference/ccomobject-class.md)   
  [Класс CComPolyObject](../../atl/reference/ccompolyobject-class.md)   
  [Общие сведения о классе](../../atl/atl-class-overview.md)
-

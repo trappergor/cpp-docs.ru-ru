@@ -4,45 +4,27 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-tools
+ms.technology: cpp-tools
 ms.tgt_pltfrm: 
 ms.topic: error-reference
-f1_keywords:
-- CXX0040
-dev_langs:
-- C++
+f1_keywords: CXX0040
+dev_langs: C++
 helpviewer_keywords:
 - CXX0040
 - CAN0040
 ms.assetid: 1914e605-d80b-4abc-9e8f-dbcbefec095b
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
-ms.openlocfilehash: 28327d982b467dc79ea4ffbf1a67534d312845d5
-ms.contentlocale: ru-ru
-ms.lasthandoff: 02/24/2017
-
+ms.openlocfilehash: 9a49bf13c9f4a5c5006de8dc3ccc485085c03e65
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="expression-evaluator-error-cxx0040"></a>Ошибка вычислителя выражений CXX0040
-функции необходимо неявное преобразование  
+функция требует неявного преобразования  
   
  Вычислитель выражений C не поддерживает неявные преобразования, включающие вызовы конструктора.  
   

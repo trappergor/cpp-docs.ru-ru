@@ -1,34 +1,32 @@
 ---
-title: "Класс RuntimeClass | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "implements/Microsoft::WRL::RuntimeClass"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "RuntimeClass - класс"
+title: "Класс RuntimeClass | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: implements/Microsoft::WRL::RuntimeClass
+dev_langs: C++
+helpviewer_keywords: RuntimeClass class
 ms.assetid: d52f9d1a-98e5-41f2-a143-8fb629dd0727
-caps.latest.revision: 5
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 5
+caps.latest.revision: "5"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: e757712b360ff3ed4de12d8236c75a691a1f0c7c
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/24/2017
 ---
-# Класс RuntimeClass
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Представляет экземпляр класса, который наследует указанное число интерфейсов и предоставляет указанный [!INCLUDE[wrt](../atl/reference/includes/wrt_md.md)], классическую COM\-модель и поддержку слабых ссылок.  
+# <a name="runtimeclass-class"></a>Класс RuntimeClass
+Представляет экземпляр класса, который наследует указанное число интерфейсов и предоставляет указанную среду выполнения Windows, классическую COM-модель и поддержку слабых ссылок.  
   
- Как правило, WRL\-типы наследуются от `RuntimeClass`, поскольку этот класс реализует `AddRef`, `Release` и `QueryInterface` и помогает управлять общим числом ссылок в модуле.  
+ Вы обычно производные типы WRL из `RuntimeClass` , так как этот класс реализует `AddRef`, `Release`, и `QueryInterface`, и помогает управлять общее количество ссылок на модуль.  
   
-## Синтаксис  
+## <a name="syntax"></a>Синтаксис  
   
 ```  
 template <  
@@ -60,50 +58,50 @@ template <
 class RuntimeClass<RuntimeClassFlags<classFlags>, I0, I1, I2, I3, I4, I5, I6, I7, I8> : public Details::RuntimeClass<typename Details::InterfaceListHelper<I0, I1, I2, I3, I4, I5, I6, I7, I8>::TypeT, RuntimeClassFlags<classFlags> >;  
 ```  
   
-#### Параметры  
+#### <a name="parameters"></a>Параметры  
  `I0`  
- Идентификатор нулевого интерфейса. \(Обязательно\)  
+ Интерфейс нулевой идентификатор. (Обязательный)  
   
  `I1`  
- Идентификатор первого интерфейса. \(Необязательный параметр\)  
+ Первый идентификатор интерфейса. (Необязательный параметр).  
   
  `I2`  
- Идентификатор второго интерфейса. \(Необязательный параметр\)  
+ Второй идентификатор интерфейса. (Необязательный параметр).  
   
  `I3`  
- Идентификатор третьего интерфейса. \(Необязательный параметр\)  
+ Третий идентификатор интерфейса. (Необязательный параметр).  
   
  `I4`  
- Идентификатор четвертого интерфейса. \(Необязательный параметр\)  
+ Четвертый идентификатор интерфейса. (Необязательный параметр).  
   
  `I5`  
- Идентификатор пятого интерфейса. \(Необязательный параметр\)  
+ Пятый идентификатор интерфейса. (Необязательный параметр).  
   
  `I6`  
- Идентификатор шестого интерфейса. \(Необязательный параметр\)  
+ Шестой идентификатор интерфейса. (Необязательный параметр).  
   
  `I7`  
- Идентификатор седьмого интерфейса. \(Необязательный параметр\)  
+ Седьмой идентификатор интерфейса. (Необязательный параметр).  
   
  `I8`  
- Идентификатор восьмого интерфейса. \(Необязательный параметр\)  
+ Идентификатор интерфейса восьмого (Необязательный параметр).  
   
  `I9`  
- Идентификатор девятого интерфейса. \(Необязательный параметр\)  
+ Девятый идентификатор интерфейса. (Необязательный параметр).  
   
  `classFlags`  
- Сочетание одного или нескольких значений перечисления [RuntimeClassType](../windows/runtimeclasstype-enumeration.md).  
+ Сочетание одного или нескольких [RuntimeClassType](../windows/runtimeclasstype-enumeration.md) значений перечисления.  `__WRL_CONFIGURATION_LEGACY__` Макрос можно определить таким образом, чтобы изменить значение по умолчанию classFlags для всех классов среды выполнения в проекте. Если определено, RuntimeClass экземпляры являются негибкий dy по умолчанию. Если не определен, RuntimeClass экземпляры являются гибкими по умолчанию. Чтобы избежать неоднозначности всегда указывать RuntimeClassType::FtmBase или RuntimeClassType::InhibitFtmBase.
   
-## Члены  
+## <a name="members"></a>Члены  
   
-### Открытые конструкторы  
+### <a name="public-constructors"></a>Открытые конструкторы  
   
-|Name|Описание|  
-|----------|--------------|  
+|Имя|Описание|  
+|----------|-----------------|  
 |[Конструктор RuntimeClass::RuntimeClass](../windows/runtimeclass-runtimeclass-constructor.md)|Инициализирует текущий экземпляр класса RuntimeClass.|  
 |[Деструктор RuntimeClass::~RuntimeClass](../windows/runtimeclass-tilde-runtimeclass-destructor.md)|Деинициализирует текущий экземпляр класса RuntimeClass.|  
   
-## Иерархия наследования  
+## <a name="inheritance-hierarchy"></a>Иерархия наследования  
  `I0`  
   
  `ChainInterfaces`  
@@ -124,10 +122,10 @@ class RuntimeClass<RuntimeClassFlags<classFlags>, I0, I1, I2, I3, I4, I5, I6, I7
   
  `RuntimeClass`  
   
-## Требования  
+## <a name="requirements"></a>Требования  
  **Заголовок:** implements.h  
   
  **Пространство имен:** Microsoft::WRL  
   
-## См. также  
+## <a name="see-also"></a>См. также  
  [Пространство имен Microsoft::WRL](../windows/microsoft-wrl-namespace.md)

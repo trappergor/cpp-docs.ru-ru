@@ -6,19 +6,17 @@ ms.reviewer:
 ms.suite: 
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords: 
-dev_langs:
-- C++
+dev_langs: C++
 ms.assetid: 77f1ae17-1eb2-480d-8fe5-66d4c24bb91e
-caps.latest.revision: 9
+caps.latest.revision: "9"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translationtype: Machine Translation
-ms.sourcegitcommit: 22ba62ab8b3b4f9d14953dbab3edd8228ea85193
-ms.openlocfilehash: 676f3e836082dc3286a45f8d59db83c969964058
-ms.lasthandoff: 02/24/2017
-
+ms.openlocfilehash: 7cc8e24c8fd1524ebaaf6c2a8edaec05ab865733
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="concurrency-namespace-operators-amp"></a>Операторы пространство имен Concurrency (AMP)
 ||||  
@@ -42,7 +40,7 @@ bool operator== (
   
 ### <a name="parameters"></a>Параметры  
  `_Rank`  
- Ранг кортежа аргументы.  
+ Ранг аргументы кортежа.  
   
  `_Lhs`  
  Одно из кортежей для сравнения.  
@@ -51,7 +49,7 @@ bool operator== (
  Одно из кортежей для сравнения.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
- `true`Если кортежи равны; в противном случае — `false`.  
+ `true`Если кортежи равны. в противном случае `false`.  
   
 ##  <a name="operator_neq"></a> operator!=   
  Определяет, равны ли указанные аргументы.  
@@ -68,7 +66,7 @@ bool operator!= (
   
 ### <a name="parameters"></a>Параметры  
  `_Rank`  
- Ранг кортежа аргументы.  
+ Ранг аргументы кортежа.  
   
  `_Lhs`  
  Одно из кортежей для сравнения.  
@@ -77,11 +75,11 @@ bool operator!= (
  Одно из кортежей для сравнения.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
- `true`Если кортежи не равны. в противном случае — `false`.  
+ `true`Если кортежи не равны. в противном случае `false`.  
   
 ##  <a name="operator_add"></a> operator+   
 
- Вычисляет сумму component-wise указанные аргументы.  
+ Вычисляет сумму component-wise указанных аргументов.  
   
 ```  
 template <
@@ -113,7 +111,7 @@ class _Tuple_type> _Tuple_type<_Rank>   operator+(
   
 ### <a name="parameters"></a>Параметры  
  `_Rank`  
- Ранг кортежа аргументы.  
+ Ранг аргументы кортежа.  
   
  `_Lhs`  
  Один из аргументов для добавления.  
@@ -122,11 +120,11 @@ class _Tuple_type> _Tuple_type<_Rank>   operator+(
  Один из аргументов для добавления.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
- Component-wise сумма указанные аргументы.  
+ Сумма component-wise указанные аргументы.  
   
 ##  <a name="operator-"></a>  оператор-   
 
- Component-wise расхождения между указанными аргументами.  
+ Вычисляет component-wise различие между указанными аргументами.  
   
 ```  
 template <
@@ -158,10 +156,10 @@ _Tuple_type<_Rank>   operator-(
   
 ### <a name="parameters"></a>Параметры  
  `_Rank`  
- Ранг кортежа аргументы.  
+ Ранг аргументы кортежа.  
   
  `_Lhs`  
- Аргумент Уменьшаемое.  
+ Аргумент, которое вычитается из.  
   
  `_Rhs`  
  Аргумент для вычитания.  
@@ -194,7 +192,7 @@ _Tuple_type<_Rank>   operator*(
   
 ### <a name="parameters"></a>Параметры  
  `_Rank`  
- Ранг кортежа аргументы.  
+ Ранг аргументы кортежа.  
   
  `_Lhs`  
  Одно из кортежей для умножения.  
@@ -203,11 +201,11 @@ _Tuple_type<_Rank>   operator*(
  Одно из кортежей для умножения.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
- Component-wise произведение заданных аргументов.  
+ Component-wise произведение указанных аргументов.  
   
 
 ##  <a name="operator_div"></a>  оператор/   
- Вычисляет частное component-wise указанных аргументов.  
+ Вычисляет частное component-wise указанные аргументы.  
   
 ```  
 template <
@@ -230,20 +228,20 @@ _Tuple_type<_Rank>   operator/(
   
 ### <a name="parameters"></a>Параметры  
  `_Rank`  
- Ранг кортежа аргументы.  
+ Ранг аргументы кортежа.  
   
  `_Lhs`  
  Кортеж, которое необходимо разделить.  
   
  `_Rhs`  
- Кортеж, который необходимо разделить.  
+ Кортеж, необходимо разделить.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
- Component-wise частное указанные аргументы.  
+ Component-wise частное указанных аргументов.  
   
 ##  <a name="operator_mod"></a>  оператор%   
 
- Вычисляет модуль первого указанного аргумента с помощью второго заданного аргумента.  
+ Вычисляет модуль первого аргумента, указанного с помощью второго заданного аргумента.  
   
 ```  
 template <
@@ -266,7 +264,7 @@ _Tuple_type<_Rank>   operator%(
   
 ### <a name="parameters"></a>Параметры  
  `_Rank`  
- Ранг кортежа аргументы.  
+ Ранг аргументы кортежа.  
   
  `_Lhs`  
  Кортеж, из которого вычисляется остаток от деления.  
@@ -275,8 +273,7 @@ _Tuple_type<_Rank>   operator%(
  Кортеж остаток от деления по.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
- Результат первого модуля указанный аргумент второго заданного аргумента.  
+ Результат первого указанного аргумента модуля второго заданного аргумента.  
   
 ## <a name="see-also"></a>См. также  
- [Пространство имен Concurrency](concurrency-namespace-cpp-amp.md)
-
+ [Concurrency-пространство имен](concurrency-namespace-cpp-amp.md)

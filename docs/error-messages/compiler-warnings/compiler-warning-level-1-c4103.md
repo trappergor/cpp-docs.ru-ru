@@ -1,34 +1,32 @@
 ---
-title: "Предупреждение компилятора (уровень 1) C4103 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C4103"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C4103"
+title: "Предупреждение (уровень 1) C4103 компилятора | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords: C4103
+dev_langs: C++
+helpviewer_keywords: C4103
 ms.assetid: 9021b514-375e-4d62-b261-ccb06f299e8e
-caps.latest.revision: 7
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: 1ac53a33d64bede8351d3b981b9c2a7e324e3f1f
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/24/2017
 ---
-# Предупреждение компилятора (уровень 1) C4103
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-"имяфайла" : выравнивание изменено после включения заголовка, возможно, пропущена прагма\-директива \#pragma pack\(pop\)  
+# <a name="compiler-warning-level-1-c4103"></a>Предупреждение (уровень 1) C4103 компилятора
+«имя_файла»: выравнивание изменилось после включения заголовка, возможно, из-за отсутствия #pragma pack(pop)  
   
- Упаковка влияет на структуру классов в памяти, и если способ упаковки меняется от одного файла заголовка к другому, могут возникать проблемы.  
+ Упаковка влияет на структуру классов и обычно, если упаковки изменения в файлах заголовков, могут возникнуть проблемы.  
   
- Чтобы устранить это предупреждение, следует использовать прагма\-директиву \#pragma [pack](../../preprocessor/pack.md)\(pop\) перед выходом из файла заголовка.  
+ Используйте #pragma [пакет](../../preprocessor/pack.md)(pop) перед выходом из файла заголовка, чтобы устранить это предупреждение.  
   
  Следующий пример приводит к возникновению ошибки C4103:  
   
@@ -42,7 +40,7 @@ caps.handback.revision: 7
 // #pragma pack(pop)  
 ```  
   
- И далее,  
+ Затем:  
   
 ```  
 // C4103.cpp  

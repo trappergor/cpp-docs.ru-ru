@@ -1,56 +1,56 @@
 ---
-title: "Toolbar Editor | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "vc.editors.toolbar.F1"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "resource editors, Toolbar editor"
-  - "editors, toolbars"
-  - "toolbars [C++], editing"
-  - "Toolbar editor"
+title: "Редактор панелей инструментов | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: vc.editors.toolbar.F1
+dev_langs: C++
+helpviewer_keywords:
+- resource editors, Toolbar editor
+- editors, toolbars
+- toolbars [C++], editing
+- Toolbar editor
 ms.assetid: aa9f0adf-60f6-4f79-ab05-bc330f15ec43
-caps.latest.revision: 12
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 8
+caps.latest.revision: "12"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 794317a81c6e3a2858ef0cc75c5264f83ffdf59b
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/24/2017
 ---
-# Toolbar Editor
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="toolbar-editor"></a>Редактор панелей инструментов
 Редактор панелей инструментов позволяет создавать ресурсы панелей инструментов и преобразовывать растровые изображения в ресурсы панелей инструментов. Редактор панелей инструментов обеспечивает графическое отображение панели инструментов с кнопками в максимально приближенном к реальности виде.  
   
  Редактор панелей инструментов позволяет выполнять следующие действия:  
   
--   [создавать панели инструментов и кнопки;](../mfc/creating-new-toolbars.md)  
+-   [создавать панели инструментов и кнопки;](../windows/creating-new-toolbars.md)  
   
--   [преобразовывать растровые изображения в ресурс панели инструментов;](../mfc/converting-bitmaps-to-toolbars.md)  
+-   [преобразовывать растровые изображения в ресурс панели инструментов;](../windows/converting-bitmaps-to-toolbars.md)  
   
--   [создавать, перемещать и изменять кнопки на панели инструментов;](../mfc/creating-moving-and-editing-toolbar-buttons.md)  
+-   [создавать, перемещать и изменять кнопки на панели инструментов;](../windows/creating-moving-and-editing-toolbar-buttons.md)  
   
--   [создавать всплывающие подсказки.](../mfc/creating-a-tool-tip-for-a-toolbar-button.md)  
+-   [создавать всплывающие подсказки.](../windows/creating-a-tool-tip-for-a-toolbar-button.md)  
   
  В окне редактора панелей инструментов кнопка отображается в двух представлениях точно так же, как и в окне редактора изображений. Две области разделены разделителем. Чтобы изменить соотношение областей, переместите разделитель в нужную сторону. Активная панель окружена границами, как выделенная область. Над представлениями изображения размещена тематическая панель инструментов.  
   
  ![Редактор панелей инструментов](../mfc/media/vctoolbareditor.gif "vcToolbarEditor")  
 Редактор панелей инструментов  
   
- Функции редактора панелей инструментов и редактора изображений во многом схожи. В обоих редакторах имеются аналогичные элементы меню, инструменты рисования и сетка растрового изображения. В меню "Изображение" есть команда, которая позволяет переключаться между редактором панелей инструментов и редактором изображений. Дополнительные сведения об использовании графических панелей инструментов, цветовых палитр и меню "Изображение" см. в разделе [Редактор изображений](../mfc/image-editor-for-icons.md).  
+ Функции редактора панелей инструментов и редактора изображений во многом схожи. В обоих редакторах имеются аналогичные элементы меню, инструменты рисования и сетка растрового изображения. В меню "Изображение" есть команда, которая позволяет переключаться между редактором панелей инструментов и редактором изображений. Дополнительные сведения об использовании графических панелей инструментов, цветовых палитр и меню "Изображение" см. в разделе [Редактор изображений](../windows/image-editor-for-icons.md).  
   
- Сведения о добавлении ресурсов в проекты управляемого кода см. в разделе [Ресурсы приложений](../Topic/Resources%20in%20Desktop%20Apps.md)*Руководства разработчика .NET Framework*. Сведения о том, как вручную добавлять файлы ресурсов в проекты управляемого кода, осуществлять доступ к ресурсам, отображать статические ресурсы и присваивать строки ресурсов свойствам, см. в разделах [Пошаговое руководство. Локализация Windows Forms](http://msdn.microsoft.com/ru-ru/9a96220d-a19b-4de0-9f48-01e5d82679e5) и [Walkthrough: Using Resources for Localization with ASP.NET](../Topic/Walkthrough:%20Using%20Resources%20for%20Localization%20with%20ASP.NET.md).  
+ Сведения о добавлении ресурсов в управляемые проекты см. в разделе [ресурсы в классических приложениях](https://msdn.microsoft.com/library/f45fce5x.aspx) в *руководства разработчика .NET Framework.* Сведения о вручную добавлять файлы ресурсов в управляемые проекты, осуществлять доступ к ресурсам, отображать статические ресурсы и присваивать строки ресурсов свойствам см. в разделе [Создание файлов ресурсов для приложений рабочего стола](https://msdn.microsoft.com/library/xbx3z216.aspx). Сведения о глобализации и локализации ресурсов в управляемых приложениях см. в разделе [Globalizing и локализация приложений .NET Framework](https://msdn.microsoft.com/library/h6270d0z.aspx).  
   
-## Требования  
+## <a name="requirements"></a>Требования  
  MFC или ATL  
   
-## См. также  
- [Resource Editors](../mfc/resource-editors.md)   
+## <a name="see-also"></a>См. также  
+ [Редакторы ресурсов](../windows/resource-editors.md)   
  [Меню и другие ресурсы](http://msdn.microsoft.com/library/windows/desktop/ms632583.aspx)
+

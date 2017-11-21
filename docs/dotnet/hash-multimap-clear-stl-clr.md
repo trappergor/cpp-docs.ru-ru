@@ -1,41 +1,39 @@
 ---
-title: "hash_multimap::clear (STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::hash_multimap::clear"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "clear - член [STL/CLR]"
+title: "hash_multimap::Clear (STL/CLR) | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::hash_multimap::clear
+dev_langs: C++
+helpviewer_keywords: clear member [STL/CLR]
 ms.assetid: 8ad99f08-93b3-42b7-be07-f9a8ec556554
-caps.latest.revision: 14
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 12
+caps.latest.revision: "14"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 8bda656c05db383f944e66d90f9117d4dcb80a9f
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/24/2017
 ---
-# hash_multimap::clear (STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="hashmultimapclear-stlclr"></a>hash_multimap::clear (STL/CLR)
 Удаляет все элементы.  
   
-## Синтаксис  
+## <a name="syntax"></a>Синтаксис  
   
 ```  
 void clear();  
 ```  
   
-## Заметки  
- Эффективно вызывает функцию\-член [hash\_multimap::erase](../dotnet/hash-multimap-erase-stl-clr.md)`(` [hash\_multimap::begin](../dotnet/hash-multimap-begin-stl-clr.md)`(),` [hash\_multimap::end](../dotnet/hash-multimap-end-stl-clr.md)`())`.  Он используется для обеспечения контролируемая последовательность пуста.  
+## <a name="remarks"></a>Примечания  
+ Функция-член вызывает [hash_multimap::erase (STL/CLR)](../dotnet/hash-multimap-erase-stl-clr.md) `(` [hash_multimap::begin (STL/CLR)](../dotnet/hash-multimap-begin-stl-clr.md) `(),` [hash_multimap::end (STL/CLR) ](../dotnet/hash-multimap-end-stl-clr.md)`())`. Используется, чтобы обеспечить пустой управляемой последовательности.  
   
-## Пример  
+## <a name="example"></a>Пример  
   
 ```  
 // cliext_hash_multimap_clear.cpp   
@@ -73,15 +71,18 @@ int main()
   
 ```  
   
-  **\[1\] \[2\] \[BC — 3\]**  
-**size\(\) \= 0**  
- **\[1\] \[B 2\]**  
-**size\(\) \= 0**   
-## Требования  
- **Заголовок:**\<cliext\/hash\_map\>  
+```Output  
+ [a 1] [b 2] [c 3]  
+size() = 0  
+ [a 1] [b 2]  
+size() = 0  
+```  
+  
+## <a name="requirements"></a>Требования  
+ **Заголовок:** \<cliext/hash_map >  
   
  **Пространство имен:** cliext  
   
-## См. также  
- [hash\_multimap](../dotnet/hash-multimap-stl-clr.md)   
- [hash\_multimap::erase](../dotnet/hash-multimap-erase-stl-clr.md)
+## <a name="see-also"></a>См. также  
+ [hash_multimap (STL/CLR)](../dotnet/hash-multimap-stl-clr.md)   
+ [hash_multimap::erase (STL/CLR)](../dotnet/hash-multimap-erase-stl-clr.md)

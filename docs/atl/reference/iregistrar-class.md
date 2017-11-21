@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 2/1/2017
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-windows
+ms.technology: cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
@@ -19,37 +18,20 @@ f1_keywords:
 - ATLIFASE/ATL::IRegistrar::StringUnregister
 - ATLIFASE/ATL::IRegistrar::ResourceRegister
 - ATLIFASE/ATL::IRegistrar::ResourceUnregister
-dev_langs:
-- C++
-helpviewer_keywords:
-- Iregistrar Interface
+dev_langs: C++
+helpviewer_keywords: Iregistrar Interface
 ms.assetid: e88c04b7-0c93-4ae8-aeb9-ecd78f87421e
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 199cdfd91a7d1b9882b57118c852352f6fdda43e
-ms.openlocfilehash: e73e095d253d5ec5ca53e4e446019b2da79e5d39
-ms.contentlocale: ru-ru
-ms.lasthandoff: 02/24/2017
-
+ms.openlocfilehash: 6f79815d873a7c9f5f8c5f0397248f54776a7c20
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="iregistrar-interface"></a>Интерфейс IRegistrar
-Этот интерфейс определяется насколько и используется внутри функции-члены CAtlModule например [UpdateRegistryFromResourceD](catlmodule-class.md#updateregistryfromresourced).   
+Этот интерфейс определяется см и используется внутри функции-члены CAtlModule например [UpdateRegistryFromResourceD](catlmodule-class.md#updateregistryfromresourced).   
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -57,7 +39,7 @@ ms.lasthandoff: 02/24/2017
 typedef interface IRegistrar IRegistrar;
 ```  
 ## <a name="remarks"></a>Примечания
-См. в разделе [с помощью подстановочных параметров (препроцессор регистратора)](../../atl/using-replaceable-parameters-the-registrar-s-preprocessor.md) для получения дополнительных сведений.  
+См. в разделе [с помощью подстановочные параметры (препроцессор регистратора)](../../atl/using-replaceable-parameters-the-registrar-s-preprocessor.md) для получения дополнительных сведений.  
 
 ## <a name="members"></a>Члены  
   
@@ -121,14 +103,14 @@ virtual HRESULT STDMETHODCALLTYPE FileUnregister(
   
  
 ##  <a name="stringregister"></a>IRegistrar::StringRegister  
-  Регистрирует указанный строковых данных.
+  Регистрирует указанную строку данных.
 ```
 virtual HRESULT STDMETHODCALLTYPE StringRegister( 
     /* [in] */ _In_z_ LPCOLESTR data) = 0;
 ```  
   
 ##  <a name="stringunregister"></a>IRegistrar::StringUnregister
- Отменяет регистрацию указанного строковых данных.  
+ Отменяет регистрацию указанного строковые данные.  
   
 ```
 virtualHRESULT STDMETHODCALLTYPE StringUnregister( 
@@ -162,4 +144,3 @@ virtualHRESULT STDMETHODCALLTYPE ResourceUnregister(
  [Общие сведения о классе](../../atl/atl-class-overview.md)   
  [Классы модуля](../../atl/atl-module-classes.md)   
  [Компонент реестра (регистратор)](../../atl/atl-registry-component-registrar.md)  
-

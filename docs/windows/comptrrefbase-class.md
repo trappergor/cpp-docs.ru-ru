@@ -1,32 +1,30 @@
 ---
-title: "Класс ComPtrRefBase | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "client/Microsoft::WRL::Details::ComPtrRefBase"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "ComPtrRefBase - класс"
+title: "Класс ComPtrRefBase | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: client/Microsoft::WRL::Details::ComPtrRefBase
+dev_langs: C++
+helpviewer_keywords: ComPtrRefBase class
 ms.assetid: 6d344c1a-cc13-4a3f-8a0d-f167ccb9348f
-caps.latest.revision: 5
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 5
+caps.latest.revision: "5"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 2c010b85095da67a91c0b4c1df6f3da7a4f677dd
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/24/2017
 ---
-# Класс ComPtrRefBase
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Предназначено для поддержки инфраструктуры WRL, а не для непосредственного использования в коде.  
+# <a name="comptrrefbase-class"></a>ComPtrRefBase - класс
+Поддерживает инфраструктуру WRL и не предназначен для использования непосредственно из программного кода.  
   
-## Синтаксис  
+## <a name="syntax"></a>Синтаксис  
   
 ```  
 template <  
@@ -35,41 +33,41 @@ template <
 class ComPtrRefBase;  
 ```  
   
-#### Параметры  
+#### <a name="parameters"></a>Параметры  
  `T`  
- Тип [ComPtr\<T\>](../windows/comptr-class.md) или тип, производный от него, не просто интерфейс, представленный ComPtr.  
+ Объект [ComPtr\<T >](../windows/comptr-class.md) тип или тип, производный от него, а не просто интерфейс, представленный экземпляром ComPtr.  
   
-## Заметки  
- Представляет базовый класс для класса [ComPtrRef](../Topic/ComPtrRef%20Class.md).  
+## <a name="remarks"></a>Примечания  
+ Представляет базовый класс для [ComPtrRef](../windows/comptrref-class.md) класса.  
   
-## Члены  
+## <a name="members"></a>Члены  
   
-### Общедоступные Typedefs  
-  
-|Имя|Описание|  
-|---------|--------------|  
-|`InterfaceType`|Синоним для типа параметра `T` шаблона.|  
-  
-### Открытые операторы  
+### <a name="public-typedefs"></a>Общедоступные определения типов  
   
 |Имя|Описание|  
-|---------|--------------|  
-|[Оператор ComPtrRefBase::operator IInspectable\*\*](../windows/comptrrefbase-operator-iinspectable-star-star-operator.md)|Приводит текущий элемент данных [ptr\_](../windows/comptrrefbase-ptr-data-member.md) к указателю\-на\-указатель\-на интерфейс IInspectable.|  
-|[Оператор ComPtrRefBase::operator IUnknown\*\*](../windows/comptrrefbase-operator-iunknown-star-star-operator.md)|Приводит текущие данные\-член [ptr\_](../windows/comptrrefbase-ptr-data-member.md) к указателю\-на\-указатель\-на интерфейс IUnknown.|  
+|----------|-----------------|  
+|`InterfaceType`|Синоним для типа параметра шаблона `T`.|  
   
-### Защищенные члены данных  
+### <a name="public-operators"></a>Открытые операторы  
   
 |Имя|Описание|  
-|---------|--------------|  
-|[Элемент данных ComPtrRefBase::ptr\_](../windows/comptrrefbase-ptr-data-member.md)|Указатель на тип, указанный в текущем параметре шаблона.|  
+|----------|-----------------|  
+|[Оператор ComPtrRefBase::operator IInspectable**](../windows/comptrrefbase-operator-iinspectable-star-star-operator.md)|Приводит текущие [ptr_](../windows/comptrrefbase-ptr-data-member.md) данные-член к указателю к a указатель-интерфейс IInspectable.|  
+|[Оператор ComPtrRefBase::operator IUnknown**](../windows/comptrrefbase-operator-iunknown-star-star-operator.md)|Приводит текущие [ptr_](../windows/comptrrefbase-ptr-data-member.md) данные-член к указатель в a указатель интерфейса IUnknown.|  
   
-## Иерархия наследования  
+### <a name="protected-data-members"></a>Защищенные члены данных  
+  
+|Имя|Описание|  
+|----------|-----------------|  
+|[Элемент данных ComPtrRefBase::ptr_](../windows/comptrrefbase-ptr-data-member.md)|Указатель на тип, заданный текущим параметром шаблона.|  
+  
+## <a name="inheritance-hierarchy"></a>Иерархия наследования  
  `ComPtrRefBase`  
   
-## Требования  
+## <a name="requirements"></a>Требования  
  **Заголовок:** client.h  
   
- **Пространство имен:** Microsoft::WRL::Details  
+ **Пространство имен:** Microsoft::wrl:: Details  
   
-## См. также  
+## <a name="see-also"></a>См. также  
  [Пространство имен Microsoft::WRL::Details](../windows/microsoft-wrl-details-namespace.md)

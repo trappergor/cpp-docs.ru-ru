@@ -1,54 +1,52 @@
 ---
-title: "lastprivate | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "lastprivate"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "lastprivate OpenMP clause"
+title: "lastprivate | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: lastprivate
+dev_langs: C++
+helpviewer_keywords: lastprivate OpenMP clause
 ms.assetid: 6ef87b31-375a-47e8-8d0d-281be45fb56a
-caps.latest.revision: 8
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 9429a54a21d58be7f2dd1667478ae653da5a8c35
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/24/2017
 ---
-# lastprivate
-[!INCLUDE[vs2017banner](../../../assembler/inline/includes/vs2017banner.md)]
-
-Указывает, что версия включающего контекста переменной задается равным закрытой версии любого поток выполняет итерацию \(последняя конструкция для\-цикла\) или последний раздел \#pragma \(partitions\).  
+# <a name="lastprivate"></a>lastprivate
+Указывает, что версия контекст внешней переменной приравнивается к закрытой версии поток выполняет последней итерации (конструкция цикла for) или последний раздел (#pragma разделов).  
   
-## Синтаксис  
+## <a name="syntax"></a>Синтаксис  
   
 ```  
 lastprivate(var)  
 ```  
   
-## Заметки  
- Здесь:  
+## <a name="remarks"></a>Примечания  
+ где  
   
  `var`  
- Переменная которой установлено равным закрытой версии любого поток выполняет итерацию \(последняя конструкция для\-цикла\) или последний раздел \#pragma \(partitions\).  
+ Переменная, которая задана равной закрытой версии поток выполняет последней итерации (конструкция цикла for) или последний раздел (#pragma разделов).  
   
-## Заметки  
- `lastprivate` применяется к следующим рекомендациям:  
+## <a name="remarks"></a>Примечания  
+ `lastprivate`применяется к следующие директивы:  
   
--   [for](../Topic/for%20\(OpenMP\).md)  
+-   [for](../../../parallel/openmp/reference/for-openmp.md)  
   
--   [sections](../../../parallel/openmp/reference/sections-openmp.md)  
+-   [разделы](../../../parallel/openmp/reference/sections-openmp.md)  
   
- Дополнительные сведения см. в разделе [2.7.2.3 lastprivate](../Topic/2.7.2.3%20lastprivate.md).  
+ Дополнительные сведения см. в разделе [2.7.2.3 lastprivate](../../../parallel/openmp/2-7-2-3-lastprivate.md).  
   
-## Пример  
- См. [schedule](../../../parallel/openmp/reference/schedule.md) пример использования  `lastprivate` предложение.  
+## <a name="example"></a>Пример  
+ В разделе [расписания](../../../parallel/openmp/reference/schedule.md) пример использования `lastprivate` предложения.  
   
-## См. также  
- [Clauses](../../../parallel/openmp/reference/openmp-clauses.md)
+## <a name="see-also"></a>См. также  
+ [Предложения](../../../parallel/openmp/reference/openmp-clauses.md)

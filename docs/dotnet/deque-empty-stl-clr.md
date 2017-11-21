@@ -1,41 +1,39 @@
 ---
-title: "deque::empty (STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::deque::empty"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "empty - член [STL/CLR]"
+title: "deque::Empty (STL/CLR) | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::deque::empty
+dev_langs: C++
+helpviewer_keywords: empty member [STL/CLR]
 ms.assetid: 6ff3dd07-ebdf-47f9-b0d2-8a3229390d3b
-caps.latest.revision: 15
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 13
+caps.latest.revision: "15"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 8cc9c3edb0fb8bc458090a5692e4e150a41cace0
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/24/2017
 ---
-# deque::empty (STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Тесты отсутствуют ли какие\-либо элементы.  
+# <a name="dequeempty-stlclr"></a>deque::empty (STL/CLR)
+Проверяет отсутствие элементов.  
   
-## Синтаксис  
+## <a name="syntax"></a>Синтаксис  
   
 ```  
 bool empty();  
 ```  
   
-## Заметки  
- Функция\-член возвращает значение true для пустой контролируемой последовательности.  Она эквивалентна [deque::size](../Topic/deque::size%20\(STL-CLR\).md)`() == 0`.  Он используется для выполнения ли deque пусто.  
+## <a name="remarks"></a>Примечания  
+ Эта функция-член возвращает значение true для пустой управляемой последовательности. Это эквивалентно [deque::size (STL/CLR)](../dotnet/deque-size-stl-clr.md)`() == 0`. Используется, чтобы проверить, является ли объект deque пустым.  
   
-## Пример  
+## <a name="example"></a>Пример  
   
 ```  
 // cliext_deque_empty.cpp   
@@ -65,16 +63,19 @@ int main()
   
 ```  
   
-  **a b c**  
-**size\(\) \= 3**  
-**empty\(\) \= false**  
-**size\(\) \= 0**  
-**empty\(\) \= true**   
-## Требования  
- **Заголовок:**\<cliext\/deque\>  
+```Output  
+ a b c  
+size() = 3  
+empty() = False  
+size() = 0  
+empty() = True  
+```  
+  
+## <a name="requirements"></a>Требования  
+ **Заголовок:** \<cliext/deque >  
   
  **Пространство имен:** cliext  
   
-## См. также  
- [deque](../dotnet/deque-stl-clr.md)   
- [deque::size](../Topic/deque::size%20\(STL-CLR\).md)
+## <a name="see-also"></a>См. также  
+ [deque (STL/CLR)](../dotnet/deque-stl-clr.md)   
+ [deque::size (STL/CLR)](../dotnet/deque-size-stl-clr.md)

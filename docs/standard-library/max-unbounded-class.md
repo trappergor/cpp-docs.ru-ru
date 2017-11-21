@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -15,8 +14,7 @@ f1_keywords:
 - allocators/stdext::max_unbounded::full
 - allocators/stdext::max_unbounded::released
 - allocators/stdext::max_unbounded::saved
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - stdext::max_unbounded
 - stdext::max_unbounded [C++], allocated
@@ -25,16 +23,15 @@ helpviewer_keywords:
 - stdext::max_unbounded [C++], released
 - stdext::max_unbounded [C++], saved
 ms.assetid: e34627a9-c231-4031-a483-cbb0514fff46
-caps.latest.revision: 18
+caps.latest.revision: "18"
 author: corob-msft
 ms.author: corob
 manager: ghogen
+ms.openlocfilehash: 8518fbbb25eadb00a6cce68d687046ce8e344fed
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
 ms.translationtype: MT
-ms.sourcegitcommit: 65f4e356ad0d46333b0d443d0fd6ac0b9f2b6f58
-ms.openlocfilehash: 499032343c20c308c2e2820420c725c8d6d43fee
-ms.contentlocale: ru-ru
-ms.lasthandoff: 10/03/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="maxunbounded-class"></a>Класс max_unbounded
 Описывает объект [max class](../standard-library/allocators-header.md), который не ограничивает максимальную длину объекта [freelist](../standard-library/freelist-class.md).  
@@ -127,7 +124,6 @@ void saved();
   
 ## <a name="see-also"></a>См. также  
  [\<allocators>](../standard-library/allocators-header.md)
-
 
 
 

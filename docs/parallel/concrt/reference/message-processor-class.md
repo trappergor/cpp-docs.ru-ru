@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-windows
+ms.technology: cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -15,35 +14,18 @@ f1_keywords:
 - AGENTS/concurrency::message_processor::sync_send
 - AGENTS/concurrency::message_processor::wait
 - AGENTS/concurrency::message_processor::process_incoming_message
-dev_langs:
-- C++
-helpviewer_keywords:
-- message_processor class
+dev_langs: C++
+helpviewer_keywords: message_processor class
 ms.assetid: 23afb052-daa7-44ed-bf24-d2513db748da
-caps.latest.revision: 16
+caps.latest.revision: "16"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 5faef5bd1be6cc02d6614a6f6193c74167a8ff23
-ms.openlocfilehash: dff934584179cc58d884be65fdb96cb6c646a4ac
-ms.contentlocale: ru-ru
-ms.lasthandoff: 03/17/2017
-
+ms.openlocfilehash: 9f93763a3d29e19feaa110b336c4cc9bb832539d
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="messageprocessor-class"></a>Класс message_processor
 Класс `message_processor` — это абстрактный базовый класс для обработки объектов `message`. Упорядочивание сообщений не гарантируется.  
@@ -79,7 +61,7 @@ class message_processor;
   
 |Имя|Описание|  
 |----------|-----------------|  
-|[process_incoming_message](#process_incoming_message)|При переопределении в производном классе выполняет прямую обработки сообщений в блок. Один раз, каждый раз добавляется новое сообщение и очередь оказывается пустой.|  
+|[process_incoming_message](#process_incoming_message)|При переопределении в производном классе выполняет прямую обработки сообщений в блок. Вызывается один раз, каждый раз, добавляется новое сообщение и очередь оказывается пустой.|  
   
 ## <a name="inheritance-hierarchy"></a>Иерархия наследования  
  `message_processor`  
@@ -99,14 +81,14 @@ virtual void async_send(_Inout_opt_ message<T>* _Msg) = 0;
   
 ### <a name="parameters"></a>Параметры  
  `_Msg`  
- A `message` объекта для асинхронной передачи.  
+ Объект `message` объект отправлять в асинхронном режиме.  
   
 ### <a name="remarks"></a>Примечания  
- Этот метод необходимо переопределить в реализации обработчика.  
+ Процессор реализации должны переопределять этот метод.  
   
 ##  <a name="process_incoming_message"></a>process_incoming_message 
 
- При переопределении в производном классе выполняет прямую обработки сообщений в блок. Один раз, каждый раз добавляется новое сообщение и очередь оказывается пустой.  
+ При переопределении в производном классе выполняет прямую обработки сообщений в блок. Вызывается один раз, каждый раз, добавляется новое сообщение и очередь оказывается пустой.  
   
 ```
 virtual void process_incoming_message() = 0;
@@ -128,7 +110,7 @@ virtual void sync_send(_Inout_opt_ message<T>* _Msg) = 0;
  Объект `message` объект для отправки в синхронном режиме.  
   
 ### <a name="remarks"></a>Примечания  
- Этот метод необходимо переопределить в реализации обработчика.  
+ Процессор реализации должны переопределять этот метод.  
   
 ##  <a name="wait"></a>Ожидание 
 
@@ -139,9 +121,8 @@ virtual void wait() = 0;
 ```  
   
 ### <a name="remarks"></a>Примечания  
- Этот метод необходимо переопределить в реализации обработчика.  
+ Процессор реализации должны переопределять этот метод.  
   
 ## <a name="see-also"></a>См. также  
  [пространство имен Concurrency](concurrency-namespace.md)   
  [Класс ordered_message_processor](ordered-message-processor-class.md)
-

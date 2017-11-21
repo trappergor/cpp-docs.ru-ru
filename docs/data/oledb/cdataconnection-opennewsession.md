@@ -1,56 +1,55 @@
 ---
-title: "CDataConnection::OpenNewSession | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "CDataConnection.OpenNewSession"
-  - "ATL.CDataConnection.OpenNewSession"
-  - "ATL::CDataConnection::OpenNewSession"
-  - "OpenNewSession"
-  - "CDataConnection::OpenNewSession"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "OpenNewSession - метод"
+title: "CDataConnection::OpenNewSession | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- CDataConnection.OpenNewSession
+- ATL.CDataConnection.OpenNewSession
+- ATL::CDataConnection::OpenNewSession
+- OpenNewSession
+- CDataConnection::OpenNewSession
+dev_langs: C++
+helpviewer_keywords: OpenNewSession method
 ms.assetid: 0a70e573-9498-4ca7-b524-45666dc7b0a3
-caps.latest.revision: 8
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 733834dcb7df6addd9b3953019b367f9e12951dc
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/24/2017
 ---
-# CDataConnection::OpenNewSession
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Открывает новый сеанс с помощью источника данных текущего объекта подключения.  
+# <a name="cdataconnectionopennewsession"></a>CDataConnection::OpenNewSession
+Открывает новый сеанс с использованием текущего объекта соединения источника данных.  
   
-## Синтаксис  
+## <a name="syntax"></a>Синтаксис  
   
 ```  
   
-      HRESULT OpenNewSession(   
-   CSession & session    
+      HRESULT OpenNewSession(   
+   CSession & session    
 ) throw( );  
 ```  
   
-#### Параметры  
+#### <a name="parameters"></a>Параметры  
  `session`  
- \[In\/out\] ссылка на новый объект сеанса.  
+ [входные/выходные] Ссылка на объект нового сеанса.  
   
- **Примечания**  
- Новый сеанс использует объект источника данных текущего объекта подключения, содержащиеся в качестве родительским элементом, может получить те же сведения как источник данных.  
+ **Заметки**  
+ Новый сеанс использует объект источника данных, содержащихся текущего объекта соединения с родительским и можно получить доступ ко всем те же сведения, как источник данных.  
   
-## Возвращаемое значение  
- Стандартное `HRESULT`.  
+## <a name="return-value"></a>Возвращаемое значение  
+ Стандартный `HRESULT`.  
   
-## Требования  
+## <a name="requirements"></a>Требования  
  **Заголовок:** atldbcli.h  
   
-## См. также  
+## <a name="see-also"></a>См. также  
  [Класс CDataConnection](../../data/oledb/cdataconnection-class.md)

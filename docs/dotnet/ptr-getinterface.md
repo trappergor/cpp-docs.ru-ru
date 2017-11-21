@@ -1,52 +1,51 @@
 ---
-title: "ptr::GetInterface | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "ptr::GetInterface"
-  - "msclr::com::ptr::GetInterface"
-  - "GetInterface"
-  - "msclr.com.ptr.GetInterface"
-  - "ptr.GetInterface"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "GetInterface - метод"
+title: "PTR::GetInterface | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords:
+- ptr::GetInterface
+- msclr::com::ptr::GetInterface
+- GetInterface
+- msclr.com.ptr.GetInterface
+- ptr.GetInterface
+dev_langs: C++
+helpviewer_keywords: GetInterface method
 ms.assetid: d85553ec-fb88-4fd6-9df2-ddcaa8b2dc70
-caps.latest.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 8
+caps.latest.revision: "10"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: a86741e9047694dda61e306afb164dc2cc2bbf98
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/24/2017
 ---
-# ptr::GetInterface
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Возвращает указатель на имеемому com\-объекта.  
+# <a name="ptrgetinterface"></a>ptr::GetInterface
+Возвращает указатель на собственный COM-объект.  
   
-## Синтаксис  
+## <a name="syntax"></a>Синтаксис  
   
 ```  
 _interface_type * GetInterface();  
 ```  
   
-## Возвращаемое значение  
- Указатель на имеемому com\-объекта.  
+## <a name="return-value"></a>Возвращаемое значение  
+ Указатель на собственный COM-объект.  
   
-## Исключения  
- По сути, `QueryInterface` вызван на имеемом COM\-объект и любые ошибки `HRESULT` преобразование к исключению <xref:System.Runtime.InteropServices.Marshal.ThrowExceptionForHR%2A>.  
+## <a name="exceptions"></a>Исключения  
+ На внутреннем уровне `QueryInterface` будет вызван на собственный объект COM и любая ошибка `HRESULT` преобразуется в исключение по <xref:System.Runtime.InteropServices.Marshal.ThrowExceptionForHR%2A>.  
   
-## Заметки  
- `com::ptr` добавляет ссылки на COM\-объект для целей вызывающего объекта, а также поддерживает собственную ссылку на COM\-объект.  Вызывающий объект должен в конечном счете освобождение ссылки в возвращаемом объекте или он никогда не уничтожается.  
+## <a name="remarks"></a>Примечания  
+ `com::ptr` Добавляет ссылку на COM-объект для вызывающего объекта, а также хранит собственную ссылку на COM-объекта. Вызывающий объект в конечном счете необходимо освободить ссылку на возвращаемый объект или никогда не будут уничтожены.  
   
-## Пример  
- В этом примере реализуется класс CLR, который использует `com::ptr` для создания его объект `IXMLDOMDocument` закрытого члена.  Функция\-член `GetDocument` использует `GetInterface`, чтобы вернуть указатель на COM\-объект.  
+## <a name="example"></a>Пример  
+ В этом примере реализуется класс CLR, который использует `com::ptr` программы-оболочки для своего закрытого члена `IXMLDOMDocument` объекта. `GetDocument` Функция-член использует `GetInterface` для возврата указателя на COM-объект.  
   
 ```  
 // comptr_getinterface.cpp  
@@ -162,12 +161,15 @@ int main() {
 }  
 ```  
   
-  **\<word\>persnickety\<\/word\>**   
-## Требования  
- **Файл заголовка**\<msclr\\com\\ptr.h\>  
+```Output  
+<word>persnickety</word>  
+```  
+  
+## <a name="requirements"></a>Требования  
+ **Файл заголовка** \<msclr\com\ptr.h >  
   
  **Пространство имен** msclr::com  
   
-## См. также  
- [Члены ptr](../dotnet/ptr-members.md)   
+## <a name="see-also"></a>См. также  
+ [Члены PTR](../dotnet/ptr-members.md)   
  [ptr::QueryInterface](../dotnet/ptr-queryinterface.md)

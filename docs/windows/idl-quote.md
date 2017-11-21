@@ -1,32 +1,30 @@
 ---
-title: "idl_quote | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-f1_keywords: 
-  - "vc-attr.idl_quote"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "idl_quote attribute"
+title: "idl_quote | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+f1_keywords: vc-attr.idl_quote
+dev_langs: C++
+helpviewer_keywords: idl_quote attribute
 ms.assetid: a370e1b7-948b-4e67-9a25-58facf24e4c9
-caps.latest.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 10
+caps.latest.revision: "10"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 8ca11d9b92ba1dd0dc7f5437bf1dec812f2edfcc
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/24/2017
 ---
-# idl_quote
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Позволяет конструкциям языка IDL использования, которые не поддерживаются в текущей версии Visual C\+\+ и передать их к созданному файлу idl.  
+# <a name="idlquote"></a>idl_quote
+Позволяет использовать IDL конструкции, которые не поддерживаются в текущей версии Visual C++ и их передачи через созданного IDL-файла.  
   
-## Синтаксис  
+## <a name="syntax"></a>Синтаксис  
   
 ```  
   
@@ -35,15 +33,15 @@ caps.handback.revision: 10
 ) ]  
 ```  
   
-#### Параметры  
+#### <a name="parameters"></a>Параметры  
  *текст*  
- Имя атрибута, который планируется компилятора Visual C\+\+, чтобы передать к созданному idl\-файл без возвращения ошибки компилятора.  
+ Имя атрибута, который планируется компилятор Visual C++ для пропуска созданного IDL-файла, не возвращая ошибку компилятора.  
   
-## Заметки  
- Если **idl\_quote** Атрибут C\+\+ используется как отдельный атрибут \(точкой с запятой после заключительного брекета\), после чего Текст помещает в объединенном файле idl как.  If **idl\_quote** использует на символе, Текст помещает в блоке атрибута символов.  
+## <a name="remarks"></a>Примечания  
+ Если **idl_quote** C++ используется в качестве изолированного атрибута (точку с запятой после закрывающей скобкой), затем *текст* помещается в объединенного IDL-файл как есть. Если **idl_quote** используется символ, *текст* помещается в блоке атрибутов для этого символа.  
   
-## Пример  
- В следующем примере кода показано, как можно определить неподдерживаемый атрибут \(использование INподдерживаются\), и как определять и использовать конструкцию неопределенное idl.  
+## <a name="example"></a>Пример  
+ В следующем коде показано, как можно указать неподдерживаемый атрибут (с помощью **в**, который поддерживается), а также для определения и использования конструкцией не определено .idl:  
   
 ```  
 // cpp_attr_ref_idl_quote.cpp  
@@ -78,22 +76,21 @@ __interface IStatic{
 };  
 ```  
   
- Этот код вызывает MYFLOT и MYDUB и *Текст* запись, который необходимо поместить в созданном файле idl.  *Имя* параметр вынуждает *Текст* располагаться перед любым, который ссылается на *Имя* в созданном файле idl.  *зависимости* параметр вынуждает определения списка зависимостей располагаться выше *Текст* в созданном файле idl.  
+ Этот код вызывает MYFLOT и MYDUB и *текст* входа должно быть помещено в сгенерированный IDL-файл. *Имя* параметр заставляет *текст* должен располагаться перед все связанные *имя* в сгенерированный IDL-файл. *Зависимости* параметр предписывает определения список зависимостей, чтобы поместить перед *текст* в сгенерированный IDL-файл.  
   
-## Требования  
+## <a name="requirements"></a>Требования  
   
-### Контекст атрибута  
+### <a name="attribute-context"></a>Контекст атрибута  
   
 |||  
 |-|-|  
-|**Применение**|Любой|  
-|**Repeatable**|Нет|  
-|**Обязательные атрибуты**|None|  
-|**Недопустимые атрибуты**|None|  
+|**Применение**|В любом месте|  
+|**Повторяемый**|Нет|  
+|**Обязательные атрибуты**|Нет|  
+|**Недопустимые атрибуты**|Нет|  
   
- Дополнительные сведения см. в разделе [Контексты атрибута](../windows/attribute-contexts.md).  
+ Дополнительные сведения см. в разделе [Контексты атрибутов](../windows/attribute-contexts.md).  
   
-## См. также  
- [IDL Attributes](../windows/idl-attributes.md)   
- [Stand\-Alone Attributes](../Topic/Stand-Alone%20Attributes.md)   
- [Attributes Samples](http://msdn.microsoft.com/ru-ru/558ebdb2-082f-44dc-b442-d8d33bf7bdb8)
+## <a name="see-also"></a>См. также  
+ [Атрибуты IDL](../windows/idl-attributes.md)   
+ [Изолированные атрибуты](../windows/stand-alone-attributes.md)   

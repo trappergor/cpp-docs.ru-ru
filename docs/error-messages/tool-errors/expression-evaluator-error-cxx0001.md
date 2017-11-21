@@ -1,30 +1,29 @@
 ---
-title: "Ошибка вычислителя выражений CXX0001 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "CXX0001"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "CAN0001"
-  - "CXX0001"
+title: "Ошибка вычислителя выражений CXX0001 | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords: CXX0001
+dev_langs: C++
+helpviewer_keywords:
+- CXX0001
+- CAN0001
 ms.assetid: 39cdf175-e4b8-49c1-bf84-ed41e0fd8600
-caps.latest.revision: 6
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 6
+caps.latest.revision: "6"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: bfdfafd7ac027f678f80f385991af720bfdd982a
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/24/2017
 ---
-# Ошибка вычислителя выражений CXX0001
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="expression-evaluator-error-cxx0001"></a>Ошибка вычислителя выражений CXX0001
 исключение при выполнении пользовательской функции  
   
- Выполняемый код вызвал общую ошибку защиты.  Эта ошибка идентична CAN0001.
+ Выполняемый код вызвал общую ошибку защиты. Эта ошибка идентична CAN0001.

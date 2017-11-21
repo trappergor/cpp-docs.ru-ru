@@ -1,81 +1,80 @@
 ---
-title: "functional (STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "<cliext/functional>"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "<cliext/functional> - заголовок [STL/CLR]"
-  - "<functional> - заголовок [STL/CLR]"
-  - "функциональные функции [STL/CLR]"
+title: "режим работы (STL/CLR) | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: <cliext/functional>
+dev_langs: C++
+helpviewer_keywords:
+- <functional> header [STL/CLR]
+- <cliext/functional> header [STL/CLR]
+- functional functions [STL/CLR]
 ms.assetid: 88738b8c-5d37-4375-970e-a4442bf5efde
-caps.latest.revision: 16
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 16
+caps.latest.revision: "16"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: df7e80a97ca54dae725a31e9d203ecd4710a4c2d
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/24/2017
 ---
-# functional (STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Включать заголовок `<cliext/functional>` STL\/CLR для определения нескольких классы\-шаблоны и соответствующих делегатов и функций шаблона.  
+# <a name="functional-stlclr"></a>functional (STL/CLR)
+Включать заголовок STL/CLR `<cliext/functional>` для определения несколько классов шаблонов и функции и делегаты связанных шаблонов.  
   
-## Синтаксис  
+## <a name="syntax"></a>Синтаксис  
   
 ```  
 #include <functional>  
 ```  
   
-## Объявления  
+## <a name="declarations"></a>Объявления  
   
 |Делегат|Описание|  
-|-------------|--------------|  
-|[binary\_delegate](../Topic/binary_delegate%20\(STL-CLR\).md)|2 — аргумента делегата.|  
-|[binary\_delegate\_noreturn](../dotnet/binary-delegate-noreturn-stl-clr.md)|2 — возвращения аргумента делегата `void`.|  
-|[unary\_delegate](../dotnet/unary-delegate-stl-clr.md)|От аргумента делегата.|  
-|[unary\_delegate\_noreturn](../dotnet/unary-delegate-noreturn-stl-clr.md)|Делегат от аргумента возвращения `void`.|  
+|--------------|-----------------|  
+|[binary_delegate (STL/CLR)](../dotnet/binary-delegate-stl-clr.md)|Делегат с двумя аргументами.|  
+|[binary_delegate_noreturn (STL/CLR)](../dotnet/binary-delegate-noreturn-stl-clr.md)|Делегат с двумя аргументами возвращающий `void`.|  
+|[unary_delegate (STL/CLR)](../dotnet/unary-delegate-stl-clr.md)|Делегат, один аргумент.|  
+|[unary_delegate_noreturn (STL/CLR)](../dotnet/unary-delegate-noreturn-stl-clr.md)|Один аргумент делегат возвращающий `void`.|  
   
 |Класс|Описание|  
-|-----------|--------------|  
-|[binary\_negate](../dotnet/binary-negate-stl-clr.md)|Функтором для отрицания функтором 2 — аргумента.|  
-|[binder1st](../dotnet/binder1st-stl-clr.md)|Функтором привязать первый аргумент функтором 2 — аргумента.|  
-|[binder2nd](../Topic/binder2nd%20\(STL-CLR\).md)|Функтором для привязки второй аргумент в функтором 2 — аргумента.|  
-|[divides](../dotnet/divides-stl-clr.md)|Функтором границы.|  
-|[equal\_to](../dotnet/equal-to-stl-clr.md)|Равное функтором сравнения.|  
-|[greater](../dotnet/greater-stl-clr.md)|Большие функтором сравнения.|  
-|[greater\_equal](../Topic/greater_equal%20\(STL-CLR\).md)|Больше или равное функтором сравнения.|  
-|[less](../dotnet/less-stl-clr.md)|Меньше функтором сравнения.|  
-|[less\_equal](../dotnet/less-equal-stl-clr.md)|Или равное функтором сравнения.|  
-|[logical\_and](../dotnet/logical-and-stl-clr.md)|Логическое И функтором.|  
-|[logical\_not](../dotnet/logical-not-stl-clr.md)|Логическое НЕ функтором.|  
-|[logical\_or](../Topic/logical_or%20\(STL-CLR\).md)|Логического ИЛИ функтором.|  
-|[minus](../dotnet/minus-stl-clr.md)|Вычитание функтором.|  
-|[остатка от деления](../dotnet/modulus-stl-clr.md)|Функтором модуля.|  
-|[multiplies](../Topic/multiplies%20\(STL-CLR\).md)|Умножьте функтором.|  
-|[negate](../Topic/negate%20\(STL-CLR\).md)|Функтором для получения его отрицанный аргумент.|  
-|[not\_equal\_to](../dotnet/not-equal-to-stl-clr.md)|Равное функтором сравнения.|  
-|[plus](../dotnet/plus-stl-clr.md)|Добавьте функтором.|  
-|[unary\_negate](../dotnet/unary-negate-stl-clr.md)|Функтором для отрицания функтором от аргумента.|  
+|-----------|-----------------|  
+|[binary_negate (STL/CLR)](../dotnet/binary-negate-stl-clr.md)|Функтор, преобразуемая в отрицательную функтор двумя аргументами.|  
+|[binder1st (STL/CLR)](../dotnet/binder1st-stl-clr.md)|Функтор для привязки к функтор двух аргументов первый аргумент.|  
+|[binder2nd (STL/CLR)](../dotnet/binder2nd-stl-clr.md)|Функтор второй аргумент привязывается функтор двумя аргументами.|  
+|[divides (STL/CLR)](../dotnet/divides-stl-clr.md)|Разделите функтор.|  
+|[equal_to (STL/CLR)](../dotnet/equal-to-stl-clr.md)|Равно функтора сравнения.|  
+|[greater (STL/CLR)](../dotnet/greater-stl-clr.md)|Больше функтора сравнения.|  
+|[greater_equal (STL/CLR)](../dotnet/greater-equal-stl-clr.md)|Функтора сравнения больше или равно.|  
+|[less (STL/CLR)](../dotnet/less-stl-clr.md)|Меньше функтора сравнения.|  
+|[less_equal (STL/CLR)](../dotnet/less-equal-stl-clr.md)|Функтора сравнения меньше или равно.|  
+|[logical_and (STL/CLR)](../dotnet/logical-and-stl-clr.md)|Логическое AND функтор.|  
+|[logical_not (STL/CLR)](../dotnet/logical-not-stl-clr.md)|Логическое не функтор.|  
+|[logical_or (STL/CLR)](../dotnet/logical-or-stl-clr.md)|Функтор логического или.|  
+|[minus (STL/CLR)](../dotnet/minus-stl-clr.md)|Вычитание функтор.|  
+|[modulus (STL/CLR)](../dotnet/modulus-stl-clr.md)|Функтор остатка от деления.|  
+|[multiplies (STL/CLR)](../dotnet/multiplies-stl-clr.md)|Умножьте функтор.|  
+|[negate (STL/CLR)](../dotnet/negate-stl-clr.md)|Функтор для возвращения аргумента инвертировано.|  
+|[not_equal_to (STL/CLR)](../dotnet/not-equal-to-stl-clr.md)|Функтора сравнения не равны.|  
+|[plus (STL/CLR)](../dotnet/plus-stl-clr.md)|Добавьте функтор.|  
+|[unary_negate (STL/CLR)](../dotnet/unary-negate-stl-clr.md)|Функтор, преобразуемая в отрицательную функтор один аргумент.|  
   
 |Функция|Описание|  
-|-------------|--------------|  
-|[bind1st](../dotnet/bind1st-stl-clr.md)|Создает binder1st для аргумента и функтором.|  
-|[bind2nd](../dotnet/bind2nd-stl-clr.md)|Создает binder2nd для аргумента и функтором.|  
-|[not1](../dotnet/not1-stl-clr.md)|Создает unary\_negate для функтором.|  
-|[not1](../dotnet/not1-stl-clr.md)|Создает binary\_negate для функтором.|  
+|--------------|-----------------|  
+|[bind1st (STL/CLR)](../dotnet/bind1st-stl-clr.md)|Создает binder1st функтор и аргумента.|  
+|[bind2nd (STL/CLR)](../dotnet/bind2nd-stl-clr.md)|Создает binder2nd функтор и аргумента.|  
+|[not1 (STL/CLR)](../dotnet/not1-stl-clr.md)|Создает unary_negate для функтором.|  
+|[not1 (STL/CLR)](../dotnet/not1-stl-clr.md)|Создает binary_negate для функтором.|  
   
-## Требования  
- **Заголовок:**\<cliext\/functional\>  
+## <a name="requirements"></a>Требования  
+ **Заголовок:** \<cliext и функционального >  
   
  **Пространство имен:** cliext  
   
-## См. также  
- [Библиотека STL\/CLR](../dotnet/stl-clr-library-reference.md)
+## <a name="see-also"></a>См. также  
+ [Справочник по библиотеке STL/CLR](../dotnet/stl-clr-library-reference.md)

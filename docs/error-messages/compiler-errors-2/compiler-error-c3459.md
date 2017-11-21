@@ -1,52 +1,32 @@
 ---
-title: "C3459 Ошибка компилятора | Документы Microsoft"
+title: "Ошибка компилятора C3459 | Документы Microsoft"
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-tools
+ms.technology: cpp-tools
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- C3459
-dev_langs:
-- C++
-helpviewer_keywords:
-- C3459
+f1_keywords: C3459
+dev_langs: C++
+helpviewer_keywords: C3459
 ms.assetid: 3d290a20-d313-4c07-9bd8-c5c159cb169f
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 65e7a7bd56096fbeec61b651ab494d82edef9c90
-ms.openlocfilehash: 7061d3d633f9b2a4127189e74103141834800bfe
-ms.contentlocale: ru-ru
-ms.lasthandoff: 02/24/2017
-
+ms.openlocfilehash: 703844f749ea2911d2472079053608474de56785
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="compiler-error-c3459"></a>Ошибка компилятора C3459
 "атрибут": атрибут допустим только в индексаторе класса (индексированное свойство по умолчанию)  
   
 Атрибут, создаваемый для применения к свойству индексатора класса, использован неправильно.  
   
-Дополнительные сведения см. в разделе [Практическое руководство: использование свойства в C + +/ CLI](../../dotnet/how-to-use-properties-in-cpp-cli.md).  
+Дополнительные сведения см. в разделе [как: используйте свойства в C + +/ CLI](../../dotnet/how-to-use-properties-in-cpp-cli.md).  
   
 ## <a name="example"></a>Пример  
 Следующий пример приводит к возникновению ошибки C3459.  

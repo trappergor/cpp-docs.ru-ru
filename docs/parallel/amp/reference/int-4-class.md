@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-windows
+ms.technology: cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -274,33 +273,17 @@ f1_keywords:
 - amp_short_vectors/Concurrency::graphics::int_4::abrg
 - amp_short_vectors/Concurrency::graphics::int_4::bg
 - amp_short_vectors/Concurrency::graphics::int_4::yxz
-dev_langs:
-- C++
+dev_langs: C++
 ms.assetid: 01768c28-23a8-4965-8267-96834864f4eb
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 5faef5bd1be6cc02d6614a6f6193c74167a8ff23
-ms.openlocfilehash: 2a974f97837ff6e4d57aec3c3f2558077a65b3c9
-ms.contentlocale: ru-ru
-ms.lasthandoff: 03/17/2017
-
+ms.openlocfilehash: 4db3a6a9674792840639340162c09a67851ae68d
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="int4-class"></a>Класс int_4
 Представляет короткий вектор из четырех целых чисел.  
@@ -477,11 +460,11 @@ class int_4;
 |int_4::operator * =||  
 |int_4::operator / =||  
 |int_4::operator ^ =||  
-|int_4::operator | =||  
+|int_4::operator &#124; =||  
 |int_4::operator ~||  
 |int_4::operator ++||  
 |int_4::operator +=||  
-|int_4::operator\<=||  
+|int_4::operator <\<=||  
 |int_4::operator =||  
 |int_4::operator-=||  
 |int_4::operator >> =||  
@@ -690,7 +673,7 @@ explicit inline int_4(
  Значение для инициализации элемента 0.  
   
  `_V1`  
- Значение для инициализации элемент 1.  
+ Значение для инициализации элемента 1.  
   
  `_V2`  
  Значение для инициализации элемента 2.  
@@ -712,4 +695,3 @@ static const int size = 4;
   
 ## <a name="see-also"></a>См. также  
  [Пространство имен Concurrency::graphics](concurrency-graphics-namespace.md)
-

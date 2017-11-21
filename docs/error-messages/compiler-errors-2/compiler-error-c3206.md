@@ -4,27 +4,22 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-tools
+ms.technology: cpp-tools
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- C3206
-dev_langs:
-- C++
-helpviewer_keywords:
-- C3206
+f1_keywords: C3206
+dev_langs: C++
+helpviewer_keywords: C3206
 ms.assetid: d62995b5-e349-4418-bbe8-8a5e776ca7b0
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: corob-msft
 ms.author: corob
 manager: ghogen
+ms.openlocfilehash: 4faf775e3a3a179e49f013b21a948c49a4f89f74
+ms.sourcegitcommit: ca2f94dfd015e0098a6eaf5c793ec532f1c97de1
 ms.translationtype: MT
-ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
-ms.openlocfilehash: 600ea77821fc457a631f96d48b2416f958dce667
-ms.contentlocale: ru-ru
-ms.lasthandoff: 10/10/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/31/2017
 ---
 # <a name="compiler-error-c3206"></a>Ошибка компилятора C3206
 "функция": недопустимый аргумент типа для "параметр", отсутствует список аргументов типа для типа класса "имя_типа"  
@@ -80,7 +75,7 @@ int main() {
 }  
 ```  
   
- Возможное решение  
+ Возможное решение:  
   
 ```  
 // C3206d.cpp  
@@ -96,11 +91,8 @@ int main() {
 }  
 ```  
   
- Эта ошибка может возникнуть и в результате действий по обеспечению совместимости компилятора с Visual C++ .NET 2003, где шаблоны класса недопустимы в качестве аргументов типа шаблона.  
-  
- Шаблон класса недопустим в качестве аргумента типа шаблона. Это работало в Visual C++ .NET 2003, но недопустимо в C++.  
-  
- Приведенный ниже пример компилируется в Visual C++ .NET 2002, но его компиляция в Visual C++ .NET 2003 завершается неудачей.  
+ 
+ Шаблон класса недопустим в качестве аргумента типа шаблона. Следующий пример вызывает ошибки C3206:  
   
 ```  
 // C3206e.cpp  
@@ -117,7 +109,7 @@ int main() {
 }  
 ```  
   
- Возможное решение  
+ Возможное решение:  
   
 ```  
 // C3206f.cpp  
@@ -134,7 +126,7 @@ int main() {
 }  
 ```  
   
- Если параметр шаблона template необходим, то способ устранения ошибки, работающий в обеих версиях (Visual C++ .NET 2003 и Visual C++ .NET 2002), требует, чтобы функция была заключена в класс шаблона, принимающий параметр шаблона template.  
+ Если параметр шаблона template необходим, необходимо заключать в класс шаблона, принимающий параметр шаблона функции:  
   
 ```  
 // C3206g.cpp  

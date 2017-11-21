@@ -1,32 +1,30 @@
 ---
-title: "rdx | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-f1_keywords: 
-  - "vc-attr.rdx"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "rdx attribute"
+title: "RDX | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+f1_keywords: vc-attr.rdx
+dev_langs: C++
+helpviewer_keywords: rdx attribute
 ms.assetid: ff8e4312-c1ad-4934-bdaa-86f54409651e
-caps.latest.revision: 14
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 14
+caps.latest.revision: "14"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: d3384547f1c7648504137004ce90d0c0f41cda77
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/24/2017
 ---
-# rdx
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="rdx"></a>rdx
 Создает раздел реестра или изменяет существующий раздел реестра.  
   
-## Синтаксис  
+## <a name="syntax"></a>Синтаксис  
   
 ```  
   
@@ -37,36 +35,36 @@ caps.handback.revision: 14
 ) ]  
 ```  
   
-#### Параметры  
+#### <a name="parameters"></a>Параметры  
  `key`  
- Имя открытого ключа, который требуется создать.  
+ Имя ключа для создания или открытия.  
   
- `valuename`\(необязательно\)  
- Определяет поле значение.  Если поле значения с таким именем еще не существует ключа, то он добавляется.  
+ `valuename` (необязательно)  
+ Указывает задаваемое полем значения. Если значение поля с таким именем уже существует в ключе, он добавляется.  
   
  *regtype*  
- Тип добавляемого раздела реестра.  Может быть одно из следующих действий: **Текст**"  **dword**"  **binary**или  `CString`.  
+ Тип добавляемого раздела реестра. Может принимать одно из следующих действий: **текст**, **dword**, **двоичных**, или `CString`.  
   
-## Заметки  
- **rdx** Атрибут C\+\+ создает или изменяет существующий раздел реестра для компонента COM.  Добавляет макрос атрибута BEGIN\_RDX\_MAP на объект, реализующий члена целевого объекта.  `RegistryDataExchange`функцию макроса, впрыснутую в результате BEGIN\_RDX\_MAP, можно использовать для передачи данных между реестре и элементами данных  
+## <a name="remarks"></a>Примечания  
+ **Rdx** атрибута C++ создает или изменяет существующий раздел реестра для COM-компонента. Атрибут добавляет макрос BEGIN_RDX_MAP объект, реализующий целевой элемент. `RegistryDataExchange`, функция, введенный в результате макрос BEGIN_RDX_MAP может использоваться для передачи данных между реестром и члены данных  
   
- Этот атрибут может использоваться совместно с [CoClass](../windows/coclass.md)"  [идентификатор progid](../Topic/progid.md)или  [vi\_progid](../windows/vi-progid.md) атрибуты или другие атрибуты, подразумевается одно из них.  
+ Этот атрибут можно использовать в сочетании с [coclass](../windows/coclass.md), [progid](../windows/progid.md), или [vi_progid](../windows/vi-progid.md) атрибутов или другие атрибуты, которые означает одно из следующих.  
   
-## Требования  
+## <a name="requirements"></a>Требования  
   
-### Контекст атрибута  
+### <a name="attribute-context"></a>Контекст атрибута  
   
 |||  
 |-|-|  
-|**Применение**|**класс** OR  `struct` элемент|  
-|**Repeatable**|Нет|  
-|**Обязательные атрибуты**|None|  
-|**Недопустимые атрибуты**|None|  
+|**Применение**|**Класс** или `struct` члена|  
+|**Повторяемый**|Нет|  
+|**Обязательные атрибуты**|Нет|  
+|**Недопустимые атрибуты**|Нет|  
   
- Дополнительные сведения о контекстах атрибута см. в разделе [Контексты атрибута](../windows/attribute-contexts.md).  
+ Дополнительные сведения о контекстах атрибутов см. в разделе [Контексты атрибутов](../windows/attribute-contexts.md).  
   
-## Пример  
- Следующий код добавляет называемый раздел реестра MyValue к системе, описывающие компонент COM CMyClass.  
+## <a name="example"></a>Пример  
+ Следующий код добавляет ключ реестра с именем MyValue в системе, описывающий CMyClass COM-компонента.  
   
 ```  
 // cpp_attr_ref_rdx.cpp  
@@ -87,7 +85,6 @@ public:
 };  
 ```  
   
-## См. также  
- [COM Attributes](../Topic/COM%20Attributes.md)   
- [registration\_script](../windows/registration-script.md)   
- [Attributes Samples](http://msdn.microsoft.com/ru-ru/558ebdb2-082f-44dc-b442-d8d33bf7bdb8)
+## <a name="see-also"></a>См. также  
+ [Атрибуты COM](../windows/com-attributes.md)   
+ [registration_script](../windows/registration-script.md)   

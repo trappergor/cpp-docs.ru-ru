@@ -1,59 +1,57 @@
 ---
-title: "Структура SRWLockExclusiveTraits | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "corewrappers/Microsoft::WRL::Wrappers::HandleTraits::SRWLockExclusiveTraits"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "SRWLockExclusiveTraits - структура"
+title: "Структура SRWLockExclusiveTraits | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: corewrappers/Microsoft::WRL::Wrappers::HandleTraits::SRWLockExclusiveTraits
+dev_langs: C++
+helpviewer_keywords: SRWLockExclusiveTraits structure
 ms.assetid: 38a996ef-c2d7-4886-b413-a426ecee8f05
-caps.latest.revision: 3
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 3
+caps.latest.revision: "3"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 75a232816e73cf19550ca897660708cdf200784f
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/24/2017
 ---
-# Структура SRWLockExclusiveTraits
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="srwlockexclusivetraits-structure"></a>SRWLockExclusiveTraits - структура
 Описывает общие характеристики класса SRWLock в режиме эксклюзивной блокировки.  
   
-## Синтаксис  
+## <a name="syntax"></a>Синтаксис  
   
 ```  
 struct SRWLockExclusiveTraits;  
 ```  
   
-## Члены  
+## <a name="members"></a>Члены  
   
-### Общедоступные Typedefs  
-  
-|Имя|Описание|  
-|---------|--------------|  
-|`Type`|Синоним для указателя на класс [SRWLOCK](../windows/srwlock-class.md).|  
-  
-### Открытые методы  
+### <a name="public-typedefs"></a>Общедоступные определения типов  
   
 |Имя|Описание|  
-|---------|--------------|  
-|[Метод SRWLockExclusiveTraits::GetInvalidValue](../windows/srwlockexclusivetraits-getinvalidvalue-method.md)|Извлекает объект SRWLockExclusiveTraits который всегда является недопустимым.|  
-|[Метод SRWLockExclusiveTraits::Unlock](../windows/srwlockexclusivetraits-unlock-method.md)|Выпускает отдельный элемент управления указанного объекта SRWLock.|  
+|----------|-----------------|  
+|`Type`|Синоним для типа указателя [SRWLOCK](../windows/srwlock-class.md) класса.|  
   
-## Иерархия наследования  
+### <a name="public-methods"></a>Открытые методы  
+  
+|Имя|Описание|  
+|----------|-----------------|  
+|[Метод SRWLockExclusiveTraits::GetInvalidValue](../windows/srwlockexclusivetraits-getinvalidvalue-method.md)|Извлекает объект SRWLockExclusiveTraits, всегда является недопустимым.|  
+|[Метод SRWLockExclusiveTraits::Unlock](../windows/srwlockexclusivetraits-unlock-method.md)|Освобождает исключительный контроль указанного объекта SRWLock.|  
+  
+## <a name="inheritance-hierarchy"></a>Иерархия наследования  
  `SRWLockExclusiveTraits`  
   
-## Требования  
+## <a name="requirements"></a>Требования  
  **Заголовок:** corewrappers.h  
   
  **Пространство имен:** Microsoft::WRL::Wrappers::HandleTraits  
   
-## См. также  
+## <a name="see-also"></a>См. также  
  [Пространство имен Microsoft::WRL::Wrappers::HandleTraits](../windows/microsoft-wrl-wrappers-handletraits-namespace.md)

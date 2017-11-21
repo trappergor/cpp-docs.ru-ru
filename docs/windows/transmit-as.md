@@ -1,32 +1,30 @@
 ---
-title: "transmit_as | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-f1_keywords: 
-  - "vc-attr.transmit_as"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "transmit_as attribute"
+title: "transmit_as | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+f1_keywords: vc-attr.transmit_as
+dev_langs: C++
+helpviewer_keywords: transmit_as attribute
 ms.assetid: 53d0b8ab-5b06-423e-83eb-3d01a10424b2
-caps.latest.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 10
+caps.latest.revision: "10"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 74ad65479af91abfd75e1459163737a8a4183deb
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/24/2017
 ---
-# transmit_as
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Указывает компилятору связи, представленный тип, клиентские и серверные приложения обрабатывают с переданным типом.  
+# <a name="transmitas"></a>transmit_as
+Указывает компилятору на необходимость связать тип представленных, управлять клиентских и серверных приложений, с типом передаваемых.  
   
-## Синтаксис  
+## <a name="syntax"></a>Синтаксис  
   
 ```  
   
@@ -35,15 +33,15 @@ caps.handback.revision: 10
 ) ]  
 ```  
   
-#### Параметры  
+#### <a name="parameters"></a>Параметры  
  `type`  
- Определяет тип данных, который передается между клиентом и сервером.  
+ Указывает тип данных, передаваемых между клиентом и сервером.  
   
-## Заметки  
- **transmit\_as** Атрибут C\+\+ имеет ту же функциональность, что и  [transmit\_as](http://msdn.microsoft.com/library/windows/desktop/aa367286) атрибут MIDL.  
+## <a name="remarks"></a>Примечания  
+ **Transmit_as** языка C++ имеет ту же функциональность, что [transmit_as](http://msdn.microsoft.com/library/windows/desktop/aa367286) языка MIDL.  
   
-## Пример  
- В следующем коде показано использование функции **transmit\_as** атрибут:  
+## <a name="example"></a>Пример  
+ В следующем коде показано использование **transmit_as** атрибута:  
   
 ```  
 // cpp_attr_ref_transmit_as.cpp  
@@ -73,21 +71,20 @@ struct _TREE_NODE_TYPE * right;
 [transmit_as(TREE_XMIT_TYPE)] typedef TREE_NODE_TYPE * TREE_TYPE;  
 ```  
   
-## Требования  
+## <a name="requirements"></a>Требования  
   
-### Контекст атрибута  
+### <a name="attribute-context"></a>Контекст атрибута  
   
 |||  
 |-|-|  
 |**Применение**|`typedef`|  
-|**Repeatable**|Нет|  
-|**Обязательные атрибуты**|None|  
-|**Недопустимые атрибуты**|None|  
+|**Повторяемый**|Нет|  
+|**Обязательные атрибуты**|Нет|  
+|**Недопустимые атрибуты**|Нет|  
   
- Дополнительные сведения о контекстах атрибута см. в разделе [Контексты атрибута](../windows/attribute-contexts.md).  
+ Дополнительные сведения о контекстах атрибутов см. в разделе [Контексты атрибутов](../windows/attribute-contexts.md).  
   
-## См. также  
- [IDL Attributes](../windows/idl-attributes.md)   
- [Typedef, Enum, Union, and Struct Attributes](../windows/typedef-enum-union-and-struct-attributes.md)   
+## <a name="see-also"></a>См. также  
+ [Атрибуты IDL](../windows/idl-attributes.md)   
+ [TypeDef, Enum, Union и Struct атрибуты](../windows/typedef-enum-union-and-struct-attributes.md)   
  [export](../windows/export.md)   
- [Attributes Samples](http://msdn.microsoft.com/ru-ru/558ebdb2-082f-44dc-b442-d8d33bf7bdb8)

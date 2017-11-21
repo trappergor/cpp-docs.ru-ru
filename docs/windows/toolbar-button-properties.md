@@ -1,48 +1,49 @@
 ---
-title: "Toolbar Button Properties | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "size, toolbar buttons"
-  - "toolbar buttons (in Toolbar editor), setting properties"
-  - "Toolbar editor, toolbar button properties"
-  - "status bars, active toolbar button text"
-  - "command IDs, toolbar buttons"
-  - "width, toolbar buttons"
+title: "Свойства кнопок панели инструментов | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- size, toolbar buttons
+- toolbar buttons (in Toolbar editor), setting properties
+- Toolbar editor, toolbar button properties
+- status bars, active toolbar button text
+- command IDs, toolbar buttons
+- width, toolbar buttons
 ms.assetid: b2705814-7c5d-4f24-8f77-07559b0cdda2
-caps.latest.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 5
+caps.latest.revision: "9"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 98c78922ee3987bf459f01a62253e9835ad3e377
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/24/2017
 ---
-# Toolbar Button Properties
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Кнопки панели инструментов имеют следующие свойства:  
+# <a name="toolbar-button-properties"></a>Свойства кнопок панели инструментов
+Существуют следующие свойства кнопки панели инструментов.  
   
-|Свойство.|Описание|  
-|---------------|--------------|  
-|**Идентификатор**|Определяет идентификатор кнопки.  Наиболее распространенные имена **идентификаторов** представлены в раскрывающемся списке.|  
-|**Ширина**|Задает ширину кнопки.  Рекомендуемое значение — 16 пикселей.|  
-|**Высота**|Задает высоту кнопки.  Обратите внимание, что высота кнопки является общим параметром для всех кнопок панели инструментов.  Рекомендуемое значение — 15 пикселей.|  
-|**Запрос**|Определяет текст сообщений, которое отображается в строке состояния.  Если добавить \\n и имя, то у кнопки панели инструментов появится всплывающая подсказка.  Дополнительные сведения см. в разделе [Создание всплывающих подсказок](../mfc/creating-a-tool-tip-for-a-toolbar-button.md).|  
+|Свойство|Описание|  
+|--------------|-----------------|  
+|**ID**|Определяет идентификатор для кнопки. Предоставляет общие раскрывающегося списка **идентификатор** имена.|  
+|**Ширина**|Задает ширину кнопки. рекомендуется 16 пикселей.|  
+|**Высота**|Задает высоту кнопки. Обратите внимание, что высота кнопки изменяет высоту всех кнопок на панели инструментов. Рекомендуется 15 пикселей.|  
+|**Запрашивать**|Определяет сообщение, отображаемое в строке состояния. Добавление \n и имя появится всплывающая подсказка для кнопки панели инструментов. Дополнительные сведения см. в разделе [Создание всплывающей подсказки](../windows/creating-a-tool-tip-for-a-toolbar-button.md).|  
   
- Свойства **Ширина** и **Высота** есть у всех кнопок.  Ширина растрового изображения, используемого для создания панели инструментов, не может превышать значение 2048.  Таким образом, если для кнопки задать ширину 512 пикселей, на панели уместится четыре кнопки, а если ширина кнопки будет 513 пикселей, на панели можно будет разместить только три кнопки.  
+ **Ширина** и **высота** применяются ко всем кнопкам. Точечный рисунок, который используется для создания панели инструментов имеет максимальную ширину 2048. Поэтому если ширина кнопки значение 512, можно установить только четыре кнопки, и что задайте ширину 513, может иметь только три кнопки.  
   
- Сведения о добавлении ресурсов в управляемые проекты см. в разделе [Ресурсы приложений](../Topic/Resources%20in%20Desktop%20Apps.md) *Руководства разработчика .NET Framework*. Сведения о том, как вручную добавлять файлы ресурсов в управляемые проекты, осуществлять доступ к ресурсам, отображать статические ресурсы и присваивать строки ресурсов свойствам см. в разделах [Пошаговое руководство. Локализация приложений Windows Forms](http://msdn.microsoft.com/ru-ru/9a96220d-a19b-4de0-9f48-01e5d82679e5) и [Walkthrough: Using Resources for Localization with ASP.NET](../Topic/Walkthrough:%20Using%20Resources%20for%20Localization%20with%20ASP.NET.md).  
+ Сведения о добавлении ресурсов в управляемые проекты см. в разделе [ресурсы в классических приложениях](https://msdn.microsoft.com/library/f45fce5x.aspx) в *руководства разработчика .NET Framework.* Сведения о вручную добавлять файлы ресурсов в управляемые проекты, осуществлять доступ к ресурсам, отображать статические ресурсы и присваивать строки ресурсов свойствам см. в разделе [Создание файлов ресурсов для приложений рабочего стола](https://msdn.microsoft.com/library/xbx3z216.aspx). Сведения о глобализации и локализации ресурсов в управляемых приложениях см. в разделе [Globalizing и локализация приложений .NET Framework](https://msdn.microsoft.com/library/h6270d0z.aspx).  
   
-## Требования  
+## <a name="requirements"></a>Требования  
  MFC или ATL  
   
-## См. также  
- [Changing the Properties of a Toolbar Button](../mfc/changing-the-properties-of-a-toolbar-button.md)   
- [Toolbar Editor](../mfc/toolbar-editor.md)
+## <a name="see-also"></a>См. также  
+ [Изменение свойств кнопки панели инструментов](../windows/changing-the-properties-of-a-toolbar-button.md)   
+ [Редактор панелей инструментов](../windows/toolbar-editor.md)
+

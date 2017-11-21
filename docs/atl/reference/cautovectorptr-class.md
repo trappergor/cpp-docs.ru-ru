@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-windows
+ms.technology: cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
@@ -17,35 +16,18 @@ f1_keywords:
 - ATLBASE/ATL::CAutoVectorPtr::Detach
 - ATLBASE/ATL::CAutoVectorPtr::Free
 - ATLBASE/ATL::CAutoVectorPtr::m_p
-dev_langs:
-- C++
-helpviewer_keywords:
-- CAutoVectorPtr class
+dev_langs: C++
+helpviewer_keywords: CAutoVectorPtr class
 ms.assetid: 0030362b-6bc4-4a47-9b5b-3c3899dceab4
-caps.latest.revision: 20
+caps.latest.revision: "20"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
-ms.openlocfilehash: 8234018b2f6faf8585186491413ecbd688a3b32f
-ms.contentlocale: ru-ru
-ms.lasthandoff: 04/29/2017
-
+ms.openlocfilehash: 304f21e226e88f4c18b218ac580d82fdb2f776a4
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="cautovectorptr-class"></a>Класс CAutoVectorPtr
 Этот класс представляет объект интеллектуального указателя с помощью нового вектора и удаление операторов.  
@@ -226,4 +208,3 @@ operator T*() const throw();
 ## <a name="see-also"></a>См. также  
  [Класс CAutoPtr](../../atl/reference/cautoptr-class.md)   
  [Общие сведения о классе](../../atl/atl-class-overview.md)
-

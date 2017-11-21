@@ -1,48 +1,47 @@
 ---
-title: "&lt;value&gt; (Visual C++) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "value"
-  - "<value>"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "<value> - XML-тег C++"
-  - "value - XML-тег C++"
+title: "&lt;значение&gt; (Visual C++) | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-ide
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- value
+- <value>
+dev_langs: C++
+helpviewer_keywords:
+- value C++ XML tag
+- <value> C++ XML tag
 ms.assetid: 0ba0a0d5-bcd7-4862-a169-83f2721ad80e
-caps.latest.revision: 8
-caps.handback.revision: 8
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "8"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 7a9e3716390f16e319e8dad95f31789fb890b6f8
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/24/2017
 ---
-# &lt;value&gt; (Visual C++)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Тег \<value\> позволяет описать свойства и методы доступа к свойству.  Обратите внимание, что при добавлении свойства с помощью кода в интегрированной среде разработки Visual Studio, она добавляет тег [\<summary\>](../ide/summary-visual-cpp.md) для нового свойства.  Затем следует вручную добавить тег \<value\>, предназначенный для описания представляемого этим свойством значения.  
+# <a name="ltvaluegt-visual-c"></a>&lt;значение&gt; (Visual C++)
+\<Значение > тег можно описать свойства и методы доступа к свойствам. Обратите внимание, что при добавлении свойства с помощью мастера кода в среде разработки Visual Studio добавит [ \<сводки >](../ide/summary-visual-cpp.md) тег для нового свойства. После этого следует вручную добавить тег \<value> для описания значения, которое представляется свойством.  
   
-## Синтаксис  
+## <a name="syntax"></a>Синтаксис  
   
 ```  
 <value>property-description</value>  
 ```  
   
-#### Параметры  
+#### <a name="parameters"></a>Параметры  
  `property-description`  
  Описание свойства.  
   
-## Заметки  
- Чтобы обработать и сохранить комментарии документации в файл, при компиляции необходимо использовать параметр [\/doc](../build/reference/doc-process-documentation-comments-c-cpp.md).  
+## <a name="remarks"></a>Примечания  
+ Чтобы обработать и сохранить комментарии документации в файл, при компиляции необходимо использовать параметр [/doc](../build/reference/doc-process-documentation-comments-c-cpp.md).  
   
-## Пример  
+## <a name="example"></a>Пример  
   
 ```  
 // xml_value_tag.cpp  
@@ -66,5 +65,5 @@ public:
 };  
 ```  
   
-## См. также  
+## <a name="see-also"></a>См. также  
  [Документация XML](../ide/xml-documentation-visual-cpp.md)

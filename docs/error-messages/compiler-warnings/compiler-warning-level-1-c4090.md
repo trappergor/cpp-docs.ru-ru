@@ -1,36 +1,34 @@
 ---
-title: "Предупреждение компилятора (уровень 1) C4090 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C4090"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C4090"
+title: "Предупреждение (уровень 1) C4090 компилятора | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords: C4090
+dev_langs: C++
+helpviewer_keywords: C4090
 ms.assetid: baad469d-23d4-45aa-ad9c-305b32d61e9a
-caps.latest.revision: 7
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.openlocfilehash: 3b508e27d72454568e26d2f1d173b05c8a65c250
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/24/2017
 ---
-# Предупреждение компилятора (уровень 1) C4090
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-операция: разные квалификаторы "модификатор"  
+# <a name="compiler-warning-level-1-c4090"></a>Предупреждение (уровень 1) C4090 компилятора
+«Операция»: квалификаторы разных «модификатор»  
   
- Переменная, использующаяся в операциях, определена при помощи указанного модификатора, не разрешающего изменять ее без ведома компилятора.  Выражение скомпилировано без модификаций.  
+ Переменная, которая используется в операции определен с указанным модификатор, который предотвращает изменение без обнаружения компилятором. Выражение компилируется без изменений.  
   
- Это предупреждение может появляться, когда указатель на элемент **const** или `volatile` присваивается указателю, не объявленному как указатель на **const** или `volatile`.  
+ Это предупреждение может возникать при создании указателя на **const** или `volatile` не объявлен как указатель на указатель назначается элемент **const** или `volatile`.  
   
- Это предупреждение не выдается для программ, написанных на языке C.  В программах, написанных на C\+\+, компилятор выдает ошибку [C2440](../../error-messages/compiler-errors-1/compiler-error-c2440.md).  
+ Это предупреждение выдается для программ. В программе на C++, компилятор выдает сообщение об ошибке: [C2440](../../error-messages/compiler-errors-1/compiler-error-c2440.md).  
   
  Следующий пример приводит к возникновению ошибки C4090:  
   

@@ -1,34 +1,32 @@
 ---
-title: "Практическое руководство. Объявление внутренних указателей с использованием ключевого слова const (C++/CLI) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "указатели, внутренние"
+title: "Как: объявление внутренних указателей с ключевым словом const (C + +/ CLI) | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+dev_langs: C++
+helpviewer_keywords: pointers, interior
 ms.assetid: 64e08b0e-9396-4046-ab51-8f6588f32330
-caps.latest.revision: 13
-caps.handback.revision: 13
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "13"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: db90a74bc73c548dcc3cca71cf3631bd9499ac27
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/24/2017
 ---
-# Практическое руководство. Объявление внутренних указателей с использованием ключевого слова const (C++/CLI)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-В следующем примере показано, как использовать `const` в объявлении внутреннего указателя.  
+# <a name="how-to-declare-interior-pointers-with-the-const-keyword-ccli"></a>Практическое руководство. Объявление внутренних указателей с использованием ключевого слова const (C++/CLI)
+Следующий пример показывает, как использовать `const` в объявлении внутреннего указателя.  
   
 > [!IMPORTANT]
->  Эта функция языка поддерживается параметром компилятора **\/clr**, но не параметром компилятора **\/ZW**.  
+>  Эта функция языка поддерживается **/CLR** параметр компилятора, а не **/zw** параметр компилятора.  
   
-## Пример  
+## <a name="example"></a>Пример  
   
 ```  
 // interior_ptr_const.cpp  
@@ -87,5 +85,5 @@ int main() {
 };  
 ```  
   
-## См. также  
- [interior\_ptr \(C\+\+\/CLI\)](../windows/interior-ptr-cpp-cli.md)
+## <a name="see-also"></a>См. также  
+ [interior_ptr (C++/CLI)](../windows/interior-ptr-cpp-cli.md)

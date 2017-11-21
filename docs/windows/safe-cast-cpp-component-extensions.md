@@ -1,41 +1,38 @@
 ---
-title: "safe_cast (расширения компонентов C++) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/16/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-f1_keywords: 
-  - "safe_cast"
-  - "safe_cast_cpp"
-  - "stdcli::language::safe_cast"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "safe_cast - ключевое слово [C++]"
+title: "safe_cast (расширения компонентов C++) | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+f1_keywords:
+- safe_cast
+- safe_cast_cpp
+- stdcli::language::safe_cast
+dev_langs: C++
+helpviewer_keywords: safe_cast keyword [C++]
 ms.assetid: 4fa688bf-a8ec-49bc-a4c5-f48134efa4f7
-caps.latest.revision: 26
-caps.handback.revision: 24
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "26"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: bf02b1c8aa84688df5ef29f4c5e69fa818b31904
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/24/2017
 ---
-# safe_cast (расширения компонентов C++)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="safecast-c-component-extensions"></a>safe_cast (расширения компонентов C++)
 В случае успешного выполнения операция `safe_cast` возвращает указанное выражение как указанный тип; в противном случае вызывается исключение `InvalidCastException`.  
   
-## Все среды выполнения  
- \(Отсутствуют комментарии для этой функции языка, которая применяется во всех средах выполнения.\)  
+## <a name="all-runtimes"></a>Все среды выполнения  
+ (Отсутствуют комментарии для этой функции языка, которая применяется во всех средах выполнения.)  
   
-### Синтаксис  
+### <a name="syntax"></a>Синтаксис  
   
 ```cpp  
-  
 [default]:: safe_cast<  
 type-id  
 >(  
@@ -44,17 +41,16 @@ expression
   
 ```  
   
-### Параметры  
+### <a name="parameters"></a>Параметры  
   
-### Примечания  
+### <a name="remarks"></a>Примечания  
   
-## [!INCLUDE[wrt](../atl/reference/includes/wrt_md.md)]  
- Параметр `safe_cast` позволяет изменить тип указанного выражения.  В ситуациях, где вы полностью рассчитываете на возможность преобразования переменной или параметра в определенный тип, можно использовать safe\_cast без блока try\-catch для обнаружения ошибок программирования во время разработки.  Дополнительные сведения см. в разделе [Приведение \(C\+\+\/CX\)](http://msdn.microsoft.com/library/windows/apps/hh755802.aspx).  
+## <a name="windows-runtime"></a>Среда выполнения Windows  
+ Параметр `safe_cast` позволяет изменить тип указанного выражения. В ситуациях, где вы полностью рассчитываете на возможность преобразования переменной или параметра в определенный тип, можно использовать safe_cast без блока try-catch для обнаружения ошибок программирования во время разработки. Дополнительные сведения см. в разделе [приведение (C + +/ CX)](http://msdn.microsoft.com/library/windows/apps/hh755802.aspx).  
   
-### Синтаксис  
+### <a name="syntax"></a>Синтаксис  
   
 ```cpp  
-  
 [default]:: safe_cast<  
 type-id  
 >(  
@@ -63,23 +59,23 @@ expression
   
 ```  
   
-### Параметры  
- *type\-id*  
- Тип, в который следует преобразовать *выражение*.  Дескриптор ссылки или типа значения, тип значения или отслеживаемая ссылка на ссылку или тип значения.  
+### <a name="parameters"></a>Параметры  
+ *Идентификатор типа*  
+ Целевой тип преобразования *выражение* для. Дескриптор ссылки или типа значения, тип значения или отслеживаемая ссылка на ссылку или тип значения.  
   
- *expression*  
+ *выражение*  
  Выражение, которое оценивается в дескрипторе ссылки или типа значения, типе значения или отслеживаемой ссылке на ссылку или тип значения.  
   
-### Примечания  
- Параметр `safe_cast` вызывает исключение  `InvalidCastException`, если не может преобразовать выражение *expression* в тип, заданный параметром *type\-id*.  Для перехвата `InvalidCastException` укажите параметр компилятора [Параметр \/EH \(модель обработки исключений\)](../build/reference/eh-exception-handling-model.md) и используйте оператор try\-catch.  
+### <a name="remarks"></a>Примечания  
+ `safe_cast`Создает `InvalidCastException` если его не удается преобразовать *выражение* тип, указанный в *идентификатор типа*. Для перехвата `InvalidCastException`, укажите [/EH (модель обработки исключений)](../build/reference/eh-exception-handling-model.md) параметр компилятора и используйте оператор try-catch.  
   
-### Требования  
- Параметр компилятора: **\/ZW**  
+### <a name="requirements"></a>Требования  
+ Параметр компилятора: **/ZW**  
   
-### Примеры  
+### <a name="examples"></a>Примеры  
  **Пример**  
   
- В следующем примере кода показано, как использовать `safe_cast` с [!INCLUDE[wrt](../atl/reference/includes/wrt_md.md)].  
+ В следующем примере кода демонстрируется использование `safe_cast` со средой выполнения Windows.  
   
 ```cpp#  
 // safe_cast_ZW.cpp  
@@ -109,14 +105,16 @@ int main(Array<String^>^ args) {
   
  **Вывод**  
   
-  **Перехвачено ожидаемое исключение: InvalidCastException**   
-## [!INCLUDE[clr_for_headings](../dotnet/includes/clr_for_headings_md.md)]  
+```Output  
+Caught expected exception: InvalidCastException  
+```  
+  
+## <a name="common-language-runtime"></a>Среда CLR 
  Параметр `safe_cast` позволяет изменить тип выражения и создать проверяемый код MSIL.  
   
-### Синтаксис  
+### <a name="syntax"></a>Синтаксис  
   
 ```cpp  
-  
 [cli]:: safe_cast<  
 type-id  
 >(  
@@ -125,46 +123,36 @@ expression
   
 ```  
   
-### Параметры  
- *type\-id*  
+### <a name="parameters"></a>Параметры  
+ *Идентификатор типа*  
  Дескриптор ссылки или типа значения, тип значения или отслеживаемая ссылка на ссылку или тип значения.  
   
- *expression*  
+ *выражение*  
  Выражение, которое оценивается в дескрипторе ссылки или типа значения, типе значения или отслеживаемой ссылке на ссылку или тип значения.  
   
-### Примечания  
- Выражение `safe_cast<`*type\-id*`>(`*expression*`)` преобразует выражение операнда в объект с типом type\-id.  
+### <a name="remarks"></a>Примечания  
+ Выражение `safe_cast<` *идентификатор типа*`>(`*выражение* `)` преобразует выражение операнда в объект типа type-ID.  
   
- Компилятор будет принимать [static\_cast](../cpp/static-cast-operator.md) в большинстве мест, где будет принимать `safe_cast`.  Однако `safe_cast` гарантированно создает проверяемый код MSIL, тогда как `static_cast` может создать непроверяемый MSIL.  Дополнительные сведения о проверяемом коде см. в разделах [Чистый и проверяемый код](../dotnet/pure-and-verifiable-code-cpp-cli.md) и [Peverify.exe \(PEVerify Tool\)](../Topic/Peverify.exe%20\(PEVerify%20Tool\).md).  
+ Компилятор будет принимать [static_cast](../cpp/static-cast-operator.md) в большинстве мест, где будет принимать `safe_cast`.  Однако `safe_cast` гарантированно создает проверяемый код MSIL, тогда как `static_cast` может создать непроверяемый MSIL.  В разделе [чистый и проверяемый код (C + +/ CLI)](../dotnet/pure-and-verifiable-code-cpp-cli.md) и [Peverify.exe (средство PEVerify)](/dotnet/framework/tools/peverify-exe-peverify-tool) Дополнительные сведения о проверяемом коде.  
   
  Как и `static_cast`, `safe_cast` вызывает заданные пользователем преобразования.  
   
- Дополнительные сведения о приведениях см. в разделе [Операторы приведения](../cpp/casting-operators.md).  
+ Дополнительные сведения о приведениях см. в разделе [операторы приведения](../cpp/casting-operators.md).  
   
- `safe_cast` не применяет **const\_cast**  \(отвергает **const**\).  
+ `safe_cast`не применяется **const_cast** (отбросить квалификатор **const**).  
   
- `safe_cast` находится в пространстве имен CLI.  Дополнительные сведения см. в разделе [Пространства имен Platform, default и cli](../windows/platform-default-and-cli-namespaces-cpp-component-extensions.md).  
+ `safe_cast` находится в пространстве имен CLI.  В разделе [платформы, по умолчанию и пространства имен cli](../windows/platform-default-and-cli-namespaces-cpp-component-extensions.md) для получения дополнительной информации.  
   
- Дополнительные сведения о **safe\_cast** см. в следующих разделах.  
+ Дополнительные сведения о **safe_cas**t, см.:  
   
--   [Приведение в стиле C с использованием параметра \/clr \(C\+\+\/CLI\)](../windows/c-style-casts-with-clr-cpp-cli.md)  
+-   [C-стиль приведения с параметром/CLR (C + +/ CLI)](../windows/c-style-casts-with-clr-cpp-cli.md)  
   
--   [Практическое руководство. Использование safe\_cast в C\+\+\/CLI](../Topic/How%20to:%20Use%20safe_cast%20in%20C++-CLI.md)  
+-   [Практическое руководство. Использование safe_cast в C++/CLI](../dotnet/how-to-use-safe-cast-in-cpp-cli.md)  
+
+### <a name="requirements"></a>Требования  
+ Параметр компилятора: **/clr**  
   
--   [Практическое руководство. Нисходящее приведение с помощью safe\_cast](../misc/how-to-downcast-with-safe-cast.md)  
-  
--   [Практическое руководство. Использование safe\_cast и универсальных типов](../misc/how-to-use-safe-cast-and-generic-types.md)  
-  
--   [Практическое руководство. Использование safe\_cast и определенных пользователем преобразований](../misc/how-to-use-safe-cast-and-user-defined-conversions.md)  
-  
--   [Практическое руководство. Использование safe\_cast и упаковки\-преобразования](../Topic/How%20to:%20Use%20safe_cast%20and%20Boxing.md)  
-  
--   [Практическое руководство. Использование safe\_cast и распаковки\-преобразования](../misc/how-to-use-safe-cast-and-unboxing.md)  
-  
-### Требования  
- Параметр компилятора: **\/clr**  
-  
-### Примеры  
+### <a name="examples"></a>Примеры  
  **Пример**  
   
  Пример, когда компилятор не будет принимать `static_cast`, но будет принимать `safe_cast`, —приведения между несвязанными типами интерфейса.  При использовании `safe_cast` компилятор не будет выдавать ошибку преобразования и будет выполнять проверку во время выполнения, чтобы увидеть, возможно ли приведение.  
@@ -195,6 +183,9 @@ int main() {
   
  **Вывод**  
   
-  **Перехвачено ожидаемое исключение.**   
-## См. также  
+```Output  
+Caught expected exception  
+```  
+  
+## <a name="see-also"></a>См. также  
  [Расширения компонентов для платформ среды выполнения](../windows/component-extensions-for-runtime-platforms.md)

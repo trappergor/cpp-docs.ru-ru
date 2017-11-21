@@ -1,38 +1,39 @@
 ---
-title: "Troubleshooting the Dialog Editor | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "controls [C++], troubleshooting"
-  - "troubleshooting controls"
-  - "Dialog editor, troubleshooting"
-  - "troubleshooting Dialog editor"
-  - "dialog boxes, troubleshooting"
+title: "Устранение неполадок редактора диалоговых окон | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- controls [C++], troubleshooting
+- troubleshooting controls
+- Dialog editor, troubleshooting
+- troubleshooting Dialog editor
+- dialog boxes, troubleshooting
 ms.assetid: 21882868-5ac4-4a41-a4a6-eaaa059402ea
-caps.latest.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 5
+caps.latest.revision: "9"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 96c104abedfb0e9a0ed6760aeaa39e293dadeca4
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/24/2017
 ---
-# Troubleshooting the Dialog Editor
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+# <a name="troubleshooting-the-dialog-editor"></a>Устранение неполадок редактора диалоговых окон
+Ниже приведены некоторые проблемы, которые следует иметь в виду при работе в редакторе диалоговых окон.  
+  
+-   [Добавление элементов управления в диалоговое окно приводит к неработоспособности этого диалогового окна](../windows/adding-controls-to-a-dialog-causes-the-dialog-to-no-longer-function.md)  
+  
+-   [Использование элемента управления RichEdit 1.0 с MFC](../windows/using-the-richedit-1-0-control-with-mfc.md)  
+  
+ Сведения о добавлении ресурсов в управляемые проекты см. в разделе [ресурсы в классических приложениях](https://msdn.microsoft.com/library/f45fce5x.aspx) в *руководства разработчика .NET Framework.* Сведения о вручную добавлять файлы ресурсов в управляемые проекты, осуществлять доступ к ресурсам, отображать статические ресурсы и присваивать строки ресурсов свойствам см. в разделе [Создание файлов ресурсов для приложений рабочего стола](https://msdn.microsoft.com/library/xbx3z216.aspx). Сведения о глобализации и локализации ресурсов в управляемых приложениях см. в разделе [Globalizing и локализация приложений .NET Framework](https://msdn.microsoft.com/library/h6270d0z.aspx).  
+  
+## <a name="see-also"></a>См. также  
+ [Редактор диалоговых окон](../windows/dialog-editor.md)
 
-Ниже перечислены несколько проблем, о которых нужно знать, работая в редакторе диалоговых окон.  
-  
--   [Добавление элементов управления в диалоговое окно приводит к неработоспособности этого диалогового окна](../mfc/adding-controls-to-a-dialog-causes-the-dialog-to-no-longer-function.md)  
-  
--   [Использование элемента управления RichEdit 1.0 с MFC](../Topic/Using%20the%20RichEdit%201.0%20Control%20with%20MFC.md)  
-  
- Сведения о добавлении ресурсов в управляемые проекты см. в разделе [Ресурсы приложений](../Topic/Resources%20in%20Desktop%20Apps.md) *Руководства разработчика .NET Framework*. Сведения о том, как вручную добавлять файлы ресурсов в управляемые проекты, осуществлять доступ к ресурсам, отображать статические ресурсы и присваивать строки ресурсов свойствам см. в разделах [Пошаговое руководство. Локализация приложений Windows Forms](http://msdn.microsoft.com/ru-ru/9a96220d-a19b-4de0-9f48-01e5d82679e5) и [Walkthrough: Using Resources for Localization with ASP.NET](../Topic/Walkthrough:%20Using%20Resources%20for%20Localization%20with%20ASP.NET.md).  
-  
-## См. также  
- [Dialog Editor](../mfc/dialog-editor.md)

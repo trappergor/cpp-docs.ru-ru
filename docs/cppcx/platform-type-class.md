@@ -1,65 +1,126 @@
 ---
-title: "Класс Platform::Type | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/30/2016"
-ms.prod: "windows-client-threshold"
-ms.technology: ""
-ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-f1_keywords: 
-  - "Platform/Platform::Type"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Класс Platform::Type"
+title: "Класс Platform::Type | Документы Microsoft"
+ms.custom: 
+ms.date: 12/30/2016
+ms.technology: cpp-windows
+ms.reviewer: 
+ms.suite: 
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+f1_keywords:
+- VCCORLIB/Platform::Type::GetTypeCode
+- VCCORLIB/Platform::Type::FullName
+dev_langs: C++
+helpviewer_keywords: Platform::Type Class
 ms.assetid: d6b03f1e-b240-49b9-a08e-53a460030475
-caps.latest.revision: 7
-author: "ghogen"
-ms.author: "ghogen"
-manager: "ghogen"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: ghogen
+ms.author: ghogen
+manager: ghogen
+ms.openlocfilehash: 260a7f5a8d5a100edd6995c381a79b5552c0744b
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/24/2017
 ---
-# Класс Platform::Type
-Содержит сведения среды выполнения о типе — в частности, имя строки и код типа. Получается вызовом метода [Object::GetType](../cppcx/object-gettype-method.md) в любом объекте или использованием оператора [typeid](http://msdn.microsoft.com/library/e9706cae-e7c4-4d6d-b474-646d73df3e70) в имени класса или структуры.  
+# <a name="platformtype-class"></a>Класс Platform::Type
+Содержит сведения среды выполнения о типе — в частности, имя строки и код типа. Получается вызовом [Object::GetType](../cppcx/platform-object-class.md#gettype) в любом объекте или или с помощью [typeid](../windows/typeid-cpp-component-extensions.md) оператора в имени класса или структуры.  
   
-## Синтаксис  
+## <a name="syntax"></a>Синтаксис  
   
 ```cpp  
-public ref class Platform::Type :      Platform::Object,      Platform::Details::IEquatable,      Platform::Details::IPrintable  
+public ref class Platform::Type :      
+    Platform::Object, Platform::Details::IEquatable,
+    Platform::Details::IPrintable  
 ```  
   
-## Заметки  
- Класс `Type` удобен в приложениях, где должна выполняться непосредственная обработка с использованием оператора `if` или `switch`, образующего ветви на основе типа объекта времени выполнения. Код типа, описывающий категорию типа, извлекается с помощью функции\-члена [Метод Type::GetTypeCode](../cppcx/type-gettypecode-method.md).  
+### <a name="remarks"></a>Примечания  
+ Класс `Type` удобен в приложениях, где должна выполняться непосредственная обработка с использованием оператора `if` или `switch` , образующего ветви на основе типа объекта времени выполнения. Код типа, описывающий категорию типа, извлекается с помощью [Type::GetTypeCode](#gettypecode) функции-члена.  
   
-## Открытые методы  
-  
-|||  
-|-|-|  
-|[Метод Type::GetTypeCode](../cppcx/type-gettypecode-method.md)|Возвращает значение [Перечисление Platform::TypeCode](../cppcx/platform-typecode-enumeration.md) для объекта.|  
-  
-## Открытые свойства  
+## <a name="public-methods"></a>Открытые методы  
   
 |||  
 |-|-|  
-|[Свойство Type::FullName](../cppcx/type-fullname-property.md)|Возвращает [Класс Platform::String](../cppcx/platform-string-class.md)^, который представляет полное имя типа и использует . \(точку\), а не :: \(двойное двоеточие\) в качестве разделителя, например MyNamespace.MyClass.|  
+|[Метод Type::GetTypeCode](#gettypecode)|Возвращает значение [Перечисление Platform::TypeCode](../cppcx/platform-typecode-enumeration.md) для объекта.| 
+|[Метод Type::ToString](#tostring)|Возвращает имя типа, указанного в метаданных.| 
+
+ 
+## <a name="public-properties"></a>Открытые свойства  
   
-## Операторы преобразования  
+|||  
+|-|-|  
+|[Type::FullName](#fullname)|Возвращает [Класс Platform::String](../cppcx/platform-string-class.md)^, который представляет полное имя типа и использует . (точка) в качестве разделителя, не:: (двойное двоеточие) — например, `MyNamespace.MyClass`.|  
+  
+## <a name="conversion-operators"></a>Операторы преобразования  
   
 |||  
 |-|-|  
 |[оператор Type^](../cppcx/operator-subtracttype-hat.md)|Обеспечивает преобразование `Windows::UI::Xaml::Interop::TypeName` в `Platform::Type`.|  
 |[оператор Windows::UI::Xaml::Interop::TypeName](../cppcx/operator-subtractwindows-ui-xaml-interop-typename.md)|Обеспечивает преобразование `Platform::Type` в `Windows::UI::Xaml::Interop::TypeName`.|  
   
-## Требования  
- **Минимальный поддерживаемый клиент:** [!INCLUDE[win8](../cppcx/includes/win8-md.md)]  
+### <a name="requirements"></a>Требования  
+ **Минимальный поддерживаемый клиент:** Windows 8  
   
- **Минимальный поддерживаемый сервер:** [!INCLUDE[winserver8](../cppcx/includes/winserver8-md.md)]  
+ **Минимальный поддерживаемый сервер:** Windows Server 2012  
   
  **Пространство имен:** Platform  
   
  **Метаданные:** platform.winmd  
+
+ 
+## <a name="fullname"></a> Свойство Type::FullName
+Получает полное имя текущего типа в виде `Namespace.Type`.  
   
-## См. также  
+### <a name="syntax"></a>Синтаксис  
+  
+```cpp  
+String^ FullName();  
+```  
+  
+### <a name="return-value"></a>Возвращаемое значение  
+ Имя типа.  
+### <a name="example"></a>Пример  
+  
+```  
+  
+//  namespace is TestApp  
+MainPage::MainPage()  
+{  
+    InitializeComponent();  
+    Type^ t = this->GetType();  
+    auto s = t->FullName; // returns "TestApp.MainPage"  
+    auto s2 = t->ToString(); //also returns "TestApp.MainPage"  
+}  
+```  
+  
+
+
+## <a name="gettypecode"></a> Метод Type::GetTypeCode
+Возвращает числовой тип категории встроенных типов.  
+  
+### <a name="syntax"></a>Синтаксис  
+  
+```cpp  
+Platform::TypeCode GetTypeCode();  
+```  
+  
+### <a name="return-value"></a>Возвращаемое значение  
+ Одно из значений перечисления Platform::TypeCode.  
+  
+### <a name="remarks"></a>Примечания  
+ Эквивалентом метода-члена GetTypeCode() является `typeid` свойства.
+
+## <a name="tostring"></a>Метод Type::ToString
+Получает имя типа.  
+  
+### <a name="syntax"></a>Синтаксис  
+  
+```cpp  
+Platform::String^ ToString();  
+```  
+  
+### <a name="return-value"></a>Возвращаемое значение  
+ Имя типа, указанного в метаданных.    
+  
+## <a name="see-also"></a>См. также  
  [Пространство имен Platform](../cppcx/platform-namespace-c-cx.md)

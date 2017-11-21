@@ -1,118 +1,118 @@
 ---
-title: "Typedef, Enum, Union, and Struct Attributes | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "union attributes"
-  - "attributes [C++], reference topics"
-  - "struct attributes"
-  - "typedef attributes"
-  - "enum attributes"
+title: "TypeDef, Enum, Union и Struct атрибуты | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+dev_langs: C++
+helpviewer_keywords:
+- union attributes
+- attributes [C++], reference topics
+- struct attributes
+- typedef attributes
+- enum attributes
 ms.assetid: f8a4fe94-dc02-4aed-bc31-3e500d42f4c7
-caps.latest.revision: 8
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 9bba47c5c0ea12ae7c1ae4f57adc24b58166ded8
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/24/2017
 ---
-# Typedef, Enum, Union, and Struct Attributes
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Следующие атрибуты применяются к [typedef](http://msdn.microsoft.com/ru-ru/cc96cf26-ba93-4179-951e-695d1f5fdcf1)"  [структура](../cpp/struct-cpp.md)и  [перечисления](../cpp/enumerations-cpp.md) ключевые слова C\+\+.  
+# <a name="typedef-enum-union-and-struct-attributes"></a>Атрибуты Typedef, Enum, Union и Struct
+Следующие атрибуты, относящиеся к [typedef](http://msdn.microsoft.com/en-us/cc96cf26-ba93-4179-951e-695d1f5fdcf1), [структуры](../cpp/struct-cpp.md), и [перечисления](../cpp/enumerations-cpp.md) ключевые слова C++.  
   
-### typedef  
+### <a name="typedef"></a>typedef  
   
 |Атрибут|Описание|  
-|-------------|--------------|  
-|[case](../windows/case-cpp.md)|Используется с [switch\_type](../windows/switch-type.md) атрибут в выражении  **union**.|  
-|[custom](../windows/custom-cpp.md)|Позволяет указать собственный атрибут.|  
-|[export](../windows/export.md)|Структура данных будет располагаться в idl\-файле.|  
-|[first\_is](../windows/first-is.md)|Определяет индекс первого элемента массива, которые необходимо передать.|  
-|[helpcontext](../windows/helpcontext.md)|Указывает идентификатор контекста, который позволяет пользователю просматривать сведения об этом элементе в файле Справки.|  
-|[helpfile](../Topic/helpfile.md)|Задает имя файла Справки библиотеки типов.|  
-|[helpstring](../windows/helpstring.md)|Задает символьную строку, используемую для описания элемента, к которому она применяется.|  
-|[library\_block](../windows/library-block.md)|Задает конструкцию внутри блока библиотеки файла idl.|  
-|[ptr](../windows/ptr.md)|Определяет указатель в виде полный указатель.|  
-|[public](../windows/public-cpp-attributes.md)|Гарантирует, что typedef переместится в библиотеку типов, несмотря на него нет ссылок из файла idl.|  
-|[ref](../windows/ref-cpp.md)|Задает указатель ссылки.|  
-|[switch\_is](../windows/switch-is.md)|Определяет выражение или идентификатор, используемый как соединение дискриминантное, которое выбирает член объединения.|  
-|[switch\_type](../windows/switch-type.md)|Указывает тип переменной, используемой в качестве соединение дискриминантное.|  
-|[unique](../windows/unique-cpp.md)|Задает уникальный указатель.|  
-|[wire\_marshal](../windows/wire-marshal.md)|Определяет тип данных, который будет использоваться для передачи конкретного приложения вместо этого типа данных.|  
+|---------------|-----------------|  
+|[case](../windows/case-cpp.md)|При использовании [switch_type](../windows/switch-type.md) атрибута в **объединение**.|  
+|[пользовательские](../windows/custom-cpp.md)|Позволяет определять собственный атрибут.|  
+|[export](../windows/export.md)|В результате структуру данных помещается в IDL-файл.|  
+|[first_is](../windows/first-is.md)|Указывает индекс первого элемента массива для передачи.|  
+|[helpcontext](../windows/helpcontext.md)|Указывает идентификатор контекста, который позволяет пользователю просматривать сведения об этом элементе в файле справки.|  
+|[helpfile](../windows/helpfile.md)|Задает имя файла справки для библиотеки типов.|  
+|[helpstring](../windows/helpstring.md)|Определяет строку символов, используемый для описания элемента, к которому он применяется.|  
+|[library_block](../windows/library-block.md)|Помещает конструкцию внутри блока библиотеки IDL-файл.|  
+|[ptr](../windows/ptr.md)|Определяет указатель как полный указатель.|  
+|[public](../windows/public-cpp-attributes.md)|Гарантирует, что typedef перейдет в библиотеке типов, даже если нет ссылок из в IDL-файл.|  
+|[ref](../windows/ref-cpp.md)|Определяет указатель ссылки.|  
+|[switch_is](../windows/switch-is.md)|Указывает выражение или идентификатор, выступающего в качестве объединения дискриминантный, который выбирает члена объединения.|  
+|[switch_type](../windows/switch-type.md)|Определяет тип переменной, которая используется как дискриминантный объединения.|  
+|[unique](../windows/unique-cpp.md)|Указывает уникальный указатель.|  
+|[wire_marshal](../windows/wire-marshal.md)|Указывает тип данных, который будет использоваться для передачи данных вместо типа данных приложения.|  
   
-### enum  
-  
-|Атрибут|Описание|  
-|-------------|--------------|  
-|[custom](../windows/custom-cpp.md)|Позволяет указать собственный атрибут.|  
-|[export](../windows/export.md)|Структура данных будет располагаться в idl\-файле.|  
-|[uuid](../windows/uuid-cpp-attributes.md)|Указывает уникальный идентификатор класса или интерфейса.|  
-|[v1\_enum](../windows/v1-enum.md)|Указывает, что заданный перечислимый тип был передан в качестве 32 сущность, а не 16\-разрядное значение по умолчанию.|  
-  
-### union  
+### <a name="enum"></a>enum  
   
 |Атрибут|Описание|  
-|-------------|--------------|  
-|[custom](../windows/custom-cpp.md)|Позволяет указать собственный атрибут.|  
-|[export](../windows/export.md)|Структура данных будет располагаться в idl\-файле.|  
-|[first\_is](../windows/first-is.md)|Определяет индекс первого элемента массива, которые необходимо передать.|  
-|[last\_is](../windows/last-is.md)|Определяет индекс последнего элемента в массиве для отправки.|  
-|[length\_is](../windows/length-is.md)|Определяет количество элементов массива, которые необходимо передать.|  
-|[max\_is](../windows/max-is.md)|Показывает максимальное допустимое значение для индекса массива.|  
-|[size\_is](../Topic/size_is.md)|Определяет размер памяти, выделенной для указанных размеров указателей, заданные размеры указателей на указанным размером и указателям, single или многомерным таблицам.|  
-|[unique](../windows/unique-cpp.md)|Задает уникальный указатель.|  
-|[uuid](../windows/uuid-cpp-attributes.md)|Указывает уникальный идентификатор класса или интерфейса.|  
+|---------------|-----------------|  
+|[пользовательские](../windows/custom-cpp.md)|Позволяет определять собственный атрибут.|  
+|[export](../windows/export.md)|В результате структуру данных помещается в IDL-файл.|  
+|[UUID](../windows/uuid-cpp-attributes.md)|Указывает уникальный идентификатор для класса или интерфейса.|  
+|[v1_enum](../windows/v1-enum.md)|Направляет передачи заданного перечислимого типа как сущность 32 бита, а не 16-разрядное значение по умолчанию.|  
   
-### Соединение Nonencapsulated  
+### <a name="union"></a>union  
   
 |Атрибут|Описание|  
-|-------------|--------------|  
-|[ms\_union](../windows/ms-union.md)|Контролирует выравнивание представлений сведениям о сети nonencapsulated соединений.|  
-|[no\_injected\_text](../windows/no-injected-text.md)|Запрещает компилятору впрыскивать код в результате использования атрибута.|  
+|---------------|-----------------|  
+|[пользовательские](../windows/custom-cpp.md)|Позволяет определять собственный атрибут.|  
+|[export](../windows/export.md)|В результате структуру данных помещается в IDL-файл.|  
+|[first_is](../windows/first-is.md)|Указывает индекс первого элемента массива для передачи.|  
+|[last_is](../windows/last-is.md)|Определяет индекс последнего элемента массива для передачи.|  
+|[length_is](../windows/length-is.md)|Указывает количество элементов массива, для передачи.|  
+|[max_is](../windows/max-is.md)|Задает максимальное значение для индекса массива допустимым.|  
+|[size_is](../windows/size-is.md)|Указывает объем памяти, выделенной для указателей, по размеру, размер указателей на указатели по размеру и одно - или многомерные массивы.|  
+|[unique](../windows/unique-cpp.md)|Указывает уникальный указатель.|  
+|[UUID](../windows/uuid-cpp-attributes.md)|Указывает уникальный идентификатор для класса или интерфейса.|  
   
-### struct  
+### <a name="nonencapsulated-union"></a>Nonencapsulated объединения  
   
 |Атрибут|Описание|  
-|-------------|--------------|  
-|[aggregatable](../Topic/aggregatable.md)|Указывает, что класс поддерживает агрегирование.|  
-|[агрегаты](../windows/aggregates.md)|Указывает, что элемент управления выполняет статистическую обработку класс целевого объекта.|  
-|[appobject](../Topic/appobject.md)|Определяет coclass, как объект приложения, который связан с полным приложением exe, и указывает на то, что функции и свойства coclass глобально доступны в этой библиотеке типов.|  
-|[CoClass](../windows/coclass.md)|Создает элемент управления ActiveX.|  
-|[com\_interface\_entry](../Topic/com_interface_entry%20\(C++\).md)|Добавляет запись интерфейса для сопоставления модели COM.|  
-|[Элемент управления](../windows/control.md)|Указывает, что пользовательский тип элемента управления.|  
-|[custom](../windows/custom-cpp.md)|Позволяет указать собственный атрибут.|  
-|[db\_column](../windows/db-column.md)|Привязывает указанный столбец в набор строк.|  
-|[db\_command](../windows/db-command.md)|Создает команда OLE DB ".|  
-|[db\_param](../windows/db-param.md)|Связывает указанная переменная члена с входом или параметром вывода и отделяет переменную.|  
-|[db\_source](../windows/db-source.md)|Создает соединение с источником данных.|  
-|[db\_table](../windows/db-table.md)|Открывает таблицу OLE DB.|  
-|[default](../windows/default-cpp.md)|Указывает, что пользовательская или диспетчерский интерфейс, определенные в компонентном классе представляют по умолчанию интерфейса программирования.|  
-|[defaultvtable](../windows/defaultvtable.md)|Определяет интерфейс, например по умолчанию vtable интерфейс для элемента управления.|  
-|[event\_receiver](../windows/event-receiver.md)|Создает приемник событий.|  
-|[event\_source](../windows/event-source.md)|Создает источник события.|  
-|[export](../windows/export.md)|Структура данных будет располагаться в idl\-файле.|  
-|[first\_is](../windows/first-is.md)|Определяет индекс первого элемента массива, которые необходимо передать.|  
-|[hidden](../Topic/hidden.md)|Показывает, что элемент существует, но не должен отображаться в обозревателе, ориентированном на пользователя.|  
-|[implements\_category](../Topic/implements_category.md)|Указывает реализации категории компонентов для класса.|  
-|[last\_is](../windows/last-is.md)|Определяет индекс последнего элемента в массиве для отправки.|  
-|[length\_is](../windows/length-is.md)|Определяет количество элементов массива, которые необходимо передать.|  
-|[max\_is](../windows/max-is.md)|Показывает максимальное допустимое значение для индекса массива.|  
-|[requires\_category](../windows/requires-category.md)|Определяет категории необходимого компонента класса целевого объекта.|  
-|[size\_is](../Topic/size_is.md)|Определяет размер памяти, выделенной для указанных размеров указателей, заданные размеры указателей на указанным размером и указателям, single или многомерным таблицам.|  
-|[source](../Topic/source%20\(C++\).md)|В классе определяет интерфейсы источника com\-объекта для точки подключения.  Свойства или метода, указывает, что член или ВАРИАНТ возвращает объект, являющийся источником событий.|  
-|[Потоки](../windows/threading-cpp.md)|Указывает потоковую модель для com\-объекта.|  
-|[unique](../windows/unique-cpp.md)|Задает уникальный указатель.|  
-|[uuid](../windows/uuid-cpp-attributes.md)|Указывает уникальный идентификатор класса или интерфейса.|  
-|[версия](../windows/version-cpp.md)|Определяет конкретную версию среди нескольких версий класса.|  
-|[vi\_progid](../windows/vi-progid.md)|Определяет версия\-независимую форму программного идентификатора.|  
+|---------------|-----------------|  
+|[ms_union](../windows/ms-union.md)|Управляет выравниванием представление данных сети nonencapsulated объединений.|  
+|[no_injected_text](../windows/no-injected-text.md)|Запрещает компилятору встраивать код в результате использования атрибута.|  
   
-## См. также  
- [Attributes by Usage](../windows/attributes-by-usage.md)
+### <a name="struct"></a>struct  
+  
+|Атрибут|Описание|  
+|---------------|-----------------|  
+|[aggregatable](../windows/aggregatable.md)|Указывает, что класс поддерживает агрегирование.|  
+|[aggregates](../windows/aggregates.md)|Указывает, что элемент управления использует статистическую функцию для целевого класса.|  
+|[appobject](../windows/appobject.md)|Идентифицирует компонентного класса, как объект приложения, который связан с приложением полный .exe и указывает, что функциях и свойствах компонентного класса доступны глобально в этой библиотеке типов.|  
+|[coclass](../windows/coclass.md)|Создает элемент управления ActiveX.|  
+|[COM_INTERFACE_ENTRY](../windows/com-interface-entry-cpp.md)|Добавляет запись интерфейс COM карты.|  
+|[control](../windows/control.md)|Указывает, что определяемый пользователем тип элемента управления.|  
+|[пользовательские](../windows/custom-cpp.md)|Позволяет определять собственный атрибут.|  
+|[db_column](../windows/db-column.md)|Связывает указанный столбец набора строк.|  
+|[db_command](../windows/db-command.md)|Создает команду OLE DB.|  
+|[db_param](../windows/db-param.md)|Связывает указанный член переменной с входным или выходным параметром и разделяет переменной.|  
+|[db_source](../windows/db-source.md)|Создает подключение к источнику данных.|  
+|[db_table](../windows/db-table.md)|Открывает таблицу OLE DB.|  
+|[default](../windows/default-cpp.md)|Указывает, что настраиваемый или disp-интерфейс, определенный в коклассе, представляет интерфейс программирования по умолчанию.|  
+|[defaultvtable](../windows/defaultvtable.md)|Определяет интерфейс как интерфейс vtable по умолчанию для элемента управления.|  
+|[event_receiver](../windows/event-receiver.md)|Создает приемник событий.|  
+|[event_source](../windows/event-source.md)|Создает источник событий.|  
+|[export](../windows/export.md)|В результате структуру данных помещается в IDL-файл.|  
+|[first_is](../windows/first-is.md)|Указывает индекс первого элемента массива для передачи.|  
+|[hidden](../windows/hidden.md)|Указывает, что элемент существует, но не должен отображаться в пользовательском браузере.|  
+|[implements_category](../windows/implements-category.md)|Определяет категории реализовано компонента для класса.|  
+|[last_is](../windows/last-is.md)|Определяет индекс последнего элемента массива для передачи.|  
+|[length_is](../windows/length-is.md)|Указывает количество элементов массива, для передачи.|  
+|[max_is](../windows/max-is.md)|Задает максимальное значение для индекса массива допустимым.|  
+|[requires_category](../windows/requires-category.md)|Задает категории обязательный компонент целевого класса.|  
+|[size_is](../windows/size-is.md)|Указывает объем памяти, выделенной для указателей, по размеру, размер указателей на указатели по размеру и одно - или многомерные массивы.|  
+|[источник](../windows/source-cpp.md)|В классе задает исходных интерфейсов COM-объект для точки подключения. Для свойства или метода означает, что член возвращает объект или ВАРИАНТ, который является источником событий.|  
+|[Работа с потоками](../windows/threading-cpp.md)|Указывает, что потоковая модель для COM-объекта.|  
+|[unique](../windows/unique-cpp.md)|Указывает уникальный указатель.|  
+|[UUID](../windows/uuid-cpp-attributes.md)|Указывает уникальный идентификатор для класса или интерфейса.|  
+|[version](../windows/version-cpp.md)|Определяет конкретную версию несколькими версиями класса.|  
+|[vi_progid](../windows/vi-progid.md)|Указывает форму независимый от версии идентификатор ProgID.|  
+  
+## <a name="see-also"></a>См. также  
+ [Список атрибутов по использованию](../windows/attributes-by-usage.md)

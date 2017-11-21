@@ -1,37 +1,37 @@
 ---
-title: "Data Types Classes | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "vc.atl.datatypes"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "типы данных [C++], classes"
-  - "data types classes [C++]"
+title: "Типы данных классов (ATL) | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: vc.atl.datatypes
+dev_langs: C++
+helpviewer_keywords:
+- data types classes [C++]
+- data types [C++], classes
 ms.assetid: 29882bab-9174-4dfa-8227-ccfeba80b865
-caps.latest.revision: 13
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 8
+caps.latest.revision: "13"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: f2566e86e9bc792fad455b293dcf213671ab8ed5
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/24/2017
 ---
-# Data Types Classes
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+# <a name="data-types-classes"></a>Классы, типы данных
+Следующие классы упаковать C++-типы данных:  
+  
+-   [CComBSTR](../atl/reference/ccombstr-class.md) заключает в оболочку `BSTR` тип данных.  
+  
+-   [CComVariant](../atl/reference/ccomvariant-class.md) заключает в оболочку **VARIANT** тип данных.  
+  
+-   [CComCurrency](../atl/reference/ccomcurrency-class.md) содержит методы и операторы для создания и управления `CURRENCY` объекта.  
+  
+## <a name="see-also"></a>См. также  
+ [Общие сведения о классе](../atl/atl-class-overview.md)
 
-Следующие классы создают программу\-оболочку типов данных C\+\+:  
-  
--   Создает [CComBSTR](../atl/reference/ccombstr-class.md) программу\-оболочку тип данных `BSTR`.  
-  
--   Создает [CComVariant](../atl/reference/ccomvariant-class.md) программу\-оболочку тип данных **VARIANT**.  
-  
--   [CComCurrency](../atl/reference/ccomcurrency-class.md) включает методы и операторы для создания и управления `CURRENCY` объект.  
-  
-## См. также  
- [Class Overview](../atl/atl-class-overview.md)

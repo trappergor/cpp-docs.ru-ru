@@ -1,34 +1,31 @@
 ---
-title: "Оператор ComPtrRef::operator!= | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "client/Microsoft::WRL::Details::ComPtrRef::operator!="
-dev_langs: 
-  - "C++"
+title: "ComPtrRef::operator! =-оператор | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: client/Microsoft::WRL::Details::ComPtrRef::operator!=
+dev_langs: C++
 ms.assetid: ab3093cc-6fbd-4039-890a-6df1cde992b6
-caps.latest.revision: 5
-caps.handback.revision: 5
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "5"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: a61ed97ffd3caad6d254d3258711a7b45ad3c0dc
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/24/2017
 ---
-# Оператор ComPtrRef::operator!=
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Предназначено для поддержки инфраструктуры WRL, а не для непосредственного использования в коде.  
+# <a name="comptrrefoperator-operator"></a>Оператор ComPtrRef::operator!=
+Поддерживает инфраструктуру WRL и не предназначен для использования непосредственно из программного кода.  
   
-## Синтаксис  
+## <a name="syntax"></a>Синтаксис  
   
 ```cpp  
-  
 bool operator!=(  
    const Details::ComPtrRef<ComPtr<T>>& a,  
    const Details::ComPtrRef<ComPtr<U>>& b  
@@ -55,28 +52,28 @@ bool operator!=(
 );  
 ```  
   
-#### Параметры  
+#### <a name="parameters"></a>Параметры  
  `a`  
  Ссылка на объект ComPtrRef.  
   
  `b`  
- Ссылка на другой объект ComPtrRef или указатель на анонимный объект \(`void*`\).  
+ Ссылка на другой объект ComPtrRef или указатель на анонимный объект (`void*`).  
   
-## Возвращаемое значение  
- Первый оператор возвращает `true`, если объект `a` не равен объекту `b`; в противном случае `false`.  
+## <a name="return-value"></a>Возвращаемое значение  
+ Первый оператор возвращает значение `true`, если объект `a` не равен объекту `b`; в противном случае —значение `false`.  
   
- Второй и третий операторы возвращают `true`, если объект `a` не равен `nullptr`; в противном случае `false`.  
+ Второй и третий операторы возвращают значение `true`, если объект `a` не равен `nullptr`; в противном случае — значение `false`.  
   
- Четвертый и пятый операторы возвращают `true`, если объект `a` не равен объекту `b`; в противном случае `false`.  
+ Четвертый и пятый операторы yield `true` Если объект `a` не равен объекту `b`; в противном случае `false`.  
   
-## Заметки  
- Определяет неравенство двух объектов ComPtrRef.  
+## <a name="remarks"></a>Примечания  
+ Указывает на неравенство двух объектов ComPtrRef.  
   
-## Требования  
+## <a name="requirements"></a>Требования  
  **Заголовок:** client.h  
   
  **Пространство имен:** Microsoft::WRL  
   
-## См. также  
- [Пространство имен Microsoft::WRL::Details](../windows/microsoft-wrl-details-namespace.md)   
- [Класс ComPtrRef](../Topic/ComPtrRef%20Class.md)
+## <a name="see-also"></a>См. также  
+ [Пространство имен Microsoft::wrl:: Details](../windows/microsoft-wrl-details-namespace.md)   
+ [Класс ComPtrRef](../windows/comptrref-class.md)

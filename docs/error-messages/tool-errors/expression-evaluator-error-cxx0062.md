@@ -4,46 +4,28 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-tools
+ms.technology: cpp-tools
 ms.tgt_pltfrm: 
 ms.topic: error-reference
-f1_keywords:
-- CXX0062
-dev_langs:
-- C++
+f1_keywords: CXX0062
+dev_langs: C++
 helpviewer_keywords:
 - CAN0062
 - CGopherFile class, operations
 ms.assetid: 8e4165c4-7753-4f45-90e9-4542cbb9fc7a
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
-ms.openlocfilehash: beb28dbc1f2dcf25302ef83cec868f106ded334c
-ms.contentlocale: ru-ru
-ms.lasthandoff: 02/24/2017
-
+ms.openlocfilehash: b68a7f5ad81d31bea20ff06d85c152843c76c755
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="expression-evaluator-error-cxx0062"></a>Ошибка вычислителя выражений CXX0062
-неподдерживаемые вызовы конструктора  
+Неподдерживаемые вызовы конструктора  
   
- Выражение вызов конструктора. Выражения не может явно вызывать конструкторы или выполнять преобразования, которые требуют вызова конструктора.  
+ Выражение выполнил вызов конструктора. Выражения не может явно вызывать конструкторы или выполнять преобразования, в которых используется вызов конструктора.  
   
  Эта ошибка идентична ошибке CAN0062.

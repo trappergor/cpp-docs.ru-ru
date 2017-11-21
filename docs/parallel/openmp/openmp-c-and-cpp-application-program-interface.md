@@ -1,34 +1,33 @@
 ---
-title: "OpenMP C and C++ Application Program Interface | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
+title: "OpenMP C и C++ программы интерфейс | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
 ms.assetid: efec8865-a755-452f-838f-ddbfecab44d4
-caps.latest.revision: 6
-caps.handback.revision: 6
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "6"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 8d807d8e9b3ef7012ac574cf8bcccb152b2c5d26
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/24/2017
 ---
-# OpenMP C and C++ Application Program Interface
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Обсуждается API OpenMP c и C\+\+, такие как зарегистрировано в спецификации версии 2.0 из доска проверкам архитектуры OpenMP.  
+# <a name="openmp-c-and-c-application-program-interface"></a>API OpenMP C и C++
+Описывает OpenMP C и C++ API, как описано в спецификации версии 2.0 на доске OpenMP архитектура проверки.  
   
- Версия 2,0, март 2002.  
+ Версии 2.0 марта 2002 г.  
   
- Авторском праве OpenMP архитектуры совет по проверкам 1997\-2002.  
+ Совет по проверкам об авторских правах 1997-2002 OpenMP архитектуры.  
   
- О разрешения на копирование без все или часть гонорара данного материала, предоставляемого сведения об авторских правах доска проверкам архитектуры OpenMP и название данного документа.  Уведомление, что копирование разрешением доска проверкам архитектуры OpenMP.  
+ Получает разрешение на копирование без сбор всех или части данного материала, предоставленный уведомление об авторском праве OpenMP архитектура отклоненное советом и отображается название этого документа. Обратите внимание —, учитывая, что копирование является разрешением OpenMP архитектура проверки доски.  
   
-## См. также  
+## <a name="see-also"></a>См. также  
  [OpenMP](../../parallel/openmp/openmp-in-visual-cpp.md)   
- [Contents](../../parallel/openmp/contents.md)
+ [Содержание](../../parallel/openmp/contents.md)

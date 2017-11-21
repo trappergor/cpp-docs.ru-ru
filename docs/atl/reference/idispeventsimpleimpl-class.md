@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-windows
+ms.technology: cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
@@ -19,41 +18,24 @@ f1_keywords:
 - ATLCOM/ATL::IDispEventSimpleImpl::GetTypeInfoCount
 - ATLCOM/ATL::IDispEventSimpleImpl::Invoke
 - ATLCOM/ATL::IDispEventSimpleImpl::Unadvise
-dev_langs:
-- C++
-helpviewer_keywords:
-- IDispEventSimpleImpl class
+dev_langs: C++
+helpviewer_keywords: IDispEventSimpleImpl class
 ms.assetid: 971d82b7-a921-47fa-a4d8-909bed377ab0
-caps.latest.revision: 27
+caps.latest.revision: "27"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: d2d39abf526a58b8442107b5ee816f316ae841f5
-ms.openlocfilehash: 392e8a8d8d38b0eaacce4ab013c46476516f46f7
-ms.contentlocale: ru-ru
-ms.lasthandoff: 03/31/2017
-
+ms.openlocfilehash: a6500a73151f2d04c6f6ec9185aca385f9c3108a
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="idispeventsimpleimpl-class"></a>Класс IDispEventSimpleImpl
 Этот класс предоставляет реализации `IDispatch` методы без получения сведений о типе из библиотеки типов.  
   
 > [!IMPORTANT]
->  Этот класс и его члены не может использоваться в приложениях, выполняемых в [!INCLUDE[wrt](../../atl/reference/includes/wrt_md.md)].  
+>  Этот класс и его члены не может использоваться в приложениях, выполняемых в среде выполнения Windows.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -206,7 +188,7 @@ STDMETHOD(GetIDsOfNames)(
 ```  
   
 ### <a name="remarks"></a>Примечания  
- В разделе [:: GetIdsOfNames](http://msdn.microsoft.com/en-us/6f6cf233-3481-436e-8d6a-51f93bf91619) в [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
+ В разделе [:: GetIdsOfNames](http://msdn.microsoft.com/en-us/6f6cf233-3481-436e-8d6a-51f93bf91619) в Windows SDK.  
   
 ##  <a name="gettypeinfo"></a>IDispEventSimpleImpl::GetTypeInfo  
  Эта реализация **IDispatch::GetTypeInfo** возвращает **E_NOTIMPL**.  
@@ -219,7 +201,7 @@ STDMETHOD(GetTypeInfo)(
 ```  
   
 ### <a name="remarks"></a>Примечания  
- В разделе [IDispatch::GetTypeInfo](http://msdn.microsoft.com/en-us/cc1ec9aa-6c40-4e70-819c-a7c6dd6b8c99) в [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
+ В разделе [IDispatch::GetTypeInfo](http://msdn.microsoft.com/en-us/cc1ec9aa-6c40-4e70-819c-a7c6dd6b8c99) в Windows SDK.  
   
 ##  <a name="gettypeinfocount"></a>IDispEventSimpleImpl::GetTypeInfoCount  
  Эта реализация **IDispatch::GetTypeInfoCount** возвращает **E_NOTIMPL**.  
@@ -229,7 +211,7 @@ STDMETHOD(GetTypeInfoCount)(UINT* /* pctinfo */);
 ```  
   
 ### <a name="remarks"></a>Примечания  
- В разделе [IDispatch::GetTypeInfoCount](http://msdn.microsoft.com/en-us/da876d53-cb8a-465c-a43e-c0eb272e2a12) в [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
+ В разделе [IDispatch::GetTypeInfoCount](http://msdn.microsoft.com/en-us/da876d53-cb8a-465c-a43e-c0eb272e2a12) в Windows SDK.  
   
 ##  <a name="invoke"></a>IDispEventSimpleImpl::Invoke  
  Эта реализация **IDispatch::Invoke** вызывает обработчики событий указанного в описании события приемником сопоставления.  
@@ -279,4 +261,3 @@ HRESULT Unadvise(IUnknown* pUnk);
  [Класс IDispEventImpl](../../atl/reference/idispeventimpl-class.md)   
  [SINK_ENTRY_INFO](composite-control-macros.md#sink_entry_info)   
  [Общие сведения о классе](../../atl/atl-class-overview.md)
-

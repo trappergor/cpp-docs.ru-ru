@@ -4,43 +4,24 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-cpp
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- xfunctional/std::logical_and
-- logical_and
-dev_langs:
-- C++
+f1_keywords: xfunctional/std::logical_and
+dev_langs: C++
 helpviewer_keywords:
 - logical_and class
 - logical_and struct
 ms.assetid: 1a375cc2-0592-4d57-a553-78009c7ad610
-caps.latest.revision: 22
+caps.latest.revision: "22"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-translationtype: Machine Translation
-ms.sourcegitcommit: 2d05749ba2837a3879c91886b9266de47dd2ece6
-ms.openlocfilehash: 8108658a9efceeb048aac2c9aa4ffd160626a31b
-ms.lasthandoff: 02/24/2017
-
+ms.openlocfilehash: 683fa6e8711deb5f61e4a41e7e9a64313d8abda8
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="logicaland-struct"></a>Структура logical_and
 Предопределенный объект функции, который выполняет над своими аргументами операцию логического умножения (конъюнкции) ( `operator&&`).  
@@ -75,7 +56,7 @@ struct logical_and<void>
  Правый операнд операции логического умножения. Неспециализированный шаблон принимает ссылочный аргумент lvalue типа `Type`. Специализированный шаблон выполняет точную пересылку ссылочных аргументов lvalue и rvalue выводимого типа `U`.  
   
 ## <a name="return-value"></a>Возвращаемое значение  
- Результат `Left``&&``Right`. Специализированный шаблон выполняет точную пересылку результата типа, возвращаемого `operator&&`.  
+ Результат `Left && Right`. Специализированный шаблон выполняет точную пересылку результата типа, возвращаемого `operator&&`.  
   
 ## <a name="remarks"></a>Примечания  
  Для определяемых пользователем типов нет сокращенного вычисления операнда. Оба аргумента вычисляются `operator&&`.  
@@ -160,7 +141,6 @@ The deque which is the conjuction of d1 & d2 is:
 ## <a name="see-also"></a>См. также  
  [Потокобезопасность в стандартной библиотеке C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)   
  [Справочник по стандартной библиотеке C++](../standard-library/cpp-standard-library-reference.md)
-
 
 
 

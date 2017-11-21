@@ -1,32 +1,30 @@
 ---
-title: "nth_element (STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::nth_element"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "nth_element - функция [STL/CLR]"
+title: "nth_element (STL/CLR) | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::nth_element
+dev_langs: C++
+helpviewer_keywords: nth_element function [STL/CLR]
 ms.assetid: 19fc1695-62a9-4f85-9920-d153c1c6481f
-caps.latest.revision: 4
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 4
+caps.latest.revision: "4"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: e0dc54dda65163f5682b2ee20e5e0b08a63acbd9
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/24/2017
 ---
-# nth_element (STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Разделы диапазон элементов, правильно находя элемент th `n` последовательности в диапазоне, чтобы все элементы перед ней будут меньше или приравнивают к нему и все элементы, которые используют ее в последовательности больше или приравнивают на него.  
+# <a name="nthelement-stlclr"></a>nth_element (STL/CLR)
+Разделяет диапазон элементов, правильно находя `n`-ый элемент последовательности в диапазоне, чтобы все элементы перед ним были меньше или равны ему, а также все элементы, следующие за ней в последовательности, больше или равны ему.  
   
-## Синтаксис  
+## <a name="syntax"></a>Синтаксис  
   
 ```  
 template<class _RanIt> inline  
@@ -36,13 +34,13 @@ template<class _RanIt, class _Pr> inline
         _Pr _Pred);  
 ```  
   
-## Заметки  
- Эта функция работает аналогично функции `nth_element` STL.  Для получения дополнительной информации см. [nth\_element](../Topic/nth_element.md).  
+## <a name="remarks"></a>Примечания  
+ Эта функция работает так же, как функция стандартной библиотеки C++ `nth_element`. Дополнительные сведения см. в разделе [nth_element](../standard-library/algorithm-functions.md#nth_element).  
   
-## Требования  
- **Заголовок:**\<cliext\/algorithm\>  
+## <a name="requirements"></a>Требования  
+ **Заголовок:** \<cliext/алгоритм >  
   
  **Пространство имен:** cliext  
   
-## См. также  
- [algorithm](../Topic/algorithm%20\(STL-CLR\).md)
+## <a name="see-also"></a>См. также  
+ [algorithm (STL/CLR)](../dotnet/algorithm-stl-clr.md)

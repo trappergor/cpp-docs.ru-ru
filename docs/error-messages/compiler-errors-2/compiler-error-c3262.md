@@ -1,45 +1,25 @@
 ---
-title: "C3262 Ошибка компилятора | Документы Microsoft"
+title: "Ошибка компилятора C3262 | Документы Microsoft"
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-tools
+ms.technology: cpp-tools
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- C3262
-dev_langs:
-- C++
-helpviewer_keywords:
-- C3262
+f1_keywords: C3262
+dev_langs: C++
+helpviewer_keywords: C3262
 ms.assetid: 3e74b9aa-de3c-4492-9331-ee73012b958b
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: c243063a9770542f137d5950e8a269f771960f74
-ms.openlocfilehash: fbb97c94a077f101c196628b74ef147f1ffa451a
-ms.contentlocale: ru-ru
-ms.lasthandoff: 02/24/2017
-
+ms.openlocfilehash: 5fb6a0bd41b2c81b011cf8762cecedad9c5e7ebd
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="compiler-error-c3262"></a>Ошибка компилятора C3262
 неправильная индексация массива: "число" размерностей указано для "тип массива" с "число" размерностями  
@@ -85,4 +65,3 @@ int main() {
    MyClass0 = Test0();  
 }  
 ```  
-

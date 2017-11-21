@@ -1,33 +1,30 @@
 ---
-title: "Оператор HandleT::operator= | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "corewrappers/Microsoft::WRL::Wrappers::HandleT::operator="
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "operator= - оператор"
+title: "HandleT::operator =-оператор | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: corewrappers/Microsoft::WRL::Wrappers::HandleT::operator=
+dev_langs: C++
+helpviewer_keywords: operator= operator
 ms.assetid: 9e42dcca-30fa-4e8b-8954-802fd64a5595
-caps.latest.revision: 3
-caps.handback.revision: 3
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "3"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 5c71e29fa31c89c030b74843a9d776923fed6789
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/24/2017
 ---
-# Оператор HandleT::operator=
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Перемещает значение указанного объекта HandleT в текущий объект HandleT.  
+# <a name="handletoperator-operator"></a>Оператор HandleT::operator=
+Перемещение текущего объекта HandleT значение указанного объекта HandleT.  
   
-## Синтаксис  
+## <a name="syntax"></a>Синтаксис  
   
 ```  
 HandleT& operator=(  
@@ -35,20 +32,20 @@ HandleT& operator=(
 );  
 ```  
   
-#### Параметры  
+#### <a name="parameters"></a>Параметры  
  `h`  
  Ссылка rvalue на дескриптор.  
   
-## Возвращаемое значение  
+## <a name="return-value"></a>Возвращаемое значение  
  Ссылка на текущий объект HandleT.  
   
-## Примечания  
- Эта операция делает недействительным объект HandleT, указанный параметром `h`.  
+## <a name="remarks"></a>Примечания  
+ Эта операция делает недействительными объекта HandleT, заданного параметром `h`.  
   
-## Требования  
+## <a name="requirements"></a>Требования  
  **Заголовок:** corewrappers.h  
   
- **Пространство имен:** Microsoft::WRL::Wrappers  
+ **Пространство имен:** Microsoft::wrl:: wrappers  
   
-## См. также  
- [Класс HandleT](../Topic/HandleT%20Class.md)
+## <a name="see-also"></a>См. также  
+ [Класс HandleT](../windows/handlet-class.md)

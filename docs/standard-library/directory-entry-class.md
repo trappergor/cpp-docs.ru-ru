@@ -4,53 +4,52 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
 - filesystem/std::experimental::filesystem::directory_entry
-- FILESYSTEM/std::experimental::filesystem::directory_entry::operator const std::experimental::filesystem::path &
-- FILESYSTEM/std::experimental::filesystem::directory_entry::directory_entry
-- FILESYSTEM/std::experimental::filesystem::directory_entry::operator=
-- FILESYSTEM/std::experimental::filesystem::directory_entry::assign
-- FILESYSTEM/std::experimental::filesystem::directory_entry::replace_filename
-- FILESYSTEM/std::experimental::filesystem::directory_entry::path
-- FILESYSTEM/std::experimental::filesystem::directory_entry::status
-- FILESYSTEM/std::experimental::filesystem::directory_entry::symlink_status
-- FILESYSTEM/std::experimental::filesystem::directory_entry::operator<
-- FILESYSTEM/std::experimental::filesystem::directory_entry::operator==
-- FILESYSTEM/std::experimental::filesystem::directory_entry::operator!=
-- FILESYSTEM/std::experimental::filesystem::directory_entry::operator<=
-- FILESYSTEM/std::experimental::filesystem::directory_entry::operator>
-- FILESYSTEM/std::experimental::filesystem::directory_entry::operator>=
-dev_langs:
-- C++
+- filesystem/std::experimental::filesystem::directory_entry::operator const std::experimental::filesystem::path &
+- filesystem/std::experimental::filesystem::directory_entry::directory_entry
+- filesystem/std::experimental::filesystem::directory_entry::operator=
+- filesystem/std::experimental::filesystem::directory_entry::assign
+- filesystem/std::experimental::filesystem::directory_entry::replace_filename
+- filesystem/std::experimental::filesystem::directory_entry::path
+- filesystem/std::experimental::filesystem::directory_entry::status
+- filesystem/std::experimental::filesystem::directory_entry::symlink_status
+- filesystem/std::experimental::filesystem::directory_entry::operator&lt;
+- filesystem/std::experimental::filesystem::directory_entry::operator==
+- filesystem/std::experimental::filesystem::directory_entry::operator!=
+- filesystem/std::experimental::filesystem::directory_entry::operator&lt;=
+- filesystem/std::experimental::filesystem::directory_entry::operator&gt;
+- filesystem/std::experimental::filesystem::directory_entry::operator&gt;=
+dev_langs: C++
 ms.assetid: 1827c67b-4137-4548-adb0-f955f7acaf08
-caps.latest.revision: 17
+caps.latest.revision: "17"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.mt:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
-ms.openlocfilehash: 0bd6b73c99eccffc7661cc4b43f97ab46890c5ee
-ms.contentlocale: ru-ru
-ms.lasthandoff: 04/29/2017
-
+helpviewer_keywords:
+- std::experimental::filesystem::directory_entry
+- std::experimental::filesystem::directory_entry::operator const std::experimental::filesystem::path &
+- std::experimental::filesystem::directory_entry::directory_entry
+- std::experimental::filesystem::directory_entry::operator=
+- std::experimental::filesystem::directory_entry::assign
+- std::experimental::filesystem::directory_entry::replace_filename
+- std::experimental::filesystem::directory_entry::path
+- std::experimental::filesystem::directory_entry::status
+- std::experimental::filesystem::directory_entry::symlink_status
+- std::experimental::filesystem::directory_entry::operator&lt;
+- std::experimental::filesystem::directory_entry::operator==
+- std::experimental::filesystem::directory_entry::operator!=
+- std::experimental::filesystem::directory_entry::operator&lt;=
+- std::experimental::filesystem::directory_entry::operator&gt;
+- std::experimental::filesystem::directory_entry::operator&gt;=
+ms.openlocfilehash: f79999e2913bb0058a62f112d4450e89daf456e6
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="directoryentry-class"></a>Класс directory_entry
 Описывает объект, возвращаемый `*X`, где *X* — [directory_iterator](../standard-library/directory-iterator-class.md) или [recursive_directory_iterator](../standard-library/recursive-directory-iterator-class.md).  
@@ -114,38 +113,37 @@ bool operator==(const directory_entry& right) const noexcept;
   
  Функция-член возвращает значение mypath == right.mypath.  
   
-## <a name="operator"></a>operator<  
+## <a name="operatorlt"></a>оператор&lt;  
   
 ```  
- 
 bool operator<(const directory_entry& right) const noexcept;  
 ```  
   
- Функция-член возвращает значение mypath < right.mypath.  
+ Функция-член возвращает mypath &lt; right.mypath.  
   
-## <a name="operator"></a>operator<=  
+## <a name="operatorlt"></a>оператор&lt;=  
   
 ```  
-bool operator<=(const directory_entry& right) const noexcept;  
+bool operator&lt;=(const directory_entry& right) const noexcept;  
 ```  
   
  Функция-член возвращает значение !(right \< *this).  
   
-## <a name="operator"></a>operator>  
+## <a name="operatorgt"></a>оператор&gt;  
   
 ```  
-bool operator>(const directory_entry& right) const noexcept;  
+bool operator&gt;(const directory_entry& right) const noexcept;  
 ```  
   
  Функция-член возвращает значение right \< *this.  
   
-## <a name="operator"></a>operator>=  
+## <a name="operatorgt"></a>оператор&gt;=  
   
 ```  
-bool operator>=(const directory_entry& right) const noexcept;  
+bool operator&gt;=(const directory_entry& right) const noexcept;  
 ```  
   
- Функция-член возвращает значение !(*this < right)  
+ Функция-член возвращает! (* это \< справа).  
   
 ## <a name="operator-const-pathtype"></a>operator const path_type&  
   
@@ -197,12 +195,11 @@ file_status symlink_status(error_code& ec) const noexcept;
  Обе функции-члены возвращают mysymstat, возможно, сначала изменив его следующим образом: если status_known(mysymstat), не выполнять никаких действий. В противном случае mysymstat = symlink_status(mypval).  
   
 ## <a name="requirements"></a>Требования  
- **Заголовок:** \<experimental/filesystem>  
+ **Заголовок:** \<экспериментальный/файловой системы&gt;  
   
  **Пространство имен:** std::experimental::filesystem  
   
 ## <a name="see-also"></a>См. также  
  [Справочник по файлам заголовков](../standard-library/cpp-standard-library-header-files.md)   
- [\<filesystem>](../standard-library/filesystem.md)
-
+ [\<файловая система&gt;](../standard-library/filesystem.md)
 

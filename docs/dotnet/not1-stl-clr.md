@@ -1,50 +1,48 @@
 ---
-title: "not1 (STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::not1"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "not1 - функция [STL/CLR]"
+title: "not1 (STL/CLR) | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::not1
+dev_langs: C++
+helpviewer_keywords: not1 function [STL/CLR]
 ms.assetid: a50cd819-10de-4d81-84da-8a34c5414a43
-caps.latest.revision: 16
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 14
+caps.latest.revision: "16"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: c35f0b9df04ca9f8d6ed142567158decc9170ac8
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/24/2017
 ---
-# not1 (STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Создает `unary_negate` для функтором.  
+# <a name="not1-stlclr"></a>not1 (STL/CLR)
+Приводит к возникновению ошибки `unary_negate` для функтором.  
   
-## Синтаксис  
+## <a name="syntax"></a>Синтаксис  
   
 ```  
 template<typename Fun>  
     unary_negate<Fun> not1(Fun% functor);  
 ```  
   
-## Параметры шаблона  
- Функции  
- Тип функтором.  
+## <a name="template-parameters"></a>Параметры шаблона  
+ Fun  
+ Тип функтора.  
   
-## Параметры функции  
- функтором  
- Функтором, создающееся.  
+## <a name="function-parameters"></a>Параметры функции  
+ функтор  
+ Функтор программы-оболочки.  
   
-## Заметки  
- Шаблонная функция [unary\_negate](../dotnet/unary-negate-stl-clr.md) возвращает `<``Fun``>(functor)`.  Он используется как удобный способ создания функтором от аргумента в функтором, доставляет его логическое НЕ.  
+## <a name="remarks"></a>Примечания  
+ Функция шаблона возвращает [unary_negate (STL/CLR)](../dotnet/unary-negate-stl-clr.md)`<Fun>(functor)`. Используется в качестве удобный способ в функтор, который доставляет его логическое не вокруг функтор один аргумент.  
   
-## Пример  
+## <a name="example"></a>Пример  
   
 ```  
 // cliext_not1.cpp   
@@ -86,13 +84,16 @@ int main()
   
 ```  
   
-  **4 0**  
- **1 0**  
- **1 0**   
-## Требования  
- **Заголовок:**\<cliext\/functional\>  
+```Output  
+4 0  
+1 0  
+1 0  
+```  
+  
+## <a name="requirements"></a>Требования  
+ **Заголовок:** \<cliext и функционального >  
   
  **Пространство имен:** cliext  
   
-## См. также  
- [unary\_negate](../dotnet/unary-negate-stl-clr.md)
+## <a name="see-also"></a>См. также  
+ [unary_negate (STL/CLR)](../dotnet/unary-negate-stl-clr.md)
