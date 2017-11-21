@@ -4,44 +4,25 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- c.io
-dev_langs:
-- C++
+f1_keywords: c.io
+dev_langs: C++
 helpviewer_keywords:
 - I/O routines, stream I/O
 - I/O [CRT], stream
 - stream I/O
 ms.assetid: dc7874d3-a91b-456a-9015-4748bb358217
-caps.latest.revision: 15
+caps.latest.revision: "15"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-ms.translationtype: Human Translation
-ms.sourcegitcommit: e257f037a05c45f5b98e64ea55bd125af443b0be
-ms.openlocfilehash: f342fb51cf2a1e97afa28db710fbb966b31a386b
-ms.contentlocale: ru-ru
-ms.lasthandoff: 03/30/2017
-
+ms.openlocfilehash: 72772912097cf868538a496d3350d4708af5dc83
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="stream-io"></a>Потоковый ввод-вывод
 Эти функции обрабатывают данные различных размеров и форматов, — от одного символа до больших структур данных. Они также предоставляют возможность буферизации, которая может повысить производительность. Размер буфера потока по умолчанию составляет 4 КБ. Эти подпрограммы влияют только на буферы, созданные подпрограммами библиотеки времени выполнения, и не затрагивают буферы, созданные операционной системой.  
@@ -52,7 +33,7 @@ ms.lasthandoff: 03/30/2017
 |-------------|---------|  
 |[clearerr](../c-runtime-library/reference/clearerr.md), [clearerr_s](../c-runtime-library/reference/clearerr-s.md)|Очистка индикатора ошибки для потока|  
 |[fclose](../c-runtime-library/reference/fclose-fcloseall.md)|Закрытие потока|  
-|[_fcloseall](../c-runtime-library/reference/fclose-fcloseall.md)|Закрытие всех открытых потоков, кроме `stdin`, `stdout` и `stderr`|  
+|[_fcloseall](../c-runtime-library/reference/fclose-fcloseall.md)|Закрытие всех открытых потоков, кроме `stdin`, `stdout`и `stderr`|  
 |[_fdopen, wfdopen](../c-runtime-library/reference/fdopen-wfdopen.md)|Связывание потока с дескриптором открытого файла|  
 |[feof](../c-runtime-library/reference/feof.md)|Проверка файла или потока на предмет конца|  
 |[ferror](../c-runtime-library/reference/ferror.md)|Проверка на наличие ошибки в потоке|  
@@ -118,7 +99,7 @@ ms.lasthandoff: 03/30/2017
   
  Любой файл, открытый с флагом `c` или `n` , ведет себя в соответствии со значением флага, вне зависимости от состояния глобального флага фиксации.  
   
- Если программа не закрывает поток явно, поток автоматически закроется, когда завершится выполнение программы. Следует, однако, закрывать поток, когда программа завершает работу с ним, так как количество потоков, которые могут одновременно быть открыты, ограничено. Дополнительные сведения об этом ограничении см. в описании функции [_setmaxstdio](../c-runtime-library/reference/setmaxstdio.md).  
+ Если программа не закрывает поток явно, поток автоматически закроется, когда завершится выполнение программы. Следует, однако, закрывать поток, когда программа завершает работу с ним, так как количество потоков, которые могут одновременно быть открыты, ограничено. Дополнительные сведения об этом ограничении смотрите в описании функции [_setmaxstdio](../c-runtime-library/reference/setmaxstdio.md) .  
   
  Ввод может следовать сразу за выводом только с промежуточным вызовом `fflush` или функции позиционирования в файле (`fseek`, `fsetpos`или `rewind`). Вывод может следовать за вводом без промежуточного вызова функции позиционирования в файле, если операция ввода обнаруживает конец файла.  
   
