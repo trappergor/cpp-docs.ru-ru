@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
 apilocation:
@@ -16,37 +15,19 @@ apilocation:
 - msvcr110.dll
 - msvcr90.dll
 apitype: DLLExport
-f1_keywords:
-- scanf
-dev_langs:
-- C++
-helpviewer_keywords:
-- scanf function, width specification
+f1_keywords: scanf
+dev_langs: C++
+helpviewer_keywords: scanf function, width specification
 ms.assetid: 94b4e8fe-c4a2-4799-8b6c-a2cf28ffb09c
-caps.latest.revision: 16
+caps.latest.revision: "16"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 3f91eafaf3b5d5c1b8f96b010206d699f666e224
-ms.openlocfilehash: 922405b111404e5a11052fd1aba8d2729e254714
-ms.contentlocale: ru-ru
-ms.lasthandoff: 04/01/2017
-
+ms.openlocfilehash: d95e5dc4b137e050c65bc95b6b872ae1f5391baa
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="scanf-width-specification"></a>Спецификация ширины scanf
 Эти данные применяются для интерпретации строк формата в семействе функций `scanf`, включая безопасные версии, такие как `scanf_s`. Эти функции обычно предполагают, что входной поток разбивается на последовательность токенов. Токены разделяются пробельным символом (пробелом, табуляцией или символом новой строки) или, в случае численных типов, естественным завершением числового типа данных, определяемым первым символом, который нельзя преобразовать в числовой текст. Однако с помощью спецификации ширины можно остановить анализ входных данных перед естественным концом токена.  
@@ -107,7 +88,7 @@ wscanf_s(L"%hC", &x, 2);    // Read a single-byte character
  Обратите внимание, что **%[a–z]** и **%[z–a]** интерпретируются как эквивалент **%[abcde...z]**. Это обычное расширения функции `scanf`, но следует заметить, что стандарт ANSI не требует его.  
   
 ## <a name="reading-unterminated-strings"></a>Чтение незавершенных строк  
- Чтобы сохранить строку без сохранения конечного нуль-символа ("\0"), используйте спецификацию `%`*n***c**, где *n* — десятичное целое число. В этом случае символ типа **c** указывает, что аргумент — указатель на массив символов. Следующие *n* символов считываются из входного потока в указанное расположение, и нуль-символ ("\0") не добавляется. Если *n* не указано, значение по умолчанию равно 1.  
+ Чтобы сохранить строку без конечного нуль-символа ("\0"), используйте спецификацию `%`*n***c**, где *n* — десятичное целое число. В этом случае символ типа **c** указывает, что аргумент — указатель на массив символов. Следующие символы (*n*) считываются из входного потока в указанное расположение, и нуль-символ ("\0") не добавляется. Если не указать *n*, значение по умолчанию будет равно 1.  
   
 ## <a name="when-scanf-stops-reading-a-field"></a>Когда функция scanf прекращает чтение поля  
  Функция `scanf` считывает каждое поле ввода, символ за символом. Она может прекратить чтение определенного поля ввода до достижения пробельного символа по различным причинам:  
