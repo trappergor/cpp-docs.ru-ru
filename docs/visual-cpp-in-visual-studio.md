@@ -4,16 +4,14 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-ide
+ms.technology: cpp-ide
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
 - visual c++
 - visual c
 - vc
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - unmanaged code, C++
 - development environment, Visual C++
@@ -21,7 +19,7 @@ helpviewer_keywords:
 - Visual C++
 - Visual C++, reference
 ms.assetid: e8dcc44c-a3e2-4ffe-887c-fd15b18dc458
-caps.latest.revision: 61
+caps.latest.revision: "61"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
@@ -35,17 +33,11 @@ translation.priority.ht:
 - ru-ru
 - zh-cn
 - zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-ms.translationtype: Human Translation
-ms.sourcegitcommit: da3c2e6ce7247d3e8c9a401bc0a133cb8d46a970
-ms.openlocfilehash: 81a7d724a4a3b2e5aa7de47461d20cc3385896eb
-ms.contentlocale: ru-ru
-ms.lasthandoff: 03/15/2017
-
+ms.openlocfilehash: bd4ac59b539b972a50a192e116e536598c03ed63
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="visual-c-in-visual-studio"></a>Visual C++ в Visual Studio
 Язык программирования в Visual Studio 2017 и средства разработки позволяют разрабатывать универсальные приложения Windows неуправляемого кода, классические и серверные приложения неуправляемого кода, межплатформенные библиотеки для Android, iOS и Windows, а также управляемые приложения, работающие на платформе .NET Framework.  
@@ -64,8 +56,7 @@ ms.lasthandoff: 03/15/2017
  [Новые возможности Visual C++](what-s-new-for-visual-cpp-in-visual-studio.md)  
  Новые возможности Visual C++.  
 
- [Улучшения соответствия C++ в Visual Studio 2017](cpp-conformance-improvements-2017.md) 
- Узнайте об улучшениях соответствия C++ в Visual Studio 2017. 
+ [Улучшения соответствия C++ в Visual Studio 2017](cpp-conformance-improvements-2017.md) Узнайте об улучшениях соответствия C++ в Visual Studio 2017. 
 
  [Соответствие стандартам языка Visual C++](visual-cpp-language-conformance.md)  
  Список с данными о состоянии соответствия стандартам по каждой функции в Visual C++.
@@ -129,9 +120,9 @@ ms.lasthandoff: 03/15/2017
  Дополнительные сведения о создании проектов, работе с файлами исходного кода, ссылках на библиотеки, компиляции, отладке, профилировании, развертывании и т. д. см. в статье [Интегрированная среда разработки и средства разработки Visual C++](ide/ide-and-tools-for-visual-cpp-development.md).  
   
 ## <a name="c-language-reference"></a>Справочник по языку C++  
- Сведения о языке C++ см. в статье [правочник по языку C++](cpp/cpp-language-reference.md).  
+ Сведения о языке C++ см. в документе [C++ Language Reference](cpp/cpp-language-reference.md).  
   
- Сведения о препроцессоре C++ см. в статье [Справочник по препроцессору C/C++](preprocessor/c-cpp-preprocessor-reference.md).  
+ Сведения о препроцессоре C++ см. в документе [C/C++ Preprocessor Reference](preprocessor/c-cpp-preprocessor-reference.md).  
   
 ## <a name="c-libraries-in-visual-studio"></a>Библиотеки C++ в Visual Studio  
  В следующих разделах приведены сведения о различных библиотеках C++, включенных в Visual C++.  
@@ -155,12 +146,12 @@ ms.lasthandoff: 03/15/2017
  Массово-параллельные алгоритмы, выполняемые в GPU.  
   
  [Библиотека шаблонов среды выполнения Windows (WRL)](http://msdn.microsoft.com/library/windows/apps/hh438466.aspx)  
-Приложения и компоненты  [!INCLUDE[win8_appname_long](build/includes/win8_appname_long_md.md)].  
+ Приложения и компоненты [!INCLUDE[win8_appname_long](build/includes/win8_appname_long_md.md)].  
   
  [Программирование .NET с использованием C++/CLI (Visual C++)](dotnet/dotnet-programming-with-cpp-cli-visual-cpp.md)  
  Программирование для общеязыковой среды выполнения (CLR).  
   
- См. также документацию по [STL/CLR](dotnet/stl-clr-library-reference.md) и [библиотеке поддержки C++](dotnet/cpp-support-library.md).  
+ См. также документацию по [STL/CLR](dotnet/stl-clr-library-reference.md) и [C++ Support Library](dotnet/cpp-support-library.md).  
   
 ## <a name="other-c-libraries"></a>Другие библиотеки C++  
  Этот раздел содержит ссылки на библиотеки, которые не входят в состав Visual Studio, но доступны для загрузки и использования с Visual C++.  
@@ -175,7 +166,7 @@ ms.lasthandoff: 03/15/2017
  [Ресурсы, посвященные Visual C++](http://msdn.microsoft.com/vstudio/hh386302.aspx)  
  Дополнительные ресурсы информации по Visual C++.  
   
- [Стандартный C++](http://isocpp.org/)  
+ [Стандартная C++](http://isocpp.org/)  
  Дополнительные сведения о C++, обзор Modern C++ и ссылки на книги, статьи, обсуждения и данные о событиях  
   
  [Знакомство с Visual C++](http://msdn.microsoft.com/vstudio/hh386302.aspx)  
@@ -185,4 +176,3 @@ ms.lasthandoff: 03/15/2017
  [Справочник по языку C](c-language/c-language-reference.md)   
  [Справочник по библиотеке времени выполнения C](c-runtime-library/c-run-time-library-reference.md)   
  [Внутренние объекты компилятора и язык ассемблера](intrinsics/compiler-intrinsics-and-assembly-language.md)
-

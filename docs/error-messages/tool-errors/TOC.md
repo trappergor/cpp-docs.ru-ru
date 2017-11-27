@@ -186,6 +186,7 @@
 ## [Предупреждение средств компоновщика LNK4010](linker-tools-warning-lnk4010.md)
 ## [Предупреждение средств компоновщика LNK4014](linker-tools-warning-lnk4014.md)
 ## [Предупреждение средств компоновщика LNK4022](linker-tools-warning-lnk4022.md)
+## [Предупреждение средств компоновщика LNK4037](linker-tools-warning-lnk4037.md)
 ## [Предупреждение средств компоновщика LNK4039](linker-tools-warning-lnk4039.md)
 ## [Предупреждение средств компоновщика LNK4044](linker-tools-warning-lnk4044.md)
 ## [Предупреждение средств компоновщика LNK4049](linker-tools-warning-lnk4049.md)

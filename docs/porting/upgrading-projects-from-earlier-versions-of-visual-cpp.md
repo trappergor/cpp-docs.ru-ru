@@ -4,41 +4,23 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-language
+ms.technology: cpp-language
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - 32-bit code porting
 - upgrading Visual C++ applications, 32-bit code
 ms.assetid: 18cdacaa-4742-43db-9e4c-2d9e73d8cc84
-caps.latest.revision: 36
+caps.latest.revision: "36"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 02dd887f1b20b42145ccc83165570b9f682e693c
-ms.openlocfilehash: 9a08af4a82aa6adcdb9e03899195f5329866eca2
-ms.contentlocale: ru-ru
-ms.lasthandoff: 02/24/2017
-
+ms.openlocfilehash: b141efa2ffa7d382278365101fca25b66ea25614
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="upgrading-projects-from-earlier-versions-of-visual-c"></a>Обновление проектов, созданных в предыдущих версиях Visual C++
 В большинстве случаев можно открыть проект, созданный в более ранней версии Visual Studio. Однако для этого Visual Studio обновляет проект. Если сохранить этот обновленный проект, его нельзя будет открыть в более ранней версии.  
@@ -62,6 +44,5 @@ ms.lasthandoff: 02/24/2017
   
 ## <a name="see-also"></a>См. также  
  [Изменения системы построения](../build/build-system-changes.md)  
- [Новые возможности Visual C++ в Visual Studio 2017](../what-s-new-for-visual-cpp-in-visual-studio.md) 
- [Журнал изменений Visual C++ 2003–2015](../porting/visual-cpp-change-history-2003-2015.md)   
+ [Новые возможности Visual C++ в Visual Studio 2017](../what-s-new-for-visual-cpp-in-visual-studio.md) [Журнал изменений Visual C++ 2003–2015](../porting/visual-cpp-change-history-2003-2015.md)   
  [Нестандартное поведение](../cpp/nonstandard-behavior.md)
