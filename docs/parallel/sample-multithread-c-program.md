@@ -1,30 +1,30 @@
 ---
-title: "Образец многопотоковой программы на C | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
+title: "Образец многопотоковой программы на C | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
 ms.assetid: 4706f6cd-ff9c-4dbf-99a2-1c999b568f17
-caps.latest.revision: 12
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 12
+caps.latest.revision: "12"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 4e4906924f3a572f2e8a00d226acdb3da7097cdc
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/24/2017
 ---
-# Образец многопотоковой программы на C
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Bounce.c является образцом многопотоковой программы, создающей новый поток каждый раз, когда вводится буква **a** или **A**.  Для каждого потока на экране отображается счастливое лицо определенного цвета.  Может быть создано до 32 потоков.  Нормальное завершение программы происходит при вводе символа `q` или **Q**.  Сведения о компиляции и связывании в программе Bounce.c см. в разделе [Компиляция и связывание в многопотоковых программах](../parallel/compiling-and-linking-multithread-programs.md).  
+# <a name="sample-multithread-c-program"></a>Образец многопотоковой программы на C
+Bounce.c является образцом многопотоковой программы, которая создает новый поток каждый раз буквы **a** или **A** типизирован. Каждый поток будет передаваться довольны гарнитуру другого цвета по экрану. Могут быть созданы до 32 потоков. Нормальное завершение программы происходит при `q` или **Q** типизирован. Сведения о компиляции и компоновки Bounce.c см. в разделе [компиляция и компоновка многопоточной программы](../parallel/compiling-and-linking-multithread-programs.md).  
   
-## Пример  
+## <a name="example"></a>Пример  
   
-### Код  
+### <a name="code"></a>Код  
   
 ```  
 // sample_multithread_c_program.c  
@@ -211,12 +211,12 @@ void ClearScreen( void )
 }  
 ```  
   
-### Ввод  
+### <a name="input"></a>Ввод  
   
 ```  
 a  
 q  
 ```  
   
-## См. также  
+## <a name="see-also"></a>См. также  
  [Реализация многопоточности на языке C с помощью функций Win32](../parallel/multithreading-with-c-and-win32.md)
