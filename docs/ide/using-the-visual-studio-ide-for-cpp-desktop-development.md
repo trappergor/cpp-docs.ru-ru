@@ -1,51 +1,56 @@
 ---
-title: "Использование интегрированной среды разработки Visual Studio для разработки приложений для настольных систем на языке C++ | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/15/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Интегрированная среда разработки [C++]"
-  - "интерфейс IDE Visual Studio [C++]"
+title: "Использование интегрированной среды разработки Visual Studio для разработки приложений рабочего стола C++ | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-ide
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- IDE [C++]
+- Visual Studio IDE [C++]
 ms.assetid: d985c230-8e81-49d6-92be-2db9cac8d023
-caps.latest.revision: 9
-caps.handback.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "9"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.openlocfilehash: 6d31d5a9cd055a9051d7003060e0202ec96c3ac5
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/24/2017
 ---
-# Использование интегрированной среды разработки Visual Studio для разработки приложений для настольных систем на языке C++
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+# <a name="using-the-visual-studio-ide-for-c-desktop-development"></a>Использование интегрированной среды разработки Visual Studio для разработки приложений для настольных систем на языке C++
 
-Интегрированная среда разработки \(IDE\) [!INCLUDE[vsprvs](../assembler/masm/includes/vsprvs_md.md)] предлагает набор инструментов для написания и изменения кода, а также обнаружения и исправления в нем ошибок.  
+Интегрированная среда разработки (IDE) Visual Studio предлагает ряд возможностей для управления большими и размера кода проекты, писать и рефакторинг кода и обнаружения и исправления ошибок с помощью статического анализа и мощных средств отладки. Этот набор статей предназначен для перебора каждый шаг, который необходимо будет управлять проектами, записи, проверки и отладки кода и затем развернуть ее на другом компьютере.  
+
+## <a name="prerequisites"></a>Предварительные требования  
+
+Если вы еще не установили Visual Studio, пришло время. Чтобы получить Visual Studio, его можно загрузить из [загрузки Visual Studio](http://www.visualstudio.com/downloads/download-visual-studio-vs.aspx). Не забудьте добавить средства разработки Visual C++, при установке Visual Studio, так как они не установлены по умолчанию. Дополнительные сведения об установке Visual Studio см. в разделе []().  
   
- В статьях данного раздела документации демонстрируется создание стандартной программы C\+\+ и проверка ее функций с помощью возможностей [!INCLUDE[vsprvs](../assembler/masm/includes/vsprvs_md.md)].  Создаваемая базовая программа отслеживает количество игроков в различных карточных играх.  
+В этих пошаговых руководствах предполагается, что вы установили Visual Studio и языке Visual C++ и компоненты, необходимые для разработки приложений для Windows Desktop. Также предполагается, что знание основ языка C++. Если вам нужно узнать C++, существует множество книг и веб-ресурсы доступны. Лучше всего начать [начать](https://isocpp.org/get-started) на веб-сайте Standard C++ Foundation.    
+
+После завершения установки Visual Studio, все готово для продолжения.  
   
- Доступны следующие статьи:  
+## <a name="get-started"></a>Приступая к работе  
+
+Чтобы приступить к работе с помощью интегрированной среды разработки Visual Studio для создания приложений C++, работают описан каждый из следующих разделов в порядке. Каждый из них выполняет построение на работу, которую можно выполнить в предыдущих разделах:  
   
--   [Пошаговое руководство. Работа с проектами и решениями \(C\+\+\)](../Topic/Walkthrough:%20Working%20with%20Projects%20and%20Solutions%20\(C++\).md)  
+-   [Пошаговое руководство. Работа с проектами и решениями (C++)](../ide/walkthrough-working-with-projects-and-solutions-cpp.md)  
   
--   [Пошаговое руководство. Построение проекта \(C\+\+\)](../ide/walkthrough-building-a-project-cpp.md)  
+-   [Пошаговое руководство. Сборка проекта (C++)](../ide/walkthrough-building-a-project-cpp.md)  
   
--   [Пошаговое руководство. Тестирование проекта \(C\+\+\)](../ide/walkthrough-testing-a-project-cpp.md)  
+-   [Пошаговое руководство. Тестирование проекта (C++)](../ide/walkthrough-testing-a-project-cpp.md)  
   
--   [Пошаговое руководство. Отладка проекта \(C\+\+\)](../ide/walkthrough-debugging-a-project-cpp.md)  
+-   [Пошаговое руководство. Отладка проекта (C++)](../ide/walkthrough-debugging-a-project-cpp.md)  
   
--   [Пошаговое руководство. Развертывание программы \(C\+\+\)](../ide/walkthrough-deploying-your-program-cpp.md)  
+-   [Пошаговое руководство. Развертывание программы (C++)](../ide/walkthrough-deploying-your-program-cpp.md)  
   
-## Необходимые компоненты  
- Это руководство предполагает знание основ языка C\+\+.  
+## <a name="next-steps"></a>Дальнейшие действия
   
-## Следующие шаги  
- **Назад:** [Visual C\+\+ Guided Tour](http://msdn.microsoft.com/ru-ru/499cb66f-7df1-45d6-8b6b-33d94fd1f17c) &#124; **Далее:** [Пошаговое руководство. Работа с проектами и решениями \(C\+\+\)](../Topic/Walkthrough:%20Working%20with%20Projects%20and%20Solutions%20\(C++\).md)  
+После завершения этих пошаговых руководствах, вы готовы приступить к созданию собственных проектах. Дополнительные сведения и ресурсы для разработки Visual C++ см. в разделе [Visual C++ в Visual Studio](https://msdn.microsoft.com/library/60k1461a.aspx).
   
-## См. также  
- [Visual C\+\+ Guided Tour](http://msdn.microsoft.com/ru-ru/499cb66f-7df1-45d6-8b6b-33d94fd1f17c)   
- [Разработка приложений в Visual Studio](http://msdn.microsoft.com/ru-ru/97490c1b-a247-41fb-8f2c-bc4c201eff68)
+## <a name="see-also"></a>См. также  
+[Разработка приложений в Visual Studio](http://msdn.microsoft.com/en-us/97490c1b-a247-41fb-8f2c-bc4c201eff68)
