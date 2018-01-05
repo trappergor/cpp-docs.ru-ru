@@ -1,32 +1,33 @@
 ---
-title: "BOOKMARK_ENTRY | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "BOOKMARK_ENTRY"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "BOOKMARK_ENTRY - макрос"
+title: "BOOKMARK_ENTRY | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: BOOKMARK_ENTRY
+dev_langs: C++
+helpviewer_keywords: BOOKMARK_ENTRY macro
 ms.assetid: ec8222f5-9d90-46cb-989e-23f24465083f
-caps.latest.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 9
+caps.latest.revision: "9"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: 9816a09c43f2b61ac908bd4c485deec080817953
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 12/21/2017
 ---
-# BOOKMARK_ENTRY
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Привязывает столбца закладки.  
+# <a name="bookmarkentry"></a>BOOKMARK_ENTRY
+Привязывает закладку для столбца.  
   
-## Синтаксис  
+## <a name="syntax"></a>Синтаксис  
   
 ```  
   
@@ -36,17 +37,62 @@ variable
   
 ```  
   
-#### Параметры  
- *variable*  
- \[in\] переменная, привязываемая к столбцу закладки.  
+#### <a name="parameters"></a>Параметры  
+ *переменная*  
+ [in] Переменная может быть привязано к закладку для столбца.  
   
-## Пример  
- [!CODE [NVC_OLEDB_Consumer#17](../CodeSnippet/VS_Snippets_Cpp/NVC_OLEDB_Consumer#17)]  
+## <a name="example"></a>Пример  
+
+```cpp  
+class CArtistsBookmark
+{
+public:
+// Data Elements
+   CBookmark<4> m_bookmark;
+   short m_nAge;
+   TCHAR m_szFirstName[21];
+   TCHAR m_szLastName[31];
+
+// Output binding map
+BEGIN_COLUMN_MAP(CArtistsBookmark)
+   BOOKMARK_ENTRY(m_bookmark)
+   COLUMN_ENTRY(1, m_nAge)
+   COLUMN_ENTRY(2, m_szFirstName)
+   COLUMN_ENTRY(3, m_szLastName)
+END_COLUMN_MAP()
+
+   void GetRowsetProperties(CDBPropSet* pPropSet)
+   {
+      pPropSet->AddProperty(DBPROP_BOOKMARKS, true);
+   }
+
+   HRESULT OpenDataSource()
+   {
+      CDataSource _db;
+      _db.Open();
+      return m_session.Open(_db);
+   }
+
+   void CloseDataSource()
+   {
+      m_session.Close();
+   }
+
+   CSession m_session;
+
+   DEFINE_COMMAND_EX(CArtistsBookmark, L" \
+   SELECT \
+      Age, \
+      FirstName, \
+      LastName \
+      FROM Artists")
+};
+```
   
-## Требования  
+## <a name="requirements"></a>Требования  
  **Заголовок:** atldbcli.h  
   
-## См. также  
- [Макросы и глобальные функции для шаблонов потребителей OLE DB](../Topic/Macros%20and%20Global%20Functions%20for%20OLE%20DB%20Consumer%20Templates.md)   
- [Класс CBookmark](../../data/oledb/cbookmark-class.md)   
- [DBPROP\_BOOKMARKS](https://msdn.microsoft.com/en-us/library/ms709728.aspx)
+## <a name="see-also"></a>См. также  
+ [Макросы и глобальные функции для шаблонов потребителей OLE DB](../../data/oledb/macros-and-global-functions-for-ole-db-consumer-templates.md)   
+ [CBookmark-класс](../../data/oledb/cbookmark-class.md)   
+ [DBPROP_BOOKMARKS](https://msdn.microsoft.com/en-us/library/ms709728.aspx)

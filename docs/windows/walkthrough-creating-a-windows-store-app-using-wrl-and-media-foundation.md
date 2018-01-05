@@ -13,11 +13,14 @@ caps.latest.revision: "9"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: eb26f38ece8c098e6f10ba2ec90738787cb20ff3
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: 25cc08c22ac0d33945a73744a0be6045971d9330
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="walkthrough-creating-a-windows-store-app-using-wrl-and-media-foundation"></a>Пошаговое руководство. Создание приложения для Магазина Windows с использованием WRL и Media Foundation
 Использование среды выполнения C++ шаблон библиотеки Windows (WRL) для создания приложения универсальной платформы Windows, который использует [Microsoft Media Foundation](http://msdn.microsoft.com/library/windows/apps/ms694197).  
@@ -125,7 +128,7 @@ ms.lasthandoff: 10/24/2017
   
  ![Приложение MediaCapture, захватывающее фотографию](../windows/media/wrl_media_capture.png "WRL_Media_Capture")  
   
-## <a name="next-steps"></a>Дальнейшие действия  
+## <a name="next-steps"></a>Следующие шаги  
  Пример показывает способ записи фотографий (по одной) с веб-камеры по умолчанию. [Медиарасширений](http://code.msdn.microsoft.com/windowsapps/Media-extensions-sample-7b466096) делается больше. В нем показано, как выполнить перебор веб-камер и работать с локальными обработчиками схем, а также демонстрируются дополнительные медиа-эффекты, работающие как на отдельных фотографиях, так и на потоках видео.  
   
 ## <a name="see-also"></a>См. также  
