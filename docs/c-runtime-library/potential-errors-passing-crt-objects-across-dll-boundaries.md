@@ -14,11 +14,12 @@ caps.latest.revision: "9"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: c5fa79de11c7c3a1526fc91361eecdc74f8bdcd7
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 0355b1c6a2731c9ca82e7ced37ad28f30a881eca
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="potential-errors-passing-crt-objects-across-dll-boundaries"></a>Потенциальные ошибки при передаче объектов CRT через границы DLL
 При передаче объектов времени выполнения C (CRT), таких как дескрипторы файлов, языковые стандарты и переменные среды, в библиотеку DLL или из нее (вызовы функций через границы DLL) может возникнуть непредвиденное поведение, если библиотека DLL, а также файлы вызывающие функции из DLL, используют различные копии библиотек CRT.  
@@ -36,7 +37,7 @@ ms.lasthandoff: 10/24/2017
   
 ## <a name="example"></a>Пример  
   
-### <a name="description"></a>Описание  
+### <a name="description"></a>Описание:  
  В этом примере дескриптор файла передается через границу библиотеки DLL.  
   
  Библиотека DLL и exe-файл создаются с /MD, поэтому они совместно используют один экземпляр CRT.  
@@ -77,7 +78,7 @@ this is a string
   
 ## <a name="example"></a>Пример  
   
-### <a name="description"></a>Описание  
+### <a name="description"></a>Описание:  
  В этом примере переменные среды передаются через границу библиотеки DLL.  
   
 ```cpp  

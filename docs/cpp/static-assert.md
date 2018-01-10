@@ -4,30 +4,27 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-language
+ms.technology: cpp-language
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-f1_keywords:
-- static_assert_cpp
-dev_langs:
-- C++
+f1_keywords: static_assert_cpp
+dev_langs: C++
 helpviewer_keywords:
 - C++ keywords, static_assert
 - C2338
 - assertions [C++], static_assert
 - static_assert
 ms.assetid: 28dd3668-e78c-4de8-ba68-552084743426
-caps.latest.revision: 9
+caps.latest.revision: "9"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.translationtype: HT
-ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
-ms.openlocfilehash: 1428d890fe079c7ac1fce175686e9776f9c21746
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/25/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: 660b91f4902e42d393509aa190172e53839b2621
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="staticassert"></a>static_assert
 Проверяет программное утверждение во время компиляции. Если заданное константное выражение имеет `false`, компилятор выводит указанное сообщение, если таковой имеется и компиляция завершается с ошибкой C2338; в противном случае объявление не имеет силы.  
@@ -43,7 +40,7 @@ static_assert( constant-expression );
   
 #### <a name="parameters"></a>Параметры  
   
-|Параметр|Описание|  
+|Параметр|Описание:|  
 |---------------|-----------------|  
 |`constant-expression`|Целочисленное константное выражение, которое можно преобразовать в логическое значение.<br /><br /> Если вычисленное выражение равно нулю (false), отображается параметр `string-literal` и компиляция завершается с ошибкой. Если выражение не равно нулю (true), то объявление `static_assert` не имеет силы.|  
 |`string-literal`|Сообщение, которое отображается, если параметр `constant-expression` равен нулю. Сообщение представляет собой строку символов в [базовый набор символов](../c-language/ascii-character-set.md) компилятора; это, а не [многобайтовых или расширенных символов](../c-language/multibyte-and-wide-characters.md).|  
@@ -57,7 +54,7 @@ static_assert( constant-expression );
   
  Ключевое слово `static_assert` можно использовать в области видимости пространства имен, класса или блока. (Хотя ключевое слово `static_assert` и не добавляет в программу новых имен, технически оно является объявлением, поскольку его можно использовать в области видимости пространства имен.)  
   
-## <a name="description"></a>Описание  
+## <a name="description"></a>Описание:  
  В следующем примере объявление `static_assert` имеет область видимости пространства имен. Поскольку компилятору известен размер типа `void *`, выражение вычисляется немедленно.  
   
 ## <a name="example"></a>Пример  
@@ -66,7 +63,7 @@ static_assert( constant-expression );
 static_assert(sizeof(void *) == 4, "64-bit code generation is not supported.");  
 ```  
   
-## <a name="description"></a>Описание  
+## <a name="description"></a>Описание:  
  В следующем примере объявление `static_assert` имеет область видимости класса. `static_assert` Проверяет, является ли параметр шаблона *обычные старые данные* тип (POD). Компилятор проверяет объявление `static_assert` при объявлении, но не принимает параметр `constant-expression` до тех пор, пока в функции `basic_string` не будет создаваться экземпляр шаблона класса `main()`.  
   
 ## <a name="example"></a>Пример  
@@ -94,7 +91,7 @@ int main()
 }  
 ```  
   
-## <a name="description"></a>Описание  
+## <a name="description"></a>Описание:  
  В следующем примере объявление `static_assert` имеет область видимости блока. Выражение в объявлении `static_assert` проверяет, равен ли размер структуры VMPage размеру страницу в виртуальной памяти системы.  
   
 ## <a name="example"></a>Пример  

@@ -14,16 +14,19 @@ caps.latest.revision: "7"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 683471e6449e1c1f190ecc7ef680d6108fdd644a
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: ccb26e1f054e6914f24982b36f6655fa62fc9f99
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="value-types-and-their-behaviors-ccli"></a>Типы значений и их режимы работы (C++/CLI)
 Типы значений изменились различными способами с управляемых расширений для C++ к Visual C++. В этом разделе мы рассмотрим перечисляемый тип среды CLR и тип класса значения вместе с упаковка-преобразование и доступ к экземпляру, упакованный в куче среды CLR, а также рассмотрим внутренних и закрепляющих указателей. В этой области были сделаны изменения расширенный язык.  
   
-## <a name="in-this-section"></a>Содержание  
+## <a name="in-this-section"></a>В этом разделе  
  [Тип перечисления Enum в среде CLR](../dotnet/value-types-and-their-behaviors-cpp-cli.md)  
  Рассматриваются изменения в объявлении и поведение перечислений.  
   

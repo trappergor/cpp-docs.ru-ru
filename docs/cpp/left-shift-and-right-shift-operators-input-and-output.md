@@ -4,15 +4,13 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-language
+ms.technology: cpp-language
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 f1_keywords:
 - <<
 - '>>'
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - << operator [C++], with specific objects
 - left shift operators [C++]
@@ -22,16 +20,16 @@ helpviewer_keywords:
 - shift operators [C++]
 - operators [C++], shift
 ms.assetid: 25fa0cbb-5fdd-4657-8745-b35f7d8f1606
-caps.latest.revision: 18
+caps.latest.revision: "18"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.translationtype: HT
-ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
-ms.openlocfilehash: e695a90f871f973780a859fb27a06a2c6b246f3d
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/25/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: 7dece9ac4045fa8b46e5edf8b266312242000229
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="left-shift-and-right-shift-operators-gtgt-and-ltlt"></a>Операторы сдвига влево и вправо (&gt; &gt; и &lt; &lt;)
 Операторы побитового сдвига являются оператором сдвига вправо (>>), который перемещает биты *выражение сдвига* оператор сдвига влево и вправо (<<), который перемещает биты *выражение сдвига* влево. <sup>1</sup>  
@@ -201,7 +199,7 @@ int main() {
 ```  
   
 ## <a name="additional-details"></a>Некоторые подробности  
- Результат операции сдвига не определен, если *выражение сложения* является отрицательным или если *выражение сложения* больше или равно числу битов в повышаемом * выражение сдвига*. Операция сдвига не выполняется при *выражение сложения* — 0.  
+ Результат операции сдвига не определен, если *выражение сложения* является отрицательным или если *выражение сложения* больше или равно числу битов в повышаемом  *выражение сдвига*. Операция сдвига не выполняется при *выражение сложения* — 0.  
   
 ```cpp  
 #include <iostream>  

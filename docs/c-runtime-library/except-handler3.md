@@ -29,11 +29,12 @@ caps.latest.revision: "7"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: dbbde719028df2d7b535548f4343b88e2c90efbd
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: b4fe280562d4f1278d74ae118712c9167de4b54d
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="excepthandler3"></a>_except_handler3
 Внутренняя функция CRT. Используется платформой для поиска подходящего обработчика исключений для обработки текущего исключения.  
@@ -53,13 +54,13 @@ int _except_handler3(
  [in] `exception_record`  
  Сведения о конкретном исключении.  
   
- [входной] `registration`  
+ [in] `registration`  
  Запись, которая указывает, какую таблицу области следует использовать для поиска обработчика исключений.  
   
- [входной] `context`  
+ [in] `context`  
  Зарезервировано.  
   
- [входной] `dispatcher`  
+ [in] `dispatcher`  
  Зарезервировано.  
   
 ## <a name="return-value"></a>Возвращаемое значение  

@@ -1,36 +1,38 @@
 ---
-title: "CDynamicParameterAccessor::SetParamStatus | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "CDynamicParameterAccessor::SetParamStatus"
-  - "ATL.CDynamicParameterAccessor.SetParamStatus"
-  - "ATL::CDynamicParameterAccessor::SetParamStatus"
-  - "CDynamicParameterAccessor.SetParamStatus"
-  - "SetParamStatus"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "SetParamStatus - метод"
+title: "CDynamicParameterAccessor::SetParamStatus | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- CDynamicParameterAccessor::SetParamStatus
+- ATL.CDynamicParameterAccessor.SetParamStatus
+- ATL::CDynamicParameterAccessor::SetParamStatus
+- CDynamicParameterAccessor.SetParamStatus
+- SetParamStatus
+dev_langs: C++
+helpviewer_keywords: SetParamStatus method
 ms.assetid: 0c2271f6-457d-46ca-88b7-4590aadb20d7
-caps.latest.revision: 8
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: 52059675e20eb1789addf20dbf7a0e772f779efb
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 12/21/2017
 ---
-# CDynamicParameterAccessor::SetParamStatus
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Задает состояние указанного параметра, хранящиеся в буфере.  
+# <a name="cdynamicparameteraccessorsetparamstatus"></a>CDynamicParameterAccessor::SetParamStatus
+Задает состояние указанного параметра, сохраненного в буфере.  
   
-## Синтаксис  
+## <a name="syntax"></a>Синтаксис  
   
 ```  
   
@@ -40,18 +42,18 @@ caps.handback.revision: 8
 );  
 ```  
   
-#### Параметры  
+#### <a name="parameters"></a>Параметры  
  `nParam`  
- \[in\] параметр \(начиная с 1\).  Параметр 0 зарезервировано для возвращаемых значений.  Параметр индекс параметра на основании своего порядке в вызове SQL или хранимой процедуры.  Пример см. в разделе [SetParam](../../data/oledb/cdynamicparameteraccessor-setparam.md).  
+ [in] Номер параметра (начиная с 1). Параметр 0 зарезервирован для возвращаемых значений. Параметр с номером — это индекс параметра, в зависимости от порядка в SQL или хранимой процедуры. В разделе [SetParam](../../data/oledb/cdynamicparameteraccessor-setparam.md) в качестве примера.  
   
  *status*  
- \[in\] состояние `DBSTATUS` указанного параметра.  Сведения о значениях `DBSTATUS` см. в разделе [Состояние](https://msdn.microsoft.com/en-us/library/ms722617.aspx) справочника *программиста OLE* DB или поиск `DBSTATUS` в oledb.h.  
+ [in] `DBSTATUS` Состояние указанного параметра. Сведения о `DBSTATUS` значения, в разделе [состояние](https://msdn.microsoft.com/en-us/library/ms722617.aspx) в *Справочник программиста OLE DB*, или выполните поиск `DBSTATUS` в oledb.h.  
   
-## Заметки  
- Возвращает **true** в успехе или **false** при сбое.  
+## <a name="remarks"></a>Примечания  
+ Возвращает **true** в случае успешного выполнения или **false** при сбое.  
   
-## Требования  
+## <a name="requirements"></a>Требования  
  **Заголовок:** atldbcli.h  
   
-## См. также  
+## <a name="see-also"></a>См. также  
  [Класс CDynamicParameterAccessor](../../data/oledb/cdynamicparameteraccessor-class.md)

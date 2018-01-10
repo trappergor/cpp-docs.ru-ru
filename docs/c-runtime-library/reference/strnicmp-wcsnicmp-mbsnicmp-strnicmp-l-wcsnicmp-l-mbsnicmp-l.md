@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
 apiname:
@@ -46,8 +45,7 @@ f1_keywords:
 - CORECRT_WSTRING/_wcsnicmp_l
 - string/_strnicmp
 - string/_strnicmp_l
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - tcsnicmp function
 - _tcsncicmp function
@@ -74,36 +72,22 @@ helpviewer_keywords:
 - mbsnicmp function
 - _wcsnicmp function
 ms.assetid: df6e5037-4039-4c85-a0a6-21d4ef513966
-caps.latest.revision: 24
+caps.latest.revision: "24"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: e257f037a05c45f5b98e64ea55bd125af443b0be
-ms.openlocfilehash: d1e4b6e775ad1b46c988c5c5ca3af1ceafa29135
-ms.contentlocale: ru-ru
-ms.lasthandoff: 03/30/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: c926c23553545a76bc8e1d0a0427c20ea65f3156
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="strnicmp-wcsnicmp-mbsnicmp-strnicmpl-wcsnicmpl-mbsnicmpl"></a>_strnicmp, _wcsnicmp, _mbsnicmp, _strnicmp_l, _wcsnicmp_l, _mbsnicmp_l
 Сравнивает указанное количество символов двух строк без учета регистра.  
   
 > [!IMPORTANT]
->  `_mbsnicmp` и `_mbsnicmp_l` нельзя использовать в приложениях, выполняемых в [!INCLUDE[wrt](../../atl/reference/includes/wrt_md.md)]. Дополнительные сведения см. в статье [Функции CRT, которые не поддерживаются с ключом /ZW](http://msdn.microsoft.com/library/windows/apps/jj606124.aspx).  
+>  Функции `_mbsnicmp` и `_mbsnicmp_l` не могут использоваться в приложениях, запускаемых в среде выполнения Windows. Дополнительные сведения см. в статье [Функции CRT, которые не поддерживаются с ключом /ZW](http://msdn.microsoft.com/library/windows/apps/jj606124.aspx).  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -169,9 +153,9 @@ int _mbsnicmp_l(
   
  Символы от 91 до 96 в таблице ASCII ('[', '\\', ']', '^', '_' и '\`') оцениваются как меньшие по сравнению с любым алфавитным символом. Такое упорядочение идентично используемому функцией `stricmp`.  
   
- Функции `_wcsnicmp` и `_mbsnicmp` являются версиями функции `_strnicmp` для расширенных и многобайтовых символов. Аргументы `_wcsnicmp` представляют собой двухбайтовые строки; аргументы `_mbsnicmp` представляют собой многобайтовые строки. `_mbsnicmp` распознает последовательности многобайтовых символов в соответствии с текущей многобайтовой кодовой страницей и возвращает `_NLSCMPERROR` при ошибке. Дополнительные сведения см. в разделе [Кодовые страницы](../../c-runtime-library/code-pages.md). В остальном эти три функции ведут себя идентично. На эти функции влияет настройка языкового стандарта: версии без суффикса `_l` используют текущий языковой стандарт для зависящего от языкового стандарта поведения; версии с суффиксом `_l` используют переданный в них параметр `locale`. Дополнительные сведения см. в разделе [Языковой стандарт](../../c-runtime-library/locale.md).  
+ Функции `_wcsnicmp` и `_mbsnicmp` являются версиями функции `_strnicmp` для расширенных и многобайтовых символов. Аргументы `_wcsnicmp` представляют собой двухбайтовые строки; аргументы `_mbsnicmp` представляют собой многобайтовые строки. `_mbsnicmp` распознает последовательности многобайтовых символов в соответствии с текущей многобайтовой кодовой страницей и возвращает `_NLSCMPERROR` при ошибке. Дополнительные сведения см. в разделе [Кодовые страницы](../../c-runtime-library/code-pages.md). В остальном эти три функции ведут себя идентично. На эти функции влияет настройка языкового стандарта: версии без суффикса `_l` используют текущий языковой стандарт для зависящего от языкового стандарта поведения; версии с суффиксом `_l` используют переданный в них параметр `locale`. Для получения дополнительной информации см. [Locale](../../c-runtime-library/locale.md).  
   
- Все эти функции проверяют свои параметры. Если параметр `string1` или `string2` является пустым указателем, вызывается обработчик недопустимых параметров, как описано в статье [Проверка параметров](../../c-runtime-library/parameter-validation.md). Если продолжение выполнения разрешено, эти функции возвращают `_NLSCMPERROR` и устанавливают для `errno` значение `EINVAL`.  
+ Все эти функции проверяют свои параметры. Если параметр `string1` или `string2` является пустым указателем, вызывается обработчик недопустимого параметра, как описано в статье [Проверка параметров](../../c-runtime-library/parameter-validation.md). Если продолжение выполнения разрешено, эти функции возвращают `_NLSCMPERROR` и устанавливают для `errno` значение `EINVAL`.  
   
 ### <a name="generic-text-routine-mappings"></a>Универсальное текстовое сопоставление функций  
   
@@ -189,7 +173,7 @@ int _mbsnicmp_l(
 |`_wcsnicmp`, `_wcsnicmp_l`|<string.h> или <wchar.h>|  
 |`_mbsnicmp`, `_mbsnicmp_l`|\<mbstring.h>|  
   
- Дополнительные сведения о совместимости см. в статье [Совместимость](../../c-runtime-library/compatibility.md).  
+ Дополнительные сведения о совместимости см. в разделе [Совместимость](../../c-runtime-library/compatibility.md).  
   
 ## <a name="example"></a>Пример  
  См. пример для функции [strncmp](../../c-runtime-library/reference/strncmp-wcsncmp-mbsncmp-mbsncmp-l.md).  

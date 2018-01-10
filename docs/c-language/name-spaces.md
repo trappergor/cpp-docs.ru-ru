@@ -21,11 +21,12 @@ caps.latest.revision: "7"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: ba0a5fcce92c0d8afe19e3b98d2ba20e1d22d6a4
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 7833c7c1cfd9e7e2b408203f18cf955f6bafedd8
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="name-spaces"></a>Пространства имен
 Компилятор настраивает пространства имен, чтобы различать идентификаторы, используемые для различных типов элементов. Имена в каждом пространстве имен должны быть уникальными во избежание конфликтов, но одинаковые имена могут использоваться в нескольких пространствах имен. Это означает, что можно использовать один и тот же идентификатор для двух или более различных элементов при условии, что элементы расположены в разных пространствах имен. Компилятор может разрешить ссылки на основе синтаксического контекста идентификатора в программе.  

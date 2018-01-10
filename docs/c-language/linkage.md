@@ -16,11 +16,12 @@ caps.latest.revision: "8"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 10b05a8d994b1df7140c7f9bd4db984931b1896f
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: e7d2522169588aa285c91c535eb31360679d8136
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="linkage"></a>Компоновка
 Имена идентификаторов могут относиться к разным идентификаторам в разных областях. Идентификатор, объявленный в разных областях или в одной и той же области несколько раз, можно настроить таким образом, чтобы он ссылался на один идентификатор или функцию, с помощью процесса компоновки. Компоновка определяет части программы, в которых можно сослаться на идентификатор (его видимость). Существует три типа компоновки: [внутренняя](../c-language/internal-linkage.md), [внешняя](../c-language/external-linkage.md) и [без компоновки](../c-language/no-linkage.md).  

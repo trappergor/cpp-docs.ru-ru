@@ -41,11 +41,12 @@ caps.latest.revision: "31"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 6a86fa0962ab55c8df1bcd81f83d10d92ea8f304
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 0610dff5366f72010de965b7b9df0cd4e02c1e5d
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="setlocale-wsetlocale"></a>setlocale, _wsetlocale
 Устанавливает или извлекает языковой стандарт времени выполнения.  
@@ -88,7 +89,7 @@ wchar_t *_wsetlocale(
   
  `_wsetlocale` — это версия с расширенными символами для `setlocale`; аргумент `locale` и возвращаемое значение `_wsetlocale` являются строками с расширенными символами. Поведение `_wsetlocale` и `setlocale` идентично в противном случае.  
   
-### <a name="generic-text-routine-mappings"></a>Универсальное текстовое сопоставление функций  
+### <a name="generic-text-routine-mappings"></a>Сопоставления подпрограмм обработки обычного текста  
   
 |Подпрограмма TCHAR.H|_UNICODE и _MBCS не определены|_MBCS определено|_UNICODE определено|  
 |---------------------|------------------------------------|--------------------|-----------------------|  

@@ -4,12 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-language
+ms.technology: cpp-language
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - envp argument
 - main function, arguments
@@ -17,16 +15,16 @@ helpviewer_keywords:
 - argv argument
 - argc argument
 ms.assetid: 6148cbf3-ebe8-44f2-b277-de4b723991c7
-caps.latest.revision: 13
+caps.latest.revision: "13"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.translationtype: HT
-ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
-ms.openlocfilehash: d50e32a54cdb10af4adbfb3cfda64b8f1b21b2eb
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/25/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: cd1bc4f017a90bf2f42972831eadc02e77868151
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="argument-definitions"></a>Определения аргументов
 Аргументы в прототипе  
@@ -43,7 +41,7 @@ argc[ ,char*argv[] [,char*envp[] ] ] );intwmain(intargc[ ,wchar_t*argv[] [,wchar
  Целое число, которое содержит количество аргументов, следующих в `argv`. Параметр `argc` всегда больше или равен 1.  
   
  `argv`  
- Массив завершающихся null строк, представляющих введенные пользователем программы аргументы командной строки. По соглашению `argv` **[0]** — команда, с помощью которого вызывается программа, `argv` **[1]** является первым аргументом командной строки и т. д., пока не `argv` ** [**`argc`**]**, который всегда имеет **NULL**. В разделе [Настройка обработки командной строки](../cpp/customizing-cpp-command-line-processing.md) сведения о подавлении обработки в командной строке.  
+ Массив завершающихся null строк, представляющих введенные пользователем программы аргументы командной строки. По соглашению `argv` **[0]** — команда, с помощью которого вызывается программа, `argv` **[1]** является первым аргументом командной строки и т. д., пока не `argv`  **[**`argc`**]**, который всегда имеет **NULL**. В разделе [Настройка обработки командной строки](../cpp/customizing-cpp-command-line-processing.md) сведения о подавлении обработки в командной строке.  
   
  Первый аргумент командной строки — всегда `argv` **[1]** , а последний — `argv` **[** `argc` - 1**]**.  
   

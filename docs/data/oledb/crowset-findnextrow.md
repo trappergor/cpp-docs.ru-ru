@@ -1,91 +1,93 @@
 ---
-title: "CRowset::FindNextRow | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "ATL.CRowset.FindNextRow"
-  - "CRowset<TAccessor>.FindNextRow"
-  - "ATL::CRowset::FindNextRow"
-  - "CRowset::FindNextRow"
-  - "CRowset<TAccessor>::FindNextRow"
-  - "CRowset.FindNextRow"
-  - "ATL.CRowset<TAccessor>.FindNextRow"
-  - "ATL::CRowset<TAccessor>::FindNextRow"
-  - "FindNextRow"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "FindNextRow - метод"
+title: "CRowset::FindNextRow | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- ATL.CRowset.FindNextRow
+- CRowset<TAccessor>.FindNextRow
+- ATL::CRowset::FindNextRow
+- CRowset::FindNextRow
+- CRowset<TAccessor>::FindNextRow
+- CRowset.FindNextRow
+- ATL.CRowset<TAccessor>.FindNextRow
+- ATL::CRowset<TAccessor>::FindNextRow
+- FindNextRow
+dev_langs: C++
+helpviewer_keywords: FindNextRow method
 ms.assetid: 36484df9-3625-4f15-bf69-db73a8d91c55
-caps.latest.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 10
+caps.latest.revision: "10"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: 08dd2a80040c4affb89b19dfff3b22103b4e9547
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 12/21/2017
 ---
-# CRowset::FindNextRow
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Находит следующую строку сопоставления после определенной закладки.  
+# <a name="crowsetfindnextrow"></a>CRowset::FindNextRow
+Находит сопоставления следующую строку после указанной закладки.  
   
-## Синтаксис  
+## <a name="syntax"></a>Синтаксис  
   
 ```  
   
-      HRESULT FindNextRow(   
-   DBCOMPAREOP op,   
-   BYTE* pData,   
-   DBTYPE wType,   
-   DBLENGTH nLength,   
-   BYTE bPrecision,   
-   BYTE bScale,   
-   BOOL bSkipCurrent = TRUE,   
-   CBookmarkBase* pBookmark = NULL    
+      HRESULT FindNextRow(   
+   DBCOMPAREOP op,   
+   BYTE* pData,   
+   DBTYPE wType,   
+   DBLENGTH nLength,   
+   BYTE bPrecision,   
+   BYTE bScale,   
+   BOOL bSkipCurrent = TRUE,   
+   CBookmarkBase* pBookmark = NULL    
 ) throw( );  
 ```  
   
-#### Параметры  
+#### <a name="parameters"></a>Параметры  
  `op`  
- \[in\] операции, используемый при сравнении значения строки.  Для значений см. в разделе [IRowsetFind::FindNextRow](https://msdn.microsoft.com/en-us/library/ms723091.aspx).  
+ [in] Операция для использования при сравнении значений строк. Значения см. в разделе [IRowsetFind::FindNextRow](https://msdn.microsoft.com/en-us/library/ms723091.aspx).  
   
  `pData`  
- \[in\] указатель на значение для сравнения.  
+ [in] Указатель на значение для сравнения.  
   
  `wType`  
- \[in\] указывает тип данных значения части буфера.  Дополнительные сведения об индикаторах типа см. в разделе [Типы данных](https://msdn.microsoft.com/en-us/library/ms723969.aspx) справочника *программиста по OLE DB* в [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
+ [in] Указывает тип данных значение части буфера. Сведения об индикаторах типа см. в разделе [типы данных](https://msdn.microsoft.com/en-us/library/ms723969.aspx) в *Справочник программиста OLE DB* в Windows SDK.  
   
  `nLength`  
- \[in\] размер, в байтах, структуры данных объект\-получателя выбранной для данных значение.  Дополнительные сведения см. в описании **cbMaxLen** см. в разделе [Структуры DBBINDING](https://msdn.microsoft.com/en-us/library/ms716845.aspx) в *справочнике программиста OLE DB.*  
+ [in] Длина структуры данных потребителя, выделенное для значения данных в байтах. Дополнительные сведения см. в описании **cbMaxLen** в [структуры DBBINDING](https://msdn.microsoft.com/en-us/library/ms716845.aspx) в *Справочник программиста OLE DB.*  
   
  `bPrecision`  
- \[in\] максимальная точность, используемая при получении данных.  Используется только в том случае, если `wType``DBTYPE_NUMERIC`.  Дополнительные сведения см. в разделе [Преобразования, включающие DBTYPE\_DECIMAL или DBTYPE\_NUMERIC](https://msdn.microsoft.com/en-us/library/ms719714.aspx) в *справочнике программиста OLE DB*.  
+ [in] Максимальная точность, при получении данных. Используется, только если `wType` — `DBTYPE_NUMERIC`. Дополнительные сведения см. в разделе [преобразования, включающие DBTYPE_NUMERIC или DBTYPE_DECIMAL](https://msdn.microsoft.com/en-us/library/ms719714.aspx) в *Справочник программиста OLE DB*.  
   
  `bScale`  
- \[in\] масштаб, используемый при получении данных.  Используется только в том случае, если `wType``DBTYPE_NUMERIC` или **DBTYPE\_DECIMAL**.  Дополнительные сведения см. в разделе [Преобразования, включающие DBTYPE\_DECIMAL или DBTYPE\_NUMERIC](https://msdn.microsoft.com/en-us/library/ms719714.aspx) в *справочнике программиста OLE DB*.  
+ [in] Масштаб, используемый при получении данных. Используется, только если `wType` — `DBTYPE_NUMERIC` или **DBTYPE_DECIMAL**. Дополнительные сведения см. в разделе [преобразования, включающие DBTYPE_NUMERIC или DBTYPE_DECIMAL](https://msdn.microsoft.com/en-us/library/ms719714.aspx) в *Справочник программиста OLE DB*.  
   
  *bSkipCurrent*  
- \[in\] количество строк из закладки в, чтобы начать поиск.  
+ [in] Количество строк от закладки, с которой начинается поиск.  
   
  `pBookmark`  
- \[in\] закладки в той же позиции в которой начинается поиск.  
+ [in] Закладка для позиции, с которой начинается поиск.  
   
-## Возвращаемое значение  
- Стандартное `HRESULT`.  
+## <a name="return-value"></a>Возвращаемое значение  
+ Стандартный `HRESULT`.  
   
-## Заметки  
- Этот метод требует дополнительного интерфейса **IRowsetFind**, который может не поддерживаться во всех поставщиках; если это так, метод возвращает **E\_NOINTERFACE**.  Необходимо также установить **DBPROP\_IRowsetFind** в `VARIANT_TRUE` до вызова метода **Открыть** на таблице или команда, содержащий набор строк.  
+## <a name="remarks"></a>Примечания  
+ Этот метод требует дополнительный интерфейс **IRowsetFind**, который может поддерживается не всеми поставщиками; Если это так, метод возвращает **E_NOINTERFACE**. Необходимо также задать **DBPROP_IRowsetFind** для `VARIANT_TRUE` перед вызовом **откройте** для таблицы или команду, содержащую набор строк.  
   
- Дополнительные сведения об использовании закладок в объект\-получателях см. в разделе [С помощью закладок](../../data/oledb/using-bookmarks.md).  
+ Сведения об использовании закладки в потребителей в разделе [с помощью закладок](../../data/oledb/using-bookmarks.md).  
   
-## Требования  
+## <a name="requirements"></a>Требования  
  **Заголовок:** atldbcli.h  
   
-## См. также  
- [Класс CRowset](../Topic/CRowset%20Class.md)   
- [DBBINDING Structures](https://msdn.microsoft.com/en-us/library/ms716845.aspx)
+## <a name="see-also"></a>См. также  
+ [CRowset-класс](../../data/oledb/crowset-class.md)   
+ [Структуры DBBINDING](https://msdn.microsoft.com/en-us/library/ms716845.aspx)

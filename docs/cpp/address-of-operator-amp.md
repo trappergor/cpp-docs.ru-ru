@@ -4,29 +4,26 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-language
+ms.technology: cpp-language
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-f1_keywords:
-- '&'
-dev_langs:
-- C++
+f1_keywords: '&'
+dev_langs: C++
 helpviewer_keywords:
 - address-of operator (&)
 - '& operator'
 - '& operator [C++], address-of operator'
 ms.assetid: 2828221a-15f6-4acc-87fe-25e34feebb88
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.translationtype: HT
-ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
-ms.openlocfilehash: 56e2606759cc381c1ae6f6f4f1f7cbc1d9d2d810
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/25/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: 814b21839ac851e942aaee34ed28fd43facb418a
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="address-of-operator-amp"></a>Оператор address-of:&amp;
 ## <a name="syntax"></a>Синтаксис  
@@ -40,7 +37,7 @@ ms.lasthandoff: 09/25/2017
   
  Оператор взятия адреса может применяться только к переменным фундаментального типа или типа структуры, класса или объединения, которые были объявлены в области видимости файла, а также к ссылкам на массив с индексом. В таких выражениях из выражения взятия адреса можно вычитать (или прибавлять к нему) константное выражение, которое не содержит выражения взятия адреса.  
   
- Если этот оператор применяется к функциям или l-значениям, то результатом является тип указателя (r-значение), производный от типа операнда. Например, если операнд имеет тип `char`, то результат выражения будет иметь тип указателя на `char`. Оператор взятия адреса, применяется к **const** или `volatile` объектов, результатом которого является **const** `type` ** \* ** или `volatile` `type` ** \* **, где `type` тип исходного объекта.  
+ Если этот оператор применяется к функциям или l-значениям, то результатом является тип указателя (r-значение), производный от типа операнда. Например, если операнд имеет тип `char`, то результат выражения будет иметь тип указателя на `char`. Оператор взятия адреса, применяется к **const** или `volatile` объектов, результатом которого является **const** `type`  **\***  или `volatile` `type`  **\*** , где `type` тип исходного объекта.  
   
  Если оператор взятия адреса применяется к [полное имя](http://msdn.microsoft.com/en-us/3fefb16d-8120-4627-8b3f-3d90fbdcd1df), результат зависит от того *полное имя* указывает статический член. Если да, то результатом является указатель на тип, заданный в определении этого члена. Если элемент не является статическим, результатом является указатель на член *имя* из класса, обозначенного *полное имя класса*. (См. [первичные выражения](../cpp/primary-expressions.md) Дополнительные сведения о *полное имя класса*.) В следующем фрагменте кода показано, как отличается результат в зависимости от того, является ли элемент статическим.  
   
@@ -121,4 +118,3 @@ int main() {
  [Встроенный C++ операторы, приоритет и ассоциативность операторов](../cpp/cpp-built-in-operators-precedence-and-associativity.md)   
  [Декларатор ссылки lvalue: &](../cpp/lvalue-reference-declarator-amp.md)   
  [Операторы косвенного обращения и адреса операнда](../c-language/indirection-and-address-of-operators.md)
-

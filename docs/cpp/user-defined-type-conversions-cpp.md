@@ -4,14 +4,11 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-language
+ms.technology: cpp-language
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-f1_keywords:
-- explicit_cpp
-dev_langs:
-- C++
+f1_keywords: explicit_cpp
+dev_langs: C++
 helpviewer_keywords:
 - constructors [C++], and constants
 - conversion functions [C++]
@@ -31,16 +28,16 @@ helpviewer_keywords:
 - conversions [C++], by constructors
 - data type conversion [C++], explicit
 ms.assetid: d40e4310-a190-4e95-a34c-22c5c20aa0b9
-caps.latest.revision: 11
+caps.latest.revision: "11"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.translationtype: HT
-ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
-ms.openlocfilehash: 778c5a659755b5c79f79e9b846441c3e0665995e
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/25/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: 561730527a215d5314f7239affc764d9f5925f67
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="user-defined-type-conversions-c"></a>Заданные пользователем преобразования типов (C++)
 Объект *преобразования* создает новое значение некоторого типа из значения другого типа. *Стандартные преобразования* встроены в языке C++ и поддерживают его встроенные типы, вы можете создавать *заданные пользователем преобразования* для выполнения преобразований для, из или между пользовательскими типами.  
@@ -234,4 +231,3 @@ void display_balance(const Money balance)
   
  В этом примере функция преобразования `operator double` была объявлена явной, а явное приведение в тип `double` добавлено в функцию `display_balance` для выполнения преобразования. Если пропустить это преобразование, компилятор не сможет найти подходящий оператор вставки в поток `<<` для типа `Money` и может возникнуть ошибка.  
   
-

@@ -20,11 +20,12 @@ caps.latest.revision: "14"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 5c7098727052ec9ef19614d011ace5981b54ce15
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 0f7abecca114b30ddf57f8530b9fbef1bd7ce909
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="namespaces-c"></a>Пространства имен (C++)
 Пространство имен — это декларативная область, в рамках которой определяются различные идентификаторы (имена типов, функций, переменных, и т. д.). Пространства имен используются для организации кода в виде логических групп и с целью избежания конфликтов имен, которые могут возникнуть, особенно в таких случаях, когда база кода включает несколько библиотек. Все идентификаторы в пределах пространства имен доступны друг другу без уточнения. Идентификаторы за пределами пространства имен можно доступа к членам, используя полное доменное имя для каждого идентификатора, например `std::vector<std::string> vec;`, используя [объявление using](../cpp/using-declaration.md) для отдельного идентификатора (`using std::string`), или [с помощью директивы](../cpp/namespaces-cpp.md#using_directives) для всех идентификаторов в пространстве имен (`using namespace std;`). Код в файлах заголовков всегда должен содержать полное имя в пространстве имен.  

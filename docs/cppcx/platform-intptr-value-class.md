@@ -18,11 +18,12 @@ caps.latest.revision: "4"
 author: ghogen
 ms.author: ghogen
 manager: ghogen
-ms.openlocfilehash: 4bd0fcdf8f7b7f825a087a2176babeb59bac4f05
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 787e8aaa0dc46a651fc4d0ac8b16d9521aebd010
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="platformintptr-value-class"></a>Класс значения Platform::IntPtr
 Представляет указатель или дескриптор числа со знаком, размер которого зависит от платформы (32-разрядная или 64-разрядная).  
@@ -33,10 +34,10 @@ ms.lasthandoff: 10/24/2017
 public value struct IntPtr  
 ```  
   
-### <a name="members"></a>Члены  
+### <a name="members"></a>Участники  
  Класс IntPtr имеет следующие члены:  
   
-|Член|Описание|  
+|Член|Описание:|  
 |------------|-----------------|  
 |[IntPtr::IntPtr](#ctor)|Инициализирует новый экземпляр класса IntPtr.|  
 |[Оператор IntPtr::op_explicit](#op-explicit)|Преобразует указанный параметр в объект IntPtr или указатель на значение IntPtr.|  
@@ -61,7 +62,7 @@ IntPtr( __int64 handle-or-pointer );   IntPtr( void* value );   IntPtr( int 32-b
 ```  
   
 ### <a name="parameters"></a>Параметры  
- значение  
+ value  
  64-разрядный дескриптор или указатель, указатель на 64-разрядное значение или 32-разрядное значение, которое можно преобразовать в 64-разрядное.  
   
 

@@ -58,11 +58,12 @@ caps.latest.revision: "28"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 1fd0738d1a08eb0c2285f12314770ec1120e7d97
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: e5d5b92497bedcfd766975e62c886dd64676fc71
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="strtoks-strtoksl-wcstoks-wcstoksl-mbstoks-mbstoksl"></a>strtok_s, _strtok_s_l, wcstok_s, _wcstok_s_l, _mbstok_s, _mbstok_s_l
 
@@ -136,9 +137,9 @@ unsigned char* _mbstok_s(
   
 |*str*|*разделители*|*контекст*|Возвращаемое значение|`errno`|  
 |----------------|------------------|---------------|------------------|-------------|  
-|`NULL`|любые|указатель на указатель NULL|`NULL`|`EINVAL`|  
-|любые|`NULL`|любые|`NULL`|`EINVAL`|  
-|любые|любые|`NULL`|`NULL`|`EINVAL`|  
+|`NULL`|any|указатель на указатель NULL|`NULL`|`EINVAL`|  
+|any|`NULL`|any|`NULL`|`EINVAL`|  
+|any|any|`NULL`|`NULL`|`EINVAL`|  
   
 Если *str* — `NULL` , но *контекста* является указатель на указатель допустимый контекст не содержит ошибок.  
   
@@ -165,7 +166,7 @@ unsigned char* _mbstok_s(
 
 Дополнительные сведения о совместимости см. в разделе [Совместимость](../../c-runtime-library/compatibility.md).  
 
-### <a name="generic-text-routine-mappings"></a>Универсальное текстовое сопоставление функций
+### <a name="generic-text-routine-mappings"></a>Сопоставления подпрограмм обработки обычного текста
 
 |Подпрограмма TCHAR.H|\_Юникод & \_MBCS не определены|\_Определенные многобайтовой Кодировки|_UNICODE определено|
 |---------------------|------------------------------------|--------------------|-----------------------|

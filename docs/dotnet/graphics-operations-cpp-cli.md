@@ -19,18 +19,21 @@ caps.latest.revision: "7"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 923fc7074c4d139d680ed9dee96a0dc54a185f21
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: d80d490dd53a6a27c610532cb26825dc29f34cde
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="graphics-operations-ccli"></a>Работа с графикой (C++/CLI)
 Демонстрируется обработка изображений с помощью [!INCLUDE[winsdklong](../dotnet/includes/winsdklong_md.md)].  
   
  В следующих разделах описывается использование <xref:System.Drawing.Image?displayProperty=fullName> классом для выполнения обработки изображений.  
   
-## <a name="in-this-section"></a>Содержание  
+## <a name="in-this-section"></a>В этом разделе  
  [Практическое руководство. Преобразование файлов изображений из одного формата в другой с помощью платформы .NET Framework](../dotnet/how-to-convert-image-file-formats-with-the-dotnet-framework.md)  
   
  [Практическое руководство. Отображение изображений в платформе .NET Framework](../dotnet/how-to-display-images-with-the-dotnet-framework.md)  

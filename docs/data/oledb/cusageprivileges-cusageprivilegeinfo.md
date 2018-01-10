@@ -1,83 +1,86 @@
 ---
-title: "CUsagePrivileges, CUsagePrivilegeInfo | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "m_szObjectCatalog"
-  - "CUsagePrivilegeInfo"
-  - "m_bIsGrantable"
-  - "OBJECT_NAME"
-  - "m_szPrivilegeType"
-  - "OBJECT_SCHEMA"
-  - "IS_GRANTABLE"
-  - "CUsagePrivileges"
-  - "m_szGrantor"
-  - "GRANTOR"
-  - "GRANTEE"
-  - "m_szObjectSchema"
-  - "OBJECT_CATALOG"
-  - "m_szObjectType"
-  - "m_szObjectName"
-  - "m_szGrantee"
-  - "OBJECT_TYPE"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "CUsagePrivilegeInfo - класс параметров"
-  - "CUsagePrivileges typedef - класс"
-  - "GRANTEE"
-  - "GRANTOR"
-  - "IS_GRANTABLE"
-  - "m_bIsGrantable"
-  - "m_szGrantee"
-  - "m_szGrantor"
-  - "m_szObjectCatalog"
-  - "m_szObjectName"
-  - "m_szObjectSchema"
-  - "m_szObjectType"
-  - "m_szPrivilegeType"
-  - "OBJECT_CATALOG"
-  - "OBJECT_NAME"
-  - "OBJECT_SCHEMA"
-  - "OBJECT_TYPE"
+title: "CUsagePrivileges, CUsagePrivilegeInfo | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- m_szObjectCatalog
+- CUsagePrivilegeInfo
+- m_bIsGrantable
+- OBJECT_NAME
+- m_szPrivilegeType
+- OBJECT_SCHEMA
+- IS_GRANTABLE
+- CUsagePrivileges
+- m_szGrantor
+- GRANTOR
+- GRANTEE
+- m_szObjectSchema
+- OBJECT_CATALOG
+- m_szObjectType
+- m_szObjectName
+- m_szGrantee
+- OBJECT_TYPE
+dev_langs: C++
+helpviewer_keywords:
+- OBJECT_NAME
+- GRANTOR
+- OBJECT_CATALOG
+- CUsagePrivileges typedef class
+- m_szPrivilegeType
+- OBJECT_SCHEMA
+- m_szObjectSchema
+- m_szObjectType
+- IS_GRANTABLE
+- OBJECT_TYPE
+- CUsagePrivilegeInfo parameter class
+- m_szGrantee
+- m_szObjectCatalog
+- m_szGrantor
+- GRANTEE
+- m_bIsGrantable
+- m_szObjectName
 ms.assetid: 09460e7f-3947-4837-ad1e-407b94acedb8
-caps.latest.revision: 6
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 6
+caps.latest.revision: "6"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: ae759b77aa5e95eda7334cea1357e8882667aba9
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 12/21/2017
 ---
-# CUsagePrivileges, CUsagePrivilegeInfo
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Вызовите **CUsagePrivileges** класс typedef для реализации его класс **CUsagePrivilegeInfo** параметра.  
+# <a name="cusageprivileges-cusageprivilegeinfo"></a>CUsagePrivileges, CUsagePrivilegeInfo
+Вызовите typedef-класс **CUsagePrivileges** реализации класса своего параметра **CUsagePrivilegeInfo**.  
   
-## Заметки  
- Дополнительные сведения см. в разделе [Классы набора строк схемы и классах typedef](../Topic/Schema%20Rowset%20Classes%20and%20Typedef%20Classes.md) при использовании классов typedef.  
+## <a name="remarks"></a>Примечания  
+ В разделе [классы набора строк схемы и классы Typedef](../../data/oledb/schema-rowset-classes-and-typedef-classes.md) Дополнительные сведения об использовании классов typedef.  
   
- Этот класс задает права ПОТРЕБЛЕНИЯ для объектов, определенных в каталоге, доступны тому или иному предоставленным или заданных пользователем.  
+ Этот класс определяет привилегии USAGE на объекты, определенные в каталоге, которые доступны или предоставлены данным пользователем.  
   
- В следующей таблице перечислены элементы данных класса и соответствующие столбцы OLE DB.  В разделе [Набор строк USAGE\_PRIVILEGES](https://msdn.microsoft.com/en-us/library/ms722743.aspx) справочника *программиста OLE DB* дополнительные сведения о схеме и столбцам.  
+ В следующей таблице перечислены данные-члены класса и их соответствующие OLE DB столбцы. В разделе [строк USAGE_PRIVILEGES](https://msdn.microsoft.com/en-us/library/ms722743.aspx) в *Справочник программиста OLE DB* Дополнительные сведения о схеме и столбцы.  
   
-|Элементы данных|Столбцы OLE DB|  
-|---------------------|--------------------|  
-|m\_szGrantor|GRANTOR|  
-|m\_szGrantee|GRANTEE|  
-|m\_szObjectCatalog|OBJECT\_CATALOG|  
-|m\_szObjectSchema|OBJECT\_SCHEMA|  
-|m\_szObjectName|OBJECT\_NAME|  
-|m\_szObjectType|OBJECT\_TYPE|  
-|m\_szPrivilegeType|PRIVILEGE\_TYPE|  
-|m\_bIsGrantable|IS\_GRANTABLE|  
+|Члены данных|Столбцы OLE DB|  
+|------------------|--------------------|  
+|m_szGrantor|GRANTOR|  
+|m_szGrantee|GRANTEE|  
+|m_szObjectCatalog|OBJECT_CATALOG|  
+|m_szObjectSchema|OBJECT_SCHEMA|  
+|m_szObjectName|OBJECT_NAME|  
+|m_szObjectType|OBJECT_TYPE|  
+|m_szPrivilegeType|PRIVILEGE_TYPE|  
+|m_bIsGrantable|IS_GRANTABLE|  
   
-## Требования  
- **Header:**  atldbsch.h  
+## <a name="requirements"></a>Требования  
+ **Заголовок:** atldbsch.h  
   
-## См. также  
- [Класс CRestrictions](../Topic/CRestrictions%20Class.md)
+## <a name="see-also"></a>См. также  
+ [Класс CRestrictions](../../data/oledb/crestrictions-class.md)

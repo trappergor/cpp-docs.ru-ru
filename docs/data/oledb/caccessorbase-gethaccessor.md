@@ -1,34 +1,36 @@
 ---
-title: "CAccessorBase::GetHAccessor | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "GetHAccessor"
-  - "CAccessorBase::GetHAccessor"
-  - "CAccessorBase.GetHAccessor"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "GetHAccessor - метод"
+title: "CAccessorBase::GetHAccessor | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- GetHAccessor
+- CAccessorBase::GetHAccessor
+- CAccessorBase.GetHAccessor
+dev_langs: C++
+helpviewer_keywords: GetHAccessor method
 ms.assetid: 1bb98762-0752-4aae-a0b6-ba96bec03621
-caps.latest.revision: 8
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: 15b598480c229c7564f0a0f9917716247c5f7dea
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 12/21/2017
 ---
-# CAccessorBase::GetHAccessor
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Извлекает маркер доступа определенного доступа.  
+# <a name="caccessorbasegethaccessor"></a>CAccessorBase::GetHAccessor
+Извлекает дескриптор метода доступа, указанного метода доступа.  
   
-## Синтаксис  
+## <a name="syntax"></a>Синтаксис  
   
 ```  
   
@@ -37,15 +39,15 @@ caps.handback.revision: 8
 ) const;  
 ```  
   
-#### Параметры  
+#### <a name="parameters"></a>Параметры  
  `nAccessor`  
- \[in\] число нулевым смещения для доступа.  
+ [in] Номер нуля смещение для метода доступа.  
   
-## Возвращаемое значение  
+## <a name="return-value"></a>Возвращаемое значение  
  Дескриптор метода доступа.  
   
-## Требования  
+## <a name="requirements"></a>Требования  
  **Заголовок:** atldbcli.h  
   
-## См. также  
+## <a name="see-also"></a>См. также  
  [Класс CAccessorBase](../../data/oledb/caccessorbase-class.md)

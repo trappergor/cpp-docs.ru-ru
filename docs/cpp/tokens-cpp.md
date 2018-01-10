@@ -18,11 +18,12 @@ caps.latest.revision: "7"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 349cc44f35a98385cbd186c6991e5a6b39724014
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 852165a345b36c2ea07d18334b050d5fcb8f7bc7
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="tokens-c"></a>Маркеры (C++)
 Токен — это наименьший элемент на C++, который имеет значение для компилятора. Синтаксический анализатор C++ распознает следующие типы токенов: идентификаторы, ключевые слова, литералы, операторы, символы пунктуации и другие разделители. Поток этих токенов составляет один блок трансляции.  

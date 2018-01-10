@@ -18,14 +18,15 @@ caps.latest.revision: "8"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: b995bc74afceb2ce0288e30f7e0be88ba5958f7d
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 809537cceac4a0b18f4a5efff883863e9a5ac2b1
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="function-attributes"></a>Атрибуты функций
-**Блок, относящийся только к системам Майкрософт**  
+**Блок, относящийся только к системам Microsoft**  
   
  Необязательная нетерминальная *attribute-seq* позволяет выбирать соглашения о вызовах на уровне функций. Можно также задать функцию как `__fastcall` или `__inline`.  
   

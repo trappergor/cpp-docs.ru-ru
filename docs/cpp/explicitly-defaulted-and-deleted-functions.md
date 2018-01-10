@@ -13,11 +13,12 @@ caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 73e1d52d1c13e2defa51a5cab9da625b75aac757
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: f31304a63ddedb90c0aa76ff77883bd1b007b77f
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="explicitly-defaulted-and-deleted-functions"></a>Явно используемые по умолчанию и удаленные функции
 В C++11 установленные по умолчанию и удаленные функции позволяют явным образом указывать, будут ли специальные функции-члены создаваться автоматически. Кроме того, удаленные функции определяют простой язык, который помогает предотвращать проблемы с повышением типов в аргументах любых функций — специальных функций-членов, а также обычных функций членов и функций, не являющихся членами. Такие проблемы могут приводить к ошибкам в вызовах функций.  

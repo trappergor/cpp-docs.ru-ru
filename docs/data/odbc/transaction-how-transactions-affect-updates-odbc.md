@@ -19,11 +19,14 @@ caps.latest.revision: "9"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: ee5e34ce0af330ec9a788ceda758a412e3d7ac2d
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: 59eb8aecbf2dd2138c8a0469d71364b55fd82774
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="transaction-how-transactions-affect-updates-odbc"></a>Транзакция. Влияние транзакций на обновления (ODBC)
 Обновления для [источника данных](../../data/odbc/data-source-odbc.md) осуществляется в процессе транзакций посредством использования буфера изменения (тот же метод применяется вне транзакций). Члены данных полей в наборе записей служат в качестве буфера изменений, содержащего текущую запись набора записей резервную копию которой временно во время `AddNew` или **изменить**. Во время **удалить** операции, текущая запись не архивируются в рамках транзакции. Дополнительные сведения о буфере изменений и как обновления сохраняют текущую запись см. в разделе [набор записей: как наборы записей обновления записей (ODBC)](../../data/odbc/recordset-how-recordsets-update-records-odbc.md).  

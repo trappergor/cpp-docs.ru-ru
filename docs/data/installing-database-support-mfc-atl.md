@@ -1,43 +1,35 @@
 ---
-title: "Установка поддержки базы данных (MFC/ATL) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "ATL [C++], поддержка баз данных"
-  - "доступ к данным [C++], установка компонентов поддержки баз данных"
-  - "базы данных [C++], установка компонентов поддержки баз данных"
-  - "установка компонентов поддержки баз данных"
+title: "Установка поддержки баз данных (MFC-ATL) | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- data access [C++], installing database support
+- installing database support
+- ATL [C++], database support
+- databases [C++], installing database support
 ms.assetid: 3820ba96-4fb8-4405-83dd-bb3bc5998667
-caps.latest.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 10
+caps.latest.revision: "10"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: c8c9c807b749c4dbaa9fb3ead88f48d13f7ed7c1
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 12/21/2017
 ---
-# Установка поддержки базы данных (MFC/ATL)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-При запуске программы установки Visual C\+\+ .NET автоматически устанавливаются следующие компоненты баз данных:  
+# <a name="installing-database-support-mfcatl"></a>Установка поддержки базы данных (MFC/ATL)
+Visual C++ не включает какие-либо продукты базы данных. Кому  
   
--   Все необходимые компоненты ATL OLE DB .  Дополнительные сведения см. в разделе [Установка системных отладочных символов](../data/installing-atl-database-support.md).  
-  
--   Набор драйверов ODBC, диспетчер драйвера ODBC и программа администрирования ODBC.  Дополнительные сведения содержатся в «Установленные драйверы ODBC» и «Установленные компоненты SDK ODBC»  в [Установка поддержки баз данных MFC](../data/installing-mfc-database-support.md).  
-  
--   Необходимые компоненты из комплекта разработки программного обеспечения \(SDK\) DAO.  Туда включены файлы справки, которые не интегрированы с этой документации.  При работе с DAO необходимо установить версию ядра Jet, совместимый с операционной системой.  Дополнительные сведения см. «Установленные компоненты SDK DAO» в [Установка поддержки баз данных MFC](../data/installing-mfc-database-support.md).  
-  
- В рамках базовой установки программа установки также устанавливает Microsoft Data Access Components \(MDAC\), которые используются для программирования в Visual C\+\+ .NET доступа к данным.  
-  
- Visual C\+\+ .NET устанавливает MDAC 2.7 SDK.  Следует проверить веб\-узел Microsoft Universal Data Access [http:\/\/go.Microsoft.com\/fwlink\/?LinkId\=121548](http://go.Microsoft.com/fwlink/?LinkId=121548) для обновления и получения новостей о MDAC SDK.  
-  
- При распространении приложений доступа к данным, следует также иметь программу распространения MDAC 2.7.  MDAC 2.7 SDK предназначен для использования с программой распространения MDAC 2.7 \(Mdac\_typ.exe\), находящейся  в каталоге MDAC на компакт\-диске необходимых компонентов Visual Studio .NET.  Также можно загрузить программу Mdac\_typ.exe по ссылке для загрузки пакета MDAC 2.7 SDK, указанной выше,.  Дополнительные сведения о распространении компонентов см. [распространение элементов управления](../Topic/Redistributing%20Controls.md).  
-  
-## См. также  
- [Доступ к данным](../Topic/Data%20Access%20in%20Visual%20C++.md)
+ 
+## <a name="see-also"></a>См. также  
+ [Доступ к данным](data-access-in-cpp.md)
