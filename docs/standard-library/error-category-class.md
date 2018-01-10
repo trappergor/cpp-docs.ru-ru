@@ -27,11 +27,12 @@ caps.latest.revision: "15"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 40ca15541b9035a82869cdfed7f304eeaeeb2553
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 927711e5ad87be2a8c4683cb960cc02015de2316
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="errorcategory-class"></a>Класс error_category
 Представляет абстрактный, общий базовый класс для объектов, который описывает категорию кодов ошибок.  
@@ -82,7 +83,7 @@ virtual error_condition default_error_condition(int _Errval) const;
   
 ### <a name="parameters"></a>Параметры  
   
-|Параметр|Описание|  
+|Параметр|Описание:|  
 |---------------|-----------------|  
 |`_Errval`|Значение кода ошибки для хранения в [error_condition](../standard-library/error-condition-class.md).|  
   
@@ -104,7 +105,7 @@ virtual bool equivalent(const error_code& _Code,
   
 ### <a name="parameters"></a>Параметры  
   
-|Параметр|Описание|  
+|Параметр|Описание:|  
 |---------------|-----------------|  
 |`_Errval`|Значение кода ошибки для сравнения.|  
 |`_Cond`|Объект [error_condition](../standard-library/error-condition-class.md) для сравнения.|  
@@ -127,7 +128,7 @@ virtual string message(error_code::value_type val) const = 0;
   
 ### <a name="parameters"></a>Параметры  
   
-|Параметр|Описание|  
+|Параметр|Описание:|  
 |---------------|-----------------|  
 |`val`|Значение кода ошибки для описания.|  
   
@@ -157,7 +158,7 @@ bool operator==(const error_category& right) const;
   
 ### <a name="parameters"></a>Параметры  
   
-|Параметр|Описание|  
+|Параметр|Описание:|  
 |---------------|-----------------|  
 |`right`|Объект для проверки на равенство.|  
   
@@ -176,7 +177,7 @@ bool operator!=(const error_category& right) const;
   
 ### <a name="parameters"></a>Параметры  
   
-|Параметр|Описание|  
+|Параметр|Описание:|  
 |---------------|-----------------|  
 |`right`|Объект для проверки на неравенство.|  
   
@@ -195,7 +196,7 @@ bool operator<(const error_category& right) const;
   
 ### <a name="parameters"></a>Параметры  
   
-|Параметр|Описание|  
+|Параметр|Описание:|  
 |---------------|-----------------|  
 |`right`|Сравниваемый объект `error_category`.|  
   

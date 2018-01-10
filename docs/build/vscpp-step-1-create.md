@@ -1,8 +1,8 @@
 ---
-title: "Шаг 1 — Создание проекта консольного приложения C++ | Документы Microsoft"
+title: "Создайте проект консольного приложения C++ | Документы Microsoft"
 description: "Установить поддержку Visual C++ в Visual Studio"
 ms.custom: mvc
-ms.date: 10/17/2017
+ms.date: 12/12/2017
 ms.topic: get-started-article
 ms.technology: devlang-C++
 ms.devlang: C++
@@ -11,11 +11,12 @@ ms.assetid: 45138d70-719d-42dc-90d7-1d0ca31a2f54
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: f75d8fc6ec744038d57bfb7576547c9be84b7551
-ms.sourcegitcommit: 69632887f7a85f4841c49b4c1353d3144927a52c
+ms.workload: cplusplus
+ms.openlocfilehash: e44d9c097461b118cae72b47dff2ab15757aed64
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/11/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="create-a-c-console-app-project"></a>Создайте проект консольного приложения C++
 
@@ -23,11 +24,11 @@ ms.lasthandoff: 11/11/2017
 
 ## <a name="prerequisites"></a>Предварительные требования
 
-- С Visual Studio с разработки настольных приложений C++ рабочей нагрузки, установлены и запущены на компьютере. Если он пока не установлен, см. раздел [шаг 0 - поддержка Установка C++ в Visual Studio](../build/vscpp-step-0-installation.md).
+- С Visual Studio с разработки настольных приложений C++ рабочей нагрузки, установлены и запущены на компьютере. Если он пока не установлен, см. раздел [поддержки Установка C++ в Visual Studio](../build/vscpp-step-0-installation.md).
 
 ## <a name="create-your-app-project"></a>Создание проекта приложения
 
-Visual Studio использует *проекты* для организации кода для приложения, и *решения* для организации проектов. Проект содержит все параметры, конфигурации и правила, используемые для построения приложений и управляет связь между файлы проекта и внешние файлы. Чтобы создать приложение, во-первых, следует создать новый проект и решение.
+Visual Studio использует *проекты*, чтобы упорядочить код для приложения, и *решения*, чтобы упорядочить проекты. Проект содержит все параметры, конфигурации и правила, используемые для построения приложений и управляет связь между файлы проекта и внешние файлы. Чтобы создать приложение, во-первых, следует создать новый проект и решение.
 
 1. В Visual Studio откройте **файл** меню и выберите **Создать > проект** Открытие **новый проект** диалогового окна.
 
@@ -89,10 +90,10 @@ Visual studio создает новый, пустой файл с исходны
 
 [Возникли проблемы.](#add-a-source-code-file-issues)
 
-## <a name="next-steps"></a>Дальнейшие действия
+## <a name="next-steps"></a>Следующие шаги
 
 > [!div class="nextstepaction"]
-> [Шаг 2: Построение и запуск проекта C++](vscpp-step-2-build.md)
+> [Построение и запуск проекта C++](vscpp-step-2-build.md)
 
 ## <a name="troubleshooting-guide"></a>Руководство по устранению неполадок
 

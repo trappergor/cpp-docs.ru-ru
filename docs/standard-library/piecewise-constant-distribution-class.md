@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -22,9 +21,7 @@ f1_keywords:
 - random/std::piecewise_constant_distribution::param_type::densities
 - random/std::piecewise_constant_distribution::param_type::operator==
 - random/std::piecewise_constant_distribution::param_type::operator!=
-- random/std::piecewise_constant_distribution::param_type
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - std::piecewise_constant_distribution [C++]
 - std::piecewise_constant_distribution [C++], reset
@@ -36,16 +33,16 @@ helpviewer_keywords:
 - std::piecewise_constant_distribution [C++], param_type
 - std::piecewise_constant_distribution [C++], param_type
 ms.assetid: 2c9a21fa-623e-4d63-b827-3f1556b6dedb
-caps.latest.revision: 23
+caps.latest.revision: "23"
 author: corob-msft
 ms.author: corob
 manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: d6a0fd48843b097de0c6181eda49d6e3879084f6
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
-ms.sourcegitcommit: 65f4e356ad0d46333b0d443d0fd6ac0b9f2b6f58
-ms.openlocfilehash: 056ee4bacc0614cb8be0e023dd59e7d93e36c8c0
-ms.contentlocale: ru-ru
-ms.lasthandoff: 10/03/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="piecewiseconstantdistribution-class"></a>Класс piecewise_constant_distribution
 Формирует кусочно-постоянное распределение с меняющимися интервалами ширины и одинаковой вероятностью в каждом интервале.  
@@ -344,13 +341,12 @@ struct param_type {
 Параметры конструктора см. в разделе [piecewise_constant_distribution](#piecewise_constant_distribution).  
   
 ### <a name="remarks"></a>Примечания  
- **Предварительные условия:** `xmin < xmax`  
+ **Предусловие:** `xmin < xmax`  
   
 Эту структуру можно передать конструктору класса распределения во время создания экземпляра, функции-члену `param()` для установки хранимых параметров существующего распределения и `operator()` для использования вместо хранимых параметров.  
   
 ## <a name="see-also"></a>См. также  
 [\<random>](../standard-library/random.md)   
 [piecewise_linear_distribution](../standard-library/piecewise-linear-distribution-class.md)
-
 
 

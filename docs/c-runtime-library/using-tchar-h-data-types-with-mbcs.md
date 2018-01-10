@@ -18,14 +18,15 @@ caps.latest.revision: "8"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 3c015c8ff7481f0d5ba25eba023b21f4877deaa4
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 05f2a5ae3ccf2ec8b9d9c1766bd5b02ed43dfbf7
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="using-tcharh-data-types-with-mbcs"></a>Использование типов данных TCHAR.H с _MBCS
-**Блок, относящийся только к системам Майкрософт**  
+**Блок, относящийся только к системам Microsoft**  
   
  Как показано в таблице универсальных текстовых сопоставлений (см. раздел [Generic-Text Mappings](../c-runtime-library/generic-text-mappings.md) (Универсальные текстовые сопоставления)), при установленном значении константы манифеста `_MBCS` каждая универсальная текстовая подпрограмма сопоставляются с подпрограммой одного из следующих типов:  
   

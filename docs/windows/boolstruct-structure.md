@@ -1,56 +1,57 @@
 ---
-title: "Структура BoolStruct | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "internal/Microsoft::WRL::Details::BoolStruct"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "BoolStruct - структура"
+title: "Структура BoolStruct | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: internal/Microsoft::WRL::Details::BoolStruct
+dev_langs: C++
+helpviewer_keywords: BoolStruct structure
 ms.assetid: 666eae78-e81d-4fb7-a9e4-1ba617d6d4cd
-caps.latest.revision: 5
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 5
+caps.latest.revision: "5"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: 7daa7527c8eea2cfca3b8933b9c3e1f042883e2d
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 12/21/2017
 ---
-# Структура BoolStruct
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Предназначено для поддержки инфраструктуры WRL, а не для непосредственного использования в коде.  
+# <a name="boolstruct-structure"></a>BoolStruct - структура
+Поддерживает инфраструктуру WRL и не предназначен для использования непосредственно из программного кода.  
   
-## Синтаксис  
+## <a name="syntax"></a>Синтаксис  
   
 ```  
 struct BoolStruct;  
 ```  
   
-## Заметки  
- Структура BoolStruct определяет, управляет ли ComPtr временем существования объекта интерфейса.  BoolStruct используется внутренне оператором [BoolType\(\)](../windows/comptr-operator-microsoft-wrl-details-booltype-operator.md).  
+## <a name="remarks"></a>Примечания  
+ Структура BoolStruct определяет, ли объект ComPtr управление временем существования объекта интерфейса. BoolStruct используется внутренним образом [BoolType()](../windows/comptr-operator-microsoft-wrl-details-booltype-operator.md) оператор.  
   
-## Члены  
+## <a name="members"></a>Участники  
   
-### Открытые члены данных  
+### <a name="public-data-members"></a>Открытые члены данных  
   
-|Name|Описание|  
-|----------|--------------|  
-|[Элемент данных BoolStruct::Member](../Topic/BoolStruct::Member%20Data%20Member.md)|Указывает, что [ComPtr](../windows/comptr-class.md) управляет или не управляет временем существования объекта интерфейса.|  
+|Имя|Описание:|  
+|----------|-----------------|  
+|[Элемент данных BoolStruct::Member](../windows/boolstruct-member-data-member.md)|Указывает, что [ComPtr](../windows/comptr-class.md) является, или не, управление временем существования объектов интерфейса.|  
   
-## Иерархия наследования  
+## <a name="inheritance-hierarchy"></a>Иерархия наследования  
  `BoolStruct`  
   
-## Требования  
+## <a name="requirements"></a>Требования  
  **Заголовок:** internal.h  
   
- **Пространство имен:** Microsoft::WRL::Details  
+ **Пространство имен:** Microsoft::wrl:: Details  
   
-## См. также  
- [Пространство имен Microsoft::WRL::Details](../windows/microsoft-wrl-details-namespace.md)   
+## <a name="see-also"></a>См. также  
+ [Пространство имен Microsoft::wrl:: Details](../windows/microsoft-wrl-details-namespace.md)   
  [Оператор ComPtr::operator Microsoft::WRL::Details::BoolType](../windows/comptr-operator-microsoft-wrl-details-booltype-operator.md)

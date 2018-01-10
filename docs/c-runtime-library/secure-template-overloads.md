@@ -22,11 +22,12 @@ caps.latest.revision: "13"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 04eae2c263c8b26e44e8c1b05736061ad9291ef0
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 92ad08738ea2c8c748ac642c5ea15f4b0a257da9
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="secure-template-overloads"></a>Безопасные перегрузки шаблонов
 Корпорация Майкрософт объявила устаревшими многие функции библиотеки C времени выполнения (CRT), заменив их версиями с более высоким уровнем безопасности. Например, `strcpy_s` является более безопасной заменой для `strcpy`. Устаревшие функции часто становятся причиной проблем с безопасностью, поскольку они допускают операции, изменяющие содержимое памяти. По умолчанию компилятор выдает предупреждение об устаревании, если в коде присутствует любая из этих функций. CRT предоставляет для этих функций перегруженные шаблоны C++, которые помогают упростить переход к более безопасным вариантам.  

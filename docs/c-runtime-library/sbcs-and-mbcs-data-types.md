@@ -19,11 +19,12 @@ caps.latest.revision: "10"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: d32c9e792971b20da99377ad36f3872f5824dcc7
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: c54b6e9716e7f0aee9a0b211148b76804d9520bf
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="sbcs-and-mbcs-data-types"></a>Типы данных SBCS и MBCS
 Любая подпрограмма `MBCS` библиотеки среды выполнения Майкрософт, которая обрабатывает только один многобайтовый символ или один байт многобайтового символа, ожидает аргумент типа `unsigned int` (где 0x00 <= значение символа <= 0xFFFF и 0x00 <= значение байта <= 0xFF). Подпрограмма `MBCS`, обрабатывающая многобайтовые байты или символы в контексте строк, ожидает строку многобайтовых символов, представленную как указатель на тип `unsigned char`.  

@@ -21,11 +21,12 @@ caps.latest.revision: "18"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 127f8b0448d141917193d41d11d5ed95576ff482
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 3cfa4d6fff6b46341f01b4d5ce18d9ec418738bf
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="crbmap-class"></a>Класс CRBMap
 Этот класс представляет сопоставление структуры, с помощью двоичного дерева красный-черный.  
@@ -53,18 +54,18 @@ class CRBMap : public CRBTree<K, V, KTraits, VTraits>
  `VTraits`  
  Код, используемый для копирования или перемещения элементов значение.  
   
-## <a name="members"></a>Члены  
+## <a name="members"></a>Участники  
   
 ### <a name="public-constructors"></a>Открытые конструкторы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[CRBMap::CRBMap](#crbmap)|Конструктор.|  
 |[CRBMap:: ~ CRBMap](#dtor)|Деструктор|  
   
 ### <a name="public-methods"></a>Открытые методы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[CRBMap::Lookup](#lookup)|Вызовите этот метод для поиска разделов или значений в `CRBMap` объекта.|  
 |[CRBMap::RemoveKey](#removekey)|Этот метод вызывается для удаления элемента из `CRBMap` объекту, заданному ключу.|  
@@ -135,7 +136,7 @@ CPair* Lookup(KINARGTYPE key) throw();
  `key`  
  Задает ключ, определяющий элемента, который требуется найти.  
   
- *value*  
+ *значение*  
  Переменная, принимающая значение поиск вверх.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
@@ -180,7 +181,7 @@ POSITION SetAt(
  `key`  
  Чтобы добавить значение ключа `CRBMap` объекта.  
   
- *value*  
+ *значение*  
  Значение для добавления `CRBMap` объекта.  
   
 ### <a name="return-value"></a>Возвращаемое значение  

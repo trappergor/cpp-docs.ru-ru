@@ -14,11 +14,12 @@ caps.latest.revision: "124"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 89b02c277faa3da102909ce88f33aea0c653ea50
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 8a2207b086b608fd601517c938572248147669ff
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="visual-c-change-history-2003---2015"></a>Журнал изменений Visual C++ 2003–2015
 В этой статье описываются критические изменения, начиная с Visual Studio 2015 и до Visual Studio 2003, а термины "новое поведение" и "теперь" относятся к Visual Studio 2015 и более поздним версиям. Термины "старое поведение" и "раньше" относятся к Visual Studio 2013 и более ранних версий. 
@@ -2879,7 +2880,7 @@ C c;
   
     ```  
   
-     Чтобы найти сегменты кода, которые предыдущие версии попытались бы оптимизировать, используйте компилятор из данного выпуска в сочетании с параметром компилятора /W3 и включите предупреждение 4370. Например:  
+     Чтобы найти сегменты кода, которые предыдущие версии попытались бы оптимизировать, используйте компилятор из данного выпуска в сочетании с параметром компилятора /W3 и включите предупреждение 4370. Пример:  
   
     ```cpp  
     #pragma warning(default:4370)  

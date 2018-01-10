@@ -31,11 +31,12 @@ helpviewer_keywords:
 - std::promise [C++], set_value
 - std::promise [C++], set_value_at_thread_exit
 - std::promise [C++], swap
-ms.openlocfilehash: 7dcad59e231749be1971a1a0fa833482a64b775c
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 12941d9fcfc1aa7123bcd68291b86c9ec3e046e9
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="promise-class"></a>Класс promise
 Описывает *асинхронный поставщик*.  
@@ -47,17 +48,17 @@ template <class Ty>
 class promise;
 ```  
   
-## <a name="members"></a>Члены  
+## <a name="members"></a>Участники  
   
 ### <a name="public-constructors"></a>Открытые конструкторы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[Объект Promise](#promise)|Создает объект `promise`.|  
   
 ### <a name="public-methods"></a>Открытые методы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[get_future](#get_future)|Возвращает [future](../standard-library/future-class.md), связанный с этим объектом promise.|  
 |[set_exception](#set_exception)|Атомарно устанавливает результат этого объекта promise для обозначения исключения.|  
@@ -68,7 +69,7 @@ class promise;
   
 ### <a name="public-operators"></a>Открытые операторы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[promise::operator=](#op_eq)|Назначение общего состояния этого объекта promise.|  
   

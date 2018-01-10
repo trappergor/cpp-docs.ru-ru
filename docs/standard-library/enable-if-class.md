@@ -4,28 +4,25 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- type_traits/std::enable_if
-dev_langs:
-- C++
+f1_keywords: type_traits/std::enable_if
+dev_langs: C++
 helpviewer_keywords:
 - enable_if class
 - enable_if
 ms.assetid: c6b8d41c-a18f-4e30-a39e-b3aa0e8fd926
-caps.latest.revision: 28
+caps.latest.revision: "28"
 author: corob-msft
 ms.author: corob
 manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 4df9da47925919a005d3c235d35f57f54a3568aa
+ms.sourcegitcommit: 54035dce0992ba5dce0323d67f86301f994ff3db
 ms.translationtype: MT
-ms.sourcegitcommit: 65f4e356ad0d46333b0d443d0fd6ac0b9f2b6f58
-ms.openlocfilehash: 4d01230a1e185ad793f554afa7fa2fe2942b27a6
-ms.contentlocale: ru-ru
-ms.lasthandoff: 10/03/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/03/2018
 ---
 # <a name="enableif-class"></a>Класс enable_if
 Условно создает экземпляр типа для разрешения перегрузки SFINAE. Вложенное определение типа `enable_if<Condition,Type>::type` (синоним для `Type`) существует, если и только если значение `Condition` равно `true`.  
@@ -56,7 +53,7 @@ template <bool B, class T = void>
 using enable_if_t = typename enable_if<B,T>::type;
 ```  
   
- В C++ ошибка замены параметров шаблона не является ошибкой — этот факт называют *SFINAE* (неудачная замена не ошибка). Обычно `enable_if` используется для удаления кандидатов из разрешения перегрузки, т. е. функция отбраковывает набор перегрузки, чтобы одно определение было отброшено в пользу другого. Это соответствует поведению SFINAE. Дополнительные сведения об SFINAE см. в статье [Ошибка замены не ошибка](http://go.microsoft.com/fwlink/LinkId=394798) на веб-сайте Википедии.  
+ В C++ ошибка замены параметров шаблона не является ошибкой — этот факт называют *SFINAE* (неудачная замена не ошибка). Обычно `enable_if` используется для удаления кандидатов из разрешения перегрузки, т. е. функция отбраковывает набор перегрузки, чтобы одно определение было отброшено в пользу другого. Это соответствует поведению SFINAE. Дополнительные сведения об SFINAE см. в статье [Ошибка замены не ошибка](http://go.microsoft.com/fwlink/p/?linkid=394798) на веб-сайте Википедии.  
   
  Вот 4 примера сценариев.  
   
@@ -147,7 +144,6 @@ func(make_pair("foo", "bar"));
   
 ## <a name="see-also"></a>См. также  
  [<type_traits>](../standard-library/type-traits.md)
-
 
 
 

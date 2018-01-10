@@ -4,44 +4,26 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-windows
+ms.technology: cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- Single
-dev_langs:
-- C++
-helpviewer_keywords:
-- single OpenMP directive
+f1_keywords: Single
+dev_langs: C++
+helpviewer_keywords: single OpenMP directive
 ms.assetid: 85cf94fb-cb9c-4d82-8609-adffa9f552e1
-caps.latest.revision: 11
+caps.latest.revision: "11"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
-ms.openlocfilehash: 7a353009983e0b5a96065fc094dabc0a4afb89e6
-ms.contentlocale: ru-ru
-ms.lasthandoff: 02/24/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: 8eabac06acc78aec46c86cf8a7dcbb2d5854c941
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="single"></a>одиночный
-Позволяет указать, что часть кода должна выполняться в одном потоке, не обязательно главного потока.  
+Позволяет указать, что фрагмент кода должна выполняться в одном потоке, не обязательно главного потока.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -54,7 +36,7 @@ ms.lasthandoff: 02/24/2017
   
 #### <a name="parameters"></a>Параметры  
  `clause` (необязательно)  
- Ноль или несколько предложений. В разделе «Примечания» на список предложений, поддерживаемые **одного**.  
+ Ноль или несколько предложений. . В разделе «Примечания» в список предложений, поддерживаемых **одного**.  
   
 ## <a name="remarks"></a>Примечания  
  **Одного** директива поддерживает следующие предложения OpenMP:  
@@ -67,9 +49,9 @@ ms.lasthandoff: 02/24/2017
   
 -   [private](../../../parallel/openmp/reference/private-openmp.md)  
   
- [Master](../../../parallel/openmp/reference/master.md) директива позволяет указать, что часть кода должна выполняться только для главного потока.  
+ [Master](../../../parallel/openmp/reference/master.md) директива позволяет указать, что фрагмент кода должен выполняться только для главного потока.  
   
- Дополнительные сведения см. в разделе [создания единого&2;.4.3](../../../parallel/openmp/2-4-3-single-construct.md).  
+ Дополнительные сведения см. в разделе [создания единого 2.4.3](../../../parallel/openmp/2-4-3-single-construct.md).  
   
 ## <a name="example"></a>Пример  
   

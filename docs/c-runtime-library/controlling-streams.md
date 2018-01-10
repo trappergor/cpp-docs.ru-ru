@@ -18,11 +18,12 @@ caps.latest.revision: "7"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: d2211a2a2bb5121921928166626d726db8dea67f
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 3d6b2678add561eda41a7426a840b9c4ad074301
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="controlling-streams"></a>Управление потоками
 Функция [fopen](../c-runtime-library/reference/fopen-wfopen.md) возвращает адрес объекта с типом `FILE`. Этот адрес используется в качестве аргумента `stream` в нескольких библиотечных функциях для выполнения различных операций с открытым файлом. Для байтового потока ввод выполняется так, как если бы каждый символ считывался с помощью функции [fgetc](../c-runtime-library/reference/fgetc-fgetwc.md), а вывод — как если бы каждый символ записывался с помощью функции [fputc](../c-runtime-library/reference/fputc-fputwc.md). Для потока расширенных символов ввод выполняется так, как если бы каждый символ считывался с помощью функции [fgetwc](../c-runtime-library/reference/fgetc-fgetwc.md), а вывод — как если бы каждый символ записывался с помощью функции [fputwc](../c-runtime-library/reference/fputc-fputwc.md).  

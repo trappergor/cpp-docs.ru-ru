@@ -1,32 +1,33 @@
 ---
-title: "defaultbind | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-f1_keywords: 
-  - "vc-attr.defaultbind"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "defaultbind attribute"
+title: "defaultbind | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+f1_keywords: vc-attr.defaultbind
+dev_langs: C++
+helpviewer_keywords: defaultbind attribute
 ms.assetid: b20a8437-24e6-4b6d-a2df-09fe5e1006e0
-caps.latest.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 9
+caps.latest.revision: "9"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: a52e56c49982055d3d91efc43ed5cf3a644502f3
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 12/21/2017
 ---
-# defaultbind
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Отображает одно свойство, связываемое лучше всего представляет объект.  
+# <a name="defaultbind"></a>defaultbind
+Указывает, одиночное, связываемое свойство, которое представляет объект наилучшим образом.  
   
-## Синтаксис  
+## <a name="syntax"></a>Синтаксис  
   
 ```  
   
@@ -34,30 +35,29 @@ caps.handback.revision: 9
   
 ```  
   
-## Заметки  
- **defaultbind** Атрибут C\+\+ имеет ту же функциональность, что и  [defaultbind](http://msdn.microsoft.com/library/windows/desktop/aa366790) атрибут MIDL.  
+## <a name="remarks"></a>Примечания  
+ **Defaultbind** языка C++ имеет ту же функциональность, что [defaultbind](http://msdn.microsoft.com/library/windows/desktop/aa366790) языка MIDL.  
   
-## Пример  
- См. пример [bindable](../windows/bindable.md) пример использования  **defaultbind**.  
+## <a name="example"></a>Пример  
+ Далее приведен пример [привязываемых](../windows/bindable.md) пример демонстрирует использование **defaultbind**.  
   
-## Требования  
+## <a name="requirements"></a>Требования  
   
-### Контекст атрибута  
+### <a name="attribute-context"></a>Контекст атрибута  
   
 |||  
 |-|-|  
 |**Применение**|Метод интерфейса|  
-|**Repeatable**|Нет|  
-|**Обязательные атрибуты**|None|  
-|**Недопустимые атрибуты**|None|  
+|**Повторяемый**|Нет|  
+|**Обязательные атрибуты**|Нет|  
+|**Недопустимые атрибуты**|Нет|  
   
- Дополнительные сведения см. в разделе [Контексты атрибута](../windows/attribute-contexts.md).  
+ Дополнительные сведения см. в разделе [Контексты атрибутов](../windows/attribute-contexts.md).  
   
-## См. также  
- [IDL Attributes](../windows/idl-attributes.md)   
- [Method Attributes](../windows/method-attributes.md)   
- [Data Member Attributes](../windows/data-member-attributes.md)   
+## <a name="see-also"></a>См. также  
+ [Атрибуты IDL](../windows/idl-attributes.md)   
+ [Атрибуты метода](../windows/method-attributes.md)   
+ [Атрибуты членов данных](../windows/data-member-attributes.md)   
  [displaybind](../windows/displaybind.md)   
  [immediatebind](../windows/immediatebind.md)   
  [requestedit](../windows/requestedit.md)   
- [Attributes Samples](http://msdn.microsoft.com/ru-ru/558ebdb2-082f-44dc-b442-d8d33bf7bdb8)

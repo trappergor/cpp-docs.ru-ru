@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-windows
+ms.technology: cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
@@ -50,7 +49,6 @@ f1_keywords:
 - AFXANIMATIONCONTROLLER/CAnimationController::ScheduleGroup
 - AFXANIMATIONCONTROLLER/CAnimationController::SetRelatedWnd
 - AFXANIMATIONCONTROLLER/CAnimationController::UpdateAnimationManager
-- AFXANIMATIONCONTROLLER/CAnimationController::CleanUpGroup
 - AFXANIMATIONCONTROLLER/CAnimationController::OnAfterSchedule
 - AFXANIMATIONCONTROLLER/CAnimationController::gkeyframeStoryboardStart
 - AFXANIMATIONCONTROLLER/CAnimationController::m_bIsValid
@@ -60,8 +58,7 @@ f1_keywords:
 - AFXANIMATIONCONTROLLER/CAnimationController::m_pRelatedWnd
 - AFXANIMATIONCONTROLLER/CAnimationController::m_pTransitionFactory
 - AFXANIMATIONCONTROLLER/CAnimationController::m_pTransitionLibrary
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - CAnimationController [MFC], CAnimationController
 - CAnimationController [MFC], AddAnimationObject
@@ -113,16 +110,16 @@ helpviewer_keywords:
 - CAnimationController [MFC], m_pTransitionFactory
 - CAnimationController [MFC], m_pTransitionLibrary
 ms.assetid: ed294c98-695e-40a6-b940-33ef1d40aa6b
-caps.latest.revision: 18
+caps.latest.revision: "18"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 79343615b633b583775a482f0a9d2155e79ede10
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
-ms.sourcegitcommit: 4a770b6508067913aec51b8b3878f33e30eed4bb
-ms.openlocfilehash: 7f749a38e052edbed456503ef2ac320743e68186
-ms.contentlocale: ru-ru
-ms.lasthandoff: 10/09/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="canimationcontroller-class"></a>Класс CAnimationController
 Реализует контроллер анимации, который обеспечивает центральный интерфейс для создания анимации и управления ею.  
@@ -133,18 +130,18 @@ ms.lasthandoff: 10/09/2017
 class CAnimationController : public CObject;  
 ```  
   
-## <a name="members"></a>Члены  
+## <a name="members"></a>Участники  
   
 ### <a name="public-constructors"></a>Открытые конструкторы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[CAnimationController::CAnimationController](#canimationcontroller)|Создает контроллер анимации.|  
 |[CAnimationController:: ~ CAnimationController](#canimationcontroller__~canimationcontroller)|Деструктор Вызывается при уничтожении объекта контроллера анимации.|  
   
 ### <a name="public-methods"></a>Открытые методы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[CAnimationController::AddAnimationObject](#addanimationobject)|Добавляет объект анимации в группу, к которой принадлежит контроллер анимации.|  
 |[CAnimationController::AddKeyframeToGroup](#addkeyframetogroup)|Добавляет группу опорный кадр.|  
@@ -187,14 +184,14 @@ class CAnimationController : public CObject;
   
 ### <a name="protected-methods"></a>Защищенные методы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[CAnimationController::CleanUpGroup](#cleanupgroup)|Перегружен. Вспомогательный класс, который очищает группе.|  
 |[CAnimationController::OnAfterSchedule](#onafterschedule)|Вызывается платформой при анимации для указанной группы только что был запланирован.|  
   
 ### <a name="protected-data-members"></a>Защищенные члены данных  
   
-|Имя|Описание|  
+|name|Описание:|  
 |----------|-----------------|  
 |[CAnimationController::gkeyframeStoryboardStart](#g_keyframestoryboardstart)|Ключевой кадр, который представляет запуск раскадровки.|  
 |[CAnimationController::m_bIsValid](#m_bisvalid)|Указывает, является ли контроллер анимации допустимым. Этот член имеет значение FALSE, если текущая операционная система не поддерживает API анимации в Windows.|  
@@ -1004,4 +1001,3 @@ virtual void UpdateAnimationManager();
   
 ## <a name="see-also"></a>См. также  
  [Классы](../../mfc/reference/mfc-classes.md)
-

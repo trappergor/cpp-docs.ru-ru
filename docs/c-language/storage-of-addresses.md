@@ -16,16 +16,17 @@ caps.latest.revision: "7"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 3d0e996ac191ba3091925a85937e7636a2425215
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: bd82f6f5046cf910fbc871be37d4af5856796792
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="storage-of-addresses"></a>Хранение адресов
 Объем хранилища, необходимый для адреса, и значение адреса зависят от реализации компилятора. Одинаковая длина указателей на разные типы не гарантируется. Поэтому значение **sizeof(char \*)** необязательно равно значению **sizeof(int \*)**.  
   
- **Блок, относящийся только к системам Майкрософт**  
+ **Блок, относящийся только к системам Microsoft**  
   
  Для компилятора Microsoft C значение **sizeof(char \*)** равно значению **sizeof(int \*)**.  
   

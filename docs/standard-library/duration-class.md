@@ -21,11 +21,12 @@ author: corob-msft
 ms.author: corob
 manager: ghogen
 helpviewer_keywords: std::chrono [C++], duration
-ms.openlocfilehash: 70dc3b3b21961946a73f73e44ae3bed7c283bd4c
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: e25b632554f56054793f60f3fe058791798894d2
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="duration-class"></a>Класс duration
 Описывает тип, содержащий *интервал времени*, представляющий собой затраченное время между двумя точками времени.  
@@ -44,24 +45,24 @@ class duration <duration<Rep, Period1>, Period2>;
 ## <a name="remarks"></a>Примечания  
  Аргумент шаблона `Rep` описывает тип, используемый для удержания числа тактов в интервале. Аргумент шаблона `Period` — экземпляр [отношения](../standard-library/ratio.md), описывающий размер интервала, который представляет каждый такт.  
   
-## <a name="members"></a>Члены  
+## <a name="members"></a>Участники  
   
 ### <a name="public-typedefs"></a>Общедоступные определения типов  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |duration::period Typedef|Синоним для параметра-шаблона `Period`.|  
 |duration::rep Typedef|Синоним для параметра-шаблона `Rep`.|  
   
 ### <a name="public-constructors"></a>Открытые конструкторы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[Длительность](#duration)|Создает объект `duration`.|  
   
 ### <a name="public-methods"></a>Открытые методы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[count](#count)|Возвращает количество тактов в интервале времени.|  
 |[max](#max)|Статический. Возвращает максимальное допустимое значение параметра-шаблона `Ref`.|  
@@ -70,7 +71,7 @@ class duration <duration<Rep, Period1>, Period2>;
   
 ### <a name="public-operators"></a>Открытые операторы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[duration::operator-](#operator-)|Возвращает копию объекта `duration` вместе с отрицательным счетчиком тактов.|  
 |[duration::operator--](#operator--)|Уменьшает на единицу накопленный счетчик тактов.|  

@@ -13,25 +13,23 @@ f1_keywords:
 - tuple/std::operator<
 - tuple/std::operator<=
 - tuple/std::operator==
-dev_langs:
-- C++
+dev_langs: C++
 ms.assetid: f25752dc-d3e2-4e12-b5ac-9a8682ca60ed
-caps.latest.revision: 13
+caps.latest.revision: "13"
 manager: ghogen
-ms.translationtype: MT
-ms.sourcegitcommit: 65f4e356ad0d46333b0d443d0fd6ac0b9f2b6f58
 ms.openlocfilehash: c336ed5e11a7db00475da735c827c23dadfa56c7
-ms.contentlocale: ru-ru
-ms.lasthandoff: 10/03/2017
-
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="lttuplegt-operators"></a>Операторы &lt;tuple&gt;
 ||||  
 |-|-|-|  
-|[оператор!=](#op_neq)|[оператор&gt;](#op_gt)|[оператор&gt;=](#op_gt_eq)|  
-|[оператор&lt;](#op_lt)|[оператор&lt;=](#op_lt_eq)|[оператор==](#op_eq_eq)|  
+|[оператор!=](#op_neq)|[оператор&gt;](#op_gt)|[operator&gt;=](#op_gt_eq)|  
+|[оператор&lt;](#op_lt)|[operator&lt;=](#op_lt_eq)|[оператор==](#op_eq_eq)|  
   
-##  <a name="op_neq"></a>  оператор!=  
+##  <a name="op_neq"></a> operator!=  
  Сравнивает объекты `tuple` на неравенство.  
   
 ```  
@@ -93,7 +91,7 @@ false
 true  
 ```  
   
-##  <a name="op_lt"></a>  оператор&lt;  
+##  <a name="op_lt"></a> operator&lt;  
  Сравнение объектов `tuple` на предмет меньшинства.  
   
 ```  
@@ -155,7 +153,7 @@ false
 true  
 ```  
   
-##  <a name="op_lt_eq"></a>  оператор&lt;=  
+##  <a name="op_lt_eq"></a> operator&lt;=  
  Сравнение объектов `tuple` на предмет отношения меньше или равно.  
   
 ```  
@@ -217,7 +215,7 @@ true
 false  
 ```  
   
-##  <a name="op_eq_eq"></a>  оператор==  
+##  <a name="op_eq_eq"></a> operator==  
  Сравнение объектов `tuple` на равенство.  
   
 ```  
@@ -279,7 +277,7 @@ true
 false  
 ```  
   
-##  <a name="op_gt"></a>  оператор&gt;  
+##  <a name="op_gt"></a> operator&gt;  
  Сравнение объектов `tuple` на предмет большинства.  
   
 ```  
@@ -341,7 +339,7 @@ false
 true  
 ```  
   
-##  <a name="op_gt_eq"></a>  оператор&gt;=  
+##  <a name="op_gt_eq"></a> operator&gt;=  
  Сравнение объектов `tuple` на предмет большинства или равенства.  
   
 ```  
@@ -405,5 +403,4 @@ false
   
 ## <a name="see-also"></a>См. также  
  [\<tuple>](../standard-library/tuple.md)
-
 

@@ -18,18 +18,19 @@ caps.latest.revision: "15"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 72772912097cf868538a496d3350d4708af5dc83
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: f6a0c3fe1a85028f4b4220f8e2f111afa1012121
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="stream-io"></a>Потоковый ввод-вывод
 Эти функции обрабатывают данные различных размеров и форматов, — от одного символа до больших структур данных. Они также предоставляют возможность буферизации, которая может повысить производительность. Размер буфера потока по умолчанию составляет 4 КБ. Эти подпрограммы влияют только на буферы, созданные подпрограммами библиотеки времени выполнения, и не затрагивают буферы, созданные операционной системой.  
   
 ### <a name="stream-io-routines"></a>Потоковые подпрограммы ввода-вывода  
   
-|Подпрограмма|Применение|  
+|Подпрограмма|Использовать|  
 |-------------|---------|  
 |[clearerr](../c-runtime-library/reference/clearerr.md), [clearerr_s](../c-runtime-library/reference/clearerr-s.md)|Очистка индикатора ошибки для потока|  
 |[fclose](../c-runtime-library/reference/fclose-fcloseall.md)|Закрытие потока|  

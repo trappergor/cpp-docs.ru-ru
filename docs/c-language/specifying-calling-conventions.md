@@ -13,14 +13,15 @@ caps.latest.revision: "8"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 9f014d6f8cc0fc6a8870e5c6fe4a43857f696ee2
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: fc23e561b00022dc4238ec986f047d08825803a9
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="specifying-calling-conventions"></a>Указание соглашений о вызовах
-**Блок, относящийся только к системам Майкрософт**  
+**Блок, относящийся только к системам Microsoft**  
   
  Дополнительные сведения по соглашениям о вызовах см. в разделе [Разделы соглашений о вызовах](../cpp/calling-conventions.md).  
   

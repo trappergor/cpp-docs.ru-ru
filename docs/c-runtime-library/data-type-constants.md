@@ -97,11 +97,12 @@ caps.latest.revision: "6"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 49faa73a334d2feed480499735220a1ae7f6d2c5
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 1702065a8157596d4366af31fed3f2a80d53149c
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="data-type-constants"></a>Константы типа данных
 Константы типа данных — это зависящие от реализации диапазоны значений, допустимые для целочисленных типов данных. Перечисленные ниже константы задают диапазоны для целочисленных типов данных и определяются в разделе LIMITS.H.  
@@ -133,7 +134,7 @@ ms.lasthandoff: 10/24/2017
   
  Следующие константы указывают диапазон и другие характеристики для типов данных **double** и **float**, и определяются в разделе FLOAT.H  
   
-|Константа|Значение|Описание|  
+|Константа|Значение|Описание:|  
 |--------------|-----------|-----------------|  
 |**DBL_DIG**|15|Количество десятичных разрядов точности|  
 |**DBL_EPSILON**|2,2204460492503131e-016|Наименьшее значение, при котором 1,0 +**DBL_EPSILON** ! = 1,0|  

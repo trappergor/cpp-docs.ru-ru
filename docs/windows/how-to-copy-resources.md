@@ -1,76 +1,79 @@
 ---
-title: "How to: Copy Resources | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "vc.resvw.resource.copying"
-  - "vs.resvw.resource.copying"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "resources [Visual Studio], moving between files"
-  - "resources [Visual Studio], copying"
-  - "resource files, copying or moving resources between"
-  - "resource files, tiling"
-  - ".rc files, copying resources between"
-  - "rc files, copying resources between"
+title: "Как: копирование ресурсов | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- vc.resvw.resource.copying
+- vs.resvw.resource.copying
+dev_langs: C++
+helpviewer_keywords:
+- resources [Visual Studio], moving between files
+- resources [Visual Studio], copying
+- resource files, copying or moving resources between
+- resource files, tiling
+- .rc files, copying resources between
+- rc files, copying resources between
 ms.assetid: 65f523e8-017f-4fc6-82d1-083c56d9131f
-caps.latest.revision: 6
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 6
+caps.latest.revision: "6"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: 4ac30e57c0c833f5d26cf9aa8a9ed4ba43946bb3
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 12/21/2017
 ---
-# How to: Copy Resources
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Вы может копировать ресурсы из одного файла в другой без изменений или [изменить язык или условие ресурса при копировании](../windows/how-to-change-the-language-or-condition-of-a-resource-while-copying.md).  
+# <a name="how-to-copy-resources"></a>Практическое руководство. Копирование ресурсов
+Можно копировать ресурсы из одного файла в другой без изменений или вы можете [измените язык или условие ресурса при копировании](../windows/how-to-change-the-language-or-condition-of-a-resource-while-copying.md).  
   
- Вы можете легко копировать ресурсы из существующего ресурса или исполняемого файла в текущий ресурсный файл.  Чтобы это сделать, необходимо одновременно открыть оба файла, содержащие ресурсы, и перетащить элементы из одного файла в другой или выполнить операции копировать – вставить в этих двух файлах.  Этот метод работает для файлов скрипта ресурсов \(.rc\) и файлов ресурсных шаблонов \(.rct\), а также исполняемых файлов \(.exe\).  
+ Ресурсы можно легко скопировать из существующего ресурса или исполняемого файла для текущего файла ресурсов. Для этого откройте обоих файлов, которые содержат ресурсы, в то же время и перетащите элементы из одного файла, или скопируйте и вставьте между двумя файлами. Этот метод работает для RC-файлы ресурсов и файлы ресурсов (.rct) шаблона, а также исполняемых файлов (.exe).  
   
 > [!NOTE]
->  Visual C\+\+ включает образцы ресурсных файлов, которые вы можете использовать в собственных приложениях.  Дополнительные сведения см. в разделе [CLIPART: общие ресурсы](http://msdn.microsoft.com/ru-ru/9bac2891-b6b3-49ec-a287-cec850c707e0).  
+>  Visual C++ включает образцы ресурсных файлов, которые можно использовать в приложении. Дополнительные сведения см. в разделе [CLIPART: общие ресурсы](http://msdn.microsoft.com/en-us/9bac2891-b6b3-49ec-a287-cec850c707e0).  
   
- Вы можете использовать метод перетаскивания между двумя файлами .rc, открытыми [за пределами проекта](../windows/how-to-open-a-resource-script-file-outside-of-a-project-standalone.md).  
+ Можно использовать метод перетаскивания и вставки между RC-файлов, открытых [за пределами проекта](../windows/how-to-open-a-resource-script-file-outside-of-a-project-standalone.md).  
   
-### Копирование ресурсов между файлами с помощью метода перетаскивания  
+### <a name="to-copy-resources-between-files-using-the-drag-and-drop-method"></a>Копирование ресурсов между файлами с помощью метода перетаскивания и вставки  
   
-1.  Откройте оба файла ресурсов в автономном режиме \(дополнительную информацию см. в разделе [Просмотр ресурсов в .rc файле за пределами проекта](../windows/how-to-open-a-resource-script-file-outside-of-a-project-standalone.md)\).  Например, откройте файлы Source1.rc и Source2.rc.  
+1.  Откройте отдельно два файла ресурсов (Дополнительные сведения см. в разделе [Просмотр ресурсов в .rc файле за пределами проекта](../windows/how-to-open-a-resource-script-file-outside-of-a-project-standalone.md)). Например, откройте Source1.rc и Source2.rc.  
   
-2.  В первом RC\-файле щелкните ресурс, который необходимо скопировать.  Например, в файле Source1.rc, щелкните IDD\_DIALOG1.  
+2.  В первом RC-файле щелкните ресурс, который нужно скопировать. Например в Source1.rc, щелкните IDD_DIALOG1.  
   
-3.  Удерживая клавишу CTRL, перетащите ресурс во второй файл .rc.  Например, перетащите IDD\_DIALOG1 из файла Source1.rc в файл Source2.rc.  
-  
-    > [!NOTE]
-    >  Перетаскивание ресурса без удерживания нажатой клавиши CTRL перемещает, а не копирует ресурс.  
-  
-### Копирование ресурсов методом копирования и вставки  
-  
-1.  Откройте оба файла ресурсов в автономном режиме \(дополнительную информацию см. в разделе [Просмотр ресурсов в .rc файле за пределами проекта](../windows/how-to-open-a-resource-script-file-outside-of-a-project-standalone.md)\).  Например, файлы Source1.rc и Source2.rc.  
-  
-2.  В исходном файле, из которого вы хотите скопировать ресурс \(например, Source1.rc\), щелкните правой кнопкой мыши ресурс и выберите **Копировать** в контекстном меню.  
-  
-3.  Щелкните правой кнопкой мыши ресурсный файл, в который нужно добавить ресурс \(например, Source2.rc\).  В контекстном меню выберите пункт **Вставить**.  
+3.  Удерживая нажатой клавишу CTRL и перетащите ресурс во второй RC-файл. Например перетащите IDD_DIALOG1 из Source1.rc Source2.rc.  
   
     > [!NOTE]
-    >  Вы не можете перетаскивать, копировать, вырезать и вставлять между ресурсными файлами проекта \(представление ресурса\) и автономными файлами .rc \(открытыми в окнах документа\).  Вы не сможете это сделать в предыдущих версиях продукта.  
+    >  Перетаскивание ресурса без удерживания нажатой клавишей CTRL Перемещение ресурса, а не его копирования.  
+  
+### <a name="to-copy-resources-using-copy-and-paste"></a>Для копирования ресурсов с помощью копирования и вставки  
+  
+1.  Откройте отдельно два файла ресурсов (Дополнительные сведения см. в разделе [Просмотр ресурсов в .rc файле за пределами проекта](../windows/how-to-open-a-resource-script-file-outside-of-a-project-standalone.md)). Например, Source1.rc и Source2.rc.  
+  
+2.  В исходном файле, с которого вы хотите скопировать ресурс (например, Source1.rc), щелкните правой кнопкой мыши ресурс и выберите **копирования** в контекстном меню.  
+  
+3.  Щелкните правой кнопкой мыши файл ресурсов, в который вы хотите добавить ресурс (например, Source2.rc). Выберите **вставить** в контекстном меню.  
   
     > [!NOTE]
-    >  В процессе копирования ресурсов или объектов ресурса из одного RC\-файла в другой Visual C\+\+ может изменить значение или имя и значение копируемого ресурса во избежание конфликтов с именами и значениями ресурсов в файле назначения.  
+    >  Невозможно перетащите и удалить, копировать, Вырезать или вставку между файлами ресурсов в проект (представление ресурса) и автономными файлами .rc (которые открытыми в окнах документа). Это можно сделать в предыдущих версиях продукта.  
   
- Сведения о добавлении ресурсов в управляемые проекты см. в разделе [Ресурсы приложений](../Topic/Resources%20in%20Desktop%20Apps.md) *Руководства разработчика .NET Framework*. Сведения о том, как вручную добавлять файлы ресурсов в управляемые проекты, осуществлять доступ к ресурсам, отображать статические ресурсы и присваивать строки ресурсов свойствам см. в разделах [Пошаговое руководство. Локализация приложений Windows Forms](http://msdn.microsoft.com/ru-ru/9a96220d-a19b-4de0-9f48-01e5d82679e5) и [Walkthrough: Using Resources for Localization with ASP.NET](../Topic/Walkthrough:%20Using%20Resources%20for%20Localization%20with%20ASP.NET.md).  
+    > [!NOTE]
+    >  Чтобы избежать конфликтов с именами и значениями в существующем файле, Visual C++ может изменить значение символа копируемого ресурса или имя и значение, при попытке скопировать в новый файл.  
+  
+ Сведения о добавлении ресурсов в управляемые проекты см. в разделе [ресурсы в классических приложениях](/dotnet/framework/resources/index) в *руководства разработчика .NET Framework.* Сведения о вручную добавлять файлы ресурсов в управляемые проекты, осуществлять доступ к ресурсам, отображать статические ресурсы и присваивать строки ресурсов свойствам см. в разделе [Создание файлов ресурсов для приложений рабочего стола](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Сведения о глобализации и локализации ресурсов в управляемых приложениях см. в разделе [Globalizing и локализация приложений .NET Framework](/dotnet/standard/globalization-localization/index).  
   
  Требования  
   
  Win32  
   
-## См. также  
- [How to: Open a Resource Script File Outside of a Project \(Standalone\)](../windows/how-to-open-a-resource-script-file-outside-of-a-project-standalone.md)   
- [Resource Files](../mfc/resource-files-visual-studio.md)   
- [Resource Editors](../mfc/resource-editors.md)
+## <a name="see-also"></a>См. также  
+ [Как: открытие файла описания ресурсов за пределами проекта (автономный)](../windows/how-to-open-a-resource-script-file-outside-of-a-project-standalone.md)   
+ [Файлы ресурсов](../windows/resource-files-visual-studio.md)   
+ [Редакторы ресурсов](../windows/resource-editors.md)

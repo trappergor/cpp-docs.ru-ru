@@ -21,11 +21,12 @@ caps.latest.revision: "17"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: fe8917c18937856a6ca310a2bbf8380840202699
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 46500f4f1658c613ee8422791e46015b0e129532
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="ltchronogt"></a>&lt;chrono&gt;
 Включите стандартный заголовок \<chrono> для определения классов и функций, которые представляют интервалы и моменты времени и работают с ними.  
@@ -40,14 +41,14 @@ ms.lasthandoff: 10/24/2017
 
 ### <a name="classes"></a>Классы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[Класс duration](../standard-library/duration-class.md)|Описывает тип, содержащий интервал времени.|  
 |[Класс time_point](../standard-library/time-point-class.md)|Описывает тип, представляющий момент времени.|  
   
 ### <a name="structs"></a>структурам;  
   
-|Имя|Описание|  
+|name|Описание:|  
 |----------|-----------------|  
 |[Структура common_type](../standard-library/common-type-structure.md)|Описывает специализации класса шаблона [common_type](../standard-library/common-type-class.md) для создания экземпляров `duration` и `time_point`.|  
 |[Структура duration_values](../standard-library/duration-values-structure.md)|Предоставляет конкретные значения для параметра `Rep` шаблона `duration`.|  
@@ -57,31 +58,31 @@ ms.lasthandoff: 10/24/2017
   
 ### <a name="functions"></a>Функции  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[duration_cast](../standard-library/chrono-functions.md#duration_cast)|Приводит объект `duration` к указанному типу.|  
 |[time_point_cast](../standard-library/chrono-functions.md#time_point_cast)|Приводит объект `time_point` к указанному типу.|  
   
 ### <a name="operators"></a>Операторы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[operator-](../standard-library/chrono-operators.md#operator-)|Оператор вычитания или отрицания объектов `duration` и `time_point`.|  
-|[operator!=](../standard-library/chrono-operators.md#op_neq)|Оператор неравенства, используемый с объектами `duration` или `time_point`.|  
+|[оператор!=](../standard-library/chrono-operators.md#op_neq)|Оператор неравенства, используемый с объектами `duration` или `time_point`.|  
 |[operator modulo](../standard-library/chrono-operators.md#op_modulo)|Оператор для операций вычисления остатка от деления над объектами `duration`.|  
 |[operator*](../standard-library/chrono-operators.md#op_star)|Оператор умножения для объектов `duration`.|  
-|[operator/](../standard-library/chrono-operators.md#op_div)|Оператор деления для объектов `duration`.|  
+|[оператор/](../standard-library/chrono-operators.md#op_div)|Оператор деления для объектов `duration`.|  
 |[operator+](../standard-library/chrono-operators.md#op_add)|Складывает объекты `duration` и `time_point`.|  
 |[operator&lt;](../standard-library/chrono-operators.md#op_lt)|Определяет, справедливо ли, что один из объектов `duration` или `time_point` меньше, чем другой объект `duration` или `time_point`.|  
 |[operator&lt;=](../standard-library/chrono-operators.md#op_lt_eq)|Определяет, справедливо ли, что один из объектов `duration` или `time_point` меньше или равен другому объекту `duration` или `time_point`.|  
-|[operator==](../standard-library/chrono-operators.md#op_eq_eq)|Определяет, справедливо ли, что два объекта `duration` представляют интервалы времени, имеющие одинаковую длину, или, что два объекта `time_point` представляют один и тот же момент времени.|  
-|[operator&gt;](../standard-library/chrono-operators.md#op_gt)|Определяет, справедливо ли, что один из объектов `duration` или `time_point` больше, чем другой объект `duration` или `time_point`.|  
+|[оператор==](../standard-library/chrono-operators.md#op_eq_eq)|Определяет, справедливо ли, что два объекта `duration` представляют интервалы времени, имеющие одинаковую длину, или, что два объекта `time_point` представляют один и тот же момент времени.|  
+|[оператор&gt;](../standard-library/chrono-operators.md#op_gt)|Определяет, справедливо ли, что один из объектов `duration` или `time_point` больше, чем другой объект `duration` или `time_point`.|  
 |[operator&gt;=](../standard-library/chrono-operators.md#op_gt_eq)|Определяет, справедливо ли, что один из объектов `duration` или `time_point` больше или равен другому объекту `duration` или `time_point`.|  
   
 ### <a name="predefined-duration-types"></a>Предопределенные типы длительности  
  Дополнительные сведения о типах отношения, используемых в следующих определениях типов, см. в разделе [\<ratio>](../standard-library/ratio.md).  
   
-|Typedef|Описание|  
+|Typedef|Описание:|  
 |-------------|-----------------|  
 |`typedef duration<long long, nano> nanoseconds;`|Синоним для типа `duration` с тактовым периодом равным 1 наносекунде.|  
 |`typedef duration<long long, micro> microseconds;`|Синоним для типа `duration` с тактовым периодом равным 1 микросекунде.|  
@@ -93,7 +94,7 @@ ms.lasthandoff: 10/24/2017
 ### <a name="literals"></a>Литералы  
  **(C++ 11)** Заголовок \<chrono> определяет следующие [пользовательские литералы](../cpp/user-defined-literals-cpp.md), которые можно использовать для большего удобства, типобезопасности и обслуживаемости кода. Такие литералы определяются во встроенном пространстве имен `literals::chrono_literals` и находятся в области действия, когда std::chrono находится в области действия.  
   
-|Литерал|Описание|  
+|Литерал|Описание:|  
 |-------------|-----------------|  
 |chrono::hours operator "" h(unsigned long long Val)|Указывает часы как целочисленное значение.|  
 |chrono::Duration\<double, соотношение\<3600 >> оператор «» h (long double Val)|Указывает часы как значение с плавающей запятой.|  

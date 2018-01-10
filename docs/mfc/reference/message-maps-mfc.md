@@ -19,16 +19,17 @@ caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 677a4a06402af1115f419dcd5979a13a84d79e08
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 958f308a089f2f503159b2ce56c2096595fc7613
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="message-maps-mfc"></a>Схемы сообщений (MFC)
 Ссылки в этом разделе перечислены все [макросы сопоставления сообщений](../../mfc/reference/message-map-macros-mfc.md) и все [CWnd](../../mfc/reference/cwnd-class.md) прототипов функции записи схемы сообщений вместе с соответствующего члена:  
   
-|Категория|Описание|  
+|Категория|Описание:|  
 |--------------|-----------------|  
 |ON\_обработчик сообщений для КОМАНДЫ|Обрабатывает `WM_COMMAND` сообщения, сформированные при выборе меню пользователя или клавиши доступа в меню.|  
 |[Обработчики для уведомляющих сообщений дочернего окна](../../mfc/reference/child-window-notification-message-handlers.md)|Обрабатывать сообщения уведомления из дочерних окон.|  

@@ -1,69 +1,69 @@
 ---
-title: "__movsq | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "__movsq"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Встроенная функция __movsq"
-  - "Инструкция rep movsq"
-  - "Инструкция movsq"
+title: "__movsq | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: __movsq
+dev_langs: C++
+helpviewer_keywords:
+- __movsq intrinsic
+- rep movsq instruction
+- movsq instruction
 ms.assetid: be116a6e-2176-4ca4-93b1-9ccf3e7e7835
-caps.latest.revision: 13
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 11
+caps.latest.revision: "13"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 543e9289e8aed2bca21da32b26392fd5c50b8730
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 12/21/2017
 ---
-# __movsq
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-**Только для систем Microsoft**  
+# <a name="movsq"></a>__movsq
+**Блок, относящийся только к системам Microsoft**  
   
- Производит повторную инструкцию move `rep movsq` строки \(\).  
+ Создает повторяющиеся строки перемещения (`rep movsq`) инструкции.  
   
-## Синтаксис  
+## <a name="syntax"></a>Синтаксис  
   
 ```  
-void __movsq(   
-   unsigned char* Dest,   
-   unsigned char* Source,   
-   size_t Count   
+void __movsq(   
+   unsigned char* Dest,   
+   unsigned char* Source,   
+   size_t Count   
 );  
 ```  
   
-#### Параметры  
- \[исходящий\] `Dest`  
- Назначение операции.  
+#### <a name="parameters"></a>Параметры  
+ [выходной] `Dest`  
+ Целевой для операции.  
   
- \[входящий\] `Source`  
+ [in] `Source`  
  Источник операции.  
   
- \[входящий\] `Count`  
- Число quadwords для копирования.  
+ [in] `Count`  
+ Количество учетверенных слова для копирования.  
   
-## Требования  
+## <a name="requirements"></a>Требования  
   
-|Встроенный объект|Архитектура|  
-|-----------------------|-----------------|  
-|`__movsq`|[!INCLUDE[vcprx64](../Token/vcprx64_md.md)]|  
+|Встроенная функция|Архитектура|  
+|---------------|------------------|  
+|`__movsq`|[!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|  
   
- **Файл заголовка** \<intrin.h\>  
+ **Файл заголовка** \<intrin.h >  
   
-## Заметки  
- В результате первые quadwords `Count` указанные в `Source` копируются в строке `Dest`.  
+## <a name="remarks"></a>Примечания  
+ В результате первый `Count` учетверенных слова, на который указывает `Source` копируются `Dest` строки.  
   
- Эта процедура доступна только в качестве внутреннего элемента.  
+ Эта процедура доступна только как встроенная функция.  
   
-## Пример  
+## <a name="example"></a>Пример  
   
 ```  
 // movsq.cpp  
@@ -86,8 +86,11 @@ int main()
 }  
 ```  
   
-  **950 850 750 650 550 450 350 250 150 50**    
-## ЭЛЕМЕНТ, относящийся Майкрософт  
+```Output  
+950 850 750 650 550 450 350 250 150 50   
+```  
   
-## См. также  
- [Встроенные объекты компилятора](../intrinsics/compiler-intrinsics.md)
+**Завершение блока, относящегося только к системам Майкрософт**  
+  
+## <a name="see-also"></a>См. также  
+ [Встроенные инструкции компилятора](../intrinsics/compiler-intrinsics.md)

@@ -20,11 +20,12 @@ caps.latest.revision: "16"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 987691d2eaf8ae2f6c8f724fb8bcf4f26ad68dcd
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 835c396c36a23d05a1e3512fa7ad5e4c4e81c795
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="locale"></a>Языковой стандарт
 *Языковой стандарт* — это настройки страны/региона и языковые настройки, с помощью которых можно настраивать программы. К числу категорий, зависящих от языкового стандарта, относится отображение форматов дат и денежных значений. Дополнительные сведения см. в разделе [Категории языковых стандартов](../c-runtime-library/locale-categories.md).  
@@ -37,7 +38,7 @@ ms.lasthandoff: 10/24/2017
   
 ### <a name="locale-dependent-routines"></a>Зависимые от языковых стандартов подпрограммы  
   
-|Подпрограмма|Применение|Зависимость настройки категории `setlocale`|  
+|Подпрограмма|Использовать|Зависимость настройки категории `setlocale`|  
 |-------------|---------|---------------------------------------------|  
 |[atof, _atof_l, _wtof, _wtof_l](../c-runtime-library/reference/atof-atof-l-wtof-wtof-l.md)|Преобразовать символ в значение с плавающей запятой|`LC_NUMERIC`|  
 |[atoi, _atoi_l, _wtoi, _wtoi_l](../c-runtime-library/reference/atoi-atoi-l-wtoi-wtoi-l.md)|Преобразовать символ в целочисленное значение|`LC_NUMERIC`|  

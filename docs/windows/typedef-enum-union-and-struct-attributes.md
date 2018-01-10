@@ -19,18 +19,21 @@ caps.latest.revision: "8"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 9bba47c5c0ea12ae7c1ae4f57adc24b58166ded8
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: 2087d4ff4e4905324f9bbdfaa954287f033feafe
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="typedef-enum-union-and-struct-attributes"></a>Атрибуты Typedef, Enum, Union и Struct
 Следующие атрибуты, относящиеся к [typedef](http://msdn.microsoft.com/en-us/cc96cf26-ba93-4179-951e-695d1f5fdcf1), [структуры](../cpp/struct-cpp.md), и [перечисления](../cpp/enumerations-cpp.md) ключевые слова C++.  
   
 ### <a name="typedef"></a>typedef  
   
-|Атрибут|Описание|  
+|Атрибут|Описание:|  
 |---------------|-----------------|  
 |[case](../windows/case-cpp.md)|При использовании [switch_type](../windows/switch-type.md) атрибута в **объединение**.|  
 |[пользовательские](../windows/custom-cpp.md)|Позволяет определять собственный атрибут.|  
@@ -48,9 +51,9 @@ ms.lasthandoff: 10/24/2017
 |[unique](../windows/unique-cpp.md)|Указывает уникальный указатель.|  
 |[wire_marshal](../windows/wire-marshal.md)|Указывает тип данных, который будет использоваться для передачи данных вместо типа данных приложения.|  
   
-### <a name="enum"></a>enum  
+### <a name="enum"></a>перечисление  
   
-|Атрибут|Описание|  
+|Атрибут|Описание:|  
 |---------------|-----------------|  
 |[пользовательские](../windows/custom-cpp.md)|Позволяет определять собственный атрибут.|  
 |[export](../windows/export.md)|В результате структуру данных помещается в IDL-файл.|  
@@ -59,7 +62,7 @@ ms.lasthandoff: 10/24/2017
   
 ### <a name="union"></a>union  
   
-|Атрибут|Описание|  
+|Атрибут|Описание:|  
 |---------------|-----------------|  
 |[пользовательские](../windows/custom-cpp.md)|Позволяет определять собственный атрибут.|  
 |[export](../windows/export.md)|В результате структуру данных помещается в IDL-файл.|  
@@ -73,14 +76,14 @@ ms.lasthandoff: 10/24/2017
   
 ### <a name="nonencapsulated-union"></a>Nonencapsulated объединения  
   
-|Атрибут|Описание|  
+|Атрибут|Описание:|  
 |---------------|-----------------|  
 |[ms_union](../windows/ms-union.md)|Управляет выравниванием представление данных сети nonencapsulated объединений.|  
 |[no_injected_text](../windows/no-injected-text.md)|Запрещает компилятору встраивать код в результате использования атрибута.|  
   
-### <a name="struct"></a>struct  
+### <a name="struct"></a>структура  
   
-|Атрибут|Описание|  
+|Атрибут|Описание:|  
 |---------------|-----------------|  
 |[aggregatable](../windows/aggregatable.md)|Указывает, что класс поддерживает агрегирование.|  
 |[aggregates](../windows/aggregates.md)|Указывает, что элемент управления использует статистическую функцию для целевого класса.|  

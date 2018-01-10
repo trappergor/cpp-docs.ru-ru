@@ -1,56 +1,57 @@
 ---
-title: "inline_depth | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "inline_depth_CPP"
-  - "vc-pragma.inline_depth"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "inline_depth - прагма"
-  - "прагмы, inline_depth"
+title: "inline_depth | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- inline_depth_CPP
+- vc-pragma.inline_depth
+dev_langs: C++
+helpviewer_keywords:
+- pragmas, inline_depth
+- inline_depth pragma
 ms.assetid: 2bba60fe-43ea-4d09-90f7-aafaba3bad07
-caps.latest.revision: 10
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 10
+caps.latest.revision: "10"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: f105512910658603139105ecf1cf1d5b7030ad00
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 12/21/2017
 ---
-# inline_depth
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Задает глубину эвристического поиска для подстановки функций, то есть на глубине \(в графе вызовов\) больше `n` подстановка функций не выполняется.  
+# <a name="inlinedepth"></a>inline_depth
+Задает глубину эвристического поиска для подстановки функций, то есть на глубине (в графе вызовов) больше `n` подстановка функций не выполняется.  
   
-## Синтаксис  
+## <a name="syntax"></a>Синтаксис  
   
 ```  
   
 #pragma inline_depth( [n] )  
 ```  
   
-## Заметки  
- Эта директива pragma управляет подстановкой функций, помеченных как [inline](../misc/inline-inline-forceinline.md) и [\_\_inline](../misc/inline-inline-forceinline.md), а также автоматически подставляемых при помощи параметра \/Ob2.  
+## <a name="remarks"></a>Примечания  
+ Эта директива pragma управляет подстановкой функций, помеченных [встроенного](../cpp/inline-functions-cpp.md) и [__inline](../cpp/inline-functions-cpp.md) или также автоматически параметре/Ob2.  
   
- Значение `n` может находиться в диапазоне от 0 до 255. Значение 255 означает, что глубина в диаграмме вызовов не ограничена, а 0 блокирует подстановку функций.  Если атрибут `n` не задан, используется значение по умолчанию \(254\).  
+ Значение `n` может находиться в диапазоне от 0 до 255. Значение 255 означает, что глубина в диаграмме вызовов не ограничена, а 0 блокирует подстановку функций.  Если атрибут `n` не задан, используется значение по умолчанию (254).  
   
- Директива \#pragma **inline\_depth** определяет, сколько раз будет развернута серия вызовов функций.  Например, если глубина подстановки равна 4, и при этом функция A вызывает B, а затем B вызывает C, то все 3 вызова будут развернуты для подстановки.  Однако если ближайшая глубина развертывания подставляемых функций равна двум, то развернуты будут только функции A и B, а C останется вызовом функции.  
+ **Inline_depth** pragma определяет, сколько раз будет развернута серия вызовов функций. Например, если глубина подстановки равна 4, и при этом функция A вызывает B, а затем B вызывает C, то все 3 вызова будут развернуты для подстановки. Однако если ближайшая глубина развертывания подставляемых функций равна двум, то развернуты будут только функции A и B, а C останется вызовом функции.  
   
- Для использования этой директивы pragma необходимо указать параметр компилятора \/Ob со значением 1 или 2.  Глубина, установленная при помощи этой директивы \#pragma, начинает действовать с первого вызова функции, расположенной после директивы.  
+ Для использования этой директивы pragma необходимо указать параметр компилятора /Ob со значением 1 или 2. Глубина, установленная при помощи этой директивы #pragma, начинает действовать с первого вызова функции, расположенной после директивы.  
   
- При выполнении расширения глубина подстановки может уменьшаться, но не увеличиваться.  Если глубина подстановки равна 6, и при выполнении расширения препроцессор встречает директиву \#pragma **inline\_depth** со значением 8, то сохраняется глубина 6.  
+ При выполнении расширения глубина подстановки может уменьшаться, но не увеличиваться. Если глубина подстановки равна 6, и при выполнении расширения препроцессор встречает **inline_depth** директиву pragma значение 8, глубина остается шесть.  
   
- Директива \#pragma **inline\_depth** не учитывается для функций, помеченных атрибутом `__forceinline`.  
+ **Inline_depth** pragma не оказывает влияния на функций, помеченных атрибутом `__forceinline`.  
   
 > [!NOTE]
 >  Подстановка для рекурсивных функций выполняется на глубину не более 16 вызовов.  
   
-## См. также  
- [Директивы Pragma и ключевое слово \_\_Pragma](../preprocessor/pragma-directives-and-the-pragma-keyword.md)   
- [inline\_recursion](../preprocessor/inline-recursion.md)
+## <a name="see-also"></a>См. также  
+ [Директивы pragma и ключевое слово __Pragma](../preprocessor/pragma-directives-and-the-pragma-keyword.md)   
+ [inline_recursion](../preprocessor/inline-recursion.md)

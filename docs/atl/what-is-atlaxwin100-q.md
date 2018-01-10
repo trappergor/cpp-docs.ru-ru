@@ -15,11 +15,12 @@ caps.latest.revision: "14"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 6cc60bbb4efad8c4e01da124cb066a4d3c151056
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 0a686dc2c8d2a8d73ed8b8a65cf6a8777fe3f6b4
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="what-is-atlaxwin100"></a>Что такое AtlAxWin100?
 `AtlAxWin100`— Имя класса окна, чтобы обеспечить функциональность размещение элементов управления ATL. При создании экземпляра этого класса, процедуру окна будут автоматически использовать API размещение элементов управления для создания объекта узла, связанный с окном и загрузить его с элементом управления, укажите в качестве заголовка окна.  

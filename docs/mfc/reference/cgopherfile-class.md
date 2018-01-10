@@ -18,11 +18,12 @@ caps.latest.revision: "23"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 48c8da8fda2cd70676476532b3ed3646285f0782
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: ce90eb2baf4ce8f6ba0136a9efd503086b686aa6
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cgopherfile-class"></a>Класс CGopherFile
 Обеспечивает возможность поиска и чтения файлов на сервере gopher.  
@@ -36,11 +37,11 @@ ms.lasthandoff: 10/24/2017
 class CGopherFile : public CInternetFile  
 ```  
   
-## <a name="members"></a>Члены  
+## <a name="members"></a>Участники  
   
 ### <a name="protected-constructors"></a>Защищенные конструкторы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[CGopherFile::CGopherFile](#cgopherfile)|Создает объект `CGopherFile`.|  
   
@@ -95,7 +96,7 @@ CGopherFile(
  Дескриптор текущего сеанса Интернета.  
   
  `pstrLocator`  
- Указатель на строку, используемую для обнаружения сервера gopher. В разделе [сеансы Gopher](https://msdn.microsoft.com/library/24wz8xze.aspx) Дополнительные сведения о локаторов gopher.  
+ Указатель на строку, используемую для обнаружения сервера gopher. В разделе [сеансы Gopher](cgopherlocator-class.md) Дополнительные сведения о локаторов gopher.  
   
  *dwLocLen*  
  DWORD, содержащее число байтов в `pstrLocator`.  

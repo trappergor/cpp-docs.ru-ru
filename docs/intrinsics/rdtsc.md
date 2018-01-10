@@ -18,14 +18,15 @@ caps.latest.revision: "17"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: fa161bcc1845ab058773ca8ebdecfb5233235e54
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: bd108c36dc60f6186d247cd3cf61d27d1dad3239
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="rdtsc"></a>__rdtsc
-**Блок, относящийся только к системам Майкрософт**  
+**Блок, относящийся только к системам Microsoft**  
   
  Приводит к возникновению ошибки `rdtsc` инструкции, которая возвращает отметку времени процессора. Отметка времени процессора регистрирует число тактов с момента последнего сброса.  
   

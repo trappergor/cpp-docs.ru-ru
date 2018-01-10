@@ -1,38 +1,38 @@
 ---
-title: "Страницы свойств средства манифестов | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Страницы свойств сервиса манифестов"
+title: "Страницы свойств средства манифестов | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-ide
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords: Manifest Tool property pages
 ms.assetid: f33499c4-7733-42d9-80e3-8a5018786965
-caps.latest.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 9
+caps.latest.revision: "9"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 5a99e8f39baa3ab3753e68ee87ecbb25d73f1a0a
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 12/21/2017
 ---
-# Страницы свойств средства манифестов
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Страницы свойств **сервиса манифестов** используются для установки параметров построения для mt.exe.  
+# <a name="manifest-tool-property-pages"></a>Страницы свойств средства манифестов
+Используйте **инструмент манифеста** страницы свойств, чтобы задать параметры для mt.exe сборки.  
   
- Дополнительные сведения о сервисе манифестов см. в [Mt.exe](http://msdn.microsoft.com/library/aa375649).  
+ Дополнительные сведения о средстве манифеста см. в разделе [Mt.exe](http://msdn.microsoft.com/library/aa375649).  
   
- [Диалоговое окно страниц свойств \<Имя\_проекта\> «Свойства конфигурации», «Инструмент манифеста», «Общие»](../ide/general-manifest-tool-configuration-properties.md)  
+ [Общие, инструмент манифеста, свойства конфигурации \<имя_проекта > диалоговое окно страниц свойств](../ide/general-manifest-tool-configuration-properties.md)  
   
- [Диалоговое окно страниц свойств \<Имя\_проекта\> «Свойства конфигурации», «Инструмент манифеста», «Входные и выходные»](../ide/input-and-output-manifest-tool.md)  
+ [Вход и выход, инструмент, свойства конфигурации манифеста \<имя_проекта > диалоговое окно страниц свойств](../ide/input-and-output-manifest-tool.md)  
   
- [Диалоговое окно страниц свойств \<Имя\_проекта\> «Свойства конфигурации», «Инструмент манифеста», «Изолированная модель COM»](../ide/isolated-com-manifest-tool.md)  
+ [Изолированные COM, инструмент манифеста, свойства конфигурации, \<имя_проекта > диалоговое окно страниц свойств](../ide/isolated-com-manifest-tool.md)  
   
- [Диалоговое окно страниц свойств \<Имя\_проекта\> «Свойства конфигурации», «Инструмент манифеста», «Дополнительно»](../Topic/Advanced,%20Manifest%20Tool,%20Configuration%20Properties,%20%3CProjectname%3E%20Property%20Pages%20Dialog%20Box.md)  
+ [Дополнительно, инструмент манифеста, свойства конфигурации \<имя_проекта > диалоговое окно страниц свойств](../ide/advanced-manifest-tool.md)  
   
-## См. также  
+## <a name="see-also"></a>См. также  
  [Страницы свойств](../ide/property-pages-visual-cpp.md)

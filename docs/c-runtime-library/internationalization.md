@@ -19,11 +19,12 @@ caps.latest.revision: "8"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 3220b96f66465af8348fc50f0c702423439d34bb
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 7d48af3fb762100fa52b37db58cfc57caca1b6e2
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="internationalization"></a>Интернационализация
 Библиотека времени выполнения Microsoft предоставляет множество процедур, полезных при создании различных версий программы для международных рынков. Сюда включены [процедуры, связанные с языковым стандартом](../c-runtime-library/locale.md), подпрограммы расширенных символов, подпрограммы многобайтовых символов и универсальные текстовые подпрограммы. Для удобства большинство процедур, связанных с языковым стандартом, в этом справочнике также упорядочены по категориям согласно выполняемым ими операциям. В этом разделе и в алфавитном справочнике процедуры многобайтовых символов и расширенных символов описаны вместе с их аналогами с однобайтовыми символами, если такие существуют.  

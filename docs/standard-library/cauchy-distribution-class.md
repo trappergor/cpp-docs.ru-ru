@@ -37,11 +37,12 @@ caps.latest.revision: "25"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 4910c1e65ac8e758b1b7790c27b8addf732dc32e
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 53ecdd04ebb24c6380e61f8bc5536d24df4dc21b
+ms.sourcegitcommit: 54035dce0992ba5dce0323d67f86301f994ff3db
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 01/03/2018
 ---
 # <a name="cauchydistribution-class"></a>Класс cauchy_distribution
 Формирует распределение Коши.  
@@ -103,7 +104,7 @@ public:
   
 Дополнительные сведения о классах распределения и их членах см. в разделе [\<random>](../standard-library/random.md).  
   
-Подробные сведения о нормальном F-распределении см. в статье в Wolfram MathWorld [Распределение Коши](http://go.microsoft.com/fwlink/LinkId=400523).  
+Подробные сведения о нормальном F-распределении см. в статье в Wolfram MathWorld [Распределение Коши](http://go.microsoft.com/fwlink/p/?linkid=400523).  
   
 ## <a name="example"></a>Пример  
   
@@ -296,7 +297,7 @@ struct param_type {
 Объект `param_type`, который требуется сравнить с данным объектом.  
   
 ### <a name="remarks"></a>Примечания  
-**Предварительные условия:** `0.0 < b`  
+**Предусловие:** `0.0 < b`  
   
 Эту структуру можно передать конструктору класса распределения во время создания экземпляра, функции-члену `param()` для установки хранимых параметров существующего распределения и `operator()` для использования вместо хранимых параметров.  
   

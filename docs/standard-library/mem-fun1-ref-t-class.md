@@ -15,11 +15,12 @@ caps.latest.revision: "20"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 8173e0c9c33b649ab298dc8ece2757f492edaecd
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: e685960f026fb6ec88e6b64adf59eda1453ca3ed
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="memfun1reft-class"></a>Класс mem_fun1_ref_t
 Класс адаптера, который позволяет вызывать функцию-член **non_const**, принимающую один аргумент как объект двоичной функции при инициализации с ссылочным аргументом.  

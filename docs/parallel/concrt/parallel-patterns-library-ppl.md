@@ -14,11 +14,12 @@ caps.latest.revision: "27"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 4d7850721f5005ac1a1ab47c6557dcd99cede897
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 4a13acdf07e2f6055326aea2097cb923baa153a0
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="parallel-patterns-library-ppl"></a>Библиотека параллельных шаблонов
 Библиотека параллельных шаблонов (PPL) предоставляет императивную модель программирования, обеспечивающую масштабируемость и повышающую удобство разработки параллельных приложений. Библиотека PPL основана на компонентах планирования и управления ресурсами среды выполнения с параллелизмом. Она создает уровень абстракции между кодом приложения и базовым потоковым механизмом, предоставляя универсальные типобезопасные алгоритмы и контейнеры, работающие с данными параллельно. Кроме того, PPL позволяет разрабатывать приложения с возможностью масштабирования, предоставляя альтернативы состоянию с общим доступом.  
@@ -58,7 +59,7 @@ fib(42): 267914296
   
 ## <a name="related-topics"></a>См. также  
   
-|Заголовок|Описание|  
+|Заголовок|Описание:|  
 |-----------|-----------------|  
 |[Параллелизм задач](../../parallel/concrt/task-parallelism-concurrency-runtime.md)|Описывает роль задач и групп задач в PPL.|  
 |[Параллельные алгоритмы](../../parallel/concrt/parallel-algorithms.md)|Описывает способы использования алгоритмов параллельной обработки, таких как `parallel_for` и `parallel_for_each`.|  

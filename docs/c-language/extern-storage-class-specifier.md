@@ -19,11 +19,12 @@ caps.latest.revision: "7"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 0f11789f985c67b59b076bed7ec849a864688743
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 448a659afaf7a0251d500da3d9878d30550b9180
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="extern-storage-class-specifier"></a>Спецификатор класса хранения extern
 Переменная, объявленная с описателем класса хранения `extern`, представляет собой ссылку на переменную с тем же именем, определенным на внешнем уровне в любом из файлов исходного кода программы. Внутреннее объявление `extern` используется, чтобы сделать определение переменной внешнего уровня видимым в блоке. Если иное не объявлено на внешнем уровне, переменная, объявленная с использованием ключевого слова `extern`, видна только в блоке, в котором она объявлена.  

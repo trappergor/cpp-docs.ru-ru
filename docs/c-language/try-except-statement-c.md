@@ -21,14 +21,15 @@ caps.latest.revision: "8"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: ea7526648d5879a224c3bc1ffd6c76dfc986c0c7
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 9896e8a348a70ff6e27342f53f627097ef15dfa8
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="try-except-statement-c"></a>Оператор try-except (C)
-**Блок, относящийся только к системам Майкрософт**  
+**Блок, относящийся только к системам Microsoft**  
   
  Оператор **try-except** является расширением Майкрософт для языка C, которое позволяет приложениям получать управление программой при возникновении событий, обычно приводящих к прекращению выполнения. Такие события вызываются исключениями, а механизм, предназначенный для работы с ними, называется структурированной обработкой исключений.  
   

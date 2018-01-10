@@ -13,27 +13,25 @@ f1_keywords:
 - array/std::array::operator>
 - array/std::array::operator>=
 - array/std::array::operator==
-dev_langs:
-- C++
+dev_langs: C++
 ms.assetid: c8f46282-f179-4909-9a01-639cb8e18c27
-caps.latest.revision: 12
+caps.latest.revision: "12"
 manager: ghogen
-ms.translationtype: MT
-ms.sourcegitcommit: 65f4e356ad0d46333b0d443d0fd6ac0b9f2b6f58
 ms.openlocfilehash: e4854303bc80603ccbdf908aefc31f304487fb1a
-ms.contentlocale: ru-ru
-ms.lasthandoff: 10/03/2017
-
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="ltarraygt-operators"></a>Операторы &lt;array&gt;
 Заголовок \<array> включает эти функции `array` шаблона сравнения, не являющиеся функциями-членами.  
   
 ||||  
 |-|-|-|  
-|[operator!=](#op_neq)|[оператор&gt;](#op_gt)|[оператор&gt;=](#op_gt_eq)|  
-|[оператор&lt;](#op_lt)|[оператор&lt;=](#op_lt_eq)|[оператор==](#op_eq_eq)|  
+|[оператор!=](#op_neq)|[оператор&gt;](#op_gt)|[operator&gt;=](#op_gt_eq)|  
+|[оператор&lt;](#op_lt)|[operator&lt;=](#op_lt_eq)|[оператор==](#op_eq_eq)|  
   
-##  <a name="op_neq"></a>  operator!=  
+##  <a name="op_neq"></a> operator!=  
  Сравнение массивов на неравенство.  
   
 ```  
@@ -103,7 +101,7 @@ false
 true  
 ```  
   
-##  <a name="op_lt"></a>  operator&lt;  
+##  <a name="op_lt"></a> operator&lt;  
  Сравнение массивов "меньше, чем".  
   
 ```  
@@ -174,7 +172,7 @@ false
 true  
 ```  
   
-##  <a name="op_lt_eq"></a>  operator&lt;=  
+##  <a name="op_lt_eq"></a> operator&lt;=  
  Сравнение массивов "меньше или равно".  
   
 ```  
@@ -245,7 +243,7 @@ true
 false  
 ```  
   
-##  <a name="op_eq_eq"></a>  operator==  
+##  <a name="op_eq_eq"></a> operator==  
  Сравнение массивов на равенство.  
   
 ```  
@@ -316,7 +314,7 @@ true
 false  
 ```  
   
-##  <a name="op_gt"></a>  operator&gt;  
+##  <a name="op_gt"></a> operator&gt;  
  Сравнение массивов "больше, чем".  
   
 ```  
@@ -387,7 +385,7 @@ false
 true  
 ```  
   
-##  <a name="op_gt_eq"></a>  operator&gt;=  
+##  <a name="op_gt_eq"></a> operator&gt;=  
  Сравнение массивов "больше или равно".  
   
 ```  
@@ -460,5 +458,4 @@ false
   
 ## <a name="see-also"></a>См. также  
  [\<array>](../standard-library/array.md)
-
 

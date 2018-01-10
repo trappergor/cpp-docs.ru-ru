@@ -13,11 +13,12 @@ caps.latest.revision: "9"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: b332e392db2ca788d041cb73e73cf42cce85906c
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: c75d66fcbe9ef437980878e7789a82dc94b68573
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="windows-store-apps-the-windows-runtime-and-the-c-run-time"></a>Приложения для Магазина Windows, среда выполнения Windows и среда выполнения C
 Приложения [!INCLUDE[win8_appname_long](../build/includes/win8_appname_long_md.md)] представляют собой программы, исполняемые в среде выполнения Windows, которая выполняется в [!INCLUDE[win8](../build/reference/includes/win8_md.md)].  Среда выполнения Windows — это надежное окружение, контролирующее функции, переменные и ресурсы, доступные приложению [!INCLUDE[win8_appname_long](../build/includes/win8_appname_long_md.md)]. Конструктивные ограничения среды выполнения Windows не позволяют использовать в приложениях [!INCLUDE[win8_appname_long](../build/includes/win8_appname_long_md.md)] большинство возможностей библиотеки времени выполнения C (CRT).  

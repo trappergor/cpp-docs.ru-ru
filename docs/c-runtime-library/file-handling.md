@@ -18,11 +18,12 @@ caps.latest.revision: "17"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 2e35d3f9a248d280f4ba617da89eb3993414a525
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 129267c69a2cf4830587f8ebc7c445a01591235b
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="file-handling"></a>Обработка файлов
 Эти подпрограммы предназначены для создания и удаления файлов, управления файлами, а также задания и проверки разрешений доступа к файлам.  
@@ -48,7 +49,7 @@ ms.lasthandoff: 10/24/2017
   
  Эти подпрограммы работают с файлами, указанными с помощью пути или имени файла.  
   
-|Подпрограмма|Для изменения этого значения используйте функцию|  
+|Подпрограмма|Использовать|  
 |-------------|---------|  
 |[_access, _waccess](../c-runtime-library/reference/access-waccess.md), [_access_s, _waccess_s](../c-runtime-library/reference/access-s-waccess-s.md)|Проверяет параметры разрешений файла|  
 |[_chmod, _wchmod](../c-runtime-library/reference/chmod-wchmod.md)|Изменяет параметры разрешений файла|  
@@ -66,7 +67,7 @@ ms.lasthandoff: 10/24/2017
   
  Эти подпрограммы открывают файлы.  
   
-|Подпрограмма|Для изменения этого значения используйте функцию|  
+|Подпрограмма|Использовать|  
 |-------------|---------|  
 |[fopen, _wfopen](../c-runtime-library/reference/fopen-wfopen.md), [fopen_s, _wfopen_s](../c-runtime-library/reference/fopen-s-wfopen-s.md)|Открывает файл и возвращает указатель на открытый файл.|  
 |[_fsopen, _wfsopen](../c-runtime-library/reference/fsopen-wfsopen.md)|Открывает поток в режиме совместного доступа к файлу и возвращает указатель на открытый файл.|  
@@ -77,7 +78,7 @@ ms.lasthandoff: 10/24/2017
   
  Эти подпрограммы предоставляют возможность изменить представление файла между структурой `FILE`, дескриптором файла и Win32-дескриптором файла.  
   
-|Подпрограмма|Применение|  
+|Подпрограмма|Использовать|  
 |-------------|---------|  
 |[_fdopen, _wfdopen](../c-runtime-library/reference/fdopen-wfdopen.md)|Связывает поток с файлом, который ранее был открыт для низкоуровневого ввода-вывода, и возвращает указатель на открытый поток.|  
 |[_fileno](../c-runtime-library/reference/fileno.md)|Получает дескриптор файла, связанного с потоком.|  

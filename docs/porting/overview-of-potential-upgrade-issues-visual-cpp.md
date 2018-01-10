@@ -11,11 +11,12 @@ caps.latest.revision: "5"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 977c13eabe0f25081b1bfe6b25e615002f0e6987
-ms.sourcegitcommit: ca2f94dfd015e0098a6eaf5c793ec532f1c97de1
+ms.workload: cplusplus
+ms.openlocfilehash: 1f1a727920ffe5e79bd62fd877e191dc6f6f3cc3
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="overview-of-potential-upgrade-issues-visual-c"></a>Общие сведения о возможных проблемах, возникающих при обновлении (Visual C++)
 За прошедшие годы компилятор Visual C++ претерпел множество изменений, кроме того, изменения были внесены и в сам язык C++, стандартную библиотеку C++, среду выполнения C (CRT) и другие библиотеки, например MFC и ATL. В результате при обновлении приложения с более ранней версии Visual C++ могут возникнуть ошибки компилятора и компоновщика, а также появиться предупреждения в коде, который ранее компилировался без проблем. Чем старше исходная база кода, тем больше вероятность таких ошибок. Этот обзор охватывает наиболее распространенные виды проблем, с которыми вы можете столкнуться, а также содержит ссылки на более подробные сведения.  

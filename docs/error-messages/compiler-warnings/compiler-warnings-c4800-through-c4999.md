@@ -1,6 +1,6 @@
 ---
 title: "Компилятора C4800 предупреждения через C5999 | Документы Microsoft"
-ms.date: 10/25/2017
+ms.date: 11/17/2017
 ms.technology: cpp-tools
 ms.topic: error-reference
 f1_keywords:
@@ -97,22 +97,20 @@ ms.assetid: c3182430-8b3b-4ab2-a532-5cd436707dc8
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 1bf919fbb1959af6fad031a7f32262466f6f49ff
-ms.sourcegitcommit: 69632887f7a85f4841c49b4c1353d3144927a52c
+ms.workload: cplusplus
+ms.openlocfilehash: 6f3c9a15c61a859564bb5613a3b8059cb011ca80
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/11/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="compiler-warnings-c4800-through-c5999"></a>Компилятора C4800 предупреждения через C5999
 
-Статьи в этой части документации содержат сведения о подмножестве предупреждений компилятора Visual C++. Можно получить информацию здесь или в окне вывода в Visual Studio можно выбрать номер ошибки и затем нажмите клавишу F1.
+Статьи в этом разделе документации описываются подмножество предупреждающие сообщения, созданные компилятором.
 
-> [!NOTE]
-> Не каждый [!INCLUDE[vcprvc](../../build/includes/vcprvc_md.md)] ошибку или предупреждение документируется в MSDN. Во многих случаях диагностическое сообщение предоставляет все информацию, которая доступна. Если вы считаете, что сообщение об ошибке требует дополнительного объяснения, сообщите нам об этом. Можно использовать форму обратной связи на этой странице или перейти к строке меню в Visual Studio и выберите **справки**, **сообщения об ошибке**, или вы можете отправить отчет предложений или ошибку на [Microsoft Connect](http://connect.microsoft.com/VisualStudio).
+[!INCLUDE[error-boilerplate](../../error-messages/includes/error-boilerplate.md)]
 
-Может оказаться дополнительную помощь для ошибок и предупреждений на открытых форумах MSDN. [Языка Visual C++](http://go.microsoft.com/fwlink/?LinkId=158195) — форум для вопросов и обсуждения о [!INCLUDE[vcprvc](../../build/includes/vcprvc_md.md)] синтаксисом и компилятором языка. [Visual C++ Общие](http://go.microsoft.com/fwlink/?LinkId=158194) — форум для вопросов о [!INCLUDE[vcprvc](../../build/includes/vcprvc_md.md)] , которые не обсуждаются на других форумах. Кроме того, возможно справки об ошибках и предупреждения на [переполнения стека](http://stackoverflow.com/).
-
-## <a name="in-this-section"></a>Содержание
+## <a name="warning-messages"></a>Предупреждающие сообщения
 
 |Предупреждение|Сообщение|
 |-------------|-------------|

@@ -14,11 +14,12 @@ caps.latest.revision: "15"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 36b20340da6cae933acb0650b3e073e3835a0204
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 04f73f89745f797658029eac2331d1764af4c065
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="specify-project-location-and-source-files-create-new-project-from-existing-code-files-wizard"></a>Страница "Задание местоположения проекта и исходных файлов" мастера создания проекта по существующим файлам с кодом
 Эта страница мастера создания проекта из существующих файлов кода для задания:  
@@ -61,4 +62,4 @@ ms.lasthandoff: 10/24/2017
  Указывает типы файлов, которые мастер будет добавлять в новый проект на основе расширений данного файла. Расширения файлов предшествует символ-шаблон звездочки и разделяются точкой с запятой в список расширений файлов.  
   
  **Показать все файлы в обозревателе решений**  
- Указывает, что все файлы в новом проекте, чтобы быть видимым и отображается в окне обозревателя решений. Этот флажок по умолчанию установлен.
+ Указывает, что все файлы в новом проекте, чтобы быть видимым и отображается в окне обозревателя решений. Этот параметр по умолчанию включен.

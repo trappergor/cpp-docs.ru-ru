@@ -14,11 +14,12 @@ caps.latest.revision: "9"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 13d292cebbb8aa3aa6a65fbc41b8b38934732b5f
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 18c2b89e8c09ca7ddb6ba7f2cc02c9b400265a35
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="for-statement-c"></a>Оператор for (C)
 Оператор **for** позволяет повторить выполнение того или иного оператора или составного оператора заданное число раз. Тело оператора **for** выполняется ноль или более раз, пока необязательное условие не примет значение false. Внутри оператора **for** можно использовать необязательные выражения для инициализации и изменения значений во время выполнения этого оператора (**for**).  

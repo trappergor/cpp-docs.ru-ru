@@ -25,11 +25,12 @@ caps.latest.revision: "6"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 88af917cb86826cc4615948f7a5d2e53e888bad5
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 261fb23c96bee0d646f64d587d9f7afecc59d4d2
+ms.sourcegitcommit: 54035dce0992ba5dce0323d67f86301f994ff3db
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 01/03/2018
 ---
 # <a name="crtlcmapstringw"></a>__crtLCMapStringW
 Сопоставляет одну строку символов другой, выполняя указанное преобразование, зависящее от языкового стандарта. Эту функцию можно также использовать для создания ключа сортировки для входной строки.  
@@ -75,7 +76,7 @@ int __crtLCMapStringW(
  Нулевое значение означает сбой. Чтобы получить расширенные сведения об ошибке, следует вызвать функцию `GetLastError` .  
   
 ## <a name="remarks"></a>Примечания  
- Если значение `cchSrc` больше нуля и параметр `lpSrcStr` представляет собой строку, завершающуюся нуль-символом, то функция `__crtLCMapStringW` устанавливает для параметра `cchSrc` значение, равное длине строки. Затем функция `__crtLCMapStringW` вызывает версию для расширенных символов (Юникод) функции `LCMapString` с указанными параметрами. Дополнительные сведения о параметрах и значениях, возвращаемых этой функцией, см. в разделе о функции `LCMapString` в [библиотеке MSDN Library](http://go.microsoft.com/fwlink/?linkID=150542).  
+ Если значение `cchSrc` больше нуля и параметр `lpSrcStr` представляет собой строку, завершающуюся нуль-символом, то функция `__crtLCMapStringW` устанавливает для параметра `cchSrc` значение, равное длине строки. Затем функция `__crtLCMapStringW` вызывает версию для расширенных символов (Юникод) функции `LCMapString` с указанными параметрами. Дополнительные сведения о параметрах и значениях, возвращаемых этой функцией, см. в разделе о функции `LCMapString` в [библиотеке MSDN Library](http://go.microsoft.com/fwlink/p/?linkid=150542).  
   
 ## <a name="requirements"></a>Требования  
   

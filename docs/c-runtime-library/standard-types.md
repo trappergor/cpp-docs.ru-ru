@@ -171,18 +171,19 @@ caps.latest.revision: "27"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: b80a4b8c947064886d6afa18e9c24d62195a049a
-ms.sourcegitcommit: c9108f0c45b7a634d4e6e5c2d2ec192d50ffdbab
+ms.workload: cplusplus
+ms.openlocfilehash: 4fd51f03d9a4134ee7193d5aede410bb541cd19f
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/18/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="standard-types"></a>Стандартные типы
 Библиотека времени выполнения Microsoft определяет следующие стандартные типы и определения типов.  
   
 ### <a name="fixed-width-integral-types-stdinth"></a>Целочисленные типы фиксированной ширины (stdint.h)  
   
-|Имя|Эквивалентный встроенный тип|  
+|name|Эквивалентный встроенный тип|  
 |----------|-------------------------------|  
 |int8\_t, uint8\_t|char со знаком, char без знака|  
 |int16\_t, uint16\_t|short, short без знака|  
@@ -198,7 +199,7 @@ ms.lasthandoff: 11/18/2017
 |int_fast64_t, uint_fast64_t|long long, long long без знака|  
 |intmax_t, uintmax_t|long long, long long без знака|  
   
-|Тип|Описание|Объявляется в|  
+|Тип|Описание:|Объявляется в|  
 |----------|-----------------|-----------------|  
 |`clock_t` (long)|Хранит значения времени; используется [часами](../c-runtime-library/reference/clock.md).|TIME.H|  
 |Структура `_complex`|Хранит реальные и мнимые части сложных чисел; используется в [_cabs](../c-runtime-library/reference/cabs.md).|MATH.H|  

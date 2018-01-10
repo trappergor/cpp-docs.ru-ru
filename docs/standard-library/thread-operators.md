@@ -14,10 +14,9 @@ f1_keywords:
 - thread/std::operator&lt;&lt;
 - thread/std::operator&lt;=
 - thread/std::operator==
-dev_langs:
-- C++
+dev_langs: C++
 ms.assetid: e6bb6c0f-64f9-4cb2-9ff2-05b88a6ba7ac
-caps.latest.revision: 11
+caps.latest.revision: "11"
 manager: ghogen
 helpviewer_keywords:
 - std::operator!= (thread)
@@ -27,21 +26,20 @@ helpviewer_keywords:
 - std::operator&lt;&lt; (thread)
 - std::operator&lt;= (thread)
 - std::operator== (thread)
-ms.translationtype: MT
-ms.sourcegitcommit: 65f4e356ad0d46333b0d443d0fd6ac0b9f2b6f58
 ms.openlocfilehash: ff0fa361845c7bf64dd15bfc4e23be7b92b6cc39
-ms.contentlocale: ru-ru
-ms.lasthandoff: 10/03/2017
-
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="ltthreadgt-operators"></a>Операторы &lt;thread&gt;
 ||||  
 |-|-|-|  
-|[operator!=](#op_neq)|[оператор&gt;](#op_gt)|[оператор&gt;=](#op_gt_eq)|  
-|[оператор&lt;](#op_lt)|[operator&lt;&lt;](#op_lt_lt)|[оператор&lt;=](#op_lt_eq)|  
-|[operator==](#op_eq_eq)|  
+|[оператор!=](#op_neq)|[оператор&gt;](#op_gt)|[operator&gt;=](#op_gt_eq)|  
+|[оператор&lt;](#op_lt)|[operator&lt;&lt;](#op_lt_lt)|[operator&lt;=](#op_lt_eq)|  
+|[оператор==](#op_eq_eq)|  
   
-##  <a name="op_gt_eq"></a>  operator&gt;=  
+##  <a name="op_gt_eq"></a> operator&gt;=  
  Определяет, справедливо ли, что один из объектов `thread::id` больше другого или равен ему.  
   
 ```cpp  
@@ -63,7 +61,7 @@ bool operator>= (
 ### <a name="remarks"></a>Примечания  
  Эта функция не вызывает исключений.  
   
-##  <a name="op_gt"></a>  operator&gt;  
+##  <a name="op_gt"></a> operator&gt;  
  Определяет, справедливо ли, что один из объектов `thread::id` больше другого или равен ему.  
   
 ```cpp  
@@ -85,7 +83,7 @@ bool operator> (
 ### <a name="remarks"></a>Примечания  
  Эта функция не вызывает исключений.  
   
-##  <a name="op_lt_eq"></a>  operator&lt;=  
+##  <a name="op_lt_eq"></a> operator&lt;=  
  Определяет, справедливо ли, что один из объектов `thread::id` меньше другого или равен ему.  
   
 ```cpp  
@@ -153,7 +151,7 @@ bool operator!= (
 ### <a name="remarks"></a>Примечания  
  Эта функция не вызывает исключений.  
   
-##  <a name="op_eq_eq"></a>  operator==  
+##  <a name="op_eq_eq"></a> operator==  
  Сравнивает два объекта `thread::id` на равенство.  
   
 ```cpp  
@@ -175,7 +173,7 @@ bool operator== (
 ### <a name="remarks"></a>Примечания  
  Эта функция не вызывает исключений.  
   
-##  <a name="op_lt_lt"></a>  operator&lt;&lt;  
+##  <a name="op_lt_lt"></a> operator&lt;&lt;  
  Вставляет текстовое представление объекта `thread::id` в поток.  
   
 ```cpp  
@@ -201,7 +199,6 @@ basic_ostream<Elem, Tr>& operator<<(
   
 ## <a name="see-also"></a>См. также  
  [\<thread>](../standard-library/thread.md)
-
 
 
 

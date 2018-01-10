@@ -1,31 +1,30 @@
 ---
-title: "Неустранимая ошибка NMAKE U1077 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "U1077"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "U1077"
+title: "Неустранимая ошибка NMAKE U1077 | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords: U1077
+dev_langs: C++
+helpviewer_keywords: U1077
 ms.assetid: 70d989f8-ef34-4ad7-8fe0-5b800556b2a1
-caps.latest.revision: 6
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 6
+caps.latest.revision: "6"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 268788774d191d99c08592fc2049fea1fae77718
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 12/21/2017
 ---
-# Неустранимая ошибка NMAKE U1077
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-"программа": возвращенный код "значение"  
+# <a name="nmake-fatal-error-u1077"></a>Неустранимая ошибка NMAKE U1077
+«Программа»: «значение» код возврата  
   
- Сбой указанной команды или программы, вызываемой программой NMAKE \(возвращается указанный код выхода\).  
+ Указанной команды или программы, вызванной NMAKE сбой и возвращается указанный код выхода.  
   
- Чтобы отключить эту ошибку и продолжить сеанс программы NMAKE, используйте параметр \/I, директиву **.IGNORE** или модификатор команд "тире" \(**\-**\).  Чтобы продолжить сеанс программы NMAKE для несвязанных компонентов дерева зависимостей, используйте параметр \/K.
+ Чтобы отключить эту ошибку и продолжить сеанс программы NMAKE, используйте параметр/i, **. ИГНОРИРОВАТЬ** директива точку или дефис (**-**) в качестве модификатора команды. Чтобы продолжить сеанс программы NMAKE для несвязанных компонентов дерева зависимостей, используйте параметр/k.

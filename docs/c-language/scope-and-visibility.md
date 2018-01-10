@@ -17,11 +17,12 @@ caps.latest.revision: "7"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 9e9dca1b95af3971045a1ce86807ef28be096546
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: c61d9c6f38851e48335f83cccfeb5a8bf4aba448
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="scope-and-visibility"></a>Область и видимость
 Видимость идентификатора определяет части программы, в которых можно сослаться на идентификатор, то есть ее область. Идентификатор является видимым (т. е. его можно использовать) только в частях программы, входящих в ее область, которая может быть ограничена (в порядке повышение количества ограничений) файлом, функцией, блоком или прототипом функции, в котором она отображается. Область идентификатора — это часть программы, в которой можно использовать имя. В некоторых случаях она называется лексической областью. Существует четыре типа области: функция, файл, блок и прототип функции.  

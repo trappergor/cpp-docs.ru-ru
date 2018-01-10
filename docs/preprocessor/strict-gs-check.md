@@ -1,33 +1,33 @@
 ---
-title: "strict_gs_check | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "strict_gs_check"
-  - "strict_gs_check_CPP"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "strict_gs_check - прагма"
+title: "strict_gs_check | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- strict_gs_check
+- strict_gs_check_CPP
+dev_langs: C++
+helpviewer_keywords: strict_gs_check pragma
 ms.assetid: decfec81-c916-42e0-a07f-8cc26df6a7ce
-caps.latest.revision: 9
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 9
+caps.latest.revision: "9"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 5c355bd385a997e8ff3fd9ec323d50bb33b9c6fd
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 12/21/2017
 ---
-# strict_gs_check
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Эта директива \#pragma обеспечивает усиленную проверку безопасности.  
+# <a name="strictgscheck"></a>strict_gs_check
+Эта директива #pragma обеспечивает усиленную проверку безопасности.  
   
-## Синтаксис  
+## <a name="syntax"></a>Синтаксис  
   
 ```  
 #pragma strict_gs_check([push,] on )   
@@ -35,17 +35,17 @@ caps.handback.revision: 9
 #pragma strict_gs_check(pop)  
 ```  
   
-## Заметки  
- Заставляет компилятор вставлять случайные объекты cookie в стек функции, помогая обнаруживать некоторые категории переполнения буфера на основе стека.  По умолчанию параметр компилятора \/GS \(проверка безопасности буфера\) обеспечивает вставку объектов cookie не для всех функций.  Дополнительные сведения см. в разделе [Параметр \/GS \(проверка безопасности буфера\)](../Topic/-GS%20\(Buffer%20Security%20Check\).md).  
+## <a name="remarks"></a>Примечания  
+ Заставляет компилятор вставлять случайные объекты cookie в стек функции, помогая обнаруживать некоторые категории переполнения буфера на основе стека. По умолчанию параметр компилятора /GS (проверка безопасности буфера) обеспечивает вставку объектов cookie не для всех функций. Дополнительные сведения см. в разделе [Параметр /GS (проверка безопасности буфера)](../build/reference/gs-buffer-security-check.md).  
   
- Для включения поверки strict\_gs\_check необходимо выполнять компиляцию с параметром \/GS \(проверка безопасности буфера\).  
+ Для включения поверки strict_gs_check необходимо выполнять компиляцию с параметром /GS (проверка безопасности буфера).  
   
- Используйте эту директиву \#pragma в модулях кода, которые могут получать потенциально вредоносные данные.  Эта директива \#pragma отличается очень агрессивным поведением и применяется к функциям, для которых подобная защита может не требоваться, но оптимизирована с целью минимального влияния на производительность конечного приложения.  
+ Используйте эту директиву #pragma в модулях кода, которые могут получать потенциально вредоносные данные. Эта директива #pragma отличается очень агрессивным поведением и применяется к функциям, для которых подобная защита может не требоваться, но оптимизирована с целью минимального влияния на производительность конечного приложения.  
   
- Даже при использовании этой директивы \#pragma следует стремиться к созданию защищенного программного кода.  Обязательно убедитесь, что в коде нет ошибок переполнения буфера. Проверка strict\_gs\_check может помочь защитить приложение от ошибок переполнения буфера, не обнаруженных в коде.  
+ Даже при использовании этой директивы #pragma следует стремиться к созданию защищенного программного кода. Т. е убедитесь, что код не имеющий переполнений буфера. strict_gs_check может защитить приложение от переполнения буфера, которые остаются в своем коде.  
   
-## Пример  
- В следующем коде переполнение буфера возникает при копировании массива в локальный массив.  Если компилировать этот код с параметром \/GS, объекты cookie не помещаются в стек, поскольку тип данных массива является указателем.  Добавление директивы \#pragma strict\_gs\_check вызывает принудительное помещение объектов cookie стека в стек функции.  
+## <a name="example"></a>Пример  
+ В следующем коде переполнение буфера возникает при копировании массива в локальный массив. Если компилировать этот код с параметром /GS, объекты cookie не помещаются в стек, поскольку тип данных массива является указателем. Добавление директивы #pragma strict_gs_check вызывает принудительное помещение объектов cookie стека в стек функции.  
   
 ```cpp  
 // pragma_strict_gs_check.cpp  
@@ -73,6 +73,6 @@ void ** ReverseArray(void **pData,
   
 ```  
   
-## См. также  
- [Директивы Pragma и ключевое слово \_\_Pragma](../preprocessor/pragma-directives-and-the-pragma-keyword.md)   
- [Параметр \/GS \(проверка безопасности буфера\)](../Topic/-GS%20\(Buffer%20Security%20Check\).md)
+## <a name="see-also"></a>См. также  
+ [Директивы pragma и ключевое слово __Pragma](../preprocessor/pragma-directives-and-the-pragma-keyword.md)   
+ [Параметр /GS (проверка безопасности буфера)](../build/reference/gs-buffer-security-check.md)

@@ -18,11 +18,12 @@ caps.latest.revision: "13"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 2853c40a5eaa3ccb8dbbf5855b92b4cba9b3a140
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 0223d9733f9290d989183a34b91779ee1f4d5e28
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="virtual-list-controls"></a>Элементы управления виртуального списка
 Элемент управления виртуального списка — элемент управления представления списка, имеющий **LVS_OWNERDATA** стиля. Этот стиль включает элемент управления для поддержки количество элементов до `DWORD` (число элементов по умолчанию распространяется только на `int`). Тем не менее предоставляемые этот стиль главным преимуществом является возможность имеют только подмножество элементов данных в памяти в любой момент времени. Это позволяет элементу управления представления виртуального списка будет недоступно для использования с большими базами данных сведений, где конкретные методы доступа к данным уже используется.  

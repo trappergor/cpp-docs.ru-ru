@@ -1,32 +1,33 @@
 ---
-title: "retval | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-f1_keywords: 
-  - "vc-attr.retval"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "retval attribute"
+title: "retval | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+f1_keywords: vc-attr.retval
+dev_langs: C++
+helpviewer_keywords: retval attribute
 ms.assetid: bfa16f08-157d-4eea-afde-1232c54b8501
-caps.latest.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 9
+caps.latest.revision: "9"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: cf7aa0cf8dd9767f603807ee18e23fe02d3446c7
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 12/21/2017
 ---
-# retval
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="retval"></a>retval
 Назначает параметр, который получает возвращаемое значение члена.  
   
-## Синтаксис  
+## <a name="syntax"></a>Синтаксис  
   
 ```  
   
@@ -34,29 +35,28 @@ caps.handback.revision: 9
   
 ```  
   
-## Заметки  
- **retval** Атрибут C\+\+ имеет ту же функциональность, что и  [retval](http://msdn.microsoft.com/library/windows/desktop/aa367158) атрибут MIDL.  
+## <a name="remarks"></a>Примечания  
+ **Retval** языка C++ имеет ту же функциональность, что [retval](http://msdn.microsoft.com/library/windows/desktop/aa367158) языка MIDL.  
   
- **retval** отображаться на последний аргумент в объявлении функции.  
+ **retval** должны располагаться на последний аргумент в объявлении функции.  
   
-## Пример  
- См. пример [bindable](../windows/bindable.md) для использования образцы  **retval**.  
+## <a name="example"></a>Пример  
+ Далее приведен пример [привязываемых](../windows/bindable.md) для приведен пример использования **retval**.  
   
-## Требования  
+## <a name="requirements"></a>Требования  
   
-### Контекст атрибута  
+### <a name="attribute-context"></a>Контекст атрибута  
   
 |||  
 |-|-|  
 |**Применение**|Параметр интерфейса, метод интерфейса|  
-|**Repeatable**|Нет|  
+|**Повторяемый**|Нет|  
 |**Обязательные атрибуты**|**out**|  
 |**Недопустимые атрибуты**|**in**|  
   
- Дополнительные сведения о контекстах атрибута см. в разделе [Контексты атрибута](../windows/attribute-contexts.md).  
+ Дополнительные сведения о контекстах атрибутов см. в разделе [Контексты атрибутов](../windows/attribute-contexts.md).  
   
-## См. также  
- [IDL Attributes](../windows/idl-attributes.md)   
- [Parameter Attributes](../windows/parameter-attributes.md)   
- [Method Attributes](../windows/method-attributes.md)   
- [Attributes Samples](http://msdn.microsoft.com/ru-ru/558ebdb2-082f-44dc-b442-d8d33bf7bdb8)
+## <a name="see-also"></a>См. также  
+ [Атрибуты IDL](../windows/idl-attributes.md)   
+ [Атрибуты параметра](../windows/parameter-attributes.md)   
+ [Атрибуты метода](../windows/method-attributes.md)   

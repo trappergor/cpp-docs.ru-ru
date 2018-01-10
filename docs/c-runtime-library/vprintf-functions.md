@@ -25,11 +25,12 @@ caps.latest.revision: "8"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 1a888f46912aaa5292e9bcf1f83bc3e6926f73d2
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 9820836096cb173cae54de496b6d10de8fe48a48
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="vprintf-functions"></a>Функции vprintf
 Каждая из функций `vprintf` принимает указатель на список аргументов, а затем форматирует и записывает указанные данные в определенное назначение. Функции различаются тем, как они выполняют проверку параметров, принимают ли двухбайтовые или однобайтовые строки символов, какое используют назначение для вывода и позволяют ли указать в строке формата порядок использования параметров.  
@@ -50,8 +51,8 @@ ms.lasthandoff: 10/24/2017
   
 |Функция|Функция-аналог|Назначение выходных данных|Проверка параметров|Поддержка позиционных параметров|  
 |--------------|--------------------------|------------------------|--------------------------|----------------------------------|  
-|`_vcprintf`|[_cprintf](../c-runtime-library/reference/cprintf-cprintf-l-cwprintf-cwprintf-l.md)|консоль|Проверка значений null.|Нет|  
-|`_vcwprintf`|[_cwprintf](../c-runtime-library/reference/cprintf-cprintf-l-cwprintf-cwprintf-l.md)|консоль|Проверка значений null.|Нет|  
+|`_vcprintf`|[_cprintf](../c-runtime-library/reference/cprintf-cprintf-l-cwprintf-cwprintf-l.md)|console|Проверка значений null.|Нет|  
+|`_vcwprintf`|[_cwprintf](../c-runtime-library/reference/cprintf-cprintf-l-cwprintf-cwprintf-l.md)|console|Проверка значений null.|Нет|  
 |`vfprintf`|[fprintf](../c-runtime-library/reference/fprintf-fprintf-l-fwprintf-fwprintf-l.md)|*Поток*|Проверка значений null.|Нет|  
 |**vfprintf_p**|[fprintf_p](../c-runtime-library/reference/fprintf-p-fprintf-p-l-fwprintf-p-fwprintf-p-l.md)|*Поток*|Проверка значений null и допустимого формата.|да|  
 |`vfprintf_s`|[fprintf_s](../c-runtime-library/reference/fprintf-s-fprintf-s-l-fwprintf-s-fwprintf-s-l.md)|*Поток*|Проверка значений null и допустимого формата.|Нет|  
@@ -73,7 +74,7 @@ ms.lasthandoff: 10/24/2017
 |`_vscprintf`|[_vscprintf](../c-runtime-library/reference/vscprintf-vscprintf-l-vscwprintf-vscwprintf-l.md)|память, на которую указывает *buffer*|Проверка значений null.|Нет|  
 |`_vscwprintf`|[_vscwprintf](../c-runtime-library/reference/vscprintf-vscprintf-l-vscwprintf-vscwprintf-l.md)|память, на которую указывает *buffer*|Проверка значений null.|Нет|  
 |`_vsnprintf`|[_snprintf](../c-runtime-library/reference/snprintf-snprintf-snprintf-l-snwprintf-snwprintf-l.md)|память, на которую указывает *buffer*|Проверка значений null.|Нет|  
-|`_vsnwprintf`|[_snwprintf](../c-runtime-library/reference/snprintf-snprintf-snprintf-l-snwprintf-snwprintf-l.md)|память, на которую указывает *buffer*|Проверка значений null.|нет|  
+|`_vsnwprintf`|[_snwprintf](../c-runtime-library/reference/snprintf-snprintf-snprintf-l-snwprintf-snwprintf-l.md)|память, на которую указывает *buffer*|Проверка значений null.|Нет|  
   
  Аргумент `argptr` имеет тип `va_list`, который определен в VARARGS.H и STDARG.H. Переменная `argptr` должна быть инициализирована через **va_start**, и ее можно инициализировать повторно дополнительными вызовами `va_arg`; в этом случае `argptr` указывает на начало списка аргументов, которые преобразуются и передаются в вывод в соответствии со спецификацией, указанной в аргументе *format*. *format* имеет ту же форму и выполняет ту же роль, что и аргумент *format* функции [printf](../c-runtime-library/reference/printf-printf-l-wprintf-wprintf-l.md). Ни одна из этих функций не вызывает `va_end`. Более полное описание каждой функции `vprintf` вы найдете в описании соответствующей функции-аналога, указанной в таблице выше.  
   

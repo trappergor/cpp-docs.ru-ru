@@ -20,16 +20,17 @@ caps.latest.revision: "7"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 1073f0eef2a976866f0bacd0cfbe1f7e6f022334
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: f7d8b6ba1c0287492195ee891b1a573bf74de6cf
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="storage-class-specifiers-with-function-declarations"></a>Спецификаторы классов хранения с объявлениями функций
 В объявлениях функций можно использовать описатель класса хранения **static** или `extern`. Функции всегда имеют глобальное время существования.  
   
- **Блок, относящийся только к системам Майкрософт**  
+ **Блок, относящийся только к системам Microsoft**  
   
  Объявления функций на внутреннем уровне имеют то же значение, что и объявления функций на внешнем уровне. Это означает, что функция видна с момента объявления на протяжении всего времени существования записи преобразования, даже если она объявлена с локальной областью видимости.  
   
@@ -43,7 +44,7 @@ ms.lasthandoff: 10/24/2017
   
 -   Объявления функций, опускающие описатель класса хранения, по умолчанию являются `extern`.  
   
- **Блок, относящийся только к системам Майкрософт**  
+ **Блок, относящийся только к системам Microsoft**  
   
  В системах Майкрософт можно повторно определять идентификатор `extern` как **static**.  
   

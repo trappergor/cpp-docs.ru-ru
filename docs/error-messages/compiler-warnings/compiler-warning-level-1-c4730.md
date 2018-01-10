@@ -1,34 +1,33 @@
 ---
-title: "Предупреждение компилятора (уровень 1) C4730 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C4730"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C4730"
+title: "Предупреждение компилятора (уровень 1) C4730 | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords: C4730
+dev_langs: C++
+helpviewer_keywords: C4730
 ms.assetid: 11303e3f-162b-4b19-970a-479686123a68
-caps.latest.revision: 8
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 334c53b030097dc822451b0e555a51c90e70d904
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 12/21/2017
 ---
-# Предупреждение компилятора (уровень 1) C4730
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-"main" : смешивание в выражении операндов с плавающей запятой и \_m64 может привести к созданию неверного кода  
+# <a name="compiler-warning-level-1-c4730"></a>Предупреждение компилятора (уровень 1) C4730
+«main»: смешение _m64 и с плавающей запятой, выражения могут стать причиной неверного кода  
   
- Функция использует типы [\_\_m64](../../cpp/m64.md) и **float**\/**double**.  Так как MMX и регистры с плавающей запятой делят одно и тоже физическое пространство \(их нельзя использовать одновременно\), используя типы `__m64` и **float**\/**double** в одной и той же функции может привести к повреждению данных, возможному генерированию исключения.  
+ Функция использует [__m64](../../cpp/m64.md) и **float**/**двойные** типов. Так как MMX и регистры с плавающей запятой имеют одинаковое физического зарегистрировать пространства (нельзя использовать одновременно), с помощью `__m64` и **float**/**двойные** типов в одном функция может привести к повреждению данных, возможно, вызывая исключение.  
   
- Для безопасного использования типов и типов с плавающей запятой `__m64` в одной и той же функции, каждая инструкция, которая использует один из типов должна отделяться **\_m\_empty\(\)** \(для MMX\) или встроенной функции **\_m\_femms\(\)** \(для 3DNow\!\).  
+ Для безопасного использования `__m64` типов и типов с плавающей запятой в той же функции, каждая инструкция, которая использует один из типов должны быть разделены **_m_empty()** (для MMX) или **_m_femms()** (для 3DNow!) Встроенная функция.  
   
  Следующий пример приводит к возникновению ошибки C4730:  
   

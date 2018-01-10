@@ -17,11 +17,12 @@ caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 74cfdf5393487ddd2cda7d478c0940c6db74b35a
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 06742239c48503a5917317a674a39f50a38702c7
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="array-declarations"></a>Объявления массивов
 "Объявление массива" именует массив и задает тип его элементов. Он также может определять число элементов в массиве. Переменная с типом массива считается указателем на тип элементов массива.  
@@ -101,7 +102,7 @@ extern char *name[];
   
  Эта инструкция объявляет тип и имя массива указателей на `char`. Фактическое определение `name` происходит в другом месте.  
   
- **Блок, относящийся только к системам Майкрософт**  
+ **Блок, относящийся только к системам Microsoft**  
   
  Тип целого числа, необходимый для удержания максимального размера массива, — это размер **size_t**. Определенный в файле заголовка STDDEF.H параметр **size_t** представляет собой `unsigned int` с диапазоном от 0x00000000 до 0x7CFFFFFF.  
   

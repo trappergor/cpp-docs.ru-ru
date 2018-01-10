@@ -1,32 +1,33 @@
 ---
-title: "Метод InvokeHelper::Invoke | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "event/Microsoft::WRL::Details::InvokeHelper::Invoke"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Invoke - метод"
+title: "Метод InvokeHelper::Invoke | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: event/Microsoft::WRL::Details::InvokeHelper::Invoke
+dev_langs: C++
+helpviewer_keywords: Invoke method
 ms.assetid: 98618815-c30e-4699-b3dd-203c91b1bf3b
-caps.latest.revision: 5
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 5
+caps.latest.revision: "5"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: a8707ac96c0417eddb015d7e802433bf071dda80
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 12/21/2017
 ---
-# Метод InvokeHelper::Invoke
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Предназначено для поддержки инфраструктуры WRL, а не для непосредственного использования в коде.  
+# <a name="invokehelperinvoke-method"></a>Метод InvokeHelper::Invoke
+Поддерживает инфраструктуру WRL и не предназначен для использования непосредственно из программного кода.  
   
-## Синтаксис  
+## <a name="syntax"></a>Синтаксис  
   
 ```  
 STDMETHOD(  
@@ -61,7 +62,7 @@ STDMETHOD(
 )( typename Traits;  
 ```  
   
-#### Параметры  
+#### <a name="parameters"></a>Параметры  
  `arg1`  
  Аргумент 1.  
   
@@ -89,17 +90,17 @@ STDMETHOD(
  `arg9`  
  Аргумент 9.  
   
-## Возвращаемое значение  
- Значение S\_ОК в случае успеха; в противном случае — значение HRESULT, указывающее на ошибку.  
+## <a name="return-value"></a>Возвращаемое значение  
+ Значение S_OK, если успешно; в противном случае — значение HRESULT, описывающее ошибку.  
   
-## Заметки  
+## <a name="remarks"></a>Примечания  
  Вызывает обработчик событий, сигнатура которого содержит указанное число аргументов.  
   
-## Требования  
+## <a name="requirements"></a>Требования  
  **Заголовок:** event.h  
   
- **Пространство имен:** Microsoft::WRL::Details  
+ **Пространство имен:** Microsoft::wrl:: Details  
   
-## См. также  
- [Структура InvokeHelper](../windows/invokehelper-structure.md)   
+## <a name="see-also"></a>См. также  
+ [Invokehelper-структура](../windows/invokehelper-structure.md)   
  [Пространство имен Microsoft::WRL::Details](../windows/microsoft-wrl-details-namespace.md)

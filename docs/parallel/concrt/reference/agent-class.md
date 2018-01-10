@@ -27,11 +27,12 @@ caps.latest.revision: "20"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: f3bcd353def1f42269a851c39a1c96e451caa577
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: cc83001328f346aa33d15b0ea6fcfb26eb444ec4
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="agent-class"></a>Класс agent
 Класс, предназначенный для использования в качестве базового класса для всех независимых агентов. Он используется для скрытия состояния от других агентов и взаимодействия посредством передачи сообщений.  
@@ -42,18 +43,18 @@ ms.lasthandoff: 10/24/2017
 class agent;
 ```  
   
-## <a name="members"></a>Члены  
+## <a name="members"></a>Участники  
   
 ### <a name="public-constructors"></a>Открытые конструкторы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[агент](#ctor)|Перегружен. Создает агент.|  
 |[~ агента деструктор](#dtor)|Уничтожает агент.|  
   
 ### <a name="public-methods"></a>Открытые методы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[Отмена](#cancel)|Перемещает агент, либо из `agent_created` или `agent_runnable` состояния следует `agent_canceled` состояния.|  
 |[start](#start)|Перемещает агент из `agent_created` состояние `agent_runnable` состояние и планирует его для выполнения.|  
@@ -65,7 +66,7 @@ class agent;
   
 ### <a name="protected-methods"></a>Защищенные методы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[Договорились](#done)|Перемещает агент в `agent_done` состоянии, указывающее, что агент был выполнен.|  
 |[run](#run)|Представляет основную задача агента. `run`должен быть переопределен в производном классе и указывает, что агент должен делать после его запуска.|  

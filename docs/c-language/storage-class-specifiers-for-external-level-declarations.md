@@ -27,11 +27,12 @@ caps.latest.revision: "8"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 729d46f1e228127b712e1533c7eab5976f690663
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 3764eb29cc46ec7b6159456131dde1024b187f61
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="storage-class-specifiers-for-external-level-declarations"></a>Спецификаторы классов хранения для объявлений внешнего уровня
 Внешние переменные — это переменные в области видимости файла. Они определяются вне конкретной функции и потенциально доступны для множества функций. Функции можно определить только на внешнем уровне, и, следовательно, они не могут быть вложенными. По умолчанию все ссылки на внешние переменные и функции с одинаковым именем являются ссылками на один и тот же объект, что означает, что они имеют внешнюю компоновку. (Чтобы переопределить такое поведение, можно использовать ключевое слово **static**. Дополнительные сведения о ключевом слове **static** см. далее в этой статье.)  

@@ -37,11 +37,12 @@ caps.latest.revision: "21"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: e19bfb11a564f23ce41bbc963a19fd239476dfb7
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 059ff922689eaf354d4b4ae9b89fb49ab8c5a885
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="coledispatchdriver-class"></a>Класс COleDispatchDriver
 Реализует автоматизацию OLE на стороне клиента.  
@@ -52,17 +53,17 @@ ms.lasthandoff: 10/24/2017
 class COleDispatchDriver  
 ```  
   
-## <a name="members"></a>Члены  
+## <a name="members"></a>Участники  
   
 ### <a name="public-constructors"></a>Открытые конструкторы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[COleDispatchDriver::COleDispatchDriver](#coledispatchdriver)|Создает объект `COleDispatchDriver`.|  
   
 ### <a name="public-methods"></a>Открытые методы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[COleDispatchDriver::AttachDispatch](#attachdispatch)|Присоединяет `IDispatch` соединение `COleDispatchDriver` объекта.|  
 |[COleDispatchDriver::CreateDispatch](#createdispatch)|Создает `IDispatch` соединения и прикрепляет его к `COleDispatchDriver` объекта.|  
@@ -74,14 +75,14 @@ class COleDispatchDriver
   
 ### <a name="public-operators"></a>Открытые операторы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[COleDispatchDriver::operator =](#operator_eq)|Копирует значение источника в `COleDispatchDriver` объекта.|  
 |[COleDispatchDriver::operator LPDISPATCH](#operator_lpdispatch)|Получает доступ к базовым `IDispatch` указателя.|  
   
 ### <a name="public-data-members"></a>Открытые члены данных  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[COleDispatchDriver::m_bAutoRelease](#m_bautorelease)|Указывает, следует ли освободить `IDispatch` во время `ReleaseDispatch` или уничтожение объектов.|  
 |[COleDispatchDriver::m_lpDispatch](#m_lpdispatch)|Указывает указатель `IDispatch` интерфейс, прикрепленный к этому `COleDispatchDriver`.|  

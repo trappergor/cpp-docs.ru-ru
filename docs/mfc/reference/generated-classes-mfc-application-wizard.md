@@ -15,11 +15,12 @@ caps.latest.revision: "13"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: f70ad153a0d74df9102f2e4e4ff048603378cb55
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 3c0a5962909c15d881214969c177cad234b2950a
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="generated-classes-mfc-application-wizard"></a>Создаваемые классы, мастер приложений MFC
 В этом разделе перечислены имена базовых классов и файлов, создаваемых в проекте. По умолчанию имена создаются на основе имени проекта, который указан в **диалоговое окно нового проекта**. Большинство этих имен можно изменить, как описано здесь:  

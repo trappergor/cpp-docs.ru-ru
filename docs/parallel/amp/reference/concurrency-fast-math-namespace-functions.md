@@ -50,18 +50,18 @@ f1_keywords:
 - amp_math/Concurrency::fast_math::tanf
 - amp_math/Concurrency::fast_math::tanhf
 - amp_math/Concurrency::fast_math::trunc
-dev_langs:
-- C++
+dev_langs: C++
 ms.assetid: f5763d62-795b-4de6-a7a5-c7115f158708
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translationtype: Machine Translation
-ms.sourcegitcommit: 5faef5bd1be6cc02d6614a6f6193c74167a8ff23
-ms.openlocfilehash: 2ca8b085c7dcc226a216032060e628c7c7ce0a4a
-ms.lasthandoff: 03/17/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: 406f92d4a13502ed784936398070f1b4a7b4eb95
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="concurrencyfastmath-namespace-functions"></a>Функции пространство имен Concurrency::fast_math
 ||||  
@@ -160,7 +160,7 @@ inline float atan(float _X) restrict(amp);
  Возвращает значение арктангенса аргумента  
   
 ##  <a name="atan2"></a>  atan2  
- Вычисляет арктангенс _Y или _X  
+ Вычисляет арктангенс _Y/_X  
   
 ```  
 inline float atan2(
@@ -176,10 +176,10 @@ inline float atan2(
  Значение с плавающей запятой  
   
 ### <a name="return-value"></a>Возвращаемое значение  
- Возвращает значение арктангенса _Y или _X  
+ Возвращает значение арктангенса _Y/_X  
   
 ##  <a name="atan2f"></a>atan2f  
- Вычисляет арктангенс _Y или _X  
+ Вычисляет арктангенс _Y/_X  
   
 ```  
 inline float atan2f(
@@ -195,7 +195,7 @@ inline float atan2f(
  Значение с плавающей запятой  
   
 ### <a name="return-value"></a>Возвращаемое значение  
- Возвращает значение арктангенса _Y или _X  
+ Возвращает значение арктангенса _Y/_X  
   
 ##  <a name="atanf"></a>atanf  
  Вычисляет арктангенс аргумента.  
@@ -223,7 +223,7 @@ inline float ceil(float _X) restrict(amp);
  Значение с плавающей запятой  
   
 ### <a name="return-value"></a>Возвращаемое значение  
- Возвращает максимальную аргумента  
+ Возвращает значение ceiling для аргумента  
   
 ##  <a name="ceilf"></a>ceilf  
  Вычисляет ceiling аргумента  
@@ -237,7 +237,7 @@ inline float ceilf(float _X) restrict(amp);
  Значение с плавающей запятой  
   
 ### <a name="return-value"></a>Возвращаемое значение  
- Возвращает максимальную аргумента  
+ Возвращает значение ceiling для аргумента  
   
 ##  <a name="cosf"></a>cosf  
  Вычисляет косинус аргумента  
@@ -321,7 +321,7 @@ inline float exp2(float _X) restrict(amp);
  Значение с плавающей запятой  
   
 ### <a name="return-value"></a>Возвращаемое значение  
- Возвращает экспоненту аргумента base-2  
+ Возвращает 2 в степени, равной аргументу  
   
 ##  <a name="exp2f"></a>exp2f  
  Вычисляет экспоненту аргумента base-2  
@@ -335,7 +335,7 @@ inline float exp2f(float _X) restrict(amp);
  Значение с плавающей запятой  
   
 ### <a name="return-value"></a>Возвращаемое значение  
- Возвращает экспоненту аргумента base-2  
+ Возвращает 2 в степени, равной аргументу  
   
 ##  <a name="expf"></a>expf  
  Вычисляет экспоненту аргумента base-e  
@@ -360,7 +360,7 @@ inline float fabs(float _X) restrict(amp);
   
 ### <a name="parameters"></a>Параметры  
  `_X`  
- Целое значение  
+ Целочисленное значение  
   
 ### <a name="return-value"></a>Возвращаемое значение  
  Возвращает абсолютное значение аргумента  
@@ -391,7 +391,7 @@ inline float floor(float _X) restrict(amp);
  Значение с плавающей запятой  
   
 ### <a name="return-value"></a>Возвращаемое значение  
- Возвращает минимальную аргумента  
+ Возвращает наименьшее аргумента  
   
 ##  <a name="floorf"></a>floorf  
  Вычисляет floor аргумента  
@@ -405,7 +405,7 @@ inline float floorf(float _X) restrict(amp);
  Значение с плавающей запятой  
   
 ### <a name="return-value"></a>Возвращаемое значение  
- Возвращает минимальную аргумента  
+ Возвращает наименьшее аргумента  
   
 ##  <a name="fmax"></a>fmax  
  Определите максимальное числовое значение аргументов  
@@ -418,13 +418,13 @@ inline float max(
   
 ### <a name="parameters"></a>Параметры  
  `_X`  
- Целое значение  
+ Целочисленное значение  
   
  `_Y`  
- Целое значение  
+ Целочисленное значение  
   
 ### <a name="return-value"></a>Возвращаемое значение  
- Возвращает максимальное значение числового аргументов  
+ Возвращает максимальное числовое значение аргументов  
   
 ##  <a name="fmaxf"></a>fmaxf  
  Определите максимальное числовое значение аргументов  
@@ -443,7 +443,7 @@ inline float fmaxf(
  Значение с плавающей запятой  
   
 ### <a name="return-value"></a>Возвращаемое значение  
- Возвращает максимальное значение числового аргументов  
+ Возвращает максимальное числовое значение аргументов  
   
 ##  <a name="fmin"></a>fmin  
  Определите минимальное числовое значение аргументов  
@@ -456,13 +456,13 @@ inline float min(
   
 ### <a name="parameters"></a>Параметры  
  `_X`  
- Целое значение  
+ Целочисленное значение  
   
  `_Y`  
- Целое значение  
+ Целочисленное значение  
   
 ### <a name="return-value"></a>Возвращаемое значение  
- Возвращает минимальное значение числового аргументов  
+ Возвращает минимальное числовое значение аргументов  
   
 ##  <a name="fminf"></a>fminf  
  Определите минимальное числовое значение аргументов  
@@ -481,10 +481,10 @@ inline float fminf(
  Значение с плавающей запятой  
   
 ### <a name="return-value"></a>Возвращаемое значение  
- Возвращает минимальное значение числового аргументов  
+ Возвращает минимальное числовое значение аргументов  
   
 ##  <a name="fmod"></a>fmod  
- Вычисляет остаток с плавающей запятой от _X или _Y  
+ Вычисляет остаток с плавающей запятой от _X/_Y  
   
 ```  
 inline float fmod(
@@ -500,10 +500,10 @@ inline float fmod(
  Значение с плавающей запятой  
   
 ### <a name="return-value"></a>Возвращаемое значение  
- Возвращает остаток с плавающей запятой _X или _Y  
+ Возвращает остаток с плавающей запятой _X/_Y  
   
 ##  <a name="fmodf"></a>fmodf  
- Вычисляет остаток с плавающей запятой от _X или _Y.  
+ Вычисляет остаток с плавающей запятой от _X/_Y.  
   
 ```  
 inline float fmodf(
@@ -519,10 +519,10 @@ inline float fmodf(
  Значение с плавающей запятой  
   
 ### <a name="return-value"></a>Возвращаемое значение  
- Возвращает остаток с плавающей запятой _X или _Y  
+ Возвращает остаток с плавающей запятой _X/_Y  
   
 ##  <a name="frexp"></a>frexp  
- Возвращает мантиссы и экспоненты _X  
+ Возвращает мантисса и степень из _X  
   
 ```  
 inline float frexp(
@@ -541,7 +541,7 @@ inline float frexp(
  Возвращает _X мантиссы  
   
 ##  <a name="frexpf"></a>frexpf  
- Возвращает мантиссы и экспоненты _X  
+ Возвращает мантисса и степень из _X  
   
 ```  
 inline float frexpf(
@@ -588,7 +588,7 @@ inline int isinf(float _X) restrict(amp);
  Возвращает ненулевое значение только в том случае, если аргумент имеет бесконечное значение  
   
 ##  <a name="isnan"></a>isNaN  
- Определяет, является ли аргумент значение NaN  
+ Определяет, является ли аргумент NaN  
   
 ```  
 inline int isnan(float _X) restrict(amp);
@@ -602,7 +602,7 @@ inline int isnan(float _X) restrict(amp);
  Возвращает ненулевое значение только в том случае, если аргумент имеет значение NaN  
   
 ##  <a name="ldexp"></a>ldexp  
- Вычисляет действительное число мантисса и степень  
+ Вычисляет вещественное число от мантисса и степень  
   
 ```  
 inline float ldexp(
@@ -621,7 +621,7 @@ inline float ldexp(
  Возвращает _X * 2 ^ _Exp  
   
 ##  <a name="ldexpf"></a>ldexpf  
- Вычисляет действительное число мантисса и степень  
+ Вычисляет вещественное число от мантисса и степень  
   
 ```  
 inline float ldexpf(
@@ -640,7 +640,7 @@ inline float ldexpf(
  Возвращает _X * 2 ^ _Exp  
   
 ##  <a name="log"></a>  log  
- Вычисляет логарифм аргумента  
+ Вычисляет логарифм с основанием e аргумента  
   
 ```  
 inline float log(float _X) restrict(amp);
@@ -654,7 +654,7 @@ inline float log(float _X) restrict(amp);
  Возвращает логарифм с основанием e аргумента  
   
 ##  <a name="log10"></a>  log10  
- Вычисляет логарифм по основанию&10; аргумента  
+ Вычисляет логарифм по основанию 10 аргумента  
   
 ```  
 inline float log10(float _X) restrict(amp);
@@ -668,7 +668,7 @@ inline float log10(float _X) restrict(amp);
  Возвращает десятичный логарифм аргумента  
   
 ##  <a name="log10f"></a>log10f  
- Вычисляет логарифм по основанию&10; аргумента  
+ Вычисляет логарифм по основанию 10 аргумента  
   
 ```  
 inline float log10f(float _X) restrict(amp);
@@ -682,7 +682,7 @@ inline float log10f(float _X) restrict(amp);
  Возвращает десятичный логарифм аргумента  
   
 ##  <a name="log2"></a>LOG2  
- Вычисляет логарифм по основанию&2; аргумента  
+ Вычисляет логарифм по основанию 2 аргумента  
   
 ```  
 inline float log2(float _X) restrict(amp);
@@ -693,10 +693,10 @@ inline float log2(float _X) restrict(amp);
  Значение с плавающей запятой  
   
 ### <a name="return-value"></a>Возвращаемое значение  
- Возвращает логарифм по основанию&2; аргумента  
+ Возвращает логарифм по основанию 2 аргумента  
   
 ##  <a name="log2f"></a>log2f  
- Вычисляет логарифм по основанию&2; аргумента  
+ Вычисляет логарифм по основанию 2 аргумента  
   
 ```  
 inline float log2f(float _X) restrict(amp);
@@ -710,7 +710,7 @@ inline float log2f(float _X) restrict(amp);
  Возвращает десятичный логарифм аргумента  
   
 ##  <a name="logf"></a>logf  
- Вычисляет логарифм аргумента  
+ Вычисляет логарифм с основанием e аргумента  
   
 ```  
 inline float logf(float _X) restrict(amp);
@@ -724,7 +724,7 @@ inline float logf(float _X) restrict(amp);
  Возвращает логарифм с основанием e аргумента  
   
 ##  <a name="modf"></a>modf  
- Разделяет _X в долях и целое число частей.  
+ Разбивает _X в долях и частей целое число со знаком.  
   
 ```  
 inline float modf(
@@ -742,7 +742,7 @@ inline float modf(
  Возвращает подписанный дробной части числа _X  
   
 ##  <a name="modff"></a>modff  
- Разделяет _X в долях и целое число частей.  
+ Разбивает _X в долях и частей целое число со знаком.  
   
 ```  
 inline float modff(
@@ -797,7 +797,7 @@ inline float powf(
 ### <a name="return-value"></a>Возвращаемое значение  
   
 ##  <a name="round"></a>Округление  
- Округляет _X до ближайшего целого числа  
+ Округляет _X до ближайшего целого  
   
 ```  
 inline float round(float _X) restrict(amp);
@@ -808,10 +808,10 @@ inline float round(float _X) restrict(amp);
  Значение с плавающей запятой  
   
 ### <a name="return-value"></a>Возвращаемое значение  
- Возвращает целое число, ближайшее из _X  
+ Возвращает ближайшего целого _X  
   
 ##  <a name="roundf"></a>roundf  
- Округляет _X до ближайшего целого числа  
+ Округляет _X до ближайшего целого  
   
 ```  
 inline float roundf(float _X) restrict(amp);
@@ -822,7 +822,7 @@ inline float roundf(float _X) restrict(amp);
  Значение с плавающей запятой  
   
 ### <a name="return-value"></a>Возвращаемое значение  
- Возвращает целое число, ближайшее из _X  
+ Возвращает ближайшего целого _X  
   
 ##  <a name="rsqrt"></a>rsqrt  
  Возвращает обратное квадратного корня аргумент  
@@ -853,7 +853,7 @@ inline float rsqrtf(float _X) restrict(amp);
  Возвращает обратное квадратного корня аргумент  
   
 ##  <a name="signbit"></a>signbit  
- Определяет, является ли знак _X отрицательное  
+ Определяет, является ли знак _X отрицательным  
   
 ```  
 inline int signbit(float _X) restrict(amp);
@@ -864,10 +864,10 @@ inline int signbit(float _X) restrict(amp);
  Значение с плавающей запятой  
   
 ### <a name="return-value"></a>Возвращаемое значение  
- Возвращает ненулевое значение только в том случае, если знак _X отрицательна  
+ Возвращает ненулевое значение только в том случае, если _X имеет отрицательный знак  
   
 ##  <a name="signbitf"></a>signbitf  
- Определяет, является ли знак _X отрицательное  
+ Определяет, является ли знак _X отрицательным  
   
 ```  
 inline int signbitf(float _X) restrict(amp);
@@ -878,7 +878,7 @@ inline int signbitf(float _X) restrict(amp);
  Значение с плавающей запятой  
   
 ### <a name="return-value"></a>Возвращаемое значение  
- Возвращает ненулевое значение только в том случае, если знак _X отрицательна  
+ Возвращает ненулевое значение только в том случае, если _X имеет отрицательный знак  
   
 ##  <a name="sin"></a>  sin  
  Вычисляет синус аргумента  
@@ -926,7 +926,7 @@ inline void sincos(
  Возвращает синус _X  
   
  `_C`  
- Возвращает косинус числа _X  
+ Возвращает косинус значение _X  
   
 ##  <a name="sincosf"></a>sincosf  
  Вычисляет синус и косинус значение _X  
@@ -946,7 +946,7 @@ inline void sincosf(
  Возвращает синус _X  
   
  `_C`  
- Возвращает косинус числа _X  
+ Возвращает косинус значение _X  
   
 ##  <a name="sinh"></a>  sinh  
  Вычисляет гиперболический синус значение аргумента  
@@ -1061,7 +1061,7 @@ inline float tanhf(float _X) restrict(amp);
  Возвращает гиперболический тангенс значение аргумента  
   
 ##  <a name="trunc"></a>TRUNC  
- Усекает для целочисленный аргумент  
+ Усекает целочисленный аргумент  
   
 ```  
 inline float trunc(float _X) restrict(amp);
@@ -1072,10 +1072,10 @@ inline float trunc(float _X) restrict(amp);
  Значение с плавающей запятой  
   
 ### <a name="return-value"></a>Возвращаемое значение  
- Возвращает целочисленный аргумент  
+ Возвращает компонент целочисленный аргумент  
   
 ##  <a name="truncf"></a>truncf  
- Усекает для целочисленный аргумент  
+ Усекает целочисленный аргумент  
   
 ```  
 inline float truncf(float _X) restrict(amp);
@@ -1086,11 +1086,10 @@ inline float truncf(float _X) restrict(amp);
  Значение с плавающей запятой  
   
 ### <a name="return-value"></a>Возвращаемое значение  
- Возвращает целочисленный аргумент  
+ Возвращает компонент целочисленный аргумент  
 
 ## <a name="requirements"></a>Требования
 **Заголовок:** amp_math.h **пространство имен:** Concurrency::fast_math
   
 ## <a name="see-also"></a>См. также  
  [Пространство имен Concurrency::fast_math](concurrency-fast-math-namespace.md)
-

@@ -1,32 +1,31 @@
 ---
-title: "Предупреждение компилятора (уровень 1) C4829 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C4829"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C4829"
+title: "Предупреждение (уровень 1) C4829 компилятора | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords: C4829
+dev_langs: C++
+helpviewer_keywords: C4829
 ms.assetid: 4ffabe2b-2ddc-4c52-8564-d1355c93cfa6
-caps.latest.revision: 14
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 14
+caps.latest.revision: "14"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 5d662aaf24526320c0ced706534099d4c94a3c9f
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 12/21/2017
 ---
-# Предупреждение компилятора (уровень 1) C4829
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Возможно, неверные параметры для функции main.Рассмотрите следующий вариант: "int main\(Platform::Array\<Platform::String^\>^ argv\)"  
+# <a name="compiler-warning-level-1-c4829"></a>Предупреждение компилятора (уровень 1) C4829
+Возможно, неверные параметры для функции main. Рассмотрите возможность "intmain (Platform::Array\<Platform::String ^ > ^ argv)"  
   
- Некоторые функции, например main, не могут принимать параметры ссылочного типа.  Хотя компиляция будет успешной, полученный в результате образ, возможно, не будет выполняться.  
+ Некоторые функции, например main, не могут принимать параметры ссылочного типа. Хотя компиляция будет успешной, полученный в результате образ, возможно, не будет выполняться.  
   
  Следующий пример приводит к возникновению ошибки C4829.  
   

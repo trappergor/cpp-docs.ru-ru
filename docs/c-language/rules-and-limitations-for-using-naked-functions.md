@@ -14,11 +14,12 @@ caps.latest.revision: "8"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: fad2a5c50750b08fcb77657001e02ab76a656df1
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 328d0584d69dfac98a486330c00ff814f55c5856
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="rules-and-limitations-for-using-naked-functions"></a>Правила и ограничения при использовании функций Naked
 Дополнительные сведения о правилах и ограничениях при использовании функций с атрибутом naked см. в соответствующей статье справочника по языку [C++ Rules and Limitations for Naked Functions](../cpp/rules-and-limitations-for-naked-functions.md) (Правила и ограничения C++ для функций с атрибутом naked).  

@@ -1,56 +1,56 @@
 ---
-title: "Функция RaiseException | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "internal/Microsoft::WRL::Details::RaiseException"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "RaiseException - функция"
+title: "Функция RaiseException | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: internal/Microsoft::WRL::Details::RaiseException
+dev_langs: C++
+helpviewer_keywords: RaiseException function
 ms.assetid: f9c74f6d-112a-4d2e-900f-622f795d5dbf
-caps.latest.revision: 5
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 5
+caps.latest.revision: "5"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: 380e3792c5b2b9504bec841965e70bd47ec619d4
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 12/21/2017
 ---
-# Функция RaiseException
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Предназначено для поддержки инфраструктуры WRL, а не для непосредственного использования в коде.  
+# <a name="raiseexception-function"></a>RaiseException - функция
+Поддерживает инфраструктуру WRL и не предназначен для использования непосредственно из программного кода.  
   
-## Синтаксис  
+## <a name="syntax"></a>Синтаксис  
   
 ```  
-inline void __declspec(noreturn)  
-   RaiseException(  
+inline void __declspec(noreturn)   RaiseException(  
       HRESULT hr,   
       DWORD dwExceptionFlags = EXCEPTION_NONCONTINUABLE);  
 ```  
   
-#### Параметры  
+#### <a name="parameters"></a>Параметры  
  `hr`  
- Вызывается код исключения в исключении; то есть HRESULT неудачно завершенной операции.  
+ Код исключения для исключения; то есть HRESULT сбоя операции.  
   
  `dwExceptionFlags`  
- Флажок, который указывает продолжаемое исключение \(значение флажка равно нулю\) или непродолжаемое исключение \(ненулевое значение флажка\).  По умолчанию исключение является непродолжаемым.  
+ Флаг, указывающий продолжено (значение флага равно нулю), либо noncontinuable исключения (значение флага не равно нулю). По умолчанию исключение делающего продолжение невозможным.  
   
-## Примечания  
- Создает исключение в вызывающем потоке.  
+## <a name="remarks"></a>Примечания  
+ Вызывает исключение в вызывающем потоке.  
   
- Для получения дополнительных сведений см. функцию **RaiseException** Windows.  
+ Дополнительные сведения см. в разделе Windows **RaiseException** функции.  
   
-## Требования  
+## <a name="requirements"></a>Требования  
  **Заголовок:** internal.h  
   
- **Пространство имен:** Microsoft::WRL::Details  
+ **Пространство имен:** Microsoft::wrl:: Details  
   
-## См. также  
+## <a name="see-also"></a>См. также  
  [Пространство имен Microsoft::WRL::Details](../windows/microsoft-wrl-details-namespace.md)

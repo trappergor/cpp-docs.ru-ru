@@ -14,11 +14,12 @@ caps.latest.revision: "12"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 85b9c40d5253c707567a7cb0a1c751b1392fc995
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 6c2e669a429bebbfde19f54200610819d0849d8f
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="scheduler-policies"></a>Политики планировщика
 В этом документе описывается роль политик планировщика в среде выполнения с параллелизмом. Объект *политики планировщика* определяет стратегию, которую планировщик применяет при управлении задачами. Например, рассмотрим приложение, которое требует выполнение некоторых задач с `THREAD_PRIORITY_NORMAL` и других задач с `THREAD_PRIORITY_HIGHEST`.  Можно создать два экземпляра планировщика: один задает политику `ContextPriority` как `THREAD_PRIORITY_NORMAL`, а второй определяет ту же политику как `THREAD_PRIORITY_HIGHEST`.  
@@ -36,7 +37,7 @@ ms.lasthandoff: 10/24/2017
 
  [Concurrency::PolicyElementKey](reference/concurrency-namespace-enums.md#policyelementkey) перечисление определяет ключи политики, связанные с планировщиком задач. В следующей таблице описаны ключи политики и значение по умолчанию, используемые средой выполнения для каждого из них.  
   
-|Ключ политики|Описание|Значение по умолчанию|  
+|Ключ политики|Описание:|Значение по умолчанию|  
 |----------------|-----------------|-------------------|  
 |`SchedulerKind`|Объект [concurrency::SchedulerType](reference/concurrency-namespace-enums.md#schedulertype) значение, указывающее тип потоков для планирования задач.|`ThreadScheduler` (используйте стандартные потоки). Это единственное допустимое значение для этого ключа.|  
 |`MaxConcurrency`|`unsigned int` Значение, указывающее максимальное количество ресурсов параллелизма, которые используются планировщиком.|[Concurrency::MaxExecutionResources](reference/concurrency-namespace-constants1.md#maxexecutionresources)|  

@@ -28,11 +28,12 @@ caps.latest.revision: "12"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 6ef848d5b00df1140850e19611a426d289539ef0
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: a17ce210dffd13e0ffdac142c6121954eec1045d
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="tn038-mfcole-iunknown-implementation"></a>TN038. Реализация MFC/OLE IUnknown
 > [!NOTE]
@@ -78,7 +79,7 @@ ULONG CMyObj::Release()
 }  
 ```  
   
- [QueryInterface](http://msdn.microsoft.com/library/windows/desktop/ms682521) функция-член является более интересным. Это не очень интересно объект только функции-члены которого являются [AddRef](http://msdn.microsoft.com/library/windows/desktop/ms691379) и [выпуска](http://msdn.microsoft.com/library/windows/desktop/ms682317) — бы желательно заставить объект выполнять больше задач, чем [IUnknown](http://msdn.microsoft.com/library/windows/desktop/ms680509) предоставляет. Это место, куда [QueryInterface](http://msdn.microsoft.com/library/windows/desktop/ms682521) полезно. Он позволяет получать разный «интерфейс» на базе одного и того же объекта. Эти интерфейсы обычно являются производными от [IUnknown](http://msdn.microsoft.com/library/windows/desktop/ms680509) и добавить дополнительную функциональность путем добавления новых функций-членов. COM-интерфейсы никогда не имеют объявляемых в интерфейсе переменных-членов, а все функции-члены объявлены как чисто виртуальные. Например:  
+ [QueryInterface](http://msdn.microsoft.com/library/windows/desktop/ms682521) функция-член является более интересным. Это не очень интересно объект только функции-члены которого являются [AddRef](http://msdn.microsoft.com/library/windows/desktop/ms691379) и [выпуска](http://msdn.microsoft.com/library/windows/desktop/ms682317) — бы желательно заставить объект выполнять больше задач, чем [IUnknown](http://msdn.microsoft.com/library/windows/desktop/ms680509) предоставляет. Это место, куда [QueryInterface](http://msdn.microsoft.com/library/windows/desktop/ms682521) полезно. Он позволяет получать разный «интерфейс» на базе одного и того же объекта. Эти интерфейсы обычно являются производными от [IUnknown](http://msdn.microsoft.com/library/windows/desktop/ms680509) и добавить дополнительную функциональность путем добавления новых функций-членов. COM-интерфейсы никогда не имеют объявляемых в интерфейсе переменных-членов, а все функции-члены объявлены как чисто виртуальные. Например, примененная к объекту директива  
   
 ```  
 class IPrintInterface : public IUnknown  
@@ -267,7 +268,7 @@ HRESULT CEditPrintObj::CPrintObj::QueryInterface(
 }  
 ```  
   
- Обратите внимание, что большая часть [IUnknown](http://msdn.microsoft.com/library/windows/desktop/ms680509) реализация помещается в класс CEditPrintObj вместо того чтобы дублировать код в CEditPrintObj::CEditObj и CEditPrintObj::CPrintObj. Это уменьшает объем кода и помогает избежать ошибок. Главное здесь то, что от интерфейса IUnknown можно вызвать [QueryInterface](http://msdn.microsoft.com/library/windows/desktop/ms682521) для получения любого интерфейса который объект должен поддерживать и из любого из этих интерфейсов можно сделать то же самое. Это означает, что все [QueryInterface](http://msdn.microsoft.com/library/windows/desktop/ms682521) функций, доступных из каждого интерфейса должны вести себя точно так же. Чтобы эти внедренные объекты вызвали реализацию во «внешнем объекте», используется обратный указатель (m_pParent). Указатель m_pParent инициализируется во время выполнения конструктора CEditPrintObj. Затем следует реализовать CEditPrintObj::CPrintObj::PrintObject, а также CEditPrintObj::CEditObj::EditObject. Потребовалось написать довольно большой объем кода для реализации одной функции — возможности изменения объекта. К счастью, интерфейсы крайне редко имеют только одну функцию-член (хотя такое и случается), и в этом случае EditObject и PrintObject обычно объединяются в единый интерфейс.  
+ Обратите внимание, что большая часть [IUnknown](http://msdn.microsoft.com/library/windows/desktop/ms680509) реализация помещается в класс CEditPrintObj вместо того чтобы дублировать код в CEditPrintObj::CEditObj и CEditPrintObj::CPrintObj. Это уменьшает объем кода и помогает избежать ошибок. Главное здесь то, что от интерфейса IUnknown можно вызвать [QueryInterface](http://msdn.microsoft.com/library/windows/desktop/ms682521) для получения любого интерфейса который объект должен поддерживать и из любого из этих интерфейсов можно сделать то же самое. Это означает, что все [QueryInterface](http://msdn.microsoft.com/library/windows/desktop/ms682521) функций, доступных из каждого интерфейса должны вести себя точно так же. Чтобы эти внедренные объекты вызвали реализацию во «внешнем объекте», используется обратный указатель (m_pParent). Указатель m_pParent инициализируется во время выполнения конструктора CEditPrintObj. Затем следует реализовать CEditPrintObj::CPrintObj::PrintObject, а также CEditPrintObj::CEditObj::EditObject. Потребовалось написать довольно большой объем кода для реализации одной возможности — возможности изменения объекта. К счастью, интерфейсы крайне редко имеют только одну функцию-член (хотя такое и случается), и в этом случае EditObject и PrintObject обычно объединяются в единый интерфейс.  
   
  Такой простой сценарий требует слишком долгих пояснений и слишком большого объема кода. Классы MFC/OLE предоставляют более простую альтернативу. Реализация MFC использует методику, аналогичную использованию программы-оболочки для сообщений Windows с помощью схем сообщений. Этот компонент называется *схемы интерфейсов* и рассматривается в следующем разделе.  
   

@@ -18,11 +18,12 @@ caps.latest.revision: "9"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 8c2d37d95a20ac2a71c50d468a7793ae4ab8956f
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 6fb26b4488f6c75c0d9d7b70afb68c3c1b5e3178
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="l-value-and-r-value-expressions"></a>Выражения L-Value и R-Value
 Выражения, которые ссылаются на адреса памяти, называются выражениями l-значения. L-значение представляет значение locator или left области хранения, что означает, что оно может отображаться слева от знака равенства (**=**). L-значения часто являются идентификаторами.  
@@ -47,7 +48,7 @@ ms.lasthandoff: 10/24/2017
   
  Термин "r-значение" иногда используется, чтобы описать значение выражения и отличить его от l-значения. Все l-значения являются r-значениями, но не все r-значения являются l-значениями.  
   
- **Блок, относящийся только к системам Майкрософт**  
+ **Блок, относящийся только к системам Microsoft**  
   
  Microsoft C включает расширение стандарта ANSI C, позволяющее использовать приведения l-значений как l-значения, если размер объекта не увеличивается при приведении. Дополнительные сведения см. в статье [Type-Cast Conversions](../c-language/type-cast-conversions.md) (Преобразования с приведением типов). Данная возможность показана в следующем примере.  
   

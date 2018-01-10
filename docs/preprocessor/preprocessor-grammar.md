@@ -1,112 +1,113 @@
 ---
-title: "Грамматика препроцессора | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "грамматика, препроцессор"
-  - "препроцессор"
-  - "препроцессор, грамматика"
+title: "Грамматика препроцессора | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- preprocessor
+- grammar, preprocessor
+- preprocessor, grammar
 ms.assetid: 6cd33fad-0b08-4592-9be8-7359c43e24e9
-caps.latest.revision: 7
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 797d4bf4274a92ca4f265d01579698c0f9c6a4a3
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 12/21/2017
 ---
-# Грамматика препроцессора
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-**\#define**  *идентификатор* *строка\-токена*необ  
+# <a name="preprocessor-grammar"></a>Грамматика препроцессора
+**#define***идентификатор* *строке токена*необязательно    
   
- *\#* **define**  *идентификатор*\[**\(** *идентификатор*необ**,** *...* **,** *идентификатор*необ **\)**\] *строка\-токена*необ  
+ *#***определить***идентификатор*[**(** *идентификатор*необ**,** *...*  **,** *идентификатор*необ **)**] *строке токена*необязательно    
   
- **определено\(**  *идентификатор* **\)**  
+ **определенные (***идентификатор* **)**   
   
- **определено**  *идентификатор*  
+ **определенные***идентификатор*   
   
- `#include` **"***спецификация\-пути***"**  
+ `#include`**»***-пути***»**  
   
- `#include` **\<***спецификация\-пути***\>**  
+ `#include` **\<**  *-пути***>**  
   
- **\#line**  *последовательность\-цифр* **"** *имя\-файла* **"** необ  
+ **#line***последовательность цифр***»** *filename* **»**необязательно      
   
- *\#* **undef**  *идентификатор*  
+ *#***undef***идентификатор*   
   
- **\#error**  *строка\-токена*  
+ **#error***строке токена*   
   
- **\#pragma**  *строка\-токена*  
+ **#pragma***строке токена*   
   
- *условные*:  
- *if\-часть elif\-части* необ *else\-часть*необ *endif\-строка*  
+ *Условное* :  
+ *IF часть elif части*необ*else часть*необ*endif строка*  
   
- *if\-часть* :  
- *if\-текст\-строки*  
+ *IF часть* :  
+ *Если linetext*  
   
- *if\-строка* :  
- **\#if**  *константное\-выражение*  
+ *Если строка* :  
+ **#if***константное выражение*   
   
- **\#ifdef**  *идентификатор*  
+ **#ifdef***идентификатор*   
   
- **\#ifndef**  *идентификатор*  
+ **#ifndef***идентификатор*   
   
- *elif\-части* :  
- *elif\-текст\-строки*  
+ *elif части* :  
+ *текст elif строки*  
   
- *elif\-части elif\-текст\-строки*  
+ *elif части elif строки текста*  
   
- *elif\-строка* :  
- **\#elif**  *константное\-выражение*  
+ *elif строки* :  
+ **#elif***константное выражение*   
   
- *else\-часть* :  
- *else\-текст\-строки*  
+ *Else часть* :  
+ *Else linetext*  
   
- *else\-строка* :  
+ *строки Else* :  
  `#else`  
   
- *endif\-строка* :  
+ *ENDIF строка* :  
  `#endif`  
   
- *последовательность\-цифр* :  
- *цифровой\-знак*  
+ *последовательность цифр* :  
+ *digit*  
   
- *последовательность\-цифр цифра*  
+ *digit-sequence digit*  
   
- *цифра* : одна из  
+ *цифра* : один из  
  **0 1 2 3 4 5 6 7 8 9**  
   
- *строка\-токена* :  
+ *маркер строки* :  
  Строка токенов  
   
- *токен*:  
- *ключевое\-слово*  
+ *токен* :  
+ *keyword*  
   
  *identifier*  
   
- *константа*  
+ *constant*  
   
- *оператор*  
+ *operator*  
   
  `punctuator`  
   
- *имя файла*:  
+ *Имя файла* :  
  Допустимое имя файла в ОС  
   
- *спецификация\-пути* :  
+ *PATH-spec* :  
  Допустимый путь к файлу  
   
  *текст* :  
  Любая текстовая последовательность  
   
 > [!NOTE]
->  Следующие нетерминальные элементы рассматриваются в приложении А, [Сводка по грамматике](../misc/grammar-summary-cpp.md), *справочника по языку C\+\+*: `constant`, `constant`\-*выражение*, *идентификатор*, *ключевое слово*, `operator` и `punctuator`.  
+>  Следующие Нетерминальные элементы рассматриваются в [лексические соглашения](../cpp/lexical-conventions.md) раздел *Справочник по языку C++*: `constant`, `constant` - *выражение* , *идентификатор*, *ключевое слово*, `operator`, и `punctuator`.  
   
-## См. также  
- [Общие сведения о грамматике](../preprocessor/grammar-summary-c-cpp.md)
+## <a name="see-also"></a>См. также  
+ [Общие сведения о грамматике (C/C++)](../preprocessor/grammar-summary-c-cpp.md)

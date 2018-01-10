@@ -13,11 +13,12 @@ caps.latest.revision: "8"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 274154eb0688bc974a34b511d0aa39d08bb27b61
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: ba7e3f139aa9956cd9d2587522dc2d0ac1f2ff7b
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="visual-c-porting-and-upgrading-guide"></a>Руководство по переносу и обновлению Visual C++
 В этом разделе содержится руководство по обновлению кода Visual C++. В нем рассматриваются такие вопросы, как получение кода для компиляции и корректной работы в новом выпуске инструментов, а также эффективное применение нового языка и функций Visual Studio. В этом разделе также содержатся сведения о миграции приложений прежних версий на более современные платформы.  
@@ -78,7 +79,7 @@ ms.lasthandoff: 10/24/2017
   
 ## <a name="related-topics"></a>Связанные разделы  
   
-|Заголовок|Описание|  
+|Заголовок|Описание:|  
 |-----------|-----------------|  
 |[Обновление проектов, созданных в предыдущих версиях Visual C++](upgrading-projects-from-earlier-versions-of-visual-cpp.md)|Описываются способы использования проектов, созданных в предыдущих версиях Visual C++.|  
 |[Новые возможности Visual C++ в версии-кандидате Visual Studio 2017](../what-s-new-for-visual-cpp-in-visual-studio.md)|Изменения в интегрированной среде разработки и инструментах Visual Studio 2015–2017|  

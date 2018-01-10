@@ -1,33 +1,33 @@
 ---
-title: "threading (C++) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-f1_keywords: 
-  - "vc-attr.threading"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "threading attribute"
+title: "Работа с потоками (C++) | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+f1_keywords: vc-attr.threading
+dev_langs: C++
+helpviewer_keywords: threading attribute
 ms.assetid: 9b558cd6-fbf0-4602-aed5-31c068550ce3
-caps.latest.revision: 10
-caps.handback.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "10"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: e44fec96391fff6700ecf4a453d7455bd75e9df7
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 12/21/2017
 ---
-# threading (C++)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Указывает потоковую модель для com\-объекта.  
+# <a name="threading-c"></a>threading (C++)
+Указывает, что потоковая модель для COM-объекта.  
   
-## Синтаксис  
+## <a name="syntax"></a>Синтаксис  
   
 ```  
   
@@ -36,49 +36,48 @@ manager: "ghogen"
 ) ]  
 ```  
   
-#### Параметры  
- ***model*** \(необязательно\)  
- Потоковых одну из следующих моделей.  
+#### <a name="parameters"></a>Параметры  
+ ***модель*** (необязательно)  
+ Одно из следующих потоковые модели:  
   
--   **плоский** потоковая модель Подразделение \(\)  
+-   **подразделения** (потоковое)  
   
--   **нейтрально** \(компоненты платформы .NET Framework без пользовательского интерфейса\)  
+-   **нейтральный** (компоненты .NET Framework без интерфейса пользователя)  
   
--   **Одинарный** \(простой работа с потоками\)  
+-   **один** (Работа с потоками в простой)  
   
--   **free** работа с потоками \(free\)  
+-   **Бесплатные** (освобождения потоков)  
   
--   **оба** \(threading подразделения и свободена\)  
+-   **оба** (подразделения и свободной потоковой модели)  
   
- Значение по умолчанию **плоский**.  
+ Значение по умолчанию — **подразделения**.  
   
-## Заметки  
- **Потоки** Атрибут C\+\+ не отображается в созданный файл idl, но будет использоваться в реализации com\-объекта.  
+## <a name="remarks"></a>Примечания  
+ **Работа с потоками** C++ атрибут не отображается в сгенерированный IDL-файл, но будет использоваться в реализации COM-объекта.  
   
- В проектах библиотеки ATL, если [CoClass](../windows/coclass.md) атрибут также присутствуют, потоковая модель, определенная by модель передает в качестве параметра шаблона  [CComObjectRootEx](../atl/reference/ccomobjectrootex-class.md) класс, вставленный  **CoClass** атрибут.  
+ В проекты ATL Если [coclass](../windows/coclass.md) присутствует также атрибут, потоковой модели, указанный *модель* передается как параметр шаблона [CComObjectRootEx](../atl/reference/ccomobjectrootex-class.md) класса , вставленное методом **coclass** атрибута.  
   
- **Потоки** атрибута к условий также  [event\_source](../windows/event-source.md).  
+ **Работа с потоками** атрибута также защищает доступ к [event_source](../windows/event-source.md).  
   
-## Пример  
- См. [лицензировано](../windows/licensed.md) пример использования образца  **Потоки**.  
+## <a name="example"></a>Пример  
+ В разделе [лицензированных](../windows/licensed.md) пример приведен пример использования **работа с потоками**.  
   
-## Требования  
+## <a name="requirements"></a>Требования  
   
-### Контекст атрибута  
+### <a name="attribute-context"></a>Контекст атрибута  
   
 |||  
 |-|-|  
-|**Применение**|**класс**"  `struct`|  
-|**Repeatable**|Нет|  
-|**Обязательные атрибуты**|**CoClass**|  
-|**Недопустимые атрибуты**|None|  
+|**Применение**|**class**, `struct`|  
+|**Повторяемый**|Нет|  
+|**Обязательные атрибуты**|**coclass**|  
+|**Недопустимые атрибуты**|Нет|  
   
- Дополнительные сведения о контекстах атрибута см. в разделе [Контексты атрибута](../windows/attribute-contexts.md).  
+ Дополнительные сведения о контекстах атрибутов см. в разделе [Контексты атрибутов](../windows/attribute-contexts.md).  
   
-## См. также  
- [COM Attributes](../Topic/COM%20Attributes.md)   
- [Typedef, Enum, Union, and Struct Attributes](../windows/typedef-enum-union-and-struct-attributes.md)   
- [Class Attributes](../windows/class-attributes.md)   
- [Поддержка многопоточности для устаревшего кода \(Visual C\+\+\)](../parallel/multithreading-support-for-older-code-visual-cpp.md)   
- [Neutral Apartments](http://msdn.microsoft.com/library/windows/desktop/ms681813)   
- [Attributes Samples](http://msdn.microsoft.com/ru-ru/558ebdb2-082f-44dc-b442-d8d33bf7bdb8)
+## <a name="see-also"></a>См. также  
+ [Атрибуты COM](../windows/com-attributes.md)   
+ [TypeDef, Enum, Union и Struct атрибуты](../windows/typedef-enum-union-and-struct-attributes.md)   
+ [Атрибуты классов](../windows/class-attributes.md)   
+ [Поддержка многопоточности для устаревшего кода (Visual C++)](../parallel/multithreading-support-for-older-code-visual-cpp.md)   
+ [Нейтральный подразделения](http://msdn.microsoft.com/library/windows/desktop/ms681813)   

@@ -28,11 +28,12 @@ caps.latest.revision: "26"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: ee67049241067285f564e59791f408347cc0c747
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 16aff4db1a04c31b3b45c9a61f74c44d6c9465f6
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="filename-search-functions"></a>Функции поиска имени файла
 Эти функции осуществляют и завершают поиск для указанных имен файлов:  
@@ -94,7 +95,7 @@ ms.lasthandoff: 10/24/2017
   
  Функции `_find` допускают вложение. Например, если вызов функции `_findfirst` или `_findnext` нашел файл, являющийся подкаталогом, новый поиск можно начать другим вызовом функции `_findfirst` или `_findnext`.  
   
- `_wfindfirst` и `_wfindnext` — это версии функций `_findfirst` и `_findnext`для расширенных символов. Аргумент структуры версий для расширенных символов имеет тип данных `_wfinddata_t` , который определен в файлах IO.h и Wchar.h. Поля этого типа данных совпадают с полями типа данных `_finddata_t` , за исключением того, что в `_wfinddata_t` поле имени имеет тип `wchar_t` , а не тип `char`. В остальном поведение функций `_wfindfirst` и `_wfindnext` не отличается от поведения функций `_findfirst` и `_findnext`.  
+ `_wfindfirst` и `_wfindnext` — это версии функций `_findfirst` и `_findnext`для расширенных символов. Аргумент структуры версий для расширенных символов имеет тип данных `_wfinddata_t`, который определен в файлах IO.h и Wchar.h. Поля этого типа данных совпадают с полями типа данных `_finddata_t` , за исключением того, что в `_wfinddata_t` поле имени имеет тип `wchar_t` , а не тип `char`. В остальном поведение функций `_wfindfirst` и `_wfindnext` не отличается от поведения функций `_findfirst` и `_findnext`.  
   
  Функции`_findfirst` и `_findnext` используют 64-разрядный тип времени. Если необходимо использовать прежний 32-разрядный тип времени, можно определить `_USE_32BIT_TIME_T`. Версии этих функций, в именах которых имеется суффикс `32` , используют 32-разрядный тип времени; версии с суффиксом `64` используют 64-разрядный тип времени.  
   

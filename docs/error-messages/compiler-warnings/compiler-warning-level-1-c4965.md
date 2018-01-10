@@ -4,48 +4,30 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-tools
+ms.technology: cpp-tools
 ms.tgt_pltfrm: 
 ms.topic: error-reference
-f1_keywords:
-- C4965
-dev_langs:
-- C++
-helpviewer_keywords:
-- C4965
+f1_keywords: C4965
+dev_langs: C++
+helpviewer_keywords: C4965
 ms.assetid: 47f3f6dc-459b-4a25-9947-f394c8966cb5
-caps.latest.revision: 14
+caps.latest.revision: "14"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
-ms.openlocfilehash: 53ed24bf928a971d1a315af73fa01b786da8958e
-ms.contentlocale: ru-ru
-ms.lasthandoff: 02/24/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: 0f92cc2115bc35c669b4d45784e1e1d79875551e
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="compiler-warning-level-1-c4965"></a>Предупреждение компилятора (уровень 1) C4965
-неявная упаковка целого числа 0; используйте nullptr или явное приведение типов  
+неявная упаковка целого числа 0; используйте nullptr или явное приведение  
   
- Visual C++ поддерживает неявная упаковка-преобразование типов значений. Инструкция, которая привела к нулевому назначению с помощью управляемых расширений для C++ теперь становится назначением с упакованным  
+ Visual C++ поддерживает неявная упаковка-преобразование типов значений. Инструкцию, которая привела к нулевому назначению с помощью управляемых расширений для C++ теперь становится назначением с упакованным  
   
- Дополнительные сведения см. в разделе [упаковки](../../windows/boxing-cpp-component-extensions.md).  
+ Дополнительные сведения см. в разделе [упаковка-преобразование](../../windows/boxing-cpp-component-extensions.md).  
   
 ## <a name="example"></a>Пример  
  Следующий пример приводит к возникновению ошибки C4965.  

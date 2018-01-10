@@ -17,11 +17,12 @@ caps.latest.revision: "7"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 45e9d2e6940955b07624b89cafd09b7d89d9cd2c
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 9dde09f2125b595ffb3d79a69b4755353a0116bb
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="required-and-optional-header-files"></a>Обязательные и необязательные файлы заголовков
 Описание каждой подпрограммы времени выполнения включает список обязательных и необязательных включаемых файлов заголовков (.H) для этой подпрограммы. Обязательные файлы заголовков необходимо включать, чтобы получить объявление функции для подпрограммы, или определение, используемое другой, вызываемой внутренне подпрограммой. Необязательные файлы заголовков обычно включаются для использования предопределенных констант, определений типов или встроенных макросов. В следующей таблице приведены примеры содержимого необязательных файлов заголовков:  

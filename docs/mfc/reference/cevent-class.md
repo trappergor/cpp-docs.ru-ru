@@ -27,11 +27,12 @@ caps.latest.revision: "27"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 7a44b005738103b91fd435bdc88f5fef9a1888a0
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 0646e703f172777817aa569fa28d3430624ccae8
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cevent-class"></a>Класс CEvent
 Представляет событие, которое представляет объект синхронизации, позволяющий одному потоку известить другой, произошло событие поток.  
@@ -42,17 +43,17 @@ ms.lasthandoff: 10/24/2017
 class CEvent : public CSyncObject  
 ```  
   
-## <a name="members"></a>Члены  
+## <a name="members"></a>Участники  
   
 ### <a name="public-constructors"></a>Открытые конструкторы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[CEvent::CEvent](#cevent)|Создает объект `CEvent`.|  
   
 ### <a name="public-methods"></a>Открытые методы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[CEvent::PulseEvent](#pulseevent)|Задает доступные события (сигнал) освобождает ожидающих потоков и задает событие на недоступный (несигнальное).|  
 |[CEvent::ResetEvent](#resetevent)|Задает событие на недоступный (несигнальное).|  

@@ -15,11 +15,14 @@ caps.latest.revision: "3"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: ad32c1ed42a2a991ba9ed9bd550330bc460834cc
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: c33d48c69852ab22cfa2bfb4f33d45edcc469662
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="asyncbase-class"></a>AsyncBase - класс
 Реализует асинхронный конечный автомат среды выполнения Windows.  
@@ -52,17 +55,17 @@ class AsyncBase< TComplete, Details::Nil, resultType > : public Microsoft::WRL::
  `resultType`  
  Один из [AsyncResultType](../windows/asyncresulttype-enumeration.md) значений перечисления. По умолчанию SingleResult.  
   
-## <a name="members"></a>Члены  
+## <a name="members"></a>Участники  
   
 ### <a name="public-constructors"></a>Открытые конструкторы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[Конструктор AsyncBase::AsyncBase](../windows/asyncbase-asyncbase-constructor.md)|Инициализирует экземпляр класса AsyncBase.|  
   
 ### <a name="public-methods"></a>Открытые методы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[Метод AsyncBase::Cancel](../windows/asyncbase-cancel-method.md)|Отменяет асинхронную операцию.|  
 |[Метод AsyncBase::Close](../windows/asyncbase-close-method.md)|Закрывает асинхронной операции.|  
@@ -80,7 +83,7 @@ class AsyncBase< TComplete, Details::Nil, resultType > : public Microsoft::WRL::
   
 ### <a name="protected-methods"></a>Защищенные методы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[Метод AsyncBase::CheckValidStateForDelegateCall](../windows/asyncbase-checkvalidstatefordelegatecall-method.md)|Проверяет, является ли делегат свойства можно изменить в текущем состоянии асинхронной.|  
 |[Метод AsyncBase::CheckValidStateForResultsCall](../windows/asyncbase-checkvalidstateforresultscall-method.md)|Проверяет, является ли результаты асинхронной операции можно собирать в текущем состоянии асинхронной.|  

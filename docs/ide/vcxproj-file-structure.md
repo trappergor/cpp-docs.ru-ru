@@ -14,11 +14,12 @@ caps.latest.revision: "1"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: bc57a69b71bd7fbdbf97d5c34e7e6ec0694bb5df
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: bdfd703b819b40a2fc391c1c6cb17edd0eff4cb9
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="vcxproj-and-props-file-structure"></a>Структура файла VCXPROJ-файл и с расширением PROPS
 MSBuild — система проекта по умолчанию в Visual Studio. При выборе **файл | Новый проект** в Visual C++ создается проекта MSBuild, параметры которого хранятся в XML-файл проекта, который имеет расширение `.vcxproj`. Файл проекта также может импортировать файлы с расширением PROPS и TARGETS-файлы, где можно хранить параметры. В большинстве случаев вам никогда не потребуется вручную изменить файл проекта, а на самом деле не следует изменять его вручную при отсутствии полного понимания MSBuild. По возможности следует использовать страницы свойств Visual Studio для изменения параметров проектов (см. [работа со свойствами проекта](working-with-project-properties.md). Однако в некоторых случаях может потребоваться изменить страницу файла или свойства проекта вручную. Для этих сценариев эта статья содержит основные сведения о структуре файла. 

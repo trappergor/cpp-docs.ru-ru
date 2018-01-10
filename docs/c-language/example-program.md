@@ -13,11 +13,12 @@ caps.latest.revision: "8"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 976b3c21e24a8e1e6c99664b31d32f85985d7f55
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 903e4890bfad23310f0663fde52af4065e78486e
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="example-program"></a>Пример программы
 Следующая исходная программа на языке C состоит из двух файлов исходного кода. В ней показаны различные объявления и определения, возможные в программе на языке C. В последующих разделах этого документа описывается, как создавать такие объявления, определения и инициализации, и как использовать ключевые слова C, например **static** и `extern`. Функция `printf` объявлена в файле заголовка C STDIO.H.  

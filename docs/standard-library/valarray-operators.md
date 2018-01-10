@@ -6,25 +6,52 @@ ms.reviewer:
 ms.suite: 
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords: []
+f1_keywords:
+- valarray/std::operator!=
+- valarray/std::operator%
+- valarray/std::operator&amp;
+- valarray/std::operator&amp;&amp;
+- valarray/std::operator&gt;
+- valarray/std::operator&gt;&gt;
+- valarray/std::operator&gt;=
+- valarray/std::operator&lt;
+- valarray/std::operator&lt;&lt;
+- valarray/std::operator&lt;=
+- valarray/std::operator*
+- valarray/std::operator+
+- valarray/std::operator-
+- valarray/std::operator/
+- valarray/std::operator==
+- valarray/std::operator^
+- valarray/std::operator|
+- valarray/std::operator||
+dev_langs: C++
 ms.assetid: 8a53562c-90ab-4eb3-85d3-ada5259d90b0
-caps.latest.revision: 8
+caps.latest.revision: "8"
 manager: ghogen
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
-ms.openlocfilehash: aa730db3fd5e9a3ea4919bb255d49532f7440981
-ms.contentlocale: ru-ru
-ms.lasthandoff: 04/29/2017
-
+helpviewer_keywords:
+- std::operator!= (valarray), std::operator&amp; (valarray)
+- std::operator&amp;&amp; (valarray)
+- std::operator&gt; (valarray)
+- std::operator&gt;&gt; (valarray)
+- std::operator&gt;= (valarray)
+- std::operator&lt; (valarray)
+- std::operator&lt;&lt; (valarray)
+- std::operator&lt;= (valarray), std::operator== (valarray)
+ms.openlocfilehash: b422f33addb61eed4ce04eeef74a76a597f799ee
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="ltvalarraygt-operators"></a>Операторы &lt;valarray&gt;
 ||||  
 |-|-|-|  
 |[оператор!=](#op_neq)|[оператор%](#op_mod)|[оператор&amp;](#op_amp)|  
-|[оператор&amp;&amp;](#op_amp_amp)|[оператор&gt;](#op_gt)|[operator&gt;&gt;](#op_gt_gt)|  
+|[operator&amp;&amp;](#op_amp_amp)|[оператор&gt;](#op_gt)|[operator&gt;&gt;](#op_gt_gt)|  
 |[operator&gt;=](#op_gt_eq)|[оператор&lt;](#op_lt)|[operator&lt;&lt;](#op_lt_lt)|  
-|[оператор&lt;=](#op_lt_eq)|[оператор*](#op_star)|[оператор+](#op_add)|  
-|[оператор-](#operator-)|[оператор/](#op_div)|[оператор==](#op_eq_eq)|  
+|[operator&lt;=](#op_lt_eq)|[оператор*](#op_star)|[operator+](#op_add)|  
+|[operator-](#operator-)|[оператор/](#op_div)|[оператор==](#op_eq_eq)|  
 |[оператор^](#op_xor)|[оператор|](#op_or)|[оператор||](#op_lor)|  
   
 ##  <a name="op_neq"></a> operator!=  
@@ -198,7 +225,7 @@ The remainders from the element-by-element division is the
 *\  
 ```  
   
-##  <a name="op_amp"></a>  оператор&amp;  
+##  <a name="op_amp"></a> operator&amp;  
  Вычисляет результат применения побитовой операции **И** между соответствующими элементами двух одинаковых по размеру объектов valarray или между объектом valarray и указанным значением типа элемента.  
   
 ```  
@@ -232,7 +259,7 @@ operator&(
  Valarray, элементы которого представляют собой поэлементную сочетание побитовую операцию и для `left` и `right`.  
   
 ### <a name="remarks"></a>Примечания  
- Побитовые операции могут использоваться только с типами данных `char` и `int` и их разновидностями и не могут использоваться с типами **float**, **double**, **longdouble**, `void``bool` или другими, более сложными типами данных.  
+ Побитовые операции могут использоваться только с типами данных `char` и `int` и их разновидностями и не могут использоваться с типами **float**, **double**, **longdouble**, `void`, `bool` или другими, более сложными типами данных.  
   
  Побитовое **И** имеет ту же таблицу истинности, что и логическое **И** , но применяется к типам данных на уровне отдельных битов. Оператор [operator&&](../standard-library/valarray-operators.md#amp) применяется на уровне элемента, интерпретируя все ненулевые значения как true. Результатом является объект valarray из логических значений. Применение оператора побитового "И" **operator&**, напротив, может привести к появлению в объекте valarray значений, отличных от 0 или 1, в зависимости от результата побитовой операции.  
   
@@ -283,7 +310,7 @@ The element-by-element result of the bitwise operator & is the
 *\  
 ```  
   
-##  <a name="op_amp_amp"></a>  оператор&amp;&amp;  
+##  <a name="op_amp_amp"></a> operator&amp;&amp;  
  Вычисляет результат применения логической операции **И** между соответствующими элементами двух одинаковых по размеру объектов valarray или между объектом valarray и указанным значением типа элемента valarray.  
   
 ```  
@@ -366,7 +393,7 @@ The element-by-element result of the logical AND operator&& is the
 *\  
 ```  
   
-##  <a name="op_gt"></a>  оператор&gt;  
+##  <a name="op_gt"></a> operator&gt;  
  Проверяет, что элементы одного объекта valarray больше чем элементы одинакового по размеру объекта valarray или что все элементы объекта valarray больше или меньше, чем указанное значение.  
   
 ```  
@@ -540,7 +567,7 @@ The element-by-element result of the greater than or equal test is the
 *\  
 ```  
   
-##  <a name="op_gt_gt"></a>  оператор&gt;&gt;  
+##  <a name="op_gt_gt"></a> operator&gt;&gt;  
  Сдвигает вправо биты для каждого элемента valarray на указанное число позиций или на поэлементную сумму, указанную вторым valarray.  
   
 ```  
@@ -623,7 +650,7 @@ The element-by-element result of the right shift is the
 *\  
 ```  
   
-##  <a name="op_lt"></a>  оператор&lt;  
+##  <a name="op_lt"></a> operator&lt;  
  Проверяет, меньше ли элементы одного valarray, чем элементы одинакового по размеру valarray или больше ли либо меньше ли все элементы valarray, чем указанное значение.  
   
 ```  
@@ -710,7 +737,7 @@ The element-by-element result of the less-than comparson test is the
 *\  
 ```  
   
-##  <a name="op_lt_eq"></a>  оператор&lt;=  
+##  <a name="op_lt_eq"></a> operator&lt;=  
  Проверяет, меньше или равны ли элементы одного valarray элементам одинакового по размеру valarray, или проверяет, больше или равны ли либо меньше или равны ли все элементы valarray указанному значению.  
   
 ```  
@@ -797,7 +824,7 @@ The element-by-element result of the less than or equal test is the
 *\  
 ```  
   
-##  <a name="op_lt_lt"></a>  оператор&lt;&lt;  
+##  <a name="op_lt_lt"></a> operator&lt;&lt;  
  Сдвигает влево биты для каждого элемента valarray на указанное число позиций или на поэлементную сумму, указанную вторым valarray.  
   
 ```  
@@ -1210,7 +1237,7 @@ The element-by-element result of the quotient is the
 *\  
 ```  
   
-##  <a name="op_eq_eq"></a>  оператор==  
+##  <a name="op_eq_eq"></a> operator==  
  Проверяет, равны ли все элементы двух одинаковых по размеру объектов valarray или равны ли все элементы объекта valarray указанному значению.  
   
 ```  
@@ -1331,7 +1358,7 @@ operator^(
  Valarray, элементы которого представляют собой поэлементную сочетание побитового **XOR** операции `left` и `right`.  
   
 ### <a name="remarks"></a>Примечания  
- Побитовые операции могут использоваться только с типами данных `char` и `int` и их разновидностями и не могут использоваться с типами **float**, **double**, `long double`, `void``bool` или другими, более сложными типами данных.  
+ Побитовую операцию может использоваться только для управления bits в `char` и `int` типов данных и их вариантов и не в **float**, **двойные**, `long double`, `void`, `bool` или других, более сложных типов данных.  
   
  Побитовое исключающее `OR` ( **ИЛИ**) имеет следующую семантику: если взять биты *b*1 и *b*2, то *b*1 **исключающее ИЛИ** *b*2 имеет значение **true**, если только один из битов имеет значение true, и имеет значение **false**, если оба бита имеют значение false или оба бита имеют значение true.  
   
@@ -1509,7 +1536,7 @@ operator||(
  Valarray, элементы которого имеют тип `bool` и поэлементно сочетания логическую операцию OR `left` и `right`.  
   
 ### <a name="remarks"></a>Примечания  
- Логическое `OR``operator||` применяется на уровне элемента, интерпретируя все ненулевые значения как **true**. Результатом является объект valarray из логических значений. Применение оператора побитового `OR`, [operator|](../standard-library/valarray-operators.md#op_or), напротив, может привести к появлению в объекте valarray значений, отличных от 0 или 1, в зависимости от результата побитовой операции.  
+ Логический `OR` `operator||` применяется на уровне элемента, подсчет нулевых значений как **true**, и это является результатом valarray логических значений. Применение оператора побитового `OR`, [operator|](../standard-library/valarray-operators.md#op_or), напротив, может привести к появлению в объекте valarray значений, отличных от 0 или 1, в зависимости от результата побитовой операции.  
   
 ### <a name="example"></a>Пример  
   
@@ -1564,5 +1591,4 @@ The element-by-element result of the logical OR operator|| is the
   
 ## <a name="see-also"></a>См. также  
  [\<valarray>](../standard-library/valarray.md)
-
 

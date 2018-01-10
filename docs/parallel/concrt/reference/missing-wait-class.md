@@ -4,43 +4,26 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-windows
+ms.technology: cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
 - missing_wait
 - CONCRT/concurrency::missing_wait
 - CONCRT/concurrency::missing_wait::missing_wait
-dev_langs:
-- C++
-helpviewer_keywords:
-- missing_wait class
+dev_langs: C++
+helpviewer_keywords: missing_wait class
 ms.assetid: ff981875-bd43-47e3-806f-b03c9f418b18
-caps.latest.revision: 19
+caps.latest.revision: "19"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 5faef5bd1be6cc02d6614a6f6193c74167a8ff23
-ms.openlocfilehash: 70b1c77660992b33de2204fd4f4221ed6e957e21
-ms.contentlocale: ru-ru
-ms.lasthandoff: 03/17/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: 952a2b88ebb91449341085a923e06d389aa10fe4
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="missingwait-class"></a>Класс missing_wait
 Этот класс описывает исключение, возникающее при наличии задач, для которых по-прежнему запланирован объект `task_group` или `structured_task_group` на момент выполнения деструктора объекта. Это исключение не создается, если деструктор достигается из-за освобождения стека в результате исключения.  
@@ -51,16 +34,16 @@ ms.lasthandoff: 03/17/2017
 class missing_wait : public std::exception;
 ```  
   
-## <a name="members"></a>Члены  
+## <a name="members"></a>Участники  
   
 ### <a name="public-constructors"></a>Открытые конструкторы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[missing_wait](#ctor)|Перегружен. Создает объект `missing_wait`.|  
   
 ## <a name="remarks"></a>Примечания  
- Отсутствует поток исключений, вы несете ответственность за вызов либо `wait` или `run_and_wait` метод `task_group` или `structured_task_group` объекта перед разрешением этого объекта для уничтожения. Среда выполнения создает это исключение, как это означает, что вы забыли вызывать `wait` или `run_and_wait` метод.  
+ Отсутствует поток исключение, вы несете ответственность за вызов любого `wait` или `run_and_wait` метод `task_group` или `structured_task_group` объект, прежде чем разрешить этот объект для уничтожения. Среда выполнения создает исключение как признак того, вы забыли вызвать `wait` или `run_and_wait` метод.  
   
 ## <a name="inheritance-hierarchy"></a>Иерархия наследования  
  `exception`  
@@ -92,4 +75,3 @@ missing_wait() throw();
  [Ожидание](task-group-class.md)   
  [run_and_wait](task-group-class.md)   
  [Класс structured_task_group](structured-task-group-class.md)
-

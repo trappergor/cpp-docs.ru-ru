@@ -14,28 +14,27 @@ f1_keywords:
 - memory/std::operator<=
 - memory/std::operator<<
 - memory/std::operator==
-dev_langs:
-- C++
+dev_langs: C++
 ms.assetid: 257e3ba9-c4c2-4ae8-9b11-b156ba9c28de
-caps.latest.revision: 13
+caps.latest.revision: "13"
 author: corob-msft
 ms.author: corob
 manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 957be55cd6f38f6ff1ea271b09dcdaa1a241c945
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
-ms.sourcegitcommit: 65f4e356ad0d46333b0d443d0fd6ac0b9f2b6f58
-ms.openlocfilehash: 95563f5eeb70d33e3ebba4de0aead276a2230669
-ms.contentlocale: ru-ru
-ms.lasthandoff: 10/03/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="ltmemorygt-operators"></a>операторы &lt;memory&gt;
 ||||  
 |-|-|-|  
-|[оператор!=](#op_neq)|[оператор&gt;](#op_gt)|[оператор&gt;=](#op_gt_eq)|  
-|[оператор&lt;](#op_lt)|[operator&lt;&lt;](#op_lt_lt)|[оператор&lt;=](#op_lt_eq)|  
+|[оператор!=](#op_neq)|[оператор&gt;](#op_gt)|[operator&gt;=](#op_gt_eq)|  
+|[оператор&lt;](#op_lt)|[operator&lt;&lt;](#op_lt_lt)|[operator&lt;=](#op_lt_eq)|  
 |[оператор==](#op_eq_eq)|  
   
-##  <a name="op_neq"></a>  оператор!=  
+##  <a name="op_neq"></a> operator!=  
  Проверяет неравенство между объектами.  
   
 ```  
@@ -242,7 +241,7 @@ sp0 == sp0 == true
 sp0 == sp1 == false  
 ```  
   
-##  <a name="op_gt_eq"></a>  оператор&gt;=  
+##  <a name="op_gt_eq"></a> operator&gt;=  
  Проверяет, больше или равен один объект второму объекту.  
   
 ```  
@@ -301,7 +300,7 @@ bool operator<(
  `Ty2`  
  Тип, управляемый правым указателем.  
   
-##  <a name="op_lt_eq"></a>  оператор&lt;=  
+##  <a name="op_lt_eq"></a> operator&lt;=  
  Проверяет, меньше или равен один объект второму объекту.  
   
 ```  
@@ -360,7 +359,7 @@ bool operator>(
  `Ty2`  
  Тип, управляемый правым общим указателем.  
   
-##  <a name="op_lt_lt"></a>  оператор&lt;&lt;  
+##  <a name="op_lt_lt"></a> operator&lt;&lt;  
 Записывает в поток общий указатель.  
   
 ```  
@@ -413,5 +412,4 @@ sp0 == 3f3040 (varies)
   
 ## <a name="see-also"></a>См. также  
  [\<memory>](../standard-library/memory.md)
-
 

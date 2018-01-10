@@ -17,14 +17,15 @@ caps.latest.revision: "11"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 4c1596f035da98524238e558ffe23816730aa42b
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 861310be7e13c0ca5e656edc4214e59f5dacd659
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="c-integer-limits"></a>Пределы целых чисел в C++
-**Блок, относящийся только к системам Майкрософт**  
+**Блок, относящийся только к системам Microsoft**  
   
  Ограничения для целочисленных типов представлены в следующей таблице. Эти ограничения заданы в стандартном файле заголовка LIMITS.H. В Microsoft C также допускается объявление целочисленных переменных с указанием размера, которые относятся к целочисленным типам с размером 8, 16 или 32 бит. Дополнительные сведения о них см. в разделе [Целочисленные типы с указанием размера](../c-language/c-sized-integer-types.md).  
   

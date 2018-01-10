@@ -1,32 +1,33 @@
 ---
-title: "synchronize | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-f1_keywords: 
-  - "vc-attr.synchronize"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "synchronize attribute"
+title: "синхронизировать | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+f1_keywords: vc-attr.synchronize
+dev_langs: C++
+helpviewer_keywords: synchronize attribute
 ms.assetid: 15fc8544-955d-4765-b3d5-0f619c8b3f40
-caps.latest.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 10
+caps.latest.revision: "10"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: 6d326a4069334a223db7824e5fa3bcaefbc97697
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 12/21/2017
 ---
-# synchronize
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Синхронизировать доступ к методу пристрелки.  
+# <a name="synchronize"></a>synchronize
+Синхронизирует доступ к целевому методу.  
   
-## Синтаксис  
+## <a name="syntax"></a>Синтаксис  
   
 ```  
   
@@ -34,15 +35,15 @@ caps.handback.revision: 10
   
 ```  
   
-## Заметки  
- **синхронизировать** Атрибут C\+\+ реализует поддержку синхронизировать метод пристрелки объекта.  Синхронизация обеспечивает несколько объектов для использования общего ресурса \(uri\) \(например метод класса\), отслеживая доступ метода пристрелки.  
+## <a name="remarks"></a>Примечания  
+ **Синхронизации** атрибута C++ реализует поддержку для синхронизации целевого метода объекта. Управление доступом для целевого метода синхронизации разрешает несколько объектов для использования общих ресурсов (например, метод класса).  
   
- Код вставленный этим атрибутом вызовет соответствующее `Lock` метод \(заданный потоковой моделью\) в начале метода пристрелки.  При выйденн, метод `Unlock` автоматически вызывает.  Дополнительные сведения об этих функциях см. в разделе [CComAutoThreadModule:: блокировать](../Topic/CComAutoThreadModule::Lock.md)  
+ Код, вставленный в этом атрибуте вызывает соответствующим `Lock` метод (определяется модель потоков) в начале целевого метода. При выходе из метода, `Unlock` вызывается автоматически. Дополнительные сведения об этих функциях см. в разделе [CComAutoThreadModule::Lock](../atl/reference/ccomautothreadmodule-class.md#lock)  
   
- Этот атрибут необходим [CoClass](../windows/coclass.md)"  [идентификатор progid](../Topic/progid.md)или  [vi\_progid](../windows/vi-progid.md) атрибут \(или другой атрибут, подразумевается одно из них\) также были применены к одному элементу.  Если отдельный атрибут используется, то остальные 2 автоматически применены.  Например, если **идентификатор progid** применяет  **vi\_progid** и  **CoClass** также применить.  
+ Этот атрибут требует, чтобы атрибут [coclass](../windows/coclass.md), [progid](../windows/progid.md)или [vi_progid](../windows/vi-progid.md) (или другой атрибут, который подразумевает один из них) также применялся к этому элементу. Если используется любой отдельный атрибут, два других применяются автоматически. Например если **progid** применяется, **vi_progid** и **coclass** также применяются.  
   
-## Пример  
- Следующий код обеспечивает синхронизацию `UpdateBalance` метод   `CMyClass` объект.  
+## <a name="example"></a>Пример  
+ Следующий код обеспечивает синхронизацию для `UpdateBalance` метод `CMyClass` объекта.  
   
 ```  
 // cpp_attr_ref_synchronize.cpp  
@@ -69,19 +70,18 @@ class CMyClass {
 };  
 ```  
   
-## Требования  
+## <a name="requirements"></a>Требования  
   
-### Контекст атрибута  
+### <a name="attribute-context"></a>Контекст атрибута  
   
 |||  
 |-|-|  
 |**Применение**|Метод класса, метод|  
-|**Repeatable**|Нет|  
-|**Обязательные атрибуты**|Одно или несколько из следующих значений: **CoClass**"  **идентификатор progid**или  **vi\_progid**.|  
-|**Недопустимые атрибуты**|None|  
+|**Повторяемый**|Нет|  
+|**Обязательные атрибуты**|Один или несколько из следующих: **coclass**, **progid**или **vi_progid**.|  
+|**Недопустимые атрибуты**|Нет|  
   
- Дополнительные сведения о контекстах атрибута см. в разделе [Контексты атрибута](../windows/attribute-contexts.md).  
+ Дополнительные сведения о контекстах атрибутов см. в разделе [Контексты атрибутов](../windows/attribute-contexts.md).  
   
-## См. также  
- [COM Attributes](../Topic/COM%20Attributes.md)   
- [Attributes Samples](http://msdn.microsoft.com/ru-ru/558ebdb2-082f-44dc-b442-d8d33bf7bdb8)
+## <a name="see-also"></a>См. также  
+ [Атрибуты COM](../windows/com-attributes.md)   

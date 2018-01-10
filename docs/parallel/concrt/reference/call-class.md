@@ -23,11 +23,12 @@ caps.latest.revision: "21"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: b1c629355db7f2e77ef0854a52c86848adb70c6f
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 2d575aaa01a3668925c6a81eda7d8d99cc591180
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="call-class"></a>Класс call
 Блок обмена сообщениями `call` — это упорядоченный блок `target_block` с несколькими источниками, который вызывает заданную функцию при получении сообщения.  
@@ -46,18 +47,18 @@ class call : public target_block<multi_link_registry<ISource<T>>>;
  `_FunctorType`  
  Подпись функции, которые может принимать этот блок.  
   
-## <a name="members"></a>Члены  
+## <a name="members"></a>Участники  
   
 ### <a name="public-constructors"></a>Открытые конструкторы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[вызов](#ctor)|Перегружен. Создает `call` блока обмена сообщениями.|  
 |[~ вызова деструктора](#dtor)|Уничтожает `call` блока обмена сообщениями.|  
   
 ### <a name="protected-methods"></a>Защищенные методы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[process_input_messages](#process_input_messages)|Выполняет функцию вызвать для входящих сообщений.|  
 |[process_message](#process_message)|Обрабатывает сообщение, которое было принято данным `call` блока обмена сообщениями.|  

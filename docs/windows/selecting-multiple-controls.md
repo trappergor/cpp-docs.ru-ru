@@ -1,58 +1,62 @@
 ---
-title: "Selecting Multiple Controls | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Dialog editor, selecting controls"
-  - "dialog box controls, selecting in editor"
-  - "controls [C++], selecting"
-  - "controls [C++], removing from groups"
+title: "Выбор нескольких элементов управления | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- Dialog editor, selecting controls
+- dialog box controls, selecting in editor
+- controls [C++], selecting
+- controls [C++], removing from groups
 ms.assetid: efbdbade-0a3a-4328-b36e-a6376c06e8de
-caps.latest.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 6
+caps.latest.revision: "10"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: b91e6d1bcadede053d1960cb15de6e2257190761
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 12/21/2017
 ---
-# Selecting Multiple Controls
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-### Выбор нескольких элементов управления  
+# <a name="selecting-multiple-controls"></a>Выбор нескольких элементов управления
+### <a name="to-select-multiple-controls"></a>Выбор нескольких элементов управления  
   
-1.  В [окне панели элементов](../Topic/Toolbox.md) выберите инструмент **Указатель**.  
+1.  В [окно панели элементов](/visualstudio/ide/reference/toolbox)выберите **указатель** средства.  
   
-2.  Перетаскивая указатель, нарисуйте прямоугольник таким образом, чтобы заключить в него элементы управления, которые необходимо выбрать для диалогового окна.  
+2.  Перетащите указатель, чтобы нарисовать поле выбора вокруг элементов управления, которые вы хотите выбрать диалогового окна.  
   
-     После того, как вы отпустите кнопку мыши все элементы управления, оказавшиеся внутри очерченной области и на границе с ней, будут выделены.  
+     Отпустите кнопку мыши, все элементы управления внутри и пересекающиеся выбрано поле выбора.  
   
-     \- или \-  
+     \- или -  
   
--   Удерживая нажатой клавишу SHIFT, щелкните элементы управления, которые необходимо выделить.  
+-   Удерживая нажатой клавишу SHIFT и щелкните элементы управления, которые вы хотите включить в список.  
   
-     \- или \-  
+     \- или -  
   
--   Удерживая нажатой клавишу CTRL, щелкните элементы управления, которые необходимо выделить.  
+-   Удерживая нажатой клавишу Ctrl и щелкните элементы управления, которые вы хотите включить в список.  
   
-#### Удаление элементов управления из группы выбранных элементов и добавление элементов управления  
+#### <a name="to-remove-a-control-from-a-group-of-selected-controls-or-to-add-a-control-to-a-group-of-selected-controls"></a>Чтобы удалить элемент управления из группы выбранных элементов или чтобы добавить элемент управления в группу выбранных элементов управления  
   
-1.  Если группа элементов управления уже выделена, удерживая нажатой клавишу SHIFT, щелкните элемент управления, которые необходимо добавить в группу или удалить из нее.  
+1.  С группой выделенных элементов управления удерживая нажатой клавишу SHIFT и щелкните элемент управления, который требуется удалить или добавить в существующее выделение.  
   
     > [!NOTE]
-    >  Чтобы выделить главный элемент управления в группе, удерживая нажатой клавишу CTRL, щелкните нужный элемент управления в составе группы.  Дополнительные сведения см. в разделе [Выбор главного элемента управления](../mfc/specifying-the-dominant-control.md).  
+    >  Удерживая нажатой клавишу CTRL и щелчок элемента управления в составе будет убедитесь, что главный элемент управления в этот выбор. Дополнительные сведения см. в разделе [Задание главного элемента управления](../windows/specifying-the-dominant-control.md).  
   
- Сведения о добавлении ресурсов в управляемые проекты см. в разделе [Ресурсы приложений](../Topic/Resources%20in%20Desktop%20Apps.md) *Руководства разработчика .NET Framework*. Сведения о том, как вручную добавлять файлы ресурсов в управляемые проекты, осуществлять доступ к ресурсам, отображать статические ресурсы и присваивать строки ресурсов свойствам см. в разделах [Пошаговое руководство. Локализация приложений Windows Forms](http://msdn.microsoft.com/ru-ru/9a96220d-a19b-4de0-9f48-01e5d82679e5) и [Walkthrough: Using Resources for Localization with ASP.NET](../Topic/Walkthrough:%20Using%20Resources%20for%20Localization%20with%20ASP.NET.md).  
+ Сведения о добавлении ресурсов в управляемые проекты см. в разделе [ресурсы в классических приложениях](/dotnet/framework/resources/index) в *руководства разработчика .NET Framework.* Сведения о вручную добавлять файлы ресурсов в управляемые проекты, осуществлять доступ к ресурсам, отображать статические ресурсы и присваивать строки ресурсов свойствам см. в разделе [Создание файлов ресурсов для приложений рабочего стола](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Сведения о глобализации и локализации ресурсов в управляемых приложениях см. в разделе [Globalizing и локализация приложений .NET Framework](/dotnet/standard/globalization-localization/index).  
   
-### Требования  
+### <a name="requirements"></a>Требования  
  Win32  
   
-## См. также  
- [Selecting Controls](../mfc/selecting-controls.md)   
- [Controls in Dialog Boxes](../mfc/controls-in-dialog-boxes.md)
+## <a name="see-also"></a>См. также  
+ [Выбор элементов управления](../windows/selecting-controls.md)   
+ [Элементы управления в диалоговых окнах](../windows/controls-in-dialog-boxes.md)
+

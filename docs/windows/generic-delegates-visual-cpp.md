@@ -16,11 +16,14 @@ caps.latest.revision: "20"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 7d09aa9d2ea4df90ad8a74b426942d21ea1d2f6e
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: 2511034af4399c983b8114ec01a86e3290bd2a8c
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="generic-delegates-visual-c"></a>Универсальные делегаты (Visual C++)
 Параметры универсального типа можно использовать с делегатами. Дополнительные сведения о делегатах см. в разделе [delegate (расширения компонентов C++)](../windows/delegate-cpp-component-extensions.md).  

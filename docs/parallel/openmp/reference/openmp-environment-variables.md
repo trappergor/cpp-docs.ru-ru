@@ -1,35 +1,36 @@
 ---
-title: "OpenMP Environment Variables | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
+title: "Переменные среды OpenMP | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
 ms.assetid: 2178ce2b-ffa1-45ec-a455-64437711d15d
-caps.latest.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 9
+caps.latest.revision: "9"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: e285ab34c7bf993b919a2c917f44828c21970f67
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 12/21/2017
 ---
-# OpenMP Environment Variables
-[!INCLUDE[vs2017banner](../../../assembler/inline/includes/vs2017banner.md)]
-
-Ссылки на переменные среды, используемые в API модели OpenMP.  
+# <a name="openmp-environment-variables"></a>Переменные среды OpenMP
+Ссылки на переменные среды, используемые в OpenMP API.  
   
- Реализация Visual C\+\+ стандарта OpenMP включает следующие переменные среды.  Эти переменные среды считываются при запуске программы и изменения их значения игнорируются во время выполнения \(например, использование \_putenv\).  
+ Реализация Visual C++ OpenMP standard включает следующие переменные среды. Эти переменные среды считываются при запуске программы и изменения их значения учитываются во время выполнения (например, с помощью [_putenv, _wputenv](../../../c-runtime-library/reference/putenv-wputenv.md)).  
   
-|Переменная среды|Описание|  
-|----------------------|--------------|  
-|[OMP\_DYNAMIC](../../../parallel/openmp/reference/omp-dynamic.md)|Определяет, может ли время выполнения OpenMP может обрабатывать количество потоков в параллельной области.|  
-|[OMP\_NESTED](../../../parallel/openmp/reference/omp-nested.md)|Указывает, включена ли вложенные параллелизм, если вложенные параллелизм не включена, либо заблокирована с `omp_set_nested`.|  
-|[OMP\_NUM\_THREADS](../Topic/OMP_NUM_THREADS.md)|Не смогут устанавливать максимальное количество потоков в параллельной области, если не переопределено by [omp\_set\_num\_threads](../../../parallel/openmp/reference/omp-set-num-threads.md) OR  [num\_threads](../../../parallel/openmp/reference/num-threads.md).|  
-|[OMP\_SCHEDULE](../../../parallel/openmp/reference/omp-schedule.md)|Изменяет расширение функциональности [schedule](../../../parallel/openmp/reference/schedule.md) если предложение  `schedule(runtime)` определяет in a  `for` OR  `parallel for` директива.|  
+|переменная среды;|Описание:|  
+|--------------------------|-----------------|  
+|[OMP_DYNAMIC](../../../parallel/openmp/reference/omp-dynamic.md)|Указывает, может ли OpenMP, время выполнения изменять количество потоков в параллельной области.|  
+|[OMP_NESTED](../../../parallel/openmp/reference/omp-nested.md)|Указывает, будет ли вложенный параллелизм, если не включена или отключена с вложенной параллелизма `omp_set_nested`.|  
+|[OMP_NUM_THREADS](../../../parallel/openmp/reference/omp-num-threads.md)|Задает максимальное число потоков в параллельной области, если иное не переопределено [omp_set_num_threads](../../../parallel/openmp/reference/omp-set-num-threads.md) или [num_threads](../../../parallel/openmp/reference/num-threads.md).|  
+|[OMP_SCHEDULE](../../../parallel/openmp/reference/omp-schedule.md)|Изменяет поведение [расписания](../../../parallel/openmp/reference/schedule.md) предложение при `schedule(runtime)` указывается в `for` или `parallel for` директивы.|  
   
-## См. также  
- [Library Reference](../../../parallel/openmp/reference/openmp-library-reference.md)
+## <a name="see-also"></a>См. также  
+ [Справочник по библиотеке](../../../parallel/openmp/reference/openmp-library-reference.md)

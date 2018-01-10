@@ -25,11 +25,12 @@ caps.latest.revision: "24"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 1235006856831c97de436a9f2b10d4aa1ad65852
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: e4188647b821fc233835ea4780804848c4b03228
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="csplitbutton-class"></a>Класс CSplitButton
 `CSplitButton` Класс представляет элемент управления SplitButton. Элемент управления "кнопка разделения" реализует поведение по умолчанию, когда пользователь щелкает основную часть кнопки, и отображает раскрывающееся меню, когда пользователь щелкает раскрывающуюся стрелку кнопки.  
@@ -40,24 +41,24 @@ ms.lasthandoff: 10/24/2017
 class CSplitButton : public CButton  
 ```  
   
-## <a name="members"></a>Члены  
+## <a name="members"></a>Участники  
   
 ### <a name="public-constructors"></a>Открытые конструкторы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[CSplitButton::CSplitButton](#csplitbutton)|Создает объект `CSplitButton`.|  
   
 ### <a name="public-methods"></a>Открытые методы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[CSplitButton::Create](#create)|Создает элемент управления SplitButton с указанным стилем и прикрепляет его к текущему `CSplitButton` объекта.|  
 |[CSplitButton::SetDropDownMenu](#setdropdownmenu)|Задает раскрывающееся меню, которое отображается, когда пользователь щелкает стрелку раскрывающегося списка для текущего управления SplitButton.|  
   
 ### <a name="protected-methods"></a>Защищенные методы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[CSplitButton::OnDropDown](#ondropdown)|Обрабатывает `BCN_DROPDOWN` уведомление, которое система отправляет, когда пользователь щелкает стрелку раскрывающегося списка для текущего управления SplitButton.|  
   
@@ -99,7 +100,7 @@ virtual BOOL Create(
   
 ### <a name="parameters"></a>Параметры  
   
-|Параметр|Описание|  
+|Параметр|Описание:|  
 |---------------|-----------------|  
 |[in] `dwStyle`|Побитовое сочетание (OR) стили, чтобы применить к элементу управления. Дополнительные сведения см. в разделе [стили кнопок](../../mfc/reference/styles-used-by-mfc.md#button-styles).|  
 |[in] `rect`|Ссылку на [RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897) структура, содержащая положение и размер элемента управления.|  
@@ -124,7 +125,7 @@ CSplitButton(CMenu* pMenu)
   
 ### <a name="parameters"></a>Параметры  
   
-|Параметр|Описание|  
+|Параметр|Описание:|  
 |---------------|-----------------|  
 |[in] `nMenuId`|Идентификатор ресурса в строке меню.|  
 |[in] `nSubMenuId`|Идентификатор ресурса подменю.|  
@@ -144,7 +145,7 @@ afx_msg void OnDropDown(
   
 ### <a name="parameters"></a>Параметры  
   
-|Параметр|Описание|  
+|Параметр|Описание:|  
 |---------------|-----------------|  
 |[in] `pNMHDR`|Указатель на [NMHDR](http://msdn.microsoft.com/library/windows/desktop/bb775514) структуру, содержащую сведения о [BCN_DROPDOWN](http://msdn.microsoft.com/library/windows/desktop/bb775983) уведомления.|  
 |[выходной] `pResult`|(Не используется; значение не возвращается). Возвращаемое значение [BCN_DROPDOWN](http://msdn.microsoft.com/library/windows/desktop/bb775983) уведомления.|  
@@ -176,7 +177,7 @@ void SetDropDownMenu(CMenu* pMenu);
   
 ### <a name="parameters"></a>Параметры  
   
-|Параметр|Описание|  
+|Параметр|Описание:|  
 |---------------|-----------------|  
 |[in] `nMenuId`|Идентификатор ресурса в строке меню.|  
 |[in] `nSubMenuId`|Идентификатор ресурса подменю.|  

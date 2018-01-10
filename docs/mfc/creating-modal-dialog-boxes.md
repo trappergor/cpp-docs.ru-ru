@@ -17,11 +17,12 @@ caps.latest.revision: "9"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 662455a3ad0c45b287f485e3b87cc5437343bffb
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 815db891514eb03169dac2ad29e50469d74dcfee
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="creating-modal-dialog-boxes"></a>Создание модальных диалоговых окон
 Создание модального диалогового окна, вызовите один из двух общих конструкторов, объявленных в [CDialog](../mfc/reference/cdialog-class.md). Затем вызовите объекта диалогового окна [DoModal](../mfc/reference/cdialog-class.md#domodal) функции-члена для отображения диалогового окна и управления взаимодействием с его, пока пользователь нажимает кнопку ОК или отменить. Такое управление по `DoModal` придает модальное диалоговое окно. Для модальные диалоговые окна `DoModal` загружает ресурс диалогового окна.  

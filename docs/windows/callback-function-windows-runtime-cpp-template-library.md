@@ -1,31 +1,32 @@
 ---
-title: "Функция Callback (библиотека шаблонов C++ среды выполнения Windows) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "event/Microsoft::WRL::Callback"
-dev_langs: 
-  - "C++"
+title: "Функция обратного вызова (библиотека шаблонов C++ среды выполнения Windows) | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: event/Microsoft::WRL::Callback
+dev_langs: C++
 ms.assetid: afb15d25-3230-44f7-b321-e17c54872943
-caps.latest.revision: 4
-caps.handback.revision: 4
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "4"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: 2b2d83096ce4e6ff9245a9e26516d6a487155695
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 12/21/2017
 ---
-# Функция Callback (библиотека шаблонов C++ среды выполнения Windows)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Создает объект, функция\-член которого является методом обратного вызова.  
+# <a name="callback-function-windows-runtime-c-template-library"></a>Функция Callback (библиотека шаблонов C++ среды выполнения Windows)
+Создает объект, функция-член которого является методом обратного вызова.  
   
-## Синтаксис  
+## <a name="syntax"></a>Синтаксис  
   
 ```  
 template<  
@@ -198,15 +199,15 @@ ComPtr<TDelegateInterface> Callback(
 );  
 ```  
   
-#### Параметры  
+#### <a name="parameters"></a>Параметры  
  `TDelegateInterface`  
  Параметр шаблона, определяющий интерфейс делегата, который вызывается при возникновении события.  
   
  `TCallback`  
- Параметр шаблона, определяющий тип объекта, который представляет объект и его функцию\-член обратного вызова.  
+ Параметр шаблона, определяющий тип объекта, который представляет объект и его функцию-член обратного вызова.  
   
  `TCallbackObject`  
- Параметр шаблона, определяющий объект, функция\-член которого является методом, вызываемым при возникновении события.  
+ Параметр шаблона, определяющий объект, функция-член которого является методом, вызываемым при возникновении события.  
   
  `TArg1`  
  Параметр шаблона, который определяет тип первого аргумента метода обратного вызова.  
@@ -236,24 +237,24 @@ ComPtr<TDelegateInterface> Callback(
  Параметр шаблона, который определяет тип девятого аргумента метода обратного вызова.  
   
  `callback`  
- Объект, который представляет объект обратного вызова и его функцию\-член.  
+ Объект, который представляет объект обратного вызова и его функцию-член.  
   
  `object`  
- Объект, функция\-член которого вызывается при возникновении события.  
+ Объект, функция-член которого вызывается при возникновении события.  
   
  `method`  
- Функция\-член, которую необходимо вызвать при возникновении события.  
+ Функция-член, которую необходимо вызвать при возникновении события.  
   
-## Возвращаемое значение  
- Объект, функция\-член которого является методом обратного вызова.  
+## <a name="return-value"></a>Возвращаемое значение  
+ Объект, функция-член которого является методом обратного вызова.  
   
-## Примечания  
+## <a name="remarks"></a>Примечания  
  Базовым классом делегата объекта должен быть IUnknown, а не IInspectable.  
   
-## Требования  
+## <a name="requirements"></a>Требования  
  **Заголовок:** event.h  
   
  **Пространство имен:** Microsoft::WRL  
   
-## См. также  
+## <a name="see-also"></a>См. также  
  [Пространство имен Microsoft::WRL](../windows/microsoft-wrl-namespace.md)

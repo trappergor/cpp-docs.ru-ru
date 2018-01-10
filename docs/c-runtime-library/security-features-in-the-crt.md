@@ -35,11 +35,12 @@ caps.latest.revision: "23"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 6dd54fcfc9612b5c20288b78b60d84257ab8f2f9
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: ce5ff232a914b929153d8dc2ea6bb0951b4ff187
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="security-features-in-the-crt"></a>Возможности безопасности в CRT
 Многие старые функции CRT имеют новые, более безопасные версии. Если безопасная функция существует, то старая менее безопасная версия помечена как нерекомендуемая, а новая версия имеет суффикс `_s` ("secure" — "безопасный").  
@@ -60,7 +61,7 @@ char szBuf[10];
 strcpy(szBuf, "test"); // warning: deprecated   
 ```  
   
- Задание символа `_CRT_SECURE_CPP_OVERLOAD_STANDARD_NAMES` равным 1 устраняет предупреждение, заменяя вызов функции `strcpy` вызовом функции `strcpy_s`, которая предотвращает переполнение буфера. Дополнительные сведения см. в разделе [Безопасные перегрузки шаблонов](../c-runtime-library/secure-template-overloads.md).  
+ Задание символа `_CRT_SECURE_CPP_OVERLOAD_STANDARD_NAMES` равным 1 устраняет предупреждение, заменяя вызов функции `strcpy` вызовом функции `strcpy_s`, которая предотвращает переполнение буфера. Дополнительные сведения см. в разделе [Secure Template Overloads](../c-runtime-library/secure-template-overloads.md).  
   
  Для тех нерекомендуемых функций, у которых нет безопасных шаблонных перегрузок, определенно стоит рассмотреть возможность обновления кода вручную для использования безопасных функций.  
   

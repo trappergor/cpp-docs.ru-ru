@@ -56,11 +56,12 @@ caps.latest.revision: "26"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 10de882f1d1942d2abec027da76aa40a201bfaad
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 0634aeb37d0374f5e6e1dfae0ac004792c279fc8
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="spawn-wspawn-functions"></a>Функции _spawn, _wspawn
 Каждая из функций `_spawn` создает и запускает новый процесс:  
@@ -89,9 +90,9 @@ ms.lasthandoff: 10/24/2017
 ## <a name="remarks"></a>Примечания  
  Каждая из функций `_spawn` создает и выполняет новый процесс. Такие функции автоматически обрабатывают аргументы в виде многобайтовых строк требуемым образом, распознавая многобайтовые последовательности символов в соответствии с текущей многобайтовой кодовой страницей. Функции `_wspawn` представляют собой версии функций `_spawn` для расширенных символов и не обрабатывают многобайтовые строки. В противном случае функции `_wspawn` ведут себя точно так же, как аналогичные функции `_spawn`.  
   
-### <a name="generic-text-routine-mappings"></a>Универсальное текстовое сопоставление функций  
+### <a name="generic-text-routine-mappings"></a>Сопоставления подпрограмм обработки обычного текста  
   
-|Подпрограмма Tchar.h|_UNICODE и _MBCS не определены|_MBCS определено|_UNICODE определено|  
+|Процедура Tchar.h|_UNICODE и _MBCS не определены|_MBCS определено|_UNICODE определено|  
 |---------------------|--------------------------------------|--------------------|-----------------------|  
 |`_tspawnl`|`_spawnl`|`_spawnl`|`_wspawnl`|  
 |`_tspawnle`|`_spawnle`|`_spawnle`|`_wspawnle`|  

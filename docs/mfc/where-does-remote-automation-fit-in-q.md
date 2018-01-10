@@ -14,11 +14,12 @@ caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 101d34c9ed610cb375c0755e7698f45a1b16e935
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 9ad6eef0bbaad7860e7f4310ce283efe18c668eb
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="where-does-remote-automation-fit-in"></a>Использование удаленной автоматизации
 DCOM была выпущена в 1996 году и доступен в 32-разрядных и 64-разрядных платформах. Группе разработчиков Visual Basic корпорации Майкрософт всегда наблюдается Visual Basic с помощью модели автоматизации, чтобы разрешить его компоненты для взаимодействия. Отсутствие распределенных версии серьезно ограничено использование этих возможностей в корпоративных средах, так что решил исследовать свой собственный набор компонентов удаленного взаимодействия для автоматизации создания группой разработки Visual Basic 4.0 Enterprise Edition части OLE и COM. Очевидно основной целью было убедитесь, что результат должен быть совместим с и может быть заменен DCOM, когда он стал доступен. Затем они перешел к реализации удаленной автоматизации (RA) для 16-разрядных и 32-разрядных платформ Windows.  

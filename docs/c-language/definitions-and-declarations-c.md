@@ -14,14 +14,15 @@ caps.latest.revision: "8"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 5800c18dd9a765aa85a8af90110c8ce32dc48174
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 4886ee6a8bce115c2f7676124477ec81e71b16d7
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="definitions-and-declarations-c"></a>Определения и объявления (C)
-**Блок, относящийся только к системам Майкрософт**  
+**Блок, относящийся только к системам Microsoft**  
   
  Интерфейс DLL относится ко всем элементам (функциям и данным), про которые известно, что некоторая программа в системе будет их экспортировать, т. е. ко всем элементам, объявленным как **dllimport** или `dllexport`. Во всех объявлениях, включенных в интерфейс DLL, нужно указать атрибут **dllimport** или `dllexport`. Однако определение может задавать только атрибут `dllexport`. Например, следующее определение функции вызовет ошибку компилятора.  
   

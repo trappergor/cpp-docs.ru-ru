@@ -16,11 +16,12 @@ caps.latest.revision: "12"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 0bdaf5b8f6128e9b718b35b7332707a5249b33ac
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 65359e76e036a0d8d33de2de9f6c96c6425d2152
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="migrating-from-openmp-to-the-concurrency-runtime"></a>Переход от OpenMP к среде выполнения с параллелизмом
 Среда выполнения с параллелизмом позволяет использовать самые разные модели программирования. Эти модели могут перекрываться с моделями других библиотек или дополнять их. Документы в этом разделе сравнения [OpenMP](../../parallel/concrt/comparing-the-concurrency-runtime-to-other-concurrency-models.md#openmp) в среду выполнения с параллелизмом и приводятся примеры способов миграции существующего кода OpenMP для использования среды выполнения с параллелизмом.  
@@ -53,7 +54,7 @@ ms.lasthandoff: 10/24/2017
 |В параллельных циклов выполняют немного работы.|Затраты на планировщик задач среды выполнения с параллелизмом не может компенсировать преимущества выполнения основной части цикла в параллельном режиме, особенно в том случае, если тело цикла относительно невелико.|  
 |Приложение написано на языке C.|Поскольку среда выполнения с параллелизмом использует множество функций C++, может оказаться подходящего при написании кода, который позволяет полностью использовать приложение C не может.|  
   
-## <a name="related-topics"></a>Связанные разделы  
+## <a name="related-topics"></a>См. также  
  [Практическое руководство. Преобразование параллельного цикла for OpenMP для использования среды выполнения с параллелизмом](../../parallel/concrt/how-to-convert-an-openmp-parallel-for-loop-to-use-the-concurrency-runtime.md)  
 
  Простой цикл, использующий OpenMP [параллельных](../../parallel/concrt/how-to-use-parallel-invoke-to-write-a-parallel-sort-routine.md#parallel) и [для](../../parallel/openmp/reference/for-openmp.md) директивы, показано, как преобразовать для использования среды выполнения с параллелизмом [concurrency::parallel_for](reference/concurrency-namespace-functions.md#parallel_for) алгоритм.  
