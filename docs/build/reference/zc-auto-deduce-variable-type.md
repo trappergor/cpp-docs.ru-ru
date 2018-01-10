@@ -19,11 +19,12 @@ caps.latest.revision: "9"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 33804c3876d378fe8138795b78a26f36a52e3c96
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: dd2f0ff353e1243685c94da0c28f29e810b2a9ef
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="zcauto-deduce-variable-type"></a>/Zc:auto (выведение типа переменной)
 **/Zc: auto [-]** параметр компилятора сообщает компилятору, как использовать [ключевое слово auto](../../cpp/auto-keyword.md) для объявления переменных. Если указан параметр по умолчанию — **/Zc: auto**, компилятор выводит тип объявленной переменной из выражения инициализации. При указании **/Zc:auto-**, компилятор выделяет переменную для автоматического класса хранения.  

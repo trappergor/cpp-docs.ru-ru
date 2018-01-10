@@ -4,12 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
-apiname:
-- _aligned_malloc
+apiname: _aligned_malloc
 apilocation:
 - msvcrt.dll
 - msvcr80.dll
@@ -26,22 +24,21 @@ apitype: DLLExport
 f1_keywords:
 - _aligned_malloc
 - alligned_malloc
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - aligned_malloc function
 - _aligned_malloc function
 ms.assetid: fb788d40-ee94-4039-aa4d-97d73dab1ca0
-caps.latest.revision: 25
+caps.latest.revision: "25"
 author: corob-msft
 ms.author: corob
 manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: e7e16801bed2063d60e9151e2afc22a128aeed97
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
-ms.sourcegitcommit: 16d1bf59dfd4b3ef5f037aed9c0f6febfdf1a2e8
-ms.openlocfilehash: e81ecad3276abc34243f18a8df367d82122a1064
-ms.contentlocale: ru-ru
-ms.lasthandoff: 10/09/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="alignedmalloc"></a>_aligned_malloc
 Размещение памяти на указанной границе выравнивания.  
@@ -60,7 +57,7 @@ void * _aligned_malloc(
  Размер запрошенного размещения памяти.  
   
  `alignment`  
- Значение выравнивания, которое должно быть целочисленной степенью числа 2.  
+ Значение выравнивания, которое должно быть целой степенью числа 2.  
   
 ## <a name="return-value"></a>Возвращаемое значение  
  Указатель на выделенный блок памяти или значение `NULL` в случае сбоя операции. Указатель делится на `alignment`.  

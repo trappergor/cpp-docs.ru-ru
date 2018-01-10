@@ -39,11 +39,12 @@ caps.latest.revision: "19"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: ba3dc3100469e207fcfa2e653a9f1a771cfe0d1c
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: aeb470a34fd6c00557cfe452503e8bf299c49182
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="mbbtombc-mbbtombcl"></a>_mbbtombc, _mbbtombc_l
 Преобразует однобайтовый многобайтовый символ в соответствующий двухбайтовый многобайтовый символ.  
@@ -76,7 +77,7 @@ unsigned int _mbbtombc_l(
 ## <a name="remarks"></a>Примечания  
  Функция `_mbbtombc` преобразовывает указанный однобайтовый многобайтовый символ в соответствующий двухбайтовый многобайтовый символ. Символы должны быть в диапазоне от 0x20 — 0x7E или 0xA1 - 0xDF для преобразования.  
   
- Выходное значение зависит от настройки категории `LC_CTYPE` языкового стандарта; дополнительные сведения см. в разделе [setlocale, _wsetlocale](../../c-runtime-library/reference/setlocale-wsetlocale.md). Версии этих функций идентичны, за исключением того, что функция `_mbbtombc` использует текущий языковой стандарт для поведения, зависящего от языкового стандарта, а функция `_mbbtombc_l` вместо этого использует переданный языковой стандарт. Дополнительные сведения см. в разделе [Языковой стандарт](../../c-runtime-library/locale.md).  
+ Выходное значение зависит от настройки категории `LC_CTYPE` языкового стандарта; дополнительные сведения см. в разделе [setlocale, _wsetlocale](../../c-runtime-library/reference/setlocale-wsetlocale.md). Версии этих функций идентичны, за исключением того, что функция `_mbbtombc` использует текущий языковой стандарт для поведения, зависящего от языкового стандарта, а функция `_mbbtombc_l` вместо этого использует переданный языковой стандарт. Для получения дополнительной информации см. [Locale](../../c-runtime-library/locale.md).  
   
  В более ранних версиях функция `_mbbtombc` называлась `hantozen`. Для нового кода используйте `_mbbtombc`.  
   

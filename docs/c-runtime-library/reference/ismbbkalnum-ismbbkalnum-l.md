@@ -39,11 +39,12 @@ caps.latest.revision: "19"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 36edbf47bacd20c06c726451d060dec61bce4e8a
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: ef81f58fc2180fcc29e943d0a352d1e6301ca7a1
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="ismbbkalnum-ismbbkalnuml"></a>_ismbbkalnum, _ismbbkalnum_l
 Определяет, является ли определенный многобайтовый символ текстовым символом, не входящим в набор ASCII.  
@@ -68,7 +69,7 @@ int _ismbbkalnum_l(
  Используемый языковой стандарт.  
   
 ## <a name="return-value"></a>Возвращаемое значение  
- `_ismbbkalnum` возвращает ненулевое значение, если целое число `c` представляет собой текстовый символ, не входящий в набор ASCII символ, и не является знаком препинания; в противном случае возвращает 0. Функция`_ismbbkalnum` использует текущий языковой стандарт для сведений о символах, зависящих от языкового стандарта. Функция`_ismbbkalnum_l` идентична функции `_ismbbkalnum` за тем исключением, что принимает в качестве параметра языковой стандарт. Дополнительные сведения см. в разделе [Языковой стандарт](../../c-runtime-library/locale.md).  
+ `_ismbbkalnum` возвращает ненулевое значение, если целое число `c` представляет собой текстовый символ, не входящий в набор ASCII символ, и не является знаком препинания; в противном случае возвращает 0. Функция`_ismbbkalnum` использует текущий языковой стандарт для сведений о символах, зависящих от языкового стандарта. Функция`_ismbbkalnum_l` идентична функции `_ismbbkalnum` за тем исключением, что принимает в качестве параметра языковой стандарт. Для получения дополнительной информации см. [Locale](../../c-runtime-library/locale.md).  
   
 ## <a name="requirements"></a>Требования  
   

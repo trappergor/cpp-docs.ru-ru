@@ -21,11 +21,12 @@ caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 38f32a1a64c461daae0bd04fd7c79b399107cf9e
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 96dfe1828ae3451411adf3ab57c1ec67db24c34e
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="dialog-boxes-in-ole"></a>Диалоговые окна в OLE
 При запуске приложения с поддержкой OLE, бывают ситуации, когда приложению требуется сведения от пользователя для выполнения операции. Классы MFC OLE содержат несколько диалоговых окон для сбора необходимых сведений. В этом разделе перечислены задачи, может быть обработано диалоговые окна OLE и классы, необходимые для отображения этих диалоговых. Дополнительные сведения о OLE диалоговые окна и структур, используемых для настройки их поведения см [Справочник по библиотеке MFC](../mfc/mfc-desktop-applications.md).  

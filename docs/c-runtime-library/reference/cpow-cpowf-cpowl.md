@@ -1,57 +1,59 @@
 ---
-title: "cpow, cpowf, cpowl | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "cpp"
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-apiname: 
-  - "cpow"
-  - "cpowf"
-  - "cpowl"
-apilocation: 
-  - "msvcrt.dll"
-  - "msvcr80.dll"
-  - "msvcr90.dll"
-  - "msvcr100.dll"
-  - "msvcr100_clr0400.dll"
-  - "msvcr110.dll"
-  - "msvcr110_clr0400.dll"
-  - "msvcr120.dll"
-  - "msvcr120_clr0400.dll"
-  - "ucrtbase.dll"
-  - "api-ms-win-crt-math-l1-1-0.dll"
-apitype: "DLLExport"
-f1_keywords: 
-  - "cpow"
-  - "cpowf"
-  - "cpowl"
-  - "complex/cpow"
-  - "complex/cpowf"
-  - "complex/copwl"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "функция cpow"
-  - "функция cpowf"
-  - "функция комплексное и cpowl"
+title: "cpow, cpowf, cpowl | Документы Майкрософт"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+apiname:
+- cpow
+- cpowf
+- cpowl
+apilocation:
+- msvcrt.dll
+- msvcr80.dll
+- msvcr90.dll
+- msvcr100.dll
+- msvcr100_clr0400.dll
+- msvcr110.dll
+- msvcr110_clr0400.dll
+- msvcr120.dll
+- msvcr120_clr0400.dll
+- ucrtbase.dll
+- api-ms-win-crt-math-l1-1-0.dll
+apitype: DLLExport
+f1_keywords:
+- cpow
+- cpowf
+- cpowl
+- complex/cpow
+- complex/cpowf
+- complex/copwl
+dev_langs: C++
+helpviewer_keywords:
+- cpow function
+- cpowf function
+- complex/cpowl function
 ms.assetid: 83fe2187-22b7-4295-ab16-4d77abdbb80b
-caps.latest.revision: 13
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 13
+caps.latest.revision: "13"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: b12c59074585acaf2ec2ce5931ef8001deb1345e
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 12/21/2017
 ---
-# cpow, cpowf, cpowl
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Получает значение числа, возведенного в заданную степень, в которых базового и экспоненты комплексных чисел. Эта функция имеет Вырезать экспоненты вдоль оси реальных отрицательных ветви.  
+# <a name="cpow-cpowf-cpowl"></a>cpow, cpowf, cpowl
+Извлекает значение числа, возведенное в заданную степень; при этом база и экспонента представляют собой комплексные числа. Эта функция имеет ветвь, вырезанную для экспоненты вдоль отрицательной части реальной оси.  
   
-## Синтаксис  
+## <a name="syntax"></a>Синтаксис  
   
 ```  
 _Dcomplex cpow(   
@@ -71,29 +73,29 @@ _Lcomplex cpowl(
 );  
 ```  
   
-#### Параметры  
+#### <a name="parameters"></a>Параметры  
  `x`  
- Основание.  
+ База.  
   
  `y`  
- Показатель степени.  
+ Экспонента.  
   
-## Возвращаемое значение  
- Значение `x` степени `y` с ветвью Вырезать для `x` вдоль оси реальных отрицательное.  
+## <a name="return-value"></a>Возвращаемое значение  
+ Значение `x`, возведенное в степень `y`, с ветвью, вырезанной для `x` вдоль отрицательной части реальной оси.  
   
-## Заметки  
- Поскольку C\+\+ допускает перегрузку, можно вызывать перегрузки `cpow`, которые принимают и возвращают значения `_Fcomplex` и `_Lcomplex`. В программе на языке C `cpow` всегда принимает и возвращает `_Dcomplex` значение.  
+## <a name="remarks"></a>Примечания  
+ Поскольку C++ допускает перегрузку, можно вызывать перегрузки `cpow`, которые принимают и возвращают значения `_Fcomplex` и `_Lcomplex`. В программе на языке C `cpow` всегда принимает и возвращает значение `_Dcomplex` .  
   
-## Требования  
+## <a name="requirements"></a>Требования  
   
-|Подпрограмма|Заголовок C|Заголовок C\+\+|  
-|------------------|-----------------|---------------------|  
-|`cpow`, `cpowf`, `cpowl`|\<complex.h\>|\< ccomplex \>|  
+|Подпрограмма|Заголовок C|Заголовок C++|  
+|-------------|--------------|------------------|  
+|`cpow`,               `cpowf`, `cpowl`|\<complex.h>|\<ccomplex>|  
   
  Дополнительные сведения о совместимости см. в разделе [Совместимость](../../c-runtime-library/compatibility.md) во введении.  
   
-## См. также  
+## <a name="see-also"></a>См. также  
  [Алфавитный указатель функций](../../c-runtime-library/reference/crt-alphabetical-function-reference.md)   
  [cexp, cexpf, cexpl](../../c-runtime-library/reference/cexp-cexpf-cexpl.md)   
- [clog10, clog10f, clog10l](../Topic/clog10,%20clog10f,%20clog10l.md)   
+ [clog10, clog10f, clog10l](../../c-runtime-library/reference/clog10-clog10f-clog10l.md)   
  [clog, clogf, clogl](../../c-runtime-library/reference/clog-clogf-clogl.md)

@@ -19,11 +19,12 @@ caps.latest.revision: "7"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: a78f6e4c7cdb5dbd25354d93d9bafc2892098c7d
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 9e0d60eed00abc60c09e03838a113c424d8f173a
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="working-with-import-libraries-and-export-files"></a>Работа с библиотеками импорта и файлами экспорта
 LIB можно использовать с параметром/DEF для создания библиотеки импорта и файла экспорта. LINK использует файл экспорта для построения программы, содержащей экспортирует (обычно динамические библиотеки (DLL)) и использует библиотеку импорта для разрешения ссылок на объекты экспорта в другие программы.  

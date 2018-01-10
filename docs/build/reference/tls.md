@@ -1,38 +1,38 @@
 ---
-title: "/TLS | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "/TLS"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "/TLS - параметр программы dumpbin"
-  - "-TLS - параметр программы dumpbin"
+title: "-TLS | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: /TLS
+dev_langs: C++
+helpviewer_keywords:
+- /TLS dumpbin option
+- -TLS dumpbin option
 ms.assetid: 2b3f48f9-cac4-4351-b15c-2833b43bc709
-caps.latest.revision: 6
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 6
+caps.latest.revision: "6"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 5adf246e343a16abebdc584589e9633b195444ea
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 12/21/2017
 ---
-# /TLS
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Выводит структуру IMAGE\_TLS\_DIRECTORY исполняемого файла.  
+# <a name="tls"></a>/TLS
+Отображает структуру IMAGE_TLS_DIRECTORY из исполняемого файла.  
   
-## Заметки  
- При указании параметра \/TLS выводятся поля структуры TLS и адреса функций обратного вызова TLS.  
+## <a name="remarks"></a>Примечания  
+ / TLS отображает поля структуры TLS и адреса функций обратного вызова TLS.  
   
- Если программа не использует локальную память потоков, ее образ не будет содержать структуру TLS.  Дополнительные сведения см. в разделе [поток](../../cpp/thread.md).  
+ Если программа использует локальное хранилище потока, ее изображение не будет содержать структуру TLS.  В разделе [поток](../../cpp/thread.md) для получения дополнительной информации.  
   
- Структура IMAGE\_TLS\_DIRECTORY определена в winnt.h.  
+ IMAGE_TLS_DIRECTORY, определенный в заголовке winnt.h.  
   
-## См. также  
+## <a name="see-also"></a>См. также  
  [Параметры DUMPBIN](../../build/reference/dumpbin-options.md)

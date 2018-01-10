@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
 apiname:
@@ -36,8 +35,7 @@ f1_keywords:
 - llabs
 - math/llabs
 - cmath/abs
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - absolute values
 - abs function
@@ -45,30 +43,16 @@ helpviewer_keywords:
 - _abs64 function
 - calculating absolute values
 ms.assetid: 60f789d1-4a1e-49f5-9e4e-0bdb277ea26a
-caps.latest.revision: 29
+caps.latest.revision: "29"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.mt:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: e257f037a05c45f5b98e64ea55bd125af443b0be
-ms.openlocfilehash: 804ed3ac260097c4eb088058580bf801b3bee9f1
-ms.contentlocale: ru-ru
-ms.lasthandoff: 03/30/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: 64c09dc8c8ce1ce5493ac4b2515c6b0be2910627
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="abs-labs-llabs-abs64"></a>abs, labs, llabs, _abs64
 Вычисляет абсолютное значение аргумента.  
@@ -115,7 +99,7 @@ __int64 _abs64(
 ## <a name="remarks"></a>Примечания  
  Так как C++ допускает перегрузку, можно вызывать перегрузки `abs`, которые принимают и возвращают значения `long`, `long long`, `float`, `double` и `long double`. Такие перегрузки определяются в заголовке \<cmath>. В программе на языке C `abs` всегда принимает и возвращает целое число.  
   
- **Блок, относящийся только к системам Майкрософт**  
+ **Блок, относящийся только к системам Microsoft**  
   
  Так как диапазон отрицательных целых чисел, которые могут быть представлены с использованием какого-либо целочисленного типа, превышает диапазон положительных целых чисел, которые могут быть представлены с помощью этого типа, можно указать аргумент для этих функций, преобразовать которые нельзя. Если абсолютное значение аргумента нельзя представить типом возвращаемого значения, функции `abs` возвращают значение аргумента без изменений. В частности `abs(INT_MIN)` возвращает `INT_MIN`, `labs(LONG_MIN)` возвращает `LONG_MIN`, `llabs(LLONG_MIN)` возвращает `LLONG_MIN`, а `_abs64(_I64_MIN)` возвращает `_I64_MIN`. Это означает, что функции `abs` не позволяют обеспечить положительное значение.  
   

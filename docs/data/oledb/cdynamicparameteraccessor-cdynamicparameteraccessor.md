@@ -1,56 +1,59 @@
 ---
-title: "CDynamicParameterAccessor::CDynamicParameterAccessor | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "CDynamicParameterAccessor::CDynamicParameterAccessor"
-  - "CDynamicParameterAccessor.CDynamicParameterAccessor"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "CDynamicParameterAccessor - класс, конструктор"
-  - "CDynamicParameterAccessor - метод"
+title: "CDynamicParameterAccessor::CDynamicParameterAccessor | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- CDynamicParameterAccessor::CDynamicParameterAccessor
+- CDynamicParameterAccessor.CDynamicParameterAccessor
+dev_langs: C++
+helpviewer_keywords:
+- CDynamicParameterAccessor class, constructor
+- CDynamicParameterAccessor method
 ms.assetid: a1cce5e4-dfb9-43a2-bfb8-0435c653674a
-caps.latest.revision: 8
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: e08c26c7ba9d07c5e845aea3443c824498354b74
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 12/21/2017
 ---
-# CDynamicParameterAccessor::CDynamicParameterAccessor
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="cdynamicparameteraccessorcdynamicparameteraccessor"></a>CDynamicParameterAccessor::CDynamicParameterAccessor
 Конструктор.  
   
-## Синтаксис  
+## <a name="syntax"></a>Синтаксис  
   
 ```  
   
       typedef CDynamicParameterAccessor _ParamClass;  
 CDynamicParameterAccessor(   
-   DBBLOBHANDLINGENUM eBlobHandling = DBBLOBHANDLING_DEFAULT,   
-   DBLENGTH nBlobSize = 8000 )   
-   : CDynamicAccessor( eBlobHandling, nBlobSize )  
+   DBBLOBHANDLINGENUM eBlobHandling = DBBLOBHANDLING_DEFAULT,   
+   DBLENGTH nBlobSize = 8000 )   
+   : CDynamicAccessor( eBlobHandling, nBlobSize )  
 ```  
   
-#### Параметры  
+#### <a name="parameters"></a>Параметры  
  `eBlobHandling`  
- Определяет, как данные больших двоичных объектов обрабатываться.  Значение по умолчанию **DBBLOBHANDLING\_DEFAULT**.  В разделе [CDynamicAccessor::SetBlobHandling](../../data/oledb/cdynamicaccessor-setblobhandling.md) для описания значений **DBBLOBHANDLINGENUM**.  
+ Указывает способ обработки данных больших двоичных ОБЪЕКТОВ. Значение по умолчанию — **DBBLOBHANDLING_DEFAULT**. В разделе [CDynamicAccessor::SetBlobHandling](../../data/oledb/cdynamicaccessor-setblobhandling.md) описание **DBBLOBHANDLINGENUM** значения.  
   
  `nBlobSize`  
- Максимальный размер БОЛЬШИХ ДВОИЧНОГО ОБЪЕКТА в байтах. данные столбца с этим значением обрабатывается как БОЛЬШОЙ ДВОИЧНЫЙ ОБЪЕКТ.  Значение по умолчанию — 8,000.  Дополнительные сведения см. в разделе [CDynamicAccessor::SetBlobSizeLimit](../../data/oledb/cdynamicaccessor-setblobsizelimit.md).  
+ Максимальный размер большого двоичного ОБЪЕКТА в байтах; столбец данных через это значение рассматривается как большой двоичный объект. Значение по умолчанию — 8000. В разделе [CDynamicAccessor::SetBlobSizeLimit](../../data/oledb/cdynamicaccessor-setblobsizelimit.md) подробные сведения.  
   
-## Заметки  
- Конструктор [CDynamicAccessor::CDynamicAccessor](../Topic/CDynamicAccessor::CDynamicAccessor.md) см. дополнительные сведения об обработке БОЛЬШИХ ДВОИЧНОГО ОБЪЕКТА.  
+## <a name="remarks"></a>Примечания  
+ В разделе [CDynamicAccessor::CDynamicAccessor](../../data/oledb/cdynamicaccessor-cdynamicaccessor.md) конструктор Дополнительные сведения об обработке большого двоичного ОБЪЕКТА.  
   
-## Требования  
+## <a name="requirements"></a>Требования  
  **Заголовок:** atldbcli.h  
   
-## См. также  
+## <a name="see-also"></a>См. также  
  [Класс CDynamicParameterAccessor](../../data/oledb/cdynamicparameteraccessor-class.md)

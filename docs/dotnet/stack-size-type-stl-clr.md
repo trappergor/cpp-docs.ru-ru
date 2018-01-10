@@ -1,41 +1,42 @@
 ---
-title: "stack::size_type (STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::stack::size_type"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "size_type - элемент [STL/CLR]"
+title: "STACK::size_type (STL/CLR) | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::stack::size_type
+dev_langs: C++
+helpviewer_keywords: size_type member [STL/CLR]
 ms.assetid: 713ba8c5-41e5-422a-a334-cfeab16b4496
-caps.latest.revision: 15
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 13
+caps.latest.revision: "15"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: 7e4de635015f550858facb3f0450710e1824d7ff
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 12/21/2017
 ---
-# stack::size_type (STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Тип подписанного расстояния между элементом 2.  
+# <a name="stacksizetype-stlclr"></a>stack::size_type (STL/CLR)
+Тип расстояния со знаком между двумя элемент.  
   
-## Синтаксис  
+## <a name="syntax"></a>Синтаксис  
   
 ```  
 typedef int size_type;  
 ```  
   
-## Заметки  
- Описывает тип неотрицательное число элементов.  
+## <a name="remarks"></a>Примечания  
+ Тип описывает элемент неотрицательное число.  
   
-## Пример  
+## <a name="example"></a>Пример  
   
 ```  
 // cliext_stack_size_type.cpp   
@@ -66,13 +67,16 @@ int main()
   
 ```  
   
-  **a b c**  
-**разница в размера \= 2**   
-## Требования  
- **Заголовок:**\<cliext\/stack\>  
+```Output  
+ a b c  
+size difference = 2  
+```  
+  
+## <a name="requirements"></a>Требования  
+ **Заголовок:** \<cliext/stack >  
   
  **Пространство имен:** cliext  
   
-## См. также  
- [стек](../dotnet/stack-stl-clr.md)   
- [stack::empty](../dotnet/stack-empty-stl-clr.md)
+## <a name="see-also"></a>См. также  
+ [стек (STL/CLR)](../dotnet/stack-stl-clr.md)   
+ [stack::empty (STL/CLR)](../dotnet/stack-empty-stl-clr.md)

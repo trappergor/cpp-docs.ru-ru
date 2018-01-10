@@ -4,30 +4,26 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-language
+ms.technology: cpp-language
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-f1_keywords:
-- _com_error::ErrorMessage
-dev_langs:
-- C++
-helpviewer_keywords:
-- ErrorMessage method [C++]
+f1_keywords: _com_error::ErrorMessage
+dev_langs: C++
+helpviewer_keywords: ErrorMessage method [C++]
 ms.assetid: e47335b6-01af-4975-a841-121597479eb7
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.translationtype: HT
-ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
-ms.openlocfilehash: 01f244a07e46c70cbd4810af666f55dc899e5c3a
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/25/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: e8690c23acf6e42d355cf122f59f54e19cc36d66
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="comerrorerrormessage"></a>_com_error::ErrorMessage
-**Блок, относящийся только к системам Майкрософт**  
+**Блок, относящийся только к системам Microsoft**  
   
  Извлекает строковое сообщение для `HRESULT`, хранящееся в объекте `_com_error`.  
   

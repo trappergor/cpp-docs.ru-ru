@@ -21,11 +21,12 @@ caps.latest.revision: "18"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: a591e7970aa21e6846700570cdf27cefececa1c9
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 49574d31ef0c606528f29c0045506e5febe69b28
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="iobjectwithsiteimpl-class"></a>Интерфейс IObjectWithSiteImpl класса
 Этот класс предоставляет методы, что объект для взаимодействия со своим сайтом.  
@@ -42,11 +43,11 @@ template <class T>
  `T`  
  Класс, производный от `IObjectWithSiteImpl`.  
   
-## <a name="members"></a>Члены  
+## <a name="members"></a>Участники  
   
 ### <a name="public-methods"></a>Открытые методы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[IObjectWithSiteImpl::GetSite](#getsite)|Запросы на сайт для указателя на интерфейс.|  
 |[IObjectWithSiteImpl::SetChildSite](#setchildsite)|Предоставляет объект, на сайте **IUnknown** указателя.|  
@@ -54,7 +55,7 @@ template <class T>
   
 ### <a name="public-data-members"></a>Открытые члены данных  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[IObjectWithSiteImpl::m_spUnkSite](#m_spunksite)|Управляет сайта **IUnknown** указателя.|  
   

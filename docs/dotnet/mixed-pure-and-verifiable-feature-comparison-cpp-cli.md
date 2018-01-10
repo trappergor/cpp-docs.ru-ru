@@ -1,54 +1,58 @@
 ---
-title: "Сравнение смешанных, чистых и проверяемых компонентов (C++/CLI) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "смешанные сборки [C++]"
-  - "смешанные сборки [C++], или чистые сборки"
-  - "смешанные сборки [C++], или безопасные"
-  - "чистые сборки [C++]"
-  - "чистые MSIL [C++]"
-  - "чистые MSIL [C++], сравнение со смешанными и безопасными"
-  - "чистые MSIL [C++], или смешанные"
-  - "чистые MSIL [C++], или безопасные"
-  - "безопасные сборки [C++]"
-  - "безопасные сборки [C++], или смешанные"
-  - "безопасные сборки [C++], или чистые сборки"
-  - "проверяемые сборки [C++]"
-  - "проверяемые сборки [C++], или смешанные"
-  - "проверяемые сборки [C++], или чистые сборки"
+title: "Сравнение смешанных, чистых и проверяемых компонентов (C + +/ CLI) | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- safe assemblies [C++], vs. pure
+- mixed assemblies [C++], vs. pure
+- safe assemblies [C++], vs. mixed
+- pure MSIL [C++]
+- verifiable assemblies [C++]
+- pure MSIL [C++], vs. safe
+- pure MSIL [C++], vs. mixed
+- pure MSIL [C++], compared to mixed and safe
+- verifiable assemblies [C++], vs. mixed
+- mixed assemblies [C++], vs. safe
+- verifiable assemblies [C++], vs. pure
+- pure assemblies [C++]
+- safe assemblies [C++]
+- mixed assemblies [C++]
 ms.assetid: 3f7a82ba-0e69-4927-ba0c-fbc3160e4394
-caps.latest.revision: 8
-caps.handback.revision: 8
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "8"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: 3ee9fbed3fd82fd450fd179683fd119cb1630034
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 12/21/2017
 ---
-# Сравнение смешанных, чистых и проверяемых компонентов (C++/CLI)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-В этом разделе приводится сравнение компонентов в различных режимах компиляции **\/clr**.  Для получения дополнительной информации см. [\/clr \(компиляция CLR\)](../build/reference/clr-common-language-runtime-compilation.md).  
+# <a name="mixed-pure-and-verifiable-feature-comparison-ccli"></a>Сравнение смешанных, чистых и проверяемых компонентов (C++/CLI)
+В этом разделе приводится сравнение компонентов в различных **/CLR** режимов компиляции. Дополнительные сведения см. в разделе [/clr (компиляция CLR)](../build/reference/clr-common-language-runtime-compilation.md).  
   
-## Сравнение компонентов  
+ Параметры компилятора **/CLR: pure** и **/CLR: safe** в Visual Studio 2015 не рекомендуется использовать.  
   
-|Функция|Смешанный режим \(\/clr\)|Чистый режим \(\/clr:pure\)|Безопасный режим \(\/clr:safe\)|Дополнительные сведения|  
-|-------------|-------------------------------|---------------------------------|-------------------------------------|-----------------------------|  
-|Библиотека CRT|поддерживается|поддерживается||[Процедуры среды выполнения по категориям](../c-runtime-library/run-time-routines-by-category.md)|  
-|Библиотеки MFC и ATL|поддерживается|||[Приложения MFC для рабочего стола](../mfc/mfc-desktop-applications.md) &#124; [Class Overview](../atl/atl-class-overview.md)|  
-|Неуправляемые функции|поддерживается|||[Смешанные \(собственные и управляемые\) сборки](../Topic/Mixed%20\(Native%20and%20Managed\)%20Assemblies.md)|  
-|Неуправляемые данные|поддерживается|поддерживается||[Чистый и проверяемый код](../dotnet/pure-and-verifiable-code-cpp-cli.md)|  
-|Компоненты, вызываемые из неуправляемых функций|поддерживается|||[Практическое руководство. Миграция в \/clr:pure](../dotnet/how-to-migrate-to-clr-pure-cpp-cli.md)|  
-|Компоненты, поддерживающие вызов неуправляемых функций|поддерживается|Только функции в стиле C|Только P\/Invoke|[Использование взаимодействия языка C\+\+ \(неявный PInvoke\)](../dotnet/using-cpp-interop-implicit-pinvoke.md)|  
-|Компоненты, поддерживающие отражение|Только библиотеки DLL|поддерживается|поддерживается|[Отражение](../dotnet/reflection-cpp-cli.md)|  
+## <a name="feature-comparison"></a>Сравнение функций  
   
-## См. также  
- [Чистый и проверяемый код](../dotnet/pure-and-verifiable-code-cpp-cli.md)
+|Функция|Смешанный (/ clr)|Чистые (/ clr: pure)|Безопасный (/ CLR: safe)|Связанные данные|  
+|-------------|---------------------|-------------------------|-------------------------|-------------------------|  
+|Библиотека CRT|Поддерживается|Поддерживается||[Процедуры среды выполнения по категориям](../c-runtime-library/run-time-routines-by-category.md)|  
+|MFC И ATL|Поддерживается|||[Настольных приложений MFC](../mfc/mfc-desktop-applications.md) &#124; [Общие сведения о классах](../atl/atl-class-overview.md)|  
+|Неуправляемые функции|Поддерживается|||[Смешанные (собственные и управляемые) сборки](../dotnet/mixed-native-and-managed-assemblies.md)|  
+|Неуправляемые данные|Поддерживается|Поддерживается||[Чистый и проверяемый код (C++/CLI)](../dotnet/pure-and-verifiable-code-cpp-cli.md)|  
+|Может быть вызван из неуправляемых функций|Поддерживается|||[Как: переход на/CLR: pure (C + +/ CLI)](../dotnet/how-to-migrate-to-clr-pure-cpp-cli.md)|  
+|Поддерживает вызов неуправляемых функций|Поддерживается|Только в стиле функции|P/Invoke только|[Использование взаимодействия языка C++ (неявный PInvoke)](../dotnet/using-cpp-interop-implicit-pinvoke.md)|  
+|Поддерживает отражение|Только библиотеки DLL|Поддерживается|Поддерживается|[Отражение (C++/CLI)](../dotnet/reflection-cpp-cli.md)|  
+  
+## <a name="see-also"></a>См. также  
+ [Чистый и проверяемый код (C++/CLI)](../dotnet/pure-and-verifiable-code-cpp-cli.md)

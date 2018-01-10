@@ -4,12 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
-apiname:
-- _CrtSetDbgFlag
+apiname: _CrtSetDbgFlag
 apilocation:
 - msvcrt.dll
 - msvcr80.dll
@@ -35,8 +33,7 @@ f1_keywords:
 - _CRTDBG_CHECK_EVERY_1024_DF
 - _CrtSetDbgFlag
 - CRTDBG_REPORT_FLAG
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - _CRTDBG_CHECK_EVERY_16_DF macro
 - CRTDBG_CHECK_EVERY_16_DF macro
@@ -59,30 +56,16 @@ helpviewer_keywords:
 - CRTDBG_CHECK_CRT_DF macro
 - _CRTDBG_CHECK_CRT_DF macro
 ms.assetid: b5657ffb-6178-4cbf-9886-1af904ede94c
-caps.latest.revision: 19
+caps.latest.revision: "19"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: e257f037a05c45f5b98e64ea55bd125af443b0be
-ms.openlocfilehash: ef1773e534c08a15f10fe2048a5036a957c6a1f4
-ms.contentlocale: ru-ru
-ms.lasthandoff: 03/30/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: c76630a6b55b85ae636e69da69d60947b4db50b9
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="crtsetdbgflag"></a>_CrtSetDbgFlag
 Получает или изменяет состояние флага **_crtDbgFlag** для управления поведением выделения памяти диспетчера отладочной кучи (только отладочная версия).  
@@ -108,7 +91,7 @@ ms.lasthandoff: 03/30/2017
   
  В следующей таблице перечислены битовые поля для флага **_crtDbgFlag** с описанием их поведения. Поскольку задание бит влечет за собой увеличение объема диагностических данных и снижение скорости выполнения программы, по умолчанию они не заданы (выключены). Дополнительные сведения об этих битовых полях см. в разделе [Функции создания отчетов о состоянии кучи](/visualstudio/debugger/crt-debug-heap-details).  
   
-|Битовое поле|По умолчанию|Описание|  
+|Битовое поле|По умолчанию|Описание:|  
 |---------------|-------------|-----------------|  
 |**_CRTDBG_ALLOC_MEM_DF**|ON|ON: включение выделения памяти отладочной кучи и использование идентификаторов типов блоков памяти, таких как `_CLIENT_BLOCK`. OFF: добавление новых выделений в связанный список кучи; однако в качестве типа блока задается **_IGNORE_BLOCK**.<br /><br /> Может также быть совмещено с любыми макросами частоты проверки кучи.|  
 |**_CRTDBG_CHECK_ALWAYS_DF**|OFF|ON: вызов [_CrtCheckMemory](../../c-runtime-library/reference/crtcheckmemory.md) при каждом запросе на выделение и отмену выделения. OFF: `_CrtCheckMemory` необходимо вызывать явно.<br /><br /> Макросы частоты проверки кучи не действуют, если задан этот флаг.|  
@@ -279,6 +262,6 @@ int main( )
 ```  
   
 ## <a name="see-also"></a>См. также  
- [Процедуры отладки](../../c-runtime-library/debug-routines.md)   
+ [Подпрограммы отладки](../../c-runtime-library/debug-routines.md)   
  [_crtDbgFlag](../../c-runtime-library/crtdbgflag.md)   
  [_CrtCheckMemory](../../c-runtime-library/reference/crtcheckmemory.md)

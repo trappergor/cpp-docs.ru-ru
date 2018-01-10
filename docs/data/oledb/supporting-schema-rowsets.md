@@ -18,11 +18,14 @@ caps.latest.revision: "11"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: d3cd1a75df607678546c53b53df134f45eb87026
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: b981af06f48834eef59103b872b8b07e75cd0065
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="supporting-schema-rowsets"></a>Поддержка наборов строк схемы
 Наборы строк схемы позволяют пользователям получать информацию о хранилище данных, не зная ее базовую структуру или схему. Например хранилище данных может иметь таблицы, упорядоченные в пользовательской иерархии, поэтому будет гарантировать знаний о схеме, считывая его. (Еще один пример, обратите внимание, что мастера Visual C++ используйте наборы строк схемы для создания методов доступа для пользователя.) Чтобы разрешить пользователю для этого, объект сеанса поставщика представляет методы на [IDBSchemaRowset](https://msdn.microsoft.com/en-us/library/ms713686.aspx) интерфейса. В приложениях Visual C++ используйте [IDBSchemaRowsetImpl](../../data/oledb/idbschemarowsetimpl-class.md) класса для реализации **IDBSchemaRowset**.  

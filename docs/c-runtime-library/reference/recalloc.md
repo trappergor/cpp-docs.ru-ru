@@ -33,11 +33,12 @@ caps.latest.revision: "9"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 007f174b3cbdb7e8ca53af19b6f9764200ff690a
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: d1f6052e71746bb05701e0d34f10585d5533be4e
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="recalloc"></a>_recalloc
 Комбинация `realloc` и `calloc`. Перераспределяет массив в памяти и инициализирует его элементы значением 0.  
@@ -78,7 +79,7 @@ void *_recalloc(
   
  Функция `_recalloc` задает для параметра `errno` значение `ENOMEM`, если выделение памяти завершается сбоем или количество запрошенной памяти превышает `_HEAP_MAXREQ`. Дополнительные сведения об этих и других кодах ошибок см. в разделе [errno, _doserrno, _sys_errlist и _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).  
   
- Функция `recalloc` вызывает функцию `realloc` для использования функции C++ [_set_new_mode](../../c-runtime-library/reference/set-new-mode.md), чтобы установить новый режим обработки. Новый режим обработки указывает, должна ли функция `realloc` при сбое вызывать новую подпрограмму обработчика, заданную функцией [_set_new_handler](../../c-runtime-library/reference/set-new-handler.md). По умолчанию в случае, если выделить память не удается, `realloc` не вызывает новую подпрограмму обработчика. Можно переопределить это поведение по умолчанию, чтобы в случае сбоя предоставления памяти функцией `_recalloc` функция `realloc` вызывала новую подпрограмму обработчика таким же образом, как это делает оператор `new` при сбое по той же причине. Чтобы переопределить значение по умолчанию, вызовите  
+ Функция `recalloc` вызывает функцию `realloc` для использования функции C++ [_set_new_mode](../../c-runtime-library/reference/set-new-mode.md), чтобы установить новый режим обработки. Новый режим обработчика указывает, должна ли функция `realloc` при сбое вызывать новую подпрограмму обработчика, заданную функцией [_set_new_handler](../../c-runtime-library/reference/set-new-handler.md). По умолчанию в случае, если выделить память не удается, `realloc` не вызывает новую подпрограмму обработчика. Можно переопределить это поведение по умолчанию, чтобы в случае сбоя предоставления памяти функцией `_recalloc` функция `realloc` вызывала новую подпрограмму обработчика таким же образом, как это делает оператор `new` при сбое по той же причине. Чтобы переопределить значение по умолчанию, вызовите  
   
 ```  
 _set_new_mode(1)  

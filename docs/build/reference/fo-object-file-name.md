@@ -22,11 +22,12 @@ caps.latest.revision: "11"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: ba311166de220cc19403fd9d5eb10ae84bffb58e
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: be821daae88e7cc2149debb49889b79bc1a59699
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="fo-object-file-name"></a>/Fo (имя объектного файла)
 Указывает имя файла или каталога объектного файла (OBJ), которое следует использовать вместо имени по умолчанию.  
@@ -38,7 +39,7 @@ ms.lasthandoff: 10/24/2017
 ```  
   
 ## <a name="remarks"></a>Примечания  
- Если этот параметр не используется, объектный файл использует базовое имя исходного файла и расширение OBJ.. Можно использовать любое имя и расширение, но Рекомендуемое соглашение заключается в использовании. obj.  
+ Если этот параметр не используется, объектный файл использует базовое имя исходного файла и расширение OBJ. Можно использовать любое имя и расширение, но Рекомендуемое соглашение заключается в использовании. obj.  
   
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Установка данного параметра компилятора в среде разработки Visual Studio  
   

@@ -19,11 +19,12 @@ caps.latest.revision: "4"
 author: ghogen
 ms.author: ghogen
 manager: ghogen
-ms.openlocfilehash: bf096ef9849856e9995ff634d7aca26cd7f3f8e9
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 3617f4e9209a9726fcf4801e803259ef921c7b60
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="platformstringreference-class"></a>Класс Platform::StringReference
 Тип оптимизации, который можно использовать для передачи строковых данных из входных параметров `Platform::String^` в другие методы с минимальным числом операций копирования.  
@@ -36,17 +37,17 @@ class StringReference
   
 ### <a name="remarks"></a>Примечания  
   
-### <a name="members"></a>Члены  
+### <a name="members"></a>Участники  
   
 ### <a name="public-constructors"></a>Открытые конструкторы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[StringReference::StringReference](#ctor)|Два конструктора для создания экземпляров `StringReference`.|  
   
 ### <a name="public-methods"></a>Открытые методы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[StringReference::Data](#data)|Возвращает строковые данные как массив значений char16.|  
 |[StringReference::Length](#length)|Возвращает число символов в строке.|  
@@ -55,7 +56,7 @@ class StringReference
   
 ### <a name="public-operators"></a>Открытые операторы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[StringReference::operator =](#operator-assign)|Присваивает `StringReference` новому экземпляру `StringReference` .|  
 |[Stringreference:: operator()](#operator-call)|Преобразует `StringReference` в `Platform::String^`.|  

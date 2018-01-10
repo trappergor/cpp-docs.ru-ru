@@ -20,11 +20,14 @@ caps.latest.revision: "9"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 98dd7c0ea8000d2f86283cadb9a92fd2caa059a9
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: 47034968c4e8e336b348565208d1a9ffed551d15
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="idbpropertiesimpl-class"></a>Класс IDBPropertiesImpl
 Предоставляет реализацию для `IDBProperties` интерфейса.  
@@ -41,7 +44,7 @@ class ATL_NO_VTABLE IDBPropertiesImpl
  `T`  
  Класс, производный от `IDBPropertiesImpl`.  
   
-## <a name="members"></a>Члены  
+## <a name="members"></a>Участники  
   
 ### <a name="interface-methods"></a>Методы интерфейса  
   

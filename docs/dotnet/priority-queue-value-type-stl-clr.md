@@ -1,41 +1,42 @@
 ---
-title: "priority_queue::value_type (STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::priority_queue::value_type"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "value_type - элемент [STL/CLR]"
+title: "priority_queue::value_type (STL/CLR) | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::priority_queue::value_type
+dev_langs: C++
+helpviewer_keywords: value_type member [STL/CLR]
 ms.assetid: 0d81ef75-8bd1-44f5-8753-4b42a505d8c3
-caps.latest.revision: 13
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 11
+caps.latest.revision: "13"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: 494b9882789057809fd5857a810bd6991344067e
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 12/21/2017
 ---
-# priority_queue::value_type (STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="priorityqueuevaluetype-stlclr"></a>priority_queue::value_type (STL/CLR)
 Тип элемента.  
   
-## Синтаксис  
+## <a name="syntax"></a>Синтаксис  
   
 ```  
 typedef Value value_type;  
 ```  
   
-## Заметки  
- Тип синоним для параметра `Value` шаблона.  
+## <a name="remarks"></a>Примечания  
+ Этот тип является синонимом для параметра шаблона `Value`.  
   
-## Пример  
+## <a name="example"></a>Пример  
   
 ```  
 // cliext_priority_queue_value_type.cpp   
@@ -63,13 +64,16 @@ int main()
   
 ```  
   
-  **a B C.**   
-## Требования  
- **Заголовок:**\<cliext\/queue\>  
+```Output  
+c b a  
+```  
+  
+## <a name="requirements"></a>Требования  
+ **Заголовок:** \<cliext/очереди >  
   
  **Пространство имен:** cliext  
   
-## См. также  
- [priority\_queue](../Topic/priority_queue%20\(STL-CLR\).md)   
- [priority\_queue::const\_reference](../dotnet/priority-queue-const-reference-stl-clr.md)   
- [priority\_queue::reference](../dotnet/priority-queue-reference-stl-clr.md)
+## <a name="see-also"></a>См. также  
+ [priority_queue (STL/CLR)](../dotnet/priority-queue-stl-clr.md)   
+ [priority_queue::const_reference (STL/CLR)](../dotnet/priority-queue-const-reference-stl-clr.md)   
+ [priority_queue::reference (STL/CLR)](../dotnet/priority-queue-reference-stl-clr.md)

@@ -1,31 +1,33 @@
 ---
-title: "Практическое руководство. Перебор элементов универсальной коллекции с использованием цикла for each | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "универсальная коллекция, итерация через"
+title: "Как: перебор универсальной коллекции с использованием for each | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+dev_langs: C++
+helpviewer_keywords: generic collection, iterating over
 ms.assetid: 00288d53-3d41-44d0-be5b-b3033456ceaa
-caps.latest.revision: 13
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 11
+caps.latest.revision: "13"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: ed9d92c4d6123d1c9c8f92814272ae5a77184102
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 12/21/2017
 ---
-# Практическое руководство. Перебор элементов универсальной коллекции с использованием цикла for each
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Функция [Универсальные шаблоны](../windows/generics-cpp-component-extensions.md) Visual C\+\+ позволяет создать универсальные коллекции.  
+# <a name="how-to-iterate-over-a-generic-collection-with-for-each"></a>Практическое руководство. Перебор элементов универсальной коллекции с использованием цикла for each
+[Универсальных шаблонов](../windows/generics-cpp-component-extensions.md) компонент Visual C++ позволяет создавать универсальные коллекции.  
   
-## Пример  
- В этом образце показано, как использовать `for each` с простой универсальной коллекции типа значения.  
+## <a name="example"></a>Пример  
+ В этом примере показано, как использовать `for each` с коллекцией простое значение универсального типа.  
   
 ```  
 // for_each_generics.cpp  
@@ -92,8 +94,11 @@ int main() {
 }  
 ```  
   
-  **10**  
-**20**  
-**30**   
-## См. также  
+```Output  
+10  
+20  
+30  
+```  
+  
+## <a name="see-also"></a>См. также  
  [for each, in](../dotnet/for-each-in.md)

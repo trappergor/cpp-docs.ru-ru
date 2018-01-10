@@ -42,11 +42,12 @@ caps.latest.revision: "11"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: abc8cfa4e21ea0a263224628a1e896493bd902e0
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: e7dfdf6479a7fc43f52c2a314f1b1b8e023f97a5
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="strdupdbg-wcsdupdbg"></a>_strdup_dbg, _wcsdup_dbg
 Версии [_strdup и _wcsdup](../../c-runtime-library/reference/strdup-wcsdup-mbsdup.md), которые используют отладочную версию `malloc`.  
@@ -89,7 +90,7 @@ wchar_t *_wcsdup_dbg(
   
  Как правило, явно вызывать эти функции не требуется. Вместо этого можно определить флаг `_CRTDBG_MAP_ALLOC`. Если определен флаг `_CRTDBG_MAP_ALLOC`, вызовы функций `_strdup` и `_wcsdup` повторно сопоставляются с `_strdup_dbg` и `_wcsdup_dbg` соответственно, а для параметра `blockType` задается флаг `_NORMAL_BLOCK`. Таким образом, не требуется явно вызывать эти функции, если только нет необходимости пометить блоки кучи как `_CLIENT_BLOCK`. Дополнительные сведения о типах блоков см. в разделе [Типы блоков в отладочной куче](/visualstudio/debugger/crt-debug-heap-details).  
   
-### <a name="generic-text-routine-mappings"></a>Универсальное текстовое сопоставление функций  
+### <a name="generic-text-routine-mappings"></a>Сопоставления подпрограмм обработки обычного текста  
   
 |Подпрограмма TCHAR.H|_UNICODE и _MBCS не определены|_MBCS определено|_UNICODE определено|  
 |---------------------|------------------------------------|--------------------|-----------------------|  
@@ -107,6 +108,6 @@ wchar_t *_wcsdup_dbg(
  Все отладочные версии [библиотек времени выполнения C](../../c-runtime-library/crt-library-features.md).  
   
 ## <a name="see-also"></a>См. также  
- [Управление строками](../../c-runtime-library/string-manipulation-crt.md)   
+ [Операции со строками](../../c-runtime-library/string-manipulation-crt.md)   
  [_strdup, _wcsdup, _mbsdup](../../c-runtime-library/reference/strdup-wcsdup-mbsdup.md)   
  [Версии отладки функций выделения кучи](/visualstudio/debugger/debug-versions-of-heap-allocation-functions)

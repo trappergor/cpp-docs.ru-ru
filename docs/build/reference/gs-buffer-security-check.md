@@ -25,11 +25,12 @@ caps.latest.revision: "40"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 21ebf470372c24a4e1ab5922f1d98c1a434691a8
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: e5699830a090f42feb92b24ec43fbae36634c4df
+ms.sourcegitcommit: 54035dce0992ba5dce0323d67f86301f994ff3db
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 01/03/2018
 ---
 # <a name="gs-buffer-security-check"></a>Параметр /GS (проверка безопасности буфера)  
   
@@ -43,7 +44,7 @@ ms.lasthandoff: 10/24/2017
   
 ## <a name="remarks"></a>Примечания  
   
-**/ GS** по умолчанию. Если предполагается отсутствие проблем безопасности приложения, используйте **/GS-**. Дополнительные сведения о **/GS**, в разделе [компилятора безопасности проверяет в глубину](http://go.microsoft.com/fwlink/?linkid=7260). Дополнительные сведения о подавлении обнаружения переполнения буфера см. в разделе [safebuffers](../../cpp/safebuffers.md).  
+**/ GS** по умолчанию. Если предполагается отсутствие проблем безопасности приложения, используйте **/GS-**. Дополнительные сведения о **/GS**, в разделе [компилятора безопасности проверяет в глубину](http://go.microsoft.com/fwlink/p/?linkid=7260). Дополнительные сведения о подавлении обнаружения переполнения буфера см. в разделе [safebuffers](../../cpp/safebuffers.md).  
   
 ## <a name="security-checks"></a>Проверки безопасности  
   

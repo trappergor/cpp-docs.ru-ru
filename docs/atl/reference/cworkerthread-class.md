@@ -25,11 +25,12 @@ caps.latest.revision: "24"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 586e75202bb2b16a0e612eea75d4e2ed6d1bd8d0
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: be7a000e48cb044a67f7eee120206f46ecaef2ce
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cworkerthread-class"></a>Класс CWorkerThread
 Этот класс создает рабочий поток или использует уже существующий, ожидает один или несколько маркеров объектов ядра и выполняет функцию указанного клиента, когда один из маркеров, получает сигнал.  
@@ -48,24 +49,24 @@ class CWorkerThread
  `ThreadTraits`  
  Класс, предоставляющий функции создания потока, такие как [CRTThreadTraits](../../atl/reference/crtthreadtraits-class.md) или [Win32ThreadTraits](../../atl/reference/win32threadtraits-class.md).  
   
-## <a name="members"></a>Члены  
+## <a name="members"></a>Участники  
   
 ### <a name="protected-structures"></a>Защищенные структуры  
   
-|Имя|Описание|  
+|name|Описание|  
 |----------|-----------------|  
 |`WorkerClientEntry`||  
   
 ### <a name="public-constructors"></a>Открытые конструкторы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[CWorkerThread::CWorkerThread](#cworkerthread)|Конструктор рабочего потока.|  
 |[CWorkerThread:: ~ CWorkerThread](#dtor)|Деструктор для рабочего потока.|  
   
 ### <a name="public-methods"></a>Открытые методы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[CWorkerThread::AddHandle](#addhandle)|Вызовите этот метод, чтобы добавить дескриптор ожидающий объект списка, поддерживаемого рабочим потоком.|  
 |[CWorkerThread::AddTimer](#addtimer)|Этот метод служит для добавления периодический таймер ожидания для списка, поддерживаемого рабочим потоком.|  

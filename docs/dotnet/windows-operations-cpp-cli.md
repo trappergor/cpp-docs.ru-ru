@@ -1,62 +1,64 @@
 ---
-title: "Операции Windows (C++/CLI) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/14/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - ".NET Framework [C++], операции Windows"
-  - "Visual C++, операции Windows"
-  - "Windows [C++], специфические задачи Windows"
-  - "операции Windows [C++]"
+title: "Операции Windows (C + +/ CLI) | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- Windows [C++], Windows-specific tasks
+- .NET Framework [C++], Windows operations
+- Visual C++, Windows operations
+- Windows operations [C++]
 ms.assetid: b9a75cb4-0589-4d5b-92cb-5e8be42b4ac0
-caps.latest.revision: 9
-caps.handback.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "9"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: 1fb24f111fc3ad10b788deec286a0052ce822970
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 12/21/2017
 ---
-# Операции Windows (C++/CLI)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-В этом разделе показаны различные задачи Windows, использующие пакет [!INCLUDE[winsdklong](../dotnet/includes/winsdklong_md.md)].  
+# <a name="windows-operations-ccli"></a>Операции Windows (C++/CLI)
+Демонстрирует различные специфические задачи Windows с помощью [!INCLUDE[winsdklong](../dotnet/includes/winsdklong_md.md)].  
   
- В следующих разделах описываются различные операции Windows, выполняемые с помощью пакета [!INCLUDE[winsdkshort](../atl/reference/includes/winsdkshort_md.md)] с использованием Visual C\+\+.  
+ Следующих разделах описываются различные операции Windows, выполняемые с [!INCLUDE[winsdkshort](../atl-mfc-shared/reference/includes/winsdkshort_md.md)] с помощью Visual C++.  
   
-## В этом подразделе  
- [Практическое руководство. Определение начала процесса завершения работы](../dotnet/how-to-determine-if-shutdown-has-started-cpp-cli.md)  
+## <a name="in-this-section"></a>В этом разделе  
+ [Практическое руководство. Определение начала процесса завершения работы (C++/CLI)](../dotnet/how-to-determine-if-shutdown-has-started-cpp-cli.md)  
   
- [Практическое руководство. Определение интерактивного состояния пользователя](../dotnet/how-to-determine-the-user-interactive-state-cpp-cli.md)  
+ [Практическое руководство. Определение интерактивного состояния пользователя (C++/CLI)](../dotnet/how-to-determine-the-user-interactive-state-cpp-cli.md)  
   
- [Практическое руководство. Чтение данных из реестра Windows](../dotnet/how-to-read-data-from-the-windows-registry-cpp-cli.md)  
+ [Практическое руководство. Чтение данных из реестра Windows (C++/CLI)](../dotnet/how-to-read-data-from-the-windows-registry-cpp-cli.md)  
   
- [Практическое руководство. Чтение из счетчиков производительности Windows](../dotnet/how-to-read-windows-performance-counters-cpp-cli.md)  
+ [Практическое руководство. Чтение из счетчиков производительности Windows (C++/CLI)](../dotnet/how-to-read-windows-performance-counters-cpp-cli.md)  
   
- [Практическое руководство. Извлечение текста из буфера обмена](../Topic/How%20to:%20Retrieve%20Text%20from%20the%20Clipboard%20\(C++-CLI\).md)  
+ [Практическое руководство. Извлечение текста из буфера обмена (C++/CLI)](../dotnet/how-to-retrieve-text-from-the-clipboard-cpp-cli.md)  
   
- [Практическое руководство. Получение версии платформы .NET Framework](../dotnet/how-to-retrieve-the-dotnet-framework-version-cpp-cli.md)  
+ [Практическое руководство. Получение версии платформы .NET Framework (C++/CLI)](../dotnet/how-to-retrieve-the-dotnet-framework-version-cpp-cli.md)  
   
- [Практическое руководство. Извлечение текущего имени пользователя.](../Topic/How%20to:%20Retrieve%20the%20Current%20Username%20\(C++-CLI\).md)  
+ [Практическое руководство. Извлечение текущего имени пользователя (C++/CLI)](../dotnet/how-to-retrieve-the-current-username-cpp-cli.md)  
   
- [Практическое руководство. Извлечение имени локального компьютера](../dotnet/how-to-retrieve-the-local-machine-name-cpp-cli.md)  
+ [Практическое руководство. Извлечение имени локального компьютера (C++/CLI)](../dotnet/how-to-retrieve-the-local-machine-name-cpp-cli.md)  
   
- [Практическое руководство. Проверка версии Windows](../dotnet/how-to-retrieve-the-windows-version-cpp-cli.md)  
+ [Практическое руководство. Проверка версии Windows (C++/CLI)](../dotnet/how-to-retrieve-the-windows-version-cpp-cli.md)  
   
- [Практическое руководство. Извлечение времени, прошедшего с момента запуска Windows](../dotnet/how-to-retrieve-time-elapsed-since-startup-cpp-cli.md)  
+ [Практическое руководство. Извлечение времени, прошедшего с момента запуска Windows (C++/CLI)](../dotnet/how-to-retrieve-time-elapsed-since-startup-cpp-cli.md)  
   
- [Практическое руководство. Хранение текста в буфере обмена.](../dotnet/how-to-store-text-in-the-clipboard-cpp-cli.md)  
+ [Практическое руководство. Хранение текста в буфере обмена (C++/CLI)](../dotnet/how-to-store-text-in-the-clipboard-cpp-cli.md)  
   
- [Практическое руководство. Запись данных в реестр Windows](../dotnet/how-to-write-data-to-the-windows-registry-cpp-cli.md)  
+ [Практическое руководство. Запись данных в реестр Windows (C++/CLI)](../dotnet/how-to-write-data-to-the-windows-registry-cpp-cli.md)  
   
-## Связанные подразделы  
+## <a name="related-sections"></a>Связанные разделы  
  <xref:System.Environment>  
   
-## См. также  
- [программирование .NET с использованием C\+\+\/CLI](../dotnet/dotnet-programming-with-cpp-cli-visual-cpp.md)
+## <a name="see-also"></a>См. также  
+ [Программирование .NET с использованием C++/CLI (Visual C++)](../dotnet/dotnet-programming-with-cpp-cli-visual-cpp.md)

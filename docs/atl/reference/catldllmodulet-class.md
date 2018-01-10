@@ -24,11 +24,12 @@ caps.latest.revision: "19"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: c178cb10c6f14d257e9c03b499ea8f2fa01eddf4
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 650924898532e352df30d7e8173620b974f30138
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="catldllmodulet-class"></a>Класс CAtlDllModuleT
 Этот класс представляет модуль для библиотеки DLL.  
@@ -44,18 +45,18 @@ class ATL_NO_VTABLE CAtlDllModuleT : public CAtlModuleT<T>
  `T`  
  Ваш класс, производный от `CAtlDllModuleT`.  
   
-## <a name="members"></a>Члены  
+## <a name="members"></a>Участники  
   
 ### <a name="public-constructors"></a>Открытые конструкторы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[CAtlDllModuleT::CAtlDllModuleT](#catldllmodulet)|Конструктор.|  
 |[CAtlDllModuleT:: ~ CAtlDllModuleT](#dtor)|Деструктор|  
   
 ### <a name="public-methods"></a>Открытые методы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[CAtlDllModuleT::DllCanUnloadNow](#dllcanunloadnow)|Проверяет, если библиотека DLL может быть выгружен.|  
 |[CAtlDllModuleT::DllGetClassObject](#dllgetclassobject)|Возвращает фабрику класса.|  

@@ -14,11 +14,12 @@ caps.latest.revision: "11"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 82f33d178799f56465f0d1a9794dacad7c01c77a
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 073c906e7ecdfcf933e4b91cbcf8d6a77324df76
+ms.sourcegitcommit: 54035dce0992ba5dce0323d67f86301f994ff3db
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 01/03/2018
 ---
 # <a name="qpar-auto-parallelizer"></a>/Qpar (автоматический параллелизатор)
 Включает [автоматического Параллелизатора](../../parallel/auto-parallelization-and-auto-vectorization.md) функции компилятора для автоматически параллелизации циклов в коде.  
@@ -54,4 +55,4 @@ ms.lasthandoff: 10/24/2017
  [Параметры компилятора](../../build/reference/compiler-options.md)   
  [Настройка параметров компилятора](../../build/reference/setting-compiler-options.md)   
  [#pragma loop()](../../preprocessor/loop.md)   
- [Параллельное программирование в машинном коде](http://go.microsoft.com/fwlink/?LinkId=263662)
+ [Параллельное программирование в машинном коде](http://go.microsoft.com/fwlink/p/?linkid=263662)

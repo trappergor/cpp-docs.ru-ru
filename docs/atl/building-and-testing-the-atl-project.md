@@ -16,11 +16,12 @@ caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 2bb3fc7d9d1e47546e4475057a11dcf560a84c1a
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 0a3dbd570a16228c02215560e8133a77b98a2489
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="building-and-testing-the-atl-project"></a>Построение и тестирование проекта ATL
 Как упоминалось в [Вставка составного элемента управления](../atl/inserting-a-composite-control.md), один из компонентов начального проекта является страница HTML по умолчанию, на котором размещена нового составного элемента управления. После завершения изменения составного элемента управления, нажмите кнопку **построить решение** или **Перестроить решение** из **построения** меню. После успешного построения проекта загрузить HTML-страницы, в Internet Explorer или другой браузер, находящуюся в корневом каталоге проекта составного элемента управления и проверить функциональные возможности элемента управления.  

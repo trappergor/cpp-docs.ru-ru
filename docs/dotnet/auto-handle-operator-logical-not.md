@@ -1,45 +1,46 @@
 ---
-title: "auto_handle::operator! | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "msclr.auto_handle.operator!"
-  - "msclr::auto_handle::operator!"
-  - "auto_handle.operator!"
-  - "auto_handle::operator!"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "operator!"
+title: "auto_handle::operator! | Документы Майкрософт"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords:
+- msclr.auto_handle.operator!
+- msclr::auto_handle::operator!
+- auto_handle.operator!
+- auto_handle::operator!
+dev_langs: C++
+helpviewer_keywords: operator!
 ms.assetid: 3f6c7729-3260-4842-87f9-c491c140b299
-caps.latest.revision: 10
-caps.handback.revision: 8
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "10"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: d6b37b4f5eaaec603ee457558fb6a68161e6e1e4
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 12/21/2017
 ---
-# auto_handle::operator!
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="autohandleoperator"></a>auto_handle::operator!
 Оператор для использования `auto_handle` в условном выражении.  
   
-## Синтаксис  
+## <a name="syntax"></a>Синтаксис  
   
 ```  
 bool operator!();  
 ```  
   
-## Возвращаемое значение  
- `true` если от программу\-оболочку объект недопустим; `false` в противном случае.  
+## <a name="return-value"></a>Возвращаемое значение  
+ `true`Если инкапсулированный объект, который является недопустимым; `false` в противном случае.  
   
-## Пример  
+## <a name="example"></a>Пример  
   
 ```  
 // msl_auto_handle_operator_not.cpp  
@@ -62,14 +63,17 @@ int main() {
 }  
 ```  
   
-  **s1 недопустим**  
-**допустимо s2**  
-**теперь s2 недопустимо**   
-## Требования  
- **Файл заголовка**\<msclr\\auto\_handle.h\>  
+```Output  
+s1 is invalid  
+s2 is valid  
+s2 is now invalid  
+```  
+  
+## <a name="requirements"></a>Требования  
+ **Файл заголовка** \<msclr\auto_handle.h >  
   
  **Пространство имен** msclr  
   
-## См. также  
- [Члены auto\_handle](../dotnet/auto-handle-members.md)   
- [auto\_handle::operator bool](../dotnet/auto-handle-operator-bool.md)
+## <a name="see-also"></a>См. также  
+ [Члены auto_handle](../dotnet/auto-handle-members.md)   
+ [auto_handle::operator bool](../dotnet/auto-handle-operator-bool.md)

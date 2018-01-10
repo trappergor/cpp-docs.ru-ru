@@ -12,11 +12,12 @@ caps.latest.revision: "28"
 author: ghogen
 ms.author: ghogen
 manager: ghogen
-ms.openlocfilehash: 181dcba15098f7cd75eec083ab977969bde622ba
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 6c2e05e3570179ac315e16576c72d2a37b580482
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="array-and-writeonlyarray-ccx"></a>Классы Array и WriteOnlyArray (C++/CX)
 Можно свободно использовать обычные массивы в стиле языка C или [std::array](../standard-library/array-class-stl.md) в C + +/ CX программы (хотя [std::vector](../standard-library/vector-class.md) часто является лучшим выбором), но любого API, который публикуется в метаданных, необходимо преобразовать массив в стиле C или вектора синхронизации в [Platform::Array](../cppcx/platform-array-class.md) или [Platform::WriteOnlyArray](../cppcx/platform-writeonlyarray-class.md) типа, в зависимости от того, как он используется. Тип [Platform::Array](../cppcx/platform-array-class.md) не сравним по эффективности и широте возможностей с типом [std::vector](../standard-library/vector-class.md), поэтому в общем случае не рекомендуется использовать его во внутреннем коде, который выполняет множество операций над элементами массива.  

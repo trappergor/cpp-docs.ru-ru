@@ -25,11 +25,12 @@ caps.latest.revision: "21"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 17eb8bd65277c5aa97996261fabc74dc668dc10e
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: c9d26ce9e674168f3d3d1c67dc48bb16b1a87169
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="colecmdui-class"></a>Класс COleCmdUI
 Реализует метод для MFC, позволяющий обновлять состояние объектов ИП, связанных с зависимыми от `IOleCommandTarget`функциями вашего приложения.  
@@ -40,17 +41,17 @@ ms.lasthandoff: 10/24/2017
 class COleCmdUI : public CCmdUI  
 ```  
   
-## <a name="members"></a>Члены  
+## <a name="members"></a>Участники  
   
 ### <a name="public-constructors"></a>Открытые конструкторы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[COleCmdUI::COleCmdUI](#colecmdui)|Создает объект `COleCmdUI`.|  
   
 ### <a name="public-methods"></a>Открытые методы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[COleCmdUI::Enable](#enable)|Устанавливает или снимает флаг команды enable.|  
 |[COleCmdUI::SetCheck](#setcheck)|Задает состояние включения/выключения переключателя команды.|  
@@ -116,7 +117,7 @@ virtual void SetCheck(int nCheck);
  `nCheck`  
  Значение, определяющее, включить или выключить переключить ее состояние команды. Доступны следующие значения:  
   
-|Значение|Описание|  
+|Значение|Описание:|  
 |-----------|-----------------|  
 |**1**|Задает команду, чтобы on.|  
 |**2**|Задает команду, чтобы определено; не удается определить состояние, так как атрибут этой команды на и отключение состояния в подходящий вариант выбора.|  

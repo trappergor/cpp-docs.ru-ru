@@ -1,49 +1,47 @@
 ---
-title: ".SETFRAME | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - ".SETFRAME"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - ".SETFRAME directive"
+title: ". SETFRAME | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: .SETFRAME
+dev_langs: C++
+helpviewer_keywords: .SETFRAME directive
 ms.assetid: eaa9b5ed-4daa-4f1e-bdb6-100758007ab3
-caps.latest.revision: 8
-caps.handback.revision: 8
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
+caps.latest.revision: "8"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 277eb151fabc62a5d6cd44ba34bac7c230cec39f
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 12/21/2017
 ---
-# .SETFRAME
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Заполняет поле и смещение регистра кадра в данных раскрутки, используя указанный регистр \(`reg`и смещение \(\)`offset`\).  Смещение должно быть кратным 16 и меньшим или равным 240.  Эта директива также создает a `UWOP_SET_FPREG` запись кода раскрутки для указанного регистра, используя текущее смещение в прологе.  
+# <a name="setframe"></a>.SETFRAME
+Заполняет кадр зарегистрировать поле и смещение в очистки данных, с помощью указанного регистра (`reg`) и смещения (`offset`). Смещение должно быть кратным 16 и меньше или равно 240. Эта директива также приводит к возникновению ошибки `UWOP_SET_FPREG` очистки записи кода для указанного зарегистрирован с помощью текущего смещения в прологе.  
   
-## Синтаксис  
+## <a name="syntax"></a>Синтаксис  
   
 ```  
 .SETFRAME reg, offset  
 ```  
   
-## Заметки  
- .SETFRAME Позволяет пользователям ml64.exe, чтобы указать, как функция с кадром очистки и допустимо только внутри пролога, который распространяется от [PROC](../../assembler/masm/proc.md) объявление КАДРА к  [.ENDPROLOG](../Topic/.ENDPROLOG.md) директива.  Эти правила не создают код; они лишь создают `.xdata` и  `.pdata`.  .SETFRAME Должен предшествовать инструкциям, которые фактически реализуют действия, размотанным.  Рекомендуется создавать программу\-оболочку и рекомендации очистки и код предназначен для раскрутки в макросе для предоставления соглашения.  
+## <a name="remarks"></a>Примечания  
+ . SETFRAME позволяет пользователям ml64.exe указать освобождает функция кадра и разрешено только в пределах пролога, начиная с позиции [PROC](../../assembler/masm/proc.md) объявление КАДРА [. ENDPROLOG](../../assembler/masm/dot-endprolog.md) директивы. Эти директивы не создают код; только создать `.xdata` и `.pdata`. . SETFRAME должно предшествовать инструкции, которые фактически реализуют действия, чтобы быть развернут. Рекомендуется переносить директивы очистки и код, который они предназначены для очистки в макросе чтобы соглашение.  
   
- Дополнительные сведения см. в разделе [MASM for x64 \(ml64.exe\)](../../assembler/masm/masm-for-x64-ml64-exe.md).  
+ Дополнительные сведения см. в разделе [MASM для x64 (ml64.exe)](../../assembler/masm/masm-for-x64-ml64-exe.md).  
   
-## Пример  
+## <a name="sample"></a>Пример  
   
-### Описание  
- В следующем образце показано, как использовать указатель кадра.  
+### <a name="description"></a>Описание:  
+ Следующий пример показывает способ использования указателя фрейма:  
   
-### Код  
+### <a name="code"></a>Код  
   
 ```  
 ; ml64 frmex2.asm /link /entry:frmex2 /SUBSYSTEM:CONSOLE  
@@ -72,5 +70,5 @@ _text ENDS
 END  
 ```  
   
-## См. также  
- [Directives Reference](../../assembler/masm/directives-reference.md)
+## <a name="see-also"></a>См. также  
+ [Справочник по директивам](../../assembler/masm/directives-reference.md)

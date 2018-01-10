@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
 apiname:
@@ -29,44 +28,29 @@ f1_keywords:
 - mbbtype
 - mbbtype_l
 - _mbbtype
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - _mbbtype function
 - _mbbtype_l function
 - mbbtype function
 - mbbtype_l function
 ms.assetid: b8e34b40-842a-4298-aa39-0bd2d8e51c2a
-caps.latest.revision: 18
+caps.latest.revision: "18"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3f91eafaf3b5d5c1b8f96b010206d699f666e224
-ms.openlocfilehash: e7b9c7aed7205e6cac428a0f627525f9484afc5a
-ms.contentlocale: ru-ru
-ms.lasthandoff: 04/01/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: ae66b1c0765f496dcfe460c4ea7ff4f84e9333ff
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="mbbtype-mbbtypel"></a>_mbbtype, _mbbtype_l
 Возвращает тип байта, основываясь на предыдущем байте.  
   
 > [!IMPORTANT]
->  Этот API не может использоваться в приложениях, выполняемых в [!INCLUDE[wrt](../../atl/reference/includes/wrt_md.md)]. Дополнительные сведения см. в статье [Функции CRT, которые не поддерживаются с ключом /ZW](http://msdn.microsoft.com/library/windows/apps/jj606124.aspx).  
+>  Этот API нельзя использовать в приложениях, выполняемых в среде выполнения Windows. Дополнительные сведения см. в статье [Функции CRT, которые не поддерживаются с ключом /ZW](http://msdn.microsoft.com/library/windows/apps/jj606124.aspx).  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -106,7 +90,7 @@ int _mbbtype_l(
 ## <a name="remarks"></a>Примечания  
  Функция `_mbbtype` определяет тип байта в многобайтовом символе. Если параметр `type` имеет любым значение, кроме 1, `_mbbtype` проверяет допустимый одиночный байт или старший байт многобайтового символа. Если значение параметра `type` равно 1, `_mbbtype` проверяет допустимый младший байт многобайтового символа.  
   
- Выходное значение зависит от настройки категории `LC_CTYPE` языкового стандарта; дополнительные сведения см. в разделе [setlocale, _wsetlocale](../../c-runtime-library/reference/setlocale-wsetlocale.md). Версия `_mbbtype` этой функции использует текущий языковой стандарт для поведения, зависящего от языкового стандарта; версия `_mbbtype_l` работает аналогично, но использует переданный языковой стандарт. Дополнительные сведения см. в разделе [Языковой стандарт](../../c-runtime-library/locale.md).  
+ Выходное значение зависит от настройки категории `LC_CTYPE` языкового стандарта; дополнительные сведения см. в разделе [setlocale, _wsetlocale](../../c-runtime-library/reference/setlocale-wsetlocale.md). Версия `_mbbtype` этой функции использует текущий языковой стандарт для поведения, зависящего от языкового стандарта; версия `_mbbtype_l` работает аналогично, но использует переданный языковой стандарт. Для получения дополнительной информации см. [Locale](../../c-runtime-library/locale.md).  
   
  В более ранних версиях функция `_mbbtype` называлась `chkctype`. Для нового кода используйте вместо нее `_mbbtype`.  
   

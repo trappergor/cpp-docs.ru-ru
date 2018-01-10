@@ -22,11 +22,12 @@ caps.latest.revision: "22"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: eb04a51ef9127daa32cb428b058eb6ac7007ba9b
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 7140e2db55db8a28c1af63f89517708f4dc0d835
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cpoint-class"></a>Класс CPoint
 Как и в структуре `POINT` Windows.  
@@ -37,23 +38,23 @@ ms.lasthandoff: 10/24/2017
 class CPoint : public tagPOINT 
 ```  
   
-## <a name="members"></a>Члены  
+## <a name="members"></a>Участники  
   
 ### <a name="public-constructors"></a>Открытые конструкторы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[CPoint::CPoint](#cpoint)|Создает документ `CPoint`.|  
   
 ### <a name="public-methods"></a>Открытые методы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[CPoint::Offset](#offset)|Значения добавляются к **x** и **y** члены `CPoint`.|  
   
 ### <a name="public-operators"></a>Открытые операторы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[CPoint::operator-](#operator_-)|Возвращает разность `CPoint` и размер, или отрицательными значениями точку или разница размера между двумя точками или смещение с отрицательным размером.|  
 |[CPoint::operator! =](#operator_neq)|Проверяет неравенство двух точек.|  

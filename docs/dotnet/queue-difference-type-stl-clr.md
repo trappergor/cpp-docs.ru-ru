@@ -1,41 +1,42 @@
 ---
-title: "queue::difference_type (STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::queue::difference_type"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "difference_type - элемент [STL/CLR]"
+title: "Queue::difference_type (STL/CLR) | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::queue::difference_type
+dev_langs: C++
+helpviewer_keywords: difference_type member [STL/CLR]
 ms.assetid: d7a716e1-b331-4928-bda3-f3c74a57307e
-caps.latest.revision: 14
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 12
+caps.latest.revision: "14"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: e38149ad3e591b9c9df49523dfc27a6b4c3d87d2
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 12/21/2017
 ---
-# queue::difference_type (STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Типы подписанного расстояния между 2 элементами.  
+# <a name="queuedifferencetype-stlclr"></a>queue::difference_type (STL/CLR)
+Тип расстояния со знаком между двумя элементами.  
   
-## Синтаксис  
+## <a name="syntax"></a>Синтаксис  
   
 ```  
 typedef int difference_type;  
 ```  
   
-## Заметки  
- Тип описывает число возможно отрицательного элемента.  
+## <a name="remarks"></a>Примечания  
+ Тип, описывающий счетчик возможно отрицательное элементов.  
   
-## Пример  
+## <a name="example"></a>Пример  
   
 ```  
 // cliext_queue_difference_type.cpp   
@@ -74,14 +75,17 @@ int main()
   
 ```  
   
-  **a b c**  
-**отправляющ 2 \= \-2**  
-**3 \= 3 извлечения**   
-## Требования  
- **Заголовок:**\<cliext\/queue\>  
+```Output  
+ a b c  
+pushing 2 = -2  
+popping 3 = 3  
+```  
+  
+## <a name="requirements"></a>Требования  
+ **Заголовок:** \<cliext/очереди >  
   
  **Пространство имен:** cliext  
   
-## См. также  
- [queue](../Topic/queue%20\(STL-CLR\).md)   
- [queue::size\_type](../dotnet/queue-size-type-stl-clr.md)
+## <a name="see-also"></a>См. также  
+ [очереди (STL/CLR)](../dotnet/queue-stl-clr.md)   
+ [queue::size_type (STL/CLR)](../dotnet/queue-size-type-stl-clr.md)

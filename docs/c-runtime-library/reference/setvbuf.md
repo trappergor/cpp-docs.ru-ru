@@ -4,12 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
-apiname:
-- setvbuf
+apiname: setvbuf
 apilocation:
 - msvcrt.dll
 - msvcr80.dll
@@ -23,39 +21,23 @@ apilocation:
 - ucrtbase.dll
 - api-ms-win-crt-stdio-l1-1-0.dll
 apitype: DLLExport
-f1_keywords:
-- setvbuf
-dev_langs:
-- C++
+f1_keywords: setvbuf
+dev_langs: C++
 helpviewer_keywords:
 - controlling stream buffering
 - stream buffering
 - setvbuf function
 ms.assetid: 6aa5aa37-3408-4fa0-992f-87f9f9c4baea
-caps.latest.revision: 16
+caps.latest.revision: "16"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: e257f037a05c45f5b98e64ea55bd125af443b0be
-ms.openlocfilehash: 3955a2e5c2f0371c804f1b5a7374540ca8720339
-ms.contentlocale: ru-ru
-ms.lasthandoff: 03/30/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: 0855982627c60c51ec5753031ae932ffd430f024
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="setvbuf"></a>setvbuf
 Управляет потоковой буферизацией и размером буфера.  
@@ -87,7 +69,7 @@ int setvbuf(
 ## <a name="return-value"></a>Возвращаемое значение  
  Возвращает 0 в случае успеха.  
   
- Если `stream` имеет значение `NULL` или `mode`, или `size` не входит в допустимый диапазон, вызывается обработчик недопустимых параметров, как описано в разделе [Проверка параметров](../../c-runtime-library/parameter-validation.md). Если продолжение выполнения разрешено, эта функция возвращает –1 и задает для `errno` значение `EINVAL`.  
+ Если `stream` имеет значение `NULL` или `mode`, или `size` не входит в допустимый диапазон, вызывается обработчик недопустимых параметров, как описано в разделе [Проверка параметров](../../c-runtime-library/parameter-validation.md). Если продолжение выполнения разрешено, эта функция возвращает -1 и задает для `errno` значение `EINVAL`.  
   
  Дополнительные сведения об этих и других кодах ошибок см. в разделе [_doserrno, errno, _sys_errlist и _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).  
   

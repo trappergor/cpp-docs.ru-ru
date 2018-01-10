@@ -1,35 +1,35 @@
 ---
-title: "Дата и время: поддержка SYSTEMTIME | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "SYSTEMTIME"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "системное время"
-  - "Структура FILETIME, класс CTime"
-  - "Форматирование времени [C++]"
-  - "SYSTEMTIME - структура"
-  - "даты [C++] MFC"
-  - "форматирование [C++], время"
+title: "Дата и время: поддержка SYSTEMTIME | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: SYSTEMTIME
+dev_langs: C++
+helpviewer_keywords:
+- system time
+- FILETIME structure, with CTime class
+- time [C++], formatting
+- SYSTEMTIME structure
+- dates [C++], MFC
+- formatting [C++], time
 ms.assetid: 201528e4-2ffa-48fc-af8f-203aa86d942a
-caps.latest.revision: 13
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 13
+caps.latest.revision: "13"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 405c245cdab6426330915c945cd77f8336e68c9d
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 12/21/2017
 ---
-# Дата и время: поддержка SYSTEMTIME
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
- [CTime](../Topic/CTime%20Class.md) имеет конструкторы, которые принимают время системы и файлов из Win32. Если вы используете в этих целях объекты `CTime`, вам следует соответствующим образом изменить их инициализацию, следуя указаниям из данной статьи.  
+# <a name="date-and-time-systemtime-support"></a>Дата и время: поддержка SYSTEMTIME
+[CTime](../atl-mfc-shared/reference/ctime-class.md) класс содержит конструкторы, которые принимают время системы и файлов из Win32. Если вы используете в этих целях объекты `CTime`, вам следует соответствующим образом изменить их инициализацию, следуя указаниям из данной статьи.  
   
  Сведения о структуре SYSTEMTIME см. в разделе [SYSTEMTIME](../mfc/reference/systemtime-structure1.md). Сведения о структуре FILETIME см. в разделе [FILETIME](../mfc/reference/filetime-structure.md).  
   
@@ -51,10 +51,10 @@ caps.handback.revision: 13
   
 -   [Общие программирования даты и времени в MFC](../atl-mfc-shared/date-and-time.md)  
   
--   [Поддержка автоматизации при программировании даты и времени](../Topic/Date%20and%20Time:%20Automation%20Support.md)  
+-   [Поддержка автоматизации программирования даты и времени](../atl-mfc-shared/date-and-time-automation-support.md)  
   
 -   [Классы общего назначения для программирования даты и времени](../atl-mfc-shared/date-and-time-general-purpose-classes.md)  
   
-## <a name="see-also"></a>См. также раздел  
+## <a name="see-also"></a>См. также  
  [Дата и время](../atl-mfc-shared/date-and-time.md)
 

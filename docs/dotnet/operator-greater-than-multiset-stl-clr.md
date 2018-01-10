@@ -1,33 +1,33 @@
 ---
-title: "operator&gt; (multiset) (STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::multiset::operator>"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "operator> - элемент [STL/CLR]"
+title: "оператор&gt; (multiset) (STL/CLR) | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::multiset::operator>
+dev_langs: C++
+helpviewer_keywords: operator> member [STL/CLR]
 ms.assetid: 88b4d56d-c7e9-4ac9-a460-0f26e1e5b837
-caps.latest.revision: 16
-caps.handback.revision: 14
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "16"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: 39acfd3b3d38186057c18ecb8701b23eba95a061
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 12/21/2017
 ---
-# operator&gt; (multiset) (STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Список большей, чем сравнение.  
+# <a name="operatorgt-multiset-stlclr"></a>оператор&gt; (multiset) (STL/CLR)
+Список больше сравнения.  
   
-## Синтаксис  
+## <a name="syntax"></a>Синтаксис  
   
 ```  
 template<typename Key>  
@@ -35,17 +35,17 @@ template<typename Key>
         multiset<Key>% right);  
 ```  
   
-#### Параметры  
- влево  
- Левый контейнер, с которым выполняется сравнение.  
+#### <a name="parameters"></a>Параметры  
+ left  
+ Левый контейнер для сравнения.  
   
- правый  
- Правой контейнер, с которым выполняется сравнение.  
+ right  
+ Правый контейнер для сравнения.  
   
-## Заметки  
- Функция возвращает оператора `right` `<` `left`.  Он используется для выполнения приказано ли `left` после `right` при сравнении 2 multisets элемент элементом.  
+## <a name="remarks"></a>Примечания  
+ Функция оператор возвращает `right` `<` `left`. Можно использовать для тестирования ли `left` упорядочен после `right` при двух множественных наборов, сравниваемые элемент элемент.  
   
-## Пример  
+## <a name="example"></a>Пример  
   
 ```  
 // cliext_multiset_operator_gt.cpp   
@@ -85,19 +85,22 @@ int main()
   
 ```  
   
-  **a b c**  
- **B d**  
-**\[B C\] \> \[B C\] false**  
-**\[B d\] \> \[B C\].**   
-## Требования  
- **Заголовок:**\<cliext\/set\>  
+```Output  
+ a b c  
+ a b d  
+[a b c] > [a b c] is False  
+[a b d] > [a b c] is True  
+```  
+  
+## <a name="requirements"></a>Требования  
+ **Заголовок:** \<cliext и set >  
   
  **Пространство имен:** cliext  
   
-## См. также  
- [multiset](../dotnet/multiset-stl-clr.md)   
- [operator\=\= \(multiset\)](../Topic/operator==%20\(multiset\)%20\(STL-CLR\).md)   
- [operator\!\= \(multiset\)](../dotnet/operator-inequality-multiset-stl-clr.md)   
- [operator\< \(multiset\)](../dotnet/operator-less-than-multiset-stl-clr.md)   
- [operator\>\= \(multiset\)](../Topic/operator%3E=%20\(multiset\)%20\(STL-CLR\).md)   
- [operator\<\= \(multiset\)](../Topic/operator%3C=%20\(multiset\)%20\(STL-CLR\).md)
+## <a name="see-also"></a>См. также  
+ [мультинабор (STL/CLR)](../dotnet/multiset-stl-clr.md)   
+ [оператор == (multiset) (STL/CLR)](../dotnet/operator-equality-multiset-stl-clr.md)   
+ [оператор! = (multiset) (STL/CLR)](../dotnet/operator-inequality-multiset-stl-clr.md)   
+ [оператор\< (multiset) (STL/CLR)](../dotnet/operator-less-than-multiset-stl-clr.md)   
+ [оператор > = (multiset) (STL/CLR)](../dotnet/operator-greater-or-equal-multiset-stl-clr.md)   
+ [operator<= (multiset) (STL/CLR)](../dotnet/operator-less-or-equal-multiset-stl-clr.md)

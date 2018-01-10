@@ -46,11 +46,12 @@ caps.latest.revision: "25"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 4ac41aff966956506c79dda65d895f805dede1d1
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: af0601299046276c135571be2bac615df1571140
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="data-type-ranges"></a>Диапазоны типов данных
 Компиляторы Visual C++ (32-разрядные и 64-разрядные) поддерживают типы, указанные в приведенной ниже таблице.  
@@ -98,7 +99,7 @@ ms.lasthandoff: 10/24/2017
 |длинное длинное|8|Нет (но эквивалентно __int64)|От -9 223 372 036 854 775 808 до 9 223 372 036 854 775 807|  
 |без знака длинное длинное|8|Нет (но эквивалентно unsigned__int64)|От 0 до 18 446 744 073 709 551 615|  
 |enum|Возможны разные варианты|Нет| |  
-|плавающее|4|Нет|3,4E +/- 38 (7 знаков)|  
+|float|4|Нет|3,4E +/- 38 (7 знаков)|  
 |double|8|Нет|1,7E +/- 308 (15 знаков)|  
 |длинное двойное|То же, что и для двойного|Нет|То же, что и для двойного|  
 |wchar_t|2|__wchar_t|От 0 до 65 535|  

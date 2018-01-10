@@ -17,14 +17,15 @@ caps.latest.revision: "13"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: eaab86ab72ef41bfe97a67c6d8845e8ce3d3c899
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 9f97b4fcc84f9099ca7017eabd7ae5ead62cfe63
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="atl-property-page-wizard"></a>Мастер страницы свойств ATL
-Этот мастер [добавляет страницу свойств в проект ATL](../../atl/reference/adding-an-atl-property-page.md) или в проект MFC с поддержкой ATL.. Страницы свойств ATL предоставляет пользовательский интерфейс для настройки свойств (или вызова методов) одного или нескольких COM-объектов.  
+Этот мастер [добавляет страницу свойств в проект ATL](../../atl/reference/adding-an-atl-property-page.md) или в проект MFC с поддержкой ATL. Страницы свойств ATL предоставляет пользовательский интерфейс для настройки свойств (или вызова методов) одного или нескольких COM-объектов.  
   
 ## <a name="remarks"></a>Примечания  
  Начиная с Visual Studio 2008, регистрации сценарий, созданные с помощью этого мастера будет регистрировать его COM-компонентов в группе **HKEY_CURRENT_USER** вместо **HKEY_LOCAL_MACHINE**. Чтобы изменить это поведение, задайте **компонент регистра для всех пользователей** параметр мастера ATL.  
@@ -56,7 +57,7 @@ ms.lasthandoff: 10/24/2017
 > [!NOTE]
 >  Если вы создаете проект, использующий атрибуты, или если на этой странице мастера указывается, что страница свойств использует атрибуты, не может изменить этот параметр, поскольку ATL не включает `coclass` атрибута.  
   
- **Тип**  
+ **Type**  
  Задает описание объекта, которое будет отображаться в реестре  
   
  **Идентификатор progID**  

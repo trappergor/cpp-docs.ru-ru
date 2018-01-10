@@ -16,11 +16,12 @@ caps.latest.revision: "6"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 53340a543e0f89a6a1078f7d9a8b291302ac973c
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: c913a5b1d5c6861fc6337f5a7343506420dd5c83
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="hlsl-property-pages-advanced"></a>Страницы свойств HLSL: Дополнительно
 Чтобы настроить следующие свойства компилятор HLSL (fxc.exe), используйте его **Дополнительно** страницу свойств. Сведения о доступе к **Дополнительно** см. на странице свойств в папке HLSL [работа со свойствами проекта](../ide/working-with-project-properties.md).  

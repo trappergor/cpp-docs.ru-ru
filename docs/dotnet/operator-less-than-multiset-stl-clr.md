@@ -1,33 +1,33 @@
 ---
-title: "operator&lt; (multiset) (STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::multiset::operator<"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "operator< - элемент [STL/CLR]"
+title: "оператор&lt; (multiset) (STL/CLR) | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::multiset::operator<
+dev_langs: C++
+helpviewer_keywords: operator< member [STL/CLR]
 ms.assetid: 48150cda-4f3e-4535-860c-89f622a7f0a8
-caps.latest.revision: 16
-caps.handback.revision: 14
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "16"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: d2eef84b72ab36a0c4dbdfc02e4b58752126a7f6
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 12/21/2017
 ---
-# operator&lt; (multiset) (STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Список проведения сравнения.  
+# <a name="operatorlt-multiset-stlclr"></a>оператор&lt; (multiset) (STL/CLR)
+Список меньше сравнения.  
   
-## Синтаксис  
+## <a name="syntax"></a>Синтаксис  
   
 ```  
 template<typename Key>  
@@ -35,17 +35,17 @@ template<typename Key>
         multiset<Key>% right);  
 ```  
   
-#### Параметры  
- влево  
- Левый контейнер, с которым выполняется сравнение.  
+#### <a name="parameters"></a>Параметры  
+ left  
+ Левый контейнер для сравнения.  
   
- правый  
- Правой контейнер, с которым выполняется сравнение.  
+ right  
+ Правый контейнер для сравнения.  
   
-## Заметки  
- Функция возвращает значение true, если оператора для самой низкой позиции `i`, которая `!(``right``[i] <` `left``[i])` также имеет значение true, `left``[i] <` `right``[i]`.  В противном случае возвращается `left``->size() <` `right``->size()` его использовании для выполнения приказано ли `left` до 2 multisets `right` при сравнении элемент элементом.  
+## <a name="remarks"></a>Примечания  
+ Оператор функция возвращает значение true, если для нижнюю позицию `i` которого `!(right[i] < left[i])` верно, кроме того, `left[i] < right[i]`. В противном случае он возвращает `left->size() < right->size()` использовать для тестирования ли `left` упорядочен до `right` при двух множественных наборов, сравниваемые элемент элемент.  
   
-## Пример  
+## <a name="example"></a>Пример  
   
 ```  
 // cliext_multiset_operator_lt.cpp   
@@ -85,19 +85,22 @@ int main()
   
 ```  
   
-  **a b c**  
- **B d**  
-**\[B C\] \< \[B C\] принимает значение " false "**  
-**\[\-\] \< \[B C d\] наоборот B**   
-## Требования  
- **Заголовок:**\<cliext\/set\>  
+```Output  
+ a b c  
+ a b d  
+[a b c] < [a b c] is False  
+[a b c] < [a b d] is True  
+```  
+  
+## <a name="requirements"></a>Требования  
+ **Заголовок:** \<cliext и set >  
   
  **Пространство имен:** cliext  
   
-## См. также  
- [multiset](../dotnet/multiset-stl-clr.md)   
- [operator\=\= \(multiset\)](../Topic/operator==%20\(multiset\)%20\(STL-CLR\).md)   
- [operator\!\= \(multiset\)](../dotnet/operator-inequality-multiset-stl-clr.md)   
- [operator\>\= \(multiset\)](../Topic/operator%3E=%20\(multiset\)%20\(STL-CLR\).md)   
- [operator\> \(multiset\)](../dotnet/operator-greater-than-multiset-stl-clr.md)   
- [operator\<\= \(multiset\)](../Topic/operator%3C=%20\(multiset\)%20\(STL-CLR\).md)
+## <a name="see-also"></a>См. также  
+ [мультинабор (STL/CLR)](../dotnet/multiset-stl-clr.md)   
+ [оператор == (multiset) (STL/CLR)](../dotnet/operator-equality-multiset-stl-clr.md)   
+ [оператор! = (multiset) (STL/CLR)](../dotnet/operator-inequality-multiset-stl-clr.md)   
+ [оператор > = (multiset) (STL/CLR)](../dotnet/operator-greater-or-equal-multiset-stl-clr.md)   
+ [оператор > (multiset) (STL/CLR)](../dotnet/operator-greater-than-multiset-stl-clr.md)   
+ [operator<= (multiset) (STL/CLR)](../dotnet/operator-less-or-equal-multiset-stl-clr.md)

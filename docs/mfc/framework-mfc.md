@@ -23,11 +23,12 @@ caps.latest.revision: "9"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 09be7a5efbf3f78aa3cbc1862b811fff3d487c75
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: c021b11809b3e6598e694fdaa46b7f829358e24f
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="framework-mfc"></a>Платформа (MFC)
 Работы с платформой библиотеки Microsoft Foundation Class (MFC) является главным образом на основе несколько основных классов и несколько средств Visual C++. Некоторые классы инкапсулируют большая часть интерфейса (API) Win32. Другие классы инкапсулируют понятий приложений, таких как документы, представления и само приложение. По-прежнему другие инкапсулируют OLE функции и возможности доступа к данным ODBC и DAO.  
@@ -36,7 +37,7 @@ ms.lasthandoff: 10/24/2017
   
  Инкапсуляция означает, что класс C++ `CWnd`, например, содержит переменную-член типа `HWND`, и функции-члены класса инкапсулируют вызовы функций Win32, которые принимают `HWND` как параметр. Функции-члены класса, обычно имеют имя, совпадающее с именем функции Win32, в которую они инкапсулируют.  
   
-## <a name="in-this-section"></a>Содержание  
+## <a name="in-this-section"></a>В этом разделе  
  [SDI и MDI](../mfc/sdi-and-mdi.md)  
   
  [Документы, представления и платформа](../mfc/documents-views-and-the-framework.md)  

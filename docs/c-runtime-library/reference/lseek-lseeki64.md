@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
 apiname:
@@ -28,8 +27,7 @@ f1_keywords:
 - _lseeki64
 - _lseek
 - lseeki64
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - lseek function
 - _lseek function
@@ -38,30 +36,16 @@ helpviewer_keywords:
 - file pointers [C++], moving
 - seek file pointers
 ms.assetid: aba8a768-d40e-48c3-b38e-473dbd782f93
-caps.latest.revision: 16
+caps.latest.revision: "16"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3f91eafaf3b5d5c1b8f96b010206d699f666e224
-ms.openlocfilehash: e8e40f4995f17314d70990a84c23c676d31a45d5
-ms.contentlocale: ru-ru
-ms.lasthandoff: 04/01/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: d4dad9abf8b82cc5c6e876af22a1a2f61a6216ed
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="lseek-lseeki64"></a>_lseek, _lseeki64
 Перемещает указатель файла в заданное местоположение.  
@@ -95,7 +79,7 @@ __int64 _lseeki64(
 ## <a name="return-value"></a>Возвращаемое значение  
  Функция `_lseek` возвращает смещение новой позиции в байтах относительно начала файла. Функция `_lseeki64` возвращает смещение в виде 64-разрядного целого числа. Эта функция возвращает-1 L для указания ошибки. Если передан недопустимый параметр, например неверный дескриптор файла, параметр *origin* имеет недопустимое значение или позиция, заданная параметром *offset*, располагается до начала файла, вызывается обработчик недопустимого параметра, как описывается в разделе [Проверка параметров](../../c-runtime-library/parameter-validation.md). Если выполнение может быть продолжено, эти функции устанавливают параметр `errno` в значение `EBADF` и возвращают –1L. Если устройство неспособно выполнять поиск (например, терминалы и принтеры), возвращаемое значение не определено.  
   
- Дополнительные сведения об этих и других кодах ошибок см. в разделе [_doserrno, errno, _sys_errlist и _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).  
+ Дополнительные сведения об этих и других кодах ошибок см. в разделе [_doserrno, errno, _sys_errlist, and _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).  
   
 ## <a name="remarks"></a>Примечания  
  Функция `_lseek` перемещает указатель файла (если он есть), связанный с аргументом `fd`, в новое местоположение, которое отстоит на *offset* байт от позиции, указанной аргументом *origin*. Следующая операция в файле выполняется в новом местоположении. Аргумент *origin* должен быть одной из следующих констант, определенных в Stdio.h.  

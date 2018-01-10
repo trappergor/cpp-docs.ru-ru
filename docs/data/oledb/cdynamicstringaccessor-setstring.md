@@ -1,33 +1,35 @@
 ---
-title: "CDynamicStringAccessor::SetString | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "CDynamicStringAccessor::SetString"
-  - "CDynamicStringAccessor.SetString"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "SetString - метод"
+title: "CDynamicStringAccessor::SetString | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- CDynamicStringAccessor::SetString
+- CDynamicStringAccessor.SetString
+dev_langs: C++
+helpviewer_keywords: SetString method
 ms.assetid: 94846d8b-4c1b-47fe-acdc-1752981cee25
-caps.latest.revision: 13
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 13
+caps.latest.revision: "13"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: 7c05186d8ea7f62ad07cae9a4b4689083543e485
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 12/21/2017
 ---
-# CDynamicStringAccessor::SetString
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Задает указанные данные столбца в виде строки.  
+# <a name="cdynamicstringaccessorsetstring"></a>CDynamicStringAccessor::SetString
+Задает данные указанного столбца в виде строки.  
   
-## Синтаксис  
+## <a name="syntax"></a>Синтаксис  
   
 ```  
 HRESULT SetString(  
@@ -44,26 +46,26 @@ HRESULT SetString(
 ) throw( );  
 ```  
   
-#### Параметры  
+#### <a name="parameters"></a>Параметры  
  `nColumn`  
- \[in\] число столбцов.  Начало номера столбца с 1.  Особое значение 0 ссылается на столбец закладки, если таковые имеются.  
+ [in] Номер столбца. Номера столбцов начинается с 1. Специальное значение 0 ссылается на столбец закладки в том случае, если таковые имеются.  
   
  `pColumnName`  
- \[in\] указатель на символьной строки, содержащей имя столбца.  
+ [in] Указатель на строку символов, которая содержит имя столбца.  
   
  `data`  
- \[in\] указатель на различных данным, в конкретному столбцу.  
+ [in] Указатель на данные строки для записи к указанному столбцу.  
   
-## Возвращаемое значение  
- Указатель на строковое значение в, чтобы задать определенный столбец.  Значение типа `BaseType`, которой будет `CHAR`  или `WCHAR`  в зависимости от того, указано `_UNICODE`  или нет.  
+## <a name="return-value"></a>Возвращаемое значение  
+ Указатель на строковое значение, для которого требуется задать указанного столбца. Значение имеет тип `BaseType`, которое будет `CHAR` или `WCHAR` в зависимости от того, следует ли `_UNICODE` или не определено.  
   
-## Заметки  
- Вторая форма переопределения принимает имя столбца в качестве строки ANSI и третья форма переопределения принимают имя столбца как строки юникода.  
+## <a name="remarks"></a>Примечания  
+ Второй переопределение принимает форму именем столбца как строки ANSI и третий переопределения формы принимает имя столбца в виде строки в Юникоде.  
   
- Если `_SECURE_ATL` определяется наличие ненулевое значение, сбой среды выполнения утверждения создается, если строка `data` ввода превышает максимально позволяемая длина указанного столбца данных.  В противном случае входная строка будет усечена, если она превышает максимально позволяемая длина.  
+ Если `_SECURE_ATL` определяется должен иметь ненулевое значение, сбой утверждения среды выполнения создается, если входные данные `data` строки превышает максимально допустимую длину столбца данных, на которую указывает ссылка. В противном случае входная строка будет усечено, если он превышает максимально допустимую длину.  
   
-## Требования  
+## <a name="requirements"></a>Требования  
  **Заголовок:** atldbcli.h  
   
-## См. также  
+## <a name="see-also"></a>См. также  
  [Класс CDynamicStringAccessor](../../data/oledb/cdynamicstringaccessor-class.md)

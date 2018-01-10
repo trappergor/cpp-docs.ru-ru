@@ -1,33 +1,32 @@
 ---
-title: "Ошибка построения проекта PRJ0002 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "PRJ0002"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "PRJ0002"
+title: "Ошибка построения проекта PRJ0002 | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords: PRJ0002
+dev_langs: C++
+helpviewer_keywords: PRJ0002
 ms.assetid: 1c820b1f-9a24-4681-80ed-4fcbfd7caa00
-caps.latest.revision: 7
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 81d7f45fb2145d0f47716841a50c9320fd46833c
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 12/21/2017
 ---
-# Ошибка построения проекта PRJ0002
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-результат ошибки возвращен из "command line".  
+# <a name="project-build-error-prj0002"></a>Ошибка построения проекта PRJ0002
+результат ошибки, возвращенные «Командная строка».  
   
- Команда ***command line***, которая была создана из пользовательского ввода в диалоговом окне **Страницы свойств**, возвратила код ошибки, но сведения не отобразились в окне вывода.  
+ Командная ***командной строки***, которой была создана из пользовательского ввода в **страницы свойств** диалоговое окно, возвращается код ошибки, но не сведения будут отображаться в окне вывода.  
   
- Разрешение для этой ошибки зависит от того, какой инструмент создает ошибку.  Для MIDL можно получить сведения о неполадках, если определено \/o \(перенаправление вывода\).  
+ Разрешение для этой ошибки зависит от того, какой инструмент создает ошибку. MIDL вы получите представление о том, что пошло не так, если определено /o (перенаправление вывода).  
   
- Вызов пакетного файла, например, настраиваемого этапа построения или построения события, не показывающего сведения о сбоях, также может послужить причиной возникновения этой ошибки.
+ Причина этой ошибки может быть также пакетного файла, например этапа настраиваемого построения или события построения, который не показывающего сведения о сбоях.

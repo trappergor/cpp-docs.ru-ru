@@ -4,12 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
-apiname:
-- longjmp
+apiname: longjmp
 apilocation:
 - msvcrt.dll
 - msvcr80.dll
@@ -22,38 +20,22 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 apitype: DLLExport
-f1_keywords:
-- longjmp
-dev_langs:
-- C++
+f1_keywords: longjmp
+dev_langs: C++
 helpviewer_keywords:
 - restoring stack environment and execution locale
 - longjmp function
 ms.assetid: 0e13670a-5130-45c1-ad69-6862505b7a2f
-caps.latest.revision: 9
+caps.latest.revision: "9"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: e257f037a05c45f5b98e64ea55bd125af443b0be
-ms.openlocfilehash: b5af03e83cc39c20fca310ba0c2377469c59ef38
-ms.contentlocale: ru-ru
-ms.lasthandoff: 03/30/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: 864aacbc30d9d50e1d0335d0d74c7ed63119d132
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="longjmp"></a>longjmp
 Восстанавливает среду стека и языковой стандарт выполнения.  
@@ -72,7 +54,7 @@ ms.lasthandoff: 03/30/2017
  `env`  
  Переменная, в которой хранится среда.  
   
- *value*  
+ *значение*  
  Значение, возвращаемое в вызов `setjmp`.  
   
 ## <a name="remarks"></a>Примечания  

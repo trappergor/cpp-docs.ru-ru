@@ -1,34 +1,36 @@
 ---
-title: "CAccessorBase::ReleaseAccessors | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "CAccessorBase::ReleaseAccessors"
-  - "CAccessorBase.ReleaseAccessors"
-  - "ReleaseAccessors"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "ReleaseAccessors - метод"
+title: "CAccessorBase::ReleaseAccessors | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- CAccessorBase::ReleaseAccessors
+- CAccessorBase.ReleaseAccessors
+- ReleaseAccessors
+dev_langs: C++
+helpviewer_keywords: ReleaseAccessors method
 ms.assetid: f08bc88e-0552-4a9c-9c65-b4061094649a
-caps.latest.revision: 8
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: a46278b59803ffafbd0b9ee4db2b77249b425fa2
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 12/21/2017
 ---
-# CAccessorBase::ReleaseAccessors
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Выпуски доступ, созданные классом.  
+# <a name="caccessorbasereleaseaccessors"></a>CAccessorBase::ReleaseAccessors
+Освобождает методы доступа, созданный классом.  
   
-## Синтаксис  
+## <a name="syntax"></a>Синтаксис  
   
 ```  
   
@@ -37,18 +39,18 @@ caps.handback.revision: 8
 );  
 ```  
   
-#### Параметры  
- *панк*  
- \[in\] указатель на интерфейс **IUnknown** для com\-объекта, для которого доступ были созданы.  
+#### <a name="parameters"></a>Параметры  
+ *pUnk*  
+ [in] Указатель на **IUnknown** интерфейса для COM-объекта, для которого были созданы методы доступа.  
   
-## Возвращаемое значение  
- Стандартное `HRESULT`.  
+## <a name="return-value"></a>Возвращаемое значение  
+ Стандартный `HRESULT`.  
   
-## Заметки  
- Эта функция вызывается из [CAccessorRowset::Close](../Topic/CAccessorRowset::Close.md).  
+## <a name="remarks"></a>Примечания  
+ Вызывается из [CAccessorRowset::Close](../../data/oledb/caccessorrowset-close.md).  
   
-## Требования  
+## <a name="requirements"></a>Требования  
  **Заголовок:** atldbcli.h  
   
-## См. также  
+## <a name="see-also"></a>См. также  
  [Класс CAccessorBase](../../data/oledb/caccessorbase-class.md)

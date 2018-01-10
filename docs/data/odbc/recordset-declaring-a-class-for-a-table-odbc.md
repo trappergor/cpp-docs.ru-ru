@@ -1,40 +1,43 @@
 ---
-title: "Набор записей. Объявление класса таблицы (ODBC) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "наборы записей ODBC, объявление класса для таблиц"
-  - "наборы записей, объявление классов для таблиц"
+title: "Набор записей: Объявление класса таблицы (ODBC) | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- ODBC recordsets, declaring class for tables
+- recordsets, declaring classes for tables
 ms.assetid: 3fe286c2-3f3d-493d-9d8c-762310939d08
-caps.latest.revision: 8
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: 309d32e5cd92d37942f4267bbd7c7cc5a1bf1805
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 12/21/2017
 ---
-# Набор записей. Объявление класса таблицы (ODBC)
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Данный раздел относится к классам ODBC библиотеки MFC.  
+# <a name="recordset-declaring-a-class-for-a-table-odbc"></a>Набор записей. Объявление класса таблицы (ODBC)
+Этот раздел относится к классам MFC ODBC.  
   
- В большинстве случаев класс набора записей используется для открытия одной таблицы.  Чтобы объявить класс набора записей для одной таблицы, в меню **Добавить класс** откройте [мастер объектов\-получателей ODBC MFC](../../mfc/reference/adding-an-mfc-odbc-consumer.md) и выберите необходимые столбцы, присвоив имена соответствующим членам данных полей в наборе записей.  
+ Наиболее распространенные класса набора записей для открытия одной таблицы. Чтобы объявить класс набора записей для одной таблицы, используйте [мастер потребителей ODBC MFC](../../mfc/reference/adding-an-mfc-odbc-consumer.md) из **Добавление класса** и выберите необходимые столбцы, присвоив имена соответствующим членам данных полей набора записей.  
   
- Наборы записей также можно использовать в следующих целях:  
+ Другие способы использования наборов записей включают:  
   
--   Объединение нескольких таблиц.  
+-   Объединение двух или более таблиц.  
   
--   Включение результатов готового запроса.  
+-   Содержащий результаты предопределенного запроса.  
   
-## См. также  
- [Набор записей \(ODBC\)](../../data/odbc/recordset-odbc.md)   
- [Набор записей. Создание и закрытие наборов записей \(ODBC\)](../../data/odbc/recordset-creating-and-closing-recordsets-odbc.md)   
- [Набор записей. Объявление класса для предопределенного запроса \(ODBC\)](../../data/odbc/recordset-declaring-a-class-for-a-predefined-query-odbc.md)   
- [Набор записей. Объединение \(ODBC\)](../Topic/Recordset:%20Performing%20a%20Join%20\(ODBC\).md)
+## <a name="see-also"></a>См. также  
+ [Набор записей (ODBC)](../../data/odbc/recordset-odbc.md)   
+ [Набор записей: Создание и закрытие наборов записей (ODBC)](../../data/odbc/recordset-creating-and-closing-recordsets-odbc.md)   
+ [Набор записей: Объявление класса для предопределенного запроса (ODBC)](../../data/odbc/recordset-declaring-a-class-for-a-predefined-query-odbc.md)   
+ [Набор записей. Объединение (ODBC)](../../data/odbc/recordset-performing-a-join-odbc.md)

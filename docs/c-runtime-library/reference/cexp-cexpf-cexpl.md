@@ -1,57 +1,59 @@
 ---
-title: "cexp, cexpf, cexpl | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "cpp"
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-apiname: 
-  - "cexp"
-  - "cexpf"
-  - "cexpl"
-apilocation: 
-  - "msvcrt.dll"
-  - "msvcr80.dll"
-  - "msvcr90.dll"
-  - "msvcr100.dll"
-  - "msvcr100_clr0400.dll"
-  - "msvcr110.dll"
-  - "msvcr110_clr0400.dll"
-  - "msvcr120.dll"
-  - "msvcr120_clr0400.dll"
-  - "ucrtbase.dll"
-  - "api-ms-win-crt-math-l1-1-0.dll"
-apitype: "DLLExport"
-f1_keywords: 
-  - "cexp"
-  - "cexpf"
-  - "cexpl"
-  - "complex/cepx"
-  - "complex/cexpf"
-  - "complex/cexpl"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "функция cexp"
-  - "функция cexpl"
-  - "функция cexpf"
+title: "cexp, cexpf, cexpl | Документы Майкрософт"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+apiname:
+- cexp
+- cexpf
+- cexpl
+apilocation:
+- msvcrt.dll
+- msvcr80.dll
+- msvcr90.dll
+- msvcr100.dll
+- msvcr100_clr0400.dll
+- msvcr110.dll
+- msvcr110_clr0400.dll
+- msvcr120.dll
+- msvcr120_clr0400.dll
+- ucrtbase.dll
+- api-ms-win-crt-math-l1-1-0.dll
+apitype: DLLExport
+f1_keywords:
+- cexp
+- cexpf
+- cexpl
+- complex/cepx
+- complex/cexpf
+- complex/cexpl
+dev_langs: C++
+helpviewer_keywords:
+- cexp function
+- cexpl function
+- cexpf function
 ms.assetid: f27fd5a9-70c7-4957-a7ee-5256d19bd1da
-caps.latest.revision: 11
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 11
+caps.latest.revision: "11"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 0f7138d3853faad1268148ef7517291a849525df
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 12/21/2017
 ---
-# cexp, cexpf, cexpl
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="cexp-cexpf-cexpl"></a>cexp, cexpf, cexpl
 Вычисляет экспоненту комплексного числа с основанием e.  
   
-## Синтаксис  
+## <a name="syntax"></a>Синтаксис  
   
 ```  
 _Dcomplex cexp(   
@@ -71,26 +73,26 @@ _Lcomplex cexpl(
 );  
 ```  
   
-#### Параметры  
+#### <a name="parameters"></a>Параметры  
  `z`  
  Комплексное число, представляющее экспоненту.  
   
-## Возвращаемое значение  
- Значение `e`, возведенное в степень `z`.  
+## <a name="return-value"></a>Возвращаемое значение  
+ Значение `e` , возведенное в степень `z`.  
   
-## Заметки  
- Поскольку C\+\+ допускает перегрузку, можно вызывать перегрузки `cexp`, которые принимают и возвращают значения `_Fcomplex` и `_Lcomplex`. В программе на языке C `cexp` всегда принимает и возвращает значение `_Dcomplex`.  
+## <a name="remarks"></a>Примечания  
+ Поскольку C++ допускает перегрузку, можно вызывать перегрузки `cexp` , которые принимают и возвращают значения `_Fcomplex` и `_Lcomplex` . В программе на языке C `cexp` всегда принимает и возвращает значение `_Dcomplex` .  
   
-## Требования  
+## <a name="requirements"></a>Требования  
   
-|Подпрограмма|Заголовок C|Заголовок C\+\+|  
-|------------------|-----------------|---------------------|  
-|`cexp`, `cexpf`, `cexpl`|\<complex.h\>|\<complex.h\>|  
+|Подпрограмма|Заголовок C|Заголовок C++|  
+|-------------|--------------|------------------|  
+|`cexp`,               `cexpf`, `cexpl`|\<complex.h>|\<complex.h>|  
   
  Сведения о совместимости см. в разделе [Совместимость](../../c-runtime-library/compatibility.md).  
   
-## См. также  
+## <a name="see-also"></a>См. также  
  [Алфавитный указатель функций](../../c-runtime-library/reference/crt-alphabetical-function-reference.md)   
  [cpow, cpowf, cpowl](../../c-runtime-library/reference/cpow-cpowf-cpowl.md)   
- [clog10, clog10f, clog10l](../Topic/clog10,%20clog10f,%20clog10l.md)   
+ [clog10, clog10f, clog10l](../../c-runtime-library/reference/clog10-clog10f-clog10l.md)   
  [clog, clogf, clogl](../../c-runtime-library/reference/clog-clogf-clogl.md)

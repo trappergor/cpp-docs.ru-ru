@@ -1,120 +1,121 @@
 ---
-title: "Ссылка на шаблоны поставщика OLE DB | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "vc.templates.ole"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "шаблоны поставщика OLE DB"
+title: "Ссылка на шаблоны поставщика OLE DB | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: vc.templates.ole
+dev_langs: C++
+helpviewer_keywords: OLE DB provider templates
 ms.assetid: 518358f0-bab1-4de9-bce9-4062cc87c11f
-caps.latest.revision: 6
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 6
+caps.latest.revision: "6"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: a68c3f0b161a21749ad49b1b89a1356b757d4b76
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 12/21/2017
 ---
-# Ссылка на шаблоны поставщика OLE DB
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Классы и интерфейсы для шаблонов поставщика OLE DB можно группировать на следующие категории.  Опорный материал также приведены сведения о [макросы для шаблонов поставщика OLE DB](../../data/oledb/macros-for-ole-db-provider-templates.md).  
+# <a name="ole-db-provider-templates-reference"></a>Ссылка на шаблоны поставщика OLE DB
+Классы и интерфейсы для шаблонов поставщика OLE DB могут быть сгруппированы в следующие категории. Справочные материалы также включает информацию о [макросы для шаблонов поставщика OLE DB](../../data/oledb/macros-for-ole-db-provider-templates.md).  
   
- Классы используют следующее соглашение об именах: класс **IWidgetImpl** с шаблоном, предоставивший реализацию интерфейса **IWidget**.  
+ Классы используют следующее соглашение об именовании: класс с именем с шаблоном **IWidgetImpl** бы предоставить реализацию интерфейса **IWidget**.  
   
-## Классы сеанса  
+## <a name="session-classes"></a>Классы сеансов  
  [IDBCreateSessionImpl](../../data/oledb/idbcreatesessionimpl-class.md)  
- Создает новый сеанс из объекта источника данных и возвращает запрошенный интерфейс в только что созданном объекте сеанса.  Обязательный интерфейс для объекта источника данных.  
+ Создает новый сеанс из объекта источника данных и возвращает запрошенный интерфейс на только что созданного сеанса. Обязательный интерфейс для объектов источника данных.  
   
  [ISessionPropertiesImpl](../../data/oledb/isessionpropertiesimpl-class.md)  
- Реализует свойства сеанса, вызвав статическая функция определяется сопоставление набора свойств.  Сопоставление набора свойств должно быть указано в классе сеанса.  Обязательный интерфейс на сеансах.  
+ Реализует свойства сеанса, вызвав статическую функцию, определяемую сопоставление набора свойств. Сопоставление набора свойств должен быть указан в классе сеанса. Обязательный интерфейс для сеансов.  
   
-## Классы набора строк  
+## <a name="rowset-classes"></a>Классы набора строк  
  [CRowsetImpl](../../data/oledb/crowsetimpl-class.md)  
   
- Предоставляет стандартную реализацию набора строк OLE DB, без необходимости множественного наследования множество интерфейсов реализации.  Единственный метод, для которого необходимо предоставить реализацию **Выполнить**.  
+ Предоставляет стандартную реализацию набора строк OLE DB без необходимости множественное наследование многие реализации интерфейсов. Это единственный метод, для которого необходимо предоставить реализация **Execute**.  
   
- [CSimpleRow](../Topic/CSimpleRow%20Class.md)  
- Предоставляет реализацию по умолчанию для обработки строк, который используется в классе `IRowsetImpl`.  Дескриптор строки логически уникальный тег для строки результата.  `IRowsetImpl` создает новое `CSimpleRow` для каждой строки в запрошенную `IRowsetImpl::GetNextRows`.  
+ [CSimpleRow](../../data/oledb/csimplerow-class.md)  
+ Предоставляет реализацию по умолчанию для дескриптора строки, которая используется в `IRowsetImpl` класса. Дескриптор строки логически представляет собой уникальный тег для строки результата. `IRowsetImpl`Создает новый `CSimpleRow` для запрашиваемого каждой строки в `IRowsetImpl::GetNextRows`.  
   
  [IAccessorImpl](../../data/oledb/iaccessorimpl-class.md)  
- OLE DB требует поставщики реализуют тег **HACCESSOR**, который в массив структур **DBBINDING**.  Предоставляет **HACCESSOR** s, адреса структур **BindType**.  Обязательный в наборах строк и командах.  
+ OLE DB требует, чтобы реализовать поставщики **HACCESSOR**, являющееся тег в массив **DBBINDING** структуры. Предоставляет **HACCESSOR**, которые адреса **BindType** структуры. Обязателен для наборов строк и команд.  
   
  [IColumnsInfoImpl](../../data/oledb/icolumnsinfoimpl-class.md)  
- Делегаты в статическую функцию, определенную сопоставления столбцов поставщика.  Обязательный интерфейс в наборах строк и командах.  
+ Делегаты статическую функцию, определяемую сопоставления столбца поставщика. Обязательный интерфейс для наборов строк и команд.  
   
  [IConvertTypeImpl](../../data/oledb/iconverttypeimpl-class.md)  
- Предоставляет сведения о доступности преобразований типов в команде или в наборе строк.  Обязательный в командах, наборов строк и наборах строк индекса.  Реализует интерфейс **IConvertType** , делегировать для преобразования, предоставленный объект OLE DB.  
+ Сведения о доступности преобразований типа команды или для набора строк. Обязателен для наборов строк, команды и наборы строк индекса. Реализует **IConvertType** интерфейса делегирование для преобразования объекта, заданного параметром OLE DB.  
   
  [IDBSchemaRowsetImpl](../../data/oledb/idbschemarowsetimpl-class.md)  
- Реализует интерфейс **IDBSchemaRowset** и templatized функции `CreateSchemaRowset` создания.  
+ Реализует **IDBSchemaRowset** интерфейс и шаблонизируемую функцию создателя `CreateSchemaRowset`.  
   
  [IOpenRowsetImpl](../../data/oledb/iopenrowsetimpl-class.md)  
- Открывает и возвращает набор строк, включающий все строки из одного базовой таблицы или индекса.  Обязательный интерфейс для объекта сеанса.  
+ Открывает и возвращает набор строк, который содержит все строки из одной базовой таблицы или индекса. Обязательный интерфейс для объекта сеанса.  
   
  [IRowsetChangeImpl](../../data/oledb/irowsetchangeimpl-class.md)  
- Реализует интерфейс OLE DB [IRowsetChange](https://msdn.microsoft.com/en-us/library/ms715790.aspx), который позволяет обновлять значений столбцов в существующих строках, удаление строки и вставка новых строк.  
+ Реализует OLE DB [IRowsetChange](https://msdn.microsoft.com/en-us/library/ms715790.aspx) интерфейс, позволяющий обновления значений столбцов в существующих строках, удаление строк и вставки новых строк.  
   
- [IRowsetCreatorImpl](../Topic/IRowsetCreatorImpl%20Class.md)  
- Этот класс наследуется от [IObjectWithSite](http://msdn.microsoft.com/library/windows/desktop/ms693765) и переопределяет [IObjectWithSite::SetSite](http://msdn.microsoft.com/library/windows/desktop/ms683869).  `IRowsetCreatorImpl` выполняет те же функции, как `IObjectWithSite`, но также содержит свойства **DBPROPCANSCROLLBACKWARDS** и **DBPROPCANFETCHBACKWARDS** OLE DB.  
+ [IRowsetCreatorImpl](../../data/oledb/irowsetcreatorimpl-class.md)  
+ Этот класс наследует от [IObjectWithSite](http://msdn.microsoft.com/library/windows/desktop/ms693765) и переопределяет [IObjectWithSite::SetSite](http://msdn.microsoft.com/library/windows/desktop/ms683869). `IRowsetCreatorImpl`выполняет те же функции, как `IObjectWithSite` , но и обеспечивает свойства OLE DB **DBPROPCANSCROLLBACKWARDS** и **DBPROPCANFETCHBACKWARDS**.  
   
- [IRowsetIdentityImpl](../Topic/IRowsetIdentityImpl%20Class.md)  
- Реализует интерфейс **IRowsetIdentity**, что позволяет сравнивать ли 2 строки данных или не совпадают.  
+ [IRowsetIdentityImpl](../../data/oledb/irowsetidentityimpl-class.md)  
+ Реализует **IRowsetIdentity** интерфейс, который позволяет сравнивать ли две строки данных идентичны, или нет.  
   
- [IRowsetImpl](../Topic/IRowsetImpl%20Class.md)  
- Предоставляет реализацию интерфейса `IRowset`, что базовый интерфейс набора строк.  
+ [IRowsetImpl](../../data/oledb/irowsetimpl-class.md)  
+ Предоставляет реализацию `IRowset` интерфейс, который имеет базовый интерфейс набора строк.  
   
- [IRowsetInfoImpl](../Topic/IRowsetInfoImpl%20Class.md)  
- Реализует определенные свойства набора строк с помощью сопоставления набора свойств в классе команд.  Обязательный интерфейс в наборах строк.  
+ [IRowsetInfoImpl](../../data/oledb/irowsetinfoimpl-class.md)  
+ Реализует свойства набора строк с помощью свойства задать карты, определенные в классе команд. Обязательный интерфейс для наборов строк.  
   
  [IRowsetLocateImpl](../../data/oledb/irowsetlocateimpl-class.md)  
- Реализует интерфейс [IRowsetLocate](https://msdn.microsoft.com/en-us/library/ms721190.aspx), OLE DB, который обращается к произвольные строки из набора строк.  Для поддержки закладок OLE DB в наборе строк используйте набор строк наследовать от этого класса.  
+ Реализует OLE DB [IRowsetLocate](https://msdn.microsoft.com/en-us/library/ms721190.aspx) интерфейс, который извлекает строки из набора строк. Поддерживает закладки OLE DB в наборе строк, чтобы наследовать от этого класса набора строк.  
   
  [IRowsetNotifyCP](../../data/oledb/irowsetnotifycp-class.md)  
- Реализует широковещательные функции для уведомления пользователей в точке подключения **IID\_IRowsetNotify** изменения содержимого набора строк.  Объект\-получатели, обрабатывающие реализуют уведомления [IRowsetNotify](https://msdn.microsoft.com/en-us/library/ms712959.aspx) и регистрирует их в этой точке подключения.  
+ Реализует широковещательных функции для в точке подключения **IID_IRowsetNotify** изменений содержимого набора строк. Объекты-получатели, обрабатывать уведомления реализовать [IRowsetNotify](https://msdn.microsoft.com/en-us/library/ms712959.aspx) и зарегистрируйте его на эту точку подключения.  
   
- [IRowsetUpdateImpl](../Topic/IRowsetUpdateImpl%20Class.md)  
- Реализует интерфейс OLE DB [IRowsetUpdate](https://msdn.microsoft.com/en-us/library/ms714401.aspx), позволяющий объект\-получатели выполнять передачу изменений, сделанных с [IRowsetChange](https://msdn.microsoft.com/en-us/library/ms715790.aspx) к источнику данных и отменить изменения перед передачей.  
+ [IRowsetUpdateImpl](../../data/oledb/irowsetupdateimpl-class.md)  
+ Реализует OLE DB [IRowsetUpdate](https://msdn.microsoft.com/en-us/library/ms714401.aspx) интерфейс, который позволяет потребителям приостановить передачу изменений, внесенных с [IRowsetChange](https://msdn.microsoft.com/en-us/library/ms715790.aspx) для источника данных и отменить изменения перед их отправкой.  
   
-## Классы команд  
- [ICommandImpl](../Topic/ICommandImpl%20Class.md)  
- Предоставляет реализацию интерфейса `ICommand`.  Этот интерфейс не отображается, но обрабатывается **ICommandTextImpl**.  Обязательный интерфейс в объекте команды.  
+## <a name="command-classes"></a>Командные классы  
+ [ICommandImpl](../../data/oledb/icommandimpl-class.md)  
+ Предоставляет реализацию интерфейса `ICommand`. Этот интерфейс не отображается, но обрабатывается **ICommandTextImpl**. Обязательный интерфейс для объекта команды.  
   
  [ICommandPropertiesImpl](../../data/oledb/icommandpropertiesimpl-class.md)  
- Эта реализация интерфейса **ICommandProperties** предусмотрена статической функцией определенной макросом `BEGIN_PROPSET_MAP`.  Обязательный в командах.  
+ Эта реализация **ICommandProperties** интерфейс, предоставляемый статическую функцию, определяемую `BEGIN_PROPSET_MAP` макрос. Обязателен для команды.  
   
  [ICommandTextImpl](../../data/oledb/icommandtextimpl-class.md)  
- Наборы, хранятся и возвращает текст команды.  Обязательный в командах.  
+ Задает, сохраняет и возвращает текст команды. Обязателен для команды.  
   
  [IDBCreateCommandImpl](../../data/oledb/idbcreatecommandimpl-class.md)  
- Создает новую команду из объекта сеанса и возвращает запрошенный интерфейс на вновь созданной команды.  Необязательный интерфейс для объектов сеанса.  
+ Создание новой команды из объекта сеанса и возвращает запрошенный интерфейс на созданная команда. Дополнительный интерфейс для объектов сеанса.  
   
- Другие классы команд `IColumnsInfoImpl` и `IAccessorImpl`, описанные в разделе классов набора строк выше.  
+ Другие команды классы являются `IColumnsInfoImpl` и `IAccessorImpl`, описанных в предыдущем разделе классы набора строк.  
   
-## Классы источников данных  
- [IDBInitializeImpl](../Topic/IDBInitializeImpl%20Class.md)  
- Создает и удаляет соединение с объект\-получателем.  Обязательный интерфейс для объекта источника данных и необязательные интерфейсы для перечислителей.  
+## <a name="data-source-classes"></a>Классы источника данных  
+ [IDBInitializeImpl](../../data/oledb/idbinitializeimpl-class.md)  
+ Создает и удаляет соединения с потребителем. Обязательный интерфейс для объектов источников данных и дополнительный интерфейс для перечислителей.  
   
  [IDBPropertiesImpl](../../data/oledb/idbpropertiesimpl-class.md)  
- `IDBProperties` обязательный интерфейс для объектов источника данных и необязательного интерфейса для перечислителей.  Однако если перечислитель предоставляет **IDBInitialize**, он должен предоставлять `IDBProperties` \(свойства источника данных\).  
+ `IDBProperties`— обязательный интерфейс для объектов источников данных и дополнительный интерфейс для перечислителей. Тем не менее если перечислитель предоставляет **IDBInitialize**, он должен предоставлять `IDBProperties` (свойства в источнике данных).  
   
  [IGetDataSourceImpl](../../data/oledb/igetdatasourceimpl-class.md)  
- Получает указатель интерфейса к объекту источника данных.  Обязательный интерфейс в сеансе.  
+ Получает указатель интерфейса на объект источника данных. Обязательный интерфейс для сеанса.  
   
-## Другие классы  
+## <a name="other-classes"></a>Другие классы  
  [CUtlProps](../../data/oledb/cutlprops-class.md)  
- Реализует свойства для различных интерфейсов свойства OLE DB \(например, `IDBProperties`, **ISessionProperties** и `IRowsetInfo`\).  
+ Реализует свойства для различных свойств интерфейсы OLE DB (например, `IDBProperties`, **ISessionProperties**, и `IRowsetInfo`).  
   
  [IErrorRecordsImpl](../../data/oledb/ierrorrecordsimpl-class.md)  
   
- Реализует интерфейс OLE DB [IErrorRecords](https://msdn.microsoft.com/en-us/library/ms718112.aspx), а для записи и извлечения записи из элемента данных.  
+ Реализует OLE DB [IErrorRecords](https://msdn.microsoft.com/en-us/library/ms718112.aspx) интерфейс, добавление записей, а также получение записей из элемента данных.  
   
-## См. также  
+## <a name="see-also"></a>См. также  
  [Ссылка на шаблоны потребителя OLE DB](../../data/oledb/ole-db-consumer-templates-reference.md)   
- [Шаблоны OLE DB](../Topic/OLE%20DB%20Templates.md)
+ [Шаблоны OLE DB](../../data/oledb/ole-db-templates.md)

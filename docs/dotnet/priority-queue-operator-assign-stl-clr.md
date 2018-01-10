@@ -1,46 +1,46 @@
 ---
-title: "priority_queue::operator= (STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::priority_queue::operator="
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "operator= - член [STL/CLR]"
+title: "priority_queue::operator = (STL/CLR) | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::priority_queue::operator=
+dev_langs: C++
+helpviewer_keywords: operator= member [STL/CLR]
 ms.assetid: 796b4ad2-3e40-49e8-8462-87460d086fe4
-caps.latest.revision: 16
-caps.handback.revision: 14
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "16"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: e97c065f42e6be5563d11bbc22af3715c173cef4
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 12/21/2017
 ---
-# priority_queue::operator= (STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Заменяет контролируемая последовательность.  
+# <a name="priorityqueueoperator-stlclr"></a>priority_queue::operator= (STL/CLR)
+Заменяет управляемую последовательность.  
   
-## Синтаксис  
+## <a name="syntax"></a>Синтаксис  
   
 ```  
 priority_queue <Value, Container>% operator=(priority_queue <Value, Container>% right);  
 ```  
   
-#### Параметры  
- правый  
- Адаптер контейнера, которые нужно скопировать.  
+#### <a name="parameters"></a>Параметры  
+ right  
+ Адаптер контейнера для копирования.  
   
-## Заметки  
- Член оператор копирует `right` к объекту, а затем возвращает `*this`.  Он используется, чтобы заменить контролируемая последовательность копией контролируемой последовательности в `right`.  
+## <a name="remarks"></a>Примечания  
+ Копирует оператор член `right` объекту, затем возвращает `*this`. Он позволяет заменить управляемую последовательность копией управляемой последовательности в `right`.  
   
-## Пример  
+## <a name="example"></a>Пример  
   
 ```  
 // cliext_priority_queue_operator_as.cpp   
@@ -71,13 +71,16 @@ int main()
   
 ```  
   
-  **B C.**  
- **B C.**   
-## Требования  
- **Заголовок:**\<cliext\/queue\>  
+```Output  
+c a b  
+c a b  
+```  
+  
+## <a name="requirements"></a>Требования  
+ **Заголовок:** \<cliext/очереди >  
   
  **Пространство имен:** cliext  
   
-## См. также  
- [priority\_queue](../Topic/priority_queue%20\(STL-CLR\).md)   
- [priority\_queue::assign](../dotnet/priority-queue-assign-stl-clr.md)
+## <a name="see-also"></a>См. также  
+ [priority_queue (STL/CLR)](../dotnet/priority-queue-stl-clr.md)   
+ [priority_queue::assign (STL/CLR)](../dotnet/priority-queue-assign-stl-clr.md)

@@ -1,49 +1,48 @@
 ---
-title: "VCPROFILE_PATH | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "VCPROFILE_PATH"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "VCPROFILE_PATH - переменная среды"
+title: "VCPROFILE_PATH | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: VCPROFILE_PATH
+dev_langs: C++
+helpviewer_keywords: VCPROFILE_PATH environment variable
 ms.assetid: 25217aa4-7e86-4eba-854d-10b3c457e4df
-caps.latest.revision: 4
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 4
+caps.latest.revision: "4"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: ea682b70f4417ef49bfca530af5f12f21699a389
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 12/21/2017
 ---
-# VCPROFILE_PATH
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Указывает каталог, в котором создаются PGC\-файлы.  
+# <a name="vcprofilepath"></a>VCPROFILE_PATH
+Укажите каталог, чтобы создать PGC-файлы.  
   
-## Синтаксис  
+## <a name="syntax"></a>Синтаксис  
   
 ```  
 VCPROFILE_PATH=path  
 ```  
   
-#### Параметры  
+#### <a name="parameters"></a>Параметры  
  `path`  
- Каталог, в который будут добавляться PGC\-файлы.  
+ Путь к каталогу, в который .pgc файлы будут добавлены.  
   
-## Заметки  
- По умолчанию PGC\-файлы создаются в том же каталоге, в котором располагается профилируемый двоичный файл.  Тем не менее, если абсолютного пути у двоичного файла нет, что может происходить, когда сценарии профилировки двоичного файла выполняются на машине, отличной от той, на которой производилось его построение, то существующий путь можно указать, задав его с помощью параметра `VCPROFILE_PATH`.  
+## <a name="remarks"></a>Примечания  
+ По умолчанию PGC-файлы создаются в каталоге, где профилируемый двоичный файл.  Однако, если абсолютный путь двоичный файл не существует, как может иметь место при запуске сценариев профиля на другом компьютере, из которой был создан двоичный файл, можно назначить `VCPROFILE_PATH` путь, который существует.  
   
-## Пример  
+## <a name="example"></a>Пример  
   
 ```  
 set VCPROFILE_PATH=c:\  
 ```  
   
-## См. также  
+## <a name="see-also"></a>См. также  
  [Переменные среды для профильной оптимизации](../../build/reference/environment-variables-for-profile-guided-optimizations.md)

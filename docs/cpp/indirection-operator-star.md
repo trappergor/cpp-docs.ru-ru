@@ -18,11 +18,12 @@ caps.latest.revision: "7"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 271708c8908e6d213047283c431e03726946e059
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 2c87c279ae1f45899dfa4525c3bdc65bfa5acc2c
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="indirection-operator-"></a>Оператор косвенного обращения: *
 ## <a name="syntax"></a>Синтаксис  
@@ -37,7 +38,7 @@ ms.lasthandoff: 10/24/2017
   
  Если операнд указывает на функцию, результатом является указатель функции. Если он указывает на место хранения, результатом является l-значение, указывающее на место хранения.  
   
- Косвенный оператор может использоваться кумулятивно для разыменования указателей на указатели. Например:  
+ Косвенный оператор может использоваться кумулятивно для разыменования указателей на указатели. Пример:  
   
 ```  
 // expre_Indirection_Operator.cpp  

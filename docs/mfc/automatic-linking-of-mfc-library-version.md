@@ -22,11 +22,12 @@ caps.latest.revision: "11"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: a9c9e9967fec6d52207e87803fa2d7a2bf42ccca
-ms.sourcegitcommit: 0bbc9aac12c926b2b03726ae5b4a09d916e17d6b
+ms.workload: cplusplus
+ms.openlocfilehash: ddc156d8518318a686796a25e89ee84a9a67ee59
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/03/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="automatic-linking-of-mfc-library-version"></a>Автоматическая компоновка версии библиотеки MFC
 В версиях до версии 3.0 (до Visual C++ версии 2.0) MFC приходилось вручную указать правильную версию библиотеки MFC в списке ввода библиотек для компоновщика. С MFC версии 3.0 и более поздней версии он больше не требуется вручную указывать версию библиотеки MFC. Вместо этого, файлы заголовков MFC автоматически определить правильную версию библиотеки MFC, в зависимости от значений, определенных с `#define`, такие как **_DEBUG** или **_UNICODE**. Добавить файлы заголовков MFC **/DEFAULTLIB** директивы для ссылок в определенной версии библиотеки MFC.  

@@ -38,11 +38,12 @@ caps.latest.revision: "23"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: c8b35eb95144be2df223c59d2c7fe046932489b4
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 25537940ef37ca6c0bb9b69aa1a1af3a44183059
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="execl-wexecl"></a>_execl, _wexecl
 Загружает и выполняет новые дочерние процессы.  
@@ -77,7 +78,7 @@ intptr_t _wexecl(
 ## <a name="return-value"></a>Возвращаемое значение  
  В случае успешного выполнения эти функции не возвращаются к вызывающему процессу. Возвращаемое значение-1 указывает на ошибку в этом случае `errno` значение глобальной переменной.  
   
-|Значение errno|Описание|  
+|Значение errno|Описание:|  
 |-----------------|-----------------|  
 |`E2BIG`|Пространство, требуемое для аргументов и параметров среды, превышает 32 КБ.|  
 |`EACCES`|Указанный файл имеет нарушение блокировки или общего доступа.|  

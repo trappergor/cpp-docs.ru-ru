@@ -33,36 +33,22 @@ f1_keywords:
 - complex/cimagf
 - complex/cimagl
 - cimag
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - cimag function
 - cimagf function
 - cimagl function
 ms.assetid: 0d8836f5-d61d-44cd-8731-6f75cb776def
-caps.latest.revision: 9
+caps.latest.revision: "9"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.mt:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: 3eac93ba78cfa2bd5d7cf735db18099dca0bd305
-ms.lasthandoff: 02/24/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: b499786cbcb1516fb9746d69c7e124f14d00f011
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cimag-cimagf-cimagl"></a>cimag, cimagf, cimagl
 Извлекает мнимую часть комплексного числа.  

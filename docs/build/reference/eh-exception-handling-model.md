@@ -23,11 +23,12 @@ caps.latest.revision: "29"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: b0f4177ffb0db75eb18c39aa260f0b150da9b6f4
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 1c56020d5013e951d9d43ed799d34641d114d612
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="eh-exception-handling-model"></a>Параметр /EH (модель обработки исключений)
 Указывает тип обработки исключений, используемый компилятором, условия отказа от проверки исключений для оптимизации работы, а также необходимость уничтожения объектов C++, которые выходят за пределы области видимости в результате исключения. Если параметр **/EH** не указан, компилятор перехватывает как асинхронные структурированные исключения, так и исключения C++, но не удаляет объекты C++, которые выходят за пределы области видимости из-за асинхронного исключения.  

@@ -17,16 +17,17 @@ caps.latest.revision: "7"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 7b2751e966f93b760898b6869ffa684f4fed323c
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: af95f7b2c74d797203a0e6b3ddd6a92ddcb51e5c
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="defining-asm-blocks-as-c-macros"></a>Определение блоков __asm как макросов C
-**Блок, относящийся только к системам Майкрософт**  
+**Блок, относящийся только к системам Microsoft**  
   
- Макросы C предоставляют удобный способ вставки кода сборки в исходный код, но они требуют особой осторожности. поскольку макрос расширяется в одну логическую строку. Для создания безотказных макросов следуйте правилам ниже.  
+ Макросы C предоставляют удобный способ вставки кода сборки в исходный код, но они требуют особой осторожности. поскольку макрос развертывается в одну логическую строку. Для создания безотказных макросов следуйте правилам ниже.  
   
 -   Заключайте блок `__asm` в фигурные скобки.  
   

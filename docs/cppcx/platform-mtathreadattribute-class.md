@@ -18,11 +18,12 @@ caps.latest.revision: "4"
 author: ghogen
 ms.author: ghogen
 manager: ghogen
-ms.openlocfilehash: 6c45256272f7d72dd1da6b6486f9358eaf062b8d
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: f99b8ab49579d949081af73e76d4bfcb167e2cb3
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="platformmtathreadattribute-class"></a>Класс Platform::MTAThreadAttribute
 Указывает, что потоковая модель для приложения является многопотоковым подразделением (MTA).  
@@ -33,18 +34,18 @@ ms.lasthandoff: 10/24/2017
 public ref class MTAThreadAttribute sealed : Attribute  
 ```  
   
-### <a name="members"></a>Члены  
+### <a name="members"></a>Участники  
   
 ### <a name="public-constructors"></a>Открытые конструкторы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[1 конструктор MTAThreadAttribute](#ctor) конструктор|Инициализирует новый экземпляр класса.|  
   
 ### <a name="public-methods"></a>Открытые методы  
  Атрибут MTAThreadAttribute наследует от [класса Platform::Object](../cppcx/platform-object-class.md). Атрибут MTAThreadAttribute также перегружает или имеет следующие члены:  
   
-|Имя|Описание|  
+|name|Описание:|  
 |----------|-----------------|  
 |[MTAThreadAttribute::Equals](#equals)|Определяет, равен ли заданный объект текущему объекту.|  
 |[MTAThreadAttribute::GetHashCode](#gethashcode)|Возвращает хэш-код данного экземпляра.|  

@@ -4,28 +4,26 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-language
+ms.technology: cpp-language
 ms.tgt_pltfrm: 
 ms.topic: 'index-page '
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - language reference
 - C++, language reference
 - language reference, Visual C++
 - Visual C++, language reference
 ms.assetid: 4be9cacb-c862-4391-894a-3a118c9c93ce
-caps.latest.revision: 14
+caps.latest.revision: "14"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.translationtype: HT
-ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
-ms.openlocfilehash: 241ae5abb680d6d8142fca93661c413bde57ace1
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/25/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: 852f4522ecf32643611f6bbd4d86028e883bb6eb
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="c-language-reference"></a>Справочник по языку C++
 В этом справочнике описывается язык программирования С++ в том виде, в котором он реализован в Microsoft Visual C++. На основе *аннотированного справочного руководства по C++* Эллис (Margaret Ellis) и Страуструп (Bjarne Stroustrup) и ANSI/ISO C++ международного стандарта (ISO/IEC FDIS 14882). Включены реализации компонентов языка С++ корпорацией Майкрософт.  
@@ -38,7 +36,7 @@ ms.lasthandoff: 09/25/2017
   
 -   [Операторы C++](../cpp/cpp-built-in-operators-precedence-and-associativity.md)  
   
-## <a name="in-this-section"></a>Содержание  
+## <a name="in-this-section"></a>В этом разделе  
 
  [Лексические соглашения](../cpp/lexical-conventions.md)  
  Основные лексические элементы программ на C++: токены, комментарии, операторы, ключевые слова, знаки пунктуации, литералы. Кроме того, трансляция файлов, приоритет и ассоциативность операторов.  

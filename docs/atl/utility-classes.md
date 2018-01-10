@@ -1,44 +1,44 @@
 ---
-title: "Utility Classes | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "vc.atl.classes.utility"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "utility classes"
+title: "Служебные классы (ATL) | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: vc.atl.classes.utility
+dev_langs: C++
+helpviewer_keywords: utility classes
 ms.assetid: 33d5da9d-89a5-49f9-a873-a26499299d17
-caps.latest.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 5
+caps.latest.revision: "10"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 827d489f01187a75c822314ef79c3b77d63178b4
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 12/21/2017
 ---
-# Utility Classes
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Следующие MFC\- независимые служебные классы предоставлены:  
+# <a name="utility-classes"></a>Служебные классы
+Предоставляются следующие вспомогательные классы зависящие от MFC.  
   
--   [CImage](../atl-mfc-shared/reference/cimage-class.md) обеспечивает поддержку растрового изображения, включая возможность загрузки и сохранения изображений в BMP, JPEG, GIF и PNG \(PNG форматах\).  
+-   [CImage](../atl-mfc-shared/reference/cimage-class.md) обеспечивает улучшенную поддержку растровых изображений, включая возможность загрузки и сохранения изображений в формате JPEG, GIF, BMP и форматирует Portable Network Graphics (PNG).  
   
--   Предоставляет реализацию для хранения [CPoint](../Topic/CPoint%20Class.md) координат \(x, y\) пары.  
+-   [CPoint](../atl-mfc-shared/reference/cpoint-class.md) предоставляет реализацию для хранения пар координат (x, y).  
   
--   [CRect](../atl-mfc-shared/reference/crect-class.md) предоставляет реализацию для хранения координаты прямоугольных области.  
+-   [CRect](../atl-mfc-shared/reference/crect-class.md) предоставляет реализацию для хранения координат прямоугольной области.  
   
--   [CSize](../atl-mfc-shared/reference/csize-class.md) предоставляет реализацию для хранения диапазон, относительные позиции или в паре значений.  
+-   [CSize](../atl-mfc-shared/reference/csize-class.md) предоставляет реализацию для хранения расстояние, относительные позиции или пар значений.  
   
 -   [CString](../atl-mfc-shared/reference/cstringt-class.md) предоставляет реализацию для хранения символьных строк.  
   
--   Шаблон [CAdapt](../atl/reference/cadapt-class.md) a simple, используемый для создания программу\-оболочку классы, переопределите оператора взятия адреса.  
+-   [CAdapt](../atl/reference/cadapt-class.md) простой шаблон, используемый для создания оболочек классов, переопределяющих оператор взятия адреса.  
   
--   [\_U\_RECT](../atl/reference/u-rect-class.md) Класс адаптера аргумента, который позволяет или указатели или ссылки `RECT`, передаваемые функции, которая реализуется в виде указателей.  
+-   [_U_RECT](../atl/reference/u-rect-class.md) аргумент класс адаптера, который позволяет либо `RECT` указатели или ссылки, должны быть переданы функции, которая реализуется с точки зрения указатели.  
   
-## См. также  
- [Class Overview](../atl/atl-class-overview.md)
+## <a name="see-also"></a>См. также  
+ [Общие сведения о классе](../atl/atl-class-overview.md)
+

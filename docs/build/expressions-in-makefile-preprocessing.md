@@ -17,11 +17,12 @@ caps.latest.revision: "6"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 32de1d1eb3262e1fca0a00048a61d3129347cb19
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 7bea4f0c4fea2c2d04681674734bc989424c7951
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="expressions-in-makefile-preprocessing"></a>Выражения в предобработке файлов makefile
 **! Если** или **! ELSE IF** `constantexpression` состоит из целочисленных констант (в десятичной нотации или языка C нотации), строковых констант или команд. Используйте круглые скобки для группирования выражений. Выражения используют C-стиле длинное целое число со знаком арифметические; числа являются в виде 32-разрядных дополнительном в диапазоне от-2147483648 до 2147483647.  

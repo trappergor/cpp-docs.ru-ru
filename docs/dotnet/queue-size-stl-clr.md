@@ -1,41 +1,42 @@
 ---
-title: "queue::size (STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::queue::size"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "size - член [STL/CLR]"
+title: "Queue::size (STL/CLR) | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::queue::size
+dev_langs: C++
+helpviewer_keywords: size member [STL/CLR]
 ms.assetid: 864510ef-5a00-4377-b286-1e73f237e359
-caps.latest.revision: 16
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 14
+caps.latest.revision: "16"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: 46f1eec77c1a4b030b412e21709dff0c2300712d
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 12/21/2017
 ---
-# queue::size (STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="queuesize-stlclr"></a>queue::size (STL/CLR)
 Подсчитывает количество элементов.  
   
-## Синтаксис  
+## <a name="syntax"></a>Синтаксис  
   
 ```  
 size_type size();  
 ```  
   
-## Заметки  
- Возвращает длину функцию\-член контролируемой последовательности.  Он используется для определения числа элементов в контролируемой последовательности.  Если требуется заботите около, имеет ли последовательность ненулевое размер см. в разделе [queue::empty](../Topic/queue::empty%20\(STL-CLR\).md)`()`.  
+## <a name="remarks"></a>Примечания  
+ Функция-член возвращает длину управляемой последовательности. Используется для определения количества элементов в данный момент в управляемой последовательности. Если вас интересует ли последовательность имеет ненулевое значение, размер, в разделе [queue::empty (STL/CLR)](../dotnet/queue-empty-stl-clr.md)`()`.  
   
-## Пример  
+## <a name="example"></a>Пример  
   
 ```  
 // cliext_queue_size.cpp   
@@ -69,15 +70,18 @@ int main()
   
 ```  
   
-  **a b c**  
-**size\(\) \= 3, начиная с 3**  
-**size\(\) \= 2 после извлечения**  
-**size\(\) \= 4 после добавления 2**   
-## Требования  
- **Заголовок:**\<cliext\/queue\>  
+```Output  
+ a b c  
+size() = 3 starting with 3  
+size() = 2 after popping  
+size() = 4 after adding 2  
+```  
+  
+## <a name="requirements"></a>Требования  
+ **Заголовок:** \<cliext/очереди >  
   
  **Пространство имен:** cliext  
   
-## См. также  
- [queue](../Topic/queue%20\(STL-CLR\).md)   
- [queue::empty](../Topic/queue::empty%20\(STL-CLR\).md)
+## <a name="see-also"></a>См. также  
+ [очереди (STL/CLR)](../dotnet/queue-stl-clr.md)   
+ [queue::empty (STL/CLR)](../dotnet/queue-empty-stl-clr.md)

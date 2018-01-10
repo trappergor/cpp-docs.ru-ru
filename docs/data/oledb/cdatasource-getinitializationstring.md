@@ -1,60 +1,62 @@
 ---
-title: "CDataSource::GetInitializationString | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "ATL::CDataSource::GetInitializationString"
-  - "CDataSource.GetInitializationString"
-  - "GetInitializationString"
-  - "CDataSource::GetInitializationString"
-  - "ATL.CDataSource.GetInitializationString"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "GetInitializationString - метод"
+title: "CDataSource::GetInitializationString | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- ATL::CDataSource::GetInitializationString
+- CDataSource.GetInitializationString
+- GetInitializationString
+- CDataSource::GetInitializationString
+- ATL.CDataSource.GetInitializationString
+dev_langs: C++
+helpviewer_keywords: GetInitializationString method
 ms.assetid: 97134723-6e99-4004-a56d-ec57543dbf3b
-caps.latest.revision: 8
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: d2dd5f7263e6972e788f46f43036991e12555771
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 12/21/2017
 ---
-# CDataSource::GetInitializationString
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Извлечь строку инициализации источника данных, который в настоящее время открыт.  
+# <a name="cdatasourcegetinitializationstring"></a>CDataSource::GetInitializationString
+Извлекает строки инициализации источника данных, который открыт в данный момент.  
   
-## Синтаксис  
+## <a name="syntax"></a>Синтаксис  
   
 ```  
   
-      HRESULT GetInitializationString(   
-   BSTR* pInitializationString,   
-   bool bIncludePassword = false    
+      HRESULT GetInitializationString(   
+   BSTR* pInitializationString,   
+   bool bIncludePassword = false    
 ) throw( );  
 ```  
   
-#### Параметры  
+#### <a name="parameters"></a>Параметры  
  *pInitializationString*  
- \[out\] указатель на строку инициализации.  
+ [out] Указатель на строку инициализации.  
   
  *bIncludePassword*  
- \[in\] **true**, если строка содержит пароль; в противном случае — значение **false**.  
+ [in] **true** Если строка содержит пароль; в противном случае **false**.  
   
-## Возвращаемое значение  
- Стандартное `HRESULT`.  
+## <a name="return-value"></a>Возвращаемое значение  
+ Стандартный `HRESULT`.  
   
-## Заметки  
- Результирующее строку инициализации можно использовать позже, чтобы снова открыть это соединение с источником данных.  
+## <a name="remarks"></a>Примечания  
+ Результирующая строка инициализации может использоваться для соединения с источником данных, открыть позднее.  
   
-## Требования  
+## <a name="requirements"></a>Требования  
  **Заголовок:** atldbcli.h  
   
-## См. также  
- [Класс CDataSource](../Topic/CDataSource%20Class.md)
+## <a name="see-also"></a>См. также  
+ [Класс CDataSource](../../data/oledb/cdatasource-class.md)

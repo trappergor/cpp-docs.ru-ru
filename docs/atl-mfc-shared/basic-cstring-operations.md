@@ -1,111 +1,112 @@
 ---
-title: "Basic CString Operations | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "знаки, accessing in CStrings"
-  - "CString objects"
-  - "CString objects, основные операции"
-  - "literal strings, CString operations"
-  - "сравнение строк, CString operations"
-  - "строковые литералы, CString operations"
+title: "Базовые операции CString | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+dev_langs: C++
+helpviewer_keywords:
+- CString objects, basic operations
+- string literals, CString operations
+- literal strings, CString operations
+- CString objects
+- string comparison, CString operations
+- characters, accessing in CStrings
 ms.assetid: 41db66b2-9427-4bb3-845a-9b6869159a6c
-caps.latest.revision: 17
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 13
+caps.latest.revision: "17"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 42353a9c59bead96da8eb3b114c8acb2361b53d0
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 12/21/2017
 ---
-# Basic CString Operations
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-В этом разделе описываются следующие основные операции [CString](../atl-mfc-shared/reference/cstringt-class.md):  
+# <a name="basic-cstring-operations"></a>Базовые операции CString
+В этом разделе объясняется следующим базовым [CString](../atl-mfc-shared/reference/cstringt-class.md) операций:  
   
--   [Создание CString возражает из стандартных строк литералов C\#](#_core_creating_cstring_objects_from_standard_c_literal_strings)  
+- [Создание объектов CString из стандартных строковых литералов C](#_core_creating_cstring_objects_from_standard_c_literal_strings)  
   
--   [Доступ к отдельным знакам в CString](#_core_accessing_individual_characters_in_a_cstring)  
+- [Доступ к отдельным символам в CString](#_core_accessing_individual_characters_in_a_cstring)  
   
--   [Сцепить 2 объекта CString](#_core_concatenating_two_cstring_objects)  
+- [Объединение двух объектов CString](#_core_concatenating_two_cstring_objects)  
   
--   [Сравнение объектов CString](#_core_comparing_cstring_objects)  
+- [Сравнение объектов CString](#_core_comparing_cstring_objects)  
   
--   [Преобразование объектов CString](#_core_converting_cstring_objects)  
+- [Преобразование объектов CString](#_core_converting_cstring_objects)  
   
- `Class CString` основан на шаблоне [CStringT Class](../atl-mfc-shared/reference/cstringt-class.md) класса.  `CString``typedef``CStringT`.  Точнее, `CString``typedef`*явной специализации*`CStringT`, распространенный способ использовать шаблон класса для определения класса.  Аналогично, определенные классы `CStringA` и `CStringW`.  Дополнительные сведения о явной специализации см. в разделе [Создание экземпляра шаблона классов](../Topic/Class%20Template%20Instantiation.md).  
+ `Class CString`на основе шаблона класса [класс CStringT](../atl-mfc-shared/reference/cstringt-class.md). `CString`— `typedef` из `CStringT`. Более точно `CString` — `typedef` из *явная специализация* из `CStringT`, который является простой способ использования шаблона класса для определения класса. Аналогичным образом определенных классов являются `CStringA` и `CStringW`.  
   
- `CString`, `CStringA` и `CStringW` определены в atlstr.h.  `CStringT` определено в cstringt.h.  
+ `CString`, `CStringA`, и `CStringW` определены в atlstr.h. `CStringT`определено в cstringt.h.  
   
- `CString`, `CStringA` и `CStringW` получает набор методов и операторов, указанный `CStringT` для использования с данными строки.  Повторяющиеся некоторые из методов, а в некоторых случаях перегоняет службы строки библиотек времени выполнения c.  
+ `CString`, `CStringA`, и `CStringW` каждого получить набор методов и операторы, определяемые `CStringT` для использования с строковые данные, которые они поддерживают. Некоторые методы повторяющиеся и, в некоторых случаях превосходит служб строку из библиотеки времени выполнения C.  
   
- Примечание. `CString` собственный класс.  Для класса строки, для использования в проекте c управляемым \+\+\/CLI, используйте `System.String`.  
+ Примечание: `CString` — это собственный класс. Для класса строки, который предназначен для использования в C + +/ CLI управляемый проект, используйте `System.String`.  
   
-##  <a name="_core_creating_cstring_objects_from_standard_c_literal_strings"></a> Создание объектов CString из стандартных строк литералов C\#  
- Можно присвоить C стилю строковые литералы в `CString` как можно присвоить один объект `CString` в другой.  
+##  <a name="_core_creating_cstring_objects_from_standard_c_literal_strings"></a>Создание объектов CString из строковых литералов в стандартном языке C  
+ Можно назначить строковыми литералами C-стиле для `CString` так же, как вы назначаете `CString` объекта в другой.  
   
--   Присвойте значение строки c литеральной к объекту `CString`.  
+-   Присвойте значение C строковый литерал `CString` объекта.  
   
-     [!code-cpp[NVC_ATLMFC_Utilities#183](../atl-mfc-shared/codesnippet/CPP/basic-cstring-operations_1.cpp)]  
+ [!code-cpp[NVC_ATLMFC_Utilities#183](../atl-mfc-shared/codesnippet/cpp/basic-cstring-operations_1.cpp)]  
   
--   Присвойте значение одного `CString` другому объекту `CString`.  
+-   Присвойте значение одного `CString` в другой `CString` объекта.  
   
-     [!code-cpp[NVC_ATLMFC_Utilities#184](../atl-mfc-shared/codesnippet/CPP/basic-cstring-operations_2.cpp)]  
+ [!code-cpp[NVC_ATLMFC_Utilities#184](../atl-mfc-shared/codesnippet/cpp/basic-cstring-operations_2.cpp)]  
   
-     Содержимое объекта `CString` копируются когда один объект `CString` присвоено другому.  Следовательно, 2 строк не используют ссылка на фактическое символы, составляющие строку.  Дополнительные сведения о том, как использовать объекты `CString` в качестве значений см. в разделе [CString Semantics](../atl-mfc-shared/cstring-semantics.md).  
+     Содержимое `CString` объекта копируются в том случае, когда один `CString` назначить объект в другой. Таким образом две строки не будут использовать ссылку на фактические символы, которые составляют строку. Дополнительные сведения об использовании `CString` объекты как значения, см. [семантика CString](../atl-mfc-shared/cstring-semantics.md).  
   
     > [!NOTE]
-    >  Написать приложение, чтобы оно может компилировать для Юникода или ANSI, строки кода литералы с помощью макроса \_T.  Дополнительные сведения см. в разделе [Поддержка Юникода и многобайтовой кодировки](../atl-mfc-shared/unicode-and-multibyte-character-set-mbcs-support.md).  
+    >  Чтобы писать приложения таким образом, чтобы он может компилироваться для Юникода или ANSI, строки литералов кода с помощью макрос _T. Дополнительные сведения см. в разделе [задать многобайтовых символов (MBCS) поддержка Юникода и](../atl-mfc-shared/unicode-and-multibyte-character-set-mbcs-support.md).  
   
-##  <a name="_core_accessing_individual_characters_in_a_cstring"></a> Доступ к отдельным знакам в CString  
- Можно получить доступ к отдельным знакам в объекте `CString` с помощью методов `GetAt` и `SetAt`.  Можно также использовать элемент массива или индекс, оператор \(\[\]\) вместо `GetAt` для получения отдельных символов.  \(Это напоминает доступа к элементам массива индексом, как в стандартных строк в стиле языка C\). Значения индекса для символов `CString` нулевой\- основаны.  
+##  <a name="_core_accessing_individual_characters_in_a_cstring"></a>Доступ к отдельным символам в CString  
+ Можно получить доступ к отдельным символам в `CString` объектов с помощью `GetAt` и `SetAt` методы. Можно также использовать массив элемент, индекс, оператор или ([]) вместо `GetAt` для получения отдельных символов. (Доступ к элементам массива напоминает Index, как и стандартные строки в стиле C). Индекс значения для `CString` символов отсчитываются от нуля.  
   
-##  <a name="_core_concatenating_two_cstring_objects"></a> Сцепить 2 объекта CString  
- Для сцепления 2 объекта `CString`, используйте операторы объединения \(\+ или \+\=\) следующим образом.  
+##  <a name="_core_concatenating_two_cstring_objects"></a>Объединение двух объектов CString  
+ Для сцепления двух `CString` объектов, используйте операторы объединения (+ или +=), как показано ниже.  
   
- [!code-cpp[NVC_ATLMFC_Utilities#185](../atl-mfc-shared/codesnippet/CPP/basic-cstring-operations_3.cpp)]  
+ [!code-cpp[NVC_ATLMFC_Utilities#185](../atl-mfc-shared/codesnippet/cpp/basic-cstring-operations_3.cpp)]  
   
- По крайней мере один аргумент до операторов объединения \(\+ или \+\=\), должен быть объектом `CString`, но может использовать константу собой строку символов \(например, `"big"`\) или `char` \(например, "x"\) для другого аргумента.  
+ Хотя бы один аргумент для оператора объединения (+ или +=) должен быть `CString` объекта, но можно использовать на постоянную строку символов (например, `"big"`) или `char` (например, «x») для второго аргумента.  
   
-##  <a name="_core_comparing_cstring_objects"></a> Сравнение объектов CString  
- Метод `Compare` и оператор \=\= для `CString` эквивалентны.  `Compare`, `operator==` и `CompareNoCase` и многобайтовая кодировка Юникод осведомленные; `CompareNoCase` также обращение\-нечувствительно.  Метод `Collate``CString` языковой стандарт\- важна и часто медленнее, чем `Compare`.  Используйте `Collate` только тогда, когда необходимо оставаться неизменным правилами сортировки, определенное текущим языковым стандартом.  
+##  <a name="_core_comparing_cstring_objects"></a>Сравнение объектов CString  
+ `Compare` Метода и оператор == `CString` эквивалентны. `Compare`, `operator==`, и `CompareNoCase` учитывают многобайтовой Кодировки и Юникода; `CompareNoCase` также не учитывается. `Collate` Метод `CString` зависящие от языкового стандарта и часто выполняется медленнее, чем `Compare`. Используйте `Collate` только которых необходимо придерживаться сортировки правил в соответствии с текущего языкового стандарта.  
   
- В следующей таблице перечислены доступные функции сравнения [CString](../atl-mfc-shared/reference/cstringt-class.md) и их функции MBCS\-portable цифры Юникод Или в библиотеке времени выполнения языка c.  
+ В следующей таблице показаны доступные [CString](../atl-mfc-shared/reference/cstringt-class.md) сравнение функций и их эквивалентные функции библиотеки времени выполнения C переносимой Юникода и Многобайтовой кодировкой.  
   
-|Функция CString|Функции многобайтовой кодировки|Функция Юникода|  
-|---------------------|-------------------------------------|---------------------|  
+|CString-функция|MBCS-функция|Функция Юникода|  
+|----------------------|-------------------|----------------------|  
 |`Compare`|`_mbscmp`|`wcscmp`|  
 |`CompareNoCase`|`_mbsicmp`|`_wcsicmp`|  
 |`Collate`|`_mbscoll`|`wcscoll`|  
   
- Шаблон класса `CStringT` определяет реляционные операторы \(\<, \<\=, \>\=, \>, \=\= и\! \=\), который доступен для использования `CString`.  Можно сравнить 2 `CStrings` с использованием этих операторов, как показано в следующем примере.  
+ `CStringT` Шаблона класса определяет реляционные операторы (<, \<=, > =, >, ==, и! =), они доступны для использования `CString`. Можно сравнить два `CStrings` с помощью этих операторов, как показано в следующем примере.  
   
- [!code-cpp[NVC_ATLMFC_Utilities#186](../atl-mfc-shared/codesnippet/CPP/basic-cstring-operations_4.cpp)]  
+ [!code-cpp[NVC_ATLMFC_Utilities#186](../atl-mfc-shared/codesnippet/cpp/basic-cstring-operations_4.cpp)]  
   
-##  <a name="_core_converting_cstring_objects"></a> Преобразование объектов CString  
- Дополнительные сведения о преобразовании CString возражает в строки других типов см. в разделе [Практическое руководство. Преобразование различных типов строк](../Topic/How%20to:%20Convert%20Between%20Various%20String%20Types.md).  
+##  <a name="_core_converting_cstring_objects"></a>Преобразование объектов CString  
+ Сведения о преобразовании CString-объекты для строк остальных типов см. в разделе [как: преобразование между различных типов строк](../text/how-to-convert-between-various-string-types.md).  
   
-## Использование с wcout CString  
- Для использования CString с `wcout` необходимо явно привести объект в `const wchar_t*` как показано в следующем примере:  
-  
-```  
-CString cs("meow");  
-  wcout << (const wchar_t*) cs << endl;  
+## <a name="using-cstring-with-wcout"></a>Использование CString с wcout  
+ Использование CString с `wcout` необходимо явно привести объект к `const wchar_t*` как показано в следующем примере:  
   
 ```  
+CString cs("meow");
+
+    wcout <<(const wchar_t*) cs <<endl;  
+ 
+```  
   
- Без приведения, `cs` обрабатывается как `void*` и `wcout` введите адрес объекта.  Эта функциональности вызвана заметно взаимодействиями между вычетом аргумента шаблона и разрешение перегрузки, в себя верных и conformant с стандартом C\+\+.  
+ Без приведения `cs` рассматривается как `void*` и `wcout` выводит адреса объекта. Это поведение связано с слабая взаимодействий между шаблона удержания и перегрузка разрешение аргументов в самих правильный и соответствовали стандарту C++.  
   
-## См. также  
- [Строки](../atl-mfc-shared/strings-atl-mfc.md)   
- [CStringT Class](../atl-mfc-shared/reference/cstringt-class.md)   
- [Создание экземпляра шаблона классов](../Topic/Class%20Template%20Instantiation.md)   
- [Явная специализация шаблонов класса](../Topic/Explicit%20Specialization%20of%20Class%20Templates.md)   
- [Частичная специализация шаблонов класса](../cpp/template-specialization-cpp.md)   
- [Практическое руководство. Преобразование различных типов строк](../Topic/How%20to:%20Convert%20Between%20Various%20String%20Types.md)
+## <a name="see-also"></a>См. также  
+ [Строки (ATL и MFC)](../atl-mfc-shared/strings-atl-mfc.md)   
+ [Класс CStringT](../atl-mfc-shared/reference/cstringt-class.md)   
+ [Специализация шаблона](../cpp/template-specialization-cpp.md)   
+ [Практическое руководство. Преобразование различных типов строк](../text/how-to-convert-between-various-string-types.md)
+

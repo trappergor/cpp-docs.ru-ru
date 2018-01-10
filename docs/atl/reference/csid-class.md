@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-windows
+ms.technology: cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
@@ -25,35 +24,19 @@ f1_keywords:
 - ATLSECURITY/ATL::CSid::LoadAccount
 - ATLSECURITY/ATL::CSid::Sid
 - ATLSECURITY/ATL::CSid::SidNameUse
-dev_langs:
-- C++
-helpviewer_keywords:
-- CSid class
+dev_langs: C++
+helpviewer_keywords: CSid class
 ms.assetid: be58b7ca-5958-49c3-a833-ca341aaaf753
-caps.latest.revision: 24
+caps.latest.revision: "24"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: d2d39abf526a58b8442107b5ee816f316ae841f5
-ms.openlocfilehash: f1e731c82892c5622dcb437498d2d318086f66d8
-ms.contentlocale: ru-ru
-ms.lasthandoff: 03/31/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: 3915206f0b05e33d5e13e41871a597ea7278ee8f
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="csid-class"></a>Класс CSid
 Этот класс является оболочкой для `SID` структуры (идентификатором безопасности).  
@@ -67,24 +50,24 @@ ms.lasthandoff: 03/31/2017
 class CSid
 ```  
   
-## <a name="members"></a>Члены  
+## <a name="members"></a>Участники  
   
 ### <a name="public-typedefs"></a>Общедоступные определения типов  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[CSid::CSidArray](#csidarray)|Массив объектов `CSid`.|  
   
 ### <a name="public-constructors"></a>Открытые конструкторы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[CSid::CSid](#csid)|Конструктор.|  
 |[Идентификатор CSid:: ~ CSid](#dtor)|Деструктор|  
   
 ### <a name="public-methods"></a>Открытые методы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[CSid::AccountName](#accountname)|Возвращает имя учетной записи, связанной с `CSid` объекта.|  
 |[CSid::Domain](#domain)|Возвращает имя домена, связанного с `CSid` объекта.|  
@@ -113,16 +96,16 @@ class CSid
 |[оператор ==](#operator_eq_eq)|Проверяет два объекта дескриптора безопасности для проверки на равенство|  
 |[оператор! =](#operator_neq)|Проверяет два объекта дескриптора безопасности для проверки на неравенство|  
 |[оператор\<](#operator_lt_)|Сравнивает относительные значение два объекта дескриптора безопасности.|  
-|[оператор настроек](#operator_gt_)|Сравнивает относительные значение два объекта дескриптора безопасности.|  
+|[оператор >](#operator_gt_)|Сравнивает относительные значение два объекта дескриптора безопасности.|  
 |[оператор\<=](#operator_lt__eq)|Сравнивает относительные значение два объекта дескриптора безопасности.|  
-|[оператор настроек =](#operator_gt__eq)|Сравнивает относительные значение два объекта дескриптора безопасности.|  
+|[оператор > =](#operator_gt__eq)|Сравнивает относительные значение два объекта дескриптора безопасности.|  
   
 ## <a name="remarks"></a>Примечания  
  `SID` Структуры — это структура переменной длины, используемые для уникальной идентификации пользователей или групп.  
   
  Приложения, которые не следует изменять `SID` структуры непосредственно, но вместо этого используйте методы, предоставленные в данный класс-оболочка. См. также [AtlGetOwnerSid](security-global-functions.md#atlgetownersid), [AtlSetGroupSid](security-global-functions.md#atlsetgroupsid), [AtlGetGroupSid](security-global-functions.md#atlgetgroupsid), и [AtlSetOwnerSid](security-global-functions.md#atlsetownersid).  
   
- Введение модель управления доступом в Windows см. в разделе [управления доступом](http://msdn.microsoft.com/library/windows/desktop/aa374860) в [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
+ Введение модель управления доступом в Windows см. в разделе [управления доступом](http://msdn.microsoft.com/library/windows/desktop/aa374860) в Windows SDK.  
   
 ## <a name="requirements"></a>Требования  
  **Заголовок:** atlsecurity.h  
@@ -239,7 +222,7 @@ bool EqualPrefix(const CSid& rhs) const throw();
  Возвращает **true** при успешном выполнении **false** при сбое.  
   
 ### <a name="remarks"></a>Примечания  
- В разделе [EqualPrefixSid](http://msdn.microsoft.com/library/windows/desktop/aa446621) в [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)] для получения дополнительных сведений.  
+ В разделе [EqualPrefixSid](http://msdn.microsoft.com/library/windows/desktop/aa446621) в Windows SDK для получения дополнительных сведений.  
   
 ##  <a name="getlength"></a>CSid::GetLength  
  Возвращает длину `CSid` объекта.  
@@ -516,7 +499,7 @@ SID_NAME_USE SidNameUse() const throw();
 ### <a name="return-value"></a>Возвращаемое значение  
  Возвращает значение члена данных, в которой хранится значение, описывающее состояние `CSid` объекта.  
   
-|Значение|Описание|  
+|Значение|Описание:|  
 |-----------|-----------------|  
 |SidTypeUser|Указывает пользователя `SID` (идентификатором безопасности).|  
 |SidTypeGroup|Указывает группу `SID`.|  
@@ -536,4 +519,3 @@ SID_NAME_USE SidNameUse() const throw();
  [Общие сведения о классе](../../atl/atl-class-overview.md)   
  [Глобальные функции безопасности](../../atl/reference/security-global-functions.md)   
  [Операторы](../../atl/reference/atl-operators.md)
-

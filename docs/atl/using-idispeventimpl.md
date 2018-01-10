@@ -1,45 +1,44 @@
 ---
-title: "Using IDispEventImpl | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "IDispEventImpl"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "IDispEventImpl class, использование"
+title: "С помощью IDispEventImpl (ATL) | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: IDispEventImpl
+dev_langs: C++
+helpviewer_keywords: IDispEventImpl class, using
 ms.assetid: 82d53b61-9d0d-45c5-aff9-2fafa468a9ca
-caps.latest.revision: 12
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 7
+caps.latest.revision: "12"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: f787fac05e95fff8a974692c3e6fca24561ed222
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 12/21/2017
 ---
-# Using IDispEventImpl
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-При использовании `IDispEventImpl` для обработки событий, необходимо следующее:  
+# <a name="using-idispeventimpl"></a>С помощью IDispEventImpl
+При использовании `IDispEventImpl` для обработки событий, необходимо:  
   
 -   Создайте производный класс от [IDispEventImpl](../atl/reference/idispeventimpl-class.md).  
   
--   Добавьте [сопоставление приемника событий](../Topic/BEGIN_SINK_MAP.md) к классу.  
+-   Добавьте картой приемника событий в класс.  
   
--   Добавьте записи к сопоставлению приемника событий, используя макрос [SINK\_ENTRY](../Topic/SINK_ENTRY.md) или [SINK\_ENTRY\_EX](../Topic/SINK_ENTRY_EX.md).  
+-   Добавить записи в карте приемник событий, используя [SINK_ENTRY](reference/composite-control-macros.md#sink_entry) или [SINK_ENTRY_EX](reference/composite-control-macros.md#sink_entry_ex) макрос.  
   
--   Реализуйте методы что нужно знать обработки.  
+-   Реализуйте методы, что вы заинтересованы в обработке.  
   
--   Посоветуйте и unadvise источник события.  
+-   Сообщить и разъединения источника события.  
   
-## Пример  
- Пример в выставками, как обработать событие **DocumentChange** сгоренное объектом **Приложение** слова.  Это событие задается в качестве метода для **ApplicationEvents** dispinterface.  
+## <a name="example"></a>Пример  
+ В приведенном ниже примере показано, как обрабатывать **DocumentChange** события, создаваемые в Word **приложения** объекта. Это событие определяется как метод на **ApplicationEvents** disp-интерфейса.  
   
- Пример из [Образец ATLEventHandling](../top/visual-cpp-samples.md).  
+ Приведенный пример взят из [ATLEventHandling пример](../visual-cpp-samples.md).  
   
  `[`  
   
@@ -69,14 +68,15 @@ caps.handback.revision: 7
   
  `};`  
   
- В примере используется `#import` для создания необходимых файлов заголовка из библиотеки типов слова.  Если требуется использовать этот пример с другими версиями слов, следует указать правильный файлу mso dll.  Например, предоставляемые mso9.dll office 2000 и Office XP предоставляет mso.dll.  Этот код в файл stdafx.h упрощен:  
+ В этом примере `#import` для создания файлов обязательный заголовок из библиотеки типов в Word. Если вы хотите использовать этот пример с другими версиями Microsoft Word, необходимо указать правильный mso dll-файла. Например Office 2000 предоставляет mso9.dll и OfficeXP предоставляет mso.dll. Этот код был упрощен из stdafx.h:  
   
- [!code-cpp[NVC_ATL_EventHandlingSample#1](../atl/codesnippet/CPP/using-idispeventimpl_1.h)]  
+ [!code-cpp[NVC_ATL_EventHandlingSample#1](../atl/codesnippet/cpp/using-idispeventimpl_1.h)]  
   
- В следующем примере кода отображается в NotSoSimple.h.  Соответствующий код отметить комментариями:  
+ Следующий код отображается в NotSoSimple.h. Комментарии в указывается соответствующий код:  
   
- [!code-cpp[NVC_ATL_EventHandlingSample#2](../atl/codesnippet/CPP/using-idispeventimpl_2.h)]  
+ [!code-cpp[NVC_ATL_EventHandlingSample#2](../atl/codesnippet/cpp/using-idispeventimpl_2.h)]  
   
-## См. также  
- [Обработка событий](../Topic/Event%20Handling%20and%20ATL.md)   
- [Образец ATLEventHandling](../top/visual-cpp-samples.md)
+## <a name="see-also"></a>См. также  
+ [Обработка событий](../atl/event-handling-and-atl.md)   
+ [Образец ATLEventHandling](../visual-cpp-samples.md)
+

@@ -1,54 +1,55 @@
 ---
-title: "Интерфейс Platform::IDisposable | Microsoft Docs"
-ms.custom: ""
-ms.date: "02/03/2017"
-ms.prod: "windows-client-threshold"
-ms.technology: ""
-ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-f1_keywords: 
-  - "Platform/Platform::IDisposable"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Интерфейс Platform::IDisposable"
+title: "Интерфейс Platform::IDisposable | Документы Microsoft"
+ms.custom: 
+ms.date: 02/03/2017
+ms.technology: cpp-windows
+ms.reviewer: 
+ms.suite: 
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+f1_keywords: VCCORLIB/Platform::IDisposable
+dev_langs: C++
+helpviewer_keywords: Platform::IDisposable Interface
 ms.assetid: f4344056-7030-42ed-bc98-b140edffddcd
-caps.latest.revision: 4
-author: "ghogen"
-ms.author: "ghogen"
-manager: "ghogen"
-caps.handback.revision: 2
+caps.latest.revision: "4"
+author: ghogen
+ms.author: ghogen
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: db500bc5a205b97ba49d92356d2e878be3e10caf
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 12/21/2017
 ---
-# Интерфейс Platform::IDisposable
+# <a name="platformidisposable-interface"></a>Интерфейс Platform::IDisposable
 Используется для освобождения неуправляемых ресурсов.  
   
-## Синтаксис  
+## <a name="syntax"></a>Синтаксис  
   
 ```cpp  
 public interface class IDisposable  
 ```  
   
-## Атрибуты  
- **GuidAttribute**\("de0cbaea\-8065\-4a45\-b196\-c9d443f9bab3"\)  
+## <a name="attributes"></a>Атрибуты  
+ **GuidAttribute**(«de0cbaea-8065-4a45-b196-c9d443f9bab3»)  
   
- **VersionAttribute**\(NTDDI\_WIN8\)  
+ **VersionAttribute**(NTDDI_WIN8)  
   
-## Члены  
+### <a name="members"></a>Участники  
  Интерфейс IDisposable наследует от интерфейса IUnknown. Интерфейс IDisposable также имеет следующие типы членов.  
   
  **Методы**  
   
  Интерфейс IDisposable содержит следующие методы.  
   
-|Метод|Описание|  
-|-----------|--------------|  
-|HYPERLINK "http:\/\/msdnpreview.redmond.corp.microsoft.com\/en\-us\/library\/windows\/apps\/platform.idisposable.dispose.aspx" Dispose|Используется для освобождения неуправляемых ресурсов.|  
+|Метод|Описание:|  
+|------------|-----------------|  
+|Ликвидировать|Используется для освобождения неуправляемых ресурсов.|  
   
-## Требования  
- **Минимальный поддерживаемый клиент:** [!INCLUDE[win8](../cppcx/includes/win8-md.md)]  
+### <a name="requirements"></a>Требования  
+ **Минимальный поддерживаемый клиент:** Windows 8  
   
- **Минимальный поддерживаемый сервер:** [!INCLUDE[winserver8](../cppcx/includes/winserver8-md.md)]  
+ **Минимальный поддерживаемый сервер:** Windows Server 2012  
   
  **Пространство имен:** Platform

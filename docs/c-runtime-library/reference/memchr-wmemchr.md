@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
 apiname:
@@ -26,36 +25,21 @@ apitype: DLLExport
 f1_keywords:
 - memchr
 - wmemchr
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - memchr function
 - wmemchr function
 ms.assetid: 5a348581-28f1-4256-8434-687245f7fc9f
-caps.latest.revision: 19
+caps.latest.revision: "19"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: e257f037a05c45f5b98e64ea55bd125af443b0be
-ms.openlocfilehash: aad3d578cececad6af6a6f4aaf1107460a23d784
-ms.contentlocale: ru-ru
-ms.lasthandoff: 03/30/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: f0eb93347f76c7becf44fb7f36fb066fe41f3f41
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="memchr-wmemchr"></a>memchr, wmemchr
 Выполняет поиск символов в буфере.  
@@ -111,7 +95,7 @@ const wchar_t *wmemchr(
 ## <a name="remarks"></a>Примечания  
  Функции `memchr` и `wmemchr` находят первое вхождение символа `c` в первых `count` байтах `buf`. Они останавливаются при обнаружении символа `c` или после проверки первых `count` байтов.  
   
- В языке C эти функции принимают указатель `const` для первого аргумента. В языке C++ доступны две перегрузки. Перегрузка, принимающая указатель на `const`, возвращает указатель на `const`; версия, которая принимает указатель на не-`const`, возвращает указатель на не-`const`. Макрос _CONST_CORRECT_OVERLOADS определяется, если доступны одновременно версии `const` и не-`const` этих функций. Чтобы реализовать поведение не-`const` для обеих перегрузок в языке C++, определите символ _CONST_RETURN.  
+ В языке C эти функции принимают указатель `const` для первого аргумента. В языке C++ доступны две перегрузки. Перегрузка, принимающая указатель на `const`, возвращает указатель на `const`; версия, которая принимает указатель на не-`const`, возвращает указатель на не-`const`. _CRT_CONST_CORRECT_OVERLOADS макрос определен, если оба `const` и не-`const` доступны версии этих функций. Чтобы реализовать поведение не-`const` для обеих перегрузок в языке C++, определите символ _CONST_RETURN.  
   
 ## <a name="requirements"></a>Требования  
   

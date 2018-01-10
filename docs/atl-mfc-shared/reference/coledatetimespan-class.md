@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-windows
+ms.technology: cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
@@ -26,8 +25,7 @@ f1_keywords:
 - ATLCOMTIME/ATL::COleDateTimeSpan::SetStatus
 - ATLCOMTIME/ATL::COleDateTimeSpan::m_span
 - ATLCOMTIME/ATL::COleDateTimeSpan::m_status
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - timespan
 - time span
@@ -35,31 +33,16 @@ helpviewer_keywords:
 - Date data type, MFC encapsulation of
 - COleDateTimeSpan class
 ms.assetid: 7441526d-a30a-4019-8fb3-3fee6f897cbe
-caps.latest.revision: 19
+caps.latest.revision: "19"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: a82768750e6a7837bb81edd8a51847f83c294c20
-ms.openlocfilehash: 0c696f59a6f4be7b4d966aad2a16a846d737009f
-ms.contentlocale: ru-ru
-ms.lasthandoff: 04/04/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: 173ae35f49379bcccf552a105b5615378e7a42cd
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="coledatetimespan-class"></a>Класс COleDateTimeSpan
 Представляет относительного времени временной интервал.  
@@ -70,17 +53,17 @@ ms.lasthandoff: 04/04/2017
 class COleDateTimeSpan
 ```  
   
-## <a name="members"></a>Члены  
+## <a name="members"></a>Участники  
   
 ### <a name="public-constructors"></a>Открытые конструкторы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[COleDateTimeSpan::COleDateTimeSpan](#coledatetimespan)|Создает объект `COleDateTimeSpan`.|  
   
 ### <a name="public-methods"></a>Открытые методы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[COleDateTimeSpan::Format](#format)|Создает строковое представление `COleDateTimeSpan` объекта.|  
 |[COleDateTimeSpan::GetDays](#getdays)|Возвращает день часть области это `COleDateTimeSpan` представляет.|  
@@ -102,12 +85,12 @@ class COleDateTimeSpan
 |[оператор +, -](#operator_add_-)|Добавление и вычитание изменить знак для `COleDateTimeSpan` значения.|  
 |[оператор +=-=](#operator_add_eq_-_eq)|Сложения и вычитания `COleDateTimeSpan` значение из этого `COleDateTimeSpan` значение.|  
 |[оператор =](#operator_eq)|Копирует `COleDateTimeSpan` значение.|  
-|[оператор ==,<,></,><>](#coledatetimespan_relational_operators)|Сравнивает два `COleDateTimeSpan` значения.|  
+|[оператор ==, <, < =](#coledatetimespan_relational_operators)|Сравнивает два `COleDateTimeSpan` значения.|  
 |[double-оператор](#operator_double)|Преобразует этот `COleDateTimeSpan` значение **двойные**.|  
   
 ### <a name="public-data-members"></a>Открытые члены данных  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[COleDateTimeSpan::m_span](#m_span)|Содержит базовый **двойные** для этого `COleDateTimeSpan` объекта.|  
 |[COleDateTimeSpan::m_status](#m_status)|Содержит состояние данного объекта `COleDateTimeSpan` объекта.|  
@@ -149,9 +132,9 @@ bool operator>=(const COleDateTimeSpan& dateSpan) const throw();
 >  ATLASSERT возникнет в том случае, если один из операндов является недопустимым.  
   
 ### <a name="example"></a>Пример  
- [!code-cpp[NVC_ATLMFC_Utilities #25](../../atl-mfc-shared/codesnippet/cpp/coledatetimespan-class_1.cpp)]  
+ [!code-cpp[NVC_ATLMFC_Utilities#25](../../atl-mfc-shared/codesnippet/cpp/coledatetimespan-class_1.cpp)]  
   
- [!code-cpp[NVC_ATLMFC_Utilities #26](../../atl-mfc-shared/codesnippet/cpp/coledatetimespan-class_2.cpp)]  
+ [!code-cpp[NVC_ATLMFC_Utilities#26](../../atl-mfc-shared/codesnippet/cpp/coledatetimespan-class_2.cpp)]  
   
 ##  <a name="coledatetimespan"></a>COleDateTimeSpan::COleDateTimeSpan  
  Создает объект `COleDateTimeSpan`.  
@@ -176,14 +159,14 @@ COleDateTimeSpan(LONG lDays, int nHours, int nMins, int nSecs) throw();
   
 - **COleDateTimeSpan (** `dblSpanSrc` **)** создает `COleDateTimeSpan` объекта из значения с плавающей запятой.  
   
-- **COleDateTimeSpan (** `lDays` **,** `nHours` **,** `nMins` **,** `nSecs` **)** создает `COleDateTimeSpan` инициализированный для числовых значений, указанного объекта.  
+- **COleDateTimeSpan (** `lDays` **,** `nHours` **,** `nMins` **,** `nSecs` **)**  Создает `COleDateTimeSpan` инициализированный для числовых значений, указанного объекта.  
   
  Состояние нового `COleDateTimeSpan` объекта имеет значение на допустимое.  
   
  Дополнительные сведения о граничные значения для `COleDateTimeSpan` значения, см. в статье [даты и времени: Поддержка модели автоматизации](../../atl-mfc-shared/date-and-time-automation-support.md).  
   
 ### <a name="example"></a>Пример  
- [!code-cpp[NVC_ATLMFC_Utilities #14](../../atl-mfc-shared/codesnippet/cpp/coledatetimespan-class_3.cpp)]  
+ [!code-cpp[NVC_ATLMFC_Utilities#14](../../atl-mfc-shared/codesnippet/cpp/coledatetimespan-class_3.cpp)]  
   
 ##  <a name="format"></a>COleDateTimeSpan::Format  
  Создает строковое представление `COleDateTimeSpan` объекта.  
@@ -199,7 +182,7 @@ CString Format(UINT nID) const;
   
 - **%H** часов в текущий день  
   
-- **Один** минут в течение текущего часа  
+- **%M** минут в течение текущего часа  
   
 - **%S** секунд в текущую минуту  
   
@@ -220,14 +203,14 @@ CString Format(UINT nID) const;
   
  Краткое описание формы для этой функции выглядит следующим образом:  
   
- **Format(** `pFormat` **)**  
+ **Формат (** `pFormat` **)**  
  Эта форма форматирует значение, используя строку форматирования, содержащий специальные коды форматирования, которым предшествует знак процента (%), как и в `printf`. Строка формата передается как параметр функции.  
   
- **Format(** `nID` **)**  
+ **Формат (** `nID` **)**  
  Эта форма форматирует значение, используя строку форматирования, содержащий специальные коды форматирования, которым предшествует знак процента (%), как и в `printf`. Строка форматирования — это ресурс. Этот строковый ресурс идентификатор передается в качестве параметра.  
   
 ### <a name="example"></a>Пример  
- [!code-cpp[NVC_ATLMFC_Utilities #15](../../atl-mfc-shared/codesnippet/cpp/coledatetimespan-class_4.cpp)]  
+ [!code-cpp[NVC_ATLMFC_Utilities#15](../../atl-mfc-shared/codesnippet/cpp/coledatetimespan-class_4.cpp)]  
   
 ##  <a name="getdays"></a>COleDateTimeSpan::GetDays  
  Извлекает день часть это значение интервал даты/времени.  
@@ -259,7 +242,7 @@ LONG GetDays() const throw();
 - [GetTotalSeconds](#gettotalseconds)  
   
 ### <a name="example"></a>Пример  
- [!code-cpp[NVC_ATLMFC_Utilities № 16](../../atl-mfc-shared/codesnippet/cpp/coledatetimespan-class_5.cpp)]  
+ [!code-cpp[NVC_ATLMFC_Utilities#16](../../atl-mfc-shared/codesnippet/cpp/coledatetimespan-class_5.cpp)]  
   
 ##  <a name="gethours"></a>COleDateTimeSpan::GetHours  
  Извлекает час часть это значение интервал даты/времени.  
@@ -291,7 +274,7 @@ LONG GetHours() const throw();
 - [GetTotalSeconds](#gettotalseconds)  
   
 ### <a name="example"></a>Пример  
- [!code-cpp[NVC_ATLMFC_Utilities 17](../../atl-mfc-shared/codesnippet/cpp/coledatetimespan-class_6.cpp)]  
+ [!code-cpp[NVC_ATLMFC_Utilities#17](../../atl-mfc-shared/codesnippet/cpp/coledatetimespan-class_6.cpp)]  
   
 ##  <a name="getminutes"></a>COleDateTimeSpan::GetMinutes  
  Возвращает значение минут типа этого значения интервал даты/времени.  
@@ -323,7 +306,7 @@ LONG GetMinutes() const throw();
 - [GetTotalSeconds](#gettotalseconds)  
   
 ### <a name="example"></a>Пример  
- [!code-cpp[NVC_ATLMFC_Utilities 18](../../atl-mfc-shared/codesnippet/cpp/coledatetimespan-class_7.cpp)]  
+ [!code-cpp[NVC_ATLMFC_Utilities#18](../../atl-mfc-shared/codesnippet/cpp/coledatetimespan-class_7.cpp)]  
   
 ##  <a name="getseconds"></a>COleDateTimeSpan::GetSeconds  
  Извлекает во второй части это значение интервал даты/времени.  
@@ -355,7 +338,7 @@ LONG GetSeconds() const throw();
 - [GetTotalSeconds](#gettotalseconds)  
   
 ### <a name="example"></a>Пример  
- [!code-cpp[NVC_ATLMFC_Utilities 19](../../atl-mfc-shared/codesnippet/cpp/coledatetimespan-class_8.cpp)]  
+ [!code-cpp[NVC_ATLMFC_Utilities#19](../../atl-mfc-shared/codesnippet/cpp/coledatetimespan-class_8.cpp)]  
   
 ##  <a name="getstatus"></a>COleDateTimeSpan::GetStatus  
  Возвращает состояние (действия) это `COleDateTimeSpan` объекта.  
@@ -428,7 +411,7 @@ double GetTotalDays() const throw();
 - [GetTotalSeconds](#gettotalseconds)  
   
 ### <a name="example"></a>Пример  
- [!code-cpp[NVC_ATLMFC_Utilities № 20](../../atl-mfc-shared/codesnippet/cpp/coledatetimespan-class_9.cpp)]  
+ [!code-cpp[NVC_ATLMFC_Utilities#20](../../atl-mfc-shared/codesnippet/cpp/coledatetimespan-class_9.cpp)]  
   
 ##  <a name="gettotalhours"></a>COleDateTimeSpan::GetTotalHours  
  Извлекает этот интервал даты/времени значение, выраженное в часах.  
@@ -608,7 +591,7 @@ COleDateTimeSpan operator-() const throw();
  Дополнительные сведения о значениях состояния недопустимый, допустимый и null. в разделе [m_status](#m_status) переменной-члена.  
   
 ### <a name="example"></a>Пример  
- [!code-cpp[NVC_ATLMFC_Utilities #23](../../atl-mfc-shared/codesnippet/cpp/coledatetimespan-class_10.cpp)]  
+ [!code-cpp[NVC_ATLMFC_Utilities#23](../../atl-mfc-shared/codesnippet/cpp/coledatetimespan-class_10.cpp)]  
   
 ##  <a name="operator_add_eq_-_eq"></a>COleDateTimeSpan::operator +=-=  
  Сложения и вычитания `COleDateTimeSpan` значение из этого `COleDateTimeSpan` значение.  
@@ -626,7 +609,7 @@ COleDateTimeSpan& operator-=(const COleDateTimeSpan dateSpan) throw();
  Дополнительные сведения о значениях состояния недопустимый, допустимый и null. в разделе [m_status](#m_status) переменной-члена.  
   
 ### <a name="example"></a>Пример  
- [!code-cpp[NVC_ATLMFC_Utilities #24](../../atl-mfc-shared/codesnippet/cpp/coledatetimespan-class_11.cpp)]  
+ [!code-cpp[NVC_ATLMFC_Utilities#24](../../atl-mfc-shared/codesnippet/cpp/coledatetimespan-class_11.cpp)]  
   
 ##  <a name="operator_double"></a>Двойные COleDateTimeSpan::operator  
  Преобразует этот `COleDateTimeSpan` значение **двойные**.  
@@ -669,7 +652,7 @@ void SetDateTimeSpan(LONG lDays, int nHours, int nMins, int nSecs) throw();
 - [GetTotalSeconds](#gettotalseconds)  
   
 ### <a name="example"></a>Пример  
- [!code-cpp[NVC_ATLMFC_Utilities #21](../../atl-mfc-shared/codesnippet/cpp/coledatetimespan-class_12.cpp)]  
+ [!code-cpp[NVC_ATLMFC_Utilities#21](../../atl-mfc-shared/codesnippet/cpp/coledatetimespan-class_12.cpp)]  
   
 ##  <a name="setstatus"></a>COleDateTimeSpan::SetStatus  
  Задает состояние (действия) это `COleDateTimeSpan` объекта.  
@@ -705,7 +688,7 @@ enum DateTimeSpanStatus{
     >  Эта функция предназначена для сложных ситуациях программирования. Эта функция не изменяет данные в этом объекте. Чаще всего будет использоваться для присвоения состоянию `null` или **недопустимый**. Обратите внимание, что оператор присваивания ( [оператор =](#eq)) и [SetDateTimeSpan](#setdatetimespan) задать состояние объекта на основании исходного значения.  
   
 ### <a name="example"></a>Пример  
- [!code-cpp[NVC_ATLMFC_Utilities #22](../../atl-mfc-shared/codesnippet/cpp/coledatetimespan-class_13.cpp)]  
+ [!code-cpp[NVC_ATLMFC_Utilities#22](../../atl-mfc-shared/codesnippet/cpp/coledatetimespan-class_13.cpp)]  
   
 ## <a name="see-also"></a>См. также  
  [Класс COleDateTime](../../atl-mfc-shared/reference/coledatetime-class.md)   
@@ -713,6 +696,5 @@ enum DateTimeSpanStatus{
  [Класс CTimeSpan](../../atl-mfc-shared/reference/ctimespan-class.md)   
  [Диаграмма иерархии](../../mfc/hierarchy-chart.md)   
  [ATL и MFC общие классы](../../atl-mfc-shared/atl-mfc-shared-classes.md)
-
 
 

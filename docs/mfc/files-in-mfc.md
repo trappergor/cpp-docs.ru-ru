@@ -25,11 +25,12 @@ caps.latest.revision: "11"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 9ece4c1b56aeb724c16683a3614d908a7e0caaad
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 4d2cd6344f11a9c32ade0fc3241225a8763c18b9
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="files-in-mfc"></a>Файлы в MFC
 В Microsoft Foundation Class библиотеки (MFC), класс [CFile](../mfc/reference/cfile-class.md) обрабатывает обычных операций ввода-вывода. Этот сборник статей объясняется, как для открытия и закрытия файлов, а также читать и записывать данные в эти файлы. В нем также описывается состояние операции с файлами. Описание способов использования возможности сериализации на основе объектов MFC как альтернативный способ чтения и записи данных в файлах, см. в статье [сериализации](../mfc/serialization-in-mfc.md).  

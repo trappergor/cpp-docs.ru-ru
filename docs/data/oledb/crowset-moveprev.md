@@ -1,40 +1,42 @@
 ---
-title: "CRowset::MovePrev | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "CRowset<TAccessor>.MovePrev"
-  - "CRowset.MovePrev"
-  - "MovePrev"
-  - "CRowset::MovePrev"
-  - "ATL.CRowset.MovePrev"
-  - "ATL::CRowset<TAccessor>::MovePrev"
-  - "ATL::CRowset::MovePrev"
-  - "ATL.CRowset<TAccessor>.MovePrev"
-  - "CRowset<TAccessor>::MovePrev"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "MovePrev - метод"
+title: "CRowset::MovePrev | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- CRowset<TAccessor>.MovePrev
+- CRowset.MovePrev
+- MovePrev
+- CRowset::MovePrev
+- ATL.CRowset.MovePrev
+- ATL::CRowset<TAccessor>::MovePrev
+- ATL::CRowset::MovePrev
+- ATL.CRowset<TAccessor>.MovePrev
+- CRowset<TAccessor>::MovePrev
+dev_langs: C++
+helpviewer_keywords: MovePrev method
 ms.assetid: 7ced2bfb-f556-40fc-97ea-0d4e7213e114
-caps.latest.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 9
+caps.latest.revision: "9"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: 0dc22504efde2b32311dea998f2ed5d157ea9122
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 12/21/2017
 ---
-# CRowset::MovePrev
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Перемещение курсора к предыдущей записи.  
+# <a name="crowsetmoveprev"></a>CRowset::MovePrev
+Перемещает курсор к предыдущей записи.  
   
-## Синтаксис  
+## <a name="syntax"></a>Синтаксис  
   
 ```  
   
@@ -42,17 +44,17 @@ HRESULT MovePrev( ) throw( );
   
 ```  
   
-## Возвращаемое значение  
- Стандартное `HRESULT`.  
+## <a name="return-value"></a>Возвращаемое значение  
+ Стандартный `HRESULT`.  
   
-## Заметки  
- Этот метод требуется набор **DBPROP\_CANFETCHBACKWARDS** или **DBPROP\_CANSCROLLBACKWARDS** в `VARIANT_TRUE` до вызова метода **Открыть** на таблице или команду, содержащую набор строк.  
+## <a name="remarks"></a>Примечания  
+ Этот метод необходимо задать либо **DBPROP_CANFETCHBACKWARDS** или **DBPROP_CANSCROLLBACKWARDS** для `VARIANT_TRUE` перед вызовом **откройте** в таблице или команда, содержащая набор строк.  
   
-## Требования  
+## <a name="requirements"></a>Требования  
  **Заголовок:** atldbcli.h  
   
-## См. также  
- [Класс CRowset](../Topic/CRowset%20Class.md)   
+## <a name="see-also"></a>См. также  
+ [CRowset-класс](../../data/oledb/crowset-class.md)   
  [CRowset::MoveNext](../../data/oledb/crowset-movenext.md)   
  [CRowset::MoveToBookmark](../../data/oledb/crowset-movetobookmark.md)   
  [CRowset::MoveLast](../../data/oledb/crowset-movelast.md)

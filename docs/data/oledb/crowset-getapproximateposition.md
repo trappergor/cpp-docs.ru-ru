@@ -1,69 +1,71 @@
 ---
-title: "CRowset::GetApproximatePosition | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "ATL::CRowset::GetApproximatePosition"
-  - "ATL::CRowset<TAccessor>::GetApproximatePosition"
-  - "CRowset.GetApproximatePosition"
-  - "CRowset::GetApproximatePosition"
-  - "GetApproximatePosition"
-  - "ATL.CRowset.GetApproximatePosition"
-  - "CRowset<TAccessor>::GetApproximatePosition"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "GetApproximatePosition - метод"
+title: "CRowset::GetApproximatePosition | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- ATL::CRowset::GetApproximatePosition
+- ATL::CRowset<TAccessor>::GetApproximatePosition
+- CRowset.GetApproximatePosition
+- CRowset::GetApproximatePosition
+- GetApproximatePosition
+- ATL.CRowset.GetApproximatePosition
+- CRowset<TAccessor>::GetApproximatePosition
+dev_langs: C++
+helpviewer_keywords: GetApproximatePosition method
 ms.assetid: 8f9ccd41-0590-468e-b202-6731d0f99d21
-caps.latest.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 9
+caps.latest.revision: "9"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: 86d6e17c3bfe01cc579e9a0afab8f555419e5116
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 12/21/2017
 ---
-# CRowset::GetApproximatePosition
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Возвращает положение приблизительная строку, соответствующую закладке.  
+# <a name="crowsetgetapproximateposition"></a>CRowset::GetApproximatePosition
+Возвращает приблизительное позицию строка, соответствующая закладки.  
   
-## Синтаксис  
+## <a name="syntax"></a>Синтаксис  
   
 ```  
   
-      HRESULT GetApproximatePosition(   
-   const CBookmarkBase* pBookmark,   
-   DBCOUNTITEM* pPosition,   
-   DBCOUNTITEM* pcRows    
+      HRESULT GetApproximatePosition(   
+   const CBookmarkBase* pBookmark,   
+   DBCOUNTITEM* pPosition,   
+   DBCOUNTITEM* pcRows    
 ) throw( );  
 ```  
   
-#### Параметры  
+#### <a name="parameters"></a>Параметры  
  `pBookmark`  
- \[in\] указатель на закладку, которая определяет строку положение которой уже быть.  **NULL**, если только количество строк не требуется.  
+ [in] Указатель на закладку, определяющий строку, позиция которого может быть найден. **Значение NULL** если только количество строк не требуется.  
   
  *pPosition*  
- \[out\] указатель на расположение, `GetApproximatePosition` возвращает положение строки.  **NULL**, если позиция не требуется.  
+ [out] Указатель на расположение, где `GetApproximatePosition` возвращает позицию строки. **Значение NULL** если позиция не требуется.  
   
  `pcRows`  
- \[out\] указатель на расположение, `GetApproximatePosition` возвращает общее число строк.  **NULL**, если количество строк не требуется.  
+ [out] Указатель на расположение, где `GetApproximatePosition` возвращает общее число строк. **Значение NULL** Если число строк не является обязательным.  
   
-## Возвращаемое значение  
- Стандартное `HRESULT`.  
+## <a name="return-value"></a>Возвращаемое значение  
+ Стандартный `HRESULT`.  
   
-## Заметки  
- Этот метод требует дополнительного интерфейса `IRowsetScroll`, может не поддерживаться во всех поставщиках; если это так, метод возвращает **E\_NOINTERFACE**.  Необходимо также установить **DBPROP\_IRowsetScroll** в `VARIANT_TRUE` до вызова метода **Открыть** на таблице или команда, содержащий набор строк.  
+## <a name="remarks"></a>Примечания  
+ Этот метод требует дополнительный интерфейс `IRowsetScroll`, который может поддерживается не всеми поставщиками; Если это так, метод возвращает **E_NOINTERFACE**. Необходимо также задать **DBPROP_IRowsetScroll** для `VARIANT_TRUE` перед вызовом **откройте** для таблицы или команду, содержащую набор строк.  
   
- Дополнительные сведения об использовании закладок в объект\-получателях см. в разделе [С помощью закладок](../../data/oledb/using-bookmarks.md).  
+ Сведения об использовании закладки в потребителей в разделе [с помощью закладок](../../data/oledb/using-bookmarks.md).  
   
-## Требования  
+## <a name="requirements"></a>Требования  
  **Заголовок:** atldbcli.h  
   
-## См. также  
- [Класс CRowset](../Topic/CRowset%20Class.md)   
+## <a name="see-also"></a>См. также  
+ [CRowset-класс](../../data/oledb/crowset-class.md)   
  [IRowsetScroll::GetApproximatePosition](https://msdn.microsoft.com/en-us/library/ms712901.aspx)

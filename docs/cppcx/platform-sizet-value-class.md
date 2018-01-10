@@ -15,11 +15,12 @@ caps.latest.revision: "4"
 author: ghogen
 ms.author: ghogen
 manager: ghogen
-ms.openlocfilehash: 18001661b0862f19e3c002f4c4e60efdf68c9e30
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: bf47d911dc348b23e371175cf46fc6d677ce9f36
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="platformsizet-value-class"></a>Класс значения Platform::SizeT
 Представляет размер объекта. SizeT — беззнаковый тип данных.  
@@ -30,9 +31,9 @@ ms.lasthandoff: 10/24/2017
 public ref class SizeT sealed : ValueType  
 ```  
   
-### <a name="members"></a>Члены  
+### <a name="members"></a>Участники  
   
-|Член|Описание|  
+|Член|Описание:|  
 |------------|-----------------|  
 |[Конструктор SizeT::SizeT](#ctor)|Инициализирует новый экземпляр класса, используя указанное значение.|  
   

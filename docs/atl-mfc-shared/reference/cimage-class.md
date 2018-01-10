@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-windows
+ms.technology: cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
@@ -51,8 +50,7 @@ f1_keywords:
 - ATLIMAGE/ATL::CImage::SetTransparentColor
 - ATLIMAGE/ATL::CImage::StretchBlt
 - ATLIMAGE/ATL::CImage::TransparentBlt
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - jpeg files
 - bitmaps [C++], ATL and MFC support for
@@ -63,30 +61,16 @@ helpviewer_keywords:
 - CImage class
 - transparent color
 ms.assetid: 52861e3d-bf7e-481f-a240-90e88f76c490
-caps.latest.revision: 20
+caps.latest.revision: "20"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3f91eafaf3b5d5c1b8f96b010206d699f666e224
-ms.openlocfilehash: 3f208b2937f2f19d87777b7158e5b765b784bb5d
-ms.contentlocale: ru-ru
-ms.lasthandoff: 04/01/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: d2720fb2b1e558b564615e1589735fe84688374b
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cimage-class"></a>CImage-класс
 `CImage`предоставляет улучшенную поддержку растровых изображений, включая возможность загрузки и сохранения изображений в формате JPEG, GIF, BMP и Portable Network Graphics (PNG).  
@@ -100,20 +84,20 @@ ms.lasthandoff: 04/01/2017
 class CImage
 ```  
   
-## <a name="members"></a>Члены  
+## <a name="members"></a>Участники  
   
 ### <a name="public-constructors"></a>Открытые конструкторы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[CImage::CImage](#cimage)|Конструктор.|  
   
 ### <a name="public-methods"></a>Открытые методы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[CImage::AlphaBlend](#alphablend)|Отображает растровых изображений, имеющих пикселей прозрачным или полупрозрачным.|  
-|[CImage::Attach](#attach)|Присоединяет `HBITMAP` для `CImage` объекта. Можно использовать с растровые изображения не DIB раздел или растровые изображения DIB раздел.|  
+|[CImage::Attach](#attach)|Присоединяет `HBITMAP` для `CImage` объекта. Можно использовать с растровые изображения не DIB раздела или растровые изображения DIB раздела.|  
 |[CImage::BitBlt](#bitblt)|Копирует растровое изображение из контекста исходного устройства это текущий контекст устройства.|  
 |[CImage::Create](#create)|Создает раздел точечный рисунок DIB и привязывает его к ранее созданные `CImage` объекта.|  
 |[CImage::CreateEx](#createex)|Создает раздел DIB точечный рисунок (с добавлением дополнительных параметров) и привязывает его к ранее созданные `CImage` объекта.|  
@@ -144,7 +128,7 @@ class CImage
 |[CImage::ReleaseDC](#releasedc)|Освобождает контекст устройства, которые были получены с [CImage::GetDC](#getdc).|  
 |[CImage::ReleaseGDIPlus](#releasegdiplus)|Освобождает ресурсы, используемые в GDI +. Необходимо вызвать для освобождения ресурсов, созданные глобальный `CImage` объекта.|  
 |[CImage::Save](#save)|Сохраняет изображение в указанный тип. **Сохранить** нельзя указать параметры изображения.|  
-|[CImage::SetColorTable](#setcolortable)|Задает RGB красный, зеленый, синий) значения в диапазоне от записей в таблице раздела DIB цвет цветов.|  
+|[CImage::SetColorTable](#setcolortable)|Задает RGB красный, зеленый, синий) значения в диапазоне от записей в таблице цвет раздела DIB цветов.|  
 |[CImage::SetPixel](#setpixel)|Задает пикселя по указанным координатам на указанный цвет.|  
 |[CImage::SetPixelIndexed](#setpixelindexed)|Задает пикселя по указанным координатам цвет палитры по указанному индексу.|  
 |[CImage::SetPixelRGB](#setpixelrgb)|Задает пикселя по указанным координатам значение указанного красный, зеленый, синего (RGB).|  
@@ -154,7 +138,7 @@ class CImage
   
 ### <a name="public-operators"></a>Открытые операторы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[HBITMAP CImage::operator](#operator_hbitmap)|Возвращает дескриптор Windows, присоединенного к `CImage` объекта.|  
   
@@ -195,7 +179,7 @@ pDC->Rectangle(0, 40, 100, 50);
 m_myImage.ReleaseDC();
 ```  
   
- При использовании `CImage` в проекте MFC Обратите внимание на то, какие функции-члены в проекте ожидается, что указатель [CBitmap](../../mfc/reference/cbitmap-class.md) объекта. Если вы хотите использовать `CImage` с помощью функции как [CMenu::AppendMenu](../../mfc/reference/cmenu-class.md#appendmenu), используйте [CBitmap::FromHandle](../../mfc/reference/cbitmap-class.md#fromhandle), передать его на `CImage` `HBITMAP`и используйте возвращенный `CBitmap*`.  
+ При использовании `CImage` в проекте MFC Обратите внимание на то, какие функции-члены в проекте ожидается, что указатель [CBitmap](../../mfc/reference/cbitmap-class.md) объекта. Если вы хотите использовать `CImage` с помощью функции как [CMenu::AppendMenu](../../mfc/reference/cmenu-class.md#appendmenu), используйте [CBitmap::FromHandle](../../mfc/reference/cbitmap-class.md#fromhandle), передать его на `CImage` `HBITMAP`и использовать возвращаемое `CBitmap*`.  
 
   
 ## <a name="example"></a>Пример  
@@ -391,7 +375,7 @@ BOOL BitBlt(
  Логический Координата y верхнего левого угла прямоугольника назначения.  
   
  `dwROP`  
- Растровые выполняемой операции. Коды растровых операций определяют, как объединяются в битах источника, назначения и шаблон (как определено выбранной кисти) назначения. В разделе [BitBlt](http://msdn.microsoft.com/library/windows/desktop/dd183370) в [!INCLUDE[winSDK](./includes/winsdk_md.md)] список другие коды растровых операций и их описания.  
+ Растровые выполняемой операции. Коды растровых операций определяют, как объединяются в битах источника, назначения и шаблон (как определено выбранной кисти) назначения. В разделе [BitBlt](http://msdn.microsoft.com/library/windows/desktop/dd183370) в Windows SDK список другие коды растровых операций и их описания.  
   
  `pointDest`  
  Объект [ТОЧКИ](http://msdn.microsoft.com/library/windows/desktop/dd162805) структуру указывая верхнего левого угла прямоугольника назначения.  
@@ -418,7 +402,7 @@ BOOL BitBlt(
  Ненулевое значение в случае успеха, иначе — 0.  
   
 ### <a name="remarks"></a>Примечания  
- Дополнительные сведения см. в разделе [BitBlt](http://msdn.microsoft.com/library/windows/desktop/dd183370) в [!INCLUDE[winSDK](./includes/winsdk_md.md)].  
+ Дополнительные сведения см. в разделе [BitBlt](http://msdn.microsoft.com/library/windows/desktop/dd183370) в Windows SDK.  
   
 ##  <a name="cimage"></a>CImage::CImage  
  Создает объект `CImage`.  
@@ -497,7 +481,7 @@ BOOL CreateEx(
 - **BI_BITFIELDS** формат без сжатия, а таблица цветов состоит из трех `DWORD` цвет маски, указывающие красный, зеленый и синий компоненты, соответственно, каждой точки. Это допустимо, при использовании с точечными рисунками 16 - и 32-бит.  
   
  *pdwBitfields*  
- Используется, только если `eCompression` равно **BI_BITFIELDS**, в противном случае он должен быть **NULL**. Указатель на массив из трех `DWORD` битовой маски, указав, какие биты каждой точки используются для красного, зеленого и синего компонентов цвета соответственно. Сведения об ограничениях для битовые поля в разделе [BITMAPINFOHEADER](http://msdn.microsoft.com/library/windows/desktop/dd183376) в [!INCLUDE[winSDK](./includes/winsdk_md.md)].  
+ Используется, только если `eCompression` равно **BI_BITFIELDS**, в противном случае он должен быть **NULL**. Указатель на массив из трех `DWORD` битовой маски, указав, какие биты каждой точки используются для красного, зеленого и синего компонентов цвета соответственно. Сведения об ограничениях для битовые поля в разделе [BITMAPINFOHEADER](http://msdn.microsoft.com/library/windows/desktop/dd183376) в Windows SDK.  
   
  `dwFlags`  
  Указывает, если объект точечный рисунок имеет альфа-канала. Может представлять собой сочетание нуля или более из следующих значений:  
@@ -651,7 +635,7 @@ int GetBPP() const throw();
 ### <a name="remarks"></a>Примечания  
  Это значение определяет количество битов, определяющих каждого пикселя и максимальное число цветов в рисунке.  
   
- Бит на пиксель, обычно является 1, 4, 8, 16, 24 или 32. В разделе **biBitCount** членом [BITMAPINFOHEADER](http://msdn.microsoft.com/library/windows/desktop/dd183376) в [!INCLUDE[winSDK](./includes/winsdk_md.md)] Дополнительные сведения об этом значении.  
+ Бит на пиксель, обычно является 1, 4, 8, 16, 24 или 32. В разделе **biBitCount** членом [BITMAPINFOHEADER](http://msdn.microsoft.com/library/windows/desktop/dd183376) в Windows SDK, Дополнительные сведения об этом значении.  
   
 ##  <a name="getcolortable"></a>CImage::GetColorTable  
  Извлекает красный, зеленый, синий цветовых значений (RGB) из диапазона записей в палитре DIB раздела.  
@@ -704,7 +688,7 @@ static HRESULT GetExporterFilterString(CSimpleString& strExporters,
  Массив идентификаторов GUID, при этом каждый элемент, соответствующий одному из типов файлов в строке. В примере в `pszAllFilesDescription` ниже `aguidFileTypes`[0] является `GUID_NULL` , а остальные значения массива — форматов файлов изображений, поддерживаемых текущей операционной системы.  
   
 > [!NOTE]
->  Полный список констант см. в разделе **константы формат файла изображения** в [!INCLUDE[winSDK](./includes/winsdk_md.md)].  
+>  Полный список констант см. в разделе **константы формат файла изображения** в Windows SDK.  
   
  `pszAllFilesDescription`  
  Если этот параметр не является **NULL**, строка будет иметь один дополнительный фильтр в начале списка. Этот фильтр будет иметь значение текущей `pszAllFilesDescription` ее описание и принимает файлы из любого расширения, поддерживаемых другими программа экспорта в списке.  
@@ -743,7 +727,7 @@ CImage::GetExporterFilterString(
   
 - **excludeDefaultLoad** = 0 для загрузки всех файлов, типы должны быть включены по умолчанию  
   
-- **excludeDefaultSave** = **excludeIcon | excludeEMF | excludeWMF** для сохранения, эти файлы исключаются по умолчанию, так как они обычно имеют особые требования.  
+- **excludeDefaultSave** = **excludeIcon &#124; excludeEMF &#124; excludeWMF** для сохранения, эти файлы были исключены по умолчанию, поскольку они обычно имеют особые требования.  
   
  `chSeparator`  
  Разделитель, используемый между форматы изображений. В разделе **примечания** для получения дополнительной информации.  
@@ -756,13 +740,13 @@ CImage::GetExporterFilterString(
   
  Параметр *strExporter* имеет следующий формат:  
   
- файл description0 | \*.ext0 | filedescription1 | \*.ext1 |... описание файла *n*|\*. ext *n*||  
+ файл description0 &#124; \*.ext0 &#124; filedescription1 &#124; \*.ext1 &#124;... описание файла  *n* &#124;\*. ext  *n* &#124; &#124;  
   
- где "|" знак разделителя задается `chSeparator`. Например:  
+ где "&#124;" указан разделитель `chSeparator`. Пример:  
   
  `"Bitmap format|*.bmp|JPEG format|*.jpg|GIF format|*.gif|PNG format|*.png||"`  
   
- Разделитель по умолчанию "|", если передать эту строку с MFC `CFileDialog` объекта. Используйте null разделитель '\0', если передать эту строку на общее сохранения файла диалоговое окно.  
+ Разделитель по умолчанию "&#124;", если передать эту строку с MFC `CFileDialog` объекта. Используйте null разделитель '\0', если передать эту строку на общее сохранения файла диалоговое окно.  
   
 ##  <a name="getheight"></a>CImage::GetHeight  
  Получает высоту в пикселях.  
@@ -793,12 +777,12 @@ static HRESULT GetImporterFilterString(CSimpleString& strImporters,
  Массив идентификаторов GUID, при этом каждый элемент, соответствующий одному из типов файлов в строке. В примере в `pszAllFilesDescription` ниже `aguidFileTypes`[0] имеет `GUID_NULL` массивом остальные значения — форматов файлов изображений, поддерживаемых текущей операционной системы.  
   
 > [!NOTE]
->  Полный список констант см. в разделе **константы формат файла изображения** в [!INCLUDE[winSDK](./includes/winsdk_md.md)].  
+>  Полный список констант см. в разделе **константы формат файла изображения** в Windows SDK.  
   
  `pszAllFilesDescription`  
  Если этот параметр не является **NULL**, строка будет иметь один дополнительный фильтр в начале списка. Этот фильтр будет иметь значение текущей `pszAllFilesDescription` ее описание и принимает файлы из любого расширения, поддерживаемых другими программа экспорта в списке.  
   
- Например:  
+ Пример:  
 
 ```cpp  
 //First filter in the list will be titled "All Image Files", and
@@ -832,7 +816,7 @@ CImage::GetImporterFilterString(
   
 - **excludeDefaultLoad** = 0 для загрузки всех файлов, типы должны быть включены по умолчанию  
   
-- **excludeDefaultSave** = **excludeIcon | excludeEMF | excludeWMF** для сохранения, эти файлы исключаются по умолчанию, так как они обычно имеют особые требования.  
+- **excludeDefaultSave** = **excludeIcon &#124; excludeEMF &#124; excludeWMF** для сохранения, эти файлы были исключены по умолчанию, поскольку они обычно имеют особые требования.  
   
  `chSeparator`  
  Разделитель, используемый между форматы изображений. В разделе **примечания** для получения дополнительной информации.  
@@ -842,13 +826,13 @@ CImage::GetImporterFilterString(
   
  Параметр *strImporter* имеет следующий формат:  
   
- файл description0 | \*.ext0 | filedescription1 | \*.ext1 |... описание файла *n*|\*. ext *n*||  
+ файл description0 &#124; \*.ext0 &#124; filedescription1 &#124; \*.ext1 &#124;... описание файла  *n* &#124;\*. ext  *n* &#124; &#124;  
   
- где "|" знак разделителя задается `chSeparator`. Пример:  
+ где "&#124;" указан разделитель `chSeparator`. Пример:  
   
  `"Bitmap format|*.bmp|JPEG format|*.jpg|GIF format|*.gif|PNG format|*.png||"`  
   
- Разделитель по умолчанию "|", если передать эту строку с MFC `CFileDialog` объекта. Используйте null разделитель '\0', если передать эту строку в общую **Открытие файла** диалоговое окно.  
+ Разделитель по умолчанию "&#124;", если передать эту строку с MFC `CFileDialog` объекта. Используйте null разделитель '\0', если передать эту строку в общую **Открытие файла** диалоговое окно.  
   
 ##  <a name="getmaxcolortableentries"></a>CImage::GetMaxColorTableEntries  
  Получает максимальное количество записей в таблице цветов.  
@@ -951,7 +935,7 @@ bool IsDIBSection() const throw();
  **значение true,** Если точечный рисунок вложенного раздела DIB. В противном случае **false**.  
   
 ### <a name="remarks"></a>Примечания  
- Если растровое изображение не раздела DIB, нельзя использовать следующие `CImage` методы, которые поддерживают только растровые изображения DIB раздел:  
+ Если растровое изображение не раздел DIB, нельзя использовать следующие `CImage` методы, которые поддерживают только растровые изображения DIB раздела:  
   
 - [GetBits](#getbits)  
   
@@ -1129,7 +1113,7 @@ BOOL MaskBlt(
  Смещение вертикальной пикселей для маски битовой карты, заданные `hbmMask` параметра.  
   
  `dwROP`  
- Указывает переднего плана и фона коды троичный растровых операций, которые метод использует для управления сочетание исходных и целевых данных. Код операции растровых фона хранится в старший байт, старшие слова этого значения; Код операции растровых переднего плана хранится в младший байт, старшие слова этого значения; младшее слово это значение игнорируется и должно быть равно нулю. Обсуждение переднего плана и фона в контексте данного метода см. в разделе `MaskBlt` в [!INCLUDE[winSDK](./includes/winsdk_md.md)]. Список общих коды растровых операций см. в разделе `BitBlt` в [!INCLUDE[winSDK](./includes/winsdk_md.md)].  
+ Указывает переднего плана и фона коды троичный растровых операций, которые метод использует для управления сочетание исходных и целевых данных. Код операции растровых фона хранится в старший байт, старшие слова этого значения; Код операции растровых переднего плана хранится в младший байт, старшие слова этого значения; младшее слово это значение игнорируется и должно быть равно нулю. Обсуждение переднего плана и фона в контексте данного метода см. в разделе `MaskBlt` в Windows SDK. Список общих коды растровых операций см. в разделе `BitBlt` в Windows SDK.  
   
  `rectDest`  
  Ссылку на `RECT` структуры, определение назначения.  
@@ -1220,7 +1204,7 @@ BOOL PlgBlt(
 ### <a name="remarks"></a>Примечания  
  Если `hbmMask` определяет допустимый монохромный точечный рисунок, **PlgBit** использует это растровое изображение для маскировки биты данных о цвете из исходного прямоугольника.  
   
- Этот метод применим к Windows NT версии 4.0 и более поздних версий. В разделе [PlgBlt](http://msdn.microsoft.com/library/windows/desktop/dd162804) в [!INCLUDE[winSDK](./includes/winsdk_md.md)] для получения дополнительных сведений.  
+ Этот метод применим к Windows NT версии 4.0 и более поздних версий. В разделе [PlgBlt](http://msdn.microsoft.com/library/windows/desktop/dd162804) в Windows SDK для получения дополнительных сведений.  
   
 ##  <a name="releasedc"></a>CImage::ReleaseDC  
  Освобождает контекст устройства.  
@@ -1272,7 +1256,7 @@ HRESULT Save(LPCTSTR pszFileName,
 - **ImageFormatGIF** сжатый образ GIF.  
   
 > [!NOTE]
->  Полный список констант см. в разделе **константы формат файла изображения** в [!INCLUDE[winSDK](./includes/winsdk_md.md)].  
+>  Полный список констант см. в разделе **константы формат файла изображения** в Windows SDK.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
  Стандартный `HRESULT`.  
@@ -1363,7 +1347,7 @@ void SetPixelRGB(
  Интенсивность красного цвета.  
   
  *g*  
- Интенсивность зеленый цвет.  
+ Интенсивность зеленым цветом.  
   
  *b*  
  Интенсивность синий цвет.  
@@ -1438,7 +1422,7 @@ BOOL StretchBlt(
  Высота в логических единицах прямоугольника назначения.  
   
  `dwROP`  
- Растровые выполняемой операции. Коды растровых операций определяют, как объединяются в битах источника, назначения и шаблон (как определено выбранной кисти) назначения. В разделе [BitBlt](http://msdn.microsoft.com/library/windows/desktop/dd183370) в [!INCLUDE[winSDK](./includes/winsdk_md.md)] список другие коды растровых операций и их описания.  
+ Растровые выполняемой операции. Коды растровых операций определяют, как объединяются в битах источника, назначения и шаблон (как определено выбранной кисти) назначения. В разделе [BitBlt](http://msdn.microsoft.com/library/windows/desktop/dd183370) в Windows SDK список другие коды растровых операций и их описания.  
   
  `rectDest`  
  Ссылку на [RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897) структуры, определение назначения.  
@@ -1462,7 +1446,7 @@ BOOL StretchBlt(
  Ненулевое значение, в случае успеха, иначе — 0.  
   
 ### <a name="remarks"></a>Примечания  
- Дополнительные сведения см. в разделе [StretchBlt](http://msdn.microsoft.com/library/windows/desktop/dd145120) в [!INCLUDE[winSDK](./includes/winsdk_md.md)].  
+ Дополнительные сведения см. в разделе [StretchBlt](http://msdn.microsoft.com/library/windows/desktop/dd145120) в Windows SDK.  
   
 ##  <a name="transparentblt"></a>CImage::TransparentBlt  
  Копирует растровое изображение из контекста исходного устройства это текущий контекст устройства.  
@@ -1580,10 +1564,8 @@ BOOL TransparentBlt(CImage* pSrcImage, CImage* pDstImage,
  [Образце SimpleImage](../../visual-cpp-samples.md)   
  [Аппаратно независимые точечные рисунки](http://msdn.microsoft.com/library/windows/desktop/dd183562)   
  [CreateDIBSection](http://msdn.microsoft.com/library/windows/desktop/dd183494)   
- [Компоненты ATL COM Desktop](../../atl/atl-com-desktop-components.md)
- [аппаратно независимые точечные рисунки](http://msdn.microsoft.com/library/windows/desktop/dd183562)   
+ [Компоненты ATL COM Desktop](../../atl/atl-com-desktop-components.md) [аппаратно независимые точечные рисунки](http://msdn.microsoft.com/library/windows/desktop/dd183562)   
  [CreateDIBSection](http://msdn.microsoft.com/library/windows/desktop/dd183494)   
-
 
 
 

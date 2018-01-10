@@ -4,41 +4,23 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-tools
+ms.technology: cpp-tools
 ms.tgt_pltfrm: 
 ms.topic: error-reference
-f1_keywords:
-- RC2104
-dev_langs:
-- C++
-helpviewer_keywords:
-- RC2104
+f1_keywords: RC2104
+dev_langs: C++
+helpviewer_keywords: RC2104
 ms.assetid: 792a3bd8-cb4c-4817-b288-4ce37082b582
-caps.latest.revision: 9
+caps.latest.revision: "9"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
-ms.openlocfilehash: 0fd55980cf15d1f7b482677571b7da00375950d7
-ms.contentlocale: ru-ru
-ms.lasthandoff: 02/24/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: ce7fa189e03ec907c4b42f381096f095d5df734a
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="resource-compiler-error-rc2104"></a>Ошибка компилятора ресурсов RC2104
 не определено ключевое слово или имя ключа: ключ  
@@ -49,7 +31,7 @@ ms.lasthandoff: 02/24/2017
   
  Чтобы устранить эту неполадку, найдите файл заголовка, который должен содержать определенное ключевое слово или имя ключа, и убедитесь, что он включен в файле ресурсов, и что имя ключа указано без опечаток. Если проект был создан с заранее скомпилированным заголовком, а потом вы его удалили, убедитесь, что файл ресурсов по-прежнему включает все необходимые заголовки.  
   
- Чтобы проверить определенные ключевые слова и имена ключей в файле ресурсов в Visual Studio откройте **представление ресурсов** окна — в строке меню выберите **представление**, **ресурсов**и затем откройте контекстное меню для RC-файл и выберите **символы ресурсов** для просмотра списка символов. Чтобы изменить включенные заголовки, откройте контекстное меню для RC-файла и выберите **ресурс содержит**.  
+ Чтобы проверить определенные ключевые слова и имена ключей в файле ресурсов в Visual Studio откройте **представление ресурсов** окна, в строке меню выберите **представление**, **представление ресурсов**— и затем откройте контекстное меню для RC-файл и выберите **символы ресурсов** для просмотра списка символов. Чтобы изменить включенные заголовки, откройте контекстное меню для RC-файл и выберите **включения ресурсов**.  
   
  Если появится такое сообщение:  
   

@@ -1,67 +1,67 @@
 ---
-title: "/Gh (Включение функции обработчика _penter) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "_penter"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "/Gh - параметр компилятора [C++]"
-  - "_penter - функция"
-  - "Gh - параметр компилятора [C++]"
-  - "-Gh - параметр компилятора [C++]"
+title: "-Gh (Включение функции обработчика _penter) | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: _penter
+dev_langs: C++
+helpviewer_keywords:
+- /Gh compiler option [C++]
+- Gh compiler option [C++]
+- _penter function
+- -Gh compiler option [C++]
 ms.assetid: 1510a082-8a0e-486e-a309-6add814b494f
-caps.latest.revision: 18
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 16
+caps.latest.revision: "18"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: dec38a8822bb8a330c4dccff9833780ea3a0a45d
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 12/21/2017
 ---
-# /Gh (Включение функции обработчика _penter)
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Вызывает функцию `_penter` при запуске каждого метода или функции.  
+# <a name="gh-enable-penter-hook-function"></a>/Gh (Включение функции обработчика _penter)
+Вызывает `_penter` функции в начале каждого метода или функции.  
   
-## Синтаксис  
+## <a name="syntax"></a>Синтаксис  
   
 ```  
 /Gh  
 ```  
   
-## Заметки  
- Функция `_penter` не является частью библиотеки, поэтому следует самостоятельно предоставить определение для `_penter`.  
+## <a name="remarks"></a>Примечания  
+ `_penter` Функция не является частью ни одну библиотеку типа, вы должны указать определение для `_penter`.  
   
- Если явно не планируется вызов `_penter`, нет необходимости предоставлять прототип.  Функция должна выглядеть так, как если бы она имела следующий прототип; на входе она должна занести содержимое всех регистров в стек и извлечь неизмененное содержимое стека на выходе:  
+ Если не планируется явным образом вызвать `_penter`, необходимо предоставлять прототип. Функция должна выглядеть, как если бы она имела следующий прототип, и он должен принудительно содержимое регистров на запись и pop без изменения содержимого при выходе:  
   
 ```  
 void __declspec(naked) _cdecl _penter( void );  
 ```  
   
- Это объявление недоступно для 64\-разрядных проектов.  
+ Это объявление недоступна для 64-разрядных проектов.  
   
-### Установка данного параметра компилятора в среде разработки Visual Studio  
+### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Установка данного параметра компилятора в среде разработки Visual Studio  
   
-1.  Откройте диалоговое окно **Страницы свойств** проекта.  Дополнительные сведения см. в разделе [Открытие свойств страниц проекта](../../misc/how-to-open-project-property-pages.md).  
+1.  Откройте диалоговое окно **Страницы свойств** проекта. Дополнительные сведения см. в разделе [работа со свойствами проекта](../../ide/working-with-project-properties.md).  
   
-2.  Откройте папку **C\/C\+\+**.  
+2.  Откройте папку **C/C++** .  
   
-3.  Выберите страницу свойств **Командная строка**.  
+3.  Выберите страницу свойств **Командная строка** .  
   
-4.  Введите параметры компилятора в поле **Дополнительные параметры**.  
+4.  Введите параметр компилятора в поле **Дополнительные параметры** .  
   
-### Установка данного параметра компилятора программным способом  
+### <a name="to-set-this-compiler-option-programmatically"></a>Установка данного параметра компилятора программным способом  
   
 -   См. раздел <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.AdditionalOptions%2A>.  
   
-## Пример  
- Следующий код при компиляции с помощью **\/Gh**, показывает как `_penter` вызывается дважды, один раз при введении функции `main`, а второй раз при введении функции `x`.  
+## <a name="example"></a>Пример  
+ В следующем примере кода при компиляции с параметром **/Gh**, показано, как `_penter` вызывается дважды; один раз при вводе функции `main` и один раз при вводе функции `x`.  
   
 ```  
 // Gh_compiler_option.cpp  
@@ -100,8 +100,11 @@ extern "C" void __declspec(naked) _cdecl _penter( void ) {
 }  
 ```  
   
-  **В function\!**  
-**В function\!**   
-## См. также  
+```Output  
+In a function!  
+In a function!  
+```  
+  
+## <a name="see-also"></a>См. также  
  [Параметры компилятора](../../build/reference/compiler-options.md)   
- [Настройка параметров компилятора](../Topic/Setting%20Compiler%20Options.md)
+ [Настройка параметров компилятора](../../build/reference/setting-compiler-options.md)

@@ -1,41 +1,42 @@
 ---
-title: "list::empty (STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::list::empty"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "empty - член [STL/CLR]"
+title: "List::Empty (STL/CLR) | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::list::empty
+dev_langs: C++
+helpviewer_keywords: empty member [STL/CLR]
 ms.assetid: f45edf8a-927d-41ff-9c09-cb0fba4f08b8
-caps.latest.revision: 16
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 14
+caps.latest.revision: "16"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: f4d2118cc8522e004f90fa0af35ac6d0cfb1090d
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 12/21/2017
 ---
-# list::empty (STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Тесты отсутствуют ли какие\-либо элементы.  
+# <a name="listempty-stlclr"></a>list::empty (STL/CLR)
+Проверяет отсутствие элементов.  
   
-## Синтаксис  
+## <a name="syntax"></a>Синтаксис  
   
 ```  
 bool empty();  
 ```  
   
-## Заметки  
- Функция\-член возвращает значение true для пустой контролируемой последовательности.  Она эквивалентна [list::size](../dotnet/list-size-stl-clr.md)`() == 0`.  Он используется для выполнения ли список пуст.  
+## <a name="remarks"></a>Примечания  
+ Эта функция-член возвращает значение true для пустой управляемой последовательности. Это эквивалентно [list::size (STL/CLR)](../dotnet/list-size-stl-clr.md)`() == 0`. Используется, чтобы проверить, имеет ли список пустым.  
   
-## Пример  
+## <a name="example"></a>Пример  
   
 ```  
 // cliext_list_empty.cpp   
@@ -65,16 +66,19 @@ int main()
   
 ```  
   
-  **a b c**  
-**size\(\) \= 3**  
-**empty\(\) \= false**  
-**size\(\) \= 0**  
-**empty\(\) \= true**   
-## Требования  
- **Заголовок:**\<cliext\/list\>  
+```Output  
+ a b c  
+size() = 3  
+empty() = False  
+size() = 0  
+empty() = True  
+```  
+  
+## <a name="requirements"></a>Требования  
+ **Заголовок:** \<cliext/list >  
   
  **Пространство имен:** cliext  
   
-## См. также  
- [list](../dotnet/list-stl-clr.md)   
- [list::size](../dotnet/list-size-stl-clr.md)
+## <a name="see-also"></a>См. также  
+ [список (STL/CLR)](../dotnet/list-stl-clr.md)   
+ [list::size (STL/CLR)](../dotnet/list-size-stl-clr.md)

@@ -37,11 +37,12 @@ caps.latest.revision: "17"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 67899d1dd082ffd023ca78ac8a4961288ffd0165
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 71279b111e50c40bb974d9a5da68b575aecc1ebc
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="umasks"></a>_umask_s
 Задает маску разрешений файла по умолчанию. Версия функции [_umask](../../c-runtime-library/reference/umask.md) с усовершенствованиями системы безопасности, описанными в разделе [Функции безопасности в CRT](../../c-runtime-library/security-features-in-the-crt.md).  
@@ -69,8 +70,8 @@ errno_t _umask_s(
   
 |`mode`|`pOldMode`|**Возвращаемое значение**|**Содержимое** `oldMode`|  
 |------------|----------------|----------------------|--------------------------------|  
-|любые|`NULL`|`EINVAL`|не изменено|  
-|недопустимый режим|любые|`EINVAL`|не изменено|  
+|any|`NULL`|`EINVAL`|не изменено|  
+|недопустимый режим|any|`EINVAL`|не изменено|  
   
  Если выполняется какое-либо из приведенных выше условий, вызывается обработчик недопустимого параметра, как описано в разделе [Проверка параметров](../../c-runtime-library/parameter-validation.md). Если выполнение может быть продолжено, функция `_umask_s` возвращает значение `EINVAL` и устанавливает параметр `errno` в значение `EINVAL`.  
   

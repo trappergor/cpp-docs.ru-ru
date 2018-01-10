@@ -28,11 +28,12 @@ caps.latest.revision: "25"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: aab3048667099a698bd4aff928c7a23d7fbb01e2
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: ab4bb1e04bd21900cdf8d8122af51547e79aea22
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cdialogimpl-class"></a>CDialogImpl-класс
 Этот класс предоставляет методы для создания модального или немодального диалогового окна.  
@@ -57,7 +58,7 @@ template <class T,
  *TBase*  
  Базовый класс к новому классу. Базовый класс по умолчанию — [CWindow](../../atl/reference/cwindow-class.md).  
   
-## <a name="members"></a>Члены  
+## <a name="members"></a>Участники  
   
 ### <a name="methods"></a>Методы  
   
