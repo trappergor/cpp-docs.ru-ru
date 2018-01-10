@@ -4,27 +4,25 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-windows
+ms.technology: cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: reference
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - ATL projects, adding ATL OLE DB consumers
 - OLE DB, adding ATL OLE DB consumer to projects
 - ATL OLE DB consumers
 ms.assetid: f940a513-4e42-4148-b521-dd0d7dc89fa2
-caps.latest.revision: 11
+caps.latest.revision: "11"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: defc933014bd287eb48f53635efba12a40960711
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
-ms.sourcegitcommit: c55726a1728185f699afbac4ba68a6dc0f70c2bf
-ms.openlocfilehash: 41e31e82c97252a2ab5e34a78db5af1fd4e24f98
-ms.contentlocale: ru-ru
-ms.lasthandoff: 10/09/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="adding-an-atl-ole-db-consumer"></a>Добавление потребителя ATL OLE DB
 Этот мастер используется для добавления в проект потребителя ATL OLE DB. Потребителя ATL OLE DB состоит из OLE DB доступа класса и привязки данных для доступа к источнику данных. Проект необходимо создать как COM-приложение ATL или как приложение MFC или Win32, содержащее поддержку ATL (которую мастер потребителя ATL OLE DB добавляется автоматически).  
@@ -45,5 +43,4 @@ ms.lasthandoff: 10/09/2017
   
 ## <a name="see-also"></a>См. также  
  [Добавление функциональных возможностей с помощью мастеров кода](../../ide/adding-functionality-with-code-wizards-cpp.md)
-
 

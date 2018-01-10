@@ -1,60 +1,62 @@
 ---
-title: "Hosting ActiveX Controls Using ATL AXHost | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "элементы управления ActiveX [C++], размещение"
-  - "AXHost method"
-  - "Calendar control (ActiveX)"
-  - "Calendar control (ActiveX), hosting with ATL AXHost"
-  - "CAxWindow2T class"
-  - "размещение элементов управления ActiveX"
+title: "Размещение элементов управления ActiveX с использованием ATL AXHost | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- CAxWindow2T class
+- Calendar control (ActiveX), hosting with ATL AXHost
+- Calendar control (ActiveX)
+- ActiveX controls [C++], hosting
+- hosting ActiveX controls
+- AXHost method
 ms.assetid: 2c1200ec-effb-4814-820a-509519699468
-caps.latest.revision: 11
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 6
+caps.latest.revision: "11"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 2aac8a8b9cbf0b72378a286943faa6e36a8f3f74
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 12/21/2017
 ---
-# Hosting ActiveX Controls Using ATL AXHost
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Пример в этом разделе показано, как создать AXHost и размещение элементов управления ActiveX с помощью различных функций библиотеки ATL.  Кроме того, показано, как получить доступ к элементу управления и утонуть события \(с использованием [IDispEventImpl](../atl/reference/idispeventimpl-class.md)\) из элемента управления, который размещается.  Пример размещение элемент управления "Календарь" в главном окне или в дочернем окне.  
+# <a name="hosting-activex-controls-using-atl-axhost"></a>Размещение элементов управления ActiveX, с помощью ATL AXHost
+Пример в этом разделе показано, как создание AXHost и как разместить элемент управления ActiveX, с помощью различных функций ATL. Также показано, как получение доступа к событиям элементов управления и приемником (с помощью [IDispEventImpl](../atl/reference/idispeventimpl-class.md)) из элемента управления, который размещен. Этот образец размещает элемент управления календаря, в главном окне или в дочернем окне.  
   
- Обратите внимание `USE_METHOD` определение символа.  Можно изменить значение этого символа в зависимости от 1 до 8.  Значение символа определяет, как элемент управления будет создать.  
+ Обратите внимание, определение `USE_METHOD` символов. Можно изменить значение этого символа, чтобы принимать значения от 1 до 8. Значение символа определяет, каким образом будет создан элемент управления:  
   
--   Для ровн\- нумерованных значений `USE_METHOD`, вызова для создания подклассы узла окно и новообращенные его в узел элемента управления.  Для нечетн\- нумерованных значений код создает дочернее окно, которое выступает в роли основного приложения.  
+-   Для четных значений `USE_METHOD`, вызов для создания узла подклассы окна и преобразует его в качестве узлов элемента управления. Для значений с нечетным код создает дочернее окно, который выступает в качестве узла.  
   
--   Для значений `USE_METHOD` между 1 и 4, доступ к элементу управления и тонуть событий выполняются в вызов, который также создает основное приложение.  Значения от 5 до 8, выполняющих запрос к основному приложению интерфейсов и закрепляют приемник.  
+-   Для значений `USE_METHOD` от 1 до 4, доступ к элементу управления и прием событий, выполняются в вызове, который также создается узел. Значения в диапазоне от 5 до 8 запроса узла для интерфейсов и подключить приемник.  
   
- Ниже приводится сводка:  
+ Ниже приведена сводная информация о вариантах.  
   
-|USE\_METHOD|Основное приложение|Контролируйте доступ и тонуть события|Функция которые представлены|  
-|-----------------|-------------------------|-------------------------------------------|----------------------------------|  
-|1|Дочернее окно|Один этап|CreateControlLicEx|  
-|2|Главное окно|Один этап|AtlAxCreateControlLicEx|  
-|3|Дочернее окно|Один этап|CreateControlEx|  
-|4|Главное окно|Один этап|AtlAxCreateControlEx|  
-|5|Дочернее окно|Множественные инструкции|CreateControlLic|  
-|6|Главное окно|Множественные инструкции|AtlAxCreateControlLic|  
-|7|Дочернее окно|Множественные инструкции|CreateControl|  
-|8|Главное окно|Множественные инструкции|AtlAxCreateControl|  
+|USE_METHOD|Ведущее приложение|Управление доступом и прием событий|Функция показано|  
+|-----------------|----------|--------------------------------------|---------------------------|  
+|1|Дочерние окна|Один шаг|CreateControlLicEx|  
+|2|Главное окно|Один шаг|AtlAxCreateControlLicEx|  
+|3|Дочерние окна|Один шаг|CreateControlEx|  
+|4|Главное окно|Один шаг|AtlAxCreateControlEx|  
+|5|Дочерние окна|Несколько шагов|CreateControlLic|  
+|6|Главное окно|Несколько шагов|AtlAxCreateControlLic|  
+|7|Дочерние окна|Несколько шагов|CreateControl|  
+|8|Главное окно|Несколько шагов|AtlAxCreateControl|  
   
- [!code-cpp[NVC_ATL_AxHost#1](../atl/codesnippet/CPP/hosting-activex-controls-using-atl-axhost_1.cpp)]  
+ [!code-cpp[NVC_ATL_AxHost#1](../atl/codesnippet/cpp/hosting-activex-controls-using-atl-axhost_1.cpp)]  
   
-## См. также  
+## <a name="see-also"></a>См. также  
  [Часто задаваемые вопросы о вложении элементов управления](../atl/atl-control-containment-faq.md)   
- [AtlAxCreateControl](../Topic/AtlAxCreateControl.md)   
- [AtlAxCreateControlEx](../Topic/AtlAxCreateControlEx.md)   
- [AtlAxCreateControlLic](../Topic/AtlAxCreateControlLic.md)   
- [AtlAxCreateControlLicEx](../Topic/AtlAxCreateControlLicEx.md)   
- [CAxWindow2T Class](../Topic/CAxWindow2T%20Class.md)   
- [IAxWinHostWindowLic Interface](../atl/reference/iaxwinhostwindowlic-interface.md)
+ [AtlAxCreateControl](reference/composite-control-global-functions.md#atlaxcreatecontrol)   
+ [AtlAxCreateControlEx](reference/composite-control-global-functions.md#atlaxcreatecontrolex)   
+ [AtlAxCreateControlLic](reference/composite-control-global-functions.md#atlaxcreatecontrollic)   
+ [AtlAxCreateControlLicEx](reference/composite-control-global-functions.md#atlaxcreatecontrolex)   
+ [Класс CAxWindow2T](../atl/reference/caxwindow2t-class.md)   
+ [Интерфейс IAxWinHostWindowLic](../atl/reference/iaxwinhostwindowlic-interface.md)
+

@@ -18,16 +18,17 @@ caps.latest.revision: "14"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: df9df0f039bb9fcf9b157c642025b3f140c26ccc
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 3ea2a2222df26c05bce7daf1852d68ba40329b92
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="microsoft-macro-assembler-reference"></a>Справочные материалы по ассемблеру Microsoft Macro Assembler
 Microsoft Macro Assembler (MASM) предоставляет несколько преимуществ над встроенной сборки. MASM содержит макрос языка, который имеет функции, такие как обработка строк циклическую обработку, арифметические и текста. MASM также предоставляет больший контроль над оборудования, так как он поддерживает наборы инструкций 386 486 и процессорах Pentium. С помощью MASM, также могут снизить нагрузку на время и память.  
   
-## <a name="in-this-section"></a>Содержание  
+## <a name="in-this-section"></a>В этом разделе  
  [Параметр командной строки ML и ML64](../../assembler/masm/ml-and-ml64-command-line-reference.md)  
  Описание параметров командной строки ML.exe и ML64.exe.  
   

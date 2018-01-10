@@ -1,46 +1,47 @@
 ---
-title: "Implementation of a Custom String Manager (Basic Method) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "IAtlStringMgr class, использование"
+title: "Реализация пользовательских строка Manager (базовый метод) | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+dev_langs: C++
+helpviewer_keywords: IAtlStringMgr class, using
 ms.assetid: eac5d13e-cbb4-4e82-b01e-f5f2dbcb962a
-caps.latest.revision: 12
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 8
+caps.latest.revision: "12"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: b80af4fc8b463b6987f586c426bd465520f75ba6
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 12/21/2017
 ---
-# Implementation of a Custom String Manager (Basic Method)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+# <a name="implementation-of-a-custom-string-manager-basic-method"></a>Реализация пользовательских строка Manager (базовый метод)
+Самый простой способ настроить схему распределения памяти для строки данных является использование ATL предоставленной **CAtlStringMgr** класса, но также предоставить собственную памяти процедур выделения. Конструктор для **CAtlStringMgr** принимает один параметр: указатель на `IAtlMemMgr` объект. `IAtlMemMgr`Представляет абстрактный базовый класс, который предоставляет универсальный интерфейс к куче. С помощью `IAtlMemMgr` интерфейс, **CAtlStringMgr** выделяет, повторно выделяет и освобождает память, используемая для хранения строковых данных. Можно либо реализовать `IAtlMemMgr` интерфейс самостоятельно или использовать один из пяти классов диспетчер памяти ATL-условии. Диспетчеры памяти, предоставленный для ATL просто перенести существующие возможности выделения памяти:  
+  
+-   [CCRTHeap](../atl/reference/ccrtheap-class.md) создает оболочку для стандартных функций кучи CRT ([malloc](../c-runtime-library/reference/malloc.md), [свободного](../c-runtime-library/reference/free.md), и [realloc](../c-runtime-library/reference/realloc.md))  
+  
+-   [CWin32Heap](../atl/reference/cwin32heap-class.md) переносит обработки кучи Win32, с помощью [HeapAlloc](http://msdn.microsoft.com/library/windows/desktop/aa366597), [HeapFree](http://msdn.microsoft.com/library/windows/desktop/aa366701), и [HeapRealloc](http://msdn.microsoft.com/library/windows/desktop/aa366704)  
+  
+-   [CLocalHeap](../atl/reference/clocalheap-class.md) создает оболочку для API-интерфейсов Win32: [LocalAlloc](http://msdn.microsoft.com/library/windows/desktop/aa366723), [LocalFree](http://msdn.microsoft.com/library/windows/desktop/aa366730), и [LocalRealloc](http://msdn.microsoft.com/library/windows/desktop/aa366742)  
+  
+-   [CGlobalHeap](../atl/reference/cglobalheap-class.md) создает оболочку для API-интерфейсов Win32: [GlobalAlloc](http://msdn.microsoft.com/library/windows/desktop/aa366574), [GlobalFree](http://msdn.microsoft.com/library/windows/desktop/aa366579), и [GlobalRealloc](http://msdn.microsoft.com/library/windows/desktop/aa366590).  
+  
+-   [CComHeap](../atl/reference/ccomheap-class.md) создает оболочку для API-интерфейсы COM задач распределителя: [CoTaskMemAlloc](http://msdn.microsoft.com/library/windows/desktop/ms692727), [CoTaskMemFree](http://msdn.microsoft.com/library/windows/desktop/ms680722), и [CoTaskMemRealloc](http://msdn.microsoft.com/library/windows/desktop/ms687280)  
+  
+ С целью управления памятью строки, наиболее полезные класс является `CWin32Heap` , так как оно дает возможность создания нескольких независимых куч. Например если вы хотели использовать отдельной куче только для строк, может необходимо следующее:  
+  
+ [!code-cpp[NVC_ATLMFC_Utilities#180](../atl-mfc-shared/codesnippet/cpp/implementation-of-a-custom-string-manager-basic-method_1.cpp)]  
+  
+ Для использования этого диспетчера частную строковую управление памятью для `CString` переменной, передайте значение указателя к диспетчеру как параметр `CString` конструктор переменной:  
+  
+ [!code-cpp[NVC_ATLMFC_Utilities#181](../atl-mfc-shared/codesnippet/cpp/implementation-of-a-custom-string-manager-basic-method_2.cpp)]  
+  
+## <a name="see-also"></a>См. также  
+ [Управление памятью с помощью CStringT](../atl-mfc-shared/memory-management-with-cstringt.md)
 
-Самый простой способ настройки схема выделения памяти для строковых данных использовать библиотеку ATL\-, класс **CAtlStringMgr** но предоставляет собственные процедуры выделения памяти.  Конструктор для **CAtlStringMgr** принимает один параметр: указатель на объект `IAtlMemMgr`.  `IAtlMemMgr` абстрактный базовый класс, который предоставляет универсальный интерфейс куча.  С помощью интерфейса `IAtlMemMgr`, **CAtlStringMgr**, reallocates и освобождает память, используемая для хранения сведений строки.  Самостоятельно любой реализовать интерфейс `IAtlMemMgr` или использовать одно из 5 библиотеки ATL\-, классы диспетчера памяти.  Библиотека ATL\-, средства выделения памяти для использования программы\-оболочек просто существующие диспетчеры памяти:  
-  
--   [CCRTHeap](../atl/reference/ccrtheap-class.md) Создает программу\-оболочку стандартные функции кучи CRT \([malloc](../c-runtime-library/reference/malloc.md), [free](../c-runtime-library/reference/free.md) и [realloc](../c-runtime-library/reference/realloc.md)\)  
-  
--   [CWin32Heap](../atl/reference/cwin32heap-class.md) Создает дескриптор Win32 программу\-оболочку кучи, с помощью [HeapAlloc](http://msdn.microsoft.com/library/windows/desktop/aa366597), [HeapFree](http://msdn.microsoft.com/library/windows/desktop/aa366701) и [HeapRealloc](http://msdn.microsoft.com/library/windows/desktop/aa366704)  
-  
--   [CLocalHeap](../atl/reference/clocalheap-class.md) Создает программу\-оболочку API Win32: [LocalAlloc](http://msdn.microsoft.com/library/windows/desktop/aa366723), [LocalFree](http://msdn.microsoft.com/library/windows/desktop/aa366730) и [LocalRealloc](http://msdn.microsoft.com/library/windows/desktop/aa366742)  
-  
--   [CGlobalHeap](../atl/reference/cglobalheap-class.md) Создает программу\-оболочку API Win32: [GlobalAlloc](http://msdn.microsoft.com/library/windows/desktop/aa366574), [GlobalFree](http://msdn.microsoft.com/library/windows/desktop/aa366579) и [GlobalRealloc](http://msdn.microsoft.com/library/windows/desktop/aa366590).  
-  
--   [CComHeap](../atl/reference/ccomheap-class.md) Создает программу\-оболочку API распределитель задачи модели COM. [CoTaskMemAlloc](http://msdn.microsoft.com/library/windows/desktop/ms692727), [CoTaskMemFree](http://msdn.microsoft.com/library/windows/desktop/ms680722) и [CoTaskMemRealloc](http://msdn.microsoft.com/library/windows/desktop/ms687280)  
-  
- Для управления памятью строки самый удобный класс `CWin32Heap`, поскольку он позволяет создать кучи, независимо от числа, кратного.  Например, если нужно использовать отдельные кучу для строк, можно сделать следующее:  
-  
- [!code-cpp[NVC_ATLMFC_Utilities#180](../atl-mfc-shared/codesnippet/CPP/implementation-of-a-custom-string-manager-basic-method_1.cpp)]  
-  
- Для использования этого закрытого диспетчера строки управление памятью для переменной `CString`, передайте указатель на него в качестве параметра конструктору переменной `CString`:  
-  
- [!code-cpp[NVC_ATLMFC_Utilities#181](../atl-mfc-shared/codesnippet/CPP/implementation-of-a-custom-string-manager-basic-method_2.cpp)]  
-  
-## См. также  
- [Memory Management with CStringT](../atl-mfc-shared/memory-management-with-cstringt.md)

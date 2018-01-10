@@ -16,11 +16,12 @@ caps.latest.revision: "7"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: eaf75c067b2e96e5ae4a893b56376bfc1b9bd1e7
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 410e52dd9ee9605f6e29b81491bda0f4883e1cf9
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="inferred-dependents"></a>Выводимые зависимости
 Выводимая зависимость создается правило определения и оценивается перед явными зависимостями. Если выводимая зависимость устарела по отношению к цели, NMAKE вызывает для этой зависимости блок команд. Если выводимая зависимость не существует или является устаревшей по отношению к собственным зависимостям, программа NMAKE сначала обновляет эту зависимость. Дополнительные сведения о выводимых зависимостях см. в разделе [правила вывода](../build/inference-rules.md).  

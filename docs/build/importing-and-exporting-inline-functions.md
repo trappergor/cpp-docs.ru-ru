@@ -23,11 +23,12 @@ caps.latest.revision: "7"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 7753660b38d67b410927ce831b936a998353e622
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: a6f8d159a1537cdfee02d45805632ba9ad4afa7e
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="importing-and-exporting-inline-functions"></a>Импорт и экспорт встраиваемых функций
 Импортируемых функций можно определить как встроенную. Результат является примерно таким же, как определение стандартной встроенной функции; вызовы функции разворачиваются во встроенный код, подобно макроса. В основном применяется, как средства поддержки C++ классов в библиотеке DLL, могут встраиваться некоторые члены функции для повышения эффективности.  

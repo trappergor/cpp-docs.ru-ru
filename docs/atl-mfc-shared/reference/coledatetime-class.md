@@ -45,11 +45,12 @@ caps.latest.revision: "34"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: fda1737c32bbc63f4ffdd4e1226459a09595f635
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: dbe0e831a644dfc09c6b4afb3c54f23b220850d3
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="coledatetime-class"></a>Класс COleDateTime
 Инкапсулирует `DATE` тип данных, используемый в OLE-автоматизации.  
@@ -60,17 +61,17 @@ ms.lasthandoff: 10/24/2017
 class COleDateTime
 ```  
   
-## <a name="members"></a>Члены  
+## <a name="members"></a>Участники  
   
 ### <a name="public-constructors"></a>Открытые конструкторы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[COleDateTime::COleDateTime](#coledatetime)|Создает объект `COleDateTime`.|  
   
 ### <a name="public-methods"></a>Открытые методы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[COleDateTime::Format](#format)|Создает строковое представление `COleDateTime` объекта.|  
 |[COleDateTime::GetAsDBTIMESTAMP](#getasdbtimestamp)|Этот метод вызывается для получения времени в `COleDateTime` объекта в виде **DBTIMESTAMP** структуры данных.|  
@@ -94,7 +95,7 @@ class COleDateTime
   
 ### <a name="public-operators"></a>Открытые операторы  
 
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[COleDateTime::operator == COleDateTime::operator < и т. д.](#coledatetime_relational_operators)|Сравнивает два `COleDateTime` значения.|  
 |[COleDateTime::operator + COleDateTime::operator-](#operator_add_-)|Сложения и вычитания `COleDateTime` значения.|  
@@ -104,7 +105,7 @@ class COleDateTime
   
 ### <a name="public-data-members"></a>Открытые члены данных  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[COleDateTime::m_dt](#m_dt)|Содержит базовый **даты** для этого `COleDateTime` объекта.|  
 |[COleDateTime::m_status](#m_status)|Содержит состояние данного объекта `COleDateTime` объекта.|  
@@ -121,7 +122,7 @@ class COleDateTime
 |Полночь 29 декабря 1899 г.,|-1.0|  
 |29 декабря 1899 г., по 6|-1.25|  
 |Полночь 30 декабря 1899 г.,|0,0|  
-|Полночь 31 декабря 1899 г.,|1,0|  
+|Полночь 31 декабря 1899 г.,|1.0|  
 |1 января 1900 г., 6: 00.|2.25|  
   
 > [!CAUTION]
@@ -804,7 +805,7 @@ COleDateTimeSpan operator-(const COleDateTime& date) const throw();
   
  Если один из операндов является недопустимым, и другой не равно null, итоговое состояние `COleDateTime` недопустимое значение.  
   
- **+**  И  **-**  операторов проверяет, если `COleDateTime` объекта установлено в значение null. В разделе [COleDateTime реляционные операторы](#coledatetime_relational_operators) в качестве примера.  
+  **+**  И  **-**  операторов проверяет, если `COleDateTime` объекта установлено в значение null. В разделе [COleDateTime реляционные операторы](#coledatetime_relational_operators) в качестве примера.  
   
  Дополнительные сведения о значениях состояния недопустимый, допустимый и null. в разделе [m_status](#m_status) переменной-члена.  
   
@@ -830,7 +831,7 @@ COleDateTime& operator-=(COleDateTimeSpan dateSpan) throw();
   
  Дополнительные сведения о значениях состояния недопустимый, допустимый и null. в разделе [m_status](#m_status) переменной-члена.  
   
- **+=**  И  **-=**  операторов проверяет, если `COleDateTime` объекта установлено в значение null. В разделе [COleDateTime реляционные операторы](#coledatetime_relational_operators) в качестве примера.  
+  **+=**  И  **-=**  операторов проверяет, если `COleDateTime` объекта установлено в значение null. В разделе [COleDateTime реляционные операторы](#coledatetime_relational_operators) в качестве примера.  
   
  Дополнительные сведения о граничные значения для `COleDateTime` значения, см. в статье [даты и времени: Поддержка модели автоматизации](../../atl-mfc-shared/date-and-time-automation-support.md).  
   

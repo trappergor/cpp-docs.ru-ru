@@ -18,16 +18,17 @@ caps.latest.revision: "12"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 38a3a64f4853948fcd9ebca1593254e803333a83
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 0c14b52ef062b2a60815f47adfb2b8d39e6aa31f
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="programming-with-atl-and-c-run-time-code"></a>Программирование с использованием ATL и кода среды выполнения C
 В этом разделе рассматриваются преимущества использования библиотеки времени выполнения C (CRT) с помощью статической или динамической компоновки.  
   
-## <a name="in-this-section"></a>Содержание  
+## <a name="in-this-section"></a>В этом разделе  
  [Преимущества и недостатки метода, используемого для ссылки на CRT](../atl/benefits-and-tradeoffs-of-the-method-used-to-link-to-the-crt.md)  
  Перечислены преимущества и недостатки, включенные в статической компоновки с библиотекой CRT или динамическую компоновку.  
   

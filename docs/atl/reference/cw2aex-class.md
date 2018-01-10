@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-windows
+ms.technology: cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
@@ -14,35 +13,19 @@ f1_keywords:
 - ATLCONV/ATL::CW2AEX::CW2AEX
 - ATLCONV/ATL::CW2AEX::m_psz
 - ATLCONV/ATL::CW2AEX::m_szBuffer
-dev_langs:
-- C++
-helpviewer_keywords:
-- CW2AEX class
+dev_langs: C++
+helpviewer_keywords: CW2AEX class
 ms.assetid: 44dc2cf5-dd30-440b-a9b9-b21b43f49843
-caps.latest.revision: 21
+caps.latest.revision: "21"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: d2d39abf526a58b8442107b5ee816f316ae841f5
-ms.openlocfilehash: 007dc4a40f0784984981c9b2741ec79ce6f12d9b
-ms.contentlocale: ru-ru
-ms.lasthandoff: 03/31/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: d135797ff6902a9a63e89a692a25919b08b47f6d
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cw2aex-class"></a>Класс CW2AEX
 Этот класс используется макросы преобразования строк `CT2AEX`, `CW2TEX`, `CW2CTEX`, и `CT2CAEX`и определение типа **CW2A**.  
@@ -61,24 +44,24 @@ class CW2AEX
  `t_nBufferLength`  
  Размер буфера, используемого в процессе перевода. Длина по умолчанию — 128 байт.  
   
-## <a name="members"></a>Члены  
+## <a name="members"></a>Участники  
   
 ### <a name="public-constructors"></a>Открытые конструкторы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[CW2AEX::CW2AEX](#cw2aex)|Конструктор.|  
 |[CW2AEX:: ~ CW2AEX](#dtor)|Деструктор|  
   
 ### <a name="public-operators"></a>Открытые операторы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[CW2AEX::operator LPSTR](#operator_lpstr)|Оператор преобразования.|  
   
 ### <a name="public-data-members"></a>Открытые члены данных  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[CW2AEX::m_psz](#m_psz)|Элемент данных, который хранит исходную строку.|  
 |[CW2AEX::m_szBuffer](#m_szbuffer)|Статический буфер, используемый для хранения преобразованную строку.|  
@@ -127,7 +110,7 @@ CW2AEX(LPCWSTR psz) throw(...);
  Текстовая строка для преобразования.  
   
  `nCodePage`  
- Кодовая страница, используемая для выполнения преобразования. В описании кода страницы параметров для [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)] функция [MultiByteToWideChar](http://msdn.microsoft.com/library/windows/desktop/dd319072) для получения дополнительных сведений.  
+ Кодовая страница, используемая для выполнения преобразования. В описании кода страницы параметров для функции Windows SDK [MultiByteToWideChar](http://msdn.microsoft.com/library/windows/desktop/dd319072) для получения дополнительных сведений.  
   
 ### <a name="remarks"></a>Примечания  
  Выделяет буфера, используемого в процессе перевода.  
@@ -173,4 +156,3 @@ operator LPSTR() const throw();
  [Класс CW2CWEX](../../atl/reference/cw2cwex-class.md)   
  [Класс CW2WEX](../../atl/reference/cw2wex-class.md)   
  [Общие сведения о классе](../../atl/atl-class-overview.md)
-

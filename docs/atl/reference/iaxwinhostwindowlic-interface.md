@@ -4,30 +4,27 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-windows
+ms.technology: cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
 - IAxWinHostWindowLic
-- No header/ATL::IAxWinHostWindowLic
-- No header/ATL::CreateControlLic
-- No header/ATL::CreateControlLicEx
-dev_langs:
-- C++
-helpviewer_keywords:
-- IAxWinHostWindowLic interface
+- ATLIFACE/ATL::IAxWinHostWindowLic
+- ATLIFACE/ATL::CreateControlLic
+- ATLIFACE/ATL::CreateControlLicEx
+dev_langs: C++
+helpviewer_keywords: IAxWinHostWindowLic interface
 ms.assetid: 750f1520-6bce-428c-aca0-fccbe3f063c7
-caps.latest.revision: 19
+caps.latest.revision: "19"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 61bd50d5602812cc70ccc3201e9df255f469604a
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
-ms.sourcegitcommit: c55726a1728185f699afbac4ba68a6dc0f70c2bf
-ms.openlocfilehash: 6d0e8c0a8ec941c7a7980b81fcd95df08298ea28
-ms.contentlocale: ru-ru
-ms.lasthandoff: 10/09/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="iaxwinhostwindowlic-interface"></a>Интерфейс IAxWinHostWindowLic
 Этот интерфейс предоставляет методы для управления лицензированный элемент управления и его объект узла.  
@@ -38,7 +35,7 @@ ms.lasthandoff: 10/09/2017
 interface IAxWinHostWindowLic : IAxWinHostWindow
 ```  
   
-## <a name="members"></a>Члены  
+## <a name="members"></a>Участники  
   
 ### <a name="methods"></a>Методы  
   
@@ -106,7 +103,6 @@ STDMETHOD(CreateControlLicEx)(
   
 ### <a name="example"></a>Пример  
  В разделе [размещение AXHost с использованием ATL ActiveX элементов управления](../../atl/hosting-activex-controls-using-atl-axhost.md) пример, использующий `IAxWinHostWindowLic::CreateControlLicEx`.
-
 
 
 

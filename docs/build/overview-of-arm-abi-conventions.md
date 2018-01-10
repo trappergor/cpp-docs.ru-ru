@@ -13,11 +13,12 @@ caps.latest.revision: "6"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: cf5ef9c9d9e122b23dc1b39d6e6092168f2c9381
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 073fe113c1915913d06a63c7feabcb7808896188
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="overview-of-arm-abi-conventions"></a>Обзор соглашений ABI ARM
 Двоичный интерфейс приложения (ABI) для кода, скомпилированного для Windows на процессорах ARM, основан на стандартном встроенном двоичном интерфейсе приложения ARM. В этой статье указаны различия между системой Windows на устройствах ARM и стандартной системой. Дополнительные сведения о стандартных встроенном двоичном интерфейсе приложения ARM см. в разделе [приложения двоичного интерфейса (ABI) для архитектуры ARM](http://infocenter.arm.com/help/index.jsp?topic=/com.arm.doc.subset.swdev.abi/index.html).  

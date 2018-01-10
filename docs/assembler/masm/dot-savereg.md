@@ -1,42 +1,40 @@
 ---
-title: ".SAVEREG | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - ".SAVEREG"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - ".SAVEREG directive"
+title: ". SAVEREG | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: .SAVEREG
+dev_langs: C++
+helpviewer_keywords: .SAVEREG directive
 ms.assetid: 1dbc2ef6-a197-40e7-9e55-fddcae8cef29
-caps.latest.revision: 8
-caps.handback.revision: 8
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
+caps.latest.revision: "8"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: ab1e777aa8bdddc4aa4fd71212f3275231b92dc4
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 12/21/2017
 ---
-# .SAVEREG
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Создает то a `UWOP_SAVE_NONVOL` или a  `UWOP_SAVE_NONVOL_FAR` запись кода раскрутки для указанного регистра \(`reg`и смещение \(\)`offset`\), используя текущее смещение в прологе.  Компилятор MASM выберет наиболее подходящий способ кодировки.  
+# <a name="savereg"></a>.SAVEREG
+Приводит к возникновению ошибки либо `UWOP_SAVE_NONVOL` или `UWOP_SAVE_NONVOL_FAR` очистки запись для указанного регистра (`reg`) и смещения (`offset`) с помощью текущего смещения в прологе. MASM выберет наиболее эффективную кодировку.  
   
-## Синтаксис  
+## <a name="syntax"></a>Синтаксис  
   
 ```  
 .SAVEREG reg, offset  
 ```  
   
-## Заметки  
- .SAVEREG Позволяет пользователям ml64.exe, чтобы указать, как функция с кадром очистки и допускается только в пределах пролога, который распространяется от [PROC](../../assembler/masm/proc.md) объявление КАДРА к  [.ENDPROLOG](../Topic/.ENDPROLOG.md) директива.  Эти правила не создают код; они лишь создают `.xdata` и  `.pdata`.  .SAVEREG Должен предшествовать инструкциям, которые фактически реализуют действия, размотанным.  Рекомендуется создавать программу\-оболочку и рекомендации очистки и код предназначен для раскрутки в макросе для предоставления соглашения.  
+## <a name="remarks"></a>Примечания  
+ . SAVEREG позволяет пользователям указать, каким образом функция кадра освобождает ml64.exe и разрешено только в пределах пролога, начиная с позиции [PROC](../../assembler/masm/proc.md) объявление КАДРА [. ENDPROLOG](../../assembler/masm/dot-endprolog.md) директивы. Эти директивы не создают код; только создать `.xdata` и `.pdata`. . SAVEREG должно предшествовать инструкции, которые фактически реализуют действия, чтобы быть развернут. Рекомендуется переносить директивы очистки и код, который они предназначены для очистки в макросе чтобы соглашение.  
   
- Дополнительные сведения см. в разделе [MASM for x64 \(ml64.exe\)](../../assembler/masm/masm-for-x64-ml64-exe.md).  
+ Дополнительные сведения см. в разделе [MASM для x64 (ml64.exe)](../../assembler/masm/masm-for-x64-ml64-exe.md).  
   
-## См. также  
- [Directives Reference](../../assembler/masm/directives-reference.md)
+## <a name="see-also"></a>См. также  
+ [Справочник по директивам](../../assembler/masm/directives-reference.md)

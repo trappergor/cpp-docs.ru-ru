@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-windows
+ms.technology: cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
@@ -13,35 +12,19 @@ f1_keywords:
 - ATLSIMPCOLL/ATL::CSimpleMapEqualHelper
 - ATLSIMPCOLL/ATL::CSimpleMapEqualHelper::IsEqualKey
 - ATLSIMPCOLL/ATL::CSimpleMapEqualHelper::IsEqualValue
-dev_langs:
-- C++
-helpviewer_keywords:
-- CSimpleMapEqualHelper class
+dev_langs: C++
+helpviewer_keywords: CSimpleMapEqualHelper class
 ms.assetid: 9bb2968a-d609-405c-8272-ff3b42df6164
-caps.latest.revision: 20
+caps.latest.revision: "20"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 604a4bf49490ad2599c857eb3afd527d67e1e25b
-ms.openlocfilehash: ddb793889748446b9613c91ce6fcefe28da32eb3
-ms.contentlocale: ru-ru
-ms.lasthandoff: 02/24/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: ecc32dc8e6e9b249b0b8b334ec3d08bf26cbd1ed
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="csimplemapequalhelper-class"></a>Класс CSimpleMapEqualHelper
 Этот класс представляет вспомогательный класс для [CSimpleMap](../../atl/reference/csimplemap-class.md) класса.  
@@ -60,23 +43,23 @@ class CSimpleMapEqualHelper
  `TVal`  
  Значение элемента.  
   
-## <a name="members"></a>Члены  
+## <a name="members"></a>Участники  
   
 ### <a name="public-methods"></a>Открытые методы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
-|[CSimpleMapEqualHelper::IsEqualKey](#isequalkey)|(Статический) Проверяет равенство двух ключей.|  
+|[CSimpleMapEqualHelper::IsEqualKey](#isequalkey)|(Статический) Проверяет два ключа на равенство.|  
 |[CSimpleMapEqualHelper::IsEqualValue](#isequalvalue)|(Статический) Сравнивает два значения на равенство.|  
   
 ## <a name="remarks"></a>Примечания  
- Этот класс признаков является дополнением к `CSimpleMap` класса. Он предоставляет методы для сравнения двух `CSimpleMap` объекта элементов (в частности, ключ и значение компоненты) на предмет равенства. По умолчанию ключи и значения сравниваются с помощью `operator==()`, но если сопоставление содержит сложные типы данных, не имеющих свои собственные оператор равенства, этот класс может быть переопределен для обеспечения дополнительной требуемой функциональности.  
+ Этот класс признаки является дополнением к `CSimpleMap` класса. Он предоставляет методы для сравнения двух `CSimpleMap` объекта элементы (в частности, ключ и значение компоненты) для проверки на равенство. По умолчанию ключи и значения сравниваются с помощью `operator==()`, но если сопоставление содержит сложные типы данных которых не хватает собственные оператор равенства, этот класс может быть переопределен для предоставления дополнительного требуемую функциональность.  
   
 ## <a name="requirements"></a>Требования  
  **Заголовок:** atlsimpcoll.h  
   
 ##  <a name="isequalkey"></a>CSimpleMapEqualHelper::IsEqualKey  
- Проверяет равенство двух ключей.  
+ Проверяет два ключа на равенство.  
   
 ```
 static bool IsEqualKey(const TKey& k1, const TKey& k2);
@@ -107,9 +90,8 @@ static bool IsEqualValue(const TVal& v1, const TVal& v2);
  Второе значение в вычитании.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
- Возвращает значение true, если значения равны false в противном случае.  
+ Возвращает значение true, если значения равны, значение false в противном случае.  
   
 ## <a name="see-also"></a>См. также  
  [Класс CSimpleMapEqualHelperFalse](../../atl/reference/csimplemapequalhelperfalse-class.md)   
  [Общие сведения о классе](../../atl/atl-class-overview.md)
-

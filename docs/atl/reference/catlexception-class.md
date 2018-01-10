@@ -19,11 +19,12 @@ caps.latest.revision: "19"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: b0a22b1918f255290ae6b47604aa57ef484a9527
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 0af7fa5a0bc78043e0eac204255f30ab1b9672c5
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="catlexception-class"></a>Класс CAtlException
 Этот класс определяет ATL исключения.  
@@ -34,23 +35,23 @@ ms.lasthandoff: 10/24/2017
 class CAtlException
 ```  
   
-## <a name="members"></a>Члены  
+## <a name="members"></a>Участники  
   
 ### <a name="public-constructors"></a>Открытые конструкторы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[CAtlException::CAtlException](#catlexception)|Конструктор.|  
   
 ### <a name="public-operators"></a>Открытые операторы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[CAtlException::operator HRESULT](#operator_hresult)|Приводит текущий объект в значение HRESULT.|  
   
 ### <a name="public-data-members"></a>Открытые члены данных  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[CAtlException::m_hr](#m_hr)|Переменная типа HRESULT созданный объект и используется для хранения состояния ошибки.|  
   

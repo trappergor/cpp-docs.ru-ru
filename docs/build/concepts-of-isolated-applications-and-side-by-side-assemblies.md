@@ -16,11 +16,12 @@ caps.latest.revision: "21"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 08c3b48ebfc96a93961c6c810312daa6072e8f40
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 9166f62c51344cc9c620da34d9c6fcee4665f400
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="concepts-of-isolated-applications-and-side-by-side-assemblies"></a>Основные понятия, связанные с изолированными приложениями и параллельными сборками
 Приложение называется [изолированным](http://msdn.microsoft.com/library/aa375190) , если все его компоненты являются [параллельными сборками](http://msdn.microsoft.com/library/ff951640). Параллельная сборка представляет собой коллекцию ресурсов (группу библиотек DLL, классов окон, серверов COM, библиотек типов или интерфейсов), которые развертываются совместно и могут использоваться приложением во время выполнения. Обычно параллельная сборка — это одна или несколько библиотек DLL.  
