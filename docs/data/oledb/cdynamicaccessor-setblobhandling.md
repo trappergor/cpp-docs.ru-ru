@@ -1,36 +1,38 @@
 ---
-title: "CDynamicAccessor::SetBlobHandling | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "CDynamicAccessor::SetBlobHandling"
-  - "CDynamicAccessor.SetBlobHandling"
-  - "ATL::CDynamicAccessor::SetBlobHandling"
-  - "SetBlobHandling"
-  - "ATL.CDynamicAccessor.SetBlobHandling"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "SetBlobHandling - метод"
+title: "CDynamicAccessor::SetBlobHandling | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- CDynamicAccessor::SetBlobHandling
+- CDynamicAccessor.SetBlobHandling
+- ATL::CDynamicAccessor::SetBlobHandling
+- SetBlobHandling
+- ATL.CDynamicAccessor.SetBlobHandling
+dev_langs: C++
+helpviewer_keywords: SetBlobHandling method
 ms.assetid: fa8b0bb3-a21b-4d64-aeef-e79bf61d079c
-caps.latest.revision: 8
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: 02b9be4b187f55d9bfb8f3ee5e572f682742f538
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 12/21/2017
 ---
-# CDynamicAccessor::SetBlobHandling
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Задает БОЛЬШОЙ ДВОИЧНЫЙ ОБЪЕКТ обработки значение для текущей строки.  
+# <a name="cdynamicaccessorsetblobhandling"></a>CDynamicAccessor::SetBlobHandling
+Задает больших двоичных ОБЪЕКТОВ, обработки значения для текущей строки.  
   
-## Синтаксис  
+## <a name="syntax"></a>Синтаксис  
   
 ```  
   
@@ -39,23 +41,23 @@ caps.handback.revision: 8
 );  
 ```  
   
-#### Параметры  
+#### <a name="parameters"></a>Параметры  
  `eBlobHandling`  
- Определяет, как данные больших двоичных объектов обрабатываться.  Он может принимать следующие значения:  
+ Указывает способ обработки данных больших двоичных ОБЪЕКТОВ. Возможны следующие значения:  
   
--   **DBBLOBHANDLING\_DEFAULT**: Обработка данных столбца больше `nBlobSize` \(в виде набора `SetBlobSizeLimit`\) как данные больших двоичных объектов и извлечь его через объект `ISequentialStream` или `IStream`.  Этот параметр пытается привязать каждый столбец, содержащий данные больше `nBlobSize` или представлены как **DBTYPE\_IUNKNOWN** как данные больших двоичных объектов.  
+-   **DBBLOBHANDLING_DEFAULT**: обрабатывать данные столбца больше, чем `nBlobSize` (как задано в `SetBlobSizeLimit`), а данные большого двоичного ОБЪЕКТА и получить его через `ISequentialStream` или `IStream` объекта. Этот параметр будет пытаться выполнить привязку каждого столбца, содержащего данные, превышающие `nBlobSize` или перечисляются в виде **DBTYPE_IUNKNOWN** как данные большого двоичного ОБЪЕКТА.  
   
--   **DBBLOBHANDLING\_NOSTREAMS**: Обработка данных столбца больше `nBlobSize` \(в виде набора `SetBlobSizeLimit`\) как данные больших двоичных объектов и извлечь его через ссылку \(в выбранной, принадлежащей объект\-получатель памяти.  Этот параметр полезен для таблиц, в которых более одного столбца БОЛЬШИХ ДВОИЧНОГО ОБЪЕКТА и поставщик поддерживает только один объект `ISequentialStream` на доступ.  
+-   **DBBLOBHANDLING_NOSTREAMS**: обрабатывать данные столбца больше, чем `nBlobSize` (как задано в `SetBlobSizeLimit`), а данные большого двоичного ОБЪЕКТА и его можно получить через ссылку в выделенной поставщика, потребителя памяти. Этот параметр полезен для таблиц, имеющих более одного столбца больших двоичных ОБЪЕКТОВ, а поставщик поддерживает только один `ISequentialStream` объекта на каждый метод доступа.  
   
--   **DBBLOBHANDLING\_SKIP**: Пропустите \(\) не выполняет привязку столбцов определяемого как содержать большие двоичные объекты \(доступ не привязывает или не извлекает значение столбца, но по\-прежнему содержит состояние и длина столбца\).  
+-   **DBBLOBHANDLING_SKIP**: пропустить (привязки) столбцов, выбранных как содержащие большие двоичные объекты (метод доступа не привязать или получить значение столбца, но будет по-прежнему получать столбец состояния и длины).  
   
-## Заметки  
- Необходимо вызвать `SetBlobHandling` до вызова функции **Открыть**.  
+## <a name="remarks"></a>Примечания  
+ Необходимо вызвать `SetBlobHandling` перед вызовом **откройте**.  
   
- Метод [CDynamicAccessor](../../data/oledb/cdynamicaccessor-class.md) в конструкторе задает БОЛЬШОЙ ДВОИЧНЫЙ ОБЪЕКТ обработки значение **DBBLOBHANDLING\_DEFAULT**.  
+ Метод конструктора [CDynamicAccessor](../../data/oledb/cdynamicaccessor-class.md) задает большой двоичный объект, значение для обработки **DBBLOBHANDLING_DEFAULT**.  
   
-## Требования  
+## <a name="requirements"></a>Требования  
  **Заголовок:** atldbcli.h  
   
-## См. также  
+## <a name="see-also"></a>См. также  
  [Класс CDynamicAccessor](../../data/oledb/cdynamicaccessor-class.md)

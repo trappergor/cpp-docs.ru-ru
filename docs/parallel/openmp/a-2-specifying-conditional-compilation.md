@@ -1,27 +1,27 @@
 ---
-title: "A.2   Specifying Conditional Compilation | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
+title: "Задание условной компиляции A.2 | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
 ms.assetid: de4a21b9-f987-4738-9f13-c4795f6f2dff
-caps.latest.revision: 8
-caps.handback.revision: 8
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "8"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 93557eaae2c8661697f7bda383b50f2e1ba9e2cb
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 12/21/2017
 ---
-# A.2   Specifying Conditional Compilation
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Следующие примеры показывают использование условной компиляции с помощью макроса OpenMP `_OPENMP` \([Раздел 2.2](../../parallel/openmp/2-2-conditional-compilation.md) на странице 8\).  С OpenMP, при компиляции `_OPENMP` макрос будет указанным.  
+# <a name="a2---specifying-conditional-compilation"></a>A.2   Задание условной компиляции
+Следующие примеры иллюстрируют использование условной компиляции с помощью макроса OpenMP `_OPENMP` ([раздел 2.2](../../parallel/openmp/2-2-conditional-compilation.md) на странице 8). При использовании компиляции OpenMP `_OPENMP` становится определен макрос.  
   
 ```  
 # ifdef _OPENMP   
@@ -29,7 +29,7 @@ manager: "ghogen"
 # endif  
 ```  
   
- Оператор distinct позволяет нескольким макрос препроцессора проверяемое в одной директиве.  
+ Определенный Оператор препроцессора позволяет более одного макроса для тестирования в одной директиве.  
   
 ```  
 # if defined(_OPENMP) && defined(VERBOSE)  

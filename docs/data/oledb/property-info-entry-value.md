@@ -1,32 +1,33 @@
 ---
-title: "PROPERTY_INFO_ENTRY_VALUE | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "PROPERTY_INFO_ENTRY_VALUE"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "PROPERTY_INFO_ENTRY_VALUE - макрос"
+title: "PROPERTY_INFO_ENTRY_VALUE | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: PROPERTY_INFO_ENTRY_VALUE
+dev_langs: C++
+helpviewer_keywords: PROPERTY_INFO_ENTRY_VALUE macro
 ms.assetid: 9690f7f3-fb20-4a7e-a75f-8a3a1cb1ce0d
-caps.latest.revision: 7
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: 1c93b2d010feb6be0160ac3253890ad7ffaa168a
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 12/21/2017
 ---
-# PROPERTY_INFO_ENTRY_VALUE
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Представляет конкретное свойство в набор свойств.  
+# <a name="propertyinfoentryvalue"></a>PROPERTY_INFO_ENTRY_VALUE
+Представляет конкретное свойство в наборе свойств.  
   
-## Синтаксис  
+## <a name="syntax"></a>Синтаксис  
   
 ```  
   
@@ -35,23 +36,23 @@ dwPropID
 , value )  
 ```  
   
-#### Параметры  
+#### <a name="parameters"></a>Параметры  
  *dwPropID*  
- \[in\] a [DBPROPID](https://msdn.microsoft.com/en-us/library/ms723882.aspx) значение, можно использовать совместно с свойством GUID для указания свойства.  
+ [входные данные] Значение [DBPROPID](https://msdn.microsoft.com/en-us/library/ms723882.aspx) , которое может использоваться вместе с GUID набора свойств для идентификации свойства.  
   
  *значение*  
- \[in\] значение свойства типа `DWORD`.  
+ [входные данные] Значение свойства с типом `DWORD`.  
   
-## Заметки  
- С помощью этого макроса можно непосредственно определить значение свойства типа `DWORD`.  Для задания свойства значение по умолчанию, определенное в ATLDB.H, используйте [PROPERTY\_INFORMATION\_ENTRY](../../data/oledb/property-info-entry.md).  Чтобы задать значение, флажки и параметры свойства, использующие [PROPERTY\_INFORMATION\_ENTRY\_EX](../../data/oledb/property-info-entry-ex.md).  
+## <a name="remarks"></a>Примечания  
+ С помощью этого макроса можно напрямую указать значение свойства типа `DWORD`. Чтобы задать свойство, значение по умолчанию, определенное в ATLDB. H, используйте [PROPERTY_INFO_ENTRY](../../data/oledb/property-info-entry.md). Чтобы задать параметры для свойства, флаги и значения, используйте [PROPERTY_INFO_ENTRY_EX](../../data/oledb/property-info-entry-ex.md).  
   
-## Пример  
- В разделе [BEGIN\_PROPSET\_MAP](../Topic/BEGIN_PROPSET_MAP.md).  
+## <a name="example"></a>Пример  
+ См. раздел [BEGIN_PROPSET_MAP](../../data/oledb/begin-propset-map.md).  
   
-## Требования  
- **Header:** atldb.h  
+## <a name="requirements"></a>Требования  
+ **Заголовок:** atldb.h  
   
-## См. также  
+## <a name="see-also"></a>См. также  
  [Макросы для шаблонов поставщика OLE DB](../../data/oledb/macros-for-ole-db-provider-templates.md)   
  [Шаблоны поставщика OLE DB](../../data/oledb/ole-db-provider-templates-cpp.md)   
  [Архитектура шаблона поставщика OLE DB](../../data/oledb/ole-db-provider-template-architecture.md)   

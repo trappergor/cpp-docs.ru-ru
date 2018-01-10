@@ -1,45 +1,46 @@
 ---
-title: "deque::swap (STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::deque::swap"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "swap - член [STL/CLR]"
+title: "deque::Swap (STL/CLR) | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::deque::swap
+dev_langs: C++
+helpviewer_keywords: swap member [STL/CLR]
 ms.assetid: 511e1aa8-3069-43f3-aa77-150f1de1e195
-caps.latest.revision: 17
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 15
+caps.latest.revision: "17"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: 2f86fa7455edfc29190593660c365e0cfe5ef629
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 12/21/2017
 ---
-# deque::swap (STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="dequeswap-stlclr"></a>deque::swap (STL/CLR)
 Меняет местами содержимое двух контейнеров.  
   
-## Синтаксис  
+## <a name="syntax"></a>Синтаксис  
   
 ```  
 void swap(deque<Value>% right);  
 ```  
   
-#### Параметры  
- правый  
+#### <a name="parameters"></a>Параметры  
+ right  
  Контейнер для обмена содержимым.  
   
-## Заметки  
- Меняет местами функции\-члена из последовательности между `*this` и `right`.  Это происходит при расчете времени и не создает исключений.  Он используется как быстрый способ обмена содержимое 2 контейнеров.  
+## <a name="remarks"></a>Примечания  
+ Функция-член меняет местами управляемые последовательности между `*this` и `right`. Она делает это в константном времени, и он не создает исключений. Используется в качестве быстро меняет местами содержимое двух контейнеров.  
   
-## Пример  
+## <a name="example"></a>Пример  
   
 ```  
 // cliext_deque_swap.cpp   
@@ -78,16 +79,19 @@ int main()
   
 ```  
   
-  **a b c**  
- **x x x x x**  
- **x x x x x**  
- **a b c**   
-## Требования  
- **Заголовок:**\<cliext\/deque\>  
+```Output  
+a b c  
+x x x x x  
+x x x x x  
+a b c  
+```  
+  
+## <a name="requirements"></a>Требования  
+ **Заголовок:** \<cliext/deque >  
   
  **Пространство имен:** cliext  
   
-## См. также  
- [deque](../dotnet/deque-stl-clr.md)   
- [deque::assign](../dotnet/deque-assign-stl-clr.md)   
- [operator\= \(deque\)](../dotnet/operator-assign-deque-stl-clr.md)
+## <a name="see-also"></a>См. также  
+ [deque (STL/CLR)](../dotnet/deque-stl-clr.md)   
+ [deque::Assign (STL/CLR)](../dotnet/deque-assign-stl-clr.md)   
+ [operator= (deque) (STL/CLR)](../dotnet/operator-assign-deque-stl-clr.md)

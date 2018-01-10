@@ -1,36 +1,38 @@
 ---
-title: "hash_set (STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::hash_set"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "<cliext/hash_set> - заголовок [STL/CLR]"
-  - "<hash_set> - заголовок [STL/CLR]"
-  - "hash_set - класс [STL/CLR]"
+title: "hash_set (STL/CLR) | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::hash_set
+dev_langs: C++
+helpviewer_keywords:
+- <cliext/hash_set> header [STL/CLR]
+- hash_set class [STL/CLR]
+- <hash_set> header [STL/CLR]
 ms.assetid: d110e356-ba3e-4e52-9e2d-d997bf975c96
-caps.latest.revision: 18
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 18
+caps.latest.revision: "18"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: c46b212f200b2ef7d46afae567efdf3f5bcef0f7
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 12/21/2017
 ---
-# hash_set (STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Описание объекта класса шаблона, что элементы управления менять\- длины последовательность элементов являются двунаправленными, имеет доступ.  Используется контейнер `hash_set` для управления последовательность элементов в виде хэш\-таблицы, каждая запись таблицы расположении двунаправленного связанного списка узлов, каждый узел расположении один элемент.  Значение каждого элемента используется как ключ, для упорядочения последовательности.  
+# <a name="hashset-stlclr"></a>hash_set (STL/CLR)
+Класс шаблона описывает объект, управляющий последовательностью элементов переменной длины с двунаправленный доступ. Используйте контейнер `hash_set` для управления последовательностью элементов хэш-таблицы, каждая запись в таблице хранения двунаправленный связанный список узлов и каждый узел хранения одного элемента. Значение каждого элемента используется в качестве ключа для упорядочения последовательности.  
   
- В описании ниже, `GValue` совпадает с `GKey`, которые, в свою очередь совпадает с `Key` если здесь не будет ссылочного типа, в случае которого это `Key^`.  
+ В следующем описании `GValue` совпадает со значением `GKey`, который в свою очередь является таким же, как `Key` Если последний является типом ссылки, в этом случае он является `Key^`.  
   
-## Синтаксис  
+## <a name="syntax"></a>Синтаксис  
   
 ```  
 template<typename Key>  
@@ -46,119 +48,119 @@ template<typename Key>
     { ..... };  
 ```  
   
-#### Параметры  
+#### <a name="parameters"></a>Параметры  
  Ключ  
- Тип ключа для элемента в управляемой последовательности.  
+ Тип ключевым компонентом любого элемента в управляемой последовательности.  
   
-## Члены  
+## <a name="members"></a>Участники  
   
-|Определение типа|Описание|  
-|----------------------|--------------|  
-|[hash\_set::const\_iterator](../dotnet/hash-set-const-iterator-stl-clr.md)|Тип постоянного итератора для управляемой последовательности.|  
-|[hash\_set::const\_reference](../dotnet/hash-set-const-reference-stl-clr.md)|Тип постоянной ссылки на элемент.|  
-|[hash\_set::const\_reverse\_iterator](../dotnet/hash-set-const-reverse-iterator-stl-clr.md)|Тип константы обратного итератора для контролируемой последовательности.|  
-|[hash\_set::difference\_type](../dotnet/hash-set-difference-type-stl-clr.md)|Тип расстояния \(возможно, подписанного a 2\) между элементами.|  
-|[hash\_set::generic\_container](../Topic/hash_set::generic_container%20\(STL-CLR\).md)|Тип универсального интерфейса для контейнера.|  
-|[hash\_set::generic\_iterator](../Topic/hash_set::generic_iterator%20\(STL-CLR\).md)|Тип итератора для универсального интерфейса для контейнера.|  
-|[hash\_set::generic\_reverse\_iterator](../Topic/hash_set::generic_reverse_iterator%20\(STL-CLR\).md)|Тип обратного итератора для универсального интерфейса для контейнера.|  
-|[hash\_set::generic\_value](../dotnet/hash-set-generic-value-stl-clr.md)|Тип элемента для универсального интерфейса для контейнера.|  
-|[hash\_set::hasher](../Topic/hash_set::hasher%20\(STL-CLR\).md)|Делегат хэширования для ключа.|  
-|[hash\_set::iterator](../dotnet/hash-set-iterator-stl-clr.md)|Тип итератора для управляемой последовательности.|  
-|[hash\_set::key\_compare](../Topic/hash_set::key_compare%20\(STL-CLR\).md)|Порядок делегат для 2 ключей.|  
-|[hash\_set::key\_type](../dotnet/hash-set-key-type-stl-clr.md)|Тип ключа упорядочения.|  
-|[hash\_set::reference](../dotnet/hash-set-reference-stl-clr.md)|Тип ссылки на элемент.|  
-|[hash\_set::reverse\_iterator](../dotnet/hash-set-reverse-iterator-stl-clr.md)|Тип обратного итератора для контролируемой последовательности.|  
-|[hash\_set::size\_type](../dotnet/hash-set-size-type-stl-clr.md)|Тип расстояния a \(не отрицательного 2\) между элементами.|  
-|[hash\_set::value\_compare](../dotnet/hash-set-value-compare-stl-clr.md)|Порядок делегат для 2 значений элементов.|  
-|[hash\_set::value\_type](../dotnet/hash-set-value-type-stl-clr.md)|Тип элемента.|  
+|Определение типа|Описание:|  
+|---------------------|-----------------|  
+|[hash_set::const_iterator (STL/CLR)](../dotnet/hash-set-const-iterator-stl-clr.md)|Тип постоянного итератора для управляемой последовательности.|  
+|[hash_set::const_reference (STL/CLR)](../dotnet/hash-set-const-reference-stl-clr.md)|Тип постоянной ссылки на элемент.|  
+|[hash_set::const_reverse_iterator (STL/CLR)](../dotnet/hash-set-const-reverse-iterator-stl-clr.md)|Тип постоянного обратного итератора для управляемой последовательности.|  
+|[hash_set::difference_type (STL/CLR)](../dotnet/hash-set-difference-type-stl-clr.md)|Тип расстояния между двумя элементами (возможно, со знаком).|  
+|[hash_set::generic_container (STL/CLR)](../dotnet/hash-set-generic-container-stl-clr.md)|Тип универсального интерфейса для контейнера.|  
+|[hash_set::generic_iterator (STL/CLR)](../dotnet/hash-set-generic-iterator-stl-clr.md)|Тип итератора для универсальный интерфейс для контейнера.|  
+|[hash_set::generic_reverse_iterator (STL/CLR)](../dotnet/hash-set-generic-reverse-iterator-stl-clr.md)|Тип обратного итератора для универсальный интерфейс для контейнера.|  
+|[hash_set::generic_value (STL/CLR)](../dotnet/hash-set-generic-value-stl-clr.md)|Тип элемента для универсального интерфейса для контейнера.|  
+|[hash_set::hasher (STL/CLR)](../dotnet/hash-set-hasher-stl-clr.md)|Делегат хэширования для ключа.|  
+|[hash_set::iterator (STL/CLR)](../dotnet/hash-set-iterator-stl-clr.md)|Тип итератора для управляемой последовательности.|  
+|[hash_set::key_compare (STL/CLR)](../dotnet/hash-set-key-compare-stl-clr.md)|Делегат упорядочения для двух ключей.|  
+|[hash_set::key_type (STL/CLR)](../dotnet/hash-set-key-type-stl-clr.md)|Тип ключа упорядочения.|  
+|[hash_set::reference (STL/CLR)](../dotnet/hash-set-reference-stl-clr.md)|Тип ссылки на элемент.|  
+|[hash_set::reverse_iterator (STL/CLR)](../dotnet/hash-set-reverse-iterator-stl-clr.md)|Тип обратного итератора для управляемой последовательности.|  
+|[hash_set::size_type (STL/CLR)](../dotnet/hash-set-size-type-stl-clr.md)|Тип расстояния (неотрицательным) между двумя элементами.|  
+|[hash_set::value_compare (STL/CLR)](../dotnet/hash-set-value-compare-stl-clr.md)|Делегат упорядочения для значения двух элементов.|  
+|[hash_set::value_type (STL/CLR)](../dotnet/hash-set-value-type-stl-clr.md)|Тип элемента.|  
   
-|Функция Member|Описание|  
-|--------------------|--------------|  
-|[hash\_set::begin](../dotnet/hash-set-begin-stl-clr.md)|Задает начало управляемой последовательности.|  
-|[hash\_set::bucket\_count](../dotnet/hash-set-bucket-count-stl-clr.md)|Подсчитывает число блоков.|  
-|[hash\_set::clear](../dotnet/hash-set-clear-stl-clr.md)|Удаляет все элементы.|  
-|[hash\_set::count](../dotnet/hash-set-count-stl-clr.md)|Подсчитывает число элементов, соответствующий указанному ключу.|  
-|[hash\_set::empty](../dotnet/hash-set-empty-stl-clr.md)|Тесты отсутствуют ли какие\-либо элементы.|  
-|[hash\_set::end](../dotnet/hash-set-end-stl-clr.md)|Задает конец управляемой последовательности.|  
-|[hash\_set::equal\_range](../dotnet/hash-set-equal-range-stl-clr.md)|Находит диапазон, соответствующий указанному ключу.|  
-|[hash\_set::erase](../dotnet/hash-set-erase-stl-clr.md)|Удаляет элементы в указанных положениях.|  
-|[hash\_set::find](../Topic/hash_set::find%20\(STL-CLR\).md)|Определяет элемент, соответствующий указанному ключу.|  
-|[hash\_set::hash\_delegate](../Topic/hash_set::hash_delegate%20\(STL-CLR\).md)|Копирует делегат хэширования для ключа.|  
-|[hash\_set::hash\_set](../dotnet/hash-set-hash-set-stl-clr.md)|Создает объект контейнера.|  
-|[hash\_set::insert](../dotnet/hash-set-insert-stl-clr.md)|Добавляет элементы.|  
-|[hash\_set::key\_comp](../dotnet/hash-set-key-comp-stl-clr.md)|Копирует порядок делегат для 2 ключей.|  
-|[hash\_set::load\_factor](../dotnet/hash-set-load-factor-stl-clr.md)|Подсчитывает число элементов " для каждого блока.|  
-|[hash\_set::lower\_bound](../dotnet/hash-set-lower-bound-stl-clr.md)|Находит начало диапазона, соответствующий указанному ключу.|  
-|[hash\_set::make\_value](../Topic/hash_set::make_value%20\(STL-CLR\).md)|Создает объект значение.|  
-|[hash\_set::max\_load\_factor](../Topic/hash_set::max_load_factor%20\(STL-CLR\).md)|Возвращает или задает максимальное количество элементов для каждого блока.|  
-|[hash\_set::rbegin](../dotnet/hash-set-rbegin-stl-clr.md)|Задает начало обратной управляемой последовательности.|  
-|[hash\_set::rehash](../Topic/hash_set::rehash%20\(STL-CLR\).md)|Повторно создает хэш\-таблицу.|  
-|[hash\_set::rend](../dotnet/hash-set-rend-stl-clr.md)|Задает конец обратной управляемой последовательности.|  
-|[hash\_set::size](../dotnet/hash-set-size-stl-clr.md)|Подсчитывает количество элементов.|  
-|[hash\_set::swap](../dotnet/hash-set-swap-stl-clr.md)|Меняет местами содержимое двух контейнеров.|  
-|[hash\_set::to\_array](../dotnet/hash-set-to-array-stl-clr.md)|Копирует контролируемая последовательность в новый массив.|  
-|[hash\_set::upper\_bound](../dotnet/hash-set-upper-bound-stl-clr.md)|Находит конечную точку диапазона, соответствующий указанному ключу.|  
-|[hash\_set::value\_comp](../dotnet/hash-set-value-comp-stl-clr.md)|Копирует порядок делегат для 2 значений элементов.|  
+|Функция-член|Описание:|  
+|---------------------|-----------------|  
+|[hash_set::begin (STL/CLR)](../dotnet/hash-set-begin-stl-clr.md)|Задает начало управляемой последовательности.|  
+|[hash_set::bucket_count (STL/CLR)](../dotnet/hash-set-bucket-count-stl-clr.md)|Подсчитывает количество сегментов.|  
+|[hash_set::clear (STL/CLR)](../dotnet/hash-set-clear-stl-clr.md)|Удаляет все элементы.|  
+|[hash_set::count (STL/CLR)](../dotnet/hash-set-count-stl-clr.md)|Подсчитывает число элементов, соответствующих заданному ключу.|  
+|[hash_set::empty (STL/CLR)](../dotnet/hash-set-empty-stl-clr.md)|Проверяет отсутствие элементов.|  
+|[hash_set::end (STL/CLR)](../dotnet/hash-set-end-stl-clr.md)|Задает конец управляемой последовательности.|  
+|[hash_set::equal_range (STL/CLR)](../dotnet/hash-set-equal-range-stl-clr.md)|Находит диапазон, соответствующий указанному ключу.|  
+|[hash_set::erase (STL/CLR)](../dotnet/hash-set-erase-stl-clr.md)|Удаляет элементы в указанных позициях.|  
+|[hash_set::find (STL/CLR)](../dotnet/hash-set-find-stl-clr.md)|Определяет элемент, соответствующий указанному ключу.|  
+|[hash_set::hash_delegate (STL/CLR)](../dotnet/hash-set-hash-delegate-stl-clr.md)|Копирует делегат хэширования для ключа.|  
+|[hash_set::hash_set (STL/CLR)](../dotnet/hash-set-hash-set-stl-clr.md)|Создает объект контейнера.|  
+|[hash_set::insert (STL/CLR)](../dotnet/hash-set-insert-stl-clr.md)|Добавляет элементы.|  
+|[hash_set::key_comp (STL/CLR)](../dotnet/hash-set-key-comp-stl-clr.md)|Копирует делегат упорядочения для двух ключей.|  
+|[hash_set::load_factor (STL/CLR)](../dotnet/hash-set-load-factor-stl-clr.md)|Подсчитывает среднее число элементов в блоке.|  
+|[hash_set::lower_bound (STL/CLR)](../dotnet/hash-set-lower-bound-stl-clr.md)|Начало находит диапазон, соответствующий указанному ключу.|  
+|[hash_set::make_value (STL/CLR)](../dotnet/hash-set-make-value-stl-clr.md)|Создает объект значения.|  
+|[hash_set::max_load_factor (STL/CLR)](../dotnet/hash-set-max-load-factor-stl-clr.md)|Возвращает или задает максимальное количество элементов в блоке.|  
+|[hash_set::rbegin (STL/CLR)](../dotnet/hash-set-rbegin-stl-clr.md)|Задает начало обратной управляемой последовательности.|  
+|[hash_set::rehash (STL/CLR)](../dotnet/hash-set-rehash-stl-clr.md)|Повторно создает хэш-таблицу.|  
+|[hash_set::rend (STL/CLR)](../dotnet/hash-set-rend-stl-clr.md)|Задает конец обратной управляемой последовательности.|  
+|[hash_set::size (STL/CLR)](../dotnet/hash-set-size-stl-clr.md)|Подсчитывает количество элементов.|  
+|[hash_set::swap (STL/CLR)](../dotnet/hash-set-swap-stl-clr.md)|Меняет местами содержимое двух контейнеров.|  
+|[hash_set::to_array (STL/CLR)](../dotnet/hash-set-to-array-stl-clr.md)|Копирует управляемой последовательности в новый массив.|  
+|[hash_set::upper_bound (STL/CLR)](../dotnet/hash-set-upper-bound-stl-clr.md)|Конец находит диапазон, соответствующий указанному ключу.|  
+|[hash_set::value_comp (STL/CLR)](../dotnet/hash-set-value-comp-stl-clr.md)|Копирует делегат упорядочения для значения двух элементов.|  
   
-|Оператор|Описание|  
-|--------------|--------------|  
-|[hash\_set::operator\=](../dotnet/hash-set-operator-assign-stl-clr.md)|Заменяет контролируемая последовательность.|  
+|Оператор|Описание:|  
+|--------------|-----------------|  
+|[hash_set::operator= (STL/CLR)](../dotnet/hash-set-operator-assign-stl-clr.md)|Заменяет управляемую последовательность.|  
   
-## Интерфейсы  
+## <a name="interfaces"></a>интерфейсов,  
   
-|Интерфейс|Описание|  
-|---------------|--------------|  
-|<xref:System.ICloneable>|Дублируйте объект.|  
-|<xref:System.Collections.IEnumerable>|Последовательность между элементами.|  
-|<xref:System.Collections.ICollection>|Обеспечение группу в составе элементы.|  
-|<xref:System.Collections.Generic.IEnumerable%601>|Через последовательность типизированных элементов.|  
-|<xref:System.Collections.Generic.ICollection%601>|Обеспечение группу в составе типизированных элементов.|  
-|IHash\<Key, Value\>|Обслуживайте универсальный контейнер.|  
+|Интерфейс|Описание:|  
+|---------------|-----------------|  
+|<xref:System.ICloneable>|Создание дубликата объекта.|  
+|<xref:System.Collections.IEnumerable>|Последовательность элементов.|  
+|<xref:System.Collections.ICollection>|Ведение группы элементов.|  
+|<xref:System.Collections.Generic.IEnumerable%601>|Последовательности типизированных элементов.|  
+|<xref:System.Collections.Generic.ICollection%601>|Ведение группы типизированных элементов.|  
+|IHash\<ключ, значение >|Ведение универсального контейнера.|  
   
-## Заметки  
- Объект выделяет и освобождает хранилище для последовательности его элементов управления в отдельные узлы в двунаправленном связанный список.  Для ускорения доступа он также поддерживает массив менять\- длины указателей в список \(хэш\-таблицу\), эффективно управляя список целиком в виде последовательности подсписков, или блоков.  Он не добавляет элементы в блок, он сохраняет упорядоченный, изменив ссылки между узлами, не скопировать содержимое одного узла на другой.  Это означает, что можно добавлять и удалять элементы свободно, не нарушая остальных элементов.  
+## <a name="remarks"></a>Примечания  
+ Объект выделяет и освобождает память для последовательность, в которой он управляет, как отдельные узлы в двунаправленного связанного списка. Для ускорения доступа, объект также хранит переменной длины массива указателей в списке (хэш-таблица), эффективное управление весь список как последовательность подсписков, или контейнеров. Он добавляет элементы в контейнер, который хранит упорядоченную путем изменения связи между узлами, никогда не копируя содержимое одного узла на другой. Это означает, что можно вставлять и удалять элементы без нарушения работы оставшиеся элементы.  
   
- Объект является упорядоченным каждым из его элементов управления путем вызова делегата сохраненный объект типа [hash\_set::key\_compare](../Topic/hash_set::key_compare%20\(STL-CLR\).md).  Можно определить, сохраненный объект делегата при построении hash\_set; если не указан ни один объект делегата, по умолчанию используется сравнение `operator<=(key_type, key_type)`.  
+ Объект заказов на каждый контейнер им элементы путем вызова хранимых делегат типа [hash_set::key_compare (STL/CLR)](../dotnet/hash-set-key-compare-stl-clr.md). Объект хранимых делегата можно указать при создании объекта hash_set; Если указан объект делегата не значение по умолчанию является сравнение `operator<=(key_type, key_type)`.  
   
- Чтобы открыть сохраненный объект делегата, вызвав функцию\-член [hash\_set::key\_comp](../dotnet/hash-set-key-comp-stl-clr.md)`()`.  Такой объект делегата должен определить соответствующий порядка между ключами типа [hash\_set::key\_type](../dotnet/hash-set-key-type-stl-clr.md).  Это означает, что для всех ключей, 2 `X` и `Y`:  
+ Доступ к объекту хранимых делегата, путем вызова функции-члена [hash_set::key_comp (STL/CLR)](../dotnet/hash-set-key-comp-stl-clr.md)`()`. Объект делегата необходимо определить соответствующий порядок ключей типа [hash_set::key_type (STL/CLR)](../dotnet/hash-set-key-type-stl-clr.md). Это означает, что для любых двух ключей `X` и `Y`:  
   
- `key_comp()(X, Y)` возвращает тот же логический результат при каждом вызове.  
+ `key_comp()(X, Y)`Возвращает значение того же типа Boolean привести при каждом вызове.  
   
- Если `key_comp()(X, Y) && key_comp()(Y, X)` выполняется, считается, что имеют `X` и `Y` соответствующий заказ.  
+ Если `key_comp()(X, Y) && key_comp()(Y, X)` имеет значение true, затем `X` и `Y` говорят, что имеют соответствующий порядок.  
   
- Любое правило со заказов, ведет себя так же, как `operator<=(key_type, key_type)`, `operator>=(key_type, key_type)` или `operator==(key_type, key_type)` определяет eqivalent упорядочение.  
+ Любое правило порядка сортировки, который ведет себя как `operator<=(key_type, key_type)`, `operator>=(key_type, key_type)` или `operator==(key_type, key_type)` определяет порядок eqivalent.  
   
- Обратите внимание, что контейнер предоставляет только что элементы ключи которых имеют эквивалентные упорядочение \(и хэш, к тому же целочисленному значению\) смежны в блоке.  В отличие от класса шаблона [hash\_multiset](../dotnet/hash-multiset-stl-clr.md), объект класса шаблона `hash_set` гарантирует, что ключи для всех элементов уникальны. \(Отсутствует 2 ключей не имеют соответствующий заказ\).  
+ Обратите внимание, что контейнера обеспечивает только элементы, ключи которых имеют соответствующий порядок (и хэш-значению целое число со знаком) рядом в сегменте. В отличие от шаблона класса [hash_multiset (STL/CLR)](../dotnet/hash-multiset-stl-clr.md), объект класса шаблона `hash_set` гарантирует уникальность ключей для всех элементов. (Ключи не двух имеют соответствующий порядок).  
   
- Объект, который определяет блок должен содержать заданный порядок вызова ключ, сохраненный объект делегата типа [hash\_set::hasher](../Topic/hash_set::hasher%20\(STL-CLR\).md).  Чтобы открыть этот сохраненный объект, вызвав функцию\-член [hash\_set::hash\_delegate](../Topic/hash_set::hash_delegate%20\(STL-CLR\).md)`()` для получения целочисленное значение, которое зависит от значения ключа.  Можно определить, сохраненный объект делегата при построении hash\_set; если не указан ни один объект делегата, по умолчанию используется функция `System::Object::hash_value(key_type)`.  Это означает, что для всех ключей, `X` и `Y`:  
+ Объект определяет в каком сегменте должен содержать указанного ключа сортировки, вызвав хранимую делегат типа [hash_set::hasher (STL/CLR)](../dotnet/hash-set-hasher-stl-clr.md). Доступ к этому сохраненному объекту путем вызова функции-члена [hash_set::hash_delegate (STL/CLR)](../dotnet/hash-set-hash-delegate-stl-clr.md) `()` получить целое значение, которое зависит от значения ключа. Объект хранимых делегата можно указать при создании объекта hash_set; При указании объект делегата отсутствует значение по умолчанию — функция `System::Object::hash_value(key_type)`. Это означает, что для любых ключей `X` и `Y`:  
   
- `hash_delegate()(X)` возвращает тот же результат целые числа при каждом вызове.  
+ `hash_delegate()(X)`Возвращает один и тот же целочисленный результат при каждом вызове.  
   
- Если `X` и `Y` имеет соответствующий порядок, `hash_delegate()(X)` должно возвращать один и тот же результат целого числа, как `hash_delegate()(Y)`.  
+ Если `X` и `Y` имеют соответствующий порядок, затем `hash_delegate()(X)` должна возвращать целочисленный аналогична `hash_delegate()(Y)`.  
   
- Каждый элемент служит в качестве ключа, и как значение.  Последовательность представляется в виде, позволяющем поиск, вставки и удаления произвольного элемента с несколькими операций, не зависящий от числа элементов в последовательности \(постоянно время\) \-\- по крайней мере в лучше всего вариантов.  Кроме того, что вставка элемента нет итераторы, и удаление элементов только что эти итераторы, указывающих на удаленный элемент.  
+ Каждый элемент используется как ключ и значение. Последовательность представляется в виде, позволяющем выполнять поиск, вставку и удаление произвольного элемента с количеством операций, не зависит от числа элементов в последовательности (постоянное время) — по крайней мере в наиболее вариантов. Кроме того, вставка элементов не делает итераторы недействительными, а при удалении элементов недействительными становятся только итераторы, указывающие на удаленный элемент.  
   
- Если хэшированных значений не распределяются равномерно, то может выродиться хэш\-таблица.  В крайности \-\- для хэш\-функция, всегда возвращает то же значение \-\- поиск, вставки и удаления пропорциональны на число элементов в последовательности \(линейном времени\).  Контейнер стремится следует выбрать хэш\-функции, средний размер блока, и размер таблицы хэширования \(общее количество блоков\), но можно переопределить любой этих вариантов.  См., например, функции [hash\_set::max\_load\_factor](../Topic/hash_set::max_load_factor%20\(STL-CLR\).md) и [hash\_set::rehash](../Topic/hash_set::rehash%20\(STL-CLR\).md).  
+ Если хэшированных значений не распределяются равномерно, однако можно вырожденных хэш-таблицу. В любых--для хэш-функции, которая всегда возвращает то же значение--поиска, вставки и удаления пропорционально количеству элементов в последовательности (линейное время). Контейнер написана выберите разумного хэш-функции, размер среднего сегмента, а размер хэш таблицы (общее количество сегментов), но можно переопределить любые или все из этих вариантов. Просмотреть, например, функции [hash_set::max_load_factor (STL/CLR)](../dotnet/hash-set-max-load-factor-stl-clr.md) и [hash_set::rehash (STL/CLR)](../dotnet/hash-set-rehash-stl-clr.md).  
   
- Hash\_set поддерживает двунаправленные итераторы\), что позволяет шаг с соседним элементам заданного итератор, обозначает элемент в контролируемой последовательности.  Специальный головной узел соответствует итератору возвращенным [hash\_set::end](../dotnet/hash-set-end-stl-clr.md)`()`.  Можно декремент такой итератор для достижения последнего элемента в контролируемой последовательности, если в настоящий момент.  Можно увеличить итератор hash\_set для достижения головного узла, а затем сравнивает равно `end()`.  Однако нельзя разыменование итератор, `end()`.  
+ Hash_set поддерживают Двунаправленные итераторы, это означает, что при переходе на соседние элементы, учитывая итератор, указывающий на элемент управляемой последовательности. Специальные головной узел соответствует итератора, возвращаемого методом [hash_set::end (STL/CLR)](../dotnet/hash-set-end-stl-clr.md)`()`. Можно уменьшить этот итератор для достижения последнего элемента в управляемой последовательности, при его наличии. Можно увеличивать итератор hash_set, чтобы достичь головного узла, и затем сравнивает равно `end()`. Но нельзя переименовать итератора, возвращаемого методом `end()`.  
   
- Обратите внимание, что нельзя обращаться к элементу hash\_set непосредственно заданного свою позицию численную \-\- это требует произвольного доступа итератора.  
+ Обратите внимание, что нельзя ссылаться на элемент hash_set, непосредственно заданным его порядкового номера--, требующий итератора произвольного доступа.  
   
- Итератор hash\_set хранит дескриптор его связанный узел hash\_set, который, в свою очередь, сохраняет его связанный дескриптор контейнер.  Можно использовать итераторы только со связанными объектами контейнера.  Итератор hash\_set остается допустимым, пока его связанный узел hash\_set связан с определенным hash\_set.  Кроме того, допустимый итератор dereferencable \-\- его можно использовать для доступа или изменения значения элемента он обозначает \-\- пока не равно `end()`.  
+ Итератор hash_set сохраняет дескриптор к узлу связанный hash_set, который в свою очередь хранит дескриптор связанного контейнера. Вы можете использовать итераторы только с свои объекты связанного контейнера. Итератор hash_set остается допустимым до тех пор, пока его связанный hash_set узел связан с некоторыми hash_set. Кроме того, допустимым итератором dereferencable — используется для доступа или изменить значение элемента, он обозначает--до тех пор, пока не равно `end()`.  
   
- Стирающ или удаление элементов вызывает деструктор этого сохраненного значения.  Удалить контейнер удаляются все элементы.  Таким образом, тип которого контейнер элемента ссылочный класс гарантирует, что никаких элементов не переживают контейнер.  Однако стоит отметить, что контейнер дескрипторов делает `not` уничтожает его элементы.  
+ Удаление или удалении элементов вызывает деструктор для сохраненное значение. Уничтожение контейнера удаляет все элементы. Таким образом контейнера, тип элементов которого является класс ссылки гарантирует, что ни один элемент пережить контейнера. Тем не менее, делает это контейнер, содержащий дескрипторы `not` уничтожить его элементов.  
   
-## Требования  
- **Заголовок:**\<cliext\/hash\_set\>  
+## <a name="requirements"></a>Требования  
+ **Заголовок:** \<cliext/hash_set >  
   
  **Пространство имен:** cliext  
   
-## См. также  
- [hash\_map](../dotnet/hash-map-stl-clr.md)   
- [hash\_set](../dotnet/hash-set-stl-clr.md)   
- [hash\_set](../dotnet/hash-set-stl-clr.md)   
- [map](../dotnet/map-stl-clr.md)   
- [набор](../dotnet/set-stl-clr.md)   
- [набор](../dotnet/set-stl-clr.md)   
- [набор](../dotnet/set-stl-clr.md)   
- [Библиотека STL\/CLR](../dotnet/stl-clr-library-reference.md)
+## <a name="see-also"></a>См. также  
+ [hash_map (STL/CLR)](../dotnet/hash-map-stl-clr.md)   
+ [hash_set](../dotnet/hash-set-stl-clr.md)   
+ [hash_set](../dotnet/hash-set-stl-clr.md)   
+ [Карта (STL/CLR)](../dotnet/map-stl-clr.md)   
+ [набор (STL/CLR)](../dotnet/set-stl-clr.md)   
+ [набор (STL/CLR)](../dotnet/set-stl-clr.md)   
+ [набор (STL/CLR)](../dotnet/set-stl-clr.md)   
+ [Справочник по библиотеке STL/CLR](../dotnet/stl-clr-library-reference.md)

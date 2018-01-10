@@ -1,41 +1,42 @@
 ---
-title: "stack::top_item (STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::stack::top_item"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "top_item - член [STL/CLR]"
+title: "STACK::top_item (STL/CLR) | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::stack::top_item
+dev_langs: C++
+helpviewer_keywords: top_item member [STL/CLR]
 ms.assetid: 01571acf-4880-44c4-80c4-bd91408a032d
-caps.latest.revision: 15
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 13
+caps.latest.revision: "15"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: 7219ed890938493a9c470ce7c2218f8fb78cfc62
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 12/21/2017
 ---
-# stack::top_item (STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Получает последний элемент.  
+# <a name="stacktopitem-stlclr"></a>stack::top_item (STL/CLR)
+Обращается к последнему элементу.  
   
-## Синтаксис  
+## <a name="syntax"></a>Синтаксис  
   
 ```  
 property value_type top_item;  
 ```  
   
-## Заметки  
- Свойство получения последнего элемента контролируемой последовательности, которая должна быть непустой.  Он используется для чтения и записи последнего элемента, если известно, что он существует.  
+## <a name="remarks"></a>Примечания  
+ Свойство обращается к последний элемент управляемой последовательности, который должен быть пустым. Используется для чтения или записи последнего элемента, если известно, что он существует.  
   
-## Пример  
+## <a name="example"></a>Пример  
   
 ```  
 // cliext_stack_top_item.cpp   
@@ -68,14 +69,17 @@ int main()
   
 ```  
   
-  **a b c**  
-**top\_item \= C**  
- **B x**   
-## Требования  
- **Заголовок:**\<cliext\/stack\>  
+```Output  
+ a b c  
+top_item = c  
+ a b x  
+```  
+  
+## <a name="requirements"></a>Требования  
+ **Заголовок:** \<cliext/stack >  
   
  **Пространство имен:** cliext  
   
-## См. также  
- [стек](../dotnet/stack-stl-clr.md)   
- [stack::top](../dotnet/stack-top-stl-clr.md)
+## <a name="see-also"></a>См. также  
+ [стек (STL/CLR)](../dotnet/stack-stl-clr.md)   
+ [stack::top (STL/CLR)](../dotnet/stack-top-stl-clr.md)

@@ -1,41 +1,42 @@
 ---
-title: "vector::to_array (STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::vector::to_array"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "to_array - элемент [STL/CLR]"
+title: "Vector::to_array (STL/CLR) | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::vector::to_array
+dev_langs: C++
+helpviewer_keywords: to_array member [STL/CLR]
 ms.assetid: 00e1f1c6-6ef5-4238-b95a-411059e0b69b
-caps.latest.revision: 14
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 12
+caps.latest.revision: "14"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: 3ba05cb75f3ff2d67343b5acff715919edb8aede
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 12/21/2017
 ---
-# vector::to_array (STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Копирует контролируемая последовательность в новый массив.  
+# <a name="vectortoarray-stlclr"></a>vector::to_array (STL/CLR)
+Копирует управляемой последовательности в новый массив.  
   
-## Синтаксис  
+## <a name="syntax"></a>Синтаксис  
   
 ```  
 cli::array<Value>^ to_array();  
 ```  
   
-## Заметки  
- Возвращает массив, содержащий функцию\-член контролируемую последовательность.  Он используется, чтобы получить копию контролируемой последовательности в форме массива.  
+## <a name="remarks"></a>Примечания  
+ Функция-член возвращает массив, содержащий управляемой последовательности. Используется для получения копии управляемой последовательности в виде массива.  
   
-## Пример  
+## <a name="example"></a>Пример  
   
 ```  
 // cliext_vector_to_array.cpp   
@@ -66,12 +67,15 @@ int main()
   
 ```  
   
-  **B C d**  
- **a b c**   
-## Требования  
- **Заголовок:**\<cliext\/vector\>  
+```Output  
+a b c d  
+a b c  
+```  
+  
+## <a name="requirements"></a>Требования  
+ **Заголовок:** \<cliext/vector >  
   
  **Пространство имен:** cliext  
   
-## См. также  
- [вектор](../dotnet/vector-stl-clr.md)
+## <a name="see-also"></a>См. также  
+ [vector (STL/CLR)](../dotnet/vector-stl-clr.md)

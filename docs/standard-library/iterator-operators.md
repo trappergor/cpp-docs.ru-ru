@@ -15,10 +15,9 @@ f1_keywords:
 - xutility/std::operator+
 - xutility/std::operator-
 - xutility/std::operator==
-dev_langs:
-- C++
+dev_langs: C++
 ms.assetid: b7c664f0-49d4-4993-b5d1-9ac4859fdddc
-caps.latest.revision: 10
+caps.latest.revision: "10"
 manager: ghogen
 helpviewer_keywords:
 - std::operator!= (iterator)
@@ -26,21 +25,20 @@ helpviewer_keywords:
 - std::operator&gt;= (iterator)
 - std::operator&lt; (iterator)
 - std::operator&lt;= (iterator), std::operator== (iterator)
-ms.translationtype: MT
-ms.sourcegitcommit: 65f4e356ad0d46333b0d443d0fd6ac0b9f2b6f58
 ms.openlocfilehash: a6e5d30b970c3887c9ac7641ec39275acd9cd79d
-ms.contentlocale: ru-ru
-ms.lasthandoff: 10/03/2017
-
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="ltiteratorgt-operators"></a>Операторы &lt;iterator&gt;
 ||||  
 |-|-|-|  
-|[оператор!=](#op_neq)|[оператор&gt;](#op_gt)|[оператор&gt;=](#op_gt_eq)|  
-|[оператор&lt;](#op_lt)|[оператор&lt;=](#op_lt_eq)|[оператор+](#op_add)|  
-|[оператор-](#operator-)|[оператор==](#op_eq_eq)|  
+|[оператор!=](#op_neq)|[оператор&gt;](#op_gt)|[operator&gt;=](#op_gt_eq)|  
+|[оператор&lt;](#op_lt)|[operator&lt;=](#op_lt_eq)|[operator+](#op_add)|  
+|[operator-](#operator-)|[оператор==](#op_eq_eq)|  
   
-##  <a name="op_neq"></a>  оператор!=  
+##  <a name="op_neq"></a> operator!=  
  Проверяет объект итератора в левой части оператора на неравенство объекту итератора в правой части.  
   
 ```  
@@ -129,7 +127,7 @@ The iterator rVPOS1 now points to the second element
 The iterators are not equal.  
 ```  
   
-##  <a name="op_eq_eq"></a>  оператор==  
+##  <a name="op_eq_eq"></a> operator==  
  Проверяет объект итератора в левой части оператора на равенство объекту итератора в правой части.  
   
 ```  
@@ -231,7 +229,7 @@ The iterator rVPOS1 now points to the second element
 The iterators are not equal.  
 ```  
   
-##  <a name="op_lt"></a>  оператор&lt;  
+##  <a name="op_lt"></a> operator&lt;  
  Определяет, верно ли, что объект итератора в левой части оператора меньше объекта итератора в правой части.  
   
 ```  
@@ -318,7 +316,7 @@ The iterator rVPOS2 now points to the second element
 The iterator rVPOS1 is less than the iterator rVPOS2.  
 ```  
   
-##  <a name="op_lt_eq"></a>  оператор&lt;=  
+##  <a name="op_lt_eq"></a> operator&lt;=  
  Определяет, верно ли, что объект итератора в левой части оператора меньше или равен объекту итератора в правой части.  
   
 ```  
@@ -409,7 +407,7 @@ The iterator rVPOS2 now points to the second element
 The iterator rVPOS1 is less than or equal to the iterator rVPOS2.  
 ```  
   
-##  <a name="op_gt"></a>  оператор&gt;  
+##  <a name="op_gt"></a> operator&gt;  
  Определяет, верно ли, что объект итератора в левой части оператора больше объекта итератора в правой части.  
   
 ```  
@@ -494,7 +492,7 @@ The iterator rVPOS1 now points to the second element
 The iterator rVPOS1 is greater than the iterator rVPOS2.  
 ```  
   
-##  <a name="op_gt_eq"></a>  оператор&gt;=  
+##  <a name="op_gt_eq"></a> operator&gt;=  
  Определяет, верно ли, что объект итератора в левой части оператора больше или равен объекту итератора в правой части.  
   
 ```  
@@ -585,7 +583,7 @@ The iterator rVPOS1 now points to the second element
 The iterator rVPOS1 is greater than or equal to the iterator rVPOS2.  
 ```  
   
-##  <a name="op_add"></a>  оператор+  
+##  <a name="op_add"></a> operator+  
  Добавляет смещение к итератору и возвращает `move_iterator` или `reverse_iterator` с адресом вставленного элемента в новой позиции смещения.  
   
 ```  
@@ -752,5 +750,4 @@ The difference: rVPOS2 - rVPOS1= 4.
   
 ## <a name="see-also"></a>См. также  
  [\<iterator>](../standard-library/iterator.md)
-
 

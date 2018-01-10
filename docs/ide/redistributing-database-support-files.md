@@ -16,22 +16,23 @@ caps.latest.revision: "18"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 3a525a857788ae13f33b29ba0058c0c818c6966b
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 7517222b1dc2e61f45c23a9fc91709672f304768
+ms.sourcegitcommit: 54035dce0992ba5dce0323d67f86301f994ff3db
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 01/03/2018
 ---
 # <a name="redistributing-database-support-files"></a>Распространение файлов поддержки базы данных
 Распространение файлов поддержки для объектов доступа к данным (DAO) и технологиям баз данных в пакете Microsoft Data Access SDK.  
   
 ## <a name="installing-dao-support-files"></a>Установка файлов поддержки DAO  
- Для получения последней версии DAO, обратитесь к [статью 239114: как получить последний пакет обновления для Microsoft Jet 4.0 Database Engine](http://go.microsoft.com/fwlink/?LinkId=198014) на сайте технической поддержки Майкрософт.  
+ Для получения последней версии DAO, обратитесь к [статью 239114: как получить последний пакет обновления для Microsoft Jet 4.0 Database Engine](http://go.microsoft.com/fwlink/p/?linkid=198014) на сайте технической поддержки Майкрософт.  
   
 ## <a name="installing-microsoft-data-access-sdk-support-files"></a>Установка файлов поддержки пакета SDK для доступа к данным Microsoft  
- Используйте Mdac_typ.exe установке поддержки для ODBC, OLE DB, объекты данных ActiveX (ADO) и удаленных служб данных (RDS). Mdac_typ.exe находится в папке... Папка \WCU\MDAC28\ на установочном носителе Visual Studio. Также можно загрузить программу Mdac_typ.exe из [центра загрузки Майкрософт](http://go.microsoft.com/fwlink/?LinkId=198015) веб-сайта.  
+ Используйте Mdac_typ.exe установке поддержки для ODBC, OLE DB, объекты данных ActiveX (ADO) и удаленных служб данных (RDS). Mdac_typ.exe находится в папке... Папка \WCU\MDAC28\ на установочном носителе Visual Studio. Также можно загрузить программу Mdac_typ.exe из [центра загрузки Майкрософт](http://go.microsoft.com/fwlink/p/?linkid=198015) веб-сайта.  
   
- Дополнительные сведения о [MSDN](http://go.microsoft.com/fwlink/?LinkId=198016) веб-сайт "," Поиск «Распространения MDAC 2.8 с пакетом обновления 1». Если вы используете проекты установки Visual Studio для развертывания приложения, см. раздел [развертывания и зависимости](http://msdn.microsoft.com/en-us/49e9b84d-bd6a-4388-b9ac-46ea79cf0733).  
+ Дополнительные сведения о [MSDN](http://go.microsoft.com/fwlink/p/?linkid=198016) веб-сайт "," Поиск «Распространения MDAC 2.8 с пакетом обновления 1». Если вы используете проекты установки Visual Studio для развертывания приложения, см. раздел [развертывания и зависимости](http://msdn.microsoft.com/en-us/49e9b84d-bd6a-4388-b9ac-46ea79cf0733).  
   
 ## <a name="see-also"></a>См. также  
  [Распространение файлов Visual C++](../ide/redistributing-visual-cpp-files.md)

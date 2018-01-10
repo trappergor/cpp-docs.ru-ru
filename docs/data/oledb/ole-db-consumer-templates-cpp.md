@@ -18,11 +18,14 @@ caps.latest.revision: "9"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: a38c2edeffbdd2c37e69ce0886c24ca0d2f0b68a
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: e7a696562a94a52b444f751ae621ae458ca7e89f
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="ole-db-consumer-templates-c"></a>Шаблоны потребителей OLE DB (C++)
 Шаблоны потребителей OLE DB поддерживают спецификацию OLE DB версии 2.6. (Шаблоны потребителей OLE DB проверяются на соответствие OLE DB версии 2.6, но не поддерживают все интерфейсы спецификации.) Использование шаблонов потребителей позволяет свести к минимуму объем кода, который вам необходимо написать для реализации потребителя OLE DB. Шаблоны обеспечивают:  

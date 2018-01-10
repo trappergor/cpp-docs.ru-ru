@@ -1,33 +1,35 @@
 ---
-title: "collection_adapter::collection_adapter (STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::collection_adapter"
-  - "cliext::collection_adapter::collection_adapter"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "collection_adapter - элемент [STL/CLR]"
+title: "collection_adapter::collection_adapter (STL/CLR) | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords:
+- cliext::collection_adapter
+- cliext::collection_adapter::collection_adapter
+dev_langs: C++
+helpviewer_keywords: collection_adapter member [STL/CLR]
 ms.assetid: 7e2bb75b-d735-4135-9523-719683e06fe9
-caps.latest.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 7
+caps.latest.revision: "9"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: 190379cbfeea0f1bbf747d537f9501f076f6bb0e
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 12/21/2017
 ---
-# collection_adapter::collection_adapter (STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="collectionadaptercollectionadapter-stlclr"></a>collection_adapter::collection_adapter (STL/CLR)
 Создает объект адаптера.  
   
-## Синтаксис  
+## <a name="syntax"></a>Синтаксис  
   
 ```  
 collection_adapter();  
@@ -36,39 +38,39 @@ collection_adapter(collection_adapter<Coll>^ right);
 collection_adapter(Coll^ collection);  
 ```  
   
-#### Параметры  
- collection  
- Дескриптор BCL, создающееся.  
+#### <a name="parameters"></a>Параметры  
+ коллекция  
+ Дескриптор BCL программы-оболочки.  
   
- правый  
- Объект, подлежащих копированию.  
+ right  
+ Копируемый объект.  
   
-## Заметки  
+## <a name="remarks"></a>Примечания  
  Конструктор:  
   
  `collection_adapter();`  
   
- инициализирует сохраненного дескриптора с `nullptr`.  
+ Инициализирует дескриптор хранимых с `nullptr`.  
   
  Конструктор:  
   
  `collection_adapter(collection_adapter<Coll>% right);`  
   
- инициализирует сохраненного дескриптора с `right``.`[collection\_adapter::base](../dotnet/collection-adapter-base-stl-clr.md)`()`.  
+ Инициализирует дескриптор хранимых с `right.` [collection_adapter::base (STL/CLR)](../dotnet/collection-adapter-base-stl-clr.md)`()`.  
   
  Конструктор:  
   
  `collection_adapter(collection_adapter<Coll>^ right);`  
   
- инициализирует сохраненного дескриптора с `right``->`[collection\_adapter::base](../dotnet/collection-adapter-base-stl-clr.md)`()`.  
+ Инициализирует дескриптор хранимых с `right->` [collection_adapter::base (STL/CLR)](../dotnet/collection-adapter-base-stl-clr.md)`()`.  
   
  Конструктор:  
   
  `collection_adapter(Coll^ collection);`  
   
- инициализирует сохраненного дескриптора с с `collection`.  
+ Инициализирует дескриптор хранимых с с `collection`.  
   
-## Пример  
+## <a name="example"></a>Пример  
   
 ```  
 // cliext_collection_adapter_construct.cpp   
@@ -109,15 +111,18 @@ int main()
   
 ```  
   
-  **NULLbase\(\) \= true**  
- **x x x x x x**  
- **x x x x x x**  
- **x x x x x x**   
-## Требования  
- **Заголовок:**\<cliext\/adapter\>  
+```Output  
+base() null = True  
+ x x x x x x  
+ x x x x x x  
+ x x x x x x  
+```  
+  
+## <a name="requirements"></a>Требования  
+ **Заголовок:** \<cliext адаптер >  
   
  **Пространство имен:** cliext  
   
-## См. также  
- [collection\_adapter](../Topic/collection_adapter%20\(STL-CLR\).md)   
- [collection\_adapter::operator\=](../dotnet/collection-adapter-operator-assign-stl-clr.md)
+## <a name="see-also"></a>См. также  
+ [collection_adapter (STL/CLR)](../dotnet/collection-adapter-stl-clr.md)   
+ [collection_adapter::operator= (STL/CLR)](../dotnet/collection-adapter-operator-assign-stl-clr.md)

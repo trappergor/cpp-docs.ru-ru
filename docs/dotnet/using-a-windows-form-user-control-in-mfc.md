@@ -1,65 +1,68 @@
 ---
-title: "Использование пользовательского элемента управления формы Windows Form в MFC | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Поддержка Windows Forms MFC [C++]"
-  - "взаимодействие [C++], Windows Forms в MFC"
-  - "взаимодействие [C++], MFC"
-  - "взаимодействие [C++], Windows Forms в MFC"
-  - "взаимодействие [C++], MFC"
-  - "Поддержка Windows Forms [C++] MFC"
+title: "С помощью Windows формы пользовательского элемента управления в MFC | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- MFC [C++], Windows Forms support
+- interoperability [C++], Windows Forms in MFC
+- interoperability [C++], MFC
+- interop [C++], Windows Forms in MFC
+- interop [C++], MFC
+- Windows Forms [C++], MFC support
 ms.assetid: 63fb099b-1dff-469c-9e34-dab52e122fcd
-caps.latest.revision: 19
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 19
+caps.latest.revision: "19"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: 59b4d974a6b25b896067bce0042d9a5ff9221cc2
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 12/21/2017
 ---
-# Использование пользовательского элемента управления формы Windows Form в MFC
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-С помощью классов поддержки MFC Windows Forms, можно размещать элементы управления Windows Forms в приложениях MFC как элемент управления ActiveX в диалоговые окна MFC или представления. Кроме того форм Windows Forms можно разместить как диалоговые окна MFC.  
+# <a name="using-a-windows-form-user-control-in-mfc"></a>Использование пользовательского элемента управления формы Windows Form в MFC
+С помощью вспомогательных классов MFC Windows Forms, может содержать элементы управления Windows Forms в приложениях MFC как элемент управления ActiveX в диалоговые окна MFC или представления. Кроме того как диалоговые окна MFC можно разместить форм Windows Forms.  
   
  В следующих разделах описаны способы:  
   
 -   Размещение элемента управления Windows Forms в диалоговом окне MFC.  
   
--   Размещение пользовательского элемента управления Windows Forms как представления MFC.  
+-   Разместить пользовательский элемент управления Windows Forms в качестве представления MFC.  
   
--   Размещать форму Windows Forms в диалоговом окне MFC.  
-  
-> [!NOTE]
->  Интеграция MFC Windows Forms работает только в проектах, которые динамически связываются с MFC (проекты, в которых определена AFXDLL).  
+-   Разместить форму Windows Forms в диалоговом окне MFC.  
   
 > [!NOTE]
->  При построении приложения с использованием закрытой (изменено) копии интерфейсов MFC Windows Forms DLL (библиотеки mfcmifc80.dll) не сможет установить в глобальном кэше СБОРОК, если ключ Майкрософт заменить ключ поставщика. Дополнительные сведения о подписи сборки см. в разделе [программирование с использованием сборок](../Topic/Programming%20with%20Assemblies.md) и [сборки строгим именем (подписывание сборок) (C + +/ CLI)](../dotnet/strong-name-assemblies-assembly-signing-cpp-cli.md).  
+>  Интеграция MFC Windows Forms работает только в тех проектах, которые динамически связываются с MFC (проекты, в которых определена AFXDLL).  
   
- Примеры приложений с помощью Windows Forms, см. [BirthdayPicker образец: демонстрируется ресурсы платформы .NET с помощью Windows Forms](http://msdn.microsoft.com/ru-ru/ac932aed-5502-4667-be29-709bca435317), [Образец калькулятора: карманный калькулятор Windows Forms](http://msdn.microsoft.com/ru-ru/2283b516-3b7e-45f2-80c4-fdcfb366ce25), и [образец Scribble: рисование MDI-приложения](http://msdn.microsoft.com/ru-ru/f025da3e-659b-4222-b991-554a1b8b2358).  
+> [!NOTE]
+>  При построении приложения (изменено) частную копию библиотеки DLL (файл mfcmifc80.dll) интерфейсов MFC Windows Forms с помощью его не удастся установить в глобальном кэше СБОРОК, если ключ Майкрософт замените свой собственный ключ поставщика. Дополнительные сведения о подписи сборки см. в разделе [программирование с использованием сборок](/dotnet/framework/app-domains/programming-with-assemblies) и [строгое имя сборки (подписывание сборки) (C + +/ CLI)](../dotnet/strong-name-assemblies-assembly-signing-cpp-cli.md).  
   
- Образец приложения Windows Forms используются с MFC, в разделе [MFC и Windows Forms Integration](http://www.microsoft.com/downloads/details.aspx?FamilyID=987021bc-e575-4fe3-baa9-15aa50b0f599&displaylang=en).  
+ Образцы приложений с помощью Windows Forms, см. [BirthdayPicker образец: демонстрируется ресурсы платформы .NET с помощью Windows Forms](http://msdn.microsoft.com/en-us/ac932aed-5502-4667-be29-709bca435317), [образец калькулятора: Windows Forms карманного калькулятора](http://msdn.microsoft.com/en-us/2283b516-3b7e-45f2-80c4-fdcfb366ce25)и [ Образец SCRIBBLE: Приложение для рисования MDI](http://msdn.microsoft.com/en-us/f025da3e-659b-4222-b991-554a1b8b2358).  
+  
+ Образец приложения Windows Forms используются с MFC, в разделе [MFC и интеграция с Windows Forms](http://www.microsoft.com/downloads/details.aspx?FamilyID=987021bc-e575-4fe3-baa9-15aa50b0f599&displaylang=en).  
   
  Если приложение MFC использует Windows Forms, необходимо распространить библиотеку mfcmifc90.dll вместе с приложением. Дополнительные сведения см. в разделе [распространение библиотеки MFC](../ide/redistributing-the-mfc-library.md).  
   
-## <a name="in-this-section"></a>Содержание  
- [Размещение элемента управления формы пользователя Windows в диалоговом окне MFC](../dotnet/hosting-a-windows-form-user-control-in-an-mfc-dialog-box.md)  
+## <a name="in-this-section"></a>В этом разделе  
+ [Размещение пользовательского элемента управления формы Windows Forms в диалоговом окне MFC](../dotnet/hosting-a-windows-form-user-control-in-an-mfc-dialog-box.md)  
   
  [Размещение пользовательского элемента управления формы Windows Forms в качестве представления MFC](../dotnet/hosting-a-windows-forms-user-control-as-an-mfc-view.md)  
   
- [Размещение пользовательского элемента управления формы Windows Form в диалоговом окне MFC](../Topic/Hosting%20a%20Windows%20Form%20User%20Control%20as%20an%20MFC%20Dialog%20Box.md)  
+ [Размещение пользовательского элемента управления формы Windows Forms в диалоговом окне MFC](../dotnet/hosting-a-windows-form-user-control-as-an-mfc-dialog-box.md)  
   
 ## <a name="reference"></a>Ссылка  
  [Класс CWinFormsControl](../mfc/reference/cwinformscontrol-class.md)  
   
- [Класс CWinFormsDialog](../Topic/CWinFormsDialog%20Class.md)  
+ [Класс CWinFormsDialog](../mfc/reference/cwinformsdialog-class.md)  
   
  [Класс CWinFormsView](../mfc/reference/cwinformsview-class.md)  
   
@@ -69,23 +72,19 @@ caps.handback.revision: 19
   
  [Интерфейс ICommandUI](../mfc/reference/icommandui-interface.md)  
   
- [Интерфейс IView](../Topic/IView%20Interface.md)  
+ [Интерфейс IView](../mfc/reference/iview-interface.md)  
   
- [CommandHandler](../Topic/CommandHandler%20Delegate.md)  
+ [CommandHandler](../atl/commandhandler.md)  
   
- [CommandUIHandler](../Topic/CommandUIHandler%20Delegate.md)  
+ [DDX_ManagedControl](../mfc/reference/standard-dialog-data-exchange-routines.md#ddx_managedcontrol)  
   
- [DDX_ManagedControl](../Topic/DDX_ManagedControl.md)  
-  
- [UICheckState](../Topic/UICheckState%20Enumeration.md)  
+ [UICheckState](../mfc/reference/uicheckstate-enumeration.md)  
   
 ## <a name="related-sections"></a>Связанные разделы  
- [Windows Forms](../Topic/Windows%20Forms.md)  
+ [Windows Forms](/dotnet/framework/winforms/index)  
   
- [Элементы управления Windows Forms](../Topic/Windows%20Forms%20Controls.md)  
+ [Элементы управления Windows Forms](/dotnet/framework/winforms/controls/index)  
   
- [Пользовательские элементы управления ASP.NET](../Topic/ASP.NET%20User%20Controls.md)  
-  
-## <a name="see-also"></a>См. также раздел  
+## <a name="see-also"></a>См. также  
  [Элементы пользовательского интерфейса](../mfc/user-interface-elements-mfc.md)   
- [Представления форм](../Topic/Form%20Views%20\(MFC\).md)
+ [Представления форм](../mfc/form-views-mfc.md)

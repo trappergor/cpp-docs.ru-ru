@@ -1,51 +1,33 @@
 ---
-title: "Предупреждение (уровень 1) C4803 компилятора | Документы Microsoft"
+title: "Предупреждение компилятора предупреждение (уровень 1) C4803 | Документы Microsoft"
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-tools
+ms.technology: cpp-tools
 ms.tgt_pltfrm: 
 ms.topic: error-reference
-f1_keywords:
-- C4803
-dev_langs:
-- C++
-helpviewer_keywords:
-- C4803
+f1_keywords: C4803
+dev_langs: C++
+helpviewer_keywords: C4803
 ms.assetid: 2552f3a6-c418-49f4-98a2-a929857be658
-caps.latest.revision: 9
+caps.latest.revision: "9"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: c243063a9770542f137d5950e8a269f771960f74
-ms.openlocfilehash: 2581d4240306e88d75fe5fcc0249371005853b7e
-ms.contentlocale: ru-ru
-ms.lasthandoff: 02/24/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: b6725685e84e1c9ce0fc5c3f58f4ff163870d278
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="compiler-warning-level-1-c4803"></a>Предупреждение компилятора (уровень 1) C4803
-«метод»: вызов метода имеет класс хранения, отличную от события, «событие»  
+«метод»: метод raise имеет отличается от класса хранения события, «событие»  
   
-Методы события должны иметь тот же класс хранения, что и объявление события. Компилятор корректирует методы события так, чтобы классы хранения совпадали.  
+Событие методы должны иметь тот же класс хранения, что и объявление события. Компилятор корректирует методы события таким образом, чтобы классы хранения совпадают.  
   
-Это предупреждение может возникать, если имеется класс, реализующий интерфейс событий. Компилятор не создает вызов метода события в интерфейсе неявно. При реализации этого интерфейса в классе, компилятор неявно создает вызов метода, и этот метод не будет виртуальным, поэтому предупреждение. Дополнительные сведения о событиях см. в разделе [событие](../../windows/event-cpp-component-extensions.md).  
+Это предупреждение может возникать, если имеется класс, который реализует событие интерфейса. Компилятор не создает неявно метода raise событие в интерфейсе. При реализации этого интерфейса в классе, компилятор неявно создает метода raise и этот метод не будет виртуальным, поэтому предупреждение. Дополнительные сведения о событиях см. в разделе [событие](../../windows/event-cpp-component-extensions.md).  
   
 В разделе [предупреждение](../../preprocessor/warning.md) Дополнительные сведения о том, как отключить предупреждение.  
   
@@ -89,4 +71,3 @@ int main() {
    ep->E1();  
 }  
 ```  
-

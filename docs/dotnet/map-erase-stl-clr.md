@@ -1,32 +1,33 @@
 ---
-title: "map::erase (STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::map::erase"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "erase - член [STL/CLR]"
+title: "MAP::Erase (STL/CLR) | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::map::erase
+dev_langs: C++
+helpviewer_keywords: erase member [STL/CLR]
 ms.assetid: a8fc88dd-a726-4a5b-bdf2-87743e98e687
-caps.latest.revision: 16
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 14
+caps.latest.revision: "16"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: 320be2b045ed128885a581b995f1e3979baea491
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 12/21/2017
 ---
-# map::erase (STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Удаляет элементы в указанных положениях.  
+# <a name="maperase-stlclr"></a>map::erase (STL/CLR)
+Удаляет элементы в указанных позициях.  
   
-## Синтаксис  
+## <a name="syntax"></a>Синтаксис  
   
 ```  
 iterator erase(iterator where);  
@@ -34,29 +35,29 @@ iterator erase(iterator first, iterator last);
 bool erase(key_type key)  
 ```  
   
-#### Параметры  
+#### <a name="parameters"></a>Параметры  
  first  
- Начало диапазона, чтобы привести к удалению.  
+ Начало диапазона для удаления.  
   
- key  
- Значение ключа, чтобы привести к удалению.  
+ клавиша  
+ Значение ключа для удаления.  
   
  last  
- Элемент диапазона, чтобы привести к удалению.  
+ Конец диапазона для удаления.  
   
- , где  
- Элемент, который необходимо привести к удалению.  
+ где  
+ Подлежащий удалению элемент.  
   
-## Заметки  
- Первый функцию\-член удаляет элемент контролируемой последовательности, указанное в `where` и возвращает первый элемент указывает итератор, оставшиеся за удаленным элементом, или [map::end](../dotnet/map-end-stl-clr.md)`()`, если такой элемент не существует.  Он используется для удаления одного элемента.  
+## <a name="remarks"></a>Примечания  
+ Первая функция-член удаляет элемент управляемой последовательности, на который указывает `where`и возвращает итератор, указывающий на первый элемент, оставшийся после удаления элемента или [map::end (STL/CLR)](../dotnet/map-end-stl-clr.md) `()` Если такого элемента не существует. Используется для удаления одного элемента.  
   
- Второй функцию\-член удаляет элементы контролируемой последовательности в диапазоне `[``first``,` `last``)` и возвращает первый элемент указывает итератор, оставшиеся за всеми удаленными элементами, или `end()`, если такой элемент не существует.  Он используется для удаления ноль или более соседние элементы.  
+ Вторая функция-член удаляет элементы управляемой последовательности в диапазоне [`first`, `last`) и возвращает итератор, указывающий на первый элемент, находящийся за всеми удаленными элементами, или `end()` Если ни одного такого элемента существует... Используется для удаления ноль или более последовательных элементов.  
   
- Третий функцию\-член удаляет любой элемент контролируемой последовательности ключ которой имеет соответствующий заказ на `key` и возвращается число удаленных элементов.  Он используется для удаления и подсчитать все элементы, соответствующие указанному ключу.  
+ Третья функция-член удаляет любой элемент управляемой последовательности, ключ которого имеет соответствующий порядок для `key`и возвращает число удаленных элементов. Используется для удаления и количество всех элементов, соответствующих заданному ключу.  
   
- Каждое erase элемента имеет время пропорциональное в логарифму числа элементов в контролируемой последовательности.  
+ Каждый элемент стирания время пропорционально логарифму числа элементов в управляемой последовательности.  
   
-## Пример  
+## <a name="example"></a>Пример  
   
 ```  
 // cliext_map_erase.cpp   
@@ -104,18 +105,21 @@ int main()
   
 ```  
   
-  **\[1\] \[2\] \[BC — 3\]**  
-**erase\(begin\(\)\) \= \[B 2\]**  
- **\[2\] B C \[3\] \[4\] \[de 5\]**  
-**erase\(begin\(\), \-1\) \= \[ end\(\)e 5\]**  
-**size\(\) \= 1**  
-**erase \(L'x\) \= 0**  
-**erase \(L'e\) \= 1**   
-## Требования  
- **Заголовок:**\<cliext\/map\>  
+```Output  
+ [a 1] [b 2] [c 3]  
+erase(begin()) = [b 2]  
+ [b 2] [c 3] [d 4] [e 5]  
+erase(begin(), end()-1) = [e 5]  
+size() = 1  
+erase(L'x') = 0  
+erase(L'e') = 1  
+```  
+  
+## <a name="requirements"></a>Требования  
+ **Заголовок:** \<cliext/map >  
   
  **Пространство имен:** cliext  
   
-## См. также  
- [map](../dotnet/map-stl-clr.md)   
- [map::clear](../dotnet/map-clear-stl-clr.md)
+## <a name="see-also"></a>См. также  
+ [Карта (STL/CLR)](../dotnet/map-stl-clr.md)   
+ [map::clear (STL/CLR)](../dotnet/map-clear-stl-clr.md)

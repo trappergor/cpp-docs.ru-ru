@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-windows
+ms.technology: cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -17,35 +16,19 @@ f1_keywords:
 - AGENTS/concurrency::single_link_registry::contains
 - AGENTS/concurrency::single_link_registry::count
 - AGENTS/concurrency::single_link_registry::remove
-dev_langs:
-- C++
-helpviewer_keywords:
-- single_link_registry class
+dev_langs: C++
+helpviewer_keywords: single_link_registry class
 ms.assetid: 09540a4e-c34e-4ff9-af49-21b8612b6ab3
-caps.latest.revision: 19
+caps.latest.revision: "19"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 5faef5bd1be6cc02d6614a6f6193c74167a8ff23
-ms.openlocfilehash: fc99e9af586520d60c20302e8b828a188df9efda
-ms.contentlocale: ru-ru
-ms.lasthandoff: 03/17/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: 11e02e4adb2e2bdb79f275537047199f434a57c2
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="singlelinkregistry-class"></a>Класс single_link_registry
 Объект `single_link_registry` представляет собой `network_link_registry`, управляющий только одним блоком источника или целевым блоком.  
@@ -61,23 +44,23 @@ class single_link_registry : public network_link_registry<_Block>;
  `_Block`  
  Тип блока данных, хранимых в `single_link_registry` объекта.  
   
-## <a name="members"></a>Члены  
+## <a name="members"></a>Участники  
   
 ### <a name="public-constructors"></a>Открытые конструкторы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[single_link_registry](#ctor)|Создает объект `single_link_registry`.|  
 |[~ single_link_registry деструктор](#dtor)|Уничтожает `single_link_registry` объекта.|  
   
 ### <a name="public-methods"></a>Открытые методы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
-|[add](#add)|Добавляет ссылку на `single_link_registry` объект. (Переопределяет [network_link_registry::add](network-link-registry-class.md#add).)|  
+|[add](#add)|Добавляет ссылку на `single_link_registry` объекта. (Переопределяет [network_link_registry::add](network-link-registry-class.md#add).)|  
 |[begin](#begin)|Возвращает итератор на первый элемент в `single_link_registry` объекта. (Переопределяет [network_link_registry::begin](network-link-registry-class.md#begin).)|  
 |[содержит](#contains)|Поиск `single_link_registry` объекта для указанного блока. (Переопределяет [network_link_registry::contains](network-link-registry-class.md#contains).)|  
-|[count](#count)|Подсчитывает число элементов в `single_link_registry` объекта. (Переопределяет [network_link_registry::count](network-link-registry-class.md#count).)|  
+|[count](#count)|Подсчитывает количество элементов в `single_link_registry` объекта. (Переопределяет [network_link_registry::count](network-link-registry-class.md#count).)|  
 |[remove](#remove)|Удаляет ссылку из `single_link_registry` объекта. (Переопределяет [network_link_registry::remove](network-link-registry-class.md#remove).)|  
   
 ## <a name="inheritance-hierarchy"></a>Иерархия наследования  
@@ -92,7 +75,7 @@ class single_link_registry : public network_link_registry<_Block>;
   
 ##  <a name="add"></a>добавить 
 
- Добавляет ссылку на `single_link_registry` объект.  
+ Добавляет ссылку на `single_link_registry` объекта.  
   
 ```
 virtual void add(_EType _Link);
@@ -103,7 +86,7 @@ virtual void add(_EType _Link);
  Указатель на блок для добавления.  
   
 ### <a name="remarks"></a>Примечания  
- Метод создает [invalid_link_target](invalid-link-target-class.md) исключение, если уже существует ссылка в реестр.  
+ Метод создает [invalid_link_target](invalid-link-target-class.md) исключение, если уже существует ссылка в данном реестре.  
   
 ##  <a name="begin"></a>начать 
 
@@ -132,11 +115,11 @@ virtual bool contains(_EType _Link);
  Указатель на блок, который необходимо найти в `single_link_registry` объекта.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
- `true`Если связь было обнаружено, `false` в противном случае.  
+ `true`Если ссылка была найдена, `false` в противном случае.  
   
-##  <a name="count"></a>число 
+##  <a name="count"></a>Счетчик 
 
- Подсчитывает число элементов в `single_link_registry` объекта.  
+ Подсчитывает количество элементов в `single_link_registry` объекта.  
   
 ```
 virtual size_t count();
@@ -155,7 +138,7 @@ virtual bool remove(_EType _Link);
   
 ### <a name="parameters"></a>Параметры  
  `_Link`  
- Указатель на блок удаляется, если найден.  
+ Указатель на блок удалены, если найден.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
  `true`Если ссылка была найдена и удалена, `false` в противном случае.  
@@ -182,4 +165,3 @@ virtual ~single_link_registry();
 ## <a name="see-also"></a>См. также  
  [пространство имен Concurrency](concurrency-namespace.md)   
  [Класс multi_link_registry](multi-link-registry-class.md)
-

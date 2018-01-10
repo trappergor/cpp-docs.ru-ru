@@ -17,14 +17,15 @@ caps.latest.revision: "5"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 2ff3bfba5409715f2e5022e62dd74fa94360d10b
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: f4bc649f35eb2e3d3ce203529bf4010a3d4f53fe
+ms.sourcegitcommit: 54035dce0992ba5dce0323d67f86301f994ff3db
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 01/03/2018
 ---
 # <a name="vmxvmread"></a>__vmx_vmread
-**Блок, относящийся только к системам Майкрософт**  
+**Блок, относящийся только к системам Microsoft**  
   
  Считывает указанное поле из текущую структуру управления виртуальной машины (VMCS) и помещает его в указанном расположении.  
   
@@ -39,7 +40,7 @@ unsigned char __vmx_vmread(
   
 #### <a name="parameters"></a>Параметры  
   
-|Параметр|Описание|  
+|Параметр|Описание:|  
 |---------------|-----------------|  
 |[in] `Field`|VMCS поле для чтения.|  
 |[in] `FieldValue`|Указатель на расположение для хранения значения чтения из поля VMCS, заданного `Field` параметра.|  
@@ -53,7 +54,7 @@ unsigned char __vmx_vmread(
 |2|Сбой операции без сведений о состоянии.|  
   
 ## <a name="remarks"></a>Примечания  
- `__vmx_vmread` Функция эквивалентна `VMREAD` инструкции компьютера. Значение `Field` параметра является индексом кодировке поля, как описано в документации Intel. Для поиска документа «Intel виртуализации технические спецификации для архитектуры IA-32 Intel,» Дополнительные сведения документа номера C97063-002, на [Корпорация Intel](http://go.microsoft.com/fwlink/?LinkId=127) сайта, а затем обратитесь к приложении C этого документа .  
+ `__vmx_vmread` Функция эквивалентна `VMREAD` инструкции компьютера. Значение `Field` параметра является индексом кодировке поля, как описано в документации Intel. Для поиска документа «Intel виртуализации технические спецификации для архитектуры IA-32 Intel,» Дополнительные сведения документа номера C97063-002, на [Корпорация Intel](http://go.microsoft.com/fwlink/p/?linkid=127) сайта, а затем обратитесь к приложении C этого документа .  
   
 ## <a name="requirements"></a>Требования  
   

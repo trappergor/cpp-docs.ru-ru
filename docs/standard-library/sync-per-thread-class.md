@@ -23,11 +23,12 @@ caps.latest.revision: "19"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 263622066c379450c5155a5d484e9eb7e46916f1
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 9f0c3e4a2b35ee0d5581320aea7eff47c9bae3e9
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="syncperthread-class"></a>Класс sync_per_thread
 Описывает [фильтр синхронизации](../standard-library/allocators-header.md), предоставляющий отдельный объект кэширования для каждого потока.  
@@ -41,7 +42,7 @@ class sync_per_thread
   
 #### <a name="parameters"></a>Параметры  
   
-|Параметр|Описание|  
+|Параметр|Описание:|  
 |---------------|-----------------|  
 |`Cache`|Тип кэша, связанный с фильтром синхронизации. Возможные типы: [cache_chunklist](../standard-library/cache-chunklist-class.md), [cache_freelist](../standard-library/cache-freelist-class.md) или [cache_suballoc](../standard-library/cache-suballoc-class.md).|  
   
@@ -70,7 +71,7 @@ void *allocate(std::size_t count);
   
 ### <a name="parameters"></a>Параметры  
   
-|Параметр|Описание|  
+|Параметр|Описание:|  
 |---------------|-----------------|  
 |`count`|Число элементов в массиве, которые нужно выделить.|  
   
@@ -86,7 +87,7 @@ void deallocate(void* ptr, std::size_t count);
   
 ### <a name="parameters"></a>Параметры  
   
-|Параметр|Описание|  
+|Параметр|Описание:|  
 |---------------|-----------------|  
 |`ptr`|Указатель на первый объект, который необходимо освободить из хранилища.|  
 |`count`|Количество объектов для освобождения из хранилища.|  
@@ -103,7 +104,7 @@ bool equals(const sync<Cache>& Other) const;
   
 ### <a name="parameters"></a>Параметры  
   
-|Параметр|Описание|  
+|Параметр|Описание:|  
 |---------------|-----------------|  
 |`Cache`|Объект кэша фильтра синхронизации.|  
 |`Other`|Объект кэша для сравнения на равенство.|  

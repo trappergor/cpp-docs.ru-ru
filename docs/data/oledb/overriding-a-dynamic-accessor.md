@@ -1,32 +1,35 @@
 ---
-title: "Переопределение динамического метода доступа | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "методы доступа [C++], dynamic"
-  - "динамические методы доступа"
-  - "переопределение, динамические методы доступа"
+title: "Переопределение динамического метода доступа | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- accessors [C++], dynamic
+- dynamic accessors
+- overriding, dynamic accessors
 ms.assetid: cbefd156-6da5-490d-b795-c2d7d874f7ce
-caps.latest.revision: 7
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: e06e1d5b0a5aa34116456c342f9cec233edcb6a1
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 12/21/2017
 ---
-# Переопределение динамического метода доступа
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-При использовании динамического метода доступа, например `CDynamicAccessor`, метод команды **Open** автоматически создает метод доступа на основе сведений о столбцах открытого набора строк.  Существует возможность переопределения динамического метода доступа для управления способом связывания столбцов.  
+# <a name="overriding-a-dynamic-accessor"></a>Переопределение динамического метода доступа
+При использовании динамического метода доступа, такие как `CDynamicAccessor`, команда **откройте** метод создает метод доступа для автоматически, основанных на данных в столбце открытого набора строк. Можно переопределить динамического метода доступа для управления точно, как связаны столбцы.  
   
- Чтобы переопределить динамический метод доступа, следует передать методу `CCommand::Open` в качестве последнего параметра значение **false**.  Тем самым предотвращается автоматическое создание метода доступа методом **Open**.  После этого можно вызывать методы `GetColumnInfo` и `AddBindEntry` для каждого столбца, который необходимо связать.  В следующем примере кода показано, как это сделать:  
+ Переопределение динамического метода доступа, передайте **false** как последний параметр `CCommand::Open` метода. Это предотвращает **откройте** из автоматического создания метода доступа. Затем можно вызвать `GetColumnInfo` и вызывать `AddBindEntry` для каждого столбца, который требуется привязать. Следующий код показывает, как это сделать:  
   
 ```  
 USES_CONVERSION;  
@@ -76,5 +79,5 @@ while (product.MoveNext() == S_OK)
 }  
 ```  
   
-## См. также  
+## <a name="see-also"></a>См. также  
  [Использование методов доступа](../../data/oledb/using-accessors.md)

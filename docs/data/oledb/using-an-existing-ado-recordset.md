@@ -1,32 +1,35 @@
 ---
-title: "Использование существующего набора записей ADO | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "наборы записей ADO [C++]"
-  - "шаблоны потребителя OLE DB, наборы записей ADO"
-  - "наборы записей [C++], использование в OLE DB"
+title: "Использование существующего набора записей ADO | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- ADO recordsets [C++]
+- OLE DB consumer templates, ADO recordsets
+- recordsets [C++], using in OLE DB
 ms.assetid: a9b1de8a-d379-49b1-a26e-578741e9f6a8
-caps.latest.revision: 7
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: 02f8f29c60601e22a1b005f435d3626336628a1e
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 12/21/2017
 ---
-# Использование существующего набора записей ADO
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Чтобы смешивать шаблоны объекта\-получателя OLE DB и Active Data Objects \(ADO\), необходимо использовать объекты ADO для открытия набора записей \(соответствующего набору строк в объекте\-получателе шаблонов OLE DB\).  При получении набора записей для подключения к набору записей OLE DB необходимо выполнить следующие действия:  
+# <a name="using-an-existing-ado-recordset"></a>Использование существующего набора записей ADO
+Чтобы смешать шаблоны потребителя OLE DB и Active Data Objects (ADO), используйте ADO для открытия набора записей (соответствующего набору строк в шаблоны потребителей OLE DB). Если у вас есть набор записей, выполните следующие действия для подключения к набору строк OLE DB:  
   
-1.  Вызвать `QueryInterface` для указателей `IRowset` и `IAccessor`.  
+1.  Вызовите `QueryInterface` для `IRowset` и `IAccessor` указатели.  
   
     ```  
     IRowset* lpRowset = NULL;  
@@ -36,9 +39,9 @@ caps.handback.revision: 7
     ```  
   
     > [!NOTE]
-    >  *lpUnk* указывает на объект **IUnknown** набора записей ADO.  
+    >  *lpUnk* указывает **IUnknown** объекта набора записей ADO.  
   
-2.  Присоединить метод доступа и набор строк к соответствующим классам шаблона объекта\-получателя OLE DB.  
+2.  Присоедините их соответствующие классы шаблонов потребителей OLE DB для доступа и строк.  
   
     ```  
     CRowset rs;  
@@ -49,5 +52,5 @@ caps.handback.revision: 7
     rs.SetAccessor(accessor);  
     ```  
   
-## См. также  
+## <a name="see-also"></a>См. также  
  [Использование методов доступа](../../data/oledb/using-accessors.md)

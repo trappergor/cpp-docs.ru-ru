@@ -20,11 +20,12 @@ caps.latest.revision: "12"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 014e1792a3431fee8dad673d17afdb84ef620936
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: ce5a658c86611c9fdd0663145ae3c09ef6544aa0
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="class-library-overview"></a>Общие сведения о библиотеке классов
 В этом обзоре категорию и описываются классы в Microsoft Foundation Class библиотеки (MFC) версии 9.0. Классы MFC, в совокупности, образующих исполняющую среду — платформа приложения, написанного для интерфейса Windows API. Задачи программирования — для заполнения в коде, который зависит от приложения.  

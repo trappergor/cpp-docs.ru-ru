@@ -14,11 +14,12 @@ caps.latest.revision: "8"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 11b316ce00dd961c2c7d0dbd91a95d9a71df6f69
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 96798abe1c70ee83a1e897133ef5036742d8771c
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="constants-in-primary-expressions"></a>Константы в первичных выражениях
 Константный операнд имеет значение и тип того константного значения, которое он представляет. Символьная константа имеет тип `int`. Целочисленная константа имеет тип `int`, **long**, `unsigned int` или `unsigned long` (в зависимости от размера целого числа и от способа указания значения). Дополнительные сведения см. в статье [Константы](../c-language/c-constants.md).  

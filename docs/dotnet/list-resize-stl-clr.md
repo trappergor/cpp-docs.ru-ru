@@ -1,49 +1,50 @@
 ---
-title: "list::resize (STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::list::resize"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "resize - член [STL/CLR]"
+title: "List::Resize (STL/CLR) | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::list::resize
+dev_langs: C++
+helpviewer_keywords: resize member [STL/CLR]
 ms.assetid: c4b8d41f-a62b-4dbc-8568-0e0a9da24016
-caps.latest.revision: 17
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 15
+caps.latest.revision: "17"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: ca91c9764f1fe438d0d7dfb66c52797d5d97aae8
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 12/21/2017
 ---
-# list::resize (STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="listresize-stlclr"></a>list::resize (STL/CLR)
 Изменяет количество элементов.  
   
-## Синтаксис  
+## <a name="syntax"></a>Синтаксис  
   
 ```  
 void resize(size_type new_size);  
 void resize(size_type new_size, value_type val);  
 ```  
   
-#### Параметры  
- new\_size  
- Новый размер контролируемой последовательности.  
+#### <a name="parameters"></a>Параметры  
+ new_size  
+ Новый размер управляемой последовательности.  
   
- val  
- Значение элемента заполнения.  
+ функция Val  
+ Значение элемента-заполнителя.  
   
-## Заметки  
- Функции\-члены предоставляют как [list::size](../dotnet/list-size-stl-clr.md)`()` впредь возвращает `new_size`.  Если он должен выполнить контролируемую последовательность более длинным, первый функцию\-член добавляет элементы со значением `value_type()`, а во втором функцию\-член добавляет элементы со значением `val`.  Чтобы сделать контролируемую последовательность более коротким, оба функции\-члена эффективно стирают последние время [list::size](../dotnet/list-size-stl-clr.md)`() -` `new_size` элемента.  Он используется для обеспечения контролируемая последовательность имеет размер `new_size` или фильтрацией по ролям или заполнением текущей контролируемая последовательность.  
+## <a name="remarks"></a>Примечания  
+ Убедитесь, что функции-члены обоих [list::size (STL/CLR)](../dotnet/list-size-stl-clr.md) `()` исходя из возвращает `new_size`. Если это вынуждает сделать более длинной управляемую последовательность, первая функция-член добавляет элементы со значением `value_type()`, тогда как вторая функция-член добавляет элементы со значением `val`. Чтобы сделать более короткие управляемой последовательности, обе функции-члены фактически удалить последний элемент [list::size (STL/CLR)](../dotnet/list-size-stl-clr.md) `() -` `new_size` раз. Используется, чтобы обеспечить размер управляемой последовательности `new_size`, trimming или заполнения текущего управляемой последовательности.  
   
-## Пример  
+## <a name="example"></a>Пример  
   
 ```  
 // cliext_list_resize.cpp   
@@ -74,17 +75,20 @@ int main()
   
 ```  
   
-  **size\(\) \= 0**  
- **0 0 0 0**  
-**size\(\) \= 0**  
- **x x x x x**   
-## Требования  
- **Заголовок:**\<cliext\/list\>  
+```Output  
+size() = 0  
+ 0 0 0 0  
+size() = 0  
+ x x x x x  
+```  
+  
+## <a name="requirements"></a>Требования  
+ **Заголовок:** \<cliext/list >  
   
  **Пространство имен:** cliext  
   
-## См. также  
- [list](../dotnet/list-stl-clr.md)   
- [list::clear](../dotnet/list-clear-stl-clr.md)   
- [list::erase](../dotnet/list-erase-stl-clr.md)   
- [list::insert](../dotnet/list-insert-stl-clr.md)
+## <a name="see-also"></a>См. также  
+ [список (STL/CLR)](../dotnet/list-stl-clr.md)   
+ [List::Clear (STL/CLR)](../dotnet/list-clear-stl-clr.md)   
+ [List::Erase (STL/CLR)](../dotnet/list-erase-stl-clr.md)   
+ [list::insert (STL/CLR)](../dotnet/list-insert-stl-clr.md)

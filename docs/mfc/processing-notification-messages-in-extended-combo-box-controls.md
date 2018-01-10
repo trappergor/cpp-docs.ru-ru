@@ -16,11 +16,12 @@ caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 5ceebaf35c9e6bb2c5be9b8b1a33f5f943e25274
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: a78e7b9fd8f9c67f14a4bb51088866785d372cca
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="processing-notification-messages-in-extended-combo-box-controls"></a>Обработка уведомляющих сообщений в элементах управления "Расширенное поле со списком"
 По мере того как пользователи взаимодействуют с расширенным полем со списком, элемент управления (`CComboBoxEx`) отправляет сообщения уведомления своему родительскому окну (обычно это объект представления или диалогового окна). Обрабатывайте эти сообщения, если требуется сделать что-нибудь в ответе. Например, когда пользователь активирует раскрывающийся список или щелкает в поле ввода элемента управления, отправляется уведомление **CBEN_BEGINEDIT** .  

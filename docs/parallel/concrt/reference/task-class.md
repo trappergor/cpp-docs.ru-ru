@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-windows
+ms.technology: cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -18,35 +17,19 @@ f1_keywords:
 - PPLTASKS/concurrency::task::scheduler
 - PPLTASKS/concurrency::task::then
 - PPLTASKS/concurrency::task::wait
-dev_langs:
-- C++
-helpviewer_keywords:
-- task class
+dev_langs: C++
+helpviewer_keywords: task class
 ms.assetid: cdc3a8c0-5cbe-45a0-b5d5-e9f81d94df1a
-caps.latest.revision: 12
+caps.latest.revision: "12"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 5faef5bd1be6cc02d6614a6f6193c74167a8ff23
-ms.openlocfilehash: e6c568b0b6a5f07df51980e1e440f31482f45846
-ms.contentlocale: ru-ru
-ms.lasthandoff: 03/17/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: 4ea618ca6a5784b44666c70d79bb10b2e9f6e394
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="task-class-concurrency-runtime"></a>Класс task (среда выполнения с параллелизмом)
 Класс `task` библиотеки параллельных шаблонов (PPL). Объект `task` представляет работу, которая может быть выполнена асинхронно и параллельно с другими задачами и параллельной работой, созданной параллельными алгоритмами в среде выполнения с параллелизмом. При успешном завершении он выводи результат типа `_ResultType`. Задачи типа `task<void>` никакого результата не дают. Задачи можно ожидать и отменять независимо от других задач. Также возможно сочетание с другими задачами с помощью продолжений ( `then`) и соединение ( `when_all`) и выбора ( `when_any`) шаблонов.  
@@ -80,13 +63,13 @@ class task;
   
 ### <a name="public-constructors"></a>Открытые конструкторы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[Задача](#ctor)|Перегружен. Создает объект `task`.|  
   
 ### <a name="public-methods"></a>Открытые методы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[get](#get)|Перегружен. Возвращает результат, созданный этой задачей. Если задача не находится в конечном состоянии, вызов `get` будет ожидать завершения задачи. Этот метод не возвращает значение при вызове для задачи с параметром `result_type`, имеющим значение `void`.|  
 |[is_apartment_aware](#is_apartment_aware)|Определяет, распаковывает ли задача интерфейс среды выполнения Windows `IAsyncInfo` или происходит от такой задачи.|  
@@ -97,11 +80,11 @@ class task;
   
 ### <a name="public-operators"></a>Открытые операторы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
-|[operator!=](#operator_neq)|Перегружен. Определяет, представляют ли два объекта `task` различные внутренние задачи.|  
-|[operator=](#operator_eq)|Перегружен. Заменяет содержимое одного объекта `task` другим.|  
-|[operator==](#operator_eq_eq)|Перегружен. Определяет, представляют ли два объекта `task` одну и ту же внутреннюю задачу.|  
+|[оператор!=](#operator_neq)|Перегружен. Определяет, представляют ли два объекта `task` различные внутренние задачи.|  
+|[оператор=](#operator_eq)|Перегружен. Заменяет содержимое одного объекта `task` другим.|  
+|[оператор==](#operator_eq_eq)|Перегружен. Определяет, представляют ли два объекта `task` одну и ту же внутреннюю задачу.|  
   
 ## <a name="remarks"></a>Примечания  
  Дополнительные сведения см. в разделе [параллелизм задач](../../../parallel/concrt/task-parallelism-concurrency-runtime.md).  
@@ -131,7 +114,7 @@ void get() const;
  Если задача отменяется, вызов `get` вызовет [task_canceled](task-canceled-class.md) исключение. Если задача встретила другое исключение или исключение было распространено на нее из предшествующей задачи, вызов `get` создаст это исключение.  
   
 > [!IMPORTANT]
->  В [!INCLUDE[win8_appname_long](../../../build/includes/win8_appname_long_md.md)] приложения, не следует вызывать [Concurrency::Task:: wait](#wait) или `get` ( `wait` вызовов `get`) в коде, выполняемом в STA. В противном случае среда выполнения создает [concurrency::invalid_operation](invalid-operation-class.md) , так как эти методы блокирует текущий поток и приложение перестанет отвечать на запросы. Тем не менее, можно вызвать `get` метод для получения результата из предшествующей задачи в продолжение на основе задач, так как результат становится доступен сразу.  
+>  В [!INCLUDE[win8_appname_long](../../../build/includes/win8_appname_long_md.md)] приложения, не следует вызывать [Concurrency::Task:: wait](#wait) или `get` ( `wait` вызовы `get`) в коде, выполняемом в STA. В противном случае среда выполнения создает [concurrency::invalid_operation](invalid-operation-class.md) , так как эти методы блокирует текущий поток и может вызвать зависание приложения. Тем не менее, можно вызвать `get` метод для получения результата из предшествующей задачи в продолжение на основе задач, поскольку результат имеет сразу становятся доступными.  
   
 ##  <a name="is_apartment_aware"></a>is_apartment_aware 
 
@@ -155,7 +138,7 @@ bool is_done() const;
  Значение true, если задача была завершена, значение false в противном случае.  
   
 ### <a name="remarks"></a>Примечания  
- Функция возвращает значение true, если задача завершается или отменяется (с или без исключения пользователей).  
+ Функция возвращает значение true, если задача завершается или отменяется (с или без исключения пользователя).  
   
 ##  <a name="operator_neq"></a>оператор! = 
 
@@ -327,7 +310,7 @@ __declspec(
 ### <a name="remarks"></a>Примечания  
  Перегрузки `then`, которые принимают лямбда-выражение или функтор, которые возвращают интерфейс Windows::Foundation::IAsyncInfo, доступны только для приложений Магазина Windows.  
   
- Дополнительные сведения об использовании продолжений задач для составления асинхронной работы см. в разделе [параллелизм задач](../../../parallel/concrt/task-parallelism-concurrency-runtime.md).  
+ Дополнительные сведения о том, как использовать для создания асинхронной работы продолжений задач см. в разделе [параллелизм задач](../../../parallel/concrt/task-parallelism-concurrency-runtime.md).  
   
 ##  <a name="wait"></a>Ожидание 
 
@@ -343,8 +326,7 @@ task_status wait() const;
 ### <a name="remarks"></a>Примечания  
   
 > [!IMPORTANT]
->  В [!INCLUDE[win8_appname_long](../../../build/includes/win8_appname_long_md.md)] приложения, не следует вызывать `wait` в коде, выполняемом в STA. В противном случае среда выполнения создает [concurrency::invalid_operation](invalid-operation-class.md) , так как этот метод блокирует текущий поток и приложение перестанет отвечать на запросы. Тем не менее, можно вызвать [Concurrency::Task:: Get](#get) метод для получения результата из предшествующей задачи в продолжение на основе задач.  
+>  В [!INCLUDE[win8_appname_long](../../../build/includes/win8_appname_long_md.md)] приложения, не следует вызывать `wait` в коде, выполняемом в STA. В противном случае среда выполнения создает [concurrency::invalid_operation](invalid-operation-class.md) , так как этот метод блокирует текущий поток и может вызвать зависание приложения. Тем не менее, можно вызвать [Concurrency::Task:: Get](#get) метод для получения результата из предшествующей задачи в продолжение на основе задач.  
   
 ## <a name="see-also"></a>См. также  
  [Пространство имен concurrency](concurrency-namespace.md)
-

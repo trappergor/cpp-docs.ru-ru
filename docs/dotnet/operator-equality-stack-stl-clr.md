@@ -1,33 +1,33 @@
 ---
-title: "operator== (stack) (STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::stack::operator=="
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "operator== - член [STL/CLR]"
+title: "оператор == (стек) (STL/CLR) | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::stack::operator==
+dev_langs: C++
+helpviewer_keywords: operator== member [STL/CLR]
 ms.assetid: 862e7130-150a-44ea-9ec4-9f091ab7653d
-caps.latest.revision: 15
-caps.handback.revision: 13
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "15"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: f4a4f6fdda04f82b83a3b4f5e176d757dc154a56
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 12/21/2017
 ---
-# operator== (stack) (STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Сравнение равное стека.  
+# <a name="operator-stack-stlclr"></a>operator== (stack) (STL/CLR)
+Сравнение равно стека.  
   
-## Синтаксис  
+## <a name="syntax"></a>Синтаксис  
   
 ```  
 template<typename Value,  
@@ -36,17 +36,17 @@ template<typename Value,
         stack<Value, Container>% right);  
 ```  
   
-#### Параметры  
- влево  
- Левый контейнер, с которым выполняется сравнение.  
+#### <a name="parameters"></a>Параметры  
+ left  
+ Левый контейнер для сравнения.  
   
- правый  
- Правой контейнер, с которым выполняется сравнение.  
+ right  
+ Правый контейнер для сравнения.  
   
-## Заметки  
- Функция возвращает значение true, если только оператора последовательности из `left` и `right` одинаковой длины, и для каждой позиции `i`, `left``[i] ==` `right``[i]`.  Он используется для выполнения приказано ли `left` таким же, как `right` при сравнении 2 стека элемент элементом.  
+## <a name="remarks"></a>Примечания  
+ Функция оператор возвращает значение true, только в том случае, если последовательности, на которые управляются `left` и `right` имеют одинаковую длину и для каждого положения `i`, `left[i] ==` `right[i]`. Можно использовать для тестирования ли `left` упорядочен таким же, как `right` при двух стеков, сравниваемые элемент элемент.  
   
-## Пример  
+## <a name="example"></a>Пример  
   
 ```  
 // cliext_stack_operator_eq.cpp   
@@ -86,19 +86,22 @@ int main()
   
 ```  
   
-  **a b c**  
- **B d**  
-**\[B C\] \[\=\= B C верно\]**  
-**\[B C\] \=\= \[d\] значение B**   
-## Требования  
- **Заголовок:**\<cliext\/stack\>  
+```Output  
+ a b c  
+ a b d  
+[a b c] == [a b c] is True  
+[a b c] == [a b d] is False  
+```  
+  
+## <a name="requirements"></a>Требования  
+ **Заголовок:** \<cliext/stack >  
   
  **Пространство имен:** cliext  
   
-## См. также  
- [стек](../dotnet/stack-stl-clr.md)   
- [operator\!\= \(stack\)](../dotnet/operator-inequality-stack-stl-clr.md)   
- [operator\< \(stack\)](../dotnet/operator-less-than-stack-stl-clr.md)   
- [operator\>\= \(stack\)](../Topic/operator%3E=%20\(stack\)%20\(STL-CLR\).md)   
- [operator\> \(stack\)](../dotnet/operator-greater-than-stack-stl-clr.md)   
- [operator\<\= \(stack\)](../dotnet/operator-less-or-equal-stack-stl-clr.md)
+## <a name="see-also"></a>См. также  
+ [стек (STL/CLR)](../dotnet/stack-stl-clr.md)   
+ [оператор! = (стек) (STL/CLR)](../dotnet/operator-inequality-stack-stl-clr.md)   
+ [оператор\< (стек) (STL/CLR)](../dotnet/operator-less-than-stack-stl-clr.md)   
+ [оператор > = (стек) (STL/CLR)](../dotnet/operator-greater-or-equal-stack-stl-clr.md)   
+ [оператор > (стек) (STL/CLR)](../dotnet/operator-greater-than-stack-stl-clr.md)   
+ [operator<= (stack) (STL/CLR)](../dotnet/operator-less-or-equal-stack-stl-clr.md)

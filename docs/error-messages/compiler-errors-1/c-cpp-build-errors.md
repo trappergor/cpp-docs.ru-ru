@@ -1,7 +1,7 @@
 ---
 title: "Ошибки построения C/C++ | Документы Microsoft"
 ms.custom: 
-ms.date: 11/04/2016
+ms.date: 11/17/2017
 ms.reviewer: 
 ms.suite: 
 ms.technology: cpp-tools
@@ -311,24 +311,20 @@ caps.latest.revision: "10"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 25ec72c39a01474bc90a1ad20c73b1e3d28c7a6e
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 80e723e5fc51ee166b61999396ddfe6be7bdd991
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cc-build-errors"></a>Ошибки построения C/C++
-Статьи в данном разделе документации описывают сообщения об ошибках, которые создаются средствами сборки. Компилятор и средства сборки [!INCLUDE[vcprvc](../../build/includes/vcprvc_md.md)] могут обнаруживать многие типы ошибок и предупреждений. Средства сборки могут делать предположения о намерениях кода и вероятности предпринять попытку продолжить после обнаружения ошибки или предупреждения, что позволяет одновременно обнаруживать больше проблем. Если средства делают неверное предположение, последующие ошибки или предупреждения не могут применяться к проекту. При устранении проблем в проекте всегда начинайте с первой зарегистрированной ошибки (или предупреждения) и выполняйте повторную сборку как можно чаще.  
-  
- Чтобы получить справку по конкретному сообщению об ошибке в Visual Studio, выберите номер ошибки в **вывода** и нажмите клавишу F1, чтобы открыть MSDN страницу для этой ошибки. В MSDN можно также выполнить поиск статей об ошибках или просмотреть список ошибок по категориям в области навигации.  
-  
-> [!NOTE]
->  Не каждый [!INCLUDE[vcprvc](../../build/includes/vcprvc_md.md)] ошибку или предупреждение документируется в MSDN. Во многих случаях диагностическое сообщение предоставляет все информацию, которая доступна. Если вы считаете, что сообщение об ошибке требует дополнительного объяснения, сообщите нам об этом. Можно использовать форму обратной связи на этой странице или перейти к строке меню в Visual Studio и выберите **справки**, **сообщения об ошибке**, или вы можете отправить отчет предложений или ошибку на [Microsoft Connect](http://connect.microsoft.com/VisualStudio).  
-  
- Может оказаться дополнительную помощь для ошибок и предупреждений на открытых форумах MSDN. [Языка Visual C++](http://go.microsoft.com/fwlink/?LinkId=158195) — форум для вопросов и обсуждения о [!INCLUDE[vcprvc](../../build/includes/vcprvc_md.md)] синтаксисом и компилятором языка. [Visual C++ Общие](http://go.microsoft.com/fwlink/?LinkId=158194) — форум для вопросов о [!INCLUDE[vcprvc](../../build/includes/vcprvc_md.md)] , которые не обсуждаются на других форумах. Кроме того, возможно справки об ошибках и предупреждения на [переполнения стека](http://stackoverflow.com/).  
-  
- Ссылки на дополнительные ресурсы, посвященные [!INCLUDE[vcprvc](../../build/includes/vcprvc_md.md)], в разделе [справки Visual C++ и сообщества](../../visual-cpp-help-and-community.md).  
-  
-## <a name="see-also"></a>См. также  
- [Справочные сведения о построении C/C++](../../build/reference/c-cpp-building-reference.md)   
- [Отладка в Visual Studio](/visualstudio/debugger/debugging-in-visual-studio)
+
+Статьи в этом разделе документации объясняется диагностики ошибки и предупреждения, которые создаются средствами сборки.
+
+[!INCLUDE[error-boilerplate](../../error-messages/includes/error-boilerplate.md)]
+
+## <a name="see-also"></a>См. также
+
+[Справочные сведения о построении C/C++](../../build/reference/c-cpp-building-reference.md)   
+[Отладка в Visual Studio](/visualstudio/debugger/debugging-in-visual-studio)

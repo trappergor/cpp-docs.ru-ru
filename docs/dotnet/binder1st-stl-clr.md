@@ -15,11 +15,14 @@ caps.latest.revision: "18"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: ae786f50700d59c5f4a24ed0ec7de1c11718f352
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: 550340bad45c6a71a633f7924afdd0eaf775005f
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="binder1st-stlclr"></a>binder1st (STL/CLR)
 Класс шаблона описывает функтор один аргумент, при вызове возвращает его хранимой двумя аргументами функтор вызывается хранимой первым аргументом и предоставленного второго аргумента. Она используется укажите объект функции, с точки зрения его хранимых функтор.  
@@ -53,7 +56,7 @@ public:
   
 ## <a name="member-functions"></a>Функции-члены  
   
-|Определение типа|Описание|  
+|Определение типа|Описание:|  
 |---------------------|-----------------|  
 |delegate_type|Тип универсального метода-делегата.|  
 |first_argument_type|Тип первого аргумента функтор.|  
@@ -61,11 +64,11 @@ public:
 |second_argument_type|Тип второго аргумента функтор.|  
 |stored_function_type|Тип функтора.|  
   
-|Член|Описание|  
+|Член|Описание:|  
 |------------|-----------------|  
 |binder1st|Создает функтор.|  
   
-|Оператор|Описание|  
+|Оператор|Описание:|  
 |--------------|-----------------|  
 |operator()|Вычисляет нужной функции.|  
 |оператор delegate_type^()|Приводит функтора к делегату.|  

@@ -1,48 +1,48 @@
 ---
-title: "&lt;example&gt; (Visual C++) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "<example>"
-  - "example"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "<example> - XML-тег C++"
-  - "example - XML-тег C++"
+title: "&lt;Пример&gt; (Visual C++) | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-ide
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- <example>
+- example
+dev_langs: C++
+helpviewer_keywords:
+- <example> C++ XML tag
+- example C++ XML tag
 ms.assetid: c821aaa7-7ea7-4bee-9922-6705ad57f877
-caps.latest.revision: 8
-caps.handback.revision: 8
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "8"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 939c14d0a0e04ad8970dea7da7888a94bb4de08f
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 12/21/2017
 ---
-# &lt;example&gt; (Visual C++)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Тег \<example\> позволяет указывать пример того, как использовать метод или другой элемент библиотеки.  Как правило, это также включена с помощью тега [\<code\>](../ide/code-visual-cpp.md).  
+# <a name="ltexamplegt-visual-c"></a>&lt;Пример&gt; (Visual C++)
+Тег \<example> позволяет указать пример использования метода или другого элемента библиотеки. Как правило, это также включает в себя использование [ \<кода >](../ide/code-visual-cpp.md) тег.  
   
-## Синтаксис  
+## <a name="syntax"></a>Синтаксис  
   
 ```  
 <example>description</example>  
 ```  
   
-#### Параметры  
+#### <a name="parameters"></a>Параметры  
  `description`  
  Описание примера кода.  
   
-## Заметки  
- Чтобы обработать и сохранить комментарии документации в файл, при компиляции необходимо использовать параметр [\/doc](../build/reference/doc-process-documentation-comments-c-cpp.md).  
+## <a name="remarks"></a>Примечания  
+ Чтобы обработать и сохранить комментарии документации в файл, при компиляции необходимо использовать параметр [/doc](../build/reference/doc-process-documentation-comments-c-cpp.md).  
   
-## Пример  
+## <a name="example"></a>Пример  
   
 ```  
 // xml_example_tag.cpp  
@@ -69,5 +69,5 @@ public:
 };  
 ```  
   
-## См. также  
+## <a name="see-also"></a>См. также  
  [Документация XML](../ide/xml-documentation-visual-cpp.md)

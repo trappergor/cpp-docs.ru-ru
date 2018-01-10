@@ -1,34 +1,36 @@
 ---
-title: "Практическое руководство. Получение сведений о файле (C++/CLI) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/15/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "FileInfo - класс"
-  - "файлы [C++], извлечение сведений"
+title: "Как: получение сведений о файле (C + +/ CLI) | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- files [C++], retrieving information about
+- FileInfo class
 ms.assetid: 8b67f7ad-a048-4437-ac5c-b41809a6018d
-caps.latest.revision: 9
-caps.handback.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "9"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: 0536366e445995d6c4e77d58eb0a48e08207f263
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 12/21/2017
 ---
-# Практическое руководство. Получение сведений о файле (C++/CLI)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-В следующем примере кода демонстрируется использование класса <xref:System.IO.FileInfo>.  Если известно имя файла, то с помощью этого класса можно извлечь такие сведения о файле, как его размер, каталог, полное имя, дата и время создания и последнего изменения.  
+# <a name="how-to-retrieve-file-information-ccli"></a>Практическое руководство. Получение сведений о файле (C++/CLI)
+В следующем примере кода показано <xref:System.IO.FileInfo> класса. Если имя файла, этот класс можно использовать для получения сведений о файле, такие как размер файла, каталога, полное имя и Дата и время создания и последнего изменения.  
   
- Этот код извлекает сведения о файле Notepad.exe.  
+ Этот код извлекает сведения о файлах для Notepad.exe.  
   
-## Пример  
+## <a name="example"></a>Пример  
   
 ```  
 // file_info.cpp  
@@ -63,6 +65,6 @@ int main()
 }  
 ```  
   
-## См. также  
- [Файловый и потоковый ввод\-вывод](../Topic/File%20and%20Stream%20I-O.md)   
- [программирование .NET с использованием C\+\+\/CLI](../dotnet/dotnet-programming-with-cpp-cli-visual-cpp.md)
+## <a name="see-also"></a>См. также  
+ [Файловый и потоковый ввод-вывод](http://msdn.microsoft.com/Library/4f4a33a9-66b7-4cd7-a285-4ad3e4276cd2)   
+ [Программирование .NET с использованием C++/CLI (Visual C++)](../dotnet/dotnet-programming-with-cpp-cli-visual-cpp.md)

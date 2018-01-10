@@ -15,11 +15,12 @@ caps.latest.revision: "8"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 94004ea52d76d39657da1fdb79e0b61777524d47
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 9d532ff9cc030c92543bec898f34daf3559531f6
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="compiler-warning-level-1-c4364"></a>Предупреждение компилятора (уровень 1) C4364
 \#с помощью для сборки «файл», полученные ранее в location(line_number) без атрибута as_friend; as_friend не применяется  
@@ -29,7 +30,7 @@ ms.lasthandoff: 10/24/2017
  Дополнительные сведения см. в разделе [дружественные сборки (C++)](../../dotnet/friend-assemblies-cpp.md).  
   
 ## <a name="example"></a>Пример  
- В приведенном ниже примере создается компонент.  
+ В следующем примере создается компонент.  
   
 ```  
 // C4364.cpp  

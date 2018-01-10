@@ -1,32 +1,33 @@
 ---
-title: "list::list (STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::list::list"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "элемент списка [STL/CLR]"
+title: "List::List (STL/CLR) | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::list::list
+dev_langs: C++
+helpviewer_keywords: list member [STL/CLR]
 ms.assetid: 51b58f63-c65a-4d54-b746-0c10635b123b
-caps.latest.revision: 17
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 15
+caps.latest.revision: "17"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: 2ae85dbdab7bb1d72862aa315949821ba5cdb830
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 12/21/2017
 ---
-# list::list (STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="listlist-stlclr"></a>list::list (STL/CLR)
 Создает объект контейнера.  
   
-## Синтаксис  
+## <a name="syntax"></a>Синтаксис  
   
 ```  
 list();  
@@ -39,52 +40,53 @@ template<typename InIt>
 list(System::Collections::Generic::IEnumerable<Value>^ right);  
 ```  
   
-#### Параметры  
- count  
- Число элементов, который необходимо вставить.  
+#### <a name="parameters"></a>Параметры  
+ `count`  
+ Число элементов для вставки.  
   
- first  
- Начало диапазона, который необходимо вставить.  
+ `first`  
+ Начало диапазона для вставки.  
   
- last  
- Элемент диапазона, который необходимо вставить.  
+ `last`  
+ Конец диапазона для вставки.  
   
- правый  
+ `right`  
  Объект или диапазон для вставки.  
   
- val  
- Значение элемента, который необходимо вставить.  
+ `val`  
+ Значение элемента, который требуется вставить.  
   
-## Заметки  
+## <a name="remarks"></a>Примечания  
+  
  Конструктор:  
   
  `list();`  
   
- инициализирует контролируемая последовательность без элементов.  Он используется для определения начальную контролируемую пустую последовательность.  
+ Инициализирует управляемой последовательности без элементов. Используется, чтобы указать пустую начальную управляемую последовательность.  
   
  Конструктор:  
   
  `list(list<Value>% right);`  
   
- инициализирует контролируемая последовательность с последовательностью `[``right``.`[list::begin](../Topic/list::begin%20\(STL-CLR\).md)`(),` `right``.`[list::end](../Topic/list::end%20\(STL-CLR\).md)`())`.  Он используется, чтобы определить домашнюю контролируемую последовательность, копию последовательности контролируемой объектом `right` списка.  
+ Инициализирует управляемой последовательности с последовательностью [`right.begin()`, `right.end()`). Они позволяют указать начальную управляемую последовательность, является копией последовательности, контролируемой объект списка `right`.  
   
  Конструктор:  
   
  `list(list<Value>^ right);`  
   
- инициализирует контролируемая последовательность с последовательностью `[``right``->`[list::begin](../Topic/list::begin%20\(STL-CLR\).md)`(),` `right``->`[list::end](../Topic/list::end%20\(STL-CLR\).md)`())`.  Он используется, чтобы определить домашнюю контролируемую последовательность, копию последовательности контролируемой объектом списка дескриптор которого `right`.  
+ Инициализирует управляемой последовательности с последовательностью [`right->begin()`, `right->end()`). Они позволяют указать начальную управляемую последовательность, является копией последовательности, управляемой с дескриптором объекта списка `right`.  
   
  Конструктор:  
   
  `explicit list(size_type count);`  
   
- инициализирует контролируемая последовательность с элементами `count` каждое со значением `value_type()`.  Он используется для заполнения контейнер с элементами, все значения по умолчанию.  
+ Инициализирует управляемой последовательности с `count` элементы каждого со значением `value_type()`. Используется для заполнения контейнера с элементами, каждый из которых по умолчанию.  
   
  Конструктор:  
   
  `list(size_type count, value_type val);`  
   
- инициализирует контролируемая последовательность с элементами `count` каждое со значением `val`.  Он используется для заполнения контейнер с элементами, все одно и то же значение.  
+ Инициализирует управляемой последовательности с `count` элементы каждого со значением `val`. Используется для заполнения элементов контейнера всех, имеющих то же значение.  
   
  Конструктор:  
   
@@ -92,17 +94,17 @@ list(System::Collections::Generic::IEnumerable<Value>^ right);
   
  `list(InIt first, InIt last);`  
   
- инициализирует контролируемая последовательность с последовательностью `[``first``,` `last``)`.  Он используется, чтобы сделать контролируемой последовательностью копии другой последовательности.  
+ Инициализирует управляемой последовательности с последовательностью [`first`, `last`). Используется для создания копии другой последовательности управляемой последовательности.  
   
  Конструктор:  
   
  `list(System::Collections::Generic::IEnumerable<Value>^ right);`  
   
- инициализирует контролируемая последовательность с последовательность — это специализированная перечислителем `right`.  Он используется, чтобы сделать контролируемой последовательностью копии другой последовательности две перечислителем.  
+ Инициализирует управляемой последовательности с последовательности, указанной с помощью перечислителя `right`. Используется для создания копии другой последовательности, описываемого перечислитель управляемой последовательности.  
   
-## Пример  
+## <a name="example"></a>Пример  
   
-```  
+```cpp  
 // cliext_list_construct.cpp   
 // compile with: /clr   
 #include <cliext/list>   
@@ -156,20 +158,23 @@ int main()
   
 ```  
   
-  **size\(\) \= 0**  
- **0 0 0**  
- **x x x x x x**  
- **x x x x x**  
- **x x x x x x**  
- **x x x x x x**  
- **x x x x x x**   
-## Требования  
- **Заголовок:**\<cliext\/list\>  
+```Output  
+size() = 0  
+ 0 0 0  
+ x x x x x x  
+ x x x x x  
+ x x x x x x  
+ x x x x x x  
+ x x x x x x  
+```  
+  
+## <a name="requirements"></a>Требования  
+ **Заголовок:** \<cliext/list >  
   
  **Пространство имен:** cliext  
   
-## См. также  
- [list](../dotnet/list-stl-clr.md)   
- [list::assign](../dotnet/list-assign-stl-clr.md)   
- [list::generic\_container](../dotnet/list-generic-container-stl-clr.md)   
- [list::operator\=](../dotnet/list-operator-assign-stl-clr.md)
+## <a name="see-also"></a>См. также  
+ [список (STL/CLR)](../dotnet/list-stl-clr.md)   
+ [List::Assign (STL/CLR)](../dotnet/list-assign-stl-clr.md)   
+ [List::generic_container (STL/CLR)](../dotnet/list-generic-container-stl-clr.md)   
+ [list::operator= (STL/CLR)](../dotnet/list-operator-assign-stl-clr.md)

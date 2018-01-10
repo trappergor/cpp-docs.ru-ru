@@ -1,41 +1,42 @@
 ---
-title: "priority_queue::size_type (STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::priority_queue::size_type"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "size_type - элемент [STL/CLR]"
+title: "priority_queue::size_type (STL/CLR) | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::priority_queue::size_type
+dev_langs: C++
+helpviewer_keywords: size_type member [STL/CLR]
 ms.assetid: 0f38e670-4f61-474a-990c-0b8cd31ada5e
-caps.latest.revision: 13
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 11
+caps.latest.revision: "13"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: 90f8943b3fe81bb352be1fbbf38652012f20f84a
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 12/21/2017
 ---
-# priority_queue::size_type (STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Тип подписанного расстояния между элементом 2.  
+# <a name="priorityqueuesizetype-stlclr"></a>priority_queue::size_type (STL/CLR)
+Тип расстояния со знаком между двумя элемент.  
   
-## Синтаксис  
+## <a name="syntax"></a>Синтаксис  
   
 ```  
 typedef int size_type;  
 ```  
   
-## Заметки  
- Описывает тип неотрицательное число элементов.  
+## <a name="remarks"></a>Примечания  
+ Тип описывает элемент неотрицательное число.  
   
-## Пример  
+## <a name="example"></a>Пример  
   
 ```  
 // cliext_priority_queue_size_type.cpp   
@@ -66,13 +67,16 @@ int main()
   
 ```  
   
-  **B C.**  
-**разница в размера \= 2**   
-## Требования  
- **Заголовок:**\<cliext\/queue\>  
+```Output  
+ c a b  
+size difference = 2  
+```  
+  
+## <a name="requirements"></a>Требования  
+ **Заголовок:** \<cliext/очереди >  
   
  **Пространство имен:** cliext  
   
-## См. также  
- [priority\_queue](../Topic/priority_queue%20\(STL-CLR\).md)   
- [priority\_queue::empty](../dotnet/priority-queue-empty-stl-clr.md)
+## <a name="see-also"></a>См. также  
+ [priority_queue (STL/CLR)](../dotnet/priority-queue-stl-clr.md)   
+ [priority_queue::empty (STL/CLR)](../dotnet/priority-queue-empty-stl-clr.md)

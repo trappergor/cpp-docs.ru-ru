@@ -15,11 +15,12 @@ caps.latest.revision: "8"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 4dc1432c6cf89f339094535f5b4ccbbd9af90aa9
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 31a3aead6f2e445a30532a5840f22ac588bd4d4a
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="compiler-error-c3342"></a>Ошибка компилятора C3342
 "атрибут": неоднозначный атрибут  
@@ -28,7 +29,7 @@ ms.lasthandoff: 10/24/2017
   
  Атрибут определен несколько раз.  
   
- Для получения дополнительной информации см. [User-Defined Attributes](../../windows/user-defined-attributes-cpp-component-extensions.md).  
+ Дополнительные сведения см. в разделе [User-Defined Attributes](../../windows/user-defined-attributes-cpp-component-extensions.md).  
   
 ## <a name="example"></a>Пример  
  Следующий пример приводит к возникновению ошибки C3342:  
