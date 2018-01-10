@@ -18,11 +18,12 @@ caps.latest.revision: "45"
 author: ghogen
 ms.author: ghogen
 manager: ghogen
-ms.openlocfilehash: ea4ac4e5f88df6d6e5de35377a4cf13f34abf900
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 0f1474f44b81a95c119a405dda8a91db62a08417
+ms.sourcegitcommit: 54035dce0992ba5dce0323d67f86301f994ff3db
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 01/03/2018
 ---
 # <a name="security-best-practices-for-c"></a>Рекомендации по безопасности для C++
 В этой статье содержатся сведения об инструментах и методиках обеспечения безопасности. Использование этих инструментов не дает полной гарантии защиты от хакерских атак, но при этом существенно снижает шансы на успех таких атак.  
@@ -87,7 +88,7 @@ ms.lasthandoff: 10/24/2017
   s
 -   Выявлять потенциальные проблемы безопасности в приложениях.  
   
- Средство AppVerifier является частью Application Compatibility Toolkit, которое доступно из [совместимость приложений](http://go.microsoft.com/fwlink/?LinkId=91277) на веб-сайте TechNet.  
+ Средство AppVerifier является частью Application Compatibility Toolkit, которое доступно из [совместимость приложений](http://go.microsoft.com/fwlink/p/?linkid=91277) на веб-сайте TechNet.  
   
 
 ## <a name="windows-user-accounts"></a>Учетные записи пользователей Windows  

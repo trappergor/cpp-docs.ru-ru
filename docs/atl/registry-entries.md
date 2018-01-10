@@ -1,37 +1,39 @@
 ---
-title: "Registry Entries | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "реестр, application IDs"
-  - "реестр, ATL services entries"
+title: "Записи реестра (ATL) | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- registry, ATL services entries
+- registry, application IDs
 ms.assetid: 881989b7-61bb-459a-a13e-3bfcb33e184e
-caps.latest.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 5
+caps.latest.revision: "10"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: faef0ca0c1c9c4c2986a039b8b1a26517641acd0
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 12/21/2017
 ---
-# Registry Entries
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-DCOM появился понятие идентификаторы приложений \(AppIDs\), которые группируют параметры конфигурации для одного или нескольких объектов DCOM в централизованное расположение в реестре.  Указании AppID, указывая его значение в именованном значение AppID под CLSID объекта.  
+# <a name="registry-entries"></a>Записи реестра
+DCOM представляет концепцию идентификаторов приложения (AppID), какой группы параметров конфигурации для одного или нескольких объектов DCOM в центральном расположении в реестре. Укажите идентификатор AppID, указав его значение в AppID, с именем значения в разделе CLSID объекта.  
   
- По умолчанию Библиотека ATL\- созданная служба использует его CLSID, как GUID для своего AppID.  В `HKEY_CLASSES_ROOT\AppID` можно указать записи DCOM\- в XML\-структуру.  Первоначально 2 записей.  
+ По умолчанию служба создается ATL использует идентификатора CLSID как идентификатор GUID для его AppID. В разделе `HKEY_CLASSES_ROOT\AppID`, можно указать параметры, специфичные для DCOM. Изначально существует две записи:  
   
--   `LocalService`, со значением, равным имени службы.  Если это значение присутствует, оно используется вместо ключа `LocalServer32` под CLSID.  
+-   `LocalService`, со значением, равным имени службы. Если это значение существует, он используется вместо `LocalServer32` ключа для CLSID.  
   
--   `ServiceParameters`, со значением, равным `–Service`.  Это значение задает параметры, которые будут переданы службе, когда она будет запуститьа.  Обратите внимание, что эти параметры передать в функцию `ServiceMain` службы, не `WinMain`.  
+-   `ServiceParameters`, со значением, равным `-Service`. Это значение указывает параметры, которые будут передаваться службе при ее запуске. Обратите внимание, что эти параметры передаются в службу `ServiceMain` функции, не `WinMain`.  
   
- Любой службе DCOM также необходимо создать другой ключ под `HKEY_CLASSES_ROOT\AppID`.  Этот ключ равен имени EXE\-ФАЙЛА и действует как крест\- ссылка, так как он содержит значение AppID, указывающим обратно к записям AppID.  
+ Также необходимо создать другого ключа в любую службу DCOM `HKEY_CLASSES_ROOT\AppID`. Этот ключ совпадает с именем исполняемого файла и выступает в качестве перекрестных ссылок, как он содержит значение AppID, указывающий AppID записей.  
   
-## См. также  
+## <a name="see-also"></a>См. также  
  [Службы](../atl/atl-services.md)
+

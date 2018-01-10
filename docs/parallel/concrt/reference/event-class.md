@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-windows
+ms.technology: cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -16,35 +15,19 @@ f1_keywords:
 - CONCRT/concurrency::event::wait
 - CONCRT/concurrency::event::wait_for_multiple
 - CONCRT/concurrency::event::timeout_infinite
-dev_langs:
-- C++
-helpviewer_keywords:
-- event class
+dev_langs: C++
+helpviewer_keywords: event class
 ms.assetid: fba35a53-6568-4bfa-9aaf-07c0928cf73d
-caps.latest.revision: 22
+caps.latest.revision: "22"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 5faef5bd1be6cc02d6614a6f6193c74167a8ff23
-ms.openlocfilehash: f858bfad08ca8d62c42556c54b505908b7122569
-ms.contentlocale: ru-ru
-ms.lasthandoff: 03/17/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: 550cbdda0468db969ffe3c7d3412789c1f0e5976
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="event-class"></a>Класс event
 Сбрасываемое вручную событие, которое явно учитывает среду выполнения с параллелизмом.  
@@ -55,26 +38,26 @@ ms.lasthandoff: 03/17/2017
 class event;
 ```  
   
-## <a name="members"></a>Члены  
+## <a name="members"></a>Участники  
   
 ### <a name="public-constructors"></a>Открытые конструкторы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[~ событий деструктор](#dtor)|Уничтожает событие.|  
   
 ### <a name="public-methods"></a>Открытые методы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
-|[reset](#reset)|Сбрасывает событие в несигнальное состояние.|  
+|[reset](#reset)|Сбрасывает несигнальное состояние события.|  
 |[set](#set)|Указывает события.|  
-|[Ожидание](#wait)|Ожидает перехода события в сигнальное.|  
-|[wait_for_multiple](#wait_for_multiple)|Ожидает в течение нескольких события в сигнальное.|  
+|[Ожидание](#wait)|Ожидание события в сигнальное.|  
+|[wait_for_multiple](#wait_for_multiple)|Ожидает несколько событий в сигнальное.|  
   
 ### <a name="public-constants"></a>Открытые константы  
   
-|Имя|Описание|  
+|name|Описание:|  
 |----------|-----------------|  
 |[timeout_infinite](#timeout_infinite)|Значение, указывающее, что время ожидания никогда не должно истечь.|  
   
@@ -108,11 +91,11 @@ _CRTIMP event();
 ```  
   
 ### <a name="remarks"></a>Примечания  
- Предполагается, что существуют потоки, ожидающие события при выполнении деструктор. Разрешение уничтожения события при наличии ожидающих его результатов потоков приводит к неопределенному поведению.  
+ Ожидается, что нет потоков ожидают события при выполнении деструктора. Разрешение уничтожения события при наличии ожидающих его результатов потоков приводит к неопределенному поведению.  
   
 ##  <a name="reset"></a>Сброс 
 
- Сбрасывает событие в несигнальное состояние.  
+ Сбрасывает несигнальное состояние события.  
   
 ```
 void reset();
@@ -139,7 +122,7 @@ static const unsigned int timeout_infinite = COOPERATIVE_TIMEOUT_INFINITE;
   
 ##  <a name="wait"></a>Ожидание 
 
- Ожидает перехода события в сигнальное.  
+ Ожидание события в сигнальное.  
   
 ```
 size_t wait(unsigned int _Timeout = COOPERATIVE_TIMEOUT_INFINITE);
@@ -157,7 +140,7 @@ size_t wait(unsigned int _Timeout = COOPERATIVE_TIMEOUT_INFINITE);
   
 ##  <a name="wait_for_multiple"></a>wait_for_multiple 
 
- Ожидает в течение нескольких события в сигнальное.  
+ Ожидает несколько событий в сигнальное.  
   
 ```
 static size_t __cdecl wait_for_multiple(
@@ -169,26 +152,25 @@ static size_t __cdecl wait_for_multiple(
   
 ### <a name="parameters"></a>Параметры  
  `_PPEvents`  
- Массив событий для ожидания. Указывает количество событий в массиве `count` параметр.  
+ Массив событий для ожидания. Количество событий в массиве указывается параметром `count` параметр.  
   
  `count`  
- Количество событий в массиве, указанном в `_PPEvents` параметр.  
+ Количество событий в массиве, указанном в `_PPEvents` параметра.  
   
  `_FWaitAll`  
- Если задано значение `true`, параметр указывает, что все события в массиве, указанное в `_PPEvents` параметр должен принимать сигнал, чтобы удовлетворить ожидания. Если задано значение `false`, указывает, что любое событие в массиве, указанное в `_PPEvents` параметр сигнал, будет удовлетворять ожидание.  
+ Если задано значение `true`, параметр указывает, что все события в массиве, представлены в `_PPEvents` параметра должны принять сигнал, чтобы удовлетворить ожидание. Если задано значение `false`, указывает, что любое событие в массиве, представлены в `_PPEvents` параметр сигнал будет удовлетворять ожидание.  
   
  `_Timeout`  
  Указывает количество миллисекунд до истечения срока ожидания. Значение `COOPERATIVE_TIMEOUT_INFINITE` означает отсутствие времени ожидания.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
- Если было выполнено ожидания, индекс в массиве, переданный в `_PPEvents` параметр, который удовлетворяет условию ожидания; в противном случае — значение `COOPERATIVE_WAIT_TIMEOUT` для указания, что истекло время ожидания без условия.  
+ Если было выполнено ожидания, индекс в массиве, переданный в `_PPEvents` параметр, который удовлетворяет условию ожидания; в противном случае — значение `COOPERATIVE_WAIT_TIMEOUT` для указания, что истекло время ожидания не будет выполнено условие.  
   
 ### <a name="remarks"></a>Примечания  
- Если параметр `_FWaitAll` присвоено значение `true` для указания, что все события должны принять сигнал, чтобы удовлетворить ожидания, возвращаемый функцией индекс не переносит специального значения за исключением того, что оно не равно значению `COOPERATIVE_WAIT_TIMEOUT`.  
+ Если параметр `_FWaitAll` присвоено значение `true` для указания, что все события должны принять сигнал для удовлетворения ожидания, возвращаемый функцией индекс не переносит специального значения за исключением того, что он не является значением `COOPERATIVE_WAIT_TIMEOUT`.  
   
 > [!IMPORTANT]
 >  В приложении [!INCLUDE[win8_appname_long](../../../build/includes/win8_appname_long_md.md)] не следует вызывать `wait_for_multiple` в потоке ASTA, потому что такой вызов может заблокировать текущий поток и приложение перестанет отвечать.  
   
 ## <a name="see-also"></a>См. также  
  [Пространство имен concurrency](concurrency-namespace.md)
-

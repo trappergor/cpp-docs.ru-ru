@@ -9,24 +9,22 @@ ms.topic: article
 f1_keywords:
 - unordered_set/std::operator!=
 - unordered_set/std::operator==
-dev_langs:
-- C++
+dev_langs: C++
 ms.assetid: 8653eea6-12f2-4dd7-aa2f-db38a71599a0
-caps.latest.revision: 7
+caps.latest.revision: "7"
 manager: ghogen
-ms.translationtype: MT
-ms.sourcegitcommit: 65f4e356ad0d46333b0d443d0fd6ac0b9f2b6f58
 ms.openlocfilehash: 615e2f69a45a17b34b38190ac1c7def1de09d8c8
-ms.contentlocale: ru-ru
-ms.lasthandoff: 10/03/2017
-
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="ltunorderedsetgt-operators"></a>Операторы &lt;unordered_set&gt;
 |||||  
 |-|-|-|-|  
 |[оператор!=](#op_neq)|[оператор==](#op_eq_eq)|[оператор!=](#op_neq_unordered_multiset)|[оператор==](#op_eq_eq_unordered_multiset)|  
   
-##  <a name="op_neq"></a>  оператор!=  
+##  <a name="op_neq"></a> operator!=  
  Проверяет, не равен ли объект [unordered_set](../standard-library/unordered-set-class.md) в левой части объекту unordered_set в правой части.  
   
 ```
@@ -91,7 +89,7 @@ int main()
   
  `c2 != c3: true`  
   
-##  <a name="op_eq_eq"></a>  оператор==  
+##  <a name="op_eq_eq"></a> operator==  
  Проверяет, равен ли объект [unordered_set](../standard-library/unordered-set-class.md) в левой части объекту unordered_set в правой части.  
   
 ```
@@ -156,7 +154,7 @@ int main()
   
  `c2 == c3: false`  
   
-##  <a name="op_neq_unordered_multiset"></a>  оператор!=  
+##  <a name="op_neq_unordered_multiset"></a> operator!=  
  Проверяет, не равен ли объект [unordered_multiset](../standard-library/unordered-multiset-class.md) в левой части объекту unordered_multiset в правой части.  
   
 ```
@@ -224,7 +222,7 @@ int main()
   
  `c2 != c3: true`  
   
-##  <a name="op_eq_eq_unordered_multiset"></a>  оператор==  
+##  <a name="op_eq_eq_unordered_multiset"></a> operator==  
  Проверяет, равен ли объект [unordered_multiset](../standard-library/unordered-multiset-class.md) в левой части объекту unordered_multiset в правой части.  
   
 ```
@@ -294,7 +292,6 @@ int main()
   
 ## <a name="see-also"></a>См. также  
  [<unordered_set>](../standard-library/unordered-set.md)
-
 
 
 

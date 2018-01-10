@@ -1,40 +1,39 @@
 ---
-title: "ML Nonfatal Error A2050 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "A2050"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "A2050"
+title: "Некритичная ошибка ML A2050 | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: A2050
+dev_langs: C++
+helpviewer_keywords: A2050
 ms.assetid: 16f3a58f-4bde-48f1-b0e3-2ed9612780a5
-caps.latest.revision: 6
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 6
+caps.latest.revision: "6"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: a51a90f294afd0347057efb04ab37ce790532ba4
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 12/21/2017
 ---
-# ML Nonfatal Error A2050
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-**real или не разрешается номер загрузки данных конфигурации**  
+# <a name="ml-nonfatal-error-a2050"></a>Некритичная ошибка ML A2050
+**реальный или BCD номер не разрешен**  
   
- Константа числа с плавающей запятой \(real\) или binary закодированных десятичного числа \(загрузить\) данных конфигураций была использована за исключением как инициализатора данных.  
+ Число с плавающей запятой (real) или константа двоично-десятичный (BCD) не использовался как инициализатор данных.  
   
- Одно из произойденного следующих действий:  
+ Произошло одно из следующих:  
   
--   Вещественное число или данные конфигурации загрузки были использованы в выражении.  
+-   Вещественное число или данных конфигурации загрузки был использован в выражении.  
   
--   Вещественное число использовался для инициализации за исключением директива [dword](../../assembler/masm/dword.md)"  [8 байт](../../assembler/masm/qword.md)или  [TBYTE](../../assembler/masm/tbyte.md).  
+-   Вещественное число был использован для инициализации директивы, отличный от [DWORD](../../assembler/masm/dword.md), [QWORD](../../assembler/masm/qword.md), или [TBYTE](../../assembler/masm/tbyte.md).  
   
--   Загружает данные конфигурации используются для инициализации за исключением директива `TBYTE`.  
+-   BCD был использован для инициализации директивы, отличный от `TBYTE`.  
   
-## См. также  
- [ML Error Messages](../../assembler/masm/ml-error-messages.md)
+## <a name="see-also"></a>См. также  
+ [Сообщения об ошибках ML](../../assembler/masm/ml-error-messages.md)

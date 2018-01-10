@@ -1,37 +1,38 @@
 ---
-title: "Руководства по программированию изготовителей процессоров | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
+title: "Руководства по программированию изготовителей процессоров | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
 ms.assetid: 61844163-de2f-419a-808e-04de39dfdddf
-caps.latest.revision: 5
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 5
+caps.latest.revision: "5"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 6a9a37c640f0262e24a66e6880d469331826d559
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 12/21/2017
 ---
-# Руководства по программированию изготовителей процессоров
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Этот раздел содержит ссылки на веб\-сайты, которые могут содержать сведения о программировании процессоров, не изготовлены, проданный или поддерживается Майкрософт.  Корпорация Майкрософт не имеет или элемент управления веб\-сайты или содержимое на них.  
+# <a name="processor-manufacturer-programming-manuals"></a>Руководства по программированию изготовителей процессоров
+Эта статья содержит ссылки на веб-сайты, могут содержать сведения о программировании о процессоров, которые не являются производства, проданных или поддерживается корпорацией Майкрософт. Корпорация Майкрософт не владеете или управляете веб-сайты или содержимое на них.  
   
-## Веб\-сайты изготовителя ЦП  
+## <a name="processor-manufacturer-websites"></a>Веб-сайты изготовитель процессора  
   
--   [Справочные руководства набора инструкций AMD64](http://go.microsoft.com/fwlink/p/?LinkID=219796)  
+-   [AMD64 Набор инструкций справочных руководствах по](http://go.microsoft.com/fwlink/p/?LinkID=219796)  
   
--   [Intel 64 и руководства программного обеспечения архитектур IA\-32](http://go.microsoft.com/fwlink/p/?LinkID=219798)  
+-   [Руководства для разработчиков для программного обеспечения Intel 64 и IA-32 архитектуры](http://go.microsoft.com/fwlink/p/?LinkID=219798)  
   
--   [Intel набор расширений вектора \(AVX\)](http://go.microsoft.com/fwlink/p/?LinkID=219800)  
+-   [Intel Advanced Vector Extensions (AVX)](http://go.microsoft.com/fwlink/p/?LinkID=219800)  
   
-## Заметки  
- Ни [!INCLUDE[vsprvs](../../assembler/masm/includes/vsprvs_md.md)] и поддержка языка сборкой макроса Майкрософт всех процессоров.  
+## <a name="remarks"></a>Примечания  
+ Ни [!INCLUDE[vsprvs](../../assembler/masm/includes/vsprvs_md.md)] , ни Microsoft Macro Assembler поддерживают все процессоры.  
   
-## См. также  
- [Microsoft Macro Assembler Reference](../../assembler/masm/microsoft-macro-assembler-reference.md)
+## <a name="see-also"></a>См. также  
+ [Справочные материалы по ассемблеру Microsoft Macro Assembler](../../assembler/masm/microsoft-macro-assembler-reference.md)

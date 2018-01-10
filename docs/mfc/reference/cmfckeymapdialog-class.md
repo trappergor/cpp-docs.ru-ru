@@ -37,11 +37,12 @@ caps.latest.revision: "26"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 27278d64ab1aef17149a3b4c166cff9c302e29ca
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 1965e5dd2d522175b3709449df9a0b8575e20c59
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cmfckeymapdialog-class"></a>Класс CMFCKeyMapDialog
 `CMFCKeyMapDialog` Класс поддерживает элемент управления, который сопоставляет команды клавишам на клавиатуре.  
@@ -52,23 +53,23 @@ ms.lasthandoff: 10/24/2017
 class CMFCKeyMapDialog : public CDialogEx  
 ```  
   
-## <a name="members"></a>Члены  
+## <a name="members"></a>Участники  
   
 ### <a name="public-constructors"></a>Открытые конструкторы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[CMFCKeyMapDialog::CMFCKeyMapDialog](#cmfckeymapdialog)|Создает объект `CMFCKeyMapDialog`.|  
   
 ### <a name="public-methods"></a>Открытые методы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[CMFCKeyMapDialog::DoModal](#domodal)|Отображает диалоговое окно сопоставления клавиатуры.|  
   
 ### <a name="protected-methods"></a>Защищенные методы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[CMFCKeyMapDialog::FormatItem](#formatitem)|Вызывается платформой для создания строку, описывающую сопоставления ключей. По умолчанию строка содержит имя команды, сочетания клавиш, используемые и описание ключа сочетания клавиш.|  
 |[CMFCKeyMapDialog::GetCommandKeys](#getcommandkeys)|Возвращает строку, содержащую список сочетаний клавиш, связанных с указанной командой.|  
@@ -114,7 +115,7 @@ CMFCKeyMapDialog(
  Указатель на родительское окно `CMFCKeyMapDialog` объекта.  
   
  [in] `bEnablePrint`  
- `TRUE`Если можно распечатать список сочетаний клавиш; в противном случае `FALSE`. Значение по умолчанию — `FALSE`.  
+ `TRUE`Если можно распечатать список сочетаний клавиш; в противном случае `FALSE`. Значение по умолчанию — `FALSE`.  
   
 ### <a name="remarks"></a>Примечания  
   

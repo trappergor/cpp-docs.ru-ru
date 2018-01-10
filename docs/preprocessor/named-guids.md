@@ -1,42 +1,41 @@
 ---
-title: "named_guids | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "named_guids"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "named_guids - атрибут"
+title: "named_guids | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: named_guids
+dev_langs: C++
+helpviewer_keywords: named_guids attribute
 ms.assetid: b905e5e5-07fe-4874-8993-e05b9d639045
-caps.latest.revision: 4
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 4
+caps.latest.revision: "4"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 13e784056314fbd16c24b1cfc5894434e7b84f5d
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 12/21/2017
 ---
-# named_guids
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-**Блок, относящийся только к языку C\+\+**  
+# <a name="namedguids"></a>named_guids
+**Конкретных C++**  
   
- Указывает компилятору определять и инициализировать переменные GUID в старом стиле, в форме **LIBID\_MyLib**, **CLSID\_MyCoClass**, **IID\_MyInterface** и **DIID\_MyDispInterface**.  
+ Указывает компилятору определять и инициализировать переменные GUID в старом стиле, в формате **LIBID_MyLib**, **CLSID_MyCoClass**, **IID_MyInterface**, и **DIID _MyDispInterface**.  
   
-## Синтаксис  
+## <a name="syntax"></a>Синтаксис  
   
 ```  
 named_guids  
 ```  
   
-## Заметки  
- **Завершение блока, относящегося только к языку C\+\+**  
+## <a name="remarks"></a>Примечания  
+ **КОНЕЦ определенного C++**  
   
-## См. также  
- [Атрибуты \#import](../preprocessor/hash-import-attributes-cpp.md)   
- [Директива \#import](../Topic/%23import%20Directive%20\(C++\).md)
+## <a name="see-also"></a>См. также  
+ [атрибуты #import](../preprocessor/hash-import-attributes-cpp.md)   
+ [директива #import](../preprocessor/hash-import-directive-cpp.md)

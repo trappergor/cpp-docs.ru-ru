@@ -1,41 +1,42 @@
 ---
-title: "hash_map::size (STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::hash_map::size"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "size - член [STL/CLR]"
+title: "hash_map::size (STL/CLR) | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::hash_map::size
+dev_langs: C++
+helpviewer_keywords: size member [STL/CLR]
 ms.assetid: 5eb91502-1b11-4703-b473-eb609c181b74
-caps.latest.revision: 16
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 14
+caps.latest.revision: "16"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: e5e07965ec9ba8e876f4141f28a653cb74433862
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 12/21/2017
 ---
-# hash_map::size (STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="hashmapsize-stlclr"></a>hash_map::size (STL/CLR)
 Подсчитывает количество элементов.  
   
-## Синтаксис  
+## <a name="syntax"></a>Синтаксис  
   
 ```  
 size_type size();  
 ```  
   
-## Заметки  
- Возвращает длину функцию\-член контролируемой последовательности.  Он используется для определения числа элементов в контролируемой последовательности.  Если требуется заботите около, имеет ли последовательность ненулевое размер см. в разделе [hash\_map::empty](../dotnet/hash-map-empty-stl-clr.md)`()`.  
+## <a name="remarks"></a>Примечания  
+ Функция-член возвращает длину управляемой последовательности. Используется для определения количества элементов в данный момент в управляемой последовательности. Если вас интересует ли последовательность имеет ненулевое значение, размер, в разделе [hash_map::empty (STL/CLR)](../dotnet/hash-map-empty-stl-clr.md)`()`.  
   
-## Пример  
+## <a name="example"></a>Пример  
   
 ```  
 // cliext_hash_map_size.cpp   
@@ -68,14 +69,17 @@ int main()
   
 ```  
   
-  **\[1\] \[2\] \[BC — 3\]**  
-**size\(\) \= 0 после очистки**  
-**size\(\) \= 2 после добавления 2**   
-## Требования  
- **Заголовок:**\<cliext\/hash\_map\>  
+```Output  
+ [a 1] [b 2] [c 3]  
+size() = 0 after clearing  
+size() = 2 after adding 2  
+```  
+  
+## <a name="requirements"></a>Требования  
+ **Заголовок:** \<cliext/hash_map >  
   
  **Пространство имен:** cliext  
   
-## См. также  
- [hash\_map](../dotnet/hash-map-stl-clr.md)   
- [hash\_map::empty](../dotnet/hash-map-empty-stl-clr.md)
+## <a name="see-also"></a>См. также  
+ [hash_map (STL/CLR)](../dotnet/hash-map-stl-clr.md)   
+ [hash_map::empty (STL/CLR)](../dotnet/hash-map-empty-stl-clr.md)

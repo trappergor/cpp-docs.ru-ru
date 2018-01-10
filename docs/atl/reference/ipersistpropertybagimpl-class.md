@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-windows
+ms.technology: cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
@@ -15,41 +14,25 @@ f1_keywords:
 - ATLCOM/ATL::IPersistPropertyBagImpl::InitNew
 - ATLCOM/ATL::IPersistPropertyBagImpl::Load
 - ATLCOM/ATL::IPersistPropertyBagImpl::Save
-dev_langs:
-- C++
-helpviewer_keywords:
-- IPersistPropertyBagImpl class
+dev_langs: C++
+helpviewer_keywords: IPersistPropertyBagImpl class
 ms.assetid: 712af24d-99f8-40f2-9811-53b3ff6e5b19
-caps.latest.revision: 20
+caps.latest.revision: "20"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: d2d39abf526a58b8442107b5ee816f316ae841f5
-ms.openlocfilehash: abef2ffa759cf74ee2316c7e0c9dd84f5c76b1d7
-ms.contentlocale: ru-ru
-ms.lasthandoff: 03/31/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: 3783d505c989b11205104cd70a9c440aa6f645f7
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="ipersistpropertybagimpl-class"></a>Класс IPersistPropertyBagImpl
 Этот класс реализует **IUnknown** и позволяет сохранить его свойств в контейнер свойств, предоставленное клиентом объекту.  
   
 > [!IMPORTANT]
->  Этот класс и его члены не может использоваться в приложениях, выполняемых в [!INCLUDE[wrt](../../atl/reference/includes/wrt_md.md)].  
+>  Этот класс и его члены не может использоваться в приложениях, выполняемых в среде выполнения Windows.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -62,11 +45,11 @@ class ATL_NO_VTABLE IPersistPropertyBagImpl : public IPersistPropertyBag
  `T`  
  Класс, производный от `IPersistPropertyBagImpl`.  
   
-## <a name="members"></a>Члены  
+## <a name="members"></a>Участники  
   
 ### <a name="public-methods"></a>Открытые методы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[IPersistPropertyBagImpl::GetClassID](#getclassid)|Извлекает идентификатор CLSID объекта.|  
 |[IPersistPropertyBagImpl::InitNew](#initnew)|Инициализирует только что созданный объект. Возвращает реализацию ATL `S_OK`.|  
@@ -96,7 +79,7 @@ STDMETHOD(GetClassID)(CLSID* pClassID);
 ```  
   
 ### <a name="remarks"></a>Примечания  
- В разделе [IPersist::GetClassID](http://msdn.microsoft.com/library/windows/desktop/ms688664) в [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
+ В разделе [IPersist::GetClassID](http://msdn.microsoft.com/library/windows/desktop/ms688664) в Windows SDK.  
   
 ##  <a name="initnew"></a>IPersistPropertyBagImpl::InitNew  
  Инициализирует только что созданный объект.  
@@ -109,7 +92,7 @@ STDMETHOD(InitNew)();
  Возвращает `S_OK`.  
   
 ### <a name="remarks"></a>Примечания  
- В разделе [IPersistPropertyBag::InitNew](https://msdn.microsoft.com/library/aa768204.aspx) в [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
+ В разделе [IPersistPropertyBag::InitNew](https://msdn.microsoft.com/library/aa768204.aspx) в Windows SDK.  
   
 ##  <a name="load"></a>IPersistPropertyBagImpl::Load  
  Загружает свойства объекта из контейнера свойств, предоставленное клиентом.  
@@ -121,7 +104,7 @@ STDMETHOD(Load)(LPPROPERTYBAG pPropBag, LPERRORLOG pErrorLog);
 ### <a name="remarks"></a>Примечания  
  ATL использует сопоставление свойств объекта для получения этих сведений.  
   
- В разделе [IPersistPropertyBag::Load](https://msdn.microsoft.com/library/aa768206.aspx) в [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
+ В разделе [IPersistPropertyBag::Load](https://msdn.microsoft.com/library/aa768206.aspx) в Windows SDK.  
   
 ##  <a name="save"></a>IPersistPropertyBagImpl::Save  
  Сохраняет свойства объекта в контейнер свойств, предоставленное клиентом.  
@@ -136,9 +119,8 @@ STDMETHOD(Save)(
 ### <a name="remarks"></a>Примечания  
  ATL использует сопоставление свойств объекта для хранения этой информации. По умолчанию этот метод сохраняет все свойства, независимо от значения *fSaveAllProperties*.  
   
- В разделе [IPersistPropertyBag::Save](https://msdn.microsoft.com/library/aa768207.aspx) в [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
+ В разделе [IPersistPropertyBag::Save](https://msdn.microsoft.com/library/aa768207.aspx) в Windows SDK.  
   
 ## <a name="see-also"></a>См. также  
  [BEGIN_PROP_MAP](property-map-macros.md#begin_prop_map)   
  [Общие сведения о классе](../../atl/atl-class-overview.md)
-

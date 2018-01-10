@@ -1,36 +1,36 @@
 ---
-title: "operator ; | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "operator %3B"
-  - "%3B"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "operator ;"
-  - "semicolon operator"
-  - "; operator"
+title: "оператор; | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- operator %3B
+- '%3B'
+dev_langs: C++
+helpviewer_keywords:
+- operator ;
+- semicolon operator
+- ; operator
 ms.assetid: 8369b28c-1fee-4e9a-a4a6-7db627e21075
-caps.latest.revision: 6
-caps.handback.revision: 6
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
+caps.latest.revision: "6"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 84f18d6ce38fdf644908b007f188d1a075bff994
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 12/21/2017
 ---
-# operator ;
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Рассматривает *Текст* в виде комментария.  
+# <a name="operator-"></a>Оператор ;
+Рассматривает *текст* как комментарий.  
   
-## Синтаксис  
+## <a name="syntax"></a>Синтаксис  
   
 ```  
   
@@ -39,5 +39,5 @@ text
   
 ```  
   
-## См. также  
- [Operators Reference](../Topic/Operators%20Reference.md)
+## <a name="see-also"></a>См. также  
+ [Справочник по операторам](../../assembler/masm/operators-reference.md)

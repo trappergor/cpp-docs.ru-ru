@@ -1,32 +1,33 @@
 ---
-title: "Класс MakeAllocator | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "implements/Microsoft::WRL::Details::MakeAllocator"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "MakeAllocator - класс"
+title: "Класс MakeAllocator | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: implements/Microsoft::WRL::Details::MakeAllocator
+dev_langs: C++
+helpviewer_keywords: MakeAllocator class
 ms.assetid: a1114615-abd7-4a56-9bc3-750c118f0fa1
-caps.latest.revision: 5
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 5
+caps.latest.revision: "5"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: 523bcdb17fc0a1b74fe615e5ff15a6fcef99cc32
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 12/21/2017
 ---
-# Класс MakeAllocator
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Предназначено для поддержки инфраструктуры WRL, а не для непосредственного использования в коде.  
+# <a name="makeallocator-class"></a>MakeAllocator - класс
+Поддерживает инфраструктуру WRL и не предназначен для использования непосредственно из программного кода.  
   
-## Синтаксис  
+## <a name="syntax"></a>Синтаксис  
   
 ```  
   
@@ -47,43 +48,43 @@ template<
 class MakeAllocator<T, true>;  
 ```  
   
-#### Параметры  
+#### <a name="parameters"></a>Параметры  
  `T`  
  Имя типа.  
   
  `hasWeakReferenceSupport`  
- `true` для выделения памяти для объекта, который поддерживает слабые ссылки; `false` для выделения памяти для объекта, который не поддерживает слабые ссылки.  
+ `true`выделить память для объекта, который поддерживает слабые ссылки; `false` выделить память для объекта, который не поддерживает слабые ссылки.  
   
-## Примечания  
- Выделяет память для активируемого класса с поддержкой или без поддержки слабой ссылки.  
+## <a name="remarks"></a>Примечания  
+ Выделяет память для активируемого класса, независимо от поддержки слабой ссылки.  
   
- Переопределите класс MakeAllocator для реализации определяемой пользователем модели выделения памяти.  
+ Переопределите MakeAllocator-класс для реализации модели выделения памяти, определяемые пользователем.  
   
- MakeAllocator обычно используется для предотвращения утечки памяти, если объект бросается во время построения.  
+ MakeAllocator обычно используется для предотвращения утечек памяти в том случае, если объект создается во время построения.  
   
-## Члены  
+## <a name="members"></a>Участники  
   
-### Открытые конструкторы  
+### <a name="public-constructors"></a>Открытые конструкторы  
   
-|Имя|Описание|  
-|---------|--------------|  
-|[Конструктор MakeAllocator::MakeAllocator](../windows/makeallocator-makeallocator-constructor.md)|Инициализирует новый экземпляр класса RoleService MakeAllocator.|  
-|[Деструктор MakeAllocator::~MakeAllocator](../Topic/MakeAllocator::~MakeAllocator%20Destructor.md)|Уничтожает текущий экземпляр класса MakeAllocator.|  
+|Имя|Описание:|  
+|----------|-----------------|  
+|[Конструктор MakeAllocator::MakeAllocator](../windows/makeallocator-makeallocator-constructor.md)|Инициализирует новый экземпляр класса MakeAllocator.|  
+|[Деструктор MakeAllocator::~MakeAllocator](../windows/makeallocator-tilde-makeallocator-destructor.md)|Деинициализирует текущий экземпляр класса MakeAllocator.|  
   
-### Открытые методы  
+### <a name="public-methods"></a>Открытые методы  
   
-|Имя|Описание|  
-|---------|--------------|  
-|[Метод MakeAllocator::Allocate](../Topic/MakeAllocator::Allocate%20Method.md)|Выделяет память и связывает ее с текущим объектом MakeAllocator.|  
-|[Метод MakeAllocator::Detach](../windows/makeallocator-detach-method.md)|Диассоциирует память, выделенную методом [Allocate](../Topic/MakeAllocator::Allocate%20Method.md) из текущего объекта MakeAllocator.|  
+|Имя|Описание:|  
+|----------|-----------------|  
+|[Метод MakeAllocator::Allocate](../windows/makeallocator-allocate-method.md)|Выделяет память и связывает ее с текущим объектом MakeAllocator.|  
+|[Метод MakeAllocator::Detach](../windows/makeallocator-detach-method.md)|Отсоединяет памяти, выделенной с помощью [Allocate](../windows/makeallocator-allocate-method.md) метод с текущим объектом MakeAllocator.|  
   
-## Иерархия наследования  
+## <a name="inheritance-hierarchy"></a>Иерархия наследования  
  `MakeAllocator`  
   
-## Требования  
+## <a name="requirements"></a>Требования  
  **Заголовок:** implements.h  
   
- **Пространство имен:** Microsoft::WRL::Details  
+ **Пространство имен:** Microsoft::wrl:: Details  
   
-## См. также  
+## <a name="see-also"></a>См. также  
  [Пространство имен Microsoft::WRL::Details](../windows/microsoft-wrl-details-namespace.md)

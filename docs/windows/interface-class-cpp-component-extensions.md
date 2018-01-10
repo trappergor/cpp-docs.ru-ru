@@ -1,98 +1,100 @@
 ---
-title: "interface class (расширения компонентов C++) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/16/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-f1_keywords: 
-  - "interface_CPP"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "класс интерфейса - ключевое слово"
-  - "interface struct - ключевое слово"
+title: "интерфейс класса (расширения компонентов C++) | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+f1_keywords: interface_CPP
+dev_langs: C++
+helpviewer_keywords:
+- interface class keyword
+- interface struct keyword
 ms.assetid: 3ccea701-f50b-4da7-ad6b-f0ee1203e2b9
-caps.latest.revision: 30
-caps.handback.revision: 28
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "30"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: abe4173dabd20442b96c8e5536b040483df4f150
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 12/21/2017
 ---
-# interface class (расширения компонентов C++)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Объявляет интерфейс  Дополнительные сведения об собственных интерфейсах см. в разделе [\_\_interface](../Topic/__interface.md).  
+# <a name="interface-class--c-component-extensions"></a>interface class (расширения компонентов C++)
+Объявляет интерфейс.  Сведения о собственном интерфейсы см [__interface](../cpp/interface.md).  
   
-## Все среды выполнения  
+## <a name="all-runtimes"></a>Все среды выполнения  
  **Синтаксис**  
   
 ```  
   
-        interface_access interface class  name :  inherit_access base_interface {};  
-interface_access interface struct name :  inherit_access base_interface {};  
+interface_access  
+interface class  
+ name :  inherit_accessbase_interface{};interface_accessinterface structname :  inherit_accessbase_interface{};  
 ```  
   
  **Параметры**  
   
- *interface\_access*  
- Доступность интерфейса за пределами сборки.  Возможные значения **public** и `private`. `private` по умолчанию.  Вложенные интерфейсы не могут иметь описатель *interface\_access*.  
+ *interface_access*  
+ Доступность интерфейса за пределами сборки.  Возможными значениями являются **открытый** и `private`.  Значение по умолчанию — `private`.  Интерфейсы не могут иметь *interface_access* спецификатор.  
   
  *name*  
  Имя интерфейса.  
   
- *inherit\_access*  
- Доступность *base\_interface*.  Единственной разрешенной доступностью базового интерфейса является `public` \(по умолчанию\).  
+ *inherit_access*  
+ Доступность *base_interface*.  Единственным разрешается специальных возможностей, для базового интерфейса `public` (по умолчанию).  
   
- *base\_interface* \(необязательно\)  
- Базовый интерфейс для интерфейса *name*.  
+ *base_interface* (необязательно)  
+ Базовый интерфейс для интерфейса *имя*.  
   
- **Примечания**  
+ **Заметки**  
   
- **interface struct** эквивалентна **interface class**.  
+ **Структура интерфейса** эквивалентно **класс интерфейса**.  
   
- Интерфейс может содержать объявления для функций, событий и свойств.  Все члены интерфейса имеют общую доступность.  Интерфейс может также содержать статические данные\-члены, функции, события и свойства, и эти статические члены должны определяться в интерфейсе.  
+ Интерфейс может содержать объявления для функций, события и свойства.  Все члены интерфейса быть открытым. Интерфейс может также содержать статические данные-члены, функции, события и свойства, и эти статические члены должны быть объявлены в интерфейсе.  
   
- Интерфейс определяет как класс может быть реализован.  Интерфейс не является классом, а классы могут только реализовывать интерфейсы.  Когда класс определяет функцию, объявленную в интерфейсе, функция реализуется, а не переопределяется.  Поэтому поиск имени не включает члены интерфейса.  
+ Интерфейс определяет реализации класса. Интерфейс не является классом и классы только могут реализовывать интерфейсы. Если класс определяет функции, объявленной в интерфейсе, функция реализована, не переопределен. Таким образом поиск имени не включает членов интерфейса.  
   
- Класс или структура, которая является производной от интерфейса, должна реализовывать все члены интерфейса.  При реализации *name* интерфейса необходимо также реализовать интерфейсы в списке `base_interface`.  
+ Класс или структура, производный от интерфейса необходимо реализовать все члены интерфейса. При реализации интерфейса *имя* также должен реализовывать интерфейсы в `base_interface` списка.  
   
- Дополнительные сведения см. в следующих разделах:  
+ Дополнительные сведения:  
   
 -   [Статический конструктор интерфейса](../dotnet/how-to-define-an-interface-static-constructor-cpp-cli.md)  
   
--   [Универсальные интерфейсы \(Visual C\+\+\)](../Topic/Generic%20Interfaces%20\(Visual%20C++\).md)  
+-   [Универсальные интерфейсы (Visual C++)](../windows/generic-interfaces-visual-cpp.md)  
   
- Сведения о других типах CLR см. в разделе [Классы и структуры](../windows/classes-and-structs-cpp-component-extensions.md).  
+ Сведения о других типов среды CLR см. в разделе [классы и структуры](../windows/classes-and-structs-cpp-component-extensions.md).  
   
- Можно определить во время компиляции, является ли тип интерфейсом с помощью `__is_interface_class(``type``)`.  Для получения дополнительной информации см. [Поддержка характеристик типов компилятором](../windows/compiler-support-for-type-traits-cpp-component-extensions.md).  
+ Можно обнаружить во время компиляции, если тип является интерфейсом с `__is_interface_class(type)`. Дополнительные сведения см. в разделе [поддержка характеристик типов компилятором](../windows/compiler-support-for-type-traits-cpp-component-extensions.md).  
   
- В среде разработки можно получить справку F1 по этим ключевым словам, выделив ключевое слово \(например,`interface class`\) и нажав клавишу F1.  
+ В среде разработки можно получить справку F1 на эти ключевые слова, выделение ключевое слово (`interface class`, например) и нажать клавишу F1.  
   
-## [!INCLUDE[wrt](../atl/reference/includes/wrt_md.md)]  
- **Примечания**  
+## <a name="windows-runtime"></a>Среда выполнения Windows  
+ **Заметки**  
   
- \(Отсутствуют комментарии для этой функции языка, которая применяется только в среде выполнения Windows\).  
+ (Отсутствуют комментарии для этой возможности языка, которая применяется только в среде выполнения Windows).  
   
-### Требования  
- Параметр компилятора: **\/ZW**  
+### <a name="requirements"></a>Требования  
+ Параметр компилятора: **/ZW**  
   
-## [!INCLUDE[clr_for_headings](../dotnet/includes/clr_for_headings_md.md)]  
- **Примечания**  
+## <a name="common-language-runtime"></a>Среда CLR 
+ **Заметки**  
   
- \(Отсутствуют комментарии для этой функции языка, которая применяется только в среде CLR\).  
+ (Отсутствуют комментарии для этой возможности языка, которая применяется только в среде CLR).  
   
-### Требования  
- Параметр компилятора: **\/clr**  
+### <a name="requirements"></a>Требования  
+ Параметр компилятора: **/clr**  
   
-### Примеры  
+### <a name="examples"></a>Примеры  
  **Пример**  
   
- В следующем примере кода показано, как интерфейс может определять поведение функции clock.  
+ В следующем примере кода показано, как интерфейс можно определить поведение функции часов.  
   
 ```  
 // mcppv2_interface_class.cpp  
@@ -184,16 +186,25 @@ int main() {
 }  
 ```  
   
- **Output**  
+ **Вывод**  
   
-  **в функции 3**  
- **в функции 2**  
- **в функции 1**  
- **8**  
- **OnClick: 7, 3.14159**  
- **в функции 1** **Пример**  
+```Output  
+in Function_3  
   
- В следующем примере кода показаны два способа реализации функций с одной и той же сигнатурой, объявленных в нескольких интерфейсах, и где эти интерфейсы используются классом.  
+in Function_2  
+  
+in Function_1  
+  
+8  
+  
+OnClick: 7, 3.14159  
+  
+in Function_1  
+```  
+  
+ **Пример**  
+  
+ В следующем примере кода показаны два способа реализации функций с такой же сигнатурой, объявленных в нескольких интерфейсах и использования этих интерфейсов в классе.  
   
 ```  
 // mcppv2_interface_class_2.cpp  
@@ -218,5 +229,5 @@ ref struct R : I, J {
 };  
 ```  
   
-## См. также  
+## <a name="see-also"></a>См. также  
  [Расширения компонентов для платформ среды выполнения](../windows/component-extensions-for-runtime-platforms.md)

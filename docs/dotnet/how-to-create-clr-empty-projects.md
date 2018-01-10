@@ -1,48 +1,51 @@
 ---
-title: "Практическое руководство. Создание пустых проектов CLR | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "пустые проекты CLR"
-  - "пустые проекты CLR, создание"
+title: "Как: создание пустых проектов CLR | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- CLR empty projects
+- CLR empty projects, creating
 ms.assetid: edb4574f-fea7-426d-9b5c-fa4ecad2befb
-caps.latest.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 10
+caps.latest.revision: "10"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: 81d24698ccdc769f93882287dfa94dbb12d9d197
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 12/21/2017
 ---
-# Практическое руководство. Создание пустых проектов CLR
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Чтобы создать пустой проект среды CLR используйте шаблон **Пустой проект CLR**, доступный в диалоговом окне **Создать проект**.  
+# <a name="how-to-create-clr-empty-projects"></a>Практическое руководство. Создание пустых проектов CLR
+Для создания пустого проекта CLR используйте **пустой проект CLR** шаблона, которое доступно из **новый проект** диалоговое окно.  
   
 > [!NOTE]
->  Вид функций в интегрированной среде разработки может зависеть от текущих настроек или выпуска и отличаться от описанного в справке.  Чтобы изменить параметры, в меню **Сервис** выберите команду **Импорт и экспорт параметров**.  Дополнительные сведения см. в разделе [Customizing Development Settings in Visual Studio](http://msdn.microsoft.com/ru-ru/22c4debb-4e31-47a8-8f19-16f328d7dcd3).  
+>  Вид функций в Интегрированной среде разработки может зависеть от текущих параметров или выпуска и могут отличаться от описанных в справке. Чтобы изменить параметры, выберите в меню **Сервис** пункт **Импорт и экспорт параметров** . Дополнительные сведения см. в статье [Настройка параметров разработки в Visual Studio](http://msdn.microsoft.com/en-us/22c4debb-4e31-47a8-8f19-16f328d7dcd3).  
   
-### Создание пустого проекта CLR  
+### <a name="to-create-a-clr-empty-project"></a>Для создания пустого проекта CLR  
   
-1.  В меню **Файл** последовательно выберите пункты **Создать** и **Проект**.  
+1.  В меню **Файл** последовательно выберите пункты **Создать**и **Проект**.  
   
-     Откроется диалоговое окно **Создание проекта**.  
+     Откроется диалоговое окно **Новый проект** .  
   
-2.  В разделе **Установленные шаблоны** щелкните узел **Visual C\+\+**, а затем щелкните узел **CLR**.  Выберите значок **Пустой проект CLR**.  
+2.  В разделе **установленные шаблоны**, нажмите кнопку **Visual C++** узла; нажмите кнопку **CLR** узла. Выберите **пустой проект CLR** значок.  
   
-3.  В поле **Имя** введите уникальное имя приложения.  
+3.  В поле **Имя** введите уникальное имя для приложения.  
   
     > [!NOTE]
-    >  В диалоговом окне **Создание проекта** можно задать и другие параметры проекта и решения, но это необязательно.  
+    >  Можно также указать другие параметры проекта и решения из **новый проект** диалоговое окно, но эти параметры не требуются.  
   
 4.  Нажмите кнопку **ОК**.  
   
-## См. также  
- [Типы проектов Visual C\+\+](../ide/visual-cpp-project-types.md)   
- [Типы проектов Visual C\+\+](../Topic/Debugging%20Preparation:%20Visual%20C++%20Project%20Types.md)
+## <a name="see-also"></a>См. также  
+ [Типы проектов Visual C++](../ide/visual-cpp-project-types.md)   
+ [Типы проектов Visual C++](/visualstudio/debugger/debugging-preparation-visual-cpp-project-types)

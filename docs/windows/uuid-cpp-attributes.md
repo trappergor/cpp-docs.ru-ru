@@ -1,33 +1,33 @@
 ---
-title: "uuid (C++ Attributes) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-f1_keywords: 
-  - "vc-attr.uuid"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "uuid attribute"
+title: "UUID (атрибуты C++) | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+f1_keywords: vc-attr.uuid
+dev_langs: C++
+helpviewer_keywords: uuid attribute
 ms.assetid: 90562a94-5e28-451b-a4b0-cadda7f66efe
-caps.latest.revision: 11
-caps.handback.revision: 11
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "11"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: ba35dc89ae2567a499d4623f0c74293d2dbdcca2
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 12/21/2017
 ---
-# uuid (C++ Attributes)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Указывает уникальный идентификатор класса или интерфейса.  
+# <a name="uuid-c-attributes"></a>uuid (атрибуты C++)
+Указывает уникальный идентификатор для класса или интерфейса.  
   
-## Синтаксис  
+## <a name="syntax"></a>Синтаксис  
   
 ```  
   
@@ -36,39 +36,38 @@ manager: "ghogen"
 ) ]  
 ```  
   
-#### Параметры  
- *uuid*  
- 128 Бит, уникального идентификатора.  
+#### <a name="parameters"></a>Параметры  
+ *UUID*  
+ 128 бит, уникальный идентификатор.  
   
-## Заметки  
- Если определение интерфейса или класса не определен `uuid` Атрибут C\+\+, затем компилятор Visual C\+\+ предоставляет одно.  При указании a `uuid`необходимо включить кавычки.  
+## <a name="remarks"></a>Примечания  
+ Если не указать определение класса или интерфейса `uuid` языка c++, то компилятор Visual C++ выдает один. При указании `uuid`, необходимо указывать в кавычках.  
   
- Если не указано `uuid`после этого компилятор создает один и тот же идентификатор GUID для интерфейсов и классов с тем же именем в различных проектах атрибута на компьютере.  
+ Если вы не укажете `uuid`, то компилятор создаст одинаковый идентификатор GUID для интерфейсов или классов с тем же именем в другой атрибут проекты на компьютере.  
   
- Uuidgen.exe или Guidgen.exe можно использовать, чтобы создавать собственные уникальные идентификаторы.  \(Выполняться одно из этих средств, нажмите кнопку **Запуск** и щелкните элемент  **Выполнить** в меню.  Введите имя требуемого tools\).  
+ Uuidgen.exe или Guidgen.exe можно использовать для создания собственных уникальных идентификаторов. (Для запуска этих средств нажмите **запустить** и нажмите кнопку **запуска** меню. Затем введите имя средства требуется.)  
   
- При использовании в проекте, который также не использует библиотеки ATL, указав `uuid` атрибут аналогичен определение  [UUID](../cpp/uuid-cpp.md) модификатор \_\_declspec.  Восстановление `uuid` класса можно использовать  [\_\_uuidof](../cpp/uuidof-operator.md)  
+ При использовании в проекте, также не используйте ATL, указав `uuid` атрибут является тот же [uuid](../cpp/uuid-cpp.md) __declspec-модификатор. Для получения `uuid` класса, можно использовать [__uuidof](../cpp/uuidof-operator.md)  
   
-## Пример  
- См. [bindable](../windows/bindable.md) пример использования образца  `uuid`.  
+## <a name="example"></a>Пример  
+ В разделе [привязываемых](../windows/bindable.md) пример приведен пример использования `uuid`.  
   
-## Требования  
+## <a name="requirements"></a>Требования  
   
-### Контекст атрибута  
+### <a name="attribute-context"></a>Контекст атрибута  
   
 |||  
 |-|-|  
-|**Применение**|**класс**"  `struct`"  `interface`"  **union**"  `enum`|  
-|**Repeatable**|Нет|  
-|**Обязательные атрибуты**|None|  
-|**Недопустимые атрибуты**|None|  
+|**Применение**|**Класс**, `struct`, `interface`, **объединение**,`enum`|  
+|**Повторяемый**|Нет|  
+|**Обязательные атрибуты**|Нет|  
+|**Недопустимые атрибуты**|Нет|  
   
- Дополнительные сведения о контекстах атрибута см. в разделе [Контексты атрибута](../windows/attribute-contexts.md).  
+ Дополнительные сведения о контекстах атрибутов см. в разделе [Контексты атрибутов](../windows/attribute-contexts.md).  
   
-## См. также  
- [IDL Attributes](../windows/idl-attributes.md)   
- [Interface Attributes](../windows/interface-attributes.md)   
- [Class Attributes](../windows/class-attributes.md)   
- [Typedef, Enum, Union, and Struct Attributes](../windows/typedef-enum-union-and-struct-attributes.md)   
- [uuid](http://msdn.microsoft.com/library/windows/desktop/aa367302)   
- [Attributes Samples](http://msdn.microsoft.com/ru-ru/558ebdb2-082f-44dc-b442-d8d33bf7bdb8)
+## <a name="see-also"></a>См. также  
+ [Атрибуты IDL](../windows/idl-attributes.md)   
+ [Атрибуты интерфейса](../windows/interface-attributes.md)   
+ [Атрибуты классов](../windows/class-attributes.md)   
+ [TypeDef, Enum, Union и Struct атрибуты](../windows/typedef-enum-union-and-struct-attributes.md)   
+ [UUID](http://msdn.microsoft.com/library/windows/desktop/aa367302)   

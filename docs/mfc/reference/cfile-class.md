@@ -71,11 +71,12 @@ caps.latest.revision: "22"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 4db8a7ee97c414a7775df393d419c7d12d61cdbf
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 1f7a2b0e1dd95b460d6b6007e79378bc69f1b4ce
+ms.sourcegitcommit: 2aeb507a426fc7881ea59115b1d5139c0a30ba91
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="cfile-class"></a>CFile-класс
 Базовый класс для файловых классов Microsoft Foundation Class.  
@@ -86,17 +87,17 @@ ms.lasthandoff: 10/24/2017
 class CFile : public CObject  
 ```  
   
-## <a name="members"></a>Члены  
+## <a name="members"></a>Участники  
   
 ### <a name="public-constructors"></a>Открытые конструкторы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[CFile::CFile](#cfile)|Создает `CFile` объекта из дескриптора путь или файл.|  
   
 ### <a name="public-methods"></a>Открытые методы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[CFile::Abort](#abort)|Закрывает файл, игнорируя все предупреждения и ошибки.|  
 |[CFile::Close](#close)|Файл был закрыт и удаляет объект.|  
@@ -124,20 +125,20 @@ class CFile : public CObject
   
 ### <a name="public-operators"></a>Открытые операторы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[CFile::operator ДЕСКРИПТОРА](#operator_handle)|Дескриптор `CFile` объекта.|  
   
 ### <a name="public-data-members"></a>Открытые члены данных  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[CFile::hFileNull](#hfilenull)|Определяет, если `CFile` объект имеет допустимый дескриптор.|  
 |[CFile::m_hFile](#m_hfile)|Обычно содержит дескриптор файла операционной системы.|  
   
 ### <a name="protected-data-members"></a>Защищенные члены данных  
   
-|Имя|Описание|  
+|name|Описание:|  
 |----------|-----------------|  
 |[CFile::m_pTM](#m_ptm)|Указатель на `CAtlTransactionManager` объект.|  
   
@@ -183,7 +184,7 @@ virtual void Abort();
 ```  
 CFile();  
 CFile(CAtlTransactionManager* pTM);  
-  CFile(HANDLE hFile);
+CFile(HANDLE hFile);
 
  
 CFile(
@@ -240,7 +241,7 @@ CAtlTransactionManager* pTM);
   
  Выберите первый или и первый, и второй из следующих параметров режима создания файла. Режим создания по умолчанию — `CFile::modeNoTruncate`, т. е. открывается существующий файл.  
   
-|Значение|Описание|  
+|Значение|Описание:|  
 |-----------|-----------------|  
 |`CFile::modeCreate`|Создает новый файл, если файл не существует.; Если файл уже существует, [CFileException](../../mfc/reference/cfileexception-class.md) возникает.|  
 |`CFile::modeNoTruncate`|Создает файл, если он не существует. В противном случае файл присоединяется к объекту `CFile`.|  
@@ -670,7 +671,7 @@ UINT nFrom);
 ### <a name="remarks"></a>Примечания  
  В следующей таблице перечислены возможные значения для `nFrom` параметра.  
   
-|Значение|Описание|  
+|Значение|Описание:|  
 |-----------|-----------------|  
 |`CFile::begin`|Поиск с начала файла.|  
 |`CFile::current`|Поиск от текущего расположения указателя файла.|  

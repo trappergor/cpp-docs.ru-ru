@@ -15,11 +15,12 @@ caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: b16df22efe86310e4d6faeadc35085507e15a7e9
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: ee958116b7eed8804bb6c540187eea6b37d750ef
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="using-cmonthcalctrl"></a>Использование CMonthCalCtrl
 Управляющий элемент календаря ([CMonthCalCtrl](../mfc/reference/cmonthcalctrl-class.md)) реализует интерфейс календаря. Это предоставляет пользователю интуитивно понятный способ ввода или выбора даты. Элемент управления также предоставляет приложению возможность получения и задания сведений о дате в элементе управления с помощью существующих типов данных. По умолчанию управляющий элемент календаря отображает текущий день и месяц. Тем не менее пользователь имеет возможность прокрутки на предыдущий и следующий месяц и выберите определенный месяц или год.  

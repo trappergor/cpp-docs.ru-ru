@@ -13,11 +13,12 @@ caps.latest.revision: "12"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 1bb9bbdd6deb0a8e459f2f2b8d5b6188c7517e6c
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 5e7f69c2ac2dbd8a0079d9160100077ccd35513e
+ms.sourcegitcommit: 54035dce0992ba5dce0323d67f86301f994ff3db
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 01/03/2018
 ---
 # <a name="arm-assembler-command-line-reference"></a>Справочник по командной строке ассемблера ARM
 В этой статье рассматривается командной строки ассемблеру Microsoft ARM, *armasm*, который компилирует ARMv7 Thumb языка ассемблера в реализацию корпорации Майкрософт общий объект формата файла (COFF). Компоновщик может привязывать COFF код и код объекта, созданного компилятором C вместе с библиотеки объектов, созданных библиотекарь или код на языке ассемблера ARM.  
@@ -41,7 +42,7 @@ armasm [[options]] -o objectfile sourcefile
  Добавление пути поиска включаемых указанные папки.  
   
  -заранее определить`directive`  
- Укажите директиву SETA, SETL или НАБОРЫ для определения символа. Пример: **armasm.exe-заранее определить «COUNT SETA 150» source.asm**. Дополнительные сведения см. в разделе [руководстве по средствам ассемблера ARM](http://go.microsoft.com/fwlink/?LinkId=246102).  
+ Укажите директиву SETA, SETL или НАБОРЫ для определения символа. Пример: **armasm.exe-заранее определить «COUNT SETA 150» source.asm**. Дополнительные сведения см. в разделе [руководстве по средствам ассемблера ARM](http://go.microsoft.com/fwlink/p/?linkid=246102).  
   
  -nowarn  
  Отключите все предупреждения.  

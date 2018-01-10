@@ -15,11 +15,12 @@ caps.latest.revision: "8"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 9d2f74872939a2237f2c816e348242ebd58c8b3e
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: ba0be4ea7cf7d82ce8c0ee412f8373ea14f1162e
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="compiler-error-c3856"></a>Ошибка компилятора C3856
 «Тип»: класс не является типом класса  
@@ -43,7 +44,7 @@ template <class T2>  // extra template parameter list in definition
 struct S<T>::S1{};  
 ```  
   
- Возможное решение:  
+ Возможное решение  
   
 ```  
 // C3856b.cpp  
@@ -77,7 +78,7 @@ generic <class V>
 ref struct GS<T>::GS2 {};   // C3856  
 ```  
   
- Возможное решение:  
+ Возможное решение  
   
 ```  
 // C3856d.cpp  

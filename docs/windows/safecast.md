@@ -1,32 +1,33 @@
 ---
-title: "SafeCast | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-f1_keywords: 
-  - "SafeCast"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "SafeCast - функция"
+title: "SafeCast | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+f1_keywords: SafeCast
+dev_langs: C++
+helpviewer_keywords: SafeCast function
 ms.assetid: 55316729-8456-403a-9f96-59d4038f67af
-caps.latest.revision: 7
-author: "ghogen"
-ms.author: "ghogen"
-manager: "ghogen"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: ghogen
+ms.author: ghogen
+manager: ghogen
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: 4c3c9bb208cc2be2f91d8a464787d3299cd0b386
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 12/21/2017
 ---
-# SafeCast
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Номера приведения одного типа в другой тип.  
+# <a name="safecast"></a>SafeCast
+Приводит одним типом чисел в другой тип.  
   
-## Синтаксис  
+## <a name="syntax"></a>Синтаксис  
   
 ```  
 template<typename T, typename U>  
@@ -36,30 +37,30 @@ inline bool SafeCast (
 );  
 ```  
   
-#### Параметры  
- \[входящий\] `From`  
- Номер источника, которое требуется преобразовать.  Это должно быть типа T.  
+#### <a name="parameters"></a>Параметры  
+ [in] `From`  
+ Источник число для преобразования. Это должен быть типа T.  
   
- \[исходящий\] `To`  
- Ссылка на новый тип числа.  Это должно быть типа U.  
+ [выходной] `To`  
+ Ссылка на новый числовой тип. Это должен быть типа u.  
   
-## Возвращаемое значение  
- `true`, если ошибка не возникает. `false` при возникновении ошибки.  
+## <a name="return-value"></a>Возвращаемое значение  
+ `true`При отсутствии ошибок; `false` при возникновении ошибки.  
   
-## Заметки  
- Этот метод часть [Библиотека SafeInt](../windows/safeint-library.md) и предназначен для одной операции приведения без создания экземпляра [Класс SafeInt](../windows/safeint-class.md).  
+## <a name="remarks"></a>Примечания  
+ Этот метод является частью [библиотека SafeInt](../windows/safeint-library.md) и предназначен для операции приведения одного без создания экземпляра [класс SafeInt](../windows/safeint-class.md).  
   
 > [!NOTE]
->  Этот метод должен использоваться, только если единственная операция необходимо защитить.  Если несколько операций, то следует использовать класс `SafeInt` вместо вызова отдельных изолированных функции.  
+>  Этот метод следует использовать только при одной операции должны быть защищены. При наличии нескольких операций, следует использовать `SafeInt` класса вместо вызова автономного отдельных функций.  
   
- Дополнительные сведения о типах T шаблона и U см. в разделе [Функции SafeInt](../windows/safeint-functions.md).  
+ Дополнительные сведения о типах шаблонов T и U см. в разделе [функции SafeInt](../windows/safeint-functions.md).  
   
-## Требования  
+## <a name="requirements"></a>Требования  
  **Заголовок:** safeint.h  
   
  **Пространство имен:** Microsoft::Utilities  
   
-## См. также  
+## <a name="see-also"></a>См. также  
  [Функции SafeInt](../windows/safeint-functions.md)   
  [Библиотека SafeInt](../windows/safeint-library.md)   
  [Класс SafeInt](../windows/safeint-class.md)

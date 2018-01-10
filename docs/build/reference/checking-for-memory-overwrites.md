@@ -1,41 +1,41 @@
 ---
-title: "Проверка затирания памяти | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "память, перезаписи"
+title: "Проверка перезаписи памяти | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords: memory, overwrites
 ms.assetid: da7c5d77-a267-415f-a8ab-ee5ce5bfc286
-caps.latest.revision: 7
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 573710ae62384c8674009770b3c4fb29100db446
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 12/21/2017
 ---
-# Проверка затирания памяти
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Если при вызове функции обработки кучи возникает нарушение прав доступа, возможно, программа повредила кучу.  Типичные симптомы такой ситуации следующие:  
+# <a name="checking-for-memory-overwrites"></a>Проверка затирания памяти
+Если вы получаете нарушение прав доступа при вызове функции обработки кучи, возможно, что программа повреждены и кучи. Признаком такой ситуации будет выглядеть так:  
   
 ```  
 Access Violation in _searchseg  
 ```  
   
- Функция [\_heapchk](../../c-runtime-library/reference/heapchk.md) доступна как в отладочном построении, так и в построении выпуска \(только Windows NT\) для проверки целостности кучи библиотеки времени выполнения.  Вы можете использовать функцию `_heapchk` так же как функцию `AfxCheckMemory` для изолирования затирания памяти, например:  
+ [_Heapchk](../../c-runtime-library/reference/heapchk.md) функция доступна в обоих отладки и выпуска сборок (только для Windows NT) для проверки целостности кучи библиотеки времени выполнения. Можно использовать `_heapchk` так же, как `AfxCheckMemory` функцию для изолирования затирания, например:  
   
 ```  
 if(_heapchk()!=_HEAPOK)  
    DebugBreak();  
 ```  
   
- В случае отказа функции необходимо изолировать точку, в которой куча была повреждена.  
+ При сбое этой функции необходимо изолировать тогда куча была повреждена.  
   
-## См. также  
- [Устранение проблем построения выпуска](../../build/reference/fixing-release-build-problems.md)
+## <a name="see-also"></a>См. также  
+ [Устранение проблем сборки выпуска](../../build/reference/fixing-release-build-problems.md)

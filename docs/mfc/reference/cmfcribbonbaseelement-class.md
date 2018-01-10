@@ -243,11 +243,12 @@ caps.latest.revision: "34"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 9337c6dd384213d086bad2138ba7d426b0b305f4
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 93db9b8d8c56a23254972af29c7381e368766381
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cmfcribbonbaseelement-class"></a>Класс CMFCRibbonBaseElement
 `CMFCRibbonBaseElement` Класс является базовым классом для всех элементов, которые могут быть добавлены к [панель ленты](../../mfc/reference/cmfcribbonbar-class.md). Примеры элементов ленты — кнопки ленты, флажки ленты и поля со списком на ленте.  
@@ -258,7 +259,7 @@ ms.lasthandoff: 10/24/2017
 class CMFCRibbonBaseElement : public CObject  
 ```  
   
-## <a name="members"></a>Члены  
+## <a name="members"></a>Участники  
   
 ### <a name="public-constructors"></a>Открытые конструкторы  
   
@@ -268,7 +269,7 @@ class CMFCRibbonBaseElement : public CObject
   
 ### <a name="public-methods"></a>Открытые методы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[CMFCRibbonBaseElement::AddToKeyList](#addtokeylist)|Добавляет массив Ключевые подсказки keytip для элемента ленты.|  
 |[CMFCRibbonBaseElement::AddToListBox](#addtolistbox)|Добавляет элемент ленты в список команд указанной ленты.|  
@@ -384,7 +385,7 @@ class CMFCRibbonBaseElement : public CObject
   
 ### <a name="protected-methods"></a>Защищенные методы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[CMFCRibbonBaseElement::OnProcessKey](#onprocesskey)|Вызывается платформой, когда пользователь нажимает сочетание клавиш.|  
 |[CMFCRibbonBaseElement::OnSetFocus](#onsetfocus)|Вызывается платформой, когда элемент ленты Получает или теряет фокус ввода.|  
@@ -825,7 +826,7 @@ RibbonElementLocation GetLocationInGroup() const;
 ### <a name="return-value"></a>Возвращаемое значение  
  Объект `RibbonElementLocation` перечислимое значение. В следующей таблице перечислены возможные значения.  
   
-|Значение|Описание|  
+|Значение|Описание:|  
 |-----------|-----------------|  
 |`RibbonElementNotInGroup`|Элемент ленты не входит в группу ленты.|  
 |`RibbonElementSingleInGroup`|Как только элемент в группу ленты отображается элемент ленты.|  

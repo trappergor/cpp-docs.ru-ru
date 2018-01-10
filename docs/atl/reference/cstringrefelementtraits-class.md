@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-windows
+ms.technology: cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
@@ -14,38 +13,22 @@ f1_keywords:
 - ATLCOLL/ATL::CStringRefElementTraits::CompareElements
 - ATLCOLL/ATL::CStringRefElementTraits::CompareElementsOrdered
 - ATLCOLL/ATL::CStringRefElementTraits::Hash
-dev_langs:
-- C++
-helpviewer_keywords:
-- CStringRefElementTraits class
+dev_langs: C++
+helpviewer_keywords: CStringRefElementTraits class
 ms.assetid: cc15062d-5627-46cc-ac2b-1744afdc2dbd
-caps.latest.revision: 19
+caps.latest.revision: "19"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 604a4bf49490ad2599c857eb3afd527d67e1e25b
-ms.openlocfilehash: 3709a5d4aac02651e5b6fafd441499fea1f8eabc
-ms.contentlocale: ru-ru
-ms.lasthandoff: 02/24/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: c89a1e0d87550614fb8991ac3efe6bf369d147e7
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cstringrefelementtraits-class"></a>Класс CStringRefElementTraits
-Этот класс предоставляет статические функции, связанные с строк, хранящихся в коллекции объектов класса. Объекты-строки обрабатываются как ссылки.  
+Этот класс предоставляет статические функции, связанные с строк, хранящихся в коллекции объектов класса. Строковые объекты обрабатываются как ссылки.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -56,20 +39,20 @@ class CStringRefElementTraits : public CElementTraitsBase<T>
   
 #### <a name="parameters"></a>Параметры  
  `T`  
- Тип данных, хранящихся в коллекции.  
+ Тип данных, хранимых в коллекции.  
   
-## <a name="members"></a>Члены  
+## <a name="members"></a>Участники  
   
 ### <a name="public-methods"></a>Открытые методы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
-|[CStringRefElementTraits::CompareElements](#compareelements)|Эта функция статических для сравнения на равенство двух элементов строки.|  
-|[CStringRefElementTraits::CompareElementsOrdered](#compareelementsordered)|Эта функция статических для сравнения двух элементов строки.|  
-|[CStringRefElementTraits::Hash](#hash)|Эта функция статических для вычисления хэш-значение для заданной строки элемента.|  
+|[CStringRefElementTraits::CompareElements](#compareelements)|Вызовите эту статическую функцию для сравнения двух строковых элементов на равенство.|  
+|[CStringRefElementTraits::CompareElementsOrdered](#compareelementsordered)|Вызовите эту статическую функцию для сравнения двух строковых элементов.|  
+|[CStringRefElementTraits::Hash](#hash)|Вызовите эту статическую функция для вычисления хэш-значение для заданной строки элемента.|  
   
 ## <a name="remarks"></a>Примечания  
- Этот класс предоставляет статические функции для сравнения строк, а также для создания хэш-значения. Эти функции полезны при использовании класса коллекции для хранения данных на основе строки. В отличие от [CStringElementTraits](../../atl/reference/cstringelementtraits-class.md) и [CStringElementTraitsI](../../atl/reference/cstringelementtraitsi-class.md), `CStringRefElementTraits` вызывает `CString` аргументы для передачи в качестве **const CString &** ссылки.  
+ Этот класс предоставляет статические функции для сравнения строк, а также для создания хэш-значения. Эти функции полезны при использовании класс коллекции для хранения данных на основе строки. В отличие от [CStringElementTraits](../../atl/reference/cstringelementtraits-class.md) и [CStringElementTraitsI](../../atl/reference/cstringelementtraitsi-class.md), `CStringRefElementTraits` вызывает `CString` аргументы для передачи как **const CString &** ссылки.  
   
  Дополнительные сведения см. в разделе [классы коллекций ATL](../../atl/atl-collection-classes.md).  
   
@@ -82,7 +65,7 @@ class CStringRefElementTraits : public CElementTraitsBase<T>
  **Заголовок:** atlcoll.h  
   
 ##  <a name="compareelements"></a>CStringRefElementTraits::CompareElements  
- Эта функция статических для сравнения на равенство двух элементов строки.  
+ Вызовите эту статическую функцию для сравнения двух строковых элементов на равенство.  
   
 ```
 static bool CompareElements(INARGTYPE element1, INARGTYPE element2) throw();
@@ -99,7 +82,7 @@ static bool CompareElements(INARGTYPE element1, INARGTYPE element2) throw();
  Возвращает значение true, если элементы равны false в противном случае.  
   
 ##  <a name="compareelementsordered"></a>CStringRefElementTraits::CompareElementsOrdered  
- Эта функция статических для сравнения двух элементов строки.  
+ Вызовите эту статическую функцию для сравнения двух строковых элементов.  
   
 ```
 static int CompareElementsOrdered(INARGTYPE str1, INARGTYPE str2) throw();
@@ -113,10 +96,10 @@ static int CompareElementsOrdered(INARGTYPE str1, INARGTYPE str2) throw();
  Вторая строка элемента.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
- Нуль, если строки идентичны, < 0="" if=""> `str1` — меньше, чем `str2`, или настроек 0, если `str1` больше, чем `str2`. [CStringT::Compare](../../atl-mfc-shared/reference/cstringt-class.md#compare) метод используется для выполнения сравнений.  
+ Нуль, если строки идентичны, < 0 Если `str1` — меньше, чем `str2`, или значение > 0, если `str1` больше, чем `str2`. [CStringT::Compare](../../atl-mfc-shared/reference/cstringt-class.md#compare) метод используется для выполнения сравнений.  
   
 ##  <a name="hash"></a>CStringRefElementTraits::Hash  
- Эта функция статических для вычисления хэш-значение для заданной строки элемента.  
+ Вызовите эту статическую функция для вычисления хэш-значение для заданной строки элемента.  
   
 ```
 static ULONG Hash(INARGTYPE str) throw();
@@ -127,9 +110,8 @@ static ULONG Hash(INARGTYPE str) throw();
  Элемент строки.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
- Возвращает хэш-значение, вычисляемое с использованием содержимого строки.  
+ Возвращает значение хэша, вычисленных с помощью содержимое строки.  
   
 ## <a name="see-also"></a>См. также  
  [Класс CElementTraitsBase](../../atl/reference/celementtraitsbase-class.md)   
  [Общие сведения о классе](../../atl/atl-class-overview.md)
-

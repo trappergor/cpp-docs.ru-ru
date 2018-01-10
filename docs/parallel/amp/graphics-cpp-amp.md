@@ -13,11 +13,12 @@ caps.latest.revision: "27"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 601cf58a8238e34b1186e9d5d022a315342d4e6e
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: c9e1b8c6205560e7ea07b529acff3ccfe9db4ea6
+ms.sourcegitcommit: 54035dce0992ba5dce0323d67f86301f994ff3db
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 01/03/2018
 ---
 # <a name="graphics-c-amp"></a>Графика (C++ AMP)
 C++ AMP содержит несколько интерфейсов API в [Concurrency::graphics](../../parallel/amp/reference/concurrency-graphics-namespace.md) пространство имен, которое можно использовать для доступа к поддержке текстур на GPU. Ниже описываются наиболее типичные сценарии применения:  
@@ -32,7 +33,7 @@ C++ AMP содержит несколько интерфейсов API в [Concu
  `norm` И `unorm` типы являются скалярными типами, которые ограничивают диапазон `float` значений; это называется *фиксацией*. Эти типы могут быть созданы из других скалярных типов явным образом. При приведении типов значение сначала приводится к `float` и затем сжимается до соответствующих границ, допускаемые norm [-1.0, 1.0] или unorm [0.0, 1.0]. Приведение из +/- бесконечности возвращает +/-1. Приведение из NaN не определено. Тип norm может быть неявно создан из unorm без потери данных. В этих типах определен неявный оператор приведения к float. Бинарные операторы определены между этими типами и другими встроенными скалярными типами, такими как `float` и `int`: +, -, *, /, ==,! =, >, \<, > =, < =. Также поддерживаются составные операторы присваивания: +=,-=, \*= / =. Для типов norm определен унарный оператор отрицания (-).  
   
 ## <a name="short-vector-library"></a>Библиотека коротких векторов  
- Библиотека коротких векторов предоставляет некоторые функциональные возможности [векторного типа](http://go.microsoft.com/fwlink/p/linkid=248500) , определенные в HLSL и обычно используется для определения текселя. Короткий вектор — это структура данных, которая содержит от одного до четырех значений одного типа. Поддерживаемые типы данных: `double`, `float`, `int`, `norm`, `uint` и `unorm`. Имена типов показаны в следующей таблице. Для каждого типа также существует определение `typedef` без символа подчеркивания в имени. Типы, которые имеют знаки подчеркивания, в [пространство имен Concurrency::graphics](../../parallel/amp/reference/concurrency-graphics-namespace.md). Типы, у которых нет знаки подчеркивания, в [имен Concurrency::Graphics:: Direct3D](../../parallel/amp/reference/concurrency-graphics-direct3d-namespace.md) , чтобы они четко отделены от базовые типы с аналогичным именем например `__int8` и `__int16`.  
+ Библиотека коротких векторов предоставляет некоторые функциональные возможности [векторного типа](http://go.microsoft.com/fwlink/p/?linkid=248500) , определенные в HLSL и обычно используется для определения текселя. Короткий вектор — это структура данных, которая содержит от одного до четырех значений одного типа. Поддерживаемые типы данных: `double`, `float`, `int`, `norm`, `uint` и `unorm`. Имена типов показаны в следующей таблице. Для каждого типа также существует определение `typedef` без символа подчеркивания в имени. Типы, которые имеют знаки подчеркивания, в [пространство имен Concurrency::graphics](../../parallel/amp/reference/concurrency-graphics-namespace.md). Типы, у которых нет знаки подчеркивания, в [имен Concurrency::Graphics:: Direct3D](../../parallel/amp/reference/concurrency-graphics-direct3d-namespace.md) , чтобы они четко отделены от базовые типы с аналогичным именем например `__int8` и `__int16`.  
   
 ||Длина 2|Длина 3|Длина 4|  
 |-|--------------|--------------|--------------|  
@@ -71,7 +72,7 @@ C++ AMP содержит несколько интерфейсов API в [Concu
   
 -   коротким вектором, который содержит 2 или 4 компонента. Единственное исключение — тип `double_4`, который не разрешен.  
   
- Объект `texture` может иметь ранг 1, 2 или 3. Объект `texture` может быть перехвачен только по ссылке в лямбда-выражении в вызове метода `parallel_for_each`. Текстура хранится в GPU в виде объектов текстуры Direct3D. Дополнительные сведения о текстур и текселей в Direct3D см. в разделе [введение в текстур в Direct3D 11](http://go.microsoft.com/fwlink/p/linkid=248502).  
+ Объект `texture` может иметь ранг 1, 2 или 3. Объект `texture` может быть перехвачен только по ссылке в лямбда-выражении в вызове метода `parallel_for_each`. Текстура хранится в GPU в виде объектов текстуры Direct3D. Дополнительные сведения о текстур и текселей в Direct3D см. в разделе [введение в текстур в Direct3D 11](http://go.microsoft.com/fwlink/p/?linkid=248502).  
   
  В качестве типа текселя можно использовать одним из множества различных форматов текстур, которые используются при программировании графики. Например, формат RGBA может использовать 32 бита, по 8 бит на каждый из скалярных элементов R, G, B и A. Текстурные компоненты видеокарты могут обращаться к отдельным элементам текстуры в зависимости от формата. Например, если используется формат RGBA, то текстурные компоненты могут извлекать каждый 8-битный элемент в 32-битное представление. В C++ AMP можно задать количество бит на один скалярный элемент текселя, что позволяет автоматически обращаться к отдельным скалярным элементам в коде без использования битовых сдвигов.  
   
@@ -429,7 +430,7 @@ parallel_for_each(w_view.extent, [=](index<2> idx) restrict(amp)
   
 ## <a name="interoperability"></a>Взаимодействие  
 
- Среда выполнения C++ AMP поддерживает взаимодействие между `texture<T,1>` и [интерфейс ID3D11Texture1D](http://go.microsoft.com/fwlink/p/LinkId=248503)между `texture<T,2>` и [ID3D11Texture2D интерфейс](http://go.microsoft.com/fwlink/p/LinkId=255317)и между `texture<T,3>`и [ID3D11Texture3D интерфейс](http://go.microsoft.com/fwlink/p/LinkId=255377). [Get_texture](reference/concurrency-graphics-direct3d-namespace-functions.md#get_texture) принимает `texture` объекта и возвращает `IUnknown` интерфейса. [Make_texture](reference/concurrency-graphics-direct3d-namespace-functions.md#make_texture) принимает `IUnknown` интерфейс и `accelerator_view` объекта и возвращает `texture` объекта.  
+ Среда выполнения C++ AMP поддерживает взаимодействие между `texture<T,1>` и [интерфейс ID3D11Texture1D](http://go.microsoft.com/fwlink/p/?linkId=248503)между `texture<T,2>` и [ID3D11Texture2D интерфейс](http://go.microsoft.com/fwlink/p/?linkId=255317)и между `texture<T,3>`и [ID3D11Texture3D интерфейс](http://go.microsoft.com/fwlink/p/?linkId=255377). [Get_texture](reference/concurrency-graphics-direct3d-namespace-functions.md#get_texture) принимает `texture` объекта и возвращает `IUnknown` интерфейса. [Make_texture](reference/concurrency-graphics-direct3d-namespace-functions.md#make_texture) принимает `IUnknown` интерфейс и `accelerator_view` объекта и возвращает `texture` объекта.  
   
 ## <a name="see-also"></a>См. также  
  [Класс double_2](../../parallel/amp/reference/double-2-class.md)   

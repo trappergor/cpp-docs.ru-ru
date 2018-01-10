@@ -17,11 +17,12 @@ caps.latest.revision: "21"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 32c65fc68bc9e7be2770e951de466e48f482af90
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 935bee8447ad0d49ae965fb92538d2e260ec68ef
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="templates-c"></a>Шаблоны (C++)
 Шаблоны являются основой для обобщенное программирование в C++. Как строго типизированным языком C++ необходимы все переменные, определенные типом, явно объявленные программистом или выведен компилятором. Тем не менее многие структуры данных и алгоритмы выглядят одинаково, независимо от того, какой тип они работают на. Включить шаблоны для определения операций, класса или функции и позволяет пользователю задать конкретный какие типы этих операций должен работать на.  

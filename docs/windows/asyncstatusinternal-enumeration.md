@@ -1,41 +1,42 @@
 ---
-title: "Перечисление AsyncStatusInternal | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "async/Microsoft::WRL::Details::AsyncStatusInternal"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "AsyncStatusInternal - перечисление"
+title: "Перечисление AsyncStatusInternal | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: async/Microsoft::WRL::Details::AsyncStatusInternal
+dev_langs: C++
+helpviewer_keywords: AsyncStatusInternal enumeration
 ms.assetid: b783923f-3f1c-4487-9384-be572cbc62d7
-caps.latest.revision: 5
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 5
+caps.latest.revision: "5"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: bd277fecb0bc63d5ee823af98df8aa298b285964
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 12/21/2017
 ---
-# Перечисление AsyncStatusInternal
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Предназначено для поддержки инфраструктуры WRL, а не для непосредственного использования в коде.  
+# <a name="asyncstatusinternal-enumeration"></a>AsyncStatusInternal - перечисление
+Поддерживает инфраструктуру WRL и не предназначен для использования непосредственно из программного кода.  
   
-## Синтаксис  
+## <a name="syntax"></a>Синтаксис  
   
 ```  
 enum AsyncStatusInternal;  
 ```  
   
-## Заметки  
- Определяет сопоставление между внутренними перечислениями для состояний асинхронных операций и перечислением **Windows::Foundation::AsyncStatus**.  
+## <a name="remarks"></a>Примечания  
+ Задает сопоставление между внутренними перечислениями состояний асинхронных операций и **Windows::Foundation::AsyncStatus** перечисления.  
   
-## Члены  
+## <a name="members"></a>Участники  
  `_Created`  
  Эквивалентно ::Windows::Foundation::AsyncStatus::Created  
   
@@ -51,10 +52,10 @@ enum AsyncStatusInternal;
  `_Error`  
  Эквивалентно ::Windows::Foundation::AsyncStatus::Error  
   
-## Требования  
+## <a name="requirements"></a>Требования  
  **Заголовок:** async.h  
   
- **Пространство имен:** Microsoft::WRL::Details  
+ **Пространство имен:** Microsoft::wrl:: Details  
   
-## См. также  
+## <a name="see-also"></a>См. также  
  [Пространство имен Microsoft::WRL::Details](../windows/microsoft-wrl-details-namespace.md)

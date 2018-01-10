@@ -1,34 +1,36 @@
 ---
-title: "Класс IRowsetLocateImpl | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "IRowsetLocateImpl"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "закладки, OLE DB"
-  - "IRowsetLocateImpl - класс"
-  - "поставщики, закладки"
+title: "Класс IRowsetLocateImpl | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: IRowsetLocateImpl
+dev_langs: C++
+helpviewer_keywords:
+- providers, bookmarks
+- IRowsetLocateImpl class
+- bookmarks, OLE DB
 ms.assetid: a8aa3149-7ce8-4976-a680-2da193fd3234
-caps.latest.revision: 11
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 11
+caps.latest.revision: "11"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: da010f02ec29b4882ffeb1bdf1c5fa7fd67c8615
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 12/21/2017
 ---
-# Класс IRowsetLocateImpl
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Реализует интерфейс [IRowsetLocate](https://msdn.microsoft.com/en-us/library/ms721190.aspx), OLE DB, который обращается к произвольные строки из набора строк.  
+# <a name="irowsetlocateimpl-class"></a>Класс IRowsetLocateImpl
+Реализует OLE DB [IRowsetLocate](https://msdn.microsoft.com/en-us/library/ms721190.aspx) интерфейс, который извлекает строки из набора строк.  
   
-## Синтаксис  
+## <a name="syntax"></a>Синтаксис  
   
 ```  
 template <  
@@ -48,7 +50,7 @@ class ATL_NO_VTABLE IRowsetLocateImpl : public IRowsetImpl<
 >  
 ```  
   
-#### Параметры  
+#### <a name="parameters"></a>Параметры  
  `T`  
  Класс, производный от `IRowsetLocateImpl`.  
   
@@ -56,52 +58,52 @@ class ATL_NO_VTABLE IRowsetLocateImpl : public IRowsetImpl<
  Класс, производный от `IRowsetImpl`.  
   
  `RowClass`  
- Блок памяти для **HROW**.  
+ Устройство хранения для **HROW**.  
   
  `MapClass`  
- Блок памяти для всех дескрипторов строк удержатьых поставщиком.  
+ Устройство хранения для все дескрипторы строк, удерживаемые поставщика.  
   
  `BookmarkKeyType`  
- Тип закладки, например ДЛИННОЕ или строка.  Обычные закладки должны иметь длину не менее 2 байт. Однобайтовая \(длина зарезервировано для OLE DB [стандартные закладки](https://msdn.microsoft.com/en-us/library/ms712954.aspx)**DBBMK\_FIRST**, **DBBMK\_LAST** и **DBBMK\_INVALID**\).  
+ Тип закладки, например значение типа LONG или строки. Обычные закладки должен иметь длину не менее двух байтов. (Single-byte длина должна быть зарезервирована для OLE DB [стандартные закладки](https://msdn.microsoft.com/en-us/library/ms712954.aspx)**DBBMK_FIRST**, **DBBMK_LAST**, и **DBBMK_INVALID**.)  
   
  `BookmarkType`  
- Механизм сопоставления для поддержки связей закладка\-к\- данных.  
+ Механизм сопоставления для поддержания связи закладки для данных.  
   
  `BookmarkMapClass`  
- Блок памяти для всех дескрипторов строк удержатьых закладкой.  
+ Устройство хранения для все дескрипторы строк, удерживаемые закладки.  
   
-## Члены  
+## <a name="members"></a>Участники  
   
-### Методы Interface  
-  
-|||  
-|-|-|  
-|[Сравнение](../../data/oledb/irowsetlocateimpl-compare.md)|Сравнивает 2 закладки.|  
-|[GetRowsAt](../../data/oledb/irowsetlocateimpl-getrowsat.md)|Получение строк, начиная со строки, заданной смещением от закладки.|  
-|[GetRowsByBookmark](../../data/oledb/irowsetlocateimpl-getrowsbybookmark.md)|Получение строк, соответствующих определенным закладкам.|  
-|[Хэш](../../data/oledb/irowsetlocateimpl-hash.md)|Возвращает значения хэша для определенных закладок.|  
-  
-### Элементы данных  
+### <a name="interface-methods"></a>Методы интерфейса  
   
 |||  
 |-|-|  
-|[m\_rgBookmarks](../Topic/IRowsetLocateImpl::m_rgBookmarks.md)|Массив закладок.|  
+|[Compare](../../data/oledb/irowsetlocateimpl-compare.md)|Сравнивает две закладки.|  
+|[GetRowsAt](../../data/oledb/irowsetlocateimpl-getrowsat.md)|Извлекает строки, начиная со строки, указанной в качестве смещения относительно закладки.|  
+|[GetRowsByBookmark](../../data/oledb/irowsetlocateimpl-getrowsbybookmark.md)|Извлекает строки, которые соответствуют указанной закладки.|  
+|[Хэш](../../data/oledb/irowsetlocateimpl-hash.md)|Возвращает хэш-значения для указанного закладки.|  
   
-## Заметки  
- `IRowsetLocateImpl` реализация интерфейса OLE DB [IRowsetLocate](https://msdn.microsoft.com/en-us/library/ms721190.aspx).  `IRowsetLocate` используется для получения произвольные строки из набора строк.  Набор строк, который не реализует этот интерфейс набора строк `sequential`.  При `IRowsetLocate` есть на наборе строк, столбец 0 закладки для строк; чтение в данном столбце получит значение закладки, которую можно использовать для перемещения в одной строке.  
+### <a name="data-members"></a>Элементы данных  
   
- `IRowsetLocateImpl` используется для реализации поддержки закладок в поставщиках.  Закладки заполнители \(индексы в наборе строк\), объект\-получатель позволяет быстро вернуться к строке, позволяя высокоскоростной доступ к данным.  Поставщик указывает, какую закладки могут уникально идентифицировать строку.  С помощью методов `IRowsetLocateImpl`, можно сравнить закладки, получение строк смещением, выборки строк и и возвращает значения хэша для закладок.  
+|||  
+|-|-|  
+|[m_rgBookmarks](../../data/oledb/irowsetlocateimpl-m-rgbookmarks.md)|Массив закладки.|  
   
- Для поддержки закладок OLE DB в наборе строк используйте набор строк наследовать от этого класса.  
+## <a name="remarks"></a>Примечания  
+ `IRowsetLocateImpl`Шаблоны OLE DB реализует [IRowsetLocate](https://msdn.microsoft.com/en-us/library/ms721190.aspx) интерфейса. `IRowsetLocate`используется для выборки строки из набора строк. Набор строк, который не реализует этот интерфейс является `sequential` набора строк. Когда `IRowsetLocate` присутствует в наборе строк столбца с номером 0 — это закладка для строки; чтение этой статьи будет получать значение закладки, который может использоваться для изменения положения в той же строке.  
   
- Сведения о реализации поддержки закладок см. в разделе [Поддержка закладок](../../data/oledb/provider-support-for-bookmarks.md) в [Закладки](https://msdn.microsoft.com/en-us/library/ms709728.aspx) в *Visual C\+\+ Programmer's Guide* и *OLE DB Programmer's Reference* в `Platform``SDK`.  
+ `IRowsetLocateImpl`используется для реализации поддержки закладок в поставщиках. Закладки представляют собой заполнители (индексы для набора строк), позволяющие потребителю быстро вернуться к строке, позволяя высокоскоростной доступ к данным. Поставщик определяет закладки возможности однозначно идентифицировать строку. С помощью `IRowsetLocateImpl` методы, можно сравнить закладки, строк выборки, смещение выборки строк по закладке и возвращает хэш-значения для закладки.  
   
-## Требования  
+ Поддерживает закладки OLE DB в наборе строк, чтобы наследовать от этого класса набора строк.  
+  
+ Сведения о реализации поддержки закладок см. в разделе [поставщик поддерживает для закладок](../../data/oledb/provider-support-for-bookmarks.md) в *Visual C++ Руководство программиста* и [закладки](https://msdn.microsoft.com/en-us/library/ms709728.aspx) в *Справочника программиста OLE DB* в пакет SDK платформы.  
+  
+## <a name="requirements"></a>Требования  
  **Заголовок**: atldb.h  
   
-## См. также  
+## <a name="see-also"></a>См. также  
  [Шаблоны поставщика OLE DB](../../data/oledb/ole-db-provider-templates-cpp.md)   
  [Архитектура шаблона поставщика OLE DB](../../data/oledb/ole-db-provider-template-architecture.md)   
  [IRowsetLocate:IRowset](https://msdn.microsoft.com/en-us/library/ms721190.aspx)   
  [Поддержка закладок поставщиками](../../data/oledb/provider-support-for-bookmarks.md)   
- [Bookmarks](https://msdn.microsoft.com/en-us/library/ms709728.aspx)
+ [Закладки](https://msdn.microsoft.com/en-us/library/ms709728.aspx)

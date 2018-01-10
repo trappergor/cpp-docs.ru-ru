@@ -39,11 +39,12 @@ caps.latest.revision: "19"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 5207b7479876cc88941397906646fbd08fa02b6c
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 5f904d5f03d4c9e74123bc5be43f02178cb2e3d2
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="ismbbkana-ismbbkanal"></a>_ismbbkana, _ismbbkana_l
 Проверяет на наличие символа катакана; относится к кодовой странице 932.  
@@ -68,7 +69,7 @@ int _ismbbkana_l(
  Используемый языковой стандарт.  
   
 ## <a name="return-value"></a>Возвращаемое значение  
- Функция `_ismbbkana` возвращает ненулевое значение, если целое число `c` является символом катакана, или 0 в противном случае. Функция`_ismbbkana` использует текущий языковой стандарт для получения сведений о символах, зависящих от языкового стандарта. Функция`_ismbbkana_l` идентична, за исключением того, что она использует переданный объект языкового стандарта. Дополнительные сведения см. в разделе [Языковой стандарт](../../c-runtime-library/locale.md).  
+ Функция `_ismbbkana` возвращает ненулевое значение, если целое число `c` является символом катакана, или 0 в противном случае. Функция`_ismbbkana` использует текущий языковой стандарт для получения сведений о символах, зависящих от языкового стандарта. Функция`_ismbbkana_l` идентична, за исключением того, что она использует переданный объект языкового стандарта. Для получения дополнительной информации см. [Locale](../../c-runtime-library/locale.md).  
   
 ## <a name="requirements"></a>Требования  
   

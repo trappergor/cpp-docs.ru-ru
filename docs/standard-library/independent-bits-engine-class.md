@@ -15,11 +15,12 @@ caps.latest.revision: "17"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 09ee64a2e93d909533a0b2e4968a0fc48a951b08
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 8ec9a4b9beac581df0060f239916c06b8b6191de
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="independentbitsengine-class"></a>Класс independent_bits_engine
 Создает случайную последовательность чисел с указанным числом разрядов, перемешивая разряды из значений, возвращенных базовым механизмом.  
@@ -36,12 +37,12 @@ class independent_bits_engine;
  Тип базового механизма.  
   
  `W`  
- **Размер слова**. Размер каждого полученного числа в битах. **Предварительные условия:** `0 < W ≤ numeric_limits<UIntType>::digits`  
+ **Размер слова**. Размер каждого полученного числа в битах. **Предварительные условия**: `0 < W ≤ numeric_limits<UIntType>::digits`  
   
  `UIntType`  
  Беззнаковый целочисленный тип результата. Возможные типы см. в разделе [\<random>](../standard-library/random.md).  
   
-## <a name="members"></a>Члены  
+## <a name="members"></a>Участники  
   
 ||||  
 |-|-|-|  

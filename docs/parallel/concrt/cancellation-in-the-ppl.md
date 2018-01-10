@@ -20,11 +20,12 @@ caps.latest.revision: "31"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 90edebe8e57e6720ad1cb7a83b59f478532c16c1
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 340942905ce252f7e4a40d8ae5366d5d154755d1
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cancellation-in-the-ppl"></a>Отмена в библиотеке параллельных шаблонов
 В этом документе рассматривается роль отмены в библиотеке параллельных шаблонов (PPL), а также объясняется, как отменить параллельную работу и как определить, что параллельная работа отменена.  
@@ -86,7 +87,7 @@ ms.lasthandoff: 10/24/2017
  Дополнительные примеры отмены параллельных задач см. в разделе [Пошаговое руководство: подключение с использованием задач и HTTP-запросов XML](../../parallel/concrt/walkthrough-connecting-using-tasks-and-xml-http-requests.md), [как: использование отмены для выхода из параллельного цикла](../../parallel/concrt/how-to-use-cancellation-to-break-from-a-parallel-loop.md), и [как: использование Обработки исключений для выхода из параллельного цикла](../../parallel/concrt/how-to-use-exception-handling-to-break-from-a-parallel-loop.md).  
   
 ###  <a name="tokens"></a>Использование токена отмены для отмены параллельной работы  
- Классы `task`, `task_group` и `structured_task_group` поддерживают отмену посредством использования токенов отмены. Библиотека PPL определяет [concurrency::cancellation_token_source](../../parallel/concrt/reference/cancellation-token-source-class.md) и [concurrency::cancellation_token](../../parallel/concrt/reference/cancellation-token-class.md) классы для этой цели. При использовании токена отмены, чтобы отменить работу, среда выполнения не запускает новую работу, которая подписывается на этот токен. Работу, которая уже активно используется [is_canceled] ((.. /.. / parallel/concrt/reference/cancellation-token-class.md#is_canceled) функция-член для наблюдения за токен отмены и остановитесь, когда это возможно.  
+ Классы `task`, `task_group` и `structured_task_group` поддерживают отмену посредством использования токенов отмены. Библиотека PPL определяет [concurrency::cancellation_token_source](../../parallel/concrt/reference/cancellation-token-source-class.md) и [concurrency::cancellation_token](../../parallel/concrt/reference/cancellation-token-class.md) классы для этой цели. При использовании токена отмены, чтобы отменить работу, среда выполнения не запускает новую работу, которая подписывается на этот токен. Можно использовать уже active [is_canceled](../../parallel/concrt/reference/cancellation-token-class.md#is_canceled) функции-члена для наблюдения за токен отмены и остановитесь, когда это возможно.  
   
 
  Чтобы инициировать отмену, вызовите [Concurrency::cancellation_token_source:: Cancel](reference/cancellation-token-source-class.md#cancel) метод. Можно реагировать на отмену следующими способами.  
@@ -259,9 +260,9 @@ Caught 50
   
  [[В начало](#top)]  
   
-## <a name="related-topics"></a>Связанные разделы  
+## <a name="related-topics"></a>См. также  
   
-|Заголовок|Описание|  
+|Заголовок|Описание:|  
 |-----------|-----------------|  
 |[Практическое руководство. Использование отмены для выхода из параллельного цикла](../../parallel/concrt/how-to-use-cancellation-to-break-from-a-parallel-loop.md)|Показывается, как использовать отмену для реализации алгоритма параллельного поиска.|  
 |[Практическое руководство. Использование обработки исключений для выхода из параллельного цикла](../../parallel/concrt/how-to-use-exception-handling-to-break-from-a-parallel-loop.md)|Здесь приводятся способы использования класса `task_group` для записи алгоритма поиска для базовой структуры дерева.|  

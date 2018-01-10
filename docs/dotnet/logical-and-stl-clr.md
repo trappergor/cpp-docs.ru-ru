@@ -1,32 +1,33 @@
 ---
-title: "logical_and (STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::logical_and"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "logical_and - функция [STL/CLR]"
+title: "logical_and (STL/CLR) | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::logical_and
+dev_langs: C++
+helpviewer_keywords: logical_and function [STL/CLR]
 ms.assetid: ae103802-11e0-4060-a4f3-4f6fdc209e7c
-caps.latest.revision: 18
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 16
+caps.latest.revision: "18"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: 62707fbcb0fd78c019fea886f4975973abbcc5aa
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 12/21/2017
 ---
-# logical_and (STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Описание класса шаблона функтором, при вызове возвращает значение true, если и только первый и второй аргумент тест как true.  Он используется определяется объект функции с точки зрения его типа аргумента.  
+# <a name="logicaland-stlclr"></a>logical_and (STL/CLR)
+Класс шаблона описывает функтор, что при вызове возвращает значение true только в том случае, если первый аргумент и второй тест как true. Она используется укажите объект функции, с точки зрения его типа аргумента.  
   
-## Синтаксис  
+## <a name="syntax"></a>Синтаксис  
   
 ```  
 template<typename Arg>  
@@ -49,34 +50,34 @@ public:
     };  
 ```  
   
-#### Параметры  
- Аргумент  
+#### <a name="parameters"></a>Параметры  
+ Arg  
  Тип аргументов.  
   
-## Функции\-члены  
+## <a name="member-functions"></a>Функции-члены  
   
-|Определение типа|Описание|  
-|----------------------|--------------|  
-|delegate\_type|Тип универсального метод\-делегата.|  
-|first\_argument\_type|Тип первого аргумента функтором.|  
-|result\_type|Тип результата функтором.|  
-|second\_argument\_type|Тип второго аргумента функтором.|  
+|Определение типа|Описание:|  
+|---------------------|-----------------|  
+|delegate_type|Тип универсального метода-делегата.|  
+|first_argument_type|Тип первого аргумента функтор.|  
+|result_type|Тип результата функтор.|  
+|second_argument_type|Тип второго аргумента функтор.|  
   
-|Член|Описание|  
-|----------|--------------|  
-|logical\_and|Построение функтором.|  
+|Член|Описание:|  
+|------------|-----------------|  
+|logical_and|Создает функтор.|  
   
-|Оператор|Описание|  
-|--------------|--------------|  
-|operator\(\)|Вычисляет нужную функцию.|  
-|delegate\_type^ оператора|Возвращает функтором делегату.|  
+|Оператор|Описание:|  
+|--------------|-----------------|  
+|operator()|Вычисляет нужной функции.|  
+|delegate_type оператор ^|Приводит функтора к делегату.|  
   
-## Заметки  
- Описание класса шаблона функтором 2 — аргумента.  Он определяет оператор `operator()` члена, что, когда объект вызывается как функция, он возвращает значение true, если и только первый и второй аргумент тест как true.  
+## <a name="remarks"></a>Примечания  
+ Класс шаблона описывает функтор двумя аргументами. Он определяет оператор-член `operator()` , чтобы при вызове объекта как функцию, она возвращает значение true только если первый аргумент и второй тест как true.  
   
- Можно также передать объект в качестве аргумента функции, тип которого `delegate_type^` и он будет преобразован соответствующим образом.  
+ Объект также можно передать в качестве аргумента функции, тип которого является `delegate_type^` и он будет преобразован соответствующим образом.  
   
-## Пример  
+## <a name="example"></a>Пример  
   
 ```  
 // cliext_logical_and.cpp   
@@ -116,13 +117,16 @@ int main()
   
 ```  
   
-  **2 0**  
- **3 0**  
- **1 0**   
-## Требования  
- **Заголовок:**\<cliext\/functional\>  
+```Output  
+2 0  
+3 0  
+1 0  
+```  
+  
+## <a name="requirements"></a>Требования  
+ **Заголовок:** \<cliext и функционального >  
   
  **Пространство имен:** cliext  
   
-## См. также  
- [logical\_or](../Topic/logical_or%20\(STL-CLR\).md)
+## <a name="see-also"></a>См. также  
+ [logical_or (STL/CLR)](../dotnet/logical-or-stl-clr.md)

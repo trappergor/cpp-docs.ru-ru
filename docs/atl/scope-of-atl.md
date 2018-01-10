@@ -1,31 +1,32 @@
 ---
-title: "Scope of ATL | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "ATL - библиотека, область действия"
+title: "Область ATL | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords: ATL, scope
 ms.assetid: 381adf50-3cb0-4d0f-a79a-07da093bc280
-caps.latest.revision: 12
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 7
+caps.latest.revision: "12"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: d1aaaaf1c312c41dad6ed3030dac30c7e28b2fce
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 12/21/2017
 ---
-# Scope of ATL
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+# <a name="scope-of-atl"></a>Область ATL
+ATL можно легко создать COM-объектам, серверов автоматизации и элементы управления ActiveX. Библиотека ATL предоставляет встроенную поддержку для многих основных COM-интерфейсов.  
+  
+ ATL поставляется в виде исходного кода, которые включены в приложении. ATL также делает библиотеки DLL доступных (atl90.dll), которая содержит код, который может совместно использоваться компонентами. Однако эта библиотека DLL не требуется.  
+  
+## <a name="see-also"></a>См. также  
+ [Общие сведения об ATL](../atl/introduction-to-atl.md)   
+ [Мастер проектов ATL](../atl/reference/atl-project-wizard.md)
 
-Библиотеки ATL позволяет легко создает управления com\-объекта, серверы автоматизации, и ActiveX.  Библиотеки ATL предоставляет встроенную поддержку многие из основных интерфейсов модели COM.  
-  
- Библиотеки ATL погружено как исходный код, включенных в приложении.  Библиотеки ATL также делает доступным библиотеки DLL \(atl90.dll\), который содержит код, который может совместно использоваться между компонентами.  Однако эта библиотека DLL не требуется.  
-  
-## См. также  
- [Введение в ATL](../Topic/Introduction%20to%20ATL.md)   
- [мастер проектов ATL](../Topic/ATL%20Project%20Wizard.md)

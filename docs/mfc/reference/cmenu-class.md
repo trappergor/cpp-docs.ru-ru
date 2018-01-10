@@ -95,11 +95,12 @@ caps.latest.revision: "22"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 5b54a2cecf6ae091680582a3997cc8ee9c1c625d
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 104c965da403040308386e019d56684577318eee
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cmenu-class"></a>CMenu-класс
 Инкапсуляция `HMENU`Windows.  
@@ -110,17 +111,17 @@ ms.lasthandoff: 10/24/2017
 class CMenu : public CObject  
 ```  
   
-## <a name="members"></a>Члены  
+## <a name="members"></a>Участники  
   
 ### <a name="public-constructors"></a>Открытые конструкторы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[CMenu::CMenu](#cmenu)|Создает объект `CMenu`.|  
   
 ### <a name="public-methods"></a>Открытые методы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[CMenu::AppendMenu](#appendmenu)|Добавляет новый элемент в конец этого меню.|  
 |[CMenu::Attach](#attach)|Прикрепляет дескриптор меню Windows `CMenu` объекта.|  
@@ -162,7 +163,7 @@ class CMenu : public CObject
   
 ### <a name="public-operators"></a>Открытые операторы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[CMenu::operator HMENU](#operator_hmenu)|Извлекает дескриптор объекта меню.|  
 |[CMenu::operator! =](#operator_neq)|Определяет, если два меню объекты не равны.|  
@@ -170,7 +171,7 @@ class CMenu : public CObject
   
 ### <a name="public-data-members"></a>Открытые члены данных  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[CMenu::m_hMenu](#m_hmenu)|Указывает дескриптор меню Windows, присоединенного к `CMenu` объекта.|  
   

@@ -27,11 +27,12 @@ caps.latest.revision: "20"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: a53206c32b59ab5cac9f14d51bed42a4870b94fa
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: b87dda35c2ea031424af3ab2aa8ebdccdb3750fb
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="multitypejoin-class"></a>Класс multitype_join
 Блок обмена сообщениями `multitype_join` — это блок с несколькими источниками и одной целью, который объединяет сообщения разных типов от каждого из своих источников и предлагает кортеж объединенных сообщений своему целевому объекту.  
@@ -53,24 +54,24 @@ class multitype_join: public ISource<typename _Unwrap<T>::type>;
  `_Jtype`  
  Тип объекта `join` это, либо блок `greedy` или`non_greedy`  
   
-## <a name="members"></a>Члены  
+## <a name="members"></a>Участники  
   
 ### <a name="public-typedefs"></a>Общедоступные определения типов  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |`type`|Псевдоним для `T`.|  
   
 ### <a name="public-constructors"></a>Открытые конструкторы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[multitype_join](#ctor)|Перегружен. Создает блок обмена сообщениями `multitype_join` .|  
 |[~ multitype_join деструктор](#dtor)|Уничтожает `multitype_join` блока обмена сообщениями.|  
   
 ### <a name="public-methods"></a>Открытые методы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[принять](#accept)|Принимает сообщение, которое было предложено это `multitype_join` блоком, передавая владение вызывающему объекту.|  
 |[acquire_ref](#acquire_ref)|Получает значение счетчика ссылок на это `multitype_join` блока обмена сообщениями, чтобы предотвратить удаление.|  

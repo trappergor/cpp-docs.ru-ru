@@ -21,11 +21,12 @@ caps.latest.revision: "22"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 1a26ab8bb81487346908a4d1d7596ad33b5c3c31
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 7e895e893c6032a8f8d7db0549f872c82cd0d9b5
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="coleexception-class"></a>Класс COleException
 Представляет исключительное условие, связанное с операцией OLE.  
@@ -36,17 +37,17 @@ ms.lasthandoff: 10/24/2017
 class COleException : public CException  
 ```  
   
-## <a name="members"></a>Члены  
+## <a name="members"></a>Участники  
   
 ### <a name="public-methods"></a>Открытые методы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[COleException::Process](#process)|Преобразует перехваченного исключения в кодом возврата OLE.|  
   
 ### <a name="public-data-members"></a>Открытые члены данных  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[COleException::m_sc](#m_sc)|Содержит код состояния, указывающее причину создания исключения.|  
   

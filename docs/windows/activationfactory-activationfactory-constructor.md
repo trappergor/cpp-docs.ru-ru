@@ -1,41 +1,42 @@
 ---
-title: "Конструктор ActivationFactory::ActivationFactory | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "module/Microsoft::WRL::ActivationFactory::ActivationFactory"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "ActivationFactory, конструктор"
+title: "Конструктор ActivationFactory::ActivationFactory | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: module/Microsoft::WRL::ActivationFactory::ActivationFactory
+dev_langs: C++
+helpviewer_keywords: ActivationFactory, constructor
 ms.assetid: 2a75cf88-9ba0-4cb7-9d58-24dd2daee9db
-caps.latest.revision: 3
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 3
+caps.latest.revision: "3"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: 2a773e919b7cfceeccc1dc80fa534a087c0b7d65
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 12/21/2017
 ---
-# Конструктор ActivationFactory::ActivationFactory
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="activationfactoryactivationfactory-constructor"></a>Конструктор ActivationFactory::ActivationFactory
 Инициализирует класс ActivationFactory.  
   
-## Синтаксис  
+## <a name="syntax"></a>Синтаксис  
   
 ```  
 ActivationFactory();  
 ```  
   
-## Требования  
+## <a name="requirements"></a>Требования  
  **Заголовок:** module.h  
   
  **Пространство имен:** Microsoft::WRL  
   
-## См. также  
+## <a name="see-also"></a>См. также  
  [Класс ActivationFactory](../windows/activationfactory-class.md)

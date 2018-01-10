@@ -1,68 +1,67 @@
 ---
-title: "/ALIGN (выравнивание разделов) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "VC.Project.VCLinkerTool.Alignment"
-  - "/align"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "/ALIGN - параметр компоновщика"
-  - "ALIGN - параметр компоновщика"
-  - "-ALIGN - параметр компоновщика"
-  - "выравнивание разделов"
-  - "разделы"
-  - "разделы, указание выравнивания"
-ms.assetid: f2f8ac24-e90e-4bea-8205-f2960a3b1740
-caps.latest.revision: 8
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 8
+title: "/ ALIGN (выравнивание разделов) | Документы Microsoft"
+ms.custom: 
+ms.date: 12/29/2017
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- VC.Project.VCLinkerTool.Alignment
+- /align
+dev_langs: C++
+helpviewer_keywords:
+- sections, specifying alignment
+- ALIGN linker option
+- /ALIGN linker option
+- -ALIGN linker option
+- section alignment
+- sections
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 4ca4572e84c7ad32be2d03a312f7bb7d8a3f3f29
+ms.sourcegitcommit: 54035dce0992ba5dce0323d67f86301f994ff3db
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/03/2018
 ---
-# /ALIGN (выравнивание разделов)
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+# <a name="align-section-alignment"></a>/ALIGN (выравнивание разделов)
 
-```  
-/ALIGN[:number]  
-```  
-  
-## Заметки  
- Здесь:  
-  
- `number`  
- Значение выравнивания.  
-  
-## Заметки  
- Параметр \/ALIGN задает вариант выравнивания каждого раздела в линейном адресном пространстве программы.  Аргумент `number` указывается в байтах и должен быть степенью числа 2.  Значение по умолчанию — 4000 \(4096\).  Компоновщик выдает предупреждение, если при выравнивании создается недопустимое изображение.  
-  
- Нет необходимости вносить изменения в выравнивание, если только создаваемое приложение не является драйвером устройства.  
-  
- Допускается изменение выравнивания определенного размера с помощью изменения значения выравнивания для параметра [\/SECTION](../../build/reference/section-specify-section-attributes.md).  
-  
- Указываемое значение выравнивания не может быть меньше, чем значение выравнивания для наибольшего раздела.  
-  
-### Установка данного параметра компоновщика в среде разработки Visual Studio  
-  
-1.  Откройте диалоговое окно **Страницы свойств** проекта.  Дополнительные сведения см. в разделе [Задание свойств проекта C\+\+](../../ide/working-with-project-properties.md).  
-  
-2.  Выберите папку **Компоновщик**.  
-  
-3.  Выберите страницу свойств **Командная строка**.  
-  
-4.  Введите параметр в поле **Дополнительные параметры**.  
-  
-### Установка данного параметра компоновщика программным способом  
-  
--   См. раздел <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.AdditionalOptions%2A>.  
-  
-## См. также  
- [Настройка параметров компоновщика](../../build/reference/setting-linker-options.md)   
- [Параметры компоновщика](../../build/reference/linker-options.md)
+## <a name="syntax"></a>Синтаксис
+
+> **/ ALIGN**[**:**_номер_]
+
+### <a name="arguments"></a>Аргументы
+
+*номер*  
+Значение выравнивания в байтах.
+
+## <a name="remarks"></a>Примечания
+
+**/ALIGN** параметр задает выравнивание каждого раздела в линейном адресном пространстве программы. *Номер* аргумент задается в байтах и должен быть степенью двух. Значение по умолчанию — 4 КБ (4096). Компоновщик выдает предупреждение, если при выравнивании создается Недопустимое изображение.
+
+Если вы пишете приложение является драйвером устройства, не следует изменять выравнивание.
+
+Можно изменять выравнивание определенного раздела в параметре выровнять [/SECTION](../../build/reference/section-specify-section-attributes.md) параметр.
+
+Указываемое значение выравнивания не может быть меньше, чем наибольшее выравнивание разделов.
+
+### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>Задание данного параметра компоновщика в среде разработки Visual Studio
+
+1. Откройте диалоговое окно **Страницы свойств** проекта. Дополнительные сведения см. в разделе [задание свойств проекта Visual C++](../../ide/working-with-project-properties.md).
+
+1. Выберите **свойства конфигурации** > **компоновщика** > **командной строки** страницу свойств.
+
+1. Введите параметр в **Дополнительные параметры** поле. Выберите **ОК** или **применить** для применения изменений.
+
+### <a name="to-set-this-linker-option-programmatically"></a>Задание данного параметра компоновщика программным способом
+
+- См. раздел <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.AdditionalOptions%2A>.
+
+## <a name="see-also"></a>См. также
+
+[Настройка параметров компоновщика](../../build/reference/setting-linker-options.md)  
+[Параметры компоновщика](../../build/reference/linker-options.md)  

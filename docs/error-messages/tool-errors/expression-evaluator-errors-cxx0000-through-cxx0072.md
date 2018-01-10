@@ -1,23 +1,27 @@
 ---
-title: "Ошибки вычислителя выражений CXX0000-CXX0072 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-dev_langs: 
-  - "C++"
+title: "Ошибки вычислителя выражений CXX0000-Cxx0072 | Документы Microsoft"
+ms.custom: 
+ms.date: 11/17/2017
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+dev_langs: C++
 ms.assetid: a47a9866-7fb2-4b21-978c-2b77402c7105
-caps.latest.revision: 6
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 6
+caps.latest.revision: "6"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 053fa173c19c8aa32169cbe67834cbcf8b7ed7de
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 12/21/2017
 ---
-# Ошибки вычислителя выражений CXX0000-CXX0072
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+# <a name="expression-evaluator-errors-cxx0000-through-cxx0072"></a>Ошибки вычислителя выражений CXX0000-CXX0072
 
-Этот раздел представляет собой справочник по ошибкам, о которых сообщают средства построения.  Чтобы получить справку по конкретному сообщению об ошибке, щелкните номер ошибки в окне вывода и нажмите клавишу F1, или введите номер ошибки в поле **Найти** указателя.
+Этот раздел представляет собой справочник по ошибкам средствами диагностики.
+
+[!INCLUDE[error-boilerplate](../../error-messages/includes/error-boilerplate.md)]

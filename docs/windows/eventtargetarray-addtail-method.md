@@ -1,32 +1,33 @@
 ---
-title: "Метод EventTargetArray::AddTail | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "event/Microsoft::WRL::Details::EventTargetArray::AddTail"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "AddTail - метод"
+title: "Метод EventTargetArray::AddTail | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: event/Microsoft::WRL::Details::EventTargetArray::AddTail
+dev_langs: C++
+helpviewer_keywords: AddTail method
 ms.assetid: d0fafab9-049c-40e0-a40c-d126c9ee63e6
-caps.latest.revision: 5
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 5
+caps.latest.revision: "5"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: 2ff008a60831ccce9a93bc3b4c4df8643db9c541
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 12/21/2017
 ---
-# Метод EventTargetArray::AddTail
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Предназначено для поддержки инфраструктуры WRL, а не для непосредственного использования в коде.  
+# <a name="eventtargetarrayaddtail-method"></a>Метод EventTargetArray::AddTail
+Поддерживает инфраструктуру WRL и не предназначен для использования непосредственно из программного кода.  
   
-## Синтаксис  
+## <a name="syntax"></a>Синтаксис  
   
 ```  
 void AddTail(  
@@ -34,20 +35,20 @@ void AddTail(
 );  
 ```  
   
-#### Параметры  
+#### <a name="parameters"></a>Параметры  
  `element`  
- Указатель на обработчик событий, который необходимо добавить.  
+ Указатель на обработчик событий для добавления.  
   
-## Примечания  
- Добавляет указанный обработчик событий в конец внутреннего массива обработчиков событий.  
+## <a name="remarks"></a>Примечания  
+ Добавляет указанный обработчик события в конец массива внутренних обработчиков событий.  
   
- AddTail\(\) предназначено для внутреннего использования в классе EventSource.  
+ AddTail() предназначен для внутреннего использования только класса EventSource.  
   
-## Требования  
+## <a name="requirements"></a>Требования  
  **Заголовок:** event.h  
   
- **Пространство имен:** Microsoft::WRL::Details  
+ **Пространство имен:** Microsoft::wrl:: Details  
   
-## См. также  
- [Класс EventTargetArray](../windows/eventtargetarray-class.md)   
+## <a name="see-also"></a>См. также  
+ [Eventtargetarray-класс](../windows/eventtargetarray-class.md)   
  [Пространство имен Microsoft::WRL::Details](../windows/microsoft-wrl-details-namespace.md)

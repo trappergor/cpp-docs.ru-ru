@@ -14,16 +14,17 @@ caps.latest.revision: "17"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 03c88c5550bf5e7a54269a3ea521cd1767d50a7e
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: eb2fdb202c9f52b941fa20877c11a7f97e1b5c9f
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="walkthroughs-mfc"></a>Пошаговые руководства (MFC)
 В этом разделе содержатся статьи с пошаговыми руководствами для различных задач, связанных с новыми функциями библиотеки MFC.  
   
-## <a name="in-this-section"></a>Содержание  
+## <a name="in-this-section"></a>В этом разделе  
  [Пошаговое руководство. Использование новых элементов управления оболочки MFC](../mfc/walkthrough-using-the-new-mfc-shell-controls.md)  
  В этом пошаговом руководстве вы создадите приложения вида проводника. Вы создадите окна, содержащего две области. В левой области будет содержаться [CMFCShellTreeCtrl](../mfc/reference/cmfcshelltreectrl-class.md) объект, отображающий рабочий стол в иерархическом представлении. В правой области будет содержаться [объект CMFCShellListCtrl](../mfc/reference/cmfcshelllistctrl-class.md) , отображающий файлы в папке, выбранной в левой области.  
   

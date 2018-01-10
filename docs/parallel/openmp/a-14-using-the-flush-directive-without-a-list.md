@@ -1,31 +1,31 @@
 ---
-title: "A.14   Using the flush Directive without a List | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
+title: "С помощью директивы очистки без списка A.14 | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
 ms.assetid: 9e63141a-d0c6-43a5-ac16-b0bd7c89b871
-caps.latest.revision: 7
-caps.handback.revision: 7
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "7"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: b2a88558de3c04f1ae05922b1ad5bc7f63aed996
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 12/21/2017
 ---
-# A.14   Using the flush Directive without a List
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-В следующем примере \(для [Раздел 2.6.5](../Topic/2.6.5%20flush%20Directive.md) на странице 20\) отличает общие объекты, затронутые a  `flush` директива без списка из общих объектов, не затрагиваются.  
+# <a name="a14---using-the-flush-directive-without-a-list"></a>A.14   Использование директивы flush без списка
+Следующий пример (для [раздел 2.6.5](../../parallel/openmp/2-6-5-flush-directive.md) на странице 20) отличает общих объектов, затронутых `flush` директивы без списка из общих объектов, которые не были затронуты:  
   
-## Пример  
+## <a name="example"></a>Пример  
   
-### Код  
+### <a name="code"></a>Код  
   
 ```  
 // omp_flush_without_list.c  

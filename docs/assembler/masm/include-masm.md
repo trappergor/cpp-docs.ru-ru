@@ -1,40 +1,39 @@
 ---
-title: "INCLUDE (MASM) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "include"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "INCLUDE directive"
+title: "ВКЛЮЧИТЬ (MASM) | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: include
+dev_langs: C++
+helpviewer_keywords: INCLUDE directive
 ms.assetid: 1c7964ee-715c-414e-a45e-74af93476eb4
-caps.latest.revision: 7
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: c66b8be1e3625a8830cb23c0898bbb0abdaed121
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 12/21/2017
 ---
-# INCLUDE (MASM)
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Вставляет исходный код из исходного файла данного by *fileName* в текущий файл источника во время сборки.  
+# <a name="include-masm"></a>INCLUDE (MASM)
+Операции вставки исходного кода из исходного файла, указанного *filename* в текущий файл исходного кода во время сборки.  
   
-## Синтаксис  
+## <a name="syntax"></a>Синтаксис  
   
 ```  
   
 INCLUDE filename  
 ```  
   
-## Заметки  
- *fileName* быть заключен в угловые скобки, если он включает обратную косую черту, точку с запятой, символ " больше чем ", " меньше символ, одинарная кавычка, либо двойная кавычка.  
+## <a name="remarks"></a>Примечания  
+ *Filename* должно заключаться в угловые скобки, если она включает обратную косую черту, точка с запятой, больше-символ, меньше-от символа, одиночные кавычки или двойные кавычки.  
   
-## См. также  
- [Directives Reference](../../assembler/masm/directives-reference.md)
+## <a name="see-also"></a>См. также  
+ [Справочник по директивам](../../assembler/masm/directives-reference.md)

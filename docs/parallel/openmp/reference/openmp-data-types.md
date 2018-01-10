@@ -13,18 +13,19 @@ caps.latest.revision: "6"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 4f3686241737921576e5e79bbd55ecba06251b9a
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: c777e672354d257ce8923c8ee0974860fdcbe8c0
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="openmp-data-types"></a>Типы данных OpenMP
 Содержит ссылки на типы данных, используемые в OpenMP API.  
   
  Реализация Visual C++ OpenMP standard включает следующие типы данных.  
   
-|Тип данных|Описание|  
+|Тип данных|Описание:|  
 |---------------|-----------------|  
 |[omp_lock_t](../../../parallel/openmp/reference/omp-lock-t.md)|Тип, содержащий состояние блокировки, доступен ли блокировка или если поток владеет блокировкой.|  
 |[omp_nest_lock_t](../../../parallel/openmp/reference/omp-nest-lock-t.md)|Тип, содержащий один из следующих элементов сведения о блокировке: ли блокировки, и идентификатор потока, которому принадлежит блокировка и вложенности count.|  

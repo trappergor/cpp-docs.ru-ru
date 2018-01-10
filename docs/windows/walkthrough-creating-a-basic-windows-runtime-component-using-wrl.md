@@ -1,26 +1,29 @@
 ---
-title: "Пошаговое руководство. Создание базового компонента среды выполнения Windows с использованием WRL | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-dev_langs: 
-  - "C++"
+title: "Пошаговое руководство: Создание базового среды выполнения компонента Windows с использованием WRL | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+dev_langs: C++
 ms.assetid: 6e3f0986-7905-4f94-90e5-22c2ebfc8cd0
-caps.latest.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 9
+caps.latest.revision: "9"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: 5859f3ebfcb55427e239a0018d539e2f4df13800
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 12/21/2017
 ---
-# Пошаговое руководство. Создание базового компонента среды выполнения Windows с использованием WRL
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Этот документ демонстрирует использование [!INCLUDE[cppwrl](../windows/includes/cppwrl_md.md)] ([!INCLUDE[cppwrl_short](../windows/includes/cppwrl_short_md.md)]) для создания базового компонента среды выполнения ([!INCLUDE[wrt](../atl/reference/includes/wrt_md.md)]). Компонент складывает 2 числа и вызывает событие, если результат — простое число. Также в этом документе демонстрируется работа с компонентом из приложения, распространяемого через [!INCLUDE[win8_appname_long](../build/includes/win8_appname_long_md.md)], использующего JavaScript.  
+# <a name="walkthrough-creating-a-basic-windows-runtime-component-using-wrl"></a>Пошаговое руководство. Создание базового компонента среды выполнения Windows с использованием WRL
+В этом документе показано, как использовать среды выполнения C++ шаблон библиотеки Windows (WRL) для создания базового компонента среды выполнения Windows. Компонент складывает 2 числа и вызывает событие, если результат — простое число. В этом документе также демонстрируется использование компонента из приложения универсальной платформы Windows, использующего JavaScript.  
   
 ## <a name="prerequisites"></a>Предварительные требования  
   
@@ -28,9 +31,9 @@ caps.handback.revision: 9
   
 -   опыт работы с моделью COM;  
   
-### <a name="to-create-a-basic-includewrttokenwrtmdmd-component-that-adds-two-numbers"></a>Создание базового компонента среды выполнения ([!INCLUDE[wrt](../atl/reference/includes/wrt_md.md)]), который складывает 2 числа  
+### <a name="to-create-a-basic-windows-runtime-component-that-adds-two-numbers"></a>Для создания базового компонента среды выполнения Windows, который добавляет два числа  
   
-1.  В Visual Studio создайте Visual C++ `WRLClassLibrary` проекта. Документ [шаблон проекта библиотеки классов](../windows/wrl-class-library-project-template.md) описывает, как загрузить этот шаблон. Задайте для проекта имя `Contoso`.  
+1.  Создайте в Visual Studio, Visual C++ `WRLClassLibrary` проекта. Документ [шаблон проекта библиотеки классов](../windows/wrl-class-library-project-template.md) описывает, как загрузить шаблон. Задайте для проекта имя `Contoso`.  
   
 2.  В файлах Contoso.cpp и Contoso.idl замените все вхождения "WinRTClass" на "Calculator".  
   
@@ -45,11 +48,11 @@ caps.handback.revision: 9
     > [!IMPORTANT]
     >  Поскольку создается компонент модели COM, необходимо использовать соглашение о вызовах `__stdcall`.  
   
-     Рекомендуется использовать `_Out_` и другие заметки на языке заметок к исходному коду (SAL), чтобы описать, как функция использует эти параметры. Заметки на языке SAL также описывают возвращаемые значения. ЭТИ заметки работают с [средство анализа кода C/C++](../Topic/Code%20Analysis%20for%20C-C++%20Overview.md) для обнаружения возможных ошибок в C и C++ в исходном коде. Наиболее распространенные ошибки обнаруживаемые этим инструментом — переполнение буфера, неинициализированная память, разыменование пустых указателей, а также утечка памяти и ресурсов.  
+     Рекомендуется использовать `_Out_` и другие заметки на языке заметок к исходному коду (SAL), чтобы описать, как функция использует эти параметры. Заметки на языке SAL также описывают возвращаемые значения. Заметки SAL совместно с [средство анализа кода C/C++](/visualstudio/code-quality/code-analysis-for-c-cpp-overview) для обнаружения возможных ошибок в C и C++ исходный код. Наиболее распространенные ошибки обнаруживаемые этим инструментом — переполнение буфера, неинициализированная память, разыменование пустых указателей, а также утечка памяти и ресурсов.  
   
-### <a name="to-use-the-component-from-a-includewin8appnamelongtokenwin8appnamelongmdmd-app-that-uses-javascript"></a>Работа с компонентом из приложения, распространяемого через [!INCLUDE[win8_appname_long](../build/includes/win8_appname_long_md.md)], использующего JavaScript  
+### <a name="to-use-the-component-from-a-universal-windows-platform-app-that-uses-javascript"></a>Использование компонента из приложения универсальной платформы Windows, использующего JavaScript  
   
-1.  В Visual Studio, добавьте новый JavaScript `Blank App` проект `Contoso` решения. Задайте для проекта имя `CalculatorJS`.  
+1.  В Visual Studio, добавьте новый JavaScript `Blank App` проекта `Contoso` решения. Задайте для проекта имя `CalculatorJS`.  
   
 2.  В `CalculatorJS` проекта, добавьте ссылку на `Contoso` проекта.  
   
@@ -78,7 +81,7 @@ caps.handback.revision: 9
   
      [!code-cpp[wrl-basic-component#6](../windows/codesnippet/CPP/walkthrough-creating-a-basic-windows-runtime-component-using-wrl_7.idl)]  
   
-3.  В файле Contoso.cpp добавьте `private` [Microsoft::wrl:: eventsource](../windows/eventsource-class.md) переменную-член для управления подписчиками события и вызова обработчика событий.  
+3.  Добавьте в Contoso.cpp `private` [Microsoft::WRL::EventSource](../windows/eventsource-class.md) переменной-члена для управления подписчики на события и вызывается обработчик события.  
   
      [!code-cpp[wrl-basic-component#7](../windows/codesnippet/CPP/walkthrough-creating-a-basic-windows-runtime-component-using-wrl_8.cpp)]  
   
@@ -92,7 +95,7 @@ caps.handback.revision: 9
   
      [!code-cpp[wrl-basic-component#12](../windows/codesnippet/CPP/walkthrough-creating-a-basic-windows-runtime-component-using-wrl_10.cpp)]  
   
-2.  Изменить `Calculator` `Add` метод для вызова [Microsoft::WRL::EventSource::InvokeAll](../windows/eventsource-invokeall-method.md) метод, когда вычисляется простое число.  
+2.  Изменить `Calculator` `Add` метод, вызываемый [Microsoft::WRL::EventSource::InvokeAll](../windows/eventsource-invokeall-method.md) метод при вычислении простого числа.  
   
      [!code-cpp[wrl-basic-component#11](../windows/codesnippet/CPP/walkthrough-creating-a-basic-windows-runtime-component-using-wrl_11.cpp)]  
   
@@ -111,11 +114,11 @@ caps.handback.revision: 9
   
  На следующем рисунке показано пример простого приложения "Калькулятор".  
   
- ![Основное приложение "Калькулятор", использующее JavaScript](../windows/media/wrl_basic_component.png "WRL_Basic_Component")  
+ ![Калькулятору приложения с помощью JavaScript](../windows/media/wrl_basic_component.png "WRL_Basic_Component")  
   
-## <a name="next-steps"></a>Дальнейшие действия  
+## <a name="next-steps"></a>Следующие шаги  
   
 ## <a name="see-also"></a>См. также  
- [Библиотека шаблонов C++ среды выполнения Windows (WRL)](../Topic/Windows%20Runtime%20C++%20Template%20Library%20\(WRL\).md)   
+ [Библиотека шаблонов C++ среды выполнения Windows (WRL)](../windows/windows-runtime-cpp-template-library-wrl.md)   
  [Шаблон проекта библиотеки классов](../windows/wrl-class-library-project-template.md)   
- [Средство анализа кода C/C++](../Topic/Code%20Analysis%20for%20C-C++%20Overview.md)
+ [Средство анализа кода C/C++](/visualstudio/code-quality/code-analysis-for-c-cpp-overview)

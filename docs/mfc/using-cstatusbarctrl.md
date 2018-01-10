@@ -17,11 +17,12 @@ caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: a3216724721c57798a9f11a4a095195ca0612163
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 8960d7093fcc950eb3118115459a414bc0f0fda3
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="using-cstatusbarctrl"></a>Использование CStatusBarCtrl
 Можно использовать элемент управления строки состояния ([CStatusBarCtrl](../mfc/reference/cstatusbarctrl-class.md)) для создания окна элемента управления, отражающий различного рода сведения о состоянии приложения. Окно состояния можно разделить на части, отображающие более чем один тип данных.  

@@ -1,68 +1,70 @@
 ---
-title: "Класс HStringReference | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "corewrappers/Microsoft::WRL::Wrappers::HStringReference"
-dev_langs: 
-  - "C++"
+title: "Класс HStringReference | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: corewrappers/Microsoft::WRL::Wrappers::HStringReference
+dev_langs: C++
 ms.assetid: 9bf823b1-17eb-4ac4-8c5d-27d27c7a4150
-caps.latest.revision: 3
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 3
+caps.latest.revision: "3"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: 97900bd44dfdcede187b20b181c64d235eac60fc
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 12/21/2017
 ---
-# Класс HStringReference
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Представляет HSTRING, созданный из существующей строки.  
+# <a name="hstringreference-class"></a>Класс HStringReference
+Представляет HSTRING, созданной из существующей строки.  
   
-## Синтаксис  
+## <a name="syntax"></a>Синтаксис  
   
 ```cpp  
 class HStringReference;  
 ```  
   
-## Примечания  
- Время существования буфера резервного копирования в новом HSTRING не управляется [!INCLUDE[wrt](../atl/reference/includes/wrt_md.md)].  Вызывающий объект выделяет строку источника в кадре стека во избежание выделения памяти для кучи и для исключения риска утечки памяти.  Кроме того, вызывающий объект должен убедиться, что строка источника остается неизменной во время существования подключенного HSTRING.  Для получения дополнительной информации см. [WindowsCreateStringReference function](http://msdn.microsoft.com/ru-ru/0361bb7e-da49-4289-a93e-de7aab8712ac).  
+## <a name="remarks"></a>Примечания  
+ Время существования резервный буфер в новый HSTRING не управляется средой выполнения Windows. Вызывающий объект выделяет строку источника, чтобы избежать выделения кучи и избежать утечки памяти в стеке. Кроме того вызывающий объект должен убедиться, исходная строка остается неизменным в течение времени существования вложенного HSTRING. Дополнительные сведения см. в разделе [WindowsCreateStringReference функция](http://msdn.microsoft.com/en-us/0361bb7e-da49-4289-a93e-de7aab8712ac).  
   
-## Члены  
+## <a name="members"></a>Участники  
   
-### Открытые конструкторы  
+### <a name="public-constructors"></a>Открытые конструкторы  
   
-|Name|Описание|  
-|----------|--------------|  
+|Имя|Описание:|  
+|----------|-----------------|  
 |[Конструктор HStringReference::HStringReference](../windows/hstringreference-hstringreference-constructor.md)|Инициализирует новый экземпляр класса HStringReference.|  
   
-### Члены  
+### <a name="members"></a>Участники  
   
-|Член|Описание|  
-|----------|--------------|  
-|[Метод HStringReference::CopyTo](../windows/hstringreference-copyto-method.md)|Копирует текущий объект HStringReference в объект HSTRING.|  
-|[Метод HStringReference::Get](../windows/hstringreference-get-method.md)|Извлекает значение базового дескриптора HSTRING.|  
+|Член|Описание:|  
+|------------|-----------------|  
+|[Метод HStringReference::CopyTo](../windows/hstringreference-copyto-method.md)|Копирует текущий HStringReference объект к объекту HSTRING.|  
+|[Метод HStringReference::Get](../windows/hstringreference-get-method.md)|Возвращает значение базового дескриптора HSTRING.|  
   
-### Открытые операторы  
+### <a name="public-operators"></a>Открытые операторы  
   
-|Name|Описание|  
-|----------|--------------|  
-|[Оператор HStringReference::Operator\=](../windows/hstringreference-operator-assign-operator.md)|Перемещает значение другого объекта HStringReference в текущий объект HStringReference.|  
-|[Оператор HStringReference::Operator\=\=](../windows/hstringreference-operator-equality-operator.md)|Указывает, действительно ли два параметра равны.|  
-|[Оператор HStringReference::O](../windows/hstringreference-operator-inequality-operator.md)|Указывает, действительно ли два параметра не равны.|  
+|Имя|Описание:|  
+|----------|-----------------|  
+|[Оператор HStringReference::Operator=](../windows/hstringreference-operator-assign-operator.md)|Значение другой объект HStringReference перемещается в текущий объект HStringReference.|  
+|[Оператор HStringReference::Operator==](../windows/hstringreference-operator-equality-operator.md)|Указывает, равны ли два параметра.|  
+|[Оператор HStringReference::Operator!=](../windows/hstringreference-operator-inequality-operator.md)|Указывает, равны ли два параметра.|  
   
-## Иерархия наследования  
+## <a name="inheritance-hierarchy"></a>Иерархия наследования  
  `HStringReference`  
   
-## Требования  
+## <a name="requirements"></a>Требования  
  **Заголовок:** corewrappers.h  
   
- **Пространство имен:** Microsoft::WRL::Wrappers  
+ **Пространство имен:** Microsoft::wrl:: wrappers  
   
-## См. также  
- [Пространство имен Microsoft::WRL::Wrappers](../Topic/Microsoft::WRL::Wrappers%20Namespace.md)
+## <a name="see-also"></a>См. также  
+ [Пространство имен Microsoft::WRL::Wrappers](../windows/microsoft-wrl-wrappers-namespace.md)

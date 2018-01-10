@@ -37,11 +37,12 @@ caps.latest.revision: "19"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: b7561c9765dcbead36335852d457568bd76b46e5
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: dd5f13f2ec48f38fde140361d31a5e08ae6228b9
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cfontholder-class"></a>Класс CFontHolder
 Реализует свойство Font и инкапсулирует функциональность объекта шрифта Windows и интерфейса `IFont` .  
@@ -52,17 +53,17 @@ ms.lasthandoff: 10/24/2017
 class CFontHolder  
 ```  
   
-## <a name="members"></a>Члены  
+## <a name="members"></a>Участники  
   
 ### <a name="public-constructors"></a>Открытые конструкторы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[CFontHolder::CFontHolder](#cfontholder)|Создает объект `CFontHolder`.|  
   
 ### <a name="public-methods"></a>Открытые методы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[CFontHolder::GetDisplayString](#getdisplaystring)|Возвращает строку, отображаемую в браузере свойств контейнера.|  
 |[CFontHolder::GetFontDispatch](#getfontdispatch)|Возвращает шрифт `IDispatch` интерфейса.|  
@@ -75,7 +76,7 @@ class CFontHolder
   
 ### <a name="public-data-members"></a>Открытые члены данных  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[CFontHolder::m_pFont](#m_pfont)|Указатель на `CFontHolder` объекта `IFont` интерфейса.|  
   

@@ -177,11 +177,12 @@ caps.latest.revision: "26"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: d9742093585283350ce2c40ae533cc9e530d94bd
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: e50e83a2d52567d30901cea33cfccec3e236fe67
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cdaorecordset-class"></a>CDaoRecordset-класс
 Представляет набор записей, выбранных из источника данных.  
@@ -192,17 +193,17 @@ ms.lasthandoff: 10/24/2017
 class CDaoRecordset : public CObject  
 ```  
   
-## <a name="members"></a>Члены  
+## <a name="members"></a>Участники  
   
 ### <a name="public-constructors"></a>Открытые конструкторы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[CDaoRecordset::CDaoRecordset](#cdaorecordset)|Создает объект `CDaoRecordset`.|  
   
 ### <a name="public-methods"></a>Открытые методы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[CDaoRecordset::AddNew](#addnew)|Подготавливает для добавления новой записи. Вызовите [обновление](#update) для завершения добавления.|  
 |[CDaoRecordset::CanAppend](#canappend)|Возвращает ненулевое значение, если новые записи могут быть добавлены в набор записей через [AddNew](#addnew) функции-члена.|  
@@ -279,7 +280,7 @@ class CDaoRecordset : public CObject
   
 ### <a name="public-data-members"></a>Открытые члены данных  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[CDaoRecordset::m_bCheckCacheForDirtyFields](#m_bcheckcachefordirtyfields)|Содержит флаг, указывающий ли поля автоматически помечаются как измененный.|  
 |[CDaoRecordset::m_nFields](#m_nfields)|Содержит число элементов данных полей в классе записей и число столбцов, выбранных в наборе записей из источника данных.|  
@@ -997,7 +998,7 @@ short GetEditMode();
   
 ### <a name="remarks"></a>Примечания  
   
-|Значение|Описание|  
+|Значение|Описание:|  
 |-----------|-----------------|  
 |**dbEditNone**|Ни одна из операций редактирования уже выполняется.|  
 |**dbEditInProgress**|**Изменить** был вызван.|  
@@ -1909,7 +1910,7 @@ BOOL Seek(
  Одно из следующих строковых выражений: «< «,»\<=», «=», «> =», или «>».  
   
  `pKey1`  
- Указатель на [COleVariant](../../mfc/reference/colevariant-class.md) , значение которого соответствует первое поле в индекс. Обязательный.  
+ Указатель на [COleVariant](../../mfc/reference/colevariant-class.md) , значение которого соответствует первое поле в индекс. Обязательно.  
   
  *pKey2*  
  Указатель на `COleVariant` , значение которого соответствует второго поля в индексе, если таковые имеются. По умолчанию используется значение **NULL**.  

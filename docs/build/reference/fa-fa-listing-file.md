@@ -27,11 +27,12 @@ caps.latest.revision: "12"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 44d21eae211bd2d01e202a516ef487c8d0df3684
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: e0cd569cf16e7b2a14faaa119eacaef0994d09dc
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="fa-fa-listing-file"></a>/FA, /Fa (файл листинга)
 Создает файл листинга, содержащего кода на языке ассемблера.  
@@ -51,10 +52,10 @@ ms.lasthandoff: 10/24/2017
 Только для языка ассемблера, включены в листинг.  
   
 `c`  
-Необязательно. Содержит машинный код в листинг.  
+Необязательный. Содержит машинный код в листинг.  
   
 `s`  
-Необязательно. В списке, включает исходный код.  
+Необязательный. В списке, включает исходный код.  
   
 `u`Необязательный параметр. Файл списка в формате UTF-8 и содержит метку порядка байтов. По умолчанию файл кодировке ANSI. Используйте `u` Чтобы создать файл листинга, который будет правильно отображать в любой системе, или если вы используете Юникода файлы исходного кода в качестве входного для компилятора.  
   

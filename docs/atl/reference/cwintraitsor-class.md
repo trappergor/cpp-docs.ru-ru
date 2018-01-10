@@ -21,11 +21,12 @@ caps.latest.revision: "20"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 14796948369b92c9137dc7e02a8399910d46997c
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: ac6cf07fcd6d3703ffb6b483ba19a2d12520cb0a
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cwintraitsor-class"></a>Класс CWinTraitsOR
 Этот класс предоставляет метод для стандартизации стили, используемые при создании объекта окна.  
@@ -49,11 +50,11 @@ class CWinTraitsOR
  `t_dwExStyle`  
  По умолчанию расширенные стили окна.  
   
-## <a name="members"></a>Члены  
+## <a name="members"></a>Участники  
   
 ### <a name="public-methods"></a>Открытые методы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[CWinTraitsOR::GetWndExStyle](#getwndexstyle)|Извлекает расширенные стили для `CWinTraitsOR` объекта.|  
 |[CWinTraitsOR::GetWndStyle](#getwndstyle)|Получает стандартный стили для `CWinTraitsOR` объекта.|  

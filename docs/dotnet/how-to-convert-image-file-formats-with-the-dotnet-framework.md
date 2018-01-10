@@ -16,17 +16,20 @@ caps.latest.revision: "13"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: eff94d00f92fe0a52162c986662209168974e072
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: dc2b84063c509cd870b5d02fa0a209b511d8a0f3
+ms.sourcegitcommit: 54035dce0992ba5dce0323d67f86301f994ff3db
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 01/03/2018
 ---
 # <a name="how-to-convert-image-file-formats-with-the-net-framework"></a>Практическое руководство. Преобразование файлов изображений из одного формата в другой с помощью платформы .NET Framework
 В следующем примере кода показано <xref:System.Drawing.Image?displayProperty=fullName> класса и <xref:System.Drawing.Imaging.ImageFormat?displayProperty=fullName> перечисление, используемое для преобразования и сохранения файлов изображений. Следующий код загружает изображение из JPG-файл и затем сохраняет его в форматах GIF и BMP.  
   
 > [!NOTE]
->  GDI + входит в состав Windows XP, Windows Server 2003 и Windows Vista и доступен в виде распространяемого пакета для Windows 2000. Загрузке последнего распространяемого пакета см. в разделе [http://go.microsoft.com/fwlink/?linkid=11232](http://go.microsoft.com/fwlink/?linkid=11232).   
+>  GDI + входит в состав Windows XP, Windows Server 2003 и Windows Vista и доступен в виде распространяемого пакета для Windows 2000. Загрузке последнего распространяемого пакета см. в разделе [http://go.microsoft.com/fwlink/p/?linkid=11232](http://go.microsoft.com/fwlink/p/?linkid=11232).   
   
 ## <a name="example"></a>Пример  
   

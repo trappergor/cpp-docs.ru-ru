@@ -141,11 +141,12 @@ caps.latest.revision: "38"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 0b6f6af6d99b27e760e48c62cdcdde5ac3936506
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 0c4e78017946ef335e04c8190b6ec4cd20e74ca2
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cmfcribboncategory-class"></a>Класс CMFCRibbonCategory
 `CMFCRibbonCategory` Класс реализует вкладку ленты, которая содержит группу [панелей ленты](../../mfc/reference/cmfcribbonpanel-class.md).  
@@ -156,17 +157,17 @@ ms.lasthandoff: 10/24/2017
 class CMFCRibbonCategory : public CObject  
 ```  
   
-## <a name="members"></a>Члены  
+## <a name="members"></a>Участники  
   
 ### <a name="protected-constructors"></a>Защищенные конструкторы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[CMFCRibbonCategory::CMFCRibbonCategory](#cmfcribboncategory)|Конструктор.|  
   
 ### <a name="public-methods"></a>Открытые методы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[CMFCRibbonCategory::AddHidden](#addhidden)|Добавляет скрытый элемент в категорию ленты.|  
 |[CMFCRibbonCategory::AddPanel](#addpanel)|Добавляет новую область в категорию ленты.|  

@@ -1,37 +1,36 @@
 ---
-title: "Ошибка BSCMAKE BK1504 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "BK1504"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "BK1504"
+title: "Ошибка BSCMAKE BK1504 | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords: BK1504
+dev_langs: C++
+helpviewer_keywords: BK1504
 ms.assetid: e6d1a171-1472-4b7e-a04b-1a68a561675f
-caps.latest.revision: 6
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 6
+caps.latest.revision: "6"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: deed01dee42c33e86489585a3346e75036031a71
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 12/21/2017
 ---
-# Ошибка BSCMAKE BK1504
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-невозможно перейти к части файла 'имя файла' \[: причина\]  
+# <a name="bscmake-error-bk1504"></a>Ошибка BSCMAKE BK1504
+не удается разместить в файл «имя_файла» [: причина]  
   
- Программе BSCMAKE не удалось перейти к определенной части файла.  
+ BSCMAKE не удалось переместить в расположение в файле.  
   
-### Чтобы устранить ошибку, следует проверить следующие возможные причины ее возникновения.  
+### <a name="to-fix-by-checking-the-following-possible-causes"></a>Чтобы устранить ошибку, проверьте указанные ниже возможные причины ее возникновения.  
   
 1.  Диск переполнен.  
   
 2.  Аппаратная ошибка.  
   
-3.  Файл усечен из\-за недостаточного места на диске или в результате остановки работы компилятора во время создания SBR\-файла.
+3.  Усечение файла из-за нехватки места на диске или прерывания работы компилятора во время создания SBR-файл.

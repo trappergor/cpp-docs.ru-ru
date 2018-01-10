@@ -1,32 +1,33 @@
 ---
-title: "Метод AsyncBase::TryTransitionToError | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "async/Microsoft::WRL::AsyncBase::TryTransitionToError"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "TryTransitionToError - метод"
+title: "Метод AsyncBase::TryTransitionToError | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: async/Microsoft::WRL::AsyncBase::TryTransitionToError
+dev_langs: C++
+helpviewer_keywords: TryTransitionToError method
 ms.assetid: f6d11c25-1ce3-43f9-af1c-97c4dc0f6f0f
-caps.latest.revision: 3
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 3
+caps.latest.revision: "3"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: 6da3d84e3e5e1ee0fd71da1cf59ec79497f81d35
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 12/21/2017
 ---
-# Метод AsyncBase::TryTransitionToError
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Указывает, может ли указанный код ошибки изменить состояние внутренней ошибки.  
+# <a name="asyncbasetrytransitiontoerror-method"></a>Метод AsyncBase::TryTransitionToError
+Указывает, является ли указанный код ошибки можно изменить состояние Внутренняя ошибка.  
   
-## Синтаксис  
+## <a name="syntax"></a>Синтаксис  
   
 ```  
 bool TryTransitionToError(  
@@ -34,20 +35,20 @@ bool TryTransitionToError(
 );  
 ```  
   
-#### Параметры  
+#### <a name="parameters"></a>Параметры  
  `error`  
- Ошибка HRESULT.  
+ HRESULT ошибки.  
   
-## Возвращаемое значение  
- `true`, если состояние внутренней ошибки было изменено; в противном случае `false`.  
+## <a name="return-value"></a>Возвращаемое значение  
+ `true`Если внутренняя ошибка состояние было изменено; в противном случае `false`.  
   
-## Примечания  
- Эта операция изменяет состояние ошибки только если состояние ошибки уже имеет значение S\_OK.  Эта операция не срабатывает, если состояние ошибки уже ошибка, отменено, выполнено или закрыто.  
+## <a name="remarks"></a>Примечания  
+ Эта операция изменяет состояние ошибки только в том случае, если состояние ошибки уже имеет значение S_OK. Эта операция оказывает никакого влияния, если состояние ошибки уже ошибка, отменено, завершено или закрыт.  
   
-## Требования  
+## <a name="requirements"></a>Требования  
  **Заголовок:** async.h  
   
  **Пространство имен:** Microsoft::WRL  
   
-## См. также  
+## <a name="see-also"></a>См. также  
  [Класс AsyncBase](../windows/asyncbase-class.md)

@@ -29,11 +29,12 @@ caps.latest.revision: "21"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 810f50a17dcdef3aac53462ac059a4aedd4343a8
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 03c9d04786bcffc8fbf951fe125dc64d45e8c0d2
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="reverseiterator-class"></a>Класс reverse_iterator
 Класс шаблона является адаптером итератора, описывающим объект обратного итератора, поведение которого аналогично поведению итератора произвольного доступа или двунаправленного итератора, но в обратном порядке. Он включает прохождение через диапазон в обратном порядке.  
@@ -66,7 +67,7 @@ class reverse_iterator
 |-|-|  
 |[reverse_iterator](#reverse_iterator)|Формирование итератора `reverse_iterator` по умолчанию или итератора `reverse_iterator` из базового итератора.|  
   
-### <a name="typedefs"></a>Typedefs  
+### <a name="typedefs"></a>Определения типов  
   
 |||  
 |-|-|  
@@ -86,10 +87,10 @@ class reverse_iterator
 |||  
 |-|-|  
 |[operator_star](#op_star)|Возвращение элемента, к которому обращается `reverse_iterator`.|  
-|[оператор+](#op_add)|Добавление смещения к итератору и возврат нового итератора `reverse_iterator`, который обращается к вставленному элементу в новой позиции смещения.|  
+|[operator+](#op_add)|Добавление смещения к итератору и возврат нового итератора `reverse_iterator`, который обращается к вставленному элементу в новой позиции смещения.|  
 |[оператор++](#op_add_add)|Увеличение `reverse_iterator` до следующего элемента.|  
 |[оператор+=](#op_add_eq)|Добавление заданного смещения из итератора `reverse_iterator`.|  
-|[оператор-](#operator-)|Вычитание смещения из итератора `reverse_iterator` с возвратом итератора `reverse_iterator`, который обращается к элементу в позиции со сдвигом.|  
+|[operator-](#operator-)|Вычитание смещения из итератора `reverse_iterator` с возвратом итератора `reverse_iterator`, который обращается к элементу в позиции со сдвигом.|  
 |[оператор--](#operator--)|Уменьшение `reverse_iterator` до предыдущего элемента.|  
 |[оператор-=](#operator-_eq)|Вычитание заданного смещения из итератора `reverse_iterator`.|  
 |[оператор>](#operator-_gt)|Возвращение указателя на элемент, к которому обращается `reverse_iterator`.|  

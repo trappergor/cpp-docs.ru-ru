@@ -9,24 +9,22 @@ ms.topic: article
 f1_keywords:
 - system_error/std::operator!=
 - system_error/std::operator==
-dev_langs:
-- C++
+dev_langs: C++
 ms.assetid: c14edefb-bd8a-4e90-88d3-c59c98e6f73c
-caps.latest.revision: 11
+caps.latest.revision: "11"
 manager: ghogen
-ms.translationtype: MT
-ms.sourcegitcommit: 65f4e356ad0d46333b0d443d0fd6ac0b9f2b6f58
 ms.openlocfilehash: ed01a5abeb54f5071968555b563849e2cd4ac1af
-ms.contentlocale: ru-ru
-ms.lasthandoff: 10/03/2017
-
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="ltsystemerrorgt-operators"></a>Операторы &lt;system_error&gt;
 ||||  
 |-|-|-|  
 |[оператор!=](#op_neq)|[оператор&lt;](#op_lt)|[оператор==](#op_eq_eq)|  
   
-##  <a name="op_eq_eq"></a>  оператор==  
+##  <a name="op_eq_eq"></a> operator==  
  Проверяет равенство объекта слева от оператора объекту справа от оператора.  
   
 ```
@@ -39,7 +37,7 @@ bool operator==(const error_condition& left,
   
 ### <a name="parameters"></a>Параметры  
   
-|Параметр|Описание|  
+|Параметр|Описание:|  
 |---------------|-----------------|  
 |`left`|Объект для проверки на равенство.|  
 |`right`|Объект для проверки на равенство.|  
@@ -50,7 +48,7 @@ bool operator==(const error_condition& left,
 ### <a name="remarks"></a>Примечания  
  Функция возвращает `left.category() == right.category() && left.value() == right.value()`.  
   
-##  <a name="op_neq"></a>  оператор!=  
+##  <a name="op_neq"></a> operator!=  
  Проверяет неравенство объекта слева от оператора объекту справа от оператора.  
   
 ```
@@ -63,7 +61,7 @@ bool operator!=(const error_condition& left,
   
 ### <a name="parameters"></a>Параметры  
   
-|Параметр|Описание|  
+|Параметр|Описание:|  
 |---------------|-----------------|  
 |`left`|Объект для проверки на неравенство.|  
 |`right`|Объект для проверки на неравенство.|  
@@ -74,7 +72,7 @@ bool operator!=(const error_condition& left,
 ### <a name="remarks"></a>Примечания  
  Функция возвращает `!(left == right)`.  
   
-##  <a name="op_lt"></a>  оператор&lt;  
+##  <a name="op_lt"></a> operator&lt;  
  Проверяет, меньше ли какой-либо объект переданного для сравнения объекта.  
   
 ```
@@ -103,7 +101,7 @@ inline bool operator<(
   
 ### <a name="parameters"></a>Параметры  
   
-|Параметр|Описание|  
+|Параметр|Описание:|  
 |---------------|-----------------|  
 |`left`|Сравниваемый объект.|  
 |`right`|Сравниваемый объект.|  
@@ -116,7 +114,6 @@ inline bool operator<(
   
 ## <a name="see-also"></a>См. также  
  [<system_error>](../standard-library/system-error.md)
-
 
 
 

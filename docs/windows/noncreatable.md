@@ -1,32 +1,33 @@
 ---
-title: "noncreatable | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-f1_keywords: 
-  - "vc-attr.noncreatable"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "noncreatable attribute"
+title: "noncreatable | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+f1_keywords: vc-attr.noncreatable
+dev_langs: C++
+helpviewer_keywords: noncreatable attribute
 ms.assetid: 4d17937b-0bff-41af-ba57-53e18b7ab5a9
-caps.latest.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 9
+caps.latest.revision: "9"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: bb9f67b4efac28a1cacd6301c8ca849246f9a481
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 12/21/2017
 ---
-# noncreatable
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Определяет объект, который не может быть создан самостоятельно.  
+# <a name="noncreatable"></a>noncreatable
+Определяет объект, который не может быть создан сам по себе.  
   
-## Синтаксис  
+## <a name="syntax"></a>Синтаксис  
   
 ```  
   
@@ -34,12 +35,12 @@ caps.handback.revision: 9
   
 ```  
   
-## Заметки  
- **noncreatable** Атрибут C\+\+ имеет ту же функциональность, что и  [noncreatable](http://msdn.microsoft.com/library/windows/desktop/aa367118) Атрибут MIDL и автоматически передается в idl\-файл генерируемый компилятором.  
+## <a name="remarks"></a>Примечания  
+ **Noncreatable** языка C++ имеет ту же функциональность, что [noncreatable](http://msdn.microsoft.com/library/windows/desktop/aa367118) языка MIDL и автоматически передается в созданный. IDL-файл компилятором.  
   
- Когда этот атрибут используется в рамках проекта, использующий библиотеку ATL, расширения функциональности атрибута изменяется.  В дополнение к приведенной выше расширений функциональности также вставляет атрибут OBJECT\_ENTRY\_NON\_CREATEABLE\_EX\_AUTO макрос.  Этот макрос указывает на библиотеку ATL, что объект не может быть создан ней.  
+ Если этот атрибут используется в проект, использующий ATL, изменяет поведение атрибута. Помимо описанное выше поведение также вставляет атрибут [OBJECT_ENTRY_NON_CREATEABLE_EX_AUTO](../atl/reference/object-map-macros.md#object_entry_non_createable_ex_auto) макрос. Этот макрос указывает ATL, что не удается создать объект извне.  
   
-## Пример  
+## <a name="example"></a>Пример  
   
 ```  
 // cpp_attr_ref_noncreatable.cpp  
@@ -59,20 +60,19 @@ class CMyClass : public A
 };  
 ```  
   
-## Требования  
+## <a name="requirements"></a>Требования  
   
-### Контекст атрибута  
+### <a name="attribute-context"></a>Контекст атрибута  
   
 |||  
 |-|-|  
-|**Применение**|**класс**"  `struct`|  
-|**Repeatable**|Нет|  
-|**Обязательные атрибуты**|**CoClass**|  
-|**Недопустимые атрибуты**|None|  
+|**Применение**|**class**, `struct`|  
+|**Повторяемый**|Нет|  
+|**Обязательные атрибуты**|**coclass**|  
+|**Недопустимые атрибуты**|Нет|  
   
- Дополнительные сведения о контекстах атрибута см. в разделе [Контексты атрибута](../windows/attribute-contexts.md).  
+ Дополнительные сведения о контекстах атрибутов см. в разделе [Контексты атрибутов](../windows/attribute-contexts.md).  
   
-## См. также  
- [IDL Attributes](../windows/idl-attributes.md)   
- [Class Attributes](../windows/class-attributes.md)   
- [Attributes Samples](http://msdn.microsoft.com/ru-ru/558ebdb2-082f-44dc-b442-d8d33bf7bdb8)
+## <a name="see-also"></a>См. также  
+ [Атрибуты IDL](../windows/idl-attributes.md)   
+ [Атрибуты классов](../windows/class-attributes.md)   

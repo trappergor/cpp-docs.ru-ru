@@ -20,11 +20,12 @@ caps.latest.revision: "15"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 849f430caaaf8dacef53ecedd5dc4897041b624a
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 46b4962e30a6990f6de2c67437fc2af3989c2407
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="concurrencydirect3d-namespace"></a>Пространство имен Concurrency::direct3d
 `direct3d` Пространство имен предоставляет функции, поддерживающие взаимодействие D3D. Он обеспечивает эффективное использование ресурсов D3D для вычислений в коде AMP, а также разрешает использование ресурсов, созданные в AMP в коде D3D, не создавая промежуточные резервированием. Можно постепенно ускорения большим объемом вычислений разделы приложений DirectX с помощью C++ AMP и использовать этот API D3D в формируемые AMP вычисления данных.  
@@ -35,23 +36,23 @@ ms.lasthandoff: 10/24/2017
 namespace direct3d;  
 ```  
   
-## <a name="members"></a>Члены  
+## <a name="members"></a>Участники  
   
 ### <a name="classes"></a>Классы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[Класс scoped_d3d_access_lock](scoped-d3d-access-lock-class.md)|Для блокировки доступа D3D программой-оболочкой RAII `accelerator_view` объекта.|  
   
 ### <a name="structures"></a>Структуры  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[Структура adopt_d3d_access_lock_t](adopt-d3d-access-lock-t-structure.md)|Тип тега для указания блокировки доступа D3D должны приняла, а не получена.|  
   
 ### <a name="functions"></a>Функции  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[abs](concurrency-direct3d-namespace-functions-amp.md#abs)|Возвращает абсолютное значение аргумента|  
 |[CLAMP](concurrency-direct3d-namespace-functions-amp.md#clamp)|Перегружен. Фиксирует _X в заданный диапазон _Min и _Max|  

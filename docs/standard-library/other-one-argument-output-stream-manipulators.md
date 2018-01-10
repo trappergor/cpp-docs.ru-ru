@@ -14,11 +14,12 @@ caps.latest.revision: "11"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: a3d453746b9f9af7219f181949ba9958c27a1577
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 916a39d284666eebd3398423471991602509e9de
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="other-one-argument-output-stream-manipulators"></a>Прочие манипуляторы потока вывода с одним аргументом
 В следующем примере используется класс `money` типа `long`. Манипулятор `setpic` присоединяет строку форматирования "рисунок" к классу, который может использоваться перегруженным оператором вставки в поток класса `money`. Строка изображения сохраняется как статическая переменная в классе `money`, а не как член данных класса потока, поэтому не нужно производить новый класс потока вывода.  

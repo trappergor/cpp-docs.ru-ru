@@ -1,82 +1,85 @@
 ---
-title: "Adding Event Handlers for Dialog Box Controls | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Dialog editor, adding event handlers to controls"
-  - "controls [C++], event handlers"
-  - "dialog box controls, events"
-  - "event handlers, for dialog box controls"
+title: "Добавление обработчиков событий для элементов управления диалоговых | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- Dialog editor, adding event handlers to controls
+- controls [C++], event handlers
+- dialog box controls, events
+- event handlers, for dialog box controls
 ms.assetid: f9c70f24-ea6f-44df-82eb-78a2deaee769
-caps.latest.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 5
+caps.latest.revision: "9"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: afe50d56d6b96cc4bc0b871f72c27feb0a750e89
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 12/21/2017
 ---
-# Adding Event Handlers for Dialog Box Controls
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Если диалоговое окно проекта уже связано с классом, при создании обработчиков можно воспользоваться сочетаниями клавиш.  Пользователь может оперативно создать обработчик событий для стандартного уведомления элемента управления или для любого соответствующего сообщения операционной системы Windows.  
+# <a name="adding-event-handlers-for-dialog-box-controls"></a>Добавление обработчиков событий для элементов управления диалоговых окон
+Для проекта диалоговых окон, которые уже связаны с классом можно воспользоваться преимуществами некоторые сочетания клавиш, при создании обработчиков событий. Можно быстро создать обработчик для события уведомления элемента управления по умолчанию или для любого соответствующего сообщения Windows.  
   
-#### Создание обработчика событий для стандартного уведомления элемента управления  
+#### <a name="to-create-a-handler-for-the-default-control-notification-event"></a>Чтобы создать обработчик для события уведомления элемента управления по умолчанию  
   
-1.  Дважды щелкните элемент управления.  Откроется редактор текста.  
+1.  Дважды щелкните элемент управления. Откроется редактор текста.  
   
-2.  Добавьте код обработчика уведомления элемента управления в редактор текста.  
+2.  Добавьте код обработчика уведомлений в текстовом редакторе.  
   
-#### Создание обработчика для любого соответствующего сообщения Windows  
+#### <a name="to-create-a-handler-for-any-applicable-windows-message"></a>Создание обработчика для любого соответствующего сообщения Windows  
   
-1.  Щелкните элемент управления, для которого следует обрабатывать событие уведомления.  
+1.  Щелкните элемент управления, для которого необходимо обработать событие уведомления.  
   
-2.  В [окне свойств](../Topic/Properties%20Window.md) нажмите кнопку **ControlEvents**, чтобы вывести список стандартных событий Windows, связанных с элементом управления.  Например, для стандартной кнопки **ОК** в диалоговом окне **О программе** перечислены следующие события уведомления:  
+2.  В [окно свойств](/visualstudio/ide/reference/properties-window), нажмите кнопку **события элемента управления** кнопку, чтобы отобразить список стандартных событий Windows, связанные с элементом управления. Например, стандартная **ОК** кнопку **о** диалоговом окне перечислены следующие события уведомления:  
   
-     **BN\_CLICKED**  
+ **BN_CLICKED**  
   
-     **BN\_DOUBLECLICKED**  
+ **BN_DOUBLECLICKED**  
   
-     **BN\_KILLFOCUS**  
+ **BN_KILLFOCUS**  
   
-     **BN\_SETFOCUS**  
+ **BN_SETFOCUS**  
   
     > [!NOTE]
-    >  Или же выберите диалоговое окно и нажмите кнопку **ControlEvents**, чтобы вывести список стандартных событий Windows, связанных со всеми элементами управления в диалоговом окне.  
+    >  Кроме того, диалоговое окно выбора и нажмите кнопку **события элемента управления** кнопку, чтобы отобразить список стандартных событий Windows для всех элементов управления в диалоговом окне.  
   
-3.  В **окне свойств** щелкните столбец справа от события, которое необходимо обработать, а затем выберите предлагаемое имя для события уведомления \(например, **OnBnClickedOK** обрабатывает событие **BN\_CLICKED**\).  
+3.  В **свойства** окно, щелкните столбец справа от события для обработки и выберите имя события предлагаемые уведомления (например, **OnBnClickedOK** дескрипторы **BN_CLICKED** ).  
   
     > [!NOTE]
-    >  С другой стороны, пользователь также может придумать имя обработчика событий самостоятельно.  
+    >  Кроме того можно предоставить имя обработчика события вашему выбору, чем при выборе имени обработчика событий по умолчанию.  
   
-     После того как пользователь выбрал событие, Visual Studio открывает редактор текста, в котором отображается код обработчика событий.  Например, для стандартного обработчика **OnBnClickedOK** будет добавлен следующий код:  
+     После выбора события Visual Studio открывает текстовый редактор и отображает код в обработчик событий. Например, следующий код добавляется по умолчанию **OnBnClickedOK**:  
   
-    ```  
+ ```  
     void CAboutDlg::OnBnClickedOk(void)  
-    {  
-       // TODO: Add your control notification handler code here  
-    }  
-    ```  
+ { *// TODO: Add your control notification handler code here  
+ }  
+ ```  
   
- Если необходимо добавить обработчик событий в класс, отличный от класса, который реализует диалоговое окно, рекомендуется использовать [мастер обработчиков событий](../ide/event-handler-wizard.md).  Дополнительные сведения см. в разделе [Добавление обработчиков событий](../ide/adding-an-event-handler-visual-cpp.md).  
+ Если вы хотите добавить обработчик событий к классу отличный от того, реализует диалоговое окно, используйте [мастер обработчиков событий](../ide/event-handler-wizard.md). Дополнительные сведения см. в разделе [Добавление обработчика событий](../ide/adding-an-event-handler-visual-cpp.md).  
   
- Сведения о добавлении ресурсов в управляемые проекты см. в разделе [Ресурсы приложений](../Topic/Resources%20in%20Desktop%20Apps.md) *Руководства разработчика .NET Framework*. Сведения о том, как вручную добавлять файлы ресурсов в управляемые проекты, осуществлять доступ к ресурсам, отображать статические ресурсы и присваивать строки ресурсов свойствам см. в разделах [Пошаговое руководство. Локализация приложений Windows Forms](http://msdn.microsoft.com/ru-ru/9a96220d-a19b-4de0-9f48-01e5d82679e5) и [Walkthrough: Using Resources for Localization with ASP.NET](../Topic/Walkthrough:%20Using%20Resources%20for%20Localization%20with%20ASP.NET.md).  
+ Сведения о добавлении ресурсов в управляемые проекты см. в разделе [ресурсы в классических приложениях](/dotnet/framework/resources/index) в *руководства разработчика .NET Framework.* Сведения о вручную добавлять файлы ресурсов в управляемые проекты, осуществлять доступ к ресурсам, отображать статические ресурсы и присваивать строки ресурсов свойствам см. в разделе [Создание файлов ресурсов для приложений рабочего стола](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Сведения о глобализации и локализации ресурсов в управляемых приложениях см. в разделе [Globalizing и локализация приложений .NET Framework](/dotnet/standard/globalization-localization/index).  
   
-### Требования  
+### <a name="requirements"></a>Требования  
  Win32  
   
-## См. также  
- [Default Control Events](../Topic/Default%20Control%20Events.md)   
- [Defining Member Variables for Dialog Controls](../mfc/defining-member-variables-for-dialog-controls.md)   
- [Элементы управления "Диалоговые окна" и типы переменных](../Topic/Dialog%20Box%20Controls%20and%20Variable%20Types.md)   
- [Добавление класса](../Topic/Adding%20a%20Class%20\(Visual%20C++\).md)   
- [Добавление функции\-члена](../ide/adding-a-member-function-visual-cpp.md)   
- [Добавление переменной\-члена](../ide/adding-a-member-variable-visual-cpp.md)   
- [Переопределение виртуальной функции](../Topic/Overriding%20a%20Virtual%20Function%20\(Visual%20C++\).md)   
+## <a name="see-also"></a>См. также  
+ [События элементов управления по умолчанию](../windows/default-control-events.md)   
+ [Определение переменных-членов для элементов управления диалоговых окон](../windows/defining-member-variables-for-dialog-controls.md)   
+ [Элементы управления диалоговых окон и типы переменных](../ide/dialog-box-controls-and-variable-types.md)   
+ [Добавление класса](../ide/adding-a-class-visual-cpp.md)   
+ [Добавление функции-члена](../ide/adding-a-member-function-visual-cpp.md)   
+ [Добавление переменной-члена](../ide/adding-a-member-variable-visual-cpp.md)   
+ [Переопределение виртуальной функции](../ide/overriding-a-virtual-function-visual-cpp.md)   
  [Обработчик сообщений MFC](../mfc/reference/adding-an-mfc-message-handler.md)
+

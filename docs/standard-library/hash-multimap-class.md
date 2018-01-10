@@ -97,15 +97,16 @@ caps.latest.revision: "24"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 5a91949cc8bd5a53d1a01835dd0880e92715cec9
-ms.sourcegitcommit: ca2f94dfd015e0098a6eaf5c793ec532f1c97de1
+ms.workload: cplusplus
+ms.openlocfilehash: 1e5c64e90b2e75a7dc0879bbc871892d90d1a02c
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="hashmultimap-class"></a>Класс hash_multimap
 > [!NOTE]
->  Этот API устарел. Вместо него следует использовать [класс unordered_multimap](../standard-library/unordered-multimap-class.md).  
+>  Этот элемент API устарел. Вместо него следует использовать [класс unordered_multimap](../standard-library/unordered-multimap-class.md).  
   
  Класс контейнеров hash_multimap является расширением стандартной библиотеки С++ и используется для хранения и быстрого получения данных из коллекции, в которой каждый элемент — это пара с необязательно уникальным значением ключа сортировки и связанным значением данных.  
   
@@ -151,9 +152,9 @@ class hash_multimap
   
  Выбор типа контейнера должен в общем случае производиться на основе типа поиска и вставки, который требуется приложению. Хэшированные ассоциативные контейнеры оптимизированы для операций поиска, вставки и удаления. Функции-члены, которые явно поддерживают эти операции, эффективны при использовании совместно с правильно разработанной хэш-функцией, в результате чего они имеют постоянное среднее время выполнения и не зависят от числа элементов в контейнере. Правильно разработанная хэш-функция обеспечивает равномерное распределение хэшированных значений и сводит к минимуму количество конфликтов, когда разные значения ключей сопоставляются с одним хэшированным значением. В худшем случае, когда применяется наиболее неоптимальная хэш-функция, количество операций пропорционально количеству элементов в последовательности (линейное время).  
   
- Класс hash_multimap рекомендуется использовать в качестве ассоциативного контейнера, если условия, ассоциирующие значения с ключами, удовлетворяются приложением. Модель для этого типа структуры — это упорядоченный список ключевых слов со связанными значениями строк, предоставляющими, например, определения, в которых слова не всегда обладают уникальными определениями. Если же ключевые слова обладают уникальными определениями и ключи уникальны, то hash_multimap будет предпочтительным контейнером. Если же сохранен только список слов, то в качестве контейнера необходимо выбрать hash_set. Если допускается многократное использование слов, то подходящей структурой контейнера будет hash_multiset.  
+ Класс hash_multimap рекомендуется использовать в качестве ассоциативного контейнера, если условия, ассоциирующие значения с ключами, удовлетворяются приложением. Модель для этого типа структуры — это упорядоченный список ключевых слов со связанными значениями строк, предоставляющими, например, определения, в которых слова не всегда обладают уникальными определениями. Если же ключевые слова обладают уникальными определениями и ключи уникальны, то hash_multimap будет предпочтительным контейнером. Если же сохранен только список слов, то в качестве контейнера необходимо выбрать hash_set. Если допускаются множественные вхождения слов, то подходящей структурой контейнера будет hash_multiset.  
   
- Hash_multimap упорядочивает управляемую им последовательность путем вызова сохраненного объекта `Traits` хэша, относящегося к типу [value_compare](../standard-library/value-compare-class.md). Доступ к этому сохраненному объекту можно получить путем вызова функции-члена [key_comp](../standard-library/hash-map-class.md#key_comp). Этот объект функции должен вести себя таким же образом, как и объект класса [hash_compare](../standard-library/hash-compare-class.md)`<Key, less<Key>>`. В частности, для всех значений `Key` типа `Key` вызов `Traits (Key)` создает распределение значений типа `size_t`.  
+ Hash_multimap упорядочивает управляемую им последовательность путем вызова сохраненного объекта `Traits` хэша, относящегося к типу [value_compare](../standard-library/value-compare-class.md). Доступ к этому хранимому объекту можно получить через вызов функции-члена [key_comp](../standard-library/hash-map-class.md#key_comp). Этот объект функции должен вести себя таким же образом, как и объект класса [hash_compare](../standard-library/hash-compare-class.md)`<Key, less<Key>>`. В частности, для всех значений `Key` типа `Key` вызов `Traits (Key)` создает распределение значений типа `size_t`.  
   
  В целом, упорядочиваемые элементы должны лишь подлежать сравнению "меньше чем" для установления такого порядка, чтобы, имея любые два элемента, можно было определить, что они равны (ни один не меньше другого) или что один меньше другого. Это приводит к упорядочению неравнозначных элементов. С более технической точки зрения, функция сравнения является бинарным предикатом, который вызывает строгого слабое упорядочение в стандартном математически смысле. Бинарный предикат f(x, y) является объектом функции, обладающим двумя объектами аргументов `x` и `y`, а также возвращаемым значением `true` или `false`. Порядок, заданный для hash_multimap, является строгим слабым порядком, если бинарный предикат нерефлексивный, антисимметричный и транзитивный и если эквивалентность является транзитивной, где два объекта — `x` и `y` — определяются как эквивалентные, а f(x, y) и f(y, x) имеет значение `false`. Если более строгое условие равенства между ключами заменяет условие эквивалентности, порядок становится общим (т.е. все элементы упорядочиваются относительно друг друга), и сопоставленные ключи будут неотличимы друг от друга.  
   
@@ -169,7 +170,7 @@ class hash_multimap
 |-|-|  
 |[hash_multimap](#hash_multimap)|Создает список определенного размера или с элементами, обладающими указанным значением или указанным `allocator`, либо в качестве копии другого `hash_multimap`.|  
   
-### <a name="typedefs"></a>Typedefs  
+### <a name="typedefs"></a>Определения типов  
   
 |||  
 |-|-|  
@@ -194,7 +195,7 @@ class hash_multimap
 |||  
 |-|-|  
 |[begin](#begin)|Возвращает итератор, обращающийся к первый элемент в контейнере `hash_multimap`.|  
-|[begin](#cbegin)|Возвращает итератор const, обращающийся к первому элементу в `hash_multimap`.|  
+|[cbegin](#cbegin)|Возвращает итератор const, обращающийся к первому элементу в `hash_multimap`.|  
 |[cend](#cend)|Возвращает итератор const, который обращается к месту, следующему за последним элементом в `hash_multimap`.|  
 |[clear](#clear)|Стирает все элементы в `hash_multimap`.|  
 |[count](#count)|Возвращает число элементов в контейнере `hash_multimap`, ключи которых соответствуют ключу, заданному параметром.|  
@@ -233,7 +234,7 @@ class hash_multimap
 ##  <a name="allocator_type"></a>  hash_multimap::allocator_type  
   
 > [!NOTE]
->  Этот API устарел. Вместо него следует использовать [класс unordered_multimap](../standard-library/unordered-multimap-class.md).  
+>  Этот элемент API устарел. Вместо него следует использовать [класс unordered_multimap](../standard-library/unordered-multimap-class.md).  
   
  Тип, представляющий класс распределителя для объекта hash_multimap.  
   
@@ -254,7 +255,7 @@ typedef list<typename Traits::value_type, typename Traits::allocator_type>::allo
 ##  <a name="begin"></a>  hash_multimap::begin  
   
 > [!NOTE]
->  Этот API устарел. Вместо него следует использовать [класс unordered_multimap](../standard-library/unordered-multimap-class.md).  
+>  Этот элемент API устарел. Вместо него следует использовать [класс unordered_multimap](../standard-library/unordered-multimap-class.md).  
   
  Возвращает итератор, адресующий первый элемент в hash_multimap.  
   
@@ -319,7 +320,7 @@ The first element of hm1 is now 1.
 ##  <a name="cbegin"></a>  hash_multimap::cbegin  
   
 > [!NOTE]
->  Этот API устарел. Вместо него следует использовать [класс unordered_multimap](../standard-library/unordered-multimap-class.md).  
+>  Этот элемент API устарел. Вместо него следует использовать [класс unordered_multimap](../standard-library/unordered-multimap-class.md).  
   
  Возвращает итератор const, адресующий первый элемент в hash_multimap.  
   
@@ -362,7 +363,7 @@ The first element of hm1 is 2.
 ##  <a name="cend"></a>  hash_multimap::cend  
   
 > [!NOTE]
->  Этот API устарел. Вместо него следует использовать [класс unordered_multimap](../standard-library/unordered-multimap-class.md).  
+>  Этот элемент API устарел. Вместо него следует использовать [класс unordered_multimap](../standard-library/unordered-multimap-class.md).  
   
  Возвращает итератор const, адресующий место, следующее за последним элементом в hash_multimap.  
   
@@ -413,7 +414,7 @@ The value of last element of hm1 is 30.
 ##  <a name="clear"></a>  hash_multimap::clear  
   
 > [!NOTE]
->  Этот API устарел. Вместо него следует использовать [класс unordered_multimap](../standard-library/unordered-multimap-class.md).  
+>  Этот элемент API устарел. Вместо него следует использовать [класс unordered_multimap](../standard-library/unordered-multimap-class.md).  
   
  Стирает все элементы в объекте hash_multimap.  
   
@@ -463,7 +464,7 @@ The size of the hash_multimap after clearing is 0.
 ##  <a name="const_iterator"></a>  hash_multimap::const_iterator  
   
 > [!NOTE]
->  Этот API устарел. Вместо него следует использовать [класс unordered_multimap](../standard-library/unordered-multimap-class.md).  
+>  Этот элемент API устарел. Вместо него следует использовать [класс unordered_multimap](../standard-library/unordered-multimap-class.md).  
   
  Тип, предоставляющий двунаправленный итератор, который может читать элемент **const** в hash_multimap.  
   
@@ -488,7 +489,7 @@ typedef list<typename Traits::value_type, typename Traits::allocator_type>::cons
 ##  <a name="const_pointer"></a>  hash_multimap::const_pointer  
   
 > [!NOTE]
->  Этот API устарел. Вместо него следует использовать [класс unordered_multimap](../standard-library/unordered-multimap-class.md).  
+>  Этот элемент API устарел. Вместо него следует использовать [класс unordered_multimap](../standard-library/unordered-multimap-class.md).  
   
  Тип, предоставляющий указатель на элемент **const** в hash_multimap.  
   
@@ -506,7 +507,7 @@ typedef list<typename _Traits::value_type, typename _Traits::allocator_type>::co
 ##  <a name="const_reference"></a>  hash_multimap::const_reference  
   
 > [!NOTE]
->  Этот API устарел. Вместо него следует использовать [класс unordered_multimap](../standard-library/unordered-multimap-class.md).  
+>  Этот элемент API устарел. Вместо него следует использовать [класс unordered_multimap](../standard-library/unordered-multimap-class.md).  
   
  Тип, предоставляющий ссылку на элемент **const**, который хранится в hash_multimap, для чтения и выполнения операций **const**.  
   
@@ -563,7 +564,7 @@ The data value of 1st element in the hash_multimap is 10.
 ##  <a name="const_reverse_iterator"></a>  hash_multimap::const_reverse_iterator  
   
 > [!NOTE]
->  Этот API устарел. Вместо него следует использовать [класс unordered_multimap](../standard-library/unordered-multimap-class.md).  
+>  Этот элемент API устарел. Вместо него следует использовать [класс unordered_multimap](../standard-library/unordered-multimap-class.md).  
   
  Тип, предоставляющий двунаправленный итератор, который может читать любой элемент **const** в hash_multimap.  
   
@@ -588,7 +589,7 @@ typedef list<typename Traits::value_type, typename Traits::allocator_type>::cons
 ##  <a name="count"></a>  hash_multimap::count  
   
 > [!NOTE]
->  Этот API устарел. Вместо него следует использовать [класс unordered_multimap](../standard-library/unordered-multimap-class.md).  
+>  Этот элемент API устарел. Вместо него следует использовать [класс unordered_multimap](../standard-library/unordered-multimap-class.md).  
   
  Возвращает число элементов в объекте hash_multimap, ключ которых совпадает с ключом, заданным параметром.  
   
@@ -659,7 +660,7 @@ The number of elements in hm1 with a sort key of 3 is: 0.
 ##  <a name="crbegin"></a>  hash_multimap::crbegin  
   
 > [!NOTE]
->  Этот API устарел. Вместо него следует использовать [класс unordered_multimap](../standard-library/unordered-multimap-class.md).  
+>  Этот элемент API устарел. Вместо него следует использовать [класс unordered_multimap](../standard-library/unordered-multimap-class.md).  
   
  Возвращает итератор const, указывающий на первый элемент в обратном hash_multimap.  
   
@@ -711,7 +712,7 @@ The first element of the reversed hash_multimap hm1 is 3.
 ##  <a name="crend"></a>  hash_multimap::crend  
   
 > [!NOTE]
->  Этот API устарел. Вместо него следует использовать [класс unordered_multimap](../standard-library/unordered-multimap-class.md).  
+>  Этот элемент API устарел. Вместо него следует использовать [класс unordered_multimap](../standard-library/unordered-multimap-class.md).  
   
  Возвращает итератор const, который обращается к месту, следующему за последним элементом в обращенном hash_multimap.  
   
@@ -766,7 +767,7 @@ The last element of the reversed hash_multimap hm1 is 3.
 ##  <a name="difference_type"></a>  hash_multimap::difference_type  
   
 > [!NOTE]
->  Этот API устарел. Вместо него следует использовать [класс unordered_multimap](../standard-library/unordered-multimap-class.md).  
+>  Этот элемент API устарел. Вместо него следует использовать [класс unordered_multimap](../standard-library/unordered-multimap-class.md).  
   
  Тип целого числа со знаком, пригодный для представления количества элементов в hash_multimap в диапазоне между элементами, на которые указывают итераторы.  
   
@@ -844,7 +845,7 @@ The values of the mapped elements are: 10 20 30 20.
 ##  <a name="emplace"></a>  hash_multimap::emplace  
   
 > [!NOTE]
->  Этот API устарел. Вместо него следует использовать [класс unordered_multimap](../standard-library/unordered-multimap-class.md).  
+>  Этот элемент API устарел. Вместо него следует использовать [класс unordered_multimap](../standard-library/unordered-multimap-class.md).  
   
  Вставляет созданный на месте элемент в hash_multimap.  
   
@@ -857,7 +858,7 @@ iterator emplace(ValTy&& val);
   
 |||  
 |-|-|  
-|Параметр|Описание|  
+|Параметр|Описание:|  
 |`val`|Значение, используемое для перемещения, формирует элемент для вставки в [hash_multimap](../standard-library/hash-multimap-class.md).|  
   
 ### <a name="return-value"></a>Возвращаемое значение  
@@ -898,7 +899,7 @@ After the emplace insertion, hm1 contains:
 ##  <a name="emplace_hint"></a>  hash_multimap::emplace_hint  
   
 > [!NOTE]
->  Этот API устарел. Вместо него следует использовать [класс unordered_multimap](../standard-library/unordered-multimap-class.md).  
+>  Этот элемент API устарел. Вместо него следует использовать [класс unordered_multimap](../standard-library/unordered-multimap-class.md).  
   
  Вставляет созданный на месте элемент в hash_multimap с подсказкой о размещении.  
   
@@ -913,7 +914,7 @@ iterator emplace_hint(
   
 |||  
 |-|-|  
-|Параметр|Описание|  
+|Параметр|Описание:|  
 |`val`|Значение, используемое для перемещения, создает элемент для вставки в [hash_multimap](../standard-library/hash-multimap-class.md), кроме случаев, когда `hash_multimap` уже содержит этот элемент (или, в более общем смысле, элемент, ключ которого эквивалентно упорядочен).|  
 |`_Where`|Подсказка о месте начала поиска правильной точки вставки.|  
   
@@ -957,7 +958,7 @@ After the emplace insertion, hm1 contains:
 ##  <a name="empty"></a>  hash_multimap::empty  
   
 > [!NOTE]
->  Этот API устарел. Вместо него следует использовать [класс unordered_multimap](../standard-library/unordered-multimap-class.md).  
+>  Этот элемент API устарел. Вместо него следует использовать [класс unordered_multimap](../standard-library/unordered-multimap-class.md).  
   
  Проверяет, что hash_multimap пуст.  
   
@@ -1008,7 +1009,7 @@ The hash_multimap hm2 is empty.
 ##  <a name="end"></a>  hash_multimap::end  
   
 > [!NOTE]
->  Этот API устарел. Вместо него следует использовать [класс unordered_multimap](../standard-library/unordered-multimap-class.md).  
+>  Этот элемент API устарел. Вместо него следует использовать [класс unordered_multimap](../standard-library/unordered-multimap-class.md).  
   
  Возвращает итератор, адресующий место, следующее за последним элементом в hash_multimap.  
   
@@ -1079,7 +1080,7 @@ The value of last element of hm1 is now 20.
 ##  <a name="equal_range"></a>  hash_multimap::equal_range  
   
 > [!NOTE]
->  Этот API устарел. Вместо него следует использовать [класс unordered_multimap](../standard-library/unordered-multimap-class.md).  
+>  Этот элемент API устарел. Вместо него следует использовать [класс unordered_multimap](../standard-library/unordered-multimap-class.md).  
   
  Возвращает пару итераторов соответственно на первый элемент в hash_multimap с ключом, который больше, чем указанный ключ, и на первый элемент в hash_multimap с ключом, который больше или равен данному ключу.  
   
@@ -1096,7 +1097,7 @@ pair <iterator, iterator> equal_range (const Key& key);
 ### <a name="return-value"></a>Возвращаемое значение  
  Пара итераторов, первый из которых является [lower_bound](#lower_bound) ключа, а второй — [upper_bound](#upper_bound) ключа.  
   
- Для доступа к первому итератору пары `pr`, возвращаемой функцией-членом, нужно использовать `pr`. **first**, а для разыменования итератора нижней границы используйте \*(`pr`. **first**). Для доступа к второму итератору пары `pr`, возвращаемой функцией-членом, нужно использовать `pr`. **second**, а для разыменования итератора верхней границы используйте \*(`pr`. **second**).  
+ Для доступа к первому итератору пары `pr`, возвращаемому функцией-членом, используйте `pr`. **first**, а для разыменования итератора нижней границы используйте \*(`pr`. **first**). Для доступа к второму итератору пары `pr`, возвращаемой функцией-членом, нужно использовать `pr`. **second**, а для разыменования итератора верхней границы используйте \*(`pr`. **second**).  
   
 ### <a name="remarks"></a>Примечания  
    
@@ -1167,7 +1168,7 @@ The hash_multimap hm1 doesn't have an element with a key less than 4.
 ##  <a name="erase"></a>  hash_multimap::erase  
   
 > [!NOTE]
->  Этот API устарел. Вместо него следует использовать [класс unordered_multimap](../standard-library/unordered-multimap-class.md).  
+>  Этот элемент API устарел. Вместо него следует использовать [класс unordered_multimap](../standard-library/unordered-multimap-class.md).  
   
  Удаляет элемент или диапазон элементов в объекте hash_multimap с заданных позиций или удаляет элементы, соответствующие заданному ключу.  
   
@@ -1291,7 +1292,7 @@ After another element with a key equal to that of the
 ##  <a name="find"></a>  hash_multimap::find  
   
 > [!NOTE]
->  Этот API устарел. Вместо него следует использовать [класс unordered_multimap](../standard-library/unordered-multimap-class.md).  
+>  Этот элемент API устарел. Вместо него следует использовать [класс unordered_multimap](../standard-library/unordered-multimap-class.md).  
   
  Возвращает итератор, адресующий первое расположение элемента в hash_multimap, ключ которого эквивалентен указанному ключу.  
   
@@ -1386,7 +1387,7 @@ This is not the last element of hash_multimap hm1.
 ##  <a name="get_allocator"></a>  hash_multimap::get_allocator  
   
 > [!NOTE]
->  Этот API устарел. Вместо него следует использовать [класс unordered_multimap](../standard-library/unordered-multimap-class.md).  
+>  Этот элемент API устарел. Вместо него следует использовать [класс unordered_multimap](../standard-library/unordered-multimap-class.md).  
   
  Возвращает копию объекта-распределителя, используемого для создания hash_multimap.  
   
@@ -1462,7 +1463,7 @@ int main( )
 ##  <a name="hash_multimap"></a>  hash_multimap::hash_multimap  
   
 > [!NOTE]
->  Этот API устарел. Вместо него следует использовать [класс unordered_multimap](../standard-library/unordered-multimap-class.md).  
+>  Этот элемент API устарел. Вместо него следует использовать [класс unordered_multimap](../standard-library/unordered-multimap-class.md).  
   
  Создает hash_multimap, который пуст или является копией части или целого другого hash_multimap.  
   
@@ -1518,7 +1519,7 @@ hash_multimap(
   
 |||  
 |-|-|  
-|Параметр|Описание|  
+|Параметр|Описание:|  
 |`Al`|Класс распределителя хранилища для данного объекта hash_multimap, значение по умолчанию `Allocator`.|  
 |`Comp`|Функция сравнения типа `const Traits` используется для упорядочения элементов в схеме, которая по умолчанию `Traits`.|  
 |`Right`|Сопоставление, копией которого будет создаваемое сопоставление.|  
@@ -1546,7 +1547,7 @@ hash_multimap(
 ##  <a name="insert"></a>  hash_multimap::insert  
   
 > [!NOTE]
->  Этот API устарел. Вместо него следует использовать [класс unordered_multimap](../standard-library/unordered-multimap-class.md).  
+>  Этот элемент API устарел. Вместо него следует использовать [класс unordered_multimap](../standard-library/unordered-multimap-class.md).  
   
  Вставляет элемент или диапазон элементов в hash_multimap.  
   
@@ -1578,7 +1579,7 @@ iterator insert(
   
 |||  
 |-|-|  
-|Параметр|Описание|  
+|Параметр|Описание:|  
 |`Val`|Значение элемента, вставляемого в hash_multimap, если он уже не содержит этот элемент, или в более общем смысле, если он уже не содержит элемент, ключ которого эквивалентно задан.|  
 |`Where`|Подсказка, где начинать поиск правильной точки вставки.|  
 |`First`|Позиция первого элемента, который следует скопировать из карты.|  
@@ -1601,7 +1602,7 @@ iterator insert(
 ##  <a name="iterator"></a>  hash_multimap::iterator  
   
 > [!NOTE]
->  Этот API устарел. Вместо него следует использовать [класс unordered_multimap](../standard-library/unordered-multimap-class.md).  
+>  Этот элемент API устарел. Вместо него следует использовать [класс unordered_multimap](../standard-library/unordered-multimap-class.md).  
   
  Тип, предоставляющий двунаправленный итератор, который может считывать или изменять любой элемент в hash_multimap.  
   
@@ -1614,7 +1615,7 @@ typedef list<typename Traits::value_type, typename Traits::allocator_type>::iter
   
  Для разыменования **итератора**`Iter`, который указывает на элемент в hash_multimap, используйте оператор **->**.  
   
- Для получения значения ключа элемента используйте `Iter` -> **first**, что эквивалентно (\* `Iter`). **first**. Для получения доступа к значению сопоставленных данных элемента используйте `Iter` -> **second**, что эквивалентно (\* `Iter`). **first**.  
+ Для получения доступа к значению ключа для элемента используйте `Iter` -> **first**, что эквивалентно (\* `Iter`). **first**. Для получения доступа к значению сопоставленных данных элемента используйте `Iter` -> **second**, что эквивалентно (\* `Iter`). **first**.  
   
  Тип **итератор** можно использовать для изменения значения элемента.  
   
@@ -1626,7 +1627,7 @@ typedef list<typename Traits::value_type, typename Traits::allocator_type>::iter
 ##  <a name="key_comp"></a>  hash_multimap::key_comp  
   
 > [!NOTE]
->  Этот API устарел. Вместо него следует использовать [класс unordered_multimap](../standard-library/unordered-multimap-class.md).  
+>  Этот элемент API устарел. Вместо него следует использовать [класс unordered_multimap](../standard-library/unordered-multimap-class.md).  
   
  Извлекает копию объекта сравнения, использованного для упорядочивания ключей в hash_multimap.  
   
@@ -1698,7 +1699,7 @@ int main( )
 ##  <a name="key_compare"></a>  hash_multimap::key_compare  
   
 > [!NOTE]
->  Этот API устарел. Вместо него следует использовать [класс unordered_multimap](../standard-library/unordered-multimap-class.md).  
+>  Этот элемент API устарел. Вместо него следует использовать [класс unordered_multimap](../standard-library/unordered-multimap-class.md).  
   
  Тип, предоставляющий объект функции, который может сравнить два ключа сортировки для определения относительного порядка двух элементов в hash_multimap.  
   
@@ -1719,7 +1720,7 @@ typedef Traits key_compare;
 ##  <a name="key_type"></a>  hash_multimap::key_type  
   
 > [!NOTE]
->  Этот API устарел. Вместо него следует использовать [класс unordered_multimap](../standard-library/unordered-multimap-class.md).  
+>  Этот элемент API устарел. Вместо него следует использовать [класс unordered_multimap](../standard-library/unordered-multimap-class.md).  
   
  Тип, описывающий объект ключа сортировки, составляющий каждый элемент hash_multimap.  
   
@@ -1740,7 +1741,7 @@ typedef Key key_type;
 ##  <a name="lower_bound"></a>  hash_multimap::lower_bound  
   
 > [!NOTE]
->  Этот API устарел. Вместо него следует использовать [класс unordered_multimap](../standard-library/unordered-multimap-class.md).  
+>  Этот элемент API устарел. Вместо него следует использовать [класс unordered_multimap](../standard-library/unordered-multimap-class.md).  
   
  Возвращает итератор, указывающий на первый элемент в hash_multimap с ключом, который больше или равен указанному ключу.  
   
@@ -1834,7 +1835,7 @@ This is not the last element of hash_multimap hm1.
 ##  <a name="mapped_type"></a>  hash_multimap::mapped_type  
   
 > [!NOTE]
->  Этот API устарел. Вместо него следует использовать [класс unordered_multimap](../standard-library/unordered-multimap-class.md).  
+>  Этот элемент API устарел. Вместо него следует использовать [класс unordered_multimap](../standard-library/unordered-multimap-class.md).  
   
  Тип, представляющий тип данных, хранящийся в hash_multimap.  
   
@@ -1855,7 +1856,7 @@ typedef Type mapped_type;
 ##  <a name="max_size"></a>  hash_multimap::max_size  
   
 > [!NOTE]
->  Этот API устарел. Вместо него следует использовать [класс unordered_multimap](../standard-library/unordered-multimap-class.md).  
+>  Этот элемент API устарел. Вместо него следует использовать [класс unordered_multimap](../standard-library/unordered-multimap-class.md).  
   
  Возвращает максимальную длину hash_multimap.  
   
@@ -1893,7 +1894,7 @@ int main( )
 ##  <a name="op_eq"></a>  hash_multimap::operator=  
   
 > [!NOTE]
->  Этот API устарел. Вместо него следует использовать [класс unordered_multimap](../standard-library/unordered-multimap-class.md).  
+>  Этот элемент API устарел. Вместо него следует использовать [класс unordered_multimap](../standard-library/unordered-multimap-class.md).  
   
  Заменяет элементы hash_multimap копией другого hash_multimap.  
   
@@ -1907,7 +1908,7 @@ hash_multimap& operator=(hash_multimap&& right);
   
 |||  
 |-|-|  
-|Параметр|Описание|  
+|Параметр|Описание:|  
 |`right`|[Hash_multimap](../standard-library/hash-multimap-class.md), который копируется в `hash_multimap`.|  
   
 ### <a name="remarks"></a>Примечания  
@@ -1954,7 +1955,7 @@ int main( )
 ##  <a name="pointer"></a>  hash_multimap::pointer  
   
 > [!NOTE]
->  Этот API устарел. Вместо него следует использовать [класс unordered_multimap](../standard-library/unordered-multimap-class.md).  
+>  Этот элемент API устарел. Вместо него следует использовать [класс unordered_multimap](../standard-library/unordered-multimap-class.md).  
   
  Тип, предоставляющий указатель на элемент в hash_multimap.  
   
@@ -1963,7 +1964,7 @@ typedef list<typename _Traits::value_type, typename _Traits::allocator_type>::po
 ```  
   
 ### <a name="remarks"></a>Примечания  
- Тип **pointer** можно использовать для изменения значения элемента.  
+ Тип **pointer** может использоваться для изменения значения элемента.  
   
  В большинстве случаев [итератор](#iterator) должен использоваться для доступа к элементам в объекте hash_multimap.  
   
@@ -1972,7 +1973,7 @@ typedef list<typename _Traits::value_type, typename _Traits::allocator_type>::po
 ##  <a name="rbegin"></a>  hash_multimap::rbegin  
   
 > [!NOTE]
->  Этот API устарел. Вместо него следует использовать [класс unordered_multimap](../standard-library/unordered-multimap-class.md).  
+>  Этот элемент API устарел. Вместо него следует использовать [класс unordered_multimap](../standard-library/unordered-multimap-class.md).  
   
  Возвращает итератор, адресующий первый элемент в обратном hash_multimap.  
   
@@ -2057,7 +2058,7 @@ After the erasure, the first element
 ##  <a name="reference"></a>  hash_multimap::reference  
   
 > [!NOTE]
->  Этот API устарел. Вместо него следует использовать [класс unordered_multimap](../standard-library/unordered-multimap-class.md).  
+>  Этот элемент API устарел. Вместо него следует использовать [класс unordered_multimap](../standard-library/unordered-multimap-class.md).  
   
  Тип, предоставляющий ссылку на элемент, хранящийся в hash_multimap.  
   
@@ -2121,7 +2122,7 @@ The modified data value of first element is 15.
 ##  <a name="rend"></a>  hash_multimap::rend  
   
 > [!NOTE]
->  Этот API устарел. Вместо него следует использовать [класс unordered_multimap](../standard-library/unordered-multimap-class.md).  
+>  Этот элемент API устарел. Вместо него следует использовать [класс unordered_multimap](../standard-library/unordered-multimap-class.md).  
   
  Возвращает итератор, адресующий место, следующее за последним элементом в обращенном hash_multimap.  
   
@@ -2209,7 +2210,7 @@ After the erasure, the last element in the reversed hash_multimap is 2.
 ##  <a name="reverse_iterator"></a>  hash_multimap::reverse_iterator  
   
 > [!NOTE]
->  Этот API устарел. Вместо него следует использовать [класс unordered_multimap](../standard-library/unordered-multimap-class.md).  
+>  Этот элемент API устарел. Вместо него следует использовать [класс unordered_multimap](../standard-library/unordered-multimap-class.md).  
   
  Тип, предоставляющий двунаправленный итератор, который может считывать или изменять элемент в обращенном hash_multimap.  
   
@@ -2225,12 +2226,12 @@ typedef list<typename Traits::value_type, typename Traits::allocator_type>::reve
    
   
 ### <a name="example"></a>Пример  
-  См. пример для [rbegin](#rbegin) в качестве примера объявления и использования `reverse_iterator`.  
+  См. пример объявления и использования `reverse_iterator` в примере для [rbegin](#rbegin).  
   
 ##  <a name="size"></a>  hash_multimap::size  
   
 > [!NOTE]
->  Этот API устарел. Вместо него следует использовать [класс unordered_multimap](../standard-library/unordered-multimap-class.md).  
+>  Этот элемент API устарел. Вместо него следует использовать [класс unordered_multimap](../standard-library/unordered-multimap-class.md).  
   
  Возвращает число элементов в объекте hash_multimap.  
   
@@ -2279,7 +2280,7 @@ The hash_multimap length is now 2.
 ##  <a name="size_type"></a>  hash_multimap::size_type  
   
 > [!NOTE]
->  Этот API устарел. Вместо него следует использовать [класс unordered_multimap](../standard-library/unordered-multimap-class.md).  
+>  Этот элемент API устарел. Вместо него следует использовать [класс unordered_multimap](../standard-library/unordered-multimap-class.md).  
   
  Тип целого числа без знака, который подсчитывает число элементов в hash_multimap.  
   
@@ -2296,7 +2297,7 @@ typedef list<typename _Traits::value_type, typename _Traits::allocator_type>::si
 ##  <a name="swap"></a>  hash_multimap::swap  
   
 > [!NOTE]
->  Этот API устарел. Вместо него следует использовать [класс unordered_multimap](../standard-library/unordered-multimap-class.md).  
+>  Этот элемент API устарел. Вместо него следует использовать [класс unordered_multimap](../standard-library/unordered-multimap-class.md).  
   
  Меняет местами элементы двух hash_multimap.  
   
@@ -2368,7 +2369,7 @@ After swapping with hm3, hash_multimap hm1 is: 300.
 ##  <a name="upper_bound"></a>  hash_multimap::upper_bound  
   
 > [!NOTE]
->  Этот API устарел. Вместо него следует использовать [класс unordered_multimap](../standard-library/unordered-multimap-class.md).  
+>  Этот элемент API устарел. Вместо него следует использовать [класс unordered_multimap](../standard-library/unordered-multimap-class.md).  
   
  Возвращает итератор, указывающий на первый элемент в hash_multimap с ключом, который больше указанного ключа.  
   
@@ -2453,7 +2454,7 @@ The first element of hm1 with a key greater than
 ##  <a name="value_comp"></a>  hash_multimap::value_comp  
   
 > [!NOTE]
->  Этот API устарел. Вместо него следует использовать [класс unordered_multimap](../standard-library/unordered-multimap-class.md).  
+>  Этот элемент API устарел. Вместо него следует использовать [класс unordered_multimap](../standard-library/unordered-multimap-class.md).  
   
  Функция-член возвращает объект функции, который определяет порядок элементов в hash_multimap путем сравнения значений ключа.  
   
@@ -2523,7 +2524,7 @@ int main( )
 ##  <a name="value_type"></a>  hash_multimap::value_type  
   
 > [!NOTE]
->  Этот API устарел. Вместо него следует использовать [класс unordered_multimap](../standard-library/unordered-multimap-class.md).  
+>  Этот элемент API устарел. Вместо него следует использовать [класс unordered_multimap](../standard-library/unordered-multimap-class.md).  
   
  Тип, представляющий тип объекта, который хранится в hash_multimap.  
   

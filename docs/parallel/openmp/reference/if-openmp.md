@@ -1,55 +1,54 @@
 ---
-title: "if (OpenMP) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "if"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "if OpenMP clause"
+title: "Если (OpenMP) | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: if
+dev_langs: C++
+helpviewer_keywords: if OpenMP clause
 ms.assetid: db5940b6-2414-4bf8-934d-3edd8393c0f8
-caps.latest.revision: 11
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 11
+caps.latest.revision: "11"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 81952612a80ac74cd4bfca62a1b2d62c910cb8f9
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 12/21/2017
 ---
-# if (OpenMP)
-[!INCLUDE[vs2017banner](../../../assembler/inline/includes/vs2017banner.md)]
-
-Указывает, должен ли быть выполнен в режиме параллельного цикла или последовательно.  
+# <a name="if-openmp"></a>if (OpenMP)
+Указывает, следует ли выполнять цикл параллельно или последовательно.  
   
-## Синтаксис  
+## <a name="syntax"></a>Синтаксис  
   
 ```  
 if(expression)  
 ```  
   
-## Заметки  
- Здесь:  
+## <a name="remarks"></a>Примечания  
+ где  
   
  `expression`  
- Объединенный выражение, если оно имеет значение true \(\) не равен нулю, приводит к тому, что код в параллельной области выполняться параллельно.  Если выражение имеет значение false \(нуля\), то параллельная область последовательно выполняется одним потоком \(\).  
+ Целочисленное выражение, если значение равно true (ненулевой), приводит к тому код в параллельной области для параллельного выполнения. Если выражение имеет значение false (0), параллельной области выполняется последовательно (одним потоком).  
   
-## Заметки  
- `if` применяется к следующим рекомендациям:  
+## <a name="remarks"></a>Примечания  
+ `if`применяется к следующие директивы:  
   
 -   [parallel](../../../parallel/openmp/reference/parallel.md)  
   
--   [for](../Topic/for%20\(OpenMP\).md)  
+-   [for](../../../parallel/openmp/reference/for-openmp.md)  
   
--   [sections](../../../parallel/openmp/reference/sections-openmp.md)  
+-   [разделы](../../../parallel/openmp/reference/sections-openmp.md)  
   
- Дополнительные сведения см. в разделе [2.3 parallel Construct](../../../parallel/openmp/2-3-parallel-construct.md).  
+ Дополнительные сведения см. в разделе [2.3 конструкция parallel](../../../parallel/openmp/2-3-parallel-construct.md).  
   
-## Пример  
+## <a name="example"></a>Пример  
   
 ```  
 // omp_if.cpp  
@@ -80,7 +79,10 @@ int main( )
 }  
 ```  
   
-  **val \= 0, при сериализации**  
-**val \= 2, 2 параллелизировано с потоками**   
-## См. также  
- [Clauses](../../../parallel/openmp/reference/openmp-clauses.md)
+```Output  
+val = 0, serialized  
+val = 2, parallelized with 2 threads  
+```  
+  
+## <a name="see-also"></a>См. также  
+ [Предложения](../../../parallel/openmp/reference/openmp-clauses.md)

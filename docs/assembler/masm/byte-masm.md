@@ -1,41 +1,40 @@
 ---
-title: "BYTE (MASM) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "byte"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "BYTE directive"
+title: "БАЙТ (MASM) | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: byte
+dev_langs: C++
+helpviewer_keywords: BYTE directive
 ms.assetid: 8dd94476-c069-4585-a478-3cb2e8e6ae54
-caps.latest.revision: 8
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: c2e140493178febc066f58db71afe045a4b4d8a6
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 12/21/2017
 ---
-# BYTE (MASM)
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Выделяет и инициализирует байт хранения для каждого `initializer`.  
+# <a name="byte-masm"></a>BYTE (MASM)
+Выделяет и при необходимости инициализирует байтов хранилища для каждого `initializer`.  
   
-## Синтаксис  
+## <a name="syntax"></a>Синтаксис  
   
 ```  
-[[name]] BYTE initializer [[, initializer]] ...  
+[[name]] BYTEinitializer [[, initializer]] ...  
 ```  
   
-## Заметки  
- Может также использоваться как описатель типа в любом месте, где допустим тип.  
+## <a name="remarks"></a>Примечания  
+ Можно также использовать как спецификатор типа в любом является допустимым типом.  
   
-## См. также  
- [Directives Reference](../../assembler/masm/directives-reference.md)   
- [DB](../../assembler/masm/db.md)   
+## <a name="see-also"></a>См. также  
+ [Справочник по директивам](../../assembler/masm/directives-reference.md)   
+ [БАЗЫ ДАННЫХ](../../assembler/masm/db.md)   
  [SBYTE](../../assembler/masm/sbyte-masm.md)

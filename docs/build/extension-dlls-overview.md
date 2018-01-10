@@ -19,11 +19,12 @@ caps.latest.revision: "8"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 39ed1531be553a66f22ac8b93e898a91cf5006e6
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 407ed0c63dce8e350c24ac5f260876fb6ab47576
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="mfc-extension-dlls-overview"></a>Библиотека DLL-расширения MFC: Обзор
 Расширения MFC DLL является библиотекой DLL, обычно реализуют классы многократного использования, производные от существующих классов библиотеки Microsoft Foundation Class. Библиотеки DLL расширения MFC строятся с помощью версии библиотеки MFC (также известный как общая версия MFC). Только исполняемые файлы MFC (приложения или обычные библиотеки DLL MFC), которые создаются с общедоступной версии MFC можно использовать расширения MFC DLL. С расширением MFC библиотеки DLL можно создать новые пользовательские классы из MFC и затем применять эту расширенную версию для MFC для приложений, которые вызывают библиотеку DLL.  

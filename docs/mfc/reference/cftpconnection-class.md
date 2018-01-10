@@ -41,11 +41,12 @@ caps.latest.revision: "23"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 6a800ff5c8c071e966bbc1e5297fb706627c8d17
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: a20ee1e3de4d5c9f61437c79bd2eda4240947947
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cftpconnection-class"></a>Класс классе CFtpConnection
 Управляет FTP-подключением к Интернет-серверу и позволяет напрямую управлять каталогов и файлов на этом сервере.  
@@ -56,17 +57,17 @@ ms.lasthandoff: 10/24/2017
 class CFtpConnection : public CInternetConnection  
 ```  
   
-## <a name="members"></a>Члены  
+## <a name="members"></a>Участники  
   
 ### <a name="public-constructors"></a>Открытые конструкторы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[CFtpConnection::CFtpConnection](#cftpconnection)|Создает объект `CFtpConnection`.|  
   
 ### <a name="public-methods"></a>Открытые методы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[CFtpConnection::Command](#command)|Отправляет команду напрямую на FTP-сервер.|  
 |[CFtpConnection::CreateDirectory](#createdirectory)|Создает каталог на сервере.|  

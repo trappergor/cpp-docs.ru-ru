@@ -4,42 +4,26 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - reading data [C++], from input streams
 - data [C++], reading from input stream
 - input streams
 - input stream objects
 ms.assetid: f14d8954-8f8c-4c3c-8b99-14ddb3683f94
-caps.latest.revision: 11
+caps.latest.revision: "11"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
-ms.openlocfilehash: 344c0c29531ee44445b89f14396593cdd48a25ad
-ms.contentlocale: ru-ru
-ms.lasthandoff: 02/24/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: 8a753216cd8dfe0975d1d92451863b1ee2a88ddd
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="input-streams"></a>Потоки ввода
 Объект потока ввода является источником байтов. Тремя наиболее важными классами потоков ввода являются [istream](../standard-library/basic-istream-class.md), [ifstream](../standard-library/basic-ifstream-class.md) и [istringstream](../standard-library/basic-istringstream-class.md).  
@@ -50,7 +34,7 @@ ms.lasthandoff: 02/24/2017
   
  Подобно функции библиотеки `sscanf_s`, класс `istringstream` поддерживает ввод из строк в памяти. Для извлечения данных из массива символов, который имеет завершающий нуль-символ, выделите и инициализируйте строку, а затем создайте объект класса `istringstream`.  
   
-## <a name="in-this-section"></a>Содержание  
+## <a name="in-this-section"></a>В этом разделе  
  [Построение объектов потока ввода](../standard-library/constructing-input-stream-objects.md)  
   
  [Использование операторов извлечения](../standard-library/using-extraction-operators.md)  
@@ -65,4 +49,3 @@ ms.lasthandoff: 02/24/2017
   
 ## <a name="see-also"></a>См. также  
  [Программирование iostream](../standard-library/iostream-programming.md)
-

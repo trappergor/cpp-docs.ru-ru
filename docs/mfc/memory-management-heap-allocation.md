@@ -22,11 +22,12 @@ caps.latest.revision: "9"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: a8be6dabf4eaae1c76ebe31c35ad5b7b30743953
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 34fbb82a28c145ad2d376f0647fbd75faeb9401c
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="memory-management-heap-allocation"></a>Управление памятью. Выделение кучи
 Куча зарезервирован для выделения памяти, необходимой программы. Он представляет собой область, отдельно от кода программы и стека. Обычно программы C используют функции `malloc` и **свободного** выделять и освобождать память в куче. Отладочная версия MFC предоставляет измененные версии встроенных операторов C++ **новый** и **удалить** выделять и освобождать объекты в памяти в куче.  

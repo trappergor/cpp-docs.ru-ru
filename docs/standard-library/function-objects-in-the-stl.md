@@ -18,11 +18,12 @@ caps.latest.revision: "6"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 90b37372123031026017e23c683a5a65555577ca
-ms.sourcegitcommit: b3ffb717e2af6ca8072b56bf4aa96b3afff73414
+ms.workload: cplusplus
+ms.openlocfilehash: 2ba5024590a0682f8d65c7d21ca2cb15d2f481b7
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/30/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="function-objects-in-the-c-standard-library"></a>Объекты функции в стандартной библиотеке C++
 *Объект функции*(или *функтор*) — это любой тип, реализующий operator(). Этот оператор называется *оператором вызова* или иногда *оператором приложения*. Стандартная библиотека C++ использует объекты функций главным образом в качестве критериев сортировки для контейнеров и в алгоритмах.  

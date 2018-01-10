@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-windows
+ms.technology: cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -30,35 +29,19 @@ f1_keywords:
 - AMP/Concurrency::array_view::extent
 - AMP/Concurrency::array_view::source_accelerator_view
 - AMP/Concurrency::array_view::value_type
-dev_langs:
-- C++
-helpviewer_keywords:
-- array_view class
+dev_langs: C++
+helpviewer_keywords: array_view class
 ms.assetid: 7e7ec9bc-05a2-4372-b05d-752b50006c5a
-caps.latest.revision: 21
+caps.latest.revision: "21"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: d2d39abf526a58b8442107b5ee816f316ae841f5
-ms.openlocfilehash: e921ae841aa1eade25fdf2ec272039cc41007a9e
-ms.contentlocale: ru-ru
-ms.lasthandoff: 03/31/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: 467d806203687610265d1b199e01295f93557081
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="arrayview-class"></a>Класс array_view
 Представляет представление многомерном над данными, хранящимися в другой контейнер.  
@@ -86,18 +69,18 @@ class array_view<const value_type, _Rank> : public _Array_view_base<_Rank, sizeo
  `_Rank`  
  Ранг `array_view` объекта.  
   
-## <a name="members"></a>Члены  
+## <a name="members"></a>Участники  
   
 ### <a name="public-constructors"></a>Открытые конструкторы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[Конструктор array_view](#ctor)|Инициализирует новый экземпляр класса `array_view`. Нет конструктора по умолчанию для `array<T,N>`. Все конструкторы ограничены для выполнения только в ЦП и не может быть выполнена на целевом Direct3D.|  
 |[~ array_view, деструктор](#ctor)|Уничтожает `array_view` объекта.|  
   
 ### <a name="public-methods"></a>Открытые методы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[copy_to](#copy_to)|Копирует содержимое `array_view` указанное назначение путем вызова `copy(*this, dest)`.|  
 |[data](#data)|Возвращает указатель на необработанные данные `array_view`.|  
@@ -116,21 +99,21 @@ class array_view<const value_type, _Rank> : public _Array_view_base<_Rank, sizeo
   
 ### <a name="public-operators"></a>Открытые операторы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[Operator()](#operator_call)|Возвращает значение элемента, который задается параметром или параметрами.|  
 |[оператор]](#operator_at)|Возвращает элемент, указанный параметрами.|  
-|[operator=](#operator_eq)|Копирует содержимое указанного `array_view` объекта в другой.|  
+|[оператор=](#operator_eq)|Копирует содержимое указанного `array_view` объекта в другой.|  
   
 ### <a name="public-constants"></a>Открытые константы  
   
-|Имя|Описание|  
+|name|Описание:|  
 |----------|-----------------|  
 |[Ранг константа](#rank)|Сохраняет ранг объекта `array_view` объекта.|  
   
 ### <a name="data-members"></a>Элементы данных  
   
-|Имя|Описание|  
+|name|Описание:|  
 |----------|-----------------|  
 |[extent](#extent)|Получает объект `extent`, который определяет форму объекта `array_view`.|  
 |[source_accelerator_view](#source_accelerator_view)|Возвращает [accelerator_view](accelerator-view-class.md) где источник данных `array_view` находится|  
@@ -705,7 +688,7 @@ array_view section(
  Наименее значащие компонент источника в этом разделе.  
   
  `_Rank`  
- Ранг разделе.  
+ Ранг раздела.  
   
  `_Section_extent`  
  [Экстент](extent-class.md) объекта, который задает область, в разделе.  
@@ -844,4 +827,3 @@ array_view<const value_type,_New_rank> view_as(
   
 ## <a name="see-also"></a>См. также  
  [Пространство имен Concurrency (C++ AMP)](concurrency-namespace-cpp-amp.md)
-

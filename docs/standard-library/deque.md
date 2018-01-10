@@ -15,11 +15,12 @@ caps.latest.revision: "19"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: b721de62a6c642eb9a5fdaf2eb0837468da17a6b
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: febe89207d1665b8b09e3388042253b516f89f9b
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="ltdequegt"></a>&lt;deque&gt;
 Определяет двустороннюю очередь (deque) классов шаблонов контейнеров и некоторые вспомогательные шаблоны.  
@@ -37,7 +38,7 @@ ms.lasthandoff: 10/24/2017
 |-|-|  
 |[оператор!=](../standard-library/deque-operators.md#op_neq)|Проверяет неравенство объекта deque слева от оператора объекту deque справа от оператора.|  
 |[оператор<](../standard-library/deque-operators.md#op_lt)|Проверяет, меньше ли объект deque слева от оператора объекта deque справа от оператора.|  
-|[оператор\<=](../standard-library/deque-operators.md#op_gt_eq)|Проверяет, меньше или равен объект deque слева от оператора объекту deque справа от оператора.|  
+|[operator\<=](../standard-library/deque-operators.md#op_gt_eq)|Проверяет, меньше или равен объект deque слева от оператора объекту deque справа от оператора.|  
 |[оператор==](../standard-library/deque-operators.md#op_eq_eq)|Проверяет равенство объекта deque слева от оператора объекту deque справа от оператора.|  
 |[оператор>](../standard-library/deque-operators.md#op_gt)|Проверяет, больше ли объект deque слева от оператора объекта deque справа от оператора.|  
 |[оператор>=](../standard-library/deque-operators.md#op_gt_eq)|Проверяет, больше или равен ли объект deque слева от оператора объекту deque справа от оператора.|  

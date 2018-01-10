@@ -22,11 +22,12 @@ caps.latest.revision: "9"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: e755ae6b0d6170087af64f7561b310894f0768d1
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: c0b97a249246a9f7f9d47880f75bdce2ca643ae3
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="registration"></a>Регистрация
 Когда пользователю для вставки элемента OLE в приложении OLE выводит список типов объектов для выбора. Этот список возвращает OLE из системной регистрации базы данных, который содержит сведения, предоставляемые все серверные приложения. Сервер регистрирует себя, операции, он помещает в регистрации системной базы данных (реестр) описания каждого типа объектов, которые он предоставляет, файла расширения и путь к самому себе, помимо прочего, сведения.  

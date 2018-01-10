@@ -1,34 +1,36 @@
 ---
-title: "Практическое руководство. Запись в двоичный файл (C++/CLI) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/15/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "двоичные файлы, запись в C++"
-  - "файлы [C++], двоичные"
+title: "Как: запись в двоичный файл (C + +/ CLI) | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- binary files, writing in C++
+- files [C++], binary
 ms.assetid: 35d97ee6-fc7e-4c36-be18-8bbb3b44b3ae
-caps.latest.revision: 10
-caps.handback.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "10"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: 66d4c46fa82713e55ce39880f5e379cafcdf9ec6
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 12/21/2017
 ---
-# Практическое руководство. Запись в двоичный файл (C++/CLI)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-В следующем примере описывается порядок записи двоичных данных в файл.  Используются два класса из пространства имен <xref:System.IO>: <xref:System.IO.FileStream> и <xref:System.IO.BinaryWriter>.  Класс <xref:System.IO.FileStream> представляет фактический файл, а класс <xref:System.IO.BinaryWriter> — интерфейс потока, обеспечивающего двоичный доступ.  
+# <a name="how-to-write-a-binary-file-ccli"></a>Практическое руководство. Запись в двоичный файл (C++/CLI)
+В следующем примере кода демонстрируется записи двоичных данных в файл. Два класса из <xref:System.IO> используются пространство имен: <xref:System.IO.FileStream> и <xref:System.IO.BinaryWriter>. <xref:System.IO.FileStream>представляет фактический файл, пока <xref:System.IO.BinaryWriter> предоставляет интерфейс для потока, который разрешает двоичный доступ.  
   
- В следующем примере выполняется запись данных в файл, содержащий целые числа в двоичном формате.  Описание порядка чтения данных из этого файла см. в разделе [Практическое руководство. Чтение данных из двоичного файла](../Topic/How%20to:%20Read%20a%20Binary%20File%20\(C++-CLI\).md).  
+ Следующий пример кода записывает файл, содержащий целые числа в двоичном формате. Этот файл может быть считан с кодом в [как: чтение двоичного файла (C + +/ CLI)](../dotnet/how-to-read-a-binary-file-cpp-cli.md).  
   
-## Пример  
+## <a name="example"></a>Пример  
   
 ```  
 // binary_write.cpp  
@@ -65,6 +67,6 @@ int main()
 }  
 ```  
   
-## См. также  
- [Файловый и потоковый ввод\-вывод](../Topic/File%20and%20Stream%20I-O.md)   
- [программирование .NET с использованием C\+\+\/CLI](../dotnet/dotnet-programming-with-cpp-cli-visual-cpp.md)
+## <a name="see-also"></a>См. также  
+ [Файловый и потоковый ввод-вывод](http://msdn.microsoft.com/Library/4f4a33a9-66b7-4cd7-a285-4ad3e4276cd2)   
+ [Программирование .NET с использованием C++/CLI (Visual C++)](../dotnet/dotnet-programming-with-cpp-cli-visual-cpp.md)

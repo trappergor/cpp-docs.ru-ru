@@ -1,32 +1,33 @@
 ---
-title: "id | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-f1_keywords: 
-  - "vc-attr.id"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "id attribute"
+title: "Идентификатор | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+f1_keywords: vc-attr.id
+dev_langs: C++
+helpviewer_keywords: id attribute
 ms.assetid: a48d2c99-c5d2-4f46-bf96-5ac88dcb5d0c
-caps.latest.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 9
+caps.latest.revision: "9"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: 9225a87f32c3c7bf42ca5fc7de98dd0ab8f12639
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 12/21/2017
 ---
-# id
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Определяет a `dispid` параметр для функции\-члена \(или свойство или метод в интерфейсе или диспетчерский интерфейс\).  
+# <a name="id"></a>id
+Указывает `dispid` параметра для функции-члена (свойство или метод в интерфейсе или disp-интерфейс).  
   
-## Синтаксис  
+## <a name="syntax"></a>Синтаксис  
   
 ```  
   
@@ -35,34 +36,33 @@ caps.handback.revision: 9
 ) ]  
 ```  
   
-#### Параметры  
+#### <a name="parameters"></a>Параметры  
  `dispid`  
- Идентификатор менеджера для метода интерфейса.  
+ Идентификатор диспетчеризации для метода интерфейса.  
   
-## Заметки  
- **id** Атрибут C\+\+ имеет ту же функциональность, что и  [id](http://msdn.microsoft.com/library/windows/desktop/aa367040) атрибут MIDL.  
+## <a name="remarks"></a>Примечания  
+ **Идентификатор** языка C++ имеет ту же функциональность, что [идентификатор](http://msdn.microsoft.com/library/windows/desktop/aa367040) языка MIDL.  
   
-## Пример  
- См. пример [bindable](../windows/bindable.md) пример использования  **id**.  
+## <a name="example"></a>Пример  
+ Далее приведен пример [привязываемых](../windows/bindable.md) пример демонстрирует использование **идентификатор**.  
   
-## Требования  
+## <a name="requirements"></a>Требования  
   
-### Контекст атрибута  
+### <a name="attribute-context"></a>Контекст атрибута  
   
 |||  
 |-|-|  
 |**Применение**|Метод интерфейса|  
-|**Repeatable**|Нет|  
-|**Обязательные атрибуты**|None|  
-|**Недопустимые атрибуты**|None|  
+|**Повторяемый**|Нет|  
+|**Обязательные атрибуты**|Нет|  
+|**Недопустимые атрибуты**|Нет|  
   
- Дополнительные сведения см. в разделе [Контексты атрибута](../windows/attribute-contexts.md).  
+ Дополнительные сведения см. в разделе [Контексты атрибутов](../windows/attribute-contexts.md).  
   
-## См. также  
- [IDL Attributes](../windows/idl-attributes.md)   
- [Method Attributes](../windows/method-attributes.md)   
- [Data Member Attributes](../windows/data-member-attributes.md)   
- [defaultvalue](../Topic/defaultvalue.md)   
- [in](../Topic/in%20\(C++\).md)   
- [выходной](../Topic/out%20\(C++\).md)   
- [Attributes Samples](http://msdn.microsoft.com/ru-ru/558ebdb2-082f-44dc-b442-d8d33bf7bdb8)
+## <a name="see-also"></a>См. также  
+ [Атрибуты IDL](../windows/idl-attributes.md)   
+ [Атрибуты метода](../windows/method-attributes.md)   
+ [Атрибуты членов данных](../windows/data-member-attributes.md)   
+ [значение по умолчанию](../windows/defaultvalue.md)   
+ [in](../windows/in-cpp.md)   
+ [out](../windows/out-cpp.md)   

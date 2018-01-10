@@ -1,32 +1,33 @@
 ---
-title: "bindable | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-f1_keywords: 
-  - "vc-attr.bindable"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "bindable attribute"
+title: "Привязываемые | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+f1_keywords: vc-attr.bindable
+dev_langs: C++
+helpviewer_keywords: bindable attribute
 ms.assetid: a2360f92-927b-4af8-98cc-6eca7f4ec954
-caps.latest.revision: 12
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 12
+caps.latest.revision: "12"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: 5266bca832a128242bcbbc8904ad9650e4432fe2
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 12/21/2017
 ---
-# bindable
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="bindable"></a>bindable
 Указывает, что свойство поддерживает привязку данных.  
   
-## Синтаксис  
+## <a name="syntax"></a>Синтаксис  
   
 ```  
   
@@ -34,19 +35,19 @@ caps.handback.revision: 12
   
 ```  
   
-## Заметки  
- **bindable** Атрибут C\+\+ имеет ту же функциональность, что и  [bindable](http://msdn.microsoft.com/library/windows/desktop/aa366738) атрибут MIDL.  Можно использовать его для свойств, определенных с [propget](../windows/propget.md)"  [propput](../windows/propput.md)или  [propputref](../windows/propputref.md) атрибуты, либо можно вручную определить связываемая метод.  
+## <a name="remarks"></a>Примечания  
+ **Привязываемых** языка C++ имеет ту же функциональность, что [привязываемых](http://msdn.microsoft.com/library/windows/desktop/aa366738) языка MIDL. Его можно использовать на свойства, определенные с [propget](../windows/propget.md), [propput](../windows/propput.md), или [propputref](../windows/propputref.md) атрибуты или можно вручную определить привязываемых метод.  
   
- В следующих примерах показано использование MFC bindable.  
+ В следующих примерах MFC показано использование **привязываемых**:  
   
--   [Примеры элементов управления: MFC\-Основанные управления ActiveX](http://msdn.microsoft.com/ru-ru/a44adf86-0ba0-4504-bedb-512b6cba2e63)  
+-   [Примеры элементов управления: Элементы управления ActiveX на основе MFC](http://msdn.microsoft.com/en-us/a44adf86-0ba0-4504-bedb-512b6cba2e63)  
   
--   [Образец CIRC: элемент управления ActiveX](http://msdn.microsoft.com/ru-ru/9ba34d04-280e-49f4-90ae-41a6be44c95b)  
+-   [Образец CIRC: Элемент управления ActiveX](http://msdn.microsoft.com/en-us/9ba34d04-280e-49f4-90ae-41a6be44c95b)  
   
--   [Образец TESTHELP: элемент управления ActiveX с подсказками и справкой](http://msdn.microsoft.com/ru-ru/d822861d-c6f0-4d0a-ad11-970eebb1e8cd)  
+-   [Образец TESTHELP: Элемент управления ActiveX с подсказки и справки](http://msdn.microsoft.com/en-us/d822861d-c6f0-4d0a-ad11-970eebb1e8cd)  
   
-## Пример  
- Следующий код показывает, как можно использовать bindable свойства:  
+## <a name="example"></a>Пример  
+ В следующем коде показано, как использовать **привязываемых** для свойства:  
   
 ```  
 // cpp_attr_ref_bindable.cpp  
@@ -69,24 +70,23 @@ __interface IPropDemo : IDispatch {
 [ module(name="PropDemoLib", uuid="479B29E2-9A2C-11D0-B696-00A0C903487A", version="1.0", helpstring="property demo") ];  
 ```  
   
-## Требования  
+## <a name="requirements"></a>Требования  
   
-### Контекст атрибута  
+### <a name="attribute-context"></a>Контекст атрибута  
   
 |||  
 |-|-|  
 |**Применение**|Метод интерфейса|  
-|**Repeatable**|Нет|  
-|**Обязательные атрибуты**|None|  
-|**Недопустимые атрибуты**|None|  
+|**Повторяемый**|Нет|  
+|**Обязательные атрибуты**|Нет|  
+|**Недопустимые атрибуты**|Нет|  
   
- Дополнительные сведения о контекстах атрибута см. в разделе [Контексты атрибута](../windows/attribute-contexts.md).  
+ Дополнительные сведения о контекстах атрибутов см. в разделе [Контексты атрибутов](../windows/attribute-contexts.md).  
   
-## См. также  
- [IDL Attributes](../windows/idl-attributes.md)   
- [Method Attributes](../windows/method-attributes.md)   
+## <a name="see-also"></a>См. также  
+ [Атрибуты IDL](../windows/idl-attributes.md)   
+ [Атрибуты метода](../windows/method-attributes.md)   
  [defaultbind](../windows/defaultbind.md)   
  [displaybind](../windows/displaybind.md)   
  [immediatebind](../windows/immediatebind.md)   
  [requestedit](../windows/requestedit.md)   
- [Attributes Samples](http://msdn.microsoft.com/ru-ru/558ebdb2-082f-44dc-b442-d8d33bf7bdb8)

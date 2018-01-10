@@ -322,11 +322,12 @@ caps.latest.revision: "48"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: c1cf7e830f2c003135ceda9b63b244f9858b14d1
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 3d652be633adca3d21d3cee5b54350c34e691740
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cmfctoolbar-class"></a>Класс CMFCToolBar
 `CMFCToolBar` Похож [класс CToolBar](../../mfc/reference/ctoolbar-class.md), но обеспечивает дополнительную поддержку функций пользовательского интерфейса. Они включают плоские панели инструментов, панели инструментов с наиболее часто используемыми изображениями, крупные значки, кнопки пролистывания страниц, заблокированные панели инструментов, элементы управления главной панели, текст под изображениями, фоновые изображения и панели инструментов с вкладками. Класс `CMFCToolBar` также содержит встроенную поддержку пользовательской настройки панелей инструментов и меню, перетаскивания между панелями элементов и меню, кнопки поля со списком, кнопки редактируемых полей, различных палитр и кнопок сворачивания.
@@ -339,18 +340,18 @@ ms.lasthandoff: 10/24/2017
 class CMFCToolBar : public CMFCBaseToolBar  
 ```  
   
-## <a name="members"></a>Члены  
+## <a name="members"></a>Участники  
   
 ### <a name="public-constructors"></a>Открытые конструкторы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |`CMFCToolBar::CMFCToolBar`|Конструктор по умолчанию.|  
 |`CMFCToolBar::~CMFCToolBar`|Деструктор.|  
   
 ### <a name="public-methods"></a>Открытые методы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[CMFCToolBar::AddBasicCommand](#addbasiccommand)|Добавляет в список команд, которые отображаются всегда, когда пользователь открывает меню команды меню.|  
 |[CMFCToolBar::AddCommandUsage](#addcommandusage)|Увеличивает на единицу счетчик, который связан с данной команды.|  
@@ -502,7 +503,7 @@ class CMFCToolBar : public CMFCBaseToolBar
   
 ### <a name="protected-methods"></a>Защищенные методы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[CMFCToolBar::AllowShowOnList](#allowshowonlist)|Определяет, отображается ли панель инструментов в списке на **панели инструментов** области **Настройка** диалоговое окно.|  
 |[CMFCToolBar::CalcMaxButtonHeight](#calcmaxbuttonheight)|Вычисляет максимальное Высота кнопки на панели инструментов.|  
@@ -513,7 +514,7 @@ class CMFCToolBar : public CMFCBaseToolBar
   
 ### <a name="data-members"></a>Элементы данных  
   
-|Имя|Описание|  
+|name|Описание:|  
 |----------|-----------------|  
 |[CMFCToolBar::m_bDontScaleImages](#m_bdontscaleimages)|Указывает необходимость масштабирования или не изображениям значков панели инструментов в режиме высокого уровня точек на ДЮЙМ.|  
 |[CMFCToolBar::m_dblLargeImageRatio](#m_dbllargeimageratio)|Указывает соотношение между измерением (высота или ширина) больших изображений и измерение обычных образов.|  
@@ -696,7 +697,7 @@ BOOL AreTextLabels() const;
  `TRUE`Если кнопки панели инструментов отображаются метки текст под изображениями; в противном случае `FALSE`.  
   
 ### <a name="remarks"></a>Примечания  
- Используйте [CMFCToolBar::EnableTextLabels](#enabletextlabels) для указания, будет ли отображаться текст. Значение по умолчанию — `FALSE`. Вызовите [CMFCToolBar::AllowChangeTextLabels](#allowchangetextlabels) для указания, является ли пользователь может изменить этот параметр в диалоговом окне настройки.  
+ Используйте [CMFCToolBar::EnableTextLabels](#enabletextlabels) для указания, будет ли отображаться текст. Значение по умолчанию — `FALSE`. Вызовите [CMFCToolBar::AllowChangeTextLabels](#allowchangetextlabels) для указания, является ли пользователь может изменить этот параметр в диалоговом окне настройки.  
   
 ##  <a name="autograyinactiveimages"></a>CMFCToolBar::AutoGrayInactiveImages  
  Включение или отключение автоматического создания образов неактивная кнопка.  

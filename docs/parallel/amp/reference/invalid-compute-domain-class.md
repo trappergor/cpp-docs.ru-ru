@@ -18,11 +18,12 @@ caps.latest.revision: "12"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: a6b41017563a7bd3c6e5ebfd3fc3752ea1e97c3a
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 9dc142b921efb6b52fd5b5ce7a89432b4727951c
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="invalidcomputedomain-class"></a>invalid_compute_domain - класс
 Исключение, возникающее, когда среда выполнения не может запустить ядро, используя указанные в домене вычислений [parallel_for_each](concurrency-namespace-functions-amp.md#parallel_for_each) место вызова.  
@@ -34,11 +35,11 @@ ms.lasthandoff: 10/24/2017
 class invalid_compute_domain : public runtime_exception;  
 ```  
   
-## <a name="members"></a>Члены  
+## <a name="members"></a>Участники  
   
 ### <a name="public-constructors"></a>Открытые конструкторы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[invalid_compute_domain конструктор](#ctor)|Инициализирует новый экземпляр класса `invalid_compute_domain`.|  
 

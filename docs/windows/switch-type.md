@@ -1,32 +1,33 @@
 ---
-title: "switch_type | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-f1_keywords: 
-  - "vc-attr.switch_type"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "switch_type attribute"
+title: "switch_type | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+f1_keywords: vc-attr.switch_type
+dev_langs: C++
+helpviewer_keywords: switch_type attribute
 ms.assetid: e24544dc-b3bc-48ae-b249-f967db49271e
-caps.latest.revision: 11
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 11
+caps.latest.revision: "11"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: 2b41a71483bc26d1a28476f24a47395ccd6b35d4
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 12/21/2017
 ---
-# switch_type
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Указывает тип переменной, используемой в качестве соединение дискриминантное.  
+# <a name="switchtype"></a>switch_type
+Определяет тип переменной, которая используется как дискриминантный объединения.  
   
-## Синтаксис  
+## <a name="syntax"></a>Синтаксис  
   
 ```  
   
@@ -36,14 +37,14 @@ type
   
 ```  
   
-#### Параметры  
+#### <a name="parameters"></a>Параметры  
  `type`  
- Тип переключателя, может быть целым числом, знаком, типом логического или перечисления.  
+ Тип коммутатора, может быть целое число, символ, логическое значение, тип или тип перечисления.  
   
-## Заметки  
- **switch\_type** Атрибут C\+\+ имеет ту же функциональность, что и  [switch\_type](http://msdn.microsoft.com/library/windows/desktop/aa367276) атрибут MIDL.  
+## <a name="remarks"></a>Примечания  
+ **Switch_type** языка C++ имеет ту же функциональность, что [switch_type](http://msdn.microsoft.com/library/windows/desktop/aa367276) языка MIDL.  
   
- Атрибуты C\+\+ не поддерживают [инкапсулированные соединения](http://msdn.microsoft.com/library/windows/desktop/aa366811).  [соединения Nonencapsulated](http://msdn.microsoft.com/library/windows/desktop/aa367119) поддерживаются только в следующей форме:  
+ Атрибуты C++ не поддерживают [инкапсулированный объединения](http://msdn.microsoft.com/library/windows/desktop/aa366811). [Nonencapsulated объединения](http://msdn.microsoft.com/library/windows/desktop/aa367119) поддерживается только в следующей форме:  
   
 ```  
 // cpp_attr_ref_switch_type.cpp  
@@ -62,24 +63,23 @@ struct SizedValue2 {
 };  
 ```  
   
-## Пример  
- См. [case](../windows/case-cpp.md) пример использования образца  **switch\_type**.  
+## <a name="example"></a>Пример  
+ В разделе [случай](../windows/case-cpp.md) пример приведен пример использования **switch_type**.  
   
-## Требования  
+## <a name="requirements"></a>Требования  
   
-### Контекст атрибута  
+### <a name="attribute-context"></a>Контекст атрибута  
   
 |||  
 |-|-|  
 |**Применение**|`typedef`|  
-|**Repeatable**|Нет|  
-|**Обязательные атрибуты**|None|  
-|**Недопустимые атрибуты**|None|  
+|**Повторяемый**|Нет|  
+|**Обязательные атрибуты**|Нет|  
+|**Недопустимые атрибуты**|Нет|  
   
- Дополнительные сведения о контекстах атрибута см. в разделе [Контексты атрибута](../windows/attribute-contexts.md).  
+ Дополнительные сведения о контекстах атрибутов см. в разделе [Контексты атрибутов](../windows/attribute-contexts.md).  
   
-## См. также  
- [IDL Attributes](../windows/idl-attributes.md)   
- [Typedef, Enum, Union, and Struct Attributes](../windows/typedef-enum-union-and-struct-attributes.md)   
+## <a name="see-also"></a>См. также  
+ [Атрибуты IDL](../windows/idl-attributes.md)   
+ [TypeDef, Enum, Union и Struct атрибуты](../windows/typedef-enum-union-and-struct-attributes.md)   
  [export](../windows/export.md)   
- [Attributes Samples](http://msdn.microsoft.com/ru-ru/558ebdb2-082f-44dc-b442-d8d33bf7bdb8)

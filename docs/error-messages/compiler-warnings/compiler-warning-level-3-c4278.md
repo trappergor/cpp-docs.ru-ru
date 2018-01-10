@@ -1,31 +1,30 @@
 ---
-title: "Предупреждение компилятора (уровень 3) C4278 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C4278"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C4278"
+title: "Предупреждение (уровень 3) C4278 компилятора | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords: C4278
+dev_langs: C++
+helpviewer_keywords: C4278
 ms.assetid: 4b6053fb-df62-4c04-b6c8-c011759557b8
-caps.latest.revision: 7
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 249b13b70f3f10942852d7a9aa13dcf4f08e1f7f
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 12/21/2017
 ---
-# Предупреждение компилятора (уровень 3) C4278
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-"идентификатор": идентификатор в библиотеке типов "TLB" уже является макроопределением; следует использовать квалификатор "rename"  
+# <a name="compiler-warning-level-3-c4278"></a>Предупреждение компилятора (уровень 3) C4278
+«Идентификатор»: идентификатор в библиотеке типов «tlb» уже является макроопределением; Используйте квалификатор «rename»  
   
- При использовании директивы [\#import](../Topic/%23import%20Directive%20\(C++\).md) идентификатор в импортируемой библиотеке типов пытается объявить идентификатор ***идентификатор***.  Однако этот символ уже является допустимым.  
+ При использовании [#import](../../preprocessor/hash-import-directive-cpp.md), идентификатор в импорте библиотеки типов пытается объявить идентификатор ***идентификатор***. Тем не менее уже допустимый символ.  
   
- Следует использовать атрибут `#import` **rename**, чтобы назначить псевдоним для символа в библиотеке типа.
+ Используйте `#import` **переименование** атрибут, чтобы назначить псевдоним для символа в библиотеке типов.

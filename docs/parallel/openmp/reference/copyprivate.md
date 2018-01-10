@@ -4,44 +4,26 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-windows
+ms.technology: cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- copyprivate
-dev_langs:
-- C++
-helpviewer_keywords:
-- copyprivate OpenMP clause
+f1_keywords: copyprivate
+dev_langs: C++
+helpviewer_keywords: copyprivate OpenMP clause
 ms.assetid: 02c0209d-abe8-4797-8365-a82b53c3f15d
-caps.latest.revision: 12
+caps.latest.revision: "12"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
-ms.openlocfilehash: 02cd38a814bcefe016763a70dd0e459e465914ce
-ms.contentlocale: ru-ru
-ms.lasthandoff: 02/24/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: ecbfa14b40a219d626293eff9fb602673bc194a3
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="copyprivate"></a>copyprivate
-Указывает, что одна или несколько переменных должны совместно используются всеми потоками.  
+Указывает, что один или несколько переменных должны совместно используются всеми потоками.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -53,7 +35,7 @@ copyprivate(var)
  где  
   
  `var`  
- Одна или несколько переменных для совместного использования. Если указано несколько переменных разделяются запятыми имен переменных.  
+ Одна или несколько переменных для совместного использования. Если указано более одной переменной, разделяйте имена переменных запятыми.  
   
 ## <a name="remarks"></a>Примечания  
  `copyprivate`применяется к [одного](../../../parallel/openmp/reference/single.md) директивы.  

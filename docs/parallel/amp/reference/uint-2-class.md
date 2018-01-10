@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-windows
+ms.technology: cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -34,37 +33,21 @@ f1_keywords:
 - amp_short_vectors/Concurrency::graphics::uint_2::g
 - amp_short_vectors/Concurrency::graphics::uint_2::operator++
 - amp_short_vectors/Concurrency::graphics::uint_2::rg
-dev_langs:
-- C++
+dev_langs: C++
 ms.assetid: 9fcc9129-72b1-4da7-9012-4d3be15f1c52
-caps.latest.revision: 11
+caps.latest.revision: "11"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 5faef5bd1be6cc02d6614a6f6193c74167a8ff23
-ms.openlocfilehash: de110d40d2885353db87813a530af33ba7d8bbd4
-ms.contentlocale: ru-ru
-ms.lasthandoff: 03/17/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: 60d3379da90611fe51b5ebb3bc6cdc2dbf4968d9
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="uint2-class"></a>Класс uint_2
-Представляет вектор короткий из двух целых чисел без знака.  
+Представляет короткого вектора двух целых чисел без знака.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -72,7 +55,7 @@ ms.lasthandoff: 03/17/2017
 class uint_2;  
 ```  
   
-## <a name="members"></a>Члены  
+## <a name="members"></a>Участники  
   
 ### <a name="public-typedefs"></a>Общедоступные определения типов  
   
@@ -82,13 +65,13 @@ class uint_2;
   
 ### <a name="public-constructors"></a>Открытые конструкторы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[Конструктор uint_2](#ctor)|Перегружен. По умолчанию конструктор инициализирует все элементы с 0.|  
   
 ### <a name="public-methods"></a>Открытые методы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |uint_2::get_X||  
 |uint_2::get_xy||  
@@ -105,7 +88,7 @@ class uint_2;
   
 ### <a name="public-operators"></a>Открытые операторы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |uint_2::operator--||  
 |uint_2::operator % =||  
@@ -113,24 +96,24 @@ class uint_2;
 |uint_2::operator * =||  
 |uint_2::operator / =||  
 |uint_2::operator ^ =||  
-|uint_2::operator | =||  
+|uint_2::operator &#124; =||  
 |uint_2::operator ~||  
 |uint_2::operator ++||  
 |uint_2::operator +=||  
-|uint_2::operator\<=||  
+|uint_2::operator <\<=||  
 |uint_2::operator =||  
 |uint_2::operator-=||  
 |uint_2::operator >> =||  
   
 ### <a name="public-constants"></a>Открытые константы  
   
-|Имя|Описание|  
+|name|Описание:|  
 |----------|-----------------|  
 |[Размер константы](#uint_2__size)||  
   
 ### <a name="public-data-members"></a>Открытые члены данных  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |uint_2::g||  
 |uint_2::GR||  
@@ -204,7 +187,7 @@ explicit inline uint_2(
  Значение для инициализации элемента 0.  
   
  `_V1`  
- Значение для инициализации элемент 1.  
+ Значение для инициализации элемента 1.  
   
  `_V`  
  Значение для инициализации.  
@@ -220,4 +203,3 @@ static const int size = 2;
   
 ## <a name="see-also"></a>См. также  
  [Пространство имен Concurrency::graphics](concurrency-graphics-namespace.md)
-

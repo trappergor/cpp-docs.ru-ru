@@ -25,11 +25,12 @@ caps.latest.revision: "24"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 1ccbda062d28cdbdaafcbae68793b6583f31a3be
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 11cfed55ce872fde3a2f20a1b8f01a371857b374
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="transporting-exceptions-between-threads"></a>Перенос исключений между потоками
 Visual C++ поддерживает *передачу исключения* из одного потока в другой. Передача исключений позволяет перехватывать исключение в одном потоке и затем обеспечить видимость того, что исключение возникло в другом потоке. Например, эту возможность можно использовать для создания многопоточного приложения, где первостепенный поток обрабатывает все исключения, создаваемые его второстепенными потоками. Передача исключений в основном полезна для разработчиков, создающих системы или библиотеки параллельного программирования. Для реализации передачи исключений Visual C++ предоставляет [exception_ptr](../standard-library/exception-typedefs.md#exception_ptr) типа и [current_exception](../standard-library/exception-functions.md#current_exception), [rethrow_exception](../standard-library/exception-functions.md#rethrow_exception), и [make_ exception_ptr](../standard-library/exception-functions.md#make_exception_ptr) функции.  
@@ -49,7 +50,7 @@ namespace std
   
 #### <a name="parameters"></a>Параметры  
   
-|Параметр|Описание|  
+|Параметр|Описание:|  
 |---------------|-----------------|  
 |`unspecified`|Неуказанный внутренний класс, используемый для реализации типа `exception_ptr`.|  
 |`p`|Объект `exception_ptr`, который ссылается на исключение.|  

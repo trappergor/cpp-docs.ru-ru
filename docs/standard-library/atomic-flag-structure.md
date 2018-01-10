@@ -4,27 +4,25 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
 - atomic/std::atomic_flag
 - atomic/std::atomic_flag::clear
 - atomic/std::atomic_flag::test_and_set
-dev_langs:
-- C++
+dev_langs: C++
 ms.assetid: 17f0c2f5-fd39-4a44-873a-b569720a670e
-caps.latest.revision: 14
+caps.latest.revision: "14"
 author: corob-msft
 ms.author: corob
 manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: d45d1cd6b0b0e4d12ee9a5567ee172cb7e772c3c
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
-ms.sourcegitcommit: 65f4e356ad0d46333b0d443d0fd6ac0b9f2b6f58
-ms.openlocfilehash: 94ab743545518fdaa9baa7817b4865673e2d8e56
-ms.contentlocale: ru-ru
-ms.lasthandoff: 10/03/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="atomicflag-structure"></a>Структура atomic_flag
 Описывает объект, который автоматически устанавливает и очищает флаг `bool`. Операции с атомарными флагами всегда неблокирующие.  
@@ -35,11 +33,11 @@ ms.lasthandoff: 10/03/2017
 struct atomic_flag;
 ```  
   
-## <a name="members"></a>Члены  
+## <a name="members"></a>Участники  
   
 ### <a name="public-methods"></a>Открытые методы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[clear](#clear)|Устанавливает сохраненный флаг в значение `false`.|  
 |[test_and_set](#test_and_set)|Устанавливает сохраненный флаг в значение `true` и возвращает начальное значение флага.|  
@@ -81,7 +79,6 @@ bool atomic_flag::test_and_set(memory_order Order = memory_order_seq_cst) noexce
   
 ## <a name="see-also"></a>См. также  
  [\<atomic>](../standard-library/atomic.md)
-
 
 
 

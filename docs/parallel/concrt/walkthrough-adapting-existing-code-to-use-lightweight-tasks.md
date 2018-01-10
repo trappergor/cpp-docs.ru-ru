@@ -16,11 +16,12 @@ caps.latest.revision: "14"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 4e5be679f1c36d2a0a615f54de099b0d834d15c7
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 8a50ad04421d7b4bcdc4a2c98de8f5a57b255c75
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="walkthrough-adapting-existing-code-to-use-lightweight-tasks"></a>Пошаговое руководство. Адаптация существующего кода для использования упрощенных задач
 В этом разделе показано, как адаптировать имеющийся код, который использует Windows API для создания и выполнения потока, в котором используется упрощенная задача.  
@@ -32,7 +33,7 @@ ms.lasthandoff: 10/24/2017
   
 ## <a name="example"></a>Пример  
   
-### <a name="description"></a>Описание  
+### <a name="description"></a>Описание:  
  В следующем примере показано типичное использование API Windows для создания и выполнения потока. В этом примере используется [CreateThread](http://msdn.microsoft.com/library/windows/desktop/ms682453) функции, вызываемой `MyThreadFunction` в отдельном потоке.  
   
 ### <a name="code"></a>Код  
@@ -89,7 +90,7 @@ Parameters = 50, 100
   
 ## <a name="example"></a>Пример  
   
-### <a name="description"></a>Описание  
+### <a name="description"></a>Описание:  
  В следующем полном примере показан код, который использует упрощенную задачу для вызова `MyThreadFunction` функции.  
   
 ### <a name="code"></a>Код  

@@ -1,22 +1,59 @@
 ---
-title: "Функции пути ATL | Документы Microsoft"
+title: "Функции ATL пути | Документы Microsoft"
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
 ms.tgt_pltfrm: 
 ms.topic: article
-keywords:
-- "ATL, путь"
+keywords: "ATL, путь"
+f1_keywords:
+- ATLPATH/ATL::ATLPath::AddBackslash
+- ATLPATH/ATL::ATLPath::AddExtension
+- ATLPATH/ATL::ATLPath::Append
+- ATLPATH/ATL::ATLPath::BuildRoot
+- ATLPATH/ATL::ATLPath::Canonicalize
+- ATLPATH/ATL::ATLPath::Combine
+- ATLPATH/ATL::ATLPath::CommonPrefix
+- ATLPATH/ATL::ATLPath::CompactPath
+- ATLPATH/ATL::ATLPath::CompactPathEx
+- ATLPATH/ATL::ATLPath::FileExists
+- ATLPATH/ATL::ATLPath::FindExtension
+- ATLPATH/ATL::ATLPath::FindFileName
+- ATLPATH/ATL::ATLPath::GetDriveNumber
+- ATLPATH/ATL::ATLPath::IsDirectory
+- ATLPATH/ATL::ATLPath::IsFileSpec
+- ATLPATH/ATL::ATLPath::IsPrefix
+- ATLPATH/ATL::ATLPath::IsRelative
+- ATLPATH/ATL::ATLPath::IsRoot
+- ATLPATH/ATL::ATLPath::IsSameRoot
+- ATLPATH/ATL::ATLPath::IsUNC
+- ATLPATH/ATL::ATLPath::IsUNCServer
+- ATLPATH/ATL::ATLPath::IsUNCServerShare
+- ATLPATH/ATL::ATLPath::MakePretty
+- ATLPATH/ATL::ATLPath::MatchSpec
+- ATLPATH/ATL::ATLPath::QuoteSpaces
+- ATLPATH/ATL::ATLPath::RelativePathTo
+- ATLPATH/ATL::ATLPath::RemoveArgs
+- ATLPATH/ATL::ATLPath::RemoveBackslash
+- ATLPATH/ATL::ATLPath::RemoveBlanks
+- ATLPATH/ATL::ATLPath::RemoveExtension
+- ATLPATH/ATL::ATLPath::RemoveFileSpec
+- ATLPATH/ATL::ATLPath::RenameExtension
+- ATLPATH/ATL::ATLPath::SkipRoot
+- ATLPATH/ATL::ATLPath::StripPath
+- ATLPATH/ATL::ATLPath::StripToRoot
+- ATLPATH/ATL::ATLPath::UnquoteSpaces
 ms.assetid: d1ec2b8d-7ec7-43ea-90dd-0a740d2a742b
-caps.latest.revision: 3
+caps.latest.revision: "3"
 author: mikeblome
 ms.author: mblome
-translationtype: Machine Translation
-ms.sourcegitcommit: 0e0c08ddc57d437c51872b5186ae3fc983bb0199
-ms.openlocfilehash: 97d585eb8bbe59a8ccd92b866819fb869d35f64c
-ms.lasthandoff: 02/24/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: 29d41c0dc09620d34299a52a505d872096a7da8c
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="atl-path-functions"></a>Функции пути ATL
 
@@ -80,7 +117,7 @@ ms.lasthandoff: 02/24/2017
 ## <a name="requirements"></a>Требования  
  **Заголовок:** atlpath.h  
 
-## <a name="a-nameaddbackslasha-atlpathaddbackslash"></a><a name="addbackslash"></a>ATLPath::AddBackSlash
+## <a name="addbackslash"></a>ATLPath::AddBackSlash
 
 Эта функция представляет собой перегруженную оболочку для [PathAddBackslash](http://msdn.microsoft.com/library/windows/desktop/bb773561).  
   
@@ -97,7 +134,7 @@ inline wchar_t* AddBackslash(wchar_t* pszPath);
  
   
 
-## <a name="a-nameaddextensiona-atlpathaddextension"></a><a name="addextension"></a>ATLPath::AddExtension
+## <a name="addextension"></a>ATLPath::AddExtension
  Эта функция представляет собой перегруженную оболочку для [PathAddExtension](http://msdn.microsoft.com/library/windows/desktop/bb773563).  
   
 ### <a name="syntax"></a>Синтаксис  
@@ -110,7 +147,7 @@ inline BOOL AddExtension(wchar_t* pszPath, const wchar_t* pszExtension);
 ### <a name="remarks"></a>Примечания  
  В разделе [PathAddExtension](http://msdn.microsoft.com/library/windows/desktop/bb773563) подробные сведения. 
   
-## <a name="a-nameappenda-atlpathappend"></a><a name="append"></a>ATLPath::Append
+## <a name="append"></a>ATLPath::Append
  Эта функция представляет собой перегруженную оболочку для [PathAppend](http://msdn.microsoft.com/library/windows/desktop/bb773565).  
   
 ### <a name="syntax"></a>Синтаксис  
@@ -126,7 +163,7 @@ inline BOOL Append(wchar_t* pszPath, const wchar_t* pszMore);
  
   
 
-## <a name="a-namebuildroota-atlpathbuildroot"></a><a name="buildroot"></a>ATLPath::BuildRoot
+## <a name="buildroot"></a>ATLPath::BuildRoot
  Эта функция представляет собой перегруженную оболочку для [PathBuildRoot](http://msdn.microsoft.com/library/windows/desktop/bb773567).  
   
 ### <a name="syntax"></a>Синтаксис  
@@ -142,7 +179,7 @@ inline wchar_t* BuildRoot(wchar_t* pszPath, int iDrive);
  
   
 
-## <a name="a-namecanonicalizea-atlpathcanonicalize"></a><a name="canonicalize"></a>ATLPath::Canonicalize
+## <a name="canonicalize"></a>ATLPath::Canonicalize
  Эта функция представляет собой перегруженную оболочку для [PathCanonicalize](http://msdn.microsoft.com/library/windows/desktop/bb773569).  
   
 ### <a name="syntax"></a>Синтаксис  
@@ -158,7 +195,7 @@ inline BOOL Canonicalize(wchar_t* pszDest, const wchar_t* pszSrc);
  
   
 
-## <a name="a-namecombinea-atlpathcombine"></a><a name="combine"></a>ATLPath::Combine 
+## <a name="combine"></a>ATLPath::Combine 
 Эта функция представляет собой перегруженную оболочку для [PathCombine](https://msdn.microsoft.com/en-us/library/windows/desktop/bb773571).  
 
 ### <a name="syntax"></a>Синтаксис  
@@ -175,10 +212,10 @@ inline wchar_t* Combine(
    const wchar_t* pszFile);
 ```
 ### <a name="remarks"></a>Примечания
-Подробнее см. PathCombine.
+Дополнительные сведения см. PathCombine.
 
 
-## <a name="a-namecommonprefixa-atlpathcommonprefix"></a><a name="commonprefix"></a>ATLPath::CommonPrefix
+## <a name="commonprefix"></a>ATLPath::CommonPrefix
  Эта функция представляет собой перегруженную оболочку для [PathCommonPrefix](http://msdn.microsoft.com/library/windows/desktop/bb773574).  
   
 ### <a name="syntax"></a>Синтаксис  
@@ -201,7 +238,7 @@ inline int CommonPrefix(
  
   
 
-## <a name="a-namecompactpatha-atlpathcompactpath"></a><a name="compactpath"></a>ATLPath::CompactPath
+## <a name="compactpath"></a>ATLPath::CompactPath
  Эта функция представляет собой перегруженную оболочку для [PathCompactPath](http://msdn.microsoft.com/library/windows/desktop/bb773575).  
   
 ### <a name="syntax"></a>Синтаксис  
@@ -224,7 +261,7 @@ inline BOOL CompactPath(
  
   
 
-## <a name="a-namecompactpathexa-atlpathcompactpathex"></a><a name="compactpathex"></a>ATLPath::CompactPathEx
+## <a name="compactpathex"></a>ATLPath::CompactPathEx
  Эта функция представляет собой перегруженную оболочку для [PathCompactPathEx](http://msdn.microsoft.com/library/windows/desktop/bb773578).  
   
 ### <a name="syntax"></a>Синтаксис  
@@ -249,7 +286,7 @@ inline BOOL CompactPathEx(
  
   
 
-## <a name="a-namefileexistsa-atlpathfileexists"></a><a name="fileexists"></a>ATLPath::FileExists
+## <a name="fileexists"></a>ATLPath::FileExists
  Эта функция представляет собой перегруженную оболочку для [PathFileExists](http://msdn.microsoft.com/library/windows/desktop/bb773584).  
   
 ### <a name="syntax"></a>Синтаксис  
@@ -265,7 +302,7 @@ inline BOOL FileExists(const wchar_t* pszPath);
  
   
 
-## <a name="a-namefindextensiona-atlpathfindextension"></a><a name="findextension"></a>ATLPath::FindExtension
+## <a name="findextension"></a>ATLPath::FindExtension
  Эта функция представляет собой перегруженную оболочку для [PathFindExtension](http://msdn.microsoft.com/library/windows/desktop/bb773587).  
   
 ### <a name="syntax"></a>Синтаксис  
@@ -281,7 +318,7 @@ inline wchar_t* FindExtension(const wchar_t* pszPath);
  
   
 
-## <a name="a-namefindfilenamea-atlpathfindfilename"></a><a name="findfilename"></a>ATLPath::FindFileName
+## <a name="findfilename"></a>ATLPath::FindFileName
  Эта функция представляет собой перегруженную оболочку для [PathFindFileName](http://msdn.microsoft.com/library/windows/desktop/bb773589).  
   
 ### <a name="syntax"></a>Синтаксис  
@@ -297,7 +334,7 @@ inline wchar_t* FindFileName(const wchar_t* pszPath);
  
   
 
-## <a name="a-namegetdrivenumbera-atlpathgetdrivenumber"></a><a name="getdrivenumber"></a>ATLPath::GetDriveNumber  
+## <a name="getdrivenumber"></a>ATLPath::GetDriveNumber  
  Эта функция представляет собой перегруженную оболочку для [PathGetDriveNumber](http://msdn.microsoft.com/library/windows/desktop/bb773612).  
   
 ### <a name="syntax"></a>Синтаксис  
@@ -313,7 +350,7 @@ inline int GetDriveNumber(const wchar_t* pszPath);
  
 
 
-## <a name="a-nameisdirectorya--atlpathisdirectory"></a><a name="isdirectory"></a>ATLPath::IsDirectory 
+## <a name="isdirectory"></a>ATLPath::IsDirectory 
 Эта функция представляет собой перегруженную оболочку для [PathIsDirectory](https://msdn.microsoft.com/en-us/library/windows/desktop/bb773621).
 
 ```  
@@ -321,9 +358,9 @@ inline BOOL IsDirectory(const char* pszPath);
 inline BOOL IsDirectory(const wchar_t* pszPath);
 ```  
 ### <a name="remarks"></a>Примечания
-Подробнее см. PathIsDirectory.  
+Дополнительные сведения см. PathIsDirectory.  
 
-## <a name="a-nameisfilespeca-atlpathisfilespec"></a><a name="isfilespec"></a>ATLPath::IsFileSpec
+## <a name="isfilespec"></a>ATLPath::IsFileSpec
  Эта функция представляет собой перегруженную оболочку для [PathIsFileSpec](http://msdn.microsoft.com/library/windows/desktop/bb773627).  
   
 ### <a name="syntax"></a>Синтаксис  
@@ -339,7 +376,7 @@ inline BOOL IsFileSpec(const wchar_t* pszPath);
  
   
 
-## <a name="a-nameisprefixa-atlpathisprefix"></a><a name="isprefix"></a>ATLPath::IsPrefix
+## <a name="isprefix"></a>ATLPath::IsPrefix
  Эта функция представляет собой перегруженную оболочку для [PathIsPrefix](http://msdn.microsoft.com/library/windows/desktop/bb773650).  
   
 ### <a name="syntax"></a>Синтаксис  
@@ -355,7 +392,7 @@ inline BOOL IsPrefix(const wchar_t* pszPrefix, const wchar_t* pszPath);
  
   
 
-## <a name="a-nameisrelativea-atlpathisrelative"></a><a name="isrelative"></a>ATLPath::IsRelative
+## <a name="isrelative"></a>ATLPath::IsRelative
  Эта функция представляет собой перегруженную оболочку для [PathIsRelative](http://msdn.microsoft.com/library/windows/desktop/bb773660).  
   
 ### <a name="syntax"></a>Синтаксис  
@@ -371,7 +408,7 @@ inline BOOL IsRelative(const wchar_t* pszPath);
  
   
 
-## <a name="a-nameisroota-atlpathisroot"></a><a name="isroot"></a>ATLPath::IsRoot
+## <a name="isroot"></a>ATLPath::IsRoot
  Эта функция представляет собой перегруженную оболочку для [PathIsRoot](http://msdn.microsoft.com/library/windows/desktop/bb773674).  
   
 ### <a name="syntax"></a>Синтаксис  
@@ -387,7 +424,7 @@ inline BOOL IsRoot(const wchar_t* pszPath);
  
   
 
-## <a name="a-nameissameroota-atlpathissameroot"></a><a name="issameroot"></a>ATLPath::IsSameRoot
+## <a name="issameroot"></a>ATLPath::IsSameRoot
  Эта функция представляет собой перегруженную оболочку для [PathIsSameRoot](http://msdn.microsoft.com/library/windows/desktop/bb773687).  
   
 ### <a name="syntax"></a>Синтаксис  
@@ -403,7 +440,7 @@ inline BOOL IsSameRoot(const wchar_t* pszPath1, const wchar_t* pszPath2);
  
   
 
-## <a name="a-nameisunca-atlpathisunc"></a><a name="isunc"></a>ATLPath::IsUNC
+## <a name="isunc"></a>ATLPath::IsUNC
  Эта функция представляет собой перегруженную оболочку для [PathIsUNC](http://msdn.microsoft.com/library/windows/desktop/bb773712).  
   
 ### <a name="syntax"></a>Синтаксис  
@@ -419,7 +456,7 @@ inline BOOL IsUNC(const wchar_t* pszPath);
  
   
 
-## <a name="a-nameisuncservera-atlpathisuncserver"></a><a name="isuncserver"></a>ATLPath::IsUNCServer
+## <a name="isuncserver"></a>ATLPath::IsUNCServer
  Эта функция представляет собой перегруженную оболочку для [PathIsUNCServer](http://msdn.microsoft.com/library/windows/desktop/bb773722).  
   
 ### <a name="syntax"></a>Синтаксис  
@@ -435,7 +472,7 @@ inline BOOL IsUNCServer(const wchar_t* pszPath);
  
   
 
-## <a name="a-nameisuncserversharea-atlpathisuncservershare"></a><a name="isuncservershare"></a>ATLPath::IsUNCServerShare
+## <a name="isuncservershare"></a>ATLPath::IsUNCServerShare
  Эта функция представляет собой перегруженную оболочку для [PathIsUNCServerShare](http://msdn.microsoft.com/library/windows/desktop/bb773723).  
   
 ### <a name="syntax"></a>Синтаксис  
@@ -451,7 +488,7 @@ inline BOOL IsUNCServerShare(const wchar_t* pszPath);
  
   
 
-## <a name="a-namemakeprettya-atlpathmakepretty"></a><a name="makepretty"></a>ATLPath::MakePretty
+## <a name="makepretty"></a>ATLPath::MakePretty
  Эта функция представляет собой перегруженную оболочку для [PathMakePretty](http://msdn.microsoft.com/library/windows/desktop/bb773725).  
   
 ### <a name="syntax"></a>Синтаксис  
@@ -467,7 +504,7 @@ inline BOOL MakePretty(wchar_t* pszPath);
  
   
 
-## <a name="a-namematchspeca-atlpathmatchspec"></a><a name="matchspec"></a>ATLPath::MatchSpec  
+## <a name="matchspec"></a>ATLPath::MatchSpec  
  Эта функция представляет собой перегруженную оболочку для [PathMatchSpec](http://msdn.microsoft.com/library/windows/desktop/bb773727).  
   
 ### <a name="syntax"></a>Синтаксис  
@@ -483,7 +520,7 @@ inline BOOL MatchSpec(const wchar_t* pszPath, const wchar_t* pszSpec);
  
   
 
-## <a name="a-namequotespacesa-atlpathquotespaces"></a><a name="quotespaces"></a>ATLPath::QuoteSpaces  
+## <a name="quotespaces"></a>ATLPath::QuoteSpaces  
  Эта функция представляет собой перегруженную оболочку для [PathQuoteSpaces](http://msdn.microsoft.com/library/windows/desktop/bb773739).  
   
 ### <a name="syntax"></a>Синтаксис  
@@ -499,7 +536,7 @@ inline void QuoteSpaces(wchar_t* pszPath);
  
   
 
-## <a name="a-namerelativepathtoa-atlpathrelativepathto"></a><a name="relativepathto"></a>ATLPath::RelativePathTo
+## <a name="relativepathto"></a>ATLPath::RelativePathTo
  Эта функция представляет собой перегруженную оболочку для [PathRelativePathTo](http://msdn.microsoft.com/library/windows/desktop/bb773740).  
   
 ### <a name="syntax"></a>Синтаксис  
@@ -526,7 +563,7 @@ inline BOOL RelativePathTo(
  
   
 
-## <a name="a-nameremoveargsa-atlpathremoveargs"></a><a name="removeargs"></a>ATLPath::RemoveArgs  
+## <a name="removeargs"></a>ATLPath::RemoveArgs  
  Эта функция представляет собой перегруженную оболочку для [PathRemoveArgs](http://msdn.microsoft.com/library/windows/desktop/bb773742).  
   
 ### <a name="syntax"></a>Синтаксис  
@@ -542,7 +579,7 @@ inline void RemoveArgs(wchar_t* pszPath);
  
   
 
-## <a name="a-nameremovebackslasha-atlpathremovebackslash"></a><a name="removebackslash"></a>ATLPath::RemoveBackslash
+## <a name="removebackslash"></a>ATLPath::RemoveBackslash
  Эта функция представляет собой перегруженную оболочку для [PathRemoveBackslash](http://msdn.microsoft.com/library/windows/desktop/bb773743).  
   
 ### <a name="syntax"></a>Синтаксис  
@@ -558,7 +595,7 @@ inline wchar_t* RemoveBackslash(wchar_t* pszPath);
  
   
 
-## <a name="a-nameremoveblanksa-atlpathremoveblanks"></a><a name="removeblanks"></a>ATLPath::RemoveBlanks
+## <a name="removeblanks"></a>ATLPath::RemoveBlanks
  Эта функция представляет собой перегруженную оболочку для [PathRemoveBlanks](http://msdn.microsoft.com/library/windows/desktop/bb773745).  
   
 ### <a name="syntax"></a>Синтаксис  
@@ -574,7 +611,7 @@ inline void RemoveBlanks(wchar_t* pszPath);
  
   
 
-## <a name="a-nameremoveextensiona-atlpathremoveextension"></a><a name="removeextension"></a>ATLPath::RemoveExtension
+## <a name="removeextension"></a>ATLPath::RemoveExtension
  Эта функция представляет собой перегруженную оболочку для [PathRemoveExtension](http://msdn.microsoft.com/library/windows/desktop/bb773746).  
   
 ### <a name="syntax"></a>Синтаксис  
@@ -590,7 +627,7 @@ inline void RemoveExtension(wchar_t* pszPath);
  
   
 
-## <a name="a-nameremovefilespeca-atlpathremovefilespec"></a><a name="removefilespec"></a>ATLPath::RemoveFileSpec
+## <a name="removefilespec"></a>ATLPath::RemoveFileSpec
  Эта функция представляет собой перегруженную оболочку для [PathRemoveFileSpec](http://msdn.microsoft.com/library/windows/desktop/bb773748).  
   
 ### <a name="syntax"></a>Синтаксис  
@@ -606,7 +643,7 @@ inline BOOL RemoveFileSpec(wchar_t* pszPath);
  
   
 
-## <a name="a-namerenameextensiona-atlpathrenameextension"></a><a name="renameextension"></a>ATLPath::RenameExtension
+## <a name="renameextension"></a>ATLPath::RenameExtension
  Эта функция представляет собой перегруженную оболочку для [PathRenameExtension](http://msdn.microsoft.com/library/windows/desktop/bb773749).  
   
 ### <a name="syntax"></a>Синтаксис  
@@ -622,7 +659,7 @@ inline BOOL RenameExtension(wchar_t* pszPath, const wchar_t* pszExt);
  
   
 
-## <a name="a-nameskiproota-atlpathskiproot"></a><a name="skiproot"></a>ATLPath::SkipRoot
+## <a name="skiproot"></a>ATLPath::SkipRoot
  Эта функция представляет собой перегруженную оболочку для [PathSkipRoot](http://msdn.microsoft.com/library/windows/desktop/bb773754).  
   
 ### <a name="syntax"></a>Синтаксис  
@@ -638,7 +675,7 @@ inline wchar_t* SkipRoot(const wchar_t* pszPath);
  
   
 
-## <a name="a-namestrippatha-atlpathstrippath"></a><a name="strippath"></a>ATLPath::StripPath
+## <a name="strippath"></a>ATLPath::StripPath
  Эта функция представляет собой перегруженную оболочку для [PathStripPath](http://msdn.microsoft.com/library/windows/desktop/bb773756).  
   
 ### <a name="syntax"></a>Синтаксис  
@@ -655,7 +692,7 @@ inline void StripPath(wchar_t* pszPath);
   
 
 
-## <a name="a-namestriptoroota-atlpathstriptoroot"></a><a name="striptoroot"></a>ATLPath::StripToRoot
+## <a name="striptoroot"></a>ATLPath::StripToRoot
  Эта функция представляет собой перегруженную оболочку для [PathStripToRoot](http://msdn.microsoft.com/library/windows/desktop/bb773757).  
   
 ### <a name="syntax"></a>Синтаксис  
@@ -671,7 +708,7 @@ inline BOOL StripToRoot(wchar_t* pszPath);
  
   
 
-## <a name="a-nameunquotespacesa-atlpathunquotespaces"></a><a name="unquotespaces"></a>ATLPath::UnquoteSpaces
+## <a name="unquotespaces"></a>ATLPath::UnquoteSpaces
  Эта функция представляет собой перегруженную оболочку для [PathUnquoteSpaces](http://msdn.microsoft.com/library/windows/desktop/bb773763).  
   
 ### <a name="syntax"></a>Синтаксис  
@@ -687,4 +724,3 @@ inline void UnquoteSpaces(wchar_t* pszPath);
  
   
  
-

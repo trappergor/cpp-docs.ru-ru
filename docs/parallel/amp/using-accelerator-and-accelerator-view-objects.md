@@ -13,11 +13,12 @@ caps.latest.revision: "17"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 47355ea2c7db35b32c69e91bf8445efe7671ccce
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 8cc676407a88979679a362b3d36f361614524432
+ms.sourcegitcommit: 54035dce0992ba5dce0323d67f86301f994ff3db
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 01/03/2018
 ---
 # <a name="using-accelerator-and-acceleratorview-objects"></a>Использование объектов accelerator и accelerator_view
 Можно использовать [accelerator](../../parallel/amp/reference/accelerator-class.md) и [accelerator_view](../../parallel/amp/reference/accelerator-view-class.md) классах, чтобы задать устройство или эмулятор для выполнения коде C++ AMP. Системы могут иметь несколько устройств или эмуляторов, которые отличаются по объему памяти, поддержки общей памяти, поддержка отладки или поддержки двойной точности. C++ Accelerated Massive Parallelism (C++ AMP) предоставляет интерфейсы API, которые можно использовать для проверки доступных сочетания клавиш, задан профиль по умолчанию, укажите нескольких объектах accelerator_view для нескольких вызовов parallel_for_each и выполнять специальные задачи отладки.  
@@ -175,10 +176,10 @@ bool pick_accelerator()
   
 - [Элемент данных Accelerator::direct3d_warp](reference/accelerator-class.md#direct3d_warp): это решение предоставляет резервной стратегии о выполнении кода C++ AMP на многоядерных процессорах, использующих Streaming SIMD расширения (SSE).  
   
-- [элемент данных Accelerator::cpu_accelerator](reference/accelerator-class.md#cpu_accelerator): это решение можно использовать для настройки размещения массивы. Он не может выполнить код C++ AMP. Дополнительные сведения см. в разделе [массивы промежуточного хранения в C++ AMP](http://go.microsoft.com/fwlink/p/LinkId=248485) разместить на параллельное программирование в блоге машинного кода.  
+- [элемент данных Accelerator::cpu_accelerator](reference/accelerator-class.md#cpu_accelerator): это решение можно использовать для настройки размещения массивы. Он не может выполнить код C++ AMP. Дополнительные сведения см. в разделе [массивы промежуточного хранения в C++ AMP](http://go.microsoft.com/fwlink/p/?linkId=248485) разместить на параллельное программирование в блоге машинного кода.  
   
 ## <a name="interoperability"></a>Взаимодействие  
- Среда выполнения C++ AMP поддерживает взаимодействие между `accelerator_view` класса и Direct3D [ID3D11Device интерфейс](http://go.microsoft.com/fwlink/p/LinkId=248488). [Create_accelerator_view](reference/concurrency-direct3d-namespace-functions-amp.md#create_accelerator_view) принимает `IUnknown` интерфейс и возвращает `accelerator_view` объекта. [Get_device](http://msdn.microsoft.com/en-us/8194125e-8396-4d62-aa8a-65831dea8439) принимает `accelerator_view` объекта и возвращает `IUknown` интерфейса.  
+ Среда выполнения C++ AMP поддерживает взаимодействие между `accelerator_view` класса и Direct3D [ID3D11Device интерфейс](http://go.microsoft.com/fwlink/p/?linkId=248488). [Create_accelerator_view](reference/concurrency-direct3d-namespace-functions-amp.md#create_accelerator_view) принимает `IUnknown` интерфейс и возвращает `accelerator_view` объекта. [Get_device](http://msdn.microsoft.com/en-us/8194125e-8396-4d62-aa8a-65831dea8439) принимает `accelerator_view` объекта и возвращает `IUknown` интерфейса.  
   
 ## <a name="see-also"></a>См. также  
  [C++ AMP (C++ Accelerated Massive Parallelism)](../../parallel/amp/cpp-amp-cpp-accelerated-massive-parallelism.md)   

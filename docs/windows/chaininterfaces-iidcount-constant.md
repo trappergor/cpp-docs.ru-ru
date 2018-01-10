@@ -1,47 +1,48 @@
 ---
-title: "Константа ChainInterfaces::IidCount | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "implements/Microsoft::WRL::ChainInterfaces::IidCount"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "IidCount - константа"
+title: "Константа ChainInterfaces::IidCount | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: implements/Microsoft::WRL::ChainInterfaces::IidCount
+dev_langs: C++
+helpviewer_keywords: IidCount constant
 ms.assetid: d4a90aa0-513c-4e99-b978-e12149734936
-caps.latest.revision: 3
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 3
+caps.latest.revision: "3"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: 1a1336bb5b8b43e833325c304a4d870220a40b84
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 12/21/2017
 ---
-# Константа ChainInterfaces::IidCount
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Общее число идентификаторов интерфейса, содержащихся в интерфейсах, указанных параметрами `I0` шаблона через `I9`.  
+# <a name="chaininterfacesiidcount-constant"></a>Константа ChainInterfaces::IidCount
+Общее количество идентификаторов, содержащихся в интерфейсах, заданные параметры шаблона интерфейса `I0` через `I9`.  
   
-## Синтаксис  
+## <a name="syntax"></a>Синтаксис  
   
 ```  
 static const unsigned long IidCount = Details::InterfaceTraits<I0>::IidCount + Details::InterfaceTraits<I1>::IidCount + Details::InterfaceTraits<I2>::IidCount + Details::InterfaceTraits<I3>::IidCount + Details::InterfaceTraits<I4>::IidCount + Details::InterfaceTraits<I5>::IidCount + Details::InterfaceTraits<I6>::IidCount + Details::InterfaceTraits<I7>::IidCount + Details::InterfaceTraits<I8>::IidCount + Details::InterfaceTraits<I9>::IidCount;  
 ```  
   
-## Возвращаемое значение  
- Общее число идентификаторов интерфейса.  
+## <a name="return-value"></a>Возвращаемое значение  
+ Общее количество идентификаторов интерфейсов.  
   
-## Примечания  
- Параметры шаблона `I0` и `I1` и параметры `I2` через `I9` являются необязательными. Количество IID каждого интерфейса обычно равно одному.  
+## <a name="remarks"></a>Примечания  
+ Параметры шаблона `I0` и `I1` являются обязательными и параметры `I2` через `I9` являются необязательными. Количество каждого интерфейса IID обычно равно 1.  
   
-## Требования  
+## <a name="requirements"></a>Требования  
  **Заголовок:** implements.h  
   
  **Пространство имен:** Microsoft::WRL  
   
-## См. также  
+## <a name="see-also"></a>См. также  
  [Структура ChainInterfaces](../windows/chaininterfaces-structure.md)

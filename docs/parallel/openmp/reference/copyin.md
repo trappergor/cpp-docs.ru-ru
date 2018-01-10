@@ -4,44 +4,26 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-windows
+ms.technology: cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- copyin
-dev_langs:
-- C++
-helpviewer_keywords:
-- copyin OpenMP clause
+f1_keywords: copyin
+dev_langs: C++
+helpviewer_keywords: copyin OpenMP clause
 ms.assetid: 369efa88-613c-4cb1-9e11-7b9ee08a4b25
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
-ms.openlocfilehash: ff466d0ec280d4e31d49328a725da88d87bd2435
-ms.contentlocale: ru-ru
-ms.lasthandoff: 02/24/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: 3190c1f6914ae8ea24b968a8cf286de1867938cf
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="copyin"></a>copyin
-Позволяет потокам обращаться к значению главного потока, для [threadprivate](../../../parallel/openmp/reference/threadprivate.md) переменной.  
+Позволяет потокам для доступа к значению главного потока для [threadprivate](../../../parallel/openmp/reference/threadprivate.md) переменной.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -53,12 +35,12 @@ copyin(var)
  где  
   
  `var`  
- `threadprivate` Переменную, которая будет инициализируется значением переменной в основной поток, как она существует до параллельной конструкции.  
+ `threadprivate` Переменную, которая будет инициализироваться со значением переменной в главного потока, которое существовало до параллельной конструкции.  
   
 ## <a name="remarks"></a>Примечания  
  `copyin`применяется к следующие директивы:  
   
--   [параллельный](../../../parallel/openmp/reference/parallel.md)  
+-   [parallel](../../../parallel/openmp/reference/parallel.md)  
   
 -   [for](../../../parallel/openmp/reference/for-openmp.md)  
   

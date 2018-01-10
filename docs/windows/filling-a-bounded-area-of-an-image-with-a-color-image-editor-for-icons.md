@@ -1,51 +1,54 @@
 ---
-title: "Filling a Bounded Area of an Image with a Color (Image Editor for Icons) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "colors [C++], image"
-  - "images [C++], colors"
-  - "Image editor [C++], colors"
-  - "Fill tool"
+title: "Заливка выделенной области изображения с цветом (редактор изображений для значков) | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- colors [C++], image
+- images [C++], colors
+- Image editor [C++], colors
+- Fill tool
 ms.assetid: e647ef83-421b-4818-855d-249b4c4cb5f2
-caps.latest.revision: 6
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 6
+caps.latest.revision: "6"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: dd951e22286b255ea504ba5764f76ba8b4020924
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 12/21/2017
 ---
-# Filling a Bounded Area of an Image with a Color (Image Editor for Icons)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-В редакторе изображений имеется инструмент **Заполнение**, предназначенный для заливки фона любого выделенного фрагмента изображения текущим выбранным для рисования цветом.  
+# <a name="filling-a-bounded-area-of-an-image-with-a-color-image-editor-for-icons"></a>Заливка цветом выделенной области изображения (редактор изображений для значков)
+Редактор изображений предоставляет **заполнения** инструмент для заполнения любые заключенные область изображения с текущего цвета или текущий цвет фона.  
   
 > [!TIP]
->  При наведении курсора на кнопку панели инструментов отображаются всплывающие подсказки.  Эти подсказки помогают определить функцию каждой кнопки.  
+>  Всплывающие подсказки отображается при наведении курсора на кнопке панели инструментов. Эти советы могут помочь определить функцию каждой кнопки.  
   
-### Работа с инструментом "Заполнение"  
+### <a name="to-use-the-fill-tool"></a>Для использования инструмента «Заливка»  
   
-1.  В панели инструментов **редактора изображений** \(или в меню **Изображение**, команда **Инструменты**\) щелкните инструмент **Заполнение**.  
+1.  На **редактора изображений** инструментов (или **изображения** меню **средства** команды), нажмите кнопку **заполнения** средства.  
   
-2.  При необходимости выберите цвета для рисования. Для этого на [цветовой палитре](../Topic/Colors%20Window%20\(Image%20Editor%20for%20Icons\).md) щелкните левой кнопкой мыши, чтобы выбрать основной цвет и правой кнопкой, чтобы выбрать цвет фона.  
+2.  При необходимости выберите рисования цветов: В [палитра цветов](../windows/colors-window-image-editor-for-icons.md), щелкните левой кнопки мыши выберите цвет переднего плана, или правой кнопкой мыши выберите цвет фона.  
   
-3.  Переместите инструмент **Заполнение** в область, которую необходимо заполнить.  
+3.  Переместить **заполнения** средства в область, которую требуется заполнить.  
   
-4.  Щелкните левой кнопкой мыши, чтобы заполнить область основным цветом или правой кнопкой, чтобы заполнить область цветом фона.  
+4.  Нажмите кнопку мыши влево или вправо, чтобы заполнить цвет фона или фоновый цвет, соответственно.  
   
- Сведения о добавлении ресурсов в управляемые проекты см. в разделе [Ресурсы приложений](../Topic/Resources%20in%20Desktop%20Apps.md) *Руководства разработчика .NET Framework*. Сведения о том, как вручную добавлять файлы ресурсов в управляемые проекты, осуществлять доступ к ресурсам, отображать статические ресурсы и присваивать строки ресурсов свойствам см. в разделах [Пошаговое руководство. Локализация приложений Windows Forms](http://msdn.microsoft.com/ru-ru/9a96220d-a19b-4de0-9f48-01e5d82679e5) и [Walkthrough: Using Resources for Localization with ASP.NET](../Topic/Walkthrough:%20Using%20Resources%20for%20Localization%20with%20ASP.NET.md).  
+ Сведения о добавлении ресурсов в управляемые проекты см. в разделе [ресурсы в классических приложениях](/dotnet/framework/resources/index) в *руководства разработчика .NET Framework.* Сведения о вручную добавлять файлы ресурсов в управляемые проекты, осуществлять доступ к ресурсам, отображать статические ресурсы и присваивать строки ресурсов свойствам см. в разделе [Создание файлов ресурсов для приложений рабочего стола](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Сведения о глобализации и локализации ресурсов в управляемых приложениях см. в разделе [Globalizing и локализация приложений .NET Framework](/dotnet/standard/globalization-localization/index).  
   
  Требования  
   
- None  
+ Нет  
   
-## См. также  
- [Accelerator Keys](../mfc/accelerator-keys-image-editor-for-icons.md)   
- [Working with Color](../mfc/working-with-color-image-editor-for-icons.md)
+## <a name="see-also"></a>См. также  
+ [Сочетания клавиш](../windows/accelerator-keys-image-editor-for-icons.md)   
+ [Работа с цветом](../windows/working-with-color-image-editor-for-icons.md)

@@ -17,11 +17,12 @@ caps.latest.revision: "13"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 9c03c642dfc3524f69f4aa8d1a397f750b42db27
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: c8d641b94664292eac70e9eba40f994de26337e9
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="tn035-using-multiple-resource-files-and-header-files-with-visual-c"></a>TN035. Использование нескольких файлов ресурсов и файлов заголовков в Visual C++
 > [!NOTE]
@@ -214,7 +215,7 @@ RESOURCE.H     AFXRES.H
     AFXPRINT.RC 
 ```  
   
- С помощью директив времени выполнения можно организовать редактируемые и нередактируемые в Visual C++ ресурсы в несколько RC-файлов, где "главный" файл MYAPP.RC не делает ничего, кроме включения других RC-файлов посредством оператора #include. При использовании MAK-файла проекта Visual C++ необходимо включить в проект "главный" RC-файл, чтобы все включенные посредством оператора #include ресурсы компилировались с приложением.  
+ С помощью директив времени компиляции можно организовать редактируемые и нередактируемые в Visual C++ ресурсы в несколько RC-файлов, где "главный" файл MYAPP.RC не делает ничего, кроме включения других RC-файлов посредством оператора #include. При использовании MAK-файла проекта Visual C++ необходимо включить в проект "главный" RC-файл, чтобы все включенные посредством оператора #include ресурсы компилировались с приложением.  
   
  **Применение файлов реализация нередактируемых в Visual C++**  
   

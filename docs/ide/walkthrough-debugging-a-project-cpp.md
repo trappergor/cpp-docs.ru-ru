@@ -17,11 +17,12 @@ caps.latest.revision: "16"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: ec7a363d3aa4601e33e44d15fbb3d667c3a87db4
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 6c9789a7deafacf09ad615f416a446da4eba8150
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="walkthrough-debugging-a-project-c"></a>Пошаговое руководство. Отладка проекта (C++)
 В этом пошаговом руководстве рассматривается изменение программы для устранения проблем, обнаруженных при проверке проекта.  
@@ -60,7 +61,7 @@ ms.lasthandoff: 10/24/2017
   
 7.  Выполните шаг с заходом в программе до ее завершения, или оставить его запустить, выбрав **отладки**, **запуска** в строке меню или нажав клавишу F5.  
   
-## <a name="next-steps"></a>Дальнейшие действия  
+## <a name="next-steps"></a>Следующие шаги  
  **Предыдущие:** [Пошаговое руководство: тестирование проекта (C++)](../ide/walkthrough-testing-a-project-cpp.md) &#124; **Далее:**[Пошаговое руководство: развертывание программы (C++)](../ide/walkthrough-deploying-your-program-cpp.md)  
   
 ## <a name="see-also"></a>См. также  

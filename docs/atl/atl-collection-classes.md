@@ -22,11 +22,12 @@ caps.latest.revision: "14"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 8be61044a9cc6883eab74eb8093b79ea84aacc60
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 24b0fbdc5ab68319704fb59746862384198f232b
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="atl-collection-classes"></a>Классы коллекций ATL
 Библиотека ATL предоставляет множество классов для хранения и доступа к данным. Класс, который вы решили использовать зависит от нескольких факторов, включая:  
@@ -65,7 +66,7 @@ ms.lasthandoff: 10/24/2017
 ## <a name="specialized-collection-classes"></a>Специализированные коллекции классов  
  Для управления указатели памяти и указателей интерфейса также используются более специализированные классы коллекций:  
   
-|Класс|Назначение|  
+|Класс|Цель|  
 |-----------|-------------|  
 |[CAutoPtrArray](../atl/reference/cautoptrarray-class.md)|Предоставляет методы, используемые при создании массива интеллектуальных указателей.|  
 |[CAutoPtrList](../atl/reference/cautoptrlist-class.md)|Предоставляет методы, используемые при построении списка интеллектуальных указателей.|  

@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -26,8 +25,7 @@ f1_keywords:
 - allocators/stdext::allocator_base::deallocate
 - allocators/stdext::allocator_base::destroy
 - allocators/stdext::allocator_base::max_size
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - stdext::allocator_base [C++]
 - stdext::allocators [C++], allocator_base
@@ -47,16 +45,16 @@ helpviewer_keywords:
 - stdext::allocator_base [C++], destroy
 - stdext::allocator_base [C++], max_size
 ms.assetid: f920b45f-2a88-4bb0-8ead-b6126b426ed4
-caps.latest.revision: 17
+caps.latest.revision: "17"
 author: corob-msft
 ms.author: corob
 manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: cf1127a6ec3e921e19c9626cc51197eb2a87d6ca
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
-ms.sourcegitcommit: 65f4e356ad0d46333b0d443d0fd6ac0b9f2b6f58
-ms.openlocfilehash: a8ca7f07f3d458b18dfb0ee21c5499b0b4bfffff
-ms.contentlocale: ru-ru
-ms.lasthandoff: 10/03/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="allocatorbase-class"></a>Класс allocator_base
 Определяет базовый класс и общие функции, необходимые для создания определяемого пользователем распределителя из фильтра синхронизации.  
@@ -70,7 +68,7 @@ class allocator_base
   
 #### <a name="parameters"></a>Параметры  
   
-|Параметр|Описание|  
+|Параметр|Описание:|  
 |---------------|-----------------|  
 |`Type`|Тип элементов, распределяемых распределителем.|  
 |`Sync`|Политика синхронизации распределителя: [класс sync_none](../standard-library/sync-none-class.md), [класс sync_per_container](../standard-library/sync-per-container-class.md), [класс sync_per_thread](../standard-library/sync-per-thread-class.md) или [класс sync_shared](../standard-library/sync-shared-class.md).|  
@@ -120,7 +118,7 @@ char *_Charalloc(size_type count);
   
 ### <a name="parameters"></a>Параметры  
   
-|Параметр|Описание|  
+|Параметр|Описание:|  
 |---------------|-----------------|  
 |`count`|Число элементов в массиве, которые нужно выделить.|  
   
@@ -139,7 +137,7 @@ void _Chardealloc(void* ptr, size_type count);
   
 ### <a name="parameters"></a>Параметры  
   
-|Параметр|Описание|  
+|Параметр|Описание:|  
 |---------------|-----------------|  
 |`ptr`|Указатель на первый объект, который необходимо освободить из хранилища.|  
 |`count`|Количество объектов для освобождения из хранилища.|  
@@ -178,7 +176,7 @@ pointer allocate(size_type _Nx);
   
 ### <a name="parameters"></a>Параметры  
   
-|Параметр|Описание|  
+|Параметр|Описание:|  
 |---------------|-----------------|  
 |`_Nx`|Число выделяемых элементов в массиве.|  
 |`_Hint`|Этот параметр не учитывается.|  
@@ -201,7 +199,7 @@ allocator_base(const allocator_base<Other, Sync>& right);
   
 ### <a name="parameters"></a>Параметры  
   
-|Параметр|Описание|  
+|Параметр|Описание:|  
 |---------------|-----------------|  
 |`right`|Объект allocator для копирования.|  
   
@@ -231,7 +229,7 @@ void construct(pointer ptr, const Type& val);
   
 ### <a name="parameters"></a>Параметры  
   
-|Параметр|Описание|  
+|Параметр|Описание:|  
 |---------------|-----------------|  
 |`ptr`|Указатель места, в котором должен создаваться объект.|  
 |`val`|Значение, с которым создаваемый объект будет инициализирован.|  
@@ -248,7 +246,7 @@ void deallocate(pointer ptr, size_type _Nx);
   
 ### <a name="parameters"></a>Параметры  
   
-|Параметр|Описание|  
+|Параметр|Описание:|  
 |---------------|-----------------|  
 |`ptr`|Указатель на первый объект, который необходимо освободить из хранилища.|  
 |`_Nx`|Количество объектов для освобождения из хранилища.|  
@@ -265,7 +263,7 @@ void destroy(pointer ptr);
   
 ### <a name="parameters"></a>Параметры  
   
-|Параметр|Описание|  
+|Параметр|Описание:|  
 |---------------|-----------------|  
 |`ptr`|Указатель, обозначающий адрес уничтожаемого объекта.|  
   
@@ -322,7 +320,6 @@ typedef Type value_type;
   
 ## <a name="see-also"></a>См. также  
  [\<allocators>](../standard-library/allocators-header.md)
-
 
 
 

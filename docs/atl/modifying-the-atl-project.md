@@ -17,11 +17,12 @@ caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 0385903a0580d06c03d3973e697e7a7fc88bbd1e
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 7de670642e80a32158b84c739d7081ca02d483a4
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="modifying-the-atl-project"></a>Изменение проекта ATL
 На этом этапе проекта составного элемента управления реализует необходимые объекты для составного элемента управления. Следующим шагом является добавление всех элементов управления, что составной элемент управления будет содержать и обрабатывать любые необходимые события.  

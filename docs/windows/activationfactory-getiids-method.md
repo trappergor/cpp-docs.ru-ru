@@ -1,32 +1,33 @@
 ---
-title: "Метод ActivationFactory::GetIids | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "module/Microsoft::WRL::ActivationFactory::GetIids"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "GetIids - метод"
+title: "Метод ActivationFactory::GetIids | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: module/Microsoft::WRL::ActivationFactory::GetIids
+dev_langs: C++
+helpviewer_keywords: GetIids method
 ms.assetid: 0983d709-d155-4d65-aae4-5b2c8bb0fede
-caps.latest.revision: 3
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 3
+caps.latest.revision: "3"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: da0ab5960b84b16f8eb05679e0afdb9a85a1955d
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 12/21/2017
 ---
-# Метод ActivationFactory::GetIids
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="activationfactorygetiids-method"></a>Метод ActivationFactory::GetIids
 Извлекает массив идентификаторов реализованного интерфейса.  
   
-## Синтаксис  
+## <a name="syntax"></a>Синтаксис  
   
 ```  
 STDMETHOD(  
@@ -34,20 +35,20 @@ STDMETHOD(
 )(_Out_ ULONG *iidCount, _Deref_out_ _Deref_post_cap_(*iidCount) IID **iids);  
 ```  
   
-#### Параметры  
+#### <a name="parameters"></a>Параметры  
  `iidCount`  
- Когда эта операция завершится, число идентификаторов интерфейса в массиве `iids`.  
+ После завершения операции представляет число идентификаторов интерфейса в массиве `iids`.  
   
  `iids`  
- Когда эта операция завершится, массив идентификаторов реализованного интерфейса.  
+ После завершения операции представляет массив идентификаторов реализованного интерфейса.  
   
-## Возвращаемое значение  
- В случае успеха возвращает значение S\_OK; в противном случае значение типа HRESULT, описывающее тип сбоя.  E\_OUTOFMEMORY является возможной ошибкой HRESULT.  
+## <a name="return-value"></a>Возвращаемое значение  
+ Значение S_OK, если операция завершилась успешно; в противном случае — значение HRESULT, описывающее тип сбоя. E_OUTOFMEMORY является возможной ошибкой HRESULT.  
   
-## Требования  
+## <a name="requirements"></a>Требования  
  **Заголовок:** module.h  
   
  **Пространство имен:** Microsoft::WRL  
   
-## См. также  
+## <a name="see-also"></a>См. также  
  [Класс ActivationFactory](../windows/activationfactory-class.md)

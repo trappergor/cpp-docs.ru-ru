@@ -1,61 +1,63 @@
 ---
-title: "Спецификаторы переопределения (расширения компонентов C++) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "спецификаторы переопределения, Visual C++"
-  - "спецификаторы переопределения"
+title: "Спецификаторы переопределения (расширения компонентов C++) | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+dev_langs: C++
+helpviewer_keywords:
+- override specifiers, Visual C++
+- override specifiers
 ms.assetid: 155bbf6f-4722-4654-afb1-9cb52af799fb
-caps.latest.revision: 13
-caps.handback.revision: 13
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "13"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: 7937e0eec53a800c7bcef2842310af368949bcca
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 12/21/2017
 ---
-# Спецификаторы переопределения (расширения компонентов C++)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-*Спецификаторы переопределения* изменяют поведение унаследованных типов и членов унаследованных типов в производных типах.  
+# <a name="override-specifiers--c-component-extensions"></a>Спецификаторы переопределения (расширения компонентов C++)
+*Спецификаторы переопределения* изменяют поведение унаследованных типов и членов унаследованных типов ведут себя в производных типах.  
   
-## Все среды выполнения  
- **Примечания**  
+## <a name="all-runtimes"></a>Все среды выполнения  
+ **Заметки**  
   
  Дополнительные сведения о спецификаторах переопределения см. в разделах:  
   
 -   [abstract](../windows/abstract-cpp-component-extensions.md)  
   
--   [new \(новая ячейка в таблице vtable\)](../windows/new-new-slot-in-vtable-cpp-component-extensions.md)  
+-   [New (новый слот в vtable)](../windows/new-new-slot-in-vtable-cpp-component-extensions.md)  
   
 -   [override](../windows/override-cpp-component-extensions.md)  
   
 -   [sealed](../windows/sealed-cpp-component-extensions.md)  
   
--   [Спецификаторы переопределения и собственные компиляции](../dotnet/how-to-declare-override-specifiers-in-native-compilations-cpp-cli.md)  
+-   [Спецификаторы переопределения и компиляция в машинный код](../dotnet/how-to-declare-override-specifiers-in-native-compilations-cpp-cli.md)  
   
  Также при объявлении типа можно использовать `abstract` и `sealed` в качестве спецификаторов переопределения.  
   
- Дополнительные сведения о функциях явного переопределения базового класса см. в разделе [Явное переопределение](../windows/explicit-overrides-cpp-component-extensions.md).  
+ Сведения о переопределении функции базового класса явным образом, в разделе [явное переопределение](../windows/explicit-overrides-cpp-component-extensions.md).  
   
-## среда выполнения Windows  
- \(Отсутствуют комментарии для этой функции языка, которая применяется только в среде выполнения Windows\).  
+## <a name="windows-runtime"></a>Среда выполнения Windows  
+ (Отсутствуют комментарии для этой возможности языка, которая применяется только в среде выполнения Windows).  
   
-### Требования  
- Параметр компилятора: **\/ZW**  
+### <a name="requirements"></a>Требования  
+ Параметр компилятора: **/ZW**  
   
-## Среда CLR  
- \(Отсутствуют комментарии для этой функции языка, которая применяется только в среде CLR\).  
+## <a name="common-language-runtime"></a>Среда CLR  
+ (Отсутствуют комментарии для этой функции языка, которая применяется только в среде CLR).  
   
-### Требования  
- Параметр компилятора: **\/clr**  
+### <a name="requirements"></a>Требования  
+ Параметр компилятора: **/clr**  
   
-## См. также  
+## <a name="see-also"></a>См. также  
  [Расширения компонентов для платформ среды выполнения](../windows/component-extensions-for-runtime-platforms.md)

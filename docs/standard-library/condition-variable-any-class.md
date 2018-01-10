@@ -29,11 +29,12 @@ helpviewer_keywords:
 - std::condition_variable_any::wait
 - std::condition_variable_any::wait_for
 - std::condition_variable_any::wait_until
-ms.openlocfilehash: 2f15319ec5d35ef5bc6ebdf047f1ea0a963510e1
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: c3acad50f9dec8e3384d0b811045f95843f40b92
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="conditionvariableany-class"></a>Класс condition_variable_any
 Класс `condition_variable_any` используется для ожидания события, которое имеет любой тип `mutex`.  
@@ -44,17 +45,17 @@ ms.lasthandoff: 10/24/2017
 class condition_variable_any;
 ```  
   
-## <a name="members"></a>Члены  
+## <a name="members"></a>Участники  
   
 ### <a name="public-constructors"></a>Открытые конструкторы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[condition_variable_any](#condition_variable_any)|Создает объект `condition_variable_any`.|  
   
 ### <a name="public-methods"></a>Открытые методы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[notify_all](#notify_all)|Разблокирует все потоки, которые ожидают объект `condition_variable_any`.|  
 |[notify_one](#notify_one)|Разблокирует один из потоков, которые ожидают объект `condition_variable_any`.|  

@@ -22,11 +22,12 @@ caps.latest.revision: "22"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: c0c2f0153d216292169b72e3e75d5d40fb5f35cf
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: ea016877744bed8e91f8e7144560969b2dbca745
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="debug-iterator-support"></a>Debug Iterator Support
 Библиотека времени выполнения Visual C++ обнаруживает некорректное использование итераторов, выполняет проверочное утверждение и отображает диалоговое окно во время выполнения. Чтобы включить поддержку отладочных итераторов, необходимо использовать отладочные версии стандартной библиотеки C++ и библиотеки времени выполнения C для компиляции программы. Дополнительные сведения см. в разделе [Функции библиотеки CRT](../c-runtime-library/crt-library-features.md). Сведения об использовании проверяемых итераторов см. в разделе [Проверяемые итераторы](../standard-library/checked-iterators.md).  

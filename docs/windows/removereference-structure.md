@@ -1,32 +1,33 @@
 ---
-title: "Структура RemoveReference | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "internal/Microsoft::WRL::Details::RemoveReference"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "RemoveReference - структура"
+title: "Структура RemoveReference | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: internal/Microsoft::WRL::Details::RemoveReference
+dev_langs: C++
+helpviewer_keywords: RemoveReference structure
 ms.assetid: 43ff91bb-815a-440e-b9fb-7dcbb7c863af
-caps.latest.revision: 5
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 5
+caps.latest.revision: "5"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: c4f205d01047a1836eb1e5a056f335a62005a9fa
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 12/21/2017
 ---
-# Структура RemoveReference
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Предназначено для поддержки инфраструктуры WRL, а не для непосредственного использования в коде.  
+# <a name="removereference-structure"></a>RemoveReference - структура
+Поддерживает инфраструктуру WRL и не предназначен для использования непосредственно из программного кода.  
   
-## Синтаксис  
+## <a name="syntax"></a>Синтаксис  
   
 ```  
 template<  
@@ -43,28 +44,28 @@ template<
 struct RemoveReference<T&&>;  
 ```  
   
-#### Параметры  
+#### <a name="parameters"></a>Параметры  
  `T`  
  Класс.  
   
-## Заметки  
- Удаляет признак ссылки или ссылки rvalue из указанного параметра шаблона класса.  
+## <a name="remarks"></a>Примечания  
+ Удаляет ссылку или ссылку rvalue признака из параметра шаблона указанного класса.  
   
-## Члены  
+## <a name="members"></a>Участники  
   
-### Общедоступные Typedefs  
+### <a name="public-typedefs"></a>Общедоступные определения типов  
   
-|Name|Описание|  
-|----------|--------------|  
-|`Type`|Синоним для параметра шаблона класса.|  
+|Имя|Описание:|  
+|----------|-----------------|  
+|`Type`|Синоним параметра шаблона класса.|  
   
-## Иерархия наследования  
+## <a name="inheritance-hierarchy"></a>Иерархия наследования  
  `RemoveReference`  
   
-## Требования  
+## <a name="requirements"></a>Требования  
  **Заголовок:** internal.h  
   
- **Пространство имен:** Microsoft::WRL::Details  
+ **Пространство имен:** Microsoft::wrl:: Details  
   
-## См. также  
+## <a name="see-also"></a>См. также  
  [Пространство имен Microsoft::WRL::Details](../windows/microsoft-wrl-details-namespace.md)

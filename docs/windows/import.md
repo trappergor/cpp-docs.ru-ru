@@ -1,32 +1,33 @@
 ---
-title: "import | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-f1_keywords: 
-  - "vc-attr.import"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "import attribute"
+title: "Импорт | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+f1_keywords: vc-attr.import
+dev_langs: C++
+helpviewer_keywords: import attribute
 ms.assetid: ebf07cae-39fb-4047-8b57-54af0a9a83de
-caps.latest.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 9
+caps.latest.revision: "9"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: 011cabb37f388d4be6a9a69f685a7c711f0209a6
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 12/21/2017
 ---
-# import
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Определяет другие idl, .odl или файл заголовка, содержащий определения необходимости ссылаться из основного языка IDL.  
+# <a name="import"></a>импорт
+Указывает другой файл IDL, .odl или заголовок, содержащий определения, которые нужно сделать ссылку из вашего основного языка IDL.  
   
-## Синтаксис  
+## <a name="syntax"></a>Синтаксис  
   
 ```  
   
@@ -35,17 +36,17 @@ caps.handback.revision: 9
 ) ];  
 ```  
   
-#### Параметры  
+#### <a name="parameters"></a>Параметры  
  `idl_file`  
- Имя idl\-файла, импортированные в библиотеку типов текущего проекта.  
+ Имя IDL-файла, который необходимо импортировать в библиотеку типов текущего проекта.  
   
-## Заметки  
- **импорт** Приводит к тому, что атрибут C\+\+  `#import` оператор, который необходимо поместить в разделе  `import "docobj.idl"` выписка в созданном файле idl.  **импорт** атрибут имеет ту же функциональность, что и  [импорт](http://msdn.microsoft.com/library/windows/desktop/aa367047) атрибут MIDL.  
+## <a name="remarks"></a>Примечания  
+ **Импорта** языка C++ вызывает `#import` инструкцию, чтобы поместить под `import "docobj.idl"` инструкции в сгенерированный IDL-файл. **Импорта** атрибут имеет ту же функциональность, что [импорта](http://msdn.microsoft.com/library/windows/desktop/aa367047) языка MIDL.  
   
- **импорт** атрибут только устанавливает указанный файл в idl\-файл, который будет создан проектом;   **импорт** атрибут не позволяет вызывать конструкции в указанном файле от исходного кода в проекте.  Вызов конструирования в указанном файле от исходного кода в проекте, любая использование [\#import](../Topic/%23import%20Directive%20\(C++\).md) и  `embedded_idl` атрибут или можно включать h\-файл,  `idl_file`h\-файл, если существует.  
+ **Импорта** атрибут только помещает указанный файл в IDL-файла, создаваемого проектом; **импорта** атрибут позволяет вызывать конструкции в указанный файл из исходного кода в проекте.  Чтобы вызвать конструкции в указанный файл из исходного кода в проекте, либо использовать [#import](../preprocessor/hash-import-directive-cpp.md) и `embedded_idl` атрибута или включить h-файл для `idl_file`, если существует h-файл.  
   
-## Пример  
- Следующий код:  
+## <a name="example"></a>Пример  
+ В приведенном ниже коде  
   
 ```  
 // cpp_attr_ref_import.cpp  
@@ -54,7 +55,7 @@ caps.handback.revision: 9
 [import(import.idl)];  
 ```  
   
- создает следующий код в созданном файле idl.  
+ Создает следующий код в сгенерированный IDL-файл:  
   
 ```  
 import "docobj.idl";  
@@ -67,24 +68,23 @@ library MyLib {
 ...  
 ```  
   
-## Требования  
+## <a name="requirements"></a>Требования  
   
-### Контекст атрибута  
+### <a name="attribute-context"></a>Контекст атрибута  
   
 |||  
 |-|-|  
-|**Применение**|Любой|  
-|**Repeatable**|Нет|  
-|**Обязательные атрибуты**|None|  
-|**Недопустимые атрибуты**|None|  
+|**Применение**|В любом месте|  
+|**Повторяемый**|Нет|  
+|**Обязательные атрибуты**|Нет|  
+|**Недопустимые атрибуты**|Нет|  
   
- Дополнительные сведения см. в разделе [Контексты атрибута](../windows/attribute-contexts.md).  
+ Дополнительные сведения см. в разделе [Контексты атрибутов](../windows/attribute-contexts.md).  
   
-## См. также  
- [IDL Attributes](../windows/idl-attributes.md)   
- [Stand\-Alone Attributes](../Topic/Stand-Alone%20Attributes.md)   
+## <a name="see-also"></a>См. также  
+ [Атрибуты IDL](../windows/idl-attributes.md)   
+ [Изолированные атрибуты](../windows/stand-alone-attributes.md)   
  [importidl](../windows/importidl.md)   
  [importlib](../windows/importlib.md)   
- [include](../windows/include-cpp.md)   
+ [включить](../windows/include-cpp.md)   
  [includelib](../windows/includelib-cpp.md)   
- [Attributes Samples](http://msdn.microsoft.com/ru-ru/558ebdb2-082f-44dc-b442-d8d33bf7bdb8)

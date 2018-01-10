@@ -1,36 +1,37 @@
 ---
-title: "__inwordstring | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "__inwordstring"
-  - "__inwordstring_cpp"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Встроенная функция __inwordstring"
-  - "Инструкция rep insw"
+title: "__inwordstring | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- __inwordstring
+- __inwordstring_cpp
+dev_langs: C++
+helpviewer_keywords:
+- __inwordstring intrinsic
+- rep insw instruction
 ms.assetid: 6de37939-017a-4740-9e3d-7de78a30daba
-caps.latest.revision: 11
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 11
+caps.latest.revision: "11"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: e8e788020ddb88f2bd95674b723a44686ec8bd05
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 12/21/2017
 ---
-# __inwordstring
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-**Только для систем Microsoft**  
+# <a name="inwordstring"></a>__inwordstring
+**Блок, относящийся только к системам Microsoft**  
   
- Считывает данные из указанного порта, используя инструкцию `rep insw`.  
+ Считывает данные из указанного порта с помощью `rep insw` инструкции.  
   
-## Синтаксис  
+## <a name="syntax"></a>Синтаксис  
   
 ```  
 void __inwordstring(  
@@ -40,28 +41,28 @@ void __inwordstring(
 );  
 ```  
   
-#### Параметры  
- \[входящий\] `Port`  
+#### <a name="parameters"></a>Параметры  
+ [in] `Port`  
  Порт, из которого выполняется чтение.  
   
- \[исходящий\] `Buffer`  
- Данные, считанные из порта записываются здесь.  
+ [выходной] `Buffer`  
+ Данные, считанные из порта записывается здесь.  
   
- \[входящий\] `Count`  
- Количество слов данных, которые необходимо считать.  
+ [in] `Count`  
+ Число слов в данных для чтения.  
   
-## Требования  
+## <a name="requirements"></a>Требования  
   
-|Встроенный объект|Архитектура|  
-|-----------------------|-----------------|  
-|`__inwordstring`|x86, [!INCLUDE[vcprx64](../Token/vcprx64_md.md)]|  
+|Встроенная функция|Архитектура|  
+|---------------|------------------|  
+|`__inwordstring`|x86, [!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|  
   
- **Файл заголовка** \<intrin.h\>  
+ **Файл заголовка** \<intrin.h >  
   
-## Заметки  
- Эта процедура доступна только в качестве внутреннего элемента.  
+## <a name="remarks"></a>Примечания  
+ Эта процедура доступна только как встроенная функция.  
   
-## ЭЛЕМЕНТ, относящийся Майкрософт  
+**Завершение блока, относящегося только к системам Майкрософт**  
   
-## См. также  
- [Встроенные объекты компилятора](../intrinsics/compiler-intrinsics.md)
+## <a name="see-also"></a>См. также  
+ [Встроенные инструкции компилятора](../intrinsics/compiler-intrinsics.md)

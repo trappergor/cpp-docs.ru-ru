@@ -1,39 +1,38 @@
 ---
-title: "YMMWORD | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "YMMWORD"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "YMMWORD directive"
+title: "YMMWORD | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: YMMWORD
+dev_langs: C++
+helpviewer_keywords: YMMWORD directive
 ms.assetid: 955a7d23-6150-4056-befc-7f72e8258ecb
-caps.latest.revision: 4
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 4
+caps.latest.revision: "4"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 877bf138fa413e7e162c1f46c2d4010b2cba4613
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 12/21/2017
 ---
-# YMMWORD
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Используется для операндов мультимедиа с 256 бита Intel дополнительные инструкции расширений вектора \(AVX\).  
+# <a name="ymmword"></a>YMMWORD
+Используется 256-разрядный мультимедиа операндов с инструкциями расширения Advanced Vector Intel (AVX).  
   
-## Синтаксис  
+## <a name="syntax"></a>Синтаксис  
   
 ```  
 YMMWORD  
 ```  
   
-## Заметки  
- `YMMWORD` должно представлять один и тот же тип, что `__m256` для встроенных функций AVX.  
+## <a name="remarks"></a>Примечания  
+ `YMMWORD`представляет тот же тип, что `__m256` для AVX встроенные функции.  
   
-## См. также  
- [Directives Reference](../../assembler/masm/directives-reference.md)
+## <a name="see-also"></a>См. также  
+ [Справочник по директивам](../../assembler/masm/directives-reference.md)

@@ -19,11 +19,12 @@ caps.latest.revision: "6"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: eeda445cc1177ce26cf0c717a67619a33d760422
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 7ba1677b5dd0aa51481a2f7fc850f8cceca1669e
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="operator-parity"></a>Оператор PARITY?
 Состояние флага четности. Используется только в пределах [. Если](../../assembler/masm/dot-if.md), [. ХОТЯ](../../assembler/masm/dot-while.md), или [. ПОВТОРИТЕ](../../assembler/masm/dot-repeat.md) блокирует и вычисляется во время выполнения, а не во время сборки.  

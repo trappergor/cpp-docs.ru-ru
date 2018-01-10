@@ -1,171 +1,174 @@
 ---
-title: "Пошаговое руководство. Создание сети обработки изображений | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "создание сетей преобразования изображений [среда выполнения с параллелизмом]"
-  - "сети преобразования изображений, создание [среда выполнения с параллелизмом]"
+title: "Пошаговое руководство: Создание сети обработки изображений | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- image-processing networks, creating [Concurrency Runtime]
+- creating image-processing networks [Concurrency Runtime]
 ms.assetid: 78ccadc9-5ce2-46cc-bd62-ce0f99d356b8
-caps.latest.revision: 15
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 14
+caps.latest.revision: "15"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 7b709179cb5bc0fefa3f342374c792656fa1e934
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 12/21/2017
 ---
-# Пошаговое руководство. Создание сети обработки изображений
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="walkthrough-creating-an-image-processing-network"></a>Пошаговое руководство. Создание сети обработки изображений
 В этом документе показано, как создавать сеть асинхронных блоков сообщений, выполняющих обработку изображений.  
   
- В зависимости от свойств изображения сеть определяет, какие операции с ним необходимо выполнить.  В этом примере для перемещения изображений по сети используется модель *потока данных*.  В модели потока данных независимые компоненты программы взаимодействуют друг с другом посредством отправки сообщений.  Когда компонент получает сообщение, он может выполнить какое\-либо действие и передать результат этого действия другому компоненту.  Сравните эту модель с моделью *потока управления*, в которой приложение управляет действиями программы с помощью структур управления, например условных операторов, циклов и так далее.  
+ Сети определяет, какие операции для выполнения в зависимости от свойств изображения. В этом примере используется *потока данных* модели для перемещения изображений по сети. В модели потока данных независимые компоненты программы взаимодействуют друг с другом, отправляя сообщения. Когда компонент получает сообщение, он выполнения некоторых операций и затем передать результат этого действия другому компоненту. Сравните это с *поток управления* модели, в котором приложение использует структур управления, например, условные операторы, циклы и т. д., для управления порядком операций в программе.  
   
- Сеть, основанная на потоке данных, создает *конвейер* задач.  Каждый этап конвейера параллельно выполняет часть общей задачи.  Это можно сравнить с линией сборки автомобилей.  При продвижении автомобиля по линии сборки одна станция собирает раму, другая — устанавливает двигатель и так далее.  Так как при этом можно собирать одновременно много автомобилей, линия сборки обеспечивает большую производительность, чем полная сборка автомобилей по одному.  
+ Создает в сети, основанной на потоке данных *конвейера* задач. Каждый этап конвейера параллельно выполняет часть общей задачи. Можно сравнить это с линией сборки автомобилей. При продвижении автомобиля по сборочной линии, одна станция собирает раму, другая — устанавливает двигатель и так далее. Много автомобилей, можно собирать одновременно, линия сборки обеспечивает большую производительность, чем полная сборка автомобилей одна за другой.  
   
-## Обязательные компоненты  
- Прежде чем начать выполнение этого пошагового руководства, необходимо ознакомиться со следующими документами.  
+## <a name="prerequisites"></a>Предварительные требования  
+ Перед выполнением этого пошагового руководства, приведены в следующих источниках:  
   
 -   [Асинхронные блоки сообщений](../../parallel/concrt/asynchronous-message-blocks.md)  
   
 -   [Практическое руководство. Использование фильтра блоков сообщений](../../parallel/concrt/how-to-use-a-message-block-filter.md)  
   
--   [Пошаговое руководство. Создание агента потоков данных](../Topic/Walkthrough:%20Creating%20a%20Dataflow%20Agent.md)  
+-   [Пошаговое руководство. Создание агента потоков данных](../../parallel/concrt/walkthrough-creating-a-dataflow-agent.md)  
   
- Также перед освоением этого пошагового руководства рекомендуется разобраться в основах [!INCLUDE[ndptecgdiplus](../../parallel/concrt/includes/ndptecgdiplus_md.md)].  Дополнительные сведения о [!INCLUDE[ndptecgdiplus](../../parallel/concrt/includes/ndptecgdiplus_md.md)] см. в разделе [GDI\+](_gdiplus_GDI_start_cpp).  
+ Рекомендуется также, что вы понимаете основные принципы [!INCLUDE[ndptecgdiplus](../../parallel/concrt/includes/ndptecgdiplus_md.md)] перед выполнением этого пошагового руководства.  
   
-##  <a name="top"></a> Подразделы  
- Это пошаговое руководство содержит следующие подразделы.  
+##  <a name="top"></a> Разделы  
+ Это пошаговое руководство содержит следующие разделы:  
   
 -   [Определение функции обработки изображений](#functionality)  
   
 -   [Создание сети обработки изображений](#network)  
   
--   [Полный код примера](#complete)  
+-   [Полный пример](#complete)  
   
-##  <a name="functionality"></a> Определение функции обработки изображений  
- В этом разделе демонстрируются необходимые функции, которые сеть обработки изображений использует для работы с изображениями, считываемыми с диска.  
+##  <a name="functionality"></a>Определение функции обработки изображений  
+ В этом разделе представлены функции поддержки, которые использует сеть обработки изображений для работы с образами, которые считываются с диска.  
   
- Следующие функции, `GetRGB` и `MakeColor`, извлекают и объединяют, соответственно, отдельные компоненты данного цвета.  
+ Следующие функции `GetRGB` и `MakeColor`, извлекают и объединяют отдельные компоненты данного цвета соответственно.  
   
- [!code-cpp[concrt-image-processing-filter#2](../../parallel/concrt/codesnippet/CPP/walkthrough-creating-an-image-processing-network_1.cpp)]  
+ [!code-cpp[concrt-image-processing-filter#2](../../parallel/concrt/codesnippet/cpp/walkthrough-creating-an-image-processing-network_1.cpp)]  
   
- Следующая функция, `ProcessImage`, вызывает данный объект [std::function](../../standard-library/function-class.md), чтобы преобразовать значение цвета каждого пикселя в объект [!INCLUDE[ndptecgdiplus](../../parallel/concrt/includes/ndptecgdiplus_md.md)] [Bitmap](https://msdn.microsoft.com/en-us/library/ms534420.aspx).  Функция `ProcessImage` использует алгоритм [concurrency::parallel\_for](../Topic/parallel_for%20Function.md), чтобы параллельно обрабатывать все ряды растрового изображения.  
+
+ Следующая функция `ProcessImage`, вызовы заданной [std::function](../../standard-library/function-class.md) объекта, чтобы преобразовать значение цвета каждого пикселя в [!INCLUDE[ndptecgdiplus](../../parallel/concrt/includes/ndptecgdiplus_md.md)] [растрового изображения](https://msdn.microsoft.com/library/ms534420.aspx) объекта. `ProcessImage` Функция использует [concurrency::parallel_for](reference/concurrency-namespace-functions.md#parallel_for) алгоритм для обработки каждой строки точечного рисунка в параллельном режиме.  
+
   
- [!code-cpp[concrt-image-processing-filter#3](../../parallel/concrt/codesnippet/CPP/walkthrough-creating-an-image-processing-network_2.cpp)]  
+ [!code-cpp[concrt-image-processing-filter#3](../../parallel/concrt/codesnippet/cpp/walkthrough-creating-an-image-processing-network_2.cpp)]  
   
- Следующие функции, `Grayscale`, `Sepiatone`, `ColorMask` и `Darken`, вызывают функцию `ProcessImage`, чтобы преобразовать значение цвета каждого пикселя в объект `Bitmap`.  Все перечисленные функции используют лямбда\-выражения, чтобы определить преобразование цвета одного пикселя.  
+ Следующие функции `Grayscale`, `Sepiatone`, `ColorMask`, и `Darken`, вызовите `ProcessImage` функция, преобразующая значение цвета каждого пикселя в `Bitmap` объекта. Для определения преобразование цвета на один пиксель, каждая из этих функций используются лямбда-выражения.  
   
- [!code-cpp[concrt-image-processing-filter#4](../../parallel/concrt/codesnippet/CPP/walkthrough-creating-an-image-processing-network_3.cpp)]  
+ [!code-cpp[concrt-image-processing-filter#4](../../parallel/concrt/codesnippet/cpp/walkthrough-creating-an-image-processing-network_3.cpp)]  
   
- Следующая функция, `GetColorDominance`, также вызывает функцию `ProcessImage`.  При этом она не изменяет значение каждого цвета, а использует объекты [concurrency::combinable](../../parallel/concrt/reference/combinable-class.md), чтобы вычислить, компонент какого цвета преобладает в изображении: красного, зеленого или синего.  
+ Следующая функция `GetColorDominance`, также вызывает `ProcessImage` функции. Тем не менее, вместо изменения значения каждого цвета, эта функция использует [concurrency::combinable](../../parallel/concrt/reference/combinable-class.md) объектов для вычисления ли красного, зеленого и синего компонентов компонент какого цвета преобладает изображения.  
   
- [!code-cpp[concrt-image-processing-filter#5](../../parallel/concrt/codesnippet/CPP/walkthrough-creating-an-image-processing-network_4.cpp)]  
+ [!code-cpp[concrt-image-processing-filter#5](../../parallel/concrt/codesnippet/cpp/walkthrough-creating-an-image-processing-network_4.cpp)]  
   
- Следующая функция, `GetEncoderClsid`, получает идентификатор класса для данного типа MIME кодировщика.  Приложение использует эту функцию, чтобы получить кодировщик для растрового изображения.  
+ Следующая функция `GetEncoderClsid`, Получает идентификатор класса для данного типа MIME кодировщика. Эта функция позволяет приложению получить кодировщик для растрового изображения.  
   
- [!code-cpp[concrt-image-processing-filter#6](../../parallel/concrt/codesnippet/CPP/walkthrough-creating-an-image-processing-network_5.cpp)]  
+ [!code-cpp[concrt-image-processing-filter#6](../../parallel/concrt/codesnippet/cpp/walkthrough-creating-an-image-processing-network_5.cpp)]  
   
- \[[Наверх](#top)\]  
+ [[В начало](#top)]  
   
-##  <a name="network"></a> Создание сети обработки изображений  
- В этом разделе описано, как создавать сеть асинхронных блоков сообщений, выполняющих обработку каждого изображения [!INCLUDE[TLA#tla_jpeg](../Token/TLA%23tla_jpeg_md.md)] \(JPG\) в данном каталоге.  Сеть выполняет следующие операции по обработке изображений.  
+##  <a name="network"></a>Создание сети обработки изображений  
+ Этот раздел описывает, как создавать сеть асинхронных блоков сообщений, выполняющих обработку изображений в каждом [!INCLUDE[TLA#tla_jpeg](../../parallel/concrt/includes/tlasharptla_jpeg_md.md)] изображений (расширение JPG) в данном каталоге. Сеть выполняет следующие операции обработки изображений.  
   
-1.  Все изображения, созданные пользователем Tom, преобразуются в оттенки серого.  
+1.  Все изображения, созданные пользователем Tom преобразуйте в оттенках серого.  
   
-2.  Во всех изображениях, в которых преобладает красный цвет, удаляются зеленый и синий компоненты, затем изображение затемняется.  
+2.  Все изображения, красный основной цвет удалите зеленый и синий компоненты и затем затемнить его.  
   
-3.  Ко всем остальным изображениям применяется тонирование сепией.  
+3.  Для любого другого изображения применяется тонирование сепией.  
   
- Сеть применяет только первую операцию обработки изображения, соответствующую одному из перечисленных условий.  Например, если изображение создано пользователем Tom и в нем преобладает красный цвет, оно будет только преобразовано в оттенки серого.  
+ Сеть применяет только первой операции обработки изображений, соответствующий одному из этих условий. Например если изображение создано пользователем Tom и красный основного цвета, изображение только преобразуется в оттенках серого.  
   
- После выполнения операции обработки изображения сеть сохраняет его на диск в виде файла растрового изображения \(BMP\).  
+ После сети каждой операции обработки изображений, он сохраняет изображение на диске как файл растрового изображения (.bmp).  
   
- Ниже показано, как создать функцию, реализующую сеть обработки изображений и применяющую эту сеть ко всем изображениям [!INCLUDE[TLA#tla_jpeg](../Token/TLA%23tla_jpeg_md.md)] в данном каталоге.  
+ Ниже показано, как создать функцию, которая реализует сеть обработки изображений и применяющую эту сеть для каждого [!INCLUDE[TLA#tla_jpeg](../../parallel/concrt/includes/tlasharptla_jpeg_md.md)] изображение в заданном каталоге.  
   
-#### Создание сети обработки изображений  
+#### <a name="to-create-the-image-processing-network"></a>Создание сети обработки изображений  
   
-1.  Создайте функцию `ProcessImages`, которая принимает имя каталога на диске.  
+1.  Создайте функцию, `ProcessImages`, который принимает имя каталога на диске.  
   
-     [!code-cpp[concrt-image-processing-filter#7](../../parallel/concrt/codesnippet/CPP/walkthrough-creating-an-image-processing-network_6.cpp)]  
+     [!code-cpp[concrt-image-processing-filter#7](../../parallel/concrt/codesnippet/cpp/walkthrough-creating-an-image-processing-network_6.cpp)]  
   
-2.  В функции `ProcessImages` создайте переменную `countdown_event`.  Класс `countdown_event` показан далее в этом пошаговом руководстве.  
+2.  В `ProcessImages` функции, создайте `countdown_event` переменной. `countdown_event` Показано далее в этом пошаговом руководстве.  
   
-     [!code-cpp[concrt-image-processing-filter#8](../../parallel/concrt/codesnippet/CPP/walkthrough-creating-an-image-processing-network_7.cpp)]  
+     [!code-cpp[concrt-image-processing-filter#8](../../parallel/concrt/codesnippet/cpp/walkthrough-creating-an-image-processing-network_7.cpp)]  
   
-3.  Создайте объект [std::map](../Topic/map%20Class.md), связывающий объект `Bitmap` с исходным именем файла.  
+3.  Создание [std::map](../../standard-library/map-class.md) объект, который связывает `Bitmap` объект с исходным именем файла.  
   
-     [!code-cpp[concrt-image-processing-filter#9](../../parallel/concrt/codesnippet/CPP/walkthrough-creating-an-image-processing-network_8.cpp)]  
+     [!code-cpp[concrt-image-processing-filter#9](../../parallel/concrt/codesnippet/cpp/walkthrough-creating-an-image-processing-network_8.cpp)]  
   
-4.  Добавьте следующий код, чтобы определить члены сети обработки изображений.  
+4.  Добавьте следующий код для определения элементов сети обработки изображений.  
   
-     [!code-cpp[concrt-image-processing-filter#10](../../parallel/concrt/codesnippet/CPP/walkthrough-creating-an-image-processing-network_9.cpp)]  
+     [!code-cpp[concrt-image-processing-filter#10](../../parallel/concrt/codesnippet/cpp/walkthrough-creating-an-image-processing-network_9.cpp)]  
   
-5.  Добавьте следующий код, чтобы соединить сеть.  
+5.  Добавьте следующий код для подключения к сети.  
   
-     [!code-cpp[concrt-image-processing-filter#11](../../parallel/concrt/codesnippet/CPP/walkthrough-creating-an-image-processing-network_10.cpp)]  
+     [!code-cpp[concrt-image-processing-filter#11](../../parallel/concrt/codesnippet/cpp/walkthrough-creating-an-image-processing-network_10.cpp)]  
   
-6.  Добавьте следующий код, чтобы отправить в начало сети полный путь каждого файла [!INCLUDE[TLA#tla_jpeg](../Token/TLA%23tla_jpeg_md.md)] в каталоге.  
+6.  Добавьте следующий код для отправки в начало сети полный путь к каждому [!INCLUDE[TLA#tla_jpeg](../../parallel/concrt/includes/tlasharptla_jpeg_md.md)] файл в каталоге.  
   
-     [!code-cpp[concrt-image-processing-filter#12](../../parallel/concrt/codesnippet/CPP/walkthrough-creating-an-image-processing-network_11.cpp)]  
+     [!code-cpp[concrt-image-processing-filter#12](../../parallel/concrt/codesnippet/cpp/walkthrough-creating-an-image-processing-network_11.cpp)]  
   
-7.  Подождите, пока переменная `countdown_event` не достигнет нуля.  
+7.  Дождитесь `countdown_event` переменной достигнет нуля.  
   
-     [!code-cpp[concrt-image-processing-filter#13](../../parallel/concrt/codesnippet/CPP/walkthrough-creating-an-image-processing-network_12.cpp)]  
+     [!code-cpp[concrt-image-processing-filter#13](../../parallel/concrt/codesnippet/cpp/walkthrough-creating-an-image-processing-network_12.cpp)]  
   
- В следующей таблице описаны члены сети.  
+ Следующая таблица описывает члены сети.  
   
-|Член|Описание|  
-|----------|--------------|  
-|`load_bitmap`|Объект [concurrency::transformer](../../parallel/concrt/reference/transformer-class.md), загружающий объект `Bitmap` с диска и добавляющий запись в объект `map`, связывающую изображение с исходным именем файла.|  
-|`loaded_bitmaps`|Объект [concurrency::unbounded\_buffer](../Topic/unbounded_buffer%20Class.md), отправляющий загруженные изображения фильтрам обработки изображений.|  
-|`grayscale`|Объект `transformer`, преобразующий в оттенки серого изображения, созданные пользователем Tom.  Он использует метаданные изображения, чтобы определить создавшего его пользователя.|  
-|`colormask`|Объект `transformer`, удаляющий компоненты зеленого и синего цветов из изображений, в которых преобладает красный цвет.|  
-|`darken`|Объект `transformer`, затемняющий изображения, в которых преобладает красный цвет.|  
-|`sepiatone`|Объект `transformer`, применяющий тонирование сепией к изображениям, не созданным пользователем Tom и в которых не преобладает красный цвет.|  
-|`save_bitmap`|Объект `transformer`, сохраняющий обработанный объект `image` на диск в качестве растрового изображения.  `save_bitmap` получает исходное имя файла из объекта `map` и изменяет расширение имени файла на BMP.|  
-|`delete_bitmap`|Объект `transformer`, освобождающий память для изображений.|  
-|`decrement`|Объект [concurrency::call](../../parallel/concrt/reference/call-class.md), действующий как конечный узел сети.  Он уменьшает объект `countdown_event`, чтобы сообщить главному приложению о том, что изображение обработано.|  
+|Член|Описание:|  
+|------------|-----------------|  
+|`load_bitmap`|Объект [concurrency::transformer](../../parallel/concrt/reference/transformer-class.md) , загружающий `Bitmap` с диска и добавляющий запись `map` объекта, связывающую изображение с исходным именем файла.|  
+|`loaded_bitmaps`|Объект [concurrency::unbounded_buffer](reference/unbounded-buffer-class.md) объект, отправляющий загруженные изображения фильтрам обработки изображений.|  
+|`grayscale`|Объект `transformer` объект, который преобразует изображения, созданные пользователем Tom оттенки серого. Он использует метаданные образа, чтобы определить ее автора.|  
+|`colormask`|Объект `transformer` объект, который удаляет компоненты зеленого и синего цветов из изображений, в которых красный основной цвет.|  
+|`darken`|Объект `transformer` объект, который затемняет которых красный основной цвет изображения.|  
+|`sepiatone`|Объект `transformer` объект, применяющий тонирование сепией к изображениям, не созданным пользователем Tom и не преобладает красный цвет.|  
+|`save_bitmap`|Объект `transformer` объекта, сохраняющий обработанный `image` на диск как растровое изображение. `save_bitmap`Получает исходное имя файла из `map` объекта и изменяет расширение имени файла на BMP.|  
+|`delete_bitmap`|Объект `transformer` объект, который освобождает память для изображений.|  
+|`decrement`|Объект [concurrency::call](../../parallel/concrt/reference/call-class.md) объект, действующий как конечный узел сети. Он уменьшает `countdown_event` чтобы сообщить главному приложению, изображение было обработано.|  
   
- Буфер сообщений `loaded_bitmaps` важен, так как будучи объектом `unbounded_buffer`, он предлагает объекты `Bitmap` нескольким получателям.  Когда целевой блок принимает объект `Bitmap`, объект `unbounded_buffer` не предлагает этот объект `Bitmap` другим целевым блокам.  Поэтому важен порядок связывания объектов с объектом `unbounded_buffer`.  Блоки сообщений `grayscale`, `colormask` и `sepiatone` используют фильтры, чтобы принимать только определенные объекты `Bitmap`.  Буфер сообщений `decrement` является важным целевым объектом буфера сообщений `loaded_bitmaps`, так как он принимает все объекты `Bitmap`, отклоненные другими буферами сообщений.  Объект `unbounded_buffer` необходим для распространения сообщений в определенном порядке.  Поэтому объект `unbounded_buffer` блокируется до тех пор, пока к нему не будет привязан новый целевой блок, и принимает сообщение, не принятое ни одним текущим целевым блоком.  
+ `loaded_bitmaps` Буфер сообщений важен, поскольку как `unbounded_buffer` объекта, он обеспечивает `Bitmap` объектов между несколькими получателями. Когда целевой блок принимает `Bitmap` объекта, `unbounded_buffer` объекта не предлагает этот `Bitmap` объектов для других целевых объектов. Таким образом, порядок связывания объектов `unbounded_buffer` важен. `grayscale`, `colormask`, И `sepiatone` блоки использовать фильтр для приема сообщений только для некоторых `Bitmap` объектов. `decrement` Буфер сообщений является важным целевым объектом `loaded_bitmaps` буфера сообщений, так как он принимает все `Bitmap` объекты, которые будут отклонены буферов сообщений. `unbounded_buffer` Объект обязательно должен передавать сообщения в порядке. Таким образом `unbounded_buffer` блокируется, пока новый целевой блок, связанного с ним и принимает сообщение, если нет текущей целевой блок не примет это сообщение.  
   
- Если в приложении необходимо, чтобы сообщение обрабатывалось несколькими блоками сообщений, а не одним блоком, первым принявшим сообщение, можно использовать другой тип блока сообщений, например `overwrite_buffer`.  Класс `overwrite_buffer` может содержать только одно сообщение, но он распространяет его всем целевым объектам.  
+ Если приложение требует, что сообщение обрабатывалось несколькими блоками сообщений, а не только одним блоком, сначала принимает сообщение, можно использовать другой тип блока сообщений, например `overwrite_buffer`. `overwrite_buffer` Класс содержит одно сообщение за раз, но он передает сообщение для каждого из его целевых объектов.  
   
- На следующем рисунке показана сеть обработки изображений.  
+ На следующей иллюстрации сеть обработки изображений.  
   
- ![Сеть обработки изображений](../Image/ConcRT_ImageProc.png "ConcRT\_ImageProc")  
+ ![Сеть обработки изображений](../../parallel/concrt/media/concrt_imageproc.png "concrt_imageproc")  
   
- Объект `countdown_event` в этом примере позволяет сети обработки изображений сообщать главному приложению о том, что все изображения обработаны.  Класс `countdown_event` использует объект [concurrency::event](../Topic/event%20Class.md), чтобы сообщить, что значение счетчика достигло нуля.  Главное приложение увеличивает счетчик при каждой отправке имени файла в сеть.  Конечный узел сети уменьшает счетчик после обработки каждого изображения.  Когда главное приложение завершает проход заданного каталога, оно ожидает, пока объект `countdown_event` не сообщит, что его счетчик достиг нуля.  
+ `countdown_event` Объект в этом примере включает сеть обработки изображений для информирования основного приложения после обработки всех образов. `countdown_event` Класс использует [concurrency::event](../../parallel/concrt/reference/event-class.md) объекта, чтобы сообщить, что значение счетчика достигло нуля. Основное приложение увеличивает счетчик каждый раз, чтобы он передает имя файла в сети. Конечный узел сети уменьшает счетчик после обработки каждого изображения. Когда основное приложение проходит через указанный каталог, он ожидает `countdown_event` объект указывают, что его счетчик достиг нуля.  
   
- В следующем примере показан класс `countdown_event`:  
+ В следующем примере показан `countdown_event` класса:  
   
- [!code-cpp[concrt-image-processing-filter#14](../../parallel/concrt/codesnippet/CPP/walkthrough-creating-an-image-processing-network_13.cpp)]  
+ [!code-cpp[concrt-image-processing-filter#14](../../parallel/concrt/codesnippet/cpp/walkthrough-creating-an-image-processing-network_13.cpp)]  
   
- \[[Наверх](#top)\]  
+ [[В начало](#top)]  
   
-##  <a name="complete"></a> Полный код примера  
- Ниже приведен полный пример кода.  Функция `wmain` управляет библиотекой [!INCLUDE[ndptecgdiplus](../../parallel/concrt/includes/ndptecgdiplus_md.md)] и вызывает функцию `ProcessImages`, чтобы обработать файлы [!INCLUDE[TLA#tla_jpeg](../Token/TLA%23tla_jpeg_md.md)] в каталоге `Sample Pictures`.  
+##  <a name="complete"></a>Полный пример  
+ Ниже приведен полный пример кода. `wmain` Управляет функция [!INCLUDE[ndptecgdiplus](../../parallel/concrt/includes/ndptecgdiplus_md.md)] библиотеку и вызывает `ProcessImages` функции к процессу [!INCLUDE[TLA#tla_jpeg](../../parallel/concrt/includes/tlasharptla_jpeg_md.md)] файлы в `Sample Pictures` каталога.  
   
- [!code-cpp[concrt-image-processing-filter#15](../../parallel/concrt/codesnippet/CPP/walkthrough-creating-an-image-processing-network_14.cpp)]  
+ [!code-cpp[concrt-image-processing-filter#15](../../parallel/concrt/codesnippet/cpp/walkthrough-creating-an-image-processing-network_14.cpp)]  
   
- На следующем рисунке показан пример результатов.  Исходные изображения расположены над соответствующими измененными изображениями.  
+ Ниже показан пример выходных данных. Исходные изображения расположены над соответствующими измененными изображениями.  
   
- ![Пример выходных данных для данного примера](../../parallel/concrt/media/concrt_imageout.png "ConcRT\_ImageOut")  
+ ![Пример выходных данных для примера](../../parallel/concrt/media/concrt_imageout.png "concrt_imageout")  
   
- Изображение `Lighthouse` создано пользователем Tom Alphin, поэтому оно преобразовано в оттенки серого.  В изображениях `Chrysanthemum`, `Desert`, `Koala` и `Tulips` преобладает красный цвет, поэтому из них удалены компоненты синего и зеленого цветов, а затем они затемнены.  Изображения `Hydrangeas`, `Jellyfish` и `Penguins` соответствуют критериям по умолчанию, поэтому тонированы сепией.  
+ `Lighthouse`созданные пользователем Tom Alphin и поэтому преобразуется в оттенках серого. `Chrysanthemum`, `Desert`, `Koala`, и `Tulips` красный основной цвет и таким образом удалить компоненты сине-зеленый цвет и они затемнены. `Hydrangeas`, `Jellyfish`, и `Penguins` соответствующие критериям по умолчанию и, следовательно, toned цвета.  
   
- \[[Наверх](#top)\]  
+ [[В начало](#top)]  
   
-### Компиляция кода  
- Скопируйте код примера и вставьте его в проект Visual Studio или в файл с именем `image-processing-network.cpp`, затем выполните в окне командной строки Visual Studio следующую команду.  
+### <a name="compiling-the-code"></a>Компиляция кода  
+ Скопируйте код примера и вставьте его в проект Visual Studio или вставить его в файл с именем `image-processing-network.cpp` , а затем запустите следующую команду в окне командной строки Visual Studio.  
   
- **cl.exe \/DUNICODE \/EHsc image\-processing\-network.cpp \/link gdiplus.lib**  
+ **CL.exe /DUNICODE/EHsc/Link image-processing-network.cpp gdiplus.lib**  
   
-## См. также  
- [Пошаговые руководства по среде выполнения с параллелизмом](../Topic/Concurrency%20Runtime%20Walkthroughs.md)
+## <a name="see-also"></a>См. также  
+ [Пошаговые руководства по среде выполнения с параллелизмом](../../parallel/concrt/concurrency-runtime-walkthroughs.md)

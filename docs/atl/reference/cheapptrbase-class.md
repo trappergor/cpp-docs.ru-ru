@@ -23,11 +23,12 @@ caps.latest.revision: "20"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 9a9b99d487b75c0d51b9d526e848e823af787cc9
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 59520211ae577c4ca4358874ef1d8ff71de59921
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cheapptrbase-class"></a>Класс CHeapPtrBase
 Этот класс является основой несколько классов кучи смарт-указатель.  
@@ -49,17 +50,17 @@ class CHeapPtrBase
  `Allocator`  
  Класс выделения памяти для использования. По умолчанию подпрограммы CRT используются для выделения и освобождения памяти.  
   
-## <a name="members"></a>Члены  
+## <a name="members"></a>Участники  
   
 ### <a name="public-constructors"></a>Открытые конструкторы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[CHeapPtrBase:: ~ CHeapPtrBase](#dtor)|Деструктор|  
   
 ### <a name="public-methods"></a>Открытые методы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[CHeapPtrBase::AllocateBytes](#allocatebytes)|Этот метод используется для выделения памяти.|  
 |[CHeapPtrBase::Attach](#attach)|Вызовите этот метод, чтобы стать владельцем существующего указателя.|  
@@ -69,7 +70,7 @@ class CHeapPtrBase
   
 ### <a name="public-operators"></a>Открытые операторы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[CHeapPtrBase::operator T *](#operator_t_star)|Оператор приведения.|  
 |[CHeapPtrBase::operator &](#operator_amp)|& Оператор.|  
@@ -78,7 +79,7 @@ class CHeapPtrBase
   
 ### <a name="public-data-members"></a>Открытые члены данных  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[CHeapPtrBase::m_pData](#m_pdata)|Переменная члена данных указателя.|  
   

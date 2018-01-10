@@ -1,49 +1,53 @@
 ---
-title: "Resizing an Entire Image (Image Editor for Icons) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Image editor [C++], resizing images"
-  - "size [C++], images"
-  - "images [C++], resizing"
-  - "resizing images"
+title: "Изменение размера всего изображения (редактор изображений для значков) | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- Image editor [C++], resizing images
+- size [C++], images
+- images [C++], resizing
+- resizing images
 ms.assetid: 10782937-7eb4-4340-bdec-618ee7d7904b
-caps.latest.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 6
+caps.latest.revision: "10"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: b605bb3e58cc687d560c2242bbf98b469defa582
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 12/21/2017
 ---
-# Resizing an Entire Image (Image Editor for Icons)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-### Изменение размера всего изображения с помощью окна свойств  
+# <a name="resizing-an-entire-image-image-editor-for-icons"></a>Изменение размера всего изображения (редактор изображений для значков)
+### <a name="to-resize-an-entire-image-using-the-properties-window"></a>Изменение размера всего изображения с помощью окна свойств  
   
-1.  Откройте изображение, свойства которого нужно изменить.  
+1.  Откройте изображение, свойства которого требуется изменить.  
   
-2.  В полях **Ширина** и **Высота** [окна "Свойства"](../Topic/Properties%20Window.md) введите нужные размеры.  
+2.  В **ширина** и **высота** поля в [окно свойств](/visualstudio/ide/reference/properties-window), введите необходимые размеры.  
   
-     При увеличении размера изображения редактор изображений расширяет изображение вправо, вниз или в обе стороны и заполняет новую область текущим фоновым цветом.  Изображение не растягивается.  
+     Если вы увеличиваете размер изображения, редактор изображений расширяет изображение справа, сверху вниз, или оба и заполняет новую область цветом фона. Изображение не растягивается.  
   
-     При уменьшении размера изображения редактор изображений обрезает изображение с правого или нижнего края, или с обоих краев.  
+     При уменьшении размера изображения, редактор изображений обрезает изображение до правого или нижнего края или оба.  
   
     > [!NOTE]
-    >  Свойства "Ширина" и "Высота" можно использовать только для изменения размера всего изображения, но не частичного выделения.  
+    >  Чтобы изменить размер только всего изображения, не для частичного выделения можно использовать свойства ширины и высоты.  
   
- Сведения о добавлении ресурсов в управляемые проекты см. в разделе [Ресурсы приложений](../Topic/Resources%20in%20Desktop%20Apps.md) *Руководства разработчика .NET Framework*. Сведения о том, как вручную добавлять файлы ресурсов в управляемые проекты, осуществлять доступ к ресурсам, отображать статические ресурсы и присваивать строки ресурсов свойствам см. в разделах [Пошаговое руководство. Локализация приложений Windows Forms](http://msdn.microsoft.com/ru-ru/9a96220d-a19b-4de0-9f48-01e5d82679e5) и [Walkthrough: Using Resources for Localization with ASP.NET](../Topic/Walkthrough:%20Using%20Resources%20for%20Localization%20with%20ASP.NET.md).  
+ Сведения о добавлении ресурсов в управляемые проекты см. в разделе [ресурсы в классических приложениях](/dotnet/framework/resources/index) в *руководства разработчика .NET Framework.* Сведения о вручную добавлять файлы ресурсов в управляемые проекты, осуществлять доступ к ресурсам, отображать статические ресурсы и присваивать строки ресурсов свойствам см. в разделе [Создание файлов ресурсов для приложений рабочего стола](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Сведения о глобализации и локализации ресурсов в управляемых приложениях см. в разделе [Globalizing и локализация приложений .NET Framework](/dotnet/standard/globalization-localization/index).  
   
  Требования  
   
- None  
+ Нет  
   
-## См. также  
- [Accelerator Keys](../mfc/accelerator-keys-image-editor-for-icons.md)   
- [Resizing an Image](../Topic/Resizing%20an%20Image%20\(Image%20Editor%20for%20Icons\).md)
+## <a name="see-also"></a>См. также  
+ [Сочетания клавиш](../windows/accelerator-keys-image-editor-for-icons.md)   
+ [Изменение размера изображения](../windows/resizing-an-image-image-editor-for-icons.md)
+

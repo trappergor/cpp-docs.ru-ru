@@ -41,11 +41,12 @@ caps.latest.revision: "28"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 06d149e6a3f69096a86d84ebe3401b5dc30e748a
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 7b1b41f1a12f6b9e97db6ad3014b047bbc0f4b72
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="basicstringbuf-class"></a>Класс basic_stringbuf
 Описывает буфер потока, который управляет передачей элементов типа `Elem`, признаки символов которого определяются с помощью класса `Tr`, в последовательность элементов, сохраненную в объекте массива, и из нее.  
@@ -83,7 +84,7 @@ class basic_stringbuf : public basic_streambuf<Elem, Tr>
 |-|-|  
 |[basic_stringbuf](#basic_stringbuf)|Создает объект типа `basic_stringbuf`.|  
   
-### <a name="typedefs"></a>Typedefs  
+### <a name="typedefs"></a>Определения типов  
   
 |||  
 |-|-|  
@@ -178,7 +179,7 @@ virtual int_type overflow(int_type _Meta = traits_type::eof());
  Если функция не может выполниться успешно, она возвращает **traits_type::eof**. В противном случае она возвращает **traits_type::**[not_eof](../standard-library/char-traits-struct.md#not_eof)(_ *Meta*).  
   
 ### <a name="remarks"></a>Примечания  
- Если _ *Meta* при сравнении не дает значение, равное **traits_type::**[eof](../standard-library/char-traits-struct.md#eof), защищенная виртуальная функция-член пытается вставить элемент **traits_type::**[to_char_type](../standard-library/char-traits-struct.md#to_char_type)(\_ *Meta*) в выходной буфер. Это можно сделать разными способами.  
+ Если _ *Meta* при сравнении не дает значение, равное **traits_type::**[eof](../standard-library/char-traits-struct.md#eof), защищенная виртуальная функция-член пытается вставить элемент **traits_type::**[to_char_type](../standard-library/char-traits-struct.md#to_char_type)(\_ *Meta*) в выходной буфер. Для этого существует несколько способов.  
   
 -   Если позиция записи доступна, можно сохранить элемент в позиции записи и увеличить следующий указатель для выходного буфера.  
   
@@ -265,7 +266,7 @@ virtual pos_type seekpos(pos_type _Sp, ios_base::openmode _Mode = ios_base::in |
  Задает режим для положения указателя. По умолчанию разрешается изменять позиции чтения и записи.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
- Если функция успешно изменила одну или обе позиции потока, то она возвращает итоговую позицию потока. В противном случае она завершается неудачно и возвращает недопустимую позицию потока. Чтобы определить, является ли позиция в потоке недопустимой, сравните возвращаемое значение с `pos_type(off_type(-1))`.  
+ Если функция успешно изменила одну или обе позиции потока, то она возвращает итоговую позицию потока. В противном случае она завершается неудачно и возвращает недопустимую позицию потока. Чтобы определить, является ли позиция потока недопустимой, сравните возвращаемое значение с `pos_type(off_type(-1))`.  
   
 ### <a name="remarks"></a>Примечания  
  Для объекта класса basic_stringbuf< **Elem**, **Tr**, `Alloc`> позиция потока состоит исключительно из смещения потока. Нулевое смещение обозначает первый элемент управляемой последовательности. Новая позиция определяется объектом *Sp*.  

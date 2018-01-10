@@ -45,11 +45,12 @@ caps.latest.revision: "22"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 33e0ca4c92d22d8afaed4523a7f274b6b5d20a2b
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 22922d29c09ee97a8b2a292953b4bf903ab6649e
+ms.sourcegitcommit: 54035dce0992ba5dce0323d67f86301f994ff3db
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 01/03/2018
 ---
 # <a name="cbitmap-class"></a>CBitmap-класс
 Инкапсулирует растровое изображение интерфейса графических устройств Windows (GDI) и предоставляет функции-члены для манипулирования этим растровым изображением.  
@@ -60,17 +61,17 @@ ms.lasthandoff: 10/24/2017
 class CBitmap : public CGdiObject  
 ```  
   
-## <a name="members"></a>Члены  
+## <a name="members"></a>Участники  
   
 ### <a name="public-constructors"></a>Открытые конструкторы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[CBitmap::CBitmap](#cbitmap)|Создает объект `CBitmap`.|  
   
 ### <a name="public-methods"></a>Открытые методы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[CBitmap::CreateBitmap](#createbitmap)|Инициализирует объект с растровым изображением зависящие от устройства памяти, который имеет заданную ширину, высоту и битовый шаблон.|  
 |[CBitmap::CreateBitmapIndirect](#createbitmapindirect)|Инициализирует объект с точечным рисунком ширину, высоту и битовый шаблон (если оно указано), заданный в **растрового ИЗОБРАЖЕНИЯ** структуры.|  
@@ -88,7 +89,7 @@ class CBitmap : public CGdiObject
   
 ### <a name="public-operators"></a>Открытые операторы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[HBITMAP CBitmap::operator](#operator_hbitmap)|Возвращает дескриптор Windows, присоединенного к `CBitmap` объекта.|  
   
@@ -374,7 +375,7 @@ BOOL LoadMappedBitmap(
 ### <a name="remarks"></a>Примечания  
  По умолчанию `LoadMappedBitmap` сопоставит цвета, обычно используется в глифах кнопки.  
   
- Сведения о создании сопоставленных растровое изображение в описании функции Windows [CreateMappedBitmap](http://go.microsoft.com/fwlink/linkid=230562) и [COLORMAP](http://msdn.microsoft.com/library/windows/desktop/bb760448) структуры в Windows SDK.  
+ Сведения о создании сопоставленных растровое изображение в описании функции Windows [CreateMappedBitmap](http://go.microsoft.com/fwlink/p/?linkid=230562) и [COLORMAP](http://msdn.microsoft.com/library/windows/desktop/bb760448) структуры в Windows SDK.  
   
 ##  <a name="loadoembitmap"></a>CBitmap::LoadOEMBitmap  
  Загружает предварительно определенных растровое изображение, используемое операционной системой Windows.  

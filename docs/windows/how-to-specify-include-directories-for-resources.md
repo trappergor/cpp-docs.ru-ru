@@ -17,11 +17,14 @@ caps.latest.revision: "11"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 789a57914e002ea33f705647ec4a6f80d8470f00
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: ddaa4bf15894b1afe4edec952b5c707a1dcfac0b
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="how-to-specify-include-directories-for-resources"></a>Практическое руководство. Указание каталогов включения для ресурсов
 ### <a name="to-specify-include-directories-for-a-specific-rc-file"></a>Для указания включите каталоги для конкретного rc-файла  
@@ -32,7 +35,7 @@ ms.lasthandoff: 10/24/2017
   
  Сведения о добавлении ресурсов в управляемые проекты см. в разделе [ресурсы в классических приложениях](/dotnet/framework/resources/index) руководства разработчика .NET Framework. Сведения о вручную добавлять файлы ресурсов в управляемые проекты, осуществлять доступ к ресурсам, отображать статические ресурсы и присваивать строки ресурсов свойствам см. в разделе [Пошаговое руководство: использование ресурсов для локализации с ASP.NET](http://msdn.microsoft.com/Library/bb4e5b44-e2b0-48ab-bbe9-609fb33900b6).  
   
- **Requirements**  
+ **Требования**  
   
  Win32  
   

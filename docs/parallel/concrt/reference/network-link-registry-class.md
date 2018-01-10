@@ -22,11 +22,12 @@ caps.latest.revision: "20"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 348964eb2f9b17a00188dd3a2589ce0711767e64
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 116c36b5c0b990672a455e1419c92d60ec992845
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="networklinkregistry-class"></a>Класс network_link_registry
 Абстрактный базовый класс `network_link_registry` управляет связями между блоками источников и целевыми блоками.  
@@ -42,11 +43,11 @@ class network_link_registry;
  `_Block`  
  Тип блока данных, хранимых в `network_link_registry`.  
   
-## <a name="members"></a>Члены  
+## <a name="members"></a>Участники  
   
 ### <a name="public-typedefs"></a>Общедоступные определения типов  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |`const_pointer`|Тип, предоставляющий указатель на `const` элемент в `network_link_registry` объекта.|  
 |`const_reference`|Тип, предоставляющий ссылку на `const` элемент хранится в `network_link_registry` объект для чтения и выполнения операций const.|  
@@ -55,7 +56,7 @@ class network_link_registry;
   
 ### <a name="public-methods"></a>Открытые методы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[add](#add)|При переопределении в производном классе, добавляет ссылку на `network_link_registry` объекта.|  
 |[begin](#begin)|При переопределении в производном классе, возвращает итератор на первый элемент в `network_link_registry` объекта.|  

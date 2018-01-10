@@ -4,28 +4,25 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
 - codecvt
 - <codecvt>
-dev_langs:
-- C++
-helpviewer_keywords:
-- codecvt header
+dev_langs: C++
+helpviewer_keywords: codecvt header
 ms.assetid: d44ee229-00d5-4761-9b48-0c702122789d
-caps.latest.revision: 21
+caps.latest.revision: "21"
 author: corob-msft
 ms.author: corob
 manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 75a8e720fa1a3add6dc8017df8b970dfa746f439
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
-ms.sourcegitcommit: 65f4e356ad0d46333b0d443d0fd6ac0b9f2b6f58
-ms.openlocfilehash: d35597d8d0c39a15aead1e7c35c512bc8dc7fafe
-ms.contentlocale: ru-ru
-ms.lasthandoff: 10/03/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="ltcodecvtgt"></a>&lt;codecvt&gt;
 Определяет несколько классов шаблонов, которые описывают объекты на основе класса шаблона [codecvt](../standard-library/codecvt-class.md). Эти объекты могут служить как [аспекты языкового стандарта](../standard-library/locale-class.md#facet_class) для управления преобразованиями между последовательностями значений типа `Elem` и последовательностями значений типа `char`.  
@@ -88,7 +85,6 @@ ms.lasthandoff: 10/03/2017
   
 ## <a name="see-also"></a>См. также  
  [Справочник по файлам заголовков](../standard-library/cpp-standard-library-header-files.md)
-
 
 
 

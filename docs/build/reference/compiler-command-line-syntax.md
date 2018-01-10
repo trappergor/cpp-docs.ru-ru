@@ -16,11 +16,12 @@ caps.latest.revision: "10"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: f2047324280a3909c60542e3994639747bb6ecd9
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 7fb89aca1990d44d7ef62ea76788b38e8ffa1d6d
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="compiler-command-line-syntax"></a>Синтаксис командной строки компилятора
 В командной строке компилятора используется следующий синтаксис:  
@@ -31,7 +32,7 @@ CL [option...] file... [option | file]... [lib...] [@command-file] [/link link-o
   
  В следующей таблице описаны ввод команду CL.  
   
-|Запись|Значение|  
+|Ввод|Значение|  
 |-----------|-------------|  
 |*параметр*|Один или несколько [параметров CL](../../build/reference/compiler-options.md). Обратите внимание, что все параметры применяются ко всем файлам указанного источника. Параметры задаются путем косой черты (/) или дефис (-). Если параметр принимает аргумент в описании параметра указывается, является ли пробел между параметром и аргументы. Имена параметров (за исключением параметра/Help) чувствительны к регистру. В разделе [порядок параметров CL](../../build/reference/order-of-cl-options.md) для получения дополнительной информации.|  
 |`file`|Имя одного или нескольких исходных файлов, OBJ-файлов или библиотек. CL компилирует исходные файлы и передает компоновщику имена OBJ-файлы и библиотеки. В разделе [синтаксис имен файлов CL](../../build/reference/cl-filename-syntax.md) для получения дополнительной информации.|  

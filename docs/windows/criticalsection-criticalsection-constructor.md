@@ -1,32 +1,33 @@
 ---
-title: "Конструктор CriticalSection::CriticalSection | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "corewrappers/Microsoft::WRL::Wrappers::CriticalSection::CriticalSection"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "CriticalSection, конструктор"
+title: "Конструктор CriticalSection::CriticalSection | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: corewrappers/Microsoft::WRL::Wrappers::CriticalSection::CriticalSection
+dev_langs: C++
+helpviewer_keywords: CriticalSection, constructor
 ms.assetid: 930b89be-4d74-46bd-8879-5dd4d15bcbd0
-caps.latest.revision: 3
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 3
+caps.latest.revision: "3"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: 532a7b2e046bbdb64db118741a939dadb049f081
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 12/21/2017
 ---
-# Конструктор CriticalSection::CriticalSection
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Инициализирует объект синхронизации, аналогичный объекту мьютекса, который может использоваться только потоками одного процесса.  
+# <a name="criticalsectioncriticalsection-constructor"></a>Конструктор CriticalSection::CriticalSection
+Инициализирует объект синхронизации, который похож на объекте mutex, но может использоваться только потоками одного процесса.  
   
-## Синтаксис  
+## <a name="syntax"></a>Синтаксис  
   
 ```  
 explicit CriticalSection(  
@@ -34,17 +35,17 @@ explicit CriticalSection(
 );  
 ```  
   
-#### Параметры  
+#### <a name="parameters"></a>Параметры  
  `spincount`  
- Счетчик прокруток для объекта критической секции.  Значение по умолчанию — 0.  
+ Счетчик прокруток для объекта критической секции. Значение по умолчанию — 0.  
   
-## Примечания  
- Для получения дополнительных сведений о критических секциях см. функцию **InitializeCriticalSectionAndSpinCount** в разделе Синхронизации документации Windows API.  
+## <a name="remarks"></a>Примечания  
+ Дополнительные сведения о критических секциях и счетчике прокруток см. в разделе **InitializeCriticalSectionAndSpinCount** функции в разделе синхронизация документации по Windows API.  
   
-## Требования  
+## <a name="requirements"></a>Требования  
  **Заголовок:** corewrappers.h  
   
- **Пространство имен:** Microsoft::WRL::Wrappers  
+ **Пространство имен:** Microsoft::wrl:: wrappers  
   
-## См. также  
- [Класс CriticalSection](../Topic/CriticalSection%20Class.md)
+## <a name="see-also"></a>См. также  
+ [Класс CriticalSection](../windows/criticalsection-class.md)

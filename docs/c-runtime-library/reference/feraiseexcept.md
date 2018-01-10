@@ -1,48 +1,48 @@
 ---
-title: "feraiseexcept | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "cpp"
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-apiname: 
-  - "feraiseexcept"
-apilocation: 
-  - "msvcrt.dll"
-  - "msvcr80.dll"
-  - "msvcr90.dll"
-  - "msvcr100.dll"
-  - "msvcr100_clr0400.dll"
-  - "msvcr110.dll"
-  - "msvcr110_clr0400.dll"
-  - "msvcr120.dll"
-  - "msvcr120_clr0400.dll"
-  - "ucrtbase.dll"
-apitype: "HeaderDef"
-f1_keywords: 
-  - "feraiseexcept"
-  - "fenv/feraiseexcept"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "функция feraiseexcept"
+title: "feraiseexcept | Документы Майкрософт"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+apiname: feraiseexcept
+apilocation:
+- msvcrt.dll
+- msvcr80.dll
+- msvcr90.dll
+- msvcr100.dll
+- msvcr100_clr0400.dll
+- msvcr110.dll
+- msvcr110_clr0400.dll
+- msvcr120.dll
+- msvcr120_clr0400.dll
+- ucrtbase.dll
+apitype: HeaderDef
+f1_keywords:
+- feraiseexcept
+- fenv/feraiseexcept
+dev_langs: C++
+helpviewer_keywords: feraiseexcept function
 ms.assetid: 87e89151-83c2-4563-9a9a-45666245d437
-caps.latest.revision: 3
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 3
+caps.latest.revision: "3"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 9ab77da8cee422bab618dc8737ad254b65301ffd
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 12/21/2017
 ---
-# feraiseexcept
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Вызывает указанный исключения с плавающей запятой.  
+# <a name="feraiseexcept"></a>feraiseexcept
+Вызывает указанные исключения с плавающей запятой.  
   
-## Синтаксис  
+## <a name="syntax"></a>Синтаксис  
   
 ```  
 int feraiseexcept(  
@@ -50,42 +50,42 @@ int feraiseexcept(
 );  
 ```  
   
-#### Параметры  
+#### <a name="parameters"></a>Параметры  
  `excepts`  
- Исключения с плавающей запятой для вызова.  
+ Исключения с плавающей запятой, которые необходимо вызвать.  
   
-## Возвращаемое значение  
- Если все заданные исключения вызываются успешно, возвращается 0.  
+## <a name="return-value"></a>Возвращаемое значение  
+ Если все заданные исключения вызваны успешно, возвращается 0.  
   
-## Заметки  
- `feraiseexcept` Функция пытается вызвать исключения с плавающей запятой, определяемое `excepts`.`feraiseexcept` Функция поддерживает эти макросы исключений, определенных в \< fenv.h \>:  
+## <a name="remarks"></a>Примечания  
+ Функция `feraiseexcept` пытается очистить исключения с плавающей запятой, заданные функцией `excepts`.   Функция `feraiseexcept` поддерживает макросы исключений, определенные в \<fenv.h>:  
   
-|Исключение\-макрос|Описание|  
-|------------------------|--------------|  
-|FE\_DIVBYZERO|Произошла ошибка своеобразие или полюсе в ранее операции с плавающей запятой; значение бесконечности был создан.|  
-|FE\_INEXACT|Функция была вынуждена округления хранимый результат ранее операции с плавающей запятой.|  
-|FE\_INVALID|Ошибка домена в ранее операции с плавающей запятой.|  
-|FE\_OVERFLOW|Ошибка диапазона; более ранние результат операции с плавающей запятой слишком велико для представления.|  
-|FE\_UNDERFLOW|Ранее результат операции с плавающей запятой слишком мал для представления в точности; значение denormal был создан.|  
-|FE\_ALLEXCEPT|Побитовое или всех поддерживаемых исключения с плавающей запятой.|  
+|Макрос исключения|Описание:|  
+|---------------------|-----------------|  
+|FE_DIVBYZERO|При выполнении предыдущей операции с плавающей запятой произошла ошибка сингулярности или полюса, в результате чего было получено бесконечное значение.|  
+|FE_INEXACT|Функция принудительно округлила сохраненный результат ранее выполненной операции с плавающей запятой.|  
+|FE_INVALID|Ошибка домена в ранее выполненной операции с плавающей запятой.|  
+|FE_OVERFLOW|Ошибка диапазона. Ранее выполненная операция с плавающей запятой возвратила слишком большое значение, которое не удается представить.|  
+|FE_UNDERFLOW|Ранее выполненная операция с плавающей запятой возвратила слишком малое значение, которое не удается представить с полной точностью. Создано денормализованное значение.|  
+|FE_ALLEXCEPT|Побитовая операция ИЛИ для всех поддерживаемых исключений с плавающей запятой.|  
   
- `excepts` Аргумент может иметь ноль, один значений макрос исключение или побитового или двух или более макросов, поддерживаемых исключение. Если один из макросов указанное исключение FE\_OVERFLOW или FE\_UNDERFLOW, FE\_INEXACT исключение может возникнуть как побочный эффект.  
+ Аргумент `excepts` может быть равен нулю, значению одного из макросов исключений, побитовой операции ИЛИ двух или больше поддерживаемых макросов исключений. Если один из указанных макросов исключений имеет значение FE_OVERFLOW или FE_UNDERFLOW, в качестве побочного эффекта может быть вызвано исключение FE_INEXACT.  
   
- Чтобы использовать эту функцию, необходимо отключить параметр оптимизации с плавающей запятой, которые может предотвратить доступ с помощью `#pragma fenv_access(on)` директив до вызова метода. Дополнительные сведения см. в разделе [fenv\_access](../../preprocessor/fenv-access.md).  
+ Чтобы использовать эту функцию, необходимо отключить оптимизацию вычислений с плавающей запятой, которая может препятствовать доступу. Для этого следует использовать директиву `#pragma fenv_access(on)` перед вызовом. Дополнительные сведения см. в разделе [fenv_access](../../preprocessor/fenv-access.md).  
   
- **Системам Microsoft:** исключения, указанного в `excepts` вызываются в порядке FE\_INVALID, FE\_DIVBYZERO, FE\_OVERFLOW, FE\_UNDERFLOW, FE\_INEXACT. Тем не менее, FE\_INEXACT может возникнуть при вызове FE\_OVERFLOW или FE\_UNDERFLOW, даже если не указаны в `excepts`.**Завершение блока, относящегося только к системам Майкрософт**  
+ **Блок, относящийся только к системам Майкрософт:** исключения, указанные в `excepts`, вызываются в порядке FE_INVALID, FE_DIVBYZERO, FE_OVERFLOW, FE_UNDERFLOW, FE_INEXACT. При этом FE_INEXACT может вызываться при вызове исключений FE_OVERFLOW или FE_UNDERFLOW, даже если оно не указано в `excepts`. **Завершение блока, относящегося только к системам Майкрософт**  
   
-## Требования  
+## <a name="requirements"></a>Требования  
   
-|Функция|Заголовок C|Заголовок C\+\+|  
-|-------------|-----------------|---------------------|  
-|`feraiseexcept`|\<fenv.h\>|\<cfenv\>|  
+|Функция|Заголовок C|Заголовок C++|  
+|--------------|--------------|------------------|  
+|`feraiseexcept`|\<fenv.h>|\<cfenv>|  
   
- Дополнительные сведения о совместимости см. в статье [Совместимость](../../c-runtime-library/compatibility.md).  
+ Дополнительные сведения о совместимости см. в разделе [Совместимость](../../c-runtime-library/compatibility.md).  
   
-## См. также  
+## <a name="see-also"></a>См. также  
  [Алфавитный указатель функций](../../c-runtime-library/reference/crt-alphabetical-function-reference.md)   
- [fesetexceptflag](../Topic/fesetexceptflag2.md)   
+ [fesetexceptflag](../../c-runtime-library/reference/fesetexceptflag2.md)   
  [feholdexcept](../../c-runtime-library/reference/feholdexcept2.md)   
- [fetestexcept](../Topic/fetestexcept1.md)   
- [feupdateenv](../Topic/feupdateenv.md)
+ [fetestexcept](../../c-runtime-library/reference/fetestexcept1.md)   
+ [feupdateenv](../../c-runtime-library/reference/feupdateenv.md)

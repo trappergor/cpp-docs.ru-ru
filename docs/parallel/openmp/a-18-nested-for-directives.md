@@ -1,27 +1,27 @@
 ---
-title: "A.18   Nested for Directives | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
+title: "A.18 вложенные директивы | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
 ms.assetid: ae2b2e0b-ec94-43f8-928c-6d621b51f0df
-caps.latest.revision: 7
-caps.handback.revision: 7
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "7"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 9784afedd20d8e3492b056179b9c60601a065a11
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 12/21/2017
 ---
-# A.18   Nested for Directives
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Следующий пример  `for` вложение \(директива[Раздел 2.9](../../parallel/openmp/2-9-directive-nesting.md) на странице 33\) поскольку внутренняя и outer уступчивы  `for` привязка к другим параллельным директив областей:  
+# <a name="a18---nested-for-directives"></a>A.18   Вложенные директивы for
+В следующем примере `for` директива nesting ([разделе 2.9](../../parallel/openmp/2-9-directive-nesting.md) на странице 33) является совместимым из-за внутренней и внешней `for` директивы привязки в разных регионах параллельных:  
   
 ```  
 #pragma omp parallel default(shared)  
@@ -39,7 +39,7 @@ manager: "ghogen"
 }  
 ```  
   
- Следующее изменение предыдущего примера также уступчиво:  
+ Следующий вариант предыдущего примера также является совместимым:  
   
 ```  
 #pragma omp parallel default(shared)  
