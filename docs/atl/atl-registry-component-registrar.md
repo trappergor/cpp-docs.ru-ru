@@ -1,45 +1,47 @@
 ---
-title: "Компонент реестра ATL (регистратор) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "регистратор ATL"
-  - "ATL - библиотека, реестр"
-  - "скрипты регистратора [ATL]"
-  - "реестр, доступ"
-  - "реестр, регистратор"
-  - "сценарии, скрипты реестра"
-  - "скрипты, скрипты регистратора"
+title: "Компонент реестра ATL (регистратор) | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- scripting, registry scripting
+- ATL, registry
+- registrar scripts [ATL]
+- registry, accessing
+- ATL Registrar
+- scripts, Registrar scripts
+- registry, Registrar
 ms.assetid: 106752ae-4cfc-4030-8cb2-d36a1d635a2e
-caps.latest.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 5
+caps.latest.revision: "10"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 43eff661ff9a72ca72554a87b2177cbe07ad10f0
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 12/21/2017
 ---
-# Компонент реестра ATL (регистратор)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Регистратор библиотеки ATL предоставляет доступ к реестру системы оптимизированный через пользовательский интерфейс.  Регистратор свободен\- продет потоков и позволяет статическое связывание кода для клиентов C\+\+.  
+# <a name="atl-registry-component-registrar"></a>Компонент реестра ATL (регистратор)
+Регистратор ATL предоставляет оптимизированного доступа к реестру системы через пользовательский интерфейс. Регистратор свободных потоков и позволяет статическое связывание кода для клиентов C++.  
   
 > [!NOTE]
->  Исходный код для регистратора библиотеки ATL можно найти в atlmfc\\include\\atliface.h.  
+>  Исходный код для регистратор ATL можно найти в atlmfc\include\atliface.h.  
   
-## В этом подразделе  
- [создать скрипты регистратора](../Topic/Creating%20Registrar%20Scripts.md)  
- Создать направляющую на скрипты регистратора.  Содержит разделы о синтаксисе BNF, анализирует деревья, примеры сценариев, реестра с использованием подстановочных параметров, и вызова скрипты.  
+## <a name="in-this-section"></a>В этом разделе  
+ [Создание скриптов регистратора](../atl/creating-registrar-scripts.md)  
+ Руководство по созданию сценариев регистратора. Включает темы о синтаксиса BNF, синтаксический анализ деревьев, реестра, сценариев примеры, использование подстановочных параметров и вызова сценариев.  
   
- [Tuning статическую ссылку к коду регистратора \(C\+\+\)](../atl/setting-up-a-static-link-to-the-registrar-code-cpp-only.md)  
- Перечислены шаги, чтобы настроить статическая компоновка на регистратору.  
+ [Настройка статическую ссылку на код регистратора (C++)](../atl/setting-up-a-static-link-to-the-registrar-code-cpp-only.md)  
+ Приводятся инструкции для настройки статическое связывание для регистратора.  
   
-## Связанные подразделы  
- [Библиотека ATL](../atl/active-template-library-atl-concepts.md)  
- Содержит ссылки на концептуальные разделы о том, как запрограммировать с помощью библиотека шаблонных классов ATL.
+## <a name="related-sections"></a>Связанные разделы  
+ [ATL](../atl/active-template-library-atl-concepts.md)  
+ Ссылки на разделы о программировании с использованием библиотеки ATL.
+

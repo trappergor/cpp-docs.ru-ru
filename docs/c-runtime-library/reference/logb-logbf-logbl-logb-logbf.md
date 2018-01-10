@@ -49,11 +49,12 @@ caps.latest.revision: "13"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 81d44f12b363cf74efd334e8ff7daadb4fee5036
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 4042e5f7b67db8e29d167f96457a91a6d47c4bfa
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="logb-logbf-logbl-logb-logbf"></a>logb, logbf, logbl, _logb, _logbf
 Извлекает значение экспоненты для аргумента с плавающей запятой.  
@@ -96,7 +97,7 @@ float _logbf(
   
  Поскольку C++ допускает перегрузку, можно вызывать перегрузки `logb`, которые принимают и возвращают значения `float` или `long double`. В программе на языке C `logb` всегда принимает и возвращает `double`.  
   
-|Ввод|Исключение SEH|Исключение Matherr|  
+|Входные данные|Исключение SEH|Исключение Matherr|  
 |-----------|-------------------|-----------------------|  
 |± QNAN,IND|Нет|_DOMAIN|  
 |± 0|ZERODIVIDE|_SING|  

@@ -18,11 +18,12 @@ caps.latest.revision: "9"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: f7b85af65da564f7231d606933ff1ebbb90d5af0
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: f44da30387421123ab6998cfbb2855a743aace39
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="routine-mappings"></a>Сопоставления процедур
 Сопоставления универсальных текстовых подпрограмм определены в файле TCHAR.H. Функции `_tccpy` и `_tclen` сопоставляются функциям в модели многобайтовой кодировки; для полноты они сопоставляются с макросам или подставляемыми функциям в моделях однобайтовой кодировки и Юникода. Дополнительные сведения об универсальных текстовых подпрограммах см. в разделе справки о соответствующей подпрограмме, связанной с `SBCS`, `_MBCS` или `_UNICODE`.  
@@ -31,7 +32,7 @@ ms.lasthandoff: 10/24/2017
   
  Дополнительные сведения см. в разделе [Универсальные текстовые сопоставления в файле TCHAR.H](../text/generic-text-mappings-in-tchar-h.md).  
   
-### <a name="generic-text-routine-mappings"></a>Универсальное текстовое сопоставление функций  
+### <a name="generic-text-routine-mappings"></a>Сопоставления подпрограмм обработки обычного текста  
   
 |Имя универсальной текстовой подпрограммы|Однобайтовая кодировка (_UNICODE и MBCS не определены)|_MBCS определено|_UNICODE определено|  
 |--------------------------------|-------------------------------------------|--------------------|-----------------------|  

@@ -4,39 +4,26 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-windows
+ms.technology: cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: reference
-dev_langs:
-- C++
-helpviewer_keywords:
-- functions [ATL], error reporting
+f1_keywords:
+- atlcomcli/ATL::AtlHresultFromLastError
+- atlcom/ATL::AtlReportError
+- atldef/ATL::AtlThrow
+dev_langs: C++
+helpviewer_keywords: functions [ATL], error reporting
 ms.assetid: 11339c02-98cd-428d-b3b9-7deeb155a6a3
-caps.latest.revision: 17
+caps.latest.revision: "17"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: d2d39abf526a58b8442107b5ee816f316ae841f5
-ms.openlocfilehash: 6c328c82c5e2ef5ff6f413d4eb3f1b62e2b693d8
-ms.contentlocale: ru-ru
-ms.lasthandoff: 03/31/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: 0b3383efcc78a022fc5131984957d94aa4b47838
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="debugging-and-error-reporting-global-functions"></a>Отладка и глобальные функции отчетов об ошибках
 Эти функции предоставляют полезные средства отладки и трассировки.  
@@ -154,7 +141,7 @@ HRESULT WINAPI AtlReportError(
  [in] Путь и имя файла справки, описывающее ошибку.  
   
  `hInst`  
- [in] Дескриптор для ресурса. По умолчанию этот параметр является **__AtlBaseModuleModule::GetResourceInstance**, где **__AtlBaseModuleModule** — это глобальный экземпляр [CAtlBaseModule](../../atl/reference/catlbasemodule-class.md) или класс, производный от него.  
+ [in] Дескриптор для ресурса. По умолчанию этот параметр является **__AtlBaseModuleModule::GetResourceInstance**, где **__AtlBaseModuleModule** — это глобальный экземпляр [CAtlBaseModule](../../atl/reference/catlbasemodule-class.md) или класс производный от него.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
  Если `hRes` параметр имеет ненулевое значение, возвращает значение `hRes`. Если `hRes` равно нулю, то первые четыре версии `AtlReportError` возвращают `DISP_E_EXCEPTION`. Две последние версии возвращают результат этого макроса **MAKE_HRESULT (1, FACILITY_ITF,** `nID` **)**.  
@@ -163,7 +150,7 @@ HRESULT WINAPI AtlReportError(
  Строка *lpszDesc* используется как текстовое описание ошибки. Когда клиент получает `hRes` возвращать из `AtlReportError`, клиент может обращаться к **IErrorInfo** структуры для получения сведений об ошибке.  
   
 ### <a name="example"></a>Пример  
- [!code-cpp[NVC_ATL_COM #52](../../atl/codesnippet/cpp/debugging-and-error-reporting-global-functions_1.cpp)]  
+ [!code-cpp[NVC_ATL_COM#52](../../atl/codesnippet/cpp/debugging-and-error-reporting-global-functions_1.cpp)]  
   
 > [!CAUTION]
 >  Не используйте `AtlReportError` обработчики catch в C++. Некоторые переопределения этих функций макросы преобразования строк ATL для внутреннего использования, который в свою очередь использовать `_alloca` внутри функции. С помощью `AtlReportError` в блоке catch C++ обработчик может привести к исключениям в обработчики catch C++.  
@@ -198,7 +185,7 @@ __declspec(noreturn) inline void AtlThrow(HRESULT hr);
  Для проектов ATL можно предоставить собственную реализацию этой функции для использования библиотеки ATL в случае сбоя. Для этого, определите собственную функцию с такой же сигнатурой, что `AtlThrow` и #define `AtlThrow` на имя функции. Это необходимо сделать перед включением atlexcept.h (что означает, что она должна быть выполнена до включая заголовки ATL, поскольку atlbase.h включает atlexcept.h). Атрибут функции `__declspec(noreturn)` во избежание ложных предупреждений SAL.  
   
 ### <a name="example"></a>Пример  
- [!code-cpp[NVC_ATL_Windowing #95](../../atl/codesnippet/cpp/debugging-and-error-reporting-global-functions_2.h)]  
+ [!code-cpp[NVC_ATL_Windowing#95](../../atl/codesnippet/cpp/debugging-and-error-reporting-global-functions_2.h)]  
 
 ## <a name="requirements"></a>Требования  
  **Заголовок:** atldef.h  
@@ -226,7 +213,6 @@ inline void AtlThrowLastWin32();
 ## <a name="see-also"></a>См. также  
  [Функции](../../atl/reference/atl-functions.md)   
  [Макросы для отладки и создания отчетов об ошибках](../../atl/reference/debugging-and-error-reporting-macros.md)
-
 
 
 

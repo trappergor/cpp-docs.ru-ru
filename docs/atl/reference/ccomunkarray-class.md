@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-windows
+ms.technology: cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
@@ -18,39 +17,24 @@ f1_keywords:
 - ATLCOM/ATL::CComUnkArray::GetCookie
 - ATLCOM/ATL::CComUnkArray::GetUnknown
 - ATLCOM/ATL::CComUnkArray::Remove
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - connection points [C++], managing
 - CComUnkArray class
 ms.assetid: 5fd4b378-a7b5-4cc1-8866-8ab72a73639e
-caps.latest.revision: 17
+caps.latest.revision: "17"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 050e7483670bd32f633660ba44491c8bb3fc462d
-ms.openlocfilehash: 94f1062ff3808f527874a8890eca95c9b655b1bf
-ms.contentlocale: ru-ru
-ms.lasthandoff: 02/24/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: 3ca462648a43869b11984e4582c8eb2c3dfaece7
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="ccomunkarray-class"></a>Класс CComUnkArray
-В этом классе хранится **IUnknown** указатели и предназначен для использования в качестве параметра [IConnectionPointImpl](../../atl/reference/iconnectionpointimpl-class.md) класса шаблона.  
+Этот класс хранит **IUnknown** указателей и предназначен для использования в качестве параметра [IConnectionPointImpl](../../atl/reference/iconnectionpointimpl-class.md) класса шаблона.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -61,42 +45,42 @@ class CComUnkArray
   
 #### <a name="parameters"></a>Параметры  
  *nMaxSize*  
- Максимальное число **IUnknown** указатели, которые могут храниться в статического массива.  
+ Максимальное число **IUnknown** указателей, которое может содержаться в статического массива.  
   
-## <a name="members"></a>Члены  
+## <a name="members"></a>Участники  
   
 ### <a name="public-constructors"></a>Открытые конструкторы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[CComUnkArray::CComUnkArray](#ccomunkarray)|Конструктор.|  
   
 ### <a name="public-methods"></a>Открытые методы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
-|[CComUnkArray::Add](#add)|Вызовите этот метод, чтобы добавить **IUnknown** указатель на массив.|  
+|[CComUnkArray::Add](#add)|Вызовите этот метод для добавления **IUnknown** указатель на массив.|  
 |[CComUnkArray::begin](#begin)|Возвращает указатель на первый **IUnknown** указатель в коллекции.|  
-|[CComUnkArray::end](#end)|Возвращает указатель на позицию сразу за последней **IUnknown** указатель в коллекции.|  
-|[CComUnkArray::GetCookie](#getcookie)|Этот метод вызывается для получения файла cookie, связанного с данной **IUnknown** указателя.|  
-|[CComUnkArray::GetUnknown](#getunknown)|Этот метод вызывается для получения **IUnknown** указатель, связанный с данной cookie.|  
-|[CComUnkArray::Remove](#remove)|Этот метод вызывается для удаления **IUnknown** указатель из массива.|  
+|[CComUnkArray::end](#end)|Возвращает указатель на элемент, следующий за последние **IUnknown** указатель в коллекции.|  
+|[CComUnkArray::GetCookie](#getcookie)|Этот метод вызывается для получения файлов cookie, связанные с данной **IUnknown** указателя.|  
+|[CComUnkArray::GetUnknown](#getunknown)|Этот метод вызывается для получения **IUnknown** указатель, связанный с данной куки-файл.|  
+|[CComUnkArray::Remove](#remove)|Этот метод вызывается для удаления **IUnknown** указателя из массива.|  
   
 ## <a name="remarks"></a>Примечания  
- **CComUnkArray** содержит фиксированное число **IUnknown** указатели, каждая точка интерфейс для подключения. **CComUnkArray** может использоваться в качестве параметра [IConnectionPointImpl](../../atl/reference/iconnectionpointimpl-class.md) класса шаблона. **CComUnkArray\<1 настроек** является специализацией шаблона **CComUnkArray** , была оптимизирована для одной точке соединения.  
+ **CComUnkArray** содержит фиксированное число **IUnknown** указателей, каждый интерфейс для подключения точки. **CComUnkArray** можно использовать в качестве параметра [IConnectionPointImpl](../../atl/reference/iconnectionpointimpl-class.md) класса шаблона. **CComUnkArray\<1 >** является специализацией шаблона **CComUnkArray** , была оптимизирована для одной точке соединения.  
   
- **CComUnkArray** методы [начать](#begin) и [end](#end) может использоваться для перебора всех точек подключения (например, когда происходит событие).  
+ **CComUnkArray** методы [начать](#begin) и [окончания](#end) можно использовать для перебора всех точек соединения (например, когда происходит событие).  
   
- В разделе [Добавление точек подключения к объекту](../../atl/adding-connection-points-to-an-object.md) подробные сведения об автоматизации создания соединения точки прокси.  
+ В разделе [Добавление подключения указывает на объект](../../atl/adding-connection-points-to-an-object.md) подробные сведения об автоматизации создания соединения привязка прокси-серверов.  
   
 > [!NOTE]
-> **Примечание** класса [CComDynamicUnkArray](../../atl/reference/ccomdynamicunkarray-class.md) используется **добавить класс** мастер при создании элемента управления, имеющий точки подключения. Если требуется вручную указать количество точек подключения, измените ссылки из **CComDynamicUnkArray** для `CComUnkArray<` *n* `>`, где *n* число необходимых точек подключения.  
+> **Примечание** класса [CComDynamicUnkArray](../../atl/reference/ccomdynamicunkarray-class.md) используется **добавить класс** мастер при создании элемента управления, который имеет точек подключения. Если вы хотите указать количество точек подключения вручную, измените ссылку с **CComDynamicUnkArray** для `CComUnkArray<`  *n*  `>`, где  *n*  число необходимых точки подключения.  
   
 ## <a name="requirements"></a>Требования  
- **Заголовок:** файле atlcom.h  
+ **Заголовок:** atlcom.h  
   
 ##  <a name="add"></a>CComUnkArray::Add  
- Вызовите этот метод, чтобы добавить **IUnknown** указатель на массив.  
+ Вызовите этот метод для добавления **IUnknown** указатель на массив.  
   
 ```
 DWORD Add(IUnknown* pUnk);
@@ -104,7 +88,7 @@ DWORD Add(IUnknown* pUnk);
   
 ### <a name="parameters"></a>Параметры  
  *pUnk*  
- Вызовите этот метод, чтобы добавить **IUnknown** указатель на массив.  
+ Вызовите этот метод для добавления **IUnknown** указатель на массив.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
  Возвращает куки-файл, связанный с вновь добавленный указателя, или 0, если массив не является достаточно велик, чтобы вместить новый указатель.  
@@ -121,9 +105,9 @@ IUnknown**
  Указатель на **IUnknown** указатель на интерфейс.  
   
 ### <a name="remarks"></a>Примечания  
- Коллекция содержит указатели на интерфейсы, которые хранятся локально в виде **IUnknown**. Нужно привести каждого **IUnknown** интерфейс для типа real интерфейса, а затем вызвать через него. Необходимо запрашивать интерфейс.  
+ Коллекция содержит указатели на интерфейсы, которые хранятся локально в виде **IUnknown**. Приведение каждого **IUnknown** интерфейса в тип real интерфейса и затем вызывать ее. Необходимо запросить интерфейс.  
   
- Перед использованием **IUnknown** интерфейс, следует проверить, что это не **NULL**.  
+ Перед использованием **IUnknown** интерфейс, должна проверять, что он не **NULL**.  
   
 ##  <a name="ccomunkarray"></a>CComUnkArray::CComUnkArray  
  Конструктор.  
@@ -133,10 +117,10 @@ CComUnkArray();
 ```  
   
 ### <a name="remarks"></a>Примечания  
- Задает коллекцию для хранения `nMaxSize` **IUnknown** указатели и инициализирует указатели **NULL**.  
+ Задает коллекцию для хранения `nMaxSize` **IUnknown** указателей и инициализирует указатели на **NULL**.  
   
 ##  <a name="end"></a>CComUnkArray::end  
- Возвращает указатель на позицию сразу за последней **IUnknown** указатель в коллекции.  
+ Возвращает указатель на элемент, следующий за последние **IUnknown** указатель в коллекции.  
   
 ```
 IUnknown**
@@ -147,12 +131,12 @@ IUnknown**
  Указатель на **IUnknown** указатель на интерфейс.  
   
 ### <a name="remarks"></a>Примечания  
- `CComUnkArray` Методы **начать** и **end** можно перебрать все точки подключения, например, когда происходит событие.  
+ `CComUnkArray` Методы **начать** и **окончания** можно использовать для перебора всех точек подключения, например, когда происходит событие.  
   
- [!code-cpp[NVC_ATL_COM&#44;](../../atl/codesnippet/cpp/ccomunkarray-class_1.cpp)]  
+ [!code-cpp[NVC_ATL_COM#44](../../atl/codesnippet/cpp/ccomunkarray-class_1.cpp)]  
   
 ##  <a name="getcookie"></a>CComUnkArray::GetCookie  
- Этот метод вызывается для получения файла cookie, связанного с данной **IUnknown** указателя.  
+ Этот метод вызывается для получения файлов cookie, связанные с данной **IUnknown** указателя.  
   
 ```
 DWORD WINAPI GetCookie(IUnknown** ppFind);
@@ -166,10 +150,10 @@ DWORD WINAPI GetCookie(IUnknown** ppFind);
  Возвращает файл cookie, связанные с **IUnknown** указателя, или 0, если нет соответствующего **IUnknown** находится указатель.  
   
 ### <a name="remarks"></a>Примечания  
- Если имеется несколько экземпляров одной и той же **IUnknown** указатель, эта функция возвращает файл cookie для первого из них.  
+ Если имеется несколько экземпляров одной и той же **IUnknown** указателем, эта функция возвращает куки-файл для первого.  
   
 ##  <a name="getunknown"></a>CComUnkArray::GetUnknown  
- Этот метод вызывается для получения **IUnknown** указатель, связанный с данной cookie.  
+ Этот метод вызывается для получения **IUnknown** указатель, связанный с данной куки-файл.  
   
 ```
 IUnknown* WINAPI GetUnknown(DWORD dwCookie);
@@ -183,7 +167,7 @@ IUnknown* WINAPI GetUnknown(DWORD dwCookie);
  Возвращает **IUnknown** указатель или значение NULL, если соответствующие объекты cookie не найден.  
   
 ##  <a name="remove"></a>CComUnkArray::Remove  
- Этот метод вызывается для удаления **IUnknown** указатель из массива.  
+ Этот метод вызывается для удаления **IUnknown** указателя из массива.  
   
 ```
 BOOL Remove(DWORD dwCookie);
@@ -191,12 +175,11 @@ BOOL Remove(DWORD dwCookie);
   
 ### <a name="parameters"></a>Параметры  
  `dwCookie`  
- Ссылка на файл cookie **IUnknown** указатель, удаляемый из массива.  
+ Создание ссылок на файл cookie **IUnknown** указатель, который необходимо удалить из массива.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
- Возвращает **TRUE** при удалении указателя **FALSE** в противном случае.  
+ Возвращает **TRUE** при удалении указатель **FALSE** в противном случае.  
   
 ## <a name="see-also"></a>См. также  
  [Класс CComDynamicUnkArray](../../atl/reference/ccomdynamicunkarray-class.md)   
  [Общие сведения о классе](../../atl/atl-class-overview.md)
-

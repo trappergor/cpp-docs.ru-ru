@@ -1,75 +1,76 @@
 ---
-title: "_atodbl, _atodbl_l, _atoldbl, _atoldbl_l, _atoflt, _atoflt_l | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-apiname: 
-  - "_atoldbl"
-  - "_atoldbl_l"
-  - "_atodbl"
-  - "_atoflt"
-  - "_atoflt_l"
-  - "_atodbl_l"
-apilocation: 
-  - "msvcrt.dll"
-  - "msvcr80.dll"
-  - "msvcr90.dll"
-  - "msvcr100.dll"
-  - "msvcr100_clr0400.dll"
-  - "msvcr110.dll"
-  - "msvcr110_clr0400.dll"
-  - "msvcr120.dll"
-  - "msvcr120_clr0400.dll"
-  - "ucrtbase.dll"
-  - "api-ms-win-crt-convert-l1-1-0.dll"
-apitype: "DLLExport"
-f1_keywords: 
-  - "_atoflt"
-  - "_atoflt_l"
-  - "atodbl_l"
-  - "atoflt_l"
-  - "_atoldbl"
-  - "_atoldbl_l"
-  - "atodbl"
-  - "_atodbl_l"
-  - "atoldbl"
-  - "atoflt"
-  - "atoldbl_l"
-  - "_atodbl"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "_atodbl - функция"
-  - "_atoldbl_l - функция"
-  - "atoflt - функция"
-  - "atoflt_l - функция"
-  - "atoldbl - функция"
-  - "_atoldbl - функция"
-  - "atodbl_l - функция"
-  - "_atoflt_l - функция"
-  - "atoldbl_l - функция"
-  - "atodbl - функция"
-  - "преобразование строк, в значения с плавающей запятой"
-  - "_atoflt - функция"
-  - "_atodbl_l - функция"
+title: "_atodbl, _atodbl_l, _atoldbl, _atoldbl_l, _atoflt, _atoflt_l | Документы Майкрософт"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-standard-libraries
+ms.tgt_pltfrm: 
+ms.topic: article
+apiname:
+- _atoldbl
+- _atoldbl_l
+- _atodbl
+- _atoflt
+- _atoflt_l
+- _atodbl_l
+apilocation:
+- msvcrt.dll
+- msvcr80.dll
+- msvcr90.dll
+- msvcr100.dll
+- msvcr100_clr0400.dll
+- msvcr110.dll
+- msvcr110_clr0400.dll
+- msvcr120.dll
+- msvcr120_clr0400.dll
+- ucrtbase.dll
+- api-ms-win-crt-convert-l1-1-0.dll
+apitype: DLLExport
+f1_keywords:
+- _atoflt
+- _atoflt_l
+- atodbl_l
+- atoflt_l
+- _atoldbl
+- _atoldbl_l
+- atodbl
+- _atodbl_l
+- atoldbl
+- atoflt
+- atoldbl_l
+- _atodbl
+dev_langs: C++
+helpviewer_keywords:
+- _atodbl function
+- _atoldbl_l function
+- atoflt function
+- atoflt_l function
+- atoldbl function
+- _atoldbl function
+- atodbl_l function
+- _atoflt_l function
+- atoldbl_l function
+- atodbl function
+- string conversion, to floating point values
+- _atoflt function
+- _atodbl_l function
 ms.assetid: 2d2530f4-4bd4-42e3-8083-f2d2fbc8432a
-caps.latest.revision: 22
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 22
+caps.latest.revision: "22"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: ea51455d2b02c651aeb8e7bb599cbc3133585c15
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 12/21/2017
 ---
-# _atodbl, _atodbl_l, _atoldbl, _atoldbl_l, _atoflt, _atoflt_l
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Преобразование строки в число двойной точности с плавающей запятой\(`_atodbl`\), удлиненное число двойной точности с плавающей запятой \(`_atoldbl`\) или в число одинарной точности с плавающей запятой \(`_atoflt`\).  
+# <a name="atodbl-atodbll-atoldbl-atoldbll-atoflt-atofltl"></a>_atodbl, _atodbl_l, _atoldbl, _atoldbl_l, _atoflt, _atoflt_l
+Преобразует строку в двойное значение (`_atodbl`), длинное двойное значение (`_atoldbl`) или число с плавающей запятой (`_atoflt`).  
   
-## Синтаксис  
+## <a name="syntax"></a>Синтаксис  
   
 ```  
 int _atodbl(  
@@ -101,33 +102,33 @@ int _atoflt_l(
 );  
 ```  
   
-#### Параметры  
+#### <a name="parameters"></a>Параметры  
  `value`  
- Значение double, long double или float создается путем преобразования строки в число с плавающей запятой.  Значения имеют оболочку\-структуру.  
+ Двойное и длинное двойное значение, а также число с плавающей запятой формируются путем преобразования строки в значение с плавающей запятой. Эти значения упаковываются в структуре.  
   
  `str`  
- Строка для разбора с целью преобразования в значение с плавающей запятой.  
+ Строка для синтаксического анализа, которую необходимо преобразовать в значение с плавающей запятой.  
   
  `locale`  
  Используемый языковой стандарт.  
   
-## Возвращаемое значение  
- Возвращает 0 в случае успеха.  Возможные коды ошибок — `_UNDERFLOW` или `_OVERFLOW`, которые определены в файле заголовка Math.h.  
+## <a name="return-value"></a>Возвращаемое значение  
+ Возвращает 0 в случае успеха. Возможные коды ошибок, `_UNDERFLOW` или `_OVERFLOW`, определяются в файле заголовка Math.h.  
   
-## Заметки  
- Эти функции преобразуют строку в число с плавающей запятой.  Различие между этими функциями и функциями семейства `atof` в том, что эти функции не создают код с плавающей запятой и не вызывают исключений оборудования.  Вместо этого условия ошибки сообщаются через коды ошибок.  
+## <a name="remarks"></a>Примечания  
+ Эти функции преобразуют строку в значение с плавающей запятой. Различие между этими функциями и семейством функций `atof` состоит в том, что эти функции не создают код с плавающей запятой и не вызывают исключения оборудования. Вместо этого условия ошибок помечаются как коды ошибок.  
   
- Если строка не имеет допустимого представления как число с плавающей запятой, `value` устанавливается в ноль и возвращаемое значение также равно нулю.  
+ Если строка не имеет допустимой интерпретации в виде значения с плавающей запятой, `value` принимает нулевое значение, а возвращаемое значение равно нулю.  
   
- Версии этих функций с суффиксом `_l` идентичны версиям без суффикса, за исключением того, что они используют переданный параметр языкового стандарта вместо текущего языкового стандарта потока.  
+ Версии этих функций с суффиксом `_l` идентичны версиям без суффикса, за исключением того, что они используют переданный параметр языкового стандарта вместо языкового стандарта текущего потока.  
   
-## Требования  
+## <a name="requirements"></a>Требования  
   
-|Программы|Обязательный заголовок|  
-|---------------|----------------------------|  
-|`_atodbl`, `_atoldbl`, `_atoflt`<br /><br /> `_atodbl_l`, `_atoldbl_l`, `_atoflt_l`|\<stdlib.h\>|  
+|Подпрограммы|Обязательный заголовок|  
+|--------------|---------------------|  
+|`_atodbl`, `_atoldbl`, `_atoflt`<br /><br /> `_atodbl_l`, `_atoldbl_l`, `_atoflt_l`|\<stdlib.h>|  
   
-## Пример  
+## <a name="example"></a>Пример  
   
 ```  
 // crt_atodbl.c  
@@ -169,16 +170,22 @@ int main()
 }  
 ```  
   
-  **Double значение: 3.141593**  
-**Возвращаемое значение: 0**  
-**Float значение: 3.141593**  
-**Возвращаемое значение: 0**  
-**Float значение: 0.000000**  
-**Возвращаемое значение: 0**  
-**Float значение: 1.\#INF00**  
-**Возвращаемое значение: 3**   
-## См. также  
+```Output  
+Double value: 3.141593  
+Return value: 0  
+  
+Float value: 3.141593  
+Return value: 0  
+  
+Float value: 0.000000  
+Return value: 0  
+  
+Float value: 1.#INF00  
+Return value: 3  
+```  
+  
+## <a name="see-also"></a>См. также  
  [Преобразование данных](../../c-runtime-library/data-conversion.md)   
  [Поддержка чисел с плавающей запятой](../../c-runtime-library/floating-point-support.md)   
  [Языковой стандарт](../../c-runtime-library/locale.md)   
- [atof, \_atof\_l, \_wtof, \_wtof\_l](../../c-runtime-library/reference/atof-atof-l-wtof-wtof-l.md)
+ [atof, _atof_l, _wtof, _wtof_l](../../c-runtime-library/reference/atof-atof-l-wtof-wtof-l.md)

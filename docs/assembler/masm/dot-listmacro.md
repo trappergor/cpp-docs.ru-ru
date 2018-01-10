@@ -1,33 +1,31 @@
 ---
-title: ".LISTMACRO | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - ".LISTMACRO"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - ".LISTMACRO directive"
+title: ". LISTMACRO | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: .LISTMACRO
+dev_langs: C++
+helpviewer_keywords: .LISTMACRO directive
 ms.assetid: f8dadf8c-ca6f-4bb9-a4f8-86a0e769a845
-caps.latest.revision: 7
-caps.handback.revision: 7
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
+caps.latest.revision: "7"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 6f7ed9e0fde8137fb9b2098b74b6ca6965a2e325
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 12/21/2017
 ---
-# .LISTMACRO
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Запускает листинг выписок расширения макроса, которые создают код или данные.  
+# <a name="listmacro"></a>.LISTMACRO
+Запускает перечисление инструкций расширения макроса, создание кода или данных.  
   
-## Синтаксис  
+## <a name="syntax"></a>Синтаксис  
   
 ```  
   
@@ -35,8 +33,8 @@ manager: "ghogen"
   
 ```  
   
-## Заметки  
- Это значение по умолчанию.  Аналогично .XALL.  
+## <a name="remarks"></a>Примечания  
+ Это значение по умолчанию. То же, что [. XALL](../../assembler/masm/dot-xall.md).  
   
-## См. также  
- [Directives Reference](../../assembler/masm/directives-reference.md)
+## <a name="see-also"></a>См. также  
+ [Справочник по директивам](../../assembler/masm/directives-reference.md)

@@ -23,11 +23,12 @@ caps.latest.revision: "21"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: ef8ca542ef9bda72bd89b633d42db727bce3e94a
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 827ba99a141799af42fab65c36df1f22d212260a
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="ccomcriticalsection-class"></a>Класс CComCriticalSection
 Этот класс предоставляет методы для получения и освобождения владения объект критической секции.  
@@ -38,17 +39,17 @@ ms.lasthandoff: 10/24/2017
 class CComCriticalSection
 ```  
   
-## <a name="members"></a>Члены  
+## <a name="members"></a>Участники  
   
 ### <a name="public-constructors"></a>Открытые конструкторы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[CComCriticalSection::CComCriticalSection](#ccomcriticalsection)|Конструктор.|  
   
 ### <a name="public-methods"></a>Открытые методы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[CComCriticalSection::Init](#init)|Создает и инициализирует объект критической секции.|  
 |[CComCriticalSection::Lock](#lock)|Получает права владельца объекта критической секции.|  
@@ -57,7 +58,7 @@ class CComCriticalSection
   
 ### <a name="public-data-members"></a>Открытые члены данных  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[CComCriticalSection::m_sec](#m_sec)|Объект **CRITICAL_SECTION** объекта.|  
   

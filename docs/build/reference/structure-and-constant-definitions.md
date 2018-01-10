@@ -1,26 +1,27 @@
 ---
-title: "Определение структуры и константы | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
+title: "Определение структуры и константы | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
 ms.assetid: 1df7cf46-b853-4788-a257-100d5c37997f
-caps.latest.revision: 7
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 4f77c74ab4b8c72973526007b2496554f5e672ac
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 12/21/2017
 ---
-# Определение структуры и константы
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Подпрограмма поддержки по умолчанию использует несколько структур для обмена информацией с функциями обработчика и во время каких\-либо исключений.  Ниже приведены уведомления и значения ошибки, структуры сведений, тип указателя на обработчик функции, который передается обработчикам:  
+# <a name="structure-and-constant-definitions"></a>Определение структуры и константы
+Вспомогательная подпрограмма по умолчанию использует несколько структур для обмена данными с функциями обработчика и во время исключения. Ниже приведены уведомления и значения ошибки, структуры данных и тип указателя на обработчик функции передается обработчикам.  
   
 ```  
 //  
@@ -78,5 +79,5 @@ typedef struct ImgDelayDescr {
     } ImgDelayDescr, * PImgDelayDescr;  
 ```  
   
-## См. также  
+## <a name="see-also"></a>См. также  
  [Понятие вспомогательной функции](../../build/reference/understanding-the-helper-function.md)

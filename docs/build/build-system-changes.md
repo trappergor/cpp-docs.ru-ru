@@ -22,11 +22,12 @@ caps.latest.revision: "13"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 90266f54dd6972e68abe770bad4ee323eebf46b7
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 59d30e2afd07c21cb42dbc2b9109d7547d6c5b9f
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="build-system-changes"></a>Изменения системы построения
 Система MSBuild используется для построения проектов Visual C++. Однако в Visual Studio 2008 и более ранних версий, использовался VCBuild системы. Определенные типы файлов и основные понятия, которые зависят от VCBuild не существуют или представлены по-разному в текущей системе. В этом документе описываются различия в текущей системе сборки.  

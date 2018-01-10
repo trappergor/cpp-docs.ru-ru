@@ -37,11 +37,12 @@ caps.latest.revision: "25"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 40fba941afd4f5acd8883acdf236273b72afb60c
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 22561495a972c7561f827c4b7f445bb3fa5c256f
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="gcvt"></a>_gcvt
 Преобразует значение с плавающей запятой в строку и сохраняет ее в буфер. Существует более безопасная версия этой функции; см. раздел [_gcvt_s](../../c-runtime-library/reference/gcvt-s.md).  

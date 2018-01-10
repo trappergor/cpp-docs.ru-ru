@@ -40,11 +40,12 @@ caps.latest.revision: "14"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 3e455fd53bcbf981cccd5b75b44738070eb614d0
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 635338ed1cc314fda94be55c2802d9ec666b42f3
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="filelength-filelengthi64"></a>_filelength, _filelengthi64
 Получает длину файла.  
@@ -86,4 +87,4 @@ __int64 _filelengthi64(
  [_fstat, _fstat32, _fstat64, _fstati64, _fstat32i64, _fstat64i32](../../c-runtime-library/reference/fstat-fstat32-fstat64-fstati64-fstat32i64-fstat64i32.md)   
  [_fstat, _fstat32, _fstat64, _fstati64, _fstat32i64, _fstat64i32](../../c-runtime-library/reference/fstat-fstat32-fstat64-fstati64-fstat32i64-fstat64i32.md)   
  [Функции _stat, _wstat](../../c-runtime-library/reference/stat-functions.md)   
- [Функции _stat, _wstat](../../c-runtime-library/reference/stat-functions.md)
+ [_stat, _wstat Functions](../../c-runtime-library/reference/stat-functions.md)

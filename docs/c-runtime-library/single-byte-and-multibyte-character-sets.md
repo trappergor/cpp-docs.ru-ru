@@ -19,11 +19,12 @@ caps.latest.revision: "8"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 9f7f9cfe98e243cb9eaa0252889b61e6c6019d89
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: b1ee6738d55f2a925c510ff342cd289f26bc8669
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="single-byte-and-multibyte-character-sets"></a>Однобайтовые и многобайтовые кодировки
 Кодировка ASCII определяет символы в диапазоне от 0x00 до 0x7F. Существует ряд других кодировок, в основном европейских, которые определяют символы в диапазоне от 0x00 до 0x7F, идентичные кодировке ASCII, а также символы национальных алфавитов в диапазоне от 0x80 до 0xFF. Так, 8-битовой (однобайтовой) кодировки (`SBCS`) достаточно для представления кодировки ASCII, а также кодировки для большинства европейских языков. Однако некоторые не европейские кодировки, например Кандзи (японский), включают намного больше символов, чем может представить схема однобайтовой кодировки, и поэтому для них используется многобайтовая кодировка (`MBCS`).  

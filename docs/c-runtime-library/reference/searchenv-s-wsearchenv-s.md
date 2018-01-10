@@ -47,11 +47,12 @@ caps.latest.revision: "32"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 8d2b78a892308b6984ef11d317cf46c1d46ca6ef
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 6f1089aa1f772832417168a2262fa72069b3ede7
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="searchenvs-wsearchenvs"></a>_searchenv_s, _wsearchenv_s
 Ищет файл, используя пути в среде. Это версии функций [_searchenv, _wsearchenv](../../c-runtime-library/reference/searchenv-wsearchenv.md) с повышенной безопасностью, как описано в разделе [Усовершенствования безопасности в CRT](../../c-runtime-library/security-features-in-the-crt.md).  
@@ -110,9 +111,9 @@ errno_t _wsearchenv_s(
   
 |`filename`|`varname`|`pathname`|`numberOfElements`|Возвращаемое значение|Содержимое `pathname`|  
 |----------------|---------------|----------------|------------------------|------------------|----------------------------|  
-|any|любые|`NULL`|any|`EINVAL`|Н/Д|  
-|`NULL`|любые|любые|любые|`EINVAL`|не изменено|  
-|any|любые|any|<= 0|`EINVAL`|не изменено|  
+|any|any|`NULL`|any|`EINVAL`|Н/Д|  
+|`NULL`|any|any|any|`EINVAL`|не изменено|  
+|any|any|any|<= 0|`EINVAL`|не изменено|  
   
  Если выполняется какое-либо из этих условий возникновения ошибки, вызывается обработчик недопустимого параметра, как описано в разделе [Проверка параметров](../../c-runtime-library/parameter-validation.md). Если выполнение может быть продолжено, эти функции устанавливают параметр `errno` в значение `EINVAL` и возвращают значение `EINVAL`.  
   
@@ -125,9 +126,9 @@ errno_t _wsearchenv_s(
   
  `_wsearchenv_s` — это двухбайтовая версия `_searchenv_s`; аргументы для `_wsearchenv_s` представляют собой двухбайтовые строки. Поведение `_wsearchenv_s` и `_searchenv_s` идентично в противном случае.  
   
- В C++ использование данных функций упрощено наличием шаблонных перегрузок; перегруженные методы могут автоматически определять длину буфера (что исключает необходимость указания аргумента с размером буфера), а также они могут автоматически заменять более старые, незащищенные функции их новыми безопасными аналогами. Дополнительные сведения см. в разделе [Безопасные перегрузки шаблонов](../../c-runtime-library/secure-template-overloads.md).  
+ В C++ использование данных функций упрощено наличием шаблонных перегрузок; перегруженные методы могут автоматически определять длину буфера (что исключает необходимость указания аргумента с размером буфера), а также они могут автоматически заменять более старые, незащищенные функции их новыми безопасными аналогами. Дополнительные сведения см. в разделе [Secure Template Overloads](../../c-runtime-library/secure-template-overloads.md).  
   
-### <a name="generic-text-routine-mappings"></a>Универсальное текстовое сопоставление функций  
+### <a name="generic-text-routine-mappings"></a>Сопоставления подпрограмм обработки обычного текста  
   
 |Подпрограмма Tchar.h|_UNICODE и _MBCS не определены|_MBCS определено|_UNICODE определено|  
 |---------------------|--------------------------------------|--------------------|-----------------------|  

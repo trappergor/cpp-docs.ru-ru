@@ -24,11 +24,12 @@ caps.latest.revision: "11"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 35064566c7a6b1c2e5ad468e9b32f58dcba40808
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 18fdaf0c2cb980f1ed19fdfc0577769a9985cf85
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="u-u-undefine-symbols"></a>Параметры /U и /u (отмена определения символа)
 **/U** параметр компилятора отменяет определение заданного символа препроцессора. **/U** параметр компилятора определений символов характерные для Майкрософт, которые компилятор определяет.  

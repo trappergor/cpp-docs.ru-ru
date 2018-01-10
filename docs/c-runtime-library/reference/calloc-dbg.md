@@ -4,12 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
-apiname:
-- _calloc_dbg
+apiname: _calloc_dbg
 apilocation:
 - msvcrt.dll
 - msvcr80.dll
@@ -25,37 +23,21 @@ apitype: DLLExport
 f1_keywords:
 - _calloc_dbg
 - calloc_dbg
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - _calloc_dbg function
 - calloc_dbg function
 ms.assetid: 7f62c42b-eb9f-4de5-87d0-df57036c87de
-caps.latest.revision: 18
+caps.latest.revision: "18"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: e257f037a05c45f5b98e64ea55bd125af443b0be
-ms.openlocfilehash: 47b4e27d52235b833f01848521c85e79dbe1ffae
-ms.contentlocale: ru-ru
-ms.lasthandoff: 03/30/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: 4295dd84e8066de0906a6fcd7b154c94875f7f5e
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="callocdbg"></a>_calloc_dbg
 Выделяет ряд блоков памяти в куче с дополнительным пространством для заголовка отладки и буферов перезаписи (только отладочная версия).  
@@ -96,7 +78,7 @@ void *_calloc_dbg(
  При успешном выполнении эта функция возвращает указатель на пользовательскую часть выделенного блока памяти, вызывает новую функцию обработчика или возвращает значение `NULL`. Полное описание поведения возвращения см. в разделе "Примечания". Дополнительные сведения о том, как используется новая функция обработчика, см. в описании функции [calloc](../../c-runtime-library/reference/calloc.md).  
   
 ## <a name="remarks"></a>Примечания  
- `_calloc_dbg` — это отладочная версия функции [calloc](../../c-runtime-library/reference/calloc.md). Если функция [_DEBUG](../../c-runtime-library/debug.md) не определена, каждый вызов функции `_calloc_dbg` сокращается до вызова функции `calloc`. Обе функции, `calloc` и `_calloc_dbg`, выделяют блоки памяти `num` в основной куче, но `_calloc_dbg` предлагает несколько функций отладки:  
+ `_calloc_dbg` — это отладочная версия функции [calloc](../../c-runtime-library/reference/calloc.md). Если [_DEBUG](../../c-runtime-library/debug.md) не определен, каждый вызов функции `_calloc_dbg` сокращается до вызова функции `calloc`. Обе функции, `calloc` и `_calloc_dbg`, выделяют блоки памяти `num` в основной куче, но `_calloc_dbg` предлагает несколько функций отладки:  
   
 -   Буферы с обеих сторон пользовательской части блока, которые необходимо проверить на наличие утечек.  
   
@@ -159,7 +141,7 @@ Allocated memory successfully
 ```  
   
 ## <a name="see-also"></a>См. также  
- [Процедуры отладки](../../c-runtime-library/debug-routines.md)   
+ [Подпрограммы отладки](../../c-runtime-library/debug-routines.md)   
  [calloc](../../c-runtime-library/reference/calloc.md)   
  [_malloc_dbg](../../c-runtime-library/reference/malloc-dbg.md)   
  [_DEBUG](../../c-runtime-library/debug.md)

@@ -18,11 +18,12 @@ caps.latest.revision: "25"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 30527a705d880e96620edfee5f7ad7897f9371a7
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 6a5a43af31a88420c154d7a57d27d2b69787d11d
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="fundamentals-of-atl-com-objects"></a>Основные принципы работы COM-объекты ATL
 На следующем рисунке показана связь между классы и интерфейсы, которые используются для определения ATL COM-объекта.  
@@ -54,7 +55,7 @@ ms.lasthandoff: 10/24/2017
   
 -   [ISupportErrorInfoImpl](../atl/reference/isupporterrorinfoimpl-class.md) реализует **ISupportErrorInfo** интерфейс, который обеспечивает сведения об ошибках могут копироваться в цепочке вызовов правильно.  
   
-## <a name="in-this-section"></a>Содержание  
+## <a name="in-this-section"></a>В этом разделе  
  [Реализация CComObjectRootEx](../atl/implementing-ccomobjectrootex.md)  
  Показать пример записях сопоставления COM. для реализации `CComObjectRootEx`.  
   

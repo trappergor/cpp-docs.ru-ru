@@ -22,11 +22,12 @@ caps.latest.revision: "7"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 10f2eb4597808f726d55c3ece76b99c394d691c3
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 446e15a6f578413cf3f0ddefa980303c10a5d280
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="calls-with-a-variable-number-of-arguments"></a>Вызовы с переменным количеством аргументов
 Частичный список параметров может завершаться многоточием (запятая и три точки за ней: **, ...**). Это означает возможность передать функции еще несколько аргументов, о которых не предоставляется дополнительной информации. Проверка типов в таких аргументах не выполняется. Хотя бы один параметр должен предшествовать блоку многоточия, и этот блок должен являться последним токеном в списке параметров. Без блока многоточия поведение функции является неопределенным, если она получает параметры в добавление к объявленным в списке параметров.  

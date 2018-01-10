@@ -1,53 +1,56 @@
 ---
-title: "Обмен данными с полями записей (RFX). Работа с кодом мастера | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "DoFieldExchange - метод, переопределение"
-  - "члены данных полей"
-  - "члены данных полей, объявление"
-  - "m_nFields - элемент данных"
-  - "m_nFields - элемент данных, инициализация"
-  - "m_nParams - элемент данных"
-  - "m_nParams - элемент данных, инициализация"
-  - "ODBC, RFX"
-  - "переопределение, DoFieldExchange"
-  - "RFX (ODBC), реализация"
-  - "RFX (ODBC), код мастера"
-  - "Юникод, с помощью классов баз данных"
+title: "Обмен полями записей: Работа с кодом мастера | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- DoFieldExchange method, overriding
+- Unicode, with database classes
+- field data members, declaring
+- RFX (ODBC), wizard code
+- RFX (ODBC), implementing
+- field data members
+- ODBC, RFX
+- m_nParams data member, initializing
+- m_nFields data member
+- m_nParams data member
+- overriding, DoFieldExchange
+- m_nFields data member, initializing
 ms.assetid: f00d882a-ff1b-4a75-9717-98d8762bb237
-caps.latest.revision: 8
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: 8909a9e933e7b3f1c59fa9ab283706f7a6d1f0c0
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 12/21/2017
 ---
-# Обмен данными с полями записей (RFX). Работа с кодом мастера
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-В этом разделе объясняется написание кода для RFX с помощью мастера приложения MFC и **Добавление класса** \(как описано в разделе [Добавление объекта\-получателя MFC ODBC](../../mfc/reference/adding-an-mfc-odbc-consumer.md)\), а также его изменение.  
+# <a name="record-field-exchange-working-with-the-wizard-code"></a>Обмен данными с полями записей (RFX). Работа с кодом мастера
+В этом разделе объясняется, мастер приложений MFC и **добавить класс** (как описано в [Добавление потребителя ODBC MFC](../../mfc/reference/adding-an-mfc-odbc-consumer.md)) для поддержки RFX и способ изменить этот код.  
   
 > [!NOTE]
->  В этом разделе описываются классы, производные от `CRecordset`, в которых не была реализована групповая выборка строк.  При использовании групповой выборки строк реализуется групповой обмен данными с полями записей \(групповой RFX\).  Групповой RFX и обычный RFX похожи.  Описание различий см. в разделе [Набор записей: групповая выборка записей ODBC](../Topic/Recordset:%20Fetching%20Records%20in%20Bulk%20\(ODBC\).md).  
+>  Этот раздел относится к классы, производные от `CRecordset` в какой строке массовая выборка не был реализован. Если вы используете выборка строк, реализуется блочный обмен полей записей (Bulk RFX). Bulk RFX аналогичен RFX. О различиях в разделе [набор записей: групповая выборка записей (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md).  
   
- При создании класса набора записей с помощью мастера приложений MFC или возможности **Добавление класса**, мастер создает следующие элементы RFX на основе источника данных, таблицы и выбора столбцов, отмеченных в мастере:  
+ При создании класса набора записей с помощью мастера приложений MFC или **Добавление класса**, мастер создает следующие элементы RFX для вас, основанный на источнике данных, таблицы и выбора столбцов, отмеченных в мастере:  
   
--   Объявления элементов полей с данными набора записей в классе набора записей  
+-   Объявления элементов данных полей набора записей в классе набора записей  
   
--   Переопределение `CRecordset::DoFieldExchange`  
+-   Переопределение`CRecordset::DoFieldExchange`  
   
--   Инициализация элементов полей с данными набора записей в конструкторе класса набора записей  
+-   Инициализация элементов данных полей набора записей в конструкторе класса набора записей  
   
-##  <a name="_core_the_field_data_member_declarations"></a> Объявления элементов полей с данными  
- Мастер прописывает объявления класса набора записей в H\-файле, который похож на класс `CSections`, следующим образом:  
+##  <a name="_core_the_field_data_member_declarations"></a>Объявления элементов данных полей  
+ Мастер прописывает объявления класса набора записей в h-файле, подобное приведенному ниже, для класса `CSections`:  
   
 ```  
 class CSections : public CRecordset  
@@ -79,14 +82,15 @@ public:
 };  
 ```  
   
- При добавлении элементов данных параметров или создании элементов полей с данными их следует добавить после сформированных мастером.  
+ При добавлении элементов данных параметров или нового поля элементов данных, которые вы самостоятельно привязать, их необходимо добавьте после сформированных мастером.  
   
- Также следует обратить внимание на то, что мастер переопределяет функцию\-член `DoFieldExchange` класса `CRecordset`.  
+ Кроме того, обратите внимание, что мастер переопределяет `DoFieldExchange` функции-члена класса `CRecordset`.  
   
-##  <a name="_core_the_dofieldexchange_override"></a> Переопределение DoFieldExchange  
- [DoFieldExchange](../Topic/CRecordset::DoFieldExchange.md) является основой RFX.  Платформа вызывает `DoFieldExchange` каждый раз, когда требуется переместить данные либо из источника данных в набор записей, либо из набора записей в источник данных.  `DoFieldExchange` также поддерживает получение информации об элементах данных полей с помощью функций\-членов [IsFieldDirty](../Topic/CRecordset::IsFieldDirty.md) и [IsFieldNull](../Topic/CRecordset::IsFieldNull.md).  
+##  <a name="_core_the_dofieldexchange_override"></a>DoFieldExchange переопределения  
+
+ [DoFieldExchange](../../mfc/reference/crecordset-class.md#dofieldexchange) является сердцем RFX. Платформа вызывает `DoFieldExchange` любое время, необходимое для перемещения данных из источника данных в набор записей, либо из набора записей в источник данных. `DoFieldExchange`также поддерживает получение сведений о поле членов данных с помощью [IsFieldDirty](../../mfc/reference/crecordset-class.md#isfielddirty) и [IsFieldNull](../../mfc/reference/crecordset-class.md#isfieldnull) функции-члены.  
   
- Ниже приводится переопределение `DoFieldExchange` для класса `CSections`.  Мастер записывает функцию в .СРР\-файл для класса набора записей.  
+ Следующие `DoFieldExchange` — переопределение для `CSections` класса. Мастер записывает функцию в CPP-файл для класса набора записей.  
   
 ```  
 void CSections::DoFieldExchange(CFieldExchange* pFX)  
@@ -100,27 +104,27 @@ void CSections::DoFieldExchange(CFieldExchange* pFX)
 }  
 ```  
   
- Обратите внимание на следующие ключевые возможности функции:  
+ Обратите внимание, следующие основные возможности функции:  
   
--   Эта секция функции называется сопоставлением поля.  
+-   В этом разделе функция вызывается сопоставления полей.  
   
--   Вызов `CFieldExchange::SetFieldType` с помощью указателя `pFX`.  Этот вызов указывает, что все вызовы функций RFX до конца `DoFieldExchange` либо следующий вызов `SetFieldType` являются столбцами вывода.  Дополнительные сведения см. в описании [CFieldExchange::SetFieldType](../Topic/CFieldExchange::SetFieldType.md).  
+-   Вызов `CFieldExchange::SetFieldType`, с помощью `pFX` указателя. Этот вызов указывает, что все вызовы функций RFX до конца `DoFieldExchange` или при следующем вызове `SetFieldType` выходных столбцов. Дополнительные сведения см. в разделе [CFieldExchange::SetFieldType](../../mfc/reference/cfieldexchange-class.md#setfieldtype).  
   
--   Несколько вызовов глобальной функции `RFX_Text` — по одному на каждый элемент поля данных \(все они являются переменными типа `CString` в данном примере\).  Эти вызовы определяют связь между именем столбца в источнике данных и элементом поля данных.  Функции RFX выполняют реальное перемещение данных.  Библиотека классов предоставляет функции RFX для всех распространенных типов данных.  Дополнительные сведения о функциях RFX см. в разделе [Обмен данными с полями записей. Использование функций RFX](../../data/odbc/record-field-exchange-using-the-rfx-functions.md).  
+-   Несколько вызовов `RFX_Text` глобальной функции — по одной на каждый элемент поля данных (все они являются `CString` перемен в примере). Эти вызовы определяют связь между именем столбца в источнике данных и элементом поля данных. Функции RFX выполняют реальное перемещение данных. Библиотека классов предоставляет функции RFX для основных типов данных. Дополнительные сведения о функциях RFX см. в разделе [обмен полями записей: использование функций RFX](../../data/odbc/record-field-exchange-using-the-rfx-functions.md).  
   
     > [!NOTE]
-    >  Порядок столбцов полученного результата должен соответствовать порядку вызовов функции RFX в `DoFieldExchange`.  
+    >  Порядок столбцов в результирующий набор должен соответствовать порядку вызовов функции RFX в `DoFieldExchange`.  
   
--   Указатель `pFX` на объект [CFieldExchange](../../mfc/reference/cfieldexchange-class.md), который передается платформой, когда она вызывает `DoFieldExchange`.  Объект `CFieldExchange` указывает операцию, которую необходимо `DoFieldExchange` выполнить, направление перемещения и другую контекстную информацию.  
+-   `pFX` Указатель [разделе](../../mfc/reference/cfieldexchange-class.md) объект, который передается платформой, когда она вызывает `DoFieldExchange`. `CFieldExchange` Объекта указывает операцию, `DoFieldExchange` выполнить, направление передачи и другой контекстной информации.  
   
-##  <a name="_core_the_recordset_constructor"></a> Конструктор набора записей  
+##  <a name="_core_the_recordset_constructor"></a>Конструктор набора записей  
  Написанный мастером конструктор набора записей содержит две вещи, относящиеся к RFX:  
   
--   Инициализацию для каждого элемента поля данных  
+-   Инициализацию для каждого элемента данных поля  
   
--   Инициализацию для элемента данных [m\_nFields](../Topic/CRecordset::m_nFields.md), который содержит число элементов поля данных  
+-   Инициализацию для [m_nFields](../../mfc/reference/crecordset-class.md#m_nfields) элемента данных, которое содержит количество элементов данных полей  
   
- Конструктор для примера набора записей `CSections` представлен таким образом:  
+ Конструктор `CSections` примера набора записей выглядит следующим образом:  
   
 ```  
 CSections::CSections(CDatabase* pdb)  
@@ -136,13 +140,14 @@ CSections::CSections(CDatabase* pdb)
 ```  
   
 > [!NOTE]
->  Если элементы поля данных добавляются вручную, например, чтобы выполнить динамическую привязку столбца, необходимо увеличить `m_nFields`.  Это можно сделать добавлением строки кода, такого как:  
+>  Если элементы поля данных добавляются вручную, например, чтобы выполнить динамическую привязку новых столбцов, необходимо увеличить `m_nFields`. Для этого добавлением строки кода, такие как:  
   
 ```  
 m_nFields += 3;  
 ```  
+
+ Это код для добавления трех новых полей. При добавлении элементов данных параметров, следует инициализировать [m_nParams](../../mfc/reference/crecordset-class.md#m_nparams) элемента данных, которое содержит количество элементов данных параметров. Поместите `m_nParams` за скобки.  
+
   
- Этот код добавляет три новых поля.  При добавлении элементов данных параметров, следует инициализировать элемент данных [m\_nParams](../Topic/CRecordset::m_nParams.md), который содержит количество элементов данных параметров.  Вынесите настройку `m_nParams` за скобки.  
-  
-## См. также  
- [Обмен данными полями записей \(RFX\)](../../data/odbc/record-field-exchange-rfx.md)
+## <a name="see-also"></a>См. также  
+ [Обмен данными полей записей (RFX)](../../data/odbc/record-field-exchange-rfx.md)

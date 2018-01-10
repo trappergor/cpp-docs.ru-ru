@@ -18,14 +18,15 @@ caps.latest.revision: "8"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: f3defc694e2ac3f859c160a2e34aecefd42627c4
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: fa558129368559f3edddf9037f7f504933eb2563
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="maximum-string-length"></a>Максимальная длина строки
-**Блок, относящийся только к системам Майкрософт**  
+**Блок, относящийся только к системам Microsoft**  
   
  В режиме совместимости с ANSI требуется, чтобы компилятор принимал до 509 символов в строковом литерале после объединения. Максимальная допустимая длина строкового литерала в Microsoft C — приблизительно 2048 байтов. Однако если строковый литерал состоит из двух частей, заключенных в двойные кавычки, препроцессор объединяет эти части в одну строку, и для каждой объединенной строки добавляет дополнительный байт к общему количеству байтов.  
   

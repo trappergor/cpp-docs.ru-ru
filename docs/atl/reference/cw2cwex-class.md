@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-windows
+ms.technology: cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
@@ -13,35 +12,19 @@ f1_keywords:
 - ATLCONV/ATL::CW2CWEX
 - ATLCONV/ATL::CW2CWEX::CW2CWEX
 - ATLCONV/ATL::CW2CWEX::m_psz
-dev_langs:
-- C++
-helpviewer_keywords:
-- CW2CWEX class
+dev_langs: C++
+helpviewer_keywords: CW2CWEX class
 ms.assetid: d654b22b-05a6-410f-a0ec-9a2cbbb4cca7
-caps.latest.revision: 20
+caps.latest.revision: "20"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: d2d39abf526a58b8442107b5ee816f316ae841f5
-ms.openlocfilehash: 5dca6b31cdd99582e727b634093c3548eef2ecc1
-ms.contentlocale: ru-ru
-ms.lasthandoff: 03/31/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: a83f0fefed5e2393c303038346e3b84ec1a3d570
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cw2cwex-class"></a>Класс CW2CWEX
 Этот класс используется макросы преобразования строк `CW2CTEX` и `CT2CWEX`и определение типа `CW2W`.  
@@ -60,24 +43,24 @@ class CW2CWEX
  `t_nBufferLength`  
  Размер буфера, используемого в процессе перевода. Длина по умолчанию — 128 байт.  
   
-## <a name="members"></a>Члены  
+## <a name="members"></a>Участники  
   
 ### <a name="public-constructors"></a>Открытые конструкторы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[CW2CWEX::CW2CWEX](#cw2cwex)|Конструктор.|  
 |[CW2CWEX:: ~ CW2CWEX](#dtor)|Деструктор|  
   
 ### <a name="public-operators"></a>Открытые операторы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[CW2CWEX::operator — LPCWSTR](#operator_lpcwstr)|Оператор преобразования.|  
   
 ### <a name="public-data-members"></a>Открытые члены данных  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[CW2CWEX::m_psz](#m_psz)|Элемент данных, который хранит исходную строку.|  
   
@@ -156,4 +139,3 @@ operator LPCWSTR() const throw();
  [Класс CW2AEX](../../atl/reference/cw2aex-class.md)   
  [Класс CW2WEX](../../atl/reference/cw2wex-class.md)   
  [Общие сведения о классе](../../atl/atl-class-overview.md)
-

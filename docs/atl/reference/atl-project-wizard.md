@@ -17,11 +17,12 @@ caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: e547f09e303386d3bb28ebd9dab94854ee67599e
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 373e39461aed7c3aadb7107e61a8aecab1177ee7
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="atl-project-wizard"></a>Мастер проектов ATL
 Active Template Library (ATL) — это набор основанных на шаблонах классов C++, которые упрощают создание простой и быстрый COM-объектов. Мастер проектов ATL создает проект со структурами COM-объектами.  
@@ -54,7 +55,7 @@ Active Template Library (ATL) — это набор основанных на ш
  Можно задать свойства проекта (например, [ли статическую компоновку с CRT](../../atl/programming-with-atl-and-c-run-time-code.md)) в [свойства проекта](../../ide/general-property-page-project.md) страницы и можно задать [конфигурации построения](/visualstudio/ide/understanding-build-configurations) для Проект ATL. В разделе [с помощью проектов для построения приложений](http://msdn.microsoft.com/en-us/3339fa90-bac2-4b95-8361-662a2e0e7dfe) для получения дополнительной информации.  
   
 ## <a name="see-also"></a>См. также  
- [Создание и управление проектами Visual C++](../../ide/creating-and-managing-visual-cpp-projects.md)   
+ [Создание проектов Visual C++ и управление ими](../../ide/creating-and-managing-visual-cpp-projects.md)   
  [Типы проектов Visual C++](../../ide/visual-cpp-project-types.md)   
  [Создание проектов для рабочего стола с помощью мастеров приложений](../../ide/creating-desktop-projects-by-using-application-wizards.md)   
  [Основные принципы работы COM-объекты ATL](../../atl/fundamentals-of-atl-com-objects.md)   

@@ -13,11 +13,12 @@ caps.latest.revision: "13"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: e8f016d6aa223d1532c90dcd9e82812444195b11
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 59c59cf6e17e763d0e672d2bc0c33d6d55c609dc
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="arm-assembler-reference"></a>Справочник по ассемблеру ARM
 
@@ -25,7 +26,7 @@ ms.lasthandoff: 10/24/2017
   
 ## <a name="related-articles"></a>Связанные статьи  
   
-|Заголовок|Описание|  
+|Заголовок|Описание:|  
 |-----------|-----------------|  
 |[Справочник по командной строке ассемблера ARM](../../assembler/arm/arm-assembler-command-line-reference.md)|Описание параметров командной строки armasm.|  
 |[Диагностические сообщения ассемблера ARM](../../assembler/arm/arm-assembler-diagnostic-messages.md)|Описывает часто встречающихся armasm предупреждения и сообщения об ошибках.|  

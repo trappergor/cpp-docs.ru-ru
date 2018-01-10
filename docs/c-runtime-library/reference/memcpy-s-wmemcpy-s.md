@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
 apiname:
@@ -27,36 +26,21 @@ apitype: DLLExport
 f1_keywords:
 - wmemcpy_s
 - memcpy_s
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - memcpy_s function
 - wmemcpy_s function
 ms.assetid: 5504e20a-83d9-4063-91fc-3f55f7dabe99
-caps.latest.revision: 27
+caps.latest.revision: "27"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.mt:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: e257f037a05c45f5b98e64ea55bd125af443b0be
-ms.openlocfilehash: 44d9ecb713c0fa85f11c3d01b5a15707b0bfaf57
-ms.contentlocale: ru-ru
-ms.lasthandoff: 03/30/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: 5748077731b07a0deeb4e601221b0ba412be391f
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="memcpys-wmemcpys"></a>memcpy_s, wmemcpy_s
 Копирует байты между буферами. Это версии функций [memcpy, wmemcpy](../../c-runtime-library/reference/memcpy-wmemcpy.md) с усовершенствованной безопасностью, как описано в разделе [Усовершенствования безопасности в CRT](../../c-runtime-library/security-features-in-the-crt.md).  
@@ -98,10 +82,10 @@ errno_t wmemcpy_s(
   
 |`dest`|`destSize`|`src`|`count`|Возвращаемое значение|Содержимое `dest`|  
 |------------|----------------|-----------|---|------------------|------------------------|  
-|any|любые|любые|0|0|Без изменений|  
-|`NULL`|любые|любые|ненулевое значение|`EINVAL`|Без изменений|  
-|любые|любые|`NULL`|ненулевое значение|`EINVAL`|`dest` обнуляется|  
-|любые|< `count`|любые|ненулевое значение|`ERANGE`|`dest` обнуляется|  
+|any|any|any|0|0|Без изменений|  
+|`NULL`|any|any|ненулевое значение|`EINVAL`|Без изменений|  
+|any|any|`NULL`|ненулевое значение|`EINVAL`|`dest` обнуляется|  
+|any|< `count`|any|ненулевое значение|`ERANGE`|`dest` обнуляется|  
   
 ## <a name="remarks"></a>Примечания  
  `memcpy_s` копирует `count` байт из `src` в `dest`; `wmemcpy_s` копирует `count` расширенных символов (двухбайтовых). При перекрытии исходного и конечного буферов поведение `memcpy_s` не определено. Используйте `memmove_s` для обработки перекрывающихся областей.  

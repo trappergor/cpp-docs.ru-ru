@@ -16,11 +16,12 @@ caps.latest.revision: "26"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 467888dc773a8d84e5a1b3fc1fd2c337b06654be
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: f2d72ddda460a88830f7f7692f4c9707fa3101a7
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="profile-guided-optimizations"></a>Профильная оптимизация
 Профильная оптимизация позволяет оптимизировать выходной файл, используя данные из тестовых запусков EXE- или DLL-файла. Данные представляют, как программа, вероятно, будет работать в рабочей среде.  
@@ -80,7 +81,7 @@ ms.lasthandoff: 10/24/2017
   
  Дополнительные сведения о ручной оптимизации в Интегрированной среде разработки или в командной строке см. в разделе [профиль подключаемый модуль профильной оптимизации](../../build/reference/profile-guided-optimization-in-the-performance-and-diagnostics-hub.md).  
   
-## <a name="in-this-section"></a>Содержание  
+## <a name="in-this-section"></a>В этом разделе  
  [Подключаемый модуль профильной оптимизации](../../build/reference/profile-guided-optimization-in-the-performance-and-diagnostics-hub.md)  
   
  [Средства для профильной оптимизации вручную](../../build/reference/tools-for-manual-profile-guided-optimization.md)  

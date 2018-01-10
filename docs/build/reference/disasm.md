@@ -1,41 +1,41 @@
 ---
-title: "/DISASM | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "/disasm"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "/DISASM - параметр программы dumpbin"
-  - "DISASM - параметр (программа dumpbin)"
-  - "-DISASM - параметр (программа dumpbin)"
+title: "-DISASM | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: /disasm
+dev_langs: C++
+helpviewer_keywords:
+- -DISASM dumpbin option
+- DISASM dumpbin option
+- /DISASM dumpbin option
 ms.assetid: 5f6d1fde-50ce-486d-9c1d-9372b7f7b533
-caps.latest.revision: 7
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: e4d55bf94f5316ebd70a13d73d042a46e1cd012d
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 12/21/2017
 ---
-# /DISASM
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="disasm"></a>/DISASM
 ```  
 /DISASM  
 ```  
   
-## Заметки  
- Данный параметр отображает дизассемблирование разделов кода с помощью символов, если таковые содержатся в файле.  
+## <a name="remarks"></a>Примечания  
+ Этот параметр отображает Дизассемблирование разделов кода с использованием символов, если они отсутствуют в файле.  
   
- Параметр \/DISASM следует использовать только для машинных \(не управляемых\) образов.  
+ / DISASM должен использоваться только для образов в машинном коде (неуправляемой).  
   
- В файлах, созданных с использованием параметра компилятора [\/GL](../../build/reference/gl-whole-program-optimization.md), может использоваться только параметр DUMPBIN [\/HEADERS](../../build/reference/headers.md).  
+ Только [/Headers](../../build/reference/headers.md) параметр программы DUMPBIN доступна для использования в файлах, созданных с помощью [/GL](../../build/reference/gl-whole-program-optimization.md) параметр компилятора.  
   
-## См. также  
+## <a name="see-also"></a>См. также  
  [Параметры DUMPBIN](../../build/reference/dumpbin-options.md)

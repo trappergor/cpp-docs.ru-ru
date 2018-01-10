@@ -1,32 +1,34 @@
 ---
-title: "CString Exception Cleanup | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "CString objects, исключения"
-  - "обработка исключений, cleanup code"
+title: "Очистка исключений CString | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+dev_langs: C++
+helpviewer_keywords:
+- CString objects, exceptions
+- exception handling, cleanup code
 ms.assetid: 28b9ce70-be63-4a0d-92a8-44bbfbc95e83
-caps.latest.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 6
+caps.latest.revision: "10"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 496fdfe6a609bd4eceae225c2568c915d38aef07
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 12/21/2017
 ---
-# CString Exception Cleanup
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-В предыдущих версиях MFC, важно очищаете поиск объектов [CString](../atl-mfc-shared/reference/cstringt-class.md) после использования.  С версией MFC 3,0 и более поздней, явной очисткой больше не требуется.  
+# <a name="cstring-exception-cleanup"></a>Очистка исключений CString
+В предыдущих версий MFC, было важные Очистить [CString](../atl-mfc-shared/reference/cstringt-class.md) объекты после использования. С MFC версии 3.0 и более поздних явная очистка не требуется.  
   
- Под механизмом обработки исключений C\+\+, теперь использует MFC, не следует беспокоиться об очистке после исключения.  Описание например C\+\+ "очистки" стек после того, как исключение перехватывается см. в разделе [попытка, catch и выписки хода](../cpp/try-throw-and-catch-statements-cpp.md).  Даже если используется MFC **TRY** и макросы **CATCH** вместо ключевых слов **try** и **catch** C\+\+, MFC использует механизм исключения C\+\+ под ними, поэтому вам не нужно очистить явным образом.  
+ В списке исключений C++, MFC использует механизм обработки у вас беспокоиться о очистки после исключения. Описание того, как C++ «освобождает» стек после исключение будет перехвачено см. в разделе [try, catch и throw-операторы](../cpp/try-throw-and-catch-statements-cpp.md). Даже при использовании MFC **ПОВТОРИТЕ**/**ПЕРЕХВАТЫВАТЬ** макросы вместо ключевые слова C++ **повторите** и **перехватывать**, MFC использует C++ механизм исключений внизу, поэтому вы по-прежнему не обязательно должны явно очистить.  
   
-## См. также  
- [Строки](../atl-mfc-shared/strings-atl-mfc.md)   
+## <a name="see-also"></a>См. также  
+ [Строки (ATL и MFC)](../atl-mfc-shared/strings-atl-mfc.md)   
  [Обработка исключений](../mfc/exception-handling-in-mfc.md)
+

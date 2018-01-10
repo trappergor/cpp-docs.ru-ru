@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-windows
+ms.technology: cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
@@ -21,21 +20,19 @@ f1_keywords:
 - ATLCOMCLI/ATL::CComPtrBase::Release
 - ATLCOMCLI/ATL::CComPtrBase::SetSite
 - ATLCOMCLI/ATL::CComPtrBase::p
-dev_langs:
-- C++
-helpviewer_keywords:
-- CComPtrBase class
+dev_langs: C++
+helpviewer_keywords: CComPtrBase class
 ms.assetid: 6dbe9543-dee8-4a97-b02f-dd3a25f4a1a0
-caps.latest.revision: 19
+caps.latest.revision: "19"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: f0d9b4d49a7568df905a595e2cf6494b2b98706d
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
-ms.sourcegitcommit: c55726a1728185f699afbac4ba68a6dc0f70c2bf
-ms.openlocfilehash: 1e6bf79ce5de5d19468b3cbb230e16882483dc30
-ms.contentlocale: ru-ru
-ms.lasthandoff: 10/09/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="ccomptrbase-class"></a>Класс CComPtrBase
 Этот класс предоставляет основу для классов интеллектуальных указателей, использование памяти на основе COM процедур.  
@@ -51,17 +48,17 @@ class CComPtrBase
  `T`  
  Тип объекта, на которые ссылается интеллектуального указателя.  
   
-## <a name="members"></a>Члены  
+## <a name="members"></a>Участники  
   
 ### <a name="public-constructors"></a>Открытые конструкторы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[CComPtrBase:: ~ CComPtrBase](#dtor)|Деструктор|  
   
 ### <a name="public-methods"></a>Открытые методы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[CComPtrBase::Advise](#advise)|Этот метод вызывается для создания подключения `CComPtrBase`точки подключения и приемником клиента.|  
 |[CComPtrBase::Attach](#attach)|Вызовите этот метод, чтобы стать владельцем существующего указателя.|  
@@ -75,7 +72,7 @@ class CComPtrBase
   
 ### <a name="public-operators"></a>Открытые операторы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[CComPtrBase::operator T *](#operator_t_star)|Оператор приведения.|  
 |[CComPtrBase::operator!](#operator_not)|Оператор NOT.|  
@@ -87,7 +84,7 @@ class CComPtrBase
   
 ### <a name="public-data-members"></a>Открытые члены данных  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[CComPtrBase::p](#p)|Переменная члена данных указателя.|  
   
@@ -375,4 +372,3 @@ HRESULT SetSite(IUnknown* punkParent) throw();
   
 ## <a name="see-also"></a>См. также  
  [Общие сведения о классе](../../atl/atl-class-overview.md)
-

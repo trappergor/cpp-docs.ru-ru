@@ -17,11 +17,12 @@ caps.latest.revision: "8"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: cd4d90d50ecfe2514b53df6b0137caa866feeea3
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 4d09e110fd428b13e501647d97a0878df0e9392a
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="byte-and-wide-streams"></a>Байты и широкие потоки
 Байтовый поток обрабатывает файл как последовательность байтов. В рамках программы поток передает эту последовательность байтов в неизменном виде.  

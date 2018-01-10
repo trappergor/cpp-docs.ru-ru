@@ -22,11 +22,12 @@ caps.latest.revision: "1"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: baab49fb4eb49f872a8d285f1d8f08ccda569a6e
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 1343c037f87aee609de2b082cb87f7f1f2832221
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="zcsizeddealloc-enable-global-sized-deallocation-functions"></a>/Zc:sizedDealloc (включить глобальные размера освобождение функции)  
 `/Zc:sizedDealloc` Компилятора указывает компилятору столбцы вызов глобальных `operator delete` или `operator delete[]` функции, которые имеют тип второго параметра `size_t` когда доступна размер объекта. Эти функции могут использовать `size_t` параметр для оптимизации производительности освобождения.   

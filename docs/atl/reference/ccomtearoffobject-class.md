@@ -26,11 +26,12 @@ caps.latest.revision: "20"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: c4f6782e2e873e844fa1d2eb7a9c1090d887dac9
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 80be7d80af5a6c8fa2c47bc0e853020663f2ceae
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="ccomtearoffobject-class"></a>Класс CComTearOffObject
 Этот класс реализует интерфейс перемещаемые.  
@@ -48,18 +49,18 @@ class CComTearOffObject : public Base
   
  ATL реализует интерфейсы перемещаемые в два этапа — `CComTearOffObjectBase` методы обрабатывают счетчик ссылок и `QueryInterface`, пока `CComTearOffObject` реализует [IUnknown](http://msdn.microsoft.com/library/windows/desktop/ms680509).  
   
-## <a name="members"></a>Члены  
+## <a name="members"></a>Участники  
   
 ### <a name="public-constructors"></a>Открытые конструкторы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[CComTearOffObject::CComTearOffObject](#ccomtearoffobject)|Конструктор.|  
 |[CComTearOffObject:: ~ CComTearOffObject](#dtor)|Деструктор|  
   
 ### <a name="public-methods"></a>Открытые методы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[CComTearOffObject::AddRef](#addref)|Увеличивает счетчик ссылок для `CComTearOffObject` объекта.|  
 |[CComTearOffObject::QueryInterface](#queryinterface)|Возвращает указатель на запрошенный интерфейс на перемещаемые класс или класс-владелец.|  

@@ -17,11 +17,12 @@ caps.latest.revision: "6"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: f03d3f2bb10fa6b12cb046fd77f45a2bc6153064
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 2412ab15317604e1d6cccc5535226d429d8ba6b7
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="specifying-the-pathname"></a>Указание пути
 Каждый параметр выходного файла принимает *pathname* аргумент, который можно указать расположение и имя для выходного файла. Аргумент может включать имя диска, каталог и имя файла. Пробелы между параметром и аргумента.  
@@ -33,7 +34,7 @@ ms.lasthandoff: 10/24/2017
 |Имя устройства|Представляет|  
 |-----------------|----------------|  
 |AUX|Дополнительное устройство|  
-|CON|Параметр Console|  
+|CON|Консоль|  
 |PRN|Принтер|  
 |NUL|NULL-устройство (файл не создается)|  
   

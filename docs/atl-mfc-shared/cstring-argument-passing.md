@@ -1,52 +1,54 @@
 ---
-title: "CString Argument Passing | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "argument passing [C++]"
-  - "argument passing [C++], C strings"
-  - "arguments [C++], передача"
-  - "CString objects, передача аргументов"
-  - "функции [C++], strings as input/output"
-  - "передача аргументов, C strings"
-  - "string arguments"
-  - "строки [C++], as function input/output"
+title: "Передача аргументов CString | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+dev_langs: C++
+helpviewer_keywords:
+- strings [C++], as function input/output
+- argument passing [C++]
+- arguments [C++], passing
+- functions [C++], strings as input/output
+- argument passing [C++], C strings
+- passing arguments, C strings
+- CString objects, passing arguments
+- string arguments
 ms.assetid: a67bebff-edf1-4cf4-bbff-d1cc6a901099
-caps.latest.revision: 13
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 9
+caps.latest.revision: "13"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 3d33c8cc46ada41f851c90aaae0cabfadb1466d0
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 12/21/2017
 ---
-# CString Argument Passing
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+# <a name="cstring-argument-passing"></a>Передача аргументов CString
+В этой статье объясняется, как передать [CString](../atl-mfc-shared/reference/cstringt-class.md) объектов функций и как вернуть `CString` объекты из функции.  
+  
+##  <a name="_core_cstring_argument.2d.passing_conventions"></a>Соглашения о передаче аргументов CString  
+ При определении интерфейса класса, необходимо определить соглашение о передаче аргументов для функций-членов. Существуют некоторые стандартные правила, передачу и возврат `CString` объектов. Если следовать правилам, описанным в [строки в качестве входных данных функции](#_core_strings_as_function_inputs) и [строки как выходные данные функции](#_core_strings_as_function_outputs), будет иметь эффективный и правильный код.  
+  
+##  <a name="_core_strings_as_function_inputs"></a>Строки в качестве входных данных функции  
+ Наиболее эффективный и безопасный способ использования `CString` объект в вызываемой функции заключается в передаче `CString` объекта функции. Несмотря на название `CString` объекта не строка внутренних целей Сохранить как строка C-стиле, которая имеет значение NULL. Вместо этого `CString` объекта будет тщательно отслеживать количество символов, он имеет. Наличие `CString` предоставляют `LPCTSTR` небольшой объем работы, которая может стать существенным, если код содержит постоянно сделать это является указателем на строку, завершающуюся значением null. Результат является временным, так как после любого изменения `CString` содержимое делает недействительными старые копии `LPCTSTR` указателя.  
+  
+ Оно имеет смысла в некоторых случаях для предоставления строки в стиле C. Например может быть ситуация, где вызываемая функция написана на языке C, а не поддерживает объекты. В этом случае приведение `CString` параметр `LPCTSTR`, и функция получает строку, завершающуюся символом null C-стиле. Кроме того, можно перейти в обратном направлении и создавать `CString` объектов с помощью `CString` конструктор, принимающий строковый параметр C-стиле.  
+  
+ Если содержимое строки будут изменены функцией, объявите параметр как неконстантной `CString` ссылки (**CString &**).  
+  
+##  <a name="_core_strings_as_function_outputs"></a>Строки как выходные данные функции  
+ Обычно можно вернуть `CString` объектов из функции, так как `CString` объекты следуют семантика значения как простые типы. Для возврата строки, только для чтения, используйте константу `CString` ссылки (**const CString &**). Следующий пример иллюстрирует использование `CString` параметры и возвращаемые типы:  
+  
+ [!code-cpp[NVC_ATLMFC_Utilities#197](../atl-mfc-shared/codesnippet/cpp/cstring-argument-passing_1.cpp)]  
+  
+ [!code-cpp[NVC_ATLMFC_Utilities#198](../atl-mfc-shared/codesnippet/cpp/cstring-argument-passing_2.cpp)]  
+  
+## <a name="see-also"></a>См. также  
+ [Строки (ATL и MFC)](../atl-mfc-shared/strings-atl-mfc.md)
 
-В этой статье описывается, как передать объекты [CString](../atl-mfc-shared/reference/cstringt-class.md) к функциям и возврата объектов `CString` от функций.  
-  
-##  <a name="_core_cstring_argument.2d.passing_conventions"></a> Соглашения Аргумент\- Передавая CString  
- При определении интерфейса класса необходимо указать аргумент\- передавая о вызовах для функций\-членов.  Некоторые стандартные правила для передачи и возврата объектов `CString`.  Если следовать правилам, описанными в [Строки как входные данные функции](#_core_strings_as_function_inputs) и [Строки как выходные данные функции](#_core_strings_as_function_outputs), будет иметь эффективный, правильный код.  
-  
-##  <a name="_core_strings_as_function_inputs"></a> Строки как входные данные функции  
- Наиболее эффективный и наиболее безопасный способ использования объекта `CString` в функциях, вызванных передать объект `CString` функции.  Несмотря на имени, объект `CString` не сохраняется строка внутри c. вставка строки как стили, которая имеет нулевой завершающий символ.  Вместо этого объект `CString` содержит тщательную отслеживание числа символов он содержит.  Having `CString` реализуйте указатель `LPCTSTR` null\- готовая строка небольшой объем работы, который может стать значительно если код должен выполнить его постоянным.  Результатом является временным, поскольку любое изменение содержимого `CString` делает недействительным старые копии указателя `LPCTSTR`.  
-  
- Он имеет смысл в некоторых случаях предоставить c \- вставьте строку стиля.  Например, могут быть ситуация, когда вызванная функция записана в C\# и не поддерживают объекты.  В этом случае coerce \- параметр `CString` к `LPCTSTR` и функции, производящие c \- стиль null\- готовая строка.  Также можно перейти другое направление и создания объекта `CString` с помощью конструктора, который принимает `CString` c. вставка параметр стиля строки.  
-  
- Если содержимое строки изменением функцией, объявите параметр как nonconstant ссылка `CString` \(**CString&**\).  
-  
-##  <a name="_core_strings_as_function_outputs"></a> Строки как выходные данные функции  
- Обычно можно вернуться объекты `CString` от функций поскольку объекты `CString` следовать семантике значения как типы\-примитивы.  Для возвращения типа string, доступное только для чтения, используйте константу ссылку `CString` \(**const CString&**\).  В следующем примере показано использование параметров и возвращаемых типов `CString`:  
-  
- [!code-cpp[NVC_ATLMFC_Utilities#197](../atl-mfc-shared/codesnippet/CPP/cstring-argument-passing_1.cpp)]  
-  
- [!code-cpp[NVC_ATLMFC_Utilities#198](../atl-mfc-shared/codesnippet/CPP/cstring-argument-passing_2.cpp)]  
-  
-## См. также  
- [Строки](../atl-mfc-shared/strings-atl-mfc.md)

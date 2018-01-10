@@ -16,11 +16,12 @@ caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 5fa1a1b914d7d9725e8f2d9858f0481bb7aa24a4
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: be87c0bad9ab250593847cc24d16158030040054
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="can-i-host-more-than-one-control-in-a-single-window"></a>Можно разместить несколько элементов управления в одном окне
 Более одного элемента управления в одном окне узла ATL невозможна. Каждое окно узла предназначен для хранения ровно один элемент управления одновременно (Это обеспечивает простой механизм для обработки сообщения отражения и на уровне элемента управления свойства окружения). Однако если необходимо видеть несколько элементов управления в одном окне, это простой механизм для создания нескольких окон узла как дочерние элементы этого окна.  

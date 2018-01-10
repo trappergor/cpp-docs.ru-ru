@@ -1,74 +1,75 @@
 ---
-title: "_cscanf, _cscanf_l, _cwscanf, _cwscanf_l | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-apiname: 
-  - "_cscanf_l"
-  - "_cscanf"
-  - "_cwscanf"
-  - "_cwscanf_l"
-apilocation: 
-  - "msvcrt.dll"
-  - "msvcr80.dll"
-  - "msvcr90.dll"
-  - "msvcr100.dll"
-  - "msvcr100_clr0400.dll"
-  - "msvcr110.dll"
-  - "msvcr110_clr0400.dll"
-  - "msvcr120.dll"
-  - "msvcr120_clr0400.dll"
-  - "ucrtbase.dll"
-apitype: "DLLExport"
-f1_keywords: 
-  - "_cwscanf"
-  - "cwscanf_l"
-  - "tcscanf_l"
-  - "_tcscanf_l"
-  - "_cscanf"
-  - "_cscanf_l"
-  - "tcscanf"
-  - "cwscanf"
-  - "_cwscanf_l"
-  - "cscanf_l"
-  - "_tcscanf"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "_cscanf - функция"
-  - "_cscanf_l - функция"
-  - "_cwscanf - функция"
-  - "_cwscanf_l - функция"
-  - "_tcscanf - функция"
-  - "_tcscanf_l - функция"
-  - "cscanf_l - функция"
-  - "cwscanf - функция"
-  - "cwscanf_l - функция"
-  - "данные [C++], чтение из консоли"
-  - "чтение данных [C++], из консоли"
-  - "tcscanf - функция"
-  - "tcscanf_l - функция"
+title: "_cscanf, _cscanf_l, _cwscanf, _cwscanf_l | Документы Майкрософт"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-standard-libraries
+ms.tgt_pltfrm: 
+ms.topic: article
+apiname:
+- _cscanf_l
+- _cscanf
+- _cwscanf
+- _cwscanf_l
+apilocation:
+- msvcrt.dll
+- msvcr80.dll
+- msvcr90.dll
+- msvcr100.dll
+- msvcr100_clr0400.dll
+- msvcr110.dll
+- msvcr110_clr0400.dll
+- msvcr120.dll
+- msvcr120_clr0400.dll
+- ucrtbase.dll
+apitype: DLLExport
+f1_keywords:
+- _cwscanf
+- cwscanf_l
+- tcscanf_l
+- _tcscanf_l
+- _cscanf
+- _cscanf_l
+- tcscanf
+- cwscanf
+- _cwscanf_l
+- cscanf_l
+- _tcscanf
+dev_langs: C++
+helpviewer_keywords:
+- _cwscanf function
+- data [C++], reading from the console
+- cscanf_l function
+- tcscanf function
+- _cscanf_l function
+- cwscanf function
+- _tcscanf_l function
+- _cscanf function
+- _tcscanf function
+- cwscanf_l function
+- tcscanf_l function
+- reading data [C++], from the console
+- _cwscanf_l function
 ms.assetid: dbfe7547-b577-4567-a1cb-893fa640e669
-caps.latest.revision: 23
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 23
+caps.latest.revision: "23"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: d49421d98bc6a51c86dc23d1a05e2b5ae943df88
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 12/21/2017
 ---
-# _cscanf, _cscanf_l, _cwscanf, _cwscanf_l
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Считывает форматированные данные с консоли.  Существуют более безопасные версии этих функций; см. раздел [\_cscanf\_s, \_cscanf\_s\_l, \_cwscanf\_s, \_cwscanf\_s\_l](../../c-runtime-library/reference/cscanf-s-cscanf-s-l-cwscanf-s-cwscanf-s-l.md).  
+# <a name="cscanf-cscanfl-cwscanf-cwscanfl"></a>_cscanf, _cscanf_l, _cwscanf, _cwscanf_l
+Считывает форматированные данные из консоли. Существуют более безопасные версии этих функций; см. раздел [_cscanf_s, _cscanf_s_l, _cwscanf_s, _cwscanf_s_l](../../c-runtime-library/reference/cscanf-s-cscanf-s-l-cwscanf-s-cwscanf-s-l.md).  
   
 > [!IMPORTANT]
->  Этот API невозможно использовать в приложениях, запускаемых в среде выполнения Windows.  Дополнительные сведения см. в статье [Функции CRT, которые не поддерживаются с ключом \/ZW](http://msdn.microsoft.com/library/windows/apps/jj606124.aspx).  
+>  Этот API нельзя использовать в приложениях, выполняемых в среде выполнения Windows. Дополнительные сведения см. в статье [Функции CRT, которые не поддерживаются с ключом /ZW](http://msdn.microsoft.com/library/windows/apps/jj606124.aspx).  
   
-## Синтаксис  
+## <a name="syntax"></a>Синтаксис  
   
 ```  
 int _cscanf(   
@@ -91,7 +92,7 @@ int _cwscanf_l(
 );  
 ```  
   
-#### Параметры  
+#### <a name="parameters"></a>Параметры  
  `format`  
  Строка управления форматом.  
   
@@ -101,33 +102,33 @@ int _cwscanf_l(
  `locale`  
  Используемый языковой стандарт.  
   
-## Возвращаемое значение  
- Количество полей, которые были успешно преобразованы и присвоены.  Возвращаемое значение не включает поля, которые были считаны, но не были присвоены.  Возвращаемое значение `EOF` при попытке чтения в конце файла.  Это может произойти, если данные, вводимые с клавиатуры, перенаправляются на уровне командной строки операционной системы.  Возвращаемое значение 0 означает, что поля не были присвоены.  
+## <a name="return-value"></a>Возвращаемое значение  
+ Число успешно преобразованных и назначенных полей. Возвращаемое значение не включает поля, которые были считаны, но не назначены. При попытке чтения конечной части файла возвращается значение `EOF`. Это может произойти при перенаправлении ввода данных с клавиатуры на уровне командной строки операционной системы. Возвращаемое значение 0 означает, что поля не были назначены.  
   
-## Заметки  
- Функция `_cscanf` считывает данные непосредственно из консоли в места, определяемые `argument`.  Функция [\_getche](../Topic/_getch,%20_getwch.md) используется для чтения символов.  Каждый необязательный параметр в списке должен быть указателем на переменную, которая имеет тип, соответствующий спецификатору типа в `format`.  Аргумент format управляет интерпретацией полей ввода и имеет те же форму и функциональные возможности, что и аргумент `format` функции [scanf](../../c-runtime-library/reference/scanf-scanf-l-wscanf-wscanf-l.md).  Обычно `_cscanf` выводит вводимый символ, но этого не происходит, если последним вызовом был `_ungetch`.  
+## <a name="remarks"></a>Примечания  
+ Функция `_cscanf` считывает данные из консоли в места, указанные функцией `argument`. Функция [_Getche](../../c-runtime-library/reference/getch-getwch.md) используется для чтения символов. Каждый дополнительный параметр должен быть указателем на переменную, тип которой соответствует спецификатору типа в параметре `format`. Формат определяет толкование полей входных данных и имеет такую же форму и функцию, как и параметр `format` для функции [scanf](../../c-runtime-library/reference/scanf-scanf-l-wscanf-wscanf-l.md). Несмотря на то, что обычно `_cscanf` отражает введенный символ, это не происходит, если последний вызов был связан с функцией `_ungetch`.  
   
- Эта функция проверяет свои параметры.  Если format имеет значение NULL, вызывается обработчик недопустимых параметров, как описано в разделе [Проверка параметров](../../c-runtime-library/parameter-validation.md).  Если продолжение выполнения разрешено, то `errno` устанавливается в `EINVAL`, и функция возвращает `EOF`.  
+ Эта функция проверяет свои параметры. Если формат имеет значение NULL, вызывается обработчик недопустимых параметров, как описано в разделе [Проверка параметров](../../c-runtime-library/parameter-validation.md). Если выполнение может быть продолжено, параметр `errno` устанавливается в значение `EINVAL`, и функция возвращает значение `EOF`.  
   
  Версии этих функций с суффиксом `_l` идентичны за исключением того, что они используют переданный параметр языкового стандарта вместо языкового стандарта текущего потока.  
   
-### Универсальное текстовое сопоставление функций  
+### <a name="generic-text-routine-mappings"></a>Сопоставления подпрограмм обработки обычного текста  
   
-|Подпрограмма TCHAR.H|\_UNICODE и \_MBCS не определены|\_MBCS определено|\_UNICODE определено|  
-|--------------------------|--------------------------------------|-----------------------|--------------------------|  
+|Подпрограмма TCHAR.H|_UNICODE и _MBCS не определены|_MBCS определено|_UNICODE определено|  
+|---------------------|--------------------------------------|--------------------|-----------------------|  
 |`_tcscanf`|`_cscanf`|`_cscanf`|`_cwscanf`|  
 |`_tcscanf_l`|`_cscanf_l`|`_cscanf_l`|`_cwscanf_l`|  
   
-## Требования  
+## <a name="requirements"></a>Требования  
   
 |Подпрограмма|Обязательный заголовок|  
-|------------------|----------------------------|  
-|`_cscanf`,`_cscanf_l`|\<conio.h\>|  
-|`_cwscanf`, `_cwscanf_l`|\<conio.h\> или \<wchar.h\>|  
+|-------------|---------------------|  
+|`_cscanf`,`_cscanf_l`|\<conio.h>|  
+|`_cwscanf`, `_cwscanf_l`|\<conio.h> или \<wchar.h>|  
   
  Дополнительные сведения о совместимости см. в разделе [Совместимость](../../c-runtime-library/compatibility.md).  
   
-## Пример  
+## <a name="example"></a>Пример  
   
 ```  
 // crt_cscanf.c  
@@ -155,22 +156,22 @@ int main( void )
 }  
 ```  
   
-## Ввод  
+## <a name="input"></a>Входные данные  
   
 ```  
 1 2 3  
 ```  
   
-## Output  
+## <a name="output"></a>Вывод  
   
 ```  
 Enter three integers: 1 2 3  
 You entered 3 2 1  
 ```  
   
-## См. также  
- [Ввод\-вывод на консоль и порт](../../c-runtime-library/console-and-port-i-o.md)   
- [\_cprintf, \_cprintf\_l, \_cwprintf, \_cwprintf\_l](../../c-runtime-library/reference/cprintf-cprintf-l-cwprintf-cwprintf-l.md)   
- [fscanf, \_fscanf\_l, fwscanf, \_fwscanf\_l](../../c-runtime-library/reference/fscanf-fscanf-l-fwscanf-fwscanf-l.md)   
- [scanf\_s, \_scanf\_s\_l, wscanf\_s, \_wscanf\_s\_l](../../c-runtime-library/reference/scanf-s-scanf-s-l-wscanf-s-wscanf-s-l.md)   
- [sscanf, \_sscanf\_l, swscanf, \_swscanf\_l](../../c-runtime-library/reference/sscanf-sscanf-l-swscanf-swscanf-l.md)
+## <a name="see-also"></a>См. также  
+ [Ввод-вывод на консоль и порт](../../c-runtime-library/console-and-port-i-o.md)   
+ [_cprintf, _cprintf_l, _cwprintf, _cwprintf_l](../../c-runtime-library/reference/cprintf-cprintf-l-cwprintf-cwprintf-l.md)   
+ [fscanf, _fscanf_l, fwscanf, _fwscanf_l](../../c-runtime-library/reference/fscanf-fscanf-l-fwscanf-fwscanf-l.md)   
+ [scanf_s, _scanf_s_l, wscanf_s, _wscanf_s_l](../../c-runtime-library/reference/scanf-s-scanf-s-l-wscanf-s-wscanf-s-l.md)   
+ [sscanf, _sscanf_l, swscanf, _swscanf_l](../../c-runtime-library/reference/sscanf-sscanf-l-swscanf-swscanf-l.md)

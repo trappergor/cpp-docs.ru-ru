@@ -1,79 +1,82 @@
 ---
-title: "Методы доступа и наборы строк | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "методы доступа [C++]"
-  - "методы доступа [C++], наборы строк"
-  - "набор строк массива"
-  - "набор строк пакета"
-  - "CAccessorBase - класс"
-  - "CAccessorRowset - класс, типы методов доступа"
-  - "CArrayRowset - класс, методы доступа"
-  - "CBulkRowset - класс, методы доступа"
-  - "CRowset - класс, методы доступа и наборы строк"
-  - "шаблоны потребителя OLE DB, методы доступа"
-  - "шаблоны потребителя OLE DB, поддержка наборов строк"
-  - "наборы строк [C++], доступ"
-  - "наборы строк [C++], поддерживаемые типы"
-  - "одиночные наборы строк"
+title: "Методы доступа и наборы строк | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- accessors [C++]
+- OLE DB consumer templates, rowset support
+- OLE DB consumer templates, accessors
+- rowsets [C++], accessing
+- bulk rowsets
+- CAccessorRowset class, accessor types
+- single rowsets
+- CArrayRowset class, accessors
+- CBulkRowset class, accessors
+- array rowsets
+- CAccessorBase class
+- CRowset class, accessors and rowsets
+- accessors [C++], rowsets
+- rowsets [C++], supported types
 ms.assetid: edc9c8b3-1a2d-4c2d-869f-7e058c631042
-caps.latest.revision: 11
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 11
+caps.latest.revision: "11"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: cf47597ac38ae2944fc41bd686552e5d15c96b39
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 12/21/2017
 ---
-# Методы доступа и наборы строк
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Для записи и извлечения данных шаблоны OLE DB используют метод доступа и набор строк с помощью класса [CAccessorRowset](../Topic/CAccessorRowset%20Class.md).  Этот класс может обрабатывать несколько методов доступа различного типа.  
+# <a name="accessors-and-rowsets"></a>Методы доступа и наборы строк
+Для установки и извлечения данных, шаблоны OLE DB используют метод доступа и набор строк с помощью [CAccessorRowset](../../data/oledb/caccessorrowset-class.md) класса. Этот класс может обрабатывать несколько методов доступа к разным типам.  
   
-## Типы методов доступа  
- Все методы доступа наследуются от [CAccessorBase](../../data/oledb/caccessorbase-class.md).  `CAccessorBase` предоставляет привязку к параметру и к столбцу.  
+## <a name="accessor-types"></a>Типы методов доступа  
+ Все методы доступа являются производными от [CAccessorBase](../../data/oledb/caccessorbase-class.md). `CAccessorBase`предоставляет параметр и привязка к столбцу.  
   
- На следующем рисунке показаны типы методов доступа.  
+ На следующем рисунке показана типы методов доступа.  
   
- ![Типы методов доступа](../../data/oledb/media/vcaccessortypes.gif "vcAccessorTypes")  
+ ![Типы методов доступа](../../data/oledb/media/vcaccessortypes.gif "vcaccessortypes")  
 Классы методов доступа  
   
--   [CAccessor](../Topic/CAccessor%20Class.md) Используйте этот метод доступа, если структура источника базы данных во время разработки известна.  `CAccessor` статически привязывает к источнику данных запись базы данных, содержащую буфер.  
+-   [CAccessor](../../data/oledb/caccessor-class.md) используйте этот метод доступа, если известно структуры источника базы данных во время разработки. `CAccessor`статически связывает запись базы данных, которая содержит буфер, к источнику данных.  
   
--   [CDynamicAccessor](../../data/oledb/cdynamicaccessor-class.md) Используйте этот метод доступа, если структура источника базы данных во время разработки неизвестна.  `CDynamicAccessor` вызывает `IColumnsInfo::GetColumnInfo` для получения сведений о столбце базы данных.  Создает и управляет методом доступа и буфером.  
+-   [CDynamicAccessor](../../data/oledb/cdynamicaccessor-class.md) используйте этот метод доступа, если вы не знаете структуры базы данных во время разработки. `CDynamicAccessor`вызовы `IColumnsInfo::GetColumnInfo` Чтобы получить сведения о столбцах базы данных. Создает и управляет методом доступа и буфером.  
   
--   [CDynamicParameterAccessor](../../data/oledb/cdynamicparameteraccessor-class.md) Используйте этот метод доступа для обработки неизвестных типов команд.  При подготовке команд `CDynamicParameterAccessor` может получить сведения о параметрах с помощью интерфейса `ICommandWithParameters`, если поставщик поддерживает `ICommandWithParameters`.  
+-   [CDynamicParameterAccessor](../../data/oledb/cdynamicparameteraccessor-class.md) использовать этот метод доступа для обработки типов Неизвестная команда. При подготовке команд `CDynamicParameterAccessor` можно получить сведения о параметрах из `ICommandWithParameters` интерфейс, если поставщик поддерживает `ICommandWithParameters`.  
   
--   [CDynamicStringAccessor](../../data/oledb/cdynamicstringaccessor-class.md), [CDynamicStringAccessorA](../../data/oledb/cdynamicstringaccessora-class.md) и [CDynamicStringAccessorW](../../data/oledb/cdynamicstringaccessorw-class.md) Используйте эти классы, если схема базы данных неизвестна.  `CDynamicStringAccessorA` получает данные в виде строк ANSI; `CDynamicStringAccessorW` получает данные в виде строк Юникода.  
+-   [CDynamicStringAccessor](../../data/oledb/cdynamicstringaccessor-class.md), [CDynamicStringAccessorA](../../data/oledb/cdynamicstringaccessora-class.md), и [CDynamicStringAccessorW](../../data/oledb/cdynamicstringaccessorw-class.md) эти классы используются, если у вас нет сведений о схеме базы данных. `CDynamicStringAccessorA`Получает данные в виде строк ANSI; `CDynamicStringAccessorW` получает данные в виде строки в Юникоде.  
   
--   [CManualAccessor](../Topic/CManualAccessor%20Class.md) С помощью этого класса возможно использование любого типа данных, если поставщик сможет конвертировать этот тип.  Он обрабатывает как столбцы результатов, так и параметры команд.  
+-   [CManualAccessor](../../data/oledb/cmanualaccessor-class.md) с этим классом, можно использовать любые типы данных, если поставщик может преобразовать типы. Он обрабатывает результирующих столбцов и параметров команды.  
   
- Следующая таблица кратко описывает поддержку типов методов доступа для шаблонов OLE DB.  
+ В следующей таблице перечислены поддержка в типы методов доступа шаблонов OLE DB.  
   
 |Тип метода доступа|Динамический|Обрабатывает параметры|Буфер|Несколько методов доступа|  
-|------------------------|------------------|----------------------------|-----------|-------------------------------|  
-|`CAccessor`|Нет|Да|Пользователь|Да|  
+|-------------------|-------------|--------------------|------------|------------------------|  
+|`CAccessor`|Нет|Да|Пользовательская|Да|  
 |`CDynamicAccessor`|Да|Нет|Шаблоны OLE DB|Нет|  
 |`CDynamicParameterAccessor`|Да|Да|Шаблоны OLE DB|Нет|  
 |`CDynamicStringAccessor[A,W]`|Да|Нет|Шаблоны OLE DB|Нет|  
-|`CManualAccessor`|Да|Да|Пользователь|Да|  
+|`CManualAccessor`|Да|Да|Пользовательская|Да|  
   
-## Типы наборов строк  
- Шаблоны OLE DB поддерживают три вида набора строк \(см. предыдущий рисунок\): одиночный набор строк \(реализован [CRowset](../Topic/CRowset%20Class.md)\), групповой набор строк \(реализован [CBulkRowset](../Topic/CBulkRowset%20Class.md)\) и массивный набор строк \(реализован [CArrayRowset](../../data/oledb/carrayrowset-class.md)\).  Одиночный набор строк загружает дескриптор одной строки при вызове `MoveNext`.  Групповой набор строк может загрузить дескриптор нескольких строк.  Массивный набор строк — тот, к которому можно получить доступ, пользуясь синтаксисом массива.  
+## <a name="rowset-types"></a>Типы наборов строк  
+ Шаблоны OLE DB поддерживают три вида набора строк (см. предыдущий рисунок): один набор строк (реализован [CRowset](../../data/oledb/crowset-class.md)), групповой набор строк (реализован [CBulkRowset](../../data/oledb/cbulkrowset-class.md)) и массивный (реализован по [CArrayRowset](../../data/oledb/carrayrowset-class.md)). Одиночный набор строк загружает дескриптор одной строки при `MoveNext` вызывается. Набор строк пакета можно загрузить дескриптор нескольких строк. Набор строк массива являются наборы строк, которые могут быть доступны с помощью синтаксис массива.  
   
- На следующем рисунке показаны типы наборов строк.  
+ На следующем рисунке показана типы наборов строк.  
   
- ![График RowsetType](../../data/oledb/media/vcrowsettypes.png "vcRowsetTypes")  
+ ![График RowsetType](../../data/oledb/media/vcrowsettypes.gif "vcrowsettypes")  
 Классы набора строк  
   
- [Набор строк схемы](../../data/oledb/obtaining-metadata-with-schema-rowsets.md) не предоставляет доступа к хранилищу данных, а предоставляет информацию о хранилище данных, — метаданные.  Наборы строк схемы обычно используются в ситуациях, когда структура базы данных неизвестна на момент компиляции и должна быть получена во время выполнения.  
+ [Наборы строк схемы](../../data/oledb/obtaining-metadata-with-schema-rowsets.md) сделать не доступа в данных хранилища данных, но вместо этого доступ к сведениям о хранилище данных, называемые метаданными. Наборы строк схемы обычно используются в ситуациях, в которых структура базы данных не известна во время компиляции и должны быть получены во время выполнения.  
   
-## См. также  
- [Шаблоны потребителей OLE DB](../../data/oledb/ole-db-consumer-templates-cpp.md)
+## <a name="see-also"></a>См. также  
+ [Шаблоны потребителя OLE DB](../../data/oledb/ole-db-consumer-templates-cpp.md)

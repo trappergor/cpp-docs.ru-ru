@@ -13,11 +13,12 @@ caps.latest.revision: "15"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 6990539ca6f0bc2956822547e3d41c00c841caf8
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 523086c70d9f974c014f5d33a71bf9309b8e017d
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="putting-the-control-on-a-web-page-atl-tutorial-part-7"></a>Размещение элемента управления на веб-странице (учебник ATL, часть 7)
 Элемент управления завершена. Для просмотра элемента управления работают в реальной ситуации, поместите его на веб-странице. HTML-файл, содержащий элемент управления был создан при определении элемента управления. Открыть файл в файл PolyCtl.htm **обозревателе решений**, и вы увидите элемент управления на веб-странице.  
@@ -74,7 +75,7 @@ ms.lasthandoff: 10/24/2017
   
  [Вернитесь к шагу 6](../atl/adding-a-property-page-atl-tutorial-part-6.md)  
   
-## <a name="next-steps"></a>Дальнейшие действия  
+## <a name="next-steps"></a>Следующие шаги  
  Это заключительный шаг учебника ATL. Ссылки на дополнительные сведения об ATL см. в разделе [ATL начальная страница](../atl/active-template-library-atl-concepts.md).  
   
 ## <a name="see-also"></a>См. также  

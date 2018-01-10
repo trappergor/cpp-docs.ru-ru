@@ -4,12 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
-apiname:
-- _alloca
+apiname: _alloca
 apilocation:
 - msvcrt.dll
 - msvcr80.dll
@@ -25,37 +23,22 @@ apitype: DLLExport
 f1_keywords:
 - _alloca
 - alloca
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - memory allocation, stack
 - alloca function
 - _alloca function
 ms.assetid: 74488eb1-b71f-4515-88e1-cdd03b6f8225
-caps.latest.revision: 23
+caps.latest.revision: "23"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: e257f037a05c45f5b98e64ea55bd125af443b0be
-ms.openlocfilehash: 5875a26dc5758674665fba2fde5b51c2ff53420e
-ms.contentlocale: ru-ru
-ms.lasthandoff: 03/30/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: a48b0ab3e9717416736acf4187a27df2c737089b
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="alloca"></a>_alloca
 Выделение памяти в стеке. Эта функция рекомендуется, поскольку существует более безопасная версия доступна; в разделе [_malloca](../../c-runtime-library/reference/malloca.md).  
@@ -93,7 +76,7 @@ void *_alloca(
 > [!IMPORTANT]
 >  В Windows XP, если `_alloca` вызывается внутри блока try/catch, необходимо вызвать метод [_resetstkoflw](../../c-runtime-library/reference/resetstkoflw.md) в блоке catch.  
   
- Помимо вышеуказанным ограничений при использовании[/CLR (компиляция CLR)](../../build/reference/clr-common-language-runtime-compilation.md) параметр `_alloca` не может использоваться в `__except` блоки. Для получения дополнительной информации см. [/clr Restrictions](../../build/reference/clr-restrictions.md).  
+ Помимо вышеуказанным ограничений при использовании[/CLR (компиляция CLR)](../../build/reference/clr-common-language-runtime-compilation.md) параметр `_alloca` не может использоваться в `__except` блоков. Для получения дополнительной информации см. [/clr Restrictions](../../build/reference/clr-restrictions.md).  
   
 ## <a name="requirements"></a>Требования  
   

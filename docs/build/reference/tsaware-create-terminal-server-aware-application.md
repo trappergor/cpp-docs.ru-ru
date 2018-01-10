@@ -1,69 +1,70 @@
 ---
-title: "/TSAWARE (создание приложения, поддерживающего сервер терминалов) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "/tsaware"
-  - "VC.Project.VCLinkerTool.TerminalServerAware"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "/TSAWARE - параметр компоновщика"
-  - "Сервер терминалов"
-  - "Сервер терминалов, Приложения, поддерживающие сервер терминалов"
-  - "TSAWARE - параметр компоновщика"
-  - "-TSAWARE - параметр компоновщика"
+title: "-TSAWARE (Создание приложения, поддерживающего сервер терминалов) | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- /tsaware
+- VC.Project.VCLinkerTool.TerminalServerAware
+dev_langs: C++
+helpviewer_keywords:
+- Terminal Server
+- /TSAWARE linker option
+- Terminal Server, Terminal Server-aware applications
+- -TSAWARE linker option
+- TSAWARE linker option
 ms.assetid: fe1c1846-de5b-4839-b562-93fbfe36cd29
-caps.latest.revision: 8
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 4c6fb783f717f730945f8d34c8fe2a03f5e1f6d0
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 12/21/2017
 ---
-# /TSAWARE (создание приложения, поддерживающего сервер терминалов)
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="tsaware-create-terminal-server-aware-application"></a>/TSAWARE (создание приложения, поддерживающего сервер терминалов)
 ```  
 /TSAWARE[:NO]  
 ```  
   
-## Заметки  
- Параметр \/TSAWARE устанавливает флаг в поле IMAGE\_OPTIONAL\_HEADER DllCharacteristics в необязательном заголовке образа программы.  Когда этот флаг установлен, сервер терминала не вносит определенные изменения в приложения.  
+## <a name="remarks"></a>Примечания  
+ Параметр/TSAWARE устанавливает флаг в поле IMAGE_OPTIONAL_HEADER dllcharacteristics в образе программы необязательный заголовок. Если этот флаг установлен, сервер терминалов не будет вносить определенные изменения в приложение.  
   
- Если приложение не поддерживает сервер терминалов \(приложение прежних версий\), то сервер терминалов выполняет определенные изменения в приложении, чтобы оно выполнялось правильно в многопользовательской среде.  Например, сервер терминалов создает виртуальную папку Windows, чтобы пользователь мог воспользоваться ей, а не системным каталогом Windows.  Пользователь получает доступ к собственным файлам INI.  Кроме этого, сервер терминалов вносит ряд изменений в реестр приложения прежних версий.  Эти изменения снижают скорость загрузки приложения прежних версий на сервере терминалов.  
+ Если приложение не поддерживает сервер терминалов (устаревшее приложение), сервер терминалов выполняет определенные изменения в приложении для последующей правильной работы в многопользовательской среде. Например сервер терминалов создаст виртуальную папку Windows, таким образом, что каждый пользователь получит папка Windows, а не начало системный каталог Windows. Это предоставляет пользователям доступ к собственным файлам INI. Кроме того сервер терминалов вносит ряд изменений в реестр приложения прежних версий. Эти изменения снижают скорость загрузки приложения прежних версий на сервере терминалов.  
   
- Если приложение поддерживает сервер терминалов, оно не должно использовать файлы INI или выполнять запись в реестр **HKEY\_CURRENT\_USER** во время установки.  
+ Если приложение поддерживает сервер терминалов, он должен использовать файлы INI ни записи **HKEY_CURRENT_USER** реестра во время установки.  
   
- Если используется параметр \/TSAWARE, а приложение использует файлы INI, эти файлы будут совместно использоваться всеми пользователями системы.  Если такой вариант является допустимым, можно выполнить компоновку приложения с помощью параметра \/TSAWARE. В противном случае необходимо использовать параметр \/TSAWARE:NO.  
+ Если используется параметр/TSAWARE, а приложение по-прежнему использует ini-файлы, файлы будут совместно использоваться всех пользователей системы. Если допустима, по-прежнему можно связать приложение с/TSAWARE; в противном случае необходимо использовать: No.  
   
- Параметр \/TSAWARE по умолчанию включен для Windows 2000 и более поздних версий, а также для приложений Windows и консольных приложений.  Дополнительные сведения см. в описании [\/SUBSYSTEM](../../build/reference/subsystem-specify-subsystem.md) и [\/VERSION](../Topic/-VERSION%20\(Version%20Information\).md).  
+ Параметр/TSAWARE включен по умолчанию для Windows 2000 и более поздних версиях для Windows и консольных приложений. В разделе [/SUBSYSTEM](../../build/reference/subsystem-specify-subsystem.md) и [/Version](../../build/reference/version-version-information.md) сведения.  
   
- Параметр \/TSAWARE нельзя использовать для драйверов, VxD или DLL.  
+ / TSAWARE не подходит для драйверов, VxD или DLL.  
   
- Если приложение было скомпоновано с помощью параметра \/TSAWARE, то параметр [\/HEADERS](../../build/reference/headers.md) DUMPBIN будет отображать соответствующую информацию.  
+ Если приложение было скомпоновано с/TSAWARE, DUMPBIN [/Headers](../../build/reference/headers.md) будут отображаться сведения об ошибке.  
   
-### Установка данного параметра компоновщика в среде разработки Visual Studio  
+### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>Задание данного параметра компоновщика в среде разработки Visual Studio  
   
-1.  Откройте диалоговое окно **Страницы свойств** проекта.  Дополнительные сведения см. в разделе [Задание свойств проекта C\+\+](../../ide/working-with-project-properties.md).  
+1.  Откройте диалоговое окно **Страницы свойств** проекта. Дополнительные сведения см. в разделе [задание свойств проекта Visual C++](../../ide/working-with-project-properties.md).  
   
-2.  Выберите папку **Компоновщик**.  
+2.  Нажмите кнопку **компоновщика** папки.  
   
-3.  Выберите страницу свойств **Система**.  
+3.  Нажмите кнопку **системы** страницу свойств.  
   
-4.  Измените свойство **Сервер терминалов**.  
+4.  Изменить **сервера терминалов** свойство.  
   
-### Установка данного параметра компоновщика программным способом  
+### <a name="to-set-this-linker-option-programmatically"></a>Задание данного параметра компоновщика программным способом  
   
 -   См. раздел <xref:Microsoft.VisualStudio.VCProjectEngine.VCLinkerTool.TerminalServerAware%2A>.  
   
-## См. также  
+## <a name="see-also"></a>См. также  
  [Настройка параметров компоновщика](../../build/reference/setting-linker-options.md)   
  [Параметры компоновщика](../../build/reference/linker-options.md)   
- [Storing User\-Specific Information](http://msdn.microsoft.com/library/aa383452)   
- [Legacy Applications in a Terminal Services Environment](https://msdn.microsoft.com/en-us/library/aa382957.aspx)
+ [Хранение сведений о пользователе](http://msdn.microsoft.com/library/aa383452)   
+ [Устаревшие приложения в среде служб терминалов](https://msdn.microsoft.com/en-us/library/aa382957.aspx)

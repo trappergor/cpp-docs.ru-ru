@@ -1,69 +1,70 @@
 ---
-title: "/volatile (интерпретация ключевого слова volatile) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "/volatile:iso"
-  - "/volatile:ms"
-  - "/volatile"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Параметр компилятора "/volatile""
-  - "Параметр компилятора "/volatile" [C++]"
-  - "Параметр компилятора "volatile""
-  - "Параметр компилятора "-volatile""
-  - "Параметр компилятора "volatile" [C++]"
-  - "Параметр компилятора "-volatile" [C++]"
+title: "-volatile (Интерпретация ключевого слова volatile) | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- /volatile:iso
+- /volatile:ms
+- /volatile
+dev_langs: C++
+helpviewer_keywords:
+- /volatile compiler option
+- /volatile compiler option [C++]
+- -volatile compiler option
+- volatile compiler option [C++]
+- volatile compiler option
+- -volatile compiler option [C++]
 ms.assetid: 9d08fcc6-5bda-44c8-8151-8d8d54f164b8
-caps.latest.revision: 15
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 15
+caps.latest.revision: "15"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: d0dab1d40efc0749478600e7330287926fa76152
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 12/21/2017
 ---
-# /volatile (интерпретация ключевого слова volatile)
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Задает способ интерпретации ключевого слова [volatile](../../cpp/volatile-cpp.md).  
+# <a name="volatile-volatile-keyword-interpretation"></a>/volatile (интерпретация ключевого слова volatile)
+Указывает, как [volatile](../../cpp/volatile-cpp.md) ключевое слово будет интерпретироваться.  
   
-## Синтаксис  
+## <a name="syntax"></a>Синтаксис  
   
 ```  
 /volatile:{iso|ms}  
 ```  
   
-## Аргументы  
- **\/volatile:iso**  
- Выделяет строгую семантику `volatile`, как определено стандартным языком С\+\+ для ISO\-образов.  Семантика получения и освобождения не гарантируется при переменном обращении.  Если компилятор нацелен на ARM, это интерпретация `volatile` по умолчанию.  
+## <a name="arguments"></a>Аргументы  
+ **/volatile:ISO**  
+ Выбирает strict `volatile` семантику в соответствии с языком C++ в соответствии со стандартом ISO. Семантика получения и освобождения не гарантируется при переменном обращении. Если компилятор ARM, это Интерпретация по умолчанию `volatile`.  
   
- **\/volatile:ms**  
- Выделяет расширенную семантику `volatile` Microsoft, которая добавляет гарантии упорядочения памяти за пределами стандартного языка С\+\+ для ISO\-образов.  Семантика получения и освобождения гарантируется при переменном обращении.  Однако этот параметр также заставляет компилятор генерировать барьеры памяти оборудования, которые могут добавлять значительную нагрузку на ARM и другие архитектуры со слабым упорядочиванием памяти.  Если компилятор нацелен на какую\-либо платформу, кроме ARM, это интерпретация `volatile` по умолчанию.  
+ **/volatile:MS**  
+ Выбирает расширенные Майкрософт `volatile` семантику, которая добавить память, приоритет очередности за пределы языка C++ стандарта ISO. Семантика получения и освобождения гарантируется при переменном обращении. Тем не менее этот параметр также предписывает компилятору создавать барьеры памяти оборудования, что может увеличить значительных временных затрат на ARM и других архитектур слабое упорядочение в памяти. Если компилятор предназначен для любой платформы, кроме ARM, это по умолчанию интерпретацию `volatile`.  
   
-## Заметки  
- Настоятельно рекомендуется использовать **\/volatile:iso** вместе с явными примитивами синхронизации и встроенными компилятора при работе с памятью, используется отладкой потоков.  Для получения дополнительной информации см. [volatile](../../cpp/volatile-cpp.md).  
+## <a name="remarks"></a>Примечания  
+ Мы настоятельно рекомендуем использовать **/volatile:iso** вместе с явные примитивы синхронизации и встроенные функции компилятора при работе с памятью, совместно используемой потоками. Дополнительные сведения см. в разделе [volatile](../../cpp/volatile-cpp.md).  
   
- Если перенести существующий код или изменить этот параметр посередине проекта, возможно, имеет смысл включить предупреждение [C4746](../../error-messages/compiler-warnings/compiler-warning-c4746.md), чтобы определить расположения кода, затронутые отличиями в семантике.  
+ При переносе существующего кода, или изменить этот параметр в середине проекта, может оказаться полезным включить предупреждение [C4746](../../error-messages/compiler-warnings/compiler-warning-c4746.md) для определения места кода, затрагиваемые разности в семантике.  
   
- Значение `#pragma` эквивалентно элементу управления этот параметр.  
+ Имеется не `#pragma` эквивалентное значению этого параметра.  
   
-### Задание параметра компилятора \/volatile в Visual Studio  
+### <a name="to-set-the-volatile-compiler-option-in-visual-studio"></a>Чтобы задать / volatile-параметр компилятора в Visual Studio  
   
-1.  Откройте диалоговое окно **Страницы свойств** проекта.  Для получения дополнительной информации см. [Открытие свойств страниц проекта](../../misc/how-to-open-project-property-pages.md).  
+1.  Откройте **страницы свойств** диалоговое окно для проекта. Дополнительные сведения см. в разделе [работа со свойствами проекта](../../ide/working-with-project-properties.md).  
   
-2.  Выберите папку **C\/C\+\+**.  
+2.  Выберите **C/C++** папки.  
   
-3.  Выберите страницу свойств **Командная строка**.  
+3.  Выберите **командной строки** страницу свойств.  
   
-4.  В поле **Дополнительные параметры** добавьте `/volatile: ISO` или `/volatile: отсутствуют`.  
+4.  В **Дополнительные параметры** добавьте `/volatile:iso` или `/volatile:ms`.  
   
-## См. также  
+## <a name="see-also"></a>См. также  
  [volatile](../../cpp/volatile-cpp.md)   
  [Параметры компилятора](../../build/reference/compiler-options.md)   
- [Настройка параметров компилятора](../Topic/Setting%20Compiler%20Options.md)
+ [Настройка параметров компилятора](../../build/reference/setting-compiler-options.md)

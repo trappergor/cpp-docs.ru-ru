@@ -17,11 +17,12 @@ caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 54c76d640171a6068421ff4199b6e77480db28d7
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: af16748bb3b2048ce854ccc7a03b2400039184a6
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="nonextensible-attribute"></a>nonextensible-атрибут
 Сдвоенный интерфейс не будет распространяться во время выполнения (то есть не предоставляют методы или свойства с помощью **IDispatch::Invoke** , которые недоступны через таблице vtable), его следует применять **nonextensible** атрибут в определении интерфейса. Этот атрибут содержит сведения для клиентских языков (например, Visual Basic), которые можно использовать для включения проверки весь код во время компиляции. Если этот атрибут не задан, ошибки могут оставаться скрытым в коде клиента до времени выполнения.  

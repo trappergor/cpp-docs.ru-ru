@@ -23,11 +23,12 @@ caps.latest.revision: "23"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: f45a4fc1d69cf0caefb08a7a408ecc836d092851
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: f57fc1bdd641fbc8e770ddc9b37480530034ba1d
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cdacl-class"></a>Класс CDacl
 Этот класс является оболочкой для структуры DACL (список управления доступом).  
@@ -41,18 +42,18 @@ ms.lasthandoff: 10/24/2017
 class CDacl : public CAcl
 ```  
   
-## <a name="members"></a>Члены  
+## <a name="members"></a>Участники  
   
 ### <a name="public-constructors"></a>Открытые конструкторы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[CDacl::CDacl](#cdacl)|Конструктор.|  
 |[CDacl:: ~ CDacl](#dtor)|Деструктор|  
   
 ### <a name="public-methods"></a>Открытые методы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[CDacl::AddAllowedAce](#addallowedace)|Добавляет допустимое ACE (записи управления доступом) `CDacl` объекта.|  
 |[CDacl::AddDeniedAce](#adddeniedace)|Добавляет запрещенного ACE для `CDacl` объекта.|  
@@ -62,7 +63,7 @@ class CDacl : public CAcl
   
 ### <a name="public-operators"></a>Открытые операторы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[CDacl::operator =](#operator_eq)|Оператор присвоения.|  
   

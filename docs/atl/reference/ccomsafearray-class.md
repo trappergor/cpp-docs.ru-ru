@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-windows
+ms.technology: cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
@@ -32,36 +31,19 @@ f1_keywords:
 - ATLSAFE/ATL::CComSafeArray::Resize
 - ATLSAFE/ATL::CComSafeArray::SetAt
 - ATLSAFE/ATL::CComSafeArray::m_psa
-dev_langs:
-- C++
-helpviewer_keywords:
-- CComSafeArray class
+dev_langs: C++
+helpviewer_keywords: CComSafeArray class
 ms.assetid: ee349aef-33db-4c85-bd08-5d86a3c9d53a
-caps.latest.revision: 26
+caps.latest.revision: "26"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: a82768750e6a7837bb81edd8a51847f83c294c20
-ms.openlocfilehash: 6e1337bee7dc6ca6f64f59657379f7d8ae40f5f8
-ms.contentlocale: ru-ru
-ms.lasthandoff: 04/04/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: 7bed846015090ef9c4da841adff4968c91d8719d
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="ccomsafearray-class"></a>Класс CComSafeArray
 Этот класс является оболочкой для структуры **SAFEARRAY** .  
@@ -77,23 +59,23 @@ class CComSafeArray
  `T`  
  Тип данных для сохранения в массиве.  
   
-## <a name="members"></a>Члены  
+## <a name="members"></a>Участники  
   
 ### <a name="public-constructors"></a>Открытые конструкторы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[CComSafeArray::CComSafeArray](#ccomsafearray)|Конструктор.|  
 |[CComSafeArray:: ~ CComSafeArray](#dtor)|Деструктор|  
   
 ### <a name="public-methods"></a>Открытые методы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[CComSafeArray::Add](#add)|Добавляет один или несколько элементов или структуру **SAFEARRAY** в `CComSafeArray`.|  
 |[CComSafeArray::Attach](#attach)|Прикрепляет структуру **SAFEARRAY** к объекту `CComSafeArray` .|  
 |[CComSafeArray::CopyFrom](#copyfrom)|Копирует содержимое структуры **SAFEARRAY** в объект `CComSafeArray` .|  
-|[CComSafeArray::CopyTo](#copyto)|Создает копию объекта `CComSafeArray`.|  
+|[CComSafeArray::CopyTo](#copyto)|Создает копию объекта `CComSafeArray` .|  
 |[CComSafeArray::Create](#create)|Создает объект `CComSafeArray`.|  
 |[CComSafeArray::Destroy](#destroy)|Уничтожает объект `CComSafeArray`.|  
 |[CComSafeArray::Detach](#detach)|Отсоединяет структуру **SAFEARRAY** от объекта `CComSafeArray` .|  
@@ -112,7 +94,7 @@ class CComSafeArray
   
 ### <a name="public-operators"></a>Открытые операторы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[CComSafeArray::operator LPSAFEARRAY](#operator_lpsafearray)|Приводит значение к указателю **SAFEARRAY** .|  
 |[CComSafeArray::operator\[\]](ccomsafearray-class.md#operator_at)|Получает элемент из массива.|  
@@ -121,22 +103,22 @@ class CComSafeArray
   
 ### <a name="public-data-members"></a>Открытые члены данных  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[CComSafeArray::m_psa](#m_psa)|Этот элемент данных содержит адрес структуры **SAFEARRAY** .|  
   
 ## <a name="remarks"></a>Примечания  
- `CComSafeArray`предоставляет оболочку для [тип данных массива SAFEARRAY](http://msdn.microsoft.com/en-us/9ec8025b-4763-4526-ab45-390c5d8b3b1e) класса, что это простой механизм для создания и управления одно - и многомерных массивов практически любого поддерживаемого типа VARIANT типа.  
+ `CComSafeArray` предоставляет оболочку для класса [SAFEARRAY Data Type](http://msdn.microsoft.com/en-us/9ec8025b-4763-4526-ab45-390c5d8b3b1e) , упрощая создание одно- и многомерных массивов практически любого поддерживаемого типа VARIANT и управление ими.  
   
  `CComSafeArray` упрощает передачу массивов между процессами и обеспечивает дополнительную безопасность путем проверки значений индекса массива на соответствие верхней и нижней границам.  
   
  Нижняя граница `CComSafeArray` может начинаться с любого определенного пользователем значения. Однако нижняя граница массивов, доступ к которым осуществляется через C++, должна быть равна 0. В других языках, например Visual Basic, могут использоваться другие ограничивающие значения (например, от −10 до 10).  
   
- Используйте [CComSafeArray::Create](#create) для создания `CComSafeArray` объекта, и [CComSafeArray::Destroy](#destroy) для его удаления.  
+ Используйте [CComSafeArray::Create](#create) для создания объекта `CComSafeArray` , и [CComSafeArray::Destroy](#destroy) — для его удаления.  
   
  `CComSafeArray` может содержать следующее подмножество типов данных VARIANT.  
   
-|VARTYPE|Описание|  
+|VARTYPE|Описание:|  
 |-------------|-----------------|  
 |VT_I1|char|  
 |VT_I2|short|  
@@ -158,7 +140,7 @@ class CComSafeArray
  **Заголовок:** atlsafe.h  
   
 ## <a name="example"></a>Пример  
- [!code-cpp[NVC_ATL_Utilities #75](../../atl/codesnippet/cpp/ccomsafearray-class_1.cpp)]  
+ [!code-cpp[NVC_ATL_Utilities#75](../../atl/codesnippet/cpp/ccomsafearray-class_1.cpp)]  
   
 ##  <a name="add"></a>CComSafeArray::Add  
  Добавляет один или несколько элементов или структуру **SAFEARRAY** в `CComSafeArray`.  
@@ -276,7 +258,7 @@ HRESULT CopyFrom(LPSAFEARRAY* ppArray);
  Этот метод копирует содержимое **SAFEARRAY** в текущий `CComSafeArray` объекта. Заменяет существующее содержимое массива.  
   
 ##  <a name="copyto"></a>CComSafeArray::CopyTo  
- Создает копию объекта `CComSafeArray`.  
+ Создает копию объекта `CComSafeArray` .  
   
 ```
 HRESULT CopyTo(LPSAFEARRAY* ppArray);
@@ -292,7 +274,7 @@ HRESULT CopyTo(LPSAFEARRAY* ppArray);
 ### <a name="remarks"></a>Примечания  
  Этот метод копирует содержимое `CComSafeArray` объекта в **SAFEARRAY** структуры.  
   
-##  <a name="create"></a>CComSafeArray::Create  
+##  <a name="create"></a>  CComSafeArray::Create  
  Создает объект `CComSafeArray`.  
   
 ```
@@ -319,7 +301,7 @@ HRESULT Create(ULONG ulCount = 0, LONG lLBound = 0);
 ### <a name="remarks"></a>Примечания  
  Объект `CComSafeArray` объект может быть создан из существующего **SAFEARRAYBOUND** структуры и число измерений или путем указания числа элементов в массиве, а нижняя граница. Если массив должен быть получен из Visual C++, нижняя граница должно быть равно 0. Другие языки могут разрешить другие значения для нижней границы (например, Visual Basic поддерживает массивы с элементами в диапазоне, например 10 до 10).  
   
-##  <a name="destroy"></a>CComSafeArray::Destroy  
+##  <a name="destroy"></a>  CComSafeArray::Destroy  
  Уничтожает объект `CComSafeArray`.  
   
 ```
@@ -423,7 +405,7 @@ VARTYPE GetType() const;
 ### <a name="return-value"></a>Возвращаемое значение  
  Возвращает тип данных, хранящихся в массиве, который может принимать одно из следующих типов:  
   
-|VARTYPE|Описание|  
+|VARTYPE|Описание:|  
 |-------------|-----------------|  
 |VT_I1|char|  
 |VT_I2|short|  
@@ -606,8 +588,7 @@ HRESULT SetAt(LONG lIndex, const T& t, BOOL bCopy = TRUE);
  `bCopy` Учитывается флаг при элементов типа `BSTR` или **VARIANT** добавляются в массив. Значение по умолчанию **TRUE** гарантирует новую копию данных, при добавлении элемента в массиве.  
   
 ## <a name="see-also"></a>См. также  
- [Тип данных массива SAFEARRAY](http://msdn.microsoft.com/en-us/9ec8025b-4763-4526-ab45-390c5d8b3b1e)   
+ [SAFEARRAY Data Type](http://msdn.microsoft.com/en-us/9ec8025b-4763-4526-ab45-390c5d8b3b1e)   
  [CComSafeArray::Create](#create)   
  [CComSafeArray::Destroy](#destroy)   
  [Общие сведения о классе](../../atl/atl-class-overview.md)
-

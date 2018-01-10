@@ -22,11 +22,12 @@ caps.latest.revision: "19"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 7684f01b9d9fa3a8be434152f190e91d0dccae3d
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 8d5264a2ab8e1bbc4c3f4eac4d83d096d91e8846
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="ccomobjectglobal-class"></a>Класс CComObjectGlobal
 Этот класс управляет значение счетчика ссылок на модуль, содержащий ваш `Base` объекта.  
@@ -42,18 +43,18 @@ class CComObjectGlobal : public Base
  `Base`  
  Класс, производный от [CComObjectRoot](../../atl/reference/ccomobjectroot-class.md) или [CComObjectRootEx](../../atl/reference/ccomobjectrootex-class.md), также как и из любого другого интерфейса, которые требуется поддерживать на объект.  
   
-## <a name="members"></a>Члены  
+## <a name="members"></a>Участники  
   
 ### <a name="public-constructors"></a>Открытые конструкторы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[CComObjectGlobal::CComObjectGlobal](#ccomobjectglobal)|Конструктор.|  
 |[CComObjectGlobal:: ~ CComObjectGlobal](#dtor)|Деструктор|  
   
 ### <a name="public-methods"></a>Открытые методы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[CComObjectGlobal::AddRef](#addref)|Реализует глобальную `AddRef`.|  
 |[CComObjectGlobal::QueryInterface](#queryinterface)|Реализует глобальную `QueryInterface`.|  
@@ -61,7 +62,7 @@ class CComObjectGlobal : public Base
   
 ### <a name="public-data-members"></a>Открытые члены данных  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[CComObjectGlobal::m_hResFinalConstruct](#m_hresfinalconstruct)|Содержит **HRESULT** возвращается при построении `CComObjectGlobal` объекта.|  
   

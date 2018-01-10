@@ -17,11 +17,12 @@ caps.latest.revision: "12"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: e0ef927ad6e2a0e9b0c71e211fa525ba7fc8ea0d
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 2063bd35627fd86c0cab82e4e50e5e8a126ddfa7
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="atl-connection-points"></a>Точки подключения ATL
 Доступный для подключения объект поддерживает исходящие интерфейсы. Исходящий интерфейс позволяет объекту обмениваться данными с клиентом. Для каждого исходящего интерфейса доступный для подключения объект предоставляет точку подключения. Каждый исходящий интерфейс реализуется клиентов для объекта, который называется приемником.  
@@ -30,7 +31,7 @@ ms.lasthandoff: 10/24/2017
   
  Каждая точка подключения поддерживает [IConnectionPoint](http://msdn.microsoft.com/library/windows/desktop/ms694318) интерфейса. Доступный для соединения объект предоставляет свои точки подключения клиенту через [IConnectionPointContainer](http://msdn.microsoft.com/library/windows/desktop/ms683857) интерфейса.  
   
-## <a name="in-this-section"></a>Содержание  
+## <a name="in-this-section"></a>В этом разделе  
  [Классы точки подключения библиотеки ATL](../atl/atl-connection-point-classes.md)  
  Краткое описание классов ATL, поддерживающих точки подключения.  
   

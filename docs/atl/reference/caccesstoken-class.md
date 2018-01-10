@@ -62,11 +62,12 @@ caps.latest.revision: "24"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: e217f73afcf00d5569f731d86c726ae3191ffa93
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 3df4c5ac46c159cd3ed955621af914c677182a57
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="caccesstoken-class"></a>Класс CAccessToken
 Этот класс является оболочкой для токена доступа.  
@@ -80,17 +81,17 @@ ms.lasthandoff: 10/24/2017
 class CAccessToken
 ```  
   
-## <a name="members"></a>Члены  
+## <a name="members"></a>Участники  
   
 ### <a name="public-constructors"></a>Открытые конструкторы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[CAccessToken:: ~ CAccessToken](#dtor)|Деструктор|  
   
 ### <a name="public-methods"></a>Открытые методы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[CAccessToken::Attach](#attach)|Вызовите этот метод, чтобы стать владельцем дескриптора маркера доступ.|  
 |[CAccessToken::CheckTokenMembership](#checktokenmembership)|Этот метод вызывается для включения в указанный идентификатор SID `CAccessToken` объекта.|  

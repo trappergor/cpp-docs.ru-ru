@@ -17,16 +17,17 @@ caps.latest.revision: "11"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 7fc4859d9008135cf1e8ff39b0f00f1a86d35088
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 7fdb5ba2c9c2be7693f5c447528f846127cc3ba1
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="dual-interfaces-and-atl"></a>Сдвоенные интерфейсы и ATL
 Сдвоенный интерфейс позволяет получить доступ как к методам disp-интерфейс или как методы vtable его методы. В этом разделе рассматриваются некоторые возможности сдвоенные интерфейсы с точки зрения ATL.  
   
-## <a name="in-this-section"></a>Содержание  
+## <a name="in-this-section"></a>В этом разделе  
  [Реализация сдвоенного интерфейса](../atl/implementing-a-dual-interface.md)  
  Описание классов и мастеров, связанной с реализацией сдвоенный интерфейс.  
   

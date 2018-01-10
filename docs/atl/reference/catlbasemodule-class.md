@@ -25,11 +25,12 @@ caps.latest.revision: "18"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 3249240ef90224dc1a297a848f1eba55d915fdac
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 88671ae94a1df10f3866dd2ae2e70092d1ca0c4d
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="catlbasemodule-class"></a>Класс CAtlBaseModule
 В каждом проекте ATL создается экземпляр этого класса.  
@@ -40,17 +41,17 @@ ms.lasthandoff: 10/24/2017
 class CAtlBaseModule : public _ATL_BASE_MODULE
 ```  
   
-## <a name="members"></a>Члены  
+## <a name="members"></a>Участники  
   
 ### <a name="public-constructors"></a>Открытые конструкторы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[CAtlBaseModule::CAtlBaseModule](#catlbasemodule)|Конструктор.|  
   
 ### <a name="public-methods"></a>Открытые методы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[CAtlBaseModule::AddResourceInstance](#addresourceinstance)|Добавляет в список хранимых дескрипторов экземпляра ресурса.|  
 |[CAtlBaseModule::GetHInstanceAt](#gethinstanceat)|Возвращает дескриптор для указанного экземпляра ресурса.|  
@@ -61,7 +62,7 @@ class CAtlBaseModule : public _ATL_BASE_MODULE
   
 ### <a name="public-data-members"></a>Открытые члены данных  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[CAtlBaseModule::m_bInitFailed](#m_binitfailed)|Переменная, которая указывает на сбой при инициализации модуля.|  
   

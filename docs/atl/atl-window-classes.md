@@ -21,18 +21,19 @@ caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 18925307a685dc338912a80398154065edfa12dd
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: d4cce6fd98d4ea476900d8b248442fdddbe3c2d2
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="atl-window-classes"></a>Классы окон ATL
 ATL включает несколько классов, которые позволяют использовать и реализовывать windows. Эти классы, как другие классы ATL, обеспечивают эффективную реализацию, которое не устанавливают дополнительные затраты на ваш код.  
   
  В этом разделе описываются классы окон ATL и способы их использования.  
   
-## <a name="in-this-section"></a>Содержание  
+## <a name="in-this-section"></a>В этом разделе  
  [Введение в классы окон ATL](../atl/introduction-to-atl-window-classes.md)  
  Краткое описание каждого класса окна ATL и ссылки на справочные материалы по их.  
   

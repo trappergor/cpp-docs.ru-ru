@@ -1,38 +1,39 @@
 ---
-title: "Which ATL Classes Facilitate ActiveX Control Containment? | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "контейнер для элементов ActiveX [C++], ATL control hosting"
-  - "hosting controls using ATL"
+title: "ATL-классы упрощают вложения элемента управления ActiveX? | Документы Майкрософт"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- hosting controls using ATL
+- ActiveX control containers [C++], ATL control hosting
 ms.assetid: 803a4605-7f4c-4139-8638-49d8783d31b0
-caps.latest.revision: 11
-caps.handback.revision: 6
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "11"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 880c7bd52476614a4356690aff2fda286e9f3aef
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 12/21/2017
 ---
-# Which ATL Classes Facilitate ActiveX Control Containment?
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Код элемента управления\- размещения библиотеки ATL не требует использовании все классы библиотеки ATL. можно просто создать поле **"AtlAxWin80"** и использовать API размещения если требуемый элемент управления\- \(дополнительные сведения см. в разделе [API Размещения, что Элемент управления\- библиотеки ATL?](../atl/what-is-the-atl-control-hosting-api-q.md)\).  Однако следующие классы реализуют включения функции проще использовать.  
+# <a name="which-atl-classes-facilitate-activex-control-containment"></a>ATL-классы упрощают вложения элемента управления ActiveX?
+Код, размещение элементов управления ATL не требуется использовать все классы ATL; позволяет создать **«AtlAxWin80»** окна и использование API размещение элементов управления, при необходимости (Дополнительные сведения см. в разделе **возможности API размещения элемента управления ATL**. Тем не менее следующие классы упростить вложенность функций для использования.  
   
-|Класс|Описание|  
-|-----------|--------------|  
-|[CAxWindow](../atl/reference/caxwindow-class.md)|Создает программу\-оболочку окно **"AtlAxWin80"**, предоставляя методы для создания окна создание элемента управления и\/или вложить элемент управления в окно и получить указатели интерфейса объекта основного приложения.|  
-|[CAxWindow2T](../Topic/CAxWindow2T%20Class.md)|Создает программу\-оболочку окно **"AtlAxWinLic80"**, предоставляя методы для создания окна создание элемента управления и\/или вложить лицензированный элемент управления в окно и получить указатели интерфейса объекта основного приложения.|  
-|[CComCompositeControl](../atl/reference/ccomcompositecontrol-class.md)|Действует как базовый класс для классов элементов управления ActiveX, основанных на ресурс диалогового окна.  Такие элементы управления могут содержать другие элементы управления ActiveX.|  
-|[CAxDialogImpl](../Topic/CAxDialogImpl%20Class.md)|Действует как базовый класс для классов диалоговых окон, основанных на ресурс диалогового окна.  Эти диалоговые окна могут содержать управления ActiveX.|  
-|[CWindow](../atl/reference/cwindow-class.md)|Предоставляет метод, [GetDlgControl](../Topic/CWindow::GetDlgControl.md), которое возвращает указатель интерфейса на элементе управления, заданным идентификатором его окна основного приложения.  Кроме того, программы\-оболочки API Windows, предоставляемые `CWindow` обычно выполняют управление окнами.|  
+|Класс|Описание:|  
+|-----------|-----------------|  
+|[CAxWindow](../atl/reference/caxwindow-class.md)|Создает оболочку для **«AtlAxWin80»** окна, предоставлять методы для создания окна, создание элемента управления и/или присоединение элемента управления в окно и получения указателей интерфейса для объекта узла.|  
+|[CAxWindow2T](../atl/reference/caxwindow2t-class.md)|Создает оболочку для **«AtlAxWinLic80»** окна, предоставлять методы для создания окна, создание элемента управления и/или присоединение лицензированный элемент управления в окно и получения указателей интерфейса для объекта узла.|  
+|[CComCompositeControl](../atl/reference/ccomcompositecontrol-class.md)|Действует как базовый класс для классов элементов управления ActiveX, на основе ресурса диалогового окна. Такие элементы управления могут содержать другие элементы управления ActiveX.|  
+|[CAxDialogImpl](../atl/reference/caxdialogimpl-class.md)|Действует как базовый класс для классов диалоговых окон, на основе ресурса диалогового окна. Такие диалоговые окна может содержать элементы управления ActiveX.|  
+|[CWindow](../atl/reference/cwindow-class.md)|Предоставляет метод, [GetDlgControl](../atl/reference/cwindow-class.md#getdlgcontrol), возвращает указатель интерфейса на элемент управления, заданный идентификатор окна ее размещения. Кроме того, программы-оболочки Windows API, предоставляемые `CWindow` обычно упростить управление окнами.|  
   
-## См. также  
+## <a name="see-also"></a>См. также  
  [Часто задаваемые вопросы о вложении элементов управления](../atl/atl-control-containment-faq.md)
+

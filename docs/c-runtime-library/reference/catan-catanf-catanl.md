@@ -33,37 +33,22 @@ f1_keywords:
 - complex/catan
 - complex/catanf
 - complex/catanl
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - catan function
 - catanf function
 - catanl function
 ms.assetid: 8415ed9c-7909-4d08-b532-4630bafdc7e8
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.mt:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3f91eafaf3b5d5c1b8f96b010206d699f666e224
-ms.openlocfilehash: 840e4fd2231d9eca61dc508b15a11ed75822bb6b
-ms.contentlocale: ru-ru
-ms.lasthandoff: 04/01/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: 333db8403e539d28de766809891a068717c738ed
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="catan-catanf-catanl"></a>catan, catanf, catanl
 Возвращает арктангенс с порезов ветвь попадает в интервал [-1; + 1] по оси мнимой комплексного числа.  
@@ -93,7 +78,7 @@ _Lcomplex catanl(
  Комплексное число, указывающее угол в радианах.  
   
 ## <a name="return-value"></a>Возвращаемое значение  
- Арктангенс `z` в радианах. Результатом является unbounded мнимой оси, а также в интервале [-π/2; + π/2] на реальных оси.  
+ Арктангенс `z` в радианах. Результатом является unbounded мнимой оси, а также в интервале [-π/2; + π/2] вдоль оси real.  
   
 ## <a name="remarks"></a>Примечания  
  Поскольку C++ допускает перегрузку, можно вызывать перегрузки `catan`, которые принимают и возвращают значения `_Fcomplex` и `_Lcomplex`. В программе на языке C `catan` всегда принимает и возвращает значение `_Dcomplex` .  

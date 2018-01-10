@@ -18,11 +18,12 @@ caps.latest.revision: "3"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 86078a8ff66eadc1cdd6b177ba074abfd1683345
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: adfd7344b01360df6af3ccf7a153eda3451d2482
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="setapptype"></a>_set_app_type
 Внутренняя функция используется при запуске для того, чтобы сообщить CRT, является ли приложение консольным приложением или приложением с графическим интерфейсом.  
@@ -46,7 +47,7 @@ void __cdecl _set_app_type(
  `appType`  
  Значение, указывающее на тип приложения. Допустимые значения:  
   
-|Значение|Описание|  
+|Значение|Описание:|  
 |----------------|-----------------|  
 |_crt_unknown_app|Неизвестный тип приложения.|  
 |_crt_console_app|Приложение консоли (командной строки).|  

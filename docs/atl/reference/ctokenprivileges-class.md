@@ -28,11 +28,12 @@ caps.latest.revision: "23"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 1b6a7d1c76b9ddb0aa555e8856f26da99611f553
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 0dc0fb58d1b92fac1462b355b9afb353554f3f23
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="ctokenprivileges-class"></a>Класс CTokenPrivileges
 Этот класс является оболочкой для **TOKEN_PRIVILEGES** структуры.  
@@ -46,18 +47,18 @@ ms.lasthandoff: 10/24/2017
 class CTokenPrivileges
 ```  
   
-## <a name="members"></a>Члены  
+## <a name="members"></a>Участники  
   
 ### <a name="public-constructors"></a>Открытые конструкторы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[CTokenPrivileges::CTokenPrivileges](#ctokenprivileges)|Конструктор.|  
 |[CTokenPrivileges:: ~ CTokenPrivileges](#dtor)|Деструктор|  
   
 ### <a name="public-methods"></a>Открытые методы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[CTokenPrivileges::Add](#add)|Добавляет один или несколько прав для `CTokenPrivileges` объекта.|  
 |[CTokenPrivileges::Delete](#delete)|Удаление прав из `CTokenPrivileges` объекта.|  
@@ -72,7 +73,7 @@ class CTokenPrivileges
   
 ### <a name="public-operators"></a>Открытые операторы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[CTokenPrivileges::operator const TOKEN_PRIVILEGES *](#operator_const_token_privileges__star)|Приводит значение к указателю на **TOKEN_PRIVILEGES** структуры.|  
 |[CTokenPrivileges::operator =](#operator_eq)|Оператор присвоения.|  
