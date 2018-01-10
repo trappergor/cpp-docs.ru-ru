@@ -13,11 +13,14 @@ caps.latest.revision: "8"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: f09bdc306bc91184b546ff951dc36b94cda72bb5
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: 3cb17a3c60f7b3f9271ed5ff569d9cd139ce80fd
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="how-to-use-winmdidlexe-and-midlrtexe-to-create-h-files-from-windows-metadata"></a>Практическое руководство. Использование winmdidl.exe и midlrt.exe для создания H-файлов из метаданных Windows
 Winmdidl.exe и midlrt.exe разрешают взаимодействие COM-уровня между машинным кодом C++ и компонентами среды выполнения Windows. Winmdidl.exe принимает в качестве входных данных WINMD-файл, содержащий метаданные для компонента среды выполнения Windows, и выводит IDL-файл. Midlrt.exe преобразовывает этот IDL-файл в файлы заголовков, которые можно использовать в коде C++. Оба инструмента запускаются с помощью командной строки.  
@@ -49,7 +52,7 @@ Winmdidl.exe [/nologo] [/supressversioncheck] [/time] [/outdir:dir] [/banner:fil
  Выводит общее время выполнения в окно консоли.  
   
  / outdir:\<dir >  
- Задает выходной каталог. Если путь содержит пробелы, используйте кавычки. Выходной каталог по умолчанию —  *\<диска >*: \Users\\*\<имя пользователя >*\AppData\Local\VirtualStore\Program Files (x86) \Microsoft Visual Studio 12.0\\.  
+ Задает выходной каталог. Если путь содержит пробелы, используйте кавычки. Выходной каталог по умолчанию — * \<диска >*: \Users\\*\<имя пользователя >*\AppData\Local\VirtualStore\Program Files (x86) \Microsoft Visual Studio 12.0\\.  
   
  `/banner:<file>`  
  Указывает файл, содержащий пользовательский текст, который необходимо вставить в начало сообщения по умолчанию об авторских правах и версии winmdidl в верхней части сгенерированного IDL-файла. Если путь содержит пробелы, используйте кавычки.  

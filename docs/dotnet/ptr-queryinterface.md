@@ -1,35 +1,37 @@
 ---
-title: "ptr::QueryInterface | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "ptr.QueryInterface"
-  - "ptr::QueryInterface"
-  - "msclr::com::ptr::QueryInterface"
-  - "msclr.com.ptr.QueryInterface"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "QueryInterface - метод"
+title: "PTR::QueryInterface | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords:
+- ptr.QueryInterface
+- ptr::QueryInterface
+- msclr::com::ptr::QueryInterface
+- msclr.com.ptr.QueryInterface
+dev_langs: C++
+helpviewer_keywords: QueryInterface method
 ms.assetid: c2619517-3fde-493b-b12d-da8f62d5d803
-caps.latest.revision: 11
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 9
+caps.latest.revision: "11"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: 687c57c32d4f270d397e3ed8fd068d603cbcb9b9
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 12/21/2017
 ---
-# ptr::QueryInterface
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Запросы выполнен com\-объекта для интерфейса и вложат результат в другой `com::ptr`.  
+# <a name="ptrqueryinterface"></a>ptr::QueryInterface
+Запрашивает у владельца объекта COM для интерфейса и прикрепляет результаты в другой `com::ptr`.  
   
-## Синтаксис  
+## <a name="syntax"></a>Синтаксис  
   
 ```  
 template<class _other_type>  
@@ -38,18 +40,18 @@ void QueryInterface(
 );  
 ```  
   
-#### Параметры  
+#### <a name="parameters"></a>Параметры  
  `other`  
- `com::ptr`, получит интерфейс.  
+ `com::ptr` , Получите интерфейс.  
   
-## Исключения  
- По сути, `QueryInterface` вызван на имеемом COM\-объект и любые ошибки `HRESULT` преобразование к исключению <xref:System.Runtime.InteropServices.Marshal.ThrowExceptionForHR%2A>.  
+## <a name="exceptions"></a>Исключения  
+ На внутреннем уровне `QueryInterface` будет вызван на собственный объект COM и любая ошибка `HRESULT` преобразуется в исключение по <xref:System.Runtime.InteropServices.Marshal.ThrowExceptionForHR%2A>.  
   
-## Заметки  
- Используйте этот метод для создания программа\-оболочка модели COM для другого интерфейса COM\-объект другому текущей программой\-оболочкой.  Этот метод вызывает `QueryInterface` через выполнен com\-объекта, чтобы запросить указатель к конкретному интерфейсу COM\-объект и вложат возвращает указатель интерфейса в проходить\- в `com::ptr`.  
+## <a name="remarks"></a>Примечания  
+ Используйте этот метод для создания оболочки COM для другой интерфейс COM-объекта, принадлежащие текущей программой-оболочкой. Этот метод вызывает метод `QueryInterface` через собственные COM-объект для запроса указатель на определенный интерфейс COM-объекта и присоединяет возвращенного указателя на интерфейс переданный `com::ptr`.  
   
-## Пример  
- В этом примере реализуется класс CLR, который использует `com::ptr` для создания его объект `IXMLDOMDocument` закрытого члена.  Функция\-член `WriteTopLevelNode` использует `QueryInterface` для заполнения локальных `com::ptr` с `IXMLDOMNode` и передает `com::ptr` \(,\) отслеживания ссылку на функцию, которая записывает закрытого члена свойства имени узла и текста на консоль.  
+## <a name="example"></a>Пример  
+ В этом примере реализуется класс CLR, который использует `com::ptr` программы-оболочки для своего закрытого члена `IXMLDOMDocument` объекта. `WriteTopLevelNode` Функция-член использует `QueryInterface` для заполнения локальной `com::ptr` с `IXMLDOMNode` , а затем передает `com::ptr` (путем отслеживания ссылок) функции закрытый член, которая выводит на консоль имя и текст свойства узла.  
   
 ```  
 // comptr_queryinterface.cpp  
@@ -150,12 +152,15 @@ int main() {
 }  
 ```  
   
-  **\<\#document\>persnickety\<\/\#document\>**   
-## Требования  
- **Файл заголовка**\<msclr\\com\\ptr.h\>  
+```Output  
+<#document>persnickety</#document>  
+```  
+  
+## <a name="requirements"></a>Требования  
+ **Файл заголовка** \<msclr\com\ptr.h >  
   
  **Пространство имен** msclr::com  
   
-## См. также  
- [Члены ptr](../dotnet/ptr-members.md)   
+## <a name="see-also"></a>См. также  
+ [Члены PTR](../dotnet/ptr-members.md)   
  [ptr::GetInterface](../dotnet/ptr-getinterface.md)

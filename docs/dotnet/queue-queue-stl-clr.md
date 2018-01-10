@@ -1,32 +1,33 @@
 ---
-title: "queue::queue (STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::queue::queue"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "queue - элемент [STL/CLR]"
+title: "Queue::Queue (STL/CLR) | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::queue::queue
+dev_langs: C++
+helpviewer_keywords: queue member [STL/CLR]
 ms.assetid: 6106c07f-d5eb-4f0b-82df-ee4e2e751047
-caps.latest.revision: 18
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 16
+caps.latest.revision: "18"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: d6c4b24ad40bf19b7a20aafcfa2d02fb6490fed1
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 12/21/2017
 ---
-# queue::queue (STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Создает объект адаптера контейнера.  
+# <a name="queuequeue-stlclr"></a>queue::queue (STL/CLR)
+Создает объект контейнера адаптера.  
   
-## Синтаксис  
+## <a name="syntax"></a>Синтаксис  
   
 ```  
 queue();  
@@ -35,39 +36,39 @@ queue(queue<Value, Container>^ right);
 explicit queue(container_type% wrapped);  
 ```  
   
-#### Параметры  
- правый  
- Объект, подлежащих копированию.  
+#### <a name="parameters"></a>Параметры  
+ right  
+ Копируемый объект.  
   
- от программу\-оболочку  
- От программу\-оболочку контейнер, который следует использовать.  
+ в оболочку  
+ Упакованное контейнер для использования.  
   
-## Заметки  
+## <a name="remarks"></a>Примечания  
  Конструктор:  
   
  `queue();`  
   
- создает пустой от программу\-оболочку контейнер.  Он используется для определения начальную контролируемую пустую последовательность.  
+ Создает оболочку пустой контейнер. Используется, чтобы указать пустую начальную управляемую последовательность.  
   
  Конструктор:  
   
  `queue(queue<Value, Container>% right);`  
   
- создает от программу\-оболочку контейнер, являющийся копией `right.get_container()`.  Он используется, чтобы определить домашнюю контролируемую последовательность, копию последовательности контролируемой объектом очереди `right`.  
+ Создает оболочку контейнер, который является копией `right.get_container()`. Они позволяют указать начальную управляемую последовательность, является копией последовательности, контролируемой объект очереди `right`.  
   
  Конструктор:  
   
  `queue(queue<Value, Container>^ right);`  
   
- создает от программу\-оболочку контейнер, являющийся копией `right->get_container()`.  Он используется, чтобы определить домашнюю контролируемую последовательность, копию последовательности контролируемой объектом очереди `*right`.  
+ Создает оболочку контейнер, который является копией `right->get_container()`. Они позволяют указать начальную управляемую последовательность, является копией последовательности, контролируемой объект очереди `*right`.  
   
  Конструктор:  
   
  `explicit queue(container_type wrapped);`  
   
- использует существующий контейнер `wrapped` как от программу\-оболочку контейнер.  Он используется для построения очередь из существующего контейнера.  
+ использует существующий контейнер `wrapped` как изолированного контейнера. Используется для создания очереди из существующего контейнера.  
   
-## Пример  
+## <a name="example"></a>Пример  
   
 ```  
 // cliext_queue_construct.cpp   
@@ -107,17 +108,20 @@ int main()
   
 ```  
   
-  **size\(\) \= 0**  
- **x x x x x**  
- **x x x x x**  
- **x x x x x**   
-## Требования  
- **Заголовок:**\<cliext\/queue\>  
+```Output  
+size() = 0  
+ x x x x x  
+ x x x x x  
+ x x x x x  
+```  
+  
+## <a name="requirements"></a>Требования  
+ **Заголовок:** \<cliext/очереди >  
   
  **Пространство имен:** cliext  
   
-## См. также  
- [queue](../Topic/queue%20\(STL-CLR\).md)   
- [queue::assign](../dotnet/queue-assign-stl-clr.md)   
- [queue::generic\_container](../dotnet/queue-generic-container-stl-clr.md)   
- [queue::operator\=](../dotnet/queue-operator-assign-stl-clr.md)
+## <a name="see-also"></a>См. также  
+ [очереди (STL/CLR)](../dotnet/queue-stl-clr.md)   
+ [Queue::Assign (STL/CLR)](../dotnet/queue-assign-stl-clr.md)   
+ [Queue::generic_container (STL/CLR)](../dotnet/queue-generic-container-stl-clr.md)   
+ [queue::operator= (STL/CLR)](../dotnet/queue-operator-assign-stl-clr.md)
