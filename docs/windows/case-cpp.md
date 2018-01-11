@@ -1,33 +1,33 @@
 ---
-title: "case (C++) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-f1_keywords: 
-  - "vc-attr.case"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "case attribute"
+title: "регистр (C++) | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+f1_keywords: vc-attr.case
+dev_langs: C++
+helpviewer_keywords: case attribute
 ms.assetid: 6fb883c3-0526-4932-a901-b4564dcaeb7d
-caps.latest.revision: 10
-caps.handback.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "10"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: adacffa4dbce4cc908c393cb5019375234e9ff85
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 12/21/2017
 ---
-# case (C++)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Используется с [switch\_type](../windows/switch-type.md) атрибут в выражении  **union**.  
+# <a name="case-c"></a>case (C++)
+При использовании [switch_type](../windows/switch-type.md) атрибута в **объединение**.  
   
-## Синтаксис  
+## <a name="syntax"></a>Синтаксис  
   
 ```  
   
@@ -36,25 +36,25 @@ manager: "ghogen"
 ) ]  
 ```  
   
-#### Параметры  
+#### <a name="parameters"></a>Параметры  
  *значение*  
- Допустимое входное значение, для которого необходимо обеспечить обработку.  Тип  **Значение** может быть одно из следующих типов:  
+ Возможное значение ввода, для которого требуется обеспечить обработку. Тип **значение** может принимать одно из следующих типов:  
   
 -   `int`  
   
 -   `char`  
   
--   **логический**  
+-   `boolean`  
   
 -   `enum`  
   
- идентификатор такого типа.  
+ или идентификатор такого типа.  
   
-## Заметки  
- **case** Атрибут C\+\+ имеет ту же функциональность, что и  **case** атрибут MIDL.  Этот атрибут используется только с [switch\_type](../windows/switch-type.md) атрибут.  
+## <a name="remarks"></a>Примечания  
+ **Случай** языка C++ имеет ту же функциональность, что **случай** языка MIDL. Этот атрибут используется только с [switch_type](../windows/switch-type.md) атрибута.  
   
-## Пример  
- В следующем коде показано использование функции case атрибут:  
+## <a name="example"></a>Пример  
+ В следующем коде показано использование **случай** атрибута:  
   
 ```  
 // cpp_attr_ref_case.cpp  
@@ -73,21 +73,20 @@ struct SizedValue2 {
 [module(name="ATLFIRELib")];  
 ```  
   
-## Требования  
+## <a name="requirements"></a>Требования  
   
-### Контекст атрибута  
+### <a name="attribute-context"></a>Контекст атрибута  
   
 |||  
 |-|-|  
-|**Применение**|Участник a **класс** OR  `struct`|  
-|**Repeatable**|Нет|  
-|**Обязательные атрибуты**|None|  
-|**Недопустимые атрибуты**|None|  
+|**Применение**|Член **класса** или`struct`|  
+|**Повторяемый**|Нет|  
+|**Обязательные атрибуты**|Нет|  
+|**Недопустимые атрибуты**|Нет|  
   
- Дополнительные сведения о контекстах атрибута см. в разделе [Контексты атрибута](../windows/attribute-contexts.md).  
+ Дополнительные сведения о контекстах атрибутов см. в разделе [Контексты атрибутов](../windows/attribute-contexts.md).  
   
-## См. также  
- [IDL Attributes](../windows/idl-attributes.md)   
- [Typedef, Enum, Union, and Struct Attributes](../windows/typedef-enum-union-and-struct-attributes.md)   
- [Class Attributes](../windows/class-attributes.md)   
- [Attributes Samples](http://msdn.microsoft.com/ru-ru/558ebdb2-082f-44dc-b442-d8d33bf7bdb8)
+## <a name="see-also"></a>См. также  
+ [Атрибуты IDL](../windows/idl-attributes.md)   
+ [TypeDef, Enum, Union и Struct атрибуты](../windows/typedef-enum-union-and-struct-attributes.md)   
+ [Атрибуты классов](../windows/class-attributes.md)   

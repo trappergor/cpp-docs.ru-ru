@@ -18,11 +18,12 @@ caps.latest.revision: "9"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: f847e3e8d79e5d36f455d3192b10376237a4d3bb
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: dd1d2938a75010d20bde26d2d9d5656b1418f3da
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="file-and-database-classes"></a>Классы файлов и баз данных
 Эти классы позволяют хранить сведения в базу данных или файл на диске. Существуют три набора классов базы данных — OLE DB, ODBC и DAO, которые предоставляют аналогичные функциональные возможности. Группы OLE DB реализуется с помощью OLE DB и работает с шаблоны потребителя OLE DB, группе DAO реализуется с помощью объект доступа к данным и группе ODBC реализуется с помощью Open Database Connectivity. Существует также набор классов для управления стандартными файлами, активные потоки и потоки HTML.  

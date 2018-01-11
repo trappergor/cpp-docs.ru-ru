@@ -28,11 +28,12 @@ caps.latest.revision: "21"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 9a7771afe4a93c6c4dafcd090276202732d1ad8b
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 3ffc58ce0354b4a3226db82a95d5c0b4cc7bc09f
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="timer-class"></a>Класс timer
 Блок обмена сообщениями `timer` — это блок `source_block` с одной целью, который может отправлять сообщение своей цели по истечении указанного периода времени или через заданные интервалы времени.  
@@ -48,18 +49,18 @@ class timer : public Concurrency::details::_Timer, public source_block<single_li
  `T`  
  Тип полезных данных выходных сообщений этого блока.  
   
-## <a name="members"></a>Члены  
+## <a name="members"></a>Участники  
   
 ### <a name="public-constructors"></a>Открытые конструкторы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[таймера](#ctor)|Перегружен. Создает `timer` блока обмена сообщениями, который будет отправлять заданное сообщение после указанного интервала.|  
 |[~ timer деструктор](#dtor)|Уничтожает `timer` блока обмена сообщениями.|  
   
 ### <a name="public-methods"></a>Открытые методы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[Приостановить](#pause)|Останавливает `timer` блока обмена сообщениями. Если это повторяющееся `timer` блоке сообщений, ее можно перезапустить с последующем `start()` вызова. — Для неповторяющихся таймеров, это имеет тот же эффект, как `stop` вызова.|  
 |[start](#start)|Запускает `timer` блока обмена сообщениями. Указанное число миллисекунд после этого вызова, указанное значение будет распространяться подчиненных как `message`.|  
@@ -67,7 +68,7 @@ class timer : public Concurrency::details::_Timer, public source_block<single_li
   
 ### <a name="protected-methods"></a>Защищенные методы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[accept_message](#accept_message)|Принимает сообщение, которое было предложено это `timer` блока обмена сообщениями, передавая владение вызывающему объекту.|  
 |[consume_message](#consume_message)|Получает сообщение, ранее предложенное `timer` и зарезервированные целевым объектом, передавая владение вызывающему объекту.|  

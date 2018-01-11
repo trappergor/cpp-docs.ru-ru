@@ -13,11 +13,12 @@ caps.latest.revision: "6"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 5f78307023091b2e9d17ca3ff8fa2d3214c458cf
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: e709e43a0b32b68bc34c4e76e8680ae371e30670
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="323-ompsetlock-and-ompsetnestlock-functions"></a>3.2.3 Функции omp_set_lock и omp_set_nest_lock
 Каждая из этих функций блокирует поток, выполняющий функции, пока указанная блокировка имеет доступные и устанавливает блокировку. Простая блокировка доступен в том случае, если он не заблокирован. Блокировку, которая доступна, если разблокирован или если он уже принадлежит поток, выполняющий функции. Он следующий:  

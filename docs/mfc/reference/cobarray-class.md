@@ -53,11 +53,12 @@ caps.latest.revision: "20"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 5b932abd77f660214a752fc2a18868f84bd22942
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 87b73299c64d6657d099b3dea9817c08649080df
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cobarray-class"></a>Класс CObArray
 Поддерживает массивы указателей `CObject` .  
@@ -68,17 +69,17 @@ ms.lasthandoff: 10/24/2017
 class CObArray : public CObject  
 ```  
   
-## <a name="members"></a>Члены  
+## <a name="members"></a>Участники  
   
 ### <a name="public-constructors"></a>Открытые конструкторы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[CObArray::CObArray](#cobarray)|Создает пустой массив для `CObject` указатели.|  
   
 ### <a name="public-methods"></a>Открытые методы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[CObArray::Add](#add)|Добавляет элемент в конец массива. При необходимости размер массива увеличивается.|  
 |[CObArray::Append](#append)|Добавляет другой массив к массиву. При необходимости размер массива увеличивается.|  
@@ -100,7 +101,7 @@ class CObArray : public CObject
   
 ### <a name="public-operators"></a>Открытые операторы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[[CObArray::operator]](#operator_at)|Получает или задает элемент с указанным индексом.|  
   

@@ -40,11 +40,12 @@ caps.latest.revision: "30"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: fa142902722ac5df6ac93b28daf9e76b99f54f5e
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 4ee05d4e8c8b36d92794293679992cb2c5ad5c36
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="wcstombs-wcstombsl"></a>wcstombs, _wcstombs_l
 Преобразует последовательность расширенных символов в соответствующую последовательность многобайтовых символов. Существуют более безопасные версии этих функций; см. раздел [wcstombs_s, _wcstombs_s_l](../../c-runtime-library/reference/wcstombs-s-wcstombs-s-l.md).  
@@ -103,9 +104,9 @@ size_t _wcstombs_l(
   
  `wcstombs` проверяет свои параметры. Если `wcstr` — `NULL`, или если `count` больше, чем `INT_MAX`, эта функция вызывает обработчик недопустимого параметра, как описано в [проверка параметров](../../c-runtime-library/parameter-validation.md) . Если выполнение может быть продолжено, функция устанавливает параметр `errno` в значение `EINVAL` и возвращает –1.  
   
- Функция `wcstombs` использует текущий языковой стандарт для любых аспектов поведения, зависящих от языкового стандарта; функция `_wcstombs_l` идентична за исключением того, что она использует переданный языковой стандарт. Дополнительные сведения см. в разделе [Языковой стандарт](../../c-runtime-library/locale.md).  
+ Функция `wcstombs` использует текущий языковой стандарт для любых аспектов поведения, зависящих от языкового стандарта; функция `_wcstombs_l` идентична за исключением того, что она использует переданный языковой стандарт. Для получения дополнительной информации см. [Locale](../../c-runtime-library/locale.md).  
   
- В C++ эти функции имеют шаблонные перегрузки, которые вызывают более новые и безопасные аналоги этих функций. Дополнительные сведения см. в разделе [Безопасные перегрузки шаблонов](../../c-runtime-library/secure-template-overloads.md).  
+ В C++ эти функции имеют шаблонные перегрузки, которые вызывают более новые и безопасные аналоги этих функций. Дополнительные сведения см. в разделе [Secure Template Overloads](../../c-runtime-library/secure-template-overloads.md).  
   
 ## <a name="requirements"></a>Требования  
   
@@ -114,7 +115,7 @@ size_t _wcstombs_l(
 |`wcstombs`|\<stdlib.h>|  
 |`_wcstombs_l`|\<stdlib.h>|  
   
- Дополнительные сведения о совместимости см. в статье [Совместимость](../../c-runtime-library/compatibility.md) во введении.  
+ Дополнительные сведения о совместимости см. в разделе [Совместимость](../../c-runtime-library/compatibility.md) во введении.  
   
 ## <a name="example"></a>Пример  
  Эта программа иллюстрирует поведение функции `wcstombs`.  

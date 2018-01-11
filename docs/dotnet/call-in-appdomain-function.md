@@ -1,32 +1,33 @@
 ---
-title: "Функция call_in_appdomain | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "call_in_appdomain"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "call_in_appdomain - функция"
+title: "Функция call_in_appdomain | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: call_in_appdomain
+dev_langs: C++
+helpviewer_keywords: call_in_appdomain function
 ms.assetid: 9a1a5026-b76b-4cae-a3d4-29badeb9db9c
-caps.latest.revision: 13
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 13
+caps.latest.revision: "13"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: 10fc96a2fee5195db97b9a3a8ac3341ea5c3a444
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 12/21/2017
 ---
-# Функция call_in_appdomain
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Выполняет функцию в конкретном домене приложения.  
+# <a name="callinappdomain-function"></a>Функция call_in_appdomain
+Выполняет функцию в указанном домене приложения.  
   
-## Синтаксис  
+## <a name="syntax"></a>Синтаксис  
   
 ```  
 template <typename ArgType1, ...typename ArgTypeN>  
@@ -47,26 +48,26 @@ RetType call_in_appdomain(
 );  
 ```  
   
-#### Параметры  
+#### <a name="parameters"></a>Параметры  
  `appdomainId`  
- Appdomain, в котором для вызова функции.  
+ Домен приложения, в котором для вызова функции.  
   
  `voidFunc`  
- Указатель на функцию `void` принимающей параметры N \(0 \<\= N \<\= 15\).  
+ Указатель на `void` функцию, которая принимает параметры N (0 < = N < = 15).  
   
  `nonvoidFunc`  
- Указатель на курсор функции `void` принимающей параметры N \(0 \<\= N \<\= 15\).  
+ Указатель на значение, отличное от`void` функцию, которая принимает параметры N (0 < = N < = 15).  
   
  `arg1...argN`  
- От нуля до 15 параметры, передаваемые `voidFunc` или `nonvoidFunc` в другом appdomain.  
+ 0 до 15 параметров должны быть переданы `voidFunc` или `nonvoidFunc` в другом домене приложения.  
   
-## Возвращаемое значение  
- Результатом выполнения `voidFunc` или `nonvoidFunc` в конкретном домене приложения.  
+## <a name="return-value"></a>Возвращаемое значение  
+ В результате выполнения `voidFunc` или `nonvoidFunc` в заданный домен приложения.  
   
-## Заметки  
- Аргументы функции переданной в `call_in_appdomain` не должны быть типами среды CLR.  
+## <a name="remarks"></a>Примечания  
+ Аргументы функции передаются в `call_in_appdomain` не должны быть типами среды CLR.  
   
-## Пример  
+## <a name="example"></a>Пример  
   
 ```  
 // msl_call_in_appdomain.cpp  
@@ -112,7 +113,7 @@ int main()
 }  
 ```  
   
-## Output  
+## <a name="output"></a>Вывод  
   
 ```  
 default appdomain: msl_call_in_appdomain.exe  
@@ -121,7 +122,7 @@ default appdomain id = 1
 appDomain1 id = 2  
 ```  
   
-## Требования  
- **Файл заголовка**\<msclr\\appdomain.h\>  
+## <a name="requirements"></a>Требования  
+ **Файл заголовка** \<msclr\appdomain.h >  
   
  **Пространство имен** msclr

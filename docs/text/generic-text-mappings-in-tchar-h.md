@@ -22,11 +22,12 @@ caps.latest.revision: "12"
 author: ghogen
 ms.author: ghogen
 manager: ghogen
-ms.openlocfilehash: 6fe2773ab5a6429f2ab2c863598dabb4dddef628
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 405e95e9eb8fb760e2688e164178cf9270f31877
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="generic-text-mappings-in-tcharh"></a>Универсальные текстовые сопоставления в файле Tchar.h
 Чтобы упростить преобразование кода для международного использования [!INCLUDE[TLA#tla_ms](../text/includes/tlasharptla_ms_md.md)] библиотека времени выполнения предоставляет [!INCLUDE[TLA#tla_ms](../text/includes/tlasharptla_ms_md.md)]-конкретных универсальные текстовые сопоставления для многих типов данных, подпрограмм и других объектов. Можно использовать эти сопоставления, которые определены в файле Tchar.h для написания универсального кода, который можно скомпилировать в однобайтовой, многобайтовой кодировке или [!INCLUDE[TLA#tla_unicode](../atl-mfc-shared/reference/includes/tlasharptla_unicode_md.md)] наборов, в зависимости от константы манифеста, определяется с помощью символов `#define` инструкции. Универсальные текстовые сопоставления представляют собой [!INCLUDE[TLA#tla_ms](../text/includes/tlasharptla_ms_md.md)] расширения, которые не являются [!INCLUDE[vcpransi](../atl-mfc-shared/reference/includes/vcpransi_md.md)] совместимы.  

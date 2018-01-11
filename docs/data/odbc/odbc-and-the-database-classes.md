@@ -18,11 +18,14 @@ caps.latest.revision: "8"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 8cf4d5dae14a59cc8b4c6d17ff118cdde59c28af
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: e3041a4fc027a8786fb62db7df6eaf486633ce97
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="odbc-and-the-database-classes"></a>ODBC и классы баз данных
 Классы баз данных ODBC библиотеки MFC инкапсулируют вызовы функций ODBC API, которые обычно приходится самостоятельно в члене функции [CDatabase](../../mfc/reference/cdatabase-class.md) и [CRecordset](../../mfc/reference/crecordset-class.md) классы. Например сложные последовательности вызовов ODBC, привязку возвращаемых записей места хранения, обработку ошибок и других операций управляются классами баз данных. В результате используется намного более простой интерфейс класса для обработки записей с использованием объекта набора записей.  

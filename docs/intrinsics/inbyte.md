@@ -19,14 +19,15 @@ caps.latest.revision: "12"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: adf3e2ccd864eee1a92c24551cfc73bb080e572e
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 20781d2e8f925cec9bacb8ca125f68c3e9f7c201
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="inbyte"></a>__inbyte
-**Блок, относящийся только к системам Майкрософт**  
+**Блок, относящийся только к системам Microsoft**  
   
  Приводит к возникновению ошибки `in` инструкции, возвращая один байт чтения из портом, указанным `Port`.  
   

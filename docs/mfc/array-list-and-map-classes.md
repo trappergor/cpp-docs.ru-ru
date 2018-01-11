@@ -20,11 +20,12 @@ caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: ff37c762049121750a342eac1cf7f310b2fbce63
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 7de6f3c72b31ea9094af032bc81e9f2506606cce
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="array-list-and-map-classes"></a>Классы массивов, списков и схем
 Для обработки агрегатов, содержащих данные, библиотека классов предоставляет группу классов коллекций, массивы, списки и сопоставляет —, содержащий ряд объектов и предварительно определенных типов. Динамически имеют размер коллекции. Эти классы можно использовать в любом приложении ли написаны для Windows или нет. Тем не менее они наиболее полезны для реализации структуры данных, которые определяют классов документа в приложение .NET framework. Можно легко создать производные классы специализированные коллекции из этих или можно создать их на основе шаблона классов. Дополнительные сведения об этих подходах см. в статье [коллекции](../mfc/collections.md). Список классов коллекции шаблонов, см. в статье [классы шаблонов для массивов, списков и схем](../mfc/template-classes-for-arrays-lists-and-maps.md).  

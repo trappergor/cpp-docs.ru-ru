@@ -1,35 +1,37 @@
 ---
-title: "attribute | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-f1_keywords: 
-  - "vc-attr.attribute"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "__typeof keyword"
-  - "custom attributes, creating"
-  - "attribute attribute"
-  - "attributes [C++], custom"
+title: "атрибут | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+f1_keywords: vc-attr.attribute
+dev_langs: C++
+helpviewer_keywords:
+- __typeof keyword
+- custom attributes, creating
+- attribute attribute
+- attributes [C++], custom
 ms.assetid: 8cb3489f-65c4-44ea-b0aa-3c3c6b15741d
-caps.latest.revision: 18
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 16
+caps.latest.revision: "18"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: 42ea9049fdd97691bd139599705856baa8acfee1
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 12/21/2017
 ---
-# attribute
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Позволяет создать настраиваемый атрибут.  
+# <a name="attribute"></a>Атрибут
+Можно создать пользовательский атрибут.  
   
-## Синтаксис  
+## <a name="syntax"></a>Синтаксис  
   
 ```  
   
@@ -40,34 +42,34 @@ caps.handback.revision: 16
 ) ]  
 ```  
   
-#### Параметры  
+#### <a name="parameters"></a>Параметры  
  *AllowOn*  
- Определяет элементы языка, к которым настраиваемый атрибут можно применить.  Значение по умолчанию **System:: AttributeTargets:: Все** \(см.  [System:: AttributeTargets](https://msdn.microsoft.com/en-us/library/system.attributetargets.aspx)\).  
+ Указывает элементы языка, к которым можно применять этот настраиваемый атрибут. Значение по умолчанию — **System::AttributeTargets::All** (см. [System::AttributeTargets](https://msdn.microsoft.com/en-us/library/system.attributetargets.aspx)).  
   
  `AllowMultiple`  
- Определяет, является ли настраиваемый атрибут может быть применен к конструкции повторно.  Значение по умолчанию **False**.  
+ Указывает, является ли пользовательский атрибут может применяться многократно конструкции. Значение по умолчанию — **FALSE**.  
   
  `Inherited`  
- Указывает ли атрибут быть унаследованным подклассами.  Компилятор не предоставляет никаких специальную поддержку этой функциональности; задание объектов\-получателей атрибута \(отражения, например учитывать эти сведения.  If `Inherited` существует  **True**атрибут унаследован.  If `AllowMultiple` существует  **True**атрибут накапливает в производном элементе; If  `AllowMultiple` существует  **False**атрибут переопределяет \(или заменить\) в наследовании.  If `Inherited` существует  **False**атрибут не является унаследованным.  Значение по умолчанию **True**.  
+ Указывает, является ли атрибут наследуются подклассами. Компилятор не поддерживает специальные для этой функции. Это задание атрибута потребителей (например, посредством) следует использовать эти сведения. Если `Inherited` — **TRUE**, атрибут наследуется. Если `AllowMultiple` — **TRUE**, атрибут накапливаются на производный член; Если `AllowMultiple` — **FALSE**, атрибут будет переопределить (или заменить) в наследовании. Если `Inherited` — **FALSE**, атрибут не наследуется. Значение по умолчанию — **TRUE**.  
   
-## Заметки  
+## <a name="remarks"></a>Примечания  
   
 > [!NOTE]
->  `attribute` атрибут теперь нерекомендуем.  Используйте атрибут System.Attribute среды CLR в непосредственно для создания определяемых пользователем attirbutes.  Дополнительные сведения см. в разделе [Пользовательские атрибуты](../windows/user-defined-attributes-cpp-component-extensions.md).  
+>  `attribute` Атрибут считается устаревшим.  Используйте общий атрибут среды выполнения языка System.Attribute непосредственно для создания определяемых пользователем attirbutes.  Дополнительные сведения см. в разделе [определяемые пользователем атрибуты](../windows/user-defined-attributes-cpp-component-extensions.md).  
   
- Указании a [настраиваемый атрибут](../windows/custom-attributes-cpp.md) устанавливая  `attribute` атрибут управляемом определении класса или структуры.  Имя класса настраиваемого атрибута.  Примеры.  
+ Можно определить [настраиваемого атрибута](../windows/custom-attributes-cpp.md) , поместив `attribute` атрибута в определении управляемого класса или структуры. Имя класса является настраиваемого атрибута. Пример:  
   
 ```  
 [ attribute(Parameter) ]  
 public ref class MyAttr {};  
 ```  
   
- определяет атрибут с именем MyAttr, которое можно применять для функционирования параметры.  Класс должен быть открытым, если атрибут планируется использовать в других сборках.  
+ Определяет атрибут с именем MyAttr, которая может применяться для параметров функции. Класс должен быть открытым, если атрибут будет использоваться в других сборках.  
   
 > [!NOTE]
->  Во избежание конфликтов пространств имен, все имена атрибутов явно заканчивается на "атрибутом"; в этом примере имя атрибута и класс, но фактически MyAttrAttribute MyAttr и MyAttrAttribute можно использовать взаимозаменимо.  
+>  Во избежание конфликтов пространств имен, все имена атрибутов неявно заканчиваться «Атрибут»; в этом примере имя атрибута и класса фактически MyAttrAttribute, но MyAttr и MyAttrAttribute взаимозаменяемы.  
   
- Открытые конструкторы типа задают параметры атрибута неименованные.  Перегруженные конструкторы предоставляют различные способы указания атрибута, чтобы настраиваемый атрибут, который определен следующим образом:  
+ Открытые конструкторы класса определения атрибута неименованные параметры. Перегруженные конструкторы разрешить несколько способов указания атрибута, поэтому пользовательский атрибут, который будет определена следующим образом:  
   
 ```  
 // cpp_attr_ref_attribute.cpp  
@@ -87,7 +89,7 @@ ref class ClassA {};   // Attribute with no parameters
 ref class ClassB {};   // Attribute with one parameter  
 ```  
   
- Элементы данных и открытые свойства типа с именем необязательно атрибута параметрами:  
+ Открытые члены данных и свойства класса, необязательно именованных параметров атрибута:  
   
 ```  
 // cpp_attr_ref_attribute_2.cpp  
@@ -111,11 +113,11 @@ public:
 ref class ClassC {};  
 ```  
   
- Список возможных типов параметров атрибутов см. в разделе [Пользовательские атрибуты](../windows/custom-attributes-cpp.md).  
+ Список типов параметров возможно атрибута см. в разделе [пользовательских атрибутов](../windows/custom-attributes-cpp.md).  
   
- См. [Пользовательские атрибуты](../windows/user-defined-attributes-cpp-component-extensions.md) обсуждение в целевых объектах атрибута.  
+ В разделе [определяемые пользователем атрибуты](../windows/user-defined-attributes-cpp-component-extensions.md) обсуждение целевые объекты атрибутов.  
   
- `attribute` атрибут имеющий  `AllowMultiple` параметр, который определяет, является ли настраиваемый атрибут одна использование или multiuse \(может появляться более одного раза в одну и ту же сущность\).  
+ `attribute` Атрибут имеет `AllowMultiple` параметр, который указывает, является ли настраиваемый атрибут однократного использования или различают серверы многопользовательские (может использоваться более чем один раз на той же сущности).  
   
 ```  
 // cpp_attr_ref_attribute_3.cpp  
@@ -130,36 +132,36 @@ ref struct MyAttr {
 ref class ClassA {};  
 ```  
   
- Классы настраиваемого атрибута получаются напрямую или косвенно от <xref:System.ComponentModel.AttributeCollection.%23ctor%2A>, который упрощает определение определения атрибута в метаданных легко и быстро.  `attribute` атрибут указывает наследование из system:: Точный атрибут, поэтому вывод не требуются.  
+ Настраиваемый атрибут классы являются производными прямо или косвенно <xref:System.ComponentModel.AttributeCollection.%23ctor%2A>, какие упрощает определение определений атрибутов в метаданных быстрый и простой. `attribute` Атрибут задает наследование от System::Attribute, явное наследование не не требуется:  
   
 ```  
 [ attribute(Class) ]  
 ref class MyAttr  
 ```  
   
- , эквивалентно выражению  
+ эквивалентно  
   
 ```  
 [ attribute(Class) ]  
 ref class MyAttr : System::Attribute   // OK, but redundant.  
 ```  
   
- `attribute` псевдоним  <xref:System.AttributeUsageAttribute?displayProperty=fullName> \(не AttributeAttribute; это исключением из правила именования атрибута\).  
+ `attribute`является псевдонимом для <xref:System.AttributeUsageAttribute?displayProperty=fullName> (AttributeAttribute; это исключение из правила именования атрибута).  
   
-## Требования  
+## <a name="requirements"></a>Требования  
   
-### Контекст атрибута  
+### <a name="attribute-context"></a>Контекст атрибута  
   
 |||  
 |-|-|  
-|**Применение**|`ref` **класс**"  **структура ref**|  
-|**Repeatable**|Нет|  
-|**Обязательные атрибуты**|None|  
-|**Недопустимые атрибуты**|None|  
+|**Применение**|`ref`**класса**, **структура ссылки**|  
+|**Повторяемый**|Нет|  
+|**Обязательные атрибуты**|Нет|  
+|**Недопустимые атрибуты**|Нет|  
   
- Дополнительные сведения о контекстах атрибута см. в разделе [Контексты атрибута](../windows/attribute-contexts.md).  
+ Дополнительные сведения о контекстах атрибутов см. в разделе [Контексты атрибутов](../windows/attribute-contexts.md).  
   
-## Пример  
+## <a name="example"></a>Пример  
   
 ```  
 // cpp_attr_ref_attribute_4.cpp  
@@ -174,8 +176,8 @@ ref struct ABC {
 ref class MyClass {};  
 ```  
   
-## Пример  
- `Inherited` именованные аргументы определяют, будет ли настраиваемый атрибут, примененный в базовом классе вверх на отражении производного класса.  
+## <a name="example"></a>Пример  
+ `Inherited` Именованный аргумент указывает, является ли настраиваемый атрибут, примененный на базовом классе будут отображаться на отражение производного класса.  
   
 ```  
 // cpp_attr_ref_attribute_5.cpp  
@@ -211,7 +213,10 @@ int main() {
 }  
 ```  
   
-  **2**   
-## См. также  
- [Attributes Alphabetical Reference](../windows/attributes-alphabetical-reference.md)   
- [Custom Attributes](http://msdn.microsoft.com/ru-ru/558ebdb2-082f-44dc-b442-d8d33bf7bdb8)
+```Output  
+2  
+```  
+  
+## <a name="see-also"></a>См. также  
+ [Алфавитный указатель атрибутов](../windows/attributes-alphabetical-reference.md)   
+ [Настраиваемые атрибуты](http://msdn.microsoft.com/en-us/558ebdb2-082f-44dc-b442-d8d33bf7bdb8)

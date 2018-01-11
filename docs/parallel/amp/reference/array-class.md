@@ -32,11 +32,12 @@ caps.latest.revision: "31"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: ad9e098ad485c7a96670c4249770b038333e1bc8
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 5b76fcb181d955fc051ade5183b67b9d55b823ab
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="array-class"></a>Класс array
 Представляет контейнер данных, используемый для перемещения данных в клавишей быстрого доступа.  
@@ -55,17 +56,17 @@ friend class array;
  `_Rank`  
  Ранг массива.  
   
-## <a name="members"></a>Члены  
+## <a name="members"></a>Участники  
   
 ### <a name="public-constructors"></a>Открытые конструкторы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[Конструктор массива](#ctor)|Инициализирует новый экземпляр класса `array`.|  
 |[~ array деструктор](#dtor)|Уничтожает `array` объекта.|  
 ### <a name="public-methods"></a>Открытые методы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[copy_to](#copy_to)|Копирует содержимое массива в другой массив.|  
 |[data](#data)|Возвращает указатель на необработанные данные массива.|  
@@ -79,22 +80,22 @@ friend class array;
   
 ### <a name="public-operators"></a>Открытые операторы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[оператор std::vector&lt;value_type&gt;](#operator_vec)|Использует `copy(*this, vector)` неявное преобразование массива в объект std::[вектор](../../../standard-library/vector-class.md) объекта.|  
 |[Operator()](#operator_call)|Возвращает значение элемента, указанный параметрами.|  
 |[оператор]](#operator_at)|Возвращает элемент, расположенный по указанному индексу.|  
-|[operator=](#operator_eq)|Копирует содержимое указанного `array` объекта в другой.|  
+|[оператор=](#operator_eq)|Копирует содержимое указанного `array` объекта в другой.|  
   
 ### <a name="public-constants"></a>Открытые константы  
   
-|Имя|Описание|  
+|name|Описание:|  
 |----------|-----------------|  
 |[Ранг константа](#rank)|Сохраняет ранг массива.|  
   
 ### <a name="public-data-members"></a>Открытые члены данных  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[accelerator_view](#accelerator_view)|Возвращает [accelerator_view](accelerator-view-class.md) , представляющий расположение, где выделяется массива. Это свойство может осуществляться только на ЦП.|  
 |[associated_accelerator_view](#associated_accelerator_view)|Возвращает второй [accelerator_view](accelerator-view-class.md) , передаваемый в качестве параметра при вызове промежуточной конструктор для создания экземпляра объекта `array` объекта.|  

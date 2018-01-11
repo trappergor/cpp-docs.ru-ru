@@ -4,27 +4,23 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- xlocale/std::codecvt_byname
-dev_langs:
-- C++
-helpviewer_keywords:
-- codecvt_byname class
+f1_keywords: xlocale/std::codecvt_byname
+dev_langs: C++
+helpviewer_keywords: codecvt_byname class
 ms.assetid: b63b6c04-f60c-47b9-8e30-a933f24a8ffb
-caps.latest.revision: 24
+caps.latest.revision: "24"
 author: corob-msft
 ms.author: corob
 manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 7b35b2c32f6472d2b1c7124d2681feeda1f42793
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
-ms.sourcegitcommit: 65f4e356ad0d46333b0d443d0fd6ac0b9f2b6f58
-ms.openlocfilehash: 0015721962278a9b4105fb3106ccc244f833becd
-ms.contentlocale: ru-ru
-ms.lasthandoff: 10/03/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="codecvtbyname-class"></a>Класс codecvt_byname
 Производный класс шаблона, описывающий объект, который можно использовать как аспект сортировки данного языкового стандарта, предоставляющий возможность извлечения данных касательно преобразований по соответствующему культурному региону.  
@@ -72,7 +68,6 @@ protected:
   
 ## <a name="see-also"></a>См. также  
  [Потокобезопасность в стандартной библиотеке C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)
-
 
 
 

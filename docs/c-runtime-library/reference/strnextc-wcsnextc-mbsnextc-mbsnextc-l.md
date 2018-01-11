@@ -55,11 +55,12 @@ caps.latest.revision: "20"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: d9d2554bb581fb63df0453ea664e5b76c41994fd
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 55127289494e6ecd1260078f76ece3d3ae41c31a
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="strnextc-wcsnextc-mbsnextc-mbsnextcl"></a>_strnextc, _wcsnextc, _mbsnextc, _mbsnextc_l
 Находит следующий символ в строке.  
@@ -103,7 +104,7 @@ unsigned int _mbsnextc_l(
   
  **Примечание о безопасности.** Эти функции представляют потенциальную угрозу, связанную с проблемой переполнения буфера. Проблемы переполнения буфера — это распространенный метод атак на системы, который приводит к несанкционированному повышению уровня прав. Дополнительные сведения см. в разделе [Как избежать переполнения буфера](http://msdn.microsoft.com/library/windows/desktop/ms717795).  
   
-### <a name="generic-text-routine-mappings"></a>Универсальное текстовое сопоставление функций  
+### <a name="generic-text-routine-mappings"></a>Сопоставления подпрограмм обработки обычного текста  
   
 |Подпрограмма Tchar.h|_UNICODE и _MBCS не определены|_MBCS определено|_UNICODE определено|  
 |---------------------|--------------------------------------|--------------------|-----------------------|  
@@ -111,7 +112,7 @@ unsigned int _mbsnextc_l(
   
  `_strnextc`и `_wcsnextc` одного байт символа строки и версий строки расширенных символов `_mbsnextc`. `_wcsnextc` возвращает целочисленное значение следующего расширенного символа в `string`; `_strnextc` возвращает целочисленное значение следующего однобайтового символа в `string`. `_strnextc` и `_wcsnextc` предоставляются только для этого сопоставления и не должны использоваться иным образом. Дополнительные сведения см. в разделах [Использование универсальных текстовых сопоставлений](../../c-runtime-library/using-generic-text-mappings.md) и [Универсальные текстовые сопоставления](../../c-runtime-library/generic-text-mappings.md).  
   
- `_mbsnextc_l` идентична указанной за исключением того, что использует языковой стандарт, переданный в качестве параметра. Дополнительные сведения см. в разделе [Языковой стандарт](../../c-runtime-library/locale.md).  
+ `_mbsnextc_l` идентична указанной за исключением того, что использует языковой стандарт, переданный в качестве параметра. Для получения дополнительной информации см. [Locale](../../c-runtime-library/locale.md).  
   
 ## <a name="requirements"></a>Требования  
   
@@ -122,7 +123,7 @@ unsigned int _mbsnextc_l(
 |`_strnextc`|\<tchar.h>|  
 |`_wcsnextc`|\<tchar.h>|  
   
- Дополнительные сведения о совместимости см. в разделе [Compatibility](../../c-runtime-library/compatibility.md).  
+ Дополнительные сведения о совместимости см. в разделе [Совместимость](../../c-runtime-library/compatibility.md).  
   
 ## <a name="see-also"></a>См. также  
  [Операции со строками](../../c-runtime-library/string-manipulation-crt.md)   

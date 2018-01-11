@@ -1,15 +1,13 @@
 ---
 title: "srand | Документы Майкрософт"
 ms.custom: 
-ms.date: 11/04/2016
+ms.date: 1/02/2018
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
-apiname:
-- srand
+apiname: srand
 apilocation:
 - msvcrt.dll
 - msvcr80.dll
@@ -23,10 +21,8 @@ apilocation:
 - ucrtbase.dll
 - api-ms-win-crt-utility-l1-1-0.dll
 apitype: DLLExport
-f1_keywords:
-- srand
-dev_langs:
-- C++
+f1_keywords: srand
+dev_langs: C++
 helpviewer_keywords:
 - random starting point
 - random starting point, setting
@@ -37,61 +33,50 @@ helpviewer_keywords:
 - pseudorandom numbers
 - starting points, setting random
 - starting points
-ms.assetid: 7bf56dc5-5692-4182-a3c1-18af98d2dd1a
-caps.latest.revision: 12
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: e257f037a05c45f5b98e64ea55bd125af443b0be
-ms.openlocfilehash: e86ea8aa561af584a6825d4225820aca7baeced2
-ms.contentlocale: ru-ru
-ms.lasthandoff: 03/30/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: 205dcb2ba7d61dff1286fd926e3f10cf2a162e9a
+ms.sourcegitcommit: a5d8f5b92cb5e984d5d6c9d67fe8a1241f3fe184
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/05/2018
 ---
 # <a name="srand"></a>srand
-Задает начальное значение для генератора псевдослучайных чисел.  
-  
-## <a name="syntax"></a>Синтаксис  
-  
-```  
-void srand(  
-   unsigned int seed   
-);  
-```  
-  
-#### <a name="parameters"></a>Параметры  
- `seed`  
- Начальное значение для создания псевдослучайных чисел  
-  
-## <a name="remarks"></a>Примечания  
- Функция `srand` задает начальную точку для создания ряда псевдослучайных целых чисел в текущем потоке. Для повторной инициализации генератора для создания результатов той же последовательности результатов вызовите функцию `srand` и использовать тот же аргумент `seed`. Любое другое значение для `seed` задает для генератора другую начальную точку создания последовательности псевдослучайных чисел. `rand` возвращает созданные псевдослучайные числа. Вызов `rand`, предшествующий вызову `srand`, создает ту же последовательность, что и вызов `srand` с `seed`, переданный в качестве 1.  
-  
-## <a name="requirements"></a>Требования  
-  
-|Подпрограмма|Обязательный заголовок|  
-|-------------|---------------------|  
-|`srand`|\<stdlib.h>|  
-  
- Дополнительные сведения о совместимости см. в статье [Совместимость](../../c-runtime-library/compatibility.md) во введении.  
-  
-## <a name="example"></a>Пример  
- См. пример для [rand](../../c-runtime-library/reference/rand.md).  
-  
-## <a name="see-also"></a>См. также  
- [Поддержка чисел с плавающей запятой](../../c-runtime-library/floating-point-support.md)   
- [rand](../../c-runtime-library/reference/rand.md)
+
+Задает начальное значение начальное значение для генератора псевдослучайных чисел, используемый `rand` функции.
+
+## <a name="syntax"></a>Синтаксис
+
+```C
+void srand(
+   unsigned int seed
+);
+```
+
+### <a name="parameters"></a>Параметры
+
+*Начальное значение*  
+Начальное значение для создания псевдослучайных чисел
+
+## <a name="remarks"></a>Примечания
+
+Функция `srand` задает начальную точку для создания ряда псевдослучайных целых чисел в текущем потоке. Чтобы повторно инициализировать генератор для создания той же последовательности результаты, вызовите `srand` функцией и используйте тот же *начальное значение* аргумент еще раз. Любое другое значение для *начальное значение* задает генератор на разных начальную точку в псевдослучайной последовательности. `rand` возвращает созданные псевдослучайные числа. Вызов `rand` перед вызовом любого метода `srand` приводит к возникновению ошибки той же последовательности, что и вызов метода `srand` с *начальное значение* передан как 1.
+
+## <a name="requirements"></a>Требования
+
+|Подпрограмма|Обязательный заголовок|
+|-------------|---------------------|
+|`srand`|\<stdlib.h>|
+
+Дополнительные сведения о совместимости см. в разделе [Совместимость](../../c-runtime-library/compatibility.md) во введении.
+
+## <a name="example"></a>Пример
+
+См. пример для [rand](../../c-runtime-library/reference/rand.md).
+
+## <a name="see-also"></a>См. также
+
+[Поддержка чисел с плавающей запятой](../../c-runtime-library/floating-point-support.md)  
+[rand](../../c-runtime-library/reference/rand.md)  

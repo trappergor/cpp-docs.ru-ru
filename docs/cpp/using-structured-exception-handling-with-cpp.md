@@ -16,11 +16,12 @@ caps.latest.revision: "7"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 416353ea79bc4ee4e09fe72490a87b70dd6f0029
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: db5d067a391512d56a2d01ce3052ac3fab061f28
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="using-structured-exception-handling-with-c"></a>Использование структурированной обработки исключений с C++
 Структурированная обработка исключений, описанная в этих статьях, работает с файлами исходного кода на языках C и C++. Однако она не была разработана специально для языка C++ и ее использование не рекомендуется. Для того чтобы ваш код лучше переносился, лучше использовать механизм обработки исключений языка C++. Кроме того, механизм обработки исключений языка C++ обеспечивает более высокую гибкость, поскольку может обрабатывать исключения любого типа.  

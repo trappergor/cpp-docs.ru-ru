@@ -41,11 +41,12 @@ caps.latest.revision: "17"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: e03ba23b30c714216356d49086a0d8f81df7db14
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: dd6ec3b6d8ee6a37fbe189ff70a2a633cfda9c8a
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="canimationcolor-class"></a>Класс CAnimationColor
 Реализует функции цвета, красный, зеленый и синий компоненты которого могут быть анимированы.  
@@ -56,17 +57,17 @@ ms.lasthandoff: 10/24/2017
 class CAnimationColor : public CAnimationBaseObject;  
 ```  
   
-## <a name="members"></a>Члены  
+## <a name="members"></a>Участники  
   
 ### <a name="public-constructors"></a>Открытые конструкторы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[CAnimationColor::CAnimationColor](#canimationcolor)|Перегружен. Создает объект цветовой анимации.|  
   
 ### <a name="public-methods"></a>Открытые методы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[CAnimationColor::AddTransition](#addtransition)|Добавляет переходы для красного, зеленого и синего компонентов.|  
 |[CAnimationColor::GetB](#getb)|Предоставляет доступ к CAnimationVariable, представляющий синего компонента.|  
@@ -78,20 +79,20 @@ class CAnimationColor : public CAnimationBaseObject;
   
 ### <a name="protected-methods"></a>Защищенные методы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[CAnimationColor::GetAnimationVariableList](#getanimationvariablelist)|Помещает инкапсулированный анимации переменные в список. (Переопределяет [CAnimationBaseObject::GetAnimationVariableList](../../mfc/reference/canimationbaseobject-class.md#getanimationvariablelist).)|  
   
 ### <a name="public-operators"></a>Открытые операторы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[CAnimationColor::operator COLORREF](#operator_colorref)||  
 |[CAnimationColor::operator =](#operator_eq)|Назначает цвет CAnimationColor.|  
   
 ### <a name="protected-data-members"></a>Защищенные члены данных  
   
-|Имя|Описание|  
+|name|Описание:|  
 |----------|-----------------|  
 |[CAnimationColor::m_bValue](#m_bvalue)|Инкапсулированный анимации переменной, представляющей синего компонента цвета анимации.|  
 |[CAnimationColor::m_gValue](#m_gvalue)|Инкапсулированный анимации переменной, представляющей зеленого компонента цвета анимации.|  

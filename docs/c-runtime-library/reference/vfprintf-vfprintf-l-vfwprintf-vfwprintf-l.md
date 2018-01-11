@@ -46,11 +46,12 @@ caps.latest.revision: "16"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 918188296fe58bd38159415c149ddfb0c9917284
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 21c04963dde21045f485c82b70439228ee7e30fc
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="vfprintf-vfprintfl-vfwprintf-vfwprintfl"></a>vfprintf, _vfprintf_l, vfwprintf, _vfwprintf_l
 Записывают форматированные выходные данные с помощью указателя на список аргументов. Существуют более безопасные версии этих функций; см. раздел [vfprintf_s, _vfprintf_s_l, vfwprintf_s, _vfwprintf_s_l](../../c-runtime-library/reference/vfprintf-s-vfprintf-s-l-vfwprintf-s-vfwprintf-s-l.md).  
@@ -112,7 +113,7 @@ int _vfwprintf_l(
 > [!IMPORTANT]
 >  Убедитесь, что `format` не является строкой, определяемой пользователем. Дополнительные сведения см. в разделе [Как избежать переполнения буфера](http://msdn.microsoft.com/library/windows/desktop/ms717795).  
   
-### <a name="generic-text-routine-mappings"></a>Универсальное текстовое сопоставление функций  
+### <a name="generic-text-routine-mappings"></a>Сопоставления подпрограмм обработки обычного текста  
   
 |Подпрограмма TCHAR.H|_UNICODE и _MBCS не определены|_MBCS определено|_UNICODE определено|  
 |---------------------|------------------------------------|--------------------|-----------------------|  

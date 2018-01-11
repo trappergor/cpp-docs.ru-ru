@@ -1,36 +1,35 @@
 ---
-title: "Предупреждение компилятора (уровень 1) C4906 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C4906"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C4906"
+title: "Предупреждение (уровень 1) C4906 компилятора | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords: C4906
+dev_langs: C++
+helpviewer_keywords: C4906
 ms.assetid: 05318e74-799b-412a-9dce-f02b8161d762
-caps.latest.revision: 8
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: ba4ce917a0ed9b4c900ba39f5ab2d84f02ca44be
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 12/21/2017
 ---
-# Предупреждение компилятора (уровень 1) C4906
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="compiler-warning-level-1-c4906"></a>Предупреждение компилятора (уровень 1) C4906
 строковой литерал приведен к "LPWSTR"  
   
- Компилятор обнаружил небезопасное приведение.  Приведение выполнено успешно, но необходимо использовать процедуру преобразования.  
+ Компилятор обнаружил небезопасное приведение. Приведение выполнено успешно, но необходимо использовать процедуру преобразования.  
   
- Данное предупреждение по умолчанию отключено.  Дополнительные сведения см. в разделе [Отключенные по умолчанию предупреждения компилятора](../Topic/Compiler%20Warnings%20That%20Are%20Off%20by%20Default.md).  
+ Это предупреждение отключено по умолчанию. Подробнее: [Выключенные по умолчанию предупреждения компилятора](../../preprocessor/compiler-warnings-that-are-off-by-default.md) .  
   
-## Пример  
+## <a name="example"></a>Пример  
  Следующий пример приводит к возникновению ошибки C4906:  
   
 ```  

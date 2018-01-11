@@ -69,11 +69,12 @@ caps.latest.revision: "23"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: c72946edb68212e09ab93e9d36d2dfa8afd5630e
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 48646e0635098aceea957f93015a5de93515096d
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cdaodatabase-class"></a>Класс CDaoDatabase
 Представляет подключение к базе данных, с помощью которого можно выполнять действия с данными.  
@@ -84,17 +85,17 @@ ms.lasthandoff: 10/24/2017
 class CDaoDatabase : public CObject  
 ```  
   
-## <a name="members"></a>Члены  
+## <a name="members"></a>Участники  
   
 ### <a name="public-constructors"></a>Открытые конструкторы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[CDaoDatabase::CDaoDatabase](#cdaodatabase)|Создает объект `CDaoDatabase`. Вызовите **откройте** подключение объекта в базе данных.|  
   
 ### <a name="public-methods"></a>Открытые методы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[CDaoDatabase::CanTransact](#cantransact)|Возвращает ненулевое значение, если базы данных поддерживает транзакции.|  
 |[CDaoDatabase::CanUpdate](#canupdate)|Возвращает ненулевое значение, если `CDaoDatabase` является обновляемым объектом (не только для чтения).|  
@@ -122,7 +123,7 @@ class CDaoDatabase : public CObject
   
 ### <a name="public-data-members"></a>Открытые члены данных  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[CDaoDatabase::m_pDAODatabase](#m_pdaodatabase)|Указатель базового объекта базы данных DAO.|  
 |[CDaoDatabase::m_pWorkspace](#m_pworkspace)|Указатель на [CDaoWorkspace](../../mfc/reference/cdaoworkspace-class.md) объект, который содержит базу данных и определяет его место транзакций.|  

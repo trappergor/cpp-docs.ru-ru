@@ -14,11 +14,14 @@ caps.latest.revision: "16"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 73a397664d5e5a9074731b6eac879fe965580f05
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: b02d6806abedb407d1c53ec8022e92983ce21d28
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="user-defined-operators-ccli"></a>Пользовательские операторы (C++/CLI)
 Определяемые пользователем операторы для управляемых типов разрешены как статические члены и члены экземпляра или в глобальной области видимости. Однако только статические операторы доступны через метаданные клиенты, написанные на языке, отличном от Visual C++.  
@@ -65,7 +68,7 @@ ms.lasthandoff: 10/24/2017
 |>=|Binary|  
 |>>|Binary|  
 |^|Binary|  
-|false|Унарный|  
+|False|Унарный|  
 |true|Унарный|  
 |&#124;|Binary|  
 |&#124;&#124;|Binary|  

@@ -16,11 +16,12 @@ caps.latest.revision: "17"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 7159d5489459bd32566c8665a5bbf42337fd8837
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: e1a8f059abffd261de2002ed5d18067c48d74876
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="how-to-use-oversubscription-to-offset-latency"></a>Практическое руководство. Использование лимита подписки для устранения задержек
 Превышение лимита подписки может повысить общую эффективность некоторых приложений, которые содержат задачи, которые имеют большое количество задержки. В этом разделе описывается использование лимита подписки для смещения задержки, вызванные чтение данных из сетевого подключения.  

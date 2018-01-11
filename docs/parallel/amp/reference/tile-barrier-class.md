@@ -22,11 +22,12 @@ caps.latest.revision: "17"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 3d6dff1e32f513007f9b99ced4000043ad27607f
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 1f6066422056efc17052afb11d01580abc340976
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="tilebarrier-class"></a>Класс tile_barrier
 Синхронизирует выполнение потоков, выполняющихся в группы потоков (плитку) с помощью `wait` методы. Только в среде выполнения можно создать экземпляр этого класса.  
@@ -37,17 +38,17 @@ ms.lasthandoff: 10/24/2017
 class tile_barrier;  
 ```  
   
-## <a name="members"></a>Члены  
+## <a name="members"></a>Участники  
   
 ### <a name="public-constructors"></a>Открытые конструкторы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[Конструктор tile_barrier](#ctor)|Инициализирует новый экземпляр класса `tile_barrier`.|  
   
 ### <a name="public-methods"></a>Открытые методы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[Ожидание](#wait)|Указывает, что все потоки в группы потоков (плитку), необходимо остановить выполнение до завершения всех потоков в плитке ожидания.|  
 |[wait_with_all_memory_fence](#wait_with_all_memory_fence)|Блокирует выполнение всех потоков в мозаике, пока не будут завершены все попытки доступа к памяти и все потоки в плитке достигнут этот вызов.|  

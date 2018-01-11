@@ -15,11 +15,12 @@ caps.latest.revision: "12"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: d3084bd69293b9419369f2457695965481d3dec3
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 018f2f6c1cd57dc500d4161b02ccb5880a9889fd
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="connection-maps"></a>Схемы подключения
 Элементы управления OLE, могут предоставлять интерфейсы другим приложениям. Эти интерфейсы только разрешить доступ из контейнера в этот элемент управления. Если элемента управления OLE хочет получить доступ к внешних интерфейсов другими объектами OLE, необходимо установить точку подключения. Эта точка соединения позволяет контролировать исходящий доступ к внешней подготовки к отправке карт, таких как схемы событий или функции уведомления.  

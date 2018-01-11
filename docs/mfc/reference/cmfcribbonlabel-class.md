@@ -21,11 +21,12 @@ caps.latest.revision: "21"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 2765579b26f73f958fcfc816252348ce2d8c8721
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 32732c08542ff766c265fda93b8cf09ad04387ea
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cmfcribbonlabel-class"></a>Класс CMFCRibbonLabel
 Реализует недоступную для щелчка текстовую метку для ленты.  
@@ -36,18 +37,18 @@ ms.lasthandoff: 10/24/2017
 class CMFCRibbonLabel : public CMFCRibbonButton  
 ```  
   
-## <a name="members"></a>Члены  
+## <a name="members"></a>Участники  
   
 ### <a name="public-constructors"></a>Открытые конструкторы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[CMFCRibbonLabel::CMFCRibbonLabel](#cmfcribbonlabel)|Создает и инициализирует `CMFCRibbonLabel` объект с указанной текстовой строки.|  
 |`CMFCRibbonLabel::~CMFCRibbonLabel`|Деструктор.|  
   
 ### <a name="public-methods"></a>Открытые методы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |`CMFCRibbonLabel::CreateObject`|Используется платформой для создания динамического экземпляра этого типа класса.|  
 |`CMFCRibbonLabel::GetThisClass`|Используется платформой для получения указателя на [CRuntimeClass](../../mfc/reference/cruntimeclass-structure.md) объект, связанный с этим типом класса.|  

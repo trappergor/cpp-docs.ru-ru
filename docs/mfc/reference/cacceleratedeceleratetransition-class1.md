@@ -17,11 +17,12 @@ caps.latest.revision: "16"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 10712925645549f637ffea343e5ab6ce4220b5e3
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 6251451607a31caad44e8507466c555d39847a1a
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cacceleratedeceleratetransition-class"></a>Класс CAccelerateDecelerateTransition
 Реализует переход между ускорением и замедлением.  
@@ -32,23 +33,23 @@ ms.lasthandoff: 10/24/2017
 class CAccelerateDecelerateTransition : public CBaseTransition;  
 ```  
   
-## <a name="members"></a>Члены  
+## <a name="members"></a>Участники  
   
 ### <a name="public-constructors"></a>Открытые конструкторы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[CAccelerateDecelerateTransition::CAccelerateDecelerateTransition](#cacceleratedeceleratetransition)|Создает объект перехода.|  
   
 ### <a name="public-methods"></a>Открытые методы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[CAccelerateDecelerateTransition::Create](#create)|Вызывает переход библиотеки для создания объекта инкапсулированный перехода COM. (Переопределяет [CBaseTransition::Create](../../mfc/reference/cbasetransition-class.md#create).)|  
   
 ### <a name="public-data-members"></a>Открытые члены данных  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[CAccelerateDecelerateTransition::m_accelerationRatio](#m_accelerationratio)|Отношение значения времени, затраченный на ускорение длительности.|  
 |[CAccelerateDecelerateTransition::m_decelerationRatio](#m_decelerationratio)|Отношение значения времени, затраченный на замедление длительности.|  

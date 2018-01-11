@@ -37,11 +37,12 @@ caps.latest.revision: "17"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 9d44533dd17a64bb25eb9c482cdf767b2a13a37e
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: e2acbdad3ec5b08ef5d83b3a6cfdb2eadd3c0e17
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="canimationsize-class"></a>Класс CAnimationSize
 Реализует функции объекта размера, размеры которого могут быть анимированы.  
@@ -52,17 +53,17 @@ ms.lasthandoff: 10/24/2017
 class CAnimationSize : public CAnimationBaseObject;  
 ```  
   
-## <a name="members"></a>Члены  
+## <a name="members"></a>Участники  
   
 ### <a name="public-constructors"></a>Открытые конструкторы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[CAnimationSize::CAnimationSize](#canimationsize)|Перегружен. Создает объект размера анимации.|  
   
 ### <a name="public-methods"></a>Открытые методы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[CAnimationSize::AddTransition](#addtransition)|Добавляет переходы для ширины и высоты.|  
 |[CAnimationSize::GetCX](#getcx)|Предоставляет доступ к CAnimationVariable, представляющее ширину.|  
@@ -73,20 +74,20 @@ class CAnimationSize : public CAnimationBaseObject;
   
 ### <a name="protected-methods"></a>Защищенные методы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[CAnimationSize::GetAnimationVariableList](#getanimationvariablelist)|Помещает инкапсулированный анимации переменные в список. (Переопределяет [CAnimationBaseObject::GetAnimationVariableList](../../mfc/reference/canimationbaseobject-class.md#getanimationvariablelist).)|  
   
 ### <a name="public-operators"></a>Открытые операторы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[CAnimationSize::operator CSize](#operator_csize)|Преобразует CAnimationSize CSize.|  
 |[CAnimationSize::operator =](#operator_eq)|Назначает szSrc CAnimationSize.|  
   
 ### <a name="protected-data-members"></a>Защищенные члены данных  
   
-|Имя|Описание|  
+|name|Описание:|  
 |----------|-----------------|  
 |[CAnimationSize::m_cxValue](#m_cxvalue)|Инкапсулированный анимации переменной, представляющей шириной анимации.|  
 |[CAnimationSize::m_cyValue](#m_cyvalue)|Переменная инкапсулированный анимации, представляющий высоту анимации.|  

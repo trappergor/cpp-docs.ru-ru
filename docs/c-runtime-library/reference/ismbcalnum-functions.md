@@ -57,11 +57,12 @@ caps.latest.revision: "22"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 3ad428851bd89dd2e9efd49a900ccdc28066b246
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 40566a3f4f6855da3a7ee7d122357f392d234ff0
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="ismbcalnum-ismbcalnuml-ismbcalpha-ismbcalphal-ismbcdigit-ismbcdigitl"></a>_ismbcalnum, _ismbcalnum_l, _ismbcalpha, _ismbcalpha_l, _ismbcdigit, _ismbcdigit_l
 Проверяет, является ли многобайтовый символ буквенно-цифровым, буквенным или цифровым.  
@@ -114,7 +115,7 @@ int _ismbcdigit_l
 ## <a name="remarks"></a>Примечания  
  Каждая из этих подпрограмм проверяет определенный многобайтовый символ на соответствие заданному условию.  
   
- Версии этих функций с суффиксом `_l` идентичны, за исключением того, что для поведения, зависящего от языкового стандарта, они используют переданный параметр языкового стандарта вместо текущего языкового стандарта. Дополнительные сведения см. в разделе [Языковой стандарт](../../c-runtime-library/locale.md).  
+ Версии этих функций с суффиксом `_l` идентичны, за исключением того, что для поведения, зависящего от языкового стандарта, они используют переданный параметр языкового стандарта вместо текущего языкового стандарта. Для получения дополнительной информации см. [Locale](../../c-runtime-library/locale.md).  
   
 |Подпрограмма|Условие теста|Пример кодовой страницы 932|  
 |-------------|--------------------|---------------------------|  

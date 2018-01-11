@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-windows
+ms.technology: cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
@@ -26,8 +25,7 @@ f1_keywords:
 - AFXWIN/CMFCPreviewCtrlImpl::m_clrTextColor
 - AFXWIN/CMFCPreviewCtrlImpl::m_font
 - AFXWIN/CMFCPreviewCtrlImpl::m_pDocument
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - CMFCPreviewCtrlImpl [MFC], CMFCPreviewCtrlImpl
 - CMFCPreviewCtrlImpl [MFC], Create
@@ -45,16 +43,16 @@ helpviewer_keywords:
 - CMFCPreviewCtrlImpl [MFC], m_font
 - CMFCPreviewCtrlImpl [MFC], m_pDocument
 ms.assetid: 06257fa0-54c9-478d-9d68-c9698c3f93ed
-caps.latest.revision: 28
+caps.latest.revision: "28"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 8def8a8085bebdd09ce58cb6d9abd026fe713fe8
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
-ms.sourcegitcommit: 4a770b6508067913aec51b8b3878f33e30eed4bb
-ms.openlocfilehash: df96faf5d4df30024e93ed701b956984399a8c3e
-ms.contentlocale: ru-ru
-ms.lasthandoff: 10/09/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cmfcpreviewctrlimpl-class"></a>Класс CMFCPreviewCtrlImpl
 Этот класс реализует окно, которое помещается в окне узла, заданного оболочкой для расширенного просмотра.  
@@ -65,18 +63,18 @@ ms.lasthandoff: 10/09/2017
 class CMFCPreviewCtrlImpl : public CWnd;  
 ```  
   
-## <a name="members"></a>Члены  
+## <a name="members"></a>Участники  
   
 ### <a name="public-constructors"></a>Открытые конструкторы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[CMFCPreviewCtrlImpl:: ~ CMFCPreviewCtrlImpl](#dtor)|Разрушается объект предварительного просмотра элемента управления.|  
 |[CMFCPreviewCtrlImpl::CMFCPreviewCtrlImpl](#cmfcpreviewctrlimpl)|Создает объект предварительного просмотра элемента управления.|  
   
 ### <a name="public-methods"></a>Открытые методы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[CMFCPreviewCtrlImpl::Create](#create)|Перегружен. Вызывается обработчиком расширенного просмотра для создания окна Windows.|  
 |[CMFCPreviewCtrlImpl::Destroy](#destroy)|Вызывается обработчиком расширенного просмотра, когда необходимо удалить этот элемент управления.|  
@@ -90,13 +88,13 @@ class CMFCPreviewCtrlImpl : public CWnd;
   
 ### <a name="protected-methods"></a>Защищенные методы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[CMFCPreviewCtrlImpl::DoPaint](#dopaint)|Вызывается платформой для отрисовки на предварительную версию.|  
   
 ### <a name="protected-data-members"></a>Защищенные члены данных  
   
-|Имя|Описание|  
+|name|Описание:|  
 |----------|-----------------|  
 |[CMFCPreviewCtrlImpl::m_clrBackColor](#m_clrbackcolor)|Цвет фона окна предварительного просмотра.|  
 |[CMFCPreviewCtrlImpl::m_clrTextColor](#m_clrtextcolor)|Цвет текста окна предварительного просмотра.|  
@@ -321,4 +319,3 @@ virtual void SetRect(
 virtual ~CMFCPreviewCtrlImpl();  
 ```  
   
-

@@ -1,37 +1,36 @@
 ---
-title: "Предупреждение компилятора (уровень 1) C4489 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C4489"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C4489"
+title: "Предупреждение (уровень 1) C4489 компилятора | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords: C4489
+dev_langs: C++
+helpviewer_keywords: C4489
 ms.assetid: 43b51c8c-27b5-44c9-b974-fe4b48f4896f
-caps.latest.revision: 4
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 4
+caps.latest.revision: "4"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 06f12ddb0289ad8c4d6acbfa6643b8426f64f1c6
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 12/21/2017
 ---
-# Предупреждение компилятора (уровень 1) C4489
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-"спецификатор": не разрешен в методе интерфейса "метод"; переопределите спецификаторы, которые разрешены только для ссылочного класса и методов классов значений  
+# <a name="compiler-warning-level-1-c4489"></a>Предупреждение компилятора (уровень 1) C4489
+«спецификатор»: не разрешен в методе интерфейса «метод»; переопределите спецификаторы допустимы только для ссылочного класса и значение методов класса  
   
- Неправильно использовано ключевое слово спецификатора для метода интерфейса.  
+ Ключевое слово спецификатора неправильно использовалась для метода интерфейса.  
   
- Для получения дополнительной информации см. [Спецификаторы переопределения](../../windows/override-specifiers-cpp-component-extensions.md).  
+ Дополнительные сведения см. в разделе [спецификаторы переопределения](../../windows/override-specifiers-cpp-component-extensions.md).  
   
-## Пример  
- В следующем примере показано возникновение ошибки C4489.  
+## <a name="example"></a>Пример  
+ Следующий пример приводит к возникновению ошибки C4489.  
   
 ```  
 // C4489.cpp  

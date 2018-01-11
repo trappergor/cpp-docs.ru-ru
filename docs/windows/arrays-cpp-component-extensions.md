@@ -1,109 +1,96 @@
 ---
-title: "Массивы (расширения компонентов C++) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/16/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-f1_keywords: 
-  - "cli::array"
-  - "details::array"
-  - "lang::array"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "array - ключевое слово [C++]"
-  - "массивы [C++]"
-  - "массивы [C++], многомерные"
-  - "объявление массивов, сведения об объявлении массивов"
-  - "многомерные массивы"
+title: "Массивы (расширения компонентов C++) | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+f1_keywords:
+- cli::array
+- details::array
+- lang::array
+dev_langs: C++
+helpviewer_keywords:
+- array keyword [C++]
+- declaring arrays, about declaring arrays
+- arrays [C++], multidimensional
+- multidimensional arrays
+- arrays [C++]
 ms.assetid: 49445812-d775-4db1-a231-869598dbb955
-caps.latest.revision: 34
-caps.handback.revision: 34
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "34"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: 343f2369260531e828ea8db27cee5e52ea18fd31
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 12/21/2017
 ---
-# Массивы (расширения компонентов C++)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Тип `Platform::Array<T>` в [!INCLUDE[cppwrt_short](../Token/cppwrt_short_md.md)] или ключевое слово `array` в [!INCLUDE[cppcli](../build/reference/includes/cppcli_md.md)] объявляет массив указанного типа и начальное значение.  
+# <a name="arrays-c-component-extensions"></a>Массивы (расширения компонентов C++)
+`Platform::Array<T>` Типа в C + +/ CX, или `array` ключевого слова в C + +/ CLI, объявляет массив указанного типа и начальное значение.  
   
-## Все платформы  
- Массив должен быть объявлен с помощью модификатора дескриптора объекта \(^\) после закрывающей угловой скобки \(\>\) в объявлении.  
+## <a name="all-platforms"></a>Все платформы  
+ Массив должен быть объявлен с помощью модификатора дескриптора объекта (^) после закрывающей угловой скобки (>) в объявлении.  
+ Количество элементов массива не является частью типа. Одна переменная массива может ссылаться на массивы разных размеров.  
   
- Количество элементов массива не является частью типа.  Одна переменная массива может ссылаться на массивы различных размеров.  
+ В отличие от стандартной версии C++, индексация не идентична арифметическим операциям над указателями и не коммутативна.  
   
- В отличие от стандартного C\+\+, индексация не является синонимом арифметических операций над указателями и не коммутативна.  
+ Дополнительные сведения о массивах см. в следующих разделах:  
   
- Дополнительные сведения о массивах см.:  
+-   [Практическое руководство. Использование массивов в C++/CLI](../dotnet/how-to-use-arrays-in-cpp-cli.md)  
+    
+-   [Списки аргументов переменной длины (...) (C++/CLI)](../windows/variable-argument-lists-dot-dot-dot-cpp-cli.md)  
   
--   [Ковариация массивов](../misc/array-covariance.md)  
+## <a name="windows-runtime"></a>Среда выполнения Windows  
+ Массивы являются членами пространства имен `Platform`. Они могут быть только одномерными.  
   
--   [Практическое руководство. Использование массивов в C\+\+\/CLI](../dotnet/how-to-use-arrays-in-cpp-cli.md)  
+### <a name="syntax"></a>Синтаксис  
   
--   [Практическое руководство. Создание многомерных массивов](../misc/how-to-create-multidimension-arrays.md)  
-  
--   [Практическое руководство. Создание массивов из управляемых массивов \(неравномерные массивы\)](../misc/how-to-create-arrays-of-managed-arrays-jagged-arrays.md)  
-  
--   [Практическое руководство. Создание Typedefs для управляемых архивов](../misc/how-to-make-typedefs-for-managed-arrays.md)  
-  
--   [Практическое руководство. Использование управляемых массивов в качестве параметров типа шаблона](../misc/how-to-use-managed-arrays-as-template-type-parameters.md)  
-  
--   [Списки аргументов переменных \(...\) \(C\+\+\/CLI\)](../windows/variable-argument-lists-dot-dot-dot-cpp-cli.md)  
-  
--   [Практическое руководство. Сортировка массивов](../misc/how-to-sort-arrays.md)  
-  
--   [Практическое руководство. Сортировка массивов с помощью настраиваемых условий](../misc/how-to-sort-arrays-using-custom-criteria.md)  
-  
-## [!INCLUDE[wrt](../atl/reference/includes/wrt_md.md)]  
- Массивы являются членами пространства имен `Platform`.  Массивы могут быть только одномерными.  
-  
- **Синтаксис**  
-  
- В первом примере синтаксиса используется агрегатное ключевое слово `ref new`, чтобы выделить память для массива.  Во втором примере объявляется локальный массив.  
+ В первом примере синтаксиса используется агрегатное ключевое слово `ref new`, чтобы выделить память для массива. Во втором примере объявляется локальный массив.  
   
 ```  
+[qualifiers] [Platform::]Array<[qualifiers] array-type [,rank]>^ identifier = 
+    ref new[Platform::]Array<initialization-type> [{initialization-list [,...]}]  
   
-        [qualifiers] [Platform::]Array<[qualifiers] array-type [,rank]>^ identifier = ref new [Platform::]Array< initialization-type > [{initialization-list [,...]}]  
-  
-[qualifiers] [Platform::]Array<[qualifiers] array-type [,rank]>^ identifier = {initialization-list [,...]}  
-  
+[qualifiers] [Platform::]Array<[qualifiers] array-type [,rank]>^ identifier = 
+    {initialization-list [,...]}  
 ```  
   
- *qualifiers* \(необязательно\)  
- Один или несколько следующих спецификаторов класса хранения: [mutable](../cpp/mutable-data-members-cpp.md), [volatile](../cpp/volatile-cpp.md), [const](../cpp/const-cpp.md), [extern](../cpp/using-extern-to-specify-linkage.md), [static](../misc/static-cpp.md).  
+ *квалификаторы* [необязательно]  
+ Один или несколько следующих спецификаторов класса хранения: [изменяемый](../cpp/mutable-data-members-cpp.md), [volatile](../cpp/volatile-cpp.md), [const](../cpp/const-cpp.md), [extern](../cpp/using-extern-to-specify-linkage.md), [статический](../cpp/static-members-cpp.md).  
   
  `array-type`  
- Тип переменной массива.  Допустимыми типами являются основные типы и классы [!INCLUDE[wrt](../atl/reference/includes/wrt_md.md)], ссылочные классы и структуры, классы и структуры значений и собственные указатели \(`type``*`\).  
+ Тип переменной массива. Допустимые типы: класса среды выполнения Windows и базовые типы, классы и структуры, классы значений и структуры и собственные указатели (`type*`).  
   
- `rank` \(необязательно\)  
- Число измерений в массиве.  Должно быть равно 1.  
+ `rank` [необязательный параметр]  
+ Число измерений массива. Должен иметь значение 1.  
   
  `identifier`  
  Имя переменной массива.  
   
  `initialization-type`  
- Тип значений, которые инициализируют массив.  Как правило, `array-type` и `initialization-type` принадлежат к одному и тому же типу.  Однако типы могут быть разными, если существует преобразование из `initialization-type` в `array-type`— например, если `initialization-type` является производным от `array-type`.  
+ Тип значений, которые инициализируют массив. Как правило, `array-type` и `initialization-type` относятся к одному и тому же типу. Однако при наличии преобразования из `initialization-type` в `array-type` (например, если `initialization-type` является производным от `array-type`) типы могут быть разными.  
   
- `initialization-list` \(необязательно\)  
- Список в фигурных скобках из значений, разделенных запятыми, инициализирует элементы массива.  Например, если `rank-size-list` был равен `(3)`, что объявляет одномерный массив из 3 элементов, `initialization list` может быть таким `{1,2,3}`.  
+ `initialization-list` [необязательный параметр]  
+ Разделенный запятыми список инициализирующих элементы массива значений в фигурных скобках. Например если `rank-size-list` были `(3)`, который объявляет одномерный массив из 3 элементов `initialization list` может быть `{1,2,3}`.  
   
- **Примечания**  
+### <a name="remarks"></a>Примечания  
   
- Во время компиляции можно определить, является ли тип массивом с подсчетом ссылок, с помощью `__is_ref_array(``type``)`.  Для получения дополнительной информации см. [Поддержка характеристик типов компилятором](../windows/compiler-support-for-type-traits-cpp-component-extensions.md).  
+ Во время компиляции можно определить является ли тип массивом подсчетом ссылок с `__is_ref_array(type)`. Дополнительные сведения см. в разделе [поддержка характеристик типов компилятором](../windows/compiler-support-for-type-traits-cpp-component-extensions.md).  
   
-### Требования  
- Параметр компилятора: **\/ZW**  
+### <a name="requirements"></a>Требования  
+ Параметр компилятора: **/ZW**  
   
-### Примеры  
- В следующем примере создается одномерный массив из 100 элементов.  
+### <a name="examples"></a>Примеры  
+ В следующем примере создается одномерный массив из 100 элементов.  
   
-```  
+```cpp  
 // cwr_array.cpp  
 // compile with: /ZW  
 using namespace Platform;  
@@ -115,63 +102,64 @@ int main() {
 }  
 ```  
   
-## [!INCLUDE[clr_for_headings](../dotnet/includes/clr_for_headings_md.md)]  
- **Синтаксис**  
+## <a name="common-language-runtime"></a>Среда CLR 
   
- В первом примере синтаксиса используется ключевое слово `gcnew`, чтобы выделить память для массива.  Во втором примере объявляется локальный массив.  
+### <a name="syntax"></a>Синтаксис  
   
-```  
-  
-        [qualifiers] [cli::]array<[qualifiers] array-type [,rank] >^ identifier = gcnew [cli::]array< initialization-type [,rank] >(rank-size-list[,...]) [{initialization-list [,...]}]  
-  
-[qualifiers] [cli::]array<[qualifiers] array-type [,rank] >^ identifier = {initialization-list [,...]}  
+ В первом примере синтаксиса используется ключевое слово `gcnew`, чтобы выделить память для массива. Во втором примере объявляется локальный массив.  
   
 ```  
+[qualifiers] [cli::]array<[qualifiers] array-type [,rank]>^ identifier = 
+    gcnew [cli::]array<initialization-type[,rank]>(rank-size-list[,...]) [{initialization-list [,...]}]  
   
- *qualifiers* \(необязательно\)  
- Один или несколько следующих спецификаторов класса хранения: [mutable](../cpp/mutable-data-members-cpp.md), [volatile](../cpp/volatile-cpp.md), [const](../cpp/const-cpp.md), [extern](../cpp/using-extern-to-specify-linkage.md), [static](../misc/static-cpp.md).  
+[qualifiers] [cli::]array<[qualifiers] array-type [,rank]>^ identifier = 
+    {initialization-list [,...]}  
+```  
+  
+ *квалификаторы* [необязательно]  
+ Один или несколько следующих спецификаторов класса хранения: [изменяемый](../cpp/mutable-data-members-cpp.md), [volatile](../cpp/volatile-cpp.md), [const](../cpp/const-cpp.md), [extern](../cpp/using-extern-to-specify-linkage.md), [статический](../cpp/static-members-cpp.md).  
   
  `array-type`  
- Тип переменной массива.  Допустимыми типами являются основные типы и классы [!INCLUDE[wrt](../atl/reference/includes/wrt_md.md)], ссылочные классы и структуры, классы и структуры значений и собственные указатели \(`type``*`\) и собственные типы POD.  
+ Тип переменной массива. Допустимые типы: класса среды выполнения Windows и базовые типы, классы и структуры, классы и структуры значений, собственные указатели (`type*`) и собственные типы POD (обычные старые данные).  
   
- `rank` \(необязательно\)  
- Число измерений в массиве.  Значение по умолчанию — 1; максимальное число — 32.  Каждое измерение массива само является массивом.  
+ `rank` [необязательный параметр]  
+ Число измерений массива. Значение по умолчанию — 1; максимальное число — 32. Каждое измерение массива само является массивом.  
   
  `identifier`  
  Имя переменной массива.  
   
  `initialization-type`  
- Тип значений, которые инициализируют массив.  Как правило, `array-type` и `initialization-type` принадлежат к одному и тому же типу.  Однако типы могут быть разными, если существует преобразование из `initialization-type` в `array-type`— например, если `initialization-type` является производным от `array-type`.  
+ Тип значений, которые инициализируют массив. Как правило, `array-type` и `initialization-type` относятся к одному и тому же типу. Однако при наличии преобразования из `initialization-type` в `array-type` (например, если `initialization-type` является производным от `array-type`) типы могут быть разными.  
   
  `rank-size-list`  
- Список размеров каждого измерения массива, разделенный запятыми.  Также, если задан параметр `initialization-list`, компилятор может определить размер каждого измерения, и `rank-size-list` можно опустить.  Для получения дополнительной информации см. [Практическое руководство. Создание многомерных массивов](../misc/how-to-create-multidimension-arrays.md).  
+ Разделенный запятыми список размеров каждого измерения массива. Если задан параметр `initialization-list`, компилятор может определить размер каждого измерения, и параметр `rank-size-list` можно опустить. 
   
- `initialization-list` \(необязательно\)  
- Список в фигурных скобках из значений, разделенных запятыми, инициализирует элементы массива.  Или разделенный запятыми список вложенных элементов *initialization\-list*, который инициализирует элементы в многомерном массиве.  
+ `initialization-list` [необязательный параметр]  
+ Разделенный запятыми список инициализирующих элементы массива значений в фигурных скобках. Вложенная разделенный запятыми список *список инициализации* элементы, которые инициализируют элементы в многомерный массив.  
   
- Например, если `rank-size-list` был равен `(3)`, что объявляет одномерный массив из 3 элементов, `initialization list` может быть таким `{1,2,3}`.  Если `rank-size-list` был равен `(3,2,4)`, что объявляет трехмерный массив с 3 элементами в первом измерении, 2 элементами во втором и 4 элементами в третьем, `initialization-list` может быть таким `{{1,2,3},{0,0},{-5,10,-21,99}}`.  
+ Например если `rank-size-list` были `(3)`, который объявляет одномерный массив из 3 элементов `initialization list` может быть `{1,2,3}`. Если `rank-size-list` были `(3,2,4)`, который объявляет трехмерный массив из 3 элементов первого измерения, два элемента во втором и четыре элемента в третьем, `initialization-list` может быть `{{1,2,3},{0,0},{-5,10,-21,99}}`.)  
   
- **Примечания**  
+### <a name="remarks"></a>Примечания  
   
- `array` находится в пространстве имен [Пространства имен Platform, default и cli](../windows/platform-default-and-cli-namespaces-cpp-component-extensions.md).  
+ `array`в [платформы, по умолчанию и пространства имен cli](../windows/platform-default-and-cli-namespaces-cpp-component-extensions.md) пространства имен.  
   
- Как и в стандартном C\+\+, индексы массива начинаются от нуля, и массив индексируется с помощью квадратных скобок \(\[\]\).  В отличие от стандартного C\+\+, индексы многомерного массива указываются в списке индексов каждого измерения вместо набора операторов квадратных скобок \(\[\]\) для каждого измерения.  Например, *identifier*\[*index1*, *index2*\] вместо *identifier*\[*index1*\]\[*index2*\].  
+ Как и в стандартной версии C++, индексы массива начинаются от нуля, и массив индексируется с помощью квадратных скобок ([]). В отличие от стандартной версии C++, индексы многомерного массива указываются в списке индексов каждого измерения вместо набора операторов квадратных скобок ([]) для каждого измерения. Например *идентификатор*[*index1*, *index2*] вместо *идентификатор*[*index1*] [ *index2*].  
   
- Все управляемые массивы являются производными от `System::Array`.  Любой метод или свойство `System::Array` может применяться непосредственно к переменной массива.  
+ Все управляемые массивы являются производными от `System::Array`. Любой метод или свойство `System::Array` может применяться непосредственно к переменной массива.  
   
  При создании массива указателей на управляемый класс элементы массива инициализируются нулем.  
   
- При создании массива, тип элементов которого является типом значения `V`, к каждому элементу массива применяется конструктор по умолчанию для `V`.  Для получения дополнительной информации см. [Эквиваленты собственным типам C\+\+ в .NET Framework](../dotnet/dotnet-framework-equivalents-to-cpp-native-types-cpp-cli.md).  
+ При создании массива, тип элементов которого является типом значения `V`, к каждому элементу массива применяется конструктор по умолчанию для `V`. Дополнительные сведения см. в разделе [эквиваленты C++ собственных типов .NET Framework (C + +/ CLI)](../dotnet/dotnet-framework-equivalents-to-cpp-native-types-cpp-cli.md).  
   
- Во время компиляции, можно определить, является ли тип массивом среды CLR с помощью `__is_ref_array(``type``)`.  Для получения дополнительной информации см. [Поддержка характеристик типов компилятором](../windows/compiler-support-for-type-traits-cpp-component-extensions.md).  
+ Во время компиляции, можно обнаружить, является ли тип общих массива среды выполнения (CLR) языка с `__is_ref_array(type)`. Дополнительные сведения см. в разделе [поддержка характеристик типов компилятором](../windows/compiler-support-for-type-traits-cpp-component-extensions.md).  
   
-### Требования  
- Параметр компилятора: **\/clr**  
+### <a name="requirements"></a>Требования  
+ Параметр компилятора: **/clr**  
   
-### Примеры  
- В следующем примере создается одномерный массив из 100 элементов, и трехмерный массив с 3 элементами в первом измерении, 5 элементами во втором и 6 элементами в третьем.  
+### <a name="examples"></a>Примеры  
+ В следующем примере создается одномерный массив из 100 элементов и трехмерный массив с 3 элементами в первом измерении, 5 элементами во втором и 6 элементами в третьем.  
   
-```  
+```cpp  
 // clr_array.cpp  
 // compile with: /clr  
 ref class MyClass {};  
@@ -186,5 +174,5 @@ int main() {
 }  
 ```  
   
-## См. также  
+## <a name="see-also"></a>См. также  
  [Расширения компонентов для платформ среды выполнения](../windows/component-extensions-for-runtime-platforms.md)

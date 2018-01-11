@@ -1,32 +1,33 @@
 ---
-title: "Метод ClassFactory::QueryInterface | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "module/Microsoft::WRL::ClassFactory::QueryInterface"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "QueryInterface - метод"
+title: "Метод ClassFactory::QueryInterface | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: module/Microsoft::WRL::ClassFactory::QueryInterface
+dev_langs: C++
+helpviewer_keywords: QueryInterface method
 ms.assetid: 9593881f-4585-4d70-8ca6-b328918d4d6b
-caps.latest.revision: 3
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 3
+caps.latest.revision: "3"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: 0c4abb408ded66f9768cd1e1476f131b3f82cd30
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 12/21/2017
 ---
-# Метод ClassFactory::QueryInterface
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Извлекает указатель на интерфейс, указанный параметром.  
+# <a name="classfactoryqueryinterface-method"></a>Метод ClassFactory::QueryInterface
+Извлекает указатель на интерфейс, определяемый параметром.  
   
-## Синтаксис  
+## <a name="syntax"></a>Синтаксис  
   
 ```  
 STDMETHOD(  
@@ -34,20 +35,20 @@ STDMETHOD(
 )(REFIID riid, _Deref_out_ void **ppvObject);  
 ```  
   
-#### Параметры  
+#### <a name="parameters"></a>Параметры  
  `riid`  
  Идентификатор интерфейса.  
   
  `ppvObject`  
- Когда эта операция завершается, указатель на интерфейс, указанный параметром `riid`.  
+ После завершения операции, указатель на интерфейс, заданный параметром `riid`.  
   
-## Возвращаемое значение  
- В случае успеха возвращает значение S\_OK; в противном случае значение типа HRESULT, описывающее тип сбоя.  
+## <a name="return-value"></a>Возвращаемое значение  
+ Значение S_OK, если операция завершилась успешно; в противном случае — значение HRESULT, описывающее тип сбоя.  
   
-## Требования  
+## <a name="requirements"></a>Требования  
  **Заголовок:** module.h  
   
  **Пространство имен:** Microsoft::WRL  
   
-## См. также  
+## <a name="see-also"></a>См. также  
  [Класс ClassFactory](../windows/classfactory-class.md)

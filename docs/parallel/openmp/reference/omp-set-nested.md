@@ -1,32 +1,31 @@
 ---
-title: "omp_set_nested | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "omp_set_nested"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "omp_set_nested OpenMP function"
+title: "omp_set_nested | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: omp_set_nested
+dev_langs: C++
+helpviewer_keywords: omp_set_nested OpenMP function
 ms.assetid: fa1cb08c-7b8b-42c9-8654-2c33dcffb5b6
-caps.latest.revision: 13
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 13
+caps.latest.revision: "13"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: f08fec246b5df4b5a6dc965917e0a6438b58042f
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 12/21/2017
 ---
-# omp_set_nested
-[!INCLUDE[vs2017banner](../../../assembler/inline/includes/vs2017banner.md)]
-
-Разрешает вложенные параллелизм.  
+# <a name="ompsetnested"></a>omp_set_nested
+Включает вложенные параллелизма.  
   
-## Синтаксис  
+## <a name="syntax"></a>Синтаксис  
   
 ```  
 void omp_set_nested(  
@@ -34,24 +33,24 @@ void omp_set_nested(
 );  
 ```  
   
-## Заметки  
- Здесь:  
+## <a name="remarks"></a>Примечания  
+ где  
   
  `val`  
- Если значение ненулевое, включает вложенные параллелизм.  Если значение равно нулю, отключение вложенных параллелизм.  
+ Если значение ненулевое, обеспечивает поддержку вложенных параллелизма. Если значение равно нулю, отключает вложенный параллелизм.  
   
-## Заметки  
- Параллелизм вложенные OMP, который можно включить с `omp_set_nested`либо, присвоив  [OMP\_NESTED](../../../parallel/openmp/reference/omp-nested.md) переменная среды.  
+## <a name="remarks"></a>Примечания  
+ Вложенные OMP параллелизма может быть включен с `omp_set_nested`, или установив [OMP_NESTED](../../../parallel/openmp/reference/omp-nested.md) переменной среды.  
   
- Параметр `omp_set_nested` переопределяет параметр  `OMP_NESTED` переменная среды.  
+ Параметр для `omp_set_nested` переопределит параметр `OMP_NESTED` переменной среды.  
   
- При включении переменная среды выполнения может нарушить в противном случае \- a программы, поскольку количество потоков растет экспоненциально при вложении параллельные области.  Например, функция создаст recurses 6 с количеством потоков OMP присвойте значение 4 необходимо 4.096 \(4 в степень 6\) потоков в целом производительность приложения ухудшат если число потоков превышает число процессоров.  Одно исключение из этого были бы связанными приложениями ВВОДА\-ВЫВОДА.  
+ При включении переменной среды может нарушить работу приложения, в противном случае оперативной число потоков, увеличивается экспоненциально, при наличии вложенных параллельных областей.  Например, recurses 6 раз с OMP потоков, равным 4 требует 4096 (4 в степень 6) функции потоков в общем, снизит производительность приложения, если количество потоков превышает число процессоров. Единственным исключением бы бы ввода / вывода приложений.  
   
- Используйте [omp\_get\_nested](../../../parallel/openmp/reference/omp-get-nested.md) отобразить текущий параметр  `omp_set_nested`.  
+ Используйте [omp_get_nested](../../../parallel/openmp/reference/omp-get-nested.md) для отображения текущего значения параметра `omp_set_nested`.  
   
- Дополнительные сведения см. в разделе [3.1.9 omp\_set\_nested Function](../../../parallel/openmp/3-1-9-omp-set-nested-function.md).  
+ Дополнительные сведения см. в разделе [3.1.9 функция omp_set_nested](../../../parallel/openmp/3-1-9-omp-set-nested-function.md).  
   
-## Пример  
+## <a name="example"></a>Пример  
   
 ```  
 // omp_set_nested.cpp  
@@ -72,7 +71,10 @@ int main( )
 }  
 ```  
   
-  **1**  
-**1**   
-## См. также  
- [Functions](../../../parallel/openmp/reference/openmp-functions.md)
+```Output  
+1  
+1  
+```  
+  
+## <a name="see-also"></a>См. также  
+ [Функции](../../../parallel/openmp/reference/openmp-functions.md)

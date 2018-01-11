@@ -41,11 +41,12 @@ caps.latest.revision: "14"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 8afa6156185ac1d375834bdc22df35f2a94638fd
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 2009a88f522b60305c6f910a155faa8e675e2147
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="getdcwddbg-wgetdcwddbg"></a>_getdcwd_dbg, _wgetdcwd_dbg
 Отладочные версии функций [_getdcwd, _wgetdcwd](../../c-runtime-library/reference/getdcwd-wgetdcwd.md) (доступны только во время отладки).  
@@ -98,7 +99,7 @@ wchar_t *_wgetdcwd_dbg(
   
  Как правило, явно вызывать эти функции не требуется. Вместо этого можно определить флаг `_CRTDBG_MAP_ALLOC`. Если определен флаг `_CRTDBG_MAP_ALLOC`, вызовы функций `_getdcwd` и `_wgetdcwd` повторно сопоставляются с `_getdcwd_dbg` и `_wgetdcwd_dbg` соответственно, а для параметра `blockType` задается тип `_NORMAL_BLOCK`. Таким образом, не требуется явно вызывать эти функции, если только нет необходимости пометить блоки кучи как `_CLIENT_BLOCK`. Дополнительные сведения см. в разделе [Типы блоков в отладочной куче](/visualstudio/debugger/crt-debug-heap-details).  
   
-### <a name="generic-text-routine-mappings"></a>Универсальное текстовое сопоставление функций  
+### <a name="generic-text-routine-mappings"></a>Сопоставления подпрограмм обработки обычного текста  
   
 |Подпрограмма Tchar.h|_UNICODE и _MBCS не определены|_MBCS определено|_UNICODE определено|  
 |---------------------|--------------------------------------|--------------------|-----------------------|  

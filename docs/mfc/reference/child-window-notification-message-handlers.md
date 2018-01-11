@@ -20,16 +20,17 @@ caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: ad91fe5a9f2afc89b642be642bf14eaed13e3009
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: f56f02bd845efdeb59a2b68604098c637ccd45c3
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="child-window-notification-message-handlers"></a>Обработчики для уведомляющих сообщений дочернего окна
 Существует пять категорий уведомляющих сообщений дочернего окна.  
   
-|Категория|Описание|  
+|Категория|Описание:|  
 |--------------|-----------------|  
 |[Обработчик универсального элемента управления](../../mfc/reference/generic-control-handler.md)|Обработчик универсального элемента управления коды уведомления.|  
 |[Обработчики пользовательских кнопок](../../mfc/reference/user-button-handlers.md)|Обработчики для коды уведомления пользователя.|  

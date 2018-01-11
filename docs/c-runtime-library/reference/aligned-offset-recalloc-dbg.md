@@ -4,12 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
-apiname:
-- _aligned_offset_recalloc_dbg
+apiname: _aligned_offset_recalloc_dbg
 apilocation:
 - msvcrt.dll
 - msvcr80.dll
@@ -25,22 +23,21 @@ apitype: DLLExport
 f1_keywords:
 - aligned_offset_recalloc_dbg
 - _aligned_offset_recalloc_dbg
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - aligned_offset_recalloc_dbg function
 - _aligned_offset_recalloc_dbg function
 ms.assetid: 7ab719c3-77e0-4d2e-934f-01529d062fbf
-caps.latest.revision: 9
+caps.latest.revision: "9"
 author: corob-msft
 ms.author: corob
 manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 8701f2e2a52603f08727220e2638f06cc40b7aec
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
-ms.sourcegitcommit: 16d1bf59dfd4b3ef5f037aed9c0f6febfdf1a2e8
-ms.openlocfilehash: 3697b62ff9926cc15d8330c94d845fe80f7c8ec5
-ms.contentlocale: ru-ru
-ms.lasthandoff: 10/09/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="alignedoffsetrecallocdbg"></a>_aligned_offset_recalloc_dbg
 Изменяет размер блока памяти, который был выделен с помощью [_aligned_malloc](../../c-runtime-library/reference/aligned-malloc.md) или [_aligned_offset_malloc](../../c-runtime-library/reference/aligned-offset-malloc.md), и инициализирует память нулями (только отладочная версия).  
@@ -91,7 +88,7 @@ void * _aligned_offset_recalloc_dbg(
   
  Эта функция задает для `errno` значение `ENOMEM` в случае сбоя выделения памяти, а также если запрошенный размер (`num` * `size`) был больше `_HEAP_MAXREQ`. Дополнительные сведения о функции `errno` см. в разделе [errno, _doserrno, _sys_errlist и _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md). Кроме того, `_aligned_offset_recalloc_dbg` проверяет свои параметры. Если значение `alignment` не является степенью числа 2 или `offset` больше или равно запрошенному размеру и не равно нулю, эта функция вызывает обработчик недопустимых параметров, как описано в разделе [Проверка параметров](../../c-runtime-library/parameter-validation.md). Если продолжение выполнения разрешено, эта функция возвращает `NULL` и задает для `errno` значение `EINVAL`.  
   
- Сведения о выделении, инициализации и управлении блоками памяти в отладочной версии базовой кучи см. в разделе [Сведения о куче отладки CRT](/visualstudio/debugger/crt-debug-heap-details). Сведения о типах блоков выделения и способах их использования см. в разделе [Типы блоков в отладочной куче](/visualstudio/debugger/crt-debug-heap-details). Сведения о различиях между вызовом стандартной функции кучи и ее отладочной версии в сборке отладки приложения см. в разделе [Версии отладки функций выделения кучи](/visualstudio/debugger/debug-versions-of-heap-allocation-functions).  
+ Сведения о выделении, инициализации и управлении блоками памяти в отладочной версии базовой кучи, см. в статье [CRT Debug Heap Details](/visualstudio/debugger/crt-debug-heap-details). Сведения о типах блоков выделения и способах их использования см. в разделе [Типы блоков в отладочной куче](/visualstudio/debugger/crt-debug-heap-details). Сведения о различиях между вызовом стандартной функции кучи и ее отладочной версии в сборке отладки приложения см. в разделе [Версии отладки функций выделения кучи](/visualstudio/debugger/debug-versions-of-heap-allocation-functions).  
   
 ## <a name="requirements"></a>Требования  
   

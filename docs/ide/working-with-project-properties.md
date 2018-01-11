@@ -18,11 +18,12 @@ caps.latest.revision: "45"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 70fc1210df4600fd63c938a7721f09dcdd206cb1
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: de48e03c62d924334e005ffd7f008e0083fb405f
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="working-with-project-properties"></a>Работа со свойствами проектов
 В Интегрированной среде разработки все сведения, необходимые для построения проекта представляется как *свойства*. Эти сведения включают имя приложения, расширение (например, DLL, exe-ФАЙЛ, LIB), параметры компилятора, параметры компоновщика, параметры отладчика, настраиваемые этапы построения и многих других параметров. Как правило, используется *страницы свойств* ( **проекта &#124; Свойства**) для просмотра и изменения этих свойств. 

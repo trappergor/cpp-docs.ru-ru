@@ -14,11 +14,12 @@ caps.latest.revision: "9"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: c44c2ed7962ab3be94af435eda6114688f9260d4
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 83e75df963889730e4514c38d0551af241a788fa
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="linker-support-for-delay-loaded-dlls"></a>Поддержка компоновщика для DLLs, загружаемых с задержкой
 Компоновщик Visual C++ теперь поддерживает отложенной загрузкой библиотек DLL. Это снимает необходимость использования функций Windows SDK **LoadLibrary** и **GetProcAddress** для реализации отложенная загрузка библиотеки DLL.  

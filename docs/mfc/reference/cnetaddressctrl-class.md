@@ -31,11 +31,12 @@ caps.latest.revision: "32"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 047032e65f0d1fa7847caae36e10fac4175b5db0
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 9a433d723e15d910674c129b1e62ca82c1de4bb0
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cnetaddressctrl-class"></a>Класс CNetAddressCtrl
 Класс `CNetAddressCtrl` представляет элемент управления сетевого адреса, который можно использовать для ввода и проверки формата IPv4, IPv6 и именованных адресов DNS.  
@@ -46,17 +47,17 @@ ms.lasthandoff: 10/24/2017
 class CNetAddressCtrl : public CEdit  
 ```  
   
-## <a name="members"></a>Члены  
+## <a name="members"></a>Участники  
   
 ### <a name="public-constructors"></a>Открытые конструкторы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[CNetAddressCtrl::CNetAddressCtrl](#cnetaddressctrl)|Создает объект `CNetAddressCtrl`.|  
   
 ### <a name="public-methods"></a>Открытые методы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[CNetAddressCtrl::Create](#create)|Создает элемент управления сетевого адреса с указанным стилем и прикрепляет его к текущему `CNetAddressCtrl` объекта.|  
 |[CNetAddressCtrl::CreateEx](#createex)|Создает элемент управления сетевого адреса с указанным расширенные стили и присоединяет его к текущему `CNetAddressCtrl` объекта.|  
@@ -125,7 +126,7 @@ virtual BOOL Create(
   
 ### <a name="parameters"></a>Параметры  
   
-|Параметр|Описание|  
+|Параметр|Описание:|  
 |---------------|-----------------|  
 |[in] `dwStyle`|Побитовое сочетание стили, чтобы применить к элементу управления. Дополнительные сведения см. в разделе [изменить стили](../../mfc/reference/styles-used-by-mfc.md#edit-styles).|  
 |[in] `rect`|Ссылку на [RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897) структура, содержащая положение и размер элемента управления.|  
@@ -149,7 +150,7 @@ virtual BOOL CreateEx(
   
 ### <a name="parameters"></a>Параметры  
   
-|Параметр|Описание|  
+|Параметр|Описание:|  
 |---------------|-----------------|  
 |[in] `dwExStyle`|Побитовое сочетание (OR) расширенные стили, которые надо применить к элементу управления. Дополнительные сведения см. в разделе `dwExStyle` параметр [CreateWindowEx](http://msdn.microsoft.com/library/windows/desktop/ms632680) функции.|  
 |[in] `dwStyle`|Побитовое сочетание (OR) стили, чтобы применить к элементу управления. Дополнительные сведения см. в разделе [изменить стили](../../mfc/reference/styles-used-by-mfc.md#edit-styles).|  
@@ -184,12 +185,12 @@ HRESULT GetAddress(PNC_ADDRESS pAddress) const;
   
 ### <a name="parameters"></a>Параметры  
   
-|Параметр|Описание|  
+|Параметр|Описание:|  
 |---------------|-----------------|  
 |[in, out] `pAddress`|Указатель на [NC_ADDRESS](http://msdn.microsoft.com/library/windows/desktop/bb773345) структуры.  Задать `pAddrInfo` член этой структуры на адрес [NET_ADDRESS_INFO](http://msdn.microsoft.com/library/windows/desktop/bb773346) структуры перед вызовом метода GetAddress.|  
   
 ### <a name="return-value"></a>Возвращаемое значение  
- Значение `S_OK` Если этот метод выполнен успешно; в противном случае — код ошибки COM.. Дополнительные сведения о кодах возможных ошибок см. в разделе разделе возвращают значение [NetAddr_GetAddress](http://msdn.microsoft.com/library/windows/desktop/bb774316) макрос.  
+ Значение `S_OK` Если этот метод выполнен успешно; в противном случае — код ошибки COM. Дополнительные сведения о кодах возможных ошибок см. в разделе разделе возвращают значение [NetAddr_GetAddress](http://msdn.microsoft.com/library/windows/desktop/bb774316) макрос.  
   
 ### <a name="remarks"></a>Примечания  
  В случае успешного выполнения [NET_ADDRESS_INFO](http://msdn.microsoft.com/library/windows/desktop/bb773346) структура содержит дополнительные сведения о сетевой адрес.  
@@ -220,12 +221,12 @@ HRESULT SetAllowType(DWORD dwAddrMask);
   
 ### <a name="parameters"></a>Параметры  
   
-|Параметр|Описание|  
+|Параметр|Описание:|  
 |---------------|-----------------|  
 |[in] `dwAddrMask`|Побитовое сочетание (OR) флагов, указывающее типы адресов может поддерживать элемент управления сетевого адреса. Дополнительные сведения см. в разделе [NET_STRING](http://msdn.microsoft.com/library/windows/desktop/bb762586).|  
   
 ### <a name="return-value"></a>Возвращаемое значение  
- `S_OK`Если этот метод выполнен успешно; в противном случае — код ошибки COM..  
+ `S_OK`Если этот метод выполнен успешно; в противном случае — код ошибки COM.  
   
 ### <a name="remarks"></a>Примечания  
  Используйте [CNetAddressCtrl::SetAllowType](#setallowtype) метод, чтобы указать типы адресов, которые может поддерживать текущего управления сетевого адреса. Используйте [CNetAddressCtrl::GetAddress](#getaddress) метод, чтобы проверить и проанализировать сетевой адрес, вводимых пользователем. Используйте [CNetAddressCtrl::DisplayErrorTip](#displayerrortip) метод, чтобы отобразить всплывающую подсказку сообщение ошибки, если [CNetAddressCtrl::GetAddress](#getaddress) метод завершается неудачно.  

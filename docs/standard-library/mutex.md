@@ -14,11 +14,12 @@ caps.latest.revision: "17"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 65629b16b03503f70f7c966e19282391c512e4ee
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 9da491492437f5bf8ed245c84a33f44174ac44ba
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="ltmutexgt"></a>&lt;Мьютекс&gt;
 Включите стандартный заголовок \<mutex> для определения классов `mutex`, `recursive_mutex`, `timed_mutex` и `recursive_timed_mutex`, шаблонов `lock_guard` и `unique_lock`, а также поддерживающих типов и функций, определяющих взаимоисключающие регионы кода.  
@@ -57,7 +58,7 @@ ms.lasthandoff: 10/24/2017
   
 ### <a name="classes"></a>Классы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[Класс lock_guard](../standard-library/lock-guard-class.md)|Представляет шаблон, для которого можно создать экземпляры и объект, деструктор которого разблокирует `mutex`.|  
 |[Класс mutex (Стандартная библиотека C++)](../standard-library/mutex-class-stl.md)|Представляет тип мьютекса. Используйте объекты этого типа для принудительного взаимного исключения в программе.|  
@@ -68,14 +69,14 @@ ms.lasthandoff: 10/24/2017
   
 ### <a name="functions"></a>Функции  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[call_once](../standard-library/mutex-functions.md#call_once)|Предоставляет механизм для однократного вызова указанного объекта во время выполнения.|  
 |[lock](../standard-library/mutex-functions.md#lock)|Пытается заблокировать все аргументы без взаимоблокировки.|  
   
 ### <a name="structs"></a>структурам;  
   
-|Имя|Описание|  
+|name|Описание:|  
 |----------|-----------------|  
 |[Структура adopt_lock_t](../standard-library/adopt-lock-t-structure.md)|Представляет тип, который используется для определения `adopt_lock`.|  
 |[Структура defer_lock_t](../standard-library/defer-lock-t-structure.md)|Представляет тип, который определяет объект `defer_lock`, используемый для выбора одного из перегруженных конструкторов `unique_lock`.|  
@@ -84,7 +85,7 @@ ms.lasthandoff: 10/24/2017
   
 ### <a name="variables"></a>Переменные  
   
-|Имя|Описание|  
+|name|Описание:|  
 |----------|-----------------|  
 |[adopt_lock](../standard-library/mutex-functions.md#adopt_lock)|Представляет объект, который можно передать в конструкторы для `lock_guard` и `unique_lock`, чтобы указать на блокировку объекта мьютекса, также передаваемого в конструктор.|  
 |[defer_lock](../standard-library/mutex-functions.md#defer_lock)|Представляет объект, который можно передать в конструктор для `unique_lock`, чтобы указать, что конструктор не должен блокировать объект мьютекса, который также передается в него.|  

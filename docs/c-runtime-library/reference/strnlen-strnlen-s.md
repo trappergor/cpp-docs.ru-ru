@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
 apiname:
@@ -43,8 +42,7 @@ f1_keywords:
 - _mbstrnlen
 - strnlen
 - _tcscnlen_l
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - _tcscnlen function
 - _mbstrnlen function
@@ -66,36 +64,22 @@ helpviewer_keywords:
 - string length
 - strnlen_l function
 ms.assetid: cc05ce1c-72ea-4ae4-a7e7-4464e56e5f80
-caps.latest.revision: 35
+caps.latest.revision: "35"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: a82768750e6a7837bb81edd8a51847f83c294c20
-ms.openlocfilehash: 9a0a0e0f9b020b635b6de27a1ae111378152291b
-ms.contentlocale: ru-ru
-ms.lasthandoff: 04/04/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: 59c9d1f893dbc024a0645e70119d1069c3383ed8
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="strnlen-strnlens-wcsnlen-wcsnlens-mbsnlen-mbsnlenl-mbstrnlen-mbstrnlenl"></a>strnlen, strnlen_s, wcsnlen, wcsnlen_s, _mbsnlen, _mbsnlen_l, _mbstrnlen, _mbstrnlen_l
 Получает длину строки, используя текущий или переданный в функцию языковой стандарт. Существуют более безопасные версии функций [strlen, wcslen, _mbslen, _mbslen_l, _mbstrlen, _mbstrlen_l](../../c-runtime-library/reference/strlen-wcslen-mbslen-mbslen-l-mbstrlen-mbstrlen-l.md).  
   
 > [!IMPORTANT]
->  `_mbsnlen`, `_mbsnlen_l`, `_mbstrnlen` и `_mbstrnlen_l` нельзя использовать в приложениях, выполняемых в [!INCLUDE[wrt](../../atl/reference/includes/wrt_md.md)]. Дополнительные сведения см. в статье [Функции CRT, которые не поддерживаются с ключом /ZW](http://msdn.microsoft.com/library/windows/apps/jj606124.aspx).  
+>  `_mbsnlen`, `_mbsnlen_l`, `_mbstrnlen` и `_mbstrnlen_l` нельзя использовать в приложениях, выполняемых в среде выполнения Windows. Дополнительные сведения см. в статье [Функции CRT, которые не поддерживаются с ключом /ZW](http://msdn.microsoft.com/library/windows/apps/jj606124.aspx).  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -174,7 +158,7 @@ size_t _mbstrnlen_l(
   
  `_mbsnlen` и `_mbstrnlen` возвращают число многобайтовых символов в строке многобайтовых символов. `_mbsnlen` распознает последовательности многобайтовых символов согласно используемой в данный момент кодовой странице многобайтовых символов или переданному в функцию языковому стандарту; она не проверяет допустимость многобайтовых символов. `_mbstrnlen` проверяет допустимость многобайтовых символов и распознает их последовательности. Если строка, передаваемая в `_mbstrnlen`, содержит недопустимый многобайтовый символ, для `errno` задается значение `EILSEQ`.  
   
- Выходное значение зависит от настройки категории `LC_CTYPE` языкового стандарта; дополнительные сведения см. в разделе [setlocale, _wsetlocale](../../c-runtime-library/reference/setlocale-wsetlocale.md). Версии этих функций идентичны за исключением того, что версии без суффикса `_l` используют текущий языковой стандарт для этого поведения, зависимого от языкового стандарта, а версии с суффиксом `_l` — параметр языкового стандарта, переданный в функцию. Дополнительные сведения см. в разделе [Языковой стандарт](../../c-runtime-library/locale.md).  
+ Выходное значение зависит от настройки категории `LC_CTYPE` языкового стандарта; дополнительные сведения см. в разделе [setlocale, _wsetlocale](../../c-runtime-library/reference/setlocale-wsetlocale.md). Версии этих функций идентичны за исключением того, что версии без суффикса `_l` используют текущий языковой стандарт для этого поведения, зависимого от языкового стандарта, а версии с суффиксом `_l` — параметр языкового стандарта, переданный в функцию. Для получения дополнительной информации см. [Locale](../../c-runtime-library/locale.md).  
   
 ## <a name="requirements"></a>Требования  
   
@@ -185,7 +169,7 @@ size_t _mbstrnlen_l(
 |`_mbsnlen`, `_mbsnlen_l`|\<mbstring.h>|  
 |`_mbstrnlen`, `_mbstrnlen_l`|\<stdlib.h>|  
   
- Дополнительные сведения о совместимости см. в статье [Совместимость](../../c-runtime-library/compatibility.md).  
+ Дополнительные сведения о совместимости см. в разделе [Совместимость](../../c-runtime-library/compatibility.md).  
   
 ## <a name="example"></a>Пример  
   

@@ -41,11 +41,12 @@ caps.latest.revision: "15"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: c4f257d4936b19fefa9484b0d2ef69bed7c310e1
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: e05b0560032d79e5e69a1cafe8669c79160b8e1a
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="puts-putws"></a>puts, _putws
 Записывает строку в поток **stdout**.  
@@ -67,7 +68,7 @@ int _putws(
  Выходная строка.  
   
 ## <a name="return-value"></a>Возвращаемое значение  
- Возвращает неотрицательное значение в случае успешного выполнения. Если функция `puts` завершается с ошибкой, она возвращает `EOF`; если функция `_putws` завершается с ошибкой, она возвращает **WEOF**. Если параметр `str` является пустым указателем, вызывается обработчик недопустимых параметров, как описано в разделе [Проверка параметров](../../c-runtime-library/parameter-validation.md). Если выполнение может быть продолжено, функции задают для `errno` значение `EINVAL` и возвращают `EOF` или **WEOF**.  
+ Возвращает неотрицательное значение в случае успешного выполнения. Если функция `puts` завершается с ошибкой, она возвращает `EOF`; если функция `_putws` завершается с ошибкой, она возвращает **WEOF**. Если параметр `str` является пустым указателем, вызывается обработчик недопустимого параметра, как описано в разделе [Проверка параметров](../../c-runtime-library/parameter-validation.md). Если выполнение может быть продолжено, функции задают для `errno` значение `EINVAL` и возвращают `EOF` или **WEOF**.  
   
  Дополнительные сведения об этих и других кодах ошибок см. в разделе [_doserrno, errno, _sys_errlist и _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).  
   
@@ -78,7 +79,7 @@ int _putws(
   
  В Windows 2000 и более поздних версиях функция **_putwch** записывает символы Юникода, используя текущие настройки языкового стандарта консоли.  
   
-### <a name="generic-text-routine-mappings"></a>Универсальное текстовое сопоставление функций  
+### <a name="generic-text-routine-mappings"></a>Сопоставления подпрограмм обработки обычного текста  
   
 |Подпрограмма TCHAR.H|_UNICODE и _MBCS не определены|_MBCS определено|_UNICODE определено|  
 |---------------------|------------------------------------|--------------------|-----------------------|  

@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
 apiname:
@@ -29,8 +28,7 @@ f1_keywords:
 - _putchar_nolock
 - _putwchar_nolock
 - putchar_nolock
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - _puttchar_nolock function
 - putchar_nolock function
@@ -41,31 +39,16 @@ helpviewer_keywords:
 - _putwchar_nolock function
 - puttchar_nolock function
 ms.assetid: 9ac68092-bfc3-4352-b486-c3e780220575
-caps.latest.revision: 13
+caps.latest.revision: "13"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: e257f037a05c45f5b98e64ea55bd125af443b0be
-ms.openlocfilehash: e9e1667242d4b569543e0044b85c319b83ff88d9
-ms.contentlocale: ru-ru
-ms.lasthandoff: 03/30/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: c4183b9ab4b15e4e39ec685934a9c2c591303f78
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="putcharnolock-putwcharnolock"></a>_putchar_nolock, _putwchar_nolock
 Записывает символ в поток **stdout** без блокировки потока.  
@@ -93,7 +76,7 @@ wint_t _putwchar_nolock(
 ## <a name="remarks"></a>Примечания  
  Функции **putchar_nolock** и `_putwchar_nolock` идентичны версиям без суффикса **_nolock**, но они не защищены от помех со стороны других потоков. Они могут выполняться быстрее, поскольку не создают дополнительную нагрузку, связанную с блокировкой работы других потоков. Используйте эти функции только в потокобезопасных контекстах, например в однопоточных приложениях или если вызываемая область уже обрабатывает изоляцию потоков.  
   
-### <a name="generic-text-routine-mappings"></a>Универсальное текстовое сопоставление функций  
+### <a name="generic-text-routine-mappings"></a>Сопоставления подпрограмм обработки обычного текста  
   
 |Подпрограмма Tchar.h|_UNICODE и _MBCS не определены|_MBCS определено|_UNICODE определено|  
 |---------------------|--------------------------------------|--------------------|-----------------------|  

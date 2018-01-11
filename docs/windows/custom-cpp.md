@@ -1,33 +1,33 @@
 ---
-title: "custom (C++) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-f1_keywords: 
-  - "vc-attr.custom"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "custom attributes, defining"
+title: "Custom (C++) | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+f1_keywords: vc-attr.custom
+dev_langs: C++
+helpviewer_keywords: custom attributes, defining
 ms.assetid: 3abac928-4d55-4ea6-8cf6-8427a4ad79f1
-caps.latest.revision: 12
-caps.handback.revision: 12
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "12"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: e55fd4ad47470a86a0a3d61cc847c20fb21768e8
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 12/21/2017
 ---
-# custom (C++)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="custom-c"></a>custom (C++)
 Определяет метаданные для объекта в библиотеке типов.  
   
-## Синтаксис  
+## <a name="syntax"></a>Синтаксис  
   
 ```  
   
@@ -37,37 +37,36 @@ manager: "ghogen"
 ) ];  
 ```  
   
-#### Параметры  
- *uuid*  
+#### <a name="parameters"></a>Параметры  
+ *UUID*  
  Уникальный идентификатор.  
   
  *значение*  
  Значение, которое можно поместить в тип variant.  
   
-## Заметки  
- **custom** Атрибут C\+\+ в результате чего данные располагаться в библиотеку типов.  Необходимо средство, которое считывает пользовательское значение из библиотеки типов.  
+## <a name="remarks"></a>Примечания  
+ **Пользовательские** атрибута C++ приведет к информации, должен быть помещен в библиотеку типов. Вам потребуется средство, которое считывает пользовательское значение из библиотеки типов.  
   
- **custom** атрибут имеет ту же функциональность, что и  [custom](http://msdn.microsoft.com/library/windows/desktop/aa366766) атрибут MIDL.  
+ **Пользовательские** атрибут имеет ту же функциональность, что [пользовательские](http://msdn.microsoft.com/library/windows/desktop/aa366766) языка MIDL.  
   
-## Требования  
+## <a name="requirements"></a>Требования  
   
-### Контекст атрибута  
+### <a name="attribute-context"></a>Контекст атрибута  
   
 |||  
 |-|-|  
-|**Применение**|Non\-модель COM `interface`"  **класс**"  `enum`\- s  `idl_module` методы члены интерфейса, параметры интерфейса  `typedef`\- s  **union**\- s  `struct`s|  
-|**Repeatable**|Да|  
-|**Обязательные атрибуты**|CoClass \(при использовании в классе\)|  
-|**Недопустимые атрибуты**|None|  
+|**Применение**|COM не `interface`, **класса**, `enum`s, `idl_module` методов, члены интерфейса, параметры интерфейса `typedef`s, **объединение**s, `struct`s|  
+|**Повторяемый**|Да|  
+|**Обязательные атрибуты**|**Компонентный класс** (при использовании класса)|  
+|**Недопустимые атрибуты**|Нет|  
   
- Дополнительные сведения о контекстах атрибута см. в разделе [Контексты атрибута](../windows/attribute-contexts.md).  
+ Дополнительные сведения о контекстах атрибутов см. в разделе [Контексты атрибутов](../windows/attribute-contexts.md).  
   
-## См. также  
- [IDL Attributes](../windows/idl-attributes.md)   
- [Stand\-Alone Attributes](../Topic/Stand-Alone%20Attributes.md)   
- [Typedef, Enum, Union, and Struct Attributes](../windows/typedef-enum-union-and-struct-attributes.md)   
- [Parameter Attributes](../windows/parameter-attributes.md)   
- [Method Attributes](../windows/method-attributes.md)   
- [Class Attributes](../windows/class-attributes.md)   
- [Interface Attributes](../windows/interface-attributes.md)   
- [Attributes Samples](http://msdn.microsoft.com/ru-ru/558ebdb2-082f-44dc-b442-d8d33bf7bdb8)
+## <a name="see-also"></a>См. также  
+ [Атрибуты IDL](../windows/idl-attributes.md)   
+ [Изолированные атрибуты](../windows/stand-alone-attributes.md)   
+ [TypeDef, Enum, Union и Struct атрибуты](../windows/typedef-enum-union-and-struct-attributes.md)   
+ [Атрибуты параметра](../windows/parameter-attributes.md)   
+ [Атрибуты метода](../windows/method-attributes.md)   
+ [Атрибуты классов](../windows/class-attributes.md)   
+ [Атрибуты интерфейса](../windows/interface-attributes.md)   

@@ -16,11 +16,12 @@ caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: c7e88956ab7c7fe1c03d10a8519aedad4767e48e
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 406e35b6ab694ca972d4cd6add0dcca7586e5005
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="settings-for-the-tool-tip-control"></a>Параметры для элемента управления всплывающей подсказки
 Вы можете задать элемент управления "Всплывающая подсказка" ([CToolTipCtrl](../mfc/reference/ctooltipctrl-class.md)) активным или неактивным. При установке его активным он отображается, когда курсор находится над инструментом. При установке его неактивным он не отображается, даже если курсор находится над инструментом. Вызовите [Activate](../mfc/reference/ctooltipctrl-class.md#activate) , чтобы активировать или деактивировать элемент управления "Всплывающая подсказка".  

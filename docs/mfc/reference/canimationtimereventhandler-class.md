@@ -27,11 +27,12 @@ caps.latest.revision: "18"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 35e59a74be574913b6605bd9bce0934280bbb542
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 1f47caa836a93ecce28e77f9bf768aeb4d1ea3d7
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="canimationtimereventhandler-class"></a>Класс CAnimationTimerEventHandler
 Реализует обратный вызов, используемый API анимации, когда происходит событие расчета времени.  
@@ -42,11 +43,11 @@ ms.lasthandoff: 10/24/2017
 class CAnimationTimerEventHandler : public CUIAnimationTimerEventHandlerBase<CAnimationTimerEventHandler>;  
 ```  
   
-## <a name="members"></a>Члены  
+## <a name="members"></a>Участники  
   
 ### <a name="public-methods"></a>Открытые методы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[CAnimationTimerEventHandler::CreateInstance](#createinstance)|Создает экземпляр `CAnimationTimerEventHandler` обратного вызова.|  
 |[CAnimationTimerEventHandler::OnPostUpdate](#onpostupdate)|Обрабатывает события, происходящие после завершения обновления анимации. (Переопределяет `CUIAnimationTimerEventHandlerBase::OnPostUpdate`.)|  

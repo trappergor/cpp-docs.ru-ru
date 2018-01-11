@@ -1942,11 +1942,12 @@ caps.latest.revision: "15"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 10de33fd0baf8ffb5ccce5fc5a532413f27a2b42
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 2ecdf6a3e736cfe2876d7ea68a8f113e6b120b40
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="arm-intrinsics"></a>Встроенные объекты ARM
 Компилятор Visual C++ создает следующие встроенные функции на архитектуре ARM. Подробнее об ARM см. в разделе [справочных руководствах по архитектуре ARM](http://go.microsoft.com/fwlink/p/?LinkId=522049) и [руководстве по средствам ассемблера ARM](http://go.microsoft.com/fwlink/p/?LinkId=246102) на веб-сайте справочного центра ARM.  

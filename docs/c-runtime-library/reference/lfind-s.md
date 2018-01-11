@@ -37,11 +37,12 @@ caps.latest.revision: "26"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: a49c732be3c1f378340d00c414acee91e6e62978
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 8bff33c66ebe8bdb2b5eb497aad2e3a11bc04a76
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="lfinds"></a>_lfind_s
 Выполняет линейный поиск указанного ключа. Версия функции [_lfind](../../c-runtime-library/reference/lfind.md) с усовершенствованиями системы безопасности, описанными в разделе [Функции безопасности в CRT](../../c-runtime-library/security-features-in-the-crt.md).  
@@ -87,10 +88,10 @@ void *_lfind_s(
   
 |клавиша|базовые|compare|num|size|errno|  
 |---------|----------|-------------|---------|----------|-----------|  
-|`NULL`|любые|любые|любые|любые|`EINVAL`|  
-|любые|`NULL`|любые|!= 0|любые|`EINVAL`|  
-|любые|любые|любые|any|нуль|`EINVAL`|  
-|any|любые|`NULL`|любой|любые|`EINVAL`|  
+|`NULL`|any|any|any|any|`EINVAL`|  
+|any|`NULL`|any|!= 0|any|`EINVAL`|  
+|any|any|any|any|нуль|`EINVAL`|  
+|any|any|`NULL`|любой|любые|`EINVAL`|  
   
 ## <a name="remarks"></a>Примечания  
  Функция `_lfind_s` выполняет линейный поиск значения `key` в массиве из `num` элементов шириной `width` каждый. В отличие от функции `bsearch_s`, `_lfind_s` не требует, чтобы массив был отсортирован. Аргумент `base` является указателем на начало массива, в котором осуществляется поиск. Аргумент `compare` является указателем на пользовательскую подпрограмму, которая сравнивает два элемента массива и возвращает значение, показывающее, как соотносятся их значения. Во время поиска функция `_lfind_s` вызывает подпрограмму `compare` один или несколько раз, передавая указатель `context` и указатели на два элемента массива при каждом вызове. Подпрограмма `compare` должна сравнивать элементы и возвращать либо отличное от нуля значение (если элементы различаются), либо 0 (если элементы идентичны).  

@@ -49,11 +49,12 @@ caps.latest.revision: "19"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 0a398e2d0b55a8c3292a77ba957982fa5a5e21f8
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 5fd3af95988ffeac5801e2d64f81c0947f26c3cd
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="mbctohira-mbctohiral-mbctokata-mbctokatal"></a>_mbctohira, _mbctohira_l, _mbctokata, _mbctokata_l
 Преобразует символы хирагана в катакана и наоборот.  
@@ -98,7 +99,7 @@ unsigned int _mbctokata_l(
 |`_mbctohira,_mbctohira_l`|Многобайтовые символы катакана в многобайтовые символы хирагана.|  
 |`_mbctokata,_mbctokata_l`|Многобайтовые символы хирагана в многобайтовые символы катакана.|  
   
- Выходное значение зависит от настройки категории `LC_CTYPE` языкового стандарта; дополнительные сведения см. в разделе [setlocale](../../c-runtime-library/reference/setlocale-wsetlocale.md). Версии этих функций идентичны за исключением того, что версии без суффикса `_l` используют текущий языковой стандарт для этого поведения, зависимого от языкового стандарта, а версии с суффиксом `_l` — параметр языкового стандарта, переданный в функцию. Дополнительные сведения см. в разделе [Языковой стандарт](../../c-runtime-library/locale.md).  
+ Выходное значение зависит от настройки категории `LC_CTYPE` языкового стандарта; дополнительные сведения см. в разделе [setlocale](../../c-runtime-library/reference/setlocale-wsetlocale.md). Версии этих функций идентичны за исключением того, что версии без суффикса `_l` используют текущий языковой стандарт для этого поведения, зависимого от языкового стандарта, а версии с суффиксом `_l` — параметр языкового стандарта, переданный в функцию. Для получения дополнительной информации см. [Locale](../../c-runtime-library/locale.md).  
   
  В более ранних версиях функция `_mbctohira` называлась `jtohira`, а функция `_mbctokata` — `jtokata`. В новом коде используйте новые имена.  
   

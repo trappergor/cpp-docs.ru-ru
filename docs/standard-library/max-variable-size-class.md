@@ -27,11 +27,12 @@ caps.latest.revision: "18"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 425a93ff12aad138ff2c539765f9afeeb2f22756
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 4e66f5bdf70997c541c4fa7f0c0f05599a25d2c8
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="maxvariablesize-class"></a>Класс max_variable_size
 Описывает объект [max class](../standard-library/allocators-header.md), который ограничивает максимальную длину объекта [freelist](../standard-library/freelist-class.md) до значения, приблизительно пропорционального количеству выделенных блоков памяти.  
@@ -72,7 +73,7 @@ void allocated(std::size_t _Nx = 1);
   
 ### <a name="parameters"></a>Параметры  
   
-|Параметр|Описание|  
+|Параметр|Описание:|  
 |---------------|-----------------|  
 |`_Nx`|Значение приращения.|  
   
@@ -88,7 +89,7 @@ void deallocated(std::size_t _Nx = 1);
   
 ### <a name="parameters"></a>Параметры  
   
-|Параметр|Описание|  
+|Параметр|Описание:|  
 |---------------|-----------------|  
 |`_Nx`|Значение приращения.|  
   
@@ -96,7 +97,7 @@ void deallocated(std::size_t _Nx = 1);
  Эта функция-член вычитает `_Nx` из сохраненного значения `_Nallocs`. Она вызывается после каждого вызова со стороны `cache_freelist::deallocate` оператора `delete`. Аргумент `_Nx` представляет число блоков памяти в блоке, который освобождается оператором `delete`.  
   
 ##  <a name="full"></a>  max_variable_size::full  
- Возвращает значение, указывающее, следует ли добавить дополнительные блоки памяти для свободного списка.  
+ Возвращает значение, указывающее, следует ли добавить в свободный список дополнительные блоки памяти.  
   
 ```
 bool full();

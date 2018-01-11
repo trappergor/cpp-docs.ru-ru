@@ -23,11 +23,12 @@ caps.latest.revision: "21"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: e98c4b48580740a6a61d0a2f55a995a967111448
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 27c749f86f9e3fbd310fd03b3a82768d58632087
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="csharedfile-class"></a>Класс CSharedFile
 [CMemFile](../../mfc/reference/cmemfile-class.md)-производного класса, который поддерживает общие файлы памяти.  
@@ -38,17 +39,17 @@ ms.lasthandoff: 10/24/2017
 class CSharedFile : public CMemFile  
 ```  
   
-## <a name="members"></a>Члены  
+## <a name="members"></a>Участники  
   
 ### <a name="public-constructors"></a>Открытые конструкторы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[CSharedFile::CSharedFile](#csharedfile)|Создает объект `CSharedFile`.|  
   
 ### <a name="public-methods"></a>Открытые методы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[CSharedFile::Detach](#detach)|Закрывает с файлом общей памяти и возвращает дескриптор блока памяти.|  
 |[CSharedFile::SetHandle](#sethandle)|Присоединяет с файлом общей памяти блок памяти.|  

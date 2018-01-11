@@ -4,41 +4,23 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-windows
+ms.technology: cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- omp_init_nest_lock
-dev_langs:
-- C++
-helpviewer_keywords:
-- omp_init_nest_lock OpenMP function
+f1_keywords: omp_init_nest_lock
+dev_langs: C++
+helpviewer_keywords: omp_init_nest_lock OpenMP function
 ms.assetid: cf749ec5-de78-4186-9588-ac7c42b02463
-caps.latest.revision: 12
+caps.latest.revision: "12"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
-ms.openlocfilehash: 566eb7c49666071fa4f5ee0fbd6c0d36d98477d1
-ms.contentlocale: ru-ru
-ms.lasthandoff: 02/24/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: 5e137206b794344cc466b5b746e04235bd2fbf73
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="ompinitnestlock"></a>omp_init_nest_lock
 Инициализирует блокировки.  
@@ -58,7 +40,7 @@ void omp_init_nest_lock(
  Переменная типа [omp_nest_lock_t](../../../parallel/openmp/reference/omp-nest-lock-t.md).  
   
 ## <a name="remarks"></a>Примечания  
- Исходное значение счетчика вложенности равен нулю.  
+ Исходное количество вложенности равен нулю.  
   
  Дополнительные сведения см. в разделе [3.2.1 функции omp_init_lock and omp_init_nest_lock](../../../parallel/openmp/3-2-1-omp-init-lock-and-omp-init-nest-lock-functions.md).  
   

@@ -4,12 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
-apiname:
-- _configthreadlocale
+apiname: _configthreadlocale
 apilocation:
 - msvcrt.dll
 - msvcr80.dll
@@ -26,8 +24,7 @@ apitype: DLLExport
 f1_keywords:
 - _configthreadlocale
 - configthreadlocale
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - configthreadlocale function
 - locales, per-thread
@@ -35,30 +32,16 @@ helpviewer_keywords:
 - per-thread locale
 - thread locale
 ms.assetid: 10e4050e-b587-4f30-80bc-6c76b35fc770
-caps.latest.revision: 24
+caps.latest.revision: "24"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: a937c9d083a7e4331af63323a19fb207142604a0
-ms.openlocfilehash: 1fca01932efb2f80d4aebf94db8900cee5d79805
-ms.contentlocale: ru-ru
-ms.lasthandoff: 02/24/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: aacd7b82525ca1b74c3d7a7ab7f8e09497e491ec
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="configthreadlocale"></a>_configthreadlocale
 Настраивает параметры языкового стандарта для каждого потока.  
@@ -90,7 +73,7 @@ int _configthreadlocale(
  `0`  
  Извлекает текущую настройку для данного потока.  
   
- Эти функции влияют на поведение `setlocale`, `_tsetlocale`, и `_wsetlocale`. Если языковой стандарт для отдельного потока является отключено, любой последующий вызов `setlocale` или `_wsetlocale` изменяет языковой стандарт все потоки, использующие глобальный языковой стандарт. Когда раздельное задание языковых стандартов отдельным потокам включено, `setlocale` или `_wsetlocale` влияют только на языковой стандарт текущего потока.  
+ Эти функции влияют на поведение `setlocale`, `_tsetlocale`, `_wsetlocale`, и `_setmbcp`. Если языковой стандарт отдельного потока является отключено, любой последующий вызов `setlocale` или `_wsetlocale` изменяет языковой стандарт всех потоков, использующие глобальный языковой стандарт. Когда раздельное задание языковых стандартов отдельным потокам включено, `setlocale` или `_wsetlocale` влияют только на языковой стандарт текущего потока.  
   
  При использовании функции `_configurethreadlocale` для включения возможности раздельного задания языковых стандартов для каждого потока сразу же после этого рекомендуется вызывать функцию `setlocale` или `_wsetlocale` для задания предпочтительного языкового стандарта в этом потоке.  
   
@@ -216,4 +199,3 @@ The time in German locale is: 'Mittwoch, 12. Mai 2004'
  [_beginthread, _beginthreadex](../../c-runtime-library/reference/beginthread-beginthreadex.md)   
  [Языковой стандарт](../../c-runtime-library/locale.md)   
  [Многопоточность и языковые стандарты](../../parallel/multithreading-and-locales.md)  
-

@@ -4,12 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
-apiname:
-- qsort
+apiname: qsort
 apilocation:
 - msvcrt.dll
 - msvcr80.dll
@@ -24,41 +22,24 @@ apilocation:
 - ucrtbase.dll
 - api-ms-win-crt-utility-l1-1-0.dll
 apitype: DLLExport
-f1_keywords:
-- qsort
-dev_langs:
-- C++
+f1_keywords: qsort
+dev_langs: C++
 helpviewer_keywords:
 - qsort function
 - quick-sort algorithm
 - sorting arrays
 - arrays [CRT], sorting
 ms.assetid: d6cb33eb-d209-485f-8d41-229eb743c027
-caps.latest.revision: 19
+caps.latest.revision: "19"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: e257f037a05c45f5b98e64ea55bd125af443b0be
-ms.openlocfilehash: b71bdc6b2b2bff50645a7ce8ae1ef88ad4d6dd91
-ms.contentlocale: ru-ru
-ms.lasthandoff: 03/30/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: 0e3f6d964f4cf4debefa3044a458704554233447
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="qsort"></a>qsort
 Выполняет быструю сортировку. Существует более безопасная версия этой функции, см. раздел [qsort_s](../../c-runtime-library/reference/qsort-s.md).  
@@ -98,7 +79,7 @@ compare( (void *) & elem1, (void *) & elem2 );
   
  Подпрограмма сравнивает элементы и возвращает одно из следующих значений.  
   
-|Сравнение возвращаемого значения функции|Описание|  
+|Сравнение возвращаемого значения функции|Описание:|  
 |-----------------------------------|-----------------|  
 |< 0|`elem1` меньше `elem2`|  
 |0|`elem1` эквивалентен `elem2`|  

@@ -1,49 +1,34 @@
 ---
-title: "Предупреждение (уровень 4) C4001 компилятора | Документы Microsoft"
+title: "Предупреждение (уровень 4) компилятора C4001 | Документы Microsoft"
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-tools
+ms.technology: cpp-tools
 ms.tgt_pltfrm: 
 ms.topic: error-reference
-f1_keywords:
-- C4001
-dev_langs:
-- C++
-helpviewer_keywords:
-- C4001
+f1_keywords: C4001
+dev_langs: C++
+helpviewer_keywords: C4001
 ms.assetid: 414a47fe-d597-425e-9374-6a569231dc0a
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
-ms.openlocfilehash: bbcf2db5f6650bd9118b28c8bbfe921d13306410
-ms.contentlocale: ru-ru
-ms.lasthandoff: 02/24/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: 3b5c3d82bef81ee84514b39a0ce8ab07ad6e6c36
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 12/21/2017
 ---
-# <a name="compiler-warning-level-4-c4001"></a>Предупреждение (уровень 4) C4001 компилятора
-использование нестандартного расширения для однострочного комментария  
+# <a name="compiler-warning-level-4-c4001"></a>Компилятора C4001 предупреждение (уровень 4)
+было использовано нестандартное расширение «однострочного комментария»  
+
+> [!NOTE] 
+> Это предупреждение удаляется в версии 15,5 2017 г. Visual Studio, так как однострочные комментарии являются стандартными в C99.
   
- Однострочные комментарии являются стандартными в C++ и нестандартными в C. В строгом режиме совместимости ANSI ([/Za](../../build/reference/za-ze-disable-language-extensions.md)), файлы C, содержащие однострочные комментарии, создают ошибку C4001 из-за использования нестандартного расширения. Поскольку однострочные комментарии являются стандартными в C++, файлы C, содержащие однострочные комментарии, не создают ошибку C4001, при компиляции с помощью расширений Microsoft (/Ze).  
+ Однострочные комментарии являются стандартными в C++ и стандартная в C, начиная с C99. В строгом режиме совместимости ANSI ([/Za](../../build/reference/za-ze-disable-language-extensions.md)), файлы C, содержащие однострочные комментарии, создают ошибку C4001 из-за использования нестандартного расширения. Поскольку однострочных комментариев являются стандартными в C++, файлы C, содержащие однострочные комментарии не создают C4001 при компиляции с расширениями Майкрософт (/Ze).  
   
 ## <a name="example"></a>Пример  
  Чтобы отключить предупреждение, раскомментируйте [#pragma warning(disable:4001)](../../preprocessor/warning.md).  

@@ -18,11 +18,12 @@ caps.latest.revision: "25"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 0390509e1708ac8609b60ab096e2db9bd5f82004
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 7d7e83351c9adbf7730fad04f2e4d73431694f3c
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cmfctoolbarcomboboxedit-class"></a>Класс CMFCToolBarComboBoxEdit
 Платформа использует `CMFCToolBarComboBoxEdit` класса, чтобы создать кнопку панели инструментов, который ведет себя как редактируемые поле со списком.  
@@ -33,18 +34,18 @@ ms.lasthandoff: 10/24/2017
 class CMFCToolBarComboBoxEdit : public CEdit  
 ```  
   
-## <a name="members"></a>Члены  
+## <a name="members"></a>Участники  
   
 ### <a name="public-constructors"></a>Открытые конструкторы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[CMFCToolBarComboBoxEdit::CMFCToolBarComboBoxEdit](#cmfctoolbarcomboboxedit)|Создает объект `CMFCToolBarComboBoxEdit`.|  
 |`CMFCToolBarComboBoxEdit::~CMFCToolBarComboBoxEdit`|Деструктор.|  
   
 ### <a name="public-methods"></a>Открытые методы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |`CMFCToolBarComboBoxEdit::PreTranslateMessage`|Преобразует сообщения окна перед их передачей [TranslateMessage](http://msdn.microsoft.com/library/windows/desktop/ms644955) и [DispatchMessage](http://msdn.microsoft.com/library/windows/desktop/ms644934) функции Windows. (Переопределяет [CWnd::PreTranslateMessage](../../mfc/reference/cwnd-class.md#pretranslatemessage).)|  
   

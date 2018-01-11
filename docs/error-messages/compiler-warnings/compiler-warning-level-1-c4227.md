@@ -1,34 +1,33 @@
 ---
-title: "Предупреждение компилятора (уровень 1) C4227 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C4227"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C4227"
+title: "Предупреждение (уровень 1) C4227 компилятора | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords: C4227
+dev_langs: C++
+helpviewer_keywords: C4227
 ms.assetid: 78f98374-c00b-4000-aefa-1b1c67b4666b
-caps.latest.revision: 7
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: cc8d9a03acf6f06d19259184b83296e873fcfc81
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 12/21/2017
 ---
-# Предупреждение компилятора (уровень 1) C4227
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-устаревший элемент: пропуск квалификаторов для ссылки  
+# <a name="compiler-warning-level-1-c4227"></a>Предупреждение компилятора (уровень 1) C4227
+устаревший: игнорируются квалификаторов для ссылки  
   
- Использование квалификаторов, например `const` или `volatile` для ссылок C\+\+ более не рекомендуется.  
+ Использование квалификаторов, например `const` или `volatile` для ссылок C++ устарело.  
   
-## Пример  
+## <a name="example"></a>Пример  
   
 ```  
 // C4227.cpp  

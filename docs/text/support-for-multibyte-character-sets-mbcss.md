@@ -19,11 +19,12 @@ caps.latest.revision: "11"
 author: ghogen
 ms.author: ghogen
 manager: ghogen
-ms.openlocfilehash: 19bbcd1030bdc89de2d3e05281786c1d0efa5ad6
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 8c6c7bd1477f62e9c78b5e71dfe3723e804283d4
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="support-for-multibyte-character-sets-mbcss"></a>Поддержка многобайтовых кодировок
 Многобайтовые кодировки (MBCS) — это более старый подход к поддержке кодировок, подобных японской и китайской, которые не могут быть представлены одним байтом. Для разработки новых приложений следует использовать Юникод для всех текстовых строк, за исключением, возможно, системных строк, которые не видны пользователям. MBCS — это устаревшая технология, которая не рекомендуется для разработки новых приложений.  

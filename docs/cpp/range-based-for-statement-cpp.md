@@ -13,11 +13,12 @@ caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 6fc44e8f844a11a608d12be1e6daa8d8bba2a3a0
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 43ded324227878b44f997e6539e060145ad0fb66
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="range-based-for-statement-c"></a>Основанное на диапазоне выражение for (C++)
 Циклически и последовательно выполняет оператор (`statement`) каждого элемента в выражении (`expression`).  

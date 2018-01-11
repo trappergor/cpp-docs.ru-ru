@@ -13,11 +13,12 @@ caps.latest.revision: "6"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: d8481c0efb54a397db004f321fb48c217cba8ebc
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: d3fca67cb50cf91195d7edfb1e5e2fccfc9f8c5d
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="14-compliance"></a>1.4 Совместимость
 Реализация API OpenMP C/C++ является *OpenMP совместимые* если он распознает и сохраняет семантика элементы данной спецификации, как описано в главах 1, 2, 3, 4, и приложение C. приложения A, B, D, E и F для сведения только в целях и не входит в спецификацию. Реализации, включающие только подмножество API OpenMP-несовместимые.  

@@ -46,11 +46,12 @@ caps.latest.revision: "21"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 422b8818ff0bbfaccd288b944c628371be7442c2
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 9fc74164b44b44e9f2ed56066d91f68e232fceb7
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="fprintfs-fprintfsl-fwprintfs-fwprintfsl"></a>fprintf_s, _fprintf_s_l, fwprintf_s, _fwprintf_s_l
 Печатает форматированные данные в поток. Это версии функций [fprintf, _fprintf_l, fwprintf, _fwprintf_l](../../c-runtime-library/reference/fprintf-fprintf-l-fwprintf-fwprintf-l.md) с усовершенствованной безопасностью, как описано в разделе [Функции безопасности в CRT](../../c-runtime-library/security-features-in-the-crt.md).  
@@ -110,7 +111,7 @@ int _fwprintf_s_l(
   
  Как и небезопасные версии (см. раздел [fprintf, _fprintf_l, fwprintf, _fwprintf_l](../../c-runtime-library/reference/fprintf-fprintf-l-fwprintf-fwprintf-l.md)), эти функции проверяют свои параметры и вызывают обработчик недопустимого параметра, как описано в разделе [Проверка параметров](../../c-runtime-library/parameter-validation.md), если параметр `stream` или `format` является указателем NULL. Также проверяется сама строка формата. При наличии любых неизвестных или неправильно сформированных описателей форматирования эти функции создают исключение недопустимого параметра. Во всех случаях, если выполнение может быть продолжено, функции возвращают –1 и устанавливают параметр `errno` в значение `EINVAL`. Дополнительные сведения об этих и других кодах ошибок см. в разделе [_doserrno, errno, _sys_errlist и _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).  
   
-### <a name="generic-text-routine-mappings"></a>Универсальное текстовое сопоставление функций  
+### <a name="generic-text-routine-mappings"></a>Сопоставления подпрограмм обработки обычного текста  
   
 |Подпрограмма TCHAR.H|_UNICODE и _MBCS не определены|_MBCS определено|_UNICODE определено|  
 |---------------------|------------------------------------|--------------------|-----------------------|  
@@ -126,7 +127,7 @@ int _fwprintf_s_l(
 |`fprintf_s`, `_fprintf_s_l`|\<stdio.h>|  
 |`fwprintf_s`, `_fwprintf_s_l`|\<stdio.h> или \<wchar.h>|  
   
- Дополнительные сведения о совместимости см. в статье [Совместимость](../../c-runtime-library/compatibility.md) во введении.  
+ Дополнительные сведения о совместимости см. в разделе [Совместимость](../../c-runtime-library/compatibility.md) во введении.  
   
 ## <a name="example"></a>Пример  
   

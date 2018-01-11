@@ -17,11 +17,12 @@ caps.latest.revision: "8"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: e68ca7ef9033e14b5463c4d2db11620a71e0d94e
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: c6919f1e3670251b952ce797df5ad10b786b1bbd
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="macros-cc"></a>Макросы (C/C++)
 Предварительная обработка разворачивает макросы во всех строках, которые не являются директивами препроцессора (строки, которые не имеют  **#**  первым символом пустого пространства) и в части некоторые директивы, которые не пропускаются в ходе Условная компиляция. Директивы условной компиляции позволяют подавлять компиляцию частей исходного файла путем проверки константного выражения или идентификатора для определения того, какие блоки текста передаются в компилятор, а какие блоки текста удаляются из исходного файла во время предварительной обработки.  

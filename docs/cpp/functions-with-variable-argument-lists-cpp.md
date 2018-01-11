@@ -4,12 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-language
+ms.technology: cpp-language
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - arguments [C++], variable number of
 - variable argument lists
@@ -18,16 +16,16 @@ helpviewer_keywords:
 - declaring functions [C++], variables
 - function calls, variable number of arguments
 ms.assetid: 27c2f83a-21dd-44c6-913c-2834cb944703
-caps.latest.revision: 16
+caps.latest.revision: "16"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.translationtype: HT
-ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
-ms.openlocfilehash: e7a1f434b9c286bfa625d703023080f55586f0a8
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/25/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: a2f22f24206a125f9575529a203e5433f1b825a1
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="functions-with-variable-argument-lists--c"></a>Функции с переменным аргументом списками (C++)
 Функции, в объявлениях которых в качестве последнего члена указано многоточие (...), могут принимать переменное число аргументов. В таких случаях C++ обеспечивает проверку типа только для явно объявленных аргументов. Переменные списки аргументов можно использовать, если функция должна быть настолько универсальной, что могут изменяться даже количество и типы аргументов. Семейство функций приведен пример функции, использующие списки аргументов переменных. `printf` *списка объявления аргументов*  
@@ -35,7 +33,7 @@ ms.lasthandoff: 09/25/2017
 ## <a name="functions-with-variable-arguments"></a>Функции с переменными аргументами  
  Для доступа к аргументам, следующим после объявленных, используйте макрос, содержащийся в стандартном включаемом файле STDARG.H, как описано ниже.  
   
- **Блок, относящийся только к системам Майкрософт**  
+ **Блок, относящийся только к системам Microsoft**  
   
  Microsoft C++ допускает указывать многоточие в качестве аргумента, если это последний аргумент и перед многоточием стоит запятая. Поэтому объявление `int Func( int i, ... );` допускается, а объявление `int Func( int i ... );` — нет.  
   

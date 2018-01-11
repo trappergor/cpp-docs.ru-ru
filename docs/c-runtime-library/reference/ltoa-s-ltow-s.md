@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
 apiname:
@@ -28,8 +27,7 @@ f1_keywords:
 - _ltoa_s
 - ltoa_s
 - ltow_s
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - converting integers
 - _ltoa_s function
@@ -39,30 +37,16 @@ helpviewer_keywords:
 - ltoa_s function
 - _ltow_s function
 ms.assetid: d7dc61ea-1ccd-412d-b262-555a58647386
-caps.latest.revision: 18
+caps.latest.revision: "18"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3f91eafaf3b5d5c1b8f96b010206d699f666e224
-ms.openlocfilehash: 098bb1dcf673931ab4c0d3682fafcc442835d76f
-ms.contentlocale: ru-ru
-ms.lasthandoff: 04/01/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: de078e5ad6d2488b852e14247d2d72ca751a9635
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="ltoas-ltows"></a>_ltoa_s, _ltow_s
 Преобразует целое число типа long в строку. Это версии функции [_ltoa, _ltow](../../c-runtime-library/reference/ltoa-ltow.md) с усовершенствованной безопасностью, как описано в разделе [Усовершенствование безопасности в CRT](../../c-runtime-library/security-features-in-the-crt.md).  
@@ -117,9 +101,9 @@ errno_t _ltow_s(
   
  Если `str` является указателем `NULL` или `sizeOfstr` меньше или равно нулю, эти функции вызывают обработчик недопустимых параметров, как описано в статье [Проверка параметров](../../c-runtime-library/parameter-validation.md). Если выполнение может быть продолжено, эти функции возвращают значение -1 и присваивают `errno` значение `EINVAL`, либо, если значение `value` или `str` выходит за пределы диапазона типа данных long integer, эти функции возвращают значение -1 и присваивают `errno` значение `ERANGE`.  
   
- В C++ использование данных функций упрощено наличием шаблонных перегрузок; перегруженные методы могут автоматически определять длину буфера (что исключает необходимость указания аргумента с размером буфера), а также они могут автоматически заменять более старые, незащищенные функции их новыми безопасными аналогами. Дополнительные сведения см. в разделе [Безопасные перегрузки шаблонов](../../c-runtime-library/secure-template-overloads.md).  
+ В C++ использование данных функций упрощено наличием шаблонных перегрузок; перегруженные методы могут автоматически определять длину буфера (что исключает необходимость указания аргумента с размером буфера), а также они могут автоматически заменять более старые, незащищенные функции их новыми безопасными аналогами. Дополнительные сведения см. в разделе [Secure Template Overloads](../../c-runtime-library/secure-template-overloads.md).  
   
-### <a name="generic-text-routine-mappings"></a>Универсальное текстовое сопоставление функций  
+### <a name="generic-text-routine-mappings"></a>Сопоставления подпрограмм обработки обычного текста  
   
 |Подпрограмма Tchar.h|_UNICODE и _MBCS не определены|_MBCS определено|_UNICODE определено|  
 |---------------------|--------------------------------------|--------------------|-----------------------|  

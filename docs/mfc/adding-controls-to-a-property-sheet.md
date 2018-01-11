@@ -16,11 +16,12 @@ caps.latest.revision: "9"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 5623f95a77710e0ffbfa8a444de6f569f24105e5
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 2acbbed1a253a502aea8b19af6fd16ddb343e3ec
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="adding-controls-to-a-property-sheet"></a>Добавление элементов управления на вкладку свойств
 По умолчанию страницы свойств выделяет область окна для страницы свойств, индекс вкладки и кнопки OK, Отмена и применить. (Немодальный лист свойств не имеет OK, Отмена и применить кнопки.) Другие элементы управления можно добавить в таблицу свойств. Например можно добавить в окно предварительного просмотра справа от области страницы свойств, чтобы показать пользователю, как будет выглядеть текущие параметры, если применяется к внешнему объекту.  

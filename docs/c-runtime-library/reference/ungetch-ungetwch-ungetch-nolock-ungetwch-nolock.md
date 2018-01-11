@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
 apiname:
@@ -37,8 +36,7 @@ f1_keywords:
 - _ungettch_nolock
 - _ungettch
 - _ungetwch_nolock
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - _ungetch function
 - ungetwch function
@@ -53,30 +51,16 @@ helpviewer_keywords:
 - ungetwch_nolock function
 - _ungetwch function
 ms.assetid: 70ae71c6-228c-4883-a57d-de6d5f873825
-caps.latest.revision: 17
+caps.latest.revision: "17"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: a82768750e6a7837bb81edd8a51847f83c294c20
-ms.openlocfilehash: 4c36da30cfc69140a47e779025acb579bb687df2
-ms.contentlocale: ru-ru
-ms.lasthandoff: 04/04/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: f853b32f22da872c918fbc60137606b651390827
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="ungetch-ungetwch-ungetchnolock-ungetwchnolock"></a>_ungetch, _ungetwch, _ungetch_nolock, _ungetwch_nolock
 Помещает обратно последний символ, считанный из консоли.  
@@ -113,7 +97,7 @@ wint_t _ungetwch_nolock(
   
  Версии с суффиксом `_nolock` идентичны за исключением того, что они не защищены от помех со стороны других потоков. Они могут выполняться быстрее, поскольку не создают дополнительную нагрузку, связанную с блокировкой работы других потоков. Используйте эти функции только в потокобезопасных контекстах, например в однопоточных приложениях или если вызываемая область уже обрабатывает изоляцию потоков.  
   
-### <a name="generic-text-routine-mappings"></a>Универсальное текстовое сопоставление функций  
+### <a name="generic-text-routine-mappings"></a>Сопоставления подпрограмм обработки обычного текста  
   
 |Подпрограмма TCHAR.H|_UNICODE и _MBCS не определены|_MBCS определено|_UNICODE определено|  
 |---------------------|------------------------------------|--------------------|-----------------------|  

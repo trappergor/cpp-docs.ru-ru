@@ -20,11 +20,12 @@ caps.latest.revision: "27"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 6f7b09ed7c4b52b45efee0708f65d8d2f3e24cd6
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 036da9664c7b61e55e1322f12de3d9c8f72c3f53
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="ltfunctionalgt"></a>&lt;functional&gt;
 Определяет функции стандартной библиотеки C++, помогающие создавать *объекты-функции*, которые также называются функторами, и их привязки. Объект-функция — это объект типа, который определяет `operator()`. Объект-функция может быть указателем на функцию, но, как правило, он используется для хранения дополнительных сведений, которые могут потребоваться при вызове функции.  

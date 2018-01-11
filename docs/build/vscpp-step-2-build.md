@@ -1,8 +1,8 @@
 ---
-title: "Шаг 2 - построение и запуск проекта консольного приложения C++ | Документы Microsoft"
+title: "Построение и запуск проекта консольного приложения C++ | Документы Microsoft"
 description: "Установить поддержку Visual C++ в Visual Studio"
 ms.custom: mvc
-ms.date: 10/17/2017
+ms.date: 12/12/2017
 ms.topic: get-started-article
 ms.technology: devlang-C++
 ms.devlang: C++
@@ -11,11 +11,12 @@ ms.assetid: 45138d71-719d-42dc-90d7-1d0ca31a2f55
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 20a8bafa69631ef8df1fb20f613dfbb81578f94a
-ms.sourcegitcommit: 69632887f7a85f4841c49b4c1353d3144927a52c
+ms.workload: cplusplus
+ms.openlocfilehash: a5b9c250b102b7d8847e99b87139136bc7df808b
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/11/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="build-and-run-a-c-console-app-project"></a>Построение и запуск проекта консольного приложения C++
 
@@ -23,9 +24,9 @@ ms.lasthandoff: 11/11/2017
 
 ## <a name="prerequisites"></a>Предварительные требования
 
-- С Visual Studio с разработки настольных приложений C++ рабочей нагрузки, установлены и запущены на компьютере. Если он пока не установлен, выполните действия в [шаг 0 - поддержка Установка C++ в Visual Studio](../build/vscpp-step-0-installation.md).
+- С Visual Studio с разработки настольных приложений C++ рабочей нагрузки, установлены и запущены на компьютере. Если он пока не установлен, выполните действия в [поддержки Установка C++ в Visual Studio](../build/vscpp-step-0-installation.md).
 
-- Создание «Hello, World!» проект и введите его исходный код. Если пока еще не сделали это, выполните действия в [шаг 1 - Создайте проект консольного приложения C++](../build/vscpp-step-1-create.md).
+- Создание «Hello, World!» проект и введите его исходный код. Если пока еще не сделали это, выполните действия в [создайте проект консольного приложения C++](../build/vscpp-step-1-create.md).
 
 Если Visual Studio выглядит следующим образом, все будет готово для построения и запуска приложения:
 
@@ -65,9 +66,9 @@ ms.lasthandoff: 11/11/2017
 
 [Возникли проблемы.](#run-your-code-in-a-command-window-issues)
 
-## <a name="next-steps"></a>Дальнейшие действия
+## <a name="next-steps"></a>Следующие шаги
 
-После построения и запуска этого простого приложения, вы будете готовы для более сложных проектов. См. краткие руководства, учебники и образцы кода для примеры задачи, которые можно выполнить в C++ с помощью Visual Studio.
+После построения и запуска этого простого приложения, вы будете готовы для более сложных проектов. В разделе [с помощью интегрированной среды разработки Visual Studio для разработки классических приложений C++](../ide/using-the-visual-studio-ide-for-cpp-desktop-development.md) более подробные пошаговые руководства, изучите возможности Visual c++ в Visual Studio.
 
 ## <a name="troubleshooting-guide"></a>Руководство по устранению неполадок
 

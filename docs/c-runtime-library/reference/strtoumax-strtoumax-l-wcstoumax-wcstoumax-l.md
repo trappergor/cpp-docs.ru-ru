@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
 apiname:
@@ -33,8 +32,7 @@ f1_keywords:
 - _wcstoumax_l
 - _tcstoumax_l
 - strtoumax
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - _strtoumax_l function
 - conversion functions
@@ -42,30 +40,16 @@ helpviewer_keywords:
 - _wcstoumax_l function
 - strtoumax function
 ms.assetid: 566769f9-495b-4508-b9c6-02217a578897
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3f91eafaf3b5d5c1b8f96b010206d699f666e224
-ms.openlocfilehash: 3519fa6a5f1decc4bad385d4204188585afa1630
-ms.contentlocale: ru-ru
-ms.lasthandoff: 04/01/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: 16ac81afeec1fece3f6a5039835b9f950a8b6768
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="strtoumax-strtoumaxl-wcstoumax-wcstoumaxl"></a>strtoumax, _strtoumax_l, wcstoumax, _wcstoumax_l
 Преобразует строку в целочисленное значение наибольшего поддерживаемого целочисленного типа без знака.  
@@ -118,13 +102,13 @@ uintmax_t _wcstoumax_l(
 ## <a name="remarks"></a>Примечания  
  Эти функции преобразуют входную строку `nptr` в целое значение `uintmax_t`.  
   
- `strtoumax` прекращает чтение строки `nptr` на первом символе, который она не может распознать как часть числа. Это может быть завершающий нуль-символ или первый числовой символ, который больше или равен `base`. Параметр категории `LC_NUMERIC` языкового стандарта определяет распознавание символа основания системы счисления в `nptr`. Дополнительные сведения см. в разделе [setlocale, _wsetlocale](../../c-runtime-library/reference/setlocale-wsetlocale.md). `strtoumax`и `wcstoumax` используют текущий языковой стандарт; `_strtoumax_l` и `_wcstoumax_l` идентичны, за исключением того, что они используют переданный языковой стандарт. Дополнительные сведения см. в разделе [Языковой стандарт](../../c-runtime-library/locale.md).  
+ `strtoumax` прекращает чтение строки `nptr` на первом символе, который она не может распознать как часть числа. Это может быть завершающий нуль-символ или первый числовой символ, который больше или равен `base`. Параметр категории `LC_NUMERIC` языкового стандарта определяет распознавание символа основания системы счисления в `nptr`. Дополнительные сведения см. в разделе [setlocale, _wsetlocale](../../c-runtime-library/reference/setlocale-wsetlocale.md). `strtoumax`и `wcstoumax` используют текущий языковой стандарт; `_strtoumax_l` и `_wcstoumax_l` идентичны, за исключением того, что они используют переданный языковой стандарт. Для получения дополнительной информации см. [Locale](../../c-runtime-library/locale.md).  
   
  Если `endptr` не является значением `NULL`, указатель на символ, который останавливает сканирование, хранится в расположении, на которое указывает `endptr`. Если не удается выполнить преобразование (не найдены допустимые цифры или указано недопустимое основание), значение `nptr` сохраняется в расположении, указанном `endptr`.  
   
- `wcstoumax` — это версия `strtoumax` с расширенными символами; ее аргумент `nptr` — строка расширенных символов. В остальном эти функции ведут себя одинаково.  
+ `wcstoumax` — это версия `strtoumax` с расширенными символами; ее аргумент `nptr` — строка расширенных символов. В остальном эти функции работают одинаково.  
   
-### <a name="generic-text-routine-mappings"></a>Универсальное текстовое сопоставление функций  
+### <a name="generic-text-routine-mappings"></a>Сопоставления подпрограмм обработки обычного текста  
   
 |Подпрограмма TCHAR.H|_UNICODE и _MBCS не определены|_MBCS определено|_UNICODE определено|  
 |---------------------|------------------------------------|--------------------|-----------------------|  

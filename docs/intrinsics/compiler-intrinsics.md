@@ -18,11 +18,12 @@ caps.latest.revision: "17"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 53d6986d569bbf928282dce9e9e1cba0601bc4ad
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 4ffbe20fb6c2b35cef46f975e99191bf96fdc6b8
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="compiler-intrinsics"></a>Встроенные объекты компилятора
 Большинство функций содержатся в библиотеках, но некоторые функции, встроенные (то есть внутренние) в компилятор. Они называются встроенными или внутренними функциями .  

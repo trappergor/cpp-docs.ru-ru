@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
 apiname:
@@ -30,8 +29,7 @@ f1_keywords:
 - _wstrdate_s
 - strdate_s
 - _tstrdate_s
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - dates, copying
 - tstrdate_s function
@@ -42,31 +40,16 @@ helpviewer_keywords:
 - _strdate_s function
 - _wstrdate_s function
 ms.assetid: d41d8ea9-e5ce-40d4-864e-1ac29b455991
-caps.latest.revision: 24
+caps.latest.revision: "24"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: e257f037a05c45f5b98e64ea55bd125af443b0be
-ms.openlocfilehash: 5b1701f41b2f66ccbc2601763c09a4db0523c2ed
-ms.contentlocale: ru-ru
-ms.lasthandoff: 03/30/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: 71117aed66d83c2c2ae1651c4de9c91e06a43653
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="strdates-wstrdates"></a>_strdate_s, _wstrdate_s
 Скопируйте текущую системную дату в буфер. Это версии функции [_strdate, _wstrdate](../../c-runtime-library/reference/strdate-wstrdate.md) с усовершенствованной безопасностью, как описано в разделе [Функции безопасности в CRT](../../c-runtime-library/security-features-in-the-crt.md).  
@@ -123,7 +106,7 @@ errno_t _wstrdate_s(
   
  Если параметр `buffer` является указателем `NULL` или значение параметра `numberOfElements` меньше 9 символов, вызывается обработчик недопустимых параметров, как описано в статье [Проверка параметров](../../c-runtime-library/parameter-validation.md). Если разрешается продолжить выполнение, эти функции возвращают значение -1 и присваивают `errno` значение `EINVAL`, если буфер имеет значение `NULL` или если значение `numberOfElements` меньше или равно 0, или присваивают `errno` значение `ERANGE`, если `numberOfElements` меньше 9.  
   
- В C++ использование данных функций упрощено наличием шаблонных перегрузок; перегруженные методы могут автоматически определять длину буфера (что исключает необходимость указания аргумента с размером буфера), а также они могут автоматически заменять более старые, незащищенные функции их новыми безопасными аналогами. Дополнительные сведения см. в разделе [Безопасные перегрузки шаблонов](../../c-runtime-library/secure-template-overloads.md).  
+ В C++ использование данных функций упрощено наличием шаблонных перегрузок; перегруженные методы могут автоматически определять длину буфера (что исключает необходимость указания аргумента с размером буфера), а также они могут автоматически заменять более старые, незащищенные функции их новыми безопасными аналогами. Дополнительные сведения см. в разделе [Secure Template Overloads](../../c-runtime-library/secure-template-overloads.md).  
   
 ### <a name="generic-text-routine-mapping"></a>Сопоставление универсальных текстовых функций:  
   

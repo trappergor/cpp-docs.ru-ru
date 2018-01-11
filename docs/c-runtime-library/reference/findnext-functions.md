@@ -103,11 +103,12 @@ caps.latest.revision: "17"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 9b095eabd6c0875bad0b3b42f488e36451f02bb3
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 6fbb76781c04afb1de970cde3d233d54909b64a6
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="findnext-findnext32-findnext32i64-findnext64-findnext64i32-findnexti64-wfindnext-wfindnext32-wfindnext32i64-wfindnext64-wfindnext64i32-wfindnexti64"></a>_findnext, _findnext32, _findnext32i64, _findnext64, _findnext64i32, _findnexti64, _wfindnext, _wfindnext32, _wfindnext32i64, _wfindnext64, _wfindnext64i32, _wfindnexti64
 Находят следующее имя, если такое имеется, которое соответствует аргументу `filespec` в предыдущем вызове функции [_findfirst](../../c-runtime-library/reference/findfirst-functions.md), а затем соответствующим образом изменяют содержимое структуры `fileinfo`.  
@@ -199,16 +200,16 @@ int _wfindnext64i32(
   
 |Функции|Директива `_USE_32BIT_TIME_T` определена?|Тип времени|Тип длины файла|  
 |---------------|----------------------------------|---------------|----------------------|  
-|`_findnext`, `_wfindnext`|Не определено|64-разрядная|32-разрядная|  
-|`_findnext`, `_wfindnext`|Определено|32-разрядная|32-разрядная|  
-|`_findnext32`, `_wfindnext32`|Не затрагивается определением макроса|32-разрядная|32-разрядная|  
-|`_findnext64`, `_wfindnext64`|Не затрагивается определением макроса|64-разрядная|64-разрядная|  
-|`_findnexti64`, `_wfindnexti64`|Не определено|64-разрядная|64-разрядная|  
-|`_findnexti64`, `_wfindnexti64`|Определено|32-разрядная|64-разрядная|  
-|`_findnext32i64`, `_wfindnext32i64`|Не затрагивается определением макроса|32-разрядная|64-разрядная|  
-|`_findnext64i32`, `_wfindnext64i32`|Не затрагивается определением макроса|64-разрядная|32-разрядная|  
+|`_findnext`, `_wfindnext`|Не определено|64-разрядная версия|32-разрядная версия|  
+|`_findnext`, `_wfindnext`|Определено|32-разрядная|32-разрядная версия|  
+|`_findnext32`, `_wfindnext32`|Не затрагивается определением макроса|32-разрядная|32-разрядная версия|  
+|`_findnext64`, `_wfindnext64`|Не затрагивается определением макроса|64-разрядная версия|64-разрядная версия|  
+|`_findnexti64`, `_wfindnexti64`|Не определено|64-разрядная|64-разрядная версия|  
+|`_findnexti64`, `_wfindnexti64`|Определено|32-разрядная версия|64-разрядная версия|  
+|`_findnext32i64`, `_wfindnext32i64`|Не затрагивается определением макроса|32-разрядная версия|64-разрядная версия|  
+|`_findnext64i32`, `_wfindnext64i32`|Не затрагивается определением макроса|64-разрядная версия|32-разрядная|  
   
-### <a name="generic-text-routine-mappings"></a>Универсальное текстовое сопоставление функций  
+### <a name="generic-text-routine-mappings"></a>Сопоставления подпрограмм обработки обычного текста  
   
 |Подпрограмма Tchar.h|_UNICODE и _MBCS не определены|_MBCS определено|_UNICODE определено|  
 |---------------------|--------------------------------------|--------------------|-----------------------|  

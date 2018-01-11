@@ -1,34 +1,33 @@
 ---
-title: "Предупреждение компилятора (уровень 4) C4460 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C4460"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C4460"
+title: "Предупреждение (уровень 4) C4460 компилятора | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords: C4460
+dev_langs: C++
+helpviewer_keywords: C4460
 ms.assetid: c97ac1c9-598d-479e-bfff-c993690c4f3d
-caps.latest.revision: 13
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 13
+caps.latest.revision: "13"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: aa925e8d0ef7779f21485cb154b9b9209ce2388e
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 12/21/2017
 ---
-# Предупреждение компилятора (уровень 4) C4460
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Оператор WinRT или CLR operator имеет параметр, передаваемый по ссылке.Семантика оператора WinRT или CLR operator отличается от семантики оператора C\+\+ operator. Вы хотели передать по значению?  
+# <a name="compiler-warning-level-4-c4460"></a>Предупреждение компилятора (уровень 4) C4460
+Оператор WinRT или CLR operator имеет параметр, передаваемый по ссылке. Семантика оператора WinRT или CLR operator отличается от семантики оператора C++ operator. Вы хотели передать по значению?  
   
- Вы передали значение с помощью ссылки определяемому пользователем оператору среды выполнения Windows или среды CLR.  Если значение изменяется внутри функции, после вызова функции оно будет назначено возвращаемому значению функции.  В стандартном языке C\+\+ измененное значение отражаются после вызова функции.  
+ Вы передали значение с помощью ссылки определяемому пользователем оператору среды выполнения Windows или среды CLR. Если значение изменяется внутри функции, после вызова функции оно будет назначено возвращаемому значению функции. В стандартном языке C++ измененное значение отражаются после вызова функции.  
   
-## Пример  
+## <a name="example"></a>Пример  
  В следующем примере показано возникновение ошибки C4460 и приводятся сведения по ее устранению.  
   
 ```  

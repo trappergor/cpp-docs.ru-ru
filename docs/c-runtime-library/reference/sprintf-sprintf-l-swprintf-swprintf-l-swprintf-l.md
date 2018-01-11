@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
 apiname:
@@ -36,8 +35,7 @@ f1_keywords:
 - sprintf
 - _stprintf
 - stprintf_l
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - _swprintf_l function
 - _stprintf function
@@ -54,30 +52,16 @@ helpviewer_keywords:
 - sprintf_l function
 - formatted text [C++]
 ms.assetid: f6efe66f-3563-4c74-9455-5411ed939b81
-caps.latest.revision: 36
+caps.latest.revision: "36"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: a82768750e6a7837bb81edd8a51847f83c294c20
-ms.openlocfilehash: 0a584008d0697dda3e45d8bafa74128d1978d5ce
-ms.contentlocale: ru-ru
-ms.lasthandoff: 04/04/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: f4b8b840e73665aa9c176daccf5c1bc712f4f2ce
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="sprintf-sprintfl-swprintf-swprintfl-swprintfl"></a>sprintf, _sprintf_l, swprintf, _swprintf_l, __swprintf_l
 Запись форматированных данных в строку. Существуют более безопасные версии этих функций; см. раздел [sprintf_s, _sprintf_s_l, swprintf_s, _swprintf_s_l](../../c-runtime-library/reference/sprintf-s-sprintf-s-l-swprintf-s-swprintf-s-l.md). Безопасные версии `swprintf` и `_swprintf_l` не принимают параметр `count`.  
@@ -164,9 +148,9 @@ int _sprintf_l(
   
  `swprintf` соответствует стандарту ISO C, который требует указания второго параметра (`count`) типа `size_t`. Чтобы применить нестандартное поведение принудительно, определите функцию `_CRT_NON_CONFORMING_SWPRINTFS`. В будущей версии старое поведение может быть удалено, поэтому код необходимо изменить в соответствии с новым стандартным поведением.  
   
- В C++ эти функции имеют шаблонные перегрузки, которые вызывают более новые и безопасные аналоги этих функций. Дополнительные сведения см. в разделе [Безопасные перегрузки шаблонов](../../c-runtime-library/secure-template-overloads.md).  
+ В C++ эти функции имеют шаблонные перегрузки, которые вызывают более новые и безопасные аналоги этих функций. Дополнительные сведения см. в разделе [Secure Template Overloads](../../c-runtime-library/secure-template-overloads.md).  
   
-### <a name="generic-text-routine-mappings"></a>Универсальное текстовое сопоставление функций  
+### <a name="generic-text-routine-mappings"></a>Сопоставления подпрограмм обработки обычного текста  
   
 |Подпрограмма TCHAR.H|_UNICODE и _MBCS не определены|_MBCS определено|_UNICODE определено|  
 |---------------------|------------------------------------|--------------------|-----------------------|  
@@ -180,7 +164,7 @@ int _sprintf_l(
 |`sprintf`, `_sprintf_l`|\<stdio.h>|  
 |`swprintf`, `_swprintf_l`|\<stdio.h> или \<wchar.h>|  
   
- Дополнительные сведения о совместимости см. в статье [Совместимость](../../c-runtime-library/compatibility.md) во введении.  
+ Дополнительные сведения о совместимости см. в разделе [Совместимость](../../c-runtime-library/compatibility.md) во введении.  
   
 ## <a name="example"></a>Пример  
   

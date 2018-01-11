@@ -20,11 +20,12 @@ caps.latest.revision: "9"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: f1a3085c92335aa6a2e0c5cd79cebb733688448a
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: cf316653b2f968fd5373c6265bb4f3f3ef3b0ba4
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="remote-automation-connection-manager"></a>Диспетчер подключений удаленной автоматизации
 Чтобы настроить компьютеры клиента и сервера, необходимо внести изменения в реестр. Вместо этого вручную, используйте диспетчер подключений удаленной автоматизации (RAC) гораздо проще. Это средство RACMGR32. EXE-файла, а также RACREG32. Библиотеки DLL, должен быть скопирован для любого выбранного каталога. Поместив его в путь, он может выполняться из панели задач, с помощью выполнения. Кроме того можно создать ярлык для ее или поместить ссылку на него в меню «Пуск».  

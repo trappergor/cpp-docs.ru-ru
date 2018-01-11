@@ -24,11 +24,12 @@ caps.latest.revision: "11"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 04c76cee41a6cf79379b65a276f24d56f7090b98
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 9e5526b0f8826a91eb0b1c5a6eae250abbb02fcf
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="using-callback-fields-in-a-date-and-time-picker-control"></a>Использование полей обратного вызова элемента выбора даты и времени
 Кроме стандартных символов формата, определяющих поля выбора даты и времени можно настроить выходных данных, указав определенные части строки настраиваемого формата в качестве поля обратного вызова. Чтобы объявить поле обратного вызова, включите в один или несколько символов «X» (88 код ASCII) в любом месте строки формата. Например, следующая строка «"на сегодняшний день является: «yy» / «Мм» и «ДД» (день «X»)" «заставляет элемент управления выбора даты и времени для отображения текущего значения в виде года, месяца, даты и наконец день года.  

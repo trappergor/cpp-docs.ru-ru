@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-windows
+ms.technology: cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
@@ -24,37 +23,22 @@ f1_keywords:
 - ATLWIN/ATL::CContainedWindowT::m_lpszClassName
 - ATLWIN/ATL::CContainedWindowT::m_pfnSuperWindowProc
 - ATLWIN/ATL::CContainedWindowT::m_pObject
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - CContainedWindow class
 - contained windows
 - CContainedWindowT class
 ms.assetid: cde0ca36-9347-4068-995a-d294dae57ca9
-caps.latest.revision: 23
+caps.latest.revision: "23"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: d2d39abf526a58b8442107b5ee816f316ae841f5
-ms.openlocfilehash: ab2b20591ded82dd17a38f5258dfe593f7e88fc8
-ms.contentlocale: ru-ru
-ms.lasthandoff: 03/31/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: 4cf792fed2f7a5cac45826649224a565228f9d73
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="ccontainedwindowt-class"></a>Класс CContainedWindowT
 Этот класс реализует окно, содержатся внутри другого объекта.  
@@ -74,22 +58,22 @@ class CContainedWindowT : public TBase
  Базовый класс к новому классу. Базовый класс по умолчанию — `CWindow`.  
   
  `TWinTraits`  
- Класс характеристик, определяющий стили для окна. Значение по умолчанию — `CControlWinTraits`.  
+ Класс характеристик, определяющий стили для окна. Значение по умолчанию — `CControlWinTraits`.  
   
 > [!NOTE]
 > [CContainedWindow](ccontainedwindowt-class.md) является специализацией `CContainedWindowT`. Если вы хотите изменить базовый класс или признаки, используйте `CContainedWindowT` напрямую.  
   
-## <a name="members"></a>Члены  
+## <a name="members"></a>Участники  
   
 ### <a name="public-constructors"></a>Открытые конструкторы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[CContainedWindowT::CContainedWindowT](#ccontainedwindowt)|Конструктор. Инициализирует элементы данных, чтобы указать, какой карты сообщение будет обрабатывать содержащееся окно сообщения.|  
   
 ### <a name="public-methods"></a>Открытые методы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[CContainedWindowT::Create](#create)|Создает окно.|  
 |[CContainedWindowT::DefWindowProc](#defwindowproc)|Обеспечивает обработку сообщений по умолчанию.|  
@@ -102,7 +86,7 @@ class CContainedWindowT : public TBase
   
 ### <a name="public-data-members"></a>Открытые члены данных  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[CContainedWindowT::m_dwMsgMapID](#m_dwmsgmapid)|Определяет, какие схемы сообщений будет обрабатывать содержащееся окно сообщения.|  
 |[CContainedWindowT::m_lpszClassName](#m_lpszclassname)|Указывает имя существующего класса окна, на котором будет основан новый класс окна.|  
@@ -121,18 +105,18 @@ class CContainedWindowT : public TBase
   
  При использовании **добавить элемент управления на основе** параметр в мастер проектов ATL, мастер автоматически добавит `CContainedWindowT` данные-члены класса, который реализует элемент управления. В следующем примере показано, как окно автономной объявлен:  
   
- [!code-cpp[NVC_ATL_Windowing #38](../../atl/codesnippet/cpp/ccontainedwindowt-class_1.h)]  
+ [!code-cpp[NVC_ATL_Windowing#38](../../atl/codesnippet/cpp/ccontainedwindowt-class_1.h)]  
   
- [!code-cpp[NVC_ATL_Windowing #39](../../atl/codesnippet/cpp/ccontainedwindowt-class_2.h)]  
+ [!code-cpp[NVC_ATL_Windowing#39](../../atl/codesnippet/cpp/ccontainedwindowt-class_2.h)]  
   
- [!code-cpp[NVC_ATL_Windowing #40](../../atl/codesnippet/cpp/ccontainedwindowt-class_3.h)]  
+ [!code-cpp[NVC_ATL_Windowing#40](../../atl/codesnippet/cpp/ccontainedwindowt-class_3.h)]  
   
 |Дополнительные сведения о|См.|  
 |--------------------------------|---------|  
 |Создание элементов управления|[Учебник по ATL](../../atl/active-template-library-atl-tutorial.md)|  
 |Использование окон в ATL|[Классы окон ATL](../../atl/atl-window-classes.md)|  
 |Мастер проектов ATL|[Создание проекта ATL](../../atl/reference/creating-an-atl-project.md)|  
-|Windows|[Windows](http://msdn.microsoft.com/library/windows/desktop/ms632595) и последующие разделы в[!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]|  
+|Windows|[Windows](http://msdn.microsoft.com/library/windows/desktop/ms632595) и последующие разделы в Windows SDK|  
   
 ## <a name="inheritance-hierarchy"></a>Иерархия наследования  
  `TBase`  
@@ -237,10 +221,10 @@ HWND Create(
  [in] Задает имя окна. Значение по умолчанию — **NULL**.  
   
  `dwStyle`  
- [in] Стиль окна. Значение по умолчанию — **WS_CHILD | WS_VISIBLE**. Список возможных значений см. в разделе [CreateWindow](http://msdn.microsoft.com/library/windows/desktop/ms632679) в [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
+ [in] Стиль окна. Значение по умолчанию — **WS_CHILD &#124; WS_VISIBLE**. Список возможных значений см. в разделе [CreateWindow](http://msdn.microsoft.com/library/windows/desktop/ms632679) в Windows SDK.  
   
  `dwExStyle`  
- [in] Стиль окна расширенного. Значение по умолчанию — 0, то есть не расширенный стиль. Список возможных значений см. в разделе [CreateWindowEx](http://msdn.microsoft.com/library/windows/desktop/ms632680) в [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
+ [in] Стиль окна расширенного. Значение по умолчанию — 0, то есть не расширенный стиль. Список возможных значений см. в разделе [CreateWindowEx](http://msdn.microsoft.com/library/windows/desktop/ms632680) в Windows SDK.  
   
  `MenuOrID`  
  [in] Для дочернего окна идентификатор окна. Для окна верхнего уровня, дескриптор меню для окна. Значение по умолчанию — **0U**.  
@@ -450,4 +434,3 @@ static LRESULT CALLBACK WindowProc(
  [BEGIN_MSG_MAP](message-map-macros-atl.md#begin_msg_map)   
  [ALT_MSG_MAP(msgMapID)](message-map-macros-atl.md#alt_msg_map)   
  [Общие сведения о классе](../../atl/atl-class-overview.md)
-

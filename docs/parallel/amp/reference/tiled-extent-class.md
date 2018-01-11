@@ -24,11 +24,12 @@ caps.latest.revision: "9"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: a73a29a7cdcd20c969680e1dbb69b6a6ede4dbb6
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 8d2aa225c579eb5d9a1412218a287252c5f076dd
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="tiledextent-class"></a>Класс tiled_extent
 Объект `tiled_extent` объект `extent` объект одного до трех измерений, разделения задачи пространства экстента на одно-, двух- или трехмерные плитки.  
@@ -65,18 +66,18 @@ class tiled_extent<_Dim0, 0, 0> : public Concurrency::extent<1>;
  `_Dim2`  
  Длина младших измерения.  
   
-## <a name="members"></a>Члены  
+## <a name="members"></a>Участники  
   
 ### <a name="public-constructors"></a>Открытые конструкторы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[Конструктор tiled_extent](#ctor)|Инициализирует новый экземпляр класса `tiled_extent`.|  
 
   
 ### <a name="public-methods"></a>Открытые методы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[get_tile_extent](#get_tile_extent)|Возвращает `extent` объект, который перехватывает значения `tiled_extent` аргументов шаблона `_Dim0`, `_Dim1`, и `_Dim2`.|  
 |[Панель](#pad)|Возвращает новый `tiled_extent` объекта с экстентами скорректировать вверх, чтобы нацело делиться на размеры плитки.|  
@@ -84,14 +85,14 @@ class tiled_extent<_Dim0, 0, 0> : public Concurrency::extent<1>;
   
 ### <a name="public-operators"></a>Открытые операторы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
-|[operator=](#operator_eq)|Копирует содержимое указанного `tiled_index` объекта в другой.|  
+|[оператор=](#operator_eq)|Копирует содержимое указанного `tiled_index` объекта в другой.|  
 
   
 ### <a name="public-constants"></a>Открытые константы  
   
-|Имя|Описание|  
+|name|Описание:|  
 |----------|-----------------|  
 |[Константа tile_dim0](#tile_dim0)|Сохраняет длину наиболее значимых измерения.|  
 |[Константа tile_dim1](#tile_dim1)|Сохраняет длину измерения значительные Далее для большинства.|  
@@ -100,7 +101,7 @@ class tiled_extent<_Dim0, 0, 0> : public Concurrency::extent<1>;
   
 ### <a name="public-data-members"></a>Открытые члены данных  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[tile_extent](#tile_extent)|Возвращает `extent` объект, который перехватывает значения `tiled_extent` аргументов шаблона `_Dim0`, `_Dim1`, и `_Dim2`.|  
   

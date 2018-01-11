@@ -38,29 +38,16 @@ helpviewer_keywords:
 - fminf function
 - fminl function
 ms.assetid: 1916dfb5-99c1-4b0d-aefb-513525c3f2ac
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.mt:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-translationtype: Machine Translation
-ms.sourcegitcommit: 8953e3bd81158ce183e1abb5dfa969164c1f9ced
-ms.openlocfilehash: b7fd6a2b91c1bc7cd973d2ac60f2d6fc39d322bb
-ms.lasthandoff: 02/24/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: 3428afcdcf403c733e5282b2b3c4347ba94497d7
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="fmin-fminf-fminl"></a>fmin, fminf, fminl
 Определяет наименьшее из двух указанных значений.  
@@ -104,7 +91,7 @@ long double fminl(
 ## <a name="return-value"></a>Возвращаемое значение  
  В случае успешного выполнения возвращает меньшее из значений `x` или `y`.  
   
-|Ввод|Результат|  
+|Входные данные|Результат|  
 |-----------|------------|  
 |`x` имеет значение NaN|`y`|  
 |`y` имеет значение NaN|`x`|  
@@ -113,7 +100,7 @@ long double fminl(
  Эта функция не вызывает [_matherr](../../c-runtime-library/reference/matherr.md), исключения вычислений с плавающей запятой и не изменяет значение `errno`.  
   
 ## <a name="remarks"></a>Примечания  
- Так как C++ допускает перегрузку, можно вызывать перегрузки функции `fmin`, принимающие и возвращающие типы значений с плавающей запятой и длинных двойных значений. В программе на языке C `fmin` всегда принимает и возвращает двойное значение.  
+ Так как C++ допускает перегрузку, можно вызывать перегрузки функции `fmin`, принимающие и возвращающие типы значений с плавающей запятой и длинных двойных значений. В программе на языке C `fmin` всегда принимает и возвращает значение типа double.  
   
 ## <a name="requirements"></a>Требования  
   

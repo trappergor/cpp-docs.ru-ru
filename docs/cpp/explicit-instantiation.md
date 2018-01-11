@@ -17,11 +17,12 @@ caps.latest.revision: "9"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: acfaf9b36cfde4399815571807a6a82903dc980e
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: e272652ecc82b65d0251194f17a746ddde58fcc1
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="explicit-instantiation"></a>явное создание экземпляра
 Явное создание экземпляров можно использовать для создания шаблонного класса или функции, чтобы обойтись без их использования в коде. Поскольку это полезно для создания файлов библиотек (.lib), в которых шаблоны используются для распространения, то определения шаблонов без создания экземпляров не включаются в объектные файлы (.obj).  
@@ -42,7 +43,7 @@ template MyStack<int, 6>::MyStack( void );
   
  Можно явно создать экземпляр шаблонов функций с помощью аргумента определенного типа для повторного объявления их, как показано в примере в [создание экземпляра шаблона функции](../cpp/function-template-instantiation.md).  
   
- Ключевое слово `extern` позволяет предотвратить автоматическое создание экземпляров элементов. Например:  
+ Ключевое слово `extern` позволяет предотвратить автоматическое создание экземпляров элементов. Пример:  
   
 ```cpp  
 extern template class MyStack<int, 6>;  

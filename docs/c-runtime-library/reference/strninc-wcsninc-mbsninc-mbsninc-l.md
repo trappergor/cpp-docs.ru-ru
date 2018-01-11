@@ -53,11 +53,12 @@ caps.latest.revision: "19"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 37bf361f9be420f2f2d54ae073a37afb1016f700
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 43f22862d8177298458e0f872d6ec22312c9d22c
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="strninc-wcsninc-mbsninc-mbsnincl"></a>_strninc, _wcsninc, _mbsninc, _mbsninc_l
 Увеличивает строковый указатель на `n` символов.  
@@ -103,7 +104,7 @@ unsigned char *_mbsninc(
 ## <a name="remarks"></a>Примечания  
  Функция `_mbsninc` увеличивает `str` на `count` многобайтовых символов. `_mbsninc` распознает последовательности многобайтовых символов в соответствии с текущей многобайтовой [кодовой страницей](../../c-runtime-library/code-pages.md).  
   
-### <a name="generic-text-routine-mappings"></a>Универсальное текстовое сопоставление функций  
+### <a name="generic-text-routine-mappings"></a>Сопоставления подпрограмм обработки обычного текста  
   
 |Подпрограмма Tchar.h|_UNICODE и _MBCS не определены|_MBCS определено|_UNICODE определено|  
 |---------------------|--------------------------------------|--------------------|-----------------------|  
@@ -111,7 +112,7 @@ unsigned char *_mbsninc(
   
  `_strninc`и `_wcsninc` одного байт символа строки и версий строки расширенных символов `_mbsninc`. `_wcsninc` и `_strninc` предоставляются только для этого сопоставления и не должны использоваться иным образом. Дополнительные сведения см. в разделах [Использование универсальных текстовых сопоставлений](../../c-runtime-library/using-generic-text-mappings.md) и [Универсальные текстовые сопоставления](../../c-runtime-library/generic-text-mappings.md).  
   
- `_mbsninc_l` идентична указанной за исключением того, что использует языковой стандарт, переданный в качестве параметра. Дополнительные сведения см. в разделе [Языковой стандарт](../../c-runtime-library/locale.md).  
+ `_mbsninc_l` идентична указанной за исключением того, что использует языковой стандарт, переданный в качестве параметра. Для получения дополнительной информации см. [Locale](../../c-runtime-library/locale.md).  
   
 ## <a name="requirements"></a>Требования  
   
@@ -122,7 +123,7 @@ unsigned char *_mbsninc(
 |`_strninc`|\<tchar.h>|  
 |`_wcsninc`|\<tchar.h>|  
   
- Дополнительные сведения о совместимости см. в разделе [Compatibility](../../c-runtime-library/compatibility.md).  
+ Дополнительные сведения о совместимости см. в разделе [Совместимость](../../c-runtime-library/compatibility.md).  
   
 ## <a name="see-also"></a>См. также  
  [Операции со строками](../../c-runtime-library/string-manipulation-crt.md)   

@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
 apiname:
@@ -31,8 +30,7 @@ f1_keywords:
 - mbccpy
 - _tccpy
 - _ftccpy
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - _tccpy function
 - _tccpy_l function
@@ -43,30 +41,16 @@ helpviewer_keywords:
 - _mbccpy function
 - mbccpy_l function
 ms.assetid: 13f4de6e-7792-41ac-b319-dd9b135433aa
-caps.latest.revision: 24
+caps.latest.revision: "24"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: e257f037a05c45f5b98e64ea55bd125af443b0be
-ms.openlocfilehash: a2c085e754e43e0909552a68d36b8393708cf7ac
-ms.contentlocale: ru-ru
-ms.lasthandoff: 03/30/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: 96273d317409f8c79740b1c7200af1533467d9f9
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="mbccpy-mbccpyl"></a>_mbccpy, _mbccpy_l
 Копирует многобайтовый символ из одной строки в другую. Существуют более безопасные версии этих функций; см. раздел [_mbccpy_s, _mbccpy_s_l](../../c-runtime-library/reference/mbccpy-s-mbccpy-s-l.md).  
@@ -103,11 +87,11 @@ void _mbccpy_l(
   
  Эта функция проверяет свои параметры. Если функция `_mbccpy` передает указатель NULL для `dest` или `src`, вызывается обработчик недопустимых параметров, как описано в разделе [Проверка параметров](../../c-runtime-library/parameter-validation.md). Если выполнение может быть продолжено, параметр `errno` устанавливается в значение `EINVAL`.  
   
- Функция `_mbccpy` использует текущий языковой стандарт для любого поведения, зависящего от языкового стандарта. Функция `_mbccpy_l` идентична функции `_mbccpy`, но в функции `_mbccpy_l` для любого поведения, зависящего от языкового стандарта, используется переданный в параметре языковой стандарт. Дополнительные сведения см. в разделе [Языковой стандарт](../../c-runtime-library/locale.md).  
+ Функция `_mbccpy` использует текущий языковой стандарт для любого поведения, зависящего от языкового стандарта. Функция `_mbccpy_l` идентична функции `_mbccpy`, но в функции `_mbccpy_l` для любого поведения, зависящего от языкового стандарта, используется переданный в параметре языковой стандарт. Для получения дополнительной информации см. [Locale](../../c-runtime-library/locale.md).  
   
  **Примечание о безопасности.** Следует использовать строку, оканчивающуюся нуль-символом. Длина строки, завершающейся нуль-символом, не должна превышать размер буфера назначения. Дополнительные сведения см. в разделе [Как избежать переполнения буфера](http://msdn.microsoft.com/library/windows/desktop/ms717795). Проблемы переполнения буфера — это распространенный метод атак на системы, который приводит к несанкционированному повышению уровня прав.  
   
-### <a name="generic-text-routine-mappings"></a>Универсальное текстовое сопоставление функций  
+### <a name="generic-text-routine-mappings"></a>Сопоставления подпрограмм обработки обычного текста  
   
 |Подпрограмма Tchar.h|_UNICODE и _MBCS не определены|_MBCS определено|_UNICODE определено|  
 |---------------------|--------------------------------------|--------------------|-----------------------|  

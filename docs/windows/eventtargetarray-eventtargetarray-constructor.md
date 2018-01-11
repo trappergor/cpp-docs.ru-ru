@@ -1,32 +1,33 @@
 ---
-title: "Конструктор EventTargetArray::EventTargetArray | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "event/Microsoft::WRL::Details::EventTargetArray::EventTargetArray"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "EventTargetArray, конструктор"
+title: "Конструктор EventTargetArray::EventTargetArray | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: event/Microsoft::WRL::Details::EventTargetArray::EventTargetArray
+dev_langs: C++
+helpviewer_keywords: EventTargetArray, constructor
 ms.assetid: 6c6d3737-3cd3-4515-a8f6-d27901bb8ed2
-caps.latest.revision: 5
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 5
+caps.latest.revision: "5"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: 3e8c8ada61a18437ed159452355e8286bc9d190f
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 12/21/2017
 ---
-# Конструктор EventTargetArray::EventTargetArray
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Предназначено для поддержки инфраструктуры WRL, а не для непосредственного использования в коде.  
+# <a name="eventtargetarrayeventtargetarray-constructor"></a>Конструктор EventTargetArray::EventTargetArray
+Поддерживает инфраструктуру WRL и не предназначен для использования непосредственно из программного кода.  
   
-## Синтаксис  
+## <a name="syntax"></a>Синтаксис  
   
 ```  
 EventTargetArray(  
@@ -35,32 +36,32 @@ EventTargetArray(
 );  
 ```  
   
-#### Параметры  
+#### <a name="parameters"></a>Параметры  
  `hr`  
- После этих операций конструктора параметр `hr` показывает, было ли успешным или закончилось неудачей размещение массива.  В следующей таблице описаны все возможные значения для `hr`.  
+ После этого конструктор операций параметр `hr` указывает, успешно ли выполнено выделение массива. В следующей таблице перечислены возможные значения для `hr`.  
   
- S\_OK  
- Операция выполнена успешно.  
+ S_OK  
+ Операция успешно выполнена.  
   
- E\_OUTOFMEMORY  
- Для этого массива не может быть выделена память.  
+ E_OUTOFMEMORY  
+ Не удалось выделить память для массива.  
   
- S\_FALSE  
- Параметр `items` меньше или равен нулю.  
+ S_FALSE  
+ Параметр `items` меньше или равно нулю.  
   
  `items`  
- Число размещаемых элементов массива.  
+ Число элементов массива для выделения.  
   
-## Примечания  
+## <a name="remarks"></a>Примечания  
  Инициализирует новый экземпляр класса EventTargetArray.  
   
- EventTargetArray используется для хранения массива обработчиков событий в объекте EventSource.  
+ EventTargetArray используется для хранения массива из обработчиков событий в объекта EventSource.  
   
-## Требования  
+## <a name="requirements"></a>Требования  
  **Заголовок:** event.h  
   
- **Пространство имен:** Microsoft::WRL::Details  
+ **Пространство имен:** Microsoft::wrl:: Details  
   
-## См. также  
- [Класс EventTargetArray](../windows/eventtargetarray-class.md)   
+## <a name="see-also"></a>См. также  
+ [Eventtargetarray-класс](../windows/eventtargetarray-class.md)   
  [Пространство имен Microsoft::WRL::Details](../windows/microsoft-wrl-details-namespace.md)

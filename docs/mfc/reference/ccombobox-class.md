@@ -119,11 +119,12 @@ caps.latest.revision: "25"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 6a8b9c9de69f9042f68cc04d435070ade9b24dd9
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: fffa5c09f1572200ca7850c8870b7daee9e3e75f
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="ccombobox-class"></a>CComboBox-класс
 Предоставляет функции поля со списком Windows.  
@@ -134,17 +135,17 @@ ms.lasthandoff: 10/24/2017
 class CComboBox : public CWnd  
 ```  
   
-## <a name="members"></a>Члены  
+## <a name="members"></a>Участники  
   
 ### <a name="public-constructors"></a>Открытые конструкторы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[CComboBox::CComboBox](#ccombobox)|Создает объект `CComboBox`.|  
   
 ### <a name="public-methods"></a>Открытые методы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[CComboBox::AddString](#addstring)|Добавляет строку в конец списка в поле со списком списком или позиции отсортированных списков с **CBS_SORT** стиля.|  
 |[CComboBox::Clear](#clear)|Удаляет (очищает) текущее выделение, если таковая имеется, в поле редактирования.|  
@@ -610,7 +611,7 @@ BOOL GetCueBanner(
   
 ### <a name="parameters"></a>Параметры  
   
-|Параметр|Описание|  
+|Параметр|Описание:|  
 |---------------|-----------------|  
 |[выходной] `lpszText`|Указатель на буфер, получающий текст баннера подсказки.|  
 |[in] `cchText`|Размер буфера, `lpszText` указывает параметр.|  
@@ -618,7 +619,7 @@ BOOL GetCueBanner(
 ### <a name="return-value"></a>Возвращаемое значение  
  В первой перегрузке [CString](../../atl-mfc-shared/using-cstring.md) , содержащий текст баннера подсказки, если он существует; в противном случае `CString` объект, который имеет нулевую длину.  
   
- -или-  
+ - или -  
   
  Во второй перегрузке `true` Если этот метод выполнен успешно; в противном случае — `false`.  
   
@@ -1046,7 +1047,7 @@ BOOL SetCueBanner(LPCTSTR lpszText);
   
 ### <a name="parameters"></a>Параметры  
   
-|Параметр|Описание|  
+|Параметр|Описание:|  
 |---------------|-----------------|  
 |[in] *lpszText*|Указатель на буфер, содержащий текст подсказки символом null.|  
   
@@ -1289,7 +1290,7 @@ BOOL SetMinVisibleItems(int iMinVisible);
   
 ### <a name="parameters"></a>Параметры  
   
-|Параметр|Описание|  
+|Параметр|Описание:|  
 |---------------|-----------------|  
 |[in] `iMinVisible`|Указывает минимальное число видимых элементов.|  
   

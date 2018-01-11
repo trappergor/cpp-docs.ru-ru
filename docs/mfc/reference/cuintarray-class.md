@@ -53,11 +53,12 @@ caps.latest.revision: "23"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 1b40dfb0204396a62efb4118b39d3adac932267a
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 5132dddcdd707d6fef63627c48e4b5619cead084
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cuintarray-class"></a>Класс CUIntArray
 Поддерживает массивы целых чисел без знака.  
@@ -68,7 +69,7 @@ ms.lasthandoff: 10/24/2017
 class CUIntArray : public CObject  
 ```  
   
-## <a name="members"></a>Члены  
+## <a name="members"></a>Участники  
  Функции-члены `CUIntArray` похожи на функции-члены класса [CObArray](../../mfc/reference/cobarray-class.md). Из-за этой схожести для изучения этой функции-члена можно использовать справочную документацию по классу `CObArray`. Если вы видите `CObject` указатель как параметр функции или возвращаемого значения, замените **UINT**.  
   
  `CObject* CObArray::GetAt( int <nIndex> ) const;`  
@@ -79,13 +80,13 @@ class CUIntArray : public CObject
   
 ### <a name="public-constructors"></a>Открытые конструкторы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[CObArray::CObArray](../../mfc/reference/cobarray-class.md#cobarray)|Создает пустой массив.|  
   
 ### <a name="public-methods"></a>Открытые методы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[CObArray::Add](../../mfc/reference/cobarray-class.md#add)|Добавляет элемент в конец массива. При необходимости размер массива увеличивается.|  
 |[CObArray::Append](../../mfc/reference/cobarray-class.md#append)|Добавляет другой массив к массиву. При необходимости размер массива увеличивается.|  
@@ -107,7 +108,7 @@ class CUIntArray : public CObject
   
 ### <a name="public-operators"></a>Открытые операторы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[[CObArray::operator]](../../mfc/reference/cobarray-class.md#operator_at)|Получает или задает элемент с указанным индексом.|  
   

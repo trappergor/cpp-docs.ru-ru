@@ -43,11 +43,12 @@ caps.latest.revision: "13"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 19aeabbda33f4eb2e6b140ab2d887813f155b67f
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 2ceff966e289fd3118cdd515fb4fbc288080b0f3
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="exp2-exp2f-exp2l"></a>exp2, exp2f, exp2l
 Вычисляет 2 возникает с указанным значением.  
@@ -92,7 +93,7 @@ long double exp2l(
 |Ошибка переполнения диапазона|+HUGE_VAL, +HUGE_VALF или +HUGE_VALL|  
 |Ошибка недостаточного заполнения диапазона|Правильный результат, после округления|  
   
- Сообщает об ошибках, как указано в [_matherr](../../c-runtime-library/reference/matherr.md).  
+ Ошибки сообщаются, как указано в [_matherr](../../c-runtime-library/reference/matherr.md).  
   
 ## <a name="remarks"></a>Примечания  
  Поскольку C++ допускает перегрузку, можно вызывать перегрузки `exp2` , принимающие и возвращающие **float** и **long double** типов. В программе на языке C `exp2` всегда принимает и возвращает **двойные**.  
@@ -103,7 +104,7 @@ long double exp2l(
 |-------------|--------------|------------------|  
 |`exp`, `expf`, `expl`|\<math.h>|\<cmath>|  
   
- Дополнительные сведения о совместимости см. в статье [Совместимость](../../c-runtime-library/compatibility.md).  
+ Дополнительные сведения о совместимости см. в разделе [Совместимость](../../c-runtime-library/compatibility.md).  
   
 ## <a name="see-also"></a>См. также  
  [Алфавитный указатель функций](../../c-runtime-library/reference/crt-alphabetical-function-reference.md)   

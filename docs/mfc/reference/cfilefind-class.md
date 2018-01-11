@@ -67,11 +67,12 @@ caps.latest.revision: "22"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: e12874dcc35c4c98b765aa773d5307d3b35dbe60
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: e890e59896d1f69264ab479168385cf2a05d9fb7
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cfilefind-class"></a>Класс CFileFind
 Выполняет поиск локального файла и является базовым классом для [CGopherFileFind](../../mfc/reference/cgopherfilefind-class.md) и [CFtpFileFind](../../mfc/reference/cftpfilefind-class.md), которые выполняют поиск файлов Интернета.  
@@ -82,17 +83,17 @@ ms.lasthandoff: 10/24/2017
 class CFileFind : public CObject  
 ```  
   
-## <a name="members"></a>Члены  
+## <a name="members"></a>Участники  
   
 ### <a name="public-constructors"></a>Открытые конструкторы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[CFileFind::CFileFind](#cfilefind)|Создает объект `CFileFind`.|  
   
 ### <a name="public-methods"></a>Открытые методы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[CFileFind::Close](#close)|Закрывает этот запрос поиска.|  
 |[CFileFind::FindFile](#findfile)|Осуществляет поиск указанного имени файла в каталоге.|  
@@ -119,13 +120,13 @@ class CFileFind : public CObject
   
 ### <a name="protected-methods"></a>Защищенные методы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[CFileFind::CloseContext](#closecontext)|Закрывает файл, указанный в дескрипторе текущего поиска.|  
   
 ### <a name="protected-data-members"></a>Защищенные члены данных  
   
-|Имя|Описание|  
+|name|Описание:|  
 |----------|-----------------|  
 |[CFileFind::m_pTM](#m_ptm)|Указатель на `CAtlTransactionManager` объект.|  
   

@@ -41,11 +41,12 @@ caps.latest.revision: "17"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 5f763c2abb919e8f65c7c386ae40a52a54fe0fa0
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 19c060c846d8dfd12a8b783f0b01153c9a424cfe
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cd2dlineargradientbrush-class"></a>Класс CD2DLinearGradientBrush
 Программа-оболочка для ID2D1LinearGradientBrush.  
@@ -56,18 +57,18 @@ ms.lasthandoff: 10/24/2017
 class CD2DLinearGradientBrush : public CD2DGradientBrush;  
 ```  
   
-## <a name="members"></a>Члены  
+## <a name="members"></a>Участники  
   
 ### <a name="public-constructors"></a>Открытые конструкторы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[CD2DLinearGradientBrush::CD2DLinearGradientBrush](#cd2dlineargradientbrush)|Создает объект CD2DLinearGradientBrush.|  
 |[CD2DLinearGradientBrush:: ~ CD2DLinearGradientBrush](#_dtorcd2dlineargradientbrush)|Деструктор Вызывается при уничтожении объекта D2D кисти линейного градиента.|  
   
 ### <a name="public-methods"></a>Открытые методы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[CD2DLinearGradientBrush::Attach](#attach)|Присоединяет существующий ресурс интерфейс для объекта|  
 |[CD2DLinearGradientBrush::CREATE](#create)|Создает CD2DLinearGradientBrush. (Переопределяет [CD2DResource::Create](../../mfc/reference/cd2dresource-class.md#create).)|  
@@ -81,13 +82,13 @@ class CD2DLinearGradientBrush : public CD2DGradientBrush;
   
 ### <a name="public-operators"></a>Открытые операторы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[CD2DLinearGradientBrush::operator ID2D1LinearGradientBrush *](#operator_id2d1lineargradientbrush_star)|Возвращает интерфейс ID2D1LinearGradientBrush|  
   
 ### <a name="protected-data-members"></a>Защищенные члены данных  
   
-|Имя|Описание|  
+|name|Описание:|  
 |----------|-----------------|  
 |[CD2DLinearGradientBrush::m_LinearGradientBrushProperties](#m_lineargradientbrushproperties)|Начальная и конечная точки градиента.|  
 |[CD2DLinearGradientBrush::m_pLinearGradientBrush](#m_plineargradientbrush)|Указатель на ID2D1LinearGradientBrush.|  

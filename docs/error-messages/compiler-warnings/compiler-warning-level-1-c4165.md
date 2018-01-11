@@ -4,32 +4,28 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-tools
+ms.technology: cpp-tools
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- C4165
-dev_langs:
-- C++
-helpviewer_keywords:
-- C4165
+f1_keywords: C4165
+dev_langs: C++
+helpviewer_keywords: C4165
 ms.assetid: f5bed515-2290-4f88-8dab-b45d95fe26ef
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 4ac033535632e94a365aa8dafd849f2ab28a3af7
-ms.openlocfilehash: 9f2007a2f43cd7641979b663c58efb3a8e276246
-ms.contentlocale: ru-ru
-ms.lasthandoff: 02/24/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: e31f0e0440b0c31197ded21464edc9d686c4864e
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="compiler-warning-level-1-c4165"></a>Предупреждение C4165 компилятора предупреждение (уровень 1).
-выполняется преобразование "HRESULT" в "bool"; возможно, это неправильное действие  
+«HRESULT» преобразуется в «bool»; Вы уверены, что это желаемый?  
   
-При использовании HRESULT в [Если](../../cpp/if-else-statement-cpp.md) инструкции, HRESULT будет преобразован в [bool](../../cpp/bool-cpp.md) Если явная проверка переменной со значением HRESULT. Это предупреждение отключено по умолчанию.  
+При использовании HRESULT в [Если](../../cpp/if-else-statement-cpp.md) инструкции, HRESULT будет преобразован для [bool](../../cpp/bool-cpp.md) Если выполняется явная проверка переменной со значением HRESULT. Это предупреждение отключено по умолчанию.  
   
 ## <a name="example"></a>Пример  
 В следующем примере возникает предупреждение C4165.  

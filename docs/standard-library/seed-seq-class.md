@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -14,8 +13,7 @@ f1_keywords:
 - random/std::seed_seq::generate
 - random/std::seed_seq::size
 - random/std::seed_seq::param
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - std::seed_seq [C++]
 - std::seed_seq [C++], result_type
@@ -23,16 +21,16 @@ helpviewer_keywords:
 - std::seed_seq [C++], size
 - std::seed_seq [C++], param
 ms.assetid: cba114f7-9ac6-4f2f-b773-9c84805401d6
-caps.latest.revision: 19
+caps.latest.revision: "19"
 author: corob-msft
 ms.author: corob
 manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 3eb5a5d383044e0e44a0913c06afa73c6fe2f0ac
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
-ms.sourcegitcommit: 65f4e356ad0d46333b0d443d0fd6ac0b9f2b6f58
-ms.openlocfilehash: 7083c7ef1de370d4faeef3344e4e78418e36a731
-ms.contentlocale: ru-ru
-ms.lasthandoff: 10/03/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="seedseq-class"></a>Класс seed_seq
 Хранит вектор беззнаковых целых значений, которые можно использовать как начальное значения для механизма получения случайных чисел.  
@@ -84,7 +82,7 @@ public:
 Инициализирует внутреннюю последовательность, используя все элементы в заданном диапазоне итератора.                  
 Типом `iterator_traits<InputIterator>::value_type` должен быть целочисленный тип.  
   
-## <a name="members"></a>Члены  
+## <a name="members"></a>Участники  
   
 ### <a name="generating-functions"></a>Генерирующие функции  
  `template<class RandomAccessIterator> void generate(RandomAccessIterator begin,          RandomAccessIterator end);`   
@@ -176,6 +174,5 @@ Generating a sequence of 5 elements into an array:
   
 ## <a name="see-also"></a>См. также  
  [\<random>](../standard-library/random.md)
-
 
 

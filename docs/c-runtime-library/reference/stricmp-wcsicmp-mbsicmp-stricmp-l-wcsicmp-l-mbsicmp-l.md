@@ -67,11 +67,12 @@ caps.latest.revision: "28"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: ff47ee9c10693c6dba4dd28323549b81266e6950
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 15b581d0d47da824f1faaade1214d1320e29bb03
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="stricmp-wcsicmp-mbsicmp-stricmpl-wcsicmpl-mbsicmpl"></a>_stricmp, _wcsicmp, _mbsicmp, _stricmp_l, _wcsicmp_l, _mbsicmp_l
 Выполняет сравнение строк без учета регистра.  
@@ -130,7 +131,7 @@ int _mbsicmp_l(
  При ошибке `_mbsicmp` возвращает значение `_NLSCMPERROR`, которое определено в \<string.h> и \<mbstring.h>.  
   
 ## <a name="remarks"></a>Примечания  
- Функция `_stricmp` выполняет порядковое сравнение версий `string1` и `string2` в нижнем регистре и возвращает значение, показывающее их взаимосвязь. `_stricmp` отличается от `_stricoll` тем, что на сравнение `_stricmp` влияет только тип `LC_CTYPE`, определяющий регистр символов. Функция `_stricoll` сравнивает строки в соответствии с категориями `LC_CTYPE` и `LC_COLLATE` языкового стандарта, который включает как регистр, так и порядок сортировки. Дополнительные сведения о категории `LC_COLLATE` см. в разделах [setlocale](../../c-runtime-library/reference/setlocale-wsetlocale.md) и [Категории языкового стандарта](../../c-runtime-library/locale-categories.md). Версии этих функций без суффикса `_l` используют текущий языковой стандарт во время операций, зависящих от языкового стандарта. Версии с суффиксом идентичны за исключением того, что вместо этого они используют переданный языковой стандарт. Если языковой стандарт не задан, используется языковой стандарт C. Дополнительные сведения см. в разделе [Языковой стандарт](../../c-runtime-library/locale.md).  
+ Функция `_stricmp` выполняет порядковое сравнение версий `string1` и `string2` в нижнем регистре и возвращает значение, показывающее их взаимосвязь. `_stricmp` отличается от `_stricoll` тем, что на сравнение `_stricmp` влияет только тип `LC_CTYPE`, определяющий регистр символов. Функция `_stricoll` сравнивает строки в соответствии с категориями `LC_CTYPE` и `LC_COLLATE` языкового стандарта, который включает как регистр, так и порядок сортировки. Дополнительные сведения о категории `LC_COLLATE` см. в разделах [setlocale](../../c-runtime-library/reference/setlocale-wsetlocale.md) и [Категории языкового стандарта](../../c-runtime-library/locale-categories.md). Версии этих функций без суффикса `_l` используют текущий языковой стандарт во время операций, зависящих от языкового стандарта. Версии с суффиксом идентичны за исключением того, что вместо этого они используют переданный языковой стандарт. Если языковой стандарт не задан, используется языковой стандарт C. Для получения дополнительной информации см. [Locale](../../c-runtime-library/locale.md).  
   
 > [!NOTE]
 >  `_stricmp` равно `_strcmpi`. Они взаимозаменяемы, но предпочтительнее стандарт `_stricmp`.  
@@ -181,7 +182,7 @@ int main() {
 |`_wcsicmp`, `_wcsicmp_l`|\<string.h> или \<wchar.h>|  
 |`_mbsicmp`, `_mbsicmp_l`|\<mbstring.h>|  
   
- Дополнительные сведения о совместимости см. в статье [Совместимость](../../c-runtime-library/compatibility.md).  
+ Дополнительные сведения о совместимости см. в разделе [Совместимость](../../c-runtime-library/compatibility.md).  
   
 ## <a name="example"></a>Пример  
   

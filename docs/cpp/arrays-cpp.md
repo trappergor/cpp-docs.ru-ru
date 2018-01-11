@@ -17,11 +17,12 @@ caps.latest.revision: "12"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: d925165e7345d715d74cdd213b01d3108be8e35d
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: b23727d7f6f5e8adcc220d57907a1d61f430bde3
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="arrays-c"></a>Массивы (C++)
 Массив — это коллекция похожих объектов. Простейший пример массива — вектор, который может быть объявлен следующей последовательностью:  

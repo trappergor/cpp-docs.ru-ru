@@ -20,11 +20,12 @@ caps.latest.revision: "9"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: aa919e1168c6235de0143d1c1f2a2337fe099685
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 26458242ab6afcf69d6e70065ba70e31f0adbe74
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="relationship-to-the-c-language-api"></a>Отношение к API языка C
 Отдельная характеристика, который задает библиотеку Microsoft Foundation Class (MFC) отдельно от других библиотек классов для Windows является очень близкие сопоставление с API Windows, написанных на языке C. Кроме того можно обычно смешивать вызовы библиотеки классов свободно с прямые вызовы Windows API. Прямой доступ, однако означает, что классы не полная замена для этого API-интерфейса. Разработчики должны периодически убедиться, прямые вызовы некоторых функций Windows, таких как [SetCursor](http://msdn.microsoft.com/library/windows/desktop/ms648393) и [GetSystemMetrics](http://msdn.microsoft.com/library/windows/desktop/ms724385), например. Функции Windows заключается только в том случае, если есть свои преимущества для этого функции-члена класса.  

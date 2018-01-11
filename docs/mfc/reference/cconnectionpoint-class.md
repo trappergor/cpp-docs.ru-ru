@@ -35,11 +35,12 @@ caps.latest.revision: "20"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: dc5626c78cdba95f1368d5bc53c275b56406f839
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: f6a9e9fafc2bbee9959a939815a92c9bc63a650f
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cconnectionpoint-class"></a>Класс CConnectionPoint
 Определяет особый тип интерфейса, используемый для взаимодействия с другими объектами OLE и называемый "точкой подключения".  
@@ -50,17 +51,17 @@ ms.lasthandoff: 10/24/2017
 class CConnectionPoint : public CCmdTarget  
 ```  
   
-## <a name="members"></a>Члены  
+## <a name="members"></a>Участники  
   
 ### <a name="public-constructors"></a>Открытые конструкторы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[CConnectionPoint::CConnectionPoint](#cconnectionpoint)|Создает объект `CConnectionPoint`.|  
   
 ### <a name="public-methods"></a>Открытые методы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[CConnectionPoint::GetConnections](#getconnections)|Возвращает все точки подключения на карте соединения.|  
 |[CConnectionPoint::GetContainer](#getcontainer)|Возвращает контейнер элемента управления, которому принадлежит сопоставление подключения.|  

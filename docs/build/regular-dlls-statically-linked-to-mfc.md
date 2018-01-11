@@ -20,11 +20,12 @@ caps.latest.revision: "7"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: acf04ba49e8e99aa1f51e5181f063d8da86c40e1
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 0fd5eee67b48fd4895cc73adfb72d34f0bd24d2c
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="regular-mfc-dlls-statically-linked-to-mfc"></a>Регулярные MFC библиотеки DLL, статически компонуемые с MFC
 Обычный, MFC DLL, статически компонуемые с MFC является библиотекой DLL, внутренне использует MFC, а экспортированные функции в DLL может быть вызван MFC или не MFC исполняемых файлов. Как из названия, этот вид библиотек DLL построен с использованием статическая компоновка версии библиотеки MFC. Функции обычно экспортируются из библиотеки DLL MFC, с помощью стандартного интерфейса C обычного. Пример того, как записи, создания и использования регулярных DLL MFC, см. в образце [DLLScreenCap](https://github.com/Microsoft/VCSamples/tree/master/VC2010Samples/MFC/advanced/DllScreenCap).  

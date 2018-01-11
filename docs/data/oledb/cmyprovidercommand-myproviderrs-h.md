@@ -1,33 +1,35 @@
 ---
-title: "CMyProviderCommand (MyProviderRS.H) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "cmyprovidercommand"
-  - ""myproviderrs.h""
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "CMyProviderCommand - класс (MyProviderRS.H)"
-  - "поставщики OLE DB, файлы, созданные мастером"
+title: "CMyProviderCommand (MyProviderRS.H) | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- cmyprovidercommand
+- myproviderrs.h
+dev_langs: C++
+helpviewer_keywords:
+- OLE DB providers, wizard-generated files
+- CMyProviderCommand class in MyProviderRS.H
 ms.assetid: b30b956e-cc91-4cf5-9fe6-f8b1ce9cc2a5
-caps.latest.revision: 7
-caps.handback.revision: 7
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "7"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: 67a394ce3c3b05e3f5eea49cbd3a234a0dd89df2
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 12/21/2017
 ---
-# CMyProviderCommand (MyProviderRS.H)
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Класс `CMyProviderCommand` обеспечивает реализацию объекта команд поставщика.  Он предоставляет реализацию интерфейсов `IAccessor`, `ICommandText` и **ICommandProperties**.  Интерфейс `IAccessor` не отличается от интерфейса для набора строк.  Объект команд использует метод доступа для указания привязки параметров.  Объект набора строк использует их для указания привязки выходных столбцов.  Интерфейс `ICommandText` полезен для текстового указания команды.  В этом примере интерфейс `ICommandText` используется позже, при добавлении пользовательского кода; в примере также переопределяется метод `ICommand::Execute`.  Интерфейс **ICommandProperties** обрабатывает все свойства объекта команд и объекта набора строк.  
+# <a name="cmyprovidercommand-myproviderrsh"></a>CMyProviderCommand (MyProviderRS.H)
+`CMyProviderCommand` Класс является реализацией для объекта команды поставщика. Он обеспечивает реализацию `IAccessor`, `ICommandText`, и **ICommandProperties** интерфейсов. `IAccessor` Интерфейс является таким же, как в наборе строк. Объект команды использует метод доступа для указания привязки параметров. Объект набора строк использует их для указания привязки выходных столбцов. `ICommandText` Интерфейс является удобным способом для текстового указания команды. В этом примере используется `ICommandText` интерфейс позже, при добавлении пользовательского кода; оно также переопределяет `ICommand::Execute` метод. **ICommandProperties** интерфейс обрабатывает все свойства для объектов команд и наборов строк.  
   
 ```  
 // CMyProviderCommand  
@@ -42,11 +44,11 @@ class ATL_NO_VTABLE CMyProviderCommand :
    public IColumnsInfoImpl<CMyProviderCommand>  
 ```  
   
- Интерфейс `IAccessor` управляет всеми привязками, используемыми в командах и наборах строк.  Объект\-получатель вызывает метод **IAccessor::CreateAccessor** с массивом структур **DBBINDING**.  В каждой структуре **DBBINDING** содержатся сведения о том, как следует проводить привязку столбцов \(например, тип данных и длина столбца\).  Поставщик получает структуры и определяет, как следует передавать данные и нужны ли какие\-либо преобразования.  Интерфейс `IAccessor` используется в объекте команд для обработки параметров команды.  
+ `IAccessor` Интерфейс управляет всеми привязками, используемыми в командах и наборах строк. Потребитель вызывает метод **IAccessor::CreateAccessor** с массивом **DBBINDING** структуры. Каждый **DBBINDING** структура содержит сведения об обработке привязки столбцов (например, тип и длина). Поставщик получает структуры и определяет способ передачи данных и нужны ли какие-либо преобразования. `IAccessor` Интерфейс используется в объекте команд для обработки параметров команды.  
   
- В объекте команд также предоставляется реализация `IColumnsInfo`.  Для OLE DB требуется интерфейс `IColumnsInfo`.  Он позволяет объекту\-получателю запрашивать сведения о параметрах команды.  Объект набора строк использует интерфейс `IColumnsInfo`, чтобы передавать сведения о выходных столбцах поставщику.  
+ Объект команды также предоставляет реализацию `IColumnsInfo`. OLE DB требует `IColumnsInfo` интерфейса. Этот интерфейс позволяет потребителю запрашивать сведения о параметрах команды. Объект набора строк использует `IColumnsInfo` интерфейс для возврата сведений о выходных столбцах поставщику.  
   
- В поставщике также содержится интерфейс `IObjectWithSite`.  Интерфейс `IObjectWithSite` реализован в библиотеке ATL 2.0, он позволяет разработчику класса передавать сведения о классе потомкам.  Объект команд использует сведения интерфейса `IObjectWithSite`, чтобы сообщать всем созданным объектам набора строк сведения об их создателе.  
+ Поставщик также содержится интерфейс `IObjectWithSite`. `IObjectWithSite` Интерфейс реализован в библиотеке ATL 2.0 и позволяет разработчику класса передавать сведения о потомкам. Объект команды использует `IObjectWithSite` сведения, чтобы сообщать всем созданным объектам набора строк о кто их создал.  
   
-## См. также  
+## <a name="see-also"></a>См. также  
  [Созданные мастером поставщика файлы](../../data/oledb/provider-wizard-generated-files.md)

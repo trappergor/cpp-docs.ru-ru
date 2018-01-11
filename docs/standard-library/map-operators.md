@@ -13,10 +13,9 @@ f1_keywords:
 - map/std::operator&lt;
 - map/std::operator&lt;=
 - map/std::operator==
-dev_langs:
-- C++
+dev_langs: C++
 ms.assetid: 7df02b9f-701c-44ed-834a-a819badc5bd0
-caps.latest.revision: 7
+caps.latest.revision: "7"
 manager: ghogen
 helpviewer_keywords:
 - std::operator!= (map)
@@ -25,22 +24,21 @@ helpviewer_keywords:
 - std::operator&lt; (map)
 - std::operator&lt;= (map)
 - std::operator== (map)
-ms.translationtype: MT
-ms.sourcegitcommit: 65f4e356ad0d46333b0d443d0fd6ac0b9f2b6f58
 ms.openlocfilehash: 6b2eb6b5ab3a8b08af5375b7767328289c68a744
-ms.contentlocale: ru-ru
-ms.lasthandoff: 10/03/2017
-
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="ltmapgt-operators"></a>Операторы &lt;map&gt;
 ||||  
 |-|-|-|  
-|[оператор!=](#op_neq)|[оператор&gt;](#op_gt)|[оператор&gt;=](#op_gt_eq)|  
-|[оператор&lt;](#op_lt)|[оператор&lt;=](#op_lt_eq)|[оператор==](#op_eq_eq)|  
-|[operator!= (multimap)](#op_neq_multimap)|[оператор&gt;](#op_gt_multimap)|[оператор&gt;=](#op_gt_eq_multimap)|  
-|[оператор&lt;](#op_lt_multimap)|[оператор&lt;=](#op_lt_eq_multimap)|[оператор==](#op_eq_eq_multimap)|  
+|[оператор!=](#op_neq)|[оператор&gt;](#op_gt)|[operator&gt;=](#op_gt_eq)|  
+|[оператор&lt;](#op_lt)|[operator&lt;=](#op_lt_eq)|[оператор==](#op_eq_eq)|  
+|[operator!= (multimap)](#op_neq_multimap)|[оператор&gt;](#op_gt_multimap)|[operator&gt;=](#op_gt_eq_multimap)|  
+|[оператор&lt;](#op_lt_multimap)|[operator&lt;=](#op_lt_eq_multimap)|[оператор==](#op_eq_eq_multimap)|  
   
-##  <a name="op_neq"></a>  оператор!=  
+##  <a name="op_neq"></a> operator!=  
  Проверяет неравенство объекта map слева от оператора объекту map справа от оператора.  
   
 ```
@@ -100,7 +98,7 @@ The maps m1 and m3 are equal.
 *\  
 ```  
   
-##  <a name="op_lt"></a>  оператор&lt;  
+##  <a name="op_lt"></a> operator&lt;  
  Проверяет, меньше ли объект map слева от оператора, чем объект map справа от оператора.  
   
 ```
@@ -160,7 +158,7 @@ The map m1 is not less than the map m3.
 *\  
 ```  
   
-##  <a name="op_lt_eq"></a>  оператор&lt;=  
+##  <a name="op_lt_eq"></a> operator&lt;=  
  Проверяет, что объект map слева от оператора меньше или равен объекту map справа от оператора.  
   
 ```
@@ -224,7 +222,7 @@ The map m1 is less than or equal to the map m4.
 *\  
 ```  
   
-##  <a name="op_eq_eq"></a>  оператор==  
+##  <a name="op_eq_eq"></a> operator==  
  Проверяет равенство объекта map слева от оператора объекту map справа от оператора.  
   
 ```
@@ -284,7 +282,7 @@ The maps m1 and m3 are equal.
 *\  
 ```  
   
-##  <a name="op_gt"></a>  оператор&gt;  
+##  <a name="op_gt"></a> operator&gt;  
  Проверяет, что объект map слева от оператора больше объекта map справа от оператора.  
   
 ```
@@ -344,7 +342,7 @@ The map m1 is greater than the map m3.
 *\  
 ```  
   
-##  <a name="op_gt_eq"></a>  оператор&gt;=  
+##  <a name="op_gt_eq"></a> operator&gt;=  
  Проверяет, что объект map слева от оператора больше или равен объекту map справа от оператора.  
   
 ```
@@ -468,7 +466,7 @@ The multimaps m1 and m3 are equal.
 *\  
 ```  
   
-##  <a name="op_lt_multimap"></a>  оператор&lt;  
+##  <a name="op_lt_multimap"></a> operator&lt;  
  Проверяет, меньше ли объект multimap слева от оператора объекта multimap справа от оператора.  
   
 ```
@@ -528,7 +526,7 @@ The multimap m1 is not less than the multimap m3.
 *\  
 ```  
   
-##  <a name="eq_multimap"></a>  оператор&lt;=  
+##  <a name="eq_multimap"></a> operator&lt;=  
  Проверяет, что объект multimap слева от оператора меньше объекта multimap справа от оператора или равен ему.  
   
 ```
@@ -592,7 +590,7 @@ m1 is less than or equal to m4
 *\  
 ```  
   
-##  <a name="op_eq_eq_multimap"></a>  оператор==  
+##  <a name="op_eq_eq_multimap"></a> operator==  
  Проверяет равенство объекта multimap слева от оператора объекту multimap справа от оператора.  
   
 ```
@@ -652,7 +650,7 @@ m1 and m3 are equal
 *\  
 ```  
   
-##  <a name="op_gt_multimap"></a>  оператор&gt;  
+##  <a name="op_gt_multimap"></a> operator&gt;  
  Проверяет, что объект multimap слева от оператора больше объекта multimap справа от оператора.  
   
 ```
@@ -712,7 +710,7 @@ The multimap m1 is greater than the multimap m3.
 *\  
 ```  
   
-##  <a name="op_gt_eq_multimap"></a>  оператор&gt;=  
+##  <a name="op_gt_eq_multimap"></a> operator&gt;=  
  Проверяет, что объект multimap слева от оператора больше объекта multimap справа от оператора или равен ему.  
   
 ```
@@ -778,7 +776,6 @@ The multimap m1 is greater than or equal to the multimap m4.
   
 ## <a name="see-also"></a>См. также  
  [\<map>](../standard-library/map.md)
-
 
 
 

@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-windows
+ms.technology: cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
@@ -15,24 +14,23 @@ f1_keywords:
 - AFXANIMATIONCONTROLLER/CAnimationManagerEventHandler::CreateInstance
 - AFXANIMATIONCONTROLLER/CAnimationManagerEventHandler::OnManagerStatusChanged
 - AFXANIMATIONCONTROLLER/CAnimationManagerEventHandler::SetAnimationController
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - CAnimationManagerEventHandler [MFC], CAnimationManagerEventHandler
 - CAnimationManagerEventHandler [MFC], CreateInstance
 - CAnimationManagerEventHandler [MFC], OnManagerStatusChanged
 - CAnimationManagerEventHandler [MFC], SetAnimationController
 ms.assetid: 6089ec07-e661-4805-b227-823b4652aade
-caps.latest.revision: 18
+caps.latest.revision: "18"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 388986aa3bf16a2863258981380f0f98c9f88afa
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
-ms.sourcegitcommit: 4a770b6508067913aec51b8b3878f33e30eed4bb
-ms.openlocfilehash: d44e0060f22f99ffff4e6fb8d4209dd166922e11
-ms.contentlocale: ru-ru
-ms.lasthandoff: 10/09/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="canimationmanagereventhandler-class"></a>Класс CAnimationManagerEventHandler
 Реализует обратный вызов, используемый API анимации при изменении состояния диспетчера анимации.  
@@ -43,17 +41,17 @@ ms.lasthandoff: 10/09/2017
 class CAnimationManagerEventHandler : public CUIAnimationManagerEventHandlerBase<CAnimationManagerEventHandler>;  
 ```  
   
-## <a name="members"></a>Члены  
+## <a name="members"></a>Участники  
   
 ### <a name="public-constructors"></a>Открытые конструкторы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[CAnimationManagerEventHandler::CAnimationManagerEventHandler](#canimationmanagereventhandler)|Создает объект `CAnimationManagerEventHandler`.|  
   
 ### <a name="public-methods"></a>Открытые методы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[CAnimationManagerEventHandler::CreateInstance](#createinstance)|Создает экземпляр `CAnimationManagerEventHandler` объекта.|  
 |[CAnimationManagerEventHandler::OnManagerStatusChanged](#onmanagerstatuschanged)|Вызывается при изменении состояния диспетчера анимации. (Переопределяет `CUIAnimationManagerEventHandlerBase::OnManagerStatusChanged`.)|  
@@ -138,4 +136,3 @@ void SetAnimationController(CAnimationController* pAnimationController);
   
 ## <a name="see-also"></a>См. также  
  [Классы](../../mfc/reference/mfc-classes.md)
-

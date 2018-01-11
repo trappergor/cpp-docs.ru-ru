@@ -30,11 +30,12 @@ caps.latest.revision: "12"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 55e6df559d6a8365635cea7e94d20bd2576d2273
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 136b9f5dd36c9e4092b8e5c15ac1738541cf71f2
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="toolbar-fundamentals"></a>Основные сведения о панелях инструментов
 В этой статье описываются основные реализации MFC, позволяющий добавить панель инструментов по умолчанию для приложения, выбрав параметр в мастере приложений. Рассмотрены следующие темы.  

@@ -51,11 +51,12 @@ caps.latest.revision: "30"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 737cf083eeca60cd0d6ac95cccbe570c56968fd9
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 59eb92e44a26577866a797243f3a32d53b854365
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cmfcoutlookbarpane-class"></a>Класс CMFCOutlookBarPane
 [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
@@ -68,18 +69,18 @@ ms.lasthandoff: 10/24/2017
 class CMFCOutlookBarPane : public CMFCToolBar  
 ```  
   
-## <a name="members"></a>Члены  
+## <a name="members"></a>Участники  
   
 ### <a name="public-constructors"></a>Открытые конструкторы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |`CMFCOutlookBarPane::CMFCOutlookBarPane`|Конструктор по умолчанию.|  
 |`CMFCOutlookBarPane::~CMFCOutlookBarPane`|Деструктор.|  
   
 ### <a name="public-methods"></a>Открытые методы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[CMFCOutlookBarPane::AddButton](#addbutton)|Добавляет кнопку область панели Outlook.|  
 |[CMFCOutlookBarPane::CanBeAttached](#canbeattached)|Определяет, можно ли прикрепить к другой панели или окне фрейма области. (Переопределяет [CBasePane::CanBeAttached](../../mfc/reference/cbasepane-class.md#canbeattached).)|  
@@ -107,7 +108,7 @@ class CMFCOutlookBarPane : public CMFCToolBar
   
 ### <a name="protected-methods"></a>Защищенные методы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[CMFCOutlookBarPane::EnableContextMenuItems](#enablecontextmenuitems)|Указывает, какие элементы контекстного меню отображаются в режим настройки.|  
 |[CMFCOutlookBarPane::RemoveAllButtons](#removeallbuttons)|Удаляет все кнопки в область панели Outlook. (Переопределяет [CMFCToolBar::RemoveAllButtons](../../mfc/reference/cmfctoolbar-class.md#removeallbuttons).)|  

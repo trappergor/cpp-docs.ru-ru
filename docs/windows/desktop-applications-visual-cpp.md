@@ -13,11 +13,14 @@ caps.latest.revision: "17"
 author: ghogen
 ms.author: ghogen
 manager: ghogen
-ms.openlocfilehash: 953bb3c84916920d9913bac9242650e66114cefc
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: 7e2da53a234f63bfd4c8a7f84ec5c107426f0e7c
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="desktop-applications-visual-c"></a>Настольные приложения (Visual C++)
 Объект *классического приложения* в C++ является собственным приложением, которое можно получить доступ к полный набор API-интерфейсов Windows и выполняется либо в окне или в системную консоль. Настольные приложения в C++ можно запустить в Windows XP до Windows 10 (хотя больше официально не поддерживает Windows XP и существует много интерфейсов API Windows, которые были введены после этого).   Классическое приложение отличается от приложения универсальной платформы Windows (UWP), которая может выполняться на компьютерах под управлением Windows 10, а также на XBox, Windows Phone, Surface Hub и других устройствах. Дополнительные сведения о рабочих столов vs. Приложения UWP, см. [Выбор технологии](https://msdn.microsoft.com/en-us/library/windows/desktop/dn614993\(v=vs.85\).aspx).  
@@ -36,7 +39,7 @@ ms.lasthandoff: 10/24/2017
   
 ## <a name="in-this-section"></a>Содержание раздела  
   
-|Заголовок|Описание|  
+|Заголовок|Описание:|  
 |-----------|-----------------|  
 |[Консольные приложения](../windows/console-applications-in-visual-cpp.md)|Содержит сведения о консольных приложениях. Консольное приложение Win32 (или Win64) не имеет собственного окна и цикла обработки сообщений. Оно выполняется в окне консоли, а ввод и вывод обрабатываются через командную строку.|  
 |[Классические приложения Windows](../windows/windows-desktop-applications-cpp.md)|Инструкции по созданию Классические приложения, работающие в windows, в отличие от консоли.|  
@@ -46,7 +49,7 @@ ms.lasthandoff: 10/24/2017
   
 ## <a name="related-articles"></a>Связанные статьи  
   
-|Заголовок|Описание|  
+|Заголовок|Описание:|  
 |-----------|-----------------|  
 |[Разработка для Windows](http://go.microsoft.com/fwlink/p/?LinkId=262282)|Содержит сведения об API Windows и COM. (Некоторые API-интерфейсы Windows и сторонние библиотеки DLL реализованы в виде объектов COM).|  
 |[Hilo: разработка приложений C++ для Windows 7](http://go.microsoft.com/fwlink/p/?LinkId=262284)|Описание способов создания классического приложения Windows, использующего анимацию Windows и Direct2D для создания интерфейса пользователя по принципу карусели.  Этот учебник не была обновлена с Windows 7, но она по-прежнему содержит throough введение в программирование Win32.|  

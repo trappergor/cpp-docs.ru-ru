@@ -23,11 +23,12 @@ caps.latest.revision: "18"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 7b5fa9a3636b9aa83344b6ae433afefd2c959d31
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: ef5ba7c445325131ad620efcbb6061a0fa49039a
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="istreamiterator-class"></a>Класс istream_iterator
 Описывает объект итератора ввода. Извлекает объекты класса `Type` из входного потока, доступ к которому получает через сохраненный объект типа `pointer`, на `basic_istream`< `CharType`, `Traits`>.  
@@ -64,7 +65,7 @@ class istream_iterator
 |-|-|  
 |[istream_iterator](#istream_iterator)|Создает итератор конца потока в качестве итератора `istream_iterator` по умолчанию или итератор `istream_iterator`, инициализированный в тип потока итератора, из которого он считывается.|  
   
-### <a name="typedefs"></a>Typedefs  
+### <a name="typedefs"></a>Определения типов  
   
 |||  
 |-|-|  
@@ -77,7 +78,7 @@ class istream_iterator
 |||  
 |-|-|  
 |[оператор*](#op_star)|Оператор удаления ссылки возвращает сохраненный объект типа `Type`, к которому обращается `istream_iterator`.|  
-|[оператор->](#operator-_gt)|Возвращает значение члена при наличии.|  
+|[оператор>](#operator-_gt)|Возвращает значение члена при наличии.|  
 |[оператор++](#op_add_add)|Либо извлекает увеличенный объект из входного потока, либо копирует объект перед его увеличением и возвращает копию.|  
   
 ## <a name="requirements"></a>Требования  

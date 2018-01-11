@@ -125,11 +125,12 @@ caps.latest.revision: "17"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 46ca0fbb4b076fe8cf9dab4d986da487b16cc976
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: a52a2add3306aaf684f9a48a06d1add229205233
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="crendertarget-class"></a>Класс CRenderTarget
 Программа-оболочка для ID2D1RenderTarget.  
@@ -140,18 +141,18 @@ ms.lasthandoff: 10/24/2017
 class CRenderTarget : public CObject;  
 ```  
   
-## <a name="members"></a>Члены  
+## <a name="members"></a>Участники  
   
 ### <a name="public-constructors"></a>Открытые конструкторы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[CRenderTarget::CRenderTarget](#crendertarget)|Создает объект CRenderTarget.|  
 |[CRenderTarget:: ~ CRenderTarget](#crendertarget__~crendertarget)|Деструктор Вызывается при уничтожении целевой объект отрисовки.|  
   
 ### <a name="public-methods"></a>Открытые методы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[CRenderTarget::Attach](#attach)|Присоединяет существующую отрисовки интерфейса целевой объект|  
 |[CRenderTarget::BeginDraw](#begindraw)|Инициирует рисования в этом целевом объекте отрисовки.|  
@@ -205,19 +206,19 @@ class CRenderTarget : public CObject;
   
 ### <a name="protected-methods"></a>Защищенные методы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[CRenderTarget::VerifyResource](#verifyresource)|Проверяет допустимость объекта CD2DResource; Создает объект, если он еще не существует.|  
   
 ### <a name="public-operators"></a>Открытые операторы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[CRenderTarget::operator ID2D1RenderTarget *](#operator_id2d1rendertarget_star)|Возвращает интерфейс ID2D1RenderTarget|  
   
 ### <a name="protected-data-members"></a>Защищенные члены данных  
   
-|Имя|Описание|  
+|name|Описание:|  
 |----------|-----------------|  
 |[CRenderTarget::m_lstResources](#m_lstresources)|Список указателей на объекты CD2DResource.|  
 |[CRenderTarget::m_pRenderTarget](#m_prendertarget)|Указатель на объект ID2D1RenderTarget.|  

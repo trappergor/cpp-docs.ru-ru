@@ -15,11 +15,14 @@ caps.latest.revision: "4"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 3c56d03b74080ae65f84ffbad8c4dd2092be1082
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: 991d428e90654fd29cfbb9c5c7e110708a05de01
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="simpleactivationfactory-class"></a>SimpleActivationFactory - класс
 Предоставляет основной механизм для создания базового класса среды выполнения Windows или классической модели COM.  
@@ -44,11 +47,11 @@ class SimpleActivationFactory : public ActivationFactory<>;
   
  `ActivatableClassWithFactoryEx(MyClass, SimpleActivationFactory, MyServerName);`  
   
-## <a name="members"></a>Члены  
+## <a name="members"></a>Участники  
   
 ### <a name="public-methods"></a>Открытые методы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[Метод SimpleActivationFactory::ActivateInstance](../windows/simpleactivationfactory-activateinstance-method.md)|Создает экземпляр указанного интерфейса.|  
 |[Метод SimpleActivationFactory::GetRuntimeClassName](../windows/simpleactivationfactory-getruntimeclassname-method.md)|Получает имя класса среды выполнения экземпляра класса, указанного в параметре шаблона класса `Base`.|  

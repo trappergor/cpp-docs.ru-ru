@@ -29,11 +29,12 @@ helpviewer_keywords:
 - std::timed_mutex [C++], try_lock_for
 - std::timed_mutex [C++], try_lock_until
 - std::timed_mutex [C++], unlock
-ms.openlocfilehash: bdc08654cef6d5e1c9b174734e43a38a4795ca41
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: b8b27489ce275cde4d0493a496980afd844f2378
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="timedmutex-class"></a>Класс timed_mutex
 Представляет *тип мьютекса с ограничением по времени*. Используйте объекты этого типа для принудительного взаимного исключения с помощью ограниченной по времени блокировки в программе.  
@@ -44,18 +45,18 @@ ms.lasthandoff: 10/24/2017
 class timed_mutex;
 ```  
   
-## <a name="members"></a>Члены  
+## <a name="members"></a>Участники  
   
 ### <a name="public-constructors"></a>Открытые конструкторы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[timed_mutex](#timed_mutex)|Создает объект `timed_mutex`, который не заблокирован.|  
 |[Деструктор timed_mutex::~timed_mutex](#dtortimed_mutex_destructor)|Освобождает все ресурсы, используемые объектом `timed_mutex`.|  
   
 ### <a name="public-methods"></a>Открытые методы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[lock](#lock)|Блокирует вызывающий поток до тех пор, пока этот поток не получит права владельца объекта `mutex`.|  
 |[try_lock](#try_lock)|Попытки получить права владельца объекта `mutex` без блокировки.|  

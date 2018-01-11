@@ -4,49 +4,30 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-tools
+ms.technology: cpp-tools
 ms.tgt_pltfrm: 
 ms.topic: error-reference
-f1_keywords:
-- C4391
-dev_langs:
-- C++
-helpviewer_keywords:
-- C4391
+f1_keywords: C4391
+dev_langs: C++
+helpviewer_keywords: C4391
 ms.assetid: 95c6182c-fae9-4174-8f7b-98aa352e68ca
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
-ms.openlocfilehash: 81b7e6ba142edb94dd77f4a63c42b245b61ccc45
-ms.contentlocale: ru-ru
-ms.lasthandoff: 02/24/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: e41234f179a977643f8f44ad1e5fad05e1a2361f
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="compiler-warning-level-1-c4391"></a>Предупреждение компилятора (уровень 1) C4391
-«сигнатура»: неверный тип возвращаемого значения для встроенной функции, ожидается «тип»  
+«сигнатура»: неправильный возвращаемый тип для подставляемой функции; ожидается «тип»  
   
- В объявлении функции встроенные функции компилятора имел неверный возвращаемый тип. Полученное изображение может работать неправильно.  
+ В объявлении функции встроенные функции компилятора имел неправильный возвращаемый тип. Полученный образ может неправильно выполняться.  
   
- Чтобы решить эту проблему, исправьте его объявление или удалить объявление и просто #include соответствующий файл заголовка.  
+ Чтобы решить эту проблему, исправьте объявление или удалить его и просто #include соответствующий файл заголовка.  
   
  Следующий пример приводит к возникновению ошибки C4391:  
   

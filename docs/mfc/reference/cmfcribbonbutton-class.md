@@ -125,11 +125,12 @@ caps.latest.revision: "42"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 5215adddf92cee7ff0bc079cf42d6dceea3f99b2
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 219d305b382d80e4015578b16531158c0f8d643d
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cmfcribbonbutton-class"></a>Класс CMFCRibbonButton
 Класс `CMFCRibbonButton` реализует кнопки, которые можно размещать на элементах ленты, например на панелях, панелях быстрого доступа и во всплывающих меню.  
@@ -142,17 +143,17 @@ ms.lasthandoff: 10/24/2017
 class CMFCRibbonButton : public CMFCRibbonBaseElement  
 ```  
   
-## <a name="members"></a>Члены  
+## <a name="members"></a>Участники  
   
 ### <a name="public-constructors"></a>Открытые конструкторы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[CMFCRibbonButton::CMFCRibbonButton](#cmfcribbonbutton)|Создает объект "кнопка ленты".|  
   
 ### <a name="public-methods"></a>Открытые методы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[CMFCRibbonButton::AddSubItem](#addsubitem)|Добавляет во всплывающее меню элемент, связанный с кнопкой.|  
 |[CMFCRibbonButton::CanBeStretched](#canbestretched)|(Переопределяет [CMFCRibbonBaseElement::CanBeStretched](../../mfc/reference/cmfcribbonbaseelement-class.md#canbestretched).)|  
@@ -209,7 +210,7 @@ class CMFCRibbonButton : public CMFCRibbonBaseElement
   
 ### <a name="protected-methods"></a>Защищенные методы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[CMFCRibbonButton::OnClick](#onclick)|Вызывается платформой по нажатию кнопки.|  
   

@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -15,36 +14,21 @@ f1_keywords:
 - filesystem/std::experimental::filesystem::filesystem_error
 - filesystem/std::experimental::filesystem::directory_iterator
 - <filesystem>
-dev_langs:
-- C++
+dev_langs: C++
 ms.assetid: 5005753b-46fa-43e1-8d4e-1b38617d3cfd
-caps.latest.revision: 27
+caps.latest.revision: "27"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.mt:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
-ms.openlocfilehash: 4cb454ca6ea92ede5c4cf83c1072e22e60577811
-ms.contentlocale: ru-ru
-ms.lasthandoff: 04/29/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: 7c8e09c494ee23d227321a807c8c533d16f981a8
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="ltfilesystemgt"></a>&lt;filesystem&gt;
-Чтобы иметь доступ к классам и функциям, позволяющим управлять и получать сведения о путях, файлах и каталогах, включите заголовок \<filesystem>.  
+Чтобы иметь доступ к классам и функциям, позволяющим управлять и получать сведения о путях, файлах и каталогах, включите заголовок &lt;filesystem>.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -55,11 +39,11 @@ using namespace std::experimental::filesystem::v1;
 ```  
   
 > [!IMPORTANT]
->  На момент выпуска Visual Studio 2017 заголовок \<experimental/filesystem> еще не был стандартом C++. Visual C++ 2017 реализует окончательный проект стандарта, который находится в [ISO/IEC JTC 1/SC 22/WG 21 N4100](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2014/n4100.pdf).  
+>  В выпуске Visual Studio 2017 г \<filesystem > заголовок еще не стандарта C++. Visual C++ 2017 реализует окончательный проект стандарта, который находится в [ISO/IEC JTC 1/SC 22/WG 21 N4100](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2014/n4100.pdf).  
   
  Этот заголовок поддерживает файловые системы одного из двух широких классов операционных систем размещения: Microsoft Windows и Posix.  
   
- Хотя большинство функций являются общими для обеих операционных систем, в этом документе указываются некоторые отличия. Например:  
+ Хотя большинство функций являются общими для обеих операционных систем, в этом документе указываются некоторые отличия. Пример:  
   
 -   Windows поддерживает несколько корневых имен, таких как c: или \\\network_name. Поэтому файловая система состоит из леса деревьев, где каждое дерево имеет свой собственный корневой каталог (например, c:\ или \\\network_name\\) и свой собственный текущий каталог для завершения относительного пути (который не является абсолютным путем).  
   
@@ -73,15 +57,15 @@ using namespace std::experimental::filesystem::v1;
   
 -   В объекте класса path хранится путь в собственном формате, однако поддерживается простое преобразование между этим хранимым форматом и различными внешними:  
   
-    -   Завершающаяся нулем последовательность символов char в кодировке, предпочитаемой в операционной системе.  
+-   Завершающаяся нулем последовательность символов char в кодировке, предпочитаемой в операционной системе.  
   
-    -   Завершающаяся нулем последовательность символов char в кодировке UTF-8.  
+-   Завершающаяся нулем последовательность символов char в кодировке UTF-8.  
   
-    -   Завершающаяся нулем последовательность символов wchar_t в кодировке, предпочитаемой в операционной системе.  
+-   Завершающаяся нулем последовательность символов wchar_t в кодировке, предпочитаемой в операционной системе.  
   
-    -   Завершающаяся нулем последовательность символов char16_t в кодировке UTF-16.  
+-   Завершающаяся нулем последовательность символов char16_t в кодировке UTF-16.  
   
-    -   Завершающаяся нулем последовательность символов char32_t в кодировке UTF-32.  
+-   Завершающаяся нулем последовательность символов char32_t в кодировке UTF-32.  
   
  Взаимные преобразования между этими представлениями выполняются по мере необходимости с помощью одного или нескольких аспектов `codecvt`. Если конкретный языковой стандарт не назначен, эти аспекты поступают из глобального языкового стандарта.  
   
@@ -117,7 +101,7 @@ using namespace std::experimental::filesystem::v1;
   
 ## <a name="classes"></a>Классы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[Класс directory_entry](../standard-library/directory-entry-class.md)|Описывает объект, возвращаемый `directory_iterator` или `recursive_directory_iterator`, и содержит путь.|  
 |[Класс directory_iterator](../standard-library/directory-iterator-class.md)|Описывает итератор ввода, выполняющий последовательный перебор имен файлов в каталоге файловой системы.|  
@@ -128,7 +112,7 @@ using namespace std::experimental::filesystem::v1;
   
 ## <a name="structs"></a>Структуры  
   
-|Имя|Описание|  
+|name|Описание:|  
 |----------|-----------------|  
 |[Структура space_info](../standard-library/space-info-structure.md)|Содержит сведения о томе.|  
   
@@ -140,16 +124,15 @@ using namespace std::experimental::filesystem::v1;
   
 ## <a name="enumerations"></a>Перечисления  
   
-|Имя|Описание|  
+|name|Описание:|  
 |----------|-----------------|  
-|[copy_options](../standard-library/filesystem-enumerations.md#copy_options)|Перечисление, используемое с функцией [copy_file](http://msdn.microsoft.com/en-us/4af7a9b0-8861-45ed-b84e-0307f0669d60) , которое определяет действия в случае, если целевой файл уже существует.|  
+|[copy_options](../standard-library/filesystem-enumerations.md#copy_options)|Перечисление, используемое с функцией [copy_file](http://msdn.microsoft.com/4af7a9b0-8861-45ed-b84e-0307f0669d60), которое определяет поведение в случае, если конечный файл уже существует.|  
 |[directory_options](../standard-library/filesystem-enumerations.md#directory_options)|Перечисление, указывающее параметры итераторов каталога.|  
 |[file_type](../standard-library/filesystem-enumerations.md#file_type)|Перечисление для типов файлов.|  
 |[perms](../standard-library/filesystem-enumerations.md#perms)|Тип битовой маски, используемый для передачи разрешений и параметров для разрешений.|  
   
 ## <a name="see-also"></a>См. также  
  [Справочник по файлам заголовков](../standard-library/cpp-standard-library-header-files.md)
-
 
 
 

@@ -15,11 +15,14 @@ caps.latest.revision: "4"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: b1e28415cf6f0e5f29d50349cd38fe4b18cfe812
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: 7d1c6f8cf6ac62cca9be3e09d7d2a103d726cf05
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="handlenulltraits-structure"></a>HANDLENullTraits - структура
 Определяет общие характеристики дескриптора неинициализированным.  
@@ -30,17 +33,17 @@ ms.lasthandoff: 10/24/2017
 struct HANDLENullTraits;  
 ```  
   
-## <a name="members"></a>Члены  
+## <a name="members"></a>Участники  
   
 ### <a name="public-typedefs"></a>Общедоступные определения типов  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |`Type`|Синоним для HANDLE.|  
   
 ### <a name="public-methods"></a>Открытые методы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[Метод HANDLENullTraits::Close](../windows/handlenulltraits-close-method.md)|Закрывает указанный дескриптор.|  
 |[Метод HANDLENullTraits::GetInvalidValue](../windows/handlenulltraits-getinvalidvalue-method.md)|Представляет недопустимый дескриптор.|  

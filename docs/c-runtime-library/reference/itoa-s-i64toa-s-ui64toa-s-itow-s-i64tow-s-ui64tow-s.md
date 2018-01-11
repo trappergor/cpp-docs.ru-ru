@@ -69,11 +69,12 @@ caps.latest.revision: "28"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: ac2b681b605c4485ed87cecebb51afa6261cafff
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 1499f3feb76219ac03362fef70e4c3b516a8f060
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="itoas-i64toas-ui64toas-itows-i64tows-ui64tows"></a>_itoa_s, _i64toa_s, _ui64toa_s, _itow_s, _i64tow_s, _ui64tow_s
 Преобразует целое число в строку. Это версии функций [_itoa, _i64toa, _ui64toa, _itow, _i64tow, _ui64tow](../../c-runtime-library/reference/itoa-i64toa-ui64toa-itow-i64tow-ui64tow.md) с усовершенствованной безопасностью, как описано в разделе [Усовершенствования безопасности в CRT](../../c-runtime-library/security-features-in-the-crt.md).  
@@ -149,12 +150,12 @@ errno_t _itow_s(
   
 ### <a name="error-conditions"></a>Условия ошибок  
   
-|value|buffer|sizeInCharacters|radix|Return|  
+|value|buffer|sizeInCharacters|radix|Назад|  
 |-----------|------------|----------------------|-----------|------------|  
-|любые|`NULL`|любые|любые|`EINVAL`|  
-|любые|any|<=0|any|`EINVAL`|  
-|любые|any|<= требуемой длины результирующей строки|любые|`EINVAL`|  
-|любые|любые|any|`radix` < 2 или `radix` > 36|`EINVAL`|  
+|any|`NULL`|any|any|`EINVAL`|  
+|any|any|<=0|any|`EINVAL`|  
+|any|any|<= требуемой длины результирующей строки|any|`EINVAL`|  
+|any|any|any|`radix` < 2 или `radix` > 36|`EINVAL`|  
   
  **Проблемы безопасности**  
   
@@ -163,11 +164,11 @@ errno_t _itow_s(
 ## <a name="remarks"></a>Примечания  
  За исключением параметров и возвращаемого значения функции `_itoa_s` ведут себя так же, как и их менее безопасные версии.  
   
- В C++ использование данных функций упрощено наличием шаблонных перегрузок; перегруженные методы могут автоматически определять длину буфера (что исключает необходимость указания аргумента с размером буфера), а также они могут автоматически заменять более старые, незащищенные функции их новыми безопасными аналогами. Дополнительные сведения см. в разделе [Безопасные перегрузки шаблонов](../../c-runtime-library/secure-template-overloads.md).  
+ В C++ использование данных функций упрощено наличием шаблонных перегрузок; перегруженные методы могут автоматически определять длину буфера (что исключает необходимость указания аргумента с размером буфера), а также они могут автоматически заменять более старые, незащищенные функции их новыми безопасными аналогами. Дополнительные сведения см. в разделе [Secure Template Overloads](../../c-runtime-library/secure-template-overloads.md).  
   
  Отладочные версии этих функций сначала заполняют буфер значением 0xFD. Чтобы отключить это поведение, используйте [_CrtSetDebugFillThreshold](../../c-runtime-library/reference/crtsetdebugfillthreshold.md).  
   
-### <a name="generic-text-routine-mappings"></a>Универсальное текстовое сопоставление функций  
+### <a name="generic-text-routine-mappings"></a>Сопоставления подпрограмм обработки обычного текста  
   
 |Подпрограмма Tchar.h|_UNICODE и _MBCS не определены|_MBCS определено|_UNICODE определено|  
 |---------------------|--------------------------------------|--------------------|-----------------------|  

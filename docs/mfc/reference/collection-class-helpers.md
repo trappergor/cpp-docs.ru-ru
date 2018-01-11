@@ -20,11 +20,12 @@ caps.latest.revision: "14"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: b3d6baf4ba1622a9a9b54dcb25ed42eae89c86a0
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 82b11c4cbe8f862121d89c308ab11d53582931d7
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="collection-class-helpers"></a>Вспомогательные функции классов коллекции
 Классы коллекций `CMap`, `CList`, и `CArray` использовать Шаблонизированный вспомогательный объект глобальные функции для таких целей, как сравнение, копирования и сериализации элементов. Как часть реализации классов на основе `CMap`, `CList`, и `CArray`, необходимо переопределить эти функции, при необходимости с версиями, специально созданных для типа данных, хранящихся в вашей карты, список или массив. Сведения о переопределении вспомогательные функции, такие как `SerializeElements`, см. в статье [коллекций: как создать типобезопасную коллекцию](../../mfc/how-to-make-a-type-safe-collection.md). Обратите внимание, что **ConstructElements** и **DestructElements** являются устаревшими.  

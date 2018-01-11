@@ -51,11 +51,12 @@ caps.latest.revision: "23"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: ced7bfbb2cedd8cad4353cdbb2d5627864de5ad7
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 3359b506217d2828207e06341fbf1fe53b3c0719
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cdatetimectrl-class"></a>CDateTimeCtrl-класс
 Инкапсулирует функциональность элемента управления "выбор даты и времени".  
@@ -66,17 +67,17 @@ ms.lasthandoff: 10/24/2017
 class CDateTimeCtrl : public CWnd  
 ```  
   
-## <a name="members"></a>Члены  
+## <a name="members"></a>Участники  
   
 ### <a name="public-constructors"></a>Открытые конструкторы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[CDateTimeCtrl::CDateTimeCtrl](#cdatetimectrl)|Создает объект `CDateTimeCtrl`.|  
   
 ### <a name="public-methods"></a>Открытые методы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[CDateTimeCtrl::CloseMonthCal](#closemonthcal)|Закрывает текущий элемент управления выбора даты и времени.|  
 |[CDateTimeCtrl::Create](#create)|Создает элемент управления выбора даты и времени и прикрепляет его к `CDateTimeCtrl` объекта.|  
@@ -190,7 +191,7 @@ BOOL GetDateTimePickerInfo(LPDATETIMEPICKERINFO pDateTimePickerInfo) const;
   
 ### <a name="parameters"></a>Параметры  
   
-|Параметр|Описание|  
+|Параметр|Описание:|  
 |---------------|-----------------|  
 |[выходной] `pDateTimePickerInfo`|Указатель на [DATETIMEPICKERINFO](http://msdn.microsoft.com/library/windows/desktop/bb761729) структуру, которая получает описание текущего элемента управления выбора даты и времени.<br /><br /> Вызывающий объект отвечает за выделение этой структуры. Тем не менее, этот метод инициализирует `cbSize` член структуры.|  
   
@@ -345,7 +346,7 @@ BOOL GetIdealSize(LPSIZE psize) const;
   
 ### <a name="parameters"></a>Параметры  
   
-|Параметр|Описание|  
+|Параметр|Описание:|  
 |---------------|-----------------|  
 |[выходной] `psize`|Указатель на [размер](http://msdn.microsoft.com/library/windows/desktop/dd145106) структуру, содержащую идеального размера для элемента управления.|  
   
@@ -456,7 +457,7 @@ DWORD SetMonthCalStyle(DWORD dwStyle);
   
 ### <a name="parameters"></a>Параметры  
   
-|Параметр|Описание|  
+|Параметр|Описание:|  
 |---------------|-----------------|  
 |[in] `dwStyle`|Новый месяц календаря стиля элемента управления, который представляет собой битовую комбинацию (OR) стили элемента управления Календарь месяца. Дополнительные сведения см. в разделе [стили элемента управления Calendar Month](http://msdn.microsoft.com/library/windows/desktop/bb760919).|  
   

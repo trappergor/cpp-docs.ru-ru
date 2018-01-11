@@ -1,32 +1,33 @@
 ---
-title: "satype | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-f1_keywords: 
-  - "vc-attr.satype"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "satype attribute"
+title: "satype | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+f1_keywords: vc-attr.satype
+dev_langs: C++
+helpviewer_keywords: satype attribute
 ms.assetid: 1716590b-6bcb-4aba-b1bc-82f7335f02c3
-caps.latest.revision: 13
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 13
+caps.latest.revision: "13"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: 9d4e083cfd0ee1a72992d3c400c4790f5cd50396
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 12/21/2017
 ---
-# satype
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Указывает тип данных SAFEARRAY структура.  
+# <a name="satype"></a>satype
+Указывает тип данных **SAFEARRAY** структуры.  
   
-## Синтаксис  
+## <a name="syntax"></a>Синтаксис  
   
 ```  
   
@@ -35,28 +36,28 @@ caps.handback.revision: 13
 ) ]  
 ```  
   
-#### Параметры  
- *data\_type*  
- Тип данных SAFEARRAY структура данных, которая передается в качестве параметра методу интерфейса.  
+#### <a name="parameters"></a>Параметры  
+ *Тип данных*  
+ Тип данных для **SAFEARRAY** структуру данных, которая передается как параметр метода интерфейса.  
   
-## Требования  
+## <a name="requirements"></a>Требования  
   
-### Контекст атрибута  
+### <a name="attribute-context"></a>Контекст атрибута  
   
 |||  
 |-|-|  
 |**Применение**|Параметр интерфейса, метод интерфейса|  
-|**Repeatable**|Нет|  
-|**Обязательные атрибуты**|None|  
-|**Недопустимые атрибуты**|None|  
+|**Повторяемый**|Нет|  
+|**Обязательные атрибуты**|Нет|  
+|**Недопустимые атрибуты**|Нет|  
   
-## Заметки  
- **satype** атрибут C\+\+ определяет тип данных   **SAFEARRAY**.  
+## <a name="remarks"></a>Примечания  
+ **Satype** атрибут C++ указывает тип данных **SAFEARRAY**.  
   
 > [!NOTE]
->  Уровень косвенного обращения удален из SAFEARRAY указатель в созданном файле idl от того, как она объявлена в cpp\-файле.  
+>  Уровень косвенности удаляется из **SAFEARRAY** указатель в созданного IDL-файла из как он объявлен в CPP-файле.  
   
-## Пример  
+## <a name="example"></a>Пример  
   
 ```  
 // cpp_attr_ref_satype.cpp  
@@ -69,9 +70,8 @@ __interface A {
 };  
 ```  
   
-## См. также  
- [Compiler Attributes](../windows/compiler-attributes.md)   
- [Parameter Attributes](../windows/parameter-attributes.md)   
- [Method Attributes](../windows/method-attributes.md)   
+## <a name="see-also"></a>См. также  
+ [Атрибуты компилятора](../windows/compiler-attributes.md)   
+ [Атрибуты параметра](../windows/parameter-attributes.md)   
+ [Атрибуты метода](../windows/method-attributes.md)   
  [id](../windows/id.md)   
- [Attributes Samples](http://msdn.microsoft.com/ru-ru/558ebdb2-082f-44dc-b442-d8d33bf7bdb8)

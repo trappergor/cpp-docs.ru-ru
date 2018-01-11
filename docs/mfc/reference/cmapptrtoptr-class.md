@@ -45,11 +45,12 @@ caps.latest.revision: "22"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 0a5c0387224958e39605dfe3ec6f04ff978ef5bb
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: b7482e2824874cbe0e1126e49979f9dfd18ba57e
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cmapptrtoptr-class"></a>Класс CMapPtrToPtr
 Поддерживает сопоставления пустых указателей, зашифрованных пустыми указателями.  
@@ -60,7 +61,7 @@ ms.lasthandoff: 10/24/2017
 class CMapPtrToPtr : public CObject  
 ```  
   
-## <a name="members"></a>Члены  
+## <a name="members"></a>Участники  
  Функции-члены `CMapPtrToPtr` похожи на функции-члены класса [CMapStringToOb](../../mfc/reference/cmapstringtoob-class.md). Из-за этой схожести для изучения этой функции-члена можно использовать справочную документацию по классу `CMapStringToOb`. Если вы видите `CObject` указатель в качестве параметра функции или возвращаемого значения, заменить указатель `void`. Если вы видите `CString` или **const** указатель `char` как параметр функции или возвращаемого значения, замените указатель `void`.  
   
  `BOOL CMapStringToOb::Lookup( const char* <key>,`  
@@ -73,13 +74,13 @@ class CMapPtrToPtr : public CObject
   
 ### <a name="public-constructors"></a>Открытые конструкторы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[CMapStringToOb::CMapStringToOb](../../mfc/reference/cmapstringtoob-class.md#cmapstringtoob)|Конструктор.|  
   
 ### <a name="public-methods"></a>Открытые методы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[CMapStringToOb::GetCount](../../mfc/reference/cmapstringtoob-class.md#getcount)|Возвращает количество элементов в этой схеме.|  
 |[CMapStringToOb::GetHashTableSize](../../mfc/reference/cmapstringtoob-class.md#gethashtablesize)|Определяет текущее число элементов в хэш-таблице.|  
@@ -97,7 +98,7 @@ class CMapPtrToPtr : public CObject
   
 ### <a name="public-operators"></a>Открытые операторы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[[CMapStringToOb::operator]](../../mfc/reference/cmapstringtoob-class.md#operator_at)|Вставляет элемент в сопоставление — оператор подстановки для `SetAt`.|  
   

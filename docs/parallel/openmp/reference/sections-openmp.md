@@ -1,33 +1,33 @@
 ---
-title: "sections (OpenMP) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "section"
-  - "SECTIONS"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "sections OpenMP directive"
+title: "разделы (OpenMP) | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- section
+- SECTIONS
+dev_langs: C++
+helpviewer_keywords: sections OpenMP directive
 ms.assetid: 4cd1d776-e198-470e-930a-01fb0ab0a0bd
-caps.latest.revision: 11
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 11
+caps.latest.revision: "11"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 458d62bf17ce7f8778e40a4e90592aa59ba09e4c
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 12/21/2017
 ---
-# sections (OpenMP)
-[!INCLUDE[vs2017banner](../../../assembler/inline/includes/vs2017banner.md)]
-
-Определяет разделы кода, который должен быть секционированы среди всех потоков.  
+# <a name="sections-openmp"></a>sections (OpenMP)
+Определяет разделы кода, чтобы разделить между всеми потоками.  
   
-## Синтаксис  
+## <a name="syntax"></a>Синтаксис  
   
 ```  
 #pragma omp [parallel] sections [clauses]  
@@ -35,22 +35,22 @@ caps.handback.revision: 11
    #pragma omp section  
    {  
       code_block   
-   }   
+   }   
 }  
 ```  
   
-## Заметки  
- Здесь:  
+## <a name="remarks"></a>Примечания  
+ где  
   
- `clause` \(необязательный параметр\)  
- Ноль или несколько предложений.  Эти раздел " примечания " список предложений, поддерживаемых by **Разделы**.  
+ `clause` (необязательно)  
+ Ноль или несколько предложений. . В разделе «Примечания» в список предложений, поддерживаемых **разделы**.  
   
-## Заметки  
- **Разделы** директива может содержать ноль или более  **раздел** директивы.  
+## <a name="remarks"></a>Примечания  
+ **Разделы** директива может содержать ноль или более **раздел** директивы.  
   
- **Разделы** директива поддерживает следующие предложений OpenMP.  
+ **Разделы** директива поддерживает следующие предложения OpenMP:  
   
--   [firstprivate](../Topic/firstprivate.md)  
+-   [firstprivate](../../../parallel/openmp/reference/firstprivate.md)  
   
 -   [lastprivate](../../../parallel/openmp/reference/lastprivate.md)  
   
@@ -60,11 +60,11 @@ caps.handback.revision: 11
   
 -   [reduction](../../../parallel/openmp/reference/reduction.md)  
   
- If **Параллельно** определяет также,  `clause` может быть любым предложением выполнения  **Параллельно** OR  **Разделы** директивы, кроме  `nowait`.  
+ Если **параллельных** также указан `clause` любые предложения, принимаются по **параллельных** или **разделы** директивы, за исключением `nowait`.  
   
- Дополнительные сведения см. в разделе [2.4.2 sections Construct](../../../parallel/openmp/2-4-2-sections-construct.md).  
+ Дополнительные сведения см. в разделе [2.4.2 конструкция sections](../../../parallel/openmp/2-4-2-sections-construct.md).  
   
-## Пример  
+## <a name="example"></a>Пример  
   
 ```  
 // omp_sections.cpp  
@@ -82,7 +82,10 @@ int main() {
 }  
 ```  
   
-  **Hello из потока 0**  
-**Hello из потока 0**   
-## См. также  
- [Directives](../../../parallel/openmp/reference/openmp-directives.md)
+```Output  
+Hello from thread 0  
+Hello from thread 0  
+```  
+  
+## <a name="see-also"></a>См. также  
+ [Директивы](../../../parallel/openmp/reference/openmp-directives.md)

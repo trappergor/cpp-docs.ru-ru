@@ -23,11 +23,12 @@ caps.latest.revision: "12"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 63bf1b92521f7a99baed0d4a000b2f3cb1f804cb
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 45c595b78b17ed00691533369ec4837345fcce03
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="documentview-architecture"></a>Архитектура "документ-представление"
 По умолчанию мастер приложений MFC создает основу для приложений с класс документа и класс представления. MFC разделяет управление данными в этих двух классов. Документ хранит данные и управляет печать данных и координирует обновления нескольких представлений данных. Представление отображает данные и управляет взаимодействием пользователя с ним, включая выбор и изменение.  

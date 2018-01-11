@@ -93,11 +93,12 @@ caps.latest.revision: "24"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 7363aca122d002a3ae77f071287942783ac7fbf2
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 81b3b8d4c3f25e1c443d5fbcaeddb7b587216d69
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="coleserverdoc-class"></a>Класс COleServerDoc
 Базовый класс для серверной документации OLE.  
@@ -108,17 +109,17 @@ ms.lasthandoff: 10/24/2017
 class AFX_NOVTABLE COleServerDoc : public COleLinkingDoc  
 ```  
   
-## <a name="members"></a>Члены  
+## <a name="members"></a>Участники  
   
 ### <a name="public-constructors"></a>Открытые конструкторы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[COleServerDoc::COleServerDoc](#coleserverdoc)|Создает объект `COleServerDoc`.|  
   
 ### <a name="public-methods"></a>Открытые методы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[COleServerDoc::ActivateDocObject](#activatedocobject)|Активируется связанный документ DocObject.|  
 |[COleServerDoc::ActivateInPlace](#activateinplace)|Активирует документ для редактирования по месту.|  
@@ -149,7 +150,7 @@ class AFX_NOVTABLE COleServerDoc : public COleLinkingDoc
   
 ### <a name="protected-methods"></a>Защищенные методы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[COleServerDoc::CreateInPlaceFrame](#createinplaceframe)|Вызывается платформой для создания окна фрейма для встроенного редактирования.|  
 |[COleServerDoc::DestroyInPlaceFrame](#destroyinplaceframe)|Вызывается платформой для уничтожения окна фрейма для встроенного редактирования.|  
@@ -579,7 +580,7 @@ virtual HRESULT OnExecOleCmd(
 ### <a name="return-value"></a>Возвращаемое значение  
  Возвращает `S_OK` Если успешно; в противном случае — одно из следующих кодов ошибки:  
   
-|Значение|Описание|  
+|Значение|Описание:|  
 |-----------|-----------------|  
 |**E_UNEXPECTED**|Произошла непредвиденная ошибка|  
 |**E_FAIL**|Произошла ошибка|  

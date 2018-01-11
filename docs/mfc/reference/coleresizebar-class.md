@@ -21,11 +21,12 @@ caps.latest.revision: "23"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 3369ef30758b687c94c97e5fb0cf18bb7565ea83
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 0cc0b9f85392a69191ee3c948985c61bd2d1f494
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="coleresizebar-class"></a>Класс COleResizeBar
 Тип панели элементов управления, который поддерживает изменение размера элементов OLE "на месте".  
@@ -36,17 +37,17 @@ ms.lasthandoff: 10/24/2017
 class COleResizeBar : public CControlBar  
 ```  
   
-## <a name="members"></a>Члены  
+## <a name="members"></a>Участники  
   
 ### <a name="public-constructors"></a>Открытые конструкторы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[COleResizeBar::COleResizeBar](#coleresizebar)|Создает объект `COleResizeBar`.|  
   
 ### <a name="public-methods"></a>Открытые методы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[COleResizeBar::Create](#create)|Создает и инициализирует дочернее окно Windows и связывает его `COleResizeBar` объекта.|  
   

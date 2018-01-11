@@ -37,11 +37,12 @@ caps.latest.revision: "22"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 55d3590ce7dab5330989171efcf704f27274a595
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 493d20359d5656f5e97e601d90e831f6a1d5b438
+ms.sourcegitcommit: 54035dce0992ba5dce0323d67f86301f994ff3db
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 01/03/2018
 ---
 # <a name="binomialdistribution-class"></a>Класс binomial_distribution
 Формирует биномиальное распределение.  
@@ -103,7 +104,7 @@ public:
   
 Дополнительные сведения о классах распределения и их членах см. в разделе [\<random>](../standard-library/random.md).  
   
-Дополнительные сведения о дискретной функции вероятности биномиального распределения см. в статье [Биномиальное распределение](http://go.microsoft.com/fwlink/LinkId=398469) на веб-сайте Wolfram MathWorld.  
+Дополнительные сведения о дискретной функции вероятности биномиального распределения см. в статье [Биномиальное распределение](http://go.microsoft.com/fwlink/p/?linkid=398469) на веб-сайте Wolfram MathWorld.  
   
 ## <a name="example"></a>Пример  
   

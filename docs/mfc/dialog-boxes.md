@@ -19,11 +19,12 @@ caps.latest.revision: "14"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 7e4417fc2d4714a249b04bb0c1d04e5642495835
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 8117d175d59859c97a360ca6a6d2af559b403e32
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="dialog-boxes"></a>Диалоговые окна
 Приложения для Windows часто взаимодействия с пользователем по диалоговым окнам. Класс [CDialog](../mfc/reference/cdialog-class.md) предоставляет интерфейс для управления диалоговым окнам, редактор диалоговых окон Visual C++ позволяет легко спроектировать диалоговые окна и создать их ресурсов шаблона диалогового окна и мастеры кода упрощают процесс инициализации и Проверка элементов управления в диалоговом окне и по сбору значений, введенных пользователем.  

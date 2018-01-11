@@ -69,11 +69,12 @@ caps.latest.revision: "16"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 08e3cd90e4c86365694c098973f45d667621ea98
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: d65be96e49d5f6cceeb6b61259cb790d4265978d
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="utime-utime32-utime64-wutime-wutime32-wutime64"></a>_utime, _utime32, _utime64, _wutime, _wutime32, _wutime64
 Задают время изменения файла.  
@@ -150,7 +151,7 @@ int _wutime64(
   
  `_wutime` — это версия `_utime` с расширенными символами; аргумент `filename` для `_wutime` — строка расширенных символов. В остальном эти функции ведут себя одинаково.  
   
-### <a name="generic-text-routine-mappings"></a>Универсальное текстовое сопоставление функций  
+### <a name="generic-text-routine-mappings"></a>Сопоставления подпрограмм обработки обычного текста  
   
 |Подпрограмма TCHAR.H|_UNICODE и _MBCS не определены|_MBCS определено|_UNICODE определено|  
 |---------------------|------------------------------------|--------------------|-----------------------|  
@@ -166,7 +167,7 @@ int _wutime64(
 |`_utime64`|\<sys/utime.h>|\<errno.h>|  
 |`_wutime`|\<utime.h> или \<wchar.h>|\<errno.h>|  
   
- Дополнительные сведения о совместимости см. в статье [Совместимость](../../c-runtime-library/compatibility.md) во введении.  
+ Дополнительные сведения о совместимости см. в разделе [Совместимость](../../c-runtime-library/compatibility.md) во введении.  
   
 ## <a name="example"></a>Пример  
  Эта программа использует функцию `_utime`, чтобы задать для времени изменения файла текущее время.  

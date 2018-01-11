@@ -19,11 +19,12 @@ caps.latest.revision: "9"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 109c4f2e8272293ccfcb58924380c586f8078536
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: d436301a979dbba2bc4a922f8427f355a398f654
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="creating-and-displaying-dialog-boxes"></a>Создание и отображение диалоговых окон
 Создание объекта диалогового окна — это двухфазная операция. Во-первых создайте объект диалогового окна, а затем создать диалоговое окно. Модальные и немодальные диалоговые окна несколько в процесс, используемый для создания и отображения их отличаться. В следующей таблице перечислены диалогового окна как модальные и немодальные поля обычно создается и отображаются.  

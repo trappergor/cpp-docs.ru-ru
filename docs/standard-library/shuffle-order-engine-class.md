@@ -26,11 +26,12 @@ caps.latest.revision: "17"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: f2e8e953d953df96cc145d8752337fa806dfbda7
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 43de5df2afa0aca7e1634eac0338ae1b49ea9372
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="shuffleorderengine-class"></a>Класс shuffle_order_engine
 Создает случайную последовательность, изменяя порядок значений, возвращенных базовым механизмом.  
@@ -49,7 +50,7 @@ class shuffle_order_engine;
  `K`  
  **Размер таблицы**. Количество элементов в буфере (таблице). **Предварительные условия**: `0 < K`  
   
-## <a name="members"></a>Члены  
+## <a name="members"></a>Участники  
   
 ||||  
 |-|-|-|  

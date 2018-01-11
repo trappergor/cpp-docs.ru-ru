@@ -17,11 +17,12 @@ caps.latest.revision: "11"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 218493b6346858d33df042ec5754775272b1d788
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: c4d3ae9509edcbe79417bb37d02f4f585b2da653
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="help-menu-merging"></a>Слияние меню "Справка"
 При включенном в контейнере объекта слияние протокола OLE документов меню предоставляет объект полный контроль над **справки** меню. В результате разделы справки контейнера недоступны, если пользователь отключает объект. Архитектура вложения активного документа расширяет правила для слияния для контейнера и активного документа, которая является активной в то же меню меню на месте. Новые правила, просто дополнительных соглашения о какой компонент, которому принадлежит какой-либо части меню и создание общего меню.  

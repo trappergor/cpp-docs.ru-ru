@@ -14,11 +14,12 @@ caps.latest.revision: "10"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: a6ce74fb7f4238f89fe177013b28536f9b27a95e
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 8974633a19e6f30f552eac4e5e7c3ec3b104c2ba
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="uniquelock-class"></a>Класс unique_lock
 Представляет шаблон, для которого можно создать экземпляры и объекты, управляющие блокировкой и разблокировкой `mutex`.  
@@ -35,24 +36,24 @@ class unique_lock;
   
  На внутреннем уровне `unique_lock` содержит указатель на связанный с ним объект `mutex` и `bool`, который указывает, владеет ли текущий поток `mutex`.  
   
-## <a name="members"></a>Члены  
+## <a name="members"></a>Участники  
   
 ### <a name="public-typedefs"></a>Общедоступные определения типов  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |`mutex_type`|Синоним для аргумента шаблона `Mutex`.|  
   
 ### <a name="public-constructors"></a>Открытые конструкторы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[unique_lock](#unique_lock)|Создает объект `unique_lock`.|  
 |[Деструктор ~unique_lock](#dtorunique_lock_destructor)|Освобождает все ресурсы, связанные с объектом `unique_lock`.|  
   
 ### <a name="public-methods"></a>Открытые методы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[lock](#lock)|Блокирует вызывающий поток до тех пор, пока этот поток не получит права владельца соответствующего объекта `mutex`.|  
 |[mutex](#mutex)|Извлекает сохраненный указатель на соответствующий объект `mutex`.|  
@@ -66,7 +67,7 @@ class unique_lock;
   
 ### <a name="public-operators"></a>Открытые операторы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[operator bool](#op_bool)|Указывает, является ли вызывающий поток владельцем соответствующего объекта `mutex`.|  
 |[оператор=](#op_eq)|Копирует сохраненный указатель `mutex` и соответствующее состояние владения из указанного объекта.|  

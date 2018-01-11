@@ -33,11 +33,12 @@ caps.latest.revision: "32"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 6378b7a170db4c37d38007236188428de904845d
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: e8cc4e9158ae9ff2ef6fd4d48483aa5a75dd9617
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cautohidedocksite-class"></a>Класс CAutoHideDockSite
 `CAutoHideDockSite` Расширяет [класс CDockSite](../../mfc/reference/cdocksite-class.md) для реализации автоматически скрываемые области закрепления.  
@@ -48,7 +49,7 @@ ms.lasthandoff: 10/24/2017
 class CAutoHideDockSite : public CDockSite  
 ```  
   
-## <a name="members"></a>Члены  
+## <a name="members"></a>Участники  
   
 ### <a name="public-constructors"></a>Открытые конструкторы  
   
@@ -62,7 +63,7 @@ class CAutoHideDockSite : public CDockSite
   
 |||  
 |-|-|  
-|Имя|Описание|  
+|Имя|Описание:|  
 |`CAutoHideDockSite::AllowShowOnPaneMenu`|Указывает, является ли `CAutoHideDockSite` отображается на панели меню.|  
 |[CAutoHideDockSite::CanAcceptPane](#canacceptpane)|Определяет, является ли объект базового области является производным от [класс CMFCAutoHideBar](../../mfc/reference/cmfcautohidebar-class.md).|  
 |[CAutoHideDockSite::DockPane](#dockpane)|Закрепляет область это `CAuotHideDockSite` объекта.|  
@@ -76,7 +77,7 @@ class CAutoHideDockSite : public CDockSite
   
 |||  
 |-|-|  
-|Имя|Описание|  
+|name|Описание:|  
 |[CAutoHideDockSite::m_nExtraSpace](#m_nextraspace)|Определяет размер пространства между панелями инструментов и краем закрепляемую панель. Это пространство отсчитывается от левого края или верхнего края, в зависимости от выравнивания для места закрепления.|  
   
 ## <a name="remarks"></a>Примечания  
@@ -114,7 +115,7 @@ virtual BOOL CanAcceptPane(const CBasePane* pBar) const;
   
 |||  
 |-|-|  
-|Параметр|Описание|  
+|Параметр|Описание:|  
 |[in] `pBar`|Базовый области, в которой проверяет платформу.|  
   
 ### <a name="return-value"></a>Возвращаемое значение  
@@ -137,7 +138,7 @@ virtual void DockPane(
   
 |||  
 |-|-|  
-|Параметр|Описание|  
+|Параметр|Описание:|  
 |[in] `pWnd`|Области, в которой закрепляет платформу.|  
 |[in] `dockMethod`|Закрепление панели параметров.|  
 |[in] `lpRect`|Прямоугольник, который определяет границы закрепленной панели.|  
@@ -158,7 +159,7 @@ void GetAlignRect(CRect& rect) const;
   
 |||  
 |-|-|  
-|Параметр|Описание|  
+|Параметр|Описание:|  
 |[in] `rect`|Ссылка в прямоугольник. Метод сохраняет размер сайте закрепления в этот прямоугольник.|  
   
 ### <a name="remarks"></a>Примечания  
@@ -213,7 +214,7 @@ virtual void RepositionPanes(CRect& rectNewClientArea);
   
 |||  
 |-|-|  
-|Параметр|Описание|  
+|Параметр|Описание:|  
 |[in] `rectNewClientArea`|Зарезервированное значение.|  
   
 ### <a name="remarks"></a>Примечания  
@@ -230,7 +231,7 @@ void UnSetAutoHideMode(CMFCAutoHideBar* pAutoHideToolbar);
   
 |||  
 |-|-|  
-|Параметр|Описание|  
+|Параметр|Описание:|  
 |[in] `pAutoHideToolbar`|Указатель на [CMFCAutoHideBar](../../mfc/reference/cmfcautohidebar-class.md) область объектов, расположенных на `CAutoHideDockSite`.|  
   
 ### <a name="remarks"></a>Примечания  

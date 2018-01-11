@@ -17,11 +17,14 @@ caps.latest.revision: "9"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: c8d89c1b353237aa84a852337b272f95a7b6d0df
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: 600a4fcf49328c4cfd2bd31e8c36b02cacd9609c
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="arrangement-of-controls-on-dialog-boxes"></a>Размещение элементов управления в диалоговых окнах
 Редактор диалоговых окон средства макета, выравнивание и размер элементов управления автоматически. Для большинства задач можно использовать [инструментов редактора диалоговых окон](../windows/showing-or-hiding-the-dialog-editor-toolbar.md). Все команды панели инструментов редактора диалоговых окон также доступны в меню «Формат» и большинства [сочетания клавиш](../windows/accelerator-keys-for-the-dialog-editor.md).  
@@ -44,7 +47,7 @@ ms.lasthandoff: 10/24/2017
   
 -   [Изменение последовательности табуляции элементов управления](../windows/changing-the-tab-order-of-controls.md)  
   
- Сведения о добавлении ресурсов в управляемые проекты см. в разделе [ресурсы в классических приложениях](https://msdn.microsoft.com/library/f45fce5x.aspx) в *руководства разработчика .NET Framework.* Сведения о вручную добавлять файлы ресурсов в управляемые проекты, осуществлять доступ к ресурсам, отображать статические ресурсы и присваивать строки ресурсов свойствам см. в разделе [Создание файлов ресурсов для приложений рабочего стола](https://msdn.microsoft.com/library/xbx3z216.aspx). Сведения о глобализации и локализации ресурсов в управляемых приложениях см. в разделе [Globalizing и локализация приложений .NET Framework](https://msdn.microsoft.com/library/h6270d0z.aspx).  
+ Сведения о добавлении ресурсов в управляемые проекты см. в разделе [ресурсы в классических приложениях](/dotnet/framework/resources/index) в *руководства разработчика .NET Framework.* Сведения о вручную добавлять файлы ресурсов в управляемые проекты, осуществлять доступ к ресурсам, отображать статические ресурсы и присваивать строки ресурсов свойствам см. в разделе [Создание файлов ресурсов для приложений рабочего стола](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Сведения о глобализации и локализации ресурсов в управляемых приложениях см. в разделе [Globalizing и локализация приложений .NET Framework](/dotnet/standard/globalization-localization/index).  
   
 ## <a name="requirements"></a>Требования  
  Win32  

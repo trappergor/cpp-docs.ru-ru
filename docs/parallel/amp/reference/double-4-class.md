@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-windows
+ms.technology: cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -274,36 +273,21 @@ f1_keywords:
 - amp_short_vectors/Concurrency::graphics::double_4::set_xwyz
 - amp_short_vectors/Concurrency::graphics::double_4::bag
 - amp_short_vectors/Concurrency::graphics::double_4::zwy
-dev_langs:
-- C++
+dev_langs: C++
 ms.assetid: a81c1595-24c6-4b3f-9574-d5942275e5e8
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 5faef5bd1be6cc02d6614a6f6193c74167a8ff23
-ms.openlocfilehash: 7a55f3f39562481ba7a4b189293dfe59891740fe
-ms.contentlocale: ru-ru
-ms.lasthandoff: 03/17/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: 9a5e0df270914eb469ced57936df2d5bfe617948
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="double4-class"></a>Класс double_4
-Представляет короткий вектор четырех чисел двойной точности.  
+Представляет короткого вектора четырех чисел типа Double.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -311,7 +295,7 @@ ms.lasthandoff: 03/17/2017
 class double_4;  
 ```  
   
-## <a name="members"></a>Члены  
+## <a name="members"></a>Участники  
   
 ### <a name="public-typedefs"></a>Общедоступные определения типов  
   
@@ -321,13 +305,13 @@ class double_4;
   
 ### <a name="public-constructors"></a>Открытые конструкторы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[Конструктор double_4](#ctor)|Перегружен. По умолчанию конструктор инициализирует все элементы с 0.|  
   
 ### <a name="public-methods"></a>Открытые методы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |double_4::get_w||  
 |double_4::get_wx||  
@@ -468,7 +452,7 @@ class double_4;
   
 ### <a name="public-operators"></a>Открытые операторы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |double_4::operator-||  
 |double_4::operator--||  
@@ -481,13 +465,13 @@ class double_4;
   
 ### <a name="public-constants"></a>Открытые константы  
   
-|Имя|Описание|  
+|name|Описание:|  
 |----------|-----------------|  
 |[Размер константы](#double_4__size)||  
   
 ### <a name="public-data-members"></a>Открытые члены данных  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |double_4::a||  
 |double_4::AB||  
@@ -683,7 +667,7 @@ explicit inline double_4(
  Значение для инициализации элемента 0.  
   
  `_V1`  
- Значение для инициализации элемент 1.  
+ Значение для инициализации элемента 1.  
   
  `_V2`  
  Значение для инициализации элемента 2.  
@@ -705,4 +689,3 @@ static const int size = 4;
   
 ## <a name="see-also"></a>См. также  
  [Пространство имен Concurrency::graphics](concurrency-graphics-namespace.md)
-

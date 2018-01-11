@@ -1,43 +1,47 @@
 ---
-title: "Shrinking or Stretching an Entire Image (Image Editor for Icons) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Image editor [C++], shrinking and stretching images"
-  - "images [C++], stretching"
-  - "images [C++], shrinking"
+title: "Растяжение всего изображения (редактор изображений для значков) и | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- Image editor [C++], shrinking and stretching images
+- images [C++], stretching
+- images [C++], shrinking
 ms.assetid: accdef79-c77e-493f-b8e8-a5ef033a4e9e
-caps.latest.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 6
+caps.latest.revision: "10"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: c4ba83b24305a3b826ea412e58766502db410f97
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 12/21/2017
 ---
-# Shrinking or Stretching an Entire Image (Image Editor for Icons)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-### Растяжение и сжатие изображения  
+# <a name="shrinking-or-stretching-an-entire-image-image-editor-for-icons"></a>Растяжение и сжатие изображения (редактор изображений для значков)
+### <a name="to-shrink-or-stretch-an-entire-image"></a>Чтобы сжать или растянуть всего изображения  
   
-1.  Выделите все изображение.  
+1.  Выберите все изображение.  
   
-     Если фрагмент изображения уже выделен, а вам нужно выделить все изображение целиком, щелкните любую область изображения за пределами текущего выделения.  
+     Если выбрана часть изображения и нужно выбрать все изображение, щелкните в любом месте изображения вне текущего выделения.  
   
-2.  Прижмите клавишу **SHIFT** и тяните за один из маркеров изменения размера до тех пор, пока изображение не увеличится или не уменьшится до нужного размера.  
+2.  Удерживайте клавишу **SHIFT** ключа и перетащите маркер изменения размера изображения нужного размера.  
   
- Сведения о добавлении ресурсов в управляемые проекты см. в разделе [Ресурсы приложений](../Topic/Resources%20in%20Desktop%20Apps.md) *Руководства разработчика .NET Framework*. Сведения о том, как вручную добавлять файлы ресурсов в управляемые проекты, осуществлять доступ к ресурсам, отображать статические ресурсы и присваивать строки ресурсов свойствам см. в разделах [Пошаговое руководство. Локализация приложений Windows Forms](http://msdn.microsoft.com/ru-ru/9a96220d-a19b-4de0-9f48-01e5d82679e5) и [Walkthrough: Using Resources for Localization with ASP.NET](../Topic/Walkthrough:%20Using%20Resources%20for%20Localization%20with%20ASP.NET.md).  
+ Сведения о добавлении ресурсов в управляемые проекты см. в разделе [ресурсы в классических приложениях](/dotnet/framework/resources/index) в *руководства разработчика .NET Framework.* Сведения о вручную добавлять файлы ресурсов в управляемые проекты, осуществлять доступ к ресурсам, отображать статические ресурсы и присваивать строки ресурсов свойствам см. в разделе [Создание файлов ресурсов для приложений рабочего стола](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Сведения о глобализации и локализации ресурсов в управляемых приложениях см. в разделе [Globalizing и локализация приложений .NET Framework](/dotnet/standard/globalization-localization/index).  
   
  **Требования**  
   
- None  
+ Нет  
   
-## См. также  
- [Accelerator Keys](../mfc/accelerator-keys-image-editor-for-icons.md)   
- [Resizing an Image](../Topic/Resizing%20an%20Image%20\(Image%20Editor%20for%20Icons\).md)
+## <a name="see-also"></a>См. также  
+ [Сочетания клавиш](../windows/accelerator-keys-image-editor-for-icons.md)   
+ [Изменение размера изображения](../windows/resizing-an-image-image-editor-for-icons.md)
+

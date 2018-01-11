@@ -43,11 +43,12 @@ caps.latest.revision: "13"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: afc048d131bd75a9645c045b3bceae90344c07eb
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 4bd91c4dd26582e98f4a6ee9f92ad0293c460433
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="lgamma-lgammaf-lgammal"></a>lgamma, lgammaf, lgammal
 Определяет натуральный логарифм абсолютного значения гамма-функции для указанного значения.  
@@ -90,13 +91,13 @@ long double lgammal(
 |`x` = ±0|+INFINITY|  
 |`x`= отрицательное целое число|+INFINITY|  
 |±INFINITY|+INFINITY|  
-|Ошибка полюса|+HUGE_VAL, +HUGE_VALF или +HUGE_VALL|  
+|ошибка полюса|+HUGE_VAL, +HUGE_VALF или +HUGE_VALL|  
 |Ошибка переполнения диапазона|±HUGE_VAL, ±HUGE_VALF или ±HUGE_VALL|  
   
- Сообщает об ошибках, как указано в [_matherr](../../c-runtime-library/reference/matherr.md).  
+ Ошибки сообщаются, как указано в [_matherr](../../c-runtime-library/reference/matherr.md).  
   
 ## <a name="remarks"></a>Примечания  
- Так как C++ допускает перегрузку, можно вызывать перегрузки функции `lgamma`, принимающие и возвращающие типы значений с плавающей запятой и длинных двойных значений. В программе на языке C `lgamma` всегда принимает и возвращает двойное значение.  
+ Так как C++ допускает перегрузку, можно вызывать перегрузки функции `lgamma`, принимающие и возвращающие типы значений с плавающей запятой и длинных двойных значений. В программе на языке C `lgamma` всегда принимает и возвращает значение типа double.  
   
  Если x является рациональным числом, эта функция возвращает логарифм факториала (`x`–1).  
   
@@ -106,7 +107,7 @@ long double lgammal(
 |--------------|--------------|------------------|  
 |`lgamma`,                `lgammaf`, `lgammal`|\<math.h>|\<cmath>|  
   
- Дополнительные сведения о совместимости см. в статье [Совместимость](../../c-runtime-library/compatibility.md).  
+ Дополнительные сведения о совместимости см. в разделе [Совместимость](../../c-runtime-library/compatibility.md).  
   
 ## <a name="see-also"></a>См. также  
  [Алфавитный указатель функций](../../c-runtime-library/reference/crt-alphabetical-function-reference.md)   

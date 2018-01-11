@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
 apiname:
@@ -30,8 +29,7 @@ f1_keywords:
 - _mbsnbcmp_l
 - mbsnbcmp_l
 - _mbsnbcmp
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - mbsnbcmp_l function
 - mbsnbcmp function
@@ -40,36 +38,22 @@ helpviewer_keywords:
 - _tcsncmp function
 - _mbsnbcmp function
 ms.assetid: dbc99e50-cf85-4e57-a13f-067591f18ac8
-caps.latest.revision: 23
+caps.latest.revision: "23"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: e257f037a05c45f5b98e64ea55bd125af443b0be
-ms.openlocfilehash: 9fdaa428d5772c0622ca4c2f08c64fb376173240
-ms.contentlocale: ru-ru
-ms.lasthandoff: 03/30/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: 614091f3e1a36bdc907bbdb1b299a53f4bb6d13c
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="mbsnbcmp-mbsnbcmpl"></a>_mbsnbcmp, _mbsnbcmp_l
 Сравнивает первые `n` байт двух строк многобайтовых символов.  
   
 > [!IMPORTANT]
->  Этот API не может использоваться в приложениях, выполняемых в [!INCLUDE[wrt](../../atl/reference/includes/wrt_md.md)]. Дополнительные сведения см. в статье [Функции CRT, которые не поддерживаются с ключом /ZW](http://msdn.microsoft.com/library/windows/apps/jj606124.aspx).  
+>  Этот API нельзя использовать в приложениях, выполняемых в среде выполнения Windows. Дополнительные сведения см. в статье [Функции CRT, которые не поддерживаются с ключом /ZW](http://msdn.microsoft.com/library/windows/apps/jj606124.aspx).  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -113,7 +97,7 @@ int _mbsnbcmp_l(
   
  Функция `_mbsnbcmp` похожа на `_mbsncmp` за тем исключением, что `_mbsncmp` сравнивает строки посимвольно, а не побайтно.  
   
- На выходное значение влияет настройка категории `LC_CTYPE` языкового стандарта, которая определяет начальные и конечные байты многобайтовых символов. Дополнительные сведения см. в разделе [setlocale](../../c-runtime-library/reference/setlocale-wsetlocale.md). Функция `_mbsnbcmp` использует текущий языковой стандарт для данной функциональности, зависящей от языкового стандарта. Функция `_mbsnbcmp_l` идентична за исключением того, что она использует вместо этого параметр `locale`. Дополнительные сведения см. в разделе [Языковой стандарт](../../c-runtime-library/locale.md).  
+ На выходное значение влияет настройка категории `LC_CTYPE` языкового стандарта, которая определяет начальные и конечные байты многобайтовых символов. Дополнительные сведения см. в разделе [setlocale](../../c-runtime-library/reference/setlocale-wsetlocale.md). Функция `_mbsnbcmp` использует текущий языковой стандарт для данной функциональности, зависящей от языкового стандарта. Функция `_mbsnbcmp_l` идентична за исключением того, что она использует вместо этого параметр `locale`. Для получения дополнительной информации см. [Locale](../../c-runtime-library/locale.md).  
   
  Если `string1` или `string2` является указателем NULL, эти функции вызывают обработчик недопустимого параметра, как описано в разделе [Проверка параметров](../../c-runtime-library/parameter-validation.md). Если выполнение может быть продолжено, эти функции возвращают `_NLSCMPERROR` и устанавливают для параметра `errno` значение `EINVAL`.  
   
@@ -185,7 +169,7 @@ Result:   String 1 is equal to string 2
 ```  
   
 ## <a name="see-also"></a>См. также  
- [Управление строками](../../c-runtime-library/string-manipulation-crt.md)   
+ [Операции со строками](../../c-runtime-library/string-manipulation-crt.md)   
  [_mbsnbcat, _mbsnbcat_l](../../c-runtime-library/reference/mbsnbcat-mbsnbcat-l.md)   
  [_mbsnbicmp, _mbsnbicmp_l](../../c-runtime-library/reference/mbsnbicmp-mbsnbicmp-l.md)   
  [strncmp, wcsncmp, _mbsncmp, _mbsncmp_l](../../c-runtime-library/reference/strncmp-wcsncmp-mbsncmp-mbsncmp-l.md)   

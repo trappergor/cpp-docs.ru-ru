@@ -4,12 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
-apiname:
-- _CrtDumpMemoryLeaks
+apiname: _CrtDumpMemoryLeaks
 apilocation:
 - msvcrt.dll
 - msvcr80.dll
@@ -29,8 +27,7 @@ f1_keywords:
 - CrtDumpMemoryLeaks
 - _CrtDumpMemoryLeaks
 - _CRTDBG_CHECK_CRT_DF
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - CrtDumpMemoryLeaks function
 - CRTDBG_LEAK_CHECK_DF macro
@@ -39,16 +36,16 @@ helpviewer_keywords:
 - CRTDBG_CHECK_CRT_DF macro
 - _CRTDBG_CHECK_CRT_DF macro
 ms.assetid: 71b2eab4-7f55-44e8-a55a-bfea4f32d34c
-caps.latest.revision: 11
+caps.latest.revision: "11"
 author: corob-msft
 ms.author: corob
 manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: fe47ee058f6dc4a33013e4773a7b3a057056b380
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
-ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
-ms.openlocfilehash: 799cb3a867af9695fcb72ae6d681168f604d880f
-ms.contentlocale: ru-ru
-ms.lasthandoff: 10/09/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="crtdumpmemoryleaks"></a>_CrtDumpMemoryLeaks
 Сбрасывает все блоки памяти в отладочной куче в случае утечки памяти (только в отладочной версии).  
@@ -72,7 +69,7 @@ int _CrtDumpMemoryLeaks( void );
   
  По умолчанию внутренние блоки среды выполнения C (`_CRT_BLOCK`) в операции с дампом памяти не включаются. Функцию [_CrtSetDbgFlag](../../c-runtime-library/reference/crtsetdbgflag.md) можно использовать для включения бита `_CRTDBG_CHECK_CRT_DF` флага `_crtDbgFlag` и включения этих блоков в процесс обнаружения утечек.  
   
- Дополнительные сведения о функциях управления состоянием кучи и структуре `_CrtMemState` см. в разделе [Функции создания отчетов о состоянии кучи](/visualstudio/debugger/crt-debug-heap-details). Дополнительные сведения о выделении, инициализации и управлении блоками памяти в отладочной версии базовой кучи см. в разделе [Сведения о куче отладки CRT](/visualstudio/debugger/crt-debug-heap-details).  
+ Дополнительные сведения о функциях управления состоянием кучи и структуре `_CrtMemState` см. в статье [Heap State Reporting Functions](/visualstudio/debugger/crt-debug-heap-details). Дополнительные сведения о выделении, инициализации и управлении блоками памяти в отладочной версии базовой кучи см. в статье [CRT Debug Heap Details](/visualstudio/debugger/crt-debug-heap-details).  
   
 ## <a name="requirements"></a>Требования  
   

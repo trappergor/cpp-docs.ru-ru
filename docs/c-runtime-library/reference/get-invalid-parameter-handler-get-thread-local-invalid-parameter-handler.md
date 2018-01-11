@@ -1,67 +1,68 @@
 ---
-title: "_get_invalid_parameter_handler _get_thread_local_invalid_parameter_handler | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-apiname: 
-  - "_get_invalid_parameter_handler"
-  - "_get_thread_local_invalid_parameter_handler"
-apilocation: 
-  - "msvcrt.dll"
-  - "msvcr80.dll"
-  - "msvcr90.dll"
-  - "msvcr100.dll"
-  - "msvcr100_clr0400.dll"
-  - "msvcr110.dll"
-  - "msvcr110_clr0400.dll"
-  - "msvcr120.dll"
-  - "msvcr120_clr0400.dll"
-  - "ucrtbase.dll"
-  - "api-ms-win-crt-runtime-l1-1-0.dll"
-apitype: "DLLExport"
-f1_keywords: 
-  - "_get_invalid_parameter_handler"
-  - "stdlib/_get_invalid_parameter_handler"
-  - "_get_thread_local_invalid_parameter_handler"
-  - "stdlib/_get_thread_local_invalid_parameter_handler"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "функция _get_thread_local_invalid_parameter_handler"
-  - "функция _get_invalid_parameter_handler"
+title: "_get_invalid_parameter_handler, _get_thread_local_invalid_parameter_handler | Документы Майкрософт"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-standard-libraries
+ms.tgt_pltfrm: 
+ms.topic: article
+apiname:
+- _get_invalid_parameter_handler
+- _get_thread_local_invalid_parameter_handler
+apilocation:
+- msvcrt.dll
+- msvcr80.dll
+- msvcr90.dll
+- msvcr100.dll
+- msvcr100_clr0400.dll
+- msvcr110.dll
+- msvcr110_clr0400.dll
+- msvcr120.dll
+- msvcr120_clr0400.dll
+- ucrtbase.dll
+- api-ms-win-crt-runtime-l1-1-0.dll
+apitype: DLLExport
+f1_keywords:
+- _get_invalid_parameter_handler
+- stdlib/_get_invalid_parameter_handler
+- _get_thread_local_invalid_parameter_handler
+- stdlib/_get_thread_local_invalid_parameter_handler
+dev_langs: C++
+helpviewer_keywords:
+- _get_thread_local_invalid_parameter_handler function
+- _get_invalid_parameter_handler function
 ms.assetid: a176da0e-38ca-4d99-92bb-b0e2b8072f53
-caps.latest.revision: 3
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 3
+caps.latest.revision: "3"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: b00d6528301101729e032a63298dd0874bfa8ed5
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 12/21/2017
 ---
-# _get_invalid_parameter_handler _get_thread_local_invalid_parameter_handler
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="getinvalidparameterhandler-getthreadlocalinvalidparameterhandler"></a>_get_invalid_parameter_handler, _get_thread_local_invalid_parameter_handler
 Получает функцию, которая вызывается, когда CRT обнаруживает недопустимый аргумент.  
   
-## Синтаксис  
+## <a name="syntax"></a>Синтаксис  
   
 ```  
 _invalid_parameter_handler _get_invalid_parameter_handler(void);  
 _invalid_parameter_handler _get_thread_local_invalid_parameter_handler(void);  
 ```  
   
-## Возвращаемое значение  
- Указатель на текущее функция обработчика недопустимого параметра или указатель null, если ни один не задана.  
+## <a name="return-value"></a>Возвращаемое значение  
+ Указатель на установленную в данный момент функцию обработчика недопустимого параметра или указатель NULL, если такая функция не задана.  
   
-## Заметки  
- `_get_invalid_parameter_handler` Функция возвращает текущее обработчик глобального недопустимого параметра. Он возвращает указатель null, если обработчик глобального недопустимый параметр не задан. Аналогичным образом `_get_thread_local_invalid_parameter_handler` возвращает текущий обработчик недопустимого параметра локального потока он вызывается для потока, или указатель null, если обработчик не был задан. Сведения о том, как задать обработчики глобальной и локальной неправильный параметр в разделе [\_set\_invalid\_parameter\_handler \_set\_thread\_local\_invalid\_parameter\_handler](../../c-runtime-library/reference/set-invalid-parameter-handler-set-thread-local-invalid-parameter-handler.md).  
+## <a name="remarks"></a>Примечания  
+ Функция `_get_invalid_parameter_handler` получает установленный на данный момент глобальный обработчик недопустимого параметра. Если глобальный обработчик недопустимого параметра не задан, возвращается указатель NULL. Аналогичным образом `_get_thread_local_invalid_parameter_handler` возвращает установленный локально обработчик недопустимого параметра для потока или указатель NULL, если обработчик не задан. Дополнительные сведения об установке глобального и локального для потока обработчика недопустимого параметра см. в разделе [_set_invalid_parameter_handler, _set_thread_local_invalid_parameter_handler](../../c-runtime-library/reference/set-invalid-parameter-handler-set-thread-local-invalid-parameter-handler.md).  
   
- Указатель на функцию обработчика недопустимого параметра, возвращенного имеет следующий тип:  
+ Возвращаемый указатель на функцию обработчика недопустимого параметра имеет следующий тип:  
   
-```c  
+```C  
 typedef void (__cdecl* _invalid_parameter_handler)(  
     wchar_t const*,  
     wchar_t const*,  
@@ -71,16 +72,16 @@ typedef void (__cdecl* _invalid_parameter_handler)(
     );  
 ```  
   
- Подробнее о обработчик недопустимого параметра, в разделе прототип в [\_set\_invalid\_parameter\_handler \_set\_thread\_local\_invalid\_parameter\_handler](../../c-runtime-library/reference/set-invalid-parameter-handler-set-thread-local-invalid-parameter-handler.md).  
+ Дополнительные сведения об обработчике недопустимого параметра см. в описании прототипа в разделе [_set_invalid_parameter_handler, _set_thread_local_invalid_parameter_handler](../../c-runtime-library/reference/set-invalid-parameter-handler-set-thread-local-invalid-parameter-handler.md).  
   
-## Требования  
+## <a name="requirements"></a>Требования  
   
 |Подпрограмма|Обязательный заголовок|  
-|------------------|----------------------------|  
-|`_get_invalid_parameter_handler`, `_get_thread_local_invalid_parameter_handler`|C: \< stdlib.h \><br /><br /> C\+\+: \< cstdlib \> или \< stdlib.h \>|  
+|-------------|---------------------|  
+|`_get_invalid_parameter_handler`, `_get_thread_local_invalid_parameter_handler`|C: \<stdlib.h><br /><br /> C++: \<cstdlib> или \<stdlib.h>|  
   
- `_get_invalid_parameter_handler` И `_get_thread_local_invalid_parameter_handler` функции, определенные Майкрософт. Сведения о совместимости см. в разделе [Совместимость](../../c-runtime-library/compatibility.md).  
+ Функции `_get_invalid_parameter_handler` и `_get_thread_local_invalid_parameter_handler` относятся только к системам Майкрософт. Сведения о совместимости см. в разделе [Совместимость](../../c-runtime-library/compatibility.md).  
   
-## См. также  
- [\_set\_invalid\_parameter\_handler \_set\_thread\_local\_invalid\_parameter\_handler](../../c-runtime-library/reference/set-invalid-parameter-handler-set-thread-local-invalid-parameter-handler.md)   
+## <a name="see-also"></a>См. также  
+ [_set_invalid_parameter_handler, _set_thread_local_invalid_parameter_handler](../../c-runtime-library/reference/set-invalid-parameter-handler-set-thread-local-invalid-parameter-handler.md)   
  [Версии функций CRT повышенной безопасности](../../c-runtime-library/security-enhanced-versions-of-crt-functions.md)

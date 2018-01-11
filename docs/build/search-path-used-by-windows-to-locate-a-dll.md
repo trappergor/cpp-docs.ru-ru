@@ -1,55 +1,56 @@
 ---
-title: "Путь поиска, используемый Windows для обнаружения библиотеки DLL | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "DLL-библиотеки [C++], Windows - путь поиска"
-  - "поиск библиотек DLL"
-  - "известные поиски DLL [C++]"
-  - "расположение библиотек DLL"
-  - "пути поиска [C++]"
-  - "поиск [C++], библиотеки DLL"
-  - "Windows [C++], пути поиска DLL"
+title: "Найдите путь, используемый Windows для размещения библиотеки DLL | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- searching [C++], DLLs
+- DLLs [C++], Windows search path
+- Windows [C++], DLL search path
+- known DLL searches [C++]
+- locating DLLs
+- finding DLLs
+- search paths [C++]
 ms.assetid: 84bfb380-ad7b-4962-b2d0-51b19a45f1bb
-caps.latest.revision: 8
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 53350ed473226c86dd4fefa93cff376a371dedf7
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 12/21/2017
 ---
-# Путь поиска, используемый Windows для обнаружения библиотеки DLL
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Используя механизмы явного и неявного связывания, Windows сначала выполняет поиск "известных библиотек DLL", таких как Kernel32.dll и User32.dll.  Затем Windows выполняет поиск библиотек DLL в следующей последовательности:  
+# <a name="search-path-used-by-windows-to-locate-a-dll"></a>Путь поиска, используемый Windows для обнаружения библиотеки DLL
+При связывании явными и неявными Windows сначала выполняет поиск «известных библиотек DLL», таких как Kernel32.dll и User32.dll. Windows выполняет поиск библиотек DLL в следующей последовательности:  
   
-1.  Каталог, в котором находится исполняемый модуль текущего процесса.  
+1.  Каталог, где находится исполняемый модуль текущего процесса.  
   
 2.  Текущий каталог.  
   
-3.  Системный каталог Windows.  Путь к этому каталогу извлекается с помощью функции **GetSystemDirectory**.  
+3.  Системный каталог Windows. **GetSystemDirectory** функция получает путь каталога.  
   
-4.  Каталог Windows.  Путь к этому каталогу извлекается с помощью функции **GetWindowsDirectory**.  
+4.  Каталог Windows. **GetWindowsDirectory** функция получает путь каталога.  
   
 5.  Каталоги, указанные в переменной среды PATH.  
   
     > [!NOTE]
-    >  Переменная среды LIBPATH не используется.  
+    >  Переменной среды LIBPATH не используется.  
   
-## Выберите действие.  
+## <a name="what-do-you-want-to-do"></a>Выберите действие  
   
--   [Неявное связывание](../Topic/Linking%20Implicitly.md)  
+-   [Неявное связывание с библиотекой DLL](../build/linking-an-executable-to-a-dll.md#linking-implicitly)  
   
--   [Явное связывание](../build/linking-explicitly.md)  
+-   [Как явной ссылки на библиотеку DLL](../build/linking-an-executable-to-a-dll.md#linking-explicitly)  
   
--   [Определение подходящего метода связывания](../build/determining-which-linking-method-to-use.md)  
+-   [Определение подходящего метода связывания](../build/linking-an-executable-to-a-dll.md#determining-which-linking-method-to-use)  
   
-## См. также  
- [DLL в Visual C\+\+](../build/dlls-in-visual-cpp.md)
+## <a name="see-also"></a>См. также  
+ [DLL в Visual C++](../build/dlls-in-visual-cpp.md)

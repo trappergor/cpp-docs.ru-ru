@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
 apiname:
@@ -28,8 +27,7 @@ f1_keywords:
 - tmpnam_s
 - _wtmpnam_s
 - L_tmpnam_s
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - tmpnam_s function
 - file names [C++], creating temporary
@@ -39,30 +37,16 @@ helpviewer_keywords:
 - file names [C++], temporary
 - wtmpnam_s function
 ms.assetid: e70d76dc-49f5-4aee-bfa2-f1baa2bcd29f
-caps.latest.revision: 20
+caps.latest.revision: "20"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: e257f037a05c45f5b98e64ea55bd125af443b0be
-ms.openlocfilehash: c2a7276c8670bf0a3fd56ac8c0df111e82da16de
-ms.contentlocale: ru-ru
-ms.lasthandoff: 03/30/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: e7846d9169db45f4176ad97dfc3c0b9d5a3c346c
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="tmpnams-wtmpnams"></a>tmpnam_s, _wtmpnam_s
 Формирует имена, которые можно использовать для создания временных файлов. Это версии функций [tmpnam и _wtmpnam](../../c-runtime-library/reference/tempnam-wtempnam-tmpnam-wtmpnam.md) с усовершенствованной безопасностью, как описано в разделе [Усовершенствования безопасности в CRT](../../c-runtime-library/security-features-in-the-crt.md).  
@@ -103,7 +87,7 @@ errno_t _wtmpnam_s(
 |||||  
 |-|-|-|-|  
 |`str`|`sizeInChars`|**Возвращаемое значение**|**Содержимое** `str`|  
-|`NULL`|любые|`EINVAL`|не изменено|  
+|`NULL`|any|`EINVAL`|не изменено|  
 |не `NULL` (указывает на допустимую память)|слишком короткий|`ERANGE`|не изменено|  
   
  Если параметр `str` имеет значение `NULL`, вызывается обработчик недопустимых параметров, как описано в разделе [Проверка параметров](../../c-runtime-library/parameter-validation.md). Если выполнение может быть продолжено, эти функции устанавливают параметр `errno` в значение `EINVAL` и возвращают значение `EINVAL`.  
@@ -115,9 +99,9 @@ errno_t _wtmpnam_s(
   
  Функция `tmpnam_s` автоматически обрабатывает многобайтовые строковые аргументы должным образом, распознавая последовательности многобайтовых символов согласно кодовой странице OEM, полученной из операционной системы. `_wtmpnam_s` — это версия с расширенными символами для `tmpnam_s`; аргумент и возвращаемое значение `_wtmpnam_s` являются строками с расширенными символами. В остальных отношениях поведение функций `_wtmpnam_s` и `tmpnam_s` идентично, за исключением того, что функция `_wtmpnam_s` не обрабатывает многобайтовые строки.  
   
- В C++ использование этих функций упрощено шаблонными перегрузками; перегрузки могут определить длину буфера автоматически, устраняя необходимость указывать аргумент size. Дополнительные сведения см. в разделе [Безопасные перегрузки шаблонов](../../c-runtime-library/secure-template-overloads.md).  
+ В C++ использование этих функций упрощено шаблонными перегрузками; перегрузки могут определить длину буфера автоматически, устраняя необходимость указывать аргумент size. Дополнительные сведения см. в разделе [Secure Template Overloads](../../c-runtime-library/secure-template-overloads.md).  
   
-### <a name="generic-text-routine-mappings"></a>Универсальное текстовое сопоставление функций  
+### <a name="generic-text-routine-mappings"></a>Сопоставления подпрограмм обработки обычного текста  
   
 |Подпрограмма TCHAR.H|_UNICODE и _MBCS не определены|_MBCS определено|_UNICODE определено|  
 |---------------------|------------------------------------|--------------------|-----------------------|  
@@ -130,7 +114,7 @@ errno_t _wtmpnam_s(
 |`tmpnam_s`|\<stdio.h>|  
 |`_wtmpnam_s`|\<stdio.h> или \<wchar.h>|  
   
- Дополнительные сведения о совместимости см. в статье [Совместимость](../../c-runtime-library/compatibility.md) во введении.  
+ Дополнительные сведения о совместимости см. в разделе [Совместимость](../../c-runtime-library/compatibility.md) во введении.  
   
 ## <a name="example"></a>Пример  
   

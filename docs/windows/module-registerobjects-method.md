@@ -1,30 +1,31 @@
 ---
-title: "Метод Module::RegisterObjects | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "module/Microsoft::WRL::Module::RegisterObjects"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "RegisterObjects - метод"
+title: "Метод Module::RegisterObjects | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: module/Microsoft::WRL::Module::RegisterObjects
+dev_langs: C++
+helpviewer_keywords: RegisterObjects method
 ms.assetid: db4077b7-068d-4534-aaa5-41b5444ccb49
-caps.latest.revision: 7
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: 5e73a59ff18c16a898ca1a9d7919615a2dec18bc
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 12/21/2017
 ---
-# Метод Module::RegisterObjects
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Регистрирует объекты модели COM или среды выполнения ([!INCLUDE[wrt](../atl/reference/includes/wrt_md.md)]), чтобы другие приложения могли к ним подключиться.  
+# <a name="moduleregisterobjects-method"></a>Метод Module::RegisterObjects
+Регистрирует объекты COM или среды выполнения Windows, чтобы другие приложения могли к ним подключиться.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -36,7 +37,7 @@ HRESULT RegisterObjects(
   
 #### <a name="parameters"></a>Параметры  
  `module`  
- Массив объектов модели COM или среды выполнения ([!INCLUDE[wrt](../atl/reference/includes/wrt_md.md)]).  
+ Массив объектов COM или среды выполнения Windows.  
   
  `serverName`  
  Имя сервера, который создал объекты.  
@@ -49,5 +50,5 @@ HRESULT RegisterObjects(
   
  **Пространство имен:** Microsoft::WRL
  
-## <a name="see-also"></a>См. также раздел
-[Класс модулей](../windows/module-class.md)
+## <a name="see-also"></a>См. также
+[Класс Module](../windows/module-class.md)

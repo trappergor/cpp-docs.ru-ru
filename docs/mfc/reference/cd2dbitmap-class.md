@@ -4,14 +4,12 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-windows
+ms.technology: cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
 - CD2DBitmap
 - AFXRENDERTARGET/CD2DBitmap
-- AFXRENDERTARGET/CD2DBitmap::CD2DBitmap
 - AFXRENDERTARGET/CD2DBitmap::CD2DBitmap
 - AFXRENDERTARGET/CD2DBitmap::Attach
 - AFXRENDERTARGET/CD2DBitmap::CopyFromBitmap
@@ -34,8 +32,7 @@ f1_keywords:
 - AFXRENDERTARGET/CD2DBitmap::m_sizeDest
 - AFXRENDERTARGET/CD2DBitmap::m_strPath
 - AFXRENDERTARGET/CD2DBitmap::m_uiResID
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - CD2DBitmap [MFC], CD2DBitmap
 - CD2DBitmap [MFC], CD2DBitmap
@@ -61,16 +58,16 @@ helpviewer_keywords:
 - CD2DBitmap [MFC], m_strPath
 - CD2DBitmap [MFC], m_uiResID
 ms.assetid: 2b3686f1-812c-462b-b449-9f0cb6949bf6
-caps.latest.revision: 17
+caps.latest.revision: "17"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 967bad02cf92b0078d789e5c0b6b55f9644bb17b
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
-ms.sourcegitcommit: 4a770b6508067913aec51b8b3878f33e30eed4bb
-ms.openlocfilehash: 97d176524d0c4748cd257415264fb05a5c6f1be3
-ms.contentlocale: ru-ru
-ms.lasthandoff: 10/09/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cd2dbitmap-class"></a>Класс CD2DBitmap
 Программа-оболочка для ID2D1Bitmap.  
@@ -81,24 +78,24 @@ ms.lasthandoff: 10/09/2017
 class CD2DBitmap : public CD2DResource;  
 ```  
   
-## <a name="members"></a>Члены  
+## <a name="members"></a>Участники  
   
 ### <a name="public-constructors"></a>Открытые конструкторы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[CD2DBitmap::CD2DBitmap](#cd2dbitmap)|Перегружен. Создает объект CD2DBitmap из HBITMAP.|  
 |[CD2DBitmap:: ~ CD2DBitmap](#_dtorcd2dbitmap)|Деструктор Вызывается при уничтожении объекта D2D растрового изображения.|  
   
 ### <a name="protected-constructors"></a>Защищенные конструкторы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[CD2DBitmap::CD2DBitmap](#cd2dbitmap)|Перегружен. Создает объект CD2DBitmap.|  
   
 ### <a name="public-methods"></a>Открытые методы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[CD2DBitmap::Attach](#attach)|Присоединяет существующий ресурс интерфейс для объекта|  
 |[CD2DBitmap::CopyFromBitmap](#copyfrombitmap)|Копирует указанную область в указанном точечном рисунке в текущую битовую карту|  
@@ -116,19 +113,19 @@ class CD2DBitmap : public CD2DResource;
   
 ### <a name="protected-methods"></a>Защищенные методы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[CD2DBitmap::CommonInit](#commoninit)|Инициализирует объект|  
   
 ### <a name="public-operators"></a>Открытые операторы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[CD2DBitmap::operator ID2D1Bitmap *](#operator_id2d1bitmap_star)|Возвращает интерфейс ID2D1Bitmap|  
   
 ### <a name="protected-data-members"></a>Защищенные члены данных  
   
-|Имя|Описание|  
+|name|Описание:|  
 |----------|-----------------|  
 |[CD2DBitmap::m_bAutoDestroyHBMP](#m_bautodestroyhbmp)|Значение TRUE, если m_hBmpSrc должно быть уничтожено; в противном случае — значение FALSE.|  
 |[CD2DBitmap::m_hBmpSrc](#m_hbmpsrc)|Дескриптор исходного растрового изображения.|  
@@ -447,4 +444,3 @@ operator ID2D1Bitmap*();
   
 ## <a name="see-also"></a>См. также  
  [Классы](../../mfc/reference/mfc-classes.md)
-

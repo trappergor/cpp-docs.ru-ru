@@ -42,11 +42,12 @@ caps.latest.revision: "30"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 5d508c70ca1a4c44e2b51dfd85b6f85700c111a9
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: a66bafa2fa032b069a0e34cf6831ac2e6f6ed13d
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="strcats-wcscats-mbscats"></a>strcat_s, wcscat_s, _mbscat_s
 Дополняет строку. Это версии функций [strcat, wcscat, _mbscat](../../c-runtime-library/reference/strcat-wcscat-mbscat.md) с усовершенствованной безопасностью, как описано в разделе [Функции безопасности в CRT](../../c-runtime-library/security-features-in-the-crt.md).  
@@ -106,9 +107,9 @@ errno_t _mbscat_s(
   
 |`strDestination`|`numberOfElements`|`strSource`|Возвращаемое значение|Содержимое `strDestination`|  
 |----------------------|------------------------|-----------------|------------------|----------------------------------|  
-|`NULL` или без признака завершения|any|любые|`EINVAL`|не изменено|  
-|any|любые|`NULL`|`EINVAL`|`strDestination`[0] имеет значение 0|  
-|любые|0 или слишком мал|любые|`ERANGE`|`strDestination`[0] имеет значение 0|  
+|`NULL` или без признака завершения|any|any|`EINVAL`|не изменено|  
+|any|any|`NULL`|`EINVAL`|`strDestination`[0] имеет значение 0|  
+|any|0 или слишком мал|any|`ERANGE`|`strDestination`[0] имеет значение 0|  
   
 ## <a name="remarks"></a>Примечания  
  Функция `strcat_s` добавляет `strSource` в `strDestination` и завершает результирующую строку символом NULL. Начальный символ строки `strSource` переопределяет завершающий символ NULL строки `strDestination`. При перекрытии исходного и конечного буферов поведение `strcat_s` не определено.  
@@ -126,11 +127,11 @@ strcat_s(buf, 16 - strlen(buf), " End"); // Incorrect
   
  Если параметр `strDestination` является пустым указателем или не завершается символом NULL, или если `strSource` является указателем `NULL`, или если строка назначения слишком мала, вызывается обработчик недопустимых параметров, как описано в разделе [Проверка параметров](../../c-runtime-library/parameter-validation.md). Если продолжение выполнения разрешено, эти функции возвращают `EINVAL` и устанавливают для `errno` значение `EINVAL`.  
   
- В C++ использование данных функций упрощено наличием шаблонных перегрузок; перегруженные методы могут автоматически определять длину буфера (что исключает необходимость указания аргумента с размером буфера), а также они могут автоматически заменять более старые, незащищенные функции их новыми безопасными аналогами. Дополнительные сведения см. в разделе [Безопасные перегрузки шаблонов](../../c-runtime-library/secure-template-overloads.md).  
+ В C++ использование данных функций упрощено наличием шаблонных перегрузок; перегруженные методы могут автоматически определять длину буфера (что исключает необходимость указания аргумента с размером буфера), а также они могут автоматически заменять более старые, незащищенные функции их новыми безопасными аналогами. Дополнительные сведения см. в разделе [Secure Template Overloads](../../c-runtime-library/secure-template-overloads.md).  
   
  Отладочные версии этих функций сначала заполняют буфер значением 0xFD. Чтобы отключить это поведение, используйте [_CrtSetDebugFillThreshold](../../c-runtime-library/reference/crtsetdebugfillthreshold.md).  
   
-### <a name="generic-text-routine-mappings"></a>Универсальное текстовое сопоставление функций  
+### <a name="generic-text-routine-mappings"></a>Сопоставления подпрограмм обработки обычного текста  
   
 |Подпрограмма TCHAR.H|_UNICODE и _MBCS не определены|_MBCS определено|_UNICODE определено|  
 |---------------------|------------------------------------|--------------------|-----------------------|  
@@ -144,7 +145,7 @@ strcat_s(buf, 16 - strlen(buf), " End"); // Incorrect
 |`wcscat_s`|\<string.h> или \<wchar.h>|  
 |`_mbscat_s`|\<mbstring.h>|  
   
- Дополнительные сведения о совместимости см. в статье [Совместимость](../../c-runtime-library/compatibility.md).  
+ Дополнительные сведения о совместимости см. в разделе [Совместимость](../../c-runtime-library/compatibility.md).  
   
 ## <a name="example"></a>Пример  
  Пример кода см. в разделе [strcpy_s, wcscpy_s, _mbscpy_s](../../c-runtime-library/reference/strcpy-s-wcscpy-s-mbscpy-s.md).  

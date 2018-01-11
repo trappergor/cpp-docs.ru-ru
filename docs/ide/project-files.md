@@ -1,34 +1,35 @@
 ---
-title: "Файлы проекта | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "VСPROJ-файлы"
-  - "файлы проекта [C++], формат файлов .vcproj"
-  - "VCPROJ (файл проекта Visual C++) - формат"
-  - "проекты Visual C++, формат файла проекта"
+title: "Файлы проекта | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-ide
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- .vcproj files
+- Visual C++ projects, project file format
+- VCPROJ (Visual C++ project file) format
+- project files [C++], .vcproj file format
 ms.assetid: 5261cf45-3136-40a6-899e-dc1339551401
-caps.latest.revision: 13
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 13
+caps.latest.revision: "13"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: ac1b6d01bc454e2bcc7f1c8fd125f9d6ff96c90f
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 12/21/2017
 ---
-# Файлы проекта
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Файл проекта Visual C\+\+ представляет собой XML\-файл с расширением VCXPROJ, который содержит сведения, необходимые для построения проекта Visual C\+\+.  
+# <a name="project-files"></a>Файлы проекта
+Файл проекта Visual C++ представляет собой XML-файл имеет расширение VCXPROJ-файл и содержит сведения, необходимые для построения проекта Visual C++.  
   
-## Пример  
- В следующем примере файл VCXPROJ был создан с помощью задания параметра **Консольное приложение Win32** в диалоговом окне **Новый проект**.  Чтобы обработать файл проекта, используйте средство msbuild.exe из командной строки или команду **Построение** в [!INCLUDE[TLA2#tla_ide](../build/includes/tla2sharptla_ide_md.md)]. \(Этот пример нельзя обработать, поскольку не предоставлены требуемые исходный файл и файл заголовка.\) Дополнительные сведения об XML\-элементах в файле проекта см. в разделе [Справочные сведения о схеме файлов проектов](../Topic/MSBuild%20Project%20File%20Schema%20Reference.md).  
+## <a name="example"></a>Пример  
+ В следующем примере файл VCXPROJ-файл был создан с помощью задания **консольное приложение Win32** в **новый проект** диалоговое окно. Для обработки в проект файла используйте средство msbuild.exe из командной строки или **построения** в [!INCLUDE[TLA2#tla_ide](../build/includes/tla2sharptla_ide_md.md)]. (В этом примере не удалось обработать, поскольку не указаны требуемые исходный файл и файлы заголовков). Дополнительные сведения об XML-элементах в файле проекта см. в разделе [Справочник по схеме файла проекта](/visualstudio/msbuild/msbuild-project-file-schema-reference).  
   
 ```  
 <?xml version="1.0" encoding="utf-8"?>  
@@ -128,6 +129,6 @@ caps.handback.revision: 13
 </Project>  
 ```  
   
-## См. также  
- [Построение проектов C\+\+ в Visual Studio](../ide/building-cpp-projects-in-visual-studio.md)   
+## <a name="see-also"></a>См. также  
+ [Построение проектов C++ в Visual Studio](../ide/building-cpp-projects-in-visual-studio.md)   
  [Работа со свойствами проектов](../ide/working-with-project-properties.md)

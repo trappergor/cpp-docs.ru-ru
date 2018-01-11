@@ -55,11 +55,12 @@ caps.latest.revision: "34"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: cedbcd404e0f9dd575fe19486e97382e5975196c
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: e49cec1c34af066d6f30cf70003252f28e2bb8dc
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cmfccolorbutton-class"></a>Класс CMFCColorButton
 `CMFCColorButton` И [CMFCColorBar класса](../../mfc/reference/cmfccolorbar-class.md) классы используются совместно для реализации управление палитрой.  
@@ -70,17 +71,17 @@ ms.lasthandoff: 10/24/2017
 class CMFCColorButton : public CMFCButton  
 ```  
   
-## <a name="members"></a>Члены  
+## <a name="members"></a>Участники  
   
 ### <a name="public-constructors"></a>Открытые конструкторы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[CMFCColorButton::CMFCColorButton](#cmfccolorbutton)|Создает новое `CMFCColorButton` объекта.|  
   
 ### <a name="public-methods"></a>Открытые методы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[CMFCColorButton::EnableAutomaticButton](#enableautomaticbutton)|Включает и отключает кнопка «automatic», расположенный выше обычного цветного кнопок. (Кнопка автоматического стандартной системы обозначается **автоматического**.)|  
 |[CMFCColorButton::EnableOtherButton](#enableotherbutton)|Включает и отключает «other» кнопки, расположенные ниже обычного цветного кнопок. (Кнопка «other» обозначается стандартной системы **Дополнительные цвета**.)|  
@@ -95,7 +96,7 @@ class CMFCColorButton : public CMFCButton
   
 ### <a name="protected-methods"></a>Защищенные методы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[CMFCColorButton::IsDrawXPTheme](#isdrawxptheme)|Указывает, отображается ли кнопка текущего цвета в визуальном стиле Windows XP.|  
 |[CMFCColorButton::OnDraw](#ondraw)|Вызывается платформой для отображения изображения кнопки.|  
@@ -107,10 +108,10 @@ class CMFCColorButton : public CMFCButton
   
 ### <a name="data-members"></a>Элементы данных  
   
-|Имя|Описание|  
+|name|Описание:|  
 |----------|-----------------|  
-|`m_bAltColorDlg`|Значение типа Boolean. Если `TRUE`, платформа отображает [CMFCColorDialog](../../mfc/reference/cmfccolordialog-class.md) диалогового окна "цвета", когда *других* кнопки, или если `FALSE`, диалоговое окно Цвет системы. Значение по умолчанию — `TRUE`. Дополнительные сведения см. в разделе [CMFCColorButton::EnableOtherButton](#enableotherbutton).|  
-|`m_bAutoSetFocus`|Значение типа Boolean. Если `TRUE`, платформа с фокусом, в меню Цвет при отображении меню или `FALSE`, не изменяет фокус. Значение по умолчанию — `TRUE`.|  
+|`m_bAltColorDlg`|Значение типа Boolean. Если `TRUE`, платформа отображает [CMFCColorDialog](../../mfc/reference/cmfccolordialog-class.md) диалогового окна "цвета", когда *других* кнопки, или если `FALSE`, диалоговое окно Цвет системы. Значение по умолчанию — `TRUE`. Дополнительные сведения см. в разделе [CMFCColorButton::EnableOtherButton](#enableotherbutton).|  
+|`m_bAutoSetFocus`|Значение типа Boolean. Если `TRUE`, платформа с фокусом, в меню Цвет при отображении меню или `FALSE`, не изменяет фокус. Значение по умолчанию — `TRUE`.|  
 |[CMFCColorButton::m_bEnabledInCustomizeMode](#m_benabledincustomizemode)|Указывает, включен ли режим настройки для «цвет».|  
 |`m_Color`|Объект [COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449) значение. Содержит выбранный цвет.|  
 |`m_ColorAutomatic`|Объект [COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449) значение. Содержит цвет выбранного по умолчанию.|  
@@ -321,7 +322,7 @@ void RebuildPalette(CPalette* pPal);
   
 ### <a name="parameters"></a>Параметры  
   
-|Параметр|Описание|  
+|Параметр|Описание:|  
 |---------------|-----------------|  
 |[in] `pPal`|Указатель на логическую палитру или `NULL`. Если `NULL`, используется по умолчанию системной палитры.|  
   

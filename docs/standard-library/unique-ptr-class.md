@@ -33,11 +33,12 @@ caps.latest.revision: "22"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 148d4b734f0e2cb56e959f54b99fb89a5efa6669
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: ba6ac8e50764801052c051703a211c4605a33601
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="uniqueptr-class"></a>Класс unique_ptr
 Содержит указатель на собственный объект или массив. Данный объект или массив не принадлежит никаким другим объектам `unique_ptr`. Данный объект удаляется при удалении объекта `unique_ptr`.  
@@ -135,7 +136,7 @@ public:
 |-|-|  
 |[unique_ptr](#unique_ptr)|Для `unique_ptr` предусмотрено семь конструкторов.|  
   
-### <a name="typedefs"></a>Typedefs  
+### <a name="typedefs"></a>Определения типов  
   
 |||  
 |-|-|  
@@ -352,7 +353,7 @@ unique_ptr(unique_ptr<Ty2, Del2>&& right);
   
 ### <a name="parameters"></a>Параметры  
   
-|Параметр|Описание|  
+|Параметр|Описание:|  
 |---------------|-----------------|  
 |`ptr`|Указатель на ресурс, который будет назначен `unique_ptr.`.|  
 |`_Deleter`|`deleter`, который будет назначен `unique_ptr`.|  

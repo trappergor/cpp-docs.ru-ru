@@ -1,32 +1,33 @@
 ---
-title: "propputref | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-f1_keywords: 
-  - "vc-attr.propputref"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "propputref attribute"
+title: "propputref | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+f1_keywords: vc-attr.propputref
+dev_langs: C++
+helpviewer_keywords: propputref attribute
 ms.assetid: 9b0aed74-fdc7-4e59-9117-949bea4f86dd
-caps.latest.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 9
+caps.latest.revision: "9"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: f11bf806e422a5b63e68caf771c4ff355065c3f2
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 12/21/2017
 ---
-# propputref
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Определяет функцию параметра свойства, которая использует ссылку вместо значения.  
+# <a name="propputref"></a>propputref
+Задает функцию настройки свойства, которое использует ссылку вместо значения.  
   
-## Синтаксис  
+## <a name="syntax"></a>Синтаксис  
   
 ```  
   
@@ -34,28 +35,27 @@ caps.handback.revision: 9
   
 ```  
   
-## Заметки  
- **propputref** Атрибут C\+\+ имеет ту же функциональность, что и  [propputref](http://msdn.microsoft.com/library/windows/desktop/aa367147) атрибут MIDL.  
+## <a name="remarks"></a>Примечания  
+ **Propputref** языка C++ имеет ту же функциональность, что [propputref](http://msdn.microsoft.com/library/windows/desktop/aa367147) языка MIDL.  
   
-## Пример  
- См. пример [bindable](../windows/bindable.md) для использования образцы  **propputref**.  
+## <a name="example"></a>Пример  
+ Далее приведен пример [привязываемых](../windows/bindable.md) для приведен пример использования **propputref**.  
   
-## Требования  
+## <a name="requirements"></a>Требования  
   
-### Контекст атрибута  
+### <a name="attribute-context"></a>Контекст атрибута  
   
 |||  
 |-|-|  
 |**Применение**|Метод|  
-|**Repeatable**|Нет|  
-|**Обязательные атрибуты**|None|  
-|**Недопустимые атрибуты**|**propget**"  **propput**|  
+|**Повторяемый**|Нет|  
+|**Обязательные атрибуты**|Нет|  
+|**Недопустимые атрибуты**|**propget**, **propput**|  
   
- Дополнительные сведения о контекстах атрибута см. в разделе [Контексты атрибута](../windows/attribute-contexts.md).  
+ Дополнительные сведения о контекстах атрибутов см. в разделе [Контексты атрибутов](../windows/attribute-contexts.md).  
   
-## См. также  
- [IDL Attributes](../windows/idl-attributes.md)   
- [Method Attributes](../windows/method-attributes.md)   
+## <a name="see-also"></a>См. также  
+ [Атрибуты IDL](../windows/idl-attributes.md)   
+ [Атрибуты метода](../windows/method-attributes.md)   
  [propget](../windows/propget.md)   
  [propput](../windows/propput.md)   
- [Attributes Samples](http://msdn.microsoft.com/ru-ru/558ebdb2-082f-44dc-b442-d8d33bf7bdb8)

@@ -18,11 +18,12 @@ caps.latest.revision: "9"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 83985689a2e696e82aae57348ab61263c0f888da
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 3563395020919c59acbd94bfc8653d349090ff96
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="creating-windows"></a>Создание окон
 Платформа автоматически создает большую часть окон, которые используются в программе framework. [Создание документов и представлений](../mfc/document-view-creation.md) показано, как платформа создает фрейм окна, связанные с документами и представлениями. Но для специальных целей, можно создать собственные windows — собственных дочерних окон фреймов или представлений, включая, помимо windows, предоставляемого платформой.  

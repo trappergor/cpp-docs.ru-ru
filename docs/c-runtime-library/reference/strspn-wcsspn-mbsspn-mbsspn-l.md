@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
 apiname:
@@ -33,8 +32,7 @@ f1_keywords:
 - _mbsspn
 - _tcsspn
 - strspn
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - wcsspn function
 - strings [C++], searching
@@ -49,36 +47,22 @@ helpviewer_keywords:
 - mbsspn_l function
 - _tcsspn function
 ms.assetid: d077284a-809f-4068-959e-c6d6262677eb
-caps.latest.revision: 22
+caps.latest.revision: "22"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: a82768750e6a7837bb81edd8a51847f83c294c20
-ms.openlocfilehash: 71c5c3e7d3dd747926a02940c5ef95f9d1ef243f
-ms.contentlocale: ru-ru
-ms.lasthandoff: 04/04/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: a0c4f57aac2f0b673cac716e5bdd94bd66534f6b
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="strspn-wcsspn-mbsspn-mbsspnl"></a>strspn, wcsspn, _mbsspn, _mbsspn_l
 Возвращает индекс первого вхождения в строке символа, который не относится к набору символов.  
   
 > [!IMPORTANT]
-> Функции  `_mbsspn` и `_mbsspn_l` не могут использоваться в приложениях, запускаемых в среде выполнения Windows. Дополнительные сведения см. в статье [Функции CRT, которые не поддерживаются с ключом /ZW](http://msdn.microsoft.com/library/windows/apps/jj606124.aspx).  
+>  Функции `_mbsspn` и `_mbsspn_l` не могут использоваться в приложениях, запускаемых в среде выполнения Windows. Дополнительные сведения см. в статье [Функции CRT, которые не поддерживаются с ключом /ZW](http://msdn.microsoft.com/library/windows/apps/jj606124.aspx).  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -120,9 +104,9 @@ size_t _mbsspn_l(
   
  Функции `wcsspn` и `_mbsspn` являются версиями функции `strspn` для расширенных и многобайтовых символов. Аргументы `wcsspn` представляют собой двухбайтовые строки; аргументы `_mbsspn` представляют собой многобайтовые строки. `_mbsspn` проверяет свои параметры. Если параметр `str` или `strCharSet` имеет значение `NULL`, вызывается обработчик недопустимого параметра, как описано в разделе [Проверка параметров](../../c-runtime-library/parameter-validation.md). Если выполнение может быть продолжено, параметр `_mbspn` принимает значение `errno`, а функция `EINVAL` возвращает значение 0. Функции `strspn` и `wcsspn` не проверяют свои параметры. В остальном эти три функции ведут себя идентично.  
   
- Выходное значение зависит от настройки категории `LC_CTYPE` языкового стандарта; дополнительные сведения см. в разделе [setlocale](../../c-runtime-library/reference/setlocale-wsetlocale.md). Версии этих функций без суффикса `_l` используют текущий языковой стандарт для данного поведения, зависимого от языкового стандарта. Версии с суффиксом `_l` идентичны, однако они используют переданный параметр языкового стандарта. Дополнительные сведения см. в разделе [Языковой стандарт](../../c-runtime-library/locale.md).  
+ Выходное значение зависит от настройки категории `LC_CTYPE` языкового стандарта; дополнительные сведения см. в разделе [setlocale](../../c-runtime-library/reference/setlocale-wsetlocale.md). Версии этих функций без суффикса `_l` используют текущий языковой стандарт для данного поведения, зависимого от языкового стандарта. Версии с суффиксом `_l` идентичны, однако они используют переданный параметр языкового стандарта. Для получения дополнительной информации см. [Locale](../../c-runtime-library/locale.md).  
   
-### <a name="generic-text-routine-mappings"></a>Универсальное текстовое сопоставление функций  
+### <a name="generic-text-routine-mappings"></a>Сопоставления подпрограмм обработки обычного текста  
   
 |Подпрограмма TCHAR.H|_UNICODE и _MBCS не определены|_MBCS определено|_UNICODE определено|  
 |---------------------|------------------------------------|--------------------|-----------------------|  
@@ -137,7 +121,7 @@ size_t _mbsspn_l(
 |`wcsspn`|\<string.h> или \<wchar.h>|  
 |`_mbsspn`, `_mbsspn_l`|\<mbstring.h>|  
   
- Дополнительные сведения о совместимости см. в статье [Совместимость](../../c-runtime-library/compatibility.md).  
+ Дополнительные сведения о совместимости см. в разделе [Совместимость](../../c-runtime-library/compatibility.md).  
   
 ## <a name="example"></a>Пример  
   

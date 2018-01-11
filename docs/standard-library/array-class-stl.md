@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -41,37 +40,7 @@ f1_keywords:
 - array/std::array::swap
 - array/std::array::operator=
 - array/std::array::operator[]
-- array/std::array::const_iterator
-- array/std::array::const_pointer
-- array/std::array::const_reference
-- array/std::array::const_reverse_iterator
-- array/std::array::difference_type
-- array/std::array::iterator
-- array/std::array::pointer
-- array/std::array::reference
-- array/std::array::reverse_iterator
-- array/std::array::size_type
-- array/std::array::value_type
-- array/std::array::assign
-- array/std::array::at
-- array/std::array::back
-- array/std::array::begin
-- array/std::array::cbegin
-- array/std::array::cend
-- array/std::array::crbegin
-- array/std::array::crend
-- array/std::array::data
-- array/std::array::empty
-- array/std::array::end
-- array/std::array::fill
-- array/std::array::front
-- array/std::array::max_size
-- array/std::array::rbegin
-- array/std::array::rend
-- array/std::array::size
-- array/std::array::swap
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - std::array [C++]
 - std::array [C++], const_iterator
@@ -134,16 +103,16 @@ helpviewer_keywords:
 - std::array [C++], size
 - std::array [C++], swap
 ms.assetid: fdfd43a5-b2b5-4b9e-991f-93bf10fb4293
-caps.latest.revision: 22
+caps.latest.revision: "22"
 author: corob-msft
 ms.author: corob
 manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 864e155bf921bb273ad0e7eb9d2e014c01760543
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
-ms.sourcegitcommit: 65f4e356ad0d46333b0d443d0fd6ac0b9f2b6f58
-ms.openlocfilehash: e5829e7b241fc4669e67f9200f2f3f0b2cf9f2c8
-ms.contentlocale: ru-ru
-ms.lasthandoff: 10/03/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="array-class-c-standard-library"></a>Класс array (стандартная библиотека C++)
 Описывает объект, управляющий последовательностью из элементов `N` типа `Ty`. Последовательность хранится как массив `Ty` в объекте `array<Ty, N>`.  
@@ -159,15 +128,15 @@ class array;
   
 |||  
 |-|-|  
-|Параметр|Описание|  
+|Параметр|Описание:|  
 |`Ty`|Тип элемента.|  
 |`N`|Количество элементов|  
   
-## <a name="members"></a>Члены  
+## <a name="members"></a>Участники  
   
 |||  
 |-|-|  
-|Определение типа|Описание|  
+|Определение типа|Описание:|  
 |[const_iterator](#const_iterator)|Тип постоянного итератора для управляемой последовательности.|  
 |[const_pointer](#const_pointer)|Тип постоянного указателя на элемент.|  
 |[const_reference](#const_reference)|Тип постоянной ссылки на элемент.|  
@@ -182,7 +151,7 @@ class array;
   
 |||  
 |-|-|  
-|Функция-член|Описание|  
+|Функция-член|Описание:|  
 |[array](#array)|Создает объект массива.|  
 |[assign](#assign)|Заменяет все элементы.|  
 |[at](#at)|Обращается к элементу в указанной позиции.|  
@@ -205,12 +174,12 @@ class array;
   
 |||  
 |-|-|  
-|Оператор|Описание|  
+|Оператор|Описание:|  
 |[array::operator=](#op_eq)|Заменяет управляемую последовательность.|  
 |[array::operator[]](#op_at)|Обращается к элементу в указанной позиции.|  
   
 ## <a name="remarks"></a>Примечания  
- У этого типа есть конструктор по умолчанию `array()` и оператор присваивания по умолчанию `operator=`. Тип удовлетворяет требованиям для `aggregate`. Поэтому объекты типа `array<Ty, N>` можно инициализировать с помощью агрегатного инициализатора. Например:  
+ У этого типа есть конструктор по умолчанию `array()` и оператор присваивания по умолчанию `operator=`. Тип удовлетворяет требованиям для `aggregate`. Поэтому объекты типа `array<Ty, N>` можно инициализировать с помощью агрегатного инициализатора. Например, примененная к объекту директива  
   
 ```  
 array<int, 4> ai = { 1, 2, 3 };  
@@ -478,7 +447,7 @@ const_iterator cbegin() const noexcept;
 ### <a name="remarks"></a>Примечания  
  Элементы в диапазоне нельзя изменить с помощью возвращаемого значения `cbegin`.  
   
- Эту функцию-член можно использовать вместо функции-члена `begin()`, чтобы гарантировать, что возвращаемое значение будет `const_iterator`. Обычно используется вместе с ключевым словом вывода типа [auto](../cpp/auto-cpp.md), как показано в следующем примере. В этом примере предположим, что `Container` является изменяемым контейнером (не `const`) любого типа, который поддерживает `begin()` и `cbegin()`.  
+ Эту функцию-член можно использовать вместо функции-члена `begin()`, чтобы гарантировать, что возвращаемое значение будет `const_iterator`. Обычно используется вместе с ключевым словом вывода типа [auto](../cpp/auto-cpp.md), как показано в следующем примере. В примере `Container` следует рассматривать как изменяемый (не-`const`) контейнер любого вида, который поддерживает `begin()` и `cbegin()`.  
   
 ```cpp  
 auto i1 = Container.begin();
@@ -501,7 +470,7 @@ const_iterator cend() const noexcept;
 ### <a name="remarks"></a>Примечания  
  `cend` используется для проверки того, прошел ли итератор конец диапазона.  
   
- Эту функцию-член можно использовать вместо функции-члена `end()`, чтобы гарантировать, что возвращаемое значение будет `const_iterator`. Обычно используется вместе с ключевым словом вывода типа [auto](../cpp/auto-cpp.md), как показано в следующем примере. В этом примере предположим, что `Container` является изменяемым контейнером (не `const`) любого типа, который поддерживает `end()` и `cend()`.  
+ Эту функцию-член можно использовать вместо функции-члена `end()`, чтобы гарантировать, что возвращаемое значение будет `const_iterator`. Обычно используется вместе с ключевым словом вывода типа [auto](../cpp/auto-cpp.md), как показано в следующем примере. В примере `Container` следует рассматривать как изменяемый (не-`const`) контейнер любого вида, который поддерживает `end()` и `cend()`.  
   
 ```cpp  
 auto i1 = Container.end();
@@ -979,7 +948,7 @@ void fill(const Type& val);
   
 |||  
 |-|-|  
-|Параметр|Описание|  
+|Параметр|Описание:|  
 |`val`|Значение элемента, вставляемого в массив.|  
   
 ### <a name="remarks"></a>Примечания  
@@ -1677,5 +1646,4 @@ int main()
   
 ## <a name="see-also"></a>См. также  
  [\<array>](../standard-library/array.md)
-
 

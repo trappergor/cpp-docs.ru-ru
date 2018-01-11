@@ -33,37 +33,22 @@ f1_keywords:
 - math/fma
 - math/fmaf
 - math/fmal
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - fma function
 - fmaf function
 - fmal function
 ms.assetid: 584a6037-da1e-4e86-9f0c-97aae86de0c0
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.mt:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3f91eafaf3b5d5c1b8f96b010206d699f666e224
-ms.openlocfilehash: 59238cf511be936b0d882c2f00320ee7422904e0
-ms.contentlocale: ru-ru
-ms.lasthandoff: 04/01/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: cd4178718380502e91bb7f019164f2398c93323c
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="fma-fmaf-fmal"></a>fma, fmaf, fmal
 Перемножает два значения, добавляет к произведению третье значение и затем округляет результат без потери точности, вызванной промежуточным округлением.  
@@ -127,10 +112,10 @@ long double fmal(
 |Ошибка переполнения диапазона|±HUGE_VAL, ±HUGE_VALF или ±HUGE_VALL|  
 |Ошибка недостаточного заполнения диапазона|правильное значение (после округления).|  
   
- Сообщает об ошибках, как указано в [_matherr](../../c-runtime-library/reference/matherr.md).  
+ Ошибки сообщаются, как указано в [_matherr](../../c-runtime-library/reference/matherr.md).  
   
 ## <a name="remarks"></a>Примечания  
- Поскольку C++ допускает перегрузку, можно вызывать перегрузки `fma` , принимающие и возвращающие **float** и **long double** типов. В программе на языке C `fma` всегда принимает и возвращает **double**.  
+ Поскольку C++ допускает перегрузку, можно вызывать перегрузки `fma` , принимающие и возвращающие **float** и **long double** типов. В программе на языке C `fma` всегда принимает и возвращает **двойные**.  
   
  Эта функция вычисляет значение с бесконечной точностью, после чего округляет результат.  
   
@@ -140,7 +125,7 @@ long double fmal(
 |--------------|--------------|------------------|  
 |`fma`, `fmaf`, `fmal`|\<math.h>|\<cmath>|  
   
- Дополнительные сведения о совместимости см. в статье [Совместимость](../../c-runtime-library/compatibility.md).  
+ Дополнительные сведения о совместимости см. в разделе [Совместимость](../../c-runtime-library/compatibility.md).  
   
 ## <a name="see-also"></a>См. также  
  [Алфавитный указатель функций](../../c-runtime-library/reference/crt-alphabetical-function-reference.md)   

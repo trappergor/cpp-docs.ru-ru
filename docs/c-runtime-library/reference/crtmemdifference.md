@@ -4,12 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
-apiname:
-- _CrtMemDifference
+apiname: _CrtMemDifference
 apilocation:
 - msvcrt.dll
 - msvcr80.dll
@@ -25,36 +23,21 @@ apitype: DLLExport
 f1_keywords:
 - _CrtMemDifference
 - CrtMemDifference
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - CrtMemDifference function
 - _CrtMemDifference function
 ms.assetid: 0f327278-b551-482f-958b-76941f796ba4
-caps.latest.revision: 16
+caps.latest.revision: "16"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.mt:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: e257f037a05c45f5b98e64ea55bd125af443b0be
-ms.openlocfilehash: 9793a58ed76b4c3251936b9016f8308ad06a07fb
-ms.contentlocale: ru-ru
-ms.lasthandoff: 03/30/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: 4ba4dc873fbb0e77f3b2f939c9d62533849dab76
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="crtmemdifference"></a>_CrtMemDifference
 Сравнивает два состояния памяти и возвращает их различия (только отладочная версия).  
@@ -91,7 +74,7 @@ int _CrtMemDifference(
   
  По умолчанию внутренние блоки времени выполнения C (`_CRT_BLOCK`) не учитываются операциями контроля состояния памяти. Функция [_CrtSetDbgFlag](../../c-runtime-library/reference/crtsetdbgflag.md) можно использовать для включения бита `_CRTDBG_CHECK_CRT_DF` флага `_crtDbgFlag` для учета этих блоков в процессе обнаружения утечек памяти и контроля других операций состояния памяти. Освобожденные блоки памяти (`_FREE_BLOCK`) не приводят к возвращению функцией `_CrtMemDifference` значения TRUE.  
   
- Дополнительные сведения о функциях состояния кучи и структуре `_CrtMemState` см. в разделе [Heap State Reporting Functions](/visualstudio/debugger/crt-debug-heap-details). Сведения о выделении, инициализации и управлении блоками памяти в отладочной версии базовой кучи см. в разделе [Сведения о куче отладки CRT](/visualstudio/debugger/crt-debug-heap-details).  
+ Дополнительные сведения о функциях состояния кучи и структуре `_CrtMemState` см. в разделе [Heap State Reporting Functions](/visualstudio/debugger/crt-debug-heap-details). Сведения о выделении, инициализации и управлении блоками памяти в отладочной версии базовой кучи, см. в статье [CRT Debug Heap Details](/visualstudio/debugger/crt-debug-heap-details).  
   
 ## <a name="requirements"></a>Требования  
   
@@ -104,5 +87,5 @@ int _CrtMemDifference(
  **Библиотеки:** только отладочные версии [функций библиотеки CRT](../../c-runtime-library/crt-library-features.md).  
   
 ## <a name="see-also"></a>См. также  
- [Процедуры отладки](../../c-runtime-library/debug-routines.md)   
+ [Подпрограммы отладки](../../c-runtime-library/debug-routines.md)   
  [_crtDbgFlag](../../c-runtime-library/crtdbgflag.md)

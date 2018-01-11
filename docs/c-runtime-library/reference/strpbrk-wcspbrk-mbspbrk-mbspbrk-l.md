@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
 apiname:
@@ -34,8 +33,7 @@ f1_keywords:
 - _tcspbrk
 - _ftcspbrk
 - wcspbrk
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - fstrpbrk function
 - _ftcspbrk function
@@ -53,36 +51,22 @@ helpviewer_keywords:
 - _mbspbrk function
 - mbspbrk_l function
 ms.assetid: 80b504f7-a167-4dde-97ad-4ae3000dc810
-caps.latest.revision: 30
+caps.latest.revision: "30"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: e257f037a05c45f5b98e64ea55bd125af443b0be
-ms.openlocfilehash: 9eb1dfc77694c9c1b85aa21fe039058facb98c71
-ms.contentlocale: ru-ru
-ms.lasthandoff: 03/30/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: 323ee2842799cdfe948bdf0a8af7ec2bfad92439
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="strpbrk-wcspbrk-mbspbrk-mbspbrkl"></a>strpbrk, wcspbrk, _mbspbrk, _mbspbrk_l
 Сканирует строки на наличие символов в указанных наборах символов.  
   
 > [!IMPORTANT]
-> Функции  `_mbspbrk` и `_mbspbrk_l` не могут использоваться в приложениях, запускаемых в среде выполнения Windows. Дополнительные сведения см. в статье [Функции CRT, которые не поддерживаются с ключом /ZW](http://msdn.microsoft.com/library/windows/apps/jj606124.aspx).  
+>  Функции `_mbspbrk` и `_mbspbrk_l` не могут использоваться в приложениях, запускаемых в среде выполнения Windows. Дополнительные сведения см. в статье [Функции CRT, которые не поддерживаются с ключом /ZW](http://msdn.microsoft.com/library/windows/apps/jj606124.aspx).  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -162,11 +146,11 @@ const unsigned char *_mbspbrk_l(
   
  `_mbspbrk` аналогична `_mbscspn`, за исключением того, что `_mbspbrk` возвращает указатель, а не значение типа [size_t](../../c-runtime-library/standard-types.md).  
   
- В языке C эти функции принимают указатель `const` в качестве первого аргумента. В языке C++ доступны две перегрузки. Перегрузка, принимающая указатель на `const`, возвращает указатель на `const`; версия, которая принимает указатель на не-`const`, возвращает указатель на не-`const`. Макрос _CONST_CORRECT_OVERLOADS определен, если одновременно доступны версии `const` и не-`const` этих функций. Чтобы реализовать поведение не-`const` для обеих перегрузок в языке C++, определите символ _CONST_RETURN.  
+ В языке C эти функции принимают указатель `const` в качестве первого аргумента. В языке C++ доступны две перегрузки. Перегрузка, принимающая указатель на `const`, возвращает указатель на `const`; версия, которая принимает указатель на не-`const`, возвращает указатель на не-`const`. Макрос `_CRT_CONST_CORRECT_OVERLOADS` определяется, если оба `const` и не-`const` доступны версии этих функций. Если требуется не`const` поведение для обоих перегрузки C++ определения символа `_CONST_RETURN`.  
   
- Выходное значение зависит от настройки категории `LC_CTYPE` языкового стандарта; дополнительные сведения см. в разделе [setlocale](../../c-runtime-library/reference/setlocale-wsetlocale.md). В версиях этих функций без суффикса `_l` используется текущий языковой стандарт для поведения, которое зависит от языкового стандарта. Версия с суффиксом `_l` идентична, однако в ней используется языковой стандарт, переданный в качестве параметра. Дополнительные сведения см. в разделе [Языковой стандарт](../../c-runtime-library/locale.md).  
+ Выходное значение зависит от настройки категории `LC_CTYPE` языкового стандарта; дополнительные сведения см. в разделе [setlocale](../../c-runtime-library/reference/setlocale-wsetlocale.md). В версиях этих функций без суффикса `_l` используется текущий языковой стандарт для поведения, которое зависит от языкового стандарта. Версия с суффиксом `_l` идентична, однако в ней используется языковой стандарт, переданный в качестве параметра. Для получения дополнительной информации см. [Locale](../../c-runtime-library/locale.md).  
   
-### <a name="generic-text-routine-mappings"></a>Универсальное текстовое сопоставление функций  
+### <a name="generic-text-routine-mappings"></a>Сопоставления подпрограмм обработки обычного текста  
   
 |Подпрограмма TCHAR.H|_UNICODE и _MBCS не определены|_MBCS определено|_UNICODE определено|  
 |---------------------|------------------------------------|--------------------|-----------------------|  

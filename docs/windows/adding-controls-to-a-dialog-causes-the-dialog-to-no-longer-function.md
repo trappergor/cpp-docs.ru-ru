@@ -1,71 +1,75 @@
 ---
-title: "Adding Controls to a Dialog Causes the Dialog to No Longer Function | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "controls [C++], troubleshooting"
-  - "common controls, troubleshooting"
-  - "troubleshooting controls"
-  - "dialog boxes, troubleshooting"
-  - "dialog box controls, troubleshooting"
-  - "InitCommonControls"
+title: "Добавление элементов управления в диалоговое окно приводит к прекращению работы диалогового окна | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- controls [C++], troubleshooting
+- common controls, troubleshooting
+- troubleshooting controls
+- dialog boxes, troubleshooting
+- dialog box controls, troubleshooting
+- InitCommonControls
 ms.assetid: b2dd4574-ea59-4343-8d65-b387cead5da6
-caps.latest.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 6
+caps.latest.revision: "10"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: d0ec4825419c7a9d3c9bc35151b84c327a03325b
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 12/21/2017
 ---
-# Adding Controls to a Dialog Causes the Dialog to No Longer Function
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-После добавления общего общий элемента управления или элемента управления "RichEdit" в диалоговое окно, данный элемент управления не отображается в диалоговом окне во время тестирования, или же само диалоговое окно не отображается.  
+# <a name="adding-controls-to-a-dialog-causes-the-dialog-to-no-longer-function"></a>Добавление элементов управления в диалоговое окно приводит к неработоспособности этого диалогового окна
+После добавления стандартного элемента управления или управления форматированным редактированием в диалоговое окно, не появятся при тестировании диалоговое окно или само диалоговое окно не будет отображаться.  
   
- **Пример неполадки**  
+ **Пример проблемы**  
   
-1.  Создайте проект Win32, измените параметры приложения таким образом, чтобы это было приложение Windows \(а не консольное приложение\).  
+1.  Создайте проект Win32, измените параметры приложения, поэтому создание приложения Windows (а не консольное приложение).  
   
-2.  В [представлении ресурсов](../windows/resource-view-window.md) дважды щелкните RC\-файл.  
+2.  В [представление ресурсов](../windows/resource-view-window.md), дважды щелкните RC-файл.  
   
-3.  В группе параметров диалогового окна щелкните поле **О программе**.  
+3.  В группе параметров диалогового окна щелкните **о** поле.  
   
-4.  Добавьте в диалоговое окно **Элемент управления "IP\-адрес"**.  
+4.  Добавить **контроль IP-адресов** в диалоговое окно.  
   
-5.  Щелкните "Сохранить", а затем **Перестроить все**.  
+5.  Сохранить и **перестроить все**.  
   
-6.  Выполните программу.  
+6.  Запустите программу.  
   
-7.  В меню **Справка** диалогового окна выберите команду **О программе**; диалоговое окно не появится.  
+7.  В диалоговом **справки** меню, нажмите кнопку **о** командной; ни одно диалоговое окно отображается поле.  
   
- **Причина**  
+ **Причины**  
   
- В настоящий момент редактор диалоговых окон не добавляет автоматически код в проект, если пользователь добавляет общий элемент управления или элемент управления "Rich Edit" в диалоговое окно методом перетаскивания.  Visual Studio в свою очередь не выдает сообщение об ошибке или предупреждение, когда данная ошибка возникает.  Код элемента управления следует добавить вручную.  
+ В настоящий момент редактор диалоговых окон не добавляет автоматически код в проект при перетаскивании следующие стандартные элементы управления или элементы управления в диалоговое окно rich edit. И не Visual Studio обеспечивает ошибку или предупреждение при возникновении этой проблемы. Необходимо вручную добавить код для элемента управления.  
   
 ||||  
 |-|-|-|  
-|Элемент управления "Ползунок"|Элемент управления "Дерево"|Элемент управления "Выбор даты и времени"|  
-|Элемент управления "Счетчик"|Элемент управления "Вкладка"|Элемент управления "Календарь на месяц"|  
-|Элемент управления "Индикатор выполнения"|Элемент управления "Анимация"|Элемент управления "IP\-адрес"|  
-|Элемент управления "Сочетание клавиш"|Элемент управления "Rich Edit"|Элемент управления "Расширенное поле со списком"|  
-|Элемент управления "Список"|Элемент управления "Rich Edit 2.0"|Пользовательский элемент управления|  
+|Элемент управления «Ползунок»|Управления "дерево"|Элемент управления "Выбор даты и времени"|  
+|Элемент управления "Счетчик"|Элемент управления вкладки|Месячный календарь|  
+|Элемент управления хода выполнения|Управления "анимация"|Контроль IP-адресов|  
+|Сочетания клавиш|Элемент управления Rich Edit|Поле Расширенное поле со списком|  
+|Список элементов управления|Элемент управления Rich Edit 2.0|Пользовательский элемент управления|  
   
-## Исправление ошибки при добавлении общих элементов управления  
- Чтобы в диалоговом окне можно было использовать общие элементы управления, прежде чем создавать диалоговое окно необходимо вызвать метод [InitCommonControlsEx](http://msdn.microsoft.com/library/windows/desktop/bb775697) или **AFXInitCommonControls**.  
+## <a name="the-fix-for-common-controls"></a>Исправление для общих элементов управления  
+ Для использования стандартных элементов управления в диалоговом окне, необходимо вызвать [InitCommonControlsEx](http://msdn.microsoft.com/library/windows/desktop/bb775697) или **AFXInitCommonControls** перед созданием диалоговым окном.  
   
-## Исправление ошибки при добавлении элементов управления "Rich Edit"  
- Для элементов управления "Rich Edit" необходим вызвать метод **LoadLibrary**.  Дополнительные сведения см. в разделах [Использование элемента управления RichEdit 1.0 с MFC](../Topic/Using%20the%20RichEdit%201.0%20Control%20with%20MFC.md) и [Об элементах управления "Rich Edit"](http://msdn.microsoft.com/library/windows/desktop/bb787873) документации по [!INCLUDE[winsdkshort](../atl/reference/includes/winsdkshort_md.md)], а также в [Общих сведениях об элементах управления "Rich Edit"](../mfc/overview-of-the-rich-edit-control.md).  
+## <a name="the-fix-for-richedit-controls"></a>Исправление для элементов управления RichEdit  
+ Необходимо вызвать **LoadLibrary** для элемента управления rich edit. Дополнительные сведения см. в разделе [использование элемента управления RichEdit 1.0 с MFC](../windows/using-the-richedit-1-0-control-with-mfc.md), [о элементами управления Rich Edit](http://msdn.microsoft.com/library/windows/desktop/bb787873) в [!INCLUDE[winsdkshort](../atl-mfc-shared/reference/includes/winsdkshort_md.md)], и [Общие сведения об элементе управления Rich Edit](../mfc/overview-of-the-rich-edit-control.md).  
   
-## Требования  
+## <a name="requirements"></a>Требования  
  Win32  
   
-## См. также  
- [Troubleshooting the Dialog Editor](../mfc/troubleshooting-the-dialog-editor.md)   
- [Dialog Editor](../mfc/dialog-editor.md)
+## <a name="see-also"></a>См. также  
+ [Устранение неполадок редактора диалоговых окон](../windows/troubleshooting-the-dialog-editor.md)   
+ [Редактор диалоговых окон](../windows/dialog-editor.md)
+

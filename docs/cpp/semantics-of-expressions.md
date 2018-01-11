@@ -4,28 +4,26 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-language
+ms.technology: cpp-language
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - grammar, expressions
 - expressions [C++], semantics
 - expression evaluation
 - expression evaluation, about expression evaluation
 ms.assetid: 4a792154-533b-48b9-8709-31bfc170f0a7
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.translationtype: HT
-ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
-ms.openlocfilehash: 09b65ee050e856c4dcecba269c46a08c8d2d7fb5
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/25/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: efdf3f67e488af0e7c20c882552b18c533a031b7
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="semantics-of-expressions"></a>Семантика выражений
 Выражения оцениваются по приоритетности и группировке операторов. ([Приоритет и ассоциативность операторов](../cpp/cpp-built-in-operators-precedence-and-associativity.md) в [лексические соглашения](../cpp/lexical-conventions.md), показаны отношения C++ операторы налагают на выражения.)  

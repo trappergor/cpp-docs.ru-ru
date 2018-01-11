@@ -33,11 +33,12 @@ caps.latest.revision: "8"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 6fb5a95cab9942c36f9578315e73392984435059
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: b9bf21c45813a616f3aaa86ac35199a9572bfc4a
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="alignedrecalloc"></a>_aligned_recalloc
 Изменяет размер блока памяти, который был выделен с помощью [_aligned_malloc](../../c-runtime-library/reference/aligned-malloc.md) или [_aligned_offset_malloc](../../c-runtime-library/reference/aligned-offset-malloc.md), и инициализирует память нулями.  
@@ -64,7 +65,7 @@ void * _aligned_recalloc(
  Размер каждого элемента в байтах.  
   
  [входной] `alignment`  
- Значение выравнивания, которое должно быть целочисленной степенью числа 2.  
+ Значение выравнивания, которое должно быть целой степенью числа 2.  
   
 ## <a name="return-value"></a>Возвращаемое значение  
  `_aligned_recalloc` возвращает указатель void на перераспределенный (и, возможно, перемещенный) блок памяти. Возвращаемое значение — `NULL`, если размер равен нулю и аргумент буфера не `NULL`, а также если недостаточно памяти для расширения блока до заданного размера. В первом случае исходный блок освобождается. Во втором случае исходный блок не изменяется. Возвращаемое значение указывает на пространство хранилища, которое гарантированно будет соответственно выровнено для хранения объектов любого типа. Чтобы получить указатель на тип, отличающийся от void, используйте приведение типа для возвращаемого значения.  

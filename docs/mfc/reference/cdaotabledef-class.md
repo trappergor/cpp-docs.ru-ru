@@ -83,11 +83,12 @@ caps.latest.revision: "24"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 51fad5e7890ce311e46c07c9505cb889bf252376
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 7b140d61689672f9d27b8078ad7d2eab732c1582
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cdaotabledef-class"></a>Класс CDaoTableDef
 Представляет хранимое определение базовой или подключенной таблицы.  
@@ -98,17 +99,17 @@ ms.lasthandoff: 10/24/2017
 class CDaoTableDef : public CObject  
 ```  
   
-## <a name="members"></a>Члены  
+## <a name="members"></a>Участники  
   
 ### <a name="public-constructors"></a>Открытые конструкторы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[CDaoTableDef::CDaoTableDef](#cdaotabledef)|Создает **CDaoTableDef** объекта.|  
   
 ### <a name="public-methods"></a>Открытые методы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[CDaoTableDef::Append](#append)|Добавляет новую таблицу в базу данных.|  
 |[CDaoTableDef::CanUpdate](#canupdate)|Возвращает ненулевое значение, если таблицы могут быть обновлены (можно изменить определение поля или свойства таблицы).|  
@@ -143,7 +144,7 @@ class CDaoTableDef : public CObject
   
 ### <a name="public-data-members"></a>Открытые члены данных  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[CDaoTableDef::m_pDAOTableDef](#m_pdaotabledef)|Указатель на интерфейс DAO основного объекта tabledef.|  
 |[CDaoTableDef::m_pDatabase](#m_pdatabase)|Базы данных-источника для этой таблицы.|  
@@ -271,7 +272,7 @@ virtual void Create(
  `lAttributes`  
  Значение, соответствующее характеристикам таблиц, представленный объектом tabledef. Побитовое или можно использовать для объединения любой из следующих констант:  
   
-|Константа|Описание|  
+|Константа|Описание:|  
 |--------------|-----------------|  
 |**dbAttachExclusive**|Для баз данных, использующих базы данных Microsoft Jet указывает, что вложенные таблицы, открыт для монопольного использования.|  
 |**dbAttachSavePWD**|Для баз данных, использующих базы данных Microsoft Jet указывает, что идентификатор пользователя и пароль для подключенной таблицы сохраняются сведения о соединении.|  
@@ -309,14 +310,14 @@ void CreateField(CDaoFieldInfo& fieldinfo);
  `nType`  
  Значение, указывающее тип данных поля. Параметр может принимать одно из следующих значений:  
   
-|Тип|Размер (в байтах)|Описание|  
+|Тип|Размер (в байтах)|Описание:|  
 |----------|--------------------|-----------------|  
 |**dbBoolean**|1 байт|BOOL|  
 |**dbByte**|1|BYTE|  
 |**dbInteger**|2|int|  
 |**dbLong**|4|long|  
 |**dbCurrency**|8|Валюта ( [COleCurrency](../../mfc/reference/colecurrency-class.md))|  
-|**dbSingle**|4|плавающее|  
+|**dbSingle**|4|float|  
 |**dbDouble**|8|double|  
 |**dbDate**|8|Даты и времени ( [COleDateTime](../../atl-mfc-shared/reference/coledatetime-class.md))|  
 |**dbText**|1 - 255|Текст ( [CString](../../atl-mfc-shared/reference/cstringt-class.md))|  
@@ -329,7 +330,7 @@ void CreateField(CDaoFieldInfo& fieldinfo);
  `lAttributes`  
  Значение, соответствующее характеристики поля, которые могут объединяться с помощью побитового или.  
   
-|Константа|Описание|  
+|Константа|Описание:|  
 |--------------|-----------------|  
 |**dbFixedField**|Поле фиксированный размер (по умолчанию для числовых полей).|  
 |**dbVariableField**|Размер поля является переменной (только текстовые поля).|  
@@ -437,7 +438,7 @@ long GetAttributes();
   
 ### <a name="remarks"></a>Примечания  
   
-|Константа|Описание|  
+|Константа|Описание:|  
 |--------------|-----------------|  
 |**dbAttachExclusive**|Для баз данных, использующих базы данных Microsoft Jet указывает, что вложенные таблицы, открыт для монопольного использования.|  
 |**dbAttachSavePWD**|Для баз данных, использующих базы данных Microsoft Jet указывает, что идентификатор пользователя и пароль для подключенной таблицы сохраняются сведения о соединении.|  
@@ -755,7 +756,7 @@ void SetAttributes(long lAttributes);
  `lAttributes`  
  Характеристики таблицы, представленной `CDaoTableDef` объекта и может быть суммой значений этих констант:  
   
-|Константа|Описание|  
+|Константа|Описание:|  
 |--------------|-----------------|  
 |**dbAttachExclusive**|Для баз данных, использующих базы данных Microsoft Jet указывает, что вложенные таблицы, открыт для монопольного использования.|  
 |**dbAttachSavePWD**|Для баз данных, использующих базы данных Microsoft Jet указывает, что идентификатор пользователя и пароль для подключенной таблицы сохраняются сведения о соединении.|  
@@ -790,7 +791,7 @@ void SetConnect(LPCTSTR lpszConnect);
   
  Ниже приведены типы возможно, база данных и их соответствующие спецификаторы базы данных и пути:  
   
-|Тип базы данных|класса хранения|Путь|  
+|Тип базы данных|Описатель|Путь|  
 |-------------------|---------------|----------|  
 |Базы данных с помощью базы данных Jet|"[ `database`];"|« `drive`:\\\ *путь*\\\ *filename*. MDB»|  
 |dBASE III|«dBASE III;»|« `drive`:\\\ *путь*»|  

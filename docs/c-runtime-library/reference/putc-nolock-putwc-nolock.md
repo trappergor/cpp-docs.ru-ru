@@ -45,11 +45,12 @@ caps.latest.revision: "15"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: e8da1041a5d719145625470aaed542cc3030bd80
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: ad994b11cecb304bd91d357516aa7c81a7351917
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="putcnolock-putwcnolock"></a>_putc_nolock, _putwc_nolock
 Записывает символ в поток без блокировки потока.  
@@ -83,7 +84,7 @@ wint_t _putwc_nolock(
   
  Функция `_putwc_nolock` является версией функции `_putc_nolock` с расширенными символами; обе функции ведут себя одинаково, если поток открыт в режиме ANSI. Функция `_putc_nolock` на данный момент не поддерживает вывод данных в поток в кодировке Юникод.  
   
-### <a name="generic-text-routine-mappings"></a>Универсальное текстовое сопоставление функций  
+### <a name="generic-text-routine-mappings"></a>Сопоставления подпрограмм обработки обычного текста  
   
 |Подпрограмма Tchar.h|_UNICODE и _MBCS не определены|_MBCS определено|_UNICODE определено|  
 |---------------------|--------------------------------------|--------------------|-----------------------|  

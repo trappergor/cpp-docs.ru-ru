@@ -4,12 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
-apiname:
-- _aligned_malloc_dbg
+apiname: _aligned_malloc_dbg
 apilocation:
 - msvcrt.dll
 - msvcr80.dll
@@ -25,22 +23,21 @@ apitype: DLLExport
 f1_keywords:
 - _aligned_malloc_dbg
 - aligned_malloc_dbg
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - aligned_malloc_dbg function
 - _aligned_malloc_dbg function
 ms.assetid: fb0429c3-685d-4826-9075-2515c5bdc5c6
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: corob-msft
 ms.author: corob
 manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: e90adb11a95f9256ffe1fe0ba4a0bd6a393a9440
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
-ms.sourcegitcommit: 16d1bf59dfd4b3ef5f037aed9c0f6febfdf1a2e8
-ms.openlocfilehash: aca23722103b75c6420ed14132d1fdac9cd097f6
-ms.contentlocale: ru-ru
-ms.lasthandoff: 10/09/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="alignedmallocdbg"></a>_aligned_malloc_dbg
 Выделяет память в указанных границах выравнивания с дополнительным пространством для заголовка отладки и буферов перезаписи (только отладочная версия).  
@@ -73,13 +70,13 @@ void * _aligned_malloc_dbg(
  Указатель на выделенный блок памяти или значение `NULL` в случае сбоя операции.  
   
 ## <a name="remarks"></a>Примечания  
- `_aligned_malloc_dbg` — это отладочная версия функции [_aligned_malloc](../../c-runtime-library/reference/aligned-malloc.md). Если функция [_DEBUG](../../c-runtime-library/debug.md) не определена, каждый вызов функции `_aligned_malloc_dbg` сокращается до вызова функции `_aligned_malloc`. И `_aligned_malloc`, и `_aligned_malloc_dbg` выполняют выделение блока памяти в основной куче, однако `_aligned_malloc_dbg` включает различные возможности отладки: буферы на обеих сторонах пользовательской части блока для тестирования утечек и сведения о `filename`/`linenumber` для определения источника запросов на выделение.  
+ `_aligned_malloc_dbg` — это отладочная версия функции [_aligned_malloc](../../c-runtime-library/reference/aligned-malloc.md). Если [_DEBUG](../../c-runtime-library/debug.md) не определен, каждый вызов функции `_aligned_malloc_dbg` сокращается до вызова функции `_aligned_malloc`. И `_aligned_malloc`, и `_aligned_malloc_dbg` выполняют выделение блока памяти в основной куче, однако `_aligned_malloc_dbg` включает различные возможности отладки: буферы на обеих сторонах пользовательской части блока для тестирования утечек и сведения о `filename`/`linenumber` для определения источника запросов на выделение.  
   
  `_aligned_malloc_dbg` выделяет блок памяти, добавив немного больше пространства, чем запрошено `size`. Дополнительное пространство используется диспетчером кучи отладки, чтобы связать блоки памяти отладки и предоставить приложению сведения о заголовке отладки и буферы перезаписи. При выделении блока пользовательская часть блока заполняется значением 0xCD, а все буферы перезаписи — значением 0xFD.  
   
  `_aligned_malloc_dbg` задает для `errno` значение `ENOMEM` в случае сбоя выделения памяти или если необходимый объем памяти (включая ранее упомянутую нагрузку) превышает `_HEAP_MAXREQ`. Дополнительные сведения об этих и других кодах ошибок см. в разделе [errno, _doserrno, _sys_errlist и _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md). Кроме того, `_aligned_malloc_dbg` проверяет свои параметры. Если `alignment` не является степенью числа 2 или `size` равен нулю, эта функция вызывает обработчик недопустимых параметров, как описано в разделе [Проверка параметров](../../c-runtime-library/parameter-validation.md). Если продолжение выполнения разрешено, эта функция возвращает `NULL` и задает для `errno` значение `EINVAL`.  
   
- Сведения о выделении, инициализации и управлении блоками памяти в отладочной версии базовой кучи см. в разделе [Сведения о куче отладки CRT](/visualstudio/debugger/crt-debug-heap-details). Сведения о типах блоков выделения и способах их использования см. в разделе [Типы блоков в отладочной куче](/visualstudio/debugger/crt-debug-heap-details). Сведения о различиях между вызовом стандартной функции кучи и ее отладочной версии в сборке отладки приложения см. в разделе [Версии отладки функций выделения кучи](/visualstudio/debugger/debug-versions-of-heap-allocation-functions).  
+ Сведения о выделении, инициализации и управлении блоками памяти в отладочной версии базовой кучи, см. в статье [CRT Debug Heap Details](/visualstudio/debugger/crt-debug-heap-details). Сведения о типах блоков выделения и способах их использования см. в разделе [Типы блоков в отладочной куче](/visualstudio/debugger/crt-debug-heap-details). Сведения о различиях между вызовом стандартной функции кучи и ее отладочной версии в сборке отладки приложения см. в разделе [Версии отладки функций выделения кучи](/visualstudio/debugger/debug-versions-of-heap-allocation-functions).  
   
 ## <a name="requirements"></a>Требования  
   

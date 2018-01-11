@@ -4,27 +4,23 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-tools
+ms.technology: cpp-tools
 ms.tgt_pltfrm: 
 ms.topic: error-reference
-f1_keywords:
-- C3849
-dev_langs:
-- C++
-helpviewer_keywords:
-- C3849
+f1_keywords: C3849
+dev_langs: C++
+helpviewer_keywords: C3849
 ms.assetid: 5347140e-1a81-4841-98c0-b63d98264b64
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: corob-msft
 ms.author: corob
 manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: b310fce347423075b1c3d23244a5059151ac87fa
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
-ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
-ms.openlocfilehash: 7fbe46ee4f83dc5477eeb67e0debf14fe4f9fad5
-ms.contentlocale: ru-ru
-ms.lasthandoff: 10/10/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="compiler-error-c3849"></a>Ошибка компилятора C3849
 вызов в стиле функции выражения типа «тип» будут потеряны квалификаторы const и volatile для всех доступных перегрузок операторов  

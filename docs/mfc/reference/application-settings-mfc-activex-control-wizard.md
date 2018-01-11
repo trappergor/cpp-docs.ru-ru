@@ -15,11 +15,12 @@ caps.latest.revision: "12"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 46310e3194104fd5a0470c810dddf26cd362287c
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 4b63507ba50f5f9d7dfb0fe5487e2758ced02cdd
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="application-settings-mfc-activex-control-wizard"></a>Параметры приложения, мастер элементов управления ActiveX MFC
 Эта страница мастера элементов управления ActiveX MFC служит для создания и добавления основных компонентов в новый проект ActiveX библиотеки MFC. Эти параметры применяются к самому приложению, а не к какому-либо конкретному компоненту или частям элемента управления.  

@@ -18,11 +18,12 @@ caps.latest.revision: "7"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: b59ad181ea39382a4f79b1af5e6f1d1dbc1ded62
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: b26a1a17952693be9db6a80649aad2c40227d53e
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="explicitly-unloading-a-delay-loaded-dll"></a>Явная выгрузка библиотеки DLL, загруженной с задержкой
 [/Delay](../../build/reference/delay-delay-load-import-settings.md): unload-параметр компоновщика позволяет выгружать библиотеку DLL, которая построена с отложенной загрузки. По умолчанию, когда ваш код выгружает библиотеку DLL (с помощью/DELAY: unload и **__FUnloadDelayLoadedDLL2**), импорты, загружаемые с задержкой, остаются в таблице адресов импорта (IAT). Однако при использовании/DELAY: unload в командной строке компоновщика вспомогательная функция будет поддерживать явную выгрузку библиотеки DLL, сбрасывая значения IAT в первоначальное состояние. Теперь недопустимые указатели будут перезаписаны. IAT является полем [ImgDelayDescr](../../build/reference/calling-conventions-parameters-and-return-type.md) , содержащий адрес копии оригинальной IAT (если он существует).  

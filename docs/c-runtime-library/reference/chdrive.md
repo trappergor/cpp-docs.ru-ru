@@ -34,11 +34,12 @@ caps.latest.revision: "21"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 214083f511067c102fcb3ab7d3e6637cfeb548ac
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: b7733a366ade87dd937eb20eab97a5258db8787a
+ms.sourcegitcommit: 54035dce0992ba5dce0323d67f86301f994ff3db
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 01/03/2018
 ---
 # <a name="chdrive"></a>_chdrive
 Изменяет текущий рабочий диск.  
@@ -64,7 +65,7 @@ int _chdrive(
 ## <a name="remarks"></a>Примечания  
  Если параметр `drive` находится в диапазоне от 1 до 26, вызывается обработчик недопустимых параметров, как описано в разделе [Проверка параметров](../../c-runtime-library/parameter-validation.md). Если выполнение может быть продолжено, функция **_chdrive** возвращает значение −1, параметр `errno` принимает значение `EACCES`, а параметр `_doserrno` — значение `ERROR_INVALID_DRIVE`.  
   
- Функция **_chdrive** не является потокобезопасной, так как зависит от не безопасной для потоков функции **SetCurrentDirectory**. Для безопасного использования функции **_chdrive** в многопоточном приложении необходимо обеспечить собственный механизм синхронизации потоков. Дополнительные сведения см. на сайте [Библиотека MSDN](http://go.microsoft.com/fwlink/?LinkID=150542), выполнив поиск по запросу **SetCurrentDirectory**.  
+ Функция **_chdrive** не является потокобезопасной, так как зависит от не безопасной для потоков функции **SetCurrentDirectory**. Для безопасного использования функции **_chdrive** в многопоточном приложении необходимо обеспечить собственный механизм синхронизации потоков. Дополнительные сведения см. на сайте [Библиотека MSDN](http://go.microsoft.com/fwlink/p/?linkid=150542), выполнив поиск по запросу **SetCurrentDirectory**.  
   
  Функция **_chdrive** изменяет текущий рабочий диск, а функция **_chdir** — текущий рабочий каталог.  
   

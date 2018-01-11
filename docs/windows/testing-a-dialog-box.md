@@ -1,29 +1,32 @@
 ---
-title: "Testing a Dialog Box | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Test Dialog command"
-  - "testing, dialog boxes"
-  - "dialog boxes, testing"
+title: "Проверка диалогового окна | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- Test Dialog command
+- testing, dialog boxes
+- dialog boxes, testing
 ms.assetid: 45034ee9-c554-4f4b-8c46-6ddefdee8951
-caps.latest.revision: 11
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 7
+caps.latest.revision: "11"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: d81d288453e56acfb02a123075692b907d371578
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 12/21/2017
 ---
-# Testing a Dialog Box
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="testing-a-dialog-box"></a>Проверка диалогового окна
 При разработке диалогового окна можно смоделировать и протестировать его поведение во время выполнения, не компилируя программу. В этом режиме можно выполнять следующие действия:  
   
 -   вводить текст, выбирать пункты в полях со списками, включать и отключать параметры, выбирать команды;  
@@ -39,19 +42,20 @@ caps.handback.revision: 7
   
  При тестировании диалогового окна его положение обычно определяется относительно главного окна программы. Если вы установили свойство "Абсолютное выравнивание" диалогового окна в значение True, положение окна будет определяться относительно левого верхнего угла экрана.  
   
-### Проверка диалогового окна  
+### <a name="to-test-a-dialog-box"></a>Проверка диалогового окна  
   
 1.  Когда редактор диалоговых окон является активным окном, выберите в строке меню **Формат**, а затем выберите пункт **Проверить диалоговое окно**.  
   
 2.  Чтобы завершить тестирование, нажмите клавишу ESC или просто нажмите кнопку **Закрыть** в проверяемом диалоговом окне.  
   
- Сведения о добавлении ресурсов в управляемые проекты см. в разделе [Ресурсы в приложениях для настольных систем](../Topic/Resources%20in%20Desktop%20Apps.md).  
+ Сведения о добавлении ресурсов в управляемые проекты см. в разделе [ресурсы в классических приложениях](/dotnet/framework/resources/index).  
   
  Требования  
   
  Win32  
   
-## См. также  
- [Controls in Dialog Boxes](../mfc/controls-in-dialog-boxes.md)   
- [Dialog Editor](../mfc/dialog-editor.md)   
- [Отображение и скрытие панели инструментов в редакторе диалоговых окон](../mfc/showing-or-hiding-the-dialog-editor-toolbar.md)
+## <a name="see-also"></a>См. также  
+ [Элементы управления в диалоговых окнах](../windows/controls-in-dialog-boxes.md)   
+ [Редактор диалоговых окон](../windows/dialog-editor.md)   
+ [Отображение и скрытие панели инструментов в редакторе диалоговых окон](../windows/showing-or-hiding-the-dialog-editor-toolbar.md)
+

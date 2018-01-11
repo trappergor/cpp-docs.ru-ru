@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
 apiname:
@@ -28,8 +27,7 @@ f1_keywords:
 - fputs
 - fputws
 - _fputts
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - streams, writing strings to
 - fputws function
@@ -37,30 +35,16 @@ helpviewer_keywords:
 - fputs function
 - fputts function
 ms.assetid: d48c82b8-aa17-4830-8c7d-30442ddbb326
-caps.latest.revision: 18
+caps.latest.revision: "18"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: e257f037a05c45f5b98e64ea55bd125af443b0be
-ms.openlocfilehash: 0a90ce974533ee40eba83f75f400c9ee472cdd4b
-ms.contentlocale: ru-ru
-ms.lasthandoff: 03/30/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: e4fcfe29abceb102534cd376c563917f3804d6df
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="fputs-fputws"></a>fputs, fputws
 Записывает строку в поток.  
@@ -95,7 +79,7 @@ int fputws(
   
  Эти две функции ведут себя одинаково, если поток открыт в режиме ANSI. Функция `fputs` на данный момент не поддерживает вывод данных в поток в кодировке Юникод.  
   
-### <a name="generic-text-routine-mappings"></a>Универсальное текстовое сопоставление функций  
+### <a name="generic-text-routine-mappings"></a>Сопоставления подпрограмм обработки обычного текста  
   
 |Подпрограмма TCHAR.H|_UNICODE и _MBCS не определены|_MBCS определено|_UNICODE определено|  
 |---------------------|------------------------------------|--------------------|-----------------------|  

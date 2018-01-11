@@ -55,11 +55,12 @@ caps.latest.revision: "33"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 5e5927cf9697a25e7e6e76a3e71c3d41ba1b32ab
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: cfebb488921d81c36f842885ad49eae3f40a37fb
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cmfcdesktopalertwnd-class"></a>CMFCDesktopAlertWnd Class
 `CMFCDesktopAlertWnd` Класс реализует функции немодального диалогового окно, которое отображается на экране, чтобы информировать пользователей о событии.  
@@ -71,11 +72,11 @@ ms.lasthandoff: 10/24/2017
 class CMFCDesktopAlertWnd : public CWnd  
 ```  
   
-## <a name="members"></a>Члены  
+## <a name="members"></a>Участники  
   
 ### <a name="public-methods"></a>Открытые методы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[CMFCDesktopAlertWnd::Create](#create)|Создает и инициализирует окно оповещения.|  
 |[CMFCDesktopAlertWnd::GetAnimationSpeed](#getanimationspeed)|Возвращает скорость анимации.|  

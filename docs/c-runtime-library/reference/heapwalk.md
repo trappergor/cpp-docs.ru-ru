@@ -4,12 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
-apiname:
-- _heapwalk
+apiname: _heapwalk
 apilocation:
 - msvcrt.dll
 - msvcr80.dll
@@ -26,37 +24,22 @@ apitype: DLLExport
 f1_keywords:
 - heapwalk
 - _heapwalk
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - debugging [CRT], heap-related problems
 - heapwalk function
 - _heapwalk function
 ms.assetid: 2df67649-fb00-4570-a8b1-a4eca5738744
-caps.latest.revision: 22
+caps.latest.revision: "22"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: e257f037a05c45f5b98e64ea55bd125af443b0be
-ms.openlocfilehash: 936ca2f3f4e4f2fb57dd730f5a58927d08d6207f
-ms.contentlocale: ru-ru
-ms.lasthandoff: 03/30/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: 87ff27007734f84b93d0ecb36f637ae22f72098b
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="heapwalk"></a>_heapwalk
 Выполняет обход кучи и возвращает сведения о следующей записи.  
@@ -86,7 +69,7 @@ int _heapwalk(
  Куча повреждена или обнаружен плохой узел.  
   
  `_HEAPBADPTR`  
-Поле  `_pentry` структуры `_HEAPINFO` не содержит допустимый указатель на кучу или `entryinfo` — указатель NULL.  
+ Поле `_pentry` структуры `_HEAPINFO` не содержит допустимый указатель на кучу или `entryinfo` — указатель NULL.  
   
  `_HEAPEND`  
  Успешно достигнут конец кучи.  

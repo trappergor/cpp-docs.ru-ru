@@ -9,23 +9,20 @@ ms.technology:
 - devlang-cpp
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- type_traits/std::is_literal_type
-dev_langs:
-- C++
-helpviewer_keywords:
-- is_literal_type
+f1_keywords: type_traits/std::is_literal_type
+dev_langs: C++
+helpviewer_keywords: is_literal_type
 ms.assetid: a03a4ebb-ee66-48d6-91bb-41cf72b2401f
-caps.latest.revision: 12
+caps.latest.revision: "12"
 author: corob-msft
 ms.author: corob
 manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: aabb7d1c6e0c194f5d031e62d84753dfc0ded3d2
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
-ms.sourcegitcommit: 65f4e356ad0d46333b0d443d0fd6ac0b9f2b6f58
-ms.openlocfilehash: c8aca3719c6a4534f92a5bf44ad8219d9d4e3141
-ms.contentlocale: ru-ru
-ms.lasthandoff: 10/03/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="isliteraltype-class"></a>Класс is_literal_type
 Проверяет, можно ли использовать тип в качестве переменной `constexpr`, создавать его, использовать или возвращать из функций `constexpr`.  
@@ -51,7 +48,6 @@ struct is_literal_type;
   
 ## <a name="see-also"></a>См. также  
  [<type_traits>](../standard-library/type-traits.md)
-
 
 
 

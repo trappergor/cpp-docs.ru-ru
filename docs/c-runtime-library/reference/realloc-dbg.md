@@ -4,12 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
-apiname:
-- _realloc_dbg
+apiname: _realloc_dbg
 apilocation:
 - msvcrt.dll
 - msvcr80.dll
@@ -25,8 +23,7 @@ apitype: DLLExport
 f1_keywords:
 - _realloc_dbg
 - realloc_dbg
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - reallocating memory blocks
 - realloc_dbg function
@@ -34,31 +31,16 @@ helpviewer_keywords:
 - memory, reallocating
 - _realloc_dbg function
 ms.assetid: 7c3cb780-51ed-4d9c-9929-cdde606d846a
-caps.latest.revision: 15
+caps.latest.revision: "15"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: e257f037a05c45f5b98e64ea55bd125af443b0be
-ms.openlocfilehash: 0104c900c01ddf28a0e60a2263cd8d370fdfa8d8
-ms.contentlocale: ru-ru
-ms.lasthandoff: 03/30/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: 3885bfb44745d815e50012d0447060b6ff2aa985
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="reallocdbg"></a>_realloc_dbg
 Перераспределяет указанный блок памяти в куче, перемещая его и (или) изменяя его размер (только для отладочной версии).  
@@ -103,7 +85,7 @@ void *_realloc_dbg(
   
  `_realloc_dbg` задает для `errno` значение `ENOMEM` в случае сбоя выделения памяти или если необходимый объем памяти (включая ранее упомянутую нагрузку) превышает `_HEAP_MAXREQ`. Дополнительные сведения об этих и других кодах ошибок см. в разделе [errno, _doserrno, _sys_errlist и _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).  
   
- Сведения о выделении, инициализации и управлении блоками памяти в отладочной версии базовой кучи см. в статье [Сведения о куче отладки CRT](/visualstudio/debugger/crt-debug-heap-details). Сведения о типах блоков выделения и способах их использования см. в разделе [Типы блоков в отладочной куче](/visualstudio/debugger/crt-debug-heap-details). Сведения о различиях между вызовом стандартной функции кучи и ее отладочной версии в сборке отладки приложения см. в разделе [Версии отладки функций выделения кучи](/visualstudio/debugger/debug-versions-of-heap-allocation-functions).  
+ Сведения о выделении, инициализации и управлении блоками памяти в отладочной версии базовой кучи, см. в статье [CRT Debug Heap Details](/visualstudio/debugger/crt-debug-heap-details). Сведения о типах блоков выделения и способах их использования см. в разделе [Типы блоков в отладочной куче](/visualstudio/debugger/crt-debug-heap-details). Сведения о различиях между вызовом стандартной функции кучи и ее отладочной версии в сборке отладки приложения см. в разделе [Версии отладки функций выделения кучи](/visualstudio/debugger/debug-versions-of-heap-allocation-functions).  
   
 ## <a name="requirements"></a>Требования  
   
@@ -120,5 +102,5 @@ void *_realloc_dbg(
  См. пример в разделе [_msize_dbg](../../c-runtime-library/reference/msize-dbg.md).  
   
 ## <a name="see-also"></a>См. также  
- [Процедуры отладки](../../c-runtime-library/debug-routines.md)   
+ [Подпрограммы отладки](../../c-runtime-library/debug-routines.md)   
  [_malloc_dbg](../../c-runtime-library/reference/malloc-dbg.md)

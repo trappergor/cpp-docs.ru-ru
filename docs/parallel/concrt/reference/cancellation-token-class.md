@@ -23,11 +23,12 @@ caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: e4e656fa567342dde9ba990bff5b0d8081337385
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: a27bb4221e1a8db19f0dd7be37bb6ca3966635de
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cancellationtoken-class"></a>Класс cancellation_token
 Класс `cancellation_token` представляет возможность определить, получала ли некоторая операция запрос на отмену. Заданный токен можно связать с `task_group`, `structured_task_group` или `task` для предоставления неявной отмены. Его также можно опрашивать на предмет отмены или зарегистрировать обратный вызов для той ситуации, когда отменяется связанный `cancellation_token_source`.  
@@ -38,18 +39,18 @@ ms.lasthandoff: 10/24/2017
 class cancellation_token;
 ```  
   
-## <a name="members"></a>Члены  
+## <a name="members"></a>Участники  
   
 ### <a name="public-constructors"></a>Открытые конструкторы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[cancellation_token](#ctor)||  
 |[~ cancellation_token деструктор](#dtor)||  
   
 ### <a name="public-methods"></a>Открытые методы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[deregister_callback](#deregister_callback)|Удаляет обратный вызов, ранее зарегистрированный с помощью метода `register` на основании объекта `cancellation_token_registration`, возвращенного во время регистрации.|  
 |[is_cancelable](#is_cancelable)|Возвращает значение, указывающее, может ли этот токен быть отменен или нет.|  
@@ -59,11 +60,11 @@ class cancellation_token;
   
 ### <a name="public-operators"></a>Открытые операторы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
-|[operator!=](#operator_neq)||  
-|[operator=](#operator_eq)||  
-|[operator==](#operator_eq_eq)||  
+|[оператор!=](#operator_neq)||  
+|[оператор=](#operator_eq)||  
+|[оператор==](#operator_eq_eq)||  
   
 ## <a name="inheritance-hierarchy"></a>Иерархия наследования  
  `cancellation_token`  

@@ -14,26 +14,24 @@ f1_keywords:
 - regex/std::operator<=
 - regex/std::operator==
 - regex/std::operator<<
-dev_langs:
-- C++
+dev_langs: C++
 ms.assetid: ec623e65-c186-491f-aa18-6b12b47e1127
-caps.latest.revision: 12
+caps.latest.revision: "12"
 manager: ghogen
-ms.translationtype: MT
-ms.sourcegitcommit: 65f4e356ad0d46333b0d443d0fd6ac0b9f2b6f58
 ms.openlocfilehash: 7c37cc1a2708346ed8af0fd8b5df9a91a625feb6
-ms.contentlocale: ru-ru
-ms.lasthandoff: 10/03/2017
-
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="ltregexgt-operators"></a>Операторы &lt;regex&gt;
 ||||  
 |-|-|-|  
-|[оператор!=](#op_neq)|[оператор&gt;](#op_gt)|[оператор&gt;=](#op_gt_eq)|  
-|[оператор&lt;](#op_lt)|[operator&lt;&lt;](#op_lt_lt)|[оператор&lt;=](#op_lt_eq)|  
+|[оператор!=](#op_neq)|[оператор&gt;](#op_gt)|[operator&gt;=](#op_gt_eq)|  
+|[оператор&lt;](#op_lt)|[operator&lt;&lt;](#op_lt_lt)|[operator&lt;=](#op_lt_eq)|  
 |[оператор==](#op_eq_eq)|  
   
-##  <a name="op_neq"></a>  оператор!=  
+##  <a name="op_neq"></a> operator!=  
  Сравнение различных объектов на неравенство.  
   
 ```  
@@ -150,7 +148,7 @@ sub != "aab" == true
 sub != 'a' == true  
 ```  
   
-##  <a name="op_lt"></a>  оператор&lt;  
+##  <a name="op_lt"></a> operator&lt;  
  Сравнение "меньше, чем" для различных объектов.  
   
 ```  
@@ -258,7 +256,7 @@ sub < "aab" == true
 sub < 'a' == false  
 ```  
   
-##  <a name="op_lt_lt"></a>  оператор&lt;&lt;  
+##  <a name="op_lt_lt"></a> operator&lt;&lt;  
  Вставляет в поток sub_match.  
   
 ```  
@@ -316,7 +314,7 @@ int main()
 whole match: caaa  
 ```  
   
-##  <a name="op_lt_eq"></a>  оператор&lt;=  
+##  <a name="op_lt_eq"></a> operator&lt;=  
  Сравнение "меньше или равно" для различных объектов.  
   
 ```  
@@ -424,7 +422,7 @@ sub <= "aab" == true
 sub <= 'a' == false  
 ```  
   
-##  <a name="op_eq_eq"></a>  оператор==  
+##  <a name="op_eq_eq"></a> operator==  
  Сравнение различных объектов на равенство.  
   
 ```  
@@ -549,7 +547,7 @@ sub == "aab" == false
 sub == 'a' == false  
 ```  
   
-##  <a name="op_gt"></a>  оператор&gt;  
+##  <a name="op_gt"></a> operator&gt;  
  Сравнение "больше, чем" для различных объектов.  
   
 ```  
@@ -657,7 +655,7 @@ sub > "aab" == false
 sub > 'a' == true  
 ```  
   
-##  <a name="op_gt_eq"></a>  оператор&gt;=  
+##  <a name="op_gt_eq"></a> operator&gt;=  
  Сравнение "больше или равно" для различных объектов.  
   
 ```  
@@ -773,6 +771,5 @@ sub >= 'a' == true
 [Класс regex_token_iterator](../standard-library/regex-token-iterator-class.md)  
 [Класс regex_traits](../standard-library/regex-traits-class.md)  
 [Определения типов \<regex>](../standard-library/regex-typedefs.md)  
-
 
 

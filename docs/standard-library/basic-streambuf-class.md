@@ -105,11 +105,12 @@ caps.latest.revision: "27"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 0586de707bb015e21df5c7975b98be6966cd0262
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: bd79ff07ff5e70c3d2d95482c5676df72dd41612
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="basicstreambuf-class"></a>Класс basic_streambuf
 Описывает абстрактный базовый класс для получения буфера потока, который управляет передачей элементов в определенное представление потока и из него.  
@@ -171,7 +172,7 @@ class basic_streambuf;
 |-|-|  
 |[basic_streambuf](#basic_streambuf)|Создает объект типа `basic_streambuf`.|  
   
-### <a name="typedefs"></a>Typedefs  
+### <a name="typedefs"></a>Определения типов  
   
 |||  
 |-|-|  
@@ -431,7 +432,7 @@ virtual int_type overflow(int_type _Meta = traits_type::eof());
  Если функция не может выполниться успешно, она возвращает **traits_type::eof** или создает исключение. В противном случае она возвращает **traits_type::**[not_eof](../standard-library/char-traits-struct.md#not_eof)(_ *Meta*). Поведением по умолчанию является возврат **traits_type::eof**.  
   
 ### <a name="remarks"></a>Примечания  
- Если _ *Meta* при сравнении не дает значение, равное **traits_type::eof**, защищенная виртуальная функция-член пытается вставить элемент **traits_type::**[to_char_type](../standard-library/char-traits-struct.md#to_char_type)(\_ *Meta*) в выходной поток. Это можно сделать разными способами.  
+ Если _ *Meta* при сравнении не дает значение, равное **traits_type::eof**, защищенная виртуальная функция-член пытается вставить элемент **traits_type::**[to_char_type](../standard-library/char-traits-struct.md#to_char_type)(\_ *Meta*) в выходной поток. Для этого существует несколько способов.  
   
 -   Если объект `write position` доступен, можно сохранить элемент в позиции записи и увеличить следующий указатель для выходного буфера.  
   
@@ -568,7 +569,7 @@ pos_type pubseekpos(pos_type _Sp, ios_base::openmode _Which = ios_base::in | ios
  Задает режим для положения указателя. По умолчанию разрешается изменять позиции чтения и записи.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
- Возвращает новую позицию или недопустимую позицию в потоке. Чтобы определить, является ли позиция в потоке недопустимой, сравните возвращаемое значение с `pos_type(off_type(-1))`.  
+ Возвращает новую позицию или недопустимую позицию в потоке. Чтобы определить, является ли позиция потока недопустимой, сравните возвращаемое значение с `pos_type(off_type(-1))`.  
   
 ### <a name="remarks"></a>Примечания  
  Функция-член возвращает [seekpos](#seekpos)(_ *Sp*, `_Which`).  
@@ -1102,7 +1103,7 @@ void swap(basic_streambuf& right);
   
 ### <a name="parameters"></a>Параметры  
   
-|Параметр|Описание|  
+|Параметр|Описание:|  
 |---------------|-----------------|  
 |`right`|Ссылка lvalue на объект `basic_streambuf`, используемый для обмена значений.|  
   
@@ -1140,7 +1141,7 @@ virtual int_type uflow();
  Текущий элемент.  
   
 ### <a name="remarks"></a>Примечания  
- Защищенная виртуальная функция-член пытается извлечь текущий элемент **ch** из входного потока, затем переместить текущую позицию в потоке и возвратить элемент как **traits_type::**[to_int_type](../standard-library/char-traits-struct.md#to_int_type)(**ch**). Это можно сделать разными способами.  
+ Защищенная виртуальная функция-член пытается извлечь текущий элемент **ch** из входного потока, затем переместить текущую позицию в потоке и возвратить элемент как **traits_type::**[to_int_type](../standard-library/char-traits-struct.md#to_int_type)(**ch**). Для этого существует несколько способов.  
   
 -   Если позиция чтения доступна, она принимает **ch** в качестве элемента, хранящегося в этой позиции чтения, и перемещает следующий указатель для входного буфера.  
   

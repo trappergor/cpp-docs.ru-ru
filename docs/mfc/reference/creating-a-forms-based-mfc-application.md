@@ -17,11 +17,12 @@ caps.latest.revision: "12"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 764721114bb87127c892563211f7fcc85171ea68
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 1e5d43412da21edce2633c17b5a38e4b1b787495
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="creating-a-forms-based-mfc-application"></a>Создание приложений MFC на основе форм
 Форма является диалоговым окном с элементами управления, позволяющих пользователям получить доступ к и при необходимости измените данные. Можно разработать приложение, в котором пользователь выбирает из выделенной области форм. Как правило, приложения на основе форм позволяет формы доступа пользователя, нажмите кнопку **New** из **файл** меню. Приложения на основе диалоговое окно, в которой пользователь не имеет доступа к **New** в диалоговом окне **файл** меню, также считается приложений на основе форм.  

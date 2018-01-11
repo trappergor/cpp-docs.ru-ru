@@ -1,30 +1,32 @@
 ---
-title: "Структура RuntimeClassBaseT | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "implements/Microsoft::WRL::Details::RuntimeClassBaseT"
-dev_langs: 
-  - "C++"
+title: "Структура RuntimeClassBaseT | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: implements/Microsoft::WRL::Details::RuntimeClassBaseT
+dev_langs: C++
 ms.assetid: a62775fb-3359-4f45-9ff1-c07fa8da464b
-caps.latest.revision: 5
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 5
+caps.latest.revision: "5"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: 8798372b96074cb8424b4e747b188abcaf826849
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 12/21/2017
 ---
-# Структура RuntimeClassBaseT
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Предназначено для поддержки инфраструктуры WRL, а не для непосредственного использования в коде.  
+# <a name="runtimeclassbaset-structure"></a>Структура RuntimeClassBaseT
+Поддерживает инфраструктуру WRL и не предназначен для использования непосредственно из программного кода.  
   
-## Синтаксис  
+## <a name="syntax"></a>Синтаксис  
   
 ```  
 template <  
@@ -33,23 +35,23 @@ template <
 friend struct Details::RuntimeClassBaseT;  
 ```  
   
-#### Параметры  
+#### <a name="parameters"></a>Параметры  
  `RuntimeClassTypeT`  
- Поле флагов, которое определяет один или несколько перечислителей [RuntimeClassType](../windows/runtimeclasstype-enumeration.md).  
+ Поле флагов, которое указывает один или несколько [RuntimeClassType](../windows/runtimeclasstype-enumeration.md) перечислителей.  
   
-## Заметки  
+## <a name="remarks"></a>Примечания  
  Предоставляет вспомогательные методы для операций `QueryInterface` и получения идентификаторов интерфейсов.  
   
-## Члены  
+## <a name="members"></a>Участники  
   
-## Иерархия наследования  
+## <a name="inheritance-hierarchy"></a>Иерархия наследования  
  `RuntimeClassBaseT`  
   
-## Требования  
+## <a name="requirements"></a>Требования  
  **Заголовок:** implements.h  
   
- **Пространство имен:** Microsoft::WRL::Details  
+ **Пространство имен:** Microsoft::wrl:: Details  
   
-## См. также  
- [Reference \(Windows Runtime Library\)](http://msdn.microsoft.com/ru-ru/00000000-0000-0000-0000-000000000000)   
+## <a name="see-also"></a>См. также  
+ [Справочник (библиотека среды выполнения Windows)](http://msdn.microsoft.com/en-us/00000000-0000-0000-0000-000000000000)   
  [Пространство имен Microsoft::WRL::Details](../windows/microsoft-wrl-details-namespace.md)

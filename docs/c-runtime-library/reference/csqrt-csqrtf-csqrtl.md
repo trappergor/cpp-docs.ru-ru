@@ -1,57 +1,59 @@
 ---
-title: "csqrt, csqrtf, csqrtl | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "cpp"
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-apiname: 
-  - "csqrt"
-  - "csqrtf"
-  - "csqrtl"
-apilocation: 
-  - "msvcrt.dll"
-  - "msvcr80.dll"
-  - "msvcr90.dll"
-  - "msvcr100.dll"
-  - "msvcr100_clr0400.dll"
-  - "msvcr110.dll"
-  - "msvcr110_clr0400.dll"
-  - "msvcr120.dll"
-  - "msvcr120_clr0400.dll"
-  - "ucrtbase.dll"
-  - "api-ms-win-crt-math-l1-1-0.dll"
-apitype: "DLLExport"
-f1_keywords: 
-  - "csqrt"
-  - "csqrtf"
-  - "csqrtl"
-  - "complex/csqrt"
-  - "complex/csqrtf"
-  - "complex/csqrtl"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "функция csqrt"
-  - "функция csqrtf"
-  - "функция csqrtl"
+title: "csqrt, csqrtf, csqrtl | Документы Майкрософт"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+apiname:
+- csqrt
+- csqrtf
+- csqrtl
+apilocation:
+- msvcrt.dll
+- msvcr80.dll
+- msvcr90.dll
+- msvcr100.dll
+- msvcr100_clr0400.dll
+- msvcr110.dll
+- msvcr110_clr0400.dll
+- msvcr120.dll
+- msvcr120_clr0400.dll
+- ucrtbase.dll
+- api-ms-win-crt-math-l1-1-0.dll
+apitype: DLLExport
+f1_keywords:
+- csqrt
+- csqrtf
+- csqrtl
+- complex/csqrt
+- complex/csqrtf
+- complex/csqrtl
+dev_langs: C++
+helpviewer_keywords:
+- csqrt function
+- csqrtf function
+- csqrtl function
 ms.assetid: b65f086b-0f55-4622-a7a3-4e79d9c9c05c
-caps.latest.revision: 11
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 11
+caps.latest.revision: "11"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 0c8f28a0979c5942765c5292fb56af6e4ba25aab
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 12/21/2017
 ---
-# csqrt, csqrtf, csqrtl
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Возвращает квадратный корень из комплексного числа с ветвью разрезать отрицательной полуоси реальных.  
+# <a name="csqrt-csqrtf-csqrtl"></a>csqrt, csqrtf, csqrtl
+Извлекает квадратный корень комплексного числа, ветви которого заканчиваются в отрицательной части реальной оси.  
   
-## Синтаксис  
+## <a name="syntax"></a>Синтаксис  
   
 ```  
 _Dcomplex csqrt(   
@@ -71,37 +73,37 @@ _Lcomplex csqrtl(
 );  
 ```  
   
-#### Параметры  
+#### <a name="parameters"></a>Параметры  
  `z`  
  Комплексное число.  
   
-## Возвращаемое значение  
- Квадратный корень из `z`. Результат — в правой половине плоскости.  
+## <a name="return-value"></a>Возвращаемое значение  
+ Квадратный корень числа `z`. Результат отображается в правой половине плоскости.  
   
-|Ввод|Исключение SEH|Исключение `_matherr`|  
-|----------|--------------------|---------------------------|  
-|± QNAN, IND|Нет|\_DOMAIN|  
-|\- ∞|Нет|\_DOMAIN|  
+|Входные данные|Исключение SEH|Исключение `_matherr`|  
+|-----------|-------------------|--------------------------|  
+|± QNAN, IND|Нет|_DOMAIN|  
+|- ∞|Нет|_DOMAIN|  
   
-## Заметки  
- Поскольку C\+\+ допускает перегрузку, можно вызывать перегрузки `csqrt`, которые принимают и возвращают значения `_Fcomplex` и `_Lcomplex`. В программе на языке C `csqrt` всегда принимает и возвращает `_Dcomplex` значение.  
+## <a name="remarks"></a>Примечания  
+ Поскольку C++ допускает перегрузку, можно вызывать перегрузки `csqrt`, которые принимают и возвращают значения `_Fcomplex` и `_Lcomplex`. В программе на языке C `csqrt` всегда принимает и возвращает значение `_Dcomplex` .  
   
-## Требования  
+## <a name="requirements"></a>Требования  
   
-|Подпрограмма|Заголовок C|Заголовок C\+\+|  
-|------------------|-----------------|---------------------|  
-|`csqrt`, `csqrtf`, `csqrtl`|\<complex.h\>|\< ccomplex \>|  
+|Подпрограмма|Заголовок C|Заголовок C++|  
+|-------------|--------------|------------------|  
+|`csqrt`,               `csqrtf`, `csqrtl`|\<complex.h>|\<ccomplex>|  
   
  Дополнительные сведения о совместимости см. в разделе [Совместимость](../../c-runtime-library/compatibility.md) во введении.  
   
-## См. также  
+## <a name="see-also"></a>См. также  
  [Алфавитный указатель функций](../../c-runtime-library/reference/crt-alphabetical-function-reference.md)   
  [catanh, catanhf, catanhl](../../c-runtime-library/reference/catanh-catanhf-catanhl.md)   
  [ctanh, ctanhf, ctanhl](../../c-runtime-library/reference/ctanh-ctanhf-ctanhl.md)   
  [catan, catanf, catanl](../../c-runtime-library/reference/catan-catanf-catanl.md)   
- [csinh, csinhf, csinhl](../Topic/csinh,%20csinhf,%20csinhl.md)   
- [casinh, casinhf, casinhl](../Topic/casinh,%20casinhf,%20casinhl.md)   
- [ccosh, ccoshf, ccoshl](../Topic/ccosh,%20ccoshf,%20ccoshl.md)   
+ [csinh, csinhf, csinhl](../../c-runtime-library/reference/csinh-csinhf-csinhl.md)   
+ [casinh, casinhf, casinhl](../../c-runtime-library/reference/casinh-casinhf-casinhl.md)   
+ [ccosh, ccoshf, ccoshl](../../c-runtime-library/reference/ccosh-ccoshf-ccoshl.md)   
  [cacosh, cacoshf, cacoshl](../../c-runtime-library/reference/cacosh-cacoshf-cacoshl.md)   
  [cacos, cacosf, cacosl](../../c-runtime-library/reference/cacos-cacosf-cacosl.md)   
  [ctan, ctanf, ctanl](../../c-runtime-library/reference/ctan-ctanf-ctanl.md)   

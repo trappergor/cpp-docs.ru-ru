@@ -21,11 +21,12 @@ caps.latest.revision: "26"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 0d3551252d04dc97f6e2b4dd13df61edda576744
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: cb68e906a06d18b41d97851d8d91717ac3dd78b3
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cwinformsview-class"></a>Класс CWinFormsView
 Предоставляет универсальную функцию для размещения элементов управления Windows Forms в качестве представления MFC.  
@@ -36,23 +37,23 @@ ms.lasthandoff: 10/24/2017
 class CWinFormsView : public CView;  
 ```  
   
-## <a name="members"></a>Члены  
+## <a name="members"></a>Участники  
   
 ### <a name="public-constructors"></a>Открытые конструкторы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[CWinFormsView::CWinFormsView](#cwinformsview)|Создает объект `CWinFormsView`.|  
   
 ### <a name="public-methods"></a>Открытые методы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[CWinFormsView::GetControl](#getcontrol)|Извлекает указатель на элемент управления Windows Forms.|  
   
 ### <a name="public-operators"></a>Открытые операторы  
   
-|Имя||  
+|name||  
 |----------|-|  
 |[Элемент управления CWinFormsView::operator ^](#operator_control)|Приводит тип как указатель на элемент управления Windows Forms.|  
   

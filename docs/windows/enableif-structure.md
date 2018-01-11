@@ -15,11 +15,14 @@ caps.latest.revision: "5"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 2ca53e203d24371f9ad661588c2c25a25cf8eebf
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: e9da168cd0f715f3140a9e9c9a93d943bcee3d97
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="enableif-structure"></a>EnableIf - структура
 Поддерживает инфраструктуру WRL и не предназначен для использования непосредственно из программного кода.  
@@ -49,11 +52,11 @@ struct EnableIf<true, T>;
 ## <a name="remarks"></a>Примечания  
  Определяет данные-член типа, указанного в качестве второго параметра шаблона, если первый параметр шаблона равен `true`.  
   
-## <a name="members"></a>Члены  
+## <a name="members"></a>Участники  
   
 ### <a name="public-typedefs"></a>Общедоступные определения типов  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |`type`|Если параметр `b` равен `true`, частичная специализация определяет, что данные-член `type` будут иметь тип `T`.|  
   

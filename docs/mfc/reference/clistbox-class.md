@@ -113,11 +113,12 @@ caps.latest.revision: "26"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: df627cbd062d2347539c0db26580360d80c3dd9a
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: ecf574deed95fca6a96e8e5a5c1d1e0bebed1854
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="clistbox-class"></a>CListBox-класс
 Предоставляет функции списка Windows.  
@@ -128,17 +129,17 @@ ms.lasthandoff: 10/24/2017
 class CListBox : public CWnd  
 ```  
   
-## <a name="members"></a>Члены  
+## <a name="members"></a>Участники  
   
 ### <a name="public-constructors"></a>Открытые конструкторы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[CListBox::CListBox](#clistbox)|Создает объект `CListBox`.|  
   
 ### <a name="public-methods"></a>Открытые методы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[CListBox::AddString](#addstring)|Добавляет строку в поле со списком.|  
 |[CListBox::CharToItem](#chartoitem)|Переопределение, чтобы указать пользовательский `WM_CHAR` обработки для списков рисуемый владельцем, которых нет строки.|  

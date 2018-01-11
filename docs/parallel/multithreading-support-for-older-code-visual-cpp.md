@@ -21,16 +21,17 @@ caps.latest.revision: "13"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: d949c1ff19be6f3b89673753fdaccc2996bbef36
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 1037b8b81c9286ac1b1dd9303294b4300e7c9309
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="multithreading-support-for-older-code-visual-c"></a>Поддержка многопоточности для устаревшего кода (Visual C++)
 Visual C++ позволяет иметь несколько параллельных потоков выполнения, работающих одновременно. С помощью многопоточности можно выполнять фоновые задачи, управлять одновременных потоков ввода, управления пользовательского интерфейса и многое другое.  
   
-## <a name="in-this-section"></a>Содержание  
+## <a name="in-this-section"></a>В этом разделе  
  [Реализация многопоточности на языке C с помощью функций Win32](../parallel/multithreading-with-c-and-win32.md)  
  Предоставляет поддержку для создания многопоточных приложений в Microsoft Windows  
   

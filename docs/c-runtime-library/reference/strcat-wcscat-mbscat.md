@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
 apiname:
@@ -32,8 +31,7 @@ f1_keywords:
 - _tcscat
 - strcat
 - wcscat
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - concatenating strings
 - mbscat function
@@ -48,30 +46,16 @@ helpviewer_keywords:
 - appending strings
 - wcscat function
 ms.assetid: c89c4ef1-817a-44ff-a229-fe22d06ba78a
-caps.latest.revision: 23
+caps.latest.revision: "23"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: e257f037a05c45f5b98e64ea55bd125af443b0be
-ms.openlocfilehash: 92bed9443eba34dc0298d28c53d34543ee52d935
-ms.contentlocale: ru-ru
-ms.lasthandoff: 03/30/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: b7b85ce742cb39dcb9333a4eae5959e38c4ec50a
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="strcat-wcscat-mbscat"></a>strcat, wcscat, _mbscat
 Дополняет строку. Существуют более безопасные версии этих функций; см. раздел [strcat_s, wcscat_s, _mbscat_s](../../c-runtime-library/reference/strcat-s-wcscat-s-mbscat-s.md).  
@@ -129,9 +113,9 @@ unsigned char *_mbscat(
   
  Функции `wcscat` и `_mbscat` являются версиями функции `strcat` для расширенных и многобайтовых символов. Аргументы и возвращаемое значение `wcscat` представляют собой двухбайтовые строки; аргументы и возвращаемое значение `_mbscat` представляют собой многобайтовые строки. В остальном эти три функции ведут себя идентично.  
   
- В C++ эти функции имеют шаблонные перегрузки, которые вызывают более новые и безопасные аналоги этих функций. Дополнительные сведения см. в разделе [Безопасные перегрузки шаблонов](../../c-runtime-library/secure-template-overloads.md).  
+ В C++ эти функции имеют шаблонные перегрузки, которые вызывают более новые и безопасные аналоги этих функций. Дополнительные сведения см. в разделе [Secure Template Overloads](../../c-runtime-library/secure-template-overloads.md).  
   
-### <a name="generic-text-routine-mappings"></a>Универсальное текстовое сопоставление функций  
+### <a name="generic-text-routine-mappings"></a>Сопоставления подпрограмм обработки обычного текста  
   
 |Подпрограмма TCHAR.H|_UNICODE и _MBCS не определены|_MBCS определено|_UNICODE определено|  
 |---------------------|------------------------------------|--------------------|-----------------------|  
@@ -145,7 +129,7 @@ unsigned char *_mbscat(
 |`wcscat`|\<string.h> или \<wchar.h>|  
 |`_mbscat`|\<mbstring.h>|  
   
- Дополнительные сведения о совместимости см. в статье [Совместимость](../../c-runtime-library/compatibility.md).  
+ Дополнительные сведения о совместимости см. в разделе [Совместимость](../../c-runtime-library/compatibility.md).  
   
 ## <a name="example"></a>Пример  
  См. пример для [strcpy](../../c-runtime-library/reference/strcpy-wcscpy-mbscpy.md).  

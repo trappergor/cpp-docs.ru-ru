@@ -171,11 +171,12 @@ caps.latest.revision: "40"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 36057304130150dbd12cf33f708d1d82cd52e0c4
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: e40f7b601eda828784fb8ebdaf010059c4d9933e
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cmfcpopupmenu-class"></a>Класс CMFCPopupMenu
 Реализует возможности всплывающего меню Windows и расширяет его, добавляя такие возможности как перемещаемые меню и подсказки.
@@ -187,17 +188,17 @@ ms.lasthandoff: 10/24/2017
 class CMFCPopupMenu : public CMiniFrameWnd  
 ```  
   
-## <a name="members"></a>Члены  
+## <a name="members"></a>Участники  
   
 ### <a name="protected-constructors"></a>Защищенные конструкторы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[CMFCPopupMenu::CMFCPopupMenu](#cmfcpopupmenu)|Создает объект `CMFCPopupMenu`.|  
   
 ### <a name="public-methods"></a>Открытые методы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[CMFCPopupMenu::ActivatePopupMenu](#activatepopupmenu)||  
 |[CMFCPopupMenu::AlwaysShowEmptyToolsEntry](#alwaysshowemptytoolsentry)|Задает включение в пустой записей о определенные пользователем инструменты всплывающего меню.|  
@@ -275,7 +276,7 @@ class CMFCPopupMenu : public CMiniFrameWnd
   
 ### <a name="protected-methods"></a>Защищенные методы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[CMFCPopupMenu::CreateTearOffBar](#createtearoffbar)||  
 |[CMFCPopupMenu::OnChangeHot](#onchangehot)||  

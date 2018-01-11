@@ -1,32 +1,33 @@
 ---
-title: "Структура IsSame | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "internal/Microsoft::WRL::Details::IsSame"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "IsSame - структура"
+title: "Структура IsSame | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: internal/Microsoft::WRL::Details::IsSame
+dev_langs: C++
+helpviewer_keywords: IsSame structure
 ms.assetid: 1eddbc3f-3cc5-434f-8495-e4477e1f868e
-caps.latest.revision: 5
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 5
+caps.latest.revision: "5"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: bae4ecb6f03b7b1cdb0fae02f211dd613e7c39d7
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 12/21/2017
 ---
-# Структура IsSame
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Предназначено для поддержки инфраструктуры WRL, а не для непосредственного использования в коде.  
+# <a name="issame-structure"></a>IsSame - структура
+Поддерживает инфраструктуру WRL и не предназначен для использования непосредственно из программного кода.  
   
-## Синтаксис  
+## <a name="syntax"></a>Синтаксис  
   
 ```  
 template <  
@@ -40,31 +41,31 @@ template <
 struct IsSame<T1, T1>;  
 ```  
   
-#### Параметры  
+#### <a name="parameters"></a>Параметры  
  `T1`  
  Тип.  
   
  `T2`  
  Другой тип.  
   
-## Заметки  
- Определяет, совпадает ли один указанный тип с другим указанными типом.  
+## <a name="remarks"></a>Примечания  
+ Определяет, совпадают ли указанные типы друг с другом.  
   
-## Члены  
+## <a name="members"></a>Участники  
   
-### Открытые константы  
+### <a name="public-constants"></a>Открытые константы  
   
-|Имя|Описание|  
-|---------|--------------|  
-|[Константа IsSame::value](../windows/issame-value-constant.md)|Указывает, совпадает ли один тип с другим.|  
+|name|Описание:|  
+|----------|-----------------|  
+|[Константа IsSame::value](../windows/issame-value-constant.md)|Указывает, совпадают ли заданные типы друг с другом.|  
   
-## Иерархия наследования  
+## <a name="inheritance-hierarchy"></a>Иерархия наследования  
  `IsSame`  
   
-## Требования  
+## <a name="requirements"></a>Требования  
  **Заголовок:** internal.h  
   
- **Пространство имен:** Microsoft::WRL::Details  
+ **Пространство имен:** Microsoft::wrl:: Details  
   
-## См. также  
+## <a name="see-also"></a>См. также  
  [Пространство имен Microsoft::WRL::Details](../windows/microsoft-wrl-details-namespace.md)

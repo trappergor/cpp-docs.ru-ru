@@ -1,69 +1,69 @@
 ---
-title: "CDynamicParameterAccessor::GetParamIO | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "GetParamIO"
-  - "CDynamicParameterAccessor::GetParamIO"
-  - "ATL.CDynamicParameterAccessor.GetParamIO"
-  - "CDynamicParameterAccessor.GetParamIO"
-  - "ATL::CDynamicParameterAccessor::GetParamIO"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "GetParamIO - метод"
+title: "CDynamicParameterAccessor::GetParamIO | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- GetParamIO
+- CDynamicParameterAccessor::GetParamIO
+- ATL.CDynamicParameterAccessor.GetParamIO
+- CDynamicParameterAccessor.GetParamIO
+- ATL::CDynamicParameterAccessor::GetParamIO
+dev_langs: C++
+helpviewer_keywords: GetParamIO method
 ms.assetid: 9c485e39-c67e-4df7-a707-c773019c4d1e
-caps.latest.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 9
+caps.latest.revision: "9"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: 340153a86584483f61ae4d6dd8a8becefbcd91d6
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 12/21/2017
 ---
-# CDynamicParameterAccessor::GetParamIO
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Определяет, является ли указанный параметр параметр ввода или вывода.  
+# <a name="cdynamicparameteraccessorgetparamio"></a>CDynamicParameterAccessor::GetParamIO
+Определяет, является ли указанный параметр входным или выходным.  
   
-## Синтаксис  
+## <a name="syntax"></a>Синтаксис  
   
 ```  
   
-      bool GetParamIO(   
-   DBORDINAL nParam,   
-   DBPARAMIO * pParamIO    
+      bool GetParamIO(   
+   DBORDINAL nParam,   
+   DBPARAMIO * pParamIO    
 ) const throw( );  
 ```  
   
-#### Параметры  
+#### <a name="parameters"></a>Параметры  
  `nParam`  
- \[in\] параметр \(начиная с 1\).  Параметр 0 зарезервировано для возвращаемых значений.  Параметр индекс параметра на основании своего порядке в вызове SQL или хранимой процедуры.  Пример см. в разделе [SetParam](../../data/oledb/cdynamicparameteraccessor-setparam.md).  
+ [in] Номер параметра (начиная с 1). Параметр 0 зарезервирован для возвращаемых значений. Параметр с номером — это индекс параметра, в зависимости от порядка в SQL или хранимой процедуры. В разделе [SetParam](../../data/oledb/cdynamicparameteraccessor-setparam.md) в качестве примера.  
   
  *pParamIO*  
- Указатель на переменную, содержащую тип **DBPARAMIO** \(ввода или вывода\) указанного параметра.  Он определяется следующим образом:  
+ Указатель на переменную, содержащую **DBPARAMIO** (Ввод или вывод) тип указанного параметра. Он определяется следующим образом:  
   
- `typedef DWORD DBPARAMIO;`  
+```  
+typedef DWORD DBPARAMIO;  
   
- `enum DBPARAMIOENUM`  
+enum DBPARAMIOENUM {  
+    DBPARAMIO_NOTPARAM   = 0,  
+    DBPARAMIO_INPUT      = 0x1,  
+    DBPARAMIO_OUTPUT     = 0x2  
+};  
+```  
   
- `{   DBPARAMIO_NOTPARAM   = 0,`  
+## <a name="return-value"></a>Возвращаемое значение  
+ Возвращает **true** в случае успешного выполнения или **false** при сбое.  
   
- `DBPARAMIO_INPUT      = 0x1,`  
-  
- `DBPARAMIO_OUTPUT     = 0x2`  
-  
- `};`  
-  
-## Возвращаемое значение  
- Возвращает **true** в успехе или **false** при сбое.  
-  
-## Требования  
+## <a name="requirements"></a>Требования  
  **Заголовок:** atldbcli.h  
   
-## См. также  
+## <a name="see-also"></a>См. также  
  [Класс CDynamicParameterAccessor](../../data/oledb/cdynamicparameteraccessor-class.md)

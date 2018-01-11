@@ -44,11 +44,12 @@ caps.latest.revision: "41"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: e07e4561674c2a75503961d2d43b1566c7a2e080
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 7a07af46cda1e3ce9c567b12bd83e2d3fd055a38
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="strcpys-wcscpys-mbscpys"></a>strcpy_s, wcscpy_s, _mbscpy_s
 Копирует строку. Это версии функций [strcpy, wcscpy, _mbscpy](../../c-runtime-library/reference/strcpy-wcscpy-mbscpy.md) с усовершенствованной безопасностью, как описано в разделе [Функции безопасности в CRT](../../c-runtime-library/security-features-in-the-crt.md).  
@@ -108,9 +109,9 @@ errno_t _mbscpy_s(
   
 |`strDestination`|`numberOfElements`|`strSource`|Возвращаемое значение|Содержимое `strDestination`|  
 |----------------------|------------------------|-----------------|------------------|----------------------------------|  
-|`NULL`|any|любые|`EINVAL`|не изменено|  
-|any|любые|`NULL`|`EINVAL`|`strDestination`[0] имеет значение 0|  
-|любые|0 или слишком мал|любые|`ERANGE`|`strDestination`[0] имеет значение 0|  
+|`NULL`|any|any|`EINVAL`|не изменено|  
+|any|any|`NULL`|`EINVAL`|`strDestination`[0] имеет значение 0|  
+|any|0 или слишком мал|any|`ERANGE`|`strDestination`[0] имеет значение 0|  
   
 ## <a name="remarks"></a>Примечания  
  Функция `strcpy_s` копирует содержимое по адресу `strSource`, включая завершающий символ нуля, в указанное расположение, заданное `strDestination`. Строка назначения должна быть достаточно велика для сохранения исходной строки и завершающего нуля. При перекрытии исходного и конечного буферов поведение `strcpy_s` не определено.  
@@ -121,11 +122,11 @@ errno_t _mbscpy_s(
   
  После успешного выполнения конечная строка всегда завершается нулем.  
   
- В C++ использование данных функций упрощено наличием шаблонных перегрузок, которые могут автоматически определять длину буфера, а также автоматически заменять более старые, незащищенные функции их новыми безопасными аналогами. Дополнительные сведения см. в разделе [Безопасные перегрузки шаблонов](../../c-runtime-library/secure-template-overloads.md).  
+ В C++ использование данных функций упрощено наличием шаблонных перегрузок, которые могут автоматически определять длину буфера, а также автоматически заменять более старые, незащищенные функции их новыми безопасными аналогами. Дополнительные сведения см. в разделе [Secure Template Overloads](../../c-runtime-library/secure-template-overloads.md).  
   
  Отладочные версии этих функций сначала заполняют буфер значением 0xFE. Чтобы отключить это поведение, используйте [_CrtSetDebugFillThreshold](../../c-runtime-library/reference/crtsetdebugfillthreshold.md).  
   
-### <a name="generic-text-routine-mappings"></a>Универсальное текстовое сопоставление функций  
+### <a name="generic-text-routine-mappings"></a>Сопоставления подпрограмм обработки обычного текста  
   
 |Подпрограмма TCHAR.H|_UNICODE и _MBCS не определены|_MBCS определено|_UNICODE определено|  
 |---------------------|------------------------------------|--------------------|-----------------------|  
@@ -139,7 +140,7 @@ errno_t _mbscpy_s(
 |`wcscpy_s`|\<string.h> или \<wchar.h>|  
 |`_mbscpy_s`|\<mbstring.h>|  
   
- Дополнительные сведения о совместимости см. в статье [Совместимость](../../c-runtime-library/compatibility.md).  
+ Дополнительные сведения о совместимости см. в разделе [Совместимость](../../c-runtime-library/compatibility.md).  
   
 ## <a name="example"></a>Пример  
   

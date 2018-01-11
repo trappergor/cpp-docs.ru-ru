@@ -171,11 +171,12 @@ caps.latest.revision: "34"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: b834b46a9a899b9b5ae7cce0d399593588ff2d0b
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 3aaf355d15679bdb30b7561fe28dd6f927688ede
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cmfctoolbarbutton-class"></a>Класс CMFCToolBarButton
 Предоставляет функции кнопок панели инструментов.  
@@ -186,18 +187,18 @@ ms.lasthandoff: 10/24/2017
 class CMFCToolBarButton : public CObject  
 ```  
   
-## <a name="members"></a>Члены  
+## <a name="members"></a>Участники  
   
 ### <a name="public-constructors"></a>Открытые конструкторы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[CMFCToolBarButton::CMFCToolBarButton](#cmfctoolbarbutton)|Создает и инициализирует объект `CMFCToolBarButton`.|  
 |`CMFCToolBarButton::~CMFCToolBarButton`|Деструктор.|  
   
 ### <a name="public-methods"></a>Открытые методы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[CMFCToolBarButton::CanBeDropped](#canbedropped)|Указывает, является ли пользователь можно расположить кнопку на панели инструментов или меню во время настройки.|  
 |[CMFCToolBarButton::CanBeStored](#canbestored)|Указывает, можно ли хранить кнопки.|  
@@ -269,7 +270,7 @@ class CMFCToolBarButton : public CObject
   
 ### <a name="data-members"></a>Элементы данных  
   
-|Имя|Описание|  
+|name|Описание:|  
 |----------|-----------------|  
 |[CMFCToolBarButton::m_bImage](#m_bimage)|Указывает, отображается ли изображения на кнопке.|  
 |[CMFCToolBarButton::m_bText](#m_btext)|Указывает, отображается ли метка текст на кнопке.|  

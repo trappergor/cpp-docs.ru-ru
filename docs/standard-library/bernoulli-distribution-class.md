@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -20,9 +19,7 @@ f1_keywords:
 - random/std::bernoulli_distribution::param_type::p
 - random/std::bernoulli_distribution::param_type::operator==
 - random/std::bernoulli_distribution::param_type::operator!=
-- random/std::bernoulli_distribution::param_type
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - std::bernoulli_distribution [C++]
 - std::bernoulli_distribution [C++], reset
@@ -33,16 +30,16 @@ helpviewer_keywords:
 - std::bernoulli_distribution [C++], param_type
 - std::bernoulli_distribution [C++], param_type
 ms.assetid: 586bcde1-95ca-411a-bf17-4aaf19482f34
-caps.latest.revision: 22
+caps.latest.revision: "22"
 author: corob-msft
 ms.author: corob
 manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 19212e7b594b21a08d6f1fb174a3385e9c46d159
+ms.sourcegitcommit: 54035dce0992ba5dce0323d67f86301f994ff3db
 ms.translationtype: MT
-ms.sourcegitcommit: 65f4e356ad0d46333b0d443d0fd6ac0b9f2b6f58
-ms.openlocfilehash: e66f7d0cc0385fea47a9d023f9cb67170de48cb4
-ms.contentlocale: ru-ru
-ms.lasthandoff: 10/03/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/03/2018
 ---
 # <a name="bernoullidistribution-class"></a>Класс bernoulli_distribution
 Формирует распределение Бернулли.  
@@ -101,7 +98,7 @@ public:
   
 Дополнительные сведения о классах распределения и их членах см. в разделе [\<random>](../standard-library/random.md).  
   
-Дополнительные сведения о дискретной функции вероятности распределения Бернулли см. в статье [Распределение Бернулли](http://go.microsoft.com/fwlink/LinkId=398467).  
+Дополнительные сведения о дискретной функции вероятности распределения Бернулли см. в статье [Распределение Бернулли](http://go.microsoft.com/fwlink/p/?linkid=398467).  
   
 ## <a name="example"></a>Пример  
   
@@ -184,7 +181,7 @@ explicit bernoulli_distribution(const param_type& parm);
  Структура `param_type`, используемая для формирования распределения.  
   
 ### <a name="remarks"></a>Примечания  
- **Предварительные условия:** `0.0 ≤ p ≤ 1.0`  
+ **Предусловие:** `0.0 ≤ p ≤ 1.0`  
   
 Первый конструктор создает объект, хранимое значение `p` которого содержит значение *p*.  
   
@@ -204,12 +201,11 @@ struct param_type {
 Хранимый параметр распределения `p`.  
   
 ### <a name="remarks"></a>Примечания  
-**Предварительные условия:** `0.0 ≤ p ≤ 1.0`  
+**Предусловие:** `0.0 ≤ p ≤ 1.0`  
   
 Эту структуру можно передать конструктору класса распределения во время создания экземпляра, функции-члену `param()` для установки хранимых параметров существующего распределения и `operator()` для использования вместо хранимых параметров.  
   
 ## <a name="see-also"></a>См. также  
  [\<random>](../standard-library/random.md)
-
 
 

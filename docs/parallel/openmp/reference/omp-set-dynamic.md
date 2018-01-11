@@ -1,32 +1,31 @@
 ---
-title: "omp_set_dynamic | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "omp_set_dynamic"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "omp_set_dynamic OpenMP function"
+title: "omp_set_dynamic | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: omp_set_dynamic
+dev_langs: C++
+helpviewer_keywords: omp_set_dynamic OpenMP function
 ms.assetid: 3845faf2-a0ca-45a5-ae70-2a7a6164f1e8
-caps.latest.revision: 12
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 12
+caps.latest.revision: "12"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 13cb098170e46b8459821156aeb8be369bbc1ffa
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 12/21/2017
 ---
-# omp_set_dynamic
-[!INCLUDE[vs2017banner](../../../assembler/inline/includes/vs2017banner.md)]
-
-Указывает количество потоков, доступных в последующей может быть параллельной области изменяется во время выполнения.  
+# <a name="ompsetdynamic"></a>omp_set_dynamic
+Указывает, что число потоков, доступных в последующих параллельной области может настраиваться по времени выполнения.  
   
-## Синтаксис  
+## <a name="syntax"></a>Синтаксис  
   
 ```  
 void omp_set_dynamic(  
@@ -34,22 +33,22 @@ void omp_set_dynamic(
 );  
 ```  
   
-## Заметки  
- Здесь:  
+## <a name="remarks"></a>Примечания  
+ где  
   
  `val`  
- Значение, указывающее, является ли число потоков, доступных в последующей может быть параллельной области изменяется с помощью среды выполнения рабочего процесса.  Если значение ненулевое, среда выполнения может обрабатывать количество потоков, если значение равно нулю, среда выполнения не будет обрабатывать динамически количество потоков.  
+ Значение, указывающее, если число потоков, доступных в последующих параллельной области может настраиваться средой выполнения.  Если значение ненулевое, среда выполнения можно настроить количество потоков, если значение равно нулю, среда выполнения не динамически изменяются число потоков.  
   
-## Заметки  
- Число потоков не превысит заданное значение by [omp\_set\_num\_threads](../../../parallel/openmp/reference/omp-set-num-threads.md) или by  [OMP\_NUM\_THREADS](../Topic/OMP_NUM_THREADS.md).  
+## <a name="remarks"></a>Примечания  
+ Число потоков, не может превышать значение, установленное [omp_set_num_threads](../../../parallel/openmp/reference/omp-set-num-threads.md) или [OMP_NUM_THREADS](../../../parallel/openmp/reference/omp-num-threads.md).  
   
- Используйте [omp\_get\_dynamic](../../../parallel/openmp/reference/omp-get-dynamic.md) отобразить текущий параметр  `omp_set_dynamic`.  
+ Используйте [omp_get_dynamic](../../../parallel/openmp/reference/omp-get-dynamic.md) для отображения текущего значения параметра `omp_set_dynamic`.  
   
- Параметр `omp_set_dynamic` переопределяет параметр  [OMP\_DYNAMIC](../../../parallel/openmp/reference/omp-dynamic.md) переменная среды.  
+ Параметр для `omp_set_dynamic` переопределит параметр [OMP_DYNAMIC](../../../parallel/openmp/reference/omp-dynamic.md) переменной среды.  
   
- Дополнительные сведения см. в разделе [3.1.7 omp\_set\_dynamic Function](../../../parallel/openmp/3-1-7-omp-set-dynamic-function.md).  
+ Дополнительные сведения см. в разделе [3.1.7 функция omp_set_dynamic](../../../parallel/openmp/3-1-7-omp-set-dynamic-function.md).  
   
-## Пример  
+## <a name="example"></a>Пример  
   
 ```  
 // omp_set_dynamic.cpp  
@@ -70,7 +69,10 @@ int main()
 }  
 ```  
   
-  **1**  
-**1**   
-## См. также  
- [Functions](../../../parallel/openmp/reference/openmp-functions.md)
+```Output  
+1  
+1  
+```  
+  
+## <a name="see-also"></a>См. также  
+ [Функции](../../../parallel/openmp/reference/openmp-functions.md)

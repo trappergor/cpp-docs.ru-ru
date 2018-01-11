@@ -17,11 +17,12 @@ caps.latest.revision: "30"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 54ca5ac28d4f5fb044b78ad7b846cd20d73e2c22
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 68b4a5ba27d4fcb6fcaac7c80662d778c7cbbca7
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="afxglobaldata-structure"></a>AFX_GLOBAL_DATA - структура
 Структура `AFX_GLOBAL_DATA` содержит поля и методы, используемые для управления платформой или настройки внешнего вида и поведения приложения.  
@@ -32,18 +33,18 @@ ms.lasthandoff: 10/24/2017
 struct AFX_GLOBAL_DATA  
 ```  
   
-## <a name="members"></a>Члены  
+## <a name="members"></a>Участники  
   
 ### <a name="public-constructors"></a>Открытые конструкторы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |`AFX_GLOBAL_DATA::AFX_GLOBAL_DATA`|Создает структуру `AFX_GLOBAL_DATA` .|  
 |`AFX_GLOBAL_DATA::~AFX_GLOBAL_DATA`|Деструктор.|  
   
 ### <a name="public-methods"></a>Открытые методы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[AFX_GLOBAL_DATA::Cleanup](#cleanup)|Освобождает ресурсы, выделенные платформой, например кисти, шрифты и библиотеки DLL.|  
 |[AFX_GLOBAL_DATA::D2D1MakeRotateMatrix](#d2d1makerotatematrix)|Создает преобразование вращения, осуществляющее поворот на указанный угол вокруг указанной точки.|  
@@ -77,7 +78,7 @@ struct AFX_GLOBAL_DATA
   
 ### <a name="protected-methods"></a>Защищенные методы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[AFX_GLOBAL_DATA::EnableAccessibilitySupport](#enableaccessibilitysupport)|Включает или отключает поддержку Microsoft Active Accessibility. Active Accessibility предлагает надежные методы для предоставления информации об элементах пользовательского интерфейса.|  
 |[AFX_GLOBAL_DATA::IsAccessibilitySupport](#isaccessibilitysupport)|Указывает, включена ли поддержка Microsoft Active Accessibility.|  
@@ -85,7 +86,7 @@ struct AFX_GLOBAL_DATA
   
 ### <a name="data-members"></a>Элементы данных  
   
-|Имя|Описание|  
+|name|Описание:|  
 |----------|-----------------|  
 |[AFX_GLOBAL_DATA::bIsOSAlphaBlendingSupport](#bisosalphablendingsupport)|Указывает, поддерживает ли текущая операционная система альфа-смешение.|  
 |[AFX_GLOBAL_DATA::bIsWindows7](#biswindows7)|Указывает, выполняется ли приложение в ОС Windows 7 или более поздней версии.|  
@@ -178,7 +179,7 @@ BOOL DrawParentBackground(
  Указатель на контекст устройства.  
   
  [in] `lpRect`  
- Указатель на прямоугольник, ограничивающий область для рисования. Значение по умолчанию — `NULL`.  
+ Указатель на прямоугольник, ограничивающий область для рисования. Значение по умолчанию — `NULL`.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
  `TRUE`Если этот метод выполнен успешно; в противном случае `FALSE`.  
@@ -257,7 +258,7 @@ void EnableAccessibilitySupport(BOOL bEnable=TRUE);
   
 ### <a name="parameters"></a>Параметры   
  [in] `bEnable`  
- `TRUE`для включения поддержки специальных возможностей; `FALSE` отключение поддержки специальных возможностей. Значение по умолчанию — `TRUE`.  
+ `TRUE`для включения поддержки специальных возможностей; `FALSE` отключение поддержки специальных возможностей. Значение по умолчанию — `TRUE`.  
   
 ### <a name="remarks"></a>Примечания  
  Активные специальные возможности технологии COM, который повышает программами и работы операционной системы Windows вместе с продуктов поддержки специальных возможностей. Он предоставляет надежные методы для вывода информации об элементах пользовательского интерфейса. Однако доступна новая модель специальных возможностей, вызывается модели автоматизации пользовательского интерфейса Microsoft. Сравнение этих двух технологий см. в разделе [модели автоматизации пользовательского интерфейса и Microsoft Active Accessibility](/dotnet/framework/ui-automation/ui-automation-and-microsoft-active-accessibility).  
@@ -387,7 +388,7 @@ int GetTextHeight(BOOL bHorz = TRUE);
   
 ### <a name="parameters"></a>Параметры   
  [in] `bHorz`  
- `TRUE`Для получения высота символов, если отрезки текста по горизонтали; `FALSE` для получения высота символов, если текст располагается вертикально. Значение по умолчанию — `TRUE`.  
+ `TRUE`Для получения высота символов, если отрезки текста по горизонтали; `FALSE` для получения высота символов, если текст располагается вертикально. Значение по умолчанию — `TRUE`.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
  Высота текущего шрифта, измеряется от его выносным элементом до его подстрочный элемент линией.  
@@ -468,7 +469,7 @@ BOOL IsAccessibilitySupport() const;
   
 
 ### <a name="see-also"></a>См. также  
- [Автоматизация пользовательского интерфейса и Microsoft Active Accessibility](/dotnet/framework/ui-automation/ui-automation-and-microsoft-active-accessibility)
+ [Модель автоматизации пользовательского интерфейса и Microsoft Active Accessibility](/dotnet/framework/ui-automation/ui-automation-and-microsoft-active-accessibility)
 
 ## <a name="isd2dinitialized"></a>AFX_GLOBAL_DATA::IsD2DInitialized
  Определяет, был ли инициализирован D2D  

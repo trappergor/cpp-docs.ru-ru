@@ -1,46 +1,46 @@
 ---
-title: "Оператор ComPtrRef::operator T* | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "client/Microsoft::WRL::Details::ComPtrRef::operator T*"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "operator T* - оператор"
+title: "Оператор ComPtrRef::operator T * | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: client/Microsoft::WRL::Details::ComPtrRef::operator T*
+dev_langs: C++
+helpviewer_keywords: operator T* operator
 ms.assetid: b4f83370-0ebc-4d56-87c6-1a8ea2d0079b
-caps.latest.revision: 5
-caps.handback.revision: 5
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "5"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: cbc7650c28ac46d6a58bced636a0aad8ae308187
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 12/21/2017
 ---
-# Оператор ComPtrRef::operator T*
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Предназначено для поддержки инфраструктуры WRL, а не для непосредственного использования в коде.  
+# <a name="comptrrefoperator-t-operator"></a>Оператор ComPtrRef::operator T*
+Поддерживает инфраструктуру WRL и не предназначен для использования непосредственно из программного кода.  
   
-## Синтаксис  
+## <a name="syntax"></a>Синтаксис  
   
 ```  
 operator T*();  
 ```  
   
-## Заметки  
- Возвращает значение элемента данных [ptr\_](../windows/comptrrefbase-ptr-data-member.md) текущего объекта ComPtrRef.  
+## <a name="remarks"></a>Примечания  
+ Возвращает значение [ptr_](../windows/comptrrefbase-ptr-data-member.md) элемент данных текущим объектом ComPtrRef.  
   
-## Требования  
+## <a name="requirements"></a>Требования  
  **Заголовок:** client.h  
   
- **Пространство имен:** Microsoft::WRL::Details  
+ **Пространство имен:** Microsoft::wrl:: Details  
   
-## См. также  
- [Класс ComPtrRef](../Topic/ComPtrRef%20Class.md)   
+## <a name="see-also"></a>См. также  
+ [ComPtrRef-класс](../windows/comptrref-class.md)   
  [Пространство имен Microsoft::WRL::Details](../windows/microsoft-wrl-details-namespace.md)

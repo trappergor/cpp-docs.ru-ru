@@ -33,11 +33,12 @@ caps.latest.revision: "7"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 786970d63482f2cede5e6b20af605accebe87da7
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: b23c60333bee887366e11f6da29a73e940a36561
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="fesetexceptflag"></a>fesetexceptflag
 Задает указанные флаги состояний с плавающей запятой в текущей среде вычислений с плавающей запятой.  
@@ -64,7 +65,7 @@ int fesetexceptflag(
 ## <a name="remarks"></a>Примечания  
  Функция `fesetexceptflag` присваивает состоянию флагов состояний исключения с плавающей запятой, заданных с помощью `excepts`, соответствующие значения объекта `fexcept_t`, на который указывает `pstatus`.  При этом не вызывается исключение. Указатель `pstatus` должен указывать на допустимый объект `fexcept_t`. В противном случае последующее поведение функции будет неопределенным. Функция `fesetexceptflag` поддерживает следующие значения макросов исключений в `excepts`, которые определены в \<fenv.h>:  
   
-|Макрос исключения|Описание|  
+|Макрос исключения|Описание:|  
 |---------------------|-----------------|  
 |FE_DIVBYZERO|При выполнении предыдущей операции с плавающей запятой произошла ошибка сингулярности или полюса, в результате чего было получено бесконечное значение.|  
 |FE_INEXACT|Функция принудительно округлила сохраненный результат ранее выполненной операции с плавающей запятой.|  

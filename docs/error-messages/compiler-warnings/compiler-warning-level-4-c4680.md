@@ -1,32 +1,31 @@
 ---
-title: "Предупреждение компилятора (уровень 4) C4680 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C4680"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C4680"
+title: "Предупреждение (уровень 4) C4680 компилятора | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords: C4680
+dev_langs: C++
+helpviewer_keywords: C4680
 ms.assetid: 6e043f4c-c601-4b77-8130-920cff1d912e
-caps.latest.revision: 7
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: d460e705a928e01b8bb203e24ea4df21ae79e087
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 12/21/2017
 ---
-# Предупреждение компилятора (уровень 4) C4680
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-"класс": coclass не указывает интерфейс по умолчанию  
+# <a name="compiler-warning-level-4-c4680"></a>Предупреждение компилятора (уровень 4) C4680
+«класс»: компонентный класс не указывает интерфейс по умолчанию  
   
- Интерфейс [по умолчанию](../../windows/default-cpp.md) не был задан для класса, помеченного с помощью атрибута [coclass](../../windows/coclass.md).  Чтобы объект был функциональным, он должен реализовать интерфейс.  
+ Объект [по умолчанию](../../windows/default-cpp.md) интерфейс не был задан для класса, который был помечен атрибутом [coclass](../../windows/coclass.md) атрибута. Объект для использования, он должен реализовать интерфейс.  
   
  Следующий пример приводит к возникновению ошибки C4680:  
   

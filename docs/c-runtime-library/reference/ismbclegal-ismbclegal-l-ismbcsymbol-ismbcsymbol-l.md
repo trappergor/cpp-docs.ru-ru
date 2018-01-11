@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
 apiname:
@@ -35,8 +34,7 @@ f1_keywords:
 - ismbclegal_l
 - ismbcsymbol
 - ismbclegal
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - ismbcsymbol function
 - ismbclegal_l function
@@ -51,30 +49,16 @@ helpviewer_keywords:
 - _ismbcsymbol_l function
 - istlegal_l function
 ms.assetid: 31bf1ea5-b56f-4e28-b21e-b49a2cf93ffc
-caps.latest.revision: 18
+caps.latest.revision: "18"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3f91eafaf3b5d5c1b8f96b010206d699f666e224
-ms.openlocfilehash: 8a7075b9a86aceda75b4934a74b405fc9e27a908
-ms.contentlocale: ru-ru
-ms.lasthandoff: 04/01/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: 057b6ee50934561662becbcf258910ee292664ef
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="ismbclegal-ismbclegall-ismbcsymbol-ismbcsymboll"></a>_ismbclegal, _ismbclegal_l, _ismbcsymbol, _ismbcsymbol_l
 Проверяет, является ли многобайтовый допустимым символьным знаком.  
@@ -114,7 +98,7 @@ int _ismbcsymbol_l(
 ## <a name="remarks"></a>Примечания  
  Каждая из этих функций проверяет определенный многобайтовый символ на соответствие заданному условию.  
   
- Версии этих функций с суффиксом `_l` идентичны, за исключением того, что для поведения, зависящего от языкового стандарта, они используют переданный параметр языкового стандарта вместо текущего языкового стандарта. Дополнительные сведения см. в разделе [Языковой стандарт](../../c-runtime-library/locale.md).  
+ Версии этих функций с суффиксом `_l` идентичны, за исключением того, что для поведения, зависящего от языкового стандарта, они используют переданный параметр языкового стандарта вместо текущего языкового стандарта. Для получения дополнительной информации см. [Locale](../../c-runtime-library/locale.md).  
   
 |Подпрограмма|Условие теста|Пример кодовой страницы 932|  
 |-------------|--------------------|---------------------------|  

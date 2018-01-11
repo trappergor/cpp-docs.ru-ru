@@ -1,35 +1,34 @@
 ---
-title: "Предупреждение компилятора (уровень 1) C4397 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C4397"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C4397"
+title: "Предупреждение компилятора (уровень 1) C4397 | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords: C4397
+dev_langs: C++
+helpviewer_keywords: C4397
 ms.assetid: 6346fdc2-dbbf-4fba-803a-32b0d0a707be
-caps.latest.revision: 8
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: eae4518c731327a59d7efd049e25a823922bc65c
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 12/21/2017
 ---
-# Предупреждение компилятора (уровень 1) C4397
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Атрибут DefaultCharSetAttribute не обрабатывается  
+# <a name="compiler-warning-level-1-c4397"></a>Предупреждение компилятора (уровень 1) C4397
+DefaultCharSetAttribute игнорируется  
   
- Атрибут <xref:System.Runtime.InteropServices.DefaultCharSetAttribute> не обрабатывается компилятором Visual C\+\+.  Чтобы задать набор символов для библиотеки DLL, следует использовать параметр CharSet DllImport.  Для получения дополнительной информации см. [Использование взаимодействия языка C\+\+ \(неявный PInvoke\)](../../dotnet/using-cpp-interop-implicit-pinvoke.md).  
+ <xref:System.Runtime.InteropServices.DefaultCharSetAttribute>обрабатывается компилятором Visual C++. Чтобы указать набор символов для библиотеки DLL, используйте параметр CharSet DllImport. Дополнительные сведения см. в разделе [с помощью взаимодействия C++ (неявный PInvoke)](../../dotnet/using-cpp-interop-implicit-pinvoke.md).  
   
-## Пример  
- Следующий пример демонстрирует причины возникновения ошибки C4397.  
+## <a name="example"></a>Пример  
+ Следующий пример приводит к возникновению ошибки C4397.  
   
 ```  
 // C4397.cpp  

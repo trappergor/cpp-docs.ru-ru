@@ -101,11 +101,12 @@ caps.latest.revision: "25"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: ab92c7116b5a4c76d136f3f448b75b3801977822
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 9f95b4097f2e0ddd399df9b65ed178c1423edaaa
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="findfirst-findfirst32-findfirst32i64-findfirst64-findfirst64i32-findfirsti64-wfindfirst-wfindfirst32-wfindfirst32i64-wfindfirst64-wfindfirst64i32-wfindfirsti64"></a>_findfirst, _findfirst32, _findfirst32i64, _findfirst64, _findfirst64i32, _findfirsti64, _wfindfirst, _wfindfirst32, _wfindfirst32i64, _wfindfirst64, _wfindfirst64i32, _wfindfirsti64
 Предоставляет сведения о первом экземпляре имени файла, соответствующему файлу, указанному в аргументе `filespec`.  
@@ -206,16 +207,16 @@ intptr_t _wfindfirst64i32(
   
 |Функции|Директива `_USE_32BIT_TIME_T` определена?|Тип времени|Тип длины файла|  
 |---------------|----------------------------------|---------------|----------------------|  
-|`_findfirst`, `_wfindfirst`|Не определено|64-разрядная|32-разрядная|  
-|`_findfirst`, `_wfindfirst`|Определено|32-разрядная|32-разрядная|  
-|`_findfirst32`, `_wfindfirst32`|Не затрагивается определением макроса|32-разрядная|32-разрядная|  
-|`_findfirst64`, `_wfindfirst64`|Не затрагивается определением макроса|64-разрядная|64-разрядная|  
-|`_findfirsti64`, `_wfindfirsti64`|Не определено|64-разрядная|64-разрядная|  
-|`_findfirsti64`, `_wfindfirsti64`|Определено|32-разрядная|64-разрядная|  
-|`_findfirst32i64`, `_wfindfirst32i64`|Не затрагивается определением макроса|32-разрядная|64-разрядная|  
-|`_findfirst64i32`, `_wfindfirst64i32`|Не затрагивается определением макроса|64-разрядная|32-разрядная|  
+|`_findfirst`, `_wfindfirst`|Не определено|64-разрядная версия|32-разрядная версия|  
+|`_findfirst`, `_wfindfirst`|Определено|32-разрядная|32-разрядная версия|  
+|`_findfirst32`, `_wfindfirst32`|Не затрагивается определением макроса|32-разрядная|32-разрядная версия|  
+|`_findfirst64`, `_wfindfirst64`|Не затрагивается определением макроса|64-разрядная версия|64-разрядная версия|  
+|`_findfirsti64`, `_wfindfirsti64`|Не определено|64-разрядная|64-разрядная версия|  
+|`_findfirsti64`, `_wfindfirsti64`|Определено|32-разрядная версия|64-разрядная версия|  
+|`_findfirst32i64`, `_wfindfirst32i64`|Не затрагивается определением макроса|32-разрядная версия|64-разрядная версия|  
+|`_findfirst64i32`, `_wfindfirst64i32`|Не затрагивается определением макроса|64-разрядная версия|32-разрядная|  
   
-### <a name="generic-text-routine-mappings"></a>Универсальное текстовое сопоставление функций  
+### <a name="generic-text-routine-mappings"></a>Сопоставления подпрограмм обработки обычного текста  
   
 |Подпрограмма Tchar.h|_UNICODE и _MBCS не определены|_MBCS определено|_UNICODE определено|  
 |---------------------|--------------------------------------|--------------------|-----------------------|  

@@ -49,11 +49,12 @@ caps.latest.revision: "34"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 00988ef4a0b70561ec3a5687502ddae95508dad5
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 257b9157059f20d9023abee092c38ad8c1a57167
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cmfcoutlookbar-class"></a>Класс CMFCOutlookBar
 Область со вкладками, которая имеет внешний вид области **Область переходов** в Microsoft Outlook 2000 или Outlook 2003. `CMFCOutlookBar` Объект содержит [класс CMFCOutlookBarTabCtrl](../../mfc/reference/cmfcoutlookbartabctrl-class.md) объекта и ряд вкладок. Вкладки могут быть либо [класса CMFCOutlookBarPane](../../mfc/reference/cmfcoutlookbarpane-class.md) объектов или `CWnd`-производных объектов. Пользователю панель Outlook отображается как последовательность кнопок и область отображения. Когда пользователь нажимает кнопку, отображается соответствующая область элемента управления или кнопки.  
@@ -64,18 +65,18 @@ ms.lasthandoff: 10/24/2017
 class CMFCOutlookBar : public CBaseTabbedPane  
 ```  
   
-## <a name="members"></a>Члены  
+## <a name="members"></a>Участники  
   
 ### <a name="public-constructors"></a>Открытые конструкторы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |`CMFCOutlookBar::CMFCOutlookBar`|Конструктор по умолчанию.|  
 |`CMFCOutlookBar::~CMFCOutlookBar`|Деструктор.|  
   
 ### <a name="public-methods"></a>Открытые методы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[CMFCOutlookBar::AllowDestroyEmptyTabbedPane](#allowdestroyemptytabbedpane)|Указывает, можно ли удалить пустой области с вкладками. (Переопределяет [CBaseTabbedPane::AllowDestroyEmptyTabbedPane](../../mfc/reference/cbasetabbedpane-class.md#allowdestroyemptytabbedpane).)|  
 |[CMFCOutlookBar::CanAcceptPane](#canacceptpane)|Определяет, является ли другую панель можно закрепить область панели Outlook. (Переопределяет CDockablePane::CanAcceptPane).|  

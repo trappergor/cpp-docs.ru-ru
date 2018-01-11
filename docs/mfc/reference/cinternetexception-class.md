@@ -23,11 +23,12 @@ caps.latest.revision: "22"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 94f75200599c941dbe63a194e6a71d1693e1810e
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 8caa275af4469d45672125677d960b71212fe3de
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cinternetexception-class"></a>Класс CInternetException
 Представляет условие исключения, касающееся интернет-операции.  
@@ -38,17 +39,17 @@ ms.lasthandoff: 10/24/2017
 class CInternetException : public CException  
 ```  
   
-## <a name="members"></a>Члены  
+## <a name="members"></a>Участники  
   
 ### <a name="public-constructors"></a>Открытые конструкторы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[CInternetException::CInternetException](#cinternetexception)|Создает объект `CInternetException`.|  
   
 ### <a name="public-data-members"></a>Открытые члены данных  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[CInternetException::m_dwContext](#m_dwcontext)|Значение контекста, связанного с операцией, которая вызвала исключение.|  
 |[CInternetException::m_dwError](#m_dwerror)|Ошибки, вызвавшей исключение.|  

@@ -4,46 +4,28 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-tools
+ms.technology: cpp-tools
 ms.tgt_pltfrm: 
 ms.topic: error-reference
-f1_keywords:
-- C4677
-dev_langs:
-- C++
-helpviewer_keywords:
-- C4677
+f1_keywords: C4677
+dev_langs: C++
+helpviewer_keywords: C4677
 ms.assetid: a8d656a1-e2ff-4f8b-9028-201765131026
-caps.latest.revision: 12
+caps.latest.revision: "12"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
-ms.openlocfilehash: 477b5def0b956dc06aa107003f93adea6ca1437c
-ms.contentlocale: ru-ru
-ms.lasthandoff: 02/24/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: 7af724ad56c3a84ffb8ef48e13d14bee97db14df
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="compiler-warning-level-1-c4677"></a>Предупреждение компилятора (уровень 1) C4677
 «функция»: подпись не частного члена содержит частный тип сборки «private_type»  
   
- Тип, открытым вне сборки использует тип, имеющий закрытый доступ за пределами сборки. Компонент, ссылающийся на открытый тип сборки не будут иметь возможность использовать член или члены типа, ссылающиеся на закрытый тип сборки.  
+ Тип, открытым вне сборки использует тип, имеющий доступ к закрытому за пределами сборки. Компонент, ссылающийся на открытый тип сборки нельзя будет использовать член типа или элементы, которые ссылаются на частный тип сборки.  
   
 ## <a name="example"></a>Пример  
  Следующий пример приводит к возникновению ошибки C4677.  

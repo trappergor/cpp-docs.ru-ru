@@ -1,31 +1,30 @@
 ---
-title: "Предупреждение программы NMAKE U4004 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "U4004"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "U4004"
+title: "Предупреждение программы NMAKE U4004 | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords: U4004
+dev_langs: C++
+helpviewer_keywords: U4004
 ms.assetid: 5086bbcb-42d7-4677-a877-1a02202a86a2
-caps.latest.revision: 6
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 6
+caps.latest.revision: "6"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: fcbda9dd9d7ca5ecb99e46b9916fb95c2c560e49
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 12/21/2017
 ---
-# Предупреждение программы NMAKE U4004
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-слишком много правил для конечного объекта "имя конечного объекта"  
+# <a name="nmake-warning-u4004"></a>Предупреждение программы NMAKE U4004
+слишком много правил для целевого «targetname»  
   
- Для данного конечного объекта было указано более одного блока описания с использованием одиночных двоеточий \(**:**\) в качестве разделителей.  NMAKE выполняет команды первого блока описания и не обрабатывает команды последующих блоков.  
+ Было указано более одного блока описания для заданного целевого объекта с использованием одиночных двоеточий (**:**) в качестве разделителей. NMAKE выполнения команды первого блока описания и не последующих блоков.  
   
- Чтобы задать для нескольких зависимостях один и тот же конечный объект, следует использовать двойные двоеточия \(`::`\) в качестве разделителей в каждой строке зависимости.
+ Чтобы указать одного целевого объекта в несколько зависимостей, следует использовать двойные двоеточия (`::`) в качестве разделителя в каждой строке зависимости.

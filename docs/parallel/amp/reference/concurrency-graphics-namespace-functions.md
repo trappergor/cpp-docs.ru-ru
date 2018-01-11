@@ -9,26 +9,26 @@ ms.topic: article
 f1_keywords:
 - amp_graphics/Concurrency::fast_math::copy_async
 - amp_graphics/Concurrency::fast_math::copy
-dev_langs:
-- C++
+dev_langs: C++
 ms.assetid: ace01cd5-29d3-4356-930e-c81a61c5f934
-caps.latest.revision: 9
+caps.latest.revision: "9"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translationtype: Machine Translation
-ms.sourcegitcommit: 5faef5bd1be6cc02d6614a6f6193c74167a8ff23
-ms.openlocfilehash: a9def518f951e6fbae788b69893cc7205053b411
-ms.lasthandoff: 03/17/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: 7338e634c7ce10b06e7b599494ed934942febe42
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="concurrencygraphics-namespace-functions"></a>Функции пространство имен Concurrency::Graphics
 |||  
 |-|-|  
 |[copy](#copy)|[copy_async](#copy_async)|  
   
-##  <a name="copy"></a>Функция Copy (пространство имен Concurrency::graphics)  
- Копирует в буфер назначения исходная текстура или копирует в буфер назначения исходного буфера. Эта функция выглядит `copy(src, dest)`.  
+##  <a name="copy"></a>Copy-функция (пространство имен Concurrency::graphics)  
+ Копирует в буфер назначения исходную текстуру или копирует в буфер назначения исходного буфера. Эта функция выглядит `copy(src, dest)`.  
   
 ```  
 template <
@@ -135,7 +135,7 @@ void copy (
   
 ### <a name="parameters"></a>Параметры  
  `_Copy_extent`  
- Экстент копируемый раздел текстуры.  
+ Степень копируемый раздел текстуры.  
   
  `_Dst`  
  Объект для копирования.  
@@ -150,7 +150,7 @@ void copy (
  Смещение в место назначения, с которого начинается копирование.  
   
  `InputIterator`  
- Тип ввода interator.  
+ Тип входного interator.  
   
  `OutputIterator`  
  Тип итератора вывода.  
@@ -165,16 +165,16 @@ void copy (
  Тип исходного объекта.  
   
  `_Src_offset`  
- Смещение в источник, из которого следует начать копирование.  
+ Смещение в источнике, с которого начинается копирование.  
   
  `first`  
- Итератор начало в контейнер источника.  
+ Итератор с начала в контейнер источника.  
   
  `last`  
  Итератор конца в контейнер источника.  
   
-##  <a name="copy_async"></a>Функция copy_async (пространство имен Concurrency::graphics)  
- Асинхронно копирует исходную текстуру в буфер назначения, или копирует исходного буфера в буфер назначения, а затем возвращает [completion_future](completion-future-class.md) объект, который может быть ожидаемым. Не удается скопировать данные, когда код выполняется на ускорителя. Эта функция выглядит `copy(src, dest)`.  
+##  <a name="copy_async"></a>(пространство имен Concurrency::graphics) функция copy_async  
+ Асинхронно копирует исходную текстуру в буфер назначения, или копирует исходного буфера в буфер назначения, а затем возвращает [completion_future](completion-future-class.md) объект, который может быть ожидаемым. Не удается скопировать данные, если код выполняется на ускорителе. Эта функция выглядит `copy(src, dest)`.  
   
 ```  
 template<
@@ -277,7 +277,7 @@ concurrency::completion_future copy_async(_Src_type& _Src,
   
 ### <a name="parameters"></a>Параметры  
  `_Copy_extent`  
- Экстент копируемый раздел текстуры.  
+ Степень копируемый раздел текстуры.  
   
  `_Dst`  
  Объект для копирования.  
@@ -292,7 +292,7 @@ concurrency::completion_future copy_async(_Src_type& _Src,
  Смещение в место назначения, с которого начинается копирование.  
   
  `InputIterator`  
- Тип ввода interator.  
+ Тип входного interator.  
   
  `OutputIterator`  
  Тип итератора вывода.  
@@ -307,10 +307,10 @@ concurrency::completion_future copy_async(_Src_type& _Src,
  Тип исходного объекта.  
   
  `_Src_offset`  
- Смещение в источник, из которого следует начать копирование.  
+ Смещение в источнике, с которого начинается копирование.  
   
  `first`  
- Итератор начало в контейнер источника.  
+ Итератор с начала в контейнер источника.  
   
  `last`  
  Итератор конца в контейнер источника.  
@@ -322,4 +322,3 @@ concurrency::completion_future copy_async(_Src_type& _Src,
 
 ## <a name="see-also"></a>См. также  
  [Пространство имен Concurrency::graphics](concurrency-graphics-namespace.md)
-

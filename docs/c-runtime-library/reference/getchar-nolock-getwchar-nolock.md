@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
 apiname:
@@ -28,8 +27,7 @@ f1_keywords:
 - _getwchar_nolock
 - _getchar_nolock
 - getchar_nolock
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - _getwchar_nolock function
 - getwchar_nolock function
@@ -38,30 +36,16 @@ helpviewer_keywords:
 - getchar_nolock function
 - standard input, reading from
 ms.assetid: dc49ba60-0647-4ae9-aa9a-a0618b1666de
-caps.latest.revision: 16
+caps.latest.revision: "16"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: e257f037a05c45f5b98e64ea55bd125af443b0be
-ms.openlocfilehash: b45437b2cfe740af9555392789fa6b58f80e6b4f
-ms.contentlocale: ru-ru
-ms.lasthandoff: 03/30/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: 08b6187c51d46f577c97405c36654de4181fcb87
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="getcharnolock-getwcharnolock"></a>_getchar_nolock, _getwchar_nolock
 Считывает символ из стандартного входного потока.  
@@ -79,7 +63,7 @@ wint_t _getwchar_nolock( void );
 ## <a name="remarks"></a>Примечания  
  Функции `_getchar_nolock` и `_getwchar_nolock` идентичны функциям `getchar` и `getwchar` за исключением того, что не защищены от помех со стороны других потоков. Они могут выполняться быстрее, поскольку не создают дополнительную нагрузку, связанную с блокировкой работы других потоков. Используйте эти функции только в потокобезопасных контекстах, например в однопоточных приложениях или если вызываемая область уже обрабатывает изоляцию потоков.  
   
-### <a name="generic-text-routine-mappings"></a>Универсальное текстовое сопоставление функций  
+### <a name="generic-text-routine-mappings"></a>Сопоставления подпрограмм обработки обычного текста  
   
 |Подпрограмма Tchar.h|_UNICODE и _MBCS не определены|_MBCS определено|_UNICODE определено|  
 |---------------------|--------------------------------------|--------------------|-----------------------|  

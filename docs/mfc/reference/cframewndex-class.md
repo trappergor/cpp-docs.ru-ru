@@ -189,11 +189,12 @@ caps.latest.revision: "39"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: de4de5d693e786cd2cb1f7e4a0e45c9f7df66d99
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: b968985c598dafe2ed96295c7388d650dc18c636
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cframewndex-class"></a>Класс CFrameWndEx
 Реализует функции однодокументного интерфейса Windows (SDI) с наложенным или всплывающим фреймовым окном, а также предоставляет элементы для управления окном. Он расширяет [CFrameWnd](../../mfc/reference/cframewnd-class.md) класса.  
@@ -204,11 +205,11 @@ ms.lasthandoff: 10/24/2017
 class CFrameWndEx : public CFrameWnd  
 ```  
   
-## <a name="members"></a>Члены  
+## <a name="members"></a>Участники  
   
 ### <a name="public-methods"></a>Открытые методы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[CFrameWndEx::ActiveItemRecalcLayout](#activeitemrecalclayout)|Настраивает макет элемент клиента OLE и клиентскую область фрейма.|  
 |`CFrameWndEx::AddDockSite`|Этот метод не используется.|  

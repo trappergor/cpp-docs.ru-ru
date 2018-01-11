@@ -1,32 +1,33 @@
 ---
-title: "defaultcollelem | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-f1_keywords: 
-  - "vc-attr.defaultcollelem"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "defaultcollelem attribute"
+title: "defaultcollelem | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+f1_keywords: vc-attr.defaultcollelem
+dev_langs: C++
+helpviewer_keywords: defaultcollelem attribute
 ms.assetid: 3dbbd293-8b83-4f70-a36b-64cc1d0b6713
-caps.latest.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 9
+caps.latest.revision: "9"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: 407742e9f56624e77c171beeb0201da37530388d
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 12/21/2017
 ---
-# defaultcollelem
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="defaultcollelem"></a>defaultcollelem
 Используется для оптимизации кода Visual Basic.  
   
-## Синтаксис  
+## <a name="syntax"></a>Синтаксис  
   
 ```  
   
@@ -34,11 +35,11 @@ caps.handback.revision: 9
   
 ```  
   
-## Заметки  
- **Элемент коллекции по умолчанию** Атрибут C\+\+ имеет ту же функциональность, что и  [Элемент коллекции по умолчанию](http://msdn.microsoft.com/library/windows/desktop/aa366792) атрибут MIDL.  
+## <a name="remarks"></a>Примечания  
+ **Defaultcollelem** языка C++ имеет ту же функциональность, что [defaultcollelem](http://msdn.microsoft.com/library/windows/desktop/aa366792) языка MIDL.  
   
-## Пример  
- В следующем примере кода показано использование метода интерфейса **Элемент коллекции по умолчанию** атрибут:  
+## <a name="example"></a>Пример  
+ В следующем коде показан метод интерфейса с помощью **defaultcollelem** атрибута:  
   
 ```  
 // cpp_attr_ref_defaultcollelem.cpp  
@@ -55,20 +56,19 @@ __interface IMyForm
 };  
 ```  
   
-## Требования  
+## <a name="requirements"></a>Требования  
   
-### Контекст атрибута  
+### <a name="attribute-context"></a>Контекст атрибута  
   
 |||  
 |-|-|  
 |**Применение**|Метод интерфейса|  
-|**Repeatable**|Нет|  
-|**Обязательные атрибуты**|None|  
-|**Недопустимые атрибуты**|None|  
+|**Повторяемый**|Нет|  
+|**Обязательные атрибуты**|Нет|  
+|**Недопустимые атрибуты**|Нет|  
   
- Дополнительные сведения см. в разделе [Контексты атрибута](../windows/attribute-contexts.md).  
+ Дополнительные сведения см. в разделе [Контексты атрибутов](../windows/attribute-contexts.md).  
   
-## См. также  
- [IDL Attributes](../windows/idl-attributes.md)   
- [Method Attributes](../windows/method-attributes.md)   
- [Attributes Samples](http://msdn.microsoft.com/ru-ru/558ebdb2-082f-44dc-b442-d8d33bf7bdb8)
+## <a name="see-also"></a>См. также  
+ [Атрибуты IDL](../windows/idl-attributes.md)   
+ [Атрибуты метода](../windows/method-attributes.md)   

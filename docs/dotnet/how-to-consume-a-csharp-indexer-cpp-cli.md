@@ -1,39 +1,39 @@
 ---
-title: "Практическое руководство. Использование индексатора C# (C++/CLI) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "get-started-article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C++, индексаторы"
-  - "индексаторы, использование C#"
+title: "Как: использование индексатора C# (C + +/ CLI) | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: get-started-article
+dev_langs: C++
+helpviewer_keywords:
+- C++, indexers
+- indexers, consuming C#
 ms.assetid: 5a11850c-a1a2-4a0a-b95e-f6dc5a87f439
-caps.latest.revision: 13
-caps.handback.revision: 11
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "13"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: 2ed069e1f9d7effa686cd572bd505a41dcf60c04
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 12/21/2017
 ---
-# Практическое руководство. Использование индексатора C# (C++/CLI)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Visual C\+\+ не содержит индексаторов, однако, имеет индексированные свойства.  Чтобы использовать индексатор C\#, подключитесь к нему таким же образом, как и к индексированному свойству.  
+# <a name="how-to-consume-a-c-indexer-ccli"></a>Практическое руководство. Использование индексатора C# (C++/CLI)
+Visual C++ не содержит индексаторов; он индексированных свойств. Чтобы использование индексатора C#, доступа индексатора, как если бы он был индексированного свойства.  
   
  Дополнительные сведения об индексаторах см. в разделе:  
   
--   [Индексаторы](../Topic/Indexers%20\(C%23%20Programming%20Guide\).md)  
+-   [Индексаторы](/dotnet/csharp/programming-guide/indexers/index)  
   
--   [Практическое руководство. Использование индексированных свойств](../misc/how-to-use-indexed-properties.md)  
-  
-## Пример  
- Следующая программа C\# определяет индексатор.  
+## <a name="example"></a>Пример  
+ В следующей программе C# определяет индексатор.  
   
 ```  
 // consume_cs_indexers.cs  
@@ -71,8 +71,8 @@ public class MainClass {
 */  
 ```  
   
-## Пример  
- Программа Visual C\+\+ использует индексатор, определенный программой C\#.  
+## <a name="example"></a>Пример  
+ Эта программа Visual C++ использует индексатор.  
   
 ```  
 // consume_cs_indexers_2.cpp  
@@ -88,16 +88,19 @@ int main() {
 }  
 ```  
   
-  **Элемент \#0 \= 21**  
-**Элемент №1 \= 0**  
-**Элемент №2 \= 0**  
-**Элемент №3 \= 0**  
-**Элемент №4 \= 0**  
-**Элемент №5 \= 0**  
-**Элемент №6 \= 0**  
-**Элемент №7 \= 0**  
-**Элемент №8 \= 0**  
-**Элемент №9 \= 0**  
-**Элемент №10 \= 0**   
-## См. также  
- [Совместимость с другими языками .NET](../dotnet/interoperability-with-other-dotnet-languages-cpp-cli.md)
+```Output  
+Element #0 = 21  
+Element #1 = 0  
+Element #2 = 0  
+Element #3 = 0  
+Element #4 = 0  
+Element #5 = 0  
+Element #6 = 0  
+Element #7 = 0  
+Element #8 = 0  
+Element #9 = 0  
+Element #10 = 0  
+```  
+  
+## <a name="see-also"></a>См. также  
+ [Совместимость с другими языками .NET (C++/CLI)](../dotnet/interoperability-with-other-dotnet-languages-cpp-cli.md)

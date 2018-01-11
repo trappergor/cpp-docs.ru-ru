@@ -20,11 +20,12 @@ caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 23c403d5e872818345b319ea6786da6b2f42fabc
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 987f754ccdf03e5a252feae693a1f7718da1b353
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="storing-and-loading-cobjects-via-an-archive"></a>Сохранение и загрузка CObjects через архив
 Сохранение и загрузка `CObject`s через архив требует дополнительных рассмотрения. В некоторых случаях необходимо вызвать `Serialize` функцию объекта, где `CArchive` объект — это параметр `Serialize` вызова, а не с помощью  **< \<**  или  **>>**  оператор `CArchive`. Это важный аспект, необходимо иметь в виду `CArchive`  **>>**  конструкции оператор `CObject` в памяти, на основе `CRuntimeClass` сведения, написанный в файле до сохранения архива.  

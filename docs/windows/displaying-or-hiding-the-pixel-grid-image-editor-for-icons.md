@@ -1,48 +1,52 @@
 ---
-title: "Displaying or Hiding the Pixel Grid (Image Editor for Icons) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "grids, pixel"
-  - "pixel grid, Image editor"
-  - "Image editor [C++], pixel grid"
-  - "Image editor [C++], grid settings"
-  - "grid settings, Image editor"
+title: "Отображение или скрытие пиксельной сетки (редактор изображений для значков) | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- grids, pixel
+- pixel grid, Image editor
+- Image editor [C++], pixel grid
+- Image editor [C++], grid settings
+- grid settings, Image editor
 ms.assetid: 571afcd7-94fb-433e-a652-c087d5665db1
-caps.latest.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 5
+caps.latest.revision: "9"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: 7767136d99027584cc2ab27c0fc0bf44cf4fd6dc
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 12/21/2017
 ---
-# Displaying or Hiding the Pixel Grid (Image Editor for Icons)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Если в любой области масштаб изображения изменен в 4 раза или более, можно отобразить решетку, которая позволит различать отдельные пиксели на изображении.  
+# <a name="displaying-or-hiding-the-pixel-grid-image-editor-for-icons"></a>Отображение или скрытие пиксельной сетки (редактор изображений для значков)
+В любой области редактора изображений, масштаб 4 или выше можно отобразить сетку, которая разделяет отдельные точки изображения.  
   
 > [!TIP]
->  При наведении курсора на кнопку панели инструментов отображаются всплывающие подсказки.  Эти подсказки помогают определить функцию каждой кнопки.  
+>  Всплывающие подсказки отображается при наведении курсора на кнопке панели инструментов. Эти советы могут помочь определить функцию каждой кнопки.  
   
-### Показать или скрыть пиксельную сетку  
+### <a name="to-display-or-hide-the-pixel-grid"></a>Чтобы отобразить или скрыть пиксельную сетку  
   
-1.  В меню **Изображение** выберите **Параметры сетки**.  
+1.  На **изображения** меню, нажмите кнопку **параметры сетки**.  
   
-2.  Установите флажок **Пиксельная сетка**, чтобы отображалась пиксельная сетка или снимите этот флажок, чтобы скрыть сетку.  
+2.  Выберите **пиксельной сетке** флажок, чтобы отобразить сетку, или снимите флажок, чтобы скрыть сетку.  
   
- Сведения о добавлении ресурсов в управляемые проекты см. в разделе [Ресурсы приложений](../Topic/Resources%20in%20Desktop%20Apps.md) *Руководства разработчика .NET Framework*. Сведения о том, как вручную добавлять файлы ресурсов в управляемые проекты, осуществлять доступ к ресурсам, отображать статические ресурсы и присваивать строки ресурсов свойствам см. в разделах [Пошаговое руководство. Локализация приложений Windows Forms](http://msdn.microsoft.com/ru-ru/9a96220d-a19b-4de0-9f48-01e5d82679e5) и [Walkthrough: Using Resources for Localization with ASP.NET](../Topic/Walkthrough:%20Using%20Resources%20for%20Localization%20with%20ASP.NET.md).  
+ Сведения о добавлении ресурсов в управляемые проекты см. в разделе [ресурсы в классических приложениях](/dotnet/framework/resources/index) в *руководства разработчика .NET Framework.* Сведения о вручную добавлять файлы ресурсов в управляемые проекты, осуществлять доступ к ресурсам, отображать статические ресурсы и присваивать строки ресурсов свойствам см. в разделе [Создание файлов ресурсов для приложений рабочего стола](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Сведения о глобализации и локализации ресурсов в управляемых приложениях см. в разделе [Globalizing и локализация приложений .NET Framework](/dotnet/standard/globalization-localization/index).  
   
  Требования  
   
- None  
+ Нет  
   
-## См. также  
- [Accelerator Keys](../mfc/accelerator-keys-image-editor-for-icons.md)   
- [Window Panes](../mfc/window-panes-image-editor-for-icons.md)
+## <a name="see-also"></a>См. также  
+ [Сочетания клавиш](../windows/accelerator-keys-image-editor-for-icons.md)   
+ [Области окна](../windows/window-panes-image-editor-for-icons.md)
+

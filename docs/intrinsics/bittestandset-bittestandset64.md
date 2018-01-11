@@ -1,67 +1,75 @@
 ---
-title: "_bittestandset, _bittestandset64 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "_bittestandset_cpp"
-  - "_bittestandset64_cpp"
-  - "_bittestandset64"
-  - "_bittestandset"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "_bittestandset intrinsic"
-  - "_bittestandset64 intrinsic"
-  - "bts instruction"
+title: "_bittestandset _bittestandset64 | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- _bittestandset_cpp
+- _bittestandset64_cpp
+- _bittestandset64
+- _bittestandset
+dev_langs: C++
+helpviewer_keywords:
+- bts instruction
+- _bittestandset intrinsic
+- _bittestandset64 intrinsic
 ms.assetid: 6d6c8670-fea0-4c1c-9aad-2bb842715203
-caps.latest.revision: 16
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 14
+caps.latest.revision: "16"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 0a4cdd4940ce5c75f1575b50d2cd411a04d6d31d
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 12/21/2017
 ---
-# _bittestandset, _bittestandset64
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="bittestandset-bittestandset64"></a>_bittestandset, _bittestandset64
 **Блок, относящийся только к системам Microsoft**  
   
  Создание инструкции, которая проверяет разряд `b` адреса `a`, возвращает его текущее значение и устанавливает разряд в 1.  
   
-## Синтаксис  
+## <a name="syntax"></a>Синтаксис  
   
 ```  
-unsigned char _bittestandset(    long *a,    long b ); unsigned char _bittestandset64(    __int64 *a,    __int64 b );  
+unsigned char _bittestandset(  
+   long *a,  
+   long b  
+);  
+unsigned char _bittestandset64(  
+   __int64 *a,  
+   __int64 b  
+);  
 ```  
   
-#### Параметры  
- \[in, out\] `a`  
+#### <a name="parameters"></a>Параметры  
+ [in, out] `a`  
  Указатель на область памяти для проверки.  
   
- \[in\] `b`  
+ [in] `b`  
  Позиция разряда для тестирования.  
   
-## Возвращаемое значение  
+## <a name="return-value"></a>Возвращаемое значение  
  Разряд на указанной позиции.  
   
-## Требования  
+## <a name="requirements"></a>Требования  
   
 |Встроенная функция|Архитектура|  
-|------------------------|-----------------|  
-|`_bittestandset`|x86, ARM, [!INCLUDE[vcprx64](../Token/vcprx64_md.md)]|  
-|`_bittestandset64`|[!INCLUDE[vcprx64](../Token/vcprx64_md.md)]|  
+|---------------|------------------|  
+|`_bittestandset`|x86, ARM, [!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|  
+|`_bittestandset64`|[!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|  
   
- **Файл заголовка** \<intrin.h\>  
+ **Файл заголовка** \<intrin.h >  
   
-## Заметки  
+## <a name="remarks"></a>Примечания  
  Эта процедура доступна только как встроенная функция.  
   
-## Пример  
+## <a name="example"></a>Пример  
   
 ```  
 // bittestandset.cpp  
@@ -137,8 +145,16 @@ int main()
 }  
 ```  
   
-  **Флаги Флаги 0x2: Флаги 0x6: Флаги 0xe: Флаги 0x6: Флаги 0x4: 0x0**   
-## Завершение блока, относящегося только к системам Майкрософт  
+```Output  
+Flags: 0x2  
+Flags: 0x6  
+Flags: 0xe  
+Flags: 0x6  
+Flags: 0x4  
+Flags: 0x0  
+```  
   
-## См. также  
- [Встроенные объекты компилятора](../intrinsics/compiler-intrinsics.md)
+**Завершение блока, относящегося только к системам Майкрософт**  
+  
+## <a name="see-also"></a>См. также  
+ [Встроенные инструкции компилятора](../intrinsics/compiler-intrinsics.md)

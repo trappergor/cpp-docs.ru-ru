@@ -18,11 +18,12 @@ caps.latest.revision: "19"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 86d2680234b1d6f957e9f19f9cacc372f7fc8eff
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: aa021ec655162cb75837ac1475e5cb9094f79fa8
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="invalidmultiplescheduling-class"></a>Класс invalid_multiple_scheduling
 Этот класс описывает исключение, создаваемое, если объект `task_handle` запланирован несколько раз с помощью метода `run` объекта `task_group` или `structured_task_group` без промежуточных вызовов любого из методов `wait` или `run_and_wait`.  
@@ -33,11 +34,11 @@ ms.lasthandoff: 10/24/2017
 class invalid_multiple_scheduling : public std::exception;
 ```  
   
-## <a name="members"></a>Члены  
+## <a name="members"></a>Участники  
   
 ### <a name="public-constructors"></a>Открытые конструкторы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[invalid_multiple_scheduling](#ctor)|Перегружен. Создает объект `invalid_multiple_scheduling`.|  
   

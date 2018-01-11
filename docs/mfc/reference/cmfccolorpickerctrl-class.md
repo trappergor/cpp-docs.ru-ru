@@ -51,11 +51,12 @@ caps.latest.revision: "33"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 66e0155adec5b00bbb5e5f090c3944899c5e92d9
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 11c015df63d3032a8616f7f19614376aa966d89b
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cmfccolorpickerctrl-class"></a>Класс для CMFCColorPickerCtrl
 `CMFCColorPickerCtrl` Класс предоставляет функциональные возможности для элемента управления, который используется для выбора цветов.  
@@ -66,17 +67,17 @@ ms.lasthandoff: 10/24/2017
 class CMFCColorPickerCtrl : public CButton  
 ```  
   
-## <a name="members"></a>Члены  
+## <a name="members"></a>Участники  
   
 ### <a name="public-constructors"></a>Открытые конструкторы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[CMFCColorPickerCtrl::CMFCColorPickerCtrl](#cmfccolorpickerctrl)|Создает объект `CMFCColorPickerCtrl`.|  
   
 ### <a name="public-methods"></a>Открытые методы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[CMFCColorPickerCtrl::GetColor](#getcolor)|Получает цвет, выбранного пользователем.|  
 |[CMFCColorPickerCtrl::GetHLS](#gethls)|Извлечение значений цветового тона, яркости и насыщенности цвета, выбранного пользователем.|  
@@ -96,7 +97,7 @@ class CMFCColorPickerCtrl : public CButton
   
 ### <a name="protected-methods"></a>Защищенные методы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[CMFCColorPickerCtrl::DrawCursor](#drawcursor)|Вызывается платформой перед отображением курсор, который указывает на выбранный цвет.|  
   
@@ -311,7 +312,7 @@ void SetHLS(
  Значение насыщенности.  
   
  [in] `bInvalidate`  
- `TRUE`Чтобы принудительно окно немедленно обновить новый цвет; в противном случае `FALSE`. Значение по умолчанию — `TRUE`.  
+ `TRUE`Чтобы принудительно окно немедленно обновить новый цвет; в противном случае `FALSE`. Значение по умолчанию — `TRUE`.  
   
 ### <a name="remarks"></a>Примечания  
   

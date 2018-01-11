@@ -17,11 +17,12 @@ caps.latest.revision: "6"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 13471dae28bec066ebe8aeec785a1a060c7f975f
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 57b1de8fbbdb3d969dca8e84e57e18b81749d944
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="additional-startup-considerations"></a>Дополнительные сведения о запуске
 В языке C++ при создании и уничтожении объекта может выполняться пользовательский код. Таким образом, важно понимать, какие инициализации выполняются перед входом в **основной** и какие деструкторы вызываются после выхода из **основной**. (Дополнительные сведения о создании и уничтожении объектов см. в разделе [конструкторы](../cpp/constructors-cpp.md) и [деструкторы](../cpp/destructors-cpp.md).)  
@@ -32,7 +33,7 @@ ms.lasthandoff: 10/24/2017
   
 -   Инициализация глобальных статических объектов в блоке трансляции. Это может происходить либо перед входом в **основной** или перед первым использованием любой функции или объекта в записи преобразования объекта.  
   
- **Блок, относящийся только к системам Майкрософт**  
+ **Блок, относящийся только к системам Microsoft**  
   
  В Microsoft C++ глобальные статические объекты инициализируются перед входом в **основной**.  
   

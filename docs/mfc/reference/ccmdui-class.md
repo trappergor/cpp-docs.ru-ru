@@ -37,11 +37,12 @@ caps.latest.revision: "21"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 657483c85c8b2f03d4a78e76cdc28a5dfff496e2
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 32413fe7939b5e5d5d3d41bf32a923dd308f0395
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="ccmdui-class"></a>CCmdUI-класс
 Используется только в `ON_UPDATE_COMMAND_UI` обработчик в `CCmdTarget`-производного класса.  
@@ -52,11 +53,11 @@ ms.lasthandoff: 10/24/2017
 class CCmdUI  
 ```  
   
-## <a name="members"></a>Члены  
+## <a name="members"></a>Участники  
   
 ### <a name="public-methods"></a>Открытые методы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[CCmdUI::ContinueRouting](#continuerouting)|Указывает механизму маршрутизации команд для продолжения рассылки текущее сообщение по цепочке обработчиков.|  
 |[CCmdUI::Enable](#enable)|Включает или отключает элемент пользовательского интерфейса для этой команды.|  
@@ -66,7 +67,7 @@ class CCmdUI
   
 ### <a name="public-data-members"></a>Открытые члены данных  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[CCmdUI::m_nID](#m_nid)|Идентификатор объекта пользовательского интерфейса.|  
 |[CCmdUI::m_nIndex](#m_nindex)|Индекс объекта пользовательского интерфейса.|  

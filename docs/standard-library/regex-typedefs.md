@@ -25,19 +25,18 @@ f1_keywords:
 - regex/std::wsregex_iterator
 - regex/std::wsregex_token_iterator
 - regex/std::wssub_match
-dev_langs:
-- C++
+dev_langs: C++
 ms.assetid: e6a69067-106c-4a24-9e08-7c867a3a2260
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: corob-msft
 ms.author: corob
 manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 52dec61f23f5468ddd0492d4d6a82b0cc5472a7c
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
-ms.sourcegitcommit: 65f4e356ad0d46333b0d443d0fd6ac0b9f2b6f58
-ms.openlocfilehash: 7dad87e2d6e402333db5f51bdf8deaee1090df86
-ms.contentlocale: ru-ru
-ms.lasthandoff: 10/03/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="ltregexgt-typedefs"></a>Определения типов &lt;regex&gt;
 ||||  
@@ -241,4 +240,3 @@ typedef sub_match<wstring::const_iterator> wssub_match;
 [Операторы \<regex>](../standard-library/regex-operators.md)  
 [Класс regex_token_iterator](../standard-library/regex-token-iterator-class.md)  
 [Класс regex_traits](../standard-library/regex-traits-class.md)  
-

@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-windows
+ms.technology: cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
@@ -16,8 +15,7 @@ f1_keywords:
 - AFXANIMATIONCONTROLLER/CAnimationStoryboardEventHandler::OnStoryboardStatusChanged
 - AFXANIMATIONCONTROLLER/CAnimationStoryboardEventHandler::OnStoryboardUpdated
 - AFXANIMATIONCONTROLLER/CAnimationStoryboardEventHandler::SetAnimationController
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - CAnimationStoryboardEventHandler [MFC], CAnimationStoryboardEventHandler
 - CAnimationStoryboardEventHandler [MFC], CreateInstance
@@ -25,16 +23,16 @@ helpviewer_keywords:
 - CAnimationStoryboardEventHandler [MFC], OnStoryboardUpdated
 - CAnimationStoryboardEventHandler [MFC], SetAnimationController
 ms.assetid: 10a7e86b-c02d-4124-9a2e-61ecf8ac62fc
-caps.latest.revision: 18
+caps.latest.revision: "18"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 599164d1bb2eca17b935fc74f13fe9b134fc4f2a
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
-ms.sourcegitcommit: 4a770b6508067913aec51b8b3878f33e30eed4bb
-ms.openlocfilehash: 242d9a1de478b4fe5c9bc80a7c77aa0148efbe24
-ms.contentlocale: ru-ru
-ms.lasthandoff: 10/09/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="canimationstoryboardeventhandler-class"></a>Класс CAnimationStoryboardEventHandler
 Реализует обратный вызов, используемый API анимации при изменении состояния или обновлении раскадровки.  
@@ -45,17 +43,17 @@ ms.lasthandoff: 10/09/2017
 class CAnimationStoryboardEventHandler : public CUIAnimationStoryboardEventHandlerBase<CAnimationStoryboardEventHandler>;  
 ```  
   
-## <a name="members"></a>Члены  
+## <a name="members"></a>Участники  
   
 ### <a name="public-constructors"></a>Открытые конструкторы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[CAnimationStoryboardEventHandler::CAnimationStoryboardEventHandler](#canimationstoryboardeventhandler)|Создает объект `CAnimationStoryboardEventHandler`.|  
   
 ### <a name="public-methods"></a>Открытые методы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[CAnimationStoryboardEventHandler::CreateInstance](#createinstance)|Создает экземпляр `CAnimationStoryboardEventHandler` обратного вызова.|  
 |[CAnimationStoryboardEventHandler::OnStoryboardStatusChanged](#onstoryboardstatuschanged)|Обрабатывает `OnStoryboardStatusChanged` событий, которые происходят при изменении состояния раскадровки (переопределяет `CUIAnimationStoryboardEventHandlerBase::OnStoryboardStatusChanged`.)|  
@@ -150,4 +148,3 @@ void SetAnimationController(CAnimationController* pAnimationController);
   
 ## <a name="see-also"></a>См. также  
  [Классы](../../mfc/reference/mfc-classes.md)
-

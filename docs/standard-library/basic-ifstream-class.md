@@ -27,11 +27,12 @@ caps.latest.revision: "23"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: d6c1c70749a805d94c79fd1b9d2521575cc99022
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: d300abc29a88c8beaa5e5992b4bca073732b0233
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="basicifstream-class"></a>Класс basic_ifstream
 Описывает объект, управляющий извлечением элементов и закодированных объектов из буфера потока класса [basic_filebuf](../standard-library/basic-filebuf-class.md)< `Elem`, `Tr`> с элементами типа `Elem`, признаки символов которых определяются классом `Tr`.  
@@ -184,7 +185,7 @@ void close();
 ```  
   
 ### <a name="remarks"></a>Примечания  
- Эта функция-член вызывает [rdbuf](#rdbuf)**->** [close](../standard-library/basic-filebuf-class.md#close).  
+ Функция-член вызывает [rdbuf](#rdbuf)  **->**  [закрыть](../standard-library/basic-filebuf-class.md#close).  
   
 ### <a name="example"></a>Пример  
   Пример, в котором используется функция **close**, см. в разделе [basic_filebuf::close](../standard-library/basic-filebuf-class.md#close).  
@@ -200,7 +201,7 @@ bool is_open() const;
  Значение **true**, если файл открыт, или **false** в противном случае.  
   
 ### <a name="remarks"></a>Примечания  
- Функция-член возвращает [rdbuf](#rdbuf) **->** [is_open](../standard-library/basic-filebuf-class.md#is_open).  
+ Функция-член возвращает [rdbuf](#rdbuf)  **->**  [is_open](../standard-library/basic-filebuf-class.md#is_open).  
   
 ### <a name="example"></a>Пример  
   Пример, в котором используется `is_open`, см. в разделе [basic_filebuf::is_open](../standard-library/basic-filebuf-class.md#is_open).  

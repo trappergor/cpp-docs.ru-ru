@@ -19,11 +19,12 @@ caps.latest.revision: "23"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 96ef9bde4895cfc35ae5858e913389b51829d864
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: ff14294236efc26b83d31ad185dc1cfd6329dbe9
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="how-to-use-parallelinvoke-to-write-a-parallel-sort-routine"></a>Практическое руководство. Использование функции parallel_invoke для написания программы параллельной сортировки
 В этом документе описывается использование [parallel_invoke](../../parallel/concrt/parallel-algorithms.md#parallel_invoke) алгоритм для повышения производительности алгоритма битонной сортировки. Алгоритм битонной сортировки рекурсивно разделяет входной последовательности на сортированные разделы меньшего размера. Алгоритма битонной сортировки могут выполняться параллельно, поскольку каждая операция разделения независима от других операций.  

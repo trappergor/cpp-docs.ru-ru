@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
 apiname:
@@ -42,8 +41,7 @@ f1_keywords:
 - i64tow
 - itow
 - _ui64toa
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - _itot function
 - ui64toa function
@@ -63,30 +61,16 @@ helpviewer_keywords:
 - converting numbers, to strings
 - _itoa function
 ms.assetid: 46592a00-77bb-4e73-98c0-bf629d96cea6
-caps.latest.revision: 25
+caps.latest.revision: "25"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3f91eafaf3b5d5c1b8f96b010206d699f666e224
-ms.openlocfilehash: 22226de878058c7c35307e47b76973eaaebcd552
-ms.contentlocale: ru-ru
-ms.lasthandoff: 04/01/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: ecf2dc476d9f35b0eb06dff8e0f701bcfa539914
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="itoa-i64toa-ui64toa-itow-i64tow-ui64tow"></a>_itoa, _i64toa, _ui64toa, _itow, _i64tow, _ui64tow
 Преобразует целое число в строку. Доступны более безопасные версии этих функций; см. раздел [_itoa_s, _i64toa_s, _ui64toa_s, _itow_s, _i64tow_s, _ui64tow_s](../../c-runtime-library/reference/itoa-s-i64toa-s-ui64toa-s-itow-s-i64tow-s-ui64tow-s.md).  
@@ -181,9 +165,9 @@ wchar_t * _ui64tow(
 > [!IMPORTANT]
 >  Чтобы предотвратить переполнение буфера, убедитесь, что буфер `str` достаточно велик для хранения преобразованных цифр, а также конечного нуль-символа и символа знака.  
   
- В C++ эти функции имеют шаблонные перегрузки, которые вызывают более новые и безопасные аналоги этих функций. Дополнительные сведения см. в разделе [Безопасные перегрузки шаблонов](../../c-runtime-library/secure-template-overloads.md).  
+ В C++ эти функции имеют шаблонные перегрузки, которые вызывают более новые и безопасные аналоги этих функций. Дополнительные сведения см. в разделе [Secure Template Overloads](../../c-runtime-library/secure-template-overloads.md).  
   
-### <a name="generic-text-routine-mappings"></a>Универсальное текстовое сопоставление функций  
+### <a name="generic-text-routine-mappings"></a>Сопоставления подпрограмм обработки обычного текста  
   
 |Подпрограмма Tchar.h|_UNICODE и _MBCS не определены|_MBCS определено|_UNICODE определено|  
 |---------------------|--------------------------------------|--------------------|-----------------------|  

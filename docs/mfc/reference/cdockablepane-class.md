@@ -143,11 +143,12 @@ caps.latest.revision: "34"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 3072e4504fc70e75888607d4f263b39532f69b51
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: cb32fc827c576830def3901389d400450b79f5ad
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cdockablepane-class"></a>CDockablePane Class
 Реализует область, которую можно закрепить на сайте закрепления или включить в область с вкладками.  
@@ -158,17 +159,17 @@ ms.lasthandoff: 10/24/2017
 class CDockablePane : public CPane  
 ```  
   
-## <a name="members"></a>Члены  
+## <a name="members"></a>Участники  
   
 ### <a name="public-constructors"></a>Открытые конструкторы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[CDockablePane::CDockablePane](#cdockablepane)|Создает и инициализирует объект `CDockablePane`.|  
   
 ### <a name="public-methods"></a>Открытые методы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[CDockablePane::AttachToTabWnd](#attachtotabwnd)|Присоединяет области в другую область. При этом создается область с вкладками.|  
 |[CDockablePane::CalcFixedLayout](#calcfixedlayout)|Возвращает размер прямоугольника области.|  
@@ -238,7 +239,7 @@ class CDockablePane : public CPane
   
 ### <a name="protected-methods"></a>Защищенные методы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[CDockablePane::CheckAutoHideCondition](#checkautohidecondition)|Определяет, является ли скрытым закрепляемой области (в режиме автоматического скрытия).|  
 |[CDockablePane::CheckStopSlideCondition](#checkstopslidecondition)|Определяет, когда автоматического скрытия закрепляемой области следует остановить со скользящим.|  
@@ -248,7 +249,7 @@ class CDockablePane : public CPane
   
 ### <a name="data-members"></a>Элементы данных  
   
-|Имя|Описание|  
+|name|Описание:|  
 |----------|-----------------|  
 |[CDockablePane::m_bDisableAnimation](#m_bdisableanimation)|Указывает, отключен ли анимация автоматического скрытия закрепляемую панель.|  
 |[CDockablePane::m_bHideInAutoHideMode](#m_bhideinautohidemode)|Если определяет поведение окна области находится в режиме автоматического скрытия.|  
@@ -627,7 +628,7 @@ static CPaneDivider* __stdcall CreateDefaultPaneDivider(
 ### <a name="remarks"></a>Примечания  
  `dwAlignment`может иметь любое из следующих значений.  
   
-|Значение|Описание|  
+|Значение|Описание:|  
 |-----------|-----------------|  
 |`CBRS_ALIGN_TOP`|Область прикрепляется к верхней части клиентской области окна фрейма.|  
 |`CBRS_ALIGN_BOTTOM`|Область прикрепляется к нижней части клиентской области окна фрейма.|  
@@ -735,7 +736,7 @@ virtual BOOL DockPaneContainer(
 ### <a name="remarks"></a>Примечания  
  `dwAlignment`может иметь любое из следующих значений.  
   
-|Значение|Описание|  
+|Значение|Описание:|  
 |-----------|-----------------|  
 |`CBRS_ALIGN_TOP`|Контейнер прикрепляется к верхней части области.|  
 |`CBRS_ALIGN_BOTTOM`|Контейнер прикрепляется к нижней части области.|  

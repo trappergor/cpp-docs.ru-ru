@@ -1,32 +1,33 @@
 ---
-title: "Метод InterfaceTraits::FillArrayWithIid | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "implements/Microsoft::WRL::Details::InterfaceTraits::FillArrayWithIid"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "FillArrayWithIid - метод"
+title: "Метод InterfaceTraits::FillArrayWithIid | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: implements/Microsoft::WRL::Details::InterfaceTraits::FillArrayWithIid
+dev_langs: C++
+helpviewer_keywords: FillArrayWithIid method
 ms.assetid: 73583177-adc9-4fcb-917d-fa7e6d07c990
-caps.latest.revision: 5
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 5
+caps.latest.revision: "5"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: c626955e957bd3db4b4d34255a38751f3339dcf9
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 12/21/2017
 ---
-# Метод InterfaceTraits::FillArrayWithIid
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Предназначено для поддержки инфраструктуры WRL, а не для непосредственного использования в коде.  
+# <a name="interfacetraitsfillarraywithiid-method"></a>Метод InterfaceTraits::FillArrayWithIid
+Поддерживает инфраструктуру WRL и не предназначен для использования непосредственно из программного кода.  
   
-## Синтаксис  
+## <a name="syntax"></a>Синтаксис  
   
 ```  
 __forceinline static void FillArrayWithIid(  
@@ -36,25 +37,25 @@ __forceinline static void FillArrayWithIid(
   
 ```  
   
-#### Параметры  
+#### <a name="parameters"></a>Параметры  
  `index`  
- Указатель на поле, содержащее значение индекса с отсчетом от нуля.  
+ Указатель на поле, содержащее значение отсчитываемый от нуля индекс.  
   
  `iids`  
- Массив идентификаторов интерфейсов.  
+ Массив идентификаторов интерфейса.  
   
-## Примечания  
- Присваивает идентификатор интерфейса `Base` к элементу массива, указанному аргументом индекса.  
+## <a name="remarks"></a>Примечания  
+ Назначает идентификатор интерфейса `Base` на элемент массива, заданного аргументом индекса.  
   
- Вопреки имени этого API, изменяется только один элемент массива; не весь массив.  
+ В отличие от имени этого API только один массив элемент изменен; не весь массив.  
   
- Дополнительные сведения о `Base` см. в разделе Общедоступные определения типов в [Структура InterfaceTraits](../windows/interfacetraits-structure.md).  
+ Дополнительные сведения о `Base`, см. в разделе определения открытых типов в [InterfaceTraits-структура](../windows/interfacetraits-structure.md).  
   
-## Требования  
+## <a name="requirements"></a>Требования  
  **Заголовок:** implements.h  
   
- **Пространство имен:** Microsoft::WRL::Details  
+ **Пространство имен:** Microsoft::wrl:: Details  
   
-## См. также  
- [Структура InterfaceTraits](../windows/interfacetraits-structure.md)   
+## <a name="see-also"></a>См. также  
+ [InterfaceTraits-структура](../windows/interfacetraits-structure.md)   
  [Пространство имен Microsoft::WRL::Details](../windows/microsoft-wrl-details-namespace.md)

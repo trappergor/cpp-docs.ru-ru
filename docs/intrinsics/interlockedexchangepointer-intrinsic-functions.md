@@ -31,14 +31,15 @@ caps.latest.revision: "17"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: d4c55ce7c11305344156677fbcfce7ef7dd7b117
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: ba9b7ac5c20c7b4bd4c43db3d76fbb5cfcb331c1
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="interlockedexchangepointer-intrinsic-functions"></a>Встроенные функции _InterlockedExchangePointer
-**Блок, относящийся только к системам Майкрософт**  
+**Блок, относящийся только к системам Microsoft**  
   
  Выполняет элементарную операцию обмена, которая копирует адрес, переданный в качестве второго аргумента в первый и возвращает исходный адрес первого.  
   

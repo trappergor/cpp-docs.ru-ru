@@ -15,11 +15,14 @@ caps.latest.revision: "6"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: b2536d406293d84db2ce5d5bd3e0292e0e57920e
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: d17e0dc79241fbd84e282b9cd8403259e34def0e
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="module-class"></a>Module - класс
 Представляет коллекцию связанных объектов.  
@@ -44,11 +47,11 @@ class Module<OutOfProc> : public Module<InProc>;
  `moduleType`  
  Сочетание одного или нескольких [ModuleType](../windows/moduletype-enumeration.md) значений перечисления.  
   
-## <a name="members"></a>Члены  
+## <a name="members"></a>Участники  
   
 ### <a name="protected-classes"></a>Защищенные классы  
   
-|Имя|Описание|  
+|name|Описание:|  
 |----------|-----------------|  
 |[Класс Module::GenericReleaseNotifier](../windows/module-genericreleasenotifier-class.md)|Вызывает обработчик событий при освобождении последнего объекта в текущем модуле. Обработчик событий задается лямбда-выражением, функтором или указателем на функцию.|  
 |[Класс Module::MethodReleaseNotifier](../windows/module-methodreleasenotifier-class.md)|Вызывает обработчик событий при освобождении последнего объекта в текущем модуле. Обработчик событий задается объектом и его элементом указателя для метода.|  
@@ -56,19 +59,19 @@ class Module<OutOfProc> : public Module<InProc>;
   
 ### <a name="public-constructors"></a>Открытые конструкторы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[Деструктор Module::~Module](../windows/module-tilde-module-destructor.md)|Деинициализирует текущий экземпляр класса Module.|  
   
 ### <a name="protected-constructors"></a>Защищенные конструкторы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[Конструктор Module::Module](../windows/module-module-constructor.md)|Инициализирует новый экземпляр класса Module.|  
   
 ### <a name="public-methods"></a>Открытые методы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[Метод Module::Create](../windows/module-create-method.md)|Создает экземпляр модуля.|  
 |[Метод Module::DecrementObjectCount](../windows/module-decrementobjectcount-method.md)|Уменьшает число объектов, отслеживаемых модулем.|  
@@ -87,13 +90,13 @@ class Module<OutOfProc> : public Module<InProc>;
   
 ### <a name="protected-methods"></a>Защищенные методы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[Метод Module::Create](../windows/module-create-method.md)|Создает экземпляр модуля.|  
   
 ### <a name="protected-data-members"></a>Защищенные члены данных  
   
-|Имя|Описание|  
+|name|Описание:|  
 |----------|-----------------|  
 |[Элемент данных Module::objectCount_](../windows/module-objectcount-data-member.md)|Хранит список количества классов были созданы при помощи [сделать](../windows/make-function.md) функции.|  
 |[Элемент данных Module::releaseNotifier_](../windows/module-releasenotifier-data-member.md)|Содержит указатель на объект ReleaseNotifier.|  

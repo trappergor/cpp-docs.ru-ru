@@ -83,11 +83,12 @@ caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 12e2e25dd6a1ba2a31130196f04f336cecf6b34e
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 2f5211440d0180b3ad05e8d172c4dea8c35b2844
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="uint3-class"></a>Класс uint_3
 Представляет короткого вектора трех целых чисел без знака.  
@@ -98,7 +99,7 @@ ms.lasthandoff: 10/24/2017
 class uint_3;  
 ```  
   
-## <a name="members"></a>Члены  
+## <a name="members"></a>Участники  
   
 ### <a name="public-typedefs"></a>Общедоступные определения типов  
   
@@ -108,13 +109,13 @@ class uint_3;
   
 ### <a name="public-constructors"></a>Открытые конструкторы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[Конструктор uint_3](#ctor)|Перегружен. По умолчанию конструктор инициализирует все элементы с 0.|  
   
 ### <a name="public-methods"></a>Открытые методы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |uint_3::get_X||  
 |uint_3::get_xy||  
@@ -155,7 +156,7 @@ class uint_3;
   
 ### <a name="public-operators"></a>Открытые операторы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |uint_3::operator--||  
 |uint_3::operator % =||  
@@ -174,13 +175,13 @@ class uint_3;
   
 ### <a name="public-constants"></a>Открытые константы  
   
-|Имя|Описание|  
+|name|Описание:|  
 |----------|-----------------|  
 |[Размер константы](#uint_3__size)||  
   
 ### <a name="public-data-members"></a>Открытые члены данных  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |uint_3::b||  
 |uint_3::BG||  

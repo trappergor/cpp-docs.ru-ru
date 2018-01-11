@@ -4,48 +4,30 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-tools
+ms.technology: cpp-tools
 ms.tgt_pltfrm: 
 ms.topic: error-reference
-f1_keywords:
-- C4928
-dev_langs:
-- C++
-helpviewer_keywords:
-- C4928
+f1_keywords: C4928
+dev_langs: C++
+helpviewer_keywords: C4928
 ms.assetid: 77235d7f-9360-45cb-8348-d148c605c4a3
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
-ms.openlocfilehash: 019a54b9911bd749e067a3a6989a8f79513f7181
-ms.contentlocale: ru-ru
-ms.lasthandoff: 02/24/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: 1e5f096ada450818f8175a8807d074b407afd2d1
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="compiler-warning-level-1-c4928"></a>Предупреждение компилятора (уровень 1) C4928
 недопустимая инициализация копии; неявно применено несколько пользовательских преобразований  
   
- Найден более чем одной подпрограммы определенного пользователем преобразования. При компиляции кода выполняется во всех этих процедурах.  
+ Найден более чем одной подпрограммы определенное пользователем преобразование. При компиляции кода выполняется во всех этих процедурах.  
   
- Это предупреждение отключено по умолчанию. В разделе [компилятора предупреждения, — это отключение по умолчанию](../../preprocessor/compiler-warnings-that-are-off-by-default.md) подробнее.  
+ Это предупреждение отключено по умолчанию. Подробнее: [Выключенные по умолчанию предупреждения компилятора](../../preprocessor/compiler-warnings-that-are-off-by-default.md) .  
   
  Следующий пример приводит к возникновению ошибки C4928:  
   

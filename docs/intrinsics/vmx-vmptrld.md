@@ -1,71 +1,71 @@
 ---
-title: "__vmx_vmptrld | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "__vmx_vmptrld"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Встроенная функция __vmx_vmptrld"
-  - "Инструкция VMPTRLD"
+title: "__vmx_vmptrld | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: __vmx_vmptrld
+dev_langs: C++
+helpviewer_keywords:
+- __vmx_vmptrld intrinsic
+- VMPTRLD instruction
 ms.assetid: 95c9ec5b-1a81-41ba-983e-327bd6a65fcb
-caps.latest.revision: 5
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 5
+caps.latest.revision: "5"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 78c6ba1a4545a03ae7f67821cf649eb936b4ed8a
+ms.sourcegitcommit: 54035dce0992ba5dce0323d67f86301f994ff3db
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/03/2018
 ---
-# __vmx_vmptrld
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-**Только для систем Microsoft**  
+# <a name="vmxvmptrld"></a>__vmx_vmptrld
+**Блок, относящийся только к системам Microsoft**  
   
- Загружает указатель на текущий структуре элемента управления виртуальной машины \(VMCS\) из указанного адреса.  
+ Загружает ссылку на текущую структуру управления виртуальной машины (VMCS) из указанного адреса.  
   
-## Синтаксис  
+## <a name="syntax"></a>Синтаксис  
   
 ```  
-int __vmx_vmptrld(   
-   unsigned __int64 *VmcsPhysicalAddress   
+int __vmx_vmptrld(   
+   unsigned __int64 *VmcsPhysicalAddress   
 );  
 ```  
   
-#### Параметры  
- \[in\] \*`VmcsPhysicalAddress`  
- Адрес, в котором хранится указатель VMCS.  
+#### <a name="parameters"></a>Параметры  
+ [in] *`VmcsPhysicalAddress`  
+ Адрес, где хранятся VMCS указателя.  
   
-## Возвращаемое значение  
+## <a name="return-value"></a>Возвращаемое значение  
  0  
- Операция завершилась успешно.  
+ Операция успешно выполнена.  
   
  1  
- Операция завершилась неуспешно с расширенным доступным текущего состояния в `VM-instruction error field` VMCS.  
+ Не удалось выполнить операцию; расширенные сведения о состоянии доступны в `VM-instruction error field` текущей структуре VMCS.  
   
  2  
- Эта операция окончилась неудачей без доступных состояний.  
+ Сбой операции без сведений о состоянии.  
   
-## Заметки  
- Указатель VMCS пакетом обновления 64 \(sp2\) физический адрес.  
+## <a name="remarks"></a>Примечания  
+ Указатель VMCS — это физический адрес 64-разрядной.  
   
- Функция `__vmx_vmptrld` эквивалентна инструкцие на компьютере `VMPTRLD`.  Эта функция поддерживает взаимодействие монитора виртуальной машины узла с операционной системой для виртуальной машине и своими приложениями.  Дополнительные сведения см. в документе «технические данные виртуализации Intel для IA\-32 архитектуры Intel,» номер документа C97063\-002, на [Intel Корпорация](http://go.microsoft.com/fwlink/?LinkId=127) сайте.  
+ `__vmx_vmptrld` Функция эквивалентна `VMPTRLD` инструкции компьютера. Эта функция поддерживает взаимодействие монитора виртуальной машины узла с гостевой операционной системой и ее приложениями. Для поиска документа «Intel виртуализации технические спецификации для архитектуры IA-32 Intel,» Дополнительные сведения документа номера C97063-002, на [Корпорация Intel](http://go.microsoft.com/fwlink/p/?linkid=127) сайта.  
   
-## Требования  
+## <a name="requirements"></a>Требования  
   
-|Встроенный объект|Архитектура|  
-|-----------------------|-----------------|  
-|`__vmx_vmptrld`|[!INCLUDE[vcprx64](../Token/vcprx64_md.md)]|  
+|Встроенная функция|Архитектура|  
+|---------------|------------------|  
+|`__vmx_vmptrld`|[!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|  
   
- **Файл заголовка** \<intrin.h\>  
+ **Файл заголовка** \<intrin.h >  
   
-## ЭЛЕМЕНТ, относящийся Майкрософт  
+**Завершение блока, относящегося только к системам Майкрософт**  
   
-## См. также  
+## <a name="see-also"></a>См. также  
  [Встроенные объекты компилятора](../intrinsics/compiler-intrinsics.md)   
- [\_\_vmx\_vmptrst](../intrinsics/vmx-vmptrst.md)
+ [__vmx_vmptrst](../intrinsics/vmx-vmptrst.md)
