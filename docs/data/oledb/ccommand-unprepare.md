@@ -1,34 +1,36 @@
 ---
-title: "CCommand::Unprepare | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "Unprepare"
-  - "CCommand.Unprepare"
-  - "CCommand::Unprepare"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Unprepare - метод"
+title: "CCommand::Unprepare | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- Unprepare
+- CCommand.Unprepare
+- CCommand::Unprepare
+dev_langs: C++
+helpviewer_keywords: Unprepare method
 ms.assetid: 4fe59988-fe51-4c7c-a156-72b68e3d642b
-caps.latest.revision: 8
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: 19622da4735d4dba86079c9009ddc52ffabd1e9d
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 12/21/2017
 ---
-# CCommand::Unprepare
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Отменяет текущий план выполнения команды.  
+# <a name="ccommandunprepare"></a>CCommand::Unprepare
+Отменяет план выполнения текущей команды.  
   
-## Синтаксис  
+## <a name="syntax"></a>Синтаксис  
   
 ```  
   
@@ -36,14 +38,14 @@ HRESULT CCommandBase::Unprepare( ) throw( );
   
 ```  
   
-## Возвращаемое значение  
- Стандартное `HRESULT`.  
+## <a name="return-value"></a>Возвращаемое значение  
+ Стандартный `HRESULT`.  
   
-## Заметки  
- Этот метод реализует метод OLE DB [ICommandPrepare::Unprepare](https://msdn.microsoft.com/en-us/library/ms719635.aspx).  
+## <a name="remarks"></a>Примечания  
+ Этот метод создает оболочку для метода OLE DB [ICommandPrepare::Unprepare](https://msdn.microsoft.com/en-us/library/ms719635.aspx).  
   
-## Требования  
+## <a name="requirements"></a>Требования  
  **Заголовок:** atldbcli.h  
   
-## См. также  
+## <a name="see-also"></a>См. также  
  [Класс CCommand](../../data/oledb/ccommand-class.md)

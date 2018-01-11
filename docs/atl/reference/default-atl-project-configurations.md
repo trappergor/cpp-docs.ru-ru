@@ -14,18 +14,19 @@ caps.latest.revision: "11"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 8485158e5760f81d9dc918bd4856a2d9a6e007a6
-ms.sourcegitcommit: ca2f94dfd015e0098a6eaf5c793ec532f1c97de1
+ms.workload: cplusplus
+ms.openlocfilehash: 770f78514a67d723305f9a70959fd69fede86aa5
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="default-atl-project-configurations"></a>Конфигурации проекта ATL по умолчанию
 Мастер проектов ATL создает две конфигурации проекта по умолчанию:  
   
 |Конфигурация|Набор символов|Использование ATL|  
 |-------------------|-------------------|----------------|  
-|Release|MBCS|DLL|  
+|выпуска|MBCS|DLL|  
 |Отладка|MBCS|DLL|  
   
  **Набор символов**, **использование ATL** и можно изменить в **параметры проекта** диалогового окна в разделе **Общие** вкладки. Можно также добавить собственные конфигурации с помощью Configuration Manager. Дополнительные сведения см. в разделе [конфигурациях сборки](/visualstudio/ide/understanding-build-configurations).  

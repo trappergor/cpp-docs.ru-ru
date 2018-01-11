@@ -1,60 +1,62 @@
 ---
-title: "Класс IGetDataSourceImpl | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "IGetDataSourceImpl"
-  - "ATL.IGetDataSourceImpl<T>"
-  - "ATL.IGetDataSourceImpl"
-  - "ATL::IGetDataSourceImpl"
-  - "ATL::IGetDataSourceImpl<T>"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "IGetDataSourceImpl - класс"
+title: "Класс IGetDataSourceImpl | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- IGetDataSourceImpl
+- ATL.IGetDataSourceImpl<T>
+- ATL.IGetDataSourceImpl
+- ATL::IGetDataSourceImpl
+- ATL::IGetDataSourceImpl<T>
+dev_langs: C++
+helpviewer_keywords: IGetDataSourceImpl class
 ms.assetid: d63f3178-d663-4f01-8c09-8aab2dd6805a
-caps.latest.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 9
+caps.latest.revision: "9"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: c83ab71b7b19d410dd0157f3400ebc1a58a63916
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 12/21/2017
 ---
-# Класс IGetDataSourceImpl
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Предоставляет реализацию объекта [IGetDataSource](https://msdn.microsoft.com/en-us/library/ms709721.aspx).  
+# <a name="igetdatasourceimpl-class"></a>Класс IGetDataSourceImpl
+Предоставляет реализацию [IGetDataSource](https://msdn.microsoft.com/en-us/library/ms709721.aspx) объекта.  
   
-## Синтаксис  
+## <a name="syntax"></a>Синтаксис  
   
 ```  
 template <class T>  
 class ATL_NO_VTABLE IGetDataSourceImpl : public IGetDataSource  
 ```  
   
-#### Параметры  
+#### <a name="parameters"></a>Параметры  
  `T`  
  Класс, производный от `IGetDataSourceImpl`.  
   
-## Члены  
+## <a name="members"></a>Участники  
   
-### Методы Interface  
+### <a name="interface-methods"></a>Методы интерфейса  
   
 |||  
 |-|-|  
-|[GetDataSource](../Topic/IGetDataSourceImpl::GetDataSource.md)|Возвращает указатель интерфейса объекта источника данных, который создал сеанс.|  
+|[GetDataSource](../../data/oledb/igetdatasourceimpl-getdatasource.md)|Возвращает указатель интерфейса на объект источника данных, для которого был создан сеанс.|  
   
-## Заметки  
- Это обязательный интерфейс в сеансе для получения указателя интерфейса к объекту источника данных.  
+## <a name="remarks"></a>Примечания  
+ Это обязательный интерфейс для получения указателя на интерфейс для объекта источника данных в сеансе.  
   
-## Требования  
- **Header:**  atldb.h  
+## <a name="requirements"></a>Требования  
+ **Заголовок:** atldb.h  
   
-## См. также  
+## <a name="see-also"></a>См. также  
  [Шаблоны поставщика OLE DB](../../data/oledb/ole-db-provider-templates-cpp.md)   
  [Архитектура шаблона поставщика OLE DB](../../data/oledb/ole-db-provider-template-architecture.md)

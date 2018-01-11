@@ -1,33 +1,33 @@
 ---
-title: "operator!= (queue) (STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::queue::operator!="
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "operator!= - элемент [STL/CLR]"
+title: "оператор! = (очередь) (STL/CLR) | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::queue::operator!=
+dev_langs: C++
+helpviewer_keywords: operator!= member [STL/CLR]
 ms.assetid: aa9e23e5-518e-473c-b15c-9b610bb215d6
-caps.latest.revision: 15
-caps.handback.revision: 13
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "15"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: 6282acabb882ac2921835c958c2a7e138b0a6742
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 12/21/2017
 ---
-# operator!= (queue) (STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Сравнение равное очереди.  
+# <a name="operator-queue-stlclr"></a>operator!= (queue) (STL/CLR)
+Очередь не равно сравнения.  
   
-## Синтаксис  
+## <a name="syntax"></a>Синтаксис  
   
 ```  
 template<typename Value,  
@@ -36,17 +36,17 @@ template<typename Value,
         queue<Value, Container>% right);  
 ```  
   
-#### Параметры  
- влево  
- Левый контейнер, с которым выполняется сравнение.  
+#### <a name="parameters"></a>Параметры  
+ left  
+ Левый контейнер для сравнения.  
   
- правый  
- Правой контейнер, с которым выполняется сравнение.  
+ right  
+ Правый контейнер для сравнения.  
   
-## Заметки  
- Функция возвращает оператора `!(``left` `==` `right``)`.  Он используется для выполнения не приказано ли `left` таким же, как `right` при сравнении 2 очереди элемент элементом.  
+## <a name="remarks"></a>Примечания  
+ Функция оператор возвращает `!(left == right)`. Можно использовать для тестирования ли `left` не упорядочен таким же, как `right` при двух очереди являются сравниваемых элемент элемент.  
   
-## Пример  
+## <a name="example"></a>Пример  
   
 ```  
 // cliext_queue_operator_ne.cpp   
@@ -86,19 +86,22 @@ int main()
   
 ```  
   
-  **a b c**  
- **B d**  
-**\[B C\]\! \= \[B C\] ложен**  
-**\[B C\]\! B \= \[d\] оказывается**   
-## Требования  
- **Заголовок:**\<cliext\/queue\>  
+```Output  
+ a b c  
+ a b d  
+[a b c] != [a b c] is False  
+[a b c] != [a b d] is True  
+```  
+  
+## <a name="requirements"></a>Требования  
+ **Заголовок:** \<cliext/очереди >  
   
  **Пространство имен:** cliext  
   
-## См. также  
- [queue](../Topic/queue%20\(STL-CLR\).md)   
- [operator\=\= \(queue\)](../dotnet/operator-equality-queue-stl-clr.md)   
- [operator\< \(queue\)](../dotnet/operator-less-than-queue-stl-clr.md)   
- [operator\>\= \(queue\)](../Topic/operator%3E=%20\(queue\)%20\(STL-CLR\).md)   
- [operator\> \(queue\)](../dotnet/operator-greater-than-queue-stl-clr.md)   
- [operator\<\= \(queue\)](../dotnet/operator-less-or-equal-queue-stl-clr.md)
+## <a name="see-also"></a>См. также  
+ [очереди (STL/CLR)](../dotnet/queue-stl-clr.md)   
+ [оператор == (очередь) (STL/CLR)](../dotnet/operator-equality-queue-stl-clr.md)   
+ [оператор\< (очередь) (STL/CLR)](../dotnet/operator-less-than-queue-stl-clr.md)   
+ [оператор > = (очередь) (STL/CLR)](../dotnet/operator-greater-or-equal-queue-stl-clr.md)   
+ [оператор > (очередь) (STL/CLR)](../dotnet/operator-greater-than-queue-stl-clr.md)   
+ [operator<= (queue) (STL/CLR)](../dotnet/operator-less-or-equal-queue-stl-clr.md)

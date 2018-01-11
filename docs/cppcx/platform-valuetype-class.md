@@ -1,46 +1,65 @@
 ---
-title: "Platform::ValueType - класс | Microsoft Docs"
-ms.custom: ""
-ms.date: "02/03/2017"
-ms.prod: "windows-client-threshold"
-ms.technology: ""
-ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-f1_keywords: 
-  - "Platform/Platform::ValueType"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Platform::ValueType - класс"
+title: "Platform::ValueType-класс | Документы Microsoft"
+ms.custom: 
+ms.date: 02/03/2017
+ms.technology: cpp-windows
+ms.reviewer: 
+ms.suite: 
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+f1_keywords: VCCORLIB/Platform::ValueType::ToString
+dev_langs: C++
+helpviewer_keywords: Platform::ValueType Class
 ms.assetid: 79aa8754-b140-4974-a5b1-be046938a10a
-caps.latest.revision: 5
-author: "ghogen"
-ms.author: "ghogen"
-manager: "ghogen"
-caps.handback.revision: 2
+caps.latest.revision: "5"
+author: ghogen
+ms.author: ghogen
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 4dba418e74affb2531e3ebbd43d95c35601e9a26
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 12/21/2017
 ---
-# Platform::ValueType - класс
+# <a name="platformvaluetype-class"></a>Platform::ValueType - класс
 Базовый класс для экземпляров типов значений.  
   
-## Синтаксис  
+## <a name="syntax"></a>Синтаксис  
   
 ```cpp  
 public ref class ValueType : Object  
 ```  
   
-## Заметки  
+## <a name="public-methods"></a>Открытые методы  
+  
+|||  
+|-|-|  
+|[ValueType::ToString](#tostring)|Возвращает строковое представление объекта. Наследуется от [Platform::Object](../cppcx/platform-object-class.md).|  
+  
+### <a name="remarks"></a>Примечания  
  Класс ValueType используется для создания типов значений. Класс ValueType является производным от класса Object, который содержит базовые элементы. Однако компилятор отсоединяет эти базовые элементы от типов значений, которые являются производными от класса ValueType. При упаковке типа значения компилятор снова присоединяет эти базовые элементы.  
   
-## Требования  
- **Минимальный поддерживаемый клиент:** [!INCLUDE[win8](../cppcx/includes/win8-md.md)]  
+### <a name="requirements"></a>Требования  
+ **Минимальный поддерживаемый клиент:** Windows 8  
   
- **Минимальный поддерживаемый сервер:** [!INCLUDE[winserver8](../cppcx/includes/winserver8-md.md)]  
+ **Минимальный поддерживаемый сервер:** Windows Server 2012  
   
  **Пространство имен:** Platform  
   
  **Метаданные:** platform.winmd  
+
+## <a name="tostring"></a>Метод ValueType::ToString
+Возвращает строковое представление объекта.  
   
-## См. также  
+### <a name="syntax"></a>Синтаксис  
+  
+```cpp  
+Platform::String ToString();  
+```  
+  
+### <a name="return-value"></a>Возвращаемое значение  
+ Представляющий значение Platform::String.  
+    
+## <a name="see-also"></a>См. также  
  [Пространство имен Platform](../cppcx/platform-namespace-c-cx.md)

@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-windows
+ms.technology: cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
@@ -19,22 +18,21 @@ f1_keywords:
 - ATLBASE/ATL::CComApartment::m_dwThreadID
 - ATLBASE/ATL::CComApartment::m_hThread
 - ATLBASE/ATL::CComApartment::m_nLockCnt
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - apartments in ATL EXE modules
 - CComApartment class
 ms.assetid: dbc177d7-7ee4-45f2-b563-d578a467ca93
-caps.latest.revision: 20
+caps.latest.revision: "20"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: a3fecd77e93c0c51a37d7363e6ec1472d157d6d1
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
-ms.sourcegitcommit: c55726a1728185f699afbac4ba68a6dc0f70c2bf
-ms.openlocfilehash: beb2052a2dc7a8efbf6820c51dc2ff7a1f227795
-ms.contentlocale: ru-ru
-ms.lasthandoff: 10/09/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="ccomapartment-class"></a>Класс CComApartment
 Этот класс обеспечивает поддержку для помещения в модуле EXE пула потоков управления.  
@@ -48,17 +46,17 @@ ms.lasthandoff: 10/09/2017
 class CComApartment
 ```  
   
-## <a name="members"></a>Члены  
+## <a name="members"></a>Участники  
   
 ### <a name="public-constructors"></a>Открытые конструкторы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[CComApartment::CComApartment](#ccomapartment)|Конструктор.|  
   
 ### <a name="public-methods"></a>Открытые методы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[CComApartment::Apartment](#apartment)|Отмечает начальный адрес потока.|  
 |[CComApartment::GetLockCount](#getlockcount)|Возвращает число блокировок текущего потока.|  
@@ -67,7 +65,7 @@ class CComApartment
   
 ### <a name="public-data-members"></a>Открытые члены данных  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[CComApartment::m_dwThreadID](#m_dwthreadid)|Содержит идентификатор потока.|  
 |[CComApartment::m_hThread](#m_hthread)|Содержит дескриптор потока.|  
@@ -165,4 +163,3 @@ LONG Unlock();
   
 ## <a name="see-also"></a>См. также  
  [Общие сведения о классе](../../atl/atl-class-overview.md)
-

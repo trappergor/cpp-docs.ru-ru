@@ -1,41 +1,42 @@
 ---
-title: "hash_map::reverse_iterator (STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::hash_map::reverse_iterator"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "reverse_iterator - элемент [STL/CLR]"
+title: "hash_map::reverse_iterator (STL/CLR) | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::hash_map::reverse_iterator
+dev_langs: C++
+helpviewer_keywords: reverse_iterator member [STL/CLR]
 ms.assetid: 63778922-82e5-4692-8447-da8964a974bb
-caps.latest.revision: 16
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 14
+caps.latest.revision: "16"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: 0b1ef37e518c194e51ddc690ae634941cd5b5255
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 12/21/2017
 ---
-# hash_map::reverse_iterator (STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Тип обратного итератора для контролируемой последовательности.  
+# <a name="hashmapreverseiterator-stlclr"></a>hash_map::reverse_iterator (STL/CLR)
+Тип обратного итератора для управляемой последовательности.  
   
-## Синтаксис  
+## <a name="syntax"></a>Синтаксис  
   
 ```  
 typedef T3 reverse_iterator;  
 ```  
   
-## Заметки  
- Описывает тип объекта неспецифицированного типа `T3`, который можно использовать в качестве обратного итератор для контролируемой последовательности.  
+## <a name="remarks"></a>Примечания  
+ Тип описывает объект незаданного типа `T3` , можно использовать в качестве обратного итератора для управляемой последовательности.  
   
-## Пример  
+## <a name="example"></a>Пример  
   
 ```  
 // cliext_hash_map_reverse_iterator.cpp   
@@ -60,14 +61,17 @@ int main()
   
 ```  
   
-  **C \[3\] \[2\] \[B1\]**   
-## Требования  
- **Заголовок:**\<cliext\/hash\_map\>  
+```Output  
+[c 3] [b 2] [a 1]  
+```  
+  
+## <a name="requirements"></a>Требования  
+ **Заголовок:** \<cliext/hash_map >  
   
  **Пространство имен:** cliext  
   
-## См. также  
- [hash\_map](../dotnet/hash-map-stl-clr.md)   
- [hash\_map::const\_iterator](../dotnet/hash-map-const-iterator-stl-clr.md)   
- [hash\_map::const\_reverse\_iterator](../dotnet/hash-map-const-reverse-iterator-stl-clr.md)   
- [hash\_map::iterator](../dotnet/hash-map-iterator-stl-clr.md)
+## <a name="see-also"></a>См. также  
+ [hash_map (STL/CLR)](../dotnet/hash-map-stl-clr.md)   
+ [hash_map::const_iterator (STL/CLR)](../dotnet/hash-map-const-iterator-stl-clr.md)   
+ [hash_map::const_reverse_iterator (STL/CLR)](../dotnet/hash-map-const-reverse-iterator-stl-clr.md)   
+ [hash_map::iterator (STL/CLR)](../dotnet/hash-map-iterator-stl-clr.md)

@@ -18,11 +18,12 @@ caps.latest.revision: "6"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 8f6b6b39220f49339faccb4ea6608a0df5fdf6ba
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 3465202908cb0ca375ab5dcc77a085b208071f3d
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="assertion-and-user-supplied-messages-c"></a>Утверждение и сообщения об ошибках, предоставленные пользователем (C++)
 C++ языка поддерживает три обработка ошибок механизмы, помогающие отладки приложения: [директива #error](../preprocessor/hash-error-directive-c-cpp.md), [static_assert](../cpp/static-assert.md) ключевое слово и [assert, макрос _assert, _ wassert](../c-runtime-library/reference/assert-macro-assert-wassert.md) макрос. Все три механизма создают сообщения об ошибках, а два их них также проверяют утверждения программного обеспечения. Программное утверждение определяет условие, которое должно выполняться на определенном этапе работы программы. Если утверждение времени компиляции ложно, компилятор создает диагностическое сообщение и ошибку компиляции. Если утверждение времени выполнения ложно, операционная система выводит диагностическое сообщение и закрывает приложение.  

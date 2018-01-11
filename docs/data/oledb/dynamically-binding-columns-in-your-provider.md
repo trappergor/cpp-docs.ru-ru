@@ -1,48 +1,51 @@
 ---
-title: "Динамическое связывание столбцов в поставщике | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "столбцы [C++], динамическое связывание столбцов"
-  - "динамическое связывание столбцов"
-  - "поставщики [C++], динамическое связывание столбцов"
+title: "Динамическое связывание столбцов в поставщике | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- columns [C++], dynamic column binding
+- dynamic column binding
+- providers [C++], dynamic column binding
 ms.assetid: 45e811e3-f5a7-4627-98cc-bf817c4e556e
-caps.latest.revision: 7
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: f95dde27d6958bd9f1ad40bc411c7c434634879b
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 12/21/2017
 ---
-# Динамическое связывание столбцов в поставщике
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Следует убедиться, что динамическое связывание столбцов необходимо.  Оно может потребоваться, если:  
+# <a name="dynamically-binding-columns-in-your-provider"></a>Динамическая привязка столбцов в поставщике
+Убедитесь, что действительно требуется динамическая привязка столбцов. Он может понадобиться, поскольку:  
   
--   столбцы набора строк не определены во время компиляции;  
+-   Столбцы набора строк не определены во время компиляции.  
   
--   имеется поддержка элементов, которые добавляют столбцы \(например, закладки\).  
+-   Имеется поддержка элементов, например закладки, добавляет столбцы.  
   
-### Выполнение динамического связывания столбцов  
+### <a name="to-implement-dynamic-column-binding"></a>Чтобы реализовать динамическое связывание столбцов  
   
-1.  Удалите все макросы **PROVIDER\_COLUMN\_MAP** из кода.  
+1.  Удалите все **PROVIDER_COLUMN_MAP**s из кода.  
   
-2.  В пользовательской записи \(в структуре\) добавьте следующее объявление:  
+2.  В записи пользователя (в структуре) добавьте следующее объявление:  
   
     ```  
     static ATLCOLUMNINFO* GetColumnInfo(void* pThis, ULONG* pcCols);  
     ```  
   
-3.  Реализуйте функцию `GetColumnInfo`.  Эта функция определяет схему хранения информации.  Для этой функции могут потребоваться определенные свойства или другая информация.  Также может потребоваться создать макрос, аналогичный макросу [COLUMN\_ENTRY](../../data/oledb/column-entry.md), для добавления собственной информации.  
+3.  Реализуйте `GetColumnInfo` функции. Эта функция определяет схему хранения информации. Может потребоваться получить свойства или другие сведения для этой функции. Может потребоваться создать макрос, аналогично [COLUMN_ENTRY](../../data/oledb/column-entry.md) макрос, чтобы добавить собственные данные.  
   
-     В следующем примере показана функция `GetColumnInfo`:  
+     В следующем примере показан `GetColumnInfo` функции.  
   
     ```  
     // Check the property flag for bookmarks, if it is set, set the zero  
@@ -95,5 +98,5 @@ caps.handback.revision: 7
     }  
     ```  
   
-## См. также  
+## <a name="see-also"></a>См. также  
  [Работа с шаблонами поставщика OLE DB](../../data/oledb/working-with-ole-db-provider-templates.md)

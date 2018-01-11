@@ -1,34 +1,36 @@
 ---
-title: "Практическое руководство. Чтение из текстового файла (C++/CLI) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/15/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "чтение текстовых файлов"
-  - "текстовые файлы, чтение"
+title: "Как: чтение из текстового файла (C + +/ CLI) | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- reading text files
+- text files, reading
 ms.assetid: 80551c01-d769-4b6d-8db7-fd53bde21b62
-caps.latest.revision: 13
-caps.handback.revision: 13
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "13"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: a1924a918d8a3255ca4a8488adc366155c1110dd
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 12/21/2017
 ---
-# Практическое руководство. Чтение из текстового файла (C++/CLI)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-В следующем примере кода демонстрируется порядок открытия и построчного прочтения текстового файла с помощью класса <xref:System.IO.StreamReader>, который определен в пространстве имен <xref:System.IO?displayProperty=fullName>.  Экземпляр этого класса используется для открытия текстового файла, а затем для считывания каждой строки используется метод <xref:System.IO.StreamReader.ReadLine%2A?displayProperty=fullName>.  
+# <a name="how-to-read-a-text-file-ccli"></a>Практическое руководство. Чтение из текстового файла (C++/CLI)
+В следующем примере кода показано, как для открытия и чтения текстового файла по одной строке за раз с помощью <xref:System.IO.StreamReader> класс, который определен в <xref:System.IO?displayProperty=fullName> пространства имен. Экземпляр этого класса используется для открытия текстового файла и затем <xref:System.IO.StreamReader.ReadLine%2A?displayProperty=fullName> метод используется для считывания каждой строки.  
   
- В этом примере кода считывает файл с именем textfile.txt и содержит текст.  Дополнительные сведения об этом файле см. в разделе [Практическое руководство. Запись данных в текстовый файл](../Topic/How%20to:%20Write%20a%20Text%20File%20\(C++-CLI\).md).  
+ Данный пример кода считывает файл, который с именем textfile.txt и содержит текст. Сведения о файлы этого типа см. в разделе [как: запись текстового файла (C + +/ CLI)](../dotnet/how-to-write-a-text-file-cpp-cli.md).  
   
-## Пример  
+## <a name="example"></a>Пример  
   
 ```  
 // text_read.cpp  
@@ -65,6 +67,6 @@ int main()
 }  
 ```  
   
-## См. также  
- [Файловый и потоковый ввод\-вывод](../Topic/File%20and%20Stream%20I-O.md)   
- [программирование .NET с использованием C\+\+\/CLI](../dotnet/dotnet-programming-with-cpp-cli-visual-cpp.md)
+## <a name="see-also"></a>См. также  
+ [Файловый и потоковый ввод-вывод](http://msdn.microsoft.com/Library/4f4a33a9-66b7-4cd7-a285-4ad3e4276cd2)   
+ [Программирование .NET с использованием C++/CLI (Visual C++)](../dotnet/dotnet-programming-with-cpp-cli-visual-cpp.md)

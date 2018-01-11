@@ -1,34 +1,36 @@
 ---
-title: "Практическое руководство. Преобразование строки char * в массив System::Byte | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "get-started-article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "массивы [C++], знак"
-  - "массив знаков, конвертирование в массивы System::Byte"
-  - "примеры [C++], массивы"
-  - "примеры [C++], строки"
+title: "Как: преобразование char * руководство. | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: get-started-article
+dev_langs: C++
+helpviewer_keywords:
+- examples [C++], strings
+- arrays [C++], character
+- character arrays, converting to System::Byte arrays
+- examples [C++], arrays
 ms.assetid: de9bc4eb-773c-4796-a496-9b90ca986503
-caps.latest.revision: 12
-caps.handback.revision: 12
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "12"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: 5c8a1dd1b126b77f14815a90e7b4599fe0ce14bd
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 12/21/2017
 ---
-# Практическое руководство. Преобразование строки char * в массив System::Byte
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Самый эффективный способ преобразования строки `char *` в массив <xref:System.Byte> — это преобразование с помощью класса <xref:System.Runtime.InteropServices.Marshal>.  
+# <a name="how-to-convert-char--string-to-systembyte-array"></a>Практическое руководство. Преобразование строки char * в массив System::Byte
+Наиболее эффективный способ преобразования `char *` строка <xref:System.Byte> массив является использование <xref:System.Runtime.InteropServices.Marshal> класса.  
   
-## Пример  
+## <a name="example"></a>Пример  
   
 ```  
 // convert_native_string_to_Byte_array.cpp  
@@ -60,5 +62,5 @@ int main() {
 Native String  
 ```  
   
-## См. также  
- [Использование взаимодействия языка C\+\+ \(неявный PInvoke\)](../dotnet/using-cpp-interop-implicit-pinvoke.md)
+## <a name="see-also"></a>См. также  
+ [Использование взаимодействия языка C++ (неявный PInvoke)](../dotnet/using-cpp-interop-implicit-pinvoke.md)

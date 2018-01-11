@@ -42,11 +42,12 @@ caps.latest.revision: "7"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 14d0228b24a97c2b7113cf9ceccf337c15ef904c
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: f32799e2eabc54dacdc5144c59483b7a6a641110
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="log1p-log1pf-log1pl"></a>log1p, log1pf, log1pl
 Вычисляет натуральный логарифм суммы указанного значения и 1.  
@@ -85,7 +86,7 @@ long double log1pl(
   
  В случае неудачи может возвращать одно из следующих значений:  
   
-|Ввод|Результат|Исключение SEH|errno|  
+|Входные данные|Результат|Исключение SEH|errno|  
 |-----------|------------|-------------------|-----------|  
 |+inf|+inf|||  
 |Денормализованные числа|Аналогично входным данным|UNDERFLOW||  
@@ -94,14 +95,14 @@ long double log1pl(
 |< –1|nan|INVALID|EDOM|  
 |-inf|nan|INVALID|EDOM|  
 |±SNaN|Аналогично входным данным|INVALID||  
-|±QNaN, indefinite|Аналогично входным данным|||  
+|±QNaN, не ограничена|Аналогично входным данным|||  
   
  `errno` имеет значение ERANGE, если `x` = –1. `errno` EDOM присвоено значение, если `x` < -1.  
   
 ## <a name="remarks"></a>Примечания  
  Точность функции `log1p` можно повысить, используя выражение log(`x`+1) при значении x, близких к 0.  
   
- Так как C++ допускает перегрузку, можно вызывать перегрузки функции `log1p`, принимающие и возвращающие типы значений с плавающей запятой и длинных двойных значений. В программе на языке C `log1p` всегда принимает и возвращает двойное значение.  
+ Так как C++ допускает перегрузку, можно вызывать перегрузки функции `log1p`, принимающие и возвращающие типы значений с плавающей запятой и длинных двойных значений. В программе на языке C `log1p` всегда принимает и возвращает значение типа double.  
   
  Если `x` является натуральным числом, эта функция возвращает логарифм факториала (`x`–1).  
   
@@ -111,7 +112,7 @@ long double log1pl(
 |--------------|--------------|------------------|  
 |`log1p`,                `log1pf`, `log1pl`|\<math.h>|\<cmath>|  
   
- Дополнительные сведения о совместимости см. в статье [Совместимость](../../c-runtime-library/compatibility.md).  
+ Дополнительные сведения о совместимости см. в разделе [Совместимость](../../c-runtime-library/compatibility.md).  
   
 ## <a name="see-also"></a>См. также  
  [Алфавитный указатель функций](../../c-runtime-library/reference/crt-alphabetical-function-reference.md)   

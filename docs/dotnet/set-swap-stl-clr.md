@@ -1,45 +1,46 @@
 ---
-title: "set::swap (STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::set::swap"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "swap - член [STL/CLR]"
+title: "set::Swap (STL/CLR) | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::set::swap
+dev_langs: C++
+helpviewer_keywords: swap member [STL/CLR]
 ms.assetid: c1733a77-d23f-44cb-b038-f1893a6fe6b1
-caps.latest.revision: 15
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 13
+caps.latest.revision: "15"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: 8f35deabbcfdaca4a655d56224aa1b62c15407a5
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 12/21/2017
 ---
-# set::swap (STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="setswap-stlclr"></a>set::swap (STL/CLR)
 Меняет местами содержимое двух контейнеров.  
   
-## Синтаксис  
+## <a name="syntax"></a>Синтаксис  
   
 ```  
 void swap(set<Key>% right);  
 ```  
   
-#### Параметры  
- правый  
+#### <a name="parameters"></a>Параметры  
+ right  
  Контейнер для обмена содержимым.  
   
-## Заметки  
- Меняет местами функции\-члена из последовательности между `this` и `right`.  Это происходит при расчете времени и не создает исключений.  Он используется как быстрый способ обмена содержимое 2 контейнеров.  
+## <a name="remarks"></a>Примечания  
+ Функция-член меняет местами управляемые последовательности между `this` и `right`. Она делает это в константном времени, и он не создает исключений. Используется в качестве быстро меняет местами содержимое двух контейнеров.  
   
-## Пример  
+## <a name="example"></a>Пример  
   
 ```  
 // cliext_set_swap.cpp   
@@ -82,15 +83,18 @@ int main()
   
 ```  
   
-  **a b c**  
- **d, e f**  
- **d, e f**  
- **a b c**   
-## Требования  
- **Заголовок:**\<cliext\/set\>  
+```Output  
+a b c  
+d e f  
+d e f  
+a b c  
+```  
+  
+## <a name="requirements"></a>Требования  
+ **Заголовок:** \<cliext и set >  
   
  **Пространство имен:** cliext  
   
-## См. также  
- [набор](../dotnet/set-stl-clr.md)   
- [set::operator\=](../dotnet/set-operator-assign-stl-clr.md)
+## <a name="see-also"></a>См. также  
+ [набор (STL/CLR)](../dotnet/set-stl-clr.md)   
+ [set::operator= (STL/CLR)](../dotnet/set-operator-assign-stl-clr.md)

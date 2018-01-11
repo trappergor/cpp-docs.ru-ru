@@ -1,33 +1,35 @@
 ---
-title: "CMyProviderRowset (MyProviderRS.H) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "cmyproviderrowset"
-  - ""myproviderrs.h""
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "CMyProviderRowset - класс (MyProviderRS.H)"
-  - "поставщики OLE DB, файлы, созданные мастером"
+title: "CMyProviderRowset (MyProviderRS.H) | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- cmyproviderrowset
+- myproviderrs.h
+dev_langs: C++
+helpviewer_keywords:
+- OLE DB providers, wizard-generated files
+- CMyProviderRowset class in MyProviderRS.H
 ms.assetid: 7ba1a124-3842-40eb-a36b-302190a1af3a
-caps.latest.revision: 7
-caps.handback.revision: 7
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "7"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: 702a86d600a1ff3623ce86c1ad36da9b15876c61
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 12/21/2017
 ---
-# CMyProviderRowset (MyProviderRS.H)
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Мастер создает запись для объекте набора строк.  В этом случае запись называется `CMyProviderRowset`.  Класс `CMyProviderRowset` является производным от класса `CRowsetImpl` поставщика OLE DB, который реализует все необходимые интерфейсы для объекта набора записей.  В следующем примере кода демонстрируется цепь наследования для `CRowsetImpl`:  
+# <a name="cmyproviderrowset-myproviderrsh"></a>CMyProviderRowset (MyProviderRS.H)
+Мастер создает запись для объекта набора строк. В данном случае файл называется `CMyProviderRowset`. `CMyProviderRowset` Класс наследует класс поставщика OLE DB с именем `CRowsetImpl`, который реализует интерфейсы, необходимые для объекта набора строк. В следующем коде показано цепочку наследования для `CRowsetImpl`:  
   
 ```  
 template <class T, class Storage, class CreatorClass,   
@@ -37,13 +39,13 @@ class CMyRowsetImpl:
       CSimpleRow, IRowsetLocateImpl< T > >  
 ```  
   
- Класс `CRowsetImpl` также использует интерфейсы `IAccessor` и `IColumnsInfo`.  Он использует указанные интерфейсы для выводов полей в таблицах.  Класс также предоставляет реализацию для интерфейса **IRowsetIdentity**, позволяющего объекту\-получателю определять, являются ли идентичными два набора записей.  Интерфейс `IRowsetInfo` реализует свойства для объекта набора записей.  Интерфейс **IConvertType** позволяет поставщику урегулировать различия между типами данных, запрошенными объектом\-получателем, и типами данных, используемыми поставщиком.  
+ `CRowsetImpl`также использует `IAccessor` и `IColumnsInfo` интерфейсов. Она использует эти интерфейсы для выводов полей в таблицах. Класс также предоставляет реализацию для **IRowsetIdentity**, который позволяет потребителю для определения идентичности двух строк. `IRowsetInfo` Интерфейс реализует свойства для объекта набора строк. **IConvertType** интерфейс позволяет устранить различия между типами данных, запрошенными объектом-получателем и используемых поставщиком поставщику.  
   
- Интерфейс `IRowset` осуществляет обработку извлекаемых данных.  Объект\-получатель, в первую очередь, использует метод `GetNextRows` и возвращает дескриптор строки, известный как **HROW**.  Затем объект вызывает **IRowset::GetData** вместе с **HROW**, чтобы получить необходимые данные.  
+ `IRowset` Интерфейс фактически обрабатывает извлечения данных. Потребитель сначала вызывает метод с именем `GetNextRows` возвращает дескриптор строки, известный как **HROW**. Затем потребитель вызывает метод **IRowset::GetData** , **HROW** для получения запрошенных данных.  
   
- `CRowsetImpl` также принимает несколько параметров шаблонов.  Эти параметры позволяют определить метод обработки данных классом `CRowsetImpl`.  Аргумент `ArrayType` позволяет определить механизм хранения, используемый для хранения данных строки.  Параметр **RowClass** указывает на класс, который содержит **HROW**.  
+ `CRowsetImpl`также принимает несколько параметров шаблонов. Эти параметры позволяют определить, каким образом `CRowsetImpl` класс обрабатывает данные. `ArrayType` Аргумент позволяет определить механизм хранения, используемый для хранения данных строки. **RowClass** параметр указывает, какой класс содержит **HROW**.  
   
- Параметр **RowsetInterface** позволяет использовать интерфейс `IRowsetLocate` или `IRowsetScroll`.  Интерфейсы `IRowsetLocate` и `IRowsetScroll` являются производными от `IRowset`.  Таким образом, шаблоны поставщиков OLE DB должны предоставлять особую обработку для этих интерфейсов.  Если необходимо использовать указанные выше интерфейсы, используйте этот параметр.  
+ **RowsetInterface** позволяет также использовать `IRowsetLocate` или `IRowsetScroll` интерфейса. `IRowsetLocate` И `IRowsetScroll` интерфейсы являются производными от `IRowset`. Таким образом шаблоны поставщика OLE DB должны предоставлять особую обработку для этих интерфейсов. Если вы хотите использовать один из этих интерфейсов, необходимо использовать этот параметр.  
   
-## См. также  
+## <a name="see-also"></a>См. также  
  [Созданные мастером поставщика файлы](../../data/oledb/provider-wizard-generated-files.md)

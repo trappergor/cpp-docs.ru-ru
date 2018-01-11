@@ -23,11 +23,14 @@ caps.latest.revision: "35"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: c58f69057a7da709ec79c614fe60beef5a203f0b
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: aeb0a4f21487d9d230c72bfbfc6a06928455dfe2
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="mixed-native-and-managed-assemblies"></a>Смешанные (собственные и управляемые) сборки
 Смешанные сборки может содержать неуправляемый машинных инструкций и инструкций MSIL. Это позволяет им вызывать и вызываться компоненты .NET, сохраняя совместимость с компонентами, которые полностью неуправляемыми. С помощью смешанных сборок, разработчики могут создавать приложения, используя сочетание управляемых и неуправляемых функций. Благодаря этому смешанные сборки идеально подходит для переноса существующих приложений Visual C++ на платформу .NET.  
@@ -36,7 +39,7 @@ ms.lasthandoff: 10/24/2017
   
  Visual C++ поддерживает создание трех различных типов управляемых сборок: смешанных, чистых и проверяемых. Последний два рассматриваются в [чистый и проверяемый код (C + +/ CLI)](../dotnet/pure-and-verifiable-code-cpp-cli.md).  
   
-## <a name="in-this-section"></a>Содержание  
+## <a name="in-this-section"></a>В этом разделе  
  [Как: переход на/CLR](../dotnet/how-to-migrate-to-clr.md)  
  Описание рекомендуемых действий по введению или обновлению функций .NET в приложении.  
   
@@ -49,7 +52,7 @@ ms.lasthandoff: 10/24/2017
  [Поддержка библиотек для смешанных сборок](../dotnet/library-support-for-mixed-assemblies.md)  
  Описываются способы использования собственных библиотек в **/CLR** компиляций.  
   
- [Вопросы производительности](../dotnet/performance-considerations-for-interop-cpp.md)  
+ [Особенности производительности](../dotnet/performance-considerations-for-interop-cpp.md)  
  Описывает влияние на производительность смешанных сборок и маршалинга данных.  
   
  [Домены приложений и Visual C++](../dotnet/application-domains-and-visual-cpp.md)  

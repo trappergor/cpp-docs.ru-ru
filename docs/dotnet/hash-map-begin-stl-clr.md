@@ -1,41 +1,42 @@
 ---
-title: "hash_map::begin (STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::hash_map::begin"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "begin - член [STL/CLR]"
+title: "hash_map::Begin (STL/CLR) | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::hash_map::begin
+dev_langs: C++
+helpviewer_keywords: begin member [STL/CLR]
 ms.assetid: b2ff4605-ac37-4456-8299-b3bcccdbe45a
-caps.latest.revision: 16
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 14
+caps.latest.revision: "16"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: 1cd1b7dc96e0d2dce90ddfbefd3ba120cfb3ff27
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 12/21/2017
 ---
-# hash_map::begin (STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="hashmapbegin-stlclr"></a>hash_map::begin (STL/CLR)
 Задает начало управляемой последовательности.  
   
-## Синтаксис  
+## <a name="syntax"></a>Синтаксис  
   
 ```  
 iterator begin();  
 ```  
   
-## Заметки  
- Функция\-член возвращает двунаправленный итератор, обозначает первый элемент контролируемой последовательности или только за пределы пустой последовательности.  Используется для получения итератора, который задает начало управляемой последовательности с параметром `current`, однако в случае изменения длины управляемой последовательности его состояние может измениться.  
+## <a name="remarks"></a>Примечания  
+ Функция-член возвращает двунаправленный итератор, указывающий первый элемент управляемой последовательности или непосредственно за концом пустой последовательности. Используется для получения итератора, который обозначает `current` начало управляемой последовательности, но его состояние можно изменить при изменении длины управляемой последовательности.  
   
-## Пример  
+## <a name="example"></a>Пример  
   
 ```  
 // cliext_hash_map_begin.cpp   
@@ -67,14 +68,17 @@ int main()
   
 ```  
   
-  **\[1\] \[2\] \[BC — 3\]**  
-**\*begin\(\) \= \[1\]**  
-**\*\+\+begin\(\) \= \[B 2\]**   
-## Требования  
- **Заголовок:**\<cliext\/hash\_map\>  
+```Output  
+ [a 1] [b 2] [c 3]  
+*begin() = [a 1]  
+*++begin() = [b 2]  
+```  
+  
+## <a name="requirements"></a>Требования  
+ **Заголовок:** \<cliext/hash_map >  
   
  **Пространство имен:** cliext  
   
-## См. также  
- [hash\_map](../dotnet/hash-map-stl-clr.md)   
- [hash\_map::end](../dotnet/hash-map-end-stl-clr.md)
+## <a name="see-also"></a>См. также  
+ [hash_map (STL/CLR)](../dotnet/hash-map-stl-clr.md)   
+ [hash_map::end (STL/CLR)](../dotnet/hash-map-end-stl-clr.md)

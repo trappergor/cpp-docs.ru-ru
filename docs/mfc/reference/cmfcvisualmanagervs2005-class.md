@@ -49,11 +49,12 @@ caps.latest.revision: "30"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: a774573a2a42904d89159697dd444db98ddc8243
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 9678ef4472f2bcb44a04d3484988033542aae243
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cmfcvisualmanagervs2005-class"></a>Класс преобразованный CMFCVisualManagerVS2005
 `CMFCVisualManagerVS2005`придает приложению внешний вид Microsoft Visual Studio 2005.  
@@ -64,11 +65,11 @@ ms.lasthandoff: 10/24/2017
 class CMFCVisualManagerVS2005 : public CMFCVisualManagerOffice2003  
 ```  
   
-## <a name="members"></a>Члены  
+## <a name="members"></a>Участники  
   
 ### <a name="public-methods"></a>Открытые методы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[CMFCVisualManagerVS2005::GetDockingTabsBordersSize](#getdockingtabsborderssize)|Этот метод вызывается платформой при рисовании область, в которой будет закреплено и с вкладками. (Переопределяет [CMFCVisualManager::GetDockingTabsBordersSize](../../mfc/reference/cmfcvisualmanager-class.md#getdockingtabsborderssize).)|  
 |[CMFCVisualManagerVS2005::GetMDITabsBordersSize](#getmditabsborderssize)|Платформа вызывает этот метод, чтобы определить размер границы окна MDITabs, прежде чем он выводит окно. (Переопределяет [CMFCVisualManager::GetMDITabsBordersSize](../../mfc/reference/cmfcvisualmanager-class.md#getmditabsborderssize).)|  

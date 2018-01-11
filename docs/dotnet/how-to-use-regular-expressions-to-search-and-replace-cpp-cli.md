@@ -17,11 +17,14 @@ caps.latest.revision: "8"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 17710654b0af2e03019a1e7b888d86e42c5e35c9
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: f66df471d66a82a565fc5c072757664567d1f25c
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="how-to-use-regular-expressions-to-search-and-replace-ccli"></a>Практическое руководство. Использование регулярных выражений для выполнения поиска и замены (C++/CLI)
 В следующем примере кода показано, как класс регулярного выражения <xref:System.Text.RegularExpressions.Regex> можно использовать для выполнения поиска и замены. Это делается с <xref:System.Text.RegularExpressions.Regex.Replace%2A> метод. Используемая версия принимает две строки в качестве входных данных: строка для изменения и строки для вставки вместо разделов (если таковые имеются), соответствующих шаблону, заданному для <xref:System.Text.RegularExpressions.Regex> объекта.  

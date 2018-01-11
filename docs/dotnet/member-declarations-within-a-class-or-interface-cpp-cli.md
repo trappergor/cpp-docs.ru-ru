@@ -16,18 +16,21 @@ caps.latest.revision: "9"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: b3475ae25a6c11dbbbead1de4fb4f3180e2e24f4
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: 96a12f544babbf188c3718bcd49233472ad0d002
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="member-declarations-within-a-class-or-interface-ccli"></a>Объявления членов в пределах класса или интерфейса (C++/CLI)
 Объявление свойств и операторов был широко переработан при переходе от управляемых расширений для C++ к Visual C++, скрытие основные сведения о реализации, которые были видны в управляемых расширениях. Также были изменены объявлений событий.  
   
  В категории изменений, не поддерживаются управляемыми расширениями, статические конструкторы, которые теперь могут быть определенным вне строки (они были обязательно быть определен как встроенный в управляемых расширениях) и понятие делегирующий конструктор представлена.  
   
-## <a name="in-this-section"></a>Содержание  
+## <a name="in-this-section"></a>В этом разделе  
  [Объявление свойства](../dotnet/property-declaration.md)  
  Рассматриваются изменения в объявлении свойства.  
   

@@ -1,35 +1,37 @@
 ---
-title: "Проблемы версий, связанные с типами значений, вложенными в собственные типы (C++/CLI) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/14/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "__nogc type - объявление"
-  - "__value - ключевое слово, проблемы при вложении"
+title: "Проблемы версий, связанные с типами значений, вложенными в собственные типы (C + +/ CLI) | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- __nogc type declarations
+- __value keyword, issues when nesting
 ms.assetid: 0a3b1a43-39c6-4b52-be2f-1074690188aa
-caps.latest.revision: 13
-caps.handback.revision: 13
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "13"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: 29a5eb3a085682f243f1497e56b12a0b7d760edb
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 12/21/2017
 ---
-# Проблемы версий, связанные с типами значений, вложенными в собственные типы (C++/CLI)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Рассмотрим подписанный с использованием строгого имени компонент, который используется для построения клиентской сборки.  Этот компонент содержит тип значений, который используется в клиенте в качестве типа члена собственного объединения, класса или массива.  Если в последующих версиях изменяется размер или структура типа значений, следует выполнить повторную компиляцию клиента.  
+# <a name="version-issues-for-value-types-nested-in-native-types-ccli"></a>Проблемы версий, связанные с типами значений, вложенными в собственные типы (C++/CLI)
+Рассмотрим компонент сборки знаком (строгое имя), используемый для построения клиентской сборки. Компонент содержит тип значения, который используется в клиенте в качестве типа члена собственного объединения, класса или массива. Если будущие версии компонента изменяется размер или структура типа значения, должны быть перекомпилированы клиента.  
   
- Создайте файл ключа с помощью программы [sn.exe](../Topic/Sn.exe%20\(Strong%20Name%20Tool\).md) \(`sn -k mykey.snk`\).  
+ Создание файла ключа с [sn.exe](/dotnet/framework/tools/sn-exe-strong-name-tool) (`sn -k mykey.snk`).  
   
-## Пример  
- Ниже приведен пример компонента:  
+## <a name="example"></a>Пример  
+ Следующий пример — это компонент.  
   
 ```  
 // nested_value_types.cpp  
@@ -46,8 +48,8 @@ public value struct S {
 };  
 ```  
   
-## Пример  
- В следующем примере описывается клиент:  
+## <a name="example"></a>Пример  
+ Этот образец является клиентом:  
   
 ```  
 // nested_value_types_2.cpp  
@@ -72,7 +74,7 @@ int main() {
 }  
 ```  
   
-## Output  
+## <a name="output"></a>Вывод  
   
 ```  
 S.i = 5  
@@ -81,8 +83,8 @@ S.i = 10
 S.i = 11  
 ```  
   
-### Комментарии  
- Однако если в файле nested\_value\_types.cpp добавить другой член к структуре `struct S` \(например `double d;`\) и выполнить компиляцию компонента без повторной компиляции клиента, возникает необработанное исключение типа <xref:System.IO.FileLoadException?displayProperty=fullName>.  
+### <a name="comments"></a>Комментарии  
+ Тем не менее если добавить другой элемент `struct S` в nested_value_types.cpp, (например, `double d;`) и повторно откомпилировать компонент без повторной компиляции клиента, в результате необработанного исключения (типа <xref:System.IO.FileLoadException?displayProperty=fullName>).  
   
-## См. также  
- [Управляемые типы](../Topic/Managed%20Types%20\(C++-CLI\).md)
+## <a name="see-also"></a>См. также  
+ [Управляемые типы (C++/CLI)](../dotnet/managed-types-cpp-cli.md)

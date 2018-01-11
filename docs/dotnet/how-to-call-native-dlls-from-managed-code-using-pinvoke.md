@@ -1,38 +1,41 @@
 ---
-title: "Практическое руководство. Вызов неуправляемых библиотек DLL из управляемого кода с помощью PInvoke | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "get-started-article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "маршалинг данных [C++], вызов собственных библиотек DLL"
-  - "взаимодействие [C++], вызов собственных библиотек DLL"
-  - "маршалинг [C++], вызов собственных библиотек DLL"
-  - "вызов неуправляемого кода [C++], вызов собственных библиотек DLL"
+title: "Как: вызов неуправляемых библиотек DLL из управляемого кода с помощью PInvoke | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: get-started-article
+dev_langs: C++
+helpviewer_keywords:
+- platform invoke [C++], calling native DLLs
+- interop [C++], calling native DLLs
+- marshaling [C++], calling native DLLs
+- data marshaling [C++], calling native DLLs
 ms.assetid: 3273eb4b-38d1-4619-92a6-71bda542be72
-caps.latest.revision: 18
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 18
+caps.latest.revision: "18"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: 5d22f493a582b6ef09615f94c7b321a7cc535e5b
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 12/21/2017
 ---
-# Практическое руководство. Вызов неуправляемых библиотек DLL из управляемого кода с помощью PInvoke
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Функции, реализованные в неуправляемых библиотеках DLL, могут вызываться из управляемого кода с помощью вызова неуправляемого кода P\/Invoke.  Если исходный код библиотеки DLL недоступен, вызов P\/Invoke является единственным вариантом обеспечения взаимодействия.  В отличие от других языков .NET в Visual C\+\+ предусматривается альтернатива вызову P\/Invoke.  Для получения дополнительной информации см. [Использование взаимодействия языка C\+\+ \(неявный PInvoke\)](../dotnet/using-cpp-interop-implicit-pinvoke.md).  
+# <a name="how-to-call-native-dlls-from-managed-code-using-pinvoke"></a>Практическое руководство. Вызов неуправляемых библиотек DLL из управляемого кода с помощью PInvoke
+Функции, реализованные в неуправляемых библиотек DLL может вызываться из управляемого кода с помощью функциональной возможности вызова неуправляемого кода (P/Invoke). Если исходный код для библиотеки DLL недоступен, P/Invoke является единственным вариантом обеспечения взаимодействия. Однако в отличие от других языков .NET, Visual C++ предоставляет альтернативы P/Invoke. Дополнительные сведения см. в разделе [с помощью взаимодействия C++ (неявный PInvoke)](../dotnet/using-cpp-interop-implicit-pinvoke.md).  
   
-## Пример  
- В следующем примере функция Win32 [GetSystemMetrics](http://msdn.microsoft.com/library/windows/desktop/ms724385) используется для получения текущего значения разрешения экрана в пикселях.  
+## <a name="example"></a>Пример  
+ В следующем примере кода используется Win32 [GetSystemMetrics](http://msdn.microsoft.com/library/windows/desktop/ms724385) функции для получения текущего разрешения экрана в пикселях.  
   
- Для функций, в которых используются аргументы и возвращаемые значения встроенных типов, дополнительные действия не требуются.  Для других типов данных, например указателей на функции, массивов и структур, требуется наличие дополнительного атрибута, гарантирующего правильный маршалинг данных.  
+ Для функций, используйте только внутренние типы в качестве аргументов и возвращаемых значений дополнительные действия не требуется. Другие типы данных, такие как указатели функций, массивы и структуры, требуются дополнительные атрибуты, чтобы обеспечить правильный маршалинг данных.  
   
- Рекомендуется \(но не обязательно\) объявлять вызовы P\/Invoke как статические члены класса значений, что позволяет не включать их в глобальное пространство имен, как показано в следующем примере.  
+ Несмотря на то, что это не обязательно, рекомендуется сделать объявления P/Invoke статические члены класса значений, чтобы они не существуют в глобальном пространстве имен, как показано в следующем примере.  
   
 ```  
 // pinvoke_basic.cpp  
@@ -59,5 +62,5 @@ int main() {
 }  
 ```  
   
-## См. также  
- [Использование явного вызова Pinvoke в C\+\+ \(атрибут DllImport\)](../dotnet/using-explicit-pinvoke-in-cpp-dllimport-attribute.md)
+## <a name="see-also"></a>См. также  
+ [Использование явного вызова Pinvoke в C++ (атрибут DllImport)](../dotnet/using-explicit-pinvoke-in-cpp-dllimport-attribute.md)

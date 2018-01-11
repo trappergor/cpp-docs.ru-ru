@@ -1,45 +1,46 @@
 ---
-title: "hash_set::upper_bound (STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::hash_set::upper_bound"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "upper_bound - член [STL/CLR]"
+title: "hash_set::upper_bound (STL/CLR) | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::hash_set::upper_bound
+dev_langs: C++
+helpviewer_keywords: upper_bound member [STL/CLR]
 ms.assetid: dc8815f1-8b45-4f3d-a51f-54050d434d8f
-caps.latest.revision: 15
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 13
+caps.latest.revision: "15"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: a2c1ee7c45d8644937fb2157413fcc9ddedc017f
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 12/21/2017
 ---
-# hash_set::upper_bound (STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Находит конечную точку диапазона, соответствующий указанному ключу.  
+# <a name="hashsetupperbound-stlclr"></a>hash_set::upper_bound (STL/CLR)
+Конец находит диапазон, соответствующий указанному ключу.  
   
-## Синтаксис  
+## <a name="syntax"></a>Синтаксис  
   
 ```  
 iterator upper_bound(key_type key);  
 ```  
   
-#### Параметры  
- key  
- Значение ключа, которое необходимо найти.  
+#### <a name="parameters"></a>Параметры  
+ клавиша  
+ Искомое значение ключа.  
   
-## Заметки  
- Функция\-член определен последний элемент `X` в контролируемой последовательности, хэширует к одному блоку как `key` и имеет соответствующий заказ на `key`.  Если такой элемент не существует, или если `X` последний элемент в контролируемой последовательности, она возвращает [hash\_set::end](../dotnet/hash-set-end-stl-clr.md)`()`; в противном случае она возвращает первый элемент указывает итератор, за `X`.  Он используется для поиска конец последовательности элементов в контролируемой последовательности, соответствующие указанному ключу.  
+## <a name="remarks"></a>Примечания  
+ Функция-член определяет последний элемент `X` в управляемой последовательности, которая хэширует с одним контейнером, как `key` и соответствующим образом для `key`. Если такого элемента не существует или `X` является последним элементом в управляемой последовательности, она возвращает [hash_set::end (STL/CLR)](../dotnet/hash-set-end-stl-clr.md)`()`; в противном случае он возвращает итератор, указывающий на первый элемент за пределами `X`. Используется для поиска конца последовательности элементов в данный момент в управляемой последовательности, которые соответствуют заданному ключу.  
   
-## Пример  
+## <a name="example"></a>Пример  
   
 ```  
 // cliext_hash_set_upper_bound.cpp   
@@ -71,18 +72,21 @@ int main()
   
 ```  
   
-  **a b c**  
-**upper\_bound\(L'x'\)\=\=end\(\) \= true**  
-**\*upper\_bound \(L'а\) \= B**  
-**\*upper\_bound \(L'б\) \= C**   
-## Требования  
- **Заголовок:**\<cliext\/hash\_set\>  
+```Output  
+ a b c  
+upper_bound(L'x')==end() = True  
+*upper_bound(L'a') = b  
+*upper_bound(L'b') = c  
+```  
+  
+## <a name="requirements"></a>Требования  
+ **Заголовок:** \<cliext/hash_set >  
   
  **Пространство имен:** cliext  
   
-## См. также  
- [hash\_set](../dotnet/hash-set-stl-clr.md)   
- [hash\_set::count](../dotnet/hash-set-count-stl-clr.md)   
- [hash\_set::equal\_range](../dotnet/hash-set-equal-range-stl-clr.md)   
- [hash\_set::find](../Topic/hash_set::find%20\(STL-CLR\).md)   
- [hash\_set::lower\_bound](../dotnet/hash-set-lower-bound-stl-clr.md)
+## <a name="see-also"></a>См. также  
+ [hash_set (STL/CLR)](../dotnet/hash-set-stl-clr.md)   
+ [hash_set::Count (STL/CLR)](../dotnet/hash-set-count-stl-clr.md)   
+ [hash_set::equal_range (STL/CLR)](../dotnet/hash-set-equal-range-stl-clr.md)   
+ [hash_set::Find (STL/CLR)](../dotnet/hash-set-find-stl-clr.md)   
+ [hash_set::lower_bound (STL/CLR)](../dotnet/hash-set-lower-bound-stl-clr.md)

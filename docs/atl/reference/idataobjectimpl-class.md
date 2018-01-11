@@ -31,11 +31,12 @@ caps.latest.revision: "20"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: be2fbd11ac875906c9fc4fca4c58d3979f49cc3e
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 644f498a491605fb69b18ec53afee689f5f90a26
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="idataobjectimpl-class"></a>Класс IDataObjectImpl
 Этот класс предоставляет методы для поддержки унифицированная передача данных и управления подключениями.  
@@ -54,11 +55,11 @@ class IDataObjectImpl
  `T`  
  Класс, производный от `IDataObjectImpl`.  
   
-## <a name="members"></a>Члены  
+## <a name="members"></a>Участники  
   
 ### <a name="public-methods"></a>Открытые методы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[IDataObjectImpl::DAdvise](#dadvise)|Устанавливает соединение между объектом данных и приемника уведомлений. Это позволяет приемник уведомлений для получения уведомлений об изменениях в объекте.|  
 |[IDataObjectImpl::DUnadvise](#dunadvise)|Завершает соединение, установленное ранее при помощи `DAdvise`.|  

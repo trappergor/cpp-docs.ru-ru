@@ -1,48 +1,51 @@
 ---
-title: "Команды и таблицы | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "CAccessorRowset - класс, классы команд и таблиц"
-  - "CCommand - класс, шаблоны потребителя OLE DB"
-  - "команды [C++], шаблоны потребителя OLE DB"
-  - "CTable - класс"
-  - "шаблоны потребителя OLE DB, поддержка команд"
-  - "шаблоны потребителя OLE DB, поддержка таблиц"
-  - "наборы строк, доступ"
-  - "таблицы [C++], шаблоны потребителя OLE DB"
+title: "Команды и таблицы | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- OLE DB consumer templates, table support
+- CCommand class, OLE DB consumer templates
+- commands [C++], OLE DB Consumer Templates
+- CTable class
+- CAccessorRowset class, command and table classes
+- rowsets, accessing
+- tables [C++], OLE DB Consumer Templates
+- OLE DB consumer templates, command support
 ms.assetid: 4bd3787b-6d26-40a9-be0c-083080537c12
-caps.latest.revision: 7
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: c42422c156a51cac161f0cc75dfd1947b92eb20e
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 12/21/2017
 ---
-# Команды и таблицы
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Команды и таблицы позволяют обращаться к наборам строк, то есть открывать их, выполнять команды и связывание столбцов.  Классы [CCommand](../../data/oledb/ccommand-class.md) и [CTable](../../data/oledb/ctable-class.md) создают объекты command и table соответственно.  Эти классы являются производными от [CAccessorRowset](../Topic/CAccessorRowset%20Class.md), как показано на следующем рисунке.  
+# <a name="commands-and-tables"></a>Команды и таблицы
+Команды и таблицы позволяют получить доступ к наборы строк; т. е откройте наборы строк, выполнять команды и привяжите столбцы. [CCommand](../../data/oledb/ccommand-class.md) и [CTable](../../data/oledb/ctable-class.md) классов, создания экземпляров объектов команд и таблиц, соответственно. Эти классы являются производными от [CAccessorRowset](../../data/oledb/caccessorrowset-class.md) как показано на следующем рисунке.  
   
- ![CCommand и CTable](../../data/oledb/media/vccommandstables.gif "vcCommandsTables")  
+ ![CCommand и CTable](../../data/oledb/media/vccommandstables.gif "vccommandstables")  
 Классы команд и таблиц  
   
- Тип `TAccessor`, показанный в предыдущей таблице, может быть любым типом метода доступа из перечисленных в разделе [Типы методов доступа](../../data/oledb/accessors-and-rowsets.md).  Тип *TRowset* может быть любым типом набора строк из перечисленных в разделе [Типы набора строк](../../data/oledb/accessors-and-rowsets.md).  Тип *TMultiple* указывает тип результата \(один или несколько результирующих наборов\).  
+ В таблице выше `TAccessor` может быть любым типом метода доступа, перечисленных в [типы методов доступа](../../data/oledb/accessors-and-rowsets.md). *TRowset* может быть любым типом набора строк, перечисленных в [типы наборов строк](../../data/oledb/accessors-and-rowsets.md). *Тип TMultiple* указывает тип результата (один или несколько результирующих наборов).  
   
- [Мастер потребителей OLE DB библиотеки ATL](../../atl/reference/atl-ole-db-consumer-wizard.md) позволяет указать, необходимо ли использовать объект command или table.  
+ [Мастер потребителя ATL OLE DB](../../atl/reference/atl-ole-db-consumer-wizard.md) позволяет указать, следует ли объект команд или таблиц.  
   
--   Для источников данных без объектов command можно использовать класс `CTable`.  Обычно он применяется к простым наборам записей, для которых не указываются параметры и не требуется нескольких результатов.  Этот простой класс открывает объект table в источнике данных с помощью указанного имени объекта table.  
+-   Для источников данных без команд, можно использовать `CTable` класса. Обычно он используется для простых наборов строк, которые не указаны другие параметры и не требуется нескольких результатов. Этот простой класс открывает таблицы при работе с источником данных с помощью имени таблицы, указанной вами.  
   
--   Для источников данных, поддерживающих объекты command, также можно использовать класс `CCommand`.  Чтобы выполнить команду, следует вызвать функцию [Open](../../data/oledb/ccommand-open.md) для этого класса.  В качестве альтернативы можно использовать функцию `Prepare` для подготовки команды, которую необходимо выполнить более одного раза.  
+-   Для источников данных, которые поддерживают команд, можно использовать `CCommand` вместо этого класс. Чтобы выполнить команду, вызовите [откройте](../../data/oledb/ccommand-open.md) для данного класса. В качестве альтернативы можно вызвать `Prepare` для подготовки команды, которую требуется выполнить более одного раза.  
   
-     Класс **CCommand** имеет три аргумента шаблона: тип метода доступа, тип набора строк и тип результатов \(`CNoMultipleResults`, используемый по умолчанию, или `CMultipleResults`\).  Если используется `CMultipleResults`, класс `CCommand` поддерживает интерфейс **IMultipleResults** и обрабатывает несколько наборов строк.  В примере [DBVIEWER](http://msdn.microsoft.com/ru-ru/07620f99-c347-4d09-9ebc-2459e8049832) показано, как обрабатывать несколько результатов.  
+     **CCommand** имеет три аргумента шаблона: тип метода доступа, тип набора строк и тип результата (`CNoMultipleResults`, по умолчанию или `CMultipleResults`). При указании `CMultipleResults`, `CCommand` поддерживает класс **IMultipleResults** интерфейса и обрабатывает несколько наборов строк. [DBVIEWER](http://msdn.microsoft.com/en-us/07620f99-c347-4d09-9ebc-2459e8049832) образце показано, как обрабатывать несколько результатов.  
   
-## См. также  
- [Шаблоны потребителей OLE DB](../../data/oledb/ole-db-consumer-templates-cpp.md)
+## <a name="see-also"></a>См. также  
+ [Шаблоны потребителя OLE DB](../../data/oledb/ole-db-consumer-templates-cpp.md)

@@ -1,41 +1,42 @@
 ---
-title: "set::const_iterator (STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::set::const_iterator"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "const_iterator - элемент [STL/CLR]"
+title: "set::const_iterator (STL/CLR) | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::set::const_iterator
+dev_langs: C++
+helpviewer_keywords: const_iterator member [STL/CLR]
 ms.assetid: de234ad4-d420-4da8-a13a-1aec8c337d8b
-caps.latest.revision: 14
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 12
+caps.latest.revision: "14"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: feabc936482953cc6fb5e861a21b159ff2d277a1
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 12/21/2017
 ---
-# set::const_iterator (STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="setconstiterator-stlclr"></a>set::const_iterator (STL/CLR)
 Тип постоянного итератора для управляемой последовательности.  
   
-## Синтаксис  
+## <a name="syntax"></a>Синтаксис  
   
 ```  
 typedef T2 const_iterator;  
 ```  
   
-## Заметки  
- Описывает тип объекта неспецифицированного типа `T2`, который можно использовать как постоянный двунаправленный итератор для контролируемой последовательности.  
+## <a name="remarks"></a>Примечания  
+ Тип описывает объект незаданного типа `T2` , можно использовать в качестве константы двунаправленного итератора для управляемой последовательности.  
   
-## Пример  
+## <a name="example"></a>Пример  
   
 ```  
 // cliext_set_const_iterator.cpp   
@@ -60,12 +61,15 @@ int main()
   
 ```  
   
-  **a b c**   
-## Требования  
- **Заголовок:**\<cliext\/set\>  
+```Output  
+a b c  
+```  
+  
+## <a name="requirements"></a>Требования  
+ **Заголовок:** \<cliext и set >  
   
  **Пространство имен:** cliext  
   
-## См. также  
- [набор](../dotnet/set-stl-clr.md)   
- [set::iterator](../Topic/set::iterator%20\(STL-CLR\).md)
+## <a name="see-also"></a>См. также  
+ [набор (STL/CLR)](../dotnet/set-stl-clr.md)   
+ [set::iterator (STL/CLR)](../dotnet/set-iterator-stl-clr.md)

@@ -31,11 +31,12 @@ caps.latest.revision: "18"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 66d98297d681f3c2c377a7bccb7b988169aca76d
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 9fd05acc351a23cc088c6491a76ecfb91583b16b
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="acceleratorview-class"></a>Класс accelerator_view
 Представляет виртуальное устройство абстракции ускорителем C++ AMP параллельными данными.  
@@ -46,18 +47,18 @@ ms.lasthandoff: 10/24/2017
 class accelerator_view;  
 ```  
   
-## <a name="members"></a>Члены  
+## <a name="members"></a>Участники  
   
 ### <a name="public-constructors"></a>Открытые конструкторы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[accelerator_view, конструктор](#ctor)|Инициализирует новый экземпляр класса `accelerator_view`.|  
 |[~ accelerator_view, деструктор](#dtor)|Уничтожает `accelerator_view` объекта.|  
   
 ### <a name="public-methods"></a>Открытые методы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[create_marker](#create_marker)|Возвращает будущее отслеживать выполнение всех команд, переданных в данный момент к этому `accelerator_view` объекта.|  
 |[flush](#flush)|Отправляет все команды, ожидающие в очереди на `accelerator_view` объект для сочетания клавиш для выполнения.|  
@@ -70,15 +71,15 @@ class accelerator_view;
   
 ### <a name="public-operators"></a>Открытые операторы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
-|[operator!=](#operator_neq)|Сравнивает этот `accelerator_view` с другим и возвращает `false` если они совпадают; в противном случае возвращает `true`.|  
-|[operator=](#operator_eq)|Копирует содержимое указанного `accelerator_view` объекта в другой.|  
-|[operator==](#operator_eq_eq)|Сравнивает этот `accelerator_view` с другим и возвращает `true` если они совпадают; в противном случае возвращает `false`.|  
+|[оператор!=](#operator_neq)|Сравнивает этот `accelerator_view` с другим и возвращает `false` если они совпадают; в противном случае возвращает `true`.|  
+|[оператор=](#operator_eq)|Копирует содержимое указанного `accelerator_view` объекта в другой.|  
+|[оператор==](#operator_eq_eq)|Сравнивает этот `accelerator_view` с другим и возвращает `true` если они совпадают; в противном случае возвращает `false`.|  
   
 ### <a name="public-data-members"></a>Открытые члены данных  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[сочетаний клавиш](#accelerator)|Возвращает объект `accelerator` для объекта `accelerator_view`.|  
 |[is_auto_selection](#is_auto_selection)|Возвращает логическое значение, указывающее ли среда выполнения автоматически выбирает соответствующий ускоритель при `accelerator_view` объект передается [parallel_for_each](concurrency-namespace-functions-amp.md#parallel_for_each).|  

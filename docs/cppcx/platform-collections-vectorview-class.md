@@ -21,11 +21,12 @@ caps.latest.revision: "8"
 author: ghogen
 ms.author: ghogen
 manager: ghogen
-ms.openlocfilehash: c69052eec58bb84416561de93df845a09514490f
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 8ef351759814ee03b54160cac2340eafd304d5f3
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="platformcollectionsvectorview-class"></a>Класс Platform::Collections::VectorView
 Представляет доступное только для чтения представление упорядоченной коллекции объектов, в которой возможен доступ к каждому отдельному объекту по его индексу. Тип каждого объекта в коллекции задается параметром шаблона.  
@@ -42,22 +43,22 @@ template <typename T, typename E>
  Тип элементов, содержащихся в объекте `VectorView` .  
   
  `E`  
- Определяет бинарный предикат для проверки равенства со значениями типа `T`. Значение по умолчанию — `std::equal_to<T>`.  
+ Определяет бинарный предикат для проверки равенства со значениями типа `T`. Значение по умолчанию — `std::equal_to<T>`.  
   
 ### <a name="remarks"></a>Примечания  
  `VectorView` Класс реализует [Windows::Foundation::Collections::IVectorView\<T >](http://go.microsoft.com/fwlink/p/?LinkId=262411) интерфейс и поддержку итераторов библиотеки стандартных шаблонов.  
   
-### <a name="members"></a>Члены  
+### <a name="members"></a>Участники  
   
 ### <a name="public-constructors"></a>Открытые конструкторы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[VectorView::VectorView](#ctor)|Инициализирует новый экземпляр класса VectorView.|  
   
 ### <a name="public-methods"></a>Открытые методы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[VectorView::First](#first)|Возвращает итератор, указывающий первый элемент объекта VectorView.|  
 |[VectorView::GetAt](#getat)|Извлекает элемент текущего VectorView, указанный заданным индексом.|  

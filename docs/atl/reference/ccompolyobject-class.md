@@ -28,11 +28,12 @@ caps.latest.revision: "19"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 49945127d726c1a83ed01f70dee2190622a4c68d
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 3518fd5936c4871e99eaf597f12fb3ab7cc8aff6
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="ccompolyobject-class"></a>Класс CComPolyObject
 Этот класс реализует **IUnknown** для суммирования или неагрегированные объекта.  
@@ -49,18 +50,18 @@ class CComPolyObject : public IUnknown,
  `contained`  
  Класс, производный от [CComObjectRoot](../../atl/reference/ccomobjectroot-class.md) или [CComObjectRootEx](../../atl/reference/ccomobjectrootex-class.md), также как и из любых других интерфейсов, которые требуется поддерживать на объект.  
   
-## <a name="members"></a>Члены  
+## <a name="members"></a>Участники  
   
 ### <a name="public-constructors"></a>Открытые конструкторы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[CComPolyObject::CComPolyObject](#ccompolyobject)|Конструктор.|  
 |[CComPolyObject:: ~ CComPolyObject](#dtor)|Деструктор|  
   
 ### <a name="public-methods"></a>Открытые методы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[CComPolyObject::AddRef](#addref)|Увеличивает значение счетчика ссылок объекта.|  
 |[CComPolyObject::CreateInstance](#createinstance)|(Статический) Позволяет создать новый **CComPolyObject <** `contained`  **>**  объекта без использования [CoCreateInstance](http://msdn.microsoft.com/library/windows/desktop/ms686615).|  
@@ -71,7 +72,7 @@ class CComPolyObject : public IUnknown,
   
 ### <a name="public-data-members"></a>Открытые члены данных  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[CComPolyObject::m_contained](#m_contained)|Делегаты **IUnknown** вызывает внешняя Неизвестная строка, если объект является статистическим выражением, или для **IUnknown** объекта, если объект не является статистическим выражением.|  
   

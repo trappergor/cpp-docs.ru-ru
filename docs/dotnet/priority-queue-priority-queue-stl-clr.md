@@ -1,32 +1,33 @@
 ---
-title: "priority_queue::priority_queue (STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::priority_queue::priority_queue"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "priority_queue - элемент [STL/CLR]"
+title: "priority_queue::priority_queue (STL/CLR) | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::priority_queue::priority_queue
+dev_langs: C++
+helpviewer_keywords: priority_queue member [STL/CLR]
 ms.assetid: aab423d7-959e-48fd-9028-e9f45f43cb8a
-caps.latest.revision: 17
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 15
+caps.latest.revision: "17"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: 03d0054f3c755c3dd6e4bd653c972a0f7aa6735d
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 12/21/2017
 ---
-# priority_queue::priority_queue (STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Создает объект адаптера контейнера.  
+# <a name="priorityqueuepriorityqueue-stlclr"></a>priority_queue::priority_queue (STL/CLR)
+Создает объект контейнера адаптера.  
   
-## Синтаксис  
+## <a name="syntax"></a>Синтаксис  
   
 ```  
 priority_queue();  
@@ -44,84 +45,74 @@ template<typename InIt>
         value_compare^ pred, container_type% cont);  
 ```  
   
-#### Параметры  
- cont  
- Контейнер, которые необходимо скопировать.  
+#### <a name="parameters"></a>Параметры  
+ Продолжение  
+ Контейнер для копирования.  
   
  first  
- Начало диапазона, который необходимо вставить.  
+ Начало диапазона для вставки.  
   
  last  
- Элемент диапазона, который необходимо вставить.  
+ Конец диапазона для вставки.  
   
- pred  
- Порядок предикат для контролируемой последовательности.  
+ Pred  
+ Упорядочение предикат для управляемой последовательности.  
   
- правый  
+ right  
  Объект или диапазон для вставки.  
   
-## Заметки  
+## <a name="remarks"></a>Примечания  
  Конструктор:  
   
  `priority_queue();`  
   
- создает пустой от программу\-оболочку контейнер с предикатом по умолчанию порядок.  Он используется, чтобы указать пустую последовательность, начальную контролируемую с предикатом по умолчанию порядок.  
+ Создает пустой контейнер оболочку по умолчанию, упорядочение предикат. Используется, чтобы указать пустую начальную управляемую последовательность, по умолчанию, упорядочение предикат.  
   
  Конструктор:  
   
  `priority_queue(priority_queue<Value, Container>% right);`  
   
- создает от программу\-оболочку контейнер, являющийся копией `right.get_container()`, порядок с предикатом `right.value_comp()`.  Он используется, чтобы определить домашнюю контролируемую последовательность, копию последовательности контролируемой объектом очереди `right`, с тем же заказу предикатом.  
+ Создает оболочку контейнер, который является копией `right.get_container()`, порядка сортировки предикатом `right.value_comp()`. Они позволяют указать начальную управляемую последовательность, является копией последовательности, контролируемой объект очереди `right`, же упорядочивания предикатом.  
   
  Конструктор:  
   
  `priority_queue(priority_queue<Value, Container>^ right);`  
   
- создает от программу\-оболочку контейнер, являющийся копией `right->get_container()`, порядок с предикатом `right->value_comp()`.  Он используется, чтобы определить домашнюю контролируемую последовательность, копию последовательности контролируемой объектом очереди `*right`, с тем же заказу предикатом.  
+ Создает оболочку контейнер, который является копией `right->get_container()`, порядка сортировки предикатом `right->value_comp()`. Они позволяют указать начальную управляемую последовательность, является копией последовательности, контролируемой объект очереди `*right`, же упорядочивания предикатом.  
   
  Конструктор:  
   
  `explicit priority_queue(value_compare^ pred);`  
   
- создает пустой от программу\-оболочку контейнер, порядок с предикатом `pred`.  Он используется для определения начальную контролируемую пустую последовательность, указанным при упорядочивании предикатом.  
+ Создает пустой контейнер упакованного упорядочивания предикатом `pred`. Используется, чтобы указать пустую начальную управляемую последовательность, с указанным предикатом порядка сортировки.  
   
  Конструктор:  
   
  `priority_queue(value_compare^ pred, container_type cont);`  
   
- создает пустой от программу\-оболочку контейнер, порядок с предикатом `pred`, а затем отправляет все элементы `cont` он используется, чтобы определить домашнюю контролируемую последовательность из существующего контейнера, указанным при упорядочивании предикатом.  
+ Создает пустой контейнер упакованного упорядочивания предикатом `pred`, помещает все элементы `cont` используется для указания начальную управляемую последовательность из существующего контейнера, с указанным предикатом порядка сортировки.  
   
  Конструктор:  
   
- `template<typename InIt>`  
+ `template<typename InIt> priority_queue(InIt first, InIt last);`  
   
- `priority_queue(InIt first, InIt last);`  
-  
- создает пустой от программу\-оболочку контейнер с предикатом по умолчанию порядок, а затем отправляет последовательность `[``first``,` `last``)`.  Он используется, чтобы определить домашнюю контролируемую последовательность из указанного eqeuence, указанным при упорядочивании предикатом.  
+ Создает пустой контейнер оболочку с предикатом порядка сортировки по умолчанию, а затем помещает последовательности [`first`, `last`). Используется, чтобы указать начальную управляемую последовательность из указанного eqeuence, с указанным предикатом порядка сортировки.  
   
  Конструктор:  
   
- `template<typename InIt>`  
+ `template<typename InIt> priority_queue(InIt first, InIt last, value_compare^ pred);`  
   
- `priority_queue(InIt first, InIt last,`  
-  
- `value_compare^ pred);`  
-  
- создает пустой от программу\-оболочку контейнер, порядок с предикатом `pred`, а затем отправляет последовательность `[``first``,` `last``)`.  Он используется, чтобы определить домашнюю контролируемую последовательность из указанного seqeuence, указанным при упорядочивании предикатом.  
+ Создает пустой контейнер упакованного упорядочивания предикатом `pred`, помещает последовательности [`first`, `last`). Используется, чтобы указать начальную управляемую последовательность из указанного seqeuence, с указанным предикатом порядка сортировки.  
   
  Конструктор:  
   
- `template<typename InIt>`  
+ `template<typename InIt> priority_queue(InIt first, InIt last, value_compare^ pred, container_type% cont);`  
   
- `priority_queue(InIt first, InIt last,`  
+ Создает пустой контейнер упакованного упорядочивания предикатом `pred`, помещает все элементы `cont` плюс последовательности [`first`, `last`). Используется, чтобы указать начальную управляемую последовательность из существующего контейнера и указанного seqeuence, с указанным предикатом порядка сортировки.  
   
- `value_compare^ pred, container_type% cont);`  
+## <a name="example"></a>Пример  
   
- создает пустой от программу\-оболочку контейнер, порядок с предикатом `pred`, а затем отправляет все элементы `cont` и последовательность `[``first``,` `last``)`.  Он используется, чтобы определить домашнюю контролируемую последовательность из существующего контейнера и заданного seqeuence, указанным при упорядочивании предикатом.  
-  
-## Пример  
-  
-```  
+```cpp  
 // cliext_priority_queue_construct.cpp   
 // compile with: /clr   
 #include <cliext/queue>   
@@ -204,24 +195,27 @@ int main()
   
 ```  
   
-  **size\(\) \= 0**  
- **B C.**  
-**size\(\) \= 0**  
- **a c b**  
- **a c b**  
- **B C.**  
- **a c b**  
- **a a b c c b**  
- **B C.**  
- **B C.**  
- **a c b**   
-## Требования  
- **Заголовок:**\<cliext\/queue\>  
+```Output  
+size() = 0  
+ c a b  
+size() = 0  
+ a c b  
+ a c b  
+ c a b  
+ a c b  
+ a a b c c b  
+ c a b  
+ c a b  
+ a c b  
+```  
+  
+## <a name="requirements"></a>Требования  
+ **Заголовок:** \<cliext/очереди >  
   
  **Пространство имен:** cliext  
   
-## См. также  
- [priority\_queue](../Topic/priority_queue%20\(STL-CLR\).md)   
- [priority\_queue::assign](../dotnet/priority-queue-assign-stl-clr.md)   
- [priority\_queue::generic\_container](../dotnet/priority-queue-generic-container-stl-clr.md)   
- [priority\_queue::operator\=](../dotnet/priority-queue-operator-assign-stl-clr.md)
+## <a name="see-also"></a>См. также  
+ [priority_queue (STL/CLR)](../dotnet/priority-queue-stl-clr.md)   
+ [priority_queue::Assign (STL/CLR)](../dotnet/priority-queue-assign-stl-clr.md)   
+ [priority_queue::generic_container (STL/CLR)](../dotnet/priority-queue-generic-container-stl-clr.md)   
+ [priority_queue::operator= (STL/CLR)](../dotnet/priority-queue-operator-assign-stl-clr.md)

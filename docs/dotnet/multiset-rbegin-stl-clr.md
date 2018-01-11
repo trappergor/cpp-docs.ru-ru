@@ -1,41 +1,42 @@
 ---
-title: "multiset::rbegin (STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::multiset::rbegin"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "rbegin - член [STL/CLR]"
+title: "MULTISET::rbegin (STL/CLR) | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::multiset::rbegin
+dev_langs: C++
+helpviewer_keywords: rbegin member [STL/CLR]
 ms.assetid: beec0024-9565-4809-86f9-8b2c4e533923
-caps.latest.revision: 15
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 13
+caps.latest.revision: "15"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: 454db96f4fe970870654734c410393dad8cb14fe
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 12/21/2017
 ---
-# multiset::rbegin (STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="multisetrbegin-stlclr"></a>multiset::rbegin (STL/CLR)
 Задает начало обратной управляемой последовательности.  
   
-## Синтаксис  
+## <a name="syntax"></a>Синтаксис  
   
 ```  
 reverse_iterator rbegin();  
 ```  
   
-## Заметки  
- Функция\-член возвращает обратный итератор, обозначает последний элемент контролируемой последовательности или только за началом пустой последовательности.  Таким образом, он задает для обратной последовательности параметр `beginning`.  Используется для получения итератора, который задает начало управляемой последовательности с параметром `current`, отображаемой в обратном порядке, однако в случае изменения длины управляемой последовательности его состояние может измениться.  
+## <a name="remarks"></a>Примечания  
+ Функция-член возвращает Обратный итератор, который задает последний элемент управляемой последовательности или начало пустую последовательность. Таким образом, он обозначает `beginning` обратной последовательности. Используется для получения итератора, который обозначает `current` начало управляемой последовательности, отображаемой в обратном порядке, но его состояние можно изменить при изменении длины управляемой последовательности.  
   
-## Пример  
+## <a name="example"></a>Пример  
   
 ```  
 // cliext_multiset_rbegin.cpp   
@@ -64,16 +65,19 @@ int main()
   
 ```  
   
-  **a b c**  
-**\*rbegin\(\) \= C**  
-**\*\+\+rbegin\(\) \= B**   
-## Требования  
- **Заголовок:**\<cliext\/set\>  
+```Output  
+ a b c  
+*rbegin() = c  
+*++rbegin() = b  
+```  
+  
+## <a name="requirements"></a>Требования  
+ **Заголовок:** \<cliext и set >  
   
  **Пространство имен:** cliext  
   
-## См. также  
- [multiset](../dotnet/multiset-stl-clr.md)   
- [multiset::begin](../dotnet/multiset-begin-stl-clr.md)   
- [multiset::end](../dotnet/multiset-end-stl-clr.md)   
- [multiset::rend](../Topic/multiset::rend%20\(STL-CLR\).md)
+## <a name="see-also"></a>См. также  
+ [мультинабор (STL/CLR)](../dotnet/multiset-stl-clr.md)   
+ [MULTISET::Begin (STL/CLR)](../dotnet/multiset-begin-stl-clr.md)   
+ [MULTISET::End (STL/CLR)](../dotnet/multiset-end-stl-clr.md)   
+ [multiset::rend (STL/CLR)](../dotnet/multiset-rend-stl-clr.md)

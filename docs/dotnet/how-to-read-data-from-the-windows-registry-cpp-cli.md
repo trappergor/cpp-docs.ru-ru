@@ -1,34 +1,36 @@
 ---
-title: "Практическое руководство. Чтение данных из реестра Windows (C++/CLI) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "реестр, чтение"
-  - "Visual C++, чтение из регистра Windows"
+title: "Как: чтение данных из реестра Windows (C + +/ CLI) | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- Visual C++, reading from Windows Registry
+- registry, reading
 ms.assetid: aebf52c0-acc7-40e2-adbc-d34e0a1e467e
-caps.latest.revision: 11
-caps.handback.revision: 11
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "11"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: dfb654ba2cce069086713322624e947e14bc26f4
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 12/21/2017
 ---
-# Практическое руководство. Чтение данных из реестра Windows (C++/CLI)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-В следующем примере для чтения данных из реестра Windows кода используется ключ <xref:Microsoft.Win32.Registry.CurrentUser>.  Сначала выполняется перечисление подразделов с помощью метода <xref:Microsoft.Win32.RegistryKey.GetSubKeyNames%2A>, а затем подраздел Identities \(Идентификаторы\) открывается с помощью метода <xref:Microsoft.Win32.RegistryKey.OpenSubKey%2A>.  Как и корневые ключи, каждый подраздел представлен классом <xref:Microsoft.Win32.RegistryKey>.  И в завершение, новый объект <xref:Microsoft.Win32.RegistryKey> используется для перечисления пар ключ\-значение.  
+# <a name="how-to-read-data-from-the-windows-registry-ccli"></a>Практическое руководство. Чтение данных из реестра Windows (C++/CLI)
+Следующий пример кода использует <xref:Microsoft.Win32.Registry.CurrentUser> ключ для чтения данных из реестра Windows. Во-первых, выполняется перечисление подразделов с помощью <xref:Microsoft.Win32.RegistryKey.GetSubKeyNames%2A> открывается с помощью метода, а затем подраздел удостоверения <xref:Microsoft.Win32.RegistryKey.OpenSubKey%2A> метод. Как и корневые ключи, каждый подраздел представлен <xref:Microsoft.Win32.RegistryKey> класса. Наконец, новый <xref:Microsoft.Win32.RegistryKey> объект используется для перечисления пар "ключ значение".  
   
-## Пример  
+## <a name="example"></a>Пример  
   
-### Код  
+### <a name="code"></a>Код  
   
 ```  
 // registry_read.cpp  
@@ -67,14 +69,14 @@ int main( )
 }  
 ```  
   
-## Примечания  
- Класс <xref:Microsoft.Win32.Registry> является контейнером для статических экземпляров класса <xref:Microsoft.Win32.RegistryKey>.  Каждый экземпляр представляет корневой узел реестра.  К этим экземплярам относятся <xref:Microsoft.Win32.Registry.ClassesRoot>, <xref:Microsoft.Win32.Registry.CurrentConfig>, <xref:Microsoft.Win32.Registry.CurrentUser>, <xref:Microsoft.Win32.Registry.LocalMachine> и <xref:Microsoft.Win32.Registry.Users>.  
+## <a name="remarks"></a>Примечания  
+ <xref:Microsoft.Win32.Registry> Класс является контейнером для статических экземпляров <xref:Microsoft.Win32.RegistryKey>. Каждый экземпляр представляет корневой узел реестра. Экземпляры <xref:Microsoft.Win32.Registry.ClassesRoot>, <xref:Microsoft.Win32.Registry.CurrentConfig>, <xref:Microsoft.Win32.Registry.CurrentUser>, <xref:Microsoft.Win32.Registry.LocalMachine>, и <xref:Microsoft.Win32.Registry.Users>.  
   
- Помимо статического свойства, объекты в классе <xref:Microsoft.Win32.Registry> доступны только для чтения.  Кроме того, экземпляры класса <xref:Microsoft.Win32.RegistryKey>, которые создаются для доступа к содержимому объектов реестра, также доступны только для чтения.  Пример переопределения данного поведения см. в разделе [Практическое руководство. Запись данных в реестр Windows](../dotnet/how-to-write-data-to-the-windows-registry-cpp-cli.md).  
+ В дополнение к, статическим, объекты внутри <xref:Microsoft.Win32.Registry> класса доступны только для чтения. Кроме того, экземпляры из <xref:Microsoft.Win32.RegistryKey> объектов класса, которые создаются для доступа к содержимому реестра, также доступны только для чтения. Пример переопределения этого поведения см. в разделе [как: записывать данные в реестре Windows (C + +/ CLI)](../dotnet/how-to-write-data-to-the-windows-registry-cpp-cli.md).  
   
- В классе <xref:Microsoft.Win32.Registry> находятся два дополнительных объекта: <xref:Microsoft.Win32.Registry.DynData> и <xref:Microsoft.Win32.Registry.PerformanceData>.  Оба экземпляра принадлежат классу <xref:Microsoft.Win32.RegistryKey>.  Объект <xref:Microsoft.Win32.Registry.DynData> содержит динамические сведения реестра, которые поддерживаются только операционными системами Windows 98 и Windows Me.  Объект <xref:Microsoft.Win32.Registry.PerformanceData> может использоваться для доступа к данным счетчиков производительности для приложений, использующих "Систему мониторинга производительности Windows".  узел <xref:Microsoft.Win32.Registry.PerformanceData> представляет сведения, которые фактически не сохраняются в реестре, и, следовательно, не могут быть отображены с помощью приложения REGEDIT.  
+ Существует два дополнительных объектов в <xref:Microsoft.Win32.Registry> класса: <xref:Microsoft.Win32.Registry.DynData> и <xref:Microsoft.Win32.Registry.PerformanceData>. Оба являются экземплярами <xref:Microsoft.Win32.RegistryKey> класса. <xref:Microsoft.Win32.Registry.DynData> Объект содержит динамические сведения реестра, который поддерживается только в Windows 98 и Windows Me. <xref:Microsoft.Win32.Registry.PerformanceData> Объект можно использовать для доступа к данным счетчиков производительности для приложений, использующих систему мониторинга производительности Windows. <xref:Microsoft.Win32.Registry.PerformanceData> Узел представляет сведения, которые в действительности не хранятся в реестре и поэтому нельзя просмотреть с помощью Regedit.exe.  
   
-## См. также  
- [Практическое руководство. Запись данных в реестр Windows](../dotnet/how-to-write-data-to-the-windows-registry-cpp-cli.md)   
- [Операции Windows](../dotnet/windows-operations-cpp-cli.md)   
- [программирование .NET с использованием C\+\+\/CLI](../dotnet/dotnet-programming-with-cpp-cli-visual-cpp.md)
+## <a name="see-also"></a>См. также  
+ [Как: запись данных в реестр Windows (C + +/ CLI)](../dotnet/how-to-write-data-to-the-windows-registry-cpp-cli.md)   
+ [Операции Windows (C + +/ CLI)](../dotnet/windows-operations-cpp-cli.md)   
+ [Программирование .NET с использованием C++/CLI (Visual C++)](../dotnet/dotnet-programming-with-cpp-cli-visual-cpp.md)

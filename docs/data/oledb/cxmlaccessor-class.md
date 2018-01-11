@@ -1,68 +1,70 @@
 ---
-title: "Класс CXMLAccessor | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "ATL::CXMLAccessor"
-  - "CXMLAccessor"
-  - "ATL.CXMLAccessor"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "CXMLAccessor - класс"
+title: "Класс CXMLAccessor | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- ATL::CXMLAccessor
+- CXMLAccessor
+- ATL.CXMLAccessor
+dev_langs: C++
+helpviewer_keywords: CXMLAccessor class
 ms.assetid: c88c082c-ec2f-4351-8947-a330b15e448a
-caps.latest.revision: 12
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 12
+caps.latest.revision: "12"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: 96620f287522168cd7b6b78d43163e8c4bb64217
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 12/21/2017
 ---
-# Класс CXMLAccessor
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Позволяет доступа к источникам данных в виде строковых данных, когда неизвестна схема хранилища данных \(базовая структура\).  
+# <a name="cxmlaccessor-class"></a>Класс CXMLAccessor
+Позволяет доступ к источникам данных как строковые данные, когда схема хранилища данных (базовая структура).  
   
-## Синтаксис  
+## <a name="syntax"></a>Синтаксис  
   
 ```  
 class CXMLAccessor : public CDynamicStringAccessorW  
 ```  
   
-## Члены  
+## <a name="members"></a>Участники  
   
-### Методы  
+### <a name="methods"></a>Методы  
   
 |||  
 |-|-|  
-|[GetXMLColumnData](../Topic/CXMLAccessor::GetXMLColumnData.md)|Извлекает сведения о столбцах.|  
-|[GetXMLRowData](../Topic/CXMLAccessor::GetXMLRowData.md)|Извлекает все содержимое таблицы строками.|  
+|[GetXMLColumnData](../../data/oledb/cxmlaccessor-getxmlcolumndata.md)|Извлекает сведения о столбце.|  
+|[GetXMLRowData](../../data/oledb/cxmlaccessor-getxmlrowdata.md)|Извлекает все содержимое таблицы по строкам.|  
   
-## Заметки  
- Однако `CXMLAccessor` отличается от `CDynamicStringAccessorW` поскольку она преобразует все данные, получаемые доступ из хранилища данных, что представляют собой \(помеченные тегами\) данные.  Это особенно полезно для вывода в зависимым к страницам.  Имена тегов XML соответствовали именам столбцов хранилища данных насколько это возможно.  
+## <a name="remarks"></a>Примечания  
+ Тем не менее `CXMLAccessor` отличается от `CDynamicStringAccessorW` в том, что он преобразует все данные из хранилища данных в виде XML-данных (с тегом). Это особенно полезно для выхода на веб-страницы, использующие XML. Имена тегов XML будет как можно точнее соответствовать имена столбцов в хранилище данных.  
   
- Используйте методы `CDynamicAccessor` для получения информации о столбцах.  Информация о столбцах используется для динамического создания метода доступа во время выполнения.  
+ Используйте `CDynamicAccessor` методов, чтобы получить сведения о столбцах. Используйте эти сведения для столбца для динамического создания метода доступа во время выполнения.  
   
- Информация о столбцах хранится в буфере, созданном и управляемым данным классом.  Получение информации о столбцах с помощью [GetXMLColumnData](../Topic/CXMLAccessor::GetXMLColumnData.md) или получить данные столбца строками с помощью [GetXMLRowData](../Topic/CXMLAccessor::GetXMLRowData.md).  
+ Сведения о столбце хранится в буфере, созданном и управляемым данным классом. Получить сведения о столбце с помощью [GetXMLColumnData](../../data/oledb/cxmlaccessor-getxmlcolumndata.md) или получить данные столбцов, строк с помощью [GetXMLRowData](../../data/oledb/cxmlaccessor-getxmlrowdata.md).  
   
-## Пример  
- [!code-cpp[NVC_OLEDB_Consumer#14](../../data/oledb/codesnippet/CPP/cxmlaccessor-class_1.cpp)]  
+## <a name="example"></a>Пример  
+ [!code-cpp[NVC_OLEDB_Consumer#14](../../data/oledb/codesnippet/cpp/cxmlaccessor-class_1.cpp)]  
   
-## Требования  
- **Заголовок**: atldbcli.h  
+## <a name="requirements"></a>Требования  
+ **Заголовок:**atldbcli.h  
   
-## См. также  
- [Шаблоны потребителей OLE DB](../../data/oledb/ole-db-consumer-templates-cpp.md)   
+## <a name="see-also"></a>См. также  
+ [Шаблоны потребителя OLE DB](../../data/oledb/ole-db-consumer-templates-cpp.md)   
  [Ссылка на шаблоны потребителя OLE DB](../../data/oledb/ole-db-consumer-templates-reference.md)   
- [Класс CAccessor](../Topic/CAccessor%20Class.md)   
- [Класс CDynamicAccessor](../../data/oledb/cdynamicaccessor-class.md)   
+ [CAccessor-класс](../../data/oledb/caccessor-class.md)   
+ [CDynamicAccessor-класс](../../data/oledb/cdynamicaccessor-class.md)   
  [Класс CDynamicParameterAccessor](../../data/oledb/cdynamicparameteraccessor-class.md)   
  [Класс CDynamicStringAccessor](../../data/oledb/cdynamicstringaccessor-class.md)   
  [Класс CDynamicStringAccessorA](../../data/oledb/cdynamicstringaccessora-class.md)   
  [Класс CDynamicStringAccessorW](../../data/oledb/cdynamicstringaccessorw-class.md)   
- [Класс CManualAccessor](../Topic/CManualAccessor%20Class.md)
+ [Класс CManualAccessor](../../data/oledb/cmanualaccessor-class.md)

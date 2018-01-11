@@ -4,39 +4,29 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-windows
+ms.technology: cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: reference
-dev_langs:
-- C++
-helpviewer_keywords:
-- macros, error reporting
+f1_keywords:
+- atldef/ATL::_ATL_DEBUG_INTERFACES
+- atldef/ATL::_ATL_DEBUG_QI
+- atldef/ATL::ATLASSERT
+- afx/ATL::ATLENSURE
+- atltrace/ATL::ATLTRACENOTIMPL
+- atltrace/ATL::ATLTRACE
+dev_langs: C++
+helpviewer_keywords: macros, error reporting
 ms.assetid: 4da9b87f-ec5c-4a32-ab93-637780909b9d
-caps.latest.revision: 18
+caps.latest.revision: "18"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: d2d39abf526a58b8442107b5ee816f316ae841f5
-ms.openlocfilehash: f59c09b7eb1621094b170d3bed31b5891081194e
-ms.contentlocale: ru-ru
-ms.lasthandoff: 03/31/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: 9098b944f70ab4e4448fe40aa2347b0128e6e1a7
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="debugging-and-error-reporting-macros"></a>Макросы, отладка и отчеты об ошибках
 Эти макросы предоставляют полезные средства отладки и трассировки.  
@@ -52,7 +42,7 @@ ms.lasthandoff: 03/31/2017
 |[ATLTRACE2](#atltrace2)|Сообщает о предупреждениях для выходного устройства, например окна отладчика, в соответствии с указанных флагов и уровней.|  
   
 ##  <a name="_atl_debug_interfaces"></a>_ATL_DEBUG_INTERFACES  
- Определить этот макрос перед включением файлов заголовка ATL для трассировки всех `AddRef` и **выпуска** вызывает по интерфейсам компонентов в окне вывода.  
+ Определить этот макрос перед включением любые файлы заголовков ATL. для отслеживания всех `AddRef` и **выпуска** вызывает по интерфейсам компонентов в окне вывода.  
   
 ```
 #define _ATL_DEBUG_INTERFACES
@@ -136,7 +126,7 @@ ATLENSURE_THROW(booleanExpression, hr);
  Разница между **ATLENSURE** и `ATLASSERT` является то, что **ATLENSURE** вызывает исключение в выпуске также создает как в отладочных построениях.  
   
 ### <a name="example"></a>Пример  
- [!code-cpp[NVC_ATL_Utilities #108](../../atl/codesnippet/cpp/debugging-and-error-reporting-macros_1.cpp)]  
+ [!code-cpp[NVC_ATL_Utilities#108](../../atl/codesnippet/cpp/debugging-and-error-reporting-macros_1.cpp)]  
 
 ## <a name="requirements"></a>Требования  
  **Заголовок:** afx.h  
@@ -156,7 +146,7 @@ ATLTRACENOTIMPL(funcname);
  В сборках выпуска возвращает **E_NOTIMPL**.  
   
 ### <a name="example"></a>Пример  
- [!code-cpp[NVC_ATL_Utilities #127](../../atl/codesnippet/cpp/debugging-and-error-reporting-macros_2.cpp)]  
+ [!code-cpp[NVC_ATL_Utilities#127](../../atl/codesnippet/cpp/debugging-and-error-reporting-macros_2.cpp)]  
   
 ## <a name="requirements"></a>Требования  
  **Заголовок:** atltrace.h 
@@ -221,7 +211,7 @@ ATLTRACE2(
   
 ### <a name="atl-trace-flags"></a>Флаги трассировки ATL  
   
-|Категория ATL|Описание|  
+|Категория ATL|Описание:|  
 |------------------|-----------------|  
 |`atlTraceGeneral`|Отчеты на все приложения ATL. По умолчанию.|  
 |`atlTraceCOM`|Отчеты в методах COM.|  
@@ -239,7 +229,7 @@ ATLTRACE2(
   
 ### <a name="mfc-trace-flags"></a>Флаги трассировки MFC  
   
-|Категория MFC|Описание|  
+|Категория MFC|Описание:|  
 |------------------|-----------------|  
 |**traceAppMsg**|Общее назначение сообщения MFC. Рекомендуется всегда.|  
 |**traceDumpContext**|Сообщения от [CDumpContext](../../mfc/reference/cdumpcontext-class.md).|  
@@ -254,13 +244,13 @@ ATLTRACE2(
   
  Чтобы объявить категория пользовательской трассировки, объявить глобальный экземпляр класса `CTraceCategory` следующим образом:  
   
- [!code-cpp[NVC_ATL_Utilities #109](../../atl/codesnippet/cpp/debugging-and-error-reporting-macros_3.cpp)]  
+ [!code-cpp[NVC_ATL_Utilities#109](../../atl/codesnippet/cpp/debugging-and-error-reporting-macros_3.cpp)]  
   
  Имя категории `MY_CATEGORY` в этом примере — необходимо указать имя `category` параметра. Первый параметр — имя категории, которое будет отображаться в инструмент трассировки ATL/MFC. Второй параметр является уровень трассировки по умолчанию. Этот параметр является необязательным, и уровень трассировки по умолчанию — 0.  
   
  Чтобы использовать пользовательские категории:  
   
- [!code-cpp[NVC_ATL_Utilities #110](../../atl/codesnippet/cpp/debugging-and-error-reporting-macros_4.cpp)]  
+ [!code-cpp[NVC_ATL_Utilities#110](../../atl/codesnippet/cpp/debugging-and-error-reporting-macros_4.cpp)]  
   
  Можно указать, что для фильтрации сообщений трассировки, вставить определения для этих макросов в файле Stdafx.h до `#include <atlbase.h>` инструкции.  
   
@@ -275,9 +265,8 @@ ATLTRACE2(
  **ATLTRACE** и `ATLTRACE2` имеют одинаковое поведение **ATLTRACE** включена для обратной совместимости.  
   
 ### <a name="example"></a>Пример  
- [!code-cpp[NVC_ATL_Utilities #111](../../atl/codesnippet/cpp/debugging-and-error-reporting-macros_5.cpp)]  
+ [!code-cpp[NVC_ATL_Utilities#111](../../atl/codesnippet/cpp/debugging-and-error-reporting-macros_5.cpp)]  
   
 ## <a name="see-also"></a>См. также  
  [Макросы](../../atl/reference/atl-macros.md)   
  [Глобальные функции для отладки и создания отчетов об ошибках](../../atl/reference/debugging-and-error-reporting-global-functions.md)
-

@@ -1,41 +1,42 @@
 ---
-title: "vector::const_iterator (STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::vector::const_iterator"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "const_iterator - элемент [STL/CLR]"
+title: "Vector::const_iterator (STL/CLR) | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::vector::const_iterator
+dev_langs: C++
+helpviewer_keywords: const_iterator member [STL/CLR]
 ms.assetid: 09c0ae0b-248b-463c-8f57-59c77eba1eaa
-caps.latest.revision: 16
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 14
+caps.latest.revision: "16"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: 95b60c25e7da1c6196f6454df227c8e556b65318
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 12/21/2017
 ---
-# vector::const_iterator (STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="vectorconstiterator-stlclr"></a>vector::const_iterator (STL/CLR)
 Тип постоянного итератора для управляемой последовательности.  
   
-## Синтаксис  
+## <a name="syntax"></a>Синтаксис  
   
 ```  
 typedef T2 const_iterator;  
 ```  
   
-## Заметки  
- Описывает тип объекта неспецифицированного типа `T2`, который можно использовать в качестве константной произвольно\-доступный итератор для контролируемой последовательности.  
+## <a name="remarks"></a>Примечания  
+ Тип описывает объект незаданного типа `T2` , можно использовать в качестве постоянного итератора произвольного доступа для управляемой последовательности.  
   
-## Пример  
+## <a name="example"></a>Пример  
   
 ```  
 // cliext_vector_const_iterator.cpp   
@@ -59,12 +60,15 @@ int main()
   
 ```  
   
-  **a b c**   
-## Требования  
- **Заголовок:**\<cliext\/vector\>  
+```Output  
+a b c  
+```  
+  
+## <a name="requirements"></a>Требования  
+ **Заголовок:** \<cliext/vector >  
   
  **Пространство имен:** cliext  
   
-## См. также  
- [вектор](../dotnet/vector-stl-clr.md)   
- [vector::iterator](../dotnet/vector-iterator-stl-clr.md)
+## <a name="see-also"></a>См. также  
+ [вектор (STL/CLR)](../dotnet/vector-stl-clr.md)   
+ [vector::iterator (STL/CLR)](../dotnet/vector-iterator-stl-clr.md)

@@ -16,11 +16,12 @@ caps.latest.revision: "11"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: f70ef6431f8dab37b6df185efe1c7494ff0d9b1f
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: d3c4d37dfe5182e375e7581d6f5ef8188b922e5d
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="how-to-convert-an-openmp-loop-that-uses-cancellation-to-use-the-concurrency-runtime"></a>Практическое руководство. Преобразование цикла OpenMP, использующего отмену для использования среды выполнения с параллелизмом
 В некоторых параллельных циклах не требуют выполнения всех итераций. Например алгоритм, который выполняет поиск значения можно завершить работу, когда значение найдено. OpenMP не предоставляет механизм для выхода из параллельного цикла. Тем не менее можно использовать флаг или логическое значение для включения итерации цикла, чтобы указать, что решение найдено. Среда выполнения с параллелизмом предоставляет функциональность, позволяющую одной задаче отменять другие задачи, которые еще не запущен.  

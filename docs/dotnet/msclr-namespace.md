@@ -23,11 +23,14 @@ caps.latest.revision: "4"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: c250a340bc840c824eea7501d5aa85705f2b83ef
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: 1eaba40c8aa6bf2227d0b53cb115793391e810e7
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="msclr-namespace"></a>Пространство имен msclr
 `msclr` Пространство имен содержит классы библиотека поддержки C++. Дополнительные сведения об этих классах см. в разделе [библиотека поддержки C++](../dotnet/cpp-support-library.md).  

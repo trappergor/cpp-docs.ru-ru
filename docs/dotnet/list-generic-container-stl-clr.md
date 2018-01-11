@@ -1,32 +1,33 @@
 ---
-title: "list::generic_container (STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::list::generic_container"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "generic_container - элемент [STL/CLR]"
+title: "List::generic_container (STL/CLR) | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::list::generic_container
+dev_langs: C++
+helpviewer_keywords: generic_container member [STL/CLR]
 ms.assetid: 1a8b708e-3c75-4551-a86e-5b50d6be706a
-caps.latest.revision: 15
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 13
+caps.latest.revision: "15"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: 5f04032a3777e9537a7565f479d2a3dce5b407cb
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 12/21/2017
 ---
-# list::generic_container (STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="listgenericcontainer-stlclr"></a>list::generic_container (STL/CLR)
 Тип универсального интерфейса для контейнера.  
   
-## Синтаксис  
+## <a name="syntax"></a>Синтаксис  
   
 ```  
 typedef Microsoft::VisualC::StlClr::  
@@ -34,10 +35,10 @@ typedef Microsoft::VisualC::StlClr::
     generic_container;  
 ```  
   
-## Заметки  
- Описывает тип универсальный интерфейс для этого класса контейнера шаблона.  
+## <a name="remarks"></a>Примечания  
+ Тип, описывающий универсальный интерфейс для класса контейнера шаблона.  
   
-## Пример  
+## <a name="example"></a>Пример  
   
 ```  
 // cliext_list_generic_container.cpp   
@@ -81,18 +82,21 @@ int main()
   
 ```  
   
-  **a b c**  
- **a b c**  
- **B C d**  
- **B C, d, e**   
-## Требования  
- **Заголовок:**\<cliext\/list\>  
+```Output  
+a b c  
+a b c  
+a b c d  
+a b c d e  
+```  
+  
+## <a name="requirements"></a>Требования  
+ **Заголовок:** \<cliext/list >  
   
  **Пространство имен:** cliext  
   
-## См. также  
+## <a name="see-also"></a>См. также  
  <xref:Microsoft.VisualC.StlClr.IList%601>   
- [list](../dotnet/list-stl-clr.md)   
- [list::generic\_iterator](../Topic/list::generic_iterator%20\(STL-CLR\).md)   
- [list::generic\_reverse\_iterator](../dotnet/list-generic-reverse-iterator-stl-clr.md)   
- [list::generic\_value](../dotnet/list-generic-value-stl-clr.md)
+ [список (STL/CLR)](../dotnet/list-stl-clr.md)   
+ [List::generic_iterator (STL/CLR)](../dotnet/list-generic-iterator-stl-clr.md)   
+ [List::generic_reverse_iterator (STL/CLR)](../dotnet/list-generic-reverse-iterator-stl-clr.md)   
+ [list::generic_value (STL/CLR)](../dotnet/list-generic-value-stl-clr.md)

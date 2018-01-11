@@ -1,35 +1,37 @@
 ---
-title: "lock::lock | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "lock::lock"
-  - "lock.lock"
-  - "msclr.lock.lock"
-  - "msclr::lock::lock"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "конструктор блокировки"
+title: "Lock::LOCK | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords:
+- lock::lock
+- lock.lock
+- msclr.lock.lock
+- msclr::lock::lock
+dev_langs: C++
+helpviewer_keywords: lock constructor
 ms.assetid: c9ad6c71-36ec-49c5-8ebd-f5c3a0cc94f0
-caps.latest.revision: 15
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 13
+caps.latest.revision: "15"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: 5148da4421b24a64dca97288975af42b9688e4ae
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 12/21/2017
 ---
-# lock::lock
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Создает объект `lock`, при необходимости, чтобы получить блокировку навсегда, для конкретно указанного промежутка времени, или не происходит вообще.  
+# <a name="locklock"></a>lock::lock
+Создает `lock` объекта, при необходимости ожидания бесконечно, получения блокировки на указанный период времени, или совсем.  
   
-## Синтаксис  
+## <a name="syntax"></a>Синтаксис  
   
 ```  
 template<class T> lock(  
@@ -49,27 +51,27 @@ template<class T> lock(
 );  
 ```  
   
-#### Параметры  
+#### <a name="parameters"></a>Параметры  
  `_object`  
- Блокируемый объект.  
+ Объект должен быть заблокирован.  
   
  `_timeout`  
- Значение времени ожидания в миллисекундах или как <xref:System.TimeSpan>.  
+ Значение времени ожидания в миллисекундах, или как <xref:System.TimeSpan>.  
   
-## Исключения  
- Создает <xref:System.ApplicationException> если метод блокировки не происходит перед ожиданием.  
+## <a name="exceptions"></a>Исключения  
+ Создает <xref:System.ApplicationException> Если получения блокировки не происходит до истечения времени ожидания.  
   
-## Заметки  
- Первые 3 формы конструктора пытаются получить блокировку на `_object` в определенной точки ожидания \(или <xref:System.Threading.Timeout.Infinite>, если не задан\).  
+## <a name="remarks"></a>Примечания  
+ Попытка получить блокировку на первые три формы конструктора `_object` в течение заданного периода ожидания (или <xref:System.Threading.Timeout.Infinite> Если ничего не указано).  
   
- Четвертая форма конструктора не получает блокировку на `_object`.  `lock_later` элемент [Перечисление lock\_when](../dotnet/lock-when-enum.md).  Используйте [lock::acquire](../dotnet/lock-acquire.md) или [lock::try\_acquire](../Topic/lock::try_acquire.md), чтобы получить блокировку в этом случае.  
+ Четвертый конструктор в форме получает блокировку на `_object`. `lock_later`является членом [перечисление lock_when](../dotnet/lock-when-enum.md). Используйте [lock::acquire](../dotnet/lock-acquire.md) или [lock::try_acquire](../dotnet/lock-try-acquire.md) в этом случае получения блокировки.  
   
- Блокировка будет автоматически, если деструктор вызывается.  
+ Блокировка освобождается автоматически при вызове деструктора.  
   
- Аргумент `_object` не может иметь значение <xref:System.Threading.ReaderWriterLock>.  Если существует, приведет к ошибке компилятора.  
+ Параметр `_object` не может иметь значение <xref:System.Threading.ReaderWriterLock>.  Если это так, приведет к ошибке компилятора.  
   
-## Пример  
- В этом примере используется единственный экземпляр класса через несколько потоков.  Класс использует блокировку для себя, чтобы обеспечить доступ к его внутренним данным согласуются для каждого потока.  Поток основного приложения использует блокировку на том же экземпляре класса периодически для проверки, чтобы определить наличие рабочие потоки все еще существуют, и ожидает, чтобы оставить, пока все рабочие потоки не будут завершения своих задач.  
+## <a name="example"></a>Пример  
+ Этот пример использует один экземпляр класса в нескольких потоках.  Этот класс использует блокировку на себя для обеспечения согласованности для каждого потока доступов к внутренних данных.  Основной поток приложения использует блокировку на том же экземпляре класса для периодической проверки ли все рабочие потоки по-прежнему существует и ожиданий для выхода, пока все рабочие потоки завершили свои задачи.  
   
 ```  
 // msl_lock_lock.cpp  
@@ -143,24 +145,27 @@ int main() {
 }  
 ```  
   
-  **В потоке 3, счетчик \= 0**  
-**В потоке 3, счетчик \= 10**  
-**В потоке 5, счетчик \= 0**  
-**В потоке 5, счетчик \= 10**  
-**В потоке 7, счетчик \= 0**  
-**В потоке 7, счетчик \= 10**  
-**В потоке 4, счетчик \= 0**  
-**В потоке 4, счетчик \= 10**  
-**В потоке 6, счетчик \= 0**  
-**В потоке 6, счетчик \= 10**  
-**Все завершения потоков.**   
-## Требования  
- **Файл заголовка**\<msclr\\lock.h\>  
+```Output  
+In thread 3, Counter = 0  
+In thread 3, Counter = 10  
+In thread 5, Counter = 0  
+In thread 5, Counter = 10  
+In thread 7, Counter = 0  
+In thread 7, Counter = 10  
+In thread 4, Counter = 0  
+In thread 4, Counter = 10  
+In thread 6, Counter = 0  
+In thread 6, Counter = 10  
+All threads completed.  
+```  
+  
+## <a name="requirements"></a>Требования  
+ **Файл заголовка** \<msclr\lock.h >  
   
  **Пространство имен** msclr  
   
-## См. также  
+## <a name="see-also"></a>См. также  
  [Блокировка членов](../dotnet/lock-members.md)   
- [lock::~lock](../dotnet/lock-tilde-lock.md)   
- [lock::acquire](../dotnet/lock-acquire.md)   
- [lock::try\_acquire](../Topic/lock::try_acquire.md)
+ [Блокировка:: ~ блокировки](../dotnet/lock-tilde-lock.md)   
+ [Lock::acquire](../dotnet/lock-acquire.md)   
+ [lock::try_acquire](../dotnet/lock-try-acquire.md)

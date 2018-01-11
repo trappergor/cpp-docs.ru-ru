@@ -1,41 +1,42 @@
 ---
-title: "vector::capacity (STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::vector::capacity"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "capacity - член [STL/CLR]"
+title: "Vector::Capacity (STL/CLR) | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::vector::capacity
+dev_langs: C++
+helpviewer_keywords: capacity member [STL/CLR]
 ms.assetid: f82d8da9-8b4d-4288-8d18-8e9ca5911d87
-caps.latest.revision: 17
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 15
+caps.latest.revision: "17"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: f8b18678545db2782d86b6c8f65a775d016d7e19
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 12/21/2017
 ---
-# vector::capacity (STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Возвращает объем пространства, выделенного для хранения контейнера.  
+# <a name="vectorcapacity-stlclr"></a>vector::capacity (STL/CLR)
+Показывает размер хранилища, выделенного для контейнера.  
   
-## Синтаксис  
+## <a name="syntax"></a>Синтаксис  
   
 ```  
 size_type capacity();  
 ```  
   
-## Заметки  
- Функция\-член возвращает хранилище выбранное для хранения контролируемая последовательность значений, по крайней мере большое, как [vector::size](../dotnet/vector-size-stl-clr.md)`()`.  Он используется для определения количества контейнер может вырасти до его следует перераспределить хранилище для контролируемой последовательности.  
+## <a name="remarks"></a>Примечания  
+ Функция-член возвращает хранилище, выделенное в данный момент для управляемой последовательности, значение, по крайней мере [vector::size (STL/CLR)](../dotnet/vector-size-stl-clr.md)`()`. Используется, чтобы определить, сколько контейнер может увеличиваться до его необходимо перераспределить хранилища для управляемой последовательности.  
   
-## Пример  
+## <a name="example"></a>Пример  
   
 ```  
 // cliext_vector_capacity.cpp   
@@ -66,17 +67,20 @@ int main()
   
 ```  
   
-  **a b c**  
-**capacity\(\) \= 4, ОДОБРЕННЫЙ \= true**  
-**capacity\(\) \= 9, ОДОБРЕННЫЙ \= true**   
-## Описание  
- Обратите внимание, что действительные емкости, могут отличаться от значений, показанных здесь, пока весь отчет испытаниям `ok` true.  
+```Output  
+ a b c  
+capacity() = 4, ok = True  
+capacity() = 9, ok = True  
+```  
   
-## Требования  
- **Заголовок:**\<cliext\/vector\>  
+## <a name="description"></a>Описание:  
+ Обратите внимание, что фактический емкости может отличаться от значений, приведенных здесь так много времени, как все `ok` тесты отчетов значение true.  
+  
+## <a name="requirements"></a>Требования  
+ **Заголовок:** \<cliext/vector >  
   
  **Пространство имен:** cliext  
   
-## См. также  
- [вектор](../dotnet/vector-stl-clr.md)   
- [vector::reserve](../Topic/vector::reserve%20\(STL-CLR\).md)
+## <a name="see-also"></a>См. также  
+ [вектор (STL/CLR)](../dotnet/vector-stl-clr.md)   
+ [vector::reserve (STL/CLR)](../dotnet/vector-reserve-stl-clr.md)

@@ -1,45 +1,46 @@
 ---
-title: "hash_multimap::equal_range (STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::hash_multimap::equal_range"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "equal_range - член [STL/CLR]"
+title: "hash_multimap::equal_range (STL/CLR) | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::hash_multimap::equal_range
+dev_langs: C++
+helpviewer_keywords: equal_range member [STL/CLR]
 ms.assetid: 3ea11e31-d4af-4d2e-a80b-eafe12c97d0c
-caps.latest.revision: 15
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 13
+caps.latest.revision: "15"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: 298292aba489ac30ebe7e66ff621bb9f1019e7b1
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 12/21/2017
 ---
-# hash_multimap::equal_range (STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="hashmultimapequalrange-stlclr"></a>hash_multimap::equal_range (STL/CLR)
 Находит диапазон, соответствующий указанному ключу.  
   
-## Синтаксис  
+## <a name="syntax"></a>Синтаксис  
   
 ```  
 cliext::pair<iterator, iterator> equal_range(key_type key);  
 ```  
   
-#### Параметры  
- key  
- Значение ключа, которое необходимо найти.  
+#### <a name="parameters"></a>Параметры  
+ клавиша  
+ Искомое значение ключа.  
   
-## Заметки  
- Функция\-член возвращает пару итераторов `cliext::pair<iterator, iterator>(` [hash\_multimap::lower\_bound](../Topic/hash_multimap::lower_bound%20\(STL-CLR\).md)`(``key``),` [hash\_multimap::upper\_bound](../Topic/hash_multimap::upper_bound%20\(STL-CLR\).md)`(``key``))`.  Он используется для определения диапазона элементов в контролируемой последовательности, соответствующие указанному ключу.  
+## <a name="remarks"></a>Примечания  
+ Функция-член возвращает пару итераторов `cliext::pair<iterator, iterator>(` [hash_multimap::lower_bound (STL/CLR)](../dotnet/hash-multimap-lower-bound-stl-clr.md) `(key),` [hash_multimap::upper_bound (STL/CLR)](../dotnet/hash-multimap-upper-bound-stl-clr.md)`(key))`. Используется для определения диапазона элементов в данный момент в управляемой последовательности, соответствующие заданному ключу.  
   
-## Пример  
+## <a name="example"></a>Пример  
   
 ```  
 // cliext_hash_multimap_equal_range.cpp   
@@ -76,17 +77,20 @@ int main()
   
 ```  
   
-  **\[1\] \[2\] \[BC — 3\]**  
-**equal\_range L'x \(пустое\) \= true**  
- **\[B 2\]**   
-## Требования  
- **Заголовок:**\<cliext\/hash\_map\>  
+```Output  
+ [a 1] [b 2] [c 3]  
+equal_range(L'x') empty = True  
+ [b 2]  
+```  
+  
+## <a name="requirements"></a>Требования  
+ **Заголовок:** \<cliext/hash_map >  
   
  **Пространство имен:** cliext  
   
-## См. также  
- [hash\_multimap](../dotnet/hash-multimap-stl-clr.md)   
- [hash\_multimap::count](../dotnet/hash-multimap-count-stl-clr.md)   
- [hash\_multimap::find](../dotnet/hash-multimap-find-stl-clr.md)   
- [hash\_multimap::lower\_bound](../Topic/hash_multimap::lower_bound%20\(STL-CLR\).md)   
- [hash\_multimap::upper\_bound](../Topic/hash_multimap::upper_bound%20\(STL-CLR\).md)
+## <a name="see-also"></a>См. также  
+ [hash_multimap (STL/CLR)](../dotnet/hash-multimap-stl-clr.md)   
+ [hash_multimap::Count (STL/CLR)](../dotnet/hash-multimap-count-stl-clr.md)   
+ [hash_multimap::Find (STL/CLR)](../dotnet/hash-multimap-find-stl-clr.md)   
+ [hash_multimap::lower_bound (STL/CLR)](../dotnet/hash-multimap-lower-bound-stl-clr.md)   
+ [hash_multimap::upper_bound (STL/CLR)](../dotnet/hash-multimap-upper-bound-stl-clr.md)

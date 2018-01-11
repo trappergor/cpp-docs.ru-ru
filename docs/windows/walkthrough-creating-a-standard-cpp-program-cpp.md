@@ -19,11 +19,14 @@ caps.latest.revision: "36"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 67b44b8f21f2c8deea7cd6b9c89e87004e088d63
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: 52066be1d67bddb7173841e9df6c5013c86ac0dd
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="walkthrough-creating-a-standard-c-program-c"></a>Пошаговое руководство: Создание стандартной программы C++ (C++)
 Для создания программ Standard C++ можно использовать Visual C++ в среде разработки Visual Studio (IDE). Выполнив действия, описанные в этом пошаговом руководстве, можно создать проект, добавьте в проект новый файл, измените файл для добавления кода C++ и последующей компиляции и запустите программу с помощью [!INCLUDE[vsprvs](../assembler/masm/includes/vsprvs_md.md)].  
@@ -74,7 +77,7 @@ ms.lasthandoff: 10/24/2017
   
      Если используется пример программы, окно командной строки отображается и показывает, находятся ли определенные целые числа в наборе.  
   
-## <a name="next-steps"></a>Дальнейшие действия  
+## <a name="next-steps"></a>Следующие шаги  
  **Предыдущие:** [консольных приложений в Visual C++](../windows/console-applications-in-visual-cpp.md). **Далее:**[Пошаговое руководство: компиляция программы на машинном коде C++ в командной строке](../build/walkthrough-compiling-a-native-cpp-program-on-the-command-line.md).  
   
 ## <a name="see-also"></a>См. также  

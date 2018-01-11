@@ -1,41 +1,42 @@
 ---
-title: "priority_queue::empty (STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::priority_queue::empty"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "empty - член [STL/CLR]"
+title: "priority_queue::Empty (STL/CLR) | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::priority_queue::empty
+dev_langs: C++
+helpviewer_keywords: empty member [STL/CLR]
 ms.assetid: bb2bc4cf-395f-4c4f-b432-550b85e1865d
-caps.latest.revision: 17
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 15
+caps.latest.revision: "17"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: 7bb5d02c3a6fb473cc94ad7c365e5a8157edcfb1
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 12/21/2017
 ---
-# priority_queue::empty (STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Тесты отсутствуют ли какие\-либо элементы.  
+# <a name="priorityqueueempty-stlclr"></a>priority_queue::empty (STL/CLR)
+Проверяет отсутствие элементов.  
   
-## Синтаксис  
+## <a name="syntax"></a>Синтаксис  
   
 ```  
 bool empty();  
 ```  
   
-## Заметки  
- Функция\-член возвращает значение true для пустой контролируемой последовательности.  Он эквивалентен [priority\_queue::size](../dotnet/priority-queue-size-stl-clr.md)`() == 0`.  Он используется для выполнения ли priority\_queue пусто.  
+## <a name="remarks"></a>Примечания  
+ Эта функция-член возвращает значение true для пустой управляемой последовательности. Это эквивалентно [priority_queue::size (STL/CLR)](../dotnet/priority-queue-size-stl-clr.md)`() == 0`. Используется, чтобы проверить, является ли пустым priority_queue.  
   
-## Пример  
+## <a name="example"></a>Пример  
   
 ```  
 // cliext_priority_queue_empty.cpp   
@@ -68,16 +69,19 @@ int main()
   
 ```  
   
-  **B C.**  
-**size\(\) \= 3**  
-**empty\(\) \= false**  
-**size\(\) \= 0**  
-**empty\(\) \= true**   
-## Требования  
- **Заголовок:**\<cliext\/queue\>  
+```Output  
+ c a b  
+size() = 3  
+empty() = False  
+size() = 0  
+empty() = True  
+```  
+  
+## <a name="requirements"></a>Требования  
+ **Заголовок:** \<cliext/очереди >  
   
  **Пространство имен:** cliext  
   
-## См. также  
- [priority\_queue](../Topic/priority_queue%20\(STL-CLR\).md)   
- [priority\_queue::size](../dotnet/priority-queue-size-stl-clr.md)
+## <a name="see-also"></a>См. также  
+ [priority_queue (STL/CLR)](../dotnet/priority-queue-stl-clr.md)   
+ [priority_queue::size (STL/CLR)](../dotnet/priority-queue-size-stl-clr.md)

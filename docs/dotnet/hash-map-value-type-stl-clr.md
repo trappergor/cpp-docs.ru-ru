@@ -1,41 +1,42 @@
 ---
-title: "hash_map::value_type (STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::hash_map::value_type"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "value_type - элемент [STL/CLR]"
+title: "hash_map::value_type (STL/CLR) | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::hash_map::value_type
+dev_langs: C++
+helpviewer_keywords: value_type member [STL/CLR]
 ms.assetid: 7aa29304-5e52-46be-b50e-45e11401764e
-caps.latest.revision: 14
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 12
+caps.latest.revision: "14"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: d0bdd560bd122a78c632b62150140c30487f18b2
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 12/21/2017
 ---
-# hash_map::value_type (STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="hashmapvaluetype-stlclr"></a>hash_map::value_type (STL/CLR)
 Тип элемента.  
   
-## Синтаксис  
+## <a name="syntax"></a>Синтаксис  
   
 ```  
 typedef generic_value value_type;  
 ```  
   
-## Заметки  
+## <a name="remarks"></a>Примечания  
  Тип является синонимом `generic_value`.  
   
-## Пример  
+## <a name="example"></a>Пример  
   
 ```  
 // cliext_hash_map_value_type.cpp   
@@ -62,14 +63,17 @@ int main()
   
 ```  
   
-  **\[1\] \[2\] \[BC — 3\]**   
-## Требования  
- **Заголовок:**\<cliext\/hash\_map\>  
+```Output  
+[a 1] [b 2] [c 3]  
+```  
+  
+## <a name="requirements"></a>Требования  
+ **Заголовок:** \<cliext/hash_map >  
   
  **Пространство имен:** cliext  
   
-## См. также  
- [hash\_map](../dotnet/hash-map-stl-clr.md)   
- [hash\_map::const\_reference](../dotnet/hash-map-const-reference-stl-clr.md)   
- [hash\_map::key\_type](../Topic/hash_map::key_type%20\(STL-CLR\).md)   
- [hash\_map::reference](../dotnet/hash-map-reference-stl-clr.md)
+## <a name="see-also"></a>См. также  
+ [hash_map (STL/CLR)](../dotnet/hash-map-stl-clr.md)   
+ [hash_map::const_reference (STL/CLR)](../dotnet/hash-map-const-reference-stl-clr.md)   
+ [hash_map::key_type (STL/CLR)](../dotnet/hash-map-key-type-stl-clr.md)   
+ [hash_map::reference (STL/CLR)](../dotnet/hash-map-reference-stl-clr.md)

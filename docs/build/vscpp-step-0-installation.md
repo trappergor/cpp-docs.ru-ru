@@ -1,8 +1,8 @@
 ---
-title: "Шаг 0 - поддержка Установка C++ в Visual Studio | Документы Microsoft"
+title: "Установка поддержки C++ в Visual Studio | Документы Microsoft"
 description: "Установить поддержку Visual C++ в Visual Studio"
 ms.custom: mvc
-ms.date: 10/17/2017
+ms.date: 12/12/2017
 ms.topic: get-started-article
 ms.technology: devlang-C++
 ms.devlang: C++
@@ -11,11 +11,12 @@ ms.assetid: 45138d70-719d-42dc-90d7-1d0ca31a2f54
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 840f23d894e8aacc53a735fa8e1c25a671ed3a2a
-ms.sourcegitcommit: 69632887f7a85f4841c49b4c1353d3144927a52c
+ms.workload: cplusplus
+ms.openlocfilehash: b895569e5535fb05c1e2383df224f149815dd47f
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/11/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="install-c-support-in-visual-studio"></a>Установка поддержки C++ в Visual Studio
 
@@ -36,16 +37,16 @@ ms.lasthandoff: 11/11/2017
 1. Загрузите последнюю Visual Studio 2017 г. установщик Windows.
 
    > [!div class="nextstepaction"]
-   > <a target="frameTarget" href="https://www.visualstudio.com/thank-you-downloading-visual-studio/?sku=Community&rel=15&utm_source=docs&utm_medium=clickbutton">Установить Visual Studio Community 2017 г.</a>
+   > <a target="frameTarget" href="https://www.visualstudio.com/thank-you-downloading-visual-studio/?sku=Community&rel=15&utm_source=docs&utm_medium=clickbutton">Установить Visual Studio 2017 Community</a>
 
    >[!Tip]
-   > Community edition — для отдельных разработчиков, аудитории обучения, научных исследований и разработки с открытым исходным кодом. Для других целей, установите <a target="frameTarget" href="https://www.visualstudio.com/thank-you-downloading-visual-studio/?sku=Professional&rel=15&utm_source=docs&utm_medium=clickbutton">Visual Studio Professional 2017 г.</a> или <a target="frameTarget" href="https://www.visualstudio.com/thank-you-downloading-visual-studio/?sku=Enterprise&rel=15&utm_source=docs&utm_medium=clickbutton">Visual Studio Enterprise 2017 г</a>.
+   > Выпуск Community предназначен для индивидуальных разработчиков, использования при аудиторном обучении и в научных исследованиях, а также разработки решений с открытым кодом. В других целях установите <a target="frameTarget" href="https://www.visualstudio.com/thank-you-downloading-visual-studio/?sku=Professional&rel=15&utm_source=docs&utm_medium=clickbutton">Visual Studio 2017 Professional</a> или <a target="frameTarget" href="https://www.visualstudio.com/thank-you-downloading-visual-studio/?sku=Enterprise&rel=15&utm_source=docs&utm_medium=clickbutton">Visual Studio 2017 Enterprise</a>.
 
 1. Найдите файл установщика загружаются и запустите его. Могут отображаться в браузере или может оказаться в папке загрузок. Установщик должен иметь права администратора для выполнения. Вы можете увидеть **контроль учетных записей пользователей** диалоговое окно, запрашивающее разрешение дать установщику внести изменения в систему, выбрать **Да**. Если возникают трудности, найдите загруженный файл в проводнике щелкните правой кнопкой мыши значок установщика и выберите **Запуск от имени администратора** в контекстном меню.
 
    ![Запустите программу установки Visual Studio 2017 г](../build/media/vscpp-concierge-run-installer.gif "запустите установщик Visual Studio")
 
-1. Программа установки предоставляет список рабочих нагрузок, которые представляют собой группы связанные параметры для области разработки. Поддержка C++ теперь является частью необязательно рабочих нагрузок, которые не установлены по умолчанию.
+1. В установщике предлагается список рабочих нагрузок, то есть групп связанных параметров для определенных целей разработки. Поддержка C++ теперь является частью необязательно рабочих нагрузок, которые не установлены по умолчанию.
 
    ![Для разработки настольных приложений с помощью C++](../build/media/desktop-development-with-cpp.png "разработки настольных приложений на C++")
 
@@ -71,9 +72,9 @@ ms.lasthandoff: 11/11/2017
 
 При запуске Visual Studio, вы готовы продолжить к следующему шагу.
 
-## <a name="next-steps"></a>Дальнейшие действия
+## <a name="next-steps"></a>Следующие шаги
 
 > [!div class="nextstepaction"]
-> [Шаг 1: Создание проекта C++](vscpp-step-1-create.md)
+> [Создание проекта C++](vscpp-step-1-create.md)
 
 <iframe src="" height="0" width="0" frameborder="0" name="frameTarget" />

@@ -33,11 +33,12 @@ caps.latest.revision: "25"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: e7a37fd636d376f379503d1dd1b95f05ac1828cd
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 7753e2be6699bc789417d8afe9e9f49e55af7010
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="wstringconvert-class"></a>Класс wstring_convert
 Класс шаблона `wstring_convert` выполняет преобразование между строкой двухбайтовых символов и строкой байтовых символов.  
@@ -77,7 +78,7 @@ class wstring_convert
 |-|-|  
 |[wstring_convert](#wstring_convert)|Создает объект типа `wstring_convert`.|  
   
-### <a name="typedefs"></a>Typedefs  
+### <a name="typedefs"></a>Определения типов  
   
 |||  
 |-|-|  
@@ -135,7 +136,7 @@ wide_string from_bytes(const char* first, const char* last);
   
 ### <a name="parameters"></a>Параметры  
   
-|Параметр|Описание|  
+|Параметр|Описание:|  
 |---------------|-----------------|  
 |`Byte`|Последовательность одноэлементных байт для преобразования.|  
 |`ptr`|Последовательность символов в стиле С, оканчивающаяся нулем, для преобразования.|  
@@ -195,7 +196,7 @@ byte_string to_bytes(const Elem* first, const Elem* last);
   
 ### <a name="parameters"></a>Параметры  
   
-|Параметр|Описание|  
+|Параметр|Описание:|  
 |---------------|-----------------|  
 |`Char`|Расширенный символ для преобразования.|  
 |`Wptr`|Последовательность в стиле C, оканчивающаяся нулем, начинающаяся с `wptr`, для преобразования.|  
@@ -229,7 +230,7 @@ wstring_convert(const byte_string& _Berr, const wide_string& Werr = wide_string(
   
 ### <a name="parameters"></a>Параметры  
   
-|Параметр|Описание|  
+|Параметр|Описание:|  
 |---------------|-----------------|  
 |`*Pcvt`|Объект типа `Codecvt` для выполнения преобразования.|  
 |`_State`|Объект типа [state_type](#state_type), представляющий состояние преобразования.|  

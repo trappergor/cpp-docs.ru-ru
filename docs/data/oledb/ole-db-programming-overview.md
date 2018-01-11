@@ -16,11 +16,14 @@ caps.latest.revision: "9"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 1f3d97dda514b3cdb0773adb3d7830e611bca3d9
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: 17e80f5a1fbe94a1d2bd4c7fc3b77525a77bbd4e
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="ole-db-programming-overview"></a>Общие сведения о программировании OLE DB
 OLE DB — это технология высокой производительности, основанных на COM базы данных. Он предоставляет общий способ доступа к данным независимо от формы, в которой хранится. В случае типичные огромный объем информации хранится вне корпоративной базы данных. Эта информация находится в файловых системах (например FAT или NTFS), индексно последовательных файлах, личные базы данных (например доступа), электронные таблицы (например, Excel), приложениях для планирования проектов (например, проект) и электронной почты (например, Outlook). OLE DB позволяет получить доступ к любого типа источника данных таким же образом, при условии, что хранилище данных содержит поставщик OLE DB.

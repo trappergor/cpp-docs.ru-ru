@@ -13,11 +13,12 @@ caps.latest.revision: "5"
 author: ghogen
 ms.author: ghogen
 manager: ghogen
-ms.openlocfilehash: 13e38563fe542eda08f436439ce3ad91a3e7a53e
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: c172246bc0e8fd7acb1661a9547fee3bf6c24421
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="platformcollectionsunorderedmapview-class"></a>Класс Platform::Collections::UnorderedMapView
 Представляет доступное только для чтения представление на *карте*, которое является коллекцией пар "ключ-значение".  
@@ -45,17 +46,17 @@ ref class UnorderedMapView sealed;
 ### <a name="remarks"></a>Примечания  
  UnorderedMapView — это конкретная реализация C++ из [Windows::Foundation:: Collections::\<K, V >](http://go.microsoft.com/fwlink/p/?LinkId=262409) , передаваемая через двоичный интерфейс приложений (ABI). Дополнительные сведения см. в разделе [Collections (C++/CX)](../cppcx/collections-c-cx.md).  
   
-### <a name="members"></a>Члены  
+### <a name="members"></a>Участники  
   
 ### <a name="public-constructors"></a>Открытые конструкторы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[UnorderedMapView::UnorderedMapView](#ctor)|Инициализирует новый экземпляр класса UnorderedMapView.|  
   
 ### <a name="public-methods"></a>Открытые методы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[UnorderedMapView::First](#first)|Возвращает итератор, который инициализируется первым элементом в представлении карты.|  
 |[UnorderedMapView::HasKey](#haskey)|Определяет, содержит ли текущий объект UnorderedMapView указанный ключ.|  
@@ -83,7 +84,7 @@ virtual Windows::Foundation::Collections::IIterator<
 ```  
   
 ### <a name="return-value"></a>Возвращаемое значение  
- Итератор, указывающий первый элемент в представлении карты.  
+ Итератор, указывающий первый элемент в представлении сопоставления.  
   
 ### <a name="remarks"></a>Примечания  
  Это удобный способ сохранения итератора, возвращаемого методом First(), — присвоить возвращаемое значение переменной, объявленной с **автоматически** ключевое слово выведения типа. Например, `auto x = myMapView->First();`.  

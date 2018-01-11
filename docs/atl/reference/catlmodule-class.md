@@ -30,11 +30,12 @@ caps.latest.revision: "19"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 6c2c9b9c5eaaa2cf908b2b1ff82bafaa892d1e43
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 6c969341656d0861224cf0835d08e31907328b5f
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="catlmodule-class"></a>Класс CAtlModule
 Этот класс предоставляет методы, используемые несколькими модульные классы ATL.  
@@ -45,18 +46,18 @@ ms.lasthandoff: 10/24/2017
 class ATL_NO_VTABLE CAtlModule : public _ATL_MODULE
 ```  
   
-## <a name="members"></a>Члены  
+## <a name="members"></a>Участники  
   
 ### <a name="public-constructors"></a>Открытые конструкторы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[CAtlModule::CAtlModule](#catlmodule)|Конструктор.|  
 |[CAtlModule:: ~ CAtlModule](#dtor)|Деструктор|  
   
 ### <a name="public-methods"></a>Открытые методы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[CAtlModule::AddCommonRGSReplacements](#addcommonrgsreplacements)|Переопределите этот метод для добавления параметров к карте замены компонент реестра ATL (регистратор).|  
 |[CAtlModule::AddTermFunc](#addtermfunc)|Добавляет новую функцию, вызываемый при завершении модуля.|  
@@ -71,7 +72,7 @@ class ATL_NO_VTABLE CAtlModule : public _ATL_MODULE
   
 ### <a name="public-data-members"></a>Открытые члены данных  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[CAtlModule::m_libid](#m_libid)|Содержит идентификатор GUID для текущего модуля.|  
 |[CAtlModule::m_pGIT](#m_pgit)|Указатель глобальной таблицы интерфейсов.|  

@@ -32,11 +32,12 @@ caps.latest.revision: "7"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 5eee589749764124bbb9d5f65fff5d8349c53d0b
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: f434c09e22933859b227f2517e124e9ca668e2cf
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="alignedrecallocdbg"></a>_aligned_recalloc_dbg
 Изменяет размер блока памяти, который был выделен с помощью [_aligned_malloc](../../c-runtime-library/reference/aligned-malloc.md) или [_aligned_offset_malloc](../../c-runtime-library/reference/aligned-offset-malloc.md), и инициализирует память нулями (только отладочная версия).  
@@ -79,7 +80,7 @@ void * _aligned_recalloc_dbg(
  Будет ошибкой повторно выделить память и изменить выравнивание блока.  
   
 ## <a name="remarks"></a>Примечания  
- `_aligned_recalloc_dbg` — это отладочная версия функции [_aligned_recalloc](../../c-runtime-library/reference/aligned-recalloc.md). Если функция [_DEBUG](../../c-runtime-library/debug.md) не определена, каждый вызов функции `_aligned_recalloc_dbg` сокращается до вызова функции `_aligned_recalloc`. И `_aligned_recalloc`, и `_aligned_recalloc_dbg` выполняют перераспределение блока памяти в основной куче, однако `_aligned_recalloc_dbg` включает различные возможности отладки: буферы на обеих сторонах пользовательской части блока для тестирования утечек, параметр типа блока для отслеживания конкретных типов выделения, а также сведения о `filename`/`linenumber` для определения источника запросов на выделение.  
+ `_aligned_recalloc_dbg` — это отладочная версия функции [_aligned_recalloc](../../c-runtime-library/reference/aligned-recalloc.md). Если [_DEBUG](../../c-runtime-library/debug.md) не определен, каждый вызов функции `_aligned_recalloc_dbg` сокращается до вызова функции `_aligned_recalloc`. И `_aligned_recalloc`, и `_aligned_recalloc_dbg` выполняют перераспределение блока памяти в основной куче, однако `_aligned_recalloc_dbg` включает различные возможности отладки: буферы на обеих сторонах пользовательской части блока для тестирования утечек, параметр типа блока для отслеживания конкретных типов выделения, а также сведения о `filename`/`linenumber` для определения источника запросов на выделение.  
   
  `_aligned_recalloc_dbg` перераспределяет указанный блок памяти, добавив немного больше пространства, чем запрошено (`num` * `size`), что может быть больше или меньше размера первоначально выделенного блока памяти. Дополнительное пространство используется диспетчером кучи отладки, чтобы связать блоки памяти отладки и предоставить приложению сведения о заголовке отладки и буферы перезаписи. Перераспределение может привести к перемещению исходного блока памяти в другое расположение в куче, а также к изменению размера блока памяти. Пользовательская часть блока заполняется значением 0xCD, а буферы перезаписи — значением 0xFD.  
   
@@ -87,7 +88,7 @@ void * _aligned_recalloc_dbg(
   
  Кроме того, `_aligned_recalloc_dbg` проверяет свои параметры. Если `alignment` не является степенью числа 2, эта функция вызывает обработчик недопустимых параметров, как описано в разделе [Проверка параметров](../../c-runtime-library/parameter-validation.md). Если продолжение выполнения разрешено, эта функция возвращает `NULL` и задает для `errno` значение `EINVAL`.  
   
- Сведения о выделении, инициализации и управлении блоками памяти в отладочной версии базовой кучи см. в разделе [Сведения о куче отладки CRT](/visualstudio/debugger/crt-debug-heap-details). Сведения о типах блоков выделения и способах их использования см. в разделе [Типы блоков в отладочной куче](/visualstudio/debugger/crt-debug-heap-details). Сведения о различиях между вызовом стандартной функции кучи и ее отладочной версии в сборке отладки приложения см. в разделе [Версии отладки функций выделения кучи](/visualstudio/debugger/debug-versions-of-heap-allocation-functions).  
+ Сведения о выделении, инициализации и управлении блоками памяти в отладочной версии базовой кучи, см. в статье [CRT Debug Heap Details](/visualstudio/debugger/crt-debug-heap-details). Сведения о типах блоков выделения и способах их использования см. в разделе [Типы блоков в отладочной куче](/visualstudio/debugger/crt-debug-heap-details). Сведения о различиях между вызовом стандартной функции кучи и ее отладочной версии в сборке отладки приложения см. в разделе [Версии отладки функций выделения кучи](/visualstudio/debugger/debug-versions-of-heap-allocation-functions).  
   
 ## <a name="requirements"></a>Требования  
   

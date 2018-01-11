@@ -42,11 +42,12 @@ caps.latest.revision: "23"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: c9e3d47f68575b27d65422f9adec2c24dee83425
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 5b86e1f082b7be844afe3b1a84d182d1c722f500
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="ccommodule-class"></a>CComModule-класс
 Начиная с ATL 7.0 `CComModule` устарел: в разделе [модульные классы ATL](../../atl/atl-module-classes.md) для получения дополнительных сведений.  
@@ -60,11 +61,11 @@ ms.lasthandoff: 10/24/2017
 class CComModule : public _ATL_MODULE
 ```  
   
-## <a name="members"></a>Члены  
+## <a name="members"></a>Участники  
   
 ### <a name="public-methods"></a>Открытые методы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[CComModule::GetClassObject](#getclassobject)|Создает объект для указанного идентификатора CLSID. Для DLL.|  
 |[CComModule::GetModuleInstance](#getmoduleinstance)|Возвращает `m_hInst`.|  
@@ -85,7 +86,7 @@ class CComModule : public _ATL_MODULE
   
 ### <a name="public-data-members"></a>Открытые члены данных  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[CComModule::m_csObjMap](#m_csobjmap)|Обеспечивает синхронизированный доступ к сведениям объекта карты.|  
 |[CComModule::m_csTypeInfoHolder](#m_cstypeinfoholder)|Обеспечивает синхронизированного доступа к информации о библиотеке типов.|  

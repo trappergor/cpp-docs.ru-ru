@@ -15,11 +15,12 @@ caps.latest.revision: "11"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 8945eb3ca53d6402e2db31c8a174d45394bcfb2e
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 80f142071a2a6b71dd134a7fb31474f917d5348f
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="dumpbin-options"></a>Параметры DUMPBIN
 Параметр состоит из спецификатора дефис (-) или косой черты (/), за которым следует имя параметра. Имена параметров не сокращается. Некоторые параметры принимают аргументы, указанные после двоеточия (:). В спецификации параметра допускаются пробелы или табуляцию. Используйте один или несколько пробелов или вкладки следует разделять в командной строке. Имена параметров и их ключевое слово или аргументы имен файлов не учитывается регистр. Большинство параметров применимы ко всем бинарным файлам; Некоторые применимы только к определенным типам файлов. По умолчанию DUMPBIN отправляет сведения в стандартный вывод. Используйте [/OUT](../../build/reference/out-dumpbin.md) параметр для отправки выходных данных в файл.  

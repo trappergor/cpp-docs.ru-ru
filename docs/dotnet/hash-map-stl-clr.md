@@ -18,11 +18,14 @@ caps.latest.revision: "20"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: aae2ca596a04a6502fc50bc7ac2cb6344463f739
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: cff0a45360a74bcfd7612b4eabe60dcc1057507a
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="hashmap-stlclr"></a>hash_map (STL/CLR)
 Класс шаблона описывает объект, управляющий последовательностью элементов переменной длины с двунаправленный доступ. Используйте контейнер `hash_map` для управления последовательностью элементов хэш-таблицы, каждая запись в таблице хранения двунаправленный связанный список узлов и каждый узел хранения одного элемента. Элемент состоит из ключа, для упорядочения последовательности и сопоставленные значение, которое происходит расстояния.  
@@ -31,7 +34,7 @@ ms.lasthandoff: 10/24/2017
   
  `Microsoft::VisualC::StlClr::GenericPair<GKey, GMapped>`  
   
- где:  
+ Здесь:  
   
  `GKey`совпадает со значением `Key` Если последний является типом ссылки, в этом случае он является`Key^`  
   
@@ -62,9 +65,9 @@ template<typename Key,
  Сопоставить  
  Тип дополнительного компонента для элемента в управляемой последовательности.  
   
-## <a name="members"></a>Члены  
+## <a name="members"></a>Участники  
   
-|Определение типа|Описание|  
+|Определение типа|Описание:|  
 |---------------------|-----------------|  
 |[hash_map::const_iterator (STL/CLR)](../dotnet/hash-map-const-iterator-stl-clr.md)|Тип постоянного итератора для управляемой последовательности.|  
 |[hash_map::const_reference (STL/CLR)](../dotnet/hash-map-const-reference-stl-clr.md)|Тип постоянной ссылки на элемент.|  
@@ -85,7 +88,7 @@ template<typename Key,
 |[hash_map::value_compare (STL/CLR)](../dotnet/hash-map-value-compare-stl-clr.md)|Делегат упорядочения для значения двух элементов.|  
 |[hash_map::value_type (STL/CLR)](../dotnet/hash-map-value-type-stl-clr.md)|Тип элемента.|  
   
-|Функция-член|Описание|  
+|Функция-член|Описание:|  
 |---------------------|-----------------|  
 |[hash_map::begin (STL/CLR)](../dotnet/hash-map-begin-stl-clr.md)|Задает начало управляемой последовательности.|  
 |[hash_map::bucket_count (STL/CLR)](../dotnet/hash-map-bucket-count-stl-clr.md)|Подсчитывает количество сегментов.|  
@@ -113,14 +116,14 @@ template<typename Key,
 |[hash_map::upper_bound (STL/CLR)](../dotnet/hash-map-upper-bound-stl-clr.md)|Конец находит диапазон, соответствующий указанному ключу.|  
 |[hash_map::value_comp (STL/CLR)](../dotnet/hash-map-value-comp-stl-clr.md)|Копирует делегат упорядочения для значения двух элементов.|  
   
-|Оператор|Описание|  
+|Оператор|Описание:|  
 |--------------|-----------------|  
 |[hash_map::operator= (STL/CLR)](../dotnet/hash-map-operator-assign-stl-clr.md)|Заменяет управляемую последовательность.|  
 |[hash_map::operator (STL/CLR)](../dotnet/hash-map-operator-stl-clr.md)|Сопоставляет сопоставленных связанное с ним значение ключа.|  
   
-## <a name="interfaces"></a>Интерфейсы  
+## <a name="interfaces"></a>интерфейсов,  
   
-|Интерфейс|Описание|  
+|Интерфейс|Описание:|  
 |---------------|-----------------|  
 |<xref:System.ICloneable>|Создание дубликата объекта.|  
 |<xref:System.Collections.IEnumerable>|Последовательность элементов.|  

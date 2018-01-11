@@ -1,30 +1,32 @@
 ---
-title: "Практическое руководство. Распаковка | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "распаковка-преобразование"
+title: "Как: Unbox | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords: unboxing
 ms.assetid: 75794696-9275-47bf-9a7d-5abe6585ab91
-caps.latest.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 8
+caps.latest.revision: "10"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: 94e9403d7def0603fc8be56ce1bd0d67db8911b6
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 12/21/2017
 ---
-# Практическое руководство. Распаковка
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Показывает, как unbox и изменить значение.  
+# <a name="how-to-unbox"></a>Практическое руководство. Распаковка
+Показано, как распаковать и измените значение.  
   
-## Пример  
+## <a name="example"></a>Пример  
   
 ```  
 // vcmcppv2_unboxing.cpp  
@@ -42,8 +44,11 @@ int main() {
 }  
 ```  
   
-  **13**  
-**14**  
-**14**   
-## См. также  
- [Упаковка\-преобразование](../windows/boxing-cpp-component-extensions.md)
+```Output  
+13  
+14  
+14  
+```  
+  
+## <a name="see-also"></a>См. также  
+ [Упаковка-преобразование](../windows/boxing-cpp-component-extensions.md)

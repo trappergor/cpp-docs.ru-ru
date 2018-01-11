@@ -21,11 +21,14 @@ caps.latest.revision: "24"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: cff5256d94593959c280614858cdde8be3dee9f6
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: fab5bb3c912aeea2598189965d424ba4508cf5c8
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="reflection-ccli"></a>Отражение (C++/CLI)
 Отражение позволяет известных типов данных необходимо проверить во время выполнения. Отражение позволяет перечисление типов данных в определенной сборке и членов данного типа класса или значения могут быть обнаружены. Это верно независимо от типа был "известен" или "ссылки во время компиляции. Благодаря этому отражение полезной функцией для разработки и средства управления кода.  

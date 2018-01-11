@@ -1,47 +1,48 @@
 ---
-title: "range_adapter::operator= (STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::operator="
-  - "cliext::range_adapter::operator="
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "operator= - член [STL/CLR]"
+title: "range_adapter::operator = (STL/CLR) | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords:
+- cliext::operator=
+- cliext::range_adapter::operator=
+dev_langs: C++
+helpviewer_keywords: operator= member [STL/CLR]
 ms.assetid: ac378ccc-a42c-4a90-bc27-9b416bee7fa9
-caps.latest.revision: 9
-caps.handback.revision: 7
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "9"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: 41b3e9e197347525ca64a549871c0ae44a4ba274
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 12/21/2017
 ---
-# range_adapter::operator= (STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Заменяет сохраненного пары итератора.  
+# <a name="rangeadapteroperator-stlclr"></a>range_adapter::operator= (STL/CLR)
+Заменяет сохраненный итератор пары.  
   
-## Синтаксис  
+## <a name="syntax"></a>Синтаксис  
   
 ```  
 range_adapter<Iter>% operator=(range_adapter<Iter>% right);  
 ```  
   
-#### Параметры  
- правый  
- Адаптер, который необходимо скопировать.  
+#### <a name="parameters"></a>Параметры  
+ right  
+ Адаптер для копирования.  
   
-## Заметки  
- Член оператор копирует `right` к объекту, а затем возвращает `*this`.  Он используется, чтобы заменить, хранящихся пары итератора копией сохраненного пар итератора в `right`.  
+## <a name="remarks"></a>Примечания  
+ Копирует оператор член `right` объекту, затем возвращает `*this`. Используется для замены сохраненного итератора пары копии сохраненного итератора пары в `right`.  
   
-## Пример  
+## <a name="example"></a>Пример  
   
 ```  
 // cliext_range_adapter_operator_as.cpp   
@@ -75,12 +76,15 @@ int main()
   
 ```  
   
-  **a b c**  
- **a b c**   
-## Требования  
- **Заголовок:**\<cliext\/adapter\>  
+```Output  
+a b c  
+a b c  
+```  
+  
+## <a name="requirements"></a>Требования  
+ **Заголовок:** \<cliext адаптер >  
   
  **Пространство имен:** cliext  
   
-## См. также  
- [range\_adapter](../dotnet/range-adapter-stl-clr.md)
+## <a name="see-also"></a>См. также  
+ [range_adapter (STL/CLR)](../dotnet/range-adapter-stl-clr.md)

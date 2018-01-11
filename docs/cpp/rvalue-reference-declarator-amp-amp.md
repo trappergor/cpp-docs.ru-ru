@@ -4,27 +4,23 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-language
+ms.technology: cpp-language
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-f1_keywords:
-- '&&'
-dev_langs:
-- C++
-helpviewer_keywords:
-- '&& rvalue reference declarator'
+f1_keywords: '&&'
+dev_langs: C++
+helpviewer_keywords: '&& rvalue reference declarator'
 ms.assetid: eab0ce3a-c5a3-4992-aa70-6a8ab1f7491d
-caps.latest.revision: 22
+caps.latest.revision: "22"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.translationtype: HT
-ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
-ms.openlocfilehash: f34c20b380fe1bef5e57de37b4e239e8ba4eadf9
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/25/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: e35d0efc92e011cfb4d93746efd1b03ac94a0779
+ms.sourcegitcommit: 54035dce0992ba5dce0323d67f86301f994ff3db
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/03/2018
 ---
 # <a name="rvalue-reference-declarator-ampamp"></a>Декларатор ссылки rvalue:&amp;&amp;
 Содержит ссылку на выражение rvalue.  
@@ -64,7 +60,7 @@ int main()
   
  До Visual C++ 2010, при каждом вызове функции `operator+` выделяет и возвращает новый временный `string` объекта (rvalue). Оператор `operator+` не может добавить одну строку к другой, потому что не знает, являются ли исходные строки значениями lvalue или rvalue. Если обе исходные строки являются значениями lvalue, на них могут указывать ссылки из какого-либо другого места программы, поэтому их не следует изменять. При использовании ссылок rvalue оператор `operator+` можно изменить, чтобы он принимал значения rvalue, на которые невозможно ссылаться в каком-либо другом месте программы. Поэтому оператор `operator+` может теперь добавлять одну строку к другой. Это может значительно снизить количество операций динамического выделения памяти, которые должен выполнять класс `string`. Дополнительные сведения о `string` см. в описании [класс basic_string](../standard-library/basic-string-class.md).  
   
- Семантика перемещения также помогает, когда компилятор не может использовать оптимизацию возвращаемого значения (RVO) или оптимизацию именованного возвращаемого значения (NRVO). В таких случаях компилятор вызывает конструктор перемещения, если он определен в типе. Дополнительные сведения об оптимизации возврата именованных значений см. в разделе [оптимизации возврата именованных значений в Visual C++ 2005](http://go.microsoft.com/fwlink/?LinkId=131571).  
+ Семантика перемещения также помогает, когда компилятор не может использовать оптимизацию возвращаемого значения (RVO) или оптимизацию именованного возвращаемого значения (NRVO). В таких случаях компилятор вызывает конструктор перемещения, если он определен в типе. Дополнительные сведения об оптимизации возврата именованных значений см. в разделе [оптимизации возврата именованных значений в Visual C++ 2005](http://go.microsoft.com/fwlink/p/?linkid=131571).  
   
  Для лучшего понимания семантики перемещения рассмотрим пример вставки элемента в объект `vector`. Если ресурсы объекта `vector` превышены, объект `vector` должен заново выделить память для своих элементов, а затем скопировать каждый элемент в другое расположение в памяти, чтобы освободить место для добавленного элемента. Когда операция вставки копирует элемент, она создает новый элемент, вызывает конструктор копирования для копирования данных из предыдущего элемента в новый элемент, а затем уничтожает предыдущий элемент. Семантика перемещения позволяет перемещать объекты напрямую, не выполняя ресурсоемкие операции выделения памяти и копирования.  
   
@@ -419,4 +415,3 @@ print_type_and_value<string&>(string& t)
  [Lvalues и Rvalues](../cpp/lvalues-and-rvalues-visual-cpp.md)   
  [Конструкторы перемещения и операторы присваивания перемещением (C++)](../cpp/move-constructors-and-move-assignment-operators-cpp.md)   
  [Стандартная библиотека C++](../standard-library/cpp-standard-library-reference.md)   
-

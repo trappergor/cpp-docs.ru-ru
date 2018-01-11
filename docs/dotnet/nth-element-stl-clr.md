@@ -15,11 +15,14 @@ caps.latest.revision: "4"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: e0dc54dda65163f5682b2ee20e5e0b08a63acbd9
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: 3bad46035c7d31250c6d4beddee70819f4a648e6
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="nthelement-stlclr"></a>nth_element (STL/CLR)
 Разделяет диапазон элементов, правильно находя `n`-ый элемент последовательности в диапазоне, чтобы все элементы перед ним были меньше или равны ему, а также все элементы, следующие за ней в последовательности, больше или равны ему.  

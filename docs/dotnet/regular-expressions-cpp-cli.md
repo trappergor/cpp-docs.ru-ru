@@ -17,18 +17,21 @@ caps.latest.revision: "8"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: a398d9df981a1ae9fc7cbc6bf73b233f0596fd2b
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: deac3645e9b53745ccf8e3b68ed47d4c0de86430
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="regular-expressions-ccli"></a>Регулярные выражения (C++/CLI)
 Демонстрирует различные операции со строками с помощью классов регулярных выражений в .NET Framework.  
   
  В следующих разделах описывается использование платформы .NET Framework <xref:System.Text.RegularExpressions> пространства имен (и в первом случае <xref:System.String.Split%2A?displayProperty=fullName> метод) для поиска, синтаксического анализа и изменять строки.  
   
-## <a name="in-this-section"></a>Содержание  
+## <a name="in-this-section"></a>В этом разделе  
   
 -   [Практическое руководство. Анализ строк с помощью регулярных выражений (C++/CLI)](../dotnet/how-to-parse-strings-using-regular-expressions-cpp-cli.md)  
   

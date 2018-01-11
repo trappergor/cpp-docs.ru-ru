@@ -1,41 +1,42 @@
 ---
-title: "hash_multimap::reference (STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::hash_multimap::reference"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "ссылочный элемент [STL/CLR]"
+title: "hash_multimap::Reference (STL/CLR) | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::hash_multimap::reference
+dev_langs: C++
+helpviewer_keywords: reference member [STL/CLR]
 ms.assetid: 2f54e8d4-59c4-44ed-a059-881dba9d7d8e
-caps.latest.revision: 14
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 12
+caps.latest.revision: "14"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: be20f68cb1494bf48f079104a6d022142f4dbe46
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 12/21/2017
 ---
-# hash_multimap::reference (STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="hashmultimapreference-stlclr"></a>hash_multimap::reference (STL/CLR)
 Тип ссылки на элемент.  
   
-## Синтаксис  
+## <a name="syntax"></a>Синтаксис  
   
 ```  
 typedef value_type% reference;  
 ```  
   
-## Заметки  
- Описывает тип ссылку на элемент.  
+## <a name="remarks"></a>Примечания  
+ Тип описывает ссылку на элемент.  
   
-## Пример  
+## <a name="example"></a>Пример  
   
 ```  
 // cliext_hash_multimap_reference.cpp   
@@ -63,13 +64,16 @@ int main()
   
 ```  
   
-  **\[1\] \[2\] \[BC — 3\]**   
-## Требования  
- **Заголовок:**\<cliext\/hash\_map\>  
+```Output  
+[a 1] [b 2] [c 3]  
+```  
+  
+## <a name="requirements"></a>Требования  
+ **Заголовок:** \<cliext/hash_map >  
   
  **Пространство имен:** cliext  
   
-## См. также  
- [hash\_multimap](../dotnet/hash-multimap-stl-clr.md)   
- [hash\_multimap::const\_reference](../dotnet/hash-multimap-const-reference-stl-clr.md)   
- [hash\_multimap::value\_type](../dotnet/hash-multimap-value-type-stl-clr.md)
+## <a name="see-also"></a>См. также  
+ [hash_multimap (STL/CLR)](../dotnet/hash-multimap-stl-clr.md)   
+ [hash_multimap::const_reference (STL/CLR)](../dotnet/hash-multimap-const-reference-stl-clr.md)   
+ [hash_multimap::value_type (STL/CLR)](../dotnet/hash-multimap-value-type-stl-clr.md)

@@ -21,11 +21,12 @@ caps.latest.revision: "20"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 17eb3b81a662ea8d0d3a2b5871441e18840efc57
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 716e3ba5d48d39cd189da8d92cca694f09508e42
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="ispecifypropertypagesimpl-class"></a>Класс ISpecifyPropertyPagesImpl
 Этот класс реализует **IUnknown** и предоставляет реализацию по умолчанию [ISpecifyPropertyPages](http://msdn.microsoft.com/library/windows/desktop/ms695217) интерфейса.  
@@ -45,11 +46,11 @@ class ATL_NO_VTABLE ISpecifyPropertyPagesImpl
  `T`  
  Класс, производный от `ISpecifyPropertyPagesImpl`.  
   
-## <a name="members"></a>Члены  
+## <a name="members"></a>Участники  
   
 ### <a name="public-methods"></a>Открытые методы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[ISpecifyPropertyPagesImpl::GetPages](#getpages)|Заполняет значения подсчета массива UUID. Каждый идентификатор UUID соответствует CLSID для одного из страницы свойств, которые могут быть отображены в окне свойств объекта.|  
   

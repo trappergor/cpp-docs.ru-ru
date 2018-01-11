@@ -1,45 +1,46 @@
 ---
-title: "hash_multimap::find (STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::hash_multimap::find"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "find - член [STL/CLR]"
+title: "hash_multimap::Find (STL/CLR) | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::hash_multimap::find
+dev_langs: C++
+helpviewer_keywords: find member [STL/CLR]
 ms.assetid: ce839c5e-b8c5-434e-9cc0-e4c6ee6a6bb3
-caps.latest.revision: 15
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 13
+caps.latest.revision: "15"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: c0c49ccfad44c7504990068ffa70953b672e5e99
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 12/21/2017
 ---
-# hash_multimap::find (STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="hashmultimapfind-stlclr"></a>hash_multimap::find (STL/CLR)
 Определяет элемент, соответствующий указанному ключу.  
   
-## Синтаксис  
+## <a name="syntax"></a>Синтаксис  
   
 ```  
 iterator find(key_type key);  
 ```  
   
-#### Параметры  
- key  
- Значение ключа, которое необходимо найти.  
+#### <a name="parameters"></a>Параметры  
+ клавиша  
+ Искомое значение ключа.  
   
-## Заметки  
- Если хотя бы один элемент в контролируемой последовательности имеет соответствующий заказ с `key`, функцию\-член возвращает итератор обозначая один из этих элементов; в противном случае возвращается [hash\_multimap::end](../dotnet/hash-multimap-end-stl-clr.md)`()`.  Он используется, чтобы найти элемент в данный момент в контролируемой последовательности, которая соответствует указанному ключу.  
+## <a name="remarks"></a>Примечания  
+ Если имеется хотя бы один элемент управляемой последовательности, эквивалентное упорядочение с `key`, функция-член возвращает итератор, назначающий один из этих элементов; в противном случае возвращается [hash_multimap::end (STL/CLR)](../dotnet/hash-multimap-end-stl-clr.md) `()`. Используется для поиска элемента в данный момент в управляемой последовательности, соответствующий указанному ключу.  
   
-## Пример  
+## <a name="example"></a>Пример  
   
 ```  
 // cliext_hash_multimap_find.cpp   
@@ -73,20 +74,23 @@ int main()
   
 ```  
   
-  **\[1\] \[2\] \[BC — 3\]**  
-**найдите a \= false**  
-**найти B \= \[B 2\]**  
-**найдите C \= false**   
-## Описание  
- Обратите внимание, что `find` не гарантирует, что из нескольких находит элемент.  
+```Output  
+ [a 1] [b 2] [c 3]  
+find A = False  
+find b = [b 2]  
+find C = False  
+```  
   
-## Требования  
- **Заголовок:**\<cliext\/hash\_map\>  
+## <a name="description"></a>Описание:  
+ Обратите внимание, что `find` не гарантирует того, какое из нескольких элемент, он находит.  
+  
+## <a name="requirements"></a>Требования  
+ **Заголовок:** \<cliext/hash_map >  
   
  **Пространство имен:** cliext  
   
-## См. также  
- [hash\_multimap](../dotnet/hash-multimap-stl-clr.md)   
- [hash\_multimap::equal\_range](../dotnet/hash-multimap-equal-range-stl-clr.md)   
- [hash\_multimap::lower\_bound](../Topic/hash_multimap::lower_bound%20\(STL-CLR\).md)   
- [hash\_multimap::upper\_bound](../Topic/hash_multimap::upper_bound%20\(STL-CLR\).md)
+## <a name="see-also"></a>См. также  
+ [hash_multimap (STL/CLR)](../dotnet/hash-multimap-stl-clr.md)   
+ [hash_multimap::equal_range (STL/CLR)](../dotnet/hash-multimap-equal-range-stl-clr.md)   
+ [hash_multimap::lower_bound (STL/CLR)](../dotnet/hash-multimap-lower-bound-stl-clr.md)   
+ [hash_multimap::upper_bound (STL/CLR)](../dotnet/hash-multimap-upper-bound-stl-clr.md)

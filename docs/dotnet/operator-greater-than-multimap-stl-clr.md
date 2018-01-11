@@ -1,33 +1,33 @@
 ---
-title: "operator&gt; (multimap) (STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::multimap::operator>"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "operator> - элемент [STL/CLR]"
+title: "оператор&gt; (multimap) (STL/CLR) | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::multimap::operator>
+dev_langs: C++
+helpviewer_keywords: operator> member [STL/CLR]
 ms.assetid: 84d6d09d-bcb7-4679-bc42-8a60670aadef
-caps.latest.revision: 16
-caps.handback.revision: 14
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "16"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: 60e9aef30717127c2459ba6e57463c6541701bf2
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 12/21/2017
 ---
-# operator&gt; (multimap) (STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Список большей, чем сравнение.  
+# <a name="operatorgt-multimap-stlclr"></a>оператор&gt; (multimap) (STL/CLR)
+Список больше сравнения.  
   
-## Синтаксис  
+## <a name="syntax"></a>Синтаксис  
   
 ```  
 template<typename Key,  
@@ -36,17 +36,17 @@ template<typename Key,
         multimap<Key, Mapped>% right);  
 ```  
   
-#### Параметры  
- влево  
- Левый контейнер, с которым выполняется сравнение.  
+#### <a name="parameters"></a>Параметры  
+ left  
+ Левый контейнер для сравнения.  
   
- правый  
- Правой контейнер, с которым выполняется сравнение.  
+ right  
+ Правый контейнер для сравнения.  
   
-## Заметки  
- Функция возвращает оператора `right` `<` `left`.  Он используется для выполнения приказано ли `left` после `right` при сравнении 2 multimaps элемент элементом.  
+## <a name="remarks"></a>Примечания  
+ Функция оператор возвращает `right` `<` `left`. Можно использовать для тестирования ли `left` упорядочен после `right` при двух multimaps являются сравниваемых элемент элемент.  
   
-## Пример  
+## <a name="example"></a>Пример  
   
 ```  
 // cliext_multimap_operator_gt.cpp   
@@ -86,19 +86,22 @@ int main()
   
 ```  
   
-  **\[1\] \[2\] \[BC — 3\]**  
- **\[1\] \[2\] \[B4 d\]**  
-**\[B C\] \> \[B C\] false**  
-**\[B d\] \> \[B C\].**   
-## Требования  
- **Заголовок:**\<cliext\/map\>  
+```Output  
+ [a 1] [b 2] [c 3]  
+ [a 1] [b 2] [d 4]  
+[a b c] > [a b c] is False  
+[a b d] > [a b c] is True  
+```  
+  
+## <a name="requirements"></a>Требования  
+ **Заголовок:** \<cliext/map >  
   
  **Пространство имен:** cliext  
   
-## См. также  
- [multimap](../dotnet/multimap-stl-clr.md)   
- [operator\=\= \(multimap\)](../dotnet/operator-equality-multimap-stl-lr.md)   
- [operator\!\= \(multimap\)](../Topic/operator!=%20\(multimap\)%20\(STL-CLR\).md)   
- [operator\< \(multimap\)](../dotnet/operator-less-than-multimap-stl-clr.md)   
- [operator\>\= \(multimap\)](../Topic/operator%3E=%20\(multimap\)%20\(STL-CLR\).md)   
- [operator\<\= \(multimap\)](../dotnet/operator-less-or-equal-multimap-stl-clr.md)
+## <a name="see-also"></a>См. также  
+ [несколько карт (STL/CLR)](../dotnet/multimap-stl-clr.md)   
+ [оператор == (multimap) (STL/CLR)](../dotnet/operator-equality-multimap-stl-clr.md)   
+ [оператор! = (multimap) (STL/CLR)](../dotnet/operator-inequality-multimap-stl-clr.md)   
+ [оператор\< (multimap) (STL/CLR)](../dotnet/operator-less-than-multimap-stl-clr.md)   
+ [оператор > = (multimap) (STL/CLR)](../dotnet/operator-greater-or-equal-multimap-stl-clr.md)   
+ [operator<= (multimap) (STL/CLR)](../dotnet/operator-less-or-equal-multimap-stl-clr.md)

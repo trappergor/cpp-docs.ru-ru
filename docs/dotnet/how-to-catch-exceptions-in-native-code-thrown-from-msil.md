@@ -1,35 +1,38 @@
 ---
-title: "Практическое руководство. Исключения в машинном коде, создаваемые MSIL | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "перехват исключений, создано из MSIL"
-  - "исключения, перехват"
-  - "MSIL, перехват исключений в машинном коде"
+title: "Как: перехват исключения в машинном коде, создаваемые MSIL | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- exceptions, catching
+- catching exceptions, thrown from MSIL
+- MSIL, catching exceptions in native code
 ms.assetid: c15afd2b-8505-43bf-8a4a-f1d41532a124
-caps.latest.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 7
+caps.latest.revision: "9"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: a740a94caf1e619e768037e15f4955c5a94cb60b
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 12/21/2017
 ---
-# Практическое руководство. Исключения в машинном коде, создаваемые MSIL
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-В машинном коде можно перехватить исключение C\+\+ собственное из кода MSIL.  Можно также перехватывать исключения среды CLR с `__try` и `__except`.  
+# <a name="how-to-catch-exceptions-in-native-code-thrown-from-msil"></a>Практическое руководство. Исключения в машинном коде, создаваемые MSIL
+В машинном коде можно перехватить собственных исключений C++ из MSIL.  Может перехватывать исключения среды CLR с `__try` и `__except`.  
   
- Дополнительные сведения см. в разделах [Структурированная обработка исключений](../cpp/structured-exception-handling-c-cpp.md) и [Обработка исключений С\+\+](../cpp/cpp-exception-handling.md).  
+ Дополнительные сведения см. в разделе [структурированная обработка исключений (C/C++)](../cpp/structured-exception-handling-c-cpp.md) и [обработку исключений C++](../cpp/cpp-exception-handling.md).  
   
-## Пример  
- В следующем примере определяется модуля с функциями, 2 из которых создает собственное исключение и другие, вызывающее исключение MSIL.  
+## <a name="example"></a>Пример  
+ Следующий пример определяет две функции, один, создается исключение собственного, и другой модуль, приводящий к исключению MSIL.  
   
 ```  
 // catch_MSIL_in_native.cpp  
@@ -43,8 +46,8 @@ void Test2() {
 }  
 ```  
   
-## Пример  
- В следующем примере определяется модуль, который перехватывает исключение для исключения и MSIL.  
+## <a name="example"></a>Пример  
+ В следующем примере определяется модуль, который перехватывает исключение MSIL и машинный код.  
   
 ```  
 // catch_MSIL_in_native_2.cpp  
@@ -79,7 +82,10 @@ int main() {
 }  
 ```  
   
-  **error**  
-**уловил исключение**   
-## См. также  
+```Output  
+error  
+caught an exception  
+```  
+  
+## <a name="see-also"></a>См. также  
  [Обработка исключений](../windows/exception-handling-cpp-component-extensions.md)

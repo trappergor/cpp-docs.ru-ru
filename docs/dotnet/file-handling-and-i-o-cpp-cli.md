@@ -18,18 +18,21 @@ caps.latest.revision: "6"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: aea20ee048ce0a11bb81893b0f492dcb28bd2aee
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: 643888b4a2bca802a9314d3468f2f416ff8a77b7
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="file-handling-and-io-ccli"></a>Функции работы с файлами и операции ввода-вывода (C++/CLI)
 Демонстрирует различные операции с файлами с помощью .NET Framework.  
   
  В следующих разделах описывается использование классов, определенных в <xref:System.IO> пространство имен для выполнения различных операций с файлами.  
   
-## <a name="in-this-section"></a>Содержание  
+## <a name="in-this-section"></a>В этом разделе  
   
 -   [Практическое руководство. Перечисление файлов в каталоге (C++/CLI)](../dotnet/how-to-enumerate-files-in-a-directory-cpp-cli.md)  
   

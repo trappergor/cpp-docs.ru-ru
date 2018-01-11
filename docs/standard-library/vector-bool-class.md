@@ -26,11 +26,12 @@ caps.latest.revision: "29"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 718cb52bbc06645ec40fe5e35ba0a8cc55ff1778
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: f8117c3ac56305637164886c6c27f7f20528d64a
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="vectorltboolgt-class"></a>Класс vector&lt;bool&gt;
 Класс `vector<bool>` является частичной специализацией объекта [vector](../standard-library/vector-class.md) для элементов типа `bool`. Он имеет распределитель базового типа, который используется специализацией, обеспечивающей оптимизацию пространства путем сохранения одного значения `bool` на бит.  
@@ -47,7 +48,7 @@ class vector<bool, Allocator>
   
  Операции, которые работают с типом `bool`, соответствуют значениям в хранилище контейнера. Параметр `allocator_traits::construct` не используется для создания данных значений.  
   
-### <a name="typedefs"></a>Typedefs  
+### <a name="typedefs"></a>Определения типов  
   
 |||  
 |-|-|  
@@ -61,7 +62,7 @@ class vector<bool, Allocator>
 |-|-|  
 |[flip](#flip)|Обращает все биты в `vector<bool>`.|  
 |[swap](#swap)|Выполняет обмен элементами между двумя объектами `vector<bool>`.|  
-|[оператор[]](#op_at)|Возвращает смоделированной ссылку на элемент `vector<bool>` в указанную позицию.|  
+|[operator&#91;&#93;](#op_at)|Возвращает смоделированной ссылку на элемент `vector<bool>` в указанную позицию.|  
 |`at`|Функция аналогична неспециализированной функции [vector](../standard-library/vector-class.md)::at за исключением того, что в ней используется прокси-класс [vector\<bool>::reference](#reference_class). См. также [operator[]](#op_at).|  
 |`front`|Функция аналогична неспециализированной функции [vector](../standard-library/vector-class.md)::front за исключением того, что в ней используется прокси-класс [vector\<bool>::reference](#reference_class). См. также [operator[]](#op_at).|  
 |`back`|Функция аналогична неспециализированной функции [vector](../standard-library/vector-class.md)::back за исключением того, что в ней используется прокси-класс [vector\<bool>::reference](#reference_class). См. также [operator[]](#op_at).|  
@@ -145,7 +146,7 @@ vector&<bool&>::const_reference operator[](size_type Pos) const;
   
 |||  
 |-|-|  
-|Параметр|Описание|  
+|Параметр|Описание:|  
 |`Pos`|Позиция элемента `vector<bool>`.|  
   
 ### <a name="return-value"></a>Возвращаемое значение  

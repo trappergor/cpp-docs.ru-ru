@@ -14,11 +14,12 @@ caps.latest.revision: "18"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 40b8099a1159514d3ffce8cfeb9b38274c3e68b0
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 4c54f0e3b8bceff3daa92ecb3e0ee46d7fbeb666
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="building-cc-side-by-side-assemblies"></a>Построение параллельных сборок C/C++
 Объект [side-by-side сборки](http://msdn.microsoft.com/library/windows/desktop/ff951640) — это совокупность ресурсов — группы библиотек DLL, классов окон, серверов COM, библиотек типов или интерфейсов — доступны для приложения для использования во время выполнения. Основное преимущество упаковки библиотек DLL в сборках, — что несколько версий сборки может использоваться приложениями, в то же время, и существует возможность обслуживания установленных сборок при выпуске обновлений.  

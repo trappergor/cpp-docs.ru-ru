@@ -24,11 +24,12 @@ caps.latest.revision: "19"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 54a1cebd11fbb1d7fffad69fadd5a588c0c1a04d
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: c001d0d1ca8e756b24d97051d100e7d71723569c
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="ccomgitptr-class"></a>Класс CComGITPtr
 Этот класс предоставляет методы для работы с указателями на интерфейс и глобальной таблицы интерфейсов (GIT).  
@@ -44,18 +45,18 @@ class CComGITPtr
  `T`  
  Тип указателя интерфейса должны храниться в GIT.  
   
-## <a name="members"></a>Члены  
+## <a name="members"></a>Участники  
   
 ### <a name="public-constructors"></a>Открытые конструкторы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[CComGITPtr::CComGITPtr](#ccomgitptr)|Конструктор.|  
 |[CComGITPtr:: ~ CComGITPtr](#dtor)|Деструктор|  
   
 ### <a name="public-methods"></a>Открытые методы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[CComGITPtr::Attach](#attach)|Этот метод вызывается для регистрации указателя интерфейса в глобальной таблицы интерфейсов (GIT).|  
 |[CComGITPtr::CopyTo](#copyto)|Этот метод используется для копирования передан указатель интерфейса из глобальной таблицы интерфейсов (GIT).|  
@@ -65,14 +66,14 @@ class CComGITPtr
   
 ### <a name="public-operators"></a>Открытые операторы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[CComGITPtr::operator DWORD](#operator_dword)|Возвращает куки-файл из `CComGITPtr` объекта.|  
 |[CComGITPtr::operator =](#operator_eq)|Оператор присвоения.|  
   
 ### <a name="public-data-members"></a>Открытые члены данных  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[CComGITPtr::m_dwCookie](#m_dwcookie)|Файл cookie.|  
   

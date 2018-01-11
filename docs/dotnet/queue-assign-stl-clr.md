@@ -1,45 +1,46 @@
 ---
-title: "queue::assign (STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::queue::assign"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "assign - член [STL/CLR]"
+title: "Queue::Assign (STL/CLR) | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::queue::assign
+dev_langs: C++
+helpviewer_keywords: assign member [STL/CLR]
 ms.assetid: 5bec8a84-9561-43f7-ad7f-f845d0edef41
-caps.latest.revision: 14
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 12
+caps.latest.revision: "14"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: fb127496347e39e22b446c84583ad37b75cc025e
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 12/21/2017
 ---
-# queue::assign (STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="queueassign-stlclr"></a>queue::assign (STL/CLR)
 Заменяет все элементы.  
   
-## Синтаксис  
+## <a name="syntax"></a>Синтаксис  
   
 ```  
 void assign(queue<Value, Container>% right);  
 ```  
   
-#### Параметры  
- правый  
- Адаптер контейнера, который необходимо вставить.  
+#### <a name="parameters"></a>Параметры  
+ right  
+ Адаптер контейнера для вставки.  
   
-## Заметки  
- Функция\-член присвоить `right``.get_container()` на основной контейнер.  Он используется для изменения все содержимое очереди.  
+## <a name="remarks"></a>Примечания  
+ Функция-член назначает `right.get_container()` для базового контейнера. Используется, чтобы изменить все содержимое очереди.  
   
-## Пример  
+## <a name="example"></a>Пример  
   
 ```  
 // cliext_queue_assign.cpp   
@@ -70,13 +71,16 @@ int main()
   
 ```  
   
-  **a b c**  
- **a b c**   
-## Требования  
- **Заголовок:**\<cliext\/queue\>  
+```Output  
+a b c  
+a b c  
+```  
+  
+## <a name="requirements"></a>Требования  
+ **Заголовок:** \<cliext/очереди >  
   
  **Пространство имен:** cliext  
   
-## См. также  
- [queue](../Topic/queue%20\(STL-CLR\).md)   
- [queue::operator\=](../dotnet/queue-operator-assign-stl-clr.md)
+## <a name="see-also"></a>См. также  
+ [очереди (STL/CLR)](../dotnet/queue-stl-clr.md)   
+ [queue::operator= (STL/CLR)](../dotnet/queue-operator-assign-stl-clr.md)

@@ -1,66 +1,67 @@
 ---
-title: "/FORCE (Назначенный файл вывода) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "VC.Project.VCLinkerTool.ForceLink"
-  - "/force"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "/FORCE - параметр компоновщика"
-  - "выходной файл (компоновщик)"
-  - "FORCE - параметр компоновщика"
-  - "-FORCE - параметр компоновщика"
+title: "-FORCE (назначенный файл вывода) | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- VC.Project.VCLinkerTool.ForceLink
+- /force
+dev_langs: C++
+helpviewer_keywords:
+- FORCE linker option
+- file output in linker
+- /FORCE linker option
+- -FORCE linker option
 ms.assetid: b1e9a218-a5eb-4e60-a4a4-65b4be15e5da
-caps.latest.revision: 9
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 9
+caps.latest.revision: "9"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 8ec19beec52a217df1237de41d0bd81ab447a56d
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 12/21/2017
 ---
-# /FORCE (Назначенный файл вывода)
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="force-force-file-output"></a>/FORCE (Назначенный файл вывода)
 ```  
 /FORCE:[MULTIPLE|UNRESOLVED]  
 ```  
   
-## Заметки  
- Параметр \/FORCE указывает линковщику создать exe\- или DLL\-файл, даже если символ, на который ссылаются, не определен или множественно определен.  
+## <a name="remarks"></a>Примечания  
+ Параметр/Force предписывает компоновщику создать файл допустимым .exe или DLL даже если на символ существует ссылка, но не определен или умножения определенных.  
   
- Параметр \/FORCE может получать необязательный аргумент:  
+ Параметр/Force может получать необязательный аргумент:  
   
--   Использовать параметр \/FORCE:MULTIPLE для создания выходного файла, независимо от того, найдет параметр LINK несколько определений символа или нет.  
+-   Используйте/FORCE: Multiple для создания выходного файла ли ссылка обнаруживает несколько определений символа.  
   
--   Использовать параметр \/FORCE:UNRESOLVED для создания выходного файла, независимо от того, найдет параметр LINK неопределенный символ или нет. Параметр \/FORCE:UNRESOLVED пропускается, если символ точки записи неразрешен.  
+-   Использовать параметр/FORCE: UNRESOLVED для создания выходного файла ли ссылка будет находить неопределенного символа. / FORCE: НЕРАЗРЕШЕННЫЕ игнорируется, если символ точки входа не распознано.  
   
- Параметр \/FORCE без аргументов выражает как многократные, так и неразрешенные ссылки.  
+ / FORCE без аргументов выражает как многократные и оставаться неразрешенным.  
   
- Файл, созданный при помощи этого параметра не может запуститься, как ожидалось.  Линковщик не компонует инкрементно, если указан параметр \/FORCE.  
+ Файл, созданный с помощью этого параметра может не работать должным образом. Компоновщик не компонует инкрементно, если указан параметр/Force.  
   
- Если модуль скомпилирован при помощи **\/clr**, **\/FORCE** не создаст изображение.  
+ Если модуль компилируется с **/CLR**, **/FORCE** образ не создается.  
   
-### Установка данного параметра компоновщика в среде разработки Visual Studio  
+### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>Задание данного параметра компоновщика в среде разработки Visual Studio  
   
-1.  Откройте диалоговое окно **Страницы свойств** проекта.  Дополнительные сведения см. в разделе [Задание свойств проекта C\+\+](../../ide/working-with-project-properties.md).  
+1.  Откройте диалоговое окно **Страницы свойств** проекта. Дополнительные сведения см. в разделе [задание свойств проекта Visual C++](../../ide/working-with-project-properties.md).  
   
-2.  Выберите папку **Компоновщик**.  
+2.  Нажмите кнопку **компоновщика** папки.  
   
-3.  Выберите страницу свойств **Командная строка**.  
+3.  Выберите страницу свойств **Командная строка** .  
   
-4.  Введите параметр в поле **Дополнительные параметры**.  
+4.  Введите параметр в **Дополнительные параметры** поле.  
   
-### Установка данного параметра компоновщика программным способом  
+### <a name="to-set-this-linker-option-programmatically"></a>Задание данного параметра компоновщика программным способом  
   
 -   См. раздел <xref:Microsoft.VisualStudio.VCProjectEngine.VCLinkerTool.AdditionalOptions%2A>.  
   
-## См. также  
+## <a name="see-also"></a>См. также  
  [Настройка параметров компоновщика](../../build/reference/setting-linker-options.md)   
  [Параметры компоновщика](../../build/reference/linker-options.md)

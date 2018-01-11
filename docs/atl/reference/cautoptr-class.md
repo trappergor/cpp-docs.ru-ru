@@ -22,11 +22,12 @@ caps.latest.revision: "23"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 4f3128f3f1c186eb1b667ab8cb456dca0c95aa6d
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 2b8ded7bbf4dbe4e4f2ada7054cebab996934316
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cautoptr-class"></a>Класс CAutoPtr
 Этот класс представляет объект интеллектуального указателя.  
@@ -45,18 +46,18 @@ class CAutoPtr
  `T`  
  Тип указателя.  
   
-## <a name="members"></a>Члены  
+## <a name="members"></a>Участники  
   
 ### <a name="public-constructors"></a>Открытые конструкторы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[CAutoPtr::CAutoPtr](#cautoptr)|Конструктор.|  
 |[CAutoPtr:: ~ CAutoPtr](#dtor)|Деструктор|  
   
 ### <a name="public-methods"></a>Открытые методы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[CAutoPtr::Attach](#attach)|Вызовите этот метод, чтобы стать владельцем существующего указателя.|  
 |[CAutoPtr::Detach](#detach)|Вызовите этот метод для освобождения владения указателя.|  
@@ -64,7 +65,7 @@ class CAutoPtr
   
 ### <a name="public-operators"></a>Открытые операторы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[CAutoPtr::operator T *](#operator_t_star)|Оператор приведения.|  
 |[CAutoPtr::operator =](#operator_eq)|Оператор присваивания.|  
@@ -72,7 +73,7 @@ class CAutoPtr
   
 ### <a name="public-data-members"></a>Открытые члены данных  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[CAutoPtr::m_p](#m_p)|Переменная члена данных указателя.|  
   

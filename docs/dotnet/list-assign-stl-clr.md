@@ -1,32 +1,33 @@
 ---
-title: "list::assign (STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::list::assign"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "assign - член [STL/CLR]"
+title: "List::Assign (STL/CLR) | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::list::assign
+dev_langs: C++
+helpviewer_keywords: assign member [STL/CLR]
 ms.assetid: c5f2b131-d0e1-4188-9d4b-d617280e4032
-caps.latest.revision: 16
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 14
+caps.latest.revision: "16"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: e4c5e670b4fca5998a21b8ae3554f31697cb3fac
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 12/21/2017
 ---
-# list::assign (STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="listassign-stlclr"></a>list::assign (STL/CLR)
 Заменяет все элементы.  
   
-## Синтаксис  
+## <a name="syntax"></a>Синтаксис  
   
 ```  
 void assign(size_type count, value_type val);  
@@ -35,30 +36,30 @@ template<typename InIt>
 void assign(System::Collections::Generic::IEnumerable<Value>^ right);  
 ```  
   
-#### Параметры  
+#### <a name="parameters"></a>Параметры  
  count  
- Число элементов, который необходимо вставить.  
+ Число элементов для вставки.  
   
  first  
- Начало диапазона, который необходимо вставить.  
+ Начало диапазона для вставки.  
   
  last  
- Элемент диапазона, который необходимо вставить.  
+ Конец диапазона для вставки.  
   
- правый  
- Перечисление, который необходимо вставить.  
+ right  
+ Перечисление для вставки.  
   
- val  
- Значение элемента, который необходимо вставить.  
+ функция Val  
+ Значение элемента, который требуется вставить.  
   
-## Заметки  
- Первый функцию\-член заменяет контролируемая последовательность с повторением элементов `count` значение `val`.  Он используется для заполнения контейнер с элементами, все одно и то же значение.  
+## <a name="remarks"></a>Примечания  
+ Первая функция-член заменяет управляемую последовательность Повтор `count` элементов со значением `val`. Используется для заполнения элементов контейнера всех, имеющих то же значение.  
   
- Если `InIt` целочисленный тип, то второй функцию\-член работает аналогично `assign((size_type)``first``, (value_type)``last``)`.  В противном случае он заменяет контролируемая последовательность с последовательностью `[``first``,` `last``)`.  Он используется, чтобы сделать контролируемой последовательностью копию другую последовательность.  
+ Если `InIt` имеет целочисленный тип, вторая функция-член работает так же, как `assign((size_type)first, (value_type)last)`. В противном случае заменяет управляемую последовательность последовательностью [`first`, `last`). Используется для управляемой последовательности копии сделать другую последовательность.  
   
- Третий функцию\-член заменяет контролируемая последовательность с последовательность — это специализированная перечислителем `right`.  Он используется, чтобы сделать контролируемой последовательностью копию последовательности две перечислителем.  
+ Третья функция-член заменяет управляемую последовательность последовательности, указанной с помощью перечислителя `right`. Используется, чтобы сделать копию последовательности, описываемого перечислитель управляемой последовательности.  
   
-## Пример  
+## <a name="example"></a>Пример  
   
 ```  
 // cliext_list_assign.cpp   
@@ -97,14 +98,17 @@ int main()
   
 ```  
   
-  **x x x x x x**  
- **B**  
- **a b c**   
-## Требования  
- **Заголовок:**\<cliext\/list\>  
+```Output  
+x x x x x x  
+a b  
+a b c  
+```  
+  
+## <a name="requirements"></a>Требования  
+ **Заголовок:** \<cliext/list >  
   
  **Пространство имен:** cliext  
   
-## См. также  
- [list](../dotnet/list-stl-clr.md)   
- [list::operator\=](../dotnet/list-operator-assign-stl-clr.md)
+## <a name="see-also"></a>См. также  
+ [список (STL/CLR)](../dotnet/list-stl-clr.md)   
+ [list::operator= (STL/CLR)](../dotnet/list-operator-assign-stl-clr.md)

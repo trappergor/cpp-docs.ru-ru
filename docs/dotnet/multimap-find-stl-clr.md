@@ -1,45 +1,46 @@
 ---
-title: "multimap::find (STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::multimap::find"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "find - член [STL/CLR]"
+title: "multimap::Find (STL/CLR) | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::multimap::find
+dev_langs: C++
+helpviewer_keywords: find member [STL/CLR]
 ms.assetid: 94b42497-3be4-448c-8de9-0a072ae14fbf
-caps.latest.revision: 16
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 14
+caps.latest.revision: "16"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: 34c7bed10c7c93a10d640b3066a5fbc5c88488ca
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 12/21/2017
 ---
-# multimap::find (STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="multimapfind-stlclr"></a>multimap::find (STL/CLR)
 Определяет элемент, соответствующий указанному ключу.  
   
-## Синтаксис  
+## <a name="syntax"></a>Синтаксис  
   
 ```  
 iterator find(key_type key);  
 ```  
   
-#### Параметры  
- key  
- Значение ключа, которое необходимо найти.  
+#### <a name="parameters"></a>Параметры  
+ клавиша  
+ Искомое значение ключа.  
   
-## Заметки  
- Если хотя бы один элемент в контролируемой последовательности имеет соответствующий заказ с `key`, функцию\-член возвращает итератор обозначая один из этих элементов; в противном случае возвращается [multimap::end](../dotnet/multimap-end-stl-clr.md)`()`.  Он используется, чтобы найти элемент в данный момент в контролируемой последовательности, которая соответствует указанному ключу.  
+## <a name="remarks"></a>Примечания  
+ Если имеется хотя бы один элемент управляемой последовательности, эквивалентное упорядочение с `key`, функция-член возвращает итератор, назначающий один из этих элементов; в противном случае возвращается [multimap::end (STL/CLR)](../dotnet/multimap-end-stl-clr.md) `()`. Используется для поиска элемента в данный момент в управляемой последовательности, соответствующий указанному ключу.  
   
-## Пример  
+## <a name="example"></a>Пример  
   
 ```  
 // cliext_multimap_find.cpp   
@@ -73,20 +74,23 @@ int main()
   
 ```  
   
-  **\[1\] \[2\] \[BC — 3\]**  
-**найдите a \= false**  
-**найти B \= \[B 2\]**  
-**найдите C \= false**   
-## Описание  
- Обратите внимание, что `find` не гарантирует, что из нескольких находит элемент.  
+```Output  
+ [a 1] [b 2] [c 3]  
+find A = False  
+find b = [b 2]  
+find C = False  
+```  
   
-## Требования  
- **Заголовок:**\<cliext\/map\>  
+## <a name="description"></a>Описание:  
+ Обратите внимание, что `find` не гарантирует того, какое из нескольких элемент, он находит.  
+  
+## <a name="requirements"></a>Требования  
+ **Заголовок:** \<cliext/map >  
   
  **Пространство имен:** cliext  
   
-## См. также  
- [multimap](../dotnet/multimap-stl-clr.md)   
- [multimap::equal\_range](../dotnet/multimap-equal-range-stl-clr.md)   
- [multimap::lower\_bound](../dotnet/multimap-lower-bound-stl-clr.md)   
- [multimap::upper\_bound](../dotnet/multimap-upper-bound-stl-clr.md)
+## <a name="see-also"></a>См. также  
+ [несколько карт (STL/CLR)](../dotnet/multimap-stl-clr.md)   
+ [multimap::equal_range (STL/CLR)](../dotnet/multimap-equal-range-stl-clr.md)   
+ [multimap::lower_bound (STL/CLR)](../dotnet/multimap-lower-bound-stl-clr.md)   
+ [multimap::upper_bound (STL/CLR)](../dotnet/multimap-upper-bound-stl-clr.md)

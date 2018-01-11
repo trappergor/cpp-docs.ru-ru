@@ -1,41 +1,42 @@
 ---
-title: "hash_multimap::to_array (STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::hash_multimap::to_array"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "to_array - элемент [STL/CLR]"
+title: "hash_multimap::to_array (STL/CLR) | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::hash_multimap::to_array
+dev_langs: C++
+helpviewer_keywords: to_array member [STL/CLR]
 ms.assetid: a7fe11ba-5a0b-4152-b24d-8b142450863c
-caps.latest.revision: 15
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 13
+caps.latest.revision: "15"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: 91b0f740b2612d7167f94a287e70a899b8795622
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 12/21/2017
 ---
-# hash_multimap::to_array (STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Копирует контролируемая последовательность в новый массив.  
+# <a name="hashmultimaptoarray-stlclr"></a>hash_multimap::to_array (STL/CLR)
+Копирует управляемой последовательности в новый массив.  
   
-## Синтаксис  
+## <a name="syntax"></a>Синтаксис  
   
 ```  
 cli::array<value_type>^ to_array();  
 ```  
   
-## Заметки  
- Возвращает массив, содержащий функцию\-член контролируемую последовательность.  Он используется, чтобы получить копию контролируемой последовательности в форме массива.  
+## <a name="remarks"></a>Примечания  
+ Функция-член возвращает массив, содержащий управляемой последовательности. Используется для получения копии управляемой последовательности в виде массива.  
   
-## Пример  
+## <a name="example"></a>Пример  
   
 ```  
 // cliext_hash_multimap_to_array.cpp   
@@ -67,12 +68,15 @@ int main()
   
 ```  
   
-  **\[1\] \[2\] \[B C \[3\]4 d\]**  
- **\[1\] \[2\] \[BC — 3\]**   
-## Требования  
- **Заголовок:**\<cliext\/hash\_map\>  
+```Output  
+[a 1] [b 2] [c 3] [d 4]  
+[a 1] [b 2] [c 3]  
+```  
+  
+## <a name="requirements"></a>Требования  
+ **Заголовок:** \<cliext/hash_map >  
   
  **Пространство имен:** cliext  
   
-## См. также  
- [hash\_multimap](../dotnet/hash-multimap-stl-clr.md)
+## <a name="see-also"></a>См. также  
+ [hash_multimap (STL/CLR)](../dotnet/hash-multimap-stl-clr.md)

@@ -1,32 +1,33 @@
 ---
-title: "vector::vector (STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::vector::vector"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "vector - элемент [STL/CLR]"
+title: "Vector::Vector (STL/CLR) | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::vector::vector
+dev_langs: C++
+helpviewer_keywords: vector member [STL/CLR]
 ms.assetid: a0b5e807-1ef2-422b-b772-1f96cd62fb51
-caps.latest.revision: 17
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 15
+caps.latest.revision: "17"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: a321e18c9fc921e1d88961b4f282c29917fa7962
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 12/21/2017
 ---
-# vector::vector (STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="vectorvector-stlclr"></a>vector::vector (STL/CLR)
 Создает объект контейнера.  
   
-## Синтаксис  
+## <a name="syntax"></a>Синтаксис  
   
 ```  
 vector();  
@@ -39,52 +40,52 @@ template<typename InIt>
 vector(System::Collections::Generic::IEnumerable<Value>^ right);  
 ```  
   
-#### Параметры  
+#### <a name="parameters"></a>Параметры  
  count  
- Число элементов, который необходимо вставить.  
+ Число элементов для вставки.  
   
  first  
- Начало диапазона, который необходимо вставить.  
+ Начало диапазона для вставки.  
   
  last  
- Элемент диапазона, который необходимо вставить.  
+ Конец диапазона для вставки.  
   
- правый  
+ right  
  Объект или диапазон для вставки.  
   
- val  
- Значение элемента, который необходимо вставить.  
+ функция Val  
+ Значение элемента, который требуется вставить.  
   
-## Заметки  
+## <a name="remarks"></a>Примечания  
  Конструктор:  
   
  `vector();`  
   
- инициализирует контролируемая последовательность без элементов.  Он используется для определения начальную контролируемую пустую последовательность.  
+ Инициализирует управляемой последовательности без элементов. Используется, чтобы указать пустую начальную управляемую последовательность.  
   
  Конструктор:  
   
  `vector(vector<Value>% right);`  
   
- инициализирует контролируемая последовательность с последовательностью `[``right``.`[vector::begin](../dotnet/vector-begin-stl-clr.md)`(),` `right``.`[vector::end](../dotnet/vector-end-stl-clr.md)`())`.  Он используется, чтобы определить домашнюю контролируемую последовательность, копию последовательности контролируемой объектом `right` вектора.  
+ Инициализирует управляемой последовательности с последовательностью [`right.begin()`, `right.end()`). Они позволяют указать начальную управляемую последовательность, является копией последовательности, контролируемой объекте vector `right`.  
   
  Конструктор:  
   
  `vector(vector<Value>^ right);`  
   
- инициализирует контролируемая последовательность с последовательностью `[``right``->`[vector::begin](../dotnet/vector-begin-stl-clr.md)`(),` `right``->`[vector::end](../dotnet/vector-end-stl-clr.md)`())`.  Он используется, чтобы определить домашнюю контролируемую последовательность, копию последовательности контролируемой объектом вектора дескриптор которого `right`.  
+ Инициализирует управляемой последовательности с последовательностью [`right->begin()`, `right->end()`). Они позволяют указать начальную управляемую последовательность, является копией последовательности, контролируемой объект vector, дескриптор которого `right`.  
   
  Конструктор:  
   
  `explicit vector(size_type count);`  
   
- инициализирует контролируемая последовательность с элементами `count` каждое со значением `value_type()`.  Он используется для заполнения контейнер с элементами, все значения по умолчанию.  
+ Инициализирует управляемой последовательности с `count` элементы каждого со значением `value_type()`. Используется для заполнения контейнера с элементами, каждый из которых по умолчанию.  
   
  Конструктор:  
   
  `vector(size_type count, value_type val);`  
   
- инициализирует контролируемая последовательность с элементами `count` каждое со значением `val`.  Он используется для заполнения контейнер с элементами, все одно и то же значение.  
+ Инициализирует управляемой последовательности с `count` элементы каждого со значением `val`. Используется для заполнения элементов контейнера всех, имеющих то же значение.  
   
  Конструктор:  
   
@@ -92,15 +93,15 @@ vector(System::Collections::Generic::IEnumerable<Value>^ right);
   
  `vector(InIt first, InIt last);`  
   
- инициализирует контролируемая последовательность с последовательностью `[``first``,` `last``)`.  Он используется, чтобы сделать контролируемой последовательностью копии другой последовательности.  
+ Инициализирует управляемой последовательности с последовательностью [`first`, `last`). Используется для создания копии другой последовательности управляемой последовательности.  
   
  Конструктор:  
   
  `vector(System::Collections::Generic::IEnumerable<Value>^ right);`  
   
- инициализирует контролируемая последовательность с последовательность — это специализированная перечислителем `right`.  Он используется, чтобы сделать контролируемой последовательностью копии другой последовательности две перечислителем.  
+ Инициализирует управляемой последовательности с последовательности, указанной с помощью перечислителя `right`. Используется для создания копии другой последовательности, описываемого перечислитель управляемой последовательности.  
   
-## Пример  
+## <a name="example"></a>Пример  
   
 ```  
 // cliext_vector_construct.cpp   
@@ -156,20 +157,23 @@ int main()
   
 ```  
   
-  **size\(\) \= 0**  
- **0 0 0**  
- **x x x x x x**  
- **x x x x x**  
- **x x x x x x**  
- **x x x x x x**  
- **x x x x x x**   
-## Требования  
- **Заголовок:**\<cliext\/vector\>  
+```Output  
+size() = 0  
+ 0 0 0  
+ x x x x x x  
+ x x x x x  
+ x x x x x x  
+ x x x x x x  
+ x x x x x x  
+```  
+  
+## <a name="requirements"></a>Требования  
+ **Заголовок:** \<cliext/vector >  
   
  **Пространство имен:** cliext  
   
-## См. также  
- [вектор](../dotnet/vector-stl-clr.md)   
- [vector::assign](../Topic/vector::assign%20\(STL-CLR\).md)   
- [vector::generic\_container](../dotnet/vector-generic-container-stl-clr.md)   
- [vector::operator\=](../dotnet/vector-operator-assign-stl-clr.md)
+## <a name="see-also"></a>См. также  
+ [вектор (STL/CLR)](../dotnet/vector-stl-clr.md)   
+ [Vector::Assign (STL/CLR)](../dotnet/vector-assign-stl-clr.md)   
+ [Vector::generic_container (STL/CLR)](../dotnet/vector-generic-container-stl-clr.md)   
+ [vector::operator= (STL/CLR)](../dotnet/vector-operator-assign-stl-clr.md)

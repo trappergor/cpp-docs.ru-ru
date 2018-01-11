@@ -14,11 +14,14 @@ caps.latest.revision: "7"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: b4f19be127a9ffefa985b27a15101308c05c10b4
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: 89f5fedddd65726b8c9819e43418182601c49dfb
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="schema-rowsets"></a>Наборы строк схемы
 Схема (или метаданные) — сведения о структуре базы данных или организации, например сведения о поставщика набора строк, таблицы, столбцы, или другие сведения, помимо фактическому содержимому базы данных. OLE DB позволяет получить такие сведения, без открытия набора строк с помощью наборов строк схемы.  

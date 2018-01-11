@@ -1,33 +1,33 @@
 ---
-title: "PDB-файлы в качестве входных файлов компоновщика | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "PDB-файлы, компоновщик - ввод"
-  - "PDB-файлы, компоновщик - ввод"
+title: ". PDB-файлы в качестве входных данных компоновщика | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- .pdb files, as linker input
+- PDB files, as linker input
 ms.assetid: c1071478-2369-4b03-9df8-71761cf82f3b
-caps.latest.revision: 7
-caps.handback.revision: 7
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
+caps.latest.revision: "7"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: c5acdc01a58cf0d501be5947cddf710d1b7c6d18
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 12/21/2017
 ---
-# PDB-файлы в качестве входных файлов компоновщика
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Объектные файлы \(OBJ\), скомпилированные с параметром \/Zi, содержат имя базы данных программы \(PDB\).  Имя файла PDB объекта не нужно указывать компоновщику явно; при необходимости программа LINK использует для поиска внедренное имя.  Это также относится к отлаживаемым объектам, содержащимся в библиотеке; файл PDB для отлаживаемой библиотеки должен быть доступен компоновщику вместе с библиотекой.  
+# <a name="pdb-files-as-linker-input"></a>PDB-файлы в качестве входных файлов компоновщика
+Объект, имя базы данных программы (PDB) содержит файлы (.obj), скомпилированные с помощью параметра/Zi. Не следует указывать имя файла PDB объекта компоновщику; СВЯЗЬ используется внедренное имя для поиска PDB-ФАЙЛ, если это требуется. Это также относится к отлаживаемым объектам, содержащимся в библиотеке. PDB-ФАЙЛ для отлаживаемой библиотеки должен быть доступен компоновщику вместе с библиотекой.  
   
- Программа LINK также использует файл PDB для хранения отладочной информации файла EXE или DLL.  Файл PDB программы является как входным, так и выходным файлом, поскольку программа LINK обновляет PDB при перепостроении программы.  
+ ССЫЛКА для хранения сведения об отладке для файла .exe или DLL-файл также используется PDB-ФАЙЛ. PDB-файла программы в том, выходной файл и входной файл, LINK обновляет PDB при перестраивает программы.  
   
-## См. также  
- [Входные LINK\-файлы](../../build/reference/link-input-files.md)   
+## <a name="see-also"></a>См. также  
+ [Входные LINK-файлы](../../build/reference/link-input-files.md)   
  [Параметры компоновщика](../../build/reference/linker-options.md)

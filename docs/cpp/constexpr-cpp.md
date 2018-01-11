@@ -14,11 +14,12 @@ caps.latest.revision: "3"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 4ff111b73d81fd3c008e53db0f5e41b82f9e3753
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: cf1094be23074fe71e65a3077de51263f01a81c6
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="constexpr-c"></a>constexpr (C++)
 Ключевое слово `constexpr` появилось в C++11 и было усовершенствовано в C++14. Это означает *константное выражение*. По аналогии с `const` оно может применяться к переменным. Поэтому если код пытается изменить значение, появится сообщение об ошибке компилятора. В отличие от `const`, `constexpr` также может применяться к функциям и конструкторам классов. `constexpr` указывает, что значение или возвращаемое значение является константой и, если это возможно, будет вычислено во время компиляции.  Целочисленное значение `constexpr` может использоваться везде, где требуется const integer, например в аргументах шаблонов и объявлениях массивов. И, если значение может быть вычислено во время компиляции, а не во время выполнения, он может позволить программе работать быстрее и использовать меньше памяти.  

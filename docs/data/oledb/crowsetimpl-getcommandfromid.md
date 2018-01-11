@@ -1,34 +1,36 @@
 ---
-title: "CRowsetImpl::GetCommandFromID | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "CRowsetImpl::GetCommandFromID"
-  - "GetCommandFromID"
-  - "CRowsetImpl.GetCommandFromID"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "GetCommandFromID - метод"
+title: "CRowsetImpl::GetCommandFromID | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- CRowsetImpl::GetCommandFromID
+- GetCommandFromID
+- CRowsetImpl.GetCommandFromID
+dev_langs: C++
+helpviewer_keywords: GetCommandFromID method
 ms.assetid: 9f39cb07-1c40-486f-ba5b-cb4a65fab8a7
-caps.latest.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 9
+caps.latest.revision: "9"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: e75fbd00b6ee2e4a19cf0fe39d0bcda9f0314f8a
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 12/21/2017
 ---
-# CRowsetImpl::GetCommandFromID
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Проверяет, является ли один или оба параметры содержат строковые значения, и если да, копирования строковые значения элементам данных [m\_strCommandText](../../data/oledb/crowsetimpl-m-strcommandtext.md) и [m\_strIndexText](../../data/oledb/crowsetimpl-m-strindextext.md).  
+# <a name="crowsetimplgetcommandfromid"></a>CRowsetImpl::GetCommandFromID
+Проверяет, если оба параметра содержат строковые значения и если да, копирует строковые значения членов данных [m_strCommandText](../../data/oledb/crowsetimpl-m-strcommandtext.md) и [m_strIndexText](../../data/oledb/crowsetimpl-m-strindextext.md).  
   
-## Синтаксис  
+## <a name="syntax"></a>Синтаксис  
   
 ```  
   
@@ -38,22 +40,22 @@ caps.handback.revision: 9
 );  
 ```  
   
-#### Параметры  
+#### <a name="parameters"></a>Параметры  
  `pTableID`  
- \[in\] указатель на **DBID**, представляющая идентификатор таблицы  
+ [in] Указатель на **DBID** представляет идентификатор таблицы.  
   
  `pIndexID`  
- \[in\] указатель на **DBID**, представляющий индекс идентификатор.  
+ [in] Указатель на **DBID** представляет идентификатор индекса.  
   
-## Возвращаемое значение  
- Стандартное `HRESULT`.  
+## <a name="return-value"></a>Возвращаемое значение  
+ Стандартный `HRESULT`.  
   
-## Заметки  
- Этот метод вызывается с помощью статического upcast `CRowsetImpl` для заполнения элементов данных [m\_strCommandText](../../data/oledb/crowsetimpl-m-strcommandtext.md) и [m\_strIndexText](../../data/oledb/crowsetimpl-m-strindextext.md).  По умолчанию этот метод проверяет, попадает ли один или оба параметры содержат строковые значения.  Если они содержат строковые значения, копии этого метода строковые значения элементам данных.  Устанавливая метод с данной сигнатурой в `CRowsetImpl`\- производный класс, этот метод вызывается вместо базовой реализации.  
+## <a name="remarks"></a>Примечания  
+ Этот метод вызывается через статический повышении по `CRowsetImpl` для заполнения элементов данных [m_strCommandText](../../data/oledb/crowsetimpl-m-strcommandtext.md) и [m_strIndexText](../../data/oledb/crowsetimpl-m-strindextext.md). По умолчанию этот метод проверяет Если оба параметра содержат строковые значения. Если они содержат строковые значения, этот метод копирует строковые значения членов данных. Поместив метод при наличии этой подписи в вашей `CRowsetImpl`-производного класса, метод будет вызван вместо базовой реализации.  
   
-## Требования  
- **Header:** atldb.h  
+## <a name="requirements"></a>Требования  
+ **Заголовок:** atldb.h  
   
-## См. также  
+## <a name="see-also"></a>См. также  
  [Класс CRowsetImpl](../../data/oledb/crowsetimpl-class.md)   
  [CRowsetImpl::SetCommandText](../../data/oledb/crowsetimpl-setcommandtext.md)

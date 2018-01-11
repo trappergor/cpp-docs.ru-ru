@@ -1,41 +1,42 @@
 ---
-title: "hash_map::reference (STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::hash_map::reference"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "ссылочный элемент [STL/CLR]"
+title: "hash_map::Reference (STL/CLR) | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::hash_map::reference
+dev_langs: C++
+helpviewer_keywords: reference member [STL/CLR]
 ms.assetid: 4aac6eb4-0792-477d-b285-e83d9601cc99
-caps.latest.revision: 15
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 13
+caps.latest.revision: "15"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: 1669262f48784b760206655065309448a5b969e3
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 12/21/2017
 ---
-# hash_map::reference (STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="hashmapreference-stlclr"></a>hash_map::reference (STL/CLR)
 Тип ссылки на элемент.  
   
-## Синтаксис  
+## <a name="syntax"></a>Синтаксис  
   
 ```  
 typedef value_type% reference;  
 ```  
   
-## Заметки  
- Описывает тип ссылку на элемент.  
+## <a name="remarks"></a>Примечания  
+ Тип описывает ссылку на элемент.  
   
-## Пример  
+## <a name="example"></a>Пример  
   
 ```  
 // cliext_hash_map_reference.cpp   
@@ -63,13 +64,16 @@ int main()
   
 ```  
   
-  **\[1\] \[2\] \[BC — 3\]**   
-## Требования  
- **Заголовок:**\<cliext\/hash\_map\>  
+```Output  
+[a 1] [b 2] [c 3]  
+```  
+  
+## <a name="requirements"></a>Требования  
+ **Заголовок:** \<cliext/hash_map >  
   
  **Пространство имен:** cliext  
   
-## См. также  
- [hash\_map](../dotnet/hash-map-stl-clr.md)   
- [hash\_map::const\_reference](../dotnet/hash-map-const-reference-stl-clr.md)   
- [hash\_map::value\_type](../dotnet/hash-map-value-type-stl-clr.md)
+## <a name="see-also"></a>См. также  
+ [hash_map (STL/CLR)](../dotnet/hash-map-stl-clr.md)   
+ [hash_map::const_reference (STL/CLR)](../dotnet/hash-map-const-reference-stl-clr.md)   
+ [hash_map::value_type (STL/CLR)](../dotnet/hash-map-value-type-stl-clr.md)

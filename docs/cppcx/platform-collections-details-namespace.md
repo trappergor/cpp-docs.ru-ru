@@ -1,44 +1,46 @@
 ---
-title: "Пространство имен Platform::Collections::Details | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/30/2016"
-ms.prod: "windows-client-threshold"
-ms.technology: ""
-ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-f1_keywords: 
-  - "collection/Platform::Collections::Details"
-dev_langs: 
-  - "C++"
+title: "Пространство имен | Документы Microsoft"
+ms.custom: 
+ms.date: 12/30/2016
+ms.technology: cpp-windows
+ms.reviewer: 
+ms.suite: 
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+f1_keywords: collection/Platform::Collections::Details
+dev_langs: C++
 ms.assetid: d5ac76ee-b568-4841-882f-738ed6fa4f1e
-caps.latest.revision: 5
-author: "ghogen"
-ms.author: "ghogen"
-manager: "ghogen"
-caps.handback.revision: 5
+caps.latest.revision: "5"
+author: ghogen
+ms.author: ghogen
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: d354dc62050915558467e7608456a92b7bfe3d2f
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 12/21/2017
 ---
-# Пространство имен Platform::Collections::Details
+# <a name="platformcollectionsdetails-namespace"></a>Пространство имен Platform::Collections::Details
 Это пространство имен служит для поддержки инфраструктуры `Platform` и не предназначено для непосредственного использования в коде.  
   
-## Синтаксис  
+## <a name="syntax"></a>Синтаксис  
   
 ```cpp  
   
 namespace Platform {  namespace Collections {    namespace Details {}}}  
 ```  
   
-## Члены  
+### <a name="members"></a>Участники  
  Члены этого пространства имен определены в файле collection.h и не отображаются в обозревателе объектов.  
   
-## Иерархия наследования  
+## <a name="inheritance-hierarchy"></a>Иерархия наследования  
  [Пространство имен Platform::Collections](../cppcx/platform-collections-namespace.md)  
   
-## Требования  
+### <a name="requirements"></a>Требования  
  **Заголовок:** Collection.h  
   
  **Пространство имен:** Platform::Collection::Details  
   
-## См. также  
- [\(NOTINBUILD\) Пространство имен Platform](http://msdn.microsoft.com/ru-ru/f3ce3eab-028c-4204-ba9f-9ab8af17c8c4)
+## <a name="see-also"></a>См. также  
+ [Пространство имен Platform](platform-namespace-c-cx.md)

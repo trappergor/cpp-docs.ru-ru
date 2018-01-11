@@ -1,50 +1,31 @@
 ---
-title: "C3274 Ошибка компилятора | Документы Microsoft"
+title: "Ошибка компилятора C3274 | Документы Microsoft"
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-tools
+ms.technology: cpp-tools
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- C3274
-dev_langs:
-- C++
-helpviewer_keywords:
-- C3274
+f1_keywords: C3274
+dev_langs: C++
+helpviewer_keywords: C3274
 ms.assetid: 1f03f18e-b569-48eb-9249-11c70122a305
-caps.latest.revision: 11
+caps.latest.revision: "11"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
-ms.openlocfilehash: 8a09f1421a32714a04c49a849162290884e53391
-ms.contentlocale: ru-ru
-ms.lasthandoff: 02/24/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: b607445586b25b04e38c7a695cbdd78325398ba4
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="compiler-error-c3274"></a>Ошибка компилятора C3274
 __finally/finally без соответствующего try  
   
- Объект [__finally](../../cpp/try-finally-statement.md) или [наконец](../../dotnet/finally.md) оператор найден без соответствующего `try`. Чтобы устранить эту ошибку, удалите оператор `__finally` или добавьте оператор `try` для `__finally`.  
+ Обнаружен оператор [__finally](../../cpp/try-finally-statement.md) или [finally](../../dotnet/finally.md) без соответствующего `try`. Чтобы устранить эту ошибку, удалите оператор `__finally` или добавьте оператор `try` для `__finally`.  
   
  В следующем примере возникает ошибка C3274:  
   

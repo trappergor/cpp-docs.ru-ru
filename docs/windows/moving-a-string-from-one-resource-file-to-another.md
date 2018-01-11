@@ -1,55 +1,57 @@
 ---
-title: "Moving a String from One Resource File to Another | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "strings [C++], moving between files"
-  - "resource script files, moving strings"
-  - "string editing, moving strings between resources"
-  - "String editor, moving strings between files"
+title: "Перемещение строки из одного файла ресурсов в другой | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- strings [C++], moving between files
+- resource script files, moving strings
+- string editing, moving strings between resources
+- String editor, moving strings between files
 ms.assetid: 94f8ee81-9b4c-4788-ba95-68c58db38029
-caps.latest.revision: 12
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 9
+caps.latest.revision: "12"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: ecb999052aa23d173a6a4113007cbd8452510e5f
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 12/21/2017
 ---
-# Moving a String from One Resource File to Another
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-### Перемещение строки из одного файла скрипта ресурсов в другой  
+# <a name="moving-a-string-from-one-resource-file-to-another"></a>Перемещение строки из одного файла ресурса в другой
+### <a name="to-move-a-string-from-one-resource-script-file-to-another"></a>Перемещение строки из одного файла скрипта ресурсов в другой  
   
-1.  Откройте таблицы строк в обоих RC\-файлах.  \(Дополнительные сведения см. в разделе [Просмотр ресурсов в файле скрипта ресурсов за пределами проекта](../windows/how-to-open-a-resource-script-file-outside-of-a-project-standalone.md).\)  
+1.  Откройте таблицы строк в обоих RC-файлах. (Дополнительные сведения см. в разделе [Просмотр ресурсов в файле скрипта ресурсов за пределами проекта](../windows/how-to-open-a-resource-script-file-outside-of-a-project-standalone.md).)  
   
     > [!NOTE]
-    >  Если в проекте нет RC\-файла, см. раздел [Создание нового файла скрипта ресурсов](../windows/how-to-create-a-resource-script-file.md).  
+    >  Если в проекте еще нет RC-файла, см. раздел [Создание нового файла описания ресурсов](../windows/how-to-create-a-resource-script-file.md).  
   
-2.  Щелкните правой кнопкой мыши строку, которую необходимо переместить, и выберите команду **Вырезать** в контекстном меню.  
+2.  Щелкните правой кнопкой мыши строку, необходимо переместить и выберите **Вырезать** в контекстном меню.  
   
-3.  Поместите курсор в окно **редактора строк**, в котором необходимо вставить строку.  
+3.  Поместите курсор в целевом **редактора строк** окна.  
   
-4.  В RC\-файле, в который необходимо вставить строку, щелкните правой кнопкой мыши и выберите в контекстном меню команду **Вставить**.  
+4.  В RC-файле, к которому нужно вставить строку, щелкните правой кнопкой мыши и выберите **вставить** в контекстном меню.  
   
     > [!NOTE]
-    >  Если **идентификатор** или **значение** перемещаемой строки конфликтует с уже существующими в конечном файле **идентификаторами** или **значениями**, то **идентификатор** или **значение** перемещенной строки будет изменено.  Если в конечном файле есть строка с таким же **идентификатором**, **идентификатор** перемещенной строки будет изменен.  Если в конечном файле есть строка с таким же **значением**, **значение** перемещенной строки будет изменено.  
+    >  Если **идентификатор** или **значение** перемещенной строки конфликтует с существующим **идентификатор** или **значение** в файле назначения, либо **Идентификатор** или **значение** перемещенной строки изменений. Если существует строка с тем же **идентификатор**, **идентификатор** перемещенной строки изменений. Если существует строка с тем же **значение**, **значение** перемещенной строки изменений.  
   
- Сведения о добавлении ресурсов в управляемые проекты \(предназначенные для выполнения в общеязыковой среде CLR\) см. в разделе [Ресурсы приложений](../Topic/Resources%20in%20Desktop%20Apps.md) *Руководства разработчика .NET Framework*. Сведения о том, как вручную добавлять файлы ресурсов в управляемые проекты, осуществлять доступ к ресурсам, отображать статические ресурсы и присваивать строки ресурсов свойствам см. в разделах [Пошаговое руководство. Локализация приложений Windows Forms](http://msdn.microsoft.com/ru-ru/9a96220d-a19b-4de0-9f48-01e5d82679e5) и [Walkthrough: Using Resources for Localization with ASP.NET](../Topic/Walkthrough:%20Using%20Resources%20for%20Localization%20with%20ASP.NET.md).  
+ Сведения о добавлении ресурсов в управляемые проекты (предназначенные общеязыковая среда выполнения), см. в разделе [ресурсы в классических приложениях](/dotnet/framework/resources/index) в *руководства разработчика .NET Framework.* . Сведения о том, как вручную добавлять файлы ресурсов в проекты управляемого кода, осуществлять доступ к ресурсам, отображать статические ресурсы и присваивать строки ресурсов свойствам, см. в разделах [Пошаговое руководство. Локализация Windows Forms](http://msdn.microsoft.com/en-us/9a96220d-a19b-4de0-9f48-01e5d82679e5) и [Walkthrough: Using Resources for Localization with ASP.NET](http://msdn.microsoft.com/Library/bb4e5b44-e2b0-48ab-bbe9-609fb33900b6);  
   
  **Требования**  
   
  Win32  
   
-## См. также  
- [String Editor](../mfc/string-editor.md)   
- [Resource Files](../mfc/resource-files-visual-studio.md)   
- [Настройка макетов окон](../Topic/Customizing%20window%20layouts%20in%20Visual%20Studio.md)   
- [Строки](_win32_Strings)   
- [О строках](_win32_About_Strings_cpp)
+## <a name="see-also"></a>См. также  
+ [Редактор строк](../windows/string-editor.md)   
+ [Файлы ресурсов](../windows/resource-files-visual-studio.md)   
+ [Настройка макетов окон](/visualstudio/ide/customizing-window-layouts-in-visual-studio)   
+

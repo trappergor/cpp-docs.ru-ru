@@ -1,41 +1,42 @@
 ---
-title: "hash_set::rend (STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::hash_set::rend"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "rend - член [STL/CLR]"
+title: "hash_set::rend (STL/CLR) | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::hash_set::rend
+dev_langs: C++
+helpviewer_keywords: rend member [STL/CLR]
 ms.assetid: 12764bf1-ff3e-48db-a6ef-fe120187bc4e
-caps.latest.revision: 15
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 13
+caps.latest.revision: "15"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: 01bf5fe0a3f38d401ccefe8578a9516fd3b710c0
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 12/21/2017
 ---
-# hash_set::rend (STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="hashsetrend-stlclr"></a>hash_set::rend (STL/CLR)
 Задает конец обратной управляемой последовательности.  
   
-## Синтаксис  
+## <a name="syntax"></a>Синтаксис  
   
 ```  
 reverse_iterator rend();  
 ```  
   
-## Заметки  
- Функция\-член возвращает обратный итератор, указывающий только за началом контролируемой последовательности.  Таким образом, он задает для обратной последовательности параметр `end`.  Используется для получения итератора, который задает конец управляемой последовательности с параметром `current`, отображаемой в обратном порядке, однако в случае изменения длины управляемой последовательности его состояние может измениться.  
+## <a name="remarks"></a>Примечания  
+ Функция-член возвращает итератор, указывающий начало управляемой последовательности. Таким образом, он обозначает `end` обратной последовательности. Используется для получения итератора, который обозначает `current` конец управляемой последовательности, отображаемой в обратном порядке, но его состояние можно изменить при изменении длины управляемой последовательности.  
   
-## Пример  
+## <a name="example"></a>Пример  
   
 ```  
 // cliext_hash_set_rend.cpp   
@@ -65,16 +66,19 @@ int main()
   
 ```  
   
-  **a b c**  
-**\*\-\- \-\-rend\(\) \= B**  
-**\*\-\-rend\(\) \= a**   
-## Требования  
- **Заголовок:**\<cliext\/hash\_set\>  
+```Output  
+ a b c  
+*-- --rend() = b  
+*--rend() = a  
+```  
+  
+## <a name="requirements"></a>Требования  
+ **Заголовок:** \<cliext/hash_set >  
   
  **Пространство имен:** cliext  
   
-## См. также  
- [hash\_set](../dotnet/hash-set-stl-clr.md)   
- [hash\_set::begin](../dotnet/hash-set-begin-stl-clr.md)   
- [hash\_set::end](../dotnet/hash-set-end-stl-clr.md)   
- [hash\_set::rbegin](../dotnet/hash-set-rbegin-stl-clr.md)
+## <a name="see-also"></a>См. также  
+ [hash_set (STL/CLR)](../dotnet/hash-set-stl-clr.md)   
+ [hash_set::Begin (STL/CLR)](../dotnet/hash-set-begin-stl-clr.md)   
+ [hash_set::End (STL/CLR)](../dotnet/hash-set-end-stl-clr.md)   
+ [hash_set::rbegin (STL/CLR)](../dotnet/hash-set-rbegin-stl-clr.md)

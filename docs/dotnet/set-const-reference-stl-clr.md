@@ -1,41 +1,42 @@
 ---
-title: "set::const_reference (STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::set::const_reference"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "const_reference - элемент [STL/CLR]"
+title: "set::const_reference (STL/CLR) | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::set::const_reference
+dev_langs: C++
+helpviewer_keywords: const_reference member [STL/CLR]
 ms.assetid: 25326f25-b4d3-4a92-950a-a843cdff7486
-caps.latest.revision: 16
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 14
+caps.latest.revision: "16"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: e145200f6cab0bc31f41ad4104995b54e6d5abab
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 12/21/2017
 ---
-# set::const_reference (STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="setconstreference-stlclr"></a>set::const_reference (STL/CLR)
 Тип постоянной ссылки на элемент.  
   
-## Синтаксис  
+## <a name="syntax"></a>Синтаксис  
   
 ```  
 typedef value_type% const_reference;  
 ```  
   
-## Заметки  
- Описывает тип константы ссылку на элемент.  
+## <a name="remarks"></a>Примечания  
+ Тип, описывающий константную ссылку на элемент.  
   
-## Пример  
+## <a name="example"></a>Пример  
   
 ```  
 // cliext_set_const_reference.cpp   
@@ -63,13 +64,16 @@ int main()
   
 ```  
   
-  **a b c**   
-## Требования  
- **Заголовок:**\<cliext\/set\>  
+```Output  
+a b c  
+```  
+  
+## <a name="requirements"></a>Требования  
+ **Заголовок:** \<cliext и set >  
   
  **Пространство имен:** cliext  
   
-## См. также  
- [набор](../dotnet/set-stl-clr.md)   
- [set::reference](../dotnet/set-reference-stl-clr.md)   
- [set::value\_type](../dotnet/set-value-type-stl-clr.md)
+## <a name="see-also"></a>См. также  
+ [набор (STL/CLR)](../dotnet/set-stl-clr.md)   
+ [set::Reference (STL/CLR)](../dotnet/set-reference-stl-clr.md)   
+ [set::value_type (STL/CLR)](../dotnet/set-value-type-stl-clr.md)

@@ -20,11 +20,12 @@ caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 6523e5758e96c140b05f8416ba886a1e8636cc7d
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: ed6fec6c878fe505b18a39df1200117f4b426878
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="mfc-activex-controls-adding-stock-properties"></a>Элементы управления ActiveX в MFC. Добавление стандартных свойств
 Стандартные свойства отличаются от пользовательские свойства, что они уже реализован класс `COleControl`. `COleControl`содержит функции стандартных элементов, которые поддерживают общие свойства для элемента управления. Некоторые типичные свойства включают заголовок элемента управления и цвета переднего плана и фона. Сведения о других стандартных свойств см. в разделе [Stock поддерживаются свойства, с помощью мастера добавления свойства](#_core_stock_properties_supported_by_classwizard) далее в этой статье. Записи карты распределения для стандартных свойств всегда предшествует **DISP_STOCKPROP**.  
@@ -79,7 +80,7 @@ ms.lasthandoff: 10/24/2017
 ##  <a name="_core_stock_properties_supported_by_classwizard"></a>Стандартные свойства, поддерживаемые мастер добавления свойства  
  `COleControl` Класс предоставляет девять стандартных свойств. Можно добавить свойства, с помощью мастера добавления свойства.  
   
-|Свойство|Элемент карты распределения|Как получить доступ к значение|  
+|Свойство.|Элемент карты распределения|Как получить доступ к значение|  
 |--------------|------------------------|-------------------------|  
 |**Внешний вид**|**(DISP_STOCKPROP_APPEARANCE)**|Значение, доступным в качестве **m_sAppearance**.|  
 |`BackColor`|**(DISP_STOCKPROP_BACKCOLOR)**|Значение доступного путем вызова `GetBackColor`.|  

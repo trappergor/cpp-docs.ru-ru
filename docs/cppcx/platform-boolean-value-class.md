@@ -15,11 +15,12 @@ caps.latest.revision: "3"
 author: ghogen
 ms.author: ghogen
 manager: ghogen
-ms.openlocfilehash: 6bc6a0a4dc709d6d9baaa4a7279f88ded764b861
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: f25b52001908cf41e1aa564ca86a30da0688003a
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="platformboolean-value-class"></a>Класс значений Platform::Boolean
 Представляет логическое значение. Эквивалент `bool`.  
@@ -30,7 +31,7 @@ ms.lasthandoff: 10/24/2017
 public value struct Boolean  
 ```  
   
-### <a name="members"></a>Члены  
+### <a name="members"></a>Участники  
  Класс Boolean имеет методы Equals(), GetHashCode() и ToString(), наследуемые от [Platform::Object Class](../cppcx/platform-object-class.md), и метод GetTypeCode(), наследуемый от [Platform::Type Class](../cppcx/platform-type-class.md).  
   
 ### <a name="requirements"></a>Требования  

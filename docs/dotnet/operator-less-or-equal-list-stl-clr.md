@@ -1,33 +1,33 @@
 ---
-title: "operator&lt;= (list) (STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::list::operator<="
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "operator<= - элемент [STL/CLR]"
+title: "оператор&lt;= (список) (STL/CLR) | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::list::operator<=
+dev_langs: C++
+helpviewer_keywords: operator<= member [STL/CLR]
 ms.assetid: af677e20-f529-4055-b101-af9728bc090b
-caps.latest.revision: 17
-caps.handback.revision: 15
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "17"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: 376c2fd83284bacbf3e4c38e4a25c14d5c9c24c6
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 12/21/2017
 ---
-# operator&lt;= (list) (STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Список больше или равное сравнение.  
+# <a name="operatorlt-list-stlclr"></a>оператор&lt;= (список) (STL/CLR)
+Меньше или равно список сравнения.  
   
-## Синтаксис  
+## <a name="syntax"></a>Синтаксис  
   
 ```  
 template<typename Value>  
@@ -35,17 +35,17 @@ template<typename Value>
         list<Value>% right);  
 ```  
   
-#### Параметры  
- влево  
- Левый контейнер, с которым выполняется сравнение.  
+#### <a name="parameters"></a>Параметры  
+ left  
+ Левый контейнер для сравнения.  
   
- правый  
- Правой контейнер, с которым выполняется сравнение.  
+ right  
+ Правый контейнер для сравнения.  
   
-## Заметки  
- Функция возвращает оператора `!(``right` `<` `left``)`.  Он используется для выполнения не приказано ли `left` после `right` при сравнении 2 списка элемент элементом.  
+## <a name="remarks"></a>Примечания  
+ Функция оператор возвращает `!(right < left)`. Можно использовать для тестирования ли `left` не упорядочен после `right` при двух списков, сравниваемые элемент элемент.  
   
-## Пример  
+## <a name="example"></a>Пример  
   
 ```  
 // cliext_list_operator_le.cpp   
@@ -84,19 +84,22 @@ int main()
   
 ```  
   
-  **a b c**  
- **B d**  
-**\[B C\] \<\= \[B C\] оказывается**  
-**\[B d\] \<\= \[B C\] ложен**   
-## Требования  
- **Заголовок:**\<cliext\/list\>  
+```Output  
+ a b c  
+ a b d  
+[a b c] <= [a b c] is True  
+[a b d] <= [a b c] is False  
+```  
+  
+## <a name="requirements"></a>Требования  
+ **Заголовок:** \<cliext/list >  
   
  **Пространство имен:** cliext  
   
-## См. также  
- [list](../dotnet/list-stl-clr.md)   
- [operator\=\= \(list\)](../dotnet/operator-equality-list-stl-clr.md)   
- [operator\!\= \(list\)](../dotnet/operator-inequality-list-stl-clr.md)   
- [operator\< \(list\)](../dotnet/operator-less-than-list-stl-clr.md)   
- [operator\>\= \(list\)](../dotnet/operator-greater-or-equal-list-stl-clr.md)   
- [operator\> \(list\)](../Topic/operator%3E%20\(list\)%20\(STL-CLR\).md)
+## <a name="see-also"></a>См. также  
+ [список (STL/CLR)](../dotnet/list-stl-clr.md)   
+ [оператор == (список) (STL/CLR)](../dotnet/operator-equality-list-stl-clr.md)   
+ [оператор! = (список) (STL/CLR)](../dotnet/operator-inequality-list-stl-clr.md)   
+ [оператор\< (список) (STL/CLR)](../dotnet/operator-less-than-list-stl-clr.md)   
+ [оператор > = (список) (STL/CLR)](../dotnet/operator-greater-or-equal-list-stl-clr.md)   
+ [operator> (list) (STL/CLR)](../dotnet/operator-greater-than-list-stl-clr.md)

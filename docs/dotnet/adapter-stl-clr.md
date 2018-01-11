@@ -18,11 +18,14 @@ caps.latest.revision: "8"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: fc5480896ed931fffdd4087eb5f39cfd8bbe67aa
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: 347fab2782f9ff19681dbaab25b7ec86ef8721ae
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="adapter-stlclr"></a>adapter (STL/CLR)
 Заголовок STL/CLR `<cliext/adapter>` определяет два класса шаблона (`collection_adapter` и `range_adapter`) и функцию шаблона `make_collection`.  
@@ -35,12 +38,12 @@ ms.lasthandoff: 10/24/2017
   
 ## <a name="remarks"></a>Примечания  
   
-|Класс|Описание|  
+|Класс|Описание:|  
 |-----------|-----------------|  
 |[collection_adapter (STL/CLR)](../dotnet/collection-adapter-stl-clr.md)|Инкапсулирует коллекцию библиотеки базовых классов (BCL) в виде диапазона.|  
 |[range_adapter (STL/CLR)](../dotnet/range-adapter-stl-clr.md)|Создает оболочку для диапазона как коллекция BCL.|  
   
-|Функция|Описание|  
+|Функция|Описание:|  
 |--------------|-----------------|  
 |[make_collection (STL/CLR)](../dotnet/make-collection-stl-clr.md)|Создает адаптер диапазона с помощью пары итератора.|  
   

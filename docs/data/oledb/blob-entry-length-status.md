@@ -1,32 +1,33 @@
 ---
-title: "BLOB_ENTRY_LENGTH_STATUS | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "BLOB_ENTRY_LENGTH_STATUS"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "BLOB_ENTRY_LENGTH_STATUS - макрос"
+title: "BLOB_ENTRY_LENGTH_STATUS | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: BLOB_ENTRY_LENGTH_STATUS
+dev_langs: C++
+helpviewer_keywords: BLOB_ENTRY_LENGTH_STATUS macro
 ms.assetid: 09da67de-421b-4853-9a26-760e38324502
-caps.latest.revision: 7
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: 1362fd9b74e415a2502c64245b580acec6fba729
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 12/21/2017
 ---
-# BLOB_ENTRY_LENGTH_STATUS
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Используется с `BEGIN_COLUMN_MAP` и `END_COLUMN_MAP` для привязки большой двоичный объект \([БОЛЬШОЙ ДВОИЧНЫЙ ОБЪЕКТ](https://msdn.microsoft.com/en-us/library/ms711511.aspx)\).  Аналогично [BLOB\_ENTRY](../Topic/BLOB_ENTRY.md), за исключением того, что этот макрос также получает длину и состояние столбца БОЛЬШИХ ДВОИЧНОГО ОБЪЕКТА.  
+# <a name="blobentrylengthstatus"></a>BLOB_ENTRY_LENGTH_STATUS
+При использовании `BEGIN_COLUMN_MAP` и `END_COLUMN_MAP` для привязки больших двоичных объектов ([больших двоичных ОБЪЕКТОВ](https://msdn.microsoft.com/en-us/library/ms711511.aspx)). Аналогично [BLOB_ENTRY](../../data/oledb/blob-entry.md), за исключением того, что этот макрос также возвращает длину и состояние столбца большого двоичного ОБЪЕКТА.  
   
-## Синтаксис  
+## <a name="syntax"></a>Синтаксис  
   
 ```  
   
@@ -41,36 +42,36 @@ data
 , length, status )  
 ```  
   
-#### Параметры  
+#### <a name="parameters"></a>Параметры  
  `nOrdinal`  
- \[in\] число столбцов.  
+ [in] Номер столбца.  
   
  *IID*  
- \[in\] интерфейс GUID, например **IDD\_ISequentialStream**, используется для извлечения БОЛЬШОЙ ДВОИЧНЫЙ ОБЪЕКТ.  
+ [in] Интерфейс GUID, таких как **IDD_ISequentialStream**, который применяется для получения большого двоичного ОБЪЕКТА.  
   
  `flags`  
- \[in\] флажки Хранилище\- режима заданное OLE составили модель хранения \(например, **STGM\_READ**\).  
+ [in] Режим хранения помечается как определяются моделью структурированного хранения OLE (например, **STGM_READ**).  
   
  `data`  
- \[in\] соответствующий элемент данных в записи пользователя.  
+ [in] Соответствующего члена данных в записи пользователя.  
   
  *length*  
- \[out\]\) \(фактическая длина в байтах столбцов БОЛЬШИХ ДВОИЧНОГО ОБЪЕКТА.  
+ [out] (Фактические) длина в байтах столбца большого двоичного ОБЪЕКТА.  
   
  *status*  
- \[out\] состояние столбца данных больших двоичных объектов.  
+ [out] Состояние столбца данных большого двоичного ОБЪЕКТА.  
   
-## Пример  
- В разделе [Как определить, извлечение БОЛЬШОЙ ДВОИЧНЫЙ ОБЪЕКТ?](../../data/oledb/retrieving-a-blob.md).  
+## <a name="example"></a>Пример  
+ В разделе [способ получения большого двоичного ОБЪЕКТА?](../../data/oledb/retrieving-a-blob.md).  
   
-## Требования  
+## <a name="requirements"></a>Требования  
  **Заголовок:** atldbcli.h  
   
-## См. также  
- [Макросы и глобальные функции для шаблонов потребителей OLE DB](../Topic/Macros%20and%20Global%20Functions%20for%20OLE%20DB%20Consumer%20Templates.md)   
- [BEGIN\_COLUMN\_MAP](../Topic/BEGIN_COLUMN_MAP.md)   
- [END\_COLUMN\_MAP](../../data/oledb/end-column-map.md)   
- [COLUMN\_ENTRY](../../data/oledb/column-entry.md)   
- [BLOB\_ENTRY](../Topic/BLOB_ENTRY.md)   
- [BLOB\_ENTRY\_LENGTH](../../data/oledb/blob-entry-length.md)   
- [BLOB\_ENTRY\_STATUS](../Topic/BLOB_ENTRY_STATUS.md)
+## <a name="see-also"></a>См. также  
+ [Макросы и глобальные функции для шаблонов потребителей OLE DB](../../data/oledb/macros-and-global-functions-for-ole-db-consumer-templates.md)   
+ [BEGIN_COLUMN_MAP](../../data/oledb/begin-column-map.md)   
+ [END_COLUMN_MAP](../../data/oledb/end-column-map.md)   
+ [COLUMN_ENTRY](../../data/oledb/column-entry.md)   
+ [BLOB_ENTRY](../../data/oledb/blob-entry.md)   
+ [BLOB_ENTRY_LENGTH](../../data/oledb/blob-entry-length.md)   
+ [BLOB_ENTRY_STATUS](../../data/oledb/blob-entry-status.md)

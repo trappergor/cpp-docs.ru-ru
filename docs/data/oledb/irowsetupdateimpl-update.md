@@ -1,35 +1,37 @@
 ---
-title: "IRowsetUpdateImpl::Update | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "ATL::IRowsetUpdateImpl::Update"
-  - "IRowsetUpdateImpl::Update"
-  - "IRowsetUpdateImpl.Update"
-  - "ATL.IRowsetUpdateImpl.Update"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Update - метод"
+title: "IRowsetUpdateImpl::Update | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- ATL::IRowsetUpdateImpl::Update
+- IRowsetUpdateImpl::Update
+- IRowsetUpdateImpl.Update
+- ATL.IRowsetUpdateImpl.Update
+dev_langs: C++
+helpviewer_keywords: Update method
 ms.assetid: 9ec6884d-aa9c-4871-a803-c048f162403c
-caps.latest.revision: 8
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: 2cf0b2989fabda9217abd64aef485f94b2c5ccc8
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 12/21/2017
 ---
-# IRowsetUpdateImpl::Update
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Передает все изменения, внесенные в строке с момента последней выборки или обновление.  
+# <a name="irowsetupdateimplupdate"></a>IRowsetUpdateImpl::Update
+Передает любые изменения, внесенные в строку с момента последней выборки или обновления.  
   
-## Синтаксис  
+## <a name="syntax"></a>Синтаксис  
   
 ```  
   
@@ -43,17 +45,17 @@ caps.handback.revision: 8
 );  
 ```  
   
-#### Параметры  
+#### <a name="parameters"></a>Параметры  
  `hReserved`  
- \[in\] соответствует параметру `hChapter` в [IRowsetUpdate::Update](https://msdn.microsoft.com/en-us/library/ms719709.aspx).  
+ [in] Соответствует `hChapter` параметр в [IRowsetUpdate::Update](https://msdn.microsoft.com/en-us/library/ms719709.aspx).  
   
- Для других параметров см. в разделе [IRowsetUpdate::Update](https://msdn.microsoft.com/en-us/library/ms719709.aspx) справочника *программиста OLE DB*.  
+ Другие параметры в разделе [IRowsetUpdate::Update](https://msdn.microsoft.com/en-us/library/ms719709.aspx) в *Справочник программиста OLE DB*.  
   
-## Заметки  
- Изменения передаются с помощью метода [IRowsetChangeImpl::FlushData](../../data/oledb/irowsetchangeimpl-flushdata.md).  Объект\-получатель должен вызвать метод [CRowset::Update](../Topic/CRowset::Update.md) для изменения вступили в силу.  Задайте соответствующее значение *prgRowstatus*, как описано в разделе [Строки состояния](https://msdn.microsoft.com/en-us/library/ms722752.aspx) в *справочнике программиста OLE DB*.  
+## <a name="remarks"></a>Примечания  
+ Изменения передаются путем вызова [IRowsetChangeImpl::FlushData](../../data/oledb/irowsetchangeimpl-flushdata.md). Пользователь должен вызвать [CRowset::Update](../../data/oledb/crowset-update.md) чтобы изменения вступили в силу. Задать *prgRowstatus* соответствующее значение, как описано в статье [состояния строк](https://msdn.microsoft.com/en-us/library/ms722752.aspx) в *Справочник программиста OLE DB*.  
   
-## Требования  
- **Header:** atldb.h  
+## <a name="requirements"></a>Требования  
+ **Заголовок:** atldb.h  
   
-## См. также  
- [Класс IRowsetUpdateImpl](../Topic/IRowsetUpdateImpl%20Class.md)
+## <a name="see-also"></a>См. также  
+ [Класс IRowsetUpdateImpl](../../data/oledb/irowsetupdateimpl-class.md)

@@ -15,11 +15,14 @@ caps.latest.revision: "16"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 5455c1912b3108291f530ee9488a4e0078ba39a2
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: b9adb22c14fb5b59dfb4e89e69c724ca8c7462bf
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="rangeadapter-stlclr"></a>range_adapter (STL/CLR)
 Класс шаблона, который создает оболочку для пары итераторы, которые позволяют реализовать несколько интерфейсов в библиотеке базовых классов (BCL). Range_adapter позволяет управлять диапазон STL/CLR, как если бы оно коллекции BCL.  
@@ -41,19 +44,19 @@ template<typename Iter>
  Iter  
  Тип, связанный с упакованного итераторов.  
   
-## <a name="members"></a>Члены  
+## <a name="members"></a>Участники  
   
-|Функция-член|Описание|  
+|Функция-член|Описание:|  
 |---------------------|-----------------|  
 |[range_adapter::range_adapter (STL/CLR)](../dotnet/range-adapter-range-adapter-stl-clr.md)|Создает объект адаптера.|  
   
-|Оператор|Описание|  
+|Оператор|Описание:|  
 |--------------|-----------------|  
 |[range_adapter::operator= (STL/CLR)](../dotnet/range-adapter-operator-assign-stl-clr.md)|Заменяет сохраненный итератор пары.|  
   
-## <a name="interfaces"></a>Интерфейсы  
+## <a name="interfaces"></a>интерфейсов,  
   
-|Интерфейс|Описание|  
+|Интерфейс|Описание:|  
 |---------------|-----------------|  
 |<xref:System.Collections.IEnumerable>|Перебор элементов в коллекции.|  
 |<xref:System.Collections.ICollection>|Поддерживает группу элементов.|  

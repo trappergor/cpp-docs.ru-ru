@@ -1,45 +1,46 @@
 ---
-title: "map::operator(STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::map::operator[]"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "operatormember [] [STL/CLR]"
+title: "MAP::operator(STL/CLR) | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::map::operator[]
+dev_langs: C++
+helpviewer_keywords: operatormember [] [STL/CLR]
 ms.assetid: 50e494c5-62d4-4469-8da3-7432ee4dff97
-caps.latest.revision: 16
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 14
+caps.latest.revision: "16"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: d8bfbba2909c3bf8256df433294c5d52605db816
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 12/21/2017
 ---
-# map::operator(STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Сопоставляет ключ, связанный с его сопоставлянному значение.  
+# <a name="mapoperatorstlclr"></a>map::operator(STL/CLR)
+Сопоставляет сопоставленных связанное с ним значение ключа.  
   
-## Синтаксис  
+## <a name="syntax"></a>Синтаксис  
   
 ```  
 mapped_type operator[](key_type key);  
 ```  
   
-#### Параметры  
- key  
- Значение ключа, которое необходимо найти.  
+#### <a name="parameters"></a>Параметры  
+ клавиша  
+ Искомое значение ключа.  
   
-## Заметки  
- Функции\-члены стремятся найти элемент с соответствующий заказ на `key`.  При обнаружении одно, возвращается сопоставляются связанное значение; в противном случае он содержит `value_type(``key``, mapped_type())` и возвращает соответствующее \(по умолчанию\) сопоставляются значению.  Он используется, чтобы искать сопоставляются значение заданного его связанный ключ, или убедиться, что запись существует для ключа, если не найдено.  
+## <a name="remarks"></a>Примечания  
+ Он стремится, чтобы найти элемент с соответствующим образом для функций-членов `key`. При обнаружении, он возвращает связанное значение сопоставленных; в противном случае он вставляет `value_type(key, mapped_type())` и возвращает связанный с ним значение сопоставлен (по умолчанию). Используется для поиска сопоставленных значение, заданное его связанный ключ или убедитесь, что запись существует для ключа, если он не найден.  
   
-## Пример  
+## <a name="example"></a>Пример  
   
 ```  
 // cliext_map_operator_sub.cpp   
@@ -80,17 +81,20 @@ int main()
   
 ```  
   
-  **\[1\] \[2\] \[BC — 3\]**  
-**a \[c1\] \= 0**  
-**c1\] \[B \= 2**  
- **A \[0\] \[1\] \[2\] \[BC — 3\]**  
- **\[A10\] \[1\] \[2\] \[BC — 13\]**   
-## Требования  
- **Заголовок:**\<cliext\/map\>  
+```Output  
+ [a 1] [b 2] [c 3]  
+c1[A] = 0  
+c1[b] = 2  
+ [A 0] [a 1] [b 2] [c 3]  
+ [A 10] [a 1] [b 2] [c 13]  
+```  
+  
+## <a name="requirements"></a>Требования  
+ **Заголовок:** \<cliext/map >  
   
  **Пространство имен:** cliext  
   
-## См. также  
- [map](../dotnet/map-stl-clr.md)   
- [map::find](../Topic/map::find%20\(STL-CLR\).md)   
- [map::insert](../dotnet/map-insert-stl-clr.md)
+## <a name="see-also"></a>См. также  
+ [Карта (STL/CLR)](../dotnet/map-stl-clr.md)   
+ [MAP::Find (STL/CLR)](../dotnet/map-find-stl-clr.md)   
+ [map::insert (STL/CLR)](../dotnet/map-insert-stl-clr.md)

@@ -21,11 +21,14 @@ caps.latest.revision: "12"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 3ad77e459d32ed0fc0b3798d2a37b4754d556f20
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: e3bbfcf020d1700effdc770b5a5e04892b72d8cc
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="how-to-read-windows-performance-counters-ccli"></a>Практическое руководство. Чтение из счетчиков производительности Windows (C++/CLI)
 Некоторые приложения и подсистемы Windows предоставляют данные о производительности посредством системы производительности Windows. Эти счетчики можно осуществлять с помощью <xref:System.Diagnostics.PerformanceCounterCategory> и <xref:System.Diagnostics.PerformanceCounter> классов, которые находятся в <xref:System.Diagnostics?displayProperty=fullName> пространства имен.  

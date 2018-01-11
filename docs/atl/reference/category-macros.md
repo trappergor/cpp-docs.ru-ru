@@ -4,40 +4,47 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-windows
+ms.technology: cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: reference
-dev_langs:
-- C++
+f1_keywords:
+- atlbase/ATL::AtlGetHexValue
+- atlbase/ATL::AtlGetVersion
+- atlenc/ATL::AtlHexDecode
+- atlenc/ATL::AtlHexDecodeGetRequiredLength
+- atlenc/ATL::AtlHexEncode
+- atlenc/ATL::AtlHexEncodeGetRequiredLength
+- atlenc/ATL::AtlHexValue
+- atlenc/ATL::BEncode
+- atlenc/ATL::BEncodeGetRequiredLength
+- atlenc/ATL::EscapeXML
+- atlenc/ATL::GetExtendedChars
+- atlenc/ATL::IsExtendedChar
+- atlenc/ATL::QEncode
+- atlenc/ATL::QEncodeGetRequiredLength
+- atlenc/ATL::QPDecode
+- atlenc/ATL::QPDecodeGetRequiredLength
+- atlenc/ATL::QPEncode
+- atlenc/ATL::QPEncodeGetRequiredLength
+- atlenc/ATL::UUDecode
+- atlenc/ATL::UUDecodeGetRequiredLength
+- atlenc/ATL::UUEncode
+- atlenc/ATL::UUEncodeGetRequiredLength
+dev_langs: C++
 ms.assetid: 223578cb-6180-4787-a8d8-ba3787a5d3ee
-caps.latest.revision: 17
+caps.latest.revision: "17"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 604a4bf49490ad2599c857eb3afd527d67e1e25b
-ms.openlocfilehash: 26eea5cc8ce8e18af84a9ca89e5ddc94272be44c
-ms.contentlocale: ru-ru
-ms.lasthandoff: 02/24/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: 752a0c0c9de5c726a106ca08a574844369c6bdc5
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="category-macros"></a>Макросы категории
-Эти макросы определить категории карт.  
+Эти макросы определяют категории карты.  
   
 |||  
 |-|-|  
@@ -47,7 +54,7 @@ ms.lasthandoff: 02/24/2017
 |[REQUIRED_CATEGORY](#required_category)|Указывает категории, которые требуются контейнера COM-объектом.|  
 
 ## <a name="requirements"></a>Требования  
- **Заголовок:** файле atlcom.h  
+ **Заголовок:** atlcom.h  
 
 ##  <a name="begin_category_map"></a>BEGIN_CATEGORY_MAP  
  Отмечает начало карты категории.  
@@ -61,19 +68,19 @@ BEGIN_CATEGORY_MAP(theClass)
  [in] Имя класса, содержащего схему категории.  
   
 ### <a name="remarks"></a>Примечания  
- Карта категория используется для указания категорий компонентов COM класс реализует и категорий, к которым он требует от его контейнера.  
+ Категория карта используется указание категорий компонентов COM-класс будет реализовывать и категорий, он требует от своего контейнера.  
   
- Добавить [IMPLEMENTED_CATEGORY](#implemented_category) запись карту для каждой категории, реализованный COM-класса. Добавить [REQUIRED_CATEGORY](#required_category) запись в сопоставление для каждой категории, классу требуется для реализации своих клиентов. Конец карты с [END_CATEGORY_MAP](#end_category_map) макрос.  
+ Добавить [IMPLEMENTED_CATEGORY](#implemented_category) запись в сопоставление для каждой категории, реализованный в COM-класс. Добавить [REQUIRED_CATEGORY](#required_category) входа на карте для каждой категории, класс требует, чтобы реализовать его клиенты. Отметить конец карты с [END_CATEGORY_MAP](#end_category_map) макрос.  
   
- Категории компонентов, перечисленных в сопоставлении регистрируются автоматически при регистрации модуля, если класс имеет связанный с ним [OBJECT_ENTRY_AUTO](../../atl/reference/object-map-macros.md#object_entry_auto) или [OBJECT_ENTRY_NON_CREATEABLE_EX_AUTO](../../atl/reference/object-map-macros.md#object_entry_non_createable_ex_auto).  
+ Категории компонентов, перечисленный в карте будет зарегистрирована автоматически при регистрации модуля, если класс имеет связанный с ним [OBJECT_ENTRY_AUTO](../../atl/reference/object-map-macros.md#object_entry_auto) или [OBJECT_ENTRY_NON_CREATEABLE_EX_AUTO](../../atl/reference/object-map-macros.md#object_entry_non_createable_ex_auto) .  
   
 > [!NOTE]
->  Диспетчер категорий стандартный компонент использует ATL для регистрации категории компонентов. Если менеджер не присутствует в системе, при регистрации модуля, регистрация прошла успешно, но для этого класса не будет зарегистрирована категории компонентов.  
+>  ATL использует диспетчер категорий стандартный компонент для регистрации категорий компонентов. Если диспетчер не находится в системе, при регистрации модуля, регистрация выполняется успешно, но категории компонентов не будут регистрироваться для этого класса.  
   
- Дополнительные сведения о категории компонентов см. в разделе [Каковы категории компонентов и как они работают](http://msdn.microsoft.com/library/windows/desktop/ms694322) в [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
+ Дополнительные сведения о категории компонентов см. в разделе [Каковы категории компонентов, и принципы их работы](http://msdn.microsoft.com/library/windows/desktop/ms694322) в Windows SDK.  
   
 ### <a name="example"></a>Пример  
- [!code-cpp[NVC_ATL_Windowing&#100;](../../atl/codesnippet/cpp/category-macros_1.h)]  
+ [!code-cpp[NVC_ATL_Windowing#100](../../atl/codesnippet/cpp/category-macros_1.h)]  
   
 ##  <a name="end_category_map"></a>END_CATEGORY_MAP  
  Отмечает конец карты категории.  
@@ -83,10 +90,10 @@ END_CATEGORY_MAP()
 ```  
   
 ### <a name="example"></a>Пример  
- В примере показано [BEGIN_CATEGORY_MAP](#begin_category_map).  
+ Далее приведен пример [BEGIN_CATEGORY_MAP](#begin_category_map).  
   
 ##  <a name="implemented_category"></a>IMPLEMENTED_CATEGORY  
- Добавить `IMPLEMENTED_CATEGORY` макрос к компоненту [карты категории](#begin_category_map) для указания, должен быть зарегистрирован как реализация категории, идентифицируемый `catID` параметр.  
+ Добавить `IMPLEMENTED_CATEGORY` макрос к компоненту [карты категории](#begin_category_map) для указания, должен быть зарегистрирован как реализация категории, обозначенную `catID` параметра.  
   
 ```
 IMPLEMENTED_CATEGORY(catID)
@@ -94,18 +101,18 @@ IMPLEMENTED_CATEGORY(catID)
   
 ### <a name="parameters"></a>Параметры  
  `catID`  
- [in] Объект **CATID** константой или переменной, содержащей глобальный уникальный идентификатор (GUID) для категории реализовано. Адрес `catID` будут выполнены и добавляются на карту. Выбор из стандартных категорий см.  
+ [in] Объект **CATID** константой или переменной, содержащей глобальный уникальный идентификатор (GUID) для категории реализовано. Адрес `catID` будут выполнены и добавляются на карту. В приведенной ниже таблице для выбора из стандартных категорий.  
   
 ### <a name="remarks"></a>Примечания  
- Категории компонентов, перечисленных в сопоставлении регистрируются автоматически при регистрации модуля, если класс имеет связанный с ним [OBJECT_ENTRY_AUTO](../../atl/reference/object-map-macros.md#object_entry_auto) или [OBJECT_ENTRY_NON_CREATEABLE_EX_AUTO](../../atl/reference/object-map-macros.md#object_entry_non_createable_ex_auto) макрос.  
+ Категории компонентов, перечисленный в карте будет зарегистрирована автоматически при регистрации модуля, если класс имеет связанный с ним [OBJECT_ENTRY_AUTO](../../atl/reference/object-map-macros.md#object_entry_auto) или [OBJECT_ENTRY_NON_CREATEABLE_EX_AUTO](../../atl/reference/object-map-macros.md#object_entry_non_createable_ex_auto) макрос.  
   
  Клиенты могут использовать сведения о категории, зарегистрированные для класса для определения его возможности и требования без необходимости создавать его экземпляр.  
   
- Дополнительные сведения о категории компонентов см. в разделе [Каковы категории компонентов и как они работают](http://msdn.microsoft.com/library/windows/desktop/ms694322) в [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
+ Дополнительные сведения о категории компонентов см. в разделе [Каковы категории компонентов, и принципы их работы](http://msdn.microsoft.com/library/windows/desktop/ms694322) в Windows SDK.  
   
 ### <a name="a-selection-of-stock-categories"></a>Выбор из стандартных категорий  
   
-|Описание|Символ|Реестр идентификатор GUID|  
+|Описание:|Символ|Идентификатор GUID реестра|  
 |-----------------|------------|-------------------|  
 |Безопасно для сценариев|CATID_SafeForScripting|{7DD95801-9882-11CF-9FA9-00AA006C42C4}|  
 |Безопасно для инициализации|CATID_SafeForInitializing|{7DD95802-9882-11CF-9FA9-00AA006C42C4}|  
@@ -113,13 +120,13 @@ IMPLEMENTED_CATEGORY(catID)
 |простую привязку данных|CATID_PropertyNotifyControl|{157083E1-2368-11cf-87B9-00AA006C8166}|  
 |Расширенная привязка данных|CATID_VBDataBound|{157083E2-2368-11cf-87B9-00AA006C8166}|  
 |Элементы управления без окон|CATID_WindowlessObject|{1D06B600-3AE3-11cf-87B9-00AA006C8166}|  
-|Объекты с поддержкой Интернета|В разделе [виду объектов Internet](http://msdn.microsoft.com/library/windows/desktop/ms690561) в [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)] для простого списка.||  
+|Объекты с поддержкой Интернета|В разделе [виду объектов Интернет](http://msdn.microsoft.com/library/windows/desktop/ms690561) в Windows SDK для простого списка.||  
   
 ### <a name="example"></a>Пример  
- [!code-cpp[NVC_ATL_Windowing&#100;](../../atl/codesnippet/cpp/category-macros_1.h)]  
+ [!code-cpp[NVC_ATL_Windowing#100](../../atl/codesnippet/cpp/category-macros_1.h)]  
   
 ##  <a name="required_category"></a>REQUIRED_CATEGORY  
- Добавить `REQUIRED_CATEGORY` макрос к компоненту [карты категории](#begin_category_map) для указания, что он должен быть зарегистрирован как требующий категории, идентифицируемый `catID` параметр.  
+ Добавить `REQUIRED_CATEGORY` макрос к компоненту [карты категории](#begin_category_map) для указания, должен быть зарегистрирован как требующее категории, обозначенную `catID` параметра.  
   
 ```
 REQUIRED_CATEGORY( catID )
@@ -127,18 +134,18 @@ REQUIRED_CATEGORY( catID )
   
 ### <a name="parameters"></a>Параметры  
  `catID`  
- [in] Объект **CATID** константой или переменной, содержащей глобальный уникальный идентификатор (GUID) для категории «обязательные». Адрес `catID` будут выполнены и добавляются на карту. Выбор из стандартных категорий см.  
+ [in] Объект **CATID** константой или переменной, содержащей глобальный уникальный идентификатор (GUID) для необходимая категория. Адрес `catID` будут выполнены и добавляются на карту. В приведенной ниже таблице для выбора из стандартных категорий.  
   
 ### <a name="remarks"></a>Примечания  
- Категории компонентов, перечисленных в сопоставлении регистрируются автоматически при регистрации модуля, если класс имеет связанный с ним [OBJECT_ENTRY_AUTO](../../atl/reference/object-map-macros.md#object_entry_auto) или [OBJECT_ENTRY_NON_CREATEABLE_EX_AUTO](../../atl/reference/object-map-macros.md#object_entry_non_createable_ex_auto) макрос.  
+ Категории компонентов, перечисленный в карте будет зарегистрирована автоматически при регистрации модуля, если класс имеет связанный с ним [OBJECT_ENTRY_AUTO](../../atl/reference/object-map-macros.md#object_entry_auto) или [OBJECT_ENTRY_NON_CREATEABLE_EX_AUTO](../../atl/reference/object-map-macros.md#object_entry_non_createable_ex_auto) макрос.  
   
- Клиенты могут использовать сведения о категории, зарегистрированные для класса для определения его возможности и требования без необходимости создавать его экземпляр. Например элемент управления может потребоваться, что контейнер поддерживают привязку данных. Контейнер можно выяснить наличие возможности, необходимые для размещения элемента управления с помощью запроса manager категории для категорий, необходимые для этого элемента управления. Если контейнер не поддерживает необходимые функции, она может отклонить для размещения COM-объекта.  
+ Клиенты могут использовать сведения о категории, зарегистрированные для класса для определения его возможности и требования без необходимости создавать его экземпляр. Например элемент управления может потребоваться, что контейнер поддерживают привязку данных. Контейнер можно выяснить наличие возможности, необходимые для размещения элемента управления, запрашивая диспетчер категории для категорий, необходимые для этого элемента управления. Если контейнер не поддерживает функцию, необходимую, может отказаться размещения COM-объекта.  
   
- Дополнительные сведения о категории компонентов, включая список примеров, в разделе [Каковы категории компонентов и как они работают](http://msdn.microsoft.com/library/windows/desktop/ms694322) в [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
+ Дополнительные сведения о категории компонентов, включая список примеров, в разделе [Каковы категории компонентов, и принципы их работы](http://msdn.microsoft.com/library/windows/desktop/ms694322) в Windows SDK.  
   
 ### <a name="a-selection-of-stock-categories"></a>Выбор из стандартных категорий  
   
-|Описание|Символ|Реестр идентификатор GUID|  
+|Описание:|Символ|Идентификатор GUID реестра|  
 |-----------------|------------|-------------------|  
 |Безопасно для сценариев|CATID_SafeForScripting|{7DD95801-9882-11CF-9FA9-00AA006C42C4}|  
 |Безопасно для инициализации|CATID_SafeForInitializing|{7DD95802-9882-11CF-9FA9-00AA006C42C4}|  
@@ -146,11 +153,10 @@ REQUIRED_CATEGORY( catID )
 |простую привязку данных|CATID_PropertyNotifyControl|{157083E1-2368-11cf-87B9-00AA006C8166}|  
 |Расширенная привязка данных|CATID_VBDataBound|{157083E2-2368-11cf-87B9-00AA006C8166}|  
 |Элементы управления без окон|CATID_WindowlessObject|{1D06B600-3AE3-11cf-87B9-00AA006C8166}|  
-|Объекты с поддержкой Интернета|В разделе [виду объектов Internet](http://msdn.microsoft.com/library/windows/desktop/ms690561) в [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)] для простого списка.||  
+|Объекты с поддержкой Интернета|В разделе [виду объектов Интернет](http://msdn.microsoft.com/library/windows/desktop/ms690561) в Windows SDK для простого списка.||  
   
 ### <a name="example"></a>Пример  
- [!code-cpp[NVC_ATL_Windowing&#135;](../../atl/codesnippet/cpp/category-macros_2.h)]  
+ [!code-cpp[NVC_ATL_Windowing#135](../../atl/codesnippet/cpp/category-macros_2.h)]  
   
 ## <a name="see-also"></a>См. также  
  [Макросы](../../atl/reference/atl-macros.md)
-

@@ -18,11 +18,14 @@ caps.latest.revision: "8"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: f59a90828f338d918f753c8ba79236fd7edc1587
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: 0276d5b5420ed0294b2cf3438190f79d03585744
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="converting-projects-from-mixed-mode-to-pure-intermediate-language"></a>Преобразование проектов из смешанного режима в чистый промежуточный язык
 Все проекты Visual C++ CLR ссылки на библиотеки времени выполнения C по умолчанию. Следовательно эти проекты классифицируются как приложения в смешанном режиме, поскольку в них объединяется машинный код с кодом языка среды CLR (управляемого кода). При компиляции, они компилируются в промежуточный язык (IL), также известный как промежуточный язык Майкрософт (MSIL).  
@@ -49,7 +52,7 @@ ms.lasthandoff: 10/24/2017
         // #include <tchar.h>  
         ```  
   
-         -или-  
+         - или -  
   
          Например в приложениях Windows Forms:  
   
@@ -60,7 +63,7 @@ ms.lasthandoff: 10/24/2017
         // #include <tchar.h>  
         ```  
   
-    6.  Для приложений Windows Forms, в Form1.cpp, закомментируйте `#include` инструкцию, которая ссылается на windows.h. Например:  
+    6.  Для приложений Windows Forms, в Form1.cpp, закомментируйте `#include` инструкцию, которая ссылается на windows.h. Пример:  
   
         ```  
         // #include <windows.h>  
@@ -79,7 +82,7 @@ ms.lasthandoff: 10/24/2017
   
     1.  Везде, где это возможно, замените неуправляемые типы ссылками на структуры из [системы](https://msdn.microsoft.com/en-us/library/system.appdomainmanager.appdomainmanager.aspx) пространства имен. В следующей таблице перечислены распространенные управляемых типов.  
   
-        |Структура|Описание|  
+        |Структура|Описание:|  
         |---------------|-----------------|  
         |[Boolean](https://msdn.microsoft.com/en-us/library/system.boolean\(v=vs.140\).aspx)|Представляет логическое значение.|  
         |[Byte](https://msdn.microsoft.com/en-us/library/system.byte\(v=vs.140\).aspx)|Представляет 8-битовое целое число без знака.|  

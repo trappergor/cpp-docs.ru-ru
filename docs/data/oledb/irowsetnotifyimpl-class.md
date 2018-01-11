@@ -18,11 +18,14 @@ caps.latest.revision: "8"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 7473e63c7ca67dff200d5cf96f1774ca9a2d6817
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: ddc410a22318b471fd59c1b29ff09fc9d771c767
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="irowsetnotifyimpl-class"></a>Класс IRowsetNotifyImpl
 Реализует и регистрирует [IRowsetNotify](https://msdn.microsoft.com/en-us/library/ms712959.aspx) на объекте-получателе (также называется «приемник»), чтобы она могла обрабатывать уведомления.  
@@ -33,7 +36,7 @@ ms.lasthandoff: 10/24/2017
 class ATL_NO_VTABLE IRowsetNotifyImpl : public IRowsetNotify  
 ```  
   
-## <a name="members"></a>Члены  
+## <a name="members"></a>Участники  
   
 ### <a name="methods"></a>Методы  
   

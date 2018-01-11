@@ -1,35 +1,37 @@
 ---
-title: "auto_handle::auto_handle | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "auto_handle::auto_handle"
-  - "msclr.auto_handle.auto_handle"
-  - "auto_handle.auto_handle"
-  - "msclr::auto_handle::auto_handle"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "auto_handle - метод"
+title: "auto_handle::auto_handle | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords:
+- auto_handle::auto_handle
+- msclr.auto_handle.auto_handle
+- auto_handle.auto_handle
+- msclr::auto_handle::auto_handle
+dev_langs: C++
+helpviewer_keywords: auto_handle method
 ms.assetid: 0b68ab31-023c-4224-9601-9231412c4e13
-caps.latest.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 8
+caps.latest.revision: "10"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: bdb0d15ac53a217282655e84898c53b762b40aa8
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 12/21/2017
 ---
-# auto_handle::auto_handle
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Конструктор `auto_handle`.  
+# <a name="autohandleautohandle"></a>auto_handle::auto_handle
+`auto_handle` Конструктор.  
   
-## Синтаксис  
+## <a name="syntax"></a>Синтаксис  
   
 ```  
 auto_handle();  
@@ -45,14 +47,14 @@ auto_handle(
 );  
 ```  
   
-#### Параметры  
+#### <a name="parameters"></a>Параметры  
  `_ptr`  
- Объект к собственному.  
+ Объект, являющейся владельцем.  
   
  `_right`  
- Существующая `auto_handle`.  
+ Существующий `auto_handle`.  
   
-## Пример  
+## <a name="example"></a>Пример  
   
 ```  
 // msl_auto_handle_auto_handle.cpp  
@@ -105,21 +107,24 @@ int main()
 }  
 ```  
   
-  **в конструкторе RefClassA: сначала**  
-**Hello от первого суффикса\!**  
-**в деструкторе RefClassA: сначала**  
-**в конструкторе RefClassA: second**  
-**Hello\! из второго B**  
-**Hello из второго суффикса\!**  
-**Hello из второго суффикса\!**  
-**в деструкторе RefClassA: second**  
-**done**   
-## Требования  
- **Файл заголовка**\<msclr\\auto\_handle.h\>  
+```Output  
+in RefClassA constructor: first  
+Hello from first A!  
+in RefClassA destructor: first  
+in RefClassA constructor: second  
+Hello from second B!  
+Hello from second A!  
+Hello from second A!  
+in RefClassA destructor: second  
+done  
+```  
+  
+## <a name="requirements"></a>Требования  
+ **Файл заголовка** \<msclr\auto_handle.h >  
   
  **Пространство имен** msclr  
   
-## См. также  
- [Члены auto\_handle](../dotnet/auto-handle-members.md)   
- [auto\_handle::operator\=](../dotnet/auto-handle-operator-assign.md)   
- [auto\_handle::~auto\_handle](../dotnet/auto-handle-tilde-auto-handle.md)
+## <a name="see-also"></a>См. также  
+ [Члены auto_handle](../dotnet/auto-handle-members.md)   
+ [auto_handle::operator =](../dotnet/auto-handle-operator-assign.md)   
+ [auto_handle::~auto_handle](../dotnet/auto-handle-tilde-auto-handle.md)

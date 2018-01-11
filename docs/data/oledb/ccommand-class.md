@@ -18,11 +18,14 @@ caps.latest.revision: "11"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 1ad74a5a763c39ce4f2ef765662b8f88ce083732
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: 82fb0dc84253fc5984f2ac9e52b96a27fb47e770
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="ccommand-class"></a>Класс CCommand
 Предоставляет методы для установки и выполнить команду.  
@@ -49,12 +52,12 @@ class CCommand :
  Тип класса метода доступа (такие как `CDynamicParameterAccessor`, `CDynamicStringAccessor`, или `CEnumeratorAccessor`), необходимо, чтобы использовался. Значение по умолчанию — `CNoAccessor`, который указывает, что класс не поддерживает параметры или выходные столбцы.  
   
  `TRowset`  
- Тип класса набора строк (таких как `CArrayRowset` или `CNoRowset`), необходимо, чтобы использовался. Значение по умолчанию — `CRowset`.  
+ Тип класса набора строк (таких как `CArrayRowset` или `CNoRowset`), необходимо, чтобы использовался. Значение по умолчанию — `CRowset`.  
   
  `TMultiple`  
  Чтобы использовать команду OLE DB, которая может вернуть несколько результатов, укажите [CMultipleResults](../../data/oledb/cmultipleresults-class.md). В противном случае используйте [CNoMultipleResults](../../data/oledb/cnomultipleresults-class.md). Дополнительные сведения см. в разделе [IMultipleResults](https://msdn.microsoft.com/en-us/library/ms721289.aspx).  
   
-## <a name="members"></a>Члены  
+## <a name="members"></a>Участники  
   
 ### <a name="methods"></a>Методы  
   

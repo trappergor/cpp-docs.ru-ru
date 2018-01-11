@@ -16,16 +16,19 @@ caps.latest.revision: "7"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 9c97e1215ce7380ec917166622e12bcefebd5083
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: d74854ce4d4e7e0fa2636fe04b01908582754f38
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="installing-and-getting-started-with-odbc"></a>Установка и начало работы с ODBC
 Следующие разделы помогут установить компоненты, необходимые для начала работы с Open Database Connectivity (ODBC).  
   
-## <a name="in-this-section"></a>Содержание  
+## <a name="in-this-section"></a>В этом разделе  
   
 -   [Установка драйверов ODBC, поставляемых с Visual C++](../../data/odbc/odbc-administrator.md)  
   

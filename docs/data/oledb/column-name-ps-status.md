@@ -1,32 +1,33 @@
 ---
-title: "COLUMN_NAME_PS_STATUS | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "COLUMN_NAME_PS_STATUS"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "COLUMN_NAME_PS_STATUS - макрос"
+title: "COLUMN_NAME_PS_STATUS | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: COLUMN_NAME_PS_STATUS
+dev_langs: C++
+helpviewer_keywords: COLUMN_NAME_PS_STATUS macro
 ms.assetid: 134e1bfe-abfa-4b64-9159-e492f31de44b
-caps.latest.revision: 7
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: a773891e7a3a0a623d10e8eb55069bf46fc10f21
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 12/21/2017
 ---
-# COLUMN_NAME_PS_STATUS
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Представляет привязку в наборе строк к конкретному столбцу в наборе строк.  Аналогично [COLUMN\_NAME](../Topic/COLUMN_NAME.md), за исключением того, что этот макрос также имеет точность, масштаб и состояния столбца.  
+# <a name="columnnamepsstatus"></a>COLUMN_NAME_PS_STATUS
+Представляет привязку в наборе строк для конкретного столбца в наборе строк. Аналогично [COLUMN_NAME](../../data/oledb/column-name.md), за исключением того, что этот макрос также принимает точность, масштаб и столбца состояния.  
   
-## Синтаксис  
+## <a name="syntax"></a>Синтаксис  
   
 ```  
   
@@ -42,42 +43,42 @@ data
 status )  
 ```  
   
-#### Параметры  
+#### <a name="parameters"></a>Параметры  
  `pszName`  
- \[in\] указатель на имени столбца.  Имя должно быть строкой юникод.  Можно выполнить путем установки «L» перед именем, например: `L"MyColumn"`.  
+ [in] Указатель на имя столбца. Имя должно быть строкой в Юникоде. Это можно сделать, поместив «L» перед именем, например: `L"MyColumn"`.  
   
  `nPrecision`  
- \[in\] максимальная точность столбца требуется выполнить привязку.  
+ [in] Максимальная точность столбца, который требуется выполнить привязку.  
   
  `nScale`  
- \[in\] масштаба столбца требуется выполнить привязку.  
+ [in] Масштаб столбца, необходимо выполнить привязку.  
   
  `data`  
- \[in\] соответствующий элемент данных в записи пользователя.  
+ [in] Соответствующего члена данных в записи пользователя.  
   
  *status*  
- \[in\] переменная, привязываемая к состояние столбца.  
+ [in] Переменная может быть привязано к состояние столбца.  
   
-## Заметки  
- В разделе [COLUMN\_NAME](../Topic/COLUMN_NAME.md) сведения о, макрос **COLUMN\_NAME\_\*** используются.  
+## <a name="remarks"></a>Примечания  
+ В разделе [COLUMN_NAME](../../data/oledb/column-name.md) сведения о том, где **COLUMN_NAME_\***  используются макросы.  
   
-## Требования  
+## <a name="requirements"></a>Требования  
  **Заголовок:** atldbcli.h  
   
-## См. также  
- [Макросы и глобальные функции для шаблонов потребителей OLE DB](../Topic/Macros%20and%20Global%20Functions%20for%20OLE%20DB%20Consumer%20Templates.md)   
- [BEGIN\_ACCESSOR](../../data/oledb/begin-accessor.md)   
- [BEGIN\_ACCESSOR\_MAP](../../data/oledb/begin-accessor-map.md)   
- [BEGIN\_COLUMN\_MAP](../Topic/BEGIN_COLUMN_MAP.md)   
- [COLUMN\_NAME](../Topic/COLUMN_NAME.md)   
- [COLUMN\_NAME\_EX](../../data/oledb/column-name-ex.md)   
- [COLUMN\_NAME\_LENGTH](../Topic/COLUMN_NAME_LENGTH.md)   
- [COLUMN\_NAME\_LENGTH\_STATUS](../Topic/COLUMN_NAME_LENGTH_STATUS.md)   
- [COLUMN\_NAME\_STATUS](../../data/oledb/column-name-status.md)   
- [COLUMN\_NAME\_PS](../../data/oledb/column-name-ps.md)   
- [COLUMN\_NAME\_PS\_LENGTH](../Topic/COLUMN_NAME_PS_LENGTH.md)   
- [COLUMN\_NAME\_PS\_LENGTH\_STATUS](../../data/oledb/column-name-ps-length-status.md)   
- [COLUMN\_NAME\_TYPE](../../data/oledb/column-name-type.md)   
- [COLUMN\_NAME\_TYPE\_PS](../../data/oledb/column-name-type-ps.md)   
- [COLUMN\_NAME\_TYPE\_SIZE](../../data/oledb/column-name-type-size.md)   
- [COLUMN\_NAME\_TYPE\_STATUS](../Topic/COLUMN_NAME_TYPE_STATUS.md)
+## <a name="see-also"></a>См. также  
+ [Макросы и глобальные функции для шаблонов потребителей OLE DB](../../data/oledb/macros-and-global-functions-for-ole-db-consumer-templates.md)   
+ [BEGIN_ACCESSOR](../../data/oledb/begin-accessor.md)   
+ [BEGIN_ACCESSOR_MAP](../../data/oledb/begin-accessor-map.md)   
+ [BEGIN_COLUMN_MAP](../../data/oledb/begin-column-map.md)   
+ [COLUMN_NAME](../../data/oledb/column-name.md)   
+ [COLUMN_NAME_EX](../../data/oledb/column-name-ex.md)   
+ [COLUMN_NAME_LENGTH](../../data/oledb/column-name-length.md)   
+ [COLUMN_NAME_LENGTH_STATUS](../../data/oledb/column-name-length-status.md)   
+ [COLUMN_NAME_STATUS](../../data/oledb/column-name-status.md)   
+ [COLUMN_NAME_PS](../../data/oledb/column-name-ps.md)   
+ [COLUMN_NAME_PS_LENGTH](../../data/oledb/column-name-ps-length.md)   
+ [COLUMN_NAME_PS_LENGTH_STATUS](../../data/oledb/column-name-ps-length-status.md)   
+ [COLUMN_NAME_TYPE](../../data/oledb/column-name-type.md)   
+ [COLUMN_NAME_TYPE_PS](../../data/oledb/column-name-type-ps.md)   
+ [COLUMN_NAME_TYPE_SIZE](../../data/oledb/column-name-type-size.md)   
+ [COLUMN_NAME_TYPE_STATUS](../../data/oledb/column-name-type-status.md)

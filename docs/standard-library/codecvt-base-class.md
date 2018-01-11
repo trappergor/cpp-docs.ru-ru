@@ -15,11 +15,12 @@ caps.latest.revision: "20"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 5ead26920f0b1aa7f49c43b60640a03241138163
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: f8bdb75c1b6ad9340b4ae774899863762cbef4a2
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="codecvtbase-class"></a>Класс codecvt_base
 Базовый класс для класса codecvt, используемый для определения типа перечисления с именем **result**, который применяется в качестве типа возвращаемого значения для функций-членов аспекта, чтобы показать результат преобразования.  

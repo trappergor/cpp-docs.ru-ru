@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-windows
+ms.technology: cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
@@ -16,35 +15,19 @@ f1_keywords:
 - ATLCOM/ATL::CComObject::CreateInstance
 - ATLCOM/ATL::CComObject::QueryInterface
 - ATLCOM/ATL::CComObject::Release
-dev_langs:
-- C++
-helpviewer_keywords:
-- CComObject class
+dev_langs: C++
+helpviewer_keywords: CComObject class
 ms.assetid: e2b6433b-6349-4749-b4bc-acbd7a22c8b0
-caps.latest.revision: 19
+caps.latest.revision: "19"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: d2d39abf526a58b8442107b5ee816f316ae841f5
-ms.openlocfilehash: 1fbf6a09b4085df4ac6918d261e2b9d625c98c08
-ms.contentlocale: ru-ru
-ms.lasthandoff: 03/31/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: 27da00e09ca88cc06b8bafed8f8601dac756fd34
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="ccomobject-class"></a>Класс CComObject
 Этот класс реализует **IUnknown** неагрегированные объекта.  
@@ -60,18 +43,18 @@ class CComObject : public Base
  `Base`  
  Класс, производный от [CComObjectRoot](../../atl/reference/ccomobjectroot-class.md) или [CComObjectRootEx](../../atl/reference/ccomobjectrootex-class.md), также как и из любых других интерфейсов, которые требуется поддерживать на объект.  
   
-## <a name="members"></a>Члены  
+## <a name="members"></a>Участники  
   
 ### <a name="public-constructors"></a>Открытые конструкторы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[CComObject::CComObject](#ccomobject)|Конструктор.|  
 |[CComObject:: ~ CComObject](#dtor)|Деструктор|  
   
 ### <a name="public-methods"></a>Открытые методы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[CComObject::AddRef](#addref)|Увеличивает счетчик ссылок на объект.|  
 |[CComObject::CreateInstance](#createinstance)|(Статический) Создает новый `CComObject` объекта.|  
@@ -109,7 +92,7 @@ CComObject(void* = NULL);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- **значение типа void\***  
+ **void\***  
  [in] Это Неименованный параметр не используется. Он существует для симметрии с другими **CCom***XXX*`Object`*XXX* конструкторы.  
   
 ### <a name="remarks"></a>Примечания  
@@ -129,7 +112,7 @@ CComObject();
 
   
 ##  <a name="createinstance"></a>CComObject::CreateInstance  
- Эта статическая функция позволяет создать новую **CComObject** `Base` **>** объекта, одновременно снижая издержки [CoCreateInstance](http://msdn.microsoft.com/library/windows/desktop/ms686615).  
+ Эта статическая функция позволяет создать новую **CComObject <** `Base`  **>**  объекта, одновременно снижая издержки [CoCreateInstance](http://msdn.microsoft.com/library/windows/desktop/ms686615).  
   
 ```
 static HRESULT WINAPI CreateInstance(CComObject<Base>** pp);
@@ -137,7 +120,7 @@ static HRESULT WINAPI CreateInstance(CComObject<Base>** pp);
   
 ### <a name="parameters"></a>Параметры  
  `pp`  
- [out] Указатель на **CComObject** `Base` **>** указателя. Если `CreateInstance` завершается неудачно, `pp` равно **NULL**.  
+ [out] Указатель на **CComObject <** `Base`  **>**  указателя. Если `CreateInstance` завершается неудачно, `pp` равно **NULL**.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
  Стандартное значение `HRESULT` .  
@@ -148,9 +131,9 @@ static HRESULT WINAPI CreateInstance(CComObject<Base>** pp);
  Если не требуется прямой доступ к объекту, но все равно хотите создать новый объект без необходимости проведения `CoCreateInstance`, используйте [CComCoClass::CreateInstance](../../atl/reference/ccomcoclass-class.md#createinstance) вместо него.  
   
 ### <a name="example"></a>Пример  
- [!code-cpp[NVC_ATL_COM #38](../../atl/codesnippet/cpp/ccomobject-class_1.h)]  
+ [!code-cpp[NVC_ATL_COM#38](../../atl/codesnippet/cpp/ccomobject-class_1.h)]  
   
- [!code-cpp[NVC_ATL_COM #39](../../atl/codesnippet/cpp/ccomobject-class_2.cpp)]  
+ [!code-cpp[NVC_ATL_COM#39](../../atl/codesnippet/cpp/ccomobject-class_2.cpp)]  
   
 ##  <a name="queryinterface"></a>CComObject::QueryInterface  
  Извлекает указатель на запрошенный интерфейс.  
@@ -190,4 +173,3 @@ STDMETHOD_(ULONG, Release)();
  [DECLARE_AGGREGATABLE](aggregation-and-class-factory-macros.md#declare_aggregatable)   
  [DECLARE_NOT_AGGREGATABLE](aggregation-and-class-factory-macros.md#declare_not_aggregatable)   
  [Общие сведения о классе](../../atl/atl-class-overview.md)
-

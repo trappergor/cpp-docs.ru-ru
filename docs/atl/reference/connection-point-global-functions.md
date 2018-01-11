@@ -1,54 +1,41 @@
 ---
-title: "Точка подключения глобальные функции | Документы Microsoft"
+title: "Глобальные функции для точки подключения | Документы Microsoft"
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-windows
+ms.technology: cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: reference
-dev_langs:
-- C++
-helpviewer_keywords:
-- connection points [C++], global functions
+f1_keywords:
+- atlbase/ATL::AtlAdvise
+- atlbase/ATL::AtlUnadvise
+- atlbase/ATL::AtlAdviseSinkMap
+dev_langs: C++
+helpviewer_keywords: connection points [C++], global functions
 ms.assetid: bcb4bf50-2155-4e20-b8bb-f2908b03a6e7
-caps.latest.revision: 20
+caps.latest.revision: "20"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 604a4bf49490ad2599c857eb3afd527d67e1e25b
-ms.openlocfilehash: 8271f512141e4d2cc274d180b31e1ad33bfc354e
-ms.contentlocale: ru-ru
-ms.lasthandoff: 02/24/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: ce7f6fc3d2a0b51f88952dd720955367b1dfe9d5
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 12/21/2017
 ---
-# <a name="connection-point-global-functions"></a>Точка подключения глобальные функции
-Эти функции обеспечивают поддержку точки подключения и приемник карт.  
+# <a name="connection-point-global-functions"></a>Глобальные функции для точки подключения
+Эти функции обеспечивают поддержку для точки подключения и приемника карты.  
   
 > [!IMPORTANT]
->  Функции, перечисленные в следующей таблице, не может использоваться в приложениях, выполняемых в [!INCLUDE[wrt](../../atl/reference/includes/wrt_md.md)].  
+>  Функции, перечисленные в следующей таблице, не может использоваться в приложениях, выполняемых в среде выполнения Windows.  
   
 |||  
 |-|-|  
 |[AtlAdvise](#atladvise)|Создает связь между точкой подключения объекта и приемником клиента.|  
-|[AtlUnadvise](#atlunadvise)|Завершает подключение, установленное через `AtlAdvise`.|  
-|[AtlAdviseSinkMap](#atladvisesinkmap)|Содержания или unadvises записей в картой приемника событий.|  
+|[AtlUnadvise](#atlunadvise)|Завершает подключение, установленное с помощью `AtlAdvise`.|  
+|[AtlAdviseSinkMap](#atladvisesinkmap)|Будет указано, или unadvises записей в схеме событий приемника.|  
 
 ## <a name="requirements"></a>Требования  
  **Заголовок:** atlbase.h  
@@ -57,7 +44,7 @@ ms.lasthandoff: 02/24/2017
  Создает связь между точкой подключения объекта и приемником клиента.  
   
 > [!IMPORTANT]
->  Эта функция не может использоваться в приложениях, выполняемых в [!INCLUDE[wrt](../../atl/reference/includes/wrt_md.md)].  
+>  Эта функция не может использоваться в приложениях, выполняемых в среде выполнения Windows.  
   
 ```
 HRESULT    AtlAdvise(
@@ -75,25 +62,25 @@ HRESULT    AtlAdvise(
  [in] Указатель на клиент **IUnknown**.  
   
  `iid`  
- [in] Идентификатор GUID точки подключения. Как правило это то же самое исходящего интерфейса, управляемого с использованием точки подключения.  
+ [in] Идентификатор GUID точки подключения. Как правило это то же самое исходящего интерфейса, управляемого с помощью точки подключения.  
   
  `pdw`  
- [out] Указатель на файл cookie, который уникально идентифицирует соединение.  
+ [out] Указатель на файл cookie, однозначно определяющее соединение.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
  Стандартное значение HRESULT.  
   
 ### <a name="remarks"></a>Примечания  
- Приемник реализует исходящего интерфейса, поддерживаемого точкой подключения. Клиент использует `pdw` файл cookie, удалите подключение, передав его в [AtlUnadvise](#atlunadvise).  
+ Приемник реализует исходящего интерфейса, поддерживаемого точкой подключения. Клиент использует `pdw` куки-файл для удаления соединения путем ее передачи [AtlUnadvise](#atlunadvise).  
   
 ### <a name="example"></a>Пример  
- [!code-cpp[NVC_ATL_Windowing&#91;](../../atl/codesnippet/cpp/connection-point-global-functions_1.cpp)]  
+ [!code-cpp[NVC_ATL_Windowing#91](../../atl/codesnippet/cpp/connection-point-global-functions_1.cpp)]  
   
 ##  <a name="atlunadvise"></a>AtlUnadvise  
  Завершает подключение, установленное с помощью [AtlAdvise](#atladvise).  
   
 > [!IMPORTANT]
->  Эта функция не может использоваться в приложениях, выполняемых в [!INCLUDE[wrt](../../atl/reference/includes/wrt_md.md)].  
+>  Эта функция не может использоваться в приложениях, выполняемых в среде выполнения Windows.  
   
 ```
 HRESULT    AtlUnadvise(
@@ -107,22 +94,22 @@ HRESULT    AtlUnadvise(
  [in] Указатель на **IUnknown** объекта, связанный с клиентом.  
   
  `iid`  
- [in] Идентификатор GUID точки подключения. Как правило это то же самое исходящего интерфейса, управляемого с использованием точки подключения.  
+ [in] Идентификатор GUID точки подключения. Как правило это то же самое исходящего интерфейса, управляемого с помощью точки подключения.  
   
  `dw`  
- [in] Файл cookie, который уникально идентифицирует соединение.  
+ [in] Файл cookie, однозначно определяющее соединение.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
  Стандартное значение HRESULT.  
   
 ### <a name="example"></a>Пример  
- [!code-cpp[NVC_ATL_Windowing&#96;](../../atl/codesnippet/cpp/connection-point-global-functions_2.cpp)]  
+ [!code-cpp[NVC_ATL_Windowing#96](../../atl/codesnippet/cpp/connection-point-global-functions_2.cpp)]  
   
 ##  <a name="atladvisesinkmap"></a>AtlAdviseSinkMap  
  Вызывайте эту функцию для соединения или разъединения всех записей в схеме событий приемника объекта.  
   
 > [!IMPORTANT]
->  Эта функция не может использоваться в приложениях, выполняемых в [!INCLUDE[wrt](../../atl/reference/includes/wrt_md.md)].  
+>  Эта функция не может использоваться в приложениях, выполняемых в среде выполнения Windows.  
   
 ```
 HRESULT AtlAdviseSinkMap(T* pT, bool bAdvise);
@@ -133,15 +120,14 @@ HRESULT AtlAdviseSinkMap(T* pT, bool bAdvise);
  [in] Указатель на объект, содержащий приемником сопоставления.  
   
  `bAdvise`  
- [in] **true** знать, если все записи приемника **false** Если все операции приемника должны быть unadvised.  
+ [in] **true** Если все записи приемника должны быть проигнорирована; **false** Если все операции приемников должны быть unadvised.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
  Стандартное значение HRESULT.  
   
 ### <a name="example"></a>Пример  
- [!code-cpp[NVC_ATL_Windowing&#92;](../../atl/codesnippet/cpp/connection-point-global-functions_3.h)]  
+ [!code-cpp[NVC_ATL_Windowing#92](../../atl/codesnippet/cpp/connection-point-global-functions_3.h)]  
   
 ## <a name="see-also"></a>См. также  
  [Функции](../../atl/reference/atl-functions.md)   
- [Макросы точки подключения](../../atl/reference/connection-point-macros.md)
-
+ [Макросы для работы с точками подключения](../../atl/reference/connection-point-macros.md)

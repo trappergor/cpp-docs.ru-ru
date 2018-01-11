@@ -1,32 +1,33 @@
 ---
-title: "hash_map::generic_container (STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::hash_map::generic_container"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "generic_container - элемент [STL/CLR]"
+title: "hash_map::generic_container (STL/CLR) | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::hash_map::generic_container
+dev_langs: C++
+helpviewer_keywords: generic_container member [STL/CLR]
 ms.assetid: 82014d95-7804-475a-86c2-649caaa4a8bc
-caps.latest.revision: 16
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 14
+caps.latest.revision: "16"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: 892c9c735a9bfc3ab204aa06fb51ab6a7a06ed08
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 12/21/2017
 ---
-# hash_map::generic_container (STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="hashmapgenericcontainer-stlclr"></a>hash_map::generic_container (STL/CLR)
 Тип универсального интерфейса для контейнера.  
   
-## Синтаксис  
+## <a name="syntax"></a>Синтаксис  
   
 ```  
 typedef Microsoft::VisualC::StlClr::  
@@ -34,10 +35,10 @@ typedef Microsoft::VisualC::StlClr::
     generic_container;  
 ```  
   
-## Заметки  
- Описывает тип универсальный интерфейс для этого класса контейнера шаблона.  
+## <a name="remarks"></a>Примечания  
+ Тип, описывающий универсальный интерфейс для класса контейнера шаблона.  
   
-## Пример  
+## <a name="example"></a>Пример  
   
 ```  
 // cliext_hash_map_generic_container.cpp   
@@ -79,15 +80,18 @@ int main()
   
 ```  
   
-  **\[1\] \[2\] \[BC — 3\]**  
- **\[1\] \[2\] \[BC — 3\]**  
- **\[1\] \[2\] \[B C \[3\]4 d\]**  
- **\[1\] \[2\] B C \[3\] \[4\] \[de 5\]**   
-## Требования  
- **Заголовок:**\<cliext\/hash\_map\>  
+```Output  
+[a 1] [b 2] [c 3]  
+[a 1] [b 2] [c 3]  
+[a 1] [b 2] [c 3] [d 4]  
+[a 1] [b 2] [c 3] [d 4] [e 5]  
+```  
+  
+## <a name="requirements"></a>Требования  
+ **Заголовок:** \<cliext/hash_map >  
   
  **Пространство имен:** cliext  
   
-## См. также  
- [hash\_map](../dotnet/hash-map-stl-clr.md)   
- [hash\_map::generic\_iterator](../dotnet/hash-map-generic-iterator-stl-clr.md)
+## <a name="see-also"></a>См. также  
+ [hash_map (STL/CLR)](../dotnet/hash-map-stl-clr.md)   
+ [hash_map::generic_iterator (STL/CLR)](../dotnet/hash-map-generic-iterator-stl-clr.md)

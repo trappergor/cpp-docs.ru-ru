@@ -15,11 +15,14 @@ caps.latest.revision: "16"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 7fbd6f2999adac0c4bb9a8d7af166caa69848efa
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: 2d66689ff8b9cddb1ac2e88cb5e4c01f9f09b4ca
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="greaterequal-stlclr"></a>greater_equal (STL/CLR)
 Класс шаблона описывает функтор, при вызове возвращает значение true, только если первый аргумент больше или равен ему. Она используется укажите объект функции, с точки зрения его типа аргумента.  
@@ -53,18 +56,18 @@ public:
   
 ## <a name="member-functions"></a>Функции-члены  
   
-|Определение типа|Описание|  
+|Определение типа|Описание:|  
 |---------------------|-----------------|  
 |delegate_type|Тип универсального метода-делегата.|  
 |first_argument_type|Тип первого аргумента функтор.|  
 |result_type|Тип результата функтор.|  
 |second_argument_type|Тип второго аргумента функтор.|  
   
-|Член|Описание|  
+|Член|Описание:|  
 |------------|-----------------|  
 |greater_equal|Создает функтор.|  
   
-|Оператор|Описание|  
+|Оператор|Описание:|  
 |--------------|-----------------|  
 |operator()|Вычисляет нужной функции.|  
 |delegate_type оператор ^|Приводит функтора к делегату.|  

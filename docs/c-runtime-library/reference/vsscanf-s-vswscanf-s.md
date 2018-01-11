@@ -32,11 +32,12 @@ caps.latest.revision: "6"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: d11fd489fc732428b257c50dd6a2792131d0396a
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: b041da3df2b745f1764440ed5afafa2cd7690b68
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="vsscanfs-vswscanfs"></a>vsscanf_s, vswscanf_s
 Считывают форматированные данные из строки. Это версии функций [sscanf, vswscanf](../../c-runtime-library/reference/vsscanf-vswscanf.md) с усовершенствованной безопасностью, как описано в разделе [Усовершенствования безопасности в CRT](../../c-runtime-library/security-features-in-the-crt.md).  
@@ -87,7 +88,7 @@ int vswscanf_s(
   
  `vswscanf_s` — это двухбайтовая версия `vsscanf_s`; аргументы для `vswscanf_s` представляют собой двухбайтовые строки. `vsscanf_s` не обрабатывает многобайтовые шестнадцатеричные символы. `vswscanf_s` не обрабатывает шестнадцатеричные символы Юникода полной ширины и символы "зоны совместимости". В противном случае поведение `vswscanf_s` и `vsscanf_s` идентично.  
   
-### <a name="generic-text-routine-mappings"></a>Универсальное текстовое сопоставление функций  
+### <a name="generic-text-routine-mappings"></a>Сопоставления подпрограмм обработки обычного текста  
   
 |Подпрограмма TCHAR.H|_UNICODE и _MBCS не определены|_MBCS определено|_UNICODE определено|  
 |---------------------|------------------------------------|--------------------|-----------------------|  

@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-windows
+ms.technology: cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
@@ -13,22 +12,21 @@ f1_keywords:
 - AFXRENDERTARGET/CD2DSizeU
 - AFXRENDERTARGET/CD2DSizeU::CD2DSizeU
 - AFXRENDERTARGET/CD2DSizeU::IsNull
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - CD2DSizeU [MFC], CD2DSizeU
 - CD2DSizeU [MFC], IsNull
 ms.assetid: 6e679ba8-2112-43c3-8275-70b660856f02
-caps.latest.revision: 18
+caps.latest.revision: "18"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 8bb2f18426394c63dc6ce45870d394ed536d6031
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
-ms.sourcegitcommit: 4a770b6508067913aec51b8b3878f33e30eed4bb
-ms.openlocfilehash: 270d668cba8e2628f4386df391a368fef8557fad
-ms.contentlocale: ru-ru
-ms.lasthandoff: 10/09/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cd2dsizeu-class"></a>Класс CD2DSizeU
 Программа-оболочка для D2D1_SIZE_U.  
@@ -39,23 +37,23 @@ ms.lasthandoff: 10/09/2017
 class CD2DSizeU : public D2D1_SIZE_U;  
 ```  
   
-## <a name="members"></a>Члены  
+## <a name="members"></a>Участники  
   
 ### <a name="public-constructors"></a>Открытые конструкторы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[CD2DSizeU::CD2DSizeU](#cd2dsizeu)|Перегружен. Создает `CD2DSizeU` объекта из `D2D1_SIZE_U` объекта.|  
   
 ### <a name="public-methods"></a>Открытые методы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[CD2DSizeU::ISNULL](#isnull)|Возвращает `boolean` значение, указывающее, является ли выражение содержит недопустимые данные ( `null`).|  
   
 ### <a name="public-operators"></a>Открытые операторы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[CD2DSizeU::operator CSize](#operator_csize)|Преобразует `CD2DSizeU` для `CSize` объекта.|  
   
@@ -113,4 +111,3 @@ operator CSize();
   
 ## <a name="see-also"></a>См. также  
  [Классы](../../mfc/reference/mfc-classes.md)
-

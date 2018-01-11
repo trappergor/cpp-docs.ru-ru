@@ -1,41 +1,42 @@
 ---
-title: "hash_set::size (STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::hash_set::size"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "size - член [STL/CLR]"
+title: "hash_set::size (STL/CLR) | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::hash_set::size
+dev_langs: C++
+helpviewer_keywords: size member [STL/CLR]
 ms.assetid: e006590e-8710-4294-b3a3-dcded0668a24
-caps.latest.revision: 16
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 14
+caps.latest.revision: "16"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: 761bbc7c67fa7cbe832aa4ef5de22d44fce0f3ce
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 12/21/2017
 ---
-# hash_set::size (STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="hashsetsize-stlclr"></a>hash_set::size (STL/CLR)
 Подсчитывает количество элементов.  
   
-## Синтаксис  
+## <a name="syntax"></a>Синтаксис  
   
 ```  
 size_type size();  
 ```  
   
-## Заметки  
- Возвращает длину функцию\-член контролируемой последовательности.  Он используется для определения числа элементов в контролируемой последовательности.  Если требуется заботите около, имеет ли последовательность ненулевое размер см. в разделе [hash\_set::empty](../dotnet/hash-set-empty-stl-clr.md)`()`.  
+## <a name="remarks"></a>Примечания  
+ Функция-член возвращает длину управляемой последовательности. Используется для определения количества элементов в данный момент в управляемой последовательности. Если вас интересует ли последовательность имеет ненулевое значение, размер, в разделе [hash_set::empty (STL/CLR)](../dotnet/hash-set-empty-stl-clr.md)`()`.  
   
-## Пример  
+## <a name="example"></a>Пример  
   
 ```  
 // cliext_hash_set_size.cpp   
@@ -69,15 +70,18 @@ int main()
   
 ```  
   
-  **a b c**  
-**size\(\) \= 3, начиная с 3**  
-**size\(\) \= 0 после очистки**  
-**size\(\) \= 2 после добавления 2**   
-## Требования  
- **Заголовок:**\<cliext\/hash\_set\>  
+```Output  
+ a b c  
+size() = 3 starting with 3  
+size() = 0 after clearing  
+size() = 2 after adding 2  
+```  
+  
+## <a name="requirements"></a>Требования  
+ **Заголовок:** \<cliext/hash_set >  
   
  **Пространство имен:** cliext  
   
-## См. также  
- [hash\_set](../dotnet/hash-set-stl-clr.md)   
- [hash\_set::empty](../dotnet/hash-set-empty-stl-clr.md)
+## <a name="see-also"></a>См. также  
+ [hash_set (STL/CLR)](../dotnet/hash-set-stl-clr.md)   
+ [hash_set::empty (STL/CLR)](../dotnet/hash-set-empty-stl-clr.md)
