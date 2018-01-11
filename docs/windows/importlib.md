@@ -1,49 +1,50 @@
 ---
-title: "importlib | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-f1_keywords: 
-  - "vc-attr.importlib"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "importlib attribute"
+title: "importlib | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+f1_keywords: vc-attr.importlib
+dev_langs: C++
+helpviewer_keywords: importlib attribute
 ms.assetid: f129e459-b8d3-4aca-a0bc-ee53e18b62ed
-caps.latest.revision: 11
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 11
+caps.latest.revision: "11"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: 7c62db5b1e10f115a57da1ea00cd87760b96a71f
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 12/21/2017
 ---
-# importlib
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="importlib"></a>importlib
 Делает типы, которые уже были скомпилированы в другую библиотеку типов, доступными для создаваемой библиотеки типов.  
   
-## Синтаксис  
+## <a name="syntax"></a>Синтаксис  
   
 ```  
   
-        [ importlib(  
+      [ importlib(  
    "tlb_file"  
 ) ];  
 ```  
   
-#### Параметры  
- *tlb\_file*  
- Заключенное в кавычки имя TLB\-файла, который необходимо импортировать в библиотеку типов текущего проекта.  
+#### <a name="parameters"></a>Параметры  
+ *tlb_file*  
+ Заключенное в кавычки имя TLB-файла, который необходимо импортировать в библиотеку типов текущего проекта.  
   
-## Заметки  
- Атрибут **importlib** языка C\+\+ вызывает помещение инструкции `importlib` в блок library созданного IDL\-файла.  Атрибут **importlib** имеет ту же функциональность, что и атрибут [importlib](http://msdn.microsoft.com/library/windows/desktop/aa367050) языка MIDL.  
+## <a name="remarks"></a>Примечания  
+ **Importlib** языка C++ вызывает `importlib` инструкции помещается в блок library созданного IDL-файла. **Importlib** атрибут имеет ту же функциональность, что [importlib](http://msdn.microsoft.com/library/windows/desktop/aa367050) языка MIDL.  
   
-## Пример  
- В следующем коде показан пример использования **importlib**:  
+## <a name="example"></a>Пример  
+ Ниже приведен пример использования **importlib**:  
   
 ```  
 // cpp_attr_ref_importlib.cpp  
@@ -52,9 +53,9 @@ caps.handback.revision: 11
 [importlib("importlib.tlb")];  
 ```  
   
-## Требования  
+## <a name="requirements"></a>Требования  
   
-### Контекст атрибута  
+### <a name="attribute-context"></a>Контекст атрибута  
   
 |||  
 |-|-|  
@@ -65,10 +66,10 @@ caps.handback.revision: 11
   
  Дополнительные сведения см. в разделе [Контексты атрибутов](../windows/attribute-contexts.md).  
   
-## См. также  
- [Compiler Attributes](../windows/compiler-attributes.md)   
- [Stand\-Alone Attributes](../Topic/Stand-Alone%20Attributes.md)   
- [import](../windows/import.md)   
+## <a name="see-also"></a>См. также  
+ [Атрибуты компилятора](../windows/compiler-attributes.md)   
+ [Изолированные атрибуты](../windows/stand-alone-attributes.md)   
+ [Импорт](../windows/import.md)   
  [importidl](../windows/importidl.md)   
- [include](../windows/include-cpp.md)   
+ [включить](../windows/include-cpp.md)   
  [includelib](../windows/includelib-cpp.md)

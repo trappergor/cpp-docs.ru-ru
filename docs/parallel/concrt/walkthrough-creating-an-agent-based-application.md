@@ -16,11 +16,12 @@ caps.latest.revision: "24"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 245952bd8dfb9acc8fc8550955232a30b9dbfe9f
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: a49c8deb9185b024dfcca977ab229bf594e05101
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="walkthrough-creating-an-agent-based-application"></a>Пошаговое руководство. Создание приложения на основе агента
 В этом разделе описывается создание базового приложения на основе агентов. В этом пошаговом руководстве можно создать агент, который асинхронно считывает данные из текстового файла. Приложение использует алгоритм контрольной суммы Adler-32 для расчета контрольной суммы содержимого этого файла.  
@@ -184,7 +185,7 @@ Adler-32 sum is fefb0d75
  Всегда вызывайте метод [concurrency::agent:: сделать](reference/agent-class.md#done) метод для перевода агента в завершенное состояние. Обычно этот метод вызывается до возврата из `run` метод.  
 
   
-## <a name="next-steps"></a>Дальнейшие действия  
+## <a name="next-steps"></a>Следующие шаги  
  Еще один пример приложения на основе агентов см. в разделе [Пошаговое руководство: использование класса join для предотвращения взаимоблокировок](../../parallel/concrt/walkthrough-using-join-to-prevent-deadlock.md).  
   
 ## <a name="see-also"></a>См. также  

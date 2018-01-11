@@ -1,62 +1,63 @@
 ---
-title: "conform | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "conform_CPP"
-  - "vc-pragma.conform"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "conform - прагма"
-  - "forScope conform - прагма"
-  - "прагмы, conform"
+title: "соответствует | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- conform_CPP
+- vc-pragma.conform
+dev_langs: C++
+helpviewer_keywords:
+- conform pragma
+- forScope conform pragma
+- pragmas, conform
 ms.assetid: 71b3e174-c53c-4bfc-adf3-af39b1554191
-caps.latest.revision: 5
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 5
+caps.latest.revision: "5"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 5f876c1b921a00c251010d22e2cdd000a405a651
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 12/21/2017
 ---
-# conform
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-**Блок, относящийся только к языку C\+\+**  
+# <a name="conform"></a>conform
+**Конкретных C++**  
   
- Определяет поведение времени выполнения параметр компилятора [\/Zc:forScope](../build/reference/zc-forscope-force-conformance-in-for-loop-scope.md).  
+ Задает поведение времени выполнения [/Zc: forScope](../build/reference/zc-forscope-force-conformance-in-for-loop-scope.md) параметр компилятора.  
   
-## Синтаксис  
+## <a name="syntax"></a>Синтаксис  
   
 ```  
 #pragma conform(name [, show ] [, on | off ] [ [, push | pop ] [, identifier ] ] )  
 ```  
   
-#### Параметры  
+#### <a name="parameters"></a>Параметры  
  *name*  
- Определяет имя параметра компилятора, которое требуется изменить.  Единственное допустимое *name* — это `forScope`.  
+ Определяет имя параметра компилятора, которое требуется изменить. Единственным допустимым *имя* — `forScope`.  
   
- **show** \(необязательно\)  
- Вызывает отображение текущей настройки *name* \(true или false\) посредством предупреждения во время компиляции.  Например, `#pragma conform(forScope, show)`.  
+ **Показать** (необязательно)  
+ Вызывает текущий параметр *имя* (true или false), для отображения посредством предупреждения во время компиляции. Например, `#pragma conform(forScope, show)`.  
   
- **on, off** \(необязательно\)  
- Задание для параметра *name* значения **on** включает параметр компилятора [\/Zc:forScope](../build/reference/zc-forscope-force-conformance-in-for-loop-scope.md).  Значение по умолчанию — **off**.  
+ **Вкл., Выкл**(необязательно)  
+ Установка *имя* для **на** позволяет [/Zc: forScope](../build/reference/zc-forscope-force-conformance-in-for-loop-scope.md) параметр компилятора. Значение по умолчанию — **off**.  
   
- **push** \(необязательно\)  
- Помещает текущее значение *name* во внутренний стек компилятора.  Если задан параметр *identifier*, можно задать помещение в стек значения **on** или **off** для параметра *name*.  Например, `#pragma conform(forScope, push, myname, on)`.  
+ **Принудительная** (необязательно)  
+ Помещает текущее значение *имя* на внутреннем стеке компилятора. При указании *идентификатор*, можно указать **на** или **off** значение для *имя* для помещается в стек. Например, `#pragma conform(forScope, push, myname, on)`.  
   
- **pop** \(необязательно\)  
- Задает в качестве значения *name* значение вверху внутреннего стека компилятора, а затем извлекает данные из стека.  Если идентификатор определен с помощью параметра **pop**, стек будет извлекаться до тех пор, пока не будет найдена запись с параметром *identifier*, который также будет извлечен; текущее значение для *name* в следующей записи стека становится новым значением для параметра *name*.  Если задать извлечение данных с помощью параметра *identifier*, который не является записью в стеке, **pop** игнорируется.  
+ **POP** (необязательно)  
+ Задает значение *имя* значение вверху внутреннего стека компилятора, а затем извлекает данные из стека. Если идентификатор определен с помощью **pop**, стек будет извлекаться обратно в том случае, пока найдет запись с *идентификатор*, который также будет извлечен; текущее значение для *имя* в следующей записи стека становится новым значением для *имя*. Если задать извлечение данных с *идентификатор* , не является запись в стеке, **pop** игнорируется.  
   
- *идентификатор* \(необязательно\)  
- Может быть включен с помощью команды **push** или **pop**.  Если используется *identifier*, можно также использовать описатель **on** или **off**.  
+ *Идентификатор*(необязательно)  
+ Может быть включен с **принудительной** или **pop** команды. Если *идентификатор* используется, то **на** или **off** также можно использовать спецификатор.  
   
-## Пример  
+## <a name="example"></a>Пример  
   
 ```  
 // pragma_directive_conform.cpp  
@@ -74,5 +75,5 @@ caps.handback.revision: 5
 int main() {}  
 ```  
   
-## См. также  
- [Директивы Pragma и ключевое слово \_\_Pragma](../preprocessor/pragma-directives-and-the-pragma-keyword.md)
+## <a name="see-also"></a>См. также  
+ [Директивы Pragma и ключевое слово __Pragma](../preprocessor/pragma-directives-and-the-pragma-keyword.md)

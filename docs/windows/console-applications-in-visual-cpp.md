@@ -13,18 +13,21 @@ caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 2ea9a8e5be589b1249c295595932facab4153a16
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: 2500f19d77339d5115f7d36c4b34b84e396a9284
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="console-applications-in-visual-c"></a>Консольные приложения Win32 в Visual C++
 Консольное приложение принимает входные и отправляет выходные данные на консоль, которая также называется командной строкой. Можно создать консольные приложения для выполнения различных задач — от простейших до самых сложных. Консольное приложение можно также использовать для демонстрации функциональных возможностей, которые позже будут реализованы в классическом приложении Windows или UWP. Консольные приложения могут взаимодействовать с другими классическими приложениями по каналам или другим механизмам RPC.  
   
 ## <a name="related-articles"></a>Связанные статьи  
   
-|Заголовок|Описание|  
+|Заголовок|Описание:|  
 |-----------|-----------------|  
 |[Пошаговое руководство. Создание стандартной программы C++ (C++)](../windows/walkthrough-creating-a-standard-cpp-program-cpp.md)|Создание консольного приложения, которое пользователи могут запускать из командной строки.|  
 |[Создание консольного приложения](../windows/creating-a-console-application.md)|Сведения о консольных приложениях.|

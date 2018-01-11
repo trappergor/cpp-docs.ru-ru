@@ -4,28 +4,25 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
 - allocators/stdext::allocators::allocator_suballoc
 - allocators/stdext::allocator_suballoc
-dev_langs:
-- C++
-helpviewer_keywords:
-- allocator_suballoc class
+dev_langs: C++
+helpviewer_keywords: allocator_suballoc class
 ms.assetid: 50c6a5c0-d00d-4276-9285-d908fd4f6483
-caps.latest.revision: 16
+caps.latest.revision: "16"
 author: corob-msft
 ms.author: corob
 manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 62f91cfbe39967dc5c95dba0f0e4c70a4bc96a14
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
-ms.sourcegitcommit: 65f4e356ad0d46333b0d443d0fd6ac0b9f2b6f58
-ms.openlocfilehash: 68708216ec3b9c0dda017d01641a303ab3ffd247
-ms.contentlocale: ru-ru
-ms.lasthandoff: 10/03/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="allocatorsuballoc-class"></a>Класс allocator_suballoc
 Описывает объект, который управляет выделением и освобождением памяти для объектов типа `Type`, использующих кэш типа [cache_suballoc](../standard-library/cache-suballoc-class.md).  
@@ -39,7 +36,7 @@ class allocator_suballoc;
   
 #### <a name="parameters"></a>Параметры  
   
-|Параметр|Описание|  
+|Параметр|Описание:|  
 |---------------|-----------------|  
 |`Type`|Тип элементов, распределяемых распределителем.|  
   
@@ -53,7 +50,6 @@ class allocator_suballoc;
   
 ## <a name="see-also"></a>См. также  
  [\<allocators>](../standard-library/allocators-header.md)
-
 
 
 

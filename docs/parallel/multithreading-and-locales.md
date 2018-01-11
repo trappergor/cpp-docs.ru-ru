@@ -1,48 +1,49 @@
 ---
-title: "Многопоточность и языковые стандарты | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "язык и региональные стандарты [C++], многопоточность"
-  - "многопоточность [C++], язык и региональные стандарты"
-  - "языковой стандарт для отдельного потока"
-  - "работа с потоками [C++], язык и региональные стандарты"
+title: "Многопоточность и языковые стандарты | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- locales [C++], multithreading
+- multithreading [C++], locales
+- threading [C++], locales
+- per-thread locale
 ms.assetid: d6fb159a-eaca-4130-a51a-f95d62f71485
-caps.latest.revision: 8
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 6
+caps.latest.revision: "8"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: e60235bb011cb130b06a51a498cd8b5b88a56232
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 12/21/2017
 ---
-# Многопоточность и языковые стандарты
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-И библиотека C времени выполнения, и стандартная библиотека C\+\+ поддерживают изменение языкового стандарта программы.  В этом разделе рассматриваются задачи, которые встречаются в многопоточных приложениях при использовании функций языковых стандартов обеих библиотек.  
+# <a name="multithreading-and-locales"></a>Многопоточность и языковые стандарты
+Библиотеки времени выполнения C и стандартную библиотеку C++ поддерживают изменение языкового стандарта программы. В этом разделе рассматриваются проблемы, возникающие при использовании функций языковых стандартов обеих библиотек в многопоточных приложениях.  
   
-## Заметки  
- С помощью библиотеки C времени выполнения можно создавать многопоточные приложения, используя функции `_beginthread` и `_beginthreadex`.  В данном разделе рассматриваются только многопоточные приложения, созданные с помощью этих функций.  Для получения дополнительной информации см. [\_beginthread, \_beginthreadex](../Topic/_beginthread,%20_beginthreadex.md).  
+## <a name="remarks"></a>Примечания  
+ Библиотеки времени выполнения языка C, позволяет создавать многопоточные приложения, используя `_beginthread` и `_beginthreadex` функции. В этом разделе рассматриваются только многопоточные приложения, созданные с помощью этих функций. Дополнительные сведения см. в разделе [_beginthread и _beginthreadex](../c-runtime-library/reference/beginthread-beginthreadex.md).  
   
- Чтобы изменить языковой стандарт с помощью библиотеки C времени выполнения, воспользуйтесь функцией [setlocale](../preprocessor/setlocale.md).  В предыдущих версиях [!INCLUDE[vcprvc](../build/includes/vcprvc_md.md)] эта функция изменяла языковой стандарт во всем приложении.  Теперь можно менять языковой стандарт для отдельного потока.  Для этого служит функция [\_configthreadlocale](../c-runtime-library/reference/configthreadlocale.md).  Чтобы функция [setlocale](../preprocessor/setlocale.md) меняла языковой стандарт только в текущем потоке, нужно вызвать в этом потоке функцию `_configthreadlocale(_ENABLE_PER_THREAD_LOCALE)`.  И наоборот, при вызове функции `_configthreadlocale(_DISABLE_PER_THREAD_LOCALE)` поток будет использовать общий языковой стандарт, и любой вызов функции [setlocale](../preprocessor/setlocale.md) в этом потоке будет изменять стандарт во всех потоках, которым явно не присвоен языковой стандарт для одного потока.  
+ Чтобы изменить языковой стандарт, с помощью библиотеки времени выполнения C, используйте [setlocale](../preprocessor/setlocale.md) функции. В предыдущих версиях Visual C++ эта функция изменяла языковой стандарт во всем приложении. Нет реализована поддержка стандарт для каждого потока. Это делается с помощью [_configthreadlocale](../c-runtime-library/reference/configthreadlocale.md) функции. Чтобы указать, что [setlocale](../preprocessor/setlocale.md) следует изменять только языкового стандарта текущего потока, вызовов `_configthreadlocale(_ENABLE_PER_THREAD_LOCALE)` в этом потоке. И наоборот, вызов `_configthreadlocale(_DISABLE_PER_THREAD_LOCALE)` вызовет потока для использования глобального языкового стандарта и любой вызов [setlocale](../preprocessor/setlocale.md) в том, что поток будет изменить языковой стандарт во всех потоках, которые явно не включены языкового стандарта отдельного потока.  
   
- Чтобы изменить языковой стандарт с помощью библиотеки C\+\+ времени выполнения, воспользуйтесь функцией [Класс locale](../standard-library/locale-class.md).  Вызов метода [locale::global](../Topic/locale::global.md) изменяет языковой стандарт во всех потоках, которым явно не присвоен языковой стандарт для одного потока.  Чтобы изменить языковой стандарт в одном потоке или части приложения, просто создайте в этом потоке или части кода экземпляр объекта `locale`.  
+ Чтобы изменить языковой стандарт, с помощью библиотеки времени выполнения C++, используйте [класс locale](../standard-library/locale-class.md). Путем вызова [locale::global](../standard-library/locale-class.md#global) метод, измените языкового стандарта каждого потока, который не включен явно языкового стандарта отдельного потока. Чтобы изменить языковой стандарт в одном потоке или части приложения, просто создайте экземпляр `locale` объекта в этом потоке или части кода.  
   
 > [!NOTE]
->  Вызов метода [locale::global](../Topic/locale::global.md) изменяет языковой стандарт как для стандартной библиотеки C\+\+, так и для библиотеки C времени выполнения.  Однако вызов функции [setlocale](../preprocessor/setlocale.md) изменяет языковой стандарт только для библиотеки C времени выполнения; стандартная библиотека C\+\+ не затрагивается.  
+>  Вызов [locale::global](../standard-library/locale-class.md#global) изменяет языковой стандарт для стандартной библиотеки C++ и библиотеки времени выполнения C. Однако, при вызове [setlocale](../preprocessor/setlocale.md) только изменяет языковой стандарт для библиотеки времени выполнения C; стандартной библиотеки C++ не влияет.  
   
- В следующих примерах показано, как использовать функции [setlocale](../preprocessor/setlocale.md), [Класс locale](../standard-library/locale-class.md) и [\_configthreadlocale](../c-runtime-library/reference/configthreadlocale.md) для изменения языкового стандарта приложения в нескольких различных скриптах.  
+ В следующих примерах показано использование [setlocale](../preprocessor/setlocale.md) функции [класс locale](../standard-library/locale-class.md)и [_configthreadlocale](../c-runtime-library/reference/configthreadlocale.md) функции для изменения языковой стандарт для приложения в нескольких различных сценариях.  
   
-## Пример  
- В этом примере главный поток создает два дочерних потока.  В первом потоке, потоке A, включается языковой стандарт для отдельного потока путем вызова функции `_configthreadlocale(_ENABLE_PER_THREAD_LOCALE)`.  Во втором потоке, потоке B, языковой стандарт для отдельного потока не включен, как и в главном потоке.  Затем поток A изменяет языковой стандарт при помощи функции [setlocale](../preprocessor/setlocale.md) библиотеки C времени выполнения.  
+## <a name="example"></a>Пример  
+ В этом примере главный поток создает два дочерних потока. Первый поток, поток A, позволяет языкового стандарта отдельного потока путем вызова `_configthreadlocale(_ENABLE_PER_THREAD_LOCALE)`. Второй поток, потоке B, а также основной поток, не включайте языкового стандарта отдельного потока. Затем поток изменяет языковой стандарт при помощи [setlocale](../preprocessor/setlocale.md) функции библиотеки времени выполнения C.  
   
- Поскольку в потоке A включен языковой стандарт для отдельного потока, "французский" языковой стандарт будут использовать только функции библиотеки C времени выполнения в потоке A.  Функции библиотеки C времени выполнения в потоке B и в главном потоке по\-прежнему будут использовать стандарт "С".  Кроме того, поскольку функция [setlocale](../preprocessor/setlocale.md) не влияет на стандартную библиотеку C\+\+, все объекты этой библиотеки также будут по\-прежнему использовать стандарт "С".  
+ Так как поток A имеет отдельного потока включен языковой стандарт только функции библиотеки времени выполнения C с помощью запуска потока A, использующие языковой стандарт «французский». Функции библиотеки времени выполнения C, в потоке B и в основном потоке продолжать использовать языковой стандарт «C». Кроме того, поскольку [setlocale](../preprocessor/setlocale.md) не влияет на стандартную библиотеку C++ языкового стандарта, все стандартной библиотеки C++ объекты продолжают использовать языковой стандарт «C».  
   
 ```  
 // multithread_locale_1.cpp  
@@ -123,19 +124,24 @@ unsigned __stdcall RunThreadB(void *params)
 }  
 ```  
   
-  **\[Поток A\] Языковой стандарт по потокам включен.**  
-**\[Thread A\] CRT locale is set to "French\_France.1252"**  
-**\[Thread A\] locale::global is set to "C"**  
-**\[Поток Б\] Языковой стандарт по потокам НЕ включен.**  
-**\[Thread B\] CRT locale is set to "C"**  
-**\[Thread B\] locale::global is set to "C"**  
-**\[Главный поток\] Языковой стандарт по потокам НЕ включен.**  
-**\[Thread main\] CRT locale is set to "C"**  
-**\[Thread main\] locale::global is set to "C"**   
-## Пример  
- В этом примере главный поток создает два дочерних потока.  В первом потоке, потоке A, включается языковой стандарт для отдельного потока путем вызова функции `_configthreadlocale(_ENABLE_PER_THREAD_LOCALE)`.  Во втором потоке, потоке B, языковой стандарт для отдельного потока не включен, как и в главном потоке.  Затем поток A изменяет языковой стандарт при помощи метода [locale::global](../Topic/locale::global.md) стандартной библиотеки C\+\+.  
+```Output  
+[Thread A] Per-thread locale is enabled.  
+[Thread A] CRT locale is set to "French_France.1252"  
+[Thread A] locale::global is set to "C"  
   
- Поскольку в потоке A включен языковой стандарт для отдельного потока, "французский" языковой стандарт будут использовать только функции библиотеки C времени выполнения в потоке A.  Функции библиотеки C времени выполнения в потоке B и в главном потоке по\-прежнему будут использовать стандарт "С".  Однако в связи с тем, что метод [locale::global](../Topic/locale::global.md) изменяет языковой стандарт в глобальном режиме, все объекты стандартной библиотеки C\+\+ во всех потоках будут использовать "французский" стандарт.  
+[Thread B] Per-thread locale is NOT enabled.  
+[Thread B] CRT locale is set to "C"  
+[Thread B] locale::global is set to "C"  
+  
+[Thread main] Per-thread locale is NOT enabled.  
+[Thread main] CRT locale is set to "C"  
+[Thread main] locale::global is set to "C"  
+```  
+  
+## <a name="example"></a>Пример  
+ В этом примере главный поток создает два дочерних потока. Первый поток, поток A, позволяет языкового стандарта отдельного потока путем вызова `_configthreadlocale(_ENABLE_PER_THREAD_LOCALE)`. Второй поток, потоке B, а также основной поток, не включайте языкового стандарта отдельного потока. Затем поток изменяет языковой стандарт при помощи [locale::global](../standard-library/locale-class.md#global) метод стандартной библиотеки C++.  
+  
+ Так как поток A имеет отдельного потока включен языковой стандарт только функции библиотеки времени выполнения C с помощью запуска потока A, использующие языковой стандарт «французский». Функции библиотеки времени выполнения C, в потоке B и в основном потоке продолжать использовать языковой стандарт «C». Однако, поскольку [locale::global](../standard-library/locale-class.md#global) метод изменяет языковой стандарт «глобально», все объекты стандартной библиотеки C++ во всех потоках начать использовать языковой стандарт «французский».  
   
 ```  
 // multithread_locale_2.cpp  
@@ -216,19 +222,24 @@ unsigned __stdcall RunThreadB(void *params)
 }  
 ```  
   
-  **\[Поток A\] Языковой стандарт по потокам включен.**  
-**\[Thread A\] CRT locale is set to "French\_France.1252"**  
-**\[Thread A\] locale::global is set to "French\_France.1252"**  
-**\[Поток Б\] Языковой стандарт по потокам НЕ включен.**  
-**\[Thread B\] CRT locale is set to "C"**  
-**\[Thread B\] locale::global is set to "French\_France.1252"**  
-**\[Главный поток\] Языковой стандарт по потокам НЕ включен.**  
-**\[Thread main\] CRT locale is set to "C"**  
-**\[Thread main\] locale::global is set to "French\_France.1252"**   
-## Пример  
- В этом примере главный поток создает два дочерних потока.  В первом потоке, потоке A, включается языковой стандарт для отдельного потока путем вызова функции `_configthreadlocale(_ENABLE_PER_THREAD_LOCALE)`.  Во втором потоке, потоке B, языковой стандарт для отдельного потока не включен, как и в главном потоке.  Затем поток B изменяет языковой стандарт при помощи функции [setlocale](../preprocessor/setlocale.md) библиотеки C времени выполнения.  
+```Output  
+[Thread A] Per-thread locale is enabled.  
+[Thread A] CRT locale is set to "French_France.1252"  
+[Thread A] locale::global is set to "French_France.1252"  
   
- Поскольку в потоке B не включен языковой стандарт для отдельного потока, функции библиотеки C времени выполнения в потоке B и в главном потоке будут использовать "французский" языковой стандарт.  Функции библиотеки C времени выполнения в потоке A по\-прежнему будут использовать языковой стандарт "С", так как в потоке A включен языковой стандарт для отдельного потока.  Кроме того, поскольку функция [setlocale](../preprocessor/setlocale.md) не влияет на стандартную библиотеку C\+\+, все объекты этой библиотеки также будут по\-прежнему использовать стандарт "С".  
+[Thread B] Per-thread locale is NOT enabled.  
+[Thread B] CRT locale is set to "C"  
+[Thread B] locale::global is set to "French_France.1252"  
+  
+[Thread main] Per-thread locale is NOT enabled.  
+[Thread main] CRT locale is set to "C"  
+[Thread main] locale::global is set to "French_France.1252"  
+```  
+  
+## <a name="example"></a>Пример  
+ В этом примере главный поток создает два дочерних потока. Первый поток, поток A, позволяет языкового стандарта отдельного потока путем вызова `_configthreadlocale(_ENABLE_PER_THREAD_LOCALE)`. Второй поток, потоке B, а также основной поток, не включайте языкового стандарта отдельного потока. Затем поток B изменяет языковой стандарт при помощи [setlocale](../preprocessor/setlocale.md) функции библиотеки времени выполнения C.  
+  
+ Поскольку потоке B не включен языковой стандарт для отдельного потока, функции библиотеки времени выполнения C, в потоке B и в основном потоке начать использовать языковой стандарт «французский». Функции библиотеки времени выполнения C в потоке A продолжить использовать языковой стандарт «C», поскольку поток A включен языковой стандарт для отдельного потока. Кроме того, поскольку [setlocale](../preprocessor/setlocale.md) не влияет на стандартную библиотеку C++ языкового стандарта, все стандартной библиотеки C++ объекты продолжают использовать языковой стандарт «C».  
   
 ```  
 // multithread_locale_3.cpp  
@@ -313,19 +324,24 @@ unsigned __stdcall RunThreadB(void *params)
 }  
 ```  
   
-  **\[Поток Б\] Языковой стандарт по потокам НЕ включен.**  
-**\[Thread B\] CRT locale is set to "French\_France.1252"**  
-**\[Thread B\] locale::global is set to "C"**  
-**\[Поток A\] Языковой стандарт по потокам включен.**  
-**\[Thread A\] CRT locale is set to "C"**  
-**\[Thread A\] locale::global is set to "C"**  
-**\[Главный поток\] Языковой стандарт по потокам НЕ включен.**  
-**\[Thread main\] CRT locale is set to "French\_France.1252"**  
-**\[Thread main\] locale::global is set to "C"**   
-## Пример  
- В этом примере главный поток создает два дочерних потока.  В первом потоке, потоке A, включается языковой стандарт для отдельного потока путем вызова функции `_configthreadlocale(_ENABLE_PER_THREAD_LOCALE)`.  Во втором потоке, потоке B, языковой стандарт для отдельного потока не включен, как и в главном потоке.  Затем поток B изменяет языковой стандарт при помощи метода [locale::global](../Topic/locale::global.md) стандартной библиотеки C\+\+.  
+```Output  
+[Thread B] Per-thread locale is NOT enabled.  
+[Thread B] CRT locale is set to "French_France.1252"  
+[Thread B] locale::global is set to "C"  
   
- Поскольку в потоке B не включен языковой стандарт для отдельного потока, функции библиотеки C времени выполнения в потоке B и в главном потоке будут использовать "французский" языковой стандарт.  Функции библиотеки C времени выполнения в потоке A по\-прежнему будут использовать языковой стандарт "С", так как в потоке A включен языковой стандарт для отдельного потока.  Однако в связи с тем, что метод [locale::global](../Topic/locale::global.md) изменяет языковой стандарт в глобальном режиме, все объекты стандартной библиотеки C\+\+ во всех потоках будут использовать "французский" стандарт.  
+[Thread A] Per-thread locale is enabled.  
+[Thread A] CRT locale is set to "C"  
+[Thread A] locale::global is set to "C"  
+  
+[Thread main] Per-thread locale is NOT enabled.  
+[Thread main] CRT locale is set to "French_France.1252"  
+[Thread main] locale::global is set to "C"  
+```  
+  
+## <a name="example"></a>Пример  
+ В этом примере главный поток создает два дочерних потока. Первый поток, поток A, позволяет языкового стандарта отдельного потока путем вызова `_configthreadlocale(_ENABLE_PER_THREAD_LOCALE)`. Второй поток, потоке B, а также основной поток, не включайте языкового стандарта отдельного потока. Затем поток B изменяет языковой стандарт при помощи [locale::global](../standard-library/locale-class.md#global) метод стандартной библиотеки C++.  
+  
+ Поскольку потоке B не включен языковой стандарт для отдельного потока, функции библиотеки времени выполнения C, в потоке B и в основном потоке начать использовать языковой стандарт «французский». Функции библиотеки времени выполнения C в потоке A продолжить использовать языковой стандарт «C», поскольку поток A включен языковой стандарт для отдельного потока. Однако, поскольку [locale::global](../standard-library/locale-class.md#global) метод изменяет языковой стандарт «глобально», все объекты стандартной библиотеки C++ во всех потоках начать использовать языковой стандарт «французский».  
   
 ```  
 // multithread_locale_4.cpp  
@@ -410,22 +426,27 @@ unsigned __stdcall RunThreadB(void *params)
 }  
 ```  
   
-  **\[Поток Б\] Языковой стандарт по потокам НЕ включен.**  
-**\[Thread B\] CRT locale is set to "French\_France.1252"**  
-**\[Thread B\] locale::global is set to "French\_France.1252"**  
-**\[Поток A\] Языковой стандарт по потокам включен.**  
-**\[Thread A\] CRT locale is set to "C"**  
-**\[Thread A\] locale::global is set to "French\_France.1252"**  
-**\[Главный поток\] Языковой стандарт по потокам НЕ включен.**  
-**\[Thread main\] CRT locale is set to "French\_France.1252"**  
-**\[Thread main\] locale::global is set to "French\_France.1252"**   
-## См. также  
- [Поддержка многопоточности для устаревшего кода \(Visual C\+\+\)](../parallel/multithreading-support-for-older-code-visual-cpp.md)   
- [\_beginthread, \_beginthreadex](../Topic/_beginthread,%20_beginthreadex.md)   
- [\_configthreadlocale](../c-runtime-library/reference/configthreadlocale.md)   
+```Output  
+[Thread B] Per-thread locale is NOT enabled.  
+[Thread B] CRT locale is set to "French_France.1252"  
+[Thread B] locale::global is set to "French_France.1252"  
+  
+[Thread A] Per-thread locale is enabled.  
+[Thread A] CRT locale is set to "C"  
+[Thread A] locale::global is set to "French_France.1252"  
+  
+[Thread main] Per-thread locale is NOT enabled.  
+[Thread main] CRT locale is set to "French_France.1252"  
+[Thread main] locale::global is set to "French_France.1252"  
+```  
+  
+## <a name="see-also"></a>См. также  
+ [Поддержка многопоточности для устаревшего кода (Visual C++)](../parallel/multithreading-support-for-older-code-visual-cpp.md)   
+ [_beginthread, _beginthreadex](../c-runtime-library/reference/beginthread-beginthreadex.md)   
+ [_configthreadlocale](../c-runtime-library/reference/configthreadlocale.md)   
  [setlocale](../preprocessor/setlocale.md)   
  [Интернационализация](../c-runtime-library/internationalization.md)   
  [Языковой стандарт](../c-runtime-library/locale.md)   
- [\<clocale\>](../standard-library/clocale.md)   
- [\<locale\>](../standard-library/locale.md)   
+ [\<clocale >](../standard-library/clocale.md)   
+ [\<locale>](../standard-library/locale.md)   
  [Класс locale](../standard-library/locale-class.md)

@@ -16,11 +16,12 @@ caps.latest.revision: "16"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: b94fb68ad28e45141551b238acf99baedf78ef6a
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 5f92dc200f29f5fd20c8dd1cc27508b9c7cdf4ce
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="walkthrough-creating-a-dataflow-agent"></a>Пошаговое руководство. Создание агента потоков данных
 В этом документе показано, как создавать приложения на основе агентов, основанных на потока данных, а не потока управления.  
@@ -93,7 +94,7 @@ ms.lasthandoff: 10/24/2017
   
  Следующая таблица описывает члены сети.  
   
-|Член|Описание|  
+|Член|Описание:|  
 |------------|-----------------|  
 |`increment_active`|Объект [concurrency::transformer](../../parallel/concrt/reference/transformer-class.md) объект, который увеличивает счетчик активных событий и передает входное значение для остальных сетей.|  
 |`negatives`, `positives`|[Concurrency::Call](../../parallel/concrt/reference/call-class.md) объектов, увеличивает число цифр и уменьшает счетчик активных событий. Все объекты используют фильтр принимать отрицательные или положительные числа.|  

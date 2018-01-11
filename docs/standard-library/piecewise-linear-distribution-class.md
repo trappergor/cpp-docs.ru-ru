@@ -37,11 +37,12 @@ caps.latest.revision: "21"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 4f53b20f91e39637fc5dc12e759a2e830e42fde1
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 7764537c09b9e1d226e1a5d847f94d4825e50870
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="piecewiselineardistribution-class"></a>Класс piecewise_linear_distribution
 Формирует кусочно-линейное распределение с меняющимися интервалами ширины и линейно меняющейся вероятностью в каждом интервале.  
@@ -353,7 +354,7 @@ struct param_type {
 См. параметры конструктора [piecewise_linear_distribution](#piecewise_linear_distribution).  
   
 ### <a name="remarks"></a>Примечания  
- **Предварительные условия:** `xmin < xmax`  
+ **Предусловие:** `xmin < xmax`  
   
 Эту структуру можно передать конструктору класса распределения во время создания экземпляра, функции-члену `param()` для установки хранимых параметров существующего распределения и `operator()` для использования вместо хранимых параметров.  
   

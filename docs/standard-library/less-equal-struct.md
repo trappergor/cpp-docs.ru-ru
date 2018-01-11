@@ -4,43 +4,25 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-cpp
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- xfunctional/std::less_equal
-- less_equal
-dev_langs:
-- C++
+f1_keywords: xfunctional/std::less_equal
+dev_langs: C++
 helpviewer_keywords:
 - less_equal function
 - less_equal struct
 ms.assetid: 32085782-c7e0-4310-9b40-8aa3c1bff211
-caps.latest.revision: 23
+caps.latest.revision: "23"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-translationtype: Machine Translation
-ms.sourcegitcommit: 2d05749ba2837a3879c91886b9266de47dd2ece6
-ms.openlocfilehash: 58e188cc830140ace78777a03959a7f4e170f328
-ms.lasthandoff: 02/24/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: 15a4d46b299ddaf99db8f39c39caaec233f8747e
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="lessequal-struct"></a>Структура less_equal
 Бинарный предикат, который выполняет на своих аргументах операцию сравнения "меньше или равно" ( `operator<=`).  
@@ -75,7 +57,7 @@ struct less_equal<void>
  Правый операнд в операции "меньше или равно". Неспециализированный шаблон принимает ссылочный аргумент lvalue типа `Type`. Специализированный шаблон выполняет точную пересылку ссылочных аргументов lvalue и rvalue выводимого типа `U`.  
   
 ## <a name="return-value"></a>Возвращаемое значение  
- Результат `Left``<=``Right`. Специализированный шаблон выполняет точную пересылку результата, который имеет тип, возвращаемый `operator<=`.  
+ Результат `Left <= Right`. Специализированный шаблон выполняет точную пересылку результата, который имеет тип, возвращаемый `operator<=`.  
   
 ## <a name="remarks"></a>Примечания  
  Бинарный предикат `less_equal`< `Type`> обеспечивает строгое слабое упорядочивание набора значений элементов типа `Type` в классы эквивалентности тогда и только тогда, когда этот тип удовлетворяет стандартным математическим требованиям для такого упорядочивания. Специализации для любого типа указателя дают общее упорядочение элементов в том, что все элементы из различных значений упорядочиваются относительно друг друга.  
@@ -148,7 +130,6 @@ Sorted vector v1 = (2836 2836 2836 6205 15251 31247 37154 48755)
   
 ## <a name="see-also"></a>См. также  
  [Справочник по стандартной библиотеке C++](../standard-library/cpp-standard-library-reference.md)
-
 
 
 

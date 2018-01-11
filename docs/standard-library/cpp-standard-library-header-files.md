@@ -4,12 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - header files, C++ Standard Library
 - wrappers
@@ -18,30 +16,16 @@ helpviewer_keywords:
 - C++ Standard Library, header files
 - Visual C++, header files
 ms.assetid: e7bf497a-0f63-48d0-9b54-cb0eef4073c4
-caps.latest.revision: 36
+caps.latest.revision: "36"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3f69f0c3176d2fbe19e11ce08c071691a72d858d
-ms.openlocfilehash: fd94dd6a7c0727b94a2f827e25bf77feea31a072
-ms.contentlocale: ru-ru
-ms.lasthandoff: 02/24/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: 8fca748d3192fcecbec5194822cd302ad78a296e
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="c-standard-library-header-files"></a>Файлы заголовков стандартных библиотек C++
 Файлы заголовков для стандартной библиотеки C++ и расширений, по категориям.  
@@ -95,7 +79,6 @@ ms.lasthandoff: 02/24/2017
 ## <a name="see-also"></a>См. также  
  [Использование заголовков библиотеки C++](../standard-library/using-cpp-library-headers.md)   
  [Стандартная библиотека C++](../standard-library/cpp-standard-library-reference.md)
-
 
 
 

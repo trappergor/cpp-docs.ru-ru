@@ -1,91 +1,94 @@
 ---
-title: "Практическое руководство. Активация и использование компонента среды выполнения Windows с помощью WRL | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-dev_langs: 
-  - "C++"
+title: "Как: активация и использование компонента среды выполнения Windows, с использованием WRL | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+dev_langs: C++
 ms.assetid: 54828f02-6af3-45d1-b965-d0104442f8d5
-caps.latest.revision: 17
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 17
+caps.latest.revision: "17"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: 9179b701506da7a714569a940543a95634439583
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 12/21/2017
 ---
-# Практическое руководство. Активация и использование компонента среды выполнения Windows с помощью WRL
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Этот документ показывает, как использовать [!INCLUDE[cppwrl](../windows/includes/cppwrl_md.md)] \([!INCLUDE[cppwrl_short](../windows/includes/cppwrl_short_md.md)]\) для инициализации [!INCLUDE[wrt](../atl/reference/includes/wrt_md.md)] и как активировать и использовать компонент [!INCLUDE[wrt](../atl/reference/includes/wrt_md.md)].  
+# <a name="how-to-activate-and-use-a-windows-runtime-component-using-wrl"></a>Практическое руководство. Активация и использование компонента среды выполнения Windows с помощью WRL
+В этом документе показано, как использовать среды выполнения C++ шаблон библиотеки Windows (WRL) для инициализации среды выполнения Windows и как активация и использование компонента среды выполнения Windows.  
   
 > [!NOTE]
->  В этом примере активируется встроенный компонент [!INCLUDE[wrt](../atl/reference/includes/wrt_md.md)].  Чтобы получить сведения о том, как создать собственный компонент, который можно активировать таким же образом, см. [Пошаговое руководство. Создание базового компонента среды выполнения Windows](../windows/walkthrough-creating-a-basic-windows-runtime-component-using-wrl.md).  
+>  В этом примере активирует встроенный компонент среды выполнения Windows. Узнайте, как создать собственный компонент, который может активировать аналогичным образом, в разделе [Пошаговое руководство: создание основного компонента среды выполнения Windows](../windows/walkthrough-creating-a-basic-windows-runtime-component-using-wrl.md).  
   
- Для использования компонента необходимо получить указатель интерфейса к типу, реализованному компонентом.  А поскольку основной технологией [!INCLUDE[wrt](../atl/reference/includes/wrt_md.md)] является модель Component Object Model \(COM\), необходимо соблюдать правила модели COM для поддержки экземпляра типа.  Например, необходимо поддерживать *счетчик ссылок*, определяющий, когда тип удаляется из памяти.  
+ Для использования компонента необходимо получить указатель интерфейса на тип, который реализуется компонентом. И поскольку лежащие в основе среды выполнения Windows модели объектов компонентов (COM), необходимо соблюдать правила модели COM для поддержки экземпляра типа. Например, необходимо поддерживать *количество ссылок* , определяющий, когда тип удаляется из памяти.  
   
- Для упрощения использования [!INCLUDE[wrt](../atl/reference/includes/wrt_md.md)], [!INCLUDE[cppwrl_short](../windows/includes/cppwrl_short_md.md)] предоставляет шаблон интеллектуального указателя, [ComPtr\<T\>](../windows/comptr-class.md), который автоматически выполняет подсчет ссылок.  При объявлении переменной укажите `ComPtr<`*interface\-name*`>` *identifier*.  Для обращения к членам интерфейса примените оператор доступа к членам класса в виде стрелки \(`->`\) к идентификатору.  
+ Чтобы упростить использование среды выполнения Windows, библиотека шаблонов C++ среды выполнения Windows предоставляет шаблон интеллектуального указателя [ComPtr\<T >](../windows/comptr-class.md), который автоматически выполняет подсчет ссылок. При объявлении переменной необходимо указать `ComPtr<` *имя интерфейса* `>` *идентификатор*. Для обращения к членам интерфейса примените оператор доступа к членам класса в виде стрелки (`->`) к идентификатору.  
   
 > [!IMPORTANT]
 >  При вызове функции интерфейса необходимо всегда проверять возвращаемое значение `HRESULT`.  
   
-## Активирование и использование компонента среды выполнения Windows  
- Следующие шаги используют интерфейс `Windows::Foundation::IUriRuntimeClass` для демонстрации создания фабрики активации компонента [!INCLUDE[wrt](../atl/reference/includes/wrt_md.md)], создания экземпляра этого компонента и извлечения значения свойства.  Они также показывают, как инициализировать [!INCLUDE[wrt](../atl/reference/includes/wrt_md.md)].  Полный пример кода выглядит следующим образом.  
+## <a name="activating-and-using-a-windows-runtime-component"></a>Активация и использование компонента среды выполнения Windows  
+ В следующих шагах используется `Windows::Foundation::IUriRuntimeClass` интерфейс для демонстрации создания фабрики активации компонента среды выполнения Windows, создания экземпляра этого компонента и извлечь значение свойства. Они также показано, как инициализировать среду выполнения Windows. Далее приведен полный пример.  
   
 > [!IMPORTANT]
->  Хотя обычно используется [!INCLUDE[cppwrl_short](../windows/includes/cppwrl_short_md.md)] в приложении [!INCLUDE[win8_appname_long](../build/includes/win8_appname_long_md.md)], в этом образце для иллюстрации используется консольное приложение.  Функции, такие как `wprintf_s`, недоступны из приложения [!INCLUDE[win8_appname_long](../build/includes/win8_appname_long_md.md)].  Дополнительные сведения о типах и функциях, которые можно использовать в приложении [!INCLUDE[win8_appname_long](../build/includes/win8_appname_long_md.md)] см. [Функции CRT, не поддерживаемые \/ZW](http://msdn.microsoft.com/library/windows/apps/jj606124.aspx) и [Win32 и модели COM для приложений Магазина Windows](http://msdn.microsoft.com/library/windows/apps/br205757.aspx).  
+>  Несмотря на то, что обычно используется библиотека шаблонов C++ среды выполнения Windows в приложении универсальной платформы Windows, в этом примере используется консольное приложение для иллюстрации. Функции, такие как `wprintf_s` недоступны в приложении универсальной платформы Windows. Дополнительные сведения о типах и функции, которые можно использовать в приложении универсальной платформы Windows см. в разделе [функции CRT не поддерживаются с параметром/zw](http://msdn.microsoft.com/library/windows/apps/jj606124.aspx) и [приложений Win32 и COM для магазина Windows](http://msdn.microsoft.com/library/windows/apps/br205757.aspx).  
   
-#### Активация и использование компонента среды выполнения Windows  
+#### <a name="to-activate-and-use-a-windows-runtime-component"></a>Активация и использование компонента среды выполнения Windows  
   
-1.  Включите \(`#include`\) все необходимые заголовки [!INCLUDE[wrt](../atl/reference/includes/wrt_md.md)], [!INCLUDE[cppwrl_short](../windows/includes/cppwrl_short_md.md)] или стандартной библиотеки C\+\+.  
+1.  Включить (`#include`) все необходимые среды выполнения Windows, библиотека шаблонов C++ среды выполнения Windows или заголовков стандартной библиотеки C++.  
   
-     [!CODE [wrl-consume-component#2](../CodeSnippet/VS_Snippets_Misc/wrl-consume-component#2)]  
+     [!code-cpp[wrl-consume-component#2](../windows/codesnippet/CPP/how-to-activate-and-use-a-windows-runtime-component-using-wrl_1.cpp)]  
   
-     Рекомендуется использовать директиву `using namespace` в CPP\-файле, чтобы сделать код более удобочитаемым.  
+     Рекомендуется использовать директиву `using namespace` в CPP-файле, чтобы сделать код более удобочитаемым.  
   
-2.  Инициализируйте поток, в котором выполняется приложение.  Каждое приложение должно инициализировать его поток и потоковую модель.  В этом примере используется класс [Microsoft::WRL::Wrappers::RoInitializeWrapper](../Topic/RoInitializeWrapper%20Class.md) для инициализации [!INCLUDE[wrt](../atl/reference/includes/wrt_md.md)] и определения [RO\_INIT\_MULTITHREADED](http://msdn.microsoft.com/library/windows/apps/br224661.aspx) в качестве потоковой модели.  Класс `RoInitializeWrapper` вызывает `Windows::Foundation::Initialize` при построении и `Windows::Foundation::Uninitialize` при уничтожении.  
+2.  Инициализируйте поток, в котором выполняется приложение. Каждое приложение должно инициализировать свой поток и потоковую модель. В этом примере используется [Microsoft::WRL::Wrappers::RoInitializeWrapper](../windows/roinitializewrapper-class.md) класса для инициализации среды выполнения Windows и указывает [RO_INIT_MULTITHREADED](http://msdn.microsoft.com/library/windows/apps/br224661.aspx) как потоковую модель. Класс `RoInitializeWrapper` вызывает `Windows::Foundation::Initialize` при создании и `Windows::Foundation::Uninitialize` при удалении.  
   
-     [!CODE [wrl-consume-component#3](../CodeSnippet/VS_Snippets_Misc/wrl-consume-component#3)]  
+     [!code-cpp[wrl-consume-component#3](../windows/codesnippet/CPP/how-to-activate-and-use-a-windows-runtime-component-using-wrl_2.cpp)]  
   
-     Во второй инструкции оператор [RoInitializeWrapper::HRESULT](../windows/roinitializewrapper-hresult-parens-operator.md) возвращает `HRESULT` из вызова `Windows::Foundation::Initialize`.  
+     Во втором операторе [RoInitializeWrapper::HRESULT](../windows/roinitializewrapper-hresult-parens-operator.md) оператор возвращает `HRESULT` из вызова `Windows::Foundation::Initialize`.  
   
-3.  Создайте *фабрику активации* для интерфейса `ABI::Windows::Foundation::IUriRuntimeClassFactory`.  
+3.  Создание *фабрики активации* для `ABI::Windows::Foundation::IUriRuntimeClassFactory` интерфейса.  
   
-     [!CODE [wrl-consume-component#4](../CodeSnippet/VS_Snippets_Misc/wrl-consume-component#4)]  
+     [!code-cpp[wrl-consume-component#4](../windows/codesnippet/CPP/how-to-activate-and-use-a-windows-runtime-component-using-wrl_3.cpp)]  
   
-     В [!INCLUDE[wrt](../atl/reference/includes/wrt_md.md)] используются полные имена для идентификации типов.  Параметр `RuntimeClass_Windows_Foundation_Uri` является строкой, предоставляемой [!INCLUDE[wrt](../atl/reference/includes/wrt_md.md)], которая содержит требуемое имя класса среды выполнения.  
+     Среда выполнения Windows использует полные имена для определения типов. `RuntimeClass_Windows_Foundation_Uri` Параметр представляет собой строку, предоставляемые средой выполнения Windows и содержит имя класса необходимая среда выполнения.  
   
-4.  Используйте переменную [Microsoft::WRL::Wrappers::HString](../windows/hstring-class.md), представляющую универсальный код ресурса \(URI\) `"http://www.microsoft.com"`.  
+4.  Инициализация [Microsoft::WRL::Wrappers::HString](../windows/hstring-class.md) переменной, представляющей URI `"http://www.microsoft.com"`.  
   
-     [!CODE [wrl-consume-component#6](../CodeSnippet/VS_Snippets_Misc/wrl-consume-component#6)]  
+     [!code-cpp[wrl-consume-component#6](../windows/codesnippet/CPP/how-to-activate-and-use-a-windows-runtime-component-using-wrl_4.cpp)]  
   
-     В [!INCLUDE[wrt](../atl/reference/includes/wrt_md.md)] нет необходимости выделять память для строки, которую [!INCLUDE[wrt](../atl/reference/includes/wrt_md.md)] будет использовать.  Вместо этого [!INCLUDE[wrt](../atl/reference/includes/wrt_md.md)] создает копию строки в буфере, который он поддерживает и использует для операций, а затем возвращает дескриптор созданного буфера.  
+     В среде выполнения Windows нет необходимости выделять память для строки, который будет использовать среды выполнения Windows. Вместо этого среда выполнения Windows создает копию строки в буфере, он сохраняет и использует для операций и затем возвращает дескриптор буфера он создан.  
   
-5.  Используйте фабричный метод `IUriRuntimeClassFactory::CreateUri` для создания объекта `ABI::Windows::Foundation::IUriRuntimeClass`.  
+5.  Используйте метод фабрики `IUriRuntimeClassFactory::CreateUri` для создания объекта `ABI::Windows::Foundation::IUriRuntimeClass`.  
   
-     [!CODE [wrl-consume-component#7](../CodeSnippet/VS_Snippets_Misc/wrl-consume-component#7)]  
+     [!code-cpp[wrl-consume-component#7](../windows/codesnippet/CPP/how-to-activate-and-use-a-windows-runtime-component-using-wrl_5.cpp)]  
   
 6.  Вызовите метод `IUriRuntimeClass::get_Domain` для получения значения свойства `Domain`.  
   
-     [!CODE [wrl-consume-component#8](../CodeSnippet/VS_Snippets_Misc/wrl-consume-component#8)]  
+     [!code-cpp[wrl-consume-component#8](../windows/codesnippet/CPP/how-to-activate-and-use-a-windows-runtime-component-using-wrl_6.cpp)]  
   
-7.  Введите доменное имя в консоль и нажмите 'ВВОД'  Все объекты `ComPtr` и RAII покидают область действия и автоматически освобождаются.  
+7.  Выведите доменное имя с символом перевода строки в окно консоли. Все объекты `ComPtr` и RAII покидают область действия и автоматически освобождаются.  
   
-     [!CODE [wrl-consume-component#9](../CodeSnippet/VS_Snippets_Misc/wrl-consume-component#9)]  
+     [!code-cpp[wrl-consume-component#9](../windows/codesnippet/CPP/how-to-activate-and-use-a-windows-runtime-component-using-wrl_7.cpp)]  
   
-     Функция [WindowsGetStringRawBuffer](http://msdn.microsoft.com/library/windows/apps/br224636.aspx) извлекает основную форму в кодировке Юникод строки универсального кода ресурса \(URI\).  
+     [WindowsGetStringRawBuffer](http://msdn.microsoft.com/library/windows/apps/br224636.aspx) функция получает базовый формат Юникода в строке URI.  
   
  Ниже приведен полный пример.  
   
- [!CODE [wrl-consume-component#1](../CodeSnippet/VS_Snippets_Misc/wrl-consume-component#1)]  
+ [!code-cpp[wrl-consume-component#1](../windows/codesnippet/CPP/how-to-activate-and-use-a-windows-runtime-component-using-wrl_8.cpp)]  
   
-## Компиляция кода  
- Чтобы скомпилировать код, скопируйте и вставьте его в проект Visual Studio или в файл с именем `wrl-consume-component.cpp`, а затем выполните в окне командной строки Visual Studio следующую команду.  
+## <a name="compiling-the-code"></a>Компиляция кода  
+ Чтобы скомпилировать код, скопируйте его и затем вставьте его в проект Visual Studio или в файл с именем `wrl-consume-component.cpp` , а затем запустите следующую команду в окне командной строки Visual Studio.  
   
- **cl.exe wrl\-consume\-component.cpp runtimeobject.lib**  
+ **CL.exe wrl-consume-component.cpp runtimeobject.lib**  
   
-## См. также  
- [Библиотека шаблонов C\+\+ среды выполнения Windows \(WRL\)](../Topic/Windows%20Runtime%20C++%20Template%20Library%20\(WRL\).md)
+## <a name="see-also"></a>См. также  
+ [Библиотека шаблонов C++ среды выполнения Windows (WRL)](../windows/windows-runtime-cpp-template-library-wrl.md)

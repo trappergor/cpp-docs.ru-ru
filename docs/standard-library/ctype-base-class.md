@@ -4,42 +4,23 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- devlang-cpp
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- locale/std::ctype_base
-- ctype_base
-dev_langs:
-- C++
-helpviewer_keywords:
-- ctype_base class
+f1_keywords: locale/std::ctype_base
+dev_langs: C++
+helpviewer_keywords: ctype_base class
 ms.assetid: ccffe891-d7ab-4d22-baf8-8eb6d438a96d
-caps.latest.revision: 19
+caps.latest.revision: "19"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 4ecf60434799708acab4726a95380a2d3b9dbb3a
-ms.openlocfilehash: 74c13251b63018e00490487cb9a45c4bb6d52a21
-ms.contentlocale: ru-ru
-ms.lasthandoff: 04/19/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: 83f467f8d06956678795bf97fed60fe9f22c32f1
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="ctypebase-class"></a>Класс ctype_base
 Этот класс служит в качестве базового класса для аспектов класса шаблона [ctype](../standard-library/ctype-class.md). Базовый класс для класса ctype, используемый для определения типов перечисления, применяемых для классификации или тестирования символов по отдельности или целыми диапазонами.  
@@ -97,7 +78,7 @@ struct ctype_base : public locale::facet
   
 - **graph** (функция [isgraph](../standard-library/locale-functions.md#isgraph))  
   
- Вы можете охарактеризовать комбинацию классификаций, выполняя операцию OR с этими константами. В частности, выражение **alnum** == ( **alpha**``&#124; **digit**\) and **graph** \=\= \( **alnum**``&#124; **punct**) всегда имеет значение true.  
+ Вы можете охарактеризовать комбинацию классификаций, выполняя операцию OR с этими константами. В частности, это всегда имеет значение true, **alnum** == ( **альфа-канал** &#124; **цифра** \) и **graph** \= \= \( **alnum** &#124; **пунктуация**).  
   
 ## <a name="requirements"></a>Требования  
  **Заголовок:** \<locale>  
@@ -106,7 +87,6 @@ struct ctype_base : public locale::facet
   
 ## <a name="see-also"></a>См. также  
  [Потокобезопасность в стандартной библиотеке C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)
-
 
 
 

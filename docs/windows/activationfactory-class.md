@@ -1,32 +1,33 @@
 ---
-title: "Класс ActivationFactory | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "module/Microsoft::WRL::ActivationFactory"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "ActivationFactory - класс"
+title: "Класс ActivationFactory | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: module/Microsoft::WRL::ActivationFactory
+dev_langs: C++
+helpviewer_keywords: ActivationFactory class
 ms.assetid: 5faddf1f-43b6-4f8a-97de-8c9d3ae1e1ff
-caps.latest.revision: 4
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 4
+caps.latest.revision: "4"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: 73690603b1be1dd74b7ae7626372e3ab6ff9101e
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 12/21/2017
 ---
-# Класс ActivationFactory
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="activationfactory-class"></a>ActivationFactory - класс
 Позволяет одному или нескольким классам быть активированными средой выполнения Windows.  
   
-## Синтаксис  
+## <a name="syntax"></a>Синтаксис  
   
 ```  
 template <  
@@ -37,9 +38,9 @@ template <
 class ActivationFactory : public Details::RuntimeClass<typename Details::InterfaceListHelper<IActivationFactory, I0, I1, I2, Details::Nil>::TypeT, RuntimeClassFlags<WinRt | InhibitWeakReference>, false>;  
 ```  
   
-#### Параметры  
+#### <a name="parameters"></a>Параметры  
  `I0`  
- Нулевой интерфейс.  
+ Интерфейс нулевой.  
   
  `I1`  
  Первый интерфейс.  
@@ -47,37 +48,37 @@ class ActivationFactory : public Details::RuntimeClass<typename Details::Interfa
  `I2`  
  Второй интерфейс.  
   
-## Примечания  
- ActivationFactory предоставляет методы регистрации и основные функциональные возможности для интерфейса IActivationFactory.  ActivationFactory также позволяет задать пользовательскую реализацию фабрики.  
+## <a name="remarks"></a>Примечания  
+ ActivationFactory предоставляет методы регистрации и базовую функциональность для интерфейса представляет интерфейс IActivationFactory. ActivationFactory позволяет для реализации пользовательской фабрики.  
   
- В следующем фрагменте кода символически показано, как использовать ActivationFactory.  
+ Символически в следующем фрагменте кода показано, как использовать ActivationFactory.  
   
  [!code-cpp[wrl-microsoft__wrl__activationfactory#1](../windows/codesnippet/CPP/activationfactory-class_1.cpp)]  
   
- В следующем фрагменте кода показано, как использовать структуру [Implements](../Topic/Implements%20Structure.md) для указания более трех идентификаторов интерфейса.  
+ В следующем фрагменте кода показано, как использовать [реализует](../windows/implements-structure.md) структура для указания более чем на три интерфейса идентификаторы.  
   
  `struct MyFactory : ActivationFactory<Implements<I1, I2, I3>, I4, I5>;`  
   
-## Члены  
+## <a name="members"></a>Участники  
   
-### Открытые конструкторы  
+### <a name="public-constructors"></a>Открытые конструкторы  
   
-|Имя|Описание|  
-|---------|--------------|  
+|Имя|Описание:|  
+|----------|-----------------|  
 |[Конструктор ActivationFactory::ActivationFactory](../windows/activationfactory-activationfactory-constructor.md)|Инициализирует класс ActivationFactory.|  
   
-### Открытые методы  
+### <a name="public-methods"></a>Открытые методы  
   
-|Имя|Описание|  
-|---------|--------------|  
-|[Метод ActivationFactory::AddRef](../windows/activationfactory-addref-method.md)|Увеличивает значение счетчика ссылок для текущего объекта ActivationFactory.|  
+|Имя|Описание:|  
+|----------|-----------------|  
+|[Метод ActivationFactory::AddRef](../windows/activationfactory-addref-method.md)|Увеличивает значение счетчика ссылок объекта ActivationFactory.|  
 |[Метод ActivationFactory::GetIids](../windows/activationfactory-getiids-method.md)|Извлекает массив идентификаторов реализованного интерфейса.|  
-|[Метод ActivationFactory::GetRuntimeClassName](../windows/activationfactory-getruntimeclassname-method.md)|Возвращает имя класса среды выполнения для объекта, который создает текущий ActivationFactory.|  
-|[Метод ActivationFactory::GetTrustLevel](../windows/activationfactory-gettrustlevel-method.md)|Получает уровень доверия объекта, который инициализируется текущим ActivationFactory.|  
-|[Метод ActivationFactory::QueryInterface](../windows/activationfactory-queryinterface-method.md)|Извлекает указатель на заданный интерфейс.|  
-|[Метод ActivationFactory::Release](../windows/activationfactory-release-method.md)|Уменьшает значение счетчика ссылок для текущего объекта ActivationFactory.|  
+|[Метод ActivationFactory::GetRuntimeClassName](../windows/activationfactory-getruntimeclassname-method.md)|Возвращает имя класса среды выполнения объекта, который создает экземпляр текущего ActivationFactory.|  
+|[Метод ActivationFactory::GetTrustLevel](../windows/activationfactory-gettrustlevel-method.md)|Возвращает объект, который создает экземпляр текущего ActivationFactory уровень доверия.|  
+|[Метод ActivationFactory::QueryInterface](../windows/activationfactory-queryinterface-method.md)|Извлекает указатель на указанный интерфейс.|  
+|[Метод ActivationFactory::Release](../windows/activationfactory-release-method.md)|Уменьшает счетчик ссылок объекта ActivationFactory.|  
   
-## Иерархия наследования  
+## <a name="inheritance-hierarchy"></a>Иерархия наследования  
  `I0`  
   
  `ChainInterfaces`  
@@ -98,10 +99,10 @@ class ActivationFactory : public Details::RuntimeClass<typename Details::Interfa
   
  `ActivationFactory`  
   
-## Требования  
+## <a name="requirements"></a>Требования  
  **Заголовок:** module.h  
   
  **Пространство имен:** Microsoft::WRL  
   
-## См. также  
+## <a name="see-also"></a>См. также  
  [Пространство имен Microsoft::WRL](../windows/microsoft-wrl-namespace.md)

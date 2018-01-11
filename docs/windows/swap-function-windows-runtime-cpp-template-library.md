@@ -1,31 +1,32 @@
 ---
-title: "Функция Swap (библиотека шаблонов C++ среды выполнения Windows) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "internal/Microsoft::WRL::Details::Swap"
-dev_langs: 
-  - "C++"
+title: "Функция (библиотека шаблонов C++ среды выполнения Windows) Swap | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: internal/Microsoft::WRL::Details::Swap
+dev_langs: C++
 ms.assetid: ed134a08-ceb7-4279-aa02-a183c3a426ea
-caps.latest.revision: 5
-caps.handback.revision: 5
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "5"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: 3e3278b21d57de0aa23e8b371ae286df4f64327b
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 12/21/2017
 ---
-# Функция Swap (библиотека шаблонов C++ среды выполнения Windows)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Предназначено для поддержки инфраструктуры WRL, а не для непосредственного использования в коде.  
+# <a name="swap-function-windows-runtime-c-template-library"></a>Функция Swap (библиотека шаблонов C++ среды выполнения Windows)
+Поддерживает инфраструктуру WRL и не предназначен для использования непосредственно из программного кода.  
   
-## Синтаксис  
+## <a name="syntax"></a>Синтаксис  
   
 ```  
 WRL_NOTHROW inline void Swap(  
@@ -34,22 +35,22 @@ WRL_NOTHROW inline void Swap(
 );  
 ```  
   
-#### Параметры  
+#### <a name="parameters"></a>Параметры  
  `left`  
  Первый аргумент.  
   
  `right`  
  Второй аргумент.  
   
-## Возвращаемое значение  
+## <a name="return-value"></a>Возвращаемое значение  
   
-## Заметки  
- Обменивает значения двух заданных аргументов.  
+## <a name="remarks"></a>Примечания  
+ Меняет местами значения двух указанных аргументов.  
   
-## Требования  
+## <a name="requirements"></a>Требования  
  **Заголовок:** internal.h  
   
- **Пространство имен:** Microsoft::WRL::Details  
+ **Пространство имен:** Microsoft::wrl:: Details  
   
-## См. также  
+## <a name="see-also"></a>См. также  
  [Пространство имен Microsoft::WRL::Details](../windows/microsoft-wrl-details-namespace.md)

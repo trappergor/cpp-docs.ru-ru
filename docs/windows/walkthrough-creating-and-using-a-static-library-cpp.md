@@ -16,11 +16,14 @@ caps.latest.revision: "38"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 97de0b4dba9aa05e34c03077d22f42bb7a2266b5
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: 3af6bc41d353f82bb1f95c73f079e530da19dba0
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="walkthrough-creating-and-using-a-static-library-c"></a>Пошаговое руководство. Создание и использование статической библиотеки (C++)
 В этом пошаговом руководстве описывается создание статической библиотеки (LIB-файла) для использования с приложениями C++. Статические библиотеки являются хорошим способом повторного использования кода. Вместо того чтобы каждый раз реализовывать одни и те же подпрограммы для обеспечения той или иной функциональности в каждом создаваемом приложении, их можно создать единожды и затем вызывать из приложений. Код, подключенный из статической библиотеки, становится частью вашего приложения — для использования кода не нужно устанавливать еще какой-либо файл.  

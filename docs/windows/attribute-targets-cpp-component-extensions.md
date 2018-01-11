@@ -1,35 +1,36 @@
 ---
-title: "Целевые объекты атрибутов (расширения компонентов C++) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "настраиваемые атрибуты, целевые объекты"
+title: "Атрибут целевых объектов (расширения компонентов C++) | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+dev_langs: C++
+helpviewer_keywords: custom attributes, targets
 ms.assetid: b4e6e224-da77-4520-b6e6-b96846e0ebc1
-caps.latest.revision: 6
-caps.handback.revision: 6
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "6"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: bdf54706673a3679582b93448f420d4a63680dee
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 12/21/2017
 ---
-# Целевые объекты атрибутов (расширения компонентов C++)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="attribute-targets-c-component-extensions"></a>Целевые объекты атрибутов (расширения компонентов C++)
 Описатели использования атрибута позволяют определить его целевые объекты.  Каждый атрибут определяется для применения к определенным элементам языка. Например, атрибут может быть определен для применения только для классов и структур.  В приведенном ниже списке показаны возможные синтаксические элементы, для которых можно использовать настраиваемый атрибут. Можно использовать сочетания этих значений (с помощью операций логического ИЛИ).  
   
- Чтобы задать целевой объект атрибута, чтобы передать один или несколько <xref:System.AttributeTargets> перечислители для <xref:System.AttributeUsageAttribute> при определении атрибута.  
+ Чтобы задать целевой объект атрибута, следует при определении атрибута передать один или несколько перечислителей <xref:System.AttributeTargets> объекту <xref:System.AttributeUsageAttribute>.  
   
  Ниже приведен список допустимых целевых объектов атрибутов.  
   
--   `All` (применяется ко всем конструкциям)  
+-   `All`(применяется ко всем конструкциям)  
   
     ```  
   
@@ -41,7 +42,7 @@ manager: "ghogen"
   
     ```  
   
--   `Assembly` (применяется к сборке в целом)  
+-   `Assembly`(применяется к сборке в целом)  
   
     ```  
   
@@ -53,7 +54,7 @@ manager: "ghogen"
   
     ```  
   
--   `Module` (применяется к модулю в целом)  
+-   `Module`(применяется к модулю в целом)  
   
     ```  
   
@@ -289,7 +290,7 @@ manager: "ghogen"
   
 ## <a name="example"></a>Пример  
   
-### <a name="description"></a>Описание  
+### <a name="description"></a>Описание:  
  В этом примере показано задание нескольких целевых объектов.  
   
 ### <a name="code"></a>Код  
@@ -311,5 +312,5 @@ ref class MyClass {};
 value struct MyStruct {};  
 ```  
   
-## <a name="see-also"></a>См. также раздел  
+## <a name="see-also"></a>См. также  
  [Пользовательские атрибуты](../windows/user-defined-attributes-cpp-component-extensions.md)

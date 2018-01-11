@@ -45,11 +45,12 @@ caps.latest.revision: "20"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: f298085fab156e8aecd0931dc72e358409a979d7
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 32e63292ffcb02fa41ea5b8d9e95f7b4cd3f776b
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="allocator-class"></a>Класс allocator
 Класс шаблона описывает объект, который управляет выделением и освобождением памяти для массивов объектов типа **Type**. Объект класса **allocator** является объектом распределителя по умолчанию, заданным в конструкторах для нескольких классов шаблонов контейнеров в стандартной библиотеке C++.  
@@ -86,7 +87,7 @@ class allocator
   
  **C++11 and later:** чтобы включить операции перемещения в распределитель, используйте минимальный интерфейс распределителя и реализуйте конструктор копирования, операторы == и !=, функции allocate и deallocate. Дополнительные сведения и пример см. в статье [Распределители](../standard-library/allocators.md).  
   
-## <a name="members"></a>Члены  
+## <a name="members"></a>Участники  
   
 ### <a name="constructors"></a>Конструкторы  
   
@@ -94,7 +95,7 @@ class allocator
 |-|-|  
 |[allocator](#allocator)|Конструкторы, используемые для создания объектов `allocator`.|  
   
-### <a name="typedefs"></a>Typedefs  
+### <a name="typedefs"></a>Определения типов  
   
 |||  
 |-|-|  

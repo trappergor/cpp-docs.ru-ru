@@ -16,11 +16,12 @@ caps.latest.revision: "17"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 0ca5172372a9a80c419e9be54b0378f1254f4e6a
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: af30b38a89eb7e4b50c7d31be2d3ba6572843b1e
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="how-to-specify-specific-scheduler-policies"></a>Практическое руководство. Задание определенных политик планировщика
 Политики планировщика позволяют управлять стратегией, которую планировщик применяет при управлении задачами. В этом разделе показано, как использовать политики планировщика для повышения приоритета потока задачи, которая выводит индикатор хода выполнения на консоль.  

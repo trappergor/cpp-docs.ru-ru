@@ -16,11 +16,14 @@ caps.latest.revision: "19"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 3fb87578a0046a70da9a68ab6a1a08b2d6a9f4d1
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: e988da5393e32871794a2a1e7565801b0b338c2d
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="string--c-component-extensions"></a>String (расширения компонентов C++)
 Компилятор Visual C++ поддерживает *строки*, которые являются объекты, представляющие текст как последовательность знаков. Visual C++ поддерживает строковые переменные с неявными значениями и литералы, значения которых — явные строки в кавычках.  

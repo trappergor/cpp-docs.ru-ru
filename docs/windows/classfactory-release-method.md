@@ -1,32 +1,33 @@
 ---
-title: "Метод ClassFactory::Release | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "module/Microsoft::WRL::ClassFactory::Release"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Release - метод"
+title: "Метод ClassFactory::Release | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: module/Microsoft::WRL::ClassFactory::Release
+dev_langs: C++
+helpviewer_keywords: Release method
 ms.assetid: 49da2002-f9d6-4d7f-8a65-48c20b1bf99f
-caps.latest.revision: 3
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 3
+caps.latest.revision: "3"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: b53ba7e09e372bb7639c70cc2ee56a0e6a489f4d
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 12/21/2017
 ---
-# Метод ClassFactory::Release
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Уменьшает значение счетчика ссылок для текущего объекта ClassFactory.  
+# <a name="classfactoryrelease-method"></a>Метод ClassFactory::Release
+Уменьшает счетчик ссылок для текущим объектом ClassFactory.  
   
-## Синтаксис  
+## <a name="syntax"></a>Синтаксис  
   
 ```  
 STDMETHOD_(  
@@ -35,13 +36,13 @@ STDMETHOD_(
 )();  
 ```  
   
-## Возвращаемое значение  
- В случае успеха возвращает значение S\_OK; в противном случае значение типа HRESULT, описывающее тип сбоя.  
+## <a name="return-value"></a>Возвращаемое значение  
+ Значение S_OK, если операция завершилась успешно; в противном случае — значение HRESULT, описывающее тип сбоя.  
   
-## Требования  
+## <a name="requirements"></a>Требования  
  **Заголовок:** module.h  
   
  **Пространство имен:** Microsoft::WRL  
   
-## См. также  
+## <a name="see-also"></a>См. также  
  [Класс ClassFactory](../windows/classfactory-class.md)

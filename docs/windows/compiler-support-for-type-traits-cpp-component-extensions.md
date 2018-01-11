@@ -1,94 +1,96 @@
 ---
-title: "Поддержка характеристик типов компилятором (расширения компонентов C++) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/16/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-f1_keywords: 
-  - "__is_simple_value_class"
-  - "__has_trivial_destructor"
-  - "__has_assign"
-  - "__is_union"
-  - "__is_class"
-  - "__is_abstract"
-  - "__has_trivial_assign"
-  - "__has_virtual_destructor"
-  - "__is_ref_array"
-  - "__is_base_of"
-  - "__has_copy"
-  - "__is_polymorphic"
-  - "__has_nothrow_constructor"
-  - "__is_ref_class"
-  - "__is_delegate"
-  - "__is_convertible_to"
-  - "__is_value_class"
-  - "__is_interface_class"
-  - "__has_nothrow_copy"
-  - "__is_sealed"
-  - "__has_trivial_constructor"
-  - "__has_trivial_copy"
-  - "__is_enum"
-  - "__has_nothrow_assign"
-  - "__has_finalizer"
-  - "__is_empty"
-  - "__is_pod"
-  - "__has_user_destructor"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "__is_class - ключевое слово [C++]"
-  - "__is_pod - ключевое слово [C++]"
-  - "__is_delegate - ключевое слово [C++]"
-  - "__is_value_class - ключевое слово [C++]"
-  - "__has_copy - ключевое слово [C++]"
-  - "__has_nothrow_copy - ключевое слово [C++]"
-  - "__is_interface_class - ключевое слово [C++]"
-  - "__is_sealed - ключевое слово [C++]"
-  - "__is_convertible_to - ключевое слово [C++]"
-  - "__is_ref_class - ключевое слово [C++]"
-  - "__has_trivial_copy - ключевое слово [C++]"
-  - "__has_user_destructor - ключевое слово [C++]"
-  - "__is_abstract - ключевое слово [C++]"
-  - "__is_empty - ключевое слово [C++]"
-  - "__has_trivial_assign - ключевое слово [C++]"
-  - "__has_nothrow_constructor - ключевое слово [C++]"
-  - "__is_ref_array - ключевое слово [C++]"
-  - "__is_base_of - ключевое слово [C++]"
-  - "__has_nothrow_assign - ключевое слово [C++]"
-  - "__has_virtual_destructor - ключевое слово [C++]"
-  - "__has_finalizer - ключевое слово [C++]"
-  - "__is_union - ключевое слово [C++]"
-  - "__has_assign - ключевое слово [C++]"
-  - "__has_trivial_destructor - ключевое слово [C++]"
-  - "__is_polymorphic - ключевое слово [C++]"
-  - "__is_enum - ключевое слово [C++]"
-  - "__is_simple_value_class - ключевое слово [C++]"
-  - "__has_trivial_constructor - ключевое слово [C++]"
+title: "Поддержка характеристик типов компилятором (расширения компонентов C++) компилятором | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+f1_keywords:
+- __is_simple_value_class
+- __has_trivial_destructor
+- __has_assign
+- __is_union
+- __is_class
+- __is_abstract
+- __has_trivial_assign
+- __has_virtual_destructor
+- __is_ref_array
+- __is_base_of
+- __has_copy
+- __is_polymorphic
+- __has_nothrow_constructor
+- __is_ref_class
+- __is_delegate
+- __is_convertible_to
+- __is_value_class
+- __is_interface_class
+- __has_nothrow_copy
+- __is_sealed
+- __has_trivial_constructor
+- __has_trivial_copy
+- __is_enum
+- __has_nothrow_assign
+- __has_finalizer
+- __is_empty
+- __is_pod
+- __has_user_destructor
+dev_langs: C++
+helpviewer_keywords:
+- __is_class keyword [C++]
+- __is_pod keyword [C++]
+- __is_delegate keyword [C++]
+- __is_value_class keyword [C++]
+- __has_copy keyword [C++]
+- __has_nothrow_copy keyword [C++]
+- __is_interface_class keyword [C++]
+- __is_sealed keyword [C++]
+- __is_convertible_to keyword [C++]
+- __is_ref_class keyword [C++]
+- __has_trivial_copy keyword [C++]
+- __has_user_destructor keyword [C++]
+- __is_abstract keyword [C++]
+- __is_empty keyword [C++]
+- __has_trivial_assign keyword [C++]
+- __has_nothrow_constructor keyword [C++]
+- __is_ref_array keyword [C++]
+- __is_base_of keyword [C++]
+- __has_nothrow_assign keyword [C++]
+- __has_virtual_destructor keyword [C++]
+- __has_finalizer keyword [C++]
+- __is_union keyword [C++]
+- __has_assign keyword [C++]
+- __has_trivial_destructor keyword [C++]
+- __is_polymorphic keyword [C++]
+- __is_enum keyword [C++]
+- __is_simple_value_class keyword [C++]
+- __has_trivial_constructor keyword [C++]
 ms.assetid: cd440630-0394-48c0-a16b-1580b6ef5844
-caps.latest.revision: 27
-caps.handback.revision: 27
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "27"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: c069645e91d9d895309f00c5f39ddda950084e07
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 12/21/2017
 ---
-# Поддержка характеристик типов компилятором (расширения компонентов C++)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Компилятор поддерживает *Введите признаков*, представляющие различные характеристики типа во время компиляции.  
+# <a name="compiler-support-for-type-traits-c-component-extensions"></a>Поддержка характеристик типов компилятором (расширения компонентов C++)
+Компилятор поддерживает *введите признаки*, представляющие различные характеристики типа во время компиляции.  
   
 ## <a name="all-runtimes"></a>Все среды выполнения  
- **Примечания**  
+ **Заметки**  
   
  Признаки типов особенно важны для программистов, создающих библиотеки.  
   
- Ниже перечислены признаки типов, поддерживаемые компилятором. Если условие, заданное по имени признака типа, не выполняется, все признаки типов возвращают значение `false`.  
+ Ниже перечислены признаки типов, поддерживаемых компилятором. Если условие, заданное по имени признака типа, не выполняется, все признаки типов возвращают значение `false`.  
   
- (В следующем списке, примеры кода представлены только в [!INCLUDE[cppcli](../build/reference/includes/cppcli_md.md)]. но соответствующий признак типа также поддерживается в [!INCLUDE[cppwrt](../build/reference/includes/cppwrt_md.md)], если не указано иное. Термин "тип платформы" относится к типам [!INCLUDE[wrt](../atl/reference/includes/wrt_md.md)] или типам среды CLR).  
+ (В следующем списке, примеры кода представлены только в C + +/ CLI. но соответствующий признак типа также поддерживается в [!INCLUDE[cppwrt](../build/reference/includes/cppwrt_md.md)], если не указано иное. Термин «тип платформы» ссылается типов среды выполнения Windows или типами среды CLR).  
   
 -   `__has_assign(` `type` `)`  
   
@@ -124,7 +126,7 @@ manager: "ghogen"
   
 -   `__has_finalizer(` `type` `)`  
   
-     (В [!INCLUDE[cppwrt](../build/reference/includes/cppwrt_md.md)] не поддерживается.) Возвращает значение true, если тип CLR содержит метод завершения. В разделе [деструкторы и методы завершения в Visual C++](../misc/destructors-and-finalizers-in-visual-cpp.md) Подробнее.  
+     (В [!INCLUDE[cppwrt](../build/reference/includes/cppwrt_md.md)] не поддерживается.) Возвращает значение true, если тип CLR содержит метод завершения. В разделе [деструкторы и методы завершения в разделе: определение и использование классов и структур (C + +/ CLI)](../dotnet/how-to-define-and-consume-classes-and-structs-cpp-cli.md#BKMK_Destructors_and_finalizers) для получения дополнительной информации.  
   
     ```  
   
@@ -325,7 +327,7 @@ manager: "ghogen"
   
      Возвращает значение true, если первый тип является базовым классом второго типа или оба типа одинаковы.  
   
-     Признак `__is_base_of` также работает с типами платформ. Например, будут возвращать значение true, если первый тип [класс интерфейса](../windows/interface-class-cpp-component-extensions.md) и второй тип реализует интерфейс.  
+     Признак `__is_base_of` также работает с типами платформ. Например, он возвращает значение true, если первый тип [класс интерфейса](../windows/interface-class-cpp-component-extensions.md) и второй тип реализует интерфейс.  
   
     ```  
   
@@ -382,7 +384,7 @@ manager: "ghogen"
   
 -   `__is_delegate(` `type` `)`  
   
-     Возвращает значение true, если `type` — делегат. Дополнительные сведения см. в разделе [делегат (расширения компонентов C++)](../windows/delegate-cpp-component-extensions.md).  
+     Возвращает значение true, если `type` — делегат. Дополнительные сведения см. в разделе [delegate (расширения компонентов C++)](../windows/delegate-cpp-component-extensions.md).  
   
     ```  
   
@@ -518,7 +520,7 @@ manager: "ghogen"
   
 -   `__is_sealed(` `type` `)`  
   
-     Возвращает значение true, если передается платформа или собственный тип, отмеченный как запечатанный. Дополнительные сведения см. в разделе [запечатанные](../windows/sealed-cpp-component-extensions.md).  
+     Возвращает значение true, если передается платформа или собственный тип, отмеченный как запечатанный. Дополнительные сведения см. в разделе [запечатанный](../windows/sealed-cpp-component-extensions.md).  
   
     ```  
   
@@ -582,16 +584,16 @@ manager: "ghogen"
   
     ```  
   
-## [!INCLUDE[wrt](../atl/reference/includes/wrt_md.md)]  
- **Примечания**  
+## <a name="windows-runtime"></a>Среда выполнения Windows  
+ **Заметки**  
   
-  `__has_finalizer(`*Тип*`)` Признак типа не поддерживается, поскольку эта платформа не поддерживает методы завершения.  
+ `__has_finalizer(` *Тип* `)` Признак типа не поддерживается, поскольку эта платформа не поддерживает методы завершения.  
   
 ### <a name="requirements"></a>Требования  
  Параметр компилятора: **/ZW**  
   
-## [!INCLUDE[clr_for_headings](../dotnet/includes/clr_for_headings_md.md)]  
- **Примечания**  
+## <a name="common-language-runtime"></a>Среда CLR 
+ **Заметки**  
   
  (Отсутствуют комментарии для данной возможности в рамках этой платформы).  
   
@@ -601,7 +603,7 @@ manager: "ghogen"
 ### <a name="examples"></a>Примеры  
  **Пример**  
   
- В следующем примере кода показано, как использовать шаблон класса для предоставления признака типа компилятора **/CLR** компиляции. Дополнительные сведения см. в разделе [среды выполнения Windows и управляемые шаблоны](../windows/windows-runtime-and-managed-templates-cpp-component-extensions.md).  
+ В следующем примере кода показано, как использование шаблона класса для предоставления признака типа компилятора **/CLR** компиляции. Дополнительные сведения см. в разделе [среды выполнения Windows и управляемые шаблоны](../windows/windows-runtime-and-managed-templates-cpp-component-extensions.md).  
   
 ```  
 // compiler_type_traits.cpp  
@@ -623,7 +625,7 @@ int main () {
 }  
 ```  
   
- **Выходные данные**  
+ **Вывод**  
   
 ```Output  
 R is a ref class  

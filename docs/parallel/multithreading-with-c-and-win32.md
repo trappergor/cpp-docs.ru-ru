@@ -21,11 +21,12 @@ caps.latest.revision: "8"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 0e2ce9377d0ea4b2bd7b04255eb1c8099341af39
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 30c7833a4df80669b6223f1fe6b1ccceed0257cc
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="multithreading-with-c-and-win32"></a>Реализация многопоточности на языке C с помощью функций Win32
 Microsoft Visual C++ поддерживает создание многопоточных приложений с Microsoft Windows: Windows XP, Windows 2000, Windows NT, Windows Me и Windows 98. Можно использовать более одного потока, если приложению приходится управлять несколькими действиями, например одновременных клавиатуры и мыши. Один поток может обрабатывать ввод с клавиатуры, а второй поток фильтрует действия мыши. Третий поток можно обновить экран, на основе данных из потоков с помощью мыши и клавиатуры. В то же время другие потоки доступ к файлам на диске или получить данные из COM-портом.  

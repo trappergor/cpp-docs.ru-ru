@@ -17,11 +17,12 @@ caps.latest.revision: "23"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: ed07a18729996097afd588bf084a18593a3946d8
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 14442f2de89c055b35614951a277366616e00250
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="ltstringgt"></a>&lt;string&gt;
 Определяет класс шаблонов контейнеров `basic_string` и некоторые вспомогательные шаблоны.  
@@ -41,7 +42,7 @@ ms.lasthandoff: 10/24/2017
   
 -   Объекты класса шаблонов типа `basic_string`, обрабатывающие все аргументы шаблонов, подобные `char`.  
   
-### <a name="typedefs"></a>Typedefs  
+### <a name="typedefs"></a>Определения типов  
   
 |||  
 |-|-|  
@@ -54,7 +55,7 @@ ms.lasthandoff: 10/24/2017
   
 |||  
 |-|-|  
-|[оператор+](../standard-library/string-operators.md#op_add)|Сцепляет два строковых объекта.|  
+|[operator+](../standard-library/string-operators.md#op_add)|Сцепляет два строковых объекта.|  
 |[оператор!=](../standard-library/string-operators.md#op_neq)|Проверяет, что строковый объект слева от оператора не равен строковому объекту справа от оператора. |  
 |[оператор==](../standard-library/string-operators.md#op_eq_eq)|Проверяет, равен ли строковый объект слева от оператора строковому объекту справа от оператора.|  
 |[оператор<](../standard-library/string-operators.md#op_lt)|Проверяет, что строковый объект слева от оператора меньше строкового объекта справа от оператора.|  

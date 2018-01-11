@@ -25,11 +25,12 @@ caps.latest.revision: "9"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 7f16b71d48bbd44a472c56aa1ad6aa1a1c510b1c
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 15f53db2d0ec6a57261e22c58abd3e5e8423b716
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="window-objects"></a>Объекты окон
 MFC предоставляет класс [CWnd](../mfc/reference/cwnd-class.md) для инкапсуляции `HWND` дескриптор окна. `CWnd` Является объектом окна C++, отличающийся от `HWND` , представляющий Windows, но содержащий его окно. Используйте `CWnd` для формирования собственных дочернее окно классы, или воспользуйтесь одним из многих классов MFC на основе `CWnd`. Класс `CWnd` является базовым классом для всех окон, включая окна фрейма, диалоговые окна, дочерних окон, элементов управления и панели элементов управления, таких как панели инструментов. Хорошо понимать [связь между объектом окна C++ и HWND](../mfc/relationship-between-a-cpp-window-object-and-an-hwnd.md) очень важно для эффективной программирование с использованием MFC.  

@@ -243,7 +243,6 @@
 ## [Макросы класса окна](window-class-macros.md)
 ## [Макросы сообщений Windows](windows-messages-macros.md)
 # [Глобальные переменные ATL](atl-global-variables.md)
-## [_pAtlModule](patlmodule.md)
 # [Мастеры и диалоговые окна ATL](atl-wizards-and-dialog-boxes.md)
 ## [Параметры приложений, мастер проектов ATL](application-settings-atl-project-wizard.md)
 ## [Мастер компонентов страницы активного сервера ATL, ASP](asp-atl-active-server-page-component-wizard.md)

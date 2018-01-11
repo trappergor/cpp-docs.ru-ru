@@ -1,43 +1,44 @@
 ---
-title: "fenv_access | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "vc-pragma.fenv_access"
-  - "fenv_access_CPP"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "fenv_access - прагма"
-  - "прагмы, fenv_access"
+title: "fenv_access | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- vc-pragma.fenv_access
+- fenv_access_CPP
+dev_langs: C++
+helpviewer_keywords:
+- pragmas, fenv_access
+- fenv_access pragma
 ms.assetid: 2ccea292-0ae4-42ce-9c67-cc189299857b
-caps.latest.revision: 12
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 10
+caps.latest.revision: "12"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 623c9cb9af1d7df137aa7ee92071e34ad99a6331
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 12/21/2017
 ---
-# fenv_access
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Отключает \(ON\) или включает \(OFF\) оптимизации, которые могут изменить проверки флагов и изменения режима.  
+# <a name="fenvaccess"></a>fenv_access
+Отключает (ON) или включает (OFF) оптимизации, которые могут изменить проверки флагов и изменения режима.  
   
-## Синтаксис  
+## <a name="syntax"></a>Синтаксис  
   
 ```  
 #pragma fenv_access [ON | OFF]  
 ```  
   
-## Заметки  
+## <a name="remarks"></a>Примечания  
  По умолчанию свойство `fenv_access` имеет значение OFF.  
   
- Дополнительные сведения о поведении чисел с плавающей запятой см. в разделе [\/fp \(Определение поведения с плавающей запятой\)](../build/reference/fp-specify-floating-point-behavior.md).  
+ Дополнительные сведения о работе с плавающей запятой см. в разделе [/FP (указать поведение с плавающей запятой)](../build/reference/fp-specify-floating-point-behavior.md).  
   
  Ключевое слово `fenv_access` действует на следующие операции:  
   
@@ -49,11 +50,11 @@ caps.handback.revision: 10
   
  Другие типы директив pragma для значений с плавающей запятой:  
   
--   [float\_control](../Topic/float_control.md)  
+-   [float_control](../preprocessor/float-control.md)  
   
--   [fp\_contract](../preprocessor/fp-contract.md)  
+-   [fp_contract](../preprocessor/fp-contract.md)  
   
-## Пример  
+## <a name="example"></a>Пример  
   
 ```  
 // pragma_directive_fenv_access_x86.cpp  
@@ -79,9 +80,12 @@ int main() {
 }  
 ```  
   
-  **Вывод \= 9.999999776482582e\-003**   
-## Пример  
- Следующий пример предназначен для компилятора, создающего выходные файлы для процессоров Itanium.  **\/fp:precise** сохраняет промежуточные результаты с расширенной точностью, при которой можно высчитывать значения больше FLT\_MAX \(3.402823466e\+38F\). В результате этого сумма будет иметь результат 1.0, как и при вычислении вручную.  **\/fp:strict** сохраняет промежуточные результаты с исходной точностью \(с плавающей запятой\), поэтому первое сложение дает результатом бесконечность, которое сохраняется на протяжении всего выражения.  
+```Output  
+out=9.999999776482582e-003  
+```  
+  
+## <a name="example"></a>Пример  
+ Следующий пример предназначен для компилятора, создающего выходные файлы для процессоров Itanium. **/ fp: точный** сохраняет промежуточные результаты с расширенной точностью, где значения больше, чем может быть вычислено FLT_MAX (3.402823466e + 38F) и в результате этого сумма будет иметь результат 1.0, как должно при вычислении вручную. **/ fp: strict** сохраняет промежуточные результаты с исходной точностью (с плавающей запятой), поэтому первое сложение дает результатом бесконечность, которое сохраняется на протяжении всего выражения.  
   
 ```  
 // pragma_directive_fenv_access_IPF.cpp  
@@ -104,8 +108,11 @@ int main() {
 }  
 ```  
   
-  **1.000000**   
-## Пример  
+```Output  
+1.000000  
+```  
+  
+## <a name="example"></a>Пример  
  Закомментируем строку `#pragma fenv_access (on)` в первом примере. Обратите внимание на то, что вывод будет отличаться, поскольку компилятор выполняет оценку выражений во время компиляции, при котором не используется режим управления.  
   
 ```  
@@ -129,6 +136,9 @@ int main() {
 }  
 ```  
   
-  **Вывод \= 1.000000000000000e\-002**   
-## См. также  
- [Директивы Pragma и ключевое слово \_\_Pragma](../preprocessor/pragma-directives-and-the-pragma-keyword.md)
+```Output  
+out=1.000000000000000e-002  
+```  
+  
+## <a name="see-also"></a>См. также  
+ [Директивы Pragma и ключевое слово __Pragma](../preprocessor/pragma-directives-and-the-pragma-keyword.md)
