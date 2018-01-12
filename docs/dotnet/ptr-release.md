@@ -1,45 +1,47 @@
 ---
-title: "ptr::Release | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "ptr.Release"
-  - "ptr::Release"
-  - "msclr.com.ptr.Release"
-  - "msclr::com::ptr::Release"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Release - метод"
+title: "PTR::Release | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords:
+- ptr.Release
+- ptr::Release
+- msclr.com.ptr.Release
+- msclr::com::ptr::Release
+dev_langs: C++
+helpviewer_keywords: Release method
 ms.assetid: 7855781e-e4f6-4ad5-86a5-a81e2c3d90db
-caps.latest.revision: 7
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: 3959ea6f1c48c22af15272a768cb73923911829a
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 12/21/2017
 ---
-# ptr::Release
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Все выпуски нет ссылки на COM\-объект.  
+# <a name="ptrrelease"></a>ptr::Release
+Освобождает все собственные ссылки на COM-объекта.  
   
-## Синтаксис  
+## <a name="syntax"></a>Синтаксис  
   
 ```  
 void Release();  
 ```  
   
-## Заметки  
- Это всеми выпусками вызов функции, ссылки на COM\-объект и задает внутренний дескриптор com\-объекта в `nullptr`.  Если других ссылки на COM\-объект не существует, он будет уничтожается.  
+## <a name="remarks"></a>Примечания  
+ Вызов этой функции освобождает все принадлежащие ссылок на COM-объект и задает внутренний дескриптор COM-объект `nullptr`.  Если не существует других ссылок на COM-объекта, он будет уничтожен.  
   
-## Пример  
- В этом примере реализуется класс CLR, который использует `com::ptr` для создания его объект `IXMLDOMDocument` закрытого члена.  Функция\-член `ReplaceDocument` использует `Release`, чтобы освобождать любой предыдущий объект документа перед вложить новый документ.  
+## <a name="example"></a>Пример  
+ В этом примере реализуется класс CLR, который использует `com::ptr` программы-оболочки для своего закрытого члена `IXMLDOMDocument` объекта.  `ReplaceDocument` Функция-член использует `Release` для освобождения объекта любого предыдущего документа до подключения нового документа.  
   
 ```  
 // comptr_release.cpp  
@@ -113,11 +115,11 @@ int main() {
 }  
 ```  
   
-## Требования  
- **Файл заголовка**\<msclr\\com\\ptr.h\>  
+## <a name="requirements"></a>Требования  
+ **Файл заголовка** \<msclr\com\ptr.h >  
   
  **Пространство имен** msclr::com  
   
-## См. также  
- [Члены ptr](../dotnet/ptr-members.md)   
- [ptr::Detach](../Topic/ptr::Detach.md)
+## <a name="see-also"></a>См. также  
+ [Члены PTR](../dotnet/ptr-members.md)   
+ [ptr::Detach](../dotnet/ptr-detach.md)

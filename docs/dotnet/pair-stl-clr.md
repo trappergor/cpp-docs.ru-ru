@@ -15,11 +15,14 @@ caps.latest.revision: "5"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: ca6ee4a44ea9e126be16b785b9ae52c7a852bc5e
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: a8c4ae8ee9fbcfddd6009d4e91134d59a9a02cc9
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="pair-stlclr"></a>pair (STL/CLR)
 Класс шаблона описывает объект, который создает оболочку для пары значений.  
@@ -39,24 +42,24 @@ template<typename Value1,
  Value2  
  Тип упакованного значение секунд.  
   
-## <a name="members"></a>Члены  
+## <a name="members"></a>Участники  
   
-|Определение типа|Описание|  
+|Определение типа|Описание:|  
 |---------------------|-----------------|  
 |[pair::first_type (STL/CLR)](../dotnet/pair-first-type-stl-clr.md)|Тип упакованного значения первой.|  
 |[pair::second_type (STL/CLR)](../dotnet/pair-second-type-stl-clr.md)|Тип упакованного значение второго.|  
   
-|Объект члена|Описание|  
+|Объект члена|Описание:|  
 |-------------------|-----------------|  
 |[pair::first (STL/CLR)](../dotnet/pair-first-stl-clr.md)|Первый сохраненное значение.|  
 |[pair::second (STL/CLR)](../dotnet/pair-second-stl-clr.md)|Второй сохраненное значение.|  
   
-|Функция-член|Описание|  
+|Функция-член|Описание:|  
 |---------------------|-----------------|  
 |[pair::pair (STL/CLR)](../dotnet/pair-pair-stl-clr.md)|Создает объект пары.|  
 |[pair::swap (STL/CLR)](../dotnet/pair-swap-stl-clr.md)|Меняет местами содержимое двух пар.|  
   
-|Оператор|Описание|  
+|Оператор|Описание:|  
 |--------------|-----------------|  
 |[pair::operator= (STL/CLR)](../dotnet/pair-operator-assign-stl-clr.md)|Заменяет хранимых пара значений.|  
   

@@ -1,41 +1,42 @@
 ---
-title: "queue::back_item (STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::queue::back_item"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "back_item - член [STL/CLR]"
+title: "Queue::back_item (STL/CLR) | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::queue::back_item
+dev_langs: C++
+helpviewer_keywords: back_item member [STL/CLR]
 ms.assetid: 721e44e1-eb46-41bf-8b3c-0fcbc02fb155
-caps.latest.revision: 15
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 13
+caps.latest.revision: "15"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: fb3776b091d31cfc0ed6cba9c148494db95c9d8c
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 12/21/2017
 ---
-# queue::back_item (STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Получает последний элемент.  
+# <a name="queuebackitem-stlclr"></a>queue::back_item (STL/CLR)
+Обращается к последнему элементу.  
   
-## Синтаксис  
+## <a name="syntax"></a>Синтаксис  
   
 ```  
 property value_type back_item;  
 ```  
   
-## Заметки  
- Свойство получения последнего элемента контролируемой последовательности, которая должна быть непустой.  Он используется для чтения и записи последнего элемента, если известно, что он существует.  
+## <a name="remarks"></a>Примечания  
+ Свойство обращается к последний элемент управляемой последовательности, который должен быть пустым. Используется для чтения или записи последнего элемента, если известно, что он существует.  
   
-## Пример  
+## <a name="example"></a>Пример  
   
 ```  
 // cliext_queue_back_item.cpp   
@@ -68,16 +69,19 @@ int main()
   
 ```  
   
-  **a b c**  
-**back\_item \= C**  
- **B x**   
-## Требования  
- **Заголовок:**\<cliext\/queue\>  
+```Output  
+ a b c  
+back_item = c  
+ a b x  
+```  
+  
+## <a name="requirements"></a>Требования  
+ **Заголовок:** \<cliext/очереди >  
   
  **Пространство имен:** cliext  
   
-## См. также  
- [queue](../Topic/queue%20\(STL-CLR\).md)   
- [queue::back](../dotnet/queue-back-stl-clr.md)   
- [queue::front](../Topic/queue::front%20\(STL-CLR\).md)   
- [queue::front\_item](../dotnet/queue-front-item-stl-clr.md)
+## <a name="see-also"></a>См. также  
+ [очереди (STL/CLR)](../dotnet/queue-stl-clr.md)   
+ [Queue::Back (STL/CLR)](../dotnet/queue-back-stl-clr.md)   
+ [Queue::Front (STL/CLR)](../dotnet/queue-front-stl-clr.md)   
+ [queue::front_item (STL/CLR)](../dotnet/queue-front-item-stl-clr.md)

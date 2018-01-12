@@ -1,32 +1,34 @@
 ---
-title: "Практическое руководство. Определение и установка глобального обработчика исключений | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "обработчики, общие"
+title: "Как: определение и Установка глобального обработчика исключений | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords: handlers, global
 ms.assetid: dd88a812-3bc7-4ce8-8283-4b674c246534
-caps.latest.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 9
+caps.latest.revision: "9"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: f1d9b1125fc54ecbd75fc49b36498a99f5e86f28
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 12/21/2017
 ---
-# Практическое руководство. Определение и установка глобального обработчика исключений
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-В следующем примере кода показано, как необработанные исключения можно заключить.  Пример формы, которая содержит кнопку, отжиманный выполняет пустую ссылку, вызывает исключение делегатом.  Эта функция представляет ultimate сбой кода.  Результирующее исключение обработано на уровне приложения обработчиком исключений задать основной функцией.  
+# <a name="how-to-define-and-install-a-global-exception-handler"></a>Практическое руководство. Определение и установка глобального обработчика исключений
+В следующем примере кода показано, как необработанные исключения могут быть захвачены. Пример формы содержит кнопку, при нажатии выполняет пустой ссылкой, что приводит к созданию исключения. Эта функция представляет типичный код сбоя. Результирующее исключение перехватывается обработчиком исключений уровня приложения, установленные в функцию main.  
   
- Это достигается путем связывания делегата для события <xref:System.Windows.Forms.Application.ThreadException>.  В этом случае следующие исключения затем передаются методу `App::OnUnhandled`.  
+ Это достигается путем привязки делегата к <xref:System.Windows.Forms.Application.ThreadException> событий. В этом случае исключений отправляются на `App::OnUnhandled` метод.  
   
-## Пример  
+## <a name="example"></a>Пример  
   
 ```  
 // global_exception_handler.cpp  
@@ -80,5 +82,5 @@ int main()
 }  
 ```  
   
-## См. также  
+## <a name="see-also"></a>См. также  
  [Обработка исключений](../windows/exception-handling-cpp-component-extensions.md)

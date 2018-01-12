@@ -16,11 +16,14 @@ caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: b47e59e5b0c14bc0014140da67d226d62fad02ba
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: 84505edf0877a5ae20d28906dde7f4c709574034
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="how-to-expose-an-stlclr-container-from-an-assembly"></a>Практическое руководство. Предоставление контейнера STL/CLR из сборки
 Контейнеры STL/CLR, такие как `list` и `map` реализованы как классы ссылки шаблонов. Поскольку C++ шаблонов создаются во время компиляции, два шаблона класса, которые точно такой же сигнатурой, но находятся в разных сборках, это разные типы. Это означает, что классы шаблонов не может использоваться за пределами сборки.  
@@ -54,7 +57,7 @@ ms.lasthandoff: 10/24/2017
   
 ## <a name="example-1"></a>Пример 1  
   
-### <a name="description"></a>Описание  
+### <a name="description"></a>Описание:  
  В этом примере необходимо объявить класс C++, содержащей закрытые данные члена STL/CLR. Затем необходимо объявить открытые методы для предоставления доступа к коллекциям закрытый класс. Мы делаем его двумя различными способами, один для клиентов C++ и один для других клиентов .NET.  
   
 ### <a name="code"></a>Код  
@@ -62,7 +65,7 @@ ms.lasthandoff: 10/24/2017
 <CodeContentPlaceHolder>0</CodeContentPlaceHolder>  
 ## <a name="example-2"></a>Пример 2  
   
-### <a name="description"></a>Описание  
+### <a name="description"></a>Описание:  
  В этом примере мы реализовали класса, объявленного в примере 1. Чтобы клиенты на использование этой библиотеки классов, мы используем инструмента манифеста **mt.exe** встроено в файл манифеста в библиотеку DLL. Дополнительные сведения см. в разделе комментариев кода.  
   
  Дополнительные сведения о средстве манифеста и side-by-side сборок см. в разделе [Построение изолированных приложений C/C++ и сборок Side-by-side](../build/building-c-cpp-isolated-applications-and-side-by-side-assemblies.md).  
@@ -72,7 +75,7 @@ ms.lasthandoff: 10/24/2017
 <CodeContentPlaceHolder>1</CodeContentPlaceHolder>  
 ## <a name="example-3"></a>Пример 3  
   
-### <a name="description"></a>Описание  
+### <a name="description"></a>Описание:  
  В этом примере мы создадим C++ клиент, использующий библиотеку классов, созданных в примерах 1 и 2. Этот клиент использует `generic_container` определения типов контейнеров STL/CLR для выполнения итерации по контейнеров и для отображения их содержимого.  
   
 ### <a name="code"></a>Код  
@@ -83,7 +86,7 @@ ms.lasthandoff: 10/24/2017
 <CodeContentPlaceHolder>3</CodeContentPlaceHolder>  
 ## <a name="example-4"></a>Пример 4  
   
-### <a name="description"></a>Описание  
+### <a name="description"></a>Описание:  
  В этом примере мы создадим клиент C#, использующий библиотеку классов, созданных в примерах 1 и 2. Этот клиент использует <xref:System.Collections.Generic.ICollection%601> методы из контейнеров STL/CLR для выполнения итерации по контейнеров и для отображения их содержимого.  
   
 ### <a name="code"></a>Код  

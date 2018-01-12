@@ -1,58 +1,59 @@
 ---
-title: "list::erase (STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::list::erase"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "erase - член [STL/CLR]"
+title: "List::Erase (STL/CLR) | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::list::erase
+dev_langs: C++
+helpviewer_keywords: erase member [STL/CLR]
 ms.assetid: 78705058-1e83-441d-b267-d4fb56451c0b
-caps.latest.revision: 17
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 15
+caps.latest.revision: "17"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: 54595b61ddd21ccd81cf4f2846224789861cb480
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 12/21/2017
 ---
-# list::erase (STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Удаляет элементы в указанных положениях.  
+# <a name="listerase-stlclr"></a>list::erase (STL/CLR)
+Удаляет элементы в указанных позициях.  
   
-## Синтаксис  
+## <a name="syntax"></a>Синтаксис  
   
 ```  
 iterator erase(iterator where);  
 iterator erase(iterator first, iterator last);  
 ```  
   
-#### Параметры  
+#### <a name="parameters"></a>Параметры  
  first  
- Начало диапазона, чтобы привести к удалению.  
+ Начало диапазона для удаления.  
   
  last  
- Элемент диапазона, чтобы привести к удалению.  
+ Конец диапазона для удаления.  
   
- , где  
- Элемент, который необходимо привести к удалению.  
+ где  
+ Подлежащий удалению элемент.  
   
-## Заметки  
- Первый функцию\-член удаляет элемент контролируемой последовательности, указанное в `where`.  Он используется для удаления одного элемента.  
+## <a name="remarks"></a>Примечания  
+ Первая функция-член удаляет элемент управляемой последовательности, указанный параметром `where`. Используется для удаления одного элемента.  
   
- Второй функцию\-член удаляет элементы контролируемой последовательности в диапазоне `[``first``,` `last``)`.  Он используется для удаления ноль или более соседние элементы.  
+ Вторая функция-член удаляет элементы управляемой последовательности в диапазоне [`first`, `last`). Используется для удаления ноль или более последовательных элементов.  
   
- Оба функции\-члена возвращают итератор, обозначает первый элемент оставшиеся за всеми удаленными элементами или [list::end](../Topic/list::end%20\(STL-CLR\).md)`()`, если такой элемент не существует.  
+ Обе функции-члены возвращают итератор, указывающий на первый элемент, находящийся за всеми удаленными элементами, или [list::end (STL/CLR)](../dotnet/list-end-stl-clr.md) `()` Если такого элемента не существует.  
   
- Стирая элементы, число копий элемента линейное количества элементов между концом стирания и более точно концом последовательности. \(Стирая один или несколько элементов в любом конце последовательности, никакие копии элемента не возникает\).  
+ После удаления элементов, количество копий элемента линейно количество элементов между концом стирания и дальнюю конец последовательности. (После удаления одного или нескольких элементов на любом конце последовательности, выполнено ни одной копии элемента.)  
   
-## Пример  
+## <a name="example"></a>Пример  
   
 ```  
 // cliext_list_erase.cpp   
@@ -92,16 +93,19 @@ int main()
   
 ```  
   
-  **a b c**  
-**erase\(begin\(\)\) \= B**  
- **B C, d, e**  
-**erase\(begin\(\), end\(\)\-1\) \= e**  
-**size\(\) \= 1**   
-## Требования  
- **Заголовок:**\<cliext\/list\>  
+```Output  
+ a b c  
+erase(begin()) = b  
+ b c d e  
+erase(begin(), end()-1) = e  
+size() = 1  
+```  
+  
+## <a name="requirements"></a>Требования  
+ **Заголовок:** \<cliext/list >  
   
  **Пространство имен:** cliext  
   
-## См. также  
- [list](../dotnet/list-stl-clr.md)   
- [list::clear](../dotnet/list-clear-stl-clr.md)
+## <a name="see-also"></a>См. также  
+ [список (STL/CLR)](../dotnet/list-stl-clr.md)   
+ [list::clear (STL/CLR)](../dotnet/list-clear-stl-clr.md)

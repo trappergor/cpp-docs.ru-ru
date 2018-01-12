@@ -1,45 +1,26 @@
 ---
-title: "C3234 Ошибка компилятора | Документы Microsoft"
+title: "Ошибка компилятора C3234 | Документы Microsoft"
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-tools
+ms.technology: cpp-tools
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- C3234
-dev_langs:
-- C++
-helpviewer_keywords:
-- C3234
+f1_keywords: C3234
+dev_langs: C++
+helpviewer_keywords: C3234
 ms.assetid: ebefc15a-e40d-424b-a3dd-d7e185d0ed7b
-caps.latest.revision: 12
+caps.latest.revision: "12"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
-ms.openlocfilehash: acba87fff71431ed69b4d6c7af33842545be6150
-ms.contentlocale: ru-ru
-ms.lasthandoff: 02/24/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: c9f1002b727053d4477095f546b36b159ee05fca
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="compiler-error-c3234"></a>Ошибка компилятора C3234
 универсальный класс нельзя вывести из параметра универсального типа  

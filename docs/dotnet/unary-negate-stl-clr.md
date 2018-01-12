@@ -1,32 +1,33 @@
 ---
-title: "unary_negate (STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::unary_negate"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "unary_negate - функция [STL/CLR]"
+title: "unary_negate (STL/CLR) | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::unary_negate
+dev_langs: C++
+helpviewer_keywords: unary_negate function [STL/CLR]
 ms.assetid: 83bbdd86-199c-4451-9f70-72f9ade2264a
-caps.latest.revision: 17
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 15
+caps.latest.revision: "17"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: 60e7a38ede07a3cf3b1c21b1c5fe26e9f588f2f1
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 12/21/2017
 ---
-# unary_negate (STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Описание класса шаблона функтором, при вызове возвращает логическое НЕ его, хранящихся функтором от аргумента.  Он используется определяется объект функции с точки зрения его, хранящихся функтором.  
+# <a name="unarynegate-stlclr"></a>unary_negate (STL/CLR)
+Класс шаблона описывает функтор, при вызове возвращает логический, ОТЛИЧНОГО от его хранимых функтор один аргумент. Она используется укажите объект функции, с точки зрения его хранимых функтор.  
   
-## Синтаксис  
+## <a name="syntax"></a>Синтаксис  
   
 ```  
 template<typename Fun>  
@@ -48,33 +49,33 @@ public:
     };  
 ```  
   
-#### Параметры  
- Функции  
- Тип, хранящихся функтором.  
+#### <a name="parameters"></a>Параметры  
+ Fun  
+ Тип хранимой функтора.  
   
-## Функции\-члены  
+## <a name="member-functions"></a>Функции-члены  
   
-|Определение типа|Описание|  
-|----------------------|--------------|  
-|argument\_type|Тип аргумента функтором.|  
-|delegate\_type|Тип универсального метод\-делегата.|  
-|result\_type|Тип результата функтором.|  
+|Определение типа|Описание:|  
+|---------------------|-----------------|  
+|argument_type|Тип аргумента функтор.|  
+|delegate_type|Тип универсального метода-делегата.|  
+|result_type|Тип результата функтор.|  
   
-|Член|Описание|  
-|----------|--------------|  
-|unary\_negate|Построение функтором.|  
+|Член|Описание:|  
+|------------|-----------------|  
+|unary_negate|Создает функтор.|  
   
-|Оператор|Описание|  
-|--------------|--------------|  
-|operator\(\)|Вычисляет нужную функцию.|  
-|delegate\_type^|Возвращает функтором делегату.|  
+|Оператор|Описание:|  
+|--------------|-----------------|  
+|operator()|Вычисляет нужной функции.|  
+|delegate_type ^|Приводит функтора к делегату.|  
   
-## Заметки  
- Описание класса шаблона функтором от аргумента, хранящий другое функтором от аргумента.  Он определяет оператор `operator()` члена, что, когда объект вызывается как функция возвращается логическое НЕ, хранящихся функтором вызван с аргументом.  
+## <a name="remarks"></a>Примечания  
+ Класс шаблона описывает функтор один аргумент, который хранит другой функтор один аргумент. Он определяет оператор-член `operator()` , чтобы при вызове объекта как функцию, он возвращает логический, ОТЛИЧНОГО от хранимых функтор вызвано с аргументом.  
   
- Можно также передать объект в качестве аргумента функции, тип которого `delegate_type^` и он будет преобразован соответствующим образом.  
+ Объект также можно передать в качестве аргумента функции, тип которого является `delegate_type^` и он будет преобразован соответствующим образом.  
   
-## Пример  
+## <a name="example"></a>Пример  
   
 ```  
 // cliext_unary_negate.cpp   
@@ -116,13 +117,16 @@ int main()
   
 ```  
   
-  **4 0**  
- **1 0**  
- **1 0**   
-## Требования  
- **Заголовок:**\<cliext\/functional\>  
+```Output  
+4 0  
+1 0  
+1 0  
+```  
+  
+## <a name="requirements"></a>Требования  
+ **Заголовок:** \<cliext и функционального >  
   
  **Пространство имен:** cliext  
   
-## См. также  
- [not1](../dotnet/not1-stl-clr.md)
+## <a name="see-also"></a>См. также  
+ [not1 (STL/CLR)](../dotnet/not1-stl-clr.md)

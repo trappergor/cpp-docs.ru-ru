@@ -1,33 +1,36 @@
 ---
-title: "Запечатывание виртуальной функции | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "__sealed - ключевое слово"
-  - "производные классы, виртуальные функции"
-  - "sealed - ключевое слово [C++]"
-  - "виртуальные функции, запечатывание"
+title: "Запечатывание виртуальной функции | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- sealed keyword [C++]
+- derived classes, virtual functions
+- virtual functions, sealing
+- __sealed keyword
 ms.assetid: 0e9fae03-6425-4512-9a24-8ccb6dc8a0d4
-caps.latest.revision: 8
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: 48d52a2697289197555438847ba2fcb86aeb3235
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 12/21/2017
 ---
-# Запечатывание виртуальной функции
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-В [!INCLUDE[cpp_current_long](../dotnet/includes/cpp_current_long_md.md)] синтаксис запечатывания виртуальной функции отличается от управляемых расширений для C\+\+.  
+# <a name="sealing-a-virtual-function"></a>Запечатывание виртуальной функции
+Синтаксис Запечатывание виртуальной функции отличается от управляемых расширений для C++ к Visual C++.  
   
- В управляемых расширениях ключевое слово `__sealed` используется для изменения ссылочного типа, запрещая последующее наследование от него \(см. раздел [Объявление управляемых типов классов](../dotnet/declaration-of-a-managed-class-type.md)\), или для изменения виртуальной функции, запрещая последующее переопределение метода в производном классе.  Примеры.  
+ `__sealed` Ключевое слово используется в управляемых расширениях для изменения любого ссылочного типа, запрещая последующее наследование от него (в разделе [объявления типа управляемого класса](../dotnet/declaration-of-a-managed-class-type.md)), или изменить виртуальную функцию, запрет последующее переопределение метода в производном классе. Пример:  
   
 ```  
 __gc class base { public: virtual void f(); };  
@@ -37,9 +40,9 @@ public:
 };  
 ```  
   
- В этом примере метод `derived::f()` переопределяет метод экземпляра `base::f()` на основании точного соответствия прототипа функции.  Ключевое слово `__sealed` определяет, что в классах, наследуемых от производного класса, не допускается переопределение метода `derived::f()`.  
+ В этом примере `derived::f()` переопределяет `base::f()` по совпадению прототип функции. `__sealed` Ключевое слово указывает, что классах, наследуемых от производного класса не допускается переопределение `derived::f()`.  
   
- В новом синтаксисе ключевое слово `sealed` размещается после подписи, а не в любом месте до фактического прототипа функции, что было допустимо в старом синтаксисе.  Кроме того, при использовании ключевого слова `sealed` необходимо явно использовать ключевое слово `virtual`.  Учитывая это, правильное преобразование класса `derived` будет выглядеть следующим образом:  
+ В новом синтаксисе `sealed` размещается после подписи, а не находиться в любом месте до фактического прототипа функции, что было допустимо. Кроме того, использование `sealed` необходимо использовать явную `virtual` также ключевое слово. То есть правильное преобразование `derived`выше, выглядит следующим образом:  
   
 ```  
 ref class derived: public base {  
@@ -48,18 +51,18 @@ public:
 };  
 ```  
   
- Отсутствие ключевого слова `virtual` в этом экземпляре приведет к ошибке.  Чтобы определить чисто виртуальную функцию в новом синтаксисе, следует использовать контекстно\-зависимое ключевое слово `abstract` вместо ключевого слова `=0`.  В управляемых расширениях такой синтаксис не поддерживается.  Примеры.  
+ Отсутствие `virtual` ключевое слово в данном экземпляре приводит к ошибке. В новом синтаксисе контекстно-зависимое ключевое слово `abstract` может использоваться вместо `=0` для указания чистой виртуальной функции. Это не поддерживается в управляемых расширениях. Пример:  
   
 ```  
 __gc class base { public: virtual void f()=0; };  
 ```  
   
- Приведенный выше код можно изменить следующим образом:  
+ можно переписать следующим образом  
   
 ```  
 ref class base { public: virtual void f() abstract; };  
 ```  
   
-## См. также  
- [Объявления членов в пределах класса или интерфейса \(C\+\+\/CLI\)](../dotnet/member-declarations-within-a-class-or-interface-cpp-cli.md)   
- [запечатанные](../windows/sealed-cpp-component-extensions.md)
+## <a name="see-also"></a>См. также  
+ [Объявления членов в пределах класса или интерфейса (C + +/ CLI)](../dotnet/member-declarations-within-a-class-or-interface-cpp-cli.md)   
+ [sealed](../windows/sealed-cpp-component-extensions.md)

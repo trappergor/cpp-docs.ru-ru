@@ -1,30 +1,32 @@
 ---
-title: "Стандартные преобразования и неявная упаковка-преобразование | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "упаковка-преобразование, неявные"
+title: "Стандартные преобразования и неявная упаковка-преобразование | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords: boxing, implicit
 ms.assetid: 33f7fc7d-5674-44a2-a859-0e6a04fae519
-caps.latest.revision: 6
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 4
+caps.latest.revision: "6"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: ade776e2d1eab0fe244254a91a2ed3830ffbda6e
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 12/21/2017
 ---
-# Стандартные преобразования и неявная упаковка-преобразование
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Стандартное преобразование будет выбрано компилятором с преобразованием, для упаковка\-преобразования.  
+# <a name="standard-conversions-and-implicit-boxing"></a>Стандартные преобразования и неявная упаковка-преобразование
+Стандартное преобразование будет выбран компилятором через преобразование, которое требуется упаковка.  
   
-## Пример  
+## <a name="example"></a>Пример  
   
 ```  
 // clr_implicit_boxing_Std_conversion.cpp  
@@ -43,6 +45,9 @@ int main() {
 }  
 ```  
   
- **2**   
-## См. также  
- [Упаковка\-преобразование](../windows/boxing-cpp-component-extensions.md)
+```Output  
+2  
+```  
+  
+## <a name="see-also"></a>См. также  
+ [Упаковка-преобразование](../windows/boxing-cpp-component-extensions.md)

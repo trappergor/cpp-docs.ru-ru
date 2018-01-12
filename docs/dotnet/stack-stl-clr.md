@@ -18,11 +18,14 @@ caps.latest.revision: "14"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: dad00eecc05b8b3020dcf024b297b4b090317ee4
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: c7f6d9eac97fa1907a0901c725645f29dcdd5d9e
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="stack-stlclr"></a>stack (STL/CLR)
 Класс шаблона описывает объект, управляющий последовательностью элементов переменной длины с доступом к последней обслужен. Используйте адаптер контейнера `stack` управление базового контейнера, что стек принудительной передачи.  
@@ -48,9 +51,9 @@ template<typename Value,
  Контейнер  
  Тип базового контейнера.  
   
-## <a name="members"></a>Члены  
+## <a name="members"></a>Участники  
   
-|Определение типа|Описание|  
+|Определение типа|Описание:|  
 |---------------------|-----------------|  
 |[stack::const_reference (STL/CLR)](../dotnet/stack-const-reference-stl-clr.md)|Тип постоянной ссылки на элемент.|  
 |[stack::container_type (STL/CLR)](../dotnet/stack-container-type-stl-clr.md)|Тип базового контейнера.|  
@@ -61,7 +64,7 @@ template<typename Value,
 |[stack::size_type (STL/CLR)](../dotnet/stack-size-type-stl-clr.md)|Тип расстояния со знаком между двумя элементами.|  
 |[stack::value_type (STL/CLR)](../dotnet/stack-value-type-stl-clr.md)|Тип элемента.|  
   
-|Функция-член|Описание|  
+|Функция-член|Описание:|  
 |---------------------|-----------------|  
 |[stack::assign (STL/CLR)](../dotnet/stack-assign-stl-clr.md)|Заменяет все элементы.|  
 |[stack::empty (STL/CLR)](../dotnet/stack-empty-stl-clr.md)|Проверяет отсутствие элементов.|  
@@ -73,11 +76,11 @@ template<typename Value,
 |[stack::top (STL/CLR)](../dotnet/stack-top-stl-clr.md)|Обращается к последнему элементу.|  
 |[stack::to_array (STL/CLR)](../dotnet/stack-to-array-stl-clr.md)|Копирует управляемой последовательности в новый массив.|  
   
-|Свойство|Описание|  
+|Свойство.|Описание:|  
 |--------------|-----------------|  
 |[stack::top_item (STL/CLR)](../dotnet/stack-top-item-stl-clr.md)|Обращается к последнему элементу.|  
   
-|Оператор|Описание|  
+|Оператор|Описание:|  
 |--------------|-----------------|  
 |[stack::operator= (STL/CLR)](../dotnet/stack-operator-assign-stl-clr.md)|Заменяет управляемую последовательность.|  
 |[operator!= (stack) (STL/CLR)](../dotnet/operator-inequality-stack-stl-clr.md)|Определяет, если `stack` объект не равен другому `stack` объекта.|  
@@ -87,9 +90,9 @@ template<typename Value,
 |[operator> (stack) (STL/CLR)](../dotnet/operator-greater-than-stack-stl-clr.md)|Определяет, если `stack` объект больше другого `stack` объекта.|  
 |[operator>= (stack) (STL/CLR)](../dotnet/operator-greater-or-equal-stack-stl-clr.md)|Определяет, если `stack` объекта больше или равно другому `stack` объекта.|  
   
-## <a name="interfaces"></a>Интерфейсы  
+## <a name="interfaces"></a>интерфейсов,  
   
-|Интерфейс|Описание|  
+|Интерфейс|Описание:|  
 |---------------|-----------------|  
 |<xref:System.ICloneable>|Создание дубликата объекта.|  
 |IStack\<значение, контейнер >|Ведение адаптера универсального контейнера.|  

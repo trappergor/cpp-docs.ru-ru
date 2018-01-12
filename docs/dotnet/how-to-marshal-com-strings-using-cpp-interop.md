@@ -1,42 +1,44 @@
 ---
-title: "Практическое руководство. Маршалирование строк COM с помощью взаимодействия C++ | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "get-started-article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "взаимодействие C++, строки"
-  - "COM [C++], маршалинг строк"
-  - "маршалинг данных [C++], строки"
-  - "взаимодействие [C++], строки"
-  - "маршалинг [C++], строки"
+title: "Как: маршалирование строк COM с помощью взаимодействия C++ | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: get-started-article
+dev_langs: C++
+helpviewer_keywords:
+- interop [C++], strings
+- marshaling [C++], strings
+- C++ Interop, strings
+- data marshaling [C++], strings
+- COM [C++], marshaling strings
 ms.assetid: 06590759-bf99-4e34-a3a9-4527ea592cc2
-caps.latest.revision: 15
-caps.handback.revision: 15
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "15"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: 45a79f3aa78d229c71aba5a1d1144d05afe7bbd7
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 12/21/2017
 ---
-# Практическое руководство. Маршалирование строк COM с помощью взаимодействия C++
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-В этом разделе описывается порядок передачи строк BSTR \(основной формат строк в программировании с использованием модели COM\) между управляемыми и неуправляемыми функциями.  Дополнительные сведения о взаимодействии с другими строковыми типами см. в следующих разделах:  
+# <a name="how-to-marshal-com-strings-using-c-interop"></a>Практическое руководство. Маршалирование строк COM с помощью взаимодействия C++
+В этом разделе показано, как BSTR (основной формат строк в программировании COM) может быть передано из управляемой в неуправляемую функцию и наоборот. Дополнительные сведения о взаимодействии с другими типами строк, в следующих разделах:  
   
--   [Практическое руководство. Маршалирование строк Юникода с использованием взаимодействия C\+\+](../dotnet/how-to-marshal-unicode-strings-using-cpp-interop.md)  
+-   [Практическое руководство. Маршалинг строк Юникода с использованием взаимодействия C++](../dotnet/how-to-marshal-unicode-strings-using-cpp-interop.md)  
   
--   [Практическое руководство. Маршалирование строк ANSI с использованием взаимодействия C\+\+](../Topic/How%20to:%20Marshal%20ANSI%20Strings%20Using%20C++%20Interop.md)  
+-   [Практическое руководство. Маршалинг строк ANSI с использованием взаимодействия C++](../dotnet/how-to-marshal-ansi-strings-using-cpp-interop.md)  
   
- В следующем примере кода используются директивы \#pragma [managed, unmanaged](../preprocessor/managed-unmanaged.md), которые встраивают управляемые и неуправляемые функции в один файл. Эти функции также взаимодействуют и в случае их распределения в отдельные файлы.  Файлы, содержащие только неуправляемые функции, не требуется компилировать с использованием параметра [\/clr \(компиляция CLR\)](../build/reference/clr-common-language-runtime-compilation.md).  
+ В следующем примере кода используются [управляемые, неуправляемые](../preprocessor/managed-unmanaged.md) директивы #pragma управляемых и неуправляемых функций в одном файле, но эти функции взаимодействия так же, если они определены в отдельных файлах. Файлы, содержащие только неуправляемые функции, не обязательно должны быть скомпилированы с [/CLR (компиляция CLR)](../build/reference/clr-common-language-runtime-compilation.md).  
   
-## Пример  
- В следующем примере описывается порядок передачи строк BSTR \(формат строк в программировании с использованием модели COM\) из управляемой в неуправляемую функцию.  В вызывающей управляемой функции используется метод <xref:System.Runtime.InteropServices.Marshal.StringToBSTR%2A> для получения адреса представления содержимого строки .NET System.String в формате BSTR.  Этот указатель закрепляется с помощью функции [pin\_ptr \(C\+\+\/CLI\)](../Topic/pin_ptr%20\(C++-CLI\).md). Благодаря этому физический адрес указателя не изменяется в процессе сборки мусора при выполнении неуправляемой функции.  Сборщик мусора не освобождает память до тех пор, пока закрепленный с помощью функции [pin\_ptr \(C\+\+\/CLI\)](../Topic/pin_ptr%20\(C++-CLI\).md) указатель не выйдет за пределы области действия.  
+## <a name="example"></a>Пример  
+ В следующем примере показано, как можно передать BSTR (формат строки используются в программировании COM) из управляемой в неуправляемую функцию. В вызывающей управляемой функции используется <xref:System.Runtime.InteropServices.Marshal.StringToBSTR%2A> для получения адреса представления BSTR содержимое .NET System.String. Этот указатель закрепляется с помощью [pin_ptr (C + +/ CLI)](../windows/pin-ptr-cpp-cli.md) чтобы убедиться, что его физический адрес не меняется во время цикла сбора мусора во время выполнения неуправляемой функции. Сборщик мусора не освобождает с перемещением памяти до [pin_ptr (C + +/ CLI)](../windows/pin-ptr-cpp-cli.md) выходит за пределы области.  
   
 ```  
 // MarshalBSTR1.cpp  
@@ -71,8 +73,8 @@ int main() {
 }  
 ```  
   
-## Пример  
- В следующем примере описывается порядок передачи строк BSTR из неуправляемой в неуправляемую функцию.  В принимающей управляемой функции входная строка может использоваться непосредственно в формате BSTR или преобразовываться к типу <xref:System.String> с помощью метода <xref:System.Runtime.InteropServices.Marshal.PtrToStringBSTR%2A> для использования в других управляемых функциях.  Поскольку память, представляющая строку BSTR, выделяется в неуправляемой куче, в которой не выполняется сборка мусора, закрепление не требуется.  
+## <a name="example"></a>Пример  
+ В следующем примере показано, как можно передать BSTR из неуправляемой в неуправляемую функцию. Получение управляемой функции можно использовать строку в качестве BSTR или <xref:System.Runtime.InteropServices.Marshal.PtrToStringBSTR%2A> для преобразования его в <xref:System.String> для использования в других управляемых функций. Поскольку память, представляющая строку BSTR выделяется в неуправляемой куче нет закрепление не требуется, так как отсутствует коллекция сборки мусора в неуправляемой куче.  
   
 ```  
 // MarshalBSTR2.cpp  
@@ -109,5 +111,5 @@ int main() {
 }  
 ```  
   
-## См. также  
- [Использование взаимодействия языка C\+\+ \(неявный PInvoke\)](../dotnet/using-cpp-interop-implicit-pinvoke.md)
+## <a name="see-also"></a>См. также  
+ [Использование взаимодействия языка C++ (неявный PInvoke)](../dotnet/using-cpp-interop-implicit-pinvoke.md)

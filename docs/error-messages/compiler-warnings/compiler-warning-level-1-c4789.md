@@ -1,44 +1,43 @@
 ---
-title: "Предупреждение компилятора (уровень 1) C4789 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C4789"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C4789"
+title: "Предупреждение (уровень 1) C4789 компилятора | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords: C4789
+dev_langs: C++
+helpviewer_keywords: C4789
 ms.assetid: 5800c301-5afb-4af0-85c1-ceb54d775234
-caps.latest.revision: 18
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 18
+caps.latest.revision: "18"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 6fde48ccbcf3a4ddec6884ac9e0c259739954772
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 12/21/2017
 ---
-# Предупреждение компилятора (уровень 1) C4789
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="compiler-warning-level-1-c4789"></a>Предупреждение компилятора (уровень 1) C4789
 буфер identifier размером N байт будет переполнен; M байт будет записано начиная с позиции L  
   
- Предупреждает о переполнения буфера при использовании определенных функций среды CRT, передаче параметров и назначений таким образом, что размеры данных известны во время компиляции.  Это предупреждение предназначено для ситуаций, в которых типичные несоответствия размеров данных могут остаться незамеченными.  
+ Предупреждает о переполнения буфера при использовании определенных функций среды CRT, передаче параметров и назначений таким образом, что размеры данных известны во время компиляции. Это предупреждение предназначено для ситуаций, в которых типичные несоответствия размеров данных могут остаться незамеченными.  
   
- Предупреждение появляется, если данные, длина которых известна во время компиляции, копируются и помещаются в блок данных, размер которого, известный во время компиляции, слишком мал для этих данных.  Копирование необходимо произвести с помощью встроенной формы одной из следующих функций CRT:  
+ Предупреждение появляется, если данные, длина которых известна во время компиляции, копируются и помещаются в блок данных, размер которого, известный во время компиляции, слишком мал для этих данных. Копирование необходимо произвести с помощью встроенной формы одной из следующих функций CRT:  
   
 -   [strcpy](../../c-runtime-library/reference/strcpy-wcscpy-mbscpy.md)  
   
--   [memset.](../../c-runtime-library/reference/memset-wmemset.md)  
+-   [memset](../../c-runtime-library/reference/memset-wmemset.md)  
   
 -   [memcpy](../../c-runtime-library/reference/memcpy-wmemcpy.md), [wmemcpy](../../c-runtime-library/reference/memcpy-wmemcpy.md)  
   
  Предупреждение также появляется, если тип данных параметра не соответствует при использовании приведения к типу, а затем выполняется попытка присвоения копии из ссылки lvalue.  
   
- Visual C\+\+ может показывать данное предупреждение для ветви кода, которое никогда не выполняется.  Предупреждение можно временно отключить с помощью `#pragma`, как показано в следующем примере:  
+ Visual C++ может показывать данное предупреждение для ветви кода, которое никогда не выполняется. Предупреждение можно временно отключить с помощью `#pragma`, как показано в следующем примере:  
   
  `#pragma(push)`  
   
@@ -48,9 +47,9 @@ caps.handback.revision: 18
   
  `#pragma(pop)`  
   
- Это предотвращает формирование предупреждений для определенного блока кода в Visual C\+\+.  `#pragma(push)` сохраняет существующее состояние перед тем, как `#pragma warning(disable: 4789)` изменяет его.  `#pragma(pop)` восстанавливает отмененное состояние и устраняет последствия `#pragma warning(disable:4789)`.  Дополнительные сведения о директиве препроцессора C\+\+ `#pragma` см. в разделе [warning](../../preprocessor/warning.md) и [Директивы Pragma и ключевое слово \_\_Pragma](../../preprocessor/pragma-directives-and-the-pragma-keyword.md).  
+ Это предотвращает формирование предупреждений для определенного блока кода в Visual C++. `#pragma(push)` сохраняет существующее состояние перед тем, как `#pragma warning(disable: 4789)` изменяет его. `#pragma(pop)` восстанавливает отмененное состояние и устраняет последствия `#pragma warning(disable:4789)`. Дополнительные сведения о директиве препроцессора C++ `#pragma`, в разделе [предупреждение](../../preprocessor/warning.md) и [директивы Pragma и ключевое слово __Pragma](../../preprocessor/pragma-directives-and-the-pragma-keyword.md).  
   
-## Пример  
+## <a name="example"></a>Пример  
  Следующий пример приводит к возникновению ошибки C4789.  
   
 ```  
@@ -73,7 +72,7 @@ int main()
 }  
 ```  
   
-## Пример  
+## <a name="example"></a>Пример  
  Следующий пример приводит к возникновению ошибки C4789.  
   
 ```  

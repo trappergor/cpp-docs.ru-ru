@@ -1,41 +1,42 @@
 ---
-title: "pair::first_type (STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::pair::first_type"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "first_type - элемент [STL/CLR]"
+title: "Pair::first_type (STL/CLR) | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::pair::first_type
+dev_langs: C++
+helpviewer_keywords: first_type member [STL/CLR]
 ms.assetid: 8a7792ee-a2f6-4e17-9d0b-9c78007202d9
-caps.latest.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 7
+caps.latest.revision: "9"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: 4a60068fac82e4094a4aac0307bdc3dd102f63c4
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 12/21/2017
 ---
-# pair::first_type (STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Тип первого создаватього программу\-оболочку значение.  
+# <a name="pairfirsttype-stlclr"></a>pair::first_type (STL/CLR)
+Тип упакованного значения первой.  
   
-## Синтаксис  
+## <a name="syntax"></a>Синтаксис  
   
 ```  
 typedef Value1 first_type;  
 ```  
   
-## Заметки  
- Тип синоним для параметра `Value1` шаблона.  
+## <a name="remarks"></a>Примечания  
+ Этот тип является синонимом для параметра шаблона `Value1`.  
   
-## Пример  
+## <a name="example"></a>Пример  
   
 ```  
 // cliext_pair_first_type.cpp   
@@ -55,14 +56,17 @@ int main()
   
 ```  
   
-  **\[x, 3\]**   
-## Требования  
- **Заголовок:**\<cliext\/utility\>  
+```Output  
+[x, 3]  
+```  
+  
+## <a name="requirements"></a>Требования  
+ **Заголовок:** \<cliext/программа >  
   
  **Пространство имен:** cliext  
   
-## См. также  
- [pair](../dotnet/pair-stl-clr.md)   
- [pair::first](../dotnet/pair-first-stl-clr.md)   
- [pair::second](../dotnet/pair-second-stl-clr.md)   
- [pair::second\_type](../dotnet/pair-second-type-stl-clr.md)
+## <a name="see-also"></a>См. также  
+ [пара (STL/CLR)](../dotnet/pair-stl-clr.md)   
+ [Pair::First (STL/CLR)](../dotnet/pair-first-stl-clr.md)   
+ [Pair::Second (STL/CLR)](../dotnet/pair-second-stl-clr.md)   
+ [pair::second_type (STL/CLR)](../dotnet/pair-second-type-stl-clr.md)

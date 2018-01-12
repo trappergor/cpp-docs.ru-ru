@@ -1,34 +1,33 @@
 ---
-title: "Предупреждение компилятора (уровень 4) C4263 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C4263"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C4263"
+title: "Предупреждение (уровень 4) C4263 компилятора | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords: C4263
+dev_langs: C++
+helpviewer_keywords: C4263
 ms.assetid: daabb05d-ab56-460f-ab6c-c74d222ef649
-caps.latest.revision: 7
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 47f871f956ef07eebc2f528182dde58ba0fa3b2a
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 12/21/2017
 ---
-# Предупреждение компилятора (уровень 4) C4263
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-"функция" : функция\-член не переопределяет ни одной виртуальной функции\-члена базового класса  
+# <a name="compiler-warning-level-4-c4263"></a>Предупреждение компилятора (уровень 4) C4263
+«функция»: функция-член не переопределяет ни одной функции виртуальный член базового класса  
   
- Определение функции класса имеет то же имя, что и виртуальная функция в базовом классе, но другое число или тип аргументов.  Это успешно скрывает виртуальную функцию в базовом классе.  
+ Определение функции класса имеет то же имя, что и виртуальная функция базового класса, но же число и тип аргументов. Данный подход скрывает виртуальную функцию в базовом классе.  
   
- Данное предупреждение по умолчанию отключено.  Дополнительные сведения см. в разделе [Отключенные по умолчанию предупреждения компилятора](../Topic/Compiler%20Warnings%20That%20Are%20Off%20by%20Default.md).  
+ Это предупреждение отключено по умолчанию. Подробнее: [Выключенные по умолчанию предупреждения компилятора](../../preprocessor/compiler-warnings-that-are-off-by-default.md) .  
   
  Следующий пример приводит к возникновению ошибки C4263:  
   

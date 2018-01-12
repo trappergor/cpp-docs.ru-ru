@@ -1,34 +1,36 @@
 ---
-title: "marshal_as | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "marshal_as"
-  - "msclr.interop.marshal_as"
-  - "msclr::interop::marshal_as"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "marshal_as - шаблон [C++]"
+title: "marshal_as | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords:
+- marshal_as
+- msclr.interop.marshal_as
+- msclr::interop::marshal_as
+dev_langs: C++
+helpviewer_keywords: marshal_as template [C++]
 ms.assetid: 2ed717da-2b11-41e5-981d-47d251771989
-caps.latest.revision: 17
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 17
+caps.latest.revision: "17"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: 1a209b1ee657d6ae6773ee88c64225a7dc5b4f49
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 12/21/2017
 ---
-# marshal_as
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Этот метод преобразует данные размещения между управляемыми и сред.  
+# <a name="marshalas"></a>marshal_as
+Этот метод преобразует данные между машинным и управляемым средами.  
   
-## Синтаксис  
+## <a name="syntax"></a>Синтаксис  
   
 ```  
 To_Type marshal_as<To_Type>(  
@@ -36,22 +38,22 @@ To_Type marshal_as<To_Type>(
 );  
 ```  
   
-#### Параметры  
- \[входящий\] `input`  
- Значение, которое необходимо, чтобы маршалировать в `To_Type` переменная.  
+#### <a name="parameters"></a>Параметры  
+ [in] `input`  
+ Значение, которое требуется маршалировать `To_Type` переменной.  
   
-## Возвращаемое значение  
- Переменная типа `To_Type`, преобразованное значение `input`.  
+## <a name="return-value"></a>Возвращаемое значение  
+ Переменная типа `To_Type` , преобразованное значение `input`.  
   
-## Заметки  
- Этот метод упрощенный способ преобразования данных между размещения и управляемыми типами.  Чтобы определить, какие типы данных поддерживаются см. в разделе [Общие сведения о маршалировании в C\+\+](../dotnet/overview-of-marshaling-in-cpp.md).  Преобразование некоторых данных требуют контекста.  Можно преобразовать эти типы данных с помощью [Класс marshal\_context](../dotnet/marshal-context-class.md).  
+## <a name="remarks"></a>Примечания  
+ Этот метод является упрощенный способ преобразования данных между неуправляемыми и управляемыми типами. Чтобы определить, какие типы данных поддерживаются, см. [Обзор из маршалировании в C++](../dotnet/overview-of-marshaling-in-cpp.md). Некоторые преобразования данных требуется контекст. Эти типы данных можно преобразовать с помощью [класс marshal_context](../dotnet/marshal-context-class.md).  
   
- При попытке маршалинг парой типов данных, которые не поддерживаются [Предупреждение C4996](../error-messages/compiler-warnings/compiler-warning-level-3-c4996.md), `marshal_as` вызовет ошибку во время компиляции.  Чтение сообщения, заданное с ошибкой дополнительные сведения.  Ошибка `C4996` можно создать дополнительные не только выступанных сопоставления функций.  Примером этого пытается маршалинг парой типов данных, которые не поддерживаются.  
+ При попытке маршалинга пару типы данных, которые не поддерживаются, `marshal_as` выдаст ошибку [C4996](../error-messages/compiler-warnings/compiler-warning-level-3-c4996.md) во время компиляции. Прочитайте сообщение, поставляемых вместе с сведения об этой ошибке. `C4996` Ошибка может возникать для более просто нерекомендуемых функций. Одним из примеров пытается маршалировать пару типов данных, которые не поддерживаются.  
   
- Библиотека маршалинга состоит из нескольких файлов заголовков.  Любое преобразование требует только одного файла, но можно включить дополнительные файлы при необходимости для других преобразований.  Чтобы увидеть, какие преобразования, с которыми связаны файлы, найденные в таблице `Marshaling Overview`.  Независимо от того, что для выполнения преобразования, требования к пространству имен всегда применяется.  
+ Библиотека маршалинга состоит из нескольких файлов заголовков. Какие-либо преобразования требуется только один файл, но может включать дополнительные файлы, при необходимости для других преобразований. Какие преобразования связаны с какие файлы можно найти в таблице в `Marshaling Overview`. В любом случае какие преобразования необходимо сделать, пространство имен требование настроена на срабатывание всегда.  
   
-## Пример  
- Маршалы данного образца из `const char*` в тип переменной `System::String`.  
+## <a name="example"></a>Пример  
+ В этом примере маршалирует из `const char*` для `System::String` тип переменной.  
   
 ```  
 // marshal_as_test.cpp  
@@ -71,11 +73,11 @@ int main() {
 }  
 ```  
   
-## Требования  
- **Файл заголовка.** \<msclr\\marshal.h\>, \<msclr\\marshal\_windows.h\>или \<msclr\\marshal\_cppstd.h\>\<msclr\\marshal\_atl.h\>  
+## <a name="requirements"></a>Требования  
+ **Файл заголовка:** \<msclr\marshal.h >, \<msclr\marshal_windows.h >, \<msclr\marshal_cppstd.h >, или \<msclr\marshal_atl.h >  
   
  **Пространство имен:** msclr::interop  
   
-## См. также  
- [Общие сведения о маршалировании в C\+\+](../dotnet/overview-of-marshaling-in-cpp.md)   
- [Класс marshal\_context](../dotnet/marshal-context-class.md)
+## <a name="see-also"></a>См. также  
+ [Общие сведения о маршалировании в C++](../dotnet/overview-of-marshaling-in-cpp.md)   
+ [Класс marshal_context](../dotnet/marshal-context-class.md)
