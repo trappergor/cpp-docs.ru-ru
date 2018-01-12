@@ -14,11 +14,12 @@ caps.latest.revision: "8"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: ce56bc4839ff7f284a9c8c9bd96331742459fd00
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: ff208af8bb89dbcb7df00b37ce542a5adae5fa23
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="specify-release-configuration-settings-create-new-project-from-existing-code-files-wizard"></a>Задание конфигурационных параметров выпуска, мастер создания проекта из существующих файлов кода
 Эта страница мастера создания проекта из существующих файлов кода позволяет задать параметры проекта для конфигурации выпуска.  
@@ -43,7 +44,7 @@ ms.lasthandoff: 10/24/2017
  Указывает путь к каталогу выходных файлов для конфигурации отладки нового проекта. Этот параметр включен при **использовать внешние системы сборки** выбран параметр **Указание параметров проекта** страницы.  
   
  **Определения препроцессора (/ D)**  
- Определяет символы препроцессора для нового проекта. Для получения дополнительной информации см. раздел [Определения препроцессора (/D)](../build/reference/d-preprocessor-definitions.md).  
+ Определяет символы препроцессора для нового проекта. Для получения дополнительной информации см. [/D (Preprocessor Definitions)](../build/reference/d-preprocessor-definitions.md).  
   
  **Путь поиска включаемых файлов (/ I)**  
  Задает пути к каталогам, добавляемый в список каталогов, в которых компилятор будет выполнять поиск для разрешения ссылок на файлы, переданные в директивы препроцессора в новом проекте. Дополнительные сведения см. в разделе [/I (дополнительные каталоги включения)](../build/reference/i-additional-include-directories.md).  

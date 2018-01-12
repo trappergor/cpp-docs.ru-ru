@@ -1,31 +1,30 @@
 ---
-title: "Ошибка построения проекта PRJ0030 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "PRJ0030"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "PRJ0030"
+title: "Ошибка построения проекта PRJ0030 | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords: PRJ0030
+dev_langs: C++
+helpviewer_keywords: PRJ0030
 ms.assetid: c48b3727-e166-46e7-bcd7-3e5b2ac5c1d4
-caps.latest.revision: 7
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: b6fe537dd8e6705fd5e30929a2480eb1d9ef9119
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 12/21/2017
 ---
-# Ошибка построения проекта PRJ0030
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Ошибка раскрытия макроса.Рекурсия при вычислении макроса $\(макрос\) превысила 32 уровня.  
+# <a name="project-build-error-prj0030"></a>Ошибка построения проекта PRJ0030
+Ошибка расширения макроса. Оцените рекурсии превышает 32 уровней для $(макрос).  
   
- Причина этой ошибки — рекурсия в макросах.  Например, если задать для свойства **Промежуточный каталог** \(см. раздел [Страница свойств "Общие" \(Проект\)](../Topic/General%20Property%20Page%20\(Project\).md)\) значение $\(IntDir\), то будет возникать рекурсия.  
+ Эта ошибка вызвана рекурсии в макросе. Например, если задать **промежуточный каталог** свойство (в разделе [свойств «Общие» (проект)](../../ide/general-property-page-project.md)) значение $(IntDir), то будет возникать рекурсия.  
   
- Для устранения этой ошибки следует избегать определения макросов с помощью макросов, в свою очередь определяемых с их помощью.
+ Чтобы устранить эту ошибку, не следует определять макросы или свойства с помощью макросов, в котором они используются для определения.

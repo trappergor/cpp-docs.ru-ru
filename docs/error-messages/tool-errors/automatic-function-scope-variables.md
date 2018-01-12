@@ -1,31 +1,32 @@
 ---
-title: "Автоматические переменные (область видимости функции) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "автоматические переменные"
-  - "функции [C++], область действия"
-  - "область действия, объявленная внутри функций"
-  - "переменные, автоматическая"
+title: "Автоматические переменные (область видимости функции) | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+dev_langs: C++
+helpviewer_keywords:
+- automatic variables
+- variables, automatic
+- functions [C++], scope
+- scope, declared within functions
 ms.assetid: 6e1a14c2-1fb0-4937-8628-8d963cc35ed4
-caps.latest.revision: 8
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 73f883f1991df8f8240c7759b277c23258197da0
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 12/21/2017
 ---
-# Автоматические переменные (область видимости функции)
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Переменная, объявленная в функции, может использоваться только в пределах области видимости данной функции.  
+# <a name="automatic-function-scope-variables"></a>Автоматические переменные (область видимости функции)
+Переменная, объявленная внутри функции могут использоваться только в пределах этой функции.  
   
 ```  
 // LNK2019_AV.cpp  
@@ -42,7 +43,7 @@ int main() {
 }  
 ```  
   
- а затем  
+ И потом  
   
 ```  
 // LNK2019_AV_2.cpp  
@@ -62,5 +63,5 @@ void test(void) {
 }  
 ```  
   
-## См. также  
- [Ошибка средств компоновщика LNK2019](../Topic/Linker%20Tools%20Error%20LNK2019.md)
+## <a name="see-also"></a>См. также  
+ [Ошибка средств компоновщика LNK2019](../../error-messages/tool-errors/linker-tools-error-lnk2019.md)

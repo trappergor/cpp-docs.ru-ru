@@ -1,37 +1,36 @@
 ---
-title: "Предупреждение компилятора (уровень 4) C4487 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C4487"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C4487"
+title: "Предупреждение (уровень 4) C4487 компилятора | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords: C4487
+dev_langs: C++
+helpviewer_keywords: C4487
 ms.assetid: 796144cf-cd3c-4edc-b6a4-96192b7eb4f0
-caps.latest.revision: 4
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 4
+caps.latest.revision: "4"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 4c992385c9bd2a7f2c918956ba128ea45afa0752
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 12/21/2017
 ---
-# Предупреждение компилятора (уровень 4) C4487
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-"функция производного класса": соответствует унаследованному невиртуальному методу "функция базового класса", но не помечен явно как "new"  
+# <a name="compiler-warning-level-4-c4487"></a>Предупреждение компилятора (уровень 4) C4487
+«невиртуальному»: соответствует наследуемые невиртуальному методу «базового класса», но не помечен явно «new»  
   
- Сигнатура функции производного класса совпадает с сигнатурой невиртуальной функции базового класса.  Предупреждение C4487 свидетельствует о том, что функция производного класса не переопределяет функцию базового.  Чтобы устранить это предупреждение, явно определите функцию производного класса с помощью ключевого слова `new`.  
+ Функция в производном классе имеет ту же сигнатуру, как функция невиртуальный базовый класс. C4487 напоминает, что функция производного класса не переопределяет функцию базового класса. Явно Определите функцию производного класса, как `new` Чтобы устранить это предупреждение.  
   
- Для получения дополнительной информации см. [new \(новый слот в vtable\)](../../windows/new-new-slot-in-vtable-cpp-component-extensions.md).  
+ Дополнительные сведения см. в разделе [new (новый слот в vtable)](../../windows/new-new-slot-in-vtable-cpp-component-extensions.md).  
   
-## Пример  
- В следующем примере возникает предупреждение C4487.  
+## <a name="example"></a>Пример  
+ Следующий пример приводит к возникновению ошибки C4487.  
   
 ```  
 // C4487.cpp  

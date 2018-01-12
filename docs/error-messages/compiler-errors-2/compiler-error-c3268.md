@@ -1,50 +1,31 @@
 ---
-title: "C3268 Ошибка компилятора | Документы Microsoft"
+title: "Ошибка компилятора C3268 | Документы Microsoft"
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-tools
+ms.technology: cpp-tools
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- C3268
-dev_langs:
-- C++
-helpviewer_keywords:
-- C3268
+f1_keywords: C3268
+dev_langs: C++
+helpviewer_keywords: C3268
 ms.assetid: d74a630c-daea-4e29-9759-83efef7fb184
-caps.latest.revision: 5
+caps.latest.revision: "5"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: cc82b83860786ffc3f0aee73ede18ecadef16a7a
-ms.openlocfilehash: 13f7af86f70cb1d8539db593cbf0170a71f66498
-ms.contentlocale: ru-ru
-ms.lasthandoff: 02/24/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: c31177aa65d3a16b85e9089c6f740e2106c6fe6c
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="compiler-error-c3268"></a>Ошибка компилятора C3268
 "функция": универсальная функция или функция-член универсального класса не может иметь переменный список параметров  
   
- **/CLR: pure** и **/CLR: safe** параметры компилятора в Visual Studio 2015 являются устаревшими.  
+ Параметры компилятора **/CLR: pure** и **/CLR: safe** в Visual Studio 2015 не рекомендуется использовать.  
   
  В разделе [универсальных типов](../../windows/generics-cpp-component-extensions.md) Дополнительные сведения.  
   

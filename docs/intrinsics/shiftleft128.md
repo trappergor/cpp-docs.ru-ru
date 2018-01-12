@@ -1,64 +1,67 @@
 ---
-title: "__shiftleft128 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "__shiftleft128"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "__shiftleft128 intrinsic"
+title: "__shiftleft128 | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: __shiftleft128
+dev_langs: C++
+helpviewer_keywords: __shiftleft128 intrinsic
 ms.assetid: 557b846a-8fb0-469d-91ac-1b1fad80dc2a
-caps.latest.revision: 17
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 15
+caps.latest.revision: "17"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: e1cfb3ed19fce5c737e7b30139ccaf01739888fd
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 12/21/2017
 ---
-# __shiftleft128
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="shiftleft128"></a>__shiftleft128
 **Блок, относящийся только к системам Microsoft**  
   
- Сдвигает 128\-разрядную величину, представленную в виде двух величин по 64\-разряда `LowPart` и `HighPart`, влево на количество разрядов, указанное в `Shift` и возвращает старшие 64 разряда результата.  
+ Сдвигает 128-разрядную величину, представленную в виде двух величин по 64-разряда `LowPart` и `HighPart`, влево на количество разрядов, указанное в `Shift` и возвращает старшие 64 разряда результата.  
   
-## Синтаксис  
+## <a name="syntax"></a>Синтаксис  
   
 ```  
-unsigned __int64 __shiftleft128(     unsigned __int64 LowPart,     unsigned __int64 HighPart,     unsigned char Shift  );  
+unsigned __int64 __shiftleft128(   
+   unsigned __int64 LowPart,   
+   unsigned __int64 HighPart,   
+   unsigned char Shift   
+);  
 ```  
   
-#### Параметры  
- \[in\] `LowPart`  
- Младшие 64 разряда 128\-разрядной величины для сдвига.  
+#### <a name="parameters"></a>Параметры  
+ [in] `LowPart`  
+ Младшие 64 разряда 128-разрядной величины для сдвига.  
   
- \[in\] `HighPart`  
- Старшие 64 разряда 128\-разрядной величины для сдвига.  
+ [in] `HighPart`  
+ Старшие 64 разряда 128-разрядной величины для сдвига.  
   
- \[in\] `Shift`  
+ [in] `Shift`  
  Число разрядов для поворота.  
   
-## Возвращаемое значение  
+## <a name="return-value"></a>Возвращаемое значение  
  Старшие 64 разряда результата.  
   
-## Требования  
+## <a name="requirements"></a>Требования  
   
 |Встроенная функция|Архитектура|  
-|------------------------|-----------------|  
-|`__shiftleft128`|[!INCLUDE[vcprx64](../Token/vcprx64_md.md)]|  
+|---------------|------------------|  
+|`__shiftleft128`|[!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|  
   
- **Файл заголовка** \<intrin.h\>  
+ **Файл заголовка** \<intrin.h >  
   
-## Заметки  
- Это значение  всегда берется по модулю 64, поэтому, например, при вызове метода`__shiftleft128(1, 0, 64)`, функция будет сдвигать влево  разряды `0` младшей части возвращать старшую часть `0`, а не `1`, как в противном случае можно было ожидать.  
+## <a name="remarks"></a>Примечания  
+ Это значение `Shift` всегда берется по модулю 64, поэтому, например, при вызове метода`__shiftleft128(1, 0, 64)`, функция будет сдвигать влево  разряды `0` младшей части возвращать старшую часть `0`, а не `1`, как в противном случае можно было ожидать.  
   
-## Пример  
+## <a name="example"></a>Пример  
   
 ```  
 // shiftleft128.c  
@@ -91,9 +94,13 @@ int main()
 }  
 ```  
   
-  **0x100000000000000001 \<\< 1 \= 0x200000000000000002 0x100000000000000001 \>\> 1 \= 0x080000000000000000**   
-## Завершение блока, относящегося только к системам Майкрософт  
+```Output  
+0x100000000000000001 << 1 = 0x200000000000000002  
+0x100000000000000001 >> 1 = 0x080000000000000000  
+```  
   
-## См. также  
- [\_\_shiftright128](../Topic/__shiftright128.md)   
- [Встроенные объекты компилятора](../intrinsics/compiler-intrinsics.md)
+**Завершение блока, относящегося только к системам Майкрософт**  
+  
+## <a name="see-also"></a>См. также  
+ [__shiftright128](../intrinsics/shiftright128.md)   
+ [Встроенные инструкции компилятора](../intrinsics/compiler-intrinsics.md)

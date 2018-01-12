@@ -17,11 +17,12 @@ caps.latest.revision: "51"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 37f1eed2287c8fe655a124b1f76f48a203ab1607
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 48c1adadb674f8dac2c5e8d6422a6594cd4fa695
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="visual-c-tools-and-features-in-visual-studio-editions"></a>Инструменты Visual C++ и функций в выпусках Visual Studio
 В следующей таблице перечислены компоненты Visual C++, доступные в Visual Studio. Крестик в ячейке указывает, что компонент доступен. Пустая ячейка означает, что компонент недоступен. Примечания в скобках означают, что компонент доступен с ограничениями.  
@@ -30,7 +31,7 @@ ms.lasthandoff: 10/24/2017
   
 ||||||  
 |-|-|-|-|-|  
-|Платформа|Visual Studio Express для Windows 10|Visual Studio Express для Windows Desktop|Visual Studio Community и Professional|Visual Studio Enterprise|  
+|Platform|Visual Studio Express для Windows 10|Visual Studio Express для Windows Desktop|Visual Studio Community и Professional|Visual Studio Enterprise|  
 |Windows Desktop||X|X|X|  
 |Универсальная платформа Windows (телефоны, планшеты, ПК, Xbox, IoT и HoloLens)|X||X|X|  
 |Windows Store 8.1|||X|X|  
@@ -128,11 +129,11 @@ ms.lasthandoff: 10/24/2017
 |Конструктор и редактор HTML|X|X|X|X|  
 |XML-редактор|X|X|X|X|  
 |Редактор исходного кода|X|X|X|X|  
-|Функции повышения производительности: рефакторинг, IntelliSense, форматирование кода C++|X|X|X|X|  
+|Возможности повышения производительности: рефакторинг, IntelliSense, форматирование кода C++|X|X|X|X|  
 |Конструктор Windows Forms||X|X|X|  
 |Конструктор данных|||X|X|  
 |Собственный редактор ресурсов (RC-файлы)|||X|X|  
-|Редакторы ресурсов|X|X|X|X|  
+|редакторы ресурсов|X|X|X|X|  
 |Редактор моделей|X||X|X|  
 |Конструктор шейдеров|X||X|X|  
   
@@ -143,7 +144,7 @@ ms.lasthandoff: 10/24/2017
 |Конструктор данных|||X|X|X|  
 |Объекты данных|||X|X|X|  
 |Веб-службы|||X|X|X|  
-|обозреватель серверов|||X|X|X|  
+|обозревателя серверов|||X|X|X|  
   
 ## <a name="build-and-project-systems"></a>Системы сборки и проектов  
   

@@ -1,34 +1,33 @@
 ---
-title: "Предупреждение компилятора (уровень 1) C4715 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C4715"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C4715"
+title: "Предупреждение (уровень 1) C4715 компилятора | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords: C4715
+dev_langs: C++
+helpviewer_keywords: C4715
 ms.assetid: 1c819bf7-0d8b-4f5e-b338-9cc292870439
-caps.latest.revision: 7
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 2b060585cd3ba6b51c9c91d42e5f3fecaf74ae1b
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 12/21/2017
 ---
-# Предупреждение компилятора (уровень 1) C4715
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-"function": не все пути выполнения возвращают значение  
+# <a name="compiler-warning-level-1-c4715"></a>Предупреждение компилятора (уровень 1) C4715
+«функция»: не все пути возвращают значение  
   
- Заданная функция потенциально может не возвращать значение.  
+ Указанная функция не потенциально могут возвращать значение.  
   
-## Пример  
+## <a name="example"></a>Пример  
   
 ```  
 // C4715a.cpp  
@@ -40,7 +39,7 @@ int func1( int i )
 }  
 ```  
   
- Чтобы предотвратить появление этого предупреждения измените код таким образом, чтобы все пути назначали возвращаемое значение для функции:  
+ Чтобы устранить это предупреждение, измените код так, чтобы все пути назначали возвращаемое значение функции:  
   
 ```  
 // C4715b.cpp  
@@ -52,7 +51,7 @@ int func1( int i )
 }  
 ```  
   
- Вероятно, что код содержит вызов для возвращения не возвращаемой функции, указанный в следующем примере:  
+ Это возможно, что ваш код может содержать вызов функции, которая не возвращает, как показано в следующем примере:  
   
 ```  
 // C4715c.cpp  
@@ -71,4 +70,4 @@ int glue()
 }  
 ```  
   
- Этот код также создает предупреждение, поскольку компилятору не известно о том, что данная функция `fatal` никогда не возвращалась.  Для предотвращения создания этим кодом сообщения об ошибке, объявите функцию `fatal`, используя [\_\_declspec\(noreturn\)](../../cpp/noreturn.md).
+ Этот код также создает предупреждение, поскольку компилятор не знает, `fatal` никогда не возвращается. Для предотвращения этот код генерирует сообщение об ошибке, объявите `fatal` с помощью [__declspec(noreturn)](../../cpp/noreturn.md).

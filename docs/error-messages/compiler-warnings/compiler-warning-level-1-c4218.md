@@ -4,47 +4,28 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-tools
+ms.technology: cpp-tools
 ms.tgt_pltfrm: 
 ms.topic: error-reference
-f1_keywords:
-- C4218
-dev_langs:
-- C++
-helpviewer_keywords:
-- C4218
+f1_keywords: C4218
+dev_langs: C++
+helpviewer_keywords: C4218
 ms.assetid: d6c3cd90-4518-49e9-ae86-4ba9e2761d98
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
-ms.openlocfilehash: 6f657da21a7756973b9f9febe823003ebfd68fd1
-ms.contentlocale: ru-ru
-ms.lasthandoff: 02/24/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: 156a43f57f52f50f6542f3502658d5e0e16f1bd9
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="compiler-warning-level-1-c4218"></a>Предупреждение компилятора (уровень 4) C4218
-нестандартное расширение: необходимо указать по крайней мере класс хранения или тип  
+использовано нестандартное расширение: необходимо указать по крайней мере класс хранения или тип  
   
- При использовании расширений Microsoft по умолчанию (/Ze) можно объявить переменную, не указывая тип или класс хранения. Значение по умолчанию — `int`.  
+ С помощью расширения Microsoft по умолчанию (/Ze) можно объявить переменную без указания типа или хранилища класса. Значение по умолчанию — `int`.  
   
 ## <a name="example"></a>Пример  
   

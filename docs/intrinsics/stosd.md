@@ -1,69 +1,69 @@
 ---
-title: "__stosd | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "__stosd"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Инструкция stosd"
-  - "Инструкция rep stosd"
-  - "Встроенная функция __stosd"
+title: "__stosd | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: __stosd
+dev_langs: C++
+helpviewer_keywords:
+- stosd instruction
+- rep stosd instruction
+- __stosd intrinsic
 ms.assetid: 03104247-1cea-49f6-b6f8-287917bf5680
-caps.latest.revision: 15
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 13
+caps.latest.revision: "15"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 213a014df3336a8a42188dc45876228a533f4a76
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 12/21/2017
 ---
-# __stosd
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-**Только для систем Microsoft**  
+# <a name="stosd"></a>__stosd
+**Блок, относящийся только к системам Microsoft**  
   
- Формирует инструкцию строки хранилища \(`rep stosd`\).  
+ Создает инструкцию строка хранилища (`rep stosd`).  
   
-## Синтаксис  
+## <a name="syntax"></a>Синтаксис  
   
 ```  
-void __stosd(   
-   unsigned long* Dest,   
-   unsigned long Data,   
-   size_t Count   
+void __stosd(   
+   unsigned long* Dest,   
+   unsigned long Data,   
+   size_t Count   
 );  
 ```  
   
-#### Параметры  
- \[исходящий\] `Dest`  
- Назначение операции.  
+#### <a name="parameters"></a>Параметры  
+ [выходной] `Dest`  
+ Целевой для операции.  
   
- \[входящий\] `Data`  
- Сохраняемые данные.  
+ [in] `Data`  
+ Для хранения данных.  
   
- \[входящий\] `Count`  
- Длина блока doublewords, которые требуется записать.  
+ [in] `Count`  
+ Длина блока двойных слов для записи.  
   
-## Требования  
+## <a name="requirements"></a>Требования  
   
-|Встроенный объект|Архитектура|  
-|-----------------------|-----------------|  
-|`__stosd`|x86, [!INCLUDE[vcprx64](../Token/vcprx64_md.md)]|  
+|Встроенная функция|Архитектура|  
+|---------------|------------------|  
+|`__stosd`|x86, [!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|  
   
- **Файл заголовка** \<intrin.h\>  
+ **Файл заголовка** \<intrin.h >  
   
-## Заметки  
- В результате doubleword `Data` помещается в блок doublewords `Count` в области памяти указанному в `Dest`.  
+## <a name="remarks"></a>Примечания  
+ Результатом является то, что двойное `Data` записывается в блок `Count` двойных слов адресу памяти, на который указывает `Dest`.  
   
- Эта процедура доступна только в качестве внутреннего элемента.  
+ Эта процедура доступна только как встроенная функция.  
   
-## Пример  
+## <a name="example"></a>Пример  
   
 ```  
 // stosd.c  
@@ -88,8 +88,11 @@ printf_s( "%u %u %u %u",
 }  
 ```  
   
-  **0 99999 99999 0**   
-## ЭЛЕМЕНТ, относящийся Майкрософт  
+```Output  
+0 99999 99999 0  
+```  
   
-## См. также  
- [Встроенные объекты компилятора](../intrinsics/compiler-intrinsics.md)
+**Завершение блока, относящегося только к системам Майкрософт**  
+  
+## <a name="see-also"></a>См. также  
+ [Встроенные инструкции компилятора](../intrinsics/compiler-intrinsics.md)

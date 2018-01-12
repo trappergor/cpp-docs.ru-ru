@@ -1,7 +1,7 @@
 ---
 title: "Ошибки CVTRES CVT1100 – CVT4001 | Документы Microsoft"
 ms.custom: 
-ms.date: 11/04/2016
+ms.date: 11/17/2017
 ms.reviewer: 
 ms.suite: 
 ms.technology: cpp-tools
@@ -14,11 +14,15 @@ caps.latest.revision: "6"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 7333e4602419d9b8697d924139863dedf4f4fc85
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: c83bd98e881604c4256b24a4091a01452296457c
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cvtres-errors-cvt1100-through-cvt4001"></a>Ошибки CVTRES CVT1100-CVT4001
-Этот раздел представляет собой справочник по ошибкам, о которых сообщают средства построения. Чтобы получить справку по конкретному сообщению об ошибке, либо щелкнуть номер ошибки в окне вывода и нажать клавишу F1 либо ввести номер ошибки в **искать** в индексе.
+
+Этот раздел представляет собой справочник по ошибкам и предупреждения, создаваемые CVTRES инструмент сборки.
+
+[!INCLUDE[error-boilerplate](../../error-messages/includes/error-boilerplate.md)]

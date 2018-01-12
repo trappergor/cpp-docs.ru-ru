@@ -1,35 +1,34 @@
 ---
-title: "Предупреждение компилятора (уровень 4) C4703 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C4703"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C4703"
+title: "Предупреждение компилятора (уровень 4) C4703 | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords: C4703
+dev_langs: C++
+helpviewer_keywords: C4703
 ms.assetid: 5dad454e-69e3-4931-9168-050a861c05f8
-caps.latest.revision: 7
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: f8c2bacdb938cacc451011cffed2b41a1092dabe
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 12/21/2017
 ---
-# Предупреждение компилятора (уровень 4) C4703
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Потенциально неинициализированных переменных локального указателя «имя»  
+# <a name="compiler-warning-level-4-c4703"></a>Предупреждение компилятора (уровень 4) C4703
+Потенциально неинициализированная локальная переменная-указатель используется «имя»  
   
- Переменная указателя локального *name* может использоваться без необходимости присвоенным значением.  Это может привести к непредсказуемым результатом.  
+ Локальная переменная-указатель *имя* использован без назначения им значение. Это может привести к непредсказуемым результатам.  
   
-## Пример  
- Следующий код создает C4701 и C4703.  
+## <a name="example"></a>Пример  
+ Следующий код приводит к возникновению ошибки C4701 и C4703.  
   
 ```cpp  
 #include <malloc.h>  
@@ -51,8 +50,13 @@ void main()
 }  
 ```  
   
-  **C\-: \\src\\test.cpp \(10\). предупреждение C4701: потенциально использована неинициализированная локальная переменная используется «p»**  
- **C\-: \\src\\test.cpp \(10\). предупреждение C4703: потенциально неинициализированных переменных локального указателя «p»,** Чтобы исправить это предупреждение, используйте переменную, как показано в следующем примере:  
+```Output  
+c:\src\test.cpp(10) : warning C4701: potentially uninitialized local variable 'p' used  
+c:\src\test.cpp(10) : warning C4703: potentially uninitialized local pointer variable 'p' used  
+  
+```  
+  
+ Чтобы устранить это предупреждение, инициализируйте переменную, как показано в следующем примере:  
   
 ```cpp  
 #include <malloc.h>  
@@ -74,6 +78,6 @@ void main()
 }  
 ```  
   
-## См. также  
- [Предупреждения, \/sdl и использование неинициализированных переменная обнаружение](http://blogs.msdn.com/b/sdl/archive/2012/06/06/warnings-sdl-and-improving-uninitialized-variable-detection.aspx)   
- [Предупреждение компилятора \(уровень 4\) C4701](../../error-messages/compiler-warnings/compiler-warning-level-4-c4701.md)
+## <a name="see-also"></a>См. также  
+ [Предупреждение компилятора (уровень 4) C4701](../../error-messages/compiler-warnings/compiler-warning-level-4-c4701.md)   
+ [Предупреждения, / SDL и улучшение обнаружения неинициализированных переменных](http://blogs.msdn.com/b/sdl/archive/2012/06/06/warnings-sdl-and-improving-uninitialized-variable-detection.aspx)

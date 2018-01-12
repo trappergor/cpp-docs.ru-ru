@@ -1,34 +1,33 @@
 ---
-title: "Предупреждение компилятора (уровень 4) C4337 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C4337"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C4337"
+title: "Предупреждение (уровень 4) C4337 компилятора | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords: C4337
+dev_langs: C++
+helpviewer_keywords: C4337
 ms.assetid: 70bc72d9-aac5-45cd-abd3-ebe42a05897b
-caps.latest.revision: 7
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: b620d43e595ca959622cd8fca1396a96718e80df
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 12/21/2017
 ---
-# Предупреждение компилятора (уровень 4) C4337
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-библиотека, на которую имеются перекрестные ссылки, "библиотека типов 1" автоматически импортируется в "библиотека типов 2"  
+# <a name="compiler-warning-level-4-c4337"></a>Предупреждение компилятора (уровень 4) C4337
+Библиотека типов «typelib1» в «typelib2» автоматически импортируется  
   
- В результате использования атрибута auto\_search [директивы \#import](../Topic/%23import%20Directive%20\(C++\).md) выполнен неявный импорт библиотеки типов.  
+ Атрибута auto_search [директивы #import](../../preprocessor/hash-import-directive-cpp.md) неявно импорта библиотеки типов.  
   
- Две указанные библиотеки типов создаются из двух следующих файлов \(компилиремых с помощью программы midl.exe\):  
+ Две указанные библиотеки типов создаются из следующих двух файлах (скомпилированный с midl.exe):  
   
 ```  
 // C4337a.idl  
@@ -47,7 +46,7 @@ library C4337aLib
 };  
 ```  
   
- и второго IDL\-файла  
+ и затем второй IDL-файла,  
   
 ```  
 // C4337b.idl  

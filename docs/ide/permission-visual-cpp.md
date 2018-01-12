@@ -1,57 +1,57 @@
 ---
-title: "&lt;permission&gt; (Visual C++) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "permission"
-  - "<permission>"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "<permission> - XML-тег C++"
-  - "permission - XML-тег C++"
+title: "&lt;разрешение&gt; (Visual C++) | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-ide
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- permission
+- <permission>
+dev_langs: C++
+helpviewer_keywords:
+- <permission> C++ XML tag
+- permission C++ XML tag
 ms.assetid: 537ee2bc-95bd-48e4-9ce6-3420c3da87f4
-caps.latest.revision: 11
-caps.handback.revision: 11
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "11"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 416467782be92760ac999301f9899be1260905aa
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 12/21/2017
 ---
-# &lt;permission&gt; (Visual C++)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Тег \<permission\> позволяет документу получил доступ к члену.  <xref:System.Security.PermissionSet> позволяет задать доступ к члену.  
+# <a name="ltpermissiongt-visual-c"></a>&lt;разрешение&gt; (Visual C++)
+Тег \<permission> tag позволяет документировать уровень доступа для члена. <xref:System.Security.PermissionSet>Вы можете задать доступ к члену.  
   
-## Синтаксис  
+## <a name="syntax"></a>Синтаксис  
   
 ```  
 <permission cref="member">description</permission>  
 ```  
   
-#### Параметры  
+#### <a name="parameters"></a>Параметры  
  `member`  
- Ссылка на член или поле, которое может вызываться из текущей среды компиляции.  Компилятор проверяет, существует ли элемент кода и приводит `member` к каноническому имени элемента в выходных XML\-данных.  Заключить его в одинарные или двойные кавычки.  
+ Ссылка на член или поле, которые доступны для вызова из текущей среды компиляции. Компилятор проверяет, существует ли элемент кода, и приводит `member` к каноническому имени элемента в выходных XML-данных.  Заключите имя в одинарные или двойные кавычки.  
   
- Компилятор выдает предупреждение, если не удается найти `member`.  
+ Если компилятору не удается найти `member`, он выдает предупреждение.  
   
- Дополнительные сведения о создании cref\-ссылки на универсальный тип см. в разделе [\<see\>](../ide/see-visual-cpp.md).  
+ Дополнительные сведения о создании ссылки cref на универсальный тип см. в разделе [\<see>](../ide/see-visual-cpp.md).  
   
  `description`  
- Описание доступа к члену.  
+ Описание уровня доступа для члена.  
   
-## Заметки  
- Чтобы обработать и сохранить комментарии документации в файл, при компиляции необходимо использовать параметр [\/doc](../build/reference/doc-process-documentation-comments-c-cpp.md).  
+## <a name="remarks"></a>Примечания  
+ Чтобы обработать и сохранить комментарии документации в файл, при компиляции необходимо использовать параметр [/doc](../build/reference/doc-process-documentation-comments-c-cpp.md).  
   
- Компилятор C Visual C\+\+ пытается разрешить ссылки cref в одном прохождении через документирующие комментарии.  Поэтому при использовании правила поиска C, C\+\+, символ не найден компилятором, ссылка будет помечена как не разрешен.  Дополнительные сведения см. в разделе [\<seealso\>](../Topic/%3Cseealso%3E%20\(Visual%20C++\).md).  
+ Компилятор Visual C++ будет пытаться разрешить ссылки cref за один проход по комментариям документации.  Поэтому если при использовании правил поиска C++ компилятор не найдет символ, ссылка будет помечена как не разрешенная. В разделе [ \<seealso >](../ide/seealso-visual-cpp.md) для получения дополнительной информации.  
   
-## Пример  
+## <a name="example"></a>Пример  
   
 ```  
 // xml_permission_tag.cpp  
@@ -65,5 +65,5 @@ public ref class TestClass {
 };  
 ```  
   
-## См. также  
+## <a name="see-also"></a>См. также  
  [Документация XML](../ide/xml-documentation-visual-cpp.md)

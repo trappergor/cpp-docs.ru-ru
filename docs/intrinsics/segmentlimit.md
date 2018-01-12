@@ -1,63 +1,63 @@
 ---
-title: "__segmentlimit | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "__segmentlimit"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Встроенная функция __segmentlimit"
-  - "Инструкция lsl"
+title: "__segmentlimit | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: __segmentlimit
+dev_langs: C++
+helpviewer_keywords:
+- __segmentlimit intrinsic
+- lsl instruction
 ms.assetid: d0bc3630-90cb-4185-8667-686fd41e23d4
-caps.latest.revision: 21
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 19
+caps.latest.revision: "21"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 5e7c93923a3fdbb2a5e62163b41c83be30d0a54e
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 12/21/2017
 ---
-# __segmentlimit
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-**Только для систем Microsoft**  
+# <a name="segmentlimit"></a>__segmentlimit
+**Блок, относящийся только к системам Microsoft**  
   
- Создает инструкцию `lsl` \(ограничения сегмента загрузки\).  
+ Приводит к возникновению ошибки `lsl` инструкций (предел сегмента нагрузки).  
   
-## Синтаксис  
+## <a name="syntax"></a>Синтаксис  
   
 ```  
-unsigned long __segmentlimit(   
-   unsigned long a   
+unsigned long __segmentlimit(   
+   unsigned long a   
 );  
 ```  
   
-#### Параметры  
- \[входящий\] `a`  
- Константа, задающая селектор сегмента.  
+#### <a name="parameters"></a>Параметры  
+ [in] `a`  
+ Константа, указывающая область выделения сегментов.  
   
-## Возвращаемое значение  
- Ограничение сегмента выбора сегмента указанный `a,` при условии, что селектор является допустимым и отображается на текущем уровне разрешений.  
+## <a name="return-value"></a>Возвращаемое значение  
+ Предел сегмента сегмент селектора заданные `a`, при условии, что область выделения является допустимым и видны на текущем уровне разрешений.  
   
-## Требования  
+## <a name="requirements"></a>Требования  
   
-|Встроенный объект|Архитектура|  
-|-----------------------|-----------------|  
-|`__segmentlimit`|x86, [!INCLUDE[vcprx64](../Token/vcprx64_md.md)]|  
+|Встроенная функция|Архитектура|  
+|---------------|------------------|  
+|`__segmentlimit`|x86, [!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|  
   
- **Файл заголовка** \<intrin.h\>  
+ **Файл заголовка** \<intrin.h >  
   
-## Заметки  
- Если предел участка получить невозможно, то происходит сбой инструкции.  В случае сбоя, эта инструкция снимает пометить ZF и возвращаемое значение не определено.  
+## <a name="remarks"></a>Примечания  
+ Если не удается получить ограничение размера сегмента, эта инструкция завершается ошибкой. В случае сбоя эта инструкция снимает флаг ZF и возвращаемое значение не определено.  
   
- Эта процедура доступна только в качестве внутреннего элемента.  
+ Эта процедура доступна только как встроенная функция.  
   
-## Пример  
+## <a name="example"></a>Пример  
   
 ```  
 #include <stdio.h>  
@@ -104,9 +104,14 @@ int main(void)
 }  
 ```  
   
-  **Раньше. eflags \=0x0 ограничения \=0xbaadbabe сегмента после: eflags \=0x256 ограничения \=0xffffffff сегмента eflags.zf \= успех набора\!**  
- **sl был изменен**   
-## ЭЛЕМЕНТ, относящийся Майкрософт  
+```Output  
+Before: segment limit =0xbaadbabe eflags =0x0  
+After: segment limit =0xffffffff eflags =0x256 eflags.zf = set  
+Success!  
+sl was changed  
+```  
   
-## См. также  
- [Встроенные объекты компилятора](../intrinsics/compiler-intrinsics.md)
+**Завершение блока, относящегося только к системам Майкрософт**  
+  
+## <a name="see-also"></a>См. также  
+ [Встроенные инструкции компилятора](../intrinsics/compiler-intrinsics.md)

@@ -1,36 +1,37 @@
 ---
-title: "__inbytestring | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "__inbytestring"
-  - "__inbytestring_cpp"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Инструкция rep insb"
-  - "Встроенная функция __inbytestring"
+title: "__inbytestring | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- __inbytestring
+- __inbytestring_cpp
+dev_langs: C++
+helpviewer_keywords:
+- rep insb instruction
+- __inbytestring intrinsic
 ms.assetid: fe549556-e7a3-4af3-8ebf-8a7dc3cb233b
-caps.latest.revision: 11
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 11
+caps.latest.revision: "11"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 4b6a70614a747ad5e313e96713f64ad756de9211
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 12/21/2017
 ---
-# __inbytestring
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-**Только для систем Microsoft**  
+# <a name="inbytestring"></a>__inbytestring
+**Блок, относящийся только к системам Microsoft**  
   
- Считывает данные из указанного порта, используя инструкцию `rep insb`.  
+ Считывает данные из указанного порта с помощью `rep insb` инструкции.  
   
-## Синтаксис  
+## <a name="syntax"></a>Синтаксис  
   
 ```  
 void __inbytestring(  
@@ -40,28 +41,28 @@ void __inbytestring(
 );  
 ```  
   
-#### Параметры  
- \[входящий\] `Port`  
+#### <a name="parameters"></a>Параметры  
+ [in] `Port`  
  Порт, из которого выполняется чтение.  
   
- \[исходящий\] `Buffer`  
- Данные, считанные из порта записываются здесь.  
+ [выходной] `Buffer`  
+ Данные, считанные из порта записывается здесь.  
   
- \[входящий\] `Count`  
- Число байтов данных, которые необходимо считать.  
+ [in] `Count`  
+ Число байтов данных для чтения.  
   
-## Требования  
+## <a name="requirements"></a>Требования  
   
-|Встроенный объект|Архитектура|  
-|-----------------------|-----------------|  
-|`__inbytestring`|x86, [!INCLUDE[vcprx64](../Token/vcprx64_md.md)]|  
+|Встроенная функция|Архитектура|  
+|---------------|------------------|  
+|`__inbytestring`|x86, [!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|  
   
- **Файл заголовка** \<intrin.h\>  
+ **Файл заголовка** \<intrin.h >  
   
-## Заметки  
- Эта процедура доступна только в качестве внутреннего элемента.  
+## <a name="remarks"></a>Примечания  
+ Эта процедура доступна только как встроенная функция.  
   
-## ЭЛЕМЕНТ, относящийся Майкрософт  
+**Завершение блока, относящегося только к системам Майкрософт**  
   
-## См. также  
- [Встроенные объекты компилятора](../intrinsics/compiler-intrinsics.md)
+## <a name="see-also"></a>См. также  
+ [Встроенные инструкции компилятора](../intrinsics/compiler-intrinsics.md)

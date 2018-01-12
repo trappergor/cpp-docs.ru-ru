@@ -1,50 +1,31 @@
 ---
-title: "Компилятор C4947 предупреждение (уровень 1) | Документы Microsoft"
+title: "Ошибка компилятора предупреждение (уровень 1) C4947 | Документы Microsoft"
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-tools
+ms.technology: cpp-tools
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- C4947
-dev_langs:
-- C++
-helpviewer_keywords:
-- C4947
+f1_keywords: C4947
+dev_langs: C++
+helpviewer_keywords: C4947
 ms.assetid: 5a1d484e-b4c7-4de2-a145-d8dcfc2fc1d2
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 4ac033535632e94a365aa8dafd849f2ab28a3af7
-ms.openlocfilehash: 08eb5385924ee4a01a942274b8c4ec10060b12c4
-ms.contentlocale: ru-ru
-ms.lasthandoff: 02/24/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: e24b2ec34c81152088bf2e9cee73237dfa43b41b
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="compiler-warning-level-1-c4947"></a>Предупреждение компилятора (уровень 1) C4947
-""тип_или_член": помечен как устаревший  
+"тип_или_член": помечен как устаревший  
   
-Член или тип был помечен как устаревший с помощью <xref:System.ObsoleteAttribute>класса.</xref:System.ObsoleteAttribute>  
+Член или тип был помечен как устаревший с помощью класса <xref:System.ObsoleteAttribute> .  
   
 ## <a name="example"></a>Пример  
 В следующем примере возникает ошибка C4947:  

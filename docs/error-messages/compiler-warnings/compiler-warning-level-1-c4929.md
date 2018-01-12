@@ -1,34 +1,33 @@
 ---
-title: "Предупреждение компилятора (уровень 1) C4929 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C4929"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C4929"
+title: "Предупреждение (уровень 1) C4929 компилятора | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords: C4929
+dev_langs: C++
+helpviewer_keywords: C4929
 ms.assetid: 95f8ab4f-4468-4caa-acd5-8f4592f03b3c
-caps.latest.revision: 17
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 17
+caps.latest.revision: "17"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 38bfd20538db1f11ab2f7f20ab4079e9ed201bc2
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 12/21/2017
 ---
-# Предупреждение компилятора (уровень 1) C4929
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-"файл": библиотека типов содержит объединение; квалификатор "embedded\_idl" пропускается  
+# <a name="compiler-warning-level-1-c4929"></a>Предупреждение компилятора (уровень 1) C4929
+«файл»: библиотека типов содержит объединение; пропуск квалификатора «embedded_idl»  
   
- Атрибут embedded\_idl директивы [\#import](../Topic/%23import%20Directive%20\(C++\).md) не может применяться в библиотеке типов, поскольку в ней присутствует объединение.  Для устранения предупреждения не используйте embedded\_idl.  
+ Атрибут embedded_idl [#import](../../preprocessor/hash-import-directive-cpp.md) не удалось применить к библиотеке типов, так как объединение присутствует в библиотеке типов. Чтобы устранить это предупреждение, не используйте embedded_idl.  
   
-## Пример  
+## <a name="example"></a>Пример  
  В следующем примере определяется компонент.  
   
 ```  
@@ -61,8 +60,8 @@ struct C : I {
 };  
 ```  
   
-## Пример  
- В следующем примере продемонстрировано возникновение ошибки C4929.  
+## <a name="example"></a>Пример  
+ Следующий пример приводит к возникновению ошибки C4929.  
   
 ```  
 // C4929b.cpp  

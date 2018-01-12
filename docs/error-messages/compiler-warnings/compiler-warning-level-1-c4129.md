@@ -1,36 +1,35 @@
 ---
-title: "Предупреждение компилятора (уровень 1) C4129 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "C4129"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "C4129"
+title: "Предупреждение (уровень 1) C4129 компилятора | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords: C4129
+dev_langs: C++
+helpviewer_keywords: C4129
 ms.assetid: a4190c64-4bfb-48fd-8e98-52720bc0d878
-caps.latest.revision: 7
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 6405c7c156f34b49ab892304ee51a6b996ac2595
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 12/21/2017
 ---
-# Предупреждение компилятора (уровень 1) C4129
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-"символ": неизвестная escape\-последовательность  
+# <a name="compiler-warning-level-1-c4129"></a>Предупреждение (уровень 1) C4129 компилятора
+«символ»: неизвестная escape-последовательность  
   
- Не удалось распознать символ `character` после обратной косой черты в символьной или строковой константе как допустимую escape\-последовательность.  Обратная косая черта пропускается и не печатается.  Символ, следующий за обратной косой чертой, печатается.  
+ `character` После обратной косой черты (\\) в символьной или строковой константы не распознан как допустимый escape-последовательность. Обратная косая черта пропускается и не печатаются. Следующий за ним знак выводится на печать.  
   
- Чтобы напечатать одну косую обратную черту, необходимо указать двойную обратную черту \(\\\\\).  
+ Чтобы напечатать одну обратную косую черту, укажите две обратные косые черты (\\\\).  
   
- Escape\-последовательности рассматриваются в разделе 2.13.2 стандарта C\+\+.  
+ Стандарт языка C++, в разделе 2.13.2 рассматриваются escape-последовательности.  
   
  Следующий пример приводит к возникновению ошибки C4129:  
   

@@ -1,63 +1,63 @@
 ---
-title: "_mm_cvtss_si64x | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "_mm_cvtss_si64x"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Встроенная функция cvtss2si"
-  - "Встроенная функция _mm_cvtss_si64x"
+title: "_mm_cvtss_si64x | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: _mm_cvtss_si64x
+dev_langs: C++
+helpviewer_keywords:
+- cvtss2si intrinsic
+- _mm_cvtss_si64x intrinsic
 ms.assetid: c279aff2-ee29-4271-8829-3ec691bf7718
-caps.latest.revision: 13
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 11
+caps.latest.revision: "13"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 0f55ecac0a9f6318b5d60a372003e548ce41c713
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 12/21/2017
 ---
-# _mm_cvtss_si64x
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-**Только для систем Microsoft**  
+# <a name="mmcvtsssi64x"></a>_mm_cvtss_si64x
+**Блок, относящийся только к системам Microsoft**  
   
- Формирует версию удлиненную [!INCLUDE[vcprx64](../Token/vcprx64_md.md)] числа с плавающей запятой одиночной точности convert скалярного на 64 инструкций целого числа \(`cvtss2si`\).  
+ Приводит к возникновению ошибки [!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)] расширенная версия преобразовать скаляр одной точности с плавающей запятой 64-разрядное целое число (`cvtss2si`) инструкции.  
   
-## Синтаксис  
+## <a name="syntax"></a>Синтаксис  
   
 ```  
-__int64 _mm_cvtss_si64x(   
-   __m128 value   
+__int64 _mm_cvtss_si64x(   
+   __m128 value   
 );  
 ```  
   
-#### Параметры  
- \[входящий\] `value`  
- Структура `__m128`, содержащий пункт\-значения плавающей запятой.  
+#### <a name="parameters"></a>Параметры  
+ [in] `value`  
+ `__m128` Структуру, содержащую значения с плавающей запятой.  
   
-## Возвращаемое значение  
- 64 \- Целое число, результат преобразования первого значения с плавающей запятой в целое число.  
+## <a name="return-value"></a>Возвращаемое значение  
+ 64-разрядное целое, результат преобразования первого значения с плавающей запятой в целочисленный.  
   
-## Требования  
+## <a name="requirements"></a>Требования  
   
-|Встроенный объект|Архитектура|  
-|-----------------------|-----------------|  
-|`_mm_cvtss_si64x`|[!INCLUDE[vcprx64](../Token/vcprx64_md.md)]|  
+|Встроенная функция|Архитектура|  
+|---------------|------------------|  
+|`_mm_cvtss_si64x`|[!INCLUDE[vcprx64](../assembler/inline/includes/vcprx64_md.md)]|  
   
- **Файл заголовка** \<intrin.h\>  
+ **Файл заголовка** \<intrin.h >  
   
-## Заметки  
- Первый элемент значения структуры преобразован к целому числу и возвращается.  Биты элемента управления округления в MXCSR используются для определения расширения функциональности округления.  По умолчанию режим округления кружком, округление до ближайшего числа, даже если десятичная часть 0,5.  Поскольку структура `__m128` представляет регистр XMM, этот встроенный принимает значение регистра XMM и записывает его в системной памяти.  
+## <a name="remarks"></a>Примечания  
+ Первый элемент структуры значение преобразуется в целое число и возвращается. Округления управляющие биты в MXCSR используются для определения поведения округления. Значение по умолчанию режим округления — округление до ближайшего округления до четного числа, если десятичное часть равна 0,5. Поскольку `__m128` структура представляет регистр XMM, а это встроенная функция принимает значение регистра XMM и записывает его в системной памяти.  
   
- Эта процедура доступна только в качестве внутреннего элемента.  
+ Эта процедура доступна только как встроенная функция.  
   
-## Пример  
+## <a name="example"></a>Пример  
   
 ```  
 // _mm_cvtss_si64x.cpp  
@@ -87,9 +87,12 @@ int main()
 }  
 ```  
   
-  **101**   
-## ЭЛЕМЕНТ, относящийся Майкрософт  
+```Output  
+101  
+```  
   
-## См. также  
- [\_\_m128d](../cpp/m128d.md)   
- [Встроенные объекты компилятора](../intrinsics/compiler-intrinsics.md)
+**Завершение блока, относящегося только к системам Майкрософт**  
+  
+## <a name="see-also"></a>См. также  
+ [__m128d](../cpp/m128d.md)   
+ [Встроенные инструкции компилятора](../intrinsics/compiler-intrinsics.md)

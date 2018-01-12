@@ -15,11 +15,12 @@ caps.latest.revision: "17"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: ad0744da891c93dab44c980ed10aa4213a4dddb3
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: ea635d701b4dea2471067072083d9568f11f3d82
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="xdcmake-reference"></a>Справочник по XDCMake
 xdcmake.exe — это программа, которая компилирует XDC-файлы в XML-файл. XDC-файл создается компилятором Visual C++ для каждого файла исходного кода при компиляции исходного кода с [/doc](../build/reference/doc-process-documentation-comments-c-cpp.md) и когда файл исходного кода содержит комментарии, помеченные XML-теги.  
@@ -39,7 +40,7 @@ xdcmake.exe — это программа, которая компилирует
  Программа xdcmake`input_filename options`  
   
 ## <a name="parameters"></a>Параметры  
- где:  
+ Здесь:  
   
  `input_filename`  
  Имя файла XDC-файлах, используемых в качестве входных для xdcmake.exe. Укажите один или несколько файлов .xdc или используйте *.xdc для использования всех XDC-файлы в текущем каталоге.  
@@ -47,7 +48,7 @@ xdcmake.exe — это программа, которая компилирует
  `options`  
  Ноль или несколько из следующих действий:  
   
-|Параметр|Описание|  
+|Параметр|Описание:|  
 |------------|-----------------|  
 |/?, / help|Отображение справки для xdcmake.exe.|  
 |/ Assembly:*имя файла*|Вы можете задать значение \<сборки > тегов в XML-файле.  По умолчанию значение \<сборки > тег является таким же, как имя файла XML-файла.|  

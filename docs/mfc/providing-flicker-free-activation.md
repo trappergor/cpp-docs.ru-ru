@@ -17,11 +17,12 @@ caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: f98cc77ecc11f2b3ea07352e48c1e6a096125300
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 1f14998ce663e5a8e53901acf9192719fa41e724
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="providing-flicker-free-activation"></a>Предоставление активации без мерцания
 Если элемент управления рисовании одинаково в активным и неактивным состоянием (и не использует активации без окна), можно исключить операции рисования и сопутствующее видимое мерцание, которое обычно случается при переходе между неактивные и активные состояния. Чтобы сделать это, включите **noFlickerActivate** флаг в набор флагов, возвращенных [COleControl::GetControlFlags](../mfc/reference/colecontrol-class.md#getcontrolflags). Пример:  

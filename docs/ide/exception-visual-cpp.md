@@ -1,57 +1,57 @@
 ---
-title: "&lt;exception&gt; (Visual C++) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "exception"
-  - "<exception>"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "<exception> - XML-тег C++"
-  - "exception - XML-тег C++"
+title: "&lt;исключение&gt; (Visual C++) | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-ide
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- exception
+- <exception>
+dev_langs: C++
+helpviewer_keywords:
+- <exception> C++ XML tag
+- exception C++ XML tag
 ms.assetid: 24451e79-9b89-4b77-98fb-702c6516b818
-caps.latest.revision: 11
-caps.handback.revision: 11
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "11"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: c07dde806938b38dd55a3258b3724b0937d5601d
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 12/21/2017
 ---
-# &lt;exception&gt; (Visual C++)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Тег \<exception\> служит для указания возможных исключений.  Этот тег применяется к определению метода.  
+# <a name="ltexceptiongt-visual-c"></a>&lt;исключение&gt; (Visual C++)
+Тег \<exception> служит для указания возможных исключений. Этот тег применяется к определению метода.  
   
-## Синтаксис  
+## <a name="syntax"></a>Синтаксис  
   
 ```  
 <exception cref="member">description</exception>  
 ```  
   
-#### Параметры  
+#### <a name="parameters"></a>Параметры  
  `member`  
- Ссылка на исключение, которое доступно из текущей среды компиляции.  С помощью правил поиска имени, компилятор проверяет, что данное исключение существует, и преобразует `member` в каноническое имя элемента в выходных XML\-данных.  Компилятор выдает предупреждение, если не удается найти `member`.  
+ Ссылка на исключение, которое доступно из текущей среды компиляции. Использовании правил поиска имени компилятор проверяет, что существует заданного исключения, а также преобразует `member` каноническое имя элемента в выходном XML.  Если компилятору не удается найти `member`, он выдает предупреждение.  
   
- Заключить его в одинарные или двойные кавычки.  
+ Заключите имя в одинарные или двойные кавычки.  
   
- Дополнительные сведения о создании cref\-ссылки на универсальный тип см. в разделе [\<see\>](../ide/see-visual-cpp.md).  
+ Дополнительные сведения о создании ссылки cref на универсальный тип см. в разделе [\<see>](../ide/see-visual-cpp.md).  
   
  `description`  
- Описание  
+ Описание.  
   
-## Заметки  
- Чтобы обработать и сохранить комментарии документации в файл, при компиляции необходимо использовать параметр [\/doc](../build/reference/doc-process-documentation-comments-c-cpp.md).  
+## <a name="remarks"></a>Примечания  
+ Чтобы обработать и сохранить комментарии документации в файл, при компиляции необходимо использовать параметр [/doc](../build/reference/doc-process-documentation-comments-c-cpp.md).  
   
- Компилятор C Visual C\+\+ пытается разрешить ссылки cref в одном прохождении через документирующие комментарии.  Поэтому при использовании правила поиска C, C\+\+, символ не найден компилятором, ссылка будет помечена как не разрешен.  Дополнительные сведения см. в разделе [\<seealso\>](../Topic/%3Cseealso%3E%20\(Visual%20C++\).md).  
+ Компилятор Visual C++ будет пытаться разрешить ссылки cref за один проход по комментариям документации.  Поэтому если при использовании правил поиска C++ компилятор не найдет символ, ссылка будет помечена как не разрешенная. В разделе [ \<seealso >](../ide/seealso-visual-cpp.md) для получения дополнительной информации.  
   
-## Пример  
+## <a name="example"></a>Пример  
   
 ```  
 // xml_exception_tag.cpp  
@@ -75,5 +75,5 @@ public ref class TestClass {
 };  
 ```  
   
-## См. также  
+## <a name="see-also"></a>См. также  
  [Документация XML](../ide/xml-documentation-visual-cpp.md)

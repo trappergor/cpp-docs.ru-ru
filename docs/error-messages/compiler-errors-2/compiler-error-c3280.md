@@ -1,45 +1,26 @@
 ---
-title: "Ошибка компилятора ошибка C3280 | Документы Microsoft"
+title: "Ошибка компилятора C3280 | Документы Microsoft"
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-tools
+ms.technology: cpp-tools
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- C3280
-dev_langs:
-- C++
-helpviewer_keywords:
-- C3280
+f1_keywords: C3280
+dev_langs: C++
+helpviewer_keywords: C3280
 ms.assetid: 86dc5bbc-8818-4786-a728-9334268d308b
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: c243063a9770542f137d5950e8a269f771960f74
-ms.openlocfilehash: 47e008992a9f077ad8985d4a5bb6b830ec93930f
-ms.contentlocale: ru-ru
-ms.lasthandoff: 02/24/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: 3ca68d60e5a6413d4793402d9d9ed8dfe060272e
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="compiler-error-c3280"></a>Ошибка компилятора C3280
 "класс": функцию-член управляемого типа нельзя скомпилировать как неуправляемую функцию  
@@ -63,4 +44,3 @@ void A::func()   // C3280
   
 #pragma managed(pop)  
 ```  
-

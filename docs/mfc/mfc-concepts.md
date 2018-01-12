@@ -14,16 +14,17 @@ caps.latest.revision: "15"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 748b28288df33ab61674dc0cf4044db28c263d7a
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: d949486867200c0349d52805a94b6cddf48d357f
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="mfc-concepts"></a>Основные понятия MFC
 В этом разделе содержатся разделы общие и на основе задач, чтобы программировании с использованием библиотеки Microsoft Foundation Class (MFC).  
   
-## <a name="in-this-section"></a>Содержание  
+## <a name="in-this-section"></a>В этом разделе  
  [Общие разделы по MFC](../mfc/general-mfc-topics.md)  
  Обсуждаются технические детали библиотеки MFC.  
   

@@ -4,12 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-windows
+ms.technology: cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - MFC ActiveX controls [MFC], events
 - notifications [MFC], notifying containers of events
@@ -22,16 +20,16 @@ helpviewer_keywords:
 - events [MFC], ActiveX controls
 - OLE events [MFC]
 ms.assetid: e1e57e0c-206b-4923-a0b5-682c26564f74
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.translationtype: HT
-ms.sourcegitcommit: 3903be230f130aeaeb1953faf73a0c8af4c3492f
-ms.openlocfilehash: f4e6cfc21a12288a53eca391eccb86bb4ea3ff55
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/25/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: b6760f2051542a28e78f5f8f2fa81f6937388d82
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="mfc-activex-controls-events"></a>Элементы управления ActiveX в MFC. События
 Элементы управления ActiveX использовать события для уведомления о том, что-то произошло в элемент управления контейнера. Распространенные примеры событий включают щелчков мыши на элементе управления, данные, введенные с помощью клавиатуры и изменения в состоянии элемента управления. При возникновении этих действий, элемент управления инициирует событие для создания предупреждения контейнера.  
@@ -63,4 +61,3 @@ ms.lasthandoff: 09/25/2017
  [Элементы управления ActiveX MFC](../mfc/mfc-activex-controls.md)   
  [Элементы управления MFC ActiveX: методы](../mfc/mfc-activex-controls-methods.md)   
  [Класс COleControl](../mfc/reference/colecontrol-class.md)
-

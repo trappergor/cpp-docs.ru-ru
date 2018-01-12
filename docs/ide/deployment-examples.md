@@ -1,40 +1,41 @@
 ---
-title: "Примеры развертывания | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "развертывание приложения [C++], примеры"
-  - "развертывание приложений [C++], примеры"
-  - "примеры [C++], развертывание"
+title: "Примеры развертывания | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-ide
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- application deployment [C++], examples
+- deploying applications [C++], examples
+- examples [C++], deployment
 ms.assetid: a2904fea-2703-48dc-881b-5bfc1f11b67f
-caps.latest.revision: 17
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 17
+caps.latest.revision: "17"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 2c484b8287f5743e3bee7e0e12f7d0c6740bceef
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 12/21/2017
 ---
-# Примеры развертывания
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-В данном разделе приводятся примеры развертывания приложений Visual C\+\+.  
+# <a name="deployment-examples"></a>Примеры развертывания
+Этот раздел содержит примеры, демонстрирующие развертывание приложений Visual C++.  
   
-## Примеры  
- [Пошаговое руководство. Развертывание приложения Visual C\+\+ с помощью проекта установки](../ide/walkthrough-deploying-a-visual-cpp-application-by-using-a-setup-project.md)  
+## <a name="examples"></a>Примеры  
+ [Пошаговое руководство. Развертывание приложения Visual C++ с помощью проекта установки](../ide/walkthrough-deploying-a-visual-cpp-application-by-using-a-setup-project.md)  
   
- [Пошаговое руководство. Развертывание приложения Visual C\+\+ в локальную папку приложения](../Topic/Walkthrough:%20Deploying%20a%20Visual%20C++%20Application%20to%20an%20Application-local%20Folder.md)  
+ [Пошаговое руководство. Развертывание приложения Visual C++ в локальную папку приложения](../ide/walkthrough-deploying-a-visual-cpp-application-to-an-application-local-folder.md)  
   
- [Пошаговое руководство. Развертывание приложения Visual C\+\+ с помощью распространяемого пакета Visual C\+\+](../Topic/Walkthrough:%20Deploying%20a%20Visual%20C++%20Application%20By%20Using%20the%20Visual%20C++%20Redistributable%20Package.md)  
+ [Пошаговое руководство. Развертывание приложения Visual C++ с помощью распространяемого пакета Visual C++](../ide/deploying-visual-cpp-application-by-using-the-vcpp-redistributable-package.md)  
   
- [Подготовка тестового компьютера для выполнения исполняемого файла отладки](../Topic/Preparing%20a%20Test%20Machine%20To%20Run%20a%20Debug%20Executable.md)  
+ [Подготовка тестового компьютера для выполнения исполняемого файла отладки](../ide/preparing-a-test-machine-to-run-a-debug-executable.md)  
   
-## См. также  
- [Разбор примера: развертывание вручную приложения ClickOnce](../Topic/Walkthrough:%20Manually%20Deploying%20a%20ClickOnce%20Application.md)   
- [Развертывание классических приложений](../Topic/Deploying%20Native%20Desktop%20Applications%20\(Visual%20C++\).md)
+## <a name="see-also"></a>См. также  
+ [Пошаговое руководство. Развертывание вручную приложения ClickOnce](/visualstudio/deployment/walkthrough-manually-deploying-a-clickonce-application)   
+ [Развертывание приложений для настольных систем](../ide/deploying-native-desktop-applications-visual-cpp.md)

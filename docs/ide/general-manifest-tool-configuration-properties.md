@@ -20,11 +20,12 @@ caps.latest.revision: "13"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: aba154afb6c3f30c305518702f42c618335f5b8e
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 0e5e56c823a7a30850e24e393a545f0df6a6637a
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="general-manifest-tool-configuration-properties-ltprojectnamegt-property-pages-dialog-box"></a>Общие, инструмент манифеста, свойства конфигурации &lt;Projectname&gt; диалоговое окно страниц свойств
 Используйте это диалоговое окно позволяет задать общие параметры для [Mt.exe](http://msdn.microsoft.com/library/aa375649).  

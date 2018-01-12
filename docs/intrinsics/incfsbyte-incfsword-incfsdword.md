@@ -1,41 +1,42 @@
 ---
-title: "__incfsbyte, __incfsword, __incfsdword | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "__incfsword"
-  - "__incfsbyte_cpp"
-  - "__incfsbyte"
-  - "__incfsdword"
-  - "__incfsword_cpp"
-  - "__incfsdword_cpp"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Встроенная функция __incfsword"
-  - "Встроенная функция __incfsdword"
-  - "Встроенная функция __incfsbyte"
+title: "__incfsbyte __incfsword, __incfsdword | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- __incfsword
+- __incfsbyte_cpp
+- __incfsbyte
+- __incfsdword
+- __incfsword_cpp
+- __incfsdword_cpp
+dev_langs: C++
+helpviewer_keywords:
+- __incfsword intrinsic
+- __incfsdword intrinsic
+- __incfsbyte intrinsic
 ms.assetid: 820457fb-e35e-42d3-bcb6-725da3281c64
-caps.latest.revision: 4
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 4
+caps.latest.revision: "4"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 541d92916c6a093d6eb8a60c30f5355f74a3b3c4
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 12/21/2017
 ---
-# __incfsbyte, __incfsword, __incfsdword
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-**Только для систем Microsoft**  
+# <a name="incfsbyte-incfsword-incfsdword"></a>__incfsbyte, __incfsword, __incfsdword
+**Блок, относящийся только к системам Microsoft**  
   
- Добавьте одно значение на области памяти заданным смещением относительно начала сегмента `FS`.  
+ Добавьте одно значение по адресу памяти, указанной в качестве смещения относительно начала `FS` сегмента.  
   
-## Синтаксис  
+## <a name="syntax"></a>Синтаксис  
   
 ```  
 void __incfsbyte(   
@@ -49,25 +50,25 @@ void __incfsdword(
 );  
 ```  
   
-#### Параметры  
- \[входящий\] `Offset`  
- Смещение в байтах от начала `FS`.  
+#### <a name="parameters"></a>Параметры  
+ [in] `Offset`  
+ Смещение от начала `FS`.  
   
-## Требования  
+## <a name="requirements"></a>Требования  
   
-|Встроенный объект|Архитектура|  
-|-----------------------|-----------------|  
+|Встроенная функция|Архитектура|  
+|---------------|------------------|  
 |`__incfsbyte`|x86|  
 |`__incfsword`|x86|  
 |`__incfsdword`|x86|  
   
-## Заметки  
- Эти встроенные функции доступны только в режиме ядра и подпрограммы доступны только в качестве встроенных функций.  
+## <a name="remarks"></a>Примечания  
+ Эти встроенные функции доступны только в режиме ядра и процедуры доступны только как встроенные объекты.  
   
-## ЭЛЕМЕНТ, относящийся Майкрософт  
+**Завершение блока, относящегося только к системам Майкрософт**  
   
-## См. также  
- [\_\_addfsbyte, \_\_addfsword, \_\_addfsdword](../intrinsics/addfsbyte-addfsword-addfsdword.md)   
- [\_\_readfsbyte, \_\_readfsdword, \_\_readfsqword, \_\_readfsword](../intrinsics/readfsbyte-readfsdword-readfsqword-readfsword.md)   
- [\_\_writefsbyte, \_\_writefsdword, \_\_writefsqword, \_\_writefsword](../intrinsics/writefsbyte-writefsdword-writefsqword-writefsword.md)   
- [Встроенные объекты компилятора](../intrinsics/compiler-intrinsics.md)
+## <a name="see-also"></a>См. также  
+ [__addfsbyte, \__addfsword, \__addfsdword](../intrinsics/addfsbyte-addfsword-addfsdword.md)   
+ [__readfsbyte, \__readfsdword, \__readfsqword, \__readfsword](../intrinsics/readfsbyte-readfsdword-readfsqword-readfsword.md)   
+ [__writefsbyte, \__writefsdword, \__writefsqword, \__writefsword](../intrinsics/writefsbyte-writefsdword-writefsqword-writefsword.md)   
+ [Встроенные инструкции компилятора](../intrinsics/compiler-intrinsics.md)

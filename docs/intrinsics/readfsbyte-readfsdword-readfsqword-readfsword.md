@@ -1,83 +1,84 @@
 ---
-title: "__readfsbyte, __readfsdword, __readfsqword, __readfsword | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "__readfsword"
-  - "__readfsdword"
-  - "__readfsbyte"
-  - "__readfsqword"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Встроенная функция __readfsword"
-  - "Встроенная функция readfsword"
-  - "Встроенная функция __readfsdword"
-  - "Встроенная функция readfsbyte"
-  - "Встроенная функция __readfsbyte"
-  - "Встроенная функция readfsdword"
-  - "Встроенная функция readfsqword"
-  - "Встроенная функция __readfsqword"
+title: "__readfsbyte __readfsdword, __readfsqword __readfsword | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- __readfsword
+- __readfsdword
+- __readfsbyte
+- __readfsqword
+dev_langs: C++
+helpviewer_keywords:
+- __readfsword intrinsic
+- readfsword intrinsic
+- __readfsdword intrinsic
+- readfsbyte intrinsic
+- __readfsbyte intrinsic
+- readfsdword intrinsic
+- readfsqword intrinsic
+- __readfsqword intrinsic
 ms.assetid: f6ee7203-4179-402c-a464-0746c84ce6ac
-caps.latest.revision: 11
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 11
+caps.latest.revision: "11"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 611b8481f58c7c89909af8d383d81e574f428eca
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 12/21/2017
 ---
-# __readfsbyte, __readfsdword, __readfsqword, __readfsword
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-**Только для систем Microsoft**  
+# <a name="readfsbyte-readfsdword-readfsqword-readfsword"></a>__readfsbyte, __readfsdword, __readfsqword, __readfsword
+**Блок, относящийся только к системам Microsoft**  
   
- Память для чтения начиная с позиции, указанной смещением относительно начала сегмента службы федерации.  
+ Чтение памяти из папки, указанной в качестве смещения относительно начала сегмента федерации Active Directory.  
   
-## Синтаксис  
+## <a name="syntax"></a>Синтаксис  
   
 ```  
-unsigned char __readfsbyte(   
-   unsigned long Offset   
+unsigned char __readfsbyte(   
+   unsigned long Offset   
 );  
-unsigned short __readfsword(   
-   unsigned long Offset   
+unsigned short __readfsword(   
+   unsigned long Offset   
 );  
-unsigned long __readfsdword(   
+unsigned long __readfsdword(   
    unsigned long Offset  
 );  
-unsigned __int64 __readfsqword(   
-   unsigned long Offset   
+unsigned __int64 __readfsqword(   
+   unsigned long Offset   
 );  
 ```  
   
-#### Параметры  
- \[входящий\] `Offset`  
- Смещение в байтах от начала `FS`, из которого выполняется чтение.  
+#### <a name="parameters"></a>Параметры  
+ [in] `Offset`  
+ Смещение от начала `FS` из которого выполняется чтение.  
   
-## Возвращаемое значение  
- Содержимое памяти в байтах, слова, doubleword или quadword \(как показано в разделе имя вызываемой функции\) на месте `FS:[``Offset``]`.  
+## <a name="return-value"></a>Возвращаемое значение  
+ Содержимое памяти байт, слово, двойное слово соответственно или quadword (как указано в имени функции, вызываемой) в расположении `FS:[Offset]`.  
   
-## Требования  
+## <a name="requirements"></a>Требования  
   
-|Встроенный объект|Архитектура|  
-|-----------------------|-----------------|  
+|Встроенная функция|Архитектура|  
+|---------------|------------------|  
 |`__readfsbyte`|x86|  
 |`__readfsdword`|x86|  
 |`__readfsqword`|x86|  
 |`__readfsword`|x86|  
   
- **Файл заголовка** \<intrin.h\>  
+ **Файл заголовка** \<intrin.h >  
   
-## Заметки  
- Эти подпрограммы доступны только в качестве встроенных функций.  
+## <a name="remarks"></a>Примечания  
+ Эти процедуры доступны только как встроенные объекты.  
   
-## ЭЛЕМЕНТ, относящийся Майкрософт  
+**Завершение блока, относящегося только к системам Майкрософт**  
   
-## См. также  
- [\_\_writefsbyte, \_\_writefsdword, \_\_writefsqword, \_\_writefsword](../intrinsics/writefsbyte-writefsdword-writefsqword-writefsword.md)   
- [Встроенные объекты компилятора](../intrinsics/compiler-intrinsics.md)
+## <a name="see-also"></a>См. также  
+ [__writefsbyte, \__writefsdword, \__writefsqword, \__writefsword](../intrinsics/writefsbyte-writefsdword-writefsqword-writefsword.md)   
+ [Встроенные инструкции компилятора](../intrinsics/compiler-intrinsics.md)

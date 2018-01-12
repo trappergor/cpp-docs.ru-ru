@@ -18,11 +18,12 @@ caps.latest.revision: "18"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: fb5b9968ad652e5ab6ef4dd29eb3c6ccc6da7493
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 17853a43d3a94be779b659b0da825467fa66f61c
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="xml-documentation-visual-c"></a>Документация XML (Visual C++)
 В Visual C++ можно добавить комментарии в исходный код, который будет обработан в XML-файл. Затем этот файл можно входных данных для процесса, создает документацию по классам в коде.  
@@ -40,7 +41,7 @@ ms.lasthandoff: 10/24/2017
   
  Дополнительные сведения о создании XML-файла в комментарии документации в следующих разделах.  
   
-|Сведения о|См.|  
+|Сведения|См.|  
 |---------------------------|---------|  
 |Параметры компилятора, используемые|[/doc](../build/reference/doc-process-documentation-comments-c-cpp.md)|  
 |Теги, которые можно использовать для предоставления часто используемым функциям в документации|[Рекомендуемые теги для комментариев документации](../ide/recommended-tags-for-documentation-comments-visual-cpp.md)|  

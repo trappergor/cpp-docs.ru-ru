@@ -1,50 +1,50 @@
 ---
-title: "Добавление класса из элемента управления ActiveX (Visual C++) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "элементы управления ActiveX [C++], классы - добавление"
-  - "классы [C++], создание"
+title: "Добавление класса из элемента управления ActiveX (Visual C++) | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-ide
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- ActiveX controls [C++], adding classes
+- classes [C++], creating
 ms.assetid: 729fcb37-54b8-44d5-9b4e-50bb16e0eea4
-caps.latest.revision: 8
-caps.handback.revision: 8
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "8"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: f059396c91ddb51247347d10e6c8f79a6c95522f
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 12/21/2017
 ---
-# Добавление класса из элемента управления ActiveX (Visual C++)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-С помощью этого мастера можно создать класс MFC из интерфейса в доступном элементе управления ActiveX.  Класс MFC можно добавить в [приложение MFC](../mfc/reference/creating-an-mfc-application.md), [DLL MFC](../mfc/reference/creating-an-mfc-dll-project.md) или [элемент управления ActiveX MFC](../mfc/reference/creating-an-mfc-activex-control.md).  
+# <a name="adding-a-class-from-an-activex-control-visual-c"></a>Добавление класса из элемента управления ActiveX (Visual C++)
+Этот мастер используется для создания класса MFC из интерфейса в доступного элемента управления ActiveX. Можно добавить класс MFC для [приложение MFC](../mfc/reference/creating-an-mfc-application.md), [MFC DLL](../mfc/reference/creating-an-mfc-dll-project.md), или [управления MFC ActiveX](../mfc/reference/creating-an-mfc-activex-control.md).  
   
 > [!NOTE]
->  Чтобы добавить класс из элемента управления ActiveX, не нужно создавать проект MFC с включенной функцией автоматизации.  
+>  Необходимо создать проект MFC с автоматизацией включена Добавление класса из элемента управления ActiveX.  
   
- Элемент управления ActiveX ― это многократно используемый компонент программы, основанный на модели COM, который поддерживает широкий диапазон функциональных возможностей OLE и может быть настроен для соответствия многим потребностям программного обеспечения.  Элементы управления ActiveX разработаны для использования как в обычных контейнерах элементов управления ActiveX, так и в интернет\-страницах.  
+ Элемент управления ActiveX — это компонент для повторного использования программного обеспечения, на основе на компонент объекта модели (COM), который поддерживает широкий набор функциональных возможностей OLE и может быть настроена в соответствии с потребностями многих программного обеспечения. Элементы управления ActiveX предназначены для использования в обычные контейнеры элементов управления ActiveX, а также в веб-страницы в Интернете.  
   
-### Добавление класса MFC из элемента управления ActiveX  
+### <a name="to-add-an-mfc-class-from-an-activex-control"></a>Добавление класса MFC из элемента управления ActiveX  
   
-1.  В **обозревателе решений** или в [представлении классов](http://msdn.microsoft.com/ru-ru/8d7430a9-3e33-454c-a9e1-a85e3d2db925) щелкните правой кнопкой мыши имя проекта, в который требуется добавить класс элементов управления ActiveX.  
+1.  В любом **обозревателе решений** или [представление классов](http://msdn.microsoft.com/en-us/8d7430a9-3e33-454c-a9e1-a85e3d2db925), щелкните правой кнопкой мыши имя проекта, к которому требуется добавить класс элементов управления ActiveX.  
   
-2.  Выберите в контекстном меню команду **Добавить**, а затем **Добавить класс**.  
+2.  В контекстном меню щелкните **добавить**, а затем нажмите кнопку **Добавление класса**.  
   
-3.  В области "Шаблоны" диалогового окна [Добавление класса](../ide/add-class-dialog-box.md) щелкните **класс MFC элемента управления ActiveX**, а затем нажмите кнопку **Открыть**, чтобы открыть [Мастер добавления классов из элемента управления ActiveX](../ide/add-class-from-activex-control-wizard.md).  
+3.  В [Добавление класса](../ide/add-class-dialog-box.md) щелкните в области шаблонов диалогового **класс MFC из элемента управления ActiveX**, а затем нажмите кнопку **откройте** для отображения [добавления классов из ActiveX Мастер управления](../ide/add-class-from-activex-control-wizard.md).  
   
- С помощью мастера можно добавить несколько интерфейсов в элемент управления ActiveX.  Можно также создавать классы из нескольких элементов управления ActiveX за один сеанс мастера.  
+ В мастере можно добавить несколько интерфейсов в элементе управления ActiveX. Аналогично можно создать классы из более чем одного элемента управления ActiveX в одном сеансе мастера.  
   
- Можно добавлять классы как из элементов управления ActiveX, зарегистрированных в системе, так и из элементов управления ActiveX, содержащихся в файлах библиотек типов \(TLB, OLB, DDL, OCX или EXE\), не регистрируя их в системе.  Дополнительные сведения о регистрации элементов управления ActiveX см. в разделе [Регистрация элементов управления библиотеки OLE](../Topic/Registering%20OLE%20Controls.md).  
+ Можно добавлять классы из элементов управления ActiveX, зарегистрированных в системе, или можно добавлять классы из элементов управления ActiveX в файлы библиотеки типов (TLB-файл, .olb, DLL, ocx; или .exe) без предварительной регистрации их в своей системе. В разделе [элементов](../mfc/reference/registering-ole-controls.md) Дополнительные сведения о регистрации элементов управления ActiveX.  
   
- Мастер создает класс MFC, производный от классов [CWnd](../Topic/CWnd%20Class.md) или [COleDispatchDriver](../mfc/reference/coledispatchdriver-class.md), для каждого интерфейса, добавляемого из выбранного элемента управления ActiveX.  
+ Мастер создает класс MFC, производный от [CWnd](../mfc/reference/cwnd-class.md) или [COleDispatchDriver](../mfc/reference/coledispatchdriver-class.md), для каждого интерфейса, добавляемого из выбранного элемента управления ActiveX.  
   
-## См. также  
+## <a name="see-also"></a>См. также  
  [Элементы управления ActiveX MFC](../mfc/mfc-activex-controls.md)   
- [Introduction to COM and ATL](../atl/introduction-to-com-and-atl.md)
+ [Введение в модель COM и ATL](../atl/introduction-to-com-and-atl.md)

@@ -1,31 +1,30 @@
 ---
-title: "Предупреждение средств компоновщика LNK4022 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "LNK4022"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "LNK4022"
+title: "Предупреждение средств компоновщика LNK4022 | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords: LNK4022
+dev_langs: C++
+helpviewer_keywords: LNK4022
 ms.assetid: 890f487e-db98-45dd-a226-c7ccead82b1e
-caps.latest.revision: 8
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 9e35974a72de349f94f2189f676b6dc955c48fab
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 12/21/2017
 ---
-# Предупреждение средств компоновщика LNK4022
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-не удается найти уникальное соответствие для символа "символ"  
+# <a name="linker-tools-warning-lnk4022"></a>Предупреждение средств компоновщика LNK4022
+не удается найти уникальное соответствие для символа «символ»  
   
- Программой LINK или LIB обнаружено несколько соответствий для указанного не являющегося внутренним символа, что привело к возникновению неоднозначности.  Выходной файл \(EXE, DLL, EXP или LIB\) не создается.  Вслед за этим предупреждением отображается предупреждение [LNK4002](../../error-messages/tool-errors/linker-tools-warning-lnk4002.md) для каждого повторяющегося символа, после чего возникает неустранимая ошибка [LNK1152](../../error-messages/tool-errors/linker-tools-error-lnk1152.md).  
+ LINK или LIB обнаружено несколько соответствий для данного упрощенного символа и не удалось разрешить неоднозначность. Нет выходного файла (.exe, .dll, .exp или LIB-файл) создается. Это предупреждение сопровождается одно предупреждение [LNK4002](../../error-messages/tool-errors/linker-tools-warning-lnk4002.md) для каждого Дублировать символ после чего возникает неустранимая ошибка [LNK1152](../../error-messages/tool-errors/linker-tools-error-lnk1152.md).  
   
- Чтобы устранить это предупреждение, задайте символ с использованием его внутренней формы.  Чтобы просмотреть внутренние имена для объекта, запустите программу [DUMPBIN](../../build/reference/dumpbin-options.md).
+ Чтобы устранить это предупреждение, необходимо укажите знак в декорированном виде. Запустите [DUMPBIN](../../build/reference/dumpbin-options.md) на объект для просмотра внутренних имен.

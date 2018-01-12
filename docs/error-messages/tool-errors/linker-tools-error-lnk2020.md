@@ -1,41 +1,40 @@
 ---
-title: "Ошибка средств компоновщика LNK2020 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "LNK2020"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "LNK2020"
+title: "Ошибка средств компоновщика LNK2020 | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords: LNK2020
+dev_langs: C++
+helpviewer_keywords: LNK2020
 ms.assetid: 4dd017d0-5e83-471b-ac8a-538ac1ed6870
-caps.latest.revision: 16
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 16
+caps.latest.revision: "16"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 394cafe23851df5320a78a4e165a90422fc305de
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 12/21/2017
 ---
-# Ошибка средств компоновщика LNK2020
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-неразрешенная лексема "лексема"  
+# <a name="linker-tools-error-lnk2020"></a>Ошибка средств компоновщика LNK2020
+неразрешенная лексема «лексема»  
   
- Эта ошибка аналогична неопределенной внешней ошибки, за исключением того, что ссылка разрешается через метаданные.  В метаданных все функции и данные должны быть определены.  
+ Аналогично Неизвестная внешняя ошибка, за исключением того, что ссылка разрешается через метаданные. В метаданных должны быть определены все функции и данные.  
   
- Чтобы устранить данную ошибку:  
+ Чтобы разрешить:  
   
--   следует определить пропущенную функцию или данные, либо  
+-   Определите отсутствующие функцию или данные, или  
   
--   включить объектный файл или библиотеку, в которой уже определены пропущенные данные или функция.  
+-   Включайте файл объекта или библиотеки, в которой отсутствует функция или данных уже определен.  
   
-## Пример  
- Следующий пример демонстрирует причины возникновения ошибки LNK2020.  
+## <a name="example"></a>Пример  
+ Следующий пример приводит к возникновению ошибки LNK2020.  
   
 ```  
 // LNK2020.cpp  
@@ -52,10 +51,10 @@ ref struct B {
 };  
 ```  
   
-## Пример  
- LNK2020 может также возникнуть в случае, когда создается переменная управляемого типа шаблона, но не создается экземпляр типа.  
+## <a name="example"></a>Пример  
+ LNK2020 может также возникнуть, если создать переменную управляемого типа шаблона, но не создается экземпляр типа.  
   
- Следующий пример демонстрирует причины возникновения ошибки LNK2020.  
+ Следующий пример приводит к возникновению ошибки LNK2020.  
   
 ```  
 // LNK2020_b.cpp  

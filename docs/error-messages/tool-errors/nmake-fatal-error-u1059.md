@@ -1,38 +1,37 @@
 ---
-title: "Неустранимая ошибка NMAKE U1059 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "U1059"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "U1059"
+title: "Неустранимая ошибка NMAKE U1059 | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords: U1059
+dev_langs: C++
+helpviewer_keywords: U1059
 ms.assetid: b21d9198-9c63-40d0-b589-80e17294ce24
-caps.latest.revision: 6
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 6
+caps.latest.revision: "6"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: fb9ba98b0f82c158e4e11859e85af72efdbbc244
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 12/21/2017
 ---
-# Неустранимая ошибка NMAKE U1059
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-синтаксическая ошибка: отсутствие "}" в зависимости  
+# <a name="nmake-fatal-error-u1059"></a>Неустранимая ошибка NMAKE U1059
+Синтаксическая ошибка: "}" отсутствует в зависимости  
   
- Путь поиска для зависимости был указан некорректно.  Были утрачены пробелы или фигурные скобки в строке пути \(**}**\).  
+ Неправильно указан путь поиска для зависимости. Существовали пробелы в пути или закрывающей фигурной скобкой (**}**) был пропущен.  
   
- Синтаксисом спецификации директории для зависимости является  
+ Синтаксис спецификации директории для зависимости:  
   
  **{**   
- ***каталоги* }зависимые**  
+ ***каталоги* } зависимые**  
   
- где `directories` определяет один или более путей, которые отделяются друг от друга при помощи точки с запятой \(**;**\).  Пробелы не разрешаются.  
+ где `directories` указывает один или несколько путей, разделяя их точкой с запятой (**;**). Пробелы не допускаются.  
   
- При замене части всех путей поиска макросом убедитесь, что в расширении макроса нет пробелов.
+ Если макрос заменяется всех или части пути поиска, убедитесь, что в расширении макроса существуют без пробелов.

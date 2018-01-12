@@ -1,73 +1,73 @@
 ---
-title: "Страница свойств NMake | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "VC.Project.VCNMakeTool.ReBuildCommandLine"
-  - "VC.Project.VCNMakeTool.CleanCommandLine"
-  - "VC.Project.VCNMakeTool.Output"
-  - "VC.Project.VCNMakeTool.BuildCommandLine"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Страница свойств NMake"
+title: "Страница свойств NMake (Windows C++) | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-ide
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- VC.Project.VCNMakeTool.ReBuildCommandLine
+- VC.Project.VCNMakeTool.CleanCommandLine
+- VC.Project.VCNMakeTool.Output
+- VC.Project.VCNMakeTool.BuildCommandLine
+dev_langs: C++
+helpviewer_keywords: NMake property page
 ms.assetid: bd20cb52-9f1d-4240-b4fc-4f43205ac94b
-caps.latest.revision: 12
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 12
+caps.latest.revision: "12"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 7cc9f6dc7c5fec4a184ed189cfaae230df3f1e9e
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 12/21/2017
 ---
-# Страница свойств NMake
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Страница свойств **NMake** позволяет задать параметры построения для проектов NMake.  
+# <a name="nmake-property-page"></a>Страница свойств NMake
+**NMake** страница свойств позволяет задать параметры построения для проектов NMake.  
   
- Дополнительные сведения о проектах NMake см. в разделе [Создание проекта Makefile](../ide/creating-a-makefile-project.md).  
+ Дополнительные сведения о проектах NMake см. в разделе [Создание проекта Makefile](../ide/creating-a-makefile-project.md). Non_Windows проектов MakeFile. в разделе [свойства проекта MakeFile (Linux C++)](../linux/prop-pages/makefile-linux.md), [общие свойства проекта (Android C++ Makefile)](/visualstudio/cross-platform/general-makefile-android-prop-page) или [NMake свойства (Android C++)](/visualstudio/cross-platform/nmake-android-prop-page).
   
- Страница свойств **NMake** содержит следующие свойства.  
+ **NMake** страница свойств содержит следующие свойства.  
   
-## Список элементов пользовательского интерфейса  
- **Командная строка для построения**  
- Задает команду, которую требуется запустить при выборе команды **Построение** из меню **Построение**.  
+## <a name="uielement-list"></a>Список элементов пользовательского интерфейса  
+ **Командная строка построения**  
+ Указывает команду для запуска при **построения** щелчке **построения** меню.  
   
- **Командная строка для перестроения всего**  
- Задает команду, которую требуется запустить при выборе команды **Перестроить все** из меню **Построение**.  
+ **Перестроение всех командной строки**  
+ Указывает команду для запуска при **перестроить все** щелчке **построения** меню.  
   
- **Командная строка для очистки**  
- Задает команду, которую требуется запустить при выборе команды **Очистить** из меню **Построение**.  
+ **Командная строка очистки**  
+ Указывает команду для запуска при **Очистить** щелчке **построения** меню.  
   
- **Output**  
- Задает имя файла, который будет содержать вывод командной строки.  По умолчанию это имя файла образуется от имени проекта.  
+ **Вывод**  
+ Задает имя файла, который будет содержать вывод командной строки. По умолчанию это имя файла основано на имени проекта.  
   
  **Определения препроцессора**  
- Задает все определения препроцессора, используемые в исходных файлах.  Значение по умолчанию определяется текущей платформой и конфигурацией.  
+ Задает все определения препроцессора, используемые в исходных файлах. Значение по умолчанию определяется текущей платформой и конфигурацией.  
   
- **Включить путь поиска**  
+ **Путь поиска включаемых файлов**  
  Задает каталоги, где компилятор выполняет поиск включаемых файлов.  
   
  **Принудительно включает**  
- Указывает файлы, которые препроцессор автоматически обрабатывает, даже если они не включаются в файлы проекта.  
+ Указывает файлы, препроцессор автоматически обрабатывает, даже если они не включаются в файлах проекта.  
   
- **Путь для поиска сборки**  
- Задает каталоги, где .NET Framework выполняет поиск при попытке разрешения сборок .NET.  
+ **Путь поиска сборок**  
+ Указывает каталоги, где .NET Framework выполняет при его предпринимается попытка расшифровать сборок .NET.  
   
  **Принудительное использование сборок**  
- Задает сборки, которые .NET Framework автоматически обрабатывает.  
+ Указывает сборки, которые .NET Framework автоматически обрабатывает.  
   
  **Дополнительные параметры**  
- Задает дополнительные параметры компилятора для IntelliSense для использования при синтаксическом анализе файлов C\+\+.  
+ Указывает дополнительные параметры компилятора для IntelliSense для использования при синтаксическом анализе файлов C++.  
   
- Дополнительные сведения об обращении к странице свойств **NMake** см. в разделе [Практическое руководство. Задание свойств проекта при помощи страниц свойств](../Topic/How%20to:%20Specify%20Project%20Properties%20with%20Property%20Pages.md).  
+ Сведения о доступе к **NMake** страницу свойств в разделе [работа со свойствами проекта](../ide/working-with-project-properties.md).  
   
- Сведения о доступе к членам данного объекта программными средствами см. в разделе <xref:Microsoft.VisualStudio.VCProjectEngine.VCNMakeTool>.  
+ Сведения о доступе к членам этого объекта см. в разделе <xref:Microsoft.VisualStudio.VCProjectEngine.VCNMakeTool>.  
   
-## См. также  
+## <a name="see-also"></a>См. также  
  [Страницы свойств](../ide/property-pages-visual-cpp.md)   
  [Практическое руководство. Использование IntelliSense для проекта Makefile](../ide/how-to-enable-intellisense-for-makefile-projects.md)

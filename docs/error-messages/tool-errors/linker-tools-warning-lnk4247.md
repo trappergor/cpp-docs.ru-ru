@@ -1,48 +1,47 @@
 ---
-title: "Предупреждение средств компоновщика LNK4247 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "error-reference"
-f1_keywords: 
-  - "LNK4247"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "LNK4247"
+title: "Предупреждение средств компоновщика LNK4247 | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: error-reference
+f1_keywords: LNK4247
+dev_langs: C++
+helpviewer_keywords: LNK4247
 ms.assetid: 085d7fdf-9eaf-4641-8473-6eaadd073c7b
-caps.latest.revision: 9
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 9
+caps.latest.revision: "9"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 517605993199942f863faa78e14a022529214a64
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 12/21/2017
 ---
-# Предупреждение средств компоновщика LNK4247
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-точка входа "декорированное\_имя\_функции" уже имеет атрибут потока; "атрибут" пропущен  
+# <a name="linker-tools-warning-lnk4247"></a>Предупреждение средств компоновщика LNK4247
+точка входа «декорированное_имя_функции» уже имеет атрибут потока; «атрибут» пропущен  
   
- Точка входа, указанная с помощью параметра [\/ENTRY \(символ точки входа\)](../../build/reference/entry-entry-point-symbol.md), имела потоковый атрибут, но при этом также был указан параметр [\/CLRTHREADATTRIBUTE \(Установка атрибута потока среды CLR\)](../../build/reference/clrthreadattribute-set-clr-thread-attribute.md) с другой потоковой моделью.  
+ Точки входа, указанное с [/Entry (символ точки входа)](../../build/reference/entry-entry-point-symbol.md), имела потоковый атрибут, но [/CLRTHREADATTRIBUTE (установить атрибут потока среды CLR)](../../build/reference/clrthreadattribute-set-clr-thread-attribute.md) также был указан с другой потоковой моделью.  
   
- Компоновщик пропускает значение, указанное с помощью параметра \/CLRTHREADATTRIBUTE.  
+ Компоновщик игнорирует значение, указанное в /CLRTHREADATTRIBUTE.  
   
  Чтобы устранить это предупреждение:  
   
--   не используйте при построении параметр \/CLRTHREADATTRIBUTE;  
+-   Удалите /CLRTHREADATTRIBUTE из сборки.  
   
--   удалите атрибут из файла исходного кода;  
+-   Удалите атрибут из файла исходного кода.  
   
--   удалите атрибут из исходного кода и параметр \/CLRTHREADATTRIBUTE из построения, и используйте потоковую модель среды CLR по умолчанию;  
+-   Удалите атрибут из источника и параметр/CLRTHREADATTRIBUTE из сборки и примите модели потоков CLR по умолчанию.  
   
--   измените значение, заданное с помощью параметра \/CLRTHREADATTRIBUTE, чтобы оно соответствовало атрибуту в исходном коде;  
+-   Измените значение, передаваемое /CLRTHREADATTRIBUTE, таким образом, что оно согласуется с атрибутом источника.  
   
--   измените атрибут в исходном коде, чтобы он соответствовал значению, заданному с помощью параметра \/CLRTHREADATTRIBUTE.  
+-   Измените атрибут в источнике, таким образом, что оно согласуется со значением, передаваемым в /CLRTHREADATTRIBUTE.  
   
- Следующий пример приводит к возникновению предупреждения LNK4247  
+ Следующий пример приводит к возникновению ошибки LNK4247  
   
 ```  
 // LNK4247.cpp  

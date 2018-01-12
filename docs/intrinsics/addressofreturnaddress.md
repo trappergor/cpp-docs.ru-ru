@@ -19,14 +19,15 @@ caps.latest.revision: "17"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 0808f1053475b1f4919ada60615f91dc8cc0cba0
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 670a9f5786fbe8f8855e9b88e179d005ba8603de
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="addressofreturnaddress"></a>_AddressOfReturnAddress
-**Блок, относящийся только к системам Майкрософт**  
+**Блок, относящийся только к системам Microsoft**  
   
  Предоставляет адрес области памяти, хранящий адрес возврата текущей функции. Этот адрес не может использоваться для доступа к другим расположениям памяти (например, аргументов функции).  
   

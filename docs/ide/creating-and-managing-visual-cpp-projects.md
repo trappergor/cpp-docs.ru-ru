@@ -22,11 +22,12 @@ caps.latest.revision: "28"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: c3e9ab166605d4d67e450a206cf1b47ea6d97f0a
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 0c38f4c75a41de8b2f2b494941c6a52b1ff46fa4
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="creating-and-managing-msbuild-based-visual-c-projects"></a>Создание и управление проектами Visual C++ в MSBuild
 MSBuild — система сборки в машинном коде для Visual C++ и обычно является наиболее сборки в систему для приложений UWP, а также настольных приложений, которые используют библиотеки MFC или ATL. MSBuild тесно интегрирован с Visual Studio IDE и система проектов, но его также можно использовать из командной строки. Начиная с Visual Studio 2017 г., Visual C++ поддерживает [CMake и другие не относящиеся к MSBuild системы через функцию открыть папку](non-msbuild-projects.md).
@@ -45,7 +46,7 @@ MSBuild — система сборки в машинном коде для Visu
   
 -   using the [Win32 Application Wizard](../windows/win32-application-wizard.md).  
   
-## <a name="in-this-section"></a>Содержание  
+## <a name="in-this-section"></a>В этом разделе  
  [Типы проектов Visual C++](../ide/visual-cpp-project-types.md)  
  Описывает типы проекта на основе MSBuild, которые доступны в Visual C++.  
   
