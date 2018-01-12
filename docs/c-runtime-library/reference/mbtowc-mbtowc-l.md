@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
 apiname:
@@ -25,39 +24,23 @@ apilocation:
 - api-ms-win-crt-convert-l1-1-0.dll
 - api-ms-win-crt-multibyte-l1-1-0.dll
 apitype: DLLExport
-f1_keywords:
-- mbtowc
-dev_langs:
-- C++
+f1_keywords: mbtowc
+dev_langs: C++
 helpviewer_keywords:
 - mbtowc function
 - _mbtowc_l function
 - mbtowc_l function
 ms.assetid: dfd1c8a7-e73a-4307-9353-53b70b45d4d1
-caps.latest.revision: 16
+caps.latest.revision: "16"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3f91eafaf3b5d5c1b8f96b010206d699f666e224
-ms.openlocfilehash: 78ec6b782a5dd0c78e3e2724fd06258d17fdbe67
-ms.contentlocale: ru-ru
-ms.lasthandoff: 04/01/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: 52f2c1d3defb822f00095a24bfcc87bd07fc8cc4
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="mbtowc-mbtowcl"></a>mbtowc, _mbtowc_l
 Преобразует многобайтовый символ в соответствующий расширенный символ.  
@@ -95,7 +78,7 @@ int _mbtowc_l(
  Если **mbchar** не имеет значение **NULL** и объект, на который указывает `mbchar`, формирует допустимый многобайтовый символ, функция `mbtowc` возвращает длину многобайтового символа в байтах. Если `mbchar` имеет значение **NULL** или объект, на который он указывает, представляет собой расширенный нуль-символ (L'\0'), функция возвращает 0. Если объект, `mbchar` указывает не образует допустимый Многобайтовый символ в первых *число* символов, возвращается значение -1.  
   
 ## <a name="remarks"></a>Примечания  
- Функция `mbtowc` преобразует не более *count* байтов, на которые указывает объект `mbchar`, если `mbchar` не имеет значение **NULL**, в соответствующий расширенный символ. Функция `mbtowc` сохраняет результирующий расширенный символ в *wchar,* если *wchar* не имеет значение **NULL**. `mbtowc` не проверяет более `MB_CUR_MAX` байтов. Функция `mbtowc` использует текущий языковой стандарт для аспектов поведения, обусловленных языковыми стандартами; функция `_mbtowc_l` идентична за исключением того, что она использует переданный языковой стандарт. Дополнительные сведения см. в разделе [Языковой стандарт](../../c-runtime-library/locale.md).  
+ Функция `mbtowc` преобразует не более *count* байтов, на которые указывает объект `mbchar`, если `mbchar` не имеет значение **NULL**, в соответствующий расширенный символ. Функция `mbtowc` сохраняет результирующий расширенный символ в *wchar,* если *wchar* не имеет значение **NULL**. `mbtowc` не проверяет более `MB_CUR_MAX` байтов. Функция `mbtowc` использует текущий языковой стандарт для аспектов поведения, обусловленных языковыми стандартами; функция `_mbtowc_l` идентична за исключением того, что она использует переданный языковой стандарт. Для получения дополнительной информации см. [Locale](../../c-runtime-library/locale.md).  
   
 ## <a name="requirements"></a>Требования  
   

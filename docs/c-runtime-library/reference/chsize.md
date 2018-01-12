@@ -4,12 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
-apiname:
-- _chsize
+apiname: _chsize
 apilocation:
 - msvcrt.dll
 - msvcr80.dll
@@ -23,10 +21,8 @@ apilocation:
 - ucrtbase.dll
 - api-ms-win-crt-stdio-l1-1-0.dll
 apitype: DLLExport
-f1_keywords:
-- _chsize
-dev_langs:
-- C++
+f1_keywords: _chsize
+dev_langs: C++
 helpviewer_keywords:
 - size
 - _chsize function
@@ -34,30 +30,16 @@ helpviewer_keywords:
 - files [C++], changing size
 - chsize function
 ms.assetid: b3e881c5-7b27-4837-a3d4-c51591ab10ff
-caps.latest.revision: 21
+caps.latest.revision: "21"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3f91eafaf3b5d5c1b8f96b010206d699f666e224
-ms.openlocfilehash: 2d75597dceaedb3e43be5a530be4a7decdd1defc
-ms.contentlocale: ru-ru
-ms.lasthandoff: 04/01/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: 9c48c9978650dc88ff2579a2838faf9bcb02cefa
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="chsize"></a>_chsize
 Изменяет размер файла. Доступна более безопасная версия этой функции; см. раздел [_chsize_s](../../c-runtime-library/reference/chsize-s.md).  
@@ -79,7 +61,7 @@ int _chsize(
  Новая длина файла в байтах.  
   
 ## <a name="return-value"></a>Возвращаемое значение  
- `_chsize` возвращает значение 0, если размер файла успешно изменен. Возвращаемое значение-1 указывает на ошибку: `errno` равно `EACCES` Если указанный файл заблокирован от доступа, к `EBADF` Если указанный файл доступен только для чтения или является недопустимым, дескриптор `ENOSPC` Если недостаточно места на устройстве, или `EINVAL` Если `size` меньше нуля.  
+ `_chsize` возвращает значение 0, если размер файла успешно изменен. Возвращаемое значение-1 указывает на ошибку: `errno` равно `EACCES` Если указанный файл блокируется и доступа к `EBADF` Если указанный файл доступен только для чтения или является недопустимым, дескриптор `ENOSPC` Если недостаточно места на устройстве или `EINVAL` Если `size` меньше нуля.  
   
  Дополнительные сведения об этих и других кодах возврата см. в разделе [_doserrno, errno, _sys_errlist и _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).  
   

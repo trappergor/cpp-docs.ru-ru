@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
 apiname:
@@ -35,8 +34,7 @@ f1_keywords:
 - wcsinc
 - mbsinc
 - _mbsinc_l
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - _mbsinc function
 - wcsinc function
@@ -49,36 +47,22 @@ helpviewer_keywords:
 - _tcsinc function
 - tcsinc function
 ms.assetid: 54685943-8e2c-45e9-a559-2d94930dc6b4
-caps.latest.revision: 23
+caps.latest.revision: "23"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: e257f037a05c45f5b98e64ea55bd125af443b0be
-ms.openlocfilehash: 3eca42c7ad0563ce573dbaa2a75dd85739c342f5
-ms.contentlocale: ru-ru
-ms.lasthandoff: 03/30/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: 4fcda1d1c288e6fe8d6a3dfafea287e79ab6738f
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="strinc-wcsinc-mbsinc-mbsincl"></a>_strinc, _wcsinc, _mbsinc, _mbsinc_l
 Увеличивает строковый указатель на один символ.  
   
 > [!IMPORTANT]
->  `_mbsinc` и `_mbsinc_l` нельзя использовать в приложениях, выполняемых в [!INCLUDE[wrt](../../atl/reference/includes/wrt_md.md)]. Дополнительные сведения см. в статье [Функции CRT, которые не поддерживаются с ключом /ZW](http://msdn.microsoft.com/library/windows/apps/jj606124.aspx).  
+>  Функции `_mbsinc` и `_mbsinc_l` не могут использоваться в приложениях, запускаемых в среде выполнения Windows. Дополнительные сведения см. в статье [Функции CRT, которые не поддерживаются с ключом /ZW](http://msdn.microsoft.com/library/windows/apps/jj606124.aspx).  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -112,7 +96,7 @@ unsigned char *_mbsinc_l(
  Каждая из этих подпрограмм возвращает указатель на символ, который следует сразу за `current`.  
   
 ## <a name="remarks"></a>Примечания  
- Функция `_mbsinc` возвращает указатель на первый байт многобайтового символа, который следует сразу за `current`. `_mbsinc` распознает последовательности многобайтовых символов согласно используемой в данный момент [многобайтовой кодовой странице](../../c-runtime-library/code-pages.md); функция `_mbsinc_l` идентична, за исключением того, что она использует переданный параметр языкового стандарта. Дополнительные сведения см. в разделе [Языковой стандарт](../../c-runtime-library/locale.md).  
+ Функция `_mbsinc` возвращает указатель на первый байт многобайтового символа, который следует сразу за `current`. `_mbsinc` распознает последовательности многобайтовых символов согласно используемой в данный момент [многобайтовой кодовой странице](../../c-runtime-library/code-pages.md); функция `_mbsinc_l` идентична, за исключением того, что она использует переданный параметр языкового стандарта. Для получения дополнительной информации см. [Locale](../../c-runtime-library/locale.md).  
   
  Функция универсального текста `_tcsinc`, определенная в Tchar.h, сопоставляется с `_mbsinc`, если определен флаг `_MBCS`, или с `_wcsinc`, если определен флаг `_UNICODE`. В противном случае `_tcsinc` сопоставляется с `_strinc`. `_strinc` и `_wcsinc` — версии `_mbsinc` с однобайтовыми или расширенными символами. `_strinc` и `_wcsinc` предоставляются только для этого сопоставления и не должны использоваться иным образом. Дополнительные сведения см. в разделах [Использование универсальных текстовых сопоставлений](../../c-runtime-library/using-generic-text-mappings.md) и [Универсальные текстовые сопоставления](../../c-runtime-library/generic-text-mappings.md).  
   

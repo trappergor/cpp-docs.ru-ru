@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-windows
+ms.technology: cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
@@ -14,35 +13,19 @@ f1_keywords:
 - ATLCONV/ATL::CW2WEX::CW2WEX
 - ATLCONV/ATL::CW2WEX::m_psz
 - ATLCONV/ATL::CW2WEX::m_szBuffer
-dev_langs:
-- C++
-helpviewer_keywords:
-- CW2WEX class
+dev_langs: C++
+helpviewer_keywords: CW2WEX class
 ms.assetid: 46262e56-e0d2-41fe-855b-0b67ecc8fcd7
-caps.latest.revision: 20
+caps.latest.revision: "20"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: d2d39abf526a58b8442107b5ee816f316ae841f5
-ms.openlocfilehash: 16b9cb286f71fa01da4b763188ff120f31ad9de7
-ms.contentlocale: ru-ru
-ms.lasthandoff: 03/31/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: c35439b1309e75359177cf45ade4c6be9459f623
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cw2wex-class"></a>Класс CW2WEX
 Этот класс используется макросы преобразования строк `CW2TEX` и `CT2WEX`и определение типа `CW2W`.  
@@ -61,24 +44,24 @@ class CW2WEX
  `t_nBufferLength`  
  Размер буфера, используемого в процессе перевода. Длина по умолчанию — 128 байт.  
   
-## <a name="members"></a>Члены  
+## <a name="members"></a>Участники  
   
 ### <a name="public-constructors"></a>Открытые конструкторы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[CW2WEX::CW2WEX](#cw2wex)|Конструктор.|  
 |[CW2WEX:: ~ CW2WEX](#dtor)|Деструктор|  
   
 ### <a name="public-operators"></a>Открытые операторы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[CW2WEX::operator LPWSTR](#operator_lpwstr)|Оператор преобразования.|  
   
 ### <a name="public-data-members"></a>Открытые члены данных  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[CW2WEX::m_psz](#m_psz)|Элемент данных, который хранит исходную строку.|  
 |[CW2WEX::m_szBuffer](#m_szbuffer)|Статический буфер, используемый для хранения преобразованную строку.|  
@@ -169,4 +152,3 @@ operator LPWSTR() const throw();
  [Класс CW2AEX](../../atl/reference/cw2aex-class.md)   
  [Класс CW2CWEX](../../atl/reference/cw2cwex-class.md)   
  [Общие сведения о классе](../../atl/atl-class-overview.md)
-

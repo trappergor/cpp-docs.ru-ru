@@ -1,38 +1,36 @@
 ---
-title: ".ERR2 | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - ".ERR2"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - ".ERR2 directive"
+title: ". ERR2 | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: .ERR2
+dev_langs: C++
+helpviewer_keywords: .ERR2 directive
 ms.assetid: ea8e0f14-cbdd-4576-9268-846527c27870
-caps.latest.revision: 7
-caps.handback.revision: 7
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
+caps.latest.revision: "7"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: ada09468c52c38311e6cd44c4cde341a0b589e43
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 12/21/2017
 ---
-# .ERR2
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-[.err](../../assembler/masm/dot-err.md) блок предполагаемый на каждом проходе, если сборки  **ПАРАМЕТР: SETIF2** существует  **TRUE.**  
+# <a name="err2"></a>.ERR2
+[. Ошибка](../../assembler/masm/dot-err.md) проверяется при каждом проходе сборки, если блок **параметр: SETIF2** — **значение TRUE.**  
   
-## Синтаксис  
+## <a name="syntax"></a>Синтаксис  
   
 ```  
   
 .ERR2 [[message]]  
 ```  
   
-## См. также  
- [Directives Reference](../../assembler/masm/directives-reference.md)
+## <a name="see-also"></a>См. также  
+ [Справочник по директивам](../../assembler/masm/directives-reference.md)

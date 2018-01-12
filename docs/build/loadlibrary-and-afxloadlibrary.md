@@ -1,61 +1,61 @@
 ---
-title: "Функции LoadLibrary и AfxLoadLibrary | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "LoadLibrary"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "AfxLoadLibrary - метод"
-  - "DLL-библиотеки [C++], AfxLoadLibrary"
-  - "DLL-библиотеки [C++], LoadLibrary"
-  - "явное связывание [C++]"
-  - "LoadLibrary - метод"
+title: "Функции LoadLibrary и AfxLoadLibrary | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: LoadLibrary
+dev_langs: C++
+helpviewer_keywords:
+- DLLs [C++], AfxLoadLibrary
+- DLLs [C++], LoadLibrary
+- AfxLoadLibrary method
+- LoadLibrary method
+- explicit linking [C++]
 ms.assetid: b4535d19-6243-4146-a31a-a5cca4c7c9e3
-caps.latest.revision: 16
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 16
+caps.latest.revision: "16"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 03fc696af7605f9937ecddf40a06a0c020aff82c
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 12/21/2017
 ---
-# Функции LoadLibrary и AfxLoadLibrary
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Процессы вызывают функцию [LoadLibrary](http://go.microsoft.com/fwlink/p/?LinkID=259187) \(или [AfxLoadLibrary](../Topic/AfxLoadLibrary.md)\) для явного связывания с библиотекой DLL.  При успешном завершении функция сопоставляет указанную библиотеку DLL с адресным пространством вызывающего процесса и возвращает дескриптор библиотеки DLL, который можно использовать с другими функциями для явного связывания — например, `GetProcAddress` и `FreeLibrary`.  
+# <a name="loadlibrary-and-afxloadlibrary"></a>Функции LoadLibrary и AfxLoadLibrary
+Обрабатывает вызов [LoadLibrary](http://go.microsoft.com/fwlink/p/?LinkID=259187) (или [AfxLoadLibrary](../mfc/reference/application-information-and-management.md#afxloadlibrary)) явной ссылкой на библиотеку DLL. Если функция выполняется успешно, он сопоставляет указанную библиотеку DLL в адресное пространство вызывающего процесса и возвращает дескриптор библиотеки DLL, который можно использовать с другими функциями для явного связывания — например, `GetProcAddress` и `FreeLibrary`.  
   
- Функция `LoadLibrary` пытается обнаружить библиотеку DLL с помощью того же метода поиска, который используется для неявного связывания.  Если система не может найти библиотеку DLL или функция точки входа возвращает значение FALSE, функция `LoadLibrary` возвращает значение NULL.  Если в вызове функции `LoadLibrary` указан модуль DLL, уже сопоставленный с адресным пространством вызывающего процесса, функция возвращает дескриптор библиотеки DLL и увеличивает счетчик ссылок модуля.  
+ `LoadLibrary`пытается найти библиотеку DLL с помощью того же метода поиска, который используется для неявного связывания. Если системе не удается найти библиотеку DLL или функция точки входа возвращает значение FALSE, `LoadLibrary` возвращает значение NULL. Если вызов `LoadLibrary` указан модуль DLL, который уже сопоставлен в адресное пространство вызывающего процесса, функция возвращает дескриптор библиотеки DLL и увеличивает счетчик ссылок модуля.  
   
- Если у библиотеки DLL есть функция точки входа, операционная система вызывает эту функцию в контексте потока, в котором вызвана функция `LoadLibrary`.  Функция точки входа не вызывается, если библиотека DLL уже присоединена к процессу в результате предыдущего вызова функции `LoadLibrary`, за которым не последовал вызов функции `FreeLibrary`.  
+ Если DLL имеет функцию точки входа, операционная система вызывает функцию в контексте потока, вызвавшего `LoadLibrary`. Функция точки входа не вызывается, если библиотека DLL уже присоединена к процессу, из-за предыдущего вызова `LoadLibrary` , имеющий нет соответствующего вызова `FreeLibrary` функции.  
   
- Для приложений MFC, загружающих библиотеки расширений DLL, рекомендуется использовать функцию `AfxLoadLibrary` вместо функции `LoadLibrary`.  Функция `AfxLoadLibrary` обрабатывает синхронизацию потока до вызова функции `LoadLibrary`.  Интерфейс \(прототип\) функции `AfxLoadLibrary` такой же, как у функции `LoadLibrary`.  
+ Для приложений MFC, которые загружают библиотека DLL-расширения MFC, мы рекомендуем использовать `AfxLoadLibrary` вместо `LoadLibrary`. `AfxLoadLibrary`обрабатывает синхронизацию потока перед вызовом метода `LoadLibrary`. Интерфейс (прототип функции) для `AfxLoadLibrary` совпадает со значением `LoadLibrary`.  
   
- Если системе Windows не удается загрузить библиотеку DLL, процесс может попытаться исправить последствия ошибки.  Например, процесс может уведомить пользователя об ошибке и запросить у него другой путь к библиотеке DLL.  
+ Если не удалось загрузить библиотеку DLL, процесс может попытаться восстановить из-за ошибки. Например процесс может уведомить пользователя об ошибке и попросите пользователя, укажите другой путь к библиотеке DLL.  
   
 > [!IMPORTANT]
->  Если код будет запускаться под управлением Windows NT 4, Windows 2000 или Windows XP \(до пакета обновления SP1\), необходимо указывать полный путь для всех библиотек DLL.  В этих операционных системах при загрузке файлов в первую очередь поиск идет в текущем каталоге.  Если не указать полный путь к файлу, может быть загружен не тот файл, который требуется.  
+>  Если код запускается в Windows NT 4, Windows 2000 или Windows XP (без SP1), убедитесь, что укажите полный путь для всех библиотек DLL. В этих операционных системах текущего каталога, поиск сначала при загрузке файлов. Если не указать путь к файлу, может загрузить файл, который не является предполагаемым.  
   
-## Выберите действие.  
+## <a name="what-do-you-want-to-do"></a>Выберите действие  
   
--   [Неявное связывание](../Topic/Linking%20Implicitly.md)  
+-   [Неявное связывание с библиотекой DLL](../build/linking-an-executable-to-a-dll.md#linking-implicitly)  
   
--   [Определение подходящего метода связывания](../build/determining-which-linking-method-to-use.md)  
+-   [Определение подходящего метода связывания](../build/linking-an-executable-to-a-dll.md#determining-which-linking-method-to-use)  
   
-## Дополнительные сведения  
+## <a name="what-do-you-want-to-know-more-about"></a>Дополнительные сведения  
   
--   [Путь поиска, используемый Windows для поиска библиотеки DLL](../build/search-path-used-by-windows-to-locate-a-dll.md)  
+-   [Путь поиска, используемый Windows для размещения библиотеки DLL](../build/search-path-used-by-windows-to-locate-a-dll.md)  
   
 -   [Функции FreeLibrary и AfxFreeLibrary](../build/freelibrary-and-afxfreelibrary.md)  
   
--   [GetProcAddress](../build/getprocaddress.md)  
+-   [Функция GetProcAddress](../build/getprocaddress.md)  
   
-## См. также  
- [DLL в Visual C\+\+](../build/dlls-in-visual-cpp.md)   
+## <a name="see-also"></a>См. также  
+ [Библиотеки DLL в Visual C++](../build/dlls-in-visual-cpp.md)   
  [LoadLibrary](http://go.microsoft.com/fwlink/p/?LinkID=259187)   
- [AfxLoadLibrary](../Topic/AfxLoadLibrary.md)
+ [AfxLoadLibrary](../mfc/reference/application-information-and-management.md#afxloadlibrary)

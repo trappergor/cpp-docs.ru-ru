@@ -18,18 +18,19 @@ caps.latest.revision: "10"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: fb525964025ce3ffce497087ec42b72aff0a4b9d
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 9e2269be27dd039357c11d38a2be83b5fc9d6504
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cc-building-reference"></a>Ссылка на сборку C/C++
 Visual C++ предоставляет два способа построения программ C/C++. Самым простым (и наиболее распространенным) способом является [сборки в среде разработки Visual C++](../../ide/building-cpp-projects-in-visual-studio.md). Другим способом является [построение из командной строки с помощью средства командной строки](../../build/building-on-the-command-line.md). В любом случае можно создать исходные файлы с помощью редактора источника Visual C++ или редактора стороннего по своему усмотрению.  
   
  Если программа использует makefile, а не VCXPROJ-файл, по-прежнему ее сборке можно в среде разработки, как [внешнем проекте](../../ide/building-external-projects.md).  
   
-## <a name="in-this-section"></a>Содержание  
+## <a name="in-this-section"></a>В этом разделе  
  [Компиляция программы на C/C++](../../build/reference/compiling-a-c-cpp-program.md)  
  Описывает компилятор, который создает объектный файл, содержащий машинный код, директивы компоновщика, разделы, внешние ссылки и имена функций и данных.  
   

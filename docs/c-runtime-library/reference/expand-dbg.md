@@ -4,12 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
-apiname:
-- _expand_dbg
+apiname: _expand_dbg
 apilocation:
 - msvcrt.dll
 - msvcr80.dll
@@ -25,38 +23,22 @@ apitype: DLLExport
 f1_keywords:
 - expand_dbg
 - _expand_dbg
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - memory blocks, changing size
 - expand_dbg function
 - _expand_dbg function
 ms.assetid: dc58c91f-72a8-48c6-b643-fe130fb6c1fd
-caps.latest.revision: 18
+caps.latest.revision: "18"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: e257f037a05c45f5b98e64ea55bd125af443b0be
-ms.openlocfilehash: e398d641cde32b90b4502b9ae38dc3918aa65704
-ms.contentlocale: ru-ru
-ms.lasthandoff: 03/30/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: e2df087072d7f34123b00acafe52c130598592a6
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="expanddbg"></a>_expand_dbg
 Изменяет размер указанного блока памяти в куче путем его расширения или сжатия (только отладочная версия).  
@@ -95,7 +77,7 @@ void *_expand_dbg(
  При успешном завершении `_expand_dbg` возвращает указатель на блок памяти, размер которого изменен. Поскольку память не перемещается, адрес совпадает с userData. Если произошла ошибка или блок не удалось расширить до запрашиваемого размера, возвращается значение `NULL`. Если происходит сбой, `errno` содержит сведения из операционной системы о причине сбоя. Дополнительные сведения о функции `errno` см. в разделе [errno, _doserrno, _sys_errlist и _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).  
   
 ## <a name="remarks"></a>Примечания  
- Функция `_expand_dbg` является отладочной версией функции _[expand](../../c-runtime-library/reference/expand.md). Если функция [_DEBUG](../../c-runtime-library/debug.md) не определена, каждый вызов функции `_expand_dbg` сокращается до вызова функции `_expand`. Функции `_expand`и `_expand_dbg` изменяют размер блока памяти в базовой куче, но возможность `_expand_dbg` поддерживает несколько возможностей отладки: буферы по обеим сторонам пользовательского участка блока для тестирования на наличие утечек, параметр типа блока для отслеживания определенных типов выделения памяти и сведения `filename`/`linenumber` для определения источника запросов выделения памяти.  
+ Функция `_expand_dbg` является отладочной версией функции _[expand](../../c-runtime-library/reference/expand.md). Если [_DEBUG](../../c-runtime-library/debug.md) не определен, каждый вызов функции `_expand_dbg` сокращается до вызова функции `_expand`. Функции `_expand`и `_expand_dbg` изменяют размер блока памяти в базовой куче, но возможность `_expand_dbg` поддерживает несколько возможностей отладки: буферы по обеим сторонам пользовательского участка блока для тестирования на наличие утечек, параметр типа блока для отслеживания определенных типов выделения памяти и сведения `filename`/`linenumber` для определения источника запросов выделения памяти.  
   
  `_expand_dbg` изменяет размер указанного блока памяти, выделяя под него немного больше пространства, чем запрашивается в `newSize`. `newSize` может быть больше или меньше размера первоначально выделенного блока памяти. Дополнительное пространство используется диспетчером кучи отладки, чтобы связать блоки памяти отладки и предоставить приложению сведения о заголовке отладки и буферы перезаписи. Изменение размера достигается либо расширением, либо сжатием исходного блока памяти. `_expand_dbg` не перемещает блок памяти, как это делает функция _[realloc_dbg](../../c-runtime-library/reference/realloc-dbg.md).  
   
@@ -173,5 +155,5 @@ Size of block after _expand_dbg of 1 more long: 164
  Вывод этой программы зависит от того, способен ли ваш компьютер расширить все разделы. Если все разделы развернуты, результат отражается в секции вывода.  
   
 ## <a name="see-also"></a>См. также  
- [Процедуры отладки](../../c-runtime-library/debug-routines.md)   
+ [Подпрограммы отладки](../../c-runtime-library/debug-routines.md)   
  [_malloc_dbg](../../c-runtime-library/reference/malloc-dbg.md)

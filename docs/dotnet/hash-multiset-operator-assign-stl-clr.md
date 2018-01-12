@@ -1,46 +1,46 @@
 ---
-title: "hash_multiset::operator= (STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::hash_multiset::operator="
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "operator= - член [STL/CLR]"
+title: "hash_multiset::operator = (STL/CLR) | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::hash_multiset::operator=
+dev_langs: C++
+helpviewer_keywords: operator= member [STL/CLR]
 ms.assetid: 1b4d5b0a-f10f-42f8-b67b-76af51c66baf
-caps.latest.revision: 8
-caps.handback.revision: 6
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "8"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: c85185743dd2ab5857b28acbacefd3842d0eadd1
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 12/21/2017
 ---
-# hash_multiset::operator= (STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Заменяет контролируемая последовательность.  
+# <a name="hashmultisetoperator-stlclr"></a>hash_multiset::operator= (STL/CLR)
+Заменяет управляемую последовательность.  
   
-## Синтаксис  
+## <a name="syntax"></a>Синтаксис  
   
 ```  
 hash_multiset<Key>% operator=(hash_multiset<Key>% right);  
 ```  
   
-#### Параметры  
- правый  
- Контейнер, которые необходимо скопировать.  
+#### <a name="parameters"></a>Параметры  
+ right  
+ Контейнер для копирования.  
   
-## Заметки  
- Член оператор копирует `right` к объекту, а затем возвращает `*this`.  Он используется, чтобы заменить контролируемая последовательность копией контролируемой последовательности в `right`.  
+## <a name="remarks"></a>Примечания  
+ Копирует оператор член `right` объекту, затем возвращает `*this`. Он позволяет заменить управляемую последовательность копией управляемой последовательности в `right`.  
   
-## Пример  
+## <a name="example"></a>Пример  
   
 ```  
 // cliext_hash_multiset_operator_as.cpp   
@@ -72,12 +72,15 @@ int main()
   
 ```  
   
-  **a b c**  
- **a b c**   
-## Требования  
- **Заголовок:**\<cliext\/hash\_set\>  
+```Output  
+a b c  
+a b c  
+```  
+  
+## <a name="requirements"></a>Требования  
+ **Заголовок:** \<cliext/hash_set >  
   
  **Пространство имен:** cliext  
   
-## См. также  
- [hash\_multiset](../dotnet/hash-multiset-stl-clr.md)
+## <a name="see-also"></a>См. также  
+ [hash_multiset (STL/CLR)](../dotnet/hash-multiset-stl-clr.md)

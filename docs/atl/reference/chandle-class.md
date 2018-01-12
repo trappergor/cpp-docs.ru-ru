@@ -22,11 +22,12 @@ caps.latest.revision: "19"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: ed254b49c61f873e1d85fd0600c371c03ac246a2
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: cd58ba8ce15bb26b4e5b768baedbf8ddfe829f2b
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="chandle-class"></a>Класс CHandle
 Этот класс предоставляет методы для создания и использования объекта дескриптора.  
@@ -37,18 +38,18 @@ ms.lasthandoff: 10/24/2017
 class CHandle
 ```  
   
-## <a name="members"></a>Члены  
+## <a name="members"></a>Участники  
   
 ### <a name="public-constructors"></a>Открытые конструкторы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[CHandle::CHandle](#chandle)|Конструктор.|  
 |[CHandle:: ~ CHandle](#dtor)|Деструктор|  
   
 ### <a name="public-methods"></a>Открытые методы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[CHandle::Attach](#attach)|Этот метод вызывается для присоединения `CHandle` объект для существующего дескриптора.|  
 |[CHandle::Close](#close)|Вызовите этот метод для закрытия `CHandle` объекта.|  
@@ -56,14 +57,14 @@ class CHandle
   
 ### <a name="public-operators"></a>Открытые операторы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[CHandle::operator ДЕСКРИПТОРА](#operator_handle)|Возвращает значение хранимого дескриптора.|  
 |[CHandle::operator =](#operator_eq)|Оператор присвоения.|  
   
 ### <a name="public-data-members"></a>Открытые члены данных  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[CHandle::m_h](#m_h)|Переменной-члена, сохранение дескриптора.|  
   

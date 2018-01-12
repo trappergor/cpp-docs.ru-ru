@@ -29,11 +29,12 @@ caps.latest.revision: "20"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: e2e3a202eb50159c43c57c96f785c74156336af8
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 6b51f8ccbac43e30202598499613d3b1c7c6e0a5
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="mbsrtowcs"></a>mbsrtowcs
 Преобразует строку многобайтовых символов в текущем языковом стандарте в соответствующую строку расширенных символов с возможностью перезапуска в середине многобайтового символа. Существует более безопасная версия этой функции; см. раздел [mbsrtowcs_s](../../c-runtime-library/reference/mbsrtowcs-s.md).  
@@ -85,7 +86,7 @@ size_t mbsrtowcs(
   
  Если параметр `mbstr` является пустым указателем, вызывается обработчик недопустимого параметра, как описано в разделе [Проверка параметров](../../c-runtime-library/parameter-validation.md). Если продолжение выполнения разрешено, эта функции задает для `errno` значение `EINVAL` и возвращает -1.  
   
- В C++ эта функция имеет шаблонную перегрузку, которая вызывает более новые и безопасные аналоги этой функции. Дополнительные сведения см. в разделе [Безопасные перегрузки шаблонов](../../c-runtime-library/secure-template-overloads.md).  
+ В C++ эта функция имеет шаблонную перегрузку, которая вызывает более новые и безопасные аналоги этой функции. Дополнительные сведения см. в разделе [Secure Template Overloads](../../c-runtime-library/secure-template-overloads.md).  
   
 ## <a name="exceptions"></a>Исключения  
  Функция `mbsrtowcs` является потокобезопасной, если ни одна из функций в текущем потоке не вызывает `setlocale`, пока выполняется данная функция, и аргумент `mbstate` не является пустым указателем.  

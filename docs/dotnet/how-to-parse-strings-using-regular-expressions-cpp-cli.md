@@ -1,34 +1,36 @@
 ---
-title: "Практическое руководство. Анализ строк с помощью регулярных выражений (C++/CLI) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/14/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "примеры [C++], строки"
-  - "разбор строк [C++]"
-  - "регулярные выражения [C++], разбор строк"
-  - "строки [C++], синтаксический разбор"
+title: "Как: синтаксический анализ строк с помощью регулярных выражений (C + +/ CLI) | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- parsing strings [C++]
+- examples [C++], strings
+- regular expressions [C++], parsing strings
+- strings [C++], parsing
 ms.assetid: 5b0c7ca3-9bba-4389-a45c-6d373cff91b0
-caps.latest.revision: 9
-caps.handback.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "9"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: 629486c98888fd8012d616c9e845e7d70a90fdcf
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 12/21/2017
 ---
-# Практическое руководство. Анализ строк с помощью регулярных выражений (C++/CLI)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-В следующем примере кода демонстрируется простой анализ строки с использованием класса <xref:System.Text.RegularExpressions.Regex> в пространстве имен <xref:System.Text.RegularExpressions?displayProperty=fullName>.  Результат: построена строка, которая содержит несколько типов разделителей слов.  При анализе строки используется класс <xref:System.Text.RegularExpressions.Regex> совместно с классом <xref:System.Text.RegularExpressions.Match>.  Затем отдельно отображается каждое слово предложения.  
+# <a name="how-to-parse-strings-using-regular-expressions-ccli"></a>Практическое руководство. Анализ строк с помощью регулярных выражений (C++/CLI)
+В следующем примере кода демонстрируется простой анализ строки с помощью <xref:System.Text.RegularExpressions.Regex> класса в <xref:System.Text.RegularExpressions?displayProperty=fullName> пространства имен. Строка, содержащая несколько типов разделителей слов создается. Строка анализируется с использованием <xref:System.Text.RegularExpressions.Regex> класса вместе с <xref:System.Text.RegularExpressions.Match> класса. Затем каждое слово в предложении выводится отдельно.  
   
-## Пример  
+## <a name="example"></a>Пример  
   
 ```  
 // regex_parse.cpp  
@@ -62,6 +64,6 @@ int main( )
 }  
 ```  
   
-## См. также  
- [Регулярные выражения в .NET Framework](../Topic/.NET%20Framework%20Regular%20Expressions.md)   
- [программирование .NET с использованием C\+\+\/CLI](../dotnet/dotnet-programming-with-cpp-cli-visual-cpp.md)
+## <a name="see-also"></a>См. также  
+ [Регулярные выражения в .NET Framework](/dotnet/standard/base-types/regular-expressions)   
+ [Программирование .NET с использованием C++/CLI (Visual C++)](../dotnet/dotnet-programming-with-cpp-cli-visual-cpp.md)

@@ -22,11 +22,12 @@ caps.latest.revision: "22"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 2f4d10fa1e70eee029f9ecca5118a010c3972cc2
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 12b7c8c66a092a92ef7fce25ce283f5145d9f910
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="caxwindow2t-class"></a>Класс CAxWindow2T
 Этот класс предоставляет методы для работы с окном, размещает элемент ActiveX, а также поддержка размещения Лицензированные элементы управления ActiveX.  
@@ -46,17 +47,17 @@ template <class TBase = CWindow>
  *TBase*  
  Класс, от которого `CAxWindowT` является производным.  
   
-## <a name="members"></a>Члены  
+## <a name="members"></a>Участники  
   
 ### <a name="public-constructors"></a>Открытые конструкторы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[CAxWindow2T::CAxWindow2T](#caxwindow2t)|Создает объект `CAxWindow2T`.|  
   
 ### <a name="public-methods"></a>Открытые методы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[CAxWindow2T::Create](#create)|Создает главное окно.|  
 |[CAxWindow2T::CreateControlLic](#createcontrollic)|Создает лицензированный элемент управления ActiveX, инициализирует его и размещает в указанном окне.|  
@@ -65,7 +66,7 @@ template <class TBase = CWindow>
   
 ### <a name="public-operators"></a>Открытые операторы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[CAxWindow2T::operator =](#operator_eq)|Назначает `HWND` к существующему `CAxWindow2T` объекта.|  
   

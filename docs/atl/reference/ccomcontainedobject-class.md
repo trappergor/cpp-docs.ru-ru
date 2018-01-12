@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-windows
+ms.technology: cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
@@ -16,23 +15,22 @@ f1_keywords:
 - ATLCOM/ATL::CComContainedObject::GetControllingUnknown
 - ATLCOM/ATL::CComContainedObject::QueryInterface
 - ATLCOM/ATL::CComContainedObject::Release
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - aggregate objects [C++], in ATL
 - aggregation [C++], ATL objects
 - CComContainedObject class
 ms.assetid: e8616b41-c200-47b8-bf2c-fb9f713ebdad
-caps.latest.revision: 20
+caps.latest.revision: "20"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 3579d4080b4dba130b58592fa47efd636805ed1d
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
-ms.sourcegitcommit: c55726a1728185f699afbac4ba68a6dc0f70c2bf
-ms.openlocfilehash: e9d580a8027e37ce2db5e70b72c4f8cf2a99e516
-ms.contentlocale: ru-ru
-ms.lasthandoff: 10/09/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="ccomcontainedobject-class"></a>Класс CComContainedObject
 Этот класс реализует [IUnknown](http://msdn.microsoft.com/library/windows/desktop/ms680509) делегирование для владельца объекта **IUnknown**.  
@@ -51,18 +49,18 @@ class CComContainedObject : public Base
  `Base`  
  Класс, производный от [CComObjectRoot](../../atl/reference/ccomobjectroot-class.md) или [CComObjectRootEx](../../atl/reference/ccomobjectrootex-class.md).  
   
-## <a name="members"></a>Члены  
+## <a name="members"></a>Участники  
   
 ### <a name="public-constructors"></a>Открытые конструкторы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[CComContainedObject::CComContainedObject](#ccomcontainedobject)|Конструктор. Инициализирует член указатель на объект-владелец `IUnknown`.|  
 |[CComContainedObject:: ~ CComContainedObject](#dtor)|Деструктор|  
   
 ### <a name="public-methods"></a>Открытые методы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[CComContainedObject::AddRef](#addref)|Увеличивает счетчик ссылок на объект-владелец.|  
 |[CComContainedObject::GetControllingUnknown](#getcontrollingunknown)|Извлекает объект-владелец `IUnknown`.|  
@@ -161,4 +159,3 @@ STDMETHOD_(ULONG, Release)();
   
 ## <a name="see-also"></a>См. также  
  [Общие сведения о классе](../../atl/atl-class-overview.md)
-

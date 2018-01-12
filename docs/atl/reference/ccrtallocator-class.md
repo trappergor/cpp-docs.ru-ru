@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-windows
+ms.technology: cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
@@ -14,38 +13,22 @@ f1_keywords:
 - ATLCORE/ATL::CCRTAllocator::Allocate
 - ATLCORE/ATL::CCRTAllocator::Free
 - ATLCORE/ATL::CCRTAllocator::Reallocate
-dev_langs:
-- C++
-helpviewer_keywords:
-- CCRTAllocator class
+dev_langs: C++
+helpviewer_keywords: CCRTAllocator class
 ms.assetid: 3e1b8cb0-859a-41ab-8e93-6f0b5ceca49d
-caps.latest.revision: 19
+caps.latest.revision: "19"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 604a4bf49490ad2599c857eb3afd527d67e1e25b
-ms.openlocfilehash: 5154a095409705e96dee6f52c67d7c23b0e6691f
-ms.contentlocale: ru-ru
-ms.lasthandoff: 02/24/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: 84c8f800e0b68e23fe33ca0a7e1c1d977bcc344e
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="ccrtallocator-class"></a>Класс CCRTAllocator
-Этот класс предоставляет методы для управления памяти с помощью подпрограммы памяти CRT.  
+Этот класс предоставляет методы для управления памяти с помощью памяти подпрограммы CRT.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -53,11 +36,11 @@ ms.lasthandoff: 02/24/2017
 class ATL::CCRTAllocator
 ```  
   
-## <a name="members"></a>Члены  
+## <a name="members"></a>Участники  
   
 ### <a name="public-methods"></a>Открытые методы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[CCRTAllocator::Allocate](#allocate)|(Статический) Этот метод используется для выделения памяти.|  
 |[CCRTAllocator::Free](#free)|(Статический) Этот метод используется для освобождения памяти.|  
@@ -84,10 +67,10 @@ static __declspec(allocator) void* Allocate(size_t nBytes) throw();
  Возвращает указатель void на выделенное пространство или значение NULL, если памяти недостаточно.  
   
 ### <a name="remarks"></a>Примечания  
- Выделяет память. В разделе [malloc](../../c-runtime-library/reference/malloc.md) подробнее.  
+ Выделяет память. В разделе [malloc](../../c-runtime-library/reference/malloc.md) для получения дополнительных сведений.  
   
 ##  <a name="free"></a>CCRTAllocator::Free  
- Эта функция статических для освобождения памяти.  
+ Вызовите эту статическую функцию, чтобы освободить память.  
   
 ```
 static void Free(void* p) throw();
@@ -98,7 +81,7 @@ static void Free(void* p) throw();
  Указатель на выделенную область памяти.  
   
 ### <a name="remarks"></a>Примечания  
- Освобождает выделенную память. В разделе [свободного](../../c-runtime-library/reference/free.md) подробнее.  
+ Освобождает выделенную память. В разделе [свободного](../../c-runtime-library/reference/free.md) для получения дополнительных сведений.  
   
 ##  <a name="reallocate"></a>CCRTAllocator::Reallocate  
  Вызовите эту статическую функцию для повторного выделения памяти.  
@@ -124,4 +107,3 @@ static __declspec(allocator) void* Reallocate(void* p, size_t nBytes) throw();
  [Класс CHeapPtr](../../atl/reference/cheapptr-class.md)   
  [Класс CComAllocator](../../atl/reference/ccomallocator-class.md)   
  [Общие сведения о классе](../../atl/atl-class-overview.md)
-

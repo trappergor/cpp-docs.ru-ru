@@ -4,79 +4,99 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-windows
+ms.technology: cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
 - CStringT
-- No header/ATL::CStringT
-- No header/ATL::CStringT::CStringT
-- No header/ATL::CStringT::AllocSysString
-- No header/ATL::CStringT::AnsiToOem
-- No header/ATL::CStringT::AppendFormat
-- No header/ATL::CStringT::Collate
-- No header/ATL::CStringT::CollateNoCase
-- No header/ATL::CStringT::Compare
-- No header/ATL::CStringT::CompareNoCase
-- No header/ATL::CStringT::Delete
-- No header/ATL::CStringT::Find
-- No header/ATL::CStringT::FindOneOf
-- No header/ATL::CStringT::Format
-- No header/ATL::CStringT::FormatMessage
-- No header/ATL::CStringT::FormatMessageV
-- No header/ATL::CStringT::FormatV
-- No header/ATL::CStringT::GetEnvironmentVariable
-- No header/ATL::CStringT::Insert
-- No header/ATL::CStringT::Left
-- No header/ATL::CStringT::LoadString
-- No header/ATL::CStringT::MakeLower
-- No header/ATL::CStringT::MakeReverse
-- No header/ATL::CStringT::MakeUpper
-- No header/ATL::CStringT::Mid
-- No header/ATL::CStringT::OemToAnsi
-- No header/ATL::CStringT::Remove
-- No header/ATL::CStringT::Replace
-- No header/ATL::CStringT::ReverseFind
-- No header/ATL::CStringT::Right
-- No header/ATL::CStringT::SetSysString
-- No header/ATL::CStringT::SpanExcluding
-- No header/ATL::CStringT::SpanIncluding
-- No header/ATL::CStringT::Tokenize
-- No header/ATL::CStringT::Trim
-- No header/ATL::CStringT::TrimLeft
-- No header/ATL::CStringT::TrimRight
-dev_langs:
-- C++
+- ATLSTR/ATL::CStringT
+- ATLSTR/ATL::CStringT::CStringT
+- ATLSTR/ATL::CStringT::AllocSysString
+- ATLSTR/ATL::CStringT::AnsiToOem
+- ATLSTR/ATL::CStringT::AppendFormat
+- ATLSTR/ATL::CStringT::Collate
+- ATLSTR/ATL::CStringT::CollateNoCase
+- ATLSTR/ATL::CStringT::Compare
+- ATLSTR/ATL::CStringT::CompareNoCase
+- ATLSTR/ATL::CStringT::Delete
+- ATLSTR/ATL::CStringT::Find
+- ATLSTR/ATL::CStringT::FindOneOf
+- ATLSTR/ATL::CStringT::Format
+- ATLSTR/ATL::CStringT::FormatMessage
+- ATLSTR/ATL::CStringT::FormatMessageV
+- ATLSTR/ATL::CStringT::FormatV
+- ATLSTR/ATL::CStringT::GetEnvironmentVariable
+- ATLSTR/ATL::CStringT::Insert
+- ATLSTR/ATL::CStringT::Left
+- ATLSTR/ATL::CStringT::LoadString
+- ATLSTR/ATL::CStringT::MakeLower
+- ATLSTR/ATL::CStringT::MakeReverse
+- ATLSTR/ATL::CStringT::MakeUpper
+- ATLSTR/ATL::CStringT::Mid
+- ATLSTR/ATL::CStringT::OemToAnsi
+- ATLSTR/ATL::CStringT::Remove
+- ATLSTR/ATL::CStringT::Replace
+- ATLSTR/ATL::CStringT::ReverseFind
+- ATLSTR/ATL::CStringT::Right
+- ATLSTR/ATL::CStringT::SetSysString
+- ATLSTR/ATL::CStringT::SpanExcluding
+- ATLSTR/ATL::CStringT::SpanIncluding
+- ATLSTR/ATL::CStringT::Tokenize
+- ATLSTR/ATL::CStringT::Trim
+- ATLSTR/ATL::CStringT::TrimLeft
+- ATLSTR/ATL::CStringT::TrimRight
+- CSTRINGT/CStringT
+- CSTRINGT/CStringT::CStringT
+- CSTRINGT/CStringT::AllocSysString
+- CSTRINGT/CStringT::AnsiToOem
+- CSTRINGT/CStringT::AppendFormat
+- CSTRINGT/CStringT::Collate
+- CSTRINGT/CStringT::CollateNoCase
+- CSTRINGT/CStringT::Compare
+- CSTRINGT/CStringT::CompareNoCase
+- CSTRINGT/CStringT::Delete
+- CSTRINGT/CStringT::Find
+- CSTRINGT/CStringT::FindOneOf
+- CSTRINGT/CStringT::Format
+- CSTRINGT/CStringT::FormatMessage
+- CSTRINGT/CStringT::FormatMessageV
+- CSTRINGT/CStringT::FormatV
+- CSTRINGT/CStringT::GetEnvironmentVariable
+- CSTRINGT/CStringT::Insert
+- CSTRINGT/CStringT::Left
+- CSTRINGT/CStringT::LoadString
+- CSTRINGT/CStringT::MakeLower
+- CSTRINGT/CStringT::MakeReverse
+- CSTRINGT/CStringT::MakeUpper
+- CSTRINGT/CStringT::Mid
+- CSTRINGT/CStringT::OemToAnsi
+- CSTRINGT/CStringT::Remove
+- CSTRINGT/CStringT::Replace
+- CSTRINGT/CStringT::ReverseFind
+- CSTRINGT/CStringT::Right
+- CSTRINGT/CStringT::SetSysString
+- CSTRINGT/CStringT::SpanExcluding
+- CSTRINGT/CStringT::SpanIncluding
+- CSTRINGT/CStringT::Tokenize
+- CSTRINGT/CStringT::Trim
+- CSTRINGT/CStringT::TrimLeft
+- CSTRINGT/CStringT::TrimRight
+dev_langs: C++
 helpviewer_keywords:
 - strings [C++], in ATL
 - shared classes, CStringT
 - CStringT class
 ms.assetid: 7cacc59c-425f-40f1-8f5b-6db921318ec9
-caps.latest.revision: 33
+caps.latest.revision: "33"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 128bd124c2536d86c8b673b54abc4b5505526b41
-ms.openlocfilehash: 4f5e485611b1a8f38375c9a95a959ddf48e3663c
-ms.contentlocale: ru-ru
-ms.lasthandoff: 05/10/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: 2d3b718249603c34d5a9a13eec966b586151f2e7
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cstringt-class"></a>Класс CStringT
 Этот класс представляет `CStringT` объекта.  
@@ -122,18 +142,18 @@ public CSimpleStringT<BaseType,
   
      Класс не требуется поддержка CRT и ищет строки ресурса, используя стандартный алгоритм поиска MFC.  
   
-## <a name="members"></a>Члены  
+## <a name="members"></a>Участники  
   
 ### <a name="public-constructors"></a>Открытые конструкторы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[CStringT::CStringT](#cstringt)|Создает `CStringT` объекта различными способами.|  
 |[CStringT:: ~ CStringT](#_dtorcstringt)|Уничтожает объект `CStringT`.|  
   
 ### <a name="public-methods"></a>Открытые методы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[CStringT::AllocSysString](#allocsysstring)|Выделяет `BSTR` из `CStringT` данных.|  
 |[CStringT::AnsiToOem](#ansitooem)|Такое преобразование на месте из кодировки ANSI в набор символов OEM.|  
@@ -202,7 +222,7 @@ public CSimpleStringT<BaseType,
  `CString`, `CStringA`, и `CStringW` экспортируются из библиотеки DLL MFC (MFC90. Библиотека DLL), никогда не от пользователя библиотеки DLL. Это делается во избежание `CStringT` из которой определен несколько раз.  
   
 > [!NOTE]
->  Если обнаружены ошибки компоновщика при экспорте `CString`-класс, производный от расширения MFC DLL в Visual C++ .NET 2002, а также инструкции по решению как описано в статье базы знаний «Связывание ошибок при вы импорта создания классы» (номер Q309801), следует удалить этот код, так как эта проблема была исправлена в Visual C++ .NET 2003. Можно найти статьи базы знаний в [http://support.microsoft.com/support](http://support.microsoft.com/support).  
+>  Если код содержит решения для ошибки компоновщика, которые описаны в [классы Linking Errors When You Import CString-Derived» (номер Q309801)](https://support.microsoft.com/help/309801/you-may-receive-an-lnk2019-error-message-when-you-build-a-visual-c-200), этот код можно удалить. Больше не используется.  
   
  В приложениях MFC доступны перечисленные ниже строки:  
   
@@ -239,13 +259,13 @@ public CSimpleStringT<BaseType,
 -   Управление пользовательской памяти буферы строк. Дополнительные сведения см. в разделе [управление памятью и CStringT](../../atl-mfc-shared/memory-management-with-cstringt.md).  
   
 ## <a name="cstringt-predefined-types"></a>CStringT предопределенные типы  
- Поскольку `CStringT` используется аргумент шаблона для определения типа символа (либо [wchar_t](../../c-runtime-library/standard-types.md) или [char](../../c-runtime-library/standard-types.md)) поддерживается, типы параметров метода, может быть затруднена время от времени. Чтобы упростить эту проблему, набор предопределенных типов определяется и используется во всей `CStringT` класса. В следующей таблице перечислены различные типы:  
+ Поскольку `CStringT` используется аргумент шаблона для определения типа символ (либо [wchar_t](../../c-runtime-library/standard-types.md) или [char](../../c-runtime-library/standard-types.md)) поддерживается, типы параметров метода, может быть затруднена время от времени. Чтобы упростить эту проблему, набор предопределенных типов определяется и используется во всей `CStringT` класса. В следующей таблице перечислены различные типы:  
   
-|Имя|Описание|  
+|name|Описание:|  
 |----------|-----------------|  
-|`XCHAR`|Отдельный символ (либо `wchar_t` или `char`) с тем же типом символа как `CStringT` объект.|  
+|`XCHAR`|Отдельный символ (либо `wchar_t` или `char`) с тем же типом символ, `CStringT` объекта.|  
 |**YCHAR**|Отдельный символ (либо `wchar_t` или `char`) с противоположной символьным типом как `CStringT` объект.|  
-|`PXSTR`|Указатель на строку знаков (либо `wchar_t` или `char`) с тем же типом символа как `CStringT` объект.|  
+|`PXSTR`|Указатель на строку знаков (либо `wchar_t` или `char`) с тем же типом символ, `CStringT` объекта.|  
 |**PYSTR**|Указатель на строку знаков (либо `wchar_t` или `char`) с противоположной символьным типом как `CStringT` объект.|  
 |`PCXSTR`|Указатель на **const** строка символов (либо `wchar_t` или `char`) с тем же типом символ, `CStringT` объекта.|  
 |**PCYSTR**|Указатель на **const** строка символов (либо `wchar_t` или `char`) с противоположной символьным типом как `CStringT` объект.|  
@@ -278,14 +298,16 @@ BSTR AllocSysString() const;
 ### <a name="remarks"></a>Примечания  
  В приложениях MFC [CMemoryException класса](../../mfc/reference/cmemoryexception-class.md) создается, если существует нехватка памяти. В программах ATL [CAtlException](../../atl/reference/catlexception-class.md) возникает исключение. Эта функция обычно используется для возврата строки для автоматизации.  
   
- Как правило Если эта строка передается в функцию COM в качестве] параметра, то это требует, чтобы освободить строку участник. Это можно сделать с помощью [SysFreeString](http://msdn.microsoft.com/en-us/8f230ee3-5f6e-4cb9-a910-9c90b754dcd3), как описано в [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)]. Дополнительные сведения см. в разделе [распределение и освобождение памяти для BSTR](../../atl-mfc-shared/allocating-and-releasing-memory-for-a-bstr.md).  
+
+ Как правило Если эта строка передается в функцию COM в качестве] параметра, то это требует, чтобы освободить строку участник. Это можно сделать с помощью [SysFreeString](https://msdn.microsoft.com/library/windows/desktop/ms221481.aspx), как описано в Windows SDK. Дополнительные сведения см. в разделе [распределение и освобождение памяти для BSTR](../../atl-mfc-shared/allocating-and-releasing-memory-for-a-bstr.md).  
   
- Дополнительные сведения о функции выделения OLE в Windows см. в разделе [SysAllocString](http://msdn.microsoft.com/en-us/9e0437a2-9b4a-4576-88b0-5cb9d08ca29b) в [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
+ Дополнительные сведения о функции выделения OLE в Windows см. в разделе [SysAllocString](https://msdn.microsoft.com/library/windows/desktop/ms221458.aspx) в Windows SDK.  
+
   
 ### <a name="example"></a>Пример  
  В следующем примере показано использование функции `CStringT::AllocSysString`.  
   
- [!code-cpp[NVC_ATLMFC_Utilities #105](../../atl-mfc-shared/codesnippet/cpp/cstringt-class_1.cpp)]  
+ [!code-cpp[NVC_ATLMFC_Utilities#105](../../atl-mfc-shared/codesnippet/cpp/cstringt-class_1.cpp)]  
   
 ##  <a name="ansitooem"></a>CStringT::AnsiToOem  
  Преобразует все символы в этом `CStringT` объекта из кодировки ANSI в набор символов OEM.  
@@ -298,7 +320,7 @@ void AnsiToOem();
  Функция недоступна при `_UNICODE` определен.  
   
 ### <a name="example"></a>Пример  
- [!code-cpp[NVC_ATLMFC_Utilities #106](../../atl-mfc-shared/codesnippet/cpp/cstringt-class_2.cpp)]  
+ [!code-cpp[NVC_ATLMFC_Utilities#106](../../atl-mfc-shared/codesnippet/cpp/cstringt-class_2.cpp)]  
   
 ##  <a name="appendformat"></a>CStringT::AppendFormat  
  Добавляет форматированных данных в существующий `CStringT` объекта.  
@@ -322,7 +344,7 @@ void __cdecl AppendFormat(UINT nFormatID, [, argument] ...);
  Эта функция форматирует и добавляет серию символов и значений в `CStringT`. Каждый необязательный аргумент (если есть) преобразуется и добавлены согласно соответствующей спецификацией формата в `pszFormat` или из строкового ресурса, обозначенную `nFormatID`.  
   
 ### <a name="example"></a>Пример  
- [!code-cpp[NVC_ATLMFC_Utilities #107](../../atl-mfc-shared/codesnippet/cpp/cstringt-class_3.cpp)]  
+ [!code-cpp[NVC_ATLMFC_Utilities#107](../../atl-mfc-shared/codesnippet/cpp/cstringt-class_3.cpp)]  
   
 ##  <a name="collate"></a>CStringT::Collate  
  Сравнивает две строки с помощью универсальная текстовая функция `_tcscoll`.  
@@ -359,7 +381,7 @@ int CollateNoCase(PCXSTR psz) const throw();
  Универсальная текстовая функция `_tcscoll`, которая определена в TCHAR. Символ «H» сопоставляет либо `stricoll`, `wcsicoll`, или `_mbsicoll`, в зависимости от кодировки, определенные во время компиляции. Каждая функция выполняет сравнение без учета регистра строк, согласно кодовой странице в настоящий момент. Дополнительные сведения см. в разделе [strcoll wcscoll, _mbscoll, _strcoll_l, _wcscoll_l, _mbscoll_l](../../c-runtime-library/reference/strcoll-wcscoll-mbscoll-strcoll-l-wcscoll-l-mbscoll-l.md).  
   
 ### <a name="example"></a>Пример  
- [!code-cpp[NVC_ATLMFC_Utilities #109](../../atl-mfc-shared/codesnippet/cpp/cstringt-class_4.cpp)]  
+ [!code-cpp[NVC_ATLMFC_Utilities#109](../../atl-mfc-shared/codesnippet/cpp/cstringt-class_4.cpp)]  
   
 ##  <a name="compare"></a>CStringT::Compare  
  Сравнивает две строки (с учетом регистра).  
@@ -383,7 +405,7 @@ int Compare(PCXSTR psz) const;
 ### <a name="example"></a>Пример  
  В следующем примере показано использование функции `CStringT::Compare`.  
   
- [!code-cpp[NVC_ATLMFC_Utilities #110](../../atl-mfc-shared/codesnippet/cpp/cstringt-class_5.cpp)]  
+ [!code-cpp[NVC_ATLMFC_Utilities#110](../../atl-mfc-shared/codesnippet/cpp/cstringt-class_5.cpp)]  
   
 ##  <a name="comparenocase"></a>CStringT::CompareNoCase  
  Сравнивает две строки (без учета регистра).  
@@ -403,7 +425,7 @@ int CompareNoCase(PCXSTR psz) const throw();
  Универсальная текстовая функция `_tcsicmp`, которая определена в TCHAR. Символ «H» сопоставляет либо `_stricmp`, `_wcsicmp` или `_mbsicmp`, в зависимости от кодировки, определенные во время компиляции. Каждая функция выполняет сравнение без учета регистра строк. Сравнение зависит от `LC_CTYPE` аспект языкового стандарта, но не `LC_COLLATE`. Дополнительные сведения см. в разделе [_stricmp, _wcsicmp, _mbsicmp, _stricmp_l, _wcsicmp_l, _mbsicmp_l](../../c-runtime-library/reference/stricmp-wcsicmp-mbsicmp-stricmp-l-wcsicmp-l-mbsicmp-l.md).  
   
 ### <a name="example"></a>Пример  
- [!code-cpp[NVC_ATLMFC_Utilities #111](../../atl-mfc-shared/codesnippet/cpp/cstringt-class_6.cpp)]  
+ [!code-cpp[NVC_ATLMFC_Utilities#111](../../atl-mfc-shared/codesnippet/cpp/cstringt-class_6.cpp)]  
   
 ##  <a name="cstringt"></a>CStringT::CStringT  
  Создает объект `CStringT`.  
@@ -541,7 +563,7 @@ CStringT(const YCHAR* pch, int nLength, IAtlStringMgr* pStringMgr) :
 >  Несмотря на то, что можно создать `CStringT` экземпляры, которые содержат внедренные символы null, не рекомендуется его. Вызов методов и операторов для `CStringT` объектов, которые содержат внедренные символы null может привести к непредвиденным результатам.  
   
 ### <a name="example"></a>Пример  
- [!code-cpp[NVC_ATLMFC_Utilities #112](../../atl-mfc-shared/codesnippet/cpp/cstringt-class_7.cpp)]  
+ [!code-cpp[NVC_ATLMFC_Utilities#112](../../atl-mfc-shared/codesnippet/cpp/cstringt-class_7.cpp)]  
   
 ##  <a name="_dtorcstringt"></a>CStringT:: ~ CStringT  
  Уничтожает `CStringT` объекта.  
@@ -574,7 +596,7 @@ int Delete(int iIndex, int nCount = 1);
  Если `nCount` длиннее, чем строка, остальная часть строки будут удалены.  
   
 ### <a name="example"></a>Пример  
- [!code-cpp[NVC_ATLMFC_Utilities #113](../../atl-mfc-shared/codesnippet/cpp/cstringt-class_8.cpp)]  
+ [!code-cpp[NVC_ATLMFC_Utilities#113](../../atl-mfc-shared/codesnippet/cpp/cstringt-class_8.cpp)]  
   
 ```Output  
 Before: Soccer is best,
@@ -608,7 +630,7 @@ int Find(XCHAR ch, int iStart=0) const throw();
  Функция перегружен, чтобы принять оба одного символа (аналогично функции времени выполнения `strchr`) и строки (аналогично `strstr`).  
   
 ### <a name="example"></a>Пример  
- [!code-cpp[NVC_ATLMFC_Utilities #114](../../atl-mfc-shared/codesnippet/cpp/cstringt-class_9.cpp)]  
+ [!code-cpp[NVC_ATLMFC_Utilities#114](../../atl-mfc-shared/codesnippet/cpp/cstringt-class_9.cpp)]  
   
 ##  <a name="findoneof"></a>CStringT::FindOneOf  
  Выполняет поиск первого символа, который соответствует любому символу, содержащихся в этой строке `pszCharSet`.  
@@ -628,7 +650,7 @@ int FindOneOf(PCXSTR pszCharSet) const throw();
  Находит первое вхождение любого символа в `pszCharSet`.  
   
 ### <a name="example"></a>Пример  
- [!code-cpp[NVC_ATLMFC_Utilities #115](../../atl-mfc-shared/codesnippet/cpp/cstringt-class_10.cpp)]  
+ [!code-cpp[NVC_ATLMFC_Utilities#115](../../atl-mfc-shared/codesnippet/cpp/cstringt-class_10.cpp)]  
   
 ##  <a name="format"></a>CStringT::Format  
  Записывает форматированные данные `CStringT` так же, как [sprintf_s](../../c-runtime-library/reference/sprintf-s-sprintf-s-l-swprintf-s-swprintf-s-l.md) форматирует данные в стиле C массив символов.  
@@ -653,12 +675,12 @@ void __cdecl Format(PCXSTR pszFormat,  [, argument] ...);
   
  Вызов завершится ошибкой, если сам объект строки предлагается как параметр `Format`. Например следующий код приведет к непредсказуемым результатам:  
   
- [!code-cpp[NVC_ATLMFC_Utilities 116](../../atl-mfc-shared/codesnippet/cpp/cstringt-class_11.cpp)]  
+ [!code-cpp[NVC_ATLMFC_Utilities#116](../../atl-mfc-shared/codesnippet/cpp/cstringt-class_11.cpp)]  
   
  Дополнительные сведения см. в разделе [Синтаксис описания формата: функции printf и wprintf](../../c-runtime-library/format-specification-syntax-printf-and-wprintf-functions.md).  
   
 ### <a name="example"></a>Пример  
- [!code-cpp[NVC_ATLMFC_Utilities #117](../../atl-mfc-shared/codesnippet/cpp/cstringt-class_12.cpp)]  
+ [!code-cpp[NVC_ATLMFC_Utilities#117](../../atl-mfc-shared/codesnippet/cpp/cstringt-class_12.cpp)]  
   
 ##  <a name="formatmessage"></a>CStringT::FormatMessage  
  Форматирует строку сообщения.  
@@ -684,10 +706,10 @@ void __cdecl FormatMessage(PCXSTR pszFormat, [, argument]...);
 > [!NOTE]
 > `FormatMessage`пытается выделить системную память для вновь форматируемой строки. Если эта попытка завершается неудачей, исключение памяти автоматически создается исключение.  
   
- Каждой вставки должен иметь соответствующий следующий параметр `pszFormat` или `nFormatID` параметра. В тексте сообщения для динамического форматирования сообщения поддерживаются несколько escape-последовательности. Дополнительные сведения см. в разделе Windows [FormatMessage](http://msdn.microsoft.com/library/windows/desktop/ms679351) функционировать в [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
+ Каждой вставки должен иметь соответствующий следующий параметр `pszFormat` или `nFormatID` параметра. В тексте сообщения для динамического форматирования сообщения поддерживаются несколько escape-последовательности. Дополнительные сведения см. в разделе Windows [FormatMessage](http://msdn.microsoft.com/library/windows/desktop/ms679351) функции в Windows SDK.  
   
 ### <a name="example"></a>Пример  
- [!code-cpp[NVC_ATLMFC_Utilities #118](../../atl-mfc-shared/codesnippet/cpp/cstringt-class_13.cpp)]  
+ [!code-cpp[NVC_ATLMFC_Utilities#118](../../atl-mfc-shared/codesnippet/cpp/cstringt-class_13.cpp)]  
   
 ##  <a name="formatmessagev"></a>CStringT::FormatMessageV  
  Форматирование строки сообщения при помощи переменное число аргументов.  
@@ -709,7 +731,7 @@ void FormatMessageV(PCXSTR pszFormat, va_list* pArgList);
 > [!NOTE]
 > `FormatMessageV`вызовы [CStringT::FormatMessage](#formatmessage), который пытается выделить системной памяти для вновь форматируемой строки. Если эта попытка завершается неудачей, исключение памяти автоматически создается исключение.  
   
- Дополнительные сведения см. в разделе Windows [FormatMessage](http://msdn.microsoft.com/library/windows/desktop/ms679351) функционировать в [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
+ Дополнительные сведения см. в разделе Windows [FormatMessage](http://msdn.microsoft.com/library/windows/desktop/ms679351) функции в Windows SDK.  
   
 ##  <a name="formatv"></a>CStringT::FormatV  
  Форматирование строки сообщения при помощи переменное число аргументов.  
@@ -729,9 +751,9 @@ void FormatV(PCXSTR pszFormat, va_list args);
  Записывает форматированную строку и переменный список аргументов для `CStringT` строки в том же, как `vsprintf_s` форматирует данные в стиле C массив символов.  
   
 ### <a name="example"></a>Пример  
- [!code-cpp[NVC_ATLMFC_Utilities #119](../../atl-mfc-shared/codesnippet/cpp/cstringt-class_14.cpp)]  
+ [!code-cpp[NVC_ATLMFC_Utilities#119](../../atl-mfc-shared/codesnippet/cpp/cstringt-class_14.cpp)]  
   
- [!code-cpp[NVC_ATLMFC_Utilities #120](../../atl-mfc-shared/codesnippet/cpp/cstringt-class_15.cpp)]  
+ [!code-cpp[NVC_ATLMFC_Utilities#120](../../atl-mfc-shared/codesnippet/cpp/cstringt-class_15.cpp)]  
   
 ##  <a name="getenvironmentvariable"></a>CStringT::GetEnvironmentVariable  
  Задает строковое значение указанной переменной среды.  
@@ -751,7 +773,7 @@ BOOL GetEnvironmentVariable(PCXSTR pszVar);
  Получает значение указанной переменной из блок среды вызывающего процесса. Значение в виде символом null строку символов.  
   
 ### <a name="example"></a>Пример  
- [!code-cpp[NVC_ATLMFC_Utilities #121](../../atl-mfc-shared/codesnippet/cpp/cstringt-class_16.cpp)]  
+ [!code-cpp[NVC_ATLMFC_Utilities#121](../../atl-mfc-shared/codesnippet/cpp/cstringt-class_16.cpp)]  
   
 ##  <a name="insert"></a>CStringT::Insert  
  Вставляет символ или подстроку с указанным индексом в строке.  
@@ -778,7 +800,7 @@ int Insert(int iIndex, XCHAR ch);
  `iIndex` Идентифицирует первый символ, который будет перемещен, чтобы освободить место для символа или подстроки. Если `nIndex` равен нулю, курсор будет выполняться перед всю строку. Если `nIndex` больше, чем длина строки, функция будет объединения присутствует строки и новые материалы, предоставляемые либо `ch` или `psz`.  
   
 ### <a name="example"></a>Пример  
- [!code-cpp[NVC_ATLMFC_Utilities #122](../../atl-mfc-shared/codesnippet/cpp/cstringt-class_17.cpp)]  
+ [!code-cpp[NVC_ATLMFC_Utilities#122](../../atl-mfc-shared/codesnippet/cpp/cstringt-class_17.cpp)]  
   
 ##  <a name="left"></a>CStringT::Left  
  Извлекает `nCount` самых левых символов из этого объекта `CStringT` и возвращает копию извлеченной подстроки.  
@@ -800,7 +822,7 @@ CStringT Left(int nCount) const;
  Для многобайтовых кодировок (MBCS) значение `nCount` обрабатывает каждую 8-разрядную последовательность как один символ, поэтому значение `nCount` возвращает количество многобайтовых символов, умноженное на 2.  
   
 ### <a name="example"></a>Пример  
- [!code-cpp[NVC_ATLMFC_Utilities #123](../../atl-mfc-shared/codesnippet/cpp/cstringt-class_18.cpp)]  
+ [!code-cpp[NVC_ATLMFC_Utilities#123](../../atl-mfc-shared/codesnippet/cpp/cstringt-class_18.cpp)]  
   
 ##  <a name="loadstring"></a>CStringT::LoadString  
  Считывает строку ресурса Windows, определяется `nID`, в существующую коллекцию `CStringT` объекта.  
@@ -828,7 +850,7 @@ BOOL LoadString(UINT nID);
  Загрузка строковых ресурсов ( `nID`) из указанного модуля ( `hInstance`) с использованием указанного языка ( `wLanguage`).  
   
 ### <a name="example"></a>Пример  
- [!code-cpp[NVC_ATLMFC_Utilities #124](../../atl-mfc-shared/codesnippet/cpp/cstringt-class_19.cpp)]  
+ [!code-cpp[NVC_ATLMFC_Utilities#124](../../atl-mfc-shared/codesnippet/cpp/cstringt-class_19.cpp)]  
   
 ##  <a name="makelower"></a>CStringT::MakeLower  
  Преобразует `CStringT` объекта в строку в нижний регистр.  
@@ -841,7 +863,7 @@ CStringT& MakeLower();
  Результирующая строка нижнего регистра.  
   
 ### <a name="example"></a>Пример  
- [!code-cpp[NVC_ATLMFC_Utilities #125](../../atl-mfc-shared/codesnippet/cpp/cstringt-class_20.cpp)]  
+ [!code-cpp[NVC_ATLMFC_Utilities#125](../../atl-mfc-shared/codesnippet/cpp/cstringt-class_20.cpp)]  
   
 ##  <a name="makereverse"></a>CStringT::MakeReverse  
  Меняет порядок символов в `CStringT` объекта.  
@@ -854,7 +876,7 @@ CStringT& MakeReverse();
  Полученный в обратном направлении строки.  
   
 ### <a name="example"></a>Пример  
- [!code-cpp[NVC_ATLMFC_Utilities #126](../../atl-mfc-shared/codesnippet/cpp/cstringt-class_21.cpp)]  
+ [!code-cpp[NVC_ATLMFC_Utilities#126](../../atl-mfc-shared/codesnippet/cpp/cstringt-class_21.cpp)]  
   
 ##  <a name="makeupper"></a>CStringT::MakeUpper  
  Преобразует `CStringT` объекта в строку в верхнем регистре.  
@@ -869,7 +891,7 @@ CStringT& MakeUpper();
 ### <a name="remarks"></a>Примечания  
   
 ### <a name="example"></a>Пример  
- [!code-cpp[NVC_ATLMFC_Utilities #127](../../atl-mfc-shared/codesnippet/cpp/cstringt-class_22.cpp)]  
+ [!code-cpp[NVC_ATLMFC_Utilities#127](../../atl-mfc-shared/codesnippet/cpp/cstringt-class_22.cpp)]  
   
 ##  <a name="mid"></a>CStringT::Mid  
  Извлекает подстроку длиной `nCount` символов из этого `CStringT` объект, начиная с позиции `iFirst` (от нуля).  
@@ -895,7 +917,7 @@ CStringT Mid(int iFirst) const;
  Для многобайтовой кодировки (MBCS) `nCount` ссылается на каждый 8-разрядное символ, то есть руководитель и младший байт один Многобайтовый символ считаются за два символа.  
   
 ### <a name="example"></a>Пример  
- [!code-cpp[NVC_ATLMFC_Utilities #128](../../atl-mfc-shared/codesnippet/cpp/cstringt-class_23.cpp)]  
+ [!code-cpp[NVC_ATLMFC_Utilities#128](../../atl-mfc-shared/codesnippet/cpp/cstringt-class_23.cpp)]  
   
 ##  <a name="oemtoansi"></a>CStringT::OemToAnsi  
  Преобразует все символы в этом `CStringT` объекта из OEM кодировки набора знаков ANSI.  
@@ -925,10 +947,10 @@ friend CStringT operator+(wchar_t ch1, const CStringT& str2,);
   
 ### <a name="parameters"></a>Параметры  
  `ch1`  
- Символ ANSI или Юникод, для объединения со строкой.  
+ ANSI или Юникод символ для добавления со строкой.  
   
  `ch2`  
- Символ ANSI или Юникод, для объединения со строкой.  
+ ANSI или Юникод символ для добавления со строкой.  
   
  `str1`  
  Объект `CStringT` для объединения с строку или символ.  
@@ -949,7 +971,7 @@ friend CStringT operator+(wchar_t ch1, const CStringT& str2,);
 >  Несмотря на то, что можно создать `CStringT` экземпляры, которые содержат внедренные символы null, не рекомендуется его. Вызов методов и операторов для `CStringT` объектов, которые содержат внедренные символы null может привести к непредвиденным результатам.  
   
 ### <a name="example"></a>Пример  
- [!code-cpp[NVC_ATLMFC_Utilities #140](../../atl-mfc-shared/codesnippet/cpp/cstringt-class_24.cpp)]  
+ [!code-cpp[NVC_ATLMFC_Utilities#140](../../atl-mfc-shared/codesnippet/cpp/cstringt-class_24.cpp)]  
   
 ##  <a name="operator_add_eq"></a>CStringT::operator +=  
  Сцепляет символы конца строки.  
@@ -984,7 +1006,7 @@ CStringT& operator+=(const VARIANT& var);
  Variant-объект для объединения с данной строки.  
   
  `ch`  
- Символ ANSI или Юникод, для объединения со строкой.  
+ ANSI или Юникод символ для добавления со строкой.  
   
  `pszSrc`  
  Указатель, объединяемых исходной строки.  
@@ -1001,7 +1023,7 @@ CStringT& operator+=(const VARIANT& var);
 >  Несмотря на то, что можно создать `CStringT` экземпляры, которые содержат внедренные символы null, не рекомендуется его. Вызов методов и операторов для `CStringT` объектов, которые содержат внедренные символы null может привести к непредвиденным результатам.  
   
 ### <a name="example"></a>Пример  
- [!code-cpp[NVC_ATLMFC_Utilities #141](../../atl-mfc-shared/codesnippet/cpp/cstringt-class_25.cpp)]  
+ [!code-cpp[NVC_ATLMFC_Utilities#141](../../atl-mfc-shared/codesnippet/cpp/cstringt-class_25.cpp)]  
   
 ##  <a name="operator_eq_eq"></a>CStringT::operator ==  
  Определяет, логически равны ли две строки.  
@@ -1039,7 +1061,7 @@ friend bool operator==(XCHAR ch1, const CStringT& str2,) throw();
  Проверяет, является ли строку или символ слева равен строку или символ, с правой стороны и возвращает значение TRUE или FALSE соответственно.  
   
 ### <a name="example"></a>Пример  
- [!code-cpp[NVC_ATLMFC_Utilities #142](../../atl-mfc-shared/codesnippet/cpp/cstringt-class_26.cpp)]  
+ [!code-cpp[NVC_ATLMFC_Utilities#142](../../atl-mfc-shared/codesnippet/cpp/cstringt-class_26.cpp)]  
   
 ##  <a name="operator_neq"></a>CStringT::operator! =  
  Определяет, действительно ли две строки логически не равны.  
@@ -1056,10 +1078,10 @@ friend bool operator!=(XCHAR ch1, const CStringT& str2,) throw();
   
 ### <a name="parameters"></a>Параметры  
  `ch1`  
- Символ ANSI или Юникод, для объединения со строкой.  
+ ANSI или Юникод символ для добавления со строкой.  
   
  `ch2`  
- Символ ANSI или Юникод, для объединения со строкой.  
+ ANSI или Юникод символ для добавления со строкой.  
   
  `str1`  
  Объект `CStringT` для сравнения.  
@@ -1077,7 +1099,7 @@ friend bool operator!=(XCHAR ch1, const CStringT& str2,) throw();
  Проверяет строку или символ слева не равно строку или символ справа от оператора.  
   
 ### <a name="example"></a>Пример  
- [!code-cpp[NVC_ATLMFC_Utilities #143](../../atl-mfc-shared/codesnippet/cpp/cstringt-class_27.cpp)]  
+ [!code-cpp[NVC_ATLMFC_Utilities#143](../../atl-mfc-shared/codesnippet/cpp/cstringt-class_27.cpp)]  
   
 ##  <a name="operator_lt"></a>CStringT::operator&lt;  
  Определяет, является ли строка в левой части оператора меньше, чем строка справа от оператора.  
@@ -1111,7 +1133,7 @@ friend bool operator<(PCXSTR psz1, const CStringT& str2) throw();
 -   Неравенство не обнаруживается, и считается, что строки содержат одинаковое количество символов, поэтому сроки равны.  
   
 ### <a name="example"></a>Пример  
- [!code-cpp[NVC_ATLMFC_Utilities #144](../../atl-mfc-shared/codesnippet/cpp/cstringt-class_28.cpp)]  
+ [!code-cpp[NVC_ATLMFC_Utilities#144](../../atl-mfc-shared/codesnippet/cpp/cstringt-class_28.cpp)]  
   
 ##  <a name="operator_gt"></a>CStringT::operator&gt;  
  Определяет, является ли строка слева от оператора больше, чем строка справа от оператора.  
@@ -1145,7 +1167,7 @@ friend bool operator>(PCXSTR psz1, const CStringT& str2) throw();
 -   Неравенство не обнаруживается, и считается, что строки содержат одинаковое количество символов, и поэтому сроки равны.  
   
 ### <a name="example"></a>Пример  
- [!code-cpp[NVC_ATLMFC_Utilities #145](../../atl-mfc-shared/codesnippet/cpp/cstringt-class_29.cpp)]  
+ [!code-cpp[NVC_ATLMFC_Utilities#145](../../atl-mfc-shared/codesnippet/cpp/cstringt-class_29.cpp)]  
   
 ##  <a name="operator_lt_eq"></a>CStringT::operator&lt;=  
  Определяет, является ли строка в левой части оператора меньше или равным строке справа от оператора.  
@@ -1179,7 +1201,7 @@ friend bool operator<=(PCXSTR psz1, const CStringT& str2) throw();
 -   Неравенство не обнаруживается, и считается, что строки содержат одинаковое количество символов, и поэтому сроки равны.  
   
 ### <a name="example"></a>Пример  
- [!code-cpp[NVC_ATLMFC_Utilities #146](../../atl-mfc-shared/codesnippet/cpp/cstringt-class_30.cpp)]  
+ [!code-cpp[NVC_ATLMFC_Utilities#146](../../atl-mfc-shared/codesnippet/cpp/cstringt-class_30.cpp)]  
   
 ##  <a name="operator_gt_eq"></a>CStringT::operator&gt;=  
  Определяет, является ли строка слева от оператора больше или равным строке справа от оператора.  
@@ -1213,7 +1235,7 @@ friend bool operator>=(PCXSTR psz1, const CStringT& str2) throw();
 -   Неравенство не обнаруживается, и считается, что строки содержат одинаковое количество символов, и поэтому сроки равны.  
   
 ### <a name="example"></a>Пример  
- [!code-cpp[NVC_ATLMFC_Utilities #147](../../atl-mfc-shared/codesnippet/cpp/cstringt-class_31.cpp)]  
+ [!code-cpp[NVC_ATLMFC_Utilities#147](../../atl-mfc-shared/codesnippet/cpp/cstringt-class_31.cpp)]  
   
 ##  <a name="remove"></a>CStringT::Remove  
  Удаляет все вхождения указанного символа в строке.  
@@ -1233,7 +1255,7 @@ int Remove(XCHAR chRemove);
  Сравнение символа чувствительны к регистру.  
   
 ### <a name="example"></a>Пример  
- [!code-cpp[NVC_ATLMFC_Utilities #129](../../atl-mfc-shared/codesnippet/cpp/cstringt-class_32.cpp)]  
+ [!code-cpp[NVC_ATLMFC_Utilities#129](../../atl-mfc-shared/codesnippet/cpp/cstringt-class_32.cpp)]  
   
 ##  <a name="replace"></a>CStringT::Replace  
  Существуют две версии `Replace`. Первая версия заменяет одну или несколько копий подстроки, используя другой подстрокой. Обе подстроки, завершающуюся значением null. Вторая версия заменяет одну или несколько копий символа с помощью другого символа. Обе версии оперируют символьные данные, хранящиеся в `CStringT`.  
@@ -1272,11 +1294,11 @@ int Replace(XCHAR chOld, XCHAR chNew);
 |----------------------|-------------------------|  
 |`_UNICODE`|Расширенные символы|  
 |`_MBCS`|Многобайтовые символы|  
-|Никакой|Однобайтовые символы|  
+|Ни|Однобайтовые символы|  
 |Оба значения|Не определено|  
   
 ### <a name="example"></a>Пример  
- [!code-cpp[NVC_ATLMFC_Utilities #200](../../atl-mfc-shared/codesnippet/cpp/cstringt-class_33.cpp)]  
+ [!code-cpp[NVC_ATLMFC_Utilities#200](../../atl-mfc-shared/codesnippet/cpp/cstringt-class_33.cpp)]  
   
 ##  <a name="reversefind"></a>CStringT::ReverseFind  
  Выполняет это `CStringT` объект для сопоставления последнего символа.  
@@ -1296,7 +1318,7 @@ int ReverseFind(XCHAR ch) const throw();
  Функция аналогична функции времени выполнения `strrchr`.  
   
 ### <a name="example"></a>Пример  
- [!code-cpp[NVC_ATLMFC_Utilities #130](../../atl-mfc-shared/codesnippet/cpp/cstringt-class_34.cpp)]  
+ [!code-cpp[NVC_ATLMFC_Utilities#130](../../atl-mfc-shared/codesnippet/cpp/cstringt-class_34.cpp)]  
   
 ##  <a name="right"></a>CStringT::Right  
  Извлекает последний (то есть правых) `nCount` символов из этого `CStringT` объекта и возвращает копию извлеченной подстроки.  
@@ -1318,7 +1340,7 @@ CStringT Right(int nCount) const;
  Для многобайтовой кодировки (MBCS) `nCount` ссылается на каждый 8-разрядное символ, то есть руководитель и младший байт один Многобайтовый символ считаются за два символа.  
   
 ### <a name="example"></a>Пример  
- [!code-cpp[NVC_ATLMFC_Utilities #131](../../atl-mfc-shared/codesnippet/cpp/cstringt-class_35.cpp)]  
+ [!code-cpp[NVC_ATLMFC_Utilities#131](../../atl-mfc-shared/codesnippet/cpp/cstringt-class_35.cpp)]  
   
 ##  <a name="setsysstring"></a>CStringT::SetSysString  
  Перераспределяет `BSTR` , на который указывает `pbstr` и копирует содержимое `CStringT` объекта, включая `NULL` символов.  
@@ -1340,7 +1362,7 @@ BSTR SetSysString(BSTR* pbstr) const;
  Эта функция обычно используется для изменения значения строк, передаваемых по ссылке для автоматизации.  
   
 ### <a name="example"></a>Пример  
- [!code-cpp[NVC_ATLMFC_Utilities #132](../../atl-mfc-shared/codesnippet/cpp/cstringt-class_36.cpp)]  
+ [!code-cpp[NVC_ATLMFC_Utilities#132](../../atl-mfc-shared/codesnippet/cpp/cstringt-class_36.cpp)]  
   
 ##  <a name="spanexcluding"></a>CStringT::SpanExcluding  
  Извлекает символы из строки, начиная с первого символа, не входящие в набор символов, которые идентифицируют `pszCharSet`.  
@@ -1354,13 +1376,13 @@ CStringT SpanExcluding(PCXSTR pszCharSet) const;
  Строка интерпретируется как набор символов.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
- Подстроке, которая содержит символы в строке, которые не находятся в `pszCharSet`, начиная с первого символа в строке и заканчивая первого символа в строке, которая присутствует также в `pszCharSet` (то есть, начиная с первого символа в строке и до, но не включая первого символа в строке, в которой находится `pszCharSet`). Возвращает всю строку, если ни один знак из `pszCharSet` найдено в строке.  
+ Подстроке, которая содержит символы в строке, которые не находятся в `pszCharSet`, начиная с первого символа в строке и заканчивая первого символа в строке, которая присутствует также в `pszCharSet` (то есть, начиная с первого символа в Строка и найти до, но не включая первого символа в строку, которая является `pszCharSet`). Возвращает всю строку, если ни один знак из `pszCharSet` найдено в строке.  
   
 ### <a name="remarks"></a>Примечания  
  `SpanExcluding`Извлекает и возвращает все символы, предшествующие первое вхождение символа из `pszCharSet` (другими словами, символ из `pszCharSet` и все символы в строке, не возвращаются). Если ни один знак из `pszCharSet` находится в строке, затем `SpanExcluding` возвращает всю строку.  
   
 ### <a name="example"></a>Пример  
- [!code-cpp[NVC_ATLMFC_Utilities #133](../../atl-mfc-shared/codesnippet/cpp/cstringt-class_37.cpp)]  
+ [!code-cpp[NVC_ATLMFC_Utilities#133](../../atl-mfc-shared/codesnippet/cpp/cstringt-class_37.cpp)]  
   
 ##  <a name="spanincluding"></a>CStringT::SpanIncluding  
  Извлекает символы из строки, начиная с первого символа, в набор символов, которые идентифицируют `pszCharSet`.  
@@ -1380,7 +1402,7 @@ CStringT SpanIncluding(PCXSTR pszCharSet) const;
  Если первый символ строки не в наборе символов, то `SpanIncluding` возвращает пустую строку. В противном случае он возвращает последовательность последовательных символов, которые входят в набор.  
   
 ### <a name="example"></a>Пример  
- [!code-cpp[NVC_ATLMFC_Utilities #134](../../atl-mfc-shared/codesnippet/cpp/cstringt-class_38.cpp)]  
+ [!code-cpp[NVC_ATLMFC_Utilities#134](../../atl-mfc-shared/codesnippet/cpp/cstringt-class_38.cpp)]  
   
 ##  <a name="tokenize"></a>CStringT::Tokenize  
  Находит следующий токен в целевой строке  
@@ -1405,7 +1427,7 @@ CStringT Tokenize(PCXSTR pszTokens, int& iStart) const;
  В отличие от CRT маркировки функций, таких как [strtok_s _strtok_s_l, wcstok_s, _wcstok_s_l, _mbstok_s, _mbstok_s_l](../../c-runtime-library/reference/strtok-s-strtok-s-l-wcstok-s-wcstok-s-l-mbstok-s-mbstok-s-l.md), `Tokenize` не изменяет целевой строки.  
   
 ### <a name="example"></a>Пример  
- [!code-cpp[NVC_ATLMFC_Utilities #135](../../atl-mfc-shared/codesnippet/cpp/cstringt-class_39.cpp)]  
+ [!code-cpp[NVC_ATLMFC_Utilities#135](../../atl-mfc-shared/codesnippet/cpp/cstringt-class_39.cpp)]  
   
 ### <a name="remarks"></a>Примечания  
  Выходные данные этого примера выглядит следующим образом:  
@@ -1427,7 +1449,7 @@ CStringT& Trim();
   
 ### <a name="parameters"></a>Параметры  
  `chTarget`  
- Символ целевой для усечения.  
+ Целевой символ для усечения.  
   
  `pszTargets`  
  Указатель на строку, содержащую символы целевой для усечения. Все начальные и конечные вхождения символов в `pszTarget` будут удалены из `CStringT` объекта.  
@@ -1445,7 +1467,7 @@ CStringT& Trim();
 -   Пробел.  
   
 ### <a name="example"></a>Пример  
- [!code-cpp[NVC_ATLMFC_Utilities #136](../../atl-mfc-shared/codesnippet/cpp/cstringt-class_40.cpp)]  
+ [!code-cpp[NVC_ATLMFC_Utilities#136](../../atl-mfc-shared/codesnippet/cpp/cstringt-class_40.cpp)]  
   
 ### <a name="remarks"></a>Примечания  
  Выходные данные этого примера выглядит следующим образом:  
@@ -1465,7 +1487,7 @@ CStringT& TrimLeft();
   
 ### <a name="parameters"></a>Параметры  
  `chTarget`  
- Символ целевой для усечения.  
+ Целевой символ для усечения.  
   
  `pszTargets`  
  Указатель на строку, содержащую символы целевой для усечения. Все начальные вхождения символов в `pszTarget` будут удалены из `CStringT` объекта.  
@@ -1483,7 +1505,7 @@ CStringT& TrimLeft();
 -   Пробел.  
   
 ### <a name="example"></a>Пример  
- [!code-cpp[NVC_ATLMFC_Utilities #137](../../atl-mfc-shared/codesnippet/cpp/cstringt-class_41.cpp)]  
+ [!code-cpp[NVC_ATLMFC_Utilities#137](../../atl-mfc-shared/codesnippet/cpp/cstringt-class_41.cpp)]  
   
 ##  <a name="trimright"></a>CStringT::TrimRight  
  Обрезка конечных символов из строки.  
@@ -1496,7 +1518,7 @@ CStringT& TrimRight();
   
 ### <a name="parameters"></a>Параметры  
  `chTarget`  
- Символ целевой для усечения.  
+ Целевой символ для усечения.  
   
  `pszTargets`  
  Указатель на строку, содержащую символы целевой для усечения. Все конечные вхождения символов в `pszTarget` будут удалены из `CStringT` объекта.  
@@ -1522,12 +1544,11 @@ CStringT& TrimRight();
 -  
   
 ### <a name="example"></a>Пример  
- [!code-cpp[NVC_ATLMFC_Utilities #138](../../atl-mfc-shared/codesnippet/cpp/cstringt-class_42.cpp)]  
+ [!code-cpp[NVC_ATLMFC_Utilities#138](../../atl-mfc-shared/codesnippet/cpp/cstringt-class_42.cpp)]  
   
 ## <a name="see-also"></a>См. также  
  [Диаграмма иерархии](../../mfc/hierarchy-chart.md)   
  [ATL и MFC общие классы](../../atl-mfc-shared/atl-mfc-shared-classes.md)   
  [Класс CSimpleStringT](../../atl-mfc-shared/reference/csimplestringt-class.md)
-
 
 

@@ -17,11 +17,12 @@ caps.latest.revision: "6"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 3bcb054af1b25e1f92fc6e31cbc3dca7dc241395
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 13e1af7964b77ae5ef179f76f997a2a81f0210bf
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="operator-lt-masm-run-time"></a>оператор &lt;= (среда выполнения MASM)
 Меньше или равно. Используется только в пределах [. Если](../../assembler/masm/dot-if.md), [. ХОТЯ](../../assembler/masm/dot-while.md), или [. ПОВТОРИТЕ](../../assembler/masm/dot-repeat.md) блокирует и вычисляется во время выполнения, а не во время сборки.  

@@ -16,11 +16,12 @@ caps.latest.revision: "11"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 9d19426a34620cfdd14b426b94757715ca2d1cbd
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: f595099d2a71c948c769adf7f7eafcbc373f3146
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="dependency-side-effects"></a>Побочные эффекты зависимостей
 Если цель указана в виде двоеточия (:) в двух строках зависимостей в разных местах, и команды отображаются после только одной из строк, NMAKE интерпретирует зависимости, как если бы смежных или их комбинация. Он не вызывается правило зависимости для зависимости, которая не сопоставлены команды, а также предполагается, что зависимости принадлежат к одному блоку описания и выполняет команды, указанные для другой зависимости. Например этот набор правил:  

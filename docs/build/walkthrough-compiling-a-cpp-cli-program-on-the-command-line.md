@@ -13,11 +13,12 @@ caps.latest.revision: "11"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 9fc173111e2188aef8c06657844000d44bfb84f6
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: d509bc9890f4fa5ccebbd6ae3d1e3bcb3dbb0d93
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="walkthrough-compiling-a-ccli-program-on-the-command-line"></a>Пошаговое руководство. Компиляция программы на языке C++/CLI из командной строки
 Вы можете создавать программы Visual C++, предназначенные для среды CLR и использующие платформу .NET Framework, и выполнять их сборку из командной строки. Visual C++ поддерживает язык программирования C++/CLI, который предоставляет дополнительные типы и операторы для модели программирования .NET. Введение в C + +/ CLI язык, в разделе [Pure C++: Hello, C + +/ CLI](http://msdn.microsoft.com/magazine/cc163681.aspx). Общие сведения см. в разделе [программирование .NET с использованием C + +/ CLI (Visual C++)](../dotnet/dotnet-programming-with-cpp-cli-visual-cpp.md).  

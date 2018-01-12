@@ -4,27 +4,25 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-language
+ms.technology: cpp-language
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - function return types [C++], reference type
 - data types [C++], function return types
 - functions [C++], return types
 ms.assetid: 5b73be1d-2dc7-41df-ab0a-adcba36f2ad1
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.translationtype: HT
-ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
-ms.openlocfilehash: 1cadf01b1af0bac4fb76d0146a51b789b5ddc6e5
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/25/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: a3a5d0b299b2bc38c95420515ab49eabd1268305
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="reference-type-function-returns"></a>Возвращаемые значения функции ссылочного типа
 Функции можно объявить, чтобы они возвращали ссылочный тип. Существует две причины создания такого объявления.  
@@ -103,7 +101,7 @@ y = 9
   
 -   Объявление в классе  
   
--   Объявление аргумента в адрес функции или возвращаемого типа для функции  
+-   Объявление аргумента в адрес функции или типа возвращаемого значения для функции  
   
 ## <a name="caution-returning-address-of-local"></a>Предупреждение при возвращении адреса локальной переменной  
  Если объект объявляется в локальной области видимости, он будет уничтожен, когда функция вернет ссылку. Возвращенная этому объекту ссылка может нарушить доступ в среде выполнения, поскольку вызывающий объект попытается использовать пустую ссылку.  

@@ -1,41 +1,40 @@
 ---
-title: "operator - | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "operator -"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "- operator, syntax"
-  - "subtraction operator, syntax"
-  - "operators [MASM], subtraction"
-  - "arithmetic operators [C++], subtraction"
+title: "оператор -2 | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: operator -
+dev_langs: C++
+helpviewer_keywords:
+- '- operator, syntax'
+- subtraction operator, syntax
+- operators [MASM], subtraction
+- arithmetic operators [C++], subtraction
 ms.assetid: 474607cb-e48d-4c91-bef6-91ff0971d5cf
-caps.latest.revision: 6
-caps.handback.revision: 6
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
+caps.latest.revision: "6"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 136fb5c6d58924b568edc96625b5f6338b53e565
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 12/21/2017
 ---
-# operator -
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Возвращает *expression1* отрицательные *expression2*.  
+# <a name="operator--"></a>оператор-
+Возвращает *expression1* минус *expression2*.  
   
-## Синтаксис  
+## <a name="syntax"></a>Синтаксис  
   
 ```  
   
-expression1 – expression2  
+expression1 - expression2  
 ```  
   
-## См. также  
- [Operators Reference](../Topic/Operators%20Reference.md)
+## <a name="see-also"></a>См. также  
+ [Справочник по операторам](../../assembler/masm/operators-reference.md)

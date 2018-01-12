@@ -14,11 +14,14 @@ caps.latest.revision: "13"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 07d612e97a6aaf3ff53116415b8eedc7324f78ea
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: 0f50e500cf25a18e86e107e22d58e6446d03379d
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="how-to-declare-override-specifiers-in-native-compilations-ccli"></a>Практическое руководство. Объявление спецификаторов переопределения в компиляциях машинного кода (C++/CLI)
 [Запечатанный](../windows/sealed-cpp-component-extensions.md), [абстрактный](../windows/abstract-cpp-component-extensions.md), и [переопределить](../windows/override-cpp-component-extensions.md) доступны в компиляций, которые не используют **/ZW** или [/CLR](../build/reference/clr-common-language-runtime-compilation.md).  
@@ -28,7 +31,7 @@ ms.lasthandoff: 10/24/2017
   
 ## <a name="example"></a>Пример  
   
-### <a name="description"></a>Описание  
+### <a name="description"></a>Описание:  
  В следующем примере показано, что `sealed` является допустимым в компиляциях машинного кода.  
   
 ### <a name="code"></a>Код  
@@ -56,7 +59,7 @@ public:
   
 ## <a name="example"></a>Пример  
   
-### <a name="description"></a>Описание  
+### <a name="description"></a>Описание:  
  В следующем примере показано, что `override` является допустимым в компиляциях машинного кода.  
   
 ### <a name="code"></a>Код  
@@ -77,7 +80,7 @@ public:
   
 ## <a name="example"></a>Пример  
   
-### <a name="description"></a>Описание  
+### <a name="description"></a>Описание:  
  В этом примере показано, что `abstract` является допустимым в компиляциях машинного кода.  
   
 ### <a name="code"></a>Код  

@@ -18,11 +18,12 @@ caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 9f8c83db3f7834c79656adc3443fd3c8946a4176
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 00158bbed5318d919c284b91cd651141a35bd441
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="catlservicemodulethandler-function"></a>Функция CAtlServiceModuleT::Handler
 `CAtlServiceModuleT::Handler`является подпрограмму, которая вызывает диспетчер управления службами (SCM) для получения состояния службы и присвойте ему различные инструкции (например, остановка или приостановка). Диспетчер управления Службами передает код операции `Handler` для указания, что следует сделать. Службу создан ATL по умолчанию обрабатывает только инструкция stop. Если диспетчер управления Службами передает инструкция stop, службы показывает диспетчера управления Службами, программа собирается остановиться. После этого служба `PostThreadMessage` Чтобы отправить сообщение о выходе к самому себе. Это завершает цикл обработки сообщений и службы в конечном счете будет закрыт.  

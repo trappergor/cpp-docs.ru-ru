@@ -1,38 +1,37 @@
 ---
-title: "ML Error Messages | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "vc.errors.ml"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "MASM (Microsoft Macro Assembler), ML error messages"
+title: "Сообщения об ошибках ML | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: vc.errors.ml
+dev_langs: C++
+helpviewer_keywords: MASM (Microsoft Macro Assembler), ML error messages
 ms.assetid: e7e164b3-6d65-4b5b-8925-bfbebc043523
-caps.latest.revision: 5
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 5
+caps.latest.revision: "5"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 1fa5933c9c676b76ebe342ffa848e7b40926da08
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 12/21/2017
 ---
-# ML Error Messages
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Сообщения об ошибках, создаваемые компонентами MASM подразделяются на категории: 3  
+# <a name="ml-error-messages"></a>Сообщения об ошибках ML
+Сообщения об ошибках, создаваемых компонентами MASM делятся на три категории:  
   
--   **неустранимые ошибки.** Они указывают на проблему, которая не позволяет строгую программу из своего обычного выполнения процесса.  
+-   **Неустранимые ошибки.** Они указывают серьезная проблема, препятствующая завершению его обычный процесс служебную программу.  
   
--   **Некритичные ошибки.** Программа может запустить его процесса.  Если он заставляет, то его результат не может быть одним требуется.  
+-   **Некритичные ошибки.** Программа может завершить его. В этом случае результат не скорее всего, будут нужную ссылку.  
   
--   **Предупреждений.** Эти сообщения перечислены условия, которые могут помешать получение результатов.  
+-   **Предупреждения.** Эти сообщения указывают условия, которые могут помешать получения нужных результатов.  
   
- Все сообщения об ошибках имеют следующую форму:  
+ Все сообщения об ошибках имеют следующий вид:  
   
 ```  
   
@@ -42,22 +41,22 @@ Utility: Filename (Line) : [Error_type} (Code): Message_text
  Здесь:  
   
  `Utility`  
- Программа, отправившей сообщение об ошибке.  
+ Программа, отправлено сообщение об ошибке.  
   
- *FileName*  
- Файл, содержащий ошибка\-производя условие.  
+ *Имя файла*  
+ Файл, содержащий условие, вызвавшую ошибку.  
   
- *Строка*  
- Приблизительная линия, где условие ошибки.  
+ *Line*  
+ Приблизительное строке, где существует условие ошибки.  
   
- *Error\_type*  
+ *Error_type*  
  Неустранимая ошибка, ошибка или предупреждение.  
   
  *Код*  
- Уникальный или код ошибки 5 \- 6 разрядов.  
+ Код ошибки уникальный 5 или 6-цифр.  
   
  `Message_text`  
- Короткое и общее описание условия ошибки.  
+ Короткие общие Описание условия ошибки.  
   
-## См. также  
- [Microsoft Macro Assembler Reference](../../assembler/masm/microsoft-macro-assembler-reference.md)
+## <a name="see-also"></a>См. также  
+ [Справочные материалы по ассемблеру Microsoft Macro Assembler](../../assembler/masm/microsoft-macro-assembler-reference.md)

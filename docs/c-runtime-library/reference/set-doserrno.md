@@ -1,76 +1,76 @@
 ---
-title: "_set_doserrno | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-apiname: 
-  - "_set_doserrno"
-apilocation: 
-  - "msvcrt.dll"
-  - "msvcr80.dll"
-  - "msvcr90.dll"
-  - "msvcr100.dll"
-  - "msvcr100_clr0400.dll"
-  - "msvcr110.dll"
-  - "msvcr110_clr0400.dll"
-  - "msvcr120.dll"
-  - "msvcr120_clr0400.dll"
-  - "ucrtbase.dll"
-  - "api-ms-win-crt-runtime-l1-1-0.dll"
-apitype: "DLLExport"
-f1_keywords: 
-  - "_set_doserrno"
-  - "set_doserrno"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "_doserrno - глобальная переменная"
-  - "_set_doserrno - функция"
-  - "doserrno - глобальная переменная"
-  - "set_doserrno - функция"
+title: "_set_doserrno | Документы Майкрософт"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-standard-libraries
+ms.tgt_pltfrm: 
+ms.topic: article
+apiname: _set_doserrno
+apilocation:
+- msvcrt.dll
+- msvcr80.dll
+- msvcr90.dll
+- msvcr100.dll
+- msvcr100_clr0400.dll
+- msvcr110.dll
+- msvcr110_clr0400.dll
+- msvcr120.dll
+- msvcr120_clr0400.dll
+- ucrtbase.dll
+- api-ms-win-crt-runtime-l1-1-0.dll
+apitype: DLLExport
+f1_keywords:
+- _set_doserrno
+- set_doserrno
+dev_langs: C++
+helpviewer_keywords:
+- _set_doserrno function
+- doserrno global variable
+- set_doserrno function
+- _doserrno global variable
 ms.assetid: 8686c159-3797-4705-a53e-7457869ca6f3
-caps.latest.revision: 12
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 12
+caps.latest.revision: "12"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: f2105c6e3479b1d46e5f61687878190870a0e10e
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 12/21/2017
 ---
-# _set_doserrno
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Задает значение глобальной переменной [\_doserrno](../Topic/errno,%20_doserrno,%20_sys_errlist,%20and%20_sys_nerr.md).  
+# <a name="setdoserrno"></a>_set_doserrno
+Задает значение глобальной переменной [_doserrno](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).  
   
-## Синтаксис  
+## <a name="syntax"></a>Синтаксис  
   
 ```  
-errno_t _set_doserrno(   
-   int value   
+errno_t _set_doserrno(   
+   int value   
 );  
 ```  
   
-#### Параметры  
- \[входящий\] `value`  
- Новое значение свойства `_doserrno`.  
+#### <a name="parameters"></a>Параметры  
+ [in] `value`  
+ Новое значение `_doserrno`.  
   
-## Возвращаемое значение  
- Возвращает ноль в случае успешного завершения.  
+## <a name="return-value"></a>Возвращаемое значение  
+ Возвращает нуль при успешном завершении.  
   
-## Заметки  
- Возможные значения определены в Errno.h.  
+## <a name="remarks"></a>Примечания  
+ Возможные значения макроса определяются в Errno.h.  
   
-## Требования  
+## <a name="requirements"></a>Требования  
   
 |Подпрограмма|Обязательный заголовок|Необязательный заголовок|  
-|------------------|----------------------------|------------------------------|  
-|`_set_doserrno`|\<stdlib.h\>|\<errno.h\>|  
+|-------------|---------------------|---------------------|  
+|`_set_doserrno`|\<stdlib.h>|\<errno.h>|  
   
  Дополнительные сведения о совместимости см. в разделе [Совместимость](../../c-runtime-library/compatibility.md) во введении.  
   
-## См. также  
- [\_get\_doserrno](../Topic/_get_doserrno.md)   
- [errno, \_doserrno, \_sys\_errlist, and \_sys\_nerr](../Topic/errno,%20_doserrno,%20_sys_errlist,%20and%20_sys_nerr.md)
+## <a name="see-also"></a>См. также  
+ [_get_doserrno](../../c-runtime-library/reference/get-doserrno.md)   
+ [errno, _doserrno, _sys_errlist, and _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)

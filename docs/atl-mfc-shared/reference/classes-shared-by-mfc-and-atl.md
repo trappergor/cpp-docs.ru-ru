@@ -4,30 +4,27 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-windows
+ms.technology: cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: reference
-dev_langs:
-- C++
-helpviewer_keywords:
-- shared classes, classes
+dev_langs: C++
+helpviewer_keywords: shared classes, classes
 ms.assetid: ca8b4b6b-744d-430b-b31f-d5b2f17bf210
-caps.latest.revision: 12
+caps.latest.revision: "12"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: e881c303fc61ee7b72f067b0c9c3378e1e2c1858
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
-ms.sourcegitcommit: c55726a1728185f699afbac4ba68a6dc0f70c2bf
-ms.openlocfilehash: 5e74a0fb32a9f0dc95837b9c8d633001ac79da8a
-ms.contentlocale: ru-ru
-ms.lasthandoff: 10/09/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="classes-shared-by-mfc-and-atl"></a>Классы, совместно используемые MFC и ATL
 В следующей таблице перечислены классы, совместно MFC и ATL.  
   
-|Класс|Описание|Файл заголовка|  
+|Класс|Описание:|Файл заголовка|  
 |-----------|-----------------|-----------------|  
 |[CFileTime](../../atl-mfc-shared/reference/cfiletime-class.md)|Предоставляет методы для управления значений даты и времени, связанного с файлом.|atltime.h|  
 |[CFileTimeSpan](../../atl-mfc-shared/reference/cfiletimespan-class.md)|Предоставляет методы для управления относительных значений даты и времени связанных с файлом.|atltime.h|  
@@ -48,6 +45,5 @@ ms.lasthandoff: 10/09/2017
   
 ## <a name="see-also"></a>См. также  
  [ATL и MFC общие классы](../../atl-mfc-shared/atl-mfc-shared-classes.md)
-
 
 

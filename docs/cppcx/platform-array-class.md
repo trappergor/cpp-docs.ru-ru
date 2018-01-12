@@ -18,11 +18,12 @@ caps.latest.revision: "9"
 author: ghogen
 ms.author: ghogen
 manager: ghogen
-ms.openlocfilehash: 81a1e90cb331bc559084ce536bc1038ff1f0b5d4
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: d7aa3a29615f6c744a3c790dd7b223225bc31f87
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="platformarray-class"></a>Platform::Array - класс
 Представляет изменяемый одномерный массив, который можно получать и передавать через двоичный интерфейс приложений (ABI).  
@@ -36,12 +37,12 @@ private ref class Array<TArg, 1> :
     public IBoxArray<TArg>   
 ```  
   
-### <a name="members"></a>Члены  
+### <a name="members"></a>Участники  
  Platform::Array наследует все методы из [класс Platform::WriteOnlyArray](../cppcx/platform-writeonlyarray-class.md) и реализует `Value` свойство [интерфейс Platform::IBoxArray](../cppcx/platform-iboxarray-interface.md).  
   
 ### <a name="public-constructors"></a>Открытые конструкторы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[Конструкторы массивов](#ctor)|Инициализирует одномерный изменяемый массив типов, указанных в параметре шаблона класса *T*.|  
   

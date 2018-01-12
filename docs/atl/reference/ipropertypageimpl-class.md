@@ -42,11 +42,12 @@ caps.latest.revision: "21"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 345379de254338fa8d344ee21b022439380d9851
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: fbc62bd72ee5a639e8df0ada365cd7baac7d0c31
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="ipropertypageimpl-class"></a>Класс IPropertyPageImpl
 Этот класс реализует **IUnknown** и предоставляет реализацию по умолчанию [IPropertyPage](http://msdn.microsoft.com/library/windows/desktop/ms691246) интерфейса.  
@@ -65,17 +66,17 @@ class IPropertyPageImpl
  `T`  
  Класс, производный от `IPropertyPageImpl`.  
   
-## <a name="members"></a>Члены  
+## <a name="members"></a>Участники  
   
 ### <a name="public-constructors"></a>Открытые конструкторы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[IPropertyPageImpl::IPropertyPageImpl](#ipropertypageimpl)|Конструктор.|  
   
 ### <a name="public-methods"></a>Открытые методы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[IPropertyPageImpl::Activate](#activate)|Создание диалогового окна для страницы свойств.|  
 |[IPropertyPageImpl::Apply](#apply)|Применяется к базовые объекты, заданные с помощью текущих значений свойств страницы `SetObjects`. Возвращает реализацию ATL `S_OK`.|  
@@ -92,7 +93,7 @@ class IPropertyPageImpl
   
 ### <a name="public-data-members"></a>Открытые члены данных  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[IPropertyPageImpl::m_bDirty](#m_bdirty)|Указывает, изменилось ли состояние страницы свойств.|  
 |[IPropertyPageImpl::m_dwDocString](#m_dwdocstring)|Сохраняет идентификатор ресурса, связанного со строкой текста описания на странице свойств.|  

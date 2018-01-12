@@ -17,11 +17,12 @@ caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: eb099a534fba9c34d46d634bbca9648af1577a85
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: fffe15d74323b798fc6de1b318e55d47602774ad
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="using-task-manager"></a>С помощью диспетчера задач
 Одна из самых простых способов отладки службы — при помощи диспетчера задач в Windows NT 4.0 или Windows 2000. Пока служба запущена, запустите диспетчер задач и нажмите кнопку **процессов** вкладки. Щелкните правой кнопкой мыши имя исполняемого файла и нажмите кнопку **отладки**. Это откроет присоединенного, выполняющемуся процессу Visual C++. Теперь щелкните **прервать** на **отладки** меню, чтобы можно было задать точки останова в коде. Нажмите кнопку **запуска** для выполнения кода до выбранной точки останова.  

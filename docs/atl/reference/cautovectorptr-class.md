@@ -23,11 +23,12 @@ caps.latest.revision: "20"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 304f21e226e88f4c18b218ac580d82fdb2f776a4
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: b01bb9f74793e739ff0930bae070f00cb909dd61
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cautovectorptr-class"></a>Класс CAutoVectorPtr
 Этот класс представляет объект интеллектуального указателя с помощью нового вектора и удаление операторов.  
@@ -46,18 +47,18 @@ class CAutoVectorPtr
  `T`  
  Тип указателя.  
   
-## <a name="members"></a>Члены  
+## <a name="members"></a>Участники  
   
 ### <a name="public-constructors"></a>Открытые конструкторы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[CAutoVectorPtr::CAutoVectorPtr](#cautovectorptr)|Конструктор.|  
 |[CAutoVectorPtr:: ~ CAutoVectorPtr](#dtor)|Деструктор|  
   
 ### <a name="public-methods"></a>Открытые методы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[CAutoVectorPtr::Allocate](#allocate)|Вызовите этот метод, чтобы выделить память, необходимую для массива объектов, указываемых `CAutoVectorPtr`.|  
 |[CAutoVectorPtr::Attach](#attach)|Вызовите этот метод, чтобы стать владельцем существующего указателя.|  
@@ -66,14 +67,14 @@ class CAutoVectorPtr
   
 ### <a name="public-operators"></a>Открытые операторы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[CAutoVectorPtr::operator T *](#operator_t__star)|Оператор приведения.|  
 |[CAutoVectorPtr::operator =](#operator_eq)|Оператор присваивания.|  
   
 ### <a name="public-data-members"></a>Открытые члены данных  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[CAutoVectorPtr::m_p](#m_p)|Переменная члена данных указателя.|  
   

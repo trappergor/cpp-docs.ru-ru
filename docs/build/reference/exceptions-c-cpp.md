@@ -1,43 +1,43 @@
 ---
-title: "Исключения (C/C++) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "ERROR_MOD_NOT_FOUND"
-  - "vcppException"
-  - "ERROR_SEVERITY_ERROR"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "обработка исключений С++, отложенная загрузка библиотек DLL"
-  - "отложенная загрузка библиотек DLL, исключения"
-  - "ERROR_MOD_NOT_FOUND - исключение"
-  - "ERROR_SEVERITY_ERROR - исключение"
-  - "vcppException"
+title: "Исключения (C/C++) | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- ERROR_MOD_NOT_FOUND
+- vcppException
+- ERROR_SEVERITY_ERROR
+dev_langs: C++
+helpviewer_keywords:
+- vcppException
+- C++ exception handling, delayed loading of DLLs
+- delayed loading of DLLs, exceptions
+- ERROR_SEVERITY_ERROR exception
+- ERROR_MOD_NOT_FOUND exception
 ms.assetid: c03be05d-1c39-4f35-84cf-00c9af3bae9a
-caps.latest.revision: 8
-caps.handback.revision: 8
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
+caps.latest.revision: "8"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 635e2b1406e9919425a396b6f49fe8eb6efd81eb
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 12/21/2017
 ---
-# Исключения (C/C++)
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-При возникновении ошибок могут создаваться два кода исключения:  
+# <a name="exceptions-cc"></a>Исключения (C/C++)
+Два кода исключения могут возникать при возникновении ошибок:  
   
--   Для ошибок **LoadLibrary**;  
+-   Для **LoadLibrary** сбоя  
   
--   Для ошибок **GetProcAddress**.  
+-   Для **GetProcAddress** сбоя  
   
- Вот сведения об исключениях:  
+ Вот сведения об исключении:  
   
 ```  
 //  
@@ -47,11 +47,11 @@ manager: "ghogen"
 #define VcppException(sev,err)  ((sev) | (FACILITY_VISUALCPP<<16) | err)  
 ```  
   
- Коды создаваемых исключений — это стандартные значения VcppException\(ERROR\_SEVERITY\_ERROR, ERROR\_MOD\_NOT\_FOUND\) и VcppException\(ERROR\_SEVERITY\_ERROR, ERROR\_PROC\_NOT\_FOUND\).  Исключение содержит указатель на структуру **DelayLoadInfo** в значении типа LPDWORD, которое может быть считано с помощью функции **GetExceptionInformation** в структуре [EXCEPTION\_RECORD](http://msdn.microsoft.com/library/windows/desktop/aa363082) в поле ExceptionInformation\[0\].  
+ Коды исключений, который создается — это стандартная VcppException (ERROR_SEVERITY_ERROR, ERROR_MOD_NOT_FOUND) и значения VcppException (ERROR_SEVERITY_ERROR, ERROR_PROC_NOT_FOUND). Исключение передается указатель **DelayLoadInfo** структуры в значении LPDWORD, можно получить с **GetExceptionInformation** в [EXCEPTION_RECORD](http://msdn.microsoft.com/library/windows/desktop/aa363082) Структура поля ExceptionInformation [0].  
   
- Помимо этого, если в поле grAttrs установлены неправильные биты, то возникает исключение ERROR\_INVALID\_PARAMETER.  Это исключение во всех случаях является неустранимым.  
+ Кроме того Если в поле grAttrs заданы неверные bits, ERROR_INVALID_PARAMETER исключение. Это исключение, в качестве исчезнувшим, Неустранимая.  
   
- Дополнительные сведения см. в разделе [Определения структур и констант](../../build/reference/structure-and-constant-definitions.md).  
+ В разделе [определение структуры и константы](../../build/reference/structure-and-constant-definitions.md) для получения дополнительной информации.  
   
-## См. также  
+## <a name="see-also"></a>См. также  
  [Обработка ошибок и предупреждений](../../build/reference/error-handling-and-notification.md)

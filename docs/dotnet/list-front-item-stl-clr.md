@@ -1,41 +1,42 @@
 ---
-title: "list::front_item (STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::list::front_item"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "front_item - член [STL/CLR]"
+title: "List::front_item (STL/CLR) | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::list::front_item
+dev_langs: C++
+helpviewer_keywords: front_item member [STL/CLR]
 ms.assetid: c871873b-7745-442b-9760-9d8096fa8610
-caps.latest.revision: 17
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 15
+caps.latest.revision: "17"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: 5a9e4b9171430b063d2315107eb585a6d16143a3
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 12/21/2017
 ---
-# list::front_item (STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Получение первого элемента.  
+# <a name="listfrontitem-stlclr"></a>list::front_item (STL/CLR)
+Обращается к первому элементу.  
   
-## Синтаксис  
+## <a name="syntax"></a>Синтаксис  
   
 ```  
 property value_type front_item;  
 ```  
   
-## Заметки  
- Свойство получения первого элемента контролируемой последовательности, которая должна быть непустой.  Он используется для чтения и записи первый элемент, если известно, что он существует.  
+## <a name="remarks"></a>Примечания  
+ Свойство обращается к первый элемент управляемой последовательности, который должен быть пустым. Используется для чтения или записи первый элемент, если известно, что он существует.  
   
-## Пример  
+## <a name="example"></a>Пример  
   
 ```  
 // cliext_list_front_item.cpp   
@@ -67,16 +68,19 @@ int main()
   
 ```  
   
-  **a b c**  
-**front\_item \= a**  
- **x B C.**   
-## Требования  
- **Заголовок:**\<cliext\/list\>  
+```Output  
+ a b c  
+front_item = a  
+ x b c  
+```  
+  
+## <a name="requirements"></a>Требования  
+ **Заголовок:** \<cliext/list >  
   
  **Пространство имен:** cliext  
   
-## См. также  
- [list](../dotnet/list-stl-clr.md)   
- [list::back](../dotnet/list-back-stl-clr.md)   
- [list::back\_item](../Topic/list::back_item%20\(STL-CLR\).md)   
- [list::front](../dotnet/list-front-stl-clr.md)
+## <a name="see-also"></a>См. также  
+ [список (STL/CLR)](../dotnet/list-stl-clr.md)   
+ [List::Back (STL/CLR)](../dotnet/list-back-stl-clr.md)   
+ [List::back_item (STL/CLR)](../dotnet/list-back-item-stl-clr.md)   
+ [list::front (STL/CLR)](../dotnet/list-front-stl-clr.md)

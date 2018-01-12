@@ -36,11 +36,12 @@ caps.latest.revision: "30"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 5b341ba3397841c21f7c2c71359b8cd5ccd3e8ae
-ms.sourcegitcommit: ca2f94dfd015e0098a6eaf5c793ec532f1c97de1
+ms.workload: cplusplus
+ms.openlocfilehash: 82f3d4bf1d0c705d7712adb092a5f6d965099a26
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="ctime-class"></a>Класс CTime
 Представляет абсолютное время и дату.  
@@ -51,17 +52,17 @@ ms.lasthandoff: 10/31/2017
 class CTime  
 ```  
   
-## <a name="members"></a>Члены  
+## <a name="members"></a>Участники  
   
 ### <a name="public-constructors"></a>Открытые конструкторы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[CTime::CTime](#ctime)|Создает `CTime` объекты различными способами.|  
   
 ### <a name="public-methods"></a>Открытые методы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[CTime::Format](#format)|Преобразует `CTime` объекта в форматированную строку, в зависимости от местного часового пояса.|  
 |[CTime::FormatGmt](#formatgmt)|Преобразует `CTime` объекта в форматированную строку, в зависимости от времени UTC.|  

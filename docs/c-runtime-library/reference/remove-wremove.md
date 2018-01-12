@@ -41,11 +41,12 @@ caps.latest.revision: "10"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 43e7443204404f79a797cab09cb56560e719a896
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 11050e3f168f390fa7a80aa6febf08a4be695c3e
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="remove-wremove"></a>remove, _wremove
 Удаление файла.  
@@ -74,7 +75,7 @@ int _wremove(
 ## <a name="remarks"></a>Примечания  
  Функция **remove** удаляет файл, указанный в параметре *path.* `_wremove` — это версия **_remove** с расширенными символами; аргумент *path* для `_wremove` — строка расширенных символов. Поведение `_wremove` и **_remove** идентично в противном случае. Чтобы можно было удалить файл, все дескрипторы файлов должны быть закрыты.  
   
-### <a name="generic-text-routine-mappings"></a>Универсальное текстовое сопоставление функций  
+### <a name="generic-text-routine-mappings"></a>Сопоставления подпрограмм обработки обычного текста  
   
 |Подпрограмма TCHAR.H|_UNICODE и _MBCS не определены|_MBCS определено|_UNICODE определено|  
 |---------------------|------------------------------------|--------------------|-----------------------|  

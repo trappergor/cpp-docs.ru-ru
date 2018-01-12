@@ -1,33 +1,33 @@
 ---
-title: "deque::operator!= (STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::deque::operator!="
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "operator!= - элемент [STL/CLR]"
+title: "deque::operator! = (STL/CLR) | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::deque::operator!=
+dev_langs: C++
+helpviewer_keywords: operator!= member [STL/CLR]
 ms.assetid: c23c7bd1-813e-4518-9947-eb13d1176a13
-caps.latest.revision: 15
-caps.handback.revision: 13
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "15"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: 17a5fb91f77e1b0a83e63bf498568690001acebd
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 12/21/2017
 ---
-# deque::operator!= (STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Сравнение Deque равное.  
+# <a name="dequeoperator-stlclr"></a>deque::operator!= (STL/CLR)
+Deque равно сравнения.  
   
-## Синтаксис  
+## <a name="syntax"></a>Синтаксис  
   
 ```  
 template<typename Value>  
@@ -35,19 +35,19 @@ template<typename Value>
         deque<Value>% right);  
 ```  
   
-#### Параметры  
- влево  
- Левый контейнер, с которым выполняется сравнение.  
+#### <a name="parameters"></a>Параметры  
+ `left`  
+ Левый контейнер для сравнения.  
   
- правый  
- Правой контейнер, с которым выполняется сравнение.  
+ `right`  
+ Правый контейнер для сравнения.  
   
-## Заметки  
- Функция возвращает оператора `!(``left` `==` `right``)`.  Он используется для выполнения не приказано ли `left` таким же, как `right` при сравнении 2 deques элемент элементом.  
+## <a name="remarks"></a>Примечания  
+ Функция оператор возвращает `!(left == right)`. Можно использовать для тестирования ли `left` не упорядочен таким же, как `right` при двух объектов deque, сравниваемые элемент элемент.  
   
-## Пример  
+## <a name="example"></a>Пример  
   
-```  
+```cpp  
 // cliext_deque_operator_ne.cpp   
 // compile with: /clr   
 #include <cliext/deque>   
@@ -84,19 +84,22 @@ int main()
   
 ```  
   
-  **a b c**  
- **B d**  
-**\[B C\]\! \= \[B C\] ложен**  
-**\[B C\]\! B \= \[d\] оказывается**   
-## Требования  
- **Заголовок:**\<cliext\/deque\>  
+```Output  
+ a b c  
+ a b d  
+[a b c] != [a b c] is False  
+[a b c] != [a b d] is True  
+```  
+  
+## <a name="requirements"></a>Требования  
+ **Заголовок:** \<cliext/deque >  
   
  **Пространство имен:** cliext  
   
-## См. также  
- [deque](../dotnet/deque-stl-clr.md)   
- [operator\=\= \(deque\)](../dotnet/operator-equality-deque-stl-clr.md)   
- [operator\< \(deque\)](../dotnet/operator-less-than-deque-stl-clr.md)   
- [operator\>\= \(deque\)](../dotnet/operator-greater-or-equal-deque-stl-clr.md)   
- [operator\> \(deque\)](../dotnet/operator-greater-than-deque-stl-clr.md)   
- [operator\<\= \(deque\)](../dotnet/operator-less-or-equal-deque-stl-clr.md)
+## <a name="see-also"></a>См. также  
+ [deque (STL/CLR)](../dotnet/deque-stl-clr.md)   
+ [оператор == (deque) (STL/CLR)](../dotnet/operator-equality-deque-stl-clr.md)   
+ [оператор\< (deque) (STL/CLR)](../dotnet/operator-less-than-deque-stl-clr.md)   
+ [оператор > = (deque) (STL/CLR)](../dotnet/operator-greater-or-equal-deque-stl-clr.md)   
+ [оператор > (deque) (STL/CLR)](../dotnet/operator-greater-than-deque-stl-clr.md)   
+ [operator<= (deque) (STL/CLR)](../dotnet/operator-less-or-equal-deque-stl-clr.md)

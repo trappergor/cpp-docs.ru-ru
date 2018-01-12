@@ -17,11 +17,12 @@ caps.latest.revision: "13"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: bfbb97f66065efd0a9ef06de0ff427e893610955
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: cbefa4a8036802599dd97f31d57f18204fd6104f
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="atl-simple-object-wizard"></a>Мастер простых объектов ATL
 Этот мастер вставляет в проект минимальный COM-объект. Эта страница мастера для указания имен, которые идентифицируют класс C++ и файлы для объекта и его функциональные возможности модели COM.  
@@ -74,7 +75,7 @@ ms.lasthandoff: 10/24/2017
 > [!NOTE]
 >  Если вы создаете проект, использующий атрибуты, или если на этой странице мастера указывается, что объект использует атрибуты, не может изменить этот параметр, поскольку ATL не включает `coclass` атрибута.  
   
- **Тип**  
+ **Type**  
  Задает описание объекта, которое будет отображаться в реестре  
   
  **Interface**  

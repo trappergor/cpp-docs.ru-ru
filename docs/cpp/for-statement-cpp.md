@@ -4,25 +4,22 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-language
+ms.technology: cpp-language
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-dev_langs:
-- C++
-helpviewer_keywords:
-- for keyword [C++]
+dev_langs: C++
+helpviewer_keywords: for keyword [C++]
 ms.assetid: 6c7d01b3-c4c1-4c6a-aa58-e2d198f33d4a
-caps.latest.revision: 15
+caps.latest.revision: "15"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.translationtype: HT
-ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
-ms.openlocfilehash: 6b958bba842a5dfdbe61415c6ad81aab7a8b4110
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/25/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: 8358af0cd6784b1974767456602350a8ccf1c57f
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="for-statement-c"></a>Оператор for (C++)
 Выполняет оператор повторно до тех пор, пока условное значение не станет false. Сведения на основе диапазонов для инструкции см. в разделе [инструкции (C++) на основе диапазонов](../cpp/range-based-for-statement-cpp.md).  
@@ -41,7 +38,7 @@ for ( init-expression ; cond-expression ; loop-expression )
   
 ### <a name="for-loop-elements"></a>элементы цикла for  
   
-|Имя синтаксиса|Когда выполняется|Описание|  
+|Имя синтаксиса|Когда выполняется|Описание:|  
 |-----------------|-------------------|-----------------|  
 |`init-expression`|Перед любой другой элемент **для** инструкции `init-expression` выполняется только один раз. Затем управление передается `cond-expression`.|Часто используется для инициализации индексов цикла. Может содержать выражения или объявления.|  
 |`cond-expression`|Перед выполнением каждой итерации `statement`, включая первую итерацию. `statement` выполняется, только если `cond-expression` имеет значение true (не равное нулю).|Выражение, значение которого относится к целочисленному типу или типу класса, для которого имеется однозначное преобразование к целочисленному типу. Обычно используется для проверки критериев завершения цикла for.|  
@@ -74,7 +71,7 @@ int main() {
     // Output: 012  
 ```  
   
- `init-expression` и `loop-expression` могут содержать несколько операторов, разделенных запятыми. Например:  
+ `init-expression` и `loop-expression` могут содержать несколько операторов, разделенных запятыми. Пример:  
   
 ```cpp  
 #include <iostream>  

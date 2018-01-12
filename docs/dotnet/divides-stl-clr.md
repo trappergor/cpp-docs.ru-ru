@@ -1,32 +1,33 @@
 ---
-title: "divides (STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::divides"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "divides - функция [STL/CLR]"
+title: "Делит (STL/CLR) | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::divides
+dev_langs: C++
+helpviewer_keywords: divides function [STL/CLR]
 ms.assetid: 4c36026a-02ba-475d-af68-854599647f4b
-caps.latest.revision: 16
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 14
+caps.latest.revision: "16"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: b634b9e0d04575d17936d9dd855dfab4d8f13c16
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 12/21/2017
 ---
-# divides (STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Описание класса шаблона функтором, при вызове возвращает первый аргумент разделенный вторым.  Он используется определяется объект функции с точки зрения его типа аргумента.  
+# <a name="divides-stlclr"></a>divides (STL/CLR)
+Класс шаблона описывает функтор, при вызове возвращает первый аргумент, разделенное на второй. Она используется укажите объект функции, с точки зрения его типа аргумента.  
   
-## Синтаксис  
+## <a name="syntax"></a>Синтаксис  
   
 ```  
 template<typename Arg>  
@@ -49,34 +50,34 @@ public:
     };  
 ```  
   
-#### Параметры  
- Аргумент  
+#### <a name="parameters"></a>Параметры  
+ Arg  
  Тип аргументов и возвращаемого значения.  
   
-## Функции\-члены  
+## <a name="member-functions"></a>Функции-члены  
   
-|Определение типа|Описание|  
-|----------------------|--------------|  
-|delegate\_type|Тип универсального метод\-делегата.|  
-|first\_argument\_type|Тип первого аргумента функтором.|  
-|result\_type|Тип результата функтором.|  
-|second\_argument\_type|Тип второго аргумента функтором.|  
+|Определение типа|Описание:|  
+|---------------------|-----------------|  
+|delegate_type|Тип универсального метода-делегата.|  
+|first_argument_type|Тип первого аргумента функтор.|  
+|result_type|Тип результата функтор.|  
+|second_argument_type|Тип второго аргумента функтор.|  
   
-|Член|Описание|  
-|----------|--------------|  
-|делит|Построение функтором.|  
+|Член|Описание:|  
+|------------|-----------------|  
+|divides|Создает функтор.|  
   
-|Оператор|Описание|  
-|--------------|--------------|  
-|operator\(\)|Вычисляет нужную функцию.|  
-|оператор delegate\_type^\(\)|Возвращает функтором делегату.|  
+|Оператор|Описание:|  
+|--------------|-----------------|  
+|operator()|Вычисляет нужной функции.|  
+|оператор delegate_type^()|Приводит функтора к делегату.|  
   
-## Заметки  
- Описание класса шаблона функтором 2 — аргумента.  Он определяет оператор `operator()` члена, что, когда объект вызывается как функция возвращается первый аргумент разделенный вторым.  
+## <a name="remarks"></a>Примечания  
+ Класс шаблона описывает функтор двумя аргументами. Он определяет оператор-член `operator()` , чтобы при вызове объекта как функцию, он возвращает первый аргумент, разделенное на второй.  
   
- Можно также передать объект в качестве аргумента функции, тип которого `delegate_type^` и он будет преобразован соответствующим образом.  
+ Объект также можно передать в качестве аргумента функции, тип которого является `delegate_type^` и он будет преобразован соответствующим образом.  
   
-## Пример  
+## <a name="example"></a>Пример  
   
 ```  
 // cliext_divides.cpp   
@@ -116,14 +117,17 @@ int main()
   
 ```  
   
-  **4 3**  
- **2 1**  
- **2 3**   
-## Требования  
- **Заголовок:**\<cliext\/functional\>  
+```Output  
+4 3  
+2 1  
+2 3  
+```  
+  
+## <a name="requirements"></a>Требования  
+ **Заголовок:** \<cliext и функционального >  
   
  **Пространство имен:** cliext  
   
-## См. также  
- [остатка от деления](../dotnet/modulus-stl-clr.md)   
- [multiplies](../Topic/multiplies%20\(STL-CLR\).md)
+## <a name="see-also"></a>См. также  
+ [остатка от деления (STL/CLR)](../dotnet/modulus-stl-clr.md)   
+ [multiplies (STL/CLR)](../dotnet/multiplies-stl-clr.md)

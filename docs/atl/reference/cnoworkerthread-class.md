@@ -24,11 +24,12 @@ caps.latest.revision: "21"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 12cb2f9ab7c69d8c120c1870c5cd97cbc59cf32e
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 36af37fae778a572d790a137073c62cfde22019c
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cnoworkerthread-class"></a>Класс CNoWorkerThread
 Этот класс используется в качестве аргумента для `MonitorClass` параметр шаблона классы кэша, если вы хотите отключить обслуживания динамического кэша.  
@@ -42,11 +43,11 @@ ms.lasthandoff: 10/24/2017
 class CNoWorkerThread
 ```  
   
-## <a name="members"></a>Члены  
+## <a name="members"></a>Участники  
   
 ### <a name="public-methods"></a>Открытые методы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[CNoWorkerThread::AddHandle](#addhandle)|Эквивалент нефункциональные [CWorkerThread::AddHandle](../../atl/reference/cworkerthread-class.md#addhandle).|  
 |[CNoWorkerThread::AddTimer](#addtimer)|Эквивалент нефункциональные [CWorkerThread::AddTimer](../../atl/reference/cworkerthread-class.md#addtimer).|  

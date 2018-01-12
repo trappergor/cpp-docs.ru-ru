@@ -27,11 +27,12 @@ caps.latest.revision: "21"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 2a7d7b14d67a127fadd8199f9cf9e1e209b8eea7
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 2308c2c8da67a7d6fe048f3e498e6d7ba1e3cad6
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="ccomcompositecontrol-class"></a>Класс CComCompositeControl
 Этот класс предоставляет методы, необходимые для реализации составного элемента управления.  
@@ -50,18 +51,18 @@ class CComCompositeControl : public CComControl<T,CAxDialogImpl<T>>
  `T`  
  Класс, производный от [CComObjectRoot](../../atl/reference/ccomobjectroot-class.md) или [CComObjectRootEx](../../atl/reference/ccomobjectrootex-class.md), как хорошо от любых других интерфейсов, которые требуется поддерживать для составного элемента управления.  
   
-## <a name="members"></a>Члены  
+## <a name="members"></a>Участники  
   
 ### <a name="public-constructors"></a>Открытые конструкторы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[CComCompositeControl::CComCompositeControl](#ccomcompositecontrol)|Конструктор.|  
 |[CComCompositeControl:: ~ CComCompositeControl](#dtor)|Деструктор|  
   
 ### <a name="public-methods"></a>Открытые методы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[CComCompositeControl::AdviseSinkMap](#advisesinkmap)|Этот метод используется для соединения или разъединения всех элементов управления, размещаемым составного элемента управления.|  
 |[CComCompositeControl::CalcExtent](#calcextent)|Этот метод вызывается для расчета размера в **HIMETRIC** единицы ресурса диалогового окна, используемого для размещения составного элемента управления.|  
@@ -71,7 +72,7 @@ class CComCompositeControl : public CComControl<T,CAxDialogImpl<T>>
   
 ### <a name="public-data-members"></a>Открытые члены данных  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[CComCompositeControl::m_hbrBackground](#m_hbrbackground)|Кисть фона.|  
 |[CComCompositeControl::m_hWndFocus](#m_hwndfocus)|Дескриптор окна, которое в данный момент имеет фокус.|  

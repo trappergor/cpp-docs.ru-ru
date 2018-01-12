@@ -18,11 +18,14 @@ caps.latest.revision: "8"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: ad2cf102902f62d03d4027c16b7d81b255b85875
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: 438ab42a7f0f12379621a591f3b0b1eeb5930afd
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="testing-the-read-only-provider"></a>Проверка поставщика в режиме "только для чтения"
 Для проверки поставщика требуется объект-получатель. Это полезно, если потребитель может совпадать с поставщиком. Шаблоны потребителя OLE DB являются оболочками для OLE DB и соответствуют поставщику COM-объектов. Поскольку источник поставляется с шаблонами объектов-получателей, можно легко провести отладку поставщика с ними. Шаблоны потребителя также являются простой и быстрый способ разработки приложения-потребители.  

@@ -20,11 +20,12 @@ caps.latest.revision: "20"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: d682e6db093220557ec7caaa4ac6f3cd7ca5f53a
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: ec54e698723b801823d58a3bad2a53e6f1708369
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="ca2aex-class"></a>Класс CA2AEX
 Этот класс используется макросы преобразования строк `CA2TEX` и `CT2AEX`и определение типа **CA2A**.  
@@ -43,24 +44,24 @@ class CA2AEX
  `t_nBufferLength`  
  Размер буфера, используемого в процессе перевода. Длина по умолчанию — 128 байт.  
   
-## <a name="members"></a>Члены  
+## <a name="members"></a>Участники  
   
 ### <a name="public-constructors"></a>Открытые конструкторы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[CA2AEX::CA2AEX](#ca2aex)|Конструктор.|  
 |[CA2AEX:: ~ CA2AEX](#dtor)|Деструктор|  
   
 ### <a name="public-operators"></a>Открытые операторы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[CA2AEX::operator LPSTR](#operator_lpstr)|Оператор преобразования.|  
   
 ### <a name="public-data-members"></a>Открытые члены данных  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[CA2AEX::m_psz](#m_psz)|Элемент данных, который хранит исходную строку.|  
 |[CA2AEX::m_szBuffer](#m_szbuffer)|Статический буфер, используемый для хранения преобразованную строку.|  

@@ -18,11 +18,12 @@ caps.latest.revision: "13"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 3830f91683399eba4784b5348ca252e9caa22d57
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: a6914ace20d299b526dc7c0d5b066948a2759287
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="storage-classes-c"></a>Классы хранения (C++)  
   
@@ -217,14 +218,12 @@ void DoSomething()
 ```  
   
 Следует помнить о `thread_local` описатель:  
+
+- Динамически инициализированных локальные переменные потока в библиотеках DLL не может правильно инициализировано на всех вызывающих потоках. Дополнительные сведения см. в разделе [поток](thread.md).
   
 -  `thread_local` Описатель могут объединяться с `static` или `extern`.  
   
 -  Можно применить `thread_local` только в объявлениях и определениях; данных `thread_local` не может использоваться в объявлениях или определениях функций.  
-  
--  Использование `thread_local` может помешать [отложенной загрузкой](../build/reference/linker-support-for-delay-loaded-dlls.md) импортов DLL. 
-  
--  В системах XP `thread_local` может работать неправильно, если библиотека DLL использует `thread_local` данных и динамически загружается через `LoadLibrary`.  
   
 -  `thread_local` можно задавать только для элементов данных со статической длительностью хранения. Сюда входят глобальные объекты данных (оба `static` и `extern`), локальные статические объекты и статические данные-члены классов. Любая локальная переменная объявлена `thread_local` является неявно статическим, если нет других класса хранения предоставляется; другими словами, в области видимости блока `thread_local` эквивалентно `thread_local static`. 
   

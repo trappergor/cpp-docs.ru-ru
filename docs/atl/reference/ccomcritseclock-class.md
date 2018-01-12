@@ -20,11 +20,12 @@ caps.latest.revision: "19"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 3fb2bad67c6488f13297783a578118ebc022c4bd
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 1cb07c2cca9394c23c6c3db156e205749f62e3f9
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="ccomcritseclock-class"></a>Класс CComCritSecLock
 Этот класс предоставляет методы для блокировки и разблокировки объекта критической секции.  
@@ -39,18 +40,18 @@ template<class TLock> class CComCritSecLock
  *TLock*  
  Объект для блокировки и разблокировать.  
   
-## <a name="members"></a>Члены  
+## <a name="members"></a>Участники  
   
 ### <a name="public-constructors"></a>Открытые конструкторы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[CComCritSecLock::CComCritSecLock](#ctor)|Конструктор.|  
 |[CComCritSecLock:: ~ CComCritSecLock](#dtor)|Деструктор|  
   
 ### <a name="public-methods"></a>Открытые методы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[CComCritSecLock::Lock](#lock)|Этот метод пытается заблокировать объект критической секции.|  
 |[CComCritSecLock::Unlock](#unlock)|Вызовите этот метод, чтобы разблокировать объект критической секции.|  

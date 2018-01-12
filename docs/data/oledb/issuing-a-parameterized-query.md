@@ -14,11 +14,14 @@ caps.latest.revision: "7"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 8386358a2dea8949d069384029ea110e8463a45d
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: e016b6bb8c37fe24d9f1929f19904f17592e6f3c
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="issuing-a-parameterized-query"></a>Выполнение параметризированного запроса
 Следующий пример выполняет простой параметризованный запрос, который извлекает записи с полем возраст (то есть больше 30) из таблицы в базе данных Microsoft Access. Для поддержки параметра пользовательская запись должна иметь дополнительную схему. Следующий код в проект ATL использует `CCommand` вместо класса `CTable` класс, используемый в предыдущем примере [перебор простого набора строк](../../data/oledb/traversing-a-simple-rowset.md).  

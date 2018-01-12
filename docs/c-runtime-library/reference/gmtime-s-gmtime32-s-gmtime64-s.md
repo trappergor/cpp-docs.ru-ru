@@ -46,11 +46,12 @@ caps.latest.revision: "29"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 199e4c459c97995701b5b7cc74f55f153703f925
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: f0d0fc911c052e58b1f2aeb9b656f737746bd2de
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="gmtimes-gmtime32s-gmtime64s"></a>gmtime_s, _gmtime32_s, _gmtime64_s
 Преобразует значение времени в структуру. Это версии функций [_gmtime32, _gmtime64](../../c-runtime-library/reference/gmtime-gmtime32-gmtime64.md) с усовершенствованной безопасностью, как описано в разделе [Усовершенствования безопасности в CRT](../../c-runtime-library/security-features-in-the-crt.md).  
@@ -86,7 +87,7 @@ errno_t _gmtime64_s(
   
 |`_tm`|`time`|Назад|Значение в `_tm`|  
 |-----------|------------|------------|--------------------|  
-|`NULL`|любые|`EINVAL`|Без изменений.|  
+|`NULL`|any|`EINVAL`|Без изменений.|  
 |Не `NULL` (указывает на допустимый адрес в памяти)|`NULL`|`EINVAL`|Во всех полях заданы значения –1.|  
 |Не `NULL`|< 0|`EINVAL`|Во всех полях заданы значения –1.|  
   

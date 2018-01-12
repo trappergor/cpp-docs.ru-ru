@@ -41,11 +41,12 @@ caps.latest.revision: "18"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 1a1cc6a80609828d084b56ef4f981c9d03de8070
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: c96e806615d165bcdc3b5a5b89e4b8a966d8b1e7
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="fullpath-wfullpath"></a>_fullpath, _wfullpath
 Создает абсолютный или полный путь для указанного относительного пути.  
@@ -99,7 +100,7 @@ wchar_t *_wfullpath(
   
  Эта функция вызывает обработчик недопустимых параметров, как описано в разделе [Проверка параметров](../../c-runtime-library/parameter-validation.md), если значение `maxlen` меньше или равно 0. Если выполнение может быть продолжено, эта функция задает для `errno` значение `EINVAL` и возвращает `NULL`.  
   
-### <a name="generic-text-routine-mappings"></a>Универсальное текстовое сопоставление функций  
+### <a name="generic-text-routine-mappings"></a>Сопоставления подпрограмм обработки обычного текста  
   
 |Подпрограмма Tchar.h|_UNICODE и _MBCS не определены|_MBCS определено|_UNICODE определено|  
 |---------------------|--------------------------------------|--------------------|-----------------------|  

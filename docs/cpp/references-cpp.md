@@ -4,12 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-language
+ms.technology: cpp-language
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - objects [C++], referencing
 - references [C++]
@@ -18,16 +16,16 @@ helpviewer_keywords:
 - references, declaring
 - referencing objects, declarator syntax
 ms.assetid: 68156f7f-97a0-4b66-b26d-b25ade5e3bd8
-caps.latest.revision: 12
+caps.latest.revision: "12"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.translationtype: HT
-ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
-ms.openlocfilehash: fb208f61d2da9e7daa7a53ac68fdcdfcdf1acab4
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/25/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: e7453fbab0ade6cfe2cbdd836d7d59ba49c3ccfd
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="references-c"></a>Ссылки (C++)
 В ссылке, как и в указателе, хранится адрес объекта, расположенного в другой области памяти. В отличие от указателя, после инициализации ссылку нельзя перенаправить на другой объект или присвоить ей нулевое значение. Существует два типа ссылок: ссылки lvalue, указывающие именованный переменной и ссылки rvalue, указывающие [временный объект](../cpp/temporary-objects.md). Оператором & обозначаются ссылки lvalue, а оператором &&, в зависимости от контекста, — ссылки rvalue или универсальные ссылки (как rvalue, так и lvalue).  
@@ -126,4 +124,3 @@ int main() {
   
 -   [Ссылки на указатели](../cpp/references-to-pointers.md)  
   
-

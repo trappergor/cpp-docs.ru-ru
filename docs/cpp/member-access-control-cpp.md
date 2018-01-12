@@ -4,27 +4,25 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-language
+ms.technology: cpp-language
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - access control [C++]
 - member access [C++]
 - member-access control [C++]
 ms.assetid: 2d596bca-56ad-4277-94e1-ce3db45fa14a
-caps.latest.revision: 9
+caps.latest.revision: "9"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.translationtype: HT
-ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
-ms.openlocfilehash: 4d209e8f5e00460f1183a154f90bbdafd459b755
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/25/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: 88fe05ab0c0e6a1c433bf2b6007fb63c18fb5850
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="member-access-control-c"></a>Управление доступом к членам (C++)
 Элементы управления доступом позволяет отделить [открытый](../cpp/public-cpp.md) интерфейс класса из [закрытый](../cpp/private-cpp.md) сведения о реализации и [защищенных](../cpp/protected-cpp.md) элементы, которые являются только для использования с производные классы. Спецификатор доступа действует для всех членов, объявленных после него, пока не будет объявлен следующий спецификатор доступа.  
@@ -74,7 +72,7 @@ protected:      // Declare protected function for derived classes only.
   
 ### <a name="member-access-in-base-class"></a>Доступ к членам в базовом классе  
   
-|private|protected|Открытый|  
+|private|protected|Public|  
 |-------------|---------------|------------|  
 |Всегда отсутствует независимо от доступа при наследовании|Закрытый в производном классе при использовании закрытого наследования|Закрытый в производном классе при использовании закрытого наследования|  
 ||Защищенный в производном классе при использовании защищенного наследования|Защищенный в производном классе при использовании защищенного наследования|  

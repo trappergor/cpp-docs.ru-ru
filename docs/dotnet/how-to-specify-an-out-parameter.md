@@ -1,34 +1,37 @@
 ---
-title: "Практическое руководство. Определение выходного параметра | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "get-started-article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "параметры функции"
-  - "параметры вывода"
+title: "Как: определение выходного параметра | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: get-started-article
+dev_langs: C++
+helpviewer_keywords:
+- function parameters
+- out parameters
 ms.assetid: 02862448-603c-4e9d-a5c5-b45fe38446e3
-caps.latest.revision: 11
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 9
+caps.latest.revision: "11"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: 0905220a1e2ab3e209fe80598ec67903999245b5
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 12/21/2017
 ---
-# Практическое руководство. Определение выходного параметра
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-В этом примере описывается порядок определения выходного параметра функции и вызова такой функции в программе C\#.  
+# <a name="how-to-specify-an-out-parameter"></a>Практическое руководство. Определение выходного параметра
+В этом примере показано, как указать, что функция параметр является выходным параметром и способа вызова этой функции из программы на C#.  
   
- В Visual C\+\+ выходной параметр определяется с помощью атрибута <xref:System.Runtime.InteropServices.OutAttribute>.  
+ Выходной параметр указывается в Visual C++ с <xref:System.Runtime.InteropServices.OutAttribute> .  
   
-## Пример  
- В первой части примера представлена библиотека DLL Visual C\+\+, в которой определяется тип, содержащий функцию с выходным параметром.  
+## <a name="example"></a>Пример  
+ Первая часть этого образца является библиотеку DLL Visual C++ с типом, который содержит функцию с выходным параметром.  
   
 ```  
 // cpp_out_param.cpp  
@@ -41,8 +44,8 @@ public value struct TestStruct {
 };  
 ```  
   
-## Пример  
- Здесь описывается клиент C\#, использующий компонент Visual C\+\+, созданный в предыдущем примере.  
+## <a name="example"></a>Пример  
+ Это клиент C#, использующий компонент Visual C++, созданных в предыдущем примере.  
   
 ```  
 // cpp_out_param_2.cs  
@@ -57,6 +60,9 @@ class TestClass {
 }  
 ```  
   
-  **строка**   
-## См. также  
- [Использование взаимодействия языка C\+\+ \(неявный PInvoke\)](../dotnet/using-cpp-interop-implicit-pinvoke.md)
+```Output  
+a string  
+```  
+  
+## <a name="see-also"></a>См. также  
+ [Использование взаимодействия языка C++ (неявный PInvoke)](../dotnet/using-cpp-interop-implicit-pinvoke.md)

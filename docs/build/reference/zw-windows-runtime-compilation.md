@@ -1,61 +1,63 @@
 ---
-title: "/ZW (компиляция среды выполнения Windows) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "VC.Project.VCCLCompilerTool.CompileAsWinRT"
-  - "/zw"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "/ZW"
-  - "/ZW - параметр компилятора"
-  - "параметр компилятора среды выполнения Windows"
-  - "-ZW"
-  - "-ZW - параметр компилятора"
+title: "-ZW (компиляция среды выполнения Windows) | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- VC.Project.VCCLCompilerTool.CompileAsWinRT
+- /zw
+dev_langs: C++
+helpviewer_keywords:
+- /ZW
+- -ZW compiler option
+- /ZW compiler option
+- -ZW
+- Windows Runtime compiler option
 ms.assetid: 0fe362b0-9526-498b-96e0-00d7a965a248
-caps.latest.revision: 13
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 13
+caps.latest.revision: "13"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 75f46c2eaaa42f473e02bc553dd06b86cd5bbc98
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 12/21/2017
 ---
-# /ZW (компиляция среды выполнения Windows)
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Компилирует исходный код для поддержки [!INCLUDE[cppwrt](../../build/reference/includes/cppwrt_md.md)] \([!INCLUDE[cppwrt_short](../Token/cppwrt_short_md.md)]\) при создании приложений [!INCLUDE[win8_appname_long](../../build/includes/win8_appname_long_md.md)].  
+# <a name="zw-windows-runtime-compilation"></a>/ZW (компиляция среды выполнения Windows)
+Компилирует исходный код для поддержки [!INCLUDE[cppwrt](../../build/reference/includes/cppwrt_md.md)] ([!INCLUDE[cppwrt_short](../../build/reference/includes/cppwrt_short_md.md)]) при создании приложений [!INCLUDE[win8_appname_long](../../build/includes/win8_appname_long_md.md)].  
   
- Если при компиляции используется параметр **\/ZW**, также необходимо указать параметр **\/EHsc**.  
+ При использовании **/ZW** для компиляции, всегда указывайте **/EHsc** также.  
   
-## Синтаксис  
+## <a name="syntax"></a>Синтаксис  
   
 ```cpp  
-/ZW /EHsc /ZW:nostdlib /EHsc  
+/ZW /EHsc  
+/ZW:nostdlib /EHsc  
 ```  
   
-## Аргументы  
+## <a name="arguments"></a>Аргументы  
  nostdlib  
- Указывает на то, что Platform.winmd, Windows.Foundation.winmd и другие файлы метаданных Windows по умолчанию \(WINMD\) не включаются в компиляцию автоматически.  Вместо этого необходимо использовать параметр компилятора [\/FU \(название файла с принудительно используемым атрибутом \#using\)](../../build/reference/fu-name-forced-hash-using-file.md), чтобы явным образом указать файлы метаданных Windows.  
+ Указывает на то, что Platform.winmd, Windows.Foundation.winmd и другие файлы метаданных Windows по умолчанию (WINMD) не включаются в компиляцию автоматически. Вместо этого необходимо использовать [/FU (имя принудительно #using файла)](../../build/reference/fu-name-forced-hash-using-file.md) параметр компилятора, чтобы явным образом указать файлы метаданных Windows.  
   
-## Заметки  
- При указании параметра **\/ZW** компилятор поддерживает следующие возможности:  
+## <a name="remarks"></a>Примечания  
+ При указании **/zw** параметр, компилятор поддерживает следующие возможности:  
   
--   файлы метаданных, пространства имен, типы данных и функции, требуемые приложению для выполнения в [!INCLUDE[wrt](../../atl/reference/includes/wrt_md.md)];  
+-   Файлы метаданных, пространства имен, типов данных и функций, которые приложение требуется для выполнения в среде выполнения Windows.  
   
--   автоматический подсчет ссылок для объектов [!INCLUDE[wrt](../../atl/reference/includes/wrt_md.md)] и автоматическое удаление объекта в случае, если число ссылок становится равным нулю.  
+-   Автоматический подсчет ссылок на объекты среды выполнения Windows и автоматическое удаление объекта, когда число ссылок становится равен нулю.  
   
- Так как инкрементный компоновщик не поддерживает метаданные Windows, включенные в файлы OBJ при использовании параметра **\/ZW**, параметр [\/Gm \(включение минимального перепостроения\)](../../build/reference/gm-enable-minimal-rebuild.md) несовместим с **\/ZW**.  
+ Инкрементный компоновщик поддерживает метаданные Windows, включенные в OBJ-файлов с помощью **/ZW** параметр [/Gm (включение минимального перепостроения)](../../build/reference/gm-enable-minimal-rebuild.md) несовместим с   **/zw** .  
   
- Для получения дополнительной информации см. [Справочник по языку C\+\+](../Topic/Visual%20C++%20Language%20Reference%20\(C++-CX\).md).  
+ Дополнительные сведения см. в разделе [Справочник по языку Visual C++](../../cppcx/visual-c-language-reference-c-cx.md).  
   
-## Требования  
+## <a name="requirements"></a>Требования  
   
-## См. также  
+## <a name="see-also"></a>См. также  
  [Параметры компилятора](../../build/reference/compiler-options.md)   
- [Настройка параметров компилятора](../Topic/Setting%20Compiler%20Options.md)
+ [Настройка параметров компилятора](../../build/reference/setting-compiler-options.md)

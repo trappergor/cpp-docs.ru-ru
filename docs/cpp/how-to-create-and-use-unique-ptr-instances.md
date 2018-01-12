@@ -13,11 +13,12 @@ caps.latest.revision: "16"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 08f597a160b3447743646c4cccfc2e05485a47b1
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: ae4610e7b26eecd6ef444f3c7c73e95af365ca71
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="how-to-create-and-use-uniqueptr-instances"></a>Практическое руководство. Создание и использование экземпляров unique_ptr
 Объект [unique_ptr](../standard-library/unique-ptr-class.md) общего доступа к указателю. Не может быть скопирован в другое `unique_ptr`, передаваемые по значению функции или использовать в любой алгоритм стандартной библиотеки C++, предполагающем создание копий будут сделаны. `unique_ptr` можно только переместить. Это означает, что владение ресурсов памяти переносится в другое `unique_ptr` и оригинал `unique_ptr` больше им не владеет. Рекомендуется ограничить объект одним владельцем, поскольку множественное владение усложняет логику программы. Таким образом, при необходимости интеллектуального указателя для простого объекта C++, используйте `unique_ptr`, и при построении `unique_ptr`, используйте [make_unique](../standard-library/memory-functions.md#make_unique) вспомогательную функцию.  

@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-windows
+ms.technology: cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
@@ -15,37 +14,22 @@ f1_keywords:
 - ATLWIN/ATL::CDynamicChain::CallChain
 - ATLWIN/ATL::CDynamicChain::RemoveChainEntry
 - ATLWIN/ATL::CDynamicChain::SetChainEntry
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - message maps, chaining
 - chaining message maps
 - CDynamicChain class
 ms.assetid: f084b2be-0e77-4836-973d-ae278a1e9da8
-caps.latest.revision: 21
+caps.latest.revision: "21"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: d2d39abf526a58b8442107b5ee816f316ae841f5
-ms.openlocfilehash: 54137760f2c1ee0f93fd8ad21238710f4b6a4a56
-ms.contentlocale: ru-ru
-ms.lasthandoff: 03/31/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: f57da02b764c1cbce6a97ecbea8aa84e4ffcce9e
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cdynamicchain-class"></a>Класс CDynamicChain
 Этот класс предоставляет методы, поддерживающие динамические цепочки схемы сообщений.  
@@ -59,18 +43,18 @@ ms.lasthandoff: 03/31/2017
 class CDynamicChain
 ```  
   
-## <a name="members"></a>Члены  
+## <a name="members"></a>Участники  
   
 ### <a name="public-constructors"></a>Открытые конструкторы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[CDynamicChain::CDynamicChain](#cdynamicchain)|Конструктор.|  
 |[CDynamicChain:: ~ CDynamicChain](#dtor)|Деструктор|  
   
 ### <a name="public-methods"></a>Открытые методы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[CDynamicChain::CallChain](#callchain)|Направляет сообщение Windows для схемы сообщений другим объектом.|  
 |[CDynamicChain::RemoveChainEntry](#removechainentry)|Удаляет элемент карты сообщений из коллекции.|  
@@ -89,11 +73,11 @@ class CDynamicChain
   
  Например предположим, что класс определяется следующим образом:  
   
- [!code-cpp[NVC_ATL_Windowing #88](../../atl/codesnippet/cpp/cdynamicchain-class_1.h)]  
+ [!code-cpp[NVC_ATL_Windowing#88](../../atl/codesnippet/cpp/cdynamicchain-class_1.h)]  
   
  Затем клиент вызывает `CMyWindow::SetChainEntry`:  
   
- [!code-cpp[NVC_ATL_Windowing #89](../../atl/codesnippet/cpp/cdynamicchain-class_2.cpp)]  
+ [!code-cpp[NVC_ATL_Windowing#89](../../atl/codesnippet/cpp/cdynamicchain-class_2.cpp)]  
   
  где `chainedObj` цепочек объектом и является экземпляром класса, производного от `CMessageMap`. Теперь если `myCtl` получает сообщение, которое не обрабатывается `OnPaint` или `OnSetFocus`, процедуру окна направляет сообщение `chainedObj`в схеме сообщений по умолчанию.  
   
@@ -174,7 +158,7 @@ BOOL RemoveChainEntry(DWORD dwChainID);
  **Значение TRUE,** Если сопоставление сообщений успешно удален из коллекции. В противном случае **FALSE**.  
   
 ##  <a name="setchainentry"></a>CDynamicChain::SetChainEntry  
- Указанное сообщение карта добавляется в коллекцию.  
+ Карта указанное сообщение добавляется в коллекцию.  
   
 ```
 BOOL SetChainEntry(  
@@ -202,4 +186,3 @@ BOOL SetChainEntry(
 ## <a name="see-also"></a>См. также  
  [Класс CWindowImpl](../../atl/reference/cwindowimpl-class.md)   
  [Общие сведения о классе](../../atl/atl-class-overview.md)
-

@@ -14,11 +14,14 @@ caps.latest.revision: "15"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 182478ffdd0175fc2b5f80b4a534b85bb97190a1
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: 8f4bf38fa6512b0dc86edad43c893d2dd09a97a4
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="c-stack-semantics-for-reference-types"></a>Семантика стека C++ для ссылочных типов
 До Visual C++ 2005 экземпляр ссылочного типа могут создаваться только с помощью `new` куче, оператор, который создал объект в сборке мусора. Тем не менее теперь можно создать экземпляр ссылочного типа, используя тот же синтаксис, используемый для создания экземпляра собственного типа в стеке. Поэтому, не требуется использовать [ref new gcnew](../windows/ref-new-gcnew-cpp-component-extensions.md) для создания объекта ссылочного типа. И, когда объект выходит за пределы области, компилятор вызывает деструктор объекта.  
@@ -56,7 +59,7 @@ ms.lasthandoff: 10/24/2017
   
 ## <a name="example"></a>Пример  
   
-### <a name="description"></a>Описание  
+### <a name="description"></a>Описание:  
  В следующем образце кода показано, как объявить экземпляров ссылочных типов в соответствии с семантикой стека, как оператор присваивания и работает конструктор копирования и каким образом выполняется инициализация отслеживаемую ссылку со ссылочным типом, созданных с помощью семантики стека.  
   
 ### <a name="code"></a>Код  

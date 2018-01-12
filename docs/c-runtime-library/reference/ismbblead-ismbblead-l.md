@@ -43,11 +43,12 @@ caps.latest.revision: "21"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 05367f833fcb10a994bc165ff7c2e0f31b8bdce0
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: acba6047239ee9c63e05666a4bdc685cf40527c3
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="ismbblead-ismbbleadl"></a>_ismbblead, _ismbblead_l
 Проверяет символ, чтобы определить, является ли он старшим байтом многобайтового символа.  
@@ -79,7 +80,7 @@ int _ismbblead_l(
   
  Функция`_ismbblead` использует текущий языковой стандарт для поведения, зависящего от языкового стандарта. Функция`_ismbblead_l` идентична за исключением того, что использует переданный языковой стандарт. Для получения дополнительной информации см. [Locale](../../c-runtime-library/locale.md).  
   
-### <a name="generic-text-routine-mappings"></a>Универсальное текстовое сопоставление функций  
+### <a name="generic-text-routine-mappings"></a>Сопоставления подпрограмм обработки обычного текста  
   
 |Подпрограмма Tchar.h|_UNICODE и _MBCS не определены|_MBCS определено|_UNICODE определено|  
 |---------------------|--------------------------------------|--------------------|-----------------------|  
@@ -94,7 +95,7 @@ int _ismbblead_l(
   
  \* Для констант манифестов, используемых в условиях проверки.  
   
- Дополнительные сведения о совместимости см. в разделе [Compatibility](../../c-runtime-library/compatibility.md).  
+ Дополнительные сведения о совместимости см. в разделе [Совместимость](../../c-runtime-library/compatibility.md).  
   
 ## <a name="see-also"></a>См. также  
  [Классификация байтов](../../c-runtime-library/byte-classification.md)   

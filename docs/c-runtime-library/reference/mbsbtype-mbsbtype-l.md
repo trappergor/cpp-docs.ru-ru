@@ -39,11 +39,12 @@ caps.latest.revision: "19"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: a20ff8b10229714a434dc0f77748f37f9c15064a
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 05c106136c36d09b06e5b168a0c582b87c306d93
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="mbsbtype-mbsbtypel"></a>_mbsbtype, _mbsbtype_l
 Возвращает тип байта в строке.  
@@ -88,7 +89,7 @@ int _mbsbtype_l(
 ## <a name="remarks"></a>Примечания  
  Функция `_mbsbtype` определяет тип байта в строке многобайтовых символов. Эта функция проверяет только байт со смещением `count` в `mbstr`, пропуская недопустимые символы перед указанным байтом.  
   
- Выходное значение зависит от настройки категории `LC_CTYPE` языкового стандарта; дополнительные сведения см. в разделе [setlocale](../../c-runtime-library/reference/setlocale-wsetlocale.md). Версия этой функции без суффикса `_l` использует текущий языковой стандарт для данной функциональности, зависящей от языкового стандарта; версия с суффиксом `_l` идентична версии без суффикса, но использует переданный параметр языкового стандарта. Дополнительные сведения см. в разделе [Языковой стандарт](../../c-runtime-library/locale.md).  
+ Выходное значение зависит от настройки категории `LC_CTYPE` языкового стандарта; дополнительные сведения см. в разделе [setlocale](../../c-runtime-library/reference/setlocale-wsetlocale.md). Версия этой функции без суффикса `_l` использует текущий языковой стандарт для данной функциональности, зависящей от языкового стандарта; версия с суффиксом `_l` идентична версии без суффикса, но использует переданный параметр языкового стандарта. Для получения дополнительной информации см. [Locale](../../c-runtime-library/locale.md).  
   
  Если входная строка имеет значение `NULL`, вызывается обработчик недопустимого параметра, как описано в статье [Проверка параметров](../../c-runtime-library/parameter-validation.md). Если выполнение может быть продолжено, параметр `errno` устанавливается в значение `EINVAL`, и функция возвращает значение `_MBC_ILLEGAL`.  
   
@@ -101,7 +102,7 @@ int _mbsbtype_l(
   
  \* Для констант манифеста используются в качестве возвращаемых значений.  
   
- Дополнительные сведения о совместимости см. в разделе [Compatibility](../../c-runtime-library/compatibility.md).  
+ Дополнительные сведения о совместимости см. в разделе [Совместимость](../../c-runtime-library/compatibility.md).  
   
 ## <a name="see-also"></a>См. также  
  [Классификация байтов](../../c-runtime-library/byte-classification.md)

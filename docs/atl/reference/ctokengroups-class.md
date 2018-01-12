@@ -26,11 +26,12 @@ caps.latest.revision: "23"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: a6c08f9105d51112f1261a79bd5b96341b5504f2
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: b6f0e8e2f63d5765e0e888c7a98cea77c862e241
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="ctokengroups-class"></a>Класс CTokenGroups
 Этот класс является оболочкой для **TOKEN_GROUPS** структуры.  
@@ -44,18 +45,18 @@ ms.lasthandoff: 10/24/2017
 class CTokenGroups
 ```  
   
-## <a name="members"></a>Члены  
+## <a name="members"></a>Участники  
   
 ### <a name="public-constructors"></a>Открытые конструкторы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[CTokenGroups::CTokenGroups](#ctokengroups)|Конструктор.|  
 |[CTokenGroups:: ~ CTokenGroups](#dtor)|Деструктор|  
   
 ### <a name="public-methods"></a>Открытые методы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[CTokenGroups::Add](#add)|Добавляет `CSid` или имеющиеся **TOKEN_GROUPS** структуру `CTokenGroups` объекта.|  
 |[CTokenGroups::Delete](#delete)|Удаляет `CSid` и связанных с ним атрибутов из `CTokenGroups` объекта.|  
@@ -68,7 +69,7 @@ class CTokenGroups
   
 ### <a name="public-operators"></a>Открытые операторы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[CTokenGroups::operator const TOKEN_GROUPS *](#operator_const_token_groups__star)|Приведение `CTokenGroups` объекта в указатель на **TOKEN_GROUPS** структуры.|  
 |[CTokenGroups::operator =](#operator_eq)|Оператор присвоения.|  

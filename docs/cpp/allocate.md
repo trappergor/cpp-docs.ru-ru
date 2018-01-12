@@ -17,14 +17,15 @@ caps.latest.revision: "6"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 83f819338286139e2b03efd900c7dc6026f6895b
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: c394e67309811f3ca968da712cba4819278a1ca0
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="allocate"></a>allocate
-**Блок, относящийся только к системам Майкрософт**  
+**Блок, относящийся только к системам Microsoft**  
   
  **Выделить** спецификатор объявления называет сегмент данных, в которой будет предоставлен элемент данных.  
   

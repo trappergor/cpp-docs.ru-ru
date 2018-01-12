@@ -19,11 +19,12 @@ caps.latest.revision: "8"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 2261f5c2b843f607f8f0906764aee833c6a100f4
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: c530a586ca2b8b70cfdc967c354738e93435f20c
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="summary-of-scope-rules"></a>Общие сведения о правилах области
 Использование имени должно быть однозначно в пределах его области видимости (до той точки, в которой задана перезагрузка). Если имя обозначает функцию, то она должна быть однозначной с точки зрения количества и типа параметров. Если имя сохраняет однозначность, [доступ к членам](../cpp/member-access-control-cpp.md) применяются правила.  

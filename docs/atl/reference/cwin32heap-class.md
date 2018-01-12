@@ -26,11 +26,12 @@ caps.latest.revision: "19"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 95498e3b945947e3cc2abc962e0ca2c2062aef83
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 67856242c63639101185eb6f6dcfd4902f0ef48c
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cwin32heap-class"></a>Класс CWin32Heap
 Этот класс реализует [IAtlMemMgr](../../atl/reference/iatlmemmgr-class.md) с помощью функций выделения кучи Win32.  
@@ -44,18 +45,18 @@ ms.lasthandoff: 10/24/2017
 class CWin32Heap : public IAtlMemMgr
 ```  
   
-## <a name="members"></a>Члены  
+## <a name="members"></a>Участники  
   
 ### <a name="public-constructors"></a>Открытые конструкторы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[CWin32Heap::CWin32Heap](#cwin32heap)|Конструктор.|  
 |[CWin32Heap:: ~ CWin32Heap](#dtor)|Деструктор|  
   
 ### <a name="public-methods"></a>Открытые методы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[CWin32Heap::Allocate](#allocate)|Выделяет блок памяти из кучи объекта.|  
 |[CWin32Heap::Attach](#attach)|Присоединяет объект кучи в существующую кучу.|  
@@ -66,7 +67,7 @@ class CWin32Heap : public IAtlMemMgr
   
 ### <a name="public-data-members"></a>Открытые члены данных  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[CWin32Heap::m_bOwnHeap](#m_bownheap)|Флаг, используемый для определения текущего владельца дескриптора кучи.|  
 |[CWin32Heap::m_hHeap](#m_hheap)|Дескриптор кучи объекта.|  

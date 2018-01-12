@@ -15,11 +15,12 @@ caps.latest.revision: "10"
 author: ghogen
 ms.author: ghogen
 manager: ghogen
-ms.openlocfilehash: 850156c2db7e57a357b1fa68337753ebd37db30d
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: d434d687eca53deb4cad41615fcfd676836dda5e
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="platform-namespace-ccx"></a>Пространство имен Platform (C++/CX)
 Содержит встроенные типы, совместимые со средой выполнения Windows.  
@@ -30,12 +31,12 @@ ms.lasthandoff: 10/24/2017
 using namespace Platform;  
 ```  
   
-### <a name="members"></a>Члены  
+### <a name="members"></a>Участники  
  **Атрибуты**  
   
  Пространство имен Platform содержит атрибуты, классы, перечисления, интерфейсы и структуры. Platform также содержит вложенные пространства имен.  
   
-|Атрибут|Описание|  
+|Атрибут|Описание:|  
 |---------------|-----------------|  
 |Флаги|Указывает, что перечисление может обрабатываться как битовое поле (т. е. набор флагов).|  
 |MTAThread|Указывает, что потоковая модель для приложения является многопотоковым подразделением (MTA).|  
@@ -45,7 +46,7 @@ using namespace Platform;
   
  Пространство имен Platform содержит следующие классы.  
   
-|Класс|Описание|  
+|Класс|Описание:|  
 |-----------|-----------------|  
 |[Класс Platform::AccessDeniedException](../cppcx/platform-accessdeniedexception-class.md)|Возникает при запрете доступа к ресурсу или функции.|  
 |[Класс Platform::Agile](../cppcx/platform-agile-class.md)|Представляет объект, отличный от Agile, как объект Agile.|  
@@ -83,7 +84,7 @@ using namespace Platform;
   
  Пространство имен Platform определяет следующие интерфейсы.  
   
-|Интерфейс|Описание|  
+|Интерфейс|Описание:|  
 |---------------|-----------------|  
 |[Интерфейс Platform::IBox](../cppcx/platform-ibox-interface.md)|Используется для передачи типов значений в функции, параметры которых имеют тип Platform::Object^.|  
 |[Интерфейс Platform::IBoxArray](../cppcx/platform-iboxarray-interface.md)|Интерфейс, используемый для передачи массивов типов значений в функции, параметры которых имеют тип Platform::Array.|  
@@ -93,7 +94,7 @@ using namespace Platform;
   
  Пространство имен Platform содержит следующие перечисления.  
   
-|Интерфейс|Описание|  
+|Интерфейс|Описание:|  
 |---------------|-----------------|  
 |[Перечисление Platform::CallbackContext](../cppcx/platform-callbackcontext-enumeration.md)|Перечисление, используемое в качестве параметра конструктора делегата. Определяет, следует ли маршалировать обратный вызов в исходный поток или в поток вызывающего объекта.|  
 |[Перечисление Platform::TypeCode](../cppcx/platform-typecode-enumeration.md)|Указывает категорию чисел, представляющую встроенный тип.|  
@@ -102,7 +103,7 @@ using namespace Platform;
   
  Пространство имен Platform содержит следующие структуры.  
   
-|Структура|Описание|  
+|Структура|Описание:|  
 |---------------|-----------------|  
 |[Класс Platform::Enum](../cppcx/platform-enum-class.md)|Представляет константу с именем.|  
 |[Класс значения Platform::Guid](../cppcx/platform-guid-value-class.md)|Представляет идентификатор GUID.|  

@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-windows
+ms.technology: cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
@@ -17,41 +16,25 @@ f1_keywords:
 - ATLCOM/ATL::IDispEventImpl::GetTypeInfo
 - ATLCOM/ATL::IDispEventImpl::GetTypeInfoCount
 - ATLCOM/ATL::IDispEventImpl::GetUserDefinedType
-dev_langs:
-- C++
-helpviewer_keywords:
-- IDispEventImpl class
+dev_langs: C++
+helpviewer_keywords: IDispEventImpl class
 ms.assetid: a64b5288-35cb-4638-aad6-2d15b1c7cf7b
-caps.latest.revision: 22
+caps.latest.revision: "22"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: d2d39abf526a58b8442107b5ee816f316ae841f5
-ms.openlocfilehash: 07aa3e37dfb1a986f083d3efb007ea8f7c0c9243
-ms.contentlocale: ru-ru
-ms.lasthandoff: 03/31/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: f052ddf0194cf28a0845ae51b9503841ca880912
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="idispeventimpl-class"></a>Класс IDispEventImpl
 Этот класс предоставляет реализации `IDispatch` методы.  
   
 > [!IMPORTANT]
->  Этот класс и его члены не может использоваться в приложениях, выполняемых в [!INCLUDE[wrt](../../atl/reference/includes/wrt_md.md)].  
+>  Этот класс и его члены не может использоваться в приложениях, выполняемых в среде выполнения Windows.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -79,31 +62,31 @@ class ATL_NO_VTABLE IDispEventImpl : public IDispEventSimpleImpl<nID, T, pdiid>
  Указатель на библиотеку типов, которая определяет интерфейс диспетчеризации, на который указывает `pdiid`. Если **& GUID_NULL**, будет загрузить библиотеку типов из источников событий объекта.  
   
  `wMajor`  
- Основной номер версии библиотеки типов. Значение по умолчанию — 0.  
+ Основной номер версии для библиотеки типов. Значение по умолчанию — 0.  
   
  `wMinor`  
- Дополнительный номер версии библиотеки типов. Значение по умолчанию — 0.  
+ Дополнительный номер версии для библиотеки типов. Значение по умолчанию — 0.  
   
  `tihclass`  
  Класс, используемый для управления сведения о типе `T`. Значение по умолчанию — класс типа `CComTypeInfoHolder`, однако можно переопределить, указав класс типа, отличного от этого параметра шаблона `CComTypeInfoHolder`.  
   
-## <a name="members"></a>Члены  
+## <a name="members"></a>Участники  
   
 ### <a name="public-typedefs"></a>Общедоступные определения типов  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[IDispEventImpl::_tihclass](../../atl/reference/idispeventimpl-class.md)|Класс, используемый для управления сведения о типе. По умолчанию `CComTypeInfoHolder`.|  
   
 ### <a name="public-constructors"></a>Открытые конструкторы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[IDispEventImpl::IDispEventImpl](#idispeventimpl)|Конструктор.|  
   
 ### <a name="public-methods"></a>Открытые методы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[IDispEventImpl::GetFuncInfoFromId](#getfuncinfofromid)|Находит индекс функция указанный идентификатор.|  
 |[IDispEventImpl::GetIDsOfNames](#getidsofnames)|Сопоставляется соответствующему набору целого DISPID один элемент и дополнительный набор имен аргументов.|  
@@ -122,10 +105,10 @@ class ATL_NO_VTABLE IDispEventImpl : public IDispEventSimpleImpl<nID, T, pdiid>
   
  Должен быть производным от `IDispEventImpl` (с помощью уникальное значение для `nID`) для каждого объекта, для которого необходимы для обработки событий. Вы можете использовать базовый класс, unadvising от одного исходного объекта, затем о том, для исходного объекта, но максимальное количество объектов источников, может обрабатываться одновременно с помощью одного объекта ограничивается количество `IDispEventImpl` базовые классы.  
   
- `IDispEventImpl`предоставляет те же функциональные возможности, как [IDispEventSimpleImpl](../../atl/reference/idispeventsimpleimpl-class.md), за исключением того, он возвращает тип сведений об интерфейсе из библиотеки типов, вместо того, он предоставлен как указатель на [_ATL_FUNC_INFO](../../atl/reference/atl-func-info-structure.md) структуры. Используйте `IDispEventSimpleImpl` при не имеют библиотеку типов, описывающие интерфейса события или хотите избежать издержек, связанных с использованием библиотеки типов.  
+ `IDispEventImpl`предоставляет те же функциональные возможности, как [IDispEventSimpleImpl](../../atl/reference/idispeventsimpleimpl-class.md), за исключением того, он возвращает тип сведений об интерфейсе из библиотеки типов, вместо того, он предоставлен как указатель на [_ATL_FUNC_INFO](../../atl/reference/atl-func-info-structure.md) Структура. Используйте `IDispEventSimpleImpl` при не имеют библиотеку типов, описывающие интерфейса события или хотите избежать издержек, связанных с использованием библиотеки типов.  
   
 > [!NOTE]
-> `IDispEventImpl`и `IDispEventSimpleImpl` предоставить свою собственную реализацию **IUnknown::QueryInterface** включение каждого `IDispEventImpl` и `IDispEventSimpleImpl` базового класса в качестве отдельный идентификатор COM по-прежнему предоставляя прямой доступ к членам класса в основной COM-объект.  
+> `IDispEventImpl`и `IDispEventSimpleImpl` предоставить свою собственную реализацию **IUnknown::QueryInterface** включение каждого `IDispEventImpl` и `IDispEventSimpleImpl` базового класса в качестве отдельный идентификатор COM по-прежнему предоставляя прямой доступ к классу элементы в основной COM-объект.  
   
  Реализация CE ATL ActiveX событий приемники только поддерживает возврат значения типа HRESULT или void из вашего методы обработчиков событий; Возвращаемое значение не поддерживается, и его поведение не определено.  
   
@@ -183,7 +166,7 @@ STDMETHOD(GetIDsOfNames)(
 ```  
   
 ### <a name="remarks"></a>Примечания  
- В разделе [:: GetIdsOfNames](http://msdn.microsoft.com/en-us/6f6cf233-3481-436e-8d6a-51f93bf91619) в [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
+ В разделе [:: GetIdsOfNames](http://msdn.microsoft.com/en-us/6f6cf233-3481-436e-8d6a-51f93bf91619) в Windows SDK.  
   
 ##  <a name="gettypeinfo"></a>IDispEventImpl::GetTypeInfo  
  Возвращает сведения о типе объекта, которые затем могут использоваться для получения сведений о типе интерфейса.  
@@ -205,7 +188,7 @@ STDMETHOD(GetTypeInfoCount)(UINT* pctinfo);
 ```  
   
 ### <a name="remarks"></a>Примечания  
- В разделе [IDispatch::GetTypeInfoCount](http://msdn.microsoft.com/en-us/da876d53-cb8a-465c-a43e-c0eb272e2a12) в [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
+ В разделе [IDispatch::GetTypeInfoCount](http://msdn.microsoft.com/en-us/da876d53-cb8a-465c-a43e-c0eb272e2a12) в Windows SDK.  
   
 ##  <a name="getuserdefinedtype"></a>IDispEventImpl::GetUserDefinedType  
  Возвращает базовый тип определяемого пользователем типа.  

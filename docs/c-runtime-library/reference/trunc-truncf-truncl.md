@@ -1,57 +1,59 @@
 ---
-title: "TRUNC, truncf, truncl | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "cpp"
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-apiname: 
-  - "trunc"
-  - "truncf"
-  - "truncl"
-apilocation: 
-  - "msvcrt.dll"
-  - "msvcr80.dll"
-  - "msvcr90.dll"
-  - "msvcr100.dll"
-  - "msvcr100_clr0400.dll"
-  - "msvcr110.dll"
-  - "msvcr110_clr0400.dll"
-  - "msvcr120.dll"
-  - "msvcr120_clr0400.dll"
-  - "ucrtbase.dll"
-  - "api-ms-win-crt-math-l1-1-0.dll"
-apitype: "DLLExport"
-f1_keywords: 
-  - "trunc"
-  - "truncf"
-  - "truncl"
-  - "math/trunc"
-  - "math/truncf"
-  - "math/truncl"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "trunc - функция"
-  - "truncf - функция"
-  - "функция truncl"
+title: "trunc, truncf, truncl | Документы Майкрософт"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+apiname:
+- trunc
+- truncf
+- truncl
+apilocation:
+- msvcrt.dll
+- msvcr80.dll
+- msvcr90.dll
+- msvcr100.dll
+- msvcr100_clr0400.dll
+- msvcr110.dll
+- msvcr110_clr0400.dll
+- msvcr120.dll
+- msvcr120_clr0400.dll
+- ucrtbase.dll
+- api-ms-win-crt-math-l1-1-0.dll
+apitype: DLLExport
+f1_keywords:
+- trunc
+- truncf
+- truncl
+- math/trunc
+- math/truncf
+- math/truncl
+dev_langs: C++
+helpviewer_keywords:
+- trunc function
+- truncf function
+- truncl function
 ms.assetid: de2038ac-ac0b-483e-870c-e8992dcd4fd0
-caps.latest.revision: 13
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 13
+caps.latest.revision: "13"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 911636e4fa843afa1220dc99e1f679d5bfe88d7b
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 12/21/2017
 ---
-# TRUNC, truncf, truncl
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Определяет ближайшего целое число, которое меньше или равно заданному значению с плавающей запятой.  
+# <a name="trunc-truncf-truncl"></a>trunc, truncf, truncl
+Определяют ближайшего целое число, которое меньше или равно заданному значению с плавающей запятой.  
   
-## Синтаксис  
+## <a name="syntax"></a>Синтаксис  
   
 ```  
 double trunc(  
@@ -76,39 +78,39 @@ long double truncl(
   
 ```  
   
-#### Параметры  
- \[in\] `x`  
+#### <a name="parameters"></a>Параметры  
+ [in] `x`  
  Значение для усечения.  
   
-## Возвращаемое значение  
- В случае успеха возвращает целое значение `x`, округленные к нулю.  
+## <a name="return-value"></a>Возвращаемое значение  
+ В случае успеха возвращает целое значение `x`, округленное в сторону нуля.  
   
- В противном случае может возвращать одно из следующих:  
+ В случае неудачи может возвращать одно из следующих значений:  
   
 |Проблеми|Назад|  
-|--------------|-----------|  
-|`x` \= ±INFINITY|x|  
-|`x` \=  ±0|x|  
-|`x` \= NaN|NaN|  
+|-----------|------------|  
+|`x`= ±INFINITY|x|  
+|`x` =  ±0|x|  
+|`x` = NaN|NaN|  
   
- Сообщает об ошибках, как указано в [\_matherr](../../c-runtime-library/reference/matherr.md).  
+ Ошибки сообщаются, как указано в [_matherr](../../c-runtime-library/reference/matherr.md).  
   
-## Заметки  
- Поскольку C\+\+ допускает перегрузку, можно вызывать перегрузки `trunc` принимающие и возвращающие float и long double типов. В программе на языке C `trunc` всегда принимает и возвращает значение типа double.  
+## <a name="remarks"></a>Примечания  
+ Так как C++ допускает перегрузку, можно вызывать перегрузки функции `trunc`, принимающие и возвращающие типы значений с плавающей запятой и длинных двойных значений. В программе на языке C `trunc` всегда принимает и возвращает значение типа double.  
   
- Поскольку наибольшие значения с плавающей запятой являются точное целых чисел, эта функция не будет переполнения самостоятельно. Тем не менее может вызвать функцию к переполнению, возвращая значение в тип integer.  
+ Поскольку наибольшими значениями с плавающей запятой являются целые числа, эта функция не будет переполняться сама по себе. Тем не менее можно вызвать переполнение этой функции, возвращая значение в целочисленный тип.  
   
- Можно также провести округление путем неявного преобразования из чисел с плавающей запятой в целочисленный; Тем не менее это является только значения, которые могут храниться в целевой тип.  
+ Можно также округлять в меньшую сторону, выполняя неявное преобразование из типа с плавающей запятой в целочисленный тип; однако это можно делать только со значениями, которые могут храниться в целевом типе.  
   
-## Требования  
+## <a name="requirements"></a>Требования  
   
-|Функция|Заголовок C|Заголовок C\+\+|  
-|-------------|-----------------|---------------------|  
-|`trunc`, `truncf`,  `truncl`|\<math.h\>|\<cmath\>|  
+|Функция|Заголовок C|Заголовок C++|  
+|--------------|--------------|------------------|  
+|`trunc`,                `truncf`, `truncl`|\<math.h>|\<cmath>|  
   
- Дополнительные сведения о совместимости см. в статье [Совместимость](../../c-runtime-library/compatibility.md).  
+ Дополнительные сведения о совместимости см. в разделе [Совместимость](../../c-runtime-library/compatibility.md).  
   
-## См. также  
+## <a name="see-also"></a>См. также  
  [Алфавитный указатель функций](../../c-runtime-library/reference/crt-alphabetical-function-reference.md)   
  [floor, floorf, floorl](../../c-runtime-library/reference/floor-floorf-floorl.md)   
  [ceil, ceilf, ceill](../../c-runtime-library/reference/ceil-ceilf-ceill.md)   

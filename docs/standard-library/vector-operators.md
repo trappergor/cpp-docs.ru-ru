@@ -13,10 +13,9 @@ f1_keywords:
 - vector/std::operator&lt;
 - vector/std::operator&lt;=
 - vector/std::operator==
-dev_langs:
-- C++
+dev_langs: C++
 ms.assetid: 1d14f312-6f59-4ec7-88ae-95f89a558823
-caps.latest.revision: 13
+caps.latest.revision: "13"
 manager: ghogen
 helpviewer_keywords:
 - std::operator!= (vector)
@@ -25,18 +24,17 @@ helpviewer_keywords:
 - std::operator&lt; (vector)
 - std::operator&lt;= (vector)
 - std::operator== (vector)
-ms.translationtype: MT
-ms.sourcegitcommit: 65f4e356ad0d46333b0d443d0fd6ac0b9f2b6f58
 ms.openlocfilehash: 310bf81e6dd20440c57ce5a0c73da7a6919f0015
-ms.contentlocale: ru-ru
-ms.lasthandoff: 10/03/2017
-
+ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/24/2017
 ---
 # <a name="ltvectorgt-operators"></a>Операторы &lt;vector&gt;
 ||||  
 |-|-|-|  
-|[оператор!=](#op_neq)|[оператор&gt;](#op_gt)|[оператор&gt;=](#op_gt_eq)|  
-|[оператор&lt;](#op_lt)|[оператор&lt;=](#op_lt_eq)|[оператор==](#op_eq_eq)|  
+|[оператор!=](#op_neq)|[оператор&gt;](#op_gt)|[operator&gt;=](#op_gt_eq)|  
+|[оператор&lt;](#op_lt)|[operator&lt;=](#op_lt_eq)|[оператор==](#op_eq_eq)|  
   
 ##  <a name="op_neq"></a>  оператор!=  
  Проверяет неравенство объекта слева от оператора объекту справа от оператора.  
@@ -85,7 +83,7 @@ int main( )
 Vectors not equal.  
 ```  
   
-##  <a name="op_lt"></a>  оператор&lt;  
+##  <a name="op_lt"></a> operator&lt;  
  Проверяет, что объект слева от оператора меньше, чем объект справа от оператора.  
   
 ```  
@@ -133,7 +131,7 @@ int main( )
 Vector v1 is less than vector v2.  
 ```  
   
-##  <a name="op_lt_eq"></a>  оператор&lt;=  
+##  <a name="op_lt_eq"></a> operator&lt;=  
  Проверяет, что объект слева от оператора меньше или равен объекту справа от оператора.  
   
 ```  
@@ -181,7 +179,7 @@ int main( )
 Vector v1 is less than or equal to vector v2.  
 ```  
   
-##  <a name="op_eq_eq"></a>  оператор==  
+##  <a name="op_eq_eq"></a> operator==  
  Проверяет равенство объекта слева от оператора объекту справа от оператора.  
   
 ```  
@@ -228,7 +226,7 @@ int main( )
 Vectors equal.  
 ```  
   
-##  <a name="op_gt"></a>  оператор&gt;  
+##  <a name="op_gt"></a> operator&gt;  
  Проверяет, что объект слева от оператора больше, чем объект справа от оператора.  
   
 ```  
@@ -277,7 +275,7 @@ int main( )
 Vector v1 is greater than vector v2.  
 ```  
   
-##  <a name="op_gt_eq"></a>  оператор&gt;=  
+##  <a name="op_gt_eq"></a> operator&gt;=  
  Проверяет, что объект слева от оператора больше или равен объекту справа от оператора.  
   
 ```  
@@ -328,5 +326,4 @@ Vector v1 is greater than or equal to vector v2.
   
 ## <a name="see-also"></a>См. также  
  [\<vector>](../standard-library/vector.md)
-
 

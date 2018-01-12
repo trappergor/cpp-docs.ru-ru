@@ -18,11 +18,12 @@ caps.latest.revision: "4"
 author: ghogen
 ms.author: ghogen
 manager: ghogen
-ms.openlocfilehash: 28475df3c5d13d1b90483213173f5343f6b85d79
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: de0f7546019096e5126938d47443f6584bf4edb2
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="platformcomexception-class"></a>Класс Platform::COMException
 Представляет ошибки COM, возникающие при выполнении приложения. COMException — базовый класс для набора предопределенных стандартных исключений.  
@@ -33,14 +34,14 @@ ms.lasthandoff: 10/24/2017
 public ref class COMException : Exception,    IException,    IPrintable,    IEquatable  
 ```  
   
-### <a name="members"></a>Члены  
+### <a name="members"></a>Участники  
  Класс COMException наследует от класса Object и интерфейсов IException, IPrintable и IEquatable.  
   
  Класс COMException также имеет следующие типы членов.  
   
  **Конструкторы**  
   
-|Член|Описание|  
+|Член|Описание:|  
 |------------|-----------------|  
 |[COMException](#ctor)|Инициализирует новый экземпляр класса COMException.|  
   
@@ -52,7 +53,7 @@ public ref class COMException : Exception,    IException,    IPrintable,    IEqu
   
  Класс COMException имеет следующие свойства.  
   
-|Член|Описание|  
+|Член|Описание:|  
 |------------|-----------------|  
 |[Exception::HRESULT](#hresult)|Значение HRESULT, соответствующее исключению.|  
 |[Exception::Message](#message)|Сообщение с описанием исключения.|  
@@ -60,7 +61,7 @@ public ref class COMException : Exception,    IException,    IPrintable,    IEqu
 ## <a name="derived-exceptions"></a>Производные исключения  
  Следующие предопределенные исключения наследуются от класса COMException. Они отличаются от класса COMException только своими именами, именами своих конструкторов и значениями HRESULT.  
   
-|Имя|Значение HRESULT|Описание|  
+|name|Значение HRESULT|Описание:|  
 |----------|------------------------|-----------------|  
 |COMException|*Определяемое пользователем значение hresult*|Возникает при возвращении неизвестного значения HRESULT после вызова метода COM.|  
 |AccessDeniedException|E_ACCESSDENIED|Возникает при запрете доступа к ресурсу или функции.|  

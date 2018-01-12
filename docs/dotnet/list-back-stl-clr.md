@@ -1,41 +1,42 @@
 ---
-title: "list::back (STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::list::back"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "back - член [STL/CLR]"
+title: "List::Back (STL/CLR) | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::list::back
+dev_langs: C++
+helpviewer_keywords: back member [STL/CLR]
 ms.assetid: 3241e497-42ab-4108-8598-3f90eac76f07
-caps.latest.revision: 18
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 16
+caps.latest.revision: "18"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: 7b0e654f5df9452177b3017f045b5db2f217031a
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 12/21/2017
 ---
-# list::back (STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Получает последний элемент.  
+# <a name="listback-stlclr"></a>list::back (STL/CLR)
+Обращается к последнему элементу.  
   
-## Синтаксис  
+## <a name="syntax"></a>Синтаксис  
   
 ```  
 reference back();  
 ```  
   
-## Заметки  
- Возвращает ссылку на функцию\-член последнему элементу контролируемой последовательности, которая должна быть непустой.  Он используется для получения последнего элемента, если известно, что он существует.  
+## <a name="remarks"></a>Примечания  
+ Функция-член возвращает ссылку на последний элемент управляемой последовательности, который должен быть пустым. Используется для доступа к последним элементом, если известно, что он существует.  
   
-## Пример  
+## <a name="example"></a>Пример  
   
 ```  
 // cliext_list_back.cpp   
@@ -67,16 +68,19 @@ int main()
   
 ```  
   
-  **a b c**  
-**back\(\) \= C**  
- **B x**   
-## Требования  
- **Заголовок:**\<cliext\/list\>  
+```Output  
+ a b c  
+back() = c  
+ a b x  
+```  
+  
+## <a name="requirements"></a>Требования  
+ **Заголовок:** \<cliext/list >  
   
  **Пространство имен:** cliext  
   
-## См. также  
- [list](../dotnet/list-stl-clr.md)   
- [list::back\_item](../Topic/list::back_item%20\(STL-CLR\).md)   
- [list::front](../dotnet/list-front-stl-clr.md)   
- [list::front\_item](../dotnet/list-front-item-stl-clr.md)
+## <a name="see-also"></a>См. также  
+ [список (STL/CLR)](../dotnet/list-stl-clr.md)   
+ [List::back_item (STL/CLR)](../dotnet/list-back-item-stl-clr.md)   
+ [List::Front (STL/CLR)](../dotnet/list-front-stl-clr.md)   
+ [list::front_item (STL/CLR)](../dotnet/list-front-item-stl-clr.md)

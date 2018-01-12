@@ -1,78 +1,80 @@
 ---
-title: "CDynamicAccessor::SetValue | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "ATL.CDynamicAccessor.SetValue"
-  - "ATL::CDynamicAccessor::SetValue"
-  - "ATL::CDynamicAccessor::SetValue<ctype>"
-  - "CDynamicAccessor.SetValue"
-  - "ATL.CDynamicAccessor.SetValue<ctype>"
-  - "CDynamicAccessor::SetValue"
-  - "CDynamicAccessor::SetValue<ctype>"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "SetValue - метод"
+title: "CDynamicAccessor::SetValue | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- ATL.CDynamicAccessor.SetValue
+- ATL::CDynamicAccessor::SetValue
+- ATL::CDynamicAccessor::SetValue<ctype>
+- CDynamicAccessor.SetValue
+- ATL.CDynamicAccessor.SetValue<ctype>
+- CDynamicAccessor::SetValue
+- CDynamicAccessor::SetValue<ctype>
+dev_langs: C++
+helpviewer_keywords: SetValue method
 ms.assetid: ecc18850-96e5-4845-abe5-ab34ad467238
-caps.latest.revision: 8
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: bdd334f916257d3688658e941522b6cc20b12b40
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 12/21/2017
 ---
-# CDynamicAccessor::SetValue
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Хранение данных определенным столбцом.  
+# <a name="cdynamicaccessorsetvalue"></a>CDynamicAccessor::SetValue
+Хранит данные для указанного столбца.  
   
-## Синтаксис  
+## <a name="syntax"></a>Синтаксис  
   
 ```  
   
-      template < class ctype >    
-bool SetValue(   
-   DBORDINAL nColumn,   
-   const ctype& data    
+      template < class ctype >    
+bool SetValue(   
+   DBORDINAL nColumn,   
+   const ctype& data    
 ) throw( );  
-template < class ctype >    
-bool SetValue(   
-   const CHAR * pColumnName,   
-   const ctype& data    
+template < class ctype >    
+bool SetValue(   
+   const CHAR * pColumnName,   
+   const ctype& data    
 ) throw( );  
-template <class ctype>   
+template <class ctype>   
 bool SetValue(  
    const WCHAR *pColumnName,  
    const ctype& data   
 ) throw( );  
 ```  
   
-#### Параметры  
+#### <a name="parameters"></a>Параметры  
  `ctype`  
- \[in\] a атрибутами параметр обработки любого типа данных, за исключением строковых типов \(**CHAR\***, **WCHAR\***\), которые требуют специальной обработки.  `GetValue` используется соответствующий тип данных, на основе которого указано ниже.  
+ [in] Шаблонный параметр, который обрабатывает любого типа данных, за исключением строковых типов (**CHAR\***, **WCHAR\***), который требуют специальной обработки. `GetValue`использует соответствующий тип данных зависимости от того, что указано здесь.  
   
  `pColumnName`  
- \[in\] указатель на символьной строки, содержащей имя столбца.  
+ [in] Указатель на символьную строку, содержащую имя столбца.  
   
  `data`  
- \[in\] указатель на адрес памяти, содержащие данные.  
+ [in] Указатель памяти, содержащую данные.  
   
  `nColumn`  
- \[in\] число столбцов.  Начало номера столбца с 1.  Значение 0 указывает на столбец закладки, если таковые имеются.  
+ [in] Номер столбца. Номера столбцов начинается с 1. Значение 0 ссылается на столбец закладки в том случае, если таковые имеются.  
   
-## Возвращаемое значение  
- Если следует разместить строковые данные, используйте nontemplated версии `GetValue`.  Nontemplated версии этого метода, который возвращает значение **void\*** указывает на части буфера, который содержит указанные данные столбца.  Возвращает значение **NULL**, если столбец не найден.  
+## <a name="return-value"></a>Возвращаемое значение  
+ Если вы хотите установить строковые данные, используйте нешаблонной версии `GetValue`. Версии нешаблонной этот метод возвращает **void\***, который указывает на часть буфер, содержащий данные указанного столбца. Возвращает **NULL** Если столбец не найден.  
   
- Для всех других типов данных он проще использовать шаблонные версии `GetValue`.  Шаблонные версии возвращают **true** в успехе или **false** при сбое.  
+ Для всех других типов данных, проще использовать шаблонные версии `GetValue`. Шаблонные версии возвращают **true** в случае успешного выполнения или **false** при сбое.  
   
-## Требования  
+## <a name="requirements"></a>Требования  
  **Заголовок:** atldbcli.h  
   
-## См. также  
+## <a name="see-also"></a>См. также  
  [Класс CDynamicAccessor](../../data/oledb/cdynamicaccessor-class.md)

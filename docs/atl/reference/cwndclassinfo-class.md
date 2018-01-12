@@ -25,11 +25,12 @@ caps.latest.revision: "22"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 27e87210bc92554b960469336af591ec5ada485a
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: b07f6b12914e18f3f83abedf59742a8b7c7867b9
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cwndclassinfo-class"></a>Класс CWndClassInfo
 Этот класс предоставляет методы для регистрации сведений о для класса окна.  
@@ -43,7 +44,7 @@ ms.lasthandoff: 10/24/2017
 class CWndClassInfo
 ```  
   
-## <a name="members"></a>Члены  
+## <a name="members"></a>Участники  
   
 ### <a name="public-methods"></a>Открытые методы  
   
@@ -66,7 +67,7 @@ class CWndClassInfo
 ## <a name="remarks"></a>Примечания  
  `CWndClassInfo`Управляет данными класса окна. Как правило, используется `CWndClassInfo` посредством одного из трех макросов `DECLARE_WND_CLASS`, `DECLARE_WND_CLASS_EX`, или `DECLARE_WND_SUPERCLASS`, как описано в следующей таблице:  
   
-|Макрос|Описание|  
+|Макрос|Описание:|  
 |-----------|-----------------|  
 |[DECLARE_WND_CLASS](window-class-macros.md#declare_wnd_class)|`CWndClassInfo`Регистрирует сведения для нового класса окна.|  
 |[DECLARE_WND_CLASS_EX](window-class-macros.md#declare_wnd_class_ex)|`CWndClassInfo`Регистрирует сведения для нового класса окна, включая параметры класса.|  

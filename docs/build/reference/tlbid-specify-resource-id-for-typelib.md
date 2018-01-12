@@ -23,11 +23,12 @@ caps.latest.revision: "8"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 9a260882b7e4623149e9e82a3a635f7230b6985a
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: a552edab9f2de646de3b869bf84467924b5db348
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="tlbid-specify-resource-id-for-typelib"></a>/TLBID (указать идентификатор ресурса для TypeLib)
 ```  
@@ -35,7 +36,7 @@ ms.lasthandoff: 10/24/2017
 ```  
   
 ## <a name="remarks"></a>Примечания  
- где:  
+ Здесь:  
   
  `id`  
  Определяемый пользователем значение для библиотеки типов, созданной компоновщиком. Он переопределяет идентификатор ресурса по умолчанию 1.  

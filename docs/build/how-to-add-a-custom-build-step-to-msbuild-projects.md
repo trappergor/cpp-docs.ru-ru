@@ -15,11 +15,12 @@ caps.latest.revision: "10"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 436c4a7d2eb8c0b75891d7df670a7f30e900bd97
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: d664b9fad6a9ec67dc009a90171119036dc13cde
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="how-to-add-a-custom-build-step-to-msbuild-projects"></a>Практическое руководство. Добавление пользовательского шага построения в проекты MSBuild
 Этап настраиваемого построения — это определяемые пользователем этап в построении. Этап настраиваемого построения ведет себя как любой другой *средство командной строки* шаг, такие как стандартный этап инструмента компиляции или компоновки.  

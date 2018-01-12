@@ -1,79 +1,79 @@
 ---
-title: "_set_fmode | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-apiname: 
-  - "_set_fmode"
-apilocation: 
-  - "msvcrt.dll"
-  - "msvcr80.dll"
-  - "msvcr90.dll"
-  - "msvcr100.dll"
-  - "msvcr100_clr0400.dll"
-  - "msvcr110.dll"
-  - "msvcr110_clr0400.dll"
-  - "msvcr120.dll"
-  - "msvcr120_clr0400.dll"
-  - "ucrtbase.dll"
-  - "api-ms-win-crt-stdio-l1-1-0.dll"
-apitype: "DLLExport"
-f1_keywords: 
-  - "_set_fmode"
-  - "set_fmode"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "_set_fmode - функция"
-  - "перевод файла [C++], режим по умолчанию"
-  - "перевод файла [C++], задание режима"
-  - "set_fmode - функция"
+title: "_set_fmode | Документы Майкрософт"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-standard-libraries
+ms.tgt_pltfrm: 
+ms.topic: article
+apiname: _set_fmode
+apilocation:
+- msvcrt.dll
+- msvcr80.dll
+- msvcr90.dll
+- msvcr100.dll
+- msvcr100_clr0400.dll
+- msvcr110.dll
+- msvcr110_clr0400.dll
+- msvcr120.dll
+- msvcr120_clr0400.dll
+- ucrtbase.dll
+- api-ms-win-crt-stdio-l1-1-0.dll
+apitype: DLLExport
+f1_keywords:
+- _set_fmode
+- set_fmode
+dev_langs: C++
+helpviewer_keywords:
+- file translation [C++], default mode
+- _set_fmode function
+- file translation [C++], setting mode
+- set_fmode function
 ms.assetid: f80eb9c7-733b-4652-a9bc-6b3790a35f12
-caps.latest.revision: 19
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 19
+caps.latest.revision: "19"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: d13ee80a8a3d9848841b7fa3b5463e0b5302ffeb
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 12/21/2017
 ---
-# _set_fmode
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Устанавливает режим преобразования файла по умолчанию для операций файлового ввода\-вывода.  
+# <a name="setfmode"></a>_set_fmode
+Устанавливает режим преобразования файла по умолчанию для операций файлового ввода-вывода.  
   
-## Синтаксис  
+## <a name="syntax"></a>Синтаксис  
   
 ```  
-errno_t _set_fmode(   
-   int mode   
+errno_t _set_fmode(   
+   int mode   
 );  
 ```  
   
-#### Параметры  
- \[входящий\] `mode`  
- Нужный режим преобразования файла: `_O_TEXT` или `_O_BINARY`.  
+#### <a name="parameters"></a>Параметры  
+ [in] `mode`  
+ Требуемый режим преобразования файлов: `_O_TEXT` или `_O_BINARY`.  
   
-## Возвращаемое значение  
- Возвращает ноль при успехе; код ошибки при неудаче.  Если параметр `mode` не имеет значения `_O_TEXT`, `_O_BINARY` или `_O_WTEXT`, вызывается обработчик недопустимых параметров, как описано в разделе [Проверка параметров](../../c-runtime-library/parameter-validation.md).  Если продолжение выполнения разрешено, функция устанавливает `errno` в `EINVAL` и возвращает `EINVAL`.  
+## <a name="return-value"></a>Возвращаемое значение  
+ Возвращает нуль в случае успеха или код ошибки в случае ошибки. Если параметр `mode` не имеет значения `_O_TEXT`, `_O_BINARY` или `_O_WTEXT`, вызывается обработчик недопустимых параметров, как описано в разделе [Проверка параметров](../../c-runtime-library/parameter-validation.md). Если выполнение может быть продолжено, эта функция задает для `errno` значение `EINVAL` и возвращает `EINVAL`.  
   
-## Заметки  
- Функция задает глобальную переменную [\_fmode](../../c-runtime-library/fmode.md).  Эта переменная указывает режим преобразования файла по умолчанию для операций файлового ввода\-вывода `_open` и `_pipe`.  
+## <a name="remarks"></a>Примечания  
+ Функция задает глобальную переменную [_fmode](../../c-runtime-library/fmode.md). Эта переменная определяет значение по умолчанию режима трансляции файла для операций файлового ввода-вывода `_open` и `_pipe`.  
   
- `_O_TEXT` и `_O_BINARY` определены в Fcntl.h.  `EINVAL` определяется в Errno.h.  
+ `_O_TEXT` и `_O_BINARY` задаются в Fcntl.h. `EINVAL` задается в Errno.h.  
   
-## Требования  
+## <a name="requirements"></a>Требования  
   
 |Подпрограмма|Обязательный заголовок|Необязательный заголовок|  
-|------------------|----------------------------|------------------------------|  
-|`_set_fmode`|\<stdlib.h\>|\<fcntl.h\>, \<errno.h\>|  
+|-------------|---------------------|---------------------|  
+|`_set_fmode`|\<stdlib.h>|\<fcntl.h>, \<errno.h>|  
   
  Дополнительные сведения о совместимости см. в разделе [Совместимость](../../c-runtime-library/compatibility.md) во введении.  
   
-## Пример  
+## <a name="example"></a>Пример  
   
 ```  
 // crt_set_fmode.c  
@@ -131,10 +131,13 @@ int main()
 }  
 ```  
   
-  **Default Mode is binary**  
-**A   B   C   D   E   F   G   H   I   J   K   L**    
-## См. также  
- [\_fmode](../../c-runtime-library/fmode.md)   
- [\_get\_fmode](../../c-runtime-library/reference/get-fmode.md)   
- [\_setmode](../../c-runtime-library/reference/setmode.md)   
- [Файловый ввод\-вывод в текстовом и двоичном режиме](../../c-runtime-library/text-and-binary-mode-file-i-o.md)
+```Output  
+Default Mode is binary  
+A   B   C   D   E   F   G   H   I   J   K   L     
+```  
+  
+## <a name="see-also"></a>См. также  
+ [_fmode](../../c-runtime-library/fmode.md)   
+ [_get_fmode](../../c-runtime-library/reference/get-fmode.md)   
+ [_setmode](../../c-runtime-library/reference/setmode.md)   
+ [Файловый ввод-вывод в текстовом и двоичном режиме](../../c-runtime-library/text-and-binary-mode-file-i-o.md)

@@ -19,11 +19,12 @@ caps.latest.revision: "21"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 58551edf5663d7ecbaf50f4ce0660247c00249c9
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: db9cd28719b1ced8efee124a4b75fbd362de60e1
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="keywords-c"></a>Ключевые слова (C++)
 Ключевые слова — это предварительно определенные зарезервированные идентификаторы, имеющие специальные значения. Их использование в программе в качестве идентификаторов не допускается. Для Microsoft C++ зарезервированы следующие ключевые слова. Имена с символами подчеркиваниями в начале — это расширения Microsoft.  
@@ -51,7 +52,7 @@ ms.lasthandoff: 10/24/2017
 |[break](../cpp/break-statement-cpp.md)|[case](../cpp/switch-statement-cpp.md)|[catch](../cpp/try-throw-and-catch-statements-cpp.md)|  
 |[char](../cpp/fundamental-types-cpp.md)|[class](../cpp/class-cpp.md)|[const](../cpp/const-cpp.md)|  
 |[const_cast](../cpp/const-cast-operator.md)|[continue](../cpp/continue-statement-cpp.md)|[decltype](../cpp/decltype-cpp.md)|  
-|[default](../cpp/switch-statement-cpp.md)|[delegate](../windows/delegate-cpp-component-extensions.md)|[удалить](../cpp/delete-operator-cpp.md)|  
+|[default](../cpp/switch-statement-cpp.md)|[delegate](../windows/delegate-cpp-component-extensions.md)|[delete](../cpp/delete-operator-cpp.md)|  
 |[Рекомендуется использовать](../cpp/deprecated-cpp.md) <sup>1</sup>|[dllexport](../cpp/dllexport-dllimport.md) <sup>1</sup>|[DllImport](../cpp/dllexport-dllimport.md) <sup>1</sup>|  
 |[do](../cpp/do-while-statement-cpp.md)|[double](../cpp/fundamental-types-cpp.md)|[dynamic_cast](../cpp/dynamic-cast-operator.md)|  
 |[else](../cpp/if-else-statement-cpp.md)|[enum](../cpp/enumerations-cpp.md)|[Класс перечисления](../windows/enum-class-cpp-component-extensions.md)|  
@@ -66,7 +67,7 @@ ms.lasthandoff: 10/24/2017
 |[naked](../cpp/naked-cpp.md) <sup>1</sup>|[namespace](namespaces-cpp.md)|[new](../windows/new-new-slot-in-vtable-cpp-component-extensions.md)|  
 |[new](../cpp/new-operator-cpp.md)|[noinline](../cpp/noinline.md) <sup>1</sup>|[noreturn](../cpp/noreturn.md) <sup>1</sup>|  
 |[nothrow](../cpp/nothrow-cpp.md) <sup>1</sup>|[novtable](../cpp/novtable.md) <sup>1</sup>|[nullptr](../cpp/nullptr.md)|  
-|[operator](../cpp/operator-overloading.md)|[private](../cpp/private-cpp.md)|[Свойство](../windows/property-cpp-component-extensions.md)|  
+|[operator](../cpp/operator-overloading.md)|[private](../cpp/private-cpp.md)|[свойство](../windows/property-cpp-component-extensions.md)|  
 |[Свойство](../cpp/property-cpp.md) <sup>1</sup>|[protected](../cpp/protected-cpp.md)|[public](../cpp/public-cpp.md)|  
 |[Класс ссылки](../windows/classes-and-structs-cpp-component-extensions.md)|[Структура ссылки](../windows/classes-and-structs-cpp-component-extensions.md)|[register](../cpp/storage-classes-cpp.md#register)|  
 |[reinterpret_cast](../cpp/reinterpret-cast-operator.md)|[return](../cpp/return-statement-cpp.md)|[safecast](../windows/safe-cast-cpp-component-extensions.md)|  

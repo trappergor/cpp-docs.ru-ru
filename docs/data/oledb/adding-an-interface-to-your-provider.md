@@ -14,11 +14,14 @@ caps.latest.revision: "7"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: a9a5a383e32a4fa5cb626dee499d5b2262abe37c
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: cd67039848eedc0568e68e1e62f6192b822b9f3d
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="adding-an-interface-to-your-provider"></a>Добавление интерфейса в поставщик
 Определения объекта, который требуется добавить интерфейс (обычно данных источника, набора строк, команды или сеанса объекты, созданные мастером поставщика OLE DB). Это возможно, необходимо добавить интерфейс для объекта, не поддерживается поставщиком. В этом случае запустите мастер ATL OLE DB Provider для создания объекта. Щелкните правой кнопкой мыши проект в представлении классов щелкните **добавить класс** из **добавить** меню, а затем нажмите **поставщика ATL OLE DB**. Вы можете разместить код интерфейса в отдельном каталоге, а затем скопируйте файлы в проект поставщика.  
@@ -32,7 +35,7 @@ public CRowsetImpl< CAgentRowset<Creator>, CAgentMan, Creator>,
    public IRowsetIndexImpl< ... >   
 ```  
   
- Добавить интерфейс **COM_MAP** в объекте с помощью макроса COM_INTERFACE_ENTRY. Если файл сопоставления отсутствует, создайте его. Например:  
+ Добавить интерфейс **COM_MAP** в объекте с помощью макроса COM_INTERFACE_ENTRY. Если файл сопоставления отсутствует, создайте его. Пример:  
   
 ```  
 BEGIN_COM_MAP(CAgentRowset)  

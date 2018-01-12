@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-windows
+ms.technology: cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
@@ -24,21 +23,19 @@ f1_keywords:
 - ATLPREVIEWCTRLIMPL/ATL::CAtlPreviewCtrlImpl::m_plf
 - ATLPREVIEWCTRLIMPL/ATL::CAtlPreviewCtrlImpl::m_clrBack
 - ATLPREVIEWCTRLIMPL/ATL::CAtlPreviewCtrlImpl::m_clrText
-dev_langs:
-- C++
-helpviewer_keywords:
-- CAtlPreviewCtrlImpl class
+dev_langs: C++
+helpviewer_keywords: CAtlPreviewCtrlImpl class
 ms.assetid: 39b3299e-07e4-4abc-9b6e-b54bfa3b0802
-caps.latest.revision: 26
+caps.latest.revision: "26"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 01c6ac22ecdbf6f66afcec3816ae9d3a3d686942
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
-ms.sourcegitcommit: c55726a1728185f699afbac4ba68a6dc0f70c2bf
-ms.openlocfilehash: 1802e1bd3a42767cbc5fa0705f9ccdfd3afa2589
-ms.contentlocale: ru-ru
-ms.lasthandoff: 10/09/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="catlpreviewctrlimpl-class"></a>Класс CAtlPreviewCtrlImpl
 Этот класс представляет собой реализацию ATL окна, которое помещается в окне узла, заданного оболочкой для расширенного просмотра.  
@@ -52,18 +49,18 @@ ms.lasthandoff: 10/09/2017
 class CAtlPreviewCtrlImpl : public CWindowImpl<CAtlPreviewCtrlImpl>, public IPreviewCtrl;
 ```  
   
-## <a name="members"></a>Члены  
+## <a name="members"></a>Участники  
   
 ### <a name="public-constructors"></a>Открытые конструкторы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[CAtlPreviewCtrlImpl:: ~ CAtlPreviewCtrlImpl](#dtor)|Разрушается объект предварительного просмотра элемента управления.|  
 |[CAtlPreviewCtrlImpl::CAtlPreviewCtrlImpl](#catlpreviewctrlimpl)|Создает объект предварительного просмотра элемента управления.|  
   
 ### <a name="public-methods"></a>Открытые методы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[CAtlPreviewCtrlImpl::Create](#create)|Вызывается обработчиком расширенного просмотра для создания окна Windows.|  
 |[CAtlPreviewCtrlImpl::Destroy](#destroy)|Вызывается обработчиком расширенного просмотра, когда необходимо удалить этот элемент управления.|  
@@ -76,19 +73,19 @@ class CAtlPreviewCtrlImpl : public CWindowImpl<CAtlPreviewCtrlImpl>, public IPre
   
 ### <a name="protected-methods"></a>Защищенные методы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[CAtlPreviewCtrlImpl::DoPaint](#dopaint)|Вызывается платформой для отрисовки на предварительную версию.|  
   
 ### <a name="protected-constants"></a>Защищенные константы  
   
-|Имя|Описание|  
+|name|Описание:|  
 |----------|-----------------|  
 |[CAtlPreviewCtrlImpl::m_plf](#m_plf)|Шрифт, используемый для отображения текста в окне предварительного просмотра.|  
   
 ### <a name="protected-data-members"></a>Защищенные члены данных  
   
-|Имя|Описание|  
+|name|Описание:|  
 |----------|-----------------|  
 |[CAtlPreviewCtrlImpl::m_clrBack](#m_clrback)|Цвет фона окна предварительного просмотра.|  
 |[CAtlPreviewCtrlImpl::m_clrText](#m_clrtext)|Цвет текста окна предварительного просмотра.|  
@@ -301,4 +298,3 @@ virtual void SetRect(const RECT* prc, BOOL bRedraw);
   
 ## <a name="see-also"></a>См. также  
  [Компоненты ATL COM Desktop](../../atl/atl-com-desktop-components.md)
-

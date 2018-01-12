@@ -45,11 +45,12 @@ caps.latest.revision: "5"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 4fb85ae9aa0c21d2afdc5c4cb5a906154cb42c6b
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 8af8a6c2d96eb0fa4fd37a41e7f022743ab78d7d
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="strtoull-strtoulll-wcstoull-wcstoulll"></a>strtoull, _strtoull_l, wcstoull, _wcstoull_l
 Преобразует строки в целое значение long long без знака.  
@@ -102,13 +103,13 @@ unsigned long long _wcstoull_l(
 ## <a name="remarks"></a>Примечания  
  Эти функции преобразуют входную строку `nptr` в целое значение `unsigned long long`.  
   
- `strtoull` прекращает чтение строки `nptr` на первом символе, который она не может распознать как часть числа. Это может быть завершающий нуль-символ или первый числовой символ, который больше или равен `base`. Параметр категории `LC_NUMERIC` языкового стандарта определяет распознавание символа основания системы счисления в `nptr`; дополнительные сведения см. в разделе [setlocale, _wsetlocale](../../c-runtime-library/reference/setlocale-wsetlocale.md). `strtoull` и `wcstoull` используют текущий языковой стандарт; `_strtoull_l` и `_wcstoull_l` используют переданный языковой стандарт, но в остальном идентичны. Дополнительные сведения см. в разделе [Языковой стандарт](../../c-runtime-library/locale.md).  
+ Функция `strtoull` прекращает чтение строки `nptr` на первом знаке, который она не может распознать как часть числа. Это может быть завершающий нуль-символ или первый числовой символ, который больше или равен `base`. Параметр категории `LC_NUMERIC` языкового стандарта определяет распознавание символа основания системы счисления в `nptr`; дополнительные сведения см. в разделе [setlocale, _wsetlocale](../../c-runtime-library/reference/setlocale-wsetlocale.md). `strtoull` и `wcstoull` используют текущий языковой стандарт; `_strtoull_l` и `_wcstoull_l` используют переданный языковой стандарт, но в остальном идентичны. Для получения дополнительной информации см. [Locale](../../c-runtime-library/locale.md).  
   
  Если `endptr` не является значением `NULL`, указатель на символ, который останавливает сканирование, хранится в расположении, на которое указывает `endptr`. Если не удается выполнить преобразование (не найдены допустимые цифры или указано недопустимое основание), значение `nptr` сохраняется в расположении, указанном `endptr`.  
   
  `wcstoull`— это версия `strtoull` с расширенными символами; ее аргумент `nptr` — строка расширенных символов. В остальном эти функции ведут себя одинаково.  
   
-### <a name="generic-text-routine-mappings"></a>Универсальное текстовое сопоставление функций  
+### <a name="generic-text-routine-mappings"></a>Сопоставления подпрограмм обработки обычного текста  
   
 |Подпрограмма TCHAR.H|_UNICODE и _MBCS не определены|_MBCS определено|_UNICODE определено|  
 |---------------------|------------------------------------|--------------------|-----------------------|  

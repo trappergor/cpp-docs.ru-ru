@@ -1,70 +1,72 @@
 ---
-title: "Экспорт из библиотеки DLL | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "DLL - экспорт [C++]"
-  - "DLL-библиотеки [C++], экспортирование из"
-  - "экспорт библиотек DLL [C++]"
-  - "экспорт библиотек DLL [C++], сведения об экспортировании из библиотек DLL"
-  - "функции - экспортирование [C++], библиотеки DLL (экспортирование из)"
-  - "таблица экспортов [C++]"
-  - "функции [C++], экспорт"
+title: "Экспорт из библиотеки DLL | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- exporting DLLs [C++], about exporting from DLLs
+- exporting functions [C++], DLLs (exporting from)
+- exporting DLLs [C++]
+- DLLs [C++], exporting from
+- DLL exports [C++]
+- functions [C++], exporting
+- exports table [C++]
 ms.assetid: a08f86c4-5996-460b-ae54-da2b764045f0
-caps.latest.revision: 7
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 64571a0f648c0e33635990d9ca57744877429049
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 12/21/2017
 ---
-# Экспорт из библиотеки DLL
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Структура файла библиотеки DLL очень похожа на структуру EXE\-файла с одним важным отличием: файл библиотеки DLL содержит таблицу экспорта.  Таблица экспорта содержит имя каждой функции, которую библиотека DLL экспортирует в другие исполняемые файлы.  Эти функции являются точками входа в библиотеку DLL. Другим исполняемым файлам доступны только те функции, которые представлены в таблице экспорта.  Все остальные функции принадлежат только самой библиотеке DLL.  Таблицу экспорта библиотеки DLL можно просмотреть с помощью утилиты [DUMPBIN](../build/reference/dumpbin-reference.md) с параметром \/EXPORTS.  
+# <a name="exporting-from-a-dll"></a>Экспорт из библиотеки DLL  
   
- Существует два метода экспорта функций из библиотеки DLL:  
+DLL-файл имеет очень похожа на файл .exe с одним важным отличием — DLL-файл содержит таблицу экспорта. Таблицу экспорта содержит имя каждой функции, библиотека DLL экспортирует в другие исполняемые файлы. Эти функции являются точками входа в библиотеку DLL. только функции в таблице экспорта может осуществляться других исполняемых файлов. Другие функции в DLL-Библиотеке являются закрытыми для библиотеки DLL. Таблицу экспорта библиотеки DLL можно просмотреть с помощью [DUMPBIN](../build/reference/dumpbin-reference.md) средство с параметром/EXPORTS.  
   
--   Создать файл определения модуля \(DEF\-файл\) и использовать данный файл при построении библиотеки DLL.  Данный метод необходимо использовать в случае, когда требуется [экспортировать функции из библиотеки DLL по порядковому номеру, а не по имени](../build/exporting-functions-from-a-dll-by-ordinal-rather-than-by-name.md).  
+ Можно экспортировать функции из библиотеки DLL с помощью двух методов:  
   
--   Использовать ключевое слово **\_\_declspec\(dllexport\)** в определении функции.  
+-   Создание файла определения модуля (DEF) и использовать данный файл при построении библиотеки DLL. Используйте этот подход, если вы хотите [Экспорт функций из библиотеки DLL по порядковому номеру, а не по имени](../build/exporting-functions-from-a-dll-by-ordinal-rather-than-by-name.md).  
   
- При использовании для экспорта функции другого метода, убедитесь в том, что используется соглашение о вызове [\_\_stdcall](../cpp/stdcall.md).  
+-   Используйте ключевое слово **__declspec(dllexport)** в определении функции.  
   
-## Выберите действие.  
+ При экспорте функции другого метода, убедитесь, что для использования [__stdcall](../cpp/stdcall.md) соглашение о вызовах.  
   
--   [Экспорт из библиотеки DLL с использованием DEF\-файлов](../build/exporting-from-a-dll-using-def-files.md)  
+## <a name="what-do-you-want-to-do"></a>Выберите действие  
   
--   [Экспорт из библиотеки DLL с использованием \_\_declspec\(dllexport\)](../build/exporting-from-a-dll-using-declspec-dllexport.md)  
+-   [Экспорт из библиотеки DLL с использованием DEF-файлы](../build/exporting-from-a-dll-using-def-files.md)  
   
--   [Экспорт и импорт с использованием AFX\_EXT\_CLASS](../build/exporting-and-importing-using-afx-ext-class.md)  
+-   [Экспорт из библиотеки DLL с помощью __declspec(dllexport)](../build/exporting-from-a-dll-using-declspec-dllexport.md)  
   
--   [Экспорт функций C\+\+ для использования в исполняемых файлах, исходный код которых написан на языке C](../build/exporting-cpp-functions-for-use-in-c-language-executables.md)  
+-   [Экспорт и импорт с использованием AFX_EXT_CLASS](../build/exporting-and-importing-using-afx-ext-class.md)  
   
--   [Экспорт функций на языке C для использования в файлах, исходный код которых написан на языке C или C\+\+](../build/exporting-c-functions-for-use-in-c-or-cpp-language-executables.md)  
+-   [Экспорт функций C++ для использования в реализации языка C](../build/exporting-cpp-functions-for-use-in-c-language-executables.md)  
   
--   [Экспорт функции из библиотеки DLL по порядковому номеру, а не по имени](../build/exporting-functions-from-a-dll-by-ordinal-rather-than-by-name.md)  
+-   [Экспорт функций на языке C для использования в исполняемых файлах C или C++-язык](../build/exporting-c-functions-for-use-in-c-or-cpp-language-executables.md)  
   
--   [Определение подходящего метода экспорта](../build/determining-which-exporting-method-to-use.md)  
+-   [Экспорт функций из библиотеки DLL по порядковому номеру, а не по имени](../build/exporting-functions-from-a-dll-by-ordinal-rather-than-by-name.md)  
   
--   [Определение подходящего метода связывания](../build/determining-which-linking-method-to-use.md)  
+-   [Выбор подходящего метода экспорта для использования](../build/determining-which-exporting-method-to-use.md)  
   
--   [Инициализацию DLL](../build/initializing-a-dll.md)  
+-   [Определение подходящего метода связывания](../build/linking-an-executable-to-a-dll.md#determining-which-linking-method-to-use)  
   
-## Дополнительные сведения  
+-   [Инициализация библиотеки DLL](../build/run-time-library-behavior.md#initializing-a-dll)  
+  
+## <a name="what-do-you-want-to-know-more-about"></a>Дополнительные сведения  
   
 -   [Импорт в приложение](../build/importing-into-an-application.md)  
   
--   [Импорт и экспорт встроенных функций](../Topic/Importing%20and%20Exporting%20Inline%20Functions.md)  
+-   [Импорт и экспорт встроенных функций](../build/importing-and-exporting-inline-functions.md)  
   
--   [Взаимный импорт](../Topic/Mutual%20Imports.md)  
+-   [Взаимный импорт](../build/mutual-imports.md)  
   
-## См. также  
+## <a name="see-also"></a>См. также  
  [Импортирование и экспортирование](../build/importing-and-exporting.md)

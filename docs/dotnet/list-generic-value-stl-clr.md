@@ -1,41 +1,42 @@
 ---
-title: "list::generic_value (STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::list::generic_value"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "generic_value - элемент [STL/CLR]"
+title: "List::generic_value (STL/CLR) | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::list::generic_value
+dev_langs: C++
+helpviewer_keywords: generic_value member [STL/CLR]
 ms.assetid: daa0fc3f-cda2-4531-8cc2-a523737d4103
-caps.latest.revision: 8
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 6
+caps.latest.revision: "8"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: 75d5d667e24addf0977d8979f3e8dd7fdb9d38ce
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 12/21/2017
 ---
-# list::generic_value (STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Тип элемента для использования с универсальным интерфейсом для контейнера.  
+# <a name="listgenericvalue-stlclr"></a>list::generic_value (STL/CLR)
+Тип элемента для использования с универсальный интерфейс для контейнера.  
   
-## Синтаксис  
+## <a name="syntax"></a>Синтаксис  
   
 ```  
 typedef GValue generic_value;  
 ```  
   
-## Заметки  
- Описывает тип объекта типа `GValue`, описывающий хранимого элемента значение для использования с универсальным интерфейсом для этого класса контейнера шаблона.  
+## <a name="remarks"></a>Примечания  
+ Тип описывает объект типа `GValue` , описывающий значение хранимого элемента для использования с универсальный интерфейс для класса контейнера шаблона.  
   
-## Пример  
+## <a name="example"></a>Пример  
   
 ```  
 // cliext_list_generic_value.cpp   
@@ -72,16 +73,19 @@ int main()
   
 ```  
   
-  **a b c**  
- **a b c**  
- **Ответ. C.**   
-## Требования  
- **Заголовок:**\<cliext\/list\>  
+```Output  
+a b c  
+a b c  
+a a c  
+```  
+  
+## <a name="requirements"></a>Требования  
+ **Заголовок:** \<cliext/list >  
   
  **Пространство имен:** cliext  
   
-## См. также  
- [list](../dotnet/list-stl-clr.md)   
- [list::generic\_container](../dotnet/list-generic-container-stl-clr.md)   
- [list::generic\_iterator](../Topic/list::generic_iterator%20\(STL-CLR\).md)   
- [list::generic\_reverse\_iterator](../dotnet/list-generic-reverse-iterator-stl-clr.md)
+## <a name="see-also"></a>См. также  
+ [список (STL/CLR)](../dotnet/list-stl-clr.md)   
+ [List::generic_container (STL/CLR)](../dotnet/list-generic-container-stl-clr.md)   
+ [List::generic_iterator (STL/CLR)](../dotnet/list-generic-iterator-stl-clr.md)   
+ [list::generic_reverse_iterator (STL/CLR)](../dotnet/list-generic-reverse-iterator-stl-clr.md)

@@ -26,11 +26,12 @@ caps.latest.revision: "19"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: c2d8f1c7308946e7c125cbc3450b328e52236823
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 89240e913f46a3522062317da8089c3ae4bd81ed
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="ccomcachedtearoffobject-class"></a>Класс CComCachedTearOffObject
 Этот класс реализует [IUnknown](http://msdn.microsoft.com/library/windows/desktop/ms680509) перемещаемые интерфейса.  
@@ -50,18 +51,18 @@ public CComObjectRootEx<contained
  `contained`  
  Перемещаемые класс, производный от `CComTearOffObjectBase` и интерфейсы нужно объекта перемещаемые для поддержки.  
   
-## <a name="members"></a>Члены  
+## <a name="members"></a>Участники  
   
 ### <a name="public-constructors"></a>Открытые конструкторы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[CComCachedTearOffObject::CComCachedTearOffObject](#ccomcachedtearoffobject)|Конструктор.|  
 |[CComCachedTearOffObject:: ~ CComCachedTearOffObject](#dtor)|Деструктор|  
   
 ### <a name="public-methods"></a>Открытые методы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[CComCachedTearOffObject::AddRef](#addref)|Увеличивает счетчик ссылок для `CComCachedTearOffObject` объекта.|  
 |[CComCachedTearOffObject::FinalConstruct](#finalconstruct)|Вызовы `m_contained::FinalConstruct` (перемещаемые метода класса).|  
@@ -71,7 +72,7 @@ public CComObjectRootEx<contained
   
 ### <a name="public-data-members"></a>Открытые члены данных  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[CComCachedTearOffObject::m_contained](#m_contained)|Объект `CComContainedObject` объект, производный от класса перемещаемые (класс `contained`).|  
   

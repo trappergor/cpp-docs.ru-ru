@@ -40,11 +40,12 @@ caps.latest.revision: "18"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: c44e5773920d42c9b37e24a11b015adccc8e1be8
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 3c819f62f36966363f32eb16b7af758de274d3d7
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="wctombs-wctombsl"></a>wctomb_s, _wctomb_s_l
 Преобразует расширенный символ в соответствующий многобайтовый символ. Версия функции [wctomb, _wctomb_l](../../c-runtime-library/reference/wctomb-wctomb-l.md) с усовершенствованиями системы безопасности, описанными в разделе [Функции безопасности в CRT](../../c-runtime-library/security-features-in-the-crt.md).  
@@ -91,7 +92,7 @@ errno_t _wctomb_s_l(
 |`mbchar`|`sizeInBytes`|Возвращаемое значение|`pRetValue`|  
 |--------------|-------------------|------------------|-----------------|  
 |`NULL`|>0|`EINVAL`|не изменено|  
-|любые|>`INT_MAX`|`EINVAL`|не изменено|  
+|any|>`INT_MAX`|`EINVAL`|не изменено|  
 |any|слишком мало|`EINVAL`|не изменено|  
   
  Если выполняется какое-либо из приведенных выше условий возникновения ошибки, вызывается обработчик недопустимого параметра, как описано в разделе [Проверка параметров](../../c-runtime-library/parameter-validation.md). Если выполнение может быть продолжено, функция `wctomb` возвращает значение `EINVAL` и устанавливает параметр `errno` в значение `EINVAL`.  
@@ -101,7 +102,7 @@ errno_t _wctomb_s_l(
   
  Если функция `wctomb_s` преобразует расширенный символ в многобайтовый символ, она помещает число байтов (которое никогда не превышает `MB_CUR_MAX`) в расширенном символе в целое число со знаком, на которое указывает `pRetValue`. Если `wchar` является расширенным нуль-символом (L '\0'), `wctomb_s` заполняет `pRetValue` символом 1. Если целевой указатель `mbchar` имеет значение NULL, `wctomb_s` помещает 0 в `pRetValue`. Если преобразование не поддерживается в текущем языковом стандарте, `wctomb_s` помещается значение -1 `pRetValue`.  
   
- Функция `wctomb_s` использует текущий языковой стандарт для информации, обусловленной языковыми стандартами; функция `_wctomb_s_l` идентична за исключением того, что она использует переданный языковой стандарт. Дополнительные сведения см. в разделе [Языковой стандарт](../../c-runtime-library/locale.md).  
+ Функция `wctomb_s` использует текущий языковой стандарт для информации, обусловленной языковыми стандартами; функция `_wctomb_s_l` идентична за исключением того, что она использует переданный языковой стандарт. Для получения дополнительной информации см. [Locale](../../c-runtime-library/locale.md).  
   
 ## <a name="requirements"></a>Требования  
   
@@ -110,7 +111,7 @@ errno_t _wctomb_s_l(
 |`wctomb_s`|\<stdlib.h>|  
 |`_wctomb_s_l`|\<stdlib.h>|  
   
- Дополнительные сведения о совместимости см. в статье [Совместимость](../../c-runtime-library/compatibility.md) во введении.  
+ Дополнительные сведения о совместимости см. в разделе [Совместимость](../../c-runtime-library/compatibility.md) во введении.  
   
 ## <a name="example"></a>Пример  
  Эта программа иллюстрирует поведение функции `wctomb`.  

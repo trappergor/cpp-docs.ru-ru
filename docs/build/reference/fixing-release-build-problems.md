@@ -1,44 +1,45 @@
 ---
-title: "Устранение проблем построения выпуска | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "отладочные построения, перезаписи памяти"
-  - "память, перезаписи"
-  - "построения выпуска, устранение неполадок"
-  - "выпускные построения - устранение неполадок"
-  - "устранение неполадок - Visual C++, построения выпуска"
+title: "Исправления выпуска построения проблемы | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- release builds, troubleshooting
+- debug builds, memory overwrites
+- memory, overwrites
+- troubleshooting Visual C++, release builds
+- troubleshooting release builds
 ms.assetid: a0c0818e-4c47-4fe0-a611-50d61a41bd88
-caps.latest.revision: 7
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: b4b5f8ebc30c8260ed27c29f62830c2a94cf4d7a
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 12/21/2017
 ---
-# Устранение проблем построения выпуска
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Если код создает ошибки компилятора после перехода от отладочного построения к построению выпуска, следует проверить следующие моменты.  
+# <a name="fixing-release-build-problems"></a>Устранение проблем построения выпуска
+Если код создает ошибки компилятора после перехода от отладочного построения в выпускное построение, существуют некоторые области, которые необходимо проверить.  
   
- Во время оптимизированного построения \(построения выпуска\) могут появиться предупреждения компилятора, которые не отображались при отладочном построении.  
+ Может появиться предупреждения компилятора во время построения оптимизированного (выпуск), не был получен во время построения отладки.  
   
 -   [Проверьте операторы ASSERT](../../build/reference/using-verify-instead-of-assert.md)  
   
--   [Воспользуйтесь отладочным построением для проверки перезаписи памяти](../Topic/Using%20the%20Debug%20Build%20to%20Check%20for%20Memory%20Overwrite.md)  
+-   [Использование отладочного построения для проверки перезаписи памяти](../../build/reference/using-the-debug-build-to-check-for-memory-overwrite.md)  
   
--   [Включите создание сведений об отладке для построения выпуска](../../build/reference/how-to-debug-a-release-build.md)  
+-   [Включить создание отладочной информации для построения выпуска](../../build/reference/how-to-debug-a-release-build.md)  
   
--   [Проверьте перезапись памяти](../../build/reference/checking-for-memory-overwrites.md)  
+-   [Проверка затирания памяти](../../build/reference/checking-for-memory-overwrites.md)  
   
-## См. также  
+## <a name="see-also"></a>См. также  
  [Построения выпуска](../../build/reference/release-builds.md)   
- [Распространенные проблемы, возникающие при создании построений выпуска](../../build/reference/common-problems-when-creating-a-release-build.md)   
+ [Проблемы, возникающие при создании построений выпуска](../../build/reference/common-problems-when-creating-a-release-build.md)   
  [Оптимизация кода](../../build/reference/optimizing-your-code.md)

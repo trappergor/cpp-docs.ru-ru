@@ -1,41 +1,43 @@
 ---
-title: "Транзакции: выполнение транзакции в наборе записей (ODBC) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "транзакции, обновление записей"
+title: "Транзакции: Выполнение транзакции в наборе записей (ODBC) | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords: transactions, updating recordsets
 ms.assetid: cf1d6b48-7fb8-4903-84f7-a1822054534d
-caps.latest.revision: 8
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: bd412549c86c3ca8ddc004016183b64248bdf292
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 12/21/2017
 ---
-# Транзакции: выполнение транзакции в наборе записей (ODBC)
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-В данном разделе описывается способ выполнения транзакции в наборе записей.  
+# <a name="transaction-performing-a-transaction-in-a-recordset-odbc"></a>Транзакции: выполнение транзакции в наборе записей (ODBC)
+В этом разделе описывается выполнение транзакции в наборе записей.  
   
 > [!NOTE]
->  Поддерживаются только одноуровневые транзакции; создание вложенных транзакций невозможно.  
+>  Поддерживается только один уровень транзакций; Создание вложенных транзакций невозможно.  
   
-#### Выполнение транзакции в наборе записей  
+#### <a name="to-perform-a-transaction-in-a-recordset"></a>Выполнение транзакции в наборе записей  
   
-1.  Вызовите функцию\-член **BeginTrans** объекта `CDatabase`.  
+1.  Вызовите `CDatabase` объекта **BeginTrans** функции-члена.  
   
-2.  Если групповая выборка строк не реализована, следует вызвать функции\-члены **AddNew\/Update**, **Edit\/Update** и **Delete** одного или нескольких объектов наборов записей, относящихся к одной базе данных, необходимое число раз.  Дополнительные сведения см. в разделе [Набор данных: добавление, обновление и удаление записей \(ODBC\)](../../data/odbc/recordset-adding-updating-and-deleting-records-odbc.md).  Если групповая выборка строк реализована, необходимо создать собственные функции для обновления источника данных.  
+2.  Если не реализована массовая выборка строк, вызвать **AddNew или обновление**, **изменить или обновить**, и **удалить** один или несколько объектов набора записей в одной и той же функции-члены База данных, любое количество раз. Дополнительные сведения см. в разделе [набор записей: Добавление, обновление и удаление записей (ODBC)](../../data/odbc/recordset-adding-updating-and-deleting-records-odbc.md). Если групповая выборка строк реализована, необходимо написать собственные функции для обновления источника данных.  
   
-3.  Наконец, вызовите функцию\-член **CommitTrans** объекта `CDatabase`.  Если при обновлении произошла ошибка или необходимо отменить изменения, следует вызвать функцию\-член **Rollback** объекта.  
+3.  Наконец, вызовите `CDatabase` объекта **CommitTrans** функции-члена. При возникновении ошибки в одном из обновлений или необходимо отменить изменения, вызвать его **отката** функции-члена.  
   
- В следующем примере используются два набора записей для удаления сведений об учащемся из регистрационной базы школы, причем сведения удаляются из всех классов.  Поскольку вызовы **Delete** должны завершиться успешно в обоих наборах записей, требуется выполнение транзакции.  В примере предполагается наличие базы данных `m_dbStudentReg`, переменной\-члена типа `CDatabase`, уже подключенной к источнику данных, и классов наборов записей `CEnrollmentSet` и `CStudentSet`.  Переменная `strStudentID` содержит значение, предоставленное пользователем.  
+ В следующем примере два набора записей для удаления регистрации Стьюдента из регистрации базы данных school, удаляются из всех классов, в которых зарегистрирован студент. Поскольку **удалить** вызовы в обоих наборах записей должна завершиться успешно, требуется транзакция. В примере предполагается существование `m_dbStudentReg`, переменную-член типа `CDatabase` уже подключен к источнику данных и классы набора записей `CEnrollmentSet` и `CStudentSet`. `strStudentID` Переменная содержит значение, полученное от пользователя.  
   
 ```  
 BOOL CEnrollDoc::RemoveStudent( CString strStudentID )  
@@ -88,10 +90,10 @@ BOOL CEnrollDoc::RemoveStudent( CString strStudentID )
 ```  
   
 > [!NOTE]
->  Повторный вызов метода **BeginTrans**, не сопровождаемый вызовом **CommitTrans** или **Rollback**, приведет к ошибке.  
+>  Вызов **BeginTrans** снова без вызова **CommitTrans** или **отката** является ошибкой.  
   
-## См. также  
- [Транзакция \(ODBC\)](../../data/odbc/transaction-odbc.md)   
- [Транзакция. Влияние транзакций на обновления \(ODBC\)](../../data/odbc/transaction-how-transactions-affect-updates-odbc.md)   
- [CDatabase Class](../../mfc/reference/cdatabase-class.md)   
- [CRecordset Class](../Topic/CRecordset%20Class.md)
+## <a name="see-also"></a>См. также  
+ [Транзакция (ODBC)](../../data/odbc/transaction-odbc.md)   
+ [Транзакция: Влияние транзакций на обновления (ODBC)](../../data/odbc/transaction-how-transactions-affect-updates-odbc.md)   
+ [CDatabase-класс](../../mfc/reference/cdatabase-class.md)   
+ [Класс CRecordset](../../mfc/reference/crecordset-class.md)

@@ -13,11 +13,12 @@ caps.latest.revision: "14"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 66ec1e2e86996b8044909961bef9ab4ea3e76312
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 4d9acaf1c8912e1b563bb5d05ae600d1430049e6
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="malloc-alignment"></a>Выравнивание с помощью функции malloc
 [malloc](../c-runtime-library/reference/malloc.md) гарантирует возврат, выровнено для хранения любого объекта, которые используют основные выравнивание и умещалось объема памяти, выделенной памяти. Объект *фундаментальные выравнивание* является выравнивания, которое меньше или равно наибольшего выравнивания, поддерживаемого реализацией без указания выравнивания. (В Visual C++, это выравнивание, необходимого для `double`, или 8 байт. В коде для 64-разрядных платформ это ограничение составляет 16 байтов.) Например распределение четырехбайтовое расположения на границе, которая поддерживает любой объект 4 байта или меньше.  

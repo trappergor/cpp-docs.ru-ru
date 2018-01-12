@@ -1,34 +1,36 @@
 ---
-title: "Практическое руководство. Определение начала процесса завершения работы (C++/CLI) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "платформа .NET Framework, завершение работы"
-  - "приложения [C++], завершение работы"
-  - "завершение работы"
-  - "завершение"
+title: "Как: определить руководство (C + +/ CLI) | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- .NET Framework, shutdown
+- shutdown
+- termination
+- applications [C++], shutdown
 ms.assetid: a8d39731-dea8-4f0a-96b7-2a5de09b21d7
-caps.latest.revision: 9
-caps.handback.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "9"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: 4d89fa475c997e0842ef9de5a21c26e664f25d78
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 12/21/2017
 ---
-# Практическое руководство. Определение начала процесса завершения работы (C++/CLI)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Следующий пример кода показывает, как определить, завершено ли в данный момент приложение или .NET Framework.  Данная возможность полезна при доступе к статическим элементам в платформе .NET Framework, т.к. в ходе завершения работы функционирование данных конструкторов завершается системой и не могут использоваться.  Чтоб избежать потенциальных ошибок, связанных с доступом к данным элементам, необходимо сперва проверить значение свойства <xref:System.Environment.HasShutdownStarted%2A>.  
+# <a name="how-to-determine-if-shutdown-has-started-ccli"></a>Практическое руководство. Определение начала процесса завершения работы (C++/CLI)
+В следующем примере кода показано, как определить, завершается ли в данный момент приложение или .NET Framework. Он полезен при доступе к статическим элементам в платформе .NET Framework, поскольку во время завершения работы, эти конструкции завершается системой и не могут использоваться. Проверив <xref:System.Environment.HasShutdownStarted%2A> свойства во-первых, можно избежать потенциальных сбоев не доступ к этим элементам.  
   
-## Пример  
+## <a name="example"></a>Пример  
   
 ```  
 // check_shutdown.cpp  
@@ -44,6 +46,6 @@ int main()
 }  
 ```  
   
-## См. также  
- [Операции Windows](../dotnet/windows-operations-cpp-cli.md)   
- [программирование .NET с использованием C\+\+\/CLI](../dotnet/dotnet-programming-with-cpp-cli-visual-cpp.md)
+## <a name="see-also"></a>См. также  
+ [Операции Windows (C + +/ CLI)](../dotnet/windows-operations-cpp-cli.md)   
+ [Программирование .NET с использованием C++/CLI (Visual C++)](../dotnet/dotnet-programming-with-cpp-cli-visual-cpp.md)

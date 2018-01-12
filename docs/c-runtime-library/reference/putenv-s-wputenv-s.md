@@ -41,11 +41,12 @@ caps.latest.revision: "20"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: e3e23b45eb96faf88924323850550feaa1fbf34f
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: b7d55736daf6652ecbde6b0d16256ccebc206bb5
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="putenvs-wputenvs"></a>_putenv_s, _wputenv_s
 Создает, изменяет или удаляет переменные среды. Это версии функций [_putenv, _wputenv](../../c-runtime-library/reference/putenv-wputenv.md) с усовершенствованной безопасностью, как описано в разделе [Функции безопасности в CRT](../../c-runtime-library/security-features-in-the-crt.md).  
@@ -80,15 +81,15 @@ errno_t _wputenv_s(
   
 |`name`|`value`|Возвращаемое значение|  
 |------------|-------------|------------------|  
-|`NULL`|любые|`EINVAL`|  
-|любые|`NULL`|`EINVAL`|  
+|`NULL`|any|`EINVAL`|  
+|any|`NULL`|`EINVAL`|  
   
  Если возникает одно из условий ошибки, эти функции вызывают обработчик недопустимого параметра, как описано в разделе [Проверка параметров](../../c-runtime-library/parameter-validation.md). Если продолжение выполнения разрешено, эти функции возвращают `EINVAL` и устанавливают для `errno` значение `EINVAL`.  
   
 ## <a name="remarks"></a>Примечания  
  Функция `_putenv_s` добавляет новые переменные среды или изменяет значения существующих переменных среды. Переменные среды определяют среду, в которой выполняется процесс (например, путь поиска по умолчанию для библиотек, связываемых с программой). `_wputenv_s` — это версия `_putenv_s` с расширенными символами; аргумент `envstring` для `_wputenv_s` — строка расширенных символов.  
   
-### <a name="generic-text-routine-mappings"></a>Универсальное текстовое сопоставление функций  
+### <a name="generic-text-routine-mappings"></a>Сопоставления подпрограмм обработки обычного текста  
   
 |Подпрограмма TCHAR.H|_UNICODE и _MBCS не определены|_MBCS определено|_UNICODE определено|  
 |---------------------|------------------------------------|--------------------|-----------------------|  

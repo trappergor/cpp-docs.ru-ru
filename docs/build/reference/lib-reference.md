@@ -1,37 +1,37 @@
 ---
-title: "Справочник по LIB | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "Lib"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "32-битный диспетчер библиотек"
-  - "LIB [C++]"
-  - "Диспетчер библиотек"
-  - "статические библиотеки"
-  - "статические библиотеки, задание параметров IDE"
+title: "Справочник по LIB | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: Lib
+dev_langs: C++
+helpviewer_keywords:
+- static libraries
+- static libraries, setting IDE options
+- Library Manager
+- LIB [C++]
+- 32-Bit Library Manager
 ms.assetid: ecc7f643-bbd4-47a3-8dc6-b360f880db91
-caps.latest.revision: 10
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 10
+caps.latest.revision: "10"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 4db7def12f6b5d08c774bef51e2a15ea5994f5a7
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 12/21/2017
 ---
-# Справочник по LIB
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Диспетчер библиотек Microsoft \(LIB.exe\) создает объектные файлы в формате Common Object File Format \(COFF\) и управляет ими.  LIB также можно использовать для создания файлов экспорта и библиотек импорта, чтобы задавать ссылки на экспортируемые определения.  
+# <a name="lib-reference"></a>Справочник по LIB
+Диспетчер библиотек Майкрософт (LIB.exe) создает и управляет библиотеку общих объектов файла формат COFF объектных файлов. LIB также может использоваться для создания файлов экспорта и импорта библиотеки в экспортированные справочные определения.  
   
 > [!NOTE]
->  Этот инструмент можно запустить только из командной строки [!INCLUDE[vsprvs](../../assembler/masm/includes/vsprvs_md.md)].  Его невозможно запустить из системной командной строки или из проводника.  
+>  Это средство можно запустить только из командной строки [!INCLUDE[vsprvs](../../assembler/masm/includes/vsprvs_md.md)]. В системной командной строке или проводнике это невозможно.  
   
 -   [Общие сведения о LIB](../../build/reference/overview-of-lib.md)  
   
@@ -45,5 +45,5 @@ caps.handback.revision: 10
   
 -   [Работа с библиотеками импорта и файлами экспорта](../../build/reference/working-with-import-libraries-and-export-files.md)  
   
-## См. также  
- [Средства построения С\/C\+\+](../Topic/C-C++%20Build%20Tools.md)
+## <a name="see-also"></a>См. также  
+ [Средства сборки С/C++](../../build/reference/c-cpp-build-tools.md)

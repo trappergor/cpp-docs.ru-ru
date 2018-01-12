@@ -1,65 +1,66 @@
 ---
-title: "/hotpatch (Создать образ с обновлениями) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "/hotpatch"
-  - "VC.Project.VCCLCompilerTool.CreateHotpatchableImage"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "критическое обновление"
-  - "-hotpatch - параметр компилятора [C++]"
-  - "/hotpatch - параметр компилятора [C++]"
-  - "критическое обновление"
+title: "-hotpatch (создать образ с обновлениями) | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- /hotpatch
+- VC.Project.VCCLCompilerTool.CreateHotpatchableImage
+dev_langs: C++
+helpviewer_keywords:
+- hot patching
+- -hotpatch compiler option [C++]
+- /hotpatch compiler option [C++]
+- hotpatching
 ms.assetid: aad539b6-c053-4c78-8682-853d98327798
-caps.latest.revision: 18
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 18
+caps.latest.revision: "18"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: ad7ab4e6450d33923b728f20c8a35185edd2b05e
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 12/21/2017
 ---
-# /hotpatch (Создать образ с обновлениями)
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Подготавливает образ к горячему обновлению.  
+# <a name="hotpatch-create-hotpatchable-image"></a>/hotpatch (Создать образ с обновлениями)
+Готовит образ к оперативному исправлению.  
   
-## Синтаксис  
+## <a name="syntax"></a>Синтаксис  
   
 ```  
 /hotpatch  
 ```  
   
-## Заметки  
- При **\/hotpatch** используется в компиляции, компилятор гарантирует, что первая инструкция каждой функции по крайней мере 2 байта, которая должна быть высоким для внесения исправлений.  
+## <a name="remarks"></a>Примечания  
+ Когда **/hotpatch** используется во время компиляции, компилятор гарантирует, что первой инструкции каждой функции по крайней мере два байта, которая необходима для выполнения горячего обновления.  
   
- Для выполнения подготовки для создания образа hotpatchable после использования **\/hotpatch** компилироваться, необходимо использовать [\/FUNCTIONPADMIN \(создание образа, допускающего горячее обновление\)](../../build/reference/functionpadmin-create-hotpatchable-image.md) для связывания.  При компилировать и связать изображение с помощью одного вызова cl.exe, **\/hotpatch** подразумевает **\/functionpadmin**.  
+ Чтобы завершить подготовку для создания образа с обновлениями, после использования **/hotpatch** для компиляции, необходимо использовать [/FUNCTIONPADMIN (создать образ с обновлениями)](../../build/reference/functionpadmin-create-hotpatchable-image.md) для связывания. После компиляции и связать образ с помощью одного вызова cl.exe, **/hotpatch** подразумевает **/functionpadmin**.  
   
- Так как инструкции всегда больше или равен 2 байт на архитектуру ARM, а поскольку x64 компиляция всегда выполняется при **\/hotpatch** задано, нет необходимости указывать **\/hotpatch** при компилировать для этих целевых объектов; однако по\-прежнему необходимо связать с помощью **\/functionpadmin** для создания hotpatchable образы для них.  Параметр компилятора **\/hotpatch** влияет только на компиляцию x86.  
+ Так как инструкции всегда два байта или больше для архитектуры ARM, а потому, что x64 компиляции всегда рассматривается как если бы **/hotpatch** был указан, нет необходимости указывать **/hotpatch** при Компилировать для этих целевых объектов; Однако по-прежнему необходимо связать с помощью **/functionpadmin** создание образов с обновлениями для них. **/Hotpatch** компиляции x86 влияет только параметр компилятора.  
   
-### Установка данного параметра компилятора в среде разработки Visual Studio  
+### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Установка данного параметра компилятора в среде разработки Visual Studio  
   
-1.  Откройте диалоговое окно **Страницы свойств** проекта.  Дополнительные сведения см. в разделе [Открытие свойств страниц проекта](../../misc/how-to-open-project-property-pages.md).  
+1.  Откройте диалоговое окно **Страницы свойств** проекта. Дополнительные сведения см. в разделе [работа со свойствами проекта](../../ide/working-with-project-properties.md).  
   
-2.  Выберите папку **C\/C\+\+**.  
+2.  Выберите **C/C++** папки.  
   
-3.  Выберите страницу свойств **Командная строка**.  
+3.  Выберите **командной строки** страницу свойств.  
   
-4.  Добавьте параметр компилятора в окно **Дополнительные параметры**.  
+4.  Добавить параметр компилятора для **Дополнительные параметры** поле.  
   
-### Установка данного параметра компилятора программным способом  
+### <a name="to-set-this-compiler-option-programmatically"></a>Установка данного параметра компилятора программным способом  
   
 -   См. раздел <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.AdditionalOptions%2A>.  
   
-## Руководство  
- Управление обновлениями Дополнительные сведения о см. в разделе «инструкции по безопасности для управления обновлениями» в [http:\/\/www.microsoft.com\/technet\/security\/guidance\/PatchManagement.mspx](http://www.microsoft.com/technet/security/guidance/PatchManagement.mspx).  
+## <a name="guidance"></a>Руководство  
+ Дополнительные сведения об управлении обновлениями см. в разделе «Руководство по безопасности для обновления управления» в [http://www.microsoft.com/technet/security/guidance/PatchManagement.mspx](http://www.microsoft.com/technet/security/guidance/PatchManagement.mspx).  
   
-## См. также  
+## <a name="see-also"></a>См. также  
  [Параметры компилятора](../../build/reference/compiler-options.md)   
- [Настройка параметров компилятора](../Topic/Setting%20Compiler%20Options.md)
+ [Настройка параметров компилятора](../../build/reference/setting-compiler-options.md)

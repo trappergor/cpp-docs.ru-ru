@@ -19,11 +19,12 @@ caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: a30c8d2c26893ddf101d7084a91215c7ed55bf48
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 4358dc54589971c559bec48adf77252d4f4cda28
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="adding-an-atl-message-handler"></a>Добавление обработчика сообщения ATL
 Добавление обработчика сообщения (член функции, обрабатывающей сообщения Windows) для элемента управления, выберите элемент управления в представлении классов. Затем откройте **свойства** выберите **сообщений** значок и выберите в раскрывающемся списке элемента управления в поле противоположного обязательный сообщений. Это добавит объявление для обработчика сообщений в файл заголовка элемента управления и схему реализации обработчика в CPP-файл элемента управления. Он также добавить схему сообщений и добавьте запись для обработчика.  

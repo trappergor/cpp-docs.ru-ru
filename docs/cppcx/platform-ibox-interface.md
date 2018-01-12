@@ -1,51 +1,75 @@
 ---
-title: "Интерфейс Platform::IBox | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/30/2016"
-ms.prod: "windows-client-threshold"
-ms.technology: ""
-ms.reviewer: ""
-ms.suite: ""
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-f1_keywords: 
-  - "Platform/Platform::IBox"
-dev_langs: 
-  - "C++"
+title: "Интерфейс Platform::IBox | Документы Microsoft"
+ms.custom: 
+ms.date: 12/30/2016
+ms.technology: cpp-windows
+ms.reviewer: 
+ms.suite: 
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+f1_keywords:
+- VCCORLIB/Namespace not found::Platform
+- VCCORLIB/Namespace not found::Platform::Value
+dev_langs: C++
 ms.assetid: 774df45d-f8a7-45a3-ae24-eecc3c681040
-caps.latest.revision: 5
-author: "ghogen"
-ms.author: "ghogen"
-manager: "ghogen"
-caps.handback.revision: 5
+caps.latest.revision: "5"
+author: ghogen
+ms.author: ghogen
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 8a86eca75bb5470585ba68fe3b7fcdb55c861434
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 12/21/2017
 ---
-# Интерфейс Platform::IBox
-[Platform::IBox](../cppcx/platform-ibox-interface.md) — это имя C\+\+ для интерфейса `Windows::Foundation::IReference`.  
+# <a name="platformibox-interface"></a>Интерфейс Platform::IBox
+[Platform::IBox](../cppcx/platform-ibox-interface.md) — это имя C++ для интерфейса `Windows::Foundation::IReference` .  
   
-## Синтаксис  
+## <a name="syntax"></a>Синтаксис  
   
 ```cpp  
 template <typename T>  
 interface class IBox  
 ```  
   
-#### Параметры  
+#### <a name="parameters"></a>Параметры  
  `T`  
  Введите запакованное значение.  
   
-## Заметки  
- Интерфейс `IBox<T>` в основном используется внутри кода для представления типов значений, допускающих значение null, как описано в разделе [Классы и структуры значения \(C\+\+\/CX\)](../cppcx/value-classes-and-structs-c-cx.md). Этот интерфейс также используется для упаковки типов значений, передаваемых в методы C\+\+, которые принимают параметры типа `Object^`. Можно в явном виде определить входной параметр как `IBox<SomeValueType>`. Пример см. в разделе [Упаковка](../cppcx/boxing-c-cx.md).  
+### <a name="remarks"></a>Примечания  
+ Интерфейс `IBox<T>` в основном используется внутри кода для представления типов значений, допускающих значение null, как описано в разделе [Классы и структуры значения (C++/CX)](../cppcx/value-classes-and-structs-c-cx.md). Этот интерфейс также используется для упаковки типов значений, передаваемых в методы C++, которые принимают параметры типа `Object^`. Можно в явном виде определить входной параметр как `IBox<SomeValueType>`. Пример см. в разделе [упаковка-преобразование](../cppcx/boxing-c-cx.md).  
   
-## Требования  
+### <a name="requirements"></a>Требования  
   
-## Члены  
- Интерфейс `Platform::IBox` наследуется от интерфейса [Platform::IValueType](../cppcx/platform-ivaluetype-interface.md). Интерфейс `IBox` содержит следующие члены:  
+### <a name="members"></a>Участники  
+ Интерфейс `Platform::IBox` наследуется от интерфейса [Platform::IValueType](../cppcx/platform-ivaluetype-interface.md) . Интерфейс`IBox` содержит следующие члены:  
   
  **Свойства**  
   
-|Метод|Описание|  
-|-----------|--------------|  
-|Значение|Возвращает распакованное значение, которое ранее хранилось в этом экземпляре `IBox`.|  
+|Метод|Описание:|  
+|------------|-----------------|  
+|[Значение](#value)|Возвращает распакованное значение, которое ранее хранилось в этом экземпляре `IBox` .|  
+
+## <a name="value"></a>Свойство IBox::Value
+Возвращает значение, которое было изначально сохранено в этом объекте.  
   
-## См. также  
+### <a name="syntax"></a>Синтаксис  
+  
+```cpp  
+property T Value {T get();}  
+```  
+  
+### <a name="parameters"></a>Параметры  
+ `T`  
+ Введите запакованное значение.  
+  
+### <a name="property-valuereturn-value"></a>Значение свойства, возвращаемое значение  
+ Возвращает значение, которое было изначально сохранено в этом объекте.  
+  
+### <a name="remarks"></a>Примечания  
+ Пример см. в разделе [упаковка-преобразование](../cppcx/boxing-c-cx.md).  
+  
+  
+## <a name="see-also"></a>См. также  
  [Пространство имен Platform](../cppcx/platform-namespace-c-cx.md)

@@ -18,11 +18,12 @@ caps.latest.revision: "21"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 0fada073fd438bb2b3605c972f6598f2955b5f68
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 4ef8c49b04a769fd6202aa58324f20216948cf3a
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="ccomptr-class"></a>Класс CComPtr
 Класс интеллектуальный указатель для управления указателей интерфейса СОМ.  
@@ -38,17 +39,17 @@ class CComPtr
  `T`  
  COM-интерфейс, указав тип указателя для сохранения.  
   
-## <a name="members"></a>Члены  
+## <a name="members"></a>Участники  
   
 ### <a name="public-constructors"></a>Открытые конструкторы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[CComPtr::CComPtr](#ccomptr)|Конструктор.|  
   
 ### <a name="public-operators"></a>Открытые операторы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[CComPtr::operator =](#operator_eq)|Присваивает указатель на указатель на член.|  
   

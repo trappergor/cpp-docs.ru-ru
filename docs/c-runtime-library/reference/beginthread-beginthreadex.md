@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
 apiname:
@@ -29,8 +28,7 @@ f1_keywords:
 - _beginthread
 - beginthreadex
 - _beginthreadex
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - _beginthread function
 - threading [C++], creating threads
@@ -38,30 +36,16 @@ helpviewer_keywords:
 - _beginthreadex function
 - beginthread function
 ms.assetid: 0df64740-a978-4358-a88f-fb0702720091
-caps.latest.revision: 36
+caps.latest.revision: "36"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.mt:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: e257f037a05c45f5b98e64ea55bd125af443b0be
-ms.openlocfilehash: 3c556e6460f1a39bab23f2612cbf820e284d7605
-ms.contentlocale: ru-ru
-ms.lasthandoff: 03/30/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: 71d47e67d56da59093db99b5da28daa6f1c18db2
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="beginthread-beginthreadex"></a>_beginthread, _beginthreadex
 Создает поток.  
@@ -167,7 +151,7 @@ uintptr_t _beginthreadex( // MANAGED CODE
  Дополнительные сведения о совместимости см. в разделе [Совместимость](../../c-runtime-library/compatibility.md).  
   
 ## <a name="libraries"></a>Библиотеки  
- Только многопоточные версии [библиотек времени выполнения языка C](../../c-runtime-library/crt-library-features.md) .  
+ Только многопоточные версии [библиотек времени выполнения языка C](../../c-runtime-library/crt-library-features.md).  
   
  Чтобы использовать `_beginthread` или `_beginthreadex`, приложение необходимо связать с одной из многопотоковых библиотек времени выполнения C.  
   

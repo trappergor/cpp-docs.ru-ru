@@ -1,132 +1,131 @@
 ---
-title: "Общие сведения о LIB | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "Lib"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "LIB [C++], режимы"
+title: "Общие сведения о LIB | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: Lib
+dev_langs: C++
+helpviewer_keywords: LIB [C++], modes
 ms.assetid: e997d423-f574-434f-8b56-25585d137ee0
-caps.latest.revision: 9
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 9
+caps.latest.revision: "9"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: ef3d1e57371fdea62bb557830baca633f4165637
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 12/21/2017
 ---
-# Общие сведения о LIB
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-LIB создает стандартные библиотеки, библиотеки импорта и файлы экспорта, которые можно использовать с [LINK](../../build/reference/linker-options.md) при сборке программы.  LIB запускается из командной строки.  
+# <a name="overview-of-lib"></a>Общие сведения о LIB
+LIB создает стандартные библиотеки, библиотеки импорта и экспорта файлов можно использовать с [ССЫЛКУ](../../build/reference/linker-options.md) при сборке программы. LIB запускается из командной строки.  
   
- LIB можно использовать в следующих режимах.  
+ LIB можно использовать в следующих режимах:  
   
--   [Построение или изменение библиотеки COFF](../../build/reference/managing-a-library.md)  
+-   [Создание или изменение библиотеки COFF](../../build/reference/managing-a-library.md)  
   
--   [Извлечение элемента\-объекта в файл](../../build/reference/extracting-a-library-member.md)  
+-   [Извлечение элемента-объекта в файл](../../build/reference/extracting-a-library-member.md)  
   
 -   [Создание файла экспорта и библиотеки импорта](../../build/reference/working-with-import-libraries-and-export-files.md)  
   
- Эти режимы взаимоисключающие, LIB можно использовать одновременно только в одном режиме.  
+ Эти режимы являются взаимоисключающими; LIB можно использовать в режиме только один одновременно.  
   
-## Параметры LIB  
- В следующей таблице перечислены параметры файла lib.exe и ссылка на дополнительные сведения.  
+## <a name="lib-options"></a>Параметры LIB  
+ В следующей таблице перечислены параметры lib.exe со ссылками на дополнительные сведения.  
   
- **\/DEF**  
- Создание библиотеки импорта и файла экспорта  
+ **/ DEF**  
+ Создание библиотеки импорта и файла экспорта.  
   
- Дополнительные сведения см. в разделе [Построение библиотеки импорта и файла экспорта](../../build/reference/building-an-import-library-and-export-file.md).  
+ Дополнительные сведения см. [построение библиотеки импорта и экспорта файла](../../build/reference/building-an-import-library-and-export-file.md).  
   
- **\/ERRORREPORT**  
- Передача Майкрософт сведений о внутренних ошибках с помощью lib.exe.  
+ **/ ERRORREPORT**  
+ Отправьте в Майкрософт сведения о внутренних ошибках lib.exe.  
   
- Дополнительные сведения см. в разделе [Запуск программы LIB](../../build/reference/running-lib.md).  
+ Дополнительные сведения см. [запуск LIB](../../build/reference/running-lib.md).  
   
- **\/EXPORT**  
- Экспорт функции из программы.  
+ **И ЭКСПОРТА**  
+ Экспортирует функцию из программы.  
   
- Дополнительные сведения см. в разделе [Построение библиотеки импорта и файла экспорта](../../build/reference/building-an-import-library-and-export-file.md).  
+ Дополнительные сведения см. [построение библиотеки импорта и экспорта файла](../../build/reference/building-an-import-library-and-export-file.md).  
   
- **\/EXTRACT**  
- Создание объектного файла \(OBJ\-файла\), содержащего копию элемента существующей библиотеки.  
+ **/ EXTRACT**  
+ Создайте Объектный OBJ-файл, содержащий копию элемента существующей библиотеки.  
   
- Дополнительные сведения см. в разделе [Извлечение члена библиотеки](../../build/reference/extracting-a-library-member.md).  
+ Дополнительные сведения см. [извлечение члена библиотеки](../../build/reference/extracting-a-library-member.md).  
   
- **\/INCLUDE**  
- Добавление символа в таблицу символов.  
+ **/ INCLUDE**  
+ Добавляет символ в таблицу символов.  
   
- Дополнительные сведения см. в разделе [Построение библиотеки импорта и файла экспорта](../../build/reference/building-an-import-library-and-export-file.md).  
+ Дополнительные сведения см. [построение библиотеки импорта и экспорта файла](../../build/reference/building-an-import-library-and-export-file.md).  
   
- **\/LIBPATH**  
+ **/ LIBPATH**  
  Переопределяет путь к библиотеке среды.  
   
- Дополнительные сведения см. в разделе [Управление библиотекой](../../build/reference/managing-a-library.md).  
+ Дополнительные сведения см. [Управление библиотекой](../../build/reference/managing-a-library.md).  
   
- **\/LIST**  
- Отображает информацию о выходной библиотеке в стандартном выходном формате.  
+ **/ LIST**  
+ Отображает сведения о выходной библиотеке в стандартный вывод.  
   
- Дополнительные сведения см. в разделе [Управление библиотекой](../../build/reference/managing-a-library.md).  
+ Дополнительные сведения см. [Управление библиотекой](../../build/reference/managing-a-library.md).  
   
- **\/LTCG**  
- Инициирует построение библиотеки с помощью создания кода времени компоновки.  
+ **/ ПАРАМЕТР LTCG**  
+ В результате библиотеки для сборки с помощью создания кода во время компоновки.  
   
- Дополнительные сведения см. в разделе [Запуск программы LIB](../../build/reference/running-lib.md).  
+ Дополнительные сведения см. [запуск LIB](../../build/reference/running-lib.md).  
   
- **\/MACHINE**  
- Задание целевой платформы для программы.  
+ **/ MACHINE**  
+ Указывает целевую платформу программы.  
   
- Дополнительные сведения см. в разделе [Запуск программы LIB](../../build/reference/running-lib.md).  
+ Дополнительные сведения см. [запуск LIB](../../build/reference/running-lib.md).  
   
- **\/NAME**  
- При построении библиотеки импорта задает имя DLL, для которого создается библиотека импорта.  
+ **В ИМЯ**  
+ При сборке библиотеки импорта задает имя библиотеки DLL, для которых создается библиотека импорта.  
   
- Дополнительные сведения см. в разделе [Управление библиотекой](../../build/reference/managing-a-library.md).  
+ Дополнительные сведения см. [Управление библиотекой](../../build/reference/managing-a-library.md).  
   
- **\/NODEFAULTLIB**  
- Удаляет одну или несколько библиотек по умолчанию из списка искомых библиотек при разрешении внешних ссылок.  
+ **/ ПАРАМЕТР NODEFAULTLIB**  
+ Удаляет один или несколько стандартных библиотек из списка библиотек, в которых осуществляется поиск при разрешении внешних ссылок.  
   
- Дополнительные сведения см. в разделе [Управление библиотекой](../../build/reference/managing-a-library.md).  
+ Дополнительные сведения см. [Управление библиотекой](../../build/reference/managing-a-library.md).  
   
- **\/NOLOGO**  
- Отключает вывод программой LIB уведомления об авторских правах и номере версии, а также отображение команд командного файла.  
+ **/ NOLOGO**  
+ Подавление отображения LIB об авторских правах и номере версии и предотвращает отображение команд командного файла.  
   
- Дополнительные сведения см. в разделе [Запуск программы LIB](../../build/reference/running-lib.md).  
+ Дополнительные сведения см. [запуск LIB](../../build/reference/running-lib.md).  
   
- **\/OUT**  
- Переопределяет имя выходного файла используемое по умолчанию.  
+ **/ OUT**  
+ Переопределяет имя выходного файла по умолчанию.  
   
- Дополнительные сведения см. в разделе [Управление библиотекой](../../build/reference/managing-a-library.md).  
+ Дополнительные сведения см. [Управление библиотекой](../../build/reference/managing-a-library.md).  
   
- **\/REMOVE**  
+ **И УДАЛЕНИЕ**  
  Пропуск объекта из выходной библиотеки.  
   
- Дополнительные сведения см. в разделе [Управление библиотекой](../../build/reference/managing-a-library.md).  
+ Дополнительные сведения см. [Управление библиотекой](../../build/reference/managing-a-library.md).  
   
- **\/SUBSYSTEM**  
- Сообщает операционной системе способ запуска программы, созданной путем привязки к выходной библиотеке.  
+ **/ SUBSYSTEM**  
+ Указывает операционной системе, как запустить программу, созданную путем связывания с выходной библиотеки.  
   
- Дополнительные сведения см. в разделе [Управление библиотекой](../../build/reference/managing-a-library.md).  
+ Дополнительные сведения см. [Управление библиотекой](../../build/reference/managing-a-library.md).  
   
- **\/VERBOSE**  
- Отображает подробные сведения о ходе сеанса, включая имена добавляемых OBJ\-файлов.  
+ **/ VERBOSE**  
+ Отображает подробные сведения о ходе выполнения сеанса, включая имена добавляемых OBJ-файлов.  
   
- Дополнительные сведения см. в разделе [Запуск программы LIB](../../build/reference/running-lib.md).  
+ Дополнительные сведения см. [запуск LIB](../../build/reference/running-lib.md).  
   
- **\/WX**  
- Обработка предупреждений, как ошибок.  
+ **/ WX**  
+ Обрабатывать предупреждения как ошибки.  
   
- Дополнительные сведения см. в разделе [Запуск программы LIB](../../build/reference/running-lib.md).  
+ Дополнительные сведения см. [запуск LIB](../../build/reference/running-lib.md).  
   
-## См. также  
+## <a name="see-also"></a>См. также  
  [Справочник по LIB](../../build/reference/lib-reference.md)   
- [Входные LIB\-файлы](../../build/reference/lib-input-files.md)   
- [Выходные LIB\-файлы](../../build/reference/lib-output-files.md)   
+ [Входные LIB-файлы](../../build/reference/lib-input-files.md)   
+ [Выходные LIB-файлы](../../build/reference/lib-output-files.md)   
  [Прочие выходные данные LIB](../../build/reference/other-lib-output.md)   
  [Структура библиотеки](../../build/reference/structure-of-a-library.md)

@@ -1,41 +1,42 @@
 ---
-title: "hash_multimap::size_type (STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::hash_multimap::size_type"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "size_type - элемент [STL/CLR]"
+title: "hash_multimap::size_type (STL/CLR) | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::hash_multimap::size_type
+dev_langs: C++
+helpviewer_keywords: size_type member [STL/CLR]
 ms.assetid: 4d266b1f-d0d6-4575-9abd-70fab719eb76
-caps.latest.revision: 14
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 12
+caps.latest.revision: "14"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: bd2887c6ada923d60b501dcc29f12d0c065cae1d
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 12/21/2017
 ---
-# hash_multimap::size_type (STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Тип подписанного расстояния между элементом 2.  
+# <a name="hashmultimapsizetype-stlclr"></a>hash_multimap::size_type (STL/CLR)
+Тип расстояния со знаком между двумя элемент.  
   
-## Синтаксис  
+## <a name="syntax"></a>Синтаксис  
   
 ```  
 typedef int size_type;  
 ```  
   
-## Заметки  
- Описывает тип неотрицательное число элементов.  
+## <a name="remarks"></a>Примечания  
+ Тип описывает элемент неотрицательное число.  
   
-## Пример  
+## <a name="example"></a>Пример  
   
 ```  
 // cliext_hash_multimap_size_type.cpp   
@@ -65,13 +66,16 @@ int main()
   
 ```  
   
-  **\[1\] \[2\] \[BC — 3\]**  
-**end\(\)\-begin\(\) \= 3**   
-## Требования  
- **Заголовок:**\<cliext\/hash\_map\>  
+```Output  
+ [a 1] [b 2] [c 3]  
+end()-begin() = 3  
+```  
+  
+## <a name="requirements"></a>Требования  
+ **Заголовок:** \<cliext/hash_map >  
   
  **Пространство имен:** cliext  
   
-## См. также  
- [hash\_multimap](../dotnet/hash-multimap-stl-clr.md)   
- [hash\_multimap::empty](../dotnet/hash-multimap-empty-stl-clr.md)
+## <a name="see-also"></a>См. также  
+ [hash_multimap (STL/CLR)](../dotnet/hash-multimap-stl-clr.md)   
+ [hash_multimap::empty (STL/CLR)](../dotnet/hash-multimap-empty-stl-clr.md)

@@ -13,11 +13,12 @@ caps.latest.revision: "8"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 5fbea80bfff17c4dd78d4e0c99af0843d7650156
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: e3af4ac1b15192762f9e420ed17a70b819116dba
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="program-and-linkage--c"></a>Программа и компоновка (C++)
 Программа состоит из одной или нескольких записей преобразования, связанных друг с другом. Выполнение (по существу) начинается в записи преобразования, содержащей функцию, **основной**. (Дополнительные сведения о записях преобразования см. в разделе [этапы преобразования](../preprocessor/phases-of-translation.md)в *справочника по препроцессору*.) Дополнительные сведения о **основной** см. в разделе [запуск программы: основная функция](../cpp/main-program-startup.md).)  

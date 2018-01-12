@@ -15,11 +15,14 @@ caps.latest.revision: "8"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 8d901b6674c19cda5a2cc9da2826c9523280b58c
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: 6b4f451fa408f2f6470281206e5de3670d069b6c
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="idbschemarowsetimpl-class"></a>IDBSchemaRowsetImpl - класс
 Предоставляет реализацию для наборов строк схемы.  
@@ -35,7 +38,7 @@ class ATL_NO_VTABLE IDBSchemaRowsetImpl : public IDBSchemaRowset
  `SessionClass`  
  Класс, по которому наследуется `IDBSchemaRowsetImpl` . Как правило, этот класс будет классом сеанса пользователя.  
   
-## <a name="members"></a>Члены  
+## <a name="members"></a>Участники  
   
 ### <a name="methods"></a>Методы  
   

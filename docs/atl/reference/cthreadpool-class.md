@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-windows
+ms.technology: cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
@@ -24,35 +23,19 @@ f1_keywords:
 - ATLUTIL/ATL::CThreadPool::SetSize
 - ATLUTIL/ATL::CThreadPool::SetTimeout
 - ATLUTIL/ATL::CThreadPool::Shutdown
-dev_langs:
-- C++
-helpviewer_keywords:
-- CThreadPool class
+dev_langs: C++
+helpviewer_keywords: CThreadPool class
 ms.assetid: 06683718-01b9-413c-9481-2dc1734ec70f
-caps.latest.revision: 22
+caps.latest.revision: "22"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: d2d39abf526a58b8442107b5ee816f316ae841f5
-ms.openlocfilehash: b3c944958ba73240131fba33db95dbc20ec9bec8
-ms.contentlocale: ru-ru
-ms.lasthandoff: 03/31/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: 6739e179843864c952a5e864de1389b466d7ca7c
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cthreadpool-class"></a>Класс CThreadPool
 Этот класс предоставляет пул рабочих потоков, обрабатывающих очередь рабочих элементов.  
@@ -71,18 +54,18 @@ class CThreadPool : public IThreadPoolConfig
  `ThreadTraits`  
  Класс, предоставляющий функцию, используемую для создания потоков в пуле.  
   
-## <a name="members"></a>Члены  
+## <a name="members"></a>Участники  
   
 ### <a name="public-constructors"></a>Открытые конструкторы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[CThreadPool::CThreadPool](#cthreadpool)|Конструктор для пула потоков.|  
 |[CThreadPool:: ~ CThreadPool](#dtor)|Деструктор для пула потоков.|  
   
 ### <a name="public-methods"></a>Открытые методы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[CThreadPool::AddRef](#addref)|Реализация `IUnknown::AddRef`.|  
 |[CThreadPool::GetNumThreads](#getnumthreads)|Этот метод вызывается для получения количества потоков в пуле.|  
@@ -100,7 +83,7 @@ class CThreadPool : public IThreadPoolConfig
 ## <a name="remarks"></a>Примечания  
  Создаются и удаляются при инициализации, размера или завершение работы пула потоков в пуле. Экземпляр класса *рабочих* создается на стеке каждого рабочего потока в пуле. Каждый экземпляр будет располагаться в течение времени существования потока.  
   
- Сразу после создания потока *рабочих*:: `Initialize` будет вызван для объекта, связанного с этим потоком. Непосредственно перед уничтожения потока *рабочих*:: `Terminate` будет вызван. Оба метода должны принять **void\*** аргумент. Значение этого аргумента передается в пул потоков через `pvWorkerParam` параметр [CThreadPool::Initialize](#initialize).  
+ Сразу после создания потока *рабочих*:: `Initialize` будет вызван для объекта, связанного с этим потоком. Непосредственно перед уничтожения потока *рабочих*:: `Terminate` будет вызван. Оба метода должны принять **void\***  аргумент. Значение этого аргумента передается в пул потоков через `pvWorkerParam` параметр [CThreadPool::Initialize](#initialize).  
   
  Если имеются доступные рабочие элементы в очереди и рабочие потоки для работы, рабочий поток будет получать элемента из очереди и вызове **Execute** метод *рабочих* объект для этого потока. Три элемента передаются в метод: элемент из очереди, то `pvWorkerParam` передаваемый *рабочих*:: `Initialize` и *рабочих*:: `Terminate`и указатель на [OVERLAPPED](http://msdn.microsoft.com/library/windows/desktop/ms684342) структура, используемая для очередь порта завершения ввода-ВЫВОДА.  
   
@@ -331,4 +314,3 @@ void Shutdown(DWORD dwMaxWait = 0) throw();
  [Интерфейс IThreadPoolConfig](../../atl/reference/ithreadpoolconfig-interface.md)   
  [DefaultThreadTraits](atl-typedefs.md#defaultthreadtraits)   
  [Классы](../../atl/reference/atl-classes.md)
-

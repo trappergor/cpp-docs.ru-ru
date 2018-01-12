@@ -1,68 +1,68 @@
 ---
-title: "/FU (именование файла с принудительно используемым атрибутом #using) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/14/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "VC.Project.VCCLCompilerTool.ForcedUsingFiles"
-  - "/FU"
-  - "VC.Project.VCNMakeTool.ForcedUsingAssemblies"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "/FU - параметр компилятора [C++]"
-  - "FU - параметр компилятора [C++]"
-  - "-FU - параметр компилятора [C++]"
+title: "-FU (имя принудительно #using файла) | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- VC.Project.VCCLCompilerTool.ForcedUsingFiles
+- /FU
+- VC.Project.VCNMakeTool.ForcedUsingAssemblies
+dev_langs: C++
+helpviewer_keywords:
+- -FU compiler option [C++]
+- FU compiler option [C++]
+- /FU compiler option [C++]
 ms.assetid: 698f8603-457f-435a-baff-5ac9243d6ca1
-caps.latest.revision: 15
-caps.handback.revision: 15
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
+caps.latest.revision: "15"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 17b62859aaf0c9dc6b3313fbb726602b5b83a82c
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 12/21/2017
 ---
-# /FU (именование файла с принудительно используемым атрибутом #using)
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Параметр компилятора, который можно использовать в качестве альтернативы передачи имени файла на [Директива \#using](../../preprocessor/hash-using-directive-cpp.md) в исходном коде.  
+# <a name="fu-name-forced-using-file"></a>/FU (именование файла с принудительно используемым атрибутом #using)
+Параметр компилятора, который можно использовать в качестве альтернативы передачи имени файла для [# директива using](../../preprocessor/hash-using-directive-cpp.md) в исходном коде.  
   
-## Синтаксис  
+## <a name="syntax"></a>Синтаксис  
   
 ```  
 /FU file  
 ```  
   
-## Аргументы  
+## <a name="arguments"></a>Аргументы  
  `file`  
- Определяет файл метаданных, на который будет создана ссылка в данной компиляции.  
+ Задает файл метаданных для ссылки в данной компиляции.  
   
-## Заметки  
- Ключ \/FU имеет только одно имя файла.  Чтобы указать несколько файлов, используйте параметр \/FU каждое с одним.  
+## <a name="remarks"></a>Примечания  
+ /FU коммутатора принимает только одно имя файла. Чтобы указать несколько файлов, используйте /FU с каждой из них.  
   
- При использовании [!INCLUDE[cppcli](../../build/reference/includes/cppcli_md.md)] и ссылки на метаданные для использования функции [Дружественных сборок](../../dotnet/friend-assemblies-cpp.md), нельзя использовать **\/FU**.  Необходимо добавить ссылку на метаданные в коде с помощью `#using`— вместе с атрибутом `[as friend]`.  Дружественных сборок не поддерживаются в [!INCLUDE[cppwrt](../../build/reference/includes/cppwrt_md.md)] \([!INCLUDE[cppwrt_short](../Token/cppwrt_short_md.md)]\).  
+ Если вы используете [!INCLUDE[cppcli](../../build/reference/includes/cppcli_md.md)] и ссылаются метаданные, которые используются [дружественных сборок](../../dotnet/friend-assemblies-cpp.md) функции, нельзя использовать **/FU**. Должна ссылаться на метаданные в коде с помощью `#using`— вместе с `[as friend]` атрибута. Дружественные сборки не поддерживаются в [!INCLUDE[cppwrt](../../build/reference/includes/cppwrt_md.md)] ([!INCLUDE[cppwrt_short](../../build/reference/includes/cppwrt_short_md.md)]).  
   
- Дополнительные сведения о создании сборки или модуль \(CLR\) для среды CLR см. в разделе [\/clr \(компиляция CLR\)](../../build/reference/clr-common-language-runtime-compilation.md).  Сведения о способах построения в [!INCLUDE[cppwrt_short](../Token/cppwrt_short_md.md)] см. в разделе [Построение приложений и библиотек](../Topic/Building%20apps%20and%20libraries%20\(C++-CX\).md).  
+ Сведения о создании сборки или модуля для общеязыковой среды выполнения (CLR) см. в разделе [/CLR (компиляция CLR)](../../build/reference/clr-common-language-runtime-compilation.md). Дополнительные сведения о построении [!INCLUDE[cppwrt_short](../../build/reference/includes/cppwrt_short_md.md)], в разделе [построение приложений и библиотек](../../cppcx/building-apps-and-libraries-c-cx.md).  
   
-### Установка данного параметра компилятора в среде разработки Visual Studio  
+### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Установка данного параметра компилятора в среде разработки Visual Studio  
   
-1.  Откройте диалоговое окно **Страницы свойств** проекта.  Дополнительные сведения см. в разделе [Открытие свойств страниц проекта](../../misc/how-to-open-project-property-pages.md).  
+1.  Откройте диалоговое окно **Страницы свойств** проекта. Дополнительные сведения см. в разделе [работа со свойствами проекта](../../ide/working-with-project-properties.md).  
   
-2.  Выберите папку **C\/C\+\+**.  
+2.  Выберите **C/C++** папки.  
   
-3.  Выберите страницу свойств **Дополнительно**.  
+3.  Выберите **Дополнительно** страницу свойств.  
   
-4.  Измените значение свойства **Принудительное использование атрибута \#using**.  
+4.  Изменить **Force #using** свойство.  
   
-### Установка данного параметра компилятора программным способом  
+### <a name="to-set-this-compiler-option-programmatically"></a>Установка данного параметра компилятора программным способом  
   
 -   См. раздел <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.ForcedUsingFiles%2A>.  
   
-## См. также  
- [Параметры выходного файла \(\/F\)](../../build/reference/output-file-f-options.md)   
+## <a name="see-also"></a>См. также  
+ [Выходного файла (/ F) параметры](../../build/reference/output-file-f-options.md)   
  [Параметры компилятора](../../build/reference/compiler-options.md)   
- [Настройка параметров компилятора](../Topic/Setting%20Compiler%20Options.md)
+ [Настройка параметров компилятора](../../build/reference/setting-compiler-options.md)

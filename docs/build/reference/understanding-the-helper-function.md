@@ -21,11 +21,12 @@ caps.latest.revision: "8"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 7b8604c90c4af46d98c3d9da72899670e86ca154
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: c3a013cf584c37f84331a5ab5dfe74eaa213c851
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="understanding-the-helper-function"></a>Понятие вспомогательной функции
 Вспомогательная функция для отложенной загрузки, поддерживаемой компоновщика является загружает библиотеку DLL, во время выполнения. Вы можете изменить вспомогательную функцию, чтобы настроить ее поведение, создав собственную функцию и связывания его в программу вместо использования предоставленного вспомогательной функции в библиотекой Delayimp.lib. Одна вспомогательная функция обслуживает все отложенные загрузки библиотек DLL.  

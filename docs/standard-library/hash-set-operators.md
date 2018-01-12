@@ -9,17 +9,15 @@ ms.topic: article
 f1_keywords:
 - hash_set/std::operator!=
 - hash_set/std::operator==
-dev_langs:
-- C++
+dev_langs: C++
 ms.assetid: 403d8e4e-0b3f-43fb-bc5a-8100c4f331c5
-caps.latest.revision: 13
+caps.latest.revision: "13"
 manager: ghogen
+ms.openlocfilehash: e5205240d4f0bbfbf41423ee73a737e7d2bd0667
+ms.sourcegitcommit: ca2f94dfd015e0098a6eaf5c793ec532f1c97de1
 ms.translationtype: MT
-ms.sourcegitcommit: 65f4e356ad0d46333b0d443d0fd6ac0b9f2b6f58
-ms.openlocfilehash: 62ad48b857b4136f2f8abbdef6ec3b5acddc00d8
-ms.contentlocale: ru-ru
-ms.lasthandoff: 10/03/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 10/31/2017
 ---
 # <a name="lthashsetgt-operators"></a>Операторы &lt;hash_set&gt;
 ||||  
@@ -27,10 +25,10 @@ ms.lasthandoff: 10/03/2017
 |[оператор!=](#op_neq)|[operator!= (hash_multiset)](#op_neq_hash_multiset)|[оператор==](#op_eq_eq)|  
 |[operator== (hash_multiset)](#op_eq_eq_hash_multiset)|  
   
-##  <a name="op_neq"></a>  оператор!=  
+##  <a name="op_neq"></a> operator!=  
   
 > [!NOTE]
->  Этот API устарел. Вместо него следует использовать [класс unordered_set](../standard-library/unordered-set-class.md).  
+>  Этот элемент API устарел. Альтернатива — [класс unordered_set](../standard-library/unordered-set-class.md).  
   
  Проверяет неравенство объекта hash_set слева от оператора и объекта hash_set справа от оператора.  
   
@@ -92,10 +90,10 @@ The hash_sets hs1 and hs2 are not equal.
 The hash_sets hs1 and hs3 are equal.  
 ```  
   
-##  <a name="op_eq_eq"></a>  оператор==  
+##  <a name="op_eq_eq"></a> operator==  
   
 > [!NOTE]
->  Этот API устарел. Вместо него следует использовать [класс unordered_set](../standard-library/unordered-set-class.md).  
+>  Этот элемент API устарел. Альтернатива — [класс unordered_set](../standard-library/unordered-set-class.md).  
   
  Проверяет равенство объекта hash_set слева от оператора и объекта hash_set справа от оператора.  
   
@@ -116,7 +114,7 @@ bool operator!==(const hash_set <Key, Traits, Allocator>& left, const hash_set <
 ### <a name="remarks"></a>Примечания  
  Сравнение между объектами hash_set основывается на попарном сравнении их элементов. Два объекта hash_set равны, если они содержат одинаковое количество элементов, а их соответствующие элементы имеют одинаковые значения. В противном случае они не равны.  
   
- В Visual C++ .NET 2003 члены файлов заголовков [<hash_map>](../standard-library/hash-map.md) и [<hash_set>](../standard-library/hash-set.md) больше не находятся в пространстве имен std. Они перемещены в пространство имен stdext. Более подробные сведения см. в разделе [Пространство имен stdext](../standard-library/stdext-namespace.md).  
+   
   
 ### <a name="example"></a>Пример  
   
@@ -160,7 +158,7 @@ The hash_sets s1 and s3 are equal.
 ##  <a name="neq_hash_multiset"></a>  operator!= (hash_multiset)  
   
 > [!NOTE]
->  Этот API устарел. Вместо него следует использовать [класс unordered_set](../standard-library/unordered-set-class.md).  
+>  Этот элемент API устарел. Альтернатива — [класс unordered_set](../standard-library/unordered-set-class.md).  
   
  Проверяет неравенство объекта hash_multiset слева от оператора и объекта hash_multiset справа от оператора.  
   
@@ -181,7 +179,7 @@ bool operator!=(const hash_multiset <Key, Traits, Allocator>& left, const hash_m
 ### <a name="remarks"></a>Примечания  
  Сравнение между объектами hash_multiset основывается на попарном сравнении их элементов. Два объекта hash_multiset равны, если они содержат одинаковое количество элементов, а их соответствующие элементы имеют одинаковые значения. В противном случае они не равны.  
   
- В Visual C++ .NET 2003 члены файлов заголовков [<hash_map>](../standard-library/hash-map.md) и [<hash_set>](../standard-library/hash-set.md) больше не находятся в пространстве имен std. Они перемещены в пространство имен stdext. Более подробные сведения см. в разделе [Пространство имен stdext](../standard-library/stdext-namespace.md).  
+   
   
 ### <a name="example"></a>Пример  
   
@@ -225,7 +223,7 @@ The hash_multisets hs1 and hs3 are equal.
 ##  <a name="eq_eq_hash_multiset"></a>  operator== (hash_multiset)  
   
 > [!NOTE]
->  Этот API устарел. Вместо него следует использовать [класс unordered_set](../standard-library/unordered-set-class.md).  
+>  Этот элемент API устарел. Альтернатива — [класс unordered_set](../standard-library/unordered-set-class.md).  
   
  Проверяет равенство объекта hash_multiset слева от оператора и объекта hash_multiset справа от оператора.  
   
@@ -245,8 +243,6 @@ bool operator!==(const hash_multiset <Key, Traits, Allocator>& left, const hash_
   
 ### <a name="remarks"></a>Примечания  
  Сравнение между объектами hash_multiset основывается на попарном сравнении их элементов. Два объекта hash_multiset равны, если они содержат одинаковое количество элементов, а их соответствующие элементы имеют одинаковые значения. В противном случае они не равны.  
-  
- В Visual C++ .NET 2003 члены файлов заголовков [<hash_map>](../standard-library/hash-map.md) и [<hash_set>](../standard-library/hash-set.md) больше не находятся в пространстве имен std. Они были перенесены в пространство имен stdext. В разделе [пространство имен stdext](../standard-library/stdext-namespace.md) для получения дополнительной информации.  
   
 ### <a name="example"></a>Пример  
   
@@ -289,5 +285,4 @@ The hash_multisets s1 and s2 are equal.
   
 ## <a name="see-also"></a>См. также  
  [<hash_set>](../standard-library/hash-set.md)
-
 

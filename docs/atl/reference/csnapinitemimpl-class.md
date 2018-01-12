@@ -38,11 +38,12 @@ caps.latest.revision: "20"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 1758a3d3bec03015abf35626adec69e1db9a7fdb
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: f1355173bafcf026a7f1bfba771a7769b202c92c
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="csnapinitemimpl-class"></a>Класс CSnapInItemImpl
 Этот класс предоставляет методы для реализации объект узла оснастки.  
@@ -64,17 +65,17 @@ class ATL_NO_VTABLE CSnapInItemImpl : public CSnapInItem
  *bIsExtension*  
  **Значение TRUE,** Если объект является расширением оснастки; в противном случае **FALSE**.  
   
-## <a name="members"></a>Члены  
+## <a name="members"></a>Участники  
   
 ### <a name="public-constructors"></a>Открытые конструкторы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[CSnapInItemImpl::CSnapInItemImpl](#csnapinitemimpl)|Конструктор.|  
   
 ### <a name="public-methods"></a>Открытые методы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[CSnapInItemImpl::AddMenuItems](#addmenuitems)|Добавляет пункты меню в контекстное меню.|  
 |[CSnapInItemImpl::Command](#command)|Вызывается средой консоль, при выборе пункта меню.|  
@@ -92,7 +93,7 @@ class ATL_NO_VTABLE CSnapInItemImpl : public CSnapInItem
   
 ### <a name="public-data-members"></a>Открытые члены данных  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[CSnapInItemImpl::m_bstrDisplayName](#m_bstrdisplayname)|Имя объекта оснастки.|  
 |[CSnapInItemImpl::m_resultDataItem](#m_resultdataitem)|Windows **RESULTDATAITEM** структура, используемая `CSnapInItemImpl` объекта.|  

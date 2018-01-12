@@ -1,26 +1,27 @@
 ---
-title: "Run-Time Operators | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
+title: "Операторы среды выполнения | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
 ms.assetid: ac73d2db-ffc6-4eab-b37b-bc51488a7d2e
-caps.latest.revision: 8
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 421e938e2d1fcf64dabca5545f94d29dc9b1f315
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 12/21/2017
 ---
-# Run-Time Operators
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Дополнительные сведения об операторах среды выполнения в языке ассемблера макроса Майкрософт, см. в разделе [Справочник по операторам](../Topic/Operators%20Reference.md).  
+# <a name="run-time-operators"></a>Операторы среды выполнения
+Дополнительные сведения об операторах времени выполнения на языке ассемблера Microsoft макросов см. в разделе [Справочник по операторам](../../assembler/masm/operators-reference.md).  
   
-## См. также  
- [Operators Reference](../Topic/Operators%20Reference.md)
+## <a name="see-also"></a>См. также  
+ [Справочник по операторам](../../assembler/masm/operators-reference.md)

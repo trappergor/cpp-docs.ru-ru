@@ -4,44 +4,28 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-windows
+ms.technology: cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
 - vc.appwiz.ATL.optimization
 - vc.appwiz.ATL.vtable
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - ATL_DISABLE_NO_VTABLE macro
 - ATL projects, compiler optimization
 - ATL_NO_VTABLE macro
 ms.assetid: 7f379318-66d5-43dd-a53d-530758d3a228
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 050e7483670bd32f633660ba44491c8bb3fc462d
-ms.openlocfilehash: abdad4367e75c1971ba5d11af1a60992d1bb3dd4
-ms.contentlocale: ru-ru
-ms.lasthandoff: 02/24/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: c6e60f22b7b91567948dfc2efc90935fce266d7e
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="specifying-compiler-optimization-for-an-atl-project"></a>Задание оптимизации компилятора для проекта ATL
 По умолчанию [мастер элементов управления ATL](../../atl/reference/atl-control-wizard.md) создает новые классы с помощью макроса ATL_NO_VTABLE следующим образом:  
@@ -63,28 +47,27 @@ class ATL_NO_VTABLE CProjName
 #endif  
 ```  
   
- Если _ATL_DISABLE_NO_VTABLE не определен, макрос ATL_NO_VTABLE развертывается `declspec(novtable)`. С помощью `declspec(novtable)`в классе объявление предотвращает указателя vtable инициализацию в конструкторе и деструкторе класса. При построении проекта компоновщик исключает указатель vtable и все функции, на которые он указывает.  
+ Если _ATL_DISABLE_NO_VTABLE не определен, макрос ATL_NO_VTABLE развертывается `declspec(novtable)`. С помощью `declspec(novtable)`в классе объявление предотвращает vtable указателя, инициализируемый в конструкторе и деструкторе класса. При построении проекта компоновщик исключает указатель vtable и все функции, на которые он указывает.  
   
- Необходимо использовать макрос ATL_NO_VTABLE и, следовательно, `declspec(novtable)`, с помощью только базовые классы, которые нельзя создать напрямую. Не следует использовать `declspec(novtable)` в классе самого дальнего в проекте, так как этот класс (обычно [CComObject](../../atl/reference/ccomobject-class.md), [CComAggObject](../../atl/reference/ccomaggobject-class.md), или [CComPolyObject](../../atl/reference/ccompolyobject-class.md)) инициализирует указателя vtable для проекта.  
+ Необходимо использовать макрос ATL_NO_VTABLE и, следовательно, `declspec(novtable)`, только базовые классы, которые нельзя непосредственно создать. Не следует использовать `declspec(novtable)` с более низкого уровня класса в проекте, так как этот класс (обычно [CComObject](../../atl/reference/ccomobject-class.md), [CComAggObject](../../atl/reference/ccomaggobject-class.md), или [CComPolyObject](../../atl/reference/ccompolyobject-class.md)) Инициализирует указатель vtable для проекта.  
   
- Нельзя вызывать виртуальные функции из конструктора любого объекта, использующего `declspec(novtable)`. Следует переместить эти вызовы [FinalConstruct](ccomobjectrootex-class.md#finalconstruct) метод.  
+ Нельзя вызывать виртуальные функции из конструктора любого объекта, который использует `declspec(novtable)`. Следует переместить эти вызовы [FinalConstruct](ccomobjectrootex-class.md#finalconstruct) метод.  
 
   
- Если вы не уверены, следует ли использовать `declspec(novtable)` модификатор, то можно удалить макрос ATL_NO_VTABLE из определений всех классов, или вы можете глобально отключить, указав  
+ Если вы не уверены, следует ли использовать `declspec(novtable)` модификатор, можно удалить макрос ATL_NO_VTABLE из определений всех классов, или можно глобально отключить его, указав  
   
 ```  
 #define _ATL_DISABLE_NO_VTABLE  
 ```  
   
- Добавьте в файл stdafx.h перед другими ATL заголовочные файлы включены.  
+ в файле stdafx.h перед другими ATL заголовочные файлы включены.  
   
 ## <a name="see-also"></a>См. также  
- [Мастер проекта ATL](../../atl/reference/atl-project-wizard.md)   
+ [Мастер проектов ATL](../../atl/reference/atl-project-wizard.md)   
  [Типы проектов Visual C++](../../ide/visual-cpp-project-types.md)   
- [Создание проектов для настольных ПК с помощью мастеров приложений](../../ide/creating-desktop-projects-by-using-application-wizards.md)   
- [Программирование с использованием ATL и кода времени выполнения C](../../atl/programming-with-atl-and-c-run-time-code.md)   
- [Основы COM-объекты ATL](../../atl/fundamentals-of-atl-com-objects.md)   
+ [Создание проектов для рабочего стола с помощью мастеров приложений](../../ide/creating-desktop-projects-by-using-application-wizards.md)   
+ [Программирование с использованием ATL и кода среды выполнения C](../../atl/programming-with-atl-and-c-run-time-code.md)   
+ [Основные принципы работы COM-объекты ATL](../../atl/fundamentals-of-atl-com-objects.md)   
  [novtable](../../cpp/novtable.md)   
- [Конфигурации проекта ATL по умолчанию](../../atl/reference/default-atl-project-configurations.md)
-
+ [Конфигурации проектов ATL по умолчанию](../../atl/reference/default-atl-project-configurations.md)
 

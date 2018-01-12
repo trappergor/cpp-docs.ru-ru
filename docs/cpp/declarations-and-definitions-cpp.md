@@ -13,11 +13,12 @@ caps.latest.revision: "9"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: b22be2b4d04350a25fcb59bd3dee49114504b547
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: ea0f8210993e494cbd4795a2c4cf7c6c0afa8aa2
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="declarations-and-definitions-c"></a>Объявления и определения (C++)
 Объявления вводят имен в программе, например имена переменных, пространств имен, функции и классы. В объявлениях также указываются типы данных и другие характеристики объявляемых объектов. Перед использованием имени его необходимо объявить. В C++ точка, в которой объявляется имя, определяет, будет ли оно видимо для компилятора. Нельзя ссылаться на функцию или класс, объявленные на более позднем этапе блока компиляции; можно использовать *отправить объявления* Чтобы обойти это ограничение.  

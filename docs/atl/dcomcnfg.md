@@ -17,11 +17,12 @@ caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: bffed7658232d11dd7741900d6eca14de341e855
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: f40b372666ba2b623450eb0e58a6c0ff372559ec
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="dcomcnfg"></a>DCOMCNFG.
 **DCOMCNFG** — это программа Windows NT 4.0, которая позволяет настраивать различные параметры DCOM в реестре. **DCOMCNFG** окно содержит три страницы: безопасность по умолчанию, свойства по умолчанию и приложений. В среде Windows 2000 четвертой странице протоколов по умолчанию, отсутствует.  

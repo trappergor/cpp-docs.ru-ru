@@ -1,31 +1,29 @@
 ---
-title: ".UNTILCXZ | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - ".UNTILCXZ"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - ".UNTILCXZ directive"
+title: ". UNTILCXZ | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: .UNTILCXZ
+dev_langs: C++
+helpviewer_keywords: .UNTILCXZ directive
 ms.assetid: 07723c4c-789d-4dfa-9407-c60e72cb975f
-caps.latest.revision: 7
-caps.handback.revision: 7
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
+caps.latest.revision: "7"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: d645dd2f102e86cf2bd7ad37b0895c1931b6d60b
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 12/21/2017
 ---
-# .UNTILCXZ
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-См. .REPEAT.  
+# <a name="untilcxz"></a>.UNTILCXZ
+В разделе [. ПОВТОРИТЕ](../../assembler/masm/dot-repeat.md).  
   
-## См. также  
- [Directives Reference](../../assembler/masm/directives-reference.md)
+## <a name="see-also"></a>См. также  
+ [Справочник по директивам](../../assembler/masm/directives-reference.md)

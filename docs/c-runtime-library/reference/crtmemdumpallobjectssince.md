@@ -32,11 +32,12 @@ caps.latest.revision: "11"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: fa818c63e779b51c9aa6c36204b5be2932d3b752
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: d71b5d13b5616717c0b3fc0ac6eae0fc1ca8b551
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="crtmemdumpallobjectssince"></a>_CrtMemDumpAllObjectsSince
 Записывает в дамп сведения об объектах в куче с начала выполнения программы или перехода в указанное состояние кучи (только в отладочной версии).  
@@ -61,7 +62,7 @@ ms.lasthandoff: 10/24/2017
   
  Если приложение установило функцию-ловушку дампа, вызвав функцию [_CrtSetDumpClient](../../c-runtime-library/reference/crtsetdumpclient.md), то каждый раз, когда `_CrtMemDumpAllObjectsSince` записывает в дамп информацию о типе блока `_CLIENT_BLOCK`, также вызывается функция дампа, предоставляемая приложением. По умолчанию внутренние блоки среды выполнения C (`_CRT_BLOCK`) в операции с дампом памяти не включаются. Функцию [_CrtSetDbgFlag](../../c-runtime-library/reference/crtsetdbgflag.md) можно использовать для включения бита `_CRTDBG_CHECK_CRT_DF` флага **_crtDbgFlag** и включения этих блоков. Кроме того, блоки, помеченные как освобожденные или игнорируемые (**_FREE_BLOCK**, **_IGNORE_BLOCK**), в дамп памяти не включаются.  
   
- Дополнительные сведения о функциях управления состоянием кучи и структуре `_CrtMemState` см. в разделе [Функции создания отчетов о состоянии кучи](/visualstudio/debugger/crt-debug-heap-details). Дополнительные сведения о выделении, инициализации и управлении блоками памяти в отладочной версии базовой кучи см. в разделе [Сведения о куче отладки CRT](/visualstudio/debugger/crt-debug-heap-details).  
+ Дополнительные сведения о функциях управления состоянием кучи и структуре `_CrtMemState` см. в разделе [Функции создания отчетов о состоянии кучи](/visualstudio/debugger/crt-debug-heap-details). Дополнительные сведения о выделении, инициализации и управлении блоками памяти в отладочной версии базовой кучи см. в статье [CRT Debug Heap Details](/visualstudio/debugger/crt-debug-heap-details).  
   
 ## <a name="requirements"></a>Требования  
   
@@ -78,5 +79,5 @@ ms.lasthandoff: 10/24/2017
  Пример использования функции `_CrtMemDumpAllObjectsSince` см. в разделе [crt_dbg2](http://msdn.microsoft.com/en-us/21e1346a-6a17-4f57-b275-c76813089167).  
   
 ## <a name="see-also"></a>См. также  
- [Процедуры отладки](../../c-runtime-library/debug-routines.md)   
+ [Подпрограммы отладки](../../c-runtime-library/debug-routines.md)   
  [_crtDbgFlag](../../c-runtime-library/crtdbgflag.md)

@@ -28,11 +28,12 @@ caps.latest.revision: "19"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: ecc87bf670f56a2f56246cf45d2819b7ab7841f7
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 7cda4598f5d5b0e5b3dbca265066c8366cfd6d67
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="ccomenumimpl-class"></a>Класс CComEnumImpl
 Этот класс предоставляет реализацию для COM-интерфейса перечислителя, где перечисляемые элементы хранятся в массиве.  
@@ -58,18 +59,18 @@ class ATL_NO_VTABLE CComEnumImpl : public Base
  `Copy`  
  Однородную [скопируйте класс политики](../../atl/atl-copy-policy-classes.md).  
   
-## <a name="members"></a>Члены  
+## <a name="members"></a>Участники  
   
 ### <a name="public-constructors"></a>Открытые конструкторы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[CComEnumImpl::CComEnumImpl](#ccomenumimpl)|Конструктор.|  
 |[CComEnumImpl:: ~ CComEnumImpl](#dtor)|Деструктор|  
   
 ### <a name="public-methods"></a>Открытые методы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[CComEnumImpl::Clone](#clone)|Реализация [IEnumXXXX::Clone](https://msdn.microsoft.com/library/ms690336.aspx).|  
 |[CComEnumImpl::Init](#init)|Инициализирует перечислитель.|  
@@ -79,7 +80,7 @@ class ATL_NO_VTABLE CComEnumImpl : public Base
   
 ### <a name="public-data-members"></a>Открытые члены данных  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[CComEnumImpl::m_begin](#m_begin)|Указатель на первый элемент в массиве.|  
 |[CComEnumImpl::m_dwFlags](#m_dwflags)|Скопируйте флаги, передаваемые через `Init`.|  

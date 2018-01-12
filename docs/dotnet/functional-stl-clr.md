@@ -18,11 +18,14 @@ caps.latest.revision: "16"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: df7e80a97ca54dae725a31e9d203ecd4710a4c2d
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: 8e731767401964045307635a428d7606d628aca8
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="functional-stlclr"></a>functional (STL/CLR)
 Включать заголовок STL/CLR `<cliext/functional>` для определения несколько классов шаблонов и функции и делегаты связанных шаблонов.  
@@ -35,14 +38,14 @@ ms.lasthandoff: 10/24/2017
   
 ## <a name="declarations"></a>Объявления  
   
-|Делегат|Описание|  
+|делегат|Описание:|  
 |--------------|-----------------|  
 |[binary_delegate (STL/CLR)](../dotnet/binary-delegate-stl-clr.md)|Делегат с двумя аргументами.|  
 |[binary_delegate_noreturn (STL/CLR)](../dotnet/binary-delegate-noreturn-stl-clr.md)|Делегат с двумя аргументами возвращающий `void`.|  
 |[unary_delegate (STL/CLR)](../dotnet/unary-delegate-stl-clr.md)|Делегат, один аргумент.|  
 |[unary_delegate_noreturn (STL/CLR)](../dotnet/unary-delegate-noreturn-stl-clr.md)|Один аргумент делегат возвращающий `void`.|  
   
-|Класс|Описание|  
+|Класс|Описание:|  
 |-----------|-----------------|  
 |[binary_negate (STL/CLR)](../dotnet/binary-negate-stl-clr.md)|Функтор, преобразуемая в отрицательную функтор двумя аргументами.|  
 |[binder1st (STL/CLR)](../dotnet/binder1st-stl-clr.md)|Функтор для привязки к функтор двух аргументов первый аргумент.|  
@@ -64,7 +67,7 @@ ms.lasthandoff: 10/24/2017
 |[plus (STL/CLR)](../dotnet/plus-stl-clr.md)|Добавьте функтор.|  
 |[unary_negate (STL/CLR)](../dotnet/unary-negate-stl-clr.md)|Функтор, преобразуемая в отрицательную функтор один аргумент.|  
   
-|Функция|Описание|  
+|Функция|Описание:|  
 |--------------|-----------------|  
 |[bind1st (STL/CLR)](../dotnet/bind1st-stl-clr.md)|Создает binder1st функтор и аргумента.|  
 |[bind2nd (STL/CLR)](../dotnet/bind2nd-stl-clr.md)|Создает binder2nd функтор и аргумента.|  

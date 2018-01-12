@@ -1,31 +1,33 @@
 ---
-title: "Практическое руководство. Перебор элементов массивов с использованием цикла for each | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "массивы [C++], итерация для каждого"
+title: "Как: перебор элементов массивов с для каждого | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+dev_langs: C++
+helpviewer_keywords: arrays [C++], iterating with for each
 ms.assetid: ddc88ce2-69e1-44fc-af84-5b6f62fcb9e3
-caps.latest.revision: 11
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 9
+caps.latest.revision: "11"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: 437e9134e489d9ca91f95979ad5165798d90cdef
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 12/21/2017
 ---
-# Практическое руководство. Перебор элементов массивов с использованием цикла for each
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-В этом разделе показано, как использовать ключевое слово [for each, in](../dotnet/for-each-in.md) в различных типах массивов.  
+# <a name="how-to-iterate-over-arrays-with-for-each"></a>Практическое руководство. Перебор элементов массивов с использованием цикла for each
+В этом разделе показано, как использовать [для каждой из них, в](../dotnet/for-each-in.md) ключевое слово на различных типов массивов.  
   
-## Пример  
- В этом образце показано, как использовать `for each` в массиве ссылочных типов.  Обратите внимание, что если любое измерение multi габаритного массива равен нулю, цикл `for each` не повторит с массивом.  
+## <a name="example"></a>Пример  
+ В этом примере показано, как использовать `for each` на массив ссылочных типов.  Обратите внимание, что если любое измерение одномерным массивом multi равно нулю, `for each` цикл не будет применен к массиву.  
   
 ```  
 // for_each_arrays.cpp  
@@ -66,14 +68,18 @@ int main() {
 }  
 ```  
   
-  **0 \= в MyClass**  
-**1 \= в MyClass**  
-**0 \= в MyClass2**  
-**1 \= в MyClass2**  
-**2 \= в MyClass2**  
-**3 \= в MyClass2**   
-## Пример  
- Этот пример выводит для каждого циклическое по <xref:System.Collections.ArrayList>, который реализует <xref:System.Collections.IEnumerable>.  
+```Output  
+0 = in MyClass  
+1 = in MyClass  
+  
+0 = in MyClass2  
+1 = in MyClass2  
+2 = in MyClass2  
+3 = in MyClass2  
+```  
+  
+## <a name="example"></a>Пример  
+ В этом примере показано, для каждого прохода по <xref:System.Collections.ArrayList>, который реализует <xref:System.Collections.IEnumerable>.  
   
 ```  
 // for_each_arrays_2.cpp  
@@ -95,9 +101,12 @@ int main() {
 }  
 ```  
   
-  **60**   
-## Пример  
- В этом примере показано, как выполнить с массивом массивов.  
+```Output  
+60  
+```  
+  
+## <a name="example"></a>Пример  
+ В этом примере показано, как для перебора массива массивов.  
   
 ```  
 // for_each_arrays_3.cpp  
@@ -129,13 +138,17 @@ int main() {
 }  
 ```  
   
-  **IntArray \[0\] \= 10**  
-**IntArray \[0\] \= 10**  
-**IntArray \[1\] \= 11**  
-**IntArray \[1\] \= 11**  
-**10**  
-**10**  
-**11**  
-**11**   
-## См. также  
+```Output  
+IntArray[0] = 10  
+IntArray[0] = 10  
+IntArray[1] = 11  
+IntArray[1] = 11  
+  
+10  
+10  
+11  
+11  
+```  
+  
+## <a name="see-also"></a>См. также  
  [for each, in](../dotnet/for-each-in.md)

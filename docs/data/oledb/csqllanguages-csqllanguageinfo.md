@@ -1,66 +1,69 @@
 ---
-title: "CSQLLanguages, CSQLLanguageInfo | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "CSQLLanguageInfo"
-  - "m_szProgrammingLanguage"
-  - "m_szImplementation"
-  - "m_szIntegrity"
-  - "m_szBindingStyle"
-  - "m_szConformance"
-  - "m_szSource"
-  - "m_szYear"
-  - "CSQLLanguages"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "CSQLLanguageInfo - класс параметров"
-  - "CSQLLanguages typedef - класс"
-  - "m_szBindingStyle"
-  - "m_szConformance"
-  - "m_szImplementation"
-  - "m_szIntegrity"
-  - "m_szProgrammingLanguage"
-  - "m_szSource"
-  - "m_szYear"
+title: "CSQLLanguages, CSQLLanguageInfo | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- CSQLLanguageInfo
+- m_szProgrammingLanguage
+- m_szImplementation
+- m_szIntegrity
+- m_szBindingStyle
+- m_szConformance
+- m_szSource
+- m_szYear
+- CSQLLanguages
+dev_langs: C++
+helpviewer_keywords:
+- m_szBindingStyle
+- m_szProgrammingLanguage
+- m_szYear
+- m_szImplementation
+- m_szSource
+- m_szConformance
+- CSQLLanguages typedef class
+- CSQLLanguageInfo parameter class
+- m_szIntegrity
 ms.assetid: 9c36c5bb-6917-49c3-9ac3-942339893f19
-caps.latest.revision: 6
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 6
+caps.latest.revision: "6"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: f3bbd06f4ae6ab0b6a53007abd933017fa662d7e
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 12/21/2017
 ---
-# CSQLLanguages, CSQLLanguageInfo
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Вызовите **CSQLLanguages** класс typedef для реализации его класс **CSQLLanguageInfo** параметра.  
+# <a name="csqllanguages-csqllanguageinfo"></a>CSQLLanguages, CSQLLanguageInfo
+Вызовите typedef-класс **CSQLLanguages** реализации класса своего параметра **CSQLLanguageInfo**.  
   
-## Заметки  
- Дополнительные сведения см. в разделе [Классы набора строк схемы и классах typedef](../Topic/Schema%20Rowset%20Classes%20and%20Typedef%20Classes.md) при использовании классов typedef.  
+## <a name="remarks"></a>Примечания  
+ В разделе [классы набора строк схемы и классы Typedef](../../data/oledb/schema-rowset-classes-and-typedef-classes.md) Дополнительные сведения об использовании классов typedef.  
   
- Этот класс определяет уровни, параметры и диалекты соответствия поддерживаемые SQL. при обработке реализацией данные, определенные в каталоге.  
+ Этот класс определяет уровни соответствия, параметры и диалекты, поддерживаемые данными обработки реализации SQL, определенные в каталоге.  
   
- В следующей таблице перечислены элементы данных класса и соответствующие столбцы OLE DB.  В разделе [Набор строк SQL\_LANGUAGES](https://msdn.microsoft.com/en-us/library/ms714374.aspx) справочника *программиста OLE DB* дополнительные сведения о схеме и столбцам.  
+ В следующей таблице перечислены данные-члены класса и их соответствующие OLE DB столбцы. В разделе [строк SQL_LANGUAGES](https://msdn.microsoft.com/en-us/library/ms714374.aspx) в *Справочник программиста OLE DB* Дополнительные сведения о схеме и столбцы.  
   
-|Элементы данных|Столбцы OLE DB|  
-|---------------------|--------------------|  
-|m\_szSource|SQL\_LANGUAGE\_SOURCE|  
-|m\_szYear|SQL\_LANGUAGE\_YEAR|  
-|m\_szConformance|SQL\_LANGUAGE\_CONFORMANCE|  
-|m\_szIntegrity|SQL\_LANGUAGE\_INTEGRITY|  
-|m\_szImplementation|SQL\_LANGUAGE\_IMPLEMENTATION|  
-|m\_szBindingStyle|SQL\_LANGUAGE\_BINDING\_STYLE|  
-|m\_szProgrammingLanguage|SQL\_LANGUAGE\_PROGRAMMING\_LANGUAGE|  
+|Члены данных|Столбцы OLE DB|  
+|------------------|--------------------|  
+|m_szSource|SQL_LANGUAGE_SOURCE|  
+|m_szYear|SQL_LANGUAGE_YEAR|  
+|m_szConformance|SQL_LANGUAGE_CONFORMANCE|  
+|m_szIntegrity|SQL_LANGUAGE_INTEGRITY|  
+|m_szImplementation|SQL_LANGUAGE_IMPLEMENTATION|  
+|m_szBindingStyle|SQL_LANGUAGE_BINDING_STYLE|  
+|m_szProgrammingLanguage|SQL_LANGUAGE_PROGRAMMING_LANGUAGE|  
   
-## Требования  
- **Header:**  atldbsch.h  
+## <a name="requirements"></a>Требования  
+ **Заголовок:** atldbsch.h  
   
-## См. также  
- [Класс CRestrictions](../Topic/CRestrictions%20Class.md)
+## <a name="see-also"></a>См. также  
+ [Класс CRestrictions](../../data/oledb/crestrictions-class.md)

@@ -14,11 +14,12 @@ caps.latest.revision: "14"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: ecd9ce0236a305fd31dec2ccc1ac3197d02908bc
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 3d701d73103ee2c5ac72eb36d9919132f0578b1b
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="manifest-generation-in-visual-studio"></a>Создание манифестов в Visual Studio
 Создание файла манифеста для конкретного проекта можно управлять в проекте **страницы свойств** диалогового окна. На **свойства конфигурации** щелкните **компоновщика**, затем **файл манифеста**, затем **создать манифест**. По умолчанию свойства проекта новых проектов присваивается создать файл манифеста. Однако можно отключить создание манифеста для проекта с помощью **создать манифест** свойство проекта. Если значение этого свойства **Да**, создания манифеста для этого проекта. В противном случае Компоновщик игнорирует информацию сборки при разрешении зависимостей в коде приложения и не создает манифест.  

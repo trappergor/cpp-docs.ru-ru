@@ -23,11 +23,12 @@ caps.latest.revision: "9"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 37b08b5108d609deca2eed94a05d4eb01d09f10b
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 1fbb3d19101358012df795000907a0b3e8139601
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="main-program-startup"></a>Функция main. Запуск программы
 Специальная функция с именем `main` является отправной точкой выполнения для всех программ на языках C и C++. При создании кода, который соответствует модели программирования [!INCLUDE[TLA#tla_unicode](../atl-mfc-shared/reference/includes/tlasharptla_unicode_md.md)], можно использовать функцию `wmain`, представляющую собой версию функции `main` для расширенных символов.  

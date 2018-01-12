@@ -41,11 +41,12 @@ caps.latest.revision: "28"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 744f069facbd1e1ecb217456c4cfd4b7a8e62589
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: f562d62f3edb1f09fe6d7ebe7b509411ad2dc8c6
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="accesss-waccesss"></a>_access_s, _waccess_s
 Определяет разрешения на чтение и запись файлов. Это — версия функций [_access, _waccess](../../c-runtime-library/reference/access-waccess.md) с усовершенствованиями системы безопасности, описанными в разделе [Возможности безопасности в CRT](../../c-runtime-library/security-features-in-the-crt.md).  
@@ -100,7 +101,7 @@ errno_t _waccess_s(
   
  Эти функции проверяют свои параметры. Если `path` имеет значение `NULL` или `mode` не указывает действительный режим, вызывается обработчик недопустимых параметров (см. раздел [Проверка параметров](../../c-runtime-library/parameter-validation.md)). Если выполнение может быть продолжено, эти функции устанавливают параметр `errno` в значение `EINVAL` и возвращают значение `EINVAL`.  
   
-### <a name="generic-text-routine-mappings"></a>Универсальное текстовое сопоставление функций  
+### <a name="generic-text-routine-mappings"></a>Сопоставления подпрограмм обработки обычного текста  
   
 |Подпрограмма Tchar.h|_UNICODE и _MBCS не определены|_MBCS определено|_UNICODE определено|  
 |---------------------|--------------------------------------|--------------------|-----------------------|  

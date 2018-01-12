@@ -1,47 +1,48 @@
 ---
-title: "lock::~lock | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "~lock"
-  - "msclr.lock.~lock"
-  - "lock.~lock"
-  - "msclr::lock::~lock"
-  - "lock::~lock"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "~lock - деструктор"
+title: "Блокировка:: ~ блокировки | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords:
+- ~lock
+- msclr.lock.~lock
+- lock.~lock
+- msclr::lock::~lock
+- lock::~lock
+dev_langs: C++
+helpviewer_keywords: ~lock destructor
 ms.assetid: 55fa9f6c-d7a6-48ef-9236-ee03342c1d20
-caps.latest.revision: 10
-caps.handback.revision: 8
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "10"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: f81ebc097d53029dc4d4e161c9cf43e15e37b94d
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 12/21/2017
 ---
-# lock::~lock
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Удаляет объект `lock`.  
+# <a name="locklock"></a>lock::~lock
+Destructs `lock` объекта.  
   
-## Синтаксис  
+## <a name="syntax"></a>Синтаксис  
   
 ```  
 ~lock();  
 ```  
   
-## Заметки  
- Деструктор вызывается [lock::release](../Topic/lock::release.md).  
+## <a name="remarks"></a>Примечания  
+ Деструктор вызывает [lock::release](../dotnet/lock-release.md).  
   
-## Пример  
- В этом примере используется единственный экземпляр класса через несколько потоков.  Класс использует блокировку для себя, чтобы обеспечить доступ к его внутренним данным согласуются для каждого потока.  Поток основного приложения использует блокировку на том же экземпляре класса периодически для проверки, чтобы определить наличие рабочие потоки все еще существуют, и ожидает, чтобы оставить, пока все рабочие потоки не будут завершения своих задач.  
+## <a name="example"></a>Пример  
+ Этот пример использует один экземпляр класса в нескольких потоках.  Этот класс использует блокировку на себя для обеспечения согласованности для каждого потока доступов к внутренних данных.  Основной поток приложения использует блокировку на том же экземпляре класса для периодической проверки ли все рабочие потоки по-прежнему существует и ожиданий для выхода, пока все рабочие потоки завершили свои задачи.  
   
 ```  
 // msl_lock_dtor.cpp  
@@ -115,22 +116,25 @@ int main() {
 }  
 ```  
   
-  **В потоке 3, счетчик \= 0**  
-**В потоке 3, счетчик \= 10**  
-**В потоке 5, счетчик \= 0**  
-**В потоке 5, счетчик \= 10**  
-**В потоке 7, счетчик \= 0**  
-**В потоке 7, счетчик \= 10**  
-**В потоке 4, счетчик \= 0**  
-**В потоке 4, счетчик \= 10**  
-**В потоке 6, счетчик \= 0**  
-**В потоке 6, счетчик \= 10**  
-**Все завершения потоков.**   
-## Требования  
- **Файл заголовка**\<msclr\\lock.h\>  
+```Output  
+In thread 3, Counter = 0  
+In thread 3, Counter = 10  
+In thread 5, Counter = 0  
+In thread 5, Counter = 10  
+In thread 7, Counter = 0  
+In thread 7, Counter = 10  
+In thread 4, Counter = 0  
+In thread 4, Counter = 10  
+In thread 6, Counter = 0  
+In thread 6, Counter = 10  
+All threads completed.  
+```  
+  
+## <a name="requirements"></a>Требования  
+ **Файл заголовка** \<msclr\lock.h >  
   
  **Пространство имен** msclr  
   
-## См. также  
+## <a name="see-also"></a>См. также  
  [Блокировка членов](../dotnet/lock-members.md)   
  [lock::lock](../dotnet/lock-lock.md)

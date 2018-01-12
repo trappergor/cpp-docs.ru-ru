@@ -50,11 +50,12 @@ caps.latest.revision: "21"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: d14c4fd98a9191e8a92d3f24dc24c19de2433e15
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 2733adb5cfc2328fdc0fb39650f6013c11960b3e
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="strerrors-strerrors-wcserrors-wcserrors"></a>strerror_s, _strerror_s, _wcserror_s, __wcserror_s
 Получают системное сообщение об ошибке (`strerror_s`, `_wcserror_s`) или выводят указанное пользователем сообщение об ошибке (`_strerror_s`, `__wcserror_s`). Это версии функций [strerror, _strerror, _wcserror, \__wcserror](../../c-runtime-library/reference/strerror-strerror-wcserror-wcserror.md) с усовершенствованной безопасностью, как описано в разделе [Функции безопасности в CRT](../../c-runtime-library/security-features-in-the-crt.md).  
@@ -118,7 +119,7 @@ errno_t __wcserror_s(
  Пользовательское сообщение.  
   
 ## <a name="return-value"></a>Возвращаемое значение  
- Возвращает нуль в случае успеха или код ошибки в случае неудачи.  
+ Нуль в случае успеха или код ошибки в случае неудачи.  
   
 ### <a name="error-condtions"></a>Условия ошибки  
   
@@ -150,11 +151,11 @@ if (( _access( "datafile",2 )) == -1 )
   
  `_strerror_s`, `_wcserror_s`, и `__wcserror_s` не входят в определение ANSI, а представляют собой расширения Microsoft к нему. Их не следует использовать там, где требуется переносимость; для обеспечения совместимости с ANSI используйте функцию `strerror_s`.  
   
- В C++ использование этих функций упрощено шаблонными перегрузками; перегрузки могут определить длину буфера автоматически, устраняя необходимость указывать аргумент size. Дополнительные сведения см. в разделе [Безопасные перегрузки шаблонов](../../c-runtime-library/secure-template-overloads.md).  
+ В C++ использование этих функций упрощено шаблонными перегрузками; перегрузки могут определить длину буфера автоматически, устраняя необходимость указывать аргумент size. Дополнительные сведения см. в разделе [Secure Template Overloads](../../c-runtime-library/secure-template-overloads.md).  
   
  Отладочные версии этих функций сначала заполняют буфер значением 0xFD. Чтобы отключить это поведение, используйте [_CrtSetDebugFillThreshold](../../c-runtime-library/reference/crtsetdebugfillthreshold.md).  
   
-### <a name="generic-text-routine-mappings"></a>Универсальное текстовое сопоставление функций  
+### <a name="generic-text-routine-mappings"></a>Сопоставления подпрограмм обработки обычного текста  
   
 |Подпрограмма TCHAR.H|_UNICODE и _MBCS не определены|_MBCS определено|_UNICODE определено|  
 |---------------------|------------------------------------|--------------------|-----------------------|  
@@ -167,7 +168,7 @@ if (( _access( "datafile",2 )) == -1 )
 |`strerror_s`, `_strerror_s`|\<string.h>|  
 |`_wcserror_s`, `__wcserror_s`|\<string.h> или \<wchar.h>|  
   
- Дополнительные сведения о совместимости см. в статье [Совместимость](../../c-runtime-library/compatibility.md) во введении.  
+ Дополнительные сведения о совместимости см. в разделе [Совместимость](../../c-runtime-library/compatibility.md) во введении.  
   
 ## <a name="example"></a>Пример  
  См. пример для [perror](../../c-runtime-library/reference/perror-wperror.md).  

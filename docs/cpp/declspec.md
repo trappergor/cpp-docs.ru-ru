@@ -15,11 +15,12 @@ caps.latest.revision: "12"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 294f6060ed163906ba4e9eeaca034ab7cbfc1205
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 0351b5ba8469918dfe52462485ebf36255db56fd
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="declspec"></a>__declspec
 ## <a name="microsoft-specific"></a>Блок, относящийся только к системам Microsoft  
@@ -85,13 +86,13 @@ ms.lasthandoff: 10/24/2017
   
  Ключевые слова `__declspec` необходимо поместить в начале простого объявления. Компилятор игнорирует без предупреждения все ключевые слова `__declspec`, находящиеся после * или &, а также перед идентификатором переменной в объявлении.  
   
- Атрибут `__declspec`, указанный в начале объявления пользовательского типа, относится к переменной этого типа. Например:  
+ Атрибут `__declspec`, указанный в начале объявления пользовательского типа, относится к переменной этого типа. Пример:  
   
 ```  
 __declspec(dllimport) class X {} varX;  
 ```  
   
- В этом случае атрибут применяется к `varX`. Атрибут `__declspec`, помещенный после ключевого слова `class` или `struct`, применяется к пользовательскому типу. Например:  
+ В этом случае атрибут применяется к `varX`. Атрибут `__declspec`, помещенный после ключевого слова `class` или `struct`, применяется к пользовательскому типу. Пример:  
   
 ```  
 class __declspec(dllimport) X {};  

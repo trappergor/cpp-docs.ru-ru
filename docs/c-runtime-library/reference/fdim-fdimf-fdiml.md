@@ -33,37 +33,22 @@ f1_keywords:
 - math/fdim
 - math/fdimf
 - math/fdiml
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - fdim function
 - fdimf function
 - fdiml function
 ms.assetid: 2d4ac639-51e9-462d-84ab-fb03b06971a0
-caps.latest.revision: 11
+caps.latest.revision: "11"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.mt:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: a82768750e6a7837bb81edd8a51847f83c294c20
-ms.openlocfilehash: f13291a00b97c319ebe69bce6939a95e6c022fd8
-ms.contentlocale: ru-ru
-ms.lasthandoff: 04/04/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: ecf0b0590942aad133cb7b8f478200525e4f4519
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="fdim-fdimf-fdiml"></a>fdim, fdimf, fdiml
 Определяет положительную разность между первым и вторым значениями.  
@@ -124,7 +109,7 @@ long double fdiml(
  Ошибки сообщаются, как указано в [_matherr](../../c-runtime-library/reference/matherr.md).  
   
 ## <a name="remarks"></a>Примечания  
- Так как C++ допускает перегрузку, можно вызывать перегрузки функции `fdim`, принимающие и возвращающие типы значений с плавающей запятой и длинных двойных значений. В программе на языке C `fdim` всегда принимает и возвращает двойное значение.  
+ Так как C++ допускает перегрузку, можно вызывать перегрузки функции `fdim`, принимающие и возвращающие типы значений с плавающей запятой и длинных двойных значений. В программе на языке C `fdim` всегда принимает и возвращает значение типа double.  
   
  За исключением обработки NaN, эта функция эквивалентно `fmax(x - y, 0)`.  
   
@@ -134,7 +119,7 @@ long double fdiml(
 |--------------|--------------|------------------|  
 |`fdim`, `fdimf`, `fdiml`|\<math.h>|\<cmath>|  
   
- Дополнительные сведения о совместимости см. в статье [Совместимость](../../c-runtime-library/compatibility.md).  
+ Дополнительные сведения о совместимости см. в разделе [Совместимость](../../c-runtime-library/compatibility.md).  
   
 ## <a name="see-also"></a>См. также  
  [Алфавитный указатель функций](../../c-runtime-library/reference/crt-alphabetical-function-reference.md)   

@@ -1,36 +1,38 @@
 ---
-title: "CDynamicParameterAccessor::GetParamString | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "CDynamicParameterAccessor.GetParamString"
-  - "GetParamString"
-  - "CDynamicParameterAccessor::GetParamString"
-  - "ATL.CDynamicParameterAccessor.GetParamString"
-  - "ATL::CDynamicParameterAccessor::GetParamString"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "GetParamString - метод"
+title: "CDynamicParameterAccessor::GetParamString | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- CDynamicParameterAccessor.GetParamString
+- GetParamString
+- CDynamicParameterAccessor::GetParamString
+- ATL.CDynamicParameterAccessor.GetParamString
+- ATL::CDynamicParameterAccessor::GetParamString
+dev_langs: C++
+helpviewer_keywords: GetParamString method
 ms.assetid: 078c2b1c-7072-47c1-a203-f47e75363f91
-caps.latest.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 9
+caps.latest.revision: "9"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: ed04d3258ad5f4d5ed68a32b32923432577453ba
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 12/21/2017
 ---
-# CDynamicParameterAccessor::GetParamString
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Извлекает строковые данные указанного параметра, хранящиеся в буфере.  
+# <a name="cdynamicparameteraccessorgetparamstring"></a>CDynamicParameterAccessor::GetParamString
+Получает строковые данные указанного параметра, сохраненного в буфере.  
   
-## Синтаксис  
+## <a name="syntax"></a>Синтаксис  
   
 ```  
   
@@ -54,32 +56,32 @@ bool GetParamString(
 ) throw( );  
 ```  
   
-#### Параметры  
+#### <a name="parameters"></a>Параметры  
  `nParam`  
- \[in\] параметр \(начиная с 1\).  Параметр 0 зарезервировано для возвращаемых значений.  Параметр индекс параметра на основании своего порядке в вызове SQL или хранимой процедуры.  Пример см. в разделе [SetParam](../../data/oledb/cdynamicparameteraccessor-setparam.md).  
+ [in] Номер параметра (начиная с 1). Параметр 0 зарезервирован для возвращаемых значений. Параметр с номером — это индекс параметра, в зависимости от порядка в SQL или хранимой процедуры. В разделе [SetParam](../../data/oledb/cdynamicparameteraccessor-setparam.md) в качестве примера.  
   
  `strOutput`  
- \[out\] строковых данных ANSI \(**CSimpleStringA**\) или юникода \(**CSimpleStringW**\) указанного параметра.  Необходимо передать параметр типа `CString`, например:  
+ [out] ANSI (**CSimpleStringA**) или Юникод (**CSimpleStringW**) строковые данные указанного параметра. Необходимо передать параметр типа `CString`, например:  
   
- [!code-cpp[NVC_OLEDB_Consumer#9](../../data/oledb/codesnippet/CPP/cdynamicparameteraccessor-getparamstring_1.cpp)]  
+ [!code-cpp[NVC_OLEDB_Consumer#9](../../data/oledb/codesnippet/cpp/cdynamicparameteraccessor-getparamstring_1.cpp)]  
   
  `pBuffer`  
- \[out\] указатель на различных данных ANSI \(**char**\) или юникода \(**WCHAR**\) указанного параметра.  
+ [out] Указатель на ANSI (**CHAR**) или Юникод (**WCHAR**) строковые данные указанного параметра.  
   
  `pMaxLen`  
- \[out\] указатель на размер буфера заданного в `pBuffer` \(в символах, включая конечное значение NULL\).  
+ [out] Указатель на размер буфера, на который указывает `pBuffer` (в символах, включая завершающий нуль-символ).  
   
-## Заметки  
- Возвращает **true** в успехе или **false** при сбое.  
+## <a name="remarks"></a>Примечания  
+ Возвращает **true** в случае успешного выполнения или **false** при сбое.  
   
- Если `pBuffer` NULL, то этот метод установит необходимый размер буфера в памяти указанную в `pMaxLen` и возвращенному **true** без копирования данных.  
+ Если `pBuffer` имеет значение NULL, этот метод будет задать необходимый размер буфера в памяти, на который указывает `pMaxLen` и возвращают **true** без копирования данных.  
   
- Этот метод завершится неудачей, если буфер `pBuffer` недостаточно велик, чтобы содержать строку целиком.  
+ Этот метод завершится ошибкой, если буфер `pBuffer` недостаточно велик для хранения вся строка.  
   
- Используйте `GetParamString` получить сведения о параметр строки из буфера.  Используйте [GetParam](../Topic/CDynamicParameterAccessor::GetParam.md), чтобы получить nonstring данные параметры из буфера.  
+ Используйте `GetParamString` для получения параметров строковые данные из буфера. Используйте [GetParam](../../data/oledb/cdynamicparameteraccessor-getparam.md) для получения нестроковые данные параметров из буфера.  
   
-## Требования  
+## <a name="requirements"></a>Требования  
  **Заголовок:** atldbcli.h  
   
-## См. также  
+## <a name="see-also"></a>См. также  
  [Класс CDynamicParameterAccessor](../../data/oledb/cdynamicparameteraccessor-class.md)

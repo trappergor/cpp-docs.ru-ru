@@ -1,39 +1,40 @@
 ---
-title: "operator LENGTH | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "operator LENGTH"
-  - "length"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "LENGTH operator"
-  - "operator LENGTH"
+title: "оператор LENGTH | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- operator LENGTH
+- length
+dev_langs: C++
+helpviewer_keywords:
+- LENGTH operator
+- operator LENGTH
 ms.assetid: dee7ba98-8e91-4078-9435-a2c8506e37f2
-caps.latest.revision: 6
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 6
+caps.latest.revision: "6"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 70bc2d8abbcff3658bc76a01b2bb43bb789312aa
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 12/21/2017
 ---
-# operator LENGTH
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Возвращает количество элементов в *переменная* создается первый инициализатором.  
+# <a name="operator-length"></a>Оператор LENGTH
+Возвращает число элементов данных в *переменной* создан первый инициализатором.  
   
-## Синтаксис  
+## <a name="syntax"></a>Синтаксис  
   
 ```  
   
 LENGTH variable  
 ```  
   
-## См. также  
- [Operators Reference](../Topic/Operators%20Reference.md)
+## <a name="see-also"></a>См. также  
+ [Справочник по операторам](../../assembler/masm/operators-reference.md)

@@ -1,49 +1,51 @@
 ---
-title: "ATL Connection Point Classes | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "ATL - библиотека, точки подключения"
-  - "CComDynamicUnkArray class, connection point classes"
-  - "CComUnkArray class, connection point classes"
-  - "CFirePropNotifyEvent class"
-  - "CFirePropNotifyEvent class, connection point classes"
-  - "точки подключения [C++], ATL - классы"
+title: "Классы точки подключения ATL | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- CFirePropNotifyEvent class, connection point classes
+- connection points [C++], ATL classes
+- ATL, connection points
+- CComDynamicUnkArray class, connection point classes
+- CFirePropNotifyEvent class
+- CComUnkArray class, connection point classes
 ms.assetid: 9582ba71-7ace-4df4-9c9b-1b0636953efc
-caps.latest.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 5
+caps.latest.revision: "10"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 9845fdffdd951809ee7127c5fec86097a6219354
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 12/21/2017
 ---
-# ATL Connection Point Classes
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Библиотеки ATL используются следующие классы для поддержки точки подключения.  
+# <a name="atl-connection-point-classes"></a>Классы точки подключения библиотеки ATL
+ATL используются следующие классы для поддержки точек подключения:  
   
--   [IConnectionPointImpl](../Topic/IConnectionPointImpl%20Class.md) реализует точку подключения.  Идентификатор IID исходящего интерфейса, оно представляет передается в качестве параметра шаблона.  
+-   [IConnectionPointImpl](../atl/reference/iconnectionpointimpl-class.md) реализует точку соединения. Идентификатор IID исходящего интерфейса, который он представляет передается в качестве параметра шаблона.  
   
--   [IConnectionPointContainerImpl](../Topic/IConnectionPointContainerImpl%20Class.md) реализован контейнер точки подключения и управляет список объектов `IConnectionPointImpl`.  
+-   [IConnectionPointContainerImpl](../atl/reference/iconnectionpointcontainerimpl-class.md) реализует контейнер точки подключения и управляет списком `IConnectionPointImpl` объектов.  
   
--   [IPropertyNotifySinkCP](../atl/reference/ipropertynotifysinkcp-class.md) реализует точку подключения, представляющий интерфейс [IPropertyNotifySink](http://msdn.microsoft.com/library/windows/desktop/ms692638).  
+-   [IPropertyNotifySinkCP](../atl/reference/ipropertynotifysinkcp-class.md) реализует объект, представляющий точку подключения [IPropertyNotifySink](http://msdn.microsoft.com/library/windows/desktop/ms692638) интерфейса.  
   
--   [CComDynamicUnkArray](../Topic/CComDynamicUnkArray%20Class.md) управляет произвольное число связь между точкой подключения и его приемники.  
+-   [CComDynamicUnkArray](../atl/reference/ccomdynamicunkarray-class.md) управляет произвольное число подключений между точкой подключения и его журналах.  
   
--   [CComUnkArray](../atl/reference/ccomunkarray-class.md) управляет стандартное число подключений, как указано параметром шаблона.  
+-   [CComUnkArray](../atl/reference/ccomunkarray-class.md) управляет определенного количества соединений, как указано в параметре шаблона.  
   
--   [CFirePropNotifyEvent](../Topic/CFirePropNotifyEvent%20Class.md) уведомляет приемник клиента, что свойство объекта изменилось или изменением.  
+-   [CFirePropNotifyEvent](../atl/reference/cfirepropnotifyevent-class.md) уведомляет приемником клиента, который свойство объекта был изменен или изменением.  
   
--   [IDispEventImpl](../atl/reference/idispeventimpl-class.md) обеспечивает поддержку точек подключения для com\-объекта библиотеки ATL.  Эти точки подключения сопоставлены с сопоставлением приемника событий, предоставляемого данным COM\-объект.  
+-   [IDispEventImpl](../atl/reference/idispeventimpl-class.md) обеспечивает поддержку точек подключения для ATL COM-объекта. Эти соединения будут сопоставлены с картой приемника событий, предоставляемый COM-объект.  
   
--   Рабочие [IDispEventSimpleImpl](../atl/reference/idispeventsimpleimpl-class.md) совместно с сопоставлением приемника событий в классе для направления события в соответствующее обработчик функции.  
+-   [IDispEventSimpleImpl](../atl/reference/idispeventsimpleimpl-class.md) работает совместно с картой приемника событий в классе направляет события соответствующим функциям обработки.  
   
-## См. также  
+## <a name="see-also"></a>См. также  
  [Точка подключения](../atl/atl-connection-points.md)
+

@@ -1,49 +1,49 @@
 ---
-title: "feclearexcept1 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "cpp"
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-apiname: 
-  - "feclearexcept"
-apilocation: 
-  - "msvcrt.dll"
-  - "msvcr80.dll"
-  - "msvcr90.dll"
-  - "msvcr100.dll"
-  - "msvcr100_clr0400.dll"
-  - "msvcr110.dll"
-  - "msvcr110_clr0400.dll"
-  - "msvcr120.dll"
-  - "msvcr120_clr0400.dll"
-  - "ucrtbase.dll"
-  - "api-ms-win-crt-runtime-l1-1-0.dll"
-apitype: "DLLExport"
-f1_keywords: 
-  - "feclearexcept"
-  - "fenv/feclearexcept"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "функция feclearexcept"
+title: "feclearexcept1 | Документы Майкрософт"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- cpp
+- devlang-cpp
+ms.tgt_pltfrm: 
+ms.topic: article
+apiname: feclearexcept
+apilocation:
+- msvcrt.dll
+- msvcr80.dll
+- msvcr90.dll
+- msvcr100.dll
+- msvcr100_clr0400.dll
+- msvcr110.dll
+- msvcr110_clr0400.dll
+- msvcr120.dll
+- msvcr120_clr0400.dll
+- ucrtbase.dll
+- api-ms-win-crt-runtime-l1-1-0.dll
+apitype: DLLExport
+f1_keywords:
+- feclearexcept
+- fenv/feclearexcept
+dev_langs: C++
+helpviewer_keywords: feclearexcept function
 ms.assetid: ef419da3-c248-4432-b53c-8e7a475d9533
-caps.latest.revision: 5
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 5
+caps.latest.revision: "5"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 327c2b70a1c5afd26953f830217d0a9c05e4d4e6
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 12/21/2017
 ---
-# feclearexcept
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Предпринимается попытка очистить флаги исключения с плавающей запятой, указанный в аргументе.  
+# <a name="feclearexcept"></a>feclearexcept
+Предпринимает попытку очистить флаги исключений с плавающей запятой, указанные в аргументе.  
   
-## Синтаксис  
+## <a name="syntax"></a>Синтаксис  
   
 ```  
 int feclearexcept(  
@@ -51,35 +51,35 @@ int feclearexcept(
 );  
 ```  
   
-#### Параметры  
+#### <a name="parameters"></a>Параметры  
  `excepts`  
  Флаги состояния исключения для очистки.  
   
-## Возвращаемое значение  
- Возвращает нуль, если `excepts` равен нулю, или если все заданные исключения были успешно очищены. В противном случае — возвращает ненулевое значение.  
+## <a name="return-value"></a>Возвращаемое значение  
+ Возвращает нуль, если `excepts` равен нулю или если все заданные исключения успешно очищены. В противном случае возвращается ненулевое значение.  
   
-## Заметки  
- `feclearexcept` Функция попытки очистить с плавающей точки флаги состояния исключения, определяемое `excepts`. Функция поддерживает эти макросы исключений, определенных в fenv.h:  
+## <a name="remarks"></a>Примечания  
+ Функция `feclearexcept` пытается очистить флаги состояния исключений с плавающей запятой, заданные `excepts`. Эта функция поддерживает макросы исключений, определенные в fenv.h:  
   
-|Исключение\-макрос|Описание|  
-|------------------------|--------------|  
-|FE\_DIVBYZERO|Произошла ошибка своеобразие или полюсе в ранее операции с плавающей запятой; значение бесконечности был создан.|  
-|FE\_INEXACT|Функция была вынуждена округления хранимый результат ранее операции с плавающей запятой.|  
-|FE\_INVALID|Ошибка домена в ранее операции с плавающей запятой.|  
-|FE\_OVERFLOW|Ошибка диапазона; более ранние результат операции с плавающей запятой слишком велико для представления.|  
-|FE\_UNDERFLOW|Ранее результат операции с плавающей запятой слишком мал для представления в точности; значение denormal был создан.|  
-|FE\_ALLEXCEPT|Побитовое или всех поддерживаемых исключения с плавающей запятой.|  
+|Макрос исключения|Описание:|  
+|---------------------|-----------------|  
+|FE_DIVBYZERO|При выполнении предыдущей операции с плавающей запятой произошла ошибка сингулярности или полюса, в результате чего было получено бесконечное значение.|  
+|FE_INEXACT|Функция принудительно округлила сохраненный результат ранее выполненной операции с плавающей запятой.|  
+|FE_INVALID|Ошибка домена в ранее выполненной операции с плавающей запятой.|  
+|FE_OVERFLOW|Ошибка диапазона. Ранее выполненная операция с плавающей запятой возвратила слишком большое значение, которое не удается представить.|  
+|FE_UNDERFLOW|Ранее выполненная операция с плавающей запятой возвратила слишком малое значение, которое не удается представить с полной точностью. Создано денормализованное значение.|  
+|FE_ALLEXCEPT|Побитовая операция ИЛИ для всех поддерживаемых исключений с плавающей запятой.|  
   
- `excepts` Аргумент может иметь ноль или побитового или из одного или нескольких поддерживаемых исключение макросов. Результат любого другого значения аргумента не определено.  
+ Аргумент `excepts` может быть выражен нулем, побитовым значением ИЛИ одним или несколькими поддерживаемыми макросами исключений. Результат применения всех остальных значений аргумента не определен.  
   
-## Требования  
+## <a name="requirements"></a>Требования  
   
-|Функция|Заголовок C|Заголовок C\+\+|  
-|-------------|-----------------|---------------------|  
-|`feclearexcept`|\<fenv.h\>|\<cfenv\>|  
+|Функция|Заголовок C|Заголовок C++|  
+|--------------|--------------|------------------|  
+|`feclearexcept`|\<fenv.h>|\<cfenv>|  
   
  Дополнительные сведения о совместимости см. в разделе [Совместимость](../../c-runtime-library/compatibility.md).  
   
-## См. также  
+## <a name="see-also"></a>См. также  
  [Алфавитный указатель функций](../../c-runtime-library/reference/crt-alphabetical-function-reference.md)   
- [fetestexcept](../Topic/fetestexcept1.md)
+ [fetestexcept](../../c-runtime-library/reference/fetestexcept1.md)

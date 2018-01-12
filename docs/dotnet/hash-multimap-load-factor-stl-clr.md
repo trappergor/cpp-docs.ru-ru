@@ -1,41 +1,42 @@
 ---
-title: "hash_multimap::load_factor (STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::hash_multimap::load_factor"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "load_factor - член [STL/CLR]"
+title: "hash_multimap::load_factor (STL/CLR) | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::hash_multimap::load_factor
+dev_langs: C++
+helpviewer_keywords: load_factor member [STL/CLR]
 ms.assetid: c4b34387-fe76-405d-bead-a092b4571631
-caps.latest.revision: 17
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 15
+caps.latest.revision: "17"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: cc6b5666da1095e5da68162709de245ef8ca9551
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 12/21/2017
 ---
-# hash_multimap::load_factor (STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Подсчитывает число элементов " для каждого блока.  
+# <a name="hashmultimaploadfactor-stlclr"></a>hash_multimap::load_factor (STL/CLR)
+Подсчитывает среднее число элементов в блоке.  
   
-## Синтаксис  
+## <a name="syntax"></a>Синтаксис  
   
 ```  
 float load_factor();  
 ```  
   
-## Заметки  
- Функция\-член возвращает `(float)`[hash\_multimap::size](../dotnet/hash-multimap-size-stl-clr.md)`() /` [hash\_multimap::bucket\_count](../dotnet/hash-multimap-bucket-count-stl-clr.md)`()`.  Он используется, чтобы определить средний размер блока.  
+## <a name="remarks"></a>Примечания  
+ Функция-член возвращает `(float)` [hash_multimap::size (STL/CLR)](../dotnet/hash-multimap-size-stl-clr.md) `() /` [hash_multimap::bucket_count (STL/CLR)](../dotnet/hash-multimap-bucket-count-stl-clr.md)`()`. Используется, чтобы определить размер среднего сегмента.  
   
-## Пример  
+## <a name="example"></a>Пример  
   
 ```  
 // cliext_hash_multimap_load_factor.cpp   
@@ -81,22 +82,27 @@ int main()
   
 ```  
   
-  **\[1\] \[2\] \[BC — 3\]**  
-**bucket\_count\(\) \= 16**  
-**load\_factor\(\) \= 0.1875**  
-**max\_load\_factor\(\) \= 4**  
-**bucket\_count\(\) \= 16**  
-**load\_factor\(\) \= 0.1875**  
-**max\_load\_factor\(\) \= 0.25**  
-**bucket\_count\(\) \= 128**  
-**load\_factor\(\) \= 0.0234375**  
-**max\_load\_factor\(\) \= 0.25**   
-## Требования  
- **Заголовок:**\<cliext\/hash\_map\>  
+```Output  
+ [a 1] [b 2] [c 3]  
+bucket_count() = 16  
+load_factor() = 0.1875  
+max_load_factor() = 4  
+  
+bucket_count() = 16  
+load_factor() = 0.1875  
+max_load_factor() = 0.25  
+  
+bucket_count() = 128  
+load_factor() = 0.0234375  
+max_load_factor() = 0.25  
+```  
+  
+## <a name="requirements"></a>Требования  
+ **Заголовок:** \<cliext/hash_map >  
   
  **Пространство имен:** cliext  
   
-## См. также  
- [hash\_multimap](../dotnet/hash-multimap-stl-clr.md)   
- [hash\_multimap::bucket\_count](../dotnet/hash-multimap-bucket-count-stl-clr.md)   
- [hash\_multimap::max\_load\_factor](../Topic/hash_multimap::max_load_factor%20\(STL-CLR\).md)
+## <a name="see-also"></a>См. также  
+ [hash_multimap (STL/CLR)](../dotnet/hash-multimap-stl-clr.md)   
+ [hash_multimap::bucket_count (STL/CLR)](../dotnet/hash-multimap-bucket-count-stl-clr.md)   
+ [hash_multimap::max_load_factor (STL/CLR)](../dotnet/hash-multimap-max-load-factor-stl-clr.md)

@@ -24,11 +24,12 @@ caps.latest.revision: "20"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 3b1c0369acceb792af26b7e9c8e8fd49f82a4468
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: aa7813b694cfea614bc80946d91c8f1bd977e627
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="iobjectsafetyimpl-class"></a>Класс IObjectSafetyImpl
 Этот класс предоставляет реализацию по умолчанию `IObjectSafety` интерфейс, позволяющий клиенту получить и задать уровни безопасности объекта.  
@@ -54,18 +55,18 @@ class IObjectSafetyImpl
   
 - **INTERFACESAFE_FOR_UNTRUSTED_DATA** интерфейс, определенный `SetInterfaceSafetyOptions` параметр `riid` должен выполняться безопасным для ненадежных данных во время инициализации.  
   
-## <a name="members"></a>Члены  
+## <a name="members"></a>Участники  
   
 ### <a name="public-methods"></a>Открытые методы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[IObjectSafetyImpl::GetInterfaceSafetyOptions](#getinterfacesafetyoptions)|Возвращает параметры безопасности, поддерживаемые объектом, а также параметры безопасности, установленным для объекта.|  
 |[IObjectSafetyImpl::SetInterfaceSafetyOptions](#setinterfacesafetyoptions)|При этом объект становится безопасным для инициализации или сценариев.|  
   
 ### <a name="public-data-members"></a>Открытые члены данных  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[IObjectSafetyImpl::m_dwCurrentSafety](#m_dwcurrentsafety)|Сохраняет текущий уровень безопасности объекта.|  
   

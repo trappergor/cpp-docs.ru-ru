@@ -1,61 +1,64 @@
 ---
-title: "Использование набора записей MFC ODBC | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "наборы записей ODBC"
-  - "наборы записей, ODBC MFC"
+title: "Использование набора записей MFC ODBC | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- recordsets, MFC ODBC
+- ODBC recordsets
 ms.assetid: ebde4180-e3de-474a-a5ab-6135e41763a7
-caps.latest.revision: 8
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: 0644d1c08b73442f07585c359f29dfeeee886d84
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 12/21/2017
 ---
-# Использование набора записей MFC ODBC
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-В этих разделах объясняется порядок работы с набором записей ODBC при помощи MFC.  
+# <a name="use-mfc-odbc-recordsets"></a>Использование набора записей MFC ODBC
+В этих разделах объясняется, как работать с набором записей ODBC через MFC.  
   
-## Содержание  
+## <a name="in-this-section"></a>В этом разделе  
   
-### Общие задачи набора записей  
+### <a name="general-recordset-tasks"></a>Общие задачи набора записей  
   
--   [Выбор типа набора записей ODBC](../../data/odbc/recordset-odbc.md)  
+-   [Выберите тип набора записей ODBC](../../data/odbc/recordset-odbc.md)  
   
 -   [Обновление набора записей](../../data/odbc/recordset-requerying-a-recordset-odbc.md)  
   
--   [Декларирование класса набора записей для таблицы](../../data/odbc/recordset-declaring-a-class-for-a-table-odbc.md)  
+-   [Объявите класс набора записей для таблицы](../../data/odbc/recordset-declaring-a-class-for-a-table-odbc.md)  
   
--   [Декларирование набора записей для предопределенного запроса](../../data/odbc/recordset-declaring-a-class-for-a-predefined-query-odbc.md)  
+-   [Объявите класс набора записей для предопределенного запроса](../../data/odbc/recordset-declaring-a-class-for-a-predefined-query-odbc.md)  
   
-### Проектирование и реализация набора записей  
+### <a name="recordset-design-and-implementation"></a>Набор записей проектирования и реализации  
   
--   [Сведения об обмене данными с полями записей \(RFX\)](../../data/odbc/record-field-exchange-rfx.md)  
+-   [Дополнительные сведения о обмен полями записей (RFX)](../../data/odbc/record-field-exchange-rfx.md)  
   
 -   [Обмен данными между базой данных и объектом набора записей](../../data/odbc/record-field-exchange-using-rfx.md)  
   
 -   [Настройка кода набора записей, сгенерированного мастером](../../data/odbc/record-field-exchange-working-with-the-wizard-code.md)  
   
--   [Использование функций RFX](../../data/odbc/record-field-exchange-using-the-rfx-functions.md)  
+-   [Использование функции обмена (полями записей RFX) полями записей](../../data/odbc/record-field-exchange-using-the-rfx-functions.md)  
   
-### Производительность и удобство использования набора записей  
+### <a name="recordset-performance-and-convenience"></a>Набор записей производительность и удобство  
   
--   [Групповое добавление записей с помощью набора записей](../../data/odbc/recordset-adding-records-in-bulk-odbc.md)  
+-   [Добавление записей в пакетном режиме с помощью набора записей](../../data/odbc/recordset-adding-records-in-bulk-odbc.md)  
   
 -   [Фильтрация записей в наборе записей](../../data/odbc/recordset-filtering-records-odbc.md)  
   
-### Операции с набором записей  
+### <a name="recordset-operations"></a>Операции с набором записей  
   
--   [Групповое добавление записей с помощью набора записей](../../data/odbc/recordset-adding-records-in-bulk-odbc.md)  
+-   [Добавление записей в пакетном режиме с помощью набора записей](../../data/odbc/recordset-adding-records-in-bulk-odbc.md)  
   
 -   [Обновление набора записей](../../data/odbc/recordset-requerying-a-recordset-odbc.md)  
   
@@ -63,27 +66,27 @@ caps.handback.revision: 8
   
 -   [Сортировка записей в наборе записей](../../data/odbc/recordset-sorting-records-odbc.md)  
   
--   [Задание параметров набору записей](../../data/odbc/recordset-parameterizing-a-recordset-odbc.md)  
+-   [Параметризация набора записей](../../data/odbc/recordset-parameterizing-a-recordset-odbc.md)  
   
 -   [Передача значений параметров в набор записей во время выполнения](../../data/odbc/recordset-parameterizing-a-recordset-odbc.md)  
   
--   [Выполнение объединений с помощью набора записей](../Topic/Recordset:%20Performing%20a%20Join%20\(ODBC\).md)  
+-   [Выполнить соединение с набором записей](../../data/odbc/recordset-performing-a-join-odbc.md)  
   
 -   [Блокировка записей в наборе записей](../../data/odbc/recordset-locking-records-odbc.md)  
   
 -   [Работа с большими элементами данных в наборе записей](../../data/odbc/recordset-working-with-large-data-items-odbc.md)  
   
--   [Получение суммированных и других агрегированных результатов в наборе записей](../../data/odbc/recordset-obtaining-sums-and-other-aggregate-results-odbc.md)  
+-   [Получения сумм и других статистических результатов в наборе записей](../../data/odbc/recordset-obtaining-sums-and-other-aggregate-results-odbc.md)  
   
-### Выбор набора записей и SQL  
+### <a name="recordset-selection-and-sql"></a>Выбор набора записей и SQL  
   
--   [Выбор записей из источника данных ODBC](../Topic/Recordset:%20How%20Recordsets%20Select%20Records%20\(ODBC\).md)  
+-   [Выберите записи из источника данных ODBC](../../data/odbc/recordset-how-recordsets-select-records-odbc.md)  
   
--   [Настройка строки SQL для набора записей](../../data/odbc/sql-customizing-your-recordset’s-sql-statement-odbc.md)  
+-   [Настройка строки SQL для набора записей](../../data/odbc/sql-customizing-your-recordsets-sql-statement-odbc.md)  
   
-### Динамическая привязка набора записей  
+### <a name="dynamic-binding-of-recordsets"></a>Динамическая привязка набора записей  
   
--   [Динамическая привязка столбцов с данными в наборе записей во время выполнения](../../data/odbc/recordset-dynamically-binding-data-columns-odbc.md)  
+-   [Динамическая привязка столбцов данных в наборе записей, во время выполнения](../../data/odbc/recordset-dynamically-binding-data-columns-odbc.md)  
   
-## См. также  
- [Интерфейс ODBC \(ODBC\)](../Topic/Open%20Database%20Connectivity%20\(ODBC\).md)
+## <a name="see-also"></a>См. также  
+ [Интерфейс ODBC](../../data/odbc/open-database-connectivity-odbc.md)

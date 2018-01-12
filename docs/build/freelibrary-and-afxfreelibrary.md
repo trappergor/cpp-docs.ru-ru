@@ -1,53 +1,54 @@
 ---
-title: "Функции FreeLibrary и AfxFreeLibrary | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "FreeLibrary"
-  - "AfxFreeLibrary"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "библиотеки DLL расширения [C++], выгрузка"
-  - "Метод AfxFreeLibrary"
-  - "выгрузка библиотек DLL"
-  - "Метод FreeLibrary"
-  - "библиотеки DLL [C++], связывание"
-  - "явное связывание [C++]"
-  - "библиотеки DLL [C++], выгрузка"
+title: "Функции FreeLibrary и AfxFreeLibrary | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- FreeLibrary
+- AfxFreeLibrary
+dev_langs: C++
+helpviewer_keywords:
+- extension DLLs [C++], unloading
+- AfxFreeLibrary method
+- unloading DLLs
+- FreeLibrary method
+- DLLs [C++], linking
+- explicit linking [C++]
+- DLLs [C++], unloading
 ms.assetid: 4a48d290-3971-43e9-8e97-ba656cd0c8f8
-caps.latest.revision: 11
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 11
+caps.latest.revision: "11"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 3d5f2c1cce980f97e7a99ff2347daceac05f984f
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 12/21/2017
 ---
-# Функции FreeLibrary и AfxFreeLibrary
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Процессы, явно связанные с библиотекой DLL, вызывают функцию [FreeLibrary](http://go.microsoft.com/fwlink/p/?LinkID=259188), когда модуль DLL не требуется.  Эта функция уменьшает значение счетчика ссылок модуля и, если результат оказывается равным нулю, удаляет его из адресного пространства процесса.  
+# <a name="freelibrary-and-afxfreelibrary"></a>Функции FreeLibrary и AfxFreeLibrary
+Процессы, которые явно связать до вызова функции DLL [FreeLibrary](http://go.microsoft.com/fwlink/p/?LinkID=259188) работает, если модуль DLL больше не нужен. Это функция уменьшает значение счетчика ссылок модуля и, если счетчик ссылок равен нулю, отменяет сопоставление из адресного пространства процесса.  
   
- В приложении MFC, используйте [AfxFreeLibrary](../Topic/AfxFreeLibrary.md) вместо `FreeLibrary` для выгрузки DLL расширения.  Интерфейс \(прототип функции\) `AfxFreeLibrary` такой же, как у функции `FreeLibrary`.  
+ В приложении MFC использовать [AfxFreeLibrary](../mfc/reference/application-information-and-management.md#afxfreelibrary) вместо `FreeLibrary` выгрузить DLL расширения MFC. Интерфейс (прототип функции) для `AfxFreeLibrary` совпадает со значением `FreeLibrary`.  
   
-## Выберите действие.  
+## <a name="what-do-you-want-to-do"></a>Выберите действие  
   
--   [Неявное связывание](../Topic/Linking%20Implicitly.md)  
+-   [Неявное связывание с библиотекой DLL](../build/linking-an-executable-to-a-dll.md#linking-implicitly)  
   
--   [Определение подходящего метода связывания](../build/determining-which-linking-method-to-use.md)  
+-   [Определение подходящего метода связывания](../build/linking-an-executable-to-a-dll.md#determining-which-linking-method-to-use)  
   
-## Дополнительные сведения  
+## <a name="what-do-you-want-to-know-more-about"></a>Дополнительные сведения  
   
 -   [Функции LoadLibrary и AfxLoadLibrary](../build/loadlibrary-and-afxloadlibrary.md)  
   
--   [GetProcAddress](../build/getprocaddress.md)  
+-   [Функция GetProcAddress](../build/getprocaddress.md)  
   
-## См. также  
- [DLL в Visual C\+\+](../build/dlls-in-visual-cpp.md)   
- [О функции FreeLibrary](http://go.microsoft.com/fwlink/p/?LinkID=259188)   
- [AfxFreeLibrary](../Topic/AfxFreeLibrary.md)
+## <a name="see-also"></a>См. также  
+ [Библиотеки DLL в Visual C++](../build/dlls-in-visual-cpp.md)   
+ [FreeLibrary](http://go.microsoft.com/fwlink/p/?LinkID=259188)   
+ [AfxFreeLibrary](../mfc/reference/application-information-and-management.md#afxfreelibrary)

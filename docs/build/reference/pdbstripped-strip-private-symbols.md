@@ -1,79 +1,80 @@
 ---
-title: "/PDBSTRIPPED (удалить закрытые символы) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "/pdbstripped"
-  - "VC.Project.VCLinkerTool.StripPrivateSymbols"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "PDB-файлы, пропустить закрытые символы"
-  - "/PDBSTRIPPED - параметр компоновщика"
-  - "PDB-файлы, пропустить закрытые символы"
-  - "PDBSTRIPPED - параметр компоновщика"
-  - "-PDBSTRIPPED - параметр компоновщика"
+title: "-PDBSTRIPPED (Удалить закрытые символы) | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- /pdbstripped
+- VC.Project.VCLinkerTool.StripPrivateSymbols
+dev_langs: C++
+helpviewer_keywords:
+- /PDBSTRIPPED linker option
+- -PDBSTRIPPED linker option
+- .pdb files, stripping private symbols
+- PDB files, stripping private symbols
+- PDBSTRIPPED linker option
 ms.assetid: 9b9e0070-6a13-4142-8180-19c003fbbd55
-caps.latest.revision: 8
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: ff124dec52a77ed5bf35d2454f95854ebea5eea0
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 12/21/2017
 ---
-# /PDBSTRIPPED (удалить закрытые символы)
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="pdbstripped-strip-private-symbols"></a>/PDBSTRIPPED (удалить закрытые символы)
 ```  
 /PDBSTRIPPED:pdb_file_name  
 ```  
   
-## Заметки  
+## <a name="remarks"></a>Примечания  
  Здесь:  
   
- *pdb\_file\_name*  
- Указанное пользователем имя базы данных программы \(PDB\), создаваемой компоновщиком путем удаления закрытых символов.  
+ *pdb_file_name*  
+ Пользовательское имя для базы данных программы (PDB), создаваемой компоновщиком.  
   
-## Заметки  
- Параметр \/PDBSTRIPPED создает второй файл базы данных программы \(PDB\) при построении образа программы с любыми параметрами компилятора или компоновщика, создающими PDB\-файл \([\/DEBUG](../../build/reference/debug-generate-debug-info.md), [\/Z7](../Topic/-Z7,%20-Zi,%20-ZI%20\(Debug%20Information%20Format\).md), \/Zd или \/Zi\).  Второй PDB\-файл не содержит символов, которые нежелательно передавать клиентам.  Второй PDB\-файл будет содержать только следующее:  
+## <a name="remarks"></a>Примечания  
+ Параметр/PDBSTRIPPED создает второй файл базы данных (PDB) программы при построении образа программы с любыми параметрами компилятора или компоновщика, создающими PDB-файл ([/DEBUG](../../build/reference/debug-generate-debug-info.md), [/Z7](../../build/reference/z7-zi-zi-debug-information-format.md), /Zd или /Zi). Второй PDB-файл не содержит символов, которые нежелательно передавать клиентам. Второй PDB-файл будет содержать только:  
   
--   открытые символы;  
+-   Открытые символы  
   
--   список объектных файлов и частей исполняемого файла, к которым они относятся;  
+-   Список объектных файлов и частей исполняемого файла, к которым они относятся  
   
--   Отладочные записи оптимизации указателя фрейма \(FPO\), используемые для прохода по стеку  
+-   Записи оптимизации указателя фрейма (FPO) отладки используется для прохода по стеку  
   
- Очищенный PDB\-файл не будет содержать следующее:  
+ Очищенный PDB-файл не будет содержать:  
   
--   сведения о типе;  
+-   Сведения о типе  
   
--   сведения о номерах строк;  
+-   Сведения о номерах строк  
   
--   символы CodeView, связанные с объектными файлами, например символы CodeView для функций, локальных и статических данных  
+-   Символы CodeView файл на объект такие функции, локальные переменные и статические данные  
   
- Полный PDB\-файл по\-прежнему будет создаваться при использовании параметра \/PDBSTRIPPED.  
+ Полный PDB-файл будет создаваться при использовании/PDBSTRIPPED.  
   
- Если PDB\-файл не создается, то параметр \/PDBSTRIPPED игнорируется.  
+ Если не создать PDB-файл, / PDBSTRIPPED игнорируется.  
   
-### Установка данного параметра компоновщика в среде разработки Visual Studio  
+### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>Задание данного параметра компоновщика в среде разработки Visual Studio  
   
-1.  Откройте диалоговое окно **Страницы свойств** проекта.  Дополнительные сведения см. в разделе [Задание свойств проекта C\+\+](../../ide/working-with-project-properties.md).  
+1.  Откройте диалоговое окно **Страницы свойств** проекта. Дополнительные сведения см. в разделе [задание свойств проекта Visual C++](../../ide/working-with-project-properties.md).  
   
-2.  Выберите папку **Компоновщик**.  
+2.  Нажмите кнопку **компоновщика** папки.  
   
-3.  Выберите страницу свойств **Отладка**.  
+3.  Нажмите кнопку **отладки** страницу свойств.  
   
-4.  Измените свойство **Удалять закрытые символы**.  
+4.  Изменить **удалить закрытые символы** свойство.  
   
-### Установка данного параметра компоновщика программным способом  
+### <a name="to-set-this-linker-option-programmatically"></a>Задание данного параметра компоновщика программным способом  
   
 -   См. раздел <xref:Microsoft.VisualStudio.VCProjectEngine.VCLinkerTool.StripPrivateSymbols%2A>.  
   
-## См. также  
+## <a name="see-also"></a>См. также  
  [Настройка параметров компоновщика](../../build/reference/setting-linker-options.md)   
  [Параметры компоновщика](../../build/reference/linker-options.md)

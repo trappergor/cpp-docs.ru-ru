@@ -1,35 +1,37 @@
 ---
-title: "Практическое руководство. Анализ строк с помощью метода разделения (C++/CLI) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/14/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "примеры [C++], строки"
-  - "разбор строк [C++]"
-  - "регулярные выражения [C++], разбор строк"
-  - "Split - метод, разбор строк"
-  - "строки [C++], синтаксический разбор"
+title: "Как: анализ строк с помощью метода разделения (C + +/ CLI) | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- parsing strings [C++]
+- examples [C++], strings
+- regular expressions [C++], parsing strings
+- Split method, parsing strings
+- strings [C++], parsing
 ms.assetid: d52d2539-5ebb-4716-86b3-07314dd7e4bd
-caps.latest.revision: 12
-caps.handback.revision: 12
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "12"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: 7494a615d1a253c6617601f38e5d01755c718b80
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 12/21/2017
 ---
-# Практическое руководство. Анализ строк с помощью метода разделения (C++/CLI)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-В следующем примере кода демонстрируется извлечение каждого слова из строки при помощи метода <xref:System.String.Split%2A?displayProperty=fullName>.  Строка, содержащая множество различных типов описаний слов, создается и затем анализируется путем вызова метода <xref:System.String.Split%2A> со списком описаний.  Затем отдельно отображается каждое слово предложения.  
+# <a name="how-to-parse-strings-using-the-split-method-ccli"></a>Практическое руководство. Анализ строк с помощью метода разделения (C++/CLI)
+В следующем примере кода показано использование <xref:System.String.Split%2A?displayProperty=fullName> метод для извлечения каждого слова из строки. Строка, содержащая несколько типов разделителей слов создается и затем анализируется путем вызова метода <xref:System.String.Split%2A> со списком описаний. Затем каждое слово в предложении выводится отдельно.  
   
-## Пример  
+## <a name="example"></a>Пример  
   
 ```  
 // regex_split.cpp  
@@ -54,6 +56,6 @@ int main()
 }  
 ```  
   
-## См. также  
- [Регулярные выражения в .NET Framework](../Topic/.NET%20Framework%20Regular%20Expressions.md)   
- [программирование .NET с использованием C\+\+\/CLI](../dotnet/dotnet-programming-with-cpp-cli-visual-cpp.md)
+## <a name="see-also"></a>См. также  
+ [Регулярные выражения в .NET Framework](/dotnet/standard/base-types/regular-expressions)   
+ [Программирование .NET с использованием C++/CLI (Visual C++)](../dotnet/dotnet-programming-with-cpp-cli-visual-cpp.md)

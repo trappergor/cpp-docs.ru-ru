@@ -1,33 +1,36 @@
 ---
-title: "Практическое руководство. Хранение ссылки на объект в неуправляемой памяти | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "get-started-article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "gcroot - зарезервированное слово [C++], ссылка на объект в собственной функции"
-  - "ссылки для объектов, в собственной функции"
-  - "объекты [C++], ссылка собственной функции"
-  - "ссылки, на объект в собственных функциях"
+title: "Как: хранение ссылки на объект в неуправляемой памяти | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: get-started-article
+dev_langs: C++
+helpviewer_keywords:
+- object references, in native functions
+- objects [C++], reference in native functions
+- references, to objects in native functions
+- gcroot keyword [C++], object reference in native function
 ms.assetid: a61eb8ce-3982-477d-8d3d-2173fd57166d
-caps.latest.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 8
+caps.latest.revision: "10"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: debda931ae121e109c4b1008054ace11a714f065
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 12/21/2017
 ---
-# Практическое руководство. Хранение ссылки на объект в неуправляемой памяти
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Для хранения ссылки на объект CLR в неуправляемой памяти можно использовать заголовочный файл gcroot.h, который содержит объект <xref:System.Runtime.InteropServices.GCHandle>.  В качестве альтернативного варианта можно напрямую использовать структуру `GCHandle`.  
+# <a name="how-to-hold-object-reference-in-unmanaged-memory"></a>Практическое руководство. Хранение ссылки на объект в неуправляемой памяти
+Можно использовать gcroot.h, которая заключает <xref:System.Runtime.InteropServices.GCHandle>, для хранения ссылки на объект CLR в неуправляемой памяти. Кроме того, можно использовать `GCHandle` напрямую.  
   
-## Пример  
+## <a name="example"></a>Пример  
   
 ```  
 // hold_object_reference.cpp  
@@ -59,9 +62,12 @@ int main() {
 }  
 ```  
   
-  **StringWrapper::x \=\= ManagedString**   
-## Пример  
- Структура `GCHandle` предоставляет возможность хранения ссылки на управляемый объект в неуправляемой памяти.  Для создания непрозрачного дескриптора для управляемого объекта можно использовать метод <xref:System.Runtime.InteropServices.GCHandle.Alloc%2A> и метод <xref:System.Runtime.InteropServices.GCHandle.Free%2A> для его освобождения.  Помимо этого метод <xref:System.Runtime.InteropServices.GCHandle.Target%2A> позволяет возвращать обратно ссылку на объект от дескриптора в управляемом коде.  
+```Output  
+StringWrapper::x == ManagedString  
+```  
+  
+## <a name="example"></a>Пример  
+ `GCHandle`предоставляет возможность хранения ссылки на управляемый объект в неуправляемой памяти.  Вы используете <xref:System.Runtime.InteropServices.GCHandle.Alloc%2A> метод для создания непрозрачный дескриптор для управляемого объекта и <xref:System.Runtime.InteropServices.GCHandle.Free%2A> для его освобождения. Кроме того <xref:System.Runtime.InteropServices.GCHandle.Target%2A> метод позволяет получить ссылку на объект обратно из дескриптора в управляемом коде.  
   
 ```  
 // hold_object_reference_2.cpp  
@@ -94,6 +100,9 @@ int main() {
 }  
 ```  
   
-  **StringWrapper::m\_handle \=\= ManagedString**   
-## См. также  
- [Использование взаимодействия языка C\+\+ \(неявный PInvoke\)](../dotnet/using-cpp-interop-implicit-pinvoke.md)
+```Output  
+StringWrapper::m_handle == ManagedString  
+```  
+  
+## <a name="see-also"></a>См. также  
+ [Использование взаимодействия языка C++ (неявный PInvoke)](../dotnet/using-cpp-interop-implicit-pinvoke.md)

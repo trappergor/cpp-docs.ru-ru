@@ -16,16 +16,17 @@ caps.latest.revision: "26"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 58b0a6c8baa52acf82bffaacb7dd309b4420f3f0
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: ab3e57cc5ccaedb5ad75ffa601f1d6c679c0ea6c
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="atl-classes"></a>ATL-классы
 Active Template Library (ATL) содержит следующие классы. Для поиска определенного класса по категории, в разделе [Обзор класса ATL](../../atl/atl-class-overview.md).  
   
-|Класс|Описание|Файл заголовка|  
+|Класс|Описание:|Файл заголовка|  
 |-----------|-----------------|-----------------|  
 |[CA2AEX](../../atl/reference/ca2aex-class.md)|Этот класс используется макросы преобразования строк `CA2TEX` и `CT2AEX`и определение типа **CA2A**.|atlconv.h|  
 |[CA2CAEX](../../atl/reference/ca2caex-class.md)|Этот класс используется макросы преобразования строк `CA2CTEX` и `CT2CAEX`и определение типа **CA2CA**.|atlconv.h|  

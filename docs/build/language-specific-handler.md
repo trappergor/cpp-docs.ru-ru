@@ -13,11 +13,12 @@ caps.latest.revision: "9"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 3f9e548dc3c9262349fc05bd6bea19290b57ad94
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: dc15e730666a643dfaa028fe7bc6166144897308
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="language-specific-handler"></a>Обработчик конкретного языка
 Относительный адрес обработчик конкретного языка в UNWIND_INFO отсутствует, каждый раз, когда установлены флаги UNW_FLAG_EHANDLER или UNW_FLAG_UHANDLER. Как описано в предыдущем разделе, обработчик языка вызывается как часть поиска для обработчика исключений или в процессе очистки. Он имеет следующий прототип:  

@@ -17,11 +17,12 @@ caps.latest.revision: "7"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 5fda176229d8f6bea5a586c6f6f538a40d7ed8a7
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 0042dd5dc6049447868cf5ca5ea1112b3695f3a3
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="using-database-ole-and-sockets-mfc-extension-dlls-in-regular-mfc-dlls"></a>С помощью базы данных, OLE и сокетов MFC DLL расширения в обычных библиотеках DLL MFC
 Если при использовании MFC библиотек DLL расширения из обычных библиотек DLL MFC, библиотеки DLL расширения MFC не встроены в **CDynLinkLibrary** объекта цепочки обычной библиотеки DLL MFC, можно запустить в одну или несколько связанных трудностями. Поскольку отладочные версии баз данных MFC, OLE и сокетов поддерживают библиотеки DLL реализованы как библиотека DLL-расширения MFC, может появиться признаки аналогичные проблемы при использовании этих MFC, даже если вы не используете явно любой из собственных библиотека DLL-расширения MFC. Ниже представлены некоторые симптомы:  

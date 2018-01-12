@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
 apiname:
@@ -28,8 +27,7 @@ f1_keywords:
 - _wfreopen
 - _tfreopen
 - freopen
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - _wfreopen function
 - file pointers [C++], reassigning
@@ -38,30 +36,16 @@ helpviewer_keywords:
 - tfreopen function
 - wfreopen function
 ms.assetid: de4b73f8-1043-4d62-98ee-30d2022da885
-caps.latest.revision: 27
+caps.latest.revision: "27"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: a82768750e6a7837bb81edd8a51847f83c294c20
-ms.openlocfilehash: 47b45dd9e2ad07032529652021172ea64b84d652
-ms.contentlocale: ru-ru
-ms.lasthandoff: 04/04/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: d3eb18b70ea672b095dc6d24dfd45e1bdda8f88b
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="freopen-wfreopen"></a>freopen, _wfreopen
 Переназначает указатель файла. Существуют более безопасные версии этих функций; см. раздел [freopen_s, _wfreopen_s](../../c-runtime-library/reference/freopen-s-wfreopen-s.md).  
@@ -101,7 +85,7 @@ FILE *_wfreopen(
   
  `freopen` Функция закрывает файл, который сейчас связан с `stream` и переназначает `stream` в файл, заданный параметром `path`. `_wfreopen` — это версия функции `_freopen` для расширенных символов; аргументы `path` и `mode` для функции `_wfreopen` представляют собой строки расширенных символов. Поведение `_wfreopen` и `_freopen` идентично в противном случае.  
   
-### <a name="generic-text-routine-mappings"></a>Универсальное текстовое сопоставление функций  
+### <a name="generic-text-routine-mappings"></a>Сопоставления подпрограмм обработки обычного текста  
   
 |Подпрограмма TCHAR.H|_UNICODE и _MBCS не определены|_MBCS определено|_UNICODE определено|  
 |---------------------|------------------------------------|--------------------|-----------------------|  
@@ -141,7 +125,7 @@ FILE *_wfreopen(
  `b`  
  Открытие файла в бинарном (непреобразованном) режиме; вышеописанные преобразования отключены.  
   
- Если символ `t` или `b` в параметре `mode` не указан, режим преобразования по умолчанию определяется глобальной переменной [_fmode](../../c-runtime-library/fmode.md). Если символ `t` или `b` указан как префикс аргумента, функция завершается с ошибкой и возвращает `NULL`.  
+ Если символ `t` или `b` в параметре `mode`не указан, режим преобразования по умолчанию определяется глобальной переменной [_fmode](../../c-runtime-library/fmode.md). Если символ `t` или `b` указан как префикс аргумента, функция завершается с ошибкой и возвращает `NULL`.  
   
  Обсуждение текстового и двоичного режимов см. в разделе [Файловый ввод-вывод в текстовом и двоичном режиме](../../c-runtime-library/text-and-binary-mode-file-i-o.md).  
   

@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
 apiname:
@@ -29,8 +28,7 @@ f1_keywords:
 - mbsnbcat_l
 - _mbsnbcat
 - _mbsnbcat_l
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - tcsncat_l function
 - _tcsncat function
@@ -41,30 +39,16 @@ helpviewer_keywords:
 - _mbsnbcat function
 - tcsncat function
 ms.assetid: aa0f1d30-0ddd-48d1-88eb-c6884b20fd91
-caps.latest.revision: 29
+caps.latest.revision: "29"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: a82768750e6a7837bb81edd8a51847f83c294c20
-ms.openlocfilehash: ad5d71827a69eaf46f5aef05e2c880e4e4eef71f
-ms.contentlocale: ru-ru
-ms.lasthandoff: 04/04/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: fb036640c10a803eb5dd910c51335409ffdfcd97
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="mbsnbcat-mbsnbcatl"></a>_mbsnbcat, _mbsnbcat_l
 Добавляют не более `n` первых байтов одной многобайтовой строки к другой. Существуют более безопасные версии этих функций; см. раздел [_mbsnbcat_s, _mbsnbcat_s_l](../../c-runtime-library/reference/mbsnbcat-s-mbsnbcat-s-l.md).  
@@ -120,15 +104,15 @@ unsigned char *_mbsnbcat_l(
 ## <a name="remarks"></a>Примечания  
  Функция `_mbsnbcat` добавляет не более `count` первых байтов строки `src` в строку `dest`. Если байт непосредственно перед нуль-символом в строке `dest` является старшим байтом, он перезаписывается начальным байтом строки `src`. В противном случае начальный байт строки `src` перезаписывает завершающий нуль-символ строки `dest`. Если байт NULL встречается в строке `src` до того как будет добавлено `count` байтов, функция `_mbsnbcat` добавляет все байты из строки `src` вплоть до нуль-символа. Если значение `count` больше длины строки `src`, вместо параметра `src` используется длина строки `count`. Результирующая строка завершается нуль-символом. Если копирование производится между перекрывающимися строками, поведение не определено.  
   
- Выходное значение зависит от настройки категории `LC_CTYPE` языкового стандарта; дополнительные сведения см. в разделе [setlocale](../../c-runtime-library/reference/setlocale-wsetlocale.md). Версия `_mbsnbcat` этой функции использует текущий языковой стандарт для поведения, зависящего от языкового стандарта; версия `_mbsnbcat_l` работает аналогично, но использует переданный языковой стандарт. Дополнительные сведения см. в разделе [Языковой стандарт](../../c-runtime-library/locale.md).  
+ Выходное значение зависит от настройки категории `LC_CTYPE` языкового стандарта; дополнительные сведения см. в разделе [setlocale](../../c-runtime-library/reference/setlocale-wsetlocale.md). Версия `_mbsnbcat` этой функции использует текущий языковой стандарт для поведения, зависящего от языкового стандарта; версия `_mbsnbcat_l` работает аналогично, но использует переданный языковой стандарт. Для получения дополнительной информации см. [Locale](../../c-runtime-library/locale.md).  
   
  **Примечание о безопасности.** Следует использовать строку, оканчивающуюся нуль-символом. Длина строки, завершающейся нуль-символом, не должна превышать размер буфера назначения. Дополнительные сведения см. в разделе [Как избежать переполнения буфера](http://msdn.microsoft.com/library/windows/desktop/ms717795).  
   
  Если параметр `dest` или `src` имеет значение `NULL`, функция создает ошибку недопустимого параметра, как описывается в разделе [Проверка параметров](../../c-runtime-library/parameter-validation.md). Если ошибка обработана, функция возвращает `EINVAL` и задает для параметра `errno` значение `EINVAL`.  
   
- В C++ эти функции имеют шаблонные перегрузки, которые вызывают более новые и безопасные аналоги этих функций. Дополнительные сведения см. в разделе [Безопасные перегрузки шаблонов](../../c-runtime-library/secure-template-overloads.md).  
+ В C++ эти функции имеют шаблонные перегрузки, которые вызывают более новые и безопасные аналоги этих функций. Дополнительные сведения см. в разделе [Secure Template Overloads](../../c-runtime-library/secure-template-overloads.md).  
   
-### <a name="generic-text-routine-mappings"></a>Универсальное текстовое сопоставление функций  
+### <a name="generic-text-routine-mappings"></a>Сопоставления подпрограмм обработки обычного текста  
   
 |Подпрограмма Tchar.h|_UNICODE и _MBCS не определены|_MBCS определено|_UNICODE определено|  
 |---------------------|--------------------------------------|--------------------|-----------------------|  
@@ -145,7 +129,7 @@ unsigned char *_mbsnbcat_l(
  Дополнительные сведения о совместимости см. в разделе [Совместимость](../../c-runtime-library/compatibility.md).  
   
 ## <a name="see-also"></a>См. также  
- [Управление строками](../../c-runtime-library/string-manipulation-crt.md)   
+ [Операции со строками](../../c-runtime-library/string-manipulation-crt.md)   
  [_mbsnbcmp, _mbsnbcmp_l](../../c-runtime-library/reference/mbsnbcmp-mbsnbcmp-l.md)   
  [_strncnt, _wcsncnt, _mbsnbcnt, _mbsnbcnt_l, _mbsnccnt, _mbsnccnt_l](../../c-runtime-library/reference/strncnt-wcsncnt-mbsnbcnt-mbsnbcnt-l-mbsnccnt-mbsnccnt-l.md)   
  [_mbsnbcpy, _mbsnbcpy_l](../../c-runtime-library/reference/mbsnbcpy-mbsnbcpy-l.md)   

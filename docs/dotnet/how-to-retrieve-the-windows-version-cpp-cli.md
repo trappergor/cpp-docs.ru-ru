@@ -1,32 +1,34 @@
 ---
-title: "Практическое руководство. Проверка версии Windows (C++/CLI) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Windows [C++], получение версии при помощи Visual C++"
-  - "Windows [C++], версия"
+title: "Как: проверка версии Windows (C + +/ CLI) | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- Windows [C++], version
+- Windows [C++], retrieving version using Visual C++
 ms.assetid: 7e6f567b-d378-49bb-aa59-2240f69a022d
-caps.latest.revision: 9
-caps.handback.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "9"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: b29d77b7bcc56baa9866c2855065052b1d2607c6
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 12/21/2017
 ---
-# Практическое руководство. Проверка версии Windows (C++/CLI)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-В следующем примере кода демонстрируется способ проверки платформы и версии текущей операционной системы.  Эта информация содержится в свойстве <xref:System.Environment.OSVersion%2A?displayProperty=fullName> и содержит перечисление, в котором версия Windows рассматривается в расширенном понятии, и объект <xref:System.Environment.Version%2A>, содержащий данные о точной версии построения операционной системы.  
+# <a name="how-to-retrieve-the-windows-version-ccli"></a>Практическое руководство. Проверка версии Windows (C++/CLI)
+В следующем примере кода показано, как получить сведения о платформе и версии текущей операционной системы. Эти сведения хранятся в <xref:System.Environment.OSVersion%2A?displayProperty=fullName> свойство и состоит из перечисление, описывающее версии Windows, в общем и <xref:System.Environment.Version%2A> , содержащий точный сборки операционной системы.  
   
-## Пример  
+## <a name="example"></a>Пример  
   
 ```  
 // os_ver.cpp  
@@ -64,6 +66,6 @@ int main()
 }  
 ```  
   
-## См. также  
- [Операции Windows](../dotnet/windows-operations-cpp-cli.md)   
- [программирование .NET с использованием C\+\+\/CLI](../dotnet/dotnet-programming-with-cpp-cli-visual-cpp.md)
+## <a name="see-also"></a>См. также  
+ [Операции Windows (C + +/ CLI)](../dotnet/windows-operations-cpp-cli.md)   
+ [Программирование .NET с использованием C++/CLI (Visual C++)](../dotnet/dotnet-programming-with-cpp-cli-visual-cpp.md)

@@ -1,34 +1,35 @@
 ---
-title: "Error Information Classes | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "vc.atl.errors"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "обработка ошибок, classes"
-  - "обработка ошибок, error information classes"
-  - "error information, classes"
+title: "Сведения об Classe (ATL) | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: vc.atl.errors
+dev_langs: C++
+helpviewer_keywords:
+- error handling, error information classes
+- error handling, classes
+- error information, classes
 ms.assetid: ba40c8fb-81fd-4f61-8f47-fa2cb540e274
-caps.latest.revision: 11
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 6
+caps.latest.revision: "11"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: da37d9620212f16f920d228278a387701d2dbee1
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 12/21/2017
 ---
-# Error Information Classes
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+# <a name="error-information-classes"></a>Сведения о классов ошибок
+Следующий класс указывает способ обработки сведений об ошибке:  
+  
+-   [ISupportErrorInfoImpl](../atl/reference/isupporterrorinfoimpl-class.md) определяет, поддерживает ли объект [IErrorInfo](http://msdn.microsoft.com/en-us/4dda6909-2d9a-4727-ae0c-b5f90dcfa447) интерфейса. **IErrorInfo** позволяет сведения об ошибке распространяться обратно клиенту.  
+  
+## <a name="see-also"></a>См. также  
+ [Общие сведения о классе](../atl/atl-class-overview.md)
 
-Следующий класс показывает, как изменяется сведения об ошибке:  
-  
--   [ISupportErrorInfoImpl](../atl/reference/isupporterrorinfoimpl-class.md) указывающее, поддерживает ли объект интерфейс [IErrorInfo](http://msdn.microsoft.com/ru-ru/4dda6909-2d9a-4727-ae0c-b5f90dcfa447).  **IErrorInfo** позволяет сведений об ошибках, которые необходимо передать обратно клиенту.  
-  
-## См. также  
- [Class Overview](../atl/atl-class-overview.md)

@@ -35,11 +35,12 @@ caps.latest.revision: "27"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 922fed9dde6e3f38ae1276034ce84a97db9f99be
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 9bd77d18f63885aa29f49ce8bd497f935d292e0b
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="fcvts"></a>_fcvt_s
 Преобразует число с плавающей запятой в строку. Это версия функции [_fcvt](../../c-runtime-library/reference/fcvt.md) с усовершенствованиями системы безопасности, описанными в разделе [Функции безопасности в CRT](../../c-runtime-library/security-features-in-the-crt.md).  
@@ -91,12 +92,12 @@ errno_t _fcvt_s(
   
 ### <a name="error-conditions"></a>Условия ошибок  
   
-|`buffer`|`sizeInBytes`|значение|count|dec|sign|Return|Значение в `buffer`|  
+|`buffer`|`sizeInBytes`|value|count|dec|sign|Return|Значение в `buffer`|  
 |--------------|-------------------|-----------|-----------|---------|----------|------------|-----------------------|  
-|`NULL`|любые|любые|любые|любые|любые|`EINVAL`|Без изменений.|  
-|Не `NULL` (указывает на допустимую память)|<=0|any|любые|любые|любые|`EINVAL`|Не изменено.|  
-|any|любые|любые|любые|`NULL`|любые|`EINVAL`|Не изменено.|  
-|any|любые|любые|любые|любые|`NULL`|`EINVAL`|Без изменений.|  
+|`NULL`|any|any|any|any|any|`EINVAL`|Без изменений.|  
+|Не `NULL` (указывает на допустимый адрес в памяти)|<=0|any|any|any|any|`EINVAL`|Не изменено.|  
+|any|any|any|any|`NULL`|any|`EINVAL`|Не изменено.|  
+|any|any|any|any|any|`NULL`|`EINVAL`|Без изменений.|  
   
  **Проблемы безопасности**  
   
@@ -111,7 +112,7 @@ errno_t _fcvt_s(
   
  Различие между функциями `_ecvt_s` и `_fcvt_s` заключается в интерпретации параметра `count`. `_ecvt_s`интерпретирует `count` как общее число цифр в выходной строке и `_fcvt_s` интерпретирует `count` как количество цифр после десятичной запятой.  
   
- В C++ использование этих функций упрощено шаблонными перегрузками; перегрузки могут определить длину буфера автоматически, устраняя необходимость указывать аргумент size. Дополнительные сведения см. в разделе [Безопасные перегрузки шаблонов](../../c-runtime-library/secure-template-overloads.md).  
+ В C++ использование этих функций упрощено шаблонными перегрузками; перегрузки могут определить длину буфера автоматически, устраняя необходимость указывать аргумент size. Дополнительные сведения см. в разделе [Secure Template Overloads](../../c-runtime-library/secure-template-overloads.md).  
   
  Отладочная версия этой функции сначала заполняет буфер значением 0xFD. Чтобы отключить это поведение, используйте [_CrtSetDebugFillThreshold](../../c-runtime-library/reference/crtsetdebugfillthreshold.md).  
   

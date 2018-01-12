@@ -1,37 +1,37 @@
 ---
-title: "Параметр /TSAWARE | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "/tsaware"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "/TSAWARE - параметр программы editbin"
-  - "TSAWARE - параметр (программа editbin)"
-  - "-TSAWARE - параметр (программа editbin)"
+title: "-TSAWARE | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: /tsaware
+dev_langs: C++
+helpviewer_keywords:
+- -TSAWARE editbin option
+- /TSAWARE editbin option
+- TSAWARE editbin option
 ms.assetid: 84715050-c907-4118-8cff-2973411ae931
-caps.latest.revision: 7
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 68cdcb1253eca6eb168aab0b846bd7a49daa6fd5
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 12/21/2017
 ---
-# Параметр /TSAWARE
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="tsaware"></a>/TSAWARE
 ```  
 /TSAWARE[:NO]  
 ```  
   
-## Заметки  
- Параметр \/TSAWARE служебной программы EDITBIN позволяет изменять образ программы аналогично параметру компоновщика [\/TSAWARE](../../build/reference/tsaware-create-terminal-server-aware-application.md).  
+## <a name="remarks"></a>Примечания  
+ Параметр/TSAWARE служебной программы EDITBIN позволяет изменять образ программы так же, как если бы вы использовали [/TSAWARE](../../build/reference/tsaware-create-terminal-server-aware-application.md) компоновщика.  
   
-## См. также  
+## <a name="see-also"></a>См. также  
  [Параметры EDITBIN](../../build/reference/editbin-options.md)

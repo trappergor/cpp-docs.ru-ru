@@ -18,11 +18,14 @@ caps.latest.revision: "12"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 2390a474e289ea41fd676759d12b92e8a22e462a
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: 1ae1bb857353b72551e4766516c571c0091062d3
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="crowsetimpl-class"></a>Класс CRowsetImpl
 Предоставляет стандартную реализацию набора строк OLE DB без необходимости множественное наследование многие реализации интерфейсов.  
@@ -57,7 +60,7 @@ class CRowsetImpl :
  `ArrayType`  
  Класс, который будет выступать в качестве хранилища для данных в наборе строк. По умолчанию этот параметр `CAtlArray`, но это может быть любой класс, который поддерживает необходимые функциональные возможности.  
   
-## <a name="members"></a>Члены  
+## <a name="members"></a>Участники  
   
 ### <a name="methods"></a>Методы  
   

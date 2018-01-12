@@ -1,59 +1,61 @@
 ---
-title: "класс CSession | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "CSession"
-  - "ATL::CSession"
-  - "ATL.CSession"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "CSession - класс"
+title: "Класс CSession | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- CSession
+- ATL::CSession
+- ATL.CSession
+dev_langs: C++
+helpviewer_keywords: CSession class
 ms.assetid: 83cd798f-b45d-4f11-a23c-29183390450c
-caps.latest.revision: 13
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 13
+caps.latest.revision: "13"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: d8b6bb75d12b4ab96c3a44c74f4487eb8a70efc6
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 12/21/2017
 ---
-# класс CSession
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Представляет один сеанс доступа к базе данных.  
+# <a name="csession-class"></a>класс CSession
+Представляет сеанс доступа к одной базе данных.  
   
-## Синтаксис  
+## <a name="syntax"></a>Синтаксис  
   
 ```  
 class CSession  
 ```  
   
-## Члены  
+## <a name="members"></a>Участники  
   
-### Методы  
+### <a name="methods"></a>Методы  
   
 |||  
 |-|-|  
-|[Прервать](../Topic/CSession::Abort.md)|Отменяет \(\) используется для завершения транзакции.|  
-|[Закрыть](../../data/oledb/csession-close.md)|Закрывает сеанс.|  
+|[Прерывание](../../data/oledb/csession-abort.md)|Отменяет (прекращает) транзакции.|  
+|[Закрыть](../../data/oledb/csession-close.md)|Завершает сеанс.|  
 |[Фиксация](../../data/oledb/csession-commit.md)|Завершает транзакцию.|  
-|[GetTransactionInfo](../../data/oledb/csession-gettransactioninfo.md)|Возвращает сведения о транзакции.|  
-|[Откройте .](../../data/oledb/csession-open.md)|Открывает новый сеанс для объекта источника данных.|  
-|[StartTransaction](../../data/oledb/csession-starttransaction.md)|Начинает новую транзакцию для данного сеанса.|  
+|[GetTransactionInfo](../../data/oledb/csession-gettransactioninfo.md)|Возвращает сведения, касающиеся транзакции.|  
+|[Открыть](../../data/oledb/csession-open.md)|Открывает новый сеанс для объекта источника данных.|  
+|[StartTransaction](../../data/oledb/csession-starttransaction.md)|Начинает новую транзакцию для этого сеанса.|  
   
-## Заметки  
- Один или несколько сеансов можно связать с каждым подключения поставщика \(источником данных\), которое представлено объектом [CDataSource](../Topic/CDataSource%20Class.md).  Для создания нового `CSession` для `CDataSource`, вызовите метод [CSession::Open](../../data/oledb/csession-open.md).  Чтобы начать транзакцию базы данных, `CSession` предоставляет метод `StartTransaction`.  Если транзакция запущена, можно также выполнять к ним с помощью метода **Зафиксировать**, или отменить их с помощью метода **Прервать**.  
+## <a name="remarks"></a>Примечания  
+ Один или несколько сеансов можно связать с каждой подключения поставщика (источник данных), который представляется [CDataSource](../../data/oledb/cdatasource-class.md) объекта. Чтобы создать новую `CSession` для `CDataSource`, вызовите [CSession::Open](../../data/oledb/csession-open.md). Чтобы начать транзакцию базы данных `CSession` предоставляет `StartTransaction` метод. После запуска транзакции можно зафиксировать с помощью **фиксации** метод, или отмените его с помощью **прервать** метод.  
   
-## Требования  
- **Header:**  atldbcli.h  
+## <a name="requirements"></a>Требования  
+ **Заголовок:** atldbcli.h  
   
-## См. также  
- [CatDB](../../top/visual-cpp-samples.md)   
- [Шаблоны потребителей OLE DB](../../data/oledb/ole-db-consumer-templates-cpp.md)   
- [Ссылка на шаблоны потребителя OLE DB](../../data/oledb/ole-db-consumer-templates-reference.md)
+## <a name="see-also"></a>См. также  
+ [CatDB](../../visual-cpp-samples.md)   
+ [Шаблоны потребителя OLE DB](../../data/oledb/ole-db-consumer-templates-cpp.md)   
+ [Ссылка на шаблоны объекта-получателя OLE DB](../../data/oledb/ole-db-consumer-templates-reference.md)

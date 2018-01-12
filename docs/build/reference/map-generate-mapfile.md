@@ -26,11 +26,12 @@ caps.latest.revision: "8"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 2e776803ab6f7046b2db1f80899ee6e465deb399
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: f01daff11d41263766b66ed335c60d4bf83ced45
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="map-generate-mapfile"></a>/MAP (создание файла сопоставления)
 ```  
@@ -38,7 +39,7 @@ ms.lasthandoff: 10/24/2017
 ```  
   
 ## <a name="remarks"></a>Примечания  
- где:  
+ Здесь:  
   
  *filename*  
  Указанное пользователем имя файла сопоставления. Он заменяет имя по умолчанию.  

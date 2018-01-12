@@ -4,42 +4,23 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-windows
+ms.technology: cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: 'index-page '
-dev_langs:
-- C++
-helpviewer_keywords:
-- ATL_URL_SCHEME
+dev_langs: C++
+helpviewer_keywords: ATLUTIL/ATL::ATL_URL_SCHEME
 ms.assetid: f4131046-8ba0-4ec1-8209-84203f05d20e
-caps.latest.revision: 7.2
+caps.latest.revision: "7.2"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 050e7483670bd32f633660ba44491c8bb3fc462d
-ms.openlocfilehash: 608508b60192ccfdaf4cb0ea09d5274e07de9f0c
-ms.contentlocale: ru-ru
-ms.lasthandoff: 02/24/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: 1936492f1b140afb762f7db2ce03abe343f0673d
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 12/21/2017
 ---
-
-
 # <a name="atlurlscheme"></a>ATL_URL_SCHEME  
 
 Члены этого перечисления предоставляют константы для схем, поддерживаемая [CUrl](curl-class.md).  

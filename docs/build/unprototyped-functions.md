@@ -13,11 +13,12 @@ caps.latest.revision: "7"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: dbc9324753f6ec2c9a332af00a00dd85116e1943
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 574c4564394e251dde9345d3658304019dae838d
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="unprototyped-functions"></a>Функции без прототипа
 Для функций без прототипа вызывающий объект передает целочисленные значения как целые числа и значения с плавающей запятой двойной точности. Для значений с плавающей запятой только регистр целых чисел и чисел с плавающей запятой регистра будет содержать значение с плавающей запятой в случае, если вызываемый ожидает значение в целочисленные регистры.  

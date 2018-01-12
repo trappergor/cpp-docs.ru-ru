@@ -1,73 +1,74 @@
 ---
-title: "Параметр /NODEFAULTLIB (пропуск библиотек) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "VC.Project.VCLinkerTool.IgnoreAllDefaultLibraries"
-  - "VC.Project.VCLinkerTool.IgnoreDefaultLibraryNames"
-  - "/nodefaultlib"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "/NODEFAULTLIB - параметр компоновщика"
-  - "библиотеки по умолчанию, удаление"
-  - "игнорировать библиотеки - параметр компоновщика"
-  - "библиотеки, игнорировать"
-  - "NODEFAULTLIB - параметр компоновщика"
-  - "-NODEFAULTLIB - параметр компоновщика"
+title: "-NODEFAULTLIB (пропуск библиотек) | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- VC.Project.VCLinkerTool.OVERWRITEAllDefaultLibraries
+- VC.Project.VCLinkerTool.OVERWRITEDefaultLibraryNames
+- /nodefaultlib
+dev_langs: C++
+helpviewer_keywords:
+- default libraries, removing
+- -NODEFAULTLIB linker option
+- libraries, ignore
+- NODEFAULTLIB linker option
+- /NODEFAULTLIB linker option
+- ignore libraries linker option
 ms.assetid: 7270b673-6711-468e-97a7-c2925ac2be6e
-caps.latest.revision: 10
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 10
+caps.latest.revision: "10"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 24045fbbba41eb9d7ca1929a86d3dd599d3490ba
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 12/21/2017
 ---
-# Параметр /NODEFAULTLIB (пропуск библиотек)
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="nodefaultlib-ignore-libraries"></a>Параметр /NODEFAULTLIB (пропуск библиотек)
 ```  
 /NODEFAULTLIB[:library]   
 ```  
   
-## Заметки  
+## <a name="remarks"></a>Примечания  
  Здесь:  
   
- *library*  
- Библиотека, пропускаемая компоновщиком при разрешении внешних ссылок.  
+ *Библиотека*  
+ Библиотека, компоновщиком пропускать при разрешении внешних ссылок.  
   
-## Заметки  
- Параметр \/NODEFAULTLIB предписывает компоновщику удаление одной или нескольких стандартных библиотек из списка, в которой выполняется поиск, при разрешении внешних ссылок.  
+## <a name="remarks"></a>Примечания  
+ Параметр/NODEFAULTLIB предписывает компоновщику удалить один или несколько стандартных библиотек из списка библиотек, в которых осуществляется поиск при разрешении внешних ссылок.  
   
- Чтобы создать OBJ\-файл, в котором отсутствуют ссылки на используемые по умолчанию библиотеки, используйте параметр [\/Zl \(Опущенное по умолчанию имя библиотеки\)](../../build/reference/zl-omit-default-library-name.md).  
+ Чтобы создать OBJ-файл, который не содержит ссылки на библиотеки по умолчанию, используйте [/Zl (пропустить имя библиотеки по умолчанию)](../../build/reference/zl-omit-default-library-name.md).  
   
- По умолчанию при использовании параметра \/NODEFAULTLIB из списка библиотек, в которых осуществляется поиск при разрешении ссылок, удаляются все используемые по умолчанию библиотеки.  Необязательный параметр *library* используется для удаления из списка только указанных библиотек.  Параметр \/NODEFAULTLIB необходимо указывать для каждой исключаемой библиотеки.  
+ По умолчанию параметр/NODEFAULTLIB удаляет все стандартные библиотеки из списка библиотек, в которых осуществляется поиск при разрешении внешних ссылок. Необязательный *библиотеки* параметр позволяет удалить указанных библиотек из списка библиотек, он выполняет поиск при разрешении внешних ссылок. Укажите параметр/NODEFAULTLIB для всех библиотек, которые требуется исключить.  
   
- При разрешении ссылок на внешние определения поиск сначала осуществляется в явно заданных библиотеках, затем в библиотеках по умолчанию, заданных с помощью параметра \/DEFAULTLIB, а затем в библиотеках по умолчанию, определенных в OBJ\-файлах.  
+ При разрешении ссылок на внешние определения поиск сначала в библиотеках, которые явно не указан, то по умолчанию библиотек, указанных с помощью параметра/DEFAULTLIB, а затем в стандартных библиотек в OBJ-файлы.  
   
- Параметр \/NODEFAULTLIB:*library* переопределяет параметр [\/DEFAULTLIB:](../../build/reference/defaultlib-specify-default-library.md)*library*, в котором задан такой же параметр *library*.  
+ / Параметр NODEFAULTLIB:*библиотеки* переопределяет [/DEFAULTLIB:](../../build/reference/defaultlib-specify-default-library.md)*библиотеки* при же *библиотеки* указано как имя.  
   
- Если параметр \/NODEFAULTLIB используется для построения программы без библиотеки времени выполнения C, можно использовать параметр [\/ENTRY](../../build/reference/entry-entry-point-symbol.md) для определения точки \(функции\) входа в программу.  Для получения дополнительной информации см. [Особенности библиотеки CRT](../../c-runtime-library/crt-library-features.md).  
+ Если используется параметр/NODEFAULTLIB, например, для построения программы без библиотеки времени выполнения языка C, необходимо также использовать [/Entry](../../build/reference/entry-entry-point-symbol.md) для указания точки входа (функция) в программе. Дополнительные сведения см. в разделе [Функции библиотеки CRT](../../c-runtime-library/crt-library-features.md).  
   
-### Установка данного параметра компоновщика в среде разработки Visual Studio  
+### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>Задание данного параметра компоновщика в среде разработки Visual Studio  
   
-1.  Откройте диалоговое окно **Страницы свойств** проекта.  Дополнительные сведения см. в разделе [Задание свойств проекта C\+\+](../../ide/working-with-project-properties.md).  
+1.  Откройте диалоговое окно **Страницы свойств** проекта. Дополнительные сведения см. в разделе [задание свойств проекта Visual C++](../../ide/working-with-project-properties.md).  
   
-2.  Выберите папку **Компоновщик**.  
+2.  Нажмите кнопку **компоновщика** папки.  
   
-3.  Выберите страницу свойств **Ввод**.  
+3.  Нажмите кнопку **ввода**страницу свойств.  
   
-4.  Выберите свойство **Игнорировать все стандартные библиотеки** или задайте список библиотек с помощью свойства **Игнорировать указанную библиотеку**.  Результаты изменения этих свойств отображаются на странице **Командная строка**.  
+4.  Выберите **игнорировать все стандартные библиотеки** свойства или указать список библиотек, которые необходимо пропустить в **Игнорировать указанную библиотеку** свойство. **Командной строки** страницы свойств будет показано влияние изменения, внесенные в эти свойства.  
   
-### Установка данного параметра компоновщика программным способом  
+### <a name="to-set-this-linker-option-programmatically"></a>Задание данного параметра компоновщика программным способом  
   
 -   См. разделы <xref:Microsoft.VisualStudio.VCProjectEngine.VCLinkerTool.IgnoreDefaultLibraryNames%2A> и <xref:Microsoft.VisualStudio.VCProjectEngine.VCLinkerTool.IgnoreAllDefaultLibraries%2A>.  
   
-## См. также  
+## <a name="see-also"></a>См. также  
  [Настройка параметров компоновщика](../../build/reference/setting-linker-options.md)   
  [Параметры компоновщика](../../build/reference/linker-options.md)

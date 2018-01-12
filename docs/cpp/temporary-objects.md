@@ -16,18 +16,19 @@ caps.latest.revision: "7"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 8cfea84beb3e6e2bef7c0b58d8932cbdc7a44f6b
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 5bb0c065158df339fb7e0a5cf39b4588411babe4
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="temporary-objects"></a>Временные объекты
 В некоторых случаях компилятору необходимо создавать временные объекты. Такие объекты могут создаваться по следующим причинам.  
   
 -   Для инициализации ссылки `const` с помощью инициализатора типа, отличного от инициализатора базового типа инициализируемой ссылки.  
   
--   Для сохранения возвращаемого значения функции, которая возвращает пользовательский тип. Эти временные объекты создаются только в том случае, если программа не копирует возвращаемое значение в объект. Например:  
+-   Для сохранения возвращаемого значения функции, которая возвращает пользовательский тип. Эти временные объекты создаются только в том случае, если программа не копирует возвращаемое значение в объект. Пример:  
   
     ```  
     UDT Func1();    //  Declare a function that returns a user-defined  

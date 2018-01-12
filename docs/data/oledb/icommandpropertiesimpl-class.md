@@ -1,34 +1,36 @@
 ---
-title: "Класс ICommandPropertiesImpl | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "ICommandPropertiesImpl"
-  - "ATL.ICommandPropertiesImpl"
-  - "ATL::ICommandPropertiesImpl"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "ICommandPropertiesImpl - класс"
+title: "Класс ICommandPropertiesImpl | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- ICommandPropertiesImpl
+- ATL.ICommandPropertiesImpl
+- ATL::ICommandPropertiesImpl
+dev_langs: C++
+helpviewer_keywords: ICommandPropertiesImpl class
 ms.assetid: b3cf6aea-527e-4f0d-96e0-669178b021a2
-caps.latest.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 9
+caps.latest.revision: "9"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: 5878e7fa6345e294025b45474b1b384d01283c49
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 12/21/2017
 ---
-# Класс ICommandPropertiesImpl
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Предоставляет реализацию интерфейса [ICommandProperties](https://msdn.microsoft.com/en-us/library/ms723044.aspx).  
+# <a name="icommandpropertiesimpl-class"></a>Класс ICommandPropertiesImpl
+Предоставляет реализацию [ICommandProperties](https://msdn.microsoft.com/en-us/library/ms723044.aspx) интерфейса.  
   
-## Синтаксис  
+## <a name="syntax"></a>Синтаксис  
   
 ```  
 template <class T, class PropClass = T>  
@@ -36,28 +38,28 @@ class ATL_NO_VTABLE ICommandPropertiesImpl
    : public ICommandProperties, public CUtlProps<PropClass>  
 ```  
   
-#### Параметры  
+#### <a name="parameters"></a>Параметры  
  `T`  
  Класс, производный от  
   
  `PropClass`  
  Класс свойств.  
   
-## Члены  
+## <a name="members"></a>Участники  
   
-### Методы Interface  
+### <a name="interface-methods"></a>Методы интерфейса  
   
 |||  
 |-|-|  
-|[GetProperties](../../data/oledb/icommandpropertiesimpl-getproperties.md)|Возвращает список свойств в группе свойств набора строк, которые в данный момент запрос для набора строк.|  
-|[SetProperties](../Topic/ICommandPropertiesImpl::SetProperties.md)|Задает свойства в группе свойств набора строк.|  
+|[GetProperties](../../data/oledb/icommandpropertiesimpl-getproperties.md)|Возвращает список свойств в группе свойств набора строк, в настоящее время запрос для набора строк.|  
+|[SetProperties](../../data/oledb/icommandpropertiesimpl-setproperties.md)|Задает свойства в группе свойств набора строк.|  
   
-## Заметки  
- Это необходимо в командах.  Реализация статической предусмотрена функция, определенная макросом [BEGIN\_PROPSET\_MAP](../Topic/BEGIN_PROPSET_MAP.md).  
+## <a name="remarks"></a>Примечания  
+ Это обязательная для команды. Реализация обеспечивается статическую функцию, определяемую [BEGIN_PROPSET_MAP](../../data/oledb/begin-propset-map.md) макрос.  
   
-## Требования  
- **Header:**  atldb.h  
+## <a name="requirements"></a>Требования  
+ **Заголовок:** atldb.h  
   
-## См. также  
+## <a name="see-also"></a>См. также  
  [Шаблоны поставщика OLE DB](../../data/oledb/ole-db-provider-templates-cpp.md)   
  [Архитектура шаблона поставщика OLE DB](../../data/oledb/ole-db-provider-template-architecture.md)

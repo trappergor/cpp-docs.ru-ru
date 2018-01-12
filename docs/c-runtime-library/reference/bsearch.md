@@ -4,12 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
-apiname:
-- bsearch
+apiname: bsearch
 apilocation:
 - msvcrt.dll
 - msvcr80.dll
@@ -23,39 +21,22 @@ apilocation:
 - ucrtbase.dll
 - api-ms-win-crt-utility-l1-1-0.dll
 apitype: DLLExport
-f1_keywords:
-- bsearch
-dev_langs:
-- C++
+f1_keywords: bsearch
+dev_langs: C++
 helpviewer_keywords:
 - arrays [CRT], binary search
 - bsearch function
 ms.assetid: e0ad2f47-e7dd-49ed-8288-870457a14a2c
-caps.latest.revision: 22
+caps.latest.revision: "22"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: e257f037a05c45f5b98e64ea55bd125af443b0be
-ms.openlocfilehash: 431bb94e27397f8a0242c45db83e00250e5c82f3
-ms.contentlocale: ru-ru
-ms.lasthandoff: 03/30/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: 1db24ea4be15c4111b94a28323903dd3f2c3ed7f
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="bsearch"></a>bsearch
 Выполняет двоичный поиск по отсортированному массиву. Существует более безопасная версия этой функции, см. раздел [bsearch_s](../../c-runtime-library/reference/bsearch-s.md).  
@@ -94,7 +75,7 @@ void *bsearch(
 ## <a name="remarks"></a>Примечания  
  Функция `bsearch` выполняет двоичный поиск по отсортированному массиву, состоящему из `num` элементов размером `width` байт каждый. Значение `base` — это указатель на начало массива, в котором должен производиться поиск, а `key` — искомое значение. Параметр `compare` — это указатель на предоставляемую пользователем подпрограмму, которая сравнивает заданный ключ с элементом массива и возвращает одно из следующих значений, показывающих, как соотносятся значения ключа и элемента массива:  
   
-|Значение, возвращаемое подпрограммой `compare`|Описание|  
+|Значение, возвращаемое подпрограммой `compare`|Описание:|  
 |-----------------------------------------|-----------------|  
 |\< 0|Ключ меньше, чем элемент массива.|  
 |0|Ключ равен элементу массива.|  

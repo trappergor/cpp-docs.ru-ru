@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-windows
+ms.technology: cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
@@ -16,35 +15,19 @@ f1_keywords:
 - ATLSECURITY/ATL::CSacl::GetAceCount
 - ATLSECURITY/ATL::CSacl::RemoveAce
 - ATLSECURITY/ATL::CSacl::RemoveAllAces
-dev_langs:
-- C++
-helpviewer_keywords:
-- CSacl class
+dev_langs: C++
+helpviewer_keywords: CSacl class
 ms.assetid: 8624889b-aebc-4183-9d29-a20f07837f05
-caps.latest.revision: 22
+caps.latest.revision: "22"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: d2d39abf526a58b8442107b5ee816f316ae841f5
-ms.openlocfilehash: bd9ef9932938cfe5ec65965b3a40116da7f43b90
-ms.contentlocale: ru-ru
-ms.lasthandoff: 03/31/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: 104c189b1f368b42ef1d93496629b4e142e1c938
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="csacl-class"></a>Класс CSacl
 Этот класс является оболочкой для структуры системного списка управления ДОСТУПОМ (список управления доступом системы).  
@@ -58,18 +41,18 @@ ms.lasthandoff: 03/31/2017
 class CSacl : public CAcl
 ```  
   
-## <a name="members"></a>Члены  
+## <a name="members"></a>Участники  
   
 ### <a name="public-constructors"></a>Открытые конструкторы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[CSacl::CSacl](#csacl)|Конструктор.|  
 |[CSacl:: ~ CSacl](#dtor)|Деструктор|  
   
 ### <a name="public-methods"></a>Открытые методы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[CSacl::AddAuditAce](#addauditace)|Добавляет запись управления доступом (ACE) аудита `CSacl` объекта.|  
 |[CSacl::GetAceCount](#getacecount)|Возвращает количество записей управления доступом (ACE) в `CSacl` объекта.|  
@@ -78,7 +61,7 @@ class CSacl : public CAcl
   
 ### <a name="public-operators"></a>Открытые операторы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[CSacl::operator =](#operator_eq)|Оператор присвоения.|  
   
@@ -89,7 +72,7 @@ class CSacl : public CAcl
   
  Используйте методы класса, предоставленные для добавления, удаления, создания и удаления элементов управления доступом из **SACL** объекта. См. также [AtlGetSacl](security-global-functions.md#atlgetsacl) и [AtlSetSacl](security-global-functions.md#atlsetsacl).  
   
- Введение модель управления доступом в Windows см. в разделе [управления доступом](http://msdn.microsoft.com/library/windows/desktop/aa374860) в [!INCLUDE[winSDK](../../atl/includes/winsdk_md.md)].  
+ Введение модель управления доступом в Windows см. в разделе [управления доступом](http://msdn.microsoft.com/library/windows/desktop/aa374860) в Windows SDK.  
   
 ## <a name="inheritance-hierarchy"></a>Иерархия наследования  
  [CAcl](../../atl/reference/cacl-class.md)  
@@ -229,4 +212,3 @@ void RemoveAllAces() throw();
  [Элементы управления доступом](http://msdn.microsoft.com/library/windows/desktop/aa374868)   
  [Общие сведения о классе](../../atl/atl-class-overview.md)   
  [Глобальные функции безопасности](../../atl/reference/security-global-functions.md)
-

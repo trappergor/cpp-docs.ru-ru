@@ -39,11 +39,12 @@ caps.latest.revision: "22"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 8b99e318e95644b327f3629658ac5100f08c05d8
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 1e5c20e436e7b51b1c4e5463fb56165ae24c264d
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="ismbbtrail-ismbbtraill"></a>_ismbbtrail, _ismbbtrail_l
 Определяет, является ли байт конечным байтом многобайтового символа.  
@@ -71,7 +72,7 @@ int _ismbbtrail_l(
  `_ismbbtrail` возвращает ненулевое значение, если целочисленное значение `c` является вторым байтом многобайтового символа. Например, только для кодовой страницы 932, допустимые диапазоны: 0x40–0x7E и 0x80–0xFC.  
   
 ## <a name="remarks"></a>Примечания  
- Функция `_ismbbtrail` использует текущий языковой стандарт для поведения, зависящего от языкового стандарта. Функция`_ismbbtrail_l` идентична за исключением того, что использует переданный языковой стандарт. Дополнительные сведения см. в разделе [Языковой стандарт](../../c-runtime-library/locale.md).  
+ Функция `_ismbbtrail` использует текущий языковой стандарт для поведения, зависящего от языкового стандарта. Функция`_ismbbtrail_l` идентична за исключением того, что использует переданный языковой стандарт. Для получения дополнительной информации см. [Locale](../../c-runtime-library/locale.md).  
   
 ## <a name="requirements"></a>Требования  
   
@@ -82,7 +83,7 @@ int _ismbbtrail_l(
   
  \* Для констант манифестов, используемых в условиях проверки.  
   
- Дополнительные сведения о совместимости см. в разделе [Compatibility](../../c-runtime-library/compatibility.md).  
+ Дополнительные сведения о совместимости см. в разделе [Совместимость](../../c-runtime-library/compatibility.md).  
   
 ## <a name="see-also"></a>См. также  
  [Классификация байтов](../../c-runtime-library/byte-classification.md)   

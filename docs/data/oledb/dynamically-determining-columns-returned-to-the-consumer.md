@@ -1,31 +1,34 @@
 ---
-title: "Динамично определяемые столбцы, возвращенные объекту-получателю | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "закладки [C++], динамически определяемые столбцы"
-  - "динамически определяемые столбцы [C++]"
+title: "Динамично определяемые столбцы, возвращенные объекту-получателю | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- bookmarks [C++], dynamically determining columns
+- dynamically determining columns [C++]
 ms.assetid: 58522b7a-894e-4b7d-a605-f80e900a7f5f
-caps.latest.revision: 7
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: 2827747d91bd1c26e173b6f0bdb44d54c3d0f8e3
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 12/21/2017
 ---
-# Динамично определяемые столбцы, возвращенные объекту-получателю
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Макрос PROVIDER\_COLUMN\_ENTRY обычно обрабатывает вызов **IColumnsInfo::GetColumnsInfo**.  Однако, поскольку объект\-получатель может выбрать использование закладок, поставщик обязан вносить изменения в возвращенные столбы в зависимости от запроса объекта\-получателя.  
+# <a name="dynamically-determining-columns-returned-to-the-consumer"></a>Динамично определяемые столбцы, возвращенные объекту-получателю
+PROVIDER_COLUMN_ENTRY в обычном режиме обработки **IColumnsInfo::GetColumnsInfo** вызова. Тем не менее поскольку объект-получатель может выбрать использование закладок, поставщик необходимо изменять столбцы, возвращенные в зависимости от того, является ли потребитель запрашивает закладку.  
   
- Для обработки вызова **IColumnsInfo::GetColumnsInfo** удалите макрос PROVIDER\_COLUMN\_MAP, который определяет функцию `GetColumnInfo`, и в пользовательской записи MyProviderRS.h `CAgentMan` замените его на определение собственной функции `GetColumnInfo`.  
+ Для обработки **IColumnsInfo::GetColumnsInfo** вызова, удалите PROVIDER_COLUMN_MAP, которая определяет функцию `GetColumnInfo`, из `CAgentMan` пользователя записи (MyProviderRS.h) и замените его собственного определения `GetColumnInfo` функции:  
   
 ```  
 ////////////////////////////////////////////////////////////////////////  
@@ -48,11 +51,11 @@ public:
 };  
 ```  
   
- Далее установите функцию `GetColumnInfo` в MyProviderRS.cpp в соответствии с ниже приведенным кодом.  
+ Далее реализовать `GetColumnInfo` функционировать в MyProviderRS.cpp, как показано в следующем коде.  
   
- `GetColumnInfo` проверяет наличие установки свойства OLE DB **DBPROP\_BOOKMARKS**.  Для получения этого свойства `pRowset` используется указатель в объекте набора строк `GetColumnInfo`.  Указатель `pThis` представляет класс, создающий набор строк, которые формируют класс, где сохраняется сопоставление свойств.  `GetColumnInfo` приводит указатель `pThis` к указателю `RMyProviderRowset`.  
+ `GetColumnInfo`проверяет сначала свойство OLE DB **DBPROP_BOOKMARKS** имеет значение. Чтобы получить значение свойства `GetColumnInfo` использует указатель (`pRowset`) для объекта набора строк. `pThis` Указатель представляет класс, который создал набор строк, который является классом, где хранится в схеме сопоставления свойств. `GetColumnInfo`приведения типов `pThis` указатель `RMyProviderRowset` указателя.  
   
- Чтобы проверить свойство **DBPROP\_BOOKMARKS**, `GetColumnInfo` используйте интерфейс `IRowsetInfo`, делая вызов `QueryInterface` интерфейса `pRowset`.  В качестве дополнительно варианта можно использовать метод ATL [CComQIPtr](../../atl/reference/ccomqiptr-class.md).  
+ Для проверки **DBPROP_BOOKMARKS** свойства `GetColumnInfo` использует `IRowsetInfo` интерфейс, который можно получить, вызвав `QueryInterface` на `pRowset` интерфейса. В качестве альтернативы можно использовать ATL [CComQIPtr](../../atl/reference/ccomqiptr-class.md) метод вместо него.  
   
 ```  
 ////////////////////////////////////////////////////////////////////  
@@ -113,7 +116,7 @@ ATLCOLUMNINFO* CAgentMan::GetColumnInfo(void* pThis, ULONG* pcCols)
 }  
 ```  
   
- В этом примере показан статический массив, который содержит данные столбцов.  Если потребитель не использует столбец закладки, запись в массиве остается незаполненной.  Для того чтобы управлять данными, создайте два массива с макросами: ADD\_COLUMN\_ENTRY и ADD\_COLUMN\_ENTRY\_EX.  ADD\_COLUMN\_ENTRY\_EX является дополнительным параметром, `flags`, который необходим для назначения столбца закладки.  
+ Содержит сведения о столбцах в этом примере используется статического массива. Если потребитель не столбец закладки, одна запись в массиве не используется. Обрабатывать эти данные, создайте два макроса массива: ADD_COLUMN_ENTRY и ADD_COLUMN_ENTRY_EX. ADD_COLUMN_ENTRY_EX дополнительным параметром, `flags`, который требуется при указании столбца закладки.  
   
 ```  
 ////////////////////////////////////////////////////////////////////////  
@@ -146,7 +149,7 @@ precision, scale, guid, dataClass, member, flags) \
    _rgColumns[ulCols].columnid.uName.pwszName = (LPOLESTR)name;  
 ```  
   
- В функции `GetColumnInfo` макрос закладки используется следующим образом:  
+ В `GetColumnInfo` функция макрос закладки используется следующим образом:  
   
 ```  
 ADD_COLUMN_ENTRY_EX(ulCols, OLESTR("Bookmark"), 0, sizeof(DWORD),  
@@ -154,7 +157,7 @@ ADD_COLUMN_ENTRY_EX(ulCols, OLESTR("Bookmark"), 0, sizeof(DWORD),
    DBCOLUMNFLAGS_ISBOOKMARK)  
 ```  
   
- Теперь можно скомпилировать и запустить расширенный интерфейс поставщика.  Для того чтобы протестировать поставщика, измените тестовый объект\-получатель в соответствии с разделом [Внедрение простого объекта\-получателя](../../data/oledb/implementing-a-simple-consumer.md).  Запустите тестовый объект\-получатель вместе с поставщиком.  При нажатии кнопки **Запустить** в диалоговом окне **Тестовый объект\-получатель**, убедитесь в том, чтобы строки, направляемые поставщиком объекту\-получателю, были правильными.  
+ Теперь можно скомпилировать и запустить расширенный интерфейс поставщика. Чтобы протестировать поставщика, измените тестовый объект-получатель как описано в [реализация простых объектов получателей](../../data/oledb/implementing-a-simple-consumer.md). Запустите тестовый объект-получатель с поставщиком. Убедитесь в том, что тестовый объект-получатель правильную строки от поставщика при нажатии кнопки **запуска** кнопку в **тестовый объект-получатель** диалоговое окно.  
   
-## См. также  
+## <a name="see-also"></a>См. также  
  [Усовершенствование простого поставщика только для чтения](../../data/oledb/enhancing-the-simple-read-only-provider.md)

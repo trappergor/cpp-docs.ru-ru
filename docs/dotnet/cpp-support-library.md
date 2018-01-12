@@ -1,39 +1,41 @@
 ---
-title: "Библиотека поддержки C++ | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Библиотека поддержки C++"
-  - "Библиотека управляемой поддержки"
-  - "Библиотека поддержки Visual C++"
+title: "Библиотека поддержки C++ | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+dev_langs: C++
+helpviewer_keywords:
+- Managed Support Library
+- C++ Support Library
+- Visual C++ Support Library
 ms.assetid: fe6246eb-9ac7-478d-a272-dc9b09b14788
-caps.latest.revision: 9
-caps.handback.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "9"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: f072d9b23a39f82f8a8fd3e8482dffacad48d70c
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 12/21/2017
 ---
-# Библиотека поддержки C++
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Библиотека поддержки C\+\+ предоставляет классы, которые поддерживают управляемое программирование в C\+\+.  
+# <a name="c-support-library"></a>Библиотека поддержки C++
+Библиотека поддержки C++ предоставляет классы, поддерживающие управляемое программирование в C++.  
   
-## В этом подразделе  
- [Общие сведения о маршалировании в C\+\+](../dotnet/overview-of-marshaling-in-cpp.md)  
+## <a name="in-this-section"></a>В этом разделе  
+ [Общие сведения о маршалинге в C++](../dotnet/overview-of-marshaling-in-cpp.md)  
   
  [Классы управления ресурсами](../dotnet/resource-management-classes.md)  
   
- [Синхронизация \(класс lock\)](../dotnet/synchronization-lock-class.md)  
+ [Синхронизация (класс lock)](../dotnet/synchronization-lock-class.md)  
   
- [Вызов функций в конкретном домене приложения](../Topic/Calling%20Functions%20in%20a%20Specific%20Application%20Domain.md)  
+ [Вызов функций в конкретном домене приложения](../dotnet/calling-functions-in-a-specific-application-domain.md)  
   
  [com::ptr](../dotnet/com-ptr.md)

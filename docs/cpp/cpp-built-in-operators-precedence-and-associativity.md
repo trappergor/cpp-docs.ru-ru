@@ -23,11 +23,12 @@ caps.latest.revision: "13"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 7a286be3d29e22cc3bae3d34241f08735f5f7b0b
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 95cbb68740fe43fa8a76624abb57284cb68e7805
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="c-built-in-operators-precedence-and-associativity"></a>Встроенный C++ операторы, приоритет и ассоциативность операторов
 
@@ -63,16 +64,16 @@ ms.lasthandoff: 10/24/2017
 |[Взятия адреса](../cpp/address-of-operator-amp.md)|[&amp;](../cpp/address-of-operator-amp.md)|
 |[Косвенное обращение](../cpp/indirection-operator-star.md)|[&#42;](../cpp/indirection-operator-star.md)|
 |[Создание объекта](../cpp/new-operator-cpp.md)|[new](../cpp/new-operator-cpp.md)|
-|[Удаление объекта](../cpp/delete-operator-cpp.md)|[удалить](../cpp/delete-operator-cpp.md)|
+|[Удаление объекта](../cpp/delete-operator-cpp.md)|[delete](../cpp/delete-operator-cpp.md)|
 |[Приведение типов](../cpp/cast-operator-parens.md)|[()](../cpp/cast-operator-parens.md)|
 |**Приоритет группы 4, левый правой ассоциативностью**|
 |[Указатель на член (объекты или указатели)](../cpp/pointer-to-member-operators-dot-star-and-star.md)|[. &#42; или "->" &#42;](../cpp/pointer-to-member-operators-dot-star-and-star.md)|
 |**Приоритет группы 5, левый правой ассоциативностью**|
 |[Умножение](../cpp/multiplicative-operators-and-the-modulus-operator.md)|[&#42;](../cpp/multiplicative-operators-and-the-modulus-operator.md)|
-|[Деления](../cpp/multiplicative-operators-and-the-modulus-operator.md)|[/](../cpp/multiplicative-operators-and-the-modulus-operator.md)|
+|[Деление](../cpp/multiplicative-operators-and-the-modulus-operator.md)|[/](../cpp/multiplicative-operators-and-the-modulus-operator.md)|
 |[Остатка от деления](../cpp/multiplicative-operators-and-the-modulus-operator.md)|[%](../cpp/multiplicative-operators-and-the-modulus-operator.md)|
 |**Приоритет группы 6, левый правой ассоциативностью**|
-|[Добавление](../cpp/additive-operators-plus-and.md)|[+](../cpp/additive-operators-plus-and.md)|
+|[Сложение](../cpp/additive-operators-plus-and.md)|[+](../cpp/additive-operators-plus-and.md)|
 |[Вычитание](../cpp/additive-operators-plus-and.md)|[-](../cpp/additive-operators-plus-and.md)|
 |**Приоритет группы 7, левый правой ассоциативностью**|
 |[Сдвиг влево](../cpp/left-shift-and-right-shift-operators-input-and-output.md)|[<<](../cpp/left-shift-and-right-shift-operators-input-and-output.md)|
@@ -84,17 +85,17 @@ ms.lasthandoff: 10/24/2017
 |[Больше или равно](../cpp/relational-operators-equal-and-equal.md)|[>=](../cpp/relational-operators-equal-and-equal.md)|
 |**Приоритет группы 9, левый правой ассоциативностью**|
 |[Равенство](../cpp/equality-operators-equal-equal-and-exclpt-equal.md)|[==](../cpp/equality-operators-equal-equal-and-exclpt-equal.md)|
-|[Неравенства](../cpp/equality-operators-equal-equal-and-exclpt-equal.md)|[!=](../cpp/equality-operators-equal-equal-and-exclpt-equal.md)|
+|[Неравенство](../cpp/equality-operators-equal-equal-and-exclpt-equal.md)|[!=](../cpp/equality-operators-equal-equal-and-exclpt-equal.md)|
 |**Приоритет группы 10 правой ассоциативностью слева**|
-|[Побитовое и](../cpp/bitwise-and-operator-amp.md)|[&amp;](../cpp/bitwise-and-operator-amp.md)|
+|[Побитовое И](../cpp/bitwise-and-operator-amp.md)|[&amp;](../cpp/bitwise-and-operator-amp.md)|
 |**Приоритет группы 11, левый правой ассоциативностью**|
 |[Побитовое исключающее или](../cpp/bitwise-exclusive-or-operator-hat.md)|[^](../cpp/bitwise-exclusive-or-operator-hat.md)|
 |**Приоритет группы 12, левый правой ассоциативностью**|
 |[Побитовое включающее или](../cpp/bitwise-inclusive-or-operator-pipe.md)|[&#124;](../cpp/bitwise-inclusive-or-operator-pipe.md)|
 |**Приоритет группы 13, левый правой ассоциативностью**|
-|[Логическое и](../cpp/logical-and-operator-amp-amp.md)|[&amp;&amp;](../cpp/logical-and-operator-amp-amp.md)|
+|[Логическое И](../cpp/logical-and-operator-amp-amp.md)|[&amp;&amp;](../cpp/logical-and-operator-amp-amp.md)|
 |**Приоритет группы 14, левый правой ассоциативностью**|
-|[Логическое или](../cpp/logical-or-operator-pipe-pipe.md)|[&#124;&#124;](../cpp/logical-or-operator-pipe-pipe.md)|
+|[Логическое ИЛИ](../cpp/logical-or-operator-pipe-pipe.md)|[&#124;&#124;](../cpp/logical-or-operator-pipe-pipe.md)|
 |**Приоритет группы 15, право ассоциативность слева**|
 |[Условный](../cpp/conditional-operator-q.md)|[? :](../cpp/conditional-operator-q.md)|
 |**Приоритет группы 16, право ассоциативность слева**|

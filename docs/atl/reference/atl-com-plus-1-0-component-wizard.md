@@ -17,11 +17,12 @@ caps.latest.revision: "13"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: d7d596396ec46aa1f30be00743ab6fe95d49a865
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 1c82cf91c61f047a80c513d1aead25fe73c77715
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="atl-com-10-component-wizard"></a>Мастер компонентов ATL COM+ 1.0
 Этот мастер используется для добавления объекта в проект, которая поддерживает службы COM + 1.0, в том числе транзакции.  
@@ -68,7 +69,7 @@ ms.lasthandoff: 10/24/2017
 > [!NOTE]
 >  Если вы создаете проект, использующий атрибуты, или если на этой странице мастера указывается, что компонент COM + 1.0 использует атрибуты, не может изменить этот параметр, поскольку ATL не включает `coclass` атрибута.  
   
- **Тип**  
+ **Type**  
  Задает описание объекта, которое будет отображаться в реестре  
   
  **Interface**  

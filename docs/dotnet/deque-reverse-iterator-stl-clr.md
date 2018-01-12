@@ -1,41 +1,42 @@
 ---
-title: "deque::reverse_iterator (STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::deque::reverse_iterator"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "reverse_iterator - элемент [STL/CLR]"
+title: "deque::reverse_iterator (STL/CLR) | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::deque::reverse_iterator
+dev_langs: C++
+helpviewer_keywords: reverse_iterator member [STL/CLR]
 ms.assetid: 82bdfda7-496d-4f8a-8eb8-96bee83b5708
-caps.latest.revision: 16
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 14
+caps.latest.revision: "16"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: 9bf68ad79146a80a1026015034c5ae986ad00cc4
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 12/21/2017
 ---
-# deque::reverse_iterator (STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Тип обратного итератора для контролируемой последовательности.  
+# <a name="dequereverseiterator-stlclr"></a>deque::reverse_iterator (STL/CLR)
+Тип обратного итератора для управляемой последовательности.  
   
-## Синтаксис  
+## <a name="syntax"></a>Синтаксис  
   
 ```  
 typedef T3 reverse_iterator;  
 ```  
   
-## Заметки  
- Описывает тип объекта неспецифицированного типа `T3`, который можно использовать в качестве обратного итератор для контролируемой последовательности.  
+## <a name="remarks"></a>Примечания  
+ Тип описывает объект незаданного типа `T3` , можно использовать в качестве обратного итератора для управляемой последовательности.  
   
-## Пример  
+## <a name="example"></a>Пример  
   
 ```  
 // cliext_deque_reverse_iterator.cpp   
@@ -66,15 +67,18 @@ int main()
   
 ```  
   
-  **a B C.**  
- **x a B**   
-## Требования  
- **Заголовок:**\<cliext\/deque\>  
+```Output  
+c b a  
+x b a  
+```  
+  
+## <a name="requirements"></a>Требования  
+ **Заголовок:** \<cliext/deque >  
   
  **Пространство имен:** cliext  
   
-## См. также  
- [deque](../dotnet/deque-stl-clr.md)   
- [deque::const\_iterator](../Topic/deque::const_iterator%20\(STL-CLR\).md)   
- [deque::const\_reverse\_iterator](../dotnet/deque-const-reverse-iterator-stl-clr.md)   
- [deque::iterator](../dotnet/deque-iterator-stl-clr.md)
+## <a name="see-also"></a>См. также  
+ [deque (STL/CLR)](../dotnet/deque-stl-clr.md)   
+ [deque::const_iterator (STL/CLR)](../dotnet/deque-const-iterator-stl-clr.md)   
+ [deque::const_reverse_iterator (STL/CLR)](../dotnet/deque-const-reverse-iterator-stl-clr.md)   
+ [deque::iterator (STL/CLR)](../dotnet/deque-iterator-stl-clr.md)

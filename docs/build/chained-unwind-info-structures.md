@@ -13,11 +13,12 @@ caps.latest.revision: "14"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 8e608d3b6826eb8bfbcebdec7fdf9891d033b418
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 3ac09c1f107b51542b7a17c8661eb784b4abf14a
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="chained-unwind-info-structures"></a>Структуры связанных данных раскрутки
 Если установлен флаг UNW_FLAG_CHAININFO, затем Структура данных раскрутки является дополнительной и общего исключения обработчик или объединении в цепочку-поле содержит первичную информацию раскрутки. Следующий код извлекает основные сведения очистки, при условии, что `unwindInfo` является структура, имеющая UNW_FLAG_CHAININFO значение флага.  

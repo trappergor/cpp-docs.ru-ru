@@ -31,11 +31,12 @@ caps.latest.revision: "12"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 504ab55aadc315dcf06c07a999f2a7d3dfca630b
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 71dbbf3c56f81b4987fcadb3db98be8d82e70fb2
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="fsetpos"></a>fsetpos
 Задает индикатор позиции в потоке.  
@@ -59,7 +60,7 @@ int fsetpos(
 ## <a name="return-value"></a>Возвращаемое значение  
  В случае успеха `fsetpos` возвращает 0. В случае сбоя функция возвращает ненулевое значение и присваивает `errno` одну из следующих констант манифеста, которые определяются в файле ERRNO.H: `EBADF` (файл недоступен, или объект, на который указывает `stream`, не является допустимой файловой структурой) или `EINVAL` (было передано недопустимое значение для `stream` или `pos`). Если передан недопустимый параметр, эти функции вызывают обработчик недопустимого параметра, как описано в разделе [Проверка параметров](../../c-runtime-library/parameter-validation.md).  
   
- Дополнительные сведения об этих и других кодах возврата см. в разделе [_doserrno, errno, _sys_errlist, and _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).  
+ Дополнительные сведения об этих и других кодах возврата см. в разделе [_doserrno, errno, _sys_errlist и _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).  
   
 ## <a name="remarks"></a>Примечания  
  `fsetpos` Функция задает для индикатора позиции файла `stream` значению `pos`, который получается в предыдущем вызове `fgetpos` от `stream`. Функция очищает индикатор end of file и отменяет последствия [ungetc](../../c-runtime-library/reference/ungetc-ungetwc.md) на `stream`. После вызова `fsetpos` следующая операция над `stream` может выполнять как ввод, так и вывод данных.  

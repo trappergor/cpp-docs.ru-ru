@@ -20,11 +20,12 @@ caps.latest.revision: "20"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: c91e6e6e4b74e1f2e9832d32b4bbf82cd62d6053
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: a5dec3b0db6d77cc11d0e2ccdc97fe54ab8e0624
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="building-cc-isolated-applications-and-side-by-side-assemblies"></a>Построение изолированных приложений и параллельных сборок C/C++
 Visual C++ поддерживает модель развертывания клиентских приложений Windows, основанную на идее [изолированных приложений](http://msdn.microsoft.com/library/aa375190) и [параллельных сборок](http://msdn.microsoft.com/library/ff951640). По умолчанию Visual C++ выполняет построение всех машинных приложений C/C++ в качестве изолированных приложений, использующих [манифесты](http://msdn.microsoft.com/library/aa375365) для описания зависимостей от библиотек Visual C++.  
@@ -33,7 +34,7 @@ Visual C++ поддерживает модель развертывания кл
   
  В этом разделе рассматриваются способы построения изолированного приложения C/C++ и обеспечения его привязки к библиотекам Visual C++ с помощью манифеста. Сведения в этом разделе в первую очередь актуальны для машинных (или неуправляемых) приложений Visual C++. Подробнее о развертывании машинных приложений, построенных с помощью Visual C++, см. в статье [Redistributing Visual C++ Files](../ide/redistributing-visual-cpp-files.md).  
   
-## <a name="in-this-section"></a>Содержание  
+## <a name="in-this-section"></a>В этом разделе  
  [Основные понятия, связанные с изолированными приложениями и параллельными сборками](../build/concepts-of-isolated-applications-and-side-by-side-assemblies.md)  
   
  [Создание изолированных приложений на C/C++](../build/building-c-cpp-isolated-applications.md)  

@@ -1,39 +1,41 @@
 ---
-title: "CBulkRowset::AddRefRows | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "CBulkRowset::AddRefRows"
-  - "AddRefRows"
-  - "CBulkRowset.AddRefRows"
-  - "ATL.CBulkRowset<TAccessor>.AddRefRows"
-  - "ATL::CBulkRowset::AddRefRows"
-  - "CBulkRowset<TAccessor>::AddRefRows"
-  - "ATL.CBulkRowset.AddRefRows"
-  - "ATL::CBulkRowset<TAccessor>::AddRefRows"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "AddRefRows - метод"
+title: "CBulkRowset::AddRefRows | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- CBulkRowset::AddRefRows
+- AddRefRows
+- CBulkRowset.AddRefRows
+- ATL.CBulkRowset<TAccessor>.AddRefRows
+- ATL::CBulkRowset::AddRefRows
+- CBulkRowset<TAccessor>::AddRefRows
+- ATL.CBulkRowset.AddRefRows
+- ATL::CBulkRowset<TAccessor>::AddRefRows
+dev_langs: C++
+helpviewer_keywords: AddRefRows method
 ms.assetid: 014be991-50f8-4377-ba16-fec80b54b406
-caps.latest.revision: 8
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: 43227ac0bddce6ac078364ff5ea1650616f8db53
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 12/21/2017
 ---
-# CBulkRowset::AddRefRows
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Вызывает метод [IRowset::AddRefRows](https://msdn.microsoft.com/en-us/library/ms719619.aspx), чтобы увеличить значение счетчика ссылок для всех строк в данный момент, извлеченных из навального набора строк.  
+# <a name="cbulkrowsetaddrefrows"></a>CBulkRowset::AddRefRows
+Вызовы [IRowset::AddRefRows](https://msdn.microsoft.com/en-us/library/ms719619.aspx) для увеличения числа ссылок для всех строк, которые в настоящее время получены из набора строк bulk.  
   
-## Синтаксис  
+## <a name="syntax"></a>Синтаксис  
   
 ```  
   
@@ -41,12 +43,12 @@ HRESULT AddRefRows( ) throw( );
   
 ```  
   
-## Возвращаемое значение  
- Стандартное `HRESULT`.  
+## <a name="return-value"></a>Возвращаемое значение  
+ Стандартный `HRESULT`.  
   
-## Требования  
+## <a name="requirements"></a>Требования  
  **Заголовок:** atldbcli.h  
   
-## См. также  
- [Класс CBulkRowset](../Topic/CBulkRowset%20Class.md)   
- [CBulkRowset::ReleaseRows](../Topic/CBulkRowset::ReleaseRows.md)
+## <a name="see-also"></a>См. также  
+ [CBulkRowset-класс](../../data/oledb/cbulkrowset-class.md)   
+ [CBulkRowset::ReleaseRows](../../data/oledb/cbulkrowset-releaserows.md)

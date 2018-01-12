@@ -1,32 +1,32 @@
 ---
-title: "Вычисление необходимых значений | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "вспомогательные функции, вычисление необходимых значений"
+title: "Вычисление необходимых значений | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords: helper functions, calculating necessary values
 ms.assetid: 4f037d0f-881a-4a48-a9d2-9f8872dfccb7
-caps.latest.revision: 7
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 4d1e51f1a23a81811bdd4aa6c6feec45748ee572
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 12/21/2017
 ---
-# Вычисление необходимых значений
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Необходимо вычислить два критичных участка данных с помощью отложенной вспомогательной программы.  Существуют две встроенные функции в Delayhlp.cpp, которые служат для вычисления данных.  
+# <a name="calculating-necessary-values"></a>Вычисление необходимых значений
+Два важных элемента данных должны вычисляться вспомогательная подпрограмма задержки. Для этого существуют две встроенные функции в delayhlp.cpp для вычисления данных.  
   
--   Первая функция выполняет вычисление индекса текущего импортируемого элемента в три различных таблицы \(адресную таблицу импорта \(IAT\), связанную адресную таблицу импорта \(BIAT\) и несвязанную адресную таблицу импорта \(UIAT\)\).  
+-   Первый вычисление индекса текущего импортируемого элемента в трех разных таблицах, (Импорт таблицы адресов (IAT), связанная таблица адресов импорта (BIAT) и несвязанную адресную таблицу импорта (UIAT)).  
   
--   Вторая функция выполняет подсчет количества импортируемых элементов в действительной таблице IAT.  
+-   Второй подсчитывает количество imports в допустимый IAT.  
   
 ```  
 // utility function for calculating the index of the current import  
@@ -50,5 +50,5 @@ CountOfImports(PCImgThunkData pitdBase) {
     }  
 ```  
   
-## См. также  
- [Understanding the Helper Function](http://msdn.microsoft.com/ru-ru/6279c12c-d908-4967-b0b3-cabfc3e91d3d)
+## <a name="see-also"></a>См. также  
+ [Понятие вспомогательной функции](understanding-the-helper-function.md)

@@ -1,46 +1,48 @@
 ---
-title: "lock::is_locked | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "is_locked"
-  - "msclr::lock::is_locked"
-  - "lock::is_locked"
-  - "msclr::lock.is_locked"
-  - "lock.is_locked"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "lock::is_locked"
+title: "Lock::is_locked | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords:
+- is_locked
+- msclr::lock::is_locked
+- lock::is_locked
+- msclr::lock.is_locked
+- lock.is_locked
+dev_langs: C++
+helpviewer_keywords: lock::is_locked
 ms.assetid: d888827c-8052-47c6-87a2-8c42f60a688d
-caps.latest.revision: 12
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 10
+caps.latest.revision: "12"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: f561a56b5859f6e7d0eaedeb6e6410bd4fe64a6d
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 12/21/2017
 ---
-# lock::is_locked
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Указывает, является ли хранение блокировку.  
+# <a name="lockislocked"></a>lock::is_locked
+Указывает, является ли блокировка удерживается.  
   
-## Синтаксис  
+## <a name="syntax"></a>Синтаксис  
   
 ```  
 bool is_locked();  
 ```  
   
-## Возвращаемое значение  
- `true` если блокировку удержатьо, `false` в противном случае.  
+## <a name="return-value"></a>Возвращаемое значение  
+ `true`Если блокировка удерживается, `false` в противном случае.  
   
-## Пример  
- В этом примере используется единственный экземпляр класса через несколько потоков.  Класс использует блокировку для себя, чтобы обеспечить доступ к его внутренним данным согласуются для каждого потока.  Поток основного приложения использует блокировку на том же экземпляре класса периодически для проверки, чтобы определить наличие рабочие потоки все еще существуют, и ожидает, чтобы оставить, пока все рабочие потоки не будут завершения своих задач.  
+## <a name="example"></a>Пример  
+ Этот пример использует один экземпляр класса в нескольких потоках.  Этот класс использует блокировку на себя для обеспечения согласованности для каждого потока доступов к внутренних данных.  Основной поток приложения использует блокировку на том же экземпляре класса для периодической проверки ли все рабочие потоки по-прежнему существует и ожиданий для выхода, пока все рабочие потоки завершили свои задачи.  
   
 ```  
 // msl_lock_is_locked.cpp  
@@ -115,22 +117,25 @@ int main() {
 }  
 ```  
   
-  **В потоке 3, счетчик \= 0**  
-**В потоке 3, счетчик \= 10**  
-**В потоке 5, счетчик \= 0**  
-**В потоке 5, счетчик \= 10**  
-**В потоке 4, счетчик \= 0**  
-**В потоке 4, счетчик \= 10**  
-**В потоке 7, счетчик \= 0**  
-**В потоке 7, счетчик \= 10**  
-**В потоке 6, счетчик \= 0**  
-**В потоке 6, счетчик \= 10**  
-**Все завершения потоков.**   
-## Требования  
- **Файл заголовка**\<msclr\\lock.h\>  
+```Output  
+In thread 3, Counter = 0  
+In thread 3, Counter = 10  
+In thread 5, Counter = 0  
+In thread 5, Counter = 10  
+In thread 4, Counter = 0  
+In thread 4, Counter = 10  
+In thread 7, Counter = 0  
+In thread 7, Counter = 10  
+In thread 6, Counter = 0  
+In thread 6, Counter = 10  
+All threads completed.  
+```  
+  
+## <a name="requirements"></a>Требования  
+ **Файл заголовка** \<msclr\lock.h >  
   
  **Пространство имен** msclr  
   
-## См. также  
+## <a name="see-also"></a>См. также  
  [Блокировка членов](../dotnet/lock-members.md)   
- [lock::operator bool](../Topic/lock::operator%20bool.md)
+ [lock::operator bool](../dotnet/lock-operator-bool.md)

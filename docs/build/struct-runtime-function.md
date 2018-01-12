@@ -1,26 +1,27 @@
 ---
-title: "структура RUNTIME_FUNCTION | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
+title: "Структура RUNTIME_FUNCTION | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
 ms.assetid: 84386527-d3aa-41c5-871d-78e3e1913704
-caps.latest.revision: 9
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 9
+caps.latest.revision: "9"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: c05dcd516af5c078b4e4e664bae16f65370ca117
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 12/21/2017
 ---
-# структура RUNTIME_FUNCTION
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Для табличной обработки исключений требуется запись в таблице для каждой функции, выделяющей место в стеке или вызывающей другую функцию \(например, неконечные функции\).  Записи в таблице функций имеют следующий формат:  
+# <a name="struct-runtimefunction"></a>структура RUNTIME_FUNCTION
+Обработка исключений, основанных на таблицах требует запись таблицы для всех функций, которые выделяют пространство стека или вызова другой функции (например, неконечные функции). Записи в таблице функций имеет следующий формат:  
   
 |||  
 |-|-|  
@@ -28,7 +29,7 @@ caps.handback.revision: 9
 |ULONG|Конечный адрес функции|  
 |ULONG|Адрес очистки|  
   
- Структура RUNTIME\_FUNCTION должна быть выровнена в памяти по типу DWORD.  Все адреса задаются относительно образа, то есть, они представляют собой 32\-разрядные смещения относительно стартового адреса образа, содержащего запись в таблице функций.  Эти записи сортируются и помещаются в раздел .pdata образа PE32\+.  Для динамически создаваемых функций \[JIT\-компиляторов\] среда выполнения для поддержки этих функций должна использовать RtlInstallFunctionTableCallback или RtlAddFunctionTable, чтобы предоставлять эти сведения операционной системе.  Невыполнение этого требования приведет к ненадежной обработке исключений и отладке процессов.  
+ Структура RUNTIME_FUNCTION должна быть выровнена в памяти DWORD. Все адреса задаются относительно образа, то есть их 32-разрядные смещения относительно стартового адреса образа, который содержит запись в таблице функций. Эти записи отсортированы и помещены в раздел .pdata образа PE32 +. Для динамически создаваемых функций [JIT-компиляторов] среда выполнения поддерживает эти функции необходимо использовать RtlInstallFunctionTableCallback или RtlAddFunctionTable для предоставления этих данных в операционную систему. Невыполнение этого требования приведет к ненадежной обработки исключений и отладки процессов.  
   
-## См. также  
+## <a name="see-also"></a>См. также  
  [Данные раскрутки для обработки исключений и поддержки отладчика](../build/unwind-data-for-exception-handling-debugger-support.md)

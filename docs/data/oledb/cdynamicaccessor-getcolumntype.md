@@ -1,58 +1,60 @@
 ---
-title: "CDynamicAccessor::GetColumnType | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "ATL.CDynamicAccessor.GetColumnType"
-  - "CDynamicAccessor::GetColumnType"
-  - "GetColumnType"
-  - "CDynamicAccessor.GetColumnType"
-  - "ATL::CDynamicAccessor::GetColumnType"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "GetColumnType - метод"
+title: "CDynamicAccessor::GetColumnType | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- ATL.CDynamicAccessor.GetColumnType
+- CDynamicAccessor::GetColumnType
+- GetColumnType
+- CDynamicAccessor.GetColumnType
+- ATL::CDynamicAccessor::GetColumnType
+dev_langs: C++
+helpviewer_keywords: GetColumnType method
 ms.assetid: ac96a2e9-6049-4eb5-9718-9f5f5446b74e
-caps.latest.revision: 8
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: dedacd68de5a254d138326a4030511685ab0da2e
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 12/21/2017
 ---
-# CDynamicAccessor::GetColumnType
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Возвращает тип данных выбранного столбца.  
+# <a name="cdynamicaccessorgetcolumntype"></a>CDynamicAccessor::GetColumnType
+Получает тип данных указанного столбца.  
   
-## Синтаксис  
+## <a name="syntax"></a>Синтаксис  
   
 ```  
   
-      bool GetColumnType(   
-   DBORDINAL nColumn,   
-   DBTYPE* pType    
+      bool GetColumnType(   
+   DBORDINAL nColumn,   
+   DBTYPE* pType    
 ) const throw( );  
 ```  
   
-#### Параметры  
+#### <a name="parameters"></a>Параметры  
  `nColumn`  
- \[in\] число столбцов.  Начало номера столбца с 1.  Значение 0 указывает на столбец закладки, если таковые имеются.  
+ [in] Номер столбца. Номера столбцов начинается с 1. Значение 0 ссылается на столбец закладки в том случае, если таковые имеются.  
   
  `pType`  
- \[out\] указатель на тип данных выбранного столбца.  
+ [out] Указатель на тип данных указанного столбца.  
   
-## Возвращаемое значение  
- Возвращает **true** в успехе или **false** при сбое.  
+## <a name="return-value"></a>Возвращаемое значение  
+ Возвращает **true** в случае успешного выполнения или **false** при сбое.  
   
-## Требования  
+## <a name="requirements"></a>Требования  
  **Заголовок:** atldbcli.h  
   
-## См. также  
- [Класс CDynamicAccessor](../../data/oledb/cdynamicaccessor-class.md)   
- [DBTYPE](https://msdn.microsoft.com/en-us/library/ms711251.aspx)
+## <a name="see-also"></a>См. также  
+ [CDynamicAccessor-класс](../../data/oledb/cdynamicaccessor-class.md)   
+ [ТИП DBTYPE](https://msdn.microsoft.com/en-us/library/ms711251.aspx)

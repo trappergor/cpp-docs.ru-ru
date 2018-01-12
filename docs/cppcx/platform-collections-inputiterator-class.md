@@ -15,11 +15,12 @@ caps.latest.revision: "4"
 author: ghogen
 ms.author: ghogen
 manager: ghogen
-ms.openlocfilehash: 15dd1d6ece1af3d561801c497b87f7be4f7d5397
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: a6041a3701bfac1561ab58ac2a6f504d255fc31c
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="platformcollectionsinputiterator-class"></a>Класс Platform::Collections::InputIterator
 Предоставляет InputIterator библиотеки стандартных шаблонов для коллекций, унаследованных от среды выполнения Windows.  
@@ -35,11 +36,11 @@ class InputIterator;
  `X`  
  Имя типа класса шаблона InputIterator.  
   
-### <a name="members"></a>Члены  
+### <a name="members"></a>Участники  
   
 ### <a name="public-typedefs"></a>Общедоступные определения типов  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |`difference_type`|Различие указателя (ptrdiff_t).|  
 |`iterator_category`|Категория итератора ввода (:: std::input_iterator_tag).|  
@@ -49,13 +50,13 @@ class InputIterator;
   
 ### <a name="public-constructors"></a>Открытые конструкторы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[InputIterator::InputIterator](#ctor)|Инициализирует новый экземпляр класса InputIterator.|  
   
 ### <a name="public-operators"></a>Открытые операторы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[Оператор InputIterator::operator!=](#operator-inequality)|Указывает, отличен ли текущий объект InputIterator от указанного объекта InputIterator.|  
 |[Оператор InputIterator::operator*](#operator-decrement)|Извлекает ссылку на элемент, указанный текущим итератором InputIterator.|  

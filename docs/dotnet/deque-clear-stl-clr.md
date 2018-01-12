@@ -1,41 +1,42 @@
 ---
-title: "deque::clear (STL/CLR) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "cliext::deque::clear"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "clear - член [STL/CLR]"
+title: "deque::Clear (STL/CLR) | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: cliext::deque::clear
+dev_langs: C++
+helpviewer_keywords: clear member [STL/CLR]
 ms.assetid: 1d9a3d11-b3fa-43a7-a508-7a05cbcd91bf
-caps.latest.revision: 15
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 13
+caps.latest.revision: "15"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: 74ab0cb7bc84a5d6959989bacd52509d6eb639ec
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 12/21/2017
 ---
-# deque::clear (STL/CLR)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="dequeclear-stlclr"></a>deque::clear (STL/CLR)
 Удаляет все элементы.  
   
-## Синтаксис  
+## <a name="syntax"></a>Синтаксис  
   
 ```  
 void clear();  
 ```  
   
-## Заметки  
- Эффективно вызывает функцию\-член [deque::erase](../Topic/deque::erase%20\(STL-CLR\).md)`(` [deque::begin](../dotnet/deque-begin-stl-clr.md)`(),` [deque::end](../Topic/deque::end%20\(STL-CLR\).md)`())`.  Он используется для обеспечения контролируемая последовательность пуста.  
+## <a name="remarks"></a>Примечания  
+ Функция-член вызывает [deque::erase (STL/CLR)](../dotnet/deque-erase-stl-clr.md) `(` [deque::begin (STL/CLR)](../dotnet/deque-begin-stl-clr.md) `(),` [deque::end (STL/CLR)](../dotnet/deque-end-stl-clr.md) `())`. Используется, чтобы обеспечить пустой управляемой последовательности.  
   
-## Пример  
+## <a name="example"></a>Пример  
   
 ```  
 // cliext_deque_clear.cpp   
@@ -72,15 +73,18 @@ int main()
   
 ```  
   
-  **a b c**  
-**size\(\) \= 0**  
- **B**  
-**size\(\) \= 0**   
-## Требования  
- **Заголовок:**\<cliext\/deque\>  
+```Output  
+ a b c  
+size() = 0  
+ a b  
+size() = 0  
+```  
+  
+## <a name="requirements"></a>Требования  
+ **Заголовок:** \<cliext/deque >  
   
  **Пространство имен:** cliext  
   
-## См. также  
- [deque](../dotnet/deque-stl-clr.md)   
- [deque::erase](../Topic/deque::erase%20\(STL-CLR\).md)
+## <a name="see-also"></a>См. также  
+ [deque (STL/CLR)](../dotnet/deque-stl-clr.md)   
+ [deque::erase (STL/CLR)](../dotnet/deque-erase-stl-clr.md)

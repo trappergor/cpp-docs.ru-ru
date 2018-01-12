@@ -13,14 +13,15 @@ caps.latest.revision: "11"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: e61efe58ae718e7381d6404f54c0887f556ac34c
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 54c1473e2341c783ebf73883680d51f161d99163
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="vectorcall"></a>__vectorcall
-**Блок, относящийся только к системам Майкрософт**  
+**Блок, относящийся только к системам Microsoft**  
   
  Соглашение о вызовах `__vectorcall` указывает, что аргументы для функций должны по возможности передаваться в регистрах. `__vectorcall`использует больше регистров для аргументов, чем [__fastcall](../cpp/fastcall.md) или значение по умолчанию [x64 соглашение о вызовах](../build/overview-of-x64-calling-conventions.md) использовать. Соглашение о вызовах `__vectorcall` поддерживается только в машинном коде для процессоров x86 и x64, в которых используется набор инструкций SSE2 и выше. Используйте соглашение об вызовах `__vectorcall`, чтобы ускорить работу функций, передающих несколько аргументов с плавающей запятой или векторных аргументов SIMD и выполняющих операции, для которых может оказаться полезной возможность загружать аргументы в регистры. В следующем списке перечислены функции, общие для реализации `__vectorcall` на процессорах x86 и x64. Различия объясняются ниже в этом разделе.  
   

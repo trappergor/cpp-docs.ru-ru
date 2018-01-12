@@ -44,11 +44,12 @@ caps.latest.revision: "24"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: e72618467666a98bdda5867b23d9ef2ce37319f2
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 14047c8143d982bc6b26bef6e46679341d9abd36
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="getcwd-wgetcwd"></a>_getcwd, _wgetcwd
 Получает текущий рабочий каталог.  
@@ -87,7 +88,7 @@ wchar_t *_wgetcwd(
   
  Если определены директивы `_DEBUG` и `_CRTDBG_MAP_ALLOC` , вызовы функций `_getcwd` и `_wgetcwd` заменяются вызовами функций `_getcwd_dbg` и `_wgetcwd_dbg` , чтобы разрешить отладку выделения памяти. Дополнительные сведения см. в разделе [_getcwd_dbg, _wgetcwd_dbg](../../c-runtime-library/reference/getcwd-dbg-wgetcwd-dbg.md).  
   
-### <a name="generic-text-routine-mappings"></a>Универсальное текстовое сопоставление функций  
+### <a name="generic-text-routine-mappings"></a>Сопоставления подпрограмм обработки обычного текста  
   
 |Подпрограмма Tchar.h|_UNICODE и _MBCS не определены|_MBCS определено|_UNICODE определено|  
 |---------------------|--------------------------------------|--------------------|-----------------------|  

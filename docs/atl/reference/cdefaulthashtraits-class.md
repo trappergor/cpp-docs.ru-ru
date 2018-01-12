@@ -4,29 +4,26 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-windows
+ms.technology: cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
 - CDefaultHashTraits
 - ATLCOLL/ATL::CDefaultHashTraits
 - ATLCOLL/ATL::CDefaultHashTraits::Hash
-dev_langs:
-- C++
-helpviewer_keywords:
-- CDefaultHashTraits class
+dev_langs: C++
+helpviewer_keywords: CDefaultHashTraits class
 ms.assetid: d8ec4b37-6d58-447b-a0c1-8580c5b1ab85
-caps.latest.revision: 19
+caps.latest.revision: "19"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 2407ffdd5d8ea327cd4669f2c33ccda5e0246d6d
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
-ms.sourcegitcommit: c55726a1728185f699afbac4ba68a6dc0f70c2bf
-ms.openlocfilehash: 932969a5d06a3bd06755ec60d43b3257a4de9785
-ms.contentlocale: ru-ru
-ms.lasthandoff: 10/09/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cdefaulthashtraits-class"></a>Класс CDefaultHashTraits
 Этот класс предоставляет статическую функцию для вычисления хэш-значения.  
@@ -42,11 +39,11 @@ class CDefaultHashTraits
  `T`  
  Тип данных, хранимых в коллекции.  
   
-## <a name="members"></a>Члены  
+## <a name="members"></a>Участники  
   
 ### <a name="public-methods"></a>Открытые методы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[CDefaultHashTraits::Hash](#hash)|(Статический) Эта функция вызывается для вычисления хэш-значение для данного элемента.|  
   
@@ -77,4 +74,3 @@ static ULONG Hash(const T& element) throw();
   
 ## <a name="see-also"></a>См. также  
  [Общие сведения о классе](../../atl/atl-class-overview.md)
-

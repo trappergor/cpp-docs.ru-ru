@@ -4,25 +4,22 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-language
+ms.technology: cpp-language
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-dev_langs:
-- C++
-helpviewer_keywords:
-- based addressing
+dev_langs: C++
+helpviewer_keywords: based addressing
 ms.assetid: a68ff750-c7fa-4c0c-8d5f-2df76e4686c5
-caps.latest.revision: 10
+caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.translationtype: HT
-ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
-ms.openlocfilehash: 427906751c57b8b5f0c46479e8481394fa20f56c
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/25/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: 6a2cb2929fa595ad13746ea929217f41272a8189
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="based-grammar"></a>Грамматика выражения __based
 ## <a name="microsoft-specific"></a>Блок, относящийся только к системам Microsoft  
@@ -32,7 +29,7 @@ ms.lasthandoff: 09/25/2017
   
 ## <a name="grammar"></a>Грамматика  
  *на основе модификатор диапазона-*:  
- **__based (***базовое выражение***)    **  
+ **__based (***базовое выражение***)**   
   
  *базовое выражение*:  
  *based-variablebased-abstract-declaratorsegment-namesegment-CAST*  

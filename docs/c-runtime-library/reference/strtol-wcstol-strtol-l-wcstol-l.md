@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
 apiname:
@@ -33,8 +32,7 @@ f1_keywords:
 - wcstol
 - _strtol_l
 - _tcstol_l
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - wcstol function
 - wcstol_l function
@@ -46,30 +44,16 @@ helpviewer_keywords:
 - _strtol_l function
 - strtol function
 ms.assetid: 1787c96a-f283-4a83-9325-33cfc1c7e240
-caps.latest.revision: 18
+caps.latest.revision: "18"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3f91eafaf3b5d5c1b8f96b010206d699f666e224
-ms.openlocfilehash: e3555a209ba931c65080e833ba36f5de7d96a1ce
-ms.contentlocale: ru-ru
-ms.lasthandoff: 04/01/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: 08a476172291c52865fe2abb9fb872e388078ac5
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="strtol-wcstol-strtoll-wcstoll"></a>strtol, wcstol, _strtol_l, _wcstol_l
 Преобразует строки в целочисленное значение типа long.  
@@ -124,14 +108,14 @@ long _wcstol_l(
   
  Функция `wcstol` — это версия функции `strtol` с расширенными символами. Ее аргумент `nptr` — строка расширенных символов. В остальном эти функции ведут себя одинаково.  
   
-### <a name="generic-text-routine-mappings"></a>Универсальное текстовое сопоставление функций  
+### <a name="generic-text-routine-mappings"></a>Сопоставления подпрограмм обработки обычного текста  
   
 |Подпрограмма TCHAR.H|_UNICODE и _MBCS не определены|_MBCS определено|_UNICODE определено|  
 |---------------------|------------------------------------|--------------------|-----------------------|  
 |`_tcstol`|`strtol`|`strtol`|`wcstol`|  
 |`_tcstol_l`|`_strtol_l`|`_strtol_l`|`_wcstol_l`|  
   
- Параметр категории `LC_NUMERIC` текущего языкового стандарта определяет распознавание символа основания системы счисления в `nptr`*.* Дополнительные сведения см. в разделе [setlocale](../../c-runtime-library/reference/setlocale-wsetlocale.md). Функции, не имеющие суффикса `_l`, используют текущий языковой стандарт; `_strtol_l` и `_wcstol_l` идентичны соответствующим функциям, которые не имеют суффикса `_l`, за исключением того, что они используют переданный им языковой стандарт. Дополнительные сведения см. в разделе [Языковой стандарт](../../c-runtime-library/locale.md).  
+ Параметр категории `LC_NUMERIC` текущего языкового стандарта определяет распознавание символа основания системы счисления в `nptr`*.* Дополнительные сведения см. в разделе [setlocale](../../c-runtime-library/reference/setlocale-wsetlocale.md). Функции, не имеющие суффикса `_l`, используют текущий языковой стандарт; `_strtol_l` и `_wcstol_l` идентичны соответствующим функциям, которые не имеют суффикса `_l`, за исключением того, что они используют переданный им языковой стандарт. Для получения дополнительной информации см. [Locale](../../c-runtime-library/locale.md).  
   
  Если `endptr` не является значением `NULL`, указатель на символ, который останавливает сканирование, хранится в расположении, на которое указывает `endptr`. Если не удается выполнить преобразование (не найдены допустимые цифры или указано недопустимое основание), значение `nptr` сохраняется в расположении, указанном `endptr`.  
   
@@ -149,7 +133,7 @@ long _wcstol_l(
 |`wcstol`|\<stdlib.h> или \<wchar.h>|  
 |`_strtol_l`|\<stdlib.h>|  
   
- Дополнительные сведения о совместимости см. в статье [Совместимость](../../c-runtime-library/compatibility.md) во введении.  
+ Дополнительные сведения о совместимости см. в разделе [Совместимость](../../c-runtime-library/compatibility.md) во введении.  
   
 ## <a name="example"></a>Пример  
  См. пример для [strtod](../../c-runtime-library/reference/strtod-strtod-l-wcstod-wcstod-l.md).  

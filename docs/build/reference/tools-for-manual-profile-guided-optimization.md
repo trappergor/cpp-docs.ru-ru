@@ -1,37 +1,37 @@
 ---
-title: "Средства профильной оптимизации | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "профильная оптимизация, средства"
+title: "Средства для ручной профильной оптимизации | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords: profile-guided optimizations, tools
 ms.assetid: c6254018-d462-4fc1-a899-ac8637487c44
-caps.latest.revision: 9
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 9
+caps.latest.revision: "9"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: fb8d4474b69d60b9ced342c478ec0f6ba4e1a933
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 12/21/2017
 ---
-# Средства профильной оптимизации
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Следующие средства поддерживают профильную оптимизацию:  
+# <a name="tools-for-manual-profile-guided-optimization"></a>Средства для ручной профильной оптимизации
+Следующие средства поддержки профильной оптимизации:  
   
  [Переменные среды для профильной оптимизации](../../build/reference/environment-variables-for-profile-guided-optimizations.md)  
- Задание поведения скриптов тестирования во время выполнения.  
+ Задание поведения сценариев тестирования во время выполнения.  
   
  [pgosweep](../../build/reference/pgosweep.md)  
- Запись всех профильных данных в файл PGC, закрытие файла PGC и открытие нового файла PGC.  
+ Записывает все данные профиля в файл PGC закрывает PGC-файл и открывает новый PGC-файл.  
   
  [pgomgr](../../build/reference/pgomgr.md)  
- Добавление профильных данных из одного или нескольких файлов PGC в файл PGD.  
+ Добавляет данные профиля из одного или нескольких файлов PGC в PGD-файл.  
   
-## См. также  
+## <a name="see-also"></a>См. также  
  [Профильная оптимизация](../../build/reference/profile-guided-optimizations.md)

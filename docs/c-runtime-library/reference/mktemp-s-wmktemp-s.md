@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
 apiname:
@@ -28,8 +27,7 @@ f1_keywords:
 - mktemp_s
 - _mktemp_s
 - _wmktemp_s
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - _tmktemp_s function
 - mktemp_s function
@@ -40,30 +38,16 @@ helpviewer_keywords:
 - wmktemp_s function
 - temporary files [C++]
 ms.assetid: 92a7e269-7f3d-4c71-bad6-14bc827a451d
-caps.latest.revision: 23
+caps.latest.revision: "23"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: e257f037a05c45f5b98e64ea55bd125af443b0be
-ms.openlocfilehash: 6231031dd0bbc5b455e3555731f711ee7de971e7
-ms.contentlocale: ru-ru
-ms.lasthandoff: 03/30/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: 9515212418b4bd4e8d9957254b2fafaf451a3adc
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="mktemps-wmktemps"></a>_mktemp_s, _wmktemp_s
 Создает уникальное имя файла. Это версии функции [_mktemp, _wmktemp](../../c-runtime-library/reference/mktemp-wmktemp.md) с усовершенствованной безопасностью, как описано в разделе [Усовершенствования безопасности в CRT](../../c-runtime-library/security-features-in-the-crt.md).  
@@ -103,8 +87,8 @@ errno_t _wmktemp_s(
   
 |`template`|`sizeInChars`|**возвращаемое значение**|**новое значение в шаблоне**|  
 |----------------|-------------------|----------------------|-------------------------------|  
-|`NULL`|любые|`EINVAL`|`NULL`|  
-|Неверный формат (сведения о правильном формате см. в разделе `Remarks`)|любые|`EINVAL`|пустая строка|  
+|`NULL`|any|`EINVAL`|`NULL`|  
+|Неверный формат (сведения о правильном формате см. в разделе `Remarks`)|any|`EINVAL`|пустая строка|  
 |any|<= количество X|`EINVAL`|пустая строка|  
   
  Если выполняется какое-либо из приведенных выше условий возникновения ошибки, вызывается обработчик недопустимого параметра, как описано в разделе [Проверка параметров](../../c-runtime-library/parameter-validation.md). Если выполнение может быть продолжено, для параметра `errno` устанавливается значение `EINVAL`, и функция возвращает значение `EINVAL`.  
@@ -112,7 +96,7 @@ errno_t _wmktemp_s(
 ## <a name="remarks"></a>Примечания  
  Функция `_mktemp_s` создает уникальное имя файла, изменяя аргумент `template` таким образом, чтобы после вызова указатель `template` ссылался на строку, содержащую имя нового файла. Функция `_mktemp_s` автоматически требуемым образом обрабатывает аргументы в виде многобайтовых строк, распознавая многобайтовые последовательности символов в соответствии с текущей многобайтовой кодовой страницей, используемой системой времени выполнения. Функция `_wmktemp_s` — это версия `_mktemp_s` с расширенными символами; аргумент `_wmktemp_s` — строка расширенных символов. В остальных отношениях поведение функций `_wmktemp_s` и `_mktemp_s` идентично, за исключением того, что функция `_wmktemp_s` не обрабатывает многобайтовые строки.  
   
-### <a name="generic-text-routine-mappings"></a>Универсальное текстовое сопоставление функций  
+### <a name="generic-text-routine-mappings"></a>Сопоставления подпрограмм обработки обычного текста  
   
 |Подпрограмма Tchar.h|_UNICODE и _MBCS не определены|_MBCS определено|_UNICODE определено|  
 |---------------------|--------------------------------------|--------------------|-----------------------|  
@@ -146,7 +130,7 @@ fna12345
   
  Функция `_mktemp_s` может создать до 26 уникальных имен файлов для любого заданного сочетания значений базы и шаблона. Таким образом, FNZ12345 является последним уникальным именем файла, которое может создать функция `_mktemp_s` для значений `base` и `template`, используемых в этом примере.  
   
- В C++ использование данных функций упрощено наличием шаблонных перегрузок; перегруженные методы могут автоматически определять длину буфера (что исключает необходимость указания аргумента с размером буфера), а также они могут автоматически заменять более старые, незащищенные функции их новыми безопасными аналогами. Дополнительные сведения см. в разделе [Безопасные перегрузки шаблонов](../../c-runtime-library/secure-template-overloads.md).  
+ В C++ использование данных функций упрощено наличием шаблонных перегрузок; перегруженные методы могут автоматически определять длину буфера (что исключает необходимость указания аргумента с размером буфера), а также они могут автоматически заменять более старые, незащищенные функции их новыми безопасными аналогами. Дополнительные сведения см. в разделе [Secure Template Overloads](../../c-runtime-library/secure-template-overloads.md).  
   
 ## <a name="requirements"></a>Требования  
   
