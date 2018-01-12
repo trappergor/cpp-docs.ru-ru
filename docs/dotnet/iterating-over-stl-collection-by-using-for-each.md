@@ -1,38 +1,40 @@
 ---
-title: "Перебор элементов коллекции STL с использованием цикла for each | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "коллекции DTL, итерация через"
+title: "Перебор коллекции библиотеки C++ Standard с использованием для каждого | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+dev_langs: C++
+helpviewer_keywords: DTL collections, iterating over
 ms.assetid: 9358ca29-b982-4a19-bbfd-bef50fe66c9a
-caps.latest.revision: 14
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 12
+caps.latest.revision: "14"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- dotnet
+ms.openlocfilehash: 1a4ce2de13380895f1f313559abeb87e4cd65db2
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 12/21/2017
 ---
-# Перебор элементов коллекции STL с использованием цикла for each
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Ключевое слово `for each` можно использовать для итерации по коллекции стандартной библиотеки C\+\+ C \(STL\).  
+# <a name="iterating-over-c-standard-library-collection-by-using-for-each"></a>Перебор элементов коллекции библиотеки C++ Standard с использованием цикла for each
+`for each` Ключевое слово может использоваться для итерации по коллекции стандартной библиотеки C++.  
   
-## Все платформы  
- **Примечания**  
+## <a name="all-platforms"></a>Все платформы  
+ **Заметки**  
   
- Коллекция STL также контейнером.  Для получения дополнительной информации см. [Контейнеры STL](../standard-library/stl-containers.md).  
+ Коллекция стандартной библиотеки C++, также называемая *контейнер*. Дополнительные сведения см. в разделе [Контейнеры стандартной библиотеки C++](../standard-library/stl-containers.md).  
   
-## Примеры  
+## <a name="examples"></a>Примеры  
  **Пример**  
   
- В следующем примере кода используется `for each` для итерации [\< map \>](../Topic/%3Cmap%3E.md).  
+ Следующий пример кода использует `for each` для прохода по [ \<карты >](../standard-library/map.md).  
   
 ```  
 // for_each_stl.cpp  
@@ -72,11 +74,15 @@ int main() {
 }  
 ```  
   
- **Output**  
+ **Вывод**  
   
-  **С днями месяца 30 \= 4** **Пример**  
+```Output  
+Months with 30 days = 4  
+```  
   
- В следующем примере кода используется ссылка const \(`const&`\) для переменной итерации с контейнерами STL.  Можно использовать ссылку \(`&`\) как переменная итерации на любой коллекции типов, могут быть объявлены как *T*`&`.  
+ **Пример**  
+  
+ В следующем примере кода используется ссылка const (`const&`) для переменной итерации с контейнерами стандартной библиотеки C++. Можно использовать ссылку на (`&`) как переменная итерации, на какой-либо коллекции типа, который может быть объявлен как *T*`&`.  
   
 ```  
 // for_each_stl_2.cpp  
@@ -100,25 +106,28 @@ int main() {
 }  
 ```  
   
- **Output**  
+ **Вывод**  
   
-  **retval: 60**   
-## [!INCLUDE[wrt](../atl/reference/includes/wrt_md.md)]  
- **Примечания**  
+```Output  
+retval: 60  
+```  
   
- Отсутствуют замечания платформы об этой функции.  
+## <a name="windows-runtime"></a>Среда выполнения Windows  
+ **Заметки**  
   
-### Требования  
- Параметр компилятора: **\/ZW**  
+ Отсутствуют платформой комментарии об этой функции.  
   
-## [!INCLUDE[clr_for_headings](../dotnet/includes/clr_for_headings_md.md)]  
- **Примечания**  
+### <a name="requirements"></a>Требования  
+ Параметр компилятора: **/ZW**  
   
- Отсутствуют замечания платформы об этой функции.  
+## <a name="common-language-runtime"></a>Среда CLR 
+ **Заметки**  
   
-### Требования  
- Параметр компилятора: **\/clr**  
+ Отсутствуют платформой комментарии об этой функции.  
   
-## См. также  
- [for each, in](../dotnet/for-each-in.md)   
+### <a name="requirements"></a>Требования  
+ Параметр компилятора: **/clr**  
+  
+## <a name="see-also"></a>См. также  
+ [для каждой из них в](../dotnet/for-each-in.md)   
  [Расширения компонентов для платформ среды выполнения](../windows/component-extensions-for-runtime-platforms.md)
