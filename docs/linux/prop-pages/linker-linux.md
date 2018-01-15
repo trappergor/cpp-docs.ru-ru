@@ -11,37 +11,20 @@ ms.assetid: a0243a94-8164-425b-b2fe-b84ff363d546
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-f1_keywords:
-- VC.Project.VCLinkerTool.OutputFile
-- VC.Project.VCLinkerTool.ShowProgress
-- VC.Project.VCLinkerTool.Version
-- VC.Project.VCLinkerTool.VerboseOutput
-- VC.Project.VCLinkerTool.UnresolvedReferences
-- VC.Project.VCLinkerTool.OptimizeForMemory
-- VC.Project.VCLinkerTool.SharedLibrarySearchPath
-- VC.Project.VCLinkerTool.AdditionalLibraryDirectories
-- VC.Project.VCConfiguration.BuildLogFile
-- VC.Project.VCLinkerTool.IgnoreDefaultLibraryNames
-- VC.Project.VCLinkerTool.ForceSymbolReferences
-- VC.Project.VCLinkerTool.LibraryDependencies
-- VC.Project.VCLinkerTool.ForceFileOutput
-- VC.Project.VCLinkerTool.GenerateMapFile
-- VC.Project.VCLinkerTool.Relocation
-- VC.Project.VCLinkerTool.FunctionBinding
-- VC.Project.VCLinkerTool.NoExecStackRequired
-- VC.Project.WholeArchive
-- VC.Project.AdditionalOptionsPage
-- VC.Project.VCLinkerTool.AdditionalDependencies
-ms.openlocfilehash: 963d73e73e42930f0245c0fef443da27bf451bc6
-ms.sourcegitcommit: ca2f94dfd015e0098a6eaf5c793ec532f1c97de1
+ms.workload:
+- cplusplus
+- linux
+ms.openlocfilehash: 5396021410ec04baa8eb1218c676919a322ac978
+ms.sourcegitcommit: 54035dce0992ba5dce0323d67f86301f994ff3db
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 01/03/2018
 ---
 # <a name="linker-properties-linux-c"></a>Свойства компоновщика (Linux C++)
 
 ## <a name="general"></a>Общие
-Свойство | Описание | Варианты
+
+Свойство. | Описание: | Варианты
 --- | ---| ---
 Выходной файл | Параметр переопределяет стандартное имя и расположение программы, которую создает компоновщик. (-o)
 Отображать ход выполнения | Печатает сообщения хода выполнения компоновщика.
@@ -58,8 +41,9 @@ ms.lasthandoff: 10/31/2017
 Время ожидания компоновки | Время ожидания удаленной компоновки (в миллисекундах).
 Копировать выходные данные | Указывает, следует ли копировать выходной файл сборки из удаленной системы на локальный компьютер.
 
-## <a name="input"></a>Ввод
-Свойство | Описание | Варианты
+## <a name="input"></a>Входные данные
+
+Свойство. | Описание: | Варианты
 --- | ---| ---
 Игнорировать конкретные стандартные библиотеки | Указывает одно или несколько имен пропускаемых библиотек по умолчанию. (--exclude-libs lib,lib)
 Игнорировать библиотеки по умолчанию | Пропуск библиотек по умолчанию и поиск только явно указанных библиотек.
@@ -68,21 +52,17 @@ ms.lasthandoff: 10/31/2017
 Дополнительные зависимости | Указывает дополнительные элементы для добавления в командную строку компоновки.
 
 ## <a name="debugging"></a>Отладка
-Свойство | Описание | Варианты
+
+Свойство. | Описание: | Варианты
 --- | ---| ---
 Символьная отладочная информация | Символьная отладочная информация из выходного файла. | **Включить все**<br>**Пропустить только символьную отладочную информацию**<br>**Пропустить всю символьную информацию**<br>
 Имя файла сопоставления | Параметр "Сопоставление" сообщает компоновщику о том, что нужно создать файл сопоставления с именем, указанным пользователем. (-Map=)
 
 ## <a name="advanced"></a>Дополнительно
-Свойство | Описание | Варианты
+
+Свойство. | Описание: | Варианты
 --- | ---| ---
 Отметить переменные как доступные только для чтения после перемещения | Параметр отмечает переменные как доступные только для чтения после перемещения.
 Включить немедленное связывание функций | Этот параметр отмечает объект для немедленного связывания функций.
 Не требовать исполняемый стек | Этот параметр отмечает выходные данные как не требующие исполняемого стека.
 Весь архив | Весь архив использует весь код из источников и дополнительных зависимостей.
-
-
-## <a name="additional-options"></a>Дополнительные параметры
-
-
-

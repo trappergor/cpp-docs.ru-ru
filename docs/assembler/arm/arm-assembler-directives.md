@@ -13,20 +13,21 @@ caps.latest.revision: "5"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 1fee551d667b40b3fc36b3ca1f91e093148083a5
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 44cd4e5c47618a12c5d4ad5edd3bd8bbf9105309
+ms.sourcegitcommit: 54035dce0992ba5dce0323d67f86301f994ff3db
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 01/03/2018
 ---
 # <a name="arm-assembler-directives"></a>Директивы ассемблера ARM
-В большинстве случаев ассемблеру Microsoft ARM использует язык ассемблера ARM, который описан в главе 7 [руководстве по средствам ассемблера ARM](http://go.microsoft.com/fwlink/?LinkId=246102). Однако реализации Microsoft некоторые директивы сборки отличаются от директивы сборки для ARM. В этой статье описаны отличия.  
+В большинстве случаев ассемблеру Microsoft ARM использует язык ассемблера ARM, который описан в главе 7 [руководстве по средствам ассемблера ARM](http://go.microsoft.com/fwlink/p/?linkid=246102). Однако реализации Microsoft некоторые директивы сборки отличаются от директивы сборки для ARM. В этой статье описаны отличия.  
   
 ## <a name="microsoft-implementations-of-arm-assembly-directives"></a>Реализации Microsoft директивы сборки для ARM  
  ОБЛАСТЬ  
  Код на языке ассемблера ARM Корпорация Майкрософт поддерживает эти атрибуты области: ВЫРАВНИВАНИЕ, код, CODEALIGN, данных, NOINIT, доступного только для чтения, READWRITE, THUMB, ARM.  
   
- Все кроме БЕГУНКА и ARM работают, как описано в [руководстве по средствам ассемблера ARM](http://go.microsoft.com/fwlink/?LinkId=246102).  
+ Все кроме БЕГУНКА и ARM работают, как описано в [руководстве по средствам ассемблера ARM](http://go.microsoft.com/fwlink/p/?linkid=246102).  
   
  В ассемблеру Microsoft ARM THUMB указывает раздел кода содержит код бегунка, которое используется по умолчанию для разделов кода.  ARM означает, что раздел содержит ARM кода.  
   

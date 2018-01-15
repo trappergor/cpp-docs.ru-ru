@@ -15,11 +15,12 @@ caps.latest.revision: "7"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: b66e9f40e3fb7f4c9a6c9f6fcb9bcd9c2a45fdd3
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 84594f668d0fc807ebb815cc519c7d45f62e8b12
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="switch-statement-c"></a>Оператор switch (C)
 Операторы `switch` и **case** помогают управлять сложными условными операциями и операциями ветвления. Оператор `switch` передает управление в оператор внутри своего тела.  
@@ -128,7 +129,7 @@ case 'f' :  hexcvt(c);
   
  В этом примере, если *константное выражение* равно любой букве в диапазоне от `'a'` до `'f'`, вызывается функция `hexcvt`.  
   
- **Блок, относящийся только к системам Майкрософт**  
+ **Блок, относящийся только к системам Microsoft**  
   
  Microsoft C не ограничивает количество значений case в операторе `switch`. Это число ограничивается только объемом доступной памяти. ANSI C требует, чтобы в операторе `switch` можно было использовать не менее 257 меток case.  
   

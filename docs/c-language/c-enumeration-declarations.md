@@ -20,11 +20,12 @@ caps.latest.revision: "11"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 69b35d3007a26cd7ca605617b7441525f44ef3ca
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: f4109bb9ed66a89765b6270fce6a3cd5821698a2
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="c-enumeration-declarations"></a>Объявления перечислений C
 Перечисление состоит из набора именованных целочисленных констант. Объявление типа перечисления предоставляет имя тега перечисления (необязательно) и определяет набор именованных целочисленных идентификаторов (называемых "набор перечисления", "константы перечислителя", "перечислители" или "члены"). Переменная с типом перечисления хранит одно из значений набора перечисления, определенных этим типом.  

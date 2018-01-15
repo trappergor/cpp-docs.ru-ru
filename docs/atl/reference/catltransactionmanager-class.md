@@ -35,11 +35,12 @@ caps.latest.revision: "25"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: ae0d3c60ee17683a1d46b35caadea7784e167b7e
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 0def8aa809cd1ccc115ccc2a09b1ae752316098f
+ms.sourcegitcommit: 54035dce0992ba5dce0323d67f86301f994ff3db
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 01/03/2018
 ---
 # <a name="catltransactionmanager-class"></a>Класс catltransactionmanager.
 Catltransactionmanager класс предоставляет оболочку для функции диспетчера транзакций ядра (KTM).  
@@ -53,18 +54,18 @@ Catltransactionmanager класс предоставляет оболочку д
 class CAtlTransactionManager;
 ```  
   
-## <a name="members"></a>Члены  
+## <a name="members"></a>Участники  
   
 ### <a name="public-constructors"></a>Открытые конструкторы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
-|[~ Catltransactionmanager.](#dtor)|Деструктор catltransactionmanager..|  
-|[Catltransactionmanager.](#catltransactionmanager)|Конструктор catltransactionmanager..|  
+|[~ Catltransactionmanager.](#dtor)|Деструктор catltransactionmanager.|  
+|[Catltransactionmanager.](#catltransactionmanager)|Конструктор catltransactionmanager.|  
   
 ### <a name="public-methods"></a>Открытые методы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[Закрыть](#close)|Закрывает один дескриптор транзакции.|  
 |[Фиксация](#commit)|Запросы, что транзакция быть зафиксирована.|  
@@ -85,7 +86,7 @@ class CAtlTransactionManager;
   
 ### <a name="protected-data-members"></a>Защищенные члены данных  
   
-|Имя|Описание|  
+|name|Описание:|  
 |----------|-----------------|  
 |[m_bFallback](#m_bfallback)|`TRUE`Если этот резервный механизм поддерживается; `FALSE` в противном случае.|  
 |[m_hTransaction](#m_htransaction)|Дескриптор транзакции.|  
@@ -99,7 +100,7 @@ class CAtlTransactionManager;
  **Заголовок:** atltransactionmanager.h  
   
 ##  <a name="dtor"></a>~ Catltransactionmanager.  
- Деструктор catltransactionmanager..  
+ Деструктор catltransactionmanager.  
   
 ```
 virtual ~CAtlTransactionManager();
@@ -109,7 +110,7 @@ virtual ~CAtlTransactionManager();
  В обычной обработки транзакция автоматически зафиксирована и закрыт. Если деструктор вызывается во время очистки исключения, транзакции откат и закрыт.  
   
 ##  <a name="catltransactionmanager"></a>Catltransactionmanager.  
- Конструктор catltransactionmanager..  
+ Конструктор catltransactionmanager.  
   
 ```
 CAtlTransactionManager(BOOL bFallback = TRUE, BOOL bAutoCreateTransaction = TRUE);
@@ -396,7 +397,7 @@ inline LSTATUS RegDeleteKeyEx(HKEY hKey, LPCTSTR lpSubKey);
   
 ### <a name="parameters"></a>Параметры  
   
-|Параметр|Описание|  
+|Параметр|Описание:|  
 |---------------|-----------------|  
 |`hKey`|Дескриптор, чтобы открыть раздел реестра.|  
 |`lpSubKey`|Имя ключа для удаления.|  
@@ -466,7 +467,7 @@ inline BOOL SetFileAttributes(LPCTSTR lpFileName, DWORD dwAttributes);
  Имя файла или каталога.  
   
  `dwAttributes`  
- Атрибуты файлов установки для файла. Дополнительные сведения см. в разделе [SetFileAttributesTransacted](http://go.microsoft.com/fwlink/linkid=158699).  
+ Атрибуты файлов установки для файла. Дополнительные сведения см. в разделе [SetFileAttributesTransacted](http://go.microsoft.com/fwlink/p/?linkid=158699).  
   
 ### <a name="remarks"></a>Примечания  
  Эта оболочка вызывает `SetFileAttributesTransacted` функции.  

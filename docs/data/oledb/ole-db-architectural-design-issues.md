@@ -14,11 +14,14 @@ caps.latest.revision: "12"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 085c658fff3d387019c6e8574ebafcd347400823
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: b894ec1cbd227663d46e98e523ffe8c1c5d84475
+ms.sourcegitcommit: 54035dce0992ba5dce0323d67f86301f994ff3db
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 01/03/2018
 ---
 # <a name="ole-db-architectural-design-issues"></a>Вопросы проектирования архитектуры OLE DB
 Перед запуском приложения OLE DB необходимо учитывать следующие аспекты:  
@@ -37,11 +40,11 @@ ms.lasthandoff: 10/24/2017
  **У вас есть старого кода с помощью другой технологии доступа к данным (ADO, ODBC или DAO)?**  
  Анализ возможных комбинаций технологий (например, использование компонентов ADO с компонентами OLE DB и миграция кода ODBC в OLE DB), охватывают все ситуации выходит за рамки документации по Visual C++. Однако во многих статьях, в которых рассматриваются различные сценарии доступны на следующих веб-сайтах корпорации Майкрософт:  
   
--   [Центр справки и поддержки Майкрософт](http://go.microsoft.com/fwlink/?linkid=148218)  
+-   [Центр справки и поддержки Майкрософт](http://go.microsoft.com/fwlink/p/?linkid=148218)  
   
--   [Обзор технических статей для доступа к данным Microsoft](http://go.microsoft.com/fwlink/?linkid=148217)  
+-   [Обзор технических статей для доступа к данным Microsoft](http://go.microsoft.com/fwlink/p/?linkid=148217)  
   
--   [Центр решений Visual Studio](http://go.microsoft.com/fwlink/?linkid=148215)  
+-   [Центр решений Visual Studio](http://go.microsoft.com/fwlink/p/?linkid=148215)  
   
 -   [Поиск Microsoft.com](http://search.microsoft.com/)  
   

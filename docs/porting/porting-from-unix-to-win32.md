@@ -21,11 +21,12 @@ caps.latest.revision: "15"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: aa15cb2eac229201dd0f686428133224b2f32afe
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: b10ee9e9b5a53d6f9f936c4bc158db8ebfb6be13
+ms.sourcegitcommit: 54035dce0992ba5dce0323d67f86301f994ff3db
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 01/03/2018
 ---
 # <a name="porting-from-unix-to-win32"></a>Перенос приложений из UNIX в Win32
 При миграции приложений из UNIX в Windows можно использовать несколько вариантов:  
@@ -44,11 +45,11 @@ ms.lasthandoff: 10/24/2017
 ### <a name="unix-migration-guides"></a>Руководства по миграции из UNIX  
  Руководство по миграции настраиваемых приложений UNIX содержит технические рекомендации по миграции кода из UNIX в среду Win32.  
   
- [http://go.microsoft.com/fwlink/?LinkId=95428](http://go.microsoft.com/fwlink/?LinkId=95428)  
+ [http://go.microsoft.com/fwlink/p/?linkid=95428](http://go.microsoft.com/fwlink/p/?linkid=95428)  
   
  Руководство по проекту миграции из Unix дополняет руководство по миграции настраиваемых приложений UNIX и содержит высокоуровневую справку по миграции важных проектов из UNIX в Win32. Руководство содержит рекомендации, которые следует учитывать на каждом этапе миграции проекта. Данное руководство можно загрузить отсюда:  
   
- [http://go.microsoft.com/fwlink/?linkid=20012](http://go.microsoft.com/fwlink/?linkid=20012)  
+ [http://go.microsoft.com/fwlink/p/?linkid=20012](http://go.microsoft.com/fwlink/p/?linkid=20012)  
   
 ### <a name="microsoft-windows-services-for-unix-sfu"></a>Службы Microsoft Windows для UNIX (SFU)  
  Службы Microsoft Windows для UNIX (SFU) предоставляют полный диапазон кроссплатформенных служб для интеграции Windows в существующие среды на основе UNIX. Службы для UNIX предоставляют общий доступ к файлам, обеспечивают удаленный доступ и администрирование, выполняют синхронизацию паролей и общие функции управления каталогами, содержат общий набор служебных программ и оболочку.  
