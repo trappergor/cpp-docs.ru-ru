@@ -1,49 +1,50 @@
 ---
-title: "Структура ImplementsBase | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "implements/Microsoft::WRL::Details::ImplementsBase"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "ImplementsBase - структура"
+title: "Структура ImplementsBase | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: implements/Microsoft::WRL::Details::ImplementsBase
+dev_langs: C++
+helpviewer_keywords: ImplementsBase structure
 ms.assetid: f898eb17-136d-4c87-b3ea-771319314641
-caps.latest.revision: 5
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 5
+caps.latest.revision: "5"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: b6b283a7377227818d9d1d759240a2c9611368b6
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 12/21/2017
 ---
-# Структура ImplementsBase
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Предназначено для поддержки инфраструктуры WRL, а не для непосредственного использования в коде.  
+# <a name="implementsbase-structure"></a>ImplementsBase - структура
+Поддерживает инфраструктуру WRL и не предназначен для использования непосредственно из программного кода.  
   
-## Синтаксис  
+## <a name="syntax"></a>Синтаксис  
   
 ```  
 struct ImplementsBase;  
 ```  
   
-## Примечания  
- Используется для проверки типов параметра шаблона в [Структура Implements](../Topic/Implements%20Structure.md).  
+## <a name="remarks"></a>Примечания  
+ Используется для проверки типов параметров шаблона в [структура реализует](../windows/implements-structure.md).  
   
- Структура ImplementsBase является пустой преднамеренно.  
+ Implementsbase-структура является пустым намеренно.  
   
-## Иерархия наследования  
+## <a name="inheritance-hierarchy"></a>Иерархия наследования  
  `ImplementsBase`  
   
-## Требования  
+## <a name="requirements"></a>Требования  
  **Заголовок:** implements.h  
   
- **Пространство имен:** Microsoft::WRL::Details  
+ **Пространство имен:** Microsoft::wrl:: Details  
   
-## См. также  
+## <a name="see-also"></a>См. также  
  [Пространство имен Microsoft::WRL::Details](../windows/microsoft-wrl-details-namespace.md)

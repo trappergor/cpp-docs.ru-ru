@@ -1,32 +1,33 @@
 ---
-title: "Метод ActivationFactory::GetTrustLevel | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "module/Microsoft::WRL::ActivationFactory::GetTrustLevel"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "GetTrustLevel - метод"
+title: "Метод ActivationFactory::GetTrustLevel | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: module/Microsoft::WRL::ActivationFactory::GetTrustLevel
+dev_langs: C++
+helpviewer_keywords: GetTrustLevel method
 ms.assetid: 31547ae6-d2ab-4039-923c-154d53fb1a8b
-caps.latest.revision: 3
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 3
+caps.latest.revision: "3"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: 48db1632c50726073372e314a338cdca543c29e9
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 12/21/2017
 ---
-# Метод ActivationFactory::GetTrustLevel
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Получает уровень доверия объекта, который инициализируется текущим ActivationFactory.  
+# <a name="activationfactorygettrustlevel-method"></a>Метод ActivationFactory::GetTrustLevel
+Возвращает объект, который создает экземпляр текущего ActivationFactory уровень доверия.  
   
-## Синтаксис  
+## <a name="syntax"></a>Синтаксис  
   
 ```  
 STDMETHOD(  
@@ -34,17 +35,17 @@ STDMETHOD(
 )(_Out_ TrustLevel* trustLvl);  
 ```  
   
-#### Параметры  
+#### <a name="parameters"></a>Параметры  
  `trustLvl`  
- Когда эта операция завершается, уровень доверия класса среды выполнения, который инициализируется ActivationFactory.  
+ После завершения операции, уровень доверия класса среды выполнения, который создает экземпляры ActivationFactory.  
   
-## Возвращаемое значение  
- S\_ОК в случае успеха; в противном случае появляется ошибка, и `trustLvl` устанавливается на FullTrust.  
+## <a name="return-value"></a>Возвращаемое значение  
+ Значение S_OK, если успешно; в противном случае выдается ошибка утверждения и `trustLvl` равно FullTrust.  
   
-## Требования  
+## <a name="requirements"></a>Требования  
  **Заголовок:** module.h  
   
  **Пространство имен:** Microsoft::WRL  
   
-## См. также  
+## <a name="see-also"></a>См. также  
  [Класс ActivationFactory](../windows/activationfactory-class.md)

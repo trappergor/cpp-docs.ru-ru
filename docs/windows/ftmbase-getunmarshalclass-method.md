@@ -1,32 +1,33 @@
 ---
-title: "Метод FtmBase::GetUnmarshalClass | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "ftm/Microsoft::WRL::FtmBase::GetUnmarshalClass"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "GetUnmarshalClass - метод"
+title: "Метод FtmBase::GetUnmarshalClass | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: ftm/Microsoft::WRL::FtmBase::GetUnmarshalClass
+dev_langs: C++
+helpviewer_keywords: GetUnmarshalClass method
 ms.assetid: 535fc539-5b97-4967-b158-f7568f13d341
-caps.latest.revision: 3
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 3
+caps.latest.revision: "3"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: 978379c64f22026f19dd76afa39af08402cebc65
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 12/21/2017
 ---
-# Метод FtmBase::GetUnmarshalClass
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Получает CLSID, который модель COM использует для поиска библиотеки DLL, содержащей код для соответствующей прокси.  Модель COM загружает эту библиотеку DLL для создания неинициализированного экземпляра прокси\-сервера.  
+# <a name="ftmbasegetunmarshalclass-method"></a>Метод FtmBase::GetUnmarshalClass
+Возвращает CLSID, модель COM использует для поиска DLL, содержащая код для соответствующего прокси-сервера. COM загружает эту библиотеку DLL для создания экземпляра неинициализированным прокси-сервера.  
   
-## Синтаксис  
+## <a name="syntax"></a>Синтаксис  
   
 ```  
 STDMETHODIMP GetUnmarshalClass(  
@@ -39,35 +40,35 @@ STDMETHODIMP GetUnmarshalClass(
 ) override;  
 ```  
   
-#### Параметры  
+#### <a name="parameters"></a>Параметры  
  `riid`  
- Ссылка на идентификатор интерфейса для маршалинга.  
+ Ссылка на идентификатор интерфейса, который необходимо маршалировать.  
   
  `pv`  
- Указатель на интерфейс, который следует маршалировать; может иметь значение NULL, если вызывающий объект не имеет указателя на требуемый интерфейс.  
+ Указатель на интерфейс, который необходимо маршалировать; может иметь значение NULL, если вызывающий объект не имеет указатель на нужный интерфейс.  
   
  `dwDestContext`  
- Контекст назначения, в котором указанный интерфейс должен быть демаршалирован.  
+ Контекст назначения, где должна быть распаковать указанный интерфейс.  
   
  Укажите одно или несколько значений перечисления MSHCTX.  
   
- Демаршалирование может произойти в другом подразделении текущего процесса \(MSHCTX\_INPROC\) или в другом процессе на том же компьютере, где находится текущий процесс \(MSHCTX\_LOCAL\).  
+ Распаковка возможна, в другое подразделение (MSHCTX_INPROC) текущего процесса или в другом процессе на том же компьютере, как текущий процесс (MSHCTX_LOCAL).  
   
  `pvDestContext`  
- Зарезервировано для будущего использования; должно быть NULL.  
+ Зарезервировано для будущего использования; должен иметь значение NULL.  
   
  `mshlflags`  
- Когда эта операция завершится, указатель на CLSID должен использоваться для создания прокси в процессе клиента.  
+ После завершения этой операции представляет указатель на идентификатор CLSID, используемый для создания учетной записи-посредника в клиентском процессе.  
   
  `pCid`  
   
-## Возвращаемое значение  
- Возвращает значение S\_OK в случае успешного выполнения; в противном случае возвращает значение S\_FALSE.  
+## <a name="return-value"></a>Возвращаемое значение  
+ Значение S_OK, если успешно; в противном случае — значение S_FALSE.  
   
-## Требования  
+## <a name="requirements"></a>Требования  
  **Заголовок:** ftm.h  
   
  **Пространство имен:** Microsoft::WRL  
   
-## См. также  
+## <a name="see-also"></a>См. также  
  [Класс FtmBase](../windows/ftmbase-class.md)

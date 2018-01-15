@@ -23,14 +23,15 @@ caps.latest.revision: "13"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 043c3307ed2729740cf973119264eb21d62a7a2b
-ms.sourcegitcommit: ca2f94dfd015e0098a6eaf5c793ec532f1c97de1
+ms.workload: cplusplus
+ms.openlocfilehash: 2205862a438099c08801556f511ebf3c5e93a277
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="mfc-activex-controls-advanced-topics"></a>Элементы управления ActiveX в MFC. Дополнительные разделы
-В этой статье представлены дополнительные разделы, относящиеся к разработке элементов управления ActiveX. К ним относятся следующие методы.  
+В этой статье представлены дополнительные разделы, относящиеся к разработке элементов управления ActiveX. Сюда входит следующее.  
   
 -   [Использование классов базы данных в элементах управления ActiveX](#_core_using_database_classes_in_activex_controls)  
   
@@ -109,7 +110,7 @@ ms.lasthandoff: 10/31/2017
   
 ### <a name="activex-control-error-codes"></a>Коды ошибок элементов управления ActiveX  
   
-|Ошибка|Описание|  
+|Error|Описание:|  
 |-----------|-----------------|  
 |**CTL_E_ILLEGALFUNCTIONCALL**|Ошибочный вызов функции|  
 |**CTL_E_OVERFLOW**|Переполнение|  
@@ -174,7 +175,7 @@ ms.lasthandoff: 10/31/2017
   
 -   Используя мастер добавления члена переменной, выберите **управления переменной** , а затем выберите идентификатор элемента управления. Введите имя переменной элемента и выберите класс-оболочку элемента управления как **типа элемента управления**.  
   
-     -или-  
+     - или -  
   
 -   Объявите локальную переменную и подкласс как элемент диалоговое окно. Вставьте код, который имеет следующий вид (`CMyCtrl` является класс-оболочка, `IDC_MYCTRL1` — идентификатор элемента управления):  
   

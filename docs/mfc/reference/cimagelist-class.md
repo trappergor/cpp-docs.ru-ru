@@ -85,11 +85,12 @@ caps.latest.revision: "19"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 07065470a7dda56650224bc794579a5038c9b643
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 1dae44f60c61222659304bea4ee811999d50280b
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cimagelist-class"></a>CImageList-класс
 Предоставляет функциональные возможности стандартного элемента управления "список изображений" Windows.  
@@ -100,17 +101,17 @@ ms.lasthandoff: 10/24/2017
 class CImageList : public CObject  
 ```  
   
-## <a name="members"></a>Члены  
+## <a name="members"></a>Участники  
   
 ### <a name="public-constructors"></a>Открытые конструкторы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[CImageList::CImageList](#cimagelist)|Создает объект `CImageList`.|  
   
 ### <a name="public-methods"></a>Открытые методы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[CImageList::Add](#add)|Добавляет изображение или изображения для списка изображений.|  
 |[CImageList::Attach](#attach)|Присоединяет списка изображений для `CImageList` объекта.|  
@@ -147,13 +148,13 @@ class CImageList : public CObject
   
 ### <a name="public-operators"></a>Открытые операторы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[CImageList::operator HIMAGELIST](#operator_himagelist)|Возвращает `HIMAGELIST` присоединяется к `CImageList`.|  
   
 ### <a name="public-data-members"></a>Открытые члены данных  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[CImageList::m_hImageList](#m_himagelist)|Дескриптор, содержащий список изображений, присоединенного к данному объекту.|  
   

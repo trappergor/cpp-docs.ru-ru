@@ -1,41 +1,42 @@
 ---
-title: "Упрощенные задачи | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "упрощенные задачи"
+title: "Упрощенные задачи | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords: lightweight tasks
 ms.assetid: b6dcfc7a-9fa9-4144-96a6-2845ea272017
-caps.latest.revision: 7
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 6
+caps.latest.revision: "7"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 010f5fd443271bec1d28b6760f0c17f4e17d803b
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 12/21/2017
 ---
-# Упрощенные задачи
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-В этом документе описывается роль упрощенных задач в среде выполнения с параллелизмом.  *Упрощенная задача* — это задача, планируемая непосредственно в объекте `concurrency::Scheduler` или `concurrency::ScheduleGroup`.  Упрощенная задача напоминает функцию, предоставляемую функции [CreateThread](http://msdn.microsoft.com/library/windows/desktop/ms682453) Windows API.  Следовательно, упрощенные задачи полезны при адаптации существующего кода к использованию функций планирования среды выполнения с параллелизмом.  В среде выполнения с параллелизмом упрощенные задачи используются для планирования асинхронных агентов и отправки сообщений между асинхронными блоками сообщений.  
+# <a name="lightweight-tasks"></a>Упрощенные задачи
+В этом документе описывается роль упрощенных задач в среде выполнения с параллелизмом. Объект *упрощенной задачи* — это задача, планируемая непосредственно из `concurrency::Scheduler` или `concurrency::ScheduleGroup` объекта. Упрощенная задача похоже на функцию, указываемое в API Windows [CreateThread](http://msdn.microsoft.com/library/windows/desktop/ms682453) функции. Таким образом упрощенные задачи полезны при адаптации существующего кода для использования функциональных возможностей планирования среды выполнения с параллелизмом. Среда выполнения с параллелизмом упрощенные задачи используются для планирования асинхронных агентов и отправки сообщений между асинхронные блоки сообщений.  
   
 > [!TIP]
->  Среда выполнения с параллелизмом предоставляет планировщик по умолчанию, поэтому вам не обязательно создавать собственный.  Так как планировщик заданий помогает оптимизировать производительность приложений, рекомендуется начать с раздела [Библиотека параллельных шаблонов](../../parallel/concrt/parallel-patterns-library-ppl.md) или [Библиотека асинхронных агентов](../../parallel/concrt/asynchronous-agents-library.md), если вы не знакомы со средой выполнения с параллелизмом.  
+>  Среда выполнения с параллелизмом предоставляет планировщик по умолчанию, и таким образом не требуется создавать планировщик в приложении. Поскольку планировщик задач помогает оптимизировать производительность приложений, рекомендуется начать с [библиотеки параллельных шаблонов (PPL)](../../parallel/concrt/parallel-patterns-library-ppl.md) или [библиотеки асинхронных агентов](../../parallel/concrt/asynchronous-agents-library.md) при наличии новые и среда выполнения с параллелизмом.  
   
- Упрощенные задачи дают меньшую нагрузку на систему, чем асинхронные агенты и группы задач.  Например, среда выполнения не уведомляет о завершении упрощенной задачи.  Кроме того, среда выполнения не перехватывает и не обрабатывает исключения, созданные в ходе выполнения упрощенной задачи.  Дополнительные сведения об обработке исключений и упрощенных задачах см. в разделе [Обработка исключений](../Topic/Exception%20Handling%20in%20the%20Concurrency%20Runtime.md).  
+ Упрощенные задачи дают меньше ресурсов, чем асинхронные агенты и группы задач. Например среда выполнения не сообщит о завершении упрощенной задачи. Кроме того среда выполнения не перехватывать и обрабатывать исключения, возникающие в упрощенной задачи. Дополнительные сведения об обработке исключений и упрощенных задач см. в разделе [обработка исключений](../../parallel/concrt/exception-handling-in-the-concurrency-runtime.md).  
   
- Для большинства задач рекомендуется использовать более надежные функции, такие как группы задач и параллельные алгоритмы, потому что они облегчают разложение сложных задач на более простые.  Дополнительные сведения о группах задач см. в разделе [Параллелизм задач](../../parallel/concrt/task-parallelism-concurrency-runtime.md).  Дополнительные сведения об алгоритмах параллельной обработки см. в разделе [Параллельные алгоритмы](../Topic/Parallel%20Algorithms.md).  
+ Для большинства задач рекомендуется использовать более надежные функциональные возможности, такие как группы задач и параллельные алгоритмы, так как они позволяют легко разбить сложные задачи на более простые. Дополнительные сведения о группах задач см. в разделе [параллелизм задач](../../parallel/concrt/task-parallelism-concurrency-runtime.md). Дополнительные сведения о параллельных алгоритмах см. в разделе [параллельные алгоритмы](../../parallel/concrt/parallel-algorithms.md).  
   
- Чтобы создать упрощенную задачу, необходимо вызвать метод [concurrency::ScheduleGroup::ScheduleTask](../Topic/ScheduleGroup::ScheduleTask%20Method.md), [concurrency::CurrentScheduler::ScheduleTask](../Topic/CurrentScheduler::ScheduleTask%20Method.md) или [concurrency::Scheduler::ScheduleTask](../Topic/Scheduler::ScheduleTask%20Method.md).  Чтобы дождаться завершения упрощенной задачи, необходимо дождаться завершения работы родительского планировщика или использовать механизм синхронизации, такой как объект [concurrency::event](../Topic/event%20Class.md).  
+ Для создания упрощенной задачи вызовите [Concurrency::ScheduleGroup:: ScheduleTask](reference/schedulegroup-class.md#scheduletask), [Concurrency::CurrentScheduler:: ScheduleTask](reference/currentscheduler-class.md#scheduletask), или [Concurrency::Scheduler:: ScheduleTask ](reference/scheduler-class.md#scheduletask) метод. Чтобы дождаться завершения упрощенной задачи, необходимо дождаться родительского планировщика завершать работу, или использовать механизм синхронизации, такие как [concurrency::event](../../parallel/concrt/reference/event-class.md) объекта.  
   
-## Пример  
- Пример, в котором показана адаптация существующего кода к использованию упрощенной задачи, см. в разделе [Пошаговое руководство. Адаптация существующего кода для использования упрощенных задач](../Topic/Walkthrough:%20Adapting%20Existing%20Code%20to%20Use%20Lightweight%20Tasks.md).  
+## <a name="example"></a>Пример  
+ Пример, демонстрирующий, как адаптировать имеющийся код для использования упрощенных задач см. в разделе [Пошаговое руководство: адаптации существующего кода для использования упрощенных задач](../../parallel/concrt/walkthrough-adapting-existing-code-to-use-lightweight-tasks.md).  
   
-## См. также  
+## <a name="see-also"></a>См. также  
  [Планировщик задач](../../parallel/concrt/task-scheduler-concurrency-runtime.md)   
- [Пошаговое руководство. Адаптация существующего кода для использования упрощенных задач](../Topic/Walkthrough:%20Adapting%20Existing%20Code%20to%20Use%20Lightweight%20Tasks.md)
+ [Пошаговое руководство. Адаптация существующего кода для использования упрощенных задач](../../parallel/concrt/walkthrough-adapting-existing-code-to-use-lightweight-tasks.md)
+

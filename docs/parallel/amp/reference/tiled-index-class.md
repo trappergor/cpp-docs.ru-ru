@@ -29,11 +29,12 @@ caps.latest.revision: "19"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 4acda08cac0e67559db48525e634cd21cdf5a8f3
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 46467930b1d8bfaffe6bac4f862986d445315f87
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="tiledindex-class"></a>Класс tiled_index
 Предоставляет индекс в [tiled_extent](tiled-extent-class.md) объекта. Этот класс содержит свойства для доступа к элементам относительно Плитка локального источника, так и относительно глобального источника. Дополнительные сведения о пространствах Мозаичная см [с помощью плитки](../../../parallel/amp/using-tiles.md).  
@@ -70,18 +71,18 @@ class tiled_index<_Dim0, 0, 0> : public _Tiled_index_base<1>;
  `_Dim2`  
  Длина младших измерения.  
   
-## <a name="members"></a>Члены  
+## <a name="members"></a>Участники  
   
 ### <a name="public-constructors"></a>Открытые конструкторы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[Конструктор tiled_index](#ctor)|Инициализирует новый экземпляр класса `tile_index`.|  
 
   
 ### <a name="public-methods"></a>Открытые методы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[get_tile_extent](#tiled_index__get_tile_extent)|Возвращает [экстент](extent-class.md) объект, имеющий значения `tiled_index` аргументов шаблона `_Dim0`, `_Dim1`, и `_Dim2`.|  
 
@@ -89,7 +90,7 @@ class tiled_index<_Dim0, 0, 0> : public _Tiled_index_base<1>;
   
 ### <a name="public-constants"></a>Открытые константы  
   
-|Имя|Описание|  
+|name|Описание:|  
 |----------|-----------------|  
 |[Барьер константа](#tiled_index__barrier)|Магазины [tile_barrier](tile-barrier-class.md) , представляющий барьер в текущий tile потоков.|  
 |||  
@@ -105,7 +106,7 @@ class tiled_index<_Dim0, 0, 0> : public _Tiled_index_base<1>;
   
 ### <a name="public-data-members"></a>Открытые члены данных  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[tile_extent](#tile_extent)|Возвращает [экстент](extent-class.md) объект, имеющий значения `tiled_index` аргументов шаблона `tiled_index` аргументов шаблона `_Dim0`, `_Dim1`, и `_Dim2`.|  
 
@@ -161,7 +162,7 @@ tiled_index(
   
 |||  
 |-|-|  
-|Имя|Описание|  
+|name|Описание:|  
 |`tiled_index(const index<rank>& _Global, const index<rank>& _Local, const index<rank>& _Tile, const index<rank>& _Tile_origin, const tile_barrier& _Barrier restrict(amp,cpu);`|Инициализирует новый экземпляр `tile_index` класса из индекса плитку на глобальные координаты и относительное положение в плитке в локальной системе координат. `_Global` И `_Tile_origin` вычисляются параметры.|  
 |`tiled_index(    const tiled_index& _Other) restrict(amp,cpu);`|Инициализирует новый экземпляр `tile_index` , копируя указанный `tiled_index` объекта.|  
 

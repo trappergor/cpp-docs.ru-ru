@@ -1,32 +1,31 @@
 ---
-title: "master | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "master"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "master OpenMP directive"
+title: "основной | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: master
+dev_langs: C++
+helpviewer_keywords: master OpenMP directive
 ms.assetid: 559ed974-e02a-486e-a23f-31556429b2c4
-caps.latest.revision: 11
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 11
+caps.latest.revision: "11"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 135b0494300fd687e9ce4dbcbac43d9c9d62977a
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 12/21/2017
 ---
-# master
-[!INCLUDE[vs2017banner](../../../assembler/inline/includes/vs2017banner.md)]
-
-Указывает, что только главное threadshould выполняет шаг программы.  
+# <a name="master"></a>master
+Указывает, что только master threadshould выполняться части программы.  
   
-## Синтаксис  
+## <a name="syntax"></a>Синтаксис  
   
 ```  
 #pragma omp master  
@@ -35,14 +34,14 @@ caps.handback.revision: 11
 }  
 ```  
   
-## Заметки  
- **Образец** директива не поддерживает никаких предложений OpenMP.  
+## <a name="remarks"></a>Примечания  
+ **Master** директива поддерживает без предложения OpenMP.  
   
- [single](../Topic/single.md) директива позволяет указать, что фрагмент кода должен выполняться в одном потоке, не обязательно главный поток.  
+ [Одного](../../../parallel/openmp/reference/single.md) директива позволяет указать, что фрагмент кода должна выполняться в одном потоке, не обязательно главного потока.  
   
- Дополнительные сведения см. в разделе [2.6.1 master Construct](../../../parallel/openmp/2-6-1-master-construct.md).  
+ Дополнительные сведения см. в разделе [-шаблоны 2.6.1 конструкция](../../../parallel/openmp/2-6-1-master-construct.md).  
   
-## Пример  
+## <a name="example"></a>Пример  
   
 ```  
 // omp_master.cpp  
@@ -77,10 +76,13 @@ int main( )
 }  
 ```  
   
-  **\[0\] \= 0**  
-**\[1\] \= 1**  
-**\[2\] \= 4**  
-**\[3\] \= 9**  
-**\[4\] \= 16**   
-## См. также  
- [Directives](../../../parallel/openmp/reference/openmp-directives.md)
+```Output  
+a[0] = 0  
+a[1] = 1  
+a[2] = 4  
+a[3] = 9  
+a[4] = 16  
+```  
+  
+## <a name="see-also"></a>См. также  
+ [Директивы](../../../parallel/openmp/reference/openmp-directives.md)

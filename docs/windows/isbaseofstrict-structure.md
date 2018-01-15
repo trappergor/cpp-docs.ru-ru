@@ -1,32 +1,33 @@
 ---
-title: "Структура IsBaseOfStrict | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "internal/Microsoft::WRL::Details::IsBaseOfStrict"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "IsBaseOfStrict - структура"
+title: "Структура IsBaseOfStrict | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: internal/Microsoft::WRL::Details::IsBaseOfStrict
+dev_langs: C++
+helpviewer_keywords: IsBaseOfStrict structure
 ms.assetid: 6fed7366-c8d4-4991-b4fb-43ed93f8e1bf
-caps.latest.revision: 5
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 5
+caps.latest.revision: "5"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: 8a8e40bec0f4dedf02aab14b2c8072ccc3e60bbb
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 12/21/2017
 ---
-# Структура IsBaseOfStrict
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Предназначено для поддержки инфраструктуры WRL, а не для непосредственного использования в коде.  
+# <a name="isbaseofstrict-structure"></a>IsBaseOfStrict - структура
+Поддерживает инфраструктуру WRL и не предназначен для использования непосредственно из программного кода.  
   
-## Синтаксис  
+## <a name="syntax"></a>Синтаксис  
   
 ```  
 template <  
@@ -41,33 +42,33 @@ template <
 struct IsBaseOfStrict<Base, Base>;  
 ```  
   
-#### Параметры  
+#### <a name="parameters"></a>Параметры  
  `Base`  
  Базовый тип.  
   
  `Derived`  
  Производный тип.  
   
-## Примечания  
+## <a name="remarks"></a>Примечания  
  Проверяет, является ли один тип базовым для другого.  
   
- Первый шаблон проверяет, является ли тип производным от базового типа, что может возвращать **true** или **false**.  Второй шаблон проверяет, является ли тип производным от самого себя, что всегда создает **false**.  
+ Первый шаблон определяет, является ли тип, производный от базового типа, что может обеспечить **true** или **false**. Второй шаблон проверяет, является ли тип является производным от самого себя, который всегда создает **false**.  
   
-## Члены  
+## <a name="members"></a>Участники  
   
-### Открытые константы  
+### <a name="public-constants"></a>Открытые константы  
   
-|Имя|Описание|  
-|---------|--------------|  
-|[Константа IsBaseOfStrict::value](../Topic/IsBaseOfStrict::value%20Constant.md)|Указывает, является ли один тип базовым для другого.|  
+|name|Описание:|  
+|----------|-----------------|  
+|[Константа IsBaseOfStrict::value](../windows/isbaseofstrict-value-constant.md)|Указывает, является ли один тип базовым для другого.|  
   
-## Иерархия наследования  
+## <a name="inheritance-hierarchy"></a>Иерархия наследования  
  `IsBaseOfStrict`  
   
-## Требования  
+## <a name="requirements"></a>Требования  
  **Заголовок:** internal.h  
   
- **Пространство имен:** Microsoft::WRL::Details  
+ **Пространство имен:** Microsoft::wrl:: Details  
   
-## См. также  
+## <a name="see-also"></a>См. также  
  [Пространство имен Microsoft::WRL::Details](../windows/microsoft-wrl-details-namespace.md)

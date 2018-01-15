@@ -17,11 +17,12 @@ caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: cd3492afb8725ccc510d185c025a27f2ce07f7f3
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 9c79404f296df09afb177930897064b8455217d1
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="how-wininet-makes-it-easier-to-create-internet-client-applications"></a>Использование WinInet для упрощения создания клиентских приложений в Интернете
 Расширения Интернета Win32 или WinInet, обеспечивают доступ к распространенные протоколы Интернета, включая HTTP, FTP и gopher. WinInet можно написать клиентских приложений в Интернете на более высоком уровне программирования без необходимости работать с WinSock TCP/IP и сведения о конкретных протоколы Интернета. WinInet предоставляет согласованный набор функций для всех трех протоколов, знакомый интерфейс Win32 API. Это согласованности сводит к минимуму изменения кода, необходимо внести изменение базового протокола (например, из FTP, HTTP).  

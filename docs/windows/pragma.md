@@ -1,32 +1,33 @@
 ---
-title: "pragma | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-f1_keywords: 
-  - "vc-attr.pragma"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "pragma attribute"
+title: "Директива pragma | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+f1_keywords: vc-attr.pragma
+dev_langs: C++
+helpviewer_keywords: pragma attribute
 ms.assetid: 3f90d023-b8b5-4007-8311-008bb72cbea1
-caps.latest.revision: 11
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 11
+caps.latest.revision: "11"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: 36016ae4af32ead520c8d9919840d267e9d46211
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 12/21/2017
 ---
-# pragma
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Помещает указанную строку в созданный файл idl без использования кавычек.  .  
+# <a name="pragma"></a>pragma
+Создает указанную строку в созданного IDL-файла без использования кавычек. .  
   
-## Синтаксис  
+## <a name="syntax"></a>Синтаксис  
   
 ```  
   
@@ -35,14 +36,14 @@ caps.handback.revision: 11
 ) ];  
 ```  
   
-#### Параметры  
- *pragma\_statement*  
- Директива pragma, что необходимо перейти в созданный файл idl.  
+#### <a name="parameters"></a>Параметры  
+ *pragma_statement*  
+ Директива pragma, необходимо перейти в сгенерированный IDL-файл.  
   
-## Заметки  
- **директива pragma** Атрибут C\+\+ имеет ту же функциональность, что и  [директива pragma](http://msdn.microsoft.com/library/windows/desktop/aa367143) атрибут MIDL.  
+## <a name="remarks"></a>Примечания  
+ **Pragma** языка C++ имеет ту же функциональность, что [pragma](http://msdn.microsoft.com/library/windows/desktop/aa367143) языка MIDL.  
   
-## Пример  
+## <a name="example"></a>Пример  
   
 ```  
 // cpp_attr_ref_pragma.cpp  
@@ -58,21 +59,20 @@ __interface A
 };  
 ```  
   
-## Требования  
+## <a name="requirements"></a>Требования  
   
-### Контекст атрибута  
+### <a name="attribute-context"></a>Контекст атрибута  
   
 |||  
 |-|-|  
-|**Применение**|Любой|  
-|**Repeatable**|Нет|  
-|**Обязательные атрибуты**|None|  
-|**Недопустимые атрибуты**|None|  
+|**Применение**|В любом месте|  
+|**Повторяемый**|Нет|  
+|**Обязательные атрибуты**|Нет|  
+|**Недопустимые атрибуты**|Нет|  
   
- Дополнительные сведения о контекстах атрибута см. в разделе [Контексты атрибута](../windows/attribute-contexts.md).  
+ Дополнительные сведения о контекстах атрибутов см. в разделе [Контексты атрибутов](../windows/attribute-contexts.md).  
   
-## См. также  
- [IDL Attributes](../windows/idl-attributes.md)   
- [Stand\-Alone Attributes](../Topic/Stand-Alone%20Attributes.md)   
+## <a name="see-also"></a>См. также  
+ [Атрибуты IDL](../windows/idl-attributes.md)   
+ [Изолированные атрибуты](../windows/stand-alone-attributes.md)   
  [pack](../preprocessor/pack.md)   
- [Attributes Samples](http://msdn.microsoft.com/ru-ru/558ebdb2-082f-44dc-b442-d8d33bf7bdb8)

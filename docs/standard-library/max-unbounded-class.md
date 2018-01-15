@@ -27,11 +27,12 @@ caps.latest.revision: "18"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 8518fbbb25eadb00a6cce68d687046ce8e344fed
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 6a06cc5f05812d662dc22fa7609680e3b5a45c97
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="maxunbounded-class"></a>Класс max_unbounded
 Описывает объект [max class](../standard-library/allocators-header.md), который не ограничивает максимальную длину объекта [freelist](../standard-library/freelist-class.md).  
@@ -66,7 +67,7 @@ void allocated(std::size_t _Nx = 1);
   
 ### <a name="parameters"></a>Параметры  
   
-|Параметр|Описание|  
+|Параметр|Описание:|  
 |---------------|-----------------|  
 |`_Nx`|Значение приращения.|  
   
@@ -82,7 +83,7 @@ void deallocated(std::size_t _Nx = 1);
   
 ### <a name="parameters"></a>Параметры  
   
-|Параметр|Описание|  
+|Параметр|Описание:|  
 |---------------|-----------------|  
 |`_Nx`|Значение приращения.|  
   
@@ -90,7 +91,7 @@ void deallocated(std::size_t _Nx = 1);
  Эта функция-член ничего не делает. Она вызывается после каждого вызова со стороны `cache_freelist::deallocate` оператора `delete`. Аргумент `_Nx` представляет число блоков памяти в блоке, который освобождается оператором `delete`.  
   
 ##  <a name="full"></a>  max_unbounded::full  
- Возвращает значение, указывающее, следует ли добавить дополнительные блоки памяти для свободного списка.  
+ Возвращает значение, указывающее, следует ли добавить в свободный список дополнительные блоки памяти.  
   
 ```
 bool full();

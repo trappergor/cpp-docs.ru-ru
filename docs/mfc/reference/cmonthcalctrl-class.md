@@ -101,11 +101,12 @@ caps.latest.revision: "23"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 9c23178c4883eedb40033aaa0ac744e90060482e
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: dad90540f74438ac17cfe1d5e14963492ee6d371
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cmonthcalctrl-class"></a>CMonthCalCtrl-класс
 Инкапсулирует функциональность элемента управления "календарь месяца".  
@@ -116,17 +117,17 @@ ms.lasthandoff: 10/24/2017
 class CMonthCalCtrl : public CWnd  
 ```  
   
-## <a name="members"></a>Члены  
+## <a name="members"></a>Участники  
   
 ### <a name="public-constructors"></a>Открытые конструкторы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[CMonthCalCtrl::CMonthCalCtrl](#cmonthcalctrl)|Создает объект `CMonthCalCtrl`.|  
   
 ### <a name="public-methods"></a>Открытые методы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[CMonthCalCtrl::Create](#create)|Создает элемент управления Календарь месяца и прикрепляет его к `CMonthCalCtrl` объекта.|  
 |[CMonthCalCtrl::GetCalendarBorder](#getcalendarborder)|Получает ширину границы элемента управления calendar текущего месяца.|  
@@ -295,7 +296,7 @@ BOOL GetCalendarGridInfo(PMCGRIDINFO pmcGridInfo) const;
   
 ### <a name="parameters"></a>Параметры  
   
-|Параметр|Описание|  
+|Параметр|Описание:|  
 |---------------|-----------------|  
 |[выходной] `pmcGridInfo`|Указатель на [MCGRIDINFO](http://msdn.microsoft.com/library/windows/desktop/bb760925) структуры, который получает сведения об элементе управления календаря текущего месяца. Вызывающий объект отвечает за выделение и инициализации этой структуры.|  
   
@@ -420,11 +421,11 @@ int GetFirstDayOfWeek(BOOL* pbLocal = NULL) const;
   
 |Значение|День недели|  
 |-----------|---------------------|  
-|0|Понедельник|  
+|0|понедельник|  
 |1|Вторник|  
-|2|Среда|  
+|2|среда|  
 |3|Четверг|  
-|4|Пятница|  
+|4|пятница|  
 |5|Суббота|  
 |6|Воскресенье|  
   
@@ -731,7 +732,7 @@ void SetCalendarBorder(int cxyBorder);
   
 ### <a name="parameters"></a>Параметры  
   
-|Параметр|Описание|  
+|Параметр|Описание:|  
 |---------------|-----------------|  
 |[in] `cxyBorder`|Ширина границы в пикселях.|  
   
@@ -771,7 +772,7 @@ BOOL SetCalID(CALID calid);
   
 ### <a name="parameters"></a>Параметры  
   
-|Параметр|Описание|  
+|Параметр|Описание:|  
 |---------------|-----------------|  
 |[in] `calid`|Один из [идентификатор календаря](http://msdn.microsoft.com/library/windows/desktop/dd317732) константы.|  
   
@@ -849,7 +850,7 @@ BOOL SetCurrentView(DWORD dwNewView);
   
 ### <a name="parameters"></a>Параметры  
   
-|Параметр|Описание|  
+|Параметр|Описание:|  
 |---------------|-----------------|  
 |[in] `dwNewView`|Одно из следующих значений, указывающее ежемесячно, годовой десятилетия или века представления.<br /><br /> MCMV_MONTH: Представление месячного<br /><br /> MCMV_YEAR: Ежегодное представление<br /><br /> MCMV_DECADE: Представление десятилетия<br /><br /> MCMV_CENTURY: Представление века|  
   
@@ -1135,7 +1136,7 @@ LPRECT SizeRectToMin(LPRECT lpRect);
   
 ### <a name="parameters"></a>Параметры  
   
-|Параметр|Описание|  
+|Параметр|Описание:|  
 |---------------|-----------------|  
 |[in] `lpRect`|Указатель на [RECT](http://msdn.microsoft.com/library/windows/desktop/dd162897) структура, определяющая прямоугольник, содержащий нужное число календарей.|  
   

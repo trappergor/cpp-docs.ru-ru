@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-windows
+ms.technology: cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
@@ -20,8 +19,7 @@ f1_keywords:
 - AFXANIMATIONCONTROLLER/CCustomTransition::m_initialValue
 - AFXANIMATIONCONTROLLER/CCustomTransition::m_initialVelocity
 - AFXANIMATIONCONTROLLER/CCustomTransition::m_pInterpolator
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - CCustomTransition [MFC], CCustomTransition
 - CCustomTransition [MFC], Create
@@ -33,16 +31,16 @@ helpviewer_keywords:
 - CCustomTransition [MFC], m_initialVelocity
 - CCustomTransition [MFC], m_pInterpolator
 ms.assetid: 5bd3f492-940f-4290-a38b-fa68eb8f8401
-caps.latest.revision: 17
+caps.latest.revision: "17"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: b94fd32bd00a484c5f8e3ba9e86efc5a9637e4e2
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
-ms.sourcegitcommit: 4a770b6508067913aec51b8b3878f33e30eed4bb
-ms.openlocfilehash: d7db8c2dc1d78fae3aebdecaac689c14695a8acb
-ms.contentlocale: ru-ru
-ms.lasthandoff: 10/09/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="ccustomtransition-class"></a>Класс CCustomTransition
 Реализует пользовательский переход.  
@@ -53,17 +51,17 @@ ms.lasthandoff: 10/09/2017
 class CCustomTransition : public CBaseTransition;  
 ```  
   
-## <a name="members"></a>Члены  
+## <a name="members"></a>Участники  
   
 ### <a name="public-constructors"></a>Открытые конструкторы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[CCustomTransition::CCustomTransition](#ccustomtransition)|Создает объект пользовательский переход.|  
   
 ### <a name="public-methods"></a>Открытые методы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[CCustomTransition::Create](#create)|Вызывает переход библиотеки для создания объекта инкапсулированный перехода COM. (Переопределяет [CBaseTransition::Create](../../mfc/reference/cbasetransition-class.md#create).)|  
 |[CCustomTransition::SetInitialValue](#setinitialvalue)|Задает начальное значение будет применяться к переменной анимации, связанные с этот переход.|  
@@ -71,7 +69,7 @@ class CCustomTransition : public CBaseTransition;
   
 ### <a name="protected-data-members"></a>Защищенные члены данных  
   
-|Имя|Описание|  
+|name|Описание:|  
 |----------|-----------------|  
 |[CCustomTransition::m_bInitialValueSpecified](#m_binitialvaluespecified)|Указывает, задан ли параметр начального значения с SetInitialValue.|  
 |[CCustomTransition::m_bInitialVelocitySpecified](#m_binitialvelocityspecified)|Указывает, задан ли параметр с SetInitialVelocity начальной скоростью.|  
@@ -178,4 +176,3 @@ void SetInitialVelocity(DOUBLE initialVelocity);
   
 ## <a name="see-also"></a>См. также  
  [Классы](../../mfc/reference/mfc-classes.md)
-

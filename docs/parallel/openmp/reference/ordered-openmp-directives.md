@@ -1,46 +1,45 @@
 ---
-title: "ordered (OpenMP Directives) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "ordered"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "ordered OpenMP directive"
+title: "упорядоченные (директивы OpenMP) | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: ordered
+dev_langs: C++
+helpviewer_keywords: ordered OpenMP directive
 ms.assetid: e1aa703e-d07d-4f6a-9b2a-f4f25203d850
-caps.latest.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 9
+caps.latest.revision: "9"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 6fa5db4e92603519314750886c28db7d097183b8
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 12/21/2017
 ---
-# ordered (OpenMP Directives)
-[!INCLUDE[vs2017banner](../../../assembler/inline/includes/vs2017banner.md)]
-
-Указывает, что код под параллелизированное for должен быть выполнен как последовательный цикл.  
+# <a name="ordered-openmp-directives"></a>ordered (директивы OpenMP)
+Указывает, код под Параллелизованный цикл должен выполняться как последовательный цикл.  
   
-## Синтаксис  
+## <a name="syntax"></a>Синтаксис  
   
 ```  
 #pragma omp ordered  
    structured-block  
 ```  
   
-## Заметки  
- **Упорядочено** рекомендация должна находиться в пределах динамической экстенты a  [for](../Topic/for%20\(OpenMP\).md) OR  **параллель для** конструкция с  **Упорядочено** предложение.  
+## <a name="remarks"></a>Примечания  
+ **Упорядоченные** директива должна быть внутри динамического экстент [для](../../../parallel/openmp/reference/for-openmp.md) или **параллельных для** построения с **упорядоченные** предложения.  
   
- **Упорядочено** директива не поддерживает никаких предложений OpenMP.  
+ **Упорядоченные** директива поддерживает без предложения OpenMP.  
   
- Дополнительные сведения см. в разделе [2.6.6 ordered Construct](../../../parallel/openmp/2-6-6-ordered-construct.md).  
+ Дополнительные сведения см. в разделе [2.6.6 конструкция ordered](../../../parallel/openmp/2-6-6-ordered-construct.md).  
   
-## Пример  
+## <a name="example"></a>Пример  
   
 ```  
 // omp_ordered.cpp  
@@ -82,14 +81,17 @@ int main( )
 }  
 ```  
   
-  **проверьте \(\) итерация 1**  
-**проверьте \(\) итерация 3**  
-**проверьте \(\) итерация 5**  
-**проверьте \(\) итерация 7**  
-**итерация test2 0 \(\)**  
-**итерация test2 1 \(\)**  
-**итерация test2 2 \(\)**  
-**итерация test2 3 \(\)**  
-**итерация test2 4 \(\)**   
-## См. также  
- [Directives](../../../parallel/openmp/reference/openmp-directives.md)
+```Output  
+test() iteration 1  
+test() iteration 3  
+test() iteration 5  
+test() iteration 7  
+test2() iteration 0  
+test2() iteration 1  
+test2() iteration 2  
+test2() iteration 3  
+test2() iteration 4  
+```  
+  
+## <a name="see-also"></a>См. также  
+ [Директивы](../../../parallel/openmp/reference/openmp-directives.md)

@@ -17,11 +17,14 @@ caps.latest.revision: "7"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: c61238a809da49686975acbfb8016996cf5d5c1a
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: a941f052527b3617772bcb18b2092fdc35ea3a22
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="creatormap-structure"></a>CreatorMap - структура
 Поддерживает инфраструктуру библиотека шаблонов C++ среды выполнения Windows и не предназначен для использования непосредственно из программного кода.  
@@ -43,11 +46,11 @@ struct CreatorMap;
   
 -   Сведения о фабрики кэша и имя сервера для интерфейса.  
   
-## <a name="members"></a>Члены  
+## <a name="members"></a>Участники  
   
 ### <a name="public-data-members"></a>Открытые члены данных  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[Элемент данных CreatorMap::activationId](../windows/creatormap-activationid-data-member.md)|Представляет идентификатор объекта, определяемого по классического COM-код класса или имя среды выполнения Windows.|  
 |[Элемент данных CreatorMap::factoryCache](../windows/creatormap-factorycache-data-member.md)|Хранит указатель на кэш фабрики для объекта CreatorMap.|  

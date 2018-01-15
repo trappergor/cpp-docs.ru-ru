@@ -49,11 +49,12 @@ caps.latest.revision: "17"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: b070dce706ab1fa63c71ac84b68f36c596b812d4
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 89286aaccd2c59efb2bac14978a2d8838af7a4e5
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cd2dgeometrysink-class"></a>Класс CD2DGeometrySink
 Программа-оболочка для ID2D1GeometrySink.  
@@ -64,18 +65,18 @@ ms.lasthandoff: 10/24/2017
 class CD2DGeometrySink;  
 ```  
   
-## <a name="members"></a>Члены  
+## <a name="members"></a>Участники  
   
 ### <a name="public-constructors"></a>Открытые конструкторы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[CD2DGeometrySink::CD2DGeometrySink](#cd2dgeometrysink)|Создает объект CD2DGeometrySink из CD2DPathGeometry объекта.|  
 |[CD2DGeometrySink:: ~ CD2DGeometrySink](#_dtorcd2dgeometrysink)|Деструктор Вызывается при уничтожении объекта D2D geometry приемника.|  
   
 ### <a name="public-methods"></a>Открытые методы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[CD2DGeometrySink::AddArc](#addarc)|Добавляет одну дугу по геометрическому пути|  
 |[CD2DGeometrySink::AddBezier](#addbezier)|Создает кривую Безье третьего порядка между текущей и заданной конечной точками.|  
@@ -94,13 +95,13 @@ class CD2DGeometrySink;
   
 ### <a name="public-operators"></a>Открытые операторы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[CD2DGeometrySink::operator ID2D1GeometrySink *](#operator_id2d1geometrysink_star)|Возвращает интерфейс ID2D1GeometrySink|  
   
 ### <a name="protected-data-members"></a>Защищенные члены данных  
   
-|Имя|Описание|  
+|name|Описание:|  
 |----------|-----------------|  
 |[CD2DGeometrySink::m_pSink](#m_psink)|Указатель на ID2D1GeometrySink.|  
   

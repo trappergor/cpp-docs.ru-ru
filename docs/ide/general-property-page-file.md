@@ -1,41 +1,46 @@
 ---
-title: "Страница свойств &quot;Общие&quot; (файл) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "VC.Project.VCFileConfiguration.ExcludedFromBuild"
-  - "VC.Project.VCFileConfiguration.Tool"
-dev_langs: 
-  - "C++"
+title: "Страница «Общие свойства» (файл) | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-ide
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- VC.Project.VCFileConfiguration.ExcludedFromBuild
+- VC.Project.VCFileConfiguration.Tool
+dev_langs: C++
 ms.assetid: 26e3711e-9e7d-4e8d-bc4c-2474538efdad
-caps.latest.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 9
+caps.latest.revision: "9"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: bb91e2700c2fd482fce996dd1936d79337435ae9
+ms.sourcegitcommit: 54035dce0992ba5dce0323d67f86301f994ff3db
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/03/2018
 ---
-# Страница свойств &quot;Общие&quot; (файл)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+# <a name="general-property-page-file"></a>Страница свойств "Общие" (файл)
 
-Когда в **обозревателе решений** выбран файл, страница свойств **Общие** под узлом **Свойства конфигурации** содержит следующие свойства:  
-  
- **Exclude From Build**  
- Указывает, должен ли файл использоваться при построении в текущей конфигурации.  
-  
- Сведения о программном доступе к этому свойству см. в разделе <xref:Microsoft.VisualStudio.VCProjectEngine.VCFileConfiguration.ExcludedFromBuild%2A>.  
-  
- **Средство**  
- Средство, используемое для построения этого файла.  Дополнительные сведения см. в разделе [Задание пользовательских средств построения](../ide/specifying-custom-build-tools.md).  
-  
- Сведения о программном доступе к этому свойству см. в разделе <xref:Microsoft.VisualStudio.VCProjectEngine.VCFileConfiguration.Tool%2A>.  
-  
- Сведения о доступе к странице **Общие** под узлом **Свойства конфигурации** см. в разделе [Практическое руководство. Задание свойств проекта при помощи страниц свойств](../Topic/How%20to:%20Specify%20Project%20Properties%20with%20Property%20Pages.md).  
-  
-## См. также  
- [Страницы свойств](../ide/property-pages-visual-cpp.md)
+При выборе файла в **обозревателе решений**, **Общие** страница свойств под **свойства конфигурации** узел содержит следующие свойства:
+
+**Исключить из сборки**  
+Указывает, следует ли файл в сборку для текущей конфигурации.
+
+Для программного доступа к этому свойству см. раздел <xref:Microsoft.VisualStudio.VCProjectEngine.VCFileConfiguration.ExcludedFromBuild%2A>.
+
+**Средство**  
+Средство, которое будет использоваться для построения этого файла. В разделе [Указание средства построения пользовательских](../ide/specifying-custom-build-tools.md) для получения дополнительной информации.
+
+Для программного доступа к этому свойству см. раздел <xref:Microsoft.VisualStudio.VCProjectEngine.VCFileConfiguration.Tool%2A>.
+
+Сведения о доступе к **Общие** страница свойств под **свойства конфигурации** узел, в разделе [работа со свойствами проекта](../ide/working-with-project-properties.md).
+
+Для проектов, отличных от Windows, в разделе [ссылка на страницу свойств C++ Linux](../linux/prop-pages-linux.md)<!-- or [C++ Cross Platform Property Page Reference](../linux/prop-pages-linux.md)-->.
+
+## <a name="see-also"></a>См. также
+
+[Страницы свойств](../ide/property-pages-visual-cpp.md)  

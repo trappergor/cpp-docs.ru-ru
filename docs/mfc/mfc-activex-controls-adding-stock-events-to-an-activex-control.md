@@ -53,11 +53,12 @@ caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 4e3226618c645a1f96c776a5aef5fbbf55f30bfe
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 99de785bba9f566c5dbb4751f788320b96782427
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="mfc-activex-controls-adding-stock-events-to-an-activex-control"></a>Элементы управления ActiveX в MFC. Добавление событий хранения в элемент управления ActiveX
 Событий хранения отличаются от пользовательских событий, автоматически запускаются классом [COleControl](../mfc/reference/colecontrol-class.md). `COleControl`содержит функции стандартных элементов, которые инициируют события, возникающие в результате общие действия. Некоторые общие действия, реализуемый `COleControl` включить одним - и двойным - clicks на элемент управления, события клавиатуры и изменения в состояние кнопок мыши. Карты записей событий для стандартных событий всегда предшествует **EVENT_STOCK** префикс.  
@@ -67,11 +68,11 @@ ms.lasthandoff: 10/24/2017
   
 ### <a name="stock-events"></a>Событий хранения  
   
-|Событие|Вызов функции|Комментарии|  
+|событие|Вызов функции|Комментарии|  
 |-----------|---------------------|--------------|  
 |Нажмите кнопку|**void (FireClick)**|Возникает, когда элемент управления захватывает мышь, все **BUTTONUP** (левая, Средняя или правая) сообщение и отпускается кнопка над элементом управления. Биржевая MouseDown и MouseUp события возникают до этого события.<br /><br /> Запись сопоставления событий: **(EVENT_STOCK_CLICK)**|  
 |Двойное нажатие кнопки|**void (FireDblClick)**|Аналогично щелкните создается, но при **BUTTONDBLCLK** сообщение.<br /><br /> Запись сопоставления событий: **(EVENT_STOCK_DBLCLICK)**|  
-|Ошибка|**void FireError (SCODE***scode* **, LPCSTR** `lpszDescription` **, UINT**`nHelpID`**= 0)** |Возникает, когда происходит ошибка в элементе управления ActiveX вне области метода вызова или доступ к свойству.<br /><br /> Запись сопоставления событий: **(EVENT_STOCK_ERROREVENT)**|  
+|Error|**void FireError (SCODE***scode* **, LPCSTR** `lpszDescription` **, UINT**`nHelpID`**= 0)** |Возникает, когда происходит ошибка в элементе управления ActiveX вне области метода вызова или доступ к свойству.<br /><br /> Запись сопоставления событий: **(EVENT_STOCK_ERROREVENT)**|  
 |KeyDown|**void FireKeyDown (короткое** `nChar` **, short**`nShiftState`**)** |Возникает, когда `WM_SYSKEYDOWN` или `WM_KEYDOWN` сообщение.<br /><br /> Запись сопоставления событий: **(EVENT_STOCK_KEYDOWN)**|  
 |Нажатие клавиши|**void FireKeyPress (короткое\***`pnChar`**)** |Возникает, когда `WM_CHAR` сообщение.<br /><br /> Запись сопоставления событий: **(EVENT_STOCK_KEYPRESS)**|  
 |Клавиша вверх|**void FireKeyUp (короткое** `nChar` **, short**`nShiftState`**)** |Возникает, когда `WM_SYSKEYUP` или `WM_KEYUP` сообщение.<br /><br /> Запись сопоставления событий: **(EVENT_STOCK_KEYUP)**|  

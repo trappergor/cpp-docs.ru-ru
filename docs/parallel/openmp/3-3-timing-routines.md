@@ -1,28 +1,28 @@
 ---
-title: "3.3 Timing Routines | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
+title: "3.3 процедуры расписания | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
 ms.assetid: 21060d64-cbe8-4e38-8718-3a68d6a57be3
-caps.latest.revision: 5
-caps.handback.revision: 5
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "5"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 05f9e7c8eedbf1803e1bfbc3c744c5d8b9c9fd99
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 12/21/2017
 ---
-# 3.3 Timing Routines
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Функции, описанные в этом разделе, поддерживающие переносимый таймер стен\-тактового генератора.  
+# <a name="33-timing-routines"></a>3.3 Процедуры расписания
+Функции, описанные в этом разделе поддерживают таймер переносимой физическое:  
   
--   `omp_get_wtime` функция возвращает истеченное время стен\-тактового генератора.  
+-   `omp_get_wtime` Функция возвращает прошедшее время.  
   
--   `omp_get_wtick` функция возвращает значение секунд между последовательными тактами часов.
+-   `omp_get_wtick` Функция возвращает секунд между последовательными тактов.

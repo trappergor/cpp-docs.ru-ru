@@ -21,11 +21,12 @@ caps.latest.revision: "19"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: dae377a89cb3264d8129c7d863d9d922d7bef876
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: c971a4aebcd0f0a7c0baa59a445059f681f7e8af
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cachefreelist-class"></a>Класс cache_freelist
 Задает [распределитель блоков](../standard-library/allocators-header.md), который выделяет и освобождает блоки памяти одного размера.  
@@ -39,7 +40,7 @@ class cache_freelist
   
 #### <a name="parameters"></a>Параметры  
   
-|Параметр|Описание|  
+|Параметр|Описание:|  
 |---------------|-----------------|  
 |`Sz`|Число элементов в массиве, которые нужно выделить.|  
 |`Max`|Класс max, представляющий максимальный размер списка свободных блоков. Это может быть класс [max_fixed_size](../standard-library/max-fixed-size-class.md), [max_none](../standard-library/max-none-class.md), [max_unbounded](../standard-library/max-unbounded-class.md) или [max_variable_size](../standard-library/max-variable-size-class.md).|  
@@ -76,7 +77,7 @@ void *allocate(std::size_t count);
   
 ### <a name="parameters"></a>Параметры  
   
-|Параметр|Описание|  
+|Параметр|Описание:|  
 |---------------|-----------------|  
 |`count`|Число элементов в массиве, которые нужно выделить.|  
   
@@ -103,7 +104,7 @@ void deallocate(void* ptr, std::size_t count);
   
 ### <a name="parameters"></a>Параметры  
   
-|Параметр|Описание|  
+|Параметр|Описание:|  
 |---------------|-----------------|  
 |`ptr`|Указатель на первый объект, который необходимо освободить из хранилища.|  
 |`count`|Количество объектов для освобождения из хранилища.|  

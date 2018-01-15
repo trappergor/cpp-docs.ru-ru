@@ -1,47 +1,46 @@
 ---
-title: "omp_lock_t | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "omp_lock_t"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "omp_lock_t OpenMP data type"
+title: "omp_lock_t | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: omp_lock_t
+dev_langs: C++
+helpviewer_keywords: omp_lock_t OpenMP data type
 ms.assetid: 51b80629-4ffc-4b8a-95c7-1af048f1f286
-caps.latest.revision: 7
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: e2e547b49aaf7dcc5293345a07191c324eac8637
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 12/21/2017
 ---
-# omp_lock_t
-[!INCLUDE[vs2017banner](../../../assembler/inline/includes/vs2017banner.md)]
-
-Тип, в котором хранится состояние блокировки, доступна ли блокировка или если поток имеет блокировку.  
+# <a name="omplockt"></a>omp_lock_t
+Тип, содержащий состояние блокировки, доступен ли блокировка или если поток владеет блокировкой.  
   
- Следующая использование функций omp\_lock\_t.  
+ Следующие функции используйте **omp_lock_t**:  
   
--   [omp\_init\_lock](../../../parallel/openmp/reference/omp-init-lock.md)  
+-   [omp_init_lock](../../../parallel/openmp/reference/omp-init-lock.md)  
   
--   [omp\_destroy\_lock](../../../parallel/openmp/reference/omp-destroy-lock.md)  
+-   [omp_destroy_lock](../../../parallel/openmp/reference/omp-destroy-lock.md)  
   
--   [omp\_set\_lock](../../../parallel/openmp/reference/omp-set-lock.md)  
+-   [omp_set_lock](../../../parallel/openmp/reference/omp-set-lock.md)  
   
--   [omp\_unset\_lock](../../../parallel/openmp/reference/omp-unset-lock.md)  
+-   [omp_unset_lock](../../../parallel/openmp/reference/omp-unset-lock.md)  
   
--   [omp\_test\_lock](../../../parallel/openmp/reference/omp-test-lock.md)  
+-   [omp_test_lock](../../../parallel/openmp/reference/omp-test-lock.md)  
   
- Дополнительные сведения см. в разделе [3.2 Lock Functions](../../../parallel/openmp/3-2-lock-functions.md).  
+ Дополнительные сведения см. в разделе [3.2 функции блокировки](../../../parallel/openmp/3-2-lock-functions.md).  
   
-## Пример  
- См. [omp\_init\_lock](../../../parallel/openmp/reference/omp-init-lock.md) пример использования  **omp\_lock\_t**.  
+## <a name="example"></a>Пример  
+ В разделе [omp_init_lock](../../../parallel/openmp/reference/omp-init-lock.md) пример использования **omp_lock_t**.  
   
-## См. также  
- [Data Types](../../../parallel/openmp/reference/openmp-data-types.md)
+## <a name="see-also"></a>См. также  
+ [Типы данных](../../../parallel/openmp/reference/openmp-data-types.md)

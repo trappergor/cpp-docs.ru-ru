@@ -61,11 +61,12 @@ caps.latest.revision: "25"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 160f85f402ee7f44f348bcb4e2ca1ed59e3b0e22
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: e22677bd88fe9e39b8c36734a9e5f3596c1a1224
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cstringlist-class"></a>Класс CStringList
 Поддерживает списки объектов `CString` .  
@@ -76,7 +77,7 @@ ms.lasthandoff: 10/24/2017
 class CStringList : public CObject  
 ```  
   
-## <a name="members"></a>Члены  
+## <a name="members"></a>Участники  
  Функции-члены `CStringList` похожи на функции-члены класса [CObList](../../mfc/reference/coblist-class.md). Из-за этой схожести для изучения этой функции-члена можно использовать справочную документацию по классу `CObList`. Если вы видите `CObject` указатель как возвращаемое значение, замените `CString` (не `CString` указатель). Если вы видите `CObject` указатель как параметр функции, замените `LPCTSTR`.  
   
  `CObject*& CObList::GetHead() const;`  
@@ -95,13 +96,13 @@ class CStringList : public CObject
   
 ### <a name="public-constructors"></a>Открытые конструкторы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[CObList::CObList](../../mfc/reference/coblist-class.md#coblist)|Создает пустой список.|  
   
 ### <a name="public-methods"></a>Открытые методы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[CObList::AddHead](../../mfc/reference/coblist-class.md#addhead)|Добавляет элемент (или все элементы в другом списке) в начало списка (делает нового заголовка).|  
 |[CObList::AddTail](../../mfc/reference/coblist-class.md#addtail)|Добавляет элемент (или все элементы в другом списке) заключительного списка (делает новый заключительного).|  

@@ -17,11 +17,12 @@ caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 80eeea133c953622151fba8b83e4995c9e5bd478
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 6c2670f3935e2f4c482728000a268cb46cc9dbdd
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="manipulating-image-lists"></a>Управление списками изображений
 [Заменить](../mfc/reference/cimagelist-class.md#replace) функция-член заменяет изображение в список изображений ([CImageList](../mfc/reference/cimagelist-class.md)) заменяется новым изображением. Эта функция также полезна, если необходимо динамически увеличить число образов в объекте списка изображений. [SetImageCount](../mfc/reference/cimagelist-class.md#setimagecount) функция динамически изменяет количество изображений, хранящихся в списке изображений. При увеличении размера списка изображений, вызовите **заменить** для добавления изображения в новый образ слоты. При уменьшении размера списка изображений, освобождаются изображения за пределами нового размера.  

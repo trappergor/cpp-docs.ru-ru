@@ -13,11 +13,12 @@ caps.latest.revision: "14"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 7ed9a10434f0128de871a426f7e6be46212d4098
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 60e7e32c79965e50255c5728cad3e9d399ea2df1
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="file-system-navigation"></a>Навигация по файловой системе
 Заголовок \<<filesystem> реализует техническую спецификацию файловой системы ISO/IEC TS 18822:2015 (окончательный вариант: [ISO/IEC JTC 1/SC 22/WG 21 N4100](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2014/n4100.pdf)), а также имеет типы и функции, позволяющие разрабатывать независимый от платформы код для навигации по файловой системе. Так как он является кроссплатформенным, он содержит API-интерфейсы, которые не являются релевантными для систем Windows. Например, это означает, что `is_fifo(const path&)` всегда возвращает `false` в Windows.   

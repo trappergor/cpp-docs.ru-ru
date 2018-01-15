@@ -1,32 +1,33 @@
 ---
-title: "requestedit | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-f1_keywords: 
-  - "vc-attr.requestedit"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "requestedit attribute"
+title: "requestedit | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+f1_keywords: vc-attr.requestedit
+dev_langs: C++
+helpviewer_keywords: requestedit attribute
 ms.assetid: b3c24790-3c4a-4646-8722-03d7b51172ee
-caps.latest.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 9
+caps.latest.revision: "9"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: 1e31881fbfc7f1da21fa7bad86fc138bc39cdf7e
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 12/21/2017
 ---
-# requestedit
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Указывает, что свойство поддерживает инфраструктуру OnRequestEdit уведомление.  
+# <a name="requestedit"></a>requestedit
+Указывает, что свойство поддерживает **OnRequestEdit** уведомления.  
   
-## Синтаксис  
+## <a name="syntax"></a>Синтаксис  
   
 ```  
   
@@ -34,30 +35,29 @@ caps.handback.revision: 9
   
 ```  
   
-## Заметки  
- **Затребовано** Атрибут C\+\+ имеет ту же функциональность, что и  [Затребовано](http://msdn.microsoft.com/library/windows/desktop/aa367155) атрибут MIDL.  
+## <a name="remarks"></a>Примечания  
+ **Requestedit** языка C++ имеет ту же функциональность, что [requestedit](http://msdn.microsoft.com/library/windows/desktop/aa367155) языка MIDL.  
   
-## Пример  
- См. пример [bindable](../windows/bindable.md) для использования образцы  **Затребовано**.  
+## <a name="example"></a>Пример  
+ Далее приведен пример [привязываемых](../windows/bindable.md) для приведен пример использования **requestedit**.  
   
-## Требования  
+## <a name="requirements"></a>Требования  
   
-### Контекст атрибута  
+### <a name="attribute-context"></a>Контекст атрибута  
   
 |||  
 |-|-|  
 |**Применение**|Метод интерфейса|  
-|**Repeatable**|Нет|  
-|**Обязательные атрибуты**|None|  
-|**Недопустимые атрибуты**|None|  
+|**Повторяемый**|Нет|  
+|**Обязательные атрибуты**|Нет|  
+|**Недопустимые атрибуты**|Нет|  
   
- Дополнительные сведения о контекстах атрибута см. в разделе [Контексты атрибута](../windows/attribute-contexts.md).  
+ Дополнительные сведения о контекстах атрибутов см. в разделе [Контексты атрибутов](../windows/attribute-contexts.md).  
   
-## См. также  
- [IDL Attributes](../windows/idl-attributes.md)   
- [Method Attributes](../windows/method-attributes.md)   
- [Data Member Attributes](../windows/data-member-attributes.md)   
+## <a name="see-also"></a>См. также  
+ [Атрибуты IDL](../windows/idl-attributes.md)   
+ [Атрибуты метода](../windows/method-attributes.md)   
+ [Атрибуты членов данных](../windows/data-member-attributes.md)   
  [defaultbind](../windows/defaultbind.md)   
  [displaybind](../windows/displaybind.md)   
  [immediatebind](../windows/immediatebind.md)   
- [Attributes Samples](http://msdn.microsoft.com/ru-ru/558ebdb2-082f-44dc-b442-d8d33bf7bdb8)

@@ -18,11 +18,12 @@ caps.latest.revision: "7"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: d4054b95dc4c62c645f4e8e9ba1eb7d64e690784
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 5cf594f08283cbffd1ccd5f22663ef88e7e19e76
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="shortvectortraits-structure"></a>Структура short_vector_traits
 Получение базовых Длина вектора и скалярный тип типа короткого вектора или скалярный тип позволяет short_vector_traits  
@@ -87,7 +88,7 @@ struct short_vector_traits<double_4>;
 #### <a name="parameters"></a>Параметры  
  `T`  
   
-## <a name="members"></a>Члены  
+## <a name="members"></a>Участники  
   
 ### <a name="public-typedefs"></a>Общедоступные определения типов  
   
@@ -97,13 +98,13 @@ struct short_vector_traits<double_4>;
   
 ### <a name="public-constructors"></a>Открытые конструкторы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[Конструктор short_vector_traits::short_vector_traits](#ctor)||  
   
 ### <a name="public-constants"></a>Открытые константы  
   
-|Имя|Описание|  
+|name|Описание:|  
 |----------|-----------------|  
 |[Константа short_vector_traits::size](#size)||  
   

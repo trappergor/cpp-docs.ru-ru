@@ -21,11 +21,12 @@ caps.latest.revision: "16"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 9f93763a3d29e19feaa110b336c4cc9bb832539d
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: b8c2f30bbab85760020c19a25b098b31eb0a8893
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="messageprocessor-class"></a>Класс message_processor
 Класс `message_processor` — это абстрактный базовый класс для обработки объектов `message`. Упорядочивание сообщений не гарантируется.  
@@ -41,17 +42,17 @@ class message_processor;
  `T`  
  Тип данных полезных данных внутри сообщений обрабатываемые этим `message_processor` объекта.  
   
-## <a name="members"></a>Члены  
+## <a name="members"></a>Участники  
   
 ### <a name="public-typedefs"></a>Общедоступные определения типов  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |`type`|Псевдоним для `T`.|  
   
 ### <a name="public-methods"></a>Открытые методы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[async_send](#async_send)|При переопределении в производном классе размещает сообщения в блок асинхронно.|  
 |[sync_send](#sync_send)|При переопределении в производном классе размещает сообщения в блок синхронно.|  
@@ -59,7 +60,7 @@ class message_processor;
   
 ### <a name="protected-methods"></a>Защищенные методы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[process_incoming_message](#process_incoming_message)|При переопределении в производном классе выполняет прямую обработки сообщений в блок. Вызывается один раз, каждый раз, добавляется новое сообщение и очередь оказывается пустой.|  
   

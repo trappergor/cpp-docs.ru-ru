@@ -18,14 +18,15 @@ caps.latest.revision: "6"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 1920d8183607140ebe38aaf56a447bc9cd3010f0
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 933e97732462b61919d9e5a1e73f2a72d26ea01b
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="charizing-operator-"></a>Оператор преобразования в символы (#@)
-**Блок, относящийся только к системам Майкрософт**  
+**Блок, относящийся только к системам Microsoft**  
   
  Оператор образования символа может использоваться только в аргументах макросов. Если  **#@**  перед формальным параметром в определении макроса, фактический аргумент заключено в одинарные кавычки и при разворачивании макроса обрабатывается как символ. Пример:  
   

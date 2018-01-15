@@ -1,62 +1,64 @@
 ---
-title: "Функции передачи сообщений | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "функции передачи сообщений"
+title: "Функции передачи сообщений | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords: message passing functions
 ms.assetid: 42477c9e-a8a6-4dc4-a98e-93c6dc8c4dd0
-caps.latest.revision: 23
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 22
+caps.latest.revision: "23"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: f9c2daa3f34ba4e73b28e11241d0f64680851fcc
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 12/21/2017
 ---
-# Функции передачи сообщений
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="message-passing-functions"></a>Функции передачи сообщений
 Библиотека асинхронных агентов предоставляет несколько функций, которые позволяют передавать сообщения между компонентами.  
   
- Эти функции передачи сообщений используются с различными типами блоков сообщений.  Дополнительные сведения о типах блоков сообщений, определяемых средой выполнения с параллелизмом, см. в разделе [Асинхронные блоки сообщений](../../parallel/concrt/asynchronous-message-blocks.md).  
+ Эти функции передачи сообщений используются с различными типами блоков сообщений. Дополнительные сведения о типах блоков сообщений, которые определены в среде выполнения с параллелизмом см. в разделе [асинхронные блоки сообщений](../../parallel/concrt/asynchronous-message-blocks.md).  
   
-##  <a name="top"></a> Подразделы  
- В этом разделе описываются следующие функции передачи сообщений:  
+##  <a name="top"></a> Разделы  
+ В этом разделе описываются следующие функции передачи сообщений.  
   
--   [send и asend](#send)  
+-   [Send и asend](#send)  
   
--   [receive и try\_receive](#receive)  
+-   [Получение и try_receive](#receive)  
   
 -   [Примеры](#examples)  
   
-##  <a name="send"></a> send и asend  
- Функция [concurrency::send](../Topic/send%20Function.md) отправляет сообщение заданному целевому объекту синхронно, а функция [concurrency::asend](../Topic/asend%20Function.md) — асинхронно.  Функции `send` и `asend` ждут, пока целевой объект укажет, примет он сообщение или отклонит.  
+##  <a name="send"></a>Send и asend  
+
+ [Concurrency::send](reference/concurrency-namespace-functions.md#send) функция отправляет сообщение заданному целевому объекту синхронно и [concurrency::asend](reference/concurrency-namespace-functions.md#asend) функция отправляет сообщение заданному целевому объекту асинхронно. Как `send` и `asend` функции подождать, пока целевой объект укажет, что он будет в конечном счете принять или отклонить сообщение.  
   
- Перед возвращением функция `send` ожидает принятия или отклонения сообщения целевым объектом.  Функция `send` возвращает значение `true`, если сообщение было доставлено; в противном случае — значение `false`.  Поскольку функция `send` работает синхронно, перед возвращением эта функция `send` ожидает получения сообщения целевым объектом.  
+ `send` Функция ожидает, пока целевой объект принимает или отклоняет сообщение, прежде чем вернуть. `send` Возврата функцией `true` Если сообщение было доставлено и `false` в противном случае. Поскольку `send` функция работает синхронно, `send` функция ожидает целевой объект для получения сообщения, прежде чем вернуть.  
   
- Функция `asend`, наоборот, перед возвратом не ждет, пока целевой объект примет или отклонит сообщение.  Вместо этого функция `asend` возвращает значение `true`, если целевой объект получает сообщение и в конечном счете примет его.  В противном случае `asend` возвращает значение `false`, чтобы указать, что целевой объект отклонил сообщение или отложил решение о принятии сообщения.  
+ И наоборот `asend` функция не ожидает целевой объект, чтобы принять или отклонить сообщение перед возвратом. Вместо этого `asend` возврата функцией `true` Если целевой объект получает сообщение и в конечном счете примет его. В противном случае `asend` возвращает `false` для указания, что целевой объект отклонил сообщение или отложил решение о принятии сообщения.  
   
- \[[Наверх](#top)\]  
+ [[В начало](#top)]  
   
-##  <a name="receive"></a> receive и try\_receive  
- Функции [concurrency::receive](../Topic/receive%20Function.md) и [concurrency::try\_receive](../Topic/try_receive%20Function.md) считывают данные из данного источника.  Функция `receive` ожидает, пока данные станут доступными, а функция `try_receive` возвращается немедленно.  
+##  <a name="receive"></a>Получение и try_receive  
+
+ [Concurrency::receive](reference/concurrency-namespace-functions.md#receive) и [concurrency::try_receive](reference/concurrency-namespace-functions.md#try_receive) функции считывают данные из источника. `receive` Функция ожидает поступления данных станут доступными, тогда как `try_receive` функция немедленно возвращает.  
   
- Использовать функцию `receive` следует в случаях, когда для продолжения обязательно наличие данных.  Использовать функцию `try_receive` следует в случаях, когда нельзя блокировать текущий контекст или для продолжения не обязательно наличие данных.  
+ Используйте `receive` работает, если необходимо иметь данные, чтобы продолжить. Используйте `try_receive` работать, если не должны блокировать текущий контекст или нет соответствующих данных, чтобы продолжить.  
   
- \[[Наверх](#top)\]  
+ [[В начало](#top)]  
   
 ##  <a name="examples"></a> Примеры  
- Примеры использования функций `send`, `asend` и `receive` см. в следующих разделах.  
+ Примеры использования `send` и `asend`, и `receive` функции, см. в следующих разделах:  
   
 -   [Асинхронные блоки сообщений](../../parallel/concrt/asynchronous-message-blocks.md)  
   
--   [Практическое руководство. Реализация различных шаблонов "источник\-приемник"](../../parallel/concrt/how-to-implement-various-producer-consumer-patterns.md)  
+-   [Практическое руководство. Реализация различных шаблонов "источник-приемник"](../../parallel/concrt/how-to-implement-various-producer-consumer-patterns.md)  
   
 -   [Практическое руководство. Предоставление рабочих функций классам call и transformer](../../parallel/concrt/how-to-provide-work-functions-to-the-call-and-transformer-classes.md)  
   
@@ -68,12 +70,14 @@ caps.handback.revision: 22
   
 -   [Практическое руководство. Использование фильтра блоков сообщений](../../parallel/concrt/how-to-use-a-message-block-filter.md)  
   
- \[[Наверх](#top)\]  
+ [[В начало](#top)]  
   
-## См. также  
+## <a name="see-also"></a>См. также  
  [Библиотека асинхронных агентов](../../parallel/concrt/asynchronous-agents-library.md)   
  [Асинхронные блоки сообщений](../../parallel/concrt/asynchronous-message-blocks.md)   
- [Функция send](../Topic/send%20Function.md)   
- [Функция asend](../Topic/asend%20Function.md)   
- [Функция receive](../Topic/receive%20Function.md)   
- [Функция try\_receive](../Topic/try_receive%20Function.md)
+ [Функция Send](reference/concurrency-namespace-functions.md#send)   
+ [Функция asend](reference/concurrency-namespace-functions.md#asend)   
+ [Функция Receive](reference/concurrency-namespace-functions.md#receive)   
+ [Функция try_receive](reference/concurrency-namespace-functions.md#try_receive)
+
+

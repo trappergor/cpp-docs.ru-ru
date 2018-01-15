@@ -19,11 +19,12 @@ caps.latest.revision: "9"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 7cce7a5d24062d06ed1f12d49e4754627f28aa92
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: f80d870f9804454dc652fdda00f34fcdb7a52062
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="initializing-documents-and-views"></a>Инициализация документов и представлений
 Класс документа должна поддерживать оба способа двумя различными способами, создании документов. Во-первых пользователь может создавать новый, пустой документ с помощью команды создания файла. В этом случае инициализации документа в переопределении [OnNewDocument](../mfc/reference/cdocument-class.md#onnewdocument) функции-члена класса [CDocument](../mfc/reference/cdocument-class.md). Во-вторых пользователя можно использовать команду «Открыть» в меню «файл» для создания нового документа, содержимое которого считываются из файла. В этом случае инициализации документа в переопределении [OnOpenDocument](../mfc/reference/cdocument-class.md#onopendocument) функции-члена класса **CDocument**. Если оба инициализаций совпадают, можно вызывать из обеих переопределенных общие функции-члена или `OnOpenDocument` можно вызвать `OnNewDocument` для инициализации чистой документа, а затем завершить операции открытия.  

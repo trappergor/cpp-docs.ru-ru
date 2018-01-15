@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-windows
+ms.technology: cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
@@ -30,8 +29,7 @@ f1_keywords:
 - AFXANIMATIONCONTROLLER/CAnimationVariable::m_lstTransitions
 - AFXANIMATIONCONTROLLER/CAnimationVariable::m_pParentObject
 - AFXANIMATIONCONTROLLER/CAnimationVariable::m_variable
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - CAnimationVariable [MFC], CAnimationVariable
 - CAnimationVariable [MFC], AddTransition
@@ -53,16 +51,16 @@ helpviewer_keywords:
 - CAnimationVariable [MFC], m_pParentObject
 - CAnimationVariable [MFC], m_variable
 ms.assetid: 506e697e-31a8-4033-a27e-292f4d7b42d9
-caps.latest.revision: 17
+caps.latest.revision: "17"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: a90db931ca53687c42263df6a4112eb478059227
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
-ms.sourcegitcommit: 4a770b6508067913aec51b8b3878f33e30eed4bb
-ms.openlocfilehash: 59b6c428f34f0f3eb100d568224399827fb243a2
-ms.contentlocale: ru-ru
-ms.lasthandoff: 10/09/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="canimationvariable-class"></a>Класс CAnimationVariable
 Представляет переменную анимации.  
@@ -73,18 +71,18 @@ ms.lasthandoff: 10/09/2017
 class CAnimationVariable;  
 ```  
   
-## <a name="members"></a>Члены  
+## <a name="members"></a>Участники  
   
 ### <a name="public-constructors"></a>Открытые конструкторы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[CAnimationVariable::CAnimationVariable](#canimationvariable)|Создает объект переменной анимации.|  
 |[CAnimationVariable:: ~ CAnimationVariable](#canimationvariable__~canimationvariable)|Деструктор Вызывается при уничтожении объекта CAnimationVariable.|  
   
 ### <a name="public-methods"></a>Открытые методы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[CAnimationVariable::AddTransition](#addtransition)|Добавляет переход.|  
 |[CAnimationVariable::ApplyTransitions](#applytransitions)|Добавляет переходы из внутреннего списка на раскадровку.|  
@@ -101,19 +99,19 @@ class CAnimationVariable;
   
 ### <a name="protected-methods"></a>Защищенные методы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[CAnimationVariable::SetParentAnimationObject](#setparentanimationobject)|Задает связь между переменной анимации и объекта анимации.|  
   
 ### <a name="public-data-members"></a>Открытые члены данных  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[CAnimationVariable::m_bAutodestroyTransitions](#m_bautodestroytransitions)|Указывает, следует ли удалять связанные перехода объектов.|  
   
 ### <a name="protected-data-members"></a>Защищенные члены данных  
   
-|Имя|Описание|  
+|name|Описание:|  
 |----------|-----------------|  
 |[CAnimationVariable::m_dblDefaultValue](#m_dbldefaultvalue)|Указывает значение по умолчанию, которое распространяется на IUIAnimationVariable.|  
 |[CAnimationVariable::m_lstTransitions](#m_lsttransitions)|Содержит список переходов, которого должна начаться анимация этой переменной анимации.|  
@@ -403,4 +401,3 @@ void SetParentAnimationObject(CAnimationBaseObject* pParentObject);
   
 ## <a name="see-also"></a>См. также  
  [Классы](../../mfc/reference/mfc-classes.md)
-

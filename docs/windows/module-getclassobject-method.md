@@ -1,29 +1,30 @@
 ---
-title: "Метод Module::GetClassObject | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "module/Microsoft::WRL::Module::GetClassObject"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "GetClassObject - метод"
+title: "Метод Module::GetClassObject | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: module/Microsoft::WRL::Module::GetClassObject
+dev_langs: C++
+helpviewer_keywords: GetClassObject method
 ms.assetid: 95b0de1b-f728-4f96-9f44-f6ea71ce56e4
-caps.latest.revision: 5
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 5
+caps.latest.revision: "5"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: 3f234b46da1a70ee0256a9a38ebb2ef7ae0bb5bb
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 12/21/2017
 ---
-# Метод Module::GetClassObject
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="modulegetclassobject-method"></a>Метод Module::GetClassObject
 Извлекает кэш фабрик классов.  
   
 ## <a name="syntax"></a>Синтаксис  
@@ -53,7 +54,7 @@ caps.handback.revision: 5
 ## <a name="return-value"></a>Возвращаемое значение  
   
 ## <a name="remarks"></a>Примечания  
- Используйте этот метод только для модели COM, а не для среды выполнения ([!INCLUDE[wrt](../atl/reference/includes/wrt_md.md)]). Этот метод реализует только методы IClassFactory.  
+ Используйте этот метод только для модели COM, а не средой выполнения Windows. Этот метод реализует только методы IClassFactory.  
   
 ## <a name="requirements"></a>Требования  
  **Заголовок:** module.h  
@@ -61,4 +62,4 @@ caps.handback.revision: 5
  **Пространство имен:** Microsoft::WRL
  
  ## <a name="see-also"></a>См. также
- [Класс модулей](../windows/module-class.md)
+ [Класс Module](../windows/module-class.md)

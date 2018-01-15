@@ -1,318 +1,309 @@
 ---
-title: "Пошаговое руководство. Умножение матриц | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
+title: "Пошаговое руководство: Умножение матриц | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
 ms.assetid: 61172e8b-da71-4200-a462-ff3a908ab0cf
-caps.latest.revision: 16
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 15
+caps.latest.revision: "16"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: f91bed0b33ae29d7928ec7df3420eb4878b51eef
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 12/21/2017
 ---
-# Пошаговое руководство. Умножение матриц
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Это пошаговое руководство демонстрирует использование C\+\+ AMP для ускорения выполнения умножения матриц.  Представлено два алгоритма, один без замощения и один с замощением.  
+# <a name="walkthrough-matrix-multiplication"></a>Пошаговое руководство. Умножение матриц
+Это пошаговое руководство демонстрирует использование C++ AMP для ускорения выполнения умножение матриц. Без заполнения и полноразмерных мозаичное заполнение представлены два алгоритма.  
   
-## Обязательные компоненты  
- Перед началом:  
+## <a name="prerequisites"></a>Предварительные требования  
+ Перед началом работы  
   
--   Чтение значения [Общие сведения о C\+\+ AMP](../../parallel/amp/cpp-amp-overview.md).  
+-   Чтение [Обзор C++ AMP](../../parallel/amp/cpp-amp-overview.md).  
   
--   Чтение значения [Использование плиток](../../parallel/amp/using-tiles.md).  
+-   Чтение [с помощью плитки](../../parallel/amp/using-tiles.md).  
   
--   Убедитесь, что на компьютере установлены [!INCLUDE[win7](../../build/includes/win7_md.md)], [!INCLUDE[win8](../../build/includes/win8_md.md)], [!INCLUDE[winsvr08_r2](../Token/winsvr08_r2_md.md)] или [!INCLUDE[winserver8](../../build/includes/winserver8_md.md)].  
+-   Убедитесь, что [!INCLUDE[win7](../../build/includes/win7_md.md)], [!INCLUDE[win8](../../build/reference/includes/win8_md.md)], [!INCLUDE[winsvr08_r2](../../parallel/amp/includes/winsvr08_r2_md.md)], или [!INCLUDE[winserver8](../../build/reference/includes/winserver8_md.md)] установлены на компьютере.  
   
-### Создание проекта  
+### <a name="to-create-the-project"></a>Создание проекта  
   
-1.  В Visual Studio в строке меню выберите **Файл**, **Создать**, **Проект**.  
+1.  В строке меню в Visual Studio выберите **файл**, **New**, **проекта**.  
   
-2.  В **Установленные** в области шаблонов выберите **Visual C\+\+**.  
+2.  В разделе **установленные** в области шаблонов выберите **Visual C++**.  
   
-3.  Выберите **Пустой проект**, введите `MatrixMultiply` в окне **Имя**, а затем нажмите кнопку **ОК**.  
+3.  Выберите **пустой проект**, введите `MatrixMultiply` в **имя** , а затем нажмите **ОК** кнопки.  
   
 4.  Нажмите кнопку **Далее**.  
   
-5.  В **Обозревателе решений** откройте контекстное меню для пункта **Файлы исходного кода**, а затем выберите **Добавить**, **Создать элемент**.  
+5.  В **обозревателе решений**, откройте контекстное меню для **исходные файлы**, а затем выберите **добавить**, **новый элемент**.  
   
-6.  В диалоговом окне **Добавление нового элемента** выберите **Файл C\+\+ \(.cpp\)**, введите `MatrixMultiply.cpp` в поле **Имя**, а затем нажмите кнопку **Добавить**.  
+6.  В **Добавление нового элемента** выберите **файл C++ (.cpp)**, введите `MatrixMultiply.cpp` в **имя** , а затем нажмите **добавить** кнопка.  
   
-## Умножение без замощения  
- В этом разделе рассмотрим умножение двух матриц, A и B, которые определяются следующим образом:  
+## <a name="multiplication-without-tiling"></a>Умножение без заполнения  
+ В этом разделе рассмотрим умножения двух матриц, А и Б, который определяется следующим образом:  
   
- ![Матрица 3x2](../../parallel/amp/media/campmatrixanontiled.png "CampMatrixANonTiled")  
+ ![3 &#45; &#45; 2 матрицы](../../parallel/amp/media/campmatrixanontiled.png "campmatrixanontiled")  
   
- ![Матрица 2x3](../Image/CampMatrixBNonTiled.PNG "CampMatrixBNonTiled")  
+ ![2 &#45; &#45; 3 матрицы](../../parallel/amp/media/campmatrixbnontiled.png "campmatrixbnontiled")  
   
- A — матрица 3 на 2, и B — матрица 2 на 3.  Результат перемножения A на B в следующей матрице 3 на 3.  Произведение вычисляется путем поэлементного умножения строк A на столбцы B.  
+ Представляет матрицу 3 x 2, а B — матрицы 2 x 3. Результат умножения A, B является следующая матрица 3 x 3. Продукт вычисляется путем умножения строки A по столбцам B поэлементно.  
   
- ![Матрица 3x3](../../parallel/amp/media/campmatrixproductnontiled.PNG "CampMatrixProductNonTiled")  
+ ![3 &#45; &#45; 3 матрицы](../../parallel/amp/media/campmatrixproductnontiled.png "campmatrixproductnontiled")  
   
-### Умножение без использования C\+\+ AMP  
+### <a name="to-multiply-without-using-c-amp"></a>Для умножения без использования C++ AMP  
   
-1.  Откройте MatrixMultiply.cpp и используйте следующий код, чтобы заменить существующий код.  
+1.  Откройте MatrixMultiply.cpp и используйте следующий код для замены существующего кода.  
   
-    ```cpp  
+```cpp  
+#include <iostream>  
   
-    #include <iostream>  
+void MultiplyWithOutAMP() {  
   
-    void MultiplyWithOutAMP() {  
+    int aMatrix[3][2] = {{1, 4}, {2, 5}, {3, 6}};  
+    int bMatrix[2][3] = {{7, 8, 9}, {10, 11, 12}};  
+    int product[3][3] = {{0, 0, 0}, {0, 0, 0}, {0, 0, 0}};  
   
-        int aMatrix[3][2] = {{1, 4}, {2, 5}, {3, 6}};  
-        int bMatrix[2][3] = {{7, 8, 9}, {10, 11, 12}};  
-        int product[3][3] = {{0, 0, 0}, {0, 0, 0}, {0, 0, 0}};  
-  
-        for (int row = 0; row < 3; row++) {  
-            for (int col = 0; col < 3; col++) {  
-                // Multiply the row of A by the column of B to get the row, column of product.  
-                for (int inner = 0; inner < 2; inner++) {  
-                    product[row][col] += aMatrix[row][inner] * bMatrix[inner][col];  
-                }  
-                std::cout << product[row][col] << "  ";  
+    for (int row = 0; row < 3; row++) {  
+        for (int col = 0; col < 3; col++) {  
+            // Multiply the row of A by the column of B to get the row, column of product.  
+            for (int inner = 0; inner < 2; inner++) {  
+                product[row][col] += aMatrix[row][inner] * bMatrix[inner][col];  
             }  
-            std::cout << "\n";  
+            std::cout << product[row][col] << "  ";  
         }  
+        std::cout << "\n";  
     }  
+}  
   
-    void main() {  
-        MultiplyWithOutAMP();  
-        getchar();  
-    }  
+void main() {  
+    MultiplyWithOutAMP();  
+    getchar();  
+}  
+```  
   
-    ```  
-  
-     Этот алгоритм — простая реализация определения произведения матриц.  Он не использует параллельных или поточных алгоритмов, чтобы сократить время вычисления.  
+    The algorithm is a straightforward implementation of the definition of matrix multiplication. It does not use any parallel or threaded algorithms to reduce the computation time.  
   
 2.  В строке меню выберите **Файл**, **Сохранить все**.  
   
-3.  Нажмите сочетание клавиш F5 для запуска отладки и убедиться, что указан верный результат.  
+3.  Нажмите сочетание клавиш F5, чтобы начать отладку и проверьте, правильно ли выходные данные.  
   
-4.  Нажмите кнопку Enter, чтобы выйти из приложения.  
+4.  Нажмите клавишу ВВОД для выхода из приложения.  
   
-### Умножение с помощью C\+\+ AMP  
+### <a name="to-multiply-by-using-c-amp"></a>Умножение с помощью C++ AMP  
   
-1.  В MatrixMultiply.cpp добавьте следующий код перед методом `main`.  
+1.  В MatrixMultiply.cpp, добавьте следующий код перед `main` метод.  
   
-    ```cpp  
-  
-    void MultiplyWithAMP() {  
-        int aMatrix[] = { 1, 4, 2, 5, 3, 6 };  
-        int bMatrix[] = { 7, 8, 9, 10, 11, 12 };  
-        int productMatrix[] = { 0, 0, 0, 0, 0, 0, 0, 0, 0 };  
-  
-        array_view<int, 2> a(3, 2, aMatrix);  
-        array_view<int, 2> b(2, 3, bMatrix);  
-        array_view<int, 2> product(3, 3, productMatrix);  
-  
-        parallel_for_each(  
-            product.extent,   
-             [=](index<2> idx) restrict(amp) {  
-                int row = idx[0];  
-                int col = idx[1];  
-                for (int inner = 0; inner < 2; inner++) {  
-                    product[idx] += a(row, inner) * b(inner, col);  
-                }  
+```cpp  
+void MultiplyWithAMP() {  
+    int aMatrix[] = { 1, 4, 2, 5, 3, 6 };  
+    int bMatrix[] = { 7, 8, 9, 10, 11, 12 };  
+    int productMatrix[] = { 0, 0, 0, 0, 0, 0, 0, 0, 0 };  
+ 
+    array_view<int, 2> a(3, 2, aMatrix);
+
+    array_view<int, 2> b(2, 3, bMatrix);
+
+    array_view<int, 2> product(3, 3, productMatrix);
+
+ 
+    parallel_for_each(product.extent,  
+        [=] (index<2> idx) restrict(amp) {  
+            int row = idx[0];  
+            int col = idx[1];  
+            for (int inner = 0; inner <2; inner++) {  
+                product[idx] += a(row, inner)* b(inner, col);  
             }  
-        );  
-  
-        product.synchronize();  
-  
-        for (int row = 0; row < 3; row++) {  
-            for (int col = 0; col < 3; col++) {  
-                //std::cout << productMatrix[row*3 + col] << "  ";  
-                std::cout << product(row, col) << "  ";  
-            }  
-            std::cout << "\n";  
-        }  
+        });  
+ 
+    product.synchronize();
+ 
+    for (int row = 0; row <3; row++) {  
+        for (int col = 0; col <3; col++) { 
+            //std::cout << productMatrix[row*3 + col] << "  ";  
+            std::cout << product(row, col) << "  ";  
+        }    
+        std::cout << "\n";  
     }  
+}  
+```  
   
-    ```  
+    The AMP code resembles the non-AMP code. The call to `parallel_for_each` starts one thread for each element in `product.extent`, and replaces the `for` loops for row and column. The value of the cell at the row and column is available in `idx`. You can access the elements of an `array_view` object by using either the `[]` operator and an index variable, or the `()` operator and the row and column variables. The example demonstrates both methods. The `array_view::synchronize` method copies the values of the `product` variable back to the `productMatrix` variable.  
   
-     Код AMP напоминает не AMP код.  Вызов `parallel_for_each` запускает по одному потоку для каждого элемента в `product.extent` и заменяет циклы `for` для строки и столбца.  Значение ячейки в строке и столбце доступно в `idx`.  Можно получить доступ к элементам объекта `array_view` с помощью оператора `[]` и переменной индекса или оператора `()` и переменных строки и столбца.  В примере демонстрируются оба метода.  Метод `array_view::synchronize` копирует значения переменной `product` обратно в переменную `productMatrix`.  
+2.  Добавьте следующие `include` и `using` инструкции в верхней части MatrixMultiply.cpp.  
   
-2.  Добавьте следующие операторы `include` и `using` в верхнюю часть MatrixMultiply.cpp.  
+```cpp  
+#include <amp.h>  
+using namespace concurrency;  
+```  
   
-    ```cpp  
+3.  Изменить `main` метод, вызываемый `MultiplyWithAMP` метод.  
   
-    #include <amp.h>  
-    using namespace concurrency;  
+```cpp  
+void main() {  
+    MultiplyWithOutAMP();  
+    MultiplyWithAMP();  
+    getchar();  
+}  
+```  
   
-    ```  
+4.  Нажмите сочетание клавиш Ctrl + F5, чтобы начать отладку и проверьте, правильно ли выходные данные.  
   
-3.  Измените метод `main` для вызова метода `MultiplyWithAMP`.  
+5.  Нажмите пробел, чтобы выйти из приложения.  
   
-    ```cpp  
+## <a name="multiplication-with-tiling"></a>Умножение с мозаичное заполнение  
+ Мозаичное заполнение методика секционирования данных на подмножества одинакового размера, которые называются плитки. При использовании мозаичное заполнение, изменить три вещи.  
   
-    void main() {  
-        MultiplyWithOutAMP();  
-        MultiplyWithAMP();  
-        getchar();  
-    }  
+-   Можно создать `tile_static` переменных. Доступ к данным в `tile_static` пространства может быть много раз быстрее, чем доступ к данным в глобальном пространстве. Экземпляр `tile_static` переменная создается для каждого мозаичного элемента, и все потоки в плитке имеют доступ к переменной. Основным преимуществом мозаичное заполнение является повышение производительности из-за `tile_static` доступа.  
   
-    ```  
+-   Можно вызвать [tile_barrier::wait](reference/tile-barrier-class.md#wait) метод, чтобы остановить все потоки в одну плитку в указанной строке кода. Не гарантирует порядок, в котором будет выполняться несколько потоков, только что все потоки в одну плитку останавливается на вызове `tile_barrier::wait` продолжения выполнения.  
+
   
-4.  Нажмите сочетание клавиш Ctrl\+F5 для запуска отладки и убедитесь, что указан верный результат.  
+-   У вас есть доступ к индексу потока относительно всего `array_view` объекта и индекса относительно плитки. С помощью локального индекса, может сделать код проще читать и отладки.  
   
-5.  Нажмите клавишу пробел, чтобы выйти из приложения.  
+ Чтобы воспользоваться преимуществами мозаичное заполнение в умножение матриц, алгоритм необходимо секционировать матрицы на плитки, а затем скопировать данные плитки в `tile_static` переменные для более быстрого доступа. В этом примере матрицы секционируются на submatrices одинакового размера. Путем умножения submatrices найден продукт. Две матрицы и их продукции в этом примере являются:  
   
-## Умножение с замощением  
- Замощение — метод, в котором вы разделяете данные на подмножества одинакового размера, известные как tiles\(мозаики\).  Три позиции изменяются при использовании замощения.  
+ ![4 &#45; &#45; 4 матрицы](../../parallel/amp/media/campmatrixatiled.png "campmatrixatiled")  
   
--   Можно создать переменные `tile_static`.  Доступ к данным в пространстве `tile_static` может быть в несколько раз быстрее, чем доступ к данным в глобальной области.  Экземпляр переменной `tile_static` создается для каждой мозаики, и все потоки в мозаике имеют доступ к этой переменной.  Основное преимущество замощения — выигрыш в производительности из\-за доступа `tile_static`.  
+ ![4 &#45; &#45; 4 матрицы](../../parallel/amp/media/campmatrixbtiled.png "campmatrixbtiled")  
   
--   Можно вызвать метод [tile\_barrier::wait](../Topic/tile_barrier::wait%20Method.md) для остановки всех потоков в одной мозаике в указанной строке кода.  Невозможно гарантировать порядок, в котором работают потоки, гарантировано только то, что все потоки в одной мозаике остановятся при вызове `tile_barrier::wait` перед тем, как возобновить выполнение.  
+ ![4 &#45; &#45; 4 матрицы](../../parallel/amp/media/campmatrixproducttiled.png "campmatrixproducttiled")  
   
--   Имеется доступ к индексу потока по отношению к всему объекту `array_view` и к индексу относительно мозаики.  С помощью локального индекса можно сделать код более удобным для чтения и отладки.  
+ Матрицы разделенная на матрицы четыре 2 x 2, которые определены следующим образом:  
   
- Чтобы воспользоваться преимуществами замощения при умножении матриц, алгоритм должен разбить матрицу на мозаики, а затем скопировать данные мозаики в переменные `tile_static` для ускорения доступа.  В этом примере матрица разделена на подматрицы одинакового размера.  Результат найден перемножением подматриц.  Две матрицы и их произведение в этом примере:  
+ ![4 &#45; &#45;4 матрица, разделенная на 2 &#45; по &#45; 2 sub &#45; матрицы](../../parallel/amp/media/campmatrixapartitioned.png "campmatrixapartitioned")  
   
- ![Матрица 4x4](../../parallel/amp/media/campmatrixatiled.png "CampMatrixATiled")  
+ ![4 &#45; &#45;4 матрица, разделенная на 2 &#45; по &#45; 2 sub &#45; матрицы](../../parallel/amp/media/campmatrixbpartitioned.png "campmatrixbpartitioned")  
   
- ![Матрица 4x4](../../parallel/amp/media/campmatrixbtiled.png "CampMatrixBTiled")  
+ Продукт A и B теперь могут быть написаны и вычисляется следующим образом:  
   
- ![Матрица 4x4](../../parallel/amp/media/campmatrixproducttiled.PNG "CampMatrixProductTiled")  
+ ![4 &#45; &#45;4 матрица, разделенная на 2 &#45; по &#45; 2 sub &#45; матрицы](../../parallel/amp/media/campmatrixproductpartitioned.png "campmatrixproductpartitioned")  
   
- Матрицы делятся на четыре матрицы 2x2, которые определяются следующим образом:  
-  
- ![Матрица 4x4, разделенная на матрицы 2x2](../../parallel/amp/media/campmatrixapartitioned.png "CampMatrixAPartitioned")  
-  
- ![Матрица 4x4, разделенная на матрицы 2x2](../../parallel/amp/media/campmatrixbpartitioned.png "CampMatrixBPartitioned")  
-  
- Произведение A и B теперь можно записать и вычислить следующим образом:  
-  
- ![Матрица 4x4, разделенная на матрицы 2x2](../../parallel/amp/media/campmatrixproductpartitioned.png "CampMatrixProductPartitioned")  
-  
- Поскольку матрицы `a` через `h` — матрицы 2x2, то все их произведения и суммы также являются матрицами 2x2.  Из этого также следует, что A\*B — матрица 4x4, как и ожидалось.  Чтобы быстро проверить алгоритм, посчитайте значение элемента в первой строке, первом столбце произведения.  В примере это было бы значением элемента в первой строке и первом столбце `ae + bg`.  Вы только должны вычислить первый столбец, первую строку `ae` и `bg` для каждого члена.  Значение `ae` равно `1*1 + 2*5 = 11`.  Значение `bg` равно `3*1 + 4*5 = 23`.  Конечное значение `11 + 23 = 34`, что верно.  
+ Поскольку матрицы `a` через `h` являются матрицы 2 x 2, все эти продукты и суммы из них — матрицы 2 x 2. Также следует, что A * B является матрицу 4 x 4 должным образом. Чтобы быстро проверить алгоритм, вычислите значение элемента в первой строке и первом столбце в пределах продукта. В примере, который будет иметь значение элемента в первой строке и первом столбце `ae + bg`. Имеется только для вычисления первого столбца, первая строка `ae` и `bg` для каждого термина. Это значение для `ae` — `1*1 + 2*5 = 11`. Значение для `bg` — `3*1 + 4*5 = 23`. Получается значение `11 + 23 = 34`, которое является верным.  
   
  Для реализации этого алгоритма, код:  
   
--   Использует объект `tiled_extent` вместо объекта `extent` в вызове `parallel_for_each`.  
+-   Использует `tiled_extent` объекта вместо `extent` объекта в `parallel_for_each` вызова.  
   
--   Использует объект `tiled_index` вместо объекта `index` в вызове `parallel_for_each`.  
+-   Использует `tiled_index` объекта вместо `index` объекта в `parallel_for_each` вызова.  
   
--   Создает `tile_static` переменные для хранения подматриц.  
+-   Создает `tile_static` переменных для хранения submatrices.  
   
--   Использует метод `tile_barrier::wait`, чтобы остановить потоки для вычисления произведения подматриц.  
+-   Использует `tile_barrier::wait` метод остановка потоков для расчета продуктов submatrices.  
   
-### Умножение с помощью AMP и замощения  
+### <a name="to-multiply-by-using-amp-and-tiling"></a>Умножение с помощью AMP и мозаичное заполнение  
   
-1.  В MatrixMultiply.cpp добавьте следующий код перед методом `main`.  
+1.  В MatrixMultiply.cpp, добавьте следующий код перед `main` метод.  
   
-    ```cpp  
+```cpp  
+void MultiplyWithTiling() {  
+    // The tile size is 2.  
+    static const int TS = 2;  
+
+    // The raw data.  
+    int aMatrix[] = { 1, 2, 3, 4, 5, 6, 7, 8, 1, 2, 3, 4, 5, 6, 7, 8 };  
+    int bMatrix[] = { 1, 2, 3, 4, 5, 6, 7, 8, 1, 2, 3, 4, 5, 6, 7, 8 };  
+    int productMatrix[] = { 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 };  
+
+    // Create the array_view objects.  
+    array_view<int, 2> a(4, 4, aMatrix);  
+    array_view<int, 2> b(4, 4, bMatrix);  
+    array_view<int, 2> product(4, 4, productMatrix);  
   
-    void MultiplyWithTiling()  
-    {  
-        // The tile size is 2.  
-        static const int TS = 2;  
+    // Call parallel_for_each by using 2x2 tiles.  
+    parallel_for_each(product.extent.tile<TS, TS>(),  
+        [=] (tiled_index<TS, TS> t_idx) restrict(amp)   
+        { 
+            // Get the location of the thread relative to the tile (row, col) 
+            // and the entire array_view (rowGlobal, colGlobal).  
+            int row = t_idx.local[0];   
+            int col = t_idx.local[1];  
+            int rowGlobal = t_idx.global[0];  
+            int colGlobal = t_idx.global[1];  
+            int sum = 0;  
   
-        // The raw data.  
-        int aMatrix[] =       { 1, 2, 3, 4, 5, 6, 7, 8, 1, 2, 3, 4, 5, 6, 7, 8 };  
-        int bMatrix[] =       { 1, 2, 3, 4, 5, 6, 7, 8, 1, 2, 3, 4, 5, 6, 7, 8 };  
-        int productMatrix[] = { 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 };  
-  
-        // Create the array_view objects.  
-        array_view<int, 2> a(4, 4, aMatrix);  
-        array_view<int, 2> b(4, 4, bMatrix);  
-        array_view<int, 2> product(4, 4, productMatrix);  
-  
-        // Call parallel_for_each by using  2x2 tiles.  
-        parallel_for_each(product.extent.tile< TS, TS >(),  
-            [=] (tiled_index< TS, TS> t_idx) restrict(amp)   
-            {  
-                // Get the location of the thread relative to the tile (row, col) and the entire array_view (rowGlobal, colGlobal).  
-                int row = t_idx.local[0];   
-                int col = t_idx.local[1];  
-                int rowGlobal = t_idx.global[0];  
-                int colGlobal = t_idx.global[1];  
-                int sum = 0;  
-  
-                // Given a 4x4 matrix and a 2x2 tile size, this loop executes twice for each thread.  
-                // For the first tile and the first loop, it copies a into locA and e into locB.  
-                // For the first tile and the second loop, it copies b into locA and g into locB.  
-                for (int i = 0; i < 4; i += TS) {  
-                    tile_static int locA[TS][TS];  
-                    tile_static int locB[TS][TS];  
-                    locA[row][col] = a(rowGlobal, col + i);  
-                    locB[row][col] = b(row + i, colGlobal);  
-                    // The threads in the tile all wait here until locA and locB are filled.  
-                    t_idx.barrier.wait();  
-  
-                    // Return the product for the thread. The sum is retained across  
-                    // both iterations of the loop, in effect adding the two products  
-                    // together, for example, a*e.  
-                    for (int k = 0; k < TS; k++) {  
-                        sum += locA[row][k] * locB[k][col];  
-                    }  
-  
-                    // All threads must wait until the sums are calculated. If any threads  
-                    // moved ahead, the values in locA and locB would change.        
-                    t_idx.barrier.wait();  
-                    // Now go on to the next iteration of the loop.            
+            // Given a 4x4 matrix and a 2x2 tile size, this loop executes twice for each thread.  
+            // For the first tile and the first loop, it copies a into locA and e into locB.  
+            // For the first tile and the second loop, it copies b into locA and g into locB.  
+            for (int i = 0; i < 4; i += TS) {  
+                tile_static int locA[TS][TS];  
+                tile_static int locB[TS][TS];  
+                locA[row][col] = a(rowGlobal, col + i);  
+                locB[row][col] = b(row + i, colGlobal);  
+                // The threads in the tile all wait here until locA and locB are filled.  
+                t_idx.barrier.wait();  
+
+                // Return the product for the thread. The sum is retained across 
+                // both iterations of the loop, in effect adding the two products 
+                // together, for example, a*e.  
+                for (int k = 0; k < TS; k++) {  
+                    sum += locA[row][k] * locB[k][col];  
                 }  
-  
-                // After both iterations of the loop, copy the sum to the product variable by using the global location.  
-                product[t_idx.global] = sum;  
-        });  
-  
-            // Copy the contents of product back to the productMatrix variable.  
-            product.synchronize();  
-  
-            for (int row = 0; row < 4; row++) {  
-            for (int col = 0; col < 4; col++) {  
-                // The results are available from both the product and productMatrix variables.  
-                //std::cout << productMatrix[row*3 + col] << "  ";  
-                std::cout << product(row, col) << "  ";  
+
+                // All threads must wait until the sums are calculated. If any threads  
+                // moved ahead, the values in locA and locB would change.        
+                t_idx.barrier.wait();
+                // Now go on to the next iteration of the loop.            
             }  
-            std::cout << "\n";  
+            
+            // After both iterations of the loop, copy the sum to the product variable by using the global location.  
+            product[t_idx.global] = sum;  
+        });
+
+    // Copy the contents of product back to the productMatrix variable.  
+    product.synchronize();
+ 
+    for (int row = 0; row <4; row++) {  
+        for (int col = 0; col <4; col++) { 
+            // The results are available from both the product and productMatrix variables. 
+            //std::cout << productMatrix[row*3 + col] << "  ";  
+            std::cout << product(row, col) << "  ";  
         }  
-  
+        std::cout << "\n";  
     }  
+}  
+```  
   
-    ```  
+    This example is significantly different than the example without tiling. The code uses these conceptual steps:  
   
-     Этот примере значительно отличается от примера без замощения.  Код использует следующие основные шаги.  
+    1.  Скопируйте элементы плитки [0,0] `a` в `locA`. Скопируйте элементы плитки [0,0] `b` в `locB`. Обратите внимание, что `product` выполняется мозаичное заполнение, не `a` и `b`. Таким образом, использовать глобальный индексы для доступа к `a, b`, и `product`. Вызов `tile_barrier::wait` важно. Останавливает все потоки на плитке, пока оба `locA` и `locB` заполняются.  
   
-    1.  Копирование элементов tile\[0,0\] `a` в `locA`.  Копирование элементов tile\[0,0\] `b` в `locB`.  Обратите внимание, что замощен `product`, а не `a` и `b`.  Поэтому необходимо использовать глобальные индексы для доступа к `a, b` и `product`.  Вызов `tile_barrier::wait` необходим.  Он останавливает все потоки в мозаике до тех пор, пока и `locA` и `locB` не заполнены.  
+    2.  Умножьте `locA` и `locB` и помещать результаты в `product`.  
   
-    2.  Перемножение `locA` и `locB` и помещение результатов в `product`.  
+    3.  Скопируйте элементы плитки [0,1] `a` в `locA`. Скопируйте элементы плитки [1,0] `b` в `locB`.  
   
-    3.  Копирование элементов tile\[0,1\] `a` в `locA`.  Копирование элементов tile\[1,0\] `b` в `locB`.  
+    4.  Умножьте `locA` и `locB` и добавить их к результатам, которые уже находятся в `product`.  
   
-    4.  Перемножение `locA` и `locB` и добавление их к результатам, которые уже находятся в `product`.  
+    5.  Умножение [0,0] плитки завершена.  
   
-    5.  Умножение tile\[0,0\] завершено.  
+    6.  Повторите для других четырех плитки. Нет, не индексирования специально для плитки и потоки могут выполняться в любом порядке. В каждый поток выполнения `tile_static` переменные создаются для каждого элемента мозаики соответствующим образом и вызов `tile_barrier::wait` управляет выполнением программы.  
   
-    6.  Повторение для других четырех мозаик.  Нет индексирования специально для мозаик, и потоки могут выполняться в любом порядке.  Пока выполняется каждый поток, переменные `tile_static` создаются для каждой мозаики соответствующим образом, и вызов `tile_barrier::wait` управляет ходом выполнения программы.  
+    7.  Внимательно просмотреть алгоритм, обратите внимание, что каждый submatrix загружается в `tile_static` памяти дважды. Что передача данных принимает времени. Однако после того как данные в `tile_static` памяти, доступ к данным выполняется гораздо быстрее. Поскольку вычисление продукты требуется повторяющиеся доступ к значениям в submatrices, является повышение общей производительности. Для каждого алгоритма экспериментов требуется найти оптимальный алгоритм и размер плитки.  
   
-    7.  При ближайшем рассмотрении алгоритма обратите внимание, что каждая подматрица загружается в память `tile_static` дважды.  Эта передача данных требует времени.  Однако как только данные попадают в память `tile_static`, доступ к данным становится намного быстрее.  Поскольку вычисления произведения требует повторного доступа к значениям подматриц, имеется повышение общей производительности.  Для каждого алгоритма требуется экспериментировать, чтобы найти оптимальный алгоритм и размер мозаики.  
+         В примерах не AMP и не плитки, каждый элемент A и B осуществляется из глобальной памяти для вычисления продукта четыре раза. В примере плитки, каждому элементу осуществляется дважды из глобальной памяти и четыре раза `tile_static` памяти. Это не значительный прирост производительности. Однако если A и B 1024 x 1024 матрицы и размер мозаики были 16, будет значительный прирост производительности. В этом случае необходимо скопировать каждый элемент в `tile_static` памяти только 16 времени и доступных из `tile_static` памяти 1024 раз.  
   
-         В примерах без AMP и мозаик для того, чтобы вычислить произведение, обращение к каждому элементу A и B происходит 4 раза из глобальной памяти.  В примере с мозаикой, обращение к каждому элементу проиходит дважды из глобальной памяти и четыре раза из памяти `tile_static`.  Это не дает значительного повышения производительности.  Однако, если А и B — матрицы 1024x1024 и размер мозаики равен 16, то будет значительное увеличение производительности.  В этом случае каждый элемент будет скопирован в память `tile_static` только 16 раз, и к нему будут обращаться из памяти `tile_static` 1024 раза.  
+2.  Изменение основной метод, вызываемый `MultiplyWithTiling` метода, как показано.  
   
-2.  Измените метод main для вызова метода `MultiplyWithTiling`, как показано ниже.  
+```cpp  
+void main() {  
+    MultiplyWithOutAMP();  
+    MultiplyWithAMP();  
+    MultiplyWithTiling();  
+    getchar();  
+}  
+```  
   
-    ```cpp  
+3.  Нажмите сочетание клавиш Ctrl + F5, чтобы начать отладку и проверьте, правильно ли выходные данные.  
   
-    void main() {  
-        MultiplyWithOutAMP();  
-        MultiplyWithAMP();  
-        MultiplyWithTiling();  
-        getchar();  
-    }  
+4.  Нажмите пробел, чтобы выйти из приложения.  
   
-    ```  
-  
-3.  Нажмите сочетание клавиш Ctrl\+F5 для запуска отладки и убедитесь, что указан верный результат.  
-  
-4.  Нажмите клавишу пробел, чтобы выйти из приложения.  
-  
-## См. также  
- [C\+\+ AMP \(C\+\+ Accelerated Massive Parallelism\)](../../parallel/amp/cpp-amp-cpp-accelerated-massive-parallelism.md)   
- [Пошаговое руководство. Отладка приложения C\+\+ AMP](../../parallel/amp/walkthrough-debugging-a-cpp-amp-application.md)
+## <a name="see-also"></a>См. также  
+ [C++ AMP (C++ Accelerated Massive Parallelism)](../../parallel/amp/cpp-amp-cpp-accelerated-massive-parallelism.md)   
+ [Пошаговое руководство. Отладка приложения C++ AMP](../../parallel/amp/walkthrough-debugging-a-cpp-amp-application.md)
+

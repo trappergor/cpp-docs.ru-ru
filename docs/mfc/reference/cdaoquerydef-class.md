@@ -77,11 +77,12 @@ caps.latest.revision: "24"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: e619cbc049e64c25325ab8327ec6dd9d16e071be
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: cbade1dc41b0e195606b10598e92f86195662bba
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cdaoquerydef-class"></a>Класс CDaoQueryDef
 Представляет определение запроса или QueryDef, как правило, сохраненный в базе данных.  
@@ -92,17 +93,17 @@ ms.lasthandoff: 10/24/2017
 class CDaoQueryDef : public CObject  
 ```  
   
-## <a name="members"></a>Члены  
+## <a name="members"></a>Участники  
   
 ### <a name="public-constructors"></a>Открытые конструкторы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[CDaoQueryDef::CDaoQueryDef](#cdaoquerydef)|Создает **CDaoQueryDef** объекта. Затем вызовите метод **откройте** или **создать**, в зависимости от потребностей.|  
   
 ### <a name="public-methods"></a>Открытые методы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[CDaoQueryDef::Append](#append)|Добавляет querydef QueryDefs-коллекция базы данных как сохраненный запрос.|  
 |[CDaoQueryDef::CanUpdate](#canupdate)|Возвращает ненулевое значение, если запрос можно обновить базу данных.|  
@@ -134,7 +135,7 @@ class CDaoQueryDef : public CObject
   
 ### <a name="public-data-members"></a>Открытые члены данных  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[CDaoQueryDef::m_pDAOQueryDef](#m_pdaoquerydef)|Указатель на интерфейс OLE для базового объекта querydef DAO.|  
 |[CDaoQueryDef::m_pDatabase](#m_pdatabase)|Указатель на `CDaoDatabase` объект, с которым связан querydef. Querydef может быть сохранен в базе данных, или нет.|  

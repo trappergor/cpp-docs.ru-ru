@@ -249,11 +249,12 @@ caps.latest.revision: "41"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 59032e700fe81c3343959252bc28433b0f6ae460
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 8dd8f70ffd2568f509b8b12be2167579c4ec4475
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cmfcbasetabctrl-class"></a>CMFCBaseTabCtrl Class
 Реализует базовую функциональность для окон с вкладками.  
@@ -265,11 +266,11 @@ ms.lasthandoff: 10/24/2017
 class CMFCBaseTabCtrl : public CWnd  
 ```  
   
-## <a name="members"></a>Члены  
+## <a name="members"></a>Участники  
   
 ### <a name="public-methods"></a>Открытые методы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[CMFCBaseTabCtrl::AddIcon](#addicon)||  
 |[CMFCBaseTabCtrl::AddTab](#addtab)|Добавляет новую вкладку в окно с вкладками.|  
@@ -387,13 +388,13 @@ class CMFCBaseTabCtrl : public CWnd
   
 ### <a name="protected-methods"></a>Защищенные методы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[CMFCBaseTabCtrl::CreateWrapper](#createwrapper)|Создает оболочку для объекта, производного от класса [CWnd](../../mfc/reference/cwnd-class.md) и не являющегося производным от `CDockablePane`. Чтобы закрепить объект `CMFCBaseTabCtrl` , каждый внедренный элемент управления должен иметь закрепляющую оболочку или быть производным от `CDockablePane`.<br /><br /> Класс оболочки задается с помощью `SetDockingBayWrapperRTC`.|  
   
 ### <a name="data-members"></a>Элементы данных  
   
-|Имя|Описание|  
+|name|Описание:|  
 |----------|-----------------|  
 |[CMFCBaseTabCtrl::m_bActivateTabOnRightClick](#m_bactivatetabonrightclick)|Указывает, выбираются вкладки щелчком левой или правой кнопкой мыши.|  
 |[CMFCBaseTabCtrl::m_bAutoDestroyWindow](#m_bautodestroywindow)|Указывает, будут ли автоматически уничтожаться области, входящие во вкладки.|  

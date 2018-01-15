@@ -205,11 +205,12 @@ caps.latest.revision: "26"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 3836482d03c8c8af7b3414e6e890e9cc7a81a844
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: cbf35669ba71c900a67f98fb9ee303c723546f94
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cmfctaskspane-class"></a>Класс CMFCTasksPane
 [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
@@ -222,17 +223,17 @@ ms.lasthandoff: 10/24/2017
 class CMFCTasksPane : public CDockablePane  
 ```  
   
-## <a name="members"></a>Члены  
+## <a name="members"></a>Участники  
   
 ### <a name="public-constructors"></a>Открытые конструкторы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[CMFCTasksPane::CMFCTasksPane](#cmfctaskspane)|Создает объект `CMFCTasksPane`.|  
   
 ### <a name="public-methods"></a>Открытые методы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[CMFCTasksPane::AddGroup](#addgroup)|Добавляет новую группу задач для элемента управления области задач.|  
 |[CMFCTasksPane::AddLabel](#addlabel)|Добавляет новую статическую подпись в указанную группу задач.|  
@@ -329,7 +330,7 @@ class CMFCTasksPane : public CDockablePane
   
 ### <a name="protected-methods"></a>Защищенные методы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[CMFCTasksPane::OnActivateTasksPanePage](#onactivatetaskspanepage)|Вызывается платформой при активации новой страницы области задач.|  
   
@@ -348,7 +349,7 @@ class CMFCTasksPane : public CDockablePane
   
 1.  Внедрите объект `CMFCTasksPane` в класс окна главного фрейма.  
   
-2.  При обработке сообщения `WM_CREATE` вызовите метод `Create`. Вы можете использовать регулярные [CControlBar](../../mfc/reference/ccontrolbar-class.md) стили. Для получения дополнительной информации см. `CControlBar::Create`.  
+2.  При обработке сообщения `WM_CREATE` вызовите метод `Create`. Вы можете использовать регулярные [CControlBar](../../mfc/reference/ccontrolbar-class.md) стили. Дополнительные сведения см. в разделе `CControlBar::Create`.  
   
 3.  Вызовите [CMFCTasksPane::AddGroup](#addgroup) метод, чтобы добавить различные группы.  
   

@@ -23,11 +23,12 @@ caps.latest.revision: "22"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 15037544b3344f5d43ebaa34fb35b431da581593
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 69fb88fc9c12994d413de2cbe2037cc4fc845760
+ms.sourcegitcommit: 54035dce0992ba5dce0323d67f86301f994ff3db
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 01/03/2018
 ---
 # <a name="cexception-class"></a>CException-класс
 Базовый класс для всех исключений библиотеки классов Microsoft Foundation.  
@@ -38,17 +39,17 @@ ms.lasthandoff: 10/24/2017
 class AFX_NOVTABLE CException : public CObject  
 ```  
   
-## <a name="members"></a>Члены  
+## <a name="members"></a>Участники  
   
 ### <a name="public-constructors"></a>Открытые конструкторы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[CException::CException](#cexception)|Создает объект `CException`.|  
   
 ### <a name="public-methods"></a>Открытые методы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[CException::Delete](#delete)|Удаляет `CException` объекта.|  
 |[CException::ReportError](#reporterror)|Возвращает сообщение об ошибке в окне сообщения для пользователя.|  
@@ -226,6 +227,6 @@ else
  [CObject-класс](cobject-class.md)   
  [Диаграмма иерархии](../hierarchy-chart.md)   
  [Обработка исключений](exception-processing.md)   
- [Практические советы. Создание собственных классах пользовательское исключение](http://go.microsoft.com/fwlink/linkid=128045)
+ [Практические советы. Создание собственных классах пользовательское исключение](http://go.microsoft.com/fwlink/p/?linkid=128045)
 
 

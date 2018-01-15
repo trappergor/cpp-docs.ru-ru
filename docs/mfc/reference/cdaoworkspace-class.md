@@ -73,11 +73,12 @@ caps.latest.revision: "24"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 089841b51421567f2faff9d06508feb20a57e15d
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 96cc8325ce8084d62f05283b424ead222bc55dd8
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cdaoworkspace-class"></a>Класс CDaoWorkspace
 Управление именованным, защищенным паролем сеансом базы данных от входа до выхода одним пользователем.  
@@ -88,17 +89,17 @@ ms.lasthandoff: 10/24/2017
 class CDaoWorkspace : public CObject  
 ```  
   
-## <a name="members"></a>Члены  
+## <a name="members"></a>Участники  
   
 ### <a name="public-constructors"></a>Открытые конструкторы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[CDaoWorkspace::CDaoWorkspace](#cdaoworkspace)|Создает объект рабочей области. После этого вызвать **создать** или **откройте**.|  
   
 ### <a name="public-methods"></a>Открытые методы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[CDaoWorkspace::Append](#append)|Добавляет созданную рабочую область в коллекцию рабочих областей компонент database engine.|  
 |[CDaoWorkspace::BeginTrans](#begintrans)|Начинает новую транзакцию, которая применяется ко всем базам данных откройте в рабочей области.|  
@@ -129,7 +130,7 @@ class CDaoWorkspace : public CObject
   
 ### <a name="public-data-members"></a>Открытые члены данных  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[CDaoWorkspace::m_pDAOWorkspace](#m_pdaoworkspace)|Указывает на объект базового DAO рабочей области.|  
   

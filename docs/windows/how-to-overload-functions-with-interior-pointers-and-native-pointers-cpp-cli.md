@@ -1,36 +1,37 @@
 ---
-title: "Практическое руководство. Перегрузка функций с внутренними и собственными указателями (C++/CLI) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Функции со внутренними и собственными указателями, перегрузка"
+title: "Как: перегрузка функций с внутренними и собственными указателями (C + +/ CLI) | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+dev_langs: C++
+helpviewer_keywords: Functions with interior and native pointers, overloading
 ms.assetid: d70df625-4aad-457c-84f5-70a0a290cc1f
-caps.latest.revision: 11
-caps.handback.revision: 11
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "11"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: f5f46abca993acb2990c3310e8fefd9ab970b751
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 12/21/2017
 ---
-# Практическое руководство. Перегрузка функций с внутренними и собственными указателями (C++/CLI)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Функции могут перегружаться в зависимости от того, является ли тип параметра является внутренним указателем или собственным указателем.  
+# <a name="how-to-overload-functions-with-interior-pointers-and-native-pointers-ccli"></a>Практическое руководство. Перегрузка функций с внутренними и собственными указателями (C++/CLI)
+Функции могут быть перегружены в зависимости от того, является ли тип параметра внутреннего указателя или собственного указателя.  
   
 > [!IMPORTANT]
->  Эта функция языка поддерживается параметром компилятора **\/clr**, но не параметром компилятора **\/ZW**.  
+>  Эта функция языка поддерживается **/CLR** параметр компилятора, а не **/zw** параметр компилятора.  
   
-## Пример  
+## <a name="example"></a>Пример  
   
-### Код  
+### <a name="code"></a>Код  
   
 ```  
 // interior_ptr_overload.cpp  
@@ -67,12 +68,12 @@ int main() {
 };  
 ```  
   
-### Output  
+### <a name="output"></a>Вывод  
   
 ```  
 in f( int* pi )  
 in f( interior_ptr<int> pi )  
 ```  
   
-## См. также  
- [interior\_ptr \(C\+\+\/CLI\)](../windows/interior-ptr-cpp-cli.md)
+## <a name="see-also"></a>См. также  
+ [interior_ptr (C++/CLI)](../windows/interior-ptr-cpp-cli.md)

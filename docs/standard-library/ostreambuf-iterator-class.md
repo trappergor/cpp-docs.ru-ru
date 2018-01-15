@@ -27,11 +27,12 @@ caps.latest.revision: "16"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 792d2f658ed64b44254b5e93b9f2b2bde9eb0a1d
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: c94ed10a0b97820c5a787e4350d39dcf6286fee7
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="ostreambufiterator-class"></a>Класс ostreambuf_iterator
 Класс-шаблон ostreambuf_iterator описывает объект итератора вывода, записывающий последующие элементы символов в поток с оператором извлечения **operator>>**. `ostreambuf_iterator` отличаются от таковых [класса ostream_iterator](../standard-library/ostream-iterator-class.md) тем, что используют символы вместо универсального типа для типа объекта, вставляемого в поток вывода.  
@@ -58,7 +59,7 @@ template <class CharType = char class Traits = char_traits <CharType>>
 |-|-|  
 |[ostreambuf_iterator](#ostreambuf_iterator_ostreambuf_iterator)|Создает итератор `ostreambuf_iterator`, инициализированный для записи символов в поток вывода.|  
   
-### <a name="typedefs"></a>Typedefs  
+### <a name="typedefs"></a>Определения типов  
   
 |||  
 |-|-|  
@@ -94,7 +95,7 @@ typedef CharType char_type;
 ```  
   
 ### <a name="remarks"></a>Примечания  
- Тип является синонимом для параметра-шаблона **Chartype**.  
+ Тип является синонимом для параметра-шаблона **CharType**.  
   
 ### <a name="example"></a>Пример  
   

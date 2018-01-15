@@ -25,11 +25,12 @@ caps.latest.revision: "11"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: d03b67b1207827ae753c9d2583d57eab49dc223a
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 7ed3f9adb564676d54e06152bfd7d277c4a5d952
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="textureview-class"></a>Класс texture_view
 Предоставляет доступ на чтение и запись для текстуры. `texture_view`может использоваться только для чтения текстуры, тип которого значение является `int`, `unsigned int`, или `float` , имеющие bpse 32-разрядных по умолчанию. Для чтения других форматов текстур, используйте `texture_view<const value_type, _Rank>`.  
@@ -56,11 +57,11 @@ class texture_view<const value_type, _Rank>
  `_Rank`  
  Ранг `texture_view`.  
   
-## <a name="members"></a>Члены  
+## <a name="members"></a>Участники  
   
 ### <a name="public-typedefs"></a>Общедоступные определения типов  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |`value_type`|Тип элементов в статистических выражениях текстуры.|  
 |`coordinates_type`|Тип координат, используется для указания текселя в `texture_view`— то есть `short_vector` , имеет тот же ранг, как связанные текстуры, которая имеет тип значения `float`.|  
@@ -68,14 +69,14 @@ class texture_view<const value_type, _Rank>
   
 ### <a name="public-constructors"></a>Открытые конструкторы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[Конструктор texture_view](#ctor)|Перегружен. Создает `texture_view` экземпляра.|  
 |[~ texture_view деструктор](#ctor)|Уничтожает `texture_view` экземпляра.|  
   
 ### <a name="public-methods"></a>Открытые методы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[gather_alpha](#gather_alpha)|Перегружен. Примеры по указанным координатам текстуры с помощью конфигурации указанной выборки и возвращает четыре выборки текселя компоненты альфа (w).|  
 |[gather_blue](#gather_blue)|Перегружен. Примеры по указанным координатам текстуры с помощью конфигурации указанной выборки и возвращает четыре выборки текселя компоненты синего цвета (z).|  
@@ -87,15 +88,15 @@ class texture_view<const value_type, _Rank>
   
 ### <a name="public-operators"></a>Открытые операторы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[Operator()](#operator_call)|Перегружен. Возвращает значение элемента по индексу.|  
 |[оператор]](#operator_at)|Перегружен. Возвращает значение элемента по индексу.|  
-|[operator=](#operator_eq)|Перегружен. Оператор присвоения.|  
+|[оператор=](#operator_eq)|Перегружен. Оператор присвоения.|  
   
 ### <a name="public-data-members"></a>Открытые члены данных  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[value_type](#value_type)|Тип значения элементов `texture_view`.|  
   

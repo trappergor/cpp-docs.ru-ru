@@ -20,11 +20,12 @@ caps.latest.revision: "13"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: fb1fb4094e5a54f82aa6aeebffe576965838cf7e
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: ba51ca465bec2a6400106071fcba94d36ad100e2
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="tn033-dll-version-of-mfc"></a>TN033. Версия библиотеки DLL MFC
 Эта заметка описывает, как можно использовать MFCxx.DLL и MFCxxD.DLL (где x является номером версии MFC) библиотек динамической компоновки с приложениями MFC и библиотека DLL-расширения MFC. Дополнительные сведения об обычных библиотек DLL MFC см. в разделе [использование MFC как часть библиотеки DLL](../mfc/tn011-using-mfc-as-part-of-a-dll.md).  
@@ -253,7 +254,7 @@ class CLASS_DECL_B CExampleB : public CExampleA
 ### <a name="not-exporting-the-entire-class"></a>Экспортирует весь класс  
  Опять же необходимо следить, если не экспортируется весь класс. Необходимо убедиться, корректно экспортированы элементы необходимые данные, создаваемые макросами MFC. Это можно сделать путем повторного определения **AFX_DATA** макрос для вашего конкретного класса. Это следует делать каждый раз, не экспортируется весь класс.  
   
- Например:  
+ Пример:  
   
 ```  
 // A.H  

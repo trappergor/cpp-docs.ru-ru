@@ -23,11 +23,12 @@ caps.latest.revision: "22"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 58d1c1ec052c399cf56cd145e7ee06f52483661e
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 451cc5690e871c1292f0a8ff2450eca950ada65b
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cpaintdc-class"></a>CPaintDC-класс
 Класс контекста устройства, производный от [CDC](../../mfc/reference/cdc-class.md).  
@@ -38,23 +39,23 @@ ms.lasthandoff: 10/24/2017
 class CPaintDC : public CDC  
 ```  
   
-## <a name="members"></a>Члены  
+## <a name="members"></a>Участники  
   
 ### <a name="public-constructors"></a>Открытые конструкторы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[CPaintDC::CPaintDC](#cpaintdc)|Создает `CPaintDC` подключен к заданному [CWnd](../../mfc/reference/cwnd-class.md).|  
   
 ### <a name="public-data-members"></a>Открытые члены данных  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[CPaintDC::m_ps](#m_ps)|Содержит [PAINTSTRUCT](../../mfc/reference/paintstruct-structure.md) используется для рисования клиентской области.|  
   
 ### <a name="protected-data-members"></a>Защищенные члены данных  
   
-|Имя|Описание|  
+|name|Описание:|  
 |----------|-----------------|  
 |[CPaintDC::m_hWnd](#m_hwnd)|`HWND` К которому `CPaintDC` присоединен объект.|  
   

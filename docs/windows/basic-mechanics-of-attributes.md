@@ -16,11 +16,14 @@ caps.latest.revision: "7"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: ebf81d5bfb20f151cc8f405fb8346b66451f77e2
-ms.sourcegitcommit: ca2f94dfd015e0098a6eaf5c793ec532f1c97de1
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: 99771e798e4957de5ff69601a5d3494e5fcacc35
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="basic-mechanics-of-attributes"></a>Основные принципы работы атрибутов
 Существует три способа для вставки атрибутов в проекте. Во-первых можно вставить их вручную в исходном коде. Во-вторых можно вставлять их с помощью сетки свойств объекта в проекте. Наконец вы можете вставить их с помощью различных мастеров. Дополнительные сведения об использовании окна «Свойства» и различных мастеров см. в разделе [Создание и управление проектов Visual C++](../ide/creating-and-managing-visual-cpp-projects.md).  

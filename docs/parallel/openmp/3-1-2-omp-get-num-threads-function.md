@@ -1,41 +1,41 @@
 ---
-title: "3.1.2 omp_get_num_threads Function | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
+title: "3.1.2 функция omp_get_num_threads | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
 ms.assetid: bcdd76e2-d96b-4884-ac8f-e55fc0c42801
-caps.latest.revision: 7
-caps.handback.revision: 7
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "7"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: d595fd47b87bbc3fd7701fc847821c73169a23e2
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 12/21/2017
 ---
-# 3.1.2 omp_get_num_threads Function
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Omp\_get\_num\_threads функция возвращает число потоков в данный момент в команде при выполнении параллельной области, из которой он вызывается.  Формат следующий:  
+# <a name="312-ompgetnumthreads-function"></a>3.1.2 Функция omp_get_num_threads
+**Omp_get_num_threads** функция возвращает число потоков в настоящее время в выполнении параллельной области, из которой вызывается команда. Он следующий:  
   
 ```  
 #include <omp.h>  
 int omp_get_num_threads(void);  
 ```  
   
- **num\_threads** предложение  **omp\_set\_num\_threads** функция and  **OMP\_NUM\_THREADS** управление переменной среды количество потоков в рабочей группе.  
+ **Num_threads** предложение, **omp_set_num_threads** функции и **OMP_NUM_THREADS** переменной среды управлять количеством потоков в команде.  
   
- Если число потоков явно не задано пользователем, то значение по умолчанию реализация\-определено.  Эта функция обеспечивает привязку к ближайший заключать **Параллельно** директива.  Если вызывается с серийной части программы, либо из вложенного параллельной области, сериализовать эта функция возвращает значение 1.  
+ Если число потоков, не было явно задано пользователем, значение по умолчанию определяется реализацией. Эта функция привязывается к ближайшей окружению **параллельных** директивы. Если вызывается из последовательного части программы или из вложенных параллельной области, в который сериализуется, эта функция возвращает значение 1.  
   
-## Перекрестные ссылки:  
+## <a name="cross-references"></a>Перекрестные ссылки:  
   
--   **OMP\_NUM\_THREADS** переменная среды выполнения, см. в разделе  [Раздел 4.2](../../parallel/openmp/4-2-omp-num-threads.md) на странице 48.  
+-   **OMP_NUM_THREADS** переменной, см. в разделе среды [разделе 4.2](../../parallel/openmp/4-2-omp-num-threads.md) на стр. 48.  
   
--   **num\_threads** предложение см. в разделе  [Раздел 2.3](../../parallel/openmp/2-3-parallel-construct.md) на странице 8.  
+-   **num_threads** предложение, в разделе [разделе 2.3](../../parallel/openmp/2-3-parallel-construct.md) на странице 8.  
   
--   **Параллельно** конструкция см. в разделе  [Раздел 2.3](../../parallel/openmp/2-3-parallel-construct.md) на странице 8.
+-   **Параллельные** создания см. в разделе [разделе 2.3](../../parallel/openmp/2-3-parallel-construct.md) на странице 8.

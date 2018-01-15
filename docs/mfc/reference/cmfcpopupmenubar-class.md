@@ -57,11 +57,12 @@ caps.latest.revision: "32"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 6be3c3b6028bab04ae3d8ec32f9063d26012778e
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 002e059fd905930409cb5f2745628f8ac1dea103
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cmfcpopupmenubar-class"></a>Класс CMFCPopupMenuBar
 Строка меню, внедренная в контекстное меню.  
@@ -72,11 +73,11 @@ ms.lasthandoff: 10/24/2017
 class CMFCPopupMenuBar : public CMFCToolBar  
 ```  
   
-## <a name="members"></a>Члены  
+## <a name="members"></a>Участники  
   
 ### <a name="public-methods"></a>Открытые методы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[CMFCPopupMenuBar::AdjustSizeImmediate](#adjustsizeimmediate)|Немедленно повторно вычисляет макет панели. (Переопределяет [CPane::AdjustSizeImmediate](../../mfc/reference/cpane-class.md#adjustsizeimmediate).)|  
 |[CMFCPopupMenuBar::BuildOrigItems](#buildorigitems)|Загружает элементы всплывающего меню из меню указанного ресурса.|  
@@ -100,7 +101,7 @@ class CMFCPopupMenuBar : public CMFCToolBar
   
 ### <a name="data-members"></a>Элементы данных  
   
-|Имя|Описание|  
+|name|Описание:|  
 |----------|-----------------|  
 |[CMFCPopupMenuBar::m_bDisableSideBarInXPMode](#m_bdisablesidebarinxpmode)|Указывает, будет ли отображаться серую полосу, если приложение имеет вид Windows XP.|  
   
@@ -343,7 +344,7 @@ BOOL m_bDisableSideBarInXPMode;
 ### <a name="remarks"></a>Примечания  
  Если имеет значение этой переменной-члена `FALSE` и ваше приложение имеет вид Windows XP, платформа рисует серую полосу в приложении.  
   
- Значение по умолчанию — `FALSE`.  
+ Значение по умолчанию — `FALSE`.  
   
 ##  <a name="restoredelayedsubmenu"></a>CMFCPopupMenuBar::RestoreDelayedSubMenu  
  Восстанавливает отложенной меню кнопку для закрытия всплывающего меню.  

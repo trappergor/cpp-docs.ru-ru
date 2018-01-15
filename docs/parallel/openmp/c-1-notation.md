@@ -1,36 +1,36 @@
 ---
-title: "C.1 Notation | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
+title: "C.1 нотация | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
 ms.assetid: a23b2631-8096-4bf3-ac23-ba4f4bd7a52a
-caps.latest.revision: 4
-caps.handback.revision: 4
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "4"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: e9772b2a4b27521c7aa256f9ee7760a4687152b9
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 12/21/2017
 ---
-# C.1 Notation
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Правилам грамматики состоят из имени для нетерминального, после двоеточия, за которым следуют вариантами замены в отдельном линиях.  
+# <a name="c1-notation"></a>C.1 Нотация
+Правилам грамматики состоят из имени для нетерминального, за которым следует двоеточие, следуют альтернативы замены в отдельных строках.  
   
- Синтаксический условие выраженияOpt указывает, что термин необязательная внутри замена.  
+ Синтаксические выражения termopt указывает необязательные замены термин.  
   
- Синтаксическое выражение *термин*optseq равно *термин\-seq*Opt следующие дополнительные правила:  
+ Синтаксические выражения *термин*optseq эквивалентно *термин seq*согласиться с следующие дополнительные правила:  
   
- *термин\-seq* .  
+ *Термин seq* :  
   
- *термин*  
+ *Термин*  
   
- *термин\-seq термин*  
+ *Термин seq термин*  
   
- *термин\-seq* " *термин*
+ *Термин seq* , *термин*

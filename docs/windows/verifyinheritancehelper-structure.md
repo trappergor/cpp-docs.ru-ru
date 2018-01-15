@@ -15,11 +15,14 @@ caps.latest.revision: "5"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 926ed226b67ae510647d2523e4992f6ee3c79a5b
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: e9e740dc15618388fe9c1428705b47bd495a1c37
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="verifyinheritancehelper-structure"></a>VerifyInheritanceHelper - структура
 Поддерживает инфраструктуру WRL и не предназначен для использования непосредственно из программного кода.  
@@ -48,11 +51,11 @@ struct VerifyInheritanceHelper<I, Nil>;
 ## <a name="remarks"></a>Примечания  
  Проверяет, является ли один интерфейс является производным от другого интерфейса.  
   
-## <a name="members"></a>Члены  
+## <a name="members"></a>Участники  
   
 ### <a name="public-methods"></a>Открытые методы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[Метод VerifyInheritanceHelper::Verify](../windows/verifyinheritancehelper-verify-method.md)|Проверяет два интерфейса, указанный параметрами шаблона и определяет, является ли один интерфейс является производным от другого.|  
   

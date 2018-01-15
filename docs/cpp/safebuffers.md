@@ -4,31 +4,28 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-language
+ms.technology: cpp-language
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-f1_keywords:
-- safebuffers_cpp
-dev_langs:
-- C++
+f1_keywords: safebuffers_cpp
+dev_langs: C++
 helpviewer_keywords:
 - __declspec keyword (C++), safebuffers
 - safebuffers __declspec keyword
 ms.assetid: 0b0dce14-4523-44d2-8070-5dd0fdabc618
-caps.latest.revision: 13
+caps.latest.revision: "13"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.translationtype: HT
-ms.sourcegitcommit: 6ffef5f51e57cf36d5984bfc43d023abc8bc5c62
-ms.openlocfilehash: ceb7d5796002bd54055b74d56a136706890494c4
-ms.contentlocale: ru-ru
-ms.lasthandoff: 09/25/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: eb9541bfc4a94253ac26e118e22c3abb2663a893
+ms.sourcegitcommit: 54035dce0992ba5dce0323d67f86301f994ff3db
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/03/2018
 ---
 # <a name="safebuffers"></a>safebuffers
-**Блок, относящийся только к системам Майкрософт**  
+**Блок, относящийся только к системам Microsoft**  
   
  Указывает компилятору не вставлять проверки безопасности на переполнение буфера для функции.  
   
@@ -39,7 +36,7 @@ __declspec( safebuffers )
 ```  
   
 ## <a name="remarks"></a>Примечания  
- **/GS** параметр компилятора предписывает компилятору проверять на переполнение буфера путем вставки проверок безопасности в стеке. Типы структур данных, подходящие для проверок безопасности описаны в [/GS (проверка безопасности буфера)](../build/reference/gs-buffer-security-check.md). Дополнительные сведения об обнаружении переполнения буфера см. в разделе [компилятора безопасности проверяет в глубину](http://go.microsoft.com/fwlink/?linkid=7260) на сайте MSDN.  
+ **/GS** параметр компилятора предписывает компилятору проверять на переполнение буфера путем вставки проверок безопасности в стеке. Типы структур данных, подходящие для проверок безопасности описаны в [/GS (проверка безопасности буфера)](../build/reference/gs-buffer-security-check.md). Дополнительные сведения об обнаружении переполнения буфера см. в разделе [компилятора безопасности проверяет в глубину](http://go.microsoft.com/fwlink/p/?linkid=7260) на сайте MSDN.  
   
  Экспертная проверка кода вручную или внешний анализ могут показать, что функция безопасна с точки зрения переполнения буфера. В этом случае можно отключить проверки безопасности для функции, применив `__declspec(safebuffers)` ключевое слово для объявления функции.  
   

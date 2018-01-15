@@ -1,32 +1,33 @@
 ---
-title: "Класс SimpleClassFactory | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "module/Microsoft::WRL::SimpleClassFactory"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "SimpleClassFactory - класс"
+title: "Класс SimpleClassFactory | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: module/Microsoft::WRL::SimpleClassFactory
+dev_langs: C++
+helpviewer_keywords: SimpleClassFactory class
 ms.assetid: 6edda1b2-4e44-4e14-9364-72f519249962
-caps.latest.revision: 4
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 4
+caps.latest.revision: "4"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: 840862915e90accbab254f5a9003446471608a2a
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 12/21/2017
 ---
-# Класс SimpleClassFactory
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="simpleclassfactory-class"></a>SimpleClassFactory - класс
 Предоставляет основной механизм для создания базового класса.  
   
-## Синтаксис  
+## <a name="syntax"></a>Синтаксис  
   
 ```  
 template<  
@@ -35,26 +36,26 @@ template<
 class SimpleClassFactory : public ClassFactory<>;  
 ```  
   
-#### Параметры  
+#### <a name="parameters"></a>Параметры  
  `Base`  
  Базовый класс.  
   
-## Примечания  
- У базового класса должен быть конструктор по умолчанию.  
+## <a name="remarks"></a>Примечания  
+ Базовый класс должен предоставлять конструктор по умолчанию.  
   
- В следующем примере кода показано использование SimpleClassFactory с макросом [ActivatableClassWithFactoryEx](../Topic/ActivatableClass%20Macros.md).  
+ В следующем примере кода демонстрируется использование SimpleClassFactory с [ActivatableClassWithFactoryEx](../windows/activatableclass-macros.md) макрос.  
   
  `ActivatableClassWithFactoryEx(MyClass, SimpleClassFactory, MyServerName);`  
   
-## Члены  
+## <a name="members"></a>Участники  
   
-### Открытые методы  
+### <a name="public-methods"></a>Открытые методы  
   
-|Имя|Описание|  
-|---------|--------------|  
+|Имя|Описание:|  
+|----------|-----------------|  
 |[Метод SimpleClassFactory::CreateInstance](../windows/simpleclassfactory-createinstance-method.md)|Создает экземпляр указанного интерфейса.|  
   
-## Иерархия наследования  
+## <a name="inheritance-hierarchy"></a>Иерархия наследования  
  `I0`  
   
  `ChainInterfaces`  
@@ -77,10 +78,10 @@ class SimpleClassFactory : public ClassFactory<>;
   
  `SimpleClassFactory`  
   
-## Требования  
+## <a name="requirements"></a>Требования  
  **Заголовок:** module.h  
   
  **Пространство имен:** Microsoft::WRL  
   
-## См. также  
+## <a name="see-also"></a>См. также  
  [Пространство имен Microsoft::WRL](../windows/microsoft-wrl-namespace.md)

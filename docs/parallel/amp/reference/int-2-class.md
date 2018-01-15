@@ -39,11 +39,12 @@ caps.latest.revision: "11"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 2eb503747b9e3a8b8a630fccdbdd8b0da9428058
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 57b6903568f635ec2f92512c922fc7c8460e7d07
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="int2-class"></a>Класс int_2
 Представляет короткого вектора из двух целых чисел.  
@@ -54,7 +55,7 @@ ms.lasthandoff: 10/24/2017
 class int_2;  
 ```  
   
-## <a name="members"></a>Члены  
+## <a name="members"></a>Участники  
   
 ### <a name="public-typedefs"></a>Общедоступные определения типов  
   
@@ -64,13 +65,13 @@ class int_2;
   
 ### <a name="public-constructors"></a>Открытые конструкторы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[Конструктор int_2](#ctor)|Перегружен. По умолчанию конструктор инициализирует все элементы с 0.|  
   
 ### <a name="public-methods"></a>Открытые методы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |int_2::get_X||  
 |int_2::get_xy||  
@@ -87,7 +88,7 @@ class int_2;
   
 ### <a name="public-operators"></a>Открытые операторы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |int_2::operator-||  
 |int_2::operator--||  
@@ -107,13 +108,13 @@ class int_2;
   
 ### <a name="public-constants"></a>Открытые константы  
   
-|Имя|Описание|  
+|name|Описание:|  
 |----------|-----------------|  
 |[Размер константы](#int_2__size)||  
   
 ### <a name="public-data-members"></a>Открытые члены данных  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |int_2::g||  
 |int_2::GR||  

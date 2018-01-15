@@ -1,32 +1,33 @@
 ---
-title: "Метод RuntimeClass::GetIids | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "implements/Microsoft::WRL::RuntimeClass::GetIids"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "GetIids - метод"
+title: "Метод RuntimeClass::GetIids | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: implements/Microsoft::WRL::RuntimeClass::GetIids
+dev_langs: C++
+helpviewer_keywords: GetIids method
 ms.assetid: 826a67d1-ebc4-4940-b5d5-7cd66885e4a1
-caps.latest.revision: 4
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 4
+caps.latest.revision: "4"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: e26101377aaf85cbae24e400557280d06d1402fd
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 12/21/2017
 ---
-# Метод RuntimeClass::GetIids
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="runtimeclassgetiids-method"></a>Метод RuntimeClass::GetIids
 Получает массив, содержащий идентификаторы интерфейса, реализованные текущим объектом RuntimeClass.  
   
-## Синтаксис  
+## <a name="syntax"></a>Синтаксис  
   
 ```  
 STDMETHOD(  
@@ -36,20 +37,20 @@ STDMETHOD(
    _Deref_out_ _Deref_post_cap_(*iidCount) IID **iids);  
 ```  
   
-#### Параметры  
+#### <a name="parameters"></a>Параметры  
  `iidCount`  
- Когда эта операция будет завершена, общее число элементов в массиве `iids`.  
+ После завершения операции представляет общее число элементов в массиве `iids`.  
   
  `iids`  
- Когда эта операция будет завершена, указатель на массив идентификаторов интерфейса.  
+ После завершения операции представляет указатель на массив идентификаторов интерфейса.  
   
-## Возвращаемое значение  
- S\_OK, если операция завершилась удачно; в противном случае E\_OUTOFMEMORY.  
+## <a name="return-value"></a>Возвращаемое значение  
+ Значение S_OK, если операция завершилась успешно; в противном случае — значение E_OUTOFMEMORY.  
   
-## Требования  
+## <a name="requirements"></a>Требования  
  **Заголовок:** implements.h  
   
  **Пространство имен:** Microsoft::WRL  
   
-## См. также  
+## <a name="see-also"></a>См. также  
  [Класс RuntimeClass](../windows/runtimeclass-class.md)

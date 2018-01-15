@@ -1,39 +1,41 @@
 ---
-title: "Константа Implements::IidCount | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "implements/Microsoft::WRL::Implements::IidCount"
-dev_langs: 
-  - "C++"
+title: "Константа Implements::IidCount | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: implements/Microsoft::WRL::Implements::IidCount
+dev_langs: C++
 ms.assetid: 757cc7ef-a3b5-4278-8b53-6e64f2afbf6a
-caps.latest.revision: 3
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 3
+caps.latest.revision: "3"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: 8589a47f096bb8ca9470111b0a3cba34082f70b5
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 12/21/2017
 ---
-# Константа Implements::IidCount
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Содержит количество реализованных идентификаторов интерфейса.  
+# <a name="implementsiidcount-constant"></a>Константа Implements::IidCount
+Содержит количество идентификаторов реализованного интерфейса.  
   
-## Синтаксис  
+## <a name="syntax"></a>Синтаксис  
   
 ```  
 static const unsigned long IidCount;  
 ```  
   
-## Требования  
+## <a name="requirements"></a>Требования  
  **Заголовок:** implements.h  
   
  **Пространство имен:** Microsoft::WRL  
   
-## См. также  
- [Структура Implements](../Topic/Implements%20Structure.md)
+## <a name="see-also"></a>См. также  
+ [Структура Implements](../windows/implements-structure.md)

@@ -25,11 +25,12 @@ caps.latest.revision: "23"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: b95af3e80234cf7f3910fc9a4ef3468ab5d90ba7
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 1c4a62d3f9631d4e2807bf12e1eda3bd4b4f5112
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cdaofieldexchange-class"></a>Класс CDaoFieldExchange
 Поддерживает процедуры обмена полями записей (DAO DFX), используемые классами баз данных DAO.  
@@ -40,18 +41,18 @@ ms.lasthandoff: 10/24/2017
 class CDaoFieldExchange  
 ```  
   
-## <a name="members"></a>Члены  
+## <a name="members"></a>Участники  
   
 ### <a name="public-methods"></a>Открытые методы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[CDaoFieldExchange::IsValidOperation](#isvalidoperation)|Возвращает ненулевое значение, если текущая операция подходит для типа обновляемого поля.|  
 |[CDaoFieldExchange::SetFieldType](#setfieldtype)|Указывает тип элемента данных набора записей — столбца или параметра, представленного все последующие вызовы функций DFX до следующего вызова для `SetFieldType`.|  
   
 ### <a name="public-data-members"></a>Открытые члены данных  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[CDaoFieldExchange::m_nOperation](#m_noperation)|DFX операцию, выполняемую при вызове текущего набора записей `DoFieldExchange` функции-члена.|  
 |[CDaoFieldExchange::m_prs](#m_prs)|Указатель на набор записей, на какие DFX выполняются операции.|  
@@ -107,7 +108,7 @@ BOOL IsValidOperation();
   
  Возможные значения **m_nOperation** являются:  
   
-|Операция|Описание|  
+|Операция|Описание:|  
 |---------------|-----------------|  
 |**AddToParameterList**|Выполняет построение **параметры** предложения инструкции SQL.|  
 |**AddToSelectList**|Выполняет построение **ВЫБЕРИТЕ** предложения инструкции SQL.|  

@@ -1,0 +1,63 @@
+---
+title: "в (C++) | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+f1_keywords: vc-attr.in
+dev_langs: C++
+helpviewer_keywords: in attribute
+ms.assetid: 7b450cc4-4d2e-4910-a195-7487c6b7c373
+caps.latest.revision: "9"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: 37eaee8d796897b14d4780f0cf65e36908d7c66b
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 12/21/2017
+---
+# <a name="in-c"></a>in (C++)
+Указывает, что параметр является должен передаваться из вызывающей процедуры к вызываемой процедуре.  
+  
+## <a name="syntax"></a>Синтаксис  
+  
+```  
+  
+[in]  
+  
+```  
+  
+## <a name="remarks"></a>Примечания  
+ **В** языка C++ имеет ту же функциональность, что [в](http://msdn.microsoft.com/library/windows/desktop/aa367051) языка MIDL.  
+  
+## <a name="example"></a>Пример  
+ В разделе [привязываемых](../windows/bindable.md) пример демонстрирует использование **в**.  
+  
+## <a name="requirements"></a>Требования  
+  
+### <a name="attribute-context"></a>Контекст атрибута  
+  
+|||  
+|-|-|  
+|**Применение**|Параметр интерфейса, метод интерфейса|  
+|**Повторяемый**|Нет|  
+|**Обязательные атрибуты**|Нет|  
+|**Недопустимые атрибуты**|**retval**|  
+  
+ Дополнительные сведения о контекстах атрибутов см. в разделе [Контексты атрибутов](../windows/attribute-contexts.md).  
+  
+## <a name="see-also"></a>См. также  
+ [Атрибуты IDL](../windows/idl-attributes.md)   
+ [Атрибуты параметра](../windows/parameter-attributes.md)   
+ [Атрибуты метода](../windows/method-attributes.md)   
+ [значение по умолчанию](../windows/defaultvalue.md)   
+ [Идентификатор](../windows/id.md)   
+ [out](../windows/out-cpp.md)   

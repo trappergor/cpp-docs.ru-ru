@@ -23,11 +23,12 @@ caps.latest.revision: "12"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: ba0de9ad80aa23d36fda33c5501ce832da6bb0c2
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 41a9a5ade4f7fa704311982d57e47f15561431c9
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="concurrentunorderedmultimap-class"></a>Класс concurrent_unordered_multimap
 Класс `concurrent_unordered_multimap` представляет собой безопасный в отношении параллелизма контейнер, управляющий последовательностью элементов типа `std::pair<const K, _Element_type>` переменной длины. Последовательность представлена таким образом, что позволяет параллельно-безопасно выполнять операции присоединения, получения доступа к элементу, доступа к итератору и обхода итератора.  
@@ -69,11 +70,11 @@ template <typename K,
  `_Allocator_type`  
  Тип, представляющий сохраненный объект распределителя, инкапсулирующий сведения о выделении и освобождении памяти для параллельного вектора. Этот аргумент является необязательным, и значение по умолчанию — `std::allocator<std::pair<K`, `_Element_type>>`.  
   
-## <a name="members"></a>Члены  
+## <a name="members"></a>Участники  
   
 ### <a name="public-typedefs"></a>Общедоступные определения типов  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |`allocator_type`|Тип распределителя для управления хранилищем.|  
 |`const_iterator`|Тип постоянного итератора для управляемой последовательности.|  
@@ -94,13 +95,13 @@ template <typename K,
   
 ### <a name="public-constructors"></a>Открытые конструкторы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[concurrent_unordered_multimap](#ctor)|Перегружен. Создает параллельное неупорядоченное мультисопоставление.|  
   
 ### <a name="public-methods"></a>Открытые методы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[hash_function](#hash_function)|Возвращает сохраненный объект хэш-функции.|  
 |[insert](#insert)|Перегружен. Добавляет элементы к `concurrent_unordered_multimap` объекта.|  
@@ -110,9 +111,9 @@ template <typename K,
   
 ### <a name="public-operators"></a>Открытые операторы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
-|[operator=](#operator_eq)|Перегружен. Назначает содержимое другой `concurrent_unordered_multimap` этого объекта. Этот метод не является безопасным в режиме параллелизма.|  
+|[оператор=](#operator_eq)|Перегружен. Назначает содержимое другой `concurrent_unordered_multimap` этого объекта. Этот метод не является безопасным в режиме параллелизма.|  
   
 ## <a name="remarks"></a>Примечания  
  Дополнительные сведения о `concurrent_unordered_multimap` см. в описании [параллельные контейнеры и объекты](../../../parallel/concrt/parallel-containers-and-objects.md).  

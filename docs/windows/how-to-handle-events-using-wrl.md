@@ -1,97 +1,100 @@
 ---
-title: "Практическое руководство. Обработка событий с использованием WRL | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-dev_langs: 
-  - "C++"
+title: "Как: обработка событий с помощью WRL | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+dev_langs: C++
 ms.assetid: 1c77543f-7b0c-4a94-93bf-e3225885ed76
-caps.latest.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 10
+caps.latest.revision: "10"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: a3341992ce2b10897fca165a787e568b5e0bc660
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 12/21/2017
 ---
-# Практическое руководство. Обработка событий с использованием WRL
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Этот документ показывает, как использовать [!INCLUDE[cppwrl](../windows/includes/cppwrl_md.md)] \([!INCLUDE[cppwrl_short](../windows/includes/cppwrl_short_md.md)]\) для подписки на события объекта [!INCLUDE[wrt](../atl/reference/includes/wrt_md.md)] и обработки этих событий.  
+# <a name="how-to-handle-events-using-wrl"></a>Практическое руководство. Обработка событий с использованием WRL
+В этом документе показано, как использовать среды выполнения C++ шаблон библиотеки Windows (WRL) для подписки и обрабатывать события объекта среды выполнения Windows.  
   
- Для более базового примера, который создает экземпляр этого компонента и получает значение свойства, см. [Практическое руководство. Активация и использование компонента среды выполнения Windows](../windows/how-to-activate-and-use-a-windows-runtime-component-using-wrl.md).  
+ Более простой пример, который создает экземпляр этого компонента и извлекает значение свойства, в разделе [как: активация и использование компонента среды выполнения Windows](../windows/how-to-activate-and-use-a-windows-runtime-component-using-wrl.md).  
   
-## Подписка на события и их обработка  
- Следующие действия запускают объект `ABI::Windows::System::Threading::IDeviceWatcher` и используют обработчики событий для отслеживания прогресса.  Интерфейс `IDeviceWatcher` позволяет перечислять устройства асинхронно или в фоновом режиме и получать уведомление при добавлении, удалении или изменении устройства.  Функция [Обратный вызов](../windows/callback-function-windows-runtime-cpp-template-library.md) является важной частью этого примера, поскольку она позволяет ему определить обработчики событий, которые обрабатывают результаты фоновых операций.  Полный пример кода выглядит следующим образом.  
+## <a name="subscribing-to-and-handling-events"></a>Подписка на события и их обработка  
+ Следующие действия запускают объект `ABI::Windows::System::Threading::IDeviceWatcher` и используют обработчики событий для отслеживания прогресса. Интерфейс `IDeviceWatcher` позволяет перечислять устройства асинхронно (или в фоновом режиме) и получать уведомление при добавлении, удалении и изменении устройства. [Обратного вызова](../windows/callback-function-windows-runtime-cpp-template-library.md) функция является важной частью в этом примере, поскольку она позволяет определить обработчики событий, которые обрабатывают результаты фоновых операций. Далее приведен полный пример.  
   
 > [!WARNING]
->  Хотя обычно используется [!INCLUDE[cppwrl_short](../windows/includes/cppwrl_short_md.md)] в приложении [!INCLUDE[win8_appname_long](../build/includes/win8_appname_long_md.md)], в этом образце для иллюстрации используется консольное приложение.  Функции, такие как `wprintf_s`, недоступны из приложения [!INCLUDE[win8_appname_long](../build/includes/win8_appname_long_md.md)].  Дополнительные сведения о типах и функциях, которые можно использовать в приложении [!INCLUDE[win8_appname_long](../build/includes/win8_appname_long_md.md)] см. [Функции CRT, не поддерживаемые \/ZW](http://msdn.microsoft.com/library/windows/apps/jj606124.aspx) и [Win32 и модели COM для приложений Магазина Windows](http://msdn.microsoft.com/library/windows/apps/br205757.aspx).  
+>  Несмотря на то, что обычно используется библиотека шаблонов C++ среды выполнения Windows в приложении универсальной платформы Windows, в этом примере используется консольное приложение для иллюстрации. Функции, такие как `wprintf_s` недоступны в приложении универсальной платформы Windows. Дополнительные сведения о типах и функции, которые можно использовать в приложении универсальной платформы Windows см. в разделе [функции CRT не поддерживаются с параметром/zw](http://msdn.microsoft.com/library/windows/apps/jj606124.aspx) и [приложений Win32 и COM для магазина Windows](http://msdn.microsoft.com/library/windows/apps/br205757.aspx).  
   
-1.  Включите \(`#include`\) все необходимые заголовки [!INCLUDE[wrt](../atl/reference/includes/wrt_md.md)], [!INCLUDE[cppwrl_short](../windows/includes/cppwrl_short_md.md)] или стандартной библиотеки C\+\+.  
+1.  Включить (`#include`) все необходимые среды выполнения Windows, библиотека шаблонов C++ среды выполнения Windows или заголовков стандартной библиотеки C++.  
   
-     [!CODE [wrl-consume-event#2](../CodeSnippet/VS_Snippets_Misc/wrl-consume-event#2)]  
+     [!code-cpp[wrl-consume-event#2](../windows/codesnippet/CPP/how-to-handle-events-using-wrl_1.cpp)]  
   
-     Windows.Devices.Enumeration.h объявляет типы, необходимые для перечисления устройств.  
+     В файле Windows.Devices.Enumeration.h объявлены типы, необходимые для перечисления устройств.  
   
-     Рекомендуется использовать директиву `using namespace` в CPP\-файле, чтобы сделать код более удобочитаемым.  
+     Рекомендуется использовать директиву `using namespace` в CPP-файле, чтобы сделать код более удобочитаемым.  
   
-2.  Объявите локальные переменные для приложения.  Этот пример проводит подсчет количества перечисленных устройств и токенов регистрации, которые позволяют позже отменять подписку на события.  
+2.  Объявите локальные переменные для приложения. Этот пример проводит подсчет количества перечисленных устройств и токенов регистрации, которые позволяют в дальнейшем отменять подписку на события.  
   
-     [!CODE [wrl-consume-event#7](../CodeSnippet/VS_Snippets_Misc/wrl-consume-event#7)]  
+     [!code-cpp[wrl-consume-event#7](../windows/codesnippet/CPP/how-to-handle-events-using-wrl_2.cpp)]  
   
-3.  Инициализируйте [!INCLUDE[wrt](../atl/reference/includes/wrt_md.md)].  
+3.  Инициализирует среду выполнения Windows.  
   
-     [!CODE [wrl-consume-event#3](../CodeSnippet/VS_Snippets_Misc/wrl-consume-event#3)]  
+     [!code-cpp[wrl-consume-event#3](../windows/codesnippet/CPP/how-to-handle-events-using-wrl_3.cpp)]  
   
-4.  Создайте объект [Событие](../windows/event-class-windows-runtime-cpp-template-library.md), который синхронизирует завершение процесса перечисления c основным приложением.  
+4.  Создание [событие](../windows/event-class-windows-runtime-cpp-template-library.md) объект, который синхронизирует завершение процесса перечисления с основным приложением.  
   
-     [!CODE [wrl-consume-event#4](../CodeSnippet/VS_Snippets_Misc/wrl-consume-event#4)]  
+     [!code-cpp[wrl-consume-event#4](../windows/codesnippet/CPP/how-to-handle-events-using-wrl_4.cpp)]  
   
     > [!NOTE]
-    >  Это событие только для демонстрации в составе консольного приложения.  В этом примере используется событие, чтобы гарантировать, что асинхронная операция окончится до завершения приложения.  В большинстве приложений обычно не ожидается выполнение асинхронной операции.  
+    >  Это событие выполняется только для демонстрации в составе консольного приложения. В этом примере используется объект-событие, чтобы удостовериться, что асинхронная операция окончится до завершения приложения. В большинстве приложений обычно не ожидается выполнение асинхронной операции.  
   
-5.  Создание фабрики активации для интерфейса `IDeviceWatcher`.  
+5.  Создайте фабрику активации для интерфейса `IDeviceWatcher`.  
   
-     [!CODE [wrl-consume-event#5](../CodeSnippet/VS_Snippets_Misc/wrl-consume-event#5)]  
+     [!code-cpp[wrl-consume-event#5](../windows/codesnippet/CPP/how-to-handle-events-using-wrl_5.cpp)]  
   
-     В [!INCLUDE[wrt](../atl/reference/includes/wrt_md.md)] используются полные имена для идентификации типов.  Параметр `RuntimeClass_Windows_Devices_Enumeration_DeviceInformation` является строкой, предоставляемой [!INCLUDE[wrt](../atl/reference/includes/wrt_md.md)], которая содержит требуемое имя класса среды выполнения.  
+     Среда выполнения Windows использует полные имена для определения типов. `RuntimeClass_Windows_Devices_Enumeration_DeviceInformation` Параметр представляет собой строку, предоставляемые средой выполнения Windows и содержит имя класса необходимая среда выполнения.  
   
 6.  Создайте объект `IDeviceWatcher`.  
   
-     [!CODE [wrl-consume-event#6](../CodeSnippet/VS_Snippets_Misc/wrl-consume-event#6)]  
+     [!code-cpp[wrl-consume-event#6](../windows/codesnippet/CPP/how-to-handle-events-using-wrl_6.cpp)]  
   
 7.  Используйте функцию `Callback` для подписки на события `Added`, `EnumerationCompleted` и `Stopped`.  
   
-     [!CODE [wrl-consume-event#8](../CodeSnippet/VS_Snippets_Misc/wrl-consume-event#8)]  
+     [!code-cpp[wrl-consume-event#8](../windows/codesnippet/CPP/how-to-handle-events-using-wrl_7.cpp)]  
   
-     Обработчик событий `Added` увеличивает число перечисленных устройств.  Он останавливает процесс перечисления после обнаружения десяти устройств.  
+     Обработчик событий `Added` увеличивает число перечисленных устройств. Он останавливает процесс перечисления после обнаружения десяти устройств.  
   
      Обработчик событий `Stopped` удаляет обработчики событий и задает событие завершения.  
   
-     Обработчик событий `EnumerationCompleted` останавливает процесс перечисления.  Рекомендуется обрабатывать это событие в случае, если устройств меньше десяти.  
+     Обработчик событий `EnumerationCompleted` останавливает процесс перечисления. Рекомендуется обрабатывать это событие, если имеется менее десяти устройств.  
   
     > [!TIP]
-    >  В этом примере используется лямбда\-выражение для определения обратных вызовов.  Можно также использовать объекты функций \(функторы\), указатели на функции или объекты [std::function](../standard-library/function-class.md).  Дополнительные сведения о лямбда\-выражениях см. в разделе [Лямбда\-выражения](../cpp/lambda-expressions-in-cpp.md).  
+    >  В этом примере используется лямбда-выражение для определения обратных вызовов. Можно также использовать объекты функций (функторы), указатели на функции или [std::function](../standard-library/function-class.md) объектов. Дополнительные сведения о лямбда-выражениях см. в разделе [Лямбда-выражения](../cpp/lambda-expressions-in-cpp.md).  
   
-8.  Запуск процесса перечисления.  
+8.  Запустите процесс перечисления.  
   
-     [!CODE [wrl-consume-event#9](../CodeSnippet/VS_Snippets_Misc/wrl-consume-event#9)]  
+     [!code-cpp[wrl-consume-event#9](../windows/codesnippet/CPP/how-to-handle-events-using-wrl_8.cpp)]  
   
-9. Дождитесь завершения процесса перечисления, а затем выведите сообщение.  Все объекты `ComPtr` и RAII покидают область действия и автоматически освобождаются.  
+9. Дождитесь завершения процесса перечисления, а затем выведите сообщение. Все объекты `ComPtr` и RAII покидают область действия и автоматически освобождаются.  
   
-     [!CODE [wrl-consume-event#10](../CodeSnippet/VS_Snippets_Misc/wrl-consume-event#10)]  
+     [!code-cpp[wrl-consume-event#10](../windows/codesnippet/CPP/how-to-handle-events-using-wrl_9.cpp)]  
   
  Ниже приведен полный пример.  
   
- [!CODE [wrl-consume-event#1](../CodeSnippet/VS_Snippets_Misc/wrl-consume-event#1)]  
+ [!code-cpp[wrl-consume-event#1](../windows/codesnippet/CPP/how-to-handle-events-using-wrl_10.cpp)]  
   
-## Компиляция кода  
- Чтобы скомпилировать код, скопируйте и вставьте его в проект Visual Studio или в файл с именем `wrl-consume-events.cpp`, а затем выполните в окне командной строки Visual Studio следующую команду.  
+## <a name="compiling-the-code"></a>Компиляция кода  
+ Чтобы скомпилировать код, скопируйте его и затем вставьте его в проект Visual Studio или в файл с именем `wrl-consume-events.cpp` , а затем запустите следующую команду в окне командной строки Visual Studio.  
   
- **cl.exe wrl\-consume\-events.cpp runtimeobject.lib**  
+ **CL.exe wrl-consume-events.cpp runtimeobject.lib**  
   
-## См. также  
- [Библиотека шаблонов C\+\+ среды выполнения Windows \(WRL\)](../Topic/Windows%20Runtime%20C++%20Template%20Library%20\(WRL\).md)
+## <a name="see-also"></a>См. также  
+ [Библиотека шаблонов C++ среды выполнения Windows (WRL)](../windows/windows-runtime-cpp-template-library-wrl.md)

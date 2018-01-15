@@ -18,11 +18,12 @@ caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: a69198834513362e87568f83f8c4f38b74a2b05d
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: db47e27ad0b556e08f51685bf84b6bd998722239
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="tree-control-item-position"></a>Положение элемента древовидного элемента управления
 Начальное положение элемента имеет значение при добавлении элемента управления дерева ([CTreeCtrl](../mfc/reference/ctreectrl-class.md)) с помощью `InsertItem` функции-члена. Вызова функции-члена задает дескриптор родительского элемента и дескриптор элементом, после которого вставляется новый элемент. Необходимо определить, дескриптор второй дочерний элемент данного родительского элемента или одно из этих значений: `TVI_FIRST`, `TVI_LAST`, или `TVI_SORT`.  

@@ -1,49 +1,48 @@
 ---
-title: "flush (OpenMP) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "Flush"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "flush OpenMP directive"
+title: "Flush (OpenMP) | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords: Flush
+dev_langs: C++
+helpviewer_keywords: flush OpenMP directive
 ms.assetid: 150ca46e-d4f7-4423-b0a4-838df40aeb67
-caps.latest.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 10
+caps.latest.revision: "10"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 72b69daf431ab9dfd2b5c2ed7cebdc8c5af75847
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 12/21/2017
 ---
-# flush (OpenMP)
-[!INCLUDE[vs2017banner](../../../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="flush-openmp"></a>flush (OpenMP)
 Указывает, что все потоки имеют одинаковое представление в памяти для всех общих объектов.  
   
-## Синтаксис  
+## <a name="syntax"></a>Синтаксис  
   
 ```  
 #pragma omp flush [(var)]  
 ```  
   
-## Заметки  
- Здесь:  
+## <a name="remarks"></a>Примечания  
+ где  
   
- `var` \(необязательный параметр\)  
- Список переменных с разделителями\-запятыми, представляющие объекты, которые нужно синхронизировать.  If `var` не указан, вся память очищается.  
+ `var` (необязательно)  
+ Список разделенных запятыми переменные, представляющие объекты, которые требуется синхронизировать. Если `var` не указан, записываемых всю память.  
   
-## Заметки  
- **flush** директива не поддерживает никаких предложений OpenMP.  
+## <a name="remarks"></a>Примечания  
+ **Flush** директива поддерживает без предложения OpenMP.  
   
- Дополнительные сведения см. в разделе [2.6.5 flush Directive](../Topic/2.6.5%20flush%20Directive.md).  
+ Дополнительные сведения см. в разделе [2.6.5 директива flush](../../../parallel/openmp/2-6-5-flush-directive.md).  
   
-## Пример  
+## <a name="example"></a>Пример  
   
 ```  
 // omp_flush.cpp  
@@ -94,8 +93,11 @@ int main() {
 }  
 ```  
   
-  **Поток 0. чтение данных**  
-**Поток 1. процесс данных**  
-**данные \= 2**   
-## См. также  
- [Directives](../../../parallel/openmp/reference/openmp-directives.md)
+```Output  
+Thread 0: read data  
+Thread 1: process data  
+data = 2  
+```  
+  
+## <a name="see-also"></a>См. также  
+ [Директивы](../../../parallel/openmp/reference/openmp-directives.md)

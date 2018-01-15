@@ -34,11 +34,12 @@ caps.latest.revision: "17"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 077af759cfde3d312ec502c33cb42ee79bafc319
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 3d5ca4de3cd7192fa4847bf6090a02b156458340
+ms.sourcegitcommit: 54035dce0992ba5dce0323d67f86301f994ff3db
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 01/03/2018
 ---
 # <a name="chisquareddistribution-class"></a>Класс chi_squared_distribution
 Формирует распределение хи-квадрат.  
@@ -98,7 +99,7 @@ public:
   
 Дополнительные сведения о классах распределения и их членах см. в разделе [\<random>](../standard-library/random.md).  
   
-Подробные сведения о распределении "хи-квадрат" см. в статье Wolfram MathWorld [Распределение "хи-квадрат"](http://go.microsoft.com/fwlink/LinkId=400528).  
+Подробные сведения о распределении "хи-квадрат" см. в статье Wolfram MathWorld [Распределение "хи-квадрат"](http://go.microsoft.com/fwlink/p/?linkid=400528).  
   
 ## <a name="example"></a>Пример  
   
@@ -244,7 +245,7 @@ explicit chi_squared_distribution(const param_type& parm);
  Структура параметров, используемая для формирования распределения.  
   
 ### <a name="remarks"></a>Примечания  
-**Предварительные условия:** `0.0 < n`  
+**Предусловие:** `0.0 < n`  
   
 Первый конструктор создает объект, хранимые `n` значение содержит значение  *n* .  
   
@@ -272,7 +273,7 @@ struct param_type {
 Объект `param_type`, который требуется сравнить с данным объектом.  
   
 ### <a name="remarks"></a>Примечания  
-**Предварительные условия:** `0.0 < n`  
+**Предусловие:** `0.0 < n`  
   
 Эту структуру можно передать конструктору класса распределения во время создания экземпляра, функции-члену `param()` для установки хранимых параметров существующего распределения и `operator()` для использования вместо хранимых параметров.  
   

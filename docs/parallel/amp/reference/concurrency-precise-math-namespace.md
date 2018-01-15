@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-windows
+ms.technology: cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -139,37 +138,21 @@ f1_keywords:
 - AMP_MATH/Concurrency::tgammaf
 - AMP_MATH/Concurrency::trunc
 - AMP_MATH/Concurrency::truncf
-dev_langs:
-- C++
+dev_langs: C++
 ms.assetid: ba653308-dc28-4384-b2fd-6cd718a72f91
-caps.latest.revision: 6
+caps.latest.revision: "6"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translation.priority.ht:
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- ru-ru
-- zh-cn
-- zh-tw
-translation.priority.mt:
-- cs-cz
-- pl-pl
-- pt-br
-- tr-tr
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 5faef5bd1be6cc02d6614a6f6193c74167a8ff23
-ms.openlocfilehash: bc8487cf007eaf1373389b6cc6d3f4bdac09b698
-ms.contentlocale: ru-ru
-ms.lasthandoff: 03/17/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: edcce2cd9f21766065cbc43f7059c638a302abd2
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="concurrencyprecisemath-namespace"></a>Пространство имен Concurrency::precise_math
-Функции в `precise_math` пространства имен являются совместимыми C99. Оба одиночной точности и включены двойной точности версии каждой функции. Например `acos` версия двойной точности и `acosf` версия одиночной точности. Эти функции, включая функции одиночной точности, требуется расширенная поддержка двойной точности на сочетания клавиш. Можно использовать [accelerator::supports_double_precision](accelerator-class.md#supports_double_precision) для определения, если эти функции можно запустить на определенных сочетаний клавиш. 
+Функции в `precise_math` пространства имен являются совместимыми C99. Оба одиночной точности, а также включаются двойной точности версии каждой функции. Например `acos` версия двойной точности и `acosf` версия одиночной точности. Эти функции, включая функции одиночной точности, требуется расширенная поддержка двойной точности на сочетания клавиш. Можно использовать [accelerator::supports_double_precision](accelerator-class.md#supports_double_precision) для определения, если эти функции можно запустить на определенных сочетаний клавиш. 
 
   
 ## <a name="syntax"></a>Синтаксис  
@@ -180,46 +163,46 @@ namespace precise_math;
   
 #### <a name="parameters"></a>Параметры  
   
-## <a name="members"></a>Члены  
+## <a name="members"></a>Участники  
   
 ### <a name="functions"></a>Функции  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[acos](concurrency-precise-math-namespace-functions.md#acos)|Перегружен. Вычисляет арккосинус аргумента|  
 |[acosf](concurrency-precise-math-namespace-functions.md#acosf)|Вычисляет арккосинус аргумента|  
-|[acosh](concurrency-precise-math-namespace-functions.md#acosh)|Перегружен. Вычисляет гиперболический арккосинус аргумента|  
-|[acoshf](concurrency-precise-math-namespace-functions.md#acoshf)|Вычисляет гиперболический арккосинус аргумента|  
+|[acosh](concurrency-precise-math-namespace-functions.md#acosh)|Перегружен. Вычисляет обратный гиперболический косинус аргумента|  
+|[acoshf](concurrency-precise-math-namespace-functions.md#acoshf)|Вычисляет обратный гиперболический косинус аргумента|  
 |[asin](concurrency-precise-math-namespace-functions.md#asin)|Перегружен. Вычисляет гиперболический арксинус аргумента|  
 |[asinf](concurrency-precise-math-namespace-functions.md#asinf)|Вычисляет гиперболический арксинус аргумента|  
 |[asinh](concurrency-precise-math-namespace-functions.md#asinh)|Перегружен. Вычисляет гиперболический арксинус аргумента|  
 |[asinhf](concurrency-precise-math-namespace-functions.md#asinhf)|Вычисляет гиперболический арксинус аргумента|  
 |[atan](concurrency-precise-math-namespace-functions.md#atan)|Перегружен. Вычисляет арктангенс аргумента.|  
-|[atan2](concurrency-precise-math-namespace-functions.md#atan2)|Перегружен. Вычисляет арктангенс _Y или _X|  
-|[atan2f](concurrency-precise-math-namespace-functions.md#atan2f)|Вычисляет арктангенс _Y или _X|  
+|[atan2](concurrency-precise-math-namespace-functions.md#atan2)|Перегружен. Вычисляет арктангенс _Y/_X|  
+|[atan2f](concurrency-precise-math-namespace-functions.md#atan2f)|Вычисляет арктангенс _Y/_X|  
 |[atanf](concurrency-precise-math-namespace-functions.md#atanf)|Вычисляет арктангенс аргумента.|  
 |[atanh](concurrency-precise-math-namespace-functions.md#atanh)|Перегружен. Вычисляет гиперболический арктангенс аргумента|  
 |[atanhf](concurrency-precise-math-namespace-functions.md#atanhf)|Вычисляет гиперболический арктангенс аргумента|  
-|[cbrt](concurrency-precise-math-namespace-functions.md#cbrt)|Перегружен. Вычисляет кубический корень реальных аргумента|  
-|[cbrtf](concurrency-precise-math-namespace-functions.md#cbrtf)|Вычисляет кубический корень реальных аргумента|  
+|[cbrt](concurrency-precise-math-namespace-functions.md#cbrt)|Перегружен. Вычисляет кубический корень реального аргумента|  
+|[cbrtf](concurrency-precise-math-namespace-functions.md#cbrtf)|Вычисляет кубический корень реального аргумента|  
 |[ceil](concurrency-precise-math-namespace-functions.md#ceil)|Перегружен. Вычисляет ceiling аргумента|  
 |[ceilf](concurrency-precise-math-namespace-functions.md#ceilf)|Вычисляет ceiling аргумента|  
-|[copysign](concurrency-precise-math-namespace-functions.md#copysign)|Перегружен. Возвращает значение, указывающее величину _X и знак _Y|  
-|[copysignf](concurrency-precise-math-namespace-functions.md#copysignf)|Возвращает значение, указывающее величину _X и знак _Y|  
+|[copysign](concurrency-precise-math-namespace-functions.md#copysign)|Перегружен. Возвращает значение, указывающее с величина _X и знак _Y|  
+|[copysignf](concurrency-precise-math-namespace-functions.md#copysignf)|Возвращает значение, указывающее с величина _X и знак _Y|  
 |[cos](concurrency-precise-math-namespace-functions.md#cos)|Перегружен. Вычисляет косинус аргумента|  
 |[cosf](concurrency-precise-math-namespace-functions.md#cosf)|Вычисляет косинус аргумента|  
 |[cosh](concurrency-precise-math-namespace-functions.md#cosh)|Перегружен. Вычисляет гиперболический косинус значение аргумента|  
 |[coshf](concurrency-precise-math-namespace-functions.md#coshf)|Вычисляет гиперболический косинус значение аргумента|  
-|[cospi](concurrency-precise-math-namespace-functions.md#cospi)|Перегружен. Вычисляет косинус числа пи * _X|  
-|[cospif](concurrency-precise-math-namespace-functions.md#cospif)|Вычисляет косинус числа пи * _X|  
+|[cospi](concurrency-precise-math-namespace-functions.md#cospi)|Перегружен. Вычисляет косинус число пи * _X|  
+|[cospif](concurrency-precise-math-namespace-functions.md#cospif)|Вычисляет косинус число пи * _X|  
 |[erf](concurrency-precise-math-namespace-functions.md#erf)|Перегружен. Вычисляет функцию ошибок _X|  
 |[erfc](concurrency-precise-math-namespace-functions.md#erfc)|Перегружен. Вычисляет дополнительную функцию ошибок _X|  
 |[erfcf](concurrency-precise-math-namespace-functions.md#erfcf)|Вычисляет дополнительную функцию ошибок _X|  
 |[erfcinv](concurrency-precise-math-namespace-functions.md#erfcinv)|Перегружен. Вычисляет обратный дополнительную функцию ошибок _X|  
 |[erfcinvf](concurrency-precise-math-namespace-functions.md#erfcinvf)|Вычисляет обратный дополнительную функцию ошибок _X|  
 |[erff](concurrency-precise-math-namespace-functions.md#erff)|Вычисляет функцию ошибок _X|  
-|[erfinv](concurrency-precise-math-namespace-functions.md#erfinv)|Перегружен. Вычисляет обратный ошибок _X|  
-|[erfinvf](concurrency-precise-math-namespace-functions.md#erfinvf)|Вычисляет обратный ошибок _X|  
+|[erfinv](concurrency-precise-math-namespace-functions.md#erfinv)|Перегружен. Вычисляет функцию обратный ошибки _X|  
+|[erfinvf](concurrency-precise-math-namespace-functions.md#erfinvf)|Вычисляет функцию обратный ошибки _X|  
 |[exp](concurrency-precise-math-namespace-functions.md#exp)|Перегружен. Вычисляет экспоненту аргумента base-e|  
 |[exp10](concurrency-precise-math-namespace-functions.md#exp10)|Перегружен. Вычисляет экспоненту аргумента base-10|  
 |[exp10f](concurrency-precise-math-namespace-functions.md#exp10f)|Вычисляет экспоненту аргумента base-10|  
@@ -230,93 +213,93 @@ namespace precise_math;
 |[expm1f](concurrency-precise-math-namespace-functions.md#expm1f)|Вычисляет экспоненту аргумента с основанием e, за вычетом 1|  
 |[fabs](concurrency-precise-math-namespace-functions.md#fabs)|Перегружен. Возвращает абсолютное значение аргумента|  
 |[fabsf](concurrency-precise-math-namespace-functions.md#fabsf)|Возвращает абсолютное значение аргумента|  
-|[fdim](concurrency-precise-math-namespace-functions.md#fdim)|Перегружен. Определяет положительной разнице между аргументами|  
-|[fdimf](concurrency-precise-math-namespace-functions.md#fdimf)|Определяет положительной разнице между аргументами|  
+|[fdim](concurrency-precise-math-namespace-functions.md#fdim)|Перегружен. Определяет положительное различие между аргументами|  
+|[fdimf](concurrency-precise-math-namespace-functions.md#fdimf)|Определяет положительное различие между аргументами|  
 |[floor](concurrency-precise-math-namespace-functions.md#floor)|Перегружен. Вычисляет floor аргумента|  
 |[floorf](concurrency-precise-math-namespace-functions.md#floorf)|Вычисляет floor аргумента|  
-|[fma](concurrency-precise-math-namespace-functions.md#fma)|Перегружен. Вычисления (_X * _Y) + _Z, с округлением в рамках одной операции троичный|  
-|[fmaf](concurrency-precise-math-namespace-functions.md#fmaf)|Вычисления (_X * _Y) + _Z, с округлением в рамках одной операции троичный|  
+|[fma](concurrency-precise-math-namespace-functions.md#fma)|Перегружен. Вычисления (_X * _Y) + _Z, округляется в рамках одной операции троичный|  
+|[fmaf](concurrency-precise-math-namespace-functions.md#fmaf)|Вычисления (_X * _Y) + _Z, округляется в рамках одной операции троичный|  
 |[fmax](concurrency-precise-math-namespace-functions.md#fmax)|Перегружен. Определите максимальное числовое значение аргументов|  
 |[fmaxf](concurrency-precise-math-namespace-functions.md#fmaxf)|Определите максимальное числовое значение аргументов|  
 |[fmin](concurrency-precise-math-namespace-functions.md#fmin)|Перегружен. Определите минимальное числовое значение аргументов|  
 |[fminf](concurrency-precise-math-namespace-functions.md#fminf)|Определите минимальное числовое значение аргументов|  
-|[Функция fmod (C++ AMP)](concurrency-precise-math-namespace-functions.md#fmod)|Перегружен. Вычисляет остаток с плавающей запятой от _X или _Y|  
-|[fmodf](concurrency-precise-math-namespace-functions.md#fmodf)|Вычисляет остаток с плавающей запятой от _X или _Y|  
-|[fpclassify](concurrency-precise-math-namespace-functions.md#fpclassify)|Перегружен. Классифицирует значение аргумента как нулевое значение NaN, бесконечное, обычная, subnormal,|  
-|[frexp](concurrency-precise-math-namespace-functions.md#frexp)|Перегружен. Возвращает мантиссы и экспоненты _X|  
-|[frexpf](concurrency-precise-math-namespace-functions.md#frexpf)|Возвращает мантиссы и экспоненты _X|  
+|[fmod функции (C++ AMP)](concurrency-precise-math-namespace-functions.md#fmod)|Перегружен. Вычисляет остаток с плавающей запятой от _X/_Y|  
+|[fmodf](concurrency-precise-math-namespace-functions.md#fmodf)|Вычисляет остаток с плавающей запятой от _X/_Y|  
+|[fpclassify](concurrency-precise-math-namespace-functions.md#fpclassify)|Перегружен. Разделяет значения аргумента как нулевое значение NaN, бесконечное, обычная, subnormal,|  
+|[frexp](concurrency-precise-math-namespace-functions.md#frexp)|Перегружен. Возвращает мантисса и степень из _X|  
+|[frexpf](concurrency-precise-math-namespace-functions.md#frexpf)|Возвращает мантисса и степень из _X|  
 |[hypot](concurrency-precise-math-namespace-functions.md#hypot)|Перегружен. Вычисляет квадратный корень из суммы квадратов _X и _Y|  
 |[hypotf](concurrency-precise-math-namespace-functions.md#hypotf)|Вычисляет квадратный корень из суммы квадратов _X и _Y|  
 |[ilogb](concurrency-precise-math-namespace-functions.md#ilogb)|Перегружен. Извлеките экспоненты _X как значение типа int со знаком|  
 |[ilogbf](concurrency-precise-math-namespace-functions.md#ilogbf)|Извлеките экспоненты _X как значение типа int со знаком|  
 |[isFinite](concurrency-precise-math-namespace-functions.md#isfinite)|Перегружен. Определяет, имеет ли аргумент конечное значение|  
 |[isinf](concurrency-precise-math-namespace-functions.md#isinf)|Перегружен. Определяет, является ли аргумент бесконечности|  
-|[isnan](concurrency-precise-math-namespace-functions.md#isnan)|Перегружен. Определяет, является ли аргумент значение NaN|  
-|[isnormal](concurrency-precise-math-namespace-functions.md#isnormal)|Перегружен. Определяет, является ли аргумент норм.|  
-|[ldexp](concurrency-precise-math-namespace-functions.md#ldexp)|Перегружен. Вычисляет действительное число мантисса и степень|  
-|[ldexpf](concurrency-precise-math-namespace-functions.md#ldexpf)|Вычисляет действительное число мантисса и степень|  
+|[isnan](concurrency-precise-math-namespace-functions.md#isnan)|Перегружен. Определяет, является ли аргумент NaN|  
+|[isnormal](concurrency-precise-math-namespace-functions.md#isnormal)|Перегружен. Определяет, является ли аргумент нормаль|  
+|[ldexp](concurrency-precise-math-namespace-functions.md#ldexp)|Перегружен. Вычисляет вещественное число от мантисса и степень|  
+|[ldexpf](concurrency-precise-math-namespace-functions.md#ldexpf)|Вычисляет вещественное число от мантисса и степень|  
 |[lgamma](concurrency-precise-math-namespace-functions.md#lgamma)|Перегружен. Вычисляет натуральный логарифм гамма аргумента абсолютное значение|  
 |[lgammaf](concurrency-precise-math-namespace-functions.md#lgammaf)|Вычисляет натуральный логарифм гамма аргумента абсолютное значение|  
-|[log](concurrency-precise-math-namespace-functions.md#log)|Перегружен. Вычисляет логарифм аргумента|  
-|[log10](concurrency-precise-math-namespace-functions.md#log10)|Перегружен. Вычисляет логарифм по основанию&10; аргумента|  
-|[log10f](concurrency-precise-math-namespace-functions.md#log10f)|Вычисляет логарифм по основанию&10; аргумента|  
-|[log1p](concurrency-precise-math-namespace-functions.md#log1p)|Перегружен. Вычисляет логарифм с основанием e 1, а также аргумент|  
-|[log1pf](concurrency-precise-math-namespace-functions.md#log1pf)|Вычисляет логарифм с основанием e 1, а также аргумент|  
-|[log2](concurrency-precise-math-namespace-functions.md#log2)|Перегружен. Вычисляет логарифм по основанию&2; аргумента|  
-|[log2f](concurrency-precise-math-namespace-functions.md#log2f)|Вычисляет логарифм по основанию&2; аргумента|  
+|[log](concurrency-precise-math-namespace-functions.md#log)|Перегружен. Вычисляет логарифм с основанием e аргумента|  
+|[log10](concurrency-precise-math-namespace-functions.md#log10)|Перегружен. Вычисляет логарифм по основанию 10 аргумента|  
+|[log10f](concurrency-precise-math-namespace-functions.md#log10f)|Вычисляет логарифм по основанию 10 аргумента|  
+|[log1p](concurrency-precise-math-namespace-functions.md#log1p)|Перегружен. Вычисляет логарифм с основанием e, 1, а также аргумент|  
+|[log1pf](concurrency-precise-math-namespace-functions.md#log1pf)|Вычисляет логарифм с основанием e, 1, а также аргумент|  
+|[log2](concurrency-precise-math-namespace-functions.md#log2)|Перегружен. Вычисляет логарифм по основанию 2 аргумента|  
+|[log2f](concurrency-precise-math-namespace-functions.md#log2f)|Вычисляет логарифм по основанию 2 аргумента|  
 |[logb](concurrency-precise-math-namespace-functions.md#logb)|Перегружен. Извлекает экспоненты _X, как значение целого числа со знаком в формате с плавающей запятой|  
 |[logbf](concurrency-precise-math-namespace-functions.md#logbf)|Извлекает экспоненты _X, как значение целого числа со знаком в формате с плавающей запятой|  
-|[logf](concurrency-precise-math-namespace-functions.md#logf)|Вычисляет логарифм аргумента|  
-|[modf](concurrency-precise-math-namespace-functions.md#modf)|Перегружен. Разделяет _X в долях и целое число частей.|  
-|[modff](concurrency-precise-math-namespace-functions.md#modff)|Разделяет _X в долях и целое число частей.|  
-|[nan](concurrency-precise-math-namespace-functions.md#nan)|Возвращает тихий NaN|  
-|[nanf](concurrency-precise-math-namespace-functions.md#nanf)|Возвращает тихий NaN|  
+|[logf](concurrency-precise-math-namespace-functions.md#logf)|Вычисляет логарифм с основанием e аргумента|  
+|[modf](concurrency-precise-math-namespace-functions.md#modf)|Перегружен. Разбивает _X в долях и частей целое число со знаком.|  
+|[modff](concurrency-precise-math-namespace-functions.md#modff)|Разбивает _X в долях и частей целое число со знаком.|  
+|[nan](concurrency-precise-math-namespace-functions.md#nan)|Возвращает несигнальным значением NaN|  
+|[nanf](concurrency-precise-math-namespace-functions.md#nanf)|Возвращает несигнальным значением NaN|  
 |[nearbyint](concurrency-precise-math-namespace-functions.md#nearbyint)|Перегружен. Округляет аргумент целочисленного значения в формате с плавающей запятой, используя текущее направление округления.|  
 |[nearbyintf](concurrency-precise-math-namespace-functions.md#nearbyintf)|Округляет аргумент целочисленного значения в формате с плавающей запятой, используя текущее направление округления.|  
-|[nextafter](concurrency-precise-math-namespace-functions.md#nextafter)|Перегружен. Определить Далее представимым значением типа функции, после _X в направлении _Y|  
-|[nextafterf](concurrency-precise-math-namespace-functions.md#nextafterf)|Определить Далее представимым значением типа функции, после _X в направлении _Y|  
+|[nextafter](concurrency-precise-math-namespace-functions.md#nextafter)|Перегружен. Определить Далее представимым значением в типе функции, после _X в направлении _Y|  
+|[nextafterf](concurrency-precise-math-namespace-functions.md#nextafterf)|Определить Далее представимым значением в типе функции, после _X в направлении _Y|  
 |[PHI](concurrency-precise-math-namespace-functions.md#phi)|Перегружен. Возвращает интегральную функцию распределения аргумента|  
 |[phif](concurrency-precise-math-namespace-functions.md#phif)|Возвращает интегральную функцию распределения аргумента|  
 |[pow](concurrency-precise-math-namespace-functions.md#pow)|Перегружен. Вычисляет _X, возведенное в степень _Y|  
 |[powf](concurrency-precise-math-namespace-functions.md#powf)|Вычисляет _X, возведенное в степень _Y|  
-|[probit](concurrency-precise-math-namespace-functions.md#probit)|Перегружен. Возвращает обратный интегральную функцию распределения аргумента|  
-|[probitf](concurrency-precise-math-namespace-functions.md#probitf)|Возвращает обратный интегральную функцию распределения аргумента|  
+|[probit](concurrency-precise-math-namespace-functions.md#probit)|Перегружен. Возвращает обратная Кумулятивная функция распределения аргумента|  
+|[probitf](concurrency-precise-math-namespace-functions.md#probitf)|Возвращает обратная Кумулятивная функция распределения аргумента|  
 |[rcbrt](concurrency-precise-math-namespace-functions.md#rcbrt)|Перегружен. Возвращает обратное кубический корень аргумента|  
 |[rcbrtf](concurrency-precise-math-namespace-functions.md#rcbrtf)|Возвращает обратное кубический корень аргумента|  
 |[remainder](concurrency-precise-math-namespace-functions.md#remainder)|Перегружен. Вычисляет остаток: _X REM _Y|  
 |[remainderf](concurrency-precise-math-namespace-functions.md#remainderf)|Вычисляет остаток: _X REM _Y|  
-|[remquo](concurrency-precise-math-namespace-functions.md#remquo)|Перегружен. Вычисляет остаток же как _X REM _Y. Также вычисляет младших битов 23 _X целочисленное частное и _Y и дает тот же знак _X или _Y это значение. Она сохраняет это значение со знаком в целое число со знаком, который указывает _Quo.|  
-|[remquof](concurrency-precise-math-namespace-functions.md#remquof)|Вычисляет остаток же как _X REM _Y. Также вычисляет младших битов 23 _X целочисленное частное и _Y и дает тот же знак _X или _Y это значение. Она сохраняет это значение со знаком в целое число со знаком, который указывает _Quo.|  
-|[round](concurrency-precise-math-namespace-functions.md#round)|Перегружен. Округляет _X до ближайшего целого числа|  
-|[roundf](concurrency-precise-math-namespace-functions.md#roundf)|Округляет _X до ближайшего целого числа|  
+|[remquo](concurrency-precise-math-namespace-functions.md#remquo)|Перегружен. Вычисляет остаток же как _X REM _Y. Также вычисляет младших битов 23 частное целого _X/_Y и присваивает это значение того же процесса входа как _X/_Y. Она сохраняет это значение со знаком в целое число со знаком, который указывает _Quo.|  
+|[remquof](concurrency-precise-math-namespace-functions.md#remquof)|Вычисляет остаток же как _X REM _Y. Также вычисляет младших битов 23 частное целого _X/_Y и присваивает это значение того же процесса входа как _X/_Y. Она сохраняет это значение со знаком в целое число со знаком, который указывает _Quo.|  
+|[round](concurrency-precise-math-namespace-functions.md#round)|Перегружен. Округляет _X до ближайшего целого|  
+|[roundf](concurrency-precise-math-namespace-functions.md#roundf)|Округляет _X до ближайшего целого|  
 |[rsqrt](concurrency-precise-math-namespace-functions.md#rsqrt)|Перегружен. Возвращает обратное квадратного корня аргумент|  
 |[rsqrtf](concurrency-precise-math-namespace-functions.md#rsqrtf)|Возвращает обратное квадратного корня аргумент|  
 |[scalb](concurrency-precise-math-namespace-functions.md#scalb)|Перегружен. Умножает _X константой FLT_RADIX для _Y питания|  
 |[scalbf](concurrency-precise-math-namespace-functions.md#scalbf)|Умножает _X константой FLT_RADIX для _Y питания|  
 |[scalbn](concurrency-precise-math-namespace-functions.md#scalbn)|Перегружен. Умножает _X константой FLT_RADIX для _Y питания|  
 |[scalbnf](concurrency-precise-math-namespace-functions.md#scalbnf)|Умножает _X константой FLT_RADIX для _Y питания|  
-|[signbit](concurrency-precise-math-namespace-functions.md#signbit)|Перегружен. Определяет, является ли знак _X отрицательное|  
-|[signbitf](concurrency-precise-math-namespace-functions.md#signbitf)|Определяет, является ли знак _X отрицательное|  
+|[signbit](concurrency-precise-math-namespace-functions.md#signbit)|Перегружен. Определяет, является ли знак _X отрицательным|  
+|[signbitf](concurrency-precise-math-namespace-functions.md#signbitf)|Определяет, является ли знак _X отрицательным|  
 |[sin](concurrency-precise-math-namespace-functions.md#sin)|Перегружен. Вычисляет синус аргумента|  
 |[sincos](concurrency-precise-math-namespace-functions.md#sincos)|Перегружен. Вычисляет синус и косинус значение _X|  
 |[sincosf](concurrency-precise-math-namespace-functions.md#sincosf)|Вычисляет синус и косинус значение _X|  
 |[sinf](concurrency-precise-math-namespace-functions.md#sinf)|Вычисляет синус аргумента|  
 |[sinh](concurrency-precise-math-namespace-functions.md#sinh)|Перегружен. Вычисляет гиперболический синус значение аргумента|  
 |[sinhf](concurrency-precise-math-namespace-functions.md#sinhf)|Вычисляет гиперболический синус значение аргумента|  
-|[sinpi](concurrency-precise-math-namespace-functions.md#sinpi)|Перегружен. Вычисляет синус числа пи * _X|  
-|[sinpif](concurrency-precise-math-namespace-functions.md#sinpif)|Вычисляет синус числа пи * _X|  
+|[sinpi](concurrency-precise-math-namespace-functions.md#sinpi)|Перегружен. Вычисляет Синус pi * _X|  
+|[sinpif](concurrency-precise-math-namespace-functions.md#sinpif)|Вычисляет Синус pi * _X|  
 |[sqrt](concurrency-precise-math-namespace-functions.md#sqrt)|Перегружен. Вычисляет корень squre аргумента|  
 |[sqrtf](concurrency-precise-math-namespace-functions.md#sqrtf)|Вычисляет корень squre аргумента|  
 |[tan](concurrency-precise-math-namespace-functions.md#tan)|Перегружен. Вычисляет тангенс значение аргумента|  
 |[tanf](concurrency-precise-math-namespace-functions.md#tanf)|Вычисляет тангенс значение аргумента|  
 |[tanh](concurrency-precise-math-namespace-functions.md#tanh)|Перегружен. Вычисляет гиперболический тангенс значение аргумента|  
 |[tanhf](concurrency-precise-math-namespace-functions.md#tanhf)|Вычисляет гиперболический тангенс значение аргумента|  
-|[tanpi](concurrency-precise-math-namespace-functions.md#tanpi)|Перегружен. Вычисляет тангенс числа пи * _X|  
-|[tanpif](concurrency-precise-math-namespace-functions.md#tanpif)|Вычисляет тангенс числа пи * _X|  
-|[tgamma](concurrency-precise-math-namespace-functions.md#tgamma)|Перегружен. Вычисляет гамма-функции _X|  
-|[tgammaf](concurrency-precise-math-namespace-functions.md#tgammaf)|Вычисляет гамма-функции _X|  
-|[trunc](concurrency-precise-math-namespace-functions.md#trunc)|Перегружен. Усекает для целочисленный аргумент|  
-|[truncf](concurrency-precise-math-namespace-functions.md#truncf)|Усекает для целочисленный аргумент|  
+|[tanpi](concurrency-precise-math-namespace-functions.md#tanpi)|Перегружен. Вычисляет тангенс число пи * _X|  
+|[tanpif](concurrency-precise-math-namespace-functions.md#tanpif)|Вычисляет тангенс число пи * _X|  
+|[tgamma](concurrency-precise-math-namespace-functions.md#tgamma)|Перегружен. Вычисляет гамма-функции из _X|  
+|[tgammaf](concurrency-precise-math-namespace-functions.md#tgammaf)|Вычисляет гамма-функции из _X|  
+|[trunc](concurrency-precise-math-namespace-functions.md#trunc)|Перегружен. Усекает целочисленный аргумент|  
+|[truncf](concurrency-precise-math-namespace-functions.md#truncf)|Усекает целочисленный аргумент|  
   
 ## <a name="requirements"></a>Требования  
  **Заголовок:** amp_math.h  
@@ -325,4 +308,3 @@ namespace precise_math;
   
 ## <a name="see-also"></a>См. также  
  [Пространство имен Concurrency (C++ AMP)](concurrency-namespace-cpp-amp.md)
-

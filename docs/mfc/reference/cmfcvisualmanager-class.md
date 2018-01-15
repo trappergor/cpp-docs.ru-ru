@@ -355,11 +355,12 @@ caps.latest.revision: "58"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 92aafb6b979557f98448e4c8ad27d20b663e228a
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: e51a6a630daa2d03ac9f251a3ba516c708ec6d37
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cmfcvisualmanager-class"></a>Класс CMFCVisualManager
 Обеспечивает поддержку изменению внешнего вида приложений на глобальном уровне. Класс `CMFCVisualManager` работает совместно с классом, предоставляющим инструкции по рисованию элементов управления графического интерфейса пользователя приложения с использованием последовательного стиля. Эти другие классы называются визуальными диспетчерами и наследуются от `CMFCBaseVisualManager`.  
@@ -372,17 +373,17 @@ ms.lasthandoff: 10/24/2017
 class CMFCVisualManager : public CMFCBaseVisualManager  
 ```  
   
-## <a name="members"></a>Члены  
+## <a name="members"></a>Участники  
   
 ### <a name="public-constructors"></a>Открытые конструкторы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |`CMFCVisualManager::CMFCVisualManager`|Конструктор по умолчанию.|  
   
 ### <a name="public-methods"></a>Открытые методы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[CMFCVisualManager::AdjustFrames](#adjustframes)||  
 |[CMFCVisualManager::AdjustToolbars](#adjusttoolbars)||  

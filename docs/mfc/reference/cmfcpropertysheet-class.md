@@ -51,11 +51,12 @@ caps.latest.revision: "35"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: b8b8624d65e6bee9aacb8ac1f8d7ec9537e5e9c6
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: e2684de5c72dcc755c2a75e2553eed509ce76533
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cmfcpropertysheet-class"></a>Класс CMFCPropertySheet
 Класс `CMFCPropertySheet` поддерживает таблицу свойств, каждая страница свойств в которой обозначается вкладкой, кнопкой панели инструментов, узлом элемента управления «Дерево» или элементом списка.  
@@ -66,18 +67,18 @@ ms.lasthandoff: 10/24/2017
 class CMFCPropertySheet : public CPropertySheet  
 ```  
   
-## <a name="members"></a>Члены  
+## <a name="members"></a>Участники  
   
 ### <a name="public-constructors"></a>Открытые конструкторы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[CMFCPropertySheet::CMFCPropertySheet](#cmfcpropertysheet)|Создает объект `CMFCPropertySheet`.|  
 |`CMFCPropertySheet::~CMFCPropertySheet`|Деструктор.|  
   
 ### <a name="public-methods"></a>Открытые методы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[CMFCPropertySheet::AddPage](#addpage)|Добавляет страницу в таблицу свойств.|  
 |[CMFCPropertySheet::AddPageToTree](#addpagetotree)|Добавляет новую страницу свойств в элемент управления «Дерево».|  
@@ -462,7 +463,7 @@ void SetLook(
   
  В следующей таблице перечислены значений перечисления, которые могут быть указаны в `look` параметра.  
   
-|Значение|Описание|  
+|Значение|Описание:|  
 |-----------|-----------------|  
 |`CMFCPropertySheet::PropSheetLook_Tabs`|(По умолчанию) Отображает вкладку для каждой страницы свойств. Вкладки отображаются в верхней части страницы свойств и помещаются в стек, если имеется больше вкладок, чем может поместиться на одной строке.|  
 |`CMFCPropertySheet::PropSheetLook_OutlookBar`|Отображает список кнопок навигации в стиле панели Microsoft Outlook в левой части страницы свойств. Каждая кнопка в списке соответствует странице свойств. Если доступны дополнительные кнопки, чем может поместиться в видимой области списка, платформа отображает стрелок прокрутки.|  

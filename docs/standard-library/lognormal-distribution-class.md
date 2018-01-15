@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -22,9 +21,7 @@ f1_keywords:
 - random/std::lognormal_distribution::param_type::s
 - random/std::lognormal_distribution::param_type::operator==
 - random/std::lognormal_distribution::param_type::operator!=
-- random/std::lognormal_distribution::param_type
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - std::lognormal_distribution [C++]
 - std::lognormal_distribution [C++], reset
@@ -36,16 +33,16 @@ helpviewer_keywords:
 - std::lognormal_distribution [C++], param_type
 - std::lognormal_distribution [C++], param_type
 ms.assetid: f2d6a431-6c3a-4370-b12e-4adb4ddf6cc4
-caps.latest.revision: 15
+caps.latest.revision: "15"
 author: corob-msft
 ms.author: corob
 manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 59d68823195d4fc975827b50225702819cd0f4e4
+ms.sourcegitcommit: 54035dce0992ba5dce0323d67f86301f994ff3db
 ms.translationtype: MT
-ms.sourcegitcommit: 65f4e356ad0d46333b0d443d0fd6ac0b9f2b6f58
-ms.openlocfilehash: 60289557e00642bfd46cbbf2d23084d148307995
-ms.contentlocale: ru-ru
-ms.lasthandoff: 10/03/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/03/2018
 ---
 # <a name="lognormaldistribution-class"></a>Класс lognormal_distribution
 Формирует логарифмически нормальное распределение.  
@@ -101,7 +98,7 @@ public:
   
 Дополнительные сведения о классах распределения и их членах см. в разделе [\<random>](../standard-library/random.md).  
   
-Подробные сведения о логарифмически нормальном распределении см. в статье Wolfram MathWorld [Логарифмически нормальное распределение](http://go.microsoft.com/fwlink/LinkId=400917).  
+Подробные сведения о логарифмически нормальном распределении см. в статье Wolfram MathWorld [Логарифмически нормальное распределение](http://go.microsoft.com/fwlink/p/?linkid=400917).  
   
 ## <a name="example"></a>Пример  
   
@@ -211,7 +208,7 @@ explicit lognormal_distribution(const param_type& parm);
 Структура `param_type`, используемая для формирования распределения.  
   
 ### <a name="remarks"></a>Примечания  
-**Предварительные условия:** `0.0 < s`  
+**Предусловие:** `0.0 < s`  
   
 Первый конструктор создает объект, хранимое значение `m` которого содержит значение *m*, а значение `s` содержит значение *s*.  
   
@@ -242,11 +239,10 @@ struct param_type {
 Структура `param_type`, используемая для сравнения.  
   
 ### <a name="remarks"></a>Примечания  
-**Предварительные условия:** `0.0 < s`  
+**Предусловие:** `0.0 < s`  
   
 Эту структуру можно передать конструктору класса распределения во время создания экземпляра, функции-члену `param()` для установки хранимых параметров существующего распределения и `operator()` для использования вместо хранимых параметров.  
   
 ## <a name="see-also"></a>См. также  
 [\<random>](../standard-library/random.md)
-
 

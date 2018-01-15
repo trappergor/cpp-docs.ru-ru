@@ -15,11 +15,12 @@ caps.latest.revision: "20"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 85345a6337ba4f40dfde85b1537622bc08fb50f5
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: db6449ad7cb350eddaa0abeecd9463fc53407d4a
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="memfun1t-class"></a>Класс mem_fun1_t
 Класс адаптера, который позволяет вызывать функцию-член **non_const**, принимающую один аргумент, как объект бинарной функции при инициализации с аргументом-указателем.  
@@ -53,7 +54,7 @@ class mem_fun1_t : public binary_function<Type *, Arg, Result> {
  Адаптируемая бинарная функция.  
   
 ## <a name="remarks"></a>Примечания  
- Класс шаблона сохраняет в частном члене объекта копию `_Pm`, который должен быть указателем на функцию-член класса **тип**. Он определяет свою функцию-член `operator()` как возвращающую ( **_Pleft**->\* `_Pm`)( **right**).  
+ Класс шаблона сохраняет в частном члене объекта копию `_Pm`, которая должна быть указателем на функцию-член класса **Type**. Он определяет свою функцию-член `operator()` как возвращающую ( **_Pleft**->\* `_Pm`)( **right**).  
   
 ## <a name="example"></a>Пример  
   Конструктор `mem_fun1_t` обычно не используется напрямую; для адаптации функций-членов используется вспомогательная функция `mem_fun`. Пример использования адаптера функции-члена см. в разделе [mem_fun](../standard-library/functional-functions.md#mem_fun).  

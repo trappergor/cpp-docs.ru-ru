@@ -41,11 +41,12 @@ caps.latest.revision: "21"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 3ed1c892dbd7cef4cee8281f63657144dc8dae10
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 2970dddd4711c431b3809127e7eeb6f7cd3f9eb1
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cgdiobject-class"></a>Класс CGdiObject
 Предоставляет базовый класс для различных типов объектов интерфейса графических устройств Windows (GDI), таких как растровые изображения, области, кисти, перья, палитры и шрифты.  
@@ -56,17 +57,17 @@ ms.lasthandoff: 10/24/2017
 class CGdiObject : public CObject  
 ```  
   
-## <a name="members"></a>Члены  
+## <a name="members"></a>Участники  
   
 ### <a name="public-constructors"></a>Открытые конструкторы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[CGdiObject::CGdiObject](#cgdiobject)|Создает объект `CGdiObject`.|  
   
 ### <a name="public-methods"></a>Открытые методы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[CGdiObject::Attach](#attach)|Присоединяет объект Windows GDI для `CGdiObject` объекта.|  
 |[CGdiObject::CreateStockObject](#createstockobject)|Получает дескриптор Windows предопределенных стандартных перья, кисти или шрифты.|  
@@ -81,7 +82,7 @@ class CGdiObject : public CObject
   
 ### <a name="public-operators"></a>Открытые операторы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[CGdiObject::operator! =](#operator_neq)|Определяет, если два объекта GDI логически не равны.|  
 |[CGdiObject::operator ==](#operator_eq_eq)|Определяет, логически равны ли два объекта GDI.|  
@@ -89,7 +90,7 @@ class CGdiObject : public CObject
   
 ### <a name="public-data-members"></a>Открытые члены данных  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[CGdiObject::m_hObject](#m_hobject)|Объект `HANDLE` содержащий `HBITMAP`, `HPALETTE`, `HRGN`, `HBRUSH`, `HPEN`, или `HFONT` присоединен к этому объекту.|  
   
@@ -226,7 +227,7 @@ int GetObject(
 ### <a name="remarks"></a>Примечания  
  Функция извлекает структуру данных, тип которого зависит от типа графического объекта, как показано в следующем списке:  
   
-|Объект|Тип буфера|  
+|Object|Тип буфера|  
 |------------|-----------------|  
 |`CPen`|[LOGPEN](../../mfc/reference/logpen-structure.md)|  
 |`CBrush`|[LOGBRUSH](../../mfc/reference/logbrush-structure.md)|  
@@ -247,7 +248,7 @@ UINT GetObjectType() const;
 ```  
   
 ### <a name="return-value"></a>Возвращаемое значение  
- Тип объекта, в случае успешного выполнения; в противном случае — 0. Значение может быть одним из следующих:  
+ Тип объекта, в случае успешного выполнения; в противном случае — 0. Он может иметь одно из следующих значений:  
   
 - **OBJ_BITMAP** растрового изображения  
   

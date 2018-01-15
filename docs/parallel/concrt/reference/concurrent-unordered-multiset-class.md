@@ -23,11 +23,12 @@ caps.latest.revision: "12"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 58dd056bc3a4d397fc8e77b8e2c0b508b489eb2b
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 518e0b7bef29e9d10e7cf603fc3bf387d986fa09
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="concurrentunorderedmultiset-class"></a>Класс concurrent_unordered_multiset
 `concurrent_unordered_multiset` Класс является параллелизма контейнер, управляющий последовательностью элементов типа K. переменной длины Последовательность представлена таким образом, что позволяет параллельно безопасно операции присоединения, доступ к элементу, доступа к итератору и итератора обхода.  
@@ -62,11 +63,11 @@ template <typename K,
  `_Allocator_type`  
  Тип, представляющий сохраненный объект распределителя, инкапсулирующий сведения о выделении и освобождении памяти для параллельного вектора. Этот аргумент является необязательным, и значением по умолчанию является `std::allocator<K>`.  
   
-## <a name="members"></a>Члены  
+## <a name="members"></a>Участники  
   
 ### <a name="public-typedefs"></a>Общедоступные определения типов  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |`allocator_type`|Тип распределителя для управления хранилищем.|  
 |`const_iterator`|Тип постоянного итератора для управляемой последовательности.|  
@@ -86,13 +87,13 @@ template <typename K,
   
 ### <a name="public-constructors"></a>Открытые конструкторы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[concurrent_unordered_multiset](#ctor)|Перегружен. Создает параллельный неупорядоченный мультинабора.|  
   
 ### <a name="public-methods"></a>Открытые методы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[hash_function](#hash_function)|Возвращает сохраненный объект хэш-функции.|  
 |[insert](#insert)|Перегружен. Добавляет элементы к `concurrent_unordered_multiset` объекта.|  
@@ -102,9 +103,9 @@ template <typename K,
   
 ### <a name="public-operators"></a>Открытые операторы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
-|[operator=](#operator_eq)|Перегружен. Назначает содержимое другой `concurrent_unordered_multiset` этого объекта. Этот метод не является безопасным в режиме параллелизма.|  
+|[оператор=](#operator_eq)|Перегружен. Назначает содержимое другой `concurrent_unordered_multiset` этого объекта. Этот метод не является безопасным в режиме параллелизма.|  
   
 ## <a name="remarks"></a>Примечания  
  Дополнительные сведения о `concurrent_unordered_multiset` см. в описании [параллельные контейнеры и объекты](../../../parallel/concrt/parallel-containers-and-objects.md).  

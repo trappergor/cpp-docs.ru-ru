@@ -1,48 +1,51 @@
 ---
-title: "Changing the Properties of Multiple Accelerator Keys | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "keyboard shortcuts [C++], property changing"
-  - "accelerator tables [C++], changing properties"
+title: "Изменение свойств для нескольких сочетаний клавиш | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- keyboard shortcuts [C++], property changing
+- accelerator tables [C++], changing properties
 ms.assetid: b55c9bd6-b430-48bb-b942-0e6f21d7abf9
-caps.latest.revision: 8
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: 8fbe5ab2202da457c8970d84d304ec97fdedd4a1
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 12/21/2017
 ---
-# Changing the Properties of Multiple Accelerator Keys
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-### Изменение свойств для нескольких сочетаний клавиш  
+# <a name="changing-the-properties-of-multiple-accelerator-keys"></a>Изменение свойств для нескольких сочетаний клавиш
+### <a name="to-change-the-properties-of-multiple-accelerator-keys"></a>Изменение свойств для нескольких сочетаний клавиш  
   
-1.  Откройте таблицу сочетаний клавиш, дважды щелкнув соответствующий значок в [представлении ресурсов](../windows/resource-view-window.md).  
+1.  Откройте таблицу сочетаний клавиш, дважды щелкнув его значок в [представление ресурсов](../windows/resource-view-window.md).  
   
     > [!NOTE]
-    >  Если в проекте нет RC\-файла, см. раздел [Создание нового файла скрипта ресурсов](../windows/how-to-create-a-resource-script-file.md).  
+    >  Если в проекте еще нет RC-файла, см. раздел [Создание нового файла описания ресурсов](../windows/how-to-create-a-resource-script-file.md).  
   
-2.  Чтобы выделить несколько сочетаний клавиш, свойства которых необходимо изменить, прижмите клавишу **CTRL** и щелкните последовательно все нужные сочетания.  
+2.  Выберите сочетания клавиш, которые вы хотите изменить, удерживая нажатой **CTRL** ключа, щелкните каждый из них.  
   
-3.  Перейдите к [окну свойств](../Topic/Properties%20Window.md) и введите значения, которые должны быть одинаковыми у всех сочетаний.  
+3.  Последовательно выберите пункты [окно свойств](/visualstudio/ide/reference/properties-window) и введите нужные значения всех сочетаний для совместного использования.  
   
     > [!NOTE]
-    >  Каждое значение модификатора отображается в окне свойств как логическое значение.  Если [значение модификатора](../windows/accelerator-modifier-property.md) изменить в окне свойств, в таблице сочетаний клавиш новый модификатор будет интерпретироваться как дополнение к ранее использовавшимся модификаторам.  В связи с этим в процессе установки значений модификатора необходимо будет задать значения всех модификаторов, чтобы убедиться, что для всех сочетаний клавиш заданы одинаковые параметры.  
+    >  Каждое значение модификатора отображается как логическое свойство в окне «Свойства». При изменении [модификатор](../windows/accelerator-modifier-property.md) значение в окне «Свойства» в таблице сочетаний клавиш новый модификатор рассматривает как дополнение к ранее использовавшимся модификаторам. По этой причине при установке любого значения модификатора необходимо будет задать все их, чтобы убедиться, что для всех сочетаний клавиш заданы те же параметры модификатор.  
   
- Сведения о добавлении ресурсов в управляемые проекты см. в разделе [Ресурсы приложений](../Topic/Resources%20in%20Desktop%20Apps.md) *Руководства разработчика .NET Framework*. Сведения о том, как вручную добавлять файлы ресурсов в управляемые проекты, осуществлять доступ к ресурсам, отображать статические ресурсы и присваивать строки ресурсов свойствам см. в разделах [Пошаговое руководство. Локализация приложений Windows Forms](http://msdn.microsoft.com/ru-ru/9a96220d-a19b-4de0-9f48-01e5d82679e5) и [Walkthrough: Using Resources for Localization with ASP.NET](../Topic/Walkthrough:%20Using%20Resources%20for%20Localization%20with%20ASP.NET.md).  
+ Сведения о добавлении ресурсов в управляемые проекты см. в разделе [ресурсы в классических приложениях](/dotnet/framework/resources/index) в *руководства разработчика .NET Framework.* Сведения о вручную добавлять файлы ресурсов в управляемые проекты, осуществлять доступ к ресурсам, отображать статические ресурсы и присваивать строки ресурсов свойствам см. в разделе [Создание файлов ресурсов для приложений рабочего стола](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Сведения о глобализации и локализации ресурсов в управляемых приложениях см. в разделе [Globalizing и локализация приложений .NET Framework](/dotnet/standard/globalization-localization/index).  
   
  **Требования**  
   
  Win32  
   
-## См. также  
- [Editing Accelerator Tables](../windows/editing-accelerator-tables.md)   
- [Accelerator Editor](../Topic/Accelerator%20Editor.md)
+## <a name="see-also"></a>См. также  
+ [Редактирование таблиц сочетаний клавиш](../windows/editing-accelerator-tables.md)   
+ [Редактор сочетаний клавиш](../windows/accelerator-editor.md)

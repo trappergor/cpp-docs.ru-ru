@@ -18,11 +18,14 @@ caps.latest.revision: "9"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: a8f85e534892cf45987cf563f968ca5e1ec28262
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: 83c7b6e4d019b895973345805027d428d7af766d
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="default-control-events"></a>События по умолчанию элемента управления
 Следующие имена элементов управления имеют соответствующие им события:  
@@ -32,7 +35,7 @@ ms.lasthandoff: 10/24/2017
 |Анимация|**ACN_START**|  
 |Флажок|**BN_CLICKED**|  
 |Поле со списком|**CBN_SELCHANGE**|  
-|Пользовательский|**TTN_GETDISPINFO**|  
+|Другой|**TTN_GETDISPINFO**|  
 |Выбор даты и времени|**DTN_DATETIMECHANGE**|  
 |Поле ввода|**EN_CHANGE**|  
 |Область группы|(Неприменимо)|  
@@ -53,7 +56,7 @@ ms.lasthandoff: 10/24/2017
 |Вкладка|**TCN_SELCHANGE**|  
 |Дерево|**TVN_SELCHANGE**|  
   
- Сведения о добавлении ресурсов в управляемые проекты см. в разделе [ресурсы в классических приложениях](https://msdn.microsoft.com/library/f45fce5x.aspx) в *руководства разработчика .NET Framework.* Сведения о вручную добавлять файлы ресурсов в управляемые проекты, осуществлять доступ к ресурсам, отображать статические ресурсы и присваивать строки ресурсов свойствам см. в разделе [Создание файлов ресурсов для приложений рабочего стола](https://msdn.microsoft.com/library/xbx3z216.aspx). Сведения о глобализации и локализации ресурсов в управляемых приложениях см. в разделе [Globalizing и локализация приложений .NET Framework](https://msdn.microsoft.com/library/h6270d0z.aspx).  
+ Сведения о добавлении ресурсов в управляемые проекты см. в разделе [ресурсы в классических приложениях](/dotnet/framework/resources/index) в *руководства разработчика .NET Framework.* Сведения о вручную добавлять файлы ресурсов в управляемые проекты, осуществлять доступ к ресурсам, отображать статические ресурсы и присваивать строки ресурсов свойствам см. в разделе [Создание файлов ресурсов для приложений рабочего стола](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Сведения о глобализации и локализации ресурсов в управляемых приложениях см. в разделе [Globalizing и локализация приложений .NET Framework](/dotnet/standard/globalization-localization/index).  
   
 ## <a name="requirements"></a>Требования  
  Win32  

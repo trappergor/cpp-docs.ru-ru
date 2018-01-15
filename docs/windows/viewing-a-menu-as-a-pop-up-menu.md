@@ -1,46 +1,48 @@
 ---
-title: "Viewing a Menu as a Pop-up Menu | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "pop-up menus"
-  - "menus, pop-up"
+title: "Просмотр меню в виде всплывающего меню | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- pop-up menus
+- menus, pop-up
 ms.assetid: 220a16dd-a6e8-4362-af85-68fbfce2870e
-caps.latest.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 10
+caps.latest.revision: "10"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: fbddc8fb0b4e382c954fe4b11f100ecefdff75d0
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 12/21/2017
 ---
-# Viewing a Menu as a Pop-up Menu
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Обычно при работе в редакторе меню ресурс меню отображается в виде строки меню.  Однако у вас могут оказаться ресурсы, добавленные в строку меню приложения, во время работы программы.  
+# <a name="viewing-a-menu-as-a-pop-up-menu"></a>Просмотр меню в виде всплывающего меню
+Обычно при работе в редакторе меню ресурс меню отображается в виде строки меню. Однако у вас могут оказаться ресурсы, добавленные в строку меню приложения, во время работы программы.  
   
-### Отображение ресурса меню в виде всплывающего меню  
+### <a name="to-view-a-menu-resource-as-a-pop-up-menu"></a>Отображение ресурса меню в виде всплывающего меню  
   
-1.  Щелкните правой кнопкой мыши меню и выберите в контекстном меню команду **Отобразить как всплывающее**.  
+1.  Щелкните правой кнопкой мыши меню и выберите **отобразить как всплывающее** в контекстном меню.  
   
      Это только режим отображения. Само меню при этом не меняется.  
   
     > [!NOTE]
-    >  Чтобы вернуться к отображению в виде строки меню, выберите команду **Отобразить как всплывающее** еще раз \(флажок будет снят и меню будет отображаться в виде строки\).  
+    >  Чтобы изменить представление строки меню, щелкните **отобразить как всплывающее** снова (который снимает флажок и возвращает представление строки меню).  
   
- Сведения о добавлении ресурсов в управляемые проекты см. в разделе [Ресурсы приложений](../Topic/Resources%20in%20Desktop%20Apps.md) *Руководства разработчика .NET Framework*. Сведения о том, как вручную добавлять файлы ресурсов в управляемые проекты, осуществлять доступ к ресурсам, отображать статические ресурсы и присваивать строки ресурсов свойствам, см. в статье [Walkthrough: Using Resources for Localization with ASP.NET](../Topic/Walkthrough:%20Using%20Resources%20for%20Localization%20with%20ASP.NET.md).  
+
   
  **Требования**  
   
  Win32  
   
-## См. также  
- [Creating Pop\-up Menus](../windows/creating-pop-up-menus.md)   
- [Menu Editor](../Topic/Menu%20Editor.md)   
- [Меню](_win32_Menus)
+## <a name="see-also"></a>См. также  
+ [Создание всплывающих меню](../windows/creating-pop-up-menus.md)   
+ [Редактор меню](../windows/menu-editor.md)   

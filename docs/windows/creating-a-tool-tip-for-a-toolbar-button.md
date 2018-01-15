@@ -1,60 +1,64 @@
 ---
-title: "Creating a Tool Tip for a Toolbar Button | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "tool tips [C++], adding to toolbar buttons"
-  - "\n in tool tip"
-  - "toolbar buttons [C++], tool tips"
-  - "buttons [C++], tool tips"
-  - "Toolbar editor, creating tool tips"
+title: "Создание всплывающей подсказки для кнопки панели инструментов | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- tool tips [C++], adding to toolbar buttons
+- "\nin tool tip"
+- toolbar buttons [C++], tool tips
+- buttons [C++], tool tips
+- Toolbar editor, creating tool tips
 ms.assetid: 0af65342-fd78-4e78-8d0d-dc68f7fc462e
-caps.latest.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 6
+caps.latest.revision: "10"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: 5b5bb25a14d68c01c25d9242df89c1183511ca83
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 12/21/2017
 ---
-# Creating a Tool Tip for a Toolbar Button
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-### Создание всплывающей подсказки  
+# <a name="creating-a-tool-tip-for-a-toolbar-button"></a>Создание всплывающей подсказки для кнопки панели инструментов
+### <a name="to-create-a-tool-tip"></a>Создание всплывающей подсказки  
   
 1.  Выберите кнопку панели инструментов.  
   
-2.  В поле свойства **Приглашение** [окна "Свойства"](../Topic/Properties%20Window.md), добавьте описание кнопки для строки состояния, после сообщения, добавьте add \\n и имя всплывающей подсказки.  
+2.  В [окно свойств](/visualstudio/ide/reference/properties-window)в **Prompt** поле свойства, добавьте описание кнопки для строки состояния, после сообщения, добавьте \n и имя всплывающей подсказки.  
   
- Типичным примером всплывающей подсказки является кнопка "Печать" редактора WordPad:  
+ Распространенным примером всплывающей подсказки является кнопкой печати в WordPad:  
   
- 1.  Откройте редактор WordPad.  
+ 1. Открыть программу WordPad.  
   
- 2.  Наведите указатель мыши на кнопку панели инструментов **Печать**.  
+ 2. Наведите указатель мыши на **печати** кнопки панели инструментов.  
   
- 3.  Обратите внимание, что теперь под указателем мыши всплывает слово "Печать".  
+ 3. Обратите внимание, что слово «печать» теперь располагается под указателем мыши.  
   
- 4.  Взгляните на строку состояния \(в самом низу окна WordPad\) – обратите внимание, что она теперь содержит текст "Печать активного документа".  
+ 4. Выполнить в строке состояния (в самом низу окна WordPad) — Обратите внимание, что она теперь содержит текст «Печать активного документа».  
   
- "Печать" в шаге 3 — это "Имя всплывающей подсказки", а "Печать активного документа" из шага 4 — это "описание кнопки для строки состояния".  
+ «Имя всплывающей подсказки» — «Печать» в шаге 3, а «Печать активного документа» из шага 4 — «описание кнопки для строки состояния.»  
   
- Если нужно получить этот эффект с помощью редактора **панели инструментов**, следует установить свойство **Приглашение** равным **Печать активного документа\\nПечать**.  
+ Если этот эффект с помощью **инструментов** редакторе задайте **Prompt** свойства **Печать активного документа\nПечать**.  
   
 > [!NOTE]
->  Текст приглашения можно изменить с помощью [окна "Свойства"](../Topic/Properties%20Window.md).  
+>  Можно изменить с помощью текст приглашения [окно свойств](/visualstudio/ide/reference/properties-window).  
   
- Сведения о добавлении ресурсов в управляемые проекты см. в разделе [Ресурсы приложений](../Topic/Resources%20in%20Desktop%20Apps.md) *Руководства разработчика .NET Framework*. Сведения о том, как вручную добавлять файлы ресурсов в управляемые проекты, осуществлять доступ к ресурсам, отображать статические ресурсы и присваивать строки ресурсов свойствам см. в разделах [Пошаговое руководство. Локализация приложений Windows Forms](http://msdn.microsoft.com/ru-ru/9a96220d-a19b-4de0-9f48-01e5d82679e5) и [Walkthrough: Using Resources for Localization with ASP.NET](../Topic/Walkthrough:%20Using%20Resources%20for%20Localization%20with%20ASP.NET.md).  
+ Сведения о добавлении ресурсов в управляемые проекты см. в разделе [ресурсы в классических приложениях](/dotnet/framework/resources/index) в *руководства разработчика .NET Framework.* Сведения о вручную добавлять файлы ресурсов в управляемые проекты, осуществлять доступ к ресурсам, отображать статические ресурсы и присваивать строки ресурсов свойствам см. в разделе [Создание файлов ресурсов для приложений рабочего стола](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Сведения о глобализации и локализации ресурсов в управляемых приложениях см. в разделе [Globalizing и локализация приложений .NET Framework](/dotnet/standard/globalization-localization/index).  
   
  Требования  
   
  MFC или ATL  
   
-## См. также  
- [Creating, Moving, and Editing Toolbar Buttons](../mfc/creating-moving-and-editing-toolbar-buttons.md)   
- [Toolbar Editor](../mfc/toolbar-editor.md)
+## <a name="see-also"></a>См. также  
+ [Создание, перемещение и редактирование кнопок панели инструментов](../windows/creating-moving-and-editing-toolbar-buttons.md)   
+ [Редактор панелей инструментов](../windows/toolbar-editor.md)
+

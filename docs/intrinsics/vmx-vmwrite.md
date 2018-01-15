@@ -17,14 +17,15 @@ caps.latest.revision: "5"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 3c9ebd2602fe38a0ec1b51389b1a8a90625dd75e
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 00bc9fe617144db7de3425c5732b3f655b30c790
+ms.sourcegitcommit: 54035dce0992ba5dce0323d67f86301f994ff3db
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 01/03/2018
 ---
 # <a name="vmxvmwrite"></a>__vmx_vmwrite
-**Блок, относящийся только к системам Майкрософт**  
+**Блок, относящийся только к системам Microsoft**  
   
  Записывает заданное значение указанного поля в текущую структуру управления виртуальной машины (VMCS).  
   
@@ -39,7 +40,7 @@ unsigned char __vmx_vmwrite(
   
 #### <a name="parameters"></a>Параметры  
   
-|Параметр|Описание|  
+|Параметр|Описание:|  
 |---------------|-----------------|  
 |[in] `Field`|VMCS поле для записи.|  
 |[in] `FieldValue`|Значение для записи в поле VMCS.|  
@@ -55,7 +56,7 @@ unsigned char __vmx_vmwrite(
  Сбой операции без сведений о состоянии.  
   
 ## <a name="remarks"></a>Примечания  
- `__vmx_vmwrite` Функция эквивалентна `VMWRITE` инструкции компьютера. Значение `Field` параметра является индексом кодировке поля, как описано в документации Intel. Для поиска документа «Intel виртуализации технические спецификации для архитектуры IA-32 Intel,» Дополнительные сведения документа номера C97063-002, на [Корпорация Intel](http://go.microsoft.com/fwlink/?LinkId=127) сайта, а затем изучите приложения C, документ.  
+ `__vmx_vmwrite` Функция эквивалентна `VMWRITE` инструкции компьютера. Значение `Field` параметра является индексом кодировке поля, как описано в документации Intel. Для поиска документа «Intel виртуализации технические спецификации для архитектуры IA-32 Intel,» Дополнительные сведения документа номера C97063-002, на [Корпорация Intel](http://go.microsoft.com/fwlink/p/?linkid=127) сайта, а затем изучите приложения C, документ.  
   
 ## <a name="requirements"></a>Требования  
   

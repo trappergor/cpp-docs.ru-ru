@@ -1,46 +1,50 @@
 ---
-title: "Changing the Magnification Factor (Image Editor for Icons) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "images [C++], magnification in Image editor"
-  - "magnification, Image editor"
-  - "Image editor [C++], magnification"
+title: "Изменение масштаба увеличения (редактор изображений для значков) | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- images [C++], magnification in Image editor
+- magnification, Image editor
+- Image editor [C++], magnification
 ms.assetid: d1b0c9e0-fe54-4b2a-b75e-ffa0fa7c8cd9
-caps.latest.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 5
+caps.latest.revision: "9"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: 8a1192219bce3fa51177f14ae1345740d0ab53a1
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 12/21/2017
 ---
-# Changing the Magnification Factor (Image Editor for Icons)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-По умолчанию в левой области редактора изображений отображается представление в масштабе 1 к 1, а в правой области — представление с шестикратным увеличением.  Масштаб увеличения \(отображается в строке состояния в нижней части рабочей области\) представляет собой отношение фактических размеров изображения к отображаемым.  Значением по умолчанию является 6; допустимы значения в диапазоне от 1 до 10.  
+# <a name="changing-the-magnification-factor-image-editor-for-icons"></a>Изменение масштаба увеличения (редактор изображений для значков)
+По умолчанию в редакторе изображений отображает представление в левой области в фактический размер и представление в области справа в натуральную величину 6 раз. Масштаб (показано в строке состояния в нижней части рабочей области) — это отношение между фактический размер образа и отображаемого размера. По умолчанию является 6 и диапазон — от 1 до 10.  
   
-### Изменение масштаба увеличения  
+### <a name="to-change-the-magnification-factor"></a>Изменение масштаба увеличения  
   
-1.  В **редакторе изображений** выберите область, в которой необходимо изменить масштаб увеличения.  
+1.  Выберите **редактора изображений** область, масштаб которого требуется изменить.  
   
-2.  В панели инструментов [редактора изображений](../mfc/toolbar-image-editor-for-icons.md) щелкните стрелку вправо в инструменте [Увеличить](../mfc/toolbar-image-editor-for-icons.md) и выберите масштаб увеличения в подменю: **1X**, **2X**, **6X** или **8X**.  
+2.  На [панель инструментов редактора изображений](../windows/toolbar-image-editor-for-icons.md), щелкните стрелку справа от [инструмента увеличить](../windows/toolbar-image-editor-for-icons.md) и выберите масштаб увеличения в подменю: **1 X**, **2 X**, **6 X**, или **8 X**.  
   
     > [!NOTE]
-    >  Чтобы выбрать другой масштаб, который не представлен в списке вариантов инструмента **Увеличить**, воспользуйтесь сочетаниями клавиш.  
+    >  Для выбора масштаба увеличения, отличного от перечисленных в **Magnify** инструмент, использовать сочетания клавиш.  
   
- Сведения о добавлении ресурсов в управляемые проекты см. в разделе [Ресурсы приложений](../Topic/Resources%20in%20Desktop%20Apps.md) *Руководства разработчика .NET Framework*. Сведения о том, как вручную добавлять файлы ресурсов в управляемые проекты, осуществлять доступ к ресурсам, отображать статические ресурсы и присваивать строки ресурсов свойствам см. в разделах [Пошаговое руководство. Локализация приложений Windows Forms](http://msdn.microsoft.com/ru-ru/9a96220d-a19b-4de0-9f48-01e5d82679e5) и [Walkthrough: Using Resources for Localization with ASP.NET](../Topic/Walkthrough:%20Using%20Resources%20for%20Localization%20with%20ASP.NET.md).  
+ Сведения о добавлении ресурсов в управляемые проекты см. в разделе [ресурсы в классических приложениях](/dotnet/framework/resources/index) в *руководства разработчика .NET Framework.* Сведения о вручную добавлять файлы ресурсов в управляемые проекты, осуществлять доступ к ресурсам, отображать статические ресурсы и присваивать строки ресурсов свойствам см. в разделе [Создание файлов ресурсов для приложений рабочего стола](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Сведения о глобализации и локализации ресурсов в управляемых приложениях см. в разделе [Globalizing и локализация приложений .NET Framework](/dotnet/standard/globalization-localization/index).  
   
  Требования  
   
- None  
+ Нет  
   
-## См. также  
- [Accelerator Keys](../mfc/accelerator-keys-image-editor-for-icons.md)   
- [Window Panes](../mfc/window-panes-image-editor-for-icons.md)
+## <a name="see-also"></a>См. также  
+ [Сочетания клавиш](../windows/accelerator-keys-image-editor-for-icons.md)   
+ [Области окна](../windows/window-panes-image-editor-for-icons.md)
+

@@ -14,11 +14,14 @@ caps.latest.revision: "3"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: eb71f24cb62beb672979fab30ad335181dbfaba1
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: 3e8d66f134eef5f2ecb75b30fd68874418dbc49d
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="hstring-class"></a>Класс HString
 Вспомогательный класс для управления временем жизни HSTRING, используя шаблон RAII.
@@ -32,18 +35,18 @@ class HString;
 ## <a name="remarks"></a>Примечания  
  Среда выполнения Windows предоставляет доступ к строки через дескрипторов HSTRING. Класс HString предоставляет удобных функций и операторов, чтобы упростить использование дескрипторов HSTRING. Этот класс может обрабатывать HSTRING, он владеет через шаблон RAII времени существования. 
   
-## <a name="members"></a>Члены  
+## <a name="members"></a>Участники  
   
 ### <a name="public-constructors"></a>Открытые конструкторы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[Конструктор HString::HString](../windows/hstring-hstring-constructor.md)|Инициализирует новый экземпляр класса HString.|  
 |[Деструктор HString::~HString](../windows/hstring-tilde-hstring-destructor.md)|Удаляет текущий экземпляр класса HString.|  
   
-### <a name="members"></a>Члены  
+### <a name="members"></a>Участники  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[Метод HString::Set](../windows/hstring-set-method.md)|Задает значение текущий объект HString указанную строку расширенных символов или параметра HString.|  
 |[Метод HString::Attach](../windows/hstring-attach-method.md)|Связывает указанный объект HString с текущий объект HString.|  
@@ -56,7 +59,7 @@ class HString;
   
 ### <a name="public-operators"></a>Открытые операторы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[Оператор HString::Operator=](../windows/hstring-operator-assign-operator.md)|Перемещает текущий объект HString значение другого объекта HString.|  
 |[Оператор HString::Operator==](../windows/hstring-operator-equality-operator.md)|Указывает, равны ли два параметра.|  

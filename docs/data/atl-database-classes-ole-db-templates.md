@@ -17,11 +17,14 @@ caps.latest.revision: "14"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 711ddfb76ea9e8be2420ea9a9a31af4cfb5f6c93
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: ca7607c037cdb1f6a42a2267d64ef274d1041cb2
+ms.sourcegitcommit: 54035dce0992ba5dce0323d67f86301f994ff3db
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 01/03/2018
 ---
 # <a name="atl-database-classes-ole-db-templates"></a>Классы баз данных библиотеки ATL (шаблоны OLE DB)
 Корпорация Майкрософт предоставляет несколько реализаций OLE DB, набор COM-интерфейсов, обеспечивающих унифицированный доступ к данным в различных источниках и форматах.  OLE DB обычно не используется; Данная документация является для разработчиков, которые обслуживание кода прежних версий. Новые приложения должны использовать ODBC для подключения к источникам данных SQL.
@@ -38,7 +41,7 @@ ms.lasthandoff: 10/24/2017
   
  Обратите внимание, что библиотека MFC содержит класс, [COleDBRecordView](../mfc/reference/coledbrecordview-class.md), которое отображает записи базы данных в элементах управления. Представление — это представление формы, непосредственно подключенные к `CRowset` объекта и отображает поля `CRowset` в элементах управления шаблона диалогового окна.  
   
- Дополнительные сведения см. в разделе [OLE DB программирования](../data/oledb/ole-db-programming.md) и [Руководство программиста OLE DB](http://go.microsoft.com/fwlink/?linkid=121548).  
+ Дополнительные сведения см. в разделе [OLE DB программирования](../data/oledb/ole-db-programming.md) и [Руководство программиста OLE DB](http://go.microsoft.com/fwlink/p/?linkid=121548).  
   
 ## <a name="see-also"></a>См. также  
  [Создание потребителя OLE DB](../data/oledb/creating-an-ole-db-consumer.md)   

@@ -17,14 +17,15 @@ caps.latest.revision: "6"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 49f0f2bc2446c45c394daa9a4ec1e8c0a6278c83
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 5da09a52b2d3bab14ca56b32df15325c324dc5cc
+ms.sourcegitcommit: 54035dce0992ba5dce0323d67f86301f994ff3db
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 01/03/2018
 ---
 # <a name="svmvmsave"></a>__svm_vmsave
-**Блок, относящийся только к системам Майкрософт**  
+**Блок, относящийся только к системам Microsoft**  
   
  Содержит набор состояния процессора в блок управления указанной виртуальной машины (VMCB).  
   
@@ -38,12 +39,12 @@ void __svm_vmsave(
   
 #### <a name="parameters"></a>Параметры  
   
-|Параметр|Описание|  
+|Параметр|Описание:|  
 |---------------|-----------------|  
 |[in] `VmcbPhysicalAddress`|Физический адрес VMCB.|  
   
 ## <a name="remarks"></a>Примечания  
- `__svm_vmsave` Функция эквивалентна `VMSAVE` инструкции компьютера. Эта функция поддерживает взаимодействие монитора виртуальной машины узла с гостевой операционной системой и ее приложениями. Дополнительные сведения, выполните поиск документа, «AMD64 архитектура программист вручную тома 2: программирования системы» номер документа 24593, редакция 3.11 или более поздней версии в [AMD Corporation](http://go.microsoft.com/fwlink/?LinkId=23746) сайта.  
+ `__svm_vmsave` Функция эквивалентна `VMSAVE` инструкции компьютера. Эта функция поддерживает взаимодействие монитора виртуальной машины узла с гостевой операционной системой и ее приложениями. Дополнительные сведения, выполните поиск документа, «AMD64 архитектура программист вручную тома 2: программирования системы» номер документа 24593, редакция 3.11 или более поздней версии в [AMD Corporation](http://go.microsoft.com/fwlink/p/?linkid=23746) сайта.  
   
 ## <a name="requirements"></a>Требования  
   

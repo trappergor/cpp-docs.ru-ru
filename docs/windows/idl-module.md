@@ -1,32 +1,33 @@
 ---
-title: "idl_module | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-f1_keywords: 
-  - "vc-attr.idl_module"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "idl_module attribute"
+title: "idl_module | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+f1_keywords: vc-attr.idl_module
+dev_langs: C++
+helpviewer_keywords: idl_module attribute
 ms.assetid: 3578b337-e38a-4334-b747-15404c02dbc0
-caps.latest.revision: 11
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 11
+caps.latest.revision: "11"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: f052692686149b247a50c0d89e77797f4f48fab3
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 12/21/2017
 ---
-# idl_module
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Определяет точку входа в DLL\-файл.  
+# <a name="idlmodule"></a>idl_module
+Указывает точку входа в DLL-файл.  
   
-## Синтаксис  
+## <a name="syntax"></a>Синтаксис  
   
 ```  
   
@@ -43,45 +44,45 @@ caps.handback.revision: 11
 function declaration  
 ```  
   
-#### Параметры  
- **Имя**  
- Определяемое пользователем имя блока кода, который отображается в idl\-файл.  
+#### <a name="parameters"></a>Параметры  
+ **name**  
+ Определяемое пользователем имя для блока кода, который будет отображаться в IDL-файл.  
   
- **dllname** \(необязательно\)  
- DLL\-файл, содержащий экспорт.  
+ **имя DLL-библиотеки** (необязательно)  
+ DLL-файл, содержащий экспорта.  
   
- `uuid` \(необязательный параметр\)  
+ `uuid` (необязательно)  
  Уникальный идентификатор.  
   
- **Сттрока справки** \(необязательно\)  
- Символьная строка, используемая для описания библиотеку типов.  
+ **HelpString** (необязательно)  
+ Строка символов, используемый для описания библиотеки типов.  
   
- **helpstringcontext** \(необязательно\)  
- Идентификатор раздела в файле справки .hlp или .chm.  
+ **helpstringcontext** (необязательно)  
+ Идентификатор раздела справки в .hlp или CHM-файле.  
   
- **Контекст справки** \(необязательно\)  
- Идентификатор Справки для данной библиотеки типов.  
+ **helpcontext** (необязательно)  
+ Идентификатор справки для этой библиотеки типов.  
   
- **скрытый** \(необязательно\)  
- Параметр, который предотвращает из библиотеки.  Эти [скрытый](http://msdn.microsoft.com/library/windows/desktop/aa366861) Атрибут MIDL дополнительные сведения.  
+ **hidden** (необязательно)  
+ Параметр, который препятствует отображению библиотеки. Дополнительные сведения см. в описании атрибута MIDL [hidden](http://msdn.microsoft.com/library/windows/desktop/aa366861) .  
   
- ***restricted***  \(необязательно\)  
- Члены библиотек не могут произвольно вызова.  Эти restricted Атрибут MIDL дополнительные сведения.  
+ ***ограниченные*** (необязательно)  
+ Члены библиотеки не может вызываться произвольным образом. Дополнительные сведения см. в описании атрибута MIDL [restricted](http://msdn.microsoft.com/library/windows/desktop/aa367157) .  
   
  *объявление функции*  
- Функция, которую вы определите.  
+ Функция, которая будет определена.  
   
-## Заметки  
- `idl_module` Атрибут C\+\+ позволяет указать точку входа в DLL\-файл, которая позволяет ввозу из dll\-файла.  
+## <a name="remarks"></a>Примечания  
+ `idl_module` Языка c++ позволяет указать точку входа в DLL-файл, который можно импортировать из DLL-файла.  
   
- **idl\_module** атрибут имеет возможности, аналогичные  [Модуль](http://msdn.microsoft.com/library/windows/desktop/aa367099) атрибут MIDL.  
+ **Idl_module** атрибут имеет функциональность, аналогичную [модуль](http://msdn.microsoft.com/library/windows/desktop/aa367099) языка MIDL.  
   
- Можно экспортировать что\-либо из com\-объекта, можно экспортировать из dll\-файла, поместив точку входа DLL в блоке библиотеки файла idl.  
+ Никаких действий можно экспортировать из COM-объект, который можно экспортировать из DLL-файла, поместив точки входа библиотеки DLL в блок library IDL-файл.  
   
- Использование сусла `idl_module` в шаге 2.  Во\-первых, необходимо указать пару месяца или DLL.  Затем при использовании `idl_module` чтобы задать точку входа, укажите имя и любые дополнительные атрибуты.  
+ Ваш необходимо использовать `idl_module` в два этапа. Во-первых необходимо определить пары имя/DLL. Затем, при использовании `idl_module` для указания точки входа, укажите имя и дополнительные атрибуты.  
   
-## Пример  
- В следующем примере кода демонстрируется применение `idl_module` атрибут:  
+## <a name="example"></a>Пример  
+ Следующий код показывает, как использовать `idl_module` атрибута:  
   
 ```  
 // cpp_attr_ref_idl_module.cpp  
@@ -92,21 +93,20 @@ function declaration
 void FuncName(int i);  
 ```  
   
-## Требования  
+## <a name="requirements"></a>Требования  
   
-### Контекст атрибута  
+### <a name="attribute-context"></a>Контекст атрибута  
   
 |||  
 |-|-|  
-|**Применение**|Любой|  
-|**Repeatable**|Нет|  
-|**Обязательные атрибуты**|None|  
-|**Недопустимые атрибуты**|None|  
+|**Применение**|В любом месте|  
+|**Повторяемый**|Нет|  
+|**Обязательные атрибуты**|Нет|  
+|**Недопустимые атрибуты**|Нет|  
   
- Дополнительные сведения см. в разделе [Контексты атрибута](../windows/attribute-contexts.md).  
+ Дополнительные сведения см. в разделе [Контексты атрибутов](../windows/attribute-contexts.md).  
   
-## См. также  
- [IDL Attributes](../windows/idl-attributes.md)   
- [Stand\-Alone Attributes](../Topic/Stand-Alone%20Attributes.md)   
+## <a name="see-also"></a>См. также  
+ [Атрибуты IDL](../windows/idl-attributes.md)   
+ [Изолированные атрибуты](../windows/stand-alone-attributes.md)   
  [entry](../windows/entry.md)   
- [Attributes Samples](http://msdn.microsoft.com/ru-ru/558ebdb2-082f-44dc-b442-d8d33bf7bdb8)

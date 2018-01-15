@@ -1,51 +1,54 @@
 ---
-title: "Dialog Editor States (Guides and Grids) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Dialog editor, guides and margins"
+title: "Состояния редактора диалоговых окон (направляющие и сетки) | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords: Dialog editor, guides and margins
 ms.assetid: dbacf9ef-e8b0-4125-a7ce-84911c482e98
-caps.latest.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 5
+caps.latest.revision: "9"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: 608137d29d71740f8c145e560a7f1516af75a43a
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 12/21/2017
 ---
-# Dialog Editor States (Guides and Grids)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Задачи упорядочения элементов управления в диалоговом окне могут быть выполняться при следующих состояниях редактора диалоговых окон:  
+# <a name="dialog-editor-states-guides-and-grids"></a>Состояния редактора диалоговых окон (направляющие и сетки)
+Элементы управления в диалоговых окнах можно упорядочить с помощью редактора диалоговых окон в одном из трех состояний:  
   
--   С включенными полями и направляющими \(настройка по умолчанию\)  
+-   С помощью поля и направляющие (Настройка по умолчанию)  
   
--   С включенной сеткой макета  
+-   С макета сетки на  
   
--   С выключенными функциями автоматического выравнивания  
+-   Без возможностей привязка или выравнивание  
   
- В [панели инструментов редактора диалоговых окон](../mfc/showing-or-hiding-the-dialog-editor-toolbar.md) имеются кнопки, которые позволяют переключаться из одного состояния в другое.  Достаточно щелкнуть значок, чтобы перейти в то или иное состояние.  Перейти в нужное состояние также можно с помощью команды **Параметры направляющих** в меню **Формат**.  
+ [Инструментов редактора диалоговых окон](../windows/showing-or-hiding-the-dialog-editor-toolbar.md) содержит кнопки, состояние элемента управления. Чтобы изменить состояние, щелкните соответствующий значок. Можно также изменить состояния с помощью **параметры направляющих** на **формат** меню.  
   
--   [Создание и настройка полей и направляющих](../mfc/creating-and-setting-guides-and-margins.md)  
+-   [Создание и настройка полей и направляющих](creating-and-setting-guides-and-margins.md)  
   
--   [Выравнивание элементов управления по направляющей](../Topic/Aligning%20Controls%20on%20a%20Guide.md)  
+-   [Выравнивание элементов управления по направляющей](../windows/aligning-controls-on-a-guide.md)  
   
--   [Отключение направляющих](../Topic/Disabling%20Guides.md)  
+-   [Отключение направляющих](../windows/disabling-guides.md)  
   
--   [Изменение сетки макета](../mfc/modifying-the-layout-grid.md)  
+-   [Изменение сетки макета](../windows/modifying-the-layout-grid.md)  
   
- Сведения о добавлении ресурсов в управляемые проекты см. в разделе [Ресурсы приложений](../Topic/Resources%20in%20Desktop%20Apps.md) *Руководства разработчика .NET Framework*. Сведения о том, как вручную добавлять файлы ресурсов в управляемые проекты, осуществлять доступ к ресурсам, отображать статические ресурсы и присваивать строки ресурсов свойствам см. в разделах [Пошаговое руководство. Локализация приложений Windows Forms](http://msdn.microsoft.com/ru-ru/9a96220d-a19b-4de0-9f48-01e5d82679e5) и [Walkthrough: Using Resources for Localization with ASP.NET](../Topic/Walkthrough:%20Using%20Resources%20for%20Localization%20with%20ASP.NET.md).  
+ Сведения о добавлении ресурсов в управляемые проекты см. в разделе [ресурсы в классических приложениях](/dotnet/framework/resources/index) в *руководства разработчика .NET Framework.* Сведения о вручную добавлять файлы ресурсов в управляемые проекты, осуществлять доступ к ресурсам, отображать статические ресурсы и присваивать строки ресурсов свойствам см. в разделе [Создание файлов ресурсов для приложений рабочего стола](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Сведения о глобализации и локализации ресурсов в управляемых приложениях см. в разделе [Globalizing и локализация приложений .NET Framework](/dotnet/standard/globalization-localization/index).  
   
-## Требования  
+## <a name="requirements"></a>Требования  
  Win32  
   
-## См. также  
- [Arrangement of Controls on Dialog Boxes](../mfc/arrangement-of-controls-on-dialog-boxes.md)   
- [Controls in Dialog Boxes](../mfc/controls-in-dialog-boxes.md)   
- [Элементы управления](../mfc/controls-mfc.md)
+## <a name="see-also"></a>См. также  
+ [Размещение элементов управления в диалоговые окна](../windows/arrangement-of-controls-on-dialog-boxes.md)   
+ [Элементы управления в диалоговых окнах](../windows/controls-in-dialog-boxes.md)   
+ [Элементы управления (MFC)](../mfc/controls-mfc.md)
+

@@ -1,27 +1,27 @@
 ---
-title: "A.12   Using the atomic Directive | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
+title: "Атомарная директива Using а.12 | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
 ms.assetid: d3ba3c87-413d-4efa-8a45-8a7f28ab0164
-caps.latest.revision: 8
-caps.handback.revision: 8
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "8"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 9aa619d9bbe635a41d15a39d6c05780a4416520e
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 12/21/2017
 ---
-# A.12   Using the atomic Directive
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-В следующем примере избежать состояния гонки \(синхронные обновления элемента x несколькими потоками\) с помощью `atomic` директива \([Раздел 2.6.4](../../parallel/openmp/2-6-4-atomic-construct.md) на странице : 19\)  
+# <a name="a12---using-the-atomic-directive"></a>A.12   Использование директивы atomic
+Следующий пример позволяет избежать состояния гонки (одновременное обновление элемент *x* из нескольких потоков) с помощью `atomic` директивы ([раздел 2.6.4](../../parallel/openmp/2-6-4-atomic-construct.md) на странице 19):  
   
 ```  
 #pragma omp parallel for shared(x, y, index, n)  
@@ -33,6 +33,6 @@ manager: "ghogen"
     }  
 ```  
   
- Преимущество использования `atomic` директива в этом примере, что он допускает обновления 2 различных элементов x, чтобы выполняться параллельно.  Если набор узлов a `critical` директива \([Раздел 2.6.2](../../parallel/openmp/2-6-2-critical-construct.md) на странице 18\) использовать вместо, тогда все обновления к элементам x выполнять последовательно \(но не гарантированном в любом порядке\).  
+ Преимущество использования `atomic` директивы в этом примере является то, что обновления двух разных элементов x, чтобы выполняться параллельно. Если `critical` директивы ([раздел 2.6.2](../../parallel/openmp/2-6-2-critical-construct.md) на странице 18) были использованы, а затем обновляет все элементы *x* будут выполняться последовательно (хотя в любом не гарантирует порядок).  
   
- Обратите внимание, что `atomic` директива применяется только к выписке c или C\+\+ непосредственно после него.  В результате элементы *y* обновление атомарным образом в этом примере.
+ Обратите внимание, что `atomic` директива применяется только к сразу после инструкции C или C++.  В результате элементы *y* не обновляются автоматически в этом примере.

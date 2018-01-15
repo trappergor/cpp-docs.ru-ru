@@ -19,11 +19,12 @@ caps.latest.revision: "11"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 749d4badb3a7b5a2c61fa753a840765f14e2a329
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 16c0311c3eedc13cbc47214b44fc8810dee3eecd
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="active-document-containment"></a>Вложение активного документа
 Вложение активного документа — это технология, которая предоставляет один кадр, в котором для работы с документами, чтобы вам создать и использовать несколько кадров приложения для каждого типа документа. Он отличается от основные технологии OLE, в том, что технологии OLE с внедренными объектами внутри составного документа, в котором может быть активна только одним элементом содержания. С вложение активного документа активировать всего документа (то есть всего приложения, включая связанные меню, панелей инструментов и т. д) в контексте одного кадра.  

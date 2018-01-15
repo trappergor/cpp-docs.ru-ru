@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-windows
+ms.technology: cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -44,38 +43,22 @@ f1_keywords:
 - AMPRT/Concurrency::accelerator::supports_double_precision
 - AMPRT/Concurrency::accelerator::supports_limited_double_precision
 - AMPRT/Concurrency::accelerator::version
-dev_langs:
-- C++
-helpviewer_keywords:
-- accelerator class
+dev_langs: C++
+helpviewer_keywords: accelerator class
 ms.assetid: 37eed593-cf87-4611-9cdc-e98df6c2377a
-caps.latest.revision: 29
+caps.latest.revision: "29"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 5faef5bd1be6cc02d6614a6f6193c74167a8ff23
-ms.openlocfilehash: d1e68b3533452ec1e47053086c59654337c995fa
-ms.contentlocale: ru-ru
-ms.lasthandoff: 03/17/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: ff64eeedb324d3a849029b15744cd630603aef67
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="accelerator-class"></a>Класс accelerator
-Ускоритель является возможностью оборудования, оптимизированный для данных параллельных вычислений. Ускоритель может быть устройство, подключенное к шине PCIe (например, GPU), или может быть расширенный набор основных ЦП инструкций.  
+Ускоритель — возможность оборудования, оптимальна для работы с параллельными данными. Ускоритель возможно, устройство, подключенное к шине PCIe (GPU) или может быть инструкция расширенной задать для основного ЦП.  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -83,25 +66,25 @@ ms.lasthandoff: 03/17/2017
 class accelerator;  
 ```  
   
-## <a name="members"></a>Члены  
+## <a name="members"></a>Участники  
   
 ### <a name="public-constructors"></a>Открытые конструкторы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[Конструктор сочетаний клавиш](#ctor)|Инициализирует новый экземпляр класса `accelerator`.|  
-|[~ accelerator деструктор](#ctor)|Уничтожает `accelerator` объекта.|  
+|[~ accelerator, деструктор](#ctor)|Уничтожает `accelerator` объекта.|  
   
 ### <a name="public-methods"></a>Открытые методы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
-|[create_view](#create_view)|Создает и возвращает `accelerator_view` объекта на это решение.|  
-|[get_all](#get_all)|Возвращает вектор `accelerator` объекты, представляющие все доступные ускорители.|  
+|[create_view](#create_view)|Создает и возвращает `accelerator_view` объект на этом сочетаний клавиш.|  
+|[get_all](#get_all)|Возвращает вектор `accelerator` объектов, представляющих доступные сочетания клавиш.|  
 |[get_auto_selection_view](#get_auto_selection_view)|Возвращает автоматический выбор `accelerator_view`.|  
 |[get_dedicated_memory](#get_dedicated_memory)|Возвращает выделенную память для `accelerator`, в килобайтах.|  
-|[get_default_cpu_access_type](#get_default_cpu_access_type)|Возвращает значение по умолчанию [access_type](concurrency-namespace-enums-amp.md#access_type) для буферы, созданные на это решение.|  
-|[get_default_view](#get_default_view)|Возвращает значение по умолчанию `accelerator_view` , связанный с `accelerator`.|  
+|[get_default_cpu_access_type](#get_default_cpu_access_type)|Возвращает значение по умолчанию [access_type](concurrency-namespace-enums-amp.md#access_type) буферы, созданные на этом сочетаний клавиш.|  
+|[get_default_view](#get_default_view)|Возвращает значение по умолчанию `accelerator_view` объекта, с которым связан `accelerator`.|  
 |[get_description](#get_description)|Возвращает краткое описание `accelerator` устройства.|  
 |[get_device_path](#get_device_path)|Возвращает путь к устройству.|  
 |[get_has_display](#get_has_display)|Определяет, является ли `accelerator` подключен на экран.|  
@@ -112,34 +95,34 @@ class accelerator;
 |[get_supports_limited_double_precision](#get_supports_limited_double_precision)|Определяет, является ли `accelerator` имеет ограниченную поддержку математические двойной точности.|  
 |[get_version](#get_version)|Возвращает версию `accelerator`.|  
 |[set_default](#set_default)|Возвращает путь по умолчанию сочетания клавиш.|  
-|[set_default_cpu_access_type](#set_default_cpu_access_type)|Задает ЦП по умолчанию [access_type](concurrency-namespace-enums-amp.md#access_type)для массивов и выделения памяти неявное об этом `accelerator`.|  
+|[set_default_cpu_access_type](#set_default_cpu_access_type)|Задает ЦП по умолчанию [access_type](concurrency-namespace-enums-amp.md#access_type)для массивов и выделения памяти неявное, сделанные в этом `accelerator`.|  
   
 ### <a name="public-operators"></a>Открытые операторы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
-|[operator!=](#operator_neq)|Сравнивает этот `accelerator` и возвращает объект с другим `false` , если они совпадают; в противном случае — возвращает `true`.|  
-|[operator=](#operator_eq)|Копирует содержимое указанного `accelerator` этого объекта.|  
-|[operator==](#operator_eq_eq)|Сравнивает этот `accelerator` и возвращает объект с другим `true` , если они совпадают; в противном случае — возвращает `false`.|  
+|[оператор!=](#operator_neq)|Сравнивает этот `accelerator` с другим и возвращает `false` если они совпадают; в противном случае возвращает `true`.|  
+|[оператор=](#operator_eq)|Копирует содержимое указанного `accelerator` этого объекта.|  
+|[оператор==](#operator_eq_eq)|Сравнивает этот `accelerator` с другим и возвращает `true` если они совпадают; в противном случае возвращает `false`.|  
   
 ### <a name="public-data-members"></a>Открытые члены данных  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
-|[cpu_accelerator](#cpu_accelerator)|Возвращает строку, постоянное ЦП `accelerator`.|  
+|[cpu_accelerator](#cpu_accelerator)|Получает строку константу для ЦП `accelerator`.|  
 |[dedicated_memory](#dedicated_memory)|Возвращает объем памяти, выделенной для `accelerator`, в килобайтах.|  
-|[default_accelerator](#default_accelerator)|Возвращает строку, константой по умолчанию `accelerator`.|  
-|[default_cpu_access_type](#default_cpu_access_type)|Возвращает или задает ЦП по умолчанию [access_type](concurrency-namespace-enums-amp.md#access_type)для массивов и выделения памяти неявное об этом `accelerator`.|  
-|[default_view](#default_view)|Возвращает значение по умолчанию `accelerator_view` , связанный с `accelerator`.|  
-|[Описание](#description)|Возвращает краткое описание `accelerator` устройства.|  
+|[default_accelerator](#default_accelerator)|Возвращает строку константой по умолчанию `accelerator`.|  
+|[default_cpu_access_type](#default_cpu_access_type)|Возвращает или задает ЦП по умолчанию [access_type](concurrency-namespace-enums-amp.md#access_type)для массивов и выделения памяти неявное, сделанные в этом `accelerator`.|  
+|[default_view](#default_view)|Возвращает значение по умолчанию `accelerator_view` объекта, с которым связан `accelerator`.|  
+|[description](#description)|Возвращает краткое описание `accelerator` устройства.|  
 |[device_path](#device_path)|Возвращает путь к устройству.|  
 |[direct3d_ref](#direct3d_ref)|Получает строку константу для ссылки на Direct3D `accelerator`.|  
-|[direct3d_warp](#direct3d_warp)|Получает константу для строки `accelerator` объекта можно использовать для выполнения кода C++ AMP на многоядерных процессорах, использующих Streaming SIMD Extensions (SSE).|  
+|[direct3d_warp](#direct3d_warp)|Возвращает строку для константы `accelerator` , который можно использовать для выполнения кода C++ AMP на многоядерных процессорах, использующих Streaming SIMD расширения (SSE).|  
 |[has_display](#has_display)|Возвращает логическое значение, указывающее, является ли `accelerator` подключен на экран.|  
 |[is_debug](#is_debug)|Указывает, является ли `accelerator` имеет уровень отладки расширенные отчеты об ошибках.|  
 |[is_emulated](#is_emulated)|Указывает, является ли `accelerator` эмулируется.|  
-|[supports_cpu_shared_memory](#supports_cpu_shared_memory)|Указывает, является ли `accelerator` поддерживает общей памяти.|  
-|[supports_double_precision](#supports_double_precision)|Указывает, поддерживает ли ускоритель математические двойной точности.|  
+|[supports_cpu_shared_memory](#supports_cpu_shared_memory)|Указывает, является ли `accelerator` поддерживает общую память.|  
+|[supports_double_precision](#supports_double_precision)|Указывает, поддерживает ли сочетания клавиш математические двойной точности.|  
 |[supports_limited_double_precision](#supports_limited_double_precision)|Указывает ли сочетания клавиш имеет ограниченную поддержку математические двойной точности.|  
 |[version](#version)|Возвращает версию `accelerator`.|  
   
@@ -147,9 +130,9 @@ class accelerator;
  `accelerator`  
   
 ## <a name="remarks"></a>Примечания  
- Ускоритель является возможностью оборудования, оптимизированный для данных параллельных вычислений. Чаще всего ускоритель дискретных GPU, но также может быть виртуальная сущность стороне главного приложения, например устройство DirectX REF, ДЕФОРМАЦИИ (стороне ЦП устройство, которое ускоряет загрузку при помощи инструкции SSE) или самим ЦП.  
+ Ускоритель — возможность оборудования, оптимальна для работы с параллельными данными. Чаще всего ускоритель дискретных графического Процессора, но это также может быть это виртуальная сущность главного узла, например устройств DirectX REF, WARP (стороне ЦП устройство, которое accelerated посредством инструкции SSE) или самим ЦП.  
   
- Можно создать `accelerator` объекта путем перечисления доступных устройств или путем получения устройство по умолчанию, ДЕФОРМАЦИИ устройства или устройства ссылки.  
+ Можно создать `accelerator` объекта путем перечисления доступных устройств или при получении устройства по умолчанию, ссылка устройства или устройства WARP.  
   
 ## <a name="requirements"></a>Требования  
  **Заголовок:** amprt.h  
@@ -189,7 +172,7 @@ accelerator(const accelerator& _Other);
   
 ##  <a name="cpu_accelerator"></a>cpu_accelerator 
 
- Возвращает строку, постоянное ускорителя ЦП.  
+ Возвращает строку, константы для ЦП сочетания клавиш.  
   
 ```  
 static const wchar_t cpu_accelerator[];  
@@ -197,7 +180,7 @@ static const wchar_t cpu_accelerator[];
   
 ##  <a name="create_view"></a>create_view 
 
- Создает и возвращает `accelerator_view` объекта на это решение, используя указанный режим постановки в очередь. Если не указан режим постановки в очередь, новый `accelerator_view` использует [queuing_mode::immediate](concurrency-namespace-enums-amp.md#queuing_mode) режим постановки в очередь.  
+ Создает и возвращает `accelerator_view` объекта на сочетаний клавиш, используя указанный режим постановки в очередь. Если не указан режим постановки в очередь, новый `accelerator_view` использует [queuing_mode::immediate](concurrency-namespace-enums-amp.md#queuing_mode) режим постановки в очередь.  
   
 ```  
 accelerator_view create_view(queuing_mode qmode = queuing_mode_automatic);
@@ -208,7 +191,7 @@ accelerator_view create_view(queuing_mode qmode = queuing_mode_automatic);
  Режим постановки в очередь.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
- Новый `accelerator_view` объекта на это решение, используя указанный режим постановки в очередь.  
+ Новый `accelerator_view` объекта на сочетаний клавиш, используя указанный режим постановки в очередь.  
   
 ##  <a name="dedicated_memory"></a>dedicated_memory 
 
@@ -220,7 +203,7 @@ __declspec(property(get= get_dedicated_memory)) size_t dedicated_memory;
   
 ##  <a name="default_accelerator"></a>default_accelerator 
 
- Возвращает строку, константой по умолчанию `accelerator`.  
+ Возвращает строку константой по умолчанию `accelerator`.  
   
 ```  
 static const wchar_t default_accelerator[];  
@@ -228,7 +211,7 @@ static const wchar_t default_accelerator[];
   
 ##  <a name="default_cpu_access_type"></a>default_cpu_access_type 
 
- Значение по умолчанию ЦП [access_type](concurrency-namespace-enums-amp.md#access_type)для массивов и выделения памяти неявное на этом `accelerator`.  
+ Значение по умолчанию ЦП [access_type](concurrency-namespace-enums-amp.md#access_type)для массивов и выделения памяти неявное, сделанные на это `accelerator`.  
   
 ```  
 __declspec(property(get= get_default_cpu_access_type)) access_type default_cpu_access_type;  
@@ -252,7 +235,7 @@ __declspec(property(get= get_description)) std::wstring description;
   
 ##  <a name="device_path"></a>device_path 
 
- Возвращает путь сочетания клавиш. Путь является уникальным в системе.  
+ Получает путь сочетания клавиш. Путь является уникальным в системе.  
   
 ```  
 __declspec(property(get= get_device_path)) std::wstring device_path;  
@@ -260,7 +243,7 @@ __declspec(property(get= get_device_path)) std::wstring device_path;
   
 ##  <a name="direct3d_ref"></a>direct3d_ref 
 
- Возвращает строку, константы для ускоритель ссылку Direct3D.  
+ Возвращает строку, константы для сочетаний клавиш ссылки Direct3D.  
   
 ```  
 static const wchar_t direct3d_ref[];  
@@ -268,7 +251,7 @@ static const wchar_t direct3d_ref[];
   
 ##  <a name="direct3d_warp"></a>direct3d_warp 
 
- Получает константу для строки `accelerator` объекта можно использовать для выполнения кода C++ AMP на многоядерных процессоров с помощью Streaming SIMD Extensions (SSE).  
+ Возвращает строку для константы `accelerator` , можно использовать для выполнения кода C++ AMP на многоядерных процессорах с помощью потоковой передачи расширений SIMD (SSE).  
   
 ```  
 static const wchar_t direct3d_warp[];  
@@ -276,25 +259,25 @@ static const wchar_t direct3d_warp[];
   
 ##  <a name="get_all"></a>get_all 
 
- Возвращает вектор `accelerator` объекты, представляющие все доступные ускорители.  
+ Возвращает вектор `accelerator` объектов, представляющих доступные сочетания клавиш.  
   
 ```  
 static inline std::vector<accelerator> get_all();
 ```  
   
 ### <a name="return-value"></a>Возвращаемое значение  
- Вектор доступных ускорителей  
+ Вектор доступные сочетания клавиш  
   
 ##  <a name="get_auto_selection_view"></a>get_auto_selection_view 
 
- Возвращает accelerator_view выбора auto, который в случае указан как целевой parallel_for_each результаты в accelerator_view целевой ядра parallel_for_each автоматически выделяется средой выполнения. Для других целей accelerator_view, возвращаемый этим методом является accelerator_view по умолчанию ускорителя по умолчанию  
+ Возвращает accelerator_view выбора автоматически, что после указан как целевой parallel_for_each результаты в accelerator_view целевой для выполнения ядра parallel_for_each автоматически выделяется средой выполнения. Для других целей accelerator_view, возвращаемый этим методом является accelerator_view по умолчанию сочетания клавиш по умолчанию  
   
 ```  
 static accelerator_view __cdecl get_auto_selection_view();
 ```  
   
 ### <a name="return-value"></a>Возвращаемое значение  
- Accelerator_view Выбор автоматически.  
+ Accelerator_view выбора автоматически.  
   
 ##  <a name="get_dedicated_memory"></a>get_dedicated_memory 
 
@@ -311,7 +294,7 @@ size_t get_dedicated_memory() const;
   
 ##  <a name="get_default_cpu_access_type"></a>get_default_cpu_access_type 
 
- Возвращает access_type ЦП по умолчанию буферы, созданные на этом сочетаний клавиш  
+ Возвращает access_type ЦП по умолчанию для буферов, созданные на этом сочетаний клавиш  
   
 ```  
 access_type get_default_cpu_access_type() const;
@@ -320,11 +303,11 @@ access_type get_default_cpu_access_type() const;
 ```  
   
 ### <a name="return-value"></a>Возвращаемое значение  
- Access_type ЦП по умолчанию для буферы, созданные на это решение.  
+ Access_type ЦП по умолчанию для буферов, созданные на этом сочетаний клавиш.  
   
 ##  <a name="get_default_view"></a>get_default_view 
 
- Возвращает значение по умолчанию `accelerator_view` , связанный с `accelerator`.  
+ Возвращает значение по умолчанию `accelerator_view` объекта, с которым связан `accelerator`.  
   
 ```  
 accelerator_view get_default_view() const;
@@ -333,7 +316,7 @@ accelerator_view get_default_view() const;
 ```  
   
 ### <a name="return-value"></a>Возвращаемое значение  
- Значение по умолчанию `accelerator_view` , связанный с `accelerator`.  
+ Значение по умолчанию `accelerator_view` объекта, с которым связан `accelerator`.  
   
 ##  <a name="get_description"></a>get_description 
 
@@ -372,7 +355,7 @@ bool get_has_display() const;
 ```  
   
 ### <a name="return-value"></a>Возвращаемое значение  
- `true`Если `accelerator` можно вывести на экран; в противном случае — `false`.  
+ `true`Если `accelerator` можно вывести на экран; в противном случае `false`.  
   
 ##  <a name="get_is_debug"></a>get_is_debug 
 
@@ -411,11 +394,11 @@ bool get_supports_cpu_shared_memory() const;
 ```  
   
 ### <a name="return-value"></a>Возвращаемое значение  
- `true`Если ускоритель поддерживает ЦП общей памяти; в противном случае — `false`.  
+ `true`Если ускоритель поддерживает ЦП общей памяти; в противном случае `false`.  
   
 ##  <a name="get_supports_double_precision"></a>get_supports_double_precision 
 
- Возвращает логическое значение, указывающее ли ускоритель поддерживает двойной точности math, включая совмещенного умножения добавьте (FMA), деления и обратное, приведение между `int` и `double`.  
+ Возвращает логическое значение, указывающее, сочетания клавиш, поддержку двойной точности математические, включая совмещенного умножения добавить (FMA), деление, обратное и приведение между `int` и `double`.  
   
 ```  
 bool get_supports_double_precision() const;
@@ -424,11 +407,11 @@ bool get_supports_double_precision() const;
 ```  
   
 ### <a name="return-value"></a>Возвращаемое значение  
- `true`Если ускоритель поддерживает двойной точности math; в противном случае — `false`.  
+ `true`Если ускоритель поддерживает двойной точности math; в противном случае `false`.  
   
 ##  <a name="get_supports_limited_double_precision"></a>get_supports_limited_double_precision 
 
- Возвращает логическое значение, указывающее ли сочетания клавиш имеет ограниченную поддержку для двойной точности math. Если ускоритель имеет только ограниченную поддержку, затем умножьте совмещенного добавьте (FMA), деления и обратное, приведение между `int` и `double` не поддерживаются.  
+ Возвращает логическое значение, указывающее ли сочетания клавиш имеет ограниченную поддержку двойной точности math. Если ускоритель имеет только ограниченную поддержку, затем совмещенного умножить добавить (FMA), деление, обратное и приведение между `int` и `double` не поддерживаются.  
   
 ```  
 bool get_supports_limited_double_precision() const;
@@ -437,7 +420,7 @@ bool get_supports_limited_double_precision() const;
 ```  
   
 ### <a name="return-value"></a>Возвращаемое значение  
- `true`Если ускоритель имеет ограниченную поддержку для двойной точности math; в противном случае — `false`.  
+ `true`Если ускоритель имеет ограниченную поддержку двойной точности math; в противном случае `false`.  
   
 ##  <a name="get_version"></a>get_version 
 
@@ -478,7 +461,7 @@ __declspec(property(get= get_is_emulated)) bool is_emulated;
   
 ##  <a name="operator_neq"></a>оператор! = 
 
- Сравнивает этот `accelerator` и возвращает объект с другим `false` , если они совпадают; в противном случае — возвращает `true`.  
+ Сравнивает этот `accelerator` с другим и возвращает `false` если они совпадают; в противном случае возвращает `true`.  
   
 ```  
 bool operator!= (const accelerator& _Other) const;
@@ -488,10 +471,10 @@ bool operator!= (const accelerator& _Other) const;
   
 ### <a name="parameters"></a>Параметры  
  `_Other`  
- `accelerator` Объект, сравниваемый с данным элементом.  
+ `accelerator` Объект, сравниваемый с этим параметром.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
- `false`Если два `accelerator` объекты совпадают; в противном случае — `true`.  
+ `false`Если два `accelerator` объекты совпадают; в противном случае `true`.  
   
 ##  <a name="operator_eq"></a>оператор = 
 
@@ -503,14 +486,14 @@ accelerator& operator= (const accelerator& _Other);
   
 ### <a name="parameters"></a>Параметры  
  `_Other`  
- `accelerator` Для копирования.  
+ `accelerator` Объект для копирования из.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
  Ссылку на это `accelerator` объекта.  
   
 ##  <a name="operator_eq_eq"></a>оператор == 
 
- Сравнивает этот `accelerator` и возвращает объект с другим `true` , если они совпадают; в противном случае — возвращает `false`.  
+ Сравнивает этот `accelerator` с другим и возвращает `true` если они совпадают; в противном случае возвращает `false`.  
   
 ```  
 bool operator== (const accelerator& _Other) const;
@@ -520,14 +503,14 @@ bool operator== (const accelerator& _Other) const;
   
 ### <a name="parameters"></a>Параметры  
  `_Other`  
- `accelerator` Объект, сравниваемый с данным элементом.  
+ `accelerator` Объект, сравниваемый с этим параметром.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
- `true`Если другой `accelerator` объект является такой же, как это `accelerator` объекта; в противном случае — `false`.  
+ `true`Если другой `accelerator` объект является такой же, как это `accelerator` объекта; в противном случае `false`.  
   
 ##  <a name="set_default"></a>set_default 
 
- Задает используемый для любой операции, неявно использует по умолчанию ускорителя по умолчанию ускорителя. Этот метод завершается успешно, только если accelerator установлен по умолчанию среда выполнения не уже используется в операции, неявно использует по умолчанию ускорителя  
+ Задает сочетания клавиш по умолчанию для любой операции, неявно использует сочетания клавиш по умолчанию. Этот метод завершается успешно, только если установлен по умолчанию сочетания клавиш среды выполнения не уже используется в операции, неявно использует сочетания клавиш по умолчанию  
   
 ```  
 static inline bool set_default(std::wstring _Path);
@@ -538,11 +521,11 @@ static inline bool set_default(std::wstring _Path);
  Путь к сочетания клавиш.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
- `true`Если вызов осуществляется на уровне сочетания клавиш по умолчанию. В противном случае — значение `false`.  
+ `true`Если вызов завершается успешно, на уровне сочетания клавиш по умолчанию. В противном случае — значение `false`.  
   
 ##  <a name="set_default_cpu_access_type"></a>set_default_cpu_access_type 
 
- Задайте access_type ЦП по умолчанию для массивов, созданных на это решение, или для выделения памяти неявное как часть array_views недоступен на этом это решение. Этот метод завершается успешно, только если default_cpu_access_type для сочетания клавиш еще не был переопределен в результате предыдущего вызова этого метода и default_cpu_access_type выбранной среды выполнения для это решение имеет еще не использовался для выделение памяти для массива или неявные памяти, резервном array_view доступ осуществляется через этот ускоритель.  
+ Задайте access_type ЦП по умолчанию для массивов, созданных на этом сочетаний клавиш или для выделения памяти неявное как часть array_views доступны на это это решение. Этот метод завершается успешно, только если default_cpu_access_type для сочетания клавиш еще не был переопределен в результате предыдущего вызова этого метода и default_cpu_access_type среды выполнения выбран клавиш имеет еще не использовался для выделение памяти для массива или неявные области памяти резервное array_view, доступ к на это решение.  
   
 ```  
 bool set_default_cpu_access_type(access_type _Default_cpu_access_type);
@@ -550,14 +533,14 @@ bool set_default_cpu_access_type(access_type _Default_cpu_access_type);
   
 ### <a name="parameters"></a>Параметры  
  `_Default_cpu_access_type`  
- Access_type ЦП по умолчанию, используемый для выделения памяти массив или array_view это решение.  
+ Access_type ЦП по умолчанию, используемый для выделения памяти массива или array_view это решение.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
- Логическое значение, указывающее, был успешно установлен access_type ЦП по умолчанию для сочетания клавиш.  
+ Логическое значение, указывающее, был успешно задан access_type ЦП по умолчанию для сочетания клавиш.  
   
 ##  <a name="supports_cpu_shared_memory"></a>supports_cpu_shared_memory 
 
- Возвращает логическое значение, указывающее, является ли `accelerator` поддерживает общей памяти.  
+ Возвращает логическое значение, указывающее, является ли `accelerator` поддерживает общую память.  
   
 ```  
 __declspec(property(get= get_supports_cpu_shared_memory)) bool supports_cpu_shared_memory;  
@@ -565,7 +548,7 @@ __declspec(property(get= get_supports_cpu_shared_memory)) bool supports_cpu_shar
   
 ##  <a name="supports_double_precision"></a>supports_double_precision 
 
- Возвращает логическое значение, указывающее, поддерживает ли ускоритель математические двойной точности.  
+ Возвращает логическое значение, указывающее, поддерживает ли сочетания клавиш математические двойной точности.  
   
 ```  
 __declspec(property(get= get_supports_double_precision)) bool supports_double_precision;  
@@ -573,7 +556,7 @@ __declspec(property(get= get_supports_double_precision)) bool supports_double_pr
   
 ##  <a name="supports_limited_double_precision"></a>supports_limited_double_precision 
 
- Возвращает логическое значение, указывающее ли сочетания клавиш имеет ограниченную поддержку для двойной точности math. Если ускоритель имеет только ограниченную поддержку, затем умножьте совмещенного добавьте (FMA), деления и обратное, приведение между `int` и `double` не поддерживаются.  
+ Возвращает логическое значение, указывающее ли сочетания клавиш имеет ограниченную поддержку двойной точности math. Если ускоритель имеет только ограниченную поддержку, затем совмещенного умножить добавить (FMA), деление, обратное и приведение между `int` и `double` не поддерживаются.  
   
 ```  
 __declspec(property(get= get_supports_limited_double_precision)) bool supports_limited_double_precision;  
@@ -619,18 +602,18 @@ accelerator_view(const accelerator_view& _Other);
   
 ##  <a name="create_marker"></a>create_marker 
 
- Возвращает будущее отслеживать выполнение всех команд, переданных пока это `accelerator_view` объекта.  
+ Возвращает будущее отслеживать выполнение всех команд, переданных в данный момент к этому `accelerator_view` объекта.  
   
 ```  
 concurrency::completion_future create_marker();
 ```  
   
 ### <a name="return-value"></a>Возвращаемое значение  
- Будущее отслеживать выполнение всех команд, переданных пока это `accelerator_view` объекта.  
+ Будущее отслеживать выполнение всех команд, переданных в данный момент к этому `accelerator_view` объекта.  
   
-##  <a name="flush"></a>Очистить 
+##  <a name="flush"></a>диск 
 
- Отправляет все ожидающие команды в очереди на [accelerator_view](accelerator-view-class.md) объекта сочетаний клавиш для выполнения.  
+ Отправляет все команды, ожидающие в очереди на [accelerator_view](accelerator-view-class.md) объект для сочетания клавиш для выполнения.  
   
 ```  
 void flush();
@@ -663,7 +646,7 @@ bool get_is_auto_selection() const;
 ```  
   
 ### <a name="return-value"></a>Возвращаемое значение  
- `true`Если среда выполнения автоматически выбирает соответствующий сочетаний клавиш; в противном случае — `false`.  
+ `true`Если среда выполнения автоматически выбирает соответствующий сочетаний клавиш; в противном случае `false`.  
   
 ##  <a name="get_is_debug"></a>get_is_debug 
 
@@ -722,7 +705,7 @@ __declspec(property(get= get_is_debug)) bool is_debug;
   
 ##  <a name="operator_neq"></a>оператор! = 
 
- Сравнивает этот [accelerator_view](accelerator-view-class.md) и возвращает объект с другим `false` , если они совпадают; в противном случае — возвращает `true`.  
+ Сравнивает этот [accelerator_view](accelerator-view-class.md) с другим и возвращает `false` если они совпадают; в противном случае возвращает `true`.  
   
 ```  
 bool operator!= (const accelerator_view& _Other) const;
@@ -732,7 +715,7 @@ bool operator!= (const accelerator_view& _Other) const;
   
 ### <a name="parameters"></a>Параметры  
  `_Other`  
- `accelerator_view` Объект, сравниваемый с данным элементом.  
+ `accelerator_view` Объект, сравниваемый с этим параметром.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
  Значение `false`, если объекты совпадают; в противном случае — значение `true`.  
@@ -747,14 +730,14 @@ accelerator_view& operator= (const accelerator_view& _Other);
   
 ### <a name="parameters"></a>Параметры  
  `_Other`  
- `accelerator_view` Для копирования.  
+ `accelerator_view` Объект для копирования из.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
  Ссылку на измененный `accelerator_view` объекта.  
   
 ##  <a name="operator_eq_eq"></a>оператор == 
 
- Сравнивает этот [accelerator_view](accelerator-view-class.md) и возвращает объект с другим `true` , если они совпадают; в противном случае — возвращает `false`.  
+ Сравнивает этот [accelerator_view](accelerator-view-class.md) с другим и возвращает `true` если они совпадают; в противном случае возвращает `false`.  
   
 ```  
 bool operator== (const accelerator_view& _Other) const;
@@ -764,7 +747,7 @@ bool operator== (const accelerator_view& _Other) const;
   
 ### <a name="parameters"></a>Параметры  
  `_Other`  
- `accelerator_view` Объект, сравниваемый с данным элементом.  
+ `accelerator_view` Объект, сравниваемый с этим параметром.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
  Значение `true`, если объекты совпадают; в противном случае — значение `false`.  
@@ -798,4 +781,3 @@ void wait();
   
 ## <a name="see-also"></a>См. также  
  [Пространство имен Concurrency (C++ AMP)](concurrency-namespace-cpp-amp.md)
-

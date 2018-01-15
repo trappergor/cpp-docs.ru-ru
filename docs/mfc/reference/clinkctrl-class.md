@@ -45,11 +45,12 @@ caps.latest.revision: "23"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 7d61e3f09b96c236277cdaf3c38008be2a661f40
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 1e6834190d7693e60f80285b04a04c484313d3c2
+ms.sourcegitcommit: 54035dce0992ba5dce0323d67f86301f994ff3db
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 01/03/2018
 ---
 # <a name="clinkctrl-class"></a>Класс классах-оболочках
 Предоставляет функциональные возможности стандартного элемента управления SysLink Windows.  
@@ -60,17 +61,17 @@ ms.lasthandoff: 10/24/2017
 class CLinkCtrl : public CWnd  
 ```  
   
-## <a name="members"></a>Члены  
+## <a name="members"></a>Участники  
   
 ### <a name="public-constructors"></a>Открытые конструкторы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[CLinkCtrl::CLinkCtrl](#clinkctrl)|Создает объект `CLinkCtrl`.|  
   
 ### <a name="public-methods"></a>Открытые методы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[CLinkCtrl::Create](#create)|Создает элемент управления для связи и прикрепляет его к `CLinkCtrl` объекта.|  
 |[CLinkCtrl::CreateEx](#createex)|Создает элемент управления для связи с расширенные стили и прикрепляет его к `CLinkCtrl` объекта.|  
@@ -132,7 +133,7 @@ virtual BOOL Create(DWORD dwStyle,
   
 ### <a name="parameters"></a>Параметры  
  `lpszLinkMarkup`  
- Указатель нулем строка, содержащая помеченные текст для отображения. Дополнительные сведения см. в подразделе «Доступ разметки и ссылки» раздела [Обзор управления SysLink](http://msdn.microsoft.com/library/windows/desktop/bb760706) в [библиотеки MSDN](http://go.microsoft.com/fwlink/linkid=556).  
+ Указатель нулем строка, содержащая помеченные текст для отображения. Дополнительные сведения см. в подразделе «Доступ разметки и ссылки» раздела [Обзор управления SysLink](http://msdn.microsoft.com/library/windows/desktop/bb760706).  
   
  `dwStyle`  
  Задает стиль элемента управления ссылки. Примените любое сочетание стилей элемента управления. В разделе [общие стили элемента управления](http://msdn.microsoft.com/library/windows/desktop/bb775498) в `Windows SDK` для получения дополнительной информации.  
@@ -186,7 +187,7 @@ virtual BOOL CreateEx(DWORD  dwExStyle,
   
 ### <a name="parameters"></a>Параметры  
  `lpszLinkMarkup`  
- Указатель нулем строка, содержащая помеченные текст для отображения. Дополнительные сведения см. в подразделе «Доступ разметки и ссылки» раздела [Обзор управления SysLink](http://msdn.microsoft.com/library/windows/desktop/bb760706) в [библиотеки MSDN](http://go.microsoft.com/fwlink/linkid=556).  
+ Указатель нулем строка, содержащая помеченные текст для отображения. Дополнительные сведения см. в подразделе «Доступ разметки и ссылки» раздела [Обзор управления SysLink](http://msdn.microsoft.com/library/windows/desktop/bb760706).  
   
  `dwExStyle`  
  Указывает расширенный стиль элемента управления ссылки. Список расширенных стилей Windows см. в разделе `dwExStyle` параметр [CreateWindowEx](http://msdn.microsoft.com/library/windows/desktop/ms632680) в Windows SDK.  
@@ -235,7 +236,7 @@ int GetIdealSize(
   
 ### <a name="parameters"></a>Параметры  
   
-|Параметр|Описание|  
+|Параметр|Описание:|  
 |---------------|-----------------|  
 |[in] `cxMaxWidth`|Максимальная ширина ссылки, в пикселях.|  
 |[out] *`pSize`|Указатель на Windows [размер](http://msdn.microsoft.com/library/windows/desktop/dd145106) структуры. По возвращении из этого метода `cy` членом `SIZE` структура содержит Высота текстового идеальный ссылку для ширину текста ссылки, задаваемый `cxMaxWidth`. `cx` Член структуры содержит ширину текста ссылки, которая фактически требуется.|  

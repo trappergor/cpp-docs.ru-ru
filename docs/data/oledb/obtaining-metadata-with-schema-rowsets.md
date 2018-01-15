@@ -17,11 +17,14 @@ caps.latest.revision: "9"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: a2a57fd92183c60e245ecdd1ba237da74c9e575b
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- data-storage
+ms.openlocfilehash: 0035606b02a1281b09287f19ffe087c9e6b36f7f
+ms.sourcegitcommit: 54035dce0992ba5dce0323d67f86301f994ff3db
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 01/03/2018
 ---
 # <a name="obtaining-metadata-with-schema-rowsets"></a>Получение метаданных в схеме набора строк
 Иногда вам необходимо получить информацию о поставщике, наборе строк, таблице, столбцах или другие сведения о базе данных без открытия набора строк. Данные о структуре базы данных называют метаданными, и их можно получить несколькими способами. Первый способ — использовать наборы строк схемы.  
@@ -59,7 +62,7 @@ CRestrictions<CAccessor<CColumnsInfo>
   
  [CRestrictions](../../data/oledb/crestrictions-class.md) класс предоставляет поддержку ограничений. После создания экземпляра набора строк схемы вызовите [CRestrictions::Open](../../data/oledb/crestrictions-open.md). Он возвращает результирующий набор, основанный на заданных ограничениях.  
   
- Чтобы указать ограничения, обратитесь к [приложение б. наборы строк схемы](http://go.microsoft.com/fwlink/?linkid=64681) и выполнять поиск строк, который вы используете. Например **CColumns** соответствует [набор строк COLUMNS](http://go.microsoft.com/fwlink/?linkid=64682); этого раздела перечислены столбцы ограничений в наборе строк COLUMNS: значениям TABLE_CATALOG, TABLE_SCHEMA, TABLE_NAME, COLUMN_NAME. Необходимо придерживаться этого порядка при указании ограничений.  
+ Чтобы указать ограничения, обратитесь к [приложение б. наборы строк схемы](http://go.microsoft.com/fwlink/p/?linkid=64681) и выполнять поиск строк, который вы используете. Например **CColumns** соответствует [набор строк COLUMNS](http://go.microsoft.com/fwlink/p/?linkid=64682); этого раздела перечислены столбцы ограничений в наборе строк COLUMNS: значениям TABLE_CATALOG, TABLE_SCHEMA, TABLE_NAME, COLUMN_NAME. Необходимо придерживаться этого порядка при указании ограничений.  
   
  Таким образом, например, если требуется ограничение по имени таблицы, обратите внимание, что TABLE_NAME — это третий столбец ограничений и затем вызвать **откройте**, укажите необходимое имя таблицы в качестве третьего параметра ограничения, как показано в следующем примере.  
   
@@ -89,7 +92,7 @@ CRestrictions<CAccessor<CColumnsInfo>
   
  Дополнительные сведения о наборе строк схемы, классах typedef, предоставленных в шаблонах OLE DB (см. [классы набора строк схемы и классы Typedef](../../data/oledb/schema-rowset-classes-and-typedef-classes.md)).  
   
- Дополнительные сведения о наборах строк схемы OLE DB, включая столбцы ограничений см [приложение б. наборы строк схемы](http://go.microsoft.com/fwlink/?linkid=64681) в справочнике программиста OLE DB.  
+ Дополнительные сведения о наборах строк схемы OLE DB, включая столбцы ограничений см [приложение б. наборы строк схемы](http://go.microsoft.com/fwlink/p/?linkid=64681) в справочнике программиста OLE DB.  
   
  Более сложные примеры использования классов набора строк схемы см. в разделе [CatDB](http://msdn.microsoft.com/en-us/003d516b-2bf6-444e-8be5-4ebaa0b66046) и [DBViewer](http://msdn.microsoft.com/en-us/07620f99-c347-4d09-9ebc-2459e8049832) образцов.  
   

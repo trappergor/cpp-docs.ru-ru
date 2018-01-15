@@ -1,32 +1,33 @@
 ---
-title: "SafeSubtract | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-f1_keywords: 
-  - "SafeSubtract"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "SafeSubtract - функция"
+title: "SafeSubtract | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+f1_keywords: SafeSubtract
+dev_langs: C++
+helpviewer_keywords: SafeSubtract function
 ms.assetid: c2712ddc-173f-46a1-b09c-e7ebbd9e68b2
-caps.latest.revision: 5
-author: "ghogen"
-ms.author: "ghogen"
-manager: "ghogen"
-caps.handback.revision: 5
+caps.latest.revision: "5"
+author: ghogen
+ms.author: ghogen
+manager: ghogen
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: 5b94d84e6a348b68258fc1b57c2e0ad9ad30e36d
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 12/21/2017
 ---
-# SafeSubtract
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Вычитает 2 числа в поведении защищает от переполнения.  
+# <a name="safesubtract"></a>SafeSubtract
+Вычитает два числа в способом, который обеспечивает защиту от переполнения.  
   
-## Синтаксис  
+## <a name="syntax"></a>Синтаксис  
   
 ```  
 template<typename T, typename U>  
@@ -37,34 +38,34 @@ inline bool SafeSubtract (
 ) throw ();  
 ```  
   
-#### Параметры  
- \[входящий\] `t`  
- Первый номер в вычитании.  Это должно быть типа T.  
+#### <a name="parameters"></a>Параметры  
+ [in] `t`  
+ Первое число операции вычитания. Это должен быть типа T.  
   
- \[входящий\] `u`  
- Число, которое вычитается из `t`.  Это должно быть типа U.  
+ [in] `u`  
+ Вычитаемое число `t`. Это должен быть типа u.  
   
- \[исходящий\] `result`  
- Параметр, `SafeSubtract` сохраняет результат.  
+ [выходной] `result`  
+ Параметр где `SafeSubtract` сохраняет результат.  
   
-## Возвращаемое значение  
- `true`, если ошибка не возникает. `false` при возникновении ошибки.  
+## <a name="return-value"></a>Возвращаемое значение  
+ `true`При отсутствии ошибок; `false` при возникновении ошибки.  
   
-## Заметки  
- Этот метод часть [Библиотека SafeInt](../windows/safeint-library.md) и предназначен для одной операции вычитания без создания экземпляра [Класс SafeInt](../windows/safeint-class.md).  
+## <a name="remarks"></a>Примечания  
+ Этот метод является частью [библиотека SafeInt](../windows/safeint-library.md) и предназначен для выполнения операции вычитания одного без создания экземпляра [класс SafeInt](../windows/safeint-class.md).  
   
 > [!NOTE]
->  Этот метод должен использоваться, только если одна математических операций необходимо защитить.  Если несколько операций, то следует использовать класс `SafeInt` вместо вызова отдельных изолированных функции.  
+>  Этот метод использовать только в том случае, когда один математической операции должны быть защищены. При наличии нескольких операций, следует использовать `SafeInt` класса вместо вызова автономного отдельных функций.  
   
- Дополнительные сведения о типах T шаблона и U см. в разделе [Функции SafeInt](../windows/safeint-functions.md).  
+ Дополнительные сведения о типах шаблонов T и U см. в разделе [функции SafeInt](../windows/safeint-functions.md).  
   
-## Требования  
+## <a name="requirements"></a>Требования  
  **Заголовок:** safeint.h  
   
  **Пространство имен:** Microsoft::Utilities  
   
-## См. также  
+## <a name="see-also"></a>См. также  
  [Функции SafeInt](../windows/safeint-functions.md)   
  [Библиотека SafeInt](../windows/safeint-library.md)   
- [Класс SafeInt](../windows/safeint-class.md)   
+ [SafeInt-класс](../windows/safeint-class.md)   
  [SafeAdd](../windows/safeadd.md)

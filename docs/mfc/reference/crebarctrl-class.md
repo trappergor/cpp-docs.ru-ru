@@ -109,11 +109,12 @@ caps.latest.revision: "23"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 4ec8e56f3a0be70807fe607bad652b359f08ec63
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 592493a9eb554f0bdeecd291fdbe3ceb54c599c6
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="crebarctrl-class"></a>CReBarCtrl-класс
 Инкапсулирует функциональность элемента управления "главная панель ", который представляет собой контейнер для дочернего окна.  
@@ -124,17 +125,17 @@ ms.lasthandoff: 10/24/2017
 class CReBarCtrl : public CWnd  
 ```  
   
-## <a name="members"></a>Члены  
+## <a name="members"></a>Участники  
   
 ### <a name="public-constructors"></a>Открытые конструкторы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[CReBarCtrl::CReBarCtrl](#crebarctrl)|Создает объект `CReBarCtrl`.|  
   
 ### <a name="public-methods"></a>Открытые методы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[CReBarCtrl::BeginDrag](#begindrag)|Помещает элемент управления главной панели в режим перетаскивания и вставки.|  
 |[CReBarCtrl::Create](#create)|Создает контейнер элементов управления и прикрепляет его к `CReBarCtrl` объекта.|  
@@ -764,7 +765,7 @@ BOOL SetBandWidth(
   
 ### <a name="parameters"></a>Параметры  
   
-|Параметр|Описание|  
+|Параметр|Описание:|  
 |---------------|-----------------|  
 |[in] `uBand`|Отсчитываемый от нуля индекс области главной панели.|  
 |[in] `cxWidth`|Новая ширина области главной панели, в пикселях.|  
@@ -844,7 +845,7 @@ DWORD SetExtendedStyle(
   
 ### <a name="parameters"></a>Параметры  
   
-|Параметр|Описание|  
+|Параметр|Описание:|  
 |---------------|-----------------|  
 |[in] `dwMask`|Побитовое сочетание (OR) флагов, указывающих, какие флаги в `dwStyleEx` применить параметр. Используйте один или несколько из следующих значений:<br /><br /> RBS_EX_SPLITTER: По умолчанию отображаться разделитель в нижней в горизонтальном режиме, а справа в вертикальной режиме.<br /><br /> RBS_EX_TRANSPARENT: Пересылать [WM_ERASEBKGND](http://msdn.microsoft.com/library/windows/desktop/ms648055) сообщение родительского окна.|  
 |[in] `dwStyleEx`|Побитовое сочетание (OR) флагов, определяющих стили для применения. Чтобы задать стиль, укажите флаг, используемый в `dwMask` параметра. Чтобы сбросить стиля, укажите двоичный нуль.|  

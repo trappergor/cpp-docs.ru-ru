@@ -1,37 +1,41 @@
 ---
-title: "Specifying the Location and Size of a Dialog Box | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "dialog boxes, size"
-  - "dialog boxes, positioning"
+title: "Задание местоположения и размера диалогового окна | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- dialog boxes, size
+- dialog boxes, positioning
 ms.assetid: 2b7c495e-6595-4cfb-9664-80b2826d0851
-caps.latest.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 5
+caps.latest.revision: "9"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: 03c4c6d6afb13a0e4ed8801838356ff0d1e851f1
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 12/21/2017
 ---
-# Specifying the Location and Size of a Dialog Box
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Местоположение и размер диалогового окна, а также местоположение и размер элементов управления в этом окне, измеряются в единицах диалогового окна.  Значения для отдельных элементов управления и диалогового окна появляются в нижней правой части строки состояния Visual Studio, когда разработчик выбирает эти элементы.  
+# <a name="specifying-the-location-and-size-of-a-dialog-box"></a>Задание местоположения и размера диалогового окна
+Расположение и размер диалогового окна, а также расположение и размер элементов управления, измеряется в диалоговых единицах. Значения для отдельных элементов управления и диалогового окна отображаются в правом нижнем углу строки при выборе состояния Visual Studio.  
   
- Существует три свойства, которые можно установить в [окне "Свойства"](../Topic/Properties%20Window.md), чтобы определить, в каком месте экрана будет появляться диалоговое окно.  Свойство "Центр" является логическим. Если его значение равно True, диалоговое окно всегда будет появляться в центре экрана.  Если для него задано значение False, можно задать свойства XPos и YPos, чтобы явно определить, в каком месте экрана будет появляться диалоговое окно.  Свойства положения представляют собой значения смещения от левого верхнего угла области просмотра, координаты которого определены как {X\=0, Y\=0}.  Положение также зависит от свойства **Абсолютное выравнивание**: если его значение равно True, координаты отсчитываются относительно экрана; если False — относительно окна владельца диалогового окна.  
+ Существует три свойства, которые можно установить в [окно "Свойства"](/visualstudio/ide/reference/properties-window) чтобы указать, где оно появится на экране. Свойство Center является логическим. Если значение равно True, диалоговое окно всегда будет отображаться в центре экрана. Если присвоить ему значение False, затем можно задать свойства XPos и YPos для явного определения, где на экране появится диалоговое окно. Положение свойства имеют значения смещения от верхнего левого угла области просмотра, которая определяется как {X = 0, Y = 0}. Позиция также основана на **абсолютное выравнивание** свойство: значение True, если координаты указываются относительно экрана; Если значение равно False, координаты указываются относительно владельца диалогового окна.  
   
- Сведения о добавлении ресурсов в управляемые проекты см. в разделе [Ресурсы приложений](../Topic/Resources%20in%20Desktop%20Apps.md) *Руководства разработчика .NET Framework*. Сведения о том, как вручную добавлять файлы ресурсов в управляемые проекты, осуществлять доступ к ресурсам, отображать статические ресурсы и присваивать строки ресурсов свойствам см. в разделах [Пошаговое руководство. Локализация приложений Windows Forms](http://msdn.microsoft.com/ru-ru/9a96220d-a19b-4de0-9f48-01e5d82679e5) и [Walkthrough: Using Resources for Localization with ASP.NET](../Topic/Walkthrough:%20Using%20Resources%20for%20Localization%20with%20ASP.NET.md).  
+ Сведения о добавлении ресурсов в управляемые проекты см. в разделе [ресурсы в классических приложениях](/dotnet/framework/resources/index) в *руководства разработчика .NET Framework.* Сведения о вручную добавлять файлы ресурсов в управляемые проекты, осуществлять доступ к ресурсам, отображать статические ресурсы и присваивать строки ресурсов свойствам см. в разделе [Создание файлов ресурсов для приложений рабочего стола](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Сведения о глобализации и локализации ресурсов в управляемых приложениях см. в разделе [Globalizing и локализация приложений .NET Framework](/dotnet/standard/globalization-localization/index).  
   
-## Требования  
+## <a name="requirements"></a>Требования  
  Win32  
   
-## См. также  
- [Controls in Dialog Boxes](../mfc/controls-in-dialog-boxes.md)   
+## <a name="see-also"></a>См. также  
+ [Элементы управления в диалоговых окнах](../windows/controls-in-dialog-boxes.md)   
  [Элементы управления](../mfc/controls-mfc.md)
+

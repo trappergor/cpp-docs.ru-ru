@@ -4,12 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
-apiname:
-- _CrtSetReportFile
+apiname: _CrtSetReportFile
 apilocation:
 - msvcrt.dll
 - msvcr80.dll
@@ -25,22 +23,21 @@ apitype: DLLExport
 f1_keywords:
 - CrtSetReportFile
 - _CrtSetReportFile
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - CrtSetReportFile function
 - _CrtSetReportFile function
 ms.assetid: 3126537e-511b-44af-9c1c-0605265eabc4
-caps.latest.revision: 16
+caps.latest.revision: "16"
 author: corob-msft
 ms.author: corob
 manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 8487ca011355ad248bc38c2fc2d3265f0fad4995
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
-ms.sourcegitcommit: 35b46e23aeb5f4dbfd2a0dd44b906389dd5bfc88
-ms.openlocfilehash: 7769c38c939b0deb1e1c61d53fad6b500f3860dd
-ms.contentlocale: ru-ru
-ms.lasthandoff: 10/09/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="crtsetreportfile"></a>_CrtSetReportFile
 Применив функцию [_CrtSetReportMode](../../c-runtime-library/reference/crtsetreportmode.md) для указания `_CRTDBG_MODE_FILE`, можно указать дескриптор файла для получения текста сообщения. `_CrtSetReportFile` также используется функциями [_CrtDbgReport, _CrtDbgReportW](../../c-runtime-library/reference/crtdbgreport-crtdbgreportw.md) для указания места назначения текста (только в отладочной версии).  
@@ -70,7 +67,7 @@ _HFILE _CrtSetReportFile(
  В следующей таблице приведен список доступных вариантов для параметра `reportFile` и соответствующее поведение функции `_CrtDbgReport`. Эти параметры задаются в виде битовых флагов в файле Crtdbg.h.  
   
  `file handle`  
- Дескриптор файла, который будет служить местом назначения для сообщений. Попытки проверить допустимость дескриптора не предпринимаются. Дескриптор файла необходимо открыть и закрыть. Например:  
+ Дескриптор файла, который будет служить местом назначения для сообщений. Попытки проверить допустимость дескриптора не предпринимаются. Дескриптор файла необходимо открыть и закрыть. Пример:  
   
 ```  
 HANDLE hLogFile;  

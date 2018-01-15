@@ -4,58 +4,41 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-tools
+ms.technology: cpp-tools
 ms.tgt_pltfrm: 
 ms.topic: error-reference
-f1_keywords:
-- PRJ0003
-dev_langs:
-- C++
-helpviewer_keywords:
-- PRJ0003
+f1_keywords: PRJ0003
+dev_langs: C++
+helpviewer_keywords: PRJ0003
 ms.assetid: fc5a84bb-c6d3-41d6-8dd6-475455820778
-caps.latest.revision: 7
+caps.latest.revision: "7"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3168772cbb7e8127523bc2fc2da5cc9b4f59beb8
-ms.openlocfilehash: aac7a37a94013a1acad8ee866d9ac7ce28fda94c
-ms.contentlocale: ru-ru
-ms.lasthandoff: 02/24/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: bcf80eb4d45fe1ae163772b96339c123996ae377
+ms.sourcegitcommit: 54035dce0992ba5dce0323d67f86301f994ff3db
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 01/03/2018
 ---
-# <a name="project-build-error-prj0003"></a>Ошибка построения проекта PRJ0003
-Ошибка при создании «Командная строка».  
+# <a name="project-build-error-prj0003"></a>Ошибка построения проекта PRJ0003  
   
- В команду ***командной строки***, которая была создана из входных данных в **страницы свойств** диалогового окна, возвращается код ошибки, но не сведения будут отображаться в окне вывода.  
+> Создание ошибки "*командной строки*".  
   
- Возможные причины этой ошибки:  
+*Командной строки* команда сформирован на основе входных данных в **страницы свойств** диалоговое окно вернул код ошибки, но не отображаются данные в **вывода** окна.  
+
+Возможные причины этой ошибки включают:  
   
--   Проект зависит от сервера ATL. Начиная с версии [!INCLUDE[vs_orcas_long](../../atl/reference/includes/vs_orcas_long_md.md)], ATL Server больше не включены в Visual Studio, но была выпущена в виде исходного проекта на сайте CodePlex. Чтобы загрузить исходный код ATL Server и средств, перейдите к [http://go.microsoft.com/fwlink/?LinkID=81979](http://go.microsoft.com/fwlink/?LinkID=81979).  
+-   Проект зависит от библиотеки ATL Server. Начиная с Visual Studio 2008, сервер ATL больше не включены в Visual Studio, но была выпущена в виде проекта общий источник на CodePlex. Чтобы загрузить исходный код для ATL-сервера и средств, перейдите на [ATL-сервера библиотеки и средства](http://go.microsoft.com/fwlink/p/?linkid=81979).  
   
--   Нехватка системных ресурсов. Закройте некоторые приложения, чтобы решить эту проблему.  
+-   Нехватка системных ресурсов. Закройте некоторые приложения для решения этой проблемы.  
   
--   Недостаточный уровень привилегий безопасности. Проверьте наличие достаточных прав доступа.  
+-   Недостаточные привилегии безопасности. Убедитесь, что у вас достаточно прав безопасности.  
   
--   Пути к исполняемым файлам, указанного в [каталоги VC ++](http://msdn.microsoft.com/en-us/e027448b-c811-4c3d-8531-4325ad3f6e02) не включают путь средство, которое вы пытаетесь запустить.  
+-   Пути к исполняемым файлам, указанный в **каталоги VC ++** должно содержать путь, предпринимается попытка запуска программы. Сведения см. в разделе [работа со свойствами проектов](../../ide/working-with-project-properties.md)  
   
--   В проектах makefile отсутствует команда для запуска на любой **построения командной строки** или **командной строке перестроения**.  
+-   В проектах makefile отсутствует команда на выполнение в **командной строке для построения** или **командной строке перестроения**.  
   
 ## <a name="see-also"></a>См. также  
- [Ошибки построения и предупреждения проекта (PRJxxxx)](../../error-messages/tool-errors/project-build-errors-and-warnings-prjxxxx.md)
+ [Ошибки и предупреждения режима сборки проекта (PRJxxxx)](../../error-messages/tool-errors/project-build-errors-and-warnings-prjxxxx.md)

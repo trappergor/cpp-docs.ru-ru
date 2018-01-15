@@ -12,18 +12,19 @@ caps.latest.revision: "9"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 7cc8e24c8fd1524ebaaf6c2a8edaec05ab865733
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: cb0682a246cc2cd2acd8f22228fd25c99755f1cb
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="concurrency-namespace-operators-amp"></a>Операторы пространство имен Concurrency (AMP)
 ||||  
 |-|-|-|  
-|[operator!=](#operator_neq)|[оператор%](#operator_mod)|[оператор*](#operator_star)|  
-|[оператор+](#operator_add)|[оператор-](#operator-)|[оператор/](#operator_div)|  
-|[operator==](#operator_eq_eq)|  
+|[оператор!=](#operator_neq)|[оператор%](#operator_mod)|[оператор*](#operator_star)|  
+|[operator+](#operator_add)|[operator-](#operator-)|[оператор/](#operator_div)|  
+|[оператор==](#operator_eq_eq)|  
   
 ##  <a name="operator_eq_eq"></a> operator==   
  Определяет, равны ли указанные аргументы.  

@@ -151,11 +151,12 @@ caps.latest.revision: "31"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: c317390f804e90ed2faf4302ab0a46d783dd49ad
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: b557a56b1d525941c96b9a6a96fd367b64afcaf0
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cmfctoolbarimages-class"></a>Класс CMFCToolBarImages
 Изображения, на панели инструментов. `CMFCToolBarImages` Класс управляет инструментов изображения, загруженные из ресурсов приложения или из файлов.  
@@ -166,17 +167,17 @@ ms.lasthandoff: 10/24/2017
 class CMFCToolBarImages : public CObject  
 ```  
   
-## <a name="members"></a>Члены  
+## <a name="members"></a>Участники  
   
 ### <a name="public-constructors"></a>Открытые конструкторы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[CMFCToolBarImages::CMFCToolBarImages](#cmfctoolbarimages)|Создает объект `CMFCToolBarImages`.|  
   
 ### <a name="public-methods"></a>Открытые методы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[CMFCToolBarImages::AdaptColors](#adaptcolors)||  
 |[CMFCToolBarImages::AddIcon](#addicon)|Добавляет значок изображениям значков панели инструментов.|  
@@ -245,13 +246,13 @@ class CMFCToolBarImages : public CObject
   
 ### <a name="protected-methods"></a>Защищенные методы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[CMFCToolBarImages::PreMultiplyAlpha](#premultiplyalpha)||  
   
 ### <a name="data-members"></a>Элементы данных  
   
-|Имя|Описание|  
+|name|Описание:|  
 |----------|-----------------|  
 |[CMFCToolBarImages::m_bDisableTrueColorAlpha](#m_bdisabletruecoloralpha)|`TRUE`Если альфа-truecolor смешение (32-разрядный цвет) отключена.|  
   

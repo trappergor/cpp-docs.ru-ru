@@ -1,137 +1,144 @@
 ---
-title: "Рекомендации по работе с библиотекой параллельных шаблонов | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "Библиотека параллельных шаблонов, нерекомендуемые методы"
-  - "нерекомендуемые методы, библиотека параллельных шаблонов"
-  - "Советы и рекомендации, библиотека параллельных шаблонов"
-  - "Рекомендации по использованию библиотеки параллельных шаблонов"
+title: "Советы и рекомендации в библиотеке параллельных шаблонов | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- Parallel Patterns Library, practices to avoid
+- practices to avoid, Parallel Patterns Library
+- best practices, Parallel Patterns Library
+- Parallel Patterns Library, best practices
 ms.assetid: e43e0304-4d54-4bd8-a3b3-b8673559a9d7
-caps.latest.revision: 24
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 24
+caps.latest.revision: "24"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 40629b25ebcc954ac19389fbc0abb3aef6e9374a
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 12/21/2017
 ---
-# Рекомендации по работе с библиотекой параллельных шаблонов
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="best-practices-in-the-parallel-patterns-library"></a>Рекомендации по работе с библиотекой параллельных шаблонов
 В этом документе описано, как наиболее эффективно использовать библиотеку параллельных шаблонов (PPL). Библиотека PPL предоставляет алгоритмы, объекты и контейнеры общего назначения для выполнения детального параллелизма.  
   
- Дополнительные сведения о PPL см. в разделе [библиотеки параллельных шаблонов (PPL)](../../parallel/concrt/parallel-patterns-library-ppl.md).  
+ Дополнительные сведения о библиотеке PPL см. в разделе [библиотеки параллельных шаблонов (PPL)](../../parallel/concrt/parallel-patterns-library-ppl.md).  
   
-##  <a name="a-nametopa-sections"></a><a name="top"></a> Разделы  
+##  <a name="top"></a> Разделы  
  Этот документ содержит следующие разделы.  
   
-- [Не выполняйте небольших тел циклов](#small-loops)  
+- [Не выполняйте параллелизацию небольших циклов](#small-loops)  
   
 - [Реализуйте параллелизм на самом высоком уровне](#highest)  
   
 - [Использование функции parallel_invoke для разрешения проблем разделяй и властвуй](#divide-and-conquer)  
   
-- [Использование отмены и обработки исключений для выхода из параллельного цикла](#breaking-loops)  
+- [Используйте отмену или обработку исключений для выхода из параллельного цикла](#breaking-loops)  
   
-- [Понять, как отмена и обработка исключений влияют на уничтожение объектов](#object-destruction)  
+- [Понять, как отмена и обработка исключений влияет на уничтожение объектов](#object-destruction)  
   
-- [Не выполняйте многократную блокировку в параллельном цикле](#repeated-blocking)  
+- [Не применяйте блокировку несколько раз в параллельном цикле](#repeated-blocking)  
   
-- [Не выполняйте операции блокировки при отмене параллельных задач](#blocking)  
+- [Не выполняйте операции блокировки при отмене параллельных работ](#blocking)  
   
 - [Не выполняйте запись в общие данные в параллельном цикле](#shared-writes)  
   
-- [По возможности избегайте ложного совместного доступа](#false-sharing)  
+- [По возможности избегайте ложного совместного использования](#false-sharing)  
   
-- [Убедитесь, что переменные являются допустимыми в течение времени существования задачи](#lifetime)  
+- [Убедитесь, что переменные допустимы на протяжении времени существования задачи](#lifetime)  
   
-##  <a name="a-namesmall-loopsa-do-not-parallelize-small-loop-bodies"></a><a name="small-loops"></a> Не выполняйте небольших тел циклов  
+##  <a name="small-loops"></a>Не выполняйте параллелизацию небольших циклов  
  Распараллеливание относительно небольших тел циклов может привести к дополнительным издержкам при планировании, которые сведут на нет преимущества параллельной обработки. Рассмотрим следующий пример, в котором каждая пара элементов помещается в два массива.  
   
- [!code-cpp[concrt-small-loops#1](../../parallel/concrt/codesnippet/CPP/best-practices-in-the-parallel-patterns-library_1.cpp)]  
+ [!code-cpp[concrt-small-loops#1](../../parallel/concrt/codesnippet/cpp/best-practices-in-the-parallel-patterns-library_1.cpp)]  
   
  Нагрузка каждой итерации параллельного цикла слишком мала, чтобы почувствовать преимущества параллельной обработки. Можно повысить производительность этого цикла, выполняя больше работы в теле цикла или выполняя цикл последовательно.  
   
  [[В начало](#top)]  
   
-##  <a name="a-namehighesta-express-parallelism-at-the-highest-possible-level"></a><a name="highest"></a> Реализуйте параллелизм на самом высоком уровне  
- При распараллеливании кода только на низком уровне можно ввести конструкцию ветвления-соединения, которая не масштабируется при увеличении числа процессоров. A *ветвления слияния* — это структура, где одна задача разделяет работу на более маленькие параллельные подзадачи и ожидает их завершения. Каждая подзадача может рекурсивно делиться на еще более мелкие подзадачи.  
+##  <a name="highest"></a>Реализуйте параллелизм на самом высоком уровне  
+ При распараллеливании кода только на низком уровне можно ввести конструкцию ветвления-соединения, которая не масштабируется при увеличении числа процессоров. Объект *ветвления соединения* — это структура, где одна задача разделяет работу на более мелкие параллельные подзадачи и ожидает их завершения. Каждая подзадача может рекурсивно делиться на еще более мелкие подзадачи.  
   
  Хотя модель ветвления-соединения может быть полезна для решения различных проблем, существуют ситуации, когда затраты на синхронизацию могут снизить масштабируемость. Например, рассмотрим следующий последовательный код, обрабатывающий данные изображений.  
   
- [!code-cpp[concrt-image-processing-filter#20](../../parallel/concrt/codesnippet/CPP/best-practices-in-the-parallel-patterns-library_2.cpp)]  
+ [!code-cpp[concrt-image-processing-filter#20](../../parallel/concrt/codesnippet/cpp/best-practices-in-the-parallel-patterns-library_2.cpp)]  
   
- Поскольку каждая итерация цикла независима, можно распараллеливать большую часть работы, как показано в следующем примере. В этом примере используется [concurrency::parallel_for](../Topic/parallel_for%20Function.md) алгоритм для параллелизации внешнего цикла.  
+ Поскольку каждая итерация цикла независима, можно распараллеливать большую часть работы, как показано в следующем примере. В этом примере используется [concurrency::parallel_for](reference/concurrency-namespace-functions.md#parallel_for) алгоритм для параллелизации внешнего цикла.  
+
   
- [!code-cpp[concrt-image-processing-filter#3](../../parallel/concrt/codesnippet/CPP/best-practices-in-the-parallel-patterns-library_3.cpp)]  
+ [!code-cpp[concrt-image-processing-filter#3](../../parallel/concrt/codesnippet/cpp/best-practices-in-the-parallel-patterns-library_3.cpp)]  
   
  В следующем примере показана конструкции ветвления-соединения путем вызова функции `ProcessImage` в цикле. Каждый вызов `ProcessImage` не возвращает данные до завершения подзадачи.  
   
- [!code-cpp[concrt-image-processing-filter#21](../../parallel/concrt/codesnippet/CPP/best-practices-in-the-parallel-patterns-library_4.cpp)]  
+ [!code-cpp[concrt-image-processing-filter#21](../../parallel/concrt/codesnippet/cpp/best-practices-in-the-parallel-patterns-library_4.cpp)]  
   
  Если при каждой итерации параллельного цикла выполняется очень мало работы или работа, выполняемая параллельным циклом, несбалансирована (то есть некоторые итерации цикла выполняются дольше, чем другие), затраты на планирование, необходимое для частого ветвления и соединения работы, могут перевесить преимущества параллельного выполнения. Эти затраты растут по мере роста числа процессов.  
   
- Чтобы уменьшить объем затрат на планирование в этом примере, можно распараллелить внешние циклы перед внутренними или использовать другие параллельные конструкции, например конвейер. В следующем примере изменяется `ProcessImages` функции [concurrency::parallel_for_each](../Topic/parallel_for_each%20Function.md) алгоритм для параллелизации внешнего цикла.  
+ Чтобы уменьшить объем затрат на планирование в этом примере, можно распараллелить внешние циклы перед внутренними или использовать другие параллельные конструкции, например конвейер. В следующем примере изменяется `ProcessImages` функции для использования [concurrency::parallel_for_each](reference/concurrency-namespace-functions.md#parallel_for_each) алгоритм для параллелизации внешнего цикла.  
+
   
- [!code-cpp[concrt-image-processing-filter#22](../../parallel/concrt/codesnippet/CPP/best-practices-in-the-parallel-patterns-library_5.cpp)]  
+ [!code-cpp[concrt-image-processing-filter#22](../../parallel/concrt/codesnippet/cpp/best-practices-in-the-parallel-patterns-library_5.cpp)]  
   
- Аналогичный пример использует конвейер для параллельного выполнения обработки изображений см [Пошаговое руководство: создание сети обработки изображений](../../parallel/concrt/walkthrough-creating-an-image-processing-network.md).  
+ Аналогичный пример, в котором для параллельного выполнения обработки изображений используется конвейер, см. [Пошаговое руководство: создание сети обработки изображений](../../parallel/concrt/walkthrough-creating-an-image-processing-network.md).  
   
  [[В начало](#top)]  
   
-##  <a name="a-namedivide-and-conquera-use-parallelinvoke-to-solve-divide-and-conquer-problems"></a><a name="divide-and-conquer"></a> Использование функции parallel_invoke для разрешения проблем разделяй и властвуй  
- A *разделяй и властвуй* проблема заключается в форме конструкции ветвления слияния, используется рекурсия для прерывания задача делится на подзадачи. В дополнение к [concurrency::task_group](../Topic/task_group%20Class.md) и [concurrency::structured_task_group](../../parallel/concrt/reference/structured-task-group-class.md) классы, можно также использовать [concurrency::parallel_invoke](../Topic/parallel_invoke%20Function.md) алгоритм разделяй и властвуй проблем. Алгоритм `parallel_invoke` имеет более сжатый синтаксис, чем объекты группы задач, и удобен при наличии фиксированного числа параллельных задач.  
+##  <a name="divide-and-conquer"></a>Использование функции parallel_invoke для разрешения проблем разделяй и властвуй  
+
+ Объект *разделяй и властвуй* проблема — это форма конструкции ветвления соединения, которая использует рекурсию для разбиения задачи на подзадачи. В дополнение к [concurrency::task_group](reference/task-group-class.md) и [concurrency::structured_task_group](../../parallel/concrt/reference/structured-task-group-class.md) классов, можно также использовать [concurrency::parallel_invoke](reference/concurrency-namespace-functions.md#parallel_invoke) алгоритм решение проблем разделяй и властвуй. Алгоритм `parallel_invoke` имеет более сжатый синтаксис, чем объекты группы задач, и удобен при наличии фиксированного числа параллельных задач.  
   
  В следующем примере показано использование алгоритма `parallel_invoke` для реализации алгоритма битонной сортировки.  
   
- [!CODE [concrt-parallel-bitonic-sort#12](../CodeSnippet/VS_Snippets_ConcRT/concrt-parallel-bitonic-sort#12)]  
+ [!code-cpp[concrt-parallel-bitonic-sort#12](../../parallel/concrt/codesnippet/cpp/best-practices-in-the-parallel-patterns-library_6.cpp)]  
   
  Для снижения затрат алгоритм `parallel_invoke` выполняет последний ряд задач в вызывающем контексте.  
   
- Полную версию этого примера, в разделе [Практическое руководство: использование функции parallel_invoke для написания программы параллельной сортировки](../../parallel/concrt/how-to-use-parallel-invoke-to-write-a-parallel-sort-routine.md). Дополнительные сведения о `parallel_invoke` алгоритм, в разделе [Параллельные алгоритмы](../Topic/Parallel%20Algorithms.md).  
+ Полную версию этого примера см. в разделе [как: использование функции parallel_invoke для написания программы параллельной сортировки](../../parallel/concrt/how-to-use-parallel-invoke-to-write-a-parallel-sort-routine.md). Дополнительные сведения о `parallel_invoke` алгоритм, в разделе [параллельные алгоритмы](../../parallel/concrt/parallel-algorithms.md).  
   
  [[В начало](#top)]  
   
-##  <a name="a-namebreaking-loopsa-use-cancellation-or-exception-handling-to-break-from-a-parallel-loop"></a><a name="breaking-loops"></a> Использование отмены и обработки исключений для выхода из параллельного цикла  
- Библиотека PPL предоставляет два способа отмены параллельной работы, выполняемой группой задач или параллельным алгоритмом. Первый способ — использовать механизм отмены, предоставляемый [concurrency::task_group](../Topic/task_group%20Class.md) и [concurrency::structured_task_group](../../parallel/concrt/reference/structured-task-group-class.md) классы. Второй способ — создать исключение в теле рабочей функции задачи. Механизм отмены более эффективен, чем обработка исключений при отмене дерева параллельной работы. A *Дерево параллельной работы* — это группа групп связанных задач, в которых некоторые группы задач содержат другие группы. Механизм отмены отменяет группу задач и ее дочерние группы в порядке «сверху вниз». Механизм обработки исключений, напротив, работает в режиме «снизу вверх», и каждую дочернюю группу задач приходится отменять независимо, поскольку исключение распространяется вверх.  
+##  <a name="breaking-loops"></a>Используйте отмену или обработку исключений для выхода из параллельного цикла  
+ Библиотека PPL предоставляет два способа отмены параллельной работы, выполняемой группой задач или параллельным алгоритмом. Один способ — использовать механизм отмены, предоставляемый [concurrency::task_group](reference/task-group-class.md) и [concurrency::structured_task_group](../../parallel/concrt/reference/structured-task-group-class.md) классы. Второй способ — создать исключение в теле рабочей функции задачи. Механизм отмены более эффективен, чем обработка исключений при отмене дерева параллельной работы. Объект *дерево параллельной работы* — это группа связанных групп задач в которых некоторые группы задач содержат другие группы. Механизм отмены отменяет группу задач и ее дочерние группы в порядке «сверху вниз». Механизм обработки исключений, напротив, работает в режиме «снизу вверх», и каждую дочернюю группу задач приходится отменять независимо, поскольку исключение распространяется вверх.  
   
- При работе непосредственно с объектом группы задач, используйте [Concurrency::task_group:: Cancel](../Topic/task_group::cancel%20Method.md) или [Concurrency::structured_task_group:: Cancel](../Topic/structured_task_group::cancel%20Method.md) методы для отмены работы, принадлежащей этой группе задач. Чтобы отменить параллельный алгоритм, например `parallel_for`, создайте родительскую группу задач и отмените ее. Например, рассмотрим следующую функцию, `parallel_find_any`, которая выполняет поиск значения в массиве в параллельном режиме.  
+
+ При работе непосредственно с объектом группы задач, используйте [Concurrency::task_group:: Cancel](reference/task-group-class.md#cancel) или [Concurrency::structured_task_group:: Cancel](reference/structured-task-group-class.md#cancel) методы для отмены работы, принадлежащей этой группе задач . Чтобы отменить параллельный алгоритм, например `parallel_for`, создайте родительскую группу задач и отмените ее. Например, рассмотрим следующую функцию, `parallel_find_any`, которая выполняет поиск значения в массиве в параллельном режиме.  
+
+
   
- [!code-cpp[concrt-parallel-array-search#2](../../parallel/concrt/codesnippet/CPP/best-practices-in-the-parallel-patterns-library_6.cpp)]  
+ [!code-cpp[concrt-parallel-array-search#2](../../parallel/concrt/codesnippet/cpp/best-practices-in-the-parallel-patterns-library_7.cpp)]  
   
- Поскольку параллельные алгоритмы используют группы задач, когда одна из параллельных итераций отменяет родительскую группу задач, общая задача также отменяется. Полную версию этого примера, в разделе [Практическое руководство: использование отмены для выхода из параллельного цикла](../../parallel/concrt/how-to-use-cancellation-to-break-from-a-parallel-loop.md).  
+ Поскольку параллельные алгоритмы используют группы задач, когда одна из параллельных итераций отменяет родительскую группу задач, общая задача также отменяется. Полную версию этого примера см. в разделе [как: использование отмены для выхода из параллельного цикла](../../parallel/concrt/how-to-use-cancellation-to-break-from-a-parallel-loop.md).  
   
- Хотя обработка исключений является менее эффективным способом отмены параллельной работы, чем механизм отмены, существуют случаи, в которых лучше применять обработку исключений. Например, следующий метод, `for_all`, рекурсивно выполняет рабочую функцию для каждого узла структуры `tree`. В этом примере `_children` данные-член [std::list](../../standard-library/list-class.md) содержащий `tree` объектов.  
+ Хотя обработка исключений является менее эффективным способом отмены параллельной работы, чем механизм отмены, существуют случаи, в которых лучше применять обработку исключений. Например, следующий метод, `for_all`, рекурсивно выполняет рабочую функцию для каждого узла структуры `tree`. В этом примере `_children` член данных — [std::list](../../standard-library/list-class.md) , содержащий `tree` объектов.  
   
- [!CODE [concrt-task-tree-search#6](../CodeSnippet/VS_Snippets_ConcRT/concrt-task-tree-search#6)]  
+ [!code-cpp[concrt-task-tree-search#6](../../parallel/concrt/codesnippet/cpp/best-practices-in-the-parallel-patterns-library_8.cpp)]  
   
  Вызывающий объект метода `tree::for_all` может создать исключение, если ему не требуется вызывать рабочую функцию для каждого элемента дерева. В следующем примере показана функция `search_for_value`, которая выполняет поиск значения в предоставленном объекте `tree`. Функция `search_for_value` использует рабочую функцию, которая создает исключение, если текущий элемент дерева соответствует предоставленному значению. Функция `search_for_value` использует блок `try-catch`, чтобы зафиксировать исключение и вывести результат на консоль.  
   
- [!CODE [concrt-task-tree-search#3](../CodeSnippet/VS_Snippets_ConcRT/concrt-task-tree-search#3)]  
+ [!code-cpp[concrt-task-tree-search#3](../../parallel/concrt/codesnippet/cpp/best-practices-in-the-parallel-patterns-library_9.cpp)]  
   
- Полную версию этого примера, см. [Практическое руководство: использование обработки исключений для выхода из параллельного цикла](../Topic/How%20to:%20Use%20Exception%20Handling%20to%20Break%20from%20a%20Parallel%20Loop.md).  
+ Полную версию этого примера см. в разделе [как: использование обработки исключений для выхода из параллельного цикла](../../parallel/concrt/how-to-use-exception-handling-to-break-from-a-parallel-loop.md).  
   
- Дополнительные сведения об отмене и механизма обработки исключений, предоставляемых PPL см. в разделе [отмены](../Topic/Exception%20Handling%20in%20the%20Concurrency%20Runtime.md#cancellation_in_the_ppl) и [обработку исключений](../Topic/Exception%20Handling%20in%20the%20Concurrency%20Runtime.md).  
+ Более общие сведения о отмены и механизма обработки исключений, предоставляемых библиотекой PPL см. в разделе [Отмена в PPL](cancellation-in-the-ppl.md) и [обработка исключений](../../parallel/concrt/exception-handling-in-the-concurrency-runtime.md).  
   
  [[В начало](#top)]  
   
-##  <a name="a-nameobject-destructiona-understand-how-cancellation-and-exception-handling-affect-object-destruction"></a><a name="object-destruction"></a> Понять, как отмена и обработка исключений влияют на уничтожение объектов  
+##  <a name="object-destruction"></a>Понять, как отмена и обработка исключений влияет на уничтожение объектов  
  В дереве параллельной работы отмененная задача предотвращает запуск дочерних задач. Это может привести к проблемам, если одна из дочерних задач выполняет операцию, важную для приложения, например высвобождает ресурс. Кроме того, отмена задачи может привести к тому, что исключение распространится через деструктор объектов и вызовет неопределенное поведение в приложении.  
   
  В следующем примере класс `Resource` описывает ресурс, а класс `Container` — контейнер, содержащий ресурсы. В его деструкторе класс `Container` вызывает метод `cleanup` для двух из его членов `Resource` в параллельном режиме, а затем вызывает метод `cleanup` для третьего члена `Resource`.  
   
- [!code-cpp[concrt-parallel-resource-destruction#1](../../parallel/concrt/codesnippet/CPP/best-practices-in-the-parallel-patterns-library_7.h)]  
+ [!code-cpp[concrt-parallel-resource-destruction#1](../../parallel/concrt/codesnippet/cpp/best-practices-in-the-parallel-patterns-library_10.h)]  
   
- Несмотря на то что эта схема сама по себе не представляет никаких проблем, рассмотрим следующий код, выполняющий две задачи параллельно. Первая задача создает объект `Container`, а вторая задача отменяет общую задачу. Для иллюстрации в примере используются два [concurrency::event](../Topic/event%20Class.md) объекты, чтобы убедиться в том, что Отмена происходила после `Container` объект создается и что `Container` был уничтожен после операции отмены.  
+ Несмотря на то что эта схема сама по себе не представляет никаких проблем, рассмотрим следующий код, выполняющий две задачи параллельно. Первая задача создает объект `Container`, а вторая задача отменяет общую задачу. Для иллюстрации в примере используются два [concurrency::event](../../parallel/concrt/reference/event-class.md) объектов, чтобы убедиться в том, что Отмена происходила после `Container` объект создается и что `Container` объект уничтожается после отмены Операция выполняется.  
   
- [!code-cpp[concrt-parallel-resource-destruction#2](../../parallel/concrt/codesnippet/CPP/best-practices-in-the-parallel-patterns-library_8.cpp)]  
+ [!code-cpp[concrt-parallel-resource-destruction#2](../../parallel/concrt/codesnippet/cpp/best-practices-in-the-parallel-patterns-library_11.cpp)]  
   
  В этом примере выводятся следующие данные:  
   
@@ -141,7 +148,8 @@ Container 1: Freeing resources...Exiting program...
   
  Данный пример кода содержит следующие проблемы, которые могут привести к неожиданному поведению.  
   
--   Отмена родительской задачи приводит к дочерней задачей, вызов [concurrency::parallel_invoke](../Topic/parallel_invoke%20Function.md), которое подлежит отмене. Таким образом, эти два ресурса не высвобождаются.  
+-   Отмена родительской задачи приводит к дочерней задачей, вызов [concurrency::parallel_invoke](reference/concurrency-namespace-functions.md#parallel_invoke), которое подлежит отмене. Таким образом, эти два ресурса не высвобождаются.  
+
   
 -   Отмена родительской задачи приводит к тому, что дочерняя задача создает внутреннее исключение. Поскольку деструктор `Container` не обрабатывает это исключение, оно распространяется вверх и третий ресурс не высвобождается.  
   
@@ -151,120 +159,133 @@ Container 1: Freeing resources...Exiting program...
   
  [[В начало](#top)]  
   
-##  <a name="a-namerepeated-blockinga-do-not-block-repeatedly-in-a-parallel-loop"></a><a name="repeated-blocking"></a> Не выполняйте многократную блокировку в параллельном цикле  
- Параллельный цикл, например [concurrency::parallel_for](../Topic/parallel_for%20Function.md) или [concurrency::parallel_for_each](../Topic/parallel_for_each%20Function.md) определяется затратами на блокирование операций может вынудить среду выполнения для создания большого количества потоков за короткое время.  
+##  <a name="repeated-blocking"></a>Не применяйте блокировку несколько раз в параллельном цикле  
+
+ Параллельный цикл, например [concurrency::parallel_for](reference/concurrency-namespace-functions.md#parallel_for) или [concurrency::parallel_for_each](reference/concurrency-namespace-functions.md#parallel_for_each) , в котором преобладают блокировки операций может привести к выполнения создает много потоков за короткое время.  
+
   
  Среда выполнения с параллелизмом выполняет дополнительную работу, когда задача завершается или выполняет совместную блокировку либо выход. Когда одна итерация параллельного цикла блокируется, среда выполнения может начать другую итерацию. Если нет свободных бездействующих потоков, среда выполнения создает новый поток.  
   
  В случае блокировки тела параллельного цикла, этот механизм позволяет увеличить производительность общей задачи. Однако, если блокируется много итераций, среда выполнения может создавать много потоков для выполнения дополнительной работы. Это может привести к условиям нехватки памяти или неэффективного использования аппаратных ресурсов.  
   
- Рассмотрим следующий пример, который вызывает [concurrency::send](../Topic/send%20Function.md) в каждой итерации `parallel_for` цикла. Поскольку функция `send` выполняет совместную блокировку, среда выполнения создает новый поток для выполнения дополнительной работы при каждом вызове `send`.  
+ Рассмотрим следующий пример, который вызывает [concurrency::send](reference/concurrency-namespace-functions.md#send) функции в каждой итерации `parallel_for` цикла. Поскольку функция `send` выполняет совместную блокировку, среда выполнения создает новый поток для выполнения дополнительной работы при каждом вызове `send`.  
   
- [!CODE [concrt-repeated-blocking#1](../CodeSnippet/VS_Snippets_ConcRT/concrt-repeated-blocking#1)]  
+ [!code-cpp[concrt-repeated-blocking#1](../../parallel/concrt/codesnippet/cpp/best-practices-in-the-parallel-patterns-library_12.cpp)]  
   
  Рекомендуется выполнить рефакторинг кода, чтобы избежать этой ситуации. В этом примере показано, как можно избежать создания дополнительных потоков, вызвав функцию `send` в последовательном цикле `for`.  
   
  [[В начало](#top)]  
   
-##  <a name="a-nameblockinga-do-not-perform-blocking-operations-when-you-cancel-parallel-work"></a><a name="blocking"></a> Не выполняйте операции блокировки при отмене параллельных задач  
- По возможности не выполняйте операции блокировки перед вызовом метода [Concurrency::task_group:: Cancel](../Topic/task_group::cancel%20Method.md) или [Concurrency::structured_task_group:: Cancel](../Topic/structured_task_group::cancel%20Method.md) для отмены параллельной работы.  
+##  <a name="blocking"></a>Не выполняйте операции блокировки при отмене параллельных работ  
+
+ По возможности не выполняйте операции блокировки до вызова метода [Concurrency::task_group:: Cancel](reference/task-group-class.md#cancel) или [Concurrency::structured_task_group:: Cancel](reference/structured-task-group-class.md#cancel) метода для отмены параллельной работы.  
+
+
   
  Когда задача выполняет операцию совместной блокировки, среда выполнения может выполнять другую работу, пока первая задача ожидает получения данных. Среда выполнения переносит выполнение ожидающей задачи на момент после разблокирования. Как правило, среда выполнения сначала переносит выполнение задач, разблокированных недавно, а затем — задач, разблокированных ранее. Поэтому среда выполнения может запланировать лишнюю работу во время операции блокировки, что приводит к снижению производительности. Соответственно, при выполнении операции блокировки до отмены параллельной работы операция блокировки может задержать вызов метода `cancel`. В этом случае другие задачи выполняют лишнюю работу.  
   
  Рассмотрим следующий пример, определяющий функцию `parallel_find_answer`, которая выполняет поиск элемента указанного массива, удовлетворяющего заданной предикативной функции. Когда предикативная функция возвращает `true`, функция параллельной работы создает объект `Answer` и отменяет общую задачу.  
   
- [!code-cpp[concrt-blocking-cancel#1](../../parallel/concrt/codesnippet/CPP/best-practices-in-the-parallel-patterns-library_9.cpp)]  
+ [!code-cpp[concrt-blocking-cancel#1](../../parallel/concrt/codesnippet/cpp/best-practices-in-the-parallel-patterns-library_13.cpp)]  
   
- Оператор `new` выполняет выделение кучи, которое может блокироваться. Среда выполнения выполняет другую работу, только в том случае, когда задача выполняет вызов совместной блокировки, например вызов [Concurrency::critical_section:: lock](../Topic/critical_section::lock%20Method.md).  
+
+
+ Оператор `new` выполняет выделение кучи, которое может блокироваться. Среда выполнения выполняет другую работу, только в том случае, когда задача выполняет вызов совместной блокировки, например вызов [Concurrency::critical_section:: lock](reference/critical-section-class.md#lock).  
+
+
   
  В следующем примере показано, как предотвратить лишнюю работу и тем самым повысить производительность. Этот пример отменяет группу задач до выделения хранилища для объекта `Answer`.  
   
- [!code-cpp[concrt-blocking-cancel#2](../../parallel/concrt/codesnippet/CPP/best-practices-in-the-parallel-patterns-library_10.cpp)]  
+ [!code-cpp[concrt-blocking-cancel#2](../../parallel/concrt/codesnippet/cpp/best-practices-in-the-parallel-patterns-library_14.cpp)]  
   
  [[В начало](#top)]  
   
-##  <a name="a-nameshared-writesa-do-not-write-to-shared-data-in-a-parallel-loop"></a><a name="shared-writes"></a> Не выполняйте запись в общие данные в параллельном цикле  
- Среда выполнения с параллелизмом предоставляет несколько структур данных, например, [concurrency::critical_section](../../parallel/concrt/reference/critical-section-class.md), синхронизирующих параллельный доступ к общим данным. Эти структуры данных удобны во многих случаях, например, если нескольким задачам нечасто нужен общий доступ к ресурсу.  
+##  <a name="shared-writes"></a>Не выполняйте запись в общие данные в параллельном цикле  
+ Среда выполнения с параллелизмом предоставляет несколько структур данных, например [concurrency::critical_section](../../parallel/concrt/reference/critical-section-class.md), синхронизирующих параллельный доступ к общим данным. Эти структуры данных удобны во многих случаях, например, если нескольким задачам нечасто нужен общий доступ к ресурсу.  
   
- Рассмотрим следующий пример, использующий [concurrency::parallel_for_each](../Topic/parallel_for_each%20Function.md) алгоритм и `critical_section` для вычисления количества простых чисел в [std::array](../../standard-library/array-class-stl.md) объекта. Этот пример нельзя масштабировать, так как каждый поток должен ждать доступа к общей переменной `prime_sum`.  
+ Рассмотрим следующий пример, использующий [concurrency::parallel_for_each](reference/concurrency-namespace-functions.md#parallel_for_each) алгоритм и `critical_section` для вычисления количества простых чисел в [std::array](../../standard-library/array-class-stl.md) объекта. Этот пример нельзя масштабировать, так как каждый поток должен ждать доступа к общей переменной `prime_sum`.  
+
   
- [!code-cpp[concrt-parallel-sum-of-primes#2](../../parallel/concrt/codesnippet/CPP/best-practices-in-the-parallel-patterns-library_11.cpp)]  
+ [!code-cpp[concrt-parallel-sum-of-primes#2](../../parallel/concrt/codesnippet/cpp/best-practices-in-the-parallel-patterns-library_15.cpp)]  
   
  Этот пример также может привести к снижению производительности, поскольку частое выполнение операции блокировки эффективно сериализует цикл. Кроме того, когда объект среды выполнения с параллелизмом выполняет операцию блокировки, планировщик может создавать дополнительный поток, чтобы выполнять другую работу, пока первый поток ожидает поступления данных. Если среда выполнения создает много потоков (поскольку многие задачи ожидают доступ к общим данным), может наблюдаться снижение производительности или переход приложения в состояние нехватки ресурсов.  
   
  Библиотека PPL определяет [concurrency::combinable](../../parallel/concrt/reference/combinable-class.md) класс, который помогает исключить состояние с общим доступом, предоставляя доступ к общим ресурсам без блокировок. Класс `combinable` предоставляет локальное для потока хранилище, которое позволяет выполнять детализированные вычисления и объединять их в общий результат. Объект `combinable` можно рассматривать как переменную уменьшения.  
   
- Следующий пример изменяет предыдущий, используя объект `combinable` вместо объекта `critical_section` для вычисления суммы. Этот пример масштабируется, так как каждый поток содержит свою собственную локальную копию суммы. В этом примере используется [Concurrency::combinable:: Combine](../Topic/combinable::combine%20Method.md) для объединения вычислений в конечный результат.  
+ Следующий пример изменяет предыдущий, используя объект `combinable` вместо объекта `critical_section` для вычисления суммы. Этот пример масштабируется, так как каждый поток содержит свою собственную локальную копию суммы. В этом примере используется [Concurrency::combinable::](reference/combinable-class.md#combine) метод для слияния локальных вычислений в конечный результат.  
+
   
- [!code-cpp[concrt-parallel-sum-of-primes#3](../../parallel/concrt/codesnippet/CPP/best-practices-in-the-parallel-patterns-library_12.cpp)]  
+ [!code-cpp[concrt-parallel-sum-of-primes#3](../../parallel/concrt/codesnippet/cpp/best-practices-in-the-parallel-patterns-library_16.cpp)]  
   
- Полную версию этого примера, в разделе [Практическое руководство: использование класса combinable для повышения производительности](../../parallel/concrt/how-to-use-combinable-to-improve-performance.md). Дополнительные сведения о `combinable` см. в разделе [Параллельные контейнеры и объекты](../../parallel/concrt/parallel-containers-and-objects.md).  
+ Полную версию этого примера см. в разделе [как: использование класса combinable для повышения производительности](../../parallel/concrt/how-to-use-combinable-to-improve-performance.md). Дополнительные сведения о `combinable` см. в описании [параллельные контейнеры и объекты](../../parallel/concrt/parallel-containers-and-objects.md).  
   
  [[В начало](#top)]  
   
-##  <a name="a-namefalse-sharinga-when-possible-avoid-false-sharing"></a><a name="false-sharing"></a> По возможности избегайте ложного совместного доступа  
- *Ложный совместный доступ* возникает, когда несколько параллельных задач, запущенных в различных процессорах записать переменные, которые находятся в той же строке кэша. Когда одна задача записывает данные в одну из переменных, строка кэша для обоих переменных становится недействительной. Каждый процессор должен перезагружать строку кэша каждый раз, когда строка кэша становится недействительной. Таким образом, ложное совместное использование может привести к снижению производительности приложения.  
+##  <a name="false-sharing"></a>По возможности избегайте ложного совместного использования  
+ *Ложное совместное использование* возникает, когда несколько параллельных задач, выполняемых на отдельных процессорах запись в переменные, которые находятся в одной строке кэша. Когда одна задача записывает данные в одну из переменных, строка кэша для обоих переменных становится недействительной. Каждый процессор должен перезагружать строку кэша каждый раз, когда строка кэша становится недействительной. Таким образом, ложное совместное использование может привести к снижению производительности приложения.  
   
  Следующий простой пример демонстрирует две параллельные задачи, увеличивающие значение общей переменной счетчика.  
   
- [!code-cpp[concrt-false-sharing#1](../../parallel/concrt/codesnippet/CPP/best-practices-in-the-parallel-patterns-library_13.cpp)]  
+ [!code-cpp[concrt-false-sharing#1](../../parallel/concrt/codesnippet/cpp/best-practices-in-the-parallel-patterns-library_17.cpp)]  
   
  Чтобы исключить совместное использование данных двумя задачами, можно изменить этот пример для использования двух переменных счетчика. В этом примере окончательное значение счетчика вычисляется после выполнения задач. Тем не менее этот пример иллюстрирует ложное совместное использование, так как переменные `count1` и `count2`, скорее всего, расположены в одной и той же строке кэша.  
   
- [!code-cpp[concrt-false-sharing#2](../../parallel/concrt/codesnippet/CPP/best-practices-in-the-parallel-patterns-library_14.cpp)]  
+ [!code-cpp[concrt-false-sharing#2](../../parallel/concrt/codesnippet/cpp/best-practices-in-the-parallel-patterns-library_18.cpp)]  
   
  Одним из способов исключить ложное совместное использование является использование переменных счетчика в разных строках кэша. Следующий пример выравнивает переменные `count1` и `count2` в границах 64 байтов.  
   
- [!code-cpp[concrt-false-sharing#3](../../parallel/concrt/codesnippet/CPP/best-practices-in-the-parallel-patterns-library_15.cpp)]  
+ [!code-cpp[concrt-false-sharing#3](../../parallel/concrt/codesnippet/cpp/best-practices-in-the-parallel-patterns-library_19.cpp)]  
   
  В этом примере предполагается, что размер кэша памяти — 64 байта или менее.  
   
- Мы рекомендуем использовать [concurrency::combinable](../../parallel/concrt/reference/combinable-class.md) класса, если необходимо использовать данные совместно задачи. Класс `combinable` создает локальные для потока переменные таким образом, что ложное совместное использование становится менее вероятным. Дополнительные сведения о `combinable` см. в разделе [Параллельные контейнеры и объекты](../../parallel/concrt/parallel-containers-and-objects.md).  
+ Мы рекомендуем использовать [concurrency::combinable](../../parallel/concrt/reference/combinable-class.md) класса, если необходимо использовать данные совместно задачи. Класс `combinable` создает локальные для потока переменные таким образом, что ложное совместное использование становится менее вероятным. Дополнительные сведения о `combinable` см. в описании [параллельные контейнеры и объекты](../../parallel/concrt/parallel-containers-and-objects.md).  
   
  [[В начало](#top)]  
   
-##  <a name="a-namelifetimea-make-sure-that-variables-are-valid-throughout-the-lifetime-of-a-task"></a><a name="lifetime"></a> Убедитесь, что переменные являются допустимыми в течение времени существования задачи  
+##  <a name="lifetime"></a>Убедитесь, что переменные допустимы на протяжении времени существования задачи  
  При предоставлении лямбда-выражения группе задач или параллельному алгоритму предложение фиксации указывает, получает ли тело лямбда-выражения доступ к переменным во внешней области по значению или по ссылке. При передаче переменных в лямбда-выражение по ссылке необходимо обеспечить сохранение существования этой переменной до завершения задачи.  
   
  Рассмотрим следующий пример, определяющий класс `object` и функцию `perform_action`. Функция `perform_action` создает переменную `object` и выполняет некоторые действия с этой переменной асинхронно. Поскольку нет гарантий, что выполнение задачи завершится до возвращения данных функцией `perform_action`, можно ожидать сбой или непредвиденное поведение программы в случае уничтожения переменной `object` во время выполнения задачи.  
   
- [!CODE [concrt-lambda-lifetime#1](../CodeSnippet/VS_Snippets_ConcRT/concrt-lambda-lifetime#1)]  
+ [!code-cpp[concrt-lambda-lifetime#1](../../parallel/concrt/codesnippet/cpp/best-practices-in-the-parallel-patterns-library_20.cpp)]  
   
  В зависимости от требований приложения можно использовать один из следующих способов, чтобы гарантировать, что переменные будут оставаться действительными на протяжении всего времени существования каждой задачи.  
   
  В следующем примере переменная `object` передается задаче по значению. Поэтому задача работает с собственной копией переменной.  
   
- [!CODE [concrt-lambda-lifetime#2](../CodeSnippet/VS_Snippets_ConcRT/concrt-lambda-lifetime#2)]  
+ [!code-cpp[concrt-lambda-lifetime#2](../../parallel/concrt/codesnippet/cpp/best-practices-in-the-parallel-patterns-library_21.cpp)]  
   
  Поскольку переменная `object` передается по значению, любые изменения состояния этой переменной не отражаются в исходной копии.  
   
- В следующем примере используется [Concurrency::task_group:: wait](../Topic/task_group::wait%20Method.md) метод, чтобы убедиться в том, что до завершения задачи `perform_action` возврата функцией.  
+ В следующем примере используется [Concurrency::task_group:: wait](reference/task-group-class.md#wait) метод, чтобы убедиться в том, что задача завершается перед `perform_action` возврата функцией.  
+
+
   
- [!CODE [concrt-lambda-lifetime#3](../CodeSnippet/VS_Snippets_ConcRT/concrt-lambda-lifetime#3)]  
+ [!code-cpp[concrt-lambda-lifetime#3](../../parallel/concrt/codesnippet/cpp/best-practices-in-the-parallel-patterns-library_22.cpp)]  
   
  Так как задача завершается до возвращения данных функцией, функция `perform_action` больше не может обеспечить асинхронное поведение.  
   
  В следующем примере демонстрируется изменение функции `perform_action`, чтобы использовать ссылку на переменную `object`. Вызывающий объект должен гарантировать, что время существования переменной `object` будет действительно до завершения задачи.  
   
- [!CODE [concrt-lambda-lifetime#4](../CodeSnippet/VS_Snippets_ConcRT/concrt-lambda-lifetime#4)]  
+ [!code-cpp[concrt-lambda-lifetime#4](../../parallel/concrt/codesnippet/cpp/best-practices-in-the-parallel-patterns-library_23.cpp)]  
   
  Кроме того, для управления временем существования объекта, передаваемого в группу задач или параллельный алгоритм, можно использовать указатель.  
   
- Дополнительные сведения о лямбда-выражениях см. в разделе [лямбда-выражения](../../cpp/lambda-expressions-in-cpp.md).  
+ Дополнительные сведения о лямбда-выражениях см. в разделе [Лямбда-выражения](../../cpp/lambda-expressions-in-cpp.md).  
   
  [[В начало](#top)]  
   
 ## <a name="see-also"></a>См. также  
- [Рекомендации по времени выполнения параллелизма](../Topic/Concurrency%20Runtime%20Best%20Practices.md)   
- [Библиотека параллельных шаблонов (PPL)](../../parallel/concrt/parallel-patterns-library-ppl.md)   
+ [Рекомендации для среды выполнения с параллелизмом](../../parallel/concrt/concurrency-runtime-best-practices.md)   
+ [Библиотека параллельных шаблонов](../../parallel/concrt/parallel-patterns-library-ppl.md)   
  [Параллельные контейнеры и объекты](../../parallel/concrt/parallel-containers-and-objects.md)   
- [Параллельные алгоритмы](../Topic/Parallel%20Algorithms.md)   
- [Отмена](../Topic/Exception%20Handling%20in%20the%20Concurrency%20Runtime.md#cancellation_in_the_ppl)   
- [Обработка исключений](../Topic/Exception%20Handling%20in%20the%20Concurrency%20Runtime.md)   
+ [Параллельные алгоритмы](../../parallel/concrt/parallel-algorithms.md)   
+ [Отмена в библиотеке параллельных Шаблонов](cancellation-in-the-ppl.md)   
+ [Обработка исключений](../../parallel/concrt/exception-handling-in-the-concurrency-runtime.md)   
  [Пошаговое руководство: Создание сети обработки изображений](../../parallel/concrt/walkthrough-creating-an-image-processing-network.md)   
- [Практическое руководство: использование функции parallel_invoke для написания программы параллельной сортировки](../../parallel/concrt/how-to-use-parallel-invoke-to-write-a-parallel-sort-routine.md)   
- [Практическое руководство: использование отмены для выхода из параллельного цикла](../../parallel/concrt/how-to-use-cancellation-to-break-from-a-parallel-loop.md)   
- [Практическое руководство: использование класса combinable для повышения производительности](../../parallel/concrt/how-to-use-combinable-to-improve-performance.md)   
- [Рекомендации в библиотеке асинхронных агентов](../Topic/Best%20Practices%20in%20the%20Asynchronous%20Agents%20Library.md)   
+ [Как: использование функции parallel_invoke для написания программы параллельной сортировки](../../parallel/concrt/how-to-use-parallel-invoke-to-write-a-parallel-sort-routine.md)   
+ [Как: использование отмены для выхода из параллельного цикла](../../parallel/concrt/how-to-use-cancellation-to-break-from-a-parallel-loop.md)   
+ [Как: использование класса combinable для повышения производительности](../../parallel/concrt/how-to-use-combinable-to-improve-performance.md)   
+ [Рекомендации в библиотеке асинхронных агентов](../../parallel/concrt/best-practices-in-the-asynchronous-agents-library.md)   
  [Общие рекомендации в среде выполнения с параллелизмом](../../parallel/concrt/general-best-practices-in-the-concurrency-runtime.md)
 

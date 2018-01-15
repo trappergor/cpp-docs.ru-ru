@@ -47,11 +47,12 @@ caps.latest.revision: "17"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: bd687a396b6538d73290a305959ba95f6b49c7e1
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 26763a16c4de59f33622ea904ea8aa132fe0d5f2
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="ccustominterpolator-class"></a>Класс CCustomInterpolator
 Реализует базовый интерполятор.  
@@ -62,17 +63,17 @@ ms.lasthandoff: 10/24/2017
 class CCustomInterpolator;  
 ```  
   
-## <a name="members"></a>Члены  
+## <a name="members"></a>Участники  
   
 ### <a name="public-constructors"></a>Открытые конструкторы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[CCustomInterpolator::CCustomInterpolator](#ccustominterpolator)|Перегружен. Создает объект пользовательского интерполятора и инициализирует длительность и скорости указанные значения.|  
   
 ### <a name="public-methods"></a>Открытые методы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[CCustomInterpolator::GetDependencies](#getdependencies)|Возвращает интерполятора зависимости.|  
 |[CCustomInterpolator::GetDuration](#getduration)|Возвращает продолжительность интерполятор.|  
@@ -85,7 +86,7 @@ class CCustomInterpolator;
   
 ### <a name="protected-data-members"></a>Защищенные члены данных  
   
-|Имя|Описание|  
+|name|Описание:|  
 |----------|-----------------|  
 |[CCustomInterpolator::m_currentValue](#m_currentvalue)|Интерполированное значение.|  
 |[CCustomInterpolator::m_currentVelocity](#m_currentvelocity)|Интерполированные скорости.|  

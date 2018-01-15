@@ -4,39 +4,22 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- C++
-helpviewer_keywords:
-- insertion operators
+dev_langs: C++
+helpviewer_keywords: insertion operators
 ms.assetid: cdefe986-6548-4cd1-8a67-b431d7d36a1c
-caps.latest.revision: 8
+caps.latest.revision: "8"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
-ms.openlocfilehash: 96d388b7ddfdf561e016b4e74ffeb9ca072c7cb2
-ms.contentlocale: ru-ru
-ms.lasthandoff: 04/29/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: 9af3a0fe28e0b5d26f17f16a6e217dce9fd82969
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="using-insertion-operators-and-controlling-format"></a>Использование операторов вставки и управление форматом
 В этой статье описывается, как управлять форматом и как создавать операторы вставки для собственных классов. Оператор вставки (**<<**), который изначально включен во все стандартные типы данных C++, отправляет байты в объект потока вывода. Операторы вставки работают с предопределенными "манипуляторами" — элементами, которые изменяют формат целочисленных аргументов, заданный по умолчанию.  
@@ -238,5 +221,4 @@ std::cout <<extracted;   //   This
   
 ## <a name="see-also"></a>См. также  
  [Потоки вывода](../standard-library/output-streams.md)   
-
 

@@ -1,63 +1,66 @@
 ---
-title: "Choosing a Transparent or Opaque Background (Image Editor for Icons) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "opaque backgrounds"
-  - "background colors, images"
-  - "colors [C++], image"
-  - "Image editor [C++], transparent or opague backgrounds"
-  - "background images"
-  - "images [C++], transparency"
-  - "images [C++], opaque background"
-  - "transparent backgrounds"
-  - "transparency, background"
-  - "transparent backgrounds, images"
+title: "Выбор прозрачного и непрозрачного фона (редактор изображений для значков) | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- opaque backgrounds
+- background colors, images
+- colors [C++], image
+- Image editor [C++], transparent or opague backgrounds
+- background images
+- images [C++], transparency
+- images [C++], opaque background
+- transparent backgrounds
+- transparency, background
+- transparent backgrounds, images
 ms.assetid: 61b743d9-c86b-405d-9a81-0806431b4363
-caps.latest.revision: 6
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 6
+caps.latest.revision: "6"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: 4e73ac7122b31ab6880d7d27387937113dee70f9
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 12/21/2017
 ---
-# Choosing a Transparent or Opaque Background (Image Editor for Icons)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Когда вы передвигаете или копируете выбранный фрагмент изображения, пиксели, которые совпадают по цвету с текущим фоном, по умолчанию становятся прозрачными, они не скрывают пиксели в целевом расположении.  
+# <a name="choosing-a-transparent-or-opaque-background-image-editor-for-icons"></a>Выбор прозрачного и непрозрачного фона (Редактор изображений для значков)
+При перемещении или копировании выбор из образа, точки в целевом, которые соответствуют текущим цветом фона, по умолчанию являются прозрачной. они не мешает пикселей в целевом расположении.  
   
- Вы можете перейти от прозрачного фона \(установленного по умолчанию\) к непрозрачному и обратно.  Когда вы используете инструмент выделения, параметры **прозрачного фона** и **непрозрачного фона** появляются в селекторе параметров панели инструментов **редактора изображений** \(как показано ниже\).  
+ Переключение непрозрачный фон с прозрачным фоном (по умолчанию) и обратно. При использовании средства выбора **прозрачный фон** и **непрозрачный фон** параметры отображаются в селекторе параметров на **редактора изображений** панель инструментов (как показано ниже).  
   
- ![Параметры фона — непрозрачный и прозрачный](../Image/vcImageEditorOpaqTranspBack.gif "vcImageEditorOpaqTranspBack")  
-Параметры прозрачности и непрозрачности в панели инструментов редактора изображений  
+ ![Параметры фона &#45; прозрачный или непрозрачный](../windows/media/vcimageeditoropaqtranspback.gif "vcImageEditorOpaqTranspBack")  
+Параметры прозрачности и непрозрачности на панели инструментов редактора изображений  
   
-### Переключиться между прозрачным и непрозрачным фоном  
+### <a name="to-switch-between-a-transparent-and-opaque-background"></a>Для переключения между прозрачного и непрозрачного фона  
   
-1.  В панели инструментов **редактора изображений**, щелкните селектор **Параметр**, затем выберите нужный фон:  
+1.  В **редактора изображений** инструментов, нажмите кнопку **параметр** селектора и затем выберите нужный фон:  
   
-    -   **Непрозрачный фон \(O\)**: существующее изображение замещается всеми частями выбранного фрагмента.  
+    -   **Непрозрачный фон (O)**: существующее изображение замещается все части выбранного фрагмента.  
   
-    -   **Прозрачный фон \(T\)**: существующее изображение видно сквозь части выбранного фрагмента, совпадающего по цвету с фоном.  
+    -   **Прозрачный фон (T)**: существующее изображение видно сквозь части выбранного фрагмента, которые соответствуют текущим цветом фона.  
   
- \- или \-  
+ \- или -  
   
--   В меню **Изображение** выберите или очистите **Нарисовать непрозрачный**.  
+-   На **изображения** меню, установите или снимите **непрозрачный**.  
   
- Вы можете изменить цвет фона, когда выбранный фрагмент уже участвует в выполнении операции, определяющей, какие части изображения будут прозрачными.  
+ Можно изменить цвет фона, во время выделения уже находится в определяющей, какие части изображения являются прозрачными.  
   
- Сведения о добавлении ресурсов в управляемые проекты см. в разделе [Ресурсы приложений](../Topic/Resources%20in%20Desktop%20Apps.md) *Руководства разработчика .NET Framework*. Сведения о том, как вручную добавлять файлы ресурсов в управляемые проекты, осуществлять доступ к ресурсам, отображать статические ресурсы и присваивать строки ресурсов свойствам см. в разделах [Пошаговое руководство. Локализация приложений Windows Forms](http://msdn.microsoft.com/ru-ru/9a96220d-a19b-4de0-9f48-01e5d82679e5) и [Walkthrough: Using Resources for Localization with ASP.NET](../Topic/Walkthrough:%20Using%20Resources%20for%20Localization%20with%20ASP.NET.md).  
+ Сведения о добавлении ресурсов в управляемые проекты см. в разделе [ресурсы в классических приложениях](/dotnet/framework/resources/index) в *руководства разработчика .NET Framework.* Сведения о вручную добавлять файлы ресурсов в управляемые проекты, осуществлять доступ к ресурсам, отображать статические ресурсы и присваивать строки ресурсов свойствам см. в разделе [Создание файлов ресурсов для приложений рабочего стола](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Сведения о глобализации и локализации ресурсов в управляемых приложениях см. в разделе [Globalizing и локализация приложений .NET Framework](/dotnet/standard/globalization-localization/index).  
   
  Требования  
   
- None  
+ Нет  
   
-## См. также  
- [Accelerator Keys](../mfc/accelerator-keys-image-editor-for-icons.md)   
- [Working with Color](../mfc/working-with-color-image-editor-for-icons.md)
+## <a name="see-also"></a>См. также  
+ [Сочетания клавиш](../windows/accelerator-keys-image-editor-for-icons.md)   
+ [Работа с цветом](../windows/working-with-color-image-editor-for-icons.md)

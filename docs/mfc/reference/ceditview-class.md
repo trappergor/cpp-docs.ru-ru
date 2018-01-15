@@ -51,11 +51,12 @@ caps.latest.revision: "25"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 38b8389418657499d43263399f1a05b3a0326c84
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 78aa34f1790b2e86dae183b96c88b4ed35483927
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="ceditview-class"></a>Класс CEditView
 Тип класса представления, который предоставляет функциональные возможности элемента управления "поле ввода" Windows и может использоваться для реализации простой функциональности текстового редактора.  
@@ -66,17 +67,17 @@ ms.lasthandoff: 10/24/2017
 class CEditView : public CCtrlView  
 ```  
   
-## <a name="members"></a>Члены  
+## <a name="members"></a>Участники  
   
 ### <a name="public-constructors"></a>Открытые конструкторы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[CEditView::CEditView](#ceditview)|Создает объект типа `CEditView`.|  
   
 ### <a name="public-methods"></a>Открытые методы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[CEditView::FindText](#findtext)|Поиск строки в тексте.|  
 |[CEditView::GetBufferLength](#getbufferlength)|Получает длину буфера символов.|  
@@ -92,7 +93,7 @@ class CEditView : public CCtrlView
   
 ### <a name="protected-methods"></a>Защищенные методы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[CEditView::OnFindNext](#onfindnext)|Находит следующее вхождение строки текста.|  
 |[CEditView::OnReplaceAll](#onreplaceall)|Заменяет все вхождения заданной строки новую строку.|  
@@ -101,7 +102,7 @@ class CEditView : public CCtrlView
   
 ### <a name="public-data-members"></a>Открытые члены данных  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[CEditView::dwStyleDefault](#dwstyledefault)|По умолчанию стиль для объектов типа **CEditView.**|  
   

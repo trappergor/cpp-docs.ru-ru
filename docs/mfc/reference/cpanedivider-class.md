@@ -95,11 +95,12 @@ caps.latest.revision: "25"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: ec11a626ef7553a658dfb7384def736039be5179
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 9bf7b8a7cae6a03906a1424b626bde19012dcbb9
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cpanedivider-class"></a>Класс CPaneDivider
 [!INCLUDE[cpp_fp_under_construction](../../mfc/reference/includes/cpp_fp_under_construction_md.md)]  
@@ -112,17 +113,17 @@ ms.lasthandoff: 10/24/2017
 class CPaneDivider : public CBasePane  
 ```  
   
-## <a name="members"></a>Члены  
+## <a name="members"></a>Участники  
   
 ### <a name="public-constructors"></a>Открытые конструкторы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[CPaneDivider::CPaneDivider](#cpanedivider)||  
   
 ### <a name="public-methods"></a>Открытые методы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[CPaneDivider::AddPaneContainer](#addpanecontainer)||  
 |[CPaneDivider::AddPane](#addpane)||  
@@ -161,14 +162,14 @@ class CPaneDivider : public CBasePane
   
 ### <a name="public-methods"></a>Открытые методы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[CPaneDivider::GetPanes](#getpanes)|Возвращает список панелей, которые находятся в [CPaneContainer класса](../../mfc/reference/cpanecontainer-class.md). Этот метод должен вызываться только для разделителей области по умолчанию.|  
 |[CPaneDivider::GetPaneDividers](#getpanedividers)|Возвращает список разделителей области, которые находятся в [CPaneContainer класса](../../mfc/reference/cpanecontainer-class.md). Этот метод должен вызываться только для разделителей области по умолчанию.|  
   
 ### <a name="data-members"></a>Элементы данных  
   
-|Имя|Описание|  
+|name|Описание:|  
 |----------|-----------------|  
 |[CPaneDivider::m_nDefaultWidth](#m_ndefaultwidth)|Задает ширину по умолчанию в пикселях все разделители области в приложении.|  
 |[CPaneDivider::m_pSliderRTC](#m_psliderrtc)|Содержит указатель на сведения о классе среды выполнения о `CPaneDivider`-производного объекта.|  

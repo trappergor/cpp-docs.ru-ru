@@ -17,11 +17,12 @@ caps.latest.revision: "14"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 0fac78eddcdf36ecc295841019f9e3f05e537802
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 9d4997d2d793102119e5021ba1110db2674e1b42
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="mfc-application-wizard"></a>мастер приложений MFC
 Мастер приложений MFC создает приложения, при компиляции реализует базовые возможности приложения Windows исполняемого файла (.exe). Начальное приложение MFC включает (.cpp) исходные файлы C++, файлы ресурсов (RC), файлы заголовков (h) и файл проекта (VCXPROJ). Код, созданный в этих начальных файлах основан на MFC.  
@@ -42,7 +43,7 @@ ms.lasthandoff: 10/24/2017
   
     -   Проект создается с помощью стиль проекта Visual Studio и включает смену визуального стиля.  
   
-    -   Проект использует MFC в общей DLL. Дополнительные сведения см. в разделе [библиотеки DLL в Visual C++](../../build/dlls-in-visual-cpp.md).  
+    -   Проект использует MFC в общей DLL. Дополнительные сведения см. в статье [DLL в Visual C++](../../build/dlls-in-visual-cpp.md).  
   
 -   [Поддержка составных документов, мастер приложений MFC](../../mfc/reference/compound-document-support-mfc-application-wizard.md)  
   

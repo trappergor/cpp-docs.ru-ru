@@ -1,57 +1,55 @@
 ---
-title: "new (новый слот в vtable) (расширения компонентов C++) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/16/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "new - ключевое слово [C++]"
+title: "New (новый слот в vtable) (расширения компонентов C++) | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+dev_langs: C++
+helpviewer_keywords: new keyword [C++]
 ms.assetid: 1a9a5704-f02f-46ae-ad65-f0f2b6dbabc3
-caps.latest.revision: 20
-caps.handback.revision: 18
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "20"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: f208a62fd49e7aea67acf5b7e3e49d3571f8d910
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 12/21/2017
 ---
-# new (новый слот в vtable) (расширения компонентов C++)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Ключевое слово `new` указывает, что виртуальный член получит новую ячейку в таблице vtable.  
+# <a name="new-new-slot-in-vtable--c-component-extensions"></a>new (новый слот в vtable) (расширения компонентов C++)
+`new` Ключевое слово указывает, что виртуальный член получает новую ячейку в таблице vtable.  
   
-> [!NOTE]
->  Ключевое слово `new` имеет много применений и значений.  Дополнительные сведения см. в разделе устранения неточностей [new](../misc/new.md).  
+## <a name="all-runtimes"></a>Все среды выполнения  
+ (Отсутствуют комментарии для этой возможности языка, которая применяется во всех средах выполнения.)  
   
-## Все среды выполнения  
- \(Отсутствует комментарий для этой функции языка, которая применяется ко всем средам выполнения\).  
+## <a name="windows-runtime"></a>Среда выполнения Windows  
+ Не поддерживается в среде выполнения Windows.  
   
-## среда выполнения Windows  
- Не поддерживается в [!INCLUDE[wrt](../atl/reference/includes/wrt_md.md)].  
+## <a name="common-language-runtime"></a>Среда CLR 
+ **Заметки**  
   
-## [!INCLUDE[clr_for_headings](../dotnet/includes/clr_for_headings_md.md)]  
- **Примечания**  
+ В **/CLR** компиляции `new` указывает, что виртуальный член получает новую ячейку в таблице vtable, что функция не переопределяет метод базового класса.  
   
- В компиляции **\/clr** `new` означает, что виртуальный член получит новый слот в vtable; это значит, что функция не переопределяет метод базового класса.  
+ `new`в результате модификатор newslot добавляемый IL-код для функции.  Дополнительные сведения о newslot см. в разделе:  
   
- `new` вызывает модификатор newslot для добавления в IL для функции.  Дополнительные сведения о newslot см. в  
+-   [Метод MethodInfo.GetBaseDefinition](https://msdn.microsoft.com/en-us/library/system.reflection.methodinfo.getbasedefinition.aspx)  
   
--   [\<caps:sentence id\="tgt11" sentenceid\="e9bb59a12f97840a5c3173bb77c6b5b1" class\="tgtSentence"\>Метод MethodInfo.GetBaseDefinition\<\/caps:sentence\>](https://msdn.microsoft.com/en-us/library/system.reflection.methodinfo.getbasedefinition.aspx)  
+-   [Перечисление MethodAttributes](https://msdn.microsoft.com/en-us/library/system.reflection.methodattributes.aspx)  
   
--   [\<caps:sentence id\="tgt12" sentenceid\="f6ceddd85a425f38e7ed06e94a9808a9" class\="tgtSentence"\>Перечисление MethodAttributes\<\/caps:sentence\>](https://msdn.microsoft.com/en-us/library/system.reflection.methodattributes.aspx)  
+### <a name="requirements"></a>Требования  
+ Параметр компилятора: **/clr**  
   
-### Требования  
- Параметр компилятора: **\/clr**  
-  
-### Примеры  
+### <a name="examples"></a>Примеры  
  **Пример**  
   
- В следующем примере показано действие `new`.  
+ В следующем примере показано влияние `new`.  
   
 ```  
 // newslot.cpp  
@@ -100,13 +98,20 @@ int main() {
 }  
 ```  
   
- **Output**  
+ **Вывод**  
   
-  **Вызывается C::f\(\)**  
- **Вызывается D::f\(\)**  
- **Вызывается D::g\(\)**  
- **Вызывается D::g\(\)**  
- **Вызывается E::f\(\)**   
-## См. также  
+```Output  
+C::f() called  
+  
+D::f() called  
+  
+D::g() called  
+  
+D::g() called  
+  
+E::f() called  
+```  
+  
+## <a name="see-also"></a>См. также  
  [Расширения компонентов для платформ среды выполнения](../windows/component-extensions-for-runtime-platforms.md)   
  [Спецификаторы переопределения](../windows/override-specifiers-cpp-component-extensions.md)

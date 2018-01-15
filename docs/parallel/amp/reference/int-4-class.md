@@ -279,11 +279,12 @@ caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 4db3a6a9674792840639340162c09a67851ae68d
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: fa890cf7fc41160b91d77a564328f8f674a11c32
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="int4-class"></a>Класс int_4
 Представляет короткий вектор из четырех целых чисел.  
@@ -294,7 +295,7 @@ ms.lasthandoff: 10/24/2017
 class int_4;  
 ```  
   
-## <a name="members"></a>Члены  
+## <a name="members"></a>Участники  
   
 ### <a name="public-typedefs"></a>Общедоступные определения типов  
   
@@ -304,13 +305,13 @@ class int_4;
   
 ### <a name="public-constructors"></a>Открытые конструкторы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[Конструктор int_4](#ctor)|Перегружен. По умолчанию конструктор инициализирует все элементы с 0.|  
   
 ### <a name="public-methods"></a>Открытые методы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |int_4::get_w||  
 |int_4::get_wx||  
@@ -451,7 +452,7 @@ class int_4;
   
 ### <a name="public-operators"></a>Открытые операторы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |int_4::operator-||  
 |int_4::operator--||  
@@ -471,13 +472,13 @@ class int_4;
   
 ### <a name="public-constants"></a>Открытые константы  
   
-|Имя|Описание|  
+|name|Описание:|  
 |----------|-----------------|  
 |[Размер константы](#int_4__size)||  
   
 ### <a name="public-data-members"></a>Открытые члены данных  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |int_4::a||  
 |int_4::AB||  

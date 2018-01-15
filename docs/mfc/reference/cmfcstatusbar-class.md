@@ -83,11 +83,12 @@ caps.latest.revision: "36"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 734097d8fffcbe21f17b68432d6233a03b11a28a
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: a235b88b676f7cf643a878e9a06408c87b20bcba
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cmfcstatusbar-class"></a>Класс CMFCStatusBar
 `CMFCStatusBar` Класс реализует строку состояния, аналогичную `CStatusBar` класса. Однако класс `CMFCStatusBar` не содержит функции, предоставляемые классом `CStatusBar` , такие как возможность отображать изображения, анимации и индикаторы выполнения, а также возможность реагировать на двойные нажатия мыши. 
@@ -100,11 +101,11 @@ ms.lasthandoff: 10/24/2017
 class CMFCStatusBar : public CPane  
 ```  
   
-## <a name="members"></a>Члены  
+## <a name="members"></a>Участники  
   
 ### <a name="public-methods"></a>Открытые методы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[CMFCStatusBar::CalcFixedLayout](#calcfixedlayout)|(Переопределяет [CBasePane::CalcFixedLayout](../../mfc/reference/cbasepane-class.md#calcfixedlayout).)|  
 |[CMFCStatusBar::CommandToIndex](#commandtoindex)||  
@@ -141,7 +142,7 @@ class CMFCStatusBar : public CPane
   
 ### <a name="protected-methods"></a>Защищенные методы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[CMFCStatusBar::OnDrawPane](#ondrawpane)|Вызывается платформой, когда он перерисовывает области строки состояния.|  
   

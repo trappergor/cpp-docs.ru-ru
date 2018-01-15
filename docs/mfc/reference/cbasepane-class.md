@@ -177,11 +177,12 @@ caps.latest.revision: "43"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 81a832d9473c9d5912e42dd4dc81db2d10bd4aea
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: c077f18fb9536e615685455e7bfc6fd896c0cc81
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cbasepane-class"></a>Класс CBasePane
 Базовый класс для всех областей в MFC.  
@@ -192,18 +193,18 @@ ms.lasthandoff: 10/24/2017
 class CBasePane : public CWnd  
 ```  
   
-## <a name="members"></a>Члены  
+## <a name="members"></a>Участники  
   
 ### <a name="public-constructors"></a>Открытые конструкторы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |`CBasePane::CBasePane`|Конструктор по умолчанию.|  
 |`CBasePane::~CBasePane`|Деструктор.|  
   
 ### <a name="public-methods"></a>Открытые методы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |`CBasePane::accHitTest`|Вызывается платформой для извлечения дочернего элемента или дочернего объекта в заданной точке экрана. (Переопределяет [CWnd::accHitTest](../../mfc/reference/cwnd-class.md#acchittest).)|  
 |`CBasePane::accLocation`|Вызывается платформой для получения текущего положения экрана для указанного объекта. (Переопределяет [CWnd::accLocation](../../mfc/reference/cwnd-class.md#acclocation).)|  
@@ -311,7 +312,7 @@ class CBasePane : public CWnd
   
 ### <a name="protected-methods"></a>Защищенные методы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[CBasePane::DoPaint](#dopaint)|Заполняет фон панели.|  
   
@@ -676,7 +677,7 @@ virtual BOOL CreateEx(
   
  Библиотека добавляет несколько новых стилей для панели. В следующей таблице описаны новые стили:  
   
-|Стиль|Описание|  
+|Стиль|Описание:|  
 |-----------|-----------------|  
 |`AFX_CBRS_FLOAT`|Области можно с плавающей запятой.|  
 |`AFX_CBRS_AUTOHIDE`|Область поддерживает режим автоматического скрытия|  
@@ -922,7 +923,7 @@ virtual DWORD GetControlBarStyle() const
 ### <a name="remarks"></a>Примечания  
  Возвращаемое значение состоит из следующих значений.  
   
-|Стиль|Описание|  
+|Стиль|Описание:|  
 |-----------|-----------------|  
 |`AFX_CBRS_FLOAT`|Делает float панели управления.|  
 |`AFX_CBRS_AUTOHIDE`|Включает режим автоматического скрытия.|  
@@ -1614,7 +1615,7 @@ virtual void SetControlBarStyle(DWORD dwNewStyle);
  [in] `dwNewStyle`  
  Побитовый оператор или сочетание следующих значений.  
   
-|Стиль|Описание|  
+|Стиль|Описание:|  
 |-----------|-----------------|  
 |`AFX_CBRS_FLOAT`|Делает float панели управления.|  
 |`AFX_CBRS_AUTOHIDE`|Включает режим автоматического скрытия.|  

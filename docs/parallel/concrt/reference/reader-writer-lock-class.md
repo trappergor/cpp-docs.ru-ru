@@ -25,11 +25,12 @@ caps.latest.revision: "21"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 98c59ec6c0eed419cdac05a39a65ea1bde624d49
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 49cc917ddcd4d7de274a8f6bb1f61c940493a365
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="readerwriterlock-class"></a>Класс reader_writer_lock
 Блокировка чтения или записи на основе очередей с предпочтением записи только с локальным вращением. Блокировка предоставляет модулям записи доступ в порядке поступления и блокирует доступ модулей чтения при постоянной нагрузке модулей записи.  
@@ -40,25 +41,25 @@ ms.lasthandoff: 10/24/2017
 class reader_writer_lock;
 ```  
   
-## <a name="members"></a>Члены  
+## <a name="members"></a>Участники  
   
 ### <a name="public-classes"></a>Открытые классы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[Класс reader_writer_lock::scoped_lock](#scoped_lock_class)|Исключение безопасная оболочка RAII, можно использовать для получения `reader_writer_lock` блокирует объекты, как средство записи.|  
 |[Класс reader_writer_lock::scoped_lock_read](#scoped_lock_read_class)|Исключение безопасная оболочка RAII, можно использовать для получения `reader_writer_lock` блокировать объекты в качестве читателя.|  
   
 ### <a name="public-constructors"></a>Открытые конструкторы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[reader_writer_lock](#ctor)|Создает новое `reader_writer_lock` объекта.|  
 |[~ reader_writer_lock деструктор](#dtor)|Уничтожает `reader_writer_lock` объекта.|  
   
 ### <a name="public-methods"></a>Открытые методы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[lock](#lock)|Получает блокировку чтения записи, как средство записи.|  
 |[lock_read](#lock_read)|Чтения получает блокировку чтения записи. При наличии модулей записи, активные читатели должны подождать, пока они выполняются. Средство чтения просто регистрирует интерес в блокировке и ожидает записи для ее снятия.|  

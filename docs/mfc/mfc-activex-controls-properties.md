@@ -17,11 +17,12 @@ caps.latest.revision: "9"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 26947b0c2c779f65fb01dd78d56ffe19afaf27ce
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: eea42401255f0aa99dd7a42b8e9b69e45dfe7b5b
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="mfc-activex-controls-properties"></a>Элементы управления ActiveX в MFC. Свойства
 Элемент управления ActiveX запускает события для взаимодействия со своим контейнером элемента управления. Контейнер, в ответ используются методы и свойства для взаимодействия с элементом управления. Методы и свойства похожи и назначение, соответственно, для функций-членов и переменных-членов класса C++. Свойства являются элементами данных элемента управления ActiveX, предоставляемых для любого контейнера. Свойства предоставляют интерфейс для приложений, содержащих элементы управления ActiveX, таких как клиенты автоматизации и контейнеры элементов управления ActiveX.  

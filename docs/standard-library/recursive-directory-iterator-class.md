@@ -14,11 +14,12 @@ caps.latest.revision: "15"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 384184fd8932c134ebb4554fab2d6e2af736a5d5
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 55e44e447ee8ad2e449c46acb5535a41346fd19f
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="recursivedirectoryiterator-class"></a>Класс recursive_directory_iterator
 Описывает итератор ввода, выполняющий последовательный перебор имен файлов в каталоге, возможно, рекурсивно просматривая подкаталоги. Для итератора X результатом выражения *X является объект класса directory_entry, являющийся оболочкой для имени файла и известных данных о его состоянии.  
@@ -174,7 +175,7 @@ recursive_directory_iterator(recursive_directory_iterator&&) noexcept = default;
 recursive_directory_iterator& increment(error_code& ec) noexcept;  
 ```  
   
- Функция пытается перейти к имени следующего файла во вложенной последовательности. В случае успешного выполнения она сохраняет это имя файла в myentry; в противном случае — создает итератор конца последовательности.  
+ Функция пытается перейти к имени следующего файла во вложенной последовательности. В случае успешного выполнения она сохраняет имя этого файла в myentry; в противном случае — создает итератор конца последовательности.  
   
 ## <a name="requirements"></a>Требования  
  **Заголовок:** \<filesystem >  

@@ -37,11 +37,12 @@ caps.latest.revision: "21"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 06b71e3cbebc7ed052fafff077d951a7f3ade810
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 6133fc593cb2fc53dfb7b6498711ae32713a4731
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cgopherfilefind-class"></a>Класс CGopherFileFind
 Помогает в поиске файлов Интернета на серверах gopher.  
@@ -55,17 +56,17 @@ ms.lasthandoff: 10/24/2017
 class CGopherFileFind : public CFileFind  
 ```  
   
-## <a name="members"></a>Члены  
+## <a name="members"></a>Участники  
   
 ### <a name="public-constructors"></a>Открытые конструкторы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[CGopherFileFind::CGopherFileFind](#cgopherfilefind)|Создает объект `CGopherFileFind`.|  
   
 ### <a name="public-methods"></a>Открытые методы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[CGopherFileFind::FindFile](#findfile)|Поиск файла на сервере gopher.|  
 |[CGopherFileFind::FindNextFile](#findnextfile)|Продолжает поиск файла из предыдущего вызова [FindFile](#findfile).|  

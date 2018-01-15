@@ -29,11 +29,12 @@ caps.latest.revision: "20"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: fe45f47520efd0a96dff9b31f18eb267d0058c61
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 5d54a461bece96faeb11f78a1788049abcabbae0
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cdumpcontext-class"></a>Класс CDumpContext
 Поддерживает ориентированных на поток диагностические данные в форме человекочитаемого текста.  
@@ -44,17 +45,17 @@ ms.lasthandoff: 10/24/2017
 class CDumpContext  
 ```  
   
-## <a name="members"></a>Члены  
+## <a name="members"></a>Участники  
   
 ### <a name="public-constructors"></a>Открытые конструкторы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[CDumpContext::CDumpContext](#cdumpcontext)|Создает объект `CDumpContext`.|  
   
 ### <a name="public-methods"></a>Открытые методы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[CDumpContext::DumpAsHex](#dumpashex)|Выводит указанный элемент в шестнадцатеричном формате.|  
 |[CDumpContext::Flush](#flush)|Очищает все данные в буфере контекста дампа.|  
@@ -64,7 +65,7 @@ class CDumpContext
   
 ### <a name="public-operators"></a>Открытые операторы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[CDumpContext::operator&lt;&lt;](#operator_lt_lt)|Вставляет переменные и объекты в контекст дампа.|  
   

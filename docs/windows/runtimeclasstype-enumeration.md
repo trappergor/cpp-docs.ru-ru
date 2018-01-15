@@ -1,54 +1,55 @@
 ---
-title: "Перечисление RuntimeClassType | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "implements/Microsoft::WRL::RuntimeClassType"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "RuntimeClassType - перечисление"
+title: "Перечисление RuntimeClassType | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: implements/Microsoft::WRL::RuntimeClassType
+dev_langs: C++
+helpviewer_keywords: RuntimeClassType enumeration
 ms.assetid: d380712d-672e-4ea9-b7c5-cf9fa7dbb770
-caps.latest.revision: 6
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 6
+caps.latest.revision: "6"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: 26016e8c95807af76484504c491ca1e6e08f8f96
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 12/21/2017
 ---
-# Перечисление RuntimeClassType
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Определяет поддерживаемый тип экземпляра [RuntimeClass](../windows/runtimeclass-class.md).  
+# <a name="runtimeclasstype-enumeration"></a>RuntimeClassType - перечисление
+Указывает тип [RuntimeClass](../windows/runtimeclass-class.md) экземпляр, который поддерживается.  
   
-## Синтаксис  
+## <a name="syntax"></a>Синтаксис  
   
 ```  
 enum RuntimeClassType;  
 ```  
   
-## Члены  
+## <a name="members"></a>Участники  
   
-### Значения  
+### <a name="values"></a>Значения  
   
-|Имя|Описание|  
-|---------|--------------|  
-|`ClassicCom`|Класс среды выполнения классической модели COM.|  
-|`Delegate`|Аналогично параметру **ClassicCom**.|  
-|`InhibitFtmBase`|Отключает поддержку `FtmBase`, если `__WRL_CONFIGURATION_LEGACY__` не определено.|  
-|`InhibitWeakReference`|Отключает поддержку слабой ссылки.|  
-|`WinRt`|Класс [!INCLUDE[wrt](../atl/reference/includes/wrt_md.md)].|  
-|`WinRtClassicComMix`|Комбинация `WinRt` и `ClassicCom`.|  
+|Имя|Описание:|  
+|----------|-----------------|  
+|`ClassicCom`|Классический COM класса среды выполнения.|  
+|`Delegate`|Эквивалентно **ClassicCom**.|  
+|`InhibitFtmBase`|Отключает `FtmBase` поддержки при `__WRL_CONFIGURATION_LEGACY__` не определен.|  
+|`InhibitWeakReference`|Отключает поддержку слабых ссылок.|  
+|`WinRt`|Класс среды выполнения Windows.|  
+|`WinRtClassicComMix`|Комбинация `WinRt` и `ClassicCom`.|  
   
-## Требования  
+## <a name="requirements"></a>Требования  
  **Заголовок:** implements.h  
   
  **Пространство имен:** Microsoft::WRL  
   
-## См. также  
+## <a name="see-also"></a>См. также  
  [Пространство имен Microsoft::WRL](../windows/microsoft-wrl-namespace.md)

@@ -21,11 +21,12 @@ caps.latest.revision: "9"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 1671d9d52625395fcad579470d8c3b0224cca189
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: c686d461a3052feb4a55cf7948b58102f10ac1f1
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="menus-and-resources-menu-merging"></a>Меню и ресурсы. Слияние меню
 В этой статье описаны действия, необходимые для приложения документов OLE для визуального редактирования и перекрестный должным образом. Активация на месте возникают сложности для контейнера и сервера приложений (компонент). Пользователь остается в том же окне фрейма (в контексте документа-контейнера), но фактически запущена другим приложением (сервер). Это требует согласования между ресурсами контейнер и сервер приложений.  

@@ -18,11 +18,12 @@ caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 6fa3efc37b251024feae79343ddfbd51769c7d53
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: feaf59932da66be2bf269316c7ee9587d4037b3f
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="tree-control-parent-and-child-items"></a>Родительские и дочерние элементы древовидного элемента управления
 Любой элемент в виде дерева ([CTreeCtrl](../mfc/reference/ctreectrl-class.md)) может содержать список элементов, которые называются дочерние элементы, связанные с ним. Элемент, имеющий один или несколько дочерних элементов вызывается с родительским элементом. Дочерний элемент отображается под его родительским элементом и с отступом, чтобы указать, что он является подчиненным для родительского. Элемент, который не имеет родителя в верхней части иерархии и вызывается корневой элемент.  

@@ -43,11 +43,12 @@ caps.latest.revision: "18"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 78a94d954631dfffbdcdc4bcad252599c673f44b
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 12ddc1fa68f1b27fa96ffb81ef24004fd1fb0a19
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="getc-getwc"></a>getc, getwc
 Считывает символ из потока.  
@@ -84,7 +85,7 @@ wint_t getwc(
 |`getc`|То же, что и функция `fgetc`, однако реализована как функция и как макрос.|  
 |`getwc`|Версия `getc` для расширенных символов. Считывает многобайтовый или расширенный символ согласно тому, открыт ли `stream` в текстовом или двоичном режиме.|  
   
-### <a name="generic-text-routine-mappings"></a>Универсальное текстовое сопоставление функций  
+### <a name="generic-text-routine-mappings"></a>Сопоставления подпрограмм обработки обычного текста  
   
 |Подпрограмма TCHAR.H|_UNICODE и _MBCS не определены|_MBCS определено|_UNICODE определено|  
 |---------------------|------------------------------------|--------------------|-----------------------|  
@@ -97,7 +98,7 @@ wint_t getwc(
 |`getc`|\<stdio.h>|  
 |`getwc`|\<stdio.h> или \<wchar.h>|  
   
- Дополнительные сведения о совместимости см. в статье [Совместимость](../../c-runtime-library/compatibility.md) во введении.  
+ Дополнительные сведения о совместимости см. в разделе [Совместимость](../../c-runtime-library/compatibility.md) во введении.  
   
 ## <a name="example"></a>Пример  
   

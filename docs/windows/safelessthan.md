@@ -1,32 +1,33 @@
 ---
-title: "SafeLessThan | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-f1_keywords: 
-  - "SafeLessThan"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "SafeLessThan - функция"
+title: "SafeLessThan | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+f1_keywords: SafeLessThan
+dev_langs: C++
+helpviewer_keywords: SafeLessThan function
 ms.assetid: 9d85bc0d-8d94-4d59-9b72-ef3c63a120a0
-caps.latest.revision: 6
-author: "ghogen"
-ms.author: "ghogen"
-manager: "ghogen"
-caps.handback.revision: 6
+caps.latest.revision: "6"
+author: ghogen
+ms.author: ghogen
+manager: ghogen
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: 4c490f02f6c27d517095ab3f75a31bb03fe14f63
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 12/21/2017
 ---
-# SafeLessThan
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Определяет, является ли один номер, чем другие.  
+# <a name="safelessthan"></a>SafeLessThan
+Определяет, является ли одно число меньше другого.  
   
-## Синтаксис  
+## <a name="syntax"></a>Синтаксис  
   
 ```  
 template<typename T, typename U>  
@@ -36,35 +37,35 @@ inline bool SafeLessThan (
 ) throw ();  
 ```  
   
-#### Параметры  
- \[входящий\] `t`  
- Первый номер.  Это должно быть типа T.  
+#### <a name="parameters"></a>Параметры  
+ [in] `t`  
+ Первое число. Это должен быть типа T.  
   
- \[входящий\] `u`  
- Второе numer.  Это должно быть типа U.  
+ [in] `u`  
+ Второй номер. Это должен быть типа u.  
   
-## Возвращаемое значение  
- `true` при `t`, чем `u`; в противном случае `false`.  
+## <a name="return-value"></a>Возвращаемое значение  
+ `true`Если `t` — меньше, чем `u`; в противном случае `false`.  
   
-## Заметки  
- Этот метод позволяет стандартный оператор сравнения, поскольку `SafeLessThan` позволяет сравнивать 2 поддерживаются два числа.  
+## <a name="remarks"></a>Примечания  
+ Этот метод расширяет возможности оператор сравнения стандартной, так как `SafeLessThan` позволяет сравнить два различных типа номер.  
   
- Этот метод часть [Библиотека SafeInt](../windows/safeint-library.md) и предназначен для одной операции сравнения без создания экземпляра [Класс SafeInt](../windows/safeint-class.md).  
+ Этот метод является частью [библиотека SafeInt](../windows/safeint-library.md) и предназначена для операции сравнения одного без создания экземпляра [класс SafeInt](../windows/safeint-class.md).  
   
 > [!NOTE]
->  Этот метод должен использоваться, только если одна математических операций необходимо защитить.  Если несколько операций, то следует использовать класс `SafeInt`, а не отдельные отдельный вызов функции.  
+>  Этот метод использовать только в том случае, когда один математической операции должны быть защищены. При наличии нескольких операций, следует использовать `SafeInt` класса, вместо того чтобы вызывать отдельные функции автономный.  
   
- Дополнительные сведения о типах T шаблона и U см. в разделе [Функции SafeInt](../windows/safeint-functions.md).  
+ Дополнительные сведения о типах шаблонов T и U см. в разделе [функции SafeInt](../windows/safeint-functions.md).  
   
-## Требования  
+## <a name="requirements"></a>Требования  
  **Заголовок:** safeint.h  
   
  **Пространство имен:** Microsoft::Utilities  
   
-## См. также  
+## <a name="see-also"></a>См. также  
  [Функции SafeInt](../windows/safeint-functions.md)   
  [Библиотека SafeInt](../windows/safeint-library.md)   
- [Класс SafeInt](../windows/safeint-class.md)   
+ [SafeInt-класс](../windows/safeint-class.md)   
  [SafeLessThanEquals](../windows/safelessthanequals.md)   
  [SafeGreaterThan](../windows/safegreaterthan.md)   
  [SafeGreaterThanEquals](../windows/safegreaterthanequals.md)

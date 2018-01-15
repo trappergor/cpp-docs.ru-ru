@@ -1,44 +1,47 @@
 ---
-title: "Универсальные приложения Windows (C++) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/16/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
+title: "Универсальные приложения Windows (C++) | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
 ms.assetid: 357121cc-d390-4bae-b34a-39614861a9f4
-caps.latest.revision: 14
-caps.handback.revision: 14
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "14"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: e9ad7a56663081941f3b3ca18193da55d5df2ab6
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 12/21/2017
 ---
-# Универсальные приложения Windows (C++)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
+# <a name="universal-windows-apps-c"></a>Универсальные приложения Windows (C++)
+Универсальные приложения для платформы Windows (UWP) реализуют набор принципов разработки, выделяющих простые пользовательские интерфейсы, организованные вокруг содержимого, которое автоматически настраивается в соответствии с различными размерами экранов на разных устройствах. Для создания пользовательского интерфейса используется разметка XAML, а для кода — неуправляемый код C++. Можно также создавать компоненты (DLL), которые могут применяться приложениями UWP, написанными на других языках. Область API для приложений UWP представляет среду выполнения Windows, которая является хорошо организованную библиотеку, которая предоставляет широкий набор служб для операционной системы.  
 
-Приложения универсальной платформы Windows \(UWP\) реализуют набор принципов разработки, выделяющих простые пользовательские интерфейсы, организованные вокруг содержимого, которое автоматически настраивается в соответствии с разными размерами экранов на разных устройствах. Для создания пользовательского интерфейса используется разметка XAML, а для кода — неуправляемый код C\+\+. Можно также создавать компоненты \(DLL\), которые могут применяться приложениями UWP, написанными на других языках. Область API для приложений UWP представляет собой [!INCLUDE[wrt](../atl/reference/includes/wrt_md.md)] — хорошо организованную библиотеку, которая предоставляет широкий набор служб для операционной системы.  
+> [!TIP]  
+> Для Windows 10 можно использовать преобразователь приложения рабочего стола для упаковки приложения для настольных компьютеров существующего развертывания через магазин Windows. Дополнительные сведения см. в статьях [Использование среды выполнения Visual C++ в проекте Centennial](https://blogs.msdn.microsoft.com/vcblog/2016/07/07/using-visual-c-runtime-in-centennial-project) и [Перенос классического приложения на универсальную платформу Windows (UWP) с помощью Desktop Bridge](https://msdn.microsoft.com/en-us/windows/uwp/porting/desktop-to-uwp-root).
   
-> [!NOTE]
->  Большая часть документации для разработки приложений UWP на C\+\+ находится на веб\-сайте [Центра разработчиков Windows](http://go.microsoft.com/fwlink/p/?LinkId=255563). Некоторые приведенные в этой статье ссылки ведут на данный веб\-сайт.  
   
-## Приложения UWP, использующие C\+\+\/CX  
+## <a name="uwp-apps-that-use-ccx"></a>Приложения UWP, использующие C++/CX  
   
 |||  
 |-|-|  
-|[Справочник по языку Visual C\+\+ \(C\+\+\/CX\)](http://go.microsoft.com/fwlink/p/?LinkId=255561)|Описание набора расширений, которые упрощают использование интерфейсов API [!INCLUDE[wrt](../atl/reference/includes/wrt_md.md)] C\+\+ и обеспечивают обработку ошибок, основанную на исключениях.|  
-|[Построение приложений и библиотек \(C\+\+\/CX\)](http://go.microsoft.com/fwlink/p/?LinkId=264858)|Описание создания библиотек DLL и статических библиотек, доступных из приложения или компонента C\+\+\/CX.|  
-|[Учебник. Создание первого приложения для Магазина Windows на C\+\+](http://go.microsoft.com/fwlink/p/?LinkId=255556)|Пошаговое руководство, представляющее основные понятия разработки приложений [!INCLUDE[win8_appname_long](../build/includes/win8_appname_long_md.md)] на C\+\+. \(Еще не обновлено для разработки UWP на платформе Windows 10\).|  
-|[Схема создания приложений на С\+\+ для Магазина Windows](http://go.microsoft.com/fwlink/p/?LinkId=255553)|Ссылки на статьи о разработке приложений [!INCLUDE[win8_appname_long](../build/includes/win8_appname_long_md.md)] и игр на C\+\+.|  
-|[Создание компонентов среды выполнения Windows в C\+\+](http://go.microsoft.com/fwlink/p/?LinkId=255559)|Описание создания библиотек DLL, которые могут использовать приложения [!INCLUDE[win8_appname_long](../build/includes/win8_appname_long_md.md)] и компоненты.|  
-|[Разработка игр](http://go.microsoft.com/fwlink/p/?LinkId=255554)|Описание использования DirectX и C\+\+ для создания игр.|  
+|[Справочник по языку Visual C++ (C++/CX)](../cppcx/visual-c-language-reference-c-cx.md)|Описание набора расширений, которые упрощают использование интерфейсов API среды выполнения Windows C++ и обеспечивают обработку ошибок, основанную на исключениях.|  
+|[Построение приложений и библиотек (C++/CX)](../cppcx/building-apps-and-libraries-c-cx.md)|Описание создания библиотек DLL и статических библиотек, доступных из приложения или компонента C++/CX.|  
+|[Учебник. Создание первого приложения для Магазина Windows на C++](https://docs.microsoft.com/en-us/windows/uwp/get-started/create-a-basic-windows-10-app-in-cpp)|Пошаговое руководство, представляющее основные понятия разработки приложений универсальной платформы Windows на C++. (Еще не обновлено для разработки UWP на платформе Windows 10).|  
+|[Создание компонентов среды выполнения Windows в C++](https://docs.microsoft.com/en-us/windows/uwp/winrt-components/creating-windows-runtime-components-in-cpp)|Описание создания библиотек DLL, которые можно использовать в других приложениях универсальной платформы Windows и компонентов.|  
+|[Разработка игр](https://docs.microsoft.com/en-us/windows/uwp/gaming/)|Описание использования DirectX и C++ для создания игр.|  
   
-## Приложения [!INCLUDE[win8_appname_long](../build/includes/win8_appname_long_md.md)], использующие [!INCLUDE[cppwrl](../windows/includes/cppwrl_md.md)] \([!INCLUDE[cppwrl_short](../windows/includes/cppwrl_short_md.md)]\)  
- [!INCLUDE[cppwrl_short](../windows/includes/cppwrl_short_md.md)] предоставляет низкоуровневые интерфейсы COM, с помощью которых код C\+\+ ISO может обращаться к [!INCLUDE[wrt](../atl/reference/includes/wrt_md.md)] в среде без поддержки исключений. В большинстве случаев вместо [!INCLUDE[cppwrl_short](../windows/includes/cppwrl_short_md.md)] рекомендуется использовать C\+\+\/CX для разработки приложений [!INCLUDE[win8_appname_long](../build/includes/win8_appname_long_md.md)]. Дополнительные сведения о [!INCLUDE[cppwrl_short](../windows/includes/cppwrl_short_md.md)] см. в разделе [Библиотека шаблонов C\+\+ среды выполнения Windows \(WRL\)](../Topic/Windows%20Runtime%20C++%20Template%20Library%20\(WRL\).md).  
+## <a name="universal-windows-platform-apps-that-use-the-windows-runtime-c-template-library-wrl"></a>Приложений платформы универсальных приложений Windows, использующих библиотека шаблонов C++ среды выполнения Windows (WRL) 
+ Библиотека шаблонов C++ среды выполнения Windows предоставляет низкоуровневые интерфейсы COM, с помощью которых код C++ стандарта ISO может обращаться к среды выполнения Windows в среде без поддержки исключений. В большинстве случаев рекомендуется использовать C + +/ CX вместо библиотека шаблонов C++ среды выполнения Windows для разработки приложений универсальной платформы Windows. Сведения о библиотека шаблонов C++ среды выполнения Windows см. в разделе [библиотеки шаблонов C++ (WRL) среды выполнения Windows](../windows/windows-runtime-cpp-template-library-wrl.md).  
   
-## См. также  
- [Visual C\+\+](../top/visual-cpp-in-visual-studio-2015.md)
+## <a name="see-also"></a>См. также  
+ [Visual C++](../visual-cpp-in-visual-studio.md)
+

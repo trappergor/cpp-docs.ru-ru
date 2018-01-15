@@ -1,43 +1,47 @@
 ---
-title: "Adding an Image for a Different Display Device (Image Editor for Icons) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "New Device Image command"
-  - "display devices, adding images"
-  - "cursors, adding"
-  - "icons, adding"
+title: "Добавление изображения для другого устройства отображения (редактор изображений для значков) | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- New Device Image command
+- display devices, adding images
+- cursors, adding
+- icons, adding
 ms.assetid: 394f87dd-ea19-49d8-bb9e-139cd28b69c2
-caps.latest.revision: 10
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 6
+caps.latest.revision: "10"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: 1fea1cecc63c1c2ec997c9acb0ea1ce19572af4d
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 12/21/2017
 ---
-# Adding an Image for a Different Display Device (Image Editor for Icons)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-### Добавление изображения для другого устройства отображения  
+# <a name="adding-an-image-for-a-different-display-device-image-editor-for-icons"></a>Добавление изображения для другого устройства отображения (редактор изображений для значков)
+### <a name="to-add-an-image-for-a-different-display-device"></a>Добавление изображения для другого устройства отображения  
   
-1.  В меню **Изображение** щелкните **Создать изображение устройства** \(или щелкните правой кнопкой мыши в области **редактора изображений** и выберите в контекстном меню пункт **Создать изображение устройства**\).  
+1.  На **изображения** меню, нажмите кнопку **нового изображения устройства** (или щелкните правой кнопкой мыши **редактора изображений** панели и выберите **нового изображения устройства** из контекстное меню).  
   
-2.  Выберите тип добавляемого изображения.  Можно также щелкнуть **Настраиваемый**, чтобы создать значок, размер которого отсутствует в списке по умолчанию.  
+2.  Выберите тип образа, который требуется добавить. Можно также щелкнуть **настраиваемый** для создания значков, размер которого недоступен в списке по умолчанию.  
   
- Сведения о добавлении ресурсов в управляемые проекты см. в разделе [Ресурсы приложений](../Topic/Resources%20in%20Desktop%20Apps.md) *Руководства разработчика .NET Framework*. Сведения о том, как вручную добавлять файлы ресурсов в управляемые проекты, осуществлять доступ к ресурсам, отображать статические ресурсы и присваивать строки ресурсов свойствам см. в разделах [Пошаговое руководство. Локализация приложений Windows Forms](http://msdn.microsoft.com/ru-ru/9a96220d-a19b-4de0-9f48-01e5d82679e5) и [Walkthrough: Using Resources for Localization with ASP.NET](../Topic/Walkthrough:%20Using%20Resources%20for%20Localization%20with%20ASP.NET.md).  
+ Сведения о добавлении ресурсов в управляемые проекты см. в разделе [ресурсы в классических приложениях](/dotnet/framework/resources/index) в *руководства разработчика .NET Framework.* Сведения о вручную добавлять файлы ресурсов в управляемые проекты, осуществлять доступ к ресурсам, отображать статические ресурсы и присваивать строки ресурсов свойствам см. в разделе [Создание файлов ресурсов для приложений рабочего стола](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Сведения о глобализации и локализации ресурсов в управляемых приложениях см. в разделе [Globalizing и локализация приложений .NET Framework](/dotnet/standard/globalization-localization/index).  
   
  Требования  
   
- None  
+ Нет  
   
-## См. также  
- [Icons and Cursors: Image Resources for Display Devices](../mfc/icons-and-cursors-image-resources-for-display-devices-image-editor-for-icons.md)   
- [Accelerator Keys](../mfc/accelerator-keys-image-editor-for-icons.md)   
- [Icons and Cursors: Image Resources for Display Devices](../mfc/icons-and-cursors-image-resources-for-display-devices-image-editor-for-icons.md)
+## <a name="see-also"></a>См. также  
+ [Значки и курсоры: ресурсы изображений для устройств отображения](../windows/icons-and-cursors-image-resources-for-display-devices-image-editor-for-icons.md)   
+ [Сочетания клавиш](../windows/accelerator-keys-image-editor-for-icons.md)   
+ [Значки и курсоры: ресурсы изображений для устройств отображения](../windows/icons-and-cursors-image-resources-for-display-devices-image-editor-for-icons.md)
+

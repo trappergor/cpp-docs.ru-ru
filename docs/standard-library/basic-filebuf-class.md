@@ -51,11 +51,12 @@ caps.latest.revision: "24"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: ffc7f3e830d9caccf3428b2d9d3b70253d8d3b18
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 0c5ec1881695c80c8f493ac2a2848d0349f430aa
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="basicfilebuf-class"></a>Класс basic_filebuf
 Описывает буфер потока, который управляет передачей элементов типа `Elem`, признаки символов которого определяются с помощью класса `Tr`, в последовательность элементов, сохраненную во внешнем файле, и из нее.  
@@ -206,7 +207,7 @@ Hex Dump of wwHello.txt - note that output is wchar_t chars:
 |-|-|  
 |[basic_filebuf](#basic_filebuf)|Создает объект типа `basic_filebuf`.|  
   
-### <a name="typedefs"></a>Typedefs  
+### <a name="typedefs"></a>Определения типов  
   
 |||  
 |-|-|  
@@ -462,7 +463,7 @@ virtual int_type overflow(int_type _Meta = traits_type::eof);
  Если функция не может выполниться успешно, она возвращает **traits_type::eof**. В противном случае она возвращает **traits_type::**[not_eof](../standard-library/char-traits-struct.md#not_eof)(_ *Meta*).  
   
 ### <a name="remarks"></a>Примечания  
- Если _ *Meta***!= traits_type::**[eof](../standard-library/char-traits-struct.md#eof), защищенная виртуальная функция-член пытается вставить элемент **ch = traits_type::**[to_char_type](../standard-library/char-traits-struct.md#to_char_type)(\_ *Meta*) в выходной буфер. Это может быть сделано разными способами.  
+ Если _ *Meta***!= traits_type::**[eof](../standard-library/char-traits-struct.md#eof), защищенная виртуальная функция-член пытается вставить элемент **ch = traits_type::**[to_char_type](../standard-library/char-traits-struct.md#to_char_type)(\_ *Meta*) в выходной буфер. Для этого существует несколько способов.  
   
 -   Если позиция записи доступна, можно сохранить элемент в позиции записи и увеличить следующий указатель для выходного буфера.  
   

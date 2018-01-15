@@ -1,81 +1,90 @@
 ---
-title: "Практическое руководство. Управление экземпляром планировщика | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "управление экземпляром планировщика [среда выполнения с параллелизмом]"
-  - "экземпляры планировщика, управление [среда выполнения с параллелизмом]"
+title: "Как: управление экземпляром планировщика | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- managing a scheduler instance [Concurrency Runtime]
+- scheduler instances, managing [Concurrency Runtime]
 ms.assetid: 2cc804f0-5ff3-498b-97f1-a9f67a005448
-caps.latest.revision: 15
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 12
+caps.latest.revision: "15"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: f2e4916e0f563c4034dc27be1e3d911f42a65319
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 12/21/2017
 ---
-# Практическое руководство. Управление экземпляром планировщика
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
+# <a name="how-to-manage-a-scheduler-instance"></a>Практическое руководство. Управление экземпляром планировщика
+Экземпляры планировщика позволяют связывать конкретные политики планирования с различными видами рабочих нагрузок. В этом разделе содержатся два базовых примера, в которых описывается создание и управление экземпляром планировщика.  
+  
+ В примерах создаются планировщики, использующие политики планировщика по умолчанию. Пример создания планировщика, который использует пользовательскую политику, см. в разделе [как: укажите конкретные политики планировщика](../../parallel/concrt/how-to-specify-specific-scheduler-policies.md).  
+  
+### <a name="to-manage-a-scheduler-instance-in-your-application"></a>Управление экземпляром планировщика в приложении  
+  
+1.  Создание [concurrency::SchedulerPolicy](../../parallel/concrt/reference/schedulerpolicy-class.md) значения объекта, который содержит политику планировщик, который нужно использовать.  
+  
 
-Экземпляры планировщика позволяют связывать конкретные политики планирования с различными видами рабочих нагрузок.  В этом разделе содержатся два базовых примера, демонстрирующих создание экземпляра планировщика и управление им.  
+2.  Вызовите [Concurrency::CurrentScheduler:: CREATE](reference/currentscheduler-class.md#create) метода или [Concurrency::Scheduler:: CREATE](reference/scheduler-class.md#create) метод для создания экземпляра планировщика.  
   
- В этих примерах создаются планировщики, использующие политики планировщика по умолчанию.  Пример создания планировщика, использующего пользовательскую политику, см. в разделе [Практическое руководство. Задание определенных политик планировщика](../Topic/How%20to:%20Specify%20Specific%20Scheduler%20Policies.md).  
+     Если вы используете `Scheduler::Create` метод, вызовите [Concurrency::Scheduler:: Attach](reference/scheduler-class.md#attach) метод, если необходимо связать планировщик с текущим контекстом.  
   
-### Управление экземпляром планировщика в приложении  
+3.  Вызовите [CreateEvent](http://msdn.microsoft.com/library/windows/desktop/ms682396) функцию, чтобы создать дескриптор объекта несигнальное автоматического сброса событий.  
   
-1.  Создайте объект [concurrency::SchedulerPolicy](../../parallel/concrt/reference/schedulerpolicy-class.md), содержащий значения политики, которые должны использоваться планировщиком.  
+4.  Передает этот дескриптор только что созданный для объекта события [Concurrency::CurrentScheduler::](reference/currentscheduler-class.md#registershutdownevent) метода или [Concurrency::Scheduler:: registershutdownevent](reference/scheduler-class.md#registershutdownevent) метод. Эта строка регистрирует события, задаваемое при уничтожении планировщика.  
   
-2.  Вызовите метод [concurrency::CurrentScheduler::Create](../Topic/CurrentScheduler::Create%20Method.md) или [concurrency::Scheduler::Create](../Topic/Scheduler::Create%20Method.md), чтобы создать экземпляр планировщика.  
+5.  Выполните задачи, необходимые для планирования текущего планировщика.  
   
-     Если используется метод `Scheduler::Create`, вызовите метод [concurrency::Scheduler::Attach](../Topic/Scheduler::Attach%20Method.md), когда нужно связать планировщик с текущим контекстом.  
+6.  Вызовите [concurrency::CurrentScheduler::Detach](reference/currentscheduler-class.md#detach) метод, чтобы отключить текущий планировщик и восстановить предыдущий планировщик в качестве текущего.  
   
-3.  Вызовите функцию [CreateEvent](http://msdn.microsoft.com/library/windows/desktop/ms682396), чтобы создать дескриптор объекта события автоматического сброса с отсутствием сигнала.  
+     Если вы используете `Scheduler::Create` метод, вызовите [Concurrency::Scheduler:: Release](reference/scheduler-class.md#release) способ уменьшения числа ссылок объекта `Scheduler` объекта.  
   
-4.  Передайте дескриптор только что созданного объекта события методу [concurrency::CurrentScheduler::RegisterShutdownEvent](../Topic/CurrentScheduler::RegisterShutdownEvent%20Method.md) или [concurrency::Scheduler::RegisterShutdownEvent](../Topic/Scheduler::RegisterShutdownEvent%20Method.md).  Это позволяет зарегистрировать событие, которое необходимо настраивать при уничтожении планировщика.  
+7.  Передает этот дескриптор события [WaitForSingleObject](http://msdn.microsoft.com/library/windows/desktop/ms687032) функции чтобы дождаться завершения работы планировщика.  
   
-5.  Выполните задачи, которые должны планироваться текущим планировщиком.  
+8.  Вызовите [CloseHandle](http://msdn.microsoft.com/library/windows/desktop/ms724211) функцию, чтобы закрыть дескриптор объекта события.  
   
-6.  Вызовите метод [concurrency::CurrentScheduler::Detach](../Topic/CurrentScheduler::Detach%20Method.md), чтобы отключить текущий планировщик и восстановить предыдущий планировщик в качестве текущего.  
+## <a name="example"></a>Пример  
+ Следующий код показывает два способа управления экземпляром планировщика. В каждом примере сначала используется планировщик по умолчанию для выполнения задачи, выводящей уникальный идентификатор текущего планировщика. В каждом примере затем использует экземпляр планировщика для выполнения той же задачи еще раз. Наконец в каждом примере восстанавливает планировщик по умолчанию, что и текущий и выполняет задачу еще раз.  
   
-     Если используется метод `Scheduler::Create`, вызовите метод [concurrency::Scheduler::Release](../Topic/Scheduler::Release%20Method.md), чтобы уменьшить число ссылок в объекте `Scheduler`.  
+ В первом примере используется [concurrency::CurrentScheduler](../../parallel/concrt/reference/currentscheduler-class.md) класса для создания экземпляра планировщика и связывания его с текущим контекстом. Во втором примере [concurrency::Scheduler](../../parallel/concrt/reference/scheduler-class.md) классом для выполнения этой задачи. Как правило `CurrentScheduler` класс используется для работы с текущего планировщика. Во втором примере, который использует `Scheduler` класса, полезно, если вы хотите управлять, когда планировщик связан с текущим контекстом, или если вы хотите связать конкретные планировщики с конкретными задачами.  
   
-7.  Передайте дескриптор события функции [WaitForSingleObject](http://msdn.microsoft.com/library/windows/desktop/ms687032), чтобы дождаться завершения работы планировщика.  
+ [!code-cpp[concrt-scheduler-instance#1](../../parallel/concrt/codesnippet/cpp/how-to-manage-a-scheduler-instance_1.cpp)]  
   
-8.  Вызовите функцию [CloseHandle](http://msdn.microsoft.com/library/windows/desktop/ms724211), чтобы закрыть дескриптор объекта события.  
+ В этом примере формируются следующие данные:  
   
-## Пример  
- В следующем фрагменте кода показаны два способа управления экземпляром планировщика.  В каждом примере для выполнения задачи, выводящей уникальный идентификатор текущего планировщика, сначала используется планировщик по умолчанию.  Затем в каждом примере для повторного выполнения той же задачи используется экземпляр планировщика.  Наконец, в каждом примере планировщик по умолчанию восстанавливается в качестве текущего и еще раз выполняет эту задачу.  
+```Output  
+Using CurrentScheduler class...  
+ 
+Current scheduler id: 0  
+Creating and attaching scheduler...  
+Current scheduler id: 1  
+Detaching scheduler...  
+Current scheduler id: 0  
+ 
+Using Scheduler class...  
+ 
+Current scheduler id: 0  
+Creating scheduler...  
+Attaching scheduler...  
+Current scheduler id: 2  
+Detaching scheduler...  
+Current scheduler id: 0  
+```  
   
- В первом примере для создания экземпляра планировщика и связывания его с текущим контекстом используется класс [concurrency::CurrentScheduler](../Topic/CurrentScheduler%20Class.md).  Во втором примере для выполнения той же задачи используется класс [concurrency::Scheduler](../../parallel/concrt/reference/scheduler-class.md).  Как правило, класс `CurrentScheduler` используется для работы с текущим планировщиком.  Сценарий, описанный во втором примере, в котором используется класс `Scheduler`, нужно использовать, если необходимо контролировать время связывания планировщика с текущим контекстом или связывать конкретные планировщики с конкретными задачами.  
+## <a name="compiling-the-code"></a>Компиляция кода  
+ Скопируйте код примера и вставьте его в проект Visual Studio или вставить его в файл с именем `scheduler-instance.cpp` , а затем запустите следующую команду в окне командной строки Visual Studio.  
   
- [!code-cpp[concrt-scheduler-instance#1](../../parallel/concrt/codesnippet/CPP/how-to-manage-a-scheduler-instance_1.cpp)]  
+ **CL.exe/EHsc scheduler-instance.cpp**  
   
- В результате выполнения примера получается следующий результат:  
-  
-  **Использование класса CurrentScheduler…**  
-**Идентификатор текущего планировщика: 0**  
-**Создание и прикрепление планировщика…**  
-**Идентификатор текущего планировщика: 1**  
-**Открепление планировщика…**  
-**Идентификатор текущего планировщика: 0**  
-**Использование класса Scheduler…**  
-**Идентификатор текущего планировщика: 0**  
-**Создание планировщика…**  
-**Прикрепление планировщика…**  
-**Идентификатор текущего планировщика: 2**  
-**Открепление планировщика…**  
-**Идентификатор текущего планировщика: 0**   
-## Компиляция кода  
- Скопируйте пример кода и вставьте его в проект Visual Studio или файл с именем `scheduler-instance.cpp`, затем выполните в окне командной строки Visual Studio следующую команду.  
-  
- **cl.exe \/EHsc scheduler\-instance.cpp**  
-  
-## См. также  
+## <a name="see-also"></a>См. также  
  [Экземпляры планировщика](../../parallel/concrt/scheduler-instances.md)   
- [Практическое руководство. Задание определенных политик планировщика](../Topic/How%20to:%20Specify%20Specific%20Scheduler%20Policies.md)
+ [Практическое руководство. Задание определенных политик планировщика](../../parallel/concrt/how-to-specify-specific-scheduler-policies.md)
+

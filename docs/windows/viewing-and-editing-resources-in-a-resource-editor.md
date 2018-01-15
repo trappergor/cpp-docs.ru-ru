@@ -23,11 +23,14 @@ caps.latest.revision: "12"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 287a1dbe297abd57911ab1ddaee7b56b7ce0b40b
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: 980264ab1857af214dcd24703980b8efa9a4d2dd
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="viewing-and-editing-resources-in-a-resource-editor"></a>Просмотр и редактирование ресурсов в редакторе ресурсов
 Каждый тип ресурса имеет редактор ресурсов, связанных с этим типом ресурса. Можно изменить, изменить размер, добавление элементов управления и компонентов или изменять другие характеристики ресурса с помощью специализированного редактора. Можно также изменить ресурс в [текстовом формате](../windows/how-to-open-a-resource-script-file-in-text-format.md) и [двоичный формат](../windows/opening-a-resource-for-binary-editing.md).  
@@ -69,7 +72,7 @@ ms.lasthandoff: 10/24/2017
 ## <a name="resources-in-managed-projects"></a>Ресурсов в управляемые проекты  
  Поскольку управляемые проекты не используют файлы описания ресурсов, необходимо открыть ресурсы из **обозревателе решений**. Для работы с файлами ресурсов в управляемых проектах можно использовать [редактор изображений](../windows/image-editor-for-icons.md) и [двоичный редактор](binary-editor.md) . Все управляемые ресурсы, которые нужно редактировать, должны быть связанными ресурсами. Редакторы ресурсов Visual Studio не поддерживают редактирование внедренных ресурсов.  
   
- Сведения о добавлении ресурсов в управляемые проекты см. в разделе [ресурсы в классических приложениях](https://msdn.microsoft.com/library/f45fce5x.aspx) в *руководства разработчика .NET Framework.* Сведения о вручную добавлять файлы ресурсов в управляемые проекты, осуществлять доступ к ресурсам, отображать статические ресурсы и присваивать строки ресурсов свойствам см. в разделе [Создание файлов ресурсов для приложений рабочего стола](https://msdn.microsoft.com/library/xbx3z216.aspx). Сведения о глобализации и локализации ресурсов в управляемых приложениях см. в разделе [Globalizing и локализация приложений .NET Framework](https://msdn.microsoft.com/library/h6270d0z.aspx).  
+ Сведения о добавлении ресурсов в управляемые проекты см. в разделе [ресурсы в классических приложениях](/dotnet/framework/resources/index) в *руководства разработчика .NET Framework.* Сведения о вручную добавлять файлы ресурсов в управляемые проекты, осуществлять доступ к ресурсам, отображать статические ресурсы и присваивать строки ресурсов свойствам см. в разделе [Создание файлов ресурсов для приложений рабочего стола](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Сведения о глобализации и локализации ресурсов в управляемых приложениях см. в разделе [Globalizing и локализация приложений .NET Framework](/dotnet/standard/globalization-localization/index).  
   
 #### <a name="to-view-a-managed-resource-in-a-resource-editor"></a>Для просмотра управляемых ресурсов в редакторе ресурсов  
   

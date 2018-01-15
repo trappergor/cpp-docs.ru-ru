@@ -45,11 +45,12 @@ caps.latest.revision: "21"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: d8189e621ac137986c72657441c5584e09795edd
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 14f41a90aab8e95d336df6724a7217947ec1c57c
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="basicistream-class"></a>Класс basic_istream
 Описывает объект, управляющий извлечением элементов и закодированных объектов из буфера потока с элементами типа `Elem`, также называемого [char_type](../standard-library/basic-ios-class.md#char_type). Их признаки символов определяются классом *Tr*, также называемым [traits_type](../standard-library/basic-ios-class.md#traits_type).  
@@ -294,7 +295,7 @@ basic_istream<Elem, Tr>& get(basic_streambuf<Elem, Tr>& strbuf, Elem Delim);
   
  Четвертая функция извлекает до `count` - 1 элементов и сохраняет их в массив, начиная с _ *Str*. Она всегда сохраняет `char_type` после сохранения всех извлеченных элементов. В целях тестирования извлечение останавливается:  
   
--   в конце файла;  
+-   Конец файла.  
   
 -   после того как функция извлечет элемент, который оценивается как эквивалентный `Delim`, и в этом случае элемент возвращается в управляемую последовательность;  
   
@@ -852,7 +853,7 @@ class sentry {
   
 -   Эффективно вызывает [ws](../standard-library/istream-functions.md#ws)( `_Istr`), если `_Istr`. [flags](../standard-library/ios-base-class.md#flags)**&**[skipws](../standard-library/ios-functions.md#skipws) не равно нулю.  
   
- Если после такой подготовки `_Istr`. **good** имеет значение false, то конструктор вызывает `_Istr`. [setstate](../standard-library/basic-ios-class.md#setstate)( **failbit**). В любом случае конструктор сохраняет значение, возвращенное `_Istr`. **good** в **status**. Последующий вызов **operator bool** предоставляет это сохраненное значение.  
+ Если после такой подготовки `_Istr`. **good** имеет значение false, то конструктор вызывает `_Istr`. [setstate](../standard-library/basic-ios-class.md#setstate)(**failbit**). В любом случае конструктор сохраняет значение, возвращенное `_Istr`. **good** в **status**. Последующий вызов **operator bool** предоставляет это сохраненное значение.  
   
 ##  <a name="swap"></a>  basic_istream::swap  
  Меняет местами содержимое двух объектов `basic_istream`.  

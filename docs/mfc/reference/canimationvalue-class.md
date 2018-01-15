@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-windows
+ms.technology: cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
@@ -18,8 +17,7 @@ f1_keywords:
 - AFXANIMATIONCONTROLLER/CAnimationValue::SetDefaultValue
 - AFXANIMATIONCONTROLLER/CAnimationValue::GetAnimationVariableList
 - AFXANIMATIONCONTROLLER/CAnimationValue::m_value
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - CAnimationValue [MFC], CAnimationValue
 - CAnimationValue [MFC], AddTransition
@@ -29,16 +27,16 @@ helpviewer_keywords:
 - CAnimationValue [MFC], GetAnimationVariableList
 - CAnimationValue [MFC], m_value
 ms.assetid: 78c5ae19-ede5-4f20-bfbe-68b467b603c2
-caps.latest.revision: 17
+caps.latest.revision: "17"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 5b37801619fae84519dde000c922d34c4b9e1509
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
-ms.sourcegitcommit: 4a770b6508067913aec51b8b3878f33e30eed4bb
-ms.openlocfilehash: e56217b4cf92583d965b221360803ce4b4de3b44
-ms.contentlocale: ru-ru
-ms.lasthandoff: 10/09/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="canimationvalue-class"></a>Класс CAnimationValue
 Реализует функции объекта анимации, имеющего одно значение.  
@@ -49,17 +47,17 @@ ms.lasthandoff: 10/09/2017
 class CAnimationValue : public CAnimationBaseObject;  
 ```  
   
-## <a name="members"></a>Члены  
+## <a name="members"></a>Участники  
   
 ### <a name="public-constructors"></a>Открытые конструкторы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[CAnimationValue::CAnimationValue](#canimationvalue)|Перегружен. Создает объект CAnimationValue.|  
   
 ### <a name="public-methods"></a>Открытые методы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[CAnimationValue::AddTransition](#addtransition)|Добавляет переход, применяемый к значению.|  
 |[CAnimationValue::GetValue](#getvalue)|Перегружен. Возвращает текущее значение.|  
@@ -68,13 +66,13 @@ class CAnimationValue : public CAnimationBaseObject;
   
 ### <a name="protected-methods"></a>Защищенные методы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[CAnimationValue::GetAnimationVariableList](#getanimationvariablelist)|Помещает переменную инкапсулированный анимации в список. (Переопределяет [CAnimationBaseObject::GetAnimationVariableList](../../mfc/reference/canimationbaseobject-class.md#getanimationvariablelist).)|  
   
 ### <a name="public-operators"></a>Открытые операторы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[CAnimationValue::operator DOUBLE](#operator_double)|Обеспечивает преобразование между CAnimationValue и DOUBLE.|  
 |[CAnimationValue::operator INT32](#operator_int32)|Обеспечивает преобразование между CAnimationValue и INT32.|  
@@ -82,7 +80,7 @@ class CAnimationValue : public CAnimationBaseObject;
   
 ### <a name="protected-data-members"></a>Защищенные члены данных  
   
-|Имя|Описание|  
+|name|Описание:|  
 |----------|-----------------|  
 |[CAnimationValue::m_value](#m_value)|Инкапсулированный анимации переменной, представляющей значение анимации.|  
   
@@ -257,4 +255,3 @@ void SetDefaultValue(DOUBLE dblDefaultValue);
   
 ## <a name="see-also"></a>См. также  
  [Классы](../../mfc/reference/mfc-classes.md)
-

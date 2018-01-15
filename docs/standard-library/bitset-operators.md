@@ -12,10 +12,9 @@ f1_keywords:
 - bitset/std::operator&lt;&lt;
 - bitset/std::operator^
 - bitset/std::operator|
-dev_langs:
-- C++
+dev_langs: C++
 ms.assetid: 84fe6a13-6f6e-4cdc-bf8f-6f65ab1134d4
-caps.latest.revision: 12
+caps.latest.revision: "12"
 author: corob-msft
 ms.author: corob
 manager: ghogen
@@ -23,12 +22,12 @@ helpviewer_keywords:
 - std::operator&amp; (bitset)
 - std::operator&gt;&gt; (bitset)
 - std::operator&lt;&lt; (bitset)
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
-ms.openlocfilehash: 99e42dab27a7ee03c42e9b1b5a35e94cc7ed050b
-ms.contentlocale: ru-ru
-ms.lasthandoff: 04/29/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: aca0affd587eb0d90b312e13687d138300f94570
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="ltbitsetgt-operators"></a>Операторы &lt;bitset&gt;
 ||||  
@@ -85,7 +84,7 @@ bitset 2: 0011
 bitset 3: 0001  
 ```  
   
-##  <a name="op_lt_lt"></a>  оператор&lt;&lt;  
+##  <a name="op_lt_lt"></a> operator&lt;&lt;  
  Вставляет текстовое представление битовой последовательности в поток вывода.  
   
 ```  
@@ -106,7 +105,7 @@ basic_ostream<CharType, Traits>& operator<<(
 ### <a name="remarks"></a>Примечания  
  Функция шаблона перегружает **operator<<**, позволяя записывать набор битов без предварительного преобразования в строку. Шаблонная функция фактически выполняется.  
   
- **ostr** << _ *Right*. [to_string](https://msdn.microsoft.com/library/2f93c55z.aspx) < **CharType**, **Traits**, **allocator**\< **CharType**> > ( )  
+ **ostr** << _ *Right*. [to_string](bitset-class.md) < **CharType**, **Traits**, **allocator**\< **CharType**> > ( )  
   
 ### <a name="example"></a>Пример  
   
@@ -139,7 +138,7 @@ int main( )
 }  
 ```  
   
-##  <a name="op_gt_gt"></a>  оператор&gt;&gt;  
+##  <a name="op_gt_gt"></a> operator&gt;&gt;  
  Считывает строку битовых символов в битовый массив.  
   
 ```  
@@ -163,7 +162,7 @@ _Istr,
  Функция шаблона возвращает строку `_Istr`.  
   
 ### <a name="remarks"></a>Примечания  
- Функция шаблона перегружает **operator>>** для сохранения в bitset _ *Right* значения bitset( `str`), где `str` является объектом типа [basic_string](https://msdn.microsoft.com/library/syxtdd4f.aspx) < **CharType**, **Traits**, **allocator**\< **CharType**> > **&** извлеченным из `_Istr`.  
+ Функция шаблона перегружает **operator>>** для сохранения в bitset _ *Right* значения bitset( `str`), где `str` является объектом типа [basic_string](basic-string-class.md) < **CharType**, **Traits**, **allocator**\< **CharType**> > **&** извлеченным из `_Istr`.  
   
  Функция шаблона извлекает элементы из `_Istr` и вставляет их в битовый массив до того, как:  
   
@@ -322,5 +321,4 @@ bitset 3: 0111
   
 ## <a name="see-also"></a>См. также  
  [\<bitset>](../standard-library/bitset.md)
-
 

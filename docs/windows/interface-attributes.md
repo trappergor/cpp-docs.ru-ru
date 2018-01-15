@@ -1,63 +1,66 @@
 ---
-title: "Interface Attributes | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "attributes [C++], reference topics"
-  - "interface attributes"
+title: "Атрибуты интерфейса | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+dev_langs: C++
+helpviewer_keywords:
+- attributes [C++], reference topics
+- interface attributes
 ms.assetid: 27fcdfee-abce-4585-8b53-ee31635356e8
-caps.latest.revision: 7
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: 5ff84939b3211633e199066e1a38da2e91efb1c8
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 12/21/2017
 ---
-# Interface Attributes
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Следующие атрибуты применяются к [интерфейс \(или \_\_interface\)](../Topic/__interface.md) ключевое слово C\+\+.  
+# <a name="interface-attributes"></a>Атрибуты интерфейса
+Следующие атрибуты, относящиеся к [interface (или __interface)](../cpp/interface.md) C++ ключевое слово.  
   
-|Атрибут|Описание|  
-|-------------|--------------|  
-|[async\_uuid](../Topic/async_uuid.md)|Определяет UUID, инструктирует компилятор MIDL задаются и синхронные и асинхронные версии интерфейсов модели COM.|  
-|[custom](../windows/custom-cpp.md)|Позволяет определить собственные атрибуты.|  
-|[dispinterface](../windows/dispinterface.md)|Задает интерфейс в файле idl как интерфейс диспетчеризации.|  
-|[dual](../Topic/dual.md)|Задает интерфейс в файле idl как сдвоенный интерфейс.|  
-|[export](../windows/export.md)|Структура данных будет располагаться в idl\-файле.|  
-|[helpcontext](../windows/helpcontext.md)|Указывает идентификатор контекста, который позволяет пользователю просматривать сведения об этом элементе в файле Справки.|  
-|[helpfile](../Topic/helpfile.md)|Задает имя файла Справки библиотеки типов.|  
-|[helpstring](../windows/helpstring.md)|Задает символьную строку, используемую для описания элемента, к которому она применяется.|  
-|[helpstringcontext](../windows/helpstringcontext.md)|Указывает идентификатор раздела в файле справки .hlp или .chm.|  
-|[helpstringdll](../windows/helpstringdll.md)|Указывает имя dll\-библиотеки для использования выполнять поиск строки документа \(локализация\).|  
-|[hidden](../Topic/hidden.md)|Показывает, что элемент существует, но не должен отображаться в обозревателе, ориентированном на пользователя.|  
-|[library\_block](../windows/library-block.md)|Задает конструкцию внутри блока библиотеки файла idl.|  
-|[local](../windows/local-cpp.md)|Позволяет использовать компилятора MIDL как генератор заголовка при использовании в заголовке интерфейса.  При использовании в отдельной функции обозначает локальную процедуру, для которой нет заглушки не формируются.|  
-|[nonextensible](../Topic/nonextensible.md)|Указывает, что `IDispatch` реализация включает только перечисленные свойства и методы в описании интерфейса и не может быть удлинена с дополнительными элементами во время выполнения.  Этот атрибут допустим только на a [Двойной](../Topic/dual.md) интерфейс.|  
-|[odl](../windows/odl.md)|Задает интерфейс в качестве интерфейса на языке описания объектов \(ODL\).|  
-|[Объект.](../Topic/object%20\(C++\).md)|Определяет пользовательский интерфейс.|  
-|[oleautomation](../windows/oleautomation.md)|Указывает, что интерфейс совместимый с автоматизацией.|  
-|[pointer\_default](../windows/pointer-default.md)|Определяет атрибут по умолчанию указателя для всех указателей, отличный от верхнего уровня указатели, отображаемые в списки параметров.|  
-|[ptr](../windows/ptr.md)|Определяет указатель в виде полный указатель.|  
-|[restricted](../windows/restricted.md)|Означают, члены библиотек не может вызываться произвольным образом.|  
-|[uuid](../windows/uuid-cpp-attributes.md)|Предоставляет уникальный идентификатор для библиотеки|  
+|Атрибут|Описание:|  
+|---------------|-----------------|  
+|[async_uuid](../windows/async-uuid.md)|Указывает идентификатор UUID, компилятор MIDL для определения синхронные и асинхронные версии COM-интерфейса.|  
+|[пользовательские](../windows/custom-cpp.md)|Можно определить собственные атрибуты.|  
+|[dispinterface](../windows/dispinterface.md)|Помещает интерфейс в IDL-файл в качестве интерфейса диспетчеризации.|  
+|[dual](../windows/dual.md)|Помещает интерфейс в IDL-файл как сдвоенный интерфейс.|  
+|[export](../windows/export.md)|В результате структуру данных помещается в IDL-файл.|  
+|[helpcontext](../windows/helpcontext.md)|Указывает идентификатор контекста, который позволяет пользователю просматривать сведения об этом элементе в файле справки.|  
+|[helpfile](../windows/helpfile.md)|Задает имя файла справки для библиотеки типов.|  
+|[helpstring](../windows/helpstring.md)|Определяет строку символов, используемый для описания элемента, к которому он применяется.|  
+|[helpstringcontext](../windows/helpstringcontext.md)|Указывает идентификатор раздела справки в .hlp или CHM-файле.|  
+|[helpstringdll](../windows/helpstringdll.md)|Указывает имя библиотеки DLL, в которых будет производиться выполняют поиск строки в документе (локализации).|  
+|[hidden](../windows/hidden.md)|Указывает, что элемент существует, но не должен отображаться в пользовательском браузере.|  
+|[library_block](../windows/library-block.md)|Помещает конструкцию внутри блока библиотеки IDL-файл.|  
+|[локальные](../windows/local-cpp.md)|Позволяет использовать компилятор MIDL как генератор заголовок при использовании в заголовке интерфейса. При использовании в отдельную функцию, назначает локальной процедуры, для которого заглушки не создаются.|  
+|[nonextensible](../windows/nonextensible.md)|Указывает, что `IDispatch` реализация содержит только свойства и методы, перечисленных в описании интерфейса и не могут быть расширены с помощью дополнительных членов во время выполнения. Этот атрибут действителен только на [двойного](../windows/dual.md) интерфейса.|  
+|[odl](../windows/odl.md)|Определяет интерфейс как интерфейс языка описания объектов (ODL).|  
+|[object](../windows/object-cpp.md)|Определяет пользовательский интерфейс.|  
+|[oleautomation](../windows/oleautomation.md)|Указывает, что интерфейс совместим с автоматизацией.|  
+|[pointer_default](../windows/pointer-default.md)|Указывает атрибут указатель по умолчанию для всех указателей, за исключением указателей верхнего уровня, которые отображаются в списках параметров.|  
+|[ptr](../windows/ptr.md)|Определяет указатель как полный указатель.|  
+|[restricted](../windows/restricted.md)|Определяет, какие члены библиотеки не может вызываться произвольным образом.|  
+|[UUID](../windows/uuid-cpp-attributes.md)|Предоставляет уникальный идентификатор библиотеки|  
   
- Необходимо соблюдать следующие правила для определения интерфейса:  
+ Должны соблюдаться следующие правила для определения интерфейса.  
   
--   Соглашение о вызовах по умолчанию \_\_stdcall.  
+-   Соглашение о вызовах по умолчанию — [__stdcall](../cpp/stdcall.md).  
   
--   Идентификатор GUID указан, если не указывать.  
+-   Идентификатор GUID предоставляется для вас, если можно не указывать.  
   
--   Нет перегруженные методы не допускаются.  
+-   Перегруженные методы не допускаются.  
   
- Если определение UUID создается атрибут и использованием того же имени интерфейса в другом атрибуте проектов, один и тот же идентификатор GUID.  
+ Если не указать [uuid](../windows/uuid-cpp-attributes.md) атрибута и с использованием имени интерфейса в проектах другой атрибут, создается одинаковый идентификатор GUID.  
   
-## См. также  
- [Attributes by Usage](../windows/attributes-by-usage.md)
+## <a name="see-also"></a>См. также  
+ [Список атрибутов по использованию](../windows/attributes-by-usage.md)

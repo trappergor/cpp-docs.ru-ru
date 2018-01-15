@@ -42,11 +42,12 @@ caps.latest.revision: "4"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: f0b2e084e27b951676fddfb20b53d5f74944089e
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 3ecf7f9bb38cdd844514001126a98bced67617e7
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="ilogb-ilogbf-ilogbl"></a>ilogb, ilogbf, ilogbl
 Возвращает целое число, представляющее несмещенный порядок по основанию 2 для заданного значения.  
@@ -85,10 +86,10 @@ int ilogbl(
   
  В противном случае возвращает одно из следующих значений, определенных в \<math.h>:  
   
-|Ввод|Результат|  
+|Входные данные|Результат|  
 |-----------|------------|  
 |±0|FP_ILOGB0|  
-|±inf, ±nan, indefinite|FP_ILOGBNAN|  
+|±INF ±nan, не ограничена|FP_ILOGBNAN|  
   
  Сообщает об ошибках, как указано в [_matherr](../../c-runtime-library/reference/matherr.md).  
   
@@ -103,7 +104,7 @@ int ilogbl(
 |-------------|--------------|------------------|  
 |`ilogb`,                `ilogbf`, `ilogbl`|\<math.h>|\<cmath>|  
   
- Дополнительные сведения о совместимости см. в статье [Совместимость](../../c-runtime-library/compatibility.md).  
+ Дополнительные сведения о совместимости см. в разделе [Совместимость](../../c-runtime-library/compatibility.md).  
   
 ## <a name="see-also"></a>См. также  
  [Алфавитный указатель функций](../../c-runtime-library/reference/crt-alphabetical-function-reference.md)   

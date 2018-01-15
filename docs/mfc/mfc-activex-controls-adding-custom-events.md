@@ -26,11 +26,12 @@ caps.latest.revision: "14"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: a93f0354395dee3110749a942e1800581f146fdf
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 6bbf62500d3aaca21e9b01401e839d08fa56755c
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="mfc-activex-controls-adding-custom-events"></a>Элементы управления ActiveX в MFC. Добавление пользовательских событий
 Пользовательские события отличаются от событий хранения в том, что они не срабатывают автоматически классом `COleControl`. Пользовательское событие распознает определенное действие, определяются разработчиками элементов управления, как событие. Карты записей событий для пользовательских событий, представляются `EVENT_CUSTOM` макрос. Следующий раздел реализует пользовательское событие для проекта элемента управления ActiveX, который был создан с помощью мастера элементов управления ActiveX.  

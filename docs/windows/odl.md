@@ -1,32 +1,33 @@
 ---
-title: "odl | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-f1_keywords: 
-  - "vc-attr.odl"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "odl attribute"
+title: "ODL | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+f1_keywords: vc-attr.odl
+dev_langs: C++
+helpviewer_keywords: odl attribute
 ms.assetid: 75dcb314-b50f-4a63-9180-507ac1bc78f3
-caps.latest.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 9
+caps.latest.revision: "9"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: fb7525fb57a336defd6d2d50dae4bc0ee988c1ae
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 12/21/2017
 ---
-# odl
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Задает интерфейс в качестве интерфейса на языке описания объектов \(ODL\).  Компилятор MIDL не требует **odl** атрибут; только для совместимости с более старыми файлами .odl.  
+# <a name="odl"></a>odl
+Определяет интерфейс как интерфейс языка описания объектов (ODL). Компилятор MIDL не требует **odl** атрибут; она распознается только для совместимости с более старых ODL-файлы.  
   
-## Синтаксис  
+## <a name="syntax"></a>Синтаксис  
   
 ```  
   
@@ -34,10 +35,10 @@ caps.handback.revision: 9
   
 ```  
   
-## Заметки  
- **odl** Атрибут C\+\+ имеет ту же функциональность, что и  [odl](http://msdn.microsoft.com/library/windows/desktop/aa367126) атрибут MIDL.  
+## <a name="remarks"></a>Примечания  
+ **Odl** языка C++ имеет ту же функциональность, что [odl](http://msdn.microsoft.com/library/windows/desktop/aa367126) языка MIDL.  
   
-## Пример  
+## <a name="example"></a>Пример  
   
 ```  
 // cpp_attr_ref_odl.cpp  
@@ -59,20 +60,19 @@ public:
 };  
 ```  
   
-## Требования  
+## <a name="requirements"></a>Требования  
   
-### Контекст атрибута  
+### <a name="attribute-context"></a>Контекст атрибута  
   
 |||  
 |-|-|  
 |**Применение**|`interface`|  
-|**Repeatable**|Нет|  
-|**Обязательные атрибуты**|None|  
-|**Недопустимые атрибуты**|None|  
+|**Повторяемый**|Нет|  
+|**Обязательные атрибуты**|Нет|  
+|**Недопустимые атрибуты**|Нет|  
   
- Дополнительные сведения о контекстах атрибута см. в разделе [Контексты атрибута](../windows/attribute-contexts.md).  
+ Дополнительные сведения о контекстах атрибутов см. в разделе [Контексты атрибутов](../windows/attribute-contexts.md).  
   
-## См. также  
- [IDL Attributes](../windows/idl-attributes.md)   
- [Interface Attributes](../windows/interface-attributes.md)   
- [Attributes Samples](http://msdn.microsoft.com/ru-ru/558ebdb2-082f-44dc-b442-d8d33bf7bdb8)
+## <a name="see-also"></a>См. также  
+ [Атрибуты IDL](../windows/idl-attributes.md)   
+ [Атрибуты интерфейса](../windows/interface-attributes.md)   

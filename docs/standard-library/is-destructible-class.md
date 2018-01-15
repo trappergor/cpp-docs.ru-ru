@@ -9,23 +9,20 @@ ms.technology:
 - devlang-cpp
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-f1_keywords:
-- type_traits/std::is_destructible
-dev_langs:
-- C++
-helpviewer_keywords:
-- is_destructible
+f1_keywords: type_traits/std::is_destructible
+dev_langs: C++
+helpviewer_keywords: is_destructible
 ms.assetid: 3bb9b718-1ad5-49ae-93cc-92b93b546b4d
-caps.latest.revision: 16
+caps.latest.revision: "16"
 author: corob-msft
 ms.author: corob
 manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 25574f44995bc118388c3100ee262d9ad13f4f8c
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
-ms.sourcegitcommit: 65f4e356ad0d46333b0d443d0fd6ac0b9f2b6f58
-ms.openlocfilehash: 438af85bce45bb0fe7d1386fdc46f1fab0217999
-ms.contentlocale: ru-ru
-ms.lasthandoff: 10/03/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="isdestructible-class"></a>Класс is_destructible
 Проверяет, можно ли уничтожить тип.  
@@ -51,7 +48,6 @@ struct is_destructible;
   
 ## <a name="see-also"></a>См. также  
  [<type_traits>](../standard-library/type-traits.md)
-
 
 
 

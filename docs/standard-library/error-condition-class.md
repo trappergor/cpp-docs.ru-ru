@@ -23,17 +23,17 @@ helpviewer_keywords:
 - std::error_condition::category
 - std::error_condition::clear
 - std::error_condition::message
-- 
 ms.assetid: 6690f481-97c9-4554-a0ff-851dc96b7a06
 caps.latest.revision: "16"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: c8109db3a6607abd1792485c93a59795d432f824
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: eaf36a6f078fd41eee75788a2adbbb5efed7f5d7
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="errorcondition-class"></a>Класс error_condition
 Представляет коды ошибок, определенные пользователем.  
@@ -53,7 +53,7 @@ class error_condition;
 |-|-|  
 |[error_condition](#error_condition)|Создает объект типа `error_condition`.|  
   
-### <a name="typedefs"></a>Typedefs  
+### <a name="typedefs"></a>Определения типов  
   
 |||  
 |-|-|  
@@ -92,7 +92,7 @@ void assign(value_type val, const error_category& _Cat);
   
 ### <a name="parameters"></a>Параметры  
   
-|Параметр|Описание|  
+|Параметр|Описание:|  
 |---------------|-----------------|  
 |`val`|Значение кода ошибки для хранения в `error_code`.|  
 |`_Cat`|Категория ошибки для хранения в `error_code`.|  
@@ -138,7 +138,7 @@ error_condition(_Enum _Errcode,
   
 ### <a name="parameters"></a>Параметры  
   
-|Параметр|Описание|  
+|Параметр|Описание:|  
 |---------------|-----------------|  
 |`val`|Значение кода ошибки для хранения в `error_condition`.|  
 |`_Cat`|Категория ошибки для хранения в `error_condition`.|  
@@ -173,7 +173,7 @@ bool operator==(const error_condition& right) const;
   
 ### <a name="parameters"></a>Параметры  
   
-|Параметр|Описание|  
+|Параметр|Описание:|  
 |---------------|-----------------|  
 |`right`|Объект для проверки на равенство.|  
   
@@ -192,7 +192,7 @@ bool operator!=(const error_condition& right) const;
   
 ### <a name="parameters"></a>Параметры  
   
-|Параметр|Описание|  
+|Параметр|Описание:|  
 |---------------|-----------------|  
 |`right`|Объект для проверки на неравенство.|  
   
@@ -211,7 +211,7 @@ bool operator<(const error_condition& right) const;
   
 ### <a name="parameters"></a>Параметры  
   
-|Параметр|Описание|  
+|Параметр|Описание:|  
 |---------------|-----------------|  
 |`right`|Сравниваемый объект `error_condition`.|  
   
@@ -234,7 +234,7 @@ error_condition(_Enum error,
   
 ### <a name="parameters"></a>Параметры  
   
-|Параметр|Описание|  
+|Параметр|Описание:|  
 |---------------|-----------------|  
 |`_Errcode`|Значение перечисления для присвоения объекту `error_condition`.|  
   

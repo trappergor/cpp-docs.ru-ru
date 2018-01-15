@@ -13,11 +13,12 @@ caps.latest.revision: "5"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 4a0566157f2dd4d9a278113f2246bd36671e3217
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: b51eeb36a4cffafde0e90586fec08d28b9672e5d
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="d-using-the-schedule-clause"></a>Г. В соответствии с расписанием предложения
 Параллельной области имеет по крайней мере один барьера со своей стороны и, возможно, дополнительных барьеры внутри него. В каждом барьера членами команды необходимо дождаться последнего потока поступления. Чтобы свести к минимуму время ожидания, должен быть предоставлен общей работы, чтобы все потоки образовать барьера, в то же время. Если некоторые, общих рабочих содержится в **для** конструкции `schedule` предложение может использоваться для этой цели.  

@@ -13,11 +13,12 @@ caps.latest.revision: "8"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 870895dae8aa6fe4b3720b9319359672fcb576af
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 612abe97de27b179f710b2b09811535829885c5f
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="a16---using-locks"></a>A.16   Использование блокировок
 В следующем примере (для [разделе 3.2](../../parallel/openmp/3-2-lock-functions.md) на странице 41) Обратите внимание, что тип должен быть аргументом для функции блокировки `omp_lock_t`, и что нет необходимости в его очистка.  Функции блокировки вызывают потоков простаивает во время ожидания для записи на первый критический раздел, но для выполнения других операций во время ожидания операции на второй.  `omp_set_lock` Блоки функции, но `omp_test_lock` функция не имеет, допускающей работу в skip() должна быть выполнена.  

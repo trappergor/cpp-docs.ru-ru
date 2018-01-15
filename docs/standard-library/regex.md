@@ -15,11 +15,12 @@ caps.latest.revision: "23"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 50aaf3f695b023d6316fdd5d601962435903e15c
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 7da90e13c325380cb8aad54d1af712c1567e0420
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="ltregexgt"></a>&lt;regex&gt;
 Определяет класс шаблона для синтаксического анализа [регулярных выражений](../standard-library/regular-expressions-cpp.md) и несколько классов шаблонов и функций для поиска в тексте совпадений с объектом регулярного выражения.  
@@ -95,7 +96,7 @@ ms.lasthandoff: 10/24/2017
 |[оператор==](../standard-library/regex-operators.md#op_eq_eq)|Сравнение различных объектов, равенство.|  
 |[оператор!=](../standard-library/regex-operators.md#op_neq)|Сравнение различных объектов, неравенство.|  
 |[оператор<](../standard-library/regex-operators.md#op_lt)|Сравнение различных объектов, меньше.|  
-|[оператор\<=](../standard-library/regex-operators.md#op_gt_eq)|Сравнение различных объектов, меньше или равно.|  
+|[operator\<=](../standard-library/regex-operators.md#op_gt_eq)|Сравнение различных объектов, меньше или равно.|  
 |[оператор>](../standard-library/regex-operators.md#op_gt)|Сравнение различных объектов, больше.|  
 |[оператор>=](../standard-library/regex-operators.md#op_gt_eq)|Сравнение различных объектов, больше или равно.|  
 |[оператор<<](../standard-library/regex-operators.md#op_lt_lt)|Вставляет `sub_match` в поток.|  

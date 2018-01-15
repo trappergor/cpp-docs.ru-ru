@@ -19,11 +19,12 @@ caps.latest.revision: "20"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: db4820fa1496bbedebba8392ab0947cfafdf03e8
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 4b053e963f4e252302ed4c390a648846166aff62
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cruntimeclass-structure"></a>Структура CRuntimeClass
 Каждый класс, производный от `CObject` связан с `CRuntimeClass` структуру, можно использовать для получения сведений о объекта или его базовый класс во время выполнения.  
@@ -34,11 +35,11 @@ ms.lasthandoff: 10/24/2017
 struct CRuntimeClass  
 ```  
   
-## <a name="members"></a>Члены  
+## <a name="members"></a>Участники  
   
 ### <a name="public-methods"></a>Открытые методы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[CRuntimeClass::CreateObject](#createobject)|Создает объект во время выполнения.|  
 |[CRuntimeClass::FromName](#fromname)|Создает объект во время выполнения с помощью имени класса знакомы.|  
@@ -46,7 +47,7 @@ struct CRuntimeClass
   
 ### <a name="public-data-members"></a>Открытые члены данных  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[CRuntimeClass::m_lpszClassName](#m_lpszclassname)|Имя класса.|  
 |[CRuntimeClass::m_nObjectSize](#m_nobjectsize)|Размер объекта в байтах.|  

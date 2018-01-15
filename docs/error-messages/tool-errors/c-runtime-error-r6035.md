@@ -15,11 +15,12 @@ caps.latest.revision: "6"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 6f0f6e34ef6c95d4c1942cdc1348000213647b0b
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 6b5f9fb1f7562b26382c6b36e3947367013631bf
+ms.sourcegitcommit: 54035dce0992ba5dce0323d67f86301f994ff3db
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 01/03/2018
 ---
 # <a name="c-runtime-error-r6035"></a>Ошибка времени выполнения C R6035
 Microsoft Visual C++ библиотеки времени выполнения, ошибка R6035 — Модуль в этом приложении инициализация модуля глобальный файл cookie безопасности во время активного как функция, использующая этот файл.  Вызов __security_init_cookie ранее.  
@@ -76,4 +77,4 @@ void DllEntryHelper() {
 >  Сообщение об ошибке R6035 — только для созданных x86 отладки CRT, а только для структурированной обработки исключений, но условие ошибки на всех платформах и для всех форм исключение обрабатывает, например обработки исключений C++.  
   
 ## <a name="see-also"></a>См. также  
- [Комплексные проверки безопасности компилятора](http://go.microsoft.com/fwlink/?linkid=7260)
+ [Комплексные проверки безопасности компилятора](http://go.microsoft.com/fwlink/p/?linkid=7260)

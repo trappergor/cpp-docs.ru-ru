@@ -1,29 +1,29 @@
 ---
-title: "A.19   Examples Showing Incorrect Nesting of Work-sharing Directives | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
+title: "A.19 примеры, показывающие, неправильное вложение директив совместной работы | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
 ms.assetid: 906e900d-9259-44d6-a095-c1ba9135d269
-caps.latest.revision: 7
-caps.handback.revision: 7
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "7"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 8a3f8a4e1ca62a77c16dafedd0921ca842d7a048
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 12/21/2017
 ---
-# A.19   Examples Showing Incorrect Nesting of Work-sharing Directives
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-Примеры в этом разделе демонстрируют директивные правила вложения.  Дополнительные сведения о вложении см. в разделе директивном [Раздел 2.9](../../parallel/openmp/2-9-directive-nesting.md) на странице 33.  
+# <a name="a19---examples-showing-incorrect-nesting-of-work-sharing-directives"></a>A.19   Примеры неправильного вложения директив совместной работы
+В этом разделе примерах директив вложенности правила. Дополнительные сведения о директива nesting см. в разделе [разделе 2.9](../../parallel/openmp/2-9-directive-nesting.md) на странице 33.  
   
- В следующем примере noncompliant поскольку внутренняя и outer `for` правила являются вложенными и связываются с одинаковым  `parallel` директива:  
+ Следующий пример является несовместимым из-за внутренней и внешней `for` директивы являются вложенными и выполнить привязку к тому же `parallel` директивы:  
   
 ```  
 void wrong1(int n)  
@@ -41,7 +41,7 @@ void wrong1(int n)
 }  
 ```  
   
- Следующая динамически вложенных версия предыдущего примера также noncompliant:  
+ Следующая версия динамически вложенной в предыдущем примере, также не соответствует требованиям:  
   
 ```  
 void wrong2(int n)  
@@ -64,7 +64,7 @@ void work1(int i, int n)
 }  
 ```  
   
- В следующем примере noncompliant поскольку `for` и  `single` правила являются вложенными, они привязываются к одной и той же параллельной области:  
+ Следующий пример является несоответствующим из-за `for` и `single` используются вложенные директивы, и они не привязаны к одной и той же параллельной области:  
   
 ```  
 void wrong3(int n)  
@@ -81,7 +81,7 @@ void wrong3(int n)
 }  
 ```  
   
- В следующем примере noncompliant поскольку a `barrier` директива in a  `for` может привести к взаимоблокировке.  
+ Следующий пример является несоответствующим из-за `barrier` директивы внутри `for` может привести к взаимоблокировке:  
   
 ```  
 void wrong4(int n)  
@@ -99,7 +99,7 @@ void wrong4(int n)
 }  
 ```  
   
- В следующем примере noncompliant поскольку `barrier` результаты взаимоблокировке из\-за факту, что одновременно только один поток может ввести критическую секцию.  
+ Следующий пример является несоответствующим из-за `barrier` приводит к взаимоблокировке тем, что только один поток за раз можно ввести критической секции:  
   
 ```  
 void wrong5()  
@@ -116,7 +116,7 @@ void wrong5()
 }  
 ```  
   
- В следующем примере noncompliant поскольку `barrier` результаты взаимоблокировке из\-за факту которому только один поток выполнения  `single` раздел:  
+ Следующий пример является несоответствующим из-за `barrier` приводит к взаимоблокировке, тем, что только один поток выполняет `single` раздела:  
   
 ```  
 void wrong6()  

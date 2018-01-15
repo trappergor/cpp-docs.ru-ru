@@ -16,11 +16,12 @@ caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 6a6e0b879efa1d96f3f379cc9aa3292a117609fb
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 4d9f79fe4def397346e3f44c6dbf50b2583888e5
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="status-bars"></a>Строки состояния
 Строки состояния предоставляют приложению место отображения сообщения и полезные сведения для пользователя, не прерывая работы пользователя. Как правило, отображается в нижней части окна, строки состояния имеют «панелей», которые включают «индикаторов» и «строка сообщения». Индикаторы отображают состояние таких объектов, как SCROLL LOCK, является ли запись макроса включено, и т. д. Строка сообщения об ошибках можно отобразить сведения о состоянии программы или элемент панели инструментов кнопки или меню, который указывает пользователя с помощью мыши.  

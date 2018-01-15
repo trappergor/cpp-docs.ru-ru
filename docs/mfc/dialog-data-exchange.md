@@ -30,11 +30,12 @@ caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: e6da394a91eab08f0c79b3edb33132e3c85401af
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 35f280228d523c7401e2a90ca395a79a9c87cd51
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="dialog-data-exchange"></a>Обмен данными диалоговых окон
 При использовании механизма DDX можно задать начальные значения диалогового окна переменных-членов объекта, обычно в вашей `OnInitDialog` обработчик или диалогового окна конструктора. Непосредственно перед отображением диалогового окна механизм DDX перемещает значения переменных-членов для элементов управления в диалоговом окне, где они отображаются при самого окна появляется в ответ на `DoModal` или **создать** . Реализация по умолчанию `OnInitDialog` в `CDialog` вызовы `UpdateData` функции-члена класса `CWnd` для инициализации элементов управления в диалоговом окне.  

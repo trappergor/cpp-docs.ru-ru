@@ -1,53 +1,54 @@
 ---
-title: "OpenMP Functions | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
+title: "Функции OpenMP | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
 ms.assetid: a55a2e5c-a260-44ee-bbd6-de7e2351b384
-caps.latest.revision: 7
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 7
+caps.latest.revision: "7"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: c01967e47d8108803fdadd9c9cfe746a4d477459
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 12/21/2017
 ---
-# OpenMP Functions
-[!INCLUDE[vs2017banner](../../../assembler/inline/includes/vs2017banner.md)]
-
-Ссылки на функции, используемые в API модели OpenMP.  
+# <a name="openmp-functions"></a>Функции OpenMP
+Ссылки на функции, используемые в OpenMP API.  
   
- Реализация Visual C\+\+ стандарта OpenMP включает следующие функции.  
+ Реализация Visual C++ OpenMP standard включает следующие функции.  
   
-|Функция|Описание|  
-|-------------|--------------|  
-|[omp\_destroy\_lock](../../../parallel/openmp/reference/omp-destroy-lock.md)|Uninitializes блокировка.|  
-|[omp\_destroy\_nest\_lock](../../../parallel/openmp/reference/omp-destroy-nest-lock.md)|Uninitializes nestable блокировка.|  
-|[omp\_get\_dynamic](../../../parallel/openmp/reference/omp-get-dynamic.md)|Возвращает значение, показывающее, если количество потоков, доступных в последующей может быть параллельной области изменяется во время выполнения.|  
-|[omp\_get\_max\_threads](../Topic/omp_get_max_threads.md)|Возвращает целое число, которое равно или больше количество потоков, которые будут доступны, если параллельная область за пределами num\_threads , определенные на этом этапе в коде.|  
-|[omp\_get\_nested](../../../parallel/openmp/reference/omp-get-nested.md)|Возвращает значение, указывающее наличие вложенных параллелизм включена.|  
-|[omp\_get\_num\_procs](../../../parallel/openmp/reference/omp-get-num-procs.md)|Возвращает количество процессоров, доступных при вызове функции.|  
-|[omp\_get\_num\_threads](../Topic/omp_get_num_threads.md)|Возвращает количество потоков в параллельной области.|  
-|[omp\_get\_thread\_num](../../../parallel/openmp/reference/omp-get-thread-num.md)|Возвращает число потоков потока выполнения в его команда потока.|  
-|[omp\_get\_wtick](../Topic/omp_get_wtick.md)|Возвращает количество секунд между тактами часов процессора.|  
-|[omp\_get\_wtime](../../../parallel/openmp/reference/omp-get-wtime.md)|Возвращает значение времени в секундах истекл от какого\-либо точки.|  
-|[omp\_in\_parallel](../../../parallel/openmp/reference/omp-in-parallel.md)|Возвращает ненулевое если вызывается из параллельной области.|  
-|[omp\_init\_lock](../../../parallel/openmp/reference/omp-init-lock.md)|Инициализирует простая блокировка.|  
-|[omp\_init\_nest\_lock](../Topic/omp_init_nest_lock.md)|Инициализирует блокировка.|  
-|[omp\_set\_dynamic](../../../parallel/openmp/reference/omp-set-dynamic.md)|Указывает количество потоков, доступных в последующей может быть параллельной области изменяется во время выполнения.|  
-|[omp\_set\_lock](../../../parallel/openmp/reference/omp-set-lock.md)|Блоки поток выполнения до тех пор, пока блокировка не будет доступна.|  
-|[omp\_set\_nest\_lock](../../../parallel/openmp/reference/omp-set-nest-lock.md)|Блоки поток выполнения до тех пор, пока блокировка не будет доступна.|  
-|[omp\_set\_nested](../../../parallel/openmp/reference/omp-set-nested.md)|Разрешает вложенные параллелизм.|  
-|[omp\_set\_num\_threads](../../../parallel/openmp/reference/omp-set-num-threads.md)|Устанавливает количество потоков в последующих параллельных областях, если не переопределено a num\_threads предложение.|  
-|[omp\_test\_lock](../../../parallel/openmp/reference/omp-test-lock.md)|Попытки установить блокировку, но не блокируют выполнение потока.|  
-|[omp\_test\_nest\_lock](../../../parallel/openmp/reference/omp-test-nest-lock.md)|Пытается перевести nestable блокировки, но не блокируют выполнение потока.|  
-|[omp\_unset\_lock](../../../parallel/openmp/reference/omp-unset-lock.md)|Выпуски блокировка.|  
-|[omp\_unset\_nest\_lock](../../../parallel/openmp/reference/omp-unset-nest-lock.md)|Выпуски nestable блокировка.|  
+|Функция|Описание:|  
+|--------------|-----------------|  
+|[omp_destroy_lock](../../../parallel/openmp/reference/omp-destroy-lock.md)|Отменяет инициализацию блокировки.|  
+|[omp_destroy_nest_lock](../../../parallel/openmp/reference/omp-destroy-nest-lock.md)|Отменяет инициализацию которая блокировки.|  
+|[omp_get_dynamic](../../../parallel/openmp/reference/omp-get-dynamic.md)|Возвращает значение, указывающее, если число потоков, доступных в последующих параллельной области может настраиваться по времени выполнения.|  
+|[omp_get_max_threads](../../../parallel/openmp/reference/omp-get-max-threads.md)|Возвращает целое число, равное или больше, чем число потоков, которые были бы доступны, если параллельной области без [num_threads](../../../parallel/openmp/reference/num-threads.md) были определены в этой точке в коде.|  
+|[omp_get_nested](../../../parallel/openmp/reference/omp-get-nested.md)|Возвращает значение, указывающее, включено ли вложенный параллелизм.|  
+|[omp_get_num_procs](../../../parallel/openmp/reference/omp-get-num-procs.md)|Возвращает количество процессоров, доступных при вызове функции.|  
+|[omp_get_num_threads](../../../parallel/openmp/reference/omp-get-num-threads.md)|Возвращает число потоков в параллельной области.|  
+|[omp_get_thread_num](../../../parallel/openmp/reference/omp-get-thread-num.md)|Возвращает количество потоков потока, выполняющегося в его команде потока.|  
+|[omp_get_wtick](../../../parallel/openmp/reference/omp-get-wtick.md)|Возвращает количество секунд между тактов процессора.|  
+|[omp_get_wtime](../../../parallel/openmp/reference/omp-get-wtime.md)|Возвращает значение в секундах времени, прошедшего с какой-то момент.|  
+|[omp_in_parallel](../../../parallel/openmp/reference/omp-in-parallel.md)|Возвращает ненулевое значение, если вызвана внутри параллельной области.|  
+|[omp_init_lock](../../../parallel/openmp/reference/omp-init-lock.md)|Инициализирует простые блокировки.|  
+|[omp_init_nest_lock](../../../parallel/openmp/reference/omp-init-nest-lock.md)|Инициализирует блокировки.|  
+|[omp_set_dynamic](../../../parallel/openmp/reference/omp-set-dynamic.md)|Указывает, что число потоков, доступных в последующих параллельной области может настраиваться по времени выполнения.|  
+|[omp_set_lock](../../../parallel/openmp/reference/omp-set-lock.md)|Блоки потоков выполнения, пока блокировка не освободится.|  
+|[omp_set_nest_lock](../../../parallel/openmp/reference/omp-set-nest-lock.md)|Блоки потоков выполнения, пока блокировка не освободится.|  
+|[omp_set_nested](../../../parallel/openmp/reference/omp-set-nested.md)|Включает вложенные параллелизма.|  
+|[omp_set_num_threads](../../../parallel/openmp/reference/omp-set-num-threads.md)|Задает число потоков в последующих параллельных регионах, если иное не переопределено [num_threads](../../../parallel/openmp/reference/num-threads.md) предложения.|  
+|[omp_test_lock](../../../parallel/openmp/reference/omp-test-lock.md)|Пытается установить блокировку, но не блокирует выполнение потока.|  
+|[omp_test_nest_lock](../../../parallel/openmp/reference/omp-test-nest-lock.md)|Пытается установить блокировку, которая, но не блокирует выполнение потока.|  
+|[omp_unset_lock](../../../parallel/openmp/reference/omp-unset-lock.md)|Освобождает блокировку.|  
+|[omp_unset_nest_lock](../../../parallel/openmp/reference/omp-unset-nest-lock.md)|Освобождение блокировки, которая.|  
   
-## См. также  
- [Library Reference](../../../parallel/openmp/reference/openmp-library-reference.md)
+## <a name="see-also"></a>См. также  
+ [Справочник по библиотеке](../../../parallel/openmp/reference/openmp-library-reference.md)

@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -18,33 +17,26 @@ f1_keywords:
 - future/std::packaged_task::valid
 - future/std::packaged_task::operator()
 - future/std::packaged_task::operator bool
-dev_langs:
-- C++
+dev_langs: C++
 ms.assetid: 0a72cbe3-f22a-4bfe-8e50-dcb268c98780
-caps.latest.revision: 9
+caps.latest.revision: "9"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 66798adc96121837b4ac2dd238b9887d3c5b7eef
-ms.openlocfilehash: 3ca8c4c008daa02af2bba0df8468bea3c063c28a
-ms.contentlocale: ru-ru
-ms.lasthandoff: 04/29/2017
-
+helpviewer_keywords:
+- std::packaged_task [C++]
+- std::packaged_task [C++], packaged_task
+- std::packaged_task [C++], get_future
+- std::packaged_task [C++], make_ready_at_thread_exit
+- std::packaged_task [C++], reset
+- std::packaged_task [C++], swap
+- std::packaged_task [C++], valid
+ms.workload: cplusplus
+ms.openlocfilehash: e060a7d9a73cd275810541fc57ad34a2c62c4097
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="packagedtask-class"></a>Класс packaged_task
 Описывает *асинхронный поставщик*, который является оберткой вызова с сигнатурой вызова `Ty(ArgTypes...)`. Его *связанное асинхронное состояние* хранит копию его вызываемого объекта, помимо возможных результатов.  
@@ -56,18 +48,18 @@ template <class>
 class packaged_task;
 ```  
   
-## <a name="members"></a>Члены  
+## <a name="members"></a>Участники  
   
 ### <a name="public-constructors"></a>Открытые конструкторы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[packaged_task](#packaged_task)|Создает объект `packaged_task`.|  
 |[Деструктор packaged_task::~packaged_task](#dtorpackaged_task_destructor)|Уничтожает объект `packaged_task`.|  
   
 ### <a name="public-methods"></a>Открытые методы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[get_future](#get_future)|Возвращает объект [future](../standard-library/future-class.md), который имеет то же связанное асинхронное состояние.|  
 |[make_ready_at_thread_exit](#make_ready_at_thread_exit)|Вызывает вызываемый объект, который хранится в связанном асинхронном состоянии и атомарно сохраняет возвращаемое значение.|  
@@ -77,7 +69,7 @@ class packaged_task;
   
 ### <a name="public-operators"></a>Открытые операторы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[packaged_task::operator=](#op_eq)|Передает связанное асинхронное состояние из указанного объекта.|  
 |[packaged_task::operator()](#op_call)|Вызывает вызываемый объект, который хранится в связанном асинхронном состоянии, атомарно сохраняет возвращаемое значение и устанавливает состояние в значение *ready*.|  
@@ -234,7 +226,6 @@ bool valid() const;
 ## <a name="see-also"></a>См. также  
  [Справочник по файлам заголовков](../standard-library/cpp-standard-library-header-files.md)   
  [\<future>](../standard-library/future.md)
-
 
 
 

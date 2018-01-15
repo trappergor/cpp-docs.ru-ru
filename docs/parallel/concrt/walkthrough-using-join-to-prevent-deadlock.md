@@ -1,156 +1,160 @@
 ---
-title: "Пошаговое руководство. Использование класса join для предотвращения взаимоблокировки | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "предотвращение взаимоблокировки объединений [среда выполнения с параллелизмом]"
-  - "взаимоблокировка, предотвращение [среда выполнения с параллелизмом]"
-  - "нежадные объединения, пример"
-  - "класс join, пример"
+title: "Пошаговое руководство: Использование класса join для предотвращения взаимоблокировок | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- preventing deadlock with joins [Concurrency Runtime]
+- deadlock, preventing [Concurrency Runtime]
+- non-greedy joins, example
+- join class, example
 ms.assetid: d791f697-bb93-463e-84bd-5df1651b7446
-caps.latest.revision: 16
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 13
+caps.latest.revision: "16"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 894ff7da95f09b1aedaa8fd9d1d9b44f77017a8f
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 12/21/2017
 ---
-# Пошаговое руководство. Использование класса join для предотвращения взаимоблокировки
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-В этом разделе на примере проблемы обедающих философов показано использование класса [concurrency::join](../Topic/join%20Class.md) для исключения взаимоблокировок в приложении.  В программном приложении *взаимоблокировка* возникает, если каждый из двух или более процессов удерживает ресурс и ожидает освобождения какого\-либо другого ресурса другим процессом.  
+# <a name="walkthrough-using-join-to-prevent-deadlock"></a>Пошаговое руководство. Использование класса join для предотвращения взаимоблокировки
+В этом разделе производит Проблема обедающих философов показано использование [concurrency::join](../../parallel/concrt/reference/join-class.md) для недопущения взаимоблокировок в приложении. В приложении программного обеспечения *взаимоблокировки* возникает, когда два или несколько процессов каждая удерживает ресурс и ожидает освобождения другого ресурса другим процессом.  
   
- Проблема обедающих философов является конкретным примером общего ряда проблем, когда несколько параллельных процессов совместно используют один набор ресурсов.  
+ Проблема обедающих философов является конкретным примером общего ряда проблем, которые могут возникнуть при набор ресурсов, являющихся общими для нескольких параллельных процессов.  
   
-## Обязательные компоненты  
- Прежде чем начать выполнение этого пошагового руководства, необходимо ознакомиться со следующими разделами.  
+## <a name="prerequisites"></a>Предварительные требования  
+ Перед выполнением этого пошагового руководства, ознакомьтесь со следующими разделами:  
   
--   [Асинхронные агенты](../../parallel/concrt/asynchronous-agents.md)  
+- [Асинхронные агенты](../../parallel/concrt/asynchronous-agents.md)  
   
--   [Пошаговое руководство. Создание приложения на основе агента](../../parallel/concrt/walkthrough-creating-an-agent-based-application.md)  
+- [Пошаговое руководство. Создание приложения на основе агента](../../parallel/concrt/walkthrough-creating-an-agent-based-application.md)  
   
--   [Асинхронные блоки сообщений](../../parallel/concrt/asynchronous-message-blocks.md)  
+- [Асинхронные блоки сообщений](../../parallel/concrt/asynchronous-message-blocks.md)  
   
--   [Функции передачи сообщений](../../parallel/concrt/message-passing-functions.md)  
+- [Функции передачи сообщений](../../parallel/concrt/message-passing-functions.md)  
   
--   [Структуры данных синхронизации](../Topic/Synchronization%20Data%20Structures.md)  
+- [Структуры данных синхронизации](../../parallel/concrt/synchronization-data-structures.md)  
   
-##  <a name="top"></a> Подразделы  
- Это пошаговое руководство содержит следующие подразделы.  
+##  <a name="top"></a> Разделы  
+ Это пошаговое руководство содержит следующие разделы:  
   
--   [Проблема обедающих философов](#problem)  
+- [Проблема обедающих философов](#problem)  
   
--   [Упрощенная реализация](#deadlock)  
+- [Реализация упрощенного](#deadlock)  
   
--   [Использование join для предотвращения взаимоблокировок](#solution)  
+- [Использование класса join для предотвращения взаимоблокировки](#solution)  
   
-##  <a name="problem"></a> Проблема обедающих философов  
- Проблема обедающих философов позволяет проиллюстрировать создание взаимоблокировки в приложении.  Пять философов сидят за круглым столом.  В определенный момент времени каждый из них может либо размышлять, либо есть.  Каждый философ вынужден делиться лежащими перед ним китайскими палочками для еды: одной палочкой с соседом слева, а другой — с соседом справа.  Расположение палочек на столе показано на следующем рисунке.  
+##  <a name="problem"></a>Проблема обедающих философов  
+ Проблема обедающих философов показано создание взаимоблокировки в приложении. В эту проблему пять философов сидят за круглым столом. Каждый философу переключается между говорить и еды. Каждый философу должны совместно использовать палочка с соседом слева, а другой — с соседом справа. На следующем рисунке для этой структуры.  
   
- ![Проблема обедающих философов](../../parallel/concrt/media/dining_philosophersproblem.png "Dining\_PhilosophersProblem")  
+ ![Проблема философов обеда](../../parallel/concrt/media/dining_philosophersproblem.png "dining_philosophersproblem")  
   
- Для еды каждому философу нужно две палочки.  Если каждый философ держит в руках одну палочку и ждет, пока ему передадут другую, ни один из них не сможет поесть, и все умрут от голода.  
+ Для еды каждому философу нужно две палочек. Если каждый философу содержит только один палочка и ожидает другого, затем можно eat ни и все незадействованным.  
   
- \[[Наверх](#top)\]  
+ [[В начало](#top)]  
   
-##  <a name="deadlock"></a> Упрощенная реализация  
- В следующем примере показана упрощенная реализация проблемы обедающих философов.  Класс `philosopher`, наследуемый от [concurrency::agent](../../parallel/concrt/reference/agent-class.md), позволяет каждому философу действовать независимо.  В этом примере общий массив объектов [concurrency::critical\_section](../../parallel/concrt/reference/critical-section-class.md) используется для предоставления каждому объекту `philosopher` монопольного доступа к паре китайских палочек.  
+##  <a name="deadlock"></a>Реализация упрощенного  
+ В следующем примере упрощенная реализация проблемы обедающих философов. `philosopher` Класс, который является производным от [concurrency::agent](../../parallel/concrt/reference/agent-class.md), позволяет каждому философу действовать независимо. В примере общий массив объектов [concurrency::critical_section](../../parallel/concrt/reference/critical-section-class.md) для предоставления каждому `philosopher` объекта эксклюзивного доступа к паре китайских палочек.  
   
- Для связи реализации с иллюстрацией класс `philosopher` представляет одного философа.  Переменная `int` представляет одну палочку.  Объекты `critical_section` используются в качестве держателей для китайских палочек.  Метод `run` моделирует жизнь философа.  Метод `think` моделирует процесс мышления, а метод `eat` — процесс еды.  
+ Для связи реализации с иллюстрацией `philosopher` класс представляет один философу. `int` Переменная представляет палочку. `critical_section` Объектов используются в качестве держателей, для которых палочек. `run` Метод моделирует жизнь философу. `think` Метод моделирует процесс мышления и `eat` — процесс еды.  
   
- Объект `philosopher` блокирует оба объекта `critical_section`, чтобы смоделировать удаление палочек из держателей до вызова метода `eat`.  После вызова метода `eat` объект `philosopher` возвращает палочки держателям, возвращая объекты `critical_section` в незаблокированное состояние.  
+ Объект `philosopher` блокирует оба `critical_section` объектов, чтобы смоделировать удаление палочек из держателей до вызывает `eat` метод. После вызова `eat`, `philosopher` объект возвращает палочек владельцам, задав `critical_section` объектов обратно в разблокировать состояние.  
   
- Метод `pickup_chopsticks` показывает, где возможны взаимоблокировки.  Если каждый объект `philosopher` получит доступ к одной из блокировок, ни один из объектов `philosopher` не сможет продолжить работу, так как другая блокировка управляется другим объектом `philosopher`.  
+ `pickup_chopsticks` Метод показывает, где может произойти взаимоблокировка. Если все `philosopher` объект получит доступ к одной блокировки, а затем нет `philosopher` объекта можно продолжить, так как другая блокировка управляется другим `philosopher` объекта.  
   
-## Пример  
+## <a name="example"></a>Пример  
   
-### Описание  
+### <a name="description"></a>Описание  
   
-### Код  
- [!CODE [concrt-philosophers-deadlock#1](../CodeSnippet/VS_Snippets_ConcRT/concrt-philosophers-deadlock#1)]  
+### <a name="code"></a>Код  
+ [!code-cpp[concrt-philosophers-deadlock#1](../../parallel/concrt/codesnippet/cpp/walkthrough-using-join-to-prevent-deadlock_1.cpp)]  
   
-## Компиляция кода  
- Скопируйте код примера и вставьте его в проект Visual Studio или в файл с именем `philosophers-deadlock.cpp`, затем выполните в окне командной строки Visual Studio следующую команду.  
+## <a name="compiling-the-code"></a>Компиляция кода  
+ Скопируйте код примера и вставьте его в проект Visual Studio или вставить его в файл с именем `philosophers-deadlock.cpp` , а затем запустите следующую команду в окне командной строки Visual Studio.  
   
- **cl.exe \/EHsc philosophers\-deadlock.cpp**  
+ **CL.exe/EHsc philosophers-deadlock.cpp**  
   
- \[[Наверх](#top)\]  
+ [[В начало](#top)]  
   
-##  <a name="solution"></a> Использование join для предотвращения взаимоблокировок  
- В этом разделе показано, как использовать буферы сообщений и функции передачи сообщений для снижения вероятности взаимоблокировки.  
+##  <a name="solution"></a>Использование класса join для предотвращения взаимоблокировки  
+ В этом разделе показано, как использовать буферы сообщений и функции передачи сообщений для снижения вероятности возникновения взаимоблокировки.  
   
- Чтобы связать этот пример с предыдущим, класс `philosopher` заменяет каждый объект `critical_section` объектами [concurrency::unbounded\_buffer](../Topic/unbounded_buffer%20Class.md) и `join`.  Объект `join` выполняет функции арбитра, предоставляющего палочки философу.  
+ Чтобы связать этот пример и предыдущий, `philosopher` класс заменяет каждый `critical_section` объектов с помощью [concurrency::unbounded_buffer](reference/unbounded-buffer-class.md) объекта и `join` объекта. `join` Объект выступает в качестве арбитра, предоставляющего палочек философу.  
   
- В этом примере используется класс `unbounded_buffer`, поскольку когда целевой объект получает сообщение от объекта `unbounded_buffer`, это сообщение удаляется из очереди сообщений.  Благодаря этому объект `unbounded_buffer`, хранящий сообщение, может показать, что палочка доступна.  Объект `unbounded_buffer`, не содержащий сообщение, указывает, что палочка используется.  
+ В этом примере используется `unbounded_buffer` класса так, как если целевой объект получает сообщение от `unbounded_buffer` объекта, сообщение удаляется из очереди сообщений. Это позволяет `unbounded_buffer` объект, содержащий сообщение, указывающее, что палочка доступна. `unbounded_buffer` Объекта, не содержащий сообщение указывает, что палочка используется.  
   
- В этом примере используется нежадный объект `join`, поскольку нежадное соединение предоставляет каждому объекту `philosopher` доступ к двум палочкам только в том случае, если оба объекта `unbounded_buffer` содержат сообщение.  Жадное соединение не позволяет предотвратить взаимоблокировку, так как жадное соединение принимает сообщения, как только они становятся доступными.  Если все жадные объекты `join` получают одно из сообщений, но бесконечно ожидают, пока станут доступными другие, создаются взаимоблокировки.  
+ В этом примере используется нежадный `join` объекта, так как дает нежадное объединение каждого `philosopher` объекта доступа для обеих палочек только если оба `unbounded_buffer` объекты содержат сообщение. Жадное объединение не могли бы помешать взаимоблокировки, так как жадное объединение принимает сообщения, как только они станут доступны. Взаимоблокировка может произойти, если все жадном `join` объекты получают одно из сообщений, но ждать бесконечно для других станут доступны.  
   
- Дополнительные сведения о жадных и нежадных соединениях и различиях между разными типами буферов сообщений см. в разделе [Асинхронные блоки сообщений](../../parallel/concrt/asynchronous-message-blocks.md).  
+ Дополнительные сведения о соединениях жадного и нежадного и различия между разными типами буферов сообщений см. в разделе [асинхронные блоки сообщений](../../parallel/concrt/asynchronous-message-blocks.md).  
   
-#### Как избежать взаимоблокировки в этом примере  
+#### <a name="to-prevent-deadlock-in-this-example"></a>Для недопущения взаимоблокировок в этом примере  
   
-1.  Удалите из примера следующий код.  
+1.  Удалите следующий код из примера.  
   
-     [!CODE [concrt-philosophers-deadlock#2](../CodeSnippet/VS_Snippets_ConcRT/concrt-philosophers-deadlock#2)]  
+ [!code-cpp[concrt-philosophers-deadlock#2](../../parallel/concrt/codesnippet/cpp/walkthrough-using-join-to-prevent-deadlock_2.cpp)]  
   
-2.  Измените тип членов данных `_left` и `_right` класса `philosopher` на `unbounded_buffer`.  
+2.  Измените тип `_left` и `_right` данные-члены `philosopher` класса `unbounded_buffer`.  
   
-     [!CODE [concrt-philosophers-join#2](../CodeSnippet/VS_Snippets_ConcRT/concrt-philosophers-join#2)]  
+ [!code-cpp[concrt-philosophers-join#2](../../parallel/concrt/codesnippet/cpp/walkthrough-using-join-to-prevent-deadlock_3.cpp)]  
   
-3.  Измените конструктор `philosopher` для принятия объектов `unbounded_buffer` в качестве параметров.  
+3.  Изменить `philosopher` конструктор, чтобы занять `unbounded_buffer` объектов в качестве параметров.  
   
-     [!CODE [concrt-philosophers-join#3](../CodeSnippet/VS_Snippets_ConcRT/concrt-philosophers-join#3)]  
+ [!code-cpp[concrt-philosophers-join#3](../../parallel/concrt/codesnippet/cpp/walkthrough-using-join-to-prevent-deadlock_4.cpp)]  
   
-4.  Измените метод `pickup_chopsticks`, чтобы использовать нежадный объект `join` для получения сообщений из буферов сообщений для обеих палочек.  
+4.  Изменить `pickup_chopsticks` метод, чтобы использовать нежадный `join` объекта для получения сообщений из буферов сообщений для обеих палочек.  
   
-     [!CODE [concrt-philosophers-join#4](../CodeSnippet/VS_Snippets_ConcRT/concrt-philosophers-join#4)]  
+ [!code-cpp[concrt-philosophers-join#4](../../parallel/concrt/codesnippet/cpp/walkthrough-using-join-to-prevent-deadlock_5.cpp)]  
   
-5.  Измените метод `putdown_chopsticks` для предоставления доступа к палочкам посредством отправки сообщения в буферы сообщений для обеих палочек.  
+5.  Изменить `putdown_chopsticks` метод для предоставления доступа к палочек путем отправки сообщения в буферы сообщений для обеих палочек.  
   
-     [!CODE [concrt-philosophers-join#5](../CodeSnippet/VS_Snippets_ConcRT/concrt-philosophers-join#5)]  
+ [!code-cpp[concrt-philosophers-join#5](../../parallel/concrt/codesnippet/cpp/walkthrough-using-join-to-prevent-deadlock_6.cpp)]  
   
-6.  Измените метод `run`, чтобы он хранил результаты метода `pickup_chopsticks` и передавал эти результаты методу `putdown_chopsticks`.  
+6.  Изменить `run` метод для хранения результатов `pickup_chopsticks` метод и передавать эти результаты `putdown_chopsticks` метод.  
   
-     [!CODE [concrt-philosophers-join#6](../CodeSnippet/VS_Snippets_ConcRT/concrt-philosophers-join#6)]  
+ [!code-cpp[concrt-philosophers-join#6](../../parallel/concrt/codesnippet/cpp/walkthrough-using-join-to-prevent-deadlock_7.cpp)]  
   
-7.  Измените объявление переменной `chopsticks` в функции `wmain` на массив объектов `unbounded_buffer`, каждый из которых содержит одно сообщение.  
+7.  Измените объявление `chopsticks` переменных в `wmain` функции как массив из `unbounded_buffer` объектов, каждый из которых содержит одно сообщение.  
   
-     [!CODE [concrt-philosophers-join#7](../CodeSnippet/VS_Snippets_ConcRT/concrt-philosophers-join#7)]  
+ [!code-cpp[concrt-philosophers-join#7](../../parallel/concrt/codesnippet/cpp/walkthrough-using-join-to-prevent-deadlock_8.cpp)]  
   
-## Пример  
+## <a name="example"></a>Пример  
   
-### Описание  
- Далее представлен полный пример, в котором для снижения вероятности взаимоблокировки используются нежадные объекты `join`.  
+### <a name="description"></a>Описание:  
+ Ниже приведен полный пример, использующий нежадном `join` объектов во избежание возникновения взаимоблокировки.  
   
-### Код  
- [!CODE [concrt-philosophers-join#1](../CodeSnippet/VS_Snippets_ConcRT/concrt-philosophers-join#1)]  
+### <a name="code"></a>Код  
+ [!code-cpp[concrt-philosophers-join#1](../../parallel/concrt/codesnippet/cpp/walkthrough-using-join-to-prevent-deadlock_9.cpp)]  
   
-### Комментарии  
- В результате выполнения примера получается следующий результат:  
+### <a name="comments"></a>Комментарии  
+ В этом примере формируются следующие данные:  
   
-  **aristotle ate 50 times.**  
-**descartes ate 50 times.**  
-**hobbes ate 50 times.**  
-**socrates ate 50 times.**  
-**plato ate 50 times.**   
-## Компиляция кода  
- Скопируйте код примера и вставьте его в проект Visual Studio или в файл с именем `philosophers-join.cpp`, затем выполните в окне командной строки Visual Studio следующую команду.  
+```Output  
+aristotle ate 50 times.  
+descartes ate 50 times.  
+hobbes ate 50 times.  
+socrates ate 50 times.  
+plato ate 50 times.  
+```  
   
- **cl.exe \/EHsc philosophers\-join.cpp**  
+## <a name="compiling-the-code"></a>Компиляция кода  
+ Скопируйте код примера и вставьте его в проект Visual Studio или вставить его в файл с именем `philosophers-join.cpp` , а затем запустите следующую команду в окне командной строки Visual Studio.  
   
- \[[Наверх](#top)\]  
+ **CL.exe/EHsc philosophers-join.cpp**  
   
-## См. также  
- [Пошаговые руководства по среде выполнения с параллелизмом](../Topic/Concurrency%20Runtime%20Walkthroughs.md)   
+ [[В начало](#top)]  
+  
+## <a name="see-also"></a>См. также  
+ [Пошаговые руководства для среды выполнения с параллелизмом](../../parallel/concrt/concurrency-runtime-walkthroughs.md)   
  [Библиотека асинхронных агентов](../../parallel/concrt/asynchronous-agents-library.md)   
  [Асинхронные агенты](../../parallel/concrt/asynchronous-agents.md)   
  [Асинхронные блоки сообщений](../../parallel/concrt/asynchronous-message-blocks.md)   
  [Функции передачи сообщений](../../parallel/concrt/message-passing-functions.md)   
- [Структуры данных синхронизации](../Topic/Synchronization%20Data%20Structures.md)
+ [Структуры данных синхронизации](../../parallel/concrt/synchronization-data-structures.md)

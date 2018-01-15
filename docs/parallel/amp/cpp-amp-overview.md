@@ -19,11 +19,12 @@ caps.latest.revision: "60"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 54823d53cfe6e83879db70dac7809a1b40217bd2
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 96c794ee66f658ca211dfa5d95525e72daf296c8
+ms.sourcegitcommit: 54035dce0992ba5dce0323d67f86301f994ff3db
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 01/03/2018
 ---
 # <a name="c-amp-overview"></a>Общие сведения о C++ AMP
 C++ Accelerated Massive Parallelism (C++ AMP) ускоряет выполнение кода C++, используя преимущества параллельными данными оборудования, например графическом процессоре (GPU) на выделенной видеокарте. С помощью C++ AMP, можно составить код алгоритмы многомерных данных, чтобы с помощью параллелизма на разнородного оборудования можно ускорить выполнение. Модель программирования C++ AMP включает многомерные массивы, индексирование, передачи памяти, мозаичное заполнение и библиотеки математических функций. Расширения языка C++ AMP можно использовать для управления как данные перемещаются из ЦП в GPU и обратно, так что можно улучшить производительность.  
@@ -223,7 +224,7 @@ for (int i = 0; i < 5; i++)
 ### <a name="comparison-of-array-and-arrayview"></a>Сравнение массивов и array_view  
  В следующей таблице показаны сходства и различия между `array` и `array_view` классы.  
   
-|Описание|array - класс|array_view - класс|  
+|Описание:|array - класс|array_view - класс|  
 |-----------------|-----------------|-----------------------|  
 |Если определяется ранг|Во время компиляции.|Во время компиляции.|  
 |Если определить экстент|Во время выполнения.|Во время выполнения.|  
@@ -427,7 +428,7 @@ for (int i = 0; i <4; i++) {
 ```  
   
 ## <a name="math-libraries"></a>Математические библиотеки  
- C++ AMP содержит две математические библиотеки. Библиотека двойной точности в [имен Concurrency::precise_math](../../parallel/amp/reference/concurrency-precise-math-namespace.md) обеспечивает поддержку функций двойной точности. Он также обеспечивает поддержку для функций одиночной точности, несмотря на то, что по-прежнему необходима поддержка двойной точности на оборудовании. Он соответствует [спецификации C99 (ISO/IEC 9899)](http://go.microsoft.com/fwlink/linkid=225887). Сочетания клавиш, должны поддерживать полной двойной точности. Можно определить, является ли это делается путем проверки значения [данных accelerator::supports_double_precision](reference/accelerator-class.md#supports_double_precision). Быстрый математическую библиотеку в [имен Concurrency::fast_math](../../parallel/amp/reference/concurrency-fast-math-namespace.md), содержит другой набор математических функций. Эти функции, которые поддерживают только `float` операндов, выполняться гораздо быстрее, но не такой точный результат, что и в число двойной точности в математическую библиотеку. Функции, содержащиеся в \<amp_math.h > заголовок файла и всех объявлены с `restrict(amp)`. Функции в \<cmath > файла заголовка, импортируются в обоих `fast_math` и `precise_math` пространства имен. `restrict` Ключевое слово используется для различения \<cmath > версия и версия C++ AMP. В следующем коде вычисляется логарифм по основанию 10, с помощью быстрый метод, для каждого значения, которое находится в домене вычислений.  
+ C++ AMP содержит две математические библиотеки. Библиотека двойной точности в [имен Concurrency::precise_math](../../parallel/amp/reference/concurrency-precise-math-namespace.md) обеспечивает поддержку функций двойной точности. Он также обеспечивает поддержку для функций одиночной точности, несмотря на то, что по-прежнему необходима поддержка двойной точности на оборудовании. Он соответствует [спецификации C99 (ISO/IEC 9899)](http://go.microsoft.com/fwlink/p/?linkid=225887). Сочетания клавиш, должны поддерживать полной двойной точности. Можно определить, является ли это делается путем проверки значения [данных accelerator::supports_double_precision](reference/accelerator-class.md#supports_double_precision). Быстрый математическую библиотеку в [имен Concurrency::fast_math](../../parallel/amp/reference/concurrency-fast-math-namespace.md), содержит другой набор математических функций. Эти функции, которые поддерживают только `float` операндов, выполняться гораздо быстрее, но не такой точный результат, что и в число двойной точности в математическую библиотеку. Функции, содержащиеся в \<amp_math.h > заголовок файла и всех объявлены с `restrict(amp)`. Функции в \<cmath > файла заголовка, импортируются в обоих `fast_math` и `precise_math` пространства имен. `restrict` Ключевое слово используется для различения \<cmath > версия и версия C++ AMP. В следующем коде вычисляется логарифм по основанию 10, с помощью быстрый метод, для каждого значения, которое находится в домене вычислений.  
 
   
 ```cpp  
@@ -469,13 +470,13 @@ void MathExample() {
   
 - [Использование C++ AMP в приложениях для Магазина Windows](../../parallel/amp/using-cpp-amp-in-windows-store-apps.md)  
   
-- [Пошаговое руководство: Создание базового компонента среды выполнения Windows в C++ и вызов его из JavaScript](http://go.microsoft.com/fwlink/p/linkid=249077)  
+- [Пошаговое руководство: Создание базового компонента среды выполнения Windows в C++ и вызов его из JavaScript](http://go.microsoft.com/fwlink/p/?linkid=249077)  
   
-- [Bing Maps Trip Optimizer — приложение магазина Windows на JavaScript и C++](http://go.microsoft.com/fwlink/p/linkid=249078)  
+- [Bing Maps Trip Optimizer — приложение магазина Windows на JavaScript и C++](http://go.microsoft.com/fwlink/p/?linkid=249078)  
   
-- [Как использовать C++ AMP из C# с помощью среды выполнения Windows](http://go.microsoft.com/fwlink/p/linkid=249080)  
+- [Как использовать C++ AMP из C# с помощью среды выполнения Windows](http://go.microsoft.com/fwlink/p/?linkid=249080)  
   
-- [Как использовать C++ AMP из C#](http://go.microsoft.com/fwlink/p/linkid=249081)  
+- [Как использовать C++ AMP из C#](http://go.microsoft.com/fwlink/p/?linkid=249081)  
   
 - [Вызов неуправляемых функций из управляемого кода](../../dotnet/calling-native-functions-from-managed-code.md)  
   
@@ -492,7 +493,7 @@ void MathExample() {
   
 - [Каналы (представление "Потоки")](/visualstudio/profiling/channels-threads-view)  
   
-- [Анализ кода C++ AMP с помощью визуализатора параллелизма](http://go.microsoft.com/fwlink/linkid=253987&clcid=0x409)  
+- [Анализ кода C++ AMP с помощью визуализатора параллелизма](http://go.microsoft.com/fwlink/p/?linkid=253987&clcid=0x409)  
   
 ## <a name="performance-recommendations"></a>Рекомендации по повышению производительности  
  Остатка от деления и деление целых чисел без знака обладают значительно лучшей производительностью, чем модуля и деления целых чисел со знаком. Мы рекомендуем использовать целых чисел без знака по возможности.  
@@ -501,4 +502,4 @@ void MathExample() {
  [C++ AMP (C++ Accelerated Massive Parallelism)](../../parallel/amp/cpp-amp-cpp-accelerated-massive-parallelism.md)   
  [Синтаксис лямбда-выражений](../../cpp/lambda-expression-syntax.md)   
  [Справочник (C++ AMP)](../../parallel/amp/reference/reference-cpp-amp.md)   
- [Параллельное программирование в блоге машинного кода](http://go.microsoft.com/fwlink/p/linkid=238472)
+ [Параллельное программирование в блоге машинного кода](http://go.microsoft.com/fwlink/p/?linkid=238472)

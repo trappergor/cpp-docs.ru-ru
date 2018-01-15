@@ -4,27 +4,23 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords:
-- xlocmon/std::money_base
-dev_langs:
-- C++
-helpviewer_keywords:
-- money_base class
+f1_keywords: xlocmon/std::money_base
+dev_langs: C++
+helpviewer_keywords: money_base class
 ms.assetid: 1a303c15-9272-4f26-ae16-dcf43a0fd38a
-caps.latest.revision: 19
+caps.latest.revision: "19"
 author: corob-msft
 ms.author: corob
 manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: 9b3243807c407fa4deeb30b8f35aa6f7acb13707
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
-ms.sourcegitcommit: 65f4e356ad0d46333b0d443d0fd6ac0b9f2b6f58
-ms.openlocfilehash: b9c41737288a4d323057b42f809dcbf4a3f2ff2c
-ms.contentlocale: ru-ru
-ms.lasthandoff: 10/03/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="moneybase-class"></a>Класс money_base
 Данный класс описывает перечисление и структуру, общие для всех специализаций класса-шаблона [moneypunct](../standard-library/moneypunct-class.md).  
@@ -56,7 +52,6 @@ struct pattern
   
 ## <a name="see-also"></a>См. также  
  [Потокобезопасность в стандартной библиотеке C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)
-
 
 
 

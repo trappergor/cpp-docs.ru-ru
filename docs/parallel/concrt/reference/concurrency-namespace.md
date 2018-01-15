@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-windows
+ms.technology: cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -24,35 +23,19 @@ f1_keywords:
 - concurrent_unordered_set/concurrency
 - pplconcrt/concurrency
 - internal_concurrent_hash/concurrency
-dev_langs:
-- C++
-helpviewer_keywords:
-- Concurrency namespace
+dev_langs: C++
+helpviewer_keywords: Concurrency namespace
 ms.assetid: f1d33ca2-679b-4442-b140-22a9d9df61d1
-caps.latest.revision: 37
+caps.latest.revision: "37"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 5faef5bd1be6cc02d6614a6f6193c74167a8ff23
-ms.openlocfilehash: 2e5a153359b2696b281a25794a85b5c676f179ce
-ms.contentlocale: ru-ru
-ms.lasthandoff: 03/17/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: 8662011107f9befef63ec247060a319172569300
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="concurrency-namespace"></a>Пространство имен concurrency
 Пространство имен `Concurrency` предоставляет классы и функции, предоставляющие доступ к среде выполнения с параллелизмом, которая является платформой параллельного программирования для C++. Дополнительные сведения см.в статье [Concurrency Runtime](../../../parallel/concrt/concurrency-runtime.md) (Среда выполнения с параллелизмом).  
@@ -63,17 +46,17 @@ ms.lasthandoff: 03/17/2017
 namespace concurrency;  
 ```  
   
-## <a name="members"></a>Члены  
+## <a name="members"></a>Участники  
   
 ### <a name="namespaces"></a>Пространства имен  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
-|[Concurrency::Extensibility пространства имен](http://msdn.microsoft.com/en-us/16a86ff2-128e-4edf-89e4-38aac79c81f9)||  
+|[пространство имен Concurrency::Extensibility](http://msdn.microsoft.com/en-us/16a86ff2-128e-4edf-89e4-38aac79c81f9)||  
   
-### <a name="typedefs"></a>Typedefs  
+### <a name="typedefs"></a>Определения типов  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |`runtime_object_identity`|Каждый экземпляр сообщения имеет идентификатор, который сопутствует ему при клонировании и передаче между компонентами обмена сообщениями. Он не может быть адресом объекта сообщения.|  
 |`task_status`|Тип, который представляет конечное состояние задачи. Допустимые значения: `completed` и `canceled`.|  
@@ -82,7 +65,7 @@ namespace concurrency;
   
 ### <a name="classes"></a>Классы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[Класс affinity_partitioner](affinity-partitioner-class.md)|Класс `affinity_partitioner` аналогичен классу `static_partitioner`, но он повышает сходство кэша путем подбора поддиапазонов сопоставления для потоков рабочего процесса. Он может значительно повысить производительность, если цикл повторно выполняется в одном и том же наборе данных и данные помещаются в кэш. Обратите внимание, что один и тот же объект `affinity_partitioner` должен использоваться с последующими итерациями параллельного цикла, выполняемого в указанном наборе данных, чтобы воспользоваться преимуществом локальности данных.|  
 |[Класс agent](agent-class.md)|Класс, предназначенный для использования в качестве базового класса для всех независимых агентов. Он используется для скрытия состояния от других агентов и взаимодействия посредством передачи сообщений.|  
@@ -98,8 +81,8 @@ namespace concurrency;
 |[Класс concurrent_queue](concurrent-queue-class.md)|Класс `concurrent_queue` представляет собой класс контейнера последовательности, обеспечивающий доступ к элементам в порядке поступления. Он позволяет использовать ограниченный набор параллельно-безопасных операций, таких как `push` и `try_pop`.|  
 |[Класс concurrent_unordered_map](concurrent-unordered-map-class.md)|Класс `concurrent_unordered_map` представляет собой безопасный в отношении параллелизма контейнер, управляющий последовательностью элементов типа `std::pair<const K, _Element_type>` переменной длины. Последовательность представлена таким образом, что позволяет параллельно-безопасно выполнять операции присоединения, получения доступа к элементу, доступа к итератору и обхода итератора.|  
 |[Класс concurrent_unordered_multimap](concurrent-unordered-multimap-class.md)|Класс `concurrent_unordered_multimap` представляет собой безопасный в отношении параллелизма контейнер, управляющий последовательностью элементов типа `std::pair<const K, _Element_type>` переменной длины. Последовательность представлена таким образом, что позволяет параллельно-безопасно выполнять операции присоединения, получения доступа к элементу, доступа к итератору и обхода итератора.|  
-|[Класс concurrent_unordered_multiset](concurrent-unordered-multiset-class.md)|`concurrent_unordered_multiset` Класс является контейнером параллельность, управляющий последовательностью элементов типа K. переменной длины Последовательность представляется в виде, позволяющем параллельность операции присоединения, доступ к элементу, доступа к итератору и итератора обхода.|  
-|[Класс concurrent_unordered_set](concurrent-unordered-set-class.md)|`concurrent_unordered_set` Класс является контейнером параллельность, управляющий последовательностью элементов типа K. переменной длины Последовательность представляется в виде, позволяющем параллельность операции присоединения, доступ к элементу, доступа к итератору и итератора обхода.|  
+|[Класс concurrent_unordered_multiset](concurrent-unordered-multiset-class.md)|`concurrent_unordered_multiset` Класс является параллелизма контейнер, управляющий последовательностью элементов типа K. переменной длины Последовательность представлена таким образом, что позволяет параллельно безопасно операции присоединения, доступ к элементу, доступа к итератору и итератора обхода.|  
+|[Класс concurrent_unordered_set](concurrent-unordered-set-class.md)|`concurrent_unordered_set` Класс является параллелизма контейнер, управляющий последовательностью элементов типа K. переменной длины Последовательность представлена таким образом, что позволяет параллельно безопасно операции присоединения, доступ к элементу, доступа к итератору и итератора обхода.|  
 |[Класс concurrent_vector](concurrent-vector-class.md)|Класс `concurrent_vector` представляет собой класс контейнера последовательности, обеспечивающий доступ к элементам в случайном порядке. Позволяет параллельно-безопасно выполнять операции присоединения, получения доступа к элементу, доступа к итератору и обхода итератора.|  
 |[Класс Context](context-class.md)|Представляет абстракцию для контекста выполнения.|  
 |[Класс context_self_unblock](context-self-unblock-class.md)|Этот класс описывает исключение, которое создается при вызове метода `Unblock` объекта `Context` из того же контекста. Это означает попытку данного контекста разблокировать самого себя.|  
@@ -165,7 +148,7 @@ namespace concurrency;
   
 ### <a name="structures"></a>Структуры  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[Структура DispatchState](dispatchstate-structure.md)|Структура `DispatchState` используется для передачи состояния в метод `IExecutionContext::Dispatch`. Она описывает обстоятельства, при которых метод `Dispatch` вызывается для интерфейса `IExecutionContext`.|  
 |[Структура IExecutionContext](iexecutioncontext-structure.md)|Интерфейс для контекста выполнения, который может выполняться на данном виртуальном процессоре и к которому может применяться совместное переключение контекста.|  
@@ -186,7 +169,7 @@ namespace concurrency;
   
 ### <a name="enumerations"></a>Перечисления  
   
-|Имя|Описание|  
+|name|Описание:|  
 |----------|-----------------|  
 |[agent_status](concurrency-namespace-enums.md#agent_status)|Допустимые состояния для объекта `agent`.|  
 |[Agents_EventType](concurrency-namespace-enums.md#agents_eventtype)|Типы событий, которые можно отслеживать с помощью функции трассировки, предоставляемой библиотекой агентов.|  
@@ -196,7 +179,7 @@ namespace concurrency;
 |[DynamicProgressFeedbackType](concurrency-namespace-enums.md#dynamicprogressfeedbacktype)|Используется политикой `DynamicProgressFeedback` для описания того, будет ли к ресурсам планировщика применена повторная балансировка в соответствии со статистическими данными, полученными из планировщика, или только на основе перехода виртуальных процессоров в состояние бездействия и из него через вызовы методов `Activate` и `Deactivate` для интерфейса `IVirtualProcessorRoot`. Дополнительные сведения о доступных политиках планировщиков см. в разделе [PolicyElementKey](concurrency-namespace-enums.md#policyelementkey).|  
 |[join_type](concurrency-namespace-enums.md#join_type)|Тип блока обмена сообщениями `join`.|  
 |[message_status](concurrency-namespace-enums.md#message_status)|Допустимые ответы на предложение объекта `message` блоку.|  
-|[PolicyElementKey](concurrency-namespace-enums.md#policyelementkey)|Ключи политики, описывающие аспекты поведения планировщика. Каждый элемент политики описан с помощью пары «ключ — значение». Дополнительные сведения о политиках планировщика и их влияние на планировщики см. в разделе [планировщик](../../../parallel/concrt/task-scheduler-concurrency-runtime.md).|  
+|[PolicyElementKey](concurrency-namespace-enums.md#policyelementkey)|Ключи политики, описывающие аспекты поведения планировщика. Каждый элемент политики описан с помощью пары «ключ — значение». Дополнительные сведения о политиках планировщика и их влиянии на планировщики см. в разделе [планировщик](../../../parallel/concrt/task-scheduler-concurrency-runtime.md).|  
 |[SchedulerType](concurrency-namespace-enums.md#schedulertype)|Используется политикой `SchedulerKind` для описания типа потоков, которые должен использовать планировщик для базовых контекстов выполнения. Дополнительные сведения о доступных политиках планировщиков см. в разделе [PolicyElementKey](concurrency-namespace-enums.md#policyelementkey).|  
 |[SchedulingProtocolType](concurrency-namespace-enums.md#schedulingprotocoltype)|Используется политикой `SchedulingProtocol` для описания того, какой алгоритм планирования будет использоваться для планировщика. Дополнительные сведения о доступных политиках планировщиков см. в разделе [PolicyElementKey](concurrency-namespace-enums.md#policyelementkey).|  
 |[SwitchingProxyState](concurrency-namespace-enums.md#switchingproxystate)|Используется для обозначения состояния прокси-потока, когда он выполняет совместное переключение контекста на другой прокси-поток.|  
@@ -205,13 +188,13 @@ namespace concurrency;
   
 ### <a name="functions"></a>Функции  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[Функция Alloc](concurrency-namespace-functions.md#alloc)|Выделяет блок памяти указанного размера из подраспределителя кэширования среды параллелизма.|  
 |[Функция asend](concurrency-namespace-functions.md#asend)|Перегружен. Асинхронная операция отправки, которая планирует задачу для распространения данных в целевой блок.|  
 |[Функция cancel_current_task](concurrency-namespace-functions.md#cancel_current_task)|Отменяет выполняющуюся в данный момент задачу. Эту функцию можно вызывать из тела задачи, чтобы прервать выполнение задачи и перевести ее в состояние `canceled`.<br /><br /> Вызов этой функции является неподдерживаемым сценарием, если вы не находитесь в теле `task`. Такие действия приведут к неопределенному поведению, например сбою или зависанию в приложении.|  
 |[Функция create_async](concurrency-namespace-functions.md#create_async)|Создает асинхронную конструкцию среды выполнения Windows на основе предоставленного пользователем лямбда-выражения или объекта функции. Возвращаемый тип `create_async` — один из следующих: `IAsyncAction^`, `IAsyncActionWithProgress<TProgress>^`, `IAsyncOperation<TResult>^` или `IAsyncOperationWithProgress<TResult, TProgress>^`, в зависимости от сигнатуры лямбда-выражения, переданного методу.|  
-|[Функция create_task](concurrency-namespace-functions.md#create_task)|Перегружен. Создает PPL [задачи](http://msdn.microsoft.com/en-us/5389e8a5-5038-40b6-844a-55e9b58ad35f) объекта. Функция `create_task` может использоваться в любой ситуации, где бы вы использовали конструктор задач. Она предоставлена главным образом для удобства, поскольку позволяет использовать ключевое слово `auto` при создании задач.|  
+|[Функция create_task](concurrency-namespace-functions.md#create_task)|Перегружен. Создает объект PPL [задачи](http://msdn.microsoft.com/en-us/5389e8a5-5038-40b6-844a-55e9b58ad35f) объекта. Функция `create_task` может использоваться в любой ситуации, где бы вы использовали конструктор задач. Она предоставлена главным образом для удобства, поскольку позволяет использовать ключевое слово `auto` при создании задач.|  
 |[Функция CreateResourceManager](concurrency-namespace-functions.md#createresourcemanager)|Возвращает интерфейс, который представляет одноэлементный экземпляр диспетчера ресурсов среды выполнения с параллелизмом. Диспетчер ресурсов отвечает за назначение ресурсов планировщикам, которым требуется взаимодействовать друг с другом.|  
 |[Функция DisableTracing](concurrency-namespace-functions.md#disabletracing)|Отключает трассировку в среде выполнения с параллелизмом. Эту функция не рекомендуется использовать, поскольку трассировка событий Windows по умолчанию не регистрируется.|  
 |[Функция EnableTracing](concurrency-namespace-functions.md#enabletracing)|Включает трассировку в среде выполнения с параллелизмом. Эта функция не рекомендована к использованию, поскольку трассировка событий Windows теперь по умолчанию включена.|  
@@ -252,20 +235,20 @@ namespace concurrency;
   
 ### <a name="operators"></a>Операторы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------| 
-|[operator!=](concurrency-namespace-operators.md#operator_neq)|Проверяет неравенство объекта `concurrent_vector` слева от оператора объекту `concurrent_vector` справа от оператора.|  
+|[оператор!=](concurrency-namespace-operators.md#operator_neq)|Проверяет неравенство объекта `concurrent_vector` слева от оператора объекту `concurrent_vector` справа от оператора.|  
 |[оператор&&](concurrency-namespace-operators.md#operator_amp_amp)|Перегружен. Создает задачу, которая завершается успешно, если обе задачи, предоставленные в качестве аргументов, завершаются успешно.|  
 |[оператор||](concurrency-namespace-operators.md#operator_lor)|Перегружен. Создает задачу, которая завершается успешно, если любая из задач, предоставленных в качестве аргументов, завершается успешно.|  
 |[оператор<](concurrency-namespace-operators.md#operator_lt)|Проверяет, меньше ли объект `concurrent_vector` слева от оператора, чем объект `concurrent_vector` справа от оператора.|  
 |[оператор<=](concurrency-namespace-operators.md#operator_lt_eq)|Проверяет, меньше ли объект `concurrent_vector` слева от оператора, чем объект `concurrent_vector` справа от оператора, или равен ему.|  
-|[operator==](concurrency-namespace-operators.md#operator_eq_eq)|Проверяет равенство объекта `concurrent_vector` слева от оператора объекту `concurrent_vector` справа от оператора.|  
+|[оператор==](concurrency-namespace-operators.md#operator_eq_eq)|Проверяет равенство объекта `concurrent_vector` слева от оператора объекту `concurrent_vector` справа от оператора.|  
 |[оператор>](concurrency-namespace-operators.md#operator_gt)|Проверяет больше ли объект `concurrent_vector` слева от оператора, чем объект `concurrent_vector` справа от оператора.|  
-|[operator>=](concurrency-namespace-operators.md#operator_lt_eq)|Проверяет больше ли объект `concurrent_vector` слева от оператора, чем объект `concurrent_vector` справа от оператора, или равен ему.|  
+|[оператор>=](concurrency-namespace-operators.md#operator_lt_eq)|Проверяет больше ли объект `concurrent_vector` слева от оператора, чем объект `concurrent_vector` справа от оператора, или равен ему.|  
   
 ### <a name="constants"></a>Константы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[AgentEventGuid](concurrency-namespace-constants1.md#agenteventguid)|GUID категории ({B9B5B78C-0713-4898-A21A-C67949DCED07}), описывающий события трассировки Windows, запускаемые библиотекой агентов исполняющей среды с параллелизмом.|  
 |[ChoreEventGuid](concurrency-namespace-constants1.md#choreeventguid)|GUID категории, описывающий события трассировки событий Windows, инициированные средой выполнения с параллелизмом, которые непосредственно связаны с делами или задачами.|  
@@ -287,9 +270,8 @@ namespace concurrency;
 |[VirtualProcessorEventGuid](concurrency-namespace-constants1.md#virtualprocessoreventguid)|GUID категории, описывающий события трассировки событий Windows, инициированные средой выполнения с параллелизмом, которые непосредственно связаны с виртуальными процессорами.|  
   
 ## <a name="requirements"></a>Требования  
- **Заголовок:** agents.h, concrt.h, concrtrm.h, concurrent_priority_queue.h, concurrent_queue.h, concurrent_unordered_map.h, concurrent_unordered_set.h, concurrent_vector.h, internal_concurrent_hash.h, internal_split_ordered_list.h, ppl.h, pplcancellation_token.h, pplconcrt.h, pplinterface.h, ppltasks.h  
+ **Заголовок:** agents.h, concrt.h, concrtrm.h, concurrent_priority_queue.h, concurrent_queue.h, concurrent_unordered_map.h, concurrent_unordered_set.h, concurrent_vector.h, internal_concurrent_hash.h, internal_split_ordered_ List.h, ppl.h, pplcancellation_token.h, pplconcrt.h, pplinterface.h, ppltasks.h  
   
 ## <a name="see-also"></a>См. также  
  [Ссылки](reference-concurrency-runtime.md)
-
 

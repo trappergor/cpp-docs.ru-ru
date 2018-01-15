@@ -25,11 +25,12 @@ caps.latest.revision: "19"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: 0f5ba9776b27ec98967f64d3c2bfb114c62c36fb
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: bc439bd64327ad48f98de8eef380a792e54b8c4f
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="basicistringstream-class"></a>Класс basic_istringstream
 Описывает объект, управляющий извлечением элементов и закодированных объектов из буфера класса [basic_stringbuf](../standard-library/basic-stringbuf-class.md)< **Elem**, **Tr**, `Alloc`>.  
@@ -60,7 +61,7 @@ class basic_istringstream : public basic_istream<Elem, Tr>
 |-|-|  
 |[basic_istringstream](#basic_istringstream)|Создает объект типа `basic_istringstream`.|  
   
-### <a name="typedefs"></a>Typedefs  
+### <a name="typedefs"></a>Определения типов  
   
 |||  
 |-|-|  
@@ -184,7 +185,7 @@ void swap(basic_istringstream& right);
   
 ### <a name="parameters"></a>Параметры  
   
-|Параметр|Описание|  
+|Параметр|Описание:|  
 |---------------|-----------------|  
 |`right`|Ссылка `lvalue` на объект `basic_istringstream`.|  
   

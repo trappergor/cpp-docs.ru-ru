@@ -1,33 +1,33 @@
 ---
-title: "optional (C++) | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-f1_keywords: 
-  - "vc-attr.optional"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "optional attribute"
+title: "Необязательный (C++) | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+f1_keywords: vc-attr.optional
+dev_langs: C++
+helpviewer_keywords: optional attribute
 ms.assetid: 86656a66-8e11-4589-8e30-9b0f34eeed03
-caps.latest.revision: 9
-caps.handback.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "9"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: 028cb0f911ac389e4ad17f54fc16e24f29c8d9db
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 12/21/2017
 ---
-# optional (C++)
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Определяет необязательный параметр для функции\-члена.  
+# <a name="optional-c"></a>optional (C++)
+Задает необязательный параметр для функции-члена.  
   
-## Синтаксис  
+## <a name="syntax"></a>Синтаксис  
   
 ```  
   
@@ -35,11 +35,11 @@ manager: "ghogen"
   
 ```  
   
-## Заметки  
- **необязательно** Атрибут C\+\+ имеет ту же функциональность, что и  [необязательно](http://msdn.microsoft.com/library/windows/desktop/aa367132) атрибут MIDL.  
+## <a name="remarks"></a>Примечания  
+ **Необязательно** языка C++ имеет ту же функциональность, что [необязательно](http://msdn.microsoft.com/library/windows/desktop/aa367132) языка MIDL.  
   
-## Пример  
- В следующем примере кода демонстрируется **необязательно** может использоваться.  
+## <a name="example"></a>Пример  
+ В следующем коде показано, как **необязательно** может быть использован:  
   
 ```  
 // cpp_attr_ref_optional.cpp  
@@ -54,20 +54,19 @@ __interface IFireTabCtrl : IDispatch
 };  
 ```  
   
-## Требования  
+## <a name="requirements"></a>Требования  
   
-### Контекст атрибута  
+### <a name="attribute-context"></a>Контекст атрибута  
   
 |||  
 |-|-|  
 |**Применение**|Параметр интерфейса|  
-|**Repeatable**|Нет|  
-|**Обязательные атрибуты**|None|  
-|**Недопустимые атрибуты**|None|  
+|**Повторяемый**|Нет|  
+|**Обязательные атрибуты**|Нет|  
+|**Недопустимые атрибуты**|Нет|  
   
- Дополнительные сведения о контекстах атрибута см. в разделе [Контексты атрибута](../windows/attribute-contexts.md).  
+ Дополнительные сведения о контекстах атрибутов см. в разделе [Контексты атрибутов](../windows/attribute-contexts.md).  
   
-## См. также  
- [IDL Attributes](../windows/idl-attributes.md)   
- [Parameter Attributes](../windows/parameter-attributes.md)   
- [Attributes Samples](http://msdn.microsoft.com/ru-ru/558ebdb2-082f-44dc-b442-d8d33bf7bdb8)
+## <a name="see-also"></a>См. также  
+ [Атрибуты IDL](../windows/idl-attributes.md)   
+ [Атрибуты параметра](../windows/parameter-attributes.md)   

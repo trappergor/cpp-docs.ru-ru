@@ -31,11 +31,12 @@ caps.latest.revision: "20"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 718f373d51c9b8dfd12e1d3559c3a9078600a54a
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 0db24894777170d2860ba8d1639fd44e3893732a
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cmfccmdusagecount-class"></a>Класс CMFCCmdUsageCount
 Отслеживает загруженность сообщений Windows, например когда пользователь выбирает элемент меню.  
@@ -46,13 +47,13 @@ ms.lasthandoff: 10/24/2017
 class CMFCCmdUsageCount : public CObject  
 ```  
   
-## <a name="members"></a>Члены  
+## <a name="members"></a>Участники  
   
 ### <a name="public-constructors"></a>Открытые конструкторы  
   
 |||  
 |-|-|  
-|Имя|Описание|  
+|Имя|Описание:|  
 |`CMFCCmdUsageCount::CMFCCmdUsageCount`|Конструктор по умолчанию.|  
 |`CMFCCmdUsageCount::~CMFCCmdUsageCount`|Деструктор.|  
   
@@ -60,7 +61,7 @@ class CMFCCmdUsageCount : public CObject
   
 |||  
 |-|-|  
-|Имя|Описание|  
+|Имя|Описание:|  
 |[CMFCCmdUsageCount::AddCmd](#addcmd)|Увеличивает на единицу счетчик, который связан с данной команды.|  
 |[CMFCCmdUsageCount::GetCount](#getcount)|Получает счетчик использования, связанный с данной команды.|  
 |[CMFCCmdUsageCount::HasEnoughInformation](#hasenoughinformation)|Определяет, является ли этот объект собрал минимальный объем данных отслеживания.|  
@@ -73,7 +74,7 @@ class CMFCCmdUsageCount : public CObject
   
 |||  
 |-|-|  
-|Имя|Описание|  
+|name|Описание:|  
 |`m_CmdUsage`|Объект `CMap` объект, который сопоставляет команды счетчики их использования.|  
 |`m_nMinUsagePercentage`|Процент минимальное использование часто используемые команды.|  
 |`m_nStartCount`|Начало счетчик, который используется для определения, является ли этот объект собрал минимальный объем данных отслеживания.|  
@@ -103,7 +104,7 @@ void AddCmd(UINT uiCmd);
   
 |||  
 |-|-|  
-|Параметр|Описание|  
+|Параметр|Описание:|  
 |[in] `uiCmd`|Указывает команду счетчик будет изменяться.|  
   
 ### <a name="remarks"></a>Примечания  
@@ -128,7 +129,7 @@ UINT GetCount(UINT uiCmd) const;
   
 |||  
 |-|-|  
-|Параметр|Описание|  
+|Параметр|Описание:|  
 |[in] `uiCmd`|Идентификатор счетчика команду для извлечения.|  
   
 ### <a name="return-value"></a>Возвращаемое значение  
@@ -160,7 +161,7 @@ BOOL IsFreqeuntlyUsedCmd(UINT uiCmd) const;
   
 |||  
 |-|-|  
-|Параметр|Описание|  
+|Параметр|Описание:|  
 |[in] `uiCmd`|Указывает команду для проверки.|  
   
 ### <a name="return-value"></a>Возвращаемое значение  
@@ -192,7 +193,7 @@ virtual void Serialize(CArchive& ar);
   
 |||  
 |-|-|  
-|Параметр|Описание|  
+|Параметр|Описание:|  
 |[in] `ar`|Объект `CArchive` объект для сериализации из или в нее.|  
   
 ### <a name="remarks"></a>Примечания  
@@ -213,7 +214,7 @@ static BOOL __stdcall SetOptions(
   
 |||  
 |-|-|  
-|Параметр|Описание|  
+|Параметр|Описание:|  
 |[in] `nStartCount`|Новое начальное количество все отслеживаемые команд.|  
 |[in] `nMinUsagePercentage`|Процент новых минимальное использование.|  
   

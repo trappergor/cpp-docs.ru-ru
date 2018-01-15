@@ -27,11 +27,12 @@ caps.latest.revision: "35"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: f7d59d91f82a0fa86efcae7214874e0b2ca16a12
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 720a1de11dcf4c37b4b321bb0e014a9ae4e2e459
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cmfcribbonundobutton-class"></a>Класс CMFCRibbonUndoButton
 `CMFCRibbonUndoButton` Класс реализует кнопку раскрывающегося списка, содержащий последние команды пользователя. Пользователи могут выбрать один или несколько последних команд из раскрывающегося списка, чтобы повтора или отменить их.  
@@ -42,17 +43,17 @@ ms.lasthandoff: 10/24/2017
 class CMFCRibbonUndoButton : public CMFCRibbonGallery  
 ```  
   
-## <a name="members"></a>Члены  
+## <a name="members"></a>Участники  
   
 ### <a name="public-constructors"></a>Открытые конструкторы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[CMFCRibbonUndoButton::CMFCRibbonUndoButton](#cmfcribbonundobutton)|Создает новое `CMFCRibbonUndoButton` объекта, используя идентификатор команды, указать, текстовую метку и изображений из списка изображений родительского объекта.|  
   
 ### <a name="public-methods"></a>Открытые методы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[CMFCRibbonUndoButton::AddUndoAction](#addundoaction)|Добавляет новое действие в список действий.|  
 |[CMFCRibbonUndoButton::CleanUpUndoList](#cleanupundolist)|Очищает список действий, который представляет собой список раскрывающегося списка.|  

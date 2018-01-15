@@ -27,11 +27,12 @@ caps.latest.revision: "17"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 75be5687e63fe38f1ffa8f91c41963dfa1171e48
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 67cf15c6681c989a2da2b4e6824fec6012c517bf
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="sourcelinkmanager-class"></a>Класс source_link_manager
 Объект `source_link_manager` управляет сетевыми соединениями блоков обмена сообщениями с блоками `ISource`.  
@@ -47,11 +48,11 @@ class source_link_manager;
  `_LinkRegistry`  
  Реестр сетевых ссылок.  
   
-## <a name="members"></a>Члены  
+## <a name="members"></a>Участники  
   
 ### <a name="public-typedefs"></a>Общедоступные определения типов  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |`const_pointer`|Тип, предоставляющий указатель на `const` элемент в `source_link_manager` объекта.|  
 |`const_reference`|Тип, предоставляющий ссылку на `const` элемент хранится в `source_link_manager` объект для чтения и выполнения операций const.|  
@@ -60,14 +61,14 @@ class source_link_manager;
   
 ### <a name="public-constructors"></a>Открытые конструкторы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[source_link_manager](#ctor)|Создает объект `source_link_manager`.|  
 |[~ source_link_manager деструктор](#dtor)|Уничтожает `source_link_manager` объекта.|  
   
 ### <a name="public-methods"></a>Открытые методы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[add](#add)|Добавляет ссылку на источник `source_link_manager` объекта.|  
 |[begin](#begin)|Возвращает итератор на первый элемент в `source_link_manager` объекта.|  

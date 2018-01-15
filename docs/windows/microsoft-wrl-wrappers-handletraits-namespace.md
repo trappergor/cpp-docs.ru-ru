@@ -15,11 +15,14 @@ caps.latest.revision: "7"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 3369f7b9264c7b0fd0bfbb9f137278a9f53848d1
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: aec9ff1b4294257f692d76a96960820379116b0f
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="microsoftwrlwrappershandletraits-namespace"></a>Пространство имен Microsoft::WRL::Wrappers::HandleTraits
 Описывает характеристики распространенных типов ресурсов на основе дескриптора.  
@@ -30,11 +33,11 @@ ms.lasthandoff: 10/24/2017
 namespace Microsoft::WRL::Wrappers::HandleTraits;  
 ```  
   
-## <a name="members"></a>Члены  
+## <a name="members"></a>Участники  
   
 ### <a name="structures"></a>структурам;  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[Структура CriticalSectionTraits](../windows/criticalsectiontraits-structure.md)|Специализирует `CriticalSection` объектов для поддержки недопустимую критическую секцию или функцию освобождения критической секции.|  
 |[Структура EventTraits](../windows/eventtraits-structure.md)|Определяет характеристики `Event` дескриптора класса.|  

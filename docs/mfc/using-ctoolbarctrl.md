@@ -17,11 +17,12 @@ caps.latest.revision: "11"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 7c15def4acc3daad2cb0739da0f53e2a9871d172
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 86bca4c48403bd41ce40b79a4b9f7c041ebb26e9
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="using-ctoolbarctrl"></a>Использование CToolBarCtrl
 Можно использовать элемент управления toolbar ([CToolBarCtrl](../mfc/reference/ctoolbarctrl-class.md)) для создания элемента управления окно, содержащее кнопки и дополнительные пробелы. Все кнопки в окне инструментов управления отправляет сообщение команды родительского окна, как пользователь нажимает кнопку. Как правило кнопок на панели инструментов соответствуют элементам в меню приложения, предоставляя дополнительную и более прямой способ пользователю получить доступ к командам приложения.  

@@ -16,11 +16,14 @@ caps.latest.revision: "13"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: df675ca7168157c5ffa9529ab630b2100abda11a
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: 4b42cbbbc175b3d48baa7b7b2e1c1a5b0e4cbf15
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="how-to-declare-value-types-with-the-interiorptr-keyword-ccli"></a>Практическое руководство. Объявление типов значений с использованием ключевого слова interior_ptr (C++/CLI)
 `interior_ptr` можно использовать с типом значения.  
@@ -30,7 +33,7 @@ ms.lasthandoff: 10/24/2017
   
 ## <a name="example"></a>Пример  
   
-### <a name="description"></a>Описание  
+### <a name="description"></a>Описание:  
  Следующие C + +/ CLI образце показано, как использовать `interior_ptr` с типом значения.  
   
 ### <a name="code"></a>Код  
@@ -76,7 +79,7 @@ int main() {
   
 ## <a name="example"></a>Пример  
   
-### <a name="description"></a>Описание  
+### <a name="description"></a>Описание:  
  В типе значения указатель `this` равен interior_ptr.  
   
  В теле нестатической функции-члена типа значения `V` указатель `this` является выражением типа `interior_ptr<V>`. Значение этого выражения — адрес объекта, для которого вызывается эта функция.  
@@ -97,7 +100,7 @@ value struct V {
   
 ## <a name="example"></a>Пример  
   
-### <a name="description"></a>Описание  
+### <a name="description"></a>Описание:  
  В следующем примере показано использование оператора взятия адреса со статическими членами.  
   
  Адрес статического члена типа Visual C++ создает собственный указатель.  Адрес статического члена типа значения является управляемым указателем, так как член типа значения выделяется в куче среды выполнения и может быть перемещен сборщиком мусора.  

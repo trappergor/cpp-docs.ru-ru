@@ -1,33 +1,33 @@
 ---
-title: "2.6.3 barrier Directive | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
+title: "2.6.3 директива barrier | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
 ms.assetid: 4485a3d7-533f-4fec-8128-a131bec7fa16
-caps.latest.revision: 6
-caps.handback.revision: 6
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "6"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: d9c64787d9c6cc2dd0809f75f8f9db9819174d0f
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 12/21/2017
 ---
-# 2.6.3 barrier Directive
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-**барьер** директива синхронизировать все потоки в рабочей группе.  Сталкивано каждый поток в рабочей группе ожидает, пока все остальные не достигнут этот пункт.  Синтаксис  **барьер** директива выглядит следующим образом:  
+# <a name="263-barrier-directive"></a>2.6.3 Директива barrier
+**Барьера** директива синхронизирует все потоки в команде. При обнаружении, каждый поток в группе ожидает, пока все остальные достижение этой точки. Синтаксис **барьера** директивы таков:  
   
 ```  
 #pragma omp barrier new-line  
 ```  
   
- После того как все потоки в рабочей группе сталкивались барьера каждый поток в рабочей группе начинает выполняться выписки после директивы барьера параллельно.  Обратите внимание, что поскольку **барьер** директива не имеет выписку языка c, как часть своего синтаксиса, существуют некоторые ограничения на его месте в рамках программы.  См. [Приложение C\#](../Topic/C.%20OpenMP%20C%20and%20C++%20Grammar.md) для формального грамматики.  В приведенном ниже примере показаны эти ограничения.  
+ После обнаружения всех потоков в группе барьера каждый поток в команде начинает выполняться инструкции после директивы барьера параллельно. Обратите внимание, что поскольку **барьера** директива не поддерживает инструкции языка C, как часть его синтаксис, существуют некоторые ограничения на его размещение в программе. В разделе [приложении C](../../parallel/openmp/c-openmp-c-and-cpp-grammar.md) для формальная грамматика. В следующем примере иллюстрируется эти ограничения.  
   
 ```  
 /* ERROR - The barrier directive cannot be the immediate  

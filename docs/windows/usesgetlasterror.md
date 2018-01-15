@@ -1,32 +1,33 @@
 ---
-title: "usesgetlasterror | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "language-reference"
-f1_keywords: 
-  - "vc-attr.usesgetlasterror"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "usesgetlasterror attribute"
+title: "usesgetlasterror | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+f1_keywords: vc-attr.usesgetlasterror
+dev_langs: C++
+helpviewer_keywords: usesgetlasterror attribute
 ms.assetid: d149e33d-35a7-46cb-9137-ae6883d86122
-caps.latest.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 9
+caps.latest.revision: "9"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: 05c74f1254230270654b3dc0b44f541e4fe9ef2c
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 12/21/2017
 ---
-# usesgetlasterror
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Указывает участника, что если ошибка вызывающий эту функцию, то вызывающий может вызвать `GetLastError` извлечь код ошибки.  
+# <a name="usesgetlasterror"></a>usesgetlasterror
+Сообщает вызывающего объекта, если возникает ошибка при вызове этой функции, затем вызывающий объект может затем вызвать `GetLastError` для получения кода ошибки.  
   
-## Синтаксис  
+## <a name="syntax"></a>Синтаксис  
   
 ```  
   
@@ -34,25 +35,24 @@ caps.handback.revision: 9
   
 ```  
   
-## Заметки  
- **usesgetlasterror** Атрибут C\+\+ имеет ту же функциональность, что и  [usesgetlasterror](http://msdn.microsoft.com/library/windows/desktop/aa367297) атрибут MIDL.  
+## <a name="remarks"></a>Примечания  
+ **Usesgetlasterror** языка C++ имеет ту же функциональность, что [usesgetlasterror](http://msdn.microsoft.com/library/windows/desktop/aa367297) языка MIDL.  
   
-## Пример  
- См. [idl\_module](../windows/idl-module.md) пример образца, как использовать  **usesgetlasterror**.  
+## <a name="example"></a>Пример  
+ В разделе [idl_module](../windows/idl-module.md) примере образец демонстрирует использование **usesgetlasterror**.  
   
-## Требования  
+## <a name="requirements"></a>Требования  
   
-### Контекст атрибута  
+### <a name="attribute-context"></a>Контекст атрибута  
   
 |||  
 |-|-|  
-|**Применение**|**Модуль** атрибут|  
-|**Repeatable**|Нет|  
-|**Обязательные атрибуты**|None|  
-|**Недопустимые атрибуты**|None|  
+|**Применение**|**модуль** атрибута|  
+|**Повторяемый**|Нет|  
+|**Обязательные атрибуты**|Нет|  
+|**Недопустимые атрибуты**|Нет|  
   
- Дополнительные сведения о контекстах атрибута см. в разделе [Контексты атрибута](../windows/attribute-contexts.md).  
+ Дополнительные сведения о контекстах атрибутов см. в разделе [Контексты атрибутов](../windows/attribute-contexts.md).  
   
-## См. также  
- [IDL Attributes](../windows/idl-attributes.md)   
- [Attributes Samples](http://msdn.microsoft.com/ru-ru/558ebdb2-082f-44dc-b442-d8d33bf7bdb8)
+## <a name="see-also"></a>См. также  
+ [Атрибуты IDL](../windows/idl-attributes.md)   

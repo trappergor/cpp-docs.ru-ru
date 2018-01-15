@@ -14,11 +14,12 @@ caps.latest.revision: "14"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: ad53fea97c98f496d1140725f4232052e2f53d3b
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: aef7e219190584ec91b08e9c44b4c921ec91d787
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="concurrencygraphics-namespace"></a>Пространство имен Concurrency::graphics
 Пространство имен графики предоставляет типы и функции, которые предназначены для программирования графики.  
@@ -29,30 +30,30 @@ ms.lasthandoff: 10/24/2017
 namespace graphics;  
 ```  
   
-## <a name="members"></a>Члены  
+## <a name="members"></a>Участники  
   
 ### <a name="namespaces"></a>Пространства имен  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[Пространство имен Concurrency::graphics::direct3d](concurrency-graphics-direct3d-namespace.md)|Предоставляет функции для взаимодействия Direct3D.|  
   
 ### <a name="typedefs"></a>Определения типов  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |`uint`|Тип элемента для [класс uint_2](uint-2-class.md), [класс uint_3](uint-3-class.md), и [класс uint_4](uint-4-class.md). Определенная как `typedef unsigned int uint;`.|  
   
 ### <a name="enumerations"></a>Перечисления  
   
-|Имя|Описание|  
+|name|Описание:|  
 |----------|-----------------|  
 |[Перечисление address_mode](concurrency-graphics-namespace-enums.md#address_mode).|Указывает адрес режимов, поддерживаемых для дискретизации текстур.|  
 |[Перечисление filter_mode](concurrency-graphics-namespace-enums.md#filter_mode)|Указывает режимы фильтрации, поддерживаемые для дискретизации текстур.|  
   
 ### <a name="classes"></a>Классы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[Класс texture](texture-class.md)|Текстуры является выражением на accelerator_view в домене экстентов данных. Представляет коллекцию переменных, по одной для каждого элемента в домене экстента. Каждая переменная содержит значение, соответствующее тип-примитив C++ (unsigned int, int, с плавающей запятой) или норму скалярный тип или unorm (определенная в concurrency::graphics) или типы соответствующих короткого вектора, определенных в concurrency::graphics.|  
 |[Класс writeonly_texture_view](writeonly-texture-view-class.md)|Writeonly_texture_view предоставляет доступ writeonly до текстуры.|  
@@ -81,7 +82,7 @@ namespace graphics;
   
 ### <a name="functions"></a>Функции  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[copy](concurrency-graphics-namespace-functions.md#copy)|Перегружен. Копирует содержимое исходного текстуры в узла буфера назначения.|  
 |[copy_async](concurrency-graphics-namespace-functions.md#copy_async)|Перегружен. Асинхронно копирует содержимое исходного текстуры в узла буфера назначения.|  

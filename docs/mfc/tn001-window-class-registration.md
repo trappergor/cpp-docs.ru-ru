@@ -18,11 +18,12 @@ caps.latest.revision: "16"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 8278a1dd22a242834fd4559c580820ae6e69e21d
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: f4560905660ea80524c3e26bf14a803a2bc74344
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="tn001-window-class-registration"></a>TN001. Регистрация класса Window
 Эта заметка описывает MFC подпрограммы, которые регистрируют специальные [WNDCLASS](http://msdn.microsoft.com/library/windows/desktop/ms633576)es, необходимые для Microsoft Windows. Определенные `WNDCLASS` описаны атрибуты, используемые MFC и Windows.  
@@ -43,7 +44,7 @@ ms.lasthandoff: 10/24/2017
 ## <a name="wndclass-fields"></a>Например, WNDCLASS поля  
  `WNDCLASS` Структура состоит из различных полей, которые описывают класс окна. В следующей таблице показаны поля и указывает, как они используются в приложениях MFC:  
   
-|Поле|Описание|  
+|Поле|Описание:|  
 |-----------|-----------------|  
 |`lpfnWndProc`|Процедура окна должен быть`AfxWndProc`|  
 |`cbClsExtra`|не используется (должно быть равно нулю)|  
@@ -78,7 +79,7 @@ ms.lasthandoff: 10/24/2017
  Если вы подкласс или суперкласса Windows элемента управления (например, [CButton](../mfc/reference/cbutton-class.md)) после создания класса автоматически получает `WNDCLASS` атрибутов, предоставленных в реализации Windows этого элемента управления.  
   
 ## <a name="the-afxregisterwndclass-function"></a>AfxRegisterWndClass-функция  
- MFC предоставляет вспомогательные функции для регистрации класса окна. Имея набор атрибутов (стили класса окна, курсор, Фоновая кисть и значок), синтетические имя создается и регистрируется результирующий класс окна. Например:  
+ MFC предоставляет вспомогательные функции для регистрации класса окна. Имея набор атрибутов (стили класса окна, курсор, Фоновая кисть и значок), синтетические имя создается и регистрируется результирующий класс окна. Например, примененная к объекту директива  
   
 ```  
 const char* AfxRegisterWndClass(UINT nClassStyle,

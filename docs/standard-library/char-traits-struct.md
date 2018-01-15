@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -30,22 +29,21 @@ f1_keywords:
 - iosfwd/std::char_traits::not_eof
 - iosfwd/std::char_traits::to_char_type
 - iosfwd/std::char_traits::to_int_type
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - char_traits struct
 - char_traits class
 ms.assetid: 568e59f0-4521-4207-9223-9dcf6a16d620
-caps.latest.revision: 20
+caps.latest.revision: "20"
 author: corob-msft
 ms.author: corob
 manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: b094e0cc34cc1a832e531cff9a5f3fa1366abcc1
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
-ms.sourcegitcommit: 65f4e356ad0d46333b0d443d0fd6ac0b9f2b6f58
-ms.openlocfilehash: af8e9c141db96bd0ce5ddd1dbca922799212b401
-ms.contentlocale: ru-ru
-ms.lasthandoff: 10/03/2017
-
+ms.contentlocale: ru-RU
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="chartraits-struct"></a>Структура char_traits
 Структура char_traits описывает атрибуты, связанные с символом.  
@@ -64,7 +62,7 @@ struct char_traits;
 ## <a name="remarks"></a>Примечания  
  Структура шаблона описывает различные признаки символов для типа **CharType**. Класс шаблона [basic_string](../standard-library/basic-string-class.md), а также несколько классов шаблонов iostream, включая [basic_ios](../standard-library/basic-ios-class.md), используют эти сведения для управления элементами типа **CharType**. Для такого типа элемента не требуются явное создание или уничтожение. Он должен предоставлять конструктор по умолчанию, конструктор копирования и оператор присваивания с ожидаемой семантикой. Побитовое копирование должно иметь такой же эффект, как и присваивание. Ни одна из функций — членов структуры char_traits не может создавать исключения.  
   
-### <a name="typedefs"></a>Typedefs  
+### <a name="typedefs"></a>Определения типов  
   
 |||  
 |-|-|  
@@ -176,7 +174,7 @@ typedef CharType char_type;
 ```  
   
 ### <a name="remarks"></a>Примечания  
- Тип является синонимом для параметра-шаблона **Chartype**.  
+ Тип является синонимом для параметра-шаблона **CharType**.  
   
 ### <a name="example"></a>Пример  
   Пример объявления и использования `char_type` см. в примере для [copy](#copy).  
@@ -1171,5 +1169,4 @@ The recovered char_type of ch2 is equal to the original ch2.
   
 ## <a name="see-also"></a>См. также  
  [Потокобезопасность в стандартной библиотеке C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)
-
 

@@ -1,27 +1,27 @@
 ---
-title: "A.22   Using the default(none) Clause | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/05/2016"
-ms.prod: "visual-studio-dev14"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
+title: "С помощью default(none) предложение A.22 | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
 ms.assetid: a3fa4e62-1e92-4896-ae3f-be268067d917
-caps.latest.revision: 8
-caps.handback.revision: 8
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
+caps.latest.revision: "8"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: a889866d214e6139cdb2b615e60002706c4e4972
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 12/21/2017
 ---
-# A.22   Using the default(none) Clause
-[!INCLUDE[vs2017banner](../../assembler/inline/includes/vs2017banner.md)]
-
-В следующем примере различие переменные, на которые повлияло `default(none)` предложение от тех, которые не являются:  
+# <a name="a22---using-the-defaultnone-clause"></a>A.22   Использование предложения default(none)
+Следующий пример разделяет переменные, которые повлияли `default(none)` предложения от тех, которые не являются:  
   
 ```  
 // openmp_using_clausedefault.c  
@@ -56,4 +56,4 @@ void fun(int a) {
 }  
 ```  
   
- Дополнительные сведения о `default` предложение см. в разделе  [Раздел 2.7.2.5](../../parallel/openmp/2-7-2-5-default.md) на странице 28.
+ Дополнительные сведения о `default` предложение, в разделе [раздел 2.7.2.5](../../parallel/openmp/2-7-2-5-default.md) стр.

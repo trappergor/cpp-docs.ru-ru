@@ -35,11 +35,12 @@ caps.latest.revision: "23"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: b2d30eb61603d791b49d6aaaca2b65176f5fa2d1
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 246c645dad5ed11fb5428e2f90ed9b9574696417
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="coledocobjectitem-class"></a>Класс COleDocObjectItem
 Реализует хранение активных документов.  
@@ -50,17 +51,17 @@ ms.lasthandoff: 10/24/2017
 class COleDocObjectItem : public COleClientItem  
 ```  
   
-## <a name="members"></a>Члены  
+## <a name="members"></a>Участники  
   
 ### <a name="public-constructors"></a>Открытые конструкторы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[COleDocObjectItem::COleDocObjectItem](#coledocobjectitem)|Создает `COleDocObject` элемента.|  
   
 ### <a name="public-methods"></a>Открытые методы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[COleDocObjectItem::DoDefaultPrinting](#dodefaultprinting)|Для печати из приложения контейнера с использованием параметров принтера по умолчанию.|  
 |[COleDocObjectItem::ExecCommand](#execcommand)|Выполняет команду, заданное пользователем.|  
@@ -150,7 +151,7 @@ HRESULT ExecCommand(
 ### <a name="return-value"></a>Возвращаемое значение  
  Возвращает `S_OK` в случае успешного выполнения; в противном случае возвращает с одним из следующих кодов ошибки.  
   
-|Значение|Описание|  
+|Значение|Описание:|  
 |-----------|-----------------|  
 |**E_UNEXPECTED**|Произошла непредвиденная ошибка.|  
 |**E_FAIL**|Произошла ошибка.|  

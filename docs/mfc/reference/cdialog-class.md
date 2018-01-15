@@ -51,11 +51,12 @@ caps.latest.revision: "23"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: b823d40d4504be0180c3af3a6fb5359bf86725cd
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 89c9670d19330e63a466c38a205a3122237e4f02
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cdialog-class"></a>CDialog-класс
 Базовый класс, используемый для отображения диалоговых окон на экране.  
@@ -66,17 +67,17 @@ ms.lasthandoff: 10/24/2017
 class CDialog : public CWnd  
 ```  
   
-## <a name="members"></a>Члены  
+## <a name="members"></a>Участники  
   
 ### <a name="public-constructors"></a>Открытые конструкторы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[CDialog::CDialog](#cdialog)|Создает объект `CDialog`.|  
   
 ### <a name="public-methods"></a>Открытые методы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[CDialog::Create](#create)|Инициализирует `CDialog` объекта. Создает немодальное диалоговое окно и прикрепляет его к `CDialog` объекта.|  
 |[CDialog::CreateIndirect](#createindirect)|Создает немодальное диалоговое окно на основе шаблона диалогового окна в памяти (не основанное на ресурсах).|  
@@ -95,7 +96,7 @@ class CDialog : public CWnd
   
 ### <a name="protected-methods"></a>Защищенные методы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[CDialog::OnCancel](#oncancel)|Переопределение для выполнения действие клавиш ESC или кнопку "Отмена". Значение по умолчанию закрывает диалоговое окно и **DoModal** возвращает **IDCANCEL**.|  
 |[CDialog::OnOK](#onok)|Переопределите, чтобы выполнить действие "ОК" в модального диалогового окна. Значение по умолчанию закрывает диалоговое окно и `DoModal` возвращает **IDOK**.|  

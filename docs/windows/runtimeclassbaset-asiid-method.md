@@ -1,32 +1,33 @@
 ---
-title: "Метод RuntimeClassBaseT::AsIID | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "implements/Microsoft::WRL::Details::RuntimeClassBaseT::AsIID"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "AsIID - метод"
+title: "Метод RuntimeClassBaseT::AsIID | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: implements/Microsoft::WRL::Details::RuntimeClassBaseT::AsIID
+dev_langs: C++
+helpviewer_keywords: AsIID method
 ms.assetid: 90d7df8a-cf9e-4eef-8837-bc1a25f3fa1a
-caps.latest.revision: 5
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 5
+caps.latest.revision: "5"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: 482edbcabf368f68a720910717650be78ac11c62
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 12/21/2017
 ---
-# Метод RuntimeClassBaseT::AsIID
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Предназначено для поддержки инфраструктуры WRL, а не для непосредственного использования в коде.  
+# <a name="runtimeclassbasetasiid-method"></a>Метод RuntimeClassBaseT::AsIID
+Поддерживает инфраструктуру WRL и не предназначен для использования непосредственно из программного кода.  
   
-## Синтаксис  
+## <a name="syntax"></a>Синтаксис  
   
 ```  
 template<  
@@ -39,30 +40,30 @@ __forceinline static HRESULT AsIID(
 );  
 ```  
   
-#### Параметры  
+#### <a name="parameters"></a>Параметры  
  `T`  
- Тип, реализующий идентификатор интерфейса, заданный параметром `riid`.  
+ Тип, который реализует идентификатор интерфейса, заданный параметром `riid`.  
   
  `implements`  
- Переменная типа, указанного в параметре `T` шаблона.  
+ Переменная типа, указанного в параметре шаблона `T`.  
   
  `riid`  
  Извлекаемый идентификатор интерфейса.  
   
  `ppvObject`  
- Если операция выполнена успешно, то указатель\-на\-указатель на интерфейс, заданный параметром `riid`.  
+ Если операция завершилась успешно, представляет указатель на указатель интерфейса, заданный параметром `riid`.  
   
-## Возвращаемое значение  
- Значение S\_ОК в случае успеха; в противном случае — значение HRESULT, указывающее на ошибку.  
+## <a name="return-value"></a>Возвращаемое значение  
+ Значение S_OK, если успешно; в противном случае — значение HRESULT, описывающее ошибку.  
   
-## Заметки  
- Извлекает указатель на заданный идентификатор интерфейса.  
+## <a name="remarks"></a>Примечания  
+ Извлекает указатель на идентификатор указанного интерфейса.  
   
-## Требования  
+## <a name="requirements"></a>Требования  
  **Заголовок:** implements.h  
   
- **Пространство имен:** Microsoft::WRL::Details  
+ **Пространство имен:** Microsoft::wrl:: Details  
   
-## См. также  
+## <a name="see-also"></a>См. также  
  [Структура RuntimeClassBaseT](../windows/runtimeclassbaset-structure.md)   
  [Пространство имен Microsoft::WRL::Details](../windows/microsoft-wrl-details-namespace.md)

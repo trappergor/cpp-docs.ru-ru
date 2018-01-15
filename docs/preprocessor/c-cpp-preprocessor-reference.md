@@ -16,16 +16,17 @@ caps.latest.revision: "9"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.openlocfilehash: e0ce24f1f7b50a899f02cc8578a293aa5734548b
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 8c91928edf1617d8572cf6a6087afecb8e08eec3
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cc-preprocessor-reference"></a>Cправочник препроцессора /C++
 *Справочника по препроцессору C/C++* Описание препроцессора, реализованного в Microsoft C и C++. Препроцессор выполняет предварительные операции с файлами C и C++ перед их передачей компилятору. Препроцессор можно использовать для условной компиляции кода, вставки файлов, задания сообщений для ошибок времени компиляции, а также для применения правил, зависящих от компьютера, к разделам кода.  
   
-## <a name="in-this-section"></a>Содержание  
+## <a name="in-this-section"></a>В этом разделе  
  [Директивы препроцессора](../preprocessor/preprocessor-directives.md)  
  Описание директив, обычно используемых, чтобы исходные программы можно было легко изменять и компилировать в разных средах выполнения.  
   

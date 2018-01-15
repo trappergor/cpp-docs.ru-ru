@@ -83,11 +83,12 @@ caps.latest.revision: "21"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 6206c47416ebbc304cb99c273a882001d684e94c
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: c6d04faa904eba416b290515e5e6773ac6ef9837
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="colecontrolcontainer-class"></a>Класс COleControlContainer
 Играет роль контейнера для элементов управления ActiveX.  
@@ -98,17 +99,17 @@ ms.lasthandoff: 10/24/2017
 class COleControlContainer : public CCmdTarget  
 ```  
   
-## <a name="members"></a>Члены  
+## <a name="members"></a>Участники  
   
 ### <a name="public-constructors"></a>Открытые конструкторы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[COleControlContainer::COleControlContainer](#colecontrolcontainer)|Создает объект `COleControlContainer`.|  
   
 ### <a name="public-methods"></a>Открытые методы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[COleControlContainer::AttachControlSite](#attachcontrolsite)|Создает узел элемента управления, размещенного в контейнере.|  
 |[COleControlContainer::BroadcastAmbientPropertyChange](#broadcastambientpropertychange)|Сообщает все размещенные элементы управления, которые изменилось свойство окружения.|  
@@ -135,7 +136,7 @@ class COleControlContainer : public CCmdTarget
   
 ### <a name="public-data-members"></a>Открытые члены данных  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[COleControlContainer::m_crBack](#m_crback)|Цвет фона контейнера.|  
 |[COleControlContainer::m_crFore](#m_crfore)|Цвет переднего плана контейнера.|  

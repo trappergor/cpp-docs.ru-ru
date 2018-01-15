@@ -1,48 +1,49 @@
 ---
-title: "Метод ModuleBase::IncrementObjectCount | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "implements/Microsoft::WRL::Details::ModuleBase::IncrementObjectCount"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "IncrementObjectCount - метод"
+title: "Метод ModuleBase::IncrementObjectCount | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: implements/Microsoft::WRL::Details::ModuleBase::IncrementObjectCount
+dev_langs: C++
+helpviewer_keywords: IncrementObjectCount method
 ms.assetid: 2d70b472-684c-4bb7-8bab-09505cfcaf28
-caps.latest.revision: 5
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 5
+caps.latest.revision: "5"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: 773f909e6dad4aae1933db355510443846646df0
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 12/21/2017
 ---
-# Метод ModuleBase::IncrementObjectCount
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Предназначено для поддержки инфраструктуры WRL, а не для непосредственного использования в коде.  
+# <a name="modulebaseincrementobjectcount-method"></a>Метод ModuleBase::IncrementObjectCount
+Поддерживает инфраструктуру WRL и не предназначен для использования непосредственно из программного кода.  
   
-## Синтаксис  
+## <a name="syntax"></a>Синтаксис  
   
 ```  
 virtual long IncrementObjectCount() = 0;  
 ```  
   
-## Возвращаемое значение  
- Количество перед операцией инкремента.  
+## <a name="return-value"></a>Возвращаемое значение  
+ Счетчик перед выполнением операции инкремента.  
   
-## Заметки  
- При реализации, увеличивает число объектов, отслеживаемых модулем.  
+## <a name="remarks"></a>Примечания  
+ При реализации увеличивает число объектов, отслеживаемых модулем.  
   
-## Требования  
+## <a name="requirements"></a>Требования  
  **Заголовок:** implements.h  
   
- **Пространство имен:** Microsoft::WRL::Details  
+ **Пространство имен:** Microsoft::wrl:: Details  
   
-## См. также  
- [Класс ModuleBase](../windows/modulebase-class.md)   
+## <a name="see-also"></a>См. также  
+ [ModuleBase-класс](../windows/modulebase-class.md)   
  [Пространство имен Microsoft::WRL::Details](../windows/microsoft-wrl-details-namespace.md)

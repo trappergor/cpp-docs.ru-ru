@@ -1,77 +1,78 @@
 ---
-title: "section | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "section_CPP"
-  - "vc-pragma.section"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "прагмы, section"
-  - "прагма раздела"
+title: "раздел | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-tools
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- section_CPP
+- vc-pragma.section
+dev_langs: C++
+helpviewer_keywords:
+- pragmas, section
+- section pragma
 ms.assetid: c67215e9-2c4a-4b0f-b691-2414d2e2d96f
-caps.latest.revision: 8
-author: "corob-msft"
-ms.author: "corob"
-manager: "ghogen"
-caps.handback.revision: 8
+caps.latest.revision: "8"
+author: corob-msft
+ms.author: corob
+manager: ghogen
+ms.workload: cplusplus
+ms.openlocfilehash: fc6035caeb3b2fe466d18ea92300b3135a6189f0
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 12/21/2017
 ---
-# section
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Создает раздел в OBJ\-файле.  
+# <a name="section"></a>section
+Создает раздел в OBJ-файле.  
   
-## Синтаксис  
+## <a name="syntax"></a>Синтаксис  
   
 ```  
   
 #pragma section( "section-name" [, attributes] )  
 ```  
   
-## Заметки  
- Термины *сегмент* и *раздел* в этом разделе взаимозаменимы.  
+## <a name="remarks"></a>Примечания  
+ Значение этих терминов *сегмент* и *раздел* являются взаимозаменяемыми в этом разделе.  
   
- После определения раздел остается допустимым для остальной части компиляции.  Однако следует использовать [\_\_declspec\(allocate\)](../Topic/allocate.md), так как иначе никакие данные не будут помещены в раздел.  
+ После определения раздел остается допустимым для остальной части компиляции. Тем не менее, необходимо использовать [__declspec(allocate)](../cpp/allocate.md) или ничего не будет размещено в разделе.  
   
- *section\-name* — обязательный параметр, который будет именем раздела.  Имя не должно конфликтовать со стандартными именами раздела.  Список имен, которые не следует использовать при создании раздела, см. в разделе [\/SECTION](../build/reference/section-specify-section-attributes.md).  
+ *Имя раздела* является обязательным параметром, который будет использоваться имя раздела. Имя не должно конфликтовать со стандартными именами раздела. В разделе [/SECTION](../build/reference/section-specify-section-attributes.md) список имен не следует использовать при создании раздела.  
   
- `attributes` — необязательный параметр, состоящий из одного или нескольких разделенных запятыми атрибутов, которые требуется присвоить разделу.  Ниже перечислены возможные `attributes`.  
+ `attributes` — необязательный параметр, состоящий из одного или нескольких разделенных запятыми атрибутов, которые требуется присвоить разделу. Ниже перечислены возможные `attributes`.  
   
- **read \(чтение\)**  
+ **read**  
  Позволяет выполнять операции чтения данных.  
   
- **write \(запись\)**  
+ **write**  
  Позволяет выполнять операции записи данных.  
   
- **execute**  
+ **выполнение**  
  Позволяет выполнять код.  
   
- **shared**  
+ **Общие**  
  Предоставляет совместный доступ к разделу всем процессам, загружающим образ.  
   
  **nopage**  
  Отмечает раздел как невыгружаемый; используются для драйверов устройств Win32.  
   
- **nocache**  
+ **NoCache**  
  Отмечает раздел как некэшируемый; используются для драйверов устройств Win32.  
   
- **discard**  
+ **Отменить**  
  Отмечает раздел как удаляемый; используются для драйверов устройств Win32.  
   
  **remove**  
- Отмечает раздел как нерезидентный; только драйверы виртуальных устройств \(V*x*D\).  
+ Отмечает раздел как нерезидентный; драйверы виртуальных устройств (V*x*D) только.  
   
  Если не задать атрибуты, раздел будет иметь атрибуты чтения и записи.  
   
-## Пример  
- В следующем примере первая инструкция определяет раздел и его атрибуты.  Целое число `j` не помещается в `mysec`, поскольку оно не было объявлено с `__declspec(allocate)`; `j` переходит в раздел данных.  Целое число `i` переходит в `mysec` как результат атрибута класса хранения `__declspec(allocate)`.  
+## <a name="example"></a>Пример  
+ В следующем примере первая инструкция определяет раздел и его атрибуты. Целое число `j` не помещается в `mysec`, поскольку оно не было объявлено с `__declspec(allocate)`; `j` переходит в раздел данных. Целое число `i` переходит в `mysec` как результат атрибута класса хранения `__declspec(allocate)`.  
   
 ```  
 // pragma_section.cpp  
@@ -84,5 +85,5 @@ int i = 0;
 int main(){}  
 ```  
   
-## См. также  
- [Директивы Pragma и ключевое слово \_\_Pragma](../preprocessor/pragma-directives-and-the-pragma-keyword.md)
+## <a name="see-also"></a>См. также  
+ [Директивы Pragma и ключевое слово __Pragma](../preprocessor/pragma-directives-and-the-pragma-keyword.md)

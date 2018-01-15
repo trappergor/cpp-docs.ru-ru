@@ -1,32 +1,33 @@
 ---
-title: "Конструктор WeakRef::WeakRef | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "client/Microsoft::WRL::WeakRef::WeakRef"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "WeakRef, конструктор"
+title: "Конструктор WeakRef::WeakRef | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: client/Microsoft::WRL::WeakRef::WeakRef
+dev_langs: C++
+helpviewer_keywords: WeakRef, constructor
 ms.assetid: 589f87e0-8dcc-4e82-aab2-f2f66f1ec47c
-caps.latest.revision: 4
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 4
+caps.latest.revision: "4"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: 125fe25179ddbe975530a0c368a4dfc7e4caaf1a
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 12/21/2017
 ---
-# Конструктор WeakRef::WeakRef
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
+# <a name="weakrefweakref-constructor"></a>Конструктор WeakRef::WeakRef
 Инициализирует новый экземпляр класса WeakRef.  
   
-## Синтаксис  
+## <a name="syntax"></a>Синтаксис  
   
 ```  
 WeakRef();  
@@ -51,17 +52,17 @@ WeakRef(
 );  
 ```  
   
-#### Параметры  
+#### <a name="parameters"></a>Параметры  
  `ptr`  
- Указатель, ссылка или rvalue\-ссылка на существующий объект, который инициализирует текущий объект WeakRef.  
+ Указатель, ссылка или ссылка rvalue на существующий объект, который инициализирует текущий объект WeakRef.  
   
-## Примечания  
- Первый конструктор инициализирует пустой объект WeakRef.  Второй конструктор инициализирует объект WeakRef из указателя на интерфейс IWeakReference.  Третий конструктор инициализирует объект WeakRef из ссылки на объект ComPtr\< IWeakReference\>.  Четвертый и пятый конструктор инициализируют объект WeakRef из другого объекта WeakRef.  
+## <a name="remarks"></a>Примечания  
+ Первый конструктор инициализирует пустой объект WeakRef. Второй конструктор инициализирует объект WeakRef из указателя на интерфейс IWeakReference. Третий конструктор инициализирует объект WeakRef из ссылки на объект ComPtr\< IWeakReference > объекта. Четвертый и пятый конструкторы инициализирует объект WeakRef из другой объект WeakRef.  
   
-## Требования  
+## <a name="requirements"></a>Требования  
  **Заголовок:** client.h  
   
  **Пространство имен:** Microsoft::WRL  
   
-## См. также  
+## <a name="see-also"></a>См. также  
  [Класс WeakRef](../windows/weakref-class.md)

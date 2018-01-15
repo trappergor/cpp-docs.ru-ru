@@ -15,11 +15,14 @@ caps.latest.revision: "5"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 2c010b85095da67a91c0b4c1df6f3da7a4f677dd
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: 071598c83086afe12e1d19ef541dbfb3d0dbc55a
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="comptrrefbase-class"></a>ComPtrRefBase - класс
 Поддерживает инфраструктуру WRL и не предназначен для использования непосредственно из программного кода.  
@@ -40,24 +43,24 @@ class ComPtrRefBase;
 ## <a name="remarks"></a>Примечания  
  Представляет базовый класс для [ComPtrRef](../windows/comptrref-class.md) класса.  
   
-## <a name="members"></a>Члены  
+## <a name="members"></a>Участники  
   
 ### <a name="public-typedefs"></a>Общедоступные определения типов  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |`InterfaceType`|Синоним для типа параметра шаблона `T`.|  
   
 ### <a name="public-operators"></a>Открытые операторы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[Оператор ComPtrRefBase::operator IInspectable**](../windows/comptrrefbase-operator-iinspectable-star-star-operator.md)|Приводит текущие [ptr_](../windows/comptrrefbase-ptr-data-member.md) данные-член к указателю к a указатель-интерфейс IInspectable.|  
 |[Оператор ComPtrRefBase::operator IUnknown**](../windows/comptrrefbase-operator-iunknown-star-star-operator.md)|Приводит текущие [ptr_](../windows/comptrrefbase-ptr-data-member.md) данные-член к указатель в a указатель интерфейса IUnknown.|  
   
 ### <a name="protected-data-members"></a>Защищенные члены данных  
   
-|Имя|Описание|  
+|name|Описание:|  
 |----------|-----------------|  
 |[Элемент данных ComPtrRefBase::ptr_](../windows/comptrrefbase-ptr-data-member.md)|Указатель на тип, заданный текущим параметром шаблона.|  
   

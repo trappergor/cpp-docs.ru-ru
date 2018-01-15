@@ -21,11 +21,12 @@ caps.latest.revision: "24"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: ea35172c527d1dad62f2f565bf7cf2e25001323b
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 5a5236a4a957c742074a1305ba2d4359da3ed967
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="chttpconnection-class"></a>Класс CHttpConnection
 Управление подключением к HTTP-серверу.  
@@ -36,17 +37,17 @@ ms.lasthandoff: 10/24/2017
 class CHttpConnection : public CInternetConnection  
 ```  
   
-## <a name="members"></a>Члены  
+## <a name="members"></a>Участники  
   
 ### <a name="public-constructors"></a>Открытые конструкторы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[CHttpConnection::CHttpConnection](#chttpconnection)|Создает объект `CHttpConnection`.|  
   
 ### <a name="public-methods"></a>Открытые методы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[CHttpConnection::OpenRequest](#openrequest)|Открывает HTTP-запроса.|  
   
@@ -199,7 +200,7 @@ CHttpFile* OpenRequest(
 ### <a name="remarks"></a>Примечания  
  `dwFlags` может принимать следующие значения:  
   
-|Флаг Интернета|Описание|  
+|Флаг Интернета|Описание:|  
 |-------------------|-----------------|  
 |`INTERNET_FLAG_RELOAD`|Вызывает загрузку запрошенного файла, объекта или каталоге с основного сервера, а не из кэша.|  
 |`INTERNET_FLAG_DONT_CACHE`|Не добавляет возвращаемой сущности в кэш.|  

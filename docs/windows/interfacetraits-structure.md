@@ -15,11 +15,14 @@ caps.latest.revision: "5"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 494942ce3c50889cae7a8867dc2b86ed6a609313
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: 1c28c7c1eef2fc278a0667ec4b7c635005331467
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="interfacetraits-structure"></a>InterfaceTraits - структура
 Поддерживает инфраструктуру WRL и не предназначен для использования непосредственно из программного кода.  
@@ -52,17 +55,17 @@ struct __declspec(novtable) InterfaceTraits<Nil>;
   
  Второй шаблон является специализацией замаскированных интерфейсов. Третий шаблон является специализацией Nil параметров.  
   
-## <a name="members"></a>Члены  
+## <a name="members"></a>Участники  
   
 ### <a name="public-typedefs"></a>Общедоступные определения типов  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |`Base`|Синоним для параметра шаблона `I0`.|  
   
 ### <a name="public-methods"></a>Открытые методы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[Метод InterfaceTraits::CanCastTo](../windows/interfacetraits-cancastto-method.md)|Указывает ли заданный указатель может быть приведен к указателю на `Base`.|  
 |[Метод InterfaceTraits::CastToBase](../windows/interfacetraits-casttobase-method.md)|Приводит определенный указатель к указателю на `Base`.|  
@@ -72,7 +75,7 @@ struct __declspec(novtable) InterfaceTraits<Nil>;
   
 ### <a name="public-constants"></a>Открытые константы  
   
-|Имя|Описание|  
+|name|Описание:|  
 |----------|-----------------|  
 |[Константа InterfaceTraits::IidCount](../windows/interfacetraits-iidcount-constant.md)|Содержит количество идентификаторов, связанного с текущим объектом InterfaceTraits интерфейса.|  
   

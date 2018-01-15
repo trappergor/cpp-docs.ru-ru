@@ -19,11 +19,12 @@ caps.latest.revision: "9"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 5f81e7c2e3f07074f451446d9ccc1796e1c393bc
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 594a23113159c7d4afa9e3119952b001f8ee7ed4
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="writeonlytextureview-class"></a>Класс writeonly_texture_view
 Предоставляет доступ writeonly до текстуры.  
@@ -51,37 +52,37 @@ class writeonly_texture_view<value_type, _Rank> : public details::_Texture_base<
  `_Rank`  
  Ранг текстуры.  
   
-## <a name="members"></a>Члены  
+## <a name="members"></a>Участники  
   
 ### <a name="public-typedefs"></a>Общедоступные определения типов  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |`scalar_type`||  
 |`value_type`|Тип элементов в текстуре.|  
   
 ### <a name="public-constructors"></a>Открытые конструкторы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[Конструктор writeonly_texture_view](#ctor)|Инициализирует новый экземпляр класса `writeonly_texture_view`.|  
 |[~ writeonly_texture_view деструктор](#ctor)|Уничтожает `writeonly_texture_view` объекта.|  
   
 ### <a name="public-methods"></a>Открытые методы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[set](#set)|Задает значение элемента по указанному индексу.|  
   
 ### <a name="public-operators"></a>Открытые операторы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
-|[operator=](#operator_eq)|Копирует указанный `writeonly_texture_view` этого объекта.|  
+|[оператор=](#operator_eq)|Копирует указанный `writeonly_texture_view` этого объекта.|  
   
 ### <a name="public-constants"></a>Открытые константы  
   
-|Имя|Описание|  
+|name|Описание:|  
 |----------|-----------------|  
 |[Ранг константа](#rank)|Возвращает ранг `writeonly_texture_view` объекта.|  
   

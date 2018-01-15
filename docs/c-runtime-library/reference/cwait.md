@@ -4,12 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
-apiname:
-- _cwait
+apiname: _cwait
 apilocation:
 - msvcrt.dll
 - msvcr80.dll
@@ -23,44 +21,28 @@ apilocation:
 - ucrtbase.dll
 - api-ms-win-crt-process-l1-1-0.dll
 apitype: DLLExport
-f1_keywords:
-- _cwait
-dev_langs:
-- C++
+f1_keywords: _cwait
+dev_langs: C++
 helpviewer_keywords:
 - cwait function
 - _cwait function
 ms.assetid: d9b596b5-45f4-4e03-9896-3f383cb922b8
-caps.latest.revision: 23
+caps.latest.revision: "23"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3f91eafaf3b5d5c1b8f96b010206d699f666e224
-ms.openlocfilehash: 8d5cfdb53b5aab8e6b0404b84de87ba24ee57597
-ms.contentlocale: ru-ru
-ms.lasthandoff: 04/01/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: 817b8ef39758a47fe28a3a2e2320ae7384a2bc86
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="cwait"></a>_cwait
 Ожидает завершения другого процесса.  
   
 > [!IMPORTANT]
->  Этот API не может использоваться в приложениях, выполняемых в [!INCLUDE[wrt](../../atl/reference/includes/wrt_md.md)]. Дополнительные сведения см. в статье [Функции CRT, которые не поддерживаются с ключом /ZW](http://msdn.microsoft.com/library/windows/apps/jj606124.aspx).  
+>  Этот API нельзя использовать в приложениях, выполняемых в среде выполнения Windows. Дополнительные сведения см. в статье [Функции CRT, которые не поддерживаются с ключом /ZW](http://msdn.microsoft.com/library/windows/apps/jj606124.aspx).  
   
 ## <a name="syntax"></a>Синтаксис  
   
@@ -85,7 +67,7 @@ intptr_t _cwait(
 ## <a name="return-value"></a>Возвращаемое значение  
  Если указанный процесс успешно выполнен, возвращает дескриптор указанного процесса и задает для параметра `termstat` код результата, возвращенный указанным процессом. В противном случае возвращается значение -1 и задает `errno` следующим образом.  
   
-|Значение|Описание|  
+|Значение|Описание:|  
 |-----------|-----------------|  
 |`ECHILD`|Указанный процесс не существует, `procHandle` недопустим или вызов API [GetExitCodeProcess](http://msdn.microsoft.com/library/windows/desktop/ms683189.aspx) или [WaitForSingleObject](http://msdn.microsoft.com/library/windows/desktop/ms687032.aspx) завершился с ошибкой.|  
 |`EINVAL`|`action` недопустим.|  

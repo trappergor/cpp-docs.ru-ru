@@ -4,40 +4,24 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- cpp-standard-libraries
+ms.technology: cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- C++
+dev_langs: C++
 helpviewer_keywords:
 - iterator conventions
 - C++ Standard Library, iterator conventions
 ms.assetid: 2f746be7-b37d-4bfc-bf05-be4336ca982f
-caps.latest.revision: 12
+caps.latest.revision: "12"
 author: corob-msft
 ms.author: corob
 manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 3f69f0c3176d2fbe19e11ce08c071691a72d858d
-ms.openlocfilehash: ffeaf473155d0a24bd0e1b14c4191d276bed5190
-ms.contentlocale: ru-ru
-ms.lasthandoff: 02/24/2017
-
+ms.workload: cplusplus
+ms.openlocfilehash: f03b62e045fe0130f981d55767c756df89bca9c6
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="iterators"></a>Итераторы
 Итератор — это объект, который может перебирать элементы в контейнере стандартной библиотеки С++ и предоставлять доступ к отдельным элементам. Все контейнеры стандартной библиотеки С++ предоставляют итераторы, чтобы алгоритмы могли получить доступ к их элементам стандартным способом, независимо от типа контейнера, в котором сохранены элементы.  
@@ -121,10 +105,9 @@ forward iterator
 > [!NOTE]
 >  Вы можете избежать явного использования итераторов с помощью циклов range-for. Дополнительные сведения см. в разделе [Циклы (современный C++)](http://msdn.microsoft.com/en-us/b1b2779c-750e-4576-a514-a84178eae9da).  
   
- [!INCLUDE[vcprvc](../build/includes/vcprvc_md.md)] теперь предоставляет проверяемые и отладочные итераторы для предотвращения перезаписи границ контейнера. Дополнительные сведения см. в разделах [Проверяемые итераторы](../standard-library/checked-iterators.md) и [Поддержка отладочных итераторов](../standard-library/debug-iterator-support.md).  
+ Visual C++ теперь предоставляет итераторы и итераторы, чтобы убедиться, что перезаписи границ контейнера. Дополнительные сведения см. в разделах [Проверяемые итераторы](../standard-library/checked-iterators.md) и [Поддержка отладочных итераторов](../standard-library/debug-iterator-support.md).  
   
 ## <a name="see-also"></a>См. также  
  [Справочник по стандартной библиотеке C++](../standard-library/cpp-standard-library-reference.md)   
  [Потокобезопасность в стандартной библиотеке C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)
-
 

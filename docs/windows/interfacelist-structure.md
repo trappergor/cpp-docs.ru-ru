@@ -1,32 +1,33 @@
 ---
-title: "Структура InterfaceList | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "implements/Microsoft::WRL::Details::InterfaceList"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "InterfaceList - структура"
+title: "Структура InterfaceList | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: implements/Microsoft::WRL::Details::InterfaceList
+dev_langs: C++
+helpviewer_keywords: InterfaceList structure
 ms.assetid: 6ec3228d-eb3e-4b7e-aef1-7dcf17bdf61a
-caps.latest.revision: 5
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 5
+caps.latest.revision: "5"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: def0a79556d74616d153a97ee5a0cc9f521944ff
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 12/21/2017
 ---
-# Структура InterfaceList
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Предназначено для поддержки инфраструктуры WRL, а не для непосредственного использования в коде.  
+# <a name="interfacelist-structure"></a>InterfaceList - структура
+Поддерживает инфраструктуру WRL и не предназначен для использования непосредственно из программного кода.  
   
-## Синтаксис  
+## <a name="syntax"></a>Синтаксис  
   
 ```  
 template <  
@@ -36,32 +37,32 @@ template <
 struct InterfaceList;  
 ```  
   
-#### Параметры  
+#### <a name="parameters"></a>Параметры  
  `T`  
- Имя интерфейса; первый интерфейс в рекурсивном списке.  
+ Имя интерфейса; Первый интерфейс в рекурсивный список.  
   
  `U`  
- Имя интерфейса; оставшиеся интерфейсы в рекурсивном списке.  
+ Имя интерфейса; остальные интерфейсы в рекурсивный список.  
   
-## Заметки  
- Используется для создания рекурсивного списка интерфейсов.  
+## <a name="remarks"></a>Примечания  
+ Используется для создания рекурсивный список интерфейсов.  
   
-## Члены  
+## <a name="members"></a>Участники  
   
-### Общедоступные Typedefs  
+### <a name="public-typedefs"></a>Общедоступные определения типов  
   
-|Имя|Описание|  
-|---------|--------------|  
-|`FirstT`|Синоним для параметра `T` шаблона.|  
-|`RestT`|Синоним для параметра `U` шаблона.|  
+|Имя|Описание:|  
+|----------|-----------------|  
+|`FirstT`|Синоним параметра шаблона `T`.|  
+|`RestT`|Синоним параметра шаблона `U`.|  
   
-## Иерархия наследования  
+## <a name="inheritance-hierarchy"></a>Иерархия наследования  
  `InterfaceList`  
   
-## Требования  
+## <a name="requirements"></a>Требования  
  **Заголовок:** implements.h  
   
- **Пространство имен:** Microsoft::WRL::Details  
+ **Пространство имен:** Microsoft::wrl:: Details  
   
-## См. также  
+## <a name="see-also"></a>См. также  
  [Пространство имен Microsoft::WRL::Details](../windows/microsoft-wrl-details-namespace.md)

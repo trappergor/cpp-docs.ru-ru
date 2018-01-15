@@ -18,11 +18,12 @@ caps.latest.revision: "10"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 7b1e38a6ca424a71418790b18b3c115d12bb3065
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: eeddfe4c67de2e96d42c7714619463ae3be45187
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="optimizing-persistence-and-initialization"></a>Оптимизация постоянства и инициализации
 По умолчанию постоянства и инициализации в элементе управления обрабатываются `DoPropExchange` функции-члена. Типичные элемента управления, эта функция содержит несколько вызовов **PX_** функции (`PX_Color`, `PX_Font`и так далее), один для каждого свойства.  

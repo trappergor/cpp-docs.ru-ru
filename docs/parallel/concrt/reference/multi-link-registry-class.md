@@ -24,11 +24,12 @@ caps.latest.revision: "19"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 39c93cf2c2e3642d2ed6c3fcf08cadafea4ce8bf
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: c5d95a98d56ea666ed823f3caef2190dea1591cb
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="multilinkregistry-class"></a>Класс multi_link_registry
 Объект `multi_link_registry` представляет собой `network_link_registry`, управляющий несколькими блоками источников или целевыми блоками.  
@@ -44,18 +45,18 @@ class multi_link_registry : public network_link_registry<_Block>;
  `_Block`  
  Тип блока данных, хранимых в `multi_link_registry` объекта.  
   
-## <a name="members"></a>Члены  
+## <a name="members"></a>Участники  
   
 ### <a name="public-constructors"></a>Открытые конструкторы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[multi_link_registry](#ctor)|Создает объект `multi_link_registry`.|  
 |[~ multi_link_registry деструктор](#dtor)|Уничтожает `multi_link_registry` объекта.|  
   
 ### <a name="public-methods"></a>Открытые методы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[add](#add)|Добавляет ссылку на `multi_link_registry` объекта. (Переопределяет [network_link_registry::add](network-link-registry-class.md#add).)|  
 |[begin](#begin)|Возвращает итератор на первый элемент в `multi_link_registry` объекта. (Переопределяет [network_link_registry::begin](network-link-registry-class.md#begin).)|  

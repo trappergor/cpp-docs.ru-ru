@@ -1,32 +1,33 @@
 ---
-title: "Метод RuntimeClassBaseT::GetImplementedIIDS | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "implements/Microsoft::WRL::Details::RuntimeClassBaseT::GetImplementedIIDS"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "GetImplementedIIDS - метод"
+title: "Метод RuntimeClassBaseT::GetImplementedIIDS | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords: implements/Microsoft::WRL::Details::RuntimeClassBaseT::GetImplementedIIDS
+dev_langs: C++
+helpviewer_keywords: GetImplementedIIDS method
 ms.assetid: adae54da-521d-4add-87f5-242fbd85f33b
-caps.latest.revision: 4
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 4
+caps.latest.revision: "4"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: 25410ac57e1812d3f4648151afff4f97d413689b
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 12/21/2017
 ---
-# Метод RuntimeClassBaseT::GetImplementedIIDS
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Предназначено для поддержки инфраструктуры WRL, а не для непосредственного использования в коде.  
+# <a name="runtimeclassbasetgetimplementediids-method"></a>Метод RuntimeClassBaseT::GetImplementedIIDS
+Поддерживает инфраструктуру WRL и не предназначен для использования непосредственно из программного кода.  
   
-## Синтаксис  
+## <a name="syntax"></a>Синтаксис  
   
 ```  
 template<  
@@ -39,29 +40,29 @@ __forceinline static HRESULT GetImplementedIIDS(
 );  
 ```  
   
-#### Параметры  
+#### <a name="parameters"></a>Параметры  
  `T`  
  Тип параметра `implements`.  
   
  `implements`  
- Указатель на тип, заданный параметром `T`.  
+ Указатель на тип, указанный параметром `T`.  
   
  `iidCount`  
- Максимальное количество получаемых идентификаторов интерфейсов.  
+ Максимальное количество идентификаторов интерфейса для извлечения.  
   
  `iids`  
- Если эта операция завершается успешно, то массив идентификаторов интерфейса реализуется типом `T`.  
+ Если эта операция завершается успешно, массив идентификаторов, реализуемый типом интерфейса `T`.  
   
-## Возвращаемое значение  
- Значение S\_ОК в случае успеха; в противном случае — значение HRESULT, указывающее на ошибку.  
+## <a name="return-value"></a>Возвращаемое значение  
+ Значение S_OK, если успешно; в противном случае — значение HRESULT, описывающее ошибку.  
   
-## Заметки  
- Извлекает массив идентификаторов интерфейсов, которые реализуются указанным типом.  
+## <a name="remarks"></a>Примечания  
+ Извлекает массив идентификаторов, которые реализуются указанного типа интерфейса.  
   
-## Требования  
+## <a name="requirements"></a>Требования  
  **Заголовок:** implements.h  
   
- **Пространство имен:** Microsoft::WRL::Details  
+ **Пространство имен:** Microsoft::wrl:: Details  
   
-## См. также  
+## <a name="see-also"></a>См. также  
  [Структура RuntimeClassBaseT](../windows/runtimeclassbaset-structure.md)

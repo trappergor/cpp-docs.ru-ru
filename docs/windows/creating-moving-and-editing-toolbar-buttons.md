@@ -1,52 +1,56 @@
 ---
-title: "Creating, Moving, and Editing Toolbar Buttons | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/04/2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "devlang-cpp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "C++"
-helpviewer_keywords: 
-  - "buttons, custom toolbars"
-  - "toolbar buttons (in Toolbar editor), editing"
-  - "buttons"
-  - "toolbar buttons (in Toolbar editor), creating"
+title: "Создание, перемещение и редактирование кнопок панели инструментов | Документы Microsoft"
+ms.custom: 
+ms.date: 11/04/2016
+ms.reviewer: 
+ms.suite: 
+ms.technology: cpp-windows
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs: C++
+helpviewer_keywords:
+- buttons, custom toolbars
+- toolbar buttons (in Toolbar editor), editing
+- buttons
+- toolbar buttons (in Toolbar editor), creating
 ms.assetid: d0f0c6c6-9d7e-42b5-a86a-7558127386e7
-caps.latest.revision: 9
-author: "mikeblome"
-ms.author: "mblome"
-manager: "ghogen"
-caps.handback.revision: 5
+caps.latest.revision: "9"
+author: mikeblome
+ms.author: mblome
+manager: ghogen
+ms.workload:
+- cplusplus
+- uwp
+ms.openlocfilehash: d265bbbe5e5c62e33b990ed1da40afdabccc7f57
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.translationtype: MT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 12/21/2017
 ---
-# Creating, Moving, and Editing Toolbar Buttons
-[!INCLUDE[vs2017banner](../assembler/inline/includes/vs2017banner.md)]
-
-Вы можете легко создавать, перемещать и редактировать кнопки в панели инструментов.  
+# <a name="creating-moving-and-editing-toolbar-buttons"></a>Создание, перемещение и редактирование кнопок в панели инструментов
+Можно легко создавать, перемещать, скопировать и изменить кнопки панели инструментов.  
   
- По умолчанию новая или пустая кнопка отображается в правой части панели инструментов.  Эту кнопку можно переместить, а затем изменить.  Когда новая кнопка создана, справа от нее появляется еще одна пустая кнопка.  При сохранении панели инструментов пустая кнопка не сохраняется.  
+ По умолчанию новая или пустая кнопка отображается в правом конце панели инструментов. Эту кнопку можно переместить перед его изменением. При создании новой кнопки еще одна пустая кнопка отображается справа от нее. При сохранении панели инструментов пустая кнопка не сохраняется.  
   
--   [Создание новой кнопки в панели инструментов](../mfc/creating-a-new-toolbar-button.md)  
+-   [Создание новой кнопки панели инструментов](creating-a-new-toolbar-button.md)  
   
--   [Перемещение кнопки в панели инструментов](../mfc/moving-a-toolbar-button.md)  
+-   [Перемещение кнопок панели инструментов](moving-a-toolbar-button.md)  
   
--   [Копирование кнопок из ресурса панели инструментов](../mfc/copying-buttons-from-a-toolbar.md)  
+-   [Копирование кнопок из ресурса панели инструментов](../windows/copying-buttons-from-a-toolbar.md)  
   
--   [Удаление кнопки с панели инструментов](../mfc/deleting-a-toolbar-button.md)  
+-   [Удаление кнопки панели инструментов](deleting-a-toolbar-button.md)  
   
--   [Добавление интервала между кнопками в ресурсе панели инструментов](../mfc/inserting-a-space-between-buttons-on-a-toolbar.md)  
+-   [Вставлять пробел между кнопками в панели инструментов](../windows/inserting-a-space-between-buttons-on-a-toolbar.md)  
   
--   [Уменьшение интервала между кнопками в панели инструментов](../mfc/removing-space-between-buttons-on-a-toolbar.md)  
+-   [Уменьшение интервала между кнопками в панели инструментов](../windows/removing-space-between-buttons-on-a-toolbar.md)  
   
--   [Редактирование страницы свойств панели инструментов](../mfc/changing-the-properties-of-a-toolbar-button.md)  
+-   [Изменение панели инструментов страницы свойств](../windows/changing-the-properties-of-a-toolbar-button.md)  
   
- Сведения о добавлении ресурсов в управляемые проекты см. в разделе [Ресурсы приложений](../Topic/Resources%20in%20Desktop%20Apps.md) *Руководства разработчика .NET Framework*. Сведения о том, как вручную добавлять файлы ресурсов в управляемые проекты, осуществлять доступ к ресурсам, отображать статические ресурсы и присваивать строки ресурсов свойствам см. в разделах [Пошаговое руководство. Локализация приложений Windows Forms](http://msdn.microsoft.com/ru-ru/9a96220d-a19b-4de0-9f48-01e5d82679e5) и [Walkthrough: Using Resources for Localization with ASP.NET](../Topic/Walkthrough:%20Using%20Resources%20for%20Localization%20with%20ASP.NET.md).  
+ Сведения о добавлении ресурсов в управляемые проекты см. в разделе [ресурсы в классических приложениях](/dotnet/framework/resources/index) в *руководства разработчика .NET Framework.* Сведения о вручную добавлять файлы ресурсов в управляемые проекты, осуществлять доступ к ресурсам, отображать статические ресурсы и присваивать строки ресурсов свойствам см. в разделе [Создание файлов ресурсов для приложений рабочего стола](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Сведения о глобализации и локализации ресурсов в управляемых приложениях см. в разделе [Globalizing и локализация приложений .NET Framework](/dotnet/standard/globalization-localization/index).  
   
-## Требования  
+## <a name="requirements"></a>Требования  
  MFC или ATL  
   
-## См. также  
- [Toolbar Editor](../mfc/toolbar-editor.md)
+## <a name="see-also"></a>См. также  
+ [Редактор панелей инструментов](../windows/toolbar-editor.md)
+

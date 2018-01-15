@@ -23,11 +23,12 @@ caps.latest.revision: "7"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: a925f476d67ac4bc5abd2270f6c0b96df67c4466
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 5a9f12f2670fce7ea1c28d68510ef6134a199dd7
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="sampler-class"></a>Класс sampler
 Класс пробы агрегирует данные конфигурации выборки, используемый для дискретизации текстур.  
@@ -38,17 +39,17 @@ ms.lasthandoff: 10/24/2017
 class sampler;  
 ```  
   
-## <a name="members"></a>Члены  
+## <a name="members"></a>Участники  
   
 ### <a name="public-constructors"></a>Открытые конструкторы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[Образец конструктора](#ctor)|Перегружен. Создает экземпляр образца.|  
   
 ### <a name="public-methods"></a>Открытые методы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[get_address_mode](#get_address_mode)|Возвращает `address_mode` , связанную с объектом пробы.|  
 |[get_border_color](#get_border_color)|Возвращает цвет границы, связанный с объектом пробы.|  
@@ -56,13 +57,13 @@ class sampler;
   
 ### <a name="public-operators"></a>Открытые операторы  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
-|[operator=](#operator_eq)|Перегружен. Оператор присвоения.|  
+|[оператор=](#operator_eq)|Перегружен. Оператор присвоения.|  
   
 ### <a name="public-data-members"></a>Открытые члены данных  
   
-|Имя|Описание|  
+|Имя|Описание:|  
 |----------|-----------------|  
 |[address_mode](#address_mode)|Возвращает режим адрес `sampler` объекта.|  
 |[border_color](#border_color)|Возвращает цвет границы `sampler` объекта.|  
@@ -124,7 +125,7 @@ sampler(// [6] move constructor
  Режим адресации для использования в выборки для всех измерений.  
   
  `_Border_color`  
- Цвет границы для использования при address_border режим адресации. Значение по умолчанию — `float_4(0.0f, 0.0f, 0.0f, 0.0f)`.  
+ Цвет границы для использования при address_border режим адресации. Значение по умолчанию — `float_4(0.0f, 0.0f, 0.0f, 0.0f)`.  
   
  `_Other`  
  [5] конструктор копий  
