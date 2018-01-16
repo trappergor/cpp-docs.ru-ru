@@ -21,15 +21,15 @@
               topicHref: /cpp/c-cpp-preprocessor-reference
             - name: Библиотека времени выполнения C
               tocHref: /cpp/c-runtime-library/
-              topicHref: /cpp/c-runtime-library/c-runtime-library-reference
+              topicHref: /cpp/c-runtime-library/c-run-time-library-reference
               items:
-                - name: Ссылки
+                - name: Ссылка
                   tocHref: /cpp/c-runtime-library/reference/
-                  topicHref: /cpp/c-runtime-library/reference/alphabetical-function-reference
+                  topicHref: /cpp/c-runtime-library/reference/crt-alphabetical-function-reference
             - name: Стандартная библиотека C++
               tocHref: /cpp/standard-library/
               topicHref: /cpp/standard-library/cpp-standard-library-reference
-            - name: Окна
+            - name: Windows
               tocHref: /cpp/windows/
               topicHref: /cpp/windows/overview-of-windows-programming-in-cpp
               items:
@@ -37,23 +37,23 @@
                   tocHref: /cpp/atl/
                   topicHref: /cpp/atl/atl-com-desktop-components
                   items:
-                    - name: Ссылки
+                    - name: Ссылка
                       tocHref: /cpp/atl/reference/
                       topicHref: /cpp/atl/reference/atl-classes
                 - name: MFC
                   tocHref: /cpp/mfc/
                   topicHref: /cpp/mfc/mfc-desktop-applications
                   items:
-                    - name: Ссылки
+                    - name: Ссылка
                       tocHref: /cpp/mfc/reference/
                       topicHref: /cpp/mfc/reference/mfc-classes
                 - name: Общие классы ATL и MFC
                   tocHref: /cpp/atl-mfc-shared/
                   topicHref: /cpp/atl-mfc-shared/atl-mfc-shared-classes
                   items:
-                    - name: Ссылки
+                    - name: Ссылка
                       tocHref: /cpp/atl-mfc-shared/reference/
-                      topicHref: /cpp/atl-mfc/shared/reference/classes-shared-by-atl-and-mfc
+                      topicHref: /cpp/atl-mfc/shared/reference/classes-shared-by-mfc-and-atl
                 - name: C++/CX
                   tocHref: /cpp/cppcx/
                   topicHref: /cpp/cppcx/visual-c-language-reference-c-cx
@@ -62,7 +62,7 @@
               topicHref: /cpp/linux/download-install-and-setup-the-linux-development-workload
             - name: .NET
               tocHref: /cpp/dotnet/
-              topicHref: /cpp/dotnet/dotnet-programming-with-cpp-cli
+              topicHref: /cpp/dotnet/dotnet-programming-with-cpp-cli-visual-cpp
             - name: Параллельное программирование
               tocHref: /cpp/parallel/
               topicHref: /cpp/parallel/parallel-programming-in-visual-cpp
@@ -108,7 +108,7 @@
                       topicHref: /cpp/assembler/arm/arm-assembler-reference
                     - name: Встроенный сборщик
                       tocHref: /cpp/assembler/inline/
-                      topicHref: /cpp/assembler/inline-assembler-reference
+                      topicHref: /cpp/assembler/inline-assembler
                     - name: MASM
                       tocHref: /cpp/assembler/masm/
                       topicHref: /cpp/assembler/masm/microsoft-macro-assembler-reference
@@ -117,7 +117,7 @@
               topicHref: /cpp/porting/visual-cpp-porting-and-upgrading-guide
             - name: Текст и строки
               tocHref: /cpp/text/
-              topicHref: /cpp/text/text-and-strings
+              topicHref: /cpp/text/text-and-strings-in-visual-cpp
             - name: Безопасность
               tocHref: /cpp/security
               topicHref: /cpp/security/security-best-practices-for-cpp
