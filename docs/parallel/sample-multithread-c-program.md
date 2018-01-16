@@ -13,11 +13,12 @@ caps.latest.revision: "12"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.openlocfilehash: 4e4906924f3a572f2e8a00d226acdb3da7097cdc
-ms.sourcegitcommit: ebec1d449f2bd98aa851667c2bfeb7e27ce657b2
+ms.workload: cplusplus
+ms.openlocfilehash: 234a24152b0f5ce02caf3948baf7ee3b183622ed
+ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/24/2017
+ms.lasthandoff: 12/21/2017
 ---
 # <a name="sample-multithread-c-program"></a>Образец многопотоковой программы на C
 Bounce.c является образцом многопотоковой программы, которая создает новый поток каждый раз буквы **a** или **A** типизирован. Каждый поток будет передаваться довольны гарнитуру другого цвета по экрану. Могут быть созданы до 32 потоков. Нормальное завершение программы происходит при `q` или **Q** типизирован. Сведения о компиляции и компоновки Bounce.c см. в разделе [компиляция и компоновка многопоточной программы](../parallel/compiling-and-linking-multithread-programs.md).  
@@ -211,7 +212,7 @@ void ClearScreen( void )
 }  
 ```  
   
-### <a name="input"></a>Ввод  
+### <a name="input"></a>Входные данные  
   
 ```  
 a  
