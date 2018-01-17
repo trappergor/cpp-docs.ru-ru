@@ -1,7 +1,7 @@
 ---
 title: "Пошаговое руководство: Создание традиционных приложений для Windows Desktop (C++) | Документы Microsoft"
 ms.custom: 
-ms.date: 10/09/2017
+ms.date: 1/11/2018
 ms.reviewer: 
 ms.technology: cpp-windows
 ms.tgt_pltfrm: 
@@ -11,19 +11,17 @@ helpviewer_keywords:
 - Windows applications [C++], Win32
 - Windows Desktop applications [C++]
 - Windows API [C++]
-ms.assetid: a247a9af-aff1-4899-9577-5f8104a0afbb
-caps.latest.revision: "27"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 8926e5e2432dea0e366698346df1d4b708517553
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: ce3c18abbace2181b2d31e0621b6e376021be68a
+ms.sourcegitcommit: c2e990450ccd528d85b2783fbc63042612987cfd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 01/16/2018
 ---
 # <a name="walkthrough-create-a-traditional-windows-desktop-application-c"></a>Пошаговое руководство: Создание традиционных приложений для Windows Desktop (C++)
 
@@ -38,7 +36,7 @@ API Windows (также известный как API-интерфейса Win32
 
 - На компьютере под управлением Microsoft Windows 7 или более поздней версии. Для получения наилучших результатов разработки мы рекомендуем Windows 10.
 
-- Копия Visual Studio 2017 г. Сведения о том, как загрузить и установить Visual Studio см. в разделе [установить Visual Studio 2017 г.](/visualstudio/install/install-visual-studio). При запуске программы установки, убедитесь, что **разработки настольных приложений с помощью C++** проверяется рабочей нагрузки. Не беспокойтесь, если рабочая нагрузка не установлен, при установке Visual Studio. Можно еще раз запустите программу установки и установите его.
+- Копия Visual Studio 2017 г. Сведения о том, как загрузить и установить Visual Studio см. в разделе [установить Visual Studio 2017](/visualstudio/install/install-visual-studio). При запуске программы установки, убедитесь, что **разработки настольных приложений с помощью C++** проверяется рабочей нагрузки. Не беспокойтесь, если рабочая нагрузка не установлен, при установке Visual Studio. Можно еще раз запустите программу установки и установите его.
 
    ![Для разработки настольных приложений с помощью C++](../build/media/desktop-development-with-cpp.png "разработки настольных приложений на C++")
 
