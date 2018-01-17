@@ -20,11 +20,11 @@ author: corob-msft
 ms.author: corob
 manager: ghogen
 ms.workload: cplusplus
-ms.openlocfilehash: 86b12604a5348c3a1aabb33c7e13a4e7a3c57932
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: ba64cf2e866579b3377e57445c98eb9a436a1edd
+ms.sourcegitcommit: ef2a263e193410782c6dfe47d00764263439537c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="zc-conformance"></a>/Zc (соответствие)
 
@@ -47,15 +47,16 @@ ms.lasthandoff: 12/21/2017
 |[externConstexpr\[-\]](zc-externconstexpr.md)|Включить внешнюю компоновку для `constexpr` переменных (отключено по умолчанию).|
 |[forScope\[-\]](zc-forscope-force-conformance-in-for-loop-scope.md)|Обеспечить выполнение стандартным C++ `for` правила области видимости (на по умолчанию).|
 |[implicitNoexcept\[-\]](zc-implicitnoexcept-implicit-exception-specifiers.md)|Включение неявного `noexcept` на требуемые функции (на по умолчанию).|
-|[Встроенная\[-\]](zc-inline-remove-unreferenced-comdat.md)|Удалите неиспользуемые функции или данные, если она COMDAT или имеют только внутреннюю связь (отключено по умолчанию).|
+|[inline\[-\]](zc-inline-remove-unreferenced-comdat.md)|Удалите неиспользуемые функции или данные, если она COMDAT или имеют только внутреннюю связь (отключено по умолчанию).|
 |[noexceptTypes\[-\]](zc-noexcepttypes.md)|Принудительное применение C ++ 17 noexcept правил (на по умолчанию в C ++ 17 или более поздней версии).|
 |[referenceBinding\[-\]](zc-referencebinding-enforce-reference-binding-rules.md)|Временный определяемого пользователем ТИПА не будет привязан к ссылки lvalue неконстантной (отключено по умолчанию).|
 |[rvalueCast\[-\]](zc-rvaluecast-enforce-type-conversion-rules.md)|Принудительное применение правил преобразования явного типа Standard C++ (отключено по умолчанию).|
 |[sizedDealloc\[-\]](zc-sizeddealloc-enable-global-sized-dealloc-functions.md)|Включить C ++ 14 глобальных размерных функциях удаления функций (на по умолчанию).|
 |[strictStrings\[-\]](zc-strictstrings-disable-string-literal-type-conversion.md)|Строковый литерал, чтобы отключить `char*` или `wchar_t*` преобразования (отключено по умолчанию).|
+|[троичный\[-\]](zc-ternary.md)|Принудительное применение правил условного оператора на типы операндов (отключено по умолчанию).|
 |[threadSafeInit\[-\]](zc-threadsafeinit-thread-safe-local-static-initialization.md)|Включение потокобезопасной локальной статичной инициализации (на по умолчанию).|
 |[throwingNew\[-\]](zc-throwingnew-assume-operator-new-throws.md)|Предположим, `operator new` сбое (отключено по умолчанию).|
-|[триграфов\[-\]](zc-trigraphs-trigraphs-substitution.md)|Включите триграфы (устаревший, отключение по умолчанию).|
+|[trigraphs\[-\]](zc-trigraphs-trigraphs-substitution.md)|Включите триграфы (устаревший, отключение по умолчанию).|
 |[wchar_t\[-\]](zc-wchar-t-wchar-t-is-native-type.md)|`wchar_t`Это собственный тип не является определением типа (на по умолчанию).|
 
 Дополнительные сведения о вопросах соответствия в Visual C++ см. в статье [Nonstandard Behavior](../../cpp/nonstandard-behavior.md).
