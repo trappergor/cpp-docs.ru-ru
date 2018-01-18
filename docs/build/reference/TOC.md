@@ -142,6 +142,7 @@
 ##### [/Zc:rvalueCast (принудительное применение правил преобразования типов)](zc-rvaluecast-enforce-type-conversion-rules.md)
 ##### [/Zc:sizedDealloc (включение глобальных размерных функций удаления)](zc-sizeddealloc-enable-global-sized-dealloc-functions.md)
 ##### [/Zc:strictStrings (отключение преобразования типов строковых литералов)](zc-strictstrings-disable-string-literal-type-conversion.md)
+##### [/Zc:ternary (принудительное применение правил для условного оператора)](zc-ternary.md)
 ##### [/Zc:threadSafeInit (потокобезопасная локальная статичная инициализация)](zc-threadsafeinit-thread-safe-local-static-initialization.md)
 ##### [/Zc:throwingNew (новые исключения оператора assume)](zc-throwingnew-assume-operator-new-throws.md)
 ##### [/Zc:trigraphs (подстановка триграфов)](zc-trigraphs-trigraphs-substitution.md)
