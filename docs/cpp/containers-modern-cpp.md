@@ -14,11 +14,11 @@ author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload: cplusplus
-ms.openlocfilehash: ffad61c015c38d808b35ebffd98f74733d0997de
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 4fc8bbc3a983e6fa50e4ae5e8590e1f1de37f02f
+ms.sourcegitcommit: ff9bf140b6874bc08718674c07312ecb5f996463
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="containers-modern-c"></a>Контейнеры (современный C++)  
   
@@ -41,7 +41,7 @@ apple_color["Granny Smith"] = "Green";
   
 1.  [Массива](../standard-library/array-class-stl.md) типов при внедрении важна, например, как член класса.  
   
-2.  Неупорядоченные ассоциативные контейнеры, такие как [unordered_map] ((.. /Standard-Library/Unordered-MAP-Class.MD). Они должны нижнему элементу издержки и постоянным по времени поиском, но они могут быть труднее использовать правильную и эффективную.  
+2.  Неупорядоченные ассоциативные контейнеры, такие как [unordered_map](../standard-library/unordered-map-class.md). Они должны нижнему элементу издержки и постоянным по времени поиском, но они могут быть труднее использовать правильную и эффективную.  
   
 3.  Сортировка `vector`. Дополнительные сведения см. в разделе [Алгоритмы](../cpp/algorithms-modern-cpp.md).  
   
