@@ -20,13 +20,17 @@ author: corob-msft
 ms.author: corob
 manager: ghogen
 ms.workload: cplusplus
-ms.openlocfilehash: 106123557c4efab5ccddf9f1292570d36b0f8313
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: a89795e19df46b3701cf8dcc7a402540f693db94
+ms.sourcegitcommit: 6f40bba1772a09ff0e3843d5f70b553e1a15ab50
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 01/22/2018
 ---
 # <a name="redistributing-visual-c-files"></a>Распространение файлов Visual C++
+
+> [!NOTE]
+> Вы здесь так, как вы ищете загрузки одного из файлов среды выполнения Visual C++? Последовательно выберите пункты [Microsoft](http://www.microsoft.com/) веб-сайта и введите **распространяемый пакет Visual C++** в поле поиска. Загрузите и установите распространяемый пакет для архитектуры вашего компьютера (например, x64 при запуске 64-разрядной версии Windows) и версии Visual C++, которая может потребоваться.   
+  
 При развертывании приложения необходимо также развернуть файлы, поддерживающие это приложение. Если какие-либо из этих файлов предоставляются Майкрософт, убедитесь в наличии разрешений на их повторное распространение. Чтобы просмотреть условия лицензионного соглашения на использование Visual Studio, см. по ссылке условия лицензии в диалоговом окне о Microsoft Visual Studio в Интегрированной среде разработки, или загрузите [условия лицензионного соглашения на использование программного обеспечения Майкрософт](http://go.microsoft.com/fwlink/p/?LinkId=831114) файла. Ознакомиться со «списком REDIST», упоминаемый в разделе «Распространяемый код» лицензионного соглашения программного обеспечения корпорации Майкрософт для некоторых выпусков Visual Studio, можно [распространяемый код для Microsoft Visual Studio, 2017 г и 2017 г. Microsoft Visual Studio Пакет SDK (включает служебные программы и файлы BuildServer)](http://go.microsoft.com/fwlink/p/?LinkId=823098), или для Visual Studio 2015, см. раздел [распространяемый код для Microsoft Visual Studio 2015 и Microsoft Visual Studio 2015 SDK](http://go.microsoft.com/fwlink/p/?LinkId=523763). Дополнительные сведения о повторно распространяемых файлах см. в разделе [определение библиотек DLL для распространения](../ide/determining-which-dlls-to-redistribute.md) и [примеры развертывания](../ide/deployment-examples.md).  
   
  Чтобы развернуть распространяемые файлы Visual C++, можно использовать распространяемые пакеты Visual C++ (VCRedist\_x86.exe VCRedist\_x64.exe или VCRedist\_arm.exe), которые входят в Visual Studio. В Visual Studio 2017 г., эти файлы можно найти в файлах программы [(x86)]\\Microsoft Visual Studio\\2017 г.\\_edition_\\VC\\Redist\\ Параметры MSVC\\_lib-version_ папку, где _edition_ выпуск Visual Studio установлена, и _lib-version_ версия библиотеки для распространения. В Visual Studio 2015, эти файлы находятся в каталоге установки Visual Studio в Program Files [(x 86)] \Microsoft Visual Studio *версии*\VC\redist\\*языкового стандарта* \\. Другой вариант — использовать распространяемые модули слияния (MSM-файлы), которые можно найти в Program Files [(x 86)] в Visual Studio 2017 г\\Microsoft Visual Studio\\2017 г.\\_edition_ \\ VC\\Redist\\параметры MSVC\\_lib-version_\\MergeModules\\ папки. В Visual Studio 2015 они находятся в Program Files [(x 86)] \common модулей\\. Это также можно напрямую установить распространяемые библиотеки DLL Visual C++ в *локальную папку приложения*, — это папка, которая содержит исполняемый файл приложения. По причинам, связанным с обслуживанием, не рекомендуется использовать это расположение установки.  

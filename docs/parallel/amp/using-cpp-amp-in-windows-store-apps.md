@@ -14,11 +14,11 @@ author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload: cplusplus
-ms.openlocfilehash: 3fa6b42dd4e00f3b5314806933d06b3c1534b4d7
-ms.sourcegitcommit: 54035dce0992ba5dce0323d67f86301f994ff3db
+ms.openlocfilehash: 39414e5b74dec15cade249bce1fb4ffe2f22edd0
+ms.sourcegitcommit: 6f40bba1772a09ff0e3843d5f70b553e1a15ab50
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/03/2018
+ms.lasthandoff: 01/22/2018
 ---
 # <a name="using-c-amp-in-windows-store-apps"></a>Использование C++ AMP в приложениях для Магазина Windows
 C++ AMP (C++ Accelerated Massive Parallelism) можно использовать в вашей [!INCLUDE[win8_appname_long](../../build/includes/win8_appname_long_md.md)] приложения для выполнения вычислений на GPU (единица обработки графики) или других вычислений сочетания клавиш. Однако C++ AMP не предоставляет интерфейсы API для работы непосредственно с типами среды выполнения Windows, а в среде выполнения Windows нет программы-оболочки для C++ AMP. При использовании в коде типов среды выполнения Windows, включая созданные самостоятельно, необходимо преобразовать их в совместимые с С++ AMP типы.  
@@ -120,8 +120,6 @@ concurrency::parallel_for_each(av_red.extent, [=](index<1> idx) restrict(amp)
 ```  
   
 ## <a name="see-also"></a>См. также  
- [Создание первого приложения для магазина Windows с помощью C++](http://go.microsoft.com/fwlink/p/?linkid=249073)   
- [Создание компонентов среды выполнения Windows в C++](http://go.microsoft.com/fwlink/p/?linkid=249076)
-
-
+ [Создание первого приложения для магазина Windows с помощью C++](http://go.microsoft.com/fwlink/p/linkid=249073)   
+ [Создание компонентов среды выполнения Windows в C++](/windows/uwp/winrt-components/creating-windows-runtime-components-in-cpp)
 

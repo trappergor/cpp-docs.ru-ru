@@ -16,11 +16,11 @@ manager: ghogen
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: e9ad7a56663081941f3b3ca18193da55d5df2ab6
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 55a6f21a8b4589b5288b8aff462dbb0234a10300
+ms.sourcegitcommit: 6f40bba1772a09ff0e3843d5f70b553e1a15ab50
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 01/22/2018
 ---
 # <a name="universal-windows-apps-c"></a>Универсальные приложения Windows (C++)
 Универсальные приложения для платформы Windows (UWP) реализуют набор принципов разработки, выделяющих простые пользовательские интерфейсы, организованные вокруг содержимого, которое автоматически настраивается в соответствии с различными размерами экранов на разных устройствах. Для создания пользовательского интерфейса используется разметка XAML, а для кода — неуправляемый код C++. Можно также создавать компоненты (DLL), которые могут применяться приложениями UWP, написанными на других языках. Область API для приложений UWP представляет среду выполнения Windows, которая является хорошо организованную библиотеку, которая предоставляет широкий набор служб для операционной системы.  
@@ -36,7 +36,7 @@ ms.lasthandoff: 12/21/2017
 |[Справочник по языку Visual C++ (C++/CX)](../cppcx/visual-c-language-reference-c-cx.md)|Описание набора расширений, которые упрощают использование интерфейсов API среды выполнения Windows C++ и обеспечивают обработку ошибок, основанную на исключениях.|  
 |[Построение приложений и библиотек (C++/CX)](../cppcx/building-apps-and-libraries-c-cx.md)|Описание создания библиотек DLL и статических библиотек, доступных из приложения или компонента C++/CX.|  
 |[Учебник. Создание первого приложения для Магазина Windows на C++](https://docs.microsoft.com/en-us/windows/uwp/get-started/create-a-basic-windows-10-app-in-cpp)|Пошаговое руководство, представляющее основные понятия разработки приложений универсальной платформы Windows на C++. (Еще не обновлено для разработки UWP на платформе Windows 10).|  
-|[Создание компонентов среды выполнения Windows в C++](https://docs.microsoft.com/en-us/windows/uwp/winrt-components/creating-windows-runtime-components-in-cpp)|Описание создания библиотек DLL, которые можно использовать в других приложениях универсальной платформы Windows и компонентов.|  
+|[Создание компонентов среды выполнения Windows в C++](/windows/uwp/winrt-components/creating-windows-runtime-components-in-cpp)|Описание создания библиотек DLL, которые можно использовать в других приложениях универсальной платформы Windows и компонентов.|  
 |[Разработка игр](https://docs.microsoft.com/en-us/windows/uwp/gaming/)|Описание использования DirectX и C++ для создания игр.|  
   
 ## <a name="universal-windows-platform-apps-that-use-the-windows-runtime-c-template-library-wrl"></a>Приложений платформы универсальных приложений Windows, использующих библиотека шаблонов C++ среды выполнения Windows (WRL) 

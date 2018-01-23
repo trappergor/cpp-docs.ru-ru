@@ -22,11 +22,11 @@ author: ghogen
 ms.author: ghogen
 manager: ghogen
 ms.workload: cplusplus
-ms.openlocfilehash: 8ef351759814ee03b54160cac2340eafd304d5f3
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 10619437ad7be96edb6ed2a0c4eb86c4f10580ca
+ms.sourcegitcommit: 6f40bba1772a09ff0e3843d5f70b553e1a15ab50
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 01/22/2018
 ---
 # <a name="platformcollectionsvectorview-class"></a>Класс Platform::Collections::VectorView
 Представляет доступное только для чтения представление упорядоченной коллекции объектов, в которой возможен доступ к каждому отдельному объекту по его индексу. Тип каждого объекта в коллекции задается параметром шаблона.  
@@ -93,7 +93,7 @@ virtual Windows::Foundation::Collections::IIterator<T>^
   
 
 
-## <a name="getat"></a>Vectorview::getat-метод
+## <a name="getat"></a>  VectorView::GetAt Method
 Извлекает элемент текущего VectorView, указанный заданным индексом.  
   
 ### <a name="syntax"></a>Синтаксис  
@@ -114,7 +114,7 @@ T GetAt(
   
 
 
-## <a name="getmany"></a>Vectorview::getmany-метод
+## <a name="getmany"></a>  VectorView::GetMany Method
 Извлекает последовательность элементов из текущего объекта VectorView, начиная с указанного индекса.  
   
 ### <a name="syntax"></a>Синтаксис  
@@ -139,7 +139,7 @@ virtual unsigned int GetMany(
   
 
 
-## <a name="indexof"></a>Vectorview::IndexOf-метод
+## <a name="indexof"></a>  VectorView::IndexOf Method
 Выполняет поиск указанного элемента в текущем объекте VectorView и возвращает его индекс, если он найден.  
   
 ### <a name="syntax"></a>Синтаксис  
@@ -181,7 +181,7 @@ virtual property unsigned int Size;
   
 
 
-## <a name="ctor"></a>Vectorview::vectorview-конструктор
+## <a name="ctor"></a>  VectorView::VectorView Constructor
 Инициализирует новый экземпляр класса VectorView.  
   
 ### <a name="syntax"></a>Синтаксис  
@@ -277,4 +277,4 @@ VectorView(
   
 ## <a name="see-also"></a>См. также  
  [Пространство имен Platform](platform-namespace-c-cx.md)   
- [Создание компонентов среды выполнения Windows в C++](/MicrosoftDocs/windows-uwp/blob/docs/windows-apps-src/winrt-components/creating-windows-runtime-components-in-cpp.md)
+ [Создание компонентов среды выполнения Windows в C++](/windows/uwp/winrt-components/creating-windows-runtime-components-in-cpp)
