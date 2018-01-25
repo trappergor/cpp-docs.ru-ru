@@ -18,11 +18,11 @@ author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload: cplusplus
-ms.openlocfilehash: a4eccca9e7afd26684d5845d853b4be98001cf58
-ms.sourcegitcommit: a5d8f5b92cb5e984d5d6c9d67fe8a1241f3fe184
+ms.openlocfilehash: 6fecc7f821bec90321095130fb21147d7227685c
+ms.sourcegitcommit: 6f40bba1772a09ff0e3843d5f70b553e1a15ab50
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/05/2018
+ms.lasthandoff: 01/22/2018
 ---
 # <a name="visual-c-in-visual-studio"></a>Visual C++ в Visual Studio
 
@@ -32,7 +32,7 @@ ms.lasthandoff: 01/05/2018
 
 Этот материал предназначен для разработчиков на C++, создающих программы.
 
-- Если вам нужен определенный распространяемый пакет C++ и компоненты среды выполнения для запуска программы, перейдите в [Центр загрузки Майкрософт](http://www.microsoft.com/en-us/download/) и введите в поле поиска **Visual C++** .
+- Если для запуска программы вам требуется конкретный распространяемый компонент C++ и компоненты среды выполнения, зайдите на веб-сайт [Майкрософт](http://www.microsoft.com/) и введите **Распространяемый пакет Visual C++** в поле поиска. Скачайте и установите распространяемый пакет для архитектуры вашего компьютера (например, x64, если у вас 64-разрядная версия Windows) и нужную версию Visual C++. 
 
 - Если вы хотите ознакомиться с принципами программирования на C++, перейдите на один из множества соответствующих ресурсов или приобретите книгу [Programming — Principles and Practice Using C++ (Second Edition)](http://stroustrup.com/Programming/) (Программирование: принципы и практика использования C++, изд. 2), которую написал создатель языка C++ Бьёрн Страуструп (Bjarne Stroustrup). В материалах по Visual C++ предполагается, что у вас уже есть базовые знания о C++.
 
