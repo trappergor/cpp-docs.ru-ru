@@ -24,17 +24,17 @@ author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload: cplusplus
-ms.openlocfilehash: 325a9a98ec536eaabedef3a93fbe38ccc2016cd9
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: ad065eb3f35080ff2e5743c0259b20ba72ee6175
+ms.sourcegitcommit: 9a0a287d6940591523af959ebdac5affa36220da
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="obsolete-calling-conventions"></a>Устаревшие соглашения о вызовах
 ## <a name="microsoft-specific"></a>Блок, относящийся только к системам Microsoft  
  **__Pascal**, **__fortran**, и **__syscall** соглашения о вызовах, больше не поддерживаются. Их функциональные возможности можно эмулировать с помощью одного из поддерживаемых соглашений о вызовах и соответствующих параметров компоновщика.  
   
- WINDOWS. Теперь поддерживает H **WINAPI** макросом, который преобразуется в соответствующее соглашение о вызовах для целевого объекта. Используйте **WINAPI** где использовалась ранее **PASCAL** или **__far \__pascal**.  
+ \<Windows.h > теперь поддерживает **WINAPI** макросом, который преобразуется в соответствующее соглашение о вызовах для целевого объекта. Используйте **WINAPI** где использовалась ранее **PASCAL** или **__far \__pascal**.  
   
 **Завершение блока, относящегося только к системам Майкрософт**  
   

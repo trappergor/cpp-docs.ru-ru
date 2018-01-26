@@ -12,9 +12,9 @@ helpviewer_keywords:
 - sequence [C++]
 - sequence, of handlers
 - exception handling [C++], timing
-- SETJMPEX.H
+- setjmpex.h
 - termination handlers [C++], timing
-- SETJMP.H
+- setjmp.h
 - handlers [C++], order of exception
 - structured exception handling [C++], timing
 ms.assetid: 5d1da546-73fd-4673-aa1a-7ac0f776c420
@@ -23,17 +23,17 @@ author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload: cplusplus
-ms.openlocfilehash: 5d4b522286a727f428cd445bf67d12a1360b49b4
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: c9e14f89bba02a53af5956ec2a2dcb52bfb1a38c
+ms.sourcegitcommit: 9a0a287d6940591523af959ebdac5affa36220da
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="timing-of-exception-handling-a-summary"></a>Время обработки исключений. Общие сведения
 Обработчик завершения выполняется независимо от того, как завершается блок инструкции `__try`. Причины включают выход из блока `__try`, инструкцию `longjmp`, которая передает контроль за пределы блока, а также освобождение стека из-за обработки исключения.  
   
 > [!NOTE]
->  Visual C++ поддерживает две формы инструкций `setjmp` и `longjmp`. Быстрая версия обходит обработку завершения, однако является более эффективной. Для использования этой версии включите файл SETJMP.H. Другая версия поддерживает обработку завершения, как описано в предыдущем абзаце. Для использования этой версии включите файл SETJMPEX.H. Увеличение производительности быстрой версии зависит от конфигурации оборудования.  
+>  Visual C++ поддерживает две формы инструкций `setjmp` и `longjmp`. Быстрая версия обходит обработку завершения, однако является более эффективной. Для использования этой версии включите файл \<setjmp.h >. Другая версия поддерживает обработку завершения, как описано в предыдущем абзаце. Для использования этой версии включите файл \<setjmpex.h >. Увеличение производительности быстрой версии зависит от конфигурации оборудования.  
   
  Операционная система выполняет все обработчики завершения в нужном порядке, прежде чем сможет быть выполнен какой-либо другой код, включая тело обработчика исключений.  
   

@@ -37,11 +37,11 @@ author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload: cplusplus
-ms.openlocfilehash: 240b8ad1b0cfd9c8b85b58c8d2309fb97f961573
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 24be4e7fd6b4dc95d9964e69943a94ecad947a47
+ms.sourcegitcommit: 9a0a287d6940591523af959ebdac5affa36220da
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="try-except-statement"></a>Оператор try-except
 
@@ -113,13 +113,13 @@ typedef struct _EXCEPTION_POINTERS {
 } EXCEPTION_POINTERS, *PEXCEPTION_POINTERS; 
 ```  
 
-Типы указателей `PEXCEPTION_RECORD` и `PCONTEXT` определены во включаемом файле WINNT. Символ «H» и `_EXCEPTION_RECORD` и `_CONTEXT` определены во включаемом файле EXCPT. H
+Типы указателей `PEXCEPTION_RECORD` и `PCONTEXT` определены во включаемом файле \<winnt.h >, и `_EXCEPTION_RECORD` и `_CONTEXT` определены во включаемом файле \<excpt.h >
 
 Можно использовать `GetExceptionCode` в обработчике исключений. Тем не менее, можно использовать `GetExceptionInformation` только в выражении фильтра исключения. Обычно она указывает на сведения, которые хранятся в стеке и уже недоступны в тот момент, когда управление передаются обработчику исключений.
 
 Встроенная функция `AbnormalTermination` можно использовать в обработчик завершения. Возвращает 0, если тело **try-finally** инструкция завершается последовательным выполнением. В остальных случаях функция возвращает 1.
 
-Во включаемом файле EXCPT.H определены альтернативные имена этих встроенных функций:
+excpt.h определены альтернативные имена этих встроенных функций:
 
 `GetExceptionCode`эквивалентно`_exception_code`
 

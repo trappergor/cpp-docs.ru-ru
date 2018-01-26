@@ -15,11 +15,11 @@ author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload: cplusplus
-ms.openlocfilehash: 98a6a535071246f75d877e7f63d3a0e9d86053be
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 68843f0619b5ebc057f83bdb4f49807a15fb86a1
+ms.sourcegitcommit: 9a0a287d6940591523af959ebdac5affa36220da
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="new-operator-c"></a>Оператор new (C++)
 Выделяет память для объекта или массива объектов *имя типа* из свободного хранилища и возвращает подходящим образом типизированный ненулевой указатель на объект.  
@@ -72,7 +72,7 @@ delete *p;
  *Размещение*  
  Предоставляет способ передачи дополнительных аргументов при перегрузке **новый**.  
   
- *Имя типа*  
+ *type-name*  
  Определяет тип для распределения; может быть встроенным или пользовательским типом. Если спецификация типа является сложной, она может быть окружена круглыми скобками, чтобы принудительно реализовать порядок привязки.  
   
  *initializer*  
@@ -238,7 +238,7 @@ int main()
  Когда компилятор встречает **новый** оператор, чтобы выделить объект типа `type`, он отправляет вызов для `type` **:: оператор new (sizeof (** `type` **))**  или, если нет пользовательских `operator new` определен, **:: оператор new (sizeof (** `type` **))**. Таким образом **новый** оператор можно выделить нужный объем памяти для объекта.  
   
 > [!NOTE]
->  Аргумент `operator new` относится к типу **size_t**. Этот тип определяется в DIRECT.H, MALLOC.H, MEMORY.H, SEARCH.H, STDDEF.H, STDIO.H, STDLIB.H, STRING.H и TIME.H.  
+>  Аргумент `operator new` относится к типу **size_t**. Этот тип определен в \<direct.h >, \<malloc.h >, \<memory.h >, \<search.h >, \<stddef.h >, \<stdio.h >, \<stdlib.h >, \<string.h >, и \<time.h >.  
   
  Параметр в грамматике позволяет задавать *размещения* (см. грамматику для [оператор new](../cpp/new-operator-cpp.md)). *Размещения* параметр может использоваться только для пользовательских реализаций `operator new`; он обеспечивает дополнительную информацию для передачи `operator new`. Выражение с *размещения* поля, такие как `T *TObject = new ( 0x0040 ) T;` , преобразуется в `T *TObject = T::operator new( sizeof( T ), 0x0040 );` Если классе T имеется оператор-член новые возможности, в противном случае для `T *TObject = ::operator new( sizeof( T ), 0x0040 );`.  
   

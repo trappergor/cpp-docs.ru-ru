@@ -16,11 +16,11 @@ author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload: cplusplus
-ms.openlocfilehash: 47ee4686c5c0a239b868d6da9aaccc332def19dc
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 53defbe6c686630791317fa20aca48414144eb91
+ms.sourcegitcommit: 9a0a287d6940591523af959ebdac5affa36220da
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="comerror-class"></a>Класс _com_error
 **Блок, относящийся только к системам Microsoft**  
@@ -53,7 +53,7 @@ ms.lasthandoff: 12/21/2017
 |-|-|  
 |[Описание](../cpp/com-error-description.md)|Вызывает функцию `IErrorInfo::GetDescription`.|  
 |[HelpContext](../cpp/com-error-helpcontext.md)|Вызывает функцию `IErrorInfo::GetHelpContext`.|  
-|[Файл справки](../cpp/com-error-helpfile.md)|Вызывает функцию `IErrorInfo::GetHelpFile`.|  
+|[HelpFile](../cpp/com-error-helpfile.md)|Вызывает функцию `IErrorInfo::GetHelpFile`.|  
 |[Source](../cpp/com-error-source.md)|Вызывает функцию `IErrorInfo::GetSource`.|  
 |[GUID](../cpp/com-error-guid.md)|Вызывает функцию `IErrorInfo::GetGUID`.|  
   
@@ -61,7 +61,7 @@ ms.lasthandoff: 12/21/2017
   
 |||  
 |-|-|  
-|[Сообщение об ошибке](../cpp/com-error-errormessage.md)|Получает строковое сообщение для значения HRESULT, хранящегося в объекте `_com_error`.|  
+|[ErrorMessage](../cpp/com-error-errormessage.md)|Получает строковое сообщение для значения HRESULT, хранящегося в объекте `_com_error`.|  
   
 ### <a name="exepinfowcode-to-hresult-mappers"></a>Средства сопоставления ExepInfo.wCode с HRESULT  
   
@@ -73,10 +73,10 @@ ms.lasthandoff: 12/21/2017
 **Завершение блока, относящегося только к системам Майкрософт**  
   
 ## <a name="requirements"></a>Требования  
- **Заголовок:** comdef.h  
+ **Header:** \<comdef.h>  
   
  `Lib:`comsuppw.lib или comsuppwd.lib (в разделе [/Zc: wchar_t (wchar_t – это собственный тип)](../build/reference/zc-wchar-t-wchar-t-is-native-type.md) для получения дополнительной информации)  
   
 ## <a name="see-also"></a>См. также  
  [Классы поддержки компилятора COM](../cpp/compiler-com-support-classes.md)   
- [Интерфейс IErrorInfo](http://msdn.microsoft.com/en-us/4dda6909-2d9a-4727-ae0c-b5f90dcfa447)
+ [IErrorInfo Interface](http://msdn.microsoft.com/en-us/4dda6909-2d9a-4727-ae0c-b5f90dcfa447)

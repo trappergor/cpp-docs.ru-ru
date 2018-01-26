@@ -18,16 +18,16 @@ author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload: cplusplus
-ms.openlocfilehash: 9560b4b3a0623a0e712d5b54d2bbe5de7dbc17e0
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: 54377893135c2b933c25387bccbb750d2f3eb734
+ms.sourcegitcommit: 9a0a287d6940591523af959ebdac5affa36220da
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="compiler-com-support-classes"></a>Классы поддержки компилятора COM
 **Блок, относящийся только к системам Microsoft**  
   
- Стандартные классы используются для поддержки некоторых типов модели COM. Классы определены в файле comdef.h и являются файлами заголовка, созданными из библиотеки типов.  
+ Стандартные классы используются для поддержки некоторых типов модели COM. Классы определены в \<comdef.h > и файлами заголовков, создается из библиотеки типов.  
   
 |Класс|Цель|  
 |-----------|-------------|  
