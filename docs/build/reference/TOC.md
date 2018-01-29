@@ -102,6 +102,7 @@
 ##### [/Qpar (автоматический параллелизатор)](qpar-auto-parallelizer.md)
 ##### [/Qpar/report (уровень отчетности автоматического параллелизатора)](qpar-report-auto-parallelizer-reporting-level.md)
 ##### [/Qsafe_fp_loads](qsafe-fp-loads.md)
+##### [/Qspectre](qspectre.md)
 ##### [/Qvec/report (уровень отчетности автоматического векторизатора)](qvec-report-auto-vectorizer-reporting-level.md)
 #### [/RTC (проверки ошибок во время выполнения)](rtc-run-time-error-checks.md)
 #### [/sdl (включение дополнительных проверок безопасности)](sdl-enable-additional-security-checks.md)
