@@ -1,33 +1,38 @@
 ---
 title: "Перегрузка функций | Документы Microsoft"
 ms.custom: 
-ms.date: 11/04/2016
+ms.date: 1/25/2018
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-language
+ms.technology:
+- cpp-language
 ms.tgt_pltfrm: 
 ms.topic: language-reference
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - function overloading [C++], about function overloading
 - function overloading
 - declaring functions [C++], overloading
 ms.assetid: 3c9884cb-1d5e-42e8-9a49-6f46141f929e
-caps.latest.revision: "10"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 785692992863e5a1cf3800f536d3f8fe3790b4a0
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: d21ecfb649748c9bf7e190d4857ce93ebee61dd1
+ms.sourcegitcommit: 185e11ab93af56ffc650fe42fb5ccdf1683e3847
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 01/29/2018
 ---
 # <a name="function-overloading"></a>Перегрузка функций
-C++ позволяет определять несколько функций с одинаковым именем в одной области. Такие функции называются перегруженными и подробно описываются в разделе "Перегрузка". Перегруженные функции позволяют программистам указывать для функций разную семантику в зависимости от типов и числа аргументов.  
+C++ позволяет определять несколько функций с одинаковым именем в одной области. Это называется *перегружены* функции. Перегруженные функции позволяют указать различную семантику для функции, в зависимости от типов и числа аргументов. 
   
- Например **печати** функцию, которая принимает строку (или **char \*** ) аргумент выполняет совершенно разные задачи, чем та, которая принимает аргумент типа **двойные** . Перегрузка позволяет использовать универсальные имена и препятствует применению программистами таких имен, как `print_sz` или `print_d`. В следующей таблице указаны компоненты объявления функций, используемые языком C++ для различения групп функций с одинаковым именем в одной области.  
+ Например **печати** функцию, которая принимает **std::string** аргумент может выполняться очень разные задачи, чем та, которая принимает аргумент типа **двойные**. Перегрузка избавляет от необходимости использовать имена, такие как `print_string` или `print_double`. Во время компиляции компилятор выбирает перегрузку, которую нужно использовать в зависимости от типа аргументов, передаваемых в вызывающей стороной.  При вызове метода **print(42.0)** то **void печати (double d)** функция будет вызываться. При вызове метода **печати ("hello world")** то **void print(std::string)** перегрузка будет вызываться.
+
+Можно выполнить перегрузку функции-члены и функции, не являющихся членами. В следующей таблице указаны компоненты объявления функций, используемые языком C++ для различения групп функций с одинаковым именем в одной области.  
   
 ### <a name="overloading-considerations"></a>Заметки по перегрузке  
   
@@ -39,9 +44,8 @@ C++ позволяет определять несколько функций с
 |Наличие или отсутствие многоточия|Да|  
 |Использование имен `typedef`|Нет|  
 |Незаданные границы массива|Нет|  
-|**const** или `volatile` (см. ниже)|Да|  
-  
- Несмотря на то, что функции можно классифицировать по типу возвращаемого значения, однако они не могут быть перегружены на его основании.  `Const`или `volatile` используются только в качестве основы для перегрузки, если они используются в классе для применения к **это** указатель мыши по классу, а не возвращаемый тип функции.  Другими словами, перегрузка применяется только в том случае, если **const** или `volatile` ключевое слово следует за списком аргументов функции в объявлении.  
+|**const** или`volatile`|Да, при применении к всей функции|
+|[ref-qualifier](#ref-qualifier)|Да|  
   
 ## <a name="example"></a>Пример  
  В следующем примере показано использование перегрузки.  
@@ -51,68 +55,71 @@ C++ позволяет определять несколько функций с
 // compile with: /EHsc  
 #include <iostream>  
 #include <math.h>  
-  
+#include <string>
+
 // Prototype three print functions.  
-int print( char *s );                  // Print a string.  
-int print( double dvalue );            // Print a double.  
-int print( double dvalue, int prec );  // Print a double with a  
-//  given precision.  
-using namespace std;  
-int main( int argc, char *argv[] )  
-{  
-const double d = 893094.2987;  
-if( argc < 2 )  
-    {  
-// These calls to print invoke print( char *s ).  
-print( "This program requires one argument." );  
-print( "The argument specifies the number of" );  
-print( "digits precision for the second number" );  
-print( "printed." );  
-exit(0);  
-    }  
-  
-// Invoke print( double dvalue ).  
-print( d );  
-  
-// Invoke print( double dvalue, int prec ).  
-print( d, atoi( argv[1] ) );  
-}  
-  
+int print(std::string s);             // Print a string.  
+int print(double dvalue);            // Print a double.  
+int print(double dvalue, int prec);  // Print a double with a  
+                                     //  given precision.  
+using namespace std;
+int main(int argc, char *argv[])
+{
+    const double d = 893094.2987;
+    if (argc < 2)
+    {
+        // These calls to print invoke print( char *s ).  
+        print("This program requires one argument.");
+        print("The argument specifies the number of");
+        print("digits precision for the second number");
+        print("printed.");
+        exit(0);
+    }
+
+    // Invoke print( double dvalue ).  
+    print(d);
+
+    // Invoke print( double dvalue, int prec ).  
+    print(d, atoi(argv[1]));
+}
+
 // Print a string.  
-int print( char *s )  
-{  
-cout << s << endl;  
-return cout.good();  
-}  
-  
+int print(string s)
+{
+    cout << s << endl;
+    return cout.good();
+}
+
 // Print a double in default precision.  
-int print( double dvalue )  
-{  
-cout << dvalue << endl;  
-return cout.good();  
-}  
-  
-// Print a double in specified precision.  
+int print(double dvalue)
+{
+    cout << dvalue << endl;
+    return cout.good();
+}
+
+//  Print a double in specified precision.  
 //  Positive numbers for precision indicate how many digits  
 //  precision after the decimal point to show. Negative  
 //  numbers for precision indicate where to round the number  
 //  to the left of the decimal point.  
-int print( double dvalue, int prec )  
-{  
-// Use table-lookup for rounding/truncation.  
-static const double rgPow10[] = {   
-10E-7, 10E-6, 10E-5, 10E-4, 10E-3, 10E-2, 10E-1, 10E0,  
-10E1,  10E2,  10E3,  10E4, 10E5,  10E6  
-    };  
-const int iPowZero = 6;  
-// If precision out of range, just print the number.  
-if( prec < -6 || prec > 7 )  
-return print( dvalue );  
-// Scale, truncate, then rescale.  
-dvalue = floor( dvalue / rgPow10[iPowZero - prec] ) *  
-rgPow10[iPowZero - prec];  
-cout << dvalue << endl;  
-return cout.good();  
+int print(double dvalue, int prec)
+{
+    // Use table-lookup for rounding/truncation.  
+    static const double rgPow10[] = {
+        10E-7, 10E-6, 10E-5, 10E-4, 10E-3, 10E-2, 10E-1, 
+        10E0, 10E1,  10E2,  10E3,  10E4, 10E5,  10E6 };
+    const int iPowZero = 6;
+
+    // If precision out of range, just print the number.  
+    if (prec < -6 || prec > 7)
+    {
+        return print(dvalue);
+    }
+    // Scale, truncate, then rescale.  
+    dvalue = floor(dvalue / rgPow10[iPowZero - prec]) *
+        rgPow10[iPowZero - prec];
+    cout << dvalue << endl;
+    return cout.good();
 }  
 ```  
   
@@ -254,14 +261,14 @@ volatile Over&
   
 |Тип, из которого выполняется преобразование|Тип, в который выполняется преобразование|  
 |-----------------------|---------------------|  
-|*Имя типа*|*Имя типа***&**|  
-|*Имя типа***&**|*Имя типа*|  
-|*Имя типа* **]**|*Имя типа\**|  
-|*Имя типа* **(** *список аргументов* **)**|**(**  *\*имя типа* **) (** *список аргументов* **)**|  
-|*Имя типа*|**const** *имя типа*|  
-|*Имя типа*|`volatile`*имя типа*|  
-|*Имя типа\**|**const** *имя типа\**|  
-|*Имя типа\**|`volatile`*имя типа\**|  
+|*type-name*|*Имя типа***&**|  
+|*Имя типа***&**|*type-name*|  
+|*type-name* **[ ]**|*type-name\**|  
+|*type-name* **(** *argument-list* **)**|**(**  *\*имя типа* **) (** *список аргументов* **)**|  
+|*type-name*|**const** *type-name*|  
+|*type-name*|`volatile`*имя типа*|  
+|*type-name\**|**const** *имя типа\**|  
+|*type-name\**|`volatile`*имя типа\**|  
   
  Ниже приведена последовательность, в которой делаются попытки выполнения преобразований.  
   
@@ -399,8 +406,47 @@ obj.name
 ```  
   
  С точки зрения сопоставления аргументов, левый операнд операторов `->*` и `.*` (указатель на член) обрабатывается так же, как и для операторов `.` и `->` (выбор члена).  
+
+## <a name="ref-qualifiers"></a>Ref квалификаторы функции-члены  
+Квалификаторы ref делают возможным перегрузить функцию-член на основании ли объект ссылается `this` rvalue или lvalue.  Эту функцию можно использовать во избежание ненужных операций копирования в сценариях, где пользователь не указывает указатель доступ к данным. Например, предположим, класс **C** некоторые данные в его конструктор инициализирует и возвращает копию данных в функции-члене **get_data()**. Если тип объекта **C** представляет собой rvalue, будет уничтожен, то компилятор выберет **get_data() & &** перегрузку, которая перемещает данные, а не скопировать его. 
+
+```cpp
+#include <iostream>
+#include <vector>
+
+using namespace std;
+
+class C
+{
+
+public:
+    C() {/*expensive initialization*/}
+    vector<unsigned> get_data() & 
+    { 
+        cout << "lvalue\n";
+        return _data;
+    }
+    vector<unsigned> get_data() && 
+    {
+        cout << "rvalue\n";
+        return std::move(_data);
+    }
+    
+private:
+    vector<unsigned> _data;
+};
+
+int main()
+{
+    C c;
+    auto v = c.get_data(); // get a copy. prints "lvalue".
+    auto v2 = C().get_data(); // get the original. prints "rvalue"
+    return 0;
+}
+
+```
   
-## <a name="restrictions"></a>Ограничения  
+## <a name="restrictions-on-overloading"></a>Ограничения по перегрузке  
  К допустимому набору перегруженных функций применяется несколько ограничений.  
   
 -   Любые две функции в наборе перегруженных функций должны иметь разные списки аргументов.  
@@ -443,10 +489,13 @@ obj.name
     void Print( char szToPrint[][9][42] );  
     ```  
   
-## <a name="declaration-matching"></a>Сопоставление объявлений  
+## <a name="overloading-overriding-and-hiding"></a>Перегрузка, переопределение и скрытие
+  
  Любые два объявления функции с одинаковым именем в одной области видимости могут ссылаться на одну функцию или на две разные перегруженные функции. Если списки аргументов в объявлениях содержат аргументы эквивалентных типов (как описано в предыдущем разделе), эти объявления относятся к одной и той же функции. В противном случае они ссылаются на две различные функции, которые выбираются с использованием перегрузки.  
   
- Область видимости класса строго соблюдается; поэтому функция, объявленная в базовом классе, не находится в той же области видимости, что и функция, объявленная в производном классе. Если функция в производном классе объявлена с тем же именем, что и функция в базовом классе, функция производного класса скрывает функцию базового класса, а не вызывает перегрузку.  
+ Область видимости класса строго соблюдается; поэтому функция, объявленная в базовом классе, не находится в той же области видимости, что и функция, объявленная в производном классе. Если функция в производном классе объявлена с тем же именем, что и виртуальная функция в базовом классе, функция производного класса *переопределяет* функции базового класса. Дополнительные сведения см. в разделе [виртуальные функции](../cpp/virtual-functions.md).
+
+Если функция базового класса не объявлена как «virtual», то функция производного класса, называется *скрыть* его. Переопределение и скрытие отличаются от перегрузки.  
   
  Область видимости блока строго соблюдается; поэтому функция, объявленная в области видимости файла, не находится в той же области видимости, что и функция, объявленная локально. Если локально объявленная функция имеет то же имя, что и функция, объявленная в области файла, локально объявленная функция скрывает функцию области файла, не вызывая перегрузки. Пример:  
   
@@ -526,7 +575,10 @@ double Account::Deposit( double dAmount, char *szPassword )
    else  
       return 0.0;  
 }  
-```  
+```
+
+
+
   
 ## <a name="see-also"></a>См. также  
  [Функции (C++)](../cpp/functions-cpp.md)

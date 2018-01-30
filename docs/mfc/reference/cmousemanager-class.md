@@ -4,7 +4,8 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
@@ -18,7 +19,8 @@ f1_keywords:
 - AFXMOUSEMANAGER/CMouseManager::LoadState
 - AFXMOUSEMANAGER/CMouseManager::SaveState
 - AFXMOUSEMANAGER/CMouseManager::SetCommandForDblClk
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - CMouseManager [MFC], AddView
 - CMouseManager [MFC], GetViewDblClickCommand
@@ -29,16 +31,17 @@ helpviewer_keywords:
 - CMouseManager [MFC], SaveState
 - CMouseManager [MFC], SetCommandForDblClk
 ms.assetid: a4d05017-4e44-4a40-8b57-4ece0de20481
-caps.latest.revision: "26"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: f50b74731089346a9675b5340ba0ea1a0b2879f4
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 7d019bedd63e7b7700ec91309c9ccaa0a41bf1ed
+ms.sourcegitcommit: 185e11ab93af56ffc650fe42fb5ccdf1683e3847
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 01/29/2018
 ---
 # <a name="cmousemanager-class"></a>Класс CMouseManager
 Позволяет пользователю связать различные команды с указанным [CView](../../mfc/reference/cview-class.md) объекта, когда пользователь дважды щелкает внутри представления.  
@@ -77,7 +80,7 @@ class CMouseManager : public CObject
 ## <a name="requirements"></a>Требования  
  **Заголовок:** afxmousemanager.h  
   
-##  <a name="addview"></a>CMouseManager::AddView  
+##  <a name="addview"></a>  CMouseManager::AddView  
  Регистрирует [CView](../../mfc/reference/cview-class.md) объекта с [CMouseManager класса](../../mfc/reference/cmousemanager-class.md) для поддержки поведения пользовательского мыши.  
   
 ```  
@@ -124,7 +127,7 @@ BOOL AddView(
   
  [!code-cpp[NVC_MFC_StateCollection#4](../../mfc/reference/codesnippet/cpp/cmousemanager-class_1.cpp)]  
   
-##  <a name="getviewdblclickcommand"></a>CMouseManager::GetViewDblClickCommand  
+##  <a name="getviewdblclickcommand"></a>  CMouseManager::GetViewDblClickCommand  
  Возвращает команду, которая выполняется, когда пользователь дважды щелкает внутри указанного представления.  
   
 ```  
@@ -138,7 +141,7 @@ UINT GetViewDblClickCommand(int iId) const;
 ### <a name="return-value"></a>Возвращаемое значение  
  Идентификатор команды, если представление, которое связано с помощью команды; в противном случае — 0.  
   
-##  <a name="getviewiconid"></a>CMouseManager::GetViewIconId  
+##  <a name="getviewiconid"></a>  CMouseManager::GetViewIconId  
  Получает значок, связанный с идентификатором представления.  
   
 ```  
@@ -155,7 +158,7 @@ UINT GetViewIconId(int iViewId) const;
 ### <a name="remarks"></a>Примечания  
  Этот метод завершится с ошибкой, если представление сначала не зарегистрирован с помощью [CMouseManager::AddView](#addview).  
   
-##  <a name="getviewidbyname"></a>CMouseManager::GetViewIdByName  
+##  <a name="getviewidbyname"></a>  CMouseManager::GetViewIdByName  
  Извлекает идентификатор представления, связанные с именем представления.  
   
 ```  
@@ -172,7 +175,7 @@ int GetViewIdByName(LPCTSTR lpszName) const;
 ### <a name="remarks"></a>Примечания  
  Этот метод выполняет поиск через представления, зарегистрированные с помощью [CMouseManager::AddView](#addview).  
   
-##  <a name="getviewnames"></a>CMouseManager::GetViewNames  
+##  <a name="getviewnames"></a>  CMouseManager::GetViewNames  
  Получает список имен всех зарегистрированных представления.  
   
 ```  
@@ -186,7 +189,7 @@ void GetViewNames(CStringList& listOfNames) const;
 ### <a name="remarks"></a>Примечания  
  Этот метод заполняет параметр `listOfNames` с именами всех представлений, которые зарегистрированы с помощью [CMouseManager::AddView](#addview).  
   
-##  <a name="loadstate"></a>CMouseManager::LoadState  
+##  <a name="loadstate"></a>  CMouseManager::LoadState  
  Загружает состояние [CMouseManager класса](../../mfc/reference/cmousemanager-class.md) из реестра.  
   
 ```  
@@ -205,7 +208,7 @@ BOOL LoadState(LPCTSTR lpszProfileName = NULL);
   
  В большинстве случаев не нужно непосредственно вызвать эту функцию. Он вызывается как часть процесса инициализации рабочей области. Дополнительные сведения о процессе инициализации рабочей области в разделе [CWinAppEx::LoadState](../../mfc/reference/cwinappex-class.md#loadstate).  
   
-##  <a name="savestate"></a>CMouseManager::SaveState  
+##  <a name="savestate"></a>  CMouseManager::SaveState  
  Записывает состояние [CMouseManager класса](../../mfc/reference/cmousemanager-class.md) в реестре.  
   
 ```  
@@ -224,7 +227,7 @@ BOOL SaveState(LPCTSTR lpszProfileName = NULL);
   
  В большинстве случаев не нужно непосредственно вызвать эту функцию. Он вызывается как часть процесса сериализации рабочей области. Дополнительные сведения о рабочей области процесса сериализации см. в разделе [CWinAppEx::SaveState](../../mfc/reference/cwinappex-class.md#savestate).  
   
-##  <a name="setcommandfordblclk"></a>CMouseManager::SetCommandForDblClk  
+##  <a name="setcommandfordblclk"></a>  CMouseManager::SetCommandForDblClk  
  Связывает пользовательской команды с представлением, сначала зарегистрированных диспетчером мыши.  
   
 ```  
@@ -241,7 +244,7 @@ void SetCommandForDblClk(
  Идентификатор команды.  
   
 ### <a name="remarks"></a>Примечания  
- Чтобы связать пользовательской команды с представлением, необходимо сначала зарегистрировать представления с помощью [CMouseManager::AddView](#addview). `AddView` Методу требуется идентификатор представления в качестве входного параметра. После регистрации представления можно вызвать `CMouseManager::SetCommandForDblClk` с того же представления идентификатора входным параметром, предоставленный для `AddView`. После этого при двойном щелчке мыши в представлении зарегистрированных, приложение выполнит команду обозначается `uiCmd.` для поддержки поведения пользовательского мыши, также необходимо будет настроить представление, зарегистрированных диспетчером мыши. Дополнительные сведения о мыши пользовательского поведения в разделе [Настройка мыши и клавиатуры]--brokenlink--(.. / мыши и клавиатуры customization.md).  
+ Чтобы связать пользовательской команды с представлением, необходимо сначала зарегистрировать представления с помощью [CMouseManager::AddView](#addview). `AddView` Методу требуется идентификатор представления в качестве входного параметра. После регистрации представления можно вызвать `CMouseManager::SetCommandForDblClk` с того же представления идентификатора входным параметром, предоставленный для `AddView`. После этого при двойном щелчке мыши в представлении зарегистрированных, приложение выполнит команду обозначается `uiCmd.` для поддержки поведения пользовательского мыши, также необходимо будет настроить представление, зарегистрированных диспетчером мыши. Дополнительные сведения о поведении пользовательского мыши см. в разделе [Настройка мыши и клавиатуры](../keyboard-and-mouse-customization.md).  
   
  Если `uiCmd` имеет значение 0, указанное представление больше не будет связан с командой.  
   

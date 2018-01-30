@@ -4,13 +4,15 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
 - LoadStdProfileSettings
 - EnableShellOpen
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - files [MFC], most recently used
 - DragAcceptFiles method [MFC]
@@ -37,16 +39,17 @@ helpviewer_keywords:
 - MFC, file operations
 - registration [MFC], shell
 ms.assetid: 0480cd01-f629-4249-b221-93432d95b431
-caps.latest.revision: "10"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: f8734bfd4e673e1298d6822bbd272e2d70ff7a81
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 28a12d9553e1519c158c0a0e9d2fcec6365b65fe
+ms.sourcegitcommit: 185e11ab93af56ffc650fe42fb5ccdf1683e3847
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 01/29/2018
 ---
 # <a name="special-cwinapp-services"></a>Специальные службы CWinApp
 Помимо выполнения цикла обработки сообщений и давая возможность инициализировать приложение и очистки после него, [CWinApp](../mfc/reference/cwinapp-class.md) предоставляет несколько служб.  
@@ -60,9 +63,9 @@ ms.lasthandoff: 12/21/2017
   
  Эта поддержка Автоматическая регистрация в `CWinApp` устраняет необходимость отправки REG-файл вместе с приложением или для выполнения работы в специальной установки.  
   
- Требуется инициализация GDI + для вашего приложения (путем вызова [GdiplusStartup]--brokenlink--(_gdiplus_FUNC_GdiplusStartup_token_input_output_) в вашей [InitInstance](../mfc/reference/cwinapp-class.md#initinstance) функции), необходимо Отключение фоновый поток GDI +.  
+ Требуется инициализация GDI + для вашего приложения (путем вызова [GdiplusStartup](https://msdn.microsoft.com/library/ms534077) в ваш [InitInstance](../mfc/reference/cwinapp-class.md#initinstance) функции), необходимо отключить в фоновом потоке GDI +.  
   
- Это можно сделать, задав **SuppressBackgroundThread** членом [структуры GdiplusStartupInput]--brokenlink--(_gdiplus_STRUC_GdiplusStartupInput) **TRUE**. При подавлении GDI + фоновый поток, **NotificationHook** и **NotificationUnhook** вызовов (см. в разделе [GdiplusStartupOutput]--brokenlink--(_gdiplus_STRUC_GdiplusStartupOutput)) следует сделать непосредственно до входа и выхода из цикла обработки сообщений приложения. Таким образом, поместите вызов **GdiplusStartup** и функции-обработчики уведомления будут находиться в переопределение виртуальной функции [CWinApp::Run](../mfc/reference/cwinapp-class.md#run), как показано ниже:  
+ Это можно сделать, задав **SuppressBackgroundThread** членом [GdiplusStartupInput](https://msdn.microsoft.com/library/ms534067) структуру **TRUE**. При подавлении GDI + фоновый поток, **NotificationHook** и **NotificationUnhook** следует вызывать перед входа и выхода из цикла обработки сообщений приложения. Дополнительные сведения об этих вызовов см. в разделе [GdiplusStartupOutput](https://msdn.microsoft.com/library/ms534068). Таким образом, поместите вызов **GdiplusStartup** и функции-обработчики уведомления будут находиться в переопределение виртуальной функции [CWinApp::Run](../mfc/reference/cwinapp-class.md#run), как показано ниже:  
   
  [!code-cpp[NVC_MFCDocView#6](../mfc/codesnippet/cpp/special-cwinapp-services_1.cpp)]  
   

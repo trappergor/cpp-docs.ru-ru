@@ -4,22 +4,26 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs: C++
-helpviewer_keywords: insertion operators
+dev_langs:
+- C++
+helpviewer_keywords:
+- insertion operators
 ms.assetid: cdefe986-6548-4cd1-8a67-b431d7d36a1c
-caps.latest.revision: "8"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 9af3a0fe28e0b5d26f17f16a6e217dce9fd82969
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 2794da411458ccdf83725b80a6b5ba8371e53248
+ms.sourcegitcommit: 185e11ab93af56ffc650fe42fb5ccdf1683e3847
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 01/29/2018
 ---
 # <a name="using-insertion-operators-and-controlling-format"></a>Использование операторов вставки и управление форматом
 В этой статье описывается, как управлять форматом и как создавать операторы вставки для собственных классов. Оператор вставки (**<<**), который изначально включен во все стандартные типы данных C++, отправляет байты в объект потока вывода. Операторы вставки работают с предопределенными "манипуляторами" — элементами, которые изменяют формат целочисленных аргументов, заданный по умолчанию.  
@@ -213,11 +217,11 @@ std::cout <<extracted;   //   This
   
  Эту проблему можно устранить вручную, но чтобы сделать обход строки более удобным, C++ 14 добавляет манипулятор потока `std::quoted` в `<iomanip>`. При вставке `quoted()` окружает строку разделителями (по умолчанию — двойные кавычки «"»), а при извлечении манипулирует потоком так, чтобы извлекать все символы, пока не будет обнаружен конечный разделитель. Все вложенные кавычки экранируются с помощью escape-символа (по умолчанию — '\\\\').  
   
- Разделители присутствуют только в объекте потока. Их нет в извлеченной строке, но они есть в строке, возвращаемой функцией [basic_stringstream::str](../standard-library/basic-stringstream-class.md#str)().  
+ Разделители присутствуют только в объекте потока; не присутствуют в извлеченной строке, но они присутствуют в строку, возвращаемую [basic_stringstream::str](../standard-library/basic-stringstream-class.md#str).  
   
  Обработка пробелов операциями вставки и извлечения не зависит от способа представления строки в коде, поэтому заключение оператора в кавычки будет полезно в любом случае, независимо от того, является входная строка необработанным строковым литералом или обычной строкой. Входная строка независимо от ее формата может иметь вложенные кавычки, разрывы строк, символы табуляции и т. д. Все они сохраняются с помощью манипулятора quoted().  
   
- Дополнительные сведения и полные примеры кода см. в разделе [цитируется]--brokenlink--(../Topic/%3Cios%3E%20functions.md#quoted).  
+ Дополнительные сведения и полные примеры кода см. в разделе [в кавычках](../standard-library/iomanip-functions.md#quoted).  
   
 ## <a name="see-also"></a>См. также  
  [Потоки вывода](../standard-library/output-streams.md)   

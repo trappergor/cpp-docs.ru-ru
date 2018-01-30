@@ -4,10 +4,12 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - upgrading Visual C++ applications, /clr compiler option
 - compiling native code [C++]
@@ -16,18 +18,18 @@ helpviewer_keywords:
 - migration [C++], /clr compiler option
 - /clr compiler option [C++], porting to
 ms.assetid: c9290b8b-436a-4510-8b56-eae51f4a9afc
-caps.latest.revision: "37"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: f38450831ad85a09d3a43173f8febc7841f02c09
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.openlocfilehash: cd40443bc656b0e0ec02b1ec05b604a758628321
+ms.sourcegitcommit: 185e11ab93af56ffc650fe42fb5ccdf1683e3847
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 01/29/2018
 ---
 # <a name="how-to-migrate-to-clr"></a>Практическое руководство. Переход на /clr
 В этом разделе рассматриваются проблемы, возникающие при компиляции машинного кода с **/CLR** (см. [/CLR (компиляция CLR)](../build/reference/clr-common-language-runtime-compilation.md) для получения дополнительной информации). **/ CLR** позволяет модулям Visual C++ для вызова неуправляемого кода и вызывать из сборок .NET, сохраняя совместимость с неуправляемыми модулями. В разделе [сборки смешанный (машинный и управляемый код)](../dotnet/mixed-native-and-managed-assemblies.md) и [машинного кода и .NET-взаимодействии](../dotnet/native-and-dotnet-interoperability.md) Дополнительные сведения о преимуществах компиляции с использованием **/CLR**.  
@@ -147,7 +149,7 @@ COMObj2->Method(args);  // C++ equivalent
 ## <a name="using-new-visual-c-features"></a>Использование новых возможностей Visual C++  
  После компиляции приложения, ссылок и запускается, вы можете использовать компоненты .NET в любом модуле, скомпилированном с **/CLR**. Дополнительные сведения см. в статье [Расширения компонентов для платформ среды выполнения](../windows/component-extensions-for-runtime-platforms.md).  
   
- При использовании управляемых расширений для C++, можно преобразовать код для использования нового синтаксиса. Краткое описание синтаксических различий см [(NOTINBUILD) управляемых расширений для C++ синтаксис Upgrade Checklist](http://msdn.microsoft.com/en-us/edbded88-7ef3-4757-bd9d-b8f48ac2aada). Дополнительные сведения о преобразовании управляемых расширений для C++ см. в разделе [C + +/ CLI Основы миграции](../dotnet/cpp-cli-migration-primer.md).  
+ При использовании управляемых расширений для C++, можно преобразовать код для использования нового синтаксиса. Дополнительные сведения о преобразовании управляемых расширений для C++ см. в разделе [C + +/ CLI Основы миграции](../dotnet/cpp-cli-migration-primer.md).  
   
  Сведения о программировании на языке Visual C++ .NET см.:  
   

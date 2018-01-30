@@ -4,24 +4,27 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - ATL, reference
 - ATL, about ATL
 ms.assetid: 291f38d1-d2de-4687-86a9-99b4fd35706c
-caps.latest.revision: "14"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: ffabd4c9ebb3f439fa1e1e70b06def3506b1227d
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: b55aef95cbe34dc51910035f4a731eed3a6a5679
+ms.sourcegitcommit: 185e11ab93af56ffc650fe42fb5ccdf1683e3847
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 01/29/2018
 ---
 # <a name="atl-com-desktop-components"></a>Компоненты ATL COM Desktop
 Справочник по ATL документах Active Template Library (ATL), набор основанных на шаблонах классов C++, упрощающих написание объектов модели объектов компонентов (COM). Чтобы полностью использовать преимущества ATL, настоятельно рекомендуется ознакомиться с моделью COM.  
@@ -66,7 +69,3 @@ ms.lasthandoff: 12/21/2017
   
  [Шаблоны OLE DB](../data/oledb/ole-db-templates.md)  
  Предоставляет справочные материалы по шаблонам клиента и поставщика OLE DB, набор классов, реализующих многие часто используемые интерфейсы OLE DB.  
-  
- [Справочные материалы по библиотекам Visual C++](http://msdn.microsoft.com/en-us/fec23c40-10c0-4857-9cdc-33a3b99b30ae)  
- Содержит ссылки на различные библиотеки, входящие в состав Visual C++, включая шаблоны ATL, MFC, OLE DB, библиотеку времени выполнения языка C, а также стандартную библиотеку C++.
-

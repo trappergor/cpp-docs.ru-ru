@@ -4,11 +4,14 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords: CREATE_SUSPENDED
-dev_langs: C++
+f1_keywords:
+- CREATE_SUSPENDED
+dev_langs:
+- C++
 helpviewer_keywords:
 - premature thread termination
 - starting threads
@@ -19,16 +22,17 @@ helpviewer_keywords:
 - stopping threads
 - AfxEndThread method
 ms.assetid: 4c0a8c6d-c02f-456d-bd02-0a8c8d006ecb
-caps.latest.revision: "9"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 8017d47f632374d8979d9a0850e1d1bfd8b9df07
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: c287de62169ef5d205ac791071cee4b103f60abc
+ms.sourcegitcommit: 185e11ab93af56ffc650fe42fb5ccdf1683e3847
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 01/29/2018
 ---
 # <a name="multithreading-terminating-threads"></a>Многопоточность. Завершение потоков
 Завершение потока, может произойти двух случаях: контролирующей функции или поток не разрешено выполняться до завершения. Если текстовый процессор поток для печати в фоновом режиме, функция управления завершается при успешном выполнении задания печати. Если пользователю необходимо отменить печать, однако печати фоновый поток должен быть преждевременно. В этом разделе объясняется, как реализовать каждой ситуации и как получить код выхода потока после его завершения.  
@@ -58,7 +62,7 @@ ms.lasthandoff: 12/21/2017
   
 -   Задать `m_bAutoDelete` данные-члены **FALSE**. Это позволяет `CWinThread` объекта после завершения потока. Теперь можно получить доступ к `m_hThread` член данных после завершения потока. При использовании этого метода, однако, вы несете ответственность за уничтожение `CWinThread` объекта, так как платформа не выполнит удаление автоматически. Это предпочтительный метод.  
   
--   Дескриптор потока следует храните отдельно. После создания потока, скопировать его `m_hThread` данные-член (с помощью **:: DuplicateHandle**) в другую переменную и доступ к нему через эту переменную. Таким образом, объект автоматически удаляется при завершении и можно по-прежнему выяснить, почему поток остановлен. Будьте внимательны, что поток до завершения можно дублировать дескриптор. Наиболее безопасным способом для этого является передача **CREATE_SUSPENDED** для [AfxBeginThread](../mfc/reference/application-information-and-management.md#afxbeginthread), хранящие дескриптор и возобновить поток путем вызова [ResumeThread](../topic/../mfc/reference/cwinthread-class.md#resumethread).  
+-   Дескриптор потока следует храните отдельно. После создания потока, скопировать его `m_hThread` данные-член (с помощью **:: DuplicateHandle**) в другую переменную и доступ к нему через эту переменную. Таким образом, объект автоматически удаляется при завершении и можно по-прежнему выяснить, почему поток остановлен. Будьте внимательны, что поток до завершения можно дублировать дескриптор. Наиболее безопасным способом для этого является передача **CREATE_SUSPENDED** для [AfxBeginThread](../mfc/reference/application-information-and-management.md#afxbeginthread), хранящие дескриптор и возобновить поток путем вызова [ResumeThread](../mfc/reference/cwinthread-class.md#resumethread).  
   
  Оба этих метода позволяет определить, почему `CWinThread` завершения объекта.  
   

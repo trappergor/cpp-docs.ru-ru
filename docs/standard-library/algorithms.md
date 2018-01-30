@@ -4,10 +4,12 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - libraries [C++], C++ algorithm conventions
 - algorithms [C++], C++
@@ -15,16 +17,17 @@ helpviewer_keywords:
 - algorithm template function C++ library conventions
 - conventions [C++], C++ algorithm
 ms.assetid: dec9b373-7d5c-46cc-b7d2-21a938ecd0a6
-caps.latest.revision: "10"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 6608b7499c18f1b740875c403e9cb8d55736c30d
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 5bc9d57f93b5d3ee537330ab16c2c9a02b6beead
+ms.sourcegitcommit: 185e11ab93af56ffc650fe42fb5ccdf1683e3847
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 01/29/2018
 ---
 # <a name="algorithms"></a>Алгоритмы
 Алгоритмы являются важнейшей частью стандартной библиотеки C++. Алгоритмы работают с контейнерами не самостоятельно, а с помощью итераторов. Поэтому один и тот же алгоритм можно использовать с большинством, а то и со всеми контейнерами стандартной библиотеки C++. В этом разделе рассматриваются правила и терминология алгоритмов стандартной библиотеки C++.  
@@ -56,7 +59,7 @@ ms.lasthandoff: 12/21/2017
   
  Последовательность элементов, обозначенная итераторами в диапазоне [`First`, `Last`), является последовательностью, упорядоченной оператором**<** если для каждого *N* в диапазоне [0, `Last` - `First`) и каждого *M* в диапазоне (N, `Last` - `First`) предикат !(\*(`First` + *M*) < \*(*First* + *N*)) имеет значение true. (Обратите внимание, что элементы сортируются по возрастанию). Функция предиката **operator<** или любая ее замена не должна изменять ни один из операндов. Она должна возвращать одинаковый результат `bool` при каждом вычислении, а также должна возвращать такой же результат, если операнд заменяется копией одного из операндов. Кроме того она должен применить строгого слабое упорядочение с операндами, которые она сравнивает.  
   
- Последовательность элементов, обозначенная итераторами в диапазоне [`First`, `Last`), является кучей, упорядоченной **operator<**, если для каждого *N*в диапазоне [1, `Last` - `First`) предикат !(\*`First` < \*(`First` + *N*)) имеет значение true. (Первый элемент является наибольшим.) Его внутренняя структура иначе известна только функциям шаблона [make_heap](http://msdn.microsoft.com/Library/b09f795c-f368-4aa8-b57e-61ee6100ddc2), [pop_heap]--brokenlink--(../Topic/not%20found:c10b0c65-410c-4c83-abf8-8b7f61bba8d0.md#pop_heap), and [push_heap]-brokenlink--(../Topic/not%20found:c10b0c65-410c-4c83-abf8-8b7f61bba8d0.md#push_heap). Как и в упорядоченной последовательности, функция предиката **operator<** или любая ее замена не должна изменять его операнды и должна налагать строгое слабое упорядочение на сравниваемые операнды. Она должна возвращать одинаковый результат `bool` при каждом вычислении, а также должна возвращать такой же результат, если операнд заменяется копией одного из операндов.  
+ Последовательность элементов, обозначенная итераторами в диапазоне [`First`, `Last`), является кучей, упорядоченной **operator<**, если для каждого *N*в диапазоне [1, `Last` - `First`) предикат !(\*`First` < \*(`First` + *N*)) имеет значение true. (Первый элемент является наибольшим.) Его внутренняя структура известна только для функций шаблонов [make_heap](../standard-library/algorithm-functions.md#make_heap), [pop_heap](../standard-library/algorithm-functions.md#pop_heap), и [push_heap](../standard-library/algorithm-functions.md#push_heap). Как и в упорядоченной последовательности, функция предиката **operator<** или любая ее замена не должна изменять его операнды и должна налагать строгое слабое упорядочение на сравниваемые операнды. Она должна возвращать одинаковый результат `bool` при каждом вычислении, а также должна возвращать такой же результат, если операнд заменяется копией одного из операндов.  
   
  Алгоритмы стандартной библиотеки C++ находятся в файлах заголовков [\<algorithm>](../standard-library/algorithm.md) и [\<numeric>](../standard-library/numeric.md).  
   
