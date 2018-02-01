@@ -4,26 +4,30 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords: c.programs
-dev_langs: C++
+f1_keywords:
+- c.programs
+dev_langs:
+- C++
 helpviewer_keywords:
 - CRT, compatibility
 - compatibility, C run-time libraries
 - compatibility
 ms.assetid: 346709cb-edda-4909-9a19-3d253eddb6b7
-caps.latest.revision: "18"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: f14d330ada8f71cc3556b7151189968b43cff4ca
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: b2c7d2882017a624bb00f5a32f5d6da69ff61057
+ms.sourcegitcommit: 185e11ab93af56ffc650fe42fb5ccdf1683e3847
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 01/29/2018
 ---
 # <a name="compatibility"></a>Совместимость
 Универсальная библиотека времени выполнения C (UCRT) поддерживает большую часть стандартной библиотеки C, необходимой для соответствия стандарту C++. Она реализует библиотеку C99 (ISO/IEC 9899:1999) за исключением макросов универсального типа, определенных в \<tgmath.h>, и строгой совместимости типов в \<complex.h>. Библиотека UCRT также реализует большое подмножество библиотеки C POSIX.1 (ISO/IEC 9945-1:1996, интерфейс прикладного программирования системы POSIX), но не полностью соответствует какому-либо стандарту POSIX.  Кроме того, UCRT реализует несколько функций и макросов Майкрософт, которые не входят в стандарт.  
@@ -34,7 +38,7 @@ ms.lasthandoff: 12/21/2017
   
  Про некоторые функции в стандартной библиотеке C известно, что имеется тенденция к их небезопасному использованию из-за неправильно используемых параметров и непроверенных буферов. Эти функции часто являются источником проблем с безопасностью в коде. Майкрософт создала набор более безопасных версий этих функций, которые проверяют использование параметров и вызывают обработчик недопустимых параметров при обнаружении проблемы в ходе выполнения.  По умолчанию компилятор Visual C++ выдает предупреждение об устаревании, когда используется функция, для которой имеется более безопасный вариант. При компиляции кода в C++ можно задать для `_CRT_SECURE_CPP_OVERLOAD_STANDARD_NAMES` значение 1, чтобы устранить большинство предупреждений. Перегрузки шаблонов используются для вызова более безопасных вариантов, сохраняя переносимость исходного кода. Чтобы подавить предупреждение, определите `_CRT_SECURE_NO_WARNINGS` перед тем, как включить какие-либо заголовки в код, который использует эти функции. Для получения дополнительной информации см. [Security Features in the CRT](../c-runtime-library/security-features-in-the-crt.md).  
   
- За исключением указанного в документации по конкретным функциям библиотека UCRT совместима с Windows API.  Некоторые функции не поддерживаются в приложениях Магазина для Windows 8 или в универсальных приложениях Windows в Windows 10. Эти функции перечислены в статье [Функции CRT, которые не поддерживаются с ключом /ZW](http://msdn.microsoft.com/library/windows/apps/jj606124.aspx), в которой перечислены функции, не поддерживающиеся [средой выполнения Windows](http://msdn.microsoft.com/en-us/9a1a18b8-9802-4ec5-b9de-0d2dfdf414e9).  
+ За исключением указанного в документации по конкретным функциям библиотека UCRT совместима с Windows API.  Приложения Microsoft Store для Windows 8 и приложения универсальной платформы Windows (UWP) на Windows 10 не поддерживают некоторые функции. Эти функции перечислены в статье [Функции CRT, которые не поддерживаются в приложениях универсальной платформы Windows](../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md), где приведены функции, не поддерживаемые средой выполнения Windows и [UWP](/uwp).  
   
 ## <a name="related-articles"></a>Связанные статьи  
   
