@@ -1,29 +1,32 @@
 ---
 title: "Соответствие стандартам языка Visual C++ | Документы Майкрософт"
 ms.date: 11/15/2017
-ms.technology: cpp-language
+ms.technology:
+- cpp-language
 ms.topic: article
-dev_langs: C++
+dev_langs:
+- C++
 ms.assetid: 475da6e9-0d78-4b4e-bd23-f41c406c4efe
-caps.latest.revision: "11"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: fa79bfc63a3906b3f7eb698c3d44ee8136db2c14
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 49aabbcc746470815db40f15fa00774d5e05bfe5
+ms.sourcegitcommit: 30ab99c775d99371ed22d1a46598e542012ed8c6
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="visual-c-language-conformance"></a>Соответствие стандартам языка Visual C++
 
-В этом разделе приводится сводка соответствия функций компилятора языковым стандартам ISO C++03, C++11, C++14 и C++17, Draft C++20, а также список функций стандартной библиотеки для Visual C++ в Visual Studio 2017 и более ранних версиях. Каждое название функции компилятора и стандартной библиотеки является ссылкой на документ по C++ стандарта ISO, где находится ее описание (если функция доступна на момент публикации). В столбце поддерживаемых версий перечислены версии Visual Studio, в которых впервые появилась поддержка функции.
+Этот раздел содержит сводку по соответствию функций компилятора языковым стандартам ISO C++03, C++11, C++14 и C++17, Draft C++20, а также список функций стандартной библиотеки для компилятора C++ в Visual Studio 2017 и более ранних версий. Каждое название функции компилятора и стандартной библиотеки является ссылкой на документ по C++ стандарта ISO, где находится ее описание (если функция доступна на момент публикации). В столбце поддерживаемых версий перечислены версии Visual Studio, в которых впервые появилась поддержка функции.
 
-Сведения об улучшениях соответствия стандартам и других изменениях в Visual Studio 2017 см. в статьях [C++ conformance improvements in Visual Studio 2017](cpp-conformance-improvements-2017.md) (Улучшения соответствия C++ в Visual Studio 2017) и [What's New for Visual C++ in Visual Studio 2017](what-s-new-for-visual-cpp-in-visual-studio.md) (Новые возможности Visual C++ в Visual Studio 2017). Сведения об изменениях соответствия в более ранних версиях см. в статье [Критические изменения в Visual C++](porting/visual-cpp-change-history-2003-2015.md) и [Visual C++ What's New 2003 through 2015](porting/visual-cpp-what-s-new-2003-through-2015.md)(Новые возможности Visual C++ в версиях 2003–2015). Последние новости от команды разработчиков C++ см. в [блоге команды разработчиков Visual C++](https://blogs.msdn.microsoft.com/vcblog/).  
+Сведения об улучшениях соответствия стандартам и других изменениях в Visual Studio 2017 см. в статьях [C++ conformance improvements in Visual Studio 2017](cpp-conformance-improvements-2017.md) (Улучшения соответствия C++ в Visual Studio 2017) и [What's New for Visual C++ in Visual Studio 2017](what-s-new-for-visual-cpp-in-visual-studio.md) (Новые возможности Visual C++ в Visual Studio 2017). Сведения об изменениях соответствия в более ранних версиях см. в статье [Критические изменения в Visual C++](porting/visual-cpp-change-history-2003-2015.md) и [Visual C++ What's New 2003 through 2015](porting/visual-cpp-what-s-new-2003-through-2015.md)(Новые возможности Visual C++ в версиях 2003–2015). Последние новости от команды разработчиков C++ см. в [блоге команды разработчиков Visual C++](https://blogs.msdn.microsoft.com/vcblog/).
 
- > [!NOTE]
- > Принципы работы с двоичными файлами в Visual Studio 2017 по сравнению с Visual Studio 2015 существенно не изменились.
+> [!NOTE]
+> Принципы работы с двоичными файлами в Visual Studio 2017 по сравнению с Visual Studio 2015 существенно не изменились.
 
 ## <a name="compiler-features"></a>Функции компилятора
 

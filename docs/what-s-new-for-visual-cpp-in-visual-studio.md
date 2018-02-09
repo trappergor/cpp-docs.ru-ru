@@ -1,22 +1,24 @@
 ---
 title: "Новые возможности Visual C++ в Visual Studio | Документы Майкрософт"
 ms.date: 11/15/2017
-ms.technology: vs-ide-general
+ms.technology:
+- vs-ide-general
 ms.topic: article
 ms.assetid: 8801dbdb-ca0b-491f-9e33-01618bff5ae9
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: f266e17e88118e41550da68e77434f52b3456261
-ms.sourcegitcommit: 54035dce0992ba5dce0323d67f86301f994ff3db
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 328862bdb85059735ef069df1c7a9be8c6651f77
+ms.sourcegitcommit: 30ab99c775d99371ed22d1a46598e542012ed8c6
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/03/2018
+ms.lasthandoff: 02/03/2018
 ---
 # <a name="whats-new-for-visual-c-in-includevsdev15mdmiscincludesvsdev15mdmd"></a>Новые возможности Visual C ++ в [!INCLUDE[vs_dev15_md](misc/includes/vs_dev15_md.md)]
 
-В [!INCLUDE[vs_dev15_md](misc/includes/vs_dev15_md.md)] реализовано множество изменений и исправлений для среды Visual C++. Мы исправили более 250 ошибок и сообщили о проблемах с компилятором и средствами, многие из которых были отправлены клиентами с помощью инструментов [Сообщить о проблеме](/visualstudio/how-to-report-a-problem-with-visual-studio-2017) и [Отправить предложение](https://visualstudio.uservoice.com/) в разделе **Отправить отзыв**. Спасибо, что сообщаете нам об ошибках! Подробнее о новых возможностях всех компонентов Visual Studio см. на странице [Новые возможности [!INCLUDE[vs_dev15_md](misc/includes/vs_dev15_md.md)]](https://go.microsoft.com/fwlink/p/?linkid=834481).
+[!INCLUDE[vs_dev15_md](misc/includes/vs_dev15_md.md)] предоставляет множество изменений и исправлений для среды Visual C++. Мы исправили более 250 ошибок и сообщили о проблемах с компилятором и средствами, многие из которых были отправлены клиентами с помощью инструментов [Сообщить о проблеме](/visualstudio/how-to-report-a-problem-with-visual-studio-2017) и [Отправить предложение](https://visualstudio.uservoice.com/) в разделе **Отправить отзыв**. Спасибо, что сообщаете нам об ошибках! Подробнее о новых возможностях всех компонентов Visual Studio см. на странице [Новые возможности [!INCLUDE[vs_dev15_md](misc/includes/vs_dev15_md.md)]](https://go.microsoft.com/fwlink/p/?linkid=834481).
 
 <!--The compiler and tools version number in [!INCLUDE[vs_dev15_md](misc/includes/vs_dev15_md.md)] is 14.10.24629. -->
 
@@ -32,11 +34,11 @@ ms.lasthandoff: 01/03/2018
 
    **Visual Studio 2017 версия 15.3**:
 
-   параметр **/std:c++17** включает набор функций C++17, который реализован с помощью компилятора Visual C++. Этот параметр отключает компилятор и поддержку стандартной библиотеки для измененных и новых функций в более поздних версиях рабочего проекта и исключает обновления C++ Standard после выхода C++17. Чтобы включить эти функции, используйте параметр **/std:c++latest**.
+   параметр **/std:c++17** включает набор функций C++17, который реализован с помощью компилятора. Этот параметр отключает компилятор и поддержку стандартной библиотеки для измененных и новых функций в более поздних версиях рабочего проекта и исключает обновления C++ Standard после выхода C++17. Чтобы включить эти функции, используйте параметр **/std:c++latest**.
 
    **Visual Studio 2017 версии 15.5**:
 
-   Компилятор Visual C++ поддерживает около 75 % новых возможностей C++17, включая структурированные привязки, лямбда-выражения `constexpr`, `if constexpr`, встроенные переменные, выражения свертывания и добавление `noexcept` в систему типов. Они доступны в параметре **/std:c++17**. Дополнительные сведения см. в статье [Улучшения соответствия C++ в Visual Studio 2017](cpp-conformance-improvements-2017.md).
+   Компилятор поддерживает около 75 % новых возможностей C++17, включая структурированные привязки, лямбда-выражения `constexpr`, `if constexpr`, встроенные переменные, выражения свертывания и добавление `noexcept` в систему типов. Они доступны в параметре **/std:c++17**. Дополнительные сведения см. в статье [Улучшения соответствия C++ в Visual Studio 2017](cpp-conformance-improvements-2017.md).
 
 - [/permissive-](build/reference/permissive-standards-conformance.md): включение всех соответствующих строгим стандартам параметров совместимости компилятора и отключение большей части поддерживаемых Майкрософт расширений компилятора (но не `__declspec(dllimport)`, например). По умолчанию этот параметр отключен, но в некоторый момент в будущем он будет включен по умолчанию.
 
