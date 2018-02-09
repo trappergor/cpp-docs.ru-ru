@@ -531,7 +531,6 @@
 ##### [Графические объекты](graphic-objects.md)
 ###### [Одноэтапное и двухэтапное создание объектов](one-stage-and-two-stage-construction-of-objects.md)
 ###### [Выбор графического объекта в контексте устройства](selecting-a-graphic-object-into-a-device-context.md)
-###### [Ограничения CImage в ранних версиях операционных систем](cimage-limitations-with-earlier-operating-systems.md)
 #### [Окна фрейма](frame-windows.md)
 ##### [Классы окна фрейма](frame-window-classes.md)
 ###### [Классы окна фрейма, создаваемые с помощью мастера приложений](frame-window-classes-created-by-the-application-wizard.md)
