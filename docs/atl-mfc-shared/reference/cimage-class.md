@@ -1,10 +1,11 @@
 ---
 title: "CImage-класс | Документы Microsoft"
 ms.custom: 
-ms.date: 11/04/2016
+ms.date: 02/01/2018
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
@@ -50,7 +51,8 @@ f1_keywords:
 - ATLIMAGE/ATL::CImage::SetTransparentColor
 - ATLIMAGE/ATL::CImage::StretchBlt
 - ATLIMAGE/ATL::CImage::TransparentBlt
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - jpeg files
 - bitmaps [C++], ATL and MFC support for
@@ -61,16 +63,17 @@ helpviewer_keywords:
 - CImage class
 - transparent color
 ms.assetid: 52861e3d-bf7e-481f-a240-90e88f76c490
-caps.latest.revision: "20"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: d2720fb2b1e558b564615e1589735fe84688374b
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 4d5478a258c55996fe4073ffc1ab616b2b71386c
+ms.sourcegitcommit: a5916b48541f804a79891ff04e246628b5f9a24a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="cimage-class"></a>CImage-класс
 `CImage`предоставляет улучшенную поддержку растровых изображений, включая возможность загрузки и сохранения изображений в формате JPEG, GIF, BMP и Portable Network Graphics (PNG).  
@@ -120,7 +123,7 @@ class CImage
 |[CImage::IsDIBSection](#isdibsection)|Определяет, является ли вложенный растрового изображения DIB раздела.|  
 |[CImage::IsIndexed](#isindexed)|Указывает, что цвета точечного рисунка, сопоставляются с индексированную палитру.|  
 |[CImage::IsNull](#isnull)|Указывает, если исходный точечный рисунок в данный момент загружен.|  
-|[CImage::IsTransparencySupported](#istransparencysupported)|Указывает, поддерживает прозрачными точечными рисунками, скомпилированного для Windows 2000 или более поздней версии приложения.|  
+|[CImage::IsTransparencySupported](#istransparencysupported)|Указывает, поддерживает ли приложение прозрачными точечными рисунками.|  
 |[CImage::Load](#load)|Загружает изображение из указанного файла.|  
 |[CImage::LoadFromResource](#loadfromresource)|Загружает изображение из указанного ресурса.|  
 |[CImage::MaskBlt](#maskblt)|Объединяет данные о цвете для исходного и конечного точечных рисунков, с помощью указанной маске и выполнению растровую операцию.|  
@@ -199,17 +202,6 @@ void CMyDlg::OnRButtonDown(UINT nFlags, CPoint point)
   
  Через `CImage`, у вас есть право число битов DIB раздела. Можно использовать `CImage` объекта ранее использовался раздел Win32 HBITMAP или DIB.  
   
-> [!NOTE]
->  Следующие `CImage` методы имеют ограничения по их использованию:  
-  
-|Метод|Ограничение|  
-|------------|----------------|  
-|[PlgBlt](#plgblt)|Работает только в Windows NT 4.0 или более поздней версии. Не будет работать в приложения, работающие в Windows 95/98 или более поздней версии.|  
-|[MaskBlt](#maskblt)|Работает только в Windows NT 4.0 или более поздней версии. Не будет работать в приложения, работающие в Windows 95/98 или более поздней версии.|  
-|[AlphaBlend](#alphablend)|Работает с только Windows 2000, Windows 98 и более поздних версиях системы.|  
-|[TransparentBlt](#transparentblt)|Работает с только Windows 2000, Windows 98 и более поздних версиях системы.|  
-|[Рисование](#draw)|Поддерживает прозрачность с только Windows 2000, Windows 98 и более поздних версиях системы.|  
-  
  Можно использовать `CImage` из MFC и ATL.  
   
 > [!NOTE]
@@ -220,7 +212,7 @@ void CMyDlg::OnRButtonDown(UINT nFlags, CPoint point)
 ## <a name="requirements"></a>Требования  
  **Заголовок:** atlimage.h  
   
-##  <a name="alphablend"></a>CImage::AlphaBlend  
+##  <a name="alphablend"></a>  CImage::AlphaBlend  
  Отображает растровых изображений, имеющих пикселей прозрачным или полупрозрачным.  
   
 ```
@@ -309,7 +301,7 @@ BOOL AlphaBlend(
   
  Когда `bBlendOp` задано значение по умолчанию **AC_SRC_OVER**, помещении исходный точечный рисунок в точечный рисунок назначения на основе значений альфа-пикселей источника.  
 
-##  <a name="attach"></a>CImage::Attach  
+##  <a name="attach"></a>  CImage::Attach  
  Присоединяет `hBitmap` для `CImage` объекта.  
   
 ```
@@ -332,7 +324,7 @@ void Attach(HBITMAP hBitmap, DIBOrientation eOrientation = DIBOR_DEFAULT) throw(
 ### <a name="remarks"></a>Примечания  
  Растровое изображение может быть растровое изображение не DIB раздел или раздел DIB растрового изображения. В разделе [IsDIBSection](#isdibsection) список методов, которые можно использовать только с DIB статьи растровые изображения.  
   
-##  <a name="bitblt"></a>CImage::BitBlt  
+##  <a name="bitblt"></a>  CImage::BitBlt  
  Копирует растровое изображение из контекста исходного устройства это текущий контекст устройства.  
   
 ```
@@ -404,7 +396,7 @@ BOOL BitBlt(
 ### <a name="remarks"></a>Примечания  
  Дополнительные сведения см. в разделе [BitBlt](http://msdn.microsoft.com/library/windows/desktop/dd183370) в Windows SDK.  
   
-##  <a name="cimage"></a>CImage::CImage  
+##  <a name="cimage"></a>  CImage::CImage  
  Создает объект `CImage`.  
   
 ```
@@ -418,7 +410,7 @@ CImage() throw();
   
  С помощью глобального `CImage` объектов в библиотеке DLL не рекомендуется. Если необходимо использовать глобальный `CImage` объектов в библиотеке DLL, вызов [CImage::ReleaseGDIPlus](#releasegdiplus) явно освободить ресурсы, используемые в GDI +.  
   
-##  <a name="create"></a>CImage::Create  
+##  <a name="create"></a>  CImage::Create  
  Создает `CImage` растрового изображения и присоединить ее к ранее созданные `CImage` объекта.  
   
 ```
@@ -450,7 +442,7 @@ BOOL Create(
 ### <a name="return-value"></a>Возвращаемое значение  
  Имеет ненулевое значение в случае успешного выполнения, иначе — 0.  
   
-##  <a name="createex"></a>CImage::CreateEx  
+##  <a name="createex"></a>  CImage::CreateEx  
  Создает `CImage` растрового изображения и присоединить ее к ранее созданные `CImage` объекта.  
   
 ```
@@ -503,14 +495,14 @@ m_myImage.CreateEx(100, 100, 16, BI_BITFIELDS, adwBitmasks, 0);
 ```
 
 
-##  <a name="destroy"></a>CImage::Destroy  
+##  <a name="destroy"></a>  CImage::Destroy  
  Отсоединяет точечный рисунок из `CImage` объекта и уничтожает растрового изображения.  
   
 ```
 void Destroy() throw();
 ```  
   
-##  <a name="detach"></a>CImage::Detach  
+##  <a name="detach"></a>  CImage::Detach  
  Отсоединяет точечный рисунок из `CImage` объекта.  
   
 ```
@@ -520,7 +512,7 @@ HBITMAP Detach() throw();
 ### <a name="return-value"></a>Возвращаемое значение  
  Дескриптор к растровому изображению отсоединении или **NULL** Если подключен не растрового изображения.  
   
-##  <a name="draw"></a>CImage::Draw  
+##  <a name="draw"></a>  CImage::Draw  
  Копирует растровое изображение из контекста исходного устройства текущий контекст устройства.  
   
 ```
@@ -606,7 +598,7 @@ BOOL Draw(
   
  Для версий **нарисовать** исходного прямоугольника, в которых не указан, по умолчанию — всего исходного изображения. Для версии **рисовать** , для целевого прямоугольника размер не задан, размер образа источника, значение по умолчанию и без растяжения или возникает сжатие.  
   
-##  <a name="getbits"></a>CImage::GetBits  
+##  <a name="getbits"></a>  CImage::GetBits  
  Извлекает указатель на фактическое битовых значений произвольной точки в точечном рисунке.  
   
 ```
@@ -622,7 +614,7 @@ void* GetBits() throw();
 > [!NOTE]
 >  Этот метод поддерживает только DIB раздел точечных рисунков; Следовательно, доступ к пикселов `CImage` объекта так же, как пикселей DIB раздела. Возвращенный указатель указывает на пиксель в расположении (0, 0).  
   
-##  <a name="getbpp"></a>CImage::GetBPP  
+##  <a name="getbpp"></a>  CImage::GetBPP  
  Возвращает значение бита на пиксель.  
   
 ```
@@ -637,7 +629,7 @@ int GetBPP() const throw();
   
  Бит на пиксель, обычно является 1, 4, 8, 16, 24 или 32. В разделе **biBitCount** членом [BITMAPINFOHEADER](http://msdn.microsoft.com/library/windows/desktop/dd183376) в Windows SDK, Дополнительные сведения об этом значении.  
   
-##  <a name="getcolortable"></a>CImage::GetColorTable  
+##  <a name="getcolortable"></a>  CImage::GetColorTable  
  Извлекает красный, зеленый, синий цветовых значений (RGB) из диапазона записей в палитре DIB раздела.  
   
 ```
@@ -656,7 +648,7 @@ void GetColorTable(UINT iFirstColor,
  `prgbColors`  
  Указатель на массив [RGBQUAD](http://msdn.microsoft.com/library/windows/desktop/dd162938) структуры для получения цвет таблицы записей.  
   
-##  <a name="getdc"></a>CImage::GetDC  
+##  <a name="getdc"></a>  CImage::GetDC  
  Извлекает контекст устройства, который в настоящее время имеет образ, выбранный в него.  
   
 ```
@@ -669,7 +661,7 @@ HDC GetDC() const throw();
 ### <a name="remarks"></a>Примечания  
  Для каждого вызова `GetDC`, необходимо иметь в последующем вызове [ReleaseDC](#releasedc).  
   
-##  <a name="getexporterfilterstring"></a>CImage::GetExporterFilterString  
+##  <a name="getexporterfilterstring"></a>  CImage::GetExporterFilterString  
  Поиск доступных форматов изображения для сохранения изображений.  
   
 ```
@@ -748,7 +740,7 @@ CImage::GetExporterFilterString(
   
  Разделитель по умолчанию "&#124;", если передать эту строку с MFC `CFileDialog` объекта. Используйте null разделитель '\0', если передать эту строку на общее сохранения файла диалоговое окно.  
   
-##  <a name="getheight"></a>CImage::GetHeight  
+##  <a name="getheight"></a>  CImage::GetHeight  
  Получает высоту в пикселях.  
   
 ```
@@ -758,7 +750,7 @@ int GetHeight() const throw();
 ### <a name="return-value"></a>Возвращаемое значение  
  Высота в пикселях.  
   
-##  <a name="getimporterfilterstring"></a>CImage::GetImporterFilterString  
+##  <a name="getimporterfilterstring"></a>  CImage::GetImporterFilterString  
  Находит форматы изображений, доступные для загрузки изображений.  
   
 ```
@@ -834,7 +826,7 @@ CImage::GetImporterFilterString(
   
  Разделитель по умолчанию "&#124;", если передать эту строку с MFC `CFileDialog` объекта. Используйте null разделитель '\0', если передать эту строку в общую **Открытие файла** диалоговое окно.  
   
-##  <a name="getmaxcolortableentries"></a>CImage::GetMaxColorTableEntries  
+##  <a name="getmaxcolortableentries"></a>  CImage::GetMaxColorTableEntries  
  Получает максимальное количество записей в таблице цветов.  
   
 ```
@@ -847,7 +839,7 @@ int GetMaxColorTableEntries() const throw();
 ### <a name="remarks"></a>Примечания  
  Этот метод поддерживает только растровые изображения DIB раздела.  
   
-##  <a name="getpitch"></a>CImage::GetPitch  
+##  <a name="getpitch"></a>  CImage::GetPitch  
  Получает высоту изображения.  
   
 ```
@@ -865,7 +857,7 @@ int GetPitch() const throw();
 > [!NOTE]
 >  Этот метод поддерживает только растровые изображения DIB раздела.  
   
-##  <a name="getpixel"></a>CImage::GetPixel  
+##  <a name="getpixel"></a>  CImage::GetPixel  
  Получает цвет пикселя в расположении, заданном *x* и *y*.  
   
 ```
@@ -882,7 +874,7 @@ COLORREF GetPixel(int x,int y) const throw();
 ### <a name="return-value"></a>Возвращаемое значение  
  Красный, зеленый, синий (RGB) значение пикселя. Если точка находится вне текущей области обрезки, возвращаемое значение равно **CLR_INVALID**.  
   
-##  <a name="getpixeladdress"></a>CImage::GetPixelAddress  
+##  <a name="getpixeladdress"></a>  CImage::GetPixelAddress  
  Извлекает адрес точки.  
   
 ```
@@ -904,7 +896,7 @@ void* GetPixelAddress(int x,int y) throw();
 > [!NOTE]
 >  Этот метод поддерживает только растровые изображения DIB раздела.  
   
-##  <a name="gettransparentcolor"></a>CImage::GetTransparentColor  
+##  <a name="gettransparentcolor"></a>  CImage::GetTransparentColor  
  Извлекает индекс прозрачного цвета в цветовой палитре.  
   
 ```
@@ -914,7 +906,7 @@ LONG GetTransparentColor() const throw();
 ### <a name="return-value"></a>Возвращаемое значение  
  Индекс прозрачный цвет.  
   
-##  <a name="getwidth"></a>CImage::GetWidth  
+##  <a name="getwidth"></a>  CImage::GetWidth  
  Получает ширину в пикселях.  
   
 ```
@@ -924,7 +916,7 @@ int GetWidth() const throw();
 ### <a name="return-value"></a>Возвращаемое значение  
  Ширина растрового изображения в пикселях.  
   
-##  <a name="isdibsection"></a>CImage::IsDIBSection  
+##  <a name="isdibsection"></a>  CImage::IsDIBSection  
  Определяет, является ли вложенный растрового изображения DIB раздела.  
   
 ```
@@ -951,7 +943,7 @@ bool IsDIBSection() const throw();
   
 - [SetColorTable](#setcolortable)  
   
-##  <a name="isindexed"></a>CImage::IsIndexed  
+##  <a name="isindexed"></a>  CImage::IsIndexed  
  Определяет, является ли пиксели сопоставляются с цветовой палитры.  
   
 ```
@@ -967,7 +959,7 @@ bool IsIndexed() const throw();
 > [!NOTE]
 >  Этот метод поддерживает только растровые изображения DIB раздела.  
   
-##  <a name="isnull"></a>CImage::IsNull  
+##  <a name="isnull"></a>  CImage::IsNull  
  Определяет, если в данный момент загружен растрового изображения.  
   
 ```
@@ -977,8 +969,8 @@ bool IsNull() const throw();
 ### <a name="remarks"></a>Примечания  
  Этот метод возвращает **True** Если растровое изображение не загружен; в противном случае **False**.  
   
-##  <a name="istransparencysupported"></a>CImage::IsTransparencySupported  
- Указывает, поддерживает прозрачными точечными рисунками, скомпилированного для Windows 2000 или более поздней версии приложения.  
+##  <a name="istransparencysupported"></a>  CImage::IsTransparencySupported  
+ Указывает, поддерживает ли приложение прозрачными точечными рисунками.  
   
 ```
 static BOOL IsTransparencySupported() throw();
@@ -990,10 +982,8 @@ static BOOL IsTransparencySupported() throw();
 ### <a name="remarks"></a>Примечания  
  Если возвращаемое значение не равно нулю, а также поддерживается прозрачность, вызов [AlphaBlend](#alphablend), [TransparentBlt](#transparentblt), или [нарисовать](#draw) обрабатывающий прозрачные цвета.  
   
- При компиляции приложения для использования с операционных систем до Windows 2000 или Windows 98, этот метод всегда возвращает 0, даже на более новых операционных системах.  
-  
 
-##  <a name="load"></a>CImage::Load  
+##  <a name="load"></a>  CImage::Load  
  Загружает изображение.  
   
 ```
@@ -1016,7 +1006,7 @@ HRESULT Load(IStream* pStream) throw();
   
  Типы допустимых изображений, BMP, GIF, JPEG, PNG и TIFF.  
   
-##  <a name="loadfromresource"></a>CImage::LoadFromResource  
+##  <a name="loadfromresource"></a>  CImage::LoadFromResource  
  Загружает изображение из `BITMAP` ресурсов.  
   
 ```
@@ -1042,7 +1032,7 @@ void LoadFromResource(
 ### <a name="remarks"></a>Примечания  
  Ресурс должен быть типа `BITMAP`.  
   
-##  <a name="maskblt"></a>CImage::MaskBlt  
+##  <a name="maskblt"></a>  CImage::MaskBlt  
  Объединяет данные о цвете для исходного и конечного точечных рисунков, с помощью указанной маске и выполнению растровую операцию.  
   
 ```
@@ -1133,10 +1123,10 @@ BOOL MaskBlt(
 ### <a name="remarks"></a>Примечания  
  Этот метод применим к Windows NT версии 4.0 и более поздних версий.  
   
-##  <a name="operator_hbitmap"></a>HBITMAP CImage::operator  
+##  <a name="operator_hbitmap"></a>  CImage::operator HBITMAP  
  Этот оператор используется для получения вложенного дескриптор Windows GDI `CImage` объекта. Этот оператор — оператор приведения, который поддерживает прямое использование `HBITMAP` объекта.  
   
-##  <a name="plgblt"></a>CImage::PlgBlt  
+##  <a name="plgblt"></a>  CImage::PlgBlt  
  Выполняет перемещение набора битов с прямоугольник в контексте устройства источника параллелограмма в контексте устройства назначения.  
   
 ```
@@ -1206,7 +1196,7 @@ BOOL PlgBlt(
   
  Этот метод применим к Windows NT версии 4.0 и более поздних версий. В разделе [PlgBlt](http://msdn.microsoft.com/library/windows/desktop/dd162804) в Windows SDK для получения дополнительных сведений.  
   
-##  <a name="releasedc"></a>CImage::ReleaseDC  
+##  <a name="releasedc"></a>  CImage::ReleaseDC  
  Освобождает контекст устройства.  
   
 ```
@@ -1216,7 +1206,7 @@ void ReleaseDC() const throw();
 ### <a name="remarks"></a>Примечания  
  Поскольку одновременно можно выбрать только один точечный рисунок в контексте устройства, необходимо вызвать метод `ReleaseDC` для каждого вызова [GetDC](#getdc).  
   
-##  <a name="releasegdiplus"></a>CImage::ReleaseGDIPlus  
+##  <a name="releasegdiplus"></a>  CImage::ReleaseGDIPlus  
  Освобождает ресурсы, используемые в GDI +.  
   
 ```
@@ -1226,7 +1216,7 @@ void ReleaseGDIPlus() throw();
 ### <a name="remarks"></a>Примечания  
  Этот метод должен вызываться для освобождения ресурсов, выделенных глобальный `CImage` объекта. В разделе [CImage::CImage](#cimage).  
   
-##  <a name="save"></a>CImage::Save  
+##  <a name="save"></a>  CImage::Save  
  Сохраняет изображение в указанный поток или файл на диске.  
   
 ```
@@ -1264,7 +1254,7 @@ HRESULT Save(LPCTSTR pszFileName,
 ### <a name="remarks"></a>Примечания  
  Вызывайте эту функцию, чтобы сохранить изображение с указанным именем и типом. Если `guidFileType` не указан, расширение имени файла будет использоваться для определения формата изображения. Если расширение не указано, изображение будет сохранено в формате BMP.  
   
-##  <a name="setcolortable"></a>CImage::SetColorTable  
+##  <a name="setcolortable"></a>  CImage::SetColorTable  
  Задает значения цвет красный, зеленый, синий (RGB) для диапазона записей в палитре DIB раздела.  
   
 ```
@@ -1287,7 +1277,7 @@ void SetColorTable(
 ### <a name="remarks"></a>Примечания  
  Этот метод поддерживает только растровые изображения DIB раздела.  
   
-##  <a name="setpixel"></a>CImage::SetPixel  
+##  <a name="setpixel"></a>  CImage::SetPixel  
  Задает цвет пикселя в заданную позицию в битовой карте.  
   
 ```
@@ -1307,7 +1297,7 @@ void SetPixel(int x, int y, COLORREF color) throw();
 ### <a name="remarks"></a>Примечания  
  Этот метод завершается ошибкой, если пикселя координирует лежит за пределами области обрезки выбранного.  
   
-##  <a name="setpixelindexed"></a>CImage::SetPixelIndexed  
+##  <a name="setpixelindexed"></a>  CImage::SetPixelIndexed  
  Задает цвет, расположенной на цвет пикселя `iIndex` в цветовой палитре.  
   
 ```
@@ -1324,7 +1314,7 @@ void SetPixelIndexed(int x, int y, int iIndex) throw();
  `iIndex`  
  Индекс цвета в цветовой палитре.  
   
-##  <a name="setpixelrgb"></a>CImage::SetPixelRGB  
+##  <a name="setpixelrgb"></a>  CImage::SetPixelRGB  
  Задает пикселя в расположениях, указанных в *x* и *y* к цветам, обозначенном *r*, *g*, и *b*, в красного, зеленого и синего (RGB) образа.  
   
 ```
@@ -1355,7 +1345,7 @@ void SetPixelRGB(
 ### <a name="remarks"></a>Примечания  
  Параметры красного, зеленого и синего выражается числом от 0 до 255. Если все три параметра задать значение 0, объединенный итоговый цвет является black. Если все три параметра равным 255, объединенный итоговый цвет отображается белый цвет.  
   
-##  <a name="settransparentcolor"></a>CImage::SetTransparentColor  
+##  <a name="settransparentcolor"></a>  CImage::SetTransparentColor  
  Задает цвет в заданную позицию индексированных как прозрачный.  
   
 ```
@@ -1369,7 +1359,7 @@ LONG SetTransparentColor(LONG iTransparentColor) throw();
 ### <a name="return-value"></a>Возвращаемое значение  
  Ранее индекс цвета набора как прозрачный.  
   
-##  <a name="stretchblt"></a>CImage::StretchBlt  
+##  <a name="stretchblt"></a>  CImage::StretchBlt  
  Копирует растровое изображение из контекста исходного устройства это текущий контекст устройства.  
   
 ```
@@ -1448,7 +1438,7 @@ BOOL StretchBlt(
 ### <a name="remarks"></a>Примечания  
  Дополнительные сведения см. в разделе [StretchBlt](http://msdn.microsoft.com/library/windows/desktop/dd145120) в Windows SDK.  
   
-##  <a name="transparentblt"></a>CImage::TransparentBlt  
+##  <a name="transparentblt"></a>  CImage::TransparentBlt  
  Копирует растровое изображение из контекста исходного устройства это текущий контекст устройства.  
   
 ```

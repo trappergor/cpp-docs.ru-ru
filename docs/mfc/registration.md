@@ -4,10 +4,12 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - servers [MFC], initializing
 - initializing servers [MFC]
@@ -18,16 +20,17 @@ helpviewer_keywords:
 - servers [MFC], installing
 - OLE server applications [MFC], registering servers
 ms.assetid: 991d5684-72c1-4f9e-a09a-9184ed12bbb9
-caps.latest.revision: "9"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: c0b97a249246a9f7f9d47880f75bdce2ca643ae3
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 636a0c2ff254957724511a067fa64533cb4837aa
+ms.sourcegitcommit: a5916b48541f804a79891ff04e246628b5f9a24a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="registration"></a>Регистрация
 Когда пользователю для вставки элемента OLE в приложении OLE выводит список типов объектов для выбора. Этот список возвращает OLE из системной регистрации базы данных, который содержит сведения, предоставляемые все серверные приложения. Сервер регистрирует себя, операции, он помещает в регистрации системной базы данных (реестр) описания каждого типа объектов, которые он предоставляет, файла расширения и путь к самому себе, помимо прочего, сведения.  
@@ -44,12 +47,12 @@ ms.lasthandoff: 12/21/2017
 > [!NOTE]
 >  Приложения MFC, созданные с помощью мастера приложений автоматически регистрироваться при запуске в качестве автономных приложений.  
   
- Если вы хотите зарегистрировать приложение во время установки, используйте программу RegEdit.exe. (В Windows 95, Windows 98 и Windows ME RegEdit находится в каталоге Windows. В Windows NT и Windows 2000 RegEdit находится в папке System32.) Если программа установки включает вместе с приложением, имеют запуска программы установки» RegEdit /S *appname*.reg». (/S флаг указывает, операции в фоновом режиме, то есть он не отображается диалоговым окном reporting успешного завершения команды). В противном случае пользователю следует вручную выполнить RegEdit.  
+ Если вы хотите зарегистрировать приложение во время установки, используйте программу RegEdit.exe. Если программа установки включает вместе с приложением, имеют запуска программы установки» RegEdit /S *appname*.reg». (/S флаг указывает, операции в фоновом режиме, то есть он не отображается диалоговым окном reporting успешного завершения команды). В противном случае пользователю следует вручную выполнить RegEdit.  
   
 > [!NOTE]
 >  REG-файл, созданный мастером приложений не включает полный путь к исполняемому файлу. Программе установки необходимо либо изменить REG-файл включает полный путь к исполняемому файлу или изменение переменной среды PATH для включения в каталог установки.  
   
- RegEdit объединяет содержимое текстового REG-файл в базу данных регистрации. Проверка базы данных или для его восстановления, используйте редактор реестра. Будьте внимательны, чтобы избежать удаления основные операции OLE. (В Windows 95, Windows 98 и Windows ME, редактор реестра является RegEdit.exe. В Windows NT и Windows 2000 это RegEdit32.exe.)  
+ RegEdit объединяет содержимое текстового REG-файл в базу данных регистрации. Проверка базы данных или для его восстановления, используйте редактор реестра. Будьте внимательны, чтобы избежать удаления основные операции OLE.  
   
 ##  <a name="_core_server_initialization"></a>Инициализация сервера  
  При создании серверного приложения с помощью мастера приложений, мастер автоматически завершит все задачи инициализации для вас. В этом разделе описывается, что необходимо сделать, если серверное приложение создать вручную.  
@@ -66,7 +69,7 @@ ms.lasthandoff: 12/21/2017
   
 ## <a name="see-also"></a>См. также  
  [OLE](../mfc/ole-in-mfc.md)   
- [Серверы](../mfc/servers.md)   
+ [Servers](../mfc/servers.md)   
  [CWinApp::RunAutomated](../mfc/reference/cwinapp-class.md#runautomated)   
  [CWinApp::RunEmbedded](../mfc/reference/cwinapp-class.md#runembedded)   
  [Класс COleTemplateServer](../mfc/reference/coletemplateserver-class.md)

@@ -4,11 +4,14 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-tools
+ms.technology:
+- cpp-tools
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords: LoadLibrary
-dev_langs: C++
+f1_keywords:
+- LoadLibrary
+dev_langs:
+- C++
 helpviewer_keywords:
 - DLLs [C++], AfxLoadLibrary
 - DLLs [C++], LoadLibrary
@@ -16,16 +19,17 @@ helpviewer_keywords:
 - LoadLibrary method
 - explicit linking [C++]
 ms.assetid: b4535d19-6243-4146-a31a-a5cca4c7c9e3
-caps.latest.revision: "16"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 03fc696af7605f9937ecddf40a06a0c020aff82c
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: dd24f125398cab606ca835094727a4a2819fb17e
+ms.sourcegitcommit: a5916b48541f804a79891ff04e246628b5f9a24a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="loadlibrary-and-afxloadlibrary"></a>Функции LoadLibrary и AfxLoadLibrary
 Обрабатывает вызов [LoadLibrary](http://go.microsoft.com/fwlink/p/?LinkID=259187) (или [AfxLoadLibrary](../mfc/reference/application-information-and-management.md#afxloadlibrary)) явной ссылкой на библиотеку DLL. Если функция выполняется успешно, он сопоставляет указанную библиотеку DLL в адресное пространство вызывающего процесса и возвращает дескриптор библиотеки DLL, который можно использовать с другими функциями для явного связывания — например, `GetProcAddress` и `FreeLibrary`.  
@@ -39,7 +43,7 @@ ms.lasthandoff: 12/21/2017
  Если не удалось загрузить библиотеку DLL, процесс может попытаться восстановить из-за ошибки. Например процесс может уведомить пользователя об ошибке и попросите пользователя, укажите другой путь к библиотеке DLL.  
   
 > [!IMPORTANT]
->  Если код запускается в Windows NT 4, Windows 2000 или Windows XP (без SP1), убедитесь, что укажите полный путь для всех библиотек DLL. В этих операционных системах текущего каталога, поиск сначала при загрузке файлов. Если не указать путь к файлу, может загрузить файл, который не является предполагаемым.  
+>  Не забудьте указать полный путь для всех библиотек DLL. Текущий каталог просматривается первой при загрузке файлов. Если не указать путь к файлу, может загрузить файл, который не является предполагаемым.  
   
 ## <a name="what-do-you-want-to-do"></a>Выберите действие  
   

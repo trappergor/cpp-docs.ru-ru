@@ -4,7 +4,8 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
@@ -15,19 +16,22 @@ f1_keywords:
 - ATLSECURITY/ATL::CPrivateObjectSecurityDesc::Create
 - ATLSECURITY/ATL::CPrivateObjectSecurityDesc::Get
 - ATLSECURITY/ATL::CPrivateObjectSecurityDesc::Set
-dev_langs: C++
-helpviewer_keywords: CPrivateObjectSecurityDesc class
+dev_langs:
+- C++
+helpviewer_keywords:
+- CPrivateObjectSecurityDesc class
 ms.assetid: 2c4bbb13-bf99-4833-912a-197f6815bb5d
-caps.latest.revision: "20"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: ef8836dec60eca6a7dac13af21c81adf72b5b319
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: e4845d652d2b1dceb8ffc0f2772f88565eb81e29
+ms.sourcegitcommit: a5916b48541f804a79891ff04e246628b5f9a24a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="cprivateobjectsecuritydesc-class"></a>Класс CPrivateObjectSecurityDesc
 Этот класс представляет объект дескриптора безопасности закрытый объект.  
@@ -45,7 +49,7 @@ class CPrivateObjectSecurityDesc : public CSecurityDesc
 |Имя|Описание:|  
 |----------|-----------------|  
 |[CPrivateObjectSecurityDesc::CPrivateObjectSecurityDesc](#cprivateobjectsecuritydesc)|Конструктор.|  
-|[CPrivateObjectSecurityDesc:: ~ CPrivateObjectSecurityDesc](#dtor)|Деструктор|  
+|[CPrivateObjectSecurityDesc::~CPrivateObjectSecurityDesc](#dtor)|Деструктор|  
   
 ### <a name="public-methods"></a>Открытые методы  
   
@@ -75,7 +79,7 @@ class CPrivateObjectSecurityDesc : public CSecurityDesc
 ## <a name="requirements"></a>Требования  
  **Заголовок:** atlsecurity.h  
   
-##  <a name="converttoautoinherit"></a>CPrivateObjectSecurityDesc::ConvertToAutoInherit  
+##  <a name="converttoautoinherit"></a>  CPrivateObjectSecurityDesc::ConvertToAutoInherit  
  Этот метод используется для преобразования в формат, который поддерживает автоматическое распространение наследуемых управления доступом (ACE) в дескрипторе безопасности и его списки управления доступом (ACL).  
   
 ```
@@ -105,7 +109,7 @@ bool ConvertToAutoInherit(
 ### <a name="remarks"></a>Примечания  
  Этот метод пытается определить список ли элементы управления доступом в управления доступом (DACL) и системный список управления доступом (SACL) текущего дескриптора безопасности были унаследованы от родительского дескриптора безопасности. Он вызывает [ConvertToAutoInheritPrivateObjectSecurity](http://msdn.microsoft.com/library/windows/desktop/aa376403) функции.  
   
-##  <a name="cprivateobjectsecuritydesc"></a>CPrivateObjectSecurityDesc::CPrivateObjectSecurityDesc  
+##  <a name="cprivateobjectsecuritydesc"></a>  CPrivateObjectSecurityDesc::CPrivateObjectSecurityDesc  
  Конструктор.  
   
 ```
@@ -115,7 +119,7 @@ CPrivateObjectSecurityDesc() throw();
 ### <a name="remarks"></a>Примечания  
  Инициализирует `CPrivateObjectSecurityDesc` объекта.  
   
-##  <a name="dtor"></a>CPrivateObjectSecurityDesc:: ~ CPrivateObjectSecurityDesc  
+##  <a name="dtor"></a>  CPrivateObjectSecurityDesc::~CPrivateObjectSecurityDesc  
  Деструктор  
   
 ```
@@ -125,7 +129,7 @@ CPrivateObjectSecurityDesc() throw();
 ### <a name="remarks"></a>Примечания  
  Деструктор освобождает все выделенные ресурсы и удаляет закрытый объект дескриптора безопасности.  
   
-##  <a name="create"></a>CPrivateObjectSecurityDesc::Create  
+##  <a name="create"></a>  CPrivateObjectSecurityDesc::Create  
  Этот метод используется для размещения и инициализации дескриптор безопасности в относительный для закрытого объекта, созданного путем вызова диспетчера ресурсов.  
   
 ```
@@ -177,12 +181,12 @@ bool Create(
 ### <a name="remarks"></a>Примечания  
  Этот метод вызывает метод [CreatePrivateObjectSercurity](http://msdn.microsoft.com/library/windows/desktop/aa376405) или [CreatePrivateObjectSecurityEx](http://msdn.microsoft.com/library/windows/desktop/aa446581).  
   
- Второй метод, который разрешает указание тип объекта новый объект GUID или Управление наследованием записи управления доступом, только на компьютерах с Windows 2000 и более поздних версий.  
+ Второй метод позволяет указать тип объекта новый объект GUID или Управление наследованием записи управления доступом.  
   
 > [!NOTE]
 >  Дескриптор безопасности в относительный является дескриптора безопасности, который хранит все сведения о безопасности в непрерывный блок памяти.  
   
-##  <a name="get"></a>CPrivateObjectSecurityDesc::Get  
+##  <a name="get"></a>  CPrivateObjectSecurityDesc::Get  
  Этот метод используется для извлечения сведений из дескриптора безопасности закрытый объект.  
   
 ```
@@ -204,7 +208,7 @@ bool Get(
 ### <a name="remarks"></a>Примечания  
  Дескриптор безопасности не является структуры и связанных данных, содержащий сведения о безопасности для защищаемого объекта.  
   
-##  <a name="operator_eq"></a>CPrivateObjectSecurityDesc::operator =  
+##  <a name="operator_eq"></a>  CPrivateObjectSecurityDesc::operator =  
  Оператор присвоения.  
   
 ```
@@ -218,7 +222,7 @@ CPrivateObjectSecurityDesc& operator= (const CPrivateObjectSecurityDesc& rhs) th
 ### <a name="return-value"></a>Возвращаемое значение  
  Возвращает обновленный `CPrivateObjectSecurityDesc` объекта.  
   
-##  <a name="set"></a>CPrivateObjectSecurityDesc::Set  
+##  <a name="set"></a>  CPrivateObjectSecurityDesc::Set  
  Вызовите этот метод, чтобы изменить дескриптор безопасности закрытый объект.  
   
 ```
@@ -256,7 +260,7 @@ bool Set(
  Возвращает значение true, если операция выполнена успешно; в противном случае — значение false.  
   
 ### <a name="remarks"></a>Примечания  
- Второй метод, который разрешает указание объекта типа GUID объекта или Управление наследованием записи управления доступом, только на компьютерах с Windows 2000 и более поздних версий.  
+ Второй метод позволяет указать тип объекта GUID объекта или Управление наследованием записи управления доступом.  
   
 ## <a name="see-also"></a>См. также  
  [SECURITY_DESCRIPTOR](http://msdn.microsoft.com/library/windows/desktop/aa379561)   

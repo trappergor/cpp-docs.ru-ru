@@ -4,7 +4,8 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
@@ -24,19 +25,22 @@ f1_keywords:
 - ATLSECURITY/ATL::CSid::LoadAccount
 - ATLSECURITY/ATL::CSid::Sid
 - ATLSECURITY/ATL::CSid::SidNameUse
-dev_langs: C++
-helpviewer_keywords: CSid class
+dev_langs:
+- C++
+helpviewer_keywords:
+- CSid class
 ms.assetid: be58b7ca-5958-49c3-a833-ca341aaaf753
-caps.latest.revision: "24"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 3915206f0b05e33d5e13e41871a597ea7278ee8f
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 38c2cff0cb9bd99a70e142d16ee5e7d38e82d8d0
+ms.sourcegitcommit: a5916b48541f804a79891ff04e246628b5f9a24a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="csid-class"></a>Класс CSid
 Этот класс является оболочкой для `SID` структуры (идентификатором безопасности).  
@@ -63,7 +67,7 @@ class CSid
 |Имя|Описание:|  
 |----------|-----------------|  
 |[CSid::CSid](#csid)|Конструктор.|  
-|[Идентификатор CSid:: ~ CSid](#dtor)|Деструктор|  
+|[CSid::~CSid](#dtor)|Деструктор|  
   
 ### <a name="public-methods"></a>Открытые методы  
   
@@ -110,7 +114,7 @@ class CSid
 ## <a name="requirements"></a>Требования  
  **Заголовок:** atlsecurity.h  
   
-##  <a name="accountname"></a>CSid::AccountName  
+##  <a name="accountname"></a>  CSid::AccountName  
  Возвращает имя учетной записи, связанной с `CSid` объекта.  
   
 ```
@@ -125,7 +129,7 @@ LPCTSTR AccountName() const throw(...);
   
  Если нет имени учетной записи для `SID` можно найти, `AccountName` возвращает пустую строку. Это может произойти, если время ожидания сети предотвращает определение имени этого метода. Это также справедливо для идентификаторов безопасности без соответствующего имени учетной записи, например входа в систему `SID` , идентифицирующим сеанс входа в систему.  
   
-##  <a name="csid"></a>CSid::CSid  
+##  <a name="csid"></a>  CSid::CSid  
  Конструктор.  
   
 ```
@@ -171,7 +175,7 @@ explicit CSid(
   
  Если происходит сбой инициализации, конструктор создаст исключение [CAtlException класса](../../atl/reference/catlexception-class.md).  
   
-##  <a name="dtor"></a>Идентификатор CSid:: ~ CSid  
+##  <a name="dtor"></a>  CSid::~CSid  
  Деструктор  
   
 ```
@@ -181,7 +185,7 @@ virtual ~CSid() throw();
 ### <a name="remarks"></a>Примечания  
  Деструктор освобождает все ресурсы, полученные из объекта.  
   
-##  <a name="csidarray"></a>CSid::CSidArray  
+##  <a name="csidarray"></a>  CSid::CSidArray  
  Массив [CSid](../../atl/reference/csid-class.md) объектов.  
   
 ```
@@ -191,7 +195,7 @@ typedef CAtlArray<CSid> CSidArray;
 ### <a name="remarks"></a>Примечания  
  Это определение типа задает тип массива, который может использоваться для получения идентификаторов безопасности из ACL (список управления доступом). В разделе [CAcl::GetAclEntries](../../atl/reference/cacl-class.md#getaclentries).  
   
-##  <a name="domain"></a>CSid::Domain  
+##  <a name="domain"></a>  CSid::Domain  
  Возвращает имя домена, связанного с `CSid` объекта.  
   
 ```
@@ -206,7 +210,7 @@ LPCTSTR Domain() const throw(...);
   
  Если нет имени учетной записи для `SID` можно найти, **домена** Возвращает домен, как пустая строка. Это может произойти, если время ожидания сети предотвращает определение имени этого метода. Это также справедливо для идентификаторов безопасности без соответствующего имени учетной записи, например входа в систему `SID` , идентифицирующим сеанс входа в систему.  
   
-##  <a name="equalprefix"></a>CSid::EqualPrefix  
+##  <a name="equalprefix"></a>  CSid::EqualPrefix  
  Тесты `SID` префиксы (идентификатором безопасности) для проверки на равенство.  
   
 ```
@@ -224,7 +228,7 @@ bool EqualPrefix(const CSid& rhs) const throw();
 ### <a name="remarks"></a>Примечания  
  В разделе [EqualPrefixSid](http://msdn.microsoft.com/library/windows/desktop/aa446621) в Windows SDK для получения дополнительных сведений.  
   
-##  <a name="getlength"></a>CSid::GetLength  
+##  <a name="getlength"></a>  CSid::GetLength  
  Возвращает длину `CSid` объекта.  
   
 ```
@@ -240,7 +244,7 @@ UINT GetLength() const throw();
 > [!NOTE]
 >  В отладочных построениях, функция вызовет ASSERT, если `CSid` недопустимый объект.  
   
-##  <a name="getpsid"></a>CSid::GetPSID  
+##  <a name="getpsid"></a>  CSid::GetPSID  
  Возвращает указатель на `SID` структуры (идентификатором безопасности).  
   
 ```
@@ -250,7 +254,7 @@ const SID* GetPSID() const throw(...);
 ### <a name="return-value"></a>Возвращаемое значение  
  Возвращает адрес `CSid` основным `SID` структуры.  
   
-##  <a name="getpsid_identifier_authority"></a>CSid::GetPSID_IDENTIFIER_AUTHORITY  
+##  <a name="getpsid_identifier_authority"></a>  CSid::GetPSID_IDENTIFIER_AUTHORITY  
  Возвращает указатель на **SID_IDENTIFIER_AUTHORITY** структуры.  
   
 ```
@@ -263,7 +267,7 @@ const SID_IDENTIFIER_AUTHORITY* GetPSID_IDENTIFIER_AUTHORITY() const throw();
 > [!NOTE]
 >  В отладочных построениях, функция вызовет ASSERT, если `CSid` недопустимый объект.  
   
-##  <a name="getsubauthority"></a>CSid::GetSubAuthority  
+##  <a name="getsubauthority"></a>  CSid::GetSubAuthority  
  Возвращает указанный данных неверна в `SID` структуры (идентификатором безопасности).  
   
 ```
@@ -283,7 +287,7 @@ DWORD GetSubAuthority(DWORD nSubAuthority) const throw();
 > [!NOTE]
 >  В отладочных построениях, функция вызовет ASSERT, если `CSid` недопустимый объект.  
   
-##  <a name="getsubauthoritycount"></a>CSid::GetSubAuthorityCount  
+##  <a name="getsubauthoritycount"></a>  CSid::GetSubAuthorityCount  
  Возвращает число данных неверна.  
   
 ```
@@ -298,7 +302,7 @@ UCHAR GetSubAuthorityCount() const throw();
 > [!NOTE]
 >  В отладочных построениях, функция вызовет ASSERT, если `CSid` недопустимый объект.  
   
-##  <a name="isvalid"></a>CSid::IsValid  
+##  <a name="isvalid"></a>  CSid::IsValid  
  Тесты `CSid` объекта на допустимость.  
   
 ```
@@ -311,7 +315,7 @@ bool IsValid() const throw();
 ### <a name="remarks"></a>Примечания  
  `IsValid` Проверяет метод `CSid` объекта путем проверки, номер редакции находится в пределах известного диапазона, а также что количество поля меньше максимального.  
   
-##  <a name="loadaccount"></a>CSid::LoadAccount  
+##  <a name="loadaccount"></a>  CSid::LoadAccount  
  Обновления `CSid` объекта по заданному имени учетной записи и домен или существующую структуру идентификатор защиты (SID).  
   
 ```
@@ -340,7 +344,7 @@ bool LoadAccount(
 ### <a name="remarks"></a>Примечания  
  `LoadAccount`пытается найти идентификатор безопасности для указанного имени. В разделе [LookupAccountSid](http://msdn.microsoft.com/library/windows/desktop/aa379166\(v=vs.85\).aspx) для получения дополнительных сведений.  
   
-##  <a name="operator_eq"></a>CSid::operator =  
+##  <a name="operator_eq"></a>  CSid::operator =  
  Оператор присвоения.  
   
 ```
@@ -355,7 +359,7 @@ CSid& operator= (const SID& rhs) throw(...);
 ### <a name="return-value"></a>Возвращаемое значение  
  Возвращает ссылку на обновленный `CSid` объекта.  
   
-##  <a name="operator_eq_eq"></a>CSid::operator ==  
+##  <a name="operator_eq_eq"></a>  CSid::operator ==  
  Проверяет два объекта дескриптора безопасности для проверки на равенство.  
   
 ```
@@ -393,7 +397,7 @@ bool operator!=(
 ### <a name="return-value"></a>Возвращаемое значение  
  **значение true,** Если дескрипторы безопасности не равны; в противном случае **false**.  
   
-##  <a name="operator_lt"></a>CSid::operator&lt;  
+##  <a name="operator_lt"></a>  CSid::operator &lt;  
  Сравнивает относительные значение два объекта дескриптора безопасности.  
   
 ```
@@ -412,7 +416,7 @@ bool operator<(
 ### <a name="return-value"></a>Возвращаемое значение  
  **значение true,** Если `lhs` — меньше, чем `rhs`, в противном случае **false**.  
   
-##  <a name="operator_lt__eq"></a>CSid::operator&lt;=  
+##  <a name="operator_lt__eq"></a>  CSid::operator &lt;=  
  Сравнивает относительные значение два объекта дескриптора безопасности.  
   
 ```
@@ -431,7 +435,7 @@ bool operator<=(
 ### <a name="return-value"></a>Возвращаемое значение  
  **значение true,** Если `lhs` меньше или равно `rhs`, в противном случае **false**.  
   
-##  <a name="operator_gt"></a>CSid::operator&gt;  
+##  <a name="operator_gt"></a>  CSid::operator &gt;  
  Сравнивает относительные значение два объекта дескриптора безопасности.  
   
 ```
@@ -450,7 +454,7 @@ bool operator>(
 ### <a name="return-value"></a>Возвращаемое значение  
  **значение true,** Если `lhs` больше, чем `rhs`, в противном случае **false**.  
   
-##  <a name="operator_gt__eq"></a>CSid::operator&gt;=  
+##  <a name="operator_gt__eq"></a>  CSid::operator &gt;=  
  Сравнивает относительные значение два объекта дескриптора безопасности.  
   
 ```
@@ -479,7 +483,7 @@ operator const SID *() const throw(...);
 ### <a name="remarks"></a>Примечания  
  Возвращает адрес `SID` структуры.  
   
-##  <a name="sid"></a>CSid::Sid  
+##  <a name="sid"></a>  CSid::Sid  
  Возвращает `SID` структуры (идентификатором безопасности) как строка.  
   
 ```
@@ -487,9 +491,9 @@ LPCTSTR Sid() const throw(...);
 ```  
   
 ### <a name="return-value"></a>Возвращаемое значение  
- Возвращает `SID` структуру как строку в формате, пригодном для отображения, сохранения или передачи. Эквивалентно [ConvertSidToStringSid](http://msdn.microsoft.com/library/windows/desktop/aa376399), несмотря на то, что эта функция только в Windows 2000 или более поздних версий и поэтому эмулируется операционных систем предыдущих версий.  
+ Возвращает `SID` структуру как строку в формате, пригодном для отображения, сохранения или передачи. Эквивалентно [ConvertSidToStringSid](http://msdn.microsoft.com/library/windows/desktop/aa376399).  
   
-##  <a name="sidnameuse"></a>CSid::SidNameUse  
+##  <a name="sidnameuse"></a>  CSid::SidNameUse  
  Возвращает описание состояния `CSid` объекта.  
   
 ```

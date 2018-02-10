@@ -4,7 +4,8 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
@@ -15,19 +16,22 @@ f1_keywords:
 - ATLSECURITY/ATL::CSacl::GetAceCount
 - ATLSECURITY/ATL::CSacl::RemoveAce
 - ATLSECURITY/ATL::CSacl::RemoveAllAces
-dev_langs: C++
-helpviewer_keywords: CSacl class
+dev_langs:
+- C++
+helpviewer_keywords:
+- CSacl class
 ms.assetid: 8624889b-aebc-4183-9d29-a20f07837f05
-caps.latest.revision: "22"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 104c189b1f368b42ef1d93496629b4e142e1c938
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: f4308211dd22c39311b4d767c4c4487d9bf23971
+ms.sourcegitcommit: a5916b48541f804a79891ff04e246628b5f9a24a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="csacl-class"></a>Класс CSacl
 Этот класс является оболочкой для структуры системного списка управления ДОСТУПОМ (список управления доступом системы).  
@@ -48,7 +52,7 @@ class CSacl : public CAcl
 |Имя|Описание:|  
 |----------|-----------------|  
 |[CSacl::CSacl](#csacl)|Конструктор.|  
-|[CSacl:: ~ CSacl](#dtor)|Деструктор|  
+|[CSacl::~CSacl](#dtor)|Деструктор|  
   
 ### <a name="public-methods"></a>Открытые методы  
   
@@ -82,7 +86,7 @@ class CSacl : public CAcl
 ## <a name="requirements"></a>Требования  
  **Заголовок:** atlsecurity.h  
   
-##  <a name="addauditace"></a>CSacl::AddAuditAce  
+##  <a name="addauditace"></a>  CSacl::AddAuditAce  
  Добавляет запись управления доступом (ACE) аудита `CSacl` объекта.  
   
 ```
@@ -129,11 +133,11 @@ bool AddAuditAce(
  Возвращает **true** при добавлении ACE `CSacl` объекта, **false** при сбое.  
   
 ### <a name="remarks"></a>Примечания  
- Объект `CSacl` объект содержит записи управления доступом (ACE), определяющих типы попыток доступа, которые создают записи аудита в журнал событий безопасности. Этот метод добавляет такие записи управления ДОСТУПОМ к `CSacl` объекта. Во второй форме `AddAuditAce` только будет доступен в Windows 2000 и более поздних версий.  
+ Объект `CSacl` объект содержит записи управления доступом (ACE), определяющих типы попыток доступа, которые создают записи аудита в журнал событий безопасности. Этот метод добавляет такие записи управления ДОСТУПОМ к `CSacl` объекта.  
   
  В разделе [ACE_HEADER](http://msdn.microsoft.com/library/windows/desktop/aa374919) Описание различных флагов, которые можно задать в `AceFlags` параметра.  
   
-##  <a name="csacl"></a>CSacl::CSacl  
+##  <a name="csacl"></a>  CSacl::CSacl  
  Конструктор.  
   
 ```
@@ -148,7 +152,7 @@ CSacl(const ACL& rhs) throw(...);
 ### <a name="remarks"></a>Примечания  
  `CSacl` Можно при необходимости создать объект с помощью существующей **ACL** структуры. Убедитесь, что этот параметр используется системный список управления доступом (SACL), а не список управления доступом (DACL). В отладочных построениях, если список DACL предоставляется утверждение будет выполняться. В сборках выпуска все записи из списка DACL учитываются.  
   
-##  <a name="dtor"></a>CSacl:: ~ CSacl  
+##  <a name="dtor"></a>  CSacl::~CSacl  
  Деструктор  
   
 ```
@@ -158,7 +162,7 @@ CSacl(const ACL& rhs) throw(...);
 ### <a name="remarks"></a>Примечания  
  Деструктор освобождает все ресурсы, полученные с помощью объекта, включая все записи управления доступом (ACE).  
   
-##  <a name="getacecount"></a>CSacl::GetAceCount  
+##  <a name="getacecount"></a>  CSacl::GetAceCount  
  Возвращает количество записей управления доступом (ACE) в `CSacl` объекта.  
   
 ```
@@ -168,7 +172,7 @@ UINT GetAceCount() const throw();
 ### <a name="return-value"></a>Возвращаемое значение  
  Возвращает количество элементов управления доступом, содержащиеся в `CSacl` объекта.  
   
-##  <a name="operator_eq"></a>CSacl::operator =  
+##  <a name="operator_eq"></a>  CSacl::operator =  
  Оператор присвоения.  
   
 ```
@@ -182,7 +186,7 @@ CSacl& operator=(const ACL& rhs) throw(...);
 ### <a name="return-value"></a>Возвращаемое значение  
  Возвращает ссылку на обновленный `CSacl` объекта. Убедитесь, что **ACL** параметр является фактически системы список управления доступом (SACL), а не список управления доступом (DACL). В отладочных построениях, утверждения будет выполняться и в сборках выпуска **ACL** параметр будет игнорироваться.  
   
-##  <a name="removeace"></a>CSacl::RemoveAce  
+##  <a name="removeace"></a>  CSacl::RemoveAce  
  Удаляет из конкретного элемента управления ДОСТУПОМ (записи управления доступом) **CSacl** объекта.  
   
 ```
@@ -196,7 +200,7 @@ void RemoveAce(UINT nIndex) throw();
 ### <a name="remarks"></a>Примечания  
  Этот метод является производным от [CAtlArray::RemoveAt](../../atl/reference/catlarray-class.md#removeat).  
   
-##  <a name="removeallaces"></a>CSacl::RemoveAllAces  
+##  <a name="removeallaces"></a>  CSacl::RemoveAllAces  
  Удаляет все элементы управления доступом (ACE), содержащихся в `CSacl` объекта.  
   
 ```

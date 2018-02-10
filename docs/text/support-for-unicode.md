@@ -4,10 +4,12 @@ ms.custom:
 ms.date: 1/09/2018
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - globalization [C++], character sets
 - portable data types [MFC]
@@ -19,12 +21,13 @@ helpviewer_keywords:
 author: ghogen
 ms.author: ghogen
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 110d99cd6bf745f20db0a92a87189fb8add68e9b
-ms.sourcegitcommit: 56f6fce7d80e4f61d45752f4c8512e4ef0453e58
+ms.workload:
+- cplusplus
+ms.openlocfilehash: fde7674d30d84385eb1f94f42056a82bfaac99fe
+ms.sourcegitcommit: a5916b48541f804a79891ff04e246628b5f9a24a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/12/2018
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="support-for-unicode"></a>Поддержка Юникода
 
@@ -58,7 +61,7 @@ ms.lasthandoff: 01/12/2018
 
 - [Использование Юникода для создания многоязыковых программ](../text/unicode-programming-summary.md)
 
-- [Изучение преимуществ Юникода, включая как использование Юникода делает программа более эффективным в Windows 2000](../text/benefits-of-character-set-portability.md)
+- [Изучение преимуществ Юникода](../text/benefits-of-character-set-portability.md)
 
 - [Использование wmain для передачи аргументов в программу](../text/support-for-using-wmain.md)
 

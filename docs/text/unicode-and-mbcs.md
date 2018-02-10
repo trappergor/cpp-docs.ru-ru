@@ -4,11 +4,14 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords: _mbcs
-dev_langs: C++
+f1_keywords:
+- _mbcs
+dev_langs:
+- C++
 helpviewer_keywords:
 - MBCS [C++], Unicode
 - MFC [C++], character sets
@@ -19,26 +22,24 @@ helpviewer_keywords:
 - multibyte characters [C++]
 - runtime [C++], language portability
 ms.assetid: 677baec6-71b4-4579-94df-64f18bc117c4
-caps.latest.revision: "9"
+caps.latest.revision: 
 author: ghogen
 ms.author: ghogen
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 8e64edebc511445973a7fbb79f8fb8ccfd3f607b
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 9a841fc97715782c303065e37cbaeb8137cf0bc3
+ms.sourcegitcommit: a5916b48541f804a79891ff04e246628b5f9a24a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="unicode-and-mbcs"></a>Юникод и многобайтовая кодировка
 Библиотека Microsoft Foundation Classes (MFC), библиотека времени выполнения C для Visual C++ и в среде разработки Visual C++ включены для помощи международного программирования. Они предоставляют:  
   
--   Поддержка стандарта Юникод в Windows 2000 (ранее Windows NT). Юникод является стандартом текущего и по возможности следует использовать.  
+-   Поддержка стандарта Юникод в Windows. Юникод является стандартом текущего и по возможности следует использовать.  
   
      Юникод является 16-разрядный символ кодирования, предоставляя достаточно кодировки для всех языков. Все символы ASCII включены в Юникод как расширенные.  
-  
-    > [!NOTE]
-    >  В стандарте Юникода не поддерживается в Windows 95, Windows 98 или Windows Millennium Edition.  
   
 -   Поддержку формы многобайтовой кодировки (MBCS), вызывается двухбайтовой кодировки (DBCS) на всех платформах.  
   

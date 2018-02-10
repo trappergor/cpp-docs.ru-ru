@@ -4,11 +4,14 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords: vc.classes.dialog
-dev_langs: C++
+f1_keywords:
+- vc.classes.dialog
+dev_langs:
+- C++
 helpviewer_keywords:
 - property sheet classes
 - dialog box classes
@@ -16,16 +19,17 @@ helpviewer_keywords:
 - common dialog classes [MFC]
 - tab dialog boxes
 ms.assetid: db75da23-4eff-4c6c-beae-79cf046fbce9
-caps.latest.revision: "9"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 3095dfbbfa33f4c3110afb96c741a508611521cd
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 6d51529e5d04a8297c0d3824ab38c7d2045bc866
+ms.sourcegitcommit: a5916b48541f804a79891ff04e246628b5f9a24a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="dialog-box-classes"></a>Классы диалоговых окон
 Класс `CDialog` и его производные классы инкапсулируют функциональность диалогового окна. Поскольку диалоговое окно — это особый тип окна, `CDialog` является производным от `CWnd`. Производные классы из диалогового окна `CDialog` или воспользуйтесь одним из классы общих диалоговых окон для стандартных диалоговых окон, таких как открытие или сохранение файла, печать, Выбор шрифта или цвета, запуск операции поиска и замены или с помощью различных связанные с OLE операции.  
@@ -58,7 +62,7 @@ ms.lasthandoff: 12/21/2017
  Предоставляет стандартное диалоговое окно для печати файла.  
   
  [CPrintDialogEx](../mfc/reference/cprintdialogex-class.md)  
- Предоставляет таблицу свойств печати Windows 2000.  
+ Предоставляет таблицу свойств печати Windows.  
   
  [CPageSetupDialog](../mfc/reference/cpagesetupdialog-class.md)  
  Инкапсулирует службы, предоставляемые Общие параметры страницы диалоговым окном Windows с дополнительной поддержкой установки и изменения полей печати.  

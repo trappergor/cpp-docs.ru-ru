@@ -4,27 +4,31 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords: _mbcs
-dev_langs: C++
+f1_keywords:
+- _mbcs
+dev_langs:
+- C++
 helpviewer_keywords:
 - MBCS [C++], dialog box fonts
 - MS Shell Dlg
 - MBCS [C++], programming
 - dialog boxes [C++], fonts
 ms.assetid: 7b541235-f3e5-4af0-b2c2-a0112cd5fbfb
-caps.latest.revision: "9"
+caps.latest.revision: 
 author: ghogen
 ms.author: ghogen
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 8a09bfb9b30e279e8d0b7696055c1e54ac56bfae
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: b379c163963a9ae0dd0c59c7d0fc809fee4f46d0
+ms.sourcegitcommit: a5916b48541f804a79891ff04e246628b5f9a24a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="general-mbcs-programming-advice"></a>Общие советы по программированию многобайтовой кодировки
 Используйте следующие рекомендации:  
@@ -39,7 +43,7 @@ ms.lasthandoff: 12/21/2017
   
 -   При разработке диалоговым окнам, оставляйте около 30% дополнительного места в конце статического текстового элемента управления для преобразования многобайтовой Кодировки.  
   
--   Будьте внимательны при Выбор шрифтов для вашего приложения, так как некоторые шрифты доступны не во всех системах. Например японская версия Windows 2000 не поддерживает Helvetica шрифта.  
+-   Будьте внимательны при Выбор шрифтов для вашего приложения, так как некоторые шрифты доступны не во всех системах.  
   
 -   При выборе шрифт для диалоговых окон, используйте [MS Shell Dlg](http://msdn.microsoft.com/library/windows/desktop/dd374112) вместо MS Sans Serif или Helvetica. MS Shell Dlg заменяется нужный шрифт в системе перед созданием диалоговым окном. MS Shell Dlg гарантирует, что любые изменения в операционную систему для работы с данным шрифтом автоматически становятся доступными. (MFC заменяет MS Shell Dlg DEFAULT_GUI_FONT или системного шрифта в Windows 95, Windows 98 и Windows NT 4, так как эти системы неправильно обрабатывает MS Shell Dlg.)  
   

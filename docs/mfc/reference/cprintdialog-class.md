@@ -4,7 +4,8 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
@@ -27,7 +28,8 @@ f1_keywords:
 - AFXDLGS/CPrintDialog::PrintRange
 - AFXDLGS/CPrintDialog::PrintSelection
 - AFXDLGS/CPrintDialog::m_pd
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - CPrintDialog [MFC], CPrintDialog
 - CPrintDialog [MFC], CreatePrinterDC
@@ -47,16 +49,17 @@ helpviewer_keywords:
 - CPrintDialog [MFC], PrintSelection
 - CPrintDialog [MFC], m_pd
 ms.assetid: 5bdb2424-adf8-433d-a97c-df11a83bc4e4
-caps.latest.revision: "23"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 653cdc4580862288d98600603c1b45526ea38675
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: d7834351533cac7f518f5ce5f5558a6be2da34be
+ms.sourcegitcommit: a5916b48541f804a79891ff04e246628b5f9a24a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="cprintdialog-class"></a>Класс CPrintDialog
 Инкапсулирует службы, предоставляемые стандартным диалоговым окном Windows для печати.  
@@ -105,7 +108,7 @@ class CPrintDialog : public CCommonDialog
  Общие печати диалоговые окна предоставляют простой способ реализации диалоговыми окнами печати и параметры печати в соответствии со стандартами Windows.  
   
 > [!NOTE]
->  `CPrintDialogEx` Класс инкапсулирует службы, предоставляемые вкладкой свойств печати Windows 2000. Дополнительные сведения см. [CPrintDialogEx](../../mfc/reference/cprintdialogex-class.md) Обзор.  
+>  `CPrintDialogEx` Класс инкапсулирует службы, предоставляемые вкладкой свойств печати Windows. Дополнительные сведения см. [CPrintDialogEx](../../mfc/reference/cprintdialogex-class.md) Обзор.  
   
  `CPrintDialog`его функциональность является замененные по [CPageSetupDialog](../../mfc/reference/cpagesetupdialog-class.md), разработанный для предоставления часто используемое диалоговое окно для обоих параметров печати и параметры страницы.  
   
@@ -149,7 +152,7 @@ class CPrintDialog : public CCommonDialog
 ## <a name="requirements"></a>Требования  
  **Заголовок:** afxdlgs.h  
   
-##  <a name="cprintdialog"></a>CPrintDialog::CPrintDialog  
+##  <a name="cprintdialog"></a>  CPrintDialog::CPrintDialog  
  Создает объект диалогового окна Параметры печати или печати Windows.  
   
 ```  
@@ -177,7 +180,7 @@ CPrintDialog(
 ### <a name="example"></a>Пример  
  [!code-cpp[NVC_MFCDocView#174](../../mfc/codesnippet/cpp/cprintdialog-class_1.cpp)]  
   
-##  <a name="createprinterdc"></a>CPrintDialog::CreatePrinterDC  
+##  <a name="createprinterdc"></a>  CPrintDialog::CreatePrinterDC  
  Создает контекст устройства принтера (DC) из [DEVMODE](http://msdn.microsoft.com/library/windows/desktop/dd183565) и [DEVNAMES](../../mfc/reference/devnames-structure.md) структуры.  
   
 ```  
@@ -193,7 +196,7 @@ HDC CreatePrinterDC();
 ### <a name="example"></a>Пример  
  [!code-cpp[NVC_MFCDocView#106](../../mfc/codesnippet/cpp/cprintdialog-class_2.cpp)]  
   
-##  <a name="domodal"></a>CPrintDialog::DoModal  
+##  <a name="domodal"></a>  CPrintDialog::DoModal  
  Отображает диалоговое окно Windows общих печати и позволяет пользователю выбирать различные параметры печати, например число копий, диапазон страниц и ли должно быть по копиям.  
   
 ```  
@@ -215,7 +218,7 @@ virtual INT_PTR DoModal();
 ### <a name="example"></a>Пример  
   Далее приведен пример [CPrintDialog::CreatePrinterDC](#createprinterdc).  
   
-##  <a name="getcopies"></a>CPrintDialog::GetCopies  
+##  <a name="getcopies"></a>  CPrintDialog::GetCopies  
  Возвращает число копий запрошено.  
   
 ```  
@@ -231,7 +234,7 @@ int GetCopies() const;
 ### <a name="example"></a>Пример  
   Далее приведен пример [CPrintDialog::PrintCollate](#printcollate).  
   
-##  <a name="getdefaults"></a>CPrintDialog::GetDefaults  
+##  <a name="getdefaults"></a>  CPrintDialog::GetDefaults  
  Получает значения по умолчанию устройства принтера по умолчанию не отображает диалоговое окно.  
   
 ```  
@@ -253,7 +256,7 @@ BOOL GetDefaults();
   
  [!code-cpp[NVC_MFCDocView#107](../../mfc/codesnippet/cpp/cprintdialog-class_3.cpp)]  
   
-##  <a name="getdevicename"></a>CPrintDialog::GetDeviceName  
+##  <a name="getdevicename"></a>  CPrintDialog::GetDeviceName  
  Извлекает имя выбранного принтера.  
   
 ```  
@@ -271,7 +274,7 @@ CString GetDeviceName() const;
   
  [!code-cpp[NVC_MFCDocView#108](../../mfc/codesnippet/cpp/cprintdialog-class_4.cpp)]  
   
-##  <a name="getdevmode"></a>CPrintDialog::GetDevMode  
+##  <a name="getdevmode"></a>  CPrintDialog::GetDevMode  
  Извлекает `DEVMODE` структуры.  
   
 ```  
@@ -287,7 +290,7 @@ LPDEVMODE GetDevMode() const;
 ### <a name="example"></a>Пример  
   Далее приведен пример [CPrintDialog::PrintCollate](#printcollate).  
   
-##  <a name="getdrivername"></a>CPrintDialog::GetDriverName  
+##  <a name="getdrivername"></a>  CPrintDialog::GetDriverName  
  Извлекает имя выбранного драйвера.  
   
 ```  
@@ -303,7 +306,7 @@ CString GetDriverName() const;
 ### <a name="example"></a>Пример  
   Далее приведен пример [CPrintDialog::GetDeviceName](#getdevicename).  
   
-##  <a name="getfrompage"></a>CPrintDialog::GetFromPage  
+##  <a name="getfrompage"></a>  CPrintDialog::GetFromPage  
  Получает начальную страницу диапазон печати.  
   
 ```  
@@ -319,7 +322,7 @@ int GetFromPage() const;
 ### <a name="example"></a>Пример  
   Далее приведен пример [CPrintDialog::m_pd](#m_pd).  
   
-##  <a name="getportname"></a>CPrintDialog::GetPortName  
+##  <a name="getportname"></a>  CPrintDialog::GetPortName  
  Извлекает имя выбранного порта.  
   
 ```  
@@ -335,7 +338,7 @@ CString GetPortName() const;
 ### <a name="example"></a>Пример  
   Далее приведен пример [CPrintDialog::GetDeviceName](#getdevicename).  
   
-##  <a name="getprinterdc"></a>CPrintDialog::GetPrinterDC  
+##  <a name="getprinterdc"></a>  CPrintDialog::GetPrinterDC  
  Получает дескриптор контекста устройства принтера.  
   
 ```  
@@ -351,7 +354,7 @@ HDC GetPrinterDC() const;
 ### <a name="example"></a>Пример  
  [!code-cpp[NVC_MFCDocView#109](../../mfc/codesnippet/cpp/cprintdialog-class_5.cpp)]  
   
-##  <a name="gettopage"></a>CPrintDialog::GetToPage  
+##  <a name="gettopage"></a>  CPrintDialog::GetToPage  
  Получает конечную страницу диапазон печати.  
   
 ```  
@@ -367,7 +370,7 @@ int GetToPage() const;
 ### <a name="example"></a>Пример  
   Далее приведен пример [CPrintDialog::m_pd](#m_pd).  
   
-##  <a name="m_pd"></a>CPrintDialog::m_pd  
+##  <a name="m_pd"></a>  CPrintDialog::m_pd  
  Структуры, члены которого хранения характеристики объекта диалогового окна.  
   
 ```  
@@ -382,7 +385,7 @@ PRINTDLG& m_pd;
 ### <a name="example"></a>Пример  
  [!code-cpp[NVC_MFCDocView#111](../../mfc/codesnippet/cpp/cprintdialog-class_6.cpp)]  
   
-##  <a name="printall"></a>CPrintDialog::PrintAll  
+##  <a name="printall"></a>  CPrintDialog::PrintAll  
  Определяет, следует ли печати всех страниц документа.  
   
 ```  
@@ -398,7 +401,7 @@ BOOL PrintAll() const;
 ### <a name="example"></a>Пример  
   Далее приведен пример [CPrintDialog::m_pd](#m_pd).  
   
-##  <a name="printcollate"></a>CPrintDialog::PrintCollate  
+##  <a name="printcollate"></a>  CPrintDialog::PrintCollate  
  Определяет ли сопоставить запрашиваются копий.  
   
 ```  
@@ -414,7 +417,7 @@ BOOL PrintCollate() const;
 ### <a name="example"></a>Пример  
  [!code-cpp[NVC_MFCDocView#110](../../mfc/codesnippet/cpp/cprintdialog-class_7.cpp)]  
   
-##  <a name="printrange"></a>CPrintDialog::PrintRange  
+##  <a name="printrange"></a>  CPrintDialog::PrintRange  
  Определяет, следует ли печать указанного диапазона страниц.  
   
 ```  
@@ -430,7 +433,7 @@ BOOL PrintRange() const;
 ### <a name="example"></a>Пример  
   Далее приведен пример [CPrintDialog::m_pd](#m_pd).  
   
-##  <a name="printselection"></a>CPrintDialog::PrintSelection  
+##  <a name="printselection"></a>  CPrintDialog::PrintSelection  
  Определяет, следует ли печати только выбранные элементы.  
   
 ```  

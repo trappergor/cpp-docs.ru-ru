@@ -4,10 +4,12 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - dialog classes [MFC]
 - dialog boxes [MFC], Windows common dialogs
@@ -18,16 +20,17 @@ helpviewer_keywords:
 - dialog classes [MFC], common
 - common dialog boxes [MFC]
 ms.assetid: 5c4f6443-896c-4b05-a7df-8169fdadc71d
-caps.latest.revision: "9"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: fcbed7cec501257f03ab13447d54e081c1d46c76
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: d76c387c9aa9f53f8503d3606b2b47cdb5c6be6d
+ms.sourcegitcommit: a5916b48541f804a79891ff04e246628b5f9a24a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="common-dialog-classes"></a>Классы общих диалоговых окон
 Помимо класса [CDialog](../mfc/reference/cdialog-class.md), MFC предоставляет несколько классов, производных от `CDialog` , инкапсулирующие часто используемые диалоговые окна, как показано в следующей таблице. Диалоговые окна, содержащийся называются «общие диалоговые окна» и являются частью общей библиотекой диалоговое окно Windows (COMMDLG. БИБЛИОТЕКА DLL). Диалоговое окно шаблона ресурсы и код для этих классов предоставляются в Windows общие диалоговые окна, являющиеся частью Windows версии 3.1 и более поздние версии.  
@@ -41,7 +44,7 @@ ms.lasthandoff: 12/21/2017
 |[Диалоговое окно CFindReplaceDialog](../mfc/reference/cfindreplacedialog-class.md)|Позволяет пользователю инициировать операцию поиска или замены в текстовом файле.|  
 |[CFontDialog](../mfc/reference/cfontdialog-class.md)|Позволяет пользователю задать шрифт.|  
 |[CPrintDialog](../mfc/reference/cprintdialog-class.md)|Позволяет пользователю указать сведения для задания печати.|  
-|[CPrintDialogEx](../mfc/reference/cprintdialogex-class.md)|Лист свойств печати Windows 2000.|  
+|[CPrintDialogEx](../mfc/reference/cprintdialogex-class.md)|Страница свойств печати Windows.|  
   
  Дополнительные сведения о классы общих диалоговых окон, в разделе имена отдельных классов в *Справочник по библиотеке MFC*. MFC также предоставляет ряд классов стандартное диалоговое окно используется для OLE. Сведения об этих классах см. в разделе базового класса, [COleDialog](../mfc/reference/coledialog-class.md)в *Справочник по библиотеке MFC*.  
   

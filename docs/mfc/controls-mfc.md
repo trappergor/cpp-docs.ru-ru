@@ -4,25 +4,28 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - Windows common controls [MFC]
 - common controls [MFC]
 - controls [MFC]
 ms.assetid: b2842884-6435-4b8f-933b-21671bf8af95
-caps.latest.revision: "11"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 3fd146ecd4a5c1b431ea63a98e770b0cb2e0917d
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: b18979ec502ea645cf8cdac39ca9ea75cb229e61
+ms.sourcegitcommit: a5916b48541f804a79891ff04e246628b5f9a24a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="controls-mfc"></a>Элементы управления (MFC)
 Элементы управления — это объекты, используемые для ввода данных и работы с ними. Как правило, они отображаются в диалоговых окнах и на панелях инструментов. В этом документе рассматриваются три основных типа элементов управления.  
@@ -36,15 +39,7 @@ ms.lasthandoff: 12/21/2017
 ## <a name="windows-common-controls"></a>Стандартные элементы управления Windows  
  В ОС Windows всегда существовал ряд стандартных элементов управления Windows. Эти объекты элементов управления являются программируемыми и редактор диалоговых окон Visual C++ поддерживает их добавление в диалоговые окна. Библиотека MFC предоставляет классы, инкапсулирующие все эти элементы управления, как показано в таблице [Стандартные элементы управления Windows и классы MFC](#_core_windows_common_controls_and_mfc_classes). (Для некоторых элементов в таблице существуют связанные разделы с дальнейшим описанием. Если для элементов управления связанные разделы отсутствуют, см. документацию по классу MFC.)  
   
- Класс [CWnd](../mfc/reference/cwnd-class.md) является базовым для всех классов окон, включая все классы элементов управления. Стандартные элементы управления Windows поддерживаются в следующих средах:  
-  
--   Windows 95, Windows 98 и Windows 2000;  
-  
--   Windows NT 3.51 и более поздние версии;  
-  
--   Win32, версия 1.3 (Visual C++ версии 4.2 и более поздних версий не поддерживает Win32).  
-  
- Более старые стандартные элементы управления — флажки, поля со списками, поля ввода, списки, переключатели, кнопок, элементов управления полосы прокрутки и статические элементы управления — также были доступны в более ранних версиях Windows.  
+ Класс [CWnd](../mfc/reference/cwnd-class.md) является базовым для всех классов окон, включая все классы элементов управления. 
   
 ## <a name="activex-controls"></a>Элементы управления ActiveX  
  Элементы управления ActiveX, ранее известные как элементы управления OLE, можно использовать в диалоговых окнах в приложениях для Windows или на HTML-страницах в Интернете. Более подробную информацию см. в разделе [Элементы управления ActiveX MFC](../mfc/mfc-activex-controls.md).  

@@ -4,7 +4,8 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
@@ -55,19 +56,22 @@ f1_keywords:
 - ATLSECURITY/ATL::CAccessToken::SetDefaultDacl
 - ATLSECURITY/ATL::CAccessToken::SetOwner
 - ATLSECURITY/ATL::CAccessToken::SetPrimaryGroup
-dev_langs: C++
-helpviewer_keywords: CAccessToken class
+dev_langs:
+- C++
+helpviewer_keywords:
+- CAccessToken class
 ms.assetid: bb5c5945-56a5-4083-b442-76573cee83ab
-caps.latest.revision: "24"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 3df4c5ac46c159cd3ed955621af914c677182a57
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: b8d2a314ea7697ef4379b899ee6845cd4ceca707
+ms.sourcegitcommit: a5916b48541f804a79891ff04e246628b5f9a24a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="caccesstoken-class"></a>Класс CAccessToken
 Этот класс является оболочкой для токена доступа.  
@@ -87,7 +91,7 @@ class CAccessToken
   
 |Имя|Описание:|  
 |----------|-----------------|  
-|[CAccessToken:: ~ CAccessToken](#dtor)|Деструктор|  
+|[CAccessToken::~CAccessToken](#dtor)|Деструктор|  
   
 ### <a name="public-methods"></a>Открытые методы  
   
@@ -140,14 +144,14 @@ class CAccessToken
 |[CAccessToken::SetPrimaryGroup](#setprimarygroup)|Вызовите этот метод для установки основной группы `CAccessToken` объекта.|  
   
 ## <a name="remarks"></a>Примечания  
- [Маркер доступа](http://msdn.microsoft.com/library/windows/desktop/aa374909) — это объект, который описывает контекст безопасности процесса или потока и выделяется для каждого пользователя, зарегистрированного в системе Windows NT или Windows 2000.  
+ [Маркер доступа](http://msdn.microsoft.com/library/windows/desktop/aa374909) — это объект, который описывает контекст безопасности процесса или потока и выделяется для каждого пользователя, зарегистрированного в системе Windows.  
   
  Введение модель управления доступом в Windows см. в разделе [управления доступом](http://msdn.microsoft.com/library/windows/desktop/aa374860) в Windows SDK.  
   
 ## <a name="requirements"></a>Требования  
  **Заголовок:** atlsecurity.h  
   
-##  <a name="attach"></a>CAccessToken::Attach  
+##  <a name="attach"></a>  CAccessToken::Attach  
  Вызовите этот метод, чтобы стать владельцем дескриптора маркера доступ.  
   
 ```
@@ -161,7 +165,7 @@ void Attach(HANDLE hToken) throw();
 ### <a name="remarks"></a>Примечания  
  В отладочных построениях, произойдет ошибка утверждения, если `CAccessToken` объект уже имеет права владения маркер доступа.  
   
-##  <a name="dtor"></a>CAccessToken:: ~ CAccessToken  
+##  <a name="dtor"></a>  CAccessToken::~CAccessToken  
  Деструктор  
   
 ```
@@ -171,7 +175,7 @@ virtual ~CAccessToken() throw();
 ### <a name="remarks"></a>Примечания  
  Освобождает все выделенные ресурсы.  
   
-##  <a name="checktokenmembership"></a>CAccessToken::CheckTokenMembership  
+##  <a name="checktokenmembership"></a>  CAccessToken::CheckTokenMembership  
  Этот метод вызывается для включения в указанный идентификатор SID `CAccessToken` объекта.  
   
 ```
@@ -198,7 +202,7 @@ bool CheckTokenMembership(
 > [!NOTE]
 >  `CAccessToken` Объект должен быть маркер олицетворения и основного маркера.  
   
-##  <a name="createimpersonationtoken"></a>CAccessToken::CreateImpersonationToken  
+##  <a name="createimpersonationtoken"></a>  CAccessToken::CreateImpersonationToken  
  Этот метод используется для создания токена доступа олицетворения.  
   
 ```
@@ -220,7 +224,7 @@ bool CreateImpersonationToken(
 ### <a name="remarks"></a>Примечания  
  `CreateImpersonationToken`вызовы [DuplicateToken](http://msdn.microsoft.com/library/windows/desktop/aa446616) , чтобы создать новый маркер олицетворения.  
   
-##  <a name="createprimarytoken"></a>CAccessToken::CreatePrimaryToken  
+##  <a name="createprimarytoken"></a>  CAccessToken::CreatePrimaryToken  
  Этот метод используется для создания нового основного маркера.  
   
 ```
@@ -246,7 +250,7 @@ bool CreatePrimaryToken(
 ### <a name="remarks"></a>Примечания  
  `CreatePrimaryToken`вызовы [DuplicateTokenEx](http://msdn.microsoft.com/library/windows/desktop/aa446617) для создания нового основного маркера.  
   
-##  <a name="createprocessasuser"></a>CAccessToken::CreateProcessAsUser  
+##  <a name="createprocessasuser"></a>  CAccessToken::CreateProcessAsUser  
  Этот метод вызывается для создания нового процесса, запущенная в контексте безопасности пользователя, представленного `CAccessToken` объекта.  
   
 ```
@@ -302,7 +306,7 @@ bool CreateProcessAsUser(
   
  Для успешного выполнения этого метода `CAccessToken` должен храниться в объекте AssignPrimaryToken (если он не маркером ограниченного доступа) и IncreaseQuota права доступа.  
   
-##  <a name="createrestrictedtoken"></a>CAccessToken::CreateRestrictedToken  
+##  <a name="createrestrictedtoken"></a>  CAccessToken::CreateRestrictedToken  
  Этот метод вызывается для создания нового ограниченного `CAccessToken` объекта.  
   
 ```
@@ -332,13 +336,10 @@ bool CreateRestrictedToken(
 ### <a name="remarks"></a>Примечания  
  `CreateRestrictedToken`использует [CreateRestrictedToken](http://msdn.microsoft.com/library/windows/desktop/aa446583) функцию Win32 для создания нового `CAccessToken` объект с ограничениями.  
   
-> [!NOTE]
->  Этот метод является только в Windows 2000 или более поздних версий.  
-  
 > [!IMPORTANT]
 >  При использовании `CreateRestrictedToken`, убедитесь в следующем: существующий маркер является допустимым (и не введенное пользователем) и `SidsToDisable` и `PrivilegesToDelete` являются допустимое (и не введенное пользователем). Если метод возвращает значение false, запретите функциональные возможности.  
   
-##  <a name="detach"></a>CAccessToken::Detach  
+##  <a name="detach"></a>  CAccessToken::Detach  
  Этот метод вызывается для отмены владения маркер доступа.  
   
 ```
@@ -351,7 +352,7 @@ HANDLE Detach() throw();
 ### <a name="remarks"></a>Примечания  
  Этот метод отменяет `CAccessToken`его владельца токена доступа.  
   
-##  <a name="disableprivilege"></a>CAccessToken::DisablePrivilege  
+##  <a name="disableprivilege"></a>  CAccessToken::DisablePrivilege  
  Этот метод вызывается для отключения доступа в `CAccessToken` объекта.  
   
 ```
@@ -370,7 +371,7 @@ bool DisablePrivilege(
 ### <a name="return-value"></a>Возвращаемое значение  
  Возвращает значение true, если операция выполнена успешно; в противном случае — значение false.  
   
-##  <a name="disableprivileges"></a>CAccessToken::DisablePrivileges  
+##  <a name="disableprivileges"></a>  CAccessToken::DisablePrivileges  
  Вызовите этот метод, чтобы отключить один или несколько привилегии в `CAccessToken` объекта.  
   
 ```
@@ -389,7 +390,7 @@ bool DisablePrivileges(
 ### <a name="return-value"></a>Возвращаемое значение  
  Возвращает значение true, если операция выполнена успешно; в противном случае — значение false.  
   
-##  <a name="enableprivilege"></a>CAccessToken::EnablePrivilege  
+##  <a name="enableprivilege"></a>  CAccessToken::EnablePrivilege  
  Этот метод вызывается для включения доступа в `CAccessToken` объекта.  
   
 ```
@@ -408,7 +409,7 @@ bool EnablePrivilege(
 ### <a name="return-value"></a>Возвращаемое значение  
  Возвращает значение true, если операция выполнена успешно; в противном случае — значение false.  
   
-##  <a name="enableprivileges"></a>CAccessToken::EnablePrivileges  
+##  <a name="enableprivileges"></a>  CAccessToken::EnablePrivileges  
  Вызовите этот метод, чтобы включить один или несколько прав в `CAccessToken` объекта.  
   
 ```
@@ -427,7 +428,7 @@ bool EnablePrivileges(
 ### <a name="return-value"></a>Возвращаемое значение  
  Возвращает значение true, если операция выполнена успешно; в противном случае — значение false.  
   
-##  <a name="getdefaultdacl"></a>CAccessToken::GetDefaultDacl  
+##  <a name="getdefaultdacl"></a>  CAccessToken::GetDefaultDacl  
  Вызовите этот метод для возврата `CAccessToken` объекта по умолчанию DACL.  
   
 ```
@@ -441,7 +442,7 @@ bool GetDefaultDacl(CDacl* pDacl) const throw(...);
 ### <a name="return-value"></a>Возвращаемое значение  
  Возвращает значение true, если значение по умолчанию DACL было восстановленный, и false в противном случае.  
   
-##  <a name="geteffectivetoken"></a>CAccessToken::GetEffectiveToken  
+##  <a name="geteffectivetoken"></a>  CAccessToken::GetEffectiveToken  
  Этот метод вызывается для получения `CAccessToken` равное маркер доступа, применяемые для текущего потока.  
   
 ```
@@ -455,7 +456,7 @@ bool GetEffectiveToken(DWORD dwDesiredAccess) throw();
 ### <a name="return-value"></a>Возвращаемое значение  
  Возвращает значение true, если операция выполнена успешно; в противном случае — значение false.  
   
-##  <a name="getgroups"></a>CAccessToken::GetGroups  
+##  <a name="getgroups"></a>  CAccessToken::GetGroups  
  Вызовите этот метод для возврата `CAccessToken` объекта маркера групп.  
   
 ```
@@ -469,7 +470,7 @@ bool GetGroups(CTokenGroups* pGroups) const throw(...);
 ### <a name="return-value"></a>Возвращаемое значение  
  Возвращает значение true, если операция выполнена успешно; в противном случае — значение false.  
   
-##  <a name="gethandle"></a>CAccessToken::GetHandle  
+##  <a name="gethandle"></a>  CAccessToken::GetHandle  
  Этот метод используется для получения дескриптора в маркер доступа.  
   
 ```
@@ -479,7 +480,7 @@ HANDLE GetHandle() const throw();
 ### <a name="return-value"></a>Возвращаемое значение  
  Возвращает дескриптор `CAccessToken` объекта маркера доступа.  
   
-##  <a name="getimpersonationlevel"></a>CAccessToken::GetImpersonationLevel  
+##  <a name="getimpersonationlevel"></a>  CAccessToken::GetImpersonationLevel  
  Этот метод используется для получения из токена доступа уровень олицетворения.  
   
 ```
@@ -494,7 +495,7 @@ bool GetImpersonationLevel(
 ### <a name="return-value"></a>Возвращаемое значение  
  Возвращает значение true, если операция выполнена успешно; в противном случае — значение false.  
   
-##  <a name="getlogonsessionid"></a>CAccessToken::GetLogonSessionId  
+##  <a name="getlogonsessionid"></a>  CAccessToken::GetLogonSessionId  
  Вызовите этот метод, чтобы получить идентификатор сеанса входа в систему, связанных с `CAccessToken` объекта.  
   
 ```
@@ -511,7 +512,7 @@ bool GetLogonSessionId(LUID* pluid) const throw(...);
 ### <a name="remarks"></a>Примечания  
  В отладочных построениях, произойдет ошибка утверждения, если `pluid` является недопустимым значением.  
   
-##  <a name="getlogonsid"></a>CAccessToken::GetLogonSid  
+##  <a name="getlogonsid"></a>  CAccessToken::GetLogonSid  
  Этот метод вызывается для получения идентификатора безопасности входа в систему, связанных с `CAccessToken` объекта.  
   
 ```
@@ -528,7 +529,7 @@ bool GetLogonSid(CSid* pSid) const throw(...);
 ### <a name="remarks"></a>Примечания  
  В отладочных построениях, произойдет ошибка утверждения, если *pSid* не является допустимым значением.  
   
-##  <a name="getowner"></a>CAccessToken::GetOwner  
+##  <a name="getowner"></a>  CAccessToken::GetOwner  
  Этот метод вызывается для получения владельца, связанного с `CAccessToken` объекта.  
   
 ```
@@ -545,7 +546,7 @@ bool GetOwner(CSid* pSid) const throw(...);
 ### <a name="remarks"></a>Примечания  
  Владелец устанавливается по умолчанию на любые объекты, созданные, когда действует этот маркер доступа.  
   
-##  <a name="getprimarygroup"></a>CAccessToken::GetPrimaryGroup  
+##  <a name="getprimarygroup"></a>  CAccessToken::GetPrimaryGroup  
  Вызовите этот метод, чтобы получить основную группу, связанную с `CAccessToken` объекта.  
   
 ```
@@ -562,7 +563,7 @@ bool GetPrimaryGroup(CSid* pSid) const throw(...);
 ### <a name="remarks"></a>Примечания  
  Группы устанавливается по умолчанию на любые объекты, созданные, когда действует этот маркер доступа.  
   
-##  <a name="getprivileges"></a>CAccessToken::GetPrivileges  
+##  <a name="getprivileges"></a>  CAccessToken::GetPrivileges  
  Этот метод получает права доступа, связанные с `CAccessToken` объекта.  
   
 ```
@@ -576,7 +577,7 @@ bool GetPrivileges(CTokenPrivileges* pPrivileges) const throw(...);
 ### <a name="return-value"></a>Возвращаемое значение  
  Возвращает значение true, если операция выполнена успешно; в противном случае — значение false.  
   
-##  <a name="getprocesstoken"></a>CAccessToken::GetProcessToken  
+##  <a name="getprocesstoken"></a>  CAccessToken::GetProcessToken  
  Этот метод вызывается для инициализации `CAccessToken` с маркером доступа из указанного процесса.  
   
 ```
@@ -596,7 +597,7 @@ bool GetProcessToken(DWORD dwDesiredAccess, HANDLE hProcess = NULL) throw();
 ### <a name="remarks"></a>Примечания  
  Вызовы [OpenProcessToken](http://msdn.microsoft.com/library/aa379295\(vs.85\).aspx) функции Win32.  
   
-##  <a name="getprofile"></a>CAccessToken::GetProfile  
+##  <a name="getprofile"></a>  CAccessToken::GetProfile  
  Вызовите этот метод, чтобы получить маркер, указывающий на профиль пользователя, связанный с `CAccessToken` объекта.  
   
 ```
@@ -606,7 +607,7 @@ HANDLE GetProfile() const throw();
 ### <a name="return-value"></a>Возвращаемое значение  
  Возвращает дескриптор, указывающий профиль пользователя, или значение NULL, если профиль не существует.  
   
-##  <a name="getsource"></a>CAccessToken::GetSource  
+##  <a name="getsource"></a>  CAccessToken::GetSource  
  Этот метод вызывается для получения источника `CAccessToken` объекта.  
   
 ```
@@ -620,7 +621,7 @@ bool GetSource(TOKEN_SOURCE* pSource) const throw(...);
 ### <a name="return-value"></a>Возвращаемое значение  
  Возвращает значение true, если операция выполнена успешно; в противном случае — значение false.  
   
-##  <a name="getstatistics"></a>CAccessToken::GetStatistics  
+##  <a name="getstatistics"></a>  CAccessToken::GetStatistics  
  Этот метод вызывается для получения сведений, связанных с `CAccessToken` объекта.  
   
 ```
@@ -634,7 +635,7 @@ bool GetStatistics(TOKEN_STATISTICS* pStatistics) const throw(...);
 ### <a name="return-value"></a>Возвращаемое значение  
  Возвращает значение true, если операция выполнена успешно; в противном случае — значение false.  
   
-##  <a name="getterminalservicessessionid"></a>CAccessToken::GetTerminalServicesSessionId  
+##  <a name="getterminalservicessessionid"></a>  CAccessToken::GetTerminalServicesSessionId  
  Вызовите этот метод, чтобы получить идентификатор сеанса служб терминалов, связанный с `CAccessToken` объекта.  
   
 ```
@@ -648,7 +649,7 @@ bool GetTerminalServicesSessionId(DWORD* pdwSessionId) const throw(...);
 ### <a name="return-value"></a>Возвращаемое значение  
  Возвращает значение true, если операция выполнена успешно; в противном случае — значение false.  
   
-##  <a name="getthreadtoken"></a>CAccessToken::GetThreadToken  
+##  <a name="getthreadtoken"></a>  CAccessToken::GetThreadToken  
  Этот метод вызывается для инициализации `CAccessToken` с маркером из данного потока.  
   
 ```
@@ -673,7 +674,7 @@ bool GetThreadToken(
 ### <a name="return-value"></a>Возвращаемое значение  
  Возвращает значение true, если операция выполнена успешно; в противном случае — значение false.  
   
-##  <a name="gettokenid"></a>CAccessToken::GetTokenId  
+##  <a name="gettokenid"></a>  CAccessToken::GetTokenId  
  Этот метод вызывается для получения маркера идентификатор, связанный с `CAccessToken` объекта.  
   
 ```
@@ -687,7 +688,7 @@ bool GetTokenId(LUID* pluid) const throw(...);
 ### <a name="return-value"></a>Возвращаемое значение  
  Возвращает значение true, если операция выполнена успешно; в противном случае — значение false.  
   
-##  <a name="gettype"></a>CAccessToken::GetType  
+##  <a name="gettype"></a>  CAccessToken::GetType  
  Этот метод вызывается для получения токена типа `CAccessToken` объекта.  
   
 ```
@@ -704,7 +705,7 @@ bool GetType(TOKEN_TYPE* pType) const throw(...);
 ### <a name="remarks"></a>Примечания  
  **TOKEN_TYPE** тип перечисления, который содержит значения, которые отличаются для разных основной маркер и маркер олицетворения.  
   
-##  <a name="getuser"></a>CAccessToken::GetUser  
+##  <a name="getuser"></a>  CAccessToken::GetUser  
  Этот метод вызывается для идентификации пользователя, связанного с `CAccessToken` объекта.  
   
 ```
@@ -718,7 +719,7 @@ bool GetUser(CSid* pSid) const throw(...);
 ### <a name="return-value"></a>Возвращаемое значение  
  Возвращает значение true, если операция выполнена успешно; в противном случае — значение false.  
   
-##  <a name="hkeycurrentuser"></a>CAccessToken::HKeyCurrentUser  
+##  <a name="hkeycurrentuser"></a>  CAccessToken::HKeyCurrentUser  
  Вызовите этот метод, чтобы получить маркер, указывающий на профиль пользователя, связанный с `CAccessToken` объекта.  
   
 ```
@@ -728,7 +729,7 @@ HKEY HKeyCurrentUser() const throw();
 ### <a name="return-value"></a>Возвращаемое значение  
  Возвращает дескриптор, указывающий профиль пользователя, или значение NULL, если профиль не существует.  
   
-##  <a name="impersonate"></a>CAccessToken::Impersonate  
+##  <a name="impersonate"></a>  CAccessToken::Impersonate  
  Вызовите этот метод, чтобы назначить олицетворение `CAccessToken` потоку.  
   
 ```
@@ -747,7 +748,7 @@ bool Impersonate(HANDLE hThread = NULL) const throw(...);
   
  [CAutoRevertImpersonation класса](../../atl/reference/cautorevertimpersonation-class.md) можно использовать для автоматической отмены маркера олицетворенного доступа.  
   
-##  <a name="impersonateloggedonuser"></a>CAccessToken::ImpersonateLoggedOnUser  
+##  <a name="impersonateloggedonuser"></a>  CAccessToken::ImpersonateLoggedOnUser  
  Этот метод позволяет вызывающему потоку олицетворять контекст безопасности пользователя, выполнившего вход.  
   
 ```
@@ -762,7 +763,7 @@ bool ImpersonateLoggedOnUser() const throw(...);
 > [!IMPORTANT]
 >  Если для какой-либо причине не удается вызвать функцию олицетворения, клиент не олицетворяется и запрос клиента выполняется в контексте безопасности процесса, из которого был выполнен вызов. Если процесс выполняется как высоко привилегированной учетной записи, или как член группы администраторов, пользователь может выполнять действия он или она бы в противном случае быть запрещено. Таким образом возвращаемое значение для этой функции всегда быть подтверждено.  
   
-##  <a name="istokenrestricted"></a>CAccessToken::IsTokenRestricted  
+##  <a name="istokenrestricted"></a>  CAccessToken::IsTokenRestricted  
  Этот метод вызывается для проверки, если `CAccessToken` объект содержит список ограниченных идентификаторов безопасности.  
   
 ```
@@ -772,7 +773,7 @@ bool IsTokenRestricted() const throw();
 ### <a name="return-value"></a>Возвращаемое значение  
  Возвращает значение true, если объект содержит список ограничивающих SID, значение false, если нет ограничивающих идентификаторов, или если метод завершается ошибкой.  
   
-##  <a name="loaduserprofile"></a>CAccessToken::LoadUserProfile  
+##  <a name="loaduserprofile"></a>  CAccessToken::LoadUserProfile  
  Вызовите этот метод, чтобы загрузить профиль пользователя, связанный с `CAccessToken` объекта.  
   
 ```
@@ -785,7 +786,7 @@ bool LoadUserProfile() throw(...);
 ### <a name="remarks"></a>Примечания  
  В отладочных построениях, произойдет ошибка утверждения, если `CAccessToken` не содержит допустимый токен, или если профиль пользователя уже существует.  
   
-##  <a name="logonuser"></a>CAccessToken::LogonUser  
+##  <a name="logonuser"></a>  CAccessToken::LogonUser  
  Этот метод используется для создания сеанса входа в систему для пользователя, связанного с заданными учетными данными.  
   
 ```
@@ -819,7 +820,7 @@ bool LogonUser(
 ### <a name="remarks"></a>Примечания  
  Доступ, маркер, полученный из вход в систему будет связан с `CAccessToken`. Для успешного выполнения этого метода `CAccessToken` должен храниться в объекте SE_TCB_NAME правами, идентификации держателя как часть доверенного компьютера базового. В разделе [LogonUser](http://msdn.microsoft.com/library/windows/desktop/aa378184) более подробные сведения о необходимых прав.  
   
-##  <a name="opencomclienttoken"></a>CAccessToken::OpenCOMClientToken  
+##  <a name="opencomclienttoken"></a>  CAccessToken::OpenCOMClientToken  
  Вызов этого метода в обработке вызов от клиента для инициализации COM-сервера `CAccessToken` с маркером доступа из COM-клиент.  
   
 ```
@@ -847,7 +848,7 @@ bool OpenCOMClientToken(
 ### <a name="remarks"></a>Примечания  
  [Класса CAutoRevertImpersonation](../../atl/reference/cautorevertimpersonation-class.md) можно использовать для автоматической отмены олицетворенного доступа токены, созданные, задав `bImpersonate` флаг *true*.  
   
-##  <a name="opennamedpipeclienttoken"></a>CAccessToken::OpenNamedPipeClientToken  
+##  <a name="opennamedpipeclienttoken"></a>  CAccessToken::OpenNamedPipeClientToken  
  Вызовите этот метод из на сервере запросов на получение по именованному каналу для инициализации `CAccessToken` с маркером доступа от клиента.  
   
 ```
@@ -879,7 +880,7 @@ bool OpenNamedPipeClientToken(
 ### <a name="remarks"></a>Примечания  
  [Класса CAutoRevertImpersonation](../../atl/reference/cautorevertimpersonation-class.md) можно использовать для автоматической отмены олицетворенного доступа токены, созданные, задав `bImpersonate` флаг *true*.  
   
-##  <a name="openrpcclienttoken"></a>CAccessToken::OpenRPCClientToken  
+##  <a name="openrpcclienttoken"></a>  CAccessToken::OpenRPCClientToken  
  Вызовите этот метод из сервера обработки вызовов из клиента RPC для инициализации `CAccessToken` с маркером доступа от клиента.  
   
 ```
@@ -911,7 +912,7 @@ bool OpenRPCClientToken(
 ### <a name="remarks"></a>Примечания  
  [Класса CAutoRevertImpersonation](../../atl/reference/cautorevertimpersonation-class.md) можно использовать для автоматической отмены олицетворенного доступа токены, созданные, задав `bImpersonate` флаг *true*.  
   
-##  <a name="openthreadtoken"></a>CAccessToken::OpenThreadToken  
+##  <a name="openthreadtoken"></a>  CAccessToken::OpenThreadToken  
  Вызовите этот метод для настройки уровня олицетворения, а затем инициализировать `CAccessToken` с маркером из данного потока.  
   
 ```
@@ -945,7 +946,7 @@ bool OpenThreadToken(
   
  [Класса CAutoRevertImpersonation](../../atl/reference/cautorevertimpersonation-class.md) можно использовать для автоматической отмены олицетворенного доступа токены, созданные, задав `bImpersonate` флаг *true*.  
   
-##  <a name="privilegecheck"></a>CAccessToken::PrivilegeCheck  
+##  <a name="privilegecheck"></a>  CAccessToken::PrivilegeCheck  
  Вызовите этот метод, чтобы определить, включены ли в указанный набор прав, **CAccessToken** объекта.  
   
 ```
@@ -967,7 +968,7 @@ bool PrivilegeCheck(
 ### <a name="remarks"></a>Примечания  
  Когда `PrivilegeCheck` возвращает, **атрибуты** каждого элемента [подробности](http://msdn.microsoft.com/library/windows/desktop/aa379263) структуры задано значение SE_PRIVILEGE_USED_FOR_ACCESS, если включен соответствующий прав доступа. Этот метод вызывает метод [PrivilegeCheck](http://msdn.microsoft.com/library/windows/desktop/aa379304) функции Win32.  
   
-##  <a name="revert"></a>CAccessToken::Revert  
+##  <a name="revert"></a>  CAccessToken::Revert  
  Вызовите этот метод, чтобы остановить поток из используется маркер олицетворения.  
   
 ```
@@ -984,7 +985,7 @@ bool Revert(HANDLE hThread = NULL) const throw();
 ### <a name="remarks"></a>Примечания  
  Изменения версии олицетворения токенов может производиться автоматически с [CAutoRevertImpersonation класса](../../atl/reference/cautorevertimpersonation-class.md).  
   
-##  <a name="setdefaultdacl"></a>CAccessToken::SetDefaultDacl  
+##  <a name="setdefaultdacl"></a>  CAccessToken::SetDefaultDacl  
  Этот метод вызывается для установки по умолчанию список DACL `CAccessToken` объекта.  
   
 ```
@@ -1001,7 +1002,7 @@ bool SetDefaultDacl(const CDacl& rDacl) throw(...);
 ### <a name="remarks"></a>Примечания  
  Значение по умолчанию DACL — DACL, который используется по умолчанию, когда создаются новые объекты с маркером доступа в силе.  
   
-##  <a name="setowner"></a>CAccessToken::SetOwner  
+##  <a name="setowner"></a>  CAccessToken::SetOwner  
  Вызовите этот метод, чтобы задать владельца `CAccessToken` объекта.  
   
 ```
@@ -1018,7 +1019,7 @@ bool SetOwner(const CSid& rSid) throw(...);
 ### <a name="remarks"></a>Примечания  
  Владелец является владельцем по умолчанию, используемый для новых объектов, создаваемых, когда действует этот маркер доступа.  
   
-##  <a name="setprimarygroup"></a>CAccessToken::SetPrimaryGroup  
+##  <a name="setprimarygroup"></a>  CAccessToken::SetPrimaryGroup  
  Вызовите этот метод для установки основной группы `CAccessToken` объекта.  
   
 ```

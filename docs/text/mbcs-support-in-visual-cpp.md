@@ -4,11 +4,14 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords: _mbcs
-dev_langs: C++
+f1_keywords:
+- _mbcs
+dev_langs:
+- C++
 helpviewer_keywords:
 - tools [C++], MBCS support
 - Asian languages [C++]
@@ -28,19 +31,20 @@ helpviewer_keywords:
 - Input Method Editor [C++]
 - MBCS [C++], enabling
 ms.assetid: 6179f6b7-bc61-4a48-9267-fb7951223e38
-caps.latest.revision: "7"
+caps.latest.revision: 
 author: ghogen
 ms.author: ghogen
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: bdc00509d8660d8111ff1b966b7a881a153cb6c3
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 92d0b737c0cfb894f87da61519f30224f6a12fc1
+ms.sourcegitcommit: a5916b48541f804a79891ff04e246628b5f9a24a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="mbcs-support-in-visual-c"></a>Поддержка многобайтовой кодировки MBCS в Visual C++
-При запуске в версии операционной системы Windows 2000 или Windows XP, система разработки Visual C++ (включая встроенный редактор исходного кода, отладчик и средства командной строки) многобайтовую кодировку за исключением окна памяти.  
+При запуске многобайтовую версию Windows системы разработки Visual C++ (включая средства командной строки, отладчик и редактор встроенной исходного кода), многобайтовую кодировку за исключением окна памяти.  
   
  Окно памяти не распознает байтов данных как символы в многобайтовой Кодировке, несмотря на то, что он может интерпретировать их как символы ANSI или Юникода. Символы ANSI всегда имеют размер 1 байт, а символы Юникода — 2 байта. С многобайтовой Кодировки символы могут быть 1 или 2 байта в размере и их интерпретацию зависит от того, какая кодовая страница уже используется. По этой причине трудно память-окно надежно выводить символы MBCS. Окно памяти не знает, какой байт является началом символа. Разработчик может просмотреть значения байта в окне памяти и поиска значения в таблицы, чтобы определить представление символа. Это возможно потому, что разработчику известно начальный адрес строки на основе исходного кода.  
   

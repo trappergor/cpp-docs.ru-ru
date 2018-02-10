@@ -4,7 +4,8 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
@@ -37,19 +38,22 @@ f1_keywords:
 - ATLSECURITY/ATL::CSecurityDesc::SetOwner
 - ATLSECURITY/ATL::CSecurityDesc::SetSacl
 - ATLSECURITY/ATL::CSecurityDesc::ToString
-dev_langs: C++
-helpviewer_keywords: CSecurityDesc class
+dev_langs:
+- C++
+helpviewer_keywords:
+- CSecurityDesc class
 ms.assetid: 3767a327-378f-4690-ba40-4d9f6a1f5ee4
-caps.latest.revision: "24"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: b199565221173d7664600f2869e079c2f1c95aae
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 64f286a02729a5fd39885a449056973381e52611
+ms.sourcegitcommit: a5916b48541f804a79891ff04e246628b5f9a24a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="csecuritydesc-class"></a>Класс CSecurityDesc
 Этот класс является оболочкой для **SECURITY_DESCRIPTOR** структуры.  
@@ -70,7 +74,7 @@ class CSecurityDesc
 |Имя|Описание:|  
 |----------|-----------------|  
 |[CSecurityDesc::CSecurityDesc](#csecuritydesc)|Конструктор.|  
-|[CSecurityDesc:: ~ CSecurityDesc](#dtor)|Деструктор|  
+|[CSecurityDesc::~CSecurityDesc](#dtor)|Деструктор|  
   
 ### <a name="public-methods"></a>Открытые методы  
   
@@ -120,7 +124,7 @@ class CSecurityDesc
 ## <a name="requirements"></a>Требования  
  **Заголовок:** atlsecurity.h  
   
-##  <a name="csecuritydesc"></a>CSecurityDesc::CSecurityDesc  
+##  <a name="csecuritydesc"></a>  CSecurityDesc::CSecurityDesc  
  Конструктор.  
   
 ```
@@ -136,7 +140,7 @@ CSecurityDesc(const SECURITY_DESCRIPTOR& rhs) throw(...);
 ### <a name="remarks"></a>Примечания  
  `CSecurityDesc` Можно при необходимости создать объект с помощью **SECURITY_DESCRIPTOR** структуры или ранее определенную `CSecurityDesc` объекта.  
   
-##  <a name="dtor"></a>CSecurityDesc:: ~ CSecurityDesc  
+##  <a name="dtor"></a>  CSecurityDesc::~CSecurityDesc  
  Деструктор  
   
 ```
@@ -146,7 +150,7 @@ virtual ~CSecurityDesc() throw();
 ### <a name="remarks"></a>Примечания  
  Деструктор освобождает все выделенные ресурсы.  
   
-##  <a name="fromstring"></a>CSecurityDesc::FromString  
+##  <a name="fromstring"></a>  CSecurityDesc::FromString  
  Преобразует формат строки дескриптора безопасности в дескриптор безопасности допустимый, режим работы.  
   
 ```
@@ -163,9 +167,9 @@ bool FromString(LPCTSTR pstr) throw(...);
 ### <a name="remarks"></a>Примечания  
  Строки могут быть созданы с помощью [CSecurityDesc::ToString](#tostring). Преобразование дескриптора безопасности в строку упрощает для хранения и передачи.  
   
- Этот метод доступен только в Windows 2000 и более поздних версий, так как он вызывает [ConvertStringSecurityDescriptorToSecurityDescriptor](http://msdn.microsoft.com/library/windows/desktop/aa376401).  
+ Этот метод вызывает метод [ConvertStringSecurityDescriptorToSecurityDescriptor](http://msdn.microsoft.com/library/windows/desktop/aa376401).  
   
-##  <a name="getcontrol"></a>CSecurityDesc::GetControl  
+##  <a name="getcontrol"></a>  CSecurityDesc::GetControl  
  Извлекает задать сведения из дескриптора безопасности.  
   
 ```
@@ -180,9 +184,9 @@ bool GetControl(SECURITY_DESCRIPTOR_CONTROL* psdc) const throw();
  Возвращает значение true, если метод выполнен успешно, значение false в случае неудачи.  
   
 ### <a name="remarks"></a>Примечания  
- Этот метод является только значимые при работе с Windows 2000 или более поздней версии, он вызывает [GetSecurityDescriptorControl](http://msdn.microsoft.com/library/windows/desktop/aa446647).  
+ Этот метод вызывает метод [GetSecurityDescriptorControl](http://msdn.microsoft.com/library/windows/desktop/aa446647).  
   
-##  <a name="getdacl"></a>CSecurityDesc::GetDacl  
+##  <a name="getdacl"></a>  CSecurityDesc::GetDacl  
  Извлекает сведения о списке (DACL) для управления доступом из дескриптора безопасности.  
   
 ```
@@ -205,7 +209,7 @@ bool GetDacl(
 ### <a name="return-value"></a>Возвращаемое значение  
  Возвращает значение true, если метод выполнен успешно, значение false в случае неудачи.  
   
-##  <a name="getgroup"></a>CSecurityDesc::GetGroup  
+##  <a name="getgroup"></a>  CSecurityDesc::GetGroup  
  Получает основную группу сведения из дескриптора безопасности.  
   
 ```
@@ -224,7 +228,7 @@ bool GetGroup(
 ### <a name="return-value"></a>Возвращаемое значение  
  Возвращает значение true, если метод выполнен успешно, значение false в случае неудачи.  
   
-##  <a name="getowner"></a>CSecurityDesc::GetOwner  
+##  <a name="getowner"></a>  CSecurityDesc::GetOwner  
  Извлекает владельца informaton из дескриптора безопасности.  
   
 ```
@@ -243,7 +247,7 @@ bool GetOwner(
 ### <a name="return-value"></a>Возвращаемое значение  
  Возвращает значение true, если метод выполнен успешно, значение false в случае неудачи.  
   
-##  <a name="getpsecurity_descriptor"></a>CSecurityDesc::GetPSECURITY_DESCRIPTOR  
+##  <a name="getpsecurity_descriptor"></a>  CSecurityDesc::GetPSECURITY_DESCRIPTOR  
  Возвращает указатель на **SECURITY_DESCRIPTOR** структуры.  
   
 ```
@@ -253,7 +257,7 @@ const SECURITY_DESCRIPTOR* GetPSECURITY_DESCRIPTOR() const throw();
 ### <a name="return-value"></a>Возвращаемое значение  
  Возвращает указатель на [SECURITY_DESCRIPTOR](http://msdn.microsoft.com/library/windows/desktop/aa379561) структуры.  
   
-##  <a name="getsacl"></a>CSecurityDesc::GetSacl  
+##  <a name="getsacl"></a>  CSecurityDesc::GetSacl  
  Извлекает сведения о системе управления доступом список управления ДОСТУПОМ из дескриптора безопасности.  
   
 ```
@@ -276,7 +280,7 @@ bool GetSacl(
 ### <a name="return-value"></a>Возвращаемое значение  
  Возвращает значение true, если метод выполнен успешно, значение false в случае неудачи.  
   
-##  <a name="isdaclautoinherited"></a>CSecurityDesc::IsDaclAutoInherited  
+##  <a name="isdaclautoinherited"></a>  CSecurityDesc::IsDaclAutoInherited  
  Определяет, если список управления доступом (DACL) настроена для поддержки автоматического распространения.  
   
 ```
@@ -289,7 +293,7 @@ bool IsDaclAutoInherited() const throw();
 ### <a name="remarks"></a>Примечания  
  Система устанавливает этот бит, при выполнении алгоритм автоматического наследования для объекта и его имеющиеся дочерние объекты.  
   
-##  <a name="isdacldefaulted"></a>CSecurityDesc::IsDaclDefaulted  
+##  <a name="isdacldefaulted"></a>  CSecurityDesc::IsDaclDefaulted  
  Определяет, настроена ли дескриптор безопасности по умолчанию список управления доступом (DACL).  
   
 ```
@@ -306,7 +310,7 @@ bool IsDaclDefaulted() const throw();
   
  Чтобы установить этот флаг, используйте [CSecurityDesc::SetDacl](#setdacl) метод.  
   
-##  <a name="isdaclpresent"></a>CSecurityDesc::IsDaclPresent  
+##  <a name="isdaclpresent"></a>  CSecurityDesc::IsDaclPresent  
  Определяет, если дескриптор безопасности содержит список управления доступом (DACL).  
   
 ```
@@ -323,7 +327,7 @@ bool IsDaclPresent() const throw();
   
  Чтобы установить этот флаг, используйте [CSecurityDesc::SetDacl](#setdacl) метод.  
   
-##  <a name="isdaclprotected"></a>CSecurityDesc::IsDaclProtected  
+##  <a name="isdaclprotected"></a>  CSecurityDesc::IsDaclProtected  
  Определяет, если список управления доступом (DACL) настроен для предотвращения изменений.  
   
 ```
@@ -336,9 +340,9 @@ bool IsDaclProtected() const throw();
 ### <a name="remarks"></a>Примечания  
  Чтобы установить этот флаг, используйте [CSecurityDesc::SetDacl](#setdacl) метод.  
   
- Этот метод применяется только для Windows 2000 или более поздней версии, как автоматическое распространение наследуемых ACE поддерживает только Windows 2000.  
+ Этот метод поддерживает автоматическое распространение наследуемых ACE.  
   
-##  <a name="isgroupdefaulted"></a>CSecurityDesc::IsGroupDefaulted  
+##  <a name="isgroupdefaulted"></a>  CSecurityDesc::IsGroupDefaulted  
  Определяет, если идентификатор безопасности группы дескриптора безопасности (SID) был установлен по умолчанию.  
   
 ```
@@ -351,7 +355,7 @@ bool IsGroupDefaulted() const throw();
 ### <a name="remarks"></a>Примечания  
  Чтобы установить этот флаг, используйте [CSecurityDesc::SetGroup](#setgroup) метод.  
   
-##  <a name="isownerdefaulted"></a>CSecurityDesc::IsOwnerDefaulted  
+##  <a name="isownerdefaulted"></a>  CSecurityDesc::IsOwnerDefaulted  
  Определяет, если идентификатора безопасности (SID) владельца дескриптора безопасности был установлен по умолчанию.  
   
 ```
@@ -364,7 +368,7 @@ bool IsOwnerDefaulted() const throw();
 ### <a name="remarks"></a>Примечания  
  Чтобы установить этот флаг, используйте [CSecurityDesc::SetOwner](#setowner) метод.  
   
-##  <a name="issaclautoinherited"></a>CSecurityDesc::IsSaclAutoInherited  
+##  <a name="issaclautoinherited"></a>  CSecurityDesc::IsSaclAutoInherited  
  Определяет, если системного списка управления доступом (SACL) настроена для поддержки автоматического распространения.  
   
 ```
@@ -377,7 +381,7 @@ bool IsSaclAutoInherited() const throw();
 ### <a name="remarks"></a>Примечания  
  Система устанавливает этот бит, при выполнении алгоритм автоматического наследования для объекта и его имеющиеся дочерние объекты.  
   
-##  <a name="issacldefaulted"></a>CSecurityDesc::IsSaclDefaulted  
+##  <a name="issacldefaulted"></a>  CSecurityDesc::IsSaclDefaulted  
  Определяет, настроена ли дескриптор безопасности по умолчанию системный список управления доступом (SACL).  
   
 ```
@@ -392,7 +396,7 @@ bool IsSaclDefaulted() const throw();
   
  Чтобы установить этот флаг, используйте [CSecurityDesc::SetSacl](#setsacl) метод.  
   
-##  <a name="issaclpresent"></a>CSecurityDesc::IsSaclPresent  
+##  <a name="issaclpresent"></a>  CSecurityDesc::IsSaclPresent  
  Определяет, содержит ли дескриптор безопасности системный список управления доступом (SACL).  
   
 ```
@@ -405,7 +409,7 @@ bool IsSaclPresent() const throw();
 ### <a name="remarks"></a>Примечания  
  Чтобы установить этот флаг, используйте [CSecurityDesc::SetSacl](#setsacl) метод.  
   
-##  <a name="issaclprotected"></a>CSecurityDesc::IsSaclProtected  
+##  <a name="issaclprotected"></a>  CSecurityDesc::IsSaclProtected  
  Определяет, если в целях предотвращения изменений настроена системного списка управления доступом (SACL).  
   
 ```
@@ -418,9 +422,9 @@ bool IsSaclProtected() const throw();
 ### <a name="remarks"></a>Примечания  
  Чтобы установить этот флаг, используйте [CSecurityDesc::SetSacl](#setsacl) метод.  
   
- Этот метод применяется только для Windows 2000 или более поздней версии, как автоматическое распространение наследуемых ACE поддерживает только Windows 2000.  
+ Этот метод поддерживает автоматическое распространение наследуемых ACE.  
   
-##  <a name="isselfrelative"></a>CSecurityDesc::IsSelfRelative  
+##  <a name="isselfrelative"></a>  CSecurityDesc::IsSelfRelative  
  Определяет, является ли дескриптор безопасности в относительный формат.  
   
 ```
@@ -430,7 +434,7 @@ bool IsSelfRelative() const throw();
 ### <a name="return-value"></a>Возвращаемое значение  
  Возвращает значение true, если дескриптор безопасности в относительном формате со всеми данными безопасности в непрерывный блок памяти. Возвращает значение false, если дескриптор безопасности в абсолютном формате. Дополнительные сведения см. в разделе [Absolute и дескрипторы безопасности Self-Relative](http://msdn.microsoft.com/library/windows/desktop/aa374807).  
   
-##  <a name="makeabsolute"></a>CSecurityDesc::MakeAbsolute  
+##  <a name="makeabsolute"></a>  CSecurityDesc::MakeAbsolute  
  Вызовите этот метод, чтобы преобразовать дескриптор безопасности в абсолютном формате.  
   
 ```
@@ -443,7 +447,7 @@ bool MakeAbsolute() throw(...);
 ### <a name="remarks"></a>Примечания  
  Дескриптор безопасности в абсолютном формате содержит ссылки на сведения о нем, а не сами сведения. Дескриптор безопасности в относительном формате сведения в непрерывный блок памяти. В дескрипторе безопасности относительный **SECURITY_DESCRIPTOR** структуры всегда начинается сведения, но дескриптор безопасности и другие компоненты могут иметь структуру, в любом порядке. Вместо адреса памяти, компоненты дескриптора безопасности в относительный идентифицируются смещения от начала дескриптор безопасности. Этот формат удобно в тех случаях, когда дескриптор безопасности должна хранящихся на диске или передаются с помощью протокола связи. Дополнительные сведения см. в разделе [Absolute и дескрипторы безопасности Self-Relative](http://msdn.microsoft.com/library/windows/desktop/aa374807).  
   
-##  <a name="makeselfrelative"></a>CSecurityDesc::MakeSelfRelative  
+##  <a name="makeselfrelative"></a>  CSecurityDesc::MakeSelfRelative  
  Вызовите этот метод, чтобы преобразовать дескриптор безопасности в относительный формат.  
   
 ```
@@ -478,7 +482,7 @@ CSecurityDesc& operator= (const CSecurityDesc& rhs) throw(...);
 operator const SECURITY_DESCRIPTOR *() const throw();
 ```  
   
-##  <a name="setcontrol"></a>CSecurityDesc::SetControl  
+##  <a name="setcontrol"></a>  CSecurityDesc::SetControl  
  Устанавливает управляющие биты дескриптора безопасности.  
   
 ```
@@ -498,9 +502,9 @@ bool SetControl(
  Возвращает значение true, если операция выполнена успешно; в противном случае — значение false.  
   
 ### <a name="remarks"></a>Примечания  
- Этот метод доступен только в Windows 2000 и более поздних версий, поскольку он задает [SetSecurityDescriptorControl](http://msdn.microsoft.com/library/windows/desktop/aa379582\(v=vs.85\).aspx).  
+ Этот метод вызывает метод [SetSecurityDescriptorControl](http://msdn.microsoft.com/library/windows/desktop/aa379582\(v=vs.85\).aspx).  
   
-##  <a name="setdacl"></a>CSecurityDesc::SetDacl  
+##  <a name="setdacl"></a>  CSecurityDesc::SetDacl  
  Задает сведения в списке управления доступом (DACL). Если список DACL уже существует в дескрипторе безопасности, он заменяется.  
   
 ```
@@ -514,7 +518,7 @@ inline void SetDacl(
 ```  
   
 ### <a name="parameters"></a>Параметры  
- *Список DACL*  
+ *Dacl*  
  Ссылка на `CDacl` объект, указывающий DACL дескриптора безопасности. Этот параметр не должен иметь значение NULL. Чтобы задать НУЛЕВОЙ DACL в дескрипторе безопасности, следует использовать первую форму метода с `bPresent` значение false.  
   
  `bPresent`  
@@ -529,7 +533,7 @@ inline void SetDacl(
 ### <a name="remarks"></a>Примечания  
  Имеется существенное различие между пустой и несуществующей DACL. Если список DACL пуст, он содержит нет записей управления доступом и явным образом предоставлен нет прав доступа. В результате неявно запрещается доступ к объекту. Если у объекта имеется списки DACL, с другой стороны, без защиты, назначенные объекту, и запрос на доступ предоставляется.  
   
-##  <a name="setgroup"></a>CSecurityDesc::SetGroup  
+##  <a name="setgroup"></a>  CSecurityDesc::SetGroup  
  Задает основную группу информацию абсолютном формате дескриптора безопасности, заменяя любые основную группу данные уже присутствует.  
   
 ```
@@ -546,7 +550,7 @@ bool SetGroup(const CSid& Sid, bool bDefaulted = false) throw(...);
 ### <a name="return-value"></a>Возвращаемое значение  
  Возвращает значение true, если операция выполнена успешно; в противном случае — значение false.  
   
-##  <a name="setowner"></a>CSecurityDesc::SetOwner  
+##  <a name="setowner"></a>  CSecurityDesc::SetOwner  
  Задает сведения о владельце абсолютном формате дескриптора безопасности. Он заменяет любые сведения о владельце уже существует.  
   
 ```
@@ -563,7 +567,7 @@ bool SetOwner(const CSid& Sid, bool bDefaulted = false) throw(...);
 ### <a name="return-value"></a>Возвращаемое значение  
  Возвращает значение true, если операция выполнена успешно; в противном случае — значение false.  
   
-##  <a name="setsacl"></a>CSecurityDesc::SetSacl  
+##  <a name="setsacl"></a>  CSecurityDesc::SetSacl  
  Задает сведения в системный список управления доступом (SACL). Если список SACL в дескрипторе безопасности установлен, он заменяется.  
   
 ```
@@ -571,7 +575,7 @@ bool SetSacl(const CSacl& Sacl, bool bDefaulted = false) throw(...);
 ```  
   
 ### <a name="parameters"></a>Параметры  
- *Системный список управления доступом*  
+ *Sacl*  
  Указатель на `CSacl` объект, указывающий системного списка управления ДОСТУПОМ для дескриптора безопасности. Этот параметр не должен иметь значение NULL и должен быть объектом CSacl. В отличие от DACL нет никаких различий между NULL и пустые системного списка управления ДОСТУПОМ, как объекты SACL определяют права доступа, только аудит сведения.  
   
  `bDefaulted`  
@@ -580,7 +584,7 @@ bool SetSacl(const CSacl& Sacl, bool bDefaulted = false) throw(...);
 ### <a name="return-value"></a>Возвращаемое значение  
  Возвращает значение true, если операция выполнена успешно; в противном случае — значение false.  
   
-##  <a name="tostring"></a>CSecurityDesc::ToString  
+##  <a name="tostring"></a>  CSecurityDesc::ToString  
  Преобразует формат строки дескриптора безопасности.  
   
 ```
@@ -616,7 +620,7 @@ bool ToString(
   
  Если список DACL имеет значение NULL, и бит управления SE_DACL_PRESENT не установлен в дескрипторе безопасности ввода, результирующие строки дескриптора безопасности не установлен компонент D:. В разделе [формат строки дескриптора безопасности](http://msdn.microsoft.com/library/windows/desktop/aa379570) для получения дополнительных сведений.  
   
- Этот метод доступен только в Windows 2000 и более поздней версии, как он вызывает [ConvertStringSecurityDescriptorToSecurityDescriptor](http://msdn.microsoft.com/library/windows/desktop/aa376401).  
+ Этот метод вызывает метод [ConvertStringSecurityDescriptorToSecurityDescriptor](http://msdn.microsoft.com/library/windows/desktop/aa376401).  
   
 ## <a name="see-also"></a>См. также  
  [Образец безопасности](../../visual-cpp-samples.md)   

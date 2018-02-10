@@ -4,23 +4,28 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: reference
-f1_keywords: vc.codewiz.class.atl.asp.options
-dev_langs: C++
-helpviewer_keywords: ATL Active Server Page Component Wizard, options
+f1_keywords:
+- vc.codewiz.class.atl.asp.options
+dev_langs:
+- C++
+helpviewer_keywords:
+- ATL Active Server Page Component Wizard, options
 ms.assetid: 54f34e26-53c7-4456-9675-cb86e356bde0
-caps.latest.revision: "12"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 6564b340458ae7e9a8e137d2338ba68b3e729a0f
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 199092acf4d26303a0d83d4885c3c7e3999bf0c4
+ms.sourcegitcommit: a5916b48541f804a79891ff04e246628b5f9a24a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="options-atl-active-server-page-component-wizard"></a>Параметры, мастер компонентов страницы активного сервера ATL
 Эта страница мастер компонентов ATL Active Server страницы для повышения эффективности и поддержки ошибок для объекта.  
@@ -36,9 +41,9 @@ ms.lasthandoff: 12/21/2017
 |------------|-----------------|  
 |`Single`|Указывает, что объект использует однопотоковую модель. В одном потоковую модель объекта всегда выполняется в основном потоке COM. В разделе [однопотокового подразделения](http://msdn.microsoft.com/library/windows/desktop/ms680112) и [InprocServer32](http://msdn.microsoft.com/library/windows/desktop/ms682390) для получения дополнительной информации.|  
 |**Подразделение**|Указывает, что объект использует потоковое. Подразделения эквивалентно один поток. Каждый объект компонента с потоковым подразделением назначается подразделение для его потока, в течение жизненного цикла объекта. Тем не менее можно использовать несколько потоков для нескольких объектов. Каждое подразделение привязано к конкретному потоку и имеет конвейер сообщений Windows (по умолчанию).<br /><br /> В разделе [однопотокового подразделения](http://msdn.microsoft.com/library/windows/desktop/ms680112) для получения дополнительной информации.|  
-|**Оба**|Указывает, что объект может использовать подразделениях или свободной потоковой модели в зависимости от создаваемого потока он создается.|  
+|**Both**|Указывает, что объект может использовать подразделениях или свободной потоковой модели в зависимости от создаваемого потока он создается.|  
 |**Бесплатно**|Указывает, что объект использует свободной потоковой модели. Свободной потоковой модели соответствует модели многопотокового подразделения. В разделе [многопотоковых подразделений](http://msdn.microsoft.com/library/windows/desktop/ms693421) для получения дополнительной информации.|  
-|**Нейтральная** (только для Windows 2000)|Указывает, что объект следует правилам для многопотоковых подразделений, но он может выполнять на любой поток.|  
+|**Neutral**|Указывает, что объект следует правилам для многопотоковых подразделений, но он может выполнять на любой поток.|  
   
  **Статистическая обработка**  
  Указывает, использует ли объект [статистической обработки](http://msdn.microsoft.com/library/windows/desktop/ms686558). Агрегатный объект выбирает, какие интерфейсы предоставлять клиентам, и интерфейсы предоставляются, как если бы агрегатного объекта реализовывать их. Клиенты объекта-агрегата обмениваться данными только с Агрегатный объект.  
