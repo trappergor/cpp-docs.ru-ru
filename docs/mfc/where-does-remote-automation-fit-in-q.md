@@ -4,22 +4,26 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs: C++
-helpviewer_keywords: Remote Automation, DCOM
+dev_langs:
+- C++
+helpviewer_keywords:
+- Remote Automation, DCOM
 ms.assetid: 4c4c8176-cfc0-44f7-bc87-b690f069ad2f
-caps.latest.revision: "10"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.workload: cplusplus
+ms.workload:
+- cplusplus
 ms.openlocfilehash: 9ad6eef0bbaad7860e7f4310ce283efe18c668eb
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.sourcegitcommit: fa7a6dccddce3747389c91277a53e296f905305c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="where-does-remote-automation-fit-in"></a>Использование удаленной автоматизации
 DCOM была выпущена в 1996 году и доступен в 32-разрядных и 64-разрядных платформах. Группе разработчиков Visual Basic корпорации Майкрософт всегда наблюдается Visual Basic с помощью модели автоматизации, чтобы разрешить его компоненты для взаимодействия. Отсутствие распределенных версии серьезно ограничено использование этих возможностей в корпоративных средах, так что решил исследовать свой собственный набор компонентов удаленного взаимодействия для автоматизации создания группой разработки Visual Basic 4.0 Enterprise Edition части OLE и COM. Очевидно основной целью было убедитесь, что результат должен быть совместим с и может быть заменен DCOM, когда он стал доступен. Затем они перешел к реализации удаленной автоматизации (RA) для 16-разрядных и 32-разрядных платформ Windows.  

@@ -4,16 +4,18 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - /clr compiler option [C++], migrating to /clr:pure
 - migration [C++], pure MSIL
 - pure MSIL [C++], porting to
 ms.assetid: 5ffb1184-2095-4ade-84aa-4fa6324bc764
-caps.latest.revision: "15"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
@@ -21,10 +23,10 @@ ms.workload:
 - cplusplus
 - dotnet
 ms.openlocfilehash: b8d49ee233167c02570408ba091c2a99b78487d5
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.sourcegitcommit: fa7a6dccddce3747389c91277a53e296f905305c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="how-to-migrate-to-clrpure-ccli"></a>Практическое руководство. Миграция в /clr:pure (C++/CLI)
 В этом разделе обсуждаются проблемы, которые могут возникнуть при миграции в чистый MSIL с помощью **/CLR: pure** (см. [/CLR (компиляция CLR)](../build/reference/clr-common-language-runtime-compilation.md) для получения дополнительной информации). В этом разделе предполагается, что подвергаемый миграции код был скомпилирован как смешанная сборка с помощью **/CLR** параметра, как пути миграции из неуправляемого кода в чистый MSIL не существует прямой. Неуправляемый код в разделе [как: переход на/CLR](../dotnet/how-to-migrate-to-clr.md) перед попыткой миграции в чистый MSIL.  

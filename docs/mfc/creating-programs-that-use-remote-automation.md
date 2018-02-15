@@ -20,10 +20,10 @@ manager: ghogen
 ms.workload:
 - cplusplus
 ms.openlocfilehash: 86a9b9f4dccaaa3a97366dffb11955d3b148aff5
-ms.sourcegitcommit: a5916b48541f804a79891ff04e246628b5f9a24a
+ms.sourcegitcommit: fa7a6dccddce3747389c91277a53e296f905305c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="creating-programs-that-use-remote-automation"></a>Создание программ, использующих удаленную автоматизацию
 Любой объект автоматизации и любой контроллер автоматизации могут использовать удаленную автоматизацию без каких-либо изменениях исходный код, без необходимости повторной компиляции и без необходимости повторного связывания. После установки, которая работает локально (то есть на том же компьютере), должны проходить через только несколько шагов для удаленного запуска.  
