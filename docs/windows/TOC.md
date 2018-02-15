@@ -287,7 +287,7 @@
 ### [Практическое руководство. Обработка событий с использованием WRL](how-to-handle-events-using-wrl.md)
 ### [Шаблон проекта библиотеки классов WRL](wrl-class-library-project-template.md)
 ### [Пошаговое руководство. Создание базового компонента среды выполнения Windows с использованием WRL](walkthrough-creating-a-basic-windows-runtime-component-using-wrl.md)
-### [Пошаговое руководство. Создание приложения для Магазина Windows с использованием WRL и Media Foundation](walkthrough-creating-a-windows-store-app-using-wrl-and-media-foundation.md)
+### [Пошаговое руководство. Создание приложения UWP с использованием WRL и Media Foundation](walkthrough-creating-a-windows-store-app-using-wrl-and-media-foundation.md)
 ### [Практическое руководство. Создание классического компонента COM с помощью WRL](how-to-create-a-classic-com-component-using-wrl.md)
 ### [Практическое руководство. Непосредственное создание экземпляра компонентов WRL](how-to-instantiate-wrl-components-directly.md)
 ### [Практическое руководство. Использование winmdidl.exe и midlrt.exe для создания H-файлов из метаданных Windows](use-winmdidl-and-midlrt-to-create-h-files-from-windows-metadata.md)

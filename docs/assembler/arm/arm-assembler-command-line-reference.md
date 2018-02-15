@@ -4,21 +4,24 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-tools
+ms.technology:
+- cpp-tools
 ms.tgt_pltfrm: 
-ms.topic: article
-dev_langs: C++
+ms.topic: reference
+dev_langs:
+- C++
 ms.assetid: f7b89478-1ab5-4995-8cde-a805f0462c45
-caps.latest.revision: "12"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 5e7f69c2ac2dbd8a0079d9160100077ccd35513e
-ms.sourcegitcommit: 54035dce0992ba5dce0323d67f86301f994ff3db
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 2eb6b395ec8f47e820cb3184c0d88b4c91e712eb
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/03/2018
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="arm-assembler-command-line-reference"></a>Справочник по командной строке ассемблера ARM
 В этой статье рассматривается командной строки ассемблеру Microsoft ARM, *armasm*, который компилирует ARMv7 Thumb языка ассемблера в реализацию корпорации Майкрософт общий объект формата файла (COFF). Компоновщик может привязывать COFF код и код объекта, созданного компилятором C вместе с библиотеки объектов, созданных библиотекарь или код на языке ассемблера ARM.  
@@ -35,25 +38,25 @@ armasm [[options]] -o objectfile sourcefile
   
 #### <a name="parameters"></a>Параметры  
  `options`  
- -ошибки`filename`  
+ -ошибки `filename`  
  Перенаправление ошибки и предупреждения для `filename`.  
   
- -i`dir[;dir]`  
+ -i `dir[;dir]`  
  Добавление пути поиска включаемых указанные папки.  
   
- -заранее определить`directive`  
+ -заранее определить `directive`  
  Укажите директиву SETA, SETL или НАБОРЫ для определения символа. Пример: **armasm.exe-заранее определить «COUNT SETA 150» source.asm**. Дополнительные сведения см. в разделе [руководстве по средствам ассемблера ARM](http://go.microsoft.com/fwlink/p/?linkid=246102).  
   
  -nowarn  
  Отключите все предупреждения.  
   
- -игнорировать`warning`  
+ -игнорировать `warning`  
  Отключите указанное предупреждение. Возможные значения см. в разделе о предупреждениях.  
   
  -Справка  
  Печать сообщения Справка по командной строке.  
   
- -machine`machine`  
+ -machine `machine`  
  Укажите тип компьютера для установки в заголовке PE-файла.  Возможные значения параметра `machine` являются:  
 **ARM**— задает тип компьютера для IMAGE_FILE_MACHINE_ARMNT. Это значение по умолчанию.   
 **БЕГУНОК**— задает тип компьютера для IMAGE_FILE_MACHINE_THUMB.  
@@ -61,7 +64,7 @@ armasm [[options]] -o objectfile sourcefile
  -oldit  
  Создание стиля ARMv7 блоки ИТ.  По умолчанию, совместимую с ARMv8 создаются блоки ИТ.  
   
- -через`filename`  
+ -через `filename`  
  Чтение дополнительные аргументы командной строки из `filename`.  
   
  -16  
@@ -73,7 +76,7 @@ armasm [[options]] -o objectfile sourcefile
  -g  
  Создайте отладочную информацию.  
   
- -errorReport:`option`  
+ -errorReport: `option`  
  Укажите, как внутренний сборщик данных, будут выдаваться ошибки в корпорацию Майкрософт.  Возможные значения параметра `option` являются:   
 **Нет**— не отправлять отчеты.   
 **строки**— запрашивать пользователя для немедленной отправки отчетов.   

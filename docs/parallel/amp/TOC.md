@@ -1,7 +1,7 @@
 # [C++ AMP (C++ Accelerated Massive Parallelism)](cpp-amp-cpp-accelerated-massive-parallelism.md)
 # [Общие сведения о C++ AMP](cpp-amp-overview.md)
 # [Использование плиток](using-tiles.md)
-# [Использование C++ AMP в приложениях для Магазина Windows](using-cpp-amp-in-windows-store-apps.md)
+# [Использование C++ AMP в приложениях UWP](using-cpp-amp-in-windows-store-apps.md)
 # [Пошаговое руководство. Умножение матриц](walkthrough-matrix-multiplication.md)
 # [Пошаговое руководство. Отладка приложения C++ AMP](walkthrough-debugging-a-cpp-amp-application.md)
 # [Использование лямбда-выражений, объектов функций и ограниченных функций](using-lambdas-function-objects-and-restricted-functions.md)

@@ -182,7 +182,7 @@
 ### [/ALIGN (выравнивание разделов)](align-section-alignment.md)
 ### [/ALLOWBIND (запрет привязки DLL)](allowbind-prevent-dll-binding.md)
 ### [/ALLOWISOLATION (поиск манифеста)](allowisolation-manifest-lookup.md)
-### [/APPCONTAINER (приложение для Магазина Windows)](appcontainer-windows-store-app.md)
+### [/APPCONTAINER (приложение UWP/Microsoft Store)](appcontainer-windows-store-app.md)
 ### [/ASSEMBLYDEBUG (добавление атрибута DebuggableAttribute)](assemblydebug-add-debuggableattribute.md)
 ### [/ASSEMBLYLINKRESOURCE (связывание с ресурсом .NET Framework)](assemblylinkresource-link-to-dotnet-framework-resource.md)
 ### [/ASSEMBLYMODULE (добавление модуля MSIL в сборку)](assemblymodule-add-a-msil-module-to-the-assembly.md)

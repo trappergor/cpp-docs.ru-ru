@@ -4,23 +4,28 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-tools
+ms.technology:
+- cpp-tools
 ms.tgt_pltfrm: 
-ms.topic: article
-f1_keywords: .MODEL
-dev_langs: C++
-helpviewer_keywords: .MODEL directive
+ms.topic: reference
+f1_keywords:
+- .MODEL
+dev_langs:
+- C++
+helpviewer_keywords:
+- .MODEL directive
 ms.assetid: 057f00df-1515-4c55-852a-d936c8a34b53
-caps.latest.revision: "11"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 5407e201b25fdf9b5344d438a69e2fc3e972327b
-ms.sourcegitcommit: 54035dce0992ba5dce0323d67f86301f994ff3db
+ms.workload:
+- cplusplus
+ms.openlocfilehash: b61cb1b04be84a52b4a455ed1b216727514e1432
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/03/2018
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="model"></a>.MODEL
 Инициализирует модель памяти программы.  
@@ -41,9 +46,9 @@ ms.lasthandoff: 01/03/2018
  `stackoption`  
  Необязательный параметр.  
   
- `stackoption`не используется, если `memorymodel` — `FLAT`.  
+ `stackoption` не используется, если `memorymodel` — `FLAT`.  
   
- Указание `NEARSTACK` группирует сегмент стека по одному физическому сегменту (`DGROUP`) вместе с данными. Регистр стека сегмента (`SS`) предполагается, что для хранения тот же адрес, регистр сегмента данных (`DS`). `FARSTACK`не группируются стек с `DGROUP`; таким образом `SS` не равно `DS`.  
+ Указание `NEARSTACK` группирует сегмент стека по одному физическому сегменту (`DGROUP`) вместе с данными. Регистр стека сегмента (`SS`) предполагается, что для хранения тот же адрес, регистр сегмента данных (`DS`). `FARSTACK` не группируются стек с `DGROUP`; таким образом `SS` не равно `DS`.  
   
 ## <a name="remarks"></a>Примечания  
  .`MODEL` не используется в [MASM для x64 (ml64.exe)](../../assembler/masm/masm-for-x64-ml64-exe.md).  

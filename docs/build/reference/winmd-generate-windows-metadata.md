@@ -4,22 +4,26 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-tools
+ms.technology:
+- cpp-tools
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords: VC.Project.VCLinkerTool.GenerateWindowsMetadata
-dev_langs: C++
+f1_keywords:
+- VC.Project.VCLinkerTool.GenerateWindowsMetadata
+dev_langs:
+- C++
 ms.assetid: bcfb4901-411e-4c9e-9f78-23028b6e5fcc
-caps.latest.revision: "9"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 903ab6875457aa8c069c47a2be7f8ff1f5c884a9
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 7517ec459677659067e80930ee48caccf84d52f3
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="winmd-generate-windows-metadata"></a>/WINMD (создавать метаданные Windows)
 Включает создание файла метаданных среды выполнения Windows (.winmd).  
@@ -30,12 +34,12 @@ ms.lasthandoff: 12/21/2017
   
 ## <a name="remarks"></a>Примечания  
  /WINMD  
- Значение по умолчанию для [!INCLUDE[win8_appname_long](../../build/includes/win8_appname_long_md.md)] приложений. Компоновщик создает двоичный исполняемый файл и файл метаданных winmd.  
+ Значение по умолчанию для приложений универсальной платформы Windows. Компоновщик создает двоичный исполняемый файл и файл метаданных winmd.  
   
  /WINMD:NO  
  Компоновщик создает двоичный исполняемый файл, но не в winmd-файл.  
   
- / WINMD: ТОЛЬКО  
+ /WINMD:ONLY  
  Компоновщик создает winmd-файл, но не двоичный исполняемый файл.  
   
  По умолчанию имя выходного файла имеет вид `binaryname`.winmd. Чтобы указать другое имя файла, используйте [/WINMDFILE](../../build/reference/winmdfile-specify-winmd-file.md) параметр.  

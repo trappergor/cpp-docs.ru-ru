@@ -1,7 +1,7 @@
 # [Справочник по библиотеке времени выполнения C](c-run-time-library-reference.md)
 # [Функции библиотеки CRT](crt-library-features.md)
 ## [Совместимость](compatibility.md)
-### [Приложения для Магазина Windows, среда выполнения Windows и среда выполнения C](windows-store-apps-the-windows-runtime-and-the-c-run-time.md)
+### [Приложения UWP, среда выполнения Windows и среда выполнения C](windows-store-apps-the-windows-runtime-and-the-c-run-time.md)
 ### [Совместимость ANSI с C](ansi-c-compliance.md)
 ### [UNIX](unix.md)
 ### [Платформы Windows (CRT)](windows-platforms-crt.md)

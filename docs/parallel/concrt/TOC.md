@@ -2,7 +2,7 @@
 # [Общие сведения о среде выполнения с параллелизмом](overview-of-the-concurrency-runtime.md)
 # [Обработка исключений в среде выполнения с параллелизмом](exception-handling-in-the-concurrency-runtime.md)
 # [Средства диагностики параллельного выполнения (среда выполнения с параллелизмом)](parallel-diagnostic-tools-concurrency-runtime.md)
-# [Создание асинхронных операций в C++ для приложений для Магазина Windows](creating-asynchronous-operations-in-cpp-for-windows-store-apps.md)
+# [Создание асинхронных операций на C++ для приложений UWP](creating-asynchronous-operations-in-cpp-for-windows-store-apps.md)
 # [Сравнение среды выполнения с параллелизмом с другими моделями параллелизма](comparing-the-concurrency-runtime-to-other-concurrency-models.md)
 ## [Переход от OpenMP к среде выполнения с параллелизмом](migrating-from-openmp-to-the-concurrency-runtime.md)
 ### [Практическое руководство. Преобразование параллельного цикла for OpenMP для использования среды выполнения с параллелизмом](how-to-convert-an-openmp-parallel-for-loop-to-use-the-concurrency-runtime.md)
