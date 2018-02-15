@@ -4,9 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 apiname:
 - _mktime32
 - mktime
@@ -27,7 +28,8 @@ apitype: DLLExport
 f1_keywords:
 - mktime
 - _mktime64
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - _mktime32 function
 - mktime function
@@ -38,16 +40,17 @@ helpviewer_keywords:
 - _mktime64 function
 - time, converting
 ms.assetid: 284ed5d4-7064-48a2-bd50-15effdae32cf
-caps.latest.revision: "25"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 33ab39945526ac2f53eab653ec374856953fc27e
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: ee2673f98f219559fd42d192dd934c8fe3eaed8c
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="mktime-mktime32-mktime64"></a>mktime, _mktime32, _mktime64
 Преобразуют локальное время в календарное значение.  
@@ -73,7 +76,7 @@ __time64_t _mktime64(
 ## <a name="return-value"></a>Возвращаемое значение  
  Функция `_mktime32` возвращает указанное календарное время, закодированное как значение типа [time_t](../../c-runtime-library/standard-types.md). Если *timeptr* ссылается на время до полуночи 1 января 1970 года, или если невозможно представить Календарное время, `_mktime32` возвращает -1, приведенное к типу `time_t`. При использовании `_mktime32` и, если *timeptr* ссылается на время после 23:59:59 18 января 2038 года, универсальное глобальное (UTC), возвращается значение -1, приведенное к типу `time_t`.  
   
- `_mktime64`Возвращает -1, приведенное к типу `__time64_t` Если *timeptr* ссылается на дату после 23:59:59, 31 декабря 3000 года, время UTC.  
+ `_mktime64` Возвращает -1, приведенное к типу `__time64_t` Если *timeptr* ссылается на дату после 23:59:59, 31 декабря 3000 года, время UTC.  
   
 ## <a name="remarks"></a>Примечания  
  Функции `mktime`, `_mktime32` и `_mktime64` преобразуют предоставленную структуру (возможно, неполную), на которую указывает *timeptr*, в полностью определенную структуру с нормализованными значениями, а затем преобразуют ее в значение календарного времени `time_t`. Преобразованное время имеет ту же кодировку, что и значения, возвращаемые функцией [time](../../c-runtime-library/reference/time-time32-time64.md). Исходные значения компонентов `tm_wday` и `tm_yday` структуры *timeptr* пропускаются, а исходные значения других компонентов не ограничиваются их нормальными диапазонами.  

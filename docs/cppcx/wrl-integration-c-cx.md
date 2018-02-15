@@ -6,18 +6,19 @@ ms.technology: cpp-windows
 ms.reviewer: 
 ms.suite: 
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: language-reference
 ms.assetid: 3ad43894-c574-477c-ad3e-240301f381d4
-caps.latest.revision: "9"
+caps.latest.revision: 
 author: ghogen
 ms.author: ghogen
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 859a25f4fc9698899f1139038e161d28da06220e
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 234141df693f67b97bf2ec83bd9063f69addeb0f
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="wrl-integration-ccx"></a>Интеграция с WRL (C++/CX)
 
@@ -31,7 +32,7 @@ ms.lasthandoff: 12/21/2017
 
 В следующем фрагменте кода показано использование WRL и [!INCLUDE[cppwrl_short](includes/cppwrl-short-md.md)] использовать [!INCLUDE[wrt](includes/wrt-md.md)] классов и анализа файла метаданных.
 
-Пример взят из фрагмента кода [форуме по приложений для магазина Windows](http://social.msdn.microsoft.com/Forums/winappswithnativecode/thread/211ef583-db11-4e55-926b-6d9ab53dbdb4). Автор этого фрагмента кода приводит следующие замечания и оговорки:
+Пример взят из фрагмента кода на форуме Microsoft Store построение приложения. Автор этого фрагмента кода приводит следующие замечания и оговорки:
 
 1. C++ не предоставляет конкретные API для отражения типов [!INCLUDE[wrt](includes/wrt-md.md)] , но файлы метаданных Windows (с расширением WINMD) для типа полностью совместимы с файлами метаданных среды CLR. Windows предоставляет новые API обнаружения метаданных (RoGetMetaDataFile), позволяющие получить WINMD-файл для указанного типа. Однако возможности применения этих API при разработке в C++ ограничены, поскольку пользователь не может создать экземпляр класса.
 

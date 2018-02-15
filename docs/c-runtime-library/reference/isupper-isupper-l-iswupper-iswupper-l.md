@@ -4,9 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 apiname:
 - isupper
 - iswupper
@@ -29,7 +30,8 @@ f1_keywords:
 - isupper
 - _istupper
 - iswupper
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - istupper function
 - iswupper function
@@ -40,16 +42,17 @@ helpviewer_keywords:
 - _iswupper_l function
 - isupper function
 ms.assetid: da2bcc9f-241c-48c0-9a0e-ad273827e16a
-caps.latest.revision: "21"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 242646319193e070e59256c71c53a25268e10e64
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 333e772c2716b87b43cb71ac1797e714af709b3e
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="isupper-isupperl-iswupper-iswupperl"></a>isupper, _isupper_l, iswupper, _iswupper_l
 Определяет, представляет ли целое число символ в верхнем регистре.  
@@ -81,7 +84,7 @@ int _iwsupper_l(
  Используемый языковой стандарт.  
   
 ## <a name="return-value"></a>Возвращаемое значение  
- Каждая из этих подпрограмм возвращает отличное от нуля значение, если `c` — конкретное представление буквы в верхнем регистре. `isupper`возвращает ненулевое значение, если `c` является символ верхнего регистра (– Z). Функция `iswupper` возвращает ненулевое значение только в том случае, если `c` является расширенным символом, соответствующим букве в верхнем регистре, или если `c` принадлежит определяемому реализацией набору расширенных символов, для которых `iswcntrl`, `iswdigit`, `iswpunct`или `iswspace` не равны нулю. Каждая из этих подпрограмм возвращает 0, если `c` не удовлетворяет проверяемому условию.  
+ Каждая из этих подпрограмм возвращает отличное от нуля значение, если `c` — конкретное представление буквы в верхнем регистре. `isupper` возвращает ненулевое значение, если `c` является символ верхнего регистра (– Z). Функция `iswupper` возвращает ненулевое значение только в том случае, если `c` является расширенным символом, соответствующим букве в верхнем регистре, или если `c` принадлежит определяемому реализацией набору расширенных символов, для которых `iswcntrl`, `iswdigit`, `iswpunct`или `iswspace` не равны нулю. Каждая из этих подпрограмм возвращает 0, если `c` не удовлетворяет проверяемому условию.  
   
  Версии этих функций с суффиксом `_l` используют переданный параметр языкового стандарта вместо текущего языкового стандарта для поведения, зависящего от языкового стандарта. Для получения дополнительной информации см. [Locale](../../c-runtime-library/locale.md).  
   

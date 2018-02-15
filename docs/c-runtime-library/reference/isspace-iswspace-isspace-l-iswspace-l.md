@@ -4,9 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 apiname:
 - iswspace
 - _isspace_l
@@ -29,7 +30,8 @@ f1_keywords:
 - iswspace
 - _istspace
 - isspace
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - iswspace function
 - isspace function
@@ -40,16 +42,17 @@ helpviewer_keywords:
 - _istspace function
 - istspace function
 ms.assetid: b851e0c0-36bb-4dac-a1a3-533540939035
-caps.latest.revision: "18"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 618ba621f385307d3609667c6df5cf56c91da2f1
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 5eef3b216ed70bb7fa6a22d02827dec34b44c3b3
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="isspace-iswspace-isspacel-iswspacel"></a>isspace, iswspace, _isspace_l, _iswspace_l
 Определяет, представляет ли целое число символ пробела.  
@@ -81,7 +84,7 @@ int _iswspace_l(
  Используемый языковой стандарт.  
   
 ## <a name="return-value"></a>Возвращаемое значение  
- Каждая из этих подпрограмм возвращает отличное от нуля значение, если `c` — конкретное представление символа пробела. `isspace`возвращает ненулевое значение, если `c` символом пробела (0x09-0x0D или 0x20). Результат проверки условия для функции `isspace` зависит от настройки категории `LC_CTYPE` для языкового стандарта. Дополнительные сведения см. в разделе [setlocale, _wsetlocale](../../c-runtime-library/reference/setlocale-wsetlocale.md). Версии этих функций без суффикса `_l` используют текущий языковой стандарт для любого поведения, зависящего от языкового стандарта. Версии с суффиксом `_l` идентичны версиям без него, за исключением того, что они используют переданный параметр языкового стандарта. Для получения дополнительной информации см. [Locale](../../c-runtime-library/locale.md).  
+ Каждая из этих подпрограмм возвращает отличное от нуля значение, если `c` — конкретное представление символа пробела. `isspace` возвращает ненулевое значение, если `c` символом пробела (0x09-0x0D или 0x20). Результат проверки условия для функции `isspace` зависит от настройки категории `LC_CTYPE` для языкового стандарта. Дополнительные сведения см. в разделе [setlocale, _wsetlocale](../../c-runtime-library/reference/setlocale-wsetlocale.md). Версии этих функций без суффикса `_l` используют текущий языковой стандарт для любого поведения, зависящего от языкового стандарта. Версии с суффиксом `_l` идентичны версиям без него, за исключением того, что они используют переданный параметр языкового стандарта. Для получения дополнительной информации см. [Locale](../../c-runtime-library/locale.md).  
   
  Функция `iswspace` возвращает ненулевое значение, если `c` представляет собой расширенный символ, соответствующий стандартному расширенному пробелу.  
   

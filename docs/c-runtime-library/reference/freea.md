@@ -4,10 +4,12 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
-apiname: _freea
+ms.topic: reference
+apiname:
+- _freea
 apilocation:
 - msvcrt.dll
 - msvcr80.dll
@@ -23,22 +25,24 @@ apitype: DLLExport
 f1_keywords:
 - freea
 - _freea
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - _freea function
 - freea function
 - memory deallocation
 ms.assetid: dcd30584-dd9d-443b-8c4c-13237a1cecac
-caps.latest.revision: "18"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 921687fbc5d8ab0b509e5a2e43c9c9ff4b18727a
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 6bf2bd2d3dacba307f529798727e7af745bf7cf9
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="freea"></a>_freea
 Освобождает блок памяти.  
@@ -61,7 +65,7 @@ void _freea(
 ## <a name="remarks"></a>Примечания  
  Функция `_freea` освобождает блок памяти (`memblock`), который был выделен ранее вызовом функции [_malloca](../../c-runtime-library/reference/malloca.md). Функция `_freea` проверяет, была ли память выделена в стеке или в куче. Если она была выделена в стеке, функция `_freea` не выполняет никаких действий. Если память выделена в куче, число освобожденных байтов эквивалентно количеству байтов, запрошенному при выделении блока. Если `memblock` имеет значение `NULL`, указатель не обрабатывается и функция `_freea` немедленно возвращает управление. Попытка освободить недопустимый указатель (указатель на блок памяти, который не был выделен функцией `_malloca`) может повлиять на последующие запросы выделения памяти и вызвать ошибки.  
   
- `_freea`вызовы `free` внутренним образом в том случае, если обнаруживается, что память выделяется в куче. Информация о том, выделена ли память в куче или в стеке, определяется меткой, которая устанавливается в памяти по адресу, непосредственно предшествующему выделенному блоку памяти.  
+ `_freea` вызовы `free` внутренним образом в том случае, если обнаруживается, что память выделяется в куче. Информация о том, выделена ли память в куче или в стеке, определяется меткой, которая устанавливается в памяти по адресу, непосредственно предшествующему выделенному блоку памяти.  
   
  В случае возникновения ошибки при освобождении памяти для `errno` задаются сведения о характере сбоя, полученные от операционной системы. Дополнительные сведения см. в разделе [errno, _doserrno, _sys_errlist и _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).  
   
