@@ -4,19 +4,22 @@ description: "Установить поддержку Visual C++ в Visual Studi
 ms.custom: mvc
 ms.date: 12/12/2017
 ms.topic: get-started-article
-ms.technology: devlang-C++
+ms.technology:
+- devlang-C++
 ms.devlang: C++
-dev_langs: C++
+dev_langs:
+- C++
 ms.assetid: 45138d71-719d-42dc-90d7-1d0ca31a2f55
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: a5b9c250b102b7d8847e99b87139136bc7df808b
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 2bbc2db5a86d44d2beabe32e265e91ddb0c90787
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="build-and-run-a-c-console-app-project"></a>Построение и запуск проекта консольного приложения C++
 
@@ -83,6 +86,8 @@ ms.lasthandoff: 12/21/2017
 ### <a name="run-your-code-in-a-command-window-issues"></a>Проблемы запуска кода в окно командной строки
 
 Можно также перейти в папку отладки решения в командной строке, чтобы запустить приложение. Не удается запустить приложение из других каталогов без указания пути к приложению. Тем не менее можно скопировать приложение в другой каталог и запустите его оттуда.
+
+Если вы не видите **Копировать как путь** в контекстном меню выберите Закрытие меню и затем снова откройте удерживая нажатой клавишу Shift. Это необходимо только для удобства. Также можно скопировать путь к папке на панели поиска проводника и вставьте его в **запуска** диалогового окна, а затем введите имя исполняемого файла в конце. Это становится немного более ввода, но он имеет тот же результат.
 
 [Вернуться.](#run-your-code-in-a-command-window)
 

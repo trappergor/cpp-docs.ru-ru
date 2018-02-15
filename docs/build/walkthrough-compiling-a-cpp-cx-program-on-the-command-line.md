@@ -4,29 +4,32 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-tools
+ms.technology:
+- cpp-tools
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs: C++
+dev_langs:
+- C++
 ms.assetid: 626f5544-69ed-4736-83a9-f11389b371b2
-caps.latest.revision: "8"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 677779aa8550869fe0859974b2aa4bbbb1c23d83
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 13e1b220123d3215e1c9150d00ee092ea4200ca8
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="walkthrough-compiling-a-ccx-program-on-the-command-line"></a>Пошаговое руководство. Компиляция программы на языке C++/CX из командной строки
-Можно создавать программы Visual C++ для среды выполнения Windows и компилировать их в командной строке. Visual C++ поддерживает расширения компонентов Visual C++ (C++/CX) с дополнительными типами и операторами, предназначенными для программной модели среды выполнения Windows. Можно использовать C++/CX для создания приложений для Windows Phone 8.1, приложений для Магазина Windows и классических приложений для Windows. Дополнительные сведения см. в разделе [Обзор из c + +/ CX](http://msdn.microsoft.com/magazine/dn166929.aspx) и [расширения компонентов для платформ среды выполнения](../windows/component-extensions-for-runtime-platforms.md).  
+Можно создавать программы Visual C++ для среды выполнения Windows и компилировать их в командной строке. Visual C++ поддерживает расширения компонентов Visual C++ (C++/CX) с дополнительными типами и операторами, предназначенными для программной модели среды выполнения Windows. Можно использовать C + +/ CX для создания приложений для универсальной платформы Windows (UWP), Windows Phone 8.1 и Windows desktop. Дополнительные сведения см. в разделе [Обзор из c + +/ CX](http://msdn.microsoft.com/magazine/dn166929.aspx) и [расширения компонентов для платформ среды выполнения](../windows/component-extensions-for-runtime-platforms.md).  
   
  В этом руководстве мы используем текстовый редактор для создания простой программы C++/CX, а затем компилируем эту программу в командной строке. (Можно использовать вашу собственную программу C++/CX вместо ввода показанной здесь, или же можно использовать образец кода C++/CX из другой статьи справки. Эта методика полезна для сборки и тестирования небольших модулей, не содержащих элементы пользовательского интерфейса.)  
   
 > [!NOTE]
->  В интегрированной среде разработки (IDE) Visual Studio также можно компилировать программы C++/CX. Интегрированная среда разработки включает средства проектирования, отладки, имитации и поддержки развертывания, недоступные в командной строке, поэтому мы рекомендуем использовать интегрированную среду разработки для создания приложений для Магазина Windows. Дополнительные сведения см. в разделе [создать простое приложение C++ магазина](http://msdn.microsoft.com/library/windows/apps/dn263168).  
+>  В интегрированной среде разработки (IDE) Visual Studio также можно компилировать программы C++/CX. Интегрированная среда разработки включает разработки, отладки, эмуляции и поддержка развертывания, недоступные в командной строке, поэтому рекомендуется использовать IDE для создания приложений универсальной платформы Windows (UWP). Дополнительные сведения см. в разделе [создать приложение UWP на C++](/windows/uwp/get-started/create-a-basic-windows-10-app-in-cpp).  
   
 ## <a name="prerequisites"></a>Предварительные требования  
  Необходимо понимать основы языка C++.  

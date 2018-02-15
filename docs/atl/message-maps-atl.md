@@ -4,24 +4,27 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
-ms.topic: article
-dev_langs: C++
+ms.topic: reference
+dev_langs:
+- C++
 helpviewer_keywords:
 - message maps, ATL
 - ATL, message handlers
 ms.assetid: 9e100400-65c7-4a85-8857-4e6cb6dd7340
-caps.latest.revision: "10"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 1e708fea75c594c7bb9504515c80222ad901c335
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 12eeb74266e9c303817430958025d6536147356c
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="message-maps-atl"></a>Схемы сообщений (ATL)
 Схемы сообщений связывает функцию обработчика событий с определенного сообщения, команды или уведомления. С помощью ATL [макросы схемы сообщений](../atl/reference/message-map-macros-atl.md), можно указать схему сообщений для окна. Процедуры окна в `CWindowImpl`, `CDialogImpl`, и `CContainedWindowT` направлять сообщения окна к схему сообщений.  
@@ -31,9 +34,9 @@ ms.lasthandoff: 12/21/2017
 ## <a name="chained-message-maps"></a>Схемы последовательных сообщений  
  ATL также позволяет отправлять цепочки схемы сообщений, который направляет вывод сообщения, обработке сообщения сопоставление, определенное в другом классе. Например можно реализовать общие обработки сообщений в отдельный класс для предоставления единообразное поведение для всех окон, привязка к этому классу. Можно соединить в цепочку к базовому классу или элементу данных вашего класса.  
   
- ATL также поддерживает динамическое цепочки, что позволяет создать цепочку карты сообщения другого объекта во время выполнения. Для реализации динамической цепочки, должен быть производным от класса [CDynamicChain](../atl/reference/cdynamicchain-class.md). Затем объявите [CHAIN_MSG_MAP_DYNAMIC](reference/message-map-macros-atl.md#chain_msg_map_dynamic) макрос в схему сообщений. `CHAIN_MSG_MAP_DYNAMIC`требуется уникальный номер, который идентифицирует объекта и сопоставление сообщений, к которому вы цепочки. Необходимо определить это уникальное значение посредством вызова `CDynamicChain::SetChainEntry`.  
+ ATL также поддерживает динамическое цепочки, что позволяет создать цепочку карты сообщения другого объекта во время выполнения. Для реализации динамической цепочки, должен быть производным от класса [CDynamicChain](../atl/reference/cdynamicchain-class.md). Затем объявите [CHAIN_MSG_MAP_DYNAMIC](reference/message-map-macros-atl.md#chain_msg_map_dynamic) макрос в схему сообщений. `CHAIN_MSG_MAP_DYNAMIC` требуется уникальный номер, который идентифицирует объекта и сопоставление сообщений, к которому вы цепочки. Необходимо определить это уникальное значение посредством вызова `CDynamicChain::SetChainEntry`.  
   
- Можно соединить в цепочку к любому классу, который объявляет схему сообщений, предоставляемый класс является производным от [CMessageMap](../atl/reference/cmessagemap-class.md). `CMessageMap`позволяет объекту предоставлять его схемы сообщений с другими объектами. Обратите внимание, что `CWindowImpl` уже является производным от `CMessageMap`.  
+ Можно соединить в цепочку к любому классу, который объявляет схему сообщений, предоставляемый класс является производным от [CMessageMap](../atl/reference/cmessagemap-class.md). `CMessageMap` позволяет объекту предоставлять его схемы сообщений с другими объектами. Обратите внимание, что `CWindowImpl` уже является производным от `CMessageMap`.  
   
 ## <a name="alternate-message-maps"></a>Схемы сообщений альтернативный  
  И, наконец, ATL поддерживает сопоставления альтернативного сообщения, объявленных с [ALT_MSG_MAP](reference/message-map-macros-atl.md#alt_msg_map) макрос. Каждый альтернативную схему сообщений определяется уникальный номер, который передается `ALT_MSG_MAP`. С помощью альтернативных сопоставляет, может обрабатывать сообщения несколько окон в одной карте. Обратите внимание, что по умолчанию `CWindowImpl` не использует схемы альтернативный сообщений. Чтобы добавить поддержку этих функций, переопределите `WindowProc` метод в вашей `CWindowImpl`-производного класса, а также вызов `ProcessWindowMessage` с карты идентификатор сообщения.  

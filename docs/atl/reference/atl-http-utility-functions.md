@@ -5,17 +5,18 @@ ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 ms.assetid: 4db57ef2-31fa-4696-bbeb-79a9035033ed
-caps.latest.revision: "4"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-ms.workload: cplusplus
-ms.openlocfilehash: 51c76e48023363fc7737aa690351801eceb3abf6
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 88bae92c568285e44965d6bfaca399709105d323
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="atl-http-utility-functions"></a>Служебные функции HTTP ATL
 
@@ -35,7 +36,7 @@ ms.lasthandoff: 12/21/2017
 ## <a name="requirements"></a>Требования  
  **Заголовок:** файлов atlutil.h  
 
-## <a name="atlcanonicalizeurl"></a>AtlCanonicalizeUrl
+## <a name="atlcanonicalizeurl"></a> AtlCanonicalizeUrl
 Вызывайте эту функцию для приведения URL-адреса к каноническому виду, что включает преобразование небезопасных символов и пробелов в escape-последовательности.  
   
 ```    
@@ -59,13 +60,13 @@ inline BOOL AtlCanonicalizeUrl(
  `dwFlags`  
  Флаги ATL_URL управление работы этой функции. 
 
-- `ATL_URL_BROWSER_MODE`Не кодирование или декодирование символов после «#» или «?» и не удаляет пробелы после «?». Если это значение не задано, кодируется весь URL-адрес и удалить конечные пробелы.
-- `ATL_URL_DECODE`Преобразует все % XX последовательности символов, включая escape-последовательностей, прежде чем разбор URL-адрес.
-- `ATL_URL_ENCODE_PERCENT`Кодирует все символы процента обнаружил. По умолчанию не кодируются символы процента.
-- `ATL_URL_ENCODE_SPACES_ONLY`Кодирует только пробелы.
-- `ATL_URL_ESCAPE`Преобразует все escape-последовательности (% XX) их соответствующих символов.
-- `ATL_URL_NO_ENCODE`Не выполняет преобразование небезопасных символов в escape-последовательности.
-- `ATL_URL_NO_META`Не приводит к удалению meta последовательности (такие как «. «и»..») по URL-адресу. 
+- `ATL_URL_BROWSER_MODE` Не кодирование или декодирование символов после «#» или «?» и не удаляет пробелы после «?». Если это значение не задано, кодируется весь URL-адрес и удалить конечные пробелы.
+- `ATL_URL_DECODE` Преобразует все % XX последовательности символов, включая escape-последовательностей, прежде чем разбор URL-адрес.
+- `ATL_URL_ENCODE_PERCENT` Кодирует все символы процента обнаружил. По умолчанию не кодируются символы процента.
+- `ATL_URL_ENCODE_SPACES_ONLY` Кодирует только пробелы.
+- `ATL_URL_ESCAPE` Преобразует все escape-последовательности (% XX) их соответствующих символов.
+- `ATL_URL_NO_ENCODE` Не выполняет преобразование небезопасных символов в escape-последовательности.
+- `ATL_URL_NO_META` Не приводит к удалению meta последовательности (такие как «. «и»..») по URL-адресу. 
   
 ### <a name="return-value"></a>Возвращаемое значение  
  Возвращает **TRUE** при успешном выполнении **FALSE** при сбое.  
@@ -76,7 +77,7 @@ inline BOOL AtlCanonicalizeUrl(
 ### <a name="see-also"></a>См. также  
  [InternetCanonicalizeUrl](http://msdn.microsoft.com/library/windows/desktop/aa384342)
 
- ## <a name="atlcombineurl"></a>AtlCombineUrl
+ ## <a name="atlcombineurl"></a> AtlCombineUrl
  Вызывайте эту функцию для объединения базового и относительного URL-адресов в один канонический URL-адрес.  
   
 ```    
@@ -110,7 +111,7 @@ inline BOOL AtlCombineUrl(
 ### <a name="remarks"></a>Примечания  
  Ведет себя как текущая версия [InternetCombineUrl](http://msdn.microsoft.com/library/windows/desktop/aa384355) , но не требует WinInet или Internet Explorer, должны быть установлены.  
   
-## <a name="atlescapeurl"></a>AtlEscapeUrl
+## <a name="atlescapeurl"></a> AtlEscapeUrl
  Вызывайте эту функцию для преобразования всех небезопасных символов в escape-последовательности.  
   
 ```    
@@ -162,7 +163,7 @@ inline ATL_URL_PORT AtlGetDefaultUrlPort(ATL_URL_SCHEME m_nScheme) throw();
 ### <a name="return-value"></a>Возвращаемое значение  
  [ATL_URL_PORT](atl-typedefs.md#atl_url_port) связанные с заданной схемой или ATL_URL_INVALID_PORT_NUMBER, если схема не распознан.  
 
-## <a name="atlisunsafeurlchar"></a>AtlIsUnsafeUrlChar
+## <a name="atlisunsafeurlchar"></a> AtlIsUnsafeUrlChar
  Вызывайте эту функцию, чтобы определить, безопасно ли использовать символ в URL-адресе.  
   
 ```  
@@ -179,7 +180,7 @@ inline BOOL AtlIsUnsafeUrlChar(char chIn) throw();
 ### <a name="remarks"></a>Примечания  
  Символы, которые не должны использоваться в URL-адреса можно проверить с помощью этой функции и преобразовывать с помощью [AtlCanonicalizeUrl](#atlcanonicalizeurl).  
   
-## <a name="atlunescapeurl"></a>AtlUnescapeUrl
+## <a name="atlunescapeurl"></a> AtlUnescapeUrl
  Вызывайте эту функцию для обратного преобразования escape-символов в первоначальные значения.  
   
 ```    
@@ -215,7 +216,7 @@ inline BOOL AtlUnescapeUrl(
 ### <a name="remarks"></a>Примечания  
  Обращает процесс преобразования, применяемая с [AtlEscapeUrl](#atlescapeurl).  
   
-## <a name="rgbtohtml"></a>RGBToHtml
+## <a name="rgbtohtml"></a> RGBToHtml
 Преобразует [COLORREF](http://msdn.microsoft.com/library/windows/desktop/dd183449) значение в HTML-текст, соответствующий этому значению цвета.  
   
 ```  
@@ -241,7 +242,7 @@ bool inline RGBToHtml(
 ### <a name="remarks"></a>Примечания  
  Значение цвета HTML является знак решетки, за которым следует шестнадцатеричное значение 6-значного, с помощью 2 цифры для каждого из компонентов красного, зеленого и синего цвета (например, #FFFFFF отображается белый цвет).  
   
-## <a name="systemtimetohttpdate"></a>SystemTimeToHttpDate
+## <a name="systemtimetohttpdate"></a> SystemTimeToHttpDate
 Вызывайте эту функцию для преобразования системного времени в строку в формате, пригодном для использования в заголовках HTTP.  
   
 ```  

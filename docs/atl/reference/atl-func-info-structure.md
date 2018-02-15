@@ -4,28 +4,31 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-windows
+ms.technology:
+- cpp-windows
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - _ATL_FUNC_INFO
 - ATL::_ATL_FUNC_INFO
 - ATL._ATL_FUNC_INFO
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - _ATL_FUNC_INFO structure
 - ATL_FUNC_INFO structure
 ms.assetid: 441ebe2c-f971-47de-9f52-a258e8d6f88e
-caps.latest.revision: "21"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: b1bbff1fa040454fc8288053938bb439d505b461
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: a5e184f1c78264304b8e4424ea3f9659689f333b
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="atlfuncinfo-structure"></a>Структура _ATL_FUNC_INFO
 Содержит сведения о типе, используемый для описания метода или свойства на disp-интерфейса.  
@@ -42,8 +45,8 @@ struct _ATL_FUNC_INFO {
 ```  
   
 ## <a name="members"></a>Участники  
- **копия**  
- Соглашение о вызовах. При использовании этой структуры с [IDispEventSimpleImpl](../../atl/reference/idispeventsimpleimpl-class.md) класса, этот член должен быть **CC_STDCALL**. `CC_CDECL`единственный параметр, который поддерживается в Windows CE для `CALLCONV` поле `_ATL_FUNC_INFO` структуры. Любое другое значение не поддерживается таким образом его поведение не определено.  
+ **cc**  
+ Соглашение о вызовах. При использовании этой структуры с [IDispEventSimpleImpl](../../atl/reference/idispeventsimpleimpl-class.md) класса, этот член должен быть **CC_STDCALL**. `CC_CDECL` единственный параметр, который поддерживается в Windows CE для `CALLCONV` поле `_ATL_FUNC_INFO` структуры. Любое другое значение не поддерживается таким образом его поведение не определено.  
   
  **vtReturn**  
  Тип variant функции возвращают значение.  

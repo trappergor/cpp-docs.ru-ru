@@ -4,7 +4,8 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-tools
+ms.technology:
+- cpp-tools
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -13,23 +14,25 @@ f1_keywords:
 - VC.Project.VCCLWCECompilerTool.WholeProgramOptimization
 - /ltcg
 - VC.Project.VCCLCompilerTool.WholeProgramOptimization
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - link-time code generation in C++ linker
 - /LTCG linker option
 - -LTCG linker option
 - LTCG linker option
 ms.assetid: 788c6f52-fdb8-40c2-90af-4026ea2cf2e2
-caps.latest.revision: "22"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: a8f1abc58f0c36f37307e1d8053e4dd8a4cac06a
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 69e67755ce5015cdd63ad36625e71380a303d2d4
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="ltcg-link-time-code-generation"></a>Параметр /LTCG (создание кода во время компоновки)
 ```  
@@ -134,11 +137,9 @@ ms.lasthandoff: 12/21/2017
 ## <a name="ltcg-and-msil-modules"></a>Модули /LTCG и MSIL  
  Модули, скомпилированные с помощью [/GL](../../build/reference/gl-whole-program-optimization.md) и [/clr](../../build/reference/clr-common-language-runtime-compilation.md) , могут использоваться в качестве входных данных компоновщика, если указан параметр **/LTCG** .  
   
--   **/ LTCG** может принять машинные файлы объектов, смешанного управляемого и машинного объектные файлы (скомпилированы с помощью **/CLR**) и чистые файлы объектов (скомпилированы с помощью **/CLR: pure**), и безопасном объекта файлы ( скомпилированный с помощью **/CLR: safe**). Параметры компилятора **/CLR: pure** и **/CLR: safe** в Visual Studio 2015 не рекомендуется использовать.  
+-   **/ Параметр LTCG** может принять машинные файлы объектов и файлами объектов, смешанного управляемого и машинного (скомпилированные с помощью **/CLR**). Параметры компилятора **/CLR: pure** и **/CLR: safe** в Visual Studio 2015 не рекомендуется использовать.  
   
--   **/ Параметр LTCG** может принять безопасные netmodules-файлы, которые могут быть созданы с помощью **/CLR: safe /LN** в Visual C++ и **/target: module** в компиляторе .NET Visual Studio. NETMODULES-файлы, созданные с помощью **/clr** или **/clr:pure** , не принимаются **/LTCG**.  
-  
--   /LTCG:PGI не принимает машинные модули, скомпилированные с помощью **/GL** и **/clr**, или чистые модули (созданные с помощью **/clr:pure**)  
+-   / LTCG: PGI не принимает машинные модули, скомпилированные с помощью **/GL** и   **/CLR**  
   
 #### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Установка данного параметра компилятора в среде разработки Visual Studio  
   

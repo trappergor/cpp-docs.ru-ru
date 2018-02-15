@@ -4,9 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 apiname:
 - fgets
 - fgetws
@@ -27,7 +28,8 @@ f1_keywords:
 - _fgetts
 - fgetws
 - fgets
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - _fgetts function
 - streams, getting strings from
@@ -36,16 +38,17 @@ helpviewer_keywords:
 - fgetws function
 - fgetts function
 ms.assetid: ad549bb5-df98-4ccd-a53f-95114e60c4fc
-caps.latest.revision: "15"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 70cccdc8dea6abb032fbf6170ca84ad866ddd491
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 9b09d22df6da016ed2cc751082d17ee7e2f68786
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="fgets-fgetws"></a>fgets, fgetws
 Получает строку из потока.  
@@ -81,7 +84,7 @@ wchar_t *fgetws(
  Дополнительные сведения об этих и других кодах ошибок см. в разделе [_doserrno, errno, _sys_errlist и _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).  
   
 ## <a name="remarks"></a>Примечания  
- Функция `fgets` считывает строку из входного аргумента `stream` и сохраняет ее в `str`. `fgets`считывает символы из позиция текущего потока, включая первого символа новой строки, до конца потока или пока число считанных символов равно `n` - 1, что наступит раньше. Результат сохраняется в `str` с добавлением символа NULL. Считываемый символ новой строки (если такой есть) включается в строку.  
+ Функция `fgets` считывает строку из входного аргумента `stream` и сохраняет ее в `str`. `fgets` считывает символы из позиция текущего потока, включая первого символа новой строки, до конца потока или пока число считанных символов равно `n` - 1, что наступит раньше. Результат сохраняется в `str` с добавлением символа NULL. Считываемый символ новой строки (если такой есть) включается в строку.  
   
  `fgetws` — это версия функции `fgets` для расширенных символов.  
   

@@ -4,26 +4,30 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-tools
+ms.technology:
+- cpp-tools
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords: /bigobj
-dev_langs: C++
+f1_keywords:
+- /bigobj
+dev_langs:
+- C++
 helpviewer_keywords:
 - -bigobj compiler option [C++]
 - /bigobj compiler option [C++]
 - bigobj compiler option [C++]
 ms.assetid: ba94d602-4015-4a8d-86ec-49241ab74c12
-caps.latest.revision: "10"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 384ec0de9e5cb1b3172b980bf7f412abe759ff91
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 178206536522630616bfae0506bfa3edec98068c
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="bigobj-increase-number-of-sections-in-obj-file"></a>/bigobj (Увеличение количества разделов в OBJ-файле)
 **/ bigobj** увеличивает количество разделов, которые может содержать объектный файл.  
@@ -37,7 +41,7 @@ ms.lasthandoff: 12/21/2017
 ## <a name="remarks"></a>Примечания  
  По умолчанию объектный файл может содержать до 65 536 байт (2 ^ 16) адресных секций. Это происходит независимо от того, что указан целевой платформы. **/ bigobj** увеличивает его адресную емкость до 4 294 967 296 (2 ^ 32).  
   
- Большинство модулей никогда не создаст OBJ-файл, содержащий более чем 65 536 разделов. Однако машины созданный код или код с интенсивным использованием библиотеки шаблонов может потребоваться OBJ-файлы, которые могут содержать дополнительные разделы. **/ bigobj** включена по умолчанию для проектов магазина Windows, так как код XAML сгенерированных включает большое количество заголовков. Если отключить этот параметр на проект приложения для магазина Windows, желательно возникает ошибка компилятора C1128.  
+ Большинство модулей никогда не создаст OBJ-файл, содержащий более чем 65 536 разделов. Однако машины созданный код или код с интенсивным использованием библиотеки шаблонов может потребоваться OBJ-файлы, которые могут содержать дополнительные разделы. **/ bigobj** включена по умолчанию в проектах универсальной платформы Windows (UWP), так как код XAML сгенерированных включает большое количество заголовков. При отключении этого параметра для проекта приложения UWP, желательно возникает ошибка компилятора C1128.  
   
  Компоновщики, входящие в до Visual C++ 2005 не удается прочитать OBJ-файлы, которые были созданы при помощи **/bigobj**.  
   

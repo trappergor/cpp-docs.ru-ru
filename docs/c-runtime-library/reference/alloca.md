@@ -4,10 +4,12 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
-apiname: _alloca
+ms.topic: reference
+apiname:
+- _alloca
 apilocation:
 - msvcrt.dll
 - msvcr80.dll
@@ -23,22 +25,24 @@ apitype: DLLExport
 f1_keywords:
 - _alloca
 - alloca
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - memory allocation, stack
 - alloca function
 - _alloca function
 ms.assetid: 74488eb1-b71f-4515-88e1-cdd03b6f8225
-caps.latest.revision: "23"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: a48b0ab3e9717416736acf4187a27df2c737089b
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 104c3df4e6f69d31c5090a87c8029351accd1e1e
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="alloca"></a>_alloca
 Выделение памяти в стеке. Эта функция рекомендуется, поскольку существует более безопасная версия доступна; в разделе [_malloca](../../c-runtime-library/reference/malloca.md).  
@@ -61,7 +65,7 @@ void *_alloca(
  Если выделить место в памяти невозможно, создается исключение переполнения стека. Исключение переполнения стека не является исключением C++; это структурированное исключение. Вместо использования обработки исключений C++ необходимо использовать [структурированную обработку исключений](../../cpp/structured-exception-handling-c-cpp.md) (SEH).  
   
 ## <a name="remarks"></a>Примечания  
- `_alloca`Выделяет `size` байтов из стека программы. Выделенное пространство освобождается автоматически при выходе из вызывающей функции, (не при распределении просто выйдет за пределы области). Таким образом, не передавайте значение указателя, возвращенное `_alloca` как аргумент [свободного](../../c-runtime-library/reference/free.md).  
+ `_alloca` Выделяет `size` байтов из стека программы. Выделенное пространство освобождается автоматически при выходе из вызывающей функции, (не при распределении просто выйдет за пределы области). Таким образом, не передавайте значение указателя, возвращенное `_alloca` как аргумент [свободного](../../c-runtime-library/reference/free.md).  
   
  Существуют ограничения на явный вызов `_alloca` в обработчике исключений (EH). Подпрограммы обработки исключений, выполняющиеся на процессорах класса x86, работают в своем собственном кадре памяти: они выполняют задачи в области памяти, не основанной на текущем положении указателя стека внешней функции. Наиболее распространенные реализации включают выражения структурной обработки исключений (SEH) Windows NT и выражения catch языка C++. Поэтому явный вызов `_alloca` в любом из следующих сценариев приводит к сбою программы во время возврата к вызывающей подпрограмме EH:  
   

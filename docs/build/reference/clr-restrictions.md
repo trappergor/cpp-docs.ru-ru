@@ -4,22 +4,26 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-tools
+ms.technology:
+- cpp-tools
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs: C++
-helpviewer_keywords: /clr compiler option [C++], restrictions
+dev_langs:
+- C++
+helpviewer_keywords:
+- /clr compiler option [C++], restrictions
 ms.assetid: 385f6462-2c68-46d6-810e-469553ead447
-caps.latest.revision: "27"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: aa0bdc6a5a62b517c252a35d8f1193b34d6e0d32
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 3552fda0ce6dc80c253809cfd464555d32604534
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="clr-restrictions"></a>Ограничения /clr
 Обратите внимание на следующие ограничения на использование **/CLR**:  
@@ -50,7 +54,7 @@ ms.lasthandoff: 12/21/2017
   
     -   **/ fp: strict** и **/fp: except** (см. [/FP (указать поведение с плавающей запятой)](../../build/reference/fp-specify-floating-point-behavior.md))  
   
-    -   [/ Zd](../../build/reference/z7-zi-zi-debug-information-format.md)  
+    -   [/Zd](../../build/reference/z7-zi-zi-debug-information-format.md)  
   
     -   [/Gm](../../build/reference/gm-enable-minimal-rebuild.md)  
   
@@ -58,13 +62,9 @@ ms.lasthandoff: 12/21/2017
   
     -   [/RTC](../../build/reference/rtc-run-time-error-checks.md)  
   
-    -   **/ ZI**  
+    -   **/ZI**  
   
--   Сочетание `_STATIC_CPPLIB` определение препроцессора (`/D_STATIC_CPPLIB`) и **/CLR** или **/CLR: pure** параметр компилятора не поддерживается. Это так, так как определение приводит приложение для связи с статические многопоточные стандартной библиотеки C++, который не поддерживается. Дополнительные сведения см. в разделе [/MD, / MT, /LD (использование библиотеки времени выполнения)](../../build/reference/md-mt-ld-use-run-time-library.md) раздела.  
-  
--   [/J](../../build/reference/j-default-char-type-is-unsigned.md) не поддерживается с **/CLR: safe** или **/CLR: pure**. Параметры компилятора **/CLR: pure** и **/CLR: safe** в Visual Studio 2015 не рекомендуется использовать.  
-  
--   Библиотеки ATL и MFC не поддерживаются в чистом режиме компиляции (**/CLR: pure**). Можно использовать **/CLR: pure** со стандартной библиотеки C++ и CRT, если одновременно с **/MD** или **/MDd**.  
+-   Сочетание `_STATIC_CPPLIB` определение препроцессора (`/D_STATIC_CPPLIB`) и **/CLR** параметр компилятора не поддерживается. Это так, так как определение приводит приложение для связи с статические многопоточные стандартной библиотеки C++, который не поддерживается. Дополнительные сведения см. в разделе [/MD, / MT, /LD (использование библиотеки времени выполнения)](../../build/reference/md-mt-ld-use-run-time-library.md) раздела.  
   
 -   При использовании **/ZI** с **/CLR**, это влияет на производительность. Дополнительные сведения см. в разделе [/ZI](../../build/reference/z7-zi-zi-debug-information-format.md).  
   
@@ -75,7 +75,7 @@ ms.lasthandoff: 12/21/2017
     Console::WriteLine((__wchar_t)L' ')   // Will output a space.  
     ```  
   
--   [/ GS](../../build/reference/gs-buffer-security-check.md) игнорируется при компиляции с параметром **/CLR**, если функция находится в `#pragma` [неуправляемые](../../preprocessor/managed-unmanaged.md) или если функция необходимо скомпилировать в машинный код, в этом случае компилятор Показывать предупреждение C4793, которое отключено по умолчанию.  
+-   [/ GS](../../build/reference/gs-buffer-security-check.md) игнорируется при компиляции с параметром **/CLR**, если функция находится в `#pragma` [неуправляемые](../../preprocessor/managed-unmanaged.md) или если функция необходимо скомпилировать в машинный код, в этом случае компилятор выдаст предупреждение C4793, которое отключено по умолчанию.  
   
 -   В разделе [/Entry](../../build/reference/entry-entry-point-symbol.md) для требования к сигнатуре функции управляемого приложения.  
   
@@ -84,8 +84,6 @@ ms.lasthandoff: 12/21/2017
 -   Функции, которые принимают переменное число аргументов (varargs) будет создан в машинном коде. Все управляемые типы данных в позиции переменное число аргументов будет маршалировать в собственные типы. Обратите внимание, что <xref:System.String?displayProperty=fullName> типы являются строками с расширенными символами фактически, но они маршалируются в строки однобайтовых символов. Поэтому если спецификатор printf %S (wchar_t *), он будет упакован в строку %s вместо.  
   
 -   При использовании va_arg-макрос, можно получить непредвиденные результаты при компиляции с параметром **/CLR: pure**.  Дополнительные сведения см. в разделе [va_arg, va_copy, va_end, va_start](../../c-runtime-library/reference/va-arg-va-copy-va-end-va-start.md).  
-  
--   Если приложение передает аргумент типа [va_list](../../c-runtime-library/reference/va-arg-va-copy-va-end-va-start.md) функции объявлено принимает переменное число аргументов, а приложение компилируется с **/CLR: pure**, среда CLR вызывает <xref:System.NotSupportedException>. Если **/CLR** используется вместо этого затронутые функции компилируются в машинный код и выполняться правильно. Если **/CLR: safe** — используется, выдается ошибка диагностики.  
   
 -   Не следует вызывать, из управляемого кода, любые функции, обход стека для получения сведений о параметре (аргументы функции); уровень P/Invoke переводит эти сведения для последующего вниз по стеку.  Например, не компилируйте прокси/заглушки с **/CLR**.  
   
@@ -101,7 +99,5 @@ ms.lasthandoff: 12/21/2017
   
     -   Функции, которая содержит ссылки на краю типов, то есть типы, объявленные с помощью `__declspec(align(...))`.  
   
--   Нельзя использовать [модели COM в компиляторе](../../cpp/compiler-com-support.md) классы с **/CLR: pure** или **/CLR: safe**.  
-  
 ## <a name="see-also"></a>См. также  
- [/ CLR (компиляция CLR)](../../build/reference/clr-common-language-runtime-compilation.md)
+ [/clr (компиляция среды выполнения)](../../build/reference/clr-common-language-runtime-compilation.md)

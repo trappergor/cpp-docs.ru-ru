@@ -4,39 +4,42 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-tools
+ms.technology:
+- cpp-tools
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - MSIL linking
 - linking [C++], modules
 - .netmodules
 - modules, Visual C++
 ms.assetid: a4bcbe8a-4255-451d-853b-f88cfd82f4e1
-caps.latest.revision: "22"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: adafad3532b17573278e7afd82bc33f2c3c50b67
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: d1c30c56012dc14392ecdc6a089dcd88a217d6d8
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="netmodule-files-as-linker-input"></a>.NETMODULE-файлы в качестве входных файлов компоновщика
 LINK.exe теперь принимает OBJ MSIL и netmodules-файлы в качестве входных данных. Выходной файл, создаваемый компоновщиком будет сборки или NETMODULE-файл во время выполнения независимо от любого из OBJ или NETMODULE, были введены в компоновщик.  
   
  netmodules-файлы, созданные компилятором Visual C++ с [/LN (Создание модуля MSIL)](../../build/reference/ln-create-msil-module.md) или компоновщиком с помощью [/NOASSEMBLY (Создание модуля MSIL)](../../build/reference/noassembly-create-a-msil-module.md). OBJ-файлов всегда создаются при компиляции Visual C++. Для других компиляторов Visual Studio используйте **/target: module** параметр компилятора.  
   
- В большинстве случаев необходимо передать в компоновщик OBJ-файл из компиляции Visual C++, создавшей NETMODULE-файл, если только netmodule не был создан с [/CLR (компиляция CLR)](../../build/reference/clr-common-language-runtime-compilation.md). Использовать в качестве входных данных компоновщика должен быть чистым кодом MSIL, который может быть получен с помощью компилятора Visual C++ netmodules-файлы MSIL **/CLR: safe**. Параметры компилятора **/CLR: pure** и **/CLR: safe** в Visual Studio 2015 не рекомендуется использовать. Компиляторы .NET Visual Studio создают чистые MSIL модули по умолчанию.  
+  Необходимо передать в компоновщик OBJ-файл из компиляции Visual C++, создавшей .netmodule. Передавая .netmodule больше не поддерживается, так как **/CLR: pure** и **/CLR: safe** параметры компилятора являются устаревшими в Visual Studio 2015 и будет удален в будущей версии компилятора.   
   
  Сведения о запуске компоновщика из командной строки см. в разделе [синтаксис командной строки компоновщика](../../build/reference/linker-command-line-syntax.md), [кода C/C++ на сборки в командной строке](../../build/building-on-the-command-line.md), и [набор переменных пути и среды для Построение из командной строки](../../build/setting-the-path-and-environment-variables-for-command-line-builds.md).  
   
- Передача NETMODULE-файл или DLL-файл для компоновщика был скомпилирован с компилятором Visual C++ с **/CLR** или **/CLR: pure** может привести к ошибке компоновщика. Дополнительные сведения см. в разделе [Выбор формата входных файлов .netmodule](../../build/reference/choosing-the-format-of-netmodule-input-files.md).  
+ Передача NETMODULE-файл или DLL-файл для компоновщика был скомпилирован с компилятором Visual C++ с **/CLR** может привести к ошибке компоновщика. Дополнительные сведения см. в разделе [Выбор формата входных файлов .netmodule](../../build/reference/choosing-the-format-of-netmodule-input-files.md).  
   
- Компоновщик принимает машинные OBJ-файлы, а также MSIL OBJ-файлы, скомпилированные с **/CLR**, **/CLR: pure**, или **/CLR: safe**. При передаче смешанных OBJ-файлов в ту же сборку, проверяемости выходного файла по умолчанию будет равно минимальному уровню проверяемости входных модулей. Например если безопасные и чистые OBJ-передать в компоновщик, выходной файл будет чистым. [/ CLRIMAGETYPE (указать Type of CLR Image)](../../build/reference/clrimagetype-specify-type-of-clr-image.md) позволяет указать более низкий уровень проверяемости, если необходимые условия.  
+ Компоновщик принимает машинные OBJ-файлы, а также MSIL OBJ-файлы, скомпилированные с **/CLR**. При передаче смешанных OBJ-файлов в ту же сборку, проверяемости выходного файла по умолчанию будет равно минимальному уровню проверяемости входных модулей. 
   
  Если в настоящее время у вас есть приложения, состоящего из двух или более сборок, и объединить в одну сборку, необходимо перекомпилировать сборку и затем связать OBJ-файлов или NETMODULE-файлов для создания в одну сборку.  
   

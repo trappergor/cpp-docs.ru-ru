@@ -4,9 +4,10 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: cpp-standard-libraries
+ms.technology:
+- cpp-standard-libraries
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 apiname:
 - iscntrl
 - _iswcntrl_l
@@ -32,7 +33,8 @@ f1_keywords:
 - _iscntrl_l
 - iscntrl
 - _istcntrl
-dev_langs: C++
+dev_langs:
+- C++
 helpviewer_keywords:
 - iscntrl function
 - _iscntrl_l function
@@ -42,16 +44,17 @@ helpviewer_keywords:
 - iswcntrl function
 - _istcntrl_l function
 ms.assetid: 616eebf9-aed4-49ba-ba2c-8677c8fe6fb5
-caps.latest.revision: "19"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 35c0947d51b4caf239838a38a31df39226f7da50
-ms.sourcegitcommit: 8fa8fdf0fbb4f57950f1e8f4f9b81b4d39ec7d7a
+ms.workload:
+- cplusplus
+ms.openlocfilehash: f56b4060f6b83aca11121ad6c40c22de64a24b8f
+ms.sourcegitcommit: 6002df0ac79bde5d5cab7bbeb9d8e0ef9920da4a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="iscntrl-iswcntrl-iscntrll-iswcntrll"></a>iscntrl, iswcntrl, _iscntrl_l, _iswcntrl_l
 Определяет, представляет ли целое число управляющий символ.  
@@ -83,7 +86,7 @@ int _iswcntrl_l(
  Используемый языковой стандарт.  
   
 ## <a name="return-value"></a>Возвращаемое значение  
- Каждая из этих подпрограмм возвращает отличное от нуля значение, если `c` — конкретное представление управляющего символа. `iscntrl`возвращает ненулевое значение, если `c` управляющим символом (0x00 — 0x1F или 0x7F). Функция `iswcntrl` возвращает ненулевое значение, если `c` является расширенным управляющим символом. Каждая из этих подпрограмм возвращает 0, если `c` не удовлетворяет проверяемому условию.  
+ Каждая из этих подпрограмм возвращает отличное от нуля значение, если `c` — конкретное представление управляющего символа. `iscntrl` возвращает ненулевое значение, если `c` управляющим символом (0x00 — 0x1F или 0x7F). Функция `iswcntrl` возвращает ненулевое значение, если `c` является расширенным управляющим символом. Каждая из этих подпрограмм возвращает 0, если `c` не удовлетворяет проверяемому условию.  
   
  Версии этих функций с суффиксом `_l` используют переданный параметр языкового стандарта вместо текущего языкового стандарта. Для получения дополнительной информации см. [Locale](../../c-runtime-library/locale.md).  
   
